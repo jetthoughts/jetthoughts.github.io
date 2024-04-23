@@ -14,6 +14,19 @@ After moving to more sane theme hopefully they will be deleted.
 
 In `config.toml` change google forms input names and action
 
+## How to find Google form input names and action
+
+1. Open google form to fill out in a private window
+2. Go to the developer console (ctr+shift+i) or (right mouse button, inspect element)
+3. Go to the network tab
+4. Set the operating mode to offline, if you do not want the test recording to be included in the results
+5. Click send form
+6. Check the request and copy values
+
+![](google_forms_get_names.png)
+
+![](google_forms_get_url.png)
+
 ## Google Forms Notification
 
 You need to install and configure addon
@@ -26,6 +39,12 @@ In this theme there 3 different types
 1. Simple page type (privacy policy)
 2. Custom page layout for `/clients/`, `/use-cases/`, `/carreers/`, `/services/` homepage, about.
 3. Custom page types for single client, use-case, career, service.
+
+## Styles
+
+You can apply new custom css to main style file here:
+
+`/themes/beaver/static/style.css`
 
 ## Data
 
