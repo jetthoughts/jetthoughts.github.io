@@ -235,12 +235,12 @@ phone = "entry.12345"
 
 
 [params.forms.contact]
-action = "https://docs.google.com/forms/d/e/1FAIpXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxXXXXXXXXXXXXXXXX1Eg/formResponse"
-first_name = "entry.12345"
-last_name = "entry.12345"
-email = "entry.12345"
-phone = "entry.12345"
-tell = "entry.12345"
+action = "https://docs.google.com/forms/d/e/1FAIpQLSev6JUWEc71yZaEbHtjwC9aiaQK1rAoU6KviUSPy9PCuQ79aw/viewform"
+first_name = "entry.2127871933"
+last_name = "entry.2106751179"
+email = "entry.156804883"
+phone = "entry.1298428859"
+tell = "entry.1387661944"
 
 
 [params.forms.newsletter]
