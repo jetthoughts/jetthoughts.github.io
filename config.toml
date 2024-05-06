@@ -224,7 +224,7 @@ disableKinds = ["section", "taxonomy", "term"]
     isPlainText = true
 
 [params.forms.career]
-action = "https://docs.google.com/forms/d/e/1FAIpQLSev6JUWEc71yZaEbHtjwC9aiaQK1rAoU6KviUSPy9PCuQ79aw/viewform"
+action = "https://docs.google.com/forms/d/e/1FAIpQLSev6JUWEc71yZaEbHtjwC9aiaQK1rAoU6KviUSPy9PCuQ79aw/formResponse"
 first_name = "entry.12345"
 last_name = "entry.12345"
 position= "entry.12345"
@@ -235,7 +235,7 @@ phone = "entry.12345"
 
 
 [params.forms.contact]
-action = "https://docs.google.com/forms/d/e/1FAIpQLSc-GYwOIET7_oVIXxsVmHfsaTlAi7aBA21aFVMVaqmXFl-S2Q/viewform"
+action = "https://docs.google.com/forms/d/e/1FAIpQLSc-GYwOIET7_oVIXxsVmHfsaTlAi7aBA21aFVMVaqmXFl-S2Q/formResponse"
 first_name = "entry.1054399299"
 last_name = "entry.615737515"
 email = "entry.577692471"
@@ -244,5 +244,5 @@ tell = "entry.1791620687"
 
 
 [params.forms.newsletter]
-action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD4751jeepeQe4wefgLqBO6XAU0qqvKWvmJ8P6xRmrMRvakg/viewform"
+action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD4751jeepeQe4wefgLqBO6XAU0qqvKWvmJ8P6xRmrMRvakg/formResponse"
 email = "entry.939459641"
