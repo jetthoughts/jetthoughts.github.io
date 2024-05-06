@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class SaveArticleToMarkdown
   require 'date'
   require 'time'

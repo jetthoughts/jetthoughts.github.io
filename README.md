@@ -64,3 +64,12 @@ Using cli `hugo new content clients/new-client/index.md`
 #### Note from developer
 
 Beaver builder and nitro created a lot of css and js files. Also, it created css in the page, js in the page and every page has different css, js files. That's why I'm using awkward if else in header partial, footer partial instead of using baseof (don't want to complicate the code more, so custom css js will be in header and footer instead of adding them in each page layout).
+
+
+## Populate Blog with Dev.to Posts
+
+To download all new posts and their updates from dev.to need to run
+
+```bash
+bin/from_devto -f
+```
