@@ -30,7 +30,19 @@
        </div>
     </div>
     <div class='gform_footer top_label'>
+      <div class="g-recaptcha" data-sitekey="6Lc9N9QpAAAAAMF8pJSb-YR4WBiD_fxNgCl_unlE" data-callback="onSuccess" data-action="action"></div>
       <input type='submit' id='gform_submit_button_5' class='gform_button button' value='Request Consultation' tabindex='106' />
-      <div class="g-recaptcha" data-sitekey="6Lc9N9QpAAAAAMF8pJSb-YR4WBiD_fxNgCl_unlE"></div>
+      <script nonce="">
+        var onSuccess = function(response) {
+          var errorDivs = document.getElementsByClassName("recaptcha-error");
+          if (errorDivs.length) {
+            errorDivs[0].className = "";
+          }
+          var errorMsgs = document.getElementsByClassName("recaptcha-error-message");
+          if (errorMsgs.length) {
+            errorMsgs[0].parentNode.removeChild(errorMsgs[0]);
+          }
+          };
+      </script>
     </div>
  </form>
