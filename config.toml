@@ -224,7 +224,7 @@ disableKinds = ["section", "taxonomy", "term"]
     isPlainText = true
 
 [params.forms.career]
-action = "https://docs.google.com/forms/d/e/100xvmH4H47-Jb-3k5X5aaIrK2elW5JHlbrF-QDBmg7E/formResponse"
+action = "https://docs.google.com/forms/d/e/1FAIpQLSfHFrlRzMK2EdIKNNLJuo9Kl4O_eRHLwvOLKNP2d0y06d2YCQ/formResponse"
 first_name = "entry.1569799146"
 last_name = "entry.321887476"
 email = "entry.59802721"
