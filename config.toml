@@ -224,14 +224,14 @@ disableKinds = ["section", "taxonomy", "term"]
     isPlainText = true
 
 [params.forms.career]
-action = "https://docs.google.com/forms/d/e/1FAIpQLSev6JUWEc71yZaEbHtjwC9aiaQK1rAoU6KviUSPy9PCuQ79aw/formResponse"
-first_name = "entry.12345"
-last_name = "entry.12345"
-position= "entry.12345"
-linkedin = "entry.12345"
-introduce = "entry.12345"
-email = "entry.12345"
-phone = "entry.12345"
+action = "https://docs.google.com/forms/d/e/100xvmH4H47-Jb-3k5X5aaIrK2elW5JHlbrF-QDBmg7E/formResponse"
+first_name = "entry.1569799146"
+last_name = "entry.321887476"
+email = "entry.59802721"
+phone = "entry.1791744358"
+linkedin = "entry.1769823274"
+introduce = "entry.995298486"
+position= "entry.1219121854"
 
 
 [params.forms.contact]
