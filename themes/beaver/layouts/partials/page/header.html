@@ -157,7 +157,13 @@
       </script>
       <!-- End Google Tag Manager -->
       <link rel='stylesheet' id='fl-builder-layout-3059-css' href='{{ absURL "style.css" }}' media='all' />
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+       <script type="text/javascript">
+         var onloadCallback = function() {
+           grecaptcha.render('g-recaptcha', {
+             'sitekey' : '6LfyGNUpAAAAANF6pY5d-MGjdAmIHjviBFikwylA'
+           });
+         };
+       </script>
    </head>
    <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
       <!-- Google Tag Manager (noscript) -->
