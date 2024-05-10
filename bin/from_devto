@@ -31,7 +31,7 @@ class SaveArticleToMarkdown
   end
 
   def save_to_md_file(data)
-    File.open("../content/pages/blog/#{slug(data)}.md", 'w') { |file| file.write(data['body_markdown']) }
+    File.open("../content/blog/#{slug(data)}.md", 'w') { |file| file.write(data['body_markdown']) }
     puts "File #{slug(data)}.md successfully created."
   end
 
@@ -55,9 +55,9 @@ class SaveArticleToMarkdown
   end
 
   def fill_seo_attributes(data)
-    markdown = File.read("../content/pages/blog/#{slug(data)}.md")
+    markdown = File.read("../content/blog/#{slug(data)}.md")
 
-    File.open("../content/pages/blog/#{slug(data)}.md", 'w') do |file|
+    File.open("../content/blog/#{slug(data)}.md", 'w') do |file|
       file.write("+++\n")
       file.write("title = \"#{data['title']}\"\n")
       file.write("description = \"#{data['description']}\"\n")

@@ -44,12 +44,10 @@
                                           {{ range where site.RegularPages "Type" "blog" }}
                                             <article>
                                               <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                                              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                                              <time> {{ .Params.created_at }} </time><br />
                                               {{ .Summary }}
                                             </article>
-                                            {{ end }}
-
-
+                                          {{ end }}
 
                                             <div class="pp-content-grid-empty">
                                                 <p>Sorry, we couldn't find any posts. Please try a different search.</p>
