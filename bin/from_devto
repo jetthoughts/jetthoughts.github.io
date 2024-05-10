@@ -64,7 +64,7 @@
 
       File.open(stored_post_path_for(data), 'w') do |file|
         file.write("+++\n")
-        file.write("title = \"#{data['title']}\"\n")
+        file.write("title = #{data['title'].to_json}\n")
         file.write("description = #{data['description'].to_json}\n")
         file.write("created_at = \"#{data['created_at']}\"\n")
         file.write("edited_at = \"#{data['edited_at']}\"\n")
