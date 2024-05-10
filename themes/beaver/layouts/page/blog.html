@@ -41,7 +41,13 @@
                                     <div class="fl-module-content fl-node-content">
                                         <div class="pp-posts-wrapper">
 
-
+                                          {{ range where site.RegularPages "Type" "blog" }}
+                                            <article>
+                                              <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                                              <time> {{ .Params.created_at }} </time><br />
+                                              {{ .Summary }}
+                                            </article>
+                                          {{ end }}
 
                                             <div class="pp-content-grid-empty">
                                                 <p>Sorry, we couldn't find any posts. Please try a different search.</p>
@@ -177,8 +183,8 @@
                                                                     </div>
                                                                  </form>
                                                             </div>
-                                                         
-                                                    
+
+
                                                         </div>
                                                     </div>
                                                 </div>
