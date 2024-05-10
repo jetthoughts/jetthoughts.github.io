@@ -3,7 +3,7 @@ title = "Align remote teams with OKRs and Impact Mapping"
 description = "In today's fast-paced business environment, remote distributed teams are becoming increasingly..."
 created_at = "2023-08-02T11:05:40Z"
 edited_at = ""
-sync_date = "2024-05-03T10:58:30Z"
+sync_date = "2024-05-06T12:36:52Z"
 draft = false
 tags = ["management", "devops"]
 +++

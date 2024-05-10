@@ -41,6 +41,14 @@
                                     <div class="fl-module-content fl-node-content">
                                         <div class="pp-posts-wrapper">
 
+                                          {{ range where site.RegularPages "Type" "blog" }}
+                                            <article>
+                                              <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                                              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                                              {{ .Summary }}
+                                            </article>
+                                            {{ end }}
+
 
 
                                             <div class="pp-content-grid-empty">
@@ -177,8 +185,8 @@
                                                                     </div>
                                                                  </form>
                                                             </div>
-                                                         
-                                                    
+
+
                                                         </div>
                                                     </div>
                                                 </div>

@@ -5,6 +5,7 @@ created_at = "2022-10-06T09:10:00Z"
 edited_at = "2024-05-06T11:13:01Z"
 sync_date = "2024-05-06T12:37:00Z"
 draft = false
+type = 'blog'
 tags = ["rails", "ruby", "webdev", "programming"]
 +++
 
