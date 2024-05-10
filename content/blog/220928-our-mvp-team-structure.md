@@ -3,7 +3,7 @@ title = "Team Structure for MVP"
 description = "In structuring a team for MVP, we should consider the following: there is a massive number of..."
 created_at = "2022-09-28T14:58:08Z"
 edited_at = "2022-10-03T14:11:23Z"
-sync_date = "2024-05-06T12:37:01Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["startup", "management", "leadership", "tutorial"]
 +++

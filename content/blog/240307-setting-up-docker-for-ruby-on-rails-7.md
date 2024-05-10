@@ -3,7 +3,7 @@ title = "Setting Up Docker for Ruby on Rails 7"
 description = "Introduction:   Docker is essential for modern software development, ensuring a consistent..."
 created_at = "2024-03-07T13:14:02Z"
 edited_at = "2024-05-06T11:12:15Z"
-sync_date = "2024-05-06T12:36:07Z"
+sync_date = "2024-05-10T19:07:51Z"
 draft = false
 tags = ["beginners", "ruby", "docker", "postgres"]
 +++

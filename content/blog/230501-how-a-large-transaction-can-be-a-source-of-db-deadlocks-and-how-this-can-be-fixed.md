@@ -3,7 +3,7 @@ title = "How a large transaction can be a source of DB deadlocks and how this ca
 description = "Recently in a project, we encountered the fact that sometimes we had a DB Deadlocks error. After..."
 created_at = "2023-05-01T17:46:03Z"
 edited_at = "2024-05-06T11:12:44Z"
-sync_date = "2024-05-06T12:36:53Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["ruby", "database", "webdev", "programming"]
 +++

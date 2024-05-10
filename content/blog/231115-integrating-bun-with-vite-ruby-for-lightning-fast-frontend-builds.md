@@ -3,7 +3,7 @@ title = "Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds"
 description = "With the recent release of Bun and its newfound support for Vite, coupled with Ruby on Rails 7.1..."
 created_at = "2023-11-15T09:13:40Z"
 edited_at = "2023-11-15T12:29:08Z"
-sync_date = "2024-05-06T12:36:47Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["rails", "javascript", "tutorial", "productivity"]
 +++

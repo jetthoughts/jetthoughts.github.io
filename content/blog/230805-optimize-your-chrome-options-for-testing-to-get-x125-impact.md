@@ -3,7 +3,7 @@ title = "Optimize your Chrome options for testing to get x1.25 impact"
 description = "🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀  Are you looking to supercharge your..."
 created_at = "2023-08-05T13:23:55Z"
 edited_at = ""
-sync_date = "2024-05-06T12:36:50Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["testing", "performance", "productivity", "browser"]
 +++

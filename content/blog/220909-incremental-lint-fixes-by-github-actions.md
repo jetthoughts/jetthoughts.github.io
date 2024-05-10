@@ -3,7 +3,7 @@ title = "Incremental lint fixes by GitHub Actions"
 description = "How do you apply new lint rules to the legacy project with active development? Have you added..."
 created_at = "2022-09-09T18:50:36Z"
 edited_at = "2022-09-13T13:29:50Z"
-sync_date = "2024-05-06T12:37:08Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["devops", "github", "ruby", "codequality"]
 +++

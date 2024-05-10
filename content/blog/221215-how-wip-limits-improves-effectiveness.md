@@ -3,7 +3,7 @@ title = "How WIP Limits improves effectiveness?"
 description = "A work-in-progress (WIP) limit is a technique used in agile project management to improve team..."
 created_at = "2022-12-15T06:56:46Z"
 edited_at = "2022-12-15T06:57:16Z"
-sync_date = "2024-05-06T12:36:54Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["productivity", "management"]
 +++

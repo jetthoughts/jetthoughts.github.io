@@ -3,7 +3,7 @@ title = "How to create triangles in TailwindCSS"
 description = "In this post, we are going to see four examples to draw a triangle in TailwindCSS using borders.    ..."
 created_at = "2022-10-18T10:46:16Z"
 edited_at = "2024-05-06T11:12:56Z"
-sync_date = "2024-05-06T12:36:59Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["html", "css", "webdev", "tailwindcss"]
 +++

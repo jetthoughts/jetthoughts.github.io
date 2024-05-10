@@ -3,7 +3,7 @@ title = "Troubleshooting ruby build"
 description = "Have you found problems building ruby on a local machine? How to configure your local environment..."
 created_at = "2022-10-10T16:14:36Z"
 edited_at = "2022-10-11T18:10:42Z"
-sync_date = "2024-05-06T12:37:00Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["ruby", "tutorial", "beginners", "help"]
 +++

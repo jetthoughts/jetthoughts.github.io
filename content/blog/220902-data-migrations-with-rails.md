@@ -3,7 +3,7 @@ title = "Data migrations with Rails"
 description = "Data migration is a common part of working with databases, and Ruby on Rails developers have many..."
 created_at = "2022-09-02T17:01:27Z"
 edited_at = "2024-05-06T11:13:14Z"
-sync_date = "2024-05-06T12:37:08Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["ruby", "rails", "webdev", "database"]
 +++

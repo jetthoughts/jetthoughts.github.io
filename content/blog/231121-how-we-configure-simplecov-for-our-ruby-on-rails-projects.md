@@ -3,7 +3,7 @@ title = "How we configure Simplecov for our Ruby on Rails projects."
 description = "Here’s a step-by-step guide to setting up simplecov with explanations of what each part of the code..."
 created_at = "2023-11-21T07:40:02Z"
 edited_at = "2024-05-06T11:12:34Z"
-sync_date = "2024-05-06T12:36:31Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["ruby", "rails", "testing", "tutorial"]
 +++

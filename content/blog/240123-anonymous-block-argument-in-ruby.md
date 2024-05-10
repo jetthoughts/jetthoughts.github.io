@@ -3,7 +3,7 @@ title = "Anonymous block argument in Ruby"
 description = "In the Ruby programming language, it is possible to use default block parameters instead of..."
 created_at = "2024-01-23T20:09:24Z"
 edited_at = ""
-sync_date = "2024-05-06T12:36:10Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["ruby", "tutorial"]
 +++

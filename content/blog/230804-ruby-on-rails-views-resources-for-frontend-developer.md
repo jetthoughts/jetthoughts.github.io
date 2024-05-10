@@ -3,7 +3,7 @@ title = "Ruby on Rails Views Resources for Frontend Developer"
 description = "🚀 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
 created_at = "2023-08-04T22:31:55Z"
 edited_at = "2023-08-04T22:35:50Z"
-sync_date = "2024-05-06T12:36:52Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["programming", "javascript", "rails", "frontend"]
 +++

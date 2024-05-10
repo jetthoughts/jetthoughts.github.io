@@ -3,7 +3,7 @@ title = "How to use Ruby on Rails Concerns"
 description = "A Rails concern is a module that extends the ActiveSupport::Concern module.  You can use Сoncerns to..."
 created_at = "2022-08-18T14:43:37Z"
 edited_at = "2024-05-06T11:13:16Z"
-sync_date = "2024-05-06T12:37:09Z"
+sync_date = "2024-05-10T19:07:54Z"
 draft = false
 tags = ["ruby", "webdev", "rails", "bestpractices"]
 +++

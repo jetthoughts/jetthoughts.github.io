@@ -3,32 +3,32 @@ title = "Auto-install system dependencies for Ruby on Rails"
 description = "Let's integrate Homebrew into our Ruby on Rails Project local set up.  There is a convention for Ruby..."
 created_at = "2022-09-22T15:37:41Z"
 edited_at = "2022-09-27T18:10:04Z"
-sync_date = "2024-05-06T12:37:06Z"
+sync_date = "2024-05-10T19:07:53Z"
 draft = false
 tags = ["ruby", "programming", "devops", "tutorial"]
 +++
 Let's integrate Homebrew into our Ruby on Rails Project local set up.
 
-There is a convention for Ruby on Rails projects to use `bin/setup` to set up and install/update required dependencies. But by default, it does not include system dependencies.
+There is a convention for Ruby on Rails projects to use `bin/setup` to set up and install/update required dependencies. But by default, it does not include system dependencies. 
 
 We are going to use [the Homebrew Bundle tool](https://github.com/Homebrew/homebrew-bundle) for this.
 
-First, we need to have a `Brewfile` with:
+First, we need to have a `Brewfile` with: 
 
 ```ruby
 # Redis - For ActionCable support (and Sidekiq, caching, etc.)
 brew "redis"
-
+    
 # PostgreSQL - brew install postgresql
 brew "postgresql"
-
+    
 # Overmind (requires tmux)
 brew "tmux"
 brew "overmind"
-
+    
 # Imagemagick or libvips - for processing images (avatars, file uploads, etc.)
 brew "vips"
-
+    
 # Yarn - for installing Javascript dependencies
 brew "yarn"
 ```

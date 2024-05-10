@@ -3,7 +3,7 @@ title = "Custom ordering without custom SQL with Ruby on Rails 7"
 description = "The problem It's a common case for Rails applications to have enum fields on a model like:    class..."
 created_at = "2023-11-24T11:37:01Z"
 edited_at = "2024-05-06T11:12:31Z"
-sync_date = "2024-05-06T12:36:15Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["ruby", "rails", "webdev", "sql"]
 +++
@@ -38,12 +38,12 @@ Review.in_order_of(
 ```
 Which translates to SQL query like:
 ```sql
-SELECT "reviews".* FROM "reviews"
-WHERE "reviews"."status" IN (2, 0, 1)
+SELECT "reviews".* FROM "reviews" 
+WHERE "reviews"."status" IN (2, 0, 1) 
 ORDER BY CASE "reviews"."status"
-  WHEN 2 THEN 1
-  WHEN 0 THEN 2
-  WHEN 1 THEN 3
+  WHEN 2 THEN 1 
+  WHEN 0 THEN 2 
+  WHEN 1 THEN 3 
 END ASC
 ```
 This works well, as long as we don't have/care about reviews with `NULL` as their status.
@@ -55,8 +55,8 @@ Review.in_order_of(
 ```
 Following SQL would be created:
 ```sql
-SELECT "reviews".* FROM "reviews"
-WHERE "reviews"."status" IN (NULL, 2, 0, 1)
+SELECT "reviews".* FROM "reviews" 
+WHERE "reviews"."status" IN (NULL, 2, 0, 1) 
 ORDER BY CASE "reviews"."status"
   WHEN NULL THEN 1
   WHEN 2 THEN 2
@@ -69,12 +69,12 @@ But since `NULL` in SQL is a special value and `NULL != NULL`, then this query s
 **The improvement**
 Ruby on Rails 7.0.7 further improves the method: now it correctly handles the `NULL` values, so the resulting query would be:
 ```sql
-SELECT "reviews".* FROM "reviews"
+SELECT "reviews".* FROM "reviews" 
 WHERE (
   "reviews"."status" IN (2, 0, 1)
   OR "reviews"."status" IS NULL
 )
-ORDER BY CASE
+ORDER BY CASE 
   WHEN "reviews"."status" IS NULL THEN 1
   WHEN "reviews"."status" = 2 THEN 2
   WHEN "reviews"."status" = 0 THEN 3

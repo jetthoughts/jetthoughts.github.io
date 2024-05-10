@@ -3,7 +3,7 @@ title = "Improving Ruby on Rails Test Suite Performance by Disabling Animations"
 description = "Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may..."
 created_at = "2023-08-07T10:41:24Z"
 edited_at = ""
-sync_date = "2024-05-06T12:36:49Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["programming", "tutorial", "productivity", "testing"]
 +++

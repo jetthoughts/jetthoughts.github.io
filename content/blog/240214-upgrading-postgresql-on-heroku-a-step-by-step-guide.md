@@ -3,7 +3,7 @@ title = "Upgrading PostgreSQL on Heroku: A Step-by-Step Guide"
 description = "Are you looking to upgrade your PostgreSQL database on Heroku? Whether it's for performance..."
 created_at = "2024-02-14T10:13:29Z"
 edited_at = "2024-05-06T11:12:21Z"
-sync_date = "2024-05-06T12:36:09Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["database", "heroku", "rails", "webdev"]
 +++

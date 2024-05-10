@@ -3,7 +3,7 @@ title = "Stimulus Keyboard Event Filter"
 description = "What it was In the last update of Stimulus v3.2.2, the ability to filter the event by PageDown and..."
 created_at = "2023-12-15T11:11:52Z"
 edited_at = "2024-05-06T11:12:27Z"
-sync_date = "2024-05-06T12:36:11Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = []
 +++

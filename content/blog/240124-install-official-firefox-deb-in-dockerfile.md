@@ -3,7 +3,7 @@ title = "Install Official Firefox .deb in Dockerfile"
 description = "Mozilla announced its dedicated APT repo for Debian-based distros, including Ubuntu, containing new..."
 created_at = "2024-01-24T10:58:06Z"
 edited_at = ""
-sync_date = "2024-05-06T12:36:09Z"
+sync_date = "2024-05-10T19:07:52Z"
 draft = false
 tags = ["docker", "devops", "tooling"]
 +++
