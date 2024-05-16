@@ -105,3 +105,5 @@ loop do
 
   page += 1
 end
+
+pp "TODO: Need to uncomment canonical url update when blog will be live."
