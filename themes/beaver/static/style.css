@@ -34,3 +34,102 @@ Appearance > Theme Settings > Code or create a child theme.
 .g-recaptcha {
   float: left;
 }
+
+/*Blog*/
+.blog {
+  padding: 135px 0 50px;
+}
+
+.blog img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 75vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.blog .container {
+  max-width: 700px !important;
+  margin: 0 auto !important;
+}
+
+.blog h1,
+.blog .heading {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: 700;
+  margin: 0 0 32px !important;
+}
+
+.blog h2 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  margin: 42px 0 0 !important;
+}
+
+.blog h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  margin: 26px 0 0 !important;
+}
+
+.blog blockquote {
+  margin: 42px 0 42px -20px;
+  padding: 0 0 0 23px;
+  box-shadow: inset 3px 0 0 0 #242424;
+  position: relative;
+}
+
+.blog blockquote p {
+  margin-top: 22px;
+}
+
+.blog blockquote h1,
+.blog blockquote h2,
+.blog blockquote h3 {
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 40px;
+  color: #6B6B6B;
+}
+
+.blog blockquote h1 a,
+.blog blockquote h2 a,
+.blog blockquote h3 a {
+  color: #6B6B6B;
+}
+
+.blog blockquote h1:before,
+.blog blockquote h2:before,
+.blog blockquote h3:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+
+.blog blockquote strong {
+  font-style: italic;
+}
+
+.blog p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 42px;
+}
+
+.blog p a {
+  color: inherit;
+}
+
+.blog .link {
+  color: #6B6B6B;
+  text-decoration: none;
+}

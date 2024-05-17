@@ -3,7 +3,7 @@
     <div class="fl-builder-content fl-builder-content-741 fl-builder-global-templates-locked" data-post-id="741">
         <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-efmcw3bh18k5 fl-row-default-height fl-row-align-center fl-row-has-layers"
             data-node="efmcw3bh18k5">
-            <div class="fl-row-content-wrap">
+            <div>
                 <div class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
                     <svg class="fl-builder-layer-align-bottom-center" viewBox="0 0 800 450" preserveAspectRatio="none">
 
@@ -20,52 +20,28 @@
                     <div class="fl-col-group fl-node-pr4hl12zykvn" data-node="pr4hl12zykvn">
                         <div class="fl-col fl-node-sfuljidq5a2h" data-node="sfuljidq5a2h">
                             <div class="fl-col-content fl-node-content">
-                                <div class="fl-module fl-module-heading fl-node-bh5ja2c6xuro" data-node="bh5ja2c6xuro">
-                                    <div class="fl-module-content fl-node-content">
-                                        <h1 class="fl-heading">
-                                            <span class="fl-heading-text">Blog</span>
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div class="fl-module fl-module-rich-text fl-node-mrsav8gcfhel"
-                                    data-node="mrsav8gcfhel">
-                                    <div class="fl-module-content fl-node-content">
-                                        <div class="fl-rich-text">
-                                            <p>Browse through our blog page filled with updated information and the
-                                                latest tips to help you achieve your goals.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fl-module fl-module-pp-content-grid fl-node-o6rwlh2bvzie"
+
+                                <div class="blog fl-module fl-module-pp-content-grid fl-node-o6rwlh2bvzie"
                                     data-node="o6rwlh2bvzie">
-                                    <div class="fl-module-content fl-node-content">
+                                    <div class="container fl-module-content fl-node-content">
+                                      <h1 class="heading">Blog</h1>
+                                      <p>Browse through our blog page filled with updated information and the latest tips to help you achieve your goals.</p>
                                         <div class="pp-posts-wrapper">
 
                                           {{ range where site.RegularPages "Type" "blog" }}
-                                            <article>
-                                              <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                                              <time> {{ .Params.created_at }} </time><br />
-                                              {{ .Summary }}
-                                            </article>
+                                            <a class="link" href="{{ .Permalink }}">
+                                              <article>
+                                                <h2>{{ .Title }}</h2>
+                                                {{ .Summary }}
+                                              </article>
+                                            </a>
                                           {{ end }}
-
-                                            <div class="pp-content-grid-empty">
-                                                <p>Sorry, we couldn't find any posts. Please try a different search.</p>
-                                                <form aria-label="Search" method="get" role="search"
-                                                    action="{{ absURL "" }}"
-                                                    title="Type and press Enter to search." data-hs-cf-bound="true">
-                                                    <input aria-label="Search" type="search"
-                                                        class="fl-search-input form-control" name="s"
-                                                        placeholder="Search" value=""
-                                                        onfocus="if (this.value === 'Search') { this.value = ''; }"
-                                                        onblur="if (this.value === '') this.value='Search';">
-                                                </form>
-                                            </div>
 
                                         </div>
 
                                     </div>
                                 </div>
+
                                 <div class="fl-module fl-module-heading fl-node-g39fdkhsc8je" data-node="g39fdkhsc8je">
                                     <div class="fl-module-content fl-node-content">
                                         <h2 class="fl-heading">
