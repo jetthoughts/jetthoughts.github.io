@@ -106,11 +106,11 @@ class SaveArticleToMarkdown
   end
 
   def read_csv
-    CSV.read(File.expand_path('../blog-urls.csv', __dir__), headers: false)
+    CSV.read(File.expand_path('../devto_urls_mapping.csv', __dir__), headers: false)
   end
 
   def write_csv(id, slug)
-    CSV.open(File.expand_path('../blog-urls.csv', __dir__), 'a+') do |csv|
+    CSV.open(File.expand_path('../devto_urls_mapping.csv', __dir__), 'a+') do |csv|
       csv << [id, slug]
     end
   end
@@ -152,4 +152,4 @@ loop do
   page += 1
 end
 
-pp 'TODO: Need to uncomment canonical url update when blog will be live.'
+puts 'TODO: Need to uncomment canonical url update when blog will be live.'
