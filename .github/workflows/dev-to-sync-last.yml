@@ -7,10 +7,6 @@ name: Sync last dev.to articles
 on:
   workflow_dispatch:
 
-defaults:
- run:
-  working-directory: ./app
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   run_sync:
@@ -20,6 +16,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
+    - name: Debug information
+      run: ls -a
     - name: Make script executable
       run: chmod +x bin/from_devto
     - name: Create content/blog catalog
