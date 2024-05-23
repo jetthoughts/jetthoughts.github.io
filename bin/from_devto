@@ -5,6 +5,8 @@ class SaveArticleToMarkdown
   require 'time'
   require 'net/http'
   require 'json'
+  require 'csv'
+  require 'yaml'
 
   DEV_TO_API_HOST = 'https://dev.to/api/articles/jetthoughts/'.freeze
   JT_BLOG_HOST = 'https://jetthoughts.github.io/blog/'.freeze
@@ -20,9 +22,18 @@ class SaveArticleToMarkdown
 
   def call
     data = fetch_article_data
+    set_custom_filename(data)
     save_to_md_file(data)
     update_canonical_url_on_dev_to(data)
     fill_seo_attributes(data)
+  end
+
+  def set_custom_filename(data)
+    file = find_file_with_id(data['id'])
+
+    return if file.nil?
+
+    File.rename(file, 'content/blog/' + slug(data) + File.extname(file))
   end
 
   def fetch_article_data
@@ -32,21 +43,31 @@ class SaveArticleToMarkdown
   end
 
   def save_to_md_file(data)
-    File.open(stored_post_path_for(data), 'w') { |file| file.write(data['body_markdown']) }
+    local_article = find_file_with_id(data['id'])
+    File.open(local_article || stored_post_path_for(data), 'w') { |file| file.write(data['body_markdown']) }
     puts "File #{slug(data)}.md successfully created."
   end
 
   def stored_post_path_for(data)
-    __dir__ + "/../content/blog/#{slug(data)}.md"
+    __dir__ + "/../content/blog/" + slug(data) + ".md"
   end
 
   def slug(data)
-    [data['slug'].split('-')[0..-2], data['tags'][0], data['tags'][1]]
-      .flatten
-      .uniq
-      .filter { |segment| !USELESS_WORDS.include?(segment) }
-      .compact
-      .join('-')
+    csv_data = read_csv
+    row = csv_data.find { |r| r[0] == data['id'].to_s }
+
+    if row
+      row[1]
+    else
+      generated_slug = [data['slug'].split('-')[0..-2], data['tags'][0], data['tags'][1]]
+                       .flatten
+                       .uniq
+                       .filter { |segment| !USELESS_WORDS.include?(segment) }
+                       .compact
+                       .join('-')
+      write_csv(data['id'], generated_slug)
+      generated_slug
+    end
   end
 
   def update_canonical_url_on_dev_to(data)
@@ -83,6 +104,24 @@ class SaveArticleToMarkdown
       file.write(markdown)
     end
   end
+
+  def read_csv
+    CSV.read(File.expand_path('../devto_urls_mapping.csv', __dir__), headers: false)
+  end
+
+  def write_csv(id, slug)
+    CSV.open(File.expand_path('../devto_urls_mapping.csv', __dir__), 'a+') do |csv|
+      csv << [id, slug]
+    end
+  end
+
+  def find_file_with_id(id)
+    Dir.glob('content/blog/*.md').each do |filename|
+      data = YAML.load_file(filename)
+      return filename if data['id'] == id
+    end
+    nil
+  end
 end
 
 page = 1
@@ -113,4 +152,4 @@ loop do
   page += 1
 end
 
-pp "TODO: Need to uncomment canonical url update when blog will be live."
+puts 'TODO: Need to uncomment canonical url update when blog will be live.'

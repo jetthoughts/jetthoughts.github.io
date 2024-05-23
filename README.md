@@ -73,3 +73,10 @@ To download all new posts and their updates from dev.to need to run
 ```bash
 bin/from_devto -f
 ```
+
+## How to set custom urls for posts
+
+1. Open `devto_urls_mapping.csv`
+2. Change the URLs that you want to update (you should not change the first number in the line, this is the foreign key for the article on dev.to )
+3. Save `devto_urls_mapping.csv`
+4. Run `bin/from_devto -f`
