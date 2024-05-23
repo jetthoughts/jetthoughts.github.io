@@ -6,14 +6,12 @@
             <div class="fl-row-content-wrap">
                 <div class="blog fl-row-content fl-row-fixed-width fl-node-content">
 
-                    <div class="fl-col-group fl-node-pr4hl12zykvn" data-node="pr4hl12zykvn">
+                    <div class="container fl-col-group fl-node-pr4hl12zykvn" data-node="pr4hl12zykvn">
                         <div class="fl-col fl-node-sfuljidq5a2h" data-node="sfuljidq5a2h">
                             <div class="fl-col-content fl-node-content">
                                 <div class="fl-module fl-module-heading fl-node-bh5ja2c6xuro" data-node="bh5ja2c6xuro">
                                     <div class="fl-module-content fl-node-content">
-                                        <h1 class="fl-heading">
-                                            <span class="fl-heading-text">Blog</span>
-                                        </h1>
+                                        <h1 class="fl-heading">Blog</h1>
                                     </div>
                                 </div>
                                 <div class="fl-module fl-module-rich-text fl-node-mrsav8gcfhel"
@@ -29,12 +27,15 @@
                                     data-node="o6rwlh2bvzie">
                                     <div class="fl-module-content fl-node-content">
                                         <div class="pp-posts-wrapper">
-                                          {{ range .Paginator.Pages }}
-                                            <article>
-                                              <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                                              <time>{{ .Params.created_at }}</time><br />
-                                              {{ .Summary }}
-                                            </article>
+                                          {{ range where site.RegularPages "Type" "blog" }}
+                                            <a class="link" href="{{ .Permalink }}">
+                                              <article>
+                                                <h2>{{ .Title }}</h2>
+                                                {{ .Summary }}
+                                              </article>
+                                              {{ $t := time.AsTime .Params.created_at }}
+                                              {{ $t.Format "Jan 2, 2006" }}
+                                            </a>
                                           {{ end }}
 
                                           {{ partial "pagination.html" . }}
