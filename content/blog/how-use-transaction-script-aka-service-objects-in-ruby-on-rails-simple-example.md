@@ -1,15 +1,15 @@
-+++
-dev_to_id = 399009
-title = "How to use a Transaction Script(aka Service Objects) in Ruby on Rails. Simple example"
-description = "The logic of small applications can be present as a series of transactions. Using the Transaction..."
-created_at = "2020-07-15T15:47:10Z"
-edited_at = "2024-05-20T10:12:49Z"
-sync_date = "2024-05-23T09:04:24Z"
-draft = false
-tags = ["ruby", "rails", "python", "javascript"]
-canonical_url = "https://jtway.co/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-161b7e228942"
-slug = "how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example"
-+++
+---
+dev_to_id: 399009
+title: "How to use a Transaction Script(aka Service Objects) in Ruby on Rails. Simple example"
+description: "The logic of small applications can be present as a series of transactions. Using the Transaction..."
+created_at: "2020-07-15T15:47:10Z"
+edited_at: "2024-05-20T10:12:49Z"
+sync_date: "2024-05-24T11:31:12Z"
+draft: false
+tags: ["ruby", "rails", "python", "javascript"]
+canonical_url: "https://jtway.co/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-161b7e228942"
+slug: "how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example"
+---
 The logic of small applications can be present as a series of transactions. Using the Transaction Scripts pattern, we get an application that is easier to maintain, to cover with tests and to scale.
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/5ch3urm1ngwqz16vdg8m.png)
@@ -27,7 +27,7 @@ module Api
     def update
       @user = User.find(params['user_id'])
       @post = Post.find(params['post_id'])
-
+      
       like = @post.likes.find_or_initialize_by(user: @user)
 
       if like.persisted?
