@@ -26,7 +26,6 @@ jobs:
         run: chmod +x bin/from_devto
       - name: Run sync script
         run: bin/from_devto -f
-              - name: Build with Hugo
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
