@@ -4,7 +4,7 @@ title: "What activities are expected from a remote developer for effective colla
 description: "In order to build trust relationships with remote non-technical founders, we designed the..."
 created_at: "2024-05-14T11:22:54Z"
 edited_at: "2024-05-14T11:23:35Z"
-sync_date: "2024-05-24T15:39:21Z"
+sync_date: "2024-05-24T16:04:32Z"
 draft: false
 tags: ["development", "process", "remote", "tips"]
 canonical_url: "https://jtway.co/what-activities-are-expected-from-remote-developer-9dca8d192955"

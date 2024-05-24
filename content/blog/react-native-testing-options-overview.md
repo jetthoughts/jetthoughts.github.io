@@ -4,7 +4,7 @@ title: "React Native Testing Options Overview"
 description: "After investigating 100 articles about testing React Native applications I detected 2 main methods of..."
 created_at: "2024-05-15T06:05:38Z"
 edited_at: "2024-05-15T06:07:04Z"
-sync_date: "2024-05-24T15:39:17Z"
+sync_date: "2024-05-24T16:04:29Z"
 draft: false
 tags: ["testing", "react", "jest", "detox"]
 canonical_url: "https://jtway.co/react-native-testing-options-overview-3b1d55e6e6f3"

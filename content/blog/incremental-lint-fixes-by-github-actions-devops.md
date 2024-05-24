@@ -4,7 +4,7 @@ title: "Incremental lint fixes by GitHub Actions"
 description: "How do you apply new lint rules to the legacy project with active development? Have you added..."
 created_at: "2022-09-09T18:50:36Z"
 edited_at: "2022-09-13T13:29:50Z"
-sync_date: "2024-05-24T15:39:24Z"
+sync_date: "2024-05-24T16:04:33Z"
 draft: false
 tags: ["devops", "github", "ruby", "codequality"]
 canonical_url: "https://jtway.co/incremental-lint-fixes-by-github-actions-73f6c141bba8"

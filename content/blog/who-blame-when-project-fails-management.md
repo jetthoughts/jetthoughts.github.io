@@ -4,7 +4,7 @@ title: "Who is to blame when a project fails?"
 description: "Who is to blame when a project fails?   Large projects continue to fail, often with..."
 created_at: "2024-05-15T07:59:15Z"
 edited_at: "2024-05-15T07:59:56Z"
-sync_date: "2024-05-24T15:39:15Z"
+sync_date: "2024-05-24T16:04:28Z"
 draft: false
 tags: ["blame", "management", "startup", "workflow"]
 canonical_url: "https://jtway.co/who-is-to-blame-when-a-project-fails-595d683da73d"

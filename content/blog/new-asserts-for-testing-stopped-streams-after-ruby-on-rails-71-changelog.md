@@ -4,7 +4,7 @@ title: "New asserts for testing stopped streams after Ruby on Rails 7.1."
 description: "Previously, developers encountered a significant challenge verifying if streams ceased operation..."
 created_at: "2024-05-13T15:10:06Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:21Z"
+sync_date: "2024-05-24T16:04:32Z"
 draft: false
 tags: ["changelog", "testing", "rails"]
 canonical_url: "https://dev.to/jetthoughts/new-asserts-for-testing-stopped-streams-after-ruby-on-rails-71-542b"

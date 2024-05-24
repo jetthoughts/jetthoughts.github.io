@@ -4,7 +4,7 @@ title: "Who is to blame when a project fails?"
 description: "Large projects continue to fail, often with disastrous results for the organizations involved. Do you..."
 created_at: "2020-09-22T07:38:55Z"
 edited_at: "2020-12-18T12:48:33Z"
-sync_date: "2024-05-24T15:39:27Z"
+sync_date: "2024-05-24T16:04:35Z"
 draft: false
 tags: ["blame", "blamegame", "projectfailure"]
 canonical_url: "https://jtway.co/who-is-to-blame-when-a-project-fails-595d683da73d?source=friends_link&sk=e4169e6aa83197bad04e56b53037805a"

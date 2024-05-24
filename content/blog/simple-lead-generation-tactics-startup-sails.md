@@ -4,7 +4,7 @@ title: "Simple Lead Generation Tactics"
 description: "How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build..."
 created_at: "2024-05-14T12:48:39Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:19Z"
+sync_date: "2024-05-24T16:04:31Z"
 draft: false
 tags: ["startup", "sails", "tutorial"]
 canonical_url: "https://jtway.co/simple-lead-generation-tactics-d152448e0569"

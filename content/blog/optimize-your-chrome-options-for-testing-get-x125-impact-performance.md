@@ -4,7 +4,7 @@ title: "Optimize your Chrome options for testing to get x1.25 impact"
 description: "🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀  Are you looking to supercharge your..."
 created_at: "2023-08-05T13:23:55Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:23Z"
+sync_date: "2024-05-24T16:04:32Z"
 draft: false
 tags: ["testing", "performance", "productivity", "browser"]
 canonical_url: "https://pftg.medium.com/4f19f071bf45?source=friends_link&sk=e1193159f391a098954c7a41230a704b"

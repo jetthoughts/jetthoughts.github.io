@@ -4,7 +4,7 @@ title: "How To Setup Default Values For Attributes In Ruby On Rails"
 description: "Have you ever thought that setting default values for attributes in Ruby on Rails could be..."
 created_at: "2022-07-19T06:01:04Z"
 edited_at: "2022-10-03T13:55:41Z"
-sync_date: "2024-05-24T15:39:25Z"
+sync_date: "2024-05-24T16:04:34Z"
 draft: false
 tags: ["ruby", "programming", "tutorial", "beginners"]
 canonical_url: "https://jtway.co/how-to-setup-default-values-for-attributes-in-ruby-on-rails-dd1d2ba38b82?source=friends_link&sk=4e07feac35fb0ee071003b191873d999"

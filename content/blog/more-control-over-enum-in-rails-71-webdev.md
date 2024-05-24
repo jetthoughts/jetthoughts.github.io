@@ -4,7 +4,7 @@ title: "More control over enum in Rails 7.1"
 description: "ActiveRecord::Enum in Rails have long been a convenient tool for representing a set of symbolic..."
 created_at: "2024-02-28T09:32:44Z"
 edited_at: "2024-05-10T19:28:05Z"
-sync_date: "2024-05-24T15:39:22Z"
+sync_date: "2024-05-24T16:04:32Z"
 draft: false
 tags: ["rails", "webdev", "ruby"]
 canonical_url: "https://jtway.co/more-control-over-enum-in-rails-7-1-bb02fbc3d252"

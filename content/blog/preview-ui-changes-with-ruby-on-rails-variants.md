@@ -4,7 +4,7 @@ title: "Preview UI changes with Ruby on Rails variants"
 description: "When implementing new design for a live application we usually don’t want our users to see an..."
 created_at: "2022-06-08T20:15:39Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:26Z"
+sync_date: "2024-05-24T16:04:34Z"
 draft: false
 tags: ["rails", "ruby", "webdev"]
 canonical_url: "https://jtway.co/preview-ui-changes-with-ruby-on-rails-variants-527c13bf7fd0"

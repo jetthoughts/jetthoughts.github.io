@@ -4,7 +4,7 @@ title: "How To Write The Right Content For Your Article"
 description: "There are moments when you’re full of motivation, ideas come up with your mind and straight onto the..."
 created_at: "2024-05-15T07:00:58Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:16Z"
+sync_date: "2024-05-24T16:04:29Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
 canonical_url: "https://jtway.co/how-to-write-the-right-content-for-your-article-e5075ad0274f"

@@ -4,7 +4,7 @@ title: "Auto-install system dependencies for Ruby on Rails"
 description: "Let's integrate Homebrew into our Ruby on Rails Project local set up.  There is a convention for Ruby..."
 created_at: "2022-09-22T15:37:41Z"
 edited_at: "2022-09-27T18:10:04Z"
-sync_date: "2024-05-24T15:39:24Z"
+sync_date: "2024-05-24T16:04:33Z"
 draft: false
 tags: ["ruby", "programming", "devops", "tutorial"]
 canonical_url: "https://jtway.co/auto-install-system-dependencies-for-ruby-on-rails-4a19c22b6d49"

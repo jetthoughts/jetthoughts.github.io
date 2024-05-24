@@ -4,7 +4,7 @@ title: "Services and tools to automatize development for the remote teams"
 description: "We save a lot of time on development and create better products due to well-formed..."
 created_at: "2024-05-15T06:02:44Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:17Z"
+sync_date: "2024-05-24T16:04:30Z"
 draft: false
 tags: ["workflow", "automation", "agile", "development"]
 canonical_url: "https://jtway.co/services-and-tools-we-use-for-development-2749af5ad08a"

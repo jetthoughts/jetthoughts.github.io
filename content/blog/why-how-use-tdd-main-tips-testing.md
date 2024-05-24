@@ -4,7 +4,7 @@ title: "Why and how to use TDD. Main tips"
 description: "How to start developing the component from scratch? How to know what architecture it should have? Wha..."
 created_at: "2020-12-11T12:02:25Z"
 edited_at: "2020-12-18T12:23:47Z"
-sync_date: "2024-05-24T15:39:27Z"
+sync_date: "2024-05-24T16:04:35Z"
 draft: false
 tags: ["tdd", "testing", "programming", "development"]
 canonical_url: "https://jtway.co/why-and-how-to-use-tdd-main-tips-976b3a6edebb"

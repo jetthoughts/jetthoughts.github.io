@@ -4,7 +4,7 @@ title: "Develop a Minimalistic Process for Development Teams to Innovate"
 description: "I just finished reading \"Continuous Discovery Habits: Discover Products That Create Customer Value..."
 created_at: "2023-12-06T09:20:12Z"
 edited_at: "2023-12-06T09:22:44Z"
-sync_date: "2024-05-24T15:39:22Z"
+sync_date: "2024-05-24T16:04:32Z"
 draft: false
 tags: ["startup", "productivity"]
 canonical_url: "https://dev.to/jetthoughts/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-1fm7"

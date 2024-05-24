@@ -4,7 +4,7 @@ title: "Rails virtual attributes use cases"
 description: "You want to keep some data but do not want to create the new column in the database? Your data should..."
 created_at: "2024-05-14T13:57:52Z"
 edited_at: "2024-05-14T13:59:19Z"
-sync_date: "2024-05-24T15:39:19Z"
+sync_date: "2024-05-24T16:04:30Z"
 draft: false
 tags: ["rails", "ruby", "tutorial", "webdev"]
 canonical_url: "https://jtway.co/rails-virtual-attributes-use-cases-cf33bd45e2a4"

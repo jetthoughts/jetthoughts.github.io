@@ -4,7 +4,7 @@ title: "Migrate from Sidekiq to Sidekiq.cr in Rails application"
 description: "Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to..."
 created_at: "2024-05-15T07:33:16Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:16Z"
+sync_date: "2024-05-24T16:04:29Z"
 draft: false
 tags: ["tdd", "testing", "development", "tutorial"]
 canonical_url: "https://jtway.co/migrate-from-sidekiq-to-sidekiq-cr-in-rails-application-8d26674d9e2a"

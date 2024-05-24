@@ -4,7 +4,7 @@ title: "Tips to attract readers to read your post"
 description: "Do you know how to keep readers’ attention? We had been experimenting with different ways to make..."
 created_at: "2024-05-14T11:25:32Z"
 edited_at: "2024-05-14T11:30:39Z"
-sync_date: "2024-05-24T15:39:21Z"
+sync_date: "2024-05-24T16:04:31Z"
 draft: false
 tags: ["blogging", "tips", "writing"]
 canonical_url: "https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8"

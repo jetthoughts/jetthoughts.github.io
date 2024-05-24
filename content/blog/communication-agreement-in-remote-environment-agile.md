@@ -4,7 +4,7 @@ title: "Communication Agreement in a remote environment"
 description: "Communication Agreement in a remote environment   How to manage tasks remotely? How to build..."
 created_at: "2020-09-22T08:10:11Z"
 edited_at: "2024-05-22T09:28:13Z"
-sync_date: "2024-05-24T15:39:27Z"
+sync_date: "2024-05-24T16:04:35Z"
 draft: false
 tags: ["agile", "agreement", "remote", "startup"]
 canonical_url: "https://jtway.co/communication-agreement-in-a-remote-environment-29ffb981ea0e"

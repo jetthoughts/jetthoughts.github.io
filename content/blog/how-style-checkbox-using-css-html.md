@@ -4,7 +4,7 @@ title: "How to style a checkbox using CSS"
 description: "In this post I’l show you exactly how to make awesome checkboxes with just CSS.    &lt;div&gt;  ..."
 created_at: "2022-06-09T09:02:15Z"
 edited_at: "2024-05-10T19:48:48Z"
-sync_date: "2024-05-24T15:39:26Z"
+sync_date: "2024-05-24T16:04:34Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
 canonical_url: "https://jtway.co/how-to-style-a-checkbox-using-css-e04b7e80992b"

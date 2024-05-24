@@ -4,7 +4,7 @@ title: "How to avoid N+1 query using SQL views (materialized) in Rails applicati
 description: "Consider the way to reduce the queries when calculating the average values and find the..."
 created_at: "2024-05-14T14:05:48Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:19Z"
+sync_date: "2024-05-24T16:04:30Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "sql"]
 canonical_url: "https://jtway.co/how-to-avoid-n-1-query-using-sql-views-materialized-in-rails-application-7cf415cd112f"

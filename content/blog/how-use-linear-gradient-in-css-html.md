@@ -4,7 +4,7 @@ title: "How to use Linear-Gradient in CSS"
 description: "The CSS linear-gradient function creates an image that consists of a progressive transition between..."
 created_at: "2022-06-27T21:31:18Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:25Z"
+sync_date: "2024-05-24T16:04:34Z"
 draft: false
 tags: ["html", "css", "webdev"]
 canonical_url: "https://jtway.co/how-to-use-linear-gradient-in-css-4a7c0deaae75"

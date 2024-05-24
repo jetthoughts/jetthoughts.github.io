@@ -4,7 +4,7 @@ title: "Regular automatic dependencies update with CircleCI"
 description: "Resolving the auto-upgrade issue will allow having edge gems versions with little to no..."
 created_at: "2024-05-14T14:18:44Z"
 edited_at: "2024-05-14T15:51:40Z"
-sync_date: "2024-05-24T15:39:18Z"
+sync_date: "2024-05-24T16:04:30Z"
 draft: false
 tags: ["github", "circle", "ci", "rails"]
 canonical_url: "https://jtway.co/regular-automatic-dependencies-update-with-circleci-90a71893aa1a"

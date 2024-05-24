@@ -4,11 +4,11 @@ title: "Generating random strings with Ruby"
 description: "When you need to generate a random alphanumeric string of a specified length in ruby you have a..."
 created_at: "2022-06-03T06:57:33Z"
 edited_at: "2022-06-06T11:35:15Z"
-sync_date: "2024-05-24T15:39:26Z"
+sync_date: "2024-05-24T16:04:34Z"
 draft: false
 tags: ["ruby", "webdev"]
 canonical_url: "https://jtway.co/generating-random-strings-with-ruby-a2f4c6f1a7a8"
-slug: "generating-random-strings-with-ruby-webdev-development"
+slug: "generating-random-strings-with-ruby-webdev"
 ---
 When you need to generate a random alphanumeric string of a specified length in ruby you have a couple of options.
 

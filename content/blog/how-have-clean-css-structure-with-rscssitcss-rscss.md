@@ -4,7 +4,7 @@ title: "How to have a clean CSS structure with RSCSS/ITCSS"
 description: "Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take..."
 created_at: "2024-05-15T07:45:28Z"
 edited_at: ""
-sync_date: "2024-05-24T15:39:15Z"
+sync_date: "2024-05-24T16:04:28Z"
 draft: false
 tags: ["css", "rscss", "frontend", "tutorial"]
 canonical_url: "https://jtway.co/how-to-have-clean-css-structure-with-rscss-itcss-2afc2e309126"

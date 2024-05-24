@@ -4,7 +4,7 @@ title: "What are the most common misconceptions about remote work?"
 description: "A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the..."
 created_at: "2024-05-14T13:38:49Z"
 edited_at: "2024-05-14T13:39:51Z"
-sync_date: "2024-05-24T15:39:19Z"
+sync_date: "2024-05-24T16:04:30Z"
 draft: false
 tags: ["remote", "misconception", "myths"]
 canonical_url: "https://jtway.co/what-are-the-most-common-misconceptions-about-remote-work-62741844e78"
