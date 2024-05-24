@@ -4,7 +4,7 @@ title: "Speed up GitHub PR’s review of your React applications"
 description: "Would you like to speed up PR’s review of React application, when you use Jest snapshot..."
 created_at: "2024-05-15T05:55:46Z"
 edited_at: "2024-05-15T06:00:03Z"
-sync_date: "2024-05-24T15:34:18Z"
+sync_date: "2024-05-24T15:39:18Z"
 draft: false
 tags: ["development", "tutorial", "github", "jest"]
 canonical_url: "https://jtway.co/speed-up-github-prs-review-of-your-react-applications-cf3786260302"

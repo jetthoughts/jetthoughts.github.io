@@ -4,7 +4,7 @@ title: "What is the difference between joins and includes in Rails ActiveRecord?
 description: "The main difference is that when using includes the eager loading is used. Eager loading allows you..."
 created_at: "2022-07-14T11:02:17Z"
 edited_at: "2022-09-27T12:48:47Z"
-sync_date: "2024-05-24T15:34:23Z"
+sync_date: "2024-05-24T15:39:25Z"
 draft: false
 tags: ["rails", "ruby", "database", "webdev"]
 canonical_url: "https://jtway.co/what-is-the-difference-between-joins-and-includes-in-rails-activerecord-64cdbffe60b6"

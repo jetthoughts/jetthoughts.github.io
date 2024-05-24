@@ -4,7 +4,7 @@ title: "Where to read ENV variables in Ruby on Rails application"
 description: "The ENV variables should not be used outside the config folder. This rule will allow the..."
 created_at: "2024-05-14T12:25:22Z"
 edited_at: "2024-05-14T12:25:45Z"
-sync_date: "2024-05-24T15:34:20Z"
+sync_date: "2024-05-24T15:39:20Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "bestpractices"]
 canonical_url: "https://jtway.co/env-variables-in-ruby-on-rails-application-5552fb963051"

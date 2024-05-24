@@ -4,7 +4,7 @@ title: "Things that remote teams expect from the product owner"
 description: "Modern digital product development methods require a flexible approach. It is much more efficient..."
 created_at: "2024-05-15T07:41:57Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:17Z"
+sync_date: "2024-05-24T15:39:15Z"
 draft: false
 tags: ["startup", "remote", "tips", "management"]
 canonical_url: "https://jtway.co/things-that-remote-teams-expect-from-the-product-owner-f253e429ba66"

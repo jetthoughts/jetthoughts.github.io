@@ -4,7 +4,7 @@ title: "How to know what your team is doing?"
 description: "What techniques do you use to work with the team in an async, remote environment? How to..."
 created_at: "2024-05-15T07:19:53Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:18Z"
+sync_date: "2024-05-24T15:39:16Z"
 draft: false
 tags: ["remote", "startup", "development", "process"]
 canonical_url: "https://jtway.co/how-to-know-what-your-team-is-doing-816c2697c189"

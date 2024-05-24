@@ -4,7 +4,7 @@ title: "4 Tricks to Write Catchy Headlines"
 description: "How to improve your writing, and create not just a good headline, but a catchy one? No matter what..."
 created_at: "2024-05-14T13:53:54Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:19Z"
+sync_date: "2024-05-24T15:39:19Z"
 draft: false
 tags: ["contentwriting", "headlines", "blog", "writing"]
 canonical_url: "https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222"

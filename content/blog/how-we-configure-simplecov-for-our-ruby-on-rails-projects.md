@@ -4,7 +4,7 @@ title: "How we configure Simplecov for our Ruby on Rails projects."
 description: "Here’s a step-by-step guide to setting up simplecov with explanations of what each part of the code..."
 created_at: "2023-11-21T07:40:02Z"
 edited_at: "2024-05-10T19:33:02Z"
-sync_date: "2024-05-24T15:34:21Z"
+sync_date: "2024-05-24T15:39:22Z"
 draft: false
 tags: ["ruby", "rails", "testing", "tutorial"]
 canonical_url: "https://jtway.co/how-we-configure-simplecov-for-our-ruby-on-rails-projects-21e5a4122a50"

@@ -4,7 +4,7 @@ title: "Benefits of working remotely"
 description: "Nowadays, remote work gains more and more prominence. Many successful companies let their employees..."
 created_at: "2024-05-14T11:38:52Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:20Z"
+sync_date: "2024-05-24T15:39:21Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
 canonical_url: "https://jtway.co/benefits-of-working-remotely-4c36456a9adb"

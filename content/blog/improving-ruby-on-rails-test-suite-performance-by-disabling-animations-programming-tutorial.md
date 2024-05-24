@@ -4,7 +4,7 @@ title: "Improving Ruby on Rails Test Suite Performance by Disabling Animations"
 description: "Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may..."
 created_at: "2023-08-07T10:41:24Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:21Z"
+sync_date: "2024-05-24T15:39:22Z"
 draft: false
 tags: ["programming", "tutorial", "productivity", "testing"]
 canonical_url: "https://jtway.co/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-2950dca86b45?source=friends_link&sk=c12f25c666e14da6b03516a015299694"

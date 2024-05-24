@@ -4,7 +4,7 @@ title: "Upgrading PostgreSQL on Heroku: A Step-by-Step Guide"
 description: "Are you looking to upgrade your PostgreSQL database on Heroku? Whether it's for performance..."
 created_at: "2024-02-14T10:13:29Z"
 edited_at: "2024-05-10T19:28:42Z"
-sync_date: "2024-05-24T15:34:21Z"
+sync_date: "2024-05-24T15:39:22Z"
 draft: false
 tags: ["database", "heroku", "rails", "webdev"]
 canonical_url: "https://jtway.co/upgrading-postgresql-on-heroku-a-step-by-step-guide-bbcb4e63adb3"

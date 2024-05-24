@@ -4,7 +4,7 @@ title: "We got 3 main principles for writing Technical Blog posts. Here’s what
 description: "After 100 articles of the research on how to write Technical Blog post simple and quickly, without..."
 created_at: "2024-05-14T11:40:41Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:20Z"
+sync_date: "2024-05-24T15:39:21Z"
 draft: false
 tags: ["writing", "blog", "blogposting", "principles"]
 canonical_url: "https://dev.to/jetthoughts/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-we-learned-5g39"

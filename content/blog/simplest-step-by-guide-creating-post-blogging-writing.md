@@ -4,7 +4,7 @@ title: "Simplest step by step guide creating a post"
 description: "For novice authors who are going to share their thoughts with public through the posts, we..."
 created_at: "2024-05-15T07:07:41Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:18Z"
+sync_date: "2024-05-24T15:39:16Z"
 draft: false
 tags: ["blogging", "writing", "tutorial", "guide"]
 canonical_url: "https://jtway.co/simplest-step-by-step-guide-creating-a-post-94a7fe21256d"

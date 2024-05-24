@@ -4,7 +4,7 @@ title: "Custom templates for Rails scaffolding"
 description: "Rails has a very handy tool for rapid development called scaffolding. Often programmers ignore it,..."
 created_at: "2022-10-06T09:10:00Z"
 edited_at: "2024-05-10T19:38:39Z"
-sync_date: "2024-05-24T15:34:22Z"
+sync_date: "2024-05-24T15:39:24Z"
 draft: false
 tags: ["rails", "ruby", "webdev", "programming"]
 canonical_url: "https://jtway.co/custom-templates-for-rails-scaffolding-9cb5270e3fff"

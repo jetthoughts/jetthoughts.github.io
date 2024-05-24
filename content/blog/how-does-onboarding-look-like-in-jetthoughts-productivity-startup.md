@@ -4,7 +4,7 @@ title: "How does the onboarding look like in JetThoughts?"
 description: "How does the onboarding look like in JetThoughts?   This is an onboarding checklist..."
 created_at: "2024-05-15T06:29:43Z"
 edited_at: ""
-sync_date: "2024-05-24T15:34:18Z"
+sync_date: "2024-05-24T15:39:17Z"
 draft: false
 tags: ["productivity", "startup", "remote", "onboarding"]
 canonical_url: "https://jtway.co/tried-and-tested-ways-of-onboarding-2a1038a873"

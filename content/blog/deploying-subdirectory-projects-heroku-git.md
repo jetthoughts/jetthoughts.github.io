@@ -4,7 +4,7 @@ title: "Deploying subdirectory projects to Heroku"
 description: "When you want to deploy to Heroku a project located in a Git subdirectory, simply running git push..."
 created_at: "2024-05-14T12:57:14Z"
 edited_at: "2024-05-14T12:58:58Z"
-sync_date: "2024-05-24T15:34:19Z"
+sync_date: "2024-05-24T15:39:19Z"
 draft: false
 tags: ["heroku", "git", "deployment"]
 canonical_url: "https://jtway.co/deploying-subdirectory-projects-to-heroku-f31ed65f3f2"
