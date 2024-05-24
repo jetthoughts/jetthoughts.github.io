@@ -4,7 +4,7 @@ title: "Setting Up Docker for Ruby on Rails 7"
 description: "Introduction:   Docker is essential for modern software development, ensuring a consistent..."
 created_at: "2024-03-07T13:14:02Z"
 edited_at: "2024-05-10T19:27:27Z"
-sync_date: "2024-05-24T11:40:56Z"
+sync_date: "2024-05-24T15:34:21Z"
 draft: false
 tags: ["beginners", "ruby", "docker", "postgres"]
 canonical_url: "https://jtway.co/setting-up-docker-for-ruby-on-rails-7-cd2c942c3d43"

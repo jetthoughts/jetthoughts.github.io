@@ -4,7 +4,7 @@ title: "A Practical Guide To Writing Introductions"
 description: "Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It..."
 created_at: "2024-05-14T14:14:26Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:37Z"
+sync_date: "2024-05-24T15:34:19Z"
 draft: false
 tags: ["writing", "introduction", "blogging", "blog"]
 canonical_url: "https://jtway.co/a-practical-guide-to-writing-introductions-17210d563621"

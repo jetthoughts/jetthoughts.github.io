@@ -4,7 +4,7 @@ title: "Running tests in containers with docker-compose"
 description: "The main advantages of this way are to have independent environment for the tests running..."
 created_at: "2024-05-15T07:56:17Z"
 edited_at: "2024-05-15T07:56:53Z"
-sync_date: "2024-05-24T11:40:25Z"
+sync_date: "2024-05-24T15:34:17Z"
 draft: false
 tags: ["coding", "tutorial", "docker", "testing"]
 canonical_url: "https://jtway.co/running-tests-in-containers-with-docker-compose-97480726c1e3"

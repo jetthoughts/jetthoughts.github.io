@@ -4,7 +4,7 @@ title: "5 Free tools to make the sales process easier"
 description: "What if I told you that there is no need to spend all your budget on super modern CRMs and..."
 created_at: "2024-05-14T13:47:15Z"
 edited_at: "2024-05-14T13:47:56Z"
-sync_date: "2024-05-24T11:40:44Z"
+sync_date: "2024-05-24T15:34:19Z"
 draft: false
 tags: ["sales", "leadgeneration", "productivity"]
 canonical_url: "https://jtway.co/5-free-tools-to-make-the-sales-process-easier-9e1368d41bf0"

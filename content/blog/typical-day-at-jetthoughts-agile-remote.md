@@ -4,7 +4,7 @@ title: "A typical day at JetThoughts"
 description: "In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the..."
 created_at: "2024-05-15T07:22:32Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:27Z"
+sync_date: "2024-05-24T15:34:17Z"
 draft: false
 tags: ["agile", "remote", "kanban", "process"]
 canonical_url: "https://jtway.co/a-typical-day-at-jetthoughts-5e25f5f803ce"

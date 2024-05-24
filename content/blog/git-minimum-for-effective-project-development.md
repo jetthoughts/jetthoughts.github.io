@@ -4,7 +4,7 @@ title: "Git minimum for effective project development"
 description: "Git minimum for effective project development             For beginners who are not familiar..."
 created_at: "2024-05-15T07:29:21Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:27Z"
+sync_date: "2024-05-24T15:34:17Z"
 draft: false
 tags: ["development", "git", "github", "tutorial"]
 canonical_url: "https://jtway.co/git-minimum-for-effective-project-development-841a0b865ef0"

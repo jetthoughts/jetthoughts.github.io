@@ -4,7 +4,7 @@ title: "TL;DR: Move CI/CD scripts into .automation"
 description: "Today our /bin folder has become overwhelmed with different development tools and scripts.  We put..."
 created_at: "2022-09-28T16:13:54Z"
 edited_at: "2022-10-03T14:07:12Z"
-sync_date: "2024-05-24T11:41:09Z"
+sync_date: "2024-05-24T15:34:22Z"
 draft: false
 tags: ["devops", "productivity", "tutorial", "tooling"]
 canonical_url: "https://jtway.co/tl-dr-move-ci-cd-scripts-into-automation-d1cc627e542f"

@@ -4,7 +4,7 @@ title: "How to make truncate text in CSS"
 description: "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..."
 created_at: "2022-08-01T09:19:46Z"
 edited_at: ""
-sync_date: "2024-05-24T11:41:13Z"
+sync_date: "2024-05-24T15:34:23Z"
 draft: false
 tags: ["css", "html", "webdev"]
 canonical_url: "https://jtway.co/how-to-make-truncate-text-in-css-67c42e264680"

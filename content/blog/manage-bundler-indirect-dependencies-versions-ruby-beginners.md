@@ -4,7 +4,7 @@ title: "Manage Bundler indirect dependencies versions"
 description: "Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new..."
 created_at: "2022-05-20T16:20:34Z"
 edited_at: "2022-05-20T16:23:27Z"
-sync_date: "2024-05-24T11:41:22Z"
+sync_date: "2024-05-24T15:34:24Z"
 draft: false
 tags: ["ruby", "beginners", "tutorial"]
 canonical_url: "https://jtway.co/manage-bundler-indirect-dependencies-versions-e0ed99ac2bd5?source=friends_link&sk=443e7e5a3e4f97c6cfa99d4e42d717bd"

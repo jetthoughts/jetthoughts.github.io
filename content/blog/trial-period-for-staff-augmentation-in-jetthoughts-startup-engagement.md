@@ -4,7 +4,7 @@ title: "The Trial Period for Staff Augmentation in JetThoughts"
 description: "We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no fi..."
 created_at: "2020-09-22T07:51:20Z"
 edited_at: "2020-12-18T12:47:42Z"
-sync_date: "2024-05-24T11:41:26Z"
+sync_date: "2024-05-24T15:34:24Z"
 draft: false
 tags: ["startup", "engagement", "team", "development"]
 canonical_url: "https://jtway.co/the-trial-period-in-jetthoughts-968e7f01481f?source=friends_link&sk=56dbdb8567ab7500796037d42c80e46a"

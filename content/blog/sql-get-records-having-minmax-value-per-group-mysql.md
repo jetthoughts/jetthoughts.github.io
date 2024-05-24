@@ -4,7 +4,7 @@ title: "SQL: Get records having min/max value per group"
 description: "Here's one possible solution for a case when you need to fetch a set of records unique on one (or..."
 created_at: "2024-05-20T07:01:49Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:23Z"
+sync_date: "2024-05-24T15:34:16Z"
 draft: false
 tags: ["mysql", "sql", "postgres", "webdev"]
 canonical_url: "https://dev.to/jetthoughts/sql-get-records-having-minmax-value-per-group-2cnh"

@@ -4,7 +4,7 @@ title: "What to do for the developer when the WIP limit is reached"
 description: "Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep..."
 created_at: "2024-05-14T11:42:29Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:49Z"
+sync_date: "2024-05-24T15:34:20Z"
 draft: false
 tags: ["agile", "kanban", "management", "development"]
 canonical_url: "https://jtway.co/what-to-do-for-the-developer-when-the-wip-limit-is-reached-3dda66a6ddbf"

@@ -4,7 +4,7 @@ title: "Cons of the private chats for team collaboration"
 description: "Communication between team members is a very important part of the software development process...."
 created_at: "2024-05-15T07:34:55Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:26Z"
+sync_date: "2024-05-24T15:34:17Z"
 draft: false
 tags: ["communication", "process", "remote", "tutorial"]
 canonical_url: "https://jtway.co/cons-of-the-private-chats-for-team-collaboration-f87c8ba8e830"

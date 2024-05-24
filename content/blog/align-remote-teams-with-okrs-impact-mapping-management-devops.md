@@ -4,7 +4,7 @@ title: "Align remote teams with OKRs and Impact Mapping"
 description: "In today's fast-paced business environment, remote distributed teams are becoming increasingly..."
 created_at: "2023-08-02T11:05:40Z"
 edited_at: ""
-sync_date: "2024-05-24T11:41:05Z"
+sync_date: "2024-05-24T15:34:22Z"
 draft: false
 tags: ["management", "devops"]
 canonical_url: "https://jtway.co/align-remote-teams-with-okrs-and-impact-mapping-f7e43a65e347?source=friends_link&sk=cbf3fb6c81d2ffa6f7aac0d696f489c6"

@@ -4,7 +4,7 @@ title: "Cleaning routines to keep your project without bugs"
 description: "How to manage problems with your project? How to understand how buggy it is and address the issues..."
 created_at: "2024-05-14T12:46:10Z"
 edited_at: ""
-sync_date: "2024-05-24T11:40:46Z"
+sync_date: "2024-05-24T15:34:19Z"
 draft: false
 tags: ["agile", "bugs", "issues"]
 canonical_url: "https://jtway.co/cleaning-routines-to-keep-your-project-neat-ef2fa8dd6034"
