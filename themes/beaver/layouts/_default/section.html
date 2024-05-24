@@ -27,14 +27,15 @@
                                     data-node="o6rwlh2bvzie">
                                     <div class="fl-module-content fl-node-content">
                                         <div class="pp-posts-wrapper">
-                                          {{ range where site.RegularPages "Type" "blog" }}
+                                          {{ range .Paginator.Pages }}
                                             <a class="link" href="{{ .Permalink }}">
                                               <article>
                                                 <h2>{{ .Title }}</h2>
                                                 {{ .Summary }}
                                               </article>
-                                              {{ $t := time.AsTime .Params.created_at }}
-                                              {{ $t.Format "Jan 2, 2006" }}
+                                              {{ if .Params.created_at }}
+                                                {{ dateFormat "Jan 2, 2006" .Params.created_at }}
+                                              {{ end }}
                                             </a>
                                           {{ end }}
 

@@ -7,7 +7,7 @@ sync_date = "2024-05-23T09:04:24Z"
 draft = false
 tags = ["ruby", "rails", "python", "javascript"]
 canonical_url = "https://jtway.co/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-161b7e228942"
-slug = "200715-how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example"
+slug = "how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example"
 +++
 The logic of small applications can be present as a series of transactions. Using the Transaction Scripts pattern, we get an application that is easier to maintain, to cover with tests and to scale.
 
