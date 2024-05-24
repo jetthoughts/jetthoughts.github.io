@@ -26,4 +26,10 @@ jobs:
         run: chmod +x bin/from_devto
       - name: Run sync script
         run: bin/from_devto -f
+      - name: Commit and push if it changed
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m 'Update blog content'; git push)
 
