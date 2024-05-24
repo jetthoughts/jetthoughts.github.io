@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+    <div class="fl-builder-content fl-builder-content-741 fl-builder-global-templates-locked" data-post-id="741">
+        <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-efmcw3bh18k5 fl-row-default-height fl-row-align-center fl-row-has-layers"
+            data-node="efmcw3bh18k5">
+            <div class="fl-row-content-wrap">
+                <div class="blog fl-row-content fl-row-fixed-width fl-node-content">
+
+                    <div class="container fl-col-group fl-node-pr4hl12zykvn" data-node="pr4hl12zykvn">
+                        <div class="fl-col fl-node-sfuljidq5a2h" data-node="sfuljidq5a2h">
+                            <div class="fl-col-content fl-node-content">
+                                <div class="fl-module fl-module-heading fl-node-bh5ja2c6xuro" data-node="bh5ja2c6xuro">
+                                    <div class="fl-module-content fl-node-content">
+                                        <h1 class="fl-heading">Blog</h1>
+                                    </div>
+                                </div>
+                                <div class="fl-module fl-module-rich-text fl-node-mrsav8gcfhel"
+                                    data-node="mrsav8gcfhel">
+                                    <div class="fl-module-content fl-node-content">
+                                        <div class="fl-rich-text">
+                                            <p>Browse through our blog page filled with updated information and the
+                                                latest tips to help you achieve your goals.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fl-module fl-module-pp-content-grid fl-node-o6rwlh2bvzie"
+                                    data-node="o6rwlh2bvzie">
+                                    <div class="fl-module-content fl-node-content">
+                                        <div class="pp-posts-wrapper">
+                                          {{ range .Paginator.Pages }}
+                                            <a class="link" href="{{ .Permalink }}">
+                                              <article>
+                                                <h2>{{ .Title }}</h2>
+                                                {{ .Summary }}
+                                              </article>
+                                              {{ if .Params.created_at }}
+                                                {{ dateFormat "Jan 2, 2006" .Params.created_at }}
+                                              {{ end }}
+                                            </a>
+                                          {{ end }}
+
+                                          {{ partial "pagination.html" . }}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{{ end }}

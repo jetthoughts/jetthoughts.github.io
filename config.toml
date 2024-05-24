@@ -5,12 +5,12 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 theme = "beaver"
 enableGitInfo = true
 assetDir = "static"
-disableKinds = ["section", "taxonomy", "term"]
+disableKinds = ["taxonomy", "term"]
 [permalinks]
   pages = "/:slug/"
 
 [params]
- 
+
   email="info@jetthoughts.com"
   phone="+1 754 216 9568"
   description="JetThoughts’s expert team of developers and consultants has helped clients launch highly tailored projects, and we’d love to help you, too."
@@ -44,7 +44,7 @@ disableKinds = ["section", "taxonomy", "term"]
   description = "“JetThoughts principals are very entrepreneurial and they really understand the process of scaling and growing a business. Their commitment to a highly technical skill set with their team members has been key for us. JetThoughts is more than a contractor—they’re a trustworthy partner with impressive knowledge and skills. Currently, I’m still working with them and giving my ideas to translate into concrete actions.”"
 
 
-  
+
 [menu]
 [[menu.main]]
   identifier = "services"
