@@ -26,6 +26,20 @@ jobs:
         run: chmod +x bin/from_devto
       - name: Run sync script
         run: bin/from_devto -f
+              - name: Build with Hugo
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
       - name: Commit and push if it changed
         run: |
           git config --global user.email "action@github.com"
