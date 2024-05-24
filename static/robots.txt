@@ -1,2 +1,6 @@
-User-agent: *
-Disallow:
+User-Agent: *
+Disallow: /contact-us
+Disallow: /?s=
+Sitemap: https://jetthoughts.com/sitemap.xml
+User-Agent: GPTBot
+Disallow: /
