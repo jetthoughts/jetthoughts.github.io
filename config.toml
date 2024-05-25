@@ -5,7 +5,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 theme = "beaver"
 enableGitInfo = true
 assetDir = "static"
-disableKinds = ["section", "taxonomy", "term"]
+disableKinds = ["taxonomy", "term"]
 [permalinks]
   pages = "/:slug/"
 
