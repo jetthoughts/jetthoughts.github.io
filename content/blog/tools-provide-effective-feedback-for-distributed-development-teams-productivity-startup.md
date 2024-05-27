@@ -4,7 +4,6 @@ title: "Tools to provide effective feedback for distributed development teams"
 description: "How to share info in a remote async environment? What is the best way to keep everyone in the..."
 created_at: "2024-05-15T07:58:27Z"
 edited_at: ""
-sync_date: "2024-05-27T16:09:24Z"
 draft: false
 tags: ["productivity", "startup", "remote", "tips"]
 canonical_url: "https://jtway.co/useloom-the-best-tool-for-async-remote-communication-7bfcbbffe051"

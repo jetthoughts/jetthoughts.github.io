@@ -4,7 +4,6 @@ title: "How to handle remote services in tests"
 description: "Do you have difficulties in adding the new tests and their readability decreased due to..."
 created_at: "2024-05-15T06:53:38Z"
 edited_at: "2024-05-15T06:53:51Z"
-sync_date: "2024-05-27T16:09:25Z"
 draft: false
 tags: ["rails", "tutorial", "pattern", "ruby"]
 canonical_url: "https://jtway.co/how-to-work-with-external-services-in-tests-f06050343aeb"

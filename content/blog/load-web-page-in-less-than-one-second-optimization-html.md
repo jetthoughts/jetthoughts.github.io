@@ -4,7 +4,6 @@ title: "Load web page in less than one second"
 description: "How to improve the website load time without much effort? What optimizations and improvements can..."
 created_at: "2024-05-15T07:04:49Z"
 edited_at: "2024-05-15T07:05:10Z"
-sync_date: "2024-05-27T16:09:25Z"
 draft: false
 tags: ["optimization", "html", "frontend", "webdev"]
 canonical_url: "https://jtway.co/load-web-page-in-less-than-one-second-145bbfecff12"

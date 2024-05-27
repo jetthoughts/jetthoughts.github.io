@@ -4,7 +4,6 @@ title: "What are the next steps when your project is failing?"
 description: "Projects fail for all kinds of reasons. Customers can change their objectives, key team members can l..."
 created_at: "2020-09-22T07:32:43Z"
 edited_at: "2020-12-18T12:51:13Z"
-sync_date: "2024-05-27T16:09:30Z"
 draft: false
 tags: ["management"]
 canonical_url: "https://jtway.co/what-are-the-next-steps-when-your-project-is-failing-cb4be757101?source=friends_link&sk=54a65cad7062094fca9449533a02ea17"

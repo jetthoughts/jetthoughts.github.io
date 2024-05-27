@@ -4,7 +4,6 @@ title: "Deploying Jekyll to GitHub Pages with CircleCI 2.0"
 description: "Have you ever seen this error when you tried to deploy your Jekyll site to GitHub Pages?    One of..."
 created_at: "2024-05-15T05:49:44Z"
 edited_at: "2024-05-15T06:00:13Z"
-sync_date: "2024-05-27T16:09:26Z"
 draft: false
 tags: ["jekyll", "deploying", "ci", "circleci"]
 canonical_url: "https://jtway.co/deploying-jekyll-to-github-pages-with-circleci-2-0-3eb69324bc6e"

@@ -4,7 +4,6 @@ title: "How a large transaction can be a source of DB deadlocks and how this can
 description: "Recently in a project, we encountered the fact that sometimes we had a DB Deadlocks error. After..."
 created_at: "2023-05-01T17:46:03Z"
 edited_at: "2024-05-10T19:33:58Z"
-sync_date: "2024-05-27T16:09:28Z"
 draft: false
 tags: ["ruby", "database", "webdev", "programming"]
 canonical_url: "https://jtway.co/how-a-large-transaction-can-be-a-source-of-db-deadlocks-and-how-this-can-be-fixed-e130075226f6"

@@ -4,7 +4,6 @@ title: "Anonymous block argument in Ruby"
 description: "In the Ruby programming language, it is possible to use default block parameters instead of..."
 created_at: "2024-01-23T20:09:24Z"
 edited_at: ""
-sync_date: "2024-05-27T16:09:28Z"
 draft: false
 tags: ["ruby", "tutorial"]
 canonical_url: "https://jtway.co/anonymous-block-argument-in-ruby-70432da9b5c7"

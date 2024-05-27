@@ -4,7 +4,6 @@ title: "How to keep clean Ruby on Rails views with the Null Object pattern"
 description: "One of the most common errors developers encounter is NoMethodError. It occurs when code is..."
 created_at: "2023-02-22T12:43:10Z"
 edited_at: "2024-05-10T19:35:10Z"
-sync_date: "2024-05-27T16:09:28Z"
 draft: false
 tags: ["ruby", "rails", "webdev"]
 canonical_url: "https://jtway.co/how-to-keep-clean-ruby-on-rails-views-with-the-null-object-pattern-4b61b8f83656"

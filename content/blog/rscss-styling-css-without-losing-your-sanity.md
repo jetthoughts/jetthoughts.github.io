@@ -4,7 +4,6 @@ title: "RSCSS. Styling CSS without losing your sanity"
 description: "Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out..."
 created_at: "2024-05-14T14:03:11Z"
 edited_at: ""
-sync_date: "2024-05-27T16:09:26Z"
 draft: false
 tags: ["css", "rscss", "html", "scss"]
 canonical_url: "https://jtway.co/rscss-styling-css-without-losing-your-sanity-9e622d9f9252"

@@ -4,7 +4,6 @@ title: "How to create a technical post in a short time"
 description: "After reading thousands of posts, it’s time to share a workflow that will help those who are creating..."
 created_at: "2020-09-22T07:55:54Z"
 edited_at: "2020-12-18T12:41:52Z"
-sync_date: "2024-05-27T16:09:30Z"
 draft: false
 tags: ["writing", "blogging", "tips"]
 canonical_url: "https://jtway.co/how-to-create-a-technical-post-in-a-short-time-15d289a23636?source=friends_link&sk=b024ba9aafcf6ea4d264798afd607b52"

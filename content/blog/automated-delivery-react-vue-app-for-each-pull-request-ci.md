@@ -4,7 +4,6 @@ title: "Automated delivery React / Vue app for each Pull Request."
 description: "Would you like to speed up the development process of your React / Vue application? Make it more..."
 created_at: "2024-05-14T11:29:22Z"
 edited_at: "2024-05-14T11:30:47Z"
-sync_date: "2024-05-27T16:09:27Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
 canonical_url: "https://jtway.co/automated-delivery-react-vue-app-for-each-pull-request-38ecd4814803"

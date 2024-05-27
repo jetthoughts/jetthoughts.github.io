@@ -4,7 +4,6 @@ title: "Delivery Flow for Distributed Remote Teams"
 description: "Process which help the team make effective decisions to better live up to expectations..."
 created_at: "2024-05-14T12:11:00Z"
 edited_at: ""
-sync_date: "2024-05-27T16:09:27Z"
 draft: false
 tags: ["agile", "kanban", "startup", "development"]
 canonical_url: "https://jtway.co/delivery-flow-for-distributed-remote-teams-5218828b0d1a"

@@ -4,7 +4,6 @@ title: "Ruby on Rails Views Resources for Frontend Developer"
 description: "🚀 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
 created_at: "2023-08-04T22:31:55Z"
 edited_at: "2023-08-04T22:35:50Z"
-sync_date: "2024-05-27T16:09:28Z"
 draft: false
 tags: ["programming", "javascript", "rails", "frontend"]
 canonical_url: "https://dev.to/jetthoughts/ruby-on-rails-views-resources-for-frontend-developer-3pi9"
