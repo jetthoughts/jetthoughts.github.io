@@ -77,7 +77,7 @@ class SaveArticleToMarkdown
     http.use_ssl = true
 
     request = Net::HTTP::Put.new(uri)
-    request['api-key'] = 'dAebJE2LywhZD6xBbAfLnfRK'
+    request['api-key'] = ENV["DEVTO_API_KEY"]
     request['Content-Type'] = 'application/json'
     pp JT_BLOG_HOST + slug(data)
 
