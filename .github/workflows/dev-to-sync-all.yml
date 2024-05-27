@@ -39,6 +39,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
+      - name: Pull latest
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git pull origin master --rebase
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
