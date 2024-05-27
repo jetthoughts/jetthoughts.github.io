@@ -95,7 +95,7 @@ class SaveArticleToMarkdown
       file.write("description: #{data['description'].to_json}\n")
       file.write("created_at: \"#{data['created_at']}\"\n")
       file.write("edited_at: \"#{data['edited_at']}\"\n")
-      file.write("sync_date: \"#{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}\"\n")
+      # file.write("sync_date: \"#{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}\"\n")
       file.write("draft: false\n")
       file.write("tags: #{data['tags']}\n")
       file.write("canonical_url: \"#{data['canonical_url']}\"\n")
