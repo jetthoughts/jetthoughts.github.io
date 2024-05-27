@@ -4,7 +4,7 @@ title: "Troubleshooting ruby build"
 description: "Have you found problems building ruby on a local machine? How to configure your local environment..."
 created_at: "2022-10-10T16:14:36Z"
 edited_at: "2022-10-11T18:10:42Z"
-sync_date: "2024-05-24T16:04:33Z"
+sync_date: "2024-05-27T16:09:29Z"
 draft: false
 tags: ["ruby", "tutorial", "beginners", "help"]
 canonical_url: "https://jtway.co/troubleshooting-ruby-builds-a53f1f19b4cb"

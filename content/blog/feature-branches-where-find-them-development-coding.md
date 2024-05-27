@@ -4,7 +4,7 @@ title: "Feature Branches and Where to Find Them"
 description: "Here we want to go through the feature branch process, show what downsides this approach..."
 created_at: "2024-05-15T07:17:21Z"
 edited_at: ""
-sync_date: "2024-05-24T16:04:29Z"
+sync_date: "2024-05-27T16:09:25Z"
 draft: false
 tags: ["development", "coding", "github", "git"]
 canonical_url: "https://jtway.co/feature-branches-and-where-to-find-them-58e898399a5e"

@@ -4,7 +4,7 @@ title: "Change input’s placeholder color with CSS"
 description: "Most modern browsers support the simple pseudo-element:    ::placeholder {   color: #9400d3; }       ..."
 created_at: "2022-05-30T10:04:54Z"
 edited_at: "2024-05-10T19:50:33Z"
-sync_date: "2024-05-24T16:04:34Z"
+sync_date: "2024-05-27T16:09:30Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
 canonical_url: "https://jtway.co/change-inputs-placeholder-color-with-css-8f6384121d8e"

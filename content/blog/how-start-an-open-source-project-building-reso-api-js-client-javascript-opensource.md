@@ -4,7 +4,7 @@ title: "How to start an Open Source project. Building RESO API JS client"
 description: "Would you like to understand how to start your new Open Source project in a week? How to build a..."
 created_at: "2024-05-14T12:29:45Z"
 edited_at: "2024-05-14T12:31:08Z"
-sync_date: "2024-05-24T16:04:31Z"
+sync_date: "2024-05-27T16:09:27Z"
 draft: false
 tags: ["javascript", "opensource", "npm", "management"]
 canonical_url: "https://jtway.co/how-to-start-an-open-source-project-building-reso-api-js-client-cee7a4cfc951"

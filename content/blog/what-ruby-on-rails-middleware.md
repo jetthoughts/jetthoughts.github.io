@@ -4,7 +4,7 @@ title: "What is Ruby on Rails Middleware."
 description: "The middleware component sits between the client and the server, processing inbound requests and..."
 created_at: "2022-11-29T17:08:51Z"
 edited_at: "2024-05-10T19:35:57Z"
-sync_date: "2024-05-24T16:04:33Z"
+sync_date: "2024-05-27T16:09:28Z"
 draft: false
 tags: []
 canonical_url: "https://jtway.co/what-is-ruby-on-rails-middleware-6eee8dab8c64"

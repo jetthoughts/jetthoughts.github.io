@@ -4,7 +4,7 @@ title: "How to use Ruby on Rails Concerns"
 description: "A Rails concern is a module that extends the ActiveSupport::Concern module.  You can use Сoncerns to..."
 created_at: "2022-08-18T14:43:37Z"
 edited_at: "2024-05-10T19:44:44Z"
-sync_date: "2024-05-24T16:04:34Z"
+sync_date: "2024-05-27T16:09:29Z"
 draft: false
 tags: ["ruby", "webdev", "rails", "bestpractices"]
 canonical_url: "https://jtway.co/how-to-use-ruby-on-rails-concerns-919139a74e64"

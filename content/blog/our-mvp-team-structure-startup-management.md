@@ -4,7 +4,7 @@ title: "Team Structure for MVP"
 description: "In structuring a team for MVP, we should consider the following: there is a massive number of..."
 created_at: "2022-09-28T14:58:08Z"
 edited_at: "2022-10-03T14:11:23Z"
-sync_date: "2024-05-24T16:04:33Z"
+sync_date: "2024-05-27T16:09:29Z"
 draft: false
 tags: ["startup", "management", "leadership", "tutorial"]
 canonical_url: "https://jtway.co/team-structure-for-mvp-2e19669de06"

@@ -4,7 +4,7 @@ title: "How to get & build full URLs in Rails"
 description: "There are some cases when you want to get a current request absolute URL. Thankfully, Rails got you..."
 created_at: "2022-05-19T08:10:35Z"
 edited_at: "2022-05-20T16:21:53Z"
-sync_date: "2024-05-24T16:04:35Z"
+sync_date: "2024-05-27T16:09:30Z"
 draft: false
 tags: ["ruby", "rails", "webdev"]
 canonical_url: "https://jtway.co/how-to-get-build-full-urls-in-rails-99128ef82bc5"

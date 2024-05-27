@@ -4,7 +4,7 @@ title: "The Ultimate Guide to the Sales Onboarding in IT Companies"
 description: "Are you new at hiring Sales Reps for your IT company? Most probably you are struggling with what to..."
 created_at: "2024-05-14T12:33:58Z"
 edited_at: ""
-sync_date: "2024-05-24T16:04:31Z"
+sync_date: "2024-05-27T16:09:27Z"
 draft: false
 tags: ["sails", "leadgeneration", "outstaffing"]
 canonical_url: "https://jtway.co/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-6e8b4a4a473"

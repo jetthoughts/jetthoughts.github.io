@@ -4,7 +4,7 @@ title: "Data migrations with Rails"
 description: "Data migration is a common part of working with databases, and Ruby on Rails developers have many..."
 created_at: "2022-09-02T17:01:27Z"
 edited_at: "2024-05-10T19:40:26Z"
-sync_date: "2024-05-24T16:04:33Z"
+sync_date: "2024-05-27T16:09:29Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "database"]
 canonical_url: "https://jtway.co/data-migrations-with-rails-6fa3d66f128f"

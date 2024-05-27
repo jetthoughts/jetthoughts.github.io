@@ -4,7 +4,7 @@ title: "Design Rails JSON API with performance in mind"
 description: "Caching can reduce load time and increase the throughput of your API endpoints without..."
 created_at: "2024-05-14T14:16:46Z"
 edited_at: ""
-sync_date: "2024-05-24T16:04:30Z"
+sync_date: "2024-05-27T16:09:26Z"
 draft: false
 tags: ["rails", "cache", "api", "performance"]
 canonical_url: "https://jtway.co/design-rails-json-api-with-performance-in-mind-427e0f0e6f04"

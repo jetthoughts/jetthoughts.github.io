@@ -4,7 +4,7 @@ title: "Why communication is so important when you work remotely?"
 description: "Communication at work is one of the most important aspects of any business.  But why? Let’s take a..."
 created_at: "2024-05-15T06:47:42Z"
 edited_at: ""
-sync_date: "2024-05-24T16:04:29Z"
+sync_date: "2024-05-27T16:09:25Z"
 draft: false
 tags: ["remote", "communication", "startup", "process"]
 canonical_url: "https://jtway.co/why-communication-is-so-important-when-you-work-remotely-8f0e97652f38"

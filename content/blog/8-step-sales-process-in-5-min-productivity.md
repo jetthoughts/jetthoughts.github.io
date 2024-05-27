@@ -4,7 +4,7 @@ title: "8-Step Sales Process in 5 min"
 description: "The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in..."
 created_at: "2024-05-15T06:34:55Z"
 edited_at: "2024-05-15T06:35:31Z"
-sync_date: "2024-05-24T16:04:29Z"
+sync_date: "2024-05-27T16:09:25Z"
 draft: false
 tags: ["sales", "productivity", "checklist"]
 canonical_url: "https://jtway.co/8-step-sales-process-in-5-min-6381751c7a11"

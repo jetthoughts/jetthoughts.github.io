@@ -4,7 +4,7 @@ title: "Tips for writing readable system tests in Rails"
 description: "Want to make system tests easy to main tain? We have selected some best practice tips to..."
 created_at: "2024-05-15T06:56:33Z"
 edited_at: "2024-05-15T06:57:05Z"
-sync_date: "2024-05-24T16:04:29Z"
+sync_date: "2024-05-27T16:09:25Z"
 draft: false
 tags: ["capybara", "ruby", "rails", "testing"]
 canonical_url: "https://jtway.co/best-tips-for-writing-integration-tests-in-rails-d1f56081f249"

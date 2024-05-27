@@ -4,7 +4,7 @@ title: "Collecting JavaScript code coverage with Capybara in Ruby on Rails appli
 description: "Having JavaScript code covered by Capybara system tests, can we utilize them for the code..."
 created_at: "2024-05-14T11:32:21Z"
 edited_at: ""
-sync_date: "2024-05-24T16:04:31Z"
+sync_date: "2024-05-27T16:09:27Z"
 draft: false
 tags: ["capybara", "testing", "javascript", "rails"]
 canonical_url: "https://jtway.co/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-d0cb83a86a90"
