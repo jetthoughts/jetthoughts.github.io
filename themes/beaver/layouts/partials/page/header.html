@@ -117,9 +117,11 @@
 
       {{ else if eq .Params.slug "clients" }}
 
-      <link rel='stylesheet' href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/owl.carousel.css?ver=2.34.6" }}' media='all' />
+      {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $style_owl_carousel.Permalink }}" media='all' />
 
-      <link rel='stylesheet' href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/owl.theme.css?ver=2.34.6" }}' media='all' />
+      {{ $style_owl_theme := resources.Get "/assets/css/owl.theme.css" | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $style_owl_theme.Permalink }}" media='all' />
 
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css" }}' media='all' />
 
