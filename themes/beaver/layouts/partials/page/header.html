@@ -91,16 +91,16 @@
       <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/2949-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}'>
 	   {{ else if eq .Type "use-cases" }}
 	   <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/3027-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-     
+
       {{ else if eq .Params.slug "blog" }}
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
       {{ else if .IsHome }}
 	   <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/590-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-     
+
       <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' />
-      
-      
+
+
       {{ else if eq .Params.slug "contact-us" }}
       <link rel='stylesheet' id='fl-builder-layout-706-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/706-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
       {{ else if eq .Params.slug "about-us" }}
@@ -111,10 +111,10 @@
       <link rel='stylesheet' id='uaf_client_css-css' href='{{ absURL "wp-content/uploads/useanyfont/uaf.css?ver=1704464349" }}' media='all' />
       {{ if eq .Params.slug "careers" }}
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/aa2019a48143ab0a991eb88e392a9964-layout-bundle.css" }}' media='all' />
-      
+
       {{ else if .IsHome }}
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/aa2019a48143ab0a991eb88e392a9964-layout-bundle.css" }}' media='all' />
-      
+
       {{ else if eq .Params.slug "clients" }}
 
       <link rel='stylesheet' href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/owl.carousel.css?ver=2.34.6" }}' media='all' />
@@ -156,8 +156,11 @@
          })(window,document,'script','dataLayer','GTM-NNP7VJJ');
       </script>
       <!-- End Google Tag Manager -->
-      <link rel='stylesheet' id='fl-builder-layout-3059-css' href='{{ absURL "style.css" }}' media='all' />
+      {{ $style := resources.Get "/assets/css/style.css" | minify | fingerprint }}
+      <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style.Permalink }}" media='all' />
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
    </head>
    <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
       <!-- Google Tag Manager (noscript) -->
@@ -234,7 +237,7 @@
                                     <nav class="pp-menu-nav pp-off-canvas-menu pp-menu-right" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
                                        <a href="javascript:void(0)" class="pp-menu-close-btn" aria-label="Close the menu" role="button">×</a>
                                        <ul id="menu-main-menu-1" class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
-                                          
+
                                           {{ $currentPage := .Page }}
                                           {{ range .Site.Menus.main }}
                                           {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
