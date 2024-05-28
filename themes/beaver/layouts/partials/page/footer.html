@@ -194,7 +194,10 @@
 </script>
 
 <script src="{{ absURL "wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.14" }}" id="fl-automator-js"></script>
-<script src='{{ absURL "wp-content/uploads/custom-css-js/587.js?v=8212" }}'></script>
+
+{{ $script_587 := resources.Get "/assets/js/587.js" | minify | fingerprint }}
+<script src='{{ $script_587.Permalink }}'></script>
+
 {{ if eq .Params.slug "about-us" }}
 <script src="{{ absURL "wp-content/plugins/bbpowerpack/assets/js/swiper.jquery.min.js?ver=4.4.6" }}"></script>
 <script src="{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>

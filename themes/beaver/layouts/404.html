@@ -70,13 +70,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <script src="{{ absURL "wp-includes/js/jquery/jquery.min.js?ver=3.7.1" }}" id="jquery-core-js"></script>
 <script src="{{ absURL "wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" }}" id="jquery-migrate-js"></script>
 <script src="https://kit.fontawesome.com/09499193bc.js?ver=6.4.3" id="fa5-kit-js"></script>
-		
+
 <script id="google_gtagjs" src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F" async></script>
 <script id="google_gtagjs-inline">
 window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-T1N27FC30F', {} );
 </script>
 
-<link rel='stylesheet' id='586.css-css'  href='//www.jetthoughts.com/wp-content/uploads/custom-css-js/586.css?v=7433' media='all' />
+{{ $style_586 := resources.Get "/assets/css/586.css" | minify | fingerprint }}
+<link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style_586.Permalink }}" media='all' />
 <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" }}" sizes="32x32" />
 <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-192x192.png" }}" sizes="192x192" />
 <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
@@ -97,7 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<header class="fl-builder-content fl-builder-content-588 fl-builder-global-templates-locked" data-post-id="588" data-type="header" data-sticky="1" data-sticky-on="all" data-sticky-breakpoint="medium" data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-q9s2ncprogml fl-row-default-height fl-row-align-center" data-node="q9s2ncprogml">
 	<div class="fl-row-content-wrap">
 						<div class="fl-row-content fl-row-fixed-width fl-node-content">
-		
+
 <div class="fl-col-group fl-node-6ghurya04s2b fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="6ghurya04s2b">
 			<div class="fl-col fl-node-zycl0pq2xei4 fl-col-small fl-col-small-custom-width" data-node="zycl0pq2xei4">
 	<div class="fl-col-content fl-node-content"><div class="fl-module fl-module-photo fl-node-b1kta765r0lo" data-node="b1kta765r0lo">
@@ -152,7 +153,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<nav class="pp-menu-nav pp-off-canvas-menu pp-menu-right" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
     <a href="javascript:void(0)" class="pp-menu-close-btn" aria-label="Close the menu" role="button">×</a>
     <ul id="menu-main-menu-1" class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
-       
+
        {{ $currentPage := .Page }}
        {{ range .Site.Menus.main }}
        {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
@@ -212,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</svg>
 </div>
 		<div class="fl-row-content fl-row-fixed-width fl-node-content">
-		
+
 <div class="fl-col-group fl-node-p0fg9w7ec5ut fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width fl-col-group-responsive-reversed" data-node="p0fg9w7ec5ut">
 			<div class="fl-col fl-node-0ptma2d86ugo fl-col-small fl-col-small-custom-width" data-node="0ptma2d86ugo">
 	<div class="fl-col-content fl-node-content"><div class="fl-module fl-module-heading fl-node-sh625973faxk" data-node="sh625973faxk">
@@ -300,9 +301,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="fl-col-content fl-node-content"><div class="fl-module fl-module-pp-content-grid fl-node-5nxtj94i8khs" data-node="5nxtj94i8khs">
 	<div class="fl-module-content fl-node-content">
 		<div class="pp-posts-wrapper">
-	
-				
-	
+
+
+
 		<div class="pp-content-grid-empty">
 		<p>Sorry, we couldn't find any posts. Please try a different search.</p>
 				<form aria-label="Search" method="get" role="search" action="{{ absURL "" }}" title="Type and press Enter to search.">
@@ -540,6 +541,8 @@ var leadin_wordpress = {"userRole":"visitor","pageType":"other","leadinPluginVer
 <script src="{{ absURL "wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js?ver=1.2" }}" id="jquery-fitvids-js"></script>
 <script src="{{ absURL "wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.14" }}" id="fl-automator-js"></script>
 
-<script src='//www.jetthoughts.com/wp-content/uploads/custom-css-js/587.js?v=8212'></script>
+{{ $script_587 := resources.Get "/assets/js/587.js" | minify | fingerprint }}
+<script src='{{ $script_587.Permalink }}'></script>
+
 </body>
 </html>

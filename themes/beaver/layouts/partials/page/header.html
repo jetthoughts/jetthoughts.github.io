@@ -143,7 +143,8 @@
       <script id="google_gtagjs-inline">
          window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-T1N27FC30F', {} );
       </script>
-      <link rel='stylesheet' id='586.css-css'  href='{{ absURL "wp-content/uploads/custom-css-js/586.css?v=7433" }}' media='all' />
+      {{ $style_586 := resources.Get "/assets/css/586.css" | minify | fingerprint }}
+      <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style_586.Permalink }}" media='all' />
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" }}" sizes="32x32" />
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-192x192.png" }}" sizes="192x192" />
       <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
