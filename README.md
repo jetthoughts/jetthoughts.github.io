@@ -80,3 +80,16 @@ bin/from_devto -f
 2. Change the URLs that you want to update (you should not change the first number in the line, this is the foreign key for the article on dev.to )
 3. Save `devto_urls_mapping.csv`
 4. Run `bin/from_devto -f`
+
+
+## How create new post
+
+1. Write post on dev.to under JetThoughts account. All of the following conditions must be met:
+    - [ ] Post under JetThoughts LLC. (You can choose it in top left corner. To the right of the dev.to logo)
+    - [ ] Set tags. Most relevant tags should be first. (2 first tags will be added to url)
+
+2. Go to [Github Actions page](https://github.com/jetthoughts/jetthoughts.github.io/actions)
+3. Click on "Sync all dev.to articles"
+4. Open dropdown with "Run worflow" label and run it in master branch.
+
+After the work flow is over, the article should appear on our blog and the canonical url on dev.to should be updated, it will point to the article on our blog.
