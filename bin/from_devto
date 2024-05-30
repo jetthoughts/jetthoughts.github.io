@@ -37,9 +37,22 @@ class SaveArticleToMarkdown
   end
 
   def fetch_article_data
-    uri = URI(DEV_TO_API_HOST + @article_slug)
-    response = Net::HTTP.get(uri)
-    JSON.parse(response)
+    max_attempts = 5
+    attempts = 0
+
+    begin
+      uri = URI(DEV_TO_API_HOST + @article_slug)
+      response = Net::HTTP.get_response(uri)
+
+      raise "Got response code: #{response.code}" unless response.code == '200'
+
+      JSON.parse(response.body)
+
+    rescue Exception => e
+      attempts += 1
+      puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
+        retry if attempts < max_attempts
+    end
   end
 
   def save_to_md_file(data)
