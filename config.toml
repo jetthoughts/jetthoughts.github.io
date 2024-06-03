@@ -143,6 +143,12 @@ disableKinds = ["taxonomy", "term"]
       weight = 6
 
 [[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  pageRef= "blog/"
+  weight = 25
+
+[[menu.main]]
   identifier = "about-us"
   name = "About Us"
   pageRef= "pages/about-us/"
