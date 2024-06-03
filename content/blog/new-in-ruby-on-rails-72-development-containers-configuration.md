@@ -3,7 +3,7 @@ dev_to_id: 1872098
 title: "New in Ruby on Rails 7.2: Development Containers Configuration"
 description: "Development container is a full-featured coding environment. Rails 7.2 introduces configurations for..."
 created_at: "2024-05-31T13:45:09Z"
-edited_at: "2024-06-03T14:58:19Z"
+edited_at: "2024-06-03T15:07:43Z"
 draft: false
 tags: ["rails", "ruby", "docker", "changelog"]
 canonical_url: "https://dev.to/jetthoughts/new-in-ruby-on-rails-72-development-containers-configuration-a57"
@@ -38,7 +38,7 @@ After this, you will see the result of the generator:
 As you can see, the generator created files that correspond to the container configuration.
 
 For existing applications, use:
-```
+```bash
 rails devcontainer
 ```
 Result:
