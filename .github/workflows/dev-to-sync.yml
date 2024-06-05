@@ -1,11 +1,16 @@
 # This is a basic workflow that is manually triggered
 
-name: Sync all dev.to articles
+name: Sync dev.to articles
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Synchronize all posts.'
+        required: true
+        default: false
 
 permissions:
   contents: write
@@ -38,7 +43,13 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Run sync script
-        run: bin/from_devto -f
+        run: |
+          if [ "${{ github.event.inputs.force }}" = "true" ]
+          then
+            bin/from_devto -f
+          else
+            bin/from_devto
+          fi
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
