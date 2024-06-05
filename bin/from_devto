@@ -137,7 +137,7 @@ class SaveArticleToMarkdown
   end
 end
 
-page = 1
+page = 0
 force = ARGV.include?('-f') ? true : false
 
 def fetch_articles(page)
