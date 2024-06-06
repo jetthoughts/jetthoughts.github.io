@@ -3,10 +3,10 @@ dev_to_id: 1677293
 title: "Custom ordering without custom SQL with Ruby on Rails 7"
 description: "The problem It's a common case for Rails applications to have enum fields on a model like:    class..."
 created_at: "2023-11-24T11:37:01Z"
-edited_at: "2024-05-27T10:01:39Z"
+edited_at: "2024-06-06T13:21:17Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "sql"]
-canonical_url: "https://jtway.co/custom-ordering-without-custom-sql-with-ruby-on-rails-7-044fc0a592e8"
+canonical_url: "https://jetthoughts.com/blog/custom-ordering-without-sql-with-ruby-on-rails-7"
 slug: "custom-ordering-without-sql-with-ruby-on-rails-7"
 ---
 ![Custom order SQL](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g9kyft9312dd3d6u0lv3.png)
@@ -18,7 +18,6 @@ class Review < ApplicationRecord
   enum status: [:pending, :processing, :completed]
 end
 ```
-<!--more-->
 All's good until we need to sort records by their status in a specific order. For example, on reviews page records should be ordered by status in alphabetical order, but internally in DB status values are stored as integers.
 We can't just add `order(status: :asc)`. Previously we'd have to write some custom SQL for the task:
 ```ruby
