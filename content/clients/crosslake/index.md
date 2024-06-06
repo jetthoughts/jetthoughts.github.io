@@ -11,7 +11,7 @@ metatags:
   image: unnamed.png
 
 client:
-  logo: download-1.jpg
+  logo: crosslake-logo-128x24-4x.webp
   logo_white_version: Corsis-Logo.jpg
   name: Crosslake
   app_name: Crosslake
