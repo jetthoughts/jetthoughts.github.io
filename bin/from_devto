@@ -9,7 +9,7 @@ class SaveArticleToMarkdown
   require 'yaml'
 
   DEV_TO_API_HOST = 'https://dev.to/api/articles/jetthoughts/'.freeze
-  JT_BLOG_HOST = 'https://jetthoughts/blog/'.freeze
+  JT_BLOG_HOST = 'https://jetthoughts.com/blog/'.freeze
   USELESS_WORDS = %w[and the a but to is so].freeze
 
   def initialize(article_slug)
