@@ -1,6 +1,6 @@
 {{ $paginator := $.Paginator }}
 <!-- Number of links either side of the current page. -->
-{{ $adjacent_links := 2 }}
+{{ $adjacent_links := 1 }}
 <!-- $max_links = ($adjacent_links * 2) + 1 -->
 {{ $max_links := (add (mul $adjacent_links 2) 1) }}
 <!-- $lower_limit = $adjacent_links + 1 -->
@@ -16,14 +16,6 @@
       <li class="page-item">
         <a class="page-link" href="{{ $paginator.First.URL }}">
           First
-        </a>
-      </li>
-    {{ end }}
-    <!-- Previous page. -->
-    {{ if $paginator.HasPrev }}
-      <li class="page-item">
-        <a class="page-link" href="{{ $paginator.Prev.URL }}" rel="next">
-          Previous
         </a>
       </li>
     {{ end }}
@@ -64,14 +56,6 @@
           </a>
         </li>
       {{ end }}
-    {{ end }}
-   <!-- Next page. -->
-    {{ if $paginator.HasNext }}
-    <li class="page-item">
-      <a class="page-link" href="{{ $paginator.Next.URL }}" >
-        Next
-      </a>
-    </li>
     {{ end }}
     <!-- Last page. -->
     {{ if ne $paginator.PageNumber $paginator.TotalPages }}
