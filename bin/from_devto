@@ -9,8 +9,8 @@ class SaveArticleToMarkdown
   require 'yaml'
 
   DEV_TO_API_HOST = 'https://dev.to/api/articles/jetthoughts/'.freeze
-  JT_BLOG_HOST = 'https://jetthoughts.github.io/blog/'.freeze
-  USELESS_WORDS = ['and', 'the', 'a', 'but', 'to', 'is', 'so'].freeze
+  JT_BLOG_HOST = 'https://jetthoughts/blog/'.freeze
+  USELESS_WORDS = %w[and the a but to is so].freeze
 
   def initialize(article_slug)
     @article_slug = article_slug
@@ -21,6 +21,7 @@ class SaveArticleToMarkdown
   end
 
   def call
+    puts '---'
     data = fetch_article_data
     set_custom_filename(data)
     save_to_md_file(data)
@@ -47,11 +48,10 @@ class SaveArticleToMarkdown
       raise "Got response code: #{response.code}" unless response.code == '200'
 
       JSON.parse(response.body)
-
     rescue Exception => e
       attempts += 1
       puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
-        retry if attempts < max_attempts
+      retry if attempts < max_attempts
     end
   end
 
@@ -62,7 +62,7 @@ class SaveArticleToMarkdown
   end
 
   def stored_post_path_for(data)
-    __dir__ + "/../content/blog/" + slug(data) + ".md"
+    __dir__ + '/../content/blog/' + slug(data) + '.md'
   end
 
   def slug(data)
@@ -90,12 +90,12 @@ class SaveArticleToMarkdown
     http.use_ssl = true
 
     request = Net::HTTP::Put.new(uri)
-    request['api-key'] = ENV["DEVTO_API_KEY"]
+    request['api-key'] = ENV['DEVTO_API_KEY']
     request['Content-Type'] = 'application/json'
-    pp JT_BLOG_HOST + slug(data)
+    puts JT_BLOG_HOST + slug(data)
 
-    # request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) } }.to_json
-    # http.request(request)
+    request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) } }.to_json
+    http.request(request)
   end
 
   def fill_seo_attributes(data)
@@ -108,7 +108,6 @@ class SaveArticleToMarkdown
       file.write("description: #{data['description'].to_json}\n")
       file.write("created_at: \"#{data['created_at']}\"\n")
       file.write("edited_at: \"#{data['edited_at']}\"\n")
-      # file.write("sync_date: \"#{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}\"\n")
       file.write("draft: false\n")
       file.write("tags: #{data['tags']}\n")
       file.write("canonical_url: \"#{data['canonical_url']}\"\n")
@@ -164,5 +163,3 @@ loop do
 
   page += 1
 end
-
-puts 'TODO: Need to uncomment canonical url update when blog will be live.'
