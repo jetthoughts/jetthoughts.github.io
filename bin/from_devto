@@ -24,8 +24,8 @@ class SaveArticleToMarkdown
     puts '---'
     data = fetch_article_data
     set_custom_filename(data)
-    save_to_md_file(data)
     update_canonical_url_on_dev_to(data)
+    save_to_md_file(data)
     fill_seo_attributes(data)
   end
 
