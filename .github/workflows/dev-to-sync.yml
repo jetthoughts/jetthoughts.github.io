@@ -43,12 +43,14 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Run sync script
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]
           then
-            DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }} bin/from_devto -f
+            bin/from_devto -f
           else
-            DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }} bin/from_devto
+            bin/from_devto
           fi
       - name: Build with Hugo
         env:
