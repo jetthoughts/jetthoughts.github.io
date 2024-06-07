@@ -3,10 +3,10 @@ dev_to_id: 1880232
 title: "DelayedJob and PG Error No Connection to Server"
 description: "DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the..."
 created_at: "2024-06-07T10:21:11Z"
-edited_at: ""
+edited_at: "2024-06-07T10:26:06Z"
 draft: false
 tags: ["rails", "ruby", "postgres"]
-canonical_url: "https://dev.to/jetthoughts/delayedjob-and-pg-error-no-connection-to-server-21e4"
+canonical_url: "https://jetthoughts.com/blog/delayedjob-pg-error-no-connection-server-rails-ruby/"
 slug: "delayedjob-pg-error-no-connection-server-rails-ruby"
 ---
 
