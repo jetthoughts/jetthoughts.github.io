@@ -46,9 +46,9 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]
           then
-            DEVTO_API_KEY=${{ env.DEVTO_API_KEY }} bin/from_devto -f
+            DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }} bin/from_devto -f
           else
-            DEVTO_API_KEY=${{ env.DEVTO_API_KEY }} bin/from_devto
+            DEVTO_API_KEY=${{ secrets.DEVTO_API_KEY }} bin/from_devto
           fi
       - name: Build with Hugo
         env:
