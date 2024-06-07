@@ -95,7 +95,8 @@ class SaveArticleToMarkdown
     puts JT_BLOG_HOST + slug(data)
 
     request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) } }.to_json
-    http.request(request)
+    pp "dev.to update canonical_url result: "
+    pp http.request(request)
   end
 
   def fill_seo_attributes(data)
