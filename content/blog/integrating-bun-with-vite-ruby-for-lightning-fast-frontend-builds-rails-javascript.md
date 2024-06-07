@@ -3,10 +3,10 @@ dev_to_id: 1667161
 title: "Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds"
 description: "With the recent release of Bun and its newfound support for Vite, coupled with Ruby on Rails 7.1..."
 created_at: "2023-11-15T09:13:40Z"
-edited_at: "2023-11-15T12:29:08Z"
+edited_at: "2024-06-07T08:39:33Z"
 draft: false
 tags: ["rails", "javascript", "tutorial", "productivity"]
-canonical_url: "https://pftg.medium.com/bbd220fefdc0?source=friends_link&sk=57ef60a3a71ed0b74cfd04ac5ca59c0e"
+canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/"
 slug: "integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript"
 ---
 With the recent release of [Bun](https://bun.sh/) and its newfound support for Vite, coupled with _Ruby on Rails 7.1_ incorporating native support for Bun, developers can now enhance their web development workflow significantly. Here is the effortless process of enabling _Bun_ for [Vite Ruby](https://vite-ruby.netlify.app/), ultimately streamlining your front-end builds.

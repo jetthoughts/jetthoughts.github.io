@@ -3,10 +3,10 @@ dev_to_id: 1091289
 title: "Manage Bundler indirect dependencies versions"
 description: "Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new..."
 created_at: "2022-05-20T16:20:34Z"
-edited_at: "2022-05-20T16:23:27Z"
+edited_at: "2024-06-06T07:42:05Z"
 draft: false
 tags: ["ruby", "beginners", "tutorial"]
-canonical_url: "https://jtway.co/manage-bundler-indirect-dependencies-versions-e0ed99ac2bd5?source=friends_link&sk=443e7e5a3e4f97c6cfa99d4e42d717bd"
+canonical_url: "https://jetthoughts.com/blog/manage-bundler-indirect-dependencies-versions-ruby-beginners"
 slug: "manage-bundler-indirect-dependencies-versions-ruby-beginners"
 ---
 Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new breaking version of the indirect dependency, causing deployment fails?

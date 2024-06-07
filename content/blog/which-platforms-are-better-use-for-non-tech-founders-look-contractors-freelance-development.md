@@ -3,10 +3,10 @@ dev_to_id: 1852624
 title: "Which platforms are better to use for non-tech founders to look for contractors?"
 description: "Are you looking for developers? In need of delivering your product ASAP? Don’t know where you can..."
 created_at: "2024-05-14T12:39:53Z"
-edited_at: "2024-05-14T12:42:40Z"
+edited_at: "2024-06-06T07:40:08Z"
 draft: false
 tags: ["freelance", "development", "remote", "startup"]
-canonical_url: "https://jtway.co/which-platforms-are-better-to-use-for-clients-to-look-for-contractors-c6df66e352b3"
+canonical_url: "https://jetthoughts.com/blog/which-platforms-are-better-use-for-non-tech-founders-look-contractors-freelance-development"
 slug: "which-platforms-are-better-use-for-non-tech-founders-look-contractors-freelance-development"
 ---
 *Are you looking for developers? In need of delivering your product ASAP? Don’t know where you can find an experienced freelancer or a team?*

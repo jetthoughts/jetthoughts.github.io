@@ -3,10 +3,10 @@ dev_to_id: 1853556
 title: "Simplest step by step guide creating a post"
 description: "For novice authors who are going to share their thoughts with public through the posts, we..."
 created_at: "2024-05-15T07:07:41Z"
-edited_at: ""
+edited_at: "2024-06-06T07:39:02Z"
 draft: false
 tags: ["blogging", "writing", "tutorial", "guide"]
-canonical_url: "https://jtway.co/simplest-step-by-step-guide-creating-a-post-94a7fe21256d"
+canonical_url: "https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing"
 slug: "simplest-step-by-guide-creating-post-blogging-writing"
 ---
 ![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/9184/0*d8XVFEGmUnp-up-_)

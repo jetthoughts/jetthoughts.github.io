@@ -3,10 +3,10 @@ dev_to_id: 1198201
 title: "How to avoid callbacks using services."
 description: "Often programmers abuse callbacks, not fully understanding that in the end their code will be..."
 created_at: "2022-09-20T13:23:18Z"
-edited_at: "2024-05-10T19:39:31Z"
+edited_at: "2024-06-06T07:41:28Z"
 draft: false
 tags: ["rails", "refactoring", "callback", "ruby"]
-canonical_url: "https://jtway.co/how-to-avoid-callbacks-using-services-ace238dd44ec"
+canonical_url: "https://jetthoughts.com/blog/how-avoid-callbacks-using-services-rails-refactoring"
 slug: "how-avoid-callbacks-using-services-rails-refactoring"
 ---
 

@@ -3,10 +3,10 @@ dev_to_id: 1877640
 title: "Onboarding Tests into Legacy Project"
 description: "What solution should you apply to get the first results in a short time in the legacy project? What..."
 created_at: "2024-06-05T06:37:41Z"
-edited_at: "2024-06-05T06:37:49Z"
+edited_at: "2024-06-06T07:38:45Z"
 draft: false
 tags: ["testing", "startup", "agile"]
-canonical_url: "https://jtway.co/onboarding-tests-into-legacy-project-3cd5658cc1f8"
+canonical_url: "https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup"
 slug: "onboarding-tests-into-legacy-project-testing-startup"
 ---
 What solution should you apply to get the first results in a short time in the legacy project? What to do when it’s hard to change a project and you cannot inject dependencies? How to get some confidence in a reasonable time?

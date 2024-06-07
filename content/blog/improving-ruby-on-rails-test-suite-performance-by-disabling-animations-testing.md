@@ -3,10 +3,10 @@ dev_to_id: 1877661
 title: "Improving Ruby on Rails Test Suite Performance by Disabling Animations"
 description: "Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may..."
 created_at: "2024-06-05T07:08:39Z"
-edited_at: ""
+edited_at: "2024-06-06T07:42:38Z"
 draft: false
 tags: ["rails", "testing", "tips"]
-canonical_url: "https://jtway.co/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-2950dca86b45"
+canonical_url: "https://jetthoughts.com/blog/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing"
 slug: "improving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing"
 ---
 Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may be surprised to learn that animations could be the culprit. We’ll explain why animations can cause random failing tests and how disabling them can improve test performance.

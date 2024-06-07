@@ -3,10 +3,10 @@ dev_to_id: 1853575
 title: "How to know what your team is doing?"
 description: "What techniques do you use to work with the team in an async, remote environment? How to..."
 created_at: "2024-05-15T07:19:53Z"
-edited_at: ""
+edited_at: "2024-06-06T07:38:58Z"
 draft: false
 tags: ["remote", "startup", "development", "process"]
-canonical_url: "https://jtway.co/how-to-know-what-your-team-is-doing-816c2697c189"
+canonical_url: "https://jetthoughts.com/blog/how-know-what-your-team-doing-remote-startup"
 slug: "how-know-what-your-team-doing-remote-startup"
 ---
 ![Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/clients?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/10348/1*r2jvcHZ1jiqLJ3WMX-kXkw.jpeg)

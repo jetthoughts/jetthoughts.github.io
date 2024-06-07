@@ -3,10 +3,10 @@ dev_to_id: 1877637
 title: "React + Ruby on Rails without any gems"
 description: "React + Ruby on Rails without any gems   How to start using React components written in..."
 created_at: "2024-06-05T06:32:51Z"
-edited_at: "2024-06-05T06:33:25Z"
+edited_at: "2024-06-06T07:38:51Z"
 draft: false
 tags: ["react", "typescript", "development"]
-canonical_url: "https://jtway.co/rails-typescript-react-js-c52a591e8276"
+canonical_url: "https://jetthoughts.com/blog/react-ruby-on-rails-without-any-gems-typescript"
 slug: "react-ruby-on-rails-without-any-gems-typescript"
 ---
 

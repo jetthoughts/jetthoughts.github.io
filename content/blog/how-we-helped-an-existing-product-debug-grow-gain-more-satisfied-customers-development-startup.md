@@ -3,10 +3,10 @@ dev_to_id: 1877638
 title: "How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers"
 description: "As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could..."
 created_at: "2024-06-05T06:34:42Z"
-edited_at: ""
+edited_at: "2024-06-06T07:38:49Z"
 draft: false
 tags: ["development", "startup", "business", "enterprise"]
-canonical_url: "https://jtway.co/how-we-helped-an-existing-product-debug-grow-and-gain-more-satisfied-customers-38e17b084ac9"
+canonical_url: "https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup"
 slug: "how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup"
 ---
 ![Photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/education?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/1*kX_wEmPpiuT9R5j7TJNtlw.jpeg)

@@ -3,10 +3,10 @@ dev_to_id: 1108673
 title: "Preview UI changes with Ruby on Rails variants"
 description: "When implementing new design for a live application we usually don’t want our users to see an..."
 created_at: "2022-06-08T20:15:39Z"
-edited_at: ""
+edited_at: "2024-06-06T07:41:51Z"
 draft: false
 tags: ["rails", "ruby", "webdev"]
-canonical_url: "https://jtway.co/preview-ui-changes-with-ruby-on-rails-variants-527c13bf7fd0"
+canonical_url: "https://jetthoughts.com/blog/preview-ui-changes-with-ruby-on-rails-variants"
 slug: "preview-ui-changes-with-ruby-on-rails-variants"
 ---
 When implementing new design for a live application we usually don’t want our users to see an unfinished implementation, but we might want to give some users the ability to preview it on the live (production or staging) environment, for designers, product owners, our most loyal customers.

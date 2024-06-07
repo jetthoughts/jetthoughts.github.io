@@ -3,10 +3,10 @@ dev_to_id: 1853649
 title: "Cheap tests with Ghost Inspector"
 description: "What do you do when a legacy project has no tests and adding them is difficult? Before making new..."
 created_at: "2024-05-15T08:05:56Z"
-edited_at: "2024-05-17T06:29:54Z"
+edited_at: "2024-06-06T07:38:34Z"
 draft: false
 tags: ["webdev", "legacy", "tools", "development"]
-canonical_url: "https://jtway.co/cheap-tests-with-ghost-inspector-5ab299856c81"
+canonical_url: "https://jetthoughts.com/blog/cheap-tests-with-ghost-inspector-webdev-legacy"
 slug: "cheap-tests-with-ghost-inspector-webdev-legacy"
 ---
 What do you do when a legacy project has no tests and adding them is difficult? Before making new changes, the developer wants to ensure the old code works as expected.

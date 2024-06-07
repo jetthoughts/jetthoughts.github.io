@@ -3,10 +3,10 @@ dev_to_id: 1215921
 title: "Troubleshooting ruby build"
 description: "Have you found problems building ruby on a local machine? How to configure your local environment..."
 created_at: "2022-10-10T16:14:36Z"
-edited_at: "2022-10-11T18:10:42Z"
+edited_at: "2024-06-06T22:58:04Z"
 draft: false
 tags: ["ruby", "tutorial", "beginners", "help"]
-canonical_url: "https://jtway.co/troubleshooting-ruby-builds-a53f1f19b4cb"
+canonical_url: "https://jetthoughts.com/blog/troubleshooting-ruby-build-tutorial/"
 slug: "troubleshooting-ruby-build-tutorial"
 ---
 Have you found problems building ruby on a local machine? How to configure your local environment once and for all?

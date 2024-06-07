@@ -136,30 +136,23 @@ class SaveArticleToMarkdown
   end
 end
 
-page = 0
 force = ARGV.include?('-f') ? true : false
 
-def fetch_articles(page)
-  uri = URI("https://dev.to/api/articles?username=jetthoughts&page=#{page}")
+def fetch_articles
+  uri = URI("https://dev.to/api/articles?username=jetthoughts&per_page=1000")
   response = Net::HTTP.get(uri)
   articles = JSON.parse(response)
 
   articles.empty? ? nil : articles
 end
 
-loop do
-  articles = fetch_articles(page)
+articles = fetch_articles
 
-  break if articles.nil? || articles.empty?
+articles.each do |article|
+  created_at = Time.parse(article['created_at']) if article['created_at']
+  edited_at = Time.parse(article['edited_at']) if article['edited_at']
 
-  articles.each do |article|
-    created_at = Time.parse(article['created_at']) if article['created_at']
-    edited_at = Time.parse(article['edited_at']) if article['edited_at']
-
-    if (created_at && (Time.now - created_at) < 1800) || (edited_at && (Time.now - edited_at) < 1800) || force
-      SaveArticleToMarkdown.call(article['slug'])
-    end
+  if (created_at && (Time.now - created_at) < 1800) || (edited_at && (Time.now - edited_at) < 1800) || force
+    SaveArticleToMarkdown.call(article['slug'])
   end
-
-  page += 1
 end

@@ -3,10 +3,10 @@ dev_to_id: 1853605
 title: "Git minimum for effective project development"
 description: "Git minimum for effective project development             For beginners who are not familiar..."
 created_at: "2024-05-15T07:29:21Z"
-edited_at: ""
+edited_at: "2024-06-06T07:38:54Z"
 draft: false
 tags: ["development", "git", "github", "tutorial"]
-canonical_url: "https://jtway.co/git-minimum-for-effective-project-development-841a0b865ef0"
+canonical_url: "https://jetthoughts.com/blog/git-minimum-for-effective-project-development"
 slug: "git-minimum-for-effective-project-development"
 ---
 

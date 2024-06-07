@@ -3,10 +3,10 @@ dev_to_id: 1853472
 title: "Services and tools to automatize development for the remote teams"
 description: "We save a lot of time on development and create better products due to well-formed..."
 created_at: "2024-05-15T06:02:44Z"
-edited_at: ""
+edited_at: "2024-06-06T07:39:27Z"
 draft: false
 tags: ["workflow", "automation", "agile", "development"]
-canonical_url: "https://jtway.co/services-and-tools-we-use-for-development-2749af5ad08a"
+canonical_url: "https://jetthoughts.com/blog/services-tools-automatize-development-for-remote-teams-workflow-automation"
 slug: "services-tools-automatize-development-for-remote-teams-workflow-automation"
 ---
 > ### We save a lot of time on development and create better products due to well-formed workflow. Tools and services that help us to implement the workflow we will describe below.

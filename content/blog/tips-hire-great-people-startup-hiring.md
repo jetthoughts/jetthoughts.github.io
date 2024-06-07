@@ -3,10 +3,10 @@ dev_to_id: 1853537
 title: "Tips to hire great people"
 description: "At JetThoughts, we don’t typically fire our employees, as we always strive to find the right people..."
 created_at: "2024-05-15T06:46:12Z"
-edited_at: ""
+edited_at: "2024-06-06T07:39:16Z"
 draft: false
 tags: ["startup", "hiring", "tips"]
-canonical_url: "https://jtway.co/tips-to-hire-great-people-b4aebb5c8f06"
+canonical_url: "https://jetthoughts.com/blog/tips-hire-great-people-startup-hiring"
 slug: "tips-hire-great-people-startup-hiring"
 ---
 ![Photo by [rawpixel](https://unsplash.com/photos/v1VB91uuyaE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/people?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2408/1*ESt4yud6tla9ZeAhmhS5lA.jpeg)

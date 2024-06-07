@@ -3,10 +3,10 @@ dev_to_id: 1852738
 title: "Rails virtual attributes use cases"
 description: "You want to keep some data but do not want to create the new column in the database? Your data should..."
 created_at: "2024-05-14T13:57:52Z"
-edited_at: "2024-05-14T13:59:19Z"
+edited_at: "2024-06-06T07:39:54Z"
 draft: false
 tags: ["rails", "ruby", "tutorial", "webdev"]
-canonical_url: "https://jtway.co/rails-virtual-attributes-use-cases-cf33bd45e2a4"
+canonical_url: "https://jetthoughts.com/blog/rails-virtual-attributes-use-cases-ruby"
 slug: "rails-virtual-attributes-use-cases-ruby"
 ---
 You want to keep some data but do not want to create the new column in the database? Your data should be stored in a form different from the one the user got to deal with?

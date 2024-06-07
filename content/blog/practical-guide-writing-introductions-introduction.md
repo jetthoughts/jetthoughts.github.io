@@ -3,10 +3,10 @@ dev_to_id: 1852747
 title: "A Practical Guide To Writing Introductions"
 description: "Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It..."
 created_at: "2024-05-14T14:14:26Z"
-edited_at: ""
+edited_at: "2024-06-06T07:39:46Z"
 draft: false
 tags: ["writing", "introduction", "blogging", "blog"]
-canonical_url: "https://jtway.co/a-practical-guide-to-writing-introductions-17210d563621"
+canonical_url: "https://jetthoughts.com/blog/practical-guide-writing-introductions-introduction"
 slug: "practical-guide-writing-introductions-introduction"
 ---
 *Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It simply summarises the main points of your article. So why so much noise about it?*

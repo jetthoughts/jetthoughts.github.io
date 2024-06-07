@@ -3,10 +3,10 @@ dev_to_id: 1877716
 title: "Best practices for optimizing Ruby on Rails performance"
 description: "Ruby on Rails is a popular web development backend framework based on the famous Ruby language...."
 created_at: "2024-06-05T08:09:41Z"
-edited_at: "2024-06-05T08:38:38Z"
+edited_at: "2024-06-06T07:42:34Z"
 draft: false
 tags: ["rails", "ruby", "performance", "optimisation"]
-canonical_url: "https://jtway.co/best-practices-for-optimizing-ruby-on-rails-performance-b62d805f6ea6"
+canonical_url: "https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance"
 slug: "best-practices-for-optimizing-ruby-on-rails-performance"
 ---
 ![Best practices for optimizing Ruby on Rails performance](https://cdn-images-1.medium.com/max/3200/0*3ZYAVd4ZwLIeAaNB)

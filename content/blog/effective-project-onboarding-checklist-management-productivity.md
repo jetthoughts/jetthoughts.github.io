@@ -3,10 +3,10 @@ dev_to_id: 1853643
 title: "Effective project onboarding checklist"
 description: "To avoid the onboarding slip and remove expectations and misunderstandings, the JetThoughts team..."
 created_at: "2024-05-15T08:00:36Z"
-edited_at: "2024-05-17T06:34:46Z"
+edited_at: "2024-06-06T07:38:36Z"
 draft: false
 tags: ["management", "productivity", "devops", "career"]
-canonical_url: "https://jtway.co/effective-project-onboarding-checklist-87b95fce256b"
+canonical_url: "https://jetthoughts.com/blog/effective-project-onboarding-checklist-management-productivity"
 slug: "effective-project-onboarding-checklist-management-productivity"
 ---
 To avoid the onboarding slip and remove expectations and misunderstandings, the **[JetThoughts](https://www.jetthoughts.com)** team defined a checklist of items to clarify. We will discuss how to start the project, but we won't discuss the onboarding process.

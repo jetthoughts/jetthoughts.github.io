@@ -3,10 +3,10 @@ dev_to_id: 1182433
 title: "Data migrations with Rails"
 description: "Data migration is a common part of working with databases, and Ruby on Rails developers have many..."
 created_at: "2022-09-02T17:01:27Z"
-edited_at: "2024-05-10T19:40:26Z"
+edited_at: "2024-06-06T07:41:31Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "database"]
-canonical_url: "https://jtway.co/data-migrations-with-rails-6fa3d66f128f"
+canonical_url: "https://jetthoughts.com/blog/data-migrations-with-rails-ruby"
 slug: "data-migrations-with-rails-ruby"
 ---
 Data migration is a common part of working with databases, and Ruby on Rails developers have many tools at their disposal. Still, it can be a challenge to get it right in every situation. Here are some tips for making sure your migrations go smoothly.

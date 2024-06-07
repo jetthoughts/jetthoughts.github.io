@@ -3,10 +3,10 @@ dev_to_id: 1852564
 title: "Automated delivery React / Vue app for each Pull Request."
 description: "Would you like to speed up the development process of your React / Vue application? Make it more..."
 created_at: "2024-05-14T11:29:22Z"
-edited_at: "2024-05-14T11:30:47Z"
+edited_at: "2024-06-06T07:40:33Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
-canonical_url: "https://jtway.co/automated-delivery-react-vue-app-for-each-pull-request-38ecd4814803"
+canonical_url: "https://jetthoughts.com/blog/automated-delivery-react-vue-app-for-each-pull-request-ci"
 slug: "automated-delivery-react-vue-app-for-each-pull-request-ci"
 ---
 Would you like to speed up the development process of your React / Vue application? Make it more predictable and transparent for clients and teammates? Well, continue reading. In this article, I want to describe a set of tools that will make your life easier.

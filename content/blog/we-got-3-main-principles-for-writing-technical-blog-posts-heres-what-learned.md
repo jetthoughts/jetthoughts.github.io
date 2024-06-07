@@ -3,10 +3,10 @@ dev_to_id: 1852579
 title: "We got 3 main principles for writing Technical Blog posts. Here’s what we learned."
 description: "After 100 articles of the research on how to write Technical Blog post simple and quickly, without..."
 created_at: "2024-05-14T11:40:41Z"
-edited_at: ""
+edited_at: "2024-06-06T07:40:27Z"
 draft: false
 tags: ["writing", "blog", "blogposting", "principles"]
-canonical_url: "https://dev.to/jetthoughts/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-we-learned-5g39"
+canonical_url: "https://jetthoughts.com/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned"
 slug: "we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned"
 ---
 After 100 articles of the research on how to write Technical Blog post simple and quickly, without any stress, we can distinguish 3 main principles which helped us overcome this barrier and can definitely help you with writing. Learn with us how to improve your post’s readability!

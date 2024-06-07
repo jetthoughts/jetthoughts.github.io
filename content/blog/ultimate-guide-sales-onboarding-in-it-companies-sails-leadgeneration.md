@@ -3,10 +3,10 @@ dev_to_id: 1852621
 title: "The Ultimate Guide to the Sales Onboarding in IT Companies"
 description: "Are you new at hiring Sales Reps for your IT company? Most probably you are struggling with what to..."
 created_at: "2024-05-14T12:33:58Z"
-edited_at: ""
+edited_at: "2024-06-06T07:40:12Z"
 draft: false
 tags: ["sails", "leadgeneration", "outstaffing"]
-canonical_url: "https://jtway.co/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-6e8b4a4a473"
+canonical_url: "https://jetthoughts.com/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration"
 slug: "ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration"
 ---
 ![[Illustration by Freepik Storyset](https://storyset.com/illustration/team/pana)](https://cdn-images-1.medium.com/max/5760/1*LUrRbaQPjAGjShnS9E16zA.png)

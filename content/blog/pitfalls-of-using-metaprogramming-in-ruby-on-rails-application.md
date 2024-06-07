@@ -3,10 +3,10 @@ dev_to_id: 1852940
 title: "Pitfalls of using metaprogramming in Ruby on Rails application"
 description: "Do you know that metaprogramming is easy to add but hard to support? Developers underestimated risks..."
 created_at: "2024-05-14T16:45:46Z"
-edited_at: ""
+edited_at: "2024-06-06T07:39:39Z"
 draft: false
 tags: ["rails", "ruby", "development", "bestpractices"]
-canonical_url: "https://jtway.co/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-966cf0fc9635"
+canonical_url: "https://jetthoughts.com/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application"
 slug: "pitfalls-of-using-metaprogramming-in-ruby-on-rails-application"
 ---
 Do you know that metaprogramming is easy to add but hard to support? Developers underestimated risks related to using metaprogramming in the code, which causes development slowdowns and business financial problems.

@@ -3,10 +3,10 @@ dev_to_id: 1116924
 title: "How to use background-size in CSS"
 description: "The CSS background-size property sets the size of the background image of the element. Images can be..."
 created_at: "2022-06-17T10:49:34Z"
-edited_at: "2022-06-17T14:53:45Z"
+edited_at: "2024-06-06T07:41:46Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
-canonical_url: "https://jtway.co/how-to-use-background-size-in-css-7b3dcdc941d5"
+canonical_url: "https://jetthoughts.com/blog/how-use-background-size-in-css-html"
 slug: "how-use-background-size-in-css-html"
 ---
 The CSS background-size property sets the size of the background image of the element. Images can be left to full size, stretched or limited to fit the available space.

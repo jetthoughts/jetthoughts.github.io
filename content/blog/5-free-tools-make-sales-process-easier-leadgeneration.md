@@ -3,10 +3,10 @@ dev_to_id: 1852719
 title: "5 Free tools to make the sales process easier"
 description: "What if I told you that there is no need to spend all your budget on super modern CRMs and..."
 created_at: "2024-05-14T13:47:15Z"
-edited_at: "2024-05-14T13:47:56Z"
+edited_at: "2024-06-06T07:39:58Z"
 draft: false
 tags: ["sales", "leadgeneration", "productivity"]
-canonical_url: "https://jtway.co/5-free-tools-to-make-the-sales-process-easier-9e1368d41bf0"
+canonical_url: "https://jetthoughts.com/blog/5-free-tools-make-sales-process-easier-leadgeneration"
 slug: "5-free-tools-make-sales-process-easier-leadgeneration"
 ---
 ![Photo by Jesse Orico on [Unsplash](https://unsplash.com/search/photos/writing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2400/1*a0W8A9PDVBtPojOssiWO0A.jpeg)

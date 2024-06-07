@@ -3,10 +3,10 @@ dev_to_id: 1877558
 title: "Test Driven Thinking for Solving Common Ruby Pitfalls"
 description: "Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for..."
 created_at: "2024-06-05T05:53:53Z"
-edited_at: "2024-06-05T07:44:07Z"
+edited_at: "2024-06-06T07:38:16Z"
 draft: false
 tags: ["rails", "tdd", "testing"]
-canonical_url: "https://jtway.co/test-driven-thinking-for-solving-common-ruby-pitfalls-458fe6d3d856"
+canonical_url: "https://jetthoughts.com/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd"
 slug: "test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd"
 ---
 

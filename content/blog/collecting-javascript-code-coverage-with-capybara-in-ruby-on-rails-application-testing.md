@@ -3,10 +3,10 @@ dev_to_id: 1852568
 title: "Collecting JavaScript code coverage with Capybara in Ruby on Rails application"
 description: "Having JavaScript code covered by Capybara system tests, can we utilize them for the code..."
 created_at: "2024-05-14T11:32:21Z"
-edited_at: ""
+edited_at: "2024-06-06T07:40:31Z"
 draft: false
 tags: ["capybara", "testing", "javascript", "rails"]
-canonical_url: "https://jtway.co/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-d0cb83a86a90"
+canonical_url: "https://jetthoughts.com/blog/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing"
 slug: "collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing"
 ---
 ### Having JavaScript code covered by Capybara system tests, can we utilize them for the code coverage collecting and get the aggregated result with the coverage from the unit tests?

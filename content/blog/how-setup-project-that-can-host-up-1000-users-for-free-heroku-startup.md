@@ -3,10 +3,10 @@ dev_to_id: 1877546
 title: "How to Setup a Project That Can Host Up to 1000 Users for Free"
 description: "Basic Heroku Setup or Staging Configuration    Hosting service: Heroku Database:..."
 created_at: "2024-06-05T05:47:43Z"
-edited_at: ""
+edited_at: "2024-06-06T07:38:23Z"
 draft: false
 tags: ["heroku", "startup", "aws", "tutorial"]
-canonical_url: "https://jtway.co/how-to-setup-a-project-that-can-host-up-to-1000-users-for-free-ab59ad3edaf1"
+canonical_url: "https://jetthoughts.com/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup"
 slug: "how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup"
 ---
 ![Unsplash Photo: [Parker Byrd](https://unsplash.com/@parkerabyrd)](https://cdn-images-1.medium.com/max/10558/1*IxmIzg_IKDthRTmXeR1Rlw.jpeg)

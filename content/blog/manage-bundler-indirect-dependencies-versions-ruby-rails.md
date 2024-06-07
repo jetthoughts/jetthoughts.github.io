@@ -3,10 +3,10 @@ dev_to_id: 1877646
 title: "Manage Bundler indirect dependencies versions"
 description: "Manage Bundler indirect dependencies versions   Have you seen that bundler stuck on finding..."
 created_at: "2024-06-05T06:45:46Z"
-edited_at: "2024-06-05T06:46:00Z"
+edited_at: "2024-06-06T07:42:41Z"
 draft: false
 tags: ["ruby", "rails", "tips", "tutorial"]
-canonical_url: "https://jtway.co/manage-bundler-indirect-dependencies-versions-e0ed99ac2bd5"
+canonical_url: "https://jetthoughts.com/blog/manage-bundler-indirect-dependencies-versions-ruby-rails"
 slug: "manage-bundler-indirect-dependencies-versions-ruby-rails"
 ---
 

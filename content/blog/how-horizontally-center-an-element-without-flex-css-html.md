@@ -3,10 +3,10 @@ dev_to_id: 1101579
 title: "How to horizontally center an element without Flex"
 description: "Centered elements with Flex it is very easy to style, what about not use Flex?    &lt;div..."
 created_at: "2022-06-01T08:10:19Z"
-edited_at: "2024-05-10T19:49:48Z"
+edited_at: "2024-06-06T07:41:59Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
-canonical_url: "https://jtway.co/how-to-horizontally-center-an-element-without-flex-13af946c88bf"
+canonical_url: "https://jetthoughts.com/blog/how-horizontally-center-an-element-without-flex-css-html"
 slug: "how-horizontally-center-an-element-without-flex-css-html"
 ---
 Centered elements with Flex it is very easy to style, what about not use Flex?

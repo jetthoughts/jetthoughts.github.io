@@ -3,10 +3,10 @@ dev_to_id: 1852739
 title: "RSCSS. Styling CSS without losing your sanity"
 description: "Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out..."
 created_at: "2024-05-14T14:03:11Z"
-edited_at: ""
+edited_at: "2024-06-06T07:39:52Z"
 draft: false
 tags: ["css", "rscss", "html", "scss"]
-canonical_url: "https://jtway.co/rscss-styling-css-without-losing-your-sanity-9e622d9f9252"
+canonical_url: "https://jetthoughts.com/blog/rscss-styling-css-without-losing-your-sanity"
 slug: "rscss-styling-css-without-losing-your-sanity"
 ---
 Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out with the methodology? Decided to use RSCSS but don’t know how to start?

@@ -3,10 +3,10 @@ dev_to_id: 1853466
 title: "Speed up GitHub PR’s review of your React applications"
 description: "Would you like to speed up PR’s review of React application, when you use Jest snapshot..."
 created_at: "2024-05-15T05:55:46Z"
-edited_at: "2024-05-15T06:00:03Z"
+edited_at: "2024-06-06T07:39:31Z"
 draft: false
 tags: ["development", "tutorial", "github", "jest"]
-canonical_url: "https://jtway.co/speed-up-github-prs-review-of-your-react-applications-cf3786260302"
+canonical_url: "https://jetthoughts.com/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial"
 slug: "speed-up-github-prs-review-of-your-react-applications-development-tutorial"
 ---
 Would you like to speed up PR’s review of React application, when you use Jest snapshot testing?

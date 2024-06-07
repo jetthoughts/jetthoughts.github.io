@@ -3,10 +3,10 @@ dev_to_id: 1556678
 title: "Align remote teams with OKRs and Impact Mapping"
 description: "In today's fast-paced business environment, remote distributed teams are becoming increasingly..."
 created_at: "2023-08-02T11:05:40Z"
-edited_at: ""
+edited_at: "2024-06-06T22:56:52Z"
 draft: false
 tags: ["management", "devops"]
-canonical_url: "https://jtway.co/align-remote-teams-with-okrs-and-impact-mapping-f7e43a65e347?source=friends_link&sk=cbf3fb6c81d2ffa6f7aac0d696f489c6"
+canonical_url: "https://jetthoughts.com/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/"
 slug: "align-remote-teams-with-okrs-impact-mapping-management-devops"
 ---
 In today's fast-paced business environment, remote distributed teams are becoming increasingly common, especially among pre-seed startups.

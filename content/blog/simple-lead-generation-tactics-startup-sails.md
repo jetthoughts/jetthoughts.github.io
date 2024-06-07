@@ -3,10 +3,10 @@ dev_to_id: 1852632
 title: "Simple Lead Generation Tactics"
 description: "How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build..."
 created_at: "2024-05-14T12:48:39Z"
-edited_at: ""
+edited_at: "2024-06-06T07:40:04Z"
 draft: false
 tags: ["startup", "sails", "tutorial"]
-canonical_url: "https://jtway.co/simple-lead-generation-tactics-d152448e0569"
+canonical_url: "https://jetthoughts.com/blog/simple-lead-generation-tactics-startup-sails"
 slug: "simple-lead-generation-tactics-startup-sails"
 ---
 ![Photo by [Denys Nevozhai](https://unsplash.com/photos/7nrsVjvALnA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/roads?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/1*91P6VhgKlRizTHZoP6RuQQ.jpeg)

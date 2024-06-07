@@ -3,10 +3,10 @@ dev_to_id: 1168677
 title: "How to create circles in CSS"
 description: "Let's look at a few tricks in CSS able to create basic shapes like circles.    &lt;div..."
 created_at: "2022-08-16T12:14:22Z"
-edited_at: "2024-05-10T19:45:23Z"
+edited_at: "2024-06-06T07:41:35Z"
 draft: false
 tags: ["css", "html", "devops"]
-canonical_url: "https://jtway.co/how-to-create-circles-in-css-1c1f64c1a7eb"
+canonical_url: "https://jetthoughts.com/blog/how-create-circles-in-css-html"
 slug: "how-create-circles-in-css-html"
 ---
 Let's look at a few tricks in CSS able to create basic shapes like circles.

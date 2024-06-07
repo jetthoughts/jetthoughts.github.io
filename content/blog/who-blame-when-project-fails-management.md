@@ -3,10 +3,10 @@ dev_to_id: 1853641
 title: "Who is to blame when a project fails?"
 description: "Who is to blame when a project fails?   Large projects continue to fail, often with..."
 created_at: "2024-05-15T07:59:15Z"
-edited_at: "2024-05-15T07:59:56Z"
+edited_at: "2024-06-06T07:38:37Z"
 draft: false
 tags: ["blame", "management", "startup", "workflow"]
-canonical_url: "https://jtway.co/who-is-to-blame-when-a-project-fails-595d683da73d"
+canonical_url: "https://jetthoughts.com/blog/who-blame-when-project-fails-management"
 slug: "who-blame-when-project-fails-management"
 ---
 
