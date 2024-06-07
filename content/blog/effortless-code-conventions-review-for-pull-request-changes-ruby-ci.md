@@ -3,10 +3,10 @@ dev_to_id: 1880211
 title: "Effortless Code Conventions Review for Pull Request Changes"
 description: "Reliably arranged source code helps hackability. You can filter code speedier if its..."
 created_at: "2024-06-07T10:03:27Z"
-edited_at: ""
+edited_at: "2024-06-07T10:06:29Z"
 draft: false
 tags: ["ruby", "ci", "github", "codereview"]
-canonical_url: "https://dev.to/jetthoughts/effortless-code-conventions-review-for-pull-request-changes-4p4k"
+canonical_url: "https://jetthoughts.com/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/"
 slug: "effortless-code-conventions-review-for-pull-request-changes-ruby-ci"
 ---
 
