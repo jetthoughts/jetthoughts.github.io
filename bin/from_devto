@@ -94,8 +94,8 @@ class SaveArticleToMarkdown
     request['Content-Type'] = 'application/json'
     puts JT_BLOG_HOST + slug(data)
 
-    # request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) } }.to_json
-    # http.request(request)
+    request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) } }.to_json
+    http.request(request)
   end
 
   def fill_seo_attributes(data)
