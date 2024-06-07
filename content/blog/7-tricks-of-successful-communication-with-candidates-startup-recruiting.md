@@ -3,10 +3,10 @@ dev_to_id: 1880416
 title: "7 tricks of successful communication with candidates"
 description: "Nowadays attracting good candidates is a pretty hard process, thereby, recruiters often face the..."
 created_at: "2024-06-07T13:12:12Z"
-edited_at: "2024-06-07T13:29:05Z"
+edited_at: "2024-06-07T13:44:13Z"
 draft: false
 tags: ["startup", "recruiting"]
-canonical_url: "https://jetthoughts.com/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/"
+canonical_url: "https://jetthoughts.com/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting"
 slug: "7-tricks-of-successful-communication-with-candidates-startup-recruiting"
 ---
 *Nowadays attracting good candidates is a pretty hard process, thereby, recruiters often face the problem of long-term closing of vacancies. That happens because HR specialists don’t pay enough attention to the initial stage of selection and communication.*
