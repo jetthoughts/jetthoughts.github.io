@@ -3,10 +3,10 @@ dev_to_id: 1880471
 title: "Jekyll + GitHub Pages + Forestry.io"
 description: "I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my..."
 created_at: "2024-06-07T13:36:24Z"
-edited_at: ""
+edited_at: "2024-06-07T13:38:50Z"
 draft: false
 tags: ["jekyl", "github", "tutorial"]
-canonical_url: "https://dev.to/jetthoughts/jekyll-github-pages-forestryio-3f24"
+canonical_url: "https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/"
 slug: "jekyll-github-pages-forestryio-jekyl"
 ---
 I’ve recently migrated the [jetthoughts.com](https://www.jetthoughts.com/) website on [Jekyll](https://jekyllrb.com/) to [Forestry.io](https://forestry.io/). I’d like to share my process with you, as well as a few tips about building a Jekyll site with GitHub Pages and [Forestry.io](https://forestry.io/).
