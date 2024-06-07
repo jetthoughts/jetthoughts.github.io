@@ -1,12 +1,12 @@
 ---
 dev_to_id: 462546
 title: "What are the next steps when your project is failing?"
-description: "Projects fail for all kinds of reasons. Customers can change their objectives, key team members can l..."
+description: "Projects fail for all kinds of reasons. Customers can change their objectives, key team members can..."
 created_at: "2020-09-22T07:32:43Z"
-edited_at: "2020-12-18T12:51:13Z"
+edited_at: "2024-06-07T15:32:34Z"
 draft: false
 tags: ["management"]
-canonical_url: "https://jtway.co/what-are-the-next-steps-when-your-project-is-failing-cb4be757101?source=friends_link&sk=54a65cad7062094fca9449533a02ea17"
+canonical_url: "https://jetthoughts.com/blog/what-are-next-steps-when-your-project-failing-management/"
 slug: "what-are-next-steps-when-your-project-failing-management"
 ---
 Projects fail for all kinds of reasons. Customers can change their objectives, key team members can leave for other companies, communication is pure, budgets can disappear, materials can be delayed, and priorities can go un-managed.

@@ -3,10 +3,10 @@ dev_to_id: 1880548
 title: "JetThoughts Is On GoodFirms Radar for Delivering Effortless Ruby on Rails Development Services to Business of Various Niches"
 description: "**JetThoughts LLC** is an excellent firm offering various services that can give the business an..."
 created_at: "2024-06-07T15:27:35Z"
-edited_at: ""
+edited_at: "2024-06-07T15:28:48Z"
 draft: false
 tags: ["ruby", "rails", "service"]
-canonical_url: "https://dev.to/jetthoughts/jetthoughts-is-on-goodfirms-radar-for-delivering-effortless-ruby-on-rails-development-services-to-business-of-various-niches-1g8b"
+canonical_url: "https://jetthoughts.com/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches"
 slug: "jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches"
 ---
 ![](https://cdn-images-1.medium.com/max/2400/0*fjqPnBGKt2JE68iY)
