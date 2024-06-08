@@ -3,7 +3,7 @@ dev_to_id: 1877639
 title: "Checklist for the non-tech founder*"
 description: "If either agency, dev shop, or offshore team is building a product for you, it’s important to know..."
 created_at: "2024-06-05T06:36:16Z"
-edited_at: "2024-06-06T07:38:47Z"
+edited_at: "2024-06-08T19:30:20Z"
 draft: false
 tags: ["agile", "checklist", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/checklist-for-non-tech-founder-agile"
@@ -30,8 +30,6 @@ In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings 
 
 ### 1. GitHub Сommits is everything
 
-![](https://cdn-images-1.medium.com/max/NaN/1*m8FH-hon6wWBMa42A5TY4g.png)
-
 * **Regular Git commits **of developers — that’s what helps the tasks to be done and the best way to understand if development flow is going fine.
 
 * You might have difficulties to understand what this or that part of the code means, but you’re definitely able to see commits frequency and observe the path from the feature to just appear in a list to its full implementation.
@@ -41,8 +39,6 @@ In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings 
 * Make sure the process is regular and stable — the team should push to
 
 ### 2. Daily Standups
-
-![Photo by [Ryan Chartrand](https://x-team.com/blog/author/ryan-chartrand/) on [X-team](https://x-team.com/blog/developer-daily-standup/)](https://cdn-images-1.medium.com/max/NaN/0*5aKLeIqwERR8wy9K.)
 
 * You should always keep track of how things are going, it’s highly recommended to conduct [daily standups](https://jtway.co/a-typical-day-at-jetthoughts-460b84eeb9c6). 10–15 minutes to spend talking over plans for the day getting feedback from every team member would save you tons of time figuring out what went wrong by not having this routine in your habit list.
 

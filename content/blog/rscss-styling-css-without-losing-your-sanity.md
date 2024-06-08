@@ -3,7 +3,7 @@ dev_to_id: 1852739
 title: "RSCSS. Styling CSS without losing your sanity"
 description: "Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out..."
 created_at: "2024-05-14T14:03:11Z"
-edited_at: "2024-06-06T07:39:52Z"
+edited_at: "2024-06-08T19:36:49Z"
 draft: false
 tags: ["css", "rscss", "html", "scss"]
 canonical_url: "https://jetthoughts.com/blog/rscss-styling-css-without-losing-your-sanity"
@@ -13,7 +13,8 @@ Thinking of a beautiful and grammatically correct CSS code over and over again b
 
 Then this article is just for you. We will not go through the theory but move on to practice right away.
 
-![](https://cdn-images-1.medium.com/max/NaN/0*rhj89G6kz3tseDdP.)
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/giqa90g49hhotrej9c7y.png)
 
 ## What we will use?
 
@@ -33,11 +34,90 @@ Oh, I do not even have to tell you to always give preference to the classes rath
 
 For example, we take the prepared HTML code:
 
- <iframe src="https://medium.com/media/f9cc1010245ba100f3610cd76a31dfc7" frameborder=0></iframe>
+```html
+<ul class="vacation-list">
+  <li class="vacation-list-item">
+    <div class="vacation-card">
+      <img class="vacation-card-image" src="https://img.theculturetrip.com/768x432/wp-content/uploads/2017/02/coconut-palm-on-caribbean-beach-cancun-mexico.jpg" alt="Beach in Cancun">
+      <div class="vacation-card-info">
+        <div class="vacation-card-eyebrow">Private Villa</div>
+        <a class="vacation-card-title" href="#">Relaxing All-Inclusive Resort in Cancun</a>
+        <div class="vacation-card-price">$99 USD per night</div>
+      </div>
+    </div>
+  </li>
+  <li class="vacation-list-item">
+    <div class="vacation-card">
+      <img class="vacation-card-image" src="https://img.theculturetrip.com/768x432/wp-content/uploads/2017/02/coconut-palm-on-caribbean-beach-cancun-mexico.jpg" alt="Beach in Cancun">
+      <div class="vacation-card-info__orange">
+        <div class="vacation-card-eyebrow">Private Villa</div>
+        <a class="vacation-card-title" href="#">Relaxing All-Inclusive Resort in Cancun</a>
+        <div class="vacation-card-price">$99 USD per night</div>
+      </div>
+    </div>
+  </li>
+</ul>
+```
 
 and CSS:
 
- <iframe src="https://medium.com/media/4f8e6bd8f11384ca2d3e5d43f76c38dc" frameborder=0></iframe>
+```css
+.vacation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.vacation-list-item {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.vacation-card {
+  margin: 0 auto;
+  width: 275px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: sans-serif;
+  border: 1px solid #cbd5e0;
+}
+
+.vacation-card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.vacation-card-info {
+  padding: 10px;
+  color: #718096;
+}
+
+.vacation-card-info__orange {
+  padding: 10px;
+  background: orange;
+  color: white;
+}
+
+.vacation-card-eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.vacation-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+}
+
+.vacation-card-price {
+  padding-top: 5px;
+  font-size: 12px;
+}
+```
 
 As you can see, this class naming doesn’t go by the RSCSS recommendation about components and elements structure.
 
@@ -59,7 +139,31 @@ vacation-card-price => price
 
 and vacation-card-info__orange => -orange
 
- <iframe src="https://medium.com/media/8453a83389b09bbe4a9b475cfce70806" frameborder=0></iframe>
+```html
+
+<ul class="vacation-list">
+  <li class="item">
+    <div class="vacation-card">
+      <img class="image" src="https://img.theculturetrip.com/768x432/wp-content/uploads/2017/02/coconut-palm-on-caribbean-beach-cancun-mexico.jpg" alt="Beach in Cancun">
+      <div class="card-info">
+        <div class="eyebrow">Private Villa</div>
+        <a class="title" href="#">Relaxing All-Inclusive Resort in Cancun</a>
+        <div class="price">$99 USD per night</div>
+      </div>
+    </div>
+  </li>
+  <li class="item">
+    <div class="vacation-card">
+      <img class="image" src="https://img.theculturetrip.com/768x432/wp-content/uploads/2017/02/coconut-palm-on-caribbean-beach-cancun-mexico.jpg" alt="Beach in Cancun">
+      <div class="card-info -orange">
+        <div class="eyebrow">Private Villa</div>
+        <a class="title" href="#">Relaxing All-Inclusive Resort in Cancun</a>
+        <div class="price">$99 USD per night</div>
+      </div>
+    </div>
+  </li>
+</ul>
+```
 
 It’s much better now.
 
@@ -67,7 +171,63 @@ It’s much better now.
 
 We will use the child selector > to reference the elements. Don’t forget to add spaces between selectors.
 
- <iframe src="https://medium.com/media/8ec22405312a1148aaf7534a965716ae" frameborder=0></iframe>
+```css
+.vacation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  
+  > .item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+.vacation-card {
+  margin: 0 auto;
+  width: 275px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: sans-serif;
+  border: 1px solid #cbd5e0;
+
+  > .image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.card-info {
+  padding: 10px;
+  color: #718096;
+  
+  &.-orange {
+    background: orange;
+    color: white;
+  }
+
+  > .eyebrow {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  > .title {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  > .price {
+    padding-top: 5px;
+    font-size: 12px;
+  }
+}
+```
 
 Done!
 
@@ -79,7 +239,7 @@ The only advice here is to try to insert only one component per file. Other than
 
 Here is the full practical example of applying the methodology:
 
- <iframe src="https://medium.com/media/6c0e5f85caff38fa1e790100a2159cd7" frameborder=0></iframe>
+https://codepen.io/andriyparashchuk/pen/WqrrWK?editors=1100
 
 ## Final considerations
 
