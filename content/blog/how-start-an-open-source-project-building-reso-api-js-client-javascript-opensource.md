@@ -3,7 +3,7 @@ dev_to_id: 1852618
 title: "How to start an Open Source project. Building RESO API JS client"
 description: "Would you like to understand how to start your new Open Source project in a week? How to build a..."
 created_at: "2024-05-14T12:29:45Z"
-edited_at: "2024-06-06T07:40:15Z"
+edited_at: "2024-06-10T15:37:11Z"
 draft: false
 tags: ["javascript", "opensource", "npm", "management"]
 canonical_url: "https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource"
@@ -13,7 +13,7 @@ Would you like to understand how to start your new Open Source project in a week
 
 In this post, you will understand the [JetThoughts](https://www.jetthoughts.com/) way of prototyping and testing of new ideas.
 
-![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/9184/0*Ks3HSuemzHYlLJ4P)
+![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_0.jpeg)
 
 ## Kickoff
 
@@ -35,9 +35,9 @@ Our goal was to deliver an Open Source project. And that’s how we did it:
 
 First of all, you would need to set up an Agile board to track your project progress. It will give you a big picture of the development process and will help to remove bottlenecks.
 
-![](https://cdn-images-1.medium.com/max/2000/1*uaPECnQn6q8TNwKOC0YHkw.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_1.png)
 
-![](https://cdn-images-1.medium.com/max/2258/1*dnD3Px2kMMI_R7cnKnxu8w.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_2.png)
 
 Discuss which tech stack you and your team will use, and add cards to the Backlog list with description, adding this technology in your project. In our case, it is [Mocha](https://mochajs.org/) and [Nock](https://github.com/nock/nock) for testing and [Axios](https://github.com/axios/axios) for making API calls.
 
@@ -45,7 +45,7 @@ Discuss which tech stack you and your team will use, and add cards to the Backlo
 
 After setting up basic dependencies you need to think of creating the tasks for the project itself. Each task should be self-descriptive, like here:
 
-![](https://cdn-images-1.medium.com/max/2000/1*Xo1UOVTebm6yN2Z_SUzISg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_3.png)
 
 Come up with a good title, so that the person who works on the task would have a basic understanding of what is needed to be done. Task description which tells about the details and usage examples or expected results (it may be text, image or gif file) is always highly appreciated.
 
@@ -53,19 +53,19 @@ Come up with a good title, so that the person who works on the task would have a
 
 To easily use your project and onboard new developers, you need to provide the instruction of installation and further usage. Each feature that you intend to merge needs to have at least two things — Documentation and Tests.
 
-![](https://cdn-images-1.medium.com/max/2000/1*KwpLfCXgF4v_nkJT2H2YZw.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_4.png)
 
  1. Documentation — we just wrote specifications to the README file, like here:
 
-![](https://cdn-images-1.medium.com/max/2000/1*uzIL83Lrtfx4DYDLt91ZFw.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_5.png)
 
 2. Tests which cover this feature functionality (at least unit ones):
 
-![](https://cdn-images-1.medium.com/max/2000/1*V-CKJkqqklIqRPujxJzDLg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_6.png)
 
 We stick to a customized test system by creating our own solution.
 
-![](https://cdn-images-1.medium.com/max/2000/1*bXCXaeaW8w0d7bWvltnjKw.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_7.png)
 
 We have a test folder with all tests and mocks in it.
 We have a *test.js* file which runs our tests and *specs/index.js* file which matches each spec.
