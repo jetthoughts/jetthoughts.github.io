@@ -3,7 +3,7 @@ dev_to_id: 1880471
 title: "Jekyll + GitHub Pages + Forestry.io"
 description: "I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my..."
 created_at: "2024-06-07T13:36:24Z"
-edited_at: "2024-06-07T13:38:50Z"
+edited_at: "2024-06-10T15:30:17Z"
 draft: false
 tags: ["jekyl", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/"
@@ -11,7 +11,7 @@ slug: "jekyll-github-pages-forestryio-jekyl"
 ---
 I’ve recently migrated the [jetthoughts.com](https://www.jetthoughts.com/) website on [Jekyll](https://jekyllrb.com/) to [Forestry.io](https://forestry.io/). I’d like to share my process with you, as well as a few tips about building a Jekyll site with GitHub Pages and [Forestry.io](https://forestry.io/).
 
-![Photo by [Richard T](https://unsplash.com/photos/yovhXPl8V1M) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/0*-PAPqcb3kzHPuizk)
+![Photo by [Richard T](https://unsplash.com/photos/yovhXPl8V1M) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_0.jpeg)
 
 The Advantages:
 
@@ -117,29 +117,29 @@ Now the easy part is adding our CMS to our website. Before we get started head o
 
 In the top right-hand corner of the page, click on Add Site*, *then simply select Other (Gridsome, Next, Nuxt…)for select your GitHub repository.
 
-![](https://cdn-images-1.medium.com/max/2000/0*e1G7eiSX7z2PSJSW.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_1.jpg)
 
 Select GitHub to continue work with your repositories.
 
-![](https://cdn-images-1.medium.com/max/2000/0*tRcN96DBOIV3TZem.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_2.jpg)
 
 A browser window should then pop up asking for your credentials in order to authenticate. After authentication simply selects the repository that contains your project, NOT the one we use for GitHub Pages that contains your username.
 
 Chose your Git provider to connect Forestry to your repository host.
 
-![](https://cdn-images-1.medium.com/max/2000/0*7bgxBo-nvp8MwDoJ.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_3.jpg)
 
 After these steps, you should see importing your site.
 
-![](https://cdn-images-1.medium.com/max/2000/0*Tlal9trj4AA7TW1P.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_4.jpg)
 
 If it works as it should, Forestry will detect your configuration file settings.yml. (Note: When importing a new site, a .forestry/ folder will be added to your site’s source. Any changes made to your CMS’ configuration will be committed to your site’s source in this folder.)
 
-![](https://cdn-images-1.medium.com/max/2000/0*xJMYN8GiuVVJJSvq.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_5.jpg)
 
 If you click on it, you will go to the admin page where you can edit the content and add media files.
 
-![](https://cdn-images-1.medium.com/max/2000/0*QhWlC3QMgTAXn6_G.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jekyll-github-pages-forestryio-jekyl/file_6.jpg)
 
 That is it! You now have a free, GitHub Pages hosted website using Jekyll and Forestry.io as your CMS. Just remember, that any changes you make using Forestry will auto-commit to your project repository, so don’t forget to git pull once you’re done editing your site content with Forestry.
 
