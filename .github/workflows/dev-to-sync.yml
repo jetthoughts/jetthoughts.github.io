@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.125.7
+      DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
@@ -43,8 +44,6 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Run sync script
-        env:
-          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: |
           echo $DEVTO_API_KEY
           if [ "${{ github.event.inputs.force }}" = "true" ]
