@@ -3,7 +3,7 @@ dev_to_id: 1877624
 title: "How Our Expertise Helped Curb Real Estate Communication Chaos"
 description: "How Our Expertise Helped Curb Real Estate Communication Chaos   The story of building Agent..."
 created_at: "2024-06-05T06:21:28Z"
-edited_at: "2024-06-06T07:38:52Z"
+edited_at: "2024-06-10T06:49:34Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/how-our-expertise-helped-curb-real-estate-communication-chaos"
@@ -29,7 +29,7 @@ He and business partner *Tyler Gordon *vented frustrations before turning that e
 
 This was the start of what would become [Agent Inbox](https://www.jetthoughts.com/agentinbox), the world’s leading real estate messaging platform. We were hired to build and deliver mobile versions for the [Apple App Store](https://itunes.apple.com/us/app/hello-show/id938410567) and Google Play, as well an enterprise version for desktop.
 
-![](https://cdn-images-1.medium.com/max/NaN/0*HjlmWDJwojXXat5z.png)
+![](https://cdn-images-1.medium.com/max/1200/0*HjlmWDJwojXXat5z.png)
 
 At launch, [Agent Inbox](https://www.jetthoughts.com/agentinbox) became recognized for facilitating easy, seamless communication between agents, brokerages, and customers powered by [Multiple Listing Service (MLS)](https://www.investopedia.com/terms/m/multiple-listing-service-mls.asp) data.
 
