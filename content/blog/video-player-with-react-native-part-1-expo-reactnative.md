@@ -3,13 +3,13 @@ dev_to_id: 1877622
 title: "Video player with React Native. Part 1: Expo"
 description: "Nowadays there are plenty of solutions to build an application for a mobile platform. If we are..."
 created_at: "2024-06-05T06:20:41Z"
-edited_at: "2024-06-06T07:38:54Z"
+edited_at: "2024-06-10T15:46:57Z"
 draft: false
 tags: ["reactnative", "expo", "tutorial", "react"]
 canonical_url: "https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative"
 slug: "video-player-with-react-native-part-1-expo-reactnative"
 ---
-![](https://cdn-images-1.medium.com/max/2560/0*jQoWIbj8jPyizNTF)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/video-player-with-react-native-part-1-expo-reactnative/file_0.jpeg)
 
 Nowadays there are [plenty of solutions](https://medium.freecodecamp.org/a-deeply-detailed-but-never-definitive-guide-to-mobile-development-architecture-6b01ce3b1528) to build an application for a mobile platform. If we are talking about the technology that feels native (uses native UI components), our company has successful experience in [building React Native applications](https://jtway.co/the-simplest-way-to-automate-delivery-of-your-react-native-application-f37f2c71eb1d). And now we decided to check other similar solutions that are built on top of React Native.
 
@@ -127,7 +127,7 @@ export default Home
 
 Check the full code for this step [here](https://github.com/jetthoughts/expo-video-catalogue-demo/tree/9f4569e87bdcd4702141cb0d0c7f6506e2a99c8c). Now our app should look similar to the image. It shows some information on video previews and allows to scroll through the list.
 
-![](https://cdn-images-1.medium.com/max/3200/0*FUtKLPkA03hNJ_rT)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/video-player-with-react-native-part-1-expo-reactnative/file_1.jpeg)
 
 ### Build a video screen
 
@@ -191,7 +191,7 @@ export default AppRouter
 
 This version of the app allows to choose a video, watch and use typical controls for the player. When a video is over it should switch to the next one.
 
-![](https://cdn-images-1.medium.com/max/3200/0*THw4HV-O6xuf3tdw)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/video-player-with-react-native-part-1-expo-reactnative/file_2.jpeg)
 
 ### Add real API
 

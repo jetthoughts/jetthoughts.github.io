@@ -3,7 +3,7 @@ dev_to_id: 1853643
 title: "Effective project onboarding checklist"
 description: "To avoid the onboarding slip and remove expectations and misunderstandings, the JetThoughts team..."
 created_at: "2024-05-15T08:00:36Z"
-edited_at: "2024-06-06T07:38:36Z"
+edited_at: "2024-06-10T15:46:09Z"
 draft: false
 tags: ["management", "productivity", "devops", "career"]
 canonical_url: "https://jetthoughts.com/blog/effective-project-onboarding-checklist-management-productivity"
@@ -13,7 +13,7 @@ To avoid the onboarding slip and remove expectations and misunderstandings, the 
 
 We assume all the developers are familiar with the principles described in our [article](https://jtway.co/a-typical-day-at-jetthoughts-460b84eeb9c6). The checklist should give information about the project and define some rules and conventions. Let's take a closer look at each of those.
 
-![Photo by [Web Donut](https://unsplash.com/photos/eSzWOpp1rgw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/collections/203782/in-transit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3198/1*yErvvzuoAo1EA3xpcNBQVQ.jpeg)
+![Photo by [Web Donut](https://unsplash.com/photos/eSzWOpp1rgw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/collections/203782/in-transit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effective-project-onboarding-checklist-management-productivity/file_0.jpeg)
 
 ## Define the helping person
 
@@ -50,7 +50,7 @@ With that information, the developer understands the client's expectations and t
 
 Before running the development process, both the client's and the developer's sides should clarify and agree on it.
 
-![Photo by [Dylan Gillis](https://unsplash.com/@dylandgillis?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10944/0*kvkS6s8qFbidDwMS)
+![Photo by [Dylan Gillis](https://unsplash.com/@dylandgillis?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effective-project-onboarding-checklist-management-productivity/file_1.jpeg)
 
 We define such questions:
 

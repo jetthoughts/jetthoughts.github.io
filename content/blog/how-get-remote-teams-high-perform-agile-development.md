@@ -3,7 +3,7 @@ dev_to_id: 1877574
 title: "How to Get Remote Teams to High Perform"
 description: "How to Get Remote Teams to High Perform     Raise your hand in case you feel confused about..."
 created_at: "2024-06-05T06:10:52Z"
-edited_at: "2024-06-06T07:38:08Z"
+edited_at: "2024-06-10T15:46:45Z"
 draft: false
 tags: ["agile", "development", "management", "remote"]
 canonical_url: "https://jetthoughts.com/blog/how-get-remote-teams-high-perform-agile-development"
@@ -12,7 +12,7 @@ slug: "how-get-remote-teams-high-perform-agile-development"
 
 ## How to Get Remote Teams to High Perform
 
-![Photo by [rawpixel](https://unsplash.com/photos/mcLpPD36-2k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@rawpixel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/6000/1*1Y-djx_fBY4GWJoNR6pVAw.jpeg)
+![Photo by [rawpixel](https://unsplash.com/photos/mcLpPD36-2k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@rawpixel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-get-remote-teams-high-perform-agile-development/file_0.jpeg)
 
 Raise your hand in case you feel confused about project progress. How often do you ask about the current status in [*Slack](https://slack.com)*?
 
@@ -30,7 +30,7 @@ Every day, we share the following via *Slack*: a snapshot of progress, and a vis
 
 Also, we have *Weekly High-Overview “Stand-up”*. Compared to daily stand up, here we share team overall results, problems of the last week, and next week's goals.
 
-![Photo by [Alexis Brown](https://unsplash.com/photos/omeaHbEFlN4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3200/0*Qtl1WEYQ_wm8jUdR.)
+![Photo by [Alexis Brown](https://unsplash.com/photos/omeaHbEFlN4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-get-remote-teams-high-perform-agile-development/file_1.jpeg)
 
 **Tools:** [*Slack](https://slack.com)*
 
@@ -62,7 +62,7 @@ Before starting working on a schedule, developers need to understand where they 
 
 Put *Roadmap* in front of developers. We found a Hierarchical Kanban Board Structure very handy to store Roadmap.
 
-![Photo by [Maarten van den Heuvel](https://unsplash.com/photos/_pc8aMbI9UQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/chess?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3200/0*RUvywffE79HgBXQK.)
+![Photo by [Maarten van den Heuvel](https://unsplash.com/photos/_pc8aMbI9UQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/chess?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-get-remote-teams-high-perform-agile-development/file_2.jpeg)
 
 To build *Roadmap* we ask questions like: where will you be in **3 weeks**, **3 months,** and **3 years?**
 
@@ -94,7 +94,7 @@ On check-ins, you can organize retrospectives and provide feedback to the team. 
 
 Regular check-in is a good opportunity to select what is the matter now. It is making everyone feel included as a team.
 
-![Photo by [Simon Maage](https://unsplash.com/photos/KTzZVDjUsXw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/thanks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3200/0*YaDVKggDirehW2pF.)
+![Photo by [Simon Maage](https://unsplash.com/photos/KTzZVDjUsXw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/thanks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-get-remote-teams-high-perform-agile-development/file_3.jpeg)
 
 **Tools:** [Hangouts](https://hangouts.google.com/)
 

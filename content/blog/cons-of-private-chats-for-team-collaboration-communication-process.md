@@ -3,7 +3,7 @@ dev_to_id: 1853611
 title: "Cons of the private chats for team collaboration"
 description: "Communication between team members is a very important part of the software development process...."
 created_at: "2024-05-15T07:34:55Z"
-edited_at: "2024-06-06T07:38:50Z"
+edited_at: "2024-06-10T15:45:53Z"
 draft: false
 tags: ["communication", "process", "remote", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/cons-of-private-chats-for-team-collaboration-communication-process"
@@ -13,7 +13,7 @@ Communication between team members is a very important part of the software deve
 
 At [JetThoughts](https://www.jetthoughts.com/) we have a time-proven rule — ***all communication between team should be in the public channels***. Let’s look at the reasons that led to avoiding private chats.
 
-![Photo by [Jason Rosewell](https://unsplash.com/@jasonrosewell?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10368/0*10ZBfER-qfGBONwE)
+![Photo by [Jason Rosewell](https://unsplash.com/@jasonrosewell?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cons-of-private-chats-for-team-collaboration-communication-process/file_0.jpeg)
 
 ## Organize public communication
 

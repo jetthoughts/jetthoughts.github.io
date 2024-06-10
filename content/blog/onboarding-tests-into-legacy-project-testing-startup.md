@@ -3,7 +3,7 @@ dev_to_id: 1877640
 title: "Onboarding Tests into Legacy Project"
 description: "What solution should you apply to get the first results in a short time in the legacy project? What..."
 created_at: "2024-06-05T06:37:41Z"
-edited_at: "2024-06-06T07:38:45Z"
+edited_at: "2024-06-10T15:47:08Z"
 draft: false
 tags: ["testing", "startup", "agile"]
 canonical_url: "https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup"
@@ -11,7 +11,7 @@ slug: "onboarding-tests-into-legacy-project-testing-startup"
 ---
 What solution should you apply to get the first results in a short time in the legacy project? What to do when it’s hard to change a project and you cannot inject dependencies? How to get some confidence in a reasonable time?
 
-![](https://cdn-images-1.medium.com/max/3524/1*jsEC1MBNHwsJXR6aIitZ9Q.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/onboarding-tests-into-legacy-project-testing-startup/file_0.png)
 
 We will work not only with the legacy but with the team that loses belief in the tests. *Cultivating habits starts from the small wins.* And how to get one in such a complex environment.
 
@@ -53,7 +53,7 @@ Here are the most common problems which characterized legacy, which we need to t
 
 ## Reproduce Test Environment
 
-![CircleCI Setup E2E for Ruby on Rails](https://cdn-images-1.medium.com/max/5184/1*z_7dWC8K1nJtWz9g0Yp8JQ.png)
+![CircleCI Setup E2E for Ruby on Rails](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/onboarding-tests-into-legacy-project-testing-startup/file_1.png)
 
 Before making the test environment consistent, let’s think about where we are going to run them. Based on our legacy project context, loading the test environment will take so much time that developers will try to avoid it.
 

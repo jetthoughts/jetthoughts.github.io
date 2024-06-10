@@ -3,7 +3,7 @@ dev_to_id: 1880466
 title: "Self-promote on Reddit without getting banned"
 description: "We are happy to share our experience on important aspects of starting self-promoting posts on Reddit...."
 created_at: "2024-06-07T13:31:24Z"
-edited_at: "2024-06-07T13:44:11Z"
+edited_at: "2024-06-10T15:47:58Z"
 draft: false
 tags: ["reddit", "promotion", "advice"]
 canonical_url: "https://jetthoughts.com/blog/self-promote-on-reddit-without-getting-banned-promotion"
@@ -11,7 +11,7 @@ slug: "self-promote-on-reddit-without-getting-banned-promotion"
 ---
 We are happy to share our experience on important aspects of starting self-promoting posts on Reddit. What do you need for it? What are the steps? We aim to identify the challenges affecting and easily face them.
 
-![Photo by [Kurt Cotoaga](https://unsplash.com/@kydroon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@kydroon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3840/1*5yXIqxyLwLV3f58xIou6Dg.jpeg)
+![Photo by [Kurt Cotoaga](https://unsplash.com/@kydroon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@kydroon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/self-promote-on-reddit-without-getting-banned-promotion/file_0.jpeg)
 
 Reddit is a large community made up of thousands of smaller communities, making it great for Growth. Despite the potentially high traffic, many blog-post writers avoid it when they faced different problems just from the beginning.
 
@@ -23,7 +23,7 @@ The first thing you need to pay attention to is your account — it is weighty t
 
 It is hard to find a subreddit for self-promotion with 0 karma points; maybe only some unpopular subreddits will allow it.
 
-![](https://cdn-images-1.medium.com/max/2000/1*Q8-IEP0Ak2TQ49CR0tUt4Q.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/self-promote-on-reddit-without-getting-banned-promotion/file_1.png)
 
 The main resource for gaining karma points is **Upvotes** that users generate on your activity. So you should take part in public life on the topic you are aiming for.
 
@@ -41,7 +41,7 @@ In turn, the users will leave you the necessary resource — **upvotes**.
 
 Reddit has stringent rules regarding new accounts, so when you try to create an advertising post on a new account with 0 Karma, the post will be permanently blocked and considered spam.
 
-![](https://cdn-images-1.medium.com/max/2000/1*T1D4i8FO95bLAVXTCVH8LA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/self-promote-on-reddit-without-getting-banned-promotion/file_2.png)
 
 **How many Karma needs to post self-promotion?** The exact amount of positive karma on your account required isn’t high — basically about 25 karma points (depending on the subreddit), but it’s kept from the public to avoid spam.
 
@@ -67,7 +67,7 @@ There is one thing we should pay attention to if we try to self-promote. This ru
 
 Reddit hates blatant marketing — much has been said about this. There is a lot of discussion about unhealthy criticism among the Reddit community. This may be the key—no need to make another advertising post and just leave your promotion link. Let people know what you have to offer.
 
-![](https://cdn-images-1.medium.com/max/2000/1*UrKV9TKM6vyk1QKMNGXQAA.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/self-promote-on-reddit-without-getting-banned-promotion/file_3.jpeg)
 
 I also can’t help but warn you there are problems that, for the most part, we cannot influence
 

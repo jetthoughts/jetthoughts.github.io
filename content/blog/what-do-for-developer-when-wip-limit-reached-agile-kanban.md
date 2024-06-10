@@ -3,7 +3,7 @@ dev_to_id: 1852581
 title: "What to do for the developer when the WIP limit is reached"
 description: "Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep..."
 created_at: "2024-05-14T11:42:29Z"
-edited_at: "2024-06-06T07:40:25Z"
+edited_at: "2024-06-10T15:44:21Z"
 draft: false
 tags: ["agile", "kanban", "management", "development"]
 canonical_url: "https://jetthoughts.com/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban"
@@ -12,7 +12,7 @@ slug: "what-do-for-developer-when-wip-limit-reached-agile-kanban"
 
 Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep reading this article in order to find out the perfect solution when you or your teammates-developers reach WIP limits.
 
-![Photo by [Clark Tibbs](https://unsplash.com/@clarktibbs?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/5214/0*VRAIUIX4C0czd6SD)
+![Photo by [Clark Tibbs](https://unsplash.com/@clarktibbs?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/file_0.jpeg)
 
 ## What is WIP and what are the WIP limitations?
 
@@ -20,7 +20,7 @@ Did you reach WIP limits and don’t know what to do? And you don’t want to pr
 
 The limitation prompts you to complete the task before moving on to another one. This quality makes the work in progress limitation so attractive in Agile and Kanban methodologies.
 
-![Photo by [Joshua Hoehne](https://unsplash.com/@mrthetrain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/collections/2099577/jetthoughts?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/9794/1*qbLdlpaxkTGOZ-WxnXk3Fw.jpeg)
+![Photo by [Joshua Hoehne](https://unsplash.com/@mrthetrain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/collections/2099577/jetthoughts?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/file_1.jpeg)
 
 Toyota uses several methods to limit work in progress, incorporating them into its corporate standard practices called [Toyota Production System](https://en.wikipedia.org/wiki/Toyota_Production_System). One WIP limiting method is called [Just in Time Manufacturing](https://en.wikipedia.org/wiki/Just-in-time_manufacturing), a philosophy that avoids starting work until “the last responsible moment.”
 

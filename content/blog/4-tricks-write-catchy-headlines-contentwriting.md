@@ -3,7 +3,7 @@ dev_to_id: 1852733
 title: "4 Tricks to Write Catchy Headlines"
 description: "How to improve your writing, and create not just a good headline, but a catchy one? No matter what..."
 created_at: "2024-05-14T13:53:54Z"
-edited_at: "2024-06-06T07:39:56Z"
+edited_at: "2024-06-10T15:44:53Z"
 draft: false
 tags: ["contentwriting", "headlines", "blog", "writing"]
 canonical_url: "https://jetthoughts.com/blog/4-tricks-write-catchy-headlines-contentwriting"
@@ -15,7 +15,7 @@ The headline is the first thing people will see on a page. Copyblogger estimated
 
 Let’s get started.
 
-![Photo by [Austin Chan](https://unsplash.com/@austinchan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/article?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*uUvrHZ7yZV9m2ynt)
+![Photo by [Austin Chan](https://unsplash.com/@austinchan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/article?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-tricks-write-catchy-headlines-contentwriting/file_0.jpeg)
 
 ### **Step #1: Use numbers & data in your headline**
 
@@ -27,7 +27,7 @@ Use unique rationales to write great headlines. The word “rationale” simply 
 
 ***Some of the rationales that you can include in your headlines are: ***Tips, Reasons, Lessons, Tricks, Ideas, Ways, Principles, Facts, Secrets, Strategies
 
-![](https://cdn-images-1.medium.com/max/2000/0*K7m9YMwsMGd51RHC)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-tricks-write-catchy-headlines-contentwriting/file_1.jpeg)
 
 ### **Step #3: Call for attention**
 

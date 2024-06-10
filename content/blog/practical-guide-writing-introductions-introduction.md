@@ -3,7 +3,7 @@ dev_to_id: 1852747
 title: "A Practical Guide To Writing Introductions"
 description: "Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It..."
 created_at: "2024-05-14T14:14:26Z"
-edited_at: "2024-06-06T07:39:46Z"
+edited_at: "2024-06-10T15:45:01Z"
 draft: false
 tags: ["writing", "introduction", "blogging", "blog"]
 canonical_url: "https://jetthoughts.com/blog/practical-guide-writing-introductions-introduction"
@@ -15,7 +15,7 @@ If your introduction is weak, it’ll discourage the reader from reading further
 
 Let’s go!
 
-![Photo by [Green Chameleon](https://unsplash.com/@craftedbygc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/writer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*xKpTC2XJ1IwMTfxD)
+![Photo by [Green Chameleon](https://unsplash.com/@craftedbygc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/writer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/practical-guide-writing-introductions-introduction/file_0.jpeg)
 
 The introduction is referred to as a lead, which simply means the opening paragraph of a news story, essay, or article.
 
@@ -27,7 +27,7 @@ There are 3 important elements of a good introduction. Let’s briefly look at t
 
 * ***Thesis:*** The last element of an introduction is the thesis. It summarizes the topic and strengthens the reason why the reader should continue with your blog post idea. If you do a great job at the transition stage, the thesis will likely fall into place and make a great blog post.
 
-![](https://cdn-images-1.medium.com/max/2000/0*EeGx6dBo1kGvLYmY)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/practical-guide-writing-introductions-introduction/file_1.jpeg)
 
 Anyway, a catchy introduction provides the reader with a brief overview of your topic and an explanation of your thesis. The successful introduction is fresh, engaging, and enjoyable.
 

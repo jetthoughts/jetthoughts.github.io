@@ -3,7 +3,7 @@ dev_to_id: 1880200
 title: "From what to start to stop delivering bugs when there is no time for changes?"
 description: "While you are struggling with breaking into the market; small bugs, UX problems, unexpected behaviors..."
 created_at: "2024-06-07T09:45:25Z"
-edited_at: "2024-06-07T09:53:50Z"
+edited_at: "2024-06-10T15:47:34Z"
 draft: false
 tags: ["management", "agile", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/"
@@ -11,7 +11,7 @@ slug: "from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-manag
 ---
 While you are struggling with breaking into the market; small bugs, UX problems, unexpected behaviors make you insane. You start thinking that you and your team are doing something wrong.
 
-![Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-wearing-black-framed-eyeglasses-7534779/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)](https://cdn-images-1.medium.com/max/8000/1*t59S78BtUSUL_RIvMdnJMQ.jpeg)
+![Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-wearing-black-framed-eyeglasses-7534779/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/file_0.jpeg)
 
 And for start over there is no time, there are obligations which you need to deliver now.
 >  So what can you do now, just after reading this post? How do make things smoother and make deliveries stable and predictable?
@@ -20,7 +20,7 @@ And for start over there is no time, there are obligations which you need to del
 
 *Don’t “Bite Off More Than You Can Chew”!*
 
-![Photo by [A Koolshooter](https://www.pexels.com/@tom-leishman?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-in-an-astronaut-costume-hitchhiking-5259406/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)](https://cdn-images-1.medium.com/max/8960/1*CQpdaOW3XAk3pCPr_B7yJQ.jpeg)
+![Photo by [A Koolshooter](https://www.pexels.com/@tom-leishman?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-in-an-astronaut-costume-hitchhiking-5259406/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/file_1.jpeg)
 
 We want to get faster results, and we push ourselves. Without enough knowledge, we deliver so many errors and unsolved problems. Later, all of them become too heavy for us to move forward.
 
@@ -34,7 +34,7 @@ Here are no extra services and tools tips to onboard.
 
 * **Limit WIP to 2 Tasks per Developer**
 
-![Photo by [airfocus](https://unsplash.com/@airfocus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/kanban?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/12000/1*VYNsvK9Lk2bvIpnFD2XC-w.jpeg)
+![Photo by [airfocus](https://unsplash.com/@airfocus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/kanban?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/file_2.jpeg)
 
 ### Weekly Goals
 

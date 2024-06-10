@@ -3,7 +3,7 @@ dev_to_id: 1880485
 title: "Dedicated Software Development Teams"
 description: "Dedicated Software Development Teams   We’ve compiled everything you need to know about..."
 created_at: "2024-06-07T13:49:53Z"
-edited_at: "2024-06-07T13:51:21Z"
+edited_at: "2024-06-10T15:48:05Z"
 draft: false
 tags: ["team", "recruitment", "hr"]
 canonical_url: "https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment"
@@ -14,7 +14,7 @@ slug: "dedicated-software-development-teams-team-recruitment"
 
 *We’ve compiled everything you need to know about dedicated software development teams into an extensive guide you’ll definitely need to read before hiring a dedicated team for your project. Let’s take a look!*
 
-![Photo by [Annie Spratt](https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/teamwork?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/15904/1*i8TEZH6GqSb_YtZB_r7zkw.jpeg)
+![Photo by [Annie Spratt](https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/teamwork?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/dedicated-software-development-teams-team-recruitment/file_0.jpeg)
 
 ## What is it?
 
@@ -22,7 +22,7 @@ slug: "dedicated-software-development-teams-team-recruitment"
 
 This model is best fit for long-term projects, where requirements are unclear initially, scope changes frequently, and scalable projects. The project’s total cost will depend on the tasks assigned to the team, the size of it, and the potential scaling of the team as the project develops.
 
-![](https://cdn-images-1.medium.com/max/2560/0*NQTu73irJCciD0oN)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/dedicated-software-development-teams-team-recruitment/file_1.jpeg)
 
 ## How does it look?
 
@@ -52,7 +52,7 @@ You get the needed specialists under your complete control, just as with your in
 
 This model is usually used for long-term projects, where requirements are unclear and scope changes frequently. It is also used when a client’s own team lacks skills or expertise in specific areas. The dedicated team’s main aim is to work seamlessly as part of the client’s team to provide quality, unique and project-specific solutions.
 
-![](https://cdn-images-1.medium.com/max/4260/1*ysqnlkO6fIoe_k7H2lmw6A.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/dedicated-software-development-teams-team-recruitment/file_2.png)
 
 ## Why us?
 

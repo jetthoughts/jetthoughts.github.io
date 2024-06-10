@@ -3,7 +3,7 @@ dev_to_id: 1877556
 title: "Mock Everything Is a Good Way to Sink"
 description: "Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see..."
 created_at: "2024-06-05T05:52:47Z"
-edited_at: "2024-06-06T07:38:18Z"
+edited_at: "2024-06-10T15:46:34Z"
 draft: false
 tags: ["tdd", "testing", "development"]
 canonical_url: "https://jetthoughts.com/blog/mock-everything-good-way-sink-tdd-testing"
@@ -11,7 +11,7 @@ slug: "mock-everything-good-way-sink-tdd-testing"
 ---
 ***Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see mocks/stubs, I am always looking for the way to remove them.***
 
-![](https://cdn-images-1.medium.com/max/2000/1*r424kBsBUOITFHHSdotGNw.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/mock-everything-good-way-sink-tdd-testing/file_0.jpeg)
 
 ## Application lifecycle with mocking everything strategy:
 

@@ -3,13 +3,13 @@ dev_to_id: 1877720
 title: "Myth or Reality: Can Test-Driven Development in Agile Replace QA?"
 description: "Test-driven development (TDD) is a cornerstone of agile methodology. It involves creating unit..."
 created_at: "2024-06-05T08:11:36Z"
-edited_at: "2024-06-06T07:42:32Z"
+edited_at: "2024-06-10T15:47:23Z"
 draft: false
 tags: ["agile", "programming", "tdd", "qa"]
 canonical_url: "https://jetthoughts.com/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming"
 slug: "myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming"
 ---
-![](https://cdn-images-1.medium.com/max/3584/0*qnLmGEKJS63GQZtF.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/file_0.png)
 
 [Test-driven development](https://jtway.co/why-and-how-to-use-tdd-main-tips-976b3a6edebb) (TDD) is a cornerstone of agile methodology. It involves creating unit tests before writing the code to ensure functionality and efficiency[[1]](https://www.nan-labs.com/blog/Test-driven-development-agile/). This practice optimizes the development process and seamlessly integrates with agile techniques such as Scrum, extreme programming, and agile testing, making it a critical component in achieving built-in quality.
 

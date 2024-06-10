@@ -3,14 +3,14 @@ dev_to_id: 1880239
 title: "Revise Your Stylesheets. Part 1. Color Scheme"
 description: "Revise Your Stylesheets. Part 1. Color Scheme   Ever wonder how many colors exist in your..."
 created_at: "2024-06-07T10:32:47Z"
-edited_at: "2024-06-07T10:37:06Z"
+edited_at: "2024-06-10T15:47:42Z"
 draft: false
 tags: ["webdev", "css"]
 canonical_url: "https://jetthoughts.com/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/"
 slug: "revise-your-stylesheets-part-1-color-scheme-webdev-css"
 ---
 
-![](https://cdn-images-1.medium.com/max/3840/1*aa1T1Wk_GiYrOvm-oL-TUA.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/file_0.jpeg)
 
 ## Revise Your Stylesheets. Part 1. Color Scheme
 
@@ -288,11 +288,11 @@ function printToHTMLColorMap(map) {
 
 You may notice two constants representing header and footer — this is for valid HTML5 markup, basic styles and scripts. The body will be generated in a loop. And here is the generated HTML with colors used in app:
 
-![](https://cdn-images-1.medium.com/max/2628/1*eqxlkiDHb2FbMLI3dgcm4A.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/file_1.png)
 
 How do you like these 50 shades of gray, green, red, yellow and so on? I should say that the application was redesigned from scratch with a brand new color scheme and it should have about 24 colors instead of 306! Now I have a total picture of what is actually happening with stylesheets in this app:
 
-![](https://cdn-images-1.medium.com/max/2000/1*0s54mLNzU-unpEHdC1lZZg.gif)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/file_2.gif)
 
 ## Add some action
 
@@ -300,7 +300,7 @@ The next step is refactoring and this is where xray may really help. As I mentio
 
 The footer has markup for modal, enclosing body, HTML tags and plain javascript. It binds event listeners on click which is needed for opening of a modal window containing list of links with paths to files where particular color was found. On each click script checks for a color element, get its attributes and opens a modal with the prepared info. The same click handler checks if target is ‘xray’ link and sends ajax get request to the application’s server with xray URL, for example [http://lvh.me:3000/_xray/open?path=/Users/username/appname/app/assets/stylesheets/nv/shared/sandbox.scss:456:46.](http://lvh.me:3000/_xray/open?path=/Users/username/appname/app/assets/stylesheets/nv/shared/sandbox.scss:456:46.)
 
-![](https://cdn-images-1.medium.com/max/3030/1*QskxCKPZMKRbmE4iKQ8Dkg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/file_3.png)
 
 You click on the color, then click on the path link and xray opens file in your favorite editor. And that’s it! Just two clicks and you’ll get a particular file, move color to separate variable — profit!
 

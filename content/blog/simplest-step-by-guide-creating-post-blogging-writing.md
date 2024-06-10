@@ -3,13 +3,13 @@ dev_to_id: 1853556
 title: "Simplest step by step guide creating a post"
 description: "For novice authors who are going to share their thoughts with public through the posts, we..."
 created_at: "2024-05-15T07:07:41Z"
-edited_at: "2024-06-06T07:39:02Z"
+edited_at: "2024-06-10T15:45:41Z"
 draft: false
 tags: ["blogging", "writing", "tutorial", "guide"]
 canonical_url: "https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing"
 slug: "simplest-step-by-guide-creating-post-blogging-writing"
 ---
-![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/9184/0*d8XVFEGmUnp-up-_)
+![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_0.jpeg)
 
 For novice authors who are going to share their thoughts with public through the posts, we highlighted the recommendations and the stages for starting to write.
 
@@ -47,7 +47,7 @@ A **photo** is a second important thing your article will be associated. It will
 
 **[EXAMPLE]** I worked on an article about auto collapsing files when reviewing PR. And I found that it would be nice when I find a picture with something that tries to hide.
 
-![Photo by [Hannes Wolf](https://unsplash.com/@hannes_wolf?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/2000/1*eWytgyhLw4zrkxkDDosAVA.png)
+![Photo by [Hannes Wolf](https://unsplash.com/@hannes_wolf?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_1.png)
 
 As you can see a fawn hides behind wheat.
 
@@ -91,7 +91,7 @@ Each article has a footer part which includes your name and external links.
 
 **[EXAMPLE]** At the end of this article, you can find a texted template:
 
-![[Roman Tershak’s](https://jtway.co/@rtershak) footer for an article about [cheap tests](https://jtway.co/cheap-tests-with-ghost-inspector-838140bdd4cc)](https://cdn-images-1.medium.com/max/2000/1*RgrSusTWf9TNweThC3vUug.png)
+![[Roman Tershak’s](https://jtway.co/@rtershak) footer for an article about [cheap tests](https://jtway.co/cheap-tests-with-ghost-inspector-838140bdd4cc)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_2.png)
 
 **Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

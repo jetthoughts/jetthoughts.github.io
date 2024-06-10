@@ -3,7 +3,7 @@ dev_to_id: 1853550
 title: "How To Write The Right Content For Your Article"
 description: "There are moments when you’re full of motivation, ideas come up with your mind and straight onto the..."
 created_at: "2024-05-15T07:00:58Z"
-edited_at: "2024-06-06T07:39:07Z"
+edited_at: "2024-06-10T15:45:36Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
 canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting"
@@ -13,7 +13,7 @@ There are moments when you’re full of motivation, ideas come up with your mind
 
 It’s time to write creating content. But not just any content. We’re talking creative, suitable and interesting content that actually gets read. And that’s exactly what you’ll get in this article.
 
-![Photo by [Kaleidico](https://unsplash.com/@kaleidico?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/content?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*RbzmUQ6Q8rSrw0Q9)
+![Photo by [Kaleidico](https://unsplash.com/@kaleidico?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/content?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-write-right-content-for-your-article-blogging-posting/file_0.jpeg)
 
 Use these specific formulas that you can plug-and-play to craft your blog posts in under an hour.
 

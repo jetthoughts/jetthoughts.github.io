@@ -3,7 +3,7 @@ dev_to_id: 1880232
 title: "DelayedJob and PG Error No Connection to Server"
 description: "DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the..."
 created_at: "2024-06-07T10:21:11Z"
-edited_at: "2024-06-07T10:26:06Z"
+edited_at: "2024-06-10T15:47:39Z"
 draft: false
 tags: ["rails", "ruby", "postgres"]
 canonical_url: "https://jetthoughts.com/blog/delayedjob-pg-error-no-connection-server-rails-ruby/"
@@ -12,7 +12,7 @@ slug: "delayedjob-pg-error-no-connection-server-rails-ruby"
 
 ## DelayedJob and PG Error No Connection to Server
 
-![](https://cdn-images-1.medium.com/max/2000/1*ZvZrWJK50aGAAkCTL1cG6A.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delayedjob-pg-error-no-connection-server-rails-ruby/file_0.png)
 
 Recently I’ve got strange errors on the staging server. Delayed::Job workers started successfully. But when they were starting to lock the jobs, workers failed with PG::Error: no connection to server and PG::Error: FATAL: invalid frontend message type 60 errors.
 

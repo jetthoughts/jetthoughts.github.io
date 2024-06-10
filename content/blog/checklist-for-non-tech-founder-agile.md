@@ -3,13 +3,13 @@ dev_to_id: 1877639
 title: "Checklist for the non-tech founder*"
 description: "If either agency, dev shop, or offshore team is building a product for you, it’s important to know..."
 created_at: "2024-06-05T06:36:16Z"
-edited_at: "2024-06-08T19:30:20Z"
+edited_at: "2024-06-10T15:47:06Z"
 draft: false
 tags: ["agile", "checklist", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/checklist-for-non-tech-founder-agile"
 slug: "checklist-for-non-tech-founder-agile"
 ---
-![Photo by [Blake Wisz](https://unsplash.com/@blakewisz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/non-tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/1*A3HfxUkpLZPR3_itEUx1BA.jpeg)
+![Photo by [Blake Wisz](https://unsplash.com/@blakewisz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/non-tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/checklist-for-non-tech-founder-agile/file_0.jpeg)
 
 If either agency, dev shop, or offshore team is building a product for you, it’s important to know how it goes. Without prior experience, it’s extremely hard to understand.
 
@@ -46,7 +46,7 @@ In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings 
 
 ### 3. Visualize Progress by Kanban Board
 
-![](https://cdn-images-1.medium.com/max/2696/0*EGu7BX0-EpOfS3zM.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/checklist-for-non-tech-founder-agile/file_1.jpg)
 
 * Confirm there are **no blockers and uncertainty every single day**. It would be great if you use a Kanban board to track all the progress where you can look at what’s happening at a certain point of time, how tasks are taken care of, etc.
 

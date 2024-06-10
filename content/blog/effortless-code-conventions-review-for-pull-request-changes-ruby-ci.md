@@ -3,7 +3,7 @@ dev_to_id: 1880211
 title: "Effortless Code Conventions Review for Pull Request Changes"
 description: "Reliably arranged source code helps hackability. You can filter code speedier if its..."
 created_at: "2024-06-07T10:03:27Z"
-edited_at: "2024-06-07T10:06:29Z"
+edited_at: "2024-06-10T15:47:35Z"
 draft: false
 tags: ["ruby", "ci", "github", "codereview"]
 canonical_url: "https://jetthoughts.com/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/"
@@ -13,7 +13,7 @@ slug: "effortless-code-conventions-review-for-pull-request-changes-ruby-ci"
 
 > # Reliably arranged source code helps hackability. You can filter code speedier if its organizing is predictable.
 
-![Photo by [chuttersnap](https://unsplash.com/photos/15IqNc61SeY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/6052/1*6GJBCYttzY_EMd6RXU4Bvg.jpeg)
+![Photo by [chuttersnap](https://unsplash.com/photos/15IqNc61SeY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/file_0.jpeg)
 
 To fight with non-consistent source code formatting there are static analysis tools such as [RuboCop](https://github.com/bbatsov/rubocop).
 

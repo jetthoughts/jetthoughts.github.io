@@ -3,7 +3,7 @@ dev_to_id: 1880380
 title: "How does your company work with clients to understand their needs?"
 description: "In today's competitive business landscape, understanding and meeting client needs is crucial for the..."
 created_at: "2024-06-07T12:41:25Z"
-edited_at: "2024-06-07T13:44:18Z"
+edited_at: "2024-06-10T15:47:51Z"
 draft: false
 tags: ["lean", "process"]
 canonical_url: "https://jetthoughts.com/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process"
@@ -11,7 +11,7 @@ slug: "how-does-your-company-work-with-clients-understand-their-needs-lean-proce
 ---
 In today's competitive business landscape, understanding and meeting client needs is crucial for the success and growth of any company. One effective approach to achieving this is through a process called Lean Inception. Lean Inception is a collaborative and iterative process that helps businesses gain a deep understanding of their clients’ needs and challenges. By using discovery techniques such as design sprints and continuous discovery, companies can uncover real problems and pre-validate ideas through prototyping and customer research.
 
-![Photo by [Campaign Creators](https://unsplash.com/@campaign_creators?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/people-sitting-near-table-with-laptop-computer-qCi_MzVODoU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)](https://cdn-images-1.medium.com/max/12000/1*NJXNCBQvgWmV-vD7C5f6PQ.jpeg)
+![Photo by [Campaign Creators](https://unsplash.com/@campaign_creators?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/people-sitting-near-table-with-laptop-computer-qCi_MzVODoU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/file_0.jpeg)
 
 ## What is Lean Inception?
 
@@ -41,7 +41,7 @@ In the validation phase, the team conducts user testing and gathers feedback fro
 
 The Lean Inception process is iterative, meaning that the team continuously learns from each stage and makes improvements based on the feedback received. This iterative approach allows for flexibility and adaptation, ensuring that the final product or solution is continuously refined to meet the evolving needs of the clients.
 
-![Photo by [Den Harrson](https://unsplash.com/@harrson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-and-blue-hard-rock-cafe-print-round-hat-m-HZ2aex1so?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)](https://cdn-images-1.medium.com/max/11958/1*kqu1DBDrerFpghNacXBejw.jpeg)
+![Photo by [Den Harrson](https://unsplash.com/@harrson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/white-and-blue-hard-rock-cafe-print-round-hat-m-HZ2aex1so?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/file_1.jpeg)
 
 ## Benefits of Lean Inception
 

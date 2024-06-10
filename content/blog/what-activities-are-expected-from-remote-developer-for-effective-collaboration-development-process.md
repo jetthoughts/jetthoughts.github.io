@@ -3,7 +3,7 @@ dev_to_id: 1852561
 title: "What activities are expected from a remote developer for effective collaboration"
 description: "In order to build trust relationships with remote non-technical founders, we designed the..."
 created_at: "2024-05-14T11:22:54Z"
-edited_at: "2024-06-06T07:40:37Z"
+edited_at: "2024-06-10T15:44:09Z"
 draft: false
 tags: ["development", "process", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process"
@@ -11,7 +11,7 @@ slug: "what-activities-are-expected-from-remote-developer-for-effective-collabor
 ---
 ### In order to build trust relationships with remote non-technical founders, we designed the easiest and effective routine for remote developers to provide.
 
-![Photo by [Roman Synkevych](https://unsplash.com/@synkevych?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10944/0*bL-7cdIJ0USje1MQ)
+![Photo by [Roman Synkevych](https://unsplash.com/@synkevych?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process/file_0.jpeg)
 
 In [JetThoughts](https://www.jetthoughts.com/), the usual working environment contains the GitHub repository with the Kanban board and some rules described in the article [“Delivery Flow for Distributed Remote Teams”](https://jtway.co/delivery-flow-for-distributed-remote-teams-5218828b0d1a).
 

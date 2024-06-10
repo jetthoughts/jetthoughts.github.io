@@ -3,7 +3,7 @@ dev_to_id: 1852562
 title: "Tips to attract readers to read your post"
 description: "Do you know how to keep readers’ attention? We had been experimenting with different ways to make..."
 created_at: "2024-05-14T11:25:32Z"
-edited_at: "2024-06-06T07:40:35Z"
+edited_at: "2024-06-10T15:44:11Z"
 draft: false
 tags: ["blogging", "tips", "writing"]
 canonical_url: "https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging"
@@ -21,7 +21,7 @@ You can use an online application (ex. [*Crazy Egg](https://www.crazyegg.com/)*)
 
 Heat mapping can show you where the focus is and where it should be. By adjusting the format of their site, they were able to improve that significantly.
 
-![Photo by [Malin Strandvall](https://unsplash.com/@malinstrandvall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/magazine-article?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/4164/1*FjUJw3CQtW26CRXtzsxIVg.jpeg)
+![Photo by [Malin Strandvall](https://unsplash.com/@malinstrandvall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/magazine-article?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-attract-readers-read-your-post-blogging/file_0.jpeg)
 
 ## Frontloading
 
@@ -63,7 +63,7 @@ You can find attractive images from stock sites (ex. [https://unsplash.com/](htt
 
 Keep in mind that the technical articles look more attractive with the code screenshots or handmade infographics as the main image. Prefer this approach and only if there are no options use closely related ones.
 
-![Photo by [Bram Naus](https://unsplash.com/@bramnaus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/unsplash-laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*N0KbmVcuMaK_hgah)
+![Photo by [Bram Naus](https://unsplash.com/@bramnaus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/unsplash-laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-attract-readers-read-your-post-blogging/file_1.jpeg)
 
 ## Space it up
 

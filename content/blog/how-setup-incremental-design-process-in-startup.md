@@ -3,13 +3,13 @@ dev_to_id: 1877667
 title: "How to Setup Incremental Design Process in a Startup"
 description: "Are you a startup looking to streamline your design process? Look no further! This article will..."
 created_at: "2024-06-05T07:12:27Z"
-edited_at: "2024-06-06T07:42:36Z"
+edited_at: "2024-06-10T15:47:19Z"
 draft: false
 tags: ["design", "process", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-incremental-design-process-in-startup"
 slug: "how-setup-incremental-design-process-in-startup"
 ---
-![[https://www.mo-hr.com/en/Specifications/Performance](https://www.mo-hr.com/en/Specifications/Performance)](https://cdn-images-1.medium.com/max/8334/1*mj6Zs-Hz76pVLu30NcJIZQ.jpeg)
+![[https://www.mo-hr.com/en/Specifications/Performance](https://www.mo-hr.com/en/Specifications/Performance)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-incremental-design-process-in-startup/file_0.jpeg)
 
 Are you a startup looking to streamline your design process? Look no further! This article will guide you through the steps to set up an incremental design process that can help your startup thrive. By implementing an incremental approach, you can tackle design challenges in small, manageable increments, allowing for faster iteration and continuous improvement.
 

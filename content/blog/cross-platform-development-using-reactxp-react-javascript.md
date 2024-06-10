@@ -3,7 +3,7 @@ dev_to_id: 1853624
 title: "Cross-platform development using ReactXP"
 description: "Cross-platform development using ReactXP   Startups with limited resources trying to reduce..."
 created_at: "2024-05-15T07:48:27Z"
-edited_at: "2024-06-06T07:38:44Z"
+edited_at: "2024-06-10T15:46:02Z"
 draft: false
 tags: ["react", "javascript", "startup", "typescript"]
 canonical_url: "https://jetthoughts.com/blog/cross-platform-development-using-reactxp-react-javascript"
@@ -14,7 +14,7 @@ slug: "cross-platform-development-using-reactxp-react-javascript"
 
 Startups with limited resources trying to reduce cost on delivering their apps to both web and mobile platforms. For now, it’s common to use [React Native](https://facebook.github.io/react-native/) for mobile and [React.js](https://reactjs.org/) for the Web. Even though these are two different frameworks, there are some solutions which reduce maintenance and at least prevent duplication in the code.
 
-![](https://cdn-images-1.medium.com/max/2396/1*WbzBry8a703YK5nbtGzWyQ.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cross-platform-development-using-reactxp-react-javascript/file_0.png)
 
 Using it, you will still need to build several infrastructures to deliver the app to different platforms, but at least you would not need to duplicate your code, which requires more time on development.
 
@@ -71,13 +71,13 @@ Here, we add the Home screen with [VideoThumbnail component](https://gist.github
 
 Now our app should look similar to the image below. It shows the list of video from fake API.
 
-![](https://cdn-images-1.medium.com/max/2012/1*DdY1Z_KmgKW075Wg92ZLjA.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cross-platform-development-using-reactxp-react-javascript/file_1.jpeg)
 
 ## Create the Playback screen component
 
 As a video player, we will use the extension calledRXVideo. More extensions and components could be found [here](https://microsoft.github.io/reactxp/docs/extensions/video.html). This version of the app allows to choose a video, watch and use standard controls for the player.
 
-![](https://cdn-images-1.medium.com/max/2614/1*ijwD_6Tik_10ePIAFjbFOQ.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cross-platform-development-using-reactxp-react-javascript/file_2.jpeg)
 
 ## Finally, the last step needed for routes our screens
 

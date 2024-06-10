@@ -3,7 +3,7 @@ dev_to_id: 1853472
 title: "Services and tools to automatize development for the remote teams"
 description: "We save a lot of time on development and create better products due to well-formed..."
 created_at: "2024-05-15T06:02:44Z"
-edited_at: "2024-06-06T07:39:27Z"
+edited_at: "2024-06-10T15:45:17Z"
 draft: false
 tags: ["workflow", "automation", "agile", "development"]
 canonical_url: "https://jetthoughts.com/blog/services-tools-automatize-development-for-remote-teams-workflow-automation"
@@ -11,7 +11,7 @@ slug: "services-tools-automatize-development-for-remote-teams-workflow-automatio
 ---
 > ### We save a lot of time on development and create better products due to well-formed workflow. Tools and services that help us to implement the workflow we will describe below.
 
-![Photo by [Frederic Köberl](https://unsplash.com/@internetztube?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/8192/1*XqXSUlDOQ-nD7gkX7HHoMw.jpeg)
+![Photo by [Frederic Köberl](https://unsplash.com/@internetztube?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/file_0.jpeg)
 
 ## Delivery
 
@@ -23,7 +23,7 @@ Creating and viewing pull requests, review code, viewing the history of changes;
 
 To generate pull request from the issue we use the **Hub** command-line utility: [Convert GitHub Issue to Pull request](https://jtway.co/convert-github-issue-to-pull-request-c624834835d8)
 
-![Photo by [airfocus](https://unsplash.com/@airfocus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/kanban-board?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/12000/1*iR4x1p4NSEWPDoLOHg5idg.jpeg)
+![Photo by [airfocus](https://unsplash.com/@airfocus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/kanban-board?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/file_1.jpeg)
 
 ### Kanban board by GitHub Projects
 
@@ -45,7 +45,7 @@ Using Heroku, we also solve the problem of isolated verification. It is essentia
 
 ## Monitoring code quality
 
-![Photo by [Stephen Dawson](https://unsplash.com/@srd844?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/monitoring?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/5894/1*5t3gwpjC4ETCjcendzS2SA.jpeg)
+![Photo by [Stephen Dawson](https://unsplash.com/@srd844?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/monitoring?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/file_2.jpeg)
 
 ### Tests coverage by Codecov
 
@@ -69,7 +69,7 @@ Another routine task that we automate is static code analysis. **Pronto** helps 
 
 ## Collaboration
 
-![Photo by [Dylan Gillis](https://unsplash.com/@dylandgillis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/collaboration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/10944/1*6ncgTeYmUqVbfQ2AnjHE7g.jpeg)
+![Photo by [Dylan Gillis](https://unsplash.com/@dylandgillis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/collaboration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/file_3.jpeg)
 
 ### Team chat by Discord
 

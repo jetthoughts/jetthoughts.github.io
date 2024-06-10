@@ -3,7 +3,7 @@ dev_to_id: 1853524
 title: "How does the onboarding look like in JetThoughts?"
 description: "How does the onboarding look like in JetThoughts?   This is an onboarding checklist..."
 created_at: "2024-05-15T06:29:43Z"
-edited_at: "2024-06-06T07:39:20Z"
+edited_at: "2024-06-10T15:45:23Z"
 draft: false
 tags: ["productivity", "startup", "remote", "onboarding"]
 canonical_url: "https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup"
@@ -16,7 +16,7 @@ slug: "how-does-onboarding-look-like-in-jetthoughts-productivity-startup"
 
 *If you follow these onboarding strategies thoroughly, you will grow both successful and happy employees. Here’s the [article](https://jtway.co/effective-project-onboarding-checklist-87b95fce256b) which I was relying on.*
 
-![Photo by [Toa Heftiba](https://unsplash.com/photos/_UIVmIBB3JU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/helping-hand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*G8eEpdYAZeIQGX_2)
+![Photo by [Toa Heftiba](https://unsplash.com/photos/_UIVmIBB3JU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/helping-hand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/file_0.jpeg)
 
 ## Who is this ‘Buddy’ and which qualities should he have?
 
@@ -26,7 +26,7 @@ When I started working, [*JetThoughts](http://jetthoughts.com)* introduced *Budd
 
 *Buddy* is responsible for introducing the employee to the rest of the team. The *Buddy* could arrange a tour on the project and serve as a resource for any of the newcomers’ questions. Also, he ought to explain mistakes, reduce any misunderstanding, etc.
 
-![Photo by [Kevin Gent](https://unsplash.com/photos/I7BQ8hww9bE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/friend?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*flq7652IXmiuCnF7)
+![Photo by [Kevin Gent](https://unsplash.com/photos/I7BQ8hww9bE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/friend?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/file_1.jpeg)
 
 ## Clarify ‘who-does-what’ questions
 
@@ -50,7 +50,7 @@ When you discuss the tasks in a team, you can move the proper cards into the col
 
 When the task is done, you should move it to column *Verify* and be waiting for a review. If everything is correct, PM moves it to the column *Done*, if no, he/she explains to you, what’s the problem and you revise and redo the task.
 
-![](https://cdn-images-1.medium.com/max/2514/1*kxK6BXGoKzBntHdsAzRyUA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/file_2.png)
 
 *Remember*: There should be no more than two cards *In Progress *and no more than three cards in *Verify* at the same time!
 
@@ -66,7 +66,7 @@ It should be as descriptive as you can get it. For approval, you need a third pe
 
 The work is asynchronous at [**JetThoughts](https://www.jetthoughts.com/)**, so that’s why people should be informed about the schedule of each other. Everyone chooses the working hours and works in the most suitable time for themselves.
 
-![Photo by [Nicole Honeywill](https://unsplash.com/photos/ylveRpZ8L1s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*-YTVxKvn8dV05OxE)
+![Photo by [Nicole Honeywill](https://unsplash.com/photos/ylveRpZ8L1s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/file_3.jpeg)
 
 ### How much time and which tools are better to use for meetings?
 

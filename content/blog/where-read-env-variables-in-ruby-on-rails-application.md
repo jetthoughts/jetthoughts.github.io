@@ -3,7 +3,7 @@ dev_to_id: 1852612
 title: "Where to read ENV variables in Ruby on Rails application"
 description: "The ENV variables should not be used outside the config folder. This rule will allow the..."
 created_at: "2024-05-14T12:25:22Z"
-edited_at: "2024-06-06T07:40:19Z"
+edited_at: "2024-06-10T15:44:27Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "bestpractices"]
 canonical_url: "https://jetthoughts.com/blog/where-read-env-variables-in-ruby-on-rails-application"
@@ -14,7 +14,7 @@ slug: "where-read-env-variables-in-ruby-on-rails-application"
 
 What if the project has too many dependencies from the environment variables? This may lead to the formation of implicit dependencies, confuse the developer’s expectations.
 
-![](https://cdn-images-1.medium.com/max/2000/1*LP3GQqVtelEFH_O3UXca4A.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/where-read-env-variables-in-ruby-on-rails-application/file_0.png)
 
 For example, it could be a confusing logic when some components depend on other components, that depend on ENV variables. It is all not explicit, developers need to keep in mind that relations. This leads to increased development time, complicated onboarding process.
 

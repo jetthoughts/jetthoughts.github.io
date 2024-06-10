@@ -3,7 +3,7 @@ dev_to_id: 1852611
 title: "JetThoughts is recognized by Techreviewer as a Top Web Development Company in 2020"
 description: "JetThoughts is a web software development company that has proven its value by providing high-quality..."
 created_at: "2024-05-14T12:23:26Z"
-edited_at: "2024-06-06T07:40:21Z"
+edited_at: "2024-06-10T15:44:25Z"
 draft: false
 tags: ["techreviewer", "webdev", "topwebdevelopmentcompany", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev"
@@ -19,4 +19,4 @@ We are honored to be recognized as one of the best web development companies in 
 
 We will continue to prove the trust that Techreviewer, our customers, and partners place in us. We believe that in the near future, we will receive more awards for custom software development.
 
-![](https://cdn-images-1.medium.com/max/2000/1*QWOUi7tuml-L1iJHHHYqkw.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev/file_0.png)

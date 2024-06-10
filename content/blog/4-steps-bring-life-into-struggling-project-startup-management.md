@@ -3,7 +3,7 @@ dev_to_id: 1877534
 title: "4 Steps to Bring Life into a Struggling Project"
 description: "4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business..."
 created_at: "2024-06-05T05:31:06Z"
-edited_at: "2024-06-05T05:31:15Z"
+edited_at: "2024-06-10T15:46:17Z"
 draft: false
 tags: ["startup", "management", "agile", "kanban"]
 canonical_url: "https://jtway.co/the-4-steps-to-bringing-life-to-a-struggling-project-37a53bf9c7dc"
@@ -12,7 +12,7 @@ slug: "4-steps-bring-life-into-struggling-project-startup-management"
 
 ## 4 Steps to Bring Life into a Struggling Project
 
-![](https://cdn-images-1.medium.com/max/4000/1*cfOiwAtxPlYJzwH6-MkDFA.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_0.jpeg)
 
 At the initial stages of a new business or a startup, when the future is unknown, people often opt for short-term solutions in product development. These short term solutions often result in hiring and changing contractors, delivering code with [technical debts](https://martinfowler.com/bliki/TechnicalDebt.html), constant requirements changes.
 
@@ -34,7 +34,7 @@ To move the project forward, each category needs to be permanently eliminated.
 
 ## Eliminating The Darkness
 
-![](https://cdn-images-1.medium.com/max/3840/0*wUbZ1HZDiROqhIod.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_1.jpg)
 
 ### Signs of the Darkness Problem:
 
@@ -48,7 +48,7 @@ The practices we use to solve this are based on [Lean](https://leankit.com/blog/
 
 Addressing the problem and introducing the methodology, we start with [Kanban Board](https://leankit.com/learn/kanban/kanban-board/).
 
-![](https://cdn-images-1.medium.com/max/2256/0*OwP0oJGtShUtwt6M.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_2.png)
 
 At a quick glance, everyone has transparency in the project and can see the following:
 
@@ -64,7 +64,7 @@ At a quick glance, everyone has transparency in the project and can see the foll
 
 ## Eliminating The Confusion
 
-![](https://cdn-images-1.medium.com/max/3840/0*gMLtpgbdpWxubaXI.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_3.jpg)
 
 ### Signs of the Confusion Problem:
 
@@ -80,7 +80,7 @@ When we ensure the processes for product delivery, all development aspects are s
 
 ## Eliminating The Rust
 
-![](https://cdn-images-1.medium.com/max/3840/0*RZemBFZkUSHWl3i7.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_4.jpg)
 
 ### Signs of the Rust Problem:
 
@@ -106,7 +106,7 @@ In combination with Kanban, we can eliminate Staled Code by limiting Work In Pro
 
 ## Eliminating The “Deja Vu”
 
-![](https://cdn-images-1.medium.com/max/2000/0*Gf7a6sJvTsLbD7tQ.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_5.jpg)
 
 ### Signs of the “Deja Vu” Problem:
 
@@ -142,7 +142,7 @@ As a result, we can eliminate several problems and:
 
 ## Summary
 
-![](https://cdn-images-1.medium.com/max/3840/0*2AGLQSpc345xiJhY.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_6.jpg)
 
 These outlined practices are very simple and easy to integrate, but at the same time produce lasting and impactful results in short time.
 

@@ -3,7 +3,7 @@ dev_to_id: 1880416
 title: "7 tricks of successful communication with candidates"
 description: "Nowadays attracting good candidates is a pretty hard process, thereby, recruiters often face the..."
 created_at: "2024-06-07T13:12:12Z"
-edited_at: "2024-06-07T13:44:13Z"
+edited_at: "2024-06-10T15:47:55Z"
 draft: false
 tags: ["startup", "recruiting"]
 canonical_url: "https://jetthoughts.com/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting"
@@ -13,7 +13,7 @@ slug: "7-tricks-of-successful-communication-with-candidates-startup-recruiting"
 
 So, how can you draw a candidate’s attention to your company from the very beginning? How to interest and immediately make a good impression on them?
 
-![Photo by [Adam Jang](https://unsplash.com/@adamjang) on [Unsplash](https://unsplash.com/s/photos/communication)](https://cdn-images-1.medium.com/max/2340/1*x19YPo8klSgI1ByrGbU8Wg.jpeg)
+![Photo by [Adam Jang](https://unsplash.com/@adamjang) on [Unsplash](https://unsplash.com/s/photos/communication)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/file_0.jpeg)
 
 Recently we conducted a small investigation and identified the main tricks of successful communication with candidates:
 

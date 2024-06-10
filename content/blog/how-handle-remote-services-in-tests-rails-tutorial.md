@@ -3,7 +3,7 @@ dev_to_id: 1853545
 title: "How to handle remote services in tests"
 description: "Do you have difficulties in adding the new tests and their readability decreased due to..."
 created_at: "2024-05-15T06:53:38Z"
-edited_at: "2024-06-06T07:39:11Z"
+edited_at: "2024-06-10T15:45:31Z"
 draft: false
 tags: ["rails", "tutorial", "pattern", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/how-handle-remote-services-in-tests-rails-tutorial"
@@ -11,7 +11,7 @@ slug: "how-handle-remote-services-in-tests-rails-tutorial"
 ---
 > ### Do you have difficulties in adding the new tests and their readability decreased due to mocks and stubs? Let’s try to get rid of external requests in tests.
 
-![](https://cdn-images-1.medium.com/max/2648/1*xlH6wOOksbUQTr9VXVnqRA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-handle-remote-services-in-tests-rails-tutorial/file_0.png)
 
 The main idea is to override implementation dynamically during the call of external service. In other words, to use different sources for receiving data for different environments. Suppose for production environments, you get the data from a third-party server, and for a test environment, the source can simply return an object of the desired format.
 

@@ -3,7 +3,7 @@ dev_to_id: 1853621
 title: "How to have a clean CSS structure with RSCSS/ITCSS"
 description: "Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take..."
 created_at: "2024-05-15T07:45:28Z"
-edited_at: "2024-06-06T07:38:46Z"
+edited_at: "2024-06-10T15:46:00Z"
 draft: false
 tags: ["css", "rscss", "frontend", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-have-clean-css-structure-with-rscssitcss-rscss"
@@ -11,7 +11,7 @@ slug: "how-have-clean-css-structure-with-rscssitcss-rscss"
 ---
 Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take a lot of effort. Making three lines of CSS code to style a DOM-element won’t take you more than two minutes, but let’s open our eyes to the bigger picture…
 
-![](https://cdn-images-1.medium.com/max/2800/0*iDZUjZ2Me7en5QnH)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-have-clean-css-structure-with-rscssitcss-rscss/file_0.jpeg)
 
 What if the application grows faster than expected at the beginning of the project?
 
@@ -43,7 +43,7 @@ ITCSS can be used with preprocessors or without them and compatible with CSS met
 
 One of the critical principles of ITCSS is that it separates your CSS codebase into several sections (called layers), which take the form of the inverted triangle:
 
-![The inverted triangle model](https://cdn-images-1.medium.com/max/2000/0*VWejk0TfrMd8kc3D)
+![The inverted triangle model](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-have-clean-css-structure-with-rscssitcss-rscss/file_1.jpeg)
 
 From top to bottom:
 

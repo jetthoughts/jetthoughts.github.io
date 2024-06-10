@@ -3,7 +3,7 @@ dev_to_id: 1113061
 title: "How to use :nth-child in CSS"
 description: "The :nth-child pseudo-class allows to select one and more elements based on their source..."
 created_at: "2022-06-13T14:53:23Z"
-edited_at: "2024-06-06T07:41:49Z"
+edited_at: "2024-06-10T15:42:44Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
 canonical_url: "https://jetthoughts.com/blog/how-use-nth-child-in-css-html"

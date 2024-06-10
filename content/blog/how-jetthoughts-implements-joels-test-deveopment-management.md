@@ -3,13 +3,13 @@ dev_to_id: 1877555
 title: "How JetThoughts implements Joel’s test?"
 description: "For those of you who don’t know who Joel Spolsky is here are some facts:   Worked at..."
 created_at: "2024-06-05T05:51:10Z"
-edited_at: "2024-06-06T07:38:19Z"
+edited_at: "2024-06-10T15:46:32Z"
 draft: false
 tags: ["deveopment", "management", "project", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management"
 slug: "how-jetthoughts-implements-joels-test-deveopment-management"
 ---
-![Unsplash Photo: [Matt Briney](http://unsplash.com/@mbriney?utm_campaign=photographer-credit)](https://cdn-images-1.medium.com/max/8576/1*oZCkto5O3X5wleYjf6J_Wg.jpeg)
+![Unsplash Photo: [Matt Briney](http://unsplash.com/@mbriney?utm_campaign=photographer-credit)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-jetthoughts-implements-joels-test-deveopment-management/file_0.jpeg)
 
 For those of you who don’t know who Joel Spolsky is here are some facts:
 
@@ -19,7 +19,7 @@ For those of you who don’t know who Joel Spolsky is here are some facts:
 
 * Guilty for the world to see some interesting web products:
 
-![](https://cdn-images-1.medium.com/max/2000/1*Jz9JY7gSWhVW4-cPGJPv2Q.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-jetthoughts-implements-joels-test-deveopment-management/file_1.png)
 
 * Wrote [an awesome post](http://www.joelonsoftware.com/articles/fog0000000043.html) about test to rate the quality of software team.
 

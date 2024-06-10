@@ -3,7 +3,7 @@ dev_to_id: 1877642
 title: "Simultaneous work on the feature for frontend and backend developers"
 description: "Simultaneous work on the feature for frontend and backend developers   How do split features..."
 created_at: "2024-06-05T06:43:35Z"
-edited_at: "2024-06-06T07:42:45Z"
+edited_at: "2024-06-10T15:47:10Z"
 draft: false
 tags: ["development", "startup", "continousdelivery"]
 canonical_url: "https://jetthoughts.com/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup"
@@ -14,11 +14,11 @@ slug: "simultaneous-work-on-feature-for-frontend-backend-developers-development-
 
 How do split features on static and backend for 2 developers to prevent blockers? What no-time solution we could use for small projects?
 
-![](https://cdn-images-1.medium.com/max/4804/1*zcKF0EGHZnbPf9ns95S9tg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/file_0.png)
 
 ## Tiny Feature-flag Solution
 
-![](https://cdn-images-1.medium.com/max/2000/1*7dODCnWczyDwl8G_8q4PCg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/file_1.png)
 
 For simplicity, we agreed to set a convention:
 > # if there is a param preview in the URL, you should activate all hidden features on the page.
@@ -45,7 +45,7 @@ If we will merge only static code, then the customers will get no working *UI*.
 
 If we will merge the backend first, then will get a broken *UX*.
 
-![Photo by [Moses Londo](https://unsplash.com/@moseslondo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/dilemma?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/12518/1*8jeyxneFoRXg3o1Lod0EzQ.jpeg)
+![Photo by [Moses Londo](https://unsplash.com/@moseslondo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/dilemma?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/file_2.jpeg)
 
 ## Overview alternative solution
 > # No, no, no! Stop long-lived feature branches usage!

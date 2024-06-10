@@ -3,7 +3,7 @@ dev_to_id: 1877577
 title: "How We Hire Developers at JetThoughts"
 description: "How We Hire Developers at JetThoughts     Hiring process at JetThoughts is aimed at building..."
 created_at: "2024-06-05T06:13:54Z"
-edited_at: "2024-06-06T07:38:07Z"
+edited_at: "2024-06-10T15:46:47Z"
 draft: false
 tags: ["recruiting", "hr", "culture"]
 canonical_url: "https://jetthoughts.com/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr"
@@ -12,7 +12,7 @@ slug: "how-we-hire-developers-at-jetthoughts-recruiting-hr"
 
 ## How We Hire Developers at JetThoughts
 
-![](https://cdn-images-1.medium.com/max/2000/0*_BuegqkYZj3noHdH.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/file_0.jpg)
 
 Hiring process at JetThoughts is aimed at building a solid team. We are a small company, and it is crucial to hire right people who have the relevant experience and the same mindset as the rest of the team. This is a guide on how we hire developers.
 

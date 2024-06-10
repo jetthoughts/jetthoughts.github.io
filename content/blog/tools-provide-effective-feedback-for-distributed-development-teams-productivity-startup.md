@@ -3,13 +3,13 @@ dev_to_id: 1853640
 title: "Tools to provide effective feedback for distributed development teams"
 description: "How to share info in a remote async environment? What is the best way to keep everyone in the..."
 created_at: "2024-05-15T07:58:27Z"
-edited_at: "2024-06-06T07:38:39Z"
+edited_at: "2024-06-10T15:46:07Z"
 draft: false
 tags: ["productivity", "startup", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup"
 slug: "tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup"
 ---
-![Photo by [Jakob Owens](https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/video?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/0*qp3KwvUGOgplTVNb)
+![Photo by [Jakob Owens](https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/video?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/file_0.jpeg)
 
 How to share info in a remote async environment? What is the best way to keep everyone in the loop?
 
@@ -25,7 +25,7 @@ It’s a screen recording app that also catches the sound that goes out of your 
 
 It could be installed from [Chrome Web Store](https://chrome.google.com/webstore/detail/loom-video-recorder-scree/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US). It’s also available for iOS btw. Just add the extension to your browser and register using your Slack or Google account. Here is how the interface looks like:
 
-![Useloom Interface](https://cdn-images-1.medium.com/max/2560/0*4yAoK_Go5fiLiNbV)
+![Useloom Interface](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/file_1.jpeg)
 
 ## How to use it?
 

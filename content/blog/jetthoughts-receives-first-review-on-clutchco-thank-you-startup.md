@@ -3,13 +3,13 @@ dev_to_id: 1853469
 title: "JetThoughts receives First Review on Clutch.co: Thank you"
 description: "Our team at JetThoughts has an expertise of the Ruby on Rails development service line, and we’re..."
 created_at: "2024-05-15T05:59:12Z"
-edited_at: "2024-06-06T07:39:29Z"
+edited_at: "2024-06-10T15:45:15Z"
 draft: false
 tags: ["startup", "review", "product", "company"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup"
 slug: "jetthoughts-receives-first-review-on-clutchco-thank-you-startup"
 ---
-![](https://cdn-images-1.medium.com/max/2538/0*7hInFO0golgSn95V)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/file_0.jpeg)
 
 Our team at JetThoughts has an expertise of the [Ruby on Rails](https://rubyonrails.org/) development service line, and we’re excited we could have offered that to our real estate platform client. This web application framework streamlines the processes for building our clients’ apps that stand out in the crowd.
 

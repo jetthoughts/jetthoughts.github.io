@@ -3,7 +3,7 @@ dev_to_id: 1880292
 title: "Stress Testing Your Rails Application Using JMeter"
 description: "Stress Testing Your Rails Application Using JMeter     Some time ago we needed to make a..."
 created_at: "2024-06-07T11:31:26Z"
-edited_at: "2024-06-07T11:31:48Z"
+edited_at: "2024-06-10T15:47:48Z"
 draft: false
 tags: ["ruby", "rails", "performance", "jmeter"]
 canonical_url: "https://dev.to/jetthoughts/stress-testing-your-rails-application-using-jmeter-5h1i"
@@ -12,7 +12,7 @@ slug: "stress-testing-your-rails-application-using-jmeter-ruby"
 
 ## Stress Testing Your Rails Application Using JMeter
 
-![](https://cdn-images-1.medium.com/max/2000/1*jm44rxFN7PL-A2WZ-aeTJw.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stress-testing-your-rails-application-using-jmeter-ruby/file_0.jpeg)
 
 Some time ago we needed to make a simple stress-testing of our application to get an idea of where we are going, and find out whether we should take a break and pay some attention to optimizations or not. The number of stress-testing tools is huge, but we decided to stick to a well-tried solution — [JMeter](https://jmeter.apache.org/).
 

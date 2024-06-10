@@ -3,23 +3,23 @@ dev_to_id: 1877638
 title: "How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers"
 description: "As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could..."
 created_at: "2024-06-05T06:34:42Z"
-edited_at: "2024-06-06T07:38:49Z"
+edited_at: "2024-06-10T15:47:04Z"
 draft: false
 tags: ["development", "startup", "business", "enterprise"]
 canonical_url: "https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup"
 slug: "how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup"
 ---
-![Photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/education?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/1*kX_wEmPpiuT9R5j7TJNtlw.jpeg)
+![Photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/education?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_0.jpeg)
 
 ***As its client base grew, Faria Education Group (FEG) needed to ensure its [OpenApply](https://openapply.com/) product could accommodate increasing demand. The problem? There were a lot (and we mean…a lot) of bugs within the code, and FEG didn’t have any governing project management structure or unified documentation processes in place to address the growing issue.***
 
-![](https://cdn-images-1.medium.com/max/2170/1*mWPbmPhvowZ2aWV8vLMS2A.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_1.png)
 
 If you’ve ever gone through a school admissions process, you know just how arduous it can be. You have to deal with paperwork, essays, tests, interviews, and likely much more. It can be overwhelming — and that’s not even considering the anxiety of waiting to find out if you got in.
 
 With all of that in mind, [FEG](https://www.fariaedu.com/) created [OpenApply](https://openapply.com/), an online platform to help simplify the admissions and enrollment processes for applicants around the world. [OpenApply](https://openapply.com/) supports international schools by providing a paperless, integrated, and seamless online system that helps ease the stress of everyone involved.
 
-![](https://cdn-images-1.medium.com/max/2800/0*5BtWf_iqace3mADH.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_2.png)
 
 But as [FEG’s](https://www.fariaedu.com/) customer base grew, the company became increasingly frustrated. They were running into various bugs in the code and needed developers with ideas for how to implement new solutions that would solve them. They needed a team on board to stop regressions, build a foundation, and scale feature development for faster growth. They couldn’t find the right team for the job — until they hired [JetThoughts](https://www.jetthoughts.com/).
 
@@ -37,7 +37,7 @@ Taking into account all of the above, plus the installation of new tools for add
 
 And, of course, with better efficiency and a more user-friendly product, [FEG](https://www.fariaedu.com/) experienced an immediate increase in existing customer satisfaction and retention, as well as new customer growth leading to profits directly tied to our work.
 
-![](https://cdn-images-1.medium.com/max/2228/1*UE-MnpdnUSWzHPo_Xt_ddA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_3.png)
 
 Below are some technical highlights from our work with FEG:
 
@@ -57,7 +57,7 @@ Technical bugs obviously cause technical issues. But beyond that, they cause int
 
 We added performance analytics so the FEG team can assess interface performance and prevent regressions. We also established project management processes that eliminated role-related confusion and allowed managers and developers to work within realistic time- and workload-frameworks.
 
-![](https://cdn-images-1.medium.com/max/2800/0*a1wzT0PNGdS0yPsS.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_4.png)
 
 ## Team Expansion
 

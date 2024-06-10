@@ -3,7 +3,7 @@ dev_to_id: 1852741
 title: "How to avoid N+1 query using SQL views (materialized) in Rails application"
 description: "Consider the way to reduce the queries when calculating the average values and find the..."
 created_at: "2024-05-14T14:05:48Z"
-edited_at: "2024-06-06T07:39:50Z"
+edited_at: "2024-06-10T15:44:59Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "sql"]
 canonical_url: "https://jetthoughts.com/blog/how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby"
@@ -11,7 +11,7 @@ slug: "how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby
 ---
 > ### Consider the way to reduce the queries when calculating the average values and find the place where to do it in the Ruby on Rails application.
 
-![](https://cdn-images-1.medium.com/max/2000/1*PFu0sdfOrNUXEiD_K0N_OA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby/file_0.png)
 
 In [the first part](https://jtway.co/how-to-avoid-n-1-and-keep-your-ruby-on-rails-controller-clean-b8589c8c6d39), we considered the solution with extracting logic to the separate class and implementing the Facade pattern. SQL views are another way for solving the N+1 problem when finding the average value in Ruby on Rails application.
 
@@ -33,7 +33,7 @@ But when we need to show the average rates for the batch of films:
 
 it will produce a lot of individual queries:
 
-![](https://cdn-images-1.medium.com/max/2800/0*2dySxfSa3iZxWQbc)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby/file_1.jpeg)
 
 The issue is:
 >  How to reduce the queries and where to do it?
@@ -88,7 +88,7 @@ Now, we will deal with the *FilmRating *in the controller
 
 the query for getting average rates of all films will look like:
 
-![](https://cdn-images-1.medium.com/max/5760/1*gxpTrWOHGSjVopmo5SpmbQ.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby/file_2.png)
 
 ### The pros of this way
 

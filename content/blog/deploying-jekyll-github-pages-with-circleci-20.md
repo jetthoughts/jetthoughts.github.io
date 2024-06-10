@@ -3,17 +3,17 @@ dev_to_id: 1853461
 title: "Deploying Jekyll to GitHub Pages with CircleCI 2.0"
 description: "Have you ever seen this error when you tried to deploy your Jekyll site to GitHub Pages?    One of..."
 created_at: "2024-05-15T05:49:44Z"
-edited_at: "2024-06-06T07:39:34Z"
+edited_at: "2024-06-10T15:45:10Z"
 draft: false
 tags: ["jekyll", "deploying", "ci", "circleci"]
 canonical_url: "https://jetthoughts.com/blog/deploying-jekyll-github-pages-with-circleci-20"
 slug: "deploying-jekyll-github-pages-with-circleci-20"
 ---
-![](https://cdn-images-1.medium.com/max/2000/1*l25XXd39n4mR4eXv4n8G5A.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_0.jpeg)
 
 Have you ever seen this error when you tried to deploy your Jekyll site to GitHub Pages?
 
-![](https://cdn-images-1.medium.com/max/2000/0*0zYQC1R7VWj_V-Hh.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_1.jpeg)
 
 One of the reasons is that some of the gems in your Gemfile are not supported by GitHub Pages. There is a way to have custom gems by setting up your own continuous delivery. In this post we will use CircleCI to solve the problem.
 
@@ -47,11 +47,11 @@ You can use another branch for deployed to GitHub Pages. But you will need to ma
 
 Make sure you enable your repository on CircleCI.
 
-![](https://cdn-images-1.medium.com/max/2418/0*ob-rkgbt1sjMvHdL.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_2.jpeg)
 
 Now add deploy key in “Checkout SSH keys”
 
-![](https://cdn-images-1.medium.com/max/2450/0*vkMdyUwvzhsNqvIB.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_3.jpeg)
 
 Also, need to create two values in “Environment Variables”:
 
@@ -59,7 +59,7 @@ Also, need to create two values in “Environment Variables”:
 
  2. USER_NAME (your username)
 
-![](https://cdn-images-1.medium.com/max/2450/0*75feLThKpIfxkGc0.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_4.jpeg)
 
 ## CircleCI configuration
 

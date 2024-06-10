@@ -3,7 +3,7 @@ dev_to_id: 1853635
 title: "Running tests in containers with docker-compose"
 description: "The main advantages of this way are to have independent environment for the tests running..."
 created_at: "2024-05-15T07:56:17Z"
-edited_at: "2024-06-06T07:38:41Z"
+edited_at: "2024-06-10T15:46:04Z"
 draft: false
 tags: ["coding", "tutorial", "docker", "testing"]
 canonical_url: "https://jetthoughts.com/blog/running-tests-in-containers-with-docker-compose-coding-tutorial"
@@ -11,7 +11,7 @@ slug: "running-tests-in-containers-with-docker-compose-coding-tutorial"
 ---
 > ### The main advantages of this way are to have independent environment for the tests running and to reduce the complexity of the test environment setup. Just load and run tests. Consider how to achieve this.
 
-![](https://cdn-images-1.medium.com/max/2000/1*oMjNdzYZ-RWJz_YHI41DlQ.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/file_0.png)
 
 You will see below how you can setup the docker-compose for common Ruby on Rails application. As a bonus, you will be able to reuse those setup on all projects without much changing.
 

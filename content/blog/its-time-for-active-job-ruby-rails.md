@@ -3,7 +3,7 @@ dev_to_id: 1880305
 title: "It’s Time For Active Job"
 description: "It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2...."
 created_at: "2024-06-07T11:47:31Z"
-edited_at: "2024-06-07T11:50:43Z"
+edited_at: "2024-06-10T15:47:49Z"
 draft: false
 tags: ["ruby", "rails", "develpment", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails"
@@ -12,7 +12,7 @@ slug: "its-time-for-active-job-ruby-rails"
 
 ## It’s Time For Active Job
 
-![](https://cdn-images-1.medium.com/max/2000/1*lEglMGLK8v205d_MBRpUFg.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/its-time-for-active-job-ruby-rails/file_0.jpeg)
 
 Recently we have upgraded one of our own projects to Rails 4.2. New minor version contains many improvements of old features and adds some new ones. One of most interesting (and helpful) new features is adding a new framework for declaring jobs and making them run on a variety of queuing backends — **Active Job**.
 

@@ -3,7 +3,7 @@ dev_to_id: 1877535
 title: "How To Name Variables And Methods In Ruby"
 description: "How To Name Variables And Methods In Ruby               What’s in a name? that which we call..."
 created_at: "2024-06-05T05:33:19Z"
-edited_at: "2024-06-05T07:36:27Z"
+edited_at: "2024-06-10T15:46:20Z"
 draft: false
 tags: ["programming", "ruby", "bestpractices", "rails"]
 canonical_url: "https://jtway.co/how-to-name-variables-and-methods-in-ruby-b4a21fb66c4d"
@@ -12,7 +12,7 @@ slug: "how-name-variables-methods-in-ruby-programming"
 
 ## How To Name Variables And Methods In Ruby
 
-![](https://cdn-images-1.medium.com/max/2000/1*KjfZbBWn_KoYjK7LsLHJKw.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-name-variables-methods-in-ruby-programming/file_0.jpeg)
 > # What’s in a name? that which we call a rose
 > #By any other name would smell as sweet.
 > # *― William Shakespeare, Romeo and Juliet*
@@ -41,7 +41,7 @@ Note how the second line in a *“good”* example tells you the complete story 
 
 There are some exceptions, like using e for an exception in rescue-block, or i for a numeric index, or f for FormBuilder instance inside a view, or k, v for key-value pairs (although this one is often misused).
 
-![](https://cdn-images-1.medium.com/max/5842/1*TbfIBeAN-Zpg3p5Jfrj37A.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-name-variables-methods-in-ruby-programming/file_1.jpeg)
 
 ## The naming of cats is a difficult matter
 
@@ -86,7 +86,7 @@ Following this advice, you may end up with really long and specific names, like 
 
 Such long names are actually a good thing, but not because it’s good to have such long names (it’s not), but because they indicate a problem with the context. They show that the class or method is trying to handle too many things at once, and you have to split it into smaller parts with as little dependencies as possible.
 
-![](https://cdn-images-1.medium.com/max/4096/1*7xVC3T8jz8AwFF7jymr-9g.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-name-variables-methods-in-ruby-programming/file_2.jpeg)
 
 ## Though this be madness, yet there is method in ‘t
 > # *It may be necessary to use methods other than constitutional ones*

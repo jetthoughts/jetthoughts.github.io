@@ -3,7 +3,7 @@ dev_to_id: 1880404
 title: "Advantages of freelance — why it’s really worth trying?"
 description: "Every day freelance is becoming more and more popular among all industries where it’s possible to..."
 created_at: "2024-06-07T13:04:07Z"
-edited_at: "2024-06-07T13:44:15Z"
+edited_at: "2024-06-10T15:47:53Z"
 draft: false
 tags: ["freelance", "remote"]
 canonical_url: "https://jetthoughts.com/blog/advantages-of-freelance-why-its-really-worth-trying-remote"
@@ -11,7 +11,7 @@ slug: "advantages-of-freelance-why-its-really-worth-trying-remote"
 ---
 *Every day freelance is becoming more and more popular among all industries where it’s possible to introduce. However, many people still don’t dare to take the first step and finally understand whether this opportunity is suitable for them. We decided to highlight all the key pros of freelance, which may help someone to make their choice.*
 
-![Photo by [Jane Palash](https://unsplash.com/@jane_palash) on [Unsplash](https://unsplash.com/s/photos/communication)](https://cdn-images-1.medium.com/max/6048/1*RCvNQ3annBj1anFDnpXoYA.jpeg)
+![Photo by [Jane Palash](https://unsplash.com/@jane_palash) on [Unsplash](https://unsplash.com/s/photos/communication)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/advantages-of-freelance-why-its-really-worth-trying-remote/file_0.jpeg)
 
 **Work whenever you want? — No problems!**
 

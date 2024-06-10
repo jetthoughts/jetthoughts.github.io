@@ -3,7 +3,7 @@ dev_to_id: 1877645
 title: "Avoid data migrations in the schema migrations for Rails"
 description: "Avoid data migrations in the schema migrations for Rails   Could you re-run all migrations..."
 created_at: "2024-06-05T06:44:55Z"
-edited_at: "2024-06-06T07:42:43Z"
+edited_at: "2024-06-10T15:47:12Z"
 draft: false
 tags: ["ruby", "rails", "bestpractices", "development"]
 canonical_url: "https://jetthoughts.com/blog/avoid-data-migrations-in-schema-for-rails-ruby"
@@ -14,7 +14,7 @@ slug: "avoid-data-migrations-in-schema-for-rails-ruby"
 
 Could you re-run all migrations in the project? How often you were required to fix them, while production under the fire? What can you do to prevent problems with migration and not waste much time on it?
 
-![Staled migrations on `db:migrate:reset`](https://cdn-images-1.medium.com/max/4100/1*mN08kDz0s4wSwtwfswI-0w.png)
+![Staled migrations on `db:migrate:reset`](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/avoid-data-migrations-in-schema-for-rails-ruby/file_0.png)
 
 ## Solution
 
@@ -38,7 +38,7 @@ But also you can do this without gems, by following simple convention.
 
 ### DIY Algorithm
 
-![One-off data migration rake task](https://cdn-images-1.medium.com/max/4040/1*woeqQCEXYUC8eNaBYMlpKA.png)
+![One-off data migration rake task](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/avoid-data-migrations-in-schema-for-rails-ruby/file_1.png)
 
  1. Add Service to migrate data. More details about Services you can find on [How to use a Transaction Script (aka Service Objects) in Ruby on Rails](https://jtway.co/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-161b7e228942?source=friends_link&sk=6b96a97ea4ec3ab4fa62e6e27fb39e9e).
 

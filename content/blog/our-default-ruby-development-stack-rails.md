@@ -3,7 +3,7 @@ dev_to_id: 1880251
 title: "Our Default Ruby Development Stack"
 description: "Our Default Ruby Development Stack     Not that long ago I joined JetThoughts. By this time..."
 created_at: "2024-06-07T10:47:23Z"
-edited_at: "2024-06-07T10:49:54Z"
+edited_at: "2024-06-10T15:47:46Z"
 draft: false
 tags: ["rails", "ruby", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/our-default-ruby-development-stack-rails/"
@@ -12,7 +12,7 @@ slug: "our-default-ruby-development-stack-rails"
 
 ## Our Default Ruby Development Stack
 
-![](https://cdn-images-1.medium.com/max/2000/1*rM-zztnKMWoKkJloXgPPmw.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/our-default-ruby-development-stack-rails/file_0.jpeg)
 
 Not that long ago I joined **JetThoughts**. By this time I studied the team, the workflow, colleagues minds (just a little) and technologies used to build applications.
 

@@ -3,13 +3,13 @@ dev_to_id: 1877716
 title: "Best practices for optimizing Ruby on Rails performance"
 description: "Ruby on Rails is a popular web development backend framework based on the famous Ruby language...."
 created_at: "2024-06-05T08:09:41Z"
-edited_at: "2024-06-06T07:42:34Z"
+edited_at: "2024-06-10T15:47:21Z"
 draft: false
 tags: ["rails", "ruby", "performance", "optimisation"]
 canonical_url: "https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance"
 slug: "best-practices-for-optimizing-ruby-on-rails-performance"
 ---
-![Best practices for optimizing Ruby on Rails performance](https://cdn-images-1.medium.com/max/3200/0*3ZYAVd4ZwLIeAaNB)
+![Best practices for optimizing Ruby on Rails performance](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/best-practices-for-optimizing-ruby-on-rails-performance/file_0.jpeg)
 
 Ruby on Rails is a popular web development backend framework based on the famous Ruby language. This framework can be used to build all types of web applications and is fast on its own. But when it comes to building enterprise applications, optimizing your code and all related aspects is essential. This article will explain the best practices for optimizing Ruby on Rails performance for your subsequent enterprise applications. But before that, let’s look at why performance optimization is needed.
 

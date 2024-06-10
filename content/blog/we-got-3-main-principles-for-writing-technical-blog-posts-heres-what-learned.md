@@ -3,7 +3,7 @@ dev_to_id: 1852579
 title: "We got 3 main principles for writing Technical Blog posts. Here’s what we learned."
 description: "After 100 articles of the research on how to write Technical Blog post simple and quickly, without..."
 created_at: "2024-05-14T11:40:41Z"
-edited_at: "2024-06-06T07:40:27Z"
+edited_at: "2024-06-10T15:44:19Z"
 draft: false
 tags: ["writing", "blog", "blogposting", "principles"]
 canonical_url: "https://jetthoughts.com/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned"
@@ -11,7 +11,7 @@ slug: "we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-lear
 ---
 After 100 articles of the research on how to write Technical Blog post simple and quickly, without any stress, we can distinguish 3 main principles which helped us overcome this barrier and can definitely help you with writing. Learn with us how to improve your post’s readability!
 
-![Photo by [Glenn Carstens-Peters](https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/typing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*rfsuKcYjRFlujyW_.jpeg)
+![Photo by [Glenn Carstens-Peters](https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/typing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/file_0.jpeg)
 
 ## Start from Angle
 
@@ -31,7 +31,7 @@ The approach of offering the most important information before filling in on the
 
 An effective frontloading distills the most important information for the reader. It helps readers quickly digest the announcement, decision, and when the new procedures go into effect. The reader doesn’t necessarily want to know all the background information that led to the decision. He or she likely wants to know “how does this information affect me?” and this principle should answer this question every time.
 
-![](https://cdn-images-1.medium.com/max/2000/0*BVaTP4m5AhPYl7Q3.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/file_1.png)
 
 Why? Because it’s easier for users to scan a webpage to see if it is relevant for their needs. Nobody likes to spend their time, so if you make it clear in the first line or paragraph exactly what the page is about, users can quickly decide whether they want to read on or whether they’re on the wrong page and need to leave.
 
@@ -69,7 +69,7 @@ The main principles of this rule:
 
 Here is an example from our previous article [https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
 
-![](https://cdn-images-1.medium.com/max/2000/0*BpYd4XjoEmSFLaMl)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/file_2.jpeg)
 
 [**Ruslana](https://jtway.co/@rbr.jt)** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

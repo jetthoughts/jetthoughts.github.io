@@ -3,7 +3,7 @@ dev_to_id: 1852749
 title: "Design Rails JSON API with performance in mind"
 description: "Caching can reduce load time and increase the throughput of your API endpoints without..."
 created_at: "2024-05-14T14:16:46Z"
-edited_at: "2024-06-06T07:39:43Z"
+edited_at: "2024-06-10T15:45:03Z"
 draft: false
 tags: ["rails", "cache", "api", "performance"]
 canonical_url: "https://jetthoughts.com/blog/design-rails-json-api-with-performance-in-mind-cache"
@@ -11,7 +11,7 @@ slug: "design-rails-json-api-with-performance-in-mind-cache"
 ---
 > ### Caching can reduce load time and increase the throughput of your API endpoints without in-depth optimization. But there are certain design principles you should follow to make your endpoints cacheable and gain all benefits caching can provide for your app.
 
-![](https://cdn-images-1.medium.com/max/2000/1*gmRAS_1N72i50qps-FkNWg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/design-rails-json-api-with-performance-in-mind-cache/file_0.png)
 
 There is a common use case which can be found in many apps when you need to implement an API returning a list of posts and each post having a flag indicating whether a post was liked by the current user or not.
 

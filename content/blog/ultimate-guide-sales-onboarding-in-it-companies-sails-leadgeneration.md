@@ -3,13 +3,13 @@ dev_to_id: 1852621
 title: "The Ultimate Guide to the Sales Onboarding in IT Companies"
 description: "Are you new at hiring Sales Reps for your IT company? Most probably you are struggling with what to..."
 created_at: "2024-05-14T12:33:58Z"
-edited_at: "2024-06-06T07:40:12Z"
+edited_at: "2024-06-10T15:44:34Z"
 draft: false
 tags: ["sails", "leadgeneration", "outstaffing"]
 canonical_url: "https://jetthoughts.com/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration"
 slug: "ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration"
 ---
-![[Illustration by Freepik Storyset](https://storyset.com/illustration/team/pana)](https://cdn-images-1.medium.com/max/5760/1*LUrRbaQPjAGjShnS9E16zA.png)
+![[Illustration by Freepik Storyset](https://storyset.com/illustration/team/pana)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/file_0.png)
 
 *Are you new at hiring Sales Reps for your IT company? Most probably you are struggling with what to tell them first and how to create the onboarding process that will last ages. I know how you feel. Here’s what I learned through the past 12 years of working in Sales:*
 

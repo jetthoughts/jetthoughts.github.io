@@ -3,14 +3,14 @@ dev_to_id: 1877558
 title: "Test Driven Thinking for Solving Common Ruby Pitfalls"
 description: "Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for..."
 created_at: "2024-06-05T05:53:53Z"
-edited_at: "2024-06-06T07:38:16Z"
+edited_at: "2024-06-10T15:46:36Z"
 draft: false
 tags: ["rails", "tdd", "testing"]
 canonical_url: "https://jetthoughts.com/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd"
 slug: "test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd"
 ---
 
-![Unsplash Photo: [Robert Adams](https://unsplash.com/@adamsr)](https://cdn-images-1.medium.com/max/9216/1*AONMFzLg2smoc5M0uHhwmw.jpeg)
+![Unsplash Photo: [Robert Adams](https://unsplash.com/@adamsr)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/file_0.jpeg)
 
 *Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for completing the Booletproof Automate Bloody Repression Machine with REST API, Authorization and other munchies for glory of the Empire.*
 

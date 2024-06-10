@@ -3,7 +3,7 @@ dev_to_id: 1852712
 title: "What are the most common misconceptions about remote work?"
 description: "A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the..."
 created_at: "2024-05-14T13:38:49Z"
-edited_at: "2024-06-06T07:40:00Z"
+edited_at: "2024-06-10T15:44:48Z"
 draft: false
 tags: ["remote", "misconception", "myths"]
 canonical_url: "https://jetthoughts.com/blog/what-are-most-common-misconceptions-about-remote-work-misconception"
@@ -13,7 +13,7 @@ slug: "what-are-most-common-misconceptions-about-remote-work-misconception"
 
 *Here are just six myths that are common the most.*
 
-![Photo by [Javier Peñas](https://unsplash.com/@ybook?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/laptop-pet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*urxsmHRemd1cfn9n)
+![Photo by [Javier Peñas](https://unsplash.com/@ybook?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/laptop-pet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-are-most-common-misconceptions-about-remote-work-misconception/file_0.jpeg)
 
 ## Remote workers don’t work at all
 
@@ -55,7 +55,7 @@ Working remotely does not mean being at home all day and all night. Sure, someon
 
 Besides, you can meet somebody new and make friends.
 
-![Photo by [Marvin Meyer](https://unsplash.com/@marvelous?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/work-in-cafe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*9L-z6SYCnWQjsdbC)
+![Photo by [Marvin Meyer](https://unsplash.com/@marvelous?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/work-in-cafe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-are-most-common-misconceptions-about-remote-work-misconception/file_1.jpeg)
 
 Furthermore, in [JetThoughts](https://www.jetthoughts.com/), we chat every day, using Discord. Team members who are from the same city, can meet and work together. We also try to minimize situations in which people are left alone, and we strive to support each other in the distance. So, we frequently do video conferencing.
 

@@ -3,13 +3,13 @@ dev_to_id: 1852632
 title: "Simple Lead Generation Tactics"
 description: "How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build..."
 created_at: "2024-05-14T12:48:39Z"
-edited_at: "2024-06-06T07:40:04Z"
+edited_at: "2024-06-10T15:44:43Z"
 draft: false
 tags: ["startup", "sails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/simple-lead-generation-tactics-startup-sails"
 slug: "simple-lead-generation-tactics-startup-sails"
 ---
-![Photo by [Denys Nevozhai](https://unsplash.com/photos/7nrsVjvALnA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/roads?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2000/1*91P6VhgKlRizTHZoP6RuQQ.jpeg)
+![Photo by [Denys Nevozhai](https://unsplash.com/photos/7nrsVjvALnA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/roads?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_0.jpeg)
 
 How to build the Lead Generation workflow? Which tools should be used?
 
@@ -19,11 +19,11 @@ In our [previous article](https://jtway.co/5-free-tools-to-make-the-sales-proces
 
 To get the work email of the lead you’d like to reach out to, there are two things to find out — the person’s first and last name and his/her company website. To guess the email, you’d need to put that data into [hunter.io](https://hunter.io/) (it gives you 100 searches/month for free)
 
-![](https://cdn-images-1.medium.com/max/2782/0*AlWnr-A8la0d0PkO)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_1.jpeg)
 
 Then the email would pop up, which you should fill into a cell of your spreadsheet. Here is the example of how such spreadsheets might look like:
 
-![](https://cdn-images-1.medium.com/max/2498/0*6DrR4HmW5uaqP5kx)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_2.jpeg)
 
 This structure allows you to fill out all the necessary data in your email mockup to be sent and make such cold emails less generic and more personal. Once it’s done, start writing your email, and from here — you are now able to make it super specific by autocomplete <<>> so that each lead would get a highly personalized message from you, which increase the chance of getting the answer.
 
@@ -38,13 +38,13 @@ Here is the email example where we use most of the data pulled from the lead tab
 
 As a result, your email is super personal and tailored, now, it’s time to send it to your leads. To do that, [Yet Another Mail Merge](https://yet-another-mail-merge.com/) comes to help.
 
-![](https://cdn-images-1.medium.com/max/2000/0*pfVxWvBcNVh8uvmu)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_3.jpeg)
 
 [Power tools](https://chrome.google.com/webstore/detail/power-tools/dofhceeoedodcaheeoacmadcpegkjobi?hl=en) along with [Split Name](https://chrome.google.com/webstore/detail/split-names/omjobieogknhhlogiaeofbdpipihaanb?hl=en) add-on would help to deal with a lot of leads while organizing the table.
 
 Now, you are ready to send your first cold email. *Yet Another Mail Merge* would gather the statistics for you on every step of your email sequence.
 
-![](https://cdn-images-1.medium.com/max/2000/0*wQnG-imuex62b6xm)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_4.jpeg)
 
 Good luck with your first email campaign! If you have any questions — feel free to comment and ask.
 

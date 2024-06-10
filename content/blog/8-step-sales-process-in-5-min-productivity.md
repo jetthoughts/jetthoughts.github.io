@@ -3,7 +3,7 @@ dev_to_id: 1853531
 title: "8-Step Sales Process in 5 min"
 description: "The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in..."
 created_at: "2024-05-15T06:34:55Z"
-edited_at: "2024-06-06T07:39:18Z"
+edited_at: "2024-06-10T15:45:25Z"
 draft: false
 tags: ["sales", "productivity", "checklist"]
 canonical_url: "https://jetthoughts.com/blog/8-step-sales-process-in-5-min-productivity"
@@ -11,7 +11,7 @@ slug: "8-step-sales-process-in-5-min-productivity"
 ---
 The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in order to get the results you envisioned for your company.
 
-![[Illustration by Freepik Storyset](https://storyset.com/illustration/processing/rafiki#407BFFFF&hide=&hide=complete)](https://cdn-images-1.medium.com/max/4000/1*Xm3CDlH2o25PyCyShNwKkQ.png)
+![[Illustration by Freepik Storyset](https://storyset.com/illustration/processing/rafiki#407BFFFF&hide=&hide=complete)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/8-step-sales-process-in-5-min-productivity/file_0.png)
 
 We created the briefest checklist to help you go through each of those steps fast while getting the most out of it:
 
@@ -42,7 +42,7 @@ You can trust your intuition and ask the questions that come to your mind during
 
 There are lots and lots of them on the internet, but here is my favorite:
 
-![Taken from Inbound Sales Course by Hubspot](https://cdn-images-1.medium.com/max/2048/1*9F2u4jMLFBYK1LGn_M1_NQ.png)
+![Taken from Inbound Sales Course by Hubspot](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/8-step-sales-process-in-5-min-productivity/file_1.png)
 
 Remember, not everyone you talked to has to become your client. After qualifying the lead you have a clear picture of who and how you can help.
 

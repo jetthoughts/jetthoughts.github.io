@@ -3,13 +3,13 @@ dev_to_id: 1880171
 title: "4 lines to Speed Up your Rails Test Suite on CircleCI"
 description: "Most of our projects have a big code base of assets which dramatically reduce not only browser page..."
 created_at: "2024-06-07T09:15:36Z"
-edited_at: "2024-06-07T09:34:44Z"
+edited_at: "2024-06-10T15:47:31Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/"
 slug: "4-lines-speed-up-your-rails-test-suite-on-circleci"
 ---
-![](https://cdn-images-1.medium.com/max/2000/1*bWSH6ZI_t1zWaWyqCWZsQg.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/file_0.jpeg)
 
 Most of our projects have a big code base of assets which dramatically reduce not only browser page rendering but also increase passing test suites.
 
@@ -42,7 +42,7 @@ and here complete [CircleCI config](https://gist.github.com/pftg/92cb374182ffec1
 
 ## Benchmark
 
-![](https://cdn-images-1.medium.com/max/3200/0*-WJqF1tHW5jyluuD.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/file_1.jpeg)
 
 We generated simple [*Rails 5 *project with Bootstrap and Foundation](https://github.com/jetthoughts/playground-for-speedup-tests-by-precompile-assets).
 

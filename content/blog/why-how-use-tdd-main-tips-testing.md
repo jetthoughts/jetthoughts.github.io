@@ -3,7 +3,7 @@ dev_to_id: 539418
 title: "Why and how to use TDD. Main tips"
 description: "How to start developing the component from scratch? How to know what architecture it should have? Wha..."
 created_at: "2020-12-11T12:02:25Z"
-edited_at: "2024-06-06T07:42:10Z"
+edited_at: "2024-06-10T15:42:21Z"
 draft: false
 tags: ["tdd", "testing", "programming", "development"]
 canonical_url: "https://jetthoughts.com/blog/why-how-use-tdd-main-tips-testing"

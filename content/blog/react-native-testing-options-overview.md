@@ -3,7 +3,7 @@ dev_to_id: 1853475
 title: "React Native Testing Options Overview"
 description: "After investigating 100 articles about testing React Native applications I detected 2 main methods of..."
 created_at: "2024-05-15T06:05:38Z"
-edited_at: "2024-06-06T07:39:25Z"
+edited_at: "2024-06-10T15:45:19Z"
 draft: false
 tags: ["testing", "react", "jest", "detox"]
 canonical_url: "https://jetthoughts.com/blog/react-native-testing-options-overview"
@@ -11,7 +11,7 @@ slug: "react-native-testing-options-overview"
 ---
 After investigating 100 articles about testing React Native applications I detected 2 main methods of testing which helped me succeed and can definitely help you.
 
-![Photo by [Austin Neill](https://unsplash.com/@arstyy?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/7984/0*x7YNZtBBiyYwpr3u)
+![Photo by [Austin Neill](https://unsplash.com/@arstyy?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/react-native-testing-options-overview/file_0.jpeg)
 
 ## Unit testing
 
@@ -124,7 +124,7 @@ describe('Login flow', () => {
 
 Appium is an open-source test automation framework. You can use it with native, hybrid, and mobile web apps. It drives iOS and Android apps using the WebDriver protocol. Appium is sponsored by [Sauce Labs](https://saucelabs.com/) and a community of open source developers.
 
-![From the official site [http://appium.io/](http://appium.io/)](https://cdn-images-1.medium.com/max/2000/0*GXG-oNdkx0UpHFvU)
+![From the official site [http://appium.io/](http://appium.io/)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/react-native-testing-options-overview/file_1.jpeg)
 
 More than 50 companies constantly use Appium in their tech stacks, including N26, Intuit, and PedidosYa.
 

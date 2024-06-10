@@ -3,14 +3,14 @@ dev_to_id: 1853596
 title: "A typical day at JetThoughts"
 description: "In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the..."
 created_at: "2024-05-15T07:22:32Z"
-edited_at: "2024-06-06T07:38:56Z"
+edited_at: "2024-06-10T15:45:47Z"
 draft: false
 tags: ["agile", "remote", "kanban", "process"]
 canonical_url: "https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote"
 slug: "typical-day-at-jetthoughts-agile-remote"
 ---
 
-![Photo by [Jon Tyson](https://unsplash.com/@jontyson?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/6528/0*NxJydEN901X8niEA)
+![Photo by [Jon Tyson](https://unsplash.com/@jontyson?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/typical-day-at-jetthoughts-agile-remote/file_0.jpeg)
 
 In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the way we communicate and develop. This article will cover our working day and the process by which we deliver the best experience to our clients.
 
@@ -36,7 +36,7 @@ To work remotely, you need to support some kind of connection with your team reg
 
 [*Example](https://x-team.com/blog/developer-daily-standup/)* of a good status report:
 
-![Photo by [Ryan Chartrand](https://x-team.com/blog/author/ryan-chartrand/) on [X-team](https://x-team.com/blog/developer-daily-standup/)](https://cdn-images-1.medium.com/max/2800/1*7gRsfIGKae5cOG5ykjBArg.png)
+![Photo by [Ryan Chartrand](https://x-team.com/blog/author/ryan-chartrand/) on [X-team](https://x-team.com/blog/developer-daily-standup/)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/typical-day-at-jetthoughts-agile-remote/file_1.png)
 
 Say “Bye!” when you are done for the day. Also, don’t forget to notify your colleagues about your plans for tomorrow. Maybe you are going to start working later than usual or plan to have a shorter day.
 

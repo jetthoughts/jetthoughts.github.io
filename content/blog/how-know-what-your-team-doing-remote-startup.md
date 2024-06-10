@@ -3,13 +3,13 @@ dev_to_id: 1853575
 title: "How to know what your team is doing?"
 description: "What techniques do you use to work with the team in an async, remote environment? How to..."
 created_at: "2024-05-15T07:19:53Z"
-edited_at: "2024-06-06T07:38:58Z"
+edited_at: "2024-06-10T15:45:44Z"
 draft: false
 tags: ["remote", "startup", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/how-know-what-your-team-doing-remote-startup"
 slug: "how-know-what-your-team-doing-remote-startup"
 ---
-![Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/clients?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/10348/1*r2jvcHZ1jiqLJ3WMX-kXkw.jpeg)
+![Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/clients?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-know-what-your-team-doing-remote-startup/file_0.jpeg)
 
 What techniques do you use to work with the team in an async, remote environment? How to collaborate effectively within the distributed team located in different timezones and deliver tangible results on top of that?
 
@@ -32,7 +32,7 @@ Along with text standups, the board keeps everyone in a loop of what’s going a
 
 Big tasks should always be split into smaller ones. How to define big tasks? It’s easy if the job takes more than two days — and you confirmed it during sprint planning estimation — it should be organized into smaller ones.
 
-![Kanban Board](https://cdn-images-1.medium.com/max/2000/0*0L4ypawbQ9srjdos.png)
+![Kanban Board](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-know-what-your-team-doing-remote-startup/file_1.png)
 
 ### 3. Frequent releases and demos
 

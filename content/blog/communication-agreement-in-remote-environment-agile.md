@@ -3,7 +3,7 @@ dev_to_id: 462581
 title: "Communication Agreement in a remote environment"
 description: "Communication Agreement in a remote environment   How to manage tasks remotely? How to build..."
 created_at: "2020-09-22T08:10:11Z"
-edited_at: "2024-06-06T07:42:13Z"
+edited_at: "2024-06-10T15:42:16Z"
 draft: false
 tags: ["agile", "agreement", "remote", "startup"]
 canonical_url: "https://jetthoughts.com/blog/communication-agreement-in-remote-environment-agile"
@@ -16,7 +16,7 @@ How to manage tasks remotely? How to build your working day properly?
 
 For less interruption during the working process, we created a Communication Agreement in [JetThoughts](http://jetthoughts.com).
 
-![Photo by [Charles 🇵🇭](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/7262/1*2dDI1pL3r-8NWD7hbowN3g.jpeg)
+![Photo by [Charles 🇵🇭](https://unsplash.com/@charlesdeluvio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/communication-agreement-in-remote-environment-agile/file_0.jpeg)
 
 We need to provide fast feedback to have better chances of closing the case we’re working on, dealing with new tasks and not forgetting about requests, etc.
 
@@ -36,7 +36,7 @@ In order to make sure that we are on the same page, we need to have some feedbac
 
 The simple reaction for the message will be enough:
 
-![](https://cdn-images-1.medium.com/max/2000/1*kCZBuD6o_5cFzbf6HfJaPA.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/communication-agreement-in-remote-environment-agile/file_1.jpeg)
 
 ### Don’t leave requests without reply, try to answer during 30–60min while you are switching between tasks
 

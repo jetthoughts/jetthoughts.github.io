@@ -3,7 +3,7 @@ dev_to_id: 1852952
 title: "What are the steps of an Automation Test Plan?"
 description: "Step 1: Defining the Scope of Automation   Here are the things to consider while identifying..."
 created_at: "2024-05-14T17:02:29Z"
-edited_at: "2024-06-06T07:39:35Z"
+edited_at: "2024-06-10T15:45:08Z"
 draft: false
 tags: ["qualitycontrol", "testing", "testplan", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing"
@@ -51,7 +51,7 @@ No matter how well you manage the automation testing, test maintenance is unavoi
 
 KPIs are indicators, not end-states. They indicate where strong and weak points exist and should be used to call attention, or used as monitors against a baseline.
 
-![Photo by [Bruno Nascimento](https://unsplash.com/@bruno_nascimento?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/steps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/12000/1*Utwr_04KKMr4tg7ZWZZI-w.jpeg)
+![Photo by [Bruno Nascimento](https://unsplash.com/@bruno_nascimento?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/steps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/file_0.jpeg)
 
 If you enjoyed this post, we recommend reading this one [**https://lnkd.in/gDu7tUA4](https://lnkd.in/gDu7tUA4)**
 >  [**Ruslana](https://www.linkedin.com/in/ruslana-b-970016135/)*** is a Sales & Marketing Manager at JetThoughts. Follow her on LinkedIn.*

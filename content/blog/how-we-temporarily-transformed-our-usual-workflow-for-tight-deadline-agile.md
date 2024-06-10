@@ -3,14 +3,14 @@ dev_to_id: 1877544
 title: "How We Temporarily Transformed Our Usual Workflow for a Tight Deadline"
 description: "Time makes rules   Every time when we start working on a new project, short iteration or..."
 created_at: "2024-06-05T05:45:06Z"
-edited_at: "2024-06-06T07:38:24Z"
+edited_at: "2024-06-10T15:46:26Z"
 draft: false
 tags: ["workflow", "agile"]
 canonical_url: "https://jetthoughts.com/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile"
 slug: "how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile"
 ---
 
-![Unsplash Photo: [榮達 陳](https://unsplash.com/@dareen0987)](https://cdn-images-1.medium.com/max/10748/1*j4ukNhQy5a-XOCrTKzuBtQ.jpeg)
+![Unsplash Photo: [榮達 陳](https://unsplash.com/@dareen0987)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/file_0.jpeg)
 
 ## Time makes rules
 
@@ -38,7 +38,7 @@ But sometimes we can add high-priority tasks to the current sprint. When the cod
 
 * And once we have broken all the rules…
 
-![](https://cdn-images-1.medium.com/max/2000/1*DKlSZCBoa2TCqRB8MJ3mjQ.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/file_1.jpeg)
 
 ## Rush development
 

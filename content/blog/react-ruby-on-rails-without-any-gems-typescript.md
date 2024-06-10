@@ -3,7 +3,7 @@ dev_to_id: 1877637
 title: "React + Ruby on Rails without any gems"
 description: "React + Ruby on Rails without any gems   How to start using React components written in..."
 created_at: "2024-06-05T06:32:51Z"
-edited_at: "2024-06-06T07:38:51Z"
+edited_at: "2024-06-10T15:47:02Z"
 draft: false
 tags: ["react", "typescript", "development"]
 canonical_url: "https://jetthoughts.com/blog/react-ruby-on-rails-without-any-gems-typescript"
@@ -14,7 +14,7 @@ slug: "react-ruby-on-rails-without-any-gems-typescript"
 
 How to start using [React](https://reactjs.org/) components written in [TypeScript](https://www.typescriptlang.org/) using [Ruby on Rails](https://rubyonrails.org/) as a server with only built-in Rails features? There are a couple of ways we can achieve it with.
 
-![Photo by [Gene Devine](https://unsplash.com/@devine_images?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/4386/0*LJEL9L0SHsesRq7-)
+![Photo by [Gene Devine](https://unsplash.com/@devine_images?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/react-ruby-on-rails-without-any-gems-typescript/file_0.jpeg)
 
 One is to add a gem: [react-rails](https://github.com/reactjs/react-rails) or [react_on_rails](https://github.com/shakacode/react_on_rails) for example. But there is a way to have a simple integration without using these gems.
 

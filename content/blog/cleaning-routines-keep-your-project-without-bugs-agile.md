@@ -3,13 +3,13 @@ dev_to_id: 1852630
 title: "Cleaning routines to keep your project without bugs"
 description: "How to manage problems with your project? How to understand how buggy it is and address the issues..."
 created_at: "2024-05-14T12:46:10Z"
-edited_at: "2024-06-06T07:40:06Z"
+edited_at: "2024-06-10T15:44:41Z"
 draft: false
 tags: ["agile", "bugs", "issues"]
 canonical_url: "https://jetthoughts.com/blog/cleaning-routines-keep-your-project-without-bugs-agile"
 slug: "cleaning-routines-keep-your-project-without-bugs-agile"
 ---
-![Photo by [Oliver Hale](https://unsplash.com/@4themorningshoot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/clean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2732/1*d5eD7CViMpyc8o8KXO3d9g.jpeg)
+![Photo by [Oliver Hale](https://unsplash.com/@4themorningshoot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/clean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cleaning-routines-keep-your-project-without-bugs-agile/file_0.jpeg)
 
 How to manage problems with your project? How to understand how buggy it is and address the issues properly? In [JetThoughts](undefined), we build our own process of handling those problems, and here is how…
 
@@ -19,13 +19,13 @@ In order to understand what issues might be crucial and threaten project stabili
 
 [**1. New Relic **](https://newrelic.com/)— it’s a tool to check on the slow performance of your app. If any action of the user takes longer than usual, NewRelic will inform you about that.
 
-![NewRelic Discord Bot](https://cdn-images-1.medium.com/max/2000/1*fWEIlG-fkSexSHAprORViA.png)
+![NewRelic Discord Bot](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cleaning-routines-keep-your-project-without-bugs-agile/file_1.png)
 
 We use it as a part of a Discord chat flow, where bot informs us about any problems directly to the channel, which is really comfortable since every team member is notified. We also tuned the bot so that it won’t spam too much.
 
 [**2. Rollbar](https://rollbar.com/) **is an error-tracking system that tells you if there are any errors occurring and if the app is functioning a-okay.
 
-![Rollbar Error-Tracking System](https://cdn-images-1.medium.com/max/3186/1*lEbfrwZykVHOXCmjrjJGwA.png)
+![Rollbar Error-Tracking System](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cleaning-routines-keep-your-project-without-bugs-agile/file_2.png)
 
 Our team checks the Rollbar console every day a week to address bugs. If there are any, we analyze them and add to the tech backlog using the rules below.
 

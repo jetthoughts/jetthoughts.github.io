@@ -3,7 +3,7 @@ dev_to_id: 1852738
 title: "Rails virtual attributes use cases"
 description: "You want to keep some data but do not want to create the new column in the database? Your data should..."
 created_at: "2024-05-14T13:57:52Z"
-edited_at: "2024-06-06T07:39:54Z"
+edited_at: "2024-06-10T15:44:55Z"
 draft: false
 tags: ["rails", "ruby", "tutorial", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/rails-virtual-attributes-use-cases-ruby"
@@ -13,7 +13,7 @@ You want to keep some data but do not want to create the new column in the datab
 
 The virtual attributes could help you! Let’s look at the main cases that come to our aid.
 
-![Photo by [Bram Van Oost](https://unsplash.com/photos/iVaah2gpeUk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/10000/1*58700AVlrhwDhAQyXnEyOg.jpeg)
+![Photo by [Bram Van Oost](https://unsplash.com/photos/iVaah2gpeUk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/rails-virtual-attributes-use-cases-ruby/file_0.jpeg)
 
 ### What is ‘Virtual Attribute’?
 
@@ -93,7 +93,7 @@ One of the most common usages of virtual attributes is decorating several model 
 
 Let’s reproduce the situation when both user and a database are dealing with one format (e.g JSON) and business logic is dealing with another one (e.g. Hash).
 
-![](https://cdn-images-1.medium.com/max/2000/1*v-NSW7iCrOx1wo-D-xrLFQ.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/rails-virtual-attributes-use-cases-ruby/file_1.png)
 
 Ideally, we need to register a new data type and add a virtual attribute of this type. In this way, it will take over all the work on the data: validation, transformation, and saving.
 

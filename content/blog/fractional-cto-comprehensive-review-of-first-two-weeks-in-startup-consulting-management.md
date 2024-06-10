@@ -3,13 +3,13 @@ dev_to_id: 1877729
 title: "Fractional CTO: A Comprehensive Review of the First Two Weeks in a Startup"
 description: "In a world where startups need to move fast and make informed decisions, the role of a Fractional..."
 created_at: "2024-06-05T08:19:05Z"
-edited_at: "2024-06-06T07:42:30Z"
+edited_at: "2024-06-10T15:47:25Z"
 draft: false
 tags: ["consulting", "management", "service"]
 canonical_url: "https://jetthoughts.com/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management"
 slug: "fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management"
 ---
-![](https://cdn-images-1.medium.com/max/3584/0*PRLv2yx9TY49sTRi.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/file_0.png)
 
 In a world where startups need to move fast and make informed decisions, the role of a [Fractional CTO](https://www.jetthoughts.com/services/fractional-cto/) has become increasingly critical. These professionals specialize in steering a company’s tech strategy and operations towards efficiency and innovation, providing agility and expertise without the full-time commitment. With the demand driven by cost-effectiveness and the versatility to work remotely, engaging a Fractional CTO offers strategic vision and quality assurance in software development [at a fraction of the usual cost](https://cto.academy/what-is-a-fractional-cto-and-how-do-you-become-one/).
 

@@ -3,7 +3,7 @@ dev_to_id: 1852622
 title: "How to create a technical post in a short time"
 description: "After reading thousands of posts, it’s time to share a workflow that will help those who are creating..."
 created_at: "2024-05-14T12:36:24Z"
-edited_at: "2024-06-06T07:40:11Z"
+edited_at: "2024-06-10T15:44:36Z"
 draft: false
 tags: ["writing", "blogging", "tips"]
 canonical_url: "https://jetthoughts.com/blog/how-create-technical-post-in-short-time-writing-blogging"
@@ -15,7 +15,7 @@ Here, in [JetThoughts](https://www.jetthoughts.com/) we highlight 3 main princip
 
 Let’s start!
 
-![Photo by [Luke Chesser](https://unsplash.com/@lukechesser?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stopwatch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/2800/0*cW7t5FetFjUg8Tm9)
+![Photo by [Luke Chesser](https://unsplash.com/@lukechesser?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stopwatch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-technical-post-in-short-time-writing-blogging/file_0.jpeg)
 
 ## Practical
 

@@ -3,7 +3,7 @@ dev_to_id: 1852577
 title: "Benefits of working remotely"
 description: "Nowadays, remote work gains more and more prominence. Many successful companies let their employees..."
 created_at: "2024-05-14T11:38:52Z"
-edited_at: "2024-06-06T07:40:29Z"
+edited_at: "2024-06-10T15:44:17Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
 canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote"
@@ -13,7 +13,7 @@ slug: "benefits-of-working-remotely-remote"
 
 *What benefits could you get from this type of work? Is it worth leaving your office?*
 
-![Photo by [Kornél Máhl](https://unsplash.com/@mahlkornel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/laptop-hotel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3200/0*ClyfJMA51Ivop3yH)
+![Photo by [Kornél Máhl](https://unsplash.com/@mahlkornel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/laptop-hotel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/benefits-of-working-remotely-remote/file_0.jpeg)
 
 ## 1. Flexible schedule
 
@@ -31,7 +31,7 @@ Take your laptop and come to some cozy restaurant with adorable interior and tas
 
 And one more remarkable thing is that you can travel and work at the same time! Be at the airport, train or even bus. All that you need are a laptop, wi-fi, and headphones. Furthermore, when you want to spend time near the ocean or hit the beach in other countries, don’t need to take a vacation or days off. Come up with your schedule and make it comfortable for work and rest!
 
-![Photo by [Manny Pantoja](https://unsplash.com/@mann_pantoja?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/travel-laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3200/0*h59wRjxgBOmKjlO2)
+![Photo by [Manny Pantoja](https://unsplash.com/@mann_pantoja?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/travel-laptop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/benefits-of-working-remotely-remote/file_1.jpeg)
 
 ## 3. Save money
 
@@ -47,7 +47,7 @@ You have an opportunity to avoid co-workers debating the merits of their cars, g
 
 All these unnecessary meetings or just chatting with colleagues instead of work does not pass against you. All this stuff is a stress for you. Removed from the stresses and distractions of the workplace and working independently in your preferred environment at your own pace, professionals are often a lot happier and a lot more productive.
 
-![Photo by [Simon Migaj](https://unsplash.com/@simonmigaj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/alone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/3200/0*uBnHJy8A3nQ09bau)
+![Photo by [Simon Migaj](https://unsplash.com/@simonmigaj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/alone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/benefits-of-working-remotely-remote/file_2.jpeg)
 
 ## 5. Time for family
 

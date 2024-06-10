@@ -3,7 +3,7 @@ dev_to_id: 1853605
 title: "Git minimum for effective project development"
 description: "Git minimum for effective project development             For beginners who are not familiar..."
 created_at: "2024-05-15T07:29:21Z"
-edited_at: "2024-06-06T07:38:54Z"
+edited_at: "2024-06-10T15:45:49Z"
 draft: false
 tags: ["development", "git", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/git-minimum-for-effective-project-development"
@@ -13,7 +13,7 @@ slug: "git-minimum-for-effective-project-development"
 ## Git minimum for effective project development
 > # For beginners who are not familiar with [Git](https://git-scm.com/) or [GitFlow](https://datasift.github.io/gitflow/), we grabbed the most common commands to be effective from the first day.
 
-![](https://cdn-images-1.medium.com/max/2000/1*-AO2005r85j7gLJap1ICVQ.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/git-minimum-for-effective-project-development/file_0.png)
 
 ## Global configurations
 
@@ -105,7 +105,7 @@ Rewrite history relative to origin/master:
 ```
     git rebase -i origin/master
 ```
-![](https://cdn-images-1.medium.com/max/2000/1*eHm-VVmEqflY-vOlmddbVw.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/git-minimum-for-effective-project-development/file_1.png)
 
 As a result, we’ll get the list of our commits and the list of actions to be done further. In our team, we use ‘*squash*’. We leave the first commit immutable with the command ‘*pick*’, and, as for the others, we rewrite them with the command ‘*squash*’, and then save and close. Git stuck the commits and suggests to enter commit-message, then saves and closes it.
 

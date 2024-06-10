@@ -3,7 +3,7 @@ dev_to_id: 1852564
 title: "Automated delivery React / Vue app for each Pull Request."
 description: "Would you like to speed up the development process of your React / Vue application? Make it more..."
 created_at: "2024-05-14T11:29:22Z"
-edited_at: "2024-06-06T07:40:33Z"
+edited_at: "2024-06-10T15:44:13Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/automated-delivery-react-vue-app-for-each-pull-request-ci"
@@ -11,7 +11,7 @@ slug: "automated-delivery-react-vue-app-for-each-pull-request-ci"
 ---
 Would you like to speed up the development process of your React / Vue application? Make it more predictable and transparent for clients and teammates? Well, continue reading. In this article, I want to describe a set of tools that will make your life easier.
 
-![Photo by [jesse ramirez](https://unsplash.com/@jesseramirezla?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/11520/0*rrS_U-UPyWpx0gad)
+![Photo by [jesse ramirez](https://unsplash.com/@jesseramirezla?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/file_0.jpeg)
 
 ## Online “snapshot” for Pull Request
 
@@ -23,7 +23,7 @@ It’s needed for 2 reasons: everyone who makes code review can easily check imp
 
 There are ready-made SaaS solutions, such as [Heroku Review Apps](https://devcenter.heroku.com/articles/github-integration-review-apps), but not all of them are always suitable. We saw a lot of examples where default SaaS platforms are very complicated and doing a lot of stuff that you don’t need at all. So, We want to show you how we can integrate CI with a custom CD.
 
-![Thanks, [https://gergely.imreh.net](https://gergely.imreh.net/) for the picture](https://cdn-images-1.medium.com/max/2040/1*gVMc46W2SlJlKH9TGTDuZA.png)
+![Thanks, [https://gergely.imreh.net](https://gergely.imreh.net/) for the picture](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/file_1.png)
 
 It will give you a possibility to find and solve problems faster, release more stable and higher quality products. Here we will use [CircleCI](https://circleci.com/), but you can use whatever you need ([Jenkins](https://jenkins.io/), [Travis CI](https://travis-ci.org/), [GitLab CI](https://about.gitlab.com/product/continuous-integration/)).
 

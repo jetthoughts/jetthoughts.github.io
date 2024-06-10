@@ -3,7 +3,7 @@ dev_to_id: 1853553
 title: "Load web page in less than one second"
 description: "How to improve the website load time without much effort? What optimizations and improvements can..."
 created_at: "2024-05-15T07:04:49Z"
-edited_at: "2024-06-06T07:39:04Z"
+edited_at: "2024-06-10T15:45:39Z"
 draft: false
 tags: ["optimization", "html", "frontend", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/load-web-page-in-less-than-one-second-optimization-html"
@@ -11,7 +11,7 @@ slug: "load-web-page-in-less-than-one-second-optimization-html"
 ---
 How to improve the website load time without much effort? What optimizations and improvements can help to speed up page loading? Consider a web page as an example and prove that downloading in less than one second is possible.
 
-![Photo by [Igor Miske](https://unsplash.com/@igormiske?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/11252/0*p3UKyNeNj64_dcS5)
+![Photo by [Igor Miske](https://unsplash.com/@igormiske?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/load-web-page-in-less-than-one-second-optimization-html/file_0.jpeg)
 
 ## What reduces site performance?
 
@@ -19,7 +19,7 @@ The main reason for a long page load is the downloading of third-party files (st
 
 Let’s take a look at what happens when you visit the page:
 
-![](https://cdn-images-1.medium.com/max/2602/0*OQMzNGJkX6-M86dh.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/load-web-page-in-less-than-one-second-optimization-html/file_1.jpg)
 
 Each file that was connected at the head or body takes precious milliseconds and sometimes seconds of time while the page is loading. And the pictures used on the page were loaded all at once, although we still haven’t scrolled to them.
 
@@ -29,7 +29,7 @@ Each file that was connected at the head or body takes precious milliseconds and
 
 Make compression your stylesheets, and insert them inline directly in the HTML document.
 
-![](https://cdn-images-1.medium.com/max/2000/0*9gNi8wByNNeIdu7t.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/load-web-page-in-less-than-one-second-optimization-html/file_2.jpg)
 
 ### Scripts
 
@@ -47,7 +47,7 @@ But if you can’t do with default fonts, it is better to upload them after the 
 
 You can specify all SVG files on the page as an HTML element and paste them inline into your HTML document.
 
-![](https://cdn-images-1.medium.com/max/2000/0*I0spkQIgTQaR-vAW.jpg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/load-web-page-in-less-than-one-second-optimization-html/file_3.jpg)
 
 ### Images
 

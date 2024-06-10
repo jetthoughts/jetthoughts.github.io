@@ -3,7 +3,7 @@ dev_to_id: 1852603
 title: "Delivery Flow for Distributed Remote Teams"
 description: "Process which help the team make effective decisions to better live up to expectations..."
 created_at: "2024-05-14T12:11:00Z"
-edited_at: "2024-06-06T07:40:23Z"
+edited_at: "2024-06-10T15:44:23Z"
 draft: false
 tags: ["agile", "kanban", "startup", "development"]
 canonical_url: "https://jetthoughts.com/blog/delivery-flow-for-distributed-remote-teams-agile-kanban"
@@ -11,7 +11,7 @@ slug: "delivery-flow-for-distributed-remote-teams-agile-kanban"
 ---
 > # Process which help the team make effective decisions to better live up to expectations while prioritizing, visualizing progress, and preventing bottlenecks.
 
-![](https://cdn-images-1.medium.com/max/2468/1*LSZXtQH9HBLatE_F5s2mAg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/file_0.png)
 
 ## Kanban Delivering Lists
 
@@ -29,7 +29,7 @@ Members are responsible for checking the appropriate list for a new card, take n
 Default conventions for priority are: work on Cards based on their position in Pipeline.
 > # From the Right to the Left List and from the Top to the Bottom in the List
 
-![](https://cdn-images-1.medium.com/max/2666/1*7Ytz5y6EaJS3pAe1BnAnuA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/file_1.png)
 
 *Code Review* list is more ‘prioritable’ than *Ready*. And the top card in the list has a more priority than the bottom one.
 
@@ -37,7 +37,7 @@ Default conventions for priority are: work on Cards based on their position in P
 
 Moving Card to the bottom of the List helps to support the Prioritization. This way the 10th issue will be still the 10th.
 
-![](https://cdn-images-1.medium.com/max/2000/1*J61rMmzt3aKUWnaycWzthA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/file_2.png)
 
 There is label **High**, which means to move card not to the bottom but to the top of the next List.
 
@@ -76,15 +76,15 @@ The key feature of Kanban is to reduce WIP. By violating those limitations, show
 
  1. **Moving items back to the previous lists is prohibited:** You could move cards only to the next lists in the row. For example, you could not return a card from ***Verify*** to ***Backlog***.
 
-![](https://cdn-images-1.medium.com/max/2236/1*wlEIBK01EraHRosPcLMh-g.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/file_3.png)
 
 2. **In Progress list limit:** 1 item per Developer
 
-![](https://cdn-images-1.medium.com/max/2000/1*sJ9cmJEs_3sv6XFVxLKeIg.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/file_4.png)
 
 3. **Developer’s issue limit:** 2 items per Developer from ***In Progress*** until ***Done***
 
-![](https://cdn-images-1.medium.com/max/2376/1*QyGr1sb-mtqwPcN_nhuUug.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/file_5.png)
 
 4. **Time limit per issue:** 2 days per issue from ***In Progress*** until ***Done***
 

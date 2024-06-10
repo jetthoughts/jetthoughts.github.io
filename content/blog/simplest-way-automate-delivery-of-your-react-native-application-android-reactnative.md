@@ -3,7 +3,7 @@ dev_to_id: 1877570
 title: "The simplest way to automate delivery of your React Native Application"
 description: "Introduction   Delivering mobile application’s updates is not as simple as in the case of a..."
 created_at: "2024-06-05T06:08:07Z"
-edited_at: "2024-06-06T07:38:10Z"
+edited_at: "2024-06-10T15:46:43Z"
 draft: false
 tags: ["android", "reactnative", "circleci"]
 canonical_url: "https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative"
@@ -47,7 +47,7 @@ In this article, we are going to provide simple and detailed step-by-step instru
 
 ## Instruction Plan
 
-![](https://cdn-images-1.medium.com/max/2000/1*_TjEaK-Ndw3O8PpWtFpBpA.png)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_0.png)
 
 Here is quick overview of the instruction:
 
@@ -59,7 +59,7 @@ Here is quick overview of the instruction:
 
 ## Add Configuration to Allow Releases to be Run on Real Devices
 
-![Sign Application](https://cdn-images-1.medium.com/max/2000/0*27yKciXrewlFP92m.png)
+![Sign Application](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_1.png)
 
 Android requires that all applications should be digitally signed with a certificate before they can be installed (at least release version), so to distribute your Android applications to mobile devices, you’ll need to generate signed release file.
 
@@ -83,7 +83,7 @@ It generates, signs and saves release file to *android/app/build/outputs/apk/app
 
 ## Setup Application Distribution
 
-![Deliver Application](https://cdn-images-1.medium.com/max/2000/0*2KMySeEArl9vmwAM.png)
+![Deliver Application](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_2.png)
 
 There are many distribution services. We have chosen [Fabric Kit](https://get.fabric.io/). It is one of the most popular, allows distribution both to iOS and Android and has many other features in its Kit. To integrate Fabric to your application you need to complete the next two steps.
 
@@ -97,7 +97,7 @@ First, you need to [register on Fabric](https://fabric.io/sign_up). Then you nee
 
 To run distribution you’ll need secret keys. You can find you key and secret by visiting your [organization’s settings page](https://www.fabric.io/settings/organizations) and clicking on the respective links under the organization’s name.
 
-![](https://cdn-images-1.medium.com/max/2000/0*BfFGZOYmsgj96kx9.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_3.jpeg)
 
 ### Install Fastlane as Fabric Kit CLI
 
@@ -163,7 +163,7 @@ And in a few minutes, you should have an email with download link to a new versi
 
 ## Automize Build and Distributions of Application
 
-![Automatic Delivery](https://cdn-images-1.medium.com/max/2000/0*kXJZhzvkuW3otI2L.png)
+![Automatic Delivery](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_4.png)
 
 Here comes the main part — how to make [CircleCI 2.0](https://circleci.com/) do deploy for you.
 
@@ -290,7 +290,7 @@ cd android && bundle exec fastlane android beta
 
 Don’t forget that this script uses fabric keys from environment variables so you need to add env vars to circle ci. Here is the list of environment variables:
 
-![](https://cdn-images-1.medium.com/max/2000/0*P_hDhzPK3oH6kHZz.)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_5.jpeg)
 
 To test it out you need to add CircleCI to your repository on Github. And then you need to push a commit to the master branch. CircleCI should run build based on the config script and deploy your app.
 
