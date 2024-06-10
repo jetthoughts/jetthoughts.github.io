@@ -46,7 +46,6 @@ jobs:
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: |
-          echo $DEVTO_API_KEY
           if [ "${{ github.event.inputs.force }}" = "true" ]
           then
             bin/from_devto -f
