@@ -3,10 +3,10 @@ dev_to_id: 1852577
 title: "Benefits of working remotely"
 description: "Nowadays, remote work gains more and more prominence. Many successful companies let their employees..."
 created_at: "2024-05-14T11:38:52Z"
-edited_at: "2024-06-10T15:44:17Z"
+edited_at: "2024-06-11T06:32:01Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
-canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote"
+canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote/"
 slug: "benefits-of-working-remotely-remote"
 ---
 *Nowadays, remote work gains more and more prominence. Many successful companies let their employees work from home and even prefer hiring people who don’t need an office and love working home. But why?*

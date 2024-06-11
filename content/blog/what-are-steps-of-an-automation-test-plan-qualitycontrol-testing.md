@@ -3,10 +3,10 @@ dev_to_id: 1852952
 title: "What are the steps of an Automation Test Plan?"
 description: "Step 1: Defining the Scope of Automation   Here are the things to consider while identifying..."
 created_at: "2024-05-14T17:02:29Z"
-edited_at: "2024-06-10T15:45:08Z"
+edited_at: "2024-06-11T06:31:28Z"
 draft: false
 tags: ["qualitycontrol", "testing", "testplan", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing"
+canonical_url: "https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/"
 slug: "what-are-steps-of-an-automation-test-plan-qualitycontrol-testing"
 ---
 ## Step 1: Defining the Scope of Automation

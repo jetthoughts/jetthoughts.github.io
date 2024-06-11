@@ -3,10 +3,10 @@ dev_to_id: 1877535
 title: "How To Name Variables And Methods In Ruby"
 description: "How To Name Variables And Methods In Ruby               What’s in a name? that which we call..."
 created_at: "2024-06-05T05:33:19Z"
-edited_at: "2024-06-10T15:46:20Z"
+edited_at: "2024-06-11T06:30:47Z"
 draft: false
 tags: ["programming", "ruby", "bestpractices", "rails"]
-canonical_url: "https://jtway.co/how-to-name-variables-and-methods-in-ruby-b4a21fb66c4d"
+canonical_url: "https://jetthoughts.com/blog/how-name-variables-methods-in-ruby-programming/"
 slug: "how-name-variables-methods-in-ruby-programming"
 ---
 

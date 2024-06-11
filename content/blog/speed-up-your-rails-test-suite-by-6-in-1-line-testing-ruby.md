@@ -3,10 +3,10 @@ dev_to_id: 1880245
 title: "Speed Up Your Rails Test Suite By 6% In 1 Line"
 description: "At one project we have a set of currently 3k+ tests, running more than 2 minutes. Most of the test..."
 created_at: "2024-06-07T10:40:25Z"
-edited_at: "2024-06-10T15:47:44Z"
+edited_at: "2024-06-11T06:29:57Z"
 draft: false
 tags: ["testing", "ruby", "rails", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby"
+canonical_url: "https://jetthoughts.com/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/"
 slug: "speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/file_0.jpeg)

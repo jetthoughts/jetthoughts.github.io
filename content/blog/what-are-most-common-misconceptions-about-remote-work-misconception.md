@@ -3,10 +3,10 @@ dev_to_id: 1852712
 title: "What are the most common misconceptions about remote work?"
 description: "A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the..."
 created_at: "2024-05-14T13:38:49Z"
-edited_at: "2024-06-10T15:44:48Z"
+edited_at: "2024-06-11T06:31:43Z"
 draft: false
 tags: ["remote", "misconception", "myths"]
-canonical_url: "https://jetthoughts.com/blog/what-are-most-common-misconceptions-about-remote-work-misconception"
+canonical_url: "https://jetthoughts.com/blog/what-are-most-common-misconceptions-about-remote-work-misconception/"
 slug: "what-are-most-common-misconceptions-about-remote-work-misconception"
 ---
 *A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the first thing that comes to mind when you think of remote work is freelancing. Absolutely no, companies are aware of the many advantages connected with moving away from offices, so that’s why it’s so popular nowadays. It has also been shown that more and more remote job openings for full-time and part-time as well as are being opened.*

@@ -3,10 +3,10 @@ dev_to_id: 1853531
 title: "8-Step Sales Process in 5 min"
 description: "The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in..."
 created_at: "2024-05-15T06:34:55Z"
-edited_at: "2024-06-10T15:45:25Z"
+edited_at: "2024-06-11T06:31:18Z"
 draft: false
 tags: ["sales", "productivity", "checklist"]
-canonical_url: "https://jetthoughts.com/blog/8-step-sales-process-in-5-min-productivity"
+canonical_url: "https://jetthoughts.com/blog/8-step-sales-process-in-5-min-productivity/"
 slug: "8-step-sales-process-in-5-min-productivity"
 ---
 The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in order to get the results you envisioned for your company.

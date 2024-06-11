@@ -3,10 +3,10 @@ dev_to_id: 1853550
 title: "How To Write The Right Content For Your Article"
 description: "There are moments when you’re full of motivation, ideas come up with your mind and straight onto the..."
 created_at: "2024-05-15T07:00:58Z"
-edited_at: "2024-06-10T15:45:36Z"
+edited_at: "2024-06-11T06:31:11Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
-canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting"
+canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting/"
 slug: "how-write-right-content-for-your-article-blogging-posting"
 ---
 There are moments when you’re full of motivation, ideas come up with your mind and straight onto the page. But there are other moments when you take up hours of your time, before getting to that last sentence. You’re almost about giving up.

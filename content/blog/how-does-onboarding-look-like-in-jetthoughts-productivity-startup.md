@@ -3,10 +3,10 @@ dev_to_id: 1853524
 title: "How does the onboarding look like in JetThoughts?"
 description: "How does the onboarding look like in JetThoughts?   This is an onboarding checklist..."
 created_at: "2024-05-15T06:29:43Z"
-edited_at: "2024-06-10T15:45:23Z"
+edited_at: "2024-06-11T06:31:19Z"
 draft: false
 tags: ["productivity", "startup", "remote", "onboarding"]
-canonical_url: "https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup"
+canonical_url: "https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/"
 slug: "how-does-onboarding-look-like-in-jetthoughts-productivity-startup"
 ---
 

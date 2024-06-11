@@ -3,10 +3,10 @@ dev_to_id: 1853640
 title: "Tools to provide effective feedback for distributed development teams"
 description: "How to share info in a remote async environment? What is the best way to keep everyone in the..."
 created_at: "2024-05-15T07:58:27Z"
-edited_at: "2024-06-10T15:46:07Z"
+edited_at: "2024-06-11T06:30:54Z"
 draft: false
 tags: ["productivity", "startup", "remote", "tips"]
-canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup"
+canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/"
 slug: "tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup"
 ---
 ![Photo by [Jakob Owens](https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/video?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/file_0.jpeg)

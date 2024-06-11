@@ -3,10 +3,10 @@ dev_to_id: 1853611
 title: "Cons of the private chats for team collaboration"
 description: "Communication between team members is a very important part of the software development process...."
 created_at: "2024-05-15T07:34:55Z"
-edited_at: "2024-06-10T15:45:53Z"
+edited_at: "2024-06-11T06:31:00Z"
 draft: false
 tags: ["communication", "process", "remote", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/cons-of-private-chats-for-team-collaboration-communication-process"
+canonical_url: "https://jetthoughts.com/blog/cons-of-private-chats-for-team-collaboration-communication-process/"
 slug: "cons-of-private-chats-for-team-collaboration-communication-process"
 ---
 Communication between team members is a very important part of the software development process. Especially when the team works remotely.

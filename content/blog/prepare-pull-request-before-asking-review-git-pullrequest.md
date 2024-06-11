@@ -3,10 +3,10 @@ dev_to_id: 1852617
 title: "Prepare the Pull Request before asking to Review"
 description: "How to avoid being the victim of an open-loop trying to get your Pull Request verified..."
 created_at: "2024-05-14T12:27:37Z"
-edited_at: "2024-06-10T15:44:30Z"
+edited_at: "2024-06-11T06:31:53Z"
 draft: false
 tags: ["git", "pullrequest", "review", "workflow"]
-canonical_url: "https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest"
+canonical_url: "https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/"
 slug: "prepare-pull-request-before-asking-review-git-pullrequest"
 ---
 ### How to avoid being the victim of an open-loop trying to get your Pull Request verified working asynchronously? In [JetThoughts](https://www.jetthoughts.com/), we distinguished some rules, which help to optimize the process of verifying the Pull Requests by the remote team members.

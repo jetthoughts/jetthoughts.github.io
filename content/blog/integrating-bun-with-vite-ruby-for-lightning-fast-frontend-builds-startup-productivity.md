@@ -3,10 +3,10 @@ dev_to_id: 1689481
 title: "Develop a Minimalistic Process for Development Teams to Innovate"
 description: "I just finished reading \"Continuous Discovery Habits: Discover Products That Create Customer Value..."
 created_at: "2023-12-06T09:20:12Z"
-edited_at: "2024-06-06T22:44:51Z"
+edited_at: "2024-06-11T06:32:19Z"
 draft: false
 tags: ["startup", "productivity"]
-canonical_url: "https://dev.to/jetthoughts/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-1fm7"
+canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-startup-productivity/"
 slug: "integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-startup-productivity"
 ---
 I just finished reading ["Continuous Discovery Habits: Discover Products That Create Customer Value and Business Value."](https://www.goodreads.com/book/show/58046715-continuous-discovery-habits?ref=rae_0) The book combines [Impact Mapping](https://www.impactmapping.org/), Customer Interview, and [LDJ](https://go.ajsmart.com/ldj) to create a process that can be used to develop innovative products.

@@ -3,10 +3,10 @@ dev_to_id: 1880485
 title: "Dedicated Software Development Teams"
 description: "Dedicated Software Development Teams   We’ve compiled everything you need to know about..."
 created_at: "2024-06-07T13:49:53Z"
-edited_at: "2024-06-10T15:48:05Z"
+edited_at: "2024-06-11T06:29:43Z"
 draft: false
 tags: ["team", "recruitment", "hr"]
-canonical_url: "https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment"
+canonical_url: "https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment/"
 slug: "dedicated-software-development-teams-team-recruitment"
 ---
 

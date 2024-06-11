@@ -3,10 +3,10 @@ dev_to_id: 1093446
 title: "Vertical align with a full screen across Tailwind CSS"
 description: "How can vertically align an element with Tailwind CSS by Flex?           Justify-Center and..."
 created_at: "2022-05-23T12:58:44Z"
-edited_at: "2024-06-10T15:42:29Z"
+edited_at: "2024-06-11T06:33:09Z"
 draft: false
 tags: ["jetthoughts", "css", "tilewind", "webdev"]
-canonical_url: "https://jetthoughts.com/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts"
+canonical_url: "https://jetthoughts.com/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/"
 slug: "vertical-align-with-full-screen-across-tailwind-css-jetthoughts"
 ---
 How can vertically align an element with Tailwind CSS by Flex?

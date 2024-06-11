@@ -3,10 +3,10 @@ dev_to_id: 470562
 title: "How to make small, valuable async standups"
 description: "How to share the current status of the development especially working remotely? How to make the mess..."
 created_at: "2020-09-30T20:42:38Z"
-edited_at: "2024-06-10T15:42:19Z"
+edited_at: "2024-06-11T06:33:14Z"
 draft: false
 tags: ["productivity", "development", "process", "standup"]
-canonical_url: "https://jetthoughts.com/blog/how-make-small-valuable-async-standups-productivity-development"
+canonical_url: "https://jetthoughts.com/blog/how-make-small-valuable-async-standups-productivity-development/"
 slug: "how-make-small-valuable-async-standups-productivity-development"
 ---
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/jhw3pncadn7pqdv9oim4.png)

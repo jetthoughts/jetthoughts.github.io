@@ -3,10 +3,10 @@ dev_to_id: 1880292
 title: "Stress Testing Your Rails Application Using JMeter"
 description: "Stress Testing Your Rails Application Using JMeter     Some time ago we needed to make a..."
 created_at: "2024-06-07T11:31:26Z"
-edited_at: "2024-06-10T15:47:48Z"
+edited_at: "2024-06-11T06:29:55Z"
 draft: false
 tags: ["ruby", "rails", "performance", "jmeter"]
-canonical_url: "https://dev.to/jetthoughts/stress-testing-your-rails-application-using-jmeter-5h1i"
+canonical_url: "https://jetthoughts.com/blog/stress-testing-your-rails-application-using-jmeter-ruby/"
 slug: "stress-testing-your-rails-application-using-jmeter-ruby"
 ---
 

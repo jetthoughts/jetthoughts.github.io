@@ -3,10 +3,10 @@ dev_to_id: 1877555
 title: "How JetThoughts implements Joel’s test?"
 description: "For those of you who don’t know who Joel Spolsky is here are some facts:   Worked at..."
 created_at: "2024-06-05T05:51:10Z"
-edited_at: "2024-06-10T15:46:32Z"
+edited_at: "2024-06-11T06:30:39Z"
 draft: false
 tags: ["deveopment", "management", "project", "startup"]
-canonical_url: "https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management"
+canonical_url: "https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management/"
 slug: "how-jetthoughts-implements-joels-test-deveopment-management"
 ---
 ![Unsplash Photo: [Matt Briney](http://unsplash.com/@mbriney?utm_campaign=photographer-credit)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-jetthoughts-implements-joels-test-deveopment-management/file_0.jpeg)
