@@ -94,7 +94,7 @@ class SaveArticleToMarkdown
     request['Content-Type'] = 'application/json'
     puts JT_BLOG_HOST + slug(data)
 
-    request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) } }.to_json
+    request.body = { article: { canonical_url: JT_BLOG_HOST + slug(data) + '/' } }.to_json
     pp "dev.to update canonical_url result: "
     pp http.request(request)
   end
