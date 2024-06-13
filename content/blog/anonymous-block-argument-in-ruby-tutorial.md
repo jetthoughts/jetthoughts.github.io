@@ -3,7 +3,7 @@ dev_to_id: 1739418
 title: "Anonymous block argument in Ruby"
 description: "In the Ruby programming language, it is possible to use default block parameters instead of..."
 created_at: "2024-01-23T20:09:24Z"
-edited_at: "2024-06-11T06:32:16Z"
+edited_at: "2024-06-13T12:41:58Z"
 draft: false
 tags: ["ruby", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/anonymous-block-argument-in-ruby-tutorial/"
@@ -48,6 +48,6 @@ These features provide more flexibility and readability when working with blocks
 
 ---
 
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [Showcase](https://showca.se) and [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

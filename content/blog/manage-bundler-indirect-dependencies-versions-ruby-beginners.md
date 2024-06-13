@@ -3,7 +3,7 @@ dev_to_id: 1091289
 title: "Manage Bundler indirect dependencies versions"
 description: "Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new..."
 created_at: "2022-05-20T16:20:34Z"
-edited_at: "2024-06-11T06:33:10Z"
+edited_at: "2024-06-13T12:43:04Z"
 draft: false
 tags: ["ruby", "beginners", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/manage-bundler-indirect-dependencies-versions-ruby-beginners/"
@@ -26,4 +26,4 @@ With explicit version constraints assigned for indirect (and now direct) depende
 
 ---
 
-Paul Keen is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).

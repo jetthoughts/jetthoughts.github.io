@@ -3,7 +3,7 @@ dev_to_id: 1852632
 title: "Simple Lead Generation Tactics"
 description: "How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build..."
 created_at: "2024-05-14T12:48:39Z"
-edited_at: "2024-06-11T06:31:45Z"
+edited_at: "2024-06-13T12:43:23Z"
 draft: false
 tags: ["startup", "sails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/simple-lead-generation-tactics-startup-sails/"
@@ -48,5 +48,5 @@ Now, you are ready to send your first cold email. *Yet Another Mail Merge* would
 
 Good luck with your first email campaign! If you have any questions — feel free to comment and ask.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

@@ -3,7 +3,7 @@ dev_to_id: 1880200
 title: "From what to start to stop delivering bugs when there is no time for changes?"
 description: "While you are struggling with breaking into the market; small bugs, UX problems, unexpected behaviors..."
 created_at: "2024-06-07T09:45:25Z"
-edited_at: "2024-06-11T06:30:04Z"
+edited_at: "2024-06-13T12:42:19Z"
 draft: false
 tags: ["management", "agile", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/"
@@ -72,5 +72,5 @@ Laser Focus will make sure that our solution will provide the best experience fo
 
 Applying those the most common Lean / Kanban practices will give you and the **team satisfaction in 2 weeks** already.
 
-**Paul Keen** is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

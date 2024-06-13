@@ -3,7 +3,7 @@ dev_to_id: 1877622
 title: "Video player with React Native. Part 1: Expo"
 description: "Nowadays there are plenty of solutions to build an application for a mobile platform. If we are..."
 created_at: "2024-06-05T06:20:41Z"
-edited_at: "2024-06-11T06:30:24Z"
+edited_at: "2024-06-13T12:43:52Z"
 draft: false
 tags: ["reactnative", "expo", "tutorial", "react"]
 canonical_url: "https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative/"
@@ -267,5 +267,5 @@ Our company has got React Native experience and set up good process/pipelines fo
 
 In the next article, we will explore another cross-platform technology — [*ReactXP](https://microsoft.github.io/reactxp/)*. Stay tuned!
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

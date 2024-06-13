@@ -3,10 +3,10 @@ dev_to_id: 1877654
 title: "Optimize your Chrome options for testing to get x1.25 impact"
 description: "🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀  Are you looking to supercharge your..."
 created_at: "2024-06-05T06:54:46Z"
-edited_at: "2024-06-10T15:47:15Z"
+edited_at: "2024-06-13T12:43:12Z"
 draft: false
 tags: ["testing", "tricks"]
-canonical_url: "https://jetthoughts.com/blog/optimize-your-chrome-options-for-testing-get-x125-impact-tricks"
+canonical_url: "https://jetthoughts.com/blog/optimize-your-chrome-options-for-testing-get-x125-impact-tricks/"
 slug: "optimize-your-chrome-options-for-testing-get-x125-impact-tricks"
 ---
 
@@ -159,6 +159,6 @@ Below are some Chrome options that helped me get x1.25 improvement:
 
 Not all of these options may be relevant to your specific testing needs, so evaluating their impact on your test environment and application behavior is essential. Happy optimizing! 🚀💨
 
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [Showcase](https://showca.se/) and [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
 We recommend reading our [latest](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending) if you enjoyed this story.

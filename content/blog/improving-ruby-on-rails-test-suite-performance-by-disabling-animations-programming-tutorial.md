@@ -3,7 +3,7 @@ dev_to_id: 1561382
 title: "Improving Ruby on Rails Test Suite Performance by Disabling Animations"
 description: "Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may..."
 created_at: "2023-08-07T10:41:24Z"
-edited_at: "2024-06-11T06:32:24Z"
+edited_at: "2024-06-13T12:42:51Z"
 draft: false
 tags: ["programming", "tutorial", "productivity", "testing"]
 canonical_url: "https://jetthoughts.com/blog/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-programming-tutorial/"
@@ -57,6 +57,6 @@ If you’re experiencing issues with failing tests or slow test execution times,
 
 ---
 
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [Showcase](https://showca.se) and [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

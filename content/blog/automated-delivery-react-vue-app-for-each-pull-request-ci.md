@@ -3,7 +3,7 @@ dev_to_id: 1852564
 title: "Automated delivery React / Vue app for each Pull Request."
 description: "Would you like to speed up the development process of your React / Vue application? Make it more..."
 created_at: "2024-05-14T11:29:22Z"
-edited_at: "2024-06-11T06:32:04Z"
+edited_at: "2024-06-13T12:42:02Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/"
@@ -51,5 +51,5 @@ Here is how to make notification in GitHub. We publish a comment with a link ins
 
 In this article, we have discovered how to create our own JS app Delivery without using a SaaS solution that can not fit your requirements. And you can verify it wasn’t so hard. Using auto-deployments, we have reduced bugs appearing up to 50% because of easier functional testing, and the price is just a small script!
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

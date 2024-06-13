@@ -3,7 +3,7 @@ dev_to_id: 1877570
 title: "The simplest way to automate delivery of your React Native Application"
 description: "Introduction   Delivering mobile application’s updates is not as simple as in the case of a..."
 created_at: "2024-06-05T06:08:07Z"
-edited_at: "2024-06-11T06:30:32Z"
+edited_at: "2024-06-13T12:43:27Z"
 draft: false
 tags: ["android", "reactnative", "circleci"]
 canonical_url: "https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/"
@@ -318,5 +318,5 @@ Stay tuned!
 
  4. [Fabric Integration for React Native on Android](http://blog.mojotech.com/fabric-integration-for-react-native-on-android/)
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -3,7 +3,7 @@ dev_to_id: 1852618
 title: "How to start an Open Source project. Building RESO API JS client"
 description: "Would you like to understand how to start your new Open Source project in a week? How to build a..."
 created_at: "2024-05-14T12:29:45Z"
-edited_at: "2024-06-11T06:31:51Z"
+edited_at: "2024-06-13T12:42:46Z"
 draft: false
 tags: ["javascript", "opensource", "npm", "management"]
 canonical_url: "https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/"
@@ -76,5 +76,5 @@ Each test set is called *specs* — represents tests for specific purposes like 
 
 Once a basic version of our RESO API client is created, we have decided to publish it to npm. All code is available here: [https://www.npmjs.com/package/reso_webapi_js](https://www.npmjs.com/package/reso_webapi_js)
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -3,7 +3,7 @@ dev_to_id: 1877561
 title: "How To Memoize False and Nil Values"
 description: "TL;DR: if method can return false or nil, and you want to memoize it, use defined?(@_result)..."
 created_at: "2024-06-05T05:55:50Z"
-edited_at: "2024-06-11T06:30:35Z"
+edited_at: "2024-06-13T12:42:31Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "development"]
 canonical_url: "https://jetthoughts.com/blog/how-memoize-false-nil-values-ruby-rails/"
@@ -67,5 +67,5 @@ defined? is Ruby’s reserved word to check if expression is currently defined. 
 
 To sum up, ||= is too good to forget about it, but when doing memoization, just think if the result may be boolean or nil, and if yes, use defined?.
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

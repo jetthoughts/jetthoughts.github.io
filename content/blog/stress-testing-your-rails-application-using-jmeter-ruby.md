@@ -3,7 +3,7 @@ dev_to_id: 1880292
 title: "Stress Testing Your Rails Application Using JMeter"
 description: "Stress Testing Your Rails Application Using JMeter     Some time ago we needed to make a..."
 created_at: "2024-06-07T11:31:26Z"
-edited_at: "2024-06-11T06:29:55Z"
+edited_at: "2024-06-13T12:43:36Z"
 draft: false
 tags: ["ruby", "rails", "performance", "jmeter"]
 canonical_url: "https://jetthoughts.com/blog/stress-testing-your-rails-application-using-jmeter-ruby/"
@@ -233,5 +233,5 @@ This article covers only the basic usage of these great tools.
 
 Image courtesy of Stuart Miles / FreeDigitalPhotos.net
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

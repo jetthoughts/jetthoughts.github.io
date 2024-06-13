@@ -3,7 +3,7 @@ dev_to_id: 1853537
 title: "Tips to hire great people"
 description: "At JetThoughts, we don’t typically fire our employees, as we always strive to find the right people..."
 created_at: "2024-05-15T06:46:12Z"
-edited_at: "2024-06-11T06:31:17Z"
+edited_at: "2024-06-13T12:43:41Z"
 draft: false
 tags: ["startup", "hiring", "tips"]
 canonical_url: "https://jetthoughts.com/blog/tips-hire-great-people-startup-hiring/"
@@ -58,5 +58,5 @@ Based on such criteria, the role, and salary will be defined. The technical revi
 
 If you are the founder and you want your company to be prosperous — do your best to avoid employment termination. Be concise in your job descriptions, look for people with high motivation, pay attention to adaptation, constant feedback, and mentoring. The person who has come to a new place should see clear objectives and understand how they relate to the company goals. Regularly discuss progress and processes, no matter how good your team is.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

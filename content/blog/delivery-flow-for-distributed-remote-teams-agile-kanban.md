@@ -3,7 +3,7 @@ dev_to_id: 1852603
 title: "Delivery Flow for Distributed Remote Teams"
 description: "Process which help the team make effective decisions to better live up to expectations..."
 created_at: "2024-05-14T12:11:00Z"
-edited_at: "2024-06-11T06:31:56Z"
+edited_at: "2024-06-13T12:42:11Z"
 draft: false
 tags: ["agile", "kanban", "startup", "development"]
 canonical_url: "https://jetthoughts.com/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/"
@@ -146,5 +146,5 @@ If you find yourself in a situation where you have to violate the workflow, you 
 
 * [Checklist for the non-tech founder](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

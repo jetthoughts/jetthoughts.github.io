@@ -3,7 +3,7 @@ dev_to_id: 1852581
 title: "What to do for the developer when the WIP limit is reached"
 description: "Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep..."
 created_at: "2024-05-14T11:42:29Z"
-edited_at: "2024-06-11T06:31:58Z"
+edited_at: "2024-06-13T12:43:56Z"
 draft: false
 tags: ["agile", "kanban", "management", "development"]
 canonical_url: "https://jetthoughts.com/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/"
@@ -66,5 +66,5 @@ Check out useful links if you want to be advanced in this theme:
 
 * [https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

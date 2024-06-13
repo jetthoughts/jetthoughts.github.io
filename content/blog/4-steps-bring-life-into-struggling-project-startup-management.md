@@ -3,7 +3,7 @@ dev_to_id: 1877534
 title: "4 Steps to Bring Life into a Struggling Project"
 description: "4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business..."
 created_at: "2024-06-05T05:31:06Z"
-edited_at: "2024-06-11T06:30:48Z"
+edited_at: "2024-06-13T12:41:48Z"
 draft: false
 tags: ["startup", "management", "agile", "kanban"]
 canonical_url: "https://jetthoughts.com/blog/4-steps-bring-life-into-struggling-project-startup-management/"
@@ -158,5 +158,5 @@ Are you ready to move to bring your struggling project back to live? [Contact us
 
 * Carbon Five’s Posts: [The 10 Practices of Healthy Engineering Teams](http://blog.carbonfive.com/2016/02/17/the-10-practices-of-healthy-engineering-teams-part-1/)
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -3,7 +3,7 @@ dev_to_id: 1689481
 title: "Develop a Minimalistic Process for Development Teams to Innovate"
 description: "I just finished reading \"Continuous Discovery Habits: Discover Products That Create Customer Value..."
 created_at: "2023-12-06T09:20:12Z"
-edited_at: "2024-06-11T06:32:19Z"
+edited_at: "2024-06-13T12:43:00Z"
 draft: false
 tags: ["startup", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-startup-productivity/"
@@ -25,6 +25,6 @@ In 2024, I aim to create a simple process that even inexperienced startup founde
 
 ---
 
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [Showcase](https://showca.se) and [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -3,7 +3,7 @@ dev_to_id: 1877638
 title: "How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers"
 description: "As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could..."
 created_at: "2024-06-05T06:34:42Z"
-edited_at: "2024-06-11T06:30:20Z"
+edited_at: "2024-06-13T12:42:48Z"
 draft: false
 tags: ["development", "startup", "business", "enterprise"]
 canonical_url: "https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/"
@@ -67,5 +67,5 @@ Additionally, we reduced the time required to onboard new employees and initiate
 
 ***With the addition of a more empowered workforce, an established system for streamlined growth, and an improved overall product, OpenApply is now able to more efficiently help both students and schools throughout the admissions and enrollment processes, easing the stress of everyone involved.***
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -3,7 +3,7 @@ dev_to_id: 1852719
 title: "5 Free tools to make the sales process easier"
 description: "What if I told you that there is no need to spend all your budget on super modern CRMs and..."
 created_at: "2024-05-14T13:47:15Z"
-edited_at: "2024-06-11T06:31:41Z"
+edited_at: "2024-06-13T12:41:51Z"
 draft: false
 tags: ["sales", "leadgeneration", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/5-free-tools-make-sales-process-easier-leadgeneration/"
@@ -57,5 +57,5 @@ Once the required quantity of leads is generated, we use [Yet Another Mail Merge
 
 When we receive the emails with positive replies, we gather them to Leads board so that the team could see all the details.
 
-**Paul Keen** is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -3,7 +3,7 @@ dev_to_id: 1853640
 title: "Tools to provide effective feedback for distributed development teams"
 description: "How to share info in a remote async environment? What is the best way to keep everyone in the..."
 created_at: "2024-05-15T07:58:27Z"
-edited_at: "2024-06-11T06:30:54Z"
+edited_at: "2024-06-13T12:43:46Z"
 draft: false
 tags: ["productivity", "startup", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/"
@@ -51,5 +51,5 @@ The best thing about the screencast is that it could be reused as many times as 
 
 I hope this tool helps you share your thoughts and ideas and improve the workflow of your team.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

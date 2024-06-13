@@ -3,7 +3,7 @@ dev_to_id: 1853466
 title: "Speed up GitHub PR’s review of your React applications"
 description: "Would you like to speed up PR’s review of React application, when you use Jest snapshot..."
 created_at: "2024-05-15T05:55:46Z"
-edited_at: "2024-06-11T06:31:26Z"
+edited_at: "2024-06-13T12:43:32Z"
 draft: false
 tags: ["development", "tutorial", "github", "jest"]
 canonical_url: "https://jetthoughts.com/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial/"
@@ -23,5 +23,5 @@ In the root of the repository create a .gitattributes file. Then use the linguis
 
 Use a .gitattributes file to mark files that match a given “pattern” with the specified attributes. A .gitattributes file uses the same rules for matching as .gitingore files.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

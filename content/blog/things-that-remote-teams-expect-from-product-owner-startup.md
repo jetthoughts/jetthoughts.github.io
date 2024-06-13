@@ -3,7 +3,7 @@ dev_to_id: 1853617
 title: "Things that remote teams expect from the product owner"
 description: "Modern digital product development methods require a flexible approach. It is much more efficient..."
 created_at: "2024-05-15T07:41:57Z"
-edited_at: "2024-06-11T06:30:59Z"
+edited_at: "2024-06-13T12:43:39Z"
 draft: false
 tags: ["startup", "remote", "tips", "management"]
 canonical_url: "https://jetthoughts.com/blog/things-that-remote-teams-expect-from-product-owner-startup/"
@@ -85,5 +85,5 @@ Here is the list of responsibilities when it comes to real, every day tasks of t
 
 We can see that the product owner is an essential element in the team’s flexible development process. He is the one who coordinates the developers’ actions, communicates with the customer, identifies the main needs of the product, and is responsible for the final version of the product.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

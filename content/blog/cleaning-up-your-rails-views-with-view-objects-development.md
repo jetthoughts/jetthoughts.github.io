@@ -3,7 +3,7 @@ dev_to_id: 1877540
 title: "Cleaning Up Your Rails Views With View Objects"
 description: "Why logic in views is a bad idea?   The main reason not to put the complex logic into your..."
 created_at: "2024-06-05T05:39:17Z"
-edited_at: "2024-06-11T06:30:45Z"
+edited_at: "2024-06-13T12:42:09Z"
 draft: false
 tags: ["rails", "development", "webdev", "programming"]
 canonical_url: "https://jetthoughts.com/blog/cleaning-up-your-rails-views-with-view-objects-development/"
@@ -142,7 +142,7 @@ The main pros of using this solution are:
 
 * Test *View Objects* logic is as easy as test ruby classes. As in decorators solution, you can feed *View Objects* with stubs to increase the tests speed.
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
 
 *Image courtesy of Vectorolie/FreeDigitalPhotos.net*

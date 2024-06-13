@@ -3,7 +3,7 @@ dev_to_id: 1144505
 title: "How To Setup Default Values For Attributes In Ruby On Rails"
 description: "Have you ever thought that setting default values for attributes in Ruby on Rails could be..."
 created_at: "2022-07-19T06:01:04Z"
-edited_at: "2024-06-11T06:32:54Z"
+edited_at: "2024-06-13T12:42:42Z"
 draft: false
 tags: ["ruby", "programming", "tutorial", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/"
@@ -131,5 +131,5 @@ end
 
 ---
 
-Paul Keen is a Chief Technology Officer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 > If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).

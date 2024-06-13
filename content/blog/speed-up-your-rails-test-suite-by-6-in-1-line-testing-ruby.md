@@ -3,7 +3,7 @@ dev_to_id: 1880245
 title: "Speed Up Your Rails Test Suite By 6% In 1 Line"
 description: "At one project we have a set of currently 3k+ tests, running more than 2 minutes. Most of the test..."
 created_at: "2024-06-07T10:40:25Z"
-edited_at: "2024-06-11T06:29:57Z"
+edited_at: "2024-06-13T12:43:34Z"
 draft: false
 tags: ["testing", "ruby", "rails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/"
@@ -68,5 +68,5 @@ And then to run the tests with logging enabled, you execute command:
 ```
     $ RAILS_ENABLE_TEST_LOG=1 rake test
 ```
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

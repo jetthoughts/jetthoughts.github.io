@@ -3,7 +3,7 @@ dev_to_id: 1877642
 title: "Simultaneous work on the feature for frontend and backend developers"
 description: "Simultaneous work on the feature for frontend and backend developers   How do split features..."
 created_at: "2024-06-05T06:43:35Z"
-edited_at: "2024-06-11T06:30:17Z"
+edited_at: "2024-06-13T12:43:30Z"
 draft: false
 tags: ["development", "startup", "continousdelivery"]
 canonical_url: "https://jetthoughts.com/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/"
@@ -56,5 +56,5 @@ In our *Continuous Delivery* implementation, we use a lot of rebases to sync cod
 
 Alternative to long-lived branches is *Feature Flags*. But we need some tiny/limited versions of it, prefer to use conventions for internal use instead of complex *UI* to manage it and support flexibilities, what features to show, and to whom.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

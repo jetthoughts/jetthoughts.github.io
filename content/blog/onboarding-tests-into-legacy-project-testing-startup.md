@@ -3,7 +3,7 @@ dev_to_id: 1877640
 title: "Onboarding Tests into Legacy Project"
 description: "What solution should you apply to get the first results in a short time in the legacy project? What..."
 created_at: "2024-06-05T06:37:41Z"
-edited_at: "2024-06-11T06:30:18Z"
+edited_at: "2024-06-13T12:43:07Z"
 draft: false
 tags: ["testing", "startup", "agile"]
 canonical_url: "https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/"
@@ -144,5 +144,5 @@ Avoid any hacks and tricks. You will get the first results from the first commit
 
 Invest in the small wins, and you will find yourselves in a satisfied and stressless environment.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

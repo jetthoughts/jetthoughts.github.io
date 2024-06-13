@@ -3,7 +3,7 @@ dev_to_id: 1853575
 title: "How to know what your team is doing?"
 description: "What techniques do you use to work with the team in an async, remote environment? How to..."
 created_at: "2024-05-15T07:19:53Z"
-edited_at: "2024-06-11T06:31:06Z"
+edited_at: "2024-06-13T12:42:28Z"
 draft: false
 tags: ["remote", "startup", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/how-know-what-your-team-doing-remote-startup/"
@@ -46,5 +46,5 @@ When it comes to your sprint results, huge features, or significant changes in f
 Ideally, product owners or their representatives should be involved in the checking process and have everything they need to check all the tasks, except for really techy-ones, and the whole git-flow should be built around it. The last comment should mention them using ‘@' and the credentials along with test cases, checking algorithms should be provided.
 > # This cheat-sheet will help you with managing your project even without prior experience and will help you to get a better understanding of how it works in practice.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

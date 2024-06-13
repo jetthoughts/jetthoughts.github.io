@@ -3,7 +3,7 @@ dev_to_id: 1880305
 title: "It’s Time For Active Job"
 description: "It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2...."
 created_at: "2024-06-07T11:47:31Z"
-edited_at: "2024-06-11T06:29:53Z"
+edited_at: "2024-06-13T12:43:02Z"
 draft: false
 tags: ["ruby", "rails", "develpment", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/"
@@ -252,5 +252,5 @@ Looks like our jobs became much cleaner with Active Job.
 
 And a small notice about deploying these changes to ***production.*** We *should not delete *previous SendNewFeedbackNotificationWorker class right now. Because during deploy it may happen that previously used worker was delayed but has not been processed before the deploy. And after deploy this job fails because DelayedJob couldn’t create instance of already deleted class. **Adding and deleting of a job shouldn’t be done in single deploy.**
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

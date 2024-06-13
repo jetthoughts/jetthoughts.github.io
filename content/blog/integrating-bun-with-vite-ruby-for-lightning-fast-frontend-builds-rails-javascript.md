@@ -3,7 +3,7 @@ dev_to_id: 1667161
 title: "Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds"
 description: "With the recent release of Bun and its newfound support for Vite, coupled with Ruby on Rails 7.1..."
 created_at: "2023-11-15T09:13:40Z"
-edited_at: "2024-06-11T06:32:22Z"
+edited_at: "2024-06-13T12:42:57Z"
 draft: false
 tags: ["rails", "javascript", "tutorial", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/"
@@ -49,6 +49,6 @@ The impact of this integration is tangible. Migrating to Bun has slashed asset p
 
 ---
 
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [Showcase](https://showca.se) and [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

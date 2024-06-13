@@ -3,7 +3,7 @@ dev_to_id: 1853596
 title: "A typical day at JetThoughts"
 description: "In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the..."
 created_at: "2024-05-15T07:22:32Z"
-edited_at: "2024-06-11T06:31:05Z"
+edited_at: "2024-06-13T12:43:50Z"
 draft: false
 tags: ["agile", "remote", "kanban", "process"]
 canonical_url: "https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote/"
@@ -78,5 +78,5 @@ We are:
 
 In this article, we have covered a lot of things about JetThoughts. Culture, our principles/values, and the way we communicate and develop. That’s all, eight hours of speaking, thinking, and listening passed very quickly. I hope this gives some insight into JetThoughts, and how we work.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

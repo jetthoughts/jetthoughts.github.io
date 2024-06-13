@@ -3,7 +3,7 @@ dev_to_id: 1853571
 title: "Feature Branches and Where to Find Them"
 description: "Here we want to go through the feature branch process, show what downsides this approach..."
 created_at: "2024-05-15T07:17:21Z"
-edited_at: "2024-06-11T06:31:07Z"
+edited_at: "2024-06-13T12:42:17Z"
 draft: false
 tags: ["development", "coding", "github", "git"]
 canonical_url: "https://jetthoughts.com/blog/feature-branches-where-find-them-development-coding/"
@@ -61,5 +61,5 @@ We use Continuous Integration. Of course, it means that each Pull Request should
 
 We won’t suggest you abandon the feature branches approach. But we encourage you to try to look at this problem from another perspective. And convince your business stakeholders also to think in small incremental changes.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

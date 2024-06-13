@@ -3,7 +3,7 @@ dev_to_id: 1877546
 title: "How to Setup a Project That Can Host Up to 1000 Users for Free"
 description: "Basic Heroku Setup or Staging Configuration    Hosting service: Heroku Database:..."
 created_at: "2024-06-05T05:47:43Z"
-edited_at: "2024-06-11T06:30:41Z"
+edited_at: "2024-06-13T12:42:44Z"
 draft: false
 tags: ["heroku", "startup", "aws", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/"
@@ -113,5 +113,5 @@ When dealing with image processing, we can use [S3](https://aws.amazon.com/s3) a
 
 I recommend using [Cloudinary](https://cloudinary.com) as an image management solution. Once uploaded to Cloudinary, images are stored on Cloudinary’s Amazon S3 account. If you wish, you can automatically back your images to your own S3 as well. As an alternative service, you can use [Blitline](https://www.blitline.com) for image processing.
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

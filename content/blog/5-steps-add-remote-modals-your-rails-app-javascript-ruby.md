@@ -3,7 +3,7 @@ dev_to_id: 1877543
 title: "5 Steps to Add Remote Modals to Your Rails App"
 description: "Sometimes you don’t want to write big JavaScript application just to have working remote modals in..."
 created_at: "2024-06-05T05:41:45Z"
-edited_at: "2024-06-11T06:30:44Z"
+edited_at: "2024-06-13T12:41:53Z"
 draft: false
 tags: ["javascript", "ruby", "rails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/"
@@ -213,5 +213,5 @@ I’ve created a small [demo application](https://remote-modals-rails.herokuapp.
 
 UPD: Updated for Rails 5 And Bootstrap 4.
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

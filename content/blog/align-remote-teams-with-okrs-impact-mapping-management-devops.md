@@ -3,7 +3,7 @@ dev_to_id: 1556678
 title: "Align remote teams with OKRs and Impact Mapping"
 description: "In today's fast-paced business environment, remote distributed teams are becoming increasingly..."
 created_at: "2023-08-02T11:05:40Z"
-edited_at: "2024-06-11T06:32:28Z"
+edited_at: "2024-06-13T12:41:56Z"
 draft: false
 tags: ["management", "devops"]
 canonical_url: "https://jetthoughts.com/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/"
@@ -70,6 +70,6 @@ So, why not give it a try and witness the positive impact on your startup's grow
 
 ---
 
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [Showcase](https://showca.se) and [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

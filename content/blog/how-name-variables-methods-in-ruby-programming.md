@@ -3,7 +3,7 @@ dev_to_id: 1877535
 title: "How To Name Variables And Methods In Ruby"
 description: "How To Name Variables And Methods In Ruby               What’s in a name? that which we call..."
 created_at: "2024-06-05T05:33:19Z"
-edited_at: "2024-06-11T06:30:47Z"
+edited_at: "2024-06-13T12:42:36Z"
 draft: false
 tags: ["programming", "ruby", "bestpractices", "rails"]
 canonical_url: "https://jetthoughts.com/blog/how-name-variables-methods-in-ruby-programming/"
@@ -128,5 +128,5 @@ The general rule of thumb for picking a name for a predicate method: it should b
 
 Of course, there may be methods that don’t fit into any of these four categories, and we did not cover class methods here at all, but in general, it’s all the same: the name should make sense and it should contain just the right amount of context to be clear — not more and not less.
 
-***Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/paul-keen/) *or [GitHub](https://github.com/pftg).*
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

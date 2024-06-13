@@ -3,7 +3,7 @@ dev_to_id: 1853545
 title: "How to handle remote services in tests"
 description: "Do you have difficulties in adding the new tests and their readability decreased due to..."
 created_at: "2024-05-15T06:53:38Z"
-edited_at: "2024-06-11T06:31:14Z"
+edited_at: "2024-06-13T12:42:26Z"
 draft: false
 tags: ["rails", "tutorial", "pattern", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/how-handle-remote-services-in-tests-rails-tutorial/"
@@ -143,5 +143,5 @@ In this way `PostsSource::Fake will` be used for the test environment and `Posts
 
 The real response still needs to be tested, and most likely, it will be stubbed. But dependency injection allows decreasing the number of stubbing usages in the tests.
 
-**Paul Keen **is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -3,7 +3,7 @@ dev_to_id: 1115250
 title: "Pitfalls of using metaprogramming in Ruby on Rails application"
 description: "Do you know that metaprogramming is easy to add but hard to support? Developers underestimated risks..."
 created_at: "2022-06-15T17:32:52Z"
-edited_at: "2024-06-11T06:32:59Z"
+edited_at: "2024-06-13T12:43:17Z"
 draft: false
 tags: ["ruby", "programming", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/"
@@ -63,5 +63,5 @@ Before accepting code with metaprogramming, you need to be sure that:
 
 ---
 
-**Paul Keen** is a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 > _If you enjoyed this story, we recommend reading our latest tech stories and trending tech stories._
