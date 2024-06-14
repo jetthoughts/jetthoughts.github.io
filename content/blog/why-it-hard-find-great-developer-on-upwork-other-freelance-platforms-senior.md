@@ -3,7 +3,7 @@ dev_to_id: 1853478
 title: "Why is it hard to find a great developer on Upwork and other freelance platforms?"
 description: "Finding good developers is a challenge. Nowadays, professionals are rare. Not all developers get to..."
 created_at: "2024-05-15T06:10:42Z"
-edited_at: "2024-06-11T06:31:21Z"
+edited_at: "2024-06-14T08:00:35Z"
 draft: false
 tags: ["senior", "freelance", "recruiting"]
 canonical_url: "https://jetthoughts.com/blog/why-it-hard-find-great-developer-on-upwork-other-freelance-platforms-senior/"
@@ -47,6 +47,6 @@ Agencies have a stable process of recruiting developers, they check all technica
 
 ***Here in [JetThoughts](https://www.jetthoughts.com/), we spend a lot of time finding and interviewing developers to find the best Ruby on Rails contributors for you. The training process (which we created) has been built for 15 years to deliver a stable code and the best communication practice for a remote team.***
 
-Ruslana is a Sales & Marketing Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

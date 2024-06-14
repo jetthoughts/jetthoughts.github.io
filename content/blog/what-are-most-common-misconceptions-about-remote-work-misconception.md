@@ -3,7 +3,7 @@ dev_to_id: 1852712
 title: "What are the most common misconceptions about remote work?"
 description: "A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the..."
 created_at: "2024-05-14T13:38:49Z"
-edited_at: "2024-06-11T06:31:43Z"
+edited_at: "2024-06-14T08:00:57Z"
 draft: false
 tags: ["remote", "misconception", "myths"]
 canonical_url: "https://jetthoughts.com/blog/what-are-most-common-misconceptions-about-remote-work-misconception/"
@@ -59,5 +59,5 @@ Besides, you can meet somebody new and make friends.
 
 Furthermore, in [JetThoughts](https://www.jetthoughts.com/), we chat every day, using Discord. Team members who are from the same city, can meet and work together. We also try to minimize situations in which people are left alone, and we strive to support each other in the distance. So, we frequently do video conferencing.
 
-[**Ruslana](https://jtway.co/@rbr.jt) ***is a Lead Generation Manager at [**JetThoughts](https://www.jetthoughts.com/)**. Follow her on [**LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/)**.*
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

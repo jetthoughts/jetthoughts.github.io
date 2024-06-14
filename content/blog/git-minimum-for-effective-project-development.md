@@ -3,7 +3,7 @@ dev_to_id: 1853605
 title: "Git minimum for effective project development"
 description: "Git minimum for effective project development             For beginners who are not familiar..."
 created_at: "2024-05-15T07:29:21Z"
-edited_at: "2024-06-11T06:31:03Z"
+edited_at: "2024-06-14T08:00:18Z"
 draft: false
 tags: ["development", "git", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/git-minimum-for-effective-project-development/"
@@ -24,8 +24,8 @@ Initialize and configure the Git to push the current branch to a branch with the
 ```
 For [GitHub](https://github.com/), we set up information about the author of commits, like this:
 ```
-    git config --global user.name "Sergey Sviridov*"
-    *git config --global user.email "sergey@users.noreply.github.com"
+    git config --global user.name "Sergey Sviridov"
+    git config --global user.email "sergey@users.noreply.github.com"
 ```
 ## Setup the project
 
@@ -149,5 +149,5 @@ To get detailed changes info per file for each commit:
 
 There are a lot of useful Git commands. And we can reach the goal in different ways using different commands. This article is showing our own way polished by the knowledge of our teammates. Feel free to find the approach that will suit your needs. Good luck in gitting :)!
 
-**Sergey Sviridov **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

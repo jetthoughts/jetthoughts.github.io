@@ -3,7 +3,7 @@ dev_to_id: 1852568
 title: "Collecting JavaScript code coverage with Capybara in Ruby on Rails application"
 description: "Having JavaScript code covered by Capybara system tests, can we utilize them for the code..."
 created_at: "2024-05-14T11:32:21Z"
-edited_at: "2024-06-11T06:32:02Z"
+edited_at: "2024-06-14T08:01:17Z"
 draft: false
 tags: ["capybara", "testing", "javascript", "rails"]
 canonical_url: "https://jetthoughts.com/blog/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing/"
@@ -68,7 +68,7 @@ Finally, the aggregated report is sent to the Codecov with *e2e* flag:
 
 And that’s all — we just got the JavaScript coverage without writing any actual JavaScript tests.
 
-**Sergey Sviridov ***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 
-**Dmitry Tsvetkov** *is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [*LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) *or [GitHub.](https://github.com/vlaew)*
+**Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

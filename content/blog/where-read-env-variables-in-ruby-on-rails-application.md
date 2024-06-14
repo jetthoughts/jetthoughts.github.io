@@ -3,7 +3,7 @@ dev_to_id: 1852612
 title: "Where to read ENV variables in Ruby on Rails application"
 description: "The ENV variables should not be used outside the config folder. This rule will allow the..."
 created_at: "2024-05-14T12:25:22Z"
-edited_at: "2024-06-11T06:31:54Z"
+edited_at: "2024-06-14T08:01:09Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "bestpractices"]
 canonical_url: "https://jetthoughts.com/blog/where-read-env-variables-in-ruby-on-rails-application/"
@@ -37,5 +37,5 @@ The configuration of the current working environment can be arranged in the *con
 
 By following this rule you can avoid problems with the implicit dependencies and your application behavior will be expected.
 
-**Sergey Sviridov ***is a Software Engineer at [**JetThoughts](https://www.jetthoughts.com/)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

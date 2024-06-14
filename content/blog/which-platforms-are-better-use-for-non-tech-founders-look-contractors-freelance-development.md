@@ -3,7 +3,7 @@ dev_to_id: 1852624
 title: "Which platforms are better to use for non-tech founders to look for contractors?"
 description: "Are you looking for developers? In need of delivering your product ASAP? Don’t know where you can..."
 created_at: "2024-05-14T12:39:53Z"
-edited_at: "2024-06-11T06:31:48Z"
+edited_at: "2024-06-14T08:01:02Z"
 draft: false
 tags: ["freelance", "development", "remote", "startup"]
 canonical_url: "https://jetthoughts.com/blog/which-platforms-are-better-use-for-non-tech-founders-look-contractors-freelance-development/"
@@ -48,5 +48,5 @@ This list of the best freelance websites can help you hire the full-time, remote
 By the way, if you have a moment, look through the **[JetThoughts](https://www.jetthoughts.com/)** profiles there ;)
 
 Good luck!
->  ***Ruslana Brykaliuk ***is a Lead Generation Manager at [**JetThoughts](https://www.jetthoughts.com/)**. Follow her on [**LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/)**.
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

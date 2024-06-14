@@ -3,7 +3,7 @@ dev_to_id: 1559624
 title: "Ruby on Rails Views Resources for Frontend Developer"
 description: "🚀 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
 created_at: "2023-08-04T22:31:55Z"
-edited_at: "2024-06-13T12:43:20Z"
+edited_at: "2024-06-14T08:01:41Z"
 draft: false
 tags: ["programming", "javascript", "rails", "frontend"]
 canonical_url: "https://jetthoughts.com/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/"

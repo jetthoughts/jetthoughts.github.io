@@ -3,7 +3,7 @@ dev_to_id: 1853524
 title: "How does the onboarding look like in JetThoughts?"
 description: "How does the onboarding look like in JetThoughts?   This is an onboarding checklist..."
 created_at: "2024-05-15T06:29:43Z"
-edited_at: "2024-06-11T06:31:19Z"
+edited_at: "2024-06-14T08:00:33Z"
 draft: false
 tags: ["productivity", "startup", "remote", "onboarding"]
 canonical_url: "https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/"
@@ -78,5 +78,5 @@ When you work remotely, you want to have some kind of a standup meeting regularl
 
 Good luck with growing out your teams and successfully onboarding your new employees. It may require a bit of trial and error to nail down the best process for your organization, but it is time and effort well spent to make sure you set the right tone with new employees.
 
-**R. B. ***is a Lead Generation Manager at [**JetThoughts](https://www.jetthoughts.com/)**. Follow her on [**LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/)**.*
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

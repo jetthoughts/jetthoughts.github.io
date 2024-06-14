@@ -3,7 +3,7 @@ dev_to_id: 1852738
 title: "Rails virtual attributes use cases"
 description: "You want to keep some data but do not want to create the new column in the database? Your data should..."
 created_at: "2024-05-14T13:57:52Z"
-edited_at: "2024-06-11T06:31:39Z"
+edited_at: "2024-06-14T08:00:53Z"
 draft: false
 tags: ["rails", "ruby", "tutorial", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/rails-virtual-attributes-use-cases-ruby/"
@@ -173,7 +173,7 @@ Let’s play the scenario when data is rendered for a user. There are two option
 
 The virtual attribute is a good helper when you need a quick and easy solution creating the form fields which are not related to the database. They allow having more flexibility in user interface customizations. The great thing is that the developer is not limited to attributes backed by a database, but he can use virtual attributes as well.
 
-**Sergey Sviridov ***is a Software Engineer at [**JetThoughts](https://www.jetthoughts.com)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 
 **Roman Tershak ***is a Software Engineer at [**JetThoughts](https://www.jetthoughts.com)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/roman-tershak-0b3958103/) *or [GitHub](https://github.com/rtershak).*
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

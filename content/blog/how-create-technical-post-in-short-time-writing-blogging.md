@@ -3,7 +3,7 @@ dev_to_id: 1852622
 title: "How to create a technical post in a short time"
 description: "After reading thousands of posts, it’s time to share a workflow that will help those who are creating..."
 created_at: "2024-05-14T12:36:24Z"
-edited_at: "2024-06-11T06:31:49Z"
+edited_at: "2024-06-14T09:03:54Z"
 draft: false
 tags: ["writing", "blogging", "tips"]
 canonical_url: "https://jetthoughts.com/blog/how-create-technical-post-in-short-time-writing-blogging/"
@@ -44,5 +44,7 @@ Authors front-load because it solves a lot of problems. Chiefly, this is because
 The reader doesn’t necessarily want to know all the background information that led to the decision. He or she likely wants to know “how does this information affect me?” and this principle should answer this question every time.
 
 Read more here [https://jtway.co/we-investigated-100-articles-on-writing-technical-blog-posts-heres-what-we-learned-26afaf986f07](https://jtway.co/we-investigated-100-articles-on-writing-technical-blog-posts-heres-what-we-learned-26afaf986f07)
->  **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

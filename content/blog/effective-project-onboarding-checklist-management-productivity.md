@@ -3,7 +3,7 @@ dev_to_id: 1853643
 title: "Effective project onboarding checklist"
 description: "To avoid the onboarding slip and remove expectations and misunderstandings, the JetThoughts team..."
 created_at: "2024-05-15T08:00:36Z"
-edited_at: "2024-06-11T06:30:53Z"
+edited_at: "2024-06-14T08:00:07Z"
 draft: false
 tags: ["management", "productivity", "devops", "career"]
 canonical_url: "https://jetthoughts.com/blog/effective-project-onboarding-checklist-management-productivity/"
@@ -138,4 +138,4 @@ This list can be modified during the process and adapted to specific requirement
 
 ---
 
-**Sergey Sviridov** is a **Software Engineer** at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) or [GitHub](https://github.com/SviridovSV).
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).

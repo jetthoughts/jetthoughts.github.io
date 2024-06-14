@@ -3,7 +3,7 @@ dev_to_id: 1877543
 title: "5 Steps to Add Remote Modals to Your Rails App"
 description: "Sometimes you don’t want to write big JavaScript application just to have working remote modals in..."
 created_at: "2024-06-05T05:41:45Z"
-edited_at: "2024-06-13T12:41:53Z"
+edited_at: "2024-06-14T07:59:58Z"
 draft: false
 tags: ["javascript", "ruby", "rails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/"

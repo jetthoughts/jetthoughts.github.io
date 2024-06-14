@@ -3,7 +3,7 @@ dev_to_id: 1853550
 title: "How To Write The Right Content For Your Article"
 description: "There are moments when you’re full of motivation, ideas come up with your mind and straight onto the..."
 created_at: "2024-05-15T07:00:58Z"
-edited_at: "2024-06-11T06:31:11Z"
+edited_at: "2024-06-14T08:00:26Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
 canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting/"
@@ -88,5 +88,5 @@ Even if you’re a self-proclaimed terrible writer or hate the writing process, 
 What it takes is commitment and trust in the systems that have already been proven to generate results.
 
 Good luck!
->  **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

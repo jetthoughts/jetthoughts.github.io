@@ -3,7 +3,7 @@ dev_to_id: 1880380
 title: "How does your company work with clients to understand their needs?"
 description: "In today's competitive business landscape, understanding and meeting client needs is crucial for the..."
 created_at: "2024-06-07T12:41:25Z"
-edited_at: "2024-06-11T06:29:52Z"
+edited_at: "2024-06-14T07:59:06Z"
 draft: false
 tags: ["lean", "process"]
 canonical_url: "https://jetthoughts.com/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/"

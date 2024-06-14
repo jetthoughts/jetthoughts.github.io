@@ -3,7 +3,7 @@ dev_to_id: 1853549
 title: "Tips for writing readable system tests in Rails"
 description: "Want to make system tests easy to main tain? We have selected some best practice tips to..."
 created_at: "2024-05-15T06:56:33Z"
-edited_at: "2024-06-11T06:31:12Z"
+edited_at: "2024-06-14T08:00:27Z"
 draft: false
 tags: ["capybara", "ruby", "rails", "testing"]
 canonical_url: "https://jetthoughts.com/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/"
@@ -140,5 +140,5 @@ Writing readability system tests does some cost, such as code duplication and mo
 However, you are increasing the enjoyment of system tests because your tests become readable and easy to maintain.
 Follow the tips or not? It is up to you to decide!
 
-**Andriy Parashchuk **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

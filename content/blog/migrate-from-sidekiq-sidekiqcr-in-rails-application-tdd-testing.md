@@ -3,7 +3,7 @@ dev_to_id: 1853610
 title: "Migrate from Sidekiq to Sidekiq.cr in Rails application"
 description: "Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to..."
 created_at: "2024-05-15T07:33:16Z"
-edited_at: "2024-06-11T06:31:02Z"
+edited_at: "2024-06-14T08:00:16Z"
 draft: false
 tags: ["tdd", "testing", "development", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing/"
@@ -81,5 +81,5 @@ Finally, run:
 
 You can find this example in our repository [jetthoughts/broolik-worker.cr](https://github.com/jetthoughts/broolik-worker.cr).
 
-**Sergey Sviridov ***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

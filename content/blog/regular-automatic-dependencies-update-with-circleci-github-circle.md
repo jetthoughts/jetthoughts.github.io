@@ -3,7 +3,7 @@ dev_to_id: 1852752
 title: "Regular automatic dependencies update with CircleCI"
 description: "Resolving the auto-upgrade issue will allow having edge gems versions with little to no..."
 created_at: "2024-05-14T14:18:44Z"
-edited_at: "2024-06-11T06:31:31Z"
+edited_at: "2024-06-14T08:00:46Z"
 draft: false
 tags: ["github", "circle", "ci", "rails"]
 canonical_url: "https://jetthoughts.com/blog/regular-automatic-dependencies-update-with-circleci-github-circle/"
@@ -149,5 +149,5 @@ This way you can not worry about updating the dependencies. Trying to automate s
 
 You can find this script as well as other optimization tricks in our repository [jetthoughts/jt_tools](https://github.com/jetthoughts/jt_tools/blob/master/lib/install/bin/circleci-auto_upgrade_tools).
 
-**Sergey Sviridov ***is a Software Engineer at [**JetThoughts](https://www.jetthoughts.com/)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

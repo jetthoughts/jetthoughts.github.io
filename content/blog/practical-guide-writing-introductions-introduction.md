@@ -3,7 +3,7 @@ dev_to_id: 1852747
 title: "A Practical Guide To Writing Introductions"
 description: "Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It..."
 created_at: "2024-05-14T14:14:26Z"
-edited_at: "2024-06-11T06:31:33Z"
+edited_at: "2024-06-14T08:00:48Z"
 draft: false
 tags: ["writing", "introduction", "blogging", "blog"]
 canonical_url: "https://jetthoughts.com/blog/practical-guide-writing-introductions-introduction/"
@@ -32,5 +32,5 @@ There are 3 important elements of a good introduction. Let’s briefly look at t
 Anyway, a catchy introduction provides the reader with a brief overview of your topic and an explanation of your thesis. The successful introduction is fresh, engaging, and enjoyable.
 
 Good luck!
->  **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

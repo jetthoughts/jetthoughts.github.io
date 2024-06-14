@@ -3,7 +3,7 @@ dev_to_id: 1853624
 title: "Cross-platform development using ReactXP"
 description: "Cross-platform development using ReactXP   Startups with limited resources trying to reduce..."
 created_at: "2024-05-15T07:48:27Z"
-edited_at: "2024-06-11T06:30:56Z"
+edited_at: "2024-06-14T08:00:11Z"
 draft: false
 tags: ["react", "javascript", "startup", "typescript"]
 canonical_url: "https://jetthoughts.com/blog/cross-platform-development-using-reactxp-react-javascript/"
@@ -89,5 +89,5 @@ We initialized the state with video value where we will store the chosen video w
 
 ReactXP is a powerful solution with a set of various useful components and best practices implemented into it. It will let you deal with both ReactJS (web) and React Native (iOS, Android) having a single codebase. ReactXP is a good choice for your first JavaScript app. You won’t have an informational glut, as you will only see the TypeScript code and no iOS/Android internals.
 
-**Andriy Parashchuk **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

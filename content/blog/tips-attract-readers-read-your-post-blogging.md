@@ -3,7 +3,7 @@ dev_to_id: 1852562
 title: "Tips to attract readers to read your post"
 description: "Do you know how to keep readers’ attention? We had been experimenting with different ways to make..."
 created_at: "2024-05-14T11:25:32Z"
-edited_at: "2024-06-11T06:32:05Z"
+edited_at: "2024-06-14T08:01:19Z"
 draft: false
 tags: ["blogging", "tips", "writing"]
 canonical_url: "https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging/"
@@ -69,5 +69,5 @@ Keep in mind that the technical articles look more attractive with the code scre
 
 Don’t feel you have to fill up every inch of your screen — instead, create spaces because they help to read the important information without a feeling of overwhelming.
 
-[***Ruslana](https://jtway.co/@rbr.jt)*** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

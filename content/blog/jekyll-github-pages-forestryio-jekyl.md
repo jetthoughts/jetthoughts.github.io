@@ -3,7 +3,7 @@ dev_to_id: 1880471
 title: "Jekyll + GitHub Pages + Forestry.io"
 description: "I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my..."
 created_at: "2024-06-07T13:36:24Z"
-edited_at: "2024-06-11T06:29:47Z"
+edited_at: "2024-06-14T07:59:00Z"
 draft: false
 tags: ["jekyl", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/"
@@ -152,5 +152,5 @@ How to do it? I have already described this in my [post](https://jtway.co/deploy
 
 I hope this simple guide to creating and setting up a free website will help you. Good luck!
 
-**Andriy Parashchuk **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

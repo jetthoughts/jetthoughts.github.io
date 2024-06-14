@@ -3,7 +3,7 @@ dev_to_id: 1852577
 title: "Benefits of working remotely"
 description: "Nowadays, remote work gains more and more prominence. Many successful companies let their employees..."
 created_at: "2024-05-14T11:38:52Z"
-edited_at: "2024-06-11T06:32:01Z"
+edited_at: "2024-06-14T08:01:16Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
 canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote/"
@@ -55,5 +55,5 @@ The time you spend commuting can now be spent with your family. For many, the ph
 
 Those working in offices find it difficult to steal out time for their loved ones. It’s evident that weekends are there for sure, but sometimes people need to spend their days off on the other things. However, as you are working from home itself, you have your family around you, and during the breaks, you take, you can just go and spend some quality time with them.
 
-[**Ruslana](https://jtway.co/@rbr.jt) ***is a Lead Generation Manager at [**JetThoughts](https://www.jetthoughts.com/)**. Follow her on [**LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/)**.*
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

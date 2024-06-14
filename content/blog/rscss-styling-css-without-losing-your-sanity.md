@@ -3,7 +3,7 @@ dev_to_id: 1852739
 title: "RSCSS. Styling CSS without losing your sanity"
 description: "Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out..."
 created_at: "2024-05-14T14:03:11Z"
-edited_at: "2024-06-11T06:31:37Z"
+edited_at: "2024-06-14T08:00:52Z"
 draft: false
 tags: ["css", "rscss", "html", "scss"]
 canonical_url: "https://jetthoughts.com/blog/rscss-styling-css-without-losing-your-sanity/"
@@ -249,5 +249,5 @@ So that you have a foundation to decide whether it’s worth studying and adopti
 
 Good luck to everyone!
 
-**Andriy Parashchuk **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

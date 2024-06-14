@@ -3,7 +3,7 @@ dev_to_id: 1879395
 title: "Recent Searches & Sorting Hashes: How They are Connected"
 description: "In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
 created_at: "2024-06-06T15:55:49Z"
-edited_at: "2024-06-11T06:30:08Z"
+edited_at: "2024-06-14T07:59:21Z"
 draft: false
 tags: ["ruby", "rails", "development"]
 canonical_url: "https://jetthoughts.com/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/"

@@ -3,7 +3,7 @@ dev_to_id: 1852561
 title: "What activities are expected from a remote developer for effective collaboration"
 description: "In order to build trust relationships with remote non-technical founders, we designed the..."
 created_at: "2024-05-14T11:22:54Z"
-edited_at: "2024-06-11T06:32:06Z"
+edited_at: "2024-06-14T08:01:21Z"
 draft: false
 tags: ["development", "process", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process/"
@@ -56,5 +56,5 @@ How to prepare the PR we discussed in [“Prepare the Pull Request before asking
 * **Merge / Deploy **(check deployment in Production)
 >  *This is the full cycle of actions that are expected from the developer, especially working remotely. Compliance with these rules will help to build trust with the customer, and also to avoid questions about what the employee is doing from management.*
 
-**Sergey Sviridov ***is a Software Engineer at [**JetThoughts](https://www.jetthoughts.com/)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

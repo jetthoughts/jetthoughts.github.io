@@ -3,7 +3,7 @@ dev_to_id: 1853539
 title: "Why communication is so important when you work remotely?"
 description: "Communication at work is one of the most important aspects of any business.  But why? Let’s take a..."
 created_at: "2024-05-15T06:47:42Z"
-edited_at: "2024-06-11T06:31:15Z"
+edited_at: "2024-06-14T08:00:29Z"
 draft: false
 tags: ["remote", "communication", "startup", "process"]
 canonical_url: "https://jetthoughts.com/blog/why-communication-important-when-you-work-remotely-remote/"
@@ -66,5 +66,5 @@ Once your employees get into the habit of communicating regularly with each othe
 And, once improved communication becomes part of your company’s policy and culture, it will continue to give you more and more benefits.
 
 **Good luck with building it your way!** **. . .**
->  **R. B. ***is a Lead Generation Manager at [**JetThoughts](https://www.jetthoughts.com/)**. Follow her on [**LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/)**.*
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

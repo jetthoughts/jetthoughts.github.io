@@ -3,7 +3,7 @@ dev_to_id: 1852617
 title: "Prepare the Pull Request before asking to Review"
 description: "How to avoid being the victim of an open-loop trying to get your Pull Request verified..."
 created_at: "2024-05-14T12:27:37Z"
-edited_at: "2024-06-11T06:31:53Z"
+edited_at: "2024-06-14T08:01:07Z"
 draft: false
 tags: ["git", "pullrequest", "review", "workflow"]
 canonical_url: "https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/"
@@ -66,7 +66,7 @@ In order to reach successful verification as fast as possible, you, as the autho
 
 This checklist will help your co-workers to avoid spending their time reading the bad code or going through other sloppy mistakes. Prevent the waste of time at the verification stage. Every issue that could be caught by us, but was caught by the reviewer instead — decreases the team productivity. Knowing that we get frank feedback should be a motivation for writing the perfect code.
 
-**Sergey Sviridov ***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199/) *or [GitHub](https://github.com/SviridovSV).*
+**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 
-**Andriy Parashchuk ***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) *or [GitHub](https://github.com/andriyParashchuk).*
+**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

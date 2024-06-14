@@ -3,7 +3,7 @@ dev_to_id: 1880485
 title: "Dedicated Software Development Teams"
 description: "Dedicated Software Development Teams   We’ve compiled everything you need to know about..."
 created_at: "2024-06-07T13:49:53Z"
-edited_at: "2024-06-11T06:29:43Z"
+edited_at: "2024-06-14T07:58:56Z"
 draft: false
 tags: ["team", "recruitment", "hr"]
 canonical_url: "https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment/"
@@ -63,5 +63,5 @@ We are Developers who helped to grow successful products. We offer a fully manag
 * Our engineers worked together as a team on different projects so the onboarding is shortened significantly
 
 * By Integrating **transparency**, **flexibility**, and **work culture** into our internal processes during the past 15 years, we’ve developed our own **unique framework** for the remote distributed teams.
->  [***Ruslana](https://www.linkedin.com/in/ruslana-b-970016135/)*** is a Sales & Marketing Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

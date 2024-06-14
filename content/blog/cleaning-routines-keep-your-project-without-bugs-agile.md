@@ -3,7 +3,7 @@ dev_to_id: 1852630
 title: "Cleaning routines to keep your project without bugs"
 description: "How to manage problems with your project? How to understand how buggy it is and address the issues..."
 created_at: "2024-05-14T12:46:10Z"
-edited_at: "2024-06-11T06:31:46Z"
+edited_at: "2024-06-14T08:01:01Z"
 draft: false
 tags: ["agile", "bugs", "issues"]
 canonical_url: "https://jetthoughts.com/blog/cleaning-routines-keep-your-project-without-bugs-agile/"

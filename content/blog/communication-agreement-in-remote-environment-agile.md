@@ -3,7 +3,7 @@ dev_to_id: 462581
 title: "Communication Agreement in a remote environment"
 description: "Communication Agreement in a remote environment   How to manage tasks remotely? How to build..."
 created_at: "2020-09-22T08:10:11Z"
-edited_at: "2024-06-11T06:33:15Z"
+edited_at: "2024-06-14T08:02:43Z"
 draft: false
 tags: ["agile", "agreement", "remote", "startup"]
 canonical_url: "https://jetthoughts.com/blog/communication-agreement-in-remote-environment-agile/"
@@ -92,5 +92,5 @@ Do not deal with proposals from potential customers/partners that are not part o
 
 Members of the team make high-quality decisions together and have the support and commitment of the group to carry out the decisions made. CEO hopes to communicate with the Sales team every day without distracting them from their work.
 
-***Ruslana ***is a Lead Generation Manager at [**JetThoughts](https://www.jetthoughts.com/)**. Follow her on [**LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/)**.
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

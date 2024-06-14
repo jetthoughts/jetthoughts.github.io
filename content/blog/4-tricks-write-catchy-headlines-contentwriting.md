@@ -3,7 +3,7 @@ dev_to_id: 1852733
 title: "4 Tricks to Write Catchy Headlines"
 description: "How to improve your writing, and create not just a good headline, but a catchy one? No matter what..."
 created_at: "2024-05-14T13:53:54Z"
-edited_at: "2024-06-11T06:31:40Z"
+edited_at: "2024-06-14T08:00:55Z"
 draft: false
 tags: ["contentwriting", "headlines", "blog", "writing"]
 canonical_url: "https://jetthoughts.com/blog/4-tricks-write-catchy-headlines-contentwriting/"
@@ -59,5 +59,5 @@ What makes a headline good is it’s a formula. Every content marketer has one o
 
 * *‘Get rid of [problem] once and for all’ *formula: Who wouldn’t want to permanently get rid of an annoying problem that they’re faced with on a daily basis? When you write your headlines with this strategy in mind, you’ll captivate your audience from start to finish, because they want to know the secret, too.
 
-[***Ruslana](https://jtway.co/@rbr.jt)*** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

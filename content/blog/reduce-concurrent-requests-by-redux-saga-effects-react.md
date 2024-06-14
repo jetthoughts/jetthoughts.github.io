@@ -3,7 +3,7 @@ dev_to_id: 1880474
 title: "Reduce concurrent requests by Redux-Saga Effects"
 description: "Are you familiar with the situation when the user clicks on a Load Data button 2 consecutive times at..."
 created_at: "2024-06-07T13:41:39Z"
-edited_at: "2024-06-11T06:29:45Z"
+edited_at: "2024-06-14T07:58:58Z"
 draft: false
 tags: ["redux", "react", "javascript", "frontend"]
 canonical_url: "https://jetthoughts.com/blog/reduce-concurrent-requests-by-redux-saga-effects-react/"
@@ -97,5 +97,5 @@ The function call will look something like this:
 
 That’s all and without any magic. I hope you found this post useful. Good luck and prosper!
 
-**Andriy Parashchuk **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

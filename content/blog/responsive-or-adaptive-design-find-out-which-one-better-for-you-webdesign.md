@@ -3,7 +3,7 @@ dev_to_id: 1877550
 title: "Responsive or Adaptive Design? Find out which one is better for you"
 description: "JetThoughts has launched a new project recently. Whole front-end team was set and started..."
 created_at: "2024-06-05T05:49:07Z"
-edited_at: "2024-06-11T06:30:40Z"
+edited_at: "2024-06-14T07:59:54Z"
 draft: false
 tags: ["design", "webdesign", "layouts"]
 canonical_url: "https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/"

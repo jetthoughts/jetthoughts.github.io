@@ -3,7 +3,7 @@ dev_to_id: 1852579
 title: "We got 3 main principles for writing Technical Blog posts. Here’s what we learned."
 description: "After 100 articles of the research on how to write Technical Blog post simple and quickly, without..."
 created_at: "2024-05-14T11:40:41Z"
-edited_at: "2024-06-11T06:32:00Z"
+edited_at: "2024-06-14T08:01:14Z"
 draft: false
 tags: ["writing", "blog", "blogposting", "principles"]
 canonical_url: "https://jetthoughts.com/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/"
@@ -71,5 +71,5 @@ Here is an example from our previous article [https://jtway.co/checklist-for-the
 
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/file_2.jpeg)
 
-[**Ruslana](https://jtway.co/@rbr.jt)** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
+**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -3,7 +3,7 @@ dev_to_id: 1774708
 title: "More control over enum in Rails 7.1"
 description: "ActiveRecord::Enum in Rails have long been a convenient tool for representing a set of symbolic..."
 created_at: "2024-02-28T09:32:44Z"
-edited_at: "2024-06-11T06:32:12Z"
+edited_at: "2024-06-14T08:01:26Z"
 draft: false
 tags: ["rails", "webdev", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/more-control-over-enum-in-rails-71-webdev/"
@@ -61,6 +61,6 @@ Now we can define custom methods tailored to the specific needs without worrying
 - **Improved Performance**: By reducing the number of automatically generated methods, there may be a slight improvement in application performance, especially in cases where models have numerous `enum` attributes.
 
 ---
-Dmitry Tsvetkov is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).
+**Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
 
 If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

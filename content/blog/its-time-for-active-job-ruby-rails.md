@@ -3,7 +3,7 @@ dev_to_id: 1880305
 title: "It’s Time For Active Job"
 description: "It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2...."
 created_at: "2024-06-07T11:47:31Z"
-edited_at: "2024-06-13T12:43:02Z"
+edited_at: "2024-06-14T07:59:07Z"
 draft: false
 tags: ["ruby", "rails", "develpment", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/"
@@ -16,7 +16,7 @@ slug: "its-time-for-active-job-ruby-rails"
 
 Recently we have upgraded one of our own projects to Rails 4.2. New minor version contains many improvements of old features and adds some new ones. One of most interesting (and helpful) new features is adding a new framework for declaring jobs and making them run on a variety of queuing backends — **Active Job**.
 
-It is hard to imagine any big and complex Rails project without background jobs processing. There are many gems for this task: [**Delayed Job](https://github.com/collectiveidea/delayed_job), [Sidekiq](https://github.com/mperham/sidekiq), [Resque](https://github.com/resque/resque), [SuckerPunch](https://github.com/brandonhilkert/sucker_punch)** and more. And Active Job has arrived here to rule them all.
+It is hard to imagine any big and complex Rails project without background jobs processing. There are many gems for this task: **[Delayed Job](https://github.com/collectiveidea/delayed_job), [Sidekiq](https://github.com/mperham/sidekiq), [Resque](https://github.com/resque/resque), [SuckerPunch](https://github.com/brandonhilkert/sucker_punch)** and more. And Active Job has arrived here to rule them all.
 
 Active Job provides unified interface to hide real background jobs library from our eyes and to simplify migration from one background jobs processing library to another. Also it is cool that Active Job provides a generator to create jobs. I really don’t like to write almost the same code over and over again and a good tool should take all routine work upon itself.
 
@@ -83,7 +83,7 @@ class SendNewFeedbackNotificationJob < ActiveJob::Base
 end
 ```
 
-It has created a new class which is descendant of ActiveJob::Base with name ending with Job. Also it is set to use a default queue (can be changed by --queue another_queue generator’s option but simple replacing this in code is much quicker).
+It has created a new class which is descendant of `ActiveJob::Base` with name ending with Job. Also it is set to use a default queue (can be changed by `--queue another_queue` generator’s option but simple replacing this in code is much quicker).
 
 It is left to change #perform method in the created job:
 
@@ -99,17 +99,17 @@ class SendNewFeedbackNotificationJob < ActiveJob::Base
 end
 ```
 
-And replace old calls SendNewFeedbackNotificationWorker.new(arguments).delay.perform to new calls SendNewFeedbackNotificationJob.perform_later(arguments).
+And replace old calls `SendNewFeedbackNotificationWorker.new(arguments).delay.perform` to new calls `SendNewFeedbackNotificationJob.perform_later(arguments)`.
 
 ## Enqueue a job with options
 
 You can change a queue and time for running a job by #set method on job. It can accept these options:
 
-* :wait - enqueues the job with the specified delay;
+* `:wait` - enqueues the job with the specified delay;
 
-* :wait_until - enqueues the job at the time specified (override :wait if both specified;
+* `:wait_until` - enqueues the job at the time specified (override :wait if both specified;
 
-* :queue - enqueues the job on the specified queue.
+* `:queue` - enqueues the job on the specified queue.
 
 Examples:
 
@@ -119,7 +119,7 @@ SendNewFeedbackNotificationJob.set(wait: 15.minutes).perform_later(showing, user
 SendNewFeedbackNotificationJob.set(wait_until: 10.hours.since(Date.tomorrow)).perform_later(showing, user)
 ```
 
-***Note: **you can check available features for your backend of choice in Rails [documentation](http://edgeapi.rubyonrails.org/classes/ActiveJob/QueueAdapters.html#module-ActiveJob::QueueAdapters-label-Backends+Features).*
+**Note:** you can check available features for your backend of choice in Rails [documentation](http://edgeapi.rubyonrails.org/classes/ActiveJob/QueueAdapters.html#module-ActiveJob::QueueAdapters-label-Backends+Features).
 
 ## Pass models instances to your jobs
 
@@ -148,13 +148,13 @@ SendNewFeedbackNotificationJob.perform_later(showing, user)
 
 All the magic is done by Active Job and Active Record using Global ID.
 
-Active Job serializes arguments which you pass to perform_later. And it has a special case for models which mixin GlobalID::Identification module. In this case Active Job serializer calls .to_global_id.to_s on the model and passes returned string to queue adapter instead of a model.
+Active Job serializes arguments which you pass to perform_later. And it has a special case for models which mixin `GlobalID::Identification` module. In this case Active Job serializer calls `.to_global_id.to_s` on the model and passes returned string to queue adapter instead of a model.
 
-Before performing job Active Job deserializer detects Global ID identifier, finds a model using GlobalID::Locator.locate and passes the found model as an argument to job’s #perform method.
+Before performing job Active Job deserializer detects Global ID identifier, finds a model using `GlobalID::Locator.locate` and passes the found model as an argument to job’s #perform method.
 
 ## Testing of Jobs
 
-Active Job also contains a useful module ActiveJob::TestHelper. When we include this module to our test class it overwrites before_setup and after_teardown methods.
+Active Job also contains a useful module `ActiveJob::TestHelper`. When we include this module to our test class it overwrites `before_setup` and `after_teardown` methods.
 
 In before_setup it sets Active Job to use a test queue adapter instead of the original one and clears lists of enqueued and performed jobs in this adapter. And it restores original adapter in the after_teardown to not interfere on next tests.
 
@@ -175,7 +175,7 @@ end
 
 Then we can use these helpers to check that this action works right.
 
-assert_enqueued_jobs(number) - checks that exact number of jobs were added to queue:
+`assert_enqueued_jobs(number)` - checks that exact number of jobs were added to queue:
 
 ```ruby
 assert_enqueued_jobs 1 do
@@ -183,7 +183,7 @@ assert_enqueued_jobs 1 do
 end
 ```
 
-assert_enqueued_with(args) - checks that block enqueues job with given arguments:
+`assert_enqueued_with(args)` - checks that block enqueues job with given arguments:
 
 ```ruby
 assert_enqueued_with(job: SendNewFeedbackNotificationJob,
@@ -193,7 +193,7 @@ assert_enqueued_with(job: SendNewFeedbackNotificationJob,
 end
 ```
 
-perform_enqueued_jobs - performs jobs created in the passed block instead of queuing them:
+`perform_enqueued_jobs` - performs jobs created in the passed block instead of queuing them:
 
 ```ruby
 perform_enqueued_jobs do
@@ -250,7 +250,7 @@ SendNewFeedbackNotificationJob.perform_later(showing, user)
 
 Looks like our jobs became much cleaner with Active Job.
 
-And a small notice about deploying these changes to ***production.*** We *should not delete *previous SendNewFeedbackNotificationWorker class right now. Because during deploy it may happen that previously used worker was delayed but has not been processed before the deploy. And after deploy this job fails because DelayedJob couldn’t create instance of already deleted class. **Adding and deleting of a job shouldn’t be done in single deploy.**
+And a small notice about deploying these changes to *production*. We **should not delete** previous `SendNewFeedbackNotificationWorker` class right now. Because during deploy it may happen that previously used worker was delayed but has not been processed before the deploy. And after deploy this job fails because DelayedJob couldn’t create instance of already deleted class. *Adding and deleting of a job shouldn’t be done in single deploy.*
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
