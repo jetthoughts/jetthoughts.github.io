@@ -9,8 +9,8 @@ metatags:
   image: og-clients-openapply.jpg
 
 client:
-  logo: case-study-open-apply.png
-  logo_white_version: case-study-open-apply.png
+  logo: case-study-open-apply.webp
+  logo_white_version: case-study-open-apply.webp
   name: Open Apply
   app_name: Open Apply
   website: https://jtway.co/how-we-helped-an-existing-product-debug-grow-and-gain-more-satisfied-customers-38e17b084ac9
