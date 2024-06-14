@@ -1882,7 +1882,7 @@ img.mfp-img {
 }
 
 .fl-node-ec25np07hf63 > .fl-row-content-wrap {
-    background-image: url("{{ absURL "wp-content/uploads/2022/10/white-border-background.jpg" }}");
+    background-image: url("{{ absURL "wp-content/uploads/2022/10/white-border-background.webp" }}");
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: scroll;
