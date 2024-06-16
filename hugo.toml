@@ -9,6 +9,9 @@ disableKinds = ["taxonomy", "term"]
 [permalinks]
   pages = "/:slug/"
 
+[build]
+  writeStats = true
+
 [params]
 
   email="info@jetthoughts.com"
