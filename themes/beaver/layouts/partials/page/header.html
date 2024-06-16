@@ -97,7 +97,7 @@
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
       {{ else if .IsHome }}
-	   <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/590-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+      <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/590-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
 
       <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' />
 
@@ -111,11 +111,34 @@
       {{ end }}
       <link rel='stylesheet' id='uaf_client_css-css' href='{{ absURL "wp-content/uploads/useanyfont/uaf.css?ver=1704464349" }}' media='all' />
       {{ if eq .Params.slug "careers" }}
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/aa2019a48143ab0a991eb88e392a9964-layout-bundle.css" }}' media='all' />
+        {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $css = $css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link
+          rel="stylesheet"
+          href="{{ $css.RelPermalink }}"
+          {{ if hugo.IsProduction -}}
+            integrity="{{ $css.Data.Integrity }}"
+          {{- end }}
+          media='all'
+        />
 
       {{ else if .IsHome }}
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/aa2019a48143ab0a991eb88e392a9964-layout-bundle.css" }}' media='all' />
+        {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $css = $css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
 
+        <link
+          rel="stylesheet"
+          href="{{ $css.RelPermalink }}"
+          {{ if hugo.IsProduction -}}
+            integrity="{{ $css.Data.Integrity }}"
+          {{- end }}
+          media='all'
+        />
       {{ else if eq .Params.slug "clients" }}
 
       {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
