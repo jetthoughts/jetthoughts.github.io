@@ -68,29 +68,76 @@
       </style>
 
       {{ if eq .Params.slug "privacy-policy" }}
-      <link rel='stylesheet' id='fl-builder-layout-3059-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3059-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-      {{ else if eq .Params.slug "free-consultation" }}
-      <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-      {{ else if eq .Params.slug "careers" }}
-      <link rel='stylesheet' id='fl-builder-layout-3086-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3086-layout2.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-      {{ else if eq .Params.slug "clients" }}
-      <link rel='stylesheet' id='fl-builder-layout-3082-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3082-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-      {{ else if eq .Params.slug "services" }}
-      <link rel='stylesheet' id='fl-builder-layout-737-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/737-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-      {{ else if eq .Params.slug "use-cases" }}
-      <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/3021-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}'>
-      {{ else if eq .Type "services" }}
-      <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/2949-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}'>
-	   {{ else if eq .Type "use-cases" }}
-	   <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/3027-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        {{ $3059_css := resources.Get "assets/css/3059-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $3059_css = $3059_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
 
+        <link rel="stylesheet" href="{{ $3059_css.RelPermalink }}" media='all' />
+      {{ else if eq .Params.slug "free-consultation" }}
+        {{ $3114_css := resources.Get "assets/css/3114-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $3114_css = $3114_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $3114_css.RelPermalink }}" media='all' />
+      {{ else if eq .Params.slug "careers" }}
+        {{ $3086_css := resources.Get "assets/css/3086-layout2.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $3086_css = $3086_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $3086_css.RelPermalink }}" media='all' />
+
+      {{ else if eq .Params.slug "clients" }}
+        {{ $3082_css := resources.Get "assets/css/3082-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $3082_css = $3082_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $3082_css.RelPermalink }}" media='all' />
+      {{ else if eq .Params.slug "services" }}
+        {{ $737_css := resources.Get "assets/css/737-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $737_css = $737_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $737_css.RelPermalink }}" media='all' />
+
+      {{ else if eq .Params.slug "use-cases" }}
+        {{ $3021_css := resources.Get "assets/css/3021-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $3021_css = $3021_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $3021_css.RelPermalink }}" media='all' />
+      {{ else if eq .Type "services" }}
+        {{ $2949_css := resources.Get "assets/css/2949-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $2949_css = $2949_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $2949_css.RelPermalink }}" media='all' />
+	   {{ else if eq .Type "use-cases" }}
+        {{ $3027_css := resources.Get "assets/css/3027-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $3027_css = $3027_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $3027_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "blog" }}
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
       <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
       {{ else if .IsHome }}
-      <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/590-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
 
-      <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' />
+        {{ $590_css := resources.Get "assets/css/590-layout.css" | resources.PostCSS }}
+        {{ if hugo.IsProduction }}
+          {{ $590_css = $590_css | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+
+        <link rel="stylesheet" href="{{ $590_css.RelPermalink }}" media='all' />
+
+        <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' />
 
 
       {{ else if eq .Params.slug "contact-us" }}
@@ -107,14 +154,7 @@
           {{ $css = $css | minify | fingerprint | resources.PostProcess }}
         {{ end }}
 
-        <link
-          rel="stylesheet"
-          href="{{ $css.RelPermalink }}"
-          {{ if hugo.IsProduction -}}
-            integrity="{{ $css.Data.Integrity }}"
-          {{- end }}
-          media='all'
-        />
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
 
       {{ else if .IsHome }}
         {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
@@ -122,14 +162,7 @@
           {{ $css = $css | minify | fingerprint | resources.PostProcess }}
         {{ end }}
 
-        <link
-          rel="stylesheet"
-          href="{{ $css.RelPermalink }}"
-          {{ if hugo.IsProduction -}}
-            integrity="{{ $css.Data.Integrity }}"
-          {{- end }}
-          media='all'
-        />
+        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "clients" }}
 
       {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
