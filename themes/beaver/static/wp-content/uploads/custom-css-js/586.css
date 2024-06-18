@@ -4,8 +4,8 @@ Saved: Nov 25 2022 | 22:27:19 */
 @charset "UTF-8";
 /*
 *	Services Menu Properties
-*	Please change the variable value below to update 
-*	icon and description on the Services menu	
+*	Please change the variable value below to update
+*	icon and description on the Services menu
 */
 /* General */
 body:not(.fl-builder-edit) a, body:not(.fl-builder-edit) .fl-button, body:not(.fl-builder-edit) .pp-button, body:not(.fl-builder-edit) button, body:not(.fl-builder-edit) input[type="submit"] {
@@ -575,7 +575,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   background-color: #1A8CFF;
   color: #FFF;
   border-radius: 25px;
-  font-family: "Archivo" !important;
+  font-family: "Roboto", sans-serif !important;
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
