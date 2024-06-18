@@ -181,7 +181,7 @@
       {{ $style := resources.Get "/assets/css/style.css" | minify | fingerprint }}
       <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style.Permalink }}" media='all' />
 
-      {{ if not (or (eq .Params.slug "careers") (eq .Type "blog")) }}
+      {{ if eq .Params.slug "contact-us" }}
         <script type="text/javascript">
           var onloadCallback = function() {
             console.log("grecaptcha is ready!")

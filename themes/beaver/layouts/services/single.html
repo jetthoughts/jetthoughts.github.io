@@ -102,7 +102,7 @@
                                      </div>
                                   </div>
                                </div>
-                     
+
 
                                {{ range .Page.Params.overview.list }}
                                <div class="fl-col-group fl-node-1e2vypldgs9f fl-col-group-custom-width" data-node="1e2vypldgs9f">
@@ -137,7 +137,7 @@
                                </div>
                                {{ end }}
 
-                              
+
                                <div class="fl-col-group fl-node-6c412x0yamvj" data-node="6c412x0yamvj">
                                   <div class="fl-col fl-node-vs40z2uygxtf fl-visible-desktop fl-visible-large fl-visible-medium" data-node="vs40z2uygxtf">
                                      <div class="fl-col-content fl-node-content">
@@ -150,7 +150,7 @@
                                   </div>
                                </div>
                                <div class="fl-col-group fl-node-28twkcfhlqbp fl-col-group-custom-width" data-node="28twkcfhlqbp">
-                                  
+
                                 {{ range .Page.Params.overview.outcome }}
                                 <div class="fl-col fl-node-26tqf1ykpsiv fl-col-small fl-col-small-custom-width" data-node="26tqf1ykpsiv">
                                      <div class="fl-col-content fl-node-content">
@@ -172,7 +172,7 @@
                                   </div>
 
                                   {{ end }}
-                               
+
                                </div>
                             </div>
                          </div>
@@ -237,15 +237,15 @@
                                               <div class="pp-posts-wrapper">
                                                  <div class="pp-content-posts" style="--items-count: 3;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
                                                     <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
-                                                       
-                                                        
+
+
                                                         {{ $pages := where .Site.RegularPages "Type" "clients" }}
                                                         {{ $pages = $pages | first 3 }}
-                                                        
+
                                                         {{ range $pages }}
                                                         {{ partial "clients/grid-single.html" . }}
                                                         {{ end }}
-                                                        
+
                                                     </div>
                                                     <div class="fl-clear"></div>
                                                  </div>
@@ -256,7 +256,7 @@
                                      </div>
                                   </div>
                                </div>
-                              
+
                                {{ partial "page/testimonials.html" . }}
 
                                <div class="fl-col-group fl-node-x4hl5foues6i fl-col-group-custom-width" data-node="x4hl5foues6i">
@@ -264,9 +264,6 @@
                                      <div class="fl-col-content fl-node-content">
                                         <div class="fl-module fl-module-rich-text fl-node-rujwd9mzxche" data-node="rujwd9mzxche">
                                            <div class="fl-module-content fl-node-content">
-                                              <div class="fl-rich-text">
-                                                 <p>CONTACT US</p>
-                                              </div>
                                            </div>
                                         </div>
                                         <div class="fl-module fl-module-heading fl-node-fa7hjib92cpv" data-node="fa7hjib92cpv">
@@ -288,136 +285,10 @@
                                               <div class="pp-spacer-module"></div>
                                            </div>
                                         </div>
-                                        <div class="fl-col-group fl-node-d96zqbnxltuj fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="d96zqbnxltuj">
-                                           <div class="fl-col fl-node-pdak97nlsr0m fl-col-small fl-col-small-custom-width" data-node="pdak97nlsr0m">
-                                              <div class="fl-col-content fl-node-content">
-                                                 <div class="fl-module fl-module-pp-infolist fl-node-9bd56tarons2 jt-contact-list" data-node="9bd56tarons2">
-                                                    <div class="fl-module-content fl-node-content">
-                                                       <div class="pp-infolist-wrap">
-                                                          <div class="pp-infolist layout-1">
-                                                             <ul class="pp-list-items">
-                                                                <li class="pp-list-item pp-list-item-0">
-                                                                   <div class="pp-list-item-content">
-                                                                      <div class="pp-icon-wrapper animated none">
-                                                                         <div class="pp-infolist-icon">
-                                                                            <div class="pp-infolist-icon-inner">
-                                                                               <img decoding="async" src="{{ absURL "wp-content/uploads/2022/10/tick-circle-white.svg" }}" alt="" role="presentation" />
-                                                                            </div>
-                                                                         </div>
-                                                                      </div>
-                                                                      <div class="pp-heading-wrapper">
-                                                                         <div class="pp-infolist-title">
-                                                                            <p class="pp-infolist-title-text">13+ Years of Industry Experience</p>
-                                                                         </div>
-                                                                         <div class="pp-infolist-description">
-                                                                         </div>
-                                                                      </div>
-                                                                   </div>
-                                                                   <div class="pp-list-connector"></div>
-                                                                </li>
-                                                                <li class="pp-list-item pp-list-item-1">
-                                                                   <div class="pp-list-item-content">
-                                                                      <div class="pp-icon-wrapper animated none">
-                                                                         <div class="pp-infolist-icon">
-                                                                            <div class="pp-infolist-icon-inner">
-                                                                               <img decoding="async" src="{{ absURL "wp-content/uploads/2022/10/tick-circle-white.svg" }}" alt="" role="presentation" />
-                                                                            </div>
-                                                                         </div>
-                                                                      </div>
-                                                                      <div class="pp-heading-wrapper">
-                                                                         <div class="pp-infolist-title">
-                                                                            <p class="pp-infolist-title-text">2 Years is Our Shortest Client Relationship</p>
-                                                                         </div>
-                                                                         <div class="pp-infolist-description">
-                                                                         </div>
-                                                                      </div>
-                                                                   </div>
-                                                                   <div class="pp-list-connector"></div>
-                                                                </li>
-                                                                <li class="pp-list-item pp-list-item-2">
-                                                                   <div class="pp-list-item-content">
-                                                                      <div class="pp-icon-wrapper animated none">
-                                                                         <div class="pp-infolist-icon">
-                                                                            <div class="pp-infolist-icon-inner">
-                                                                               <img decoding="async" src="{{ absURL "wp-content/uploads/2022/10/tick-circle-white.svg" }}" alt="" role="presentation" />
-                                                                            </div>
-                                                                         </div>
-                                                                      </div>
-                                                                      <div class="pp-heading-wrapper">
-                                                                         <div class="pp-infolist-title">
-                                                                            <p class="pp-infolist-title-text">Proprietary Talent Network</p>
-                                                                         </div>
-                                                                         <div class="pp-infolist-description">
-                                                                         </div>
-                                                                      </div>
-                                                                   </div>
-                                                                   <div class="pp-list-connector"></div>
-                                                                </li>
-                                                                <li class="pp-list-item pp-list-item-3">
-                                                                   <div class="pp-list-item-content">
-                                                                      <div class="pp-icon-wrapper animated none">
-                                                                         <div class="pp-infolist-icon">
-                                                                            <div class="pp-infolist-icon-inner">
-                                                                               <img decoding="async" src="{{ absURL "wp-content/uploads/2022/10/tick-circle-white.svg" }}" alt="" role="presentation" />
-                                                                            </div>
-                                                                         </div>
-                                                                      </div>
-                                                                      <div class="pp-heading-wrapper">
-                                                                         <div class="pp-infolist-title">
-                                                                            <p class="pp-infolist-title-text">Competitive Cost Structure</p>
-                                                                         </div>
-                                                                         <div class="pp-infolist-description">
-                                                                         </div>
-                                                                      </div>
-                                                                   </div>
-                                                                   <div class="pp-list-connector"></div>
-                                                                </li>
-                                                                <li class="pp-list-item pp-list-item-4">
-                                                                   <div class="pp-list-item-content">
-                                                                      <div class="pp-icon-wrapper animated none">
-                                                                         <div class="pp-infolist-icon">
-                                                                            <div class="pp-infolist-icon-inner">
-                                                                               <img decoding="async" src="{{ absURL "wp-content/uploads/2022/10/tick-circle-white.svg" }}" alt="" role="presentation" />
-                                                                            </div>
-                                                                         </div>
-                                                                      </div>
-                                                                      <div class="pp-heading-wrapper">
-                                                                         <div class="pp-infolist-title">
-                                                                            <p class="pp-infolist-title-text">Reliable Development Systems</p>
-                                                                         </div>
-                                                                         <div class="pp-infolist-description">
-                                                                         </div>
-                                                                      </div>
-                                                                   </div>
-                                                                   <div class="pp-list-connector"></div>
-                                                                </li>
-                                                             </ul>
-                                                          </div>
-                                                       </div>
-                                                    </div>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                           <div class="fl-col fl-node-no1p3qm2vyd7 fl-col-small-custom-width" data-node="no1p3qm2vyd7">
-                                              <div class="fl-col-content fl-node-content">
-                                                 <div class="fl-module fl-module-pp-gravity-form fl-node-btz2rn93xyu8 contact-page cta-contact" data-node="btz2rn93xyu8">
-                                                    <div class="fl-module-content fl-node-content">
-                                                       <div class="pp-gf-content">
-                                                          <div class="pp-gf-inner">
-                                                             <script type="text/javascript"></script>
-                                                             <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_2' >
-                                                                <div id='gf_2' class='gform_anchor' tabindex='-1'></div>
-                                                                <div class='gform_heading'>
-                                                                   <p class='gform_required_legend'>&quot;<span class="gfield_required gfield_required_asterisk">*</span>&quot; indicates required fields</p>
-                                                                </div>
-                                                                {{ partial "page/contact-form.html" . }}
-                                                             </div>
-                                                          </div>
-                                                       </div>
-                                                    </div>
-                                                 </div>
-                                              </div>
-                                           </div>
+                                        <div class="fl-button-wrap-center fl-button-width-auto fl-button-center">
+                                          <a href="/contact-us/" target="_self" class="fl-button">
+                                            <span class="fl-button-text">Contact Us</span>
+                                          </a>
                                         </div>
                                      </div>
                                   </div>
