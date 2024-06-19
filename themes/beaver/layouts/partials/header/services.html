@@ -1,0 +1,8 @@
+{{ $737_css := resources.Get "assets/css/737-layout.css" | resources.PostCSS }}
+{{ if hugo.IsProduction }}
+  {{ $737_css = $737_css | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+
+<link rel="stylesheet" href="{{ $737_css.RelPermalink }}" media='all' />
+
+

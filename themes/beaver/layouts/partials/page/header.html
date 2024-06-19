@@ -126,20 +126,10 @@
 
         <link rel="stylesheet" href="{{ $3027_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "blog" }}
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
+        <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
+        <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
       {{ else if .IsHome }}
-
-        {{ $590_css := resources.Get "assets/css/590-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $590_css = $590_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $590_css.RelPermalink }}" media='all' />
-
-        <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' />
-
-
+        {{ partial "header/homepage.html" . }}
       {{ else if eq .Params.slug "contact-us" }}
       <link rel='stylesheet' id='fl-builder-layout-706-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/706-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
       {{ else if eq .Params.slug "about-us" }}
@@ -147,7 +137,7 @@
       {{ else }}
       <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
       {{ end }}
-      <link rel='stylesheet' id='uaf_client_css-css' href='{{ absURL "wp-content/uploads/useanyfont/uaf.css?ver=1704464349" }}' media='all' />
+
       {{ if eq .Params.slug "careers" }}
         {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
         {{ if hugo.IsProduction }}
@@ -156,13 +146,6 @@
 
         <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
 
-      {{ else if .IsHome }}
-        {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "clients" }}
 
       {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
@@ -179,16 +162,23 @@
      {{ else if eq .Type "clients" }}
 	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/fb2624e43f3c4277448abe268cde571e-layout-bundle.css" }}' media='all' />
      {{ else }}
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/bf72bba397177a0376baed325bffdc75-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
+       {{ if not .IsHome }}
+         <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/bf72bba397177a0376baed325bffdc75-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
+       {{ end }}
+     {{ end }}
+
+      {{ if not .IsHome }}
+        <link rel='stylesheet' id='jquery-magnificpopup-css' href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.7.4.4" }}' media='all' />
+        <link rel='stylesheet' id='base-4-css' href='{{ absURL "wp-content/themes/bb-theme/css/base-4.min.css?ver=1.7.14" }}' media='all' />
+        <link rel='stylesheet' id='fl-automator-skin-css' href='/wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14' media='all' />
+        <link rel='stylesheet' id='pp-animate-css' href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/animate.min.css?ver=3.5.1" }}' media='all' />
+        {{ $style_586 := resources.Get "/assets/css/586.css" | minify | fingerprint }}
+        <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style_586.Permalink }}" media='all' />
+        {{ $style := resources.Get "/assets/css/style.css" | minify | fingerprint }}
+        <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style.Permalink }}" media='all' />
       {{ end }}
-      <link rel='stylesheet' id='jquery-magnificpopup-css' href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.7.4.4" }}' media='all' />
-      <link rel='stylesheet' id='base-4-css' href='{{ absURL "wp-content/themes/bb-theme/css/base-4.min.css?ver=1.7.14" }}' media='all' />
-      <link rel='stylesheet' id='fl-automator-skin-css' href='/wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14' media='all' />
-      <link rel='stylesheet' id='pp-animate-css' href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/animate.min.css?ver=3.5.1" }}' media='all' />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-      {{ $style_586 := resources.Get "/assets/css/586.css" | minify | fingerprint }}
-      <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style_586.Permalink }}" media='all' />
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" }}" sizes="32x32" />
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-192x192.png" }}" sizes="192x192" />
       <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
@@ -201,8 +191,6 @@
          })(window,document,'script','dataLayer','G-T1N27FC30F');
       </script>
       <!-- End Google Tag Manager -->
-      {{ $style := resources.Get "/assets/css/style.css" | minify | fingerprint }}
-      <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style.Permalink }}" media='all' />
 
       {{ if eq .Params.slug "contact-us" }}
         <script type="text/javascript">

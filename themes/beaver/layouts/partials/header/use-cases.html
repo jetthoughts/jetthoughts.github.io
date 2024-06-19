@@ -1,0 +1,7 @@
+{{ $3021_css := resources.Get "assets/css/3021-layout.css" | resources.PostCSS }}
+{{ if hugo.IsProduction }}
+  {{ $3021_css = $3021_css | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+
+<link rel="stylesheet" href="{{ $3021_css.RelPermalink }}" media='all' />
+

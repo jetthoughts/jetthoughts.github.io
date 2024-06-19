@@ -12,6 +12,9 @@ disableKinds = ["taxonomy", "term"]
 [build]
   writeStats = true
 
+[build.processing.css]
+  bundle = true
+
 [params]
 
   email="info@jetthoughts.com"
