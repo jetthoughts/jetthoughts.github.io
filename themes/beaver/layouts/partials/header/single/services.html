@@ -1,0 +1,7 @@
+{{ $2949_css := resources.Get "assets/css/2949-layout.css" | resources.PostCSS }}
+{{ if hugo.IsProduction }}
+{{ $2949_css = $2949_css | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+
+<link rel="stylesheet" href="{{ $2949_css.RelPermalink }}" media='all' />
+

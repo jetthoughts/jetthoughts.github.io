@@ -82,105 +82,54 @@
 
         <link rel="stylesheet" href="{{ $3114_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "careers" }}
-        {{ $3086_css := resources.Get "assets/css/3086-layout2.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3086_css = $3086_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $3086_css.RelPermalink }}" media='all' />
+        {{ partial "header/careers.html" . }}
 
       {{ else if eq .Params.slug "clients" }}
-        {{ $3082_css := resources.Get "assets/css/3082-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3082_css = $3082_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/clients.html" . }}
 
-        <link rel="stylesheet" href="{{ $3082_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "services" }}
-        {{ $737_css := resources.Get "assets/css/737-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $737_css = $737_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $737_css.RelPermalink }}" media='all' />
+        {{ partial "header/services.html" . }}
 
       {{ else if eq .Params.slug "use-cases" }}
-        {{ $3021_css := resources.Get "assets/css/3021-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3021_css = $3021_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/use-cases.html" . }}
 
-        <link rel="stylesheet" href="{{ $3021_css.RelPermalink }}" media='all' />
       {{ else if eq .Type "services" }}
-        {{ $2949_css := resources.Get "assets/css/2949-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $2949_css = $2949_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/single/services.html" . }}
 
-        <link rel="stylesheet" href="{{ $2949_css.RelPermalink }}" media='all' />
-	   {{ else if eq .Type "use-cases" }}
-        {{ $3027_css := resources.Get "assets/css/3027-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3027_css = $3027_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+	    {{ else if eq .Type "use-cases" }}
+        {{ partial "header/single/use-cases.html" . }}
 
-        <link rel="stylesheet" href="{{ $3027_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "blog" }}
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
+        {{ partial "header/blog.html" . }}
+
       {{ else if .IsHome }}
-
-        {{ $590_css := resources.Get "assets/css/590-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $590_css = $590_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $590_css.RelPermalink }}" media='all' />
-
-        <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' />
-
+        {{ partial "header/homepage.html" . }}
 
       {{ else if eq .Params.slug "contact-us" }}
-      <link rel='stylesheet' id='fl-builder-layout-706-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/706-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        {{ partial "header/contact-us.html" . }}
+
       {{ else if eq .Params.slug "about-us" }}
-      <link rel='stylesheet' id='fl-builder-layout-701-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        {{ partial "header/about-us.html" . }}
       {{ else }}
-      <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
       {{ end }}
-      <link rel='stylesheet' id='uaf_client_css-css' href='{{ absURL "wp-content/uploads/useanyfont/uaf.css?ver=1704464349" }}' media='all' />
+
       {{ if eq .Params.slug "careers" }}
-        {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/single/careers.html" . }}
 
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
-
-      {{ else if .IsHome }}
-        {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "clients" }}
+        {{ partial "header/single/clients.html" . }}
 
-      {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $style_owl_carousel.Permalink }}" media='all' />
+      {{ else if eq .Type "careers" }}
+        {{ partial "header/single/careers.html" . }}
 
-      {{ $style_owl_theme := resources.Get "/assets/css/owl.theme.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $style_owl_theme.Permalink }}" media='all' />
+      {{ else if eq .Type "clients" }}
+        {{ partial "header/single/clients.html" . }}
 
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css" }}' media='all' />
-
-
-	  {{ else if eq .Type "careers" }}
-	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/e966db44b09892b8d7d492247c67e86c-layout-bundle.css" }}' media='all' />
-     {{ else if eq .Type "clients" }}
-	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/fb2624e43f3c4277448abe268cde571e-layout-bundle.css" }}' media='all' />
-     {{ else }}
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/bf72bba397177a0376baed325bffdc75-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
+      {{ else }}
+        <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/bf72bba397177a0376baed325bffdc75-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
       {{ end }}
+
       <link rel='stylesheet' id='jquery-magnificpopup-css' href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.7.4.4" }}' media='all' />
       <link rel='stylesheet' id='base-4-css' href='{{ absURL "wp-content/themes/bb-theme/css/base-4.min.css?ver=1.7.14" }}' media='all' />
       <link rel='stylesheet' id='fl-automator-skin-css' href='/wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14' media='all' />
