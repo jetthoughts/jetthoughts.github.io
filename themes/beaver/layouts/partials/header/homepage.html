@@ -1,7 +1,4 @@
-<!-- <link rel="stylesheet" href="{{ $590_css.RelPermalink }}" media='all' /> -->
-<!-- <link rel="stylesheet" href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.bxslider.css?ver=2.7.4.4" }}' /> -->
-
-{{- $CSS := slice (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/590-layout.css") | resources.Concat "assets/css/main.css" | minify | fingerprint | resources.PostProcess}}
+{{- $CSS := slice (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/590-layout.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/jquery.magnificpopup.css")  (resources.Get "assets/css/skin-65eda28877e04.css") (resources.Get "assets/css/animate.min.css") (resources.Get "/assets/css/style.css") (resources.Get "/assets/css/586.css") | resources.Concat "assets/css/main.css" | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media="all">
 

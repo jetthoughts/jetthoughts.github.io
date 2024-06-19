@@ -5,4 +5,12 @@
 
 <link rel="stylesheet" href="{{ $3086_css.RelPermalink }}" media='all' />
 
+
+{{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
+{{ if hugo.IsProduction }}
+  {{ $css = $css | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
+
 <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/e966db44b09892b8d7d492247c67e86c-layout-bundle.css" }}' media='all' />
