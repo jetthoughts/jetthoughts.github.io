@@ -57,12 +57,7 @@
 
         <link rel="stylesheet" href="{{ $3114_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "clients" }}
-        {{ $3082_css := resources.Get "assets/css/3082-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3082_css = $3082_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $3082_css.RelPermalink }}" media='all' />
+        {{ partial "header/clients.html" . }}
       {{ else if eq .Params.slug "services" }}
         {{ $737_css := resources.Get "assets/css/737-layout.css" | resources.PostCSS }}
         {{ if hugo.IsProduction }}
@@ -102,26 +97,15 @@
       {{ else if (strings.HasPrefix $url "/blog/") }}
         {{ partial "header/blog.html" . }}
       {{ else }}
-      <!-- <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' /> -->
+      <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
       {{ end }}
 
       {{ if eq .Params.slug "careers" }}
         {{ partial "header/careers.html" . }}
-      {{ else if eq .Params.slug "clients" }}
-
-      {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $style_owl_carousel.Permalink }}" media='all' />
-
-      {{ $style_owl_theme := resources.Get "/assets/css/owl.theme.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $style_owl_theme.Permalink }}" media='all' />
-
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css" }}' media='all' />
-
-
 	  {{ else if eq .Type "careers" }}
-	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/e966db44b09892b8d7d492247c67e86c-layout-bundle.css" }}' media='all' />
+        {{ partial "header/single/careers.html" . }}
      {{ else if eq .Type "clients" }}
-	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/fb2624e43f3c4277448abe268cde571e-layout-bundle.css" }}' media='all' />
+        {{ partial "header/single/clients.html" . }}
      {{ else }}
        {{ if not .IsHome }}
          <!-- <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/bf72bba397177a0376baed325bffdc75-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' /> -->
