@@ -59,13 +59,7 @@
       {{ else if eq .Params.slug "clients" }}
         {{ partial "header/clients.html" . }}
       {{ else if eq .Params.slug "services" }}
-        {{ $737_css := resources.Get "assets/css/737-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $737_css = $737_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $737_css.RelPermalink }}" media='all' />
-
+        {{ partial "header/services.html" . }}
       {{ else if eq .Params.slug "use-cases" }}
         {{ $3021_css := resources.Get "assets/css/3021-layout.css" | resources.PostCSS }}
         {{ if hugo.IsProduction }}
@@ -74,12 +68,13 @@
 
         <link rel="stylesheet" href="{{ $3021_css.RelPermalink }}" media='all' />
       {{ else if eq .Type "services" }}
-        {{ $2949_css := resources.Get "assets/css/2949-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $2949_css = $2949_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/single/services.html" . }}
+        <!-- {{ $2949_css := resources.Get "assets/css/2949-layout.css" | resources.PostCSS }} -->
+        <!-- {{ if hugo.IsProduction }} -->
+        <!--   {{ $2949_css = $2949_css | minify | fingerprint | resources.PostProcess }} -->
+        <!-- {{ end }} -->
 
-        <link rel="stylesheet" href="{{ $2949_css.RelPermalink }}" media='all' />
+        <!-- <link rel="stylesheet" href="{{ $2949_css.RelPermalink }}" media='all' /> -->
 	   {{ else if eq .Type "use-cases" }}
         {{ $3027_css := resources.Get "assets/css/3027-layout.css" | resources.PostCSS }}
         {{ if hugo.IsProduction }}
@@ -90,10 +85,9 @@
       {{ else if .IsHome }}
         {{ partial "header/homepage.html" . }}
       {{ else if eq .Params.slug "contact-us" }}
-      <link rel='stylesheet' id='fl-builder-layout-706-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/706-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        {{ partial "header/contact-us.html" . }}
       {{ else if eq .Params.slug "about-us" }}
         {{ partial "header/about-us.html" . }}
-
       {{ else if (strings.HasPrefix $url "/blog/") }}
         {{ partial "header/blog.html" . }}
       {{ else }}
