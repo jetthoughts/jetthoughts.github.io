@@ -103,27 +103,27 @@
         gtag('config', 'G-T1N27FC30F');
       </script>
 
-      <!-- {{ if eq .Params.slug "contact-us" }} -->
-      <!--   <script type="text/javascript"> -->
-      <!--     var onloadCallback = function() { -->
-      <!--       console.log("grecaptcha is ready!") -->
-      <!--       grecaptcha.render('html_element', { -->
-      <!--         'sitekey' : '6Lem-e4pAAAAAJM_6wjku-RWSfFY9YoccTTTeXCf', -->
-      <!--         'callback' : correctCaptcha -->
-      <!--       }); -->
-      <!--     }; -->
+      {{ if eq .Params.slug "contact-us" }}
+        <script type="text/javascript">
+          var onloadCallback = function() {
+            console.log("grecaptcha is ready!")
+            grecaptcha.render('html_element', {
+              'sitekey' : '6Lem-e4pAAAAAJM_6wjku-RWSfFY9YoccTTTeXCf',
+              'callback' : correctCaptcha
+            });
+          };
 
-      <!--     var correctCaptcha = function(response) { -->
-      <!--       if (response.length == 0) { -->
-      <!--         document.getElementById('gform_submit_button_5').disabled = true -->
-      <!--         return false; -->
-      <!--       } else { -->
-      <!--         document.getElementById('gform_submit_button_5').disabled = false -->
-      <!--         return true; -->
-      <!--       } -->
-      <!--     }; -->
-      <!--   </script> -->
-      <!-- {{ end }} -->
+          var correctCaptcha = function(response) {
+            if (response.length == 0) {
+              document.getElementById('gform_submit_button_5').disabled = true
+              return false;
+            } else {
+              document.getElementById('gform_submit_button_5').disabled = false
+              return true;
+            }
+          };
+        </script>
+      {{ end }}
 
    </head>
    <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
