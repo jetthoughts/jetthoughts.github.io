@@ -42,6 +42,15 @@
       <!-- /Rank Math WordPress SEO plugin -->
       <link rel='dns-prefetch' href='{{ absURL "" }}' />
 
+      {{ if .IsHome }}
+        <link rel="prefetch" href="/services/">
+        <link rel="prefetch" href="/use-cases/">
+        <link rel="prefetch" href="/about-us/">
+        <link rel="prefetch" href="/clients/">
+        <link rel="prefetch" href="/careers/">
+        <link rel="prefetch" href="/contact-us/">
+      {{ end }}
+
       {{ if eq .Params.slug "privacy-policy" }}
         {{ partial "header/privacy-policy.html" . }}
 
