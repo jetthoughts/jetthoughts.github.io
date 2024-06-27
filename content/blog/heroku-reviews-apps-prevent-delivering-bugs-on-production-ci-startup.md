@@ -3,7 +3,7 @@ dev_to_id: 1877581
 title: "Heroku Reviews Apps prevent delivering bugs on production"
 description: "Are you afraid to deploy a master branch to the production? Do you still mess with staging..."
 created_at: "2024-06-05T06:16:42Z"
-edited_at: "2024-06-14T07:59:41Z"
+edited_at: "2024-06-14T11:01:41Z"
 draft: false
 tags: ["ci", "startup", "github", "development"]
 canonical_url: "https://jetthoughts.com/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/"

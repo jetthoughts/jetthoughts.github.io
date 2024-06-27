@@ -3,7 +3,7 @@ dev_to_id: 1677293
 title: "Custom ordering without custom SQL with Ruby on Rails 7"
 description: "The problem It's a common case for Rails applications to have enum fields on a model like:    class..."
 created_at: "2023-11-24T11:37:01Z"
-edited_at: "2024-06-14T08:01:35Z"
+edited_at: "2024-06-14T11:03:47Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "sql"]
 canonical_url: "https://jetthoughts.com/blog/custom-ordering-without-sql-with-ruby-on-rails-7/"

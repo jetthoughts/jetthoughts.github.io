@@ -3,7 +3,7 @@ dev_to_id: 1222970
 title: "How to create triangles in TailwindCSS"
 description: "In this post, we are going to see four examples to draw a triangle in TailwindCSS using borders.    ..."
 created_at: "2022-10-18T10:46:16Z"
-edited_at: "2024-06-14T08:01:50Z"
+edited_at: "2024-06-14T11:04:04Z"
 draft: false
 tags: ["html", "css", "webdev", "tailwindcss"]
 canonical_url: "https://jetthoughts.com/blog/how-create-triangles-in-tailwindcss-html-css/"

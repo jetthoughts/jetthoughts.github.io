@@ -3,7 +3,7 @@ dev_to_id: 1783325
 title: "Setting Up Docker for Ruby on Rails 7"
 description: "Introduction:   Docker is essential for modern software development, ensuring a consistent..."
 created_at: "2024-03-07T13:14:02Z"
-edited_at: "2024-06-14T08:01:25Z"
+edited_at: "2024-06-14T11:03:37Z"
 draft: false
 tags: ["beginners", "ruby", "docker", "postgres"]
 canonical_url: "https://jetthoughts.com/blog/setting-up-docker-for-ruby-on-rails-7-beginners/"

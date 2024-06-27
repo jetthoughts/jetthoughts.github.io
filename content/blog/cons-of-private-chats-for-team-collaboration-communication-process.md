@@ -3,7 +3,7 @@ dev_to_id: 1853611
 title: "Cons of the private chats for team collaboration"
 description: "Communication between team members is a very important part of the software development process...."
 created_at: "2024-05-15T07:34:55Z"
-edited_at: "2024-06-14T08:00:15Z"
+edited_at: "2024-06-14T11:02:24Z"
 draft: false
 tags: ["communication", "process", "remote", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/cons-of-private-chats-for-team-collaboration-communication-process/"

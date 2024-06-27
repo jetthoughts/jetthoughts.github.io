@@ -3,7 +3,7 @@ dev_to_id: 1853472
 title: "Services and tools to automatize development for the remote teams"
 description: "We save a lot of time on development and create better products due to well-formed..."
 created_at: "2024-05-15T06:02:44Z"
-edited_at: "2024-06-14T08:00:38Z"
+edited_at: "2024-06-14T11:02:47Z"
 draft: false
 tags: ["workflow", "automation", "agile", "development"]
 canonical_url: "https://jetthoughts.com/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/"

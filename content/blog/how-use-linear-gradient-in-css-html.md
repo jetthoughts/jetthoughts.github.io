@@ -3,7 +3,7 @@ dev_to_id: 1125937
 title: "How to use Linear-Gradient in CSS"
 description: "The CSS linear-gradient function creates an image that consists of a progressive transition between..."
 created_at: "2022-06-27T21:31:18Z"
-edited_at: "2024-06-14T08:02:11Z"
+edited_at: "2024-06-14T11:04:25Z"
 draft: false
 tags: ["html", "css", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-use-linear-gradient-in-css-html/"

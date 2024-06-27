@@ -3,7 +3,7 @@ dev_to_id: 1852738
 title: "Rails virtual attributes use cases"
 description: "You want to keep some data but do not want to create the new column in the database? Your data should..."
 created_at: "2024-05-14T13:57:52Z"
-edited_at: "2024-06-14T08:00:53Z"
+edited_at: "2024-06-27T15:05:33Z"
 draft: false
 tags: ["rails", "ruby", "tutorial", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/rails-virtual-attributes-use-cases-ruby/"
@@ -59,7 +59,7 @@ Supporting the multiple types for the same variable could lead to a code smell. 
 ```
 ### Decorator for storing the composite values
 
-One of the most common usages of virtual attributes is decorating several model attributes in one parameter and splitting it back as it was originally used in the database. For example, the virtual attribute we use in the code sample below —*** author_full_name*** is stored as 2 separate columns in the DB table — ***author_first_name*** and ***author_last_name, ***but here and now — we use these 2 columns together in ***author_full_name**.*
+One of the most common usages of virtual attributes is decorating several model attributes in one parameter and splitting it back as it was originally used in the database. For example, the virtual attribute we use in the code sample below — ***author_full_name*** is stored as 2 separate columns in the DB table — ***author_first_name*** and ***author_last_name***, but here and now — we use these 2 columns together in ***author_full_name***.
 ```ruby
     class Post < ActiveRecord::Base
       def author_full_name
@@ -175,5 +175,5 @@ The virtual attribute is a good helper when you need a quick and easy solution c
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 
-**Roman Tershak ***is a Software Engineer at [**JetThoughts](https://www.jetthoughts.com)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[*LinkedIn](https://www.linkedin.com/in/roman-tershak-0b3958103/) *or [GitHub](https://github.com/rtershak).*
+**Roman Tershak** is a Software Engineer at **[JetThoughts](https://www.jetthoughts.com)**. Follow him on[ ](https://twitter.com/ChrisKeathley)[LinkedIn](https://www.linkedin.com/in/roman-tershak-0b3958103/) *or [GitHub](https://github.com/rtershak).*
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

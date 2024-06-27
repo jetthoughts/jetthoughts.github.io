@@ -3,7 +3,7 @@ dev_to_id: 1108673
 title: "Preview UI changes with Ruby on Rails variants"
 description: "When implementing new design for a live application we usually don’t want our users to see an..."
 created_at: "2022-06-08T20:15:39Z"
-edited_at: "2024-06-14T08:02:15Z"
+edited_at: "2024-06-14T11:04:31Z"
 draft: false
 tags: ["rails", "ruby", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/preview-ui-changes-with-ruby-on-rails-variants/"

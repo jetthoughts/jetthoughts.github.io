@@ -3,7 +3,7 @@ dev_to_id: 399009
 title: "How to use a Transaction Script(aka Service Objects) in Ruby on Rails. Simple example"
 description: "The logic of small applications can be present as a series of transactions. Using the Transaction..."
 created_at: "2020-07-15T15:47:10Z"
-edited_at: "2024-06-14T08:02:49Z"
+edited_at: "2024-06-27T15:51:35Z"
 draft: false
 tags: ["ruby", "rails", "python", "javascript"]
 canonical_url: "https://jetthoughts.com/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/"
@@ -151,6 +151,3 @@ As you can see, our controller has now looked cleaner. 'toggle like' functionali
 - The code could be reused without duplication
 - Easier to test, a test environment reproduction is not difficult
 - The application structure becomes cleaner and easier to maintain
-
-
-Original post: https://jtway.co/how-to-use-a-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example-161b7e228942
