@@ -1,16 +1,16 @@
-{{ $3086_css := resources.Get "assets/css/3086-layout2.css" | resources.PostCSS }}
-{{ if hugo.IsProduction }}
-  {{ $3086_css = $3086_css | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+{{ partial "header/critical/careers.html" . }}
 
-<link rel="stylesheet" href="{{ $3086_css.RelPermalink }}" media='all' />
+{{- $CSS := slice (resources.Get "assets/css/3086-layout2.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/jquery.magnificpopup.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/careers.css" | minify | fingerprint | resources.PostProcess}}
 
+<script>
+  function loadCSS(url) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+  }
 
-{{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
-{{ if hugo.IsProduction }}
-  {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-{{ end }}
-
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
-
-<link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/e966db44b09892b8d7d492247c67e86c-layout-bundle.css" }}' media='all' />
+  window.onload = function() {
+    loadCSS("{{ $CSS.RelPermalink }}");
+  };
+</script>

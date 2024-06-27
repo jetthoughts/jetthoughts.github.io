@@ -43,115 +43,49 @@
       <link rel='dns-prefetch' href='{{ absURL "" }}' />
 
       {{ if eq .Params.slug "privacy-policy" }}
-        {{ $3059_css := resources.Get "assets/css/3059-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3059_css = $3059_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/privacy-policy.html" . }}
 
-        <link rel="stylesheet" href="{{ $3059_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "free-consultation" }}
-        {{ $3114_css := resources.Get "assets/css/3114-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3114_css = $3114_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $3114_css.RelPermalink }}" media='all' />
-      {{ else if eq .Params.slug "careers" }}
-        {{ $3086_css := resources.Get "assets/css/3086-layout2.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3086_css = $3086_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $3086_css.RelPermalink }}" media='all' />
+        {{ partial "header/free-consultation.html" . }}
 
       {{ else if eq .Params.slug "clients" }}
-        {{ $3082_css := resources.Get "assets/css/3082-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3082_css = $3082_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/clients.html" . }}
 
-        <link rel="stylesheet" href="{{ $3082_css.RelPermalink }}" media='all' />
       {{ else if eq .Params.slug "services" }}
-        {{ $737_css := resources.Get "assets/css/737-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $737_css = $737_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
-
-        <link rel="stylesheet" href="{{ $737_css.RelPermalink }}" media='all' />
+        {{ partial "header/services.html" . }}
 
       {{ else if eq .Params.slug "use-cases" }}
-        {{ $3021_css := resources.Get "assets/css/3021-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3021_css = $3021_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/use-cases.html" . }}
 
-        <link rel="stylesheet" href="{{ $3021_css.RelPermalink }}" media='all' />
       {{ else if eq .Type "services" }}
-        {{ $2949_css := resources.Get "assets/css/2949-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $2949_css = $2949_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/single/services.html" . }}
 
-        <link rel="stylesheet" href="{{ $2949_css.RelPermalink }}" media='all' />
-	   {{ else if eq .Type "use-cases" }}
-        {{ $3027_css := resources.Get "assets/css/3027-layout.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $3027_css = $3027_css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+      {{ else if eq .Type "use-cases" }}
+        {{ partial "header/single/use-cases.html" . }}
 
-        <link rel="stylesheet" href="{{ $3027_css.RelPermalink }}" media='all' />
-      {{ else if eq .Params.slug "blog" }}
-        <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/1ae004af287c504b7b21124ea00c34c7-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
-        <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14" }}' media='all' />
       {{ else if .IsHome }}
         {{ partial "header/homepage.html" . }}
+
       {{ else if eq .Params.slug "contact-us" }}
-      <link rel='stylesheet' id='fl-builder-layout-706-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/706-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        {{ partial "header/contact-us.html" . }}
+
       {{ else if eq .Params.slug "about-us" }}
-      <link rel='stylesheet' id='fl-builder-layout-701-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
-      {{ else }}
-      <link rel='stylesheet' id='fl-builder-layout-3114-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/3114-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+        {{ partial "header/about-us.html" . }}
+
+      {{ else if (strings.HasPrefix $url "/blog/") }}
+        {{ partial "header/blog.html" . }}
       {{ end }}
 
       {{ if eq .Params.slug "careers" }}
-        {{ $css := resources.Get "assets/css/homepage.css" | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-          {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-        {{ end }}
+        {{ partial "header/careers.html" . }}
 
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" media='all' />
+      {{ else if eq .Type "careers" }}
+        {{ partial "header/single/careers.html" . }}
 
-      {{ else if eq .Params.slug "clients" }}
-
-      {{ $style_owl_carousel := resources.Get "/assets/css/owl.carousel.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $style_owl_carousel.Permalink }}" media='all' />
-
-      {{ $style_owl_theme := resources.Get "/assets/css/owl.theme.css" | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ $style_owl_theme.Permalink }}" media='all' />
-
-      <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css" }}' media='all' />
-
-
-	  {{ else if eq .Type "careers" }}
-	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/e966db44b09892b8d7d492247c67e86c-layout-bundle.css" }}' media='all' />
-     {{ else if eq .Type "clients" }}
-	  <link rel="stylesheet" href='{{ absURL "wp-content/uploads/bb-plugin/cache/fb2624e43f3c4277448abe268cde571e-layout-bundle.css" }}' media='all' />
-     {{ else }}
-       {{ if not .IsHome }}
-         <link rel='stylesheet' href='{{ absURL "wp-content/uploads/bb-plugin/cache/bf72bba397177a0376baed325bffdc75-layout-bundle.css?ver=2.7.4.4-1.4.9.2" }}' media='all' />
-       {{ end }}
-     {{ end }}
-
-      {{ if not .IsHome }}
-        <link rel='stylesheet' id='jquery-magnificpopup-css' href='{{ absURL "wp-content/plugins/bb-plugin/css/jquery.magnificpopup.min.css?ver=2.7.4.4" }}' media='all' />
-        <link rel='stylesheet' id='base-4-css' href='{{ absURL "wp-content/themes/bb-theme/css/base-4.min.css?ver=1.7.14" }}' media='all' />
-        <link rel='stylesheet' id='fl-automator-skin-css' href='/wp-content/uploads/bb-theme/skin-65eda28877e04.css?ver=1.7.14' media='all' />
-        <link rel='stylesheet' id='pp-animate-css' href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/animate.min.css?ver=3.5.1" }}' media='all' />
-        {{ $style_586 := resources.Get "/assets/css/586.css" | minify | fingerprint }}
-        <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style_586.Permalink }}" media='all' />
-        {{ $style := resources.Get "/assets/css/style.css" | minify | fingerprint }}
-        <link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $style.Permalink }}" media='all' />
+      {{ else if eq .Type "clients" }}
+        {{ partial "header/single/clients.html" . }}
       {{ end }}
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" id="jquery-migrate-js"></script>
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" }}" sizes="32x32" />
@@ -169,34 +103,35 @@
         gtag('config', 'G-T1N27FC30F');
       </script>
 
-      {{ if eq .Params.slug "contact-us" }}
-        <script type="text/javascript">
-          var onloadCallback = function() {
-            console.log("grecaptcha is ready!")
-            grecaptcha.render('html_element', {
-              'sitekey' : '6Lem-e4pAAAAAJM_6wjku-RWSfFY9YoccTTTeXCf',
-              'callback' : correctCaptcha
-            });
-          };
+      <!-- {{ if eq .Params.slug "contact-us" }} -->
+      <!--   <script type="text/javascript"> -->
+      <!--     var onloadCallback = function() { -->
+      <!--       console.log("grecaptcha is ready!") -->
+      <!--       grecaptcha.render('html_element', { -->
+      <!--         'sitekey' : '6Lem-e4pAAAAAJM_6wjku-RWSfFY9YoccTTTeXCf', -->
+      <!--         'callback' : correctCaptcha -->
+      <!--       }); -->
+      <!--     }; -->
 
-          var correctCaptcha = function(response) {
-            if (response.length == 0) {
-              document.getElementById('gform_submit_button_5').disabled = true
-              return false;
-            } else {
-              document.getElementById('gform_submit_button_5').disabled = false
-              return true;
-            }
-          };
-        </script>
-      {{ end }}
+      <!--     var correctCaptcha = function(response) { -->
+      <!--       if (response.length == 0) { -->
+      <!--         document.getElementById('gform_submit_button_5').disabled = true -->
+      <!--         return false; -->
+      <!--       } else { -->
+      <!--         document.getElementById('gform_submit_button_5').disabled = false -->
+      <!--         return true; -->
+      <!--       } -->
+      <!--     }; -->
+      <!--   </script> -->
+      <!-- {{ end }} -->
 
    </head>
    <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-T1N27FC30F"
          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) --><a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
+      <!-- End Google Tag Manager (noscript) -->
+      <a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
       <div class="fl-page">
       <header class="fl-builder-content fl-builder-content-588 fl-builder-global-templates-locked" data-post-id="588" data-type="header" data-sticky="1" data-sticky-on="all" data-sticky-breakpoint="medium" data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
          <div class="fl-row fl-row-full-width fl-row-bg-none fl-node-q9s2ncprogml fl-row-default-height fl-row-align-center" data-node="q9s2ncprogml">

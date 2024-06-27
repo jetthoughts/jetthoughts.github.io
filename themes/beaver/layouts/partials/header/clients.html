@@ -1,7 +1,16 @@
-{{ $3082_css := resources.Get "assets/css/3082-layout.css" | resources.PostCSS }}
-{{ if hugo.IsProduction }}
-  {{ $3082_css = $3082_css | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+{{ partial "header/critical/clients.html" . }}
 
-<link rel="stylesheet" href="{{ $3082_css.RelPermalink }}" media='all' />
+{{- $CSS := slice (resources.Get "assets/css/3082-layout.css") (resources.Get "assets/css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/jquery.magnificpopup.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/clients.css" | minify | fingerprint | resources.PostProcess }}
 
+<script>
+  function loadCSS(url) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+  }
+
+  window.onload = function() {
+    loadCSS("{{ $CSS.RelPermalink }}");
+  };
+</script>

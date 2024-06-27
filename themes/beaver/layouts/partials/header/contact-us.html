@@ -1,2 +1,16 @@
-<link rel='stylesheet' id='fl-builder-layout-706-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/706-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+{{ partial "header/critical/contact-us.html" . }}
 
+{{- $CSS := slice (resources.Get "assets/css/706-layout.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/jquery.magnificpopup.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/contact-us.css" | minify | fingerprint | resources.PostProcess}}
+
+<script>
+  function loadCSS(url) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+  }
+
+  window.onload = function() {
+    loadCSS("{{ $CSS.RelPermalink }}");
+  };
+</script>

@@ -1,2 +1,16 @@
-<link rel='stylesheet' id='fl-builder-layout-701-css' href='{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.css?ver=5c3440c7ff1783ff5c81c69a265b6df6" }}' media='all' />
+{{ partial "header/critical/about-us.html" . }}
 
+{{- $CSS := slice (resources.Get "/assets/css/701-layout.css") (resources.Get "assets/css/skin-65eda28877e04.css") (resources.Get "/assets/css/586.css") (resources.Get "/assets/css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") | resources.Concat "assets/css/about-us.css" | minify | fingerprint | resources.PostProcess}}
+
+<script>
+  function loadCSS(url) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+  }
+
+  window.onload = function() {
+    loadCSS("{{ $CSS.RelPermalink }}");
+  };
+</script>
