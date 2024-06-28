@@ -181,7 +181,12 @@
                                              <div class="pp-has-submenu-container"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="{{ .Name }}: submenu" role="button"></span></span></a></div>
                                              <ul class="sub-menu">
                                                 {{ range .Children }}
-                                                <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}</span></a></li>
+                                                <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
+                                                    <div class="menu-image">
+                                                      {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
+                                                      {{ partial $partialPath . }}
+                                                    </div>
+                                                    <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
                                                 {{ end }}
                                              </ul>
                                           </li>
@@ -220,7 +225,12 @@
                                                    <div class="pp-has-submenu-container"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="{{ .Name }}: submenu" role="button"></span></span></a></div>
                                                    <ul class="sub-menu">
                                                       {{ range .Children }}
-                                                      <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}</span></a></li>
+                                                      <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
+                                                          <div class="menu-image">
+                                                            {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
+                                                            {{ partial $partialPath . }}
+                                                          </div>
+                                                          <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
                                                       {{ end }}
                                                    </ul>
                                                 </li>

@@ -15,12 +15,6 @@ Saved: Aug 28 2023 | 08:18:55 */
                 if ($(x).length > 0) { return true; }
             },
             init: function() {
-				if(SDB.App.exists('.menu.pp-advanced-menu-horizontal')){
-				   $('.sub-menu > .menu-item').each(function(){
-					  $(this).find('a').prepend('<div class="menu-image"></div>');
-					  $(this).find('a').append('<p class="menu-desc"></p>');
-				   });
-				};
 				// Basic Clickable for .hover-box class
 				if(SDB.App.exists('.hover-box')){
 					$(document).on('click', 'body:not(.fl-builder-edit) .hover-box .fl-col-content', function(event) { 
