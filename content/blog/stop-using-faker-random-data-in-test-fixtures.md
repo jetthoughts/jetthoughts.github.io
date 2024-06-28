@@ -1,18 +1,14 @@
 ---
 dev_to_id: 1902786
 title: "Stop using Faker and random data in the test fixtures."
-description: "Stop using Faker and random data in the test fixtures.     Faker/FFaker can seem like the..."
+description: "Faker/FFaker can seem like the perfect solution to generate data for testing.  In theory, Faker..."
 created_at: "2024-06-27T15:47:25Z"
-edited_at: "2024-06-27T15:48:01Z"
+edited_at: "2024-06-28T14:03:59Z"
 draft: false
 tags: []
-canonical_url: "https://dev.to/jetthoughts/stop-using-faker-and-random-data-in-the-test-fixtures-4cg7"
+canonical_url: "https://jetthoughts.com/blog/stop-using-faker-random-data-in-test-fixtures/"
 slug: "stop-using-faker-random-data-in-test-fixtures"
 ---
-
-## Stop using Faker and random data in the test fixtures.
-
-
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ph5ct77dpnm7820jf2wn.png)
 
 
