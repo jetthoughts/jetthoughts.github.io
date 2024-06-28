@@ -5202,8 +5202,8 @@ img.mfp-img {
 }
 
 .fl-node-fw375yhpuo4v .pp-swiper-button svg {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
 }
 
 .fl-node-fw375yhpuo4v .pp-swiper-button {
@@ -7799,6 +7799,20 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
     -webkit-transition: all .4s ease-in-out,background-position 1ms;
     -moz-transition: all .4s ease-in-out,background-position 1ms;
     transition: all .4s ease-in-out,background-position 1ms;
+}
+
+.pp-tabs-panel-content > div > ul{
+  list-style: none;
+  padding-left: 0;
+}
+.pp-tabs-panel-content > div > ul > li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.pp-tabs-panel-content > div > ul > li > svg {
+  flex-shrink: 0;
+  margin-right: 10px;
 }
 
 .fl-builder-content[data-overlay="1"]:not(.fl-theme-builder-header-sticky):not(.fl-builder-content-editing) {
@@ -18794,11 +18808,6 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
     padding-left: 0;
     list-style: none;
     margin-bottom: 32px !important;
-}
-
-.jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div ul li,.jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div ol li {
-    padding-left: 36px;
-    background: url("{{ absURL "wp-content/uploads/2022/10/tick-circle-bordered.svg" }}") no-repeat;
 }
 
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div ul li.nitro-lazy,.jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div ol li.nitro-lazy {
