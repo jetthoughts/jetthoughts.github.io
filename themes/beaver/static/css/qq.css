@@ -18902,16 +18902,6 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
     padding: 0;
 }
 
-.jt-reviews-box .pp-reviews-wrapper .pp-swiper-button span::before {
-    content: "";
-    background-image: url("{{ absURL "wp-content/uploads/2022/09/arrow-icon-hover.svg" }}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 60px;
-    height: 60px;
-    display: block;
-}
-
 .jt-reviews-box .pp-reviews-wrapper .pp-swiper-button.pp-swiper-button-prev {
     left: 44% !important;
 }

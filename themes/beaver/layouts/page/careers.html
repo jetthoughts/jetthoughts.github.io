@@ -76,14 +76,14 @@
                                            <div class="fl-module-content fl-node-content">
                                               <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                                                  <div class="fl-photo-content fl-photo-img-jpeg">
-                                                   
+
                                                     {{ $image := .Page.Resources.GetMatch .Page.Params.cover_image }}
                                                     {{ $imageW1210 := $image.Resize "1210x webp q75" }}
                                                     {{ $imageW1024 := $image.Resize "1024x webp q75" }}
                                                     {{ $imageW768 := $image.Resize "768x webp q75" }}
                                                     {{ $imageW300 := $image.Resize "300x webp q75" }}
-                                            
-                                                   
+
+
                                                     <img fetchpriority="high" decoding="async" class="fl-photo-img wp-image-3055 size-full"
                                                         src="{{ $image.RelPermalink }}"
                                                         alt="Browse. Apply. Prepare your bright future." itemprop="image" height="{{ $image.Height }}" width="{{ $image.Width }}"
@@ -286,9 +286,9 @@
                                         <div class="fl-module fl-module-photo fl-node-o7uedk0zaipg" data-node="o7uedk0zaipg">
                                            <div class="fl-module-content fl-node-content">
 
-                                            
+
 {{ $image := .Page.Resources.GetMatch .Page.Params.testimonial.image }}
-                                                                         
+
 {{ $imageW300 := $image.Resize "300x webp q75" }}
 
 {{ $imageW150 := $image.Resize "150x webp q75" }}
@@ -378,10 +378,10 @@
                                               <div class="pp-posts-wrapper">
                                                  <div class="pp-content-posts" style="--items-count: 2;--column-xl: 2;--column-lg: 2;--column-md: 2;--column-sm: 1;">
                                                     <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
-                                               
+
                                                       {{ range where site.RegularPages "Type" "careers" }}
-                                                                                                       
-                                                        <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3048 jt-careers type-jt-careers status-publish hentry jt_careers_category-engineering" itemscope itemtype="https://schema.org/CreativeWork" data-id="3048">
+
+                                                        <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3048 jt-careers type-jt-careers status-publish hentry jt_careers_category-engineering" itemscope itemtype="https://schema.org/CreativeWork" data-id="3048" onmouseover="changeIcon(this)" onmouseout="changeIconBack(this)">
                                                             <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" content="{{ .Params.position }}" />
                                                             <meta itemprop="datePublished" content="{{ dateFormat "2006-01-02" .Date }}" />
                                                             <meta itemprop="dateModified" content="{{ dateFormat "2006-01-02" .Lastmod }}" />
@@ -411,7 +411,12 @@
                                                                     </div>
                                                                     {{ end }}
 
-                                                                    <div class="readmore"> </div>
+                                                                    <div class="readmore">
+                                                                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="readmore-arrow"><defs><style>.aar,.bar,.car,.ear{fill:none;}.aar,.bar{stroke:#1a8cff;}.bar{stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;}.car{opacity:0;}.dar{stroke:none;}</style></defs><g transform="translate(-160 -2848)"><g class="aar" transform="translate(160 2848)"><rect class="dar" width="40" height="40" rx="20"/><rect class="ear" x="0.5" y="0.5" width="39" height="39" rx="19.5"/></g><g transform="translate(-451 2669)"><g transform="translate(620 188)"><path class="bar" d="M0,0,5.555,5.574,0,11.147" transform="translate(13.243 5.426)"/><path class="bar" d="M0,0H15.439" transform="translate(3.203 11)"/><path class="car" d="M0,0H22V22H0Z" transform="translate(22 22) rotate(180)"/></g></g></g></svg>
+
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="readmore-arrow-hover" style="display:none"><defs><style>.aarh{fill:#1a8cff;}.barh,.carh{fill:none;}.barh{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7px;}.carh{opacity:0;}</style></defs><g transform="translate(-160 -2848)"><rect class="aarh" width="40" height="40" rx="20" transform="translate(160 2848)"/><g transform="translate(-451 2669)"><g transform="translate(620 188)"><path class="barh" d="M0,0,5.555,5.574,0,11.147" transform="translate(13.243 5.426)"/><path class="barh" d="M0,0H15.439" transform="translate(3.203 11)"/><path class="carh" d="M0,0H22V22H0Z" transform="translate(22 22) rotate(180)"/></g></g></g></svg>
+
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -493,5 +498,17 @@
                 </div>
                 <!-- .fl-post-content -->
              </article>
+
+             <script>
+               function changeIcon(e) {
+                 e.getElementsByClassName('readmore-arrow')[0].style.display = "none";
+                 e.getElementsByClassName('readmore-arrow-hover')[0].style.display = "inline";
+               }
+
+               function changeIconBack(e) {
+                 e.getElementsByClassName('readmore-arrow')[0].style.display = "inline";
+                 e.getElementsByClassName('readmore-arrow-hover')[0].style.display = "none";
+               }
+             </script>
 
              {{ partial "page/footer.html" . }}
