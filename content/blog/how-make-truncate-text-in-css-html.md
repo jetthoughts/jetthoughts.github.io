@@ -3,10 +3,11 @@ dev_to_id: 1156418
 title: "How to make truncate text in CSS"
 description: "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..."
 created_at: "2022-08-01T09:19:46Z"
-edited_at: "2024-06-14T11:04:20Z"
+edited_at: "2024-06-27T15:53:30Z"
 draft: false
 tags: ["css", "html", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-make-truncate-text-in-css-html/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl5cdcrq6rev0cozjlvm5.png"
 slug: "how-make-truncate-text-in-css-html"
 ---
 ```html

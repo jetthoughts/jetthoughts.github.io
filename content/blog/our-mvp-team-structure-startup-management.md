@@ -3,10 +3,11 @@ dev_to_id: 1205578
 title: "Team Structure for MVP"
 description: "In structuring a team for MVP, we should consider the following: there is a massive number of..."
 created_at: "2022-09-28T14:58:08Z"
-edited_at: "2024-06-14T11:04:08Z"
+edited_at: "2024-06-27T15:53:19Z"
 draft: false
 tags: ["startup", "management", "leadership", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/our-mvp-team-structure-startup-management/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcskm42dpzai9za1fysmt.jpeg"
 slug: "our-mvp-team-structure-startup-management"
 ---
 In structuring a team for MVP, we should consider the following: there is a massive number of uncertainties. We have to work with assumptions and bets.

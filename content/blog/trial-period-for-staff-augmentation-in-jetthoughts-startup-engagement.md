@@ -7,6 +7,7 @@ edited_at: "2024-06-10T15:42:14Z"
 draft: false
 tags: ["startup", "engagement", "team", "development"]
 canonical_url: "https://jtway.co/the-trial-period-in-jetthoughts-968e7f01481f?source=friends_link&sk=56dbdb8567ab7500796037d42c80e46a"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F0vqbsdg8l5onq2cpvjho.png"
 slug: "trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement"
 ---
 *We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no financial risks at all. Let’s see how it works…*

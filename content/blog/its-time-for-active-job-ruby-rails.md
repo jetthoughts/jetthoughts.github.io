@@ -3,10 +3,11 @@ dev_to_id: 1880305
 title: "It’s Time For Active Job"
 description: "It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2...."
 created_at: "2024-06-07T11:47:31Z"
-edited_at: "2024-06-14T11:01:05Z"
+edited_at: "2024-06-27T15:50:32Z"
 draft: false
 tags: ["ruby", "rails", "develpment", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fahm6syimd0xp0ypri3sv.jpeg"
 slug: "its-time-for-active-job-ruby-rails"
 ---
 

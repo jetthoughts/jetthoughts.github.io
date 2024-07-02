@@ -3,10 +3,11 @@ dev_to_id: 1852747
 title: "A Practical Guide To Writing Introductions"
 description: "Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It..."
 created_at: "2024-05-14T14:14:26Z"
-edited_at: "2024-06-14T11:02:58Z"
+edited_at: "2024-06-27T15:52:14Z"
 draft: false
 tags: ["writing", "introduction", "blogging", "blog"]
 canonical_url: "https://jetthoughts.com/blog/practical-guide-writing-introductions-introduction/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/practical-guide-writing-introductions-introduction/file_0.jpeg"
 slug: "practical-guide-writing-introductions-introduction"
 ---
 *Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It simply summarises the main points of your article. So why so much noise about it?*
