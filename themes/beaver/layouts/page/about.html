@@ -41,7 +41,7 @@
 {{ $imageW600 := $image.Resize "600x webp q75" }}
 {{ $imageW300 := $image.Resize "300x webp q75" }}
 
-                                        <img fetchpriority="high" decoding="async" class="fl-photo-img wp-image-710 size-full" src="{{ $image.RelPermalink }}" alt="The Best Products" itemprop="image"
+                                        <img loading="lazy" decoding="async" class="fl-photo-img wp-image-710 size-full" src="{{ $image.RelPermalink }}" alt="The Best Products" itemprop="image"
                                         height="{{ $image.Height }}" width="{{ $image.Width }}" srcset="{{ $image.RelPermalink }} 2360w,
                                             {{ $imageW300.RelPermalink }} 300w,
                                             {{ $imageW1024.RelPermalink }} 1024w,
