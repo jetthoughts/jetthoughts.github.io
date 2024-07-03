@@ -3,11 +3,11 @@ dev_to_id: 1880211
 title: "Effortless Code Conventions Review for Pull Request Changes"
 description: "Reliably arranged source code helps hackability. You can filter code speedier if its..."
 created_at: "2024-06-07T10:03:27Z"
-edited_at: "2024-06-27T15:50:42Z"
+edited_at: "2024-07-03T12:20:30Z"
 draft: false
 tags: ["ruby", "ci", "github", "codereview"]
 canonical_url: "https://jetthoughts.com/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--JOQPTQ9S--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/file_0.jpeg"
 slug: "effortless-code-conventions-review-for-pull-request-changes-ruby-ci"
 ---
 

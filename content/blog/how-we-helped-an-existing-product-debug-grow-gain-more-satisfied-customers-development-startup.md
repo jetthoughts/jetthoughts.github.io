@@ -3,11 +3,11 @@ dev_to_id: 1877638
 title: "How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers"
 description: "As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could..."
 created_at: "2024-06-05T06:34:42Z"
-edited_at: "2024-06-27T15:51:03Z"
+edited_at: "2024-07-03T12:21:48Z"
 draft: false
 tags: ["development", "startup", "business", "enterprise"]
 canonical_url: "https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--2Uh8Wkjy--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_0.jpeg"
 slug: "how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup"
 ---
 ![Photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/education?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/file_0.jpeg)

@@ -3,11 +3,11 @@ dev_to_id: 1852719
 title: "5 Free tools to make the sales process easier"
 description: "What if I told you that there is no need to spend all your budget on super modern CRMs and..."
 created_at: "2024-05-14T13:47:15Z"
-edited_at: "2024-06-27T15:52:22Z"
+edited_at: "2024-07-03T12:19:37Z"
 draft: false
 tags: ["sales", "leadgeneration", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/5-free-tools-make-sales-process-easier-leadgeneration/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/5-free-tools-make-sales-process-easier-leadgeneration/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--PihTp6TX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/5-free-tools-make-sales-process-easier-leadgeneration/file_0.jpeg"
 slug: "5-free-tools-make-sales-process-easier-leadgeneration"
 ---
 ![Photo by Jesse Orico on [Unsplash](https://unsplash.com/search/photos/writing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/5-free-tools-make-sales-process-easier-leadgeneration/file_0.jpeg)

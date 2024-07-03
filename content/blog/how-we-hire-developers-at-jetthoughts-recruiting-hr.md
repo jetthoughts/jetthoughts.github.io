@@ -3,11 +3,11 @@ dev_to_id: 1877577
 title: "How We Hire Developers at JetThoughts"
 description: "How We Hire Developers at JetThoughts     Hiring process at JetThoughts is aimed at building..."
 created_at: "2024-06-05T06:13:54Z"
-edited_at: "2024-06-27T15:51:10Z"
+edited_at: "2024-07-03T12:21:49Z"
 draft: false
 tags: ["recruiting", "hr", "culture"]
 canonical_url: "https://jetthoughts.com/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/file_0.jpg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--DRdqxbXs--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/file_0.jpg"
 slug: "how-we-hire-developers-at-jetthoughts-recruiting-hr"
 ---
 

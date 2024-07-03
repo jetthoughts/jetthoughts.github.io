@@ -3,11 +3,11 @@ dev_to_id: 1877624
 title: "How Our Expertise Helped Curb Real Estate Communication Chaos"
 description: "How Our Expertise Helped Curb Real Estate Communication Chaos   The story of building Agent..."
 created_at: "2024-06-05T06:21:28Z"
-edited_at: "2024-06-27T15:51:05Z"
+edited_at: "2024-07-03T12:21:27Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--YeMpMtEL--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/file_0.jpeg"
 slug: "how-our-expertise-helped-curb-real-estate-communication-chaos"
 ---
 

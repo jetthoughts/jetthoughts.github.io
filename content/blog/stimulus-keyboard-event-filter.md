@@ -3,7 +3,7 @@ dev_to_id: 1698810
 title: "Stimulus Keyboard Event Filter"
 description: "What it was In the last update of Stimulus v3.2.2, the ability to filter the event by PageDown and..."
 created_at: "2023-12-15T11:11:52Z"
-edited_at: "2024-06-27T15:52:56Z"
+edited_at: "2024-07-03T12:23:20Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/stimulus-keyboard-event-filter/"

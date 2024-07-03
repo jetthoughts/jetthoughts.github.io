@@ -3,11 +3,11 @@ dev_to_id: 1853621
 title: "How to have a clean CSS structure with RSCSS/ITCSS"
 description: "Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take..."
 created_at: "2024-05-15T07:45:28Z"
-edited_at: "2024-06-27T15:51:39Z"
+edited_at: "2024-07-03T12:21:08Z"
 draft: false
 tags: ["css", "rscss", "frontend", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-have-clean-css-structure-with-rscssitcss-rscss/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-have-clean-css-structure-with-rscssitcss-rscss/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--ScKcvTxj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-have-clean-css-structure-with-rscssitcss-rscss/file_0.jpeg"
 slug: "how-have-clean-css-structure-with-rscssitcss-rscss"
 ---
 Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take a lot of effort. Making three lines of CSS code to style a DOM-element won’t take you more than two minutes, but let’s open our eyes to the bigger picture…

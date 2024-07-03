@@ -3,11 +3,11 @@ dev_to_id: 1880251
 title: "Our Default Ruby Development Stack"
 description: "Our Default Ruby Development Stack     Not that long ago I joined JetThoughts. By this time..."
 created_at: "2024-06-07T10:47:23Z"
-edited_at: "2024-06-27T15:50:35Z"
+edited_at: "2024-07-03T12:22:34Z"
 draft: false
 tags: ["rails", "ruby", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/our-default-ruby-development-stack-rails/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/our-default-ruby-development-stack-rails/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--ZkqgZl-d--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/our-default-ruby-development-stack-rails/file_0.jpeg"
 slug: "our-default-ruby-development-stack-rails"
 ---
 

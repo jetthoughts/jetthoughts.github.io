@@ -3,11 +3,11 @@ dev_to_id: 1853635
 title: "Running tests in containers with docker-compose"
 description: "The main advantages of this way are to have independent environment for the tests running..."
 created_at: "2024-05-15T07:56:17Z"
-edited_at: "2024-06-27T15:51:36Z"
+edited_at: "2024-07-03T12:23:03Z"
 draft: false
 tags: ["coding", "tutorial", "docker", "testing"]
 canonical_url: "https://jetthoughts.com/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/file_0.png"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--2BOL3j2J--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/file_0.png"
 slug: "running-tests-in-containers-with-docker-compose-coding-tutorial"
 ---
 > ### The main advantages of this way are to have independent environment for the tests running and to reduce the complexity of the test environment setup. Just load and run tests. Consider how to achieve this.

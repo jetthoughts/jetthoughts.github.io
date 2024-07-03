@@ -3,7 +3,7 @@ dev_to_id: 1877579
 title: "How to Learn Ruby"
 description: "Starting to learn a new programming language or a new framework every person faces a problem — what..."
 created_at: "2024-06-05T06:15:06Z"
-edited_at: "2024-06-27T15:51:09Z"
+edited_at: "2024-07-03T12:21:18Z"
 draft: false
 tags: ["ruby", "tutorial", "beginners", "rails"]
 canonical_url: "https://jetthoughts.com/blog/how-learn-ruby-tutorial/"

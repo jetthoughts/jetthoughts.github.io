@@ -3,11 +3,11 @@ dev_to_id: 1852612
 title: "Where to read ENV variables in Ruby on Rails application"
 description: "The ENV variables should not be used outside the config folder. This rule will allow the..."
 created_at: "2024-05-14T12:25:22Z"
-edited_at: "2024-06-27T15:52:34Z"
+edited_at: "2024-07-03T12:24:03Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "bestpractices"]
 canonical_url: "https://jetthoughts.com/blog/where-read-env-variables-in-ruby-on-rails-application/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/where-read-env-variables-in-ruby-on-rails-application/file_0.png"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--FAECQ6hC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/where-read-env-variables-in-ruby-on-rails-application/file_0.png"
 slug: "where-read-env-variables-in-ruby-on-rails-application"
 ---
 

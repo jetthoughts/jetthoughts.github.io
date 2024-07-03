@@ -3,7 +3,7 @@ dev_to_id: 1739418
 title: "Anonymous block argument in Ruby"
 description: "In the Ruby programming language, it is possible to use default block parameters instead of..."
 created_at: "2024-01-23T20:09:24Z"
-edited_at: "2024-06-27T15:52:55Z"
+edited_at: "2024-07-03T12:19:47Z"
 draft: false
 tags: ["ruby", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/anonymous-block-argument-in-ruby-tutorial/"

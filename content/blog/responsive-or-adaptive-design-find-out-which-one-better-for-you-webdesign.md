@@ -3,11 +3,11 @@ dev_to_id: 1877550
 title: "Responsive or Adaptive Design? Find out which one is better for you"
 description: "JetThoughts has launched a new project recently. Whole front-end team was set and started..."
 created_at: "2024-06-05T05:49:07Z"
-edited_at: "2024-06-27T15:51:21Z"
+edited_at: "2024-07-03T12:22:56Z"
 draft: false
 tags: ["design", "webdesign", "layouts"]
 canonical_url: "https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--BARc7jMm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/file_0.jpeg"
 slug: "responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/file_0.jpeg)

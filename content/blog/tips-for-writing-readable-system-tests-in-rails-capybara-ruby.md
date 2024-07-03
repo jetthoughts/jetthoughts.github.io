@@ -3,11 +3,11 @@ dev_to_id: 1853549
 title: "Tips for writing readable system tests in Rails"
 description: "Want to make system tests easy to main tain? We have selected some best practice tips to..."
 created_at: "2024-05-15T06:56:33Z"
-edited_at: "2024-06-27T15:51:54Z"
+edited_at: "2024-07-03T12:23:29Z"
 draft: false
 tags: ["capybara", "ruby", "rails", "testing"]
 canonical_url: "https://jetthoughts.com/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/file_0.jpg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--CjVaFGQk--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/file_0.jpg"
 slug: "tips-for-writing-readable-system-tests-in-rails-capybara-ruby"
 ---
 > # Want to make system tests easy to main tain? We have selected some best practice tips to help achieve this.

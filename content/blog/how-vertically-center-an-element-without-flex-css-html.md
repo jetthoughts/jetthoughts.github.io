@@ -3,7 +3,7 @@ dev_to_id: 1103884
 title: "How to vertically center an element without Flex"
 description: "How vertically center with Flex you can view Vertical align with a full screen across Tailwind..."
 created_at: "2022-06-03T12:58:50Z"
-edited_at: "2024-06-27T15:53:44Z"
+edited_at: "2024-07-03T12:21:45Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
 canonical_url: "https://jetthoughts.com/blog/how-vertically-center-an-element-without-flex-css-html/"

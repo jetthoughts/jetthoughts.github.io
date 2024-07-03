@@ -3,11 +3,11 @@ dev_to_id: 1853472
 title: "Services and tools to automatize development for the remote teams"
 description: "We save a lot of time on development and create better products due to well-formed..."
 created_at: "2024-05-15T06:02:44Z"
-edited_at: "2024-06-27T15:52:04Z"
+edited_at: "2024-07-03T12:23:06Z"
 draft: false
 tags: ["workflow", "automation", "agile", "development"]
 canonical_url: "https://jetthoughts.com/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--lvp67DNj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/file_0.jpeg"
 slug: "services-tools-automatize-development-for-remote-teams-workflow-automation"
 ---
 > ### We save a lot of time on development and create better products due to well-formed workflow. Tools and services that help us to implement the workflow we will describe below.

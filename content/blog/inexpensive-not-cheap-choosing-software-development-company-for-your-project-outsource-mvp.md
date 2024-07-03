@@ -3,11 +3,11 @@ dev_to_id: 1877566
 title: "Inexpensive is Not Cheap. Choosing Software Development Company for Your Project"
 description: "You have a great idea for a new product or a growing business and need a team of software..."
 created_at: "2024-06-05T06:01:42Z"
-edited_at: "2024-06-27T15:51:14Z"
+edited_at: "2024-07-03T12:22:00Z"
 draft: false
 tags: ["outsource", "mvp"]
 canonical_url: "https://jetthoughts.com/blog/inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--q4sRRpkc--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp/file_0.jpeg"
 slug: "inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp/file_0.jpeg)

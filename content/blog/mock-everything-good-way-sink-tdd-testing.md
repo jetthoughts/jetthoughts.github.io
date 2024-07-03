@@ -3,11 +3,11 @@ dev_to_id: 1877556
 title: "Mock Everything Is a Good Way to Sink"
 description: "Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see..."
 created_at: "2024-06-05T05:52:47Z"
-edited_at: "2024-06-27T15:51:19Z"
+edited_at: "2024-07-03T12:22:19Z"
 draft: false
 tags: ["tdd", "testing", "development"]
 canonical_url: "https://jetthoughts.com/blog/mock-everything-good-way-sink-tdd-testing/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/mock-everything-good-way-sink-tdd-testing/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--_HRj5KdZ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/mock-everything-good-way-sink-tdd-testing/file_0.jpeg"
 slug: "mock-everything-good-way-sink-tdd-testing"
 ---
 ***Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see mocks/stubs, I am always looking for the way to remove them.***

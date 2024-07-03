@@ -3,11 +3,11 @@ dev_to_id: 1880171
 title: "4 lines to Speed Up your Rails Test Suite on CircleCI"
 description: "Most of our projects have a big code base of assets which dramatically reduce not only browser page..."
 created_at: "2024-06-07T09:15:36Z"
-edited_at: "2024-06-27T15:50:45Z"
+edited_at: "2024-07-03T12:19:33Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/file_0.jpeg"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--0gaGe7DN--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/file_0.jpeg"
 slug: "4-lines-speed-up-your-rails-test-suite-on-circleci"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/file_0.jpeg)

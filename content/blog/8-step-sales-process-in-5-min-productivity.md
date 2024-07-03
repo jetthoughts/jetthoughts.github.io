@@ -3,11 +3,11 @@ dev_to_id: 1853531
 title: "8-Step Sales Process in 5 min"
 description: "The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in..."
 created_at: "2024-05-15T06:34:55Z"
-edited_at: "2024-06-27T15:51:58Z"
+edited_at: "2024-07-03T12:19:43Z"
 draft: false
 tags: ["sales", "productivity", "checklist"]
 canonical_url: "https://jetthoughts.com/blog/8-step-sales-process-in-5-min-productivity/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/8-step-sales-process-in-5-min-productivity/file_0.png"
+cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--kcuBJ5V_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/8-step-sales-process-in-5-min-productivity/file_0.png"
 slug: "8-step-sales-process-in-5-min-productivity"
 ---
 The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in order to get the results you envisioned for your company.
