@@ -3,10 +3,11 @@ dev_to_id: 1189342
 title: "Incremental lint fixes by GitHub Actions"
 description: "How do you apply new lint rules to the legacy project with active development? Have you added..."
 created_at: "2022-09-09T18:50:36Z"
-edited_at: "2024-06-14T11:04:15Z"
+edited_at: "2024-06-27T15:53:25Z"
 draft: false
 tags: ["devops", "github", "ruby", "codequality"]
 canonical_url: "https://jetthoughts.com/blog/incremental-lint-fixes-by-github-actions-devops/"
+cover_image: ""
 slug: "incremental-lint-fixes-by-github-actions-devops"
 ---
 How do you apply new lint rules to the legacy project with active development? Have you added `standard` gem recently, and now you are required to change a lot of files but could not apply them at once.

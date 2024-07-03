@@ -3,10 +3,11 @@ dev_to_id: 539418
 title: "Why and how to use TDD. Main tips"
 description: "How to start developing the component from scratch? How to know what architecture it should have? Wha..."
 created_at: "2020-12-11T12:02:25Z"
-edited_at: "2024-06-14T11:04:43Z"
+edited_at: "2024-06-27T15:53:51Z"
 draft: false
 tags: ["tdd", "testing", "programming", "development"]
 canonical_url: "https://jetthoughts.com/blog/why-how-use-tdd-main-tips-testing/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fgvb6rq57294dby6wk205.jpg"
 slug: "why-how-use-tdd-main-tips-testing"
 ---
 *How to start developing the component from scratch? How to know what architecture it should have? What parameters should the component accept? The TDD usage could help to find the answers.*

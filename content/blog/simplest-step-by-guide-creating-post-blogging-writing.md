@@ -3,10 +3,11 @@ dev_to_id: 1853556
 title: "Simplest step by step guide creating a post"
 description: "For novice authors who are going to share their thoughts with public through the posts, we..."
 created_at: "2024-05-15T07:07:41Z"
-edited_at: "2024-06-14T11:02:32Z"
+edited_at: "2024-06-27T15:51:50Z"
 draft: false
 tags: ["blogging", "writing", "tutorial", "guide"]
 canonical_url: "https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_0.jpeg"
 slug: "simplest-step-by-guide-creating-post-blogging-writing"
 ---
 ![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_0.jpeg)

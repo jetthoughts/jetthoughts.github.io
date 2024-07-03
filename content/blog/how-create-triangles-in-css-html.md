@@ -3,10 +3,11 @@ dev_to_id: 1148536
 title: "How to create triangles in CSS"
 description: "In this post, we are going to see a simple method to draw a triangle in CSS using borders.    &lt;div..."
 created_at: "2022-07-22T08:32:10Z"
-edited_at: "2024-06-14T11:04:22Z"
+edited_at: "2024-06-27T15:53:31Z"
 draft: false
 tags: ["css", "html", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-create-triangles-in-css-html/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftk93al7i9cx2fdgv1ozn.png"
 slug: "how-create-triangles-in-css-html"
 ---
 In this post, we are going to see a simple method to draw a triangle in CSS using borders.

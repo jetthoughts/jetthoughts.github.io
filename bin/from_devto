@@ -112,6 +112,7 @@ class SaveArticleToMarkdown
       file.write("draft: false\n")
       file.write("tags: #{data['tags']}\n")
       file.write("canonical_url: \"#{data['canonical_url']}\"\n")
+      file.write("cover_image: \"#{data['cover_image']}\"\n")
       file.write("slug: \"#{slug(data)}\"\n")
       file.write("---\n")
       file.write(markdown)

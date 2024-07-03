@@ -3,10 +3,11 @@ dev_to_id: 1877667
 title: "How to Setup Incremental Design Process in a Startup"
 description: "Are you a startup looking to streamline your design process? Look no further! This article will..."
 created_at: "2024-06-05T07:12:27Z"
-edited_at: "2024-06-14T11:01:26Z"
+edited_at: "2024-06-27T15:50:53Z"
 draft: false
 tags: ["design", "process", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-incremental-design-process-in-startup/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-incremental-design-process-in-startup/file_0.jpeg"
 slug: "how-setup-incremental-design-process-in-startup"
 ---
 ![[https://www.mo-hr.com/en/Specifications/Performance](https://www.mo-hr.com/en/Specifications/Performance)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-incremental-design-process-in-startup/file_0.jpeg)

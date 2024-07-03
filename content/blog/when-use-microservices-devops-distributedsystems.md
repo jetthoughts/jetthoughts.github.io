@@ -3,10 +3,11 @@ dev_to_id: 1283284
 title: "When to use Microservices?"
 description: "Microservices are a software architecture design pattern in which a large application is built as a..."
 created_at: "2022-12-03T12:26:09Z"
-edited_at: "2024-06-14T11:04:02Z"
+edited_at: "2024-06-27T15:53:13Z"
 draft: false
 tags: ["devops", "distributedsystems", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/when-use-microservices-devops-distributedsystems/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbz18dqkcx25p6omko464.png"
 slug: "when-use-microservices-devops-distributedsystems"
 ---
 Microservices are a software architecture design pattern in which a large application is built as a collection of small, independent services that communicate with each other over well-defined interfaces, typically using APIs. This approach to software development has become increasingly popular in recent years because it offers several key benefits over traditional, monolithic architecture.

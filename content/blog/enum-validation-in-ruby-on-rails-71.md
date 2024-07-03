@@ -7,6 +7,7 @@ edited_at: "2024-06-10T15:43:58Z"
 draft: false
 tags: ["ruby", "rails", "programming", "development"]
 canonical_url: "https://jtway.co/enum-validation-in-ruby-on-rails-7-1-285762a64582"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5cafn4wyku2l3fhlupcp.png"
 slug: "enum-validation-in-ruby-on-rails-71"
 ---
 The latest version of Rails, 7.1, introduces the ability to validate enums, enhancing data integrity and error handling in Rails models. Enums in Rails allow defining a set of permissible values for an attribute. Prior to Rails 7.1, assigning an invalid enum value would raise an `ArgumentError`, necessitating manual validation checks. The updated feature in Rails 7.1 streamlines this process by enabling built-in enum validation options within ActiveRecord objects.

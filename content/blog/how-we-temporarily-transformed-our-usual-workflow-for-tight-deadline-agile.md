@@ -3,10 +3,11 @@ dev_to_id: 1877544
 title: "How We Temporarily Transformed Our Usual Workflow for a Tight Deadline"
 description: "Time makes rules   Every time when we start working on a new project, short iteration or..."
 created_at: "2024-06-05T05:45:06Z"
-edited_at: "2024-06-14T11:01:57Z"
+edited_at: "2024-06-27T15:51:23Z"
 draft: false
 tags: ["workflow", "agile"]
 canonical_url: "https://jetthoughts.com/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/file_0.jpeg"
 slug: "how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile"
 ---
 

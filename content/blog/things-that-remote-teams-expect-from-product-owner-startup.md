@@ -3,10 +3,11 @@ dev_to_id: 1853617
 title: "Things that remote teams expect from the product owner"
 description: "Modern digital product development methods require a flexible approach. It is much more efficient..."
 created_at: "2024-05-15T07:41:57Z"
-edited_at: "2024-06-14T11:02:23Z"
+edited_at: "2024-06-27T15:51:41Z"
 draft: false
 tags: ["startup", "remote", "tips", "management"]
 canonical_url: "https://jetthoughts.com/blog/things-that-remote-teams-expect-from-product-owner-startup/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/things-that-remote-teams-expect-from-product-owner-startup/file_0.jpeg"
 slug: "things-that-remote-teams-expect-from-product-owner-startup"
 ---
 ![[Photo by Helloquence](https://unsplash.com/photos/5fNmWej4tAA)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/things-that-remote-teams-expect-from-product-owner-startup/file_0.jpeg)

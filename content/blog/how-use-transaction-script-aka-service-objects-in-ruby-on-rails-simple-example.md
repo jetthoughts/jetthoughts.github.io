@@ -3,10 +3,11 @@ dev_to_id: 399009
 title: "How to use a Transaction Script(aka Service Objects) in Ruby on Rails. Simple example"
 description: "The logic of small applications can be present as a series of transactions. Using the Transaction..."
 created_at: "2020-07-15T15:47:10Z"
-edited_at: "2024-06-27T15:51:35Z"
+edited_at: "2024-06-27T15:53:58Z"
 draft: false
 tags: ["ruby", "rails", "python", "javascript"]
 canonical_url: "https://jetthoughts.com/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/"
+cover_image: ""
 slug: "how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example"
 ---
 The logic of small applications can be present as a series of transactions. Using the Transaction Scripts pattern, we get an application that is easier to maintain, to cover with tests and to scale.

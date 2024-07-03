@@ -3,10 +3,11 @@ dev_to_id: 1200329
 title: "Auto-install system dependencies for Ruby on Rails"
 description: "Let's integrate Homebrew into our Ruby on Rails Project local set up.  There is a convention for Ruby..."
 created_at: "2022-09-22T15:37:41Z"
-edited_at: "2024-06-14T11:04:12Z"
+edited_at: "2024-06-27T15:53:23Z"
 draft: false
 tags: ["ruby", "programming", "devops", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/auto-install-system-dependencies-for-ruby-on-rails-programming/"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ejalho4lm0evqn4t6bq.jpg"
 slug: "auto-install-system-dependencies-for-ruby-on-rails-programming"
 ---
 Let's integrate Homebrew into our Ruby on Rails Project local set up.

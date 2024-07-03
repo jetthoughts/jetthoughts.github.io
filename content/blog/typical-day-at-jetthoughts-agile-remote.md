@@ -3,10 +3,11 @@ dev_to_id: 1853596
 title: "A typical day at JetThoughts"
 description: "In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the..."
 created_at: "2024-05-15T07:22:32Z"
-edited_at: "2024-06-14T11:02:28Z"
+edited_at: "2024-06-27T15:53:54Z"
 draft: false
 tags: ["agile", "remote", "kanban", "process"]
 canonical_url: "https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/typical-day-at-jetthoughts-agile-remote/file_0.jpeg"
 slug: "typical-day-at-jetthoughts-agile-remote"
 ---
 
@@ -34,7 +35,7 @@ Give feedback and make decisions if it’s needed. Also, make sure to use a call
 
 To work remotely, you need to support some kind of connection with your team regularly. We are using text-based, asynchronous standups every day. We create a channel that is dedicated to our #project-name. We don’t have a specific time to post there, usually, we do it, when we start our work session. When you are writing a standup message it is important to think about the others — what can they get from it by reading your status?
 
-[*Example](https://x-team.com/blog/developer-daily-standup/)* of a good status report:
+*[Example](https://x-team.com/blog/developer-daily-standup/)* of a good status report:
 
 ![Photo by [Ryan Chartrand](https://x-team.com/blog/author/ryan-chartrand/) on [X-team](https://x-team.com/blog/developer-daily-standup/)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/typical-day-at-jetthoughts-agile-remote/file_1.png)
 
@@ -42,7 +43,7 @@ Say “Bye!” when you are done for the day. Also, don’t forget to notify you
 
 ## Development
 
-After triage, we get to code. We put on Ambient or Chill music, sit at our desks, and dive into programming. We are using the [*Kanban](https://leankit.com/learn/kanban/kanban-board/)* board by assigning stories that correspond to project features. We approach this one by one. In the order prioritized by the client, requesting clarification, exploring edge cases, and finally writing tests and implementation. It is a part where you can learn something new and take joy from it.
+After triage, we get to code. We put on Ambient or Chill music, sit at our desks, and dive into programming. We are using the *[Kanban](https://leankit.com/learn/kanban/kanban-board/)* board by assigning stories that correspond to project features. We approach this one by one. In the order prioritized by the client, requesting clarification, exploring edge cases, and finally writing tests and implementation. It is a part where you can learn something new and take joy from it.
 
 We write Ruby and a lot of JavaScript code. One of the benefits of development is that we see tons of languages, frameworks, libraries, databases, code styles, and design decisions. This is an unlimited field for learning. Every new project is like a child — unique in its own way. It’s an infinite walk through the many levels of software development.
 
@@ -52,11 +53,11 @@ When you get interrupted during work, you just need to notify the channel about 
 
 ## Mondays
 
-On Mondays, we are running weekly sprint kick-off sessions. Prioritize and schedule issues. Post our goals on project channels to share our expectations with the whole team including [*stakeholders](https://www.stakeholdermap.com/stakeholder-definition.html)*. Also, make sure that things are properly categorized and issues on the board are fully descriptive.
+On Mondays, we are running weekly sprint kick-off sessions. Prioritize and schedule issues. Post our goals on project channels to share our expectations with the whole team including *[stakeholders](https://www.stakeholdermap.com/stakeholder-definition.html)*. Also, make sure that things are properly categorized and issues on the board are fully descriptive.
 
 ## Thursdays
 
-Every Thursday we are discussing with the team what was done this week. It’s called [*Retrospective](https://www.atlassian.com/team-playbook/plays/retrospective)*. What issues were done and how much time was spent on them. Pluses, minuses, and improvements.
+Every Thursday we are discussing with the team what was done this week. It’s called *[Retrospective](https://www.atlassian.com/team-playbook/plays/retrospective)*. What issues were done and how much time was spent on them. Pluses, minuses, and improvements.
 
 ## Fridays
 

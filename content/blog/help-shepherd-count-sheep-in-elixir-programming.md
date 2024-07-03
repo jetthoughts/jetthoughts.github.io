@@ -3,10 +3,11 @@ dev_to_id: 1880218
 title: "Help shepherd to count sheep in Elixir"
 description: "I have been thinking about learning a functional language for a long time. So recently I’ve started..."
 created_at: "2024-06-07T10:14:43Z"
-edited_at: "2024-06-14T11:01:14Z"
+edited_at: "2024-06-27T15:50:41Z"
 draft: false
 tags: ["programming", "elixir", "codewars", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/help-shepherd-count-sheep-in-elixir-programming/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/help-shepherd-count-sheep-in-elixir-programming/file_0.jpeg"
 slug: "help-shepherd-count-sheep-in-elixir-programming"
 ---
 ![Shepard (Mass Effect)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/help-shepherd-count-sheep-in-elixir-programming/file_0.jpeg)
