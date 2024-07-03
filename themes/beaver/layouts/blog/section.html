@@ -32,7 +32,7 @@
                       <a class="link" href="{{ .Permalink }}">
                         <div class="blog-post">
                           <div class="post-image">
-                            <img src="{{ with .Params.cover_image }}{{ . }}{{ else }}{{ "/assets/img/no-image.png" }}{{ end }}" alt="Placeholder Image" loading="lazy">
+                            <img src="{{ with .Params.cover_image }}{{ . }}{{ else }}{{ "/assets/img/no-image.png" }}{{ end }}" alt="Placeholder Image" loading="lazy" decoding="async">
                           </div>
                           <div class="post-content">
                             <h2 class="post-title">{{ .Title }}</h2>
