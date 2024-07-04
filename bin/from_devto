@@ -154,7 +154,7 @@ articles.each do |article|
   created_at = Time.parse(article['created_at']) if article['created_at']
   edited_at = Time.parse(article['edited_at']) if article['edited_at']
 
-  if (created_at && (Time.now - created_at) < 1800) || (edited_at && (Time.now - edited_at) < 1800) || force
+  if (created_at && (Time.now - created_at) < 3600) || (edited_at && (Time.now - edited_at) < 3600) || force
     SaveArticleToMarkdown.call(article['slug'])
   end
 end
