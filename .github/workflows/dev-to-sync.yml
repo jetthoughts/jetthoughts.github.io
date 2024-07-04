@@ -5,6 +5,8 @@ name: Sync dev.to articles
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
+  schedule:
+    - cron: '0 4-21 * * *'
   workflow_dispatch:
     inputs:
       force:
@@ -72,7 +74,7 @@ jobs:
           git config --global user.name "GitHub Action"
           git add -A
           git diff --quiet && git diff --staged --quiet || (git commit -m 'Update blog content'; git push)
-  
+
   # Deployment job
   deploy:
     environment:
