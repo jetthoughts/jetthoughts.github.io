@@ -56,8 +56,8 @@ Appearance > Theme Settings > Code or create a child theme.
 
 .blog h1,
 .blog .heading {
-  font-size: 42px;
-  line-height: 52px;
+  font-size: 72px;
+  line-height: 92px;
   font-weight: 700;
   margin: 0 0 32px !important;
 }
