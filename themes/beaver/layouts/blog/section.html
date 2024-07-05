@@ -32,7 +32,28 @@
                       <a class="link" href="{{ .Permalink }}">
                         <div class="blog-post">
                           <div class="post-image">
-                            <img src="{{ with .Params.cover_image }}{{ . }}{{ else }}{{ "/assets/img/no-image.png" }}{{ end }}" alt="Placeholder Image" loading="lazy" decoding="async">
+
+                            {{ $src := "" }}
+                            {{ with .Params.cover_image }}
+                              {{ $src = . }}
+                              {{ if strings.HasPrefix $src "https://res.cloudinary.com" }}
+                                {{ $baseURL := "https://res.cloudinary.com/practicaldev/image/fetch/w_150,h_150,c_fill/" }}
+                                {{ $imageURL := replaceRE `https://res.cloudinary.com/practicaldev/image/fetch/.*?/https?://` "" $src }}
+                                {{ $src = printf "%shttps://%s" $baseURL $imageURL }}
+                              {{ else if strings.HasPrefix $src "https://media.dev.to" }}
+                                {{ $baseURL := "https://media.dev.to/cdn-cgi/image/width=150,height=150,fit=cover,gravity=auto,format=auto/" }}
+                                {{ $imageURL := replaceRE `https://media.dev.to/cdn-cgi/image/[^/]+/(.*)` "${1}" $src }}
+                                {{ $imageURL = replace $imageURL "%3A" ":" }}
+                                {{ $imageURL = replace $imageURL "%2F" "/" }}
+                                {{ $src = printf "%s%s" $baseURL $imageURL }}
+                              {{ else }}
+                                {{ $src = . }}
+                              {{ end }}
+                            {{ else }}
+                              {{ $src = "/assets/img/no-image.png" }}
+                            {{ end }}
+
+                            <img src="{{ $src }}" alt="Placeholder Image" loading="lazy" decoding="async">
                           </div>
                           <div class="post-content">
                             <h2 class="post-title">{{ .Title }}</h2>
