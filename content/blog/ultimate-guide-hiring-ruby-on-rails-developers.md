@@ -3,7 +3,7 @@ dev_to_id: 1918313
 title: "The Ultimate Guide to Hiring Ruby on Rails Developers"
 description: "Ruby on Rails (RoR) is a top choice and a pivotal tool in web development, especially for startups...."
 created_at: "2024-07-10T09:32:48Z"
-edited_at: "2024-07-10T10:01:23Z"
+edited_at: "2024-07-10T11:23:58Z"
 draft: false
 tags: ["hiring", "rails", "startup", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/ultimate-guide-hiring-ruby-on-rails-developers/"
@@ -65,15 +65,15 @@ Confirm they can work independently.
 
 ### Scoring System
 
-- **1: Poor** -- Did not address the question adequately
+- **1: Poor** - Did not address the question adequately
 
-- **2: Fair** -- Provided some relevant information but lacked depth
+- **2: Fair** - Provided some relevant information but lacked depth
 
-- **3: Good** -- Answered the question with sufficient detail
+- **3: Good** - Answered the question with sufficient detail
 
-- **4: Very Good**-- Answered thoroughly with clear and relevant examples
+- **4: Very Good** - Answered thoroughly with clear and relevant examples
 
-- **5: Excellent** -- Provided exceptional detail and insight, demonstrating strong capability
+- **5: Excellent** - Provided exceptional detail and insight, demonstrating strong capability
 
 Evaluating Candidates
 ---------------------
