@@ -3,10 +3,10 @@ dev_to_id: 1918313
 title: "The Ultimate Guide to Hiring Ruby on Rails Developers"
 description: "Ruby on Rails (RoR) is a top choice and a pivotal tool in web development, especially for startups...."
 created_at: "2024-07-10T09:32:48Z"
-edited_at: "2024-07-10T09:33:04Z"
+edited_at: "2024-07-10T09:33:40Z"
 draft: false
 tags: ["hiring", "rails", "startup", "beginners"]
-canonical_url: "https://dev.to/jetthoughts/the-ultimate-guide-to-hiring-ruby-on-rails-developers-2lbo"
+canonical_url: "https://jetthoughts.com/blog/ultimate-guide-hiring-ruby-on-rails-developers/"
 cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdwnc2ptgz16i5urx5olx.png"
 slug: "ultimate-guide-hiring-ruby-on-rails-developers"
 ---
