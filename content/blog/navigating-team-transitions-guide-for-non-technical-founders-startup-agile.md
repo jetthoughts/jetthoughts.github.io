@@ -3,7 +3,7 @@ dev_to_id: 1941092
 title: "Navigating Team Transitions: A Guide for Non-Technical Founders"
 description: "Change can be challenging, especially when it involves individuals. Replacing a team is always a..."
 created_at: "2024-07-30T10:47:52Z"
-edited_at: "2024-07-30T10:55:18Z"
+edited_at: "2024-07-30T11:16:42Z"
 draft: false
 tags: ["startup", "agile", "culture", "process"]
 canonical_url: "https://jetthoughts.com/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/"
@@ -16,7 +16,7 @@ Change can be challenging, especially when it involves individuals. Replacing a 
 
 The dilemma is how to replace a compact yet efficient team. Your current workforce consists of engineers and support or operations personnel who have been successfully managing operations thus far. However, expenses are increasing, and the outdated codebase is proving problematic. How can you navigate this shift without disrupting the established workflow?
 
-The first step is to familiarize yourself with [ADKAR](https://jetthoughts.com/blog/transforming-titans-outsourcing-odyssey-leadership-agile/) (Awareness, Desire, Knowledge, Ability, Reinforcement), a highly effective framework for change management.
+The first step is to familiarize yourself with [ADKAR](https://jetthoughts.com/blog/transforming-titans-outsourcing-odyssey-leadership-agile/) (Awareness, Desire, Knowledge, Ability, Reinforcement).
 
 ADKAR, a highly effective framework for change management, is your guiding tool towards a more seamless transformation. It represents the necessity for change, willingness to engage and aid in the process, understanding effective methods for change, the capability to carry out the change, and continued support to maintain the change. This framework is not merely a buzzword but a powerful resource that will instill confidence in your ability to manage this transition.
 
