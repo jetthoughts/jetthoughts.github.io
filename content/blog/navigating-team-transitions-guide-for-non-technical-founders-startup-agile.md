@@ -3,14 +3,16 @@ dev_to_id: 1941092
 title: "Navigating Team Transitions: A Guide for Non-Technical Founders"
 description: "Change can be challenging, especially when it involves individuals. Replacing a team is always a..."
 created_at: "2024-07-30T10:47:52Z"
-edited_at: "2024-07-30T10:48:21Z"
+edited_at: "2024-07-30T10:55:18Z"
 draft: false
 tags: ["startup", "agile", "culture", "process"]
-canonical_url: "https://dev.to/jetthoughts/navigating-team-transitions-a-guide-for-non-technical-founders-1m60"
+canonical_url: "https://jetthoughts.com/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/"
 cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmor5578bem1wja6zm92o.png"
 slug: "navigating-team-transitions-guide-for-non-technical-founders-startup-agile"
 ---
 Change can be challenging, especially when it involves individuals. Replacing a team is always a difficult choice, but keeping your startup on the right path is sometimes necessary. Here is a roadmap to assist you in navigating this delicate situation while maintaining your composure and your company's progress.
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qe5vlvo1euxdq1dzx7xn.png)
 
 The dilemma is how to replace a compact yet efficient team. Your current workforce consists of engineers and support or operations personnel who have been successfully managing operations thus far. However, expenses are increasing, and the outdated codebase is proving problematic. How can you navigate this shift without disrupting the established workflow?
 
