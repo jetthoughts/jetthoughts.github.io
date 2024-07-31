@@ -3,10 +3,10 @@ dev_to_id: 1939835
 title: "Kamal Integration in Rails 8 by Default"
 description: "In Rails 8, Kamal will be included by default. This change aims to simplify deployment and..."
 created_at: "2024-07-29T09:50:35Z"
-edited_at: "2024-07-31T08:33:41Z"
+edited_at: "2024-07-31T08:34:43Z"
 draft: false
 tags: ["ruby", "rails", "kamal", "docker"]
-canonical_url: "https://dev.to/jetthoughts/kamal-integration-in-rails-8-by-default-538m"
+canonical_url: "https://jetthoughts.com/blog/kamal-integration-in-rails-8-by-default-ruby/"
 cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq8hqn47ak2tmxlr13awl.png"
 slug: "kamal-integration-in-rails-8-by-default-ruby"
 ---
