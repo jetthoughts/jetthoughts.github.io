@@ -153,8 +153,9 @@ articles = fetch_articles
 articles.each do |article|
   created_at = Time.parse(article['created_at']) if article['created_at']
   edited_at = Time.parse(article['edited_at']) if article['edited_at']
+  published_at = Time.parse(article['published_at']) if article['published_at']
 
-  if (created_at && (Time.now - created_at) < 3600) || (edited_at && (Time.now - edited_at) < 3600) || force
+  if (created_at && (Time.now - created_at) < 3600) || (edited_at && (Time.now - edited_at) < 3600) || (published_at && (Time.now - published_at) < 3600) || force
     SaveArticleToMarkdown.call(article['slug'])
   end
 end
