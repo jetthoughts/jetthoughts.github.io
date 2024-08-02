@@ -3,7 +3,7 @@ dev_to_id: 1945366
 title: "Emergency CTO Leadership: Navigating Software Development Challenges"
 description: "Emergency CTO Leadership: Tackling Software Hurdles            Introduction   In the..."
 created_at: "2024-08-02T13:00:26Z"
-edited_at: "2024-08-02T13:03:27Z"
+edited_at: "2024-08-02T14:01:12Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/emergency-cto-leadership-navigating-software-development-challenges/"
