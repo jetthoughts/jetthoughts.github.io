@@ -26,7 +26,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-r-[50px] border-r-transparent">
 </div>
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lty9myydv862xrzdplm8.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-tailwindcss-html-css/file_0.png)
 
 ## Triangle Left
 ```html
@@ -36,7 +36,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-b-[50px] border-b-transparent">
 </div>
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5wkf825qmrkth0swawxe.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-tailwindcss-html-css/file_1.png)
 
 ## Triangle Up
 ```html
@@ -46,7 +46,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-r-[50px] border-r-transparent">
 </div>
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hvchko8w2mi3nnvx9l4r.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-tailwindcss-html-css/file_2.png)
 
 ## Triangle Right
 ```html
@@ -56,7 +56,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-b-[50px] border-b-transparent">
 </div>
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9x7x2twgrj9a2hsqjh9k.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-tailwindcss-html-css/file_3.png)
 
 In this post, we showed examples of a simple equilateral triangle. If you need a triangle with different sides, you can play with the width of the border `[*px]`.
 

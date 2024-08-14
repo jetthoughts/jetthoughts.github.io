@@ -17,7 +17,7 @@ Startups move fast, and testing ideas is critical. It helps make intelligent cho
 
 The good news is that you can test ideas without developers. Here are three ways to do it fast and cheap.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/01phdyeoelkedbvmk8ob.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/top-3-ways-test-ideas-without-developers-startup-agile/file_0.png)
 
 Why Skip Developers Early On
 ----------------------------

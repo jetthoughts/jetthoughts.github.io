@@ -12,7 +12,7 @@ slug: "incremental-lint-fixes-by-github-actions-devops"
 ---
 How do you apply new lint rules to the legacy project with active development? Have you added `standard` gem recently, and now you are required to change a lot of files but could not apply them at once.
 
-![Auto-corrected Rubocop rules](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rriw7035iyk4wwedexq2.png)
+![Auto-corrected Rubocop rules](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/incremental-lint-fixes-by-github-actions-devops/file_0.png)
 
 I got the same problem, and we could not add a massive amount of the small changes because it would require regular rebasing while this PR is on review, or even some safe changes could cause annoying problems.
 
@@ -24,7 +24,7 @@ PRs Authors and Code Reviewers without big enthusiasm will follow this.
 
 So, I decided to delegate this annoying problem to the machine!
 
-![Terminator](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9429i3j8xv4y8ggyo3vo.jpeg)
+![Terminator](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/incremental-lint-fixes-by-github-actions-devops/file_1.jpeg)
 
 > _Photo by [Thierry K](https://unsplash.com/@thielypics?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
   
@@ -194,7 +194,7 @@ jobs:
 
 After several weeks you will get cleaned code, and there was no harm to Code Reviewers or Developers ;)
 
-![Result of the script](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/89lsilnrhv1hwto0bua3.png)
+![Result of the script](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/incremental-lint-fixes-by-github-actions-devops/file_2.png)
 
 ---
 

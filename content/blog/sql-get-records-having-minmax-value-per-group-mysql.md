@@ -21,11 +21,11 @@ Imagine you have a table named `customer_subscriptions` with the following field
 
 For illustration, consider the following data in `customer_subscriptions`:
 
-![Sample customer_subscriptions table](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w2x5d8fkjb6uejshsp52.png)
+![Sample customer_subscriptions table](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/sql-get-records-having-minmax-value-per-group-mysql/file_0.png)
 
 Let's say we want to show a table showing what was the first subscription plan for each user:
 
-![Desired query result](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/57s5ceotrrd2roige1hg.png)
+![Desired query result](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/sql-get-records-having-minmax-value-per-group-mysql/file_1.png)
 
 ## Subquery JOIN solution
 

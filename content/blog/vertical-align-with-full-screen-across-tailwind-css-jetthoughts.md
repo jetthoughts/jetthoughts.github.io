@@ -25,7 +25,7 @@ How can vertically align an element with Tailwind CSS by Flex?
 </div>
 ```
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g8oeati6etcsm4r4fytf.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/file_0.png)
  
 This is already pretty well documented in the [Tailwind CSS](https://tailwindcss.com/docs/align-items#center) docs.
 

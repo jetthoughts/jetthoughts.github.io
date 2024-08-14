@@ -54,6 +54,7 @@ jobs:
           else
             bin/from_devto
           fi
+          bin/upload_assets_to_github
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules

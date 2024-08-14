@@ -19,26 +19,26 @@ background-image: url('some-example-image.jpg');
 ```css
 background-size: cover;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9tp2oo2eh7x79k9i2q6t.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_0.png)
 
 
 ## Size in pixels or percentage
 ```css
 background-size: 300px;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zoedgqjpigh1n1vgbebb.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_1.png)
 
 ```css
 background-size: 15%;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mdv5e1u4lyaz98gcu5j9.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_2.png)
 
 
 ## Contain
 ```css
 background-size: contain;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/88nmgv0d07t1yef3t1v7.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_3.png)
 
 
 ## Background-Repeat
@@ -46,7 +46,7 @@ If the container is larger than the image, this will mosaic the image if the bac
 ```css
 background-repeat: no-repeat;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o4fhm79iozsmjugpge53.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_4.png)
 
 
 ## Background-Position
@@ -54,7 +54,7 @@ The `background-position` CSS property sets the initial position for each backgr
 ```css
 background-position: center;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gz5e2wt308q4te7w2dr8.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_5.png)
 
 
 ## Background-Color
@@ -62,5 +62,5 @@ Spaces not covered by the background image are filled with the `background-color
 ```css
 background-color: lightgreen;
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vkbfnnhywj1ub9yji02m.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/file_6.png)
   

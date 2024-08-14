@@ -22,7 +22,7 @@ This initial phase set the stage for a comprehensive transformation, where under
 
 ### **Chapter 2: The First Steps**
 
-![old compass greek mythology hyperrealistic](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rgjwkbnqyznbzwlxuqv7.png)
+![old compass greek mythology hyperrealistic](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_0.png)
 
 Paul analyzed SWOT to identify strengths, weaknesses, opportunities, and threats. Strengths? The company had great talent. Weaknesses? They needed more processes for delivering complete projects. Opportunities? There is a vast market for outsourcing services. Threats? Competitors were already doing it.
 
@@ -41,7 +41,7 @@ With the groundwork laid, Paul was ready to form a dedicated team to drive the t
 
 ### **Chapter 3: The Vanguard**
 
-![ship with warriors](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ucdba56scdgjodpm7wzl.png)
+![ship with warriors](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_1.png)
 
 Next, he formed a powerful coalition — The Vanguard. This team comprised critical stakeholders from different departments and was crucial to the transformation. Using the stakeholder map, Paul carefully selected members who could drive change and influence others. Some, like Michael Vas, a veteran project manager with extensive experience, were on board. His knowledge and insights were invaluable, and he quickly became Paul's trusted lieutenant.
 
@@ -63,7 +63,7 @@ The formation of the Vanguard marked the beginning of active efforts towards imp
 
 ### **Chapter 4: The Trials and Tribulations**
 
-![The great tribulation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mu9qo09gs6h9ci4y1x0a.png)
+![The great tribulation](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_2.png)
 
 Recognizing the need for quick wins to build momentum, Paul and his team launched pilot projects. These were carefully chosen to test their new processes and demonstrate early successes.
 
@@ -91,7 +91,7 @@ The challenges faced during these trials laid the groundwork for the following s
 
 ### **Chapter 5: Gaining momentum**
 
-![pulp fiction style, showing a Latin man blacksmith forging a sword](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wvlzrureydpeio3azu3g.png)
+![pulp fiction style, showing a Latin man blacksmith forging a sword](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_3.png)
 
 By the end of the first year, they were gaining momentum. The second round of pilot projects was smoother. They delivered on time and within budget. Clients were happy. Paul could see the vision coming to life.
 
@@ -109,7 +109,7 @@ With a solid foundation and a motivated team, they were ready to tackle larger c
 
 ### **Chapter 6: The Turning Point**
 
-![Ancient Greek warrior](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ht2nsdah3pxaex7pptcw.png)
+![Ancient Greek warrior](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_4.png)
 
 Year two was pivotal. They were ready to scale. The Vanguard worked tirelessly. They expanded their service offerings. More clients signed up for complete outsourcing solutions. The company rebranded itself as an outsourcing leader. Paul's vision was becoming a reality.
 
@@ -121,7 +121,7 @@ The board was happy with the progress but still had concerns about the plans for
 
 ### **Chapter 7: Overcoming Setbacks**
 
-![warriors fight with a gigantic spider](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fmn6xg9hlsl60gvngpeg.png)
+![warriors fight with a gigantic spider](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_5.png)
 
 While some things went smoothly, a significant project encountered a problem. Deadlines were missed, and costs exceeded the budget. As a result, the client went mad.
 
@@ -131,7 +131,7 @@ Paul was particularly impressed with Sarah's performance during this crisis. Her
 
 ### **Chapter 8: The Final Stretch**
 
-![a giant warrior, and a warrior watching him](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lze4tdlaysv4y2olqytw.png)
+![a giant warrior, and a warrior watching him](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_6.png)
 
 By the third year, they were a well-oiled machine. The company had transformed. They delivered projects seamlessly, delighted clients, and stayed ahead of the competition. They were a market leader in outsourcing services.
 
@@ -143,7 +143,7 @@ They celebrated their success, but Paul knew the journey wasn't over. They had t
 
 ### **Chapter 9: The Lessons Learned**
 
-![The Dwarf Kings' Causeway is an old road that was once used to link the 4 dwarf city-states. It used to lead to the High Marches, where one of the four dwarf city-states fell during the war. This city acted as a buffer between the lands of the Empire and the elves before the elves submitted to the imperial rule and became a protectorate. As the city-state fell, there was very little dwarf presence today and little imperial troop presence. Dnd old road style](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4z7xfcdxorh4tetey8nc.png)
+![The Dwarf Kings' Causeway is an old road that was once used to link the 4 dwarf city-states. It used to lead to the High Marches, where one of the four dwarf city-states fell during the war. This city acted as a buffer between the lands of the Empire and the elves before the elves submitted to the imperial rule and became a protectorate. As the city-state fell, there was very little dwarf presence today and little imperial troop presence. Dnd old road style](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_7.png)
 
 Paul gathered the entire Vanguard team for a final reflection on their journey. He began, "We've come a long way from where we started. What have we learned?"
 
@@ -165,7 +165,7 @@ The team exchanged nods and smiles, feeling a deep sense of accomplishment and r
 
 ### **Chapter 10: The Future**
 
-![A figure in ancient warrior attire stands on a hill overlooking a vast, scenic landscape with mountains, a distant city, and classical architecture at sunset.](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ic968qvhx0q4a0vx84ln.png)
+![A figure in ancient warrior attire stands on a hill overlooking a vast, scenic landscape with mountains, a distant city, and classical architecture at sunset.](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/file_8.png)
 
 Paul looked ahead. The company was strong, but it couldn't rest on its laurels. The market would keep evolving. It had to stay ahead and keep delivering value. He knew it could do it. It had the vision, the team, and the tools.
 

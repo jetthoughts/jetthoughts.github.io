@@ -12,7 +12,7 @@ slug: "why-when-use-waterfall-vs-agile-business-perspective-management"
 ---
 ## Waterfall Methodology
 
-![From https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vyqfeejavftmjgj4ryqm.png)
+![From https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-when-use-waterfall-vs-agile-business-perspective-management/file_0.png)
 
 ### Use Cases:
 
@@ -37,7 +37,7 @@ slug: "why-when-use-waterfall-vs-agile-business-perspective-management"
 
 ## Agile Methodology
 
-![From https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c8bgf53syytbm55mzm95.png)
+![From https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-when-use-waterfall-vs-agile-business-perspective-management/file_1.png)
 
 ### Use Cases:
 
@@ -59,7 +59,7 @@ slug: "why-when-use-waterfall-vs-agile-business-perspective-management"
 
 ## Choosing the Right Path for Your Business
 
-![Figure 4: Money for Information vs. Money for Flexibility by https://blog.kese.hu/2021/10/planning-constraints-in-agile-projects.html](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7mzwqp9pqwpaj9hvjo9f.png)
+![Figure 4: Money for Information vs. Money for Flexibility by https://blog.kese.hu/2021/10/planning-constraints-in-agile-projects.html](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-when-use-waterfall-vs-agile-business-perspective-management/file_2.png)
 ### Waterfall:
 
 -   **Profit Potential:** Using Waterfall's structured approach, the completion of big, complex projects is manageable, and the outcomes are expected. Moreover, it switches those risks presented by scope change to other areas where they are less prominent, making it easier to manage for less dynamic projects. Another aspect that makes implementation a challenge is the rigidity of the waterfall model. Every time new requirements are imposed, the cost of making changes increases. Further, the model's rigidity needs to enable customer feedback, bringing about unnecessarily expensive changes upon them.

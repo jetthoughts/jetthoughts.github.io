@@ -22,6 +22,6 @@ In order for the scroll to appear, you need to limit its `height` by adding heig
 If you do not add this, your block will stretch to the entire height.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9uxdd7z2ccnh9belnkua.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-make-vertically-scrollable-in-css-html/file_0.png)
 
 

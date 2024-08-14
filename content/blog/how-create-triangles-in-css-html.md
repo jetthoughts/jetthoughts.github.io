@@ -37,7 +37,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-bottom: 15px solid red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c6v74y7hiq0oihmawh34.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-css-html/file_0.png)
 
 ## Triangle Down
 ```css
@@ -49,7 +49,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-top: 15px solid blue;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/x5n0u28q42i8yff4wtnf.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-css-html/file_1.png)
 
 ## Triangle Left
 ```css
@@ -61,7 +61,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-right: 15px solid yellow; 
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kp73luwplu4mvylnhyl4.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-css-html/file_2.png)
 
 ## Triangle Right
 ```css
@@ -73,6 +73,6 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-left: 15px solid green;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/36ul4s884a4bazx4y1la.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-triangles-in-css-html/file_3.png)
  
 

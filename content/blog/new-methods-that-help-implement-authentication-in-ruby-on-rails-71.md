@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "new-methods-that-help-implement-authentication-in-ruby-on-rails-71"
 ---
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nazdnkdgk0unctyj3gwg.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/file_0.png)
 
 The new version of Ruby on Rails 7.1 has many new features, some of which make writing your own authorization system easier. Let’s take a closer look at these helpers: `normalizes`, `generates_token_for` and `authenticate_by`.
 

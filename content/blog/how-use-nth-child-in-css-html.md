@@ -34,7 +34,7 @@ li:first-child {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/e9rve6b255r7off0ugz2.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_0.png)
 
 ## Select the 5th list item
 ```css
@@ -42,7 +42,7 @@ li:nth-child(5) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3pcymakl62wpodupa6ha.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_1.png)
 
 
 ## Select every child elements whose index is odd
@@ -51,7 +51,7 @@ li:nth-child(odd) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/07myqk5nxrv4ift045gg.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_2.png)
 
 ## Select every child elements whose index is even
 ```css
@@ -59,7 +59,7 @@ li:nth-child(even) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/er45co5nrbwfsi71oosn.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_3.png)
 
 ## Select every 3rd list item starting with first
 ```css
@@ -67,7 +67,7 @@ li:nth-child(3n — 2) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g39qoeqmkxuh86uxnvtm.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_4.png)
 
 ## Select every 3rd list item starting with 2nd
 ```css
@@ -75,7 +75,7 @@ li:nth-child(3n — 1) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4pax0i1343r08awa8ipe.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_5.png)
   
 ## Select every 3rd child item
 ```css
@@ -83,7 +83,7 @@ li:nth-child(3n) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rxfyxxwzs4pbfs8vdire.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_6.png)
 
 ## Select the first three items of the list
 ```css
@@ -91,7 +91,7 @@ li:nth-child(-n+3) {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r4d8g0treln69h6l7xwe.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_7.png)
       
 ## Select the last element of the list
 ```css
@@ -99,5 +99,5 @@ li:last-child {
   color: red;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d450kwaasyex3j2z1grz.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-nth-child-in-css-html/file_8.png)
  

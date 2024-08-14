@@ -16,7 +16,7 @@ We put everything there: local automations, _CI/CD_ helpers, _PAAS_ release scri
 
 It becomes too hard to find appropriate tools for your problem in that mess. 
 
-![Messy bin folder](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/byrgpl5ltann5d4ism3e.png)
+![Messy bin folder](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/file_0.png)
 
 I had several revisions on decomposing the `/bin` scripts and the whole directory, but I still have not found one solution.
 

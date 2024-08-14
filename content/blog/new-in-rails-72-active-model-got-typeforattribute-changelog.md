@@ -14,7 +14,7 @@ slug: "new-in-rails-72-active-model-got-typeforattribute-changelog"
 
 Ruby on Rails 7.2 brings a handy change. The `type_for_attribute` method is now in Active Model.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ilmccorzumrcqr8nxvre.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/new-in-rails-72-active-model-got-typeforattribute-changelog/file_0.png)
 
 ## What is type_for_attribute?
 

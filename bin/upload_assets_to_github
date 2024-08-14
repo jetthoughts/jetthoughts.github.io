@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+require 'net/http'
+require 'uri'
+
+CDN_REGEX = %r{https?:\/\/dev-to-uploads\.s3\.amazonaws\.com[^\s\)]*}
+
+BLOG_DIR = 'content/blog'
+STATIC_DIR = './static/assets/img/blog'
+REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog'
+
+def download_file(url, dest)
+  uri = URI(url)
+  Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+    request = Net::HTTP::Get.new(uri)
+    http.request(request) do |response|
+      open(dest, 'wb') do |io|
+        response.read_body { |chunk| io.write(chunk) }
+      end
+    end
+  end
+end
+
+Dir.glob("#{BLOG_DIR}/*.md").each do |file_path|
+  file_name = File.basename(file_path, ".md")
+  content = File.read(file_path)
+  index = 0
+
+  updated_content = content.gsub(CDN_REGEX) do |cdn_link|
+    ext = File.extname(URI(cdn_link).path)
+
+    new_dir = "#{STATIC_DIR}/#{file_name}"
+    new_file = "file_#{index}#{ext}"
+    new_path = "#{new_dir}/#{new_file}"
+    pp new_path
+
+    FileUtils.mkdir_p(new_dir)
+
+    download_file(cdn_link, new_path)
+
+    index += 1
+
+    "#{REPO_URL}/#{file_name}/#{new_file}"
+  end
+
+  File.write(file_path, updated_content)
+end

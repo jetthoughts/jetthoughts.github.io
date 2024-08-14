@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "custom-templates-for-rails-scaffolding-ruby"
 ---
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q6bpz5jztjno002mo3mg.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-templates-for-rails-scaffolding-ruby/file_0.png)
 
 Rails has a very handy tool for rapid development called scaffolding. Often programmers ignore it, because some things have to be written by hand anyway. I will tell you how you can minimize manual coding by using custom templates.
 
@@ -56,9 +56,9 @@ $ rails db:migrate
 ```
 As a result, we get standard templates, which now need to be manually adjusted to fit the site design.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oer2x7ysm77ce5zi4ev6.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-templates-for-rails-scaffolding-ruby/file_1.png)
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r94ick43lgw7l2i00e8g.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-templates-for-rails-scaffolding-ruby/file_2.png)
 
 It’s time to update the templates to use custom styles. I suggest using Bootstrap.
 
@@ -189,9 +189,9 @@ $ rails g scaffold Post title:string description:text
 ```
 Result:
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/40tl5ojla2pbq3mgyag6.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-templates-for-rails-scaffolding-ruby/file_3.png)
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6n5c6q51lmwc4r1mok0o.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-templates-for-rails-scaffolding-ruby/file_4.png)
 
 
 

@@ -25,7 +25,7 @@ For this case need to use the border-radius property and set the value to 50%. T
   background: lightgreen;
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f8wphtna4iy825wyscnw.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-circles-in-css-html/file_0.png)
 
 ## Circle()
 In this, the circle is created using the shape-outside property. You must also apply a clip-path with the appropriate property to make the circle appear.
@@ -38,5 +38,5 @@ In this, the circle is created using the shape-outside property. You must also a
   background: yellow; 
 }
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xug5rpk5y88kwbg8z98d.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-circles-in-css-html/file_1.png)
   

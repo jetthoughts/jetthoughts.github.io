@@ -12,7 +12,7 @@ slug: "ultimate-guide-hiring-ruby-on-rails-developers"
 ---
 Ruby on Rails (RoR) is a top choice and a pivotal tool in web development, especially for startups. Its speed, reliability, and ability to simplify complex tasks make it a favorite among startups, enabling them to launch products quickly.
 
-![the cartoon-like image of a young startup entrepreneur searching for a ruby gem in a pile of coals. Let me know if you need any changes or additional elements!](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9dsa6jiypldk2a6idqx6.png)
+![the cartoon-like image of a young startup entrepreneur searching for a ruby gem in a pile of coals. Let me know if you need any changes or additional elements!](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/ultimate-guide-hiring-ruby-on-rails-developers/file_0.png)
 
 Understanding the Role
 ----------------------

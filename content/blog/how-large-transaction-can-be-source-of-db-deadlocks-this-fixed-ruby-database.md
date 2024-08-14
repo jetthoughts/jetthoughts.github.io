@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database"
 ---
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9w7tk6wrm2hbp5b0d7z5.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database/file_0.png)
 
 Recently in a project, we encountered the fact that sometimes we had a DB Deadlocks error. After some experiments, we realized that this is due to the fact that we have too large a transaction and it mixes searching creating, and updating actions.
 

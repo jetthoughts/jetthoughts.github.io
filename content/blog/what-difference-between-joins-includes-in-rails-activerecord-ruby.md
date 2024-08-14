@@ -15,12 +15,12 @@ The main difference is that when using includes the eager loading is used. Eager
 Let’s see how it works with an example:
 
 **Joins:**
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yvc5868vlo25ieeqqj3a.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-difference-between-joins-includes-in-rails-activerecord-ruby/file_0.png)
 
 We have joined tables, but we don’t get any data from the users table. Therefore, each time the user record is accessed, and there is an additional query to the database.
 
 **Includes:**
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0a4wxvhwry0k6sucaux0.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-difference-between-joins-includes-in-rails-activerecord-ruby/file_1.png)
 
 As you can see, we don’t have any additional queries because we use eager loading and we get the data about the user from memory instead of querying the database.
 

@@ -15,14 +15,14 @@ Communication at work is one of the most important aspects of any business.
 But why? Let’s take a brief look at the reasons.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/irc1zshxi981sfwxj4zz.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-communication-important-when-you-work-remotely-remote/file_0.png)
 
 ## Working routine
 
 How does your working day in the office start? Right, it starts with coffee.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0glbyi1r1bcpys0uoc9j.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-communication-important-when-you-work-remotely-remote/file_1.png)
 
 Seriously, coffee is the most important part of my daily routine. When you work remotely, you are not able to come to the office in the morning, take your favorite cup, make fresh coffee and drink it while chatting with your colleagues before the working day starts.
 
@@ -56,7 +56,7 @@ In [JetThoughts](https://www.jetthoughts.com/) we have a special day for this me
 
 What do we do together? We discuss all problems, look for ways of solving problems, set up our goals, write articles on different topics, etc.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgl59scexgmc2t6y0cnp.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-communication-important-when-you-work-remotely-remote/file_2.png)
 
 In this way, communication tears down the barriers between departments, and allows people from across the company to work together. Due to a wide variety of skills and perspectives often needed to complete a project in a timely manner, greater cooperation across departments can only increase productivity.
 

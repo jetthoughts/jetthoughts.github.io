@@ -12,7 +12,7 @@ slug: "integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-j
 ---
 With the recent release of [Bun](https://bun.sh/) and its newfound support for Vite, coupled with _Ruby on Rails 7.1_ incorporating native support for Bun, developers can now enhance their web development workflow significantly. Here is the effortless process of enabling _Bun_ for [Vite Ruby](https://vite-ruby.netlify.app/), ultimately streamlining your front-end builds.
 
-![Bun plus Vite Ruby](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hhd73ikhzma10k727lzf.png)
+![Bun plus Vite Ruby](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/file_0.png)
 
 ## Getting Started: Creating a Shim Bin
 

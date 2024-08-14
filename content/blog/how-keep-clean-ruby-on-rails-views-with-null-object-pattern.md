@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "how-keep-clean-ruby-on-rails-views-with-null-object-pattern"
 ---
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qxvcqxyr3cymikwwh11y.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-keep-clean-ruby-on-rails-views-with-null-object-pattern/file_0.png)
 
 One of the most common errors developers encounter is NoMethodError. It occurs when code is executed according to a script not provided by the programmer.
 

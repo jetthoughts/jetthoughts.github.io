@@ -10,7 +10,7 @@ canonical_url: "https://jetthoughts.com/blog/stop-using-faker-random-data-in-tes
 cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fph5ct77dpnm7820jf2wn.png"
 slug: "stop-using-faker-random-data-in-test-fixtures"
 ---
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ph5ct77dpnm7820jf2wn.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stop-using-faker-random-data-in-test-fixtures/file_0.png)
 
 
 
@@ -66,14 +66,14 @@ For one of our projects, we **reduced it by** **20% (more than 20 min)** by repl
 The problem is that random data breaks [F.I.R.S.T principles of testing](https://medium.com/@tasdikrahman/f-i-r-s-t-principles-of-testing-1a497acda8d6).
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/is1zyen2ckwhlw6imaoe.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stop-using-faker-random-data-in-test-fixtures/file_1.png)
 
 
 
 Performance issues may violate the fast testing principle.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4r77csgtjw2wy2zh3r4m.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stop-using-faker-random-data-in-test-fixtures/file_2.png)
 
 
 
@@ -81,7 +81,7 @@ Performance issues may violate the fast testing principle.
 >  *As a result above together gives a meaningful impact on the project, and in fact, the sum will be a critical slowdown in development. This is incredibly frustrating.*
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6wq1sd6oo7ferceqwjep.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stop-using-faker-random-data-in-test-fixtures/file_3.png)
 
 
 

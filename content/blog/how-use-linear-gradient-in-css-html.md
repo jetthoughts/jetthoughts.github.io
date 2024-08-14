@@ -18,7 +18,7 @@ In this example shows a linear gradient that starts at the top. It starts blue, 
 ```css
 background-image: linear-gradient(to bottom, blue, green);
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/peojlhke1mxezd9zhaxn.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-linear-gradient-in-css-html/file_0.png)
  
 ## Left to Right
 In this example shows a linear gradient that begins on the left. It starts blue, transitioning yellow:
@@ -26,7 +26,7 @@ In this example shows a linear gradient that begins on the left. It starts blue,
 ```css
 background-image: linear-gradient(to right, blue, green);
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ofv8leikwgra8jbsapl5.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-linear-gradient-in-css-html/file_1.png)
  
 
 ## Diagonal
@@ -37,7 +37,7 @@ In this example shows a linear gradient that starts at the top left (and goes to
 ```css
 background-image: linear-gradient(to bottom right, blue, green);
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bd89zj7fds8ztshv6aak.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-linear-gradient-in-css-html/file_2.png)
  
 If you want to control the direction of the gradient more, you can define the angle instead of predefined directions (bottom, up, right, left, bottom right, etc.). A value of `0deg` is equivalent to to top. A value of `90deg` is equivalent `to right`. A value of `180deg` is equivalent `to bottom`.
 
@@ -51,5 +51,5 @@ In this example shows a linear gradient (from top to bottom) with multiple color
 ```css
 background-image: linear-gradient(to bottom, blue, yellow, green);
 ```
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yqmbg7soofy5t6ufj8yk.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-linear-gradient-in-css-html/file_3.png)
  

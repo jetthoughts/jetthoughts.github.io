@@ -12,12 +12,12 @@ slug: "how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-ex
 ---
 The logic of small applications can be present as a series of transactions. Using the Transaction Scripts pattern, we get an application that is easier to maintain, to cover with tests and to scale.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/5ch3urm1ngwqz16vdg8m.png)
+![Alt Text](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/file_0.png)
 
 ## The Problem Setup
 There is a Ruby on Rails API application that has Post, User, and Like models. Users should be able to like posts.
 
-![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/z8doa4yviijb8cje161m.png)
+![Alt Text](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/file_1.png)
 
 Let’s add a controller that processes click on like buttons.
 

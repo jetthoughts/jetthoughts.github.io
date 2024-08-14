@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "what-ruby-on-rails-middleware"
 ---
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pkulmbqw4w1hes94c9vl.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-ruby-on-rails-middleware/file_0.png)
 The middleware component sits between the client and the server, processing inbound requests and outbound responses. The middleware is used for tasks that are not related to business logic of your application.
 
 A list of tasks that are commonly solved with the help of middleware:

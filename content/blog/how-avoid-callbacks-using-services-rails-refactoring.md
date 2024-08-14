@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "how-avoid-callbacks-using-services-rails-refactoring"
 ---
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lsgjg0p19920ehuu6mz4.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-callbacks-using-services-rails-refactoring/file_0.png)
 
 Often programmers abuse callbacks, not fully understanding that in the end their code will be confusing and non-obvious. There are several ways to avoid using callbacks. Today I will tell you how to do this using services.
 

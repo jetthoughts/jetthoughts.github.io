@@ -15,7 +15,7 @@ Thinking of a beautiful and grammatically correct CSS code over and over again b
 Then this article is just for you. We will not go through the theory but move on to practice right away.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/giqa90g49hhotrej9c7y.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/rscss-styling-css-without-losing-your-sanity/file_0.png)
 
 ## What we will use?
 

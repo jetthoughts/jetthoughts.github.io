@@ -14,7 +14,7 @@ slug: "how-avoid-n-1-keep-your-ruby-on-rails-controller-clean"
 > ## Where to put the logic related to database queries optimization in a Ruby on Rails application. We want to answer this question by showing you the ‘Facade’ approach.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l42d9vuobi7g9un4iahx.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/file_0.png)
 
 
 ### Outline the problem
@@ -69,7 +69,7 @@ end
 If we need to show some films with their average ratings, this *avg_rating* method will issue an *avg* query every time it’s called, which will lead to a lot of individual queries.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f16nzbhy6l85dksjujj2.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/file_1.png)
 
 
 ### How to reduce the query to two
@@ -105,7 +105,7 @@ end
 And now we receive data without N+1 problem:
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wz4dt3udozisbpf2j6zc.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/file_2.png)
 
 
 ### Where to store code for receiving data

@@ -13,7 +13,7 @@ slug: "new-in-rails-72-generated-with-devcontainer-changelog"
 Exciting news from Rails! The latest Rails 7.2 has a new feature. When you create a new app, it now generates a `.devcontainer` folder.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u76j5e4876kxiv4iz2nk.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/new-in-rails-72-generated-with-devcontainer-changelog/file_0.png)
 
 What's in the `.devcontainer`?
 ----------------------------

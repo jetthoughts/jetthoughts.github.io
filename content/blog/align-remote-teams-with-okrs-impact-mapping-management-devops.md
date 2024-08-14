@@ -20,7 +20,7 @@ To address these issues and support a cross-functional team with limited experie
 
 ## Align the Focus with OKR:
 
-![Darts in the goal](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qngq16x6knfyaqm50zem.png)
+![Darts in the goal](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/file_0.png)
 
 
 The first step is to gain clarity on the team's most essential goals.
@@ -50,7 +50,7 @@ _The best part is that you don't need an expert facilitator to support this work
 
 ## Result:
 
-![Success Team](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/le8apwmvn71mvkotayq9.png)
+![Success Team](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/file_1.png)
 
 
 With a laser-focused approach based on OKRs and a well-defined roadmap using Impact Mapping, the team can confidently start working on the project.

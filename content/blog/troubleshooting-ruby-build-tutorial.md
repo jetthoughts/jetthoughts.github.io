@@ -12,7 +12,7 @@ slug: "troubleshooting-ruby-build-tutorial"
 ---
 Have you found problems building ruby on a local machine? How to configure your local environment once and for all?
 
-![Failed to build ruby](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/imhqc87sg8k3h3i5socn.png)
+![Failed to build ruby](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/troubleshooting-ruby-build-tutorial/file_0.png)
 
 Building ruby is dependent on several key elements: build tools, compilers, linkers, also shared libraries like openssl, libyaml, readline and etc. And we need to help ruby-build to find all those tools and libraries.
 

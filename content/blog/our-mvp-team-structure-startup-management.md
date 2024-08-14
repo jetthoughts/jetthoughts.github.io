@@ -12,7 +12,7 @@ slug: "our-mvp-team-structure-startup-management"
 ---
 In structuring a team for MVP, we should consider the following: there is a massive number of uncertainties. We have to work with assumptions and bets.
 
-![Strategyzer](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lgrwufmk18egtdz11qsj.png)
+![Strategyzer](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/our-mvp-team-structure-startup-management/file_0.png)
 
 The goal for the business is to find a good enough solution for a reasonable budget: _ROI_. It's vital to have the fastest feedback loop to prevent dramatic waste.
 

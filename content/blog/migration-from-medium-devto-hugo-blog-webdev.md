@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "migration-from-medium-devto-hugo-blog-webdev"
 ---
 
-![Photo by Stephen Phillips - Hostreviews.co.uk on Unsplash](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p9i2krmml9b2n1z53jn6.jpg)
+![Photo by Stephen Phillips - Hostreviews.co.uk on Unsplash](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/migration-from-medium-devto-hugo-blog-webdev/file_0.jpg)
 
 For a long time, we've been running a corporate blog on Medium, but recently, we've run into some problems:
 

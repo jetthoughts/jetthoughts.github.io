@@ -24,7 +24,7 @@ I assembled the most common problems, which were missing from the consideration,
 * Easier to add unintentional bugs
 
 ## Hard to find what causes bugs
-![Where is the method?](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8dbu6mi669azb5tunp32.png)
+![Where is the method?](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/file_0.png)
 
 In my experience, most of the unexpected and hard-to-reproduce bugs were caused by the dynamically generated code. We cannot rely on obvious evidence of how code should work.
 
@@ -38,20 +38,20 @@ It has tight coupling with other codes but is hidden and not apparent in some ca
 And even if we found some unexpected coupling, it's hard to find it. We cannot use IDE and other Editors to find it straightforward. See the cover screen as an example.
 
 ### Harder to understand the logic
-![Do you see what we are going to invoke?](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gn2dcv6mdz7pn0og6r1f.png) 
+![Do you see what we are going to invoke?](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/file_1.png) 
 We are limited. We can only consider a few things at a time. So you will require a lot of effort to recompile and store all variations in your head, especially if there are many variables and dependencies.
 
 To change logic need to extend the current complexity even more. And make sure not to break the previous scenario.
 
 ## Easier to add unintentional bugs
-![Small typo in the method name!](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vh3e95yonzcd72z8dpa2.png)
+![Small typo in the method name!](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/file_2.png)
 
 It is elementary to add typo errors and miss them. There is no one solution to help to validate all cases and pre-test our dynamic code.
 
 Good test coverage should help you handle those cases, but today is hard to find developers who would like to onboard testing ;(.
 
 ### Easier to add security whole in the code
-![An example of the Ruby code injection opens a security "breach" for hackers.](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5jw4mohfh70df5paru14.png)
+![An example of the Ruby code injection opens a security "breach" for hackers.](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/file_3.png)
 
 We can easily miss security problems.
 

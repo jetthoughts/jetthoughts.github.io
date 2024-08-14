@@ -11,7 +11,7 @@ cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover
 slug: "manage-bundler-indirect-dependencies-versions-ruby-beginners"
 ---
 Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new breaking version of the indirect dependency, causing deployment fails?
-![Bundler looks for options](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4sxis2wl9dy5364bl24a.png)
+![Bundler looks for options](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/manage-bundler-indirect-dependencies-versions-ruby-beginners/file_0.png)
  
 Sometimes we got broken deploy, because of the not supported version of the gem, and it has been used automatically as an indirect dependency.
 
@@ -21,7 +21,7 @@ So what can we do? How could we help bundler find better versions for indirect d
 
 ## Migrate from indirect to direct dependency status
 Yep, that's all. We just need to add indirect dependency as direct. And do not forget to add a notice comment to ensure that this gem is required only for assigning version constraints.
-![Add direct dependency to add constraint for indirect](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pbxx3fzqemouy7a2uml4.png)
+![Add direct dependency to add constraint for indirect](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/manage-bundler-indirect-dependencies-versions-ruby-beginners/file_1.png)
 
 With explicit version constraints assigned for indirect (and now direct) dependency, the bundler will have to satisfy them and will change other gems.
 

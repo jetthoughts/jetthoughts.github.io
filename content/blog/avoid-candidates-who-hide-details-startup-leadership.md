@@ -17,7 +17,7 @@ Understanding how a candidate plans to work is crucial when hiring remote worker
 While it may sound witty, it's a red flag. Here's why.
 
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b9b4ritbvzwpywooylwn.png)
+![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/avoid-candidates-who-hide-details-startup-leadership/file_0.png)
 
 Fear of Intellectual Theft? Not a Valid Excuse
 ----------------------------------------------
