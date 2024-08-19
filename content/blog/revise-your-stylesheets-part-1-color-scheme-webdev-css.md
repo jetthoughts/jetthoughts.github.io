@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:57Z"
 draft: false
 tags: ["webdev", "css"]
 canonical_url: "https://jetthoughts.com/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--yvFjEhJH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/cover.jpeg"
 slug: "revise-your-stylesheets-part-1-color-scheme-webdev-css"
 ---
 

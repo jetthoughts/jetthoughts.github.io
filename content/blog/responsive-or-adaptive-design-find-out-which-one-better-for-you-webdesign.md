@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:56Z"
 draft: false
 tags: ["design", "webdesign", "layouts"]
 canonical_url: "https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--BARc7jMm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/cover.jpeg"
 slug: "responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/file_0.jpeg)

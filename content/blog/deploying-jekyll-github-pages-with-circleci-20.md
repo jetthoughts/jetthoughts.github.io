@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:23Z"
 draft: false
 tags: ["jekyll", "deploying", "ci", "circleci"]
 canonical_url: "https://jetthoughts.com/blog/deploying-jekyll-github-pages-with-circleci-20/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--6BbWuVqe--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/cover.jpeg"
 slug: "deploying-jekyll-github-pages-with-circleci-20"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-jekyll-github-pages-with-circleci-20/file_0.jpeg)

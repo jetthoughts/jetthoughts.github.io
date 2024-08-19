@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:33Z"
 draft: false
 tags: ["productivity", "startup", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--BRhX32Q1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/cover.jpeg"
 slug: "tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup"
 ---
 ![Photo by [Jakob Owens](https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/video?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/file_0.jpeg)

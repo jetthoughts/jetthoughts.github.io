@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:30Z"
 draft: false
 tags: ["design", "process", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-incremental-design-process-in-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--akF-lZi3--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-incremental-design-process-in-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-incremental-design-process-in-startup/cover.jpeg"
 slug: "how-setup-incremental-design-process-in-startup"
 ---
 ![[https://www.mo-hr.com/en/Specifications/Performance](https://www.mo-hr.com/en/Specifications/Performance)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-incremental-design-process-in-startup/file_0.jpeg)

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T19:27:13Z"
 draft: false
 tags: ["startup", "leadership", "tutorial"]
 canonical_url: "https://dev.to/jetthoughts/avoid-candidates-who-hide-details-5f7e"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2jnqtsq96jcqrrivux1e.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/avoid-candidates-who-hide-details-startup-leadership/cover.png"
 slug: "avoid-candidates-who-hide-details-startup-leadership"
 ---
 Understanding how a candidate plans to work is crucial when hiring remote workers. Have you ever encountered a candidate who hesitates to share their work methods, perhaps citing:

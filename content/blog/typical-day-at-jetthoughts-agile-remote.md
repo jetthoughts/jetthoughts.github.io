@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:39Z"
 draft: false
 tags: ["agile", "remote", "kanban", "process"]
 canonical_url: "https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--0ia0xhVf--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/typical-day-at-jetthoughts-agile-remote/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/typical-day-at-jetthoughts-agile-remote/cover.jpeg"
 slug: "typical-day-at-jetthoughts-agile-remote"
 ---
 

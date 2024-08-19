@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:32Z"
 draft: false
 tags: ["devops", "productivity", "tutorial", "tooling"]
 canonical_url: "https://jetthoughts.com/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbyrgpl5ltann5d4ism3e.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/cover.png"
 slug: "tldr-move-cicd-scripts-into-automation-devops-productivity"
 ---
 Today our `/bin` folder has become overwhelmed with different development tools and scripts.

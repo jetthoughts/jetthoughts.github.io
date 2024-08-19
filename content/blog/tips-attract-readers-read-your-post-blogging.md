@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:27Z"
 draft: false
 tags: ["blogging", "tips", "writing"]
 canonical_url: "https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--lIiLM19A--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-attract-readers-read-your-post-blogging/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-attract-readers-read-your-post-blogging/cover.jpeg"
 slug: "tips-attract-readers-read-your-post-blogging"
 ---
 Do you know how to keep readers’ attention? We had been experimenting with different ways to make articles more attractive until we found and checked the best steps to do it. Let’s read!

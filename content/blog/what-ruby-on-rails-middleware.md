@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:58Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/what-ruby-on-rails-middleware/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpkulmbqw4w1hes94c9vl.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-ruby-on-rails-middleware/cover.png"
 slug: "what-ruby-on-rails-middleware"
 ---
 

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:49Z"
 draft: false
 tags: ["ruby", "programming", "devops", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/auto-install-system-dependencies-for-ruby-on-rails-programming/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0ejalho4lm0evqn4t6bq.jpg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/auto-install-system-dependencies-for-ruby-on-rails-programming/cover.jpg"
 slug: "auto-install-system-dependencies-for-ruby-on-rails-programming"
 ---
 Let's integrate Homebrew into our Ruby on Rails Project local set up.

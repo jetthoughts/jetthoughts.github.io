@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:56Z"
 draft: false
 tags: ["agile", "kanban", "management", "development"]
 canonical_url: "https://jetthoughts.com/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--UfoHeHwl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/cover.jpeg"
 slug: "what-do-for-developer-when-wip-limit-reached-agile-kanban"
 ---
 

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:01Z"
 draft: false
 tags: ["programming", "javascript", "rails", "frontend"]
 canonical_url: "https://jetthoughts.com/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fv0b6zeupdtuu8xux2xhp.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/cover.png"
 slug: "ruby-on-rails-views-resources-for-frontend-developer-programming-javascript"
 ---
 🚀 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails Views kitchen! 🎉

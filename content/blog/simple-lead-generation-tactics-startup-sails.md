@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:09Z"
 draft: false
 tags: ["startup", "sails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/simple-lead-generation-tactics-startup-sails/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--maEbc9oH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/cover.jpeg"
 slug: "simple-lead-generation-tactics-startup-sails"
 ---
 ![Photo by [Denys Nevozhai](https://unsplash.com/photos/7nrsVjvALnA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/roads?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simple-lead-generation-tactics-startup-sails/file_0.jpeg)

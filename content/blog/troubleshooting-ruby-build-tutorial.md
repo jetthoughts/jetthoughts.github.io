@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:37Z"
 draft: false
 tags: ["ruby", "tutorial", "beginners", "help"]
 canonical_url: "https://jetthoughts.com/blog/troubleshooting-ruby-build-tutorial/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fj9vog7po56twk0s2pd6k.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/troubleshooting-ruby-build-tutorial/cover.png"
 slug: "troubleshooting-ruby-build-tutorial"
 ---
 Have you found problems building ruby on a local machine? How to configure your local environment once and for all?

@@ -7,7 +7,7 @@ edited_at: "2024-08-16T13:29:27Z"
 draft: false
 tags: ["testdev", "devresolutions2024", "webdev", "startup"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-soars-among-top-web-development-companies-in-usa-for-2024-by-techreviewerco-testdev-devresolutions2024/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsvbb2lmep9w1fcrbru4u.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-soars-among-top-web-development-companies-in-usa-for-2024-by-techreviewerco-testdev-devresolutions2024/cover.png"
 slug: "jetthoughts-soars-among-top-web-development-companies-in-usa-for-2024-by-techreviewerco-testdev-devresolutions2024"
 ---
 

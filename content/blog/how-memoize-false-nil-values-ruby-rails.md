@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:24Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "development"]
 canonical_url: "https://jetthoughts.com/blog/how-memoize-false-nil-values-ruby-rails/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--eGa9p_ab--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-memoize-false-nil-values-ruby-rails/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-memoize-false-nil-values-ruby-rails/cover.jpeg"
 slug: "how-memoize-false-nil-values-ruby-rails"
 ---
 

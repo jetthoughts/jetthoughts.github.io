@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:10Z"
 draft: false
 tags: ["startup", "review", "product", "company"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--Zit8Imvy--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/cover.jpeg"
 slug: "jetthoughts-receives-first-review-on-clutchco-thank-you-startup"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/file_0.jpeg)

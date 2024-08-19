@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:51Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--q4p9E3In--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/cover.jpeg"
 slug: "automated-delivery-react-vue-app-for-each-pull-request-ci"
 ---
 Would you like to speed up the development process of your React / Vue application? Make it more predictable and transparent for clients and teammates? Well, continue reading. In this article, I want to describe a set of tools that will make your life easier.

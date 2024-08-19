@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:00Z"
 draft: false
 tags: ["webdev", "legacy", "tools", "development"]
 canonical_url: "https://jetthoughts.com/blog/cheap-tests-with-ghost-inspector-webdev-legacy/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--32tlX9Mn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cheap-tests-with-ghost-inspector-webdev-legacy/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cheap-tests-with-ghost-inspector-webdev-legacy/cover.png"
 slug: "cheap-tests-with-ghost-inspector-webdev-legacy"
 ---
 What do you do when a legacy project has no tests and adding them is difficult? Before making new changes, the developer wants to ensure the old code works as expected.

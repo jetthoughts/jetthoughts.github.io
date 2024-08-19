@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:23Z"
 draft: false
 tags: ["css", "html", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-make-vertically-scrollable-in-css-html/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy1r3jjguhgxpz0mp1i0s.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-make-vertically-scrollable-in-css-html/cover.jpeg"
 slug: "how-make-vertically-scrollable-in-css-html"
 ---
 In order for the scroll to appear, you need to limit its `height` by adding height or `max-height` properties.

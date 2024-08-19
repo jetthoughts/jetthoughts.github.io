@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:24:03Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "bestpractices"]
 canonical_url: "https://jetthoughts.com/blog/where-read-env-variables-in-ruby-on-rails-application/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--FAECQ6hC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/where-read-env-variables-in-ruby-on-rails-application/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/where-read-env-variables-in-ruby-on-rails-application/cover.png"
 slug: "where-read-env-variables-in-ruby-on-rails-application"
 ---
 

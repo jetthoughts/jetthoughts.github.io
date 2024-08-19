@@ -7,7 +7,7 @@ edited_at: "2024-07-31T08:34:43Z"
 draft: false
 tags: ["ruby", "rails", "kamal", "docker"]
 canonical_url: "https://jetthoughts.com/blog/kamal-integration-in-rails-8-by-default-ruby/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq8hqn47ak2tmxlr13awl.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/kamal-integration-in-rails-8-by-default-ruby/cover.png"
 slug: "kamal-integration-in-rails-8-by-default-ruby"
 ---
 

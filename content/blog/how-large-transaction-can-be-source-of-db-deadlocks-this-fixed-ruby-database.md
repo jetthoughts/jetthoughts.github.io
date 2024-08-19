@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:16Z"
 draft: false
 tags: ["ruby", "database", "webdev", "programming"]
 canonical_url: "https://jetthoughts.com/blog/how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9w7tk6wrm2hbp5b0d7z5.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database/cover.png"
 slug: "how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database"
 ---
 

@@ -7,7 +7,7 @@ edited_at: ""
 draft: false
 tags: ["devops", "docker", "kamal", "rails"]
 canonical_url: "https://dev.to/jetthoughts/deploying-ruby-on-rails-applications-with-kamal-1m9n"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx1ujafgup7gqat2ngds5.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/cover.png"
 slug: "deploying-ruby-on-rails-applications-with-kamal-devops-docker"
 ---
 With the release of Rails 8, [Kamal will be the default tool for deploying Rails applications](https://jetthoughts.com/blog/kamal-integration-in-rails-8-by-default-ruby/), simplifying the process for developers. This change is significant as it standardizes deployment, making it easier for both new and experienced developers to get their applications up and running. Utilizing a VPS for hosting your Rails applications is also a cost-effective alternative to platforms like Heroku, providing greater flexibility and control over your infrastructure. 

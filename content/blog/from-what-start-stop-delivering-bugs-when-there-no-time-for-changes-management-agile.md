@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:37Z"
 draft: false
 tags: ["management", "agile", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--XolT3Qa7--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/cover.jpeg"
 slug: "from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile"
 ---
 While you are struggling with breaking into the market; small bugs, UX problems, unexpected behaviors make you insane. You start thinking that you and your team are doing something wrong.

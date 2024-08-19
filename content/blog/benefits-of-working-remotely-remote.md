@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:54Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
 canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--2Iyt0Nia--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/benefits-of-working-remotely-remote/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/benefits-of-working-remotely-remote/cover.jpeg"
 slug: "benefits-of-working-remotely-remote"
 ---
 *Nowadays, remote work gains more and more prominence. Many successful companies let their employees work from home and even prefer hiring people who don’t need an office and love working home. But why?*

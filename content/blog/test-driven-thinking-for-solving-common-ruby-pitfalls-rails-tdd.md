@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:24Z"
 draft: false
 tags: ["rails", "tdd", "testing"]
 canonical_url: "https://jetthoughts.com/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--gf8MwQJj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/cover.jpeg"
 slug: "test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd"
 ---
 

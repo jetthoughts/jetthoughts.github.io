@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:24:06Z"
 draft: false
 tags: ["blame", "blamegame", "projectfailure"]
 canonical_url: "https://jetthoughts.com/blog/who-blame-when-project-fails-blamegame/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F38e6anewxdyto08iy9zl.jpg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/who-blame-when-project-fails-blamegame/cover.jpg"
 slug: "who-blame-when-project-fails-blamegame"
 ---
 Large projects continue to fail, often with disastrous results for the organizations involved. Do you know the reasons they fail and how to avoid them? Why does this kind of thing keep happening?

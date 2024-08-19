@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:40Z"
 draft: false
 tags: ["sails", "leadgeneration", "outstaffing"]
 canonical_url: "https://jetthoughts.com/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--lj7k83Pa--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/cover.png"
 slug: "ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration"
 ---
 ![[Illustration by Freepik Storyset](https://storyset.com/illustration/team/pana)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/file_0.png)

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:43Z"
 draft: false
 tags: ["ruby", "rails", "python", "javascript"]
 canonical_url: "https://jetthoughts.com/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F5ch3urm1ngwqz16vdg8m.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example/cover.png"
 slug: "how-use-transaction-script-aka-service-objects-in-ruby-on-rails-simple-example"
 ---
 The logic of small applications can be present as a series of transactions. Using the Transaction Scripts pattern, we get an application that is easier to maintain, to cover with tests and to scale.

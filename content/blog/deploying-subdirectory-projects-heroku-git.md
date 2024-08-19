@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:25Z"
 draft: false
 tags: ["heroku", "git", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/deploying-subdirectory-projects-heroku-git/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--r0VyEXHC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-subdirectory-projects-heroku-git/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/deploying-subdirectory-projects-heroku-git/cover.png"
 slug: "deploying-subdirectory-projects-heroku-git"
 ---
 When you want to deploy to Heroku a project located in a Git subdirectory, simply running git push heroku master will likely fail, because Heroku buildpacks won’t be able to detect your project files location. There are two simple solutions which will help you make it work.

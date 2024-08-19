@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:04Z"
 draft: false
 tags: ["startup", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-startup-productivity/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4l8bgzlouvos0mzbr7x6.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-startup-productivity/cover.png"
 slug: "integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-startup-productivity"
 ---
 I just finished reading ["Continuous Discovery Habits: Discover Products That Create Customer Value and Business Value."](https://www.goodreads.com/book/show/58046715-continuous-discovery-habits?ref=rae_0) The book combines [Impact Mapping](https://www.impactmapping.org/), Customer Interview, and [LDJ](https://go.ajsmart.com/ldj) to create a process that can be used to develop innovative products.

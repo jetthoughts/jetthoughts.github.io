@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:40Z"
 draft: false
 tags: ["writing", "introduction", "blogging", "blog"]
 canonical_url: "https://jetthoughts.com/blog/practical-guide-writing-introductions-introduction/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--Yfzo2a1v--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/practical-guide-writing-introductions-introduction/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/practical-guide-writing-introductions-introduction/cover.jpeg"
 slug: "practical-guide-writing-introductions-introduction"
 ---
 *Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It simply summarises the main points of your article. So why so much noise about it?*

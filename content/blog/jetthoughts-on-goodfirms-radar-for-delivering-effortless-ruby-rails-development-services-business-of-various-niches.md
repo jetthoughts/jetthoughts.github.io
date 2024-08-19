@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:08Z"
 draft: false
 tags: ["ruby", "rails", "service"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--EMFAkZzx--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/cover.jpeg"
 slug: "jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/file_0.jpeg)

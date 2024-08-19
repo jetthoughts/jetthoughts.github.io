@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:59Z"
 draft: false
 tags: ["productivity", "startup", "remote", "onboarding"]
 canonical_url: "https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--a6cXSfPM--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/cover.jpeg"
 slug: "how-does-onboarding-look-like-in-jetthoughts-productivity-startup"
 ---
 

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:21Z"
 draft: false
 tags: ["rails", "webdev", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/more-control-over-enum-in-rails-71-webdev/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3z4m2w9mdthapyr7ke09.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/more-control-over-enum-in-rails-71-webdev/cover.png"
 slug: "more-control-over-enum-in-rails-71-webdev"
 ---
 `ActiveRecord::Enum` in Rails have long been a convenient tool for representing a set of symbolic values within a model. However, using `enum` can sometimes lead to unexpected behavior, especially when it comes to the automatic generation of instance methods. 

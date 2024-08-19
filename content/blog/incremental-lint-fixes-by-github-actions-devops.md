@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:58Z"
 draft: false
 tags: ["devops", "github", "ruby", "codequality"]
 canonical_url: "https://jetthoughts.com/blog/incremental-lint-fixes-by-github-actions-devops/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Frriw7035iyk4wwedexq2.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/incremental-lint-fixes-by-github-actions-devops/cover.png"
 slug: "incremental-lint-fixes-by-github-actions-devops"
 ---
 How do you apply new lint rules to the legacy project with active development? Have you added `standard` gem recently, and now you are required to change a lot of files but could not apply them at once.

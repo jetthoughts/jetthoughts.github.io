@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:41Z"
 draft: false
 tags: ["startup", "recruiting"]
 canonical_url: "https://jetthoughts.com/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--HTZpc8rN--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/cover.jpeg"
 slug: "7-tricks-of-successful-communication-with-candidates-startup-recruiting"
 ---
 *Nowadays attracting good candidates is a pretty hard process, thereby, recruiters often face the problem of long-term closing of vacancies. That happens because HR specialists don’t pay enough attention to the initial stage of selection and communication.*

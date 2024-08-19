@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:21Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/stop-using-faker-random-data-in-test-fixtures/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fph5ct77dpnm7820jf2wn.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stop-using-faker-random-data-in-test-fixtures/cover.png"
 slug: "stop-using-faker-random-data-in-test-fixtures"
 ---
 ![Image description](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/stop-using-faker-random-data-in-test-fixtures/file_0.png)

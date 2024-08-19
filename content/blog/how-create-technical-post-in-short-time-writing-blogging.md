@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:54Z"
 draft: false
 tags: ["writing", "blogging", "tips"]
 canonical_url: "https://jetthoughts.com/blog/how-create-technical-post-in-short-time-writing-blogging/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--eCdXfJai--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-technical-post-in-short-time-writing-blogging/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-create-technical-post-in-short-time-writing-blogging/cover.jpeg"
 slug: "how-create-technical-post-in-short-time-writing-blogging"
 ---
 *After reading thousands of posts, it’s time to share a workflow that will help those who are creating amazing things to blog more easily and often.*

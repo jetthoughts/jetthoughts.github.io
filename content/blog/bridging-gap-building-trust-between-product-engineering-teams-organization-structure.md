@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:57Z"
 draft: false
 tags: ["organization", "structure", "effectiveness"]
 canonical_url: "https://jetthoughts.com/blog/bridging-gap-building-trust-between-product-engineering-teams-organization-structure/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe4t3b97nxjihvlownx88.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/bridging-gap-building-trust-between-product-engineering-teams-organization-structure/cover.png"
 slug: "bridging-gap-building-trust-between-product-engineering-teams-organization-structure"
 ---
 Companies often see their product and engineering teams compete instead of working together effectively. This lack of synergy causes a lack of trust and not rare scenarios where everyone, sooner or later, points fingers at others, thus slowing down the general development process. However, not only does the commitment of trust become the solution, but it also opens up the road to an easy and efficient work process and, consequently, promotes a friendly working environment.

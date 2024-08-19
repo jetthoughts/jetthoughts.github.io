@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:53Z"
 draft: false
 tags: ["redux", "react", "javascript", "frontend"]
 canonical_url: "https://jetthoughts.com/blog/reduce-concurrent-requests-by-redux-saga-effects-react/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--thz8bb-t--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/reduce-concurrent-requests-by-redux-saga-effects-react/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/reduce-concurrent-requests-by-redux-saga-effects-react/cover.jpeg"
 slug: "reduce-concurrent-requests-by-redux-saga-effects-react"
 ---
 Are you familiar with the situation when the user clicks on a Load Data button 2 consecutive times at a rapid rate, the 2nd click will dispatch a request while the fetch fired on the first one hasn’t yet terminated? Then this blog post is for you.

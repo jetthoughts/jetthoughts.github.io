@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:24:07Z"
 draft: false
 tags: ["remote", "communication", "startup", "process"]
 canonical_url: "https://jetthoughts.com/blog/why-communication-important-when-you-work-remotely-remote/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Firc1zshxi981sfwxj4zz.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-communication-important-when-you-work-remotely-remote/cover.png"
 slug: "why-communication-important-when-you-work-remotely-remote"
 ---
 Communication at work is one of the most important aspects of any business.

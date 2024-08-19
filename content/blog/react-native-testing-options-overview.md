@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:47Z"
 draft: false
 tags: ["testing", "react", "jest", "detox"]
 canonical_url: "https://jetthoughts.com/blog/react-native-testing-options-overview/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--V3cL6snE--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/react-native-testing-options-overview/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/react-native-testing-options-overview/cover.jpeg"
 slug: "react-native-testing-options-overview"
 ---
 After investigating 100 articles about testing React Native applications I detected 2 main methods of testing which helped me succeed and can definitely help you.

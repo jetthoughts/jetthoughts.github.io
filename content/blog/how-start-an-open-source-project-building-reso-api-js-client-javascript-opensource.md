@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:34Z"
 draft: false
 tags: ["javascript", "opensource", "npm", "management"]
 canonical_url: "https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--zNUcb50Q--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/cover.jpeg"
 slug: "how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource"
 ---
 Would you like to understand how to start your new Open Source project in a week? How to build a rapid development process and bootstrap your ideas faster?

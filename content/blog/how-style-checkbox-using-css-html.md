@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:35Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
 canonical_url: "https://jetthoughts.com/blog/how-style-checkbox-using-css-html/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr52osy8dx8pfwh7iz2hw.jpg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-style-checkbox-using-css-html/cover.jpg"
 slug: "how-style-checkbox-using-css-html"
 ---
 In this post I’l show you exactly how to make awesome checkboxes with just CSS.

@@ -10,39 +10,87 @@ BLOG_DIR = 'content/blog'
 STATIC_DIR = './static/assets/img/blog'
 REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog'
 
-def download_file(url, dest)
-  uri = URI(url)
-  Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
-    request = Net::HTTP::Get.new(uri)
-    http.request(request) do |response|
-      open(dest, 'wb') do |io|
-        response.read_body { |chunk| io.write(chunk) }
+class ImageDownloader
+  def download(url, dest)
+    uri = URI(url)
+    Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+      request = Net::HTTP::Get.new(uri)
+      http.request(request) do |response|
+        File.open(dest, 'wb') do |io|
+          response.read_body { |chunk| io.write(chunk) }
+        end
       end
     end
   end
 end
 
-Dir.glob("#{BLOG_DIR}/*.md").each do |file_path|
-  file_name = File.basename(file_path, ".md")
-  content = File.read(file_path)
-  index = 0
-
-  updated_content = content.gsub(CDN_REGEX) do |cdn_link|
-    ext = File.extname(URI(cdn_link).path)
-
-    new_dir = "#{STATIC_DIR}/#{file_name}"
-    new_file = "file_#{index}#{ext}"
-    new_path = "#{new_dir}/#{new_file}"
-    pp new_path
-
-    FileUtils.mkdir_p(new_dir)
-
-    download_file(cdn_link, new_path)
-
-    index += 1
-
-    "#{REPO_URL}/#{file_name}/#{new_file}"
+class BlogProcessor
+  def initialize(downloader)
+    @downloader = downloader
   end
 
-  File.write(file_path, updated_content)
+  def process_blogs
+    Dir.glob("#{BLOG_DIR}/*.md").each do |file_path|
+      process_blog(file_path)
+    end
+  end
+
+  private
+
+  def process_blog(file_path)
+    file_name = File.basename(file_path, ".md")
+    content = File.read(file_path)
+
+    # Process cover image if it exists
+    content = process_cover_image(file_name, content, file_path)
+
+    # Process images in the blog content
+    content = process_images(file_name, content)
+
+    File.write(file_path, content)
+  end
+
+  def process_cover_image(file_name, content, file_path)
+    cover_image_match = content.match(/cover_image: "(?<url>http[^\s\)]*)"/)
+
+    if cover_image_match
+      cover_image_url = cover_image_match[:url]
+      ext = File.extname(URI(cover_image_url).path)
+
+      new_dir = "#{STATIC_DIR}/#{file_name}"
+      cover_path = "#{new_dir}/cover#{ext}"
+
+      FileUtils.mkdir_p(new_dir)
+      @downloader.download(cover_image_url, cover_path)
+
+      updated_content = content.sub(cover_image_url, "#{REPO_URL}/#{file_name}/cover#{ext}")
+      File.write(file_path, updated_content)
+
+      return updated_content
+    end
+
+    content
+  end
+
+  def process_images(file_name, content)
+    index = 0
+    content.gsub(CDN_REGEX) do |cdn_link|
+      ext = File.extname(URI(cdn_link).path)
+
+      new_dir = "#{STATIC_DIR}/#{file_name}"
+      new_file = "file_#{index}#{ext}"
+      new_path = "#{new_dir}/#{new_file}"
+
+      FileUtils.mkdir_p(new_dir)
+      @downloader.download(cdn_link, new_path)
+
+      index += 1
+
+      "#{REPO_URL}/#{file_name}/#{new_file}"
+    end
+  end
 end
+
+downloader = ImageDownloader.new
+processor = BlogProcessor.new(downloader)
+processor.process_blogs

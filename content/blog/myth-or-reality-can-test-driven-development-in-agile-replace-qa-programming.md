@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:22Z"
 draft: false
 tags: ["agile", "programming", "tdd", "qa"]
 canonical_url: "https://jetthoughts.com/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--hgIzL5ey--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/cover.png"
 slug: "myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/file_0.png)

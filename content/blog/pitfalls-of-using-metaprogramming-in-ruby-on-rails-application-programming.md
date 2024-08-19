@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:39Z"
 draft: false
 tags: ["ruby", "programming", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs8ej8emhx4mz8a41s3re.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/cover.png"
 slug: "pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming"
 ---
 Do you know that metaprogramming is easy to add but hard to support? Developers underestimated risks related to using metaprogramming in the code, which causes development slowdowns and business financial problems.

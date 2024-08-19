@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:45Z"
 draft: false
 tags: ["reactnative", "expo", "tutorial", "react"]
 canonical_url: "https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--umP_CCpD--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/video-player-with-react-native-part-1-expo-reactnative/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/video-player-with-react-native-part-1-expo-reactnative/cover.jpeg"
 slug: "video-player-with-react-native-part-1-expo-reactnative"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/video-player-with-react-native-part-1-expo-reactnative/file_0.jpeg)

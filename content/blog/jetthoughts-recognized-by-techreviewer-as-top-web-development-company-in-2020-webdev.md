@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:12Z"
 draft: false
 tags: ["techreviewer", "webdev", "topwebdevelopmentcompany", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--zbJeKuHs--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev/cover.png"
 slug: "jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev"
 ---
 JetThoughts is a web software development company that has proven its value by providing high-quality solutions and providing flexibility and support to customers.

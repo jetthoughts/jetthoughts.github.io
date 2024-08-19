@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:52Z"
 draft: false
 tags: ["ruby", "rails", "bestpractices", "development"]
 canonical_url: "https://jetthoughts.com/blog/avoid-data-migrations-in-schema-for-rails-ruby/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--UNLKH3dK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/avoid-data-migrations-in-schema-for-rails-ruby/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/avoid-data-migrations-in-schema-for-rails-ruby/cover.png"
 slug: "avoid-data-migrations-in-schema-for-rails-ruby"
 ---
 

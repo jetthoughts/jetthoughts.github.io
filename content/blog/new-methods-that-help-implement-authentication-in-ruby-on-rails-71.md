@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:27Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnazdnkdgk0unctyj3gwg.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/cover.png"
 slug: "new-methods-that-help-implement-authentication-in-ruby-on-rails-71"
 ---
 

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:05Z"
 draft: false
 tags: ["ruby", "rails", "develpment", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fahm6syimd0xp0ypri3sv.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/its-time-for-active-job-ruby-rails/cover.jpeg"
 slug: "its-time-for-active-job-ruby-rails"
 ---
 

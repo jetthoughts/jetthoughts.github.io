@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:34Z"
 draft: false
 tags: ["startup", "management", "agile", "kanban"]
 canonical_url: "https://jetthoughts.com/blog/4-steps-bring-life-into-struggling-project-startup-management/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--M68DhAZo--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/4-steps-bring-life-into-struggling-project-startup-management/cover.jpeg"
 slug: "4-steps-bring-life-into-struggling-project-startup-management"
 ---
 

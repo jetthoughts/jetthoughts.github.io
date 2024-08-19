@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:34Z"
 draft: false
 tags: ["development", "coding", "github", "git"]
 canonical_url: "https://jetthoughts.com/blog/feature-branches-where-find-them-development-coding/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--0pFlLzPe--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/feature-branches-where-find-them-development-coding/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/feature-branches-where-find-them-development-coding/cover.jpeg"
 slug: "feature-branches-where-find-them-development-coding"
 ---
 > # Here we want to go through the feature branch process, show what downsides this approach may have and share why it causes us pain.

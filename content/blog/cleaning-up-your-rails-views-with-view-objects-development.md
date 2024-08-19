@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:05Z"
 draft: false
 tags: ["rails", "development", "webdev", "programming"]
 canonical_url: "https://jetthoughts.com/blog/cleaning-up-your-rails-views-with-view-objects-development/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--1Z8O2sVn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cleaning-up-your-rails-views-with-view-objects-development/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cleaning-up-your-rails-views-with-view-objects-development/cover.jpeg"
 slug: "cleaning-up-your-rails-views-with-view-objects-development"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/cleaning-up-your-rails-views-with-view-objects-development/file_0.jpeg)

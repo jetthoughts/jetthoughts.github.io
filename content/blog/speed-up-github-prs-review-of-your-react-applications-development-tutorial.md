@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:15Z"
 draft: false
 tags: ["development", "tutorial", "github", "jest"]
 canonical_url: "https://jetthoughts.com/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--2xUJQdCw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial/cover.jpeg"
 slug: "speed-up-github-prs-review-of-your-react-applications-development-tutorial"
 ---
 Would you like to speed up PR’s review of React application, when you use Jest snapshot testing?

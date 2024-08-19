@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:30Z"
 draft: false
 tags: ["startup", "hiring", "tips"]
 canonical_url: "https://jetthoughts.com/blog/tips-hire-great-people-startup-hiring/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--xd346KOw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-hire-great-people-startup-hiring/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-hire-great-people-startup-hiring/cover.jpeg"
 slug: "tips-hire-great-people-startup-hiring"
 ---
 ![Photo by [rawpixel](https://unsplash.com/photos/v1VB91uuyaE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/people?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/tips-hire-great-people-startup-hiring/file_0.jpeg)

@@ -7,7 +7,7 @@ edited_at: "2024-07-30T11:43:50Z"
 draft: false
 tags: ["startup", "agile", "culture", "process"]
 canonical_url: "https://jetthoughts.com/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmor5578bem1wja6zm92o.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/cover.png"
 slug: "navigating-team-transitions-guide-for-non-technical-founders-startup-agile"
 ---
 Change can be challenging, especially when it involves individuals. Replacing a team is always a difficult choice, but keeping your startup on the right path is sometimes necessary. Here is a roadmap to assist you in navigating this delicate situation while maintaining your composure and your company's progress.

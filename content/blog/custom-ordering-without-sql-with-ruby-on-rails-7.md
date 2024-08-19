@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:14Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "sql"]
 canonical_url: "https://jetthoughts.com/blog/custom-ordering-without-sql-with-ruby-on-rails-7/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fg9kyft9312dd3d6u0lv3.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-ordering-without-sql-with-ruby-on-rails-7/cover.png"
 slug: "custom-ordering-without-sql-with-ruby-on-rails-7"
 ---
 ![Custom order SQL](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/custom-ordering-without-sql-with-ruby-on-rails-7/file_0.png)

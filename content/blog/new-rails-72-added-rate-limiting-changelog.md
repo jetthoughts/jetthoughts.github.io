@@ -7,7 +7,7 @@ edited_at: "2024-07-03T21:07:48Z"
 draft: false
 tags: ["rails", "changelog"]
 canonical_url: "https://dev.to/jetthoughts/new-rails-72-added-rate-limiting-5a8o"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhuuki7kw1dji10iqrd44.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/new-rails-72-added-rate-limiting-changelog/cover.png"
 slug: "new-rails-72-added-rate-limiting-changelog"
 ---
 Ruby on Rails 7.2 added rate limiting to Action Controller. It's cool and easy to use.

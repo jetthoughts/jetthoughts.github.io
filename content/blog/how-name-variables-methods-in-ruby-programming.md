@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:26Z"
 draft: false
 tags: ["programming", "ruby", "bestpractices", "rails"]
 canonical_url: "https://jetthoughts.com/blog/how-name-variables-methods-in-ruby-programming/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--G_3Xi9Ke--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-name-variables-methods-in-ruby-programming/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-name-variables-methods-in-ruby-programming/cover.jpeg"
 slug: "how-name-variables-methods-in-ruby-programming"
 ---
 

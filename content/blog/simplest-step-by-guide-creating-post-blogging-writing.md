@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:10Z"
 draft: false
 tags: ["blogging", "writing", "tutorial", "guide"]
 canonical_url: "https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--wOFzOEZ2--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/cover.jpeg"
 slug: "simplest-step-by-guide-creating-post-blogging-writing"
 ---
 ![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-step-by-guide-creating-post-blogging-writing/file_0.jpeg)

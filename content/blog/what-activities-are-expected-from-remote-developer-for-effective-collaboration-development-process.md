@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:48Z"
 draft: false
 tags: ["development", "process", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--nN-D2ZTF--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process/cover.jpeg"
 slug: "what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process"
 ---
 ### In order to build trust relationships with remote non-technical founders, we designed the easiest and effective routine for remote developers to provide.

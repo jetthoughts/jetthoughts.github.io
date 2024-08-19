@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:20Z"
 draft: false
 tags: ["rails", "ruby", "postgres"]
 canonical_url: "https://jetthoughts.com/blog/delayedjob-pg-error-no-connection-server-rails-ruby/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--vU-NT_Ek--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delayedjob-pg-error-no-connection-server-rails-ruby/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/delayedjob-pg-error-no-connection-server-rails-ruby/cover.png"
 slug: "delayedjob-pg-error-no-connection-server-rails-ruby"
 ---
 

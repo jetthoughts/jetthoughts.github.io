@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:32Z"
 draft: false
 tags: ["heroku", "startup", "aws", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--zVKuD5AC--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/cover.jpeg"
 slug: "how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup"
 ---
 ![Unsplash Photo: [Parker Byrd](https://unsplash.com/@parkerabyrd)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/file_0.jpeg)

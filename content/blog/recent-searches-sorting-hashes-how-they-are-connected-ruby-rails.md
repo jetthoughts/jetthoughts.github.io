@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:50Z"
 draft: false
 tags: ["ruby", "rails", "development"]
 canonical_url: "https://jetthoughts.com/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--UQpgUMbl--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/cover.jpeg"
 slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails"
 ---
 

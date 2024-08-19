@@ -7,7 +7,7 @@ edited_at: "2024-07-04T10:39:06Z"
 draft: false
 tags: ["startup", "agile", "learning", "ux"]
 canonical_url: "https://dev.to/jetthoughts/top-3-ways-to-test-ideas-without-developers-1fjd"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fphse12oocyc3yv33sl4c.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/top-3-ways-test-ideas-without-developers-startup-agile/cover.png"
 slug: "top-3-ways-test-ideas-without-developers-startup-agile"
 ---
 Intro

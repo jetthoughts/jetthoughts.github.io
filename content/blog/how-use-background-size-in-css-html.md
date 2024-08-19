@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:37Z"
 draft: false
 tags: ["css", "html", "webdev", "jetthoughts"]
 canonical_url: "https://jetthoughts.com/blog/how-use-background-size-in-css-html/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbi4ip13evru2plxrxplb.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-background-size-in-css-html/cover.png"
 slug: "how-use-background-size-in-css-html"
 ---
 The CSS background-size property sets the size of the background image of the element. Images can be left to full size, stretched or limited to fit the available space.

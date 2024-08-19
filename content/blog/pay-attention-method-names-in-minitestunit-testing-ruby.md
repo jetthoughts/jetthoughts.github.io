@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:37Z"
 draft: false
 tags: ["testing", "ruby", "minitest", "rails"]
 canonical_url: "https://jetthoughts.com/blog/pay-attention-method-names-in-minitestunit-testing-ruby/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--JksLagE_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pay-attention-method-names-in-minitestunit-testing-ruby/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pay-attention-method-names-in-minitestunit-testing-ruby/cover.jpeg"
 slug: "pay-attention-method-names-in-minitestunit-testing-ruby"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/pay-attention-method-names-in-minitestunit-testing-ruby/file_0.jpeg)

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:28Z"
 draft: false
 tags: ["management", "productivity", "devops", "career"]
 canonical_url: "https://jetthoughts.com/blog/effective-project-onboarding-checklist-management-productivity/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--6dKVmPPx--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effective-project-onboarding-checklist-management-productivity/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/effective-project-onboarding-checklist-management-productivity/cover.jpeg"
 slug: "effective-project-onboarding-checklist-management-productivity"
 ---
 To avoid the onboarding slip and remove expectations and misunderstandings, the **[JetThoughts](https://www.jetthoughts.com)** team defined a checklist of items to clarify. We will discuss how to start the project, but we won't discuss the onboarding process.

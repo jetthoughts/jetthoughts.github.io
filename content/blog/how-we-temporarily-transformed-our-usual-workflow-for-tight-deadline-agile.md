@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:51Z"
 draft: false
 tags: ["workflow", "agile"]
 canonical_url: "https://jetthoughts.com/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--w3AnlJbL--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/cover.jpeg"
 slug: "how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile"
 ---
 

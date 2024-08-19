@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:27Z"
 draft: false
 tags: ["rails", "cache", "api", "performance"]
 canonical_url: "https://jetthoughts.com/blog/design-rails-json-api-with-performance-in-mind-cache/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--YLeS-VZ8--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/design-rails-json-api-with-performance-in-mind-cache/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/design-rails-json-api-with-performance-in-mind-cache/cover.png"
 slug: "design-rails-json-api-with-performance-in-mind-cache"
 ---
 > ### Caching can reduce load time and increase the throughput of your API endpoints without in-depth optimization. But there are certain design principles you should follow to make your endpoints cacheable and gain all benefits caching can provide for your app.

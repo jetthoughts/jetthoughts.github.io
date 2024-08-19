@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:53Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
 canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--2YhZ2OXQ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-write-right-content-for-your-article-blogging-posting/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-write-right-content-for-your-article-blogging-posting/cover.jpeg"
 slug: "how-write-right-content-for-your-article-blogging-posting"
 ---
 There are moments when you’re full of motivation, ideas come up with your mind and straight onto the page. But there are other moments when you take up hours of your time, before getting to that last sentence. You’re almost about giving up.

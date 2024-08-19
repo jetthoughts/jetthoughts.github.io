@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:19:39Z"
 draft: false
 tags: ["javascript", "ruby", "rails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--IDnRH0AF--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/cover.png"
 slug: "5-steps-add-remote-modals-your-rails-app-javascript-ruby"
 ---
 Sometimes you don’t want to write big JavaScript application just to have working remote modals in your rails application. The whole JSON-response parsing thing looks big and scary. Why can’t we simply render our views on a server and just display them as modals to users? Let’s take a look at how we can implement this with elegance.

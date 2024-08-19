@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:36Z"
 draft: false
 tags: ["consulting", "management", "service"]
 canonical_url: "https://jetthoughts.com/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--U60deuID--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/cover.png"
 slug: "fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management"
 ---
 ![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/file_0.png)

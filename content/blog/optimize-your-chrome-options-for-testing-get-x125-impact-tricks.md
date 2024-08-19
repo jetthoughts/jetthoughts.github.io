@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:32Z"
 draft: false
 tags: ["testing", "tricks"]
 canonical_url: "https://jetthoughts.com/blog/optimize-your-chrome-options-for-testing-get-x125-impact-tricks/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--loybasL2--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/optimize-your-chrome-options-for-testing-get-x125-impact-tricks/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/optimize-your-chrome-options-for-testing-get-x125-impact-tricks/cover.png"
 slug: "optimize-your-chrome-options-for-testing-get-x125-impact-tricks"
 ---
 

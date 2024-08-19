@@ -7,7 +7,7 @@ edited_at: "2024-07-07T11:01:07Z"
 draft: false
 tags: ["leadership", "agile", "management", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/transforming-titans-outsourcing-odyssey-leadership-agile/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm5kt5b6pugxidz6i69nw.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/transforming-titans-outsourcing-odyssey-leadership-agile/cover.png"
 slug: "transforming-titans-outsourcing-odyssey-leadership-agile"
 ---
 ### **Chapter 1: The New Beginning**

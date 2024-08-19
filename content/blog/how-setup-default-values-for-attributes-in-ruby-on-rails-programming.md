@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:29Z"
 draft: false
 tags: ["ruby", "programming", "tutorial", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcl8y84yk69rxlbt5phgl.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/cover.png"
 slug: "how-setup-default-values-for-attributes-in-ruby-on-rails-programming"
 ---
 _Have you ever thought that setting default values for attributes in Ruby on Rails could be a problem?_

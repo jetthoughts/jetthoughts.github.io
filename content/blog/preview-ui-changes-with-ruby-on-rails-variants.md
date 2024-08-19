@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:22:43Z"
 draft: false
 tags: ["rails", "ruby", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/preview-ui-changes-with-ruby-on-rails-variants/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fr5xi6xq7n95ajy6reqtc.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/preview-ui-changes-with-ruby-on-rails-variants/cover.png"
 slug: "preview-ui-changes-with-ruby-on-rails-variants"
 ---
 When implementing new design for a live application we usually don’t want our users to see an unfinished implementation, but we might want to give some users the ability to preview it on the live (production or staging) environment, for designers, product owners, our most loyal customers.

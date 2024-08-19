@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:12Z"
 draft: false
 tags: ["android", "reactnative", "circleci"]
 canonical_url: "https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--Qam6PsYe--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/cover.png"
 slug: "simplest-way-automate-delivery-of-your-react-native-application-android-reactnative"
 ---
 ## Introduction

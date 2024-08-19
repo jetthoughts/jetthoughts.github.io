@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:03Z"
 draft: false
 tags: ["agile", "development", "management", "remote"]
 canonical_url: "https://jetthoughts.com/blog/how-get-remote-teams-high-perform-agile-development/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--PXcXd3i4--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-get-remote-teams-high-perform-agile-development/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-get-remote-teams-high-perform-agile-development/cover.jpeg"
 slug: "how-get-remote-teams-high-perform-agile-development"
 ---
 

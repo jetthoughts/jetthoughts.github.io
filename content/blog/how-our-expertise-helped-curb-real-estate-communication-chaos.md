@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:27Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--YeMpMtEL--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/cover.jpeg"
 slug: "how-our-expertise-helped-curb-real-estate-communication-chaos"
 ---
 

@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:42Z"
 draft: false
 tags: ["programming", "elixir", "codewars", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/help-shepherd-count-sheep-in-elixir-programming/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--3eHSyIDd--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/help-shepherd-count-sheep-in-elixir-programming/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/help-shepherd-count-sheep-in-elixir-programming/cover.jpeg"
 slug: "help-shepherd-count-sheep-in-elixir-programming"
 ---
 ![Shepard (Mass Effect)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/help-shepherd-count-sheep-in-elixir-programming/file_0.jpeg)

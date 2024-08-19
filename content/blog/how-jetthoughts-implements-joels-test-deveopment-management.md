@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:12Z"
 draft: false
 tags: ["deveopment", "management", "project", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--cNi5PNDb--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-jetthoughts-implements-joels-test-deveopment-management/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-jetthoughts-implements-joels-test-deveopment-management/cover.jpeg"
 slug: "how-jetthoughts-implements-joels-test-deveopment-management"
 ---
 ![Unsplash Photo: [Matt Briney](http://unsplash.com/@mbriney?utm_campaign=photographer-credit)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-jetthoughts-implements-joels-test-deveopment-management/file_0.jpeg)

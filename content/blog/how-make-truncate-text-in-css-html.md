@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:21Z"
 draft: false
 tags: ["css", "html", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-make-truncate-text-in-css-html/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl5cdcrq6rev0cozjlvm5.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-make-truncate-text-in-css-html/cover.png"
 slug: "how-make-truncate-text-in-css-html"
 ---
 ```html

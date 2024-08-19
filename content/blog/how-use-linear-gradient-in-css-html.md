@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:38Z"
 draft: false
 tags: ["html", "css", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-use-linear-gradient-in-css-html/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9bikt97gjbmyefav7q4r.jpg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-use-linear-gradient-in-css-html/cover.jpg"
 slug: "how-use-linear-gradient-in-css-html"
 ---
 The CSS `linear-gradient` function creates an image that consists of a progressive transition between two or more colors along a straight line. The result is a data type object `gradient`, which is a special type `image`.

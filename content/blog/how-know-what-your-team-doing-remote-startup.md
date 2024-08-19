@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:21:15Z"
 draft: false
 tags: ["remote", "startup", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/how-know-what-your-team-doing-remote-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--pe5rvC1O--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-know-what-your-team-doing-remote-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-know-what-your-team-doing-remote-startup/cover.jpeg"
 slug: "how-know-what-your-team-doing-remote-startup"
 ---
 ![Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/clients?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/how-know-what-your-team-doing-remote-startup/file_0.jpeg)

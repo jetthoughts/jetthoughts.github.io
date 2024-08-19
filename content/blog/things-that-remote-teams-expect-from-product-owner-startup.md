@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:23:26Z"
 draft: false
 tags: ["startup", "remote", "tips", "management"]
 canonical_url: "https://jetthoughts.com/blog/things-that-remote-teams-expect-from-product-owner-startup/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--dm2jt43H--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/things-that-remote-teams-expect-from-product-owner-startup/file_0.jpeg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/things-that-remote-teams-expect-from-product-owner-startup/cover.jpeg"
 slug: "things-that-remote-teams-expect-from-product-owner-startup"
 ---
 ![[Photo by Helloquence](https://unsplash.com/photos/5fNmWej4tAA)](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/things-that-remote-teams-expect-from-product-owner-startup/file_0.jpeg)

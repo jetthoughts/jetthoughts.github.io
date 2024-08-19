@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:20:40Z"
 draft: false
 tags: ["development", "git", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/git-minimum-for-effective-project-development/"
-cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--ekqHgXq1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/git-minimum-for-effective-project-development/file_0.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/git-minimum-for-effective-project-development/cover.png"
 slug: "git-minimum-for-effective-project-development"
 ---
 

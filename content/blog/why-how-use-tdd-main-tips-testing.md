@@ -7,7 +7,7 @@ edited_at: "2024-07-03T12:24:09Z"
 draft: false
 tags: ["tdd", "testing", "programming", "development"]
 canonical_url: "https://jetthoughts.com/blog/why-how-use-tdd-main-tips-testing/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fgvb6rq57294dby6wk205.jpg"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/why-how-use-tdd-main-tips-testing/cover.jpg"
 slug: "why-how-use-tdd-main-tips-testing"
 ---
 *How to start developing the component from scratch? How to know what architecture it should have? What parameters should the component accept? The TDD usage could help to find the answers.*
