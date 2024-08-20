@@ -28,9 +28,24 @@
                             data-node="wdsg6r2ykhb1">
                             <div class="fl-module-content fl-node-content">
                               <div class="fl-rich-text">
-                                {{- $content := .Content | safeHTML -}}
-                                {{- $content := replaceRE "<img" "<img loading=\"lazy\" decoding=\"async\"" $content -}}
-                                {{- $content | safeHTML -}}
+                                <div class="fl-rich-text">
+                                  {{ $cdnPrefix := "https://imagecdn.app/v1/images/" }}
+                                  {{ $content := .Content }}
+
+                                  {{ $cdnContent := $content }}
+                                  {{ $cdnContent := replaceRE "<img" "<img loading=\"lazy\" decoding=\"async\"" $cdnContent }}
+
+                                  {{ $images := findRE "(https://raw\\.githubusercontent\\.com/jetthoughts/jetthoughts\\.github\\.io/master/static/assets/img/blog/[^\"]+)" $content }}
+
+                                  {{ range $images }}
+                                    {{ $original := . }}
+                                    {{ $encoded := printf "%s%s?width=660&fit=inside" $cdnPrefix (urlquery $original) }}
+                                    {{ $cdnContent = replace $cdnContent $original $encoded }}
+                                  {{ end }}
+
+
+                                  {{ $cdnContent | safeHTML }}
+                                </div>
                               </div>
                             </div>
                           </div>
