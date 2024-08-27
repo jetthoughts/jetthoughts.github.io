@@ -47,14 +47,7 @@
                           <div class="post-content">
                             <h2 class="post-title">{{ .Title }}</h2>
                             <div class="post-meta">
-
-                              {{ $tags := slice }}
-                              {{ range .Params.tags }}
-                              {{ $tags = $tags | append (printf "#%s" .) }}
-                              {{ end }}
-
-                              <span class="post-tags">{{ delimit $tags ", " }}</span>
-
+                              <div class="post-tags">{{ range .Params.tags }}<a href="/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
                               {{ if .Params.created_at }}
                               <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
                               {{ end }}

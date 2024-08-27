@@ -5,10 +5,10 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 theme = "beaver"
 enableGitInfo = true
 assetDir = "static"
-disableKinds = ["taxonomy", "term"]
+disableKinds = []
 [permalinks]
   pages = "/:slug/"
-
+  blog = "/blog/:slug/"
 [build]
   writeStats = true
 
