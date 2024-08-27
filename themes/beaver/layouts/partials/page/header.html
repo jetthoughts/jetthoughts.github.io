@@ -8,7 +8,16 @@
       <title>{{ .Title }}</title>
       <meta name="description" content="{{ .Params.description }}" />
       <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+
+      {{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
+      {{ $canonical := .Permalink | replace "/tags/" "/blog/tags/" }}
+      <link rel="canonical" href="{{ $canonical }}" />
+      {{ else }}
       <link rel="canonical" href="{{ .Permalink }}" />
+      {{ end }}
+
+
+
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content="{{ .Title }} | JetThoughts" />

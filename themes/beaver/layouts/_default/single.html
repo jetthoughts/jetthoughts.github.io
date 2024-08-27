@@ -32,7 +32,7 @@
 <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 {{ if eq .Section "posts" }}
 <p>Updated: {{ .Date.Format "2th January 2006" }}
-<br>Tags: {{ range .Params.tags }}<a href="/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>
+<br>Tags: {{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>
 {{ end }}
 </header>
 {{ .Content }}
