@@ -9,12 +9,17 @@ disableKinds = []
 [permalinks]
   pages = "/:slug/"
   blog = "/blog/:slug/"
+[permalinks.term]
+  tags = "/blog/tags/:slug/"
 [build]
   writeStats = true
 
 [build.processing.css]
   bundle = true
-
+[[redirects]]
+  from = "/tags/:slug/"
+  to = "/blog/tags/:slug/"
+  status = 301
 [params]
 
   email="info@jetthoughts.com"
