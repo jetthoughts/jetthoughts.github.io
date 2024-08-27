@@ -8,7 +8,7 @@ assetDir = "static"
 disableKinds = []
 [permalinks]
   pages = "/:slug/"
-
+  blog = "/blog/:slug/"
 [build]
   writeStats = true
 
