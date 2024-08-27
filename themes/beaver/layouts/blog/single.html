@@ -24,6 +24,7 @@
                               <h1 class="heading">{{ .Title }}</h1>
                             </div>
                           </div>
+                          <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
                           <div class="fl-module fl-module-rich-text fl-node-wdsg6r2ykhb1 single-content"
                             data-node="wdsg6r2ykhb1">
                             <div class="fl-module-content fl-node-content">
