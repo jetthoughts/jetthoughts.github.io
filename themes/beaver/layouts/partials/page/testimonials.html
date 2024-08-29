@@ -27,8 +27,24 @@
    </div>
 </div>
 
+<style>
+   .my-flex-container {
+      display: flex;
+      flex-direction: row;
+      row-gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0;
+  }
+  
+  @media (max-width: 800px) {
+      .my-flex-container {
+          flex-direction: column;
+          margin-top: 2rem;
+      }
+  }
+</style>
    
-<div style="display:flex;justify-content: center !important;column-gap:2rem">
+<div class="my-flex-container" style="display:flex;justify-content: center !important;column-gap:2rem">
 
    <div style="display:flex;justify-content: center !important;column-gap:2rem">
 
