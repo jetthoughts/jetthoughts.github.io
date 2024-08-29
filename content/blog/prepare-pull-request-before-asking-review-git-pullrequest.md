@@ -1,42 +1,48 @@
 ---
 dev_to_id: 1852617
 title: "Prepare the Pull Request before asking to Review"
-description: "How to avoid being the victim of an open-loop trying to get your Pull Request verified..."
+description: "How to avoid being the victim of an open loop trying to get your Pull Request verified while working..."
 created_at: "2024-05-14T12:27:37Z"
-edited_at: "2024-07-03T12:22:42Z"
+edited_at: "2024-08-29T13:36:13Z"
 draft: false
 tags: ["git", "pullrequest", "review", "workflow"]
 canonical_url: "https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/"
 cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/prepare-pull-request-before-asking-review-git-pullrequest/cover.png"
 slug: "prepare-pull-request-before-asking-review-git-pullrequest"
 ---
-### How to avoid being the victim of an open-loop trying to get your Pull Request verified working asynchronously? In [JetThoughts](https://www.jetthoughts.com/), we distinguished some rules, which help to optimize the process of verifying the Pull Requests by the remote team members.
+How to avoid being the victim of an open loop trying to get your Pull Request verified while working asynchronously? In [JetThoughts](https://www.jetthoughts.com/), we set some rules. They help optimize the process of verifying Pull Requests for the remote team.
 
-![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/prepare-pull-request-before-asking-review-git-pullrequest/file_0.png)
+![github activity history per pull request](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/prepare-pull-request-before-asking-review-git-pullrequest/file_0.png)
 
 ## The author is the first reviewer for his code
 
-When all changes have been made, it is better to pause and be distracted for 15 minutes. Then imagine that you are a reviewer and you see someone else’s Pull Request. Try to look at the code as critically as possible.
+Then imagine that you are a reviewer and you see someone else’s Pull Request. Try to look at the code as critically as possible.
 
-**List of requirements before verification:**
+> When all changes have been made, it is better to pause and be distracted for 15 minutes.
 
- 1. **Perfect code**. Be sure to read the code, don’t just skim it, and apply thought to both the code and its style
+List of requirements before verification:
 
- 2. **Acceptance test**. Try, run, and check the functional tests on staging. All acceptance tests should be passed
+ 1. **Perfect code.** Be sure to read the code, don’t just skim it, and apply thought to both the code and its style
 
- 3. **Clean Git History**. Read the commit message — it should be understandable, not cause the desire to call the author for help
+ 2. **Acceptance test.** Try, run, and check the functional tests on staging. All acceptance tests should be passed
 
- 4. **Functional on Staging**. The link on staging must always be available, work properly, and should not require any special skills to view it
+ 3. **Clean Git History.** Read the commit message — it should be understandable, not cause the desire to call the author for help
 
- 5. **Resolved comments. **All comments for your Pull Request must be answered. All proposals must be confirmed that they are applied, or the reason why not
+ 4. **Functional on Staging.** The link on staging must always be available, work properly, and should not require any special skills to view it
 
- 6. **Call to action**. ****Make sure there is an explicit request for the review
+ 5. **Resolved comments.** All comments for your Pull Request must be answered. All proposals must be confirmed that they are applied, or the reason why not
 
- 7. **Assign others. **Make people you need a review from aware of that not only by mentioning them but also assigning the ticket.
+ 6. **Call to action.** Make sure there is an explicit request for the review
+
+ 7. **Assign others.** Make people you need a review from aware of that not only by mentioning them but also assigning the ticket.
 
 ## Deliver the solution to be available online
 
-For better testing, your solution should be implemented with the real environment, but at the same time, it should not break the product, which is already in use. For such purposes, we suggest using the [isolated staging environment](https://medium.com/p/make-master-stable-again-b15c9ff3b129). The link with the solution needs to be provided to the reviewer. Make sure the result is the same as it’s described in the description of your issue. To accelerate the verification, it is very important to add a link to the feature on the staging within the description of the Pull Request, which the reviewer will be able to check on.
+For better testing, use the real environment without disrupting the current product. We recommend an [isolated staging environment](https://jetthoughts.com/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/).
+
+Provide the reviewer with a link to the solution's server.
+
+Ensure the result matches your issue's description. To speed up verification, include a link to the staging feature in the pull request's description.
 
 ## Without an online solution
 
@@ -44,16 +50,20 @@ If (for some reason), it is not possible to deliver the feature to the staging �
 
 ## The final commit message as a description
 
-Before asking for the verification — all commits should be squashed into one with an informative message. It should be focused on pointing out the reasons you made the changes in this Pull Request. The main conventions for a commit message are well-described in [an article by Chris Beams](https://chris.beams.io/posts/git-commit/).
-All changes in the *master *must be in the current branch. In JetThoughts we prefer to [*rebase](https://git-scm.com/docs/git-rebase)* over [*merge](https://git-scm.com/docs/git-merge) *and there are some reasons:
+> Before asking for the verification — all redundant commits should be squashed with an informative message.
 
-* *rebase* generates a clean history (no *merge* commits)
+It should be focused on pointing out the reasons you made the changes in this Pull Request. The main conventions for a commit message are well-described in [an article by Chris Beams](https://chris.beams.io/posts/git-commit/).
 
-* all changes come from a specific and entitled commit (no hidden changes in *merge* commits)
+All changes in the `master` must be in the current branch. In JetThoughts we prefer to [rebase](https://git-scm.com/docs/git-rebase) over [merge](https://git-scm.com/docs/git-merge) and there are some reasons:
+
+- _rebase_ generates a clean history (no _merge_ commits)
+- all changes come from a specific and entitled commit (no hidden changes in _merge_ commits)
 
 ## Help the reviewer to get your solution
 
-One of the responsibilities of the author is to provide enough information for a reviewer. All screenshots, screencasts, online documentation which reviewer should have in order to understand the task, should be provided explicitly. It becomes especially helpful for the newbies and those members who have just joined the project. Also, it is essential for teams that are working asynchronously primarily when author’s and reviewer’s work schedules could not be matched or overlapped.
+An author must provide reviewers with all necessary information.This includes screenshots, screencasts, and online documentation. Such resources are vital for newcomers and new team members.
+
+They are also crucial for teams working in different time zones. This support ensures everyone stays aligned, even when schedules don't match.
 
 ## The green light is a sign to move on
 
@@ -61,13 +71,18 @@ Check for the green lights from all the external services. All tools used for yo
 
 ## Use call to action
 
-In order to reach successful verification as fast as possible, you, as the author, should be responsible for your Pull Requests and their promotion. Use an explicit call to action when you’re asking for a review. “Please review” or “Please verify” are better than just “Done.” Address your request, identify, and name the person who will be responsible for the review. Use preferred channels for communication with your team members to duplicate the call to action. Check the progress of reviewing and remind the reviewer to check if there were no reaction.
+To speed up verification, authors should lead their pull requests. Use clear calls to action like "Please review" or "Please verify," instead of "Done." Route requests to the reviewer for personal attention. Use preferred communication channels to echo your request. 
+
+> Also, check the review's progress and remind the reviewer if needed.
 
 ## The motivation to do the best
 
-This checklist will help your co-workers to avoid spending their time reading the bad code or going through other sloppy mistakes. Prevent the waste of time at the verification stage. Every issue that could be caught by us, but was caught by the reviewer instead — decreases the team productivity. Knowing that we get frank feedback should be a motivation for writing the perfect code.
+This checklist helps coworkers avoid bad code and mistakes, saving time during reviews. Issues caught by reviewers lower team productivity. Honest feedback motivates us to improve our code.
 
-**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
+---
 
-**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+**Sergey Sviridov** works as a software engineer at [JetThoughts](https://www.jetthoughts.com/). You can connect with him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
+
+**Andriy Parashchuk** is also a software engineer at [JetThoughts](https://www.jetthoughts.com/). You can find him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+
+> *If you liked this story, we recommend our [latest tech stories](https://www.jetthoughts.com/blog/)*
