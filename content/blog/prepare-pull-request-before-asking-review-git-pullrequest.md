@@ -3,7 +3,7 @@ dev_to_id: 1852617
 title: "Prepare the Pull Request before asking to Review"
 description: "How to avoid being the victim of an open loop trying to get your Pull Request verified while working..."
 created_at: "2024-05-14T12:27:37Z"
-edited_at: "2024-08-29T13:37:15Z"
+edited_at: "2024-08-29T14:01:03Z"
 draft: false
 tags: ["git", "pullrequest", "review", "workflow"]
 canonical_url: "https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/"
