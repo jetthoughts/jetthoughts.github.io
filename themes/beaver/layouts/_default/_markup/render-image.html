@@ -1,0 +1,67 @@
+{{/* Original code from: https://laurakalbag.com/processing-responsive-images-with-hugo/ */}}
+{{/* Just modified a bit to work with render_image hook and output webp images */}}
+{{/* get file that matches the filename as specified as src="" */}}
+{{ $src := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $alt := .PlainText | safeHTML }}
+
+{{/* So for posts that aren't set up in the page bundles, it doesn't fail */}}
+{{ if $src }}
+
+{{ $tinyw := "400x webp" }}
+{{ $smallw := "800x webp" }}
+{{ $mediumw := "1200x webp" }}
+{{ $largew := "1600x webp" }}
+{{ $origw := "1600x webp" }}
+
+{{/* Create an optimized version of the original image in WebP */}}
+{{ $optimized := $src }}
+
+{{ if or (lt $src.Width 400) (lt $src.Width 800) (lt $src.Width 1200) (lt $src.Width 1600) }}
+    {{ $optimized = $src.Resize (printf "%dx webp" $src.Width) }}
+{{ end }}
+{{/* Resize the image only if it won't upscale */}}
+{{ $data := newScratch }}
+
+{{ if gt $src.Width 400 }}
+    {{ $data.Set "tiny" ($src.Resize $tinyw) }}
+{{ else }}
+    {{ $data.Set "tiny" $optimized }}
+{{ end }}
+
+{{ if gt $src.Width 800 }}
+    {{ $data.Set "small" ($src.Resize $smallw) }}
+{{ else }}
+    {{ $data.Set "small" $optimized }}
+{{ end }}
+
+{{ if gt $src.Width 1200 }}
+    {{ $data.Set "medium" ($src.Resize $mediumw) }}
+{{ else }}
+    {{ $data.Set "medium" $optimized }}
+{{ end }}
+
+{{ if gt $src.Width 1600 }}
+    {{ $data.Set "large" ($src.Resize $largew) }}
+{{ else }}
+    {{ $data.Set "large" $optimized }}
+{{ end }}
+
+{{ $tiny := $data.Get "tiny" }}
+{{ $small := $data.Get "small" }}
+{{ $medium := $data.Get "medium" }}
+{{ $large := $data.Get "large" }}
+
+<a href="{{ $src.RelPermalink }}"><img loading="lazy"
+    src="{{ $tiny.RelPermalink }}" 
+    srcset="{{ $tiny.RelPermalink }} 400w, {{ $small.RelPermalink }} 800w, {{ $medium.RelPermalink }} 1200w, {{ $large.RelPermalink }} 1600w" 
+    sizes="(max-width: 48rem) 100vw, 48rem" 
+    alt="{{ $alt }}"
+    height="{{ $src.Height }}" width="{{ $src.Width }}">
+</a>
+
+{{ else }}
+
+{{/* Render a default img tag if $src is not found */}}
+<img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ $alt }}">
+
+{{ end }}
