@@ -30,7 +30,7 @@ How can vertically align an element with Tailwind CSS by Flex?
 </div>
 ```
 
-{{< img "file_0.png" "Image description" >}}
+![Image description](file_0.png)
 
 This is already pretty well documented in the [Tailwind CSS](https://tailwindcss.com/docs/align-items#center) docs.
 
