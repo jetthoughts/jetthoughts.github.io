@@ -1,67 +1,39 @@
 {{ partial "page/header.html" . }}
 
 <div id="fl-main-content" class="blog" itemprop="mainContentOfPage" role="main">
-  <div class="fl-content-full container">
-    <div class="row">
-      <div class="fl-content col-md-12">
-        <article class="fl-post post-3059 page type-page status-publish hentry" id="fl-post-3059"
+  <div class="fl-row-content fl-row-fixed-width fl-node-content">
+
+       
+        <article class="single-content" style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px"
           itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 
-          <div class="fl-post-content clearfix" itemprop="text">
-            <div class="fl-builder-content fl-builder-content-3059 fl-builder-content-primary fl-builder-global-templates-locked"
-              data-post-id="3059">
-              <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-ypvs1kmu8ifb fl-row-default-height fl-row-align-center"
-                data-node="ypvs1kmu8ifb">
-                <div class="fl-row-content-wrap">
-                  <div class="fl-row-content fl-row-fixed-width fl-node-content">
+          <h1 class="heading">{{ .Title }}</h1>
+          <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
+  
+          <div class="fl-rich-text" style="max-width: 43rem;">
+            {{ $cdnPrefix := "https://imagecdn.app/v1/images/" }}
+            {{ $content := .Content }}
 
-                    <div class="fl-col-group fl-node-zs5jmu8ew4ri" data-node="zs5jmu8ew4ri">
-                      <div class="fl-col fl-node-n35mvjhird21" data-node="n35mvjhird21">
-                        <div class="fl-col-content fl-node-content">
-                          <div class="fl-module fl-module-heading fl-node-v25au8ix6cf1"
-                            data-node="v25au8ix6cf1">
-                            <div class="fl-module-content fl-node-content">
-                              <h1 class="heading">{{ .Title }}</h1>
-                            </div>
-                          </div>
-                          <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
-                          <div class="fl-module fl-module-rich-text fl-node-wdsg6r2ykhb1 single-content"
-                            data-node="wdsg6r2ykhb1">
-                            <div class="fl-module-content fl-node-content">
-                              <div class="fl-rich-text">
-                                <div class="fl-rich-text">
-                                  {{ $cdnPrefix := "https://imagecdn.app/v1/images/" }}
-                                  {{ $content := .Content }}
+            {{ $cdnContent := $content }}
+            {{ $cdnContent := replaceRE "<img" "<img loading=\"lazy\" decoding=\"async\"" $cdnContent }}
 
-                                  {{ $cdnContent := $content }}
-                                  {{ $cdnContent := replaceRE "<img" "<img loading=\"lazy\" decoding=\"async\"" $cdnContent }}
+            {{ $images := findRE "(https://raw\\.githubusercontent\\.com/jetthoughts/jetthoughts\\.github\\.io/master/static/assets/img/blog/[^\"]+)" $content }}
 
-                                  {{ $images := findRE "(https://raw\\.githubusercontent\\.com/jetthoughts/jetthoughts\\.github\\.io/master/static/assets/img/blog/[^\"]+)" $content }}
-
-                                  {{ range $images }}
-                                    {{ $original := . }}
-                                    {{ $encoded := printf "%s%s?width=660&fit=inside" $cdnPrefix (urlquery $original) }}
-                                    {{ $cdnContent = replace $cdnContent $original $encoded }}
-                                  {{ end }}
+            {{ range $images }}
+              {{ $original := . }}
+              {{ $encoded := printf "%s%s?width=660&fit=inside" $cdnPrefix (urlquery $original) }}
+              {{ $cdnContent = replace $cdnContent $original $encoded }}
+            {{ end }}
 
 
-                                  {{ $cdnContent | safeHTML }}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- .fl-post-content -->
+            {{ $cdnContent | safeHTML }}
+          </div>
+          </article>
 
-        </article>
-      </div>
-    </div>
+          <aside class="single-content" style="max-width: 960px; margin:4rem auto 0 auto; padding-left:18px;padding-right:18px">
+          {{ partial "blog/related-posts.html" . }}
+          </aside>
+
   </div>
 </div>
 
