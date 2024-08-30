@@ -17,9 +17,14 @@
       {{ end }}
 
 
+      {{ if and (eq .Section "blog") (eq .Kind "page") }}
+        <meta property="og:type" content="article">
+      {{ else }}
+         <meta property="og:type" content="website">
+      {{ end }}
 
+      
       <meta property="og:locale" content="en_US" />
-      <meta property="og:type" content="article" />
       <meta property="og:title" content="{{ .Title }} | JetThoughts" />
       <meta property="og:description" content="{{ .Params.description }}" />
       <meta property="og:url" content="{{ .Permalink }}" />
