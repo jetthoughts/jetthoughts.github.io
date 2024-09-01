@@ -1,62 +1,45 @@
-{{/* Original code from: https://laurakalbag.com/processing-responsive-images-with-hugo/ */}}
-{{/* Just modified a bit to work with render_image hook and output webp images */}}
-{{/* get file that matches the filename as specified as src="" */}}
+{{/* Get file that matches the filename as specified as src="" */}}
 {{ $src := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 {{ $alt := .PlainText | safeHTML }}
 
-{{/* So for posts that aren't set up in the page bundles, it doesn't fail */}}
 {{ if $src }}
 
-{{ $tinyw := "400x webp" }}
-{{ $smallw := "800x webp" }}
-{{ $mediumw := "1200x webp" }}
-{{ $largew := "1600x webp" }}
-{{ $origw := "1600x webp" }}
+{{/* Get formats and sizes from config */}}
+{{/* From less common to most common. For example avif webp jpeg */}}
+{{ $formats := slice "webp" "jpeg" }}
+{{ $sizes := slice 400 800 1200 1600 }}
+{{/* default format if browser doesn't support picture element */}}
+{{ $defaultFormat := "jpeg" }}
 
-{{/* Create an optimized version of the original image in WebP */}}
-{{ $optimized := $src }}
-
-{{ if or (lt $src.Width 400) (lt $src.Width 800) (lt $src.Width 1200) (lt $src.Width 1600) }}
-    {{ $optimized = $src.Resize (printf "%dx webp" $src.Width) }}
-{{ end }}
-{{/* Resize the image only if it won't upscale */}}
+{{/* Create optimized versions of the original image in the specified formats */}}
 {{ $data := newScratch }}
 
-{{ if gt $src.Width 400 }}
-    {{ $data.Set "tiny" ($src.Resize $tinyw) }}
-{{ else }}
-    {{ $data.Set "tiny" $optimized }}
+{{ range $format := $formats }}
+    {{ range $index, $size := $sizes }}
+        {{ $resizedImage := $src }}
+
+        {{ if gt $src.Width $size }}
+            {{ $resizedImage = $src.Resize (printf "%dx %s" $size $format) }}
+        {{ else }}
+            {{ $resizedImage = $src.Resize (printf "%dx%d %s" $src.Width $src.Height $format) }}
+        {{ end }}
+
+        {{ $data.Set (printf "%s-%d" $format $index) $resizedImage }}
+    {{ end }}
 {{ end }}
 
-{{ if gt $src.Width 800 }}
-    {{ $data.Set "small" ($src.Resize $smallw) }}
-{{ else }}
-    {{ $data.Set "small" $optimized }}
-{{ end }}
-
-{{ if gt $src.Width 1200 }}
-    {{ $data.Set "medium" ($src.Resize $mediumw) }}
-{{ else }}
-    {{ $data.Set "medium" $optimized }}
-{{ end }}
-
-{{ if gt $src.Width 1600 }}
-    {{ $data.Set "large" ($src.Resize $largew) }}
-{{ else }}
-    {{ $data.Set "large" $optimized }}
-{{ end }}
-
-{{ $tiny := $data.Get "tiny" }}
-{{ $small := $data.Get "small" }}
-{{ $medium := $data.Get "medium" }}
-{{ $large := $data.Get "large" }}
-
-<a href="{{ $src.RelPermalink }}"><img loading="lazy"
-    src="{{ $tiny.RelPermalink }}" 
-    srcset="{{ $tiny.RelPermalink }} 400w, {{ $small.RelPermalink }} 800w, {{ $medium.RelPermalink }} 1200w, {{ $large.RelPermalink }} 1600w" 
-    sizes="(max-width: 48rem) 100vw, 48rem" 
-    alt="{{ $alt }}"
-    height="{{ $src.Height }}" width="{{ $src.Width }}">
+<a href="{{ $src.RelPermalink }}">
+    <picture>
+        {{ range $format := $formats }}
+            {{ $srcset := slice }}
+            {{ range $index, $size := $sizes }}
+                {{ $image := $data.Get (printf "%s-%d" $format $index) }}
+                {{ $srcset = $srcset | append (printf "%s %dw" $image.RelPermalink $size) }}
+            {{ end }}
+            <source type="image/{{ $format }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 48rem) 100vw, 48rem" height="{{ $src.Height }}" width="{{ $src.Width }}">
+        {{ end }}
+        <img loading="lazy" src="{{ ($data.Get (printf "%s-0" $defaultFormat)).RelPermalink }}" alt="{{ $alt }}" height="{{ $src.Height }}" width="{{ $src.Width }}">
+    </picture>
 </a>
 
 {{ else }}
