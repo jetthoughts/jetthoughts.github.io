@@ -7,20 +7,36 @@ require 'uri'
 CDN_REGEX = %r{https?:\/\/dev-to-uploads\.s3\.amazonaws\.com[^\s\)]*}
 
 BLOG_DIR = 'content/blog'
-STATIC_DIR = './static/assets/img/blog'
-REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog'
+REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog'
 
 class ImageDownloader
   def download(url, dest)
-    uri = URI(url)
-    Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
-      request = Net::HTTP::Get.new(uri)
-      http.request(request) do |response|
-        File.open(dest, 'wb') do |io|
-          response.read_body { |chunk| io.write(chunk) }
+    max_attempts = 5
+    attempts = 0
+
+    begin
+      uri = URI(url)
+      Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https', open_timeout: 20, read_timeout: 60) do |http|
+        request = Net::HTTP::Get.new(uri)
+        http.request(request) do |response|
+          if response.is_a?(Net::HTTPSuccess)
+            File.open(dest, 'wb') do |io|
+              response.read_body { |chunk| io.write(chunk) }
+            end
+          else
+            puts "Failed to download #{url}: #{response.code} #{response.message}"
+            return false # Indicate that the download was not successful
+          end
         end
       end
+
+    rescue Exception => e
+      attempts += 1
+      puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
+      retry if attempts < max_attempts
     end
+
+    true # Indicate that the download was successful
   end
 end
 
@@ -30,7 +46,7 @@ class BlogProcessor
   end
 
   def process_blogs
-    Dir.glob("#{BLOG_DIR}/*.md").each do |file_path|
+    Dir.glob("#{BLOG_DIR}/*/index.md").each do |file_path|
       process_blog(file_path)
     end
   end
@@ -38,7 +54,7 @@ class BlogProcessor
   private
 
   def process_blog(file_path)
-    file_name = File.basename(file_path, ".md")
+    file_name = File.basename(File.dirname(file_path))
     content = File.read(file_path)
 
     # Process cover image if it exists
@@ -57,16 +73,18 @@ class BlogProcessor
       cover_image_url = cover_image_match[:url]
       ext = File.extname(URI(cover_image_url).path)
 
-      new_dir = "#{STATIC_DIR}/#{file_name}"
-      cover_path = "#{new_dir}/cover#{ext}"
+      cover_path = "#{BLOG_DIR}/#{file_name}/cover#{ext}"
 
-      FileUtils.mkdir_p(new_dir)
-      @downloader.download(cover_image_url, cover_path)
+      FileUtils.mkdir_p(File.dirname(cover_path))
+      # Only proceed if the download is successful
+      if @downloader.download(cover_image_url, cover_path)
+        updated_content = content.sub(cover_image_url, "#{REPO_URL}/#{file_name}/cover#{ext}")
+        File.write(file_path, updated_content)
 
-      updated_content = content.sub(cover_image_url, "#{REPO_URL}/#{file_name}/cover#{ext}")
-      File.write(file_path, updated_content)
-
-      return updated_content
+        return updated_content
+      else
+        FileUtils.rm_f(cover_path) # Remove the file if the download was unsuccessful
+      end
     end
 
     content
@@ -77,11 +95,10 @@ class BlogProcessor
     content.gsub(CDN_REGEX) do |cdn_link|
       ext = File.extname(URI(cdn_link).path)
 
-      new_dir = "#{STATIC_DIR}/#{file_name}"
       new_file = "file_#{index}#{ext}"
-      new_path = "#{new_dir}/#{new_file}"
+      new_path = "#{BLOG_DIR}/#{file_name}/#{new_file}"
 
-      FileUtils.mkdir_p(new_dir)
+        FileUtils.mkdir_p(File.dirname(new_path))
       @downloader.download(cdn_link, new_path)
 
       index += 1

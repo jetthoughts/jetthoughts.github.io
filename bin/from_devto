@@ -7,6 +7,7 @@ class SaveArticleToMarkdown
   require 'json'
   require 'csv'
   require 'yaml'
+  require 'fileutils'
 
   DEV_TO_API_HOST = 'https://dev.to/api/articles/jetthoughts/'.freeze
   JT_BLOG_HOST = 'https://jetthoughts.com/blog/'.freeze
@@ -34,7 +35,9 @@ class SaveArticleToMarkdown
 
     return if file.nil?
 
-    File.rename(file, 'content/blog/' + slug(data) + File.extname(file))
+    new_path = "content/blog/#{slug(data)}/index.md"
+    FileUtils.mkdir_p(File.dirname(new_path))
+    File.rename(file, new_path)
   end
 
   def fetch_article_data
@@ -57,13 +60,15 @@ class SaveArticleToMarkdown
 
   def save_to_md_file(data)
     local_article = find_file_with_id(data['id'])
-    File.open(local_article || stored_post_path_for(data), 'w') { |file| file.write(data['body_markdown']) }
-    puts "File #{slug(data)}.md successfully created."
+    path = local_article || stored_post_path_for(data)
+    FileUtils.mkdir_p(File.dirname(path))
+    File.open(path, 'w') { |file| file.write(data['body_markdown']) }
+    puts "File #{slug(data)}/index.md successfully created."
   end
 
-  def stored_post_path_for(data)
-    __dir__ + '/../content/blog/' + slug(data) + '.md'
-  end
+def stored_post_path_for(data)
+  File.expand_path("../content/blog/#{slug(data)}/index.md", __dir__)
+end
 
   def slug(data)
     csv_data = read_csv
@@ -114,6 +119,8 @@ class SaveArticleToMarkdown
       file.write("canonical_url: \"#{data['canonical_url']}\"\n")
       file.write("cover_image: \"#{data['cover_image']}\"\n")
       file.write("slug: \"#{slug(data)}\"\n")
+      file.write("metatags:\n")
+      file.write("  image: cover.jpg\n") # Need to update to use real extension instad of jpg
       file.write("---\n")
       file.write(markdown)
     end
@@ -130,7 +137,7 @@ class SaveArticleToMarkdown
   end
 
   def find_file_with_id(id)
-    Dir.glob('content/blog/*.md').each do |filename|
+    Dir.glob('content/blog/*/index.md').each do |filename|
       data = YAML.load_file(filename)
       return filename if data['dev_to_id'] == id
     end
