@@ -1,6 +1,82 @@
-{{ partial "page/header.html" . }}
-{{ block "main" . }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<title>{{ .Title }}</title>
+<meta name="description" content="{{ .Params.description }}" />
+{{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
+{{ $canonical := .Permalink | replace "/tags/" "/blog/tags/" }}
+<link rel="canonical" href="{{ $canonical }}" />
+{{ else }}
+<link rel="canonical" href="{{ .Permalink }}" />
 {{ end }}
-{{ block "footer" . }}
+
+<link rel="icon" href="/wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2022/09/cropped-jet-thoughts-logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="{{ .Title }} | JetThoughts" />
+<meta property="og:description" content="{{ .Params.description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="JetThoughts" />
+<meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
+
+<meta name="twitter:title" content="{{ .Title}} | JetThoughts" />
+<meta name="twitter:site" content="@jetthoughts" />
+<meta name="twitter:creator" content="@jetthoughts" />
+
+{{ if eq .Section "blog" }}
+{{ with .Params.created_at }}
+<meta property="article:published_time" content="{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}" />
 {{ end }}
-{{ partial "page/footer.html" . }}
+<meta property="article:modified_time" content="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{ end }}
+
+{{ $url := .RelPermalink }}
+{{ if or (eq $url "/blog/") (strings.HasPrefix $url "/blog/page/") }}
+<meta name="robots" content="NOODP">
+{{ end }}
+
+{{ with .Page.Resources.GetMatch .Page.Params.metatags.image }}
+<meta property="og:image" content="{{ .Permalink }}" />
+<meta property="og:image:width" content="{{ .Width }}" />
+<meta property="og:image:height" content="{{ .Height }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ .Permalink }}" />
+{{ end }}
+
+{{ if eq .Type "tags" }}
+{{ $blogIndex := .Site.GetPage "blog" }} <!-- Get the blog index page -->
+{{ with $blogIndex.Resources.GetMatch $blogIndex.Params.metatags.image }}
+<meta property="og:image" content="{{ .Permalink }}" />
+<meta property="og:image:width" content="{{ .Width }}" />
+<meta property="og:image:height" content="{{ .Height }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ .Permalink }}" />
+{{ end }}
+{{ end }}
+
+{{ $css := resources.Get "assets/css/newblog.css" }}
+{{ if eq hugo.Environment "production" }}
+{{ $css = $css | resources.Minify | fingerprint }}
+{{ end }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end }}
+</head>
+
+<body>
+{{ partial "blog/header.html" . }} 
+
+<div class="wrapper">
+    {{ block "main" . }}{{ end }}
+</div>
+
+{{ partial "blog/footer.html" . }}
+</body>
+</html>

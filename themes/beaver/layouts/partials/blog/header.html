@@ -1,0 +1,24 @@
+<header class="header">
+<nav class="navbar">
+    <a class="logo" href="/" title="JetThoughts">
+        {{ partial "svg" "jetthoughts" }}
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </label>
+
+    <div class="nav-links">
+        {{ range .Site.Menus.main }}
+        {{ if eq .URL "/contact-us/" }}
+        <a class="btn" href="{{ .URL }}">{{ .Name }}</a>
+        {{ else }}
+        <a class="nav-item {{ if eq .URL $.RelPermalink }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        {{ end }}
+    </div>
+</nav>
+</header>
