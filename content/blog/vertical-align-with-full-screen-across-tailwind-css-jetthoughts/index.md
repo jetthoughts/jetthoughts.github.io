@@ -3,14 +3,11 @@ dev_to_id: 1093446
 title: "Vertical align with a full screen across Tailwind CSS"
 description: "How can vertically align an element with Tailwind CSS by Flex?           Justify-Center and..."
 created_at: "2022-05-23T12:58:44Z"
-edited_at: "2024-07-03T12:23:43Z"
+edited_at: "2024-07-03T12:37:07Z"
 draft: false
-
-canonical_url: "https://jetthoughts.com/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/static/assets/img/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/cover.jpg"
-
-
 tags: ["jetthoughts", "css", "tilewind", "webdev"]
+canonical_url: "https://jetthoughts.com/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/cover.jpg"
 slug: "vertical-align-with-full-screen-across-tailwind-css-jetthoughts"
 metatags:
   image: cover.jpg
@@ -45,3 +42,7 @@ In this case need to set `margin: auto` to wrapper of children element.
   </div>
 </div>
 ```
+
+
+
+

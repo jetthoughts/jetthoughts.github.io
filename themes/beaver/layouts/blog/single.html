@@ -3,32 +3,17 @@
 <div id="fl-main-content" class="blog" itemprop="mainContentOfPage" role="main">
   <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
-       
-        <article class="single-content single-post-wrapper" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+        <article class="single-content" style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px"
+          itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 
           <h1 class="heading">{{ .Title }}</h1>
           <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
-  
-          <div class="fl-rich-text single-post-content">
-            {{ $cdnPrefix := "https://imagecdn.app/v1/images/" }}
-            {{ $content := .Content }}
 
-            {{ $cdnContent := $content }}
-            {{ $cdnContent := replaceRE "<img" "<img loading=\"lazy\" decoding=\"async\"" $cdnContent }}
-
-            {{ $images := findRE "(https://raw\\.githubusercontent\\.com/jetthoughts/jetthoughts\\.github\\.io/master/static/assets/img/blog/[^\"]+)" $content }}
-
-            {{ range $images }}
-              {{ $original := . }}
-              {{ $encoded := printf "%s%s?width=660&fit=inside" $cdnPrefix (urlquery $original) }}
-              {{ $cdnContent = replace $cdnContent $original $encoded }}
-            {{ end }}
-
-
-            {{ $cdnContent | safeHTML }}
+          <div class="fl-rich-text" style="max-width: 43rem;">
+            {{ .Content }}
           </div>
           </article>
-            
+
           <div class="single-post-wrapper">
           <aside class="social-share">
               <a href="https://x.com/intent/tweet?url={{ .Permalink }}" target="_blank" title="Share on X" aria-label="Share on X">

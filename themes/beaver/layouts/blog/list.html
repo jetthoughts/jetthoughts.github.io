@@ -6,47 +6,58 @@
         <div class="fl-row-content-wrap">
           <div class="blog fl-row-content fl-row-fixed-width fl-node-content">
 
-            <div style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px">
-              <div style="max-width: 43rem;">
-                <h1 class="fl-heading" style="margin: 0!important;padding: 0!important">Blog</h1>
-
-                <p>Browse through our blog page filled with updated information and the
-                latest tips to help you achieve your goals.</p>
-
-                <br>
-              
-                {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
-                <a class="link" href="{{ .Permalink }}">
-                  <div class="blog-post">
-                    <div class="post-image">
-                      {{ $cdnPrefix := "https://imagecdn.app/v1/images/" }}
-                      {{ $src := "" }}
-                      {{ with .Params.cover_image }}
-                        {{ $encodedSrc := printf "%s%s" $cdnPrefix (urlquery .) }}
-                        {{ $src = printf "%s?width=150&height=150" $encodedSrc }}
-                      {{ else }}
-                        {{ $src = "/assets/img/no-image.png" }}
-                      {{ end }}
-
-                      <img src="{{ $src }}" alt="Placeholder Image" loading="lazy" decoding="async">
-
+            <div class="container fl-col-group fl-node-pr4hl12zykvn" data-node="pr4hl12zykvn">
+              <div class="fl-col fl-node-sfuljidq5a2h" data-node="sfuljidq5a2h">
+                <div class="fl-col-content fl-node-content">
+                  <div class="fl-module fl-module-heading fl-node-bh5ja2c6xuro" data-node="bh5ja2c6xuro">
+                    <div class="fl-module-content fl-node-content">
+                      <h1 class="fl-heading">Blog</h1>
                     </div>
-                    <div class="post-content">
-                      <h2 class="post-title">{{ .Title }}</h2>
-                      <div class="post-meta">
-                        <div class="post-tags">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
-                        {{ if .Params.created_at }}
-                        <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
-                        {{ end }}
+                  </div>
+                  <div class="fl-module fl-module-rich-text fl-node-mrsav8gcfhel"
+                    data-node="mrsav8gcfhel">
+                    <div class="fl-module-content fl-node-content">
+                      <div class="fl-rich-text">
+                        <p>Browse through our blog page filled with updated information and the
+                        latest tips to help you achieve your goals.</p>
                       </div>
                     </div>
                   </div>
-                </a>
-                {{ end }}
+                  <br />
+                  <br />
+                  <div class="fl-module fl-module-pp-content-grid fl-node-o6rwlh2bvzie" data-node="o6rwlh2bvzie">
+                    <div class="fl-module-content fl-node-content">
 
-                {{ partial "pagination.html" . }}
-            </div>
+                      {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
+                      <a class="link" href="{{ .Permalink }}">
+                        <div class="blog-post">
+                          <div class="post-image">
+                            {{ $image := .Resources.GetMatch (printf "*%s*" .Params.metatags.image) }}
+                            {{ if $image }}
+                            <img src="{{ $image.Permalink }}" alt="{{ .Title }}">
+                            {{ else }}
+                            <img src="/assets/img/no-image.png" alt="Placeholder Image">
+                            {{ end }}
+                          </div>
+                          <div class="post-content">
+                            <h2 class="post-title">{{ .Title }}</h2>
+                            <div class="post-meta">
+                              <div class="post-tags">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
+                              {{ if .Params.created_at }}
+                              <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
+                              {{ end }}
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      {{ end }}
 
+                      {{ partial "pagination.html" . }}
+
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
