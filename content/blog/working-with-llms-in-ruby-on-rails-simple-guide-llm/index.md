@@ -3,7 +3,7 @@ dev_to_id: 1978541
 title: "Working with LLMs in Ruby on Rails: A Simple Guide"
 description: "Why You Need to Work with LLMs Today   Large Language Models (LLMs) are reshaping how we..."
 created_at: "2024-08-29T07:34:43Z"
-edited_at: "2024-08-29T15:01:00Z"
+edited_at: "2024-09-03T17:21:22Z"
 draft: false
 tags: ["llm", "ruby", "llama", "rails"]
 canonical_url: "https://jetthoughts.com/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/"
@@ -26,15 +26,15 @@ We will run the [Llama 3.1](https://github.com/ollama/ollama?tab=readme-ov-file)
   ollama/ollama
   ```
 - **Select LLM model:**
-```bash
-docker exec -it ollama ollama run llama3
-```
+  ```bash
+  docker exec -it ollama ollama run llama3
+  ```
 - **Test the server with:** 
-```bash
-curl http://localhost:11434/api/generate -d '{"model": "llama3", "prompt":"Why is the sky blue? Answer with 10 words"}'
-```
+  ```bash
+  curl http://localhost:11434/api/generate -d '{"model": "llama3", "prompt":"Why is the sky blue? Answer with 10 words"}'
+  ```
 If the result looks something like this, then the server has started successfully:
-```
+  ```
 {"model":"llama3","created_at":"2024-08-28T15:01:07.826076294Z","response":"Short","done":false}
 {"model":"llama3","created_at":"2024-08-28T15:01:08.154276586Z","response":" wavelength","done":false}
 {"model":"llama3","created_at":"2024-08-28T15:01:08.314917461Z","response":" blue","done":false}
@@ -48,7 +48,7 @@ If the result looks something like this, then the server has started successfull
 {"model":"llama3","created_at":"2024-08-28T15:01:09.685311962Z","response":" atmosphere","done":false}
 {"model":"llama3","created_at":"2024-08-28T15:01:09.87469392Z","response":".","done":false}
 {"model":"llama3","created_at":"2024-08-28T15:01:10.089219045Z","response":"","done":true,"done_reason":"stop","context":[128006,882,128007,271,10445,374,279,13180,6437,30,22559,449,220,605,4339,128009,128006,78191,128007,271,12755,46406,6437,3177,1156,10385,810,304,9420,596,16975,13],"total_duration":12195522088,"load_duration":7132571086,"prompt_eval_count":21,"prompt_eval_duration":2754452000,"eval_count":13,"eval_duration":2263609000}
-```
+   ```
 
 Llama server [API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md).
 
