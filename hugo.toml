@@ -11,6 +11,10 @@ disableKinds = []
   blog = "/blog/:slug/"
 [permalinks.term]
   tags = "/blog/tags/:slug/"
+
+[taxonomies]
+    tag = "tags"
+
 [build]
   writeStats = true
 
