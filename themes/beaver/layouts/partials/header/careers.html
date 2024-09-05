@@ -1,3 +1,7 @@
-{{- $CSS := slice (resources.Get "assets/css/3086-layout2.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/jquery.magnificpopup.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/careers.css" | minify | fingerprint | resources.PostProcess}}
+{{
+$CSS := slice
+(resources.Get "assets/css/3086-layout2.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/_careers.css"
+| css.PostCSS | minify | fingerprint | resources.PostProcess
+}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />

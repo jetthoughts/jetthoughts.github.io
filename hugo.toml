@@ -19,6 +19,8 @@ disableKinds = []
 
 [build]
   writeStats = true
+  [build.buildStats]
+    enable = true
 
 [build.processing.css]
   bundle = true

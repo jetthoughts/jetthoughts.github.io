@@ -905,30 +905,6 @@
 			if ('scrollRestoration' in history) {
 				history.scrollRestoration = 'manual';
 			}
-
-			$('.fl-page-header-logo').imagesLoaded(function(){
-				var logo       = $( '.fl-logo-img' ),
-					logoHeight = logo.height();
-
-				// Check to see if original height is set on scroll while the page is reloading.
-				if ( 'undefined' !== typeof logo.data('origHeight') ) {
-					logoHeight = parseInt( logo.data('origHeight') );
-				}
-
-				logo.css( 'max-height', logoHeight );
-
-				setTimeout( function() {
-					$('.fl-page-header').addClass( 'fl-shrink-header-transition' );
-
-					// Shrink on page load
-					if ( distanceY > shrinkOn ) {
-						header.addClass( 'fl-shrink-header' );
-					}
-					else {
-						header.removeClass( 'fl-shrink-header' );
-					}
-				}, 100 );
-			});
 		},
 
 		/**
@@ -997,24 +973,6 @@
 				header    = $( '.fl-page-header' ),
 				logo      = null;
 
-			$('.fl-page-header-logo').imagesLoaded(function(){
-				logo = $( '.fl-logo-img' );
-
-				if ( 'undefined' === typeof logo.data('origHeight') ) {
-					logo.data( 'origHeight', logo.height() );
-				}
-
-				if ( distanceY > shrinkOn ) {
-					header.addClass( 'fl-shrink-header' );
-				}
-				else {
-					header.removeClass( 'fl-shrink-header' );
-				}
-
-				if ( 'undefined' !== typeof header.data( 'original-top' ) ) {
-					FLTheme._fixThemerLayoutOnScroll();
-				}
-			});
 		},
 
 		/**
