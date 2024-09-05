@@ -23,7 +23,7 @@
          <meta property="og:type" content="website">
       {{ end }}
 
-      
+
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content="{{ .Title }} | JetThoughts" />
       <meta property="og:description" content="{{ .Params.description }}" />
@@ -135,29 +135,6 @@
            gtag('config', 'G-T1N27FC30F');
        </script>
 
-
-      {{ if eq .Params.slug "contact-us" }}
-        <script type="text/javascript">
-          var onloadCallback = function() {
-            console.log("grecaptcha is ready!")
-            grecaptcha.render('html_element', {
-              'sitekey' : '6Lem-e4pAAAAAJM_6wjku-RWSfFY9YoccTTTeXCf',
-              'callback' : correctCaptcha
-            });
-          };
-
-          var correctCaptcha = function(response) {
-            if (response.length == 0) {
-              document.getElementById('gform_submit_button_5').disabled = true
-              return false;
-            } else {
-              document.getElementById('gform_submit_button_5').disabled = false
-              return true;
-            }
-          };
-        </script>
-      {{ end }}
-
       {{ if .IsHome }}
         <link rel="prefetch" href="/services/" as="document" >
         <link rel="prefetch" href="/use-cases/" as="document">
@@ -165,15 +142,9 @@
         <link rel="prefetch" href="/clients/" as="document">
         <link rel="prefetch" href="/careers/" as="document">
       {{ end }}
-
-
-
    </head>
+
    <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-T1N27FC30F"
-         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
       <a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
       <div class="fl-page">
       <header class="fl-builder-content fl-builder-content-588 fl-builder-global-templates-locked" data-post-id="588" data-type="header" data-sticky="1" data-sticky-on="all" data-sticky-breakpoint="medium" data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
