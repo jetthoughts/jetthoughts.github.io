@@ -124,27 +124,16 @@
       <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
       <meta name="msapplication-TileImage" content="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-270x270.png" }}" />
 
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+       <!-- Google tag (gtag.js) -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>
+       <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
 
-        gtag('config', 'G-T1N27FC30F');
-      </script>
+           gtag('config', 'G-T1N27FC30F');
+       </script>
 
-      <script type="text/javascript">
-  (function(w,d,s,j,o,a,b){
-    o=o||'delveAIOrgInfoGA4';
-    w[o]=w[o] || function() {
-      (w[o].q = w[o].q || []).push(arguments);
-    };
-    a=d.createElement(s);a.async=1;a.src=j;
-    b=d.getElementsByTagName(s)[0];b.parentNode.insertBefore(a,b);
-  })(window,document,'script','//static.orginfo.io/js/plugin_ga4.js');
-  delveAIOrgInfoGA4('gtag', 'orgInfoServiceProvider', 'orgInfoNetworkDomain');
-</script>
 
       {{ if eq .Params.slug "contact-us" }}
         <script type="text/javascript">
