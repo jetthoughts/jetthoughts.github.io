@@ -1,5 +1,3 @@
-{{ partial "header/critical/blog.html" . }}
-
 {{- $CSS := slice
   (resources.Get "assets/css/586.css")
   (resources.Get "assets/css/style.css")
@@ -11,15 +9,4 @@
   (resources.Get "assets/css/single-post.css")
   | resources.Concat "assets/css/blog.css" | minify | fingerprint | resources.PostProcess}}
 
-<script>
-  function loadCSS(url) {
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = url;
-    document.head.appendChild(link);
-  }
-
-  window.onload = function () {
-    loadCSS("{{ $CSS.RelPermalink }}");
-  };
-</script>
+<link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $CSS.RelPermalink }}" media='all' />
