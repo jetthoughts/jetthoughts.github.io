@@ -3135,7 +3135,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 
 .fl-node-efmcw3bh18k5 .fl-builder-bottom-edge-layer>* {
 	width: 100%;
-	left: calc(50% - 50%);
+	left: 0;
 	right: auto;
 	height: 6%;
 	top: auto;

@@ -1899,7 +1899,7 @@ img.mfp-img {
 
 .fl-node-ec25np07hf63 .fl-builder-bottom-edge-layer > * {
     width: 100%;
-    left: calc(50% - 50%);
+    left: 0;
     right: auto;
     height: 7%;
     top: auto;
