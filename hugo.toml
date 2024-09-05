@@ -6,9 +6,11 @@ theme = "beaver"
 enableGitInfo = true
 assetDir = "static"
 disableKinds = []
+
 [permalinks]
   pages = "/:slug/"
   blog = "/blog/:slug/"
+
 [permalinks.term]
   tags = "/blog/tags/:slug/"
 
@@ -17,6 +19,8 @@ disableKinds = []
 
 [build]
   writeStats = true
+  [build.buildStats]
+    enable = true
 
 [build.processing.css]
   bundle = true
@@ -43,26 +47,6 @@ disableKinds = []
   rating = 5
   title = "Director of Engineering at PubNative"
   description = "“Usually, in my experience, contractors are either highly talented but lacking in communication skills or vice versa. Guys from JetThoughts got the best of both worlds. They implemented easy ways to manage the flow of a distributed team and support high-quality code and development overall. Their team was also detailed and precise, helping us to find problems before they appear. We knew exactly what was happening and where we were going the whole time.”"
-
-[[params.testimonials]]
-  name = "Vince Han"
-  rating = 5
-  title = "CEO of Mobile Coach"
-  description = "“JetThoughts principals are very entrepreneurial and they really understand the process of scaling and growing a business. Their commitment to a highly technical skill set with their team members has been key for us. JetThoughts is more than a contractor—they’re a trustworthy partner with impressive knowledge and skills. Currently, I’m still working with them and giving my ideas to translate into concrete actions.”"
-
-[[params.testimonials]]
-  name = "Bruno Wozniak"
-  rating = 5
-  title = "Director of Engineering at PubNative"
-  description = "“Usually, in my experience, contractors are either highly talented but lacking in communication skills or vice versa. Guys from JetThoughts got the best of both worlds. They implemented easy ways to manage the flow of a distributed team and support high-quality code and development overall. Their team was also detailed and precise, helping us to find problems before they appear. We knew exactly what was happening and where we were going the whole time.”"
-
-[[params.testimonials]]
-  name = "Vince Han"
-  rating = 5
-  title = "CEO of Mobile Coach"
-  description = "“JetThoughts principals are very entrepreneurial and they really understand the process of scaling and growing a business. Their commitment to a highly technical skill set with their team members has been key for us. JetThoughts is more than a contractor—they’re a trustworthy partner with impressive knowledge and skills. Currently, I’m still working with them and giving my ideas to translate into concrete actions.”"
-
-
 
 [menu]
 [[menu.main]]

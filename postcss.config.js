@@ -17,4 +17,7 @@ module.exports = {
   content: ['layouts/**/*.html'],
   css: ['static/css/*.css'],
   whitelist: [],
+  plugins: [
+    require('autoprefixer')
+  ]
 };
