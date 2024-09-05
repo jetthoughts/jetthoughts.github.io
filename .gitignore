@@ -6,7 +6,6 @@
 # Generated files by hugo
 /public/
 /resources/_gen/
-/node_modules/
 /assets/jsconfig.json
 hugo_stats.json
 
@@ -18,6 +17,9 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 
-# End of https://www.toptal.com/developers/gitignore/api/hugo
+# JavaScript
+/node_modules/
 
+# Other
 .DS_Store
+.*

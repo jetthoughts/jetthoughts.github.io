@@ -28,7 +28,7 @@ disableKinds = []
 
 [sitemap]
   changeFreq = 'weekly'
-  priority = 1
+  priority = 0.5
 
 [params]
   email="info@jetthoughts.com"

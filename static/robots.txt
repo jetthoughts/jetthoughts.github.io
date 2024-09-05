@@ -1,7 +1,5 @@
 User-Agent: *
-Disallow: /contact-us/
 Disallow: /?s=
 Disallow: /blog/page/
+Disallow: /contact-us/
 Sitemap: https://jetthoughts.com/sitemap.xml
-User-Agent: GPTBot
-Disallow: /
