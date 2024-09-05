@@ -308,7 +308,7 @@
 
 .rc-anchor-error-message {
     color: #f00;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
@@ -320,7 +320,7 @@
 }
 
 .rc-anchor-checkbox-label {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px
@@ -336,7 +336,7 @@
 
 .rc-anchor-error-msg-container {
     color: #f00;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 12px;
     font-weight: 400;
     left: 0;
@@ -382,7 +382,7 @@
 
 .rc-anchor-logo-text {
     cursor: default;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 10px;
     font-weight: 400;
     line-height: 10px;
@@ -438,7 +438,7 @@
 }
 
 .rc-anchor-normal .rc-anchor-pt,.rc-anchor-invisible .rc-anchor-pt,.rc-anchor-compact .rc-anchor-pt {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 8px;
     font-weight: 400
 }
@@ -489,7 +489,7 @@
 #rc-anchor-over-quota {
     bottom: 0;
     color: #555;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 9px;
     padding: 4px;
     position: absolute;
@@ -554,7 +554,7 @@
     -ms-flex-positive: 1;
     -webkit-flex-grow: 1;
     flex-grow: 1;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 13px;
     font-weight: 400;
     height: 100%;
@@ -659,7 +659,7 @@
     border-radius: 2px;
     color: #fff;
     cursor: pointer;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 500;
     height: 42px;
@@ -704,7 +704,7 @@ body {
 }
 
 .rc-footer {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     position: relative;
     width: 100%
 }
@@ -875,7 +875,7 @@ body {
 }
 
 .rc-challenge-help {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 12px;
     font-weight: 400;
     overflow-y: scroll;
@@ -920,14 +920,14 @@ body {
 
 .rc-audiochallenge-error-message {
     color: #ff1b1b;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     margin: 20px 20px 0 20px
 }
 
 .rc-audiochallenge-instructions {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     margin: 10px 20px 10px 20px
@@ -945,7 +945,7 @@ body {
 }
 
 .rc-audiochallenge-input-label {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     margin: 10px 20px 10px 20px
@@ -1048,7 +1048,7 @@ body {
 
 .rc-defaultchallenge-payload {
     border: none;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     min-height: 61px;
@@ -1057,7 +1057,7 @@ body {
 
 .rc-defaultchallenge-incorrect-response {
     color: #ff1b1b;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
@@ -1072,7 +1072,7 @@ body {
 }
 
 .rc-doscaptcha-header-text {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 22px;
     font-weight: 400;
     text-align: center;
@@ -1084,7 +1084,7 @@ body {
 }
 
 .rc-doscaptcha-body-text {
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 16px;
     font-weight: 400;
     padding: 10px 15px 10px 15px
@@ -1100,7 +1100,7 @@ body {
 
 #rc-imageselect {
     min-width: 240px;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     background-color: #fff
 }
 
@@ -1501,14 +1501,14 @@ td:focus {
 
 .rc-prepositional-payload {
     padding: 20px;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400
 }
 
 .rc-prepositional-select-more,.rc-prepositional-verify-failed {
     color: #ff1b1b;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     margin: 20px 20px 0 20px
@@ -1532,7 +1532,7 @@ td:focus {
     border: 1px solid #fff;
     color: #000;
     cursor: pointer;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 14px;
     font-weight: 400;
     width: 40%;
@@ -1545,7 +1545,7 @@ td:focus {
 }
 
 .rc-2fa-payload {
-    font-family: Roboto,Helvetica,Arial,Sans-Serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-weight: 400;
     font-size: 14px;
     color: #202124;
@@ -1659,7 +1659,7 @@ td:focus {
     height: 36px;
     margin: 5px 0;
     padding: 1px 9px;
-    font-family: Roboto,helvetica,arial,sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
     font-size: 16px;
     font-weight: 400;
     outline: none;

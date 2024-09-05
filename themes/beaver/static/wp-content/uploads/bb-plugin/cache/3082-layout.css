@@ -4041,7 +4041,7 @@ img.mfp-img {
 .pp-review-header {
     padding-top: 15px;
     padding-bottom: 6px;
-    font-family: "Roboto", Sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 600;
 }
 
@@ -4459,19 +4459,19 @@ img.mfp-img {
 }
 
 .fl-node-08kl1yzxeout .pp-review-name {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 800;
     font-size: 18px;
 }
 
 .fl-node-08kl1yzxeout .pp-review-title {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 300;
     font-size: 16px;
 }
 
 .fl-node-08kl1yzxeout .pp-review-text {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 300;
     font-size: 18px;
     text-align: left;
@@ -4880,7 +4880,7 @@ img.mfp-img {
 }
 
 .fl-node-kv6yd9o5zpag .pp-infolist-title .pp-infolist-title-text {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 300;
     font-size: 18px;
 }
@@ -5071,7 +5071,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper .ginput_container label,.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper table.gfield_list thead th,.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper span.ginput_product_price,.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper span.ginput_product_price_label,.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper span.ginput_quantity_label,.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper .gfield_html {
     color: #121212 !important;
-    font-family: "Roboto", sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
 }
 
@@ -5251,13 +5251,13 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper .gfield .gfield_label {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     font-size: 14px;
 }
 
 .fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper .gfield select,.fl-node-jumarfbx1lcn .pp-gf-content .gform_wrapper .gfield textarea {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
     font-size: 18px;
 }
@@ -5286,7 +5286,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-jumarfbx1lcn .pp-gf-content .gform_confirmation_wrapper .gform_confirmation_message {
-    font-family: Roboto, sans-serif;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     font-size: 20px;
     text-align: center;
