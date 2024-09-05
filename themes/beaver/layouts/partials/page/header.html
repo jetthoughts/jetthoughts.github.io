@@ -23,7 +23,6 @@
          <meta property="og:type" content="website">
       {{ end }}
 
-
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content="{{ .Title }} | JetThoughts" />
       <meta property="og:description" content="{{ .Params.description }}" />
@@ -68,6 +67,7 @@
        {{ end }}
 
       <link rel='dns-prefetch' href='{{ absURL "" }}' />
+      <link rel="preload" as="image" href='{{ absURL "wp-content/uploads/2022/10/white-border-background.webp" }}'>
 
 
       {{ if eq .Params.slug "privacy-policy" }}
