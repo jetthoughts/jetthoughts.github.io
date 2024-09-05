@@ -16,7 +16,52 @@
 <meta property="og:site_name" content="JetThoughts" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Page Not Found - JetThoughts" />
-<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"{{ absURL "#person" }}","name":"JetThoughts","url":"https://www.jetthoughts.com"},{"@type":"WebSite","@id":"{{ absURL "#website" }}","url":"https://www.jetthoughts.com","name":"JetThoughts","publisher":{"@id":"{{ absURL "#person" }}"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://www.jetthoughts.com","name":"Home"}}]},{"@type":"WebPage","@id":"#webpage","url":"","name":"Page Not Found - JetThoughts","isPartOf":{"@id":"{{ absURL "#website" }}"},"inLanguage":"en-US","breadcrumb":{"@id":"#breadcrumb"}}]}</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+       {
+         "@type": "Person",
+         "@id": "{{ absURL "#person" }}",
+         "name": "JetThoughts",
+         "url": "https://www.jetthoughts.com"
+       },
+      {
+        "@type":"WebSite",
+        "@id":"{{ absURL "#website" }}",
+        "url":"https://www.jetthoughts.com",
+        "name":"JetThoughts",
+        "publisher": { "@id": "{{ absURL "#person" }}" },
+        "inLanguage":"en-US"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://www.jetthoughts.com",
+              "name":"Home"
+            }
+          }
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "@id":"#webpage",
+        "url":"",
+        "name": "Page Not Found - JetThoughts",
+        "isPartOf": {
+          "@id": "{{ absURL "#website" }}"
+        },
+        "inLanguage": "en-US",
+        "breadcrumb":{ "@id": "#breadcrumb" }
+      }
+    ]
+  }
+</script>
 <!-- /Rank Math WordPress SEO plugin -->
 
 <link rel='dns-prefetch' href='//js.hs-scripts.com' />
