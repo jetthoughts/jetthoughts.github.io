@@ -9,4 +9,4 @@
   (resources.Get "assets/css/single-post.css")
   | resources.Concat "assets/css/blog.css" | minify | fingerprint | resources.PostProcess}}
 
-<link rel="stylesheet" id='fl-builder-layout-3059-css' href="{{ $CSS.RelPermalink }}" media='all' />
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />

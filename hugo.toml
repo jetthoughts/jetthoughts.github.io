@@ -6,9 +6,11 @@ theme = "beaver"
 enableGitInfo = true
 assetDir = "static"
 disableKinds = []
+
 [permalinks]
   pages = "/:slug/"
   blog = "/blog/:slug/"
+
 [permalinks.term]
   tags = "/blog/tags/:slug/"
 

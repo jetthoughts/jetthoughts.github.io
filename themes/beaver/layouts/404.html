@@ -567,18 +567,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    </div>
 </div>
 </footer>	</div><!-- .fl-page -->
-<script id="leadin-script-loader-js-js-extra">
-var leadin_wordpress = {"userRole":"visitor","pageType":"other","leadinPluginVersion":"10.2.23"};
-</script>
-<script src="{{ absURL "wp-content/plugins/bb-plugin/js/jquery.imagesloaded.min.js?ver=2.7.4.4" }}" id="imagesloaded-js"></script>
-<script src="{{ absURL "wp-content/plugins/bb-plugin/js/jquery.ba-throttle-debounce.min.js?ver=2.7.4.4" }}" id="jquery-throttle-js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/5cc6310d2cced275654804670ab61720-layout-bundle.js?ver=2.7.4.4-1.4.9.2" }}" id="fl-builder-layout-bundle-5cc6310d2cced275654804670ab61720-js"></script>
-<script src="{{ absURL "wp-content/plugins/bb-plugin/js/jquery.magnificpopup.min.js?ver=2.7.4.4" }}" id="jquery-magnificpopup-js"></script>
-<script src="{{ absURL "wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js?ver=1.2" }}" id="jquery-fitvids-js"></script>
-<script src="{{ absURL "wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.14" }}" id="fl-automator-js"></script>
 
-{{ $script_587 := resources.Get "/assets/js/587.js" | minify | fingerprint }}
-<script src='{{ $script_587.Permalink }}'></script>
+{{ partial "page/site-scripts" . }}
 
 </body>
 </html>
