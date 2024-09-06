@@ -1,7 +1,7 @@
 <!-- .fl-post -->
-</div>
-</div>
-</div>
+         </div>
+      </div>
+   </div>
 </div><!-- .fl-page-content -->
 <footer class="fl-builder-content fl-builder-content-589 fl-builder-global-templates-locked" data-post-id="589" data-type="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
    <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-530uo7f2gcli fl-row-default-height fl-row-align-center" data-node="530uo7f2gcli">
@@ -15,7 +15,7 @@
                            <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                               <div class="fl-photo-content fl-photo-img-png">
                                  <img loading="lazy" decoding="async" class="fl-photo-img wp-image-661 size-full"
-                                 src="{{ "/wp-content/uploads/2022/09/jet-thoughts-white.png" }}" alt="Jet Thoughts Logo White" itemprop="image" height="73"
+                                 src="{{ "/wp-content/uploads/2022/09/jet-thoughts-white.png" }}" alt="JetThoughts Logo White" itemprop="image" height="73"
                                  width="400" srcset="{{ "/wp-content/uploads/2022/09/jet-thoughts-white.png" }} 400w,
                                  {{ "/wp-content/uploads/2022/09/jet-thoughts-white-300x55.png" }} 300w"
                                  sizes="(max-width: 400px) 100vw, 400px" />
@@ -132,7 +132,8 @@
                               <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
                                  <link itemprop="url" href='{{ absURL "" }}'>
                                  <a itemprop="sameAs" href="https://www.facebook.com/jetthoughts/" target="_blank" title="Facebook" aria-label="Facebook" role="button" rel="noopener noreferrer external" >
-                                   <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+
                                  </a>
                               </span>
                               <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
@@ -183,62 +184,8 @@
    </div>
 </footer>
 </div><!-- .fl-page -->
-<script id="leadin-script-loader-js-js-extra">
-   var leadin_wordpress = {"userRole":"visitor","pageType":"page","leadinPluginVersion":"10.2.23"};
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" id="imagesloaded-js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-throttle-debounce@1.0.0/jquery.ba-throttle-debounce.min.js" id="jquery-throttle-js"></script>
-<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.2.0/dist/jquery.magnific-popup.min.js" id="jquery-magnificpopup-js"></script>
-<script id="fl-automator-js-extra">
-   var themeopts = {"medium_breakpoint":"1115","mobile_breakpoint":"860","scrollTopPosition":"800"};
-</script>
+{{ partial "page/site-scripts" . }}
 
-<script src="{{ absURL "wp-content/themes/bb-theme/js/theme.min.js?ver=1.7.14" }}" id="fl-automator-js"></script>
-
-{{ $script_587 := resources.Get "/assets/js/587.js" | minify | fingerprint }}
-<script src='{{ $script_587.Permalink }}'></script>
-
-{{ if eq .Params.slug "about-us" }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-
-
-{{ else if eq .Params.slug "services" }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/737-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-
-{{ else if eq .Type "services" }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-
-{{ else if eq .Params.slug "use-cases" }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/3021-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-
-{{ else if eq .Type "use-cases" }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-
-{{ else if eq .Params.slug "clients" }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
-<script src="{{ absURL "wp-content/uploads/bb-plugin/cache/701-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}"></script>
-
-{{ else if eq .Type "clients" }}
-<link rel="stylesheet" href="{{ absURL "wp-content/plugins/bbpowerpack/assets/css/jquery.fancybox.min.css?ver=3.5.4" }}">
-<script src='https://cdn.jsdelivr.net/npm/fancybox@3.0.1/dist/js/jquery.fancybox.min.js'></script>
-
-{{ else if .IsHome }}
-<script src='https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js' async></script>
-<script src='https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js'></script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js" async></script>
-<script src='{{ absURL "wp-content/uploads/bb-plugin/cache/590-layout.js?ver=bed65587f6ebfbb8ac367b0f726010a5" }}' async></script>
-
-{{ else }}
-<script src='{{ absURL "wp-content/uploads/bb-plugin/cache/3059-layout.js?ver=76927b1e9fed04ee4e090c7bdfc164c9" }}' id="fl-builder-layout-3059-js"></script>
-{{ end }}
-<script src='{{ absURL "wp-content/uploads/bb-plugin/cache/e40f11516a33666c3bb656e8ae3f5bdc-layout-bundle.js?ver=2.7.4.4-1.4.9.2" }}' id="fl-builder-layout-bundle-e40f11516a33666c3bb656e8ae3f5bdc-js"></script>
 </body>
 </html>

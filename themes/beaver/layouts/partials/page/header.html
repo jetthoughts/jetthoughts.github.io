@@ -23,7 +23,6 @@
          <meta property="og:type" content="website">
       {{ end }}
 
-      
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content="{{ .Title }} | JetThoughts" />
       <meta property="og:description" content="{{ .Params.description }}" />
@@ -37,9 +36,9 @@
 
       {{ if eq .Section "blog" }}
       {{ with .Params.created_at }}
-      <meta property="article:published_time" content="{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}">
+      <meta property="article:published_time" content="{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}" />
       {{ end }}
-      <meta property="article:modified_time" content="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}">
+      <meta property="article:modified_time" content="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}" />
       {{ end }}
 
       {{ $url := .RelPermalink }}
@@ -47,26 +46,28 @@
         <meta name="robots" content="NOODP">
       {{ end }}
 
-      {{ with .Page.Resources.GetMatch .Page.Params.metatags.image }}
-      <meta property="og:image" content="{{ .Permalink }}" />
-      <meta property="og:image:width" content="{{ .Width }}" />
-      <meta property="og:image:height" content="{{ .Height }}" />
-      <meta name="twitter:image" content="{{ .Permalink }}" />
-      <meta name="twitter:card" content="summary_large_image">
-      {{ end }}
+       {{ with .Page.Resources.GetMatch .Page.Params.metatags.image }}
+       <meta property="og:image" content="{{ .Permalink }}" />
+       <meta property="og:image:width" content="{{ .Width }}" />
+       <meta property="og:image:height" content="{{ .Height }}" />
+       <meta name="twitter:card" content="summary_large_image" />
+       <meta name="twitter:image" content="{{ .Permalink }}" />
+       {{ end }}
 
-      {{ if eq .Type "tags" }}
-      {{ $blogIndex := .Site.GetPage "blog" }}  <!-- Get the blog index page -->
-      {{ with $blogIndex.Resources.GetMatch $blogIndex.Params.metatags.image }}
-        <meta property="og:image" content="{{ .Permalink }}" />
-        <meta property="og:image:width" content="{{ .Width }}" />
-        <meta property="og:image:height" content="{{ .Height }}" />
-        <meta name="twitter:image" content="{{ .Permalink }}" />
-        <meta name="twitter:card" content="summary_large_image">
-      {{ end }}
-      {{ end }}
+       {{ if eq .Type "tags" }}
+       {{ $blogIndex := .Site.GetPage "blog" }}  <!-- Get the blog index page -->
+       {{ with $blogIndex.Resources.GetMatch $blogIndex.Params.metatags.image }}
+       <meta property="og:image" content="{{ .Permalink }}" />
+       <meta property="og:image:width" content="{{ .Width }}" />
+       <meta property="og:image:height" content="{{ .Height }}" />
+       <meta name="twitter:card" content="summary_large_image" />
+       <meta name="twitter:image" content="{{ .Permalink }}" />
+
+       {{ end }}
+       {{ end }}
 
       <link rel='dns-prefetch' href='{{ absURL "" }}' />
+      <link rel="preload" as="image" href='{{ absURL "wp-content/uploads/2022/10/white-border-background.webp" }}'>
 
 
       {{ if eq .Params.slug "privacy-policy" }}
@@ -124,49 +125,15 @@
       <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
       <meta name="msapplication-TileImage" content="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-270x270.png" }}" />
 
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+       <!-- Google tag (gtag.js) -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>
+       <script>
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
 
-        gtag('config', 'G-T1N27FC30F');
-      </script>
-
-      <script type="text/javascript">
-  (function(w,d,s,j,o,a,b){
-    o=o||'delveAIOrgInfoGA4';
-    w[o]=w[o] || function() {
-      (w[o].q = w[o].q || []).push(arguments);
-    };
-    a=d.createElement(s);a.async=1;a.src=j;
-    b=d.getElementsByTagName(s)[0];b.parentNode.insertBefore(a,b);
-  })(window,document,'script','//static.orginfo.io/js/plugin_ga4.js');
-  delveAIOrgInfoGA4('gtag', 'orgInfoServiceProvider', 'orgInfoNetworkDomain');
-</script>
-
-      {{ if eq .Params.slug "contact-us" }}
-        <script type="text/javascript">
-          var onloadCallback = function() {
-            console.log("grecaptcha is ready!")
-            grecaptcha.render('html_element', {
-              'sitekey' : '6Lem-e4pAAAAAJM_6wjku-RWSfFY9YoccTTTeXCf',
-              'callback' : correctCaptcha
-            });
-          };
-
-          var correctCaptcha = function(response) {
-            if (response.length == 0) {
-              document.getElementById('gform_submit_button_5').disabled = true
-              return false;
-            } else {
-              document.getElementById('gform_submit_button_5').disabled = false
-              return true;
-            }
-          };
-        </script>
-      {{ end }}
+           gtag('config', 'G-T1N27FC30F');
+       </script>
 
       {{ if .IsHome }}
         <link rel="prefetch" href="/services/" as="document" >
@@ -175,15 +142,9 @@
         <link rel="prefetch" href="/clients/" as="document">
         <link rel="prefetch" href="/careers/" as="document">
       {{ end }}
-
-
-
    </head>
+
    <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-T1N27FC30F"
-         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
       <a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
       <div class="fl-page">
       <header class="fl-builder-content fl-builder-content-588 fl-builder-global-templates-locked" data-post-id="588" data-type="header" data-sticky="1" data-sticky-on="all" data-sticky-breakpoint="medium" data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">

@@ -1,0 +1,9 @@
+{{- $js := slice
+(resources.Get "/assets/js/bb-theme/theme.js")
+(resources.Get "/assets/js/bb-theme/pp_advanced_menu.js")
+(resources.Get "/assets/js/587.js")
+| resources.Concat "assets/js/_site.js"
+| minify | fingerprint | resources.PostProcess
+}}
+
+<script src='{{ $js.Permalink }}'></script>
