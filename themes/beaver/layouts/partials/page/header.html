@@ -118,22 +118,10 @@
       {{ partial "header/blog.html" . }}
       {{ end }}
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" id="jquery-migrate-js"></script>
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" }}" sizes="32x32" />
       <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-192x192.png" }}" sizes="192x192" />
       <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
       <meta name="msapplication-TileImage" content="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-270x270.png" }}" />
-
-       <!-- Google tag (gtag.js) -->
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>
-       <script>
-           window.dataLayer = window.dataLayer || [];
-           function gtag(){dataLayer.push(arguments);}
-           gtag('js', new Date());
-
-           gtag('config', 'G-T1N27FC30F');
-       </script>
 
       {{ if .IsHome }}
         <link rel="prefetch" href="/services/" as="document" >
@@ -169,7 +157,7 @@
                      </div>
                      <div class="fl-col fl-node-6evrh1ufgx0t fl-col-small-custom-width" data-node="6evrh1ufgx0t">
                         <div class="fl-col-content fl-node-content">
-                           <div class="fl-module fl-module-pp-advanced-menu fl-node-ncg61wov0ytq" data-node="ncg61wov0ytq">
+                           <div class="fl-module fl-module-pp-advanced-menu fl-node-menu" data-node="menu">
                               <div class="fl-module-content fl-node-content">
                                  <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-right pp-menu-position-below">
                                     <div class="pp-clear"></div>
@@ -202,8 +190,8 @@
                                     {{ end }}
                                     </ul>
                                     </nav>
-
                                  </div>
+
                                  <div class="pp-advanced-menu-mobile">
                                     <button class="pp-advanced-menu-mobile-toggle hamburger" tabindex="0" aria-label="Menu">
                                        <div class="pp-hamburger">
@@ -213,6 +201,7 @@
                                        </div>
                                     </button>
                                  </div>
+
                                  <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse off-canvas pp-menu-position-below">
                                     <div class="pp-clear"></div>
                                     <nav class="pp-menu-nav pp-off-canvas-menu pp-menu-right" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
