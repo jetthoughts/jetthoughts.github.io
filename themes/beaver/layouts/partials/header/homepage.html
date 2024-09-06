@@ -1,4 +1,6 @@
-{{- $CSS := slice
+{{ partial "header/critical/homepage.html" . }}
+
+{{ $CSS := slice
 (resources.Get "assets/css/homepage.css")
 (resources.Get "assets/css/companies.css")
 (resources.Get "assets/css/590-layout.css")
