@@ -1,14 +1,26 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-<article>
-  <header>
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-    {{ if eq .Section "posts" }}
-    <p>Updated: {{ .Date.Format "2th January 2006" }}
-      <br>Tags: {{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a> {{ end }}</p>
-    {{ end }}
-  </header>
-  {{ .Content }}
-</article>
+<div id="fl-main-content" class="blog" itemprop="mainContentOfPage" role="main">
+  <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
-{{ partial "footer.html" . }}
+    <article class="single-content" style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px"
+             itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+
+      <h1 class="heading">{{ .Title }}</h1>
+      <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
+
+      <div class="fl-rich-text" style="max-width: 43rem;">
+        {{ .Content }}
+      </div>
+    </article>
+
+    <div class="single-content single-post-wrapper">
+      {{ partial "blog/share.html" . }}
+
+      {{ partial "blog/related-posts.html" . }}
+    </div>
+
+  </div>
+</div>
+
+{{ end }}

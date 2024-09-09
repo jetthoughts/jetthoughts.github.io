@@ -17,19 +17,16 @@
               
                 {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
                 <a class="link" href="{{ .Permalink }}">
+
+
                   <div class="blog-post">
                     <div class="post-image">
-                      {{ $cdnPrefix := "https://imagecdn.app/v1/images/" }}
-                      {{ $src := "" }}
-                      {{ with .Params.cover_image }}
-                        {{ $encodedSrc := printf "%s%s" $cdnPrefix (urlquery .) }}
-                        {{ $src = printf "%s?width=150&height=150" $encodedSrc }}
+                      {{ $image := .Resources.GetMatch (printf "*%s*" .Params.metatags.image) }}
+                      {{ if $image }}
+                      <img src="{{ $image.Permalink }}" alt="{{ .Title }}">
                       {{ else }}
-                        {{ $src = "/assets/img/no-image.png" }}
+                      <img src="/assets/img/no-image.png" alt="Placeholder Image">
                       {{ end }}
-
-                      <img src="{{ $src }}" alt="Placeholder Image" loading="lazy" decoding="async">
-
                     </div>
                     <div class="post-content">
                       <h2 class="post-title">{{ .Title }}</h2>
@@ -41,6 +38,7 @@
                       </div>
                     </div>
                   </div>
+
                 </a>
                 {{ end }}
 
