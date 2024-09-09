@@ -1,6 +1,383 @@
-{{ partial "page/header.html" . }}
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Params.description }}" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+
+    {{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
+    {{ $canonical := .Permalink | replace "/tags/" "/blog/tags/" }}
+    <link rel="canonical" href="{{ $canonical }}" />
+    {{ else }}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ end }}
+
+
+    {{ if and (eq .Section "blog") (eq .Kind "page") }}
+    <meta property="og:type" content="article">
+    {{ else }}
+    <meta property="og:type" content="website">
+    {{ end }}
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="{{ .Title }} | JetThoughts" />
+    <meta property="og:description" content="{{ .Params.description }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="JetThoughts" />
+    <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
+
+    <meta name="twitter:title" content="{{ .Title}} | JetThoughts" />
+    <meta name="twitter:site" content="@jetthoughts" />
+    <meta name="twitter:creator" content="@jetthoughts" />
+
+    <link rel='dns-prefetch' href='{{ absURL "" }}' />
+    <link rel="preload" as="image" href='{{ absURL "wp-content/uploads/2022/10/white-border-background.webp" }}'>
+
+
+
+
+
+    {{ with .Page.Resources.GetMatch .Page.Params.metatags.image }}
+    <meta property="og:image" content="{{ .Permalink }}" />
+    <meta property="og:image:width" content="{{ .Width }}" />
+    <meta property="og:image:height" content="{{ .Height }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ .Permalink }}" />
+    {{ end }}
+
+
+
+
+    {{ block "header" . }} {{ end }}
+
+    <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-32x32.png" }}" sizes="32x32" />
+    <link rel="icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-192x192.png" }}" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-180x180.png" }}" />
+    <meta name="msapplication-TileImage" content="{{ absURL "wp-content/uploads/2022/09/cropped-jet-thoughts-logo-270x270.png" }}" />
+
+</head>
+
+<body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
+<div class="fl-page">
+    <header class="fl-builder-content fl-builder-content-588 fl-builder-global-templates-locked" data-post-id="588" data-type="header" data-sticky="1" data-sticky-on="all" data-sticky-breakpoint="medium" data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+        <div class="fl-row fl-row-full-width fl-row-bg-none fl-node-q9s2ncprogml fl-row-default-height fl-row-align-center" data-node="q9s2ncprogml">
+            <div class="fl-row-content-wrap">
+                <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                    <div class="fl-col-group fl-node-6ghurya04s2b fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="6ghurya04s2b">
+                        <div class="fl-col fl-node-zycl0pq2xei4 fl-col-small fl-col-small-custom-width" data-node="zycl0pq2xei4">
+                            <div class="fl-col-content fl-node-content">
+                                <div class="fl-module fl-module-photo fl-node-b1kta765r0lo" data-node="b1kta765r0lo">
+                                    <div class="fl-module-content fl-node-content">
+                                        <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                                            <div class="fl-photo-content fl-photo-img-png">
+                                                <a href="{{ absURL "" }}" target="_self" itemprop="url">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="36.264" viewBox="80 34.001 200 36.264"><g data-name="Group 11430"><path d="M98.112 34.001c-10 0-18.112 8.09-18.112 18.132 0 10.043 8.112 18.132 18.112 18.132 10 0 18.112-8.09 18.112-18.132C116.154 42.09 108.042 34 98.112 34Zm0 31.801c-7.553 0-13.707-6.137-13.707-13.67 0-7.531 6.155-13.667 13.707-13.667 7.553 0 13.636 6.136 13.636 13.668 0 7.532-6.153 13.67-13.637 13.67h.001Zm3.007-15.622c-.91-.279-1.959-.906-3.007-1.534a10.11 10.11 0 0 1-.909-.627c-.35-.21-.7-.488-.979-.698-1.26-.976-.979-2.093.209-2.86 1.26-.836 2.798-1.463 4.966-2.23.699-.21.978-.559.838-.838 0 0 0-.07-.069-.07 0-.07-.07-.07-.14-.139-.42-.418-1.33-.768-2.868-.837-.628-.07-2.027 0-3.846.558-3.426.976-6.713 3.556-6.782 4.533-.07 1.395 3.495 3.627 6.223 5.09.14.629.14 1.396.14 2.163v.209c0 1.115-.14 2.301-.28 3.068-.208 1.604-1.33 1.884-2.588 1.187-1.328-.698-2.586-1.744-4.405-3.278-.56-.49-.978-.629-1.188-.28 0 .07 0 .07-.07.14-.14.557-.07 1.534.699 2.929.28.558.979 1.744 2.307 3.068 2.449 2.51 6.364 4.185 7.274 3.697 1.258-.559 1.468-4.814 1.468-7.95.07-.07.14-.07.209-.14l.07-.07.07-.07c1.049-.697 2.587-1.464 3.776-1.953 0 0 .07 0 .07-.069.071 0 .071 0 .14-.07.07 0 .14-.07.21-.07h.07c.07 0 .14-.069.21-.069 1.468-.558 2.307.278 2.307 1.674 0 1.534-.209 3.137-.699 5.44-.14.766-.07 1.185.35 1.185h.14c.56-.14 1.329-.698 2.238-2.022.349-.489 1.049-1.744 1.538-3.558.98-3.418.56-7.601-.28-8.16-1.049-.626-4.755 1.187-7.412 2.651Z" fill="#1a8cff" fill-rule="evenodd" data-name="a"/><path d="M98.112 35.001c-10 0 9.93 0 0 0Zm33.636 23.502c0 1.674 0 2.022-2.937 2.998l1.399 3.138c5.804-1.255 5.804-2.789 5.804-6.415V42.463h-4.267v16.04h.001Zm13.356-1.256c-1.607 0-2.447-.976-2.657-2.999h8.672s.21-.767.21-1.882c0-3.347-2.098-5.857-6.363-5.857-4.197 0-6.714 2.579-6.714 6.903 0 4.742 2.868 6.835 6.434 6.835 3.077 0 5.734-1.466 6.713-2.023l-1.47-2.58c-1.607.906-3.426 1.604-4.824 1.604Zm-.069-7.74c1.539 0 2.308.906 2.308 2.65h-4.827c.21-1.744 1.05-2.65 2.517-2.65h.002Zm14.616 7.183c-.49 0-1.12-.07-1.12-1.187v-5.648h3.567v-2.997h-3.566v-3.835l-4.056.487v3.348h-1.819v2.998h1.819v5.648c0 3.278 1.328 4.813 4.055 4.813 1.889 0 3.567-.697 4.476-1.116l-1.398-3.068c-.35.14-1.4.558-1.958.558v-.001Zm3.006-10.601h5.106v13.948h4.266V46.09h5.034v-3.626h-14.406v3.626Zm25.245.489c-2.028 0-3.777.976-4.965 1.743v-6.626h-4.126v18.341h4.126V51.32c.77-.698 2.098-1.534 3.356-1.534 1.26 0 1.539.836 1.539 1.952v8.3h4.126v-9.275c-.07-2.582-1.189-4.185-4.056-4.185Zm13.077 0c-4.545 0-6.993 2.51-6.993 6.834 0 4.393 2.517 6.903 6.993 6.903 4.545 0 6.994-2.51 6.994-6.834 0-4.393-2.518-6.903-6.994-6.903Zm0 10.6c-1.958 0-2.798-1.396-2.798-3.697 0-2.3.84-3.695 2.798-3.695 1.958 0 2.867 1.395 2.867 3.695 0 2.302-.909 3.697-2.867 3.697Zm18.112-1.604c-.84.767-2.238 1.534-3.357 1.534-1.258 0-1.538-.837-1.538-1.953v-8.297h-4.126v9.275c0 2.58 1.188 4.184 3.986 4.184 2.028 0 3.776-.906 5.035-1.743v1.464h4.125V46.856h-4.125v8.718Zm15.734-7.322c-1.118-.907-2.447-1.674-4.336-1.674-3.077 0-5.175 2.301-5.175 6.903 0 4.533 2.098 6.835 5.175 6.835 1.889 0 3.218-.697 4.336-1.604v1.396c0 1.463-.63 2.022-2.657 2.022-1.328 0-3.777-.559-5.455-1.047l-.84 3.277c2.24.629 5.036 1.046 7.134 1.046 3.986 0 5.944-1.813 5.944-5.579V46.858h-4.126v1.395-.001Zm0 7.182c-.979 1.046-2.028 1.534-3.006 1.534-1.539 0-2.308-1.255-2.308-3.556s.77-3.557 2.308-3.557c1.048 0 2.098.488 3.006 1.535v4.044Zm16.015-8.857c-2.029 0-3.777.978-4.966 1.744v-6.626h-4.126v18.341h4.126V51.32c.769-.698 2.099-1.534 3.357-1.534s1.538.836 1.538 1.952v8.3h4.127v-9.275c-.07-2.582-1.19-4.185-4.056-4.185v-.001Zm12.796 10.112c-.489 0-1.118-.07-1.118-1.185v-5.648h3.566v-3h-3.566V43.02l-4.056.488v3.348h-1.82v2.998h1.82v5.648c0 3.278 1.328 4.813 4.056 4.813 1.887 0 3.566-.697 4.475-1.116l-1.398-3.068c-.35.14-1.33.558-1.959.558v-.001Zm11.678-4.742c-1.678-.417-3.356-.627-3.356-1.464 0-.418.49-.768 1.468-.768 1.26 0 3.217.559 4.406 1.046l1.609-2.72c-1.4-.626-3.986-1.463-6.294-1.463-3.427 0-5.315 1.743-5.315 4.044 0 2.65 2.378 3.697 4.546 4.255 1.468.348 3.496.697 3.496 1.534 0 .417-.49.836-1.469.836-1.398 0-3.916-.836-5.245-1.464l-1.607 2.86c1.468.836 4.335 1.743 6.992 1.743 3.497 0 5.455-1.605 5.455-4.044 0-2.792-2.447-3.837-4.686-4.395Z" fill-rule="evenodd" data-name="a"/></g></svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fl-col fl-node-6evrh1ufgx0t fl-col-small-custom-width" data-node="6evrh1ufgx0t">
+                            <div class="fl-col-content fl-node-content">
+                                <div class="fl-module fl-module-pp-advanced-menu fl-node-menu" data-node="menu">
+                                    <div class="fl-module-content fl-node-content">
+                                        <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-right pp-menu-position-below">
+                                            <div class="pp-clear"></div>
+                                            <nav class="pp-menu-nav" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                                                <ul id="menu-main-menu" class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
+                                                    {{ $currentPage := .Page }}
+                                                    {{ range .Site.Menus.main }}
+                                                    {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
+                                                    {{ if .HasChildren }}
+
+                                                    <li class="menu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu
+                                    {{if $active }}current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor{{ end }}">
+                                                        <div class="pp-has-submenu-container"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="{{ .Name }}: submenu" role="button"></span></span></a></div>
+                                                        <ul class="sub-menu">
+                                                            {{ range .Children }}
+                                                            <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
+                                                                <div class="menu-image">
+                                                                    {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
+                                                                    {{ partial $partialPath . }}
+                                                                </div>
+                                                                <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
+                                                            {{ end }}
+                                                        </ul>
+                                                    </li>
+                                                    {{ else }}
+                                                    <li class="jt-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if $active }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}</span></a></li>
+
+                                                    {{ end }}
+
+                                                    {{ end }}
+                                                </ul>
+                                            </nav>
+                                        </div>
+
+                                        <div class="pp-advanced-menu-mobile">
+                                            <button class="pp-advanced-menu-mobile-toggle hamburger" tabindex="0" aria-label="Menu">
+                                                <div class="pp-hamburger">
+                                                    <div class="pp-hamburger-box">
+                                                        <div class="pp-hamburger-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+
+                                        <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse off-canvas pp-menu-position-below">
+                                            <div class="pp-clear"></div>
+                                            <nav class="pp-menu-nav pp-off-canvas-menu pp-menu-right" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                                                <a href="javascript:void(0)" class="pp-menu-close-btn" aria-label="Close the menu" role="button">×</a>
+                                                <ul id="menu-main-menu-1" class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
+
+                                                    {{ $currentPage := .Page }}
+                                                    {{ range .Site.Menus.main }}
+                                                    {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
+                                                    {{ if .HasChildren }}
+
+                                                    <li class="menu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu
+                                          {{if $active }}current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor{{ end }}">
+                                                        <div class="pp-has-submenu-container"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="{{ .Name }}: submenu" role="button"></span></span></a></div>
+                                                        <ul class="sub-menu">
+                                                            {{ range .Children }}
+                                                            <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
+                                                                <div class="menu-image">
+                                                                    {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
+                                                                    {{ partial $partialPath . }}
+                                                                </div>
+                                                                <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
+                                                            {{ end }}
+                                                        </ul>
+                                                    </li>
+                                                    {{ else }}
+                                                    <li class="jt-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if $active }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}</span></a></li>
+
+                                                    {{ end }}
+
+                                                    {{ end }}
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fl-col fl-node-r5xbj4ni8mge fl-col-small fl-visible-desktop fl-visible-large fl-visible-medium" data-node="r5xbj4ni8mge">
+                            <div class="fl-col-content fl-node-content">
+                                <div class="fl-module fl-module-button fl-node-vha2g9x6ljec" data-node="vha2g9x6ljec">
+                                    <div class="fl-module-content fl-node-content">
+                                        <div class="fl-button-wrap fl-button-width-auto fl-button-right">
+                                            <a href="{{ absURL "contact-us/" }}" target="_self" class="fl-button">
+                                            <span class="fl-button-text">Contact Us</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
 {{ block "main" . }}
 {{ end }}
+
+    <!-- .fl-post -->
+
+</div><!-- .fl-page-content -->
+<footer class="fl-builder-content fl-builder-content-589 fl-builder-global-templates-locked" data-post-id="589" data-type="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+    <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-530uo7f2gcli fl-row-default-height fl-row-align-center" data-node="530uo7f2gcli">
+        <div class="fl-row-content-wrap">
+            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                <div class="fl-col-group fl-node-c73flkp6wyo8 fl-col-group-custom-width" data-node="c73flkp6wyo8">
+                    <div class="fl-col fl-node-ntfp1iza9jy8 fl-col-small-custom-width" data-node="ntfp1iza9jy8">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-photo fl-node-93z28ipdxk56" data-node="93z28ipdxk56">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                                        <div class="fl-photo-content fl-photo-img-png">
+                                            <img loading="lazy" decoding="async" class="fl-photo-img wp-image-661 size-full"
+                                                 src="{{ "/wp-content/uploads/2022/09/jet-thoughts-white.png" }}" alt="JetThoughts Logo White" itemprop="image" height="73"
+                                            width="400" srcset="{{ "/wp-content/uploads/2022/09/jet-thoughts-white.png" }} 400w,
+                                            {{ "/wp-content/uploads/2022/09/jet-thoughts-white-300x55.png" }} 300w"
+                                            sizes="(max-width: 400px) 100vw, 400px" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fl-module fl-module-rich-text fl-node-l972bjsmtzwf" data-node="l972bjsmtzwf">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        <p>{{ .Site.Params.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fl-module fl-module-rich-text fl-node-lsrnf83ijm06 footer-menu" data-node="lsrnf83ijm06">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+                                        <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-5dcip6gnz2at fl-col-small fl-col-small-custom-width" data-node="5dcip6gnz2at">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-heading fl-node-vieclstgwdma" data-node="vieclstgwdma">
+                                <div class="fl-module-content fl-node-content">
+                                    <h5 class="fl-heading">
+                                        <span class="fl-heading-text">Services</span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="fl-module fl-module-rich-text fl-node-t1kspwz29rlo footer-menu" data-node="t1kspwz29rlo">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        {{ range .Site.Menus.services }}
+                                        <p><a href="{{ .URL }}">{{ .Name }}</a></p>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-7p1us6kjlz9d fl-col-small fl-col-small-custom-width" data-node="7p1us6kjlz9d">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-heading fl-node-zevlimhbtfcq" data-node="zevlimhbtfcq">
+                                <div class="fl-module-content fl-node-content">
+                                    <h5 class="fl-heading">
+                                        <span class="fl-heading-text">Company</span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="fl-module fl-module-rich-text fl-node-q8ul0bi34dvt footer-menu careers-text" data-node="q8ul0bi34dvt">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        {{ range .Site.Menus.company }}
+                                        <p><a href="{{ .URL }}">{{ .Name }}</a></p>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-fxtbmly0wvq4 fl-col-small fl-col-small-custom-width" data-node="fxtbmly0wvq4">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-heading fl-node-e1085k37ypqb" data-node="e1085k37ypqb">
+                                <div class="fl-module-content fl-node-content">
+                                    <h5 class="fl-heading">
+                                        <span class="fl-heading-text">Resources</span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="fl-module fl-module-rich-text fl-node-dt8uqacr4y16 footer-menu" data-node="dt8uqacr4y16">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        {{ range .Site.Menus.resources }}
+                                        <p><a href="{{ .URL }}">{{ .Name }}</a></p>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl-col-group fl-node-ywg4hbdm8ero" data-node="ywg4hbdm8ero">
+                    <div class="fl-col fl-node-d09l8jp3qrgf fl-visible-desktop fl-visible-large fl-visible-medium" data-node="d09l8jp3qrgf">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-pp-spacer fl-node-7d9wg1x8ua5m fl-visible-desktop fl-visible-large fl-visible-medium" data-node="7d9wg1x8ua5m">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="pp-spacer-module"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl-col-group fl-node-n9xkao8bpvwe fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="n9xkao8bpvwe">
+                    <div class="fl-col fl-node-j3vd1emwi9k5 fl-col-small fl-col-small-custom-width" data-node="j3vd1emwi9k5">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-rich-text fl-node-9c2hyrnig0m4" data-node="9c2hyrnig0m4">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        <p>{{ .Site.Params.copyright }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-ebun2x3dawyq fl-col-small fl-col-small-custom-width" data-node="ebun2x3dawyq">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-pp-social-icons fl-node-yqpsldhfovz6 jt-footer-social" data-node="yqpsldhfovz6">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="pp-social-icons pp-social-icons-horizontal">
+                              <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
+                                 <link itemprop="url" href='{{ absURL "" }}'>
+                                 <a itemprop="sameAs" href="https://www.facebook.com/jetthoughts/" target="_blank" title="Facebook" aria-label="Facebook" role="button" rel="noopener noreferrer external" >
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+
+                                 </a>
+                              </span>
+                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
+                                 <link itemprop="url" href='{{ absURL "" }}'>
+                                 <a itemprop="sameAs" href="https://twitter.com/jetthoughts/" target="_blank" title="Twitter" aria-label="Twitter" role="button" rel="noopener noreferrer external" >
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                                 </a>
+                              </span>
+                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
+                                 <link itemprop="url" href='{{ absURL "" }}'>
+                                 <a itemprop="sameAs" href="https://www.linkedin.com/company/jetthoughts/" target="_blank" title="LinkedIn" aria-label="LinkedIn" role="button" rel="noopener noreferrer external" >
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                 </a>
+                              </span>
+                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
+                                 <link itemprop="url" href='{{ absURL "" }}'>
+                                 <a itemprop="sameAs" href="https://github.com/jetthoughts/" target="_blank" title="" aria-label="" role="button" rel="noopener noreferrer external" >
+                                   <svg xmlns="http://www.w3.org/2000/svg" height="20" width="19.375" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                                 </a>
+                              </span>
+                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
+                                 <link itemprop="url" href='{{ absURL "" }}'>
+                                 <a itemprop="sameAs" href="" target="_self" role="button">
+                                 <i class="fab "></i>
+                                 </a>
+                              </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-2ej8k3vximbp fl-col-small fl-col-small-custom-width" data-node="2ej8k3vximbp">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-rich-text fl-node-tlnupvy1oxaj legal-links" data-node="tlnupvy1oxaj">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-rich-text">
+                                        <ul>
+                                            <li><a href="{{ absURL "privacy-policy/" }}">Privacy Policy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 {{ block "footer" . }}
 {{ end }}
-{{ partial "page/footer.html" . }}
+{{ partial "page/site-scripts" . }}
+
+</body>
+</html>

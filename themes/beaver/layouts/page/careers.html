@@ -1,4 +1,14 @@
-{{ partial "page/header.html" . }}
+{{ define "header" }}
+{{ partial "header/critical/careers.html" . }}
+
+{{ $CSS := slice
+(resources.Get "assets/css/3086-layout2.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/_careers.css"
+| css.PostCSS | minify | fingerprint | resources.PostProcess }}
+
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{ end }}
+
+{{ define "main" }}
 <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
     <div class="fl-content-full container">
        <div class="row">
@@ -511,4 +521,8 @@
                }
              </script>
 
-             {{ partial "page/footer.html" . }}
+          </div>
+       </div>
+    </div>
+</div>
+{{ end }}
