@@ -1,5 +1,0 @@
-{{ partial "header/critical/services.html" . }}
-
-{{- $CSS := slice (resources.Get "assets/css/737-layout.css") (resources.Get "/assets/css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") (resources.Get "assets/css/586.css")  (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/services.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />

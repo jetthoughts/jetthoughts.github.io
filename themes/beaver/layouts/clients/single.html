@@ -1,3 +1,10 @@
+{{ define "header" }}
+{{ partial "header/critical/single/clients.html" . }}
+
+{{- $CSS := slice (resources.Get "assets/css/3114-layout.css") (resources.Get "assets/css/fb2624e43f3c4277448abe268cde571e-layout-bundle.css") (resources.Get "assets/css/586.css")  (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/single/clients.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess}}
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{ end }}
+
 {{ define "main" }}
 <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
   <div class="fl-builder-content fl-builder-content-2998 fl-builder-global-templates-locked" data-post-id="2998">

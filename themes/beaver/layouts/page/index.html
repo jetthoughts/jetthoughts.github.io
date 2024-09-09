@@ -1,3 +1,26 @@
+{{ define "header" }}
+{{ partial "header/critical/homepage.html" . }}
+
+{{ $CSS := slice
+(resources.Get "assets/css/homepage.css")
+(resources.Get "assets/css/companies.css")
+(resources.Get "assets/css/590-layout.css")
+(resources.Get "assets/css/base-4.min.css")
+(resources.Get "assets/css/skin-65eda28877e04.css")
+(resources.Get "assets/css/animate.min.css")
+(resources.Get "/assets/css/style.css")
+(resources.Get "/assets/css/586.css")
+| resources.Concat "assets/css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+}}
+
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+
+<link rel="prefetch" href="/services/" as="document" >
+<link rel="prefetch" href="/use-cases/" as="document">
+<link rel="prefetch" href="/about-us/" as="document">
+<link rel="prefetch" href="/clients/" as="document">
+<link rel="prefetch" href="/careers/" as="document">
+{{ end }}
 {{ define "main" }}
 
 <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
