@@ -1,1 +1,6 @@
-path_filters: "!*.md"
+early_access: true
+reviews:
+  path_filters:
+    - "!content/blog/!*.md"
+    - "!wp-content/**"
+    - "!wp-includes/**"
