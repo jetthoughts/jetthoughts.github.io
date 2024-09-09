@@ -41,12 +41,8 @@ Appearance > Theme Settings > Code or create a child theme.
 }
 
 .blog img {
-  width: auto;
   max-width: 100%;
   height: auto;
-  max-height: 75vh;
-  margin: 0 auto;
-  display: block;
 }
 
 .blog .container {
