@@ -13,6 +13,7 @@
    <link rel="stylesheet"  media="all"
          href="{{ (resources.Get "assets/css/skin-65eda28877e04.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess).RelPermalink }}" />
 
+   <!-- Non-critical CSS -->
    {{ $CSS := slice
       (resources.Get "assets/css/590-layout.css")
       (resources.Get "assets/css/base-4.min.css")
@@ -22,7 +23,13 @@
       | resources.Concat "assets/css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
    }}
 
-   <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+   <link rel="preload" href="{{ $CSS.RelPermalink }}" media="all" as="style"
+         onload="this.onload=null;this.rel='stylesheet'" />
+
+   <noscript>
+      <link rel="stylesheet" href="{{ $CSS.RelPermalink }}">
+   </noscript>
+
 {{ end }}
 
 {{ define "main" }}
