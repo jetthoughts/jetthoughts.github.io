@@ -39,6 +39,10 @@ Using CLI `hugo new content clients/new-client/index.md`
 
 # Development
 
+## Setup local environment
+
+`bin/setup`
+
 ## Staging deployment
 
 We can use surge.sh to deploy.
