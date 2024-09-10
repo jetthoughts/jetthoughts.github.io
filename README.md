@@ -37,9 +37,13 @@ Go to `content/clients` and copy the folder then rename it and change content an
 
 Using CLI `hugo new content clients/new-client/index.md`
 
-#### Note from developer
+# Development
 
-Beaver Builder and Nitro created a lot of CSS and JS files. Also, it created CSS in the page, js in the page and every page has different css, js files. That's why I'm using awkward if else in header partial and footer partial instead of using base of (I don't want to complicate the code more, so custom CSS js will be in header and footer instead of adding them in each page layout).
+## Staging deployment
+
+We can use surge.sh to deploy.
+
+`bin/surge/deploy`
 
 
 ## Populate Blog with Dev.to Posts
