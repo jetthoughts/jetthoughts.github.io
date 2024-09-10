@@ -1,4 +1,7 @@
-<link rel="stylesheet" href='{{ absURL "wp-content/plugins/bbpowerpack/assets/css/swiper.min.css?ver=4.4.6" }}'>
+{{ $nonCriticalCSS := resources.Get "/assets/css/swiper.min.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess }}
+<link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
+
 <div class="fl-col-group fl-node-1a4igunq3xvj fl-col-group-custom-width" data-node="1a4igunq3xvj">
    <div class="fl-col fl-node-38ejkdz2v4cq fl-col-small-custom-width" data-node="38ejkdz2v4cq">
       <div class="fl-col-content fl-node-content">
