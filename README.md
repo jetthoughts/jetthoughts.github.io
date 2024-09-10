@@ -69,3 +69,9 @@ bin/from_devto -f
 4. Open the dropdown with the "Run worflow" label and run it in the master branch.
 
 After the work flow is over, the article should appear on our blog and the canonical url on dev.to should be updated, it will point to the article on our blog.
+
+
+## How to generate new favicon, etc
+
+1. Use square svg (find or create). I used `themes/beaver/static/img/icons/logo-small.svg`.
+2. Generate everything using [realfavicongenerator.net](https://realfavicongenerator.net/).
