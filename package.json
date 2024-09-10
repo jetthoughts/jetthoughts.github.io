@@ -10,8 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.4.45",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "surge": "^0.24.6"
   }
 }

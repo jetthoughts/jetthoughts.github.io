@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eo pipefail
+
+([[ (-x "$(command -v brew)") ]] && brew bundle check --no-lock --no-upgrade || brew bundle --no-upgrade --no-lock) \
+  || (echo "*** Please install manually system dependencies: ***" && cat Brewfile)
+
+bun install
