@@ -1,0 +1,24 @@
+<svg fill="url(#a)" viewBox="59.392 70.656 388.096 384" role="img" aria-label="Ruby" xmlns="http://www.w3.org/2000/svg">
+    <linearGradient y2="1" x2=".2" id="a">
+        <stop stop-color="#fff" offset=".2"/>
+        <stop stop-color="#d53" offset=".4"/>
+        <stop stop-color="#b10" offset=".6"/>
+    </linearGradient>
+    <linearGradient y1="1" id="b">
+        <stop stop-color="#fff" offset="0"/>
+        <stop stop-color="#d32" offset=".1"/>
+        <stop stop-color="#800" offset=".2"/>
+        <stop stop-color="#d20" offset="1"/>
+    </linearGradient>
+    <path d="m154 430 257-17V248" fill="#810"/>
+    <path d="m411 413-164-13 81-61zl-22-152 41-100" fill="#b10"/>
+    <path d="m81 360q2 72 73 70c129-8 266-167 276-269q6-68-55-78l-54 30s-11 194-218 204" fill="#900"/>
+    <path d="m81 360 5-97 19 54"/>
+    <path d="m105 317 49 113 40-133"/>
+    <path d="m194 297 100-94 34 137"/>
+    <path d="m294 203 27-90 101 82"/>
+    <g fill="url(#b)">
+        <path d="m155 157a62 139 45 101-1.02"/>
+        <path d="m375 83h-96l42 30zl300-600"/>
+    </g>
+</svg>
