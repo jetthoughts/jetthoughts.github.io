@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eo pipefail
+
+SURGE_APP=${SURGE_APP:-"jt-site"}
+
+hugo --gc --minify --baseURL "https://${SURGE_APP}.surge.sh" --environment production
+
+bin/surge/cleanup
+
+surge public "${SURGE_APP}.surge.sh"

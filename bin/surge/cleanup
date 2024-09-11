@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# Directory to clean up
+TARGET_DIR="public/blog"
+
+# Allowed files list
+ALLOWED_FILES=(
+  "4-lines-speed-up-your-rails-test-suite-on-circleci"
+  "page"
+  "tags"
+  "index.html"
+  "index.xml"
+  "og-blog.jpg"
+)
+
+# Convert the allowed files array to a string for easier comparison
+ALLOWED_FILES_STRING=$(printf "|%s" "${ALLOWED_FILES[@]}")
+ALLOWED_FILES_STRING=${ALLOWED_FILES_STRING:1}
+
+# Iterate over all files in the target directory
+for file in "$TARGET_DIR"/*; do
+  # Get the base name of the file
+  basefile=$(basename -s $TARGET_DIR "$file")
+
+  # Check if the file is in the allowed list
+  if [[ ! "$ALLOWED_FILES_STRING" =~ (^|\||[[:space:]])"$basefile"($|\||[[:space:]]) ]]; then
+    rm -rf "$file"
+  fi
+done

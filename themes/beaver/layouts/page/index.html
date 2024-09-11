@@ -4,25 +4,26 @@
 {{ $CSS := slice
 (resources.Get "assets/css/homepage.css")
 (resources.Get "assets/css/companies.css")
+| resources.Concat "assets/css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+}}
+
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+
+{{ $nonCriticalCSS := slice
 (resources.Get "assets/css/590-layout.css")
 (resources.Get "assets/css/base-4.min.css")
 (resources.Get "assets/css/skin-65eda28877e04.css")
 (resources.Get "assets/css/animate.min.css")
 (resources.Get "/assets/css/style.css")
 (resources.Get "/assets/css/586.css")
-| resources.Concat "assets/css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+| resources.Concat "assets/css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
 }}
 
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+<link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 
-<link rel="prefetch" href="/services/" as="document" >
-<link rel="prefetch" href="/use-cases/" as="document">
-<link rel="prefetch" href="/about-us/" as="document">
-<link rel="prefetch" href="/clients/" as="document">
-<link rel="prefetch" href="/careers/" as="document">
 {{ end }}
 {{ define "main" }}
-
 <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
    <div class="fl-content-full container">
       <div class="row">
@@ -67,7 +68,7 @@
                                           <div class="fl-module-content fl-node-content">
                                              <div class="fl-photo fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
                                                 <div class="fl-photo-content fl-photo-img-jpeg">
-                                                   <img fetchpriority="high" decoding="async" class="fl-photo-img wp-image-682 size-full" src="{{ "/wp-content/uploads/2022/10/build-faster-scale-smarter.webp" }}" alt="Build Faster Scale Smarter" itemprop="image" height="700" width="730" srcset="{{ "/wp-content/uploads/2022/10/build-faster-scale-smarter.webp" }} 730w, {{ "/wp-content/uploads/2022/10/build-faster-scale-smarter-300x288.jpeg" }} 300w" sizes="(max-width: 730px) 100vw, 730px" />
+                                                   <img fetchpriority="high" class="fl-photo-img wp-image-682 size-full" src="{{ "/wp-content/uploads/2022/10/build-faster-scale-smarter.webp" }}" alt="Build Faster Scale Smarter" itemprop="image" height="700" width="730" srcset="{{ "/wp-content/uploads/2022/10/build-faster-scale-smarter.webp" }} 730w, {{ "/wp-content/uploads/2022/10/build-faster-scale-smarter-300x288.jpeg" }} 300w" sizes="(max-width: 730px) 100vw, 730px" />
                                                 </div>
                                              </div>
                                           </div>
@@ -79,7 +80,7 @@
                                                    <div class="fl-module-content fl-node-content">
                                                       <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                                                          <div class="fl-photo-content fl-photo-img-png">
-                                                            <img loading="lazy" decoding="async" class="fl-photo-img wp-image-606 size-full" src="{{ "/img/icons/logo-dark.svg" }}" alt="JetThoughts logo with inscription" itemprop="image" height="73" width="400">
+                                                            {{ partial "svg" "logo-dark" }}
                                                          </div>
                                                       </div>
                                                    </div>
