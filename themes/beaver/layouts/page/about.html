@@ -40,22 +40,12 @@
                                      <div class="fl-module-content fl-node-content">
                                         <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                                            <div class="fl-photo-content fl-photo-img-jpg">
-                                              {{ $image := .Page.Resources.GetMatch .Page.Params.cover_image }}
-                                              {{ $imageW2048 := $image.Resize "2048x webp q75" }}
-                                              {{ $imageW1024 := $image.Resize "1024x webp q75" }}
-                                              {{ $imageW1536 := $image.Resize "1536x webp q75" }}
-                                              {{ $imageW768 := $image.Resize "768x webp q75" }}
-                                              {{ $imageW600 := $image.Resize "600x webp q75" }}
-                                              {{ $imageW300 := $image.Resize "300x webp q75" }}
 
-                                              <img loading="lazy" decoding="async" class="fl-photo-img wp-image-710 size-full" src="{{ $image.RelPermalink }}" alt="The Best Products" itemprop="image"
-                                                   height="{{ $image.Height }}" width="{{ $image.Width }}" srcset="{{ $image.RelPermalink }} 2360w,
-                                            {{ $imageW300.RelPermalink }} 300w,
-                                            {{ $imageW1024.RelPermalink }} 1024w,
-                                            {{ $imageW768.RelPermalink }} 768w,
-                                            {{ $imageW1536.RelPermalink }} 1536w,
-                                            {{ $imageW2048.RelPermalink }} 2048w" }}"
-                                              sizes="(max-width: 2360px) 100vw, 2360px" /> </div>
+                                              {{ $image := .Page.Resources.GetMatch .Page.Params.client.cover_image }}
+                                              {{ $title := "The Best Products" }}
+                                              {{ partial "img/hero-big.html" (dict "image" $image "title" $title) }}
+
+                                           </div>
                                         </div>
                                      </div>
                                   </div>

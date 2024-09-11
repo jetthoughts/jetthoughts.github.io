@@ -41,26 +41,10 @@
                           <div class="fl-module-content fl-node-content">
                              <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                                 <div class="fl-photo-content fl-photo-img-jpg">
-
-
-                                  {{ $image := .Page.Resources.GetMatch .Page.Params.client.cover_image }}
-
-                                  {{ $imageW1024 := $image.Resize "1024x webp q75" }}
-                                  {{ $imageW1536 := $image.Resize "1536x webp q75" }}
-                                  {{ $imageW768 := $image.Resize "768x webp q75" }}
-                                  {{ $imageW600 := $image.Resize "600x webp q75" }}
-                                  {{ $imageW300 := $image.Resize "300x webp q75" }}
-
-                                  <img loading="lazy" decoding="async" class="fl-photo-img wp-image-3212 size-full"
-                                    src="{{ $image.RelPermalink }}" alt="{{ .Page.Params.client.name }}"
-                                    itemprop="image" height="{{ $image.Height }}" width="{{ $image.Width }}" title="{{ .Page.Params.client.name }}"
-                                    srcset="{{ $image.RelPermalink }} 1920w,
-                                    {{ $imageW300.RelPermalink }} 300w,
-                                    {{ $imageW1024.RelPermalink }} 1024w,
-                                    {{ $imageW768.RelPermalink }} 768w,
-                                    {{ $imageW1536.RelPermalink }} 1536w"
-                                    sizes="(max-width: 1920px) 100vw, 1920px" />
-                                  </div>
+                                   {{ $image := .Page.Resources.GetMatch .Page.Params.client.cover_image }}
+                                   {{ $title := .Page.Params.client.name }}
+                                   {{ partial "img/hero.html" (dict "image" $image "title" $title) }}
+                                </div>
                              </div>
                           </div>
                        </div>
@@ -187,13 +171,14 @@
                               {{ $imageItemW1024 := $imageItem.Resize "1024x webp q75" }}
 
 
-                                <div class="pp-photo-gallery-item" data-item-id="3209" itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
+                                <div class="pp-photo-gallery-item" itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
                                    <div class="pp-photo-gallery-content">
                                       <a
-                                         href="{{ $imageItemW1024.RelPermalink }}"
+                                         href="{{ $imageItem.RelPermalink }}"
                                          data-fancybox="images"
                                          title="{{ $.Page.Title }}"
                                          data-description=""
+                                         target="_blank"
                                          itemprop="contentUrl">
                                          <img loading="lazy" decoding="async" class="pp-gallery-img no-lazyload skip-lazy"
                                          src="{{ $imageItemW1024.RelPermalink }}"
@@ -249,118 +234,14 @@
                              <div class="pp-posts-wrapper">
                                 <div class="pp-content-posts" style="--items-count: 3;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
                                    <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
-                                      <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3213 jt_case_studies type-jt_case_studies status-publish has-post-thumbnail hentry jt_case_studies_category-hotwire jt_case_studies_category-ruby-on-rails jt_case_studies_category-tailwind-css" itemscope itemtype="https://schema.org/CreativeWork" data-id="3213">
-                                         <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="http://3213" content="See How JetThoughts Helped OrchestrateCS Go From an Idea to Software in Just 60 Days" />
-                                         <meta itemprop="datePublished" content="2022-12-04" />
-                                         <meta itemprop="dateModified" content="2022-12-11" />
-                                         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                                            <meta itemprop="name" content="JetThoughts">
-                                         </div>
-                                         <div itemscope itemprop="author" itemtype="https://schema.org/Person">
-                                            <meta itemprop="url" content="https://www.jetthoughts.com/blog/author/greyson/" />
-                                            <meta itemprop="name" content="Greyson" />
-                                         </div>
-                                         <div itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
-                                            <meta itemprop="url" content="https://www.jetthoughts.com/wp-content/uploads/2022/12/ocs-return-work-with-confidence.png" />
-                                            <meta itemprop="width" content="2000" />
-                                            <meta itemprop="height" content="1573" />
-                                         </div>
-                                         <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
-                                            <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
-                                            <meta itemprop="userInteractionCount" content="0" />
-                                         </div>
-                                         <div class="pp-content-grid-post-image">
-                                            <a href="/clients/see-how-jetthoughts-helped-orchestratecs-go-from-an-idea-to-software-in-just-60-days/"><img width="450" height="175" src="/wp-content/uploads/2022/12/OCS-Logo-1.png" class="attachment-full size-full pp-post-img" alt="OCS Logo" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/12/OCS-Logo-1.png 450w, /wp-content/uploads/2022/12/OCS-Logo-1-300x117.png 300w" sizes="(max-width: 450px) 100vw, 450px" /></a>
-                                         </div>
-                                         <div class="pp-content-grid-post-text">
-                                            <div class="excerpt">
-                                               <p>To help make their startup idea a reality, OrchestrateCS hired us to help them go from zero to revenue by making their an initial MVP they could use to go-to-market.</p>
-                                            </div>
-                                            <div class="case-category">
-                                               <ul class='fl-jt_case_studies_category'>
-                                                  <li><span class="hotwire">Hotwire</span></li>
-                                                  <li><span class="ruby-on-rails">Ruby on Rails</span></li>
-                                                  <li><span class="tailwind-css">Tailwind CSS</span></li>
-                                               </ul>
-                                            </div>
-                                         </div>
-                                      </div>
-                                      <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3198 jt_case_studies type-jt_case_studies status-publish has-post-thumbnail hentry jt_case_studies_category-angularjs jt_case_studies_category-bootstrap jt_case_studies_category-graphql jt_case_studies_category-react-js jt_case_studies_category-ruby-on-rails" itemscope itemtype="https://schema.org/CreativeWork" data-id="3198">
-                                         <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="http://3198" content="See How JetThoughts Helped Crosslake Transform a Legacy Software Project &amp; Gain Control Over a Complex Codebase" />
-                                         <meta itemprop="datePublished" content="2022-12-04" />
-                                         <meta itemprop="dateModified" content="2022-12-04" />
-                                         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                                            <meta itemprop="name" content="JetThoughts">
-                                         </div>
-                                         <div itemscope itemprop="author" itemtype="https://schema.org/Person">
-                                            <meta itemprop="url" content="https://www.jetthoughts.com/blog/author/greyson/" />
-                                            <meta itemprop="name" content="Greyson" />
-                                         </div>
-                                         <div itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
-                                            <meta itemprop="url" content="https://www.jetthoughts.com/wp-content/uploads/2022/12/unnamed.png" />
-                                            <meta itemprop="width" content="934" />
-                                            <meta itemprop="height" content="703" />
-                                         </div>
-                                         <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
-                                            <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
-                                            <meta itemprop="userInteractionCount" content="0" />
-                                         </div>
-                                         <div class="pp-content-grid-post-image">
-                                            <a href="/clients/see-how-jetthoughts-helped-crosslake-transform-a-legacy-software-project-gain-control-over-a-complex-codebase/"><img width="470" height="107" src="/wp-content/uploads/2022/12/crosslake-logo-128x24-4x.webp" class="attachment-full size-full pp-post-img" alt="The Crosslake logo" decoding="async" loading="lazy" srcset="/wp-content/uploads/2022/12/crosslake-logo-128x24-4x.webp 470w, /wp-content/uploads/2022/12/crosslake-logo-128x24-4x.webp 300w" sizes="(max-width: 470px) 100vw, 470px" /></a>
-                                         </div>
-                                         <div class="pp-content-grid-post-text">
-                                            <div class="excerpt">
-                                               <p>To help salvage an aging legacy project, Crosslake hired us to take over responsibility for ongoing architecture and development for a proprietary software in desperate need of a technical owner.</p>
-                                            </div>
-                                            <div class="case-category">
-                                               <ul class='fl-jt_case_studies_category'>
-                                                  <li><span class="angularjs">AngularJS</span></li>
-                                                  <li><span class="bootstrap">Bootstrap</span></li>
-                                                  <li><span class="graphql">GraphQL</span></li>
-                                                  <li><span class="react-js">React.js</span></li>
-                                                  <li><span class="ruby-on-rails">Ruby on Rails</span></li>
-                                               </ul>
-                                            </div>
-                                         </div>
-                                      </div>
-                                      <div class="pp-content-post pp-content-grid-post pp-grid-custom post-2994 jt_case_studies type-jt_case_studies status-publish has-post-thumbnail hentry jt_case_studies_category-node-js jt_case_studies_category-python jt_case_studies_category-react-js jt_case_studies_category-ruby-on-rails jt_case_studies_category-vue-js" itemscope itemtype="https://schema.org/CreativeWork" data-id="2994">
-                                         <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="http://2994" content="See How JetThoughts Helped Agent Inbox Go From Idea to Software in 60 Days" />
-                                         <meta itemprop="datePublished" content="2022-10-13" />
-                                         <meta itemprop="dateModified" content="2022-11-29" />
-                                         <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                                            <meta itemprop="name" content="JetThoughts">
-                                         </div>
-                                         <div itemscope itemprop="author" itemtype="https://schema.org/Person">
-                                            <meta itemprop="url" content="https://www.jetthoughts.com/blog/author/paul/" />
-                                            <meta itemprop="name" content="Paul Keen" />
-                                         </div>
-                                         <div itemscope itemprop="image" itemtype="https://schema.org/ImageObject">
-                                            <meta itemprop="url" content="https://www.jetthoughts.com/wp-content/uploads/2022/10/hero-ai.jpg" />
-                                            <meta itemprop="width" content="2048" />
-                                            <meta itemprop="height" content="868" />
-                                         </div>
-                                         <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
-                                            <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
-                                            <meta itemprop="userInteractionCount" content="0" />
-                                         </div>
-                                         <div class="pp-content-grid-post-image">
-                                            <a href="/clients/agent-inbox/"><img width="260" height="72" src="/wp-content/uploads/2022/10/case-study-agent-inbox-color.png" class="attachment-full size-full pp-post-img" alt="Agent Inbox" decoding="async" loading="lazy" /></a>
-                                         </div>
-                                         <div class="pp-content-grid-post-text">
-                                            <div class="excerpt">
-                                               <p>To take real estate communication to the next level, Agent Inbox hired us to build the right platform, deliver a market-ready solution, and help the team grow.</p>
-                                            </div>
-                                            <div class="case-category">
-                                               <ul class='fl-jt_case_studies_category'>
-                                                  <li><span class="node-js">Node.js</span></li>
-                                                  <li><span class="python">Python</span></li>
-                                                  <li><span class="react-js">React.js</span></li>
-                                                  <li><span class="ruby-on-rails">Ruby on Rails</span></li>
-                                                  <li><span class="vue-js">Vue.js</span></li>
-                                               </ul>
-                                            </div>
-                                         </div>
-                                      </div>
+
+                                      {{ $pages := where .Site.RegularPages "Type" "clients" }}
+                                      {{ $pages = $pages | first 3 }}
+
+                                      {{ range $pages }}
+                                      {{ partial "clients/grid-single.html" . }}
+                                      {{ end }}
+
                                    </div>
                                    <div class="fl-clear"></div>
                                 </div>
