@@ -3,16 +3,18 @@ dev_to_id: 1997035
 title: "How Small PR Improves Team Productivity"
 description: "In many companies, teams work together to achieve big goals. One way to keep the team productive is..."
 created_at: "2024-09-11T15:59:07Z"
-edited_at: ""
+edited_at: "2024-09-11T16:34:19Z"
 draft: false
 tags: ["development", "productivity", "programming", "devops"]
-canonical_url: "https://dev.to/jetthoughts/how-small-pr-improves-team-productivity-25g"
+canonical_url: "https://jetthoughts.com/blog/how-small-pr-improves-team-productivity-development/"
 cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-small-pr-improves-team-productivity-development/cover.jpg"
 slug: "how-small-pr-improves-team-productivity-development"
 metatags:
   image: cover.jpg
 ---
 In many companies, teams work together to achieve big goals. One way to keep the team productive is by focusing on small pull requests (PRs). But what does that mean, and how does it help?
+
+![Image description](file_0.jpg)
 
 ### What is a Small PR?
 
