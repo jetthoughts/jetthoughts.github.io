@@ -59,14 +59,9 @@
                                         <div class="fl-photo fl-photo-align-center" itemscope
                                              itemtype="https://schema.org/ImageObject">
                                             <div class="fl-photo-content fl-photo-img-png">
-                                                <img loading="lazy" decoding="async"
-                                                     class="fl-photo-img wp-image-714 size-full"
-                                                     src="{{ absURL "wp-content/uploads/2022/10/404.png" }}"
-                                                alt="404" itemprop="image" height="750" width="802"
-                                                srcset="{{ "/wp-content/uploads/2022/10/404.png" }} 802w,
-                                                {{ "/wp-content/uploads/2022/10/404-300x281.png" }} 300w,
-                                                {{ "/wp-content/uploads/2022/10/404-768x718.png" }} 768w"
-                                                sizes="(max-width: 802px) 100vw, 802px" />
+
+                                                {{ $image := resources.Get "img/404.png" }}
+                                                {{ partial "img/404.html" (dict "image" $image "title" "404") }}
                                             </div>
                                         </div>
                                     </div>
