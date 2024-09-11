@@ -55,12 +55,7 @@
 
                   <div class="blog-post">
                     <div class="post-image">
-                      {{ $image := .Resources.GetMatch (printf "*%s*" .Params.metatags.image) }}
-                      {{ if $image }}
-                      <img src="{{ $image.Permalink }}" alt="{{ .Title }}">
-                      {{ else }}
-                      <img src="/img/no-image.svg" alt="Placeholder Image">
-                      {{ end }}
+                      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 150 "height" 150) }}
                     </div>
                     <div class="post-content">
                       <h2 class="post-title">{{ .Title }}</h2>

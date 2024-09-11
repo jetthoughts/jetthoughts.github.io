@@ -1,0 +1,15 @@
+{{ $image := .Page.Resources.GetMatch (printf "*%s*" .Page.Params.metatags.image) }}
+{{ if $image }}
+{{ $cropped := $image.Fill (printf "%dx%d Center" .width .height) }}
+{{ $webp := $cropped.Resize (printf "%dx%d webp" .width .height) }}
+
+
+<picture>
+    <source srcset="{{ $webp.Permalink }}" type="image/webp">
+    <source srcset="{{ $cropped.Permalink }}" type="{{ $cropped.MediaType }}">
+    <img src="{{ $cropped.Permalink }}" alt="{{ .Page.Title }}" width="{{ .width }}" height="{{ .height }}">
+</picture>
+
+{{ else }}
+<img src="{{ (resources.Get "assets_dynamic/img/no-image.svg" | resources.Fingerprint).Permalink }}" alt="Cat" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
+{{ end }}
