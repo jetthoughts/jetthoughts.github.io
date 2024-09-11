@@ -53,31 +53,34 @@
 
 
       <div style="text-align: center;">
-         <a target="_blank" href="https://www.goodfirms.co/company/jetthoughts-llc"><img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
+         <a target="_blank" href="https://www.goodfirms.co/company/jetthoughts-llc">
+             <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
             src="{{ absURL "assets/img/badges/top-software-development-companies.svg" }}"
-            title="Top Software Development Company" alt="Top Software Development Company on GoodFirms"
-           ></a>
+            title="Top Software Development Company" alt="Top Software Development Company on GoodFirms"></a>
       </div>
 
       <div style="text-align: center;">
-         <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-            src="{{ absURL "wp-content/uploads/2022/09/clutch.webp" }}" alt="Clutch banner">
+          {{ $image := resources.Get "assets/img/badges/clutch.png" }}
+          {{ $title := "Clutch banner" }}
+          {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
       </div>
 
 
       <div style="text-align: center;">
-         <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-            src="{{ absURL "wp-content/uploads/2022/09/glassdoor.png" }}" alt="Glassdoor logo">
+          {{ $image := resources.Get "assets/img/badges/glassdoor.png" }}
+          {{ $title := "Glassdoor logo" }}
+          {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
         </div>
-            <div style="text-align: center;">
-            <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-               src="{{ absURL "wp-content/uploads/2022/09/top-rated.webp" }}" alt="Top Rated">
+       <div style="text-align: center;">
+            {{ $image := resources.Get "assets/img/badges/top-rated.png" }}
+            {{ $title := "Top Rated" }}
+            {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
          </div>
 
          <div style="text-align: center;">
-            <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-               src="{{ absURL "wp-content/uploads/2022/09/tewa.png" }}" alt="Top Web Development Companies"
-              >
+             {{ $image := resources.Get "assets/img/badges/tewa.png" }}
+             {{ $title := "Top Web Development Companies" }}
+             {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
          </div>
       </div>
 
