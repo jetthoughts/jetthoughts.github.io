@@ -13,7 +13,7 @@
 {{ end }}
 {{ $srcset = chomp (replace $srcset ", " ", ") }}
 
-<img loading="lazy" decoding="async" class="fl-photo-img size-full"
+<img fetchpriority="high" decoding="async" class="fl-photo-img size-full"
      src="{{ $imageWebP.RelPermalink }}" alt="{{ $title }}"
      itemprop="image" height="{{ $image.Height }}" width="{{ $image.Width }}" title="{{ $title }}"
      srcset="{{ $srcset }}"
