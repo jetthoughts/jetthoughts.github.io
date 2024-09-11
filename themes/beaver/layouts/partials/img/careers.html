@@ -1,0 +1,20 @@
+{{ $image := .image }}
+{{ $title := .title }}
+{{ $widths := slice 300 768 1024 1210 }}
+
+{{ $originalWidth := $image.Width }}
+{{ $imageWebP := $image.Resize (printf "%dx webp q75" $originalWidth) }}
+{{ $srcset := printf "%s %dw, " $imageWebP.RelPermalink $originalWidth }}
+{{ range $widths }}
+{{ if le . $originalWidth }}
+{{ $resized := $image.Resize (printf "%dx webp q75" .) }}
+{{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+{{ end }}
+{{ end }}
+{{ $srcset = chomp (replace $srcset ", " ", ") }}
+
+<img loading="lazy" decoding="async" class="fl-photo-img size-full"
+     src="{{ $imageWebP.RelPermalink }}" alt="{{ $title }}"
+     itemprop="image" height="{{ $image.Height }}" width="{{ $image.Width }}" title="{{ $title }}"
+     srcset="{{ $srcset }}"
+     sizes="(max-width: 1920px) 100vw, 1920px" />

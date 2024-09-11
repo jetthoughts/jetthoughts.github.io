@@ -84,24 +84,12 @@
                                      <div class="fl-col-content fl-node-content">
                                         <div class="fl-module fl-module-photo fl-node-gi0qls6dvyk9" data-node="gi0qls6dvyk9">
                                            <div class="fl-module-content fl-node-content">
-                                              <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                                              <div class="fl-photo fl-photo-align-left">
                                                  <div class="fl-photo-content fl-photo-img-jpeg">
-
                                                     {{ $image := .Page.Resources.GetMatch .Page.Params.cover_image }}
-                                                    {{ $imageW1210 := $image.Resize "1210x webp q75" }}
-                                                    {{ $imageW1024 := $image.Resize "1024x webp q75" }}
-                                                    {{ $imageW768 := $image.Resize "768x webp q75" }}
-                                                    {{ $imageW300 := $image.Resize "300x webp q75" }}
-
-
-                                                    <img fetchpriority="high" decoding="async" class="fl-photo-img wp-image-3055 size-full"
-                                                        src="{{ $image.RelPermalink }}"
-                                                        alt="Browse. Apply. Prepare your bright future." itemprop="image" height="{{ $image.Height }}" width="{{ $image.Width }}"
-                                                        srcset="{{ $imageW1210.RelPermalink }} 1210w,
-                                                        {{ $imageW300.RelPermalink }} 300w,
-                                                        {{ $imageW1024.RelPermalink }} 1024w,
-                                                        {{ $imageW768.RelPermalink }} 768w"
-                                                        sizes="(max-width: 1210px) 100vw, 1210px" />  </div>
+                                                    {{ $title := "Browse. Apply. Prepare your bright future." }}
+                                                    {{ partial "img/careers.html" (dict "image" $image "title" $title) }}
+                                                 </div>
                                               </div>
                                            </div>
                                         </div>
@@ -296,23 +284,14 @@
                                         <div class="fl-module fl-module-photo fl-node-o7uedk0zaipg" data-node="o7uedk0zaipg">
                                            <div class="fl-module-content fl-node-content">
 
-
-{{ $image := .Page.Resources.GetMatch .Page.Params.testimonial.image }}
-
-{{ $imageW300 := $image.Resize "300x webp q75" }}
-
-{{ $imageW150 := $image.Resize "150x webp q75" }}
-
-
-                                              <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                                              <div class="fl-photo fl-photo-align-left">
                                                  <div class="fl-photo-content fl-photo-img-jpg">
-                                                    <img decoding="async" class="fl-photo-img wp-image-3054 size-full"
-                                                        src="{{ $image.RelPermalink }}" alt="John Doe" itemprop="image"
-                                                        height="{{ $image.Height }}" width="{{ $image.Width }}"
-                                                        srcset="{{ $image.RelPermalink }} 528w,
-                                                        {{ $imageW300.RelPermalink }} 300w,
-                                                        {{ $imageW150.RelPermalink }} 150w"
-                                                        sizes="(max-width: 528px) 100vw, 528px" /> </div>
+
+                                                    {{ $image := .Page.Resources.GetMatch .Page.Params.testimonial.image }}
+                                                    {{ $title := "John Doe" }}
+                                                    {{ partial "img/testimonial.html" (dict "image" $image "title" $title) }}
+
+                                                 </div>
                                               </div>
                                            </div>
                                         </div>
