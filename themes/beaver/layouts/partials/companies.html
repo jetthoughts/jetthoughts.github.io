@@ -1,9 +1,15 @@
 <ul class="client-logos">
   {{ range $index, $tech := .Site.Data.companies }}
   <li class="client-logo">
+    {{ $image := resources.GetMatch $tech.image }}
+    {{ if $image }}
+    {{ $resized := $image.Resize "200x webp Smart q75" }}
     <img decoding="async" class="image"
-         src="{{ if (resources.GetMatch $tech.image ) }}{{ ((resources.GetMatch $tech.image).Resize `200x webp Smart q75`).RelPermalink | safeURL }}{{ else }}{{ absURL $tech.image }}{{ end }}"
-         alt="{{ $tech.name }}">
+         src="{{ $resized.RelPermalink | safeURL }}"
+         alt="{{ $tech.name }}"
+         width="{{ $resized.Width }}"
+         height="{{ $resized.Height }}">
+    {{ end }}
   </li>
   {{ end }}
 </ul>
