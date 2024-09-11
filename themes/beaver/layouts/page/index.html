@@ -9,18 +9,6 @@
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 
-{{ $nonCriticalCSS := slice
-(resources.Get "assets/css/590-layout.css")
-(resources.Get "assets/css/base-4.min.css")
-(resources.Get "assets/css/skin-65eda28877e04.css")
-(resources.Get "assets/css/animate.min.css")
-(resources.Get "/assets/css/style.css")
-(resources.Get "/assets/css/586.css")
-| resources.Concat "assets/css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
-}}
-
-<link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 
 {{ end }}
 {{ define "main" }}
@@ -1198,4 +1186,28 @@
       </div>
    </div>
 </div>
+{{ end }}
+
+{{ define "footer" }}
+<script>
+function loadCSS(url) {
+   const link = document.createElement('link');
+   link.rel = 'stylesheet';
+   link.href = url;
+   document.head.appendChild(link);
+}
+
+{{ $nonCriticalCSS := slice
+(resources.Get "assets/css/590-layout.css")
+   (resources.Get "assets/css/base-4.min.css")
+   (resources.Get "assets/css/skin-65eda28877e04.css")
+   (resources.Get "assets/css/animate.min.css")
+   (resources.Get "/assets/css/style.css")
+   (resources.Get "/assets/css/586.css")
+| resources.Concat "assets/css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+}}
+
+
+loadCSS('{{ $nonCriticalCSS.RelPermalink }}')
+</script>
 {{ end }}
