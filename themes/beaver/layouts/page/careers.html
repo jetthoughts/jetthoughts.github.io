@@ -2,7 +2,7 @@
 {{ partial "header/critical/careers.html" . }}
 
 {{ $CSS := slice
-(resources.Get "assets/css/3086-layout2.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/_careers.css"
+(resources.Get "assets/css/careers.css") (resources.Get "assets/css/3086-layout2.css") (resources.Get "assets/css/586.css") (resources.Get "assets/css/homepage.css") (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/_careers.css"
 | css.PostCSS | minify | fingerprint | resources.PostProcess }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
@@ -128,7 +128,7 @@
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
                                                        <div class="pp-infobox-image">
-                                                          <img decoding="async" src="{{ absURL "wp-content/uploads/2022/11/people-oriented.png" }}" alt="People oriented icon" />
+                                                          {{ partial "svg" "theme/people-oriented" }}
                                                        </div>
                                                     </div>
                                                     <div class="pp-infobox-title-wrapper">
@@ -153,7 +153,7 @@
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
                                                        <div class="pp-infobox-image">
-                                                          <img decoding="async" src="{{ absURL "wp-content/uploads/2022/11/long-term-focused.png" }}" alt="Long term focused icon" />
+                                                          {{ partial "svg" "theme/long-term-focused" }}
                                                        </div>
                                                     </div>
                                                     <div class="pp-infobox-title-wrapper">
@@ -178,7 +178,7 @@
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
                                                        <div class="pp-infobox-image">
-                                                          <img decoding="async" src="{{ absURL "wp-content/uploads/2022/11/tight-knit-team.png" }}" alt="Tight knit team" />
+                                                          {{ partial "svg" "theme/tight-knit-team" }}
                                                        </div>
                                                     </div>
                                                     <div class="pp-infobox-title-wrapper">
@@ -216,7 +216,7 @@
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
                                                        <div class="pp-infobox-image">
-                                                          <img decoding="async" src="{{ absURL "wp-content/uploads/2022/11/flexible-nvironment.png" }}" alt="Flexible environment icon" />
+                                                          {{ partial "svg" "theme/flexible-nvironment" }}
                                                        </div>
                                                     </div>
                                                     <div class="pp-infobox-title-wrapper">
@@ -241,7 +241,7 @@
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
                                                        <div class="pp-infobox-image">
-                                                          <img decoding="async" src="{{ absURL "wp-content/uploads/2022/11/growth-beyond-jetthoughts.png" }}" alt="Growth beyond JetThoughts icon" />
+                                                          {{ partial "svg" "theme/growth-beyond-jetthoughts" }}
                                                        </div>
                                                     </div>
                                                     <div class="pp-infobox-title-wrapper">
@@ -266,7 +266,7 @@
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
                                                        <div class="pp-infobox-image">
-                                                          <img decoding="async" src="{{ absURL "wp-content/uploads/2022/11/world-class-training.png" }}" alt="World class training" />
+                                                          {{ partial "svg" "theme/world-class-training" }}
                                                        </div>
                                                     </div>
                                                     <div class="pp-infobox-title-wrapper">
