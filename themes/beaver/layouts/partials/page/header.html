@@ -1,0 +1,123 @@
+<header class="fl-builder-content fl-builder-content-588 fl-builder-global-templates-locked" data-post-id="588" data-type="header" data-sticky="1" data-sticky-on="all" data-sticky-breakpoint="medium" data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+    <div class="fl-row fl-row-full-width fl-row-bg-none fl-node-q9s2ncprogml fl-row-default-height fl-row-align-center" data-node="q9s2ncprogml">
+        <div class="fl-row-content-wrap">
+            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                <div class="fl-col-group fl-node-6ghurya04s2b fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="6ghurya04s2b">
+                    <div class="fl-col fl-node-zycl0pq2xei4 fl-col-small fl-col-small-custom-width" data-node="zycl0pq2xei4">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-photo fl-node-b1kta765r0lo" data-node="b1kta765r0lo">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                                        <div class="fl-photo-content fl-photo-img-png">
+                                            <a href="{{ absURL "" }}" target="_self" itemprop="url" class="logo-image-main">
+                                            {{ partial "svg" "logo-dark" }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-6evrh1ufgx0t fl-col-small-custom-width" data-node="6evrh1ufgx0t">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-pp-advanced-menu fl-node-menu" data-node="menu">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse pp-menu-default pp-menu-align-right pp-menu-position-below">
+                                        <div class="pp-clear"></div>
+                                        <nav class="pp-menu-nav" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                                            <ul id="menu-main-menu" class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
+                                                {{ $currentPage := .Page }}
+                                                {{ range .Site.Menus.main }}
+                                                {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
+                                                {{ if .HasChildren }}
+
+                                                <li class="menu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu
+                                    {{if $active }}current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor{{ end }}">
+                                                    <div class="pp-has-submenu-container"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="{{ .Name }}: submenu" role="button"></span></span></a></div>
+                                                    <ul class="sub-menu">
+                                                        {{ range .Children }}
+                                                        <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
+                                                            <div class="menu-image">
+                                                                {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
+                                                                {{ partial $partialPath . }}
+                                                            </div>
+                                                            <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
+                                                        {{ end }}
+                                                    </ul>
+                                                </li>
+                                                {{ else }}
+                                                <li class="jt-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if $active }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}</span></a></li>
+
+                                                {{ end }}
+
+                                                {{ end }}
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                    <div class="pp-advanced-menu-mobile">
+                                        <button class="pp-advanced-menu-mobile-toggle hamburger" tabindex="0" aria-label="Menu">
+                                            <div class="pp-hamburger">
+                                                <div class="pp-hamburger-box">
+                                                    <div class="pp-hamburger-inner"></div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <div class="pp-advanced-menu pp-advanced-menu-accordion-collapse off-canvas pp-menu-position-below">
+                                        <div class="pp-clear"></div>
+                                        <nav class="pp-menu-nav pp-off-canvas-menu pp-menu-right" aria-label="Main Menu" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                                            <a href="javascript:void(0)" class="pp-menu-close-btn" aria-label="Close the menu" role="button">×</a>
+                                            <ul id="menu-main-menu-1" class="menu pp-advanced-menu-horizontal pp-toggle-arrows">
+
+                                                {{ $currentPage := .Page }}
+                                                {{ range .Site.Menus.main }}
+                                                {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
+                                                {{ if .HasChildren }}
+
+                                                <li class="menu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children pp-has-submenu
+                                          {{if $active }}current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor{{ end }}">
+                                                    <div class="pp-has-submenu-container"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}<span class="pp-menu-toggle" tabindex="0" aria-expanded="false" aria-label="{{ .Name }}: submenu" role="button"></span></span></a></div>
+                                                    <ul class="sub-menu">
+                                                        {{ range .Children }}
+                                                        <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
+                                                            <div class="menu-image">
+                                                                {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
+                                                                {{ partial $partialPath . }}
+                                                            </div>
+                                                            <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
+                                                        {{ end }}
+                                                    </ul>
+                                                </li>
+                                                {{ else }}
+                                                <li class="jt-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if $active }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}"><span class="menu-item-text">{{ .Name }}</span></a></li>
+
+                                                {{ end }}
+
+                                                {{ end }}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fl-col fl-node-r5xbj4ni8mge fl-col-small fl-visible-desktop fl-visible-large fl-visible-medium" data-node="r5xbj4ni8mge">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-button fl-node-vha2g9x6ljec" data-node="vha2g9x6ljec">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-button-wrap fl-button-width-auto fl-button-right">
+                                        <a href="{{ absURL "contact-us/" }}" target="_self" class="fl-button">
+                                        <span class="fl-button-text">Contact Us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
