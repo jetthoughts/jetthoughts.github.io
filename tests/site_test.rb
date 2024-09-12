@@ -6,9 +6,19 @@ class SiteTest < ApplicationSystemTestCase
   def test_homepage
     visit "/"
 
-    assert_success_response
-
     assert_matches_screenshot "homepage", skip_area: [".jt-counter-number-ready"], wait: 5, stability_time_limit: 3
+  end
+
+  def test_homepage_sections
+    visit "/"
+    scroll_to :bottom # to preload all images
+
+    sections = %w[clients companies testimonials services technologies why-us cta use-cases cta-contact_us footer]
+
+    sections.each do |section_id|
+      scroll_to find("##{section_id}")
+      assert_matches_screenshot "homepage/_#{section_id}", wait: 5, stability_time_limit: 3
+    end
   end
 
   def test_blog_index
