@@ -103,6 +103,14 @@ class SiteTest < ApplicationSystemTestCase
     assert_matches_screenshot "services/app_web_development", wait: nil
   end
 
+  def test_contact_us
+    visit "/"
+    click_on "Contact Us", exact: false, match: :first
+
+    assert_text "Let’s get started now"
+    assert_matches_screenshot "contact_us", wait: nil
+  end
+
   private
 
   def assert_success_response
