@@ -24,7 +24,18 @@ end
 
 Capybara.app = Rack::Builder.new do
   use RequestLogger if ENV["DEBUG"]
-  use Rack::Static, urls: [""], root: "public", index: "index.html"
+  use Rack::Static,
+    urls: [""],
+    root: "public",
+    index: "index.html",
+    header_rules: [
+      # Cache all static files in public caches (e.g. Rack::Cache)
+      #  as well as in the browser
+      [:all, {"cache-control" => "public, max-age=31536000"}],
+      # Provide web fonts with cross-origin access-control-headers
+      #  Firefox requires this when serving assets using a Content Delivery Network
+      [:fonts, {"access-control-allow-origin" => "*"}]
+    ]
   run Rack::Directory.new(File.expand_path("../../public", __FILE__))
 end
 
@@ -34,7 +45,7 @@ Capybara.current_driver = Capybara.javascript_driver
 Capybara::Screenshot.save_path = "tests/fixtures/screenshots"
 Capybara::Screenshot.window_size = nil
 Capybara::Screenshot::Diff.driver = :vips
-Capybara.default_max_wait_time = 10
+Capybara.default_max_wait_time = 1
 
 system("hugo --minify --baseURL \"http://localhost:#{Capybara.current_session.server.port}\" --environment production", exception: true)
 

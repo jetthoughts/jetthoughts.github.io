@@ -5,6 +5,7 @@ require "test_helper"
 class SiteTest < ApplicationSystemTestCase
   def test_homepage
     visit "/"
+    scroll_to :bottom # to preload all images
 
     assert_matches_screenshot "homepage", skip_area: [".jt-counter-number-ready"], wait: 5, stability_time_limit: 3
   end
@@ -17,7 +18,8 @@ class SiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      assert_matches_screenshot "homepage/_#{section_id}", wait: 5, stability_time_limit: 3
+      sleep 1.5
+      assert_matches_screenshot "homepage/_#{section_id}", wait: nil, stability_time_limit: nil
     end
   end
 
@@ -54,7 +56,7 @@ class SiteTest < ApplicationSystemTestCase
 
     assert_success_response
 
-    assert_matches_screenshot "about_us", wait: nil
+    assert_matches_screenshot "about_us", wait: 5, stability_time_limit: 3
   end
 
   def test_clients
@@ -65,7 +67,7 @@ class SiteTest < ApplicationSystemTestCase
 
     assert_success_response
 
-    assert_matches_screenshot "clients", wait: nil
+    assert_matches_screenshot "clients", wait: 5, stability_time_limit: 3
   end
 
 
@@ -77,7 +79,8 @@ class SiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      assert_matches_screenshot "clients/_#{section_id}", wait: 5, stability_time_limit: 3
+      sleep 1
+      assert_matches_screenshot "clients/_#{section_id}", wait: nil, stability_time_limit: nil
     end
   end
 
@@ -90,7 +93,7 @@ class SiteTest < ApplicationSystemTestCase
 
     assert_success_response
 
-    assert_matches_screenshot "careers", wait: nil
+    assert_matches_screenshot "careers", wait: 5, stability_time_limit: 3
   end
 
   def test_services_fractional_cto
@@ -114,7 +117,7 @@ class SiteTest < ApplicationSystemTestCase
     end
 
     assert_success_response
-    assert_matches_screenshot "services/app_web_development", wait: nil
+    assert_matches_screenshot "services/app_web_development", wait: 5, stability_time_limit: 3
   end
 
   def test_contact_us
@@ -122,7 +125,7 @@ class SiteTest < ApplicationSystemTestCase
     click_on "Contact Us", exact: false, match: :first
 
     assert_text "Let’s get started now"
-    assert_matches_screenshot "contact_us", wait: nil
+    assert_matches_screenshot "contact_us", wait: 5, stability_time_limit: 3
   end
 
   private
