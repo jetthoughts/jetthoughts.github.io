@@ -68,6 +68,20 @@ class SiteTest < ApplicationSystemTestCase
     assert_matches_screenshot "clients", wait: nil
   end
 
+
+  def test_clients_sections
+    visit "/"
+    scroll_to :bottom # to preload all images
+
+    sections = %w[clients technologies cta-contact_us footer]
+
+    sections.each do |section_id|
+      scroll_to find("##{section_id}")
+      assert_matches_screenshot "clients/_#{section_id}", wait: 5, stability_time_limit: 3
+    end
+  end
+
+
   def test_careers
     visit "/"
     within_top_bar do
