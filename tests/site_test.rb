@@ -58,7 +58,7 @@ class SiteTest < ApplicationSystemTestCase
     assert_matches_screenshot "clients", wait: nil
   end
 
-  def test_carrers
+  def test_careers
     visit "/"
     within_top_bar do
       click_on "Careers"
