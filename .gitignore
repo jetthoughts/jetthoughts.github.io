@@ -24,4 +24,5 @@ hugo.linux
 .DS_Store
 .*
 
-
+# SnapDiff runtime
+*.diff.png
