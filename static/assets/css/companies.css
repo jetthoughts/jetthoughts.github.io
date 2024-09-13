@@ -1,25 +1,25 @@
 .client-logos {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .client-logos > .client-logo {
-    display: flex;
-    height: 4rem;
-    justify-content: center;
-    max-width: var(--p-max-width);
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  max-width: var(--p-max-width);
 }
 
 .client-logos > .client-logo > .image {
-    align-self: center;
-    max-height: 50%;
-    max-width: 75%;
-    width: auto;
+  align-self: center;
+  max-height: 50%;
+  max-width: 75%;
+  width: auto;
 
-    height: auto;
+  height: auto;
 }
