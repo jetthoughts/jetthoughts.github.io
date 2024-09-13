@@ -69,7 +69,6 @@ class SiteTest < ApplicationSystemTestCase
     assert_matches_screenshot "clients", wait: 5, stability_time_limit: 3
   end
 
-
   def test_clients_sections
     visit "/"
     scroll_to :bottom # to preload all images
@@ -83,7 +82,6 @@ class SiteTest < ApplicationSystemTestCase
     end
   end
 
-
   def test_careers
     visit "/"
     within_top_bar do
@@ -93,6 +91,16 @@ class SiteTest < ApplicationSystemTestCase
     assert_success_response
 
     assert_matches_screenshot "careers", wait: 5, stability_time_limit: 3
+  end
+
+  def test_services_menu
+    visit "/"
+
+    within_top_bar do
+      find("a", text: "Services").hover
+    end
+
+    assert_matches_screenshot "nav/services", wait: nil
   end
 
   def test_services_fractional_cto
@@ -117,6 +125,16 @@ class SiteTest < ApplicationSystemTestCase
 
     assert_success_response
     assert_matches_screenshot "services/app_web_development", wait: 5, stability_time_limit: 3
+  end
+
+  def test_use_cases_menu
+    visit "/"
+
+    within_top_bar do
+      find("a", text: "Use Cases").hover
+    end
+
+    assert_matches_screenshot "nav/use_cases", wait: nil
   end
 
   def test_contact_us

@@ -41,9 +41,11 @@ end
 
 Capybara.javascript_driver = :cuprite
 Capybara.current_driver = Capybara.javascript_driver
+Capybara.disable_animation = true
 
 Capybara::Screenshot.save_path = "tests/fixtures/screenshots"
 Capybara::Screenshot.window_size = nil
+Capybara::Screenshot.stability_time_limit = 0.25
 Capybara::Screenshot::Diff.driver = :vips
 Capybara.default_max_wait_time = 1
 
