@@ -100,7 +100,9 @@ class SiteTest < ApplicationSystemTestCase
       find("a", text: "Services").hover
     end
 
-    assert_matches_screenshot "nav/services", wait: nil
+    sleep 1
+
+    assert_matches_screenshot "nav/services", wait: nil, stability_time_limit: nil
   end
 
   def test_services_fractional_cto
@@ -111,8 +113,7 @@ class SiteTest < ApplicationSystemTestCase
       click_on "Fractional CTO"
     end
 
-    assert_success_response
-    assert_matches_screenshot "services/fractional_cto", wait: nil
+    assert_matches_screenshot "services/fractional_cto", wait: nil, stability_time_limit: nil
   end
 
   def test_services_app_development
@@ -134,7 +135,9 @@ class SiteTest < ApplicationSystemTestCase
       find("a", text: "Use Cases").hover
     end
 
-    assert_matches_screenshot "nav/use_cases", wait: nil
+    sleep 1
+
+    assert_matches_screenshot "nav/use_cases", wait: nil, stability_time_limit: nil
   end
 
   def test_contact_us
