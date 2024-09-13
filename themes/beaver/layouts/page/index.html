@@ -54,9 +54,12 @@
                                     <div class="fl-col-content fl-node-content">
                                        <div class="fl-module fl-module-photo fl-node-m6xb85qn107l" data-node="m6xb85qn107l">
                                           <div class="fl-module-content fl-node-content">
-                                             <div class="fl-photo fl-photo-align-right" itemscope itemtype="https://schema.org/ImageObject">
+                                             <div class="fl-photo fl-photo-align-right">
                                                 <div class="fl-photo-content fl-photo-img-jpeg">
-                                                   <img fetchpriority="high" class="fl-photo-img wp-image-682 size-full" src="{{ "/wp-content/uploads/2022/10/build-faster-scale-smarter.webp" }}" alt="Build Faster Scale Smarter" itemprop="image" height="700" width="730" srcset="{{ "/wp-content/uploads/2022/10/build-faster-scale-smarter.webp" }} 730w, {{ "/wp-content/uploads/2022/10/build-faster-scale-smarter-300x288.jpeg" }} 300w" sizes="(max-width: 730px) 100vw, 730px" />
+
+                                                   {{ $image := .Page.Resources.Get "build-faster-scale-smarter.jpeg" }}
+                                                   {{ $title := "Build Faster Scale Smarter" }}
+                                                   {{ partial "img/homepage.html" (dict "image" $image "title" $title) }}
                                                 </div>
                                              </div>
                                           </div>
