@@ -1,9 +1,8 @@
 <header class="top-panel">
   <div class="container">
     <div class="wrapper">
-      <a class="logo" href="/" title="JetThoughts">{{ partial "svg" "logo-dark" }}</a>
-      <a href="{{ absURL "" }}" target="_self" itemprop="url" class="logo-image-main">
-      {{ partial "svg" "logo-dark" }}
+      <a href="{{ absURL "" }}" target="_self" itemprop="url" class="logo">
+        {{ partial "svg" "logo-dark" }}
       </a>
 
       {{ partial "page/navigation.html" . }}
