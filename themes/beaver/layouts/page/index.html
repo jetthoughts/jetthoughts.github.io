@@ -2,11 +2,9 @@
 {{ partial "header/critical/homepage.html" . }}
 
 {{ $CSS := slice
-   (resources.Get "css/components/pp_adv_menu.css")
    (resources.Get "css/companies.css")
    | resources.Concat "css/_critical.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
-
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 
