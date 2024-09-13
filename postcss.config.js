@@ -13,6 +13,7 @@ module.exports = {
   whitelist: [],
   plugins: [
     require("autoprefixer"),
+    require("cssnano"),
     // purgecss
     // ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
   ],
