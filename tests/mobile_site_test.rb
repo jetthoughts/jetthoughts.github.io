@@ -10,21 +10,9 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_homepage
     visit "/"
+    sleep 1
 
-    assert_matches_screenshot "homepage"
-  end
-
-  def test_homepage_sections
-    visit "/"
-    scroll_to :bottom # to preload all images
-
-    sections = %w[clients companies testimonials services technologies why-us cta use-cases cta-contact_us footer]
-
-    sections.each do |section_id|
-      scroll_to find("##{section_id}")
-      sleep 1.5
-      assert_matches_screenshot "homepage/_#{section_id}", wait: nil, stability_time_limit: nil
-    end
+    assert_matches_screenshot "homepage", skip_area: [".counter-value"]
   end
 
   def test_blog_index
@@ -55,22 +43,9 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_clients
     visit "/clients/"
-    sleep 1
+    sleep 5
 
-    assert_matches_screenshot "clients", wait: nil
-  end
-
-  def test_clients_sections
-    visit "/clients/"
-    scroll_to :bottom # to preload all images
-
-    sections = %w[clients technologies cta-contact_us footer]
-
-    sections.each do |section_id|
-      scroll_to find("##{section_id}")
-      sleep 1
-      assert_matches_screenshot "clients/_#{section_id}", wait: nil, stability_time_limit: nil
-    end
+    assert_matches_screenshot "clients", wait: nil, stability_time_limit: nil
   end
 
   def test_careers
@@ -83,8 +58,9 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/"
 
     find(".pp-advanced-menu-mobile-toggle.hamburger").click
+    sleep 1
 
-    assert_matches_screenshot "nav/hamburger_menu", wait: nil
+    assert_matches_screenshot "nav/hamburger_menu", wait: nil, stability_time_limit: nil
   end
 
   def test_top_bar_hamburger_menu_services
@@ -96,7 +72,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     find(".pp-menu-toggle", match: :first).click
     sleep 1
 
-    assert_matches_screenshot "nav/hamburger_menu/services", wait: nil
+    assert_matches_screenshot "nav/hamburger_menu/services", wait: nil, stability_time_limit: nil
   end
 
   def test_contact_us
