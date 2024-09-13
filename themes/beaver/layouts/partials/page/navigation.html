@@ -5,7 +5,7 @@
     {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
     {{ if .HasChildren }}
 
-      <li class="item -arrow">
+      <li class="item -arrow {{if $active }}active{{ end }}">
         <a href="{{ .URL }}" class="link">{{ .Name }}</a>
 
         <ul class="sub-menu">
@@ -28,7 +28,7 @@
       </li>
 
     {{ else }}
-      <li class="item">
+      <li class="item {{if $active }}active{{ end }}">
         {{ if eq .URL "/contact-us/" }}
           <a href="{{ .URL }}" class="btn btn-primary">{{ .Name }}</a>
         {{ else }}
