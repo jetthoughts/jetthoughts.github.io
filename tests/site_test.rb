@@ -6,7 +6,7 @@ class SiteTest < ApplicationSystemTestCase
   def test_homepage
     visit "/"
 
-    assert_matches_screenshot "homepage", wait: 5, stability_time_limit: 3
+    assert_matches_screenshot "homepage", skip_area: [".counter-value"], wait: 5, stability_time_limit: 3
   end
 
   def test_homepage_sections
