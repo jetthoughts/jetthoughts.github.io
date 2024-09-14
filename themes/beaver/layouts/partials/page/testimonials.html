@@ -54,9 +54,11 @@
 
       <div style="text-align: center;">
          <a target="_blank" href="https://www.goodfirms.co/company/jetthoughts-llc">
-             <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-            src="{{ absURL "img/badges/top-software-development-companies.svg" }}"
-            title="Top Software Development Company" alt="Top Software Development Company on GoodFirms"></a>
+           {{ $image := resources.Get "img/badges/top-software-development-companies.svg" }}
+           <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
+            src="{{ $image.RelPermalink }}"
+            title="Top Software Development Company" alt="Top Software Development Company on GoodFirms">
+         </a>
       </div>
 
       <div style="text-align: center;">
