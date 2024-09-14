@@ -3,16 +3,16 @@
 
 {{
 $js := slice
-  (resources.Get "/assets/js/587.js")
-  (resources.Get "/assets/js/bb-theme/pp_advanced_tabs.js")
-  (resources.Get "/assets/js/bb-theme/theme.js")
-  | resources.Concat "assets/js/_site.js"
+  (resources.Get "js/587.js")
+  (resources.Get "js/bb-theme/pp_advanced_tabs.js")
+  (resources.Get "js/bb-theme/theme.js")
+  | resources.Concat "js/_site.js"
   | minify | fingerprint | resources.PostProcess
 }}
 
 <script defer src='{{ $js.Permalink }}'></script>
-<script async src='{{ (resources.Get "/assets/js/bb-theme/theme.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
-<script async src='{{ (resources.Get "/assets/js/bb-theme/pp_advanced_menu.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
+<script async src='{{ (resources.Get "js/bb-theme/theme.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
+<script async src='{{ (resources.Get "js/bb-theme/pp_advanced_menu.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
 
 <!-- Google tag (gtag.js) -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>

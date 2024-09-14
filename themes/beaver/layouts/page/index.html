@@ -2,9 +2,9 @@
 {{ partial "header/critical/homepage.html" . }}
 
 {{ $CSS := slice
-(resources.Get "assets/css/homepage.css")
-(resources.Get "assets/css/companies.css")
-| resources.Concat "assets/css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+(resources.Get "css/homepage.css")
+(resources.Get "css/companies.css")
+| resources.Concat "css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
 }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
@@ -1198,13 +1198,13 @@ function loadCSS(url) {
 }
 
 {{ $nonCriticalCSS := slice
-(resources.Get "assets/css/590-layout.css")
-   (resources.Get "assets/css/base-4.min.css")
-   (resources.Get "assets/css/skin-65eda28877e04.css")
-   (resources.Get "assets/css/animate.min.css")
-   (resources.Get "/assets/css/style.css")
-   (resources.Get "/assets/css/586.css")
-| resources.Concat "assets/css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+(resources.Get "css/590-layout.css")
+   (resources.Get "css/base-4.min.css")
+   (resources.Get "css/skin-65eda28877e04.css")
+   (resources.Get "css/animate.min.css")
+   (resources.Get "css/style.css")
+   (resources.Get "css/586.css")
+| resources.Concat "css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
 }}
 
 

@@ -1,4 +1,4 @@
-{{ $nonCriticalCSS := resources.Get "/assets/css/swiper.min.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess }}
+{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess }}
 <link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 
@@ -55,30 +55,30 @@
       <div style="text-align: center;">
          <a target="_blank" href="https://www.goodfirms.co/company/jetthoughts-llc">
              <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-            src="{{ absURL "assets/img/badges/top-software-development-companies.svg" }}"
+            src="{{ absURL "img/badges/top-software-development-companies.svg" }}"
             title="Top Software Development Company" alt="Top Software Development Company on GoodFirms"></a>
       </div>
 
       <div style="text-align: center;">
-          {{ $image := resources.Get "assets/img/badges/clutch.png" }}
+          {{ $image := resources.Get "img/badges/clutch.png" }}
           {{ $title := "Clutch banner" }}
           {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
       </div>
 
 
       <div style="text-align: center;">
-          {{ $image := resources.Get "assets/img/badges/glassdoor.png" }}
+          {{ $image := resources.Get "img/badges/glassdoor.png" }}
           {{ $title := "Glassdoor logo" }}
           {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
         </div>
        <div style="text-align: center;">
-            {{ $image := resources.Get "assets/img/badges/top-rated.png" }}
+            {{ $image := resources.Get "img/badges/top-rated.png" }}
             {{ $title := "Top Rated" }}
             {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
          </div>
 
          <div style="text-align: center;">
-             {{ $image := resources.Get "assets/img/badges/tewa.png" }}
+             {{ $image := resources.Get "img/badges/tewa.png" }}
              {{ $title := "Top Web Development Companies" }}
              {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
          </div>
