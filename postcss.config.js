@@ -19,9 +19,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 })
 
 module.exports = {
-  content: ["layouts/**/*.html"],
-  css: ["static/css/*.css"],
-  whitelist: [],
   plugins: [
     require("autoprefixer"),
     ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("cssnano")] : []),
