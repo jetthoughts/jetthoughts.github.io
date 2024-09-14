@@ -508,7 +508,7 @@
   color: #fff;
   left: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
+  -ms-filter: "alpha(opacity=0)";
   padding: 10px 15px;
   position: absolute;
   right: 0;
@@ -519,7 +519,7 @@
 
 .fl-photo-content:hover .fl-photo-caption-hover {
   opacity: 100;
-  filter: alpha(opacity=100);
+  -ms-filter: "alpha(opacity=100)";
 }
 
 .fl-builder-pagination, .fl-builder-pagination-load-more {
