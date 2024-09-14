@@ -8,7 +8,7 @@ Saved: Nov 25 2022 | 22:27:19 */
 *	icon and description on the Services menu
 */
 /* General */
-body:not(.fl-builder-edit) a, body:not(.fl-builder-edit) .fl-button, body:not(.fl-builder-edit) .pp-button, body:not(.fl-builder-edit) button, body:not(.fl-builder-edit) input[type="submit"] {
+body a, body .fl-button, body .pp-button, body button, body input[type="submit"] {
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -35,7 +35,7 @@ body:not(.fl-builder-edit) a, body:not(.fl-builder-edit) .fl-button, body:not(.f
 }
 
 @media (min-width: 861px) {
-  body:not(.fl-builder-edit) .single-sidebar {
+  body .single-sidebar {
     position: sticky;
     top: 12rem;
     align-self: start;

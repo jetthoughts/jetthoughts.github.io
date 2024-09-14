@@ -119,7 +119,7 @@ Saved: Sep 09 2022 | 07:01:19 */
 }
 
 /* General */
-body:not(.fl-builder-edit) a,
+body a,
 a.fl-button, a.pp-button, button, input[type="submit"] {
   transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
@@ -230,19 +230,19 @@ header.fl-theme-builder-header-shrink ul.menu > li {
     width: 200px !important;
   }
 
-  body:not(.fl-builder-edit) .floating-banner,
-  body:not(.fl-builder-edit) .legal-sidebar,
-  body:not(.fl-builder-edit) .single-sidebar {
+  body .floating-banner,
+  body .legal-sidebar,
+  body .single-sidebar {
     position: sticky;
     top: 12rem;
     align-self: start;
   }
 
-  body:not(.fl-builder-edit) .uk-tabs .pp-tabs-panel-content {
+  body .uk-tabs .pp-tabs-panel-content {
     border: unset !important;
   }
 
-  body:not(.fl-builder-edit) .uk-tabs .pp-tabs .pp-tabs-labels {
+  body .uk-tabs .pp-tabs .pp-tabs-labels {
     position: sticky;
     top: 8rem;
     align-self: start;
