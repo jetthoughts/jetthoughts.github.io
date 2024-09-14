@@ -10,6 +10,7 @@ class SiteTest < ApplicationSystemTestCase
   end
 
   def test_homepage_sections
+    skip "Integration with chrome si broken: there is broken screenshots after scrolling"
     visit "/"
     scroll_to :bottom # to preload all images
 

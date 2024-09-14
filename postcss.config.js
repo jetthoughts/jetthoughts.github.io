@@ -24,8 +24,7 @@ module.exports = {
   whitelist: [],
   plugins: [
     require("autoprefixer"),
-    require("cssnano")
-    // purgecss
-    // ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
+    ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("cssnano")] : []),
+    // ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss, require("autoprefixer"), require("cssnano")] : []),
   ],
 }
