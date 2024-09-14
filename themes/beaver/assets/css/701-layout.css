@@ -1611,11 +1611,11 @@ img.mfp-img {
   }
 }
 
-.fl-node-19njtzagfebh .fl-photo {
+.fl-photo {
   text-align: left;
 }
 
-.fl-node-19njtzagfebh .fl-photo-img {
+.fl-photo-img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -2029,10 +2029,7 @@ img.mfp-img {
 }
 
 .fl-node-5tmpu20yerbq .pp-infobox-icon-inner span.pp-icon, .fl-node-5tmpu20yerbq .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-radius: px;
 }
 
 .fl-node-5tmpu20yerbq .pp-infobox-wrap .pp-infobox {

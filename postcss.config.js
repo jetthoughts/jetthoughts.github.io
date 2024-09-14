@@ -5,23 +5,17 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])]
   },
   safelist: {
-    standard: [
-      "button, input[type=button], input[type=submit]",
-      "pp-advanced-menu", "pp-advanced-menu-accordion-collapse", "off-canvas", "pp-menu-position-below", "menu-close", "menu-open"
-    ],
-    greedy: [
-      /^swiper-/, /^is-/, /^has-/, /^js-/,
-      /^fl-builder-content/, /^fl-col/,
-      /^pp-/,
-      'menu'
-    ]
+    deep: [/^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-/, /^pp-/],
+    greedy: [/^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-/, /^pp-/]
   },
+  blocklist: ["fl-theme-builder-header-sticky"]
 })
 
 module.exports = {
   plugins: [
-    require("autoprefixer"),
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("cssnano")] : []),
-    // ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss, require("autoprefixer"), require("cssnano")] : []),
+    require("postcss-nested"),
+    purgecss,
+    require("postcss-delete-duplicate-css")({isRemoveNull: true, isRemoveComment: true}),
+    ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("autoprefixer"), require("cssnano")] : []),
   ],
 }
