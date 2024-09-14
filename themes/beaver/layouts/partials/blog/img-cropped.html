@@ -11,5 +11,5 @@
 </picture>
 
 {{ else }}
-<img src="{{ (resources.Get "assets_dynamic/img/no-image.svg" | resources.Fingerprint).Permalink }}" alt="Cat" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
+<img src="{{ (resources.Get "assets_dynamic/img/no-image.svg" | resources.Fingerprint).Permalink }}" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
 {{ end }}
