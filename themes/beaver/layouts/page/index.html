@@ -33,7 +33,9 @@ function loadCSS(url) {
 | resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
-loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
+document.addEventListener("DOMContentLoaded", function () {
+   loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
+})
 </script>
 {{ end }}
 
