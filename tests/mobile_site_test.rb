@@ -66,9 +66,9 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_top_bar_hamburger_menu_services
     visit "/"
 
-    page.driver.resize(360, 800)
-
     find(".pp-advanced-menu-mobile-toggle.hamburger").click
+    sleep 1
+
     find(".pp-menu-toggle", match: :first).click
     sleep 1
 
