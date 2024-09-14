@@ -12,8 +12,9 @@
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "postcss": "^8.4.45",
+    "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
+    "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-nested": "^6.2.0",
     "surge": "^0.24.6"
   }
