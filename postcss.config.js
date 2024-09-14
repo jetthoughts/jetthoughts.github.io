@@ -4,7 +4,18 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     const els = JSON.parse(content).htmlElements
     return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])]
   },
-  safelist: [],
+  safelist: {
+    standard: [
+      "button, input[type=button], input[type=submit]",
+      "pp-advanced-menu", "pp-advanced-menu-accordion-collapse", "off-canvas", "pp-menu-position-below", "menu-close", "menu-open"
+    ],
+    greedy: [
+      /^swiper-/, /^is-/, /^has-/, /^js-/,
+      /^fl-builder-content/, /^fl-col/,
+      /^pp-/,
+      'menu'
+    ]
+  },
 })
 
 module.exports = {
@@ -13,7 +24,7 @@ module.exports = {
   whitelist: [],
   plugins: [
     require("autoprefixer"),
-    require("cssnano"),
+    require("cssnano")
     // purgecss
     // ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
   ],

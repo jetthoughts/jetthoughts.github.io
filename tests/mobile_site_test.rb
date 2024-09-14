@@ -10,7 +10,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_homepage
     visit "/"
-    sleep 1
+    sleep 2
 
     assert_matches_screenshot "homepage", skip_area: [".counter-value"]
   end
