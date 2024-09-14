@@ -1,30 +1,30 @@
 .single-post-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    padding-left: 18px;
-    padding-right: 18px
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px
 }
 
 .single-post-content {
-    max-width: 43rem;
+  max-width: 43rem;
 }
 
 .social-share {
-    display: flex;
-    max-width: 43rem;
-    gap: 1rem;
-    margin-top: 4rem;
-    justify-content: center;
+  display: flex;
+  max-width: 43rem;
+  gap: 1rem;
+  margin-top: 4rem;
+  justify-content: center;
 
 }
 
 .social-share a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
 }
 
 .social-share svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
