@@ -7,7 +7,7 @@
 (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
 (resources.Get "css/skin-65eda28877e04.css")
 (resources.Get "css/single-post.css")
-| resources.Concat "css/blog.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/blog.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 
@@ -48,7 +48,7 @@
                 latest tips to help you achieve your goals.</p>
 
                 <br>
-              
+
                 {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
                 <a class="link" href="{{ .Permalink }}">
 

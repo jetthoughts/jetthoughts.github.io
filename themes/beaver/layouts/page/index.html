@@ -4,7 +4,7 @@
 {{ $CSS := slice
 (resources.Get "css/homepage.css")
 (resources.Get "css/companies.css")
-| resources.Concat "css/_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+| resources.Concat "css/_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
@@ -1197,13 +1197,11 @@ function loadCSS(url) {
 }
 
 {{ $nonCriticalCSS := slice
-(resources.Get "css/590-layout.css")
-   (resources.Get "css/base-4.min.css")
+   (resources.Get "css/590-layout.css")
    (resources.Get "css/skin-65eda28877e04.css")
-   (resources.Get "css/animate.min.css")
    (resources.Get "css/style.css")
    (resources.Get "css/586.css")
-| resources.Concat "css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
+| resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
 

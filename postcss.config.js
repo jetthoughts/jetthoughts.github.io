@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     require("postcss-nested"),
     require("postcss-delete-duplicate-css")({isRemoveNull: true, isRemoveComment: true}),
-    purgecss,
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss, require("autoprefixer"), require("cssnano")] : []),
+    purgecss, require("autoprefixer"), require("cssnano"),
+    ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("autoprefixer"), require("cssnano")] : []),
   ],
 }
