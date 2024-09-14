@@ -59,6 +59,7 @@
             $(".career-form .form-title").hide()
           })
         }
+
         // Add Active Class to Clients, Careers & Blog
         if (SDB.App.exists("body.single")) {
           if ($("body").hasClass("single-post")) {
@@ -73,8 +74,8 @@
         }
         // Number Counter
         if (SDB.App.exists(".jt-counter-number-ready")) {
-          $(document).ready(startCounterReady)
-          flag = 1
+          // $(document).ready(startCounterReady)
+          // flag = 1
 
           function startCounterReady () {
             if ($(".jt-counter-number-ready").length > 0) {

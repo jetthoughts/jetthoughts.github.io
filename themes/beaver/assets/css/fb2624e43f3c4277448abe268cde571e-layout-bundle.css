@@ -1974,7 +1974,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .pp-advanced-menu-mobile {
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 
@@ -1995,7 +1995,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .pp-advanced-menu-mobile {
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .fl-node-menu .pp-advanced-menu-mobile-toggle {

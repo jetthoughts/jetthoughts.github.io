@@ -90,7 +90,11 @@
          <div class="fl-module fl-module-rich-text fl-node-c17gwsk2h8zy jt-rating" data-node="c17gwsk2h8zy">
             <div class="fl-module-content fl-node-content">
                <div class="fl-rich-text">
-                  <p><strong>4.8</strong>/5.0 <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663" src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" alt="" width="212" height="36"></p>
+                  <p>
+                    <strong>4.8</strong>/5.0
+                    <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663"
+                         src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" alt="" width="212" height="36">
+                  </p>
                </div>
             </div>
          </div>
@@ -124,10 +128,16 @@
                                         <p>{{ .description }}</p>
                                     </div>
                                 </div>
-                                <div class="pp-review-header"> <cite class="pp-review-cite"> <span class="pp-review-name">{{ .name }}</span>
-                                        <div class="pp-rating"> <i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i></div> <span class="pp-review-title">{{ .title }}</span>
-                                    </cite>
-                                    <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
+                                <div class="pp-review-header">
+                                  <cite class="pp-review-cite"> <span class="pp-review-name">{{ .name }}</span>
+                                    <div class="pp-rating">
+                                      <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663"
+                                           alt="five stars" height="18" width="106"
+                                           src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" >
+                                    </div>
+                                    <span class="pp-review-title">{{ .title }}</span>
+                                  </cite>
+                                  <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
                                 </div>
                             </div>
                         </div>

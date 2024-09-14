@@ -18086,7 +18086,7 @@ body.fl-framework-base-4 .fl-woo-content-right,body.fl-framework-bootstrap-4 .fl
     animation-name: slideOutUp;
 }
 
-@charset "UTF-8";body:not(.fl-builder-edit) a,body:not(.fl-builder-edit) .fl-button,body:not(.fl-builder-edit) .pp-button,body:not(.fl-builder-edit) button,body:not(.fl-builder-edit) input[type="submit"] {
+@charset "UTF-8";body a,body .fl-button,body .pp-button,body button,body input[type="submit"] {
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -18113,7 +18113,7 @@ body.fl-framework-base-4 .fl-woo-content-right,body.fl-framework-bootstrap-4 .fl
 }
 
 @media (min-width: 861px) {
-    body:not(.fl-builder-edit) .single-sidebar {
+    body .single-sidebar {
         position:sticky;
         top: 12rem;
         align-self: start;
