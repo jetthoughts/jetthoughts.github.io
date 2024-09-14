@@ -698,29 +698,6 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   font-size: 0;
 }
 
-.jt-reviews-box .pp-reviews-wrapper .pp-reviews-swiper .swiper-wrapper .pp-review-item .pp-review .pp-review-header .pp-review-cite .pp-rating .pp-star-full::before {
-  content: "";
-  background: url("/wp-content/uploads/2022/09/single-star.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 18px;
-  height: 18px;
-}
-
-.jt-reviews-box .pp-reviews-wrapper .pp-reviews-swiper .swiper-wrapper .pp-review-item .pp-review .pp-review-header .pp-review-cite .pp-rating .pp-star-0 {
-  font-size: 0;
-}
-
-.jt-reviews-box .pp-reviews-wrapper .pp-reviews-swiper .swiper-wrapper .pp-review-item .pp-review .pp-review-header .pp-review-cite .pp-rating .pp-star-0::before {
-  content: "";
-  background: url("/wp-content/uploads/2022/09/single-star.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 18px;
-  height: 18px;
-  filter: grayscale(1);
-}
-
 .jt-reviews-box .pp-reviews-wrapper .pp-reviews-swiper .swiper-wrapper .pp-review-item .pp-review .pp-review-header .pp-review-cite .pp-rating i:not(:last-of-type) {
   margin-right: 21px;
 }
