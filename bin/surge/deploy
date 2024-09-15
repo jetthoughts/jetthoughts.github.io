@@ -8,4 +8,4 @@ hugo --gc --minify --baseURL "https://${SURGE_APP}.surge.sh" --environment produ
 
 bin/surge/cleanup
 
-surge public "${SURGE_APP}.surge.sh"
+bunx surge public "${SURGE_APP}.surge.sh"
