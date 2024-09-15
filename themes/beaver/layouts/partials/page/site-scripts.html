@@ -1,14 +1,15 @@
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" as="script" fetchpriority="high">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-<script defer src='{{ (resources.Get "js/bb-theme/pp_advanced_menu.js" | minify | fingerprint | resources.PostProcess).Permalink }}'></script>
+<!--<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" as="script" fetchpriority="high">-->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script defer
+        src='{{ (resources.Get "js/bb-theme/pp_advanced_menu.js" | js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess).RelPermalink }}'>
+</script>
 
 {{
 $js := slice
   (resources.Get "js/587.js")
   (resources.Get "js/bb-theme/pp_advanced_tabs.js")
   | resources.Concat "js/_site.js"
-  | minify | fingerprint | resources.PostProcess
+  | js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
 }}
 
-<script defer src='{{ $js.Permalink }}'></script>
+<script defer src='{{ $js.RelPermalink }}'></script>
