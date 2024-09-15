@@ -81,4 +81,12 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_text "Let’s get started now"
     assert_matches_screenshot "contact_us", wait: 5, stability_time_limit: 3
   end
+
+  def test_free_consultation
+    visit "/"
+    click_on "Talk to an Expert", exact: false, match: :first
+
+    assert_text "Free Consultation"
+    assert_matches_screenshot "free_consultation", wait: 5, stability_time_limit: 3
+  end
 end
