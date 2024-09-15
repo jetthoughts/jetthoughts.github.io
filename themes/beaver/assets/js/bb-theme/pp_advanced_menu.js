@@ -31,17 +31,19 @@
         const wrapper = document.querySelector(this.wrapperClass)
         const mobileToggle = wrapper.querySelector(".pp-advanced-menu-mobile-toggle")
 
-        if (mobileToggle.classList.contains("pp-active") && this.mobileToggle !== "expanded") {
+        if (mobileToggle && mobileToggle.classList.contains("pp-active") && this.mobileToggle !== "expanded") {
           if (e.target.closest(".fl-module-pp-advanced-menu")) return
           if (e.target.closest(".pp-advanced-menu") && e.target.tagName === "INPUT") return
           if (e.target.classList.contains("pp-menu-close-btn")) return
           mobileToggle.click()
         }
 
-        wrapper.querySelectorAll(".pp-has-submenu").forEach(el => el.classList.remove("focus", "pp-active"))
-        wrapper.querySelectorAll(".pp-has-submenu .sub-menu").forEach(el => el.classList.remove("focus"))
-        wrapper.querySelectorAll(".pp-has-submenu-container").forEach(el => el.classList.remove("focus"))
-        wrapper.querySelectorAll(".pp-menu-toggle").forEach(el => el.setAttribute("aria-expanded", false))
+        if (wrapper) {
+          wrapper.querySelectorAll(".pp-has-submenu").forEach(el => el.classList.remove("focus", "pp-active"))
+          wrapper.querySelectorAll(".pp-has-submenu .sub-menu").forEach(el => el.classList.remove("focus"))
+          wrapper.querySelectorAll(".pp-has-submenu-container").forEach(el => el.classList.remove("focus"))
+          wrapper.querySelectorAll(".pp-menu-toggle").forEach(el => el.setAttribute("aria-expanded", false))
+        }
       })
 
       document.addEventListener("keyup", (e) => {
