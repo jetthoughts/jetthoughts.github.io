@@ -2,9 +2,9 @@
 {{ partial "header/critical/homepage.html" . }}
 
 {{ $CSS := slice
-(resources.Get "css/homepage.css")
-(resources.Get "css/companies.css")
-| resources.Concat "css/_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
+   (resources.Get "css/components/pp_adv_menu.css")
+   (resources.Get "css/companies.css")
+   | resources.Concat "css/_critical.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
@@ -26,6 +26,7 @@ function loadCSS(url) {
 }
 
 {{ $nonCriticalCSS := slice
+   (resources.Get "css/homepage.css")
    (resources.Get "css/590-layout.css")
    (resources.Get "css/skin-65eda28877e04.css")
    (resources.Get "css/style.css")
@@ -34,7 +35,7 @@ function loadCSS(url) {
 }}
 
 document.addEventListener("DOMContentLoaded", function () {
-   loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
+   // loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
 })
 </script>
 {{ end }}
