@@ -1,4 +1,3 @@
-<!--<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" as="script" fetchpriority="high">-->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script defer
         src='{{ (resources.Get "js/bb-theme/pp_advanced_menu.js" | js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess).RelPermalink }}'>
