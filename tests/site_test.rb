@@ -157,6 +157,12 @@ class SiteTest < ApplicationSystemTestCase
     assert_matches_screenshot "free_consultation", wait: 5, stability_time_limit: 3
   end
 
+  def test_not_found
+    visit "/404.html"
+
+    assert_matches_screenshot "404", wait: 5, stability_time_limit: 3
+  end
+
   private
 
   def assert_success_response
