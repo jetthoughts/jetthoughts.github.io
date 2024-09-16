@@ -271,7 +271,7 @@
     z-index: 999998;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     backface-visibility: hidden;
-    perspective: 1000;
+    perspective: 1000px;
     transition: all .5s;
     will-change: transform;
     -webkit-overflow-scrolling: touch;
@@ -356,7 +356,6 @@ ul.pp-advanced-menu-horizontal li.mega-menu {
 
     ul.sub-menu {
       background: 0 0;
-      -ms-box-shadow: none;
       box-shadow: none;
       display: block;
       min-width: 0;
@@ -369,8 +368,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu {
 }
 
 .pp-advanced-menu ul li.mega-menu a:not([href]) {
-  background: 0 0;
-  background-color: unset;
+  background: unset 0 0;
   color: unset;
 }
 
@@ -723,10 +721,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu {
   }
 
   .sub-menu {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   }
 
