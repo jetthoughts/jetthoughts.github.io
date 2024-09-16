@@ -1,13 +1,14 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script defer
+        src='{{ (resources.Get "js/bb-theme/pp_advanced_menu.js" | js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess).RelPermalink }}'>
+</script>
 
 {{
 $js := slice
-  (resources.Get "/assets/js/587.js")
-  (resources.Get "/assets/js/bb-theme/pp_advanced_tabs.js")
-  (resources.Get "/assets/js/bb-theme/theme.js")
-  | resources.Concat "assets/js/_site.js"
-  | minify | fingerprint | resources.PostProcess
+  (resources.Get "js/587.js")
+  (resources.Get "js/bb-theme/pp_advanced_tabs.js")
+  | resources.Concat "js/_site.js"
+  | js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
 }}
 
 <script defer src='{{ $js.Permalink }}'></script>
@@ -23,3 +24,4 @@ function gtag () {dataLayer.push(arguments)}
 gtag("js", new Date())
 gtag("config", "G-T1N27FC30F")
 </script>
+<script defer src='{{ $js.RelPermalink }}'></script>

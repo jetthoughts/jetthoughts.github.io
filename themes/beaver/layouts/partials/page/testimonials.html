@@ -1,4 +1,4 @@
-{{ $nonCriticalCSS := resources.Get "/assets/css/swiper.min.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess }}
+{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | postCSS | minify | fingerprint | resources.PostProcess }}
 <link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 
@@ -54,31 +54,33 @@
 
       <div style="text-align: center;">
          <a target="_blank" href="https://www.goodfirms.co/company/jetthoughts-llc">
-             <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
-            src="{{ absURL "assets/img/badges/top-software-development-companies.svg" }}"
-            title="Top Software Development Company" alt="Top Software Development Company on GoodFirms"></a>
+           {{ $image := resources.Get "img/badges/top-software-development-companies.svg" }}
+           <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
+            src="{{ $image.RelPermalink }}"
+            title="Top Software Development Company" alt="Top Software Development Company on GoodFirms">
+         </a>
       </div>
 
       <div style="text-align: center;">
-          {{ $image := resources.Get "assets/img/badges/clutch.png" }}
+          {{ $image := resources.Get "img/badges/clutch.png" }}
           {{ $title := "Clutch banner" }}
           {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
       </div>
 
 
       <div style="text-align: center;">
-          {{ $image := resources.Get "assets/img/badges/glassdoor.png" }}
+          {{ $image := resources.Get "img/badges/glassdoor.png" }}
           {{ $title := "Glassdoor logo" }}
           {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
         </div>
        <div style="text-align: center;">
-            {{ $image := resources.Get "assets/img/badges/top-rated.png" }}
+            {{ $image := resources.Get "img/badges/top-rated.png" }}
             {{ $title := "Top Rated" }}
             {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
          </div>
 
          <div style="text-align: center;">
-             {{ $image := resources.Get "assets/img/badges/tewa.png" }}
+             {{ $image := resources.Get "img/badges/tewa.png" }}
              {{ $title := "Top Web Development Companies" }}
              {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
          </div>
@@ -88,7 +90,11 @@
          <div class="fl-module fl-module-rich-text fl-node-c17gwsk2h8zy jt-rating" data-node="c17gwsk2h8zy">
             <div class="fl-module-content fl-node-content">
                <div class="fl-rich-text">
-                  <p><strong>4.8</strong>/5.0 <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663" src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" alt="" width="212" height="36"></p>
+                  <p>
+                    <strong>4.8</strong>/5.0
+                    <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663"
+                         src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" alt="" width="212" height="36">
+                  </p>
                </div>
             </div>
          </div>
@@ -122,10 +128,16 @@
                                         <p>{{ .description }}</p>
                                     </div>
                                 </div>
-                                <div class="pp-review-header"> <cite class="pp-review-cite"> <span class="pp-review-name">{{ .name }}</span>
-                                        <div class="pp-rating"> <i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i><i class="pp-star-full">&#9733;</i></div> <span class="pp-review-title">{{ .title }}</span>
-                                    </cite>
-                                    <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
+                                <div class="pp-review-header">
+                                  <cite class="pp-review-cite"> <span class="pp-review-name">{{ .name }}</span>
+                                    <div class="pp-rating">
+                                      <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663"
+                                           alt="five stars" height="18" width="106"
+                                           src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" >
+                                    </div>
+                                    <span class="pp-review-title">{{ .title }}</span>
+                                  </cite>
+                                  <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
                                 </div>
                             </div>
                         </div>

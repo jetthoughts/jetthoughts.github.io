@@ -1,7 +1,7 @@
 {{ define "header" }}
 {{ partial "header/critical/services.html" . }}
 
-{{- $CSS := slice (resources.Get "assets/css/737-layout.css") (resources.Get "/assets/css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") (resources.Get "assets/css/586.css")  (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/services.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess}}
+{{- $CSS := slice (resources.Get "css/737-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") | resources.Concat "css/services.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
@@ -783,7 +783,7 @@
                                        </div>
                                      </div>
                                      <div class="fl-col-group fl-node-d96zqbnxltuj fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="d96zqbnxltuj">
-                                       <div class="fl-module fl-module-button fl-node-vha2g9x6ljec" data-node="vha2g9x6ljec">
+                                       <div class="fl-module fl-module-button fl-node-header-nav-contat-us-btn-nested" data-node="vha2g9x6ljec">
                                          <div class="fl-module-content fl-node-content">
                                            <div class="fl-button-wrap-center fl-button-width-auto fl-button-center">
                                              <a href="/contact-us/" target="_self" class="fl-button">

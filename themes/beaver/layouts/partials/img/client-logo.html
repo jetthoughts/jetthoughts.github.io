@@ -1,21 +1,3 @@
 {{ $image := .image }}
 {{ $title := .title }}
-{{ $widths := slice 300 450 }}
-
-{{ $originalWidth := $image.Width }}
-{{ $imageWebP := $image.Resize (printf "%dx webp q75" $originalWidth) }}
-{{ $srcset := "" }}
-{{ range $widths }}
-{{ if lt . $originalWidth }}
-{{ $resized := $image.Resize (printf "%dx webp q75" .) }}
-{{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
-{{ end }}
-{{ end }}
-{{ $srcset = printf "%s%s %dw" $srcset $imageWebP.RelPermalink $originalWidth }}
-
-<img loading="lazy" decoding="async" class="attachment-full size-full pp-post-img"
-     src="{{ $imageWebP.RelPermalink }}" alt="{{ $title }}"
-     itemprop="image" width="{{ $image.Width }}" height="{{ $image.Height }}" title="{{ $title }}"
-     srcset="{{ $srcset }}"
-     sizes="(max-width: 450px) 100vw, 450px">
-
+{{ partial "img/generic.html" (dict "image" $image "title" $title "widths" (slice 300 450) "sizes" "(max-width: 450px) 100vw, 450px" "attributes" "loading=\"lazy\" decoding=\"async\" itemprop=\"image\"") }}

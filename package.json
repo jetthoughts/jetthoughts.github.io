@@ -8,11 +8,16 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.45",
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.23.1",
+    "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
+    "postcss-delete-duplicate-css": "^1.0.0",
+    "postcss-nested": "^6.2.0",
+    "prettier": "^3.3.3",
     "surge": "^0.24.6"
   }
 }

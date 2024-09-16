@@ -1,7 +1,7 @@
 {{ define "header" }}
 {{ partial "header/critical/use-cases.html" . }}
 
-{{- $CSS := slice (resources.Get "assets/css/3021-layout.css") (resources.Get "/assets/css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") (resources.Get "assets/css/586.css")  (resources.Get "assets/css/animate.min.css") (resources.Get "assets/css/base-4.min.css") (resources.Get "assets/css/style.css") (resources.Get "assets/css/skin-65eda28877e04.css") | resources.Concat "assets/css/use-cases.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess}}
+{{- $CSS := slice (resources.Get "css/3021-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") | resources.Concat "css/use-cases.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
