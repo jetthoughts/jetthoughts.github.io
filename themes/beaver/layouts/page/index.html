@@ -1203,9 +1203,11 @@ function loadCSS(url) {
    (resources.Get "assets/css/skin-65eda28877e04.css")
    (resources.Get "assets/css/animate.min.css")
    (resources.Get "/assets/css/style.css")
+   (resources.Get "/assets/css/navigation.css")
    (resources.Get "/assets/css/586.css")
 | resources.Concat "assets/css/_non_critical_homepage.css" | css.PostCSS  | minify | fingerprint | resources.PostProcess
 }}
 
+loadCSS('{{ $nonCriticalCSS.RelPermalink }}')
 </script>
 {{ end }}

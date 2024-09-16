@@ -13,6 +13,7 @@ $js := slice
 <script defer src='{{ $js.Permalink }}'></script>
 <script async src='{{ (resources.Get "/assets/js/bb-theme/theme.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
 <script async src='{{ (resources.Get "/assets/js/bb-theme/pp_advanced_menu.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
+<script async src='{{ (resources.Get "/assets/js/script.js" | minify | fingerprint  | resources.PostProcess).Permalink }}'></script>
 
 <!-- Google tag (gtag.js) -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-T1N27FC30F"></script>

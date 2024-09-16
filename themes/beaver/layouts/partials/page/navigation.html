@@ -1,11 +1,14 @@
-<nav class="navigation">
+<nav class="navigation js-navigation">
+  <div class="menu-close js-mobile-menu-close"></div>
+
   <ul class="list">
     {{ $currentPage := .Page }}
     {{ range .Site.Menus.main }}
     {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
     {{ if .HasChildren }}
 
-      <li class="item -arrow {{if $active }}-active{{ end }}">
+      <li class="item {{if $active }}-active{{ end }}">
+        <span class="arrow js-sub-menu-opener"></span>
         <a href="{{ .URL }}" class="link">{{ .Name }}</a>
 
         <ul class="sub-menu">
@@ -38,6 +41,6 @@
     {{ end }}
     {{ end }}
   </ul>
-
-  <div class="opener js-mobile-menu-opener"></div>
 </nav>
+
+<div class="menu-opener js-mobile-menu-opener"></div>
