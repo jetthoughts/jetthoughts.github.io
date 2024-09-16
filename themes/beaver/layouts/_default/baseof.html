@@ -55,13 +55,14 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
+    <link rel='stylesheet' href='{{ absURL "assets/css/navigation.css" }}' media='all' />
 </head>
 
 <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 <a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
+{{ partial "page/header.html" . }}
 <div class="fl-page">
 
-{{ partial "page/header.html" . }}
 
 {{ block "main" . }} {{ end }}
 
