@@ -75,11 +75,11 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
       /^fl-node/,
     ],
   },
-  blocklist: {
-    // deep: [
-    //   /^fl-theme-builder-header-sticky/
-    // ],
-  },
+  // blocklist: {
+  // deep: [
+  //   /^fl-theme-builder-header-sticky/
+  // ],
+  // },
 });
 
 module.exports = {
