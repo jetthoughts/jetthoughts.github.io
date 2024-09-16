@@ -1,5 +1,5 @@
 {{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | postCSS | minify | fingerprint | resources.PostProcess }}
-<link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 
 <div class="fl-col-group fl-node-1a4igunq3xvj fl-col-group-custom-width" data-node="1a4igunq3xvj">

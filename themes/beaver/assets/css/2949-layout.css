@@ -941,7 +941,7 @@ img.mfp-img {
 
 .fl-node-vyrjnfzokbg4 > .fl-row-content-wrap {
   background-color: #F5F6F8;
-  background-image: url(/wp-content/uploads/2022/10/white-border-background.webp);
+
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -985,7 +985,7 @@ img.mfp-img {
 }
 
 .fl-node-k8vfnuxaydbe > .fl-row-content-wrap {
-  background-image: url(/wp-content/uploads/2022/10/black-border-background.webp);
+  background-color: #000;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -1012,7 +1012,7 @@ img.mfp-img {
 }
 
 .fl-node-y72pr89xtsqh > .fl-row-content-wrap {
-  background-image: url(/wp-content/uploads/2022/10/white-border-background.webp);
+
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: scroll;
