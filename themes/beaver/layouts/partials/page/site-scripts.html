@@ -6,6 +6,7 @@
 {{
 $js := slice
   (resources.Get "js/587.js")
+  (resources.Get "js/navigation.js")
   (resources.Get "js/bb-theme/pp_advanced_tabs.js")
   | resources.Concat "js/_site.js"
   | js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
