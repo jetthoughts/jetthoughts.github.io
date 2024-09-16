@@ -1,5 +1,6 @@
 {{ define "header" }}
-
+{{- $CSS := slice (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/586.css") (resources.Get "css/404.css") (resources.Get "css/base-4.min.css") | resources.Concat "css/single/404.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 {{ define "main" }}
 <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
