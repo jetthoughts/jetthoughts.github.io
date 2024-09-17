@@ -92,8 +92,10 @@
                <div class="fl-rich-text">
                   <p>
                     <strong>4.8</strong>/5.0
-                    <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663"
-                         src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" alt="" width="212" height="36">
+
+                      {{ $image := resources.Get "img/stars.png" }}
+                      {{ $title := "" }}
+                      {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 212 "class" "alignnone size-full") }}
                   </p>
                </div>
             </div>
@@ -131,9 +133,9 @@
                                 <div class="pp-review-header">
                                   <cite class="pp-review-cite"> <span class="pp-review-name">{{ .name }}</span>
                                     <div class="pp-rating">
-                                      <img loading="lazy" decoding="async" class="alignnone size-full wp-image-663"
-                                           alt="five stars" height="18" width="106"
-                                           src="{{ absURL "wp-content/uploads/2022/09/stars.png" }}" >
+                                        {{ $image := resources.Get "img/stars.png" }}
+                                        {{ $title := "five stars" }}
+                                        {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 106 "class" "alignnone size-full") }}
                                     </div>
                                     <span class="pp-review-title">{{ .title }}</span>
                                   </cite>
