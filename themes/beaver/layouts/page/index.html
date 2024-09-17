@@ -24,9 +24,10 @@ function loadCSS(url) {
 
    document.head.appendChild(link);
 }
-
+{{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
 {{ $nonCriticalCSS := slice
    (resources.Get "css/homepage.css")
+   $dynamicCSS
    (resources.Get "css/590-layout.css")
    (resources.Get "css/skin-65eda28877e04.css")
    (resources.Get "css/style.css")
