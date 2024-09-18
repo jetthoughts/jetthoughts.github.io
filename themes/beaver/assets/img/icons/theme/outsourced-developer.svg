@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.117" height="28.807">
+    <defs>
+        <style>.a, .b {
+            fill: none;
+            stroke: #1a8cff;
+            stroke-linecap: round;
+            stroke-width: 1.5px
+        }
+
+        .a {
+            stroke-linejoin: round
+        }
+
+        .b {
+            stroke-linejoin: bevel
+        }</style>
+    </defs>
+    <path class="a" d="M1.061 5.031v-3.97h3.97"/>
+    <path class="b" d="M1.061 1.061 4.399 4.44"/>
+    <path class="a" d="M1.061 8.126v3.97h3.97"/>
+    <path class="b" d="m1.061 12.097 3.338-3.379"/>
+    <path class="a" d="M28.008 8.126v3.97h-3.921"/>
+    <path class="b" d="M28.008 12.097 24.67 8.718"/>
+    <path class="a" d="M28.057 5.031v-3.97h-3.97"/>
+    <path class="b" d="m24.719 4.44 3.338-3.379"/>
+    <g transform="translate(5.735 11.383)">
+        <circle class="a" cx="3.882" cy="3.882" r="3.882" transform="translate(4.942)"/>
+        <path class="a" d="M0 16.674a6.6 6.6 0 0 1 5.915-6.547l2.909 6.547 2.909-6.547a6.6 6.6 0 0 1 5.915 6.547z"/>
+    </g>
+    <path class="a" d="m18.529 4.116 2.382 2.382-2.382 2.382M10.589 4.116 8.207 6.498l2.381 2.382"/>
+    <path class="b" d="M16.147 3.876 12.971 8.64M11.516 21.51h2.91"/>
+</svg>
