@@ -8,6 +8,8 @@
         "*.html"
       ],
       "options": {
+        "bracketSameLine": true,
+        "goTemplateBracketSpacing": true,
         "parser": "go-template"
       }
     }
