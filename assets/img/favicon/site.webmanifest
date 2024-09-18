@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "{{ .Site.Title }}",
+    "short_name": "{{ .Site.Title }}",
     "icons": [
         {
             "src": "{{ (resources.Get "img/favicon/android-chrome-192x192.png" | fingerprint).RelPermalink }}",
