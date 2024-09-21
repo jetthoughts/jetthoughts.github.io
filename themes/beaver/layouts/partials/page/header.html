@@ -38,8 +38,7 @@
                                                         {{ range .Children }}
                                                         <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
                                                             <div class="menu-image">
-                                                                {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
-                                                                {{ partial $partialPath . }}
+                                                                {{ partial "svg" (printf "theme/%s" .Identifier) }}
                                                             </div>
                                                             <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
                                                         {{ end }}
@@ -83,8 +82,7 @@
                                                         {{ range .Children }}
                                                         <li class="submenu-{{ .Identifier }} menu-item menu-item-type-post_type menu-item-object-page {{if (eq $currentPage.RelPermalink .URL) }}current-menu-item page_item current_page_item{{ end }}"><a href="{{ .URL }}">
                                                             <div class="menu-image">
-                                                                {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
-                                                                {{ partial $partialPath . }}
+                                                                {{ partial "svg" (printf "theme/%s" .Identifier) }}
                                                             </div>
                                                             <span class="menu-item-text">{{ .Name }}</span><p class="menu-desc"></p></a></li>
                                                         {{ end }}
