@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   if (window.innerWidth < 1024) {
-    document
-      .querySelector(".js-sub-menu-opener")
-      .addEventListener("click", function (e) {
-        document.querySelector(this).parent().classList.toggle("-open");
+    const subMenuOpeners = document.querySelectorAll(".js-sub-menu-opener")
+
+    subMenuOpeners.forEach((subMenuOpener) => {
+      subMenuOpener.addEventListener("click", function (e) {
+        e.target.parentElement.classList.toggle("-open");
       });
+    });
   }
 });

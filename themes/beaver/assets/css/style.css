@@ -151,26 +151,3 @@
 input[type=submit]:disabled {
   opacity: 0.25
 }
-
-/*Buttons*/
-.btn,
-.btn:hover {
-  padding: 10px 18px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  border-radius: 25px;
-  text-decoration: none;
-  white-space: nowrap;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.btn-primary {
-  background-color: #1a8cff;
-  color: #fff !important;
-}
-
-.btn-primary:hover {
-  background-color: #007af4;
-}

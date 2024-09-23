@@ -63,7 +63,9 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="{{ (resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint).RelPermalink }}">
     <meta name="theme-color" content="#ffffff">
-    <link rel='stylesheet' href='{{ absURL "assets/css/navigation.css" }}' media='all' />
+
+    {{ $navCss := resources.Get "css/navigation.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $navCss.RelPermalink }}">
 </head>
 
 <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">

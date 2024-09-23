@@ -1,3 +1,25 @@
+.btn,
+.btn:hover {
+  padding: 10px 18px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 25px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.btn-primary {
+  background-color: #1a8cff;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: #007af4;
+}
+
 .top-panel {
   padding: 15px 20px 0;
   position: absolute;
@@ -13,6 +35,7 @@
   max-width: 1280px;
   width: auto;
   padding: 0;
+  margin: 0 auto;
 }
 
 .top-panel .content {
@@ -122,7 +145,7 @@
 
 .navigation .item {
   padding: 15px 0;
-  margin-right: 7px;
+  margin-right: 9px;
   position: relative;
 }
 
@@ -153,7 +176,6 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  font-weight: 300;
   color: #121212;
   text-decoration: none;
   transition: .3s;
@@ -173,9 +195,10 @@
   box-shadow: 0 10px 40px rgba(0,0,0,.1);
   border-radius: 20px;
   padding: 30px 30px 0;
-  margin: 0;
+  margin: 30px 0 0;
   position: absolute;
   top: 100%;
+  margin-top: 0;
   left: 0;
   z-index: 10;
   text-align: left;
@@ -197,7 +220,7 @@
   border-style: solid;
   border-width: 15px 0 15px 15px;
   border-color: transparent transparent transparent #fff;
-  right: unset !important;
+  right: unset!important;
   top: -20px !important;
   left: 45% !important;
   transform: rotate(270deg) !important;
@@ -228,6 +251,8 @@
 
 .navigation .sub-holder {
   overflow: hidden;
+  padding-left: 20px;
+  padding-right: 45px;
   padding: 0 20px;
 }
 
@@ -252,17 +277,19 @@
   color: #7e7e7e;
 }
 
-.navigation .item:hover .sub-menu {
-  display: block;
-}
+@media (min-width: 1025px) {
+  .navigation .item:hover .sub-menu {
+    display: block;
+  }
 
-.navigation .item:hover .link {
-  color: #1a8cff;
-}
+  .navigation .item:hover .link {
+    color: #1a8cff;
+  }
 
-.navigation .item:hover .arrow {
-  transform: rotate(225deg);
-  border-color: #1a8cff;
+  .navigation .item:hover .arrow {
+    transform: rotate(225deg);
+    border-color: #1a8cff;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -329,10 +356,14 @@
     margin: 0;
     transform: none;
     box-shadow: none;
+    transition: .3s;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
   }
 
   .navigation .item.-open .sub-menu {
-    display: block;
+    max-height: 350px;
   }
 
   .navigation .sub-menu:before,
@@ -370,5 +401,13 @@
 
   .navigation .item.-open .arrow {
     transform: rotate(225deg);
+  }
+
+  .navigation .item:hover .arrow {
+    border-color: inherit;
+  }
+  .navigation .item:hover .link,
+  .navigation .sub-item:hover .sub-name {
+    color: inherit;
   }
 }
