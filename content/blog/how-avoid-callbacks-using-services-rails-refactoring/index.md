@@ -1,23 +1,22 @@
 ---
 dev_to_id: 1198201
 title: "How to avoid callbacks using services."
-description: "Often programmers abuse callbacks, not fully understanding that in the end their code will be..."
+description: "Often, programmers abuse callbacks, not fully understanding that their code will ultimately be..."
 created_at: "2022-09-20T13:23:18Z"
-edited_at: "2024-07-03T12:36:41Z"
+edited_at: "2024-09-23T14:31:44Z"
 draft: false
 tags: ["rails", "refactoring", "callback", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/how-avoid-callbacks-using-services-rails-refactoring/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-avoid-callbacks-using-services-rails-refactoring/cover.png"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flsgjg0p19920ehuu6mz4.png"
 slug: "how-avoid-callbacks-using-services-rails-refactoring"
 metatags:
   image: cover.png
 ---
+![example code for using service](file_0.png)
 
-![Image description](file_0.png)
+Often, programmers abuse callbacks, not fully understanding that their code will ultimately be confusing and non-obvious. There are several ways to avoid using callbacks. Today, I will tell you how to do this using services.
 
-Often programmers abuse callbacks, not fully understanding that in the end their code will be confusing and non-obvious. There are several ways to avoid using callbacks. Today I will tell you how to do this using services.
-
-Lets see on a code:
+Let's see on a code:
 
 ```ruby
 class User < ApplicationController
@@ -38,7 +37,10 @@ class User < ApplicationRecord
   end
 end
 ```
-What is the problem with this code? We get a non-obvious (magical) action. We do not pass any data about the serial number in the parameters, and we do not explicitly set this value anywhere. This happens automatically with a callback.
+
+## What is the problem with this code?
+
+We get a non-obvious (magical) action. We do not pass any data about the serial number in the parameters or explicitly set this value anywhere. This happens automatically with a callback.
 
 Let’s implement the same thing but using a service.
 
@@ -72,9 +74,10 @@ class User < ApplicationController
   end
 end
 ```
-What advantages does this approach give us?
 
-- Suppose we have users can be created from the Admin panel and through the API. Depending on the method of creation, we may have a different set of actions performed with the user. It is very convenient to make two separate services for creating a user. For example: Admin::CreateUser and Api::CreateUser
-- Such services are easy to test.
+## What advantages does this approach give us?
+
+Suppose we have users that can be created from the Admin panel and through the API. Depending on the creation method, we may perform different actions on the user. It is very convenient to create two separate services for creating a user. For example: `Admin::CreateUser` and `Api::CreateUser`
+- Such services are accessible to test.
 - They are easy to expand.
-- The code becomes much clearer and more predictable.
+- The code becomes much more transparent and more predictable.
