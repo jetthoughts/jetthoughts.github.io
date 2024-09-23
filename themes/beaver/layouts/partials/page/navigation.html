@@ -16,8 +16,7 @@
             <li class="sub-item">
               <a href="{{ .URL }}" class="sub-link">
                 <div class="sub-image">
-                  {{ $partialPath := printf "header/icons/%s.html" .Identifier }}
-                  {{ partial $partialPath . }}
+                  {{ partial "svg" (printf "theme/%s" .Identifier) }}
                 </div>
                 <div class="sub-holder">
                   <div class="sub-name">{{ .Title }}</div>
