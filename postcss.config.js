@@ -8,14 +8,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     standard: [
       "button, input[type=button], input[type=submit]",
       // pp adv menu
-      "pp-advanced-menu", "pp-advanced-menu-accordion-collapse", "off-canvas", "pp-menu-position-below",
-      "menu-close", "menu-open",
-      "pp-active", "focus", "pp-menu-submenu-right", "mega-menu-disabled", "mega-menu",
-      "pp-off-canvas-menu-module", "pp-off-canvas-menu-open", "pp-full-screen-menu-module",
-      "pp-full-screen-menu-open", "fl-node-menu-clone", "pp-search-form--focus", "first-click",
-
-      "pp-advanced-menu", "pp-advanced-menu-accordion-collapse", "pp-menu-default", "pp-menu-align-right",
-      "pp-menu-position-below", "fl-module-content", "fl-node-content",
+      "-open",
 
       // pp adv tabs
       "pp-tabs", "pp-tabs-label", "pp-tab-active", "pp-tabs-panel", "pp-tabs-panel-content",
@@ -34,7 +27,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     ],
 
     deep: [
-      /^fl-page/
+      /^fl-page/, /^navigation/, /^menu-close/, /^top-panel/, /^menu-opener/
     ],
 
     greedy: [

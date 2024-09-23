@@ -89,4 +89,10 @@ class MobileSiteTest < ApplicationSystemTestCase
     assert_text "Free Consultation"
     assert_matches_screenshot "free_consultation", wait: 5, stability_time_limit: 3
   end
+
+  def test_not_found
+    visit "/404.html"
+
+    assert_matches_screenshot "404", wait: 5, stability_time_limit: 3
+  end
 end

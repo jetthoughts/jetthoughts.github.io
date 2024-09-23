@@ -1882,7 +1882,6 @@ img.mfp-img {
 }
 
 .fl-node-ec25np07hf63 > .fl-row-content-wrap {
-    background-image: url("{{ absURL "wp-content/uploads/2022/10/white-border-background.webp" }}");
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: scroll;
@@ -7838,7 +7837,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-node-530uo7f2gcli > .fl-row-content-wrap {
-    background-image: url("{{ absURL "wp-content/uploads/2022/10/black-border-background.webp" }}");
+    background-color: #000;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;

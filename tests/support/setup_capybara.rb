@@ -68,32 +68,3 @@ Capybara.javascript_driver = :cuprite
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.disable_animation = true
 Capybara.threadsafe = false
-
-class RequestLogger
-  def initialize(app)
-    @app = app
-  end
-
-  def call(env)
-    request = Rack::Request.new(env)
-    puts "Received #{request.request_method} request for #{request.path}"
-    @app.call(env)
-  end
-end
-
-Capybara.app = Rack::Builder.new do
-  use RequestLogger if ENV["DEBUG"]
-  use Rack::Static,
-    urls: [""],
-    root: "public",
-    index: "index.html",
-    header_rules: [
-      # Cache all static files in public caches (e.g. Rack::Cache)
-      #  as well as in the browser
-      [:all, {"cache-control" => "public, max-age=31536000"}],
-      # Provide web fonts with cross-origin access-control-headers
-      #  Firefox requires this when serving assets using a Content Delivery Network
-      [:fonts, {"access-control-allow-origin" => "*"}]
-    ]
-  run Rack::Directory.new(File.expand_path("../../public", __FILE__))
-end
