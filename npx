@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+# This is a npx stub to use bunx instead
+
+set -eo pipefail
+
+bunx $@
