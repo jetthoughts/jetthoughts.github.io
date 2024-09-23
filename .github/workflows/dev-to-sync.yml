@@ -1,5 +1,4 @@
-# This is a basic workflow that is manually triggered
-
+---
 name: Sync dev.to articles
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
@@ -39,6 +38,7 @@ jobs:
           else
             bin/from_devto
           fi
+          
           bin/upload_assets_to_github
 
       - name: Commit and push if it changed
