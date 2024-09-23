@@ -62,7 +62,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          PATH: "./:$PATH"
+          PATH: ".github/bin:$PATH"
         run: |
           hugo \
             --minify \
