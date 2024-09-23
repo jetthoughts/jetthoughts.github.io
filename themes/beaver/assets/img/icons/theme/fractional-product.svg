@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.497" height="28.497">
+    <defs>
+        <style>.a, .b, .c {
+            fill: none;
+            stroke: #1a8cff;
+            stroke-linecap: round;
+            stroke-width: 1.5px
+        }
+
+        .a, .b {
+            stroke-linejoin: round
+        }
+
+        .b {
+            stroke-dasharray: 4
+        }
+
+        .c {
+            stroke-linejoin: bevel
+        }</style>
+    </defs>
+    <path class="a" d="m14.244 4.987 8.255 4.766-8.254 4.766-8.256-4.767z"/>
+    <path class="a" d="m18.599 12.003 3.9 2.251-8.254 4.766-8.256-4.766 3.9-2.251"/>
+    <path class="a" d="m18.599 16.506 3.9 2.251-8.254 4.766-8.256-4.766 3.9-2.251"/>
+    <path class="b" d="M4.667 23.777a13.5 13.5 0 0 1 .047-19.062M23.756 4.688a13.5 13.5 0 0 1 .047 19.118"/>
+    <path class="a"
+          d="M4.718 4.666a13.5 13.5 0 0 1 19.062.048M23.808 23.756a13.5 13.5 0 0 1-19.118.047M5.75 5.756H3.628V3.633z"/>
+    <path class="a" d="M24.853 24.859v-2.123h-2.122z"/>
+    <path class="c" d="m11.09 14.954 2.565 1.481M11.09 10.445l2.565 1.481M11.109 19.476l2.565 1.481"/>
+</svg>
