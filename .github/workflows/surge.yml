@@ -2,41 +2,33 @@ name: Deploy Pull Request to Surge
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [ opened, synchronize, reopened ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
 
-    - name: Install dependencies
-      run: npm install
+      - name: Deploy to Surge
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_EMAIL }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          DEPLOY_URL="https://${PR_NUMBER}-your-project.surge.sh"
+          surge --project ./build --domain $DEPLOY_URL
 
-    - name: Build project
-      run: npm run build # Замените эту команду на ту, которая собирает ваш проект
-
-    - name: Deploy to Surge
-      env:
-        SURGE_LOGIN: ${{ secrets.SURGE_EMAIL }}
-        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-      run: |
-        PR_NUMBER=${{ github.event.pull_request.number }}
-        DEPLOY_URL="https://${PR_NUMBER}-your-project.surge.sh"
-        surge --project ./build --domain $DEPLOY_URL
-
-    - name: Add comment with Surge link
-      run: |
-        PR_NUMBER=${{ github.event.pull_request.number }}
-        DEPLOY_URL="https://${PR_NUMBER}-your-project.surge.sh"
-        curl -s -X POST \
-          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          -d "{\"body\":\"🚀 Deployed to Surge: $DEPLOY_URL\"}" \
-          "https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments"
+      - name: Add comment with Surge link
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          DEPLOY_URL="https://${PR_NUMBER}-your-project.surge.sh"
+          curl -s -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -d "{\"body\":\"🚀 Deployed to Surge: $DEPLOY_URL\"}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments"
