@@ -1,7 +1,6 @@
 {{ $image := .image }}
 {{ $title := .title }}
 {{ $widths := .widths }}
-{{ $sizes := .sizes }}
 {{ $attributes := .attributes | default "" }}
 
 {{ $originalWidth := $image.Width }}
@@ -13,8 +12,14 @@
 {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
 {{ end }}
 {{ end }}
-{{ $srcset = printf "%s%s %dw" $srcset $imageWebP.RelPermalink $originalWidth }}
 
-<img {{ $attributes }} src="{{ $imageWebP.RelPermalink }}" alt="{{ $title }}"
-width="{{ $image.Width }}" height="{{ $image.Height }}" title="{{ $title }}"
-srcset="{{ $srcset }}" sizes="{{ $sizes }}">
+<picture>
+    {{ range $widths }}
+    {{ if lt . $originalWidth }}
+    {{ $resized := $image.Resize (printf "%dx webp q75" .) }}
+    <source media="(max-width: {{ . }}px)" srcset="{{ $resized.RelPermalink }}">
+    {{ end }}
+    {{ end }}
+    <img {{ $attributes }} src="{{ $imageWebP.RelPermalink }}" alt="{{ $title }}"
+         width="{{ $image.Width }}" height="{{ $image.Height }}" title="{{ $title }}">
+</picture>

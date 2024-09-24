@@ -1,3 +1,3 @@
 {{ $image := .image }}
 {{ $title := .title }}
-{{ partial "img/generic.html" (dict "image" $image "title" $title "widths" (slice 360 730) "sizes" "(max-width: 730px) 100vw, 730px" "attributes" "fetchpriority=\"high\"") }}
+{{ partial "img/generic.html" (dict "image" $image "title" $title "widths" (slice 360 730) "attributes" "fetchpriority=\"high\"") }}
