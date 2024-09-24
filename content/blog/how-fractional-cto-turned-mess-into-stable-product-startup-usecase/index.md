@@ -7,7 +7,7 @@ edited_at: "2024-09-24T15:00:55Z"
 draft: false
 tags: ["startup", "usecase", "cto", "devops"]
 canonical_url: "https://jetthoughts.com/blog/how-fractional-cto-turned-mess-into-stable-product-startup-usecase/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3h06z37mch9oq5rooey1.png"
+cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-fractional-cto-turned-mess-into-stable-product-startup-usecase/cover.png"
 slug: "how-fractional-cto-turned-mess-into-stable-product-startup-usecase"
 metatags:
   image: cover.png
