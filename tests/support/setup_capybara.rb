@@ -1,5 +1,7 @@
 # Middleware to log requests
 
+require "selenium-webdriver"
+
 CHROME_OPTIONS = {
   "allow-running-insecure-content" => nil,
   "autoplay-policy" => "user-gesture-required",
@@ -18,7 +20,6 @@ CHROME_OPTIONS = {
   "disable-domain-reliability" => nil,
   "disable-extensions" => nil,
   "disable-features" => "TranslateUI,BlinkGenPropertyTrees",
-  "disable-gpu" => nil,
   "disable-hang-monitor" => nil,
   "disable-infobars" => nil,
   "disable-ipc-flooding-protection" => nil,
@@ -45,26 +46,41 @@ CHROME_OPTIONS = {
   "no-sandbox" => nil,
   "password-store" => "basic",
   "test-type" => nil,
-  "use-mock-keychain" => nil,
-  # "window-size" => "2048,1536"
+  "use-mock-keychain" => nil
 }
 
-CHROME_ARGS = CHROME_OPTIONS.map { |k, v| ["--#{k}", v].compact.join("=") }.freeze
-
-require "capybara/cuprite"
-
-Capybara.register_driver(:cuprite) do |app|
-  Capybara::Cuprite::Driver.new(
-    app,
-    # screen_size: [2048, 1536],
-    # browser_options: CHROME_OPTIONS,
-    # headless: "new",
-    # inspector: true,
-    # js_errors: true
-  )
+if Gem.win_platform?
+  CHROME_OPTIONS["disable-gpu"] = nil
 end
 
-Capybara.javascript_driver = :cuprite
+def build_default_chrome_options
+  options = Selenium::WebDriver::Chrome::Options.new
+
+  CHROME_OPTIONS.each do |key, value|
+    if value.nil?
+      options.add_argument("--#{key}")
+    else
+      options.add_argument("--#{key}=#{value}")
+    end
+  end
+  options
+end
+
+Capybara.register_driver :desktop_chrome do |app|
+  options = build_default_chrome_options
+  options.add_emulation(device_metrics: {width: 1920, height: 1080, pixelRatio: 1, touch: false})
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+
+Capybara.register_driver :mobile_chrome do |app|
+  options = build_default_chrome_options
+  options.add_emulation(device_metrics: {width: 360, height: 800, pixelRatio: 1, touch: true})
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+
+Capybara.javascript_driver = :desktop_chrome
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.disable_animation = true
 Capybara.threadsafe = false

@@ -3,7 +3,6 @@
 require "minitest/autorun"
 require "capybara/minitest"
 require "capybara/dsl"
-require "capybara/cuprite"
 require "rack"
 require "puma"
 
