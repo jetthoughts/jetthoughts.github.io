@@ -28,10 +28,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 
       // pp google form
       // /^pp-gf/, "fl-button", "pp-button",
-
-        ".pagination",
-        ".page-link",
-        ".page-item",
       // sdb
       "jt-active",
     ],
