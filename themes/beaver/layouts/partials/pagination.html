@@ -39,20 +39,11 @@
   <a href="{{ .URL }}" aria-label="First" class="page-link" role="button">First</a>
 </li>
 {{- else }}
-<!--<li class="page-item disabled">-->
-<!--  <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>-->
-<!--</li>-->
 {{- end }}
 {{- end }}
 
 {{- with .Prev }}
-<!--<li class="page-item">-->
-<!--  <a href="{{ .URL }}" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>-->
-<!--</li>-->
 {{- else }}
-<!--<li class="page-item disabled">-->
-<!--  <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>-->
-<!--</li>-->
 {{- end }}
 
 {{- $slots := 3 }}
@@ -75,13 +66,7 @@
 {{- end }}
 
 {{- with .Next }}
-<!--<li class="page-item">-->
-<!--  <a href="{{ .URL }}" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>-->
-<!--</li>-->
 {{- else }}
-<!--<li class="page-item disabled">-->
-<!--  <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;</span></a>-->
-<!--</li>-->
 {{- end }}
 
 {{- with .Last }}
@@ -90,9 +75,6 @@
   <a href="{{ .URL }}" aria-label="Last" class="page-link" role="button">Last</a>
 </li>
 {{- else }}
-<!--<li class="page-item disabled">-->
-<!--  <a aria-disabled="true" aria-label="Last" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&raquo;&raquo;</span></a>-->
-<!--</li>-->
 {{- end }}
 {{- end }}
 {{- end }}
@@ -107,15 +89,12 @@
 {{- with .First }}
 {{- if ne $currentPageNumber .PageNumber }}
 <li class="page-item">
-  <a href="{{ .URL }}" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  <a href="{{ .URL }}" aria-label="First" class="page-link" role="button">First</a>
 </li>
 {{- end }}
 {{- end }}
 
 {{- with .Prev }}
-<li class="page-item">
-  <a href="{{ .URL }}" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-</li>
 {{- end }}
 
 {{- $slots := 3 }}
@@ -138,15 +117,12 @@
 {{- end }}
 
 {{- with .Next }}
-<li class="page-item">
-  <a href="{{ .URL }}" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-</li>
 {{- end }}
 
 {{- with .Last }}
 {{- if ne $currentPageNumber .PageNumber }}
 <li class="page-item">
-  <a href="{{ .URL }}" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  <a href="{{ .URL }}" aria-label="Last" class="page-link" role="button">Last</a>
 </li>
 {{- end }}
 {{- end }}
