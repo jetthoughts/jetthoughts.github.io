@@ -29,6 +29,8 @@ pagination
 
 
 .page-link:hover {
+    text-decoration: none;
+
     z-index: 2;
     color: #0a58ca; /* --bs-link-hover-color */
     background-color: #f8f9fa; /* --bs-tertiary-bg */
@@ -36,6 +38,8 @@ pagination
 }
 
 .page-link:focus {
+    text-decoration: none;
+
     z-index: 3;
     color: #0a58ca; /* --bs-link-hover-color */
 

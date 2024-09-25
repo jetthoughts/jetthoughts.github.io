@@ -7,11 +7,11 @@
 (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
 (resources.Get "css/skin-65eda28877e04.css")
 (resources.Get "css/single-post.css")
-(resources.Get "css/pagination.css")
 | resources.Concat "css/blog.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
-
+{{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $paginationCss.RelPermalink }}">
 
 
 {{ if eq .Type "tags" }}
