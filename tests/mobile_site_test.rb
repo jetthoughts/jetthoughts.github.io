@@ -4,15 +4,17 @@ require "test_helper"
 
 class MobileSiteTest < ApplicationSystemTestCase
   def setup
-    page.driver.resize(360, 800)
+    Capybara.current_driver = :mobile_chrome
     screenshot_section "mobile"
+    super
   end
 
   def test_homepage
     visit "/"
+    assert_text "Build faster. Scale smarter."
     sleep 2
 
-    assert_matches_screenshot "homepage", skip_area: [".counter-value"]
+    assert_matches_screenshot "homepage"
   end
 
   def test_blog_index
