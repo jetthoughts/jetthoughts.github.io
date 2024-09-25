@@ -29,9 +29,11 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
       // pp google form
       // /^pp-gf/, "fl-button", "pp-button",
 
-        ".pagination",
-        ".page-link",
-        ".page-item",
+      "pagination",
+      "page-link",
+      "page-item",
+      "active",
+      "disabled",
       // sdb
       "jt-active",
     ],
@@ -42,6 +44,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 
     greedy: [
       /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/,
+        /^pagination-/, /^page-item/,
     ]
   },
 })
