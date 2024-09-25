@@ -12,7 +12,8 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_homepage
     visit "/"
     assert_text "Build faster. Scale smarter."
-    sleep 2
+
+    preload_all_images
 
     assert_matches_screenshot "homepage"
   end
@@ -27,6 +28,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/blog/"
 
     find(".blog-post .post-content .link", match: :first).click
+    wait_menu_to_render
 
     assert_text "Read next"
   end
@@ -45,7 +47,8 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_clients
     visit "/clients/"
-    sleep 5
+
+    preload_all_images
 
     assert_matches_screenshot "clients", wait: nil, stability_time_limit: nil
   end
@@ -60,7 +63,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/"
 
     find(".pp-advanced-menu-mobile-toggle.hamburger").click
-    sleep 1
+    wait_menu_to_render
 
     assert_matches_screenshot "nav/hamburger_menu", wait: nil, stability_time_limit: nil
   end
@@ -69,10 +72,10 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/"
 
     find(".pp-advanced-menu-mobile-toggle.hamburger").click
-    sleep 1
+    wait_menu_to_render
 
     find(".pp-menu-toggle", match: :first).click
-    sleep 1
+    wait_menu_to_render
 
     assert_matches_screenshot "nav/hamburger_menu/services", wait: nil, stability_time_limit: nil
   end
@@ -96,5 +99,17 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/404.html"
 
     assert_matches_screenshot "404", wait: 5, stability_time_limit: 3
+  end
+
+  private
+
+  def wait_menu_to_render
+    sleep 1
+  end
+
+  def preload_all_images
+    scroll_to :bottom
+    scroll_to :top
+    sleep 2
   end
 end
