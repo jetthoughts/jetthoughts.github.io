@@ -25,12 +25,15 @@ function loadCSS(url) {
    document.head.appendChild(link);
 }
 {{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
+{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+
 {{ $nonCriticalCSS := slice
    (resources.Get "css/homepage.css")
    $dynamicCSS
    (resources.Get "css/590-layout.css")
    (resources.Get "css/skin-65eda28877e04.css")
    (resources.Get "css/style.css")
+   $dynamicCSS586
    (resources.Get "css/586.css")
 | resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
@@ -251,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                       </div>
                                                       <div class="pp-infobox-button pp-button-wrap">
                                                          <a class="pp-more-link pp-button" href="{{ absURL "services/fractional-cto/" }}" role="button" target="_self">
-                                                         Learn More                     <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                         Learn More											<i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                          </a>
                                                       </div>
                                                    </div>
@@ -281,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                       </div>
                                                       <div class="pp-infobox-button pp-button-wrap">
                                                          <a class="pp-more-link pp-button" href="{{ absURL "services/app-web-development/" }}" role="button" target="_self">
-                                                         Learn More                     <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                         Learn More											<i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                          </a>
                                                       </div>
                                                    </div>
@@ -311,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                       </div>
                                                       <div class="pp-infobox-button pp-button-wrap">
                                                          <a class="pp-more-link pp-button" href="{{ absURL "services/software-qa-cat/" }}" role="button" target="_self">
-                                                         Learn More                     <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                         Learn More											<i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                          </a>
                                                       </div>
                                                    </div>
@@ -354,7 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                       </div>
                                                       <div class="pp-infobox-button pp-button-wrap">
                                                          <a class="pp-more-link pp-button" href="{{ absURL "services/fractional-product-management/" }}" role="button" target="_self">
-                                                         Learn More                     <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                         Learn More											<i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                          </a>
                                                       </div>
                                                    </div>
@@ -384,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                       </div>
                                                       <div class="pp-infobox-button pp-button-wrap">
                                                          <a class="pp-more-link pp-button" href="{{ absURL "services/outsourced-developer-staffing/" }}" role="button" target="_self">
-                                                         Learn More                     <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                         Learn More											<i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                          </a>
                                                       </div>
                                                    </div>
@@ -414,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                       </div>
                                                       <div class="pp-infobox-button pp-button-wrap">
                                                          <a class="pp-more-link pp-button" href="{{ absURL "services/talent-recruiting-training/" }}" role="button" target="_self">
-                                                         Learn More                     <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                         Learn More											<i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                          </a>
                                                       </div>
                                                    </div>

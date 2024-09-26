@@ -1,5 +1,8 @@
 {{ define "header" }}
+{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+
 {{- $CSS := slice
+$dynamicCSS586
 (resources.Get "css/586.css")
 (resources.Get "css/style.css")
 (resources.Get "css/base-4.min.css")
