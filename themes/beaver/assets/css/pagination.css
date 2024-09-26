@@ -75,3 +75,6 @@ pagination
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
+.justify-content-between {
+    justify-content: space-between !important;
+}
