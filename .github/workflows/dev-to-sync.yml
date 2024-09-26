@@ -6,6 +6,7 @@ name: Sync dev.to articles
 on:
   schedule:
     - cron: '0 4-21 * * *'
+
   workflow_dispatch:
     inputs:
       force:

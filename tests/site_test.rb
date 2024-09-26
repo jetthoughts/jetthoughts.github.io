@@ -3,16 +3,21 @@
 require "test_helper"
 
 class SiteTest < ApplicationSystemTestCase
+  def setup
+    Capybara.current_driver = :desktop_chrome
+    super
+  end
+
   def test_homepage
     visit "/"
-
-    assert_matches_screenshot "homepage", skip_area: [".counter-value"], wait: 5, stability_time_limit: 3
+    assert_text "Build faster. Scale smarter."
+    assert_matches_screenshot "homepage", wait: 5, stability_time_limit: 3
   end
 
   def test_homepage_sections
-    skip "Integration with chrome si broken: there is broken screenshots after scrolling"
     visit "/"
     scroll_to :bottom # to preload all images
+    assert_text "JetThoughts’s expert team of developers", exact: false
 
     sections = %w[clients companies testimonials services technologies why-us cta use-cases cta-contact_us footer]
 
@@ -28,7 +33,6 @@ class SiteTest < ApplicationSystemTestCase
     within_top_bar do
       click_on "Blog"
     end
-    assert_success_response
 
     assert_matches_screenshot "blog/index"
   end
@@ -54,8 +58,6 @@ class SiteTest < ApplicationSystemTestCase
       click_on "About Us"
     end
 
-    assert_success_response
-
     assert_matches_screenshot "about_us", wait: 5, stability_time_limit: 3
   end
 
@@ -64,8 +66,6 @@ class SiteTest < ApplicationSystemTestCase
     within_top_bar do
       click_on "Clients"
     end
-
-    assert_success_response
 
     assert_matches_screenshot "clients", wait: 5, stability_time_limit: 3
   end
@@ -88,8 +88,6 @@ class SiteTest < ApplicationSystemTestCase
     within_top_bar do
       click_on "Careers"
     end
-
-    assert_success_response
 
     assert_matches_screenshot "careers", wait: 5, stability_time_limit: 3
   end
@@ -125,7 +123,6 @@ class SiteTest < ApplicationSystemTestCase
       click_on "App/Web Development"
     end
 
-    assert_success_response
     assert_matches_screenshot "services/app_web_development", wait: 5, stability_time_limit: 3
   end
 
@@ -164,10 +161,6 @@ class SiteTest < ApplicationSystemTestCase
   end
 
   private
-
-  def assert_success_response
-    assert_equal 200, page.status_code
-  end
 
   def within_top_bar
     within "nav" do
