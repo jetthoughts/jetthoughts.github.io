@@ -11,7 +11,8 @@
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 
-
+{{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $paginationCss.RelPermalink }}">
 
 {{ if eq .Type "tags" }}
 {{ $blogIndex := .Site.GetPage "blog" }}  <!-- Get the blog index page -->

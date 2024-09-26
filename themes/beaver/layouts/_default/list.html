@@ -10,7 +10,8 @@
 | resources.Concat "css/blog.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
-
+{{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $paginationCss.RelPermalink }}">
 
 
 {{ if eq .Type "tags" }}
