@@ -62,19 +62,17 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_top_bar_hamburger_menu
     visit "/"
 
-    find(".pp-advanced-menu-mobile-toggle.hamburger").click
-    wait_menu_to_render
+    open_mobile_menu
 
-    assert_matches_screenshot "nav/hamburger_menu", wait: nil, stability_time_limit: nil
+    assert_matches_screenshot "nav/hamburger_menu", wait: 1, stability_time_limit: 0.025
   end
 
   def test_top_bar_hamburger_menu_services
     visit "/"
 
-    find(".pp-advanced-menu-mobile-toggle.hamburger").click
-    wait_menu_to_render
+    open_mobile_menu
 
-    find(".pp-menu-toggle", match: :first).click
+    find(".js-sub-menu-opener", match: :first).click
     wait_menu_to_render
 
     assert_matches_screenshot "nav/hamburger_menu/services", wait: nil, stability_time_limit: nil
@@ -102,6 +100,11 @@ class MobileSiteTest < ApplicationSystemTestCase
   end
 
   private
+
+  def open_mobile_menu
+    find(".js-mobile-menu-opener").click
+    wait_menu_to_render
+  end
 
   def wait_menu_to_render
     sleep 1
