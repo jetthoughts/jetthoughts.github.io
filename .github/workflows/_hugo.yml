@@ -1,0 +1,56 @@
+# https://gohugo.io/hosting-and-deployment/hosting-on-github/
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    outputs:
+      page_url: ${{ steps.pages.outputs.url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.134.2'
+          extended: true
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+        run: |
+          PATH=".github/bin:$PATH" hugo \
+            --minify \
+            --baseURL "https://jetthoughts.com/" \
+            --environment production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ needs.build.outputs.page_url }}
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

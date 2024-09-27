@@ -1,0 +1,28 @@
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build_and_deploy:
+    uses: ./.github/workflows/_hugo.yml
