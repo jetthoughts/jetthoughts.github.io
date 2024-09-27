@@ -3,7 +3,7 @@ dev_to_id: 2014071
 title: "Direct Upload with Rails & Dropzone.js"
 description: "Configuring direct file uploads in Rails is now easier than ever. In this article, I'll show you how..."
 created_at: "2024-09-25T08:37:13Z"
-edited_at: "2024-09-26T08:35:48Z"
+edited_at: "2024-09-27T09:31:42Z"
 draft: false
 tags: ["rails", "webdev", "javascript"]
 canonical_url: "https://jetthoughts.com/blog/direct-upload-with-rails-dropzonejs-webdev/"
@@ -361,7 +361,7 @@ This rendering adds file upload functionality to your form. You can customize it
 
 ## Possible Improvements
 
-####Add Image Thumbnails
+#### Add Image Thumbnails
 To show image thumbnails, set `createImageThumbnails` to `true` when creating a `Dropzone` instance. Then, modify the preview template to render the thumbnail image:
 
 ```html
@@ -376,7 +376,7 @@ To show image thumbnails, set `createImageThumbnails` to `true` when creating a 
 </div>
 ```
 
-####Invoke `change` Events
+#### Invoke `change` Events
 If you have a `form_controller.js` with custom validation logic, and you need to validate each time a file is added or removed, you can use this approach:
 
 ```javascript
