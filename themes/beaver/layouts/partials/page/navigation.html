@@ -16,7 +16,8 @@
             <li class="sub-item">
               <a href="{{ .URL }}" class="sub-link">
                 <div class="sub-image">
-                  {{ partial "svg" (printf "theme/%s" .Identifier) }}
+                  {{ partial "svgiw" (dict "svg" (printf "theme/%s" .Identifier) "width" "27" "height" "27") }}
+
                 </div>
                 <div class="sub-holder">
                   <div class="sub-name">{{ .Title }}</div>
