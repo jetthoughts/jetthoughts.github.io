@@ -1,0 +1,6 @@
+{{ $svg := . }}
+{{ $svgPath := printf "img/icons/%s.svg" $svg }}
+{{ $svgFile := resources.Get $svgPath }}
+{{ $svgRelPermalink := $svgFile.RelPermalink }}
+
+<img src="{{ $svgRelPermalink }}" alt="">
