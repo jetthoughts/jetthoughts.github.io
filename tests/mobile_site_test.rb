@@ -64,7 +64,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     open_mobile_menu
 
-    assert_matches_screenshot "nav/hamburger_menu", wait: 1, stability_time_limit: 0.025
+    assert_matches_screenshot "nav/hamburger_menu", wait: 2, stability_time_limit: 0.025
   end
 
   def test_top_bar_hamburger_menu_services

@@ -78,15 +78,6 @@ body a, body .fl-button, body .pp-button, body button, body input[type="submit"]
   margin-bottom: 20px;
 }
 
-.pp-gf-content .pp-gf-inner .gform_confirmation_message i::before {
-  content: "";
-  width: 70px;
-  height: 70px;
-  display: block;
-  background-image: url("/wp-content/uploads/2022/10/confirmation-icon.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 .gform_wrapper .gform_heading .gform_required_legend {
   display: none !important;
@@ -542,9 +533,6 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   transform: rotate(-180deg);
 }
 
-.jt-reviews-box .pp-reviews-wrapper .pp-swiper-button:hover span::before {
-  background-image: url("/wp-content/uploads/2022/09/hover-arrow-icon-hover.svg");
-}
 
 .jt-contact-list ul.pp-list-items li:last-child {
   padding-bottom: 0 !important;
@@ -970,17 +958,6 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   }
 }
 
-.cs-testimonial .cs-testimonial-wrapper::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 60px;
-  background: url("/wp-content/uploads/2022/10/testimonial-quote.png") no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 @media (max-width: 860px) {
   .cs-testimonial .cs-testimonial-wrapper::before {
