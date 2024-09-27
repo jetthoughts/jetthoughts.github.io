@@ -3,11 +3,11 @@ dev_to_id: 2012759
 title: "How a Fractional CTO Turned a Mess into a Stable Product"
 description: "Are bugs pushing your customers away?  Maybe your app breaks at the worst times. Maybe its design..."
 created_at: "2024-09-24T12:34:01Z"
-edited_at: "2024-09-24T15:00:55Z"
+edited_at: "2024-09-26T16:01:05Z"
 draft: false
 tags: ["startup", "usecase", "cto", "devops"]
 canonical_url: "https://jetthoughts.com/blog/how-fractional-cto-turned-mess-into-stable-product-startup-usecase/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-fractional-cto-turned-mess-into-stable-product-startup-usecase/cover.png"
+cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3h06z37mch9oq5rooey1.png"
 slug: "how-fractional-cto-turned-mess-into-stable-product-startup-usecase"
 metatags:
   image: cover.png
@@ -26,6 +26,8 @@ Here's a story about a company in that exact spot. They were losing clients left
 
 The company had no system in place. Their vendor's development was a mess. Reactive, not proactive. Code went live without proper testing. Bugs got fixed only after causing real damage. That's not sustainable.
 
+![introduction product development challenges](file_1.png)
+
 We started by mapping out who was involved. It became clear where things were breaking down. The project manager missed the client's problems. There was zero coordination. No discovery sessions. No engagement with stakeholders. Everyone worked in the dark.
 
 Surprisingly, the most effective person on the client's side was a customer support rep. We suggested cutting the project manager, QA, and status update roles. They weren't just unnecessary—they were creating confusion and wasting time.
@@ -39,6 +41,8 @@ Communication with the vendor was the biggest gap. The client didn't know the te
 Our deep dive showed a lack of experience across the board. The team wasn't equipped to work together. This made the app's problems even worse.
 
 Without proper processes or documentation, the vendor couldn't keep up. They were always putting out fires. The app's code was fragile due to poor quality and lack of testing. Clients were fed up. Many had already left.
+
+![code with a lot of if else statements](file_2.jpg)
 
 At its worst, the app's uptime dropped to 80%. Downtime and bugs led to a 15% revenue loss from client churn and complaints.
 
