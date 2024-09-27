@@ -24,7 +24,7 @@ class SiteTest < ApplicationSystemTestCase
     sections.each do |section_id|
       scroll_to find("##{section_id}")
       sleep 1.5
-      assert_matches_screenshot "homepage/_#{section_id}", wait: nil, stability_time_limit: nil
+      assert_matches_screenshot "homepage/_#{section_id}", wait: 3, stability_time_limit: 0.25
     end
   end
 
@@ -157,7 +157,7 @@ class SiteTest < ApplicationSystemTestCase
   def test_not_found
     visit "/404.html"
 
-    assert_matches_screenshot "404", wait: 5, stability_time_limit: 3
+    assert_matches_screenshot "404", wait: 5, stability_time_limit: 0.25
   end
 
   private
