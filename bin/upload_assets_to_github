@@ -37,6 +37,15 @@ class ImageDownloader
 
     true
   end
+
+  def remove_cdn(url)
+    if url.include?('cdn-cgi')
+      decoded_url = URI.decode_www_form_component(url.split('/https%3A').last)
+      'https:' + decoded_url
+    else
+      url
+    end
+  end
 end
 
 class BlogProcessor
@@ -70,6 +79,7 @@ class BlogProcessor
 
     if cover_image_match
       cover_image_url = cover_image_match[:url]
+      cover_image_url = @downloader.remove_cdn(cover_image_url) # Remove CDN part
       ext = File.extname(URI(cover_image_url).path)
 
       cover_path = "#{BLOG_DIR}/#{file_name}/cover#{ext}"
@@ -77,7 +87,7 @@ class BlogProcessor
       FileUtils.mkdir_p(File.dirname(cover_path))
       # Only proceed if the download is successful
       if @downloader.download(cover_image_url, cover_path)
-        updated_content = content.sub(cover_image_url, REPO_URL + "/"+ cover_path)
+        updated_content = content.sub(cover_image_url, REPO_URL + "/" + cover_path)
 
         File.write(file_path, updated_content)
 
@@ -95,12 +105,13 @@ class BlogProcessor
     new_content = content.gsub(IMG_REGEX) do |match|
       alt_text = $~[:alt]
       img_url = $~[:url]
+      img_url = @downloader.remove_cdn(img_url) # Remove CDN part
       ext = File.extname(URI(img_url).path)
 
       new_file = "file_#{index}#{ext}"
       new_path = "#{BLOG_DIR}/#{file_name}/#{new_file}"
 
-        FileUtils.mkdir_p(File.dirname(new_path))
+      FileUtils.mkdir_p(File.dirname(new_path))
       if @downloader.download(img_url, new_path)
         replacement = "![#{alt_text}](#{new_file})"
         index += 1
