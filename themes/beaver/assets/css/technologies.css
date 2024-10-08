@@ -1,0 +1,69 @@
+.technologies__container--white, .technologies__container--white h2 {
+    color: #fff!important;
+}
+
+.technologies__subheading {
+    color: #1a8cff;
+    font-weight: 600;
+}
+
+.technologies--header {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.technologies--header h2 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.technologies__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.technologies__item {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.technologies__container img, .technologies__container svg {
+    width: 65px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+    .technologies__container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 980px) {
+    .technologies--header {
+       margin-left: 100px; margin-right: 100px;
+    }
+    .technologies__description {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+
+/*
+quick fix services page
+ */
+
+.fl-node-w8dym2q746pj>.fl-row-content-wrap {
+    padding-top: 0;
+}
+/*
+quick fix use-case page
+ */
+.fl-node-r5xy9wufkc2e>.fl-row-content-wrap {
+    padding-top: 0;
+}

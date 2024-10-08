@@ -30,7 +30,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     ],
 
     greedy: [
-      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/,
+      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies/
     ]
   },
 })

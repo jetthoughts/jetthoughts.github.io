@@ -1,0 +1,20 @@
+{{ $techColor := .colorVariant }}
+{{ $site := .site }}
+<div id="technologies" class="technologies {{ if eq $techColor "white" }}technologies__container--white{{ end }}">
+
+<div class="technologies--header">
+    <div class="technologies__subheading">TECHNOLOGIES</div>
+    <h2>Just like you, we choose scalable and flexible technologies</h2>
+    <p class="technologies__description">We provide a diverse mix of experiences across the leading back-end and front-end coding languages.</p>
+</div>
+
+<div class="technologies__container {{ if eq $techColor "white" }}technologies__container--white{{ end }}">
+{{ range $index, $tech := $site.Data.technologies }}
+    <div class="technologies__item">
+        {{ partial "svg" $tech.svg }}
+        <div>{{ $tech.name }}</div>
+    </div>
+{{ end }}
+</div>
+
+</div>

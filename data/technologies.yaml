@@ -1,12 +1,12 @@
 - name: Ruby on Rails
-  image: /assets/img/technologies/rube-on-rails.png
+  svg: technologies/ruby
 - name: Python
-  image: /assets/img/technologies/python.png
+  svg: technologies/python
 - name: React.js
-  image: /assets/img/technologies/react.png
+  svg: technologies/react
 - name: Vue.js
-  image: /assets/img/technologies/vue.png
+  svg: technologies/vue
 - name: React Native
-  image: /assets/img/technologies/react.png
+  svg: technologies/react
 - name: Node.js
-  image: /assets/img/technologies/node.png
+  svg: technologies/node
