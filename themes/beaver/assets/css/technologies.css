@@ -17,19 +17,21 @@
     margin-bottom: 20px;
     margin-top: 30px;
 }
-
 .technologies__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    justify-items: center;
+    font-size: 0;
+    text-align: center;
 }
+
 
 .technologies__item {
-    padding: 20px;
-    text-align: center;
+    font-size:18px;
+    display: inline-block;
+    padding: 20px 0;
+    box-sizing: border-box;
+    width: 25%;
     font-weight: bold;
 }
+
 .technologies__container img, .technologies__container svg {
     width: 65px;
     height: auto;
@@ -37,9 +39,8 @@
 }
 
 @media (max-width: 850px) {
-    .technologies__container {
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
+    .technologies__item {
+        width: 50%;
     }
 }
 
