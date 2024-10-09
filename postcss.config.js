@@ -7,8 +7,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
   safelist: {
     standard: [
       "button, input[type=button], input[type=submit]",
-      // pp adv menu
-      "-open",
 
       // pp adv tabs
       "pp-tabs", "pp-tabs-label", "pp-tab-active", "pp-tabs-panel", "pp-tabs-panel-content",
@@ -19,8 +17,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
       "fl-show", "mega-menu-disabled", "mega-menu", /^mega-menu-items-/, "fl-responsive-nav-enabled",
       "fl-nav-offcanvas-collapse",
 
-      // pp google form
-      // /^pp-gf/, "fl-button", "pp-button",
       // sdb
       "jt-active",
     ],
@@ -38,7 +34,6 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 module.exports = {
   plugins: [
     require("postcss-nested"),
-    require("postcss-delete-duplicate-css")({ isRemoveNull: true, isRemoveComment: true }),
     purgecss,
     require("postcss-delete-duplicate-css")({ isRemoveNull: true, isRemoveComment: true }),
     ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("autoprefixer"), require("cssnano")] : []),

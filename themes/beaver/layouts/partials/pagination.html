@@ -1,5 +1,5 @@
 {{- if gt .Paginator.TotalPages 1 }}
-  <ul id="pagination" class="pagination pagination-default justify-content-between">
+  <ul id="pagination" class="pagination">
     {{- with .Paginator }}
       {{- $currentPageNumber := .PageNumber }}
 

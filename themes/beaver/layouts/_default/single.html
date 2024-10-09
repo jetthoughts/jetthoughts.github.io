@@ -1,8 +1,7 @@
 {{ define "header" }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 
 {{- $CSS := slice
-$dynamicCSS586
+(resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
 (resources.Get "css/586.css")
 (resources.Get "css/style.css")
 (resources.Get "css/base-4.min.css")
@@ -10,16 +9,17 @@ $dynamicCSS586
 (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
 (resources.Get "css/skin-65eda28877e04.css")
 (resources.Get "css/single-post.css")
-| resources.Concat "css/blog.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/blog/single.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+<link href='{{ $CSS.RelPermalink }}' media='all' rel='stylesheet'/>
 
 {{ with .Params.created_at }}
-<meta property="article:published_time" content="{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta content='{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:published_time'/>
 {{ end }}
-<meta property="article:modified_time" content="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}" />
 
+<meta content='{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:modified_time'/>
 {{ end }}
+
 {{ define "main" }}
 
 <div id="fl-main-content" class="blog" itemprop="mainContentOfPage" role="main">

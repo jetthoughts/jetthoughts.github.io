@@ -1,7 +1,7 @@
 {{ define "header" }}
-  {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
   {{- $CSS := slice
-    $dynamicCSS586
+    (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/pagination.css")
     (resources.Get "css/586.css")
     (resources.Get "css/style.css")
     (resources.Get "css/base-4.min.css")
@@ -9,18 +9,14 @@
     (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
     (resources.Get "css/skin-65eda28877e04.css")
     (resources.Get "css/single-post.css")
-    | resources.Concat "css/blog.css" | postCSS  | minify | fingerprint | resources.PostProcess
+    | resources.Concat "css/blog/list.css" | postCSS  | minify | fingerprint | resources.PostProcess
   }}
 
 
   <link href="{{ $CSS.RelPermalink }}" media="all" rel="stylesheet" />
 
-  {{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint }}
-  <link href="{{ $paginationCss.RelPermalink }}" rel="stylesheet" />
-
   {{ if eq .Type "tags" }}
     {{ $blogIndex := .Site.GetPage "blog" }}
-    <!-- Get the blog index page -->
     {{ with $blogIndex.Resources.GetMatch $blogIndex.Params.metatags.image }}
       <meta content="{{ .Permalink }}" property="og:image" />
       <meta content="{{ .Width }}" property="og:image:width" />
