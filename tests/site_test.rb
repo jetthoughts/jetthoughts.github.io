@@ -63,11 +63,14 @@ class SiteTest < ApplicationSystemTestCase
 
   def test_clients
     visit "/"
+
     within_top_bar do
       click_on "Clients"
     end
 
-    assert_matches_screenshot "clients", wait: 5, stability_time_limit: 3
+    sleep 1
+
+    assert_matches_screenshot "clients", wait: 5, stability_time_limit: 0.25
   end
 
   def test_clients_sections
