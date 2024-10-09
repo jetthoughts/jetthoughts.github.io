@@ -37,6 +37,14 @@ class SiteTest < ApplicationSystemTestCase
     assert_matches_screenshot "blog/index"
   end
 
+  def test_blog_index_pagination
+    visit "/blog/"
+
+    scroll_to find("#pagination")
+
+    assert_matches_screenshot "blog/index/_pagination", wait: 3, stability_time_limit: 0.25
+  end
+
   def test_visit_blog_post
     visit "/"
     within_top_bar { click_on "Blog" }

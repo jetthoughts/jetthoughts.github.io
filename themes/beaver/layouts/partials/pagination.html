@@ -1,134 +1,16 @@
-{{- $validFormats := slice "default" "terse" }}
+{{- if gt .Paginator.TotalPages 1 }}
+  <ul id="pagination" class="pagination pagination-default justify-content-between">
+    {{- with .Paginator }}
+      {{- $currentPageNumber := .PageNumber }}
 
-{{- $msg1 := "When passing a map to the internal pagination template, one of the elements must be named 'page', and it must be set to the context of the current page." }}
-{{- $msg2 := "The 'format' specified in the map passed to the internal pagination template is invalid. Valid choices are: %s." }}
+      {{- with .Next }}
+        <li class="page-item">
+          <a aria-label="Next" class="page-link" href="{{ .URL }}" role="button"
+            >See more posts »</a
+          >
+        </li>
+      {{- end }}
 
-{{- $page := . }}
-{{- $format := "default" }}
-
-{{- if reflect.IsMap . }}
-{{- with .page }}
-{{- $page = . }}
-{{- else }}
-{{- errorf $msg1 }}
+    {{- end }}
+  </ul>
 {{- end }}
-{{- with .format }}
-{{- $format = lower . }}
-{{- end }}
-{{- end }}
-
-{{- if in $validFormats $format }}
-{{- if gt $page.Paginator.TotalPages 1 }}
-<ul class="pagination pagination-{{ $format }} justify-content-between">
-  {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
-</ul>
-{{- end }}
-{{- else }}
-{{- errorf $msg2 (delimit $validFormats ", ") }}
-{{- end -}}
-
-{{/* Format: default
-{{/* --------------------------------------------------------------------- */}}
-{{- define "partials/inline/pagination/default" }}
-{{- with .Paginator }}
-{{- $currentPageNumber := .PageNumber }}
-
-{{- with .First }}
-{{- if ne $currentPageNumber .PageNumber }}
-{{- else }}
-{{- end }}
-{{- end }}
-
-{{- with .Prev }}
-<li class="page-item">
-  <a href="{{ .URL }}" aria-label="Previous" class="page-link" role="button">← Prev</a>
-</li>
-{{- else }}
-<li class="page-item disabled">
-  <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1">← Prev</a>
-</li>
-{{- end }}
-
-{{- $slots := 3 }}
-{{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
-{{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
-{{- if lt (add (sub $end $start) 1) $slots }}
-{{- $start = math.Max 1 (add (sub $end $slots) 1) }}
-{{- end }}
-
-{{- range $k := seq $start $end }}
-{{- if eq $.Paginator.PageNumber $k }}
-
-{{- else }}
-
-{{- end }}
-{{- end }}
-
-{{- with .Next }}
-<li class="page-item">
-  <a href="{{ .URL }}" aria-label="Next" class="page-link" role="button">Next →</a>
-</li>
-{{- else }}
-<li class="page-item disabled">
-  <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1">Next →</a>
-</li>
-{{- end }}
-
-{{- with .Last }}
-{{- if ne $currentPageNumber .PageNumber }}
-{{- else }}
-{{- end }}
-{{- end }}
-{{- end }}
-{{- end -}}
-
-{{/* Format: terse
-{{/* --------------------------------------------------------------------- */}}
-{{- define "partials/inline/pagination/terse" }}
-{{- with .Paginator }}
-{{- $currentPageNumber := .PageNumber }}
-
-{{- with .First }}
-{{- if ne $currentPageNumber .PageNumber }}
-{{- end }}
-{{- end }}
-
-{{- with .Prev }}
-<li class="page-item">
-  <a href="{{ .URL }}" aria-label="Previous" class="page-link" role="button">← Prev</a>
-</li>
-{{- else }}
-<li class="page-item disabled">
-  <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1">← Prev</a>
-</li>
-{{- end }}
-
-{{- $slots := 3 }}
-{{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
-{{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
-{{- if lt (add (sub $end $start) 1) $slots }}
-{{- $start = math.Max 1 (add (sub $end $slots) 1) }}
-{{- end }}
-
-{{- range $k := seq $start $end }}
-{{- if eq $.Paginator.PageNumber $k }}
-{{- else }}
-{{- end }}
-{{- end }}
-
-{{- with .Next }}
-<li class="page-item">
-  <a href="{{ .URL }}" aria-label="Next" class="page-link" role="button">Next →</a>
-</li>
-{{- else }}
-<li class="page-item disabled">
-  <a aria-disabled="true" aria-label="Next" class="page-link" role="button" tabindex="-1">Next →</a>
-</li>
-{{- end }}
-
-{{- with .Last }}
-{{- if ne $currentPageNumber .PageNumber }}
-{{- end }}
-{{- end }}
-{{- end }}
-{{- end -}}
