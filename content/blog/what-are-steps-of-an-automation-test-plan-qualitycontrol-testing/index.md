@@ -3,7 +3,7 @@ dev_to_id: 1852952
 title: "What are the steps of an Automation Test Plan?"
 description: "Step 1: Defining the Scope of Automation   Here are the things to consider while identifying..."
 created_at: "2024-05-14T17:02:29Z"
-edited_at: "2024-10-01T16:06:25Z"
+edited_at: "2024-10-10T08:45:08Z"
 draft: false
 tags: ["qualitycontrol", "testing", "testplan", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/"
@@ -26,7 +26,7 @@ Here are the things to consider while identifying the scope of Testing Automatio
 
 It solely depends on the technology on which the application tests are built. Each tool or framework may serve different demands; therefore, a thorough understanding of multiple tool types is also a prominent factor in choosing your best tool.
 
-For instance, some tools are better suited for web applications, while others excel at testing mobile platforms or APIs. Evaluating how well the tool integrates with your existing tech stack and supports the specific tests you need to run is essential. Thus, keeping up with the [latest automation testing tools]( https://www.functionize.com/automated-testing/automation-testing-tools-deep-dive) ensures you have the most efficient and up-to-date solutions to streamline your testing process and improve overall results.
+For instance, some tools are better suited for web applications, while others excel at testing mobile platforms or APIs. Evaluating how well the tool integrates with your existing tech stack and supports the specific tests you need to run is essential. Thus, keeping up with the [latest automation testing tools]( https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/) ensures you have the most efficient and up-to-date solutions to streamline your testing process and improve overall results.
 
 ## Step 3: Develop Test Strategy
 
