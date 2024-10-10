@@ -6,6 +6,9 @@ theme = "beaver"
 enableGitInfo = true
 disableKinds = []
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [permalinks]
   pages = "/:slug/"
   blog = "/blog/:slug/"
