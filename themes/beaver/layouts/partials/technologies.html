@@ -11,7 +11,7 @@
     <div class="container">
     {{ range $index, $tech := $site.Data.technologies }}
         <div class="item">
-            {{ partial "svg" $tech.svg }}
+            {{ partial "svg" $tech.icon }}
             <div>{{ $tech.name }}</div>
         </div>
     {{ end }}
