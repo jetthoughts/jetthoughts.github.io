@@ -1,29 +1,29 @@
-.technologies__container--white, .technologies__container--white h2 {
+.technologies-component.white, .technologies-component.white .heading {
     color: #fff!important;
 }
 
-.technologies__subheading {
+.technologies-component .subheading {
     color: #1a8cff;
     font-weight: 600;
 }
 
-.technologies--header {
+.technologies-component .header {
     text-align: center;
     padding-top: 130px;
     padding-bottom: 60px;
 }
 
-.technologies--header h2 {
+.technologies-component .heading {
     margin-bottom: 20px;
     margin-top: 30px;
 }
-.technologies__container {
+.technologies-component .container {
     font-size: 0;
     text-align: center;
 }
 
 
-.technologies__item {
+.technologies-component .container .item {
     font-size:18px;
     display: inline-block;
     padding: 20px 0;
@@ -32,23 +32,23 @@
     font-weight: bold;
 }
 
-.technologies__container img, .technologies__container svg {
+.technologies-component .container img, .technologies-component .container svg {
     width: 65px;
     height: auto;
     margin-bottom: 20px;
 }
 
 @media (max-width: 850px) {
-    .technologies__item {
+    .technologies-component .item {
         width: 50%;
     }
 }
 
 @media (min-width: 980px) {
-    .technologies--header {
+    .technologies-component .header {
        margin-left: 100px; margin-right: 100px;
     }
-    .technologies__description {
+    .technologies-component .description {
         margin-left: 200px;
         margin-right: 200px;
     }
