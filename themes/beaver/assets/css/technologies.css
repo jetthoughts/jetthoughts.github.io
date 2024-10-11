@@ -1,0 +1,70 @@
+.technologies-component.white, .technologies-component.white .heading {
+    color: #fff!important;
+}
+
+.technologies-component .subheading {
+    color: #1a8cff;
+    font-weight: 600;
+}
+
+.technologies-component .header {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.technologies-component .heading {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.technologies-component .container {
+    font-size: 0;
+    text-align: center;
+}
+
+
+.technologies-component .container .item {
+    font-size:18px;
+    display: inline-block;
+    padding: 20px 0;
+    box-sizing: border-box;
+    width: 25%;
+    font-weight: bold;
+}
+
+.technologies-component .container img, .technologies-component .container svg {
+    width: 65px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+    .technologies-component .item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 980px) {
+    .technologies-component .header {
+       margin-left: 100px; margin-right: 100px;
+    }
+    .technologies-component .description {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+
+/*
+quick fix services page
+ */
+
+.fl-node-w8dym2q746pj>.fl-row-content-wrap {
+    padding-top: 0;
+}
+/*
+quick fix use-case page
+ */
+.fl-node-r5xy9wufkc2e>.fl-row-content-wrap {
+    padding-top: 0;
+}
