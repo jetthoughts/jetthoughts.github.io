@@ -35,10 +35,13 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_visit_blog_post
     visit "/blog/"
 
-    find(".blog-post .post-content .link", match: :first).click
-    wait_menu_to_render
+    new_window = window_opened_by do
+      find(".blog-post .post-content .link", match: :first).click
+    end
 
-    assert_text "Read next"
+    within_window new_window do
+      assert_text "Read next"
+    end
   end
 
   def test_blog_post

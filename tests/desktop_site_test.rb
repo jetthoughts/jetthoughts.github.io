@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-class SiteTest < ApplicationSystemTestCase
+class DesktopSiteTest < ApplicationSystemTestCase
   def setup
     Capybara.current_driver = :desktop_chrome
     super
@@ -49,9 +49,13 @@ class SiteTest < ApplicationSystemTestCase
     visit "/"
     within_top_bar { click_on "Blog" }
 
-    find(".blog-post .post-content .link", match: :first).click
+    new_window = window_opened_by do
+      find(".blog-post .post-content .link", match: :first).click
+    end
 
-    assert_text "Read next"
+    within_window new_window do
+      assert_text "Read next"
+    end
   end
 
   def test_blog_post
