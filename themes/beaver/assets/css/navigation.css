@@ -357,7 +357,7 @@
     width: auto;
     position: static;
     padding: 0;
-    margin: 0;
+    margin: 0 -15px;
     transform: none;
     box-shadow: none;
     transition: .3s;
@@ -379,6 +379,7 @@
     width: auto;
     display: block;
     margin-bottom: 15px;
+    padding: 0 15px;
   }
 
   .navigation .sub-link {
