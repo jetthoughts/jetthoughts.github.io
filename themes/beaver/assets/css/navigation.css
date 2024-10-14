@@ -249,6 +249,10 @@
   height: auto;
 }
 
+.navigation .sub-image .a {
+  stroke-width: 1.5;
+}
+
 .navigation .sub-holder {
   overflow: hidden;
   padding-left: 20px;
