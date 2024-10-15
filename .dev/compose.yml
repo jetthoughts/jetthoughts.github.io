@@ -1,0 +1,35 @@
+---
+x-app: &app
+  image: jetthoughts.com-test:1.0.0
+  build:
+    context: .
+    dockerfile: ./Dockerfile
+
+x-backend: &backend
+  <<: *app
+  stdin_open: true
+  tty: true
+  volumes:
+    - ..:/app:cached
+    - bundle:/app/vendor/bundle
+    - history:/usr/local/hist
+    - node_modules:/app/node_modules
+  environment:
+    HISTFILE: /usr/local/hist/.bash_history
+    IRB_HISTFILE: /usr/local/hist/.irb_history
+
+services:
+  sh:
+    <<: *backend
+    command: sh
+    tty: true
+    stdin_open: true
+
+  t:
+    <<: *backend
+    entrypoint: bin/test
+
+volumes:
+  bundle:
+  history:
+  node_modules:

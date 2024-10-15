@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
 set -eo pipefail
 
-test_file=${1:-tests/*_test.rb}
-# shellcheck disable=SC2086
-bundle exec ruby -Itests $test_file
+test_files="${1:-test/*_test.rb}"
+bundle exec ruby -Itest $test_files

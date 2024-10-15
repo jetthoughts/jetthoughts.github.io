@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# This is a npx stub to use bunx instead
+# We're using bunx (from bun) as a faster alternative to npx (from npm)
+
+set -euo pipefail
+
+if ! command -v bun &> /dev/null; then
+    echo "Error: bun is not installed or not in the PATH. Please install bun: https://bun.sh/" >&2
+    exit 1
+fi
+
+bun x "$@"
