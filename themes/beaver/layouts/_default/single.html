@@ -18,6 +18,7 @@
 {{ end }}
 
 <meta content='{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:modified_time'/>
+{{ partial "blog/json-ld.html" . }}
 {{ end }}
 
 {{ define "main" }}
