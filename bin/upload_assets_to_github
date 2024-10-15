@@ -41,9 +41,12 @@ class ImageDownloader
   def remove_cdn(url)
     parts = url.split("https")
     encoded_url = 'https' + parts.last
+    max_iterations = 10
+    iterations = 0
 
-    while encoded_url.include?('%')
+    while encoded_url.include?('%') && iterations < max_iterations
       encoded_url = URI.decode_www_form_component(encoded_url)
+      iterations += 1
     end
 
     encoded_url
