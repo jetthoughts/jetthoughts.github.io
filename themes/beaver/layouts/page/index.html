@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
    loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
 })
 </script>
+{{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
 {{ define "main" }}
