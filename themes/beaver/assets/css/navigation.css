@@ -249,6 +249,10 @@
   height: auto;
 }
 
+.navigation .sub-image .a {
+  stroke-width: 1.5;
+}
+
 .navigation .sub-holder {
   overflow: hidden;
   padding-left: 20px;
@@ -353,7 +357,7 @@
     width: auto;
     position: static;
     padding: 0;
-    margin: 0;
+    margin: 0 -15px;
     transform: none;
     box-shadow: none;
     transition: .3s;
@@ -375,6 +379,7 @@
     width: auto;
     display: block;
     margin-bottom: 15px;
+    padding: 0 15px;
   }
 
   .navigation .sub-link {
