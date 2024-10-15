@@ -10,6 +10,7 @@ $dynamicCSS586
 | resources.Concat "css/about-us.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
 {{ define "main" }}
