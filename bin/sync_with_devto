@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative "sync/article_sync_checker.rb"
+require_relative "sync/article_updater.rb"
+require_relative "sync/images_processor.rb"
+
+ArticleSyncChecker.new.call
+ArticleUpdater.new.call
