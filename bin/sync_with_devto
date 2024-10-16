@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative "sync/article_sync_checker.rb"
+require_relative "sync/article_updater.rb"
+require_relative "sync/article_cleaner.rb"
+
+ArticleSyncChecker.new.call
+ArticleUpdater.new.call
+ArticleCleaner.new.call
