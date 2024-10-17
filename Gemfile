@@ -11,6 +11,10 @@ gem "puma"
 
 gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
 gem "vips"
-gem "chunky_png"
 
+# system libs
+gem "bigdecimal", require: false
+gem "mutex_m", require: false
+
+# tools
 gem "standard", require: false

@@ -2,7 +2,6 @@
   "name": "jetthoughts.github.io",
   "version": "1.0.0",
   "description": "1. Change config.toml file acording to your settings\r 2. Change Google forms",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
