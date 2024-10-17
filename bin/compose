@@ -2,8 +2,12 @@
 
 set -eo pipefail
 
+# Set Docker platform for ARM-based Macs (M1/M2 chips)
 if [[ "$(uname -m)" == arm* && "$(uname)" == Darwin ]]; then
   export DOCKER_DEFAULT_PLATFORM=linux/arm64/v8
 fi
 
-docker compose -f .dev/compose.yml -p "${DOCKED_PROJECT_NAME:-showcase}" "$@"
+docker compose \
+  -f .dev/compose.yml \
+  -p "${DOCKED_PROJECT_NAME:-jtcom}" \
+  "$@"

@@ -15,11 +15,10 @@ RUN apk -v add --no-cache \
       vips-dev \
       chromium \
       chromium-chromedriver \
-      xvfb && \
-    apk -v cache clean
+      xvfb
 
 # Upgrade RubyGems
-RUN echo "gem: --no-document" > ~/.gemrc && gem update --system
+RUN echo "gem: --no-document" > ~/.gemrc
 
 # Create a directory for the app code
 RUN mkdir -p /app

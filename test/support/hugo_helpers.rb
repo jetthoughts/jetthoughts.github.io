@@ -28,7 +28,7 @@ class Hugo
           [:all, {"cache-control" => "public, max-age=31536000"}],
           # Provide web fonts with cross-origin access-control-headers
           #  Firefox requires this when serving assets using a Content Delivery Network
-          [:fonts, {"access-control-allow-origin" => "*"}]
+          [:fonts, {"access-control-allow-origin" => "*"}],
         ]
       run Rack::Directory.new(that.destination_path)
     end
