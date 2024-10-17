@@ -2,13 +2,12 @@
 name: Deploy Hugo site to Pages
 
 on:
+  workflow_dispatch:
+  pull_request:
   schedule:
     - cron: '0 0 * * *'
-
   push:
     branches: [ master ]
-
-  workflow_dispatch:
 
 permissions:
   contents: read
