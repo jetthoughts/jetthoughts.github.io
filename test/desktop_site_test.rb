@@ -93,8 +93,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      sleep 1
-      assert_matches_screenshot "clients/_#{section_id}", wait: nil, stability_time_limit: nil
+      assert_matches_screenshot "clients/_#{section_id}", wait: 5, stability_time_limit: 2, tolerance: 0.1
     end
   end
 

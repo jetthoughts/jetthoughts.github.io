@@ -10,7 +10,7 @@ Capybara.default_max_wait_time = 5
 
 module Rails
   def self.root
-    File.expand_path("../../", __FILE__)
+    Dir.pwd
   end
 
   def self.application

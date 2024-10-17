@@ -1,14 +1,22 @@
 class Hugo
   attr_reader :destination
 
-  def initialize(path: "public-test")
+  def initialize(path: ENV.fetch("HUGO_DEFAULT_PATH", "public-test"))
     @destination = path
   end
+  HUGO_OPTIONS = %w[
+    --minify
+    --forceSyncStatic
+    --environment production
+    --cleanDestinationDir
+    --gc
+    --logLevel warn
+  ].freeze
 
   def precompile(port:)
+    options = HUGO_OPTIONS.join(" ")
     system(
-      "hugo --minify --forceSyncStatic --environment production --cleanDestinationDir --gc --logLevel warn" \
-        " --baseURL \"http://localhost:#{port}\"  --destination \"#{destination}\"",
+      "hugo #{options} --baseURL \"http://localhost:#{port}\" --destination \"#{destination}\"",
       exception: true
     )
     self
@@ -28,14 +36,14 @@ class Hugo
           [:all, {"cache-control" => "public, max-age=31536000"}],
           # Provide web fonts with cross-origin access-control-headers
           #  Firefox requires this when serving assets using a Content Delivery Network
-          [:fonts, {"access-control-allow-origin" => "*"}],
+          [:fonts, {"access-control-allow-origin" => "*"}]
         ]
       run Rack::Directory.new(that.destination_path)
     end
   end
 
   def destination_path
-    File.expand_path("../../../#{@destination}", __FILE__)
+    File.expand_path(@destination, Dir.pwd)
   end
 end
 
