@@ -4,6 +4,7 @@ class Hugo
   def initialize(path: ENV.fetch("HUGO_DEFAULT_PATH", "public-test"))
     @destination = path
   end
+
   HUGO_OPTIONS = %w[
     --minify
     --forceSyncStatic
