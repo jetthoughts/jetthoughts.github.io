@@ -23,7 +23,14 @@ services:
   t:
     <<: *backend
     entrypoint: bin/test
-
+    deploy:
+      resources:
+        limits:
+          cpus: '3.0'
+          memory: '1GB'
+        reservations:
+          cpus: '1.5'
+          memory: '512M'
 volumes:
   bundle:
   history:

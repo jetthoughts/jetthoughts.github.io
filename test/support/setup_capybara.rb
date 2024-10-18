@@ -66,19 +66,18 @@ def build_default_chrome_options
   options
 end
 
-Capybara.register_driver :desktop_chrome do |app|
-  options = build_default_chrome_options
-  options.add_emulation(device_metrics: {width: 1920, height: 1080, pixelRatio: 1, touch: false})
+def register_chrome_driver(name, device_metrics)
+  Capybara.register_driver name do |app|
+    options = build_default_chrome_options
+    options.add_emulation(device_metrics: device_metrics)
 
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+  end
 end
 
-Capybara.register_driver :mobile_chrome do |app|
-  options = build_default_chrome_options
-  options.add_emulation(device_metrics: {width: 360, height: 800, pixelRatio: 1, touch: true})
+register_chrome_driver(:desktop_chrome, {width: 1920, height: 1080, pixelRatio: 1, touch: false})
+register_chrome_driver(:mobile_chrome, {width: 360, height: 800, pixelRatio: 1, touch: true})
 
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-end
 
 Capybara.javascript_driver = :desktop_chrome
 Capybara.current_driver = Capybara.javascript_driver
