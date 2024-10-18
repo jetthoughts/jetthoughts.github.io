@@ -2,7 +2,7 @@
 
 require "selenium-webdriver"
 
-CHROME_OPTIONS = {
+CHROME_ARGS = {
   "allow-running-insecure-content" => nil,
   "autoplay-policy" => "user-gesture-required",
   "disable-add-to-shelf" => nil,
@@ -50,13 +50,13 @@ CHROME_OPTIONS = {
 }
 
 if Gem.win_platform?
-  CHROME_OPTIONS["disable-gpu"] = nil
+  CHROME_ARGS["disable-gpu"] = nil
 end
 
-def build_default_chrome_options
+def build_options_for(opts)
   options = Selenium::WebDriver::Chrome::Options.new
 
-  CHROME_OPTIONS.each do |key, value|
+  opts.each do |key, value|
     if value.nil?
       options.add_argument("--#{key}")
     else
@@ -68,7 +68,7 @@ end
 
 def register_chrome_driver(name, device_metrics)
   Capybara.register_driver name do |app|
-    options = build_default_chrome_options
+    options = build_options_for(CHROME_ARGS)
     options.add_emulation(device_metrics: device_metrics)
 
     Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
@@ -78,13 +78,8 @@ end
 register_chrome_driver(:desktop_chrome, {width: 1920, height: 1080, pixelRatio: 1, touch: false})
 register_chrome_driver(:mobile_chrome, {width: 360, height: 800, pixelRatio: 1, touch: true})
 
-
 Capybara.javascript_driver = :desktop_chrome
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.disable_animation = true
 Capybara.threadsafe = false
 Capybara.default_max_wait_time = 10
-
-# Configure Selenium logging
-Selenium::WebDriver.logger.level = :error
-# Selenium::WebDriver.logger.output = 'log/selenium.log'

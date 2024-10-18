@@ -28,7 +28,7 @@ WORKDIR /app
 RUN git config --global --add safe.directory /app
 
 # To run browser tests need to run Xvfb
-RUN	printf '#!/bin/sh\nXvfb :99 -screen 0 1920x1080x24 &\nexec "$@"\n' | tee /docker-entrypoint.sh && \
+RUN	printf '#!/bin/sh\nbundle check || bundle install\nXvfb :99 -screen 0 1920x1080x24 &\nexec "$@"\n' > /docker-entrypoint.sh && \
 	chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
