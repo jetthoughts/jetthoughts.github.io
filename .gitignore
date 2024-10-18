@@ -27,6 +27,8 @@ hugo.linux
 
 # SnapDiff runtime
 *.diff.png
+*.base.png
+*.attempt_*.png
 
 # Capybara
 capybara-*.png
