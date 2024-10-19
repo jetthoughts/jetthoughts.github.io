@@ -33,7 +33,7 @@ jobs:
           HUGO_ENV: production
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
         run: |
-          PATH=".github/bin:$PATH" hugo \
+          PATH="app/bin:$PATH" hugo \
             --minify \
             --baseURL "https://jetthoughts.com/" \
             --environment production
