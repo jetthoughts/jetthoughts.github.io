@@ -3,11 +3,11 @@ dev_to_id: 1853472
 title: "Services and tools to automatize development for the remote teams"
 description: "We save a lot of time on development and create better products due to well-formed..."
 created_at: "2024-05-15T06:02:44Z"
-edited_at: "2024-07-03T12:35:10Z"
+edited_at: "2024-10-21T15:30:36Z"
 draft: false
 tags: ["workflow", "automation", "agile", "development"]
 canonical_url: "https://jetthoughts.com/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/services-tools-automatize-development-for-remote-teams-workflow-automation/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fservices-tools-automatize-development-for-remote-teams-workflow-automation%2Ffile_0.jpeg"
 slug: "services-tools-automatize-development-for-remote-teams-workflow-automation"
 metatags:
   image: cover.jpeg

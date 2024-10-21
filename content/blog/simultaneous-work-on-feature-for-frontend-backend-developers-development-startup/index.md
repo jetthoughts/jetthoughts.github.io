@@ -3,7 +3,7 @@ dev_to_id: 1877642
 title: "Simultaneous work on the feature for frontend and backend developers"
 description: "Simultaneous work on the feature for frontend and backend developers   How do split features..."
 created_at: "2024-06-05T06:43:35Z"
-edited_at: "2024-10-21T14:47:23Z"
+edited_at: "2024-10-21T16:06:37Z"
 draft: false
 tags: ["development", "startup", "continousdelivery"]
 canonical_url: "https://jetthoughts.com/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/"

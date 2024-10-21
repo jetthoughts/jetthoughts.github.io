@@ -3,7 +3,7 @@ dev_to_id: 1880171
 title: "4 lines to Speed Up your Rails Test Suite on CircleCI"
 description: "Most of our projects have a big code base of assets which dramatically reduce not only browser page..."
 created_at: "2024-06-07T09:15:36Z"
-edited_at: "2024-10-21T14:45:51Z"
+edited_at: "2024-10-21T16:03:53Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/"

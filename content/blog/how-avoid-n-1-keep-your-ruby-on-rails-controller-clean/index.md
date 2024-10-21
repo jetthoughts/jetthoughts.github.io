@@ -3,7 +3,7 @@ dev_to_id: 1907419
 title: "How to avoid N + 1 and keep your Ruby on Rails controller clean"
 description: "Where to put the logic related to database queries optimization in a Ruby on Rails..."
 created_at: "2024-07-01T09:32:21Z"
-edited_at: "2024-10-21T14:41:45Z"
+edited_at: "2024-10-21T15:57:51Z"
 draft: false
 tags: ["ruby", "rails", "patterns", "designpatterns"]
 canonical_url: "https://jetthoughts.com/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/"

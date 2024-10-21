@@ -3,7 +3,7 @@ dev_to_id: 1893839
 title: "Bridging the Gap: Building Trust Between Product and Engineering Teams"
 description: "Companies often see their product and engineering teams competing. This lack of cooperation breeds..."
 created_at: "2024-06-19T16:45:35Z"
-edited_at: "2024-10-21T14:42:44Z"
+edited_at: "2024-10-21T15:58:17Z"
 draft: false
 tags: ["organization", "structure", "effectiveness"]
 canonical_url: "https://jetthoughts.com/blog/bridging-gap-building-trust-between-product-engineering-teams-organization-structure/"

@@ -3,11 +3,11 @@ dev_to_id: 1852581
 title: "What to do for the developer when the WIP limit is reached"
 description: "Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep..."
 created_at: "2024-05-14T11:42:29Z"
-edited_at: "2024-07-03T12:35:52Z"
+edited_at: "2024-10-21T15:35:38Z"
 draft: false
 tags: ["agile", "kanban", "management", "development"]
 canonical_url: "https://jetthoughts.com/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwhat-do-for-developer-when-wip-limit-reached-agile-kanban%2Ffile_0.jpeg"
 slug: "what-do-for-developer-when-wip-limit-reached-agile-kanban"
 metatags:
   image: cover.jpeg

@@ -1,24 +1,28 @@
 ---
 dev_to_id: 1144505
 title: "How To Setup Default Values For Attributes In Ruby On Rails"
-description: "Have you ever thought that setting default values for attributes in Ruby on Rails could be..."
+description: "Have you ever thought setting default values for attributes in Ruby on Rails could be..."
 created_at: "2022-07-19T06:01:04Z"
-edited_at: "2024-07-03T12:36:51Z"
+edited_at: "2024-10-21T15:46:37Z"
 draft: false
 tags: ["ruby", "programming", "tutorial", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/cover.png"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fcl8y84yk69rxlbt5phgl.png"
 slug: "how-setup-default-values-for-attributes-in-ruby-on-rails-programming"
 metatags:
   image: cover.png
 ---
-_Have you ever thought that setting default values for attributes in Ruby on Rails could be a problem?_
+_Have you ever thought setting default values for attributes in Ruby on Rails could be problematic?_
 
-Since attributes are uninitialized when a new model is created without any parameters, default values will be set according to the type of attribute.
 
-This is a very good idea if we don't want to fill up the database with unnecessary information.
+![code example how to set default value for attribute](file_0.png)
 
-Ruby on Rails provides a lot of options to add default values, but not all of them are good.
+
+Since attributes are uninitialized when a new model is created without any parameters, default values will be set according to the attribute type.
+
+This idea is perfect if we don't want to fill the database with unnecessary information.
+
+Ruby on Rails provides many options for adding default values, but not all of them are good.
 
 Here is a list of good examples of how you should add default values:
 
@@ -26,13 +30,13 @@ Here is a list of good examples of how you should add default values:
 - Option 2: Use `after_initialize` callback.
 - Option 3: Use `before_validate` callback. Set the default value in the model, but only if it is nil.
 
-##Option 1: Set the default value directly in the database via migrations
+## Option 1: Set the default value directly in the database via migrations
 
-In Ruby on Rails, you can set default values for attributes in the database by including them as part of your migration.
+In Ruby on Rails, you can set default values for database attributes by including them in your migration.
 
 The syntax is `default: 'value'`.
 
-This is useful if you want to define lots of attributes at once, and it's easy to see what the default value is at a glance when looking at your `db/schema.rb` file.
+This is useful if you want to define many attributes at once. When looking at your `db/schema.rb` file, it's easy to see the default value at a glance.
 
 ```ruby
 class CreateUsers < ActiveRecord::Migration
@@ -44,12 +48,12 @@ class CreateUsers < ActiveRecord::Migration
 end
 ```
 
-##Option 2: Use `after_initialize` callback
+## Option 2: Use `after_initialize` callback
 
 There is `after_initialize` callback to help a developer to set default values,
 especially if they are required to do some computation.
 
-This callback is invoked after the model has been initiated and the developer could access default values before updating it.
+This callback is invoked after initiating the model so the developer can access default values before updating it.
 
 For example, let's say we want to set a default name for our user in our app:
 
@@ -63,11 +67,11 @@ class User < ApplicationRecord
 end
 ```
 
-## Option 3: Use `before_validate` callback. Set the default value in the model, when it is missed
+## Option 3: Use `before_validate` callback. Set the default value in the model when it is missed
 
-In Ruby on Rails, you can set default values for attributes in the model by using `before_validation`.
+In Ruby on Rails, you can use `before_validation` to set default values for model attributes.
 
-This is a great way to ensure that your models always have valid attributes, and it's really simple to do:
+This is a great way to ensure that your models always have valid attributes, and it's elementary to do:
 
 ```ruby
 class User < ApplicationRecord
@@ -83,7 +87,7 @@ end
 
 ## Option 4: Through Rails Attributes API 
 
-And last most ideal way is to use [Rails Attributes API](https://api.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html#method-i-attribute). You can adds default value in the model like `attribute :my_string, :string, default: "new default"`
+And last most ideal way is to use [Rails Attributes API](https://api.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html#method-i-attribute). You can add default value in the model like `attribute :my_string, :string, default: "new default"`
 
 ```ruby
 # db/schema.rb
@@ -111,16 +115,16 @@ Product.new.my_default_proc # => 2015-05-30 11:04:49 -0600
 
 And that's it!
 
-##It is worth mentioning:
+## It is worth mentioning:
 - Do not override with default values original changes, which breaks the ActiveRecord contract:
 ```ruby
 def set_defaults
   name = "First Last"
 end
 ```
-(This unexpected behavior will provide confusion for developers)
+(This unexpected behavior will confuse developers)
 
-- Do not set defaults after validations. Prefer to add default values only before validation, to make sure that we support consistency
+- Do not set defaults after validations. Prefer to add default values only before validation to make sure that we support consistency
 ```ruby
 before_save :set_defaults
 
@@ -135,4 +139,4 @@ end
 ---
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jetthoughts.com/blog/).

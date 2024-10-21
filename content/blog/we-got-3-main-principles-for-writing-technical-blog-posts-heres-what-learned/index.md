@@ -3,11 +3,11 @@ dev_to_id: 1852579
 title: "We got 3 main principles for writing Technical Blog posts. Here’s what we learned."
 description: "After 100 articles of the research on how to write Technical Blog post simple and quickly, without..."
 created_at: "2024-05-14T11:40:41Z"
-edited_at: "2024-07-03T12:35:53Z"
+edited_at: "2024-10-21T15:36:05Z"
 draft: false
 tags: ["writing", "blog", "blogposting", "principles"]
 canonical_url: "https://jetthoughts.com/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwe-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned%2Ffile_0.jpeg"
 slug: "we-got-3-main-principles-for-writing-technical-blog-posts-heres-what-learned"
 metatags:
   image: cover.jpeg

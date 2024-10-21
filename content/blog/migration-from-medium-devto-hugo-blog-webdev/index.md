@@ -3,11 +3,11 @@ dev_to_id: 1846033
 title: "Migration from Medium to Hugo + dev.to API"
 description: "For a long time, we've been running a corporate blog on Medium, but recently, we've run into some..."
 created_at: "2024-05-08T07:43:55Z"
-edited_at: "2024-07-03T12:36:02Z"
+edited_at: "2024-10-21T15:40:16Z"
 draft: false
 tags: ["blog", "webdev", "cms"]
 canonical_url: "https://jetthoughts.com/blog/migration-from-medium-devto-hugo-blog-webdev/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/migration-from-medium-devto-hugo-blog-webdev/cover.jpg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp9i2krmml9b2n1z53jn6.jpg"
 slug: "migration-from-medium-devto-hugo-blog-webdev"
 metatags:
   image: cover.jpg

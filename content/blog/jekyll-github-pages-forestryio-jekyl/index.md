@@ -3,7 +3,7 @@ dev_to_id: 1880471
 title: "Jekyll + GitHub Pages + Forestry.io"
 description: "I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my..."
 created_at: "2024-06-07T13:36:24Z"
-edited_at: "2024-10-21T14:44:04Z"
+edited_at: "2024-10-21T15:59:50Z"
 draft: false
 tags: ["jekyl", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/"

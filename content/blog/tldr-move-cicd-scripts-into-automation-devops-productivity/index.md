@@ -3,11 +3,11 @@ dev_to_id: 1205643
 title: "TL;DR: Move CI/CD scripts into .automation"
 description: "Today our /bin folder has become overwhelmed with different development tools and scripts.  We put..."
 created_at: "2022-09-28T16:13:54Z"
-edited_at: "2024-07-03T12:36:37Z"
+edited_at: "2024-10-21T15:44:35Z"
 draft: false
 tags: ["devops", "productivity", "tutorial", "tooling"]
 canonical_url: "https://jetthoughts.com/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/cover.png"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbyrgpl5ltann5d4ism3e.png"
 slug: "tldr-move-cicd-scripts-into-automation-devops-productivity"
 metatags:
   image: cover.png

@@ -3,11 +3,11 @@ dev_to_id: 462554
 title: "Who is to blame when a project fails?"
 description: "Large projects continue to fail, often with disastrous results for the organizations involved. Do you..."
 created_at: "2020-09-22T07:38:55Z"
-edited_at: "2024-07-03T12:37:16Z"
+edited_at: "2024-10-21T15:53:16Z"
 draft: false
 tags: ["blame", "blamegame", "projectfailure"]
 canonical_url: "https://jetthoughts.com/blog/who-blame-when-project-fails-blamegame/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/who-blame-when-project-fails-blamegame/cover.jpg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fi%252F38e6anewxdyto08iy9zl.jpg"
 slug: "who-blame-when-project-fails-blamegame"
 metatags:
   image: cover.jpg
