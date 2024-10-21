@@ -3,7 +3,7 @@ dev_to_id: 1188292
 title: "How to make vertically scrollable in CSS"
 description: "In order for the scroll to appear, you need to limit its height by adding height or max-height..."
 created_at: "2022-09-08T21:16:07Z"
-edited_at: "2024-10-21T17:44:00Z"
+edited_at: "2024-10-21T18:09:31Z"
 draft: false
 tags: ["css", "html", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-make-vertically-scrollable-in-css-html/"
