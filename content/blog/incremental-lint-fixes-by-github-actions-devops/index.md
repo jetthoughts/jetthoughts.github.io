@@ -3,7 +3,7 @@ dev_to_id: 1189342
 title: "Incremental lint fixes by GitHub Actions"
 description: "How do you apply new lint rules to the legacy project with active development? Have you added..."
 created_at: "2022-09-09T18:50:36Z"
-edited_at: "2024-10-21T16:10:32Z"
+edited_at: "2024-10-21T17:44:29Z"
 draft: false
 tags: ["devops", "github", "ruby", "codequality"]
 canonical_url: "https://jetthoughts.com/blog/incremental-lint-fixes-by-github-actions-devops/"
