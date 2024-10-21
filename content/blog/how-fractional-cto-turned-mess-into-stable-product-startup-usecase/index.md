@@ -3,11 +3,11 @@ dev_to_id: 2012759
 title: "How a Fractional CTO Turned a Mess into a Stable Product"
 description: "Are bugs pushing your customers away?  Maybe your app breaks at the worst times. Maybe its design..."
 created_at: "2024-09-24T12:34:01Z"
-edited_at: "2024-09-26T16:01:05Z"
+edited_at: "2024-10-21T14:38:39Z"
 draft: false
 tags: ["startup", "usecase", "cto", "devops"]
 canonical_url: "https://jetthoughts.com/blog/how-fractional-cto-turned-mess-into-stable-product-startup-usecase/"
-cover_image: "https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3h06z37mch9oq5rooey1.png"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3h06z37mch9oq5rooey1.png"
 slug: "how-fractional-cto-turned-mess-into-stable-product-startup-usecase"
 metatags:
   image: cover.png

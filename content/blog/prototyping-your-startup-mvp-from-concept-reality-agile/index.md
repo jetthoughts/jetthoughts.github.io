@@ -3,7 +3,7 @@ dev_to_id: 1943703
 title: "Prototyping Your Startup MVP: From Concept to Reality"
 description: "Making a Minimum Viable Product (MVP) is key in the fast-paced startup world. This guide will help..."
 created_at: "2024-08-01T12:57:40Z"
-edited_at: "2024-08-01T14:01:03Z"
+edited_at: "2024-10-21T14:39:41Z"
 draft: false
 tags: ["startup", "agile"]
 canonical_url: "https://jetthoughts.com/blog/prototyping-your-startup-mvp-from-concept-reality-agile/"

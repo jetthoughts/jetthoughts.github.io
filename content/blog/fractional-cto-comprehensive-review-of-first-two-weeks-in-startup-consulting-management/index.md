@@ -3,11 +3,11 @@ dev_to_id: 1877729
 title: "Fractional CTO: A Comprehensive Review of the First Two Weeks in a Startup"
 description: "In a world where startups need to move fast and make informed decisions, the role of a Fractional..."
 created_at: "2024-06-05T08:19:05Z"
-edited_at: "2024-07-03T12:33:47Z"
+edited_at: "2024-10-21T14:46:24Z"
 draft: false
 tags: ["consulting", "management", "service"]
 canonical_url: "https://jetthoughts.com/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/cover.png"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ffractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management%2Ffile_0.png"
 slug: "fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management"
 metatags:
   image: cover.png

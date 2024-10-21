@@ -3,11 +3,11 @@ dev_to_id: 1877556
 title: "Mock Everything Is a Good Way to Sink"
 description: "Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see..."
 created_at: "2024-06-05T05:52:47Z"
-edited_at: "2024-07-03T12:34:19Z"
+edited_at: "2024-10-21T14:50:32Z"
 draft: false
 tags: ["tdd", "testing", "development"]
 canonical_url: "https://jetthoughts.com/blog/mock-everything-good-way-sink-tdd-testing/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mock-everything-good-way-sink-tdd-testing/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fmock-everything-good-way-sink-tdd-testing%2Ffile_0.jpeg"
 slug: "mock-everything-good-way-sink-tdd-testing"
 metatags:
   image: cover.jpeg

@@ -3,11 +3,11 @@ dev_to_id: 1880239
 title: "Revise Your Stylesheets. Part 1. Color Scheme"
 description: "Revise Your Stylesheets. Part 1. Color Scheme   Ever wonder how many colors exist in your..."
 created_at: "2024-06-07T10:32:47Z"
-edited_at: "2024-07-03T12:33:36Z"
+edited_at: "2024-10-21T14:45:10Z"
 draft: false
 tags: ["webdev", "css"]
 canonical_url: "https://jetthoughts.com/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Frevise-your-stylesheets-part-1-color-scheme-webdev-css%2Ffile_0.jpeg"
 slug: "revise-your-stylesheets-part-1-color-scheme-webdev-css"
 metatags:
   image: cover.jpeg

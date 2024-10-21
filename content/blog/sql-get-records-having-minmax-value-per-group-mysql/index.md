@@ -3,11 +3,11 @@ dev_to_id: 1858929
 title: "SQL: Get records having min/max value per group"
 description: "Here's one possible solution for a case when you need to fetch a set of records unique on one (or..."
 created_at: "2024-05-20T07:01:49Z"
-edited_at: "2024-07-03T12:34:33Z"
+edited_at: "2024-10-21T14:52:00Z"
 draft: false
 tags: ["mysql", "sql", "postgres", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/sql-get-records-having-minmax-value-per-group-mysql/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/sql-get-records-having-minmax-value-per-group-mysql/cover.png"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fpgy0x17zvtuwuv216n74.png"
 slug: "sql-get-records-having-minmax-value-per-group-mysql"
 metatags:
   image: cover.png

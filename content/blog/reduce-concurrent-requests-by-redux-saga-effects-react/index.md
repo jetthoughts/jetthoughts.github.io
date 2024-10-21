@@ -3,11 +3,11 @@ dev_to_id: 1880474
 title: "Reduce concurrent requests by Redux-Saga Effects"
 description: "Are you familiar with the situation when the user clicks on a Load Data button 2 consecutive times at..."
 created_at: "2024-06-07T13:41:39Z"
-edited_at: "2024-07-03T12:33:21Z"
+edited_at: "2024-10-21T14:43:25Z"
 draft: false
 tags: ["redux", "react", "javascript", "frontend"]
 canonical_url: "https://jetthoughts.com/blog/reduce-concurrent-requests-by-redux-saga-effects-react/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/reduce-concurrent-requests-by-redux-saga-effects-react/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Freduce-concurrent-requests-by-redux-saga-effects-react%2Ffile_0.jpeg"
 slug: "reduce-concurrent-requests-by-redux-saga-effects-react"
 metatags:
   image: cover.jpeg

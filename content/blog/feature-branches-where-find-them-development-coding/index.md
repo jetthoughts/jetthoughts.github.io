@@ -3,11 +3,11 @@ dev_to_id: 1853571
 title: "Feature Branches and Where to Find Them"
 description: "Here we want to go through the feature branch process, show what downsides this approach..."
 created_at: "2024-05-15T07:17:21Z"
-edited_at: "2024-07-03T12:34:53Z"
+edited_at: "2024-10-21T14:53:32Z"
 draft: false
 tags: ["development", "coding", "github", "git"]
 canonical_url: "https://jetthoughts.com/blog/feature-branches-where-find-them-development-coding/"
-cover_image: "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/feature-branches-where-find-them-development-coding/cover.jpeg"
+cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ffeature-branches-where-find-them-development-coding%2Ffile_0.jpeg"
 slug: "feature-branches-where-find-them-development-coding"
 metatags:
   image: cover.jpeg
