@@ -3,11 +3,11 @@ dev_to_id: 1089599
 title: "How to get & build full URLs in Rails"
 description: "There are some cases when you want to get a current request absolute URL. Thankfully, Rails got you..."
 created_at: "2022-05-19T08:10:35Z"
-edited_at: "2024-10-21T18:10:03Z"
+edited_at: "2024-10-21T19:07:45Z"
 draft: false
 tags: ["ruby", "rails", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/how-get-build-full-urls-in-rails-ruby/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fp6h92y04u9tw8zreu37m.jpg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fp6h92y04u9tw8zreu37m.jpg"
 slug: "how-get-build-full-urls-in-rails-ruby"
 metatags:
   image: cover.jpg

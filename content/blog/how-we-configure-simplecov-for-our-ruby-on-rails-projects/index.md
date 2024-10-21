@@ -3,7 +3,7 @@ dev_to_id: 1673284
 title: "How we configure Simplecov for our Ruby on Rails projects."
 description: "Here’s a step-by-step guide to setting up simplecov with explanations of what each part of the code..."
 created_at: "2023-11-21T07:40:02Z"
-edited_at: "2024-10-21T18:09:07Z"
+edited_at: "2024-10-21T19:06:47Z"
 draft: false
 tags: ["ruby", "rails", "testing", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-we-configure-simplecov-for-our-ruby-on-rails-projects/"

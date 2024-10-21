@@ -3,11 +3,11 @@ dev_to_id: 1852561
 title: "What activities are expected from a remote developer for effective collaboration"
 description: "In order to build trust relationships with remote non-technical founders, we designed the..."
 created_at: "2024-05-14T11:22:54Z"
-edited_at: "2024-10-21T18:08:52Z"
+edited_at: "2024-10-21T19:06:31Z"
 draft: false
 tags: ["development", "process", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwhat-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwhat-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process%2Ffile_0.jpeg"
 slug: "what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process"
 metatags:
   image: cover.jpeg
