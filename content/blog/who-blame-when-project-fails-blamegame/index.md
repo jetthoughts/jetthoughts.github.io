@@ -3,7 +3,7 @@ dev_to_id: 462554
 title: "Who is to blame when a project fails?"
 description: "Large projects continue to fail, often with disastrous results for the organizations involved. Do you..."
 created_at: "2020-09-22T07:38:55Z"
-edited_at: "2024-10-21T19:07:51Z"
+edited_at: "2024-10-21T20:07:46Z"
 draft: false
 tags: ["blame", "blamegame", "projectfailure"]
 canonical_url: "https://jetthoughts.com/blog/who-blame-when-project-fails-blamegame/"

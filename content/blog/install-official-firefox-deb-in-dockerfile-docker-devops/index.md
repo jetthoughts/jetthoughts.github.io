@@ -3,7 +3,7 @@ dev_to_id: 1740002
 title: "Install Official Firefox .deb in Dockerfile"
 description: "Mozilla announced its dedicated APT repo for Debian-based distros, including Ubuntu, containing new..."
 created_at: "2024-01-24T10:58:06Z"
-edited_at: "2024-10-21T19:06:40Z"
+edited_at: "2024-10-21T20:06:38Z"
 draft: false
 tags: ["docker", "devops", "tooling"]
 canonical_url: "https://jetthoughts.com/blog/install-official-firefox-deb-in-dockerfile-docker-devops/"

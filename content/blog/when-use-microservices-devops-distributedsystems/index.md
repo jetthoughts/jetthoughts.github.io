@@ -3,7 +3,7 @@ dev_to_id: 1283284
 title: "When to use Microservices?"
 description: "Microservices are a software architecture design pattern in which a large application is built as a..."
 created_at: "2022-12-03T12:26:09Z"
-edited_at: "2024-10-21T19:07:00Z"
+edited_at: "2024-10-21T20:06:59Z"
 draft: false
 tags: ["devops", "distributedsystems", "beginners"]
 canonical_url: "https://jetthoughts.com/blog/when-use-microservices-devops-distributedsystems/"

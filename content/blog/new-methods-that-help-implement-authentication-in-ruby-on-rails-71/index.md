@@ -3,7 +3,7 @@ dev_to_id: 1673299
 title: "New methods that help implement authentication in Ruby on Rails 7.1"
 description: "The new version of Ruby on Rails 7.1 has many new features, some of which make writing your own..."
 created_at: "2023-11-21T08:01:09Z"
-edited_at: "2024-10-21T19:06:45Z"
+edited_at: "2024-10-21T20:06:43Z"
 draft: false
 tags: ["ruby", "rails", "webdev", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/"
