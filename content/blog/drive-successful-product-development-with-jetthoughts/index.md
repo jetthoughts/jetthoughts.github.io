@@ -3,7 +3,7 @@ dev_to_id: 2016117
 title: "Drive Successful Product Development with JetThoughts"
 description: "Welcome to the world of product development, where innovation meets strategy! In today's fast-paced..."
 created_at: "2024-09-26T15:47:15Z"
-edited_at: "2024-10-21T15:54:32Z"
+edited_at: "2024-10-21T16:06:52Z"
 draft: false
 tags: ["product", "development", "startup", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/drive-successful-product-development-with-jetthoughts/"

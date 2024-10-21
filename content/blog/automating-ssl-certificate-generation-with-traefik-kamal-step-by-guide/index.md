@@ -3,7 +3,7 @@ dev_to_id: 1966362
 title: "Automating SSL Certificate Generation with Traefik and Kamal: A Step-by-Step Guide"
 description: "In this guide, we'll explore how to configure Traefik with Kamal to automatically obtain and manage..."
 created_at: "2024-08-20T09:22:37Z"
-edited_at: "2024-10-21T15:55:30Z"
+edited_at: "2024-10-21T16:07:03Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/"

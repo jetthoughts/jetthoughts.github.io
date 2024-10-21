@@ -3,7 +3,7 @@ dev_to_id: 1880251
 title: "Our Default Ruby Development Stack"
 description: "Our Default Ruby Development Stack     Not that long ago I joined JetThoughts. By this time..."
 created_at: "2024-06-07T10:47:23Z"
-edited_at: "2024-10-21T16:01:15Z"
+edited_at: "2024-10-21T16:07:50Z"
 draft: false
 tags: ["rails", "ruby", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/our-default-ruby-development-stack-rails/"

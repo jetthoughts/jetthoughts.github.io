@@ -3,7 +3,7 @@ dev_to_id: 1877555
 title: "How JetThoughts implements Joel’s test?"
 description: "For those of you who don’t know who Joel Spolsky is here are some facts:   Worked at..."
 created_at: "2024-06-05T05:51:10Z"
-edited_at: "2024-10-21T14:50:38Z"
+edited_at: "2024-10-21T16:09:42Z"
 draft: false
 tags: ["deveopment", "management", "project", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management/"

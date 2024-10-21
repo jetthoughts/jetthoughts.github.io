@@ -3,7 +3,7 @@ dev_to_id: 462546
 title: "What are the next steps when your project is failing?"
 description: "Projects fail for all kinds of reasons. Customers can change their objectives, key team members can..."
 created_at: "2020-09-22T07:32:43Z"
-edited_at: "2024-10-21T15:53:22Z"
+edited_at: "2024-10-21T16:11:09Z"
 draft: false
 tags: ["management"]
 canonical_url: "https://jetthoughts.com/blog/what-are-next-steps-when-your-project-failing-management/"

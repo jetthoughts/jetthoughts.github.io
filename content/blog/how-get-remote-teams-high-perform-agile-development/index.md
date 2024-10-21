@@ -3,7 +3,7 @@ dev_to_id: 1877574
 title: "How to Get Remote Teams to High Perform"
 description: "How to Get Remote Teams to High Perform     Raise your hand in case you feel confused about..."
 created_at: "2024-06-05T06:10:52Z"
-edited_at: "2024-10-21T14:49:08Z"
+edited_at: "2024-10-21T16:08:35Z"
 draft: false
 tags: ["agile", "development", "management", "remote"]
 canonical_url: "https://jetthoughts.com/blog/how-get-remote-teams-high-perform-agile-development/"

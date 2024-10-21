@@ -3,7 +3,7 @@ dev_to_id: 1852618
 title: "How to start an Open Source project. Building RESO API JS client"
 description: "Would you like to understand how to start your new Open Source project in a week? How to build a..."
 created_at: "2024-05-14T12:29:45Z"
-edited_at: "2024-10-21T15:34:09Z"
+edited_at: "2024-10-21T17:06:12Z"
 draft: false
 tags: ["javascript", "opensource", "npm", "management"]
 canonical_url: "https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/"

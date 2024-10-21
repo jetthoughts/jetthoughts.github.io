@@ -3,7 +3,7 @@ dev_to_id: 1556678
 title: "Align remote teams with OKRs and Impact Mapping"
 description: "In today's fast-paced business environment, remote distributed teams are becoming increasingly..."
 created_at: "2023-08-02T11:05:40Z"
-edited_at: "2024-10-21T15:42:36Z"
+edited_at: "2024-10-21T16:10:12Z"
 draft: false
 tags: ["management", "devops"]
 canonical_url: "https://jetthoughts.com/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/"

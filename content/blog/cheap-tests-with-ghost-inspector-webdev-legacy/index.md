@@ -3,7 +3,7 @@ dev_to_id: 1853649
 title: "Cheap tests with Ghost Inspector"
 description: "What do you do when a legacy project has no tests and adding them is difficult? Before making new..."
 created_at: "2024-05-15T08:05:56Z"
-edited_at: "2024-10-21T15:08:23Z"
+edited_at: "2024-10-21T16:29:16Z"
 draft: false
 tags: ["webdev", "legacy", "tools", "development"]
 canonical_url: "https://jetthoughts.com/blog/cheap-tests-with-ghost-inspector-webdev-legacy/"

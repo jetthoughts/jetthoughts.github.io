@@ -3,7 +3,7 @@ dev_to_id: 1877624
 title: "How Our Expertise Helped Curb Real Estate Communication Chaos"
 description: "How Our Expertise Helped Curb Real Estate Communication Chaos   The story of building Agent..."
 created_at: "2024-06-05T06:21:28Z"
-edited_at: "2024-10-21T14:48:39Z"
+edited_at: "2024-10-21T16:07:44Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/"

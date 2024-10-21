@@ -3,7 +3,7 @@ dev_to_id: 1853469
 title: "JetThoughts receives First Review on Clutch.co: Thank you"
 description: "Our team at JetThoughts has an expertise of the Ruby on Rails development service line, and we’re..."
 created_at: "2024-05-15T05:59:12Z"
-edited_at: "2024-10-21T15:30:41Z"
+edited_at: "2024-10-21T17:00:20Z"
 draft: false
 tags: ["startup", "review", "product", "company"]
 canonical_url: "https://jetthoughts.com/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/"
