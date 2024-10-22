@@ -3,11 +3,11 @@ dev_to_id: 1877661
 title: "Improving Ruby on Rails Test Suite Performance by Disabling Animations"
 description: "Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may..."
 created_at: "2024-06-05T07:08:39Z"
-edited_at: "2024-10-21T16:08:10Z"
+edited_at: "2024-10-22T17:28:24Z"
 draft: false
 tags: ["rails", "testing", "tips"]
 canonical_url: "https://jetthoughts.com/blog/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fimproving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing%2Ffile_0.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fimproving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing%2Ffile_0.png"
 slug: "improving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing"
 metatags:
   image: cover.png

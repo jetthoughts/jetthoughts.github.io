@@ -3,11 +3,11 @@ dev_to_id: 1911972
 title: "Transforming Titans: A Novel Journey of Agile Leadership in Outsourcing"
 description: "Chapter 1: The New Beginning   Paul Keen stood in his new office, his mind racing with..."
 created_at: "2024-07-04T19:54:09Z"
-edited_at: "2024-10-21T16:07:20Z"
+edited_at: "2024-10-22T17:20:09Z"
 draft: false
 tags: ["leadership", "agile", "management", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/transforming-titans-outsourcing-odyssey-leadership-agile/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm5kt5b6pugxidz6i69nw.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm5kt5b6pugxidz6i69nw.png"
 slug: "transforming-titans-outsourcing-odyssey-leadership-agile"
 metatags:
   image: cover.png

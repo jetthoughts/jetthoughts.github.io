@@ -3,11 +3,11 @@ dev_to_id: 1997035
 title: "How Small PR Improves Team Productivity"
 description: "In many companies, teams work together to achieve big goals. One way to keep the team productive is..."
 created_at: "2024-09-11T15:59:07Z"
-edited_at: "2024-10-21T16:07:00Z"
+edited_at: "2024-10-22T17:17:41Z"
 draft: false
 tags: ["development", "productivity", "programming", "devops"]
 canonical_url: "https://jetthoughts.com/blog/how-small-pr-improves-team-productivity-development/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F203jbqjlbdflqalyz7ki.jpg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F203jbqjlbdflqalyz7ki.jpg"
 slug: "how-small-pr-improves-team-productivity-development"
 metatags:
   image: cover.jpg

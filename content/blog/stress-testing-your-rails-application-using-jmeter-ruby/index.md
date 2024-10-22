@@ -3,11 +3,11 @@ dev_to_id: 1880292
 title: "Stress Testing Your Rails Application Using JMeter"
 description: "Stress Testing Your Rails Application Using JMeter     Some time ago we needed to make a..."
 created_at: "2024-06-07T11:31:26Z"
-edited_at: "2024-10-21T16:07:48Z"
+edited_at: "2024-10-22T17:26:15Z"
 draft: false
 tags: ["ruby", "rails", "performance", "jmeter"]
 canonical_url: "https://jetthoughts.com/blog/stress-testing-your-rails-application-using-jmeter-ruby/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fstress-testing-your-rails-application-using-jmeter-ruby%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fstress-testing-your-rails-application-using-jmeter-ruby%2Ffile_0.jpeg"
 slug: "stress-testing-your-rails-application-using-jmeter-ruby"
 metatags:
   image: cover.jpeg

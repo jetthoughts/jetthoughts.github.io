@@ -3,11 +3,11 @@ dev_to_id: 1880466
 title: "Self-promote on Reddit without getting banned"
 description: "We are happy to share our experience on important aspects of starting self-promoting posts on Reddit...."
 created_at: "2024-06-07T13:31:24Z"
-edited_at: "2024-10-21T16:07:41Z"
+edited_at: "2024-10-22T17:25:12Z"
 draft: false
 tags: ["reddit", "promotion", "advice"]
 canonical_url: "https://jetthoughts.com/blog/self-promote-on-reddit-without-getting-banned-promotion/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fself-promote-on-reddit-without-getting-banned-promotion%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fself-promote-on-reddit-without-getting-banned-promotion%2Ffile_0.jpeg"
 slug: "self-promote-on-reddit-without-getting-banned-promotion"
 metatags:
   image: cover.jpeg

@@ -3,11 +3,11 @@ dev_to_id: 1880471
 title: "Jekyll + GitHub Pages + Forestry.io"
 description: "I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my..."
 created_at: "2024-06-07T13:36:24Z"
-edited_at: "2024-10-21T16:07:40Z"
+edited_at: "2024-10-22T17:24:43Z"
 draft: false
 tags: ["jekyl", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fjekyll-github-pages-forestryio-jekyl%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fjekyll-github-pages-forestryio-jekyl%2Ffile_0.jpeg"
 slug: "jekyll-github-pages-forestryio-jekyl"
 metatags:
   image: cover.jpeg

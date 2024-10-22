@@ -3,11 +3,11 @@ dev_to_id: 1997076
 title: "What to Do When You Have a Big PR Blocking Other Issues"
 description: "Sometimes, despite your best efforts, you end up with a large pull request (PR) that blocks other..."
 created_at: "2024-09-11T16:24:29Z"
-edited_at: "2024-10-21T16:06:58Z"
+edited_at: "2024-10-22T17:17:33Z"
 draft: false
 tags: ["development", "productivity", "programming", "devops"]
 canonical_url: "https://jetthoughts.com/blog/what-do-when-you-have-big-pr-blocking-other-issues-development-productivity/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F900seyzwxmi7fjnaecua.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F900seyzwxmi7fjnaecua.jpeg"
 slug: "what-do-when-you-have-big-pr-blocking-other-issues-development-productivity"
 metatags:
   image: cover.jpeg

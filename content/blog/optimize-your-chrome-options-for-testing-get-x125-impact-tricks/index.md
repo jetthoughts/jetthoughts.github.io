@@ -3,11 +3,11 @@ dev_to_id: 1877654
 title: "Optimize your Chrome options for testing to get x1.25 impact"
 description: "🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀  Are you looking to supercharge your..."
 created_at: "2024-06-05T06:54:46Z"
-edited_at: "2024-10-21T16:08:11Z"
+edited_at: "2024-10-22T17:28:30Z"
 draft: false
 tags: ["testing", "tricks"]
 canonical_url: "https://jetthoughts.com/blog/optimize-your-chrome-options-for-testing-get-x125-impact-tricks/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Foptimize-your-chrome-options-for-testing-get-x125-impact-tricks%2Ffile_0.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Foptimize-your-chrome-options-for-testing-get-x125-impact-tricks%2Ffile_0.png"
 slug: "optimize-your-chrome-options-for-testing-get-x125-impact-tricks"
 metatags:
   image: cover.png

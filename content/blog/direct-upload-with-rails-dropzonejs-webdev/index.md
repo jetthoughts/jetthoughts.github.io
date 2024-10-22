@@ -3,11 +3,11 @@ dev_to_id: 2014071
 title: "Direct Upload with Rails & Dropzone.js"
 description: "Configuring direct file uploads in Rails is now easier than ever. In this article, I'll show you how..."
 created_at: "2024-09-25T08:37:13Z"
-edited_at: "2024-10-21T16:06:53Z"
+edited_at: "2024-10-22T17:16:31Z"
 draft: false
 tags: ["rails", "webdev", "javascript"]
 canonical_url: "https://jetthoughts.com/blog/direct-upload-with-rails-dropzonejs-webdev/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqavnojejlyg7meh50a7m.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqavnojejlyg7meh50a7m.png"
 slug: "direct-upload-with-rails-dropzonejs-webdev"
 metatags:
   image: cover.png
