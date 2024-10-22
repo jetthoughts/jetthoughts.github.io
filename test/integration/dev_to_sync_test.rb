@@ -49,4 +49,10 @@ class DevToSyncTest < Minitest::Test
 
     assert_includes content, 'In one of the applications, that we are developing'
   end
+
+  def test_sync_download_cover_image
+    refute File.exist?("#{WORKING_DIR}/#{FAKE_API_ARTICLE[:slug]}/cover.jpeg")
+    @syncer.sync
+    assert File.exist?("#{WORKING_DIR}/#{FAKE_API_ARTICLE[:slug]}/cover.jpeg")
+  end
 end

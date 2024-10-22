@@ -12,5 +12,9 @@ class DevToAdapter
   def get_article(id)
     @http_client.get("#{BASE_URL}/articles/#{id}")
   end
+
+  def download(url)
+    @http_client.get(url, timeout: 60)
+  end
 end
 
