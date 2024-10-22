@@ -3,7 +3,7 @@ dev_to_id: 1877622
 title: "Video player with React Native. Part 1: Expo"
 description: "Nowadays there are plenty of solutions to build an application for a mobile platform. If we are..."
 created_at: "2024-06-05T06:20:41Z"
-edited_at: "2024-10-22T19:07:40Z"
+edited_at: "2024-10-22T20:07:38Z"
 draft: false
 tags: ["reactnative", "expo", "tutorial", "react"]
 canonical_url: "https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative/"

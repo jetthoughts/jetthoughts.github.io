@@ -3,7 +3,7 @@ dev_to_id: 1941092
 title: "Navigating Team Transitions: A Guide for Non-Technical Founders"
 description: "Change can be challenging, especially when it involves individuals. Replacing a team is always a..."
 created_at: "2024-07-30T10:47:52Z"
-edited_at: "2024-10-22T19:06:34Z"
+edited_at: "2024-10-22T20:06:33Z"
 draft: false
 tags: ["startup", "agile", "culture", "process"]
 canonical_url: "https://jetthoughts.com/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/"

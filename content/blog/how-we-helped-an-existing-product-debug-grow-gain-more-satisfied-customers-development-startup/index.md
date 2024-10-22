@@ -3,7 +3,7 @@ dev_to_id: 1877638
 title: "How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers"
 description: "As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could..."
 created_at: "2024-06-05T06:34:42Z"
-edited_at: "2024-10-22T19:07:36Z"
+edited_at: "2024-10-22T20:07:33Z"
 draft: false
 tags: ["development", "startup", "business", "enterprise"]
 canonical_url: "https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/"
