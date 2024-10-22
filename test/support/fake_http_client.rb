@@ -3,10 +3,12 @@ require "json"
 class FakeHttpClient
   def get(url)
     case url
-    when /articles\?username=jetthoughts&page=0/
+    when "https://dev.to/api/articles?username=jetthoughts&page=0"
       index_response
-    when /articles\/2040573/
-      show_respone
+    when "https://dev.to/api/articles/1879395"
+      show_respone("1879395")
+    when "https://dev.to/api/articles/1877720"
+      show_respone("1877720")
     else
       raise "Unexpected URL: #{url}"
     end
@@ -17,8 +19,8 @@ class FakeHttpClient
     JSON.parse(index_content)
   end
 
-  def show_respone
-    show_content = File.read("test/fixtures/responses/show.json")
+  def show_respone(id)
+    show_content = File.read("test/fixtures/responses/#{id}.json")
     JSON.parse(show_content)
   end
 end
