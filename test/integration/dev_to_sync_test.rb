@@ -25,17 +25,28 @@ class DevToSyncTest < Minitest::Test
   end
 
   def test_sync_add_meta_information_to_article
+    refute File.exist?("#{WORKING_DIR}/#{FAKE_API_ARTICLE[:slug]}/index.md")
     @syncer.sync
 
     markdown_file = "#{WORKING_DIR}/#{FAKE_API_ARTICLE[:slug]}/index.md"
     content = File.read(markdown_file)
 
     assert_includes content, 'title: "Recent Searches & Sorting Hashes: How They are Connected"'
-    # assert_includes content, 'description: "This is a test article."'
-    # assert_includes content, 'tags:'
-    # assert_includes content, '  - test'
-    # assert_includes content, '  - article'
-    # assert_includes content, 'cover_image: "https://example.com/cover.jpg"'
-    # assert_includes content, 'This is the body of the test article.'
+    assert_includes content, 'description: "In one of the applications, that we are developing, we needed to implement the storing of 10 last..."'
+    assert_includes content, 'tags:'
+    assert_includes content, '  - ruby'
+    assert_includes content, '  - rails'
+    assert_includes content, '  - development'
+    assert_includes content, 'cover_image:'
+  end
+
+  def test_sync_add_article_markdown
+    refute File.exist?("#{WORKING_DIR}/#{FAKE_API_ARTICLE[:slug]}/index.md")
+    @syncer.sync
+
+    markdown_file = "#{WORKING_DIR}/#{FAKE_API_ARTICLE[:slug]}/index.md"
+    content = File.read(markdown_file)
+
+    assert_includes content, 'In one of the applications, that we are developing'
   end
 end
