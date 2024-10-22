@@ -3,7 +3,7 @@ dev_to_id: 1910629
 title: "Avoid Candidates Who Hide Details"
 description: "Understanding how a candidate plans to work is crucial when hiring remote workers. Have you ever..."
 created_at: "2024-07-03T19:27:05Z"
-edited_at: "2024-10-22T18:08:04Z"
+edited_at: "2024-10-22T19:06:44Z"
 draft: false
 tags: ["startup", "leadership", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/avoid-candidates-who-hide-details-startup-leadership/"
