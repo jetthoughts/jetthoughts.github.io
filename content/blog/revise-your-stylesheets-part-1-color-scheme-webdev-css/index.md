@@ -3,7 +3,7 @@ dev_to_id: 1880239
 title: "Revise Your Stylesheets. Part 1. Color Scheme"
 description: "Revise Your Stylesheets. Part 1. Color Scheme   Ever wonder how many colors exist in your..."
 created_at: "2024-06-07T10:32:47Z"
-edited_at: "2024-10-22T17:26:55Z"
+edited_at: "2024-10-22T18:08:28Z"
 draft: false
 tags: ["webdev", "css"]
 canonical_url: "https://jetthoughts.com/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/"

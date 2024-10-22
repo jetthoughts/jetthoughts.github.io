@@ -3,7 +3,7 @@ dev_to_id: 1877667
 title: "How to Setup Incremental Design Process in a Startup"
 description: "Are you a startup looking to streamline your design process? Look no further! This article will..."
 created_at: "2024-06-05T07:12:27Z"
-edited_at: "2024-10-22T17:28:18Z"
+edited_at: "2024-10-22T18:08:43Z"
 draft: false
 tags: ["design", "process", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-setup-incremental-design-process-in-startup/"

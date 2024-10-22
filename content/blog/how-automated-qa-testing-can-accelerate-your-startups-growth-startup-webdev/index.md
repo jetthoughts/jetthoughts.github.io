@@ -3,7 +3,7 @@ dev_to_id: 1943564
 title: "How Automated QA Testing Can Accelerate Your Startup's Growth"
 description: "In the fast-paced world of startups, maintaining top software quality is key to growth and success...."
 created_at: "2024-08-01T12:00:51Z"
-edited_at: "2024-10-22T17:18:45Z"
+edited_at: "2024-10-22T18:07:51Z"
 draft: false
 tags: ["startup", "webdev", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-automated-qa-testing-can-accelerate-your-startups-growth-startup-webdev/"

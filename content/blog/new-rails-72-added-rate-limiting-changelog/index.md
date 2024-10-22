@@ -3,7 +3,7 @@ dev_to_id: 1910839
 title: "New Rails 7.2: Added Rate Limiting"
 description: "Ruby on Rails 7.2 added rate limiting to Action Controller. It's cool and easy to use.            ..."
 created_at: "2024-07-03T21:05:23Z"
-edited_at: "2024-10-22T17:21:28Z"
+edited_at: "2024-10-22T18:07:59Z"
 draft: false
 tags: ["rails", "changelog"]
 canonical_url: "https://jetthoughts.com/blog/new-rails-72-added-rate-limiting-changelog/"
