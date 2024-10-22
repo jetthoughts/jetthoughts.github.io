@@ -12,9 +12,9 @@ class DevToSync
 
   def sync
     articles = @adapter.get_articles(@username, 0)
-    articles.each do |article_data|
-      FileUtils.mkdir_p "#{@working_dir}/develop-a-minimalistic-process/"
-      File.open("#{@working_dir}/develop-a-minimalistic-process/index.md", "w+") do |f|
+    articles.each do |article|
+      FileUtils.mkdir_p "#{@working_dir}/#{article["slug"]}"
+      File.open("#{@working_dir}/#{article["slug"]}/index.md", "w+") do |f|
         f.write("markdown content")
       end
     end
