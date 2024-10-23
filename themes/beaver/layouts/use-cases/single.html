@@ -2,7 +2,7 @@
 {{ partial "header/critical/single/use-cases.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 
-{{ $CSS := slice (resources.Get "css/3027-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css")
+{{ $CSS := slice (resources.Get "css/3027-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/footer.css")
 | resources.Concat "css/single/use-cases.css"
 | postCSS  | minify | fingerprint | resources.PostProcess
 }}
