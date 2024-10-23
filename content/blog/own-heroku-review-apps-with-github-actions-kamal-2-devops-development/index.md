@@ -3,10 +3,10 @@ dev_to_id: 2053767
 title: "Own Heroku Review Apps with GitHub Actions and Kamal 2"
 description: "Continuous delivery is vital in modern software development. It ensures that code changes are..."
 created_at: "2024-10-23T14:23:22Z"
-edited_at: "2024-10-23T14:30:39Z"
+edited_at: "2024-10-23T14:31:51Z"
 draft: false
 tags: ["devops", "development", "automation", "heroku"]
-canonical_url: "https://dev.to/jetthoughts/own-heroku-review-apps-with-github-actions-and-kamal-2-407n"
+canonical_url: "https://jetthoughts.com/blog/own-heroku-review-apps-with-github-actions-kamal-2-devops-development/"
 cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftpaz9sitkygmqq6d6mgz.jpeg"
 slug: "own-heroku-review-apps-with-github-actions-kamal-2-devops-development"
 metatags:
