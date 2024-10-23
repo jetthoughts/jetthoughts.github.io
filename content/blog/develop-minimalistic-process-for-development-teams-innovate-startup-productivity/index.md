@@ -3,11 +3,11 @@ dev_to_id: 2040573
 title: "Develop a Minimalistic Process for Development Teams to Innovate"
 description: "I just finished reading \"Continuous Discovery Habits: Discover Products That Create Customer Value..."
 created_at: "2024-10-16T12:21:53Z"
-edited_at: "2024-10-21T16:06:42Z"
+edited_at: "2024-10-23T06:45:11Z"
 draft: false
 tags: ["startup", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/develop-minimalistic-process-for-development-teams-innovate-startup-productivity/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxry553ugh2khlnr4sr4y.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxry553ugh2khlnr4sr4y.png"
 slug: "develop-minimalistic-process-for-development-teams-innovate-startup-productivity"
 metatags:
   image: cover.png
