@@ -1,9 +1,9 @@
 ---
 dev_to_id: 2053767
 title: "Own Heroku Review Apps with GitHub Actions and Kamal 2"
-description: "The Problem   Heroku Review Apps are useful but have limitations. They can be expensive and..."
+description: "Continuous delivery is vital in modern software development. It ensures that code changes are..."
 created_at: "2024-10-23T14:23:22Z"
-edited_at: "2024-10-23T14:27:12Z"
+edited_at: "2024-10-23T14:30:39Z"
 draft: false
 tags: ["devops", "development", "automation", "heroku"]
 canonical_url: "https://dev.to/jetthoughts/own-heroku-review-apps-with-github-actions-and-kamal-2-407n"
@@ -12,6 +12,12 @@ slug: "own-heroku-review-apps-with-github-actions-kamal-2-devops-development"
 metatags:
   image: cover.jpeg
 ---
+Continuous delivery is vital in modern software development. It ensures that code changes are released quickly and reliably. **Heroku Review Apps** help in this process by creating temporary environments for each pull request. This makes it easy to test changes before merging them into the main branch.
+
+By automatically deploying code changes to a live environment, teams can catch issues early. This prevents bugs from reaching production and improves code quality. To learn more about how Heroku Review Apps prevent delivering bugs to production, check out our detailed post: [Heroku Reviews Apps Prevent Delivering Bugs on Production CI Startup](https://jetthoughts.com/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/).
+
+However, Heroku Review Apps have limitations. They can be expensive and may not offer the flexibility some teams need. If you use GitHub, Kamal 2, and a VPS, you might want a similar workflow without the downsides. That's where our automated scripts come in.
+
 ## The Problem
 
 Heroku Review Apps are useful but have limitations. They can be expensive and may not fit all needs. In our context, we have a limited number of servers and need to use them efficiently. If you use GitHub, Kamal 2, and a VPS, you might want a similar workflow. 
