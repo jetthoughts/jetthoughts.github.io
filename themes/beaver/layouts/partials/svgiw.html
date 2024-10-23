@@ -3,4 +3,4 @@
 {{ $svgFile := resources.Get $svgPath }}
 {{ $svgRelPermalink := $svgFile.RelPermalink }}
 
-<img src="{{ $svgRelPermalink }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} alt="{{ with .alt }}{{ . }}{{ else }}{{ "" }}{{ end }}">
+<img fetchpriority="low" loading="lazy" src="{{ $svgRelPermalink }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} alt="{{ with .alt }}{{ . }}{{ else }}{{ "" }}{{ end }}">
