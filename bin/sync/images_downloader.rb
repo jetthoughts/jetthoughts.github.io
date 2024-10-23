@@ -1,20 +1,18 @@
 require 'fileutils'
-require 'net/http'
 require 'uri'
 
 IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?:\/\/[^\s\)]+)\)}
-BLOG_DIR = 'content/blog'
-REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master'
+REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master'.freeze
 
-class ImagesProcessor
-  def initialize(slug, blog_dir: BLOG_DIR, repo_url: REPO_URL)
+class ImagesDownloader
+  def initialize(slug, http_client, working_dir)
     @slug = slug
-    @blog_dir = blog_dir
-    @repo_url = repo_url
+    @working_dir = working_dir
+    @http_client = http_client
   end
 
   def call
-    process_blog("#{@blog_dir}/#{@slug}/index.md")
+    process_blog("#{@working_dir}/#{@slug}/index.md")
   end
 
   private
@@ -35,11 +33,11 @@ class ImagesProcessor
     if cover_image_match
       cover_image_url = remove_cdn(cover_image_match[:url])
       ext = File.extname(URI(cover_image_url).path)
-      cover_path = "#{@blog_dir}/#{file_name}/cover#{ext}"
+      cover_path = "#{@working_dir}/#{file_name}/cover#{ext}"
 
       FileUtils.mkdir_p(File.dirname(cover_path))
       if download_image(cover_image_url, cover_path)
-        updated_content = content.sub(cover_image_match[:url], "#{@repo_url}/#{cover_path}")
+        updated_content = content.sub(cover_image_match[:url], "#{REPO_URL}/#{cover_path}")
         File.write(file_path, updated_content)
         return updated_content
       else
@@ -57,7 +55,7 @@ class ImagesProcessor
       img_url = remove_cdn($~[:url])
       ext = File.extname(URI(img_url).path)
       new_file = "file_#{index}#{ext}"
-      new_path = "#{@blog_dir}/#{file_name}/#{new_file}"
+      new_path = "#{@working_dir}/#{file_name}/#{new_file}"
 
       FileUtils.mkdir_p(File.dirname(new_path))
       if download_image(img_url, new_path)
@@ -87,23 +85,20 @@ class ImagesProcessor
     attempts = 0
 
     begin
-      uri = URI(url)
-      Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https', open_timeout: 20, read_timeout: 60) do |http|
-        request = Net::HTTP::Get.new(uri)
-        http.request(request) do |response|
-          if response.is_a?(Net::HTTPSuccess)
-            File.open(dest, 'wb') { |io| response.read_body { |chunk| io.write(chunk) } }
-            return true
-          else
-            puts "Failed to download #{url}: #{response.code} #{response.message}"
-            return false
-          end
-        end
+      response = http_client.get(url, timeout: 60)
+
+      if response.success?
+        File.open(dest, 'wb') { |file| file.write(response.body) }
+        return true
+      else
+        puts "Failed to download #{url}: #{response.code} #{response.message}"
+          return false
       end
+
     rescue StandardError => e
       attempts += 1
       puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
-      retry if attempts < max_attempts
+        retry if attempts < max_attempts
     end
 
     false

@@ -1,11 +1,43 @@
 #!/usr/bin/env ruby
 
+require 'httparty'
+require 'json'
+require 'yaml'
+
 require_relative "sync/article_sync_checker.rb"
 require_relative "sync/article_updater.rb"
 require_relative "sync/article_cleaner.rb"
 
+include ArticleSyncChecker
+include ArticleUpdater
+include ArticleCleaner
+
 force = ARGV.include?('-f') ? true : false
 
-ArticleSyncChecker.new.call
-ArticleUpdater.new.call(force)
-ArticleCleaner.new.call
+def working_dir
+  "content/blog/"
+end
+
+def http_client
+  HTTParty
+end
+
+def json_lib
+  JSON
+end
+
+def yaml_parser
+  YAML
+end
+
+def file_manager
+  File
+end
+
+def perform(force)
+  update_sync_status
+  download_new_articles(force)
+  cleanup_renamed_articles
+end
+
+perform(force)

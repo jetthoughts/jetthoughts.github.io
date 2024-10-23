@@ -1,80 +1,68 @@
-require_relative "images_processor.rb"
-require 'yaml'
-require 'json'
+require 'fileutils'
+require_relative 'images_downloader'
 
-class ArticleUpdater
+module ArticleUpdater
   JT_BLOG_HOST = 'https://jetthoughts.com/blog/'.freeze
   YAML_STATUS_FILE = 'sync_status.yml'.freeze
+  DEV_TO_API_URL = 'https://dev.to/api/articles'.freeze
 
-  def initialize(http_client: Net::HTTP, file_manager: File, yaml_parser: YAML, json_parser: JSON)
-    @http_client = http_client
-    @file_manager = file_manager
-    @yaml_parser = yaml_parser
-    @json_parser = json_parser
-  end
-
-  def call(force)
+  def download_new_articles(force = false)
     articles = force ? all_articles : unsynced_articles
 
     articles.each do |article_id, attributes|
       article_data = fetch_article(article_id)
 
       save_article_as_markdown(article_data, attributes[:slug])
-      download_images(attributes[:slug])
+      download_images(attributes[:slug], http_client)
       update_canonical_url_on_dev_to(article_id, attributes[:slug])
-      update_article_hash(article_id)
+      update_article_edited_at(article_id)
     end
   end
 
   private
 
-  def download_images(slug)
-    ImagesProcessor.new(slug).call
+  def download_images(slug, http_client)
+    ImagesDownloader.new(slug, http_client, working_dir).call
   end
 
   def sync_status
-    @yaml_parser.load_file(YAML_STATUS_FILE)
+    yaml_parser.load_file(working_dir + YAML_STATUS_FILE)
   end
 
-  def update_article_hash(article_id)
+  def update_article_edited_at(article_id)
     data = sync_status
 
     if data[article_id]
-      data[article_id][:hash] = actual_article_hash(article_id)
+      data[article_id][:edited_at] = actual_article_edited_at(article_id)
       data[article_id][:synced] = true
-      File.open(YAML_STATUS_FILE, 'w') { |f| f.write(data.to_yaml) }
-      puts "Hash for article ID #{article_id} updated successfully."
+      File.open(working_dir + YAML_STATUS_FILE, 'w') { |f| f.write(data.to_yaml) }
+      puts "Article ID: #{article_id} updated successfully."
     else
-      puts "Article ID #{article_id} not found."
+      puts "Article ID: #{article_id} not found."
     end
   end
 
-  def calculate_hash(article)
-    Digest::SHA256.hexdigest(article["created_at"] + article["edited_at"])
-  end
-
   def update_canonical_url_on_dev_to(article_id, slug)
-    uri = URI("https://dev.to/api/articles/#{article_id}")
     canonical_url = JT_BLOG_HOST + "#{slug}/"
-
-    request = @http_client::Put.new(uri, {
+    url = "#{DEV_TO_API_URL}/#{article_id}"
+    headers = {
       'api-key' => ENV['DEVTO_API_KEY'],
       'Content-Type' => 'application/json'
-    })
-    request.body = { article: { canonical_url: canonical_url } }.to_json
+    }
 
+    body = { article: { canonical_url: canonical_url } }.to_json
     max_retries = 5
     attempt = 0
 
     begin
       attempt += 1
-      response = @http_client.start(uri.host, uri.port, use_ssl: true) { |http| http.request(request) }
+      response = http_client.put(url, headers: headers, body: body)
 
-      if response.is_a?(Net::HTTPSuccess)
+      if response.success?
         puts "Update canonical_url result: #{canonical_url}\n"
         return response
       else
-        raise RuntimeError, "Failed to update canonical_url: #{response.message} (Attempt #{attempt})"
+        raise "Failed to update canonical_url: #{response.code} - #{response.message} (Attempt #{attempt})"
       end
 
     rescue StandardError => e
@@ -88,9 +76,9 @@ class ArticleUpdater
     end
   end
 
-  def actual_article_hash(article_id)
+  def actual_article_edited_at(article_id)
     article = fetch_article(article_id)
-    calculate_hash(article)
+    article['edited_at']
   end
 
   def unsynced_articles
@@ -105,11 +93,17 @@ class ArticleUpdater
     max_attempts = 5
     attempts = 0
 
-    url = URI("https://dev.to/api/articles/#{article_id}")
+    url = "#{DEV_TO_API_URL}/#{article_id}"
 
     begin
-      response = @http_client.get(url)
-      @json_parser.parse(response)
+      response = http_client.get(url)
+
+      if response.success?
+        JSON.parse(response.body)
+      else
+        raise "Failed to fetch article #{article_id}: #{response.code} - #{response.message}"
+      end
+
     rescue StandardError => e
       attempts += 1
       puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
@@ -125,7 +119,7 @@ class ArticleUpdater
 
     FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
 
-    @file_manager.write(file_name, markdown_content)
+    File.write(file_name, markdown_content)
     puts "\nArticle saved: #{file_name}"
   end
 
@@ -159,4 +153,3 @@ class ArticleUpdater
     MARKDOWN
   end
 end
-
