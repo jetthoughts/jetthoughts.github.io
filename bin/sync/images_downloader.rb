@@ -29,7 +29,7 @@ class ImagesDownloader
   end
 
   def process_cover_image(file_name, content, file_path)
-    cover_image_match = content.match(/cover_image: "(?<url>http[^\s\)]*)"/)
+    cover_image_match = content.match(/cover_image: (?<url>http[^\s\)]*)/)
 
     if cover_image_match
       cover_image_url = remove_cdn(cover_image_match[:url])

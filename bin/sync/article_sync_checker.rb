@@ -1,3 +1,5 @@
+require 'json'
+
 module ArticleSyncChecker
   USERNAME = 'jetthoughts'.freeze
   SYNC_STATUS_FILE = 'sync_status.yml'.freeze
@@ -5,7 +7,7 @@ module ArticleSyncChecker
 
   def update_sync_status
     ensure_sync_status_file_exists
-    @sync_status = load_sync_status
+    @sync_status = sync_status
     update_status(fetch_articles)
     save_sync_status
   end
@@ -13,17 +15,15 @@ module ArticleSyncChecker
   private
 
   def ensure_sync_status_file_exists
-    unless File.exist?(working_dir + SYNC_STATUS_FILE)
-      File.open(working_dir + SYNC_STATUS_FILE, 'w') { |file| file.write({}.to_yaml) }
+    sync_file_path = File.join(working_dir, SYNC_STATUS_FILE)
+
+    unless File.exist?(sync_file_path)
+      File.open(sync_file_path, 'w') { |file| file.write({}.to_yaml) }
     end
   end
 
-  def load_sync_status
-    YAML.load_file(working_dir + SYNC_STATUS_FILE) || {}
-  end
-
   def save_sync_status
-    File.open(working_dir + SYNC_STATUS_FILE, 'w') do |file|
+    File.open(File.join(working_dir, SYNC_STATUS_FILE), 'w') do |file|
       file.write(@sync_status.to_yaml)
     end
   end

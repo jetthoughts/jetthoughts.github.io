@@ -1,27 +1,26 @@
 require "json"
 require 'ostruct'
-require 'httparty'
 
 class FakeHttpClient
-  def get_articles(url, page)
+  def get_articles(url, page = 1)
     OpenStruct.new(success?: true, body: index_response)
  end
 
   def get_article(url)
     id = url.split("/").last
 
-    OpenStruct.new(success?: true, body: show_respone(id))
+    OpenStruct.new(success?: true, body: show_response(id))
   end
 
   def download(url)
-      image_response
+    image_response
   end
 
   def index_response
     File.read("test/fixtures/responses/index.json")
   end
 
-  def show_respone(id)
+  def show_response(id)
     File.read("test/fixtures/responses/#{id}.json")
   end
 
