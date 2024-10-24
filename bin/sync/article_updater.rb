@@ -30,6 +30,8 @@ module ArticleUpdater
   end
 
   def update_article_edited_at(article_id, updated_article)
+    return if updated_article.nil?
+
     data = sync_status
 
     if data[article_id]
