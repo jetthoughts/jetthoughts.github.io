@@ -3,41 +3,68 @@ require_relative 'images_downloader'
 
 module ArticleUpdater
   JT_BLOG_HOST = 'https://jetthoughts.com/blog/'.freeze
-  YAML_STATUS_FILE = 'sync_status.yml'.freeze
   DEV_TO_API_URL = 'https://dev.to/api/articles'.freeze
+  YAML_STATUS_FILE = 'sync_status.yml'.freeze
+  RETRY_CONFIG = {
+    max_attempts: 5,
+    base_delay: 2
+  }.freeze
 
   def download_new_articles(force = false)
+    raise ArgumentError, "http_client is required" if http_client.nil?
+    raise ArgumentError, "working_dir is required" if working_dir.nil?
+
     articles = force ? all_articles : unsynced_articles
 
-    articles.each do |article_id, attributes|
-      article_data = fetch_article(article_id)
+    begin
+      articles.each do |article_id, attributes|
+        article_data = fetch_article(article_id)
+        next unless article_data
 
-      save_article_as_markdown(article_data, attributes[:slug])
-      download_images(attributes[:slug], http_client)
-      updated_article = update_canonical_url_on_dev_to(article_id, attributes[:slug])
-      update_article_edited_at(article_id, updated_article)
+        save_article_as_markdown(article_data, attributes[:slug])
+        download_images(attributes[:slug], http_client, working_dir)
+        updated_article = update_canonical_url_on_dev_to(article_id, attributes[:slug])
+        next unless updated_article
+
+        update_article_edited_at(article_id, updated_article)
+      end
+
+    rescue StandardError => e
+      puts "Error processing articles: #{e.message}"
+      raise
     end
   end
 
   private
 
-  def download_images(slug, http_client)
+  def with_retries(operation:)
+    attempts = 0
+    begin
+      attempts += 1
+      yield
+    rescue StandardError => e
+      if attempts < RETRY_CONFIG[:max_attempts]
+        delay = RETRY_CONFIG[:base_delay] * attempts
+        puts "#{operation} failed, attempt #{attempts}/#{RETRY_CONFIG[:max_attempts]}. Retrying in #{delay}s..."
+        sleep(delay)
+
+        retry
+      end
+      puts "#{operation} failed after #{RETRY_CONFIG[:max_attempts]} attempts: #{e.message}"
+    end
+  end
+
+  def download_images(slug, http_client, working_dir)
     ImagesDownloader.new(slug, http_client, working_dir).call
   end
 
-  def sync_status
-    YAML.load_file(working_dir + YAML_STATUS_FILE)
-  end
-
   def update_article_edited_at(article_id, updated_article)
-    return if updated_article.nil?
-
     data = sync_status
 
     if data[article_id]
       data[article_id][:edited_at] = updated_article["edited_at"]
       data[article_id][:synced] = true
-      File.open(working_dir + YAML_STATUS_FILE, 'w') { |f| f.write(data.to_yaml) }
+      File.open(File.join(working_dir, YAML_STATUS_FILE), 'w') { |f| f.write(data.to_yaml) }
       puts "Article ID: #{article_id} updated successfully."
     else
       puts "Article ID: #{article_id} not found."
@@ -45,35 +72,21 @@ module ArticleUpdater
   end
 
   def update_canonical_url_on_dev_to(article_id, slug)
+    raise ArgumentError, "Missing dev.to api-key header" unless ENV['DEVTO_API_KEY']
+
     canonical_url = JT_BLOG_HOST + "#{slug}/"
     url = "#{DEV_TO_API_URL}/#{article_id}"
-    headers = {
-      'api-key' => ENV['DEVTO_API_KEY'],
-      'Content-Type' => 'application/json'
-    }
-
+    headers = { 'api-key' => ENV['DEVTO_API_KEY'], 'Content-Type' => 'application/json' }
     body = { article: { canonical_url: canonical_url } }.to_json
-    max_retries = 5
-    attempt = 0
 
-    begin
-      attempt += 1
+    with_retries(operation: "Updating canonical_url for article #{article_id}") do
       response = http_client.update_article(url, headers: headers, body: body)
 
       if response.success?
         puts "Update canonical_url result: #{canonical_url}\n"
-        return response.body
+        response.body
       else
-        raise "Failed to update canonical_url: #{response.code} - #{response.message} (Attempt #{attempt})"
-      end
-
-    rescue StandardError => e
-      if attempt < max_retries
-        puts "Error updating canonical_url for article #{article_id}, retrying in #{attempt * 2} seconds..."
-        sleep(attempt * 2)
-        retry
-      else
-        puts "Failed to update canonical_url for article #{article_id} after #{max_retries} attempts: #{e.message}"
+        raise "Failed to update canonical_url: #{response.code} - #{response.message}"
       end
     end
   end
@@ -87,23 +100,15 @@ module ArticleUpdater
   end
 
   def fetch_article(article_id)
-    max_attempts = 5
-    attempts = 0
-
     url = "#{DEV_TO_API_URL}/#{article_id}"
 
-    begin
+    with_retries(operation: "Fetching article #{article_id}") do
       response = http_client.get_article(url)
       if response.success?
         JSON.parse(response.body)
       else
         raise "Failed to fetch article #{article_id}: #{response.code} - #{response.message}"
       end
-
-    rescue StandardError => e
-      attempts += 1
-      puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
-      retry if attempts < max_attempts
     end
   end
 
@@ -113,39 +118,41 @@ module ArticleUpdater
     dir_path = "#{working_dir}#{slug}"
     file_name = "#{dir_path}/index.md"
 
-    FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
-
-    File.write(file_name, markdown_content)
-    puts "\nArticle saved: #{file_name}"
+    begin
+      FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
+      File.write(file_name, markdown_content)
+      puts "\nArticle saved: #{file_name}"
+    rescue StandardError => e
+      puts "Error saving article #{slug}: #{e.message}"
+      raise
+    end
   end
 
   def generate_markdown(article_data, slug)
     cover_image = article_data['cover_image']
-    metatags_image = ""
+    metatags_image = {}
 
     unless cover_image.to_s.empty?
-      metatags_image = <<~METATAG
-      metatags:
-        image: cover#{File.extname(cover_image)}
-      METATAG
+      metatags_image = {
+        'metatags' => {
+          'image' => "cover#{File.extname(cover_image)}"
+        }
+      }
     end
 
-    <<~MARKDOWN
-    ---
-    dev_to_id: #{article_data['id']}
-    title: "#{article_data['title']}"
-    description: #{article_data['description'].to_json}
-    created_at: "#{article_data['created_at']}"
-    edited_at: "#{article_data['edited_at']}"
-    draft: false
-    tags:
-    #{article_data['tags'].map { |tag| "  - #{tag}" }.join("\n")}
-    canonical_url: "#{article_data['canonical_url']}"
-    cover_image: "#{cover_image}"
-    slug: "#{slug}"
-    #{metatags_image.strip}
-    ---
-    #{article_data['body_markdown']}
-    MARKDOWN
+    article_hash = {
+      'dev_to_id' => article_data['id'],
+      'title' => article_data['title'],
+      'description' => article_data['description'],
+      'created_at' => article_data['created_at'],
+      'edited_at' => article_data['edited_at'],
+      'draft' => false,
+      'tags' => article_data['tags'],
+      'canonical_url' => article_data['canonical_url'],
+      'cover_image' => cover_image,
+      'slug' => slug
+    }.merge(metatags_image)
+
+    "#{article_hash.to_yaml(line_width: -1)}---\n#{article_data['body_markdown']}"
   end
 end

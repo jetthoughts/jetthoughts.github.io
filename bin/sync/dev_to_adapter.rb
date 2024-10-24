@@ -1,3 +1,5 @@
+require 'httparty'
+
 class DevToAdapter
   BASE_URL = 'https://dev.to/api'
 

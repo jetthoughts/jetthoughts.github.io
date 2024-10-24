@@ -13,6 +13,7 @@ class SyncWithDevToTest < Minitest::Test
   }
 
   def setup
+    ENV["DEVTO_API_KEY"] = "fake_api_key"
     FileUtils.mkdir_p(WORKING_DIR)
   end
 
@@ -37,7 +38,7 @@ class SyncWithDevToTest < Minitest::Test
         synced: true
       }
     }
-    File.open("#{WORKING_DIR}/#{SYNC_STATUS_FILE}", 'w') { |file| file.write(articles.to_yaml) }
+    File.open("#{WORKING_DIR}#{SYNC_STATUS_FILE}", 'w') { |file| file.write(articles.to_yaml) }
   end
 
   def change_article_slug
@@ -53,17 +54,17 @@ class SyncWithDevToTest < Minitest::Test
         synced: true
       }
     }
-    File.open("#{WORKING_DIR}/#{SYNC_STATUS_FILE}", 'w') { |file| file.write(articles.to_yaml) }
+    File.open("#{WORKING_DIR}#{SYNC_STATUS_FILE}", 'w') { |file| file.write(articles.to_yaml) }
   end
 
   def test_sync_script_create_yaml_status_file_on_first_run
-    refute File.exist?("#{WORKING_DIR}/#{SYNC_STATUS_FILE}")
+    refute File.exist?("#{WORKING_DIR}#{SYNC_STATUS_FILE}")
     run_sync
-    assert File.exist?("#{WORKING_DIR}/#{SYNC_STATUS_FILE}")
+    assert File.exist?("#{WORKING_DIR}#{SYNC_STATUS_FILE}")
   end
 
   def sync_file_content
-    YAML.load(File.read("#{WORKING_DIR}/#{SYNC_STATUS_FILE}"))
+    YAML.safe_load(File.read("#{WORKING_DIR}#{SYNC_STATUS_FILE}"), permitted_classes: [Time, Symbol])
   end
 
   def test_sync_script_fill_yaml_status_file
@@ -121,19 +122,19 @@ class SyncWithDevToTest < Minitest::Test
     markdown_file = "#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md"
     content = File.read(markdown_file)
 
-    assert_includes content, 'title: "Recent Searches & Sorting Hashes: How They are Connected"'
-    assert_includes content, 'description: "In one of the applications, that we are developing, we needed to implement the storing of 10 last..."'
+    assert_includes content, "title: 'Recent Searches & Sorting Hashes: How They are Connected'"
+    assert_includes content, "description: In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
     assert_includes content, 'tags:'
-    assert_includes content, '  - ruby'
-    assert_includes content, '  - rails'
-    assert_includes content, '  - development'
+    assert_includes content, '- ruby'
+    assert_includes content, '- rails'
+    assert_includes content, '- development'
     assert_includes content, 'cover_image:'
   end
 
   def test_sync_add_article_markdown
     run_sync
 
-    markdown_file = "#{WORKING_DIR}/#{FAKE_API_ARTICLE_1[:slug]}/index.md"
+    markdown_file = "#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md"
     content = File.read(markdown_file)
 
     assert_includes content, 'In one of the applications, that we are developing'
