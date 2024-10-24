@@ -1,5 +1,5 @@
 module ArticleSyncChecker
-  API_URL = 'https://dev.to/api/articles?username=jetthoughts'.freeze
+  USERNAME = 'jetthoughts'.freeze
   SYNC_STATUS_FILE = 'sync_status.yml'.freeze
   USELESS_WORDS = %w[and the a but to is so].freeze
 
@@ -13,24 +13,23 @@ module ArticleSyncChecker
   private
 
   def ensure_sync_status_file_exists
-    unless file_manager.exist?(working_dir + SYNC_STATUS_FILE)
-      file_manager.open(working_dir + SYNC_STATUS_FILE, 'w') { |file| file.write({}.to_yaml) }
+    unless File.exist?(working_dir + SYNC_STATUS_FILE)
+      File.open(working_dir + SYNC_STATUS_FILE, 'w') { |file| file.write({}.to_yaml) }
     end
   end
 
   def load_sync_status
-    yaml_parser.load_file(working_dir + SYNC_STATUS_FILE) || {}
+    YAML.load_file(working_dir + SYNC_STATUS_FILE) || {}
   end
 
   def save_sync_status
-    file_manager.open(working_dir + SYNC_STATUS_FILE, 'w') do |file|
+    File.open(working_dir + SYNC_STATUS_FILE, 'w') do |file|
       file.write(@sync_status.to_yaml)
     end
   end
 
   def fetch_articles
-    uri = URI(API_URL + "&per_page=#{rand(999..9999)}") # hack to avoid cached API response
-    response = http_client.get(uri)
+    response = http_client.get_articles(USERNAME, 0)
     JSON.parse(response.body)
   end
 

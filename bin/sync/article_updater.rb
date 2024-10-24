@@ -14,8 +14,8 @@ module ArticleUpdater
 
       save_article_as_markdown(article_data, attributes[:slug])
       download_images(attributes[:slug], http_client)
-      update_canonical_url_on_dev_to(article_id, attributes[:slug])
-      update_article_edited_at(article_id)
+      updated_article = update_canonical_url_on_dev_to(article_id, attributes[:slug])
+      update_article_edited_at(article_id, updated_article)
     end
   end
 
@@ -26,14 +26,14 @@ module ArticleUpdater
   end
 
   def sync_status
-    yaml_parser.load_file(working_dir + YAML_STATUS_FILE)
+    YAML.load_file(working_dir + YAML_STATUS_FILE)
   end
 
-  def update_article_edited_at(article_id)
+  def update_article_edited_at(article_id, updated_article)
     data = sync_status
 
     if data[article_id]
-      data[article_id][:edited_at] = actual_article_edited_at(article_id)
+      data[article_id][:edited_at] = updated_article["edited_at"]
       data[article_id][:synced] = true
       File.open(working_dir + YAML_STATUS_FILE, 'w') { |f| f.write(data.to_yaml) }
       puts "Article ID: #{article_id} updated successfully."
@@ -56,11 +56,11 @@ module ArticleUpdater
 
     begin
       attempt += 1
-      response = http_client.put(url, headers: headers, body: body)
+      response = http_client.update_article(url, headers: headers, body: body)
 
       if response.success?
         puts "Update canonical_url result: #{canonical_url}\n"
-        return response
+        return response.body
       else
         raise "Failed to update canonical_url: #{response.code} - #{response.message} (Attempt #{attempt})"
       end
@@ -74,11 +74,6 @@ module ArticleUpdater
         puts "Failed to update canonical_url for article #{article_id} after #{max_retries} attempts: #{e.message}"
       end
     end
-  end
-
-  def actual_article_edited_at(article_id)
-    article = fetch_article(article_id)
-    article['edited_at']
   end
 
   def unsynced_articles
@@ -96,8 +91,7 @@ module ArticleUpdater
     url = "#{DEV_TO_API_URL}/#{article_id}"
 
     begin
-      response = http_client.get(url)
-
+      response = http_client.get_article(url)
       if response.success?
         JSON.parse(response.body)
       else
@@ -114,7 +108,7 @@ module ArticleUpdater
   def save_article_as_markdown(article_data, slug)
     markdown_content = generate_markdown(article_data, slug)
 
-    dir_path = "content/blog/#{slug}"
+    dir_path = "#{working_dir}#{slug}"
     file_name = "#{dir_path}/index.md"
 
     FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)

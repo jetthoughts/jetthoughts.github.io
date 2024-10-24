@@ -8,9 +8,9 @@ module ArticleCleaner
     slugs = load_slugs_from_yaml
 
     Dir.glob("#{working_dir}/*").each do |folder_path|
-      next unless file_manager.directory?(folder_path) && File.exist?("#{folder_path}/#{ARTICLE_FILE}")
+      next unless File.directory?(folder_path) && File.exist?("#{folder_path}/#{ARTICLE_FILE}")
 
-      folder_name = file_manager.basename(folder_path)
+      folder_name = File.basename(folder_path)
       unless slugs.include?(folder_name)
         FileUtils.rm_rf(folder_path)
         puts "Deleted folder: #{folder_name}"
@@ -21,7 +21,7 @@ module ArticleCleaner
   private
 
   def load_slugs_from_yaml
-    yaml_data = yaml_parser.load_file(working_dir + SYNC_STATUS_FILE)
+    yaml_data = YAML.load_file(working_dir + SYNC_STATUS_FILE)
     yaml_data.values.map { |article| article[:slug] }
   end
 end

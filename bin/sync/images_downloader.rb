@@ -12,13 +12,14 @@ class ImagesDownloader
   end
 
   def call
-    process_blog("#{@working_dir}/#{@slug}/index.md")
+    process_blog("#{@working_dir}#{@slug}/index.md")
   end
 
   private
 
   def process_blog(file_path)
     file_name = File.basename(File.dirname(file_path))
+    puts file_path
     content = File.read(file_path)
 
     content = process_cover_image(file_name, content, file_path)
@@ -33,7 +34,7 @@ class ImagesDownloader
     if cover_image_match
       cover_image_url = remove_cdn(cover_image_match[:url])
       ext = File.extname(URI(cover_image_url).path)
-      cover_path = "#{@working_dir}/#{file_name}/cover#{ext}"
+      cover_path = "#{@working_dir}#{file_name}/cover#{ext}"
 
       FileUtils.mkdir_p(File.dirname(cover_path))
       if download_image(cover_image_url, cover_path)
@@ -55,7 +56,7 @@ class ImagesDownloader
       img_url = remove_cdn($~[:url])
       ext = File.extname(URI(img_url).path)
       new_file = "file_#{index}#{ext}"
-      new_path = "#{@working_dir}/#{file_name}/#{new_file}"
+      new_path = "#{@working_dir}#{file_name}/#{new_file}"
 
       FileUtils.mkdir_p(File.dirname(new_path))
       if download_image(img_url, new_path)
@@ -85,14 +86,15 @@ class ImagesDownloader
     attempts = 0
 
     begin
-      response = http_client.get(url, timeout: 60)
+      response = @http_client.download(url)
 
       if response.success?
         File.open(dest, 'wb') { |file| file.write(response.body) }
+        puts "#{dest} downloaded"
         return true
       else
         puts "Failed to download #{url}: #{response.code} #{response.message}"
-          return false
+        return false
       end
 
     rescue StandardError => e
@@ -104,3 +106,4 @@ class ImagesDownloader
     false
   end
 end
+
