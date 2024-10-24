@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative "sync/sync.rb"
+
+force = ARGV.include?('-f') ? true : false
+Sync.perform(force)

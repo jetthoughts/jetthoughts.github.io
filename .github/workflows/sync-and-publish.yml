@@ -33,9 +33,9 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]
           then
-            bin/from_devto -f
+            bin/sync_with_devto -f
           else
-            bin/from_devto
+            bin/sync_with_devto
           fi
 
           bin/upload_assets_to_github
