@@ -1,7 +1,7 @@
 require 'fileutils'
 require 'uri'
 
-IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?:\/\/[^\s\)]+)\)}
+IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?:\/\/[^\s\)]+)\)}.freeze
 REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master'.freeze
 
 class ImagesDownloader
