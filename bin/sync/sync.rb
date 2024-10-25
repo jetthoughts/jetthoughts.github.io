@@ -17,8 +17,8 @@ class Sync
     @working_dir = working_dir
   end
 
-  def self.perform(force = false, http_client: DevToAdapter.new, working_dir: "content/blog/")
-    new(http_client: http_client, working_dir: working_dir).perform(force)
+  def self.perform(force = false, **options)
+    new(**options).perform(force)
   end
 
   def sync_status
