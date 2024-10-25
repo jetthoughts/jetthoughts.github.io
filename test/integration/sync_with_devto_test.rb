@@ -25,7 +25,7 @@ class SyncWithDevToTest < Minitest::Test
     FileUtils.rm_rf(Dir.glob(WORKING_DIR))
   end
 
-  def prepare_sync_file_with_unsinced_article
+  def prepare_sync_file_with_unsynced_article
     articles = {
       1879395 => {
         edited_at: "2023-10-23T00:00:00Z",
