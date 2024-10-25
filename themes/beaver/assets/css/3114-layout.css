@@ -2250,16 +2250,9 @@ span.pp-accordion-button-icon {
 }
 
 @media (max-width: 860px) {
-  /* .post-image { */
-  /*   display: none; */
-  /* } */
-  .post-image {
-    margin-right: 20px;
-    min-width: 80px;
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-  }
+   .post-image {
+     display: none;
+   }
 }
 
 .post-image img {
