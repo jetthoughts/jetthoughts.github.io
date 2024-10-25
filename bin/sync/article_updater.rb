@@ -1,14 +1,13 @@
 require 'fileutils'
+require_relative 'retryable'
 require_relative 'images_downloader'
 
 module ArticleUpdater
   JT_BLOG_HOST = 'https://jetthoughts.com/blog/'.freeze
   DEV_TO_API_URL = 'https://dev.to/api/articles'.freeze
   YAML_STATUS_FILE = 'sync_status.yml'.freeze
-  RETRY_CONFIG = {
-    max_attempts: 5,
-    base_delay: 2
-  }.freeze
+
+  include Retryable
 
   def download_new_articles(force = false)
     raise ArgumentError, "http_client is required" if http_client.nil?
@@ -36,23 +35,6 @@ module ArticleUpdater
   end
 
   private
-
-  def with_retries(operation:)
-    attempts = 0
-    begin
-      attempts += 1
-      yield
-    rescue StandardError => e
-      if attempts < RETRY_CONFIG[:max_attempts]
-        delay = RETRY_CONFIG[:base_delay] * attempts
-        puts "#{operation} failed, attempt #{attempts}/#{RETRY_CONFIG[:max_attempts]}. Retrying in #{delay}s..."
-        sleep(delay)
-
-        retry
-      end
-      puts "#{operation} failed after #{RETRY_CONFIG[:max_attempts]} attempts: #{e.message}"
-    end
-  end
 
   def download_images(slug, http_client, working_dir)
     ImagesDownloader.new(slug, http_client, working_dir).call

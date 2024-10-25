@@ -85,7 +85,7 @@ class SyncWithDevToTest < Minitest::Test
   end
 
   def test_sync_only_unsynced_articles
-    prepare_sync_file_with_unsinced_article
+    prepare_sync_file_with_unsynced_article
 
     assert_equal sync_file_content, {
       1879395 => {

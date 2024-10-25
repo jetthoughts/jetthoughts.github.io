@@ -1,10 +1,13 @@
 require 'fileutils'
 require 'uri'
+require_relative 'retryable'
 
 IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?:\/\/[^\s\)]+)\)}.freeze
 REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master'.freeze
 
 class ImagesDownloader
+  include Retryable
+
   def initialize(slug, http_client, working_dir)
     @slug = slug
     @working_dir = working_dir
@@ -82,10 +85,7 @@ class ImagesDownloader
   end
 
   def download_image(url, dest)
-    max_attempts = 5
-    attempts = 0
-
-    begin
+    with_retries(operation: "Downloading image from #{url}") do
       response = @http_client.download(url)
 
       if response.success?
@@ -93,16 +93,9 @@ class ImagesDownloader
         puts "#{dest} downloaded"
         return true
       else
-        puts "Failed to download #{url}: #{response.code} #{response.message}"
-        return false
+        raise "Failed to download #{url}: #{response.code} #{response.message}"
       end
-
-    rescue StandardError => e
-      attempts += 1
-      puts "Attempt #{attempts} of #{max_attempts} failed with message: #{e.message}"
-        retry if attempts < max_attempts
     end
-
     false
   end
 end
