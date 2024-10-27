@@ -59,7 +59,7 @@ $dynamicCSS586
 
                   <div class="blog-post">
                     <div class="post-image">
-                      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 150 "height" 150) }}
+                      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
                     </div>
                     <div class="post-content">
                       <h2 class="post-title">{{ .Title }}</h2>
@@ -69,6 +69,7 @@ $dynamicCSS586
                         <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
                         {{ end }}
                       </div>
+                      <div>{{ .Params.description }}</div>
                     </div>
                   </div>
 
