@@ -1,14 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="45" height="36.537" viewBox="0 0 45 36.537">
-    <g transform="translate(-1 -5.635)">
-        <path class="a" d="M9.893,8,2,21.672H17.787Z" transform="translate(0 5.794)"/>
-        <path class="a" d="M5.464,27.672H21.251L13.358,14Z" transform="translate(4.341 13.328)"/>
-        <path class="b" d="M17.787,14H2L9.893,27.672,17.787,14Z" transform="translate(0 13.5)"/>
-        <path class="b" d="M8.928,14Z" transform="translate(8.746 13.411)"/>
-        <path class="b" d="M14.842,14H8.928l7.893,13.672L24.715,14H19.508" transform="translate(8.682 13.328)"/>
-        <path class="b" d="M18.62,12.557,21.251,8H5.464l7.893,13.672,2.631-4.558" transform="translate(4.341 5.794)"/>
-        <g transform="translate(29.213 7)">
-            <path class="c" d="M24.918,16.672h2L19.021,3l-.865,1.5" transform="translate(-11.128 -3)"/>
-            <path class="b" d="M22.965,3,15.072,16.672H30.859" transform="translate(-15.072 -3)"/>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="36.537">
+    <g fill="none" stroke="#1a8cff" stroke-linecap="round" stroke-width="1.5">
+        <path d="M8.893 8.159 1 21.831h15.787Z"/>
+        <path d="M8.805 35.365h15.787l-7.893-13.672Z"/>
+        <path d="M16.787 21.865H1l7.893 13.672 7.894-13.672ZM16.674 21.776Z"/>
+        <path d="M22.524 21.693H16.61l7.893 13.672 7.894-13.672H27.19"/>
+        <path d="m21.961 12.716 2.631-4.557H8.805l7.893 13.672 2.631-4.558M42.003 15.037h2L36.106 1.365l-.865 1.5"/>
+        <path d="m36.106 1.365-7.893 13.672H44"/>
     </g>
 </svg>
