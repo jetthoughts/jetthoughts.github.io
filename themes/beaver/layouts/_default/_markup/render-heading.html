@@ -1,1 +1,1 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading-component">{{ .Text | safeHTML }} <a href="#{{ .Anchor | safeURL }}" class="heading-self-link">#</a></h{{ .Level }}>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading-component">{{ .Text | safeHTML }} <a href="#{{ .Anchor | safeURL }}" class="heading-self-link" aria-label="Link to {{ .Text }}" title="Link to this section">#</a></h{{ .Level }}>
