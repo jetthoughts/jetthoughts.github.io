@@ -7,7 +7,8 @@
 }
 
 .footer-component .logo {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     display: block;
     margin-bottom: 16px;
 }
@@ -15,12 +16,14 @@
 .footer-component .footer-container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-component .flex-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .footer-component .headline {
@@ -37,11 +40,6 @@
 
 .footer-component ul li {
     margin: 12px 0;
-}
-
-.footer-component a {
-    color: white;
-    text-decoration: none;
 }
 
 .footer-component .flex-container .flex1 {
@@ -61,11 +59,14 @@
     .footer-component .flex-container {
         flex-direction: row;
     }
+    .footer-component .footer-container {
+        padding: 0;
+    }
 }
 
 
 
-.footer-component li a strong {
+.footer-component .special {
     color: #fff;
     background-color: #1a8cff;
     border-radius: 10px;
@@ -73,10 +74,12 @@
     margin-left: 5px;
     font-size: smaller;
     padding: 2px 4px;
+    font-weight: bold;
 }
 
 .footer-component a {
-    color: #969798
+    color: #969798;
+    text-decoration: none;
 }
 
 .footer-component a:hover {
@@ -91,6 +94,7 @@
 .footer-component .footer-bottom {
     text-align: center;
     margin-top: 60px;
+    padding: 0 20px;
 }
 
 .footer-component .social-icons a {
