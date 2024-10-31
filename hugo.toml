@@ -228,7 +228,7 @@ disableKinds = []
   url = "/free-consultation/"
   weight = 30
 [[menu.company]]
-  name = "Careers <strong>we’re hiring</strong>"
+  name = "Careers <b class=\"special\">we’re hiring</b>"
   url = "/careers/"
   weight = 40
 

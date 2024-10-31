@@ -3,7 +3,8 @@
 
 {{ $CSS := slice
    (resources.Get "css/companies.css")
-   | resources.Concat "css/_critical.css" | postCSS  | minify | fingerprint | resources.PostProcess
+   (resources.Get "css/footer.css")
+| resources.Concat "css/_critical.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
