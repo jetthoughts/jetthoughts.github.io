@@ -10,49 +10,49 @@
                 <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
             </div>
             <div class="flex1"></div>
-            <div class="services flex1">
+            <nav class="services flex1" aria-label="Services navigation">
                 <div class="headline">Services</div>
                 <ul>
                     {{ range .Site.Menus.services }}
                     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
-            </div>
-            <div class="company flex1">
+            </nav>
+            <nav class="company flex1" aria-label="Company navigation">
                 <div class="headline">Company</div>
                 <ul>
                     {{ range .Site.Menus.company }}
                     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
-            </div>
-            <div class="resources flex1">
+            </nav>
+            <nav class="resources flex1" aria-label="Resources navigation">
                 <div class="headline">Resources</div>
                 <ul>
                     {{ range .Site.Menus.resources }}
                     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}
                 </ul>
-            </div>
+            </nav>
         </div>
     </div>
 
     <div class="footer-bottom">
 
-        <p class="social-icons">
-            <a href="https://www.facebook.com/jetthoughts/" target="_blank" title="Facebook" aria-label="Facebook" role="button" rel="noopener noreferrer external">
+        <nav class="social-icons" aria-label="Social media">
+            <a href="https://www.facebook.com/jetthoughts/" target="_blank" title="Facebook" aria-label="Facebook" rel="noopener noreferrer external">
                 {{ partial "svg" "theme/mini/facebook" }}
             </a>
-            <a href="https://twitter.com/jetthoughts/" target="_blank" title="Twitter" aria-label="Twitter" role="button" rel="noopener noreferrer external">
+            <a href="https://twitter.com/jetthoughts/" target="_blank" title="Twitter" aria-label="Twitter" rel="noopener noreferrer external">
                 {{ partial "svg" "theme/mini/x" }}
             </a>
-            <a href="https://www.linkedin.com/company/jetthoughts/" target="_blank" title="LinkedIn" aria-label="LinkedIn" role="button" rel="noopener noreferrer external">
+            <a href="https://www.linkedin.com/company/jetthoughts/" target="_blank" title="LinkedIn" aria-label="LinkedIn" rel="noopener noreferrer external">
                 {{ partial "svg" "theme/mini/linkedin" }}
             </a>
-            <a href="https://github.com/jetthoughts/" target="_blank" title="Github" aria-label="Github" role="button" rel="noopener noreferrer external">
+            <a href="https://github.com/jetthoughts/" target="_blank" title="Github" aria-label="Github" rel="noopener noreferrer external">
                 {{ partial "svg" "theme/mini/github" }}
             </a>
-        </p>
+        </nav>
         <div>{{ .Site.Params.copyright }} <a href="{{ relURL "privacy-policy/" }}">Privacy Policy</a></div>
     </div>
 </footer>
