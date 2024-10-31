@@ -1,13 +1,5 @@
 {{ define "header" }}
 {{ partial "header/critical/homepage.html" . }}
-
-{{ $CSS := slice
-   (resources.Get "css/companies.css")
-   (resources.Get "css/footer.css")
-| resources.Concat "css/_critical.css" | postCSS  | minify | fingerprint | resources.PostProcess
-}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 
 {{ define "footer" }}
@@ -28,6 +20,8 @@ function loadCSS(url) {
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 
 {{ $nonCriticalCSS := slice
+   (resources.Get "css/companies.css")
+   (resources.Get "css/footer.css")
    (resources.Get "css/homepage.css")
    $dynamicCSS
    (resources.Get "css/590-layout.css")
