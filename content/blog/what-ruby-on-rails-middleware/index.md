@@ -3,7 +3,7 @@ dev_to_id: 1277349
 title: "What is Ruby on Rails Middleware."
 description: "The middleware component sits between the client and the server, processing inbound requests and..."
 created_at: "2022-11-29T17:08:51Z"
-edited_at: "2024-11-01T17:09:24Z"
+edited_at: "2024-11-01T18:09:17Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/what-ruby-on-rails-middleware/"

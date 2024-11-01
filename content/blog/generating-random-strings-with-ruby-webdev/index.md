@@ -3,7 +3,7 @@ dev_to_id: 1103639
 title: "Generating random strings with Ruby"
 description: "When you need to generate a random alphanumeric string of a specified length in ruby you have a..."
 created_at: "2022-06-03T06:57:33Z"
-edited_at: "2024-11-01T17:09:56Z"
+edited_at: "2024-11-01T18:09:49Z"
 draft: false
 tags: ["ruby", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/generating-random-strings-with-ruby-webdev/"

@@ -3,7 +3,7 @@ dev_to_id: 1853621
 title: "How to have a clean CSS structure with RSCSS/ITCSS"
 description: "Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take..."
 created_at: "2024-05-15T07:45:28Z"
-edited_at: "2024-11-01T17:07:34Z"
+edited_at: "2024-11-01T18:07:32Z"
 draft: false
 tags: ["css", "rscss", "frontend", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-have-clean-css-structure-with-rscssitcss-rscss/"

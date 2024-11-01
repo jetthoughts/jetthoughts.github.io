@@ -3,7 +3,7 @@ dev_to_id: 1454204
 title: "How a large transaction can be a source of DB deadlocks and how this can be fixed."
 description: "Recently in a project, we encountered the fact that sometimes we had a DB Deadlocks error. After..."
 created_at: "2023-05-01T17:46:03Z"
-edited_at: "2024-11-01T17:09:18Z"
+edited_at: "2024-11-01T18:09:11Z"
 draft: false
 tags: ["ruby", "database", "webdev", "programming"]
 canonical_url: "https://jetthoughts.com/blog/how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database/"

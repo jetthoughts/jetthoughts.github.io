@@ -3,7 +3,7 @@ dev_to_id: 1853478
 title: "Why is it hard to find a great developer on Upwork and other freelance platforms?"
 description: "Finding good developers is a challenge. Nowadays, professionals are rare. Not all developers get to..."
 created_at: "2024-05-15T06:10:42Z"
-edited_at: "2024-11-01T17:08:01Z"
+edited_at: "2024-11-01T18:07:57Z"
 draft: false
 tags: ["senior", "freelance", "recruiting"]
 canonical_url: "https://jetthoughts.com/blog/why-it-hard-find-great-developer-on-upwork-other-freelance-platforms-senior/"

@@ -3,7 +3,7 @@ dev_to_id: 1852632
 title: "Simple Lead Generation Tactics"
 description: "How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build..."
 created_at: "2024-05-14T12:48:39Z"
-edited_at: "2024-11-01T17:08:29Z"
+edited_at: "2024-11-01T18:08:24Z"
 draft: false
 tags: ["startup", "sails", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/simple-lead-generation-tactics-startup-sails/"
