@@ -90,7 +90,7 @@ class ImagesDownloader
 
       if response.success?
         File.binwrite(dest, response.body)
-        puts "#{dest} downloaded"
+        puts "#{dest} downloaded from #{url}"
         return true
       else
         raise "Failed to download #{url}: #{response.code} #{response.message}"

@@ -10,7 +10,7 @@ tags:
 - rails
 - programming
 - development
-canonical_url: https://jtway.co/enum-validation-in-ruby-on-rails-7-1-285762a64582
+canonical_url: https://jetthoughts.com/blog/enum-validation-in-ruby-on-rails-71/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/enum-validation-in-ruby-on-rails-71/cover.png
 slug: enum-validation-in-ruby-on-rails-71
 metatags:
