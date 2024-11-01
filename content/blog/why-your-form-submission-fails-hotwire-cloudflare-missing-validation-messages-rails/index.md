@@ -3,7 +3,7 @@ dev_to_id: 2024297
 title: "Why Your Form Submission Fails: Hotwire/Turbo 1.x, Cloudflare, and Missing Validation Messages"
 description: "Recently, we encountered a bug in our application. A user reported that after submitting a form,..."
 created_at: "2024-10-03T12:16:04Z"
-edited_at: "2024-11-01T14:04:05Z"
+edited_at: "2024-11-01T14:26:59Z"
 draft: false
 tags: ["rails", "hotwire", "proxy", "challenge"]
 canonical_url: "https://jetthoughts.com/blog/why-your-form-submission-fails-hotwire-cloudflare-missing-validation-messages-rails/"

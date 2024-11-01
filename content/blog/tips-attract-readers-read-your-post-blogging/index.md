@@ -3,7 +3,7 @@ dev_to_id: 1852562
 title: "Tips to attract readers to read your post"
 description: "Do you know how to keep readers’ attention? We had been experimenting with different ways to make..."
 created_at: "2024-05-14T11:25:32Z"
-edited_at: "2024-11-01T13:31:18Z"
+edited_at: "2024-11-01T14:15:11Z"
 draft: false
 tags: ["blogging", "tips", "writing"]
 canonical_url: "https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging/"

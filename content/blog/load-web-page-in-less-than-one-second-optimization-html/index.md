@@ -3,7 +3,7 @@ dev_to_id: 1853553
 title: "Load web page in less than one second"
 description: "How to improve the website load time without much effort? What optimizations and improvements can..."
 created_at: "2024-05-15T07:04:49Z"
-edited_at: "2024-11-01T13:28:43Z"
+edited_at: "2024-11-01T14:12:59Z"
 draft: false
 tags: ["optimization", "html", "frontend", "webdev"]
 canonical_url: "https://jetthoughts.com/blog/load-web-page-in-less-than-one-second-optimization-html/"

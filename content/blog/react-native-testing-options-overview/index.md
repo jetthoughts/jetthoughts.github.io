@@ -3,7 +3,7 @@ dev_to_id: 1853475
 title: "React Native Testing Options Overview"
 description: "After investigating 100 articles about testing React Native applications I detected 2 main methods of..."
 created_at: "2024-05-15T06:05:38Z"
-edited_at: "2024-11-01T13:29:37Z"
+edited_at: "2024-11-01T14:13:38Z"
 draft: false
 tags: ["testing", "react", "jest", "detox"]
 canonical_url: "https://jetthoughts.com/blog/react-native-testing-options-overview/"

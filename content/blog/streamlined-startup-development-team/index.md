@@ -3,7 +3,7 @@ dev_to_id: 1943717
 title: "Streamlined Startup Development Team"
 description: "Starting a new venture is hard, especially for non-tech founders. Finding the right remote developers..."
 created_at: "2024-08-01T13:10:25Z"
-edited_at: "2024-11-01T14:05:36Z"
+edited_at: "2024-11-01T14:28:34Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/streamlined-startup-development-team/"

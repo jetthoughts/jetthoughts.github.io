@@ -3,7 +3,7 @@ dev_to_id: 1852950
 title: "Enum validation in Ruby on Rails 7.1"
 description: "The latest version of Rails 7.1 introduces the ability to validate enums, enhancing data integrity..."
 created_at: "2024-05-14T17:00:00Z"
-edited_at: "2024-11-01T13:29:55Z"
+edited_at: "2024-11-01T14:13:54Z"
 draft: false
 tags: ["ruby", "rails", "changelog", "development"]
 canonical_url: "https://jetthoughts.com/blog/enum-validation-in-ruby-on-rails-71/"
