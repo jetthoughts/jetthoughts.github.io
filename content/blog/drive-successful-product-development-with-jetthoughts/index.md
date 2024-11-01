@@ -3,7 +3,7 @@ dev_to_id: 2016117
 title: Drive Successful Product Development with JetThoughts
 description: Welcome to the world of product development, where innovation meets strategy! In today's fast-paced...
 created_at: '2024-09-26T15:47:15Z'
-edited_at: '2024-11-01T13:21:47Z'
+edited_at: '2024-11-01T14:05:51Z'
 draft: false
 tags:
 - product

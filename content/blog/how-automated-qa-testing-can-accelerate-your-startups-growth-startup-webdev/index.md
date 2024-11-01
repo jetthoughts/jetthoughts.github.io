@@ -3,7 +3,7 @@ dev_to_id: 1943564
 title: How Automated QA Testing Can Accelerate Your Startup's Growth
 description: In the fast-paced world of startups, maintaining top software quality is key to growth and success....
 created_at: '2024-08-01T12:00:51Z'
-edited_at: '2024-11-01T13:22:48Z'
+edited_at: '2024-11-01T14:06:12Z'
 draft: false
 tags:
 - startup

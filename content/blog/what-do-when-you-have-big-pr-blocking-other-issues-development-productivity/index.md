@@ -3,7 +3,7 @@ dev_to_id: 1997076
 title: What to Do When You Have a Big PR Blocking Other Issues
 description: Sometimes, despite your best efforts, you end up with a large pull request (PR) that blocks other...
 created_at: '2024-09-11T16:24:29Z'
-edited_at: '2024-11-01T13:22:13Z'
+edited_at: '2024-11-01T14:05:57Z'
 draft: false
 tags:
 - development

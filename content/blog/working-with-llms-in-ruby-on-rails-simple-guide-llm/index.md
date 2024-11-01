@@ -3,7 +3,7 @@ dev_to_id: 1978541
 title: 'Working with LLMs in Ruby on Rails: A Simple Guide'
 description: Why You Need to Work with LLMs Today   Large Language Models (LLMs) are reshaping how we...
 created_at: '2024-08-29T07:34:43Z'
-edited_at: '2024-11-01T13:22:24Z'
+edited_at: '2024-11-01T14:06:00Z'
 draft: false
 tags:
 - llm

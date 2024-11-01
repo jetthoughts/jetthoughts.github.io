@@ -1,23 +1,21 @@
 ---
-dev_to_id: 1880471
+dev_to_id: 1880470
 title: Jekyll + GitHub Pages + Forestry.io
 description: I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my...
-created_at: '2024-06-07T13:36:24Z'
-edited_at: '2024-11-01T14:06:41Z'
+created_at: '2024-06-07T13:36:23Z'
+edited_at: '2024-06-07T13:44:07Z'
 draft: false
 tags:
 - jekyl
 - github
 - tutorial
-canonical_url: https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jekyll-github-pages-forestryio-jekyl/cover.jpeg
+canonical_url: https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl
+cover_image:
 slug: jekyll-github-pages-forestryio-jekyl
-metatags:
-  image: cover.jpeg
 ---
 I’ve recently migrated the [jetthoughts.com](https://www.jetthoughts.com/) website on [Jekyll](https://jekyllrb.com/) to [Forestry.io](https://forestry.io/). I’d like to share my process with you, as well as a few tips about building a Jekyll site with GitHub Pages and [Forestry.io](https://forestry.io/).
 
-![Photo by [Richard T](https://unsplash.com/photos/yovhXPl8V1M) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
+![Photo by [Richard T](https://unsplash.com/photos/yovhXPl8V1M) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0)
 
 The Advantages:
 
@@ -158,5 +156,5 @@ How to do it? I have already described this in my [post](https://jtway.co/deploy
 
 I hope this simple guide to creating and setting up a free website will help you. Good luck!
 
-**Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
+**Andriy Parashchuk **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
 >  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
