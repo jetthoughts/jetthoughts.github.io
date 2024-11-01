@@ -3,7 +3,7 @@ dev_to_id: 1852564
 title: "Automated delivery React / Vue app for each Pull Request."
 description: "Would you like to speed up the development process of your React / Vue application? Make it more..."
 created_at: "2024-05-14T11:29:22Z"
-edited_at: "2024-11-01T16:09:26Z"
+edited_at: "2024-11-01T17:08:49Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/"
