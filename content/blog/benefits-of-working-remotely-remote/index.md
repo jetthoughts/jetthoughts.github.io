@@ -3,7 +3,7 @@ dev_to_id: 1852577
 title: "Benefits of working remotely"
 description: "Nowadays, remote work gains more and more prominence. Many successful companies let their employees..."
 created_at: "2024-05-14T11:38:52Z"
-edited_at: "2024-11-01T18:08:41Z"
+edited_at: "2024-11-01T19:06:42Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
 canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote/"
