@@ -3,11 +3,11 @@ dev_to_id: 1852564
 title: "Automated delivery React / Vue app for each Pull Request."
 description: "Would you like to speed up the development process of your React / Vue application? Make it more..."
 created_at: "2024-05-14T11:29:22Z"
-edited_at: "2024-10-21T18:08:49Z"
+edited_at: "2024-11-01T13:31:15Z"
 draft: false
 tags: ["ci", "react", "vue", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/automated-delivery-react-vue-app-for-each-pull-request-ci/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fautomated-delivery-react-vue-app-for-each-pull-request-ci%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fautomated-delivery-react-vue-app-for-each-pull-request-ci%2Ffile_0.jpeg"
 slug: "automated-delivery-react-vue-app-for-each-pull-request-ci"
 metatags:
   image: cover.jpeg

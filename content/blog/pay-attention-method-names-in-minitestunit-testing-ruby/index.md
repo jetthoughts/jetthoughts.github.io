@@ -3,7 +3,7 @@ dev_to_id: 1879467
 title: "Pay Attention to Method Names in Minitest::Unit"
 description: "**TL,DR: *don’t define any methods with names name, message, time, pass in Minitest::Unit test..."
 created_at: "2024-06-06T17:07:35Z"
-edited_at: "2024-10-22T20:07:16Z"
+edited_at: "2024-11-01T13:26:34Z"
 draft: false
 tags: ["testing", "ruby", "minitest", "rails"]
 canonical_url: "https://jetthoughts.com/blog/pay-attention-method-names-in-minitestunit-testing-ruby/"

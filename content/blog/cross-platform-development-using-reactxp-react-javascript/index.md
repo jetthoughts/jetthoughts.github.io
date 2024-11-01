@@ -3,11 +3,11 @@ dev_to_id: 1853624
 title: "Cross-platform development using ReactXP"
 description: "Cross-platform development using ReactXP   Startups with limited resources trying to reduce..."
 created_at: "2024-05-15T07:48:27Z"
-edited_at: "2024-10-21T16:39:17Z"
+edited_at: "2024-11-01T13:28:18Z"
 draft: false
 tags: ["react", "javascript", "startup", "typescript"]
 canonical_url: "https://jetthoughts.com/blog/cross-platform-development-using-reactxp-react-javascript/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fcross-platform-development-using-reactxp-react-javascript%2Ffile_0.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fcross-platform-development-using-reactxp-react-javascript%2Ffile_0.png"
 slug: "cross-platform-development-using-reactxp-react-javascript"
 metatags:
   image: cover.png

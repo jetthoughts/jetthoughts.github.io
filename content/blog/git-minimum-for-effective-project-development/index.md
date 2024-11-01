@@ -3,11 +3,11 @@ dev_to_id: 1853605
 title: "Git minimum for effective project development"
 description: "Git minimum for effective project development             For beginners who are not familiar..."
 created_at: "2024-05-15T07:29:21Z"
-edited_at: "2024-10-21T16:40:11Z"
+edited_at: "2024-11-01T13:28:28Z"
 draft: false
 tags: ["development", "git", "github", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/git-minimum-for-effective-project-development/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fgit-minimum-for-effective-project-development%2Ffile_0.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fgit-minimum-for-effective-project-development%2Ffile_0.png"
 slug: "git-minimum-for-effective-project-development"
 metatags:
   image: cover.png

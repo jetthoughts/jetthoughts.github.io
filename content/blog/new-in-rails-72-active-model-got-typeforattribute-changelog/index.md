@@ -3,7 +3,7 @@ dev_to_id: 1910828
 title: "New in Rails 7.2: Active Model Got type_for_attribute"
 description: "What's New?   Ruby on Rails 7.2 brings a handy change. The type_for_attribute method is now..."
 created_at: "2024-07-03T20:42:57Z"
-edited_at: "2024-10-22T20:06:40Z"
+edited_at: "2024-11-01T13:24:21Z"
 draft: false
 tags: ["rails", "changelog"]
 canonical_url: "https://jetthoughts.com/blog/new-in-rails-72-active-model-got-typeforattribute-changelog/"

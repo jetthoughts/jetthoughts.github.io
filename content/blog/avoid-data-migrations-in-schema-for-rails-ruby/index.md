@@ -3,7 +3,7 @@ dev_to_id: 1877645
 title: "Avoid data migrations in the schema migrations for Rails"
 description: "Avoid data migrations in the schema migrations for Rails   Could you re-run all migrations..."
 created_at: "2024-06-05T06:44:55Z"
-edited_at: "2024-10-22T20:07:27Z"
+edited_at: "2024-11-01T13:26:53Z"
 draft: false
 tags: ["ruby", "rails", "bestpractices", "development"]
 canonical_url: "https://jetthoughts.com/blog/avoid-data-migrations-in-schema-for-rails-ruby/"

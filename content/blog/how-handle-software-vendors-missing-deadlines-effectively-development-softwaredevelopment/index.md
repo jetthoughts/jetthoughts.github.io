@@ -3,11 +3,11 @@ dev_to_id: 2019422
 title: "How to Handle Software Vendors Missing Deadlines Effectively"
 description: "Dealing with missed work deadlines can be tough, especially when software vendors are late. Learn how..."
 created_at: "2024-09-29T13:07:06Z"
-edited_at: "2024-10-21T16:06:48Z"
+edited_at: "2024-11-01T14:04:09Z"
 draft: false
 tags: ["development", "softwaredevelopment", "startup"]
 canonical_url: "https://jetthoughts.com/blog/how-handle-software-vendors-missing-deadlines-effectively-development-softwaredevelopment/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp1i1djps8dtd3qt3hbyf.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp1i1djps8dtd3qt3hbyf.png"
 slug: "how-handle-software-vendors-missing-deadlines-effectively-development-softwaredevelopment"
 metatags:
   image: cover.png

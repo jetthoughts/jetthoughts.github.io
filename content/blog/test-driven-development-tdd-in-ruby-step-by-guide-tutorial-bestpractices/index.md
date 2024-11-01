@@ -3,10 +3,10 @@ dev_to_id: 2066540
 title: "Test-Driven Development (TDD) in Ruby: A Step-by-Step Guide"
 description: "In Test-Driven Development (TDD), you start with tests, not code. First, write a test that defines..."
 created_at: "2024-10-30T10:03:39Z"
-edited_at: ""
+edited_at: "2024-11-01T13:09:33Z"
 draft: false
 tags: ["tutorial", "bestpractices", "ruby", "learning"]
-canonical_url: "https://dev.to/jetthoughts/test-driven-development-tdd-in-ruby-a-step-by-step-guide-2h15"
+canonical_url: "https://jetthoughts.com/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/"
 cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgd3moqdku5u3lkr56iqa.jpeg"
 slug: "test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices"
 metatags:

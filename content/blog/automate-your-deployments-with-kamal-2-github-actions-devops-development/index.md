@@ -3,11 +3,11 @@ dev_to_id: 2034339
 title: "Automate Your Deployments with Kamal 2 and GitHub Actions"
 description: "Deployments shouldn’t be complex. You don’t need a lot of complicated configurations. That’s where..."
 created_at: "2024-10-11T12:26:52Z"
-edited_at: "2024-10-21T16:06:43Z"
+edited_at: "2024-11-01T14:04:02Z"
 draft: false
 tags: ["devops", "development", "rails", "automation"]
 canonical_url: "https://jetthoughts.com/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnartcf27k41nafq8m082.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnartcf27k41nafq8m082.jpeg"
 slug: "automate-your-deployments-with-kamal-2-github-actions-devops-development"
 metatags:
   image: cover.jpeg
