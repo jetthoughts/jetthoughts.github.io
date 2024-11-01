@@ -3,7 +3,7 @@ dev_to_id: 1853635
 title: "Running tests in containers with docker-compose"
 description: "The main advantages of this way are to have independent environment for the tests running..."
 created_at: "2024-05-15T07:56:17Z"
-edited_at: "2024-11-01T14:12:30Z"
+edited_at: "2024-11-01T15:08:15Z"
 draft: false
 tags: ["coding", "tutorial", "docker", "testing"]
 canonical_url: "https://jetthoughts.com/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/"

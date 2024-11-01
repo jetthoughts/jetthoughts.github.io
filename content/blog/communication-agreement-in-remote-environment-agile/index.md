@@ -3,7 +3,7 @@ dev_to_id: 462581
 title: "Communication Agreement in a remote environment"
 description: "Communication Agreement in a remote environment   How to manage tasks remotely? How to build..."
 created_at: "2020-09-22T08:10:11Z"
-edited_at: "2024-11-01T14:20:26Z"
+edited_at: "2024-11-01T15:10:49Z"
 draft: false
 tags: ["agile", "agreement", "remote", "startup"]
 canonical_url: "https://jetthoughts.com/blog/communication-agreement-in-remote-environment-agile/"

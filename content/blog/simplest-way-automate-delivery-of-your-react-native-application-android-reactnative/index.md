@@ -3,7 +3,7 @@ dev_to_id: 1877570
 title: "The simplest way to automate delivery of your React Native Application"
 description: "Introduction   Delivering mobile application’s updates is not as simple as in the case of a..."
 created_at: "2024-06-05T06:08:07Z"
-edited_at: "2024-11-01T14:11:41Z"
+edited_at: "2024-11-01T15:07:49Z"
 draft: false
 tags: ["android", "reactnative", "circleci"]
 canonical_url: "https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/"

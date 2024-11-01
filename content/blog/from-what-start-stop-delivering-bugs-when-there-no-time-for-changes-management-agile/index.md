@@ -3,7 +3,7 @@ dev_to_id: 1880200
 title: "From what to start to stop delivering bugs when there is no time for changes?"
 description: "While you are struggling with breaking into the market; small bugs, UX problems, unexpected behaviors..."
 created_at: "2024-06-07T09:45:25Z"
-edited_at: "2024-11-01T14:10:43Z"
+edited_at: "2024-11-01T15:07:18Z"
 draft: false
 tags: ["management", "agile", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/"
