@@ -3,7 +3,7 @@ dev_to_id: 1880218
 title: "Help shepherd to count sheep in Elixir"
 description: "I have been thinking about learning a functional language for a long time. So recently I’ve started..."
 created_at: "2024-06-07T10:14:43Z"
-edited_at: "2024-11-01T15:07:15Z"
+edited_at: "2024-11-01T16:07:14Z"
 draft: false
 tags: ["programming", "elixir", "codewars", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/help-shepherd-count-sheep-in-elixir-programming/"

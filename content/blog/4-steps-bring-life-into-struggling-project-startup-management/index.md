@@ -3,7 +3,7 @@ dev_to_id: 1877534
 title: "4 Steps to Bring Life into a Struggling Project"
 description: "4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business..."
 created_at: "2024-06-05T05:31:06Z"
-edited_at: "2024-11-01T15:08:06Z"
+edited_at: "2024-11-01T16:08:04Z"
 draft: false
 tags: ["startup", "management", "agile", "kanban"]
 canonical_url: "https://jetthoughts.com/blog/4-steps-bring-life-into-struggling-project-startup-management/"

@@ -3,7 +3,7 @@ dev_to_id: 1853550
 title: "How To Write The Right Content For Your Article"
 description: "There are moments when you’re full of motivation, ideas come up with your mind and straight onto the..."
 created_at: "2024-05-15T07:00:58Z"
-edited_at: "2024-11-01T15:08:32Z"
+edited_at: "2024-11-01T16:08:29Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
 canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting/"

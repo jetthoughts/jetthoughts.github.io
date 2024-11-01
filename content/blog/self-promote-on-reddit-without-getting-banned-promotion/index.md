@@ -3,7 +3,7 @@ dev_to_id: 1880466
 title: "Self-promote on Reddit without getting banned"
 description: "We are happy to share our experience on important aspects of starting self-promoting posts on Reddit...."
 created_at: "2024-06-07T13:31:24Z"
-edited_at: "2024-11-01T15:07:01Z"
+edited_at: "2024-11-01T16:06:59Z"
 draft: false
 tags: ["reddit", "promotion", "advice"]
 canonical_url: "https://jetthoughts.com/blog/self-promote-on-reddit-without-getting-banned-promotion/"

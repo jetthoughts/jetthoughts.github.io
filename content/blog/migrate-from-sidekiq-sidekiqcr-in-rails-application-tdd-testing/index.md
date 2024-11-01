@@ -3,7 +3,7 @@ dev_to_id: 1853610
 title: "Migrate from Sidekiq to Sidekiq.cr in Rails application"
 description: "Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to..."
 created_at: "2024-05-15T07:33:16Z"
-edited_at: "2024-11-01T15:08:22Z"
+edited_at: "2024-11-01T16:08:19Z"
 draft: false
 tags: ["tdd", "testing", "development", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing/"

@@ -3,7 +3,7 @@ dev_to_id: 1853640
 title: "Tools to provide effective feedback for distributed development teams"
 description: "How to share info in a remote async environment? What is the best way to keep everyone in the..."
 created_at: "2024-05-15T07:58:27Z"
-edited_at: "2024-11-01T15:08:14Z"
+edited_at: "2024-11-01T16:08:10Z"
 draft: false
 tags: ["productivity", "startup", "remote", "tips"]
 canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/"
