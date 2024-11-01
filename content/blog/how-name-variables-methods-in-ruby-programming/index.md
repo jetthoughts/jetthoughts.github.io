@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877535
-title: "How To Name Variables And Methods In Ruby"
-description: "How To Name Variables And Methods In Ruby               What’s in a name? that which we call..."
-created_at: "2024-06-05T05:33:19Z"
-edited_at: "2024-10-21T16:11:14Z"
+title: How To Name Variables And Methods In Ruby
+description: How To Name Variables And Methods In Ruby               What’s in a name? that which we call...
+created_at: '2024-06-05T05:33:19Z'
+edited_at: '2024-10-21T17:07:27Z'
 draft: false
-tags: ["programming", "ruby", "bestpractices", "rails"]
-canonical_url: "https://jetthoughts.com/blog/how-name-variables-methods-in-ruby-programming/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-name-variables-methods-in-ruby-programming%2Ffile_0.jpeg"
-slug: "how-name-variables-methods-in-ruby-programming"
+tags:
+- programming
+- ruby
+- bestpractices
+- rails
+canonical_url: https://jetthoughts.com/blog/how-name-variables-methods-in-ruby-programming/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-name-variables-methods-in-ruby-programming/cover.jpeg
+slug: how-name-variables-methods-in-ruby-programming
 metatags:
   image: cover.jpeg
 ---

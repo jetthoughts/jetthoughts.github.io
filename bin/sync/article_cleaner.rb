@@ -1,9 +1,9 @@
-require 'fileutils'
-require 'yaml'
+require "fileutils"
+require "yaml"
 
 module ArticleCleaner
-  SYNC_STATUS_FILE = 'sync_status.yml'.freeze
-  ARTICLE_FILE = 'index.md'.freeze
+  SYNC_STATUS_FILE = "sync_status.yml".freeze
+  ARTICLE_FILE = "index.md".freeze
 
   def cleanup_renamed_articles
     raise ArgumentError, "Working directory doesn't exist" unless Dir.exist?(working_dir)
@@ -20,7 +20,7 @@ module ArticleCleaner
           FileUtils.rm_rf(folder_path)
           deleted_folders << folder_name
           puts "Deleted folder: #{folder_name}"
-        rescue StandardError => e
+        rescue => e
           puts "Failed to delete folder #{folder_name}: #{e.message}"
         end
       end
@@ -41,7 +41,7 @@ module ArticleCleaner
         raise "Invalid article data structure" unless article.is_a?(Hash) && article[:slug]
         article[:slug]
       end
-    rescue StandardError => e
+    rescue => e
       logger.error "Failed to load slugs from YAML: #{e.message}"
       []
     end

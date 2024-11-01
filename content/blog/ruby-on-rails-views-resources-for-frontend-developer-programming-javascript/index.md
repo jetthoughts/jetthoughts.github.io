@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1559624
-title: "Ruby on Rails Views Resources for Frontend Developer"
-description: "🚀 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
-created_at: "2023-08-04T22:31:55Z"
-edited_at: "2024-10-21T20:06:51Z"
+title: Ruby on Rails Views Resources for Frontend Developer
+description: "\U0001F680 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
+created_at: '2023-08-04T22:31:55Z'
+edited_at: '2024-10-21T21:05:48Z'
 draft: false
-tags: ["programming", "javascript", "rails", "frontend"]
-canonical_url: "https://jetthoughts.com/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fv0b6zeupdtuu8xux2xhp.png"
-slug: "ruby-on-rails-views-resources-for-frontend-developer-programming-javascript"
+tags:
+- programming
+- javascript
+- rails
+- frontend
+canonical_url: https://jetthoughts.com/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/cover.png
+slug: ruby-on-rails-views-resources-for-frontend-developer-programming-javascript
 metatags:
   image: cover.png
 ---

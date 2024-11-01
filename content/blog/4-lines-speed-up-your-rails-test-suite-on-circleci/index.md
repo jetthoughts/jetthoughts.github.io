@@ -1,14 +1,14 @@
 ---
 dev_to_id: 1880171
-title: "4 lines to Speed Up your Rails Test Suite on CircleCI"
-description: "Most of our projects have a big code base of assets which dramatically reduce not only browser page..."
-created_at: "2024-06-07T09:15:36Z"
-edited_at: "2024-10-21T16:08:00Z"
+title: 4 lines to Speed Up your Rails Test Suite on CircleCI
+description: Most of our projects have a big code base of assets which dramatically reduce not only browser page...
+created_at: '2024-06-07T09:15:36Z'
+edited_at: '2024-10-22T21:06:28Z'
 draft: false
 tags: []
-canonical_url: "https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2F4-lines-speed-up-your-rails-test-suite-on-circleci%2Ffile_0.jpeg"
-slug: "4-lines-speed-up-your-rails-test-suite-on-circleci"
+canonical_url: https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/cover.jpeg
+slug: 4-lines-speed-up-your-rails-test-suite-on-circleci
 metatags:
   image: cover.jpeg
 ---

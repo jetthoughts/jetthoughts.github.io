@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1893839
-title: "Bridging the Gap: Building Trust Between Product and Engineering Teams"
-description: "Companies often see their product and engineering teams competing. This lack of cooperation breeds..."
-created_at: "2024-06-19T16:45:35Z"
-edited_at: "2024-10-21T16:07:33Z"
+title: 'Bridging the Gap: Building Trust Between Product and Engineering Teams'
+description: Companies often see their product and engineering teams competing. This lack of cooperation breeds...
+created_at: '2024-06-19T16:45:35Z'
+edited_at: '2024-10-22T21:06:04Z'
 draft: false
-tags: ["organization", "structure", "effectiveness"]
-canonical_url: "https://jetthoughts.com/blog/bridging-gap-building-trust-between-product-engineering-teams-organization-structure/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fe4t3b97nxjihvlownx88.png"
-slug: "bridging-gap-building-trust-between-product-engineering-teams-organization-structure"
+tags:
+- organization
+- structure
+- effectiveness
+canonical_url: https://jetthoughts.com/blog/bridging-gap-building-trust-between-product-engineering-teams-organization-structure/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/bridging-gap-building-trust-between-product-engineering-teams-organization-structure/cover.png
+slug: bridging-gap-building-trust-between-product-engineering-teams-organization-structure
 metatags:
   image: cover.png
 ---

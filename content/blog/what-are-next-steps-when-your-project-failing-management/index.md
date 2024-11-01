@@ -1,14 +1,15 @@
 ---
 dev_to_id: 462546
-title: "What are the next steps when your project is failing?"
-description: "Projects fail for all kinds of reasons. Customers can change their objectives, key team members can..."
-created_at: "2020-09-22T07:32:43Z"
-edited_at: "2024-10-21T20:07:47Z"
+title: What are the next steps when your project is failing?
+description: Projects fail for all kinds of reasons. Customers can change their objectives, key team members can...
+created_at: '2020-09-22T07:32:43Z'
+edited_at: '2024-10-21T21:06:43Z'
 draft: false
-tags: ["management"]
-canonical_url: "https://jetthoughts.com/blog/what-are-next-steps-when-your-project-failing-management/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fi%252Fr6dluzj7t3lrqazbm6v3.png"
-slug: "what-are-next-steps-when-your-project-failing-management"
+tags:
+- management
+canonical_url: https://jetthoughts.com/blog/what-are-next-steps-when-your-project-failing-management/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-are-next-steps-when-your-project-failing-management/cover.png
+slug: what-are-next-steps-when-your-project-failing-management
 metatags:
   image: cover.png
 ---

@@ -1,14 +1,14 @@
 ---
 dev_to_id: 1966362
-title: "Automating SSL Certificate Generation with Traefik and Kamal: A Step-by-Step Guide"
-description: "In this guide, we'll explore how to configure Traefik with Kamal to automatically obtain and manage..."
-created_at: "2024-08-20T09:22:37Z"
-edited_at: "2024-10-21T16:07:03Z"
+title: 'Automating SSL Certificate Generation with Traefik and Kamal: A Step-by-Step Guide'
+description: In this guide, we'll explore how to configure Traefik with Kamal to automatically obtain and manage...
+created_at: '2024-08-20T09:22:37Z'
+edited_at: '2024-10-22T19:06:21Z'
 draft: false
 tags: []
-canonical_url: "https://jetthoughts.com/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnzb82v1c6vw2a9ugwfmd.png"
-slug: "automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide"
+canonical_url: https://jetthoughts.com/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/cover.png
+slug: automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide
 metatags:
   image: cover.png
 ---

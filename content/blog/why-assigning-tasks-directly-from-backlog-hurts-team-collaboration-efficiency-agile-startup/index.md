@@ -1,14 +1,18 @@
 ---
 dev_to_id: 2017433
-title: "Why Assigning Tasks Directly from the Backlog Hurts Team Collaboration and Efficiency"
-description: "In the fast-paced world of startups, poor task management can cripple team productivity and drain..."
-created_at: "2024-09-27T14:45:43Z"
-edited_at: "2024-10-21T16:06:50Z"
+title: Why Assigning Tasks Directly from the Backlog Hurts Team Collaboration and Efficiency
+description: In the fast-paced world of startups, poor task management can cripple team productivity and drain...
+created_at: '2024-09-27T14:45:43Z'
+edited_at: '2024-10-21T17:05:39Z'
 draft: false
-tags: ["agile", "startup", "development", "devops"]
-canonical_url: "https://jetthoughts.com/blog/why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx6jc1kn89uwrbq5dtfrp.jpeg"
-slug: "why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup"
+tags:
+- agile
+- startup
+- development
+- devops
+canonical_url: https://jetthoughts.com/blog/why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup/cover.jpeg
+slug: why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup
 metatags:
   image: cover.jpeg
 ---

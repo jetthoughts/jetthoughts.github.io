@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1880548
-title: "JetThoughts Is On GoodFirms Radar for Delivering Effortless Ruby on Rails Development Services to Business of Various Niches"
+title: JetThoughts Is On GoodFirms Radar for Delivering Effortless Ruby on Rails Development Services to Business of Various Niches
 description: "**JetThoughts LLC** is an excellent firm offering various services that can give the business an..."
-created_at: "2024-06-07T15:27:35Z"
-edited_at: "2024-10-21T16:07:35Z"
+created_at: '2024-06-07T15:27:35Z'
+edited_at: '2024-10-22T21:06:06Z'
 draft: false
-tags: ["ruby", "rails", "service"]
-canonical_url: "https://jetthoughts.com/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fjetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches%2Ffile_0.jpeg"
-slug: "jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches"
+tags:
+- ruby
+- rails
+- service
+canonical_url: https://jetthoughts.com/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/cover.jpeg
+slug: jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches
 metatags:
   image: cover.jpeg
 ---

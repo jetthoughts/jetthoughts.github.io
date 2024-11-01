@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1774708
-title: "More control over enum in Rails 7.1"
-description: "ActiveRecord::Enum in Rails have long been a convenient tool for representing a set of symbolic..."
-created_at: "2024-02-28T09:32:44Z"
-edited_at: "2024-10-21T20:06:35Z"
+title: More control over enum in Rails 7.1
+description: ActiveRecord::Enum in Rails have long been a convenient tool for representing a set of symbolic...
+created_at: '2024-02-28T09:32:44Z'
+edited_at: '2024-10-21T21:05:33Z'
 draft: false
-tags: ["rails", "webdev", "ruby"]
-canonical_url: "https://jetthoughts.com/blog/more-control-over-enum-in-rails-71-webdev/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F3z4m2w9mdthapyr7ke09.png"
-slug: "more-control-over-enum-in-rails-71-webdev"
+tags:
+- rails
+- webdev
+- ruby
+canonical_url: https://jetthoughts.com/blog/more-control-over-enum-in-rails-71-webdev/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/more-control-over-enum-in-rails-71-webdev/cover.png
+slug: more-control-over-enum-in-rails-71-webdev
 metatags:
   image: cover.png
 ---

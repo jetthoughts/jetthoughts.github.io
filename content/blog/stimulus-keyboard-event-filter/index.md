@@ -1,14 +1,14 @@
 ---
 dev_to_id: 1698810
-title: "Stimulus Keyboard Event Filter"
-description: "What it was In the last update of Stimulus v3.2.2, the ability to filter the event by PageDown and..."
-created_at: "2023-12-15T11:11:52Z"
-edited_at: "2024-10-21T20:06:41Z"
+title: Stimulus Keyboard Event Filter
+description: What it was In the last update of Stimulus v3.2.2, the ability to filter the event by PageDown and...
+created_at: '2023-12-15T11:11:52Z'
+edited_at: '2024-10-21T21:05:39Z'
 draft: false
 tags: []
-canonical_url: "https://jetthoughts.com/blog/stimulus-keyboard-event-filter/"
-cover_image: ""
-slug: "stimulus-keyboard-event-filter"
+canonical_url: https://jetthoughts.com/blog/stimulus-keyboard-event-filter/
+cover_image:
+slug: stimulus-keyboard-event-filter
 ---
 **What it was**
 In the last update of Stimulus `v3.2.2`, the ability to filter the event by `PageDown` and `PageUp` keys was added. 

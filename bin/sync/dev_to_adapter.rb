@@ -1,7 +1,7 @@
-require 'httparty'
+require "httparty"
 
 class DevToAdapter
-  BASE_URL = 'https://dev.to/api'
+  BASE_URL = "https://dev.to/api"
 
   def initialize(http_client: HTTParty)
     @http_client = http_client
@@ -19,7 +19,7 @@ class DevToAdapter
     @http_client.get(url, timeout: 60)
   end
 
-  def update_article(url, headers: , body:)
+  def update_article(url, headers:, body:)
     @http_client.put(url, headers: headers, body: body)
   end
 end

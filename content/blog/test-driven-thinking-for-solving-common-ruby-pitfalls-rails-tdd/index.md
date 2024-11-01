@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1877558
-title: "Test Driven Thinking for Solving Common Ruby Pitfalls"
-description: "Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for..."
-created_at: "2024-06-05T05:53:53Z"
-edited_at: "2024-10-21T16:09:25Z"
+title: Test Driven Thinking for Solving Common Ruby Pitfalls
+description: Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for...
+created_at: '2024-06-05T05:53:53Z'
+edited_at: '2024-10-21T17:07:16Z'
 draft: false
-tags: ["rails", "tdd", "testing"]
-canonical_url: "https://jetthoughts.com/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ftest-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd%2Ffile_0.jpeg"
-slug: "test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd"
+tags:
+- rails
+- tdd
+- testing
+canonical_url: https://jetthoughts.com/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/cover.jpeg
+slug: test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1880211
-title: "Effortless Code Conventions Review for Pull Request Changes"
-description: "Reliably arranged source code helps hackability. You can filter code speedier if its..."
-created_at: "2024-06-07T10:03:27Z"
-edited_at: "2024-10-21T16:07:57Z"
+title: Effortless Code Conventions Review for Pull Request Changes
+description: Reliably arranged source code helps hackability. You can filter code speedier if its...
+created_at: '2024-06-07T10:03:27Z'
+edited_at: '2024-10-22T21:06:25Z'
 draft: false
-tags: ["ruby", "ci", "github", "codereview"]
-canonical_url: "https://jetthoughts.com/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Feffortless-code-conventions-review-for-pull-request-changes-ruby-ci%2Ffile_0.jpeg"
-slug: "effortless-code-conventions-review-for-pull-request-changes-ruby-ci"
+tags:
+- ruby
+- ci
+- github
+- codereview
+canonical_url: https://jetthoughts.com/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/cover.jpeg
+slug: effortless-code-conventions-review-for-pull-request-changes-ruby-ci
 metatags:
   image: cover.jpeg
 ---

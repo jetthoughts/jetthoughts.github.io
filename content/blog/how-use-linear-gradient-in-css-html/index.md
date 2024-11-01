@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1125937
-title: "How to use Linear-Gradient in CSS"
-description: "The CSS linear-gradient function creates an image that consists of a progressive transition between..."
-created_at: "2022-06-27T21:31:18Z"
-edited_at: "2024-10-21T20:07:24Z"
+title: How to use Linear-Gradient in CSS
+description: The CSS linear-gradient function creates an image that consists of a progressive transition between...
+created_at: '2022-06-27T21:31:18Z'
+edited_at: '2024-10-21T21:06:20Z'
 draft: false
-tags: ["html", "css", "webdev"]
-canonical_url: "https://jetthoughts.com/blog/how-use-linear-gradient-in-css-html/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F9bikt97gjbmyefav7q4r.jpg"
-slug: "how-use-linear-gradient-in-css-html"
+tags:
+- html
+- css
+- webdev
+canonical_url: https://jetthoughts.com/blog/how-use-linear-gradient-in-css-html/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-use-linear-gradient-in-css-html/cover.jpg
+slug: how-use-linear-gradient-in-css-html
 metatags:
   image: cover.jpg
 ---

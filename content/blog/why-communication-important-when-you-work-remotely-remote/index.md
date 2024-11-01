@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853539
-title: "Why communication is so important when you work remotely?"
-description: "Communication at work is one of the most important aspects of any business.  But why? Let’s take a..."
-created_at: "2024-05-15T06:47:42Z"
-edited_at: "2024-10-21T18:07:57Z"
+title: Why communication is so important when you work remotely?
+description: Communication at work is one of the most important aspects of any business.  But why? Let’s take a...
+created_at: '2024-05-15T06:47:42Z'
+edited_at: '2024-10-21T19:05:33Z'
 draft: false
-tags: ["remote", "communication", "startup", "process"]
-canonical_url: "https://jetthoughts.com/blog/why-communication-important-when-you-work-remotely-remote/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Firc1zshxi981sfwxj4zz.png"
-slug: "why-communication-important-when-you-work-remotely-remote"
+tags:
+- remote
+- communication
+- startup
+- process
+canonical_url: https://jetthoughts.com/blog/why-communication-important-when-you-work-remotely-remote/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-communication-important-when-you-work-remotely-remote/cover.png
+slug: why-communication-important-when-you-work-remotely-remote
 metatags:
   image: cover.png
 ---

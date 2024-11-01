@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1885724
-title: "Why and When to Use Waterfall vs. Agile: A Business Perspective"
-description: "Waterfall Methodology              Use Cases:      Well-defined requirements: Waterfall is..."
-created_at: "2024-06-12T13:00:53Z"
-edited_at: "2024-10-21T16:07:34Z"
+title: 'Why and When to Use Waterfall vs. Agile: A Business Perspective'
+description: 'Waterfall Methodology              Use Cases:      Well-defined requirements: Waterfall is...'
+created_at: '2024-06-12T13:00:53Z'
+edited_at: '2024-10-22T21:06:05Z'
 draft: false
-tags: ["agile", "management", "startup"]
-canonical_url: "https://jetthoughts.com/blog/why-when-use-waterfall-vs-agile-business-perspective-management/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fe5v2rr5n6hpl385pt5f3.png"
-slug: "why-when-use-waterfall-vs-agile-business-perspective-management"
+tags:
+- agile
+- management
+- startup
+canonical_url: https://jetthoughts.com/blog/why-when-use-waterfall-vs-agile-business-perspective-management/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-when-use-waterfall-vs-agile-business-perspective-management/cover.png
+slug: why-when-use-waterfall-vs-agile-business-perspective-management
 metatags:
   image: cover.png
 ---

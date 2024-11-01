@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853469
-title: "JetThoughts receives First Review on Clutch.co: Thank you"
-description: "Our team at JetThoughts has an expertise of the Ruby on Rails development service line, and we’re..."
-created_at: "2024-05-15T05:59:12Z"
-edited_at: "2024-10-21T18:08:08Z"
+title: 'JetThoughts receives First Review on Clutch.co: Thank you'
+description: Our team at JetThoughts has an expertise of the Ruby on Rails development service line, and we’re...
+created_at: '2024-05-15T05:59:12Z'
+edited_at: '2024-10-21T19:05:43Z'
 draft: false
-tags: ["startup", "review", "product", "company"]
-canonical_url: "https://jetthoughts.com/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fjetthoughts-receives-first-review-on-clutchco-thank-you-startup%2Ffile_0.jpeg"
-slug: "jetthoughts-receives-first-review-on-clutchco-thank-you-startup"
+tags:
+- startup
+- review
+- product
+- company
+canonical_url: https://jetthoughts.com/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/cover.jpeg
+slug: jetthoughts-receives-first-review-on-clutchco-thank-you-startup
 metatags:
   image: cover.jpeg
 ---

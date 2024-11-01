@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1911406
-title: "Top 3 Ways to Test Ideas Without Developers"
-description: "Intro   Startups move fast, and testing ideas is critical. It helps make intelligent..."
-created_at: "2024-07-04T10:36:58Z"
-edited_at: "2024-10-21T16:07:21Z"
+title: Top 3 Ways to Test Ideas Without Developers
+description: Intro   Startups move fast, and testing ideas is critical. It helps make intelligent...
+created_at: '2024-07-04T10:36:58Z'
+edited_at: '2024-10-22T21:05:53Z'
 draft: false
-tags: ["startup", "agile", "learning", "ux"]
-canonical_url: "https://jetthoughts.com/blog/top-3-ways-test-ideas-without-developers-startup-agile/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fphse12oocyc3yv33sl4c.png"
-slug: "top-3-ways-test-ideas-without-developers-startup-agile"
+tags:
+- startup
+- agile
+- learning
+- ux
+canonical_url: https://jetthoughts.com/blog/top-3-ways-test-ideas-without-developers-startup-agile/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/top-3-ways-test-ideas-without-developers-startup-agile/cover.png
+slug: top-3-ways-test-ideas-without-developers-startup-agile
 metatags:
   image: cover.png
 ---

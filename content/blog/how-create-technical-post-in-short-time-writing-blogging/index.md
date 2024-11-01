@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1852622
-title: "How to create a technical post in a short time"
-description: "After reading thousands of posts, it’s time to share a workflow that will help those who are creating..."
-created_at: "2024-05-14T12:36:24Z"
-edited_at: "2024-10-21T18:08:34Z"
+title: How to create a technical post in a short time
+description: After reading thousands of posts, it’s time to share a workflow that will help those who are creating...
+created_at: '2024-05-14T12:36:24Z'
+edited_at: '2024-10-21T19:06:09Z'
 draft: false
-tags: ["writing", "blogging", "tips"]
-canonical_url: "https://jetthoughts.com/blog/how-create-technical-post-in-short-time-writing-blogging/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-create-technical-post-in-short-time-writing-blogging%2Ffile_0.jpeg"
-slug: "how-create-technical-post-in-short-time-writing-blogging"
+tags:
+- writing
+- blogging
+- tips
+canonical_url: https://jetthoughts.com/blog/how-create-technical-post-in-short-time-writing-blogging/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-create-technical-post-in-short-time-writing-blogging/cover.jpeg
+slug: how-create-technical-post-in-short-time-writing-blogging
 metatags:
   image: cover.jpeg
 ---

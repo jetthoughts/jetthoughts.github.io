@@ -9,7 +9,7 @@ module Retryable
     begin
       attempts += 1
       yield
-    rescue StandardError => e
+    rescue => e
       if attempts < RETRY_CONFIG[:max_attempts]
         delay = RETRY_CONFIG[:base_delay] * attempts
         puts "#{operation} failed, attempt #{attempts}/#{RETRY_CONFIG[:max_attempts]}. Retrying in #{delay}s..."

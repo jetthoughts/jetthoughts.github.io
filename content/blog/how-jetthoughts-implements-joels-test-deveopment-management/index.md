@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877555
-title: "How JetThoughts implements Joel’s test?"
-description: "For those of you who don’t know who Joel Spolsky is here are some facts:   Worked at..."
-created_at: "2024-06-05T05:51:10Z"
-edited_at: "2024-10-21T16:09:42Z"
+title: How JetThoughts implements Joel’s test?
+description: 'For those of you who don’t know who Joel Spolsky is here are some facts:   Worked at...'
+created_at: '2024-06-05T05:51:10Z'
+edited_at: '2024-10-21T17:07:19Z'
 draft: false
-tags: ["deveopment", "management", "project", "startup"]
-canonical_url: "https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-jetthoughts-implements-joels-test-deveopment-management%2Ffile_0.jpeg"
-slug: "how-jetthoughts-implements-joels-test-deveopment-management"
+tags:
+- deveopment
+- management
+- project
+- startup
+canonical_url: https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-jetthoughts-implements-joels-test-deveopment-management/cover.jpeg
+slug: how-jetthoughts-implements-joels-test-deveopment-management
 metatags:
   image: cover.jpeg
 ---

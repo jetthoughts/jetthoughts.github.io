@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853640
-title: "Tools to provide effective feedback for distributed development teams"
-description: "How to share info in a remote async environment? What is the best way to keep everyone in the..."
-created_at: "2024-05-15T07:58:27Z"
-edited_at: "2024-10-21T16:29:30Z"
+title: Tools to provide effective feedback for distributed development teams
+description: How to share info in a remote async environment? What is the best way to keep everyone in the...
+created_at: '2024-05-15T07:58:27Z'
+edited_at: '2024-10-21T17:07:37Z'
 draft: false
-tags: ["productivity", "startup", "remote", "tips"]
-canonical_url: "https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ftools-provide-effective-feedback-for-distributed-development-teams-productivity-startup%2Ffile_0.jpeg"
-slug: "tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup"
+tags:
+- productivity
+- startup
+- remote
+- tips
+canonical_url: https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/cover.jpeg
+slug: tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853556
-title: "Simplest step by step guide creating a post"
-description: "For novice authors who are going to share their thoughts with public through the posts, we..."
-created_at: "2024-05-15T07:07:41Z"
-edited_at: "2024-10-21T18:07:51Z"
+title: Simplest step by step guide creating a post
+description: For novice authors who are going to share their thoughts with public through the posts, we...
+created_at: '2024-05-15T07:07:41Z'
+edited_at: '2024-10-21T19:05:27Z'
 draft: false
-tags: ["blogging", "writing", "tutorial", "guide"]
-canonical_url: "https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fsimplest-step-by-guide-creating-post-blogging-writing%2Ffile_0.jpeg"
-slug: "simplest-step-by-guide-creating-post-blogging-writing"
+tags:
+- blogging
+- writing
+- tutorial
+- guide
+canonical_url: https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-step-by-guide-creating-post-blogging-writing/cover.jpeg
+slug: simplest-step-by-guide-creating-post-blogging-writing
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1205578
-title: "Team Structure for MVP"
-description: "In structuring a team for MVP, we should consider the following: there is a massive number of..."
-created_at: "2022-09-28T14:58:08Z"
-edited_at: "2024-10-21T20:07:06Z"
+title: Team Structure for MVP
+description: 'In structuring a team for MVP, we should consider the following: there is a massive number of...'
+created_at: '2022-09-28T14:58:08Z'
+edited_at: '2024-10-21T21:06:02Z'
 draft: false
-tags: ["startup", "management", "leadership", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/our-mvp-team-structure-startup-management/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fcskm42dpzai9za1fysmt.jpeg"
-slug: "our-mvp-team-structure-startup-management"
+tags:
+- startup
+- management
+- leadership
+- tutorial
+canonical_url: https://jetthoughts.com/blog/our-mvp-team-structure-startup-management/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/our-mvp-team-structure-startup-management/cover.jpeg
+slug: our-mvp-team-structure-startup-management
 metatags:
   image: cover.jpeg
 ---

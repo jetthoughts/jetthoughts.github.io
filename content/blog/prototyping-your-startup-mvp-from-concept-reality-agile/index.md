@@ -1,14 +1,16 @@
 ---
 dev_to_id: 1943703
-title: "Prototyping Your Startup MVP: From Concept to Reality"
-description: "Making a Minimum Viable Product (MVP) is key in the fast-paced startup world. This guide will help..."
-created_at: "2024-08-01T12:57:40Z"
-edited_at: "2024-10-21T16:07:11Z"
+title: 'Prototyping Your Startup MVP: From Concept to Reality'
+description: Making a Minimum Viable Product (MVP) is key in the fast-paced startup world. This guide will help...
+created_at: '2024-08-01T12:57:40Z'
+edited_at: '2024-10-22T19:06:28Z'
 draft: false
-tags: ["startup", "agile"]
-canonical_url: "https://jetthoughts.com/blog/prototyping-your-startup-mvp-from-concept-reality-agile/"
-cover_image: ""
-slug: "prototyping-your-startup-mvp-from-concept-reality-agile"
+tags:
+- startup
+- agile
+canonical_url: https://jetthoughts.com/blog/prototyping-your-startup-mvp-from-concept-reality-agile/
+cover_image:
+slug: prototyping-your-startup-mvp-from-concept-reality-agile
 ---
 Making a Minimum Viable Product (MVP) is key in the fast-paced startup world. This guide will help you step by step to turn your idea into a natural product.
 

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877574
-title: "How to Get Remote Teams to High Perform"
-description: "How to Get Remote Teams to High Perform     Raise your hand in case you feel confused about..."
-created_at: "2024-06-05T06:10:52Z"
-edited_at: "2024-10-21T16:08:35Z"
+title: How to Get Remote Teams to High Perform
+description: How to Get Remote Teams to High Perform     Raise your hand in case you feel confused about...
+created_at: '2024-06-05T06:10:52Z'
+edited_at: '2024-10-21T17:07:11Z'
 draft: false
-tags: ["agile", "development", "management", "remote"]
-canonical_url: "https://jetthoughts.com/blog/how-get-remote-teams-high-perform-agile-development/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-get-remote-teams-high-perform-agile-development%2Ffile_0.jpeg"
-slug: "how-get-remote-teams-high-perform-agile-development"
+tags:
+- agile
+- development
+- management
+- remote
+canonical_url: https://jetthoughts.com/blog/how-get-remote-teams-high-perform-agile-development/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-get-remote-teams-high-perform-agile-development/cover.jpeg
+slug: how-get-remote-teams-high-perform-agile-development
 metatags:
   image: cover.jpeg
 ---

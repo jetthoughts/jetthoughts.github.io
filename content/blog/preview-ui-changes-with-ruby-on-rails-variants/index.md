@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1108673
-title: "Preview UI changes with Ruby on Rails variants"
-description: "When implementing new design for a live application we usually don’t want our users to see an..."
-created_at: "2022-06-08T20:15:39Z"
-edited_at: "2024-10-21T20:07:30Z"
+title: Preview UI changes with Ruby on Rails variants
+description: When implementing new design for a live application we usually don’t want our users to see an...
+created_at: '2022-06-08T20:15:39Z'
+edited_at: '2024-10-21T21:06:26Z'
 draft: false
-tags: ["rails", "ruby", "webdev"]
-canonical_url: "https://jetthoughts.com/blog/preview-ui-changes-with-ruby-on-rails-variants/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fr5xi6xq7n95ajy6reqtc.png"
-slug: "preview-ui-changes-with-ruby-on-rails-variants"
+tags:
+- rails
+- ruby
+- webdev
+canonical_url: https://jetthoughts.com/blog/preview-ui-changes-with-ruby-on-rails-variants/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/preview-ui-changes-with-ruby-on-rails-variants/cover.png
+slug: preview-ui-changes-with-ruby-on-rails-variants
 metatags:
   image: cover.png
 ---

@@ -1,9 +1,9 @@
-require 'fileutils'
-require 'uri'
-require_relative 'retryable'
+require "fileutils"
+require "uri"
+require_relative "retryable"
 
-IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?:\/\/[^\s\)]+)\)}.freeze
-REPO_URL = 'https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master'.freeze
+IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?://[^\s\)]+)\)}
+REPO_URL = "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master".freeze
 
 class ImagesDownloader
   include Retryable
@@ -72,11 +72,11 @@ class ImagesDownloader
   end
 
   def remove_cdn(url)
-    encoded_url = 'https' + url.split('https').last
+    encoded_url = "https" + url.split("https").last
     max_attempts = 5
     attempts = 0
 
-    while encoded_url.include?('%') && attempts < max_attempts
+    while encoded_url.include?("%") && attempts < max_attempts
       encoded_url = URI.decode_www_form_component(encoded_url)
       attempts += 1
     end
@@ -89,7 +89,7 @@ class ImagesDownloader
       response = @http_client.download(url)
 
       if response.success?
-        File.open(dest, 'wb') { |file| file.write(response.body) }
+        File.binwrite(dest, response.body)
         puts "#{dest} downloaded"
         return true
       else
@@ -99,4 +99,3 @@ class ImagesDownloader
     false
   end
 end
-

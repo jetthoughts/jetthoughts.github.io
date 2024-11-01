@@ -1,11 +1,11 @@
-require 'fileutils'
-require_relative 'retryable'
-require_relative 'images_downloader'
+require "fileutils"
+require_relative "retryable"
+require_relative "images_downloader"
 
 module ArticleUpdater
-  JT_BLOG_HOST = 'https://jetthoughts.com/blog/'.freeze
-  DEV_TO_API_URL = 'https://dev.to/api/articles'.freeze
-  YAML_STATUS_FILE = 'sync_status.yml'.freeze
+  JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
+  DEV_TO_API_URL = "https://dev.to/api/articles".freeze
+  YAML_STATUS_FILE = "sync_status.yml".freeze
 
   include Retryable
 
@@ -27,8 +27,7 @@ module ArticleUpdater
 
         update_article_edited_at(article_id, updated_article)
       end
-
-    rescue StandardError => e
+    rescue => e
       puts "Error processing articles: #{e.message}"
       raise
     end
@@ -46,7 +45,7 @@ module ArticleUpdater
     if data[article_id]
       data[article_id][:edited_at] = updated_article["edited_at"]
       data[article_id][:synced] = true
-      File.open(File.join(working_dir, YAML_STATUS_FILE), 'w') { |f| f.write(data.to_yaml) }
+      File.write(File.join(working_dir, YAML_STATUS_FILE), data.to_yaml)
       puts "Article ID: #{article_id} updated successfully."
     else
       puts "Article ID: #{article_id} not found."
@@ -54,12 +53,12 @@ module ArticleUpdater
   end
 
   def update_canonical_url_on_dev_to(article_id, slug)
-    raise ArgumentError, "Missing dev.to api-key header" unless ENV['DEVTO_API_KEY']
+    raise ArgumentError, "Missing dev.to api-key header" unless ENV["DEVTO_API_KEY"]
 
     canonical_url = JT_BLOG_HOST + "#{slug}/"
     url = "#{DEV_TO_API_URL}/#{article_id}"
-    headers = { 'api-key' => ENV['DEVTO_API_KEY'], 'Content-Type' => 'application/json' }
-    body = { article: { canonical_url: canonical_url } }.to_json
+    headers = {"api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json"}
+    body = {article: {canonical_url: canonical_url}}.to_json
 
     with_retries(operation: "Updating canonical_url for article #{article_id}") do
       response = http_client.update_article(url, headers: headers, body: body)
@@ -104,37 +103,37 @@ module ArticleUpdater
       FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
       File.write(file_name, markdown_content)
       puts "\nArticle saved: #{file_name}"
-    rescue StandardError => e
+    rescue => e
       puts "Error saving article #{slug}: #{e.message}"
       raise
     end
   end
 
   def generate_markdown(article_data, slug)
-    cover_image = article_data['cover_image']
+    cover_image = article_data["cover_image"]
     metatags_image = {}
 
     unless cover_image.to_s.empty?
       metatags_image = {
-        'metatags' => {
-          'image' => "cover#{File.extname(cover_image)}"
+        "metatags" => {
+          "image" => "cover#{File.extname(cover_image)}"
         }
       }
     end
 
     article_hash = {
-      'dev_to_id' => article_data['id'],
-      'title' => article_data['title'],
-      'description' => article_data['description'],
-      'created_at' => article_data['created_at'],
-      'edited_at' => article_data['edited_at'],
-      'draft' => false,
-      'tags' => article_data['tags'],
-      'canonical_url' => article_data['canonical_url'],
-      'cover_image' => cover_image,
-      'slug' => slug
+      "dev_to_id" => article_data["id"],
+      "title" => article_data["title"],
+      "description" => article_data["description"],
+      "created_at" => article_data["created_at"],
+      "edited_at" => article_data["edited_at"],
+      "draft" => false,
+      "tags" => article_data["tags"],
+      "canonical_url" => article_data["canonical_url"],
+      "cover_image" => cover_image,
+      "slug" => slug
     }.merge(metatags_image)
 
-    "#{article_hash.to_yaml(line_width: -1)}---\n#{article_data['body_markdown']}"
+    "#{article_hash.to_yaml(line_width: -1)}---\n#{article_data["body_markdown"]}"
   end
 end

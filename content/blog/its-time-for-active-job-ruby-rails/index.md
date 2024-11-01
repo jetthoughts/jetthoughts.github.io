@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1880305
-title: "It’s Time For Active Job"
-description: "It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2...."
-created_at: "2024-06-07T11:47:31Z"
-edited_at: "2024-10-21T16:07:47Z"
+title: It’s Time For Active Job
+description: It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2....
+created_at: '2024-06-07T11:47:31Z'
+edited_at: '2024-10-22T21:06:17Z'
 draft: false
-tags: ["ruby", "rails", "develpment", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fahm6syimd0xp0ypri3sv.jpeg"
-slug: "its-time-for-active-job-ruby-rails"
+tags:
+- ruby
+- rails
+- develpment
+- tutorial
+canonical_url: https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/its-time-for-active-job-ruby-rails/cover.jpeg
+slug: its-time-for-active-job-ruby-rails
 metatags:
   image: cover.jpeg
 ---

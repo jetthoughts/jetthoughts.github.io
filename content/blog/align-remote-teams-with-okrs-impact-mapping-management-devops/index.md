@@ -1,14 +1,16 @@
 ---
 dev_to_id: 1556678
-title: "Align remote teams with OKRs and Impact Mapping"
-description: "In today's fast-paced business environment, remote distributed teams are becoming increasingly..."
-created_at: "2023-08-02T11:05:40Z"
-edited_at: "2024-10-21T20:06:54Z"
+title: Align remote teams with OKRs and Impact Mapping
+description: In today's fast-paced business environment, remote distributed teams are becoming increasingly...
+created_at: '2023-08-02T11:05:40Z'
+edited_at: '2024-10-21T21:05:51Z'
 draft: false
-tags: ["management", "devops"]
-canonical_url: "https://jetthoughts.com/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F83855rcb4hwz6yzz4s11.png"
-slug: "align-remote-teams-with-okrs-impact-mapping-management-devops"
+tags:
+- management
+- devops
+canonical_url: https://jetthoughts.com/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/cover.png
+slug: align-remote-teams-with-okrs-impact-mapping-management-devops
 metatags:
   image: cover.png
 ---

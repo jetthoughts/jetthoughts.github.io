@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1879395
-title: "Recent Searches & Sorting Hashes: How They are Connected"
-description: "In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
-created_at: "2024-06-06T15:55:49Z"
-edited_at: "2024-10-21T16:08:03Z"
+title: 'Recent Searches & Sorting Hashes: How They are Connected'
+description: In one of the applications, that we are developing, we needed to implement the storing of 10 last...
+created_at: '2024-06-06T15:55:49Z'
+edited_at: '2024-10-22T21:06:31Z'
 draft: false
-tags: ["ruby", "rails", "development"]
-canonical_url: "https://jetthoughts.com/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Frecent-searches-sorting-hashes-how-they-are-connected-ruby-rails%2Ffile_0.jpeg"
-slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails"
+tags:
+- ruby
+- rails
+- development
+canonical_url: https://jetthoughts.com/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/cover.jpeg
+slug: recent-searches-sorting-hashes-how-they-are-connected-ruby-rails
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1880218
-title: "Help shepherd to count sheep in Elixir"
-description: "I have been thinking about learning a functional language for a long time. So recently I’ve started..."
-created_at: "2024-06-07T10:14:43Z"
-edited_at: "2024-10-21T16:07:55Z"
+title: Help shepherd to count sheep in Elixir
+description: I have been thinking about learning a functional language for a long time. So recently I’ve started...
+created_at: '2024-06-07T10:14:43Z'
+edited_at: '2024-10-22T21:06:24Z'
 draft: false
-tags: ["programming", "elixir", "codewars", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/help-shepherd-count-sheep-in-elixir-programming/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhelp-shepherd-count-sheep-in-elixir-programming%2Ffile_0.jpeg"
-slug: "help-shepherd-count-sheep-in-elixir-programming"
+tags:
+- programming
+- elixir
+- codewars
+- tutorial
+canonical_url: https://jetthoughts.com/blog/help-shepherd-count-sheep-in-elixir-programming/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/help-shepherd-count-sheep-in-elixir-programming/cover.jpeg
+slug: help-shepherd-count-sheep-in-elixir-programming
 metatags:
   image: cover.jpeg
 ---

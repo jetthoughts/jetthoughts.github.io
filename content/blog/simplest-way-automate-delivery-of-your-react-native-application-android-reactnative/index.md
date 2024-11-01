@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1877570
-title: "The simplest way to automate delivery of your React Native Application"
-description: "Introduction   Delivering mobile application’s updates is not as simple as in the case of a..."
-created_at: "2024-06-05T06:08:07Z"
-edited_at: "2024-10-21T16:09:03Z"
+title: The simplest way to automate delivery of your React Native Application
+description: Introduction   Delivering mobile application’s updates is not as simple as in the case of a...
+created_at: '2024-06-05T06:08:07Z'
+edited_at: '2024-10-21T17:07:12Z'
 draft: false
-tags: ["android", "reactnative", "circleci"]
-canonical_url: "https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fsimplest-way-automate-delivery-of-your-react-native-application-android-reactnative%2Ffile_0.png"
-slug: "simplest-way-automate-delivery-of-your-react-native-application-android-reactnative"
+tags:
+- android
+- reactnative
+- circleci
+canonical_url: https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/cover.png
+slug: simplest-way-automate-delivery-of-your-react-native-application-android-reactnative
 metatags:
   image: cover.png
 ---
