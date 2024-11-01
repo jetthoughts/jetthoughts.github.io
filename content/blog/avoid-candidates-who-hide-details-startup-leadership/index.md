@@ -3,7 +3,7 @@ dev_to_id: 1910629
 title: Avoid Candidates Who Hide Details
 description: Understanding how a candidate plans to work is crucial when hiring remote workers. Have you ever...
 created_at: '2024-07-03T19:27:05Z'
-edited_at: '2024-10-22T21:06:00Z'
+edited_at: '2024-11-01T14:06:26Z'
 draft: false
 tags:
 - startup

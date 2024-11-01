@@ -3,7 +3,7 @@ dev_to_id: 1852581
 title: What to do for the developer when the WIP limit is reached
 description: Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep...
 created_at: '2024-05-14T11:42:29Z'
-edited_at: '2024-10-21T19:06:23Z'
+edited_at: '2024-11-01T14:09:16Z'
 draft: false
 tags:
 - agile

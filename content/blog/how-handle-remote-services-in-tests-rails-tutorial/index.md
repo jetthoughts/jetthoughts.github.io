@@ -3,7 +3,7 @@ dev_to_id: 1853545
 title: How to handle remote services in tests
 description: Do you have difficulties in adding the new tests and their readability decreased due to...
 created_at: '2024-05-15T06:53:38Z'
-edited_at: '2024-10-21T19:05:31Z'
+edited_at: '2024-11-01T14:08:25Z'
 draft: false
 tags:
 - rails

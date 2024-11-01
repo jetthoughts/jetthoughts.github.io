@@ -3,7 +3,7 @@ dev_to_id: 1852622
 title: How to create a technical post in a short time
 description: After reading thousands of posts, it’s time to share a workflow that will help those who are creating...
 created_at: '2024-05-14T12:36:24Z'
-edited_at: '2024-10-21T19:06:09Z'
+edited_at: '2024-11-01T14:09:06Z'
 draft: false
 tags:
 - writing

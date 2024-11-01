@@ -3,7 +3,7 @@ dev_to_id: 1877550
 title: Responsive or Adaptive Design? Find out which one is better for you
 description: JetThoughts has launched a new project recently. Whole front-end team was set and started...
 created_at: '2024-06-05T05:49:07Z'
-edited_at: '2024-10-21T17:07:20Z'
+edited_at: '2024-11-01T14:07:46Z'
 draft: false
 tags:
 - design

@@ -3,7 +3,7 @@ dev_to_id: 1559624
 title: Ruby on Rails Views Resources for Frontend Developer
 description: "\U0001F680 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails..."
 created_at: '2023-08-04T22:31:55Z'
-edited_at: '2024-10-21T21:05:48Z'
+edited_at: '2024-11-01T14:09:47Z'
 draft: false
 tags:
 - programming

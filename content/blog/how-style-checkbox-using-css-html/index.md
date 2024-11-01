@@ -3,7 +3,7 @@ dev_to_id: 1109046
 title: How to style a checkbox using CSS
 description: In this post I’l show you exactly how to make awesome checkboxes with just CSS.    &lt;div&gt;  ...
 created_at: '2022-06-09T09:02:15Z'
-edited_at: '2024-10-21T21:06:28Z'
+edited_at: '2024-11-01T14:10:29Z'
 draft: false
 tags:
 - css

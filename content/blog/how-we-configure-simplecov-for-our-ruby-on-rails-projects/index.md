@@ -3,7 +3,7 @@ dev_to_id: 1673284
 title: How we configure Simplecov for our Ruby on Rails projects.
 description: Here’s a step-by-step guide to setting up simplecov with explanations of what each part of the code...
 created_at: '2023-11-21T07:40:02Z'
-edited_at: '2024-10-21T21:05:43Z'
+edited_at: '2024-11-01T14:09:41Z'
 draft: false
 tags:
 - ruby

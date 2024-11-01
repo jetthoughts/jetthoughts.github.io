@@ -3,7 +3,7 @@ dev_to_id: 1880292
 title: Stress Testing Your Rails Application Using JMeter
 description: Stress Testing Your Rails Application Using JMeter     Some time ago we needed to make a...
 created_at: '2024-06-07T11:31:26Z'
-edited_at: '2024-10-22T19:07:04Z'
+edited_at: '2024-11-01T14:06:51Z'
 draft: false
 tags:
 - ruby

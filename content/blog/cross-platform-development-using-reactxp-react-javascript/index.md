@@ -3,7 +3,7 @@ dev_to_id: 1853624
 title: Cross-platform development using ReactXP
 description: Cross-platform development using ReactXP   Startups with limited resources trying to reduce...
 created_at: '2024-05-15T07:48:27Z'
-edited_at: '2024-10-21T17:07:40Z'
+edited_at: '2024-11-01T14:08:06Z'
 draft: false
 tags:
 - react

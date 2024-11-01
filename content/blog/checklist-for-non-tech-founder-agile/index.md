@@ -3,7 +3,7 @@ dev_to_id: 1877639
 title: Checklist for the non-tech founder
 description: If either agency, dev shop, or offshore team is building a product for you, it’s important to know...
 created_at: '2024-06-05T06:36:16Z'
-edited_at: '2024-10-22T21:06:43Z'
+edited_at: '2024-11-01T14:07:24Z'
 draft: false
 tags:
 - agile

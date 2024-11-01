@@ -3,7 +3,7 @@ dev_to_id: 1877556
 title: Mock Everything Is a Good Way to Sink
 description: Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see...
 created_at: '2024-06-05T05:52:47Z'
-edited_at: '2024-10-21T17:07:17Z'
+edited_at: '2024-11-01T14:07:44Z'
 draft: false
 tags:
 - tdd

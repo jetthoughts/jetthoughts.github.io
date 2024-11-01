@@ -3,7 +3,7 @@ dev_to_id: 1880251
 title: Our Default Ruby Development Stack
 description: Our Default Ruby Development Stack     Not that long ago I joined JetThoughts. By this time...
 created_at: '2024-06-07T10:47:23Z'
-edited_at: '2024-10-22T21:06:18Z'
+edited_at: '2024-11-01T14:06:53Z'
 draft: false
 tags:
 - rails

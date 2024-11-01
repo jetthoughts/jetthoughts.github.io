@@ -3,7 +3,7 @@ dev_to_id: 1880474
 title: Reduce concurrent requests by Redux-Saga Effects
 description: Are you familiar with the situation when the user clicks on a Load Data button 2 consecutive times at...
 created_at: '2024-06-07T13:41:39Z'
-edited_at: '2024-10-22T21:06:09Z'
+edited_at: '2024-11-01T14:06:39Z'
 draft: false
 tags:
 - redux

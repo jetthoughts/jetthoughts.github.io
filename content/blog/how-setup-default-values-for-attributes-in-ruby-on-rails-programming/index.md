@@ -3,7 +3,7 @@ dev_to_id: 1144505
 title: How To Setup Default Values For Attributes In Ruby On Rails
 description: Have you ever thought setting default values for attributes in Ruby on Rails could be...
 created_at: '2022-07-19T06:01:04Z'
-edited_at: '2024-10-21T21:06:18Z'
+edited_at: '2024-11-01T14:10:18Z'
 draft: false
 tags:
 - ruby

@@ -4,7 +4,7 @@ require 'ostruct'
 class FakeHttpClient
   def get_articles(url, page = 1)
     OpenStruct.new(success?: true, body: index_response)
- end
+  end
 
   def get_article(url)
     id = url.split("/").last

@@ -3,7 +3,7 @@ dev_to_id: 1910822
 title: 'New in Rails 7.2: Generated With .devcontainer'
 description: Exciting news from Rails! The latest Rails 7.2 has a new feature. When you create a new app, it now...
 created_at: '2024-07-03T20:23:36Z'
-edited_at: '2024-10-22T21:05:58Z'
+edited_at: '2024-11-01T14:06:24Z'
 draft: false
 tags:
 - rails

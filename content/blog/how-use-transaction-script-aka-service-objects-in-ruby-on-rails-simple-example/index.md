@@ -3,7 +3,7 @@ dev_to_id: 399009
 title: How to use a Transaction Script(aka Service Objects) in Ruby on Rails. Simple example
 description: The logic of small applications can be present as a series of transactions. Using the Transaction...
 created_at: '2020-07-15T15:47:10Z'
-edited_at: '2024-10-21T21:06:45Z'
+edited_at: '2024-11-01T13:37:03Z'
 draft: false
 tags:
 - ruby

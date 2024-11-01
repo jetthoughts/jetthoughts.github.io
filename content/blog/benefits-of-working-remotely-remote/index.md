@@ -3,7 +3,7 @@ dev_to_id: 1852577
 title: Benefits of working remotely
 description: Nowadays, remote work gains more and more prominence. Many successful companies let their employees...
 created_at: '2024-05-14T11:38:52Z'
-edited_at: '2024-10-21T19:06:26Z'
+edited_at: '2024-11-01T14:09:19Z'
 draft: false
 tags:
 - remote

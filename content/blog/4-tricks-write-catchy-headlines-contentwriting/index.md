@@ -3,7 +3,7 @@ dev_to_id: 1852733
 title: 4 Tricks to Write Catchy Headlines
 description: How to improve your writing, and create not just a good headline, but a catchy one? No matter what...
 created_at: '2024-05-14T13:53:54Z'
-edited_at: '2024-10-21T19:05:59Z'
+edited_at: '2024-11-01T14:08:56Z'
 draft: false
 tags:
 - contentwriting

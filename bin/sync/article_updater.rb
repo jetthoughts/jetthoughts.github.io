@@ -65,7 +65,7 @@ module ArticleUpdater
 
       if response.success?
         puts "Update canonical_url result: #{canonical_url}\n"
-        response.body
+        JSON.parse(response.body)
       else
         raise "Failed to update canonical_url: #{response.code} - #{response.message}"
       end

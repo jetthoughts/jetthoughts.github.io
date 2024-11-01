@@ -3,7 +3,7 @@ dev_to_id: 1205578
 title: Team Structure for MVP
 description: 'In structuring a team for MVP, we should consider the following: there is a massive number of...'
 created_at: '2022-09-28T14:58:08Z'
-edited_at: '2024-10-21T21:06:02Z'
+edited_at: '2024-11-01T14:10:03Z'
 draft: false
 tags:
 - startup

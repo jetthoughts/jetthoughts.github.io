@@ -3,7 +3,7 @@ dev_to_id: 1099690
 title: Change input’s placeholder color with CSS
 description: 'Most modern browsers support the simple pseudo-element:    ::placeholder {   color: #9400d3; }       ...'
 created_at: '2022-05-30T10:04:54Z'
-edited_at: '2024-10-21T21:06:33Z'
+edited_at: '2024-11-01T14:10:35Z'
 draft: false
 tags:
 - css

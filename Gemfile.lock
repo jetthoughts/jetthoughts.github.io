@@ -59,10 +59,15 @@ GEM
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
+    csv (3.3.0)
     drb (2.2.1)
     erubi (1.13.0)
     ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
+    httparty (0.22.0)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     json (2.7.5)
@@ -79,6 +84,8 @@ GEM
     mini_mime (1.1.5)
     mini_portile2 (2.8.7)
     minitest (5.25.1)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     mutex_m (0.2.0)
     nio4r (2.7.4)
     nokogiri (1.16.7)
@@ -167,6 +174,7 @@ DEPENDENCIES
   bigdecimal
   capybara
   capybara-screenshot-diff!
+  httparty
   launchy
   minitest
   mutex_m

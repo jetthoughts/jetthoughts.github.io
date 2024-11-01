@@ -3,7 +3,7 @@ dev_to_id: 1880404
 title: Advantages of freelance — why it’s really worth trying?
 description: Every day freelance is becoming more and more popular among all industries where it’s possible to...
 created_at: '2024-06-07T13:04:07Z'
-edited_at: '2024-10-22T21:06:14Z'
+edited_at: '2024-11-01T14:06:45Z'
 draft: false
 tags:
 - freelance

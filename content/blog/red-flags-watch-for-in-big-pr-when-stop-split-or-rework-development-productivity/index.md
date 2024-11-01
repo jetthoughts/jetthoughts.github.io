@@ -3,7 +3,7 @@ dev_to_id: 1997095
 title: 'Red Flags to Watch for in a Big PR: When to Stop, Split, or Rework'
 description: Big pull requests (PRs) can cause delays and block progress. As a developer, it's important to spot...
 created_at: '2024-09-11T16:47:44Z'
-edited_at: '2024-10-22T19:06:15Z'
+edited_at: '2024-11-01T13:22:07Z'
 draft: false
 tags:
 - development

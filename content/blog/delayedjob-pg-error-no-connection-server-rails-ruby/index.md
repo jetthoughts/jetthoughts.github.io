@@ -3,7 +3,7 @@ dev_to_id: 1880232
 title: DelayedJob and PG Error No Connection to Server
 description: DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the...
 created_at: '2024-06-07T10:21:11Z'
-edited_at: '2024-10-22T21:06:22Z'
+edited_at: '2024-11-01T14:06:57Z'
 draft: false
 tags:
 - rails

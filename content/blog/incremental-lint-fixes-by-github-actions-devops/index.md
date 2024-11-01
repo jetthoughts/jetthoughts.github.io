@@ -3,7 +3,7 @@ dev_to_id: 1189342
 title: Incremental lint fixes by GitHub Actions
 description: How do you apply new lint rules to the legacy project with active development? Have you added...
 created_at: '2022-09-09T18:50:36Z'
-edited_at: '2024-10-21T21:06:09Z'
+edited_at: '2024-11-01T14:10:10Z'
 draft: false
 tags:
 - devops

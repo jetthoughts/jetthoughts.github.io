@@ -3,7 +3,7 @@ dev_to_id: 1853472
 title: Services and tools to automatize development for the remote teams
 description: We save a lot of time on development and create better products due to well-formed...
 created_at: '2024-05-15T06:02:44Z'
-edited_at: '2024-10-21T19:05:42Z'
+edited_at: '2024-11-01T14:08:36Z'
 draft: false
 tags:
 - workflow

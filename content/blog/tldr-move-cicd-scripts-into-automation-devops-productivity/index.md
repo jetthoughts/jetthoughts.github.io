@@ -3,7 +3,7 @@ dev_to_id: 1205643
 title: 'TL;DR: Move CI/CD scripts into .automation'
 description: Today our /bin folder has become overwhelmed with different development tools and scripts.  We put...
 created_at: '2022-09-28T16:13:54Z'
-edited_at: '2024-10-21T21:06:04Z'
+edited_at: '2024-11-01T14:10:04Z'
 draft: false
 tags:
 - devops

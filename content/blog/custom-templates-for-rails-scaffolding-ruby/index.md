@@ -3,7 +3,7 @@ dev_to_id: 1212480
 title: Custom templates for Rails scaffolding
 description: Rails has a very handy tool for rapid development called scaffolding. Often programmers ignore it,...
 created_at: '2022-10-06T09:10:00Z'
-edited_at: '2024-10-21T21:06:01Z'
+edited_at: '2024-11-01T14:10:01Z'
 draft: false
 tags:
 - rails

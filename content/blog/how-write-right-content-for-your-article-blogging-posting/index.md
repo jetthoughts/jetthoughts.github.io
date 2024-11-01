@@ -3,7 +3,7 @@ dev_to_id: 1853550
 title: How To Write The Right Content For Your Article
 description: There are moments when you’re full of motivation, ideas come up with your mind and straight onto the...
 created_at: '2024-05-15T07:00:58Z'
-edited_at: '2024-10-21T19:05:30Z'
+edited_at: '2024-11-01T14:08:22Z'
 draft: false
 tags:
 - blogging

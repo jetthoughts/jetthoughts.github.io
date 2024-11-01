@@ -3,7 +3,7 @@ dev_to_id: 1853539
 title: Why communication is so important when you work remotely?
 description: Communication at work is one of the most important aspects of any business.  But why? Let’s take a...
 created_at: '2024-05-15T06:47:42Z'
-edited_at: '2024-10-21T19:05:33Z'
+edited_at: '2024-11-01T14:08:27Z'
 draft: false
 tags:
 - remote

@@ -1,10 +1,10 @@
-require_relative '../support/fake_http_client'
-require_relative '../../bin/sync/sync.rb'
-require 'minitest/autorun'
+require_relative "../support/fake_http_client"
+require_relative "../../bin/sync/sync"
+require "minitest/autorun"
 
 class SyncWithDevToTest < Minitest::Test
-  WORKING_DIR = 'test/tmp/content/blog/'.freeze
-  SYNC_STATUS_FILE = 'sync_status.yml'.freeze
+  WORKING_DIR = "test/tmp/content/blog/".freeze
+  SYNC_STATUS_FILE = "sync_status.yml".freeze
   FAKE_API_ARTICLE_1 = {
     slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails"
   }
@@ -13,8 +13,8 @@ class SyncWithDevToTest < Minitest::Test
   }
 
   def setup
-    ENV["DEVTO_API_KEY"] = "fake_api_key"
-    FileUtils.mkdir_p(WORKING_DIR)
+    ENV["DEVTO_API_KEY"] = "fake_api_key" # to avoid ArgumentError
+    FileUtils.mkdir_p(WORKING_DIR) # to avoid Errno::ENOENT
   end
 
   def run_sync
@@ -25,7 +25,7 @@ class SyncWithDevToTest < Minitest::Test
     FileUtils.rm_rf(Dir.glob(WORKING_DIR))
   end
 
-  def prepare_sync_file_with_unsynced_article
+  def prepare_sync_file_with_un_synced_article
     articles = {
       1879395 => {
         edited_at: "2023-10-23T00:00:00Z",
@@ -38,7 +38,7 @@ class SyncWithDevToTest < Minitest::Test
         synced: true
       }
     }
-    File.open("#{WORKING_DIR}#{SYNC_STATUS_FILE}", 'w') { |file| file.write(articles.to_yaml) }
+    File.write("#{WORKING_DIR}#{SYNC_STATUS_FILE}", articles.to_yaml)
   end
 
   def change_article_slug
@@ -54,7 +54,7 @@ class SyncWithDevToTest < Minitest::Test
         synced: true
       }
     }
-    File.open("#{WORKING_DIR}#{SYNC_STATUS_FILE}", 'w') { |file| file.write(articles.to_yaml) }
+    File.write("#{WORKING_DIR}#{SYNC_STATUS_FILE}", articles.to_yaml)
   end
 
   def test_sync_script_create_yaml_status_file_on_first_run
@@ -64,7 +64,7 @@ class SyncWithDevToTest < Minitest::Test
   end
 
   def sync_file_content
-    YAML.safe_load(File.read("#{WORKING_DIR}#{SYNC_STATUS_FILE}"), permitted_classes: [Time, Symbol])
+    YAML.safe_load_file("#{WORKING_DIR}#{SYNC_STATUS_FILE}", permitted_classes: [Time, Symbol])
   end
 
   def test_sync_script_fill_yaml_status_file
@@ -72,7 +72,7 @@ class SyncWithDevToTest < Minitest::Test
 
     assert_equal sync_file_content, {
       1879395 => {
-        edited_at: '2024-10-23T15:44:11Z',
+        edited_at: "2024-10-23T15:44:11Z",
         slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails",
         synced: true
       },
@@ -85,11 +85,11 @@ class SyncWithDevToTest < Minitest::Test
   end
 
   def test_sync_only_unsynced_articles
-    prepare_sync_file_with_unsynced_article
+    prepare_sync_file_with_un_synced_article
 
     assert_equal sync_file_content, {
       1879395 => {
-        edited_at: '2023-10-23T00:00:00Z',
+        edited_at: "2023-10-23T00:00:00Z",
         slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails",
         synced: false
       },
@@ -124,11 +124,11 @@ class SyncWithDevToTest < Minitest::Test
 
     assert_includes content, "title: 'Recent Searches & Sorting Hashes: How They are Connected'"
     assert_includes content, "description: In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
-    assert_includes content, 'tags:'
-    assert_includes content, '- ruby'
-    assert_includes content, '- rails'
-    assert_includes content, '- development'
-    assert_includes content, 'cover_image:'
+    assert_includes content, "tags:"
+    assert_includes content, "- ruby"
+    assert_includes content, "- rails"
+    assert_includes content, "- development"
+    assert_includes content, "cover_image:"
   end
 
   def test_sync_add_article_markdown
@@ -137,7 +137,7 @@ class SyncWithDevToTest < Minitest::Test
     markdown_file = "#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md"
     content = File.read(markdown_file)
 
-    assert_includes content, 'In one of the applications, that we are developing'
+    assert_includes content, "In one of the applications, that we are developing"
   end
 
   def test_sync_script_downloads_cover_image
@@ -158,7 +158,7 @@ class SyncWithDevToTest < Minitest::Test
     markdown_file = "#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md"
     content = File.read(markdown_file)
 
-    assert_includes content, 'file_0.jpeg'
+    assert_includes content, "file_0.jpeg"
   end
 
   def test_sync_script_apply_custom_slugs_from_file

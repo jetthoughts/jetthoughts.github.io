@@ -3,7 +3,7 @@ dev_to_id: 1198201
 title: How to avoid callbacks using services.
 description: Often, programmers abuse callbacks, not fully understanding that their code will ultimately be...
 created_at: '2022-09-20T13:23:18Z'
-edited_at: '2024-10-21T21:06:08Z'
+edited_at: '2024-11-01T14:10:08Z'
 draft: false
 tags:
 - rails

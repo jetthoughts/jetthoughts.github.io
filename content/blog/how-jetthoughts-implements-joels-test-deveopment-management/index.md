@@ -3,7 +3,7 @@ dev_to_id: 1877555
 title: How JetThoughts implements Joel’s test?
 description: 'For those of you who don’t know who Joel Spolsky is here are some facts:   Worked at...'
 created_at: '2024-06-05T05:51:10Z'
-edited_at: '2024-10-21T17:07:19Z'
+edited_at: '2024-11-01T14:07:45Z'
 draft: false
 tags:
 - deveopment

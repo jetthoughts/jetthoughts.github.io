@@ -3,7 +3,7 @@ dev_to_id: 1108673
 title: Preview UI changes with Ruby on Rails variants
 description: When implementing new design for a live application we usually don’t want our users to see an...
 created_at: '2022-06-08T20:15:39Z'
-edited_at: '2024-10-21T21:06:26Z'
+edited_at: '2024-11-01T14:10:27Z'
 draft: false
 tags:
 - rails

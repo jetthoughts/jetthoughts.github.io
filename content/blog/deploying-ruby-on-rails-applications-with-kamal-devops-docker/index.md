@@ -3,7 +3,7 @@ dev_to_id: 1952002
 title: Deploying Ruby on Rails applications with Kamal
 description: With the release of Rails 8, Kamal will be the default tool for deploying Rails applications,...
 created_at: '2024-08-08T07:55:18Z'
-edited_at: '2024-10-22T19:06:22Z'
+edited_at: '2024-11-01T13:22:35Z'
 draft: false
 tags:
 - devops
