@@ -5,9 +5,9 @@
 
 
 <picture>
-    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-    <source srcset="{{ $cropped.RelPermalink }}" type="{{ $cropped.MediaType }}">
-    <img src="{{ $cropped.RelPermalink }}" alt="{{ .Page.Title }}" width="{{ .width }}" height="{{ .height }}">
+  <source srcset='{{ $webp.RelPermalink }}' type="image/webp" width="{{ .width }}" height="{{ .height }}">
+  <source srcset='{{ $cropped.RelPermalink }}' type="{{ $cropped.MediaType }}" width="{{ .width }}" height="{{ .height }}">
+  <img alt='{{ .Page.Title }}' src="{{ $cropped.RelPermalink }}" width="{{ .width }}" height="{{ .height }}">
 </picture>
 
 {{ else }}
