@@ -28,7 +28,7 @@
     {{ end }}
 {{ end }}
 
-<a href="{{ $src.RelPermalink }}">
+<a href="{{ $src.RelPermalink }}" rel="nofollow">
     <picture>
         {{ range $format := $formats }}
             {{ $srcset := slice }}
@@ -36,9 +36,14 @@
                 {{ $image := $data.Get (printf "%s-%d" $format $index) }}
                 {{ $srcset = $srcset | append (printf "%s %dw" $image.RelPermalink $size) }}
             {{ end }}
-            <source type="image/{{ $format }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 48rem) 100vw, 48rem" height="{{ $src.Height }}" width="{{ $src.Width }}">
+            <source type="image/{{ $format }}" srcset="{{ delimit $srcset ", " }}"
+                    sizes="(max-width: 48rem) 100vw, 48rem" height="{{ $src.Height }}" width="{{ $src.Width }}">
         {{ end }}
-        <img loading="lazy" src="{{ ($data.Get (printf "%s-0" $defaultFormat)).RelPermalink }}" alt="{{ $alt }}" height="{{ $src.Height }}" width="{{ $src.Width }}">
+        <img loading="lazy"
+             src="{{ ($data.Get (printf "%s-0" $defaultFormat)).RelPermalink }}"
+             alt="{{ $alt }}"
+             height="{{ $src.Height }}"
+             width="{{ $src.Width }}">
     </picture>
 </a>
 

@@ -64,7 +64,7 @@
                 <br />
 
                 {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
-                  <a class="link" target="_blank" rel="noopener" href="{{ .Permalink }}">
+                  <a class="link" target="_blank" rel="noopener" href="{{ .RelPermalink }}">
                     <div class="blog-post">
                       <div class="post-image">
                         {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}

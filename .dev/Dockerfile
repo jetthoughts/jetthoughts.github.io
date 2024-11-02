@@ -43,7 +43,12 @@ ENV \
     OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
     PATH="/app/bin:$PATH" \
     PRECOMPILED_ASSETS=true \
-    RUBY_YJIT_ENABLE=1
+    RUBY_YJIT_ENABLE=1 \
+    TEST_SERVER_PORT=1314
+
+# Install bundle from Gemfile
+COPY ../Gemfile ../Gemfile.lock ./
+RUN bundle check || bundle install
 
 # Use Bash as the default command
 CMD ["bin/test"]

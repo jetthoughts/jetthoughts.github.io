@@ -2,8 +2,8 @@
 x-backend: &backend
   image: jetthoughts.com-test:1.0.0
   build:
-    context: .
-    dockerfile: ./Dockerfile
+    context: ../
+    dockerfile: ./.dev/Dockerfile
   stdin_open: true
   tty: true
   volumes:

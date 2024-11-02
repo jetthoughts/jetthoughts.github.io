@@ -5,11 +5,11 @@
 
 
 <picture>
-    <source srcset="{{ $webp.Permalink }}" type="image/webp">
-    <source srcset="{{ $cropped.Permalink }}" type="{{ $cropped.MediaType }}">
-    <img src="{{ $cropped.Permalink }}" alt="{{ .Page.Title }}" width="{{ .width }}" height="{{ .height }}">
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <source srcset="{{ $cropped.RelPermalink }}" type="{{ $cropped.MediaType }}">
+    <img src="{{ $cropped.RelPermalink }}" alt="{{ .Page.Title }}" width="{{ .width }}" height="{{ .height }}">
 </picture>
 
 {{ else }}
-<img src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).Permalink }}" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
+<img src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).RelPermalink }}" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
 {{ end }}

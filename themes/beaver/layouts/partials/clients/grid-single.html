@@ -26,7 +26,7 @@
         <meta itemprop="userInteractionCount" content="0"/>
     </div>
     <div class="pp-content-grid-post-image">
-        <a href="{{ .Permalink }}">
+        <a href="{{ .RelPermalink }}">
             {{ partial "img/client-logo.html" (dict "image" $logo "title" .Params.client.name) }}
         </a>
     </div>
