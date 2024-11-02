@@ -3,11 +3,11 @@ dev_to_id: 1852618
 title: "How to start an Open Source project. Building RESO API JS client"
 description: "Would you like to understand how to start your new Open Source project in a week? How to build a..."
 created_at: "2024-05-14T12:29:45Z"
-edited_at: "2024-10-21T18:08:37Z"
+edited_at: "2024-11-01T18:08:31Z"
 draft: false
 tags: ["javascript", "opensource", "npm", "management"]
 canonical_url: "https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-start-an-open-source-project-building-reso-api-js-client-javascript-opensource%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-start-an-open-source-project-building-reso-api-js-client-javascript-opensource%2Ffile_0.jpeg"
 slug: "how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource"
 metatags:
   image: cover.jpeg

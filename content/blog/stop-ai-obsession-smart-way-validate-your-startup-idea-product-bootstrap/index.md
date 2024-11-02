@@ -3,7 +3,7 @@ dev_to_id: 2057569
 title: "Stop the AI Obsession: The Smart Way to Validate Your Startup Idea"
 description: "Many founders today fixate on AI. They think adding AI to their product will draw users in droves,..."
 created_at: "2024-10-25T12:04:15Z"
-edited_at: "2024-10-25T12:14:32Z"
+edited_at: "2024-11-01T14:39:09Z"
 draft: false
 tags: ["product", "bootstrap", "ai", "startup"]
 canonical_url: "https://jetthoughts.com/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/"

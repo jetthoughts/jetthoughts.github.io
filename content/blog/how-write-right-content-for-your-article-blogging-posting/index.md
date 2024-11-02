@@ -3,11 +3,11 @@ dev_to_id: 1853550
 title: "How To Write The Right Content For Your Article"
 description: "There are moments when you’re full of motivation, ideas come up with your mind and straight onto the..."
 created_at: "2024-05-15T07:00:58Z"
-edited_at: "2024-10-21T18:07:55Z"
+edited_at: "2024-11-01T18:07:47Z"
 draft: false
 tags: ["blogging", "posting", "contentwriting"]
 canonical_url: "https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-write-right-content-for-your-article-blogging-posting%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-write-right-content-for-your-article-blogging-posting%2Ffile_0.jpeg"
 slug: "how-write-right-content-for-your-article-blogging-posting"
 metatags:
   image: cover.jpeg

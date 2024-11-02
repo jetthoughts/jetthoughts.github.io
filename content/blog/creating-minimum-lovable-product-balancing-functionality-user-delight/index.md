@@ -3,7 +3,7 @@ dev_to_id: 1943646
 title: "Creating a Minimum Lovable Product: Balancing Functionality and User Delight"
 description: "In the fast-paced world of startups, it's key to create a product that works well and makes users..."
 created_at: "2024-08-01T12:41:11Z"
-edited_at: "2024-10-22T20:06:28Z"
+edited_at: "2024-11-01T14:28:38Z"
 draft: false
 tags: []
 canonical_url: "https://jetthoughts.com/blog/creating-minimum-lovable-product-balancing-functionality-user-delight/"

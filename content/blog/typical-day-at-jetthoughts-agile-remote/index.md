@@ -3,11 +3,11 @@ dev_to_id: 1853596
 title: "A typical day at JetThoughts"
 description: "In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the..."
 created_at: "2024-05-15T07:22:32Z"
-edited_at: "2024-10-21T18:07:47Z"
+edited_at: "2024-11-01T18:07:39Z"
 draft: false
 tags: ["agile", "remote", "kanban", "process"]
 canonical_url: "https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ftypical-day-at-jetthoughts-agile-remote%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ftypical-day-at-jetthoughts-agile-remote%2Ffile_0.jpeg"
 slug: "typical-day-at-jetthoughts-agile-remote"
 metatags:
   image: cover.jpeg

@@ -3,11 +3,11 @@ dev_to_id: 1853545
 title: "How to handle remote services in tests"
 description: "Do you have difficulties in adding the new tests and their readability decreased due to..."
 created_at: "2024-05-15T06:53:38Z"
-edited_at: "2024-10-21T18:07:56Z"
+edited_at: "2024-11-01T18:07:50Z"
 draft: false
 tags: ["rails", "tutorial", "pattern", "ruby"]
 canonical_url: "https://jetthoughts.com/blog/how-handle-remote-services-in-tests-rails-tutorial/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-handle-remote-services-in-tests-rails-tutorial%2Ffile_0.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-handle-remote-services-in-tests-rails-tutorial%2Ffile_0.png"
 slug: "how-handle-remote-services-in-tests-rails-tutorial"
 metatags:
   image: cover.png

@@ -3,7 +3,7 @@ dev_to_id: 1667161
 title: "Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds"
 description: "With the recent release of Bun and its newfound support for Vite, coupled with Ruby on Rails 7.1..."
 created_at: "2023-11-15T09:13:40Z"
-edited_at: "2024-10-21T20:06:46Z"
+edited_at: "2024-11-01T18:09:03Z"
 draft: false
 tags: ["rails", "javascript", "tutorial", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/"

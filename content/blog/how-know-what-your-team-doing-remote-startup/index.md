@@ -3,11 +3,11 @@ dev_to_id: 1853575
 title: "How to know what your team is doing?"
 description: "What techniques do you use to work with the team in an async, remote environment? How to..."
 created_at: "2024-05-15T07:19:53Z"
-edited_at: "2024-10-21T18:07:49Z"
+edited_at: "2024-11-01T18:07:41Z"
 draft: false
 tags: ["remote", "startup", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/how-know-what-your-team-doing-remote-startup/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-know-what-your-team-doing-remote-startup%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-know-what-your-team-doing-remote-startup%2Ffile_0.jpeg"
 slug: "how-know-what-your-team-doing-remote-startup"
 metatags:
   image: cover.jpeg

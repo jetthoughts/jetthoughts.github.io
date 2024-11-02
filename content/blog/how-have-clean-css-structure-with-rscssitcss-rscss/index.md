@@ -3,11 +3,11 @@ dev_to_id: 1853621
 title: "How to have a clean CSS structure with RSCSS/ITCSS"
 description: "Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take..."
 created_at: "2024-05-15T07:45:28Z"
-edited_at: "2024-10-21T16:39:23Z"
+edited_at: "2024-11-01T18:07:32Z"
 draft: false
 tags: ["css", "rscss", "frontend", "tutorial"]
 canonical_url: "https://jetthoughts.com/blog/how-have-clean-css-structure-with-rscssitcss-rscss/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-have-clean-css-structure-with-rscssitcss-rscss%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-have-clean-css-structure-with-rscssitcss-rscss%2Ffile_0.jpeg"
 slug: "how-have-clean-css-structure-with-rscssitcss-rscss"
 metatags:
   image: cover.jpeg

@@ -3,11 +3,11 @@ dev_to_id: 1852741
 title: "How to avoid N+1 query using SQL views (materialized) in Rails application"
 description: "Consider the way to reduce the queries when calculating the average values and find the..."
 created_at: "2024-05-14T14:05:48Z"
-edited_at: "2024-10-21T18:08:19Z"
+edited_at: "2024-11-01T18:08:14Z"
 draft: false
 tags: ["ruby", "rails", "tutorial", "sql"]
 canonical_url: "https://jetthoughts.com/blog/how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby%2Ffile_0.png"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby%2Ffile_0.png"
 slug: "how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby"
 metatags:
   image: cover.png

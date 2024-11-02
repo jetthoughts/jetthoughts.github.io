@@ -3,11 +3,11 @@ dev_to_id: 1852712
 title: "What are the most common misconceptions about remote work?"
 description: "A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the..."
 created_at: "2024-05-14T13:38:49Z"
-edited_at: "2024-10-21T18:08:26Z"
+edited_at: "2024-11-01T18:08:21Z"
 draft: false
 tags: ["remote", "misconception", "myths"]
 canonical_url: "https://jetthoughts.com/blog/what-are-most-common-misconceptions-about-remote-work-misconception/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwhat-are-most-common-misconceptions-about-remote-work-misconception%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwhat-are-most-common-misconceptions-about-remote-work-misconception%2Ffile_0.jpeg"
 slug: "what-are-most-common-misconceptions-about-remote-work-misconception"
 metatags:
   image: cover.jpeg

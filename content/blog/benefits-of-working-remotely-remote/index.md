@@ -3,11 +3,11 @@ dev_to_id: 1852577
 title: "Benefits of working remotely"
 description: "Nowadays, remote work gains more and more prominence. Many successful companies let their employees..."
 created_at: "2024-05-14T11:38:52Z"
-edited_at: "2024-10-21T18:08:46Z"
+edited_at: "2024-11-01T20:06:41Z"
 draft: false
 tags: ["remote", "benefits", "workplace", "advantages"]
 canonical_url: "https://jetthoughts.com/blog/benefits-of-working-remotely-remote/"
-cover_image: "https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fbenefits-of-working-remotely-remote%2Ffile_0.jpeg"
+cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fbenefits-of-working-remotely-remote%2Ffile_0.jpeg"
 slug: "benefits-of-working-remotely-remote"
 metatags:
   image: cover.jpeg

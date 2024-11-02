@@ -3,7 +3,7 @@ dev_to_id: 1908791
 title: "Top Venture Builders in Germany: Leading Innovation Across Industries"
 description: "Fed up! Are you aiming to create a new company but you are weak from a tech position? Are you excited..."
 created_at: "2024-07-02T11:17:59Z"
-edited_at: "2024-10-22T20:06:45Z"
+edited_at: "2024-11-01T16:06:47Z"
 draft: false
 tags: ["startup"]
 canonical_url: "https://jetthoughts.com/blog/top-venture-builders-in-germany-leading-innovation-across-industries-startup/"

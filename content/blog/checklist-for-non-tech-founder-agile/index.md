@@ -3,7 +3,7 @@ dev_to_id: 1877639
 title: "Checklist for the non-tech founder"
 description: "If either agency, dev shop, or offshore team is building a product for you, it’s important to know..."
 created_at: "2024-06-05T06:36:16Z"
-edited_at: "2024-10-22T20:07:32Z"
+edited_at: "2024-11-01T16:07:34Z"
 draft: false
 tags: ["agile", "checklist", "development", "process"]
 canonical_url: "https://jetthoughts.com/blog/checklist-for-non-tech-founder-agile/"
