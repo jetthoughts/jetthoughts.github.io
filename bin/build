@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-set -eo pipefail
+set -euo pipefail
 
 hugo --gc --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn "$@"
