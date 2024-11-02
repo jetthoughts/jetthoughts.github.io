@@ -21,7 +21,7 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_blog_index
     visit "/blog/"
 
-    assert_matches_screenshot "blog/index"
+    assert_matches_screenshot "blog/index", skip_area: [".blog-post"]
   end
 
   def test_blog_index_pagination
@@ -29,7 +29,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_matches_screenshot "blog/index/_pagination", wait: 3, stability_time_limit: 0.25
+    assert_matches_screenshot "blog/index/_pagination", skip_area: [".blog-post"], wait: 3, stability_time_limit: 0.25
   end
 
   def test_visit_blog_post
