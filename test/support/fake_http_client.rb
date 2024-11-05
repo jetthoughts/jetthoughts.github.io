@@ -34,7 +34,7 @@ class FakeHttpClient
   def update_article(url, headers:, body:)
     OpenStruct.new(
       success?: true,
-      body: { "edited_at" => '2024-10-23T15:44:11Z' }
+      body: JSON.generate({ "edited_at" => '2024-10-23T15:44:11Z' })
     )
   end
 end
