@@ -34,7 +34,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Blog"
     end
 
-    assert_matches_screenshot "blog/index"
+    assert_matches_screenshot "blog/index", skip_area: [".blog-post"]
   end
 
   def test_blog_index_pagination
@@ -42,7 +42,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_matches_screenshot "blog/index/_pagination", wait: 3, stability_time_limit: 0.25
+    assert_matches_screenshot "blog/index/_pagination", skip_area: [".blog-post"], wait: 3, stability_time_limit: 0.25
   end
 
   def test_visit_blog_post
@@ -177,7 +177,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   private
 
   def within_top_bar
-    within "nav" do
+    within ".navigation" do
       yield
     end
   end

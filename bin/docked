@@ -2,4 +2,4 @@
 
 set -eo pipefail
 
-bin/compose run --rm "$@"
+bin/compose run --rm --quiet-pull --remove-orphans "$@"
