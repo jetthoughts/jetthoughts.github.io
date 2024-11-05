@@ -18,6 +18,7 @@ function loadCSS(url) {
 }
 {{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+{{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
 
 {{ $nonCriticalCSS := slice
    (resources.Get "css/companies.css")
@@ -30,6 +31,7 @@ function loadCSS(url) {
    $dynamicCSS586
    (resources.Get "css/586.css")
    (resources.Get "css/technologies.css")
+   $dynamicCSSUseCases
 | resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
@@ -37,6 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
    loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
 })
 </script>
+
+{{ $tabs := slice
+(resources.Get "js/tabs.js")
+| resources.Concat "js/_tabs.js"
+| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
+}}
+
+<script defer src="{{ $tabs.RelPermalink }}"></script>
+
 {{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
@@ -632,7 +643,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
                                  </div>
                               </div>
-                              <div id="cta" class="fl-col-group fl-node-3izxuk4et0wy fl-col-group-custom-width" data-node="3izxuk4et0wy">
+                              <div id="cta" class="fl-col-group fl-node-3izxuk4et0wy fl-col-group-custom-width" data-node="3izxuk4et0wy" style="margin-bottom: 130px">
                                  <div class="fl-col fl-node-04h8akisgvow fl-col-small-custom-width" data-node="04h8akisgvow">
                                     <div class="fl-col-content fl-node-content">
                                        <div class="fl-module fl-module-heading fl-node-pmt8g6z4fiqj" data-node="pmt8g6z4fiqj">
@@ -661,281 +672,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
                                  </div>
                               </div>
-                              <div id="use-cases" class="fl-col-group fl-node-f0zdskhtr8qj" data-node="f0zdskhtr8qj">
-                                 <div class="fl-col fl-node-vazkm2sftxr5" data-node="vazkm2sftxr5">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-rich-text fl-node-qyvt504hwa8m" data-node="qyvt504hwa8m">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-rich-text">
-                                                <p>USE CASES</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-heading fl-node-o4t01yzwbpma" data-node="o4t01yzwbpma">
-                                          <div class="fl-module-content fl-node-content">
-                                             <h2 class="fl-heading">
-                                                <span class="fl-heading-text">Delivering positive technology outcomes</span>
-                                             </h2>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-rich-text fl-node-grasw159c7ut" data-node="grasw159c7ut">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-rich-text">
-                                                <p>We are committed to helping companies confront &amp; conquer new software development challenges, no matter how complicated.</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-pp-advanced-tabs fl-node-vo75i29j3fmz jt-tabs" data-node="vo75i29j3fmz">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-tabs pp-tabs-vertical pp-tabs-vertical-left pp-tabs-default pp-clearfix">
-                                                <div class="pp-tabs-labels pp-clearfix" role="tablist" aria-label="Use cases">
-                                                   <div id="pp-tab-vo75i29j3fmz-1" class="pp-tabs-label pp-tab-active pp-tab-icon-left" data-index="0" role="tab" tabindex="0" aria-selected="true" aria-controls="pp-tab-vo75i29j3fmz-1-content">
-                                                      <div class="pp-tab-label-inner">
-                                                         <div class="pp-tab-label-flex">
-                                                            <div class="pp-tab-title">Startup MVP Prototyping & Development</div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div id="pp-tab-vo75i29j3fmz-2" class="pp-tabs-label pp-tab-icon-left" data-index="1" role="tab" tabindex="-1" aria-selected="false" aria-controls="pp-tab-vo75i29j3fmz-2-content">
-                                                      <div class="pp-tab-label-inner">
-                                                         <div class="pp-tab-label-flex">
-                                                            <div class="pp-tab-title">Salvage an Existing Project</div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div id="pp-tab-vo75i29j3fmz-3" class="pp-tabs-label pp-tab-icon-left" data-index="2" role="tab" tabindex="-1" aria-selected="false" aria-controls="pp-tab-vo75i29j3fmz-3-content">
-                                                      <div class="pp-tab-label-inner">
-                                                         <div class="pp-tab-label-flex">
-                                                            <div class="pp-tab-title">Emergency CTO Leadership</div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div id="pp-tab-vo75i29j3fmz-4" class="pp-tabs-label pp-tab-icon-left" data-index="3" role="tab" tabindex="-1" aria-selected="false" aria-controls="pp-tab-vo75i29j3fmz-4-content">
-                                                      <div class="pp-tab-label-inner">
-                                                         <div class="pp-tab-label-flex">
-                                                            <div class="pp-tab-title">Empower an Existing Engineering Team</div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div id="pp-tab-vo75i29j3fmz-5" class="pp-tabs-label pp-tab-icon-left" data-index="4" role="tab" tabindex="-1" aria-selected="false" aria-controls="pp-tab-vo75i29j3fmz-5-content">
-                                                      <div class="pp-tab-label-inner">
-                                                         <div class="pp-tab-label-flex">
-                                                            <div class="pp-tab-title">Accelerate Development & Maximize Capacity</div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div id="pp-tab-vo75i29j3fmz-6" class="pp-tabs-label pp-tab-icon-left" data-index="5" role="tab" tabindex="-1" aria-selected="false" aria-controls="pp-tab-vo75i29j3fmz-6-content">
-                                                      <div class="pp-tab-label-inner">
-                                                         <div class="pp-tab-label-flex">
-                                                            <div class="pp-tab-title">Automate Product QA & Testing</div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                                <div class="pp-tabs-panels pp-clearfix">
-                                                   <div class="pp-tabs-panel">
-                                                      <div class="pp-tabs-label pp-tabs-panel-label pp-tab-active pp-tab-icon-left" data-index="0">
-                                                         <div class="pp-tab-label-inner">
-                                                            <div class="pp-tab-label-flex">
-                                                               <div class="pp-tab-label-wrap">
-                                                                  <div class="pp-tab-title">Startup MVP Prototyping & Development</div>
-                                                               </div>
-                                                            </div>
-                                                            <i class="pp-toggle-icon pp-tab-open fa fa-plus"></i>
-                                                            <i class="pp-toggle-icon pp-tab-close fa fa-minus"></i>
-                                                         </div>
-                                                      </div>
-                                                      <div id="pp-tab-vo75i29j3fmz-1-content" class="pp-tabs-panel-content pp-clearfix pp-tab-active" data-index="0" role="tabpanel" tabindex="0" aria-labelledby="pp-tab-vo75i29j3fmz-1">
-                                                         <div itemprop="text">
-                                                            <h3>Startup MVP Prototyping &amp; Development</h3>
-                                                            <ul>
-                                                              <li>
-                                                                 {{ partial "svg" "theme/homepage_tick_circle" }}
 
-                                                                 With the emergence of lean methodologies, software startups are finding creative, cost-effective ways to go-to-market on a budget.</li>
-                                                              <li>
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                Instead of enduring big expenses &amp; risks to build a full product, startups can use prototypes and Minimally-Viable Products (MVP) as a low-cost way to gather customer feedback and iterate on the overall product vision.</li>
-                                                              <li>
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                We’ve helped startups across a variety of industries go from zero to go-to-market at a fraction of the costs with prototyping &amp; MVP development services.</li>
-                                                            </ul>
-                                                            <p><a title="Startup MVP Prototyping &amp; Development" href="{{ relURL "use-cases/startup-mvp-prototyping-development/" }}">Learn More</a></p>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-tabs-panel">
-                                                      <div class="pp-tabs-label pp-tabs-panel-label pp-tab-icon-left" data-index="1">
-                                                         <div class="pp-tab-label-inner">
-                                                            <div class="pp-tab-label-flex">
-                                                               <div class="pp-tab-label-wrap">
-                                                                  <div class="pp-tab-title">Salvage an Existing Project</div>
-                                                               </div>
-                                                            </div>
-                                                            <i class="pp-toggle-icon pp-tab-open fa fa-plus"></i>
-                                                            <i class="pp-toggle-icon pp-tab-close fa fa-minus"></i>
-                                                         </div>
-                                                      </div>
-                                                      <div id="pp-tab-vo75i29j3fmz-2-content" class="pp-tabs-panel-content pp-clearfix" data-index="1" role="tabpanel" tabindex="0" aria-labelledby="pp-tab-vo75i29j3fmz-2">
-                                                         <div itemprop="text">
-                                                            <h3>Salvage an Existing Project</h3>
-                                                            <ul>
-                                                               <li>
+                            {{ partial "page/use-cases.html" (dict "addHeadline" "true") }}
 
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Software products often get handled by many people, teams, and leaders as it ages, which can make it harder to maintain, repair, and improve.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Without the right best practices &amp; documentation, software codebases can become impossible to use without consultants or additional technical resources.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 We can help transform the long-term stability of your software product, providing the visibility, clarity, and control you need to get your project on track.</li>
-                                                            </ul>
-                                                            <p><a title="Salvage an Existing Project" href="{{ relURL "use-cases/salvage-existing-project/" }}">Learn More</a></p>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-tabs-panel">
-                                                      <div class="pp-tabs-label pp-tabs-panel-label pp-tab-icon-left" data-index="2">
-                                                         <div class="pp-tab-label-inner">
-                                                            <div class="pp-tab-label-flex">
-                                                               <div class="pp-tab-label-wrap">
-                                                                  <div class="pp-tab-title">Emergency CTO Leadership</div>
-                                                               </div>
-                                                            </div>
-                                                            <i class="pp-toggle-icon pp-tab-open fa fa-plus"></i>
-                                                            <i class="pp-toggle-icon pp-tab-close fa fa-minus"></i>
-                                                         </div>
-                                                      </div>
-                                                      <div id="pp-tab-vo75i29j3fmz-3-content" class="pp-tabs-panel-content pp-clearfix" data-index="2" role="tabpanel" tabindex="0" aria-labelledby="pp-tab-vo75i29j3fmz-3">
-                                                         <div itemprop="text">
-                                                            <h3>Emergency CTO Leadership</h3>
-                                                            <ul>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Technology &amp; software products need constant supervision from someone with the knowledge to reduce errors, spot problems, &amp; prevent downtime.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 When a company loses technical leadership or reaches unfamiliar territory, it’s critical to find the right technical expertise as soon as possible.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 With access to a fractional CTO, you can maintain best practices, hire developers faster, &amp; streamline operations at a fraction of the cost of a full-time CTO</li>
-                                                            </ul>
-                                                            <p><a title="Emergency CTO Leadership" href="{{ relURL "use-cases/emergency-cto-leadership/" }}">Learn More</a></p>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-tabs-panel">
-                                                      <div class="pp-tabs-label pp-tabs-panel-label pp-tab-icon-left" data-index="3">
-                                                         <div class="pp-tab-label-inner">
-                                                            <div class="pp-tab-label-flex">
-                                                               <div class="pp-tab-label-wrap">
-                                                                  <div class="pp-tab-title">Empower an Existing Engineering Team</div>
-                                                               </div>
-                                                            </div>
-                                                            <i class="pp-toggle-icon pp-tab-open fa fa-plus"></i>
-                                                            <i class="pp-toggle-icon pp-tab-close fa fa-minus"></i>
-                                                         </div>
-                                                      </div>
-                                                      <div id="pp-tab-vo75i29j3fmz-4-content" class="pp-tabs-panel-content pp-clearfix" data-index="3" role="tabpanel" tabindex="0" aria-labelledby="pp-tab-vo75i29j3fmz-4">
-                                                         <div itemprop="text">
-                                                            <h3>Empower an Existing Engineering Team</h3>
-                                                            <ul>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Even a talented development team can become overwhelmed by customer complaints, technical issues, or aggressive deadlines.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 When a core development team is rushed or overworked, companies risk losing control over product quality &amp; missing critical software errors.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 With access to on-demand engineering resources, you can help support your core team and make it easier for them to adapt as the environment changes.</li>
-                                                            </ul>
-                                                            <p><a title="Empower an Existing Engineering Team" href="{{ relURL "use-cases/empower-existing-engineering-team/" }}">Learn More</a></p>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-tabs-panel">
-                                                      <div class="pp-tabs-label pp-tabs-panel-label pp-tab-icon-left" data-index="4">
-                                                         <div class="pp-tab-label-inner">
-                                                            <div class="pp-tab-label-flex">
-                                                               <div class="pp-tab-label-wrap">
-                                                                  <div class="pp-tab-title">Accelerate Development & Maximize Capacity</div>
-                                                               </div>
-                                                            </div>
-                                                            <i class="pp-toggle-icon pp-tab-open fa fa-plus"></i>
-                                                            <i class="pp-toggle-icon pp-tab-close fa fa-minus"></i>
-                                                         </div>
-                                                      </div>
-                                                      <div id="pp-tab-vo75i29j3fmz-5-content" class="pp-tabs-panel-content pp-clearfix" data-index="4" role="tabpanel" tabindex="0" aria-labelledby="pp-tab-vo75i29j3fmz-5">
-                                                         <div itemprop="text">
-                                                            <h3>Accelerate Development &amp; Maximize Capacity</h3>
-                                                            <ul>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Software development is a delicate balancing act between speed &amp; quality, which can be difficult to achieve.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Any team can build a high-quality product with enough time, but very few teams can deliver a high level of quality at a competitive pace.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 With access to on-demand engineering resources, you can accelerate development speed while maintaining product quality.</li>
-                                                            </ul>
-                                                            <p><a title="Accelerate Development & Maximize Capacity" href="{{ relURL "use-cases/accelerate-development-maximize-capacity/" }}">Learn More</a></p>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-tabs-panel">
-                                                      <div class="pp-tabs-label pp-tabs-panel-label pp-tab-icon-left" data-index="5">
-                                                         <div class="pp-tab-label-inner">
-                                                            <div class="pp-tab-label-flex">
-                                                               <div class="pp-tab-label-wrap">
-                                                                  <div class="pp-tab-title">Automate Product QA & Testing</div>
-                                                               </div>
-                                                            </div>
-                                                            <i class="pp-toggle-icon pp-tab-open fa fa-plus"></i>
-                                                            <i class="pp-toggle-icon pp-tab-close fa fa-minus"></i>
-                                                         </div>
-                                                      </div>
-                                                      <div id="pp-tab-vo75i29j3fmz-6-content" class="pp-tabs-panel-content pp-clearfix" data-index="5" role="tabpanel" tabindex="0" aria-labelledby="pp-tab-vo75i29j3fmz-6">
-                                                         <div itemprop="text">
-                                                            <h3>Automate Product QA &amp; Testing</h3>
-                                                            <ul>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 The larger a software product grows, the harder it becomes to maintain, improve, and optimize it over time without issues emerging.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 Without an effective system for ongoing product testing, it’s easy for hidden issues to devolve into an uncontrollable, unsustainable situation.</li>
-                                                               <li>
-
-                                                                {{ partial "svg" "theme/homepage_tick_circle" }}
-                                                                 With our fully-managed software testing &amp; QA services, you can accelerate development cycles while minimizing costly mistakes &amp; product errors.</li>
-                                                            </ul>
-                                                            <p><a title="Automate Product QA &amp; Testing" href="{{ relURL "use-cases/automate-product-qa-testing/" }}">Learn More</a></p>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
                             {{ partial "page/testimonials.html" . }}
                               <div id="cta-contact_us" class="fl-col-group fl-node-niok604vy81f fl-col-group-custom-width" data-node="niok604vy81f">
                                  <div class="fl-col fl-node-8x91uqrnkeb7 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="8x91uqrnkeb7">
