@@ -17,13 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     false,
   );
 
-  if (window.innerWidth < 1024) {
     const subMenuOpeners = document.querySelectorAll(".js-sub-menu-opener")
 
     subMenuOpeners.forEach((subMenuOpener) => {
-      subMenuOpener.addEventListener("click", function (e) {
-        e.target.parentElement.classList.toggle("-open");
-      });
+        subMenuOpener.addEventListener("click", function (e) {
+            e.target.parentElement.classList.toggle("-open");
+        });
     });
-  }
 });
