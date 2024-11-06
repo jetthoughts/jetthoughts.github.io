@@ -22,10 +22,16 @@ module ArticleUpdater
 
         save_article_as_markdown(article_data, attributes[:slug])
         download_images(attributes[:slug], http_client, working_dir)
+
+        if has_updated_canonical_url?(article_data)
+          mark_as_synced(article_id, nil)
+          next
+        end
+
         updated_article = update_canonical_url_on_dev_to(article_id, attributes[:slug])
         next unless updated_article
 
-        update_article_edited_at(article_id, updated_article)
+        mark_as_synced(article_id, updated_article["edited_at"])
       end
     rescue => e
       puts "Error processing articles: #{e.message}"
@@ -35,15 +41,23 @@ module ArticleUpdater
 
   private
 
+  def has_updated_canonical_url?(article_data)
+    data = sync_status
+
+    return false if article_data["canonical_url"].nil?
+
+    article_data["canonical_url"].split("/").last == data[article_data["id"]][:slug]
+  end
+
   def download_images(slug, http_client, working_dir)
     ImagesDownloader.new(slug, http_client, working_dir).call
   end
 
-  def update_article_edited_at(article_id, updated_article)
+  def mark_as_synced(article_id, edited_at)
     data = sync_status
 
     if data[article_id]
-      data[article_id][:edited_at] = updated_article["edited_at"]
+      data[article_id][:edited_at] = edited_at || data[article_id][:edited_at]
       data[article_id][:synced] = true
       File.write(File.join(working_dir, YAML_STATUS_FILE), data.to_yaml)
       puts "Article ID: #{article_id} updated successfully."

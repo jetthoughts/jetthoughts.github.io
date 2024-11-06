@@ -41,6 +41,10 @@ class SyncWithDevToTest < Minitest::Test
     File.write("#{WORKING_DIR}#{SYNC_STATUS_FILE}", articles.to_yaml)
   end
 
+  def sync_file_content
+    YAML.safe_load_file("#{WORKING_DIR}#{SYNC_STATUS_FILE}", permitted_classes: [Time, Symbol])
+  end
+
   def change_article_slug
     articles = {
       1879395 => {
@@ -63,24 +67,19 @@ class SyncWithDevToTest < Minitest::Test
     assert File.exist?("#{WORKING_DIR}#{SYNC_STATUS_FILE}")
   end
 
-  def sync_file_content
-    YAML.safe_load_file("#{WORKING_DIR}#{SYNC_STATUS_FILE}", permitted_classes: [Time, Symbol])
-  end
-
   def test_sync_script_fill_yaml_status_file
     run_sync
 
-    assert_equal sync_file_content, {
-      1879395 => {
-        edited_at: "2024-10-23T15:44:11Z",
-        slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails",
-        synced: true
-      },
-      1877720 => {
-        edited_at: "2024-10-23T15:44:11Z",
-        slug: "myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming",
-        synced: true
-      }
+    assert_equal sync_file_content[1879395], {
+      edited_at: "2024-10-23T15:44:11Z",
+      slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails",
+      synced: true
+    }
+
+    assert_equal sync_file_content[1877720], {
+      edited_at: "2024-10-23T15:44:11Z",
+      slug: "myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming",
+      synced: true
     }
   end
 
@@ -102,17 +101,16 @@ class SyncWithDevToTest < Minitest::Test
 
     run_sync
 
-    assert_equal sync_file_content, {
-      1879395 => {
+    assert_equal sync_file_content[1879395], {
         edited_at: "2024-10-23T15:44:11Z",
         slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails",
         synced: true
-      },
-      1877720 => {
+      }
+
+    assert_equal sync_file_content[1877720], {
         edited_at: "2024-10-23T15:44:11Z",
         slug: "myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming",
         synced: true
-      }
     }
   end
 
@@ -173,5 +171,33 @@ class SyncWithDevToTest < Minitest::Test
     refute File.directory?("#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}")
     assert File.directory?("#{WORKING_DIR}changed_slug")
     assert File.directory?("#{WORKING_DIR}#{FAKE_API_ARTICLE_2[:slug]}")
+  end
+
+  def test_sync_script_skip_updated_canonical_urls
+    articles = {
+      999 => {
+        edited_at: "1995-10-23T15:44:11Z",
+        slug: "synced-canonical-url-article",
+        synced: false
+      }
+    }
+    File.write("#{WORKING_DIR}#{SYNC_STATUS_FILE}", articles.to_yaml)
+
+    assert_equal sync_file_content[999],
+      {
+        :edited_at=>"1995-10-23T15:44:11Z",
+        :slug=>"synced-canonical-url-article",
+        :synced=>false
+      }
+
+    run_sync
+
+    # We check that edited_at wasn't changed, but the sync status changed.
+    assert_equal sync_file_content[999],
+      {
+        :edited_at=>"1995-10-23T15:44:11Z",
+        :slug=>"synced-canonical-url-article",
+        :synced=>true
+      }
   end
 end
