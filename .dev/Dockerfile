@@ -48,7 +48,7 @@ ENV \
 
 # Install bundle from Gemfile
 COPY ../Gemfile ../Gemfile.lock ./
-RUN bundle check || bundle install
+RUN bundle install
 
 # Use Bash as the default command
 CMD ["bin/test"]

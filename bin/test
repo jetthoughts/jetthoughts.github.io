@@ -1,6 +1,4 @@
 #!/bin/sh
 
-set -eo pipefail
-
 test_files="${1:-test/*_test.rb}"
 bundle exec ruby -Itest $test_files
