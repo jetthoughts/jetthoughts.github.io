@@ -68,15 +68,6 @@
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
-  outline: none;
-}
-
-._d-flex {
-  display: flex;
-}
-
-._flex1 {
-  flex: 1
 }
 
 @media (min-width: 860px) {
@@ -95,6 +86,7 @@
 }
 
 .use-cases .tab-panels {
+  flex: 1;
   padding-left: 100px
 }
 
