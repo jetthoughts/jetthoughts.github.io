@@ -58,12 +58,13 @@
 .use-cases .tab-title {
     background-color: #f5f6f8;
     color: #121212;
-    border: unset !important;
+    border: none;
     border-radius: 14px;
     padding: 28px 35px;
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+    outline: none;
 }
 
 .d-flex {
@@ -124,7 +125,7 @@
 
 .use-cases .tab-panel .list {
     list-style: none;
-    margin-bottom: 36px !important;
+    margin-bottom: 36px;
     margin-top: 0;
     padding-left: 0;
 }
