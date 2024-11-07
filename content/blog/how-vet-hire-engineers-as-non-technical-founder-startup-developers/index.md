@@ -3,10 +3,10 @@ dev_to_id: 2085026
 title: "How to Vet and Hire Engineers as a non-Technical Founder"
 description: "You don't need an in-house tech expert to find the right developer. Follow these steps to get the..."
 created_at: "2024-11-07T21:50:51Z"
-edited_at: ""
+edited_at: "2024-11-07T21:53:36Z"
 draft: false
 tags: ["startup", "developers", "hiring", "productivity"]
-canonical_url: "https://dev.to/jetthoughts/how-to-vet-and-hire-engineers-as-a-non-technical-founder-4mfd"
+canonical_url: "https://jetthoughts.com/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/"
 cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F93u518yr86wn651wgusx.jpeg"
 slug: "how-vet-hire-engineers-as-non-technical-founder-startup-developers"
 metatags:
@@ -40,7 +40,7 @@ Look for developers from countries that win programming competitions: Eastern Eu
 
 ## 5. Find managers of one
 
-Look for developers who have worked directly with founders. These people know how to communicate with non-tech people and provide great empathy.
+Look for developers who have worked directly with founders. These people know how to communicate with non-tech people and provide great empathy. Learn more on [Basecamp Blog: Hire managers of one](https://signalvnoise.com/posts/1430-hire-managers-of-one).
 
 ## 6. Use Lean Startup
 
@@ -64,7 +64,7 @@ Confirm that developers will provide daily asynchronous text updates. This keeps
 
 Use contracts that cover clear termination terms and deliverables. To protect your business, include clauses on non-compete and no soliciting.
 
-## 11. Use a 2-week trial project
+## 11. Run a 2-week trial project
 
 The interview does not provide real experience. Running a paid 2-week trial project is a great solution to confirm a match. [Some staffing agencies offer free trials](https://jetthoughts.com/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/).
 
