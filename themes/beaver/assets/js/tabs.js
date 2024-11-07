@@ -19,7 +19,7 @@ document.querySelectorAll('.tabs').forEach(tabList => {
     const tabs = tabList.querySelectorAll('.js-tab');
     let tabFocus = 0;
     tabList.addEventListener("keydown", (e) => {
-        // Move right
+        e.preventDefault();
         if (e.key === "ArrowDown" || e.key === "ArrowUp" || e.key === 'Enter' || e.key === ' ') {
             tabs[tabFocus].setAttribute("tabindex", -1);
             if (e.key === "ArrowDown") {
