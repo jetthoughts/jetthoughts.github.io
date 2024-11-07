@@ -3,7 +3,7 @@ dev_to_id: 2085026
 title: "How to Vet and Hire Engineers as a non-Technical Founder"
 description: "You don't need an in-house tech expert to find the right developer. Follow these steps to get the..."
 created_at: "2024-11-07T21:50:51Z"
-edited_at: "2024-11-07T21:53:36Z"
+edited_at: "2024-11-07T22:07:44Z"
 draft: false
 tags: ["startup", "developers", "hiring", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/"
