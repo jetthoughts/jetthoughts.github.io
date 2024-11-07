@@ -67,10 +67,10 @@
     outline: none;
 }
 
-.d-flex {
-    display: flex !important;
+._d-flex {
+    display: flex;
 }
-.flex1 {
+._flex1 {
     flex: 1
 }
 
