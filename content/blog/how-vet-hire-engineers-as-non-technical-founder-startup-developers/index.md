@@ -3,7 +3,7 @@ dev_to_id: 2085026
 title: "How to Vet and Hire Engineers as a non-Technical Founder"
 description: "You don't need an in-house tech expert to find the right developer. Follow these steps to get the..."
 created_at: "2024-11-07T21:50:51Z"
-edited_at: "2024-11-07T22:19:41Z"
+edited_at: "2024-11-07T23:08:31Z"
 draft: false
 tags: ["startup", "developers", "hiring", "productivity"]
 canonical_url: "https://jetthoughts.com/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/"
@@ -18,7 +18,7 @@ You don't need an in-house tech expert to find the right developer. Follow these
 
 Write what you want to build. Please keep it simple! Describe the problem and how your product solves it. Refer to [Geoffry Moore's “vision of the product”](https://martinfowler.com/articles/lean-inception/write-product-vision.html).
 
-## 2. (Optional) Get a Tech Advisor
+## 2. (Optional) Get a Tech Advisor or Fractional CTO
 
 Find a senior tech lead or a part-time CTO. They can help you hire the right developer.
 
@@ -32,9 +32,9 @@ Hire two part-time developers instead of one full-time. They can check each othe
 
 ## 4. Look for Specific Skills
 
-Search for developers who use [Test-Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development). They write tests first, then code.
+Search for developers who use Test-Driven Development (TDD). They write tests first, then code. To understand the importance of TDD, read [Why and How to Use TDD: Main Tips for Testing](https://jetthoughts.com/blog/why-how-use-tdd-main-tips-testing/).
 
-Find those who have set up [Continuous Integration and Deployment (CI/CD)](https://en.wikipedia.org/wiki/CI/CD). They can update your product with speed and safety. To understand the importance of TDD, read [Why and How to Use TDD: Main Tips for Testing](https://jetthoughts.com/blog/why-how-use-tdd-main-tips-testing/).
+Find those who have set up [Continuous Integration and Deployment (CI/CD)](https://en.wikipedia.org/wiki/CI/CD). They can update your product quickly and safely.
 
 Look for developers from countries that win programming competitions: Eastern European countries, China, the United States, South Korea, and India.
 
