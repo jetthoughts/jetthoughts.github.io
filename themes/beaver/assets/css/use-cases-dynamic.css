@@ -57,6 +57,7 @@
 .use-cases .tabs-container {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 }
 
 .use-cases .tab-title {
@@ -78,11 +79,6 @@
   .use-cases .tabs-container {
     flex-direction: row;
   }
-}
-
-
-.use-cases .tabs-container {
-  margin-top: 60px;
 }
 
 .use-cases .tab-panels {
