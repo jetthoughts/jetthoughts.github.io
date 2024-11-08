@@ -61,7 +61,6 @@
 }
 
 .use-cases .tab-title {
-  background-color: #f5f6f8;
   color: #121212;
   border: none;
   border-radius: 14px;
@@ -69,6 +68,9 @@
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
+}
+.use-cases .tab-title:hover,.use-cases .tab-title:focus, .use-cases .tab-title[aria-selected="true"] {
+  background-color: #f5f6f8;
 }
 
 @media (min-width: 860px) {
