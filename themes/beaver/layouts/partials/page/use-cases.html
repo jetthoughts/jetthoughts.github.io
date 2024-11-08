@@ -1,7 +1,7 @@
-{{ $addHeadline := .addHeadline | default "true" }}
+{{ $addHeadline := .addHeadline | default true }}
 
 <div id="use-cases" class="use-cases">
-{{ if eq $addHeadline "true" }}
+{{ if $addHeadline }}
 <p class="heading">USE CASES</p>
 {{ end }}
 <h2 class="subheading">Delivering positive technology outcomes</h2>
