@@ -3,10 +3,10 @@ dev_to_id: 2086243
 title: "Ruby on Rails 8: How to Batch with Custom Columns"
 description: "Ruby on Rails 8 introduces a handy feature for developers handling large datasets: batching with..."
 created_at: "2024-11-08T08:42:28Z"
-edited_at: ""
+edited_at: "2024-11-08T08:58:47Z"
 draft: false
 tags: ["rails", "ruby", "webdev", "tutorial"]
-canonical_url: "https://dev.to/jetthoughts/ruby-on-rails-8-how-to-batch-with-custom-columns-510p"
+canonical_url: "https://jetthoughts.com/blog/ruby-on-rails-8-how-batch-with-custom-columns/"
 cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4yv3v4wgpqnrn1zr3tp6.png"
 slug: "ruby-on-rails-8-how-batch-with-custom-columns"
 metatags:
