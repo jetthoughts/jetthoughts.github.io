@@ -3,7 +3,7 @@ dev_to_id: 1852624
 title: Which platforms are better to use for non-tech founders to look for contractors?
 description: Are you looking for developers? In need of delivering your product ASAP? Don’t know where you can...
 created_at: '2024-05-14T12:39:53Z'
-edited_at: '2024-11-01T14:09:04Z'
+edited_at: '2024-11-01T19:06:28Z'
 draft: false
 tags:
 - freelance

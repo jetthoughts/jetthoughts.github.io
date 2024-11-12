@@ -3,7 +3,7 @@ dev_to_id: 2019422
 title: How to Handle Software Vendors Missing Deadlines Effectively
 description: Dealing with missed work deadlines can be tough, especially when software vendors are late. Learn how...
 created_at: '2024-09-29T13:07:06Z'
-edited_at: '2024-11-01T14:05:48Z'
+edited_at: '2024-11-01T15:06:08Z'
 draft: false
 tags:
 - development

@@ -3,7 +3,7 @@ dev_to_id: 1852739
 title: RSCSS. Styling CSS without losing your sanity
 description: Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out...
 created_at: '2024-05-14T14:03:11Z'
-edited_at: '2024-11-01T14:08:52Z'
+edited_at: '2024-11-01T19:06:17Z'
 draft: false
 tags:
 - css

@@ -3,7 +3,7 @@ dev_to_id: 1872098
 title: 'New in Ruby on Rails 7.2: Development Containers Configuration'
 description: Development container is a full-featured coding environment. Rails 7.2 introduces configurations for...
 created_at: '2024-05-31T13:45:09Z'
-edited_at: '2024-11-01T14:07:57Z'
+edited_at: '2024-11-01T17:07:23Z'
 draft: false
 tags:
 - rails

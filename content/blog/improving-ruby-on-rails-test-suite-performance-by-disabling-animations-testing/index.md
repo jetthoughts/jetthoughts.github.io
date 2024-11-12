@@ -3,7 +3,7 @@ dev_to_id: 1877661
 title: Improving Ruby on Rails Test Suite Performance by Disabling Animations
 description: Have you ever encountered random failing tests using the Ruby on Rails system tests? If so, you may...
 created_at: '2024-06-05T07:08:39Z'
-edited_at: '2024-11-01T14:07:17Z'
+edited_at: '2024-11-01T17:06:43Z'
 draft: false
 tags:
 - rails

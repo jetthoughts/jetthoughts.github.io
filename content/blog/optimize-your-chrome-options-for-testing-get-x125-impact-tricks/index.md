@@ -3,7 +3,7 @@ dev_to_id: 1877654
 title: Optimize your Chrome options for testing to get x1.25 impact
 description: "\U0001F680 Increase Browser Test Speed with Chrome Options Optimization \U0001F680  Are you looking to supercharge your..."
 created_at: '2024-06-05T06:54:46Z'
-edited_at: '2024-11-01T14:07:18Z'
+edited_at: '2024-11-01T17:06:45Z'
 draft: false
 tags:
 - testing

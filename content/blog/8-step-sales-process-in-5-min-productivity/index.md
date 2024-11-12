@@ -3,7 +3,7 @@ dev_to_id: 1853531
 title: 8-Step Sales Process in 5 min
 description: The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in...
 created_at: '2024-05-15T06:34:55Z'
-edited_at: '2024-11-01T14:08:30Z'
+edited_at: '2024-11-01T19:05:56Z'
 draft: false
 tags:
 - sales

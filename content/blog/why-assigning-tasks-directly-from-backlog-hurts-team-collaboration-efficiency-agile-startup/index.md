@@ -3,7 +3,7 @@ dev_to_id: 2017433
 title: Why Assigning Tasks Directly from the Backlog Hurts Team Collaboration and Efficiency
 description: In the fast-paced world of startups, poor task management can cripple team productivity and drain...
 created_at: '2024-09-27T14:45:43Z'
-edited_at: '2024-11-01T14:05:50Z'
+edited_at: '2024-11-01T15:06:09Z'
 draft: false
 tags:
 - agile

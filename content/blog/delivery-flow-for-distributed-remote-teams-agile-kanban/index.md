@@ -3,7 +3,7 @@ dev_to_id: 1852603
 title: Delivery Flow for Distributed Remote Teams
 description: Process which help the team make effective decisions to better live up to expectations...
 created_at: '2024-05-14T12:11:00Z'
-edited_at: '2024-11-01T14:09:15Z'
+edited_at: '2024-11-01T21:05:42Z'
 draft: false
 tags:
 - agile

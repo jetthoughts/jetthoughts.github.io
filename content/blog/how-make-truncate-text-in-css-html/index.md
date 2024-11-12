@@ -3,7 +3,7 @@ dev_to_id: 1156418
 title: How to make truncate text in CSS
 description: "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..."
 created_at: '2022-08-01T09:19:46Z'
-edited_at: '2024-11-01T14:10:15Z'
+edited_at: '2024-11-01T21:06:37Z'
 draft: false
 tags:
 - css

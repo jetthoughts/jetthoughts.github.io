@@ -3,7 +3,7 @@ dev_to_id: 1853605
 title: Git minimum for effective project development
 description: Git minimum for effective project development             For beginners who are not familiar...
 created_at: '2024-05-15T07:29:21Z'
-edited_at: '2024-11-01T14:08:14Z'
+edited_at: '2024-11-01T19:05:39Z'
 draft: false
 tags:
 - development

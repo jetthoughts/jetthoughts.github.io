@@ -3,7 +3,7 @@ dev_to_id: 2066540
 title: 'Test-Driven Development (TDD) in Ruby: A Step-by-Step Guide'
 description: In Test-Driven Development (TDD), you start with tests, not code. First, write a test that defines...
 created_at: '2024-10-30T10:03:39Z'
-edited_at: '2024-11-01T14:05:38Z'
+edited_at: '2024-11-01T15:05:57Z'
 draft: false
 tags:
 - tutorial

@@ -3,7 +3,7 @@ dev_to_id: 1880245
 title: Speed Up Your Rails Test Suite By 6% In 1 Line
 description: At one project we have a set of currently 3k+ tests, running more than 2 minutes. Most of the test...
 created_at: '2024-06-07T10:40:25Z'
-edited_at: '2024-11-01T14:06:54Z'
+edited_at: '2024-11-01T17:06:25Z'
 draft: false
 tags:
 - testing

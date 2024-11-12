@@ -3,7 +3,7 @@ dev_to_id: 1852747
 title: A Practical Guide To Writing Introductions
 description: Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It...
 created_at: '2024-05-14T14:14:26Z'
-edited_at: '2024-11-01T14:08:47Z'
+edited_at: '2024-11-01T19:06:13Z'
 draft: false
 tags:
 - writing

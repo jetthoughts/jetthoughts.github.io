@@ -3,7 +3,7 @@ dev_to_id: 1170570
 title: How to use Ruby on Rails Concerns
 description: A Rails concern is a module that extends the ActiveSupport::Concern module.  You can use Сoncerns to...
 created_at: '2022-08-18T14:43:37Z'
-edited_at: '2024-11-01T14:10:13Z'
+edited_at: '2024-11-01T21:06:35Z'
 draft: false
 tags:
 - ruby

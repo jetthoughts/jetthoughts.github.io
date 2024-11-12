@@ -3,7 +3,7 @@ dev_to_id: 1879395
 title: 'Recent Searches & Sorting Hashes: How They are Connected'
 description: In one of the applications, that we are developing, we needed to implement the storing of 10 last...
 created_at: '2024-06-06T15:55:49Z'
-edited_at: '2024-11-01T14:07:06Z'
+edited_at: '2024-11-01T17:06:36Z'
 draft: false
 tags:
 - ruby

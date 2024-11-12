@@ -3,7 +3,7 @@ dev_to_id: 1853469
 title: 'JetThoughts receives First Review on Clutch.co: Thank you'
 description: Our team at JetThoughts has an expertise of the Ruby on Rails development service line, and we’re...
 created_at: '2024-05-15T05:59:12Z'
-edited_at: '2024-11-01T14:08:37Z'
+edited_at: '2024-11-01T19:06:03Z'
 draft: false
 tags:
 - startup

@@ -3,7 +3,7 @@ dev_to_id: 539418
 title: Why and how to use TDD. Main tips
 description: How do I start developing the component from scratch? How do I know what architecture it should have?...
 created_at: '2020-12-11T12:02:25Z'
-edited_at: '2024-11-01T14:10:40Z'
+edited_at: '2024-11-01T21:07:01Z'
 draft: false
 tags:
 - tdd

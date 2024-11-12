@@ -3,7 +3,7 @@ dev_to_id: 1877540
 title: Cleaning Up Your Rails Views With View Objects
 description: Why logic in views is a bad idea?   The main reason not to put the complex logic into your...
 created_at: '2024-06-05T05:39:17Z'
-edited_at: '2024-11-01T14:07:53Z'
+edited_at: '2024-11-01T17:07:19Z'
 draft: false
 tags:
 - rails

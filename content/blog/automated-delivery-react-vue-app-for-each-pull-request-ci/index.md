@@ -3,7 +3,7 @@ dev_to_id: 1852564
 title: Automated delivery React / Vue app for each Pull Request.
 description: Would you like to speed up the development process of your React / Vue application? Make it more...
 created_at: '2024-05-14T11:29:22Z'
-edited_at: '2024-11-01T14:09:22Z'
+edited_at: '2024-11-01T21:05:49Z'
 draft: false
 tags:
 - ci

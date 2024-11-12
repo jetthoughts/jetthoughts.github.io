@@ -3,7 +3,7 @@ dev_to_id: 1877637
 title: React + Ruby on Rails without any gems
 description: React + Ruby on Rails without any gems   How to start using React components written in...
 created_at: '2024-06-05T06:32:51Z'
-edited_at: '2024-11-01T14:07:27Z'
+edited_at: '2024-11-01T17:06:53Z'
 draft: false
 tags:
 - react

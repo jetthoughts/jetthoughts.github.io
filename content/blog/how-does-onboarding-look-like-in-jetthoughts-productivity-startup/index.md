@@ -3,7 +3,7 @@ dev_to_id: 1853524
 title: How does the onboarding look like in JetThoughts?
 description: How does the onboarding look like in JetThoughts?   This is an onboarding checklist...
 created_at: '2024-05-15T06:29:43Z'
-edited_at: '2024-11-01T14:08:31Z'
+edited_at: '2024-11-01T19:05:57Z'
 draft: false
 tags:
 - productivity

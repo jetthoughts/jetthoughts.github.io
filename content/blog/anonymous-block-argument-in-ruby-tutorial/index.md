@@ -3,7 +3,7 @@ dev_to_id: 1739418
 title: Anonymous block argument in Ruby
 description: In the Ruby programming language, it is possible to use default block parameters instead of...
 created_at: '2024-01-23T20:09:24Z'
-edited_at: '2024-11-01T14:09:35Z'
+edited_at: '2024-11-01T21:06:02Z'
 draft: false
 tags:
 - ruby

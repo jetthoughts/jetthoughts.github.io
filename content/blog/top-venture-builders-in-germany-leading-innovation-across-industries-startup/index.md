@@ -3,7 +3,7 @@ dev_to_id: 1908791
 title: 'Top Venture Builders in Germany: Leading Innovation Across Industries'
 description: Fed up! Are you aiming to create a new company but you are weak from a tech position? Are you excited...
 created_at: '2024-07-02T11:17:59Z'
-edited_at: '2024-11-01T14:06:27Z'
+edited_at: '2024-11-01T17:06:02Z'
 draft: false
 tags:
 - startup

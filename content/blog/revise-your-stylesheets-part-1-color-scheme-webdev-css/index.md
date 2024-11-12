@@ -3,7 +3,7 @@ dev_to_id: 1880239
 title: Revise Your Stylesheets. Part 1. Color Scheme
 description: Revise Your Stylesheets. Part 1. Color Scheme   Ever wonder how many colors exist in your...
 created_at: '2024-06-07T10:32:47Z'
-edited_at: '2024-11-01T14:06:56Z'
+edited_at: '2024-11-01T17:06:27Z'
 draft: false
 tags:
 - webdev
