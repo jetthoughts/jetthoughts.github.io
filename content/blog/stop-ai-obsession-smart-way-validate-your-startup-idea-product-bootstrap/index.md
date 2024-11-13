@@ -1,14 +1,18 @@
 ---
 dev_to_id: 2057569
-title: "Stop the AI Obsession: The Smart Way to Validate Your Startup Idea"
-description: "Many founders today fixate on AI. They think adding AI to their product will draw users in droves,..."
-created_at: "2024-10-25T12:04:15Z"
-edited_at: "2024-11-01T14:39:09Z"
+title: 'Stop the AI Obsession: The Smart Way to Validate Your Startup Idea'
+description: Many founders today fixate on AI. They think adding AI to their product will draw users in droves,...
+created_at: '2024-10-25T12:04:15Z'
+edited_at: '2024-11-01T15:06:00Z'
 draft: false
-tags: ["product", "bootstrap", "ai", "startup"]
-canonical_url: "https://jetthoughts.com/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fe7ktcl7ihynxlvzu13pf.png"
-slug: "stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap"
+tags:
+- product
+- bootstrap
+- ai
+- startup
+canonical_url: https://jetthoughts.com/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/cover.png
+slug: stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap
 metatags:
   image: cover.png
 ---

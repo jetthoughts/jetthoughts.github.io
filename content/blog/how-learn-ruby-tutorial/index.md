@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877579
-title: "How to Learn Ruby"
-description: "Starting to learn a new programming language or a new framework every person faces a problem — what..."
-created_at: "2024-06-05T06:15:06Z"
-edited_at: "2024-11-01T16:07:43Z"
+title: How to Learn Ruby
+description: Starting to learn a new programming language or a new framework every person faces a problem — what...
+created_at: '2024-06-05T06:15:06Z'
+edited_at: '2024-11-01T17:06:59Z'
 draft: false
-tags: ["ruby", "tutorial", "beginners", "rails"]
-canonical_url: "https://jetthoughts.com/blog/how-learn-ruby-tutorial/"
-cover_image: ""
-slug: "how-learn-ruby-tutorial"
+tags:
+- ruby
+- tutorial
+- beginners
+- rails
+canonical_url: https://jetthoughts.com/blog/how-learn-ruby-tutorial/
+cover_image:
+slug: how-learn-ruby-tutorial
 ---
 Starting to learn a new programming language or a new framework every person faces a problem — what should I start studying with? In this article I will outline the basic resources, which I consider to be the best for Ruby on Rails beginners.
 

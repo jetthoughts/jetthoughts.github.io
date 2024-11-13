@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1852733
-title: "4 Tricks to Write Catchy Headlines"
-description: "How to improve your writing, and create not just a good headline, but a catchy one? No matter what..."
-created_at: "2024-05-14T13:53:54Z"
-edited_at: "2024-11-01T18:08:19Z"
+title: 4 Tricks to Write Catchy Headlines
+description: How to improve your writing, and create not just a good headline, but a catchy one? No matter what...
+created_at: '2024-05-14T13:53:54Z'
+edited_at: '2024-11-01T19:06:20Z'
 draft: false
-tags: ["contentwriting", "headlines", "blog", "writing"]
-canonical_url: "https://jetthoughts.com/blog/4-tricks-write-catchy-headlines-contentwriting/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2F4-tricks-write-catchy-headlines-contentwriting%2Ffile_0.jpeg"
-slug: "4-tricks-write-catchy-headlines-contentwriting"
+tags:
+- contentwriting
+- headlines
+- blog
+- writing
+canonical_url: https://jetthoughts.com/blog/4-tricks-write-catchy-headlines-contentwriting/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-tricks-write-catchy-headlines-contentwriting/cover.jpeg
+slug: 4-tricks-write-catchy-headlines-contentwriting
 metatags:
   image: cover.jpeg
 ---

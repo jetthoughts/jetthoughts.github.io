@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853610
-title: "Migrate from Sidekiq to Sidekiq.cr in Rails application"
-description: "Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to..."
-created_at: "2024-05-15T07:33:16Z"
-edited_at: "2024-11-01T18:07:36Z"
+title: Migrate from Sidekiq to Sidekiq.cr in Rails application
+description: Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to...
+created_at: '2024-05-15T07:33:16Z'
+edited_at: '2024-11-01T19:05:37Z'
 draft: false
-tags: ["tdd", "testing", "development", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fmigrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing%2Ffile_0.png"
-slug: "migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing"
+tags:
+- tdd
+- testing
+- development
+- tutorial
+canonical_url: https://jetthoughts.com/blog/migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing/cover.png
+slug: migrate-from-sidekiq-sidekiqcr-in-rails-application-tdd-testing
 metatags:
   image: cover.png
 ---

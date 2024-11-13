@@ -1,14 +1,17 @@
 ---
 dev_to_id: 2057856
-title: "Rails 8: Introducing the New Default Asset Pipeline – Propshaft"
-description: "The Rails asset pipeline helps manage static assets like CSS, JavaScript, and images. It improves..."
-created_at: "2024-10-25T14:36:50Z"
-edited_at: "2024-11-01T14:39:04Z"
+title: 'Rails 8: Introducing the New Default Asset Pipeline – Propshaft'
+description: The Rails asset pipeline helps manage static assets like CSS, JavaScript, and images. It improves...
+created_at: '2024-10-25T14:36:50Z'
+edited_at: '2024-11-01T15:05:58Z'
 draft: false
-tags: ["rails", "ruby", "changelog"]
-canonical_url: "https://jetthoughts.com/blog/rails-8-introducing-new-default-asset-pipeline-propshaft-ruby/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4r3vimwwmkkai30pltxm.jpeg"
-slug: "rails-8-introducing-new-default-asset-pipeline-propshaft-ruby"
+tags:
+- rails
+- ruby
+- changelog
+canonical_url: https://jetthoughts.com/blog/rails-8-introducing-new-default-asset-pipeline-propshaft-ruby/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-8-introducing-new-default-asset-pipeline-propshaft-ruby/cover.jpeg
+slug: rails-8-introducing-new-default-asset-pipeline-propshaft-ruby
 metatags:
   image: cover.jpeg
 ---

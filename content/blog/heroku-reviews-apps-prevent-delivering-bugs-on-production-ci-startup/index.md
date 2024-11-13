@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877581
-title: "Heroku Reviews Apps prevent delivering bugs on production"
-description: "Are you afraid to deploy a master branch to the production? Do you still mess with staging..."
-created_at: "2024-06-05T06:16:42Z"
-edited_at: "2024-11-01T16:07:41Z"
+title: Heroku Reviews Apps prevent delivering bugs on production
+description: Are you afraid to deploy a master branch to the production? Do you still mess with staging...
+created_at: '2024-06-05T06:16:42Z'
+edited_at: '2024-11-01T17:06:58Z'
 draft: false
-tags: ["ci", "startup", "github", "development"]
-canonical_url: "https://jetthoughts.com/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fheroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup%2Ffile_0.jpeg"
-slug: "heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup"
+tags:
+- ci
+- startup
+- github
+- development
+canonical_url: https://jetthoughts.com/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/cover.jpeg
+slug: heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1997095
-title: "Red Flags to Watch for in a Big PR: When to Stop, Split, or Rework"
-description: "Big pull requests (PRs) can cause delays and block progress. As a developer, it's important to spot..."
-created_at: "2024-09-11T16:47:44Z"
-edited_at: "2024-11-01T14:28:00Z"
+title: 'Red Flags to Watch for in a Big PR: When to Stop, Split, or Rework'
+description: Big pull requests (PRs) can cause delays and block progress. As a developer, it's important to spot...
+created_at: '2024-09-11T16:47:44Z'
+edited_at: '2024-11-01T15:06:18Z'
 draft: false
-tags: ["development", "productivity", "programming", "devops"]
-canonical_url: "https://jetthoughts.com/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy9nfrispq6plhdk3q4qm.png"
-slug: "red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity"
+tags:
+- development
+- productivity
+- programming
+- devops
+canonical_url: https://jetthoughts.com/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/cover.png
+slug: red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity
 metatags:
   image: cover.png
 ---

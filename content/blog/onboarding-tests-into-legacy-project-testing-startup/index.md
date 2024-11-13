@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1877640
-title: "Onboarding Tests into Legacy Project"
-description: "What solution should you apply to get the first results in a short time in the legacy project? What..."
-created_at: "2024-06-05T06:37:41Z"
-edited_at: "2024-11-01T16:07:33Z"
+title: Onboarding Tests into Legacy Project
+description: What solution should you apply to get the first results in a short time in the legacy project? What...
+created_at: '2024-06-05T06:37:41Z'
+edited_at: '2024-11-01T17:06:49Z'
 draft: false
-tags: ["testing", "startup", "agile"]
-canonical_url: "https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fonboarding-tests-into-legacy-project-testing-startup%2Ffile_0.png"
-slug: "onboarding-tests-into-legacy-project-testing-startup"
+tags:
+- testing
+- startup
+- agile
+canonical_url: https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/onboarding-tests-into-legacy-project-testing-startup/cover.png
+slug: onboarding-tests-into-legacy-project-testing-startup
 metatags:
   image: cover.png
 ---

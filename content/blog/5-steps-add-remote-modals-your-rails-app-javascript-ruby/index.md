@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877543
-title: "5 Steps to Add Remote Modals to Your Rails App"
-description: "Sometimes you don’t want to write big JavaScript application just to have working remote modals in..."
-created_at: "2024-06-05T05:41:45Z"
-edited_at: "2024-11-01T16:07:59Z"
+title: 5 Steps to Add Remote Modals to Your Rails App
+description: Sometimes you don’t want to write big JavaScript application just to have working remote modals in...
+created_at: '2024-06-05T05:41:45Z'
+edited_at: '2024-11-01T17:07:17Z'
 draft: false
-tags: ["javascript", "ruby", "rails", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2F5-steps-add-remote-modals-your-rails-app-javascript-ruby%2Ffile_0.png"
-slug: "5-steps-add-remote-modals-your-rails-app-javascript-ruby"
+tags:
+- javascript
+- ruby
+- rails
+- tutorial
+canonical_url: https://jetthoughts.com/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/5-steps-add-remote-modals-your-rails-app-javascript-ruby/cover.png
+slug: 5-steps-add-remote-modals-your-rails-app-javascript-ruby
 metatags:
   image: cover.png
 ---

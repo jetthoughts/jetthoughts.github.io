@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853553
-title: "Load web page in less than one second"
-description: "How to improve the website load time without much effort? What optimizations and improvements can..."
-created_at: "2024-05-15T07:04:49Z"
-edited_at: "2024-11-01T18:07:45Z"
+title: Load web page in less than one second
+description: How to improve the website load time without much effort? What optimizations and improvements can...
+created_at: '2024-05-15T07:04:49Z'
+edited_at: '2024-11-01T19:05:47Z'
 draft: false
-tags: ["optimization", "html", "frontend", "webdev"]
-canonical_url: "https://jetthoughts.com/blog/load-web-page-in-less-than-one-second-optimization-html/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fload-web-page-in-less-than-one-second-optimization-html%2Ffile_0.jpeg"
-slug: "load-web-page-in-less-than-one-second-optimization-html"
+tags:
+- optimization
+- html
+- frontend
+- webdev
+canonical_url: https://jetthoughts.com/blog/load-web-page-in-less-than-one-second-optimization-html/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/load-web-page-in-less-than-one-second-optimization-html/cover.jpeg
+slug: load-web-page-in-less-than-one-second-optimization-html
 metatags:
   image: cover.jpeg
 ---

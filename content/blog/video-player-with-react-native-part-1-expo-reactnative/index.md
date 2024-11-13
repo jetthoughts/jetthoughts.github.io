@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877622
-title: "Video player with React Native. Part 1: Expo"
-description: "Nowadays there are plenty of solutions to build an application for a mobile platform. If we are..."
-created_at: "2024-06-05T06:20:41Z"
-edited_at: "2024-11-01T16:07:40Z"
+title: 'Video player with React Native. Part 1: Expo'
+description: Nowadays there are plenty of solutions to build an application for a mobile platform. If we are...
+created_at: '2024-06-05T06:20:41Z'
+edited_at: '2024-11-01T17:06:56Z'
 draft: false
-tags: ["reactnative", "expo", "tutorial", "react"]
-canonical_url: "https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fvideo-player-with-react-native-part-1-expo-reactnative%2Ffile_0.jpeg"
-slug: "video-player-with-react-native-part-1-expo-reactnative"
+tags:
+- reactnative
+- expo
+- tutorial
+- react
+canonical_url: https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/video-player-with-react-native-part-1-expo-reactnative/cover.jpeg
+slug: video-player-with-react-native-part-1-expo-reactnative
 metatags:
   image: cover.jpeg
 ---

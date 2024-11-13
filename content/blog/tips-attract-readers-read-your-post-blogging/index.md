@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1852562
-title: "Tips to attract readers to read your post"
-description: "Do you know how to keep readers’ attention? We had been experimenting with different ways to make..."
-created_at: "2024-05-14T11:25:32Z"
-edited_at: "2024-11-01T20:06:45Z"
+title: Tips to attract readers to read your post
+description: Do you know how to keep readers’ attention? We had been experimenting with different ways to make...
+created_at: '2024-05-14T11:25:32Z'
+edited_at: '2024-11-01T21:05:51Z'
 draft: false
-tags: ["blogging", "tips", "writing"]
-canonical_url: "https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ftips-attract-readers-read-your-post-blogging%2Ffile_0.jpeg"
-slug: "tips-attract-readers-read-your-post-blogging"
+tags:
+- blogging
+- tips
+- writing
+canonical_url: https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tips-attract-readers-read-your-post-blogging/cover.jpeg
+slug: tips-attract-readers-read-your-post-blogging
 metatags:
   image: cover.jpeg
 ---

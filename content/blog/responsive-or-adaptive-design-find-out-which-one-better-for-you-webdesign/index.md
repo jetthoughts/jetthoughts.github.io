@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1877550
-title: "Responsive or Adaptive Design? Find out which one is better for you"
-description: "JetThoughts has launched a new project recently. Whole front-end team was set and started..."
-created_at: "2024-06-05T05:49:07Z"
-edited_at: "2024-11-01T16:07:55Z"
+title: Responsive or Adaptive Design? Find out which one is better for you
+description: JetThoughts has launched a new project recently. Whole front-end team was set and started...
+created_at: '2024-06-05T05:49:07Z'
+edited_at: '2024-11-01T17:07:13Z'
 draft: false
-tags: ["design", "webdesign", "layouts"]
-canonical_url: "https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fresponsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign%2Ffile_0.jpeg"
-slug: "responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign"
+tags:
+- design
+- webdesign
+- layouts
+canonical_url: https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/cover.jpeg
+slug: responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign
 metatags:
   image: cover.jpeg
 ---

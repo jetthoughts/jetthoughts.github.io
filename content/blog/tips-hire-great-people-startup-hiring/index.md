@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1853537
-title: "Tips to hire great people"
-description: "At JetThoughts, we don’t typically fire our employees. We always strive to find the right people who..."
-created_at: "2024-05-15T06:46:12Z"
-edited_at: "2024-11-01T18:07:52Z"
+title: Tips to hire great people
+description: At JetThoughts, we don’t typically fire our employees. We always strive to find the right people who...
+created_at: '2024-05-15T06:46:12Z'
+edited_at: '2024-11-01T19:05:54Z'
 draft: false
-tags: ["startup", "hiring", "tips"]
-canonical_url: "https://jetthoughts.com/blog/tips-hire-great-people-startup-hiring/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Ftips-hire-great-people-startup-hiring%2Ffile_0.jpeg"
-slug: "tips-hire-great-people-startup-hiring"
+tags:
+- startup
+- hiring
+- tips
+canonical_url: https://jetthoughts.com/blog/tips-hire-great-people-startup-hiring/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tips-hire-great-people-startup-hiring/cover.jpeg
+slug: tips-hire-great-people-startup-hiring
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,16 @@
 ---
 dev_to_id: 1103639
-title: "Generating random strings with Ruby"
-description: "When you need to generate a random alphanumeric string of a specified length in ruby you have a..."
-created_at: "2022-06-03T06:57:33Z"
-edited_at: "2024-11-01T20:07:45Z"
+title: Generating random strings with Ruby
+description: When you need to generate a random alphanumeric string of a specified length in ruby you have a...
+created_at: '2022-06-03T06:57:33Z'
+edited_at: '2024-11-01T21:06:51Z'
 draft: false
-tags: ["ruby", "webdev"]
-canonical_url: "https://jetthoughts.com/blog/generating-random-strings-with-ruby-webdev/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F7vytirms7om8v9u9sdvo.png"
-slug: "generating-random-strings-with-ruby-webdev"
+tags:
+- ruby
+- webdev
+canonical_url: https://jetthoughts.com/blog/generating-random-strings-with-ruby-webdev/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/generating-random-strings-with-ruby-webdev/cover.png
+slug: generating-random-strings-with-ruby-webdev
 metatags:
   image: cover.png
 ---

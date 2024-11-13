@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1852952
-title: "What are the steps of an Automation Test Plan?"
-description: "Step 1: Defining the Scope of Automation   Here are the things to consider while identifying..."
-created_at: "2024-05-14T17:02:29Z"
-edited_at: "2024-11-01T18:08:06Z"
+title: What are the steps of an Automation Test Plan?
+description: 'Step 1: Defining the Scope of Automation   Here are the things to consider while identifying...'
+created_at: '2024-05-14T17:02:29Z'
+edited_at: '2024-11-01T19:06:07Z'
 draft: false
-tags: ["qualitycontrol", "testing", "testplan", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fwhat-are-steps-of-an-automation-test-plan-qualitycontrol-testing%2Ffile_0.jpeg"
-slug: "what-are-steps-of-an-automation-test-plan-qualitycontrol-testing"
+tags:
+- qualitycontrol
+- testing
+- testplan
+- tutorial
+canonical_url: https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/cover.jpeg
+slug: what-are-steps-of-an-automation-test-plan-qualitycontrol-testing
 metatags:
   image: cover.jpeg
 ---

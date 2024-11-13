@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1103884
-title: "How to vertically center an element without Flex"
-description: "How vertically center with Flex you can view Vertical align with a full screen across Tailwind..."
-created_at: "2022-06-03T12:58:50Z"
-edited_at: "2024-11-01T20:07:46Z"
+title: How to vertically center an element without Flex
+description: How vertically center with Flex you can view Vertical align with a full screen across Tailwind...
+created_at: '2022-06-03T12:58:50Z'
+edited_at: '2024-11-01T21:06:52Z'
 draft: false
-tags: ["css", "html", "webdev", "jetthoughts"]
-canonical_url: "https://jetthoughts.com/blog/how-vertically-center-an-element-without-flex-css-html/"
-cover_image: ""
-slug: "how-vertically-center-an-element-without-flex-css-html"
+tags:
+- css
+- html
+- webdev
+- jetthoughts
+canonical_url: https://jetthoughts.com/blog/how-vertically-center-an-element-without-flex-css-html/
+cover_image:
+slug: how-vertically-center-an-element-without-flex-css-html
 ---
 How vertically center with Flex you can view [Vertical align with a full screen across Tailwind CSS](https://jtway.co/vertical-align-with-a-full-screen-across-tailwind-css-5c6ad91c3e4f)
 ```html

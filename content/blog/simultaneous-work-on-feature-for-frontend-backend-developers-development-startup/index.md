@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1877642
-title: "Simultaneous work on the feature for frontend and backend developers"
-description: "Simultaneous work on the feature for frontend and backend developers   How do split features..."
-created_at: "2024-06-05T06:43:35Z"
-edited_at: "2024-11-01T16:07:31Z"
+title: Simultaneous work on the feature for frontend and backend developers
+description: Simultaneous work on the feature for frontend and backend developers   How do split features...
+created_at: '2024-06-05T06:43:35Z'
+edited_at: '2024-11-01T17:06:48Z'
 draft: false
-tags: ["development", "startup", "continousdelivery"]
-canonical_url: "https://jetthoughts.com/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fsimultaneous-work-on-feature-for-frontend-backend-developers-development-startup%2Ffile_0.png"
-slug: "simultaneous-work-on-feature-for-frontend-backend-developers-development-startup"
+tags:
+- development
+- startup
+- continousdelivery
+canonical_url: https://jetthoughts.com/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/cover.png
+slug: simultaneous-work-on-feature-for-frontend-backend-developers-development-startup
 metatags:
   image: cover.png
 ---

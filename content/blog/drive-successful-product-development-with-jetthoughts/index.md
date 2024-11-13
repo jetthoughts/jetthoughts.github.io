@@ -1,14 +1,18 @@
 ---
 dev_to_id: 2016117
-title: "Drive Successful Product Development with JetThoughts"
-description: "Welcome to the world of product development, where innovation meets strategy! In today's fast-paced..."
-created_at: "2024-09-26T15:47:15Z"
-edited_at: "2024-11-01T14:27:38Z"
+title: Drive Successful Product Development with JetThoughts
+description: Welcome to the world of product development, where innovation meets strategy! In today's fast-paced...
+created_at: '2024-09-26T15:47:15Z'
+edited_at: '2024-11-01T15:06:11Z'
 draft: false
-tags: ["product", "development", "startup", "webdev"]
-canonical_url: "https://jetthoughts.com/blog/drive-successful-product-development-with-jetthoughts/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fg5jpp9ednvcbtudga0qt.png"
-slug: "drive-successful-product-development-with-jetthoughts"
+tags:
+- product
+- development
+- startup
+- webdev
+canonical_url: https://jetthoughts.com/blog/drive-successful-product-development-with-jetthoughts/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/drive-successful-product-development-with-jetthoughts/cover.png
+slug: drive-successful-product-development-with-jetthoughts
 metatags:
   image: cover.png
 ---

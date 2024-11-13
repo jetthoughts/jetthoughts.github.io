@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1852752
-title: "Regular automatic dependencies update with CircleCI"
-description: "Resolving the auto-upgrade issue will allow having edge gems versions with little to no..."
-created_at: "2024-05-14T14:18:44Z"
-edited_at: "2024-11-01T18:08:09Z"
+title: Regular automatic dependencies update with CircleCI
+description: Resolving the auto-upgrade issue will allow having edge gems versions with little to no...
+created_at: '2024-05-14T14:18:44Z'
+edited_at: '2024-11-01T19:06:10Z'
 draft: false
-tags: ["github", "circle", "ci", "rails"]
-canonical_url: "https://jetthoughts.com/blog/regular-automatic-dependencies-update-with-circleci-github-circle/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fregular-automatic-dependencies-update-with-circleci-github-circle%2Ffile_0.png"
-slug: "regular-automatic-dependencies-update-with-circleci-github-circle"
+tags:
+- github
+- circle
+- ci
+- rails
+canonical_url: https://jetthoughts.com/blog/regular-automatic-dependencies-update-with-circleci-github-circle/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/regular-automatic-dependencies-update-with-circleci-github-circle/cover.png
+slug: regular-automatic-dependencies-update-with-circleci-github-circle
 metatags:
   image: cover.png
 ---

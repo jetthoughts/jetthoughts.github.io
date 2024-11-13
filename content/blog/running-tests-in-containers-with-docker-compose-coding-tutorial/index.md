@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853635
-title: "Running tests in containers with docker-compose"
-description: "The main advantages of this way are to have independent environment for the tests running..."
-created_at: "2024-05-15T07:56:17Z"
-edited_at: "2024-11-01T18:07:29Z"
+title: Running tests in containers with docker-compose
+description: The main advantages of this way are to have independent environment for the tests running...
+created_at: '2024-05-15T07:56:17Z'
+edited_at: '2024-11-01T19:05:30Z'
 draft: false
-tags: ["coding", "tutorial", "docker", "testing"]
-canonical_url: "https://jetthoughts.com/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Frunning-tests-in-containers-with-docker-compose-coding-tutorial%2Ffile_0.png"
-slug: "running-tests-in-containers-with-docker-compose-coding-tutorial"
+tags:
+- coding
+- tutorial
+- docker
+- testing
+canonical_url: https://jetthoughts.com/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/running-tests-in-containers-with-docker-compose-coding-tutorial/cover.png
+slug: running-tests-in-containers-with-docker-compose-coding-tutorial
 metatags:
   image: cover.png
 ---

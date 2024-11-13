@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1877577
-title: "How We Hire Developers at JetThoughts"
-description: "How We Hire Developers at JetThoughts     Hiring process at JetThoughts is aimed at building..."
-created_at: "2024-06-05T06:13:54Z"
-edited_at: "2024-11-01T16:07:44Z"
+title: How We Hire Developers at JetThoughts
+description: How We Hire Developers at JetThoughts     Hiring process at JetThoughts is aimed at building...
+created_at: '2024-06-05T06:13:54Z'
+edited_at: '2024-11-01T17:07:01Z'
 draft: false
-tags: ["recruiting", "hr", "culture"]
-canonical_url: "https://jetthoughts.com/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-we-hire-developers-at-jetthoughts-recruiting-hr%2Ffile_0.jpg"
-slug: "how-we-hire-developers-at-jetthoughts-recruiting-hr"
+tags:
+- recruiting
+- hr
+- culture
+canonical_url: https://jetthoughts.com/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/cover.jpg
+slug: how-we-hire-developers-at-jetthoughts-recruiting-hr
 metatags:
   image: cover.jpg
 ---

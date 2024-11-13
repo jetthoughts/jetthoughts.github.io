@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1907419
-title: "How to avoid N + 1 and keep your Ruby on Rails controller clean"
-description: "Where to put the logic related to database queries optimization in a Ruby on Rails..."
-created_at: "2024-07-01T09:32:21Z"
-edited_at: "2024-11-01T16:06:49Z"
+title: How to avoid N + 1 and keep your Ruby on Rails controller clean
+description: Where to put the logic related to database queries optimization in a Ruby on Rails...
+created_at: '2024-07-01T09:32:21Z'
+edited_at: '2024-11-01T17:06:04Z'
 draft: false
-tags: ["ruby", "rails", "patterns", "designpatterns"]
-canonical_url: "https://jetthoughts.com/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl42d9vuobi7g9un4iahx.png"
-slug: "how-avoid-n-1-keep-your-ruby-on-rails-controller-clean"
+tags:
+- ruby
+- rails
+- patterns
+- designpatterns
+canonical_url: https://jetthoughts.com/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/cover.png
+slug: how-avoid-n-1-keep-your-ruby-on-rails-controller-clean
 metatags:
   image: cover.png
 ---

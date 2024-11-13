@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877534
-title: "4 Steps to Bring Life into a Struggling Project"
-description: "4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business..."
-created_at: "2024-06-05T05:31:06Z"
-edited_at: "2024-11-01T16:08:04Z"
+title: 4 Steps to Bring Life into a Struggling Project
+description: 4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business...
+created_at: '2024-06-05T05:31:06Z'
+edited_at: '2024-11-01T17:07:22Z'
 draft: false
-tags: ["startup", "management", "agile", "kanban"]
-canonical_url: "https://jetthoughts.com/blog/4-steps-bring-life-into-struggling-project-startup-management/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2F4-steps-bring-life-into-struggling-project-startup-management%2Ffile_0.jpeg"
-slug: "4-steps-bring-life-into-struggling-project-startup-management"
+tags:
+- startup
+- management
+- agile
+- kanban
+canonical_url: https://jetthoughts.com/blog/4-steps-bring-life-into-struggling-project-startup-management/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-steps-bring-life-into-struggling-project-startup-management/cover.jpeg
+slug: 4-steps-bring-life-into-struggling-project-startup-management
 metatags:
   image: cover.jpeg
 ---

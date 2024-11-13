@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1852739
-title: "RSCSS. Styling CSS without losing your sanity"
-description: "Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out..."
-created_at: "2024-05-14T14:03:11Z"
-edited_at: "2024-11-01T18:08:16Z"
+title: RSCSS. Styling CSS without losing your sanity
+description: Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out...
+created_at: '2024-05-14T14:03:11Z'
+edited_at: '2024-11-01T19:06:17Z'
 draft: false
-tags: ["css", "rscss", "html", "scss"]
-canonical_url: "https://jetthoughts.com/blog/rscss-styling-css-without-losing-your-sanity/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgiqa90g49hhotrej9c7y.png"
-slug: "rscss-styling-css-without-losing-your-sanity"
+tags:
+- css
+- rscss
+- html
+- scss
+canonical_url: https://jetthoughts.com/blog/rscss-styling-css-without-losing-your-sanity/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rscss-styling-css-without-losing-your-sanity/cover.png
+slug: rscss-styling-css-without-losing-your-sanity
 metatags:
   image: cover.png
 ---

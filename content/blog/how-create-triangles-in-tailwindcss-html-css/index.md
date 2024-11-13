@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1222970
-title: "How to create triangles in TailwindCSS"
-description: "In this post, we are going to see four examples of how to draw a triangle in TailwindCSS using..."
-created_at: "2022-10-18T10:46:16Z"
-edited_at: "2024-11-01T20:07:15Z"
+title: How to create triangles in TailwindCSS
+description: In this post, we are going to see four examples of how to draw a triangle in TailwindCSS using...
+created_at: '2022-10-18T10:46:16Z'
+edited_at: '2024-11-01T21:06:21Z'
 draft: false
-tags: ["html", "css", "webdev", "tailwindcss"]
-canonical_url: "https://jetthoughts.com/blog/how-create-triangles-in-tailwindcss-html-css/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fostd933jdk97j8ifwm3e.jpeg"
-slug: "how-create-triangles-in-tailwindcss-html-css"
+tags:
+- html
+- css
+- webdev
+- tailwindcss
+canonical_url: https://jetthoughts.com/blog/how-create-triangles-in-tailwindcss-html-css/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-create-triangles-in-tailwindcss-html-css/cover.jpeg
+slug: how-create-triangles-in-tailwindcss-html-css
 metatags:
   image: cover.jpeg
 ---

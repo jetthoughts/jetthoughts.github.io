@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1952002
-title: "Deploying Ruby on Rails applications with Kamal"
-description: "With the release of Rails 8, Kamal will be the default tool for deploying Rails applications,..."
-created_at: "2024-08-08T07:55:18Z"
-edited_at: "2024-11-01T14:28:26Z"
+title: Deploying Ruby on Rails applications with Kamal
+description: With the release of Rails 8, Kamal will be the default tool for deploying Rails applications,...
+created_at: '2024-08-08T07:55:18Z'
+edited_at: '2024-11-01T15:06:25Z'
 draft: false
-tags: ["devops", "docker", "kamal", "rails"]
-canonical_url: "https://jetthoughts.com/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx1ujafgup7gqat2ngds5.png"
-slug: "deploying-ruby-on-rails-applications-with-kamal-devops-docker"
+tags:
+- devops
+- docker
+- kamal
+- rails
+canonical_url: https://jetthoughts.com/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/cover.png
+slug: deploying-ruby-on-rails-applications-with-kamal-devops-docker
 metatags:
   image: cover.png
 ---

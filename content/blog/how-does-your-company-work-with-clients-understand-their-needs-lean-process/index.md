@@ -1,14 +1,16 @@
 ---
 dev_to_id: 1880380
-title: "How does your company work with clients to understand their needs?"
-description: "In today's competitive business landscape, understanding and meeting client needs is crucial for the..."
-created_at: "2024-06-07T12:41:25Z"
-edited_at: "2024-11-01T16:07:04Z"
+title: How does your company work with clients to understand their needs?
+description: In today's competitive business landscape, understanding and meeting client needs is crucial for the...
+created_at: '2024-06-07T12:41:25Z'
+edited_at: '2024-11-01T17:06:19Z'
 draft: false
-tags: ["lean", "process"]
-canonical_url: "https://jetthoughts.com/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-does-your-company-work-with-clients-understand-their-needs-lean-process%2Ffile_0.jpeg"
-slug: "how-does-your-company-work-with-clients-understand-their-needs-lean-process"
+tags:
+- lean
+- process
+canonical_url: https://jetthoughts.com/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/cover.jpeg
+slug: how-does-your-company-work-with-clients-understand-their-needs-lean-process
 metatags:
   image: cover.jpeg
 ---

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853649
-title: "Cheap tests with Ghost Inspector"
-description: "What do you do when a legacy project has no tests and adding them is difficult? Before making new..."
-created_at: "2024-05-15T08:05:56Z"
-edited_at: "2024-11-01T18:07:25Z"
+title: Cheap tests with Ghost Inspector
+description: What do you do when a legacy project has no tests and adding them is difficult? Before making new...
+created_at: '2024-05-15T08:05:56Z'
+edited_at: '2024-11-01T19:05:27Z'
 draft: false
-tags: ["webdev", "legacy", "tools", "development"]
-canonical_url: "https://jetthoughts.com/blog/cheap-tests-with-ghost-inspector-webdev-legacy/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fcheap-tests-with-ghost-inspector-webdev-legacy%2Ffile_0.png"
-slug: "cheap-tests-with-ghost-inspector-webdev-legacy"
+tags:
+- webdev
+- legacy
+- tools
+- development
+canonical_url: https://jetthoughts.com/blog/cheap-tests-with-ghost-inspector-webdev-legacy/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cheap-tests-with-ghost-inspector-webdev-legacy/cover.png
+slug: cheap-tests-with-ghost-inspector-webdev-legacy
 metatags:
   image: cover.png
 ---

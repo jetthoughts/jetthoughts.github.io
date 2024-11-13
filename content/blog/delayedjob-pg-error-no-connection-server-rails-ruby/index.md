@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1880232
-title: "DelayedJob and PG Error No Connection to Server"
-description: "DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the..."
-created_at: "2024-06-07T10:21:11Z"
-edited_at: "2024-11-01T16:07:13Z"
+title: DelayedJob and PG Error No Connection to Server
+description: DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the...
+created_at: '2024-06-07T10:21:11Z'
+edited_at: '2024-11-01T17:06:28Z'
 draft: false
-tags: ["rails", "ruby", "postgres"]
-canonical_url: "https://jetthoughts.com/blog/delayedjob-pg-error-no-connection-server-rails-ruby/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fdelayedjob-pg-error-no-connection-server-rails-ruby%2Ffile_0.png"
-slug: "delayedjob-pg-error-no-connection-server-rails-ruby"
+tags:
+- rails
+- ruby
+- postgres
+canonical_url: https://jetthoughts.com/blog/delayedjob-pg-error-no-connection-server-rails-ruby/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/delayedjob-pg-error-no-connection-server-rails-ruby/cover.png
+slug: delayedjob-pg-error-no-connection-server-rails-ruby
 metatags:
   image: cover.png
 ---

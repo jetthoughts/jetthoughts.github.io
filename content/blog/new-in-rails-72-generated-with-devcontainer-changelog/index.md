@@ -1,14 +1,16 @@
 ---
 dev_to_id: 1910822
-title: "New in Rails 7.2: Generated With .devcontainer"
-description: "Exciting news from Rails! The latest Rails 7.2 has a new feature. When you create a new app, it now..."
-created_at: "2024-07-03T20:23:36Z"
-edited_at: "2024-11-01T16:06:46Z"
+title: 'New in Rails 7.2: Generated With .devcontainer'
+description: Exciting news from Rails! The latest Rails 7.2 has a new feature. When you create a new app, it now...
+created_at: '2024-07-03T20:23:36Z'
+edited_at: '2024-11-01T17:06:01Z'
 draft: false
-tags: ["rails", "changelog"]
-canonical_url: "https://jetthoughts.com/blog/new-in-rails-72-generated-with-devcontainer-changelog/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3nulk11a30tipd4qpyh6.png"
-slug: "new-in-rails-72-generated-with-devcontainer-changelog"
+tags:
+- rails
+- changelog
+canonical_url: https://jetthoughts.com/blog/new-in-rails-72-generated-with-devcontainer-changelog/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-in-rails-72-generated-with-devcontainer-changelog/cover.png
+slug: new-in-rails-72-generated-with-devcontainer-changelog
 metatags:
   image: cover.png
 ---

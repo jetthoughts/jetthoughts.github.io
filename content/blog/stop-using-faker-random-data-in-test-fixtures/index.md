@@ -1,14 +1,14 @@
 ---
 dev_to_id: 1902786
-title: "Stop using Faker and random data in the test fixtures."
-description: "Faker/FFaker can seem like the perfect solution to generate data for testing.  In theory, Faker..."
-created_at: "2024-06-27T15:47:25Z"
-edited_at: "2024-11-01T16:06:50Z"
+title: Stop using Faker and random data in the test fixtures.
+description: Faker/FFaker can seem like the perfect solution to generate data for testing.  In theory, Faker...
+created_at: '2024-06-27T15:47:25Z'
+edited_at: '2024-11-01T17:06:05Z'
 draft: false
 tags: []
-canonical_url: "https://jetthoughts.com/blog/stop-using-faker-random-data-in-test-fixtures/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fph5ct77dpnm7820jf2wn.png"
-slug: "stop-using-faker-random-data-in-test-fixtures"
+canonical_url: https://jetthoughts.com/blog/stop-using-faker-random-data-in-test-fixtures/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stop-using-faker-random-data-in-test-fixtures/cover.png
+slug: stop-using-faker-random-data-in-test-fixtures
 metatags:
   image: cover.png
 ---
@@ -34,7 +34,7 @@ This is a frustrating process since tests might fail only once every ten or hund
 
 Faker produces tones of tests that are hard to debug. It isn’t easy to understand why the test failed and harder to reproduce the same test scenario.
 
-![](https://cdn-images-1.medium.com/max/2000/1*jvTfk_gqTqIA_NGanNrjbw.png)
+![](file_1.png)
 
 Code will produce problems in which someone **spends more than 10 hours finding that problem** or triangulating the issue.
 
@@ -68,14 +68,14 @@ For one of our projects, we **reduced it by** **20% (more than 20 min)** by repl
 The problem is that random data breaks [F.I.R.S.T principles of testing](https://medium.com/@tasdikrahman/f-i-r-s-t-principles-of-testing-1a497acda8d6).
 
 
-![Image description](file_1.png)
+![Image description](file_2.png)
 
 
 
 Performance issues may violate the fast testing principle.
 
 
-![Image description](file_2.png)
+![Image description](file_3.png)
 
 
 
@@ -83,7 +83,7 @@ Performance issues may violate the fast testing principle.
 >  *As a result above together gives a meaningful impact on the project, and in fact, the sum will be a critical slowdown in development. This is incredibly frustrating.*
 
 
-![Image description](file_3.png)
+![Image description](file_4.png)
 
 
 

@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1853524
-title: "How does the onboarding look like in JetThoughts?"
-description: "How does the onboarding look like in JetThoughts?   This is an onboarding checklist..."
-created_at: "2024-05-15T06:29:43Z"
-edited_at: "2024-11-01T18:07:55Z"
+title: How does the onboarding look like in JetThoughts?
+description: How does the onboarding look like in JetThoughts?   This is an onboarding checklist...
+created_at: '2024-05-15T06:29:43Z'
+edited_at: '2024-11-01T19:05:57Z'
 draft: false
-tags: ["productivity", "startup", "remote", "onboarding"]
-canonical_url: "https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-does-onboarding-look-like-in-jetthoughts-productivity-startup%2Ffile_0.jpeg"
-slug: "how-does-onboarding-look-like-in-jetthoughts-productivity-startup"
+tags:
+- productivity
+- startup
+- remote
+- onboarding
+canonical_url: https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/cover.jpeg
+slug: how-does-onboarding-look-like-in-jetthoughts-productivity-startup
 metatags:
   image: cover.jpeg
 ---

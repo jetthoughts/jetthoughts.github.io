@@ -2,5 +2,7 @@ early_access: true
 reviews:
   path_filters:
     - "!content/blog/!*.md"
+    - "!content/blog/sync_status.yml"
+    - "!test/fixtures/"
     - "!wp-content/**"
     - "!wp-includes/**"

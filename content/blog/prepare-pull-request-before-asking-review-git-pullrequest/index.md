@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1852617
-title: "Prepare the Pull Request before asking to Review"
-description: "How to avoid being the victim of an open loop trying to get your Pull Request verified while working..."
-created_at: "2024-05-14T12:27:37Z"
-edited_at: "2024-11-01T20:06:32Z"
+title: Prepare the Pull Request before asking to Review
+description: How to avoid being the victim of an open loop trying to get your Pull Request verified while working...
+created_at: '2024-05-14T12:27:37Z'
+edited_at: '2024-11-01T21:05:37Z'
 draft: false
-tags: ["git", "pullrequest", "review", "workflow"]
-canonical_url: "https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fprepare-pull-request-before-asking-review-git-pullrequest%2Ffile_0.png"
-slug: "prepare-pull-request-before-asking-review-git-pullrequest"
+tags:
+- git
+- pullrequest
+- review
+- workflow
+canonical_url: https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/prepare-pull-request-before-asking-review-git-pullrequest/cover.png
+slug: prepare-pull-request-before-asking-review-git-pullrequest
 metatags:
   image: cover.png
 ---

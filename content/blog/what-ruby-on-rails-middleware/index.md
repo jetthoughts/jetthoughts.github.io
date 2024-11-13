@@ -1,14 +1,14 @@
 ---
 dev_to_id: 1277349
-title: "What is Ruby on Rails Middleware."
-description: "The middleware component sits between the client and the server, processing inbound requests and..."
-created_at: "2022-11-29T17:08:51Z"
-edited_at: "2024-11-01T20:07:14Z"
+title: What is Ruby on Rails Middleware.
+description: The middleware component sits between the client and the server, processing inbound requests and...
+created_at: '2022-11-29T17:08:51Z'
+edited_at: '2024-11-01T21:06:20Z'
 draft: false
 tags: []
-canonical_url: "https://jetthoughts.com/blog/what-ruby-on-rails-middleware/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpkulmbqw4w1hes94c9vl.png"
-slug: "what-ruby-on-rails-middleware"
+canonical_url: https://jetthoughts.com/blog/what-ruby-on-rails-middleware/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-ruby-on-rails-middleware/cover.png
+slug: what-ruby-on-rails-middleware
 metatags:
   image: cover.png
 ---

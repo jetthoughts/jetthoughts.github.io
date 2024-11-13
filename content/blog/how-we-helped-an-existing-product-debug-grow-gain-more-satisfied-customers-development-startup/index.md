@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1877638
-title: "How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers"
-description: "As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could..."
-created_at: "2024-06-05T06:34:42Z"
-edited_at: "2024-11-01T16:07:36Z"
+title: How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers
+description: As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could...
+created_at: '2024-06-05T06:34:42Z'
+edited_at: '2024-11-01T17:06:52Z'
 draft: false
-tags: ["development", "startup", "business", "enterprise"]
-canonical_url: "https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fhow-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup%2Ffile_0.jpeg"
-slug: "how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup"
+tags:
+- development
+- startup
+- business
+- enterprise
+canonical_url: https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/cover.jpeg
+slug: how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup
 metatags:
   image: cover.jpeg
 ---

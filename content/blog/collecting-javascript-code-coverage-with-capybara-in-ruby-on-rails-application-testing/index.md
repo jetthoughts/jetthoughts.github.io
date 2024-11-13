@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1852568
-title: "Collecting JavaScript code coverage with Capybara in Ruby on Rails application"
-description: "Having JavaScript code covered by Capybara system tests, can we utilize them for the code..."
-created_at: "2024-05-14T11:32:21Z"
-edited_at: "2024-11-01T20:06:42Z"
+title: Collecting JavaScript code coverage with Capybara in Ruby on Rails application
+description: Having JavaScript code covered by Capybara system tests, can we utilize them for the code...
+created_at: '2024-05-14T11:32:21Z'
+edited_at: '2024-11-01T21:05:48Z'
 draft: false
-tags: ["capybara", "testing", "javascript", "rails"]
-canonical_url: "https://jetthoughts.com/blog/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fcollecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing%2Ffile_0.png"
-slug: "collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing"
+tags:
+- capybara
+- testing
+- javascript
+- rails
+canonical_url: https://jetthoughts.com/blog/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing/cover.png
+slug: collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-application-testing
 metatags:
   image: cover.png
 ---

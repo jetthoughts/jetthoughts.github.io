@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1941092
-title: "Navigating Team Transitions: A Guide for Non-Technical Founders"
-description: "Change can be challenging, especially when it involves individuals. Replacing a team is always a..."
-created_at: "2024-07-30T10:47:52Z"
-edited_at: "2024-11-01T16:06:36Z"
+title: 'Navigating Team Transitions: A Guide for Non-Technical Founders'
+description: Change can be challenging, especially when it involves individuals. Replacing a team is always a...
+created_at: '2024-07-30T10:47:52Z'
+edited_at: '2024-11-01T17:05:52Z'
 draft: false
-tags: ["startup", "agile", "culture", "process"]
-canonical_url: "https://jetthoughts.com/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmor5578bem1wja6zm92o.png"
-slug: "navigating-team-transitions-guide-for-non-technical-founders-startup-agile"
+tags:
+- startup
+- agile
+- culture
+- process
+canonical_url: https://jetthoughts.com/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/navigating-team-transitions-guide-for-non-technical-founders-startup-agile/cover.png
+slug: navigating-team-transitions-guide-for-non-technical-founders-startup-agile
 metatags:
   image: cover.png
 ---

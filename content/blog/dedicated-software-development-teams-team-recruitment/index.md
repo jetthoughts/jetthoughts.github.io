@@ -1,14 +1,17 @@
 ---
 dev_to_id: 1880485
-title: "Dedicated Software Development Teams"
-description: "Dedicated Software Development Teams   We’ve compiled everything you need to know about..."
-created_at: "2024-06-07T13:49:53Z"
-edited_at: "2024-11-01T16:06:55Z"
+title: Dedicated Software Development Teams
+description: Dedicated Software Development Teams   We’ve compiled everything you need to know about...
+created_at: '2024-06-07T13:49:53Z'
+edited_at: '2024-11-01T17:06:10Z'
 draft: false
-tags: ["team", "recruitment", "hr"]
-canonical_url: "https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fdedicated-software-development-teams-team-recruitment%2Ffile_0.jpeg"
-slug: "dedicated-software-development-teams-team-recruitment"
+tags:
+- team
+- recruitment
+- hr
+canonical_url: https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/dedicated-software-development-teams-team-recruitment/cover.jpeg
+slug: dedicated-software-development-teams-team-recruitment
 metatags:
   image: cover.jpeg
 ---

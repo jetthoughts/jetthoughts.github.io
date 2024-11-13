@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1872098
-title: "New in Ruby on Rails 7.2: Development Containers Configuration"
-description: "Development container is a full-featured coding environment. Rails 7.2 introduces configurations for..."
-created_at: "2024-05-31T13:45:09Z"
-edited_at: "2024-11-01T16:08:05Z"
+title: 'New in Ruby on Rails 7.2: Development Containers Configuration'
+description: Development container is a full-featured coding environment. Rails 7.2 introduces configurations for...
+created_at: '2024-05-31T13:45:09Z'
+edited_at: '2024-11-01T17:07:23Z'
 draft: false
-tags: ["rails", "ruby", "docker", "changelog"]
-canonical_url: "https://jetthoughts.com/blog/new-in-ruby-on-rails-72-development-containers-configuration/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252Fkta2a5l0ptajiqx2uzgo.png"
-slug: "new-in-ruby-on-rails-72-development-containers-configuration"
+tags:
+- rails
+- ruby
+- docker
+- changelog
+canonical_url: https://jetthoughts.com/blog/new-in-ruby-on-rails-72-development-containers-configuration/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-in-ruby-on-rails-72-development-containers-configuration/cover.png
+slug: new-in-ruby-on-rails-72-development-containers-configuration
 metatags:
   image: cover.png
 ---

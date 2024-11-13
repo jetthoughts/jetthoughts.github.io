@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1978541
-title: "Working with LLMs in Ruby on Rails: A Simple Guide"
-description: "Why You Need to Work with LLMs Today   Large Language Models (LLMs) are reshaping how we..."
-created_at: "2024-08-29T07:34:43Z"
-edited_at: "2024-11-01T14:28:14Z"
+title: 'Working with LLMs in Ruby on Rails: A Simple Guide'
+description: Why You Need to Work with LLMs Today   Large Language Models (LLMs) are reshaping how we...
+created_at: '2024-08-29T07:34:43Z'
+edited_at: '2024-11-01T15:06:22Z'
 draft: false
-tags: ["llm", "ruby", "llama", "rails"]
-canonical_url: "https://jetthoughts.com/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2co47m8du8je5x7olwhg.jpeg"
-slug: "working-with-llms-in-ruby-on-rails-simple-guide-llm"
+tags:
+- llm
+- ruby
+- llama
+- rails
+canonical_url: https://jetthoughts.com/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/cover.jpeg
+slug: working-with-llms-in-ruby-on-rails-simple-guide-llm
 metatags:
   image: cover.jpeg
 ---

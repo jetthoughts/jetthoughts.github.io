@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1673299
-title: "New methods that help implement authentication in Ruby on Rails 7.1"
-description: "The new version of Ruby on Rails 7.1 has many new features, some of which make writing your own..."
-created_at: "2023-11-21T08:01:09Z"
-edited_at: "2024-11-01T20:07:00Z"
+title: New methods that help implement authentication in Ruby on Rails 7.1
+description: The new version of Ruby on Rails 7.1 has many new features, some of which make writing your own...
+created_at: '2023-11-21T08:01:09Z'
+edited_at: '2024-11-01T21:06:05Z'
 draft: false
-tags: ["ruby", "rails", "webdev", "tutorial"]
-canonical_url: "https://jetthoughts.com/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnazdnkdgk0unctyj3gwg.png"
-slug: "new-methods-that-help-implement-authentication-in-ruby-on-rails-71"
+tags:
+- ruby
+- rails
+- webdev
+- tutorial
+canonical_url: https://jetthoughts.com/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/cover.png
+slug: new-methods-that-help-implement-authentication-in-ruby-on-rails-71
 metatags:
   image: cover.png
 ---

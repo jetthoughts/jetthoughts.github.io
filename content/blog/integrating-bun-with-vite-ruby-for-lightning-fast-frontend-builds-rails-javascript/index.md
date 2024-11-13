@@ -1,14 +1,18 @@
 ---
 dev_to_id: 1667161
-title: "Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds"
-description: "With the recent release of Bun and its newfound support for Vite, coupled with Ruby on Rails 7.1..."
-created_at: "2023-11-15T09:13:40Z"
-edited_at: "2024-11-01T18:09:03Z"
+title: Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds
+description: With the recent release of Bun and its newfound support for Vite, coupled with Ruby on Rails 7.1...
+created_at: '2023-11-15T09:13:40Z'
+edited_at: '2024-11-01T19:07:03Z'
 draft: false
-tags: ["rails", "javascript", "tutorial", "productivity"]
-canonical_url: "https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fmedia.dev.to%2Fcdn-cgi%2Fimage%2Fwidth%3D1000%2Cheight%3D420%2Cfit%3Dcover%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F6v6svmpp53nbv8x5t3p9.png"
-slug: "integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript"
+tags:
+- rails
+- javascript
+- tutorial
+- productivity
+canonical_url: https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/cover.png
+slug: integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript
 metatags:
   image: cover.png
 ---

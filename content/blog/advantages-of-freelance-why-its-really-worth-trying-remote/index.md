@@ -1,14 +1,16 @@
 ---
 dev_to_id: 1880404
-title: "Advantages of freelance — why it’s really worth trying?"
-description: "Every day freelance is becoming more and more popular among all industries where it’s possible to..."
-created_at: "2024-06-07T13:04:07Z"
-edited_at: "2024-11-01T16:07:03Z"
+title: Advantages of freelance — why it’s really worth trying?
+description: Every day freelance is becoming more and more popular among all industries where it’s possible to...
+created_at: '2024-06-07T13:04:07Z'
+edited_at: '2024-11-01T17:06:17Z'
 draft: false
-tags: ["freelance", "remote"]
-canonical_url: "https://jetthoughts.com/blog/advantages-of-freelance-why-its-really-worth-trying-remote/"
-cover_image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fraw.githubusercontent.com%2Fjetthoughts%2Fjetthoughts.github.io%2Fmaster%2Fstatic%2Fassets%2Fimg%2Fblog%2Fadvantages-of-freelance-why-its-really-worth-trying-remote%2Ffile_0.jpeg"
-slug: "advantages-of-freelance-why-its-really-worth-trying-remote"
+tags:
+- freelance
+- remote
+canonical_url: https://jetthoughts.com/blog/advantages-of-freelance-why-its-really-worth-trying-remote/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/advantages-of-freelance-why-its-really-worth-trying-remote/cover.jpeg
+slug: advantages-of-freelance-why-its-really-worth-trying-remote
 metatags:
   image: cover.jpeg
 ---
