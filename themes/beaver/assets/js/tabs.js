@@ -2,7 +2,7 @@ document.querySelectorAll('.js-tab').forEach(el => {
     const container = el.closest('.js-tabs-container');
     el.onclick = function (e) {
         const targetTab = e.target;
-        const panel = document.getElementById(targetTab.getAttribute('aria-controls'));
+        const panel = document.getElementById(targetTab.getAttribute('data-controls'));
         container.querySelectorAll(".tab-panel").forEach(panel => panel.hidden = true);
         panel.hidden = false;
         container.querySelectorAll(".js-tab").forEach(tabTitle => tabTitle.setAttribute('aria-selected', 'false'));
