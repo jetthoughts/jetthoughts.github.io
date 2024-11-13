@@ -1,6 +1,6 @@
 .btn,
 .btn:hover {
-  padding: 10px 18px;
+  padding: 11px 18px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -92,8 +92,8 @@
 
 .menu-close {
   display: none;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 24px;
   left: 16px;
@@ -183,7 +183,7 @@
   transition: .3s;
 }
 
-  .navigation .-active .link {
+.navigation .-active .link {
   color: #1a8cff;
 }
 
@@ -341,7 +341,7 @@
     background-color: #121212;
     color: #fff;
     border-radius: 6px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .navigation .item {
@@ -406,6 +406,17 @@
 
   .navigation .item .arrow {
     top: 25px;
+    right: 15px;
+  }
+
+  .navigation .item .arrow:before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: -15px;
+    bottom: -15px;
+    cursor: pointer;
   }
 
   .navigation .item.-open .arrow {
@@ -415,8 +426,14 @@
   .navigation .item:hover .arrow {
     border-color: inherit;
   }
+
   .navigation .item:hover .link,
   .navigation .sub-item:hover .sub-name {
     color: inherit;
+  }
+
+  .navigation .link {
+    font-size: 18px;
+    padding-right: 15px;
   }
 }
