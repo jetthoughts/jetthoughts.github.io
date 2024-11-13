@@ -36,7 +36,7 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 ENV \
     BUNDLE_JOBS=4 \
     BUNDLE_RETRY=3 \
-    BUNDLE_PATH=/app/vendor/bundle \
+    BUNDLE_PATH=/opt/bundle \
     DEBUG_COLORS=true \
     LANG=C.UTF-8 \
     NODE_ENV=production \
