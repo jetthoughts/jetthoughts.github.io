@@ -28,3 +28,12 @@
   width: 100%;
   height: 100%;
 }
+
+.heading-component .heading-self-link {
+  text-decoration: none;
+  color: #1a8cff;
+  visibility: hidden;
+}
+.heading-component:hover>.heading-self-link {
+  visibility: visible;
+}

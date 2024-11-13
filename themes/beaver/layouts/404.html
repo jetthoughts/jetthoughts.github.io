@@ -1,7 +1,7 @@
 {{ define "header" }}
 {{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $CSS := slice $dynamicCSS (resources.Get "css/404.css") (resources.Get "css/base-4.min.css") (resources.Get "css/skin-65eda28877e04.css") $dynamicCSS586 (resources.Get "css/586.css") | resources.Concat "css/single/404.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+{{- $CSS := slice $dynamicCSS (resources.Get "css/404.css") (resources.Get "css/base-4.min.css") (resources.Get "css/skin-65eda28877e04.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/footer.css") | resources.Concat "css/single/404.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 {{ define "main" }}
@@ -46,7 +46,7 @@
                                 <div class="fl-module fl-module-button fl-node-ar7hkgve10jq" data-node="ar7hkgve10jq">
                                     <div class="fl-module-content fl-node-content">
                                         <div class="fl-button-wrap fl-button-width-auto fl-button-left">
-                                            <a href="{{ absURL "" }}" target="_self" class="fl-button">
+                                            <a href="{{ relURL "" }}" target="_self" class="fl-button">
                                             <span class="fl-button-text">Back to Homepage</span>
                                             </a>
                                         </div>
@@ -107,7 +107,7 @@
                                 <div class="fl-module fl-module-button fl-node-fxvw9yp0o6l7" data-node="fxvw9yp0o6l7">
                                     <div class="fl-module-content fl-node-content">
                                         <div class="fl-button-wrap fl-button-width-auto fl-button-center">
-                                            <a href="{{ absURL " free-consultation/" }}" target="_self"
+                                            <a href="{{ relURL "free-consultation/" }}" target="_self"
                                             class="fl-button">
                                             <span class="fl-button-text">Talk to an Expert</span>
                                             </a>

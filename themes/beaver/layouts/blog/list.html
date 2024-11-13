@@ -9,6 +9,7 @@
     (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
     (resources.Get "css/skin-65eda28877e04.css")
     (resources.Get "css/single-post.css")
+    (resources.Get "css/footer.css")
     | resources.Concat "css/blog/list.css" | postCSS  | minify | fingerprint | resources.PostProcess
   }}
 
@@ -66,7 +67,7 @@
                   <a class="link" target="_blank" rel="noopener" href="{{ .Permalink }}">
                     <div class="blog-post">
                       <div class="post-image">
-                        {{ partial "blog/img-cropped.html" (dict "Page" . "width" 150 "height" 150) }}
+                        {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
                       </div>
                       <div class="post-content">
                         <h2 class="post-title">{{ .Title }}</h2>
@@ -79,11 +80,10 @@
                             {{ end }}
                           </div>
                           {{ if .Params.created_at }}
-                            <span class="post-date"
-                              >{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span
-                            >
+                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
                           {{ end }}
                         </div>
+                        <div>{{ .Params.description }}</div>
                       </div>
                     </div>
                   </a>

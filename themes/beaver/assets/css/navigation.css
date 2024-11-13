@@ -9,6 +9,8 @@
   white-space: nowrap;
   display: inline-block;
   vertical-align: top;
+  min-width: 100px;
+  text-align: center;
 }
 
 .btn-primary {
@@ -313,10 +315,12 @@
     z-index: -1;
     opacity: 0;
     transition: .3s;
+    display: none;
   }
 
   .navigation.-open:before {
     opacity: 1;
+    display: block;
   }
 
   .navigation.-open .list {

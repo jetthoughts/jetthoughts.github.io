@@ -30,11 +30,12 @@
     box-sizing: border-box;
     width: 25%;
     font-weight: bold;
+    vertical-align: top;
 }
 
 .technologies-component .container img, .technologies-component .container svg {
     width: 65px;
-    height: auto;
+    height: 65px;
     margin-bottom: 20px;
 }
 

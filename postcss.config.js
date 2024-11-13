@@ -26,7 +26,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     ],
 
     greedy: [
-      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/
+      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/
     ]
   },
 })

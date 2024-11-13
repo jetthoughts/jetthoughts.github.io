@@ -1,169 +1,58 @@
-<footer id="footer" class="fl-builder-content fl-builder-content-589 fl-builder-global-templates-locked" data-post-id="589" data-type="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-    <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-530uo7f2gcli fl-row-default-height fl-row-align-center" data-node="530uo7f2gcli">
-        <div class="fl-row-content-wrap">
-            <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                <div class="fl-col-group fl-node-c73flkp6wyo8 fl-col-group-custom-width" data-node="c73flkp6wyo8">
-                    <div class="fl-col fl-node-ntfp1iza9jy8 fl-col-small-custom-width" data-node="ntfp1iza9jy8">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-photo fl-node-93z28ipdxk56" data-node="93z28ipdxk56">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
-                                        <div class="fl-photo-content fl-photo-img-png">
-                                            {{ partial "svg" "logo-white" }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fl-module fl-module-rich-text fl-node-l972bjsmtzwf" data-node="l972bjsmtzwf">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        <p>{{ .Site.Params.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="fl-module fl-module-rich-text fl-node-lsrnf83ijm06 footer-menu" data-node="lsrnf83ijm06">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        <p><a href="mailto:{{ .Site.Params.email }}" title="mail to us">{{ .Site.Params.email }}</a></p>
-                                        <p><a href="tel:{{ .Site.Params.phone }}" title="call us">{{ .Site.Params.phone }}</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fl-col fl-node-5dcip6gnz2at fl-col-small fl-col-small-custom-width" data-node="5dcip6gnz2at">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-heading fl-node-vieclstgwdma" data-node="vieclstgwdma">
-                                <div class="fl-module-content fl-node-content">
-                                    <h5 class="fl-heading">
-                                        <span class="fl-heading-text">Services</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="fl-module fl-module-rich-text fl-node-t1kspwz29rlo footer-menu" data-node="t1kspwz29rlo">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        {{ range .Site.Menus.services }}
-                                        <p><a href="{{ .URL }}">{{ .Name }}</a></p>
-                                        {{ end }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fl-col fl-node-7p1us6kjlz9d fl-col-small fl-col-small-custom-width" data-node="7p1us6kjlz9d">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-heading fl-node-zevlimhbtfcq" data-node="zevlimhbtfcq">
-                                <div class="fl-module-content fl-node-content">
-                                    <h5 class="fl-heading">
-                                        <span class="fl-heading-text">Company</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="fl-module fl-module-rich-text fl-node-q8ul0bi34dvt footer-menu careers-text" data-node="q8ul0bi34dvt">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        {{ range .Site.Menus.company }}
-                                        <p><a href="{{ .URL }}">{{ .Name }}</a></p>
-                                        {{ end }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fl-col fl-node-fxtbmly0wvq4 fl-col-small fl-col-small-custom-width" data-node="fxtbmly0wvq4">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-heading fl-node-e1085k37ypqb" data-node="e1085k37ypqb">
-                                <div class="fl-module-content fl-node-content">
-                                    <h5 class="fl-heading">
-                                        <span class="fl-heading-text">Resources</span>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="fl-module fl-module-rich-text fl-node-dt8uqacr4y16 footer-menu" data-node="dt8uqacr4y16">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        {{ range .Site.Menus.resources }}
-                                        <p><a href="{{ .URL }}">{{ .Name }}</a></p>
-                                        {{ end }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="fl-col-group fl-node-ywg4hbdm8ero" data-node="ywg4hbdm8ero">
-                    <div class="fl-col fl-node-d09l8jp3qrgf fl-visible-desktop fl-visible-large fl-visible-medium" data-node="d09l8jp3qrgf">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-pp-spacer fl-node-7d9wg1x8ua5m fl-visible-desktop fl-visible-large fl-visible-medium" data-node="7d9wg1x8ua5m">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="pp-spacer-module"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="fl-col-group fl-node-n9xkao8bpvwe fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="n9xkao8bpvwe">
-                    <div class="fl-col fl-node-j3vd1emwi9k5 fl-col-small fl-col-small-custom-width" data-node="j3vd1emwi9k5">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-rich-text fl-node-9c2hyrnig0m4" data-node="9c2hyrnig0m4">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        <p>{{ .Site.Params.copyright }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fl-col fl-node-ebun2x3dawyq fl-col-small fl-col-small-custom-width" data-node="ebun2x3dawyq">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-pp-social-icons fl-node-yqpsldhfovz6 jt-footer-social" data-node="yqpsldhfovz6">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="pp-social-icons pp-social-icons-horizontal">
-                              <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
-                                 <link itemprop="url" href='{{ absURL "" }}'>
-                                 <a itemprop="sameAs" href="https://www.facebook.com/jetthoughts/" target="_blank" title="Facebook" aria-label="Facebook" role="button" rel="noopener noreferrer external">
-                                     {{ partial "svg" "facebook-white-fa" }}
-                                 </a>
-                              </span>
-                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
-                                 <link itemprop="url" href='{{ absURL "" }}'>
-                                 <a itemprop="sameAs" href="https://twitter.com/jetthoughts/" target="_blank" title="Twitter" aria-label="Twitter" role="button" rel="noopener noreferrer external">
-                                 {{ partial "svg" "x-white-fa" }}
-                                 </a>
-                              </span>
-                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
-                                 <link itemprop="url" href='{{ absURL "" }}'>
-                                 <a itemprop="sameAs" href="https://www.linkedin.com/company/jetthoughts/" target="_blank" title="LinkedIn" aria-label="LinkedIn" role="button" rel="noopener noreferrer external">
-                                   {{ partial "svg" "linkedin-white-fa" }}
-                                 </a>
-                              </span>
-                                        <span class="pp-social-icon" itemscope itemtype="https://schema.org/Organization">
-                                 <link itemprop="url" href='{{ absURL "" }}'>
-                                 <a itemprop="sameAs" href="https://github.com/jetthoughts/" target="_blank" title="Github" aria-label="Github" role="button" rel="noopener noreferrer external">
-                                   {{ partial "svg" "github-white-fa" }}
-                                 </a>
-                              </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fl-col fl-node-2ej8k3vximbp fl-col-small fl-col-small-custom-width" data-node="2ej8k3vximbp">
-                        <div class="fl-col-content fl-node-content">
-                            <div class="fl-module fl-module-rich-text fl-node-tlnupvy1oxaj legal-links" data-node="tlnupvy1oxaj">
-                                <div class="fl-module-content fl-node-content">
-                                    <div class="fl-rich-text">
-                                        <ul>
-                                            <li><a href="{{ absURL "privacy-policy/" }}">Privacy Policy</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<footer class="footer-component" id="footer">
+    <div class="footer-container">
+        <div class="flex-container justify-content-between">
+            <div class="info flex2">
+                <a href="{{ relURL "/" }}" title="Go to homepage" class="logo">
+                    {{ partial "svg" "logo-white" }}
+                </a>
+                <p>{{ .Site.Params.description }}</p>
+                <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+                <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
             </div>
+            <div class="flex1"></div>
+            <nav class="services flex1" aria-label="Services navigation">
+                <div class="headline">Services</div>
+                <ul>
+                    {{ range .Site.Menus.services }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+            <nav class="company flex1" aria-label="Company navigation">
+                <div class="headline">Company</div>
+                <ul>
+                    {{ range .Site.Menus.company }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+            <nav class="resources flex1" aria-label="Resources navigation">
+                <div class="headline">Resources</div>
+                <ul>
+                    {{ range .Site.Menus.resources }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
         </div>
+    </div>
+
+    <div class="footer-bottom">
+
+        <nav class="social-icons" aria-label="Social media">
+            <a href="https://www.facebook.com/jetthoughts/" target="_blank" title="Facebook" aria-label="Facebook" rel="noopener noreferrer external">
+                {{ partial "svg" "theme/mini/facebook" }}
+            </a>
+            <a href="https://twitter.com/jetthoughts/" target="_blank" title="Twitter" aria-label="Twitter" rel="noopener noreferrer external">
+                {{ partial "svg" "theme/mini/x" }}
+            </a>
+            <a href="https://www.linkedin.com/company/jetthoughts/" target="_blank" title="LinkedIn" aria-label="LinkedIn" rel="noopener noreferrer external">
+                {{ partial "svg" "theme/mini/linkedin" }}
+            </a>
+            <a href="https://github.com/jetthoughts/" target="_blank" title="Github" aria-label="Github" rel="noopener noreferrer external">
+                {{ partial "svg" "theme/mini/github" }}
+            </a>
+        </nav>
+        <div>{{ .Site.Params.copyright }} <a href="{{ relURL "privacy-policy/" }}">Privacy Policy</a></div>
     </div>
 </footer>

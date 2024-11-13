@@ -9,6 +9,7 @@ $dynamicCSS586
 (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
 (resources.Get "css/skin-65eda28877e04.css")
 (resources.Get "css/single-post.css")
+(resources.Get "css/footer.css")
 | resources.Concat "css/blog.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
@@ -58,7 +59,7 @@ $dynamicCSS586
 
                   <div class="blog-post">
                     <div class="post-image">
-                      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 150 "height" 150) }}
+                      {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
                     </div>
                     <div class="post-content">
                       <h2 class="post-title">{{ .Title }}</h2>
@@ -68,6 +69,7 @@ $dynamicCSS586
                         <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
                         {{ end }}
                       </div>
+                      <div>{{ .Params.description }}</div>
                     </div>
                   </div>
 

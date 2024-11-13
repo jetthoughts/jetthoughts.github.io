@@ -2,7 +2,7 @@
 {{ partial "header/critical/single/use-cases.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 
-{{ $CSS := slice (resources.Get "css/3027-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css")
+{{ $CSS := slice (resources.Get "css/3027-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/footer.css")
 | resources.Concat "css/single/use-cases.css"
 | postCSS  | minify | fingerprint | resources.PostProcess
 }}
@@ -49,7 +49,7 @@
                                        <div class="fl-module fl-module-button fl-node-wh4cbm261s3z" data-node="wh4cbm261s3z">
                                           <div class="fl-module-content fl-node-content">
                                              <div class="fl-button-wrap fl-button-width-auto fl-button-left">
-                                                <a href="{{ absURL "free-consultation/" }}" target="_self" class="fl-button">
+                                                <a href="{{ relURL "free-consultation/" }}" target="_self" class="fl-button">
                                                 <span class="fl-button-text">Talk to an Expert</span>
                                                 </a>
                                              </div>
@@ -184,7 +184,7 @@
                                                 <div class="fl-module fl-module-button fl-node-qym512pwze3d" data-node="qym512pwze3d">
                                                    <div class="fl-module-content fl-node-content">
                                                       <div class="fl-button-wrap fl-button-width-auto fl-button-right">
-                                                         <a href="{{ absURL "clients/" }}" target="_self" class="fl-button">
+                                                         <a href="{{ relURL "clients/" }}" target="_self" class="fl-button">
                                                          <span class="fl-button-text">View All Clients</span>
                                                          </a>
                                                       </div>
