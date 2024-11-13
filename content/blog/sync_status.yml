@@ -611,10 +611,6 @@
   :edited_at: '2024-11-01T21:05:57Z'
   :slug: more-control-over-enum-in-rails-71-webdev
   :synced: true
-1765310:
-  :edited_at: '2024-07-03T12:20:32Z'
-  :slug: enum-validation-in-ruby-on-rails-71
-  :synced: false
 1760994:
   :edited_at: '2024-11-01T21:05:59Z'
   :slug: upgrading-postgresql-on-heroku-step-by-guide-database
@@ -814,7 +810,7 @@
 462569:
   :edited_at: '2024-07-03T12:23:36Z'
   :slug: trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement
-  :synced: false
+  :synced: true
 462554:
   :edited_at: '2024-11-01T15:10:50Z'
   :slug: who-blame-when-project-fails-blamegame
