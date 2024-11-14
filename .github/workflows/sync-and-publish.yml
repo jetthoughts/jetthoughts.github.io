@@ -27,6 +27,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: bundle install
+
       - name: Run sync script
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
