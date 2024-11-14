@@ -48,8 +48,6 @@ jobs:
             bin/sync_with_devto
           fi
 
-          bin/upload_assets_to_github
-
       - name: Commit and push if it changed
         run: |
           git config --global user.email "action@github.com"
