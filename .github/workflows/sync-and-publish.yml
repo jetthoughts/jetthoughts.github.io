@@ -1,4 +1,4 @@
-name: Sync articles & Deploy Hugo site to Pages
+name: Sync articles
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI or API.
 on:
@@ -54,7 +54,3 @@ jobs:
           git config --global user.name "GitHub Action"
           git add -A
           git diff --quiet && git diff --staged --quiet || (git commit -m 'Update blog content'; git push)
-
-  build_and_deploy:
-    needs: run_sync
-    uses: ./.github/workflows/_hugo.yml
