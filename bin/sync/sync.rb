@@ -17,8 +17,8 @@ class Sync
     @working_dir = working_dir
   end
 
-  def self.perform(force = false, **)
-    new(**).perform(force)
+  def self.perform(force = false, **kwargs)
+    new(**kwargs).perform(force)
   end
 
   def sync_status
