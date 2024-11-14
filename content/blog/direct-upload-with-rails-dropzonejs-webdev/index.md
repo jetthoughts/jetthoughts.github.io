@@ -3,7 +3,7 @@ dev_to_id: 2014071
 title: Direct Upload with Rails & Dropzone.js
 description: Configuring direct file uploads in Rails is now easier than ever. In this article, I'll show you how...
 created_at: '2024-09-25T08:37:13Z'
-edited_at: '2024-11-01T15:06:12Z'
+edited_at: '2024-11-14T20:25:05Z'
 draft: false
 tags:
 - rails
@@ -365,7 +365,7 @@ This rendering adds file upload functionality to your form. You can customize it
 ## Possible Improvements
 
 #### Add Image Thumbnails
-To show image thumbnails, set `createImageThumbnails` to `true` when creating a `Dropzone` instance. Then, modify the preview template to render the thumbnail image:
+To show image thumbnails, set `createImageThumbnails` to `true` when creating a `Dropzone` instance. Then, modify the preview template to render the [thumbnail](https://www.adobe.com/express/create/thumbnail/youtube) image:
 
 ```html
 <div class="dz-preview dz-file-preview">
