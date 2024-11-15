@@ -8,7 +8,7 @@ class DevToAdapter
   end
 
   def get_articles(username, page)
-    @http_client.get("#{BASE_URL}/articles?username=#{username}&page=#{page}&per_page=1000&cache_buster=#{Time.now.to_i}")
+    @http_client.get("#{BASE_URL}/articles?username=#{username}&page=#{page}&per_page=#{rand(8999..9999)}")
   end
 
   def get_article(id)
