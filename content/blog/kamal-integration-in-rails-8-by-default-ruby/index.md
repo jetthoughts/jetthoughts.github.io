@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1939835
+dev_to_url: https://dev.to/jetthoughts/kamal-integration-in-rails-8-by-default-538m
 title: Kamal Integration in Rails 8 by Default
 description: In Rails 8, Kamal will be included by default. This change aims to simplify deployment and...
 created_at: '2024-07-29T09:50:35Z'

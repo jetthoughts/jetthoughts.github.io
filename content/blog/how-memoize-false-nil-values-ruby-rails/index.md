@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877561
+dev_to_url: https://dev.to/jetthoughts/how-to-memoize-false-and-nil-values-50g3
 title: How To Memoize False and Nil Values
 description: 'TL;DR: if method can return false or nil, and you want to memoize it, use defined?(@_result)...'
 created_at: '2024-06-05T05:55:50Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880471
+dev_to_url: https://dev.to/jetthoughts/jekyll-github-pages-forestryio-3f24
 title: Jekyll + GitHub Pages + Forestry.io
 description: I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my...
 created_at: '2024-06-07T13:36:24Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1952002
+dev_to_url: https://dev.to/jetthoughts/deploying-ruby-on-rails-applications-with-kamal-1m9n
 title: Deploying Ruby on Rails applications with Kamal
 description: With the release of Rails 8, Kamal will be the default tool for deploying Rails applications,...
 created_at: '2024-08-08T07:55:18Z'

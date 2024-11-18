@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880292
+dev_to_url: https://dev.to/jetthoughts/stress-testing-your-rails-application-using-jmeter-5h1i
 title: Stress Testing Your Rails Application Using JMeter
 description: Stress Testing Your Rails Application Using JMeter     Some time ago we needed to make a...
 created_at: '2024-06-07T11:31:26Z'

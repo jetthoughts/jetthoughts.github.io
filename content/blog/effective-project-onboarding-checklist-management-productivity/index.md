@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853643
+dev_to_url: https://dev.to/jetthoughts/effective-project-onboarding-checklist-42k
 title: Effective project onboarding checklist
 description: To avoid the onboarding slip and remove expectations and misunderstandings, the JetThoughts team...
 created_at: '2024-05-15T08:00:36Z'

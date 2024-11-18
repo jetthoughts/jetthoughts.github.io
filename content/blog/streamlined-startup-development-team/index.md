@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1943717
+dev_to_url: https://dev.to/jetthoughts/streamlined-startup-development-team-2of7
 title: Streamlined Startup Development Team
 description: Starting a new venture is hard, especially for non-tech founders. Finding the right remote developers...
 created_at: '2024-08-01T13:10:25Z'

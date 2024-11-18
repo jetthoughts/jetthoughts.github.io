@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877645
+dev_to_url: https://dev.to/jetthoughts/avoid-data-migrations-in-the-schema-migrations-for-rails-5hdi
 title: Avoid data migrations in the schema migrations for Rails
 description: Avoid data migrations in the schema migrations for Rails   Could you re-run all migrations...
 created_at: '2024-06-05T06:44:55Z'

@@ -1,6 +1,7 @@
 ---
 dev_to_id: 1852745
 title: The Trial Period for Staff Augmentation in JetThoughts
+dev_to_url: https://dev.to/jetthoughts/the-trial-period-for-staff-augmentation-in-jetthoughts-eff
 description: We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no...
 created_at: '2024-05-14T14:11:01Z'
 edited_at: '2024-11-25T15:38:04Z'
@@ -13,8 +14,6 @@ tags:
 canonical_url: https://jetthoughts.com/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/cover.png
 slug: trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement
-metatags:
-  image: cover.png
 ---
 *We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no financial risks at all. Let’s see how it works…*
 

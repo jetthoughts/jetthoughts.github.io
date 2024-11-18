@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852642
+dev_to_url: https://dev.to/jetthoughts/deploying-subdirectory-projects-to-heroku-5cj3
 title: Deploying subdirectory projects to Heroku
 description: When you want to deploy to Heroku a project located in a Git subdirectory, simply running git push...
 created_at: '2024-05-14T12:57:14Z'

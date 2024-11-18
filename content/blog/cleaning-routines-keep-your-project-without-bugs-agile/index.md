@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852630
+dev_to_url: https://dev.to/jetthoughts/cleaning-routines-to-keep-your-project-without-bugs-167f
 title: Cleaning routines to keep your project without bugs
 description: How to manage problems with your project? How to understand how buggy it is and address the issues...
 created_at: '2024-05-14T12:46:10Z'

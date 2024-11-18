@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877637
+dev_to_url: https://dev.to/jetthoughts/react-ruby-on-rails-without-any-gems-3clf
 title: React + Ruby on Rails without any gems
 description: React + Ruby on Rails without any gems   How to start using React components written in...
 created_at: '2024-06-05T06:32:51Z'

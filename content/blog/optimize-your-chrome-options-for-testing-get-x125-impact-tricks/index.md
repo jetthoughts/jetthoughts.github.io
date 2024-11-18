@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877654
+dev_to_url: https://dev.to/jetthoughts/optimize-your-chrome-options-for-testing-to-get-x125-impact-djf
 title: Optimize your Chrome options for testing to get x1.25 impact
 description: Enhance your Ruby on Rails development team's testing. Learn tricks to optimize Chrome options for a 125% performance boost.
 created_at: '2024-06-05T06:54:46Z'

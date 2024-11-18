@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877566
+dev_to_url: https://dev.to/jetthoughts/inexpensive-is-not-cheap-choosing-software-development-company-for-your-project-ak0
 title: Inexpensive is Not Cheap. Choosing Software Development Company for Your Project
 description: You have a great idea for a new product or a growing business and need a team of software...
 created_at: '2024-06-05T06:01:42Z'

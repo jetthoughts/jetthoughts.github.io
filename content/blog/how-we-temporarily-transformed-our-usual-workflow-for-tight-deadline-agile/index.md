@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877544
+dev_to_url: https://dev.to/jetthoughts/how-we-temporarily-transformed-our-usual-workflow-for-a-tight-deadline-4fm9
 title: How We Temporarily Transformed Our Usual Workflow for a Tight Deadline
 description: Time makes rules   Every time when we start working on a new project, short iteration or...
 created_at: '2024-06-05T05:45:06Z'

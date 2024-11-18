@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1099690
+dev_to_url: https://dev.to/jetthoughts/change-inputs-placeholder-color-with-css-b4i
 title: Change input’s placeholder color with CSS
 description: 'Most modern browsers support the simple pseudo-element:    ::placeholder {   color: #9400d3; }       ...'
 created_at: '2022-05-30T10:04:54Z'

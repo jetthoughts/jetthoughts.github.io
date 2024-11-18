@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877558
+dev_to_url: https://dev.to/jetthoughts/test-driven-thinking-for-solving-common-ruby-pitfalls-3gb7
 title: Test Driven Thinking for Solving Common Ruby Pitfalls
 description: Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for...
 created_at: '2024-06-05T05:53:53Z'

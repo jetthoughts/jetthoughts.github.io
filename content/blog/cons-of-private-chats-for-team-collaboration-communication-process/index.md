@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853611
+dev_to_url: https://dev.to/jetthoughts/cons-of-the-private-chats-for-team-collaboration-4d13
 title: Cons of the private chats for team collaboration
 description: Communication between team members is a very important part of the software development process....
 created_at: '2024-05-15T07:34:55Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877574
+dev_to_url: https://dev.to/jetthoughts/how-to-get-remote-teams-to-high-perform-555g
 title: How to Get Remote Teams to High Perform
 description: How to Get Remote Teams to High Perform     Raise your hand in case you feel confused about...
 created_at: '2024-06-05T06:10:52Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1910828
+dev_to_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1
 title: 'New in Rails 7.2: Active Model Got type_for_attribute'
 description: What's New?   Ruby on Rails 7.2 brings a handy change. The type_for_attribute method is now...
 created_at: '2024-07-03T20:42:57Z'

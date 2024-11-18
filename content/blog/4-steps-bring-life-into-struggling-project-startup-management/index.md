@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877534
+dev_to_url: https://dev.to/jetthoughts/4-steps-to-bring-life-into-a-struggling-project-470g
 title: 4 Steps to Bring Life into a Struggling Project
 description: 4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business...
 created_at: '2024-06-05T05:31:06Z'

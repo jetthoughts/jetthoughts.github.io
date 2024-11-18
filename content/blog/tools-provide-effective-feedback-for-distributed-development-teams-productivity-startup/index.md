@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853640
+dev_to_url: https://dev.to/jetthoughts/tools-to-provide-effective-feedback-for-distributed-development-teams-55gm
 title: Tools to provide effective feedback for distributed development teams
 description: How to share info in a remote async environment? What is the best way to keep everyone in the...
 created_at: '2024-05-15T07:58:27Z'

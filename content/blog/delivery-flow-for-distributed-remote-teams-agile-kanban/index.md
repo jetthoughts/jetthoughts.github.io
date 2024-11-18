@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852603
+dev_to_url: https://dev.to/jetthoughts/delivery-flow-for-distributed-remote-teams-19k9
 title: Delivery Flow for Distributed Remote Teams
 description: Process which help the team make effective decisions to better live up to expectations...
 created_at: '2024-05-14T12:11:00Z'

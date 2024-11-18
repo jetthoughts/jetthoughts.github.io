@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880380
+dev_to_url: https://dev.to/jetthoughts/how-does-your-company-work-with-clients-to-understand-their-needs-3nic
 title: How does your company work with clients to understand their needs?
 description: In today's competitive business landscape, understanding and meeting client needs is crucial for the...
 created_at: '2024-06-07T12:41:25Z'

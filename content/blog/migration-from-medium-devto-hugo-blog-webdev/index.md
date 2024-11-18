@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1846033
+dev_to_url: https://dev.to/jetthoughts/migration-from-medium-to-devto-and-hugo-28bj
 title: Migration from Medium to Hugo + dev.to API
 description: For a long time, we've been running a corporate blog on Medium, but recently, we've run into some...
 created_at: '2024-05-08T07:43:55Z'

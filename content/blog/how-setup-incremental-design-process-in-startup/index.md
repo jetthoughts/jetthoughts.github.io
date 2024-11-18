@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877667
+dev_to_url: https://dev.to/jetthoughts/how-to-setup-incremental-design-process-in-a-startup-5b69
 title: How to Setup Incremental Design Process in a Startup
 description: Are you a startup looking to streamline your design process? Look no further! This article will...
 created_at: '2024-06-05T07:12:27Z'

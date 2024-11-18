@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1103639
+dev_to_url: https://dev.to/jetthoughts/generating-random-strings-with-ruby-2gp6
 title: Generating random strings with Ruby
 description: When you need to generate a random alphanumeric string of a specified length in ruby you have a...
 created_at: '2022-06-03T06:57:33Z'

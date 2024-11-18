@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853649
+dev_to_url: https://dev.to/jetthoughts/cheap-tests-with-ghost-inspector-31me
 title: Cheap tests with Ghost Inspector
 description: What do you do when a legacy project has no tests and adding them is difficult? Before making new...
 created_at: '2024-05-15T08:05:56Z'

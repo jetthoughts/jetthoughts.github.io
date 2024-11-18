@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853537
+dev_to_url: https://dev.to/jetthoughts/tips-to-hire-great-people-54ab
 title: Tips to hire great people
 description: At JetThoughts, we don’t typically fire our employees. We always strive to find the right people who...
 created_at: '2024-05-15T06:46:12Z'

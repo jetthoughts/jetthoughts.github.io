@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880171
+dev_to_url: https://dev.to/jetthoughts/4-lines-to-speed-up-your-rails-test-suite-on-circleci-32lp
 title: 4 lines to Speed Up your Rails Test Suite on CircleCI
 description: Most of our projects have a big code base of assets which dramatically reduce not only browser page...
 created_at: '2024-06-07T09:15:36Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852719
+dev_to_url: https://dev.to/jetthoughts/5-free-tools-to-make-the-sales-process-easier-3ad4
 title: 5 Free tools to make the sales process easier
 description: What if I told you that there is no need to spend all your budget on super modern CRMs and...
 created_at: '2024-05-14T13:47:15Z'

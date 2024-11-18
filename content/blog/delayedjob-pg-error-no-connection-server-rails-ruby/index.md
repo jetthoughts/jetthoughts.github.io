@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880232
+dev_to_url: https://dev.to/jetthoughts/delayedjob-and-pg-error-no-connection-to-server-21e4
 title: DelayedJob and PG Error No Connection to Server
 description: DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the...
 created_at: '2024-06-07T10:21:11Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1200329
+dev_to_url: https://dev.to/jetthoughts/auto-install-system-dependencies-for-ruby-on-rails-48kf
 title: Auto-install system dependencies for Ruby on Rails
 description: Let's integrate Homebrew into our Ruby on Rails Project local set up.  There is a convention for Ruby...
 created_at: '2022-09-22T15:37:41Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852577
+dev_to_url: https://dev.to/jetthoughts/benefits-of-working-remotely-26ma
 title: Benefits of working remotely
 description: Nowadays, remote work gains more and more prominence. Many successful companies let their employees...
 created_at: '2024-05-14T11:38:52Z'

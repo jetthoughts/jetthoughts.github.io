@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1170570
+dev_to_url: https://dev.to/jetthoughts/how-to-use-ruby-on-rails-concerns-47mj
 title: How to use Ruby on Rails Concerns
 description: A Rails concern is a module that extends the ActiveSupport::Concern module.  You can use Сoncerns to...
 created_at: '2022-08-18T14:43:37Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852617
+dev_to_url: https://dev.to/jetthoughts/prepare-the-pull-request-before-asking-to-review-2o87
 title: Prepare the Pull Request before asking to Review
 description: How to avoid being the victim of an open loop trying to get your Pull Request verified while working...
 created_at: '2024-05-14T12:27:37Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1978541
+dev_to_url: https://dev.to/jetthoughts/working-with-llms-in-ruby-on-rails-a-simple-guide-1dm6
 title: 'Working with LLMs in Ruby on Rails: A Simple Guide'
 description: Why You Need to Work with LLMs Today   Large Language Models (LLMs) are reshaping how we...
 created_at: '2024-08-29T07:34:43Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853624
+dev_to_url: https://dev.to/jetthoughts/cross-platform-development-using-reactxp-3poc
 title: Cross-platform development using ReactXP
 description: Cross-platform development using ReactXP   Startups with limited resources trying to reduce...
 created_at: '2024-05-15T07:48:27Z'

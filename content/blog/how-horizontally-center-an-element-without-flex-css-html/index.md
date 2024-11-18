@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1101579
+dev_to_url: https://dev.to/jetthoughts/how-to-horizontally-center-an-element-without-flex-2cdc
 title: How to horizontally center an element without Flex
 description: Centered elements with Flex it is very easy to style, what about not use Flex?    &lt;div...
 created_at: '2022-06-01T08:10:19Z'

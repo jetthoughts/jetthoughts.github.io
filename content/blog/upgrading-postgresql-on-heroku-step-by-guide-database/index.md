@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1760994
+dev_to_url: https://dev.to/jetthoughts/upgrading-postgresql-on-heroku-a-step-by-step-guide-4beb
 title: 'Upgrading PostgreSQL on Heroku: A Step-by-Step Guide'
 description: Are you looking to upgrade your PostgreSQL database on Heroku? Whether it's for performance...
 created_at: '2024-02-14T10:13:29Z'

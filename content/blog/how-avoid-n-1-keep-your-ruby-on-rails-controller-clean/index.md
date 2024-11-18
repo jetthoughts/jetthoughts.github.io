@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1907419
+dev_to_url: https://dev.to/jetthoughts/how-to-avoid-n-1-and-keep-your-ruby-on-rails-controller-clean-bb
 title: How to avoid N + 1 and keep your Ruby on Rails controller clean
 description: Where to put the logic related to database queries optimization in a Ruby on Rails...
 created_at: '2024-07-01T09:32:21Z'
