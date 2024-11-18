@@ -14,6 +14,8 @@ tags:
 canonical_url: https://jetthoughts.com/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/cover.png
 slug: trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement
+metatags:
+  image: cover.png
 ---
 *We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no financial risks at all. Let’s see how it works…*
 
