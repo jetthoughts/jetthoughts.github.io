@@ -3,7 +3,7 @@ dev_to_id: 1852745
 title: The Trial Period for Staff Augmentation in JetThoughts
 description: We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no...
 created_at: '2024-05-14T14:11:01Z'
-edited_at: '2024-11-18T17:17:02Z'
+edited_at: '2024-11-18T17:44:53Z'
 draft: false
 tags:
 - startup
@@ -18,7 +18,7 @@ metatags:
 ---
 *We offer a 2-week trial with no obligation. So you can test everything and see how it goes with no financial risks at all. Let’s see how it works…*
 
-![Photo by [Austin Kehmeier](https://unsplash.com/@a_kehmeier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/hands-together?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0)
+![Photo by [Austin Kehmeier](https://unsplash.com/@a_kehmeier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/hands-together?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.png)
 
 ## What is the trial period?
 
