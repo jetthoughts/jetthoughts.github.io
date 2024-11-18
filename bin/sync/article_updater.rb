@@ -150,6 +150,7 @@ module ArticleUpdater
 
     article_hash = {
       "dev_to_id" => article_data["id"],
+      "dev_to_url" => article_data["url"],
       "title" => article_data["title"],
       "description" => description || article_data["description"],
       "created_at" => article_data["created_at"],

@@ -138,6 +138,7 @@ class SyncWithDevToTest < Minitest::Test
     content = File.read(markdown_file)
 
     assert_includes content, "title: 'Recent Searches & Sorting Hashes: How They are Connected'"
+    assert_includes content, "dev_to_url: https://dev.to/jetthoughts/recent-searches-sorting-hashes-how-they-are-connected-4965"
     assert_includes content, "description: In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
     assert_includes content, "tags:"
     assert_includes content, "- ruby"
