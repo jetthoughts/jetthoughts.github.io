@@ -15,7 +15,7 @@
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"
       },
-      {{ with .Resources.GetMatch .Params.metatags.image }}
+      {{ with .Resources.Get .Params.metatags.image }}
         "image": "{{ .Permalink }}",
       {{ end }}
       "keywords": [

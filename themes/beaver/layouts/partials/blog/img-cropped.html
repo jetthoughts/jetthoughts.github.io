@@ -1,4 +1,4 @@
-{{ $image := .Page.Resources.GetMatch (printf "*%s*" .Page.Params.metatags.image) }}
+{{ $image := .Page.Resources.Get .Page.Params.metatags.image }}
 {{ if $image }}
 {{ $cropped := $image.Fill (printf "%dx%d Center" .width .height) }}
 {{ $webp := $cropped.Resize (printf "%dx%d webp" .width .height) }}

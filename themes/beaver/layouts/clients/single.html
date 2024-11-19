@@ -42,7 +42,7 @@
                           <div class="fl-module-content fl-node-content">
                              <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                                 <div class="fl-photo-content fl-photo-img-jpg">
-                                   {{ $image := .Page.Resources.GetMatch .Page.Params.client.cover_image }}
+                                   {{ $image := .Page.Resources.Get .Page.Params.client.cover_image }}
                                    {{ $title := .Page.Params.client.name }}
                                    {{ partial "img/hero.html" (dict "image" $image "title" $title) }}
                                 </div>
@@ -168,7 +168,7 @@
                              <div class="pp-photo-gallery" itemscope="itemscope" itemtype="https://schema.org/ImageGallery">
 
                               {{ range .Params.gallery }}
-                              {{ $imageItem := $.Page.Resources.GetMatch . }}
+                              {{ $imageItem := $.Page.Resources.Get . }}
                               {{ $imageItemW1024 := $imageItem.Resize "1024x webp q75" }}
 
 

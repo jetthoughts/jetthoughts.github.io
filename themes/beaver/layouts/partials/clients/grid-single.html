@@ -1,8 +1,8 @@
-{{ $image := .Resources.GetMatch .Params.client.cover_image }}
+{{ $image := .Resources.Get .Params.client.cover_image }}
 
-{{ $logo := .Resources.GetMatch .Params.client.logo }}
+{{ $logo := .Resources.Get .Params.client.logo }}
 {{ if eq (.Scratch.Get "logoVariant") "white" }}
-{{ $logo = .Resources.GetMatch .Params.client.logo_white_version }}
+{{ $logo = .Resources.Get .Params.client.logo_white_version }}
 {{ end }}
 {{ .Scratch.Delete "logoVariant" }}
 <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3206 jt_case_studies type-jt_case_studies status-publish has-post-thumbnail hentry jt_case_studies_category-amazon-web-services jt_case_studies_category-elastisearch jt_case_studies_category-postgresql jt_case_studies_category-react-js jt_case_studies_category-ruby-on-rails" itemscope itemtype="https://schema.org/CreativeWork" data-id="3206">

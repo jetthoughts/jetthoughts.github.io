@@ -1,5 +1,5 @@
 {{/* Get file that matches the filename as specified as src="" */}}
-{{ $src := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $src := .Page.Resources.Get (printf "%s" (.Destination | safeURL)) }}
 {{ $alt := .PlainText | safeHTML }}
 
 {{ if $src }}

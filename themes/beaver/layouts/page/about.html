@@ -49,7 +49,7 @@ $dynamicCSS586
                                         <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
                                            <div class="fl-photo-content fl-photo-img-jpg">
 
-                                              {{ $image := .Page.Resources.GetMatch .Page.Params.cover_image }}
+                                              {{ $image := .Page.Resources.Get .Page.Params.cover_image }}
                                               {{ $title := "The Best Products" }}
                                               {{ partial "img/hero-big.html" (dict "image" $image "title" $title) }}
 

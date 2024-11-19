@@ -86,7 +86,7 @@
                                            <div class="fl-module-content fl-node-content">
                                               <div class="fl-photo fl-photo-align-left">
                                                  <div class="fl-photo-content fl-photo-img-jpeg">
-                                                    {{ $image := .Page.Resources.GetMatch .Page.Params.cover_image }}
+                                                    {{ $image := .Page.Resources.Get .Page.Params.cover_image }}
                                                     {{ $title := "Browse. Apply. Prepare your bright future." }}
                                                     {{ partial "img/careers.html" (dict "image" $image "title" $title) }}
                                                  </div>
@@ -287,7 +287,7 @@
                                               <div class="fl-photo fl-photo-align-left">
                                                  <div class="fl-photo-content fl-photo-img-jpg">
 
-                                                    {{ $image := .Page.Resources.GetMatch .Page.Params.testimonial.image }}
+                                                    {{ $image := .Page.Resources.Get .Page.Params.testimonial.image }}
                                                     {{ $title := "John Doe" }}
                                                     {{ partial "img/testimonial.html" (dict "image" $image "title" $title) }}
 
