@@ -3,7 +3,7 @@ dev_to_id: 1852630
 title: Cleaning routines to keep your project without bugs
 description: How to manage problems with your project? How to understand how buggy it is and address the issues...
 created_at: '2024-05-14T12:46:10Z'
-edited_at: '2024-11-01T19:06:27Z'
+edited_at: '2024-11-21T00:34:03Z'
 draft: false
 tags:
 - agile
@@ -17,7 +17,7 @@ metatags:
 ---
 ![Photo by [Oliver Hale](https://unsplash.com/@4themorningshoot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/clean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 
-How to manage problems with your project? How to understand how buggy it is and address the issues properly? In [JetThoughts](undefined), we build our own process of handling those problems, and here is how…
+How to manage problems with your project? How to understand how buggy it is and address the issues properly? In [JetThoughts](https://jetthoughts.com/), we build our own process of handling those problems, and here is how…
 
 ### **Know your enemy**
 
