@@ -1,0 +1,15 @@
+ux:
+  name: "UX"
+  description: "This is the description for the UX tag."
+
+design:
+  name: "Design"
+  description: "All about design principles and practices."
+
+development:
+  name: "Development"
+  description: "Insights into software development."
+
+startup:
+  name: "Startup"
+  description: "Insights into startup development."
