@@ -6,7 +6,20 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <title>{{ .Title }}</title>
-    <meta name="description" content="{{ .Params.description }}" />
+
+
+    {{ if eq .Section "tags" }}
+    {{ $tagName := lower .Title }}
+    {{ $tagData := index .Site.Data.tags $tagName }}
+
+    <meta name="description" content="{{ $tagData.description | default "" }}" />
+    <meta property="og:description" content="{{ $tagData.description | default "" }}" />
+    {{ else }}
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
+    {{ end }}
+
+
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
 
     {{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
@@ -25,7 +38,6 @@
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="{{ .Title }} | JetThoughts" />
-    <meta property="og:description" content="{{ .Params.description }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="JetThoughts" />
     <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
