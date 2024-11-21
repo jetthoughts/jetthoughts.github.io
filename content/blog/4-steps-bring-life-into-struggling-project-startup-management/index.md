@@ -3,7 +3,7 @@ dev_to_id: 1877534
 title: 4 Steps to Bring Life into a Struggling Project
 description: 4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business...
 created_at: '2024-06-05T05:31:06Z'
-edited_at: '2024-11-01T17:07:22Z'
+edited_at: '2024-11-21T11:24:30Z'
 draft: false
 tags:
 - startup
@@ -155,7 +155,7 @@ These outlined practices are very simple and easy to integrate, but at the same 
 
 These recommendations are amongst many requirements when integrating effective lean and agile practices. With an effective development pipeline, healthy engineering teams can be built.
 
-Are you ready to move to bring your struggling project back to live? [Contact us](http://www.jetthoughts.com/contact.html) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
+Are you ready to move to bring your struggling project back to live? [Contact us](https://jetthoughts.com/contact-us/) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
 
 ### See also:
 

@@ -3,7 +3,7 @@ dev_to_id: 1877577
 title: How We Hire Developers at JetThoughts
 description: How We Hire Developers at JetThoughts     Hiring process at JetThoughts is aimed at building...
 created_at: '2024-06-05T06:13:54Z'
-edited_at: '2024-11-01T17:07:01Z'
+edited_at: '2024-11-21T11:26:51Z'
 draft: false
 tags:
 - recruiting
@@ -24,7 +24,7 @@ Hiring process at JetThoughts is aimed at building a solid team. We are a small 
 
 ## 1.Intro
 
-All the available positions are listed on our [Career](http://www.jetthoughts.com/career.html) page. Also we post openings at job boards and share information on social media. You can subscribe to our accounts ([Facebook](https://www.facebook.com/jetthoughts), [Twitter](https://twitter.com/jetthoughts), [LinkedIn](https://www.linkedin.com/company/jetthoughts)) and never miss a suitable vacancy. If there are no openings that meet your skill set, we still would be glad to receive your application at [cv@jetthoughts.com](mailto:cv@jetthoughts.com).
+All the available positions are listed on our [Career](https://jetthoughts.com/careers/) page. Also we post openings at job boards and share information on social media. You can subscribe to our accounts ([Facebook](https://www.facebook.com/jetthoughts), [Twitter](https://twitter.com/jetthoughts), [LinkedIn](https://www.linkedin.com/company/jetthoughts)) and never miss a suitable vacancy. If there are no openings that meet your skill set, we still would be glad to receive your application at [cv@jetthoughts.com](mailto:cv@jetthoughts.com).
 
 So, we look at the CV that you have submitted. At first point of contact we would like to know who you are, what is your expertise, and how your skills and qualifications meet our needs. Remember that the CVs with cover letters tailored for our company always stand out among copypasted text like “Hi, I’m interested in Ruby on Rails position.”
 

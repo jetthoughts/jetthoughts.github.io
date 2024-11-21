@@ -3,7 +3,7 @@ dev_to_id: 1880211
 title: Effortless Code Conventions Review for Pull Request Changes
 description: Reliably arranged source code helps hackability. You can filter code speedier if its...
 created_at: '2024-06-07T10:03:27Z'
-edited_at: '2024-11-01T15:07:16Z'
+edited_at: '2024-11-21T11:26:06Z'
 draft: false
 tags:
 - ruby
@@ -135,7 +135,7 @@ Let’s remove the waste of time for trivial problems and spend it on codding!
 
 ## Get More
 
-[Contact us](http://www.jetthoughts.com/contact.html) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
+[Contact us](https://jetthoughts.com/contact-us/) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
