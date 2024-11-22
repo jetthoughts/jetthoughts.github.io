@@ -1,3 +1,7 @@
+{{ define "title" }}
+    <title>{{ .Title }} - JTWay, JetThoughts’ team blog</title>
+{{ end }}
+
 {{ define "header" }}
   {{- $CSS := slice
     (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
@@ -12,7 +16,6 @@
     (resources.Get "css/footer.css")
     | resources.Concat "css/blog/list.css" | postCSS  | minify | fingerprint | resources.PostProcess
   }}
-
 
   <link href="{{ $CSS.RelPermalink }}" media="all" rel="stylesheet" />
 

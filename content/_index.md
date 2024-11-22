@@ -6,8 +6,6 @@ description: Achieve your product vision with access to turnkey engineering reso
 headline: Build faster. Scale smarter.
 excerpt: Streamline development, accelerate delivery, & achieve your product vision with access to turnkey engineering resources backed by world-class technical talent.
 
-
-
 metatags:
   image: og-home.jpg
 

@@ -5,8 +5,10 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
-    <title>{{ .Title }} - JTWay, JetThoughts’ team blog</title>
 
+    {{ block "title" . }}
+      <title>{{ .Title }}</title>
+    {{ end }}
 
     {{ if eq .Section "tags" }}
     {{ $tagName := lower .Title }}
