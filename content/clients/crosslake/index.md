@@ -3,6 +3,7 @@ title: See How JetThoughts Helped Crosslake Transform a Legacy Software Project 
 excerpt: To help salvage an aging legacy project, Crosslake hired us to take over responsibility for ongoing architecture and development for a proprietary software in desperate need of a technical owner.
 
 slug: "see-how-jetthoughts-helped-crosslake-transform-a-legacy-software-project-gain-control-over-a-complex-codebase"
+description: See how Jetthoughts helped Crosslake transform their legacy software project for better control over a complex codebase.
 author: Paul Keen
 categories: ["AngularJS", "Bootstrap", "GraphQL", "React.js", "Ruby on Rails"]
 
