@@ -48,7 +48,11 @@ module ArticleSyncChecker
       id = article["id"]
       edited_at = article["edited_at"] || article["created_at"]
 
-      @sync_status[id] ||= {edited_at: edited_at, slug: slug(article), synced: false}
+      @sync_status[id] ||= {
+        edited_at: edited_at,
+        slug: slug(article),
+        synced: false
+      }
 
       if @sync_status[id][:edited_at] != edited_at
         @sync_status[id][:edited_at] = edited_at
