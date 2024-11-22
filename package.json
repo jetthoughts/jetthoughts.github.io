@@ -12,7 +12,7 @@
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "esbuild": "^0.23.1",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-nested": "^6.2.0",
