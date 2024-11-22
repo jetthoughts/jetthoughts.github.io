@@ -18,6 +18,8 @@
 <meta content='{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:published_time'/>
 {{ end }}
 
+<meta property="og:type" content="article">
+
 <meta content='{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:modified_time'/>
 {{ partial "blog/json-ld.html" . }}
 {{ end }}
@@ -30,8 +32,10 @@
     <article class="single-content" style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px"
              itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 
-      <h1 class="heading">{{ .Title }}</h1>
-      <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
+      <header>
+        <h1 class="heading">{{ .Title }}</h1>
+        <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
+      </header>
 
       <div class="fl-rich-text" style="max-width: 43rem;">
         {{ .Content }}

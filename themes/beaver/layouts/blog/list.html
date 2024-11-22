@@ -18,7 +18,12 @@
 
   {{ if eq .Type "tags" }}
     {{ $blogIndex := .Site.GetPage "blog" }}
+
+    {{ partial "page/cover_image.html" ($blogIndex.Resources.Get $blogIndex.Params.metatags.image) }}
+
     {{ with $blogIndex.Resources.Get $blogIndex.Params.metatags.image }}
+      <meta property="og:type" content="website" />
+
       <meta content="{{ .Permalink }}" property="og:image" />
       <meta content="{{ .Width }}" property="og:image:width" />
       <meta content="{{ .Height }}" property="og:image:height" />
