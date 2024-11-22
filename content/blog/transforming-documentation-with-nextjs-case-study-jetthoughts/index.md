@@ -3,10 +3,10 @@ dev_to_id: 2117299
 title: 'Transforming Documentation with Next.js: A Case Study with JetThoughts'
 description: Well-structured documentation is crucial for all open-source projects, but it becomes even more vital...
 created_at: '2024-11-22T17:51:46Z'
-edited_at: 
+edited_at: '2024-11-22T19:29:13Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/transforming-documentation-with-nextjs-a-case-study-with-jetthoughts-2c5o
+canonical_url: https://jetthoughts.com/blog/transforming-documentation-with-nextjs-case-study-jetthoughts/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-documentation-with-nextjs-case-study-jetthoughts/cover.png
 slug: transforming-documentation-with-nextjs-case-study-jetthoughts
 metatags:
@@ -64,4 +64,4 @@ Next.js also enabled exciting new features, such as smart search functions and c
 
 This transformation marks a significant step for CodeVerse. By partnering with JetThoughts and leveraging Next.js and Vercel, CodeVerse has a robust documentation platform that meets their current needs and can scale with them for the future.
 
-Are you facing similar challenges with your documentation or software solutions? Let JetThoughts help transform your project into something remarkable! Contact us today to discuss how we can create innovative solutions tailored to your needs. Together, we can drive your success in the tech landscape!
+Are you facing similar challenges with your documentation or software solutions? Let JetThoughts help transform your project into something remarkable! [Contact us](https://jetthoughts.com/contact-us/) today to discuss how we can create innovative solutions tailored to your needs. Together, we can drive your success in the tech landscape!
