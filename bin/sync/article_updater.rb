@@ -50,6 +50,7 @@ module ArticleUpdater
   end
 
   def has_updated_meta_description?(article_data)
+    return false unless sync_status[article_data["id"]]
     return true if sync_status[article_data["id"]][:description].nil?
 
     article_data["description"] == sync_status[article_data["id"]][:description]
