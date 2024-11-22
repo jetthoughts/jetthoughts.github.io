@@ -20,15 +20,15 @@ module ArticleUpdater
         article_data = fetch_article(article_id)
         next unless article_data
 
-        save_article_as_markdown(article_data, attributes[:slug])
+        save_article_as_markdown(article_data, attributes[:slug], attributes[:description])
         download_images(attributes[:slug], http_client, working_dir)
 
-        if has_updated_canonical_url?(article_data)
+        if has_updated_canonical_url?(article_data) && has_updated_meta_description?(article_data)
           mark_as_synced(article_id, nil)
           next
         end
 
-        updated_article = update_canonical_url_on_dev_to(article_id, attributes[:slug])
+        updated_article = update_meta_on_dev_to(article_id, attributes[:slug], { description: attributes[:description] })
         next unless updated_article
 
         mark_as_synced(article_id, updated_article["edited_at"])
@@ -49,6 +49,12 @@ module ArticleUpdater
     article_data["canonical_url"].split("/").last == data[article_data["id"]][:slug]
   end
 
+  def has_updated_meta_description?(article_data)
+    return true if sync_status[article_data["id"]][:description].nil?
+
+    article_data["description"] == sync_status[article_data["id"]][:description]
+  end
+
   def download_images(slug, http_client, working_dir)
     ImagesDownloader.new(slug, http_client, working_dir).call
   end
@@ -66,16 +72,22 @@ module ArticleUpdater
     end
   end
 
-  def update_canonical_url_on_dev_to(article_id, slug)
+  def update_meta_on_dev_to(article_id, slug, meta = {})
     raise ArgumentError, "Missing dev.to api-key header" unless ENV["DEVTO_API_KEY"]
 
     canonical_url = JT_BLOG_HOST + "#{slug}/"
     url = "#{DEV_TO_API_URL}/#{article_id}"
     headers = {"api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json"}
-    body = {article: {canonical_url: canonical_url}}.to_json
+
+    body = {
+      article: {
+        canonical_url: canonical_url,
+        description: meta[:description]
+      }.compact
+    }
 
     with_retries(operation: "Updating canonical_url for article #{article_id}") do
-      response = http_client.update_article(url, headers: headers, body: body)
+      response = http_client.update_article(url, headers: headers, body: body.to_json)
 
       if response.success?
         puts "Update canonical_url result: #{canonical_url}\n"
@@ -107,8 +119,8 @@ module ArticleUpdater
     end
   end
 
-  def save_article_as_markdown(article_data, slug)
-    markdown_content = generate_markdown(article_data, slug)
+  def save_article_as_markdown(article_data, slug, description)
+    markdown_content = generate_markdown(article_data, slug, description)
 
     dir_path = "#{working_dir}#{slug}"
     file_name = "#{dir_path}/index.md"
@@ -127,7 +139,7 @@ module ArticleUpdater
 
   end
 
-  def generate_markdown(article_data, slug)
+  def generate_markdown(article_data, slug, description)
     cover_image = article_data["cover_image"]
     metatags_image = {}
 
@@ -142,7 +154,7 @@ module ArticleUpdater
     article_hash = {
       "dev_to_id" => article_data["id"],
       "title" => article_data["title"],
-      "description" => article_data["description"],
+      "description" => description || article_data["description"],
       "created_at" => article_data["created_at"],
       "edited_at" => article_data["edited_at"],
       "draft" => false,
