@@ -1,16 +1,16 @@
 ---
 dev_to_id: 2103920
 title: 'Ruby on Rails Case Study: How JetThoughts Improved OpenApply''s Code and UX'
-description: OpenApply is a smart software platform that makes admissions and enrollment easier for students...
+description: OpenApply is a smart software tool that makes admissions and enrollment easier for students...
 created_at: '2024-11-14T09:38:27Z'
-edited_at: '2024-11-15T08:13:58Z'
+edited_at: '2024-11-22T13:06:57Z'
 draft: false
 tags:
 - ruby
 - rails
 - coding
 - ux
-canonical_url: https://dev.to/jetthoughts/ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-and-ux-5acc
+canonical_url: https://jetthoughts.com/blog/ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-ux/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-ux/cover.png
 slug: ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-ux
 metatags:
