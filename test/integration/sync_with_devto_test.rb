@@ -61,6 +61,24 @@ class SyncWithDevToTest < Minitest::Test
     File.write("#{WORKING_DIR}#{SYNC_STATUS_FILE}", articles.to_yaml)
   end
 
+  def change_article_meta_description
+    articles = {
+      1879395 => {
+        edited_at: "2023-10-23T00:00:00Z",
+        slug: "recent-searches-sorting-hashes-how-they-are-connected-ruby-rails",
+        description: "In one of the applications, that we are developing, we needed to implement the storing of 10 last...",
+        synced: false
+      },
+      1877720 => {
+        edited_at: "2024-10-23T15:44:11Z",
+        slug: "myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming",
+        description: "Custom description",
+        synced: true
+      }
+    }
+    File.write("#{WORKING_DIR}#{SYNC_STATUS_FILE}", articles.to_yaml)
+  end
+
   def test_sync_script_create_yaml_status_file_on_first_run
     refute File.exist?("#{WORKING_DIR}#{SYNC_STATUS_FILE}")
     run_sync
@@ -202,6 +220,21 @@ class SyncWithDevToTest < Minitest::Test
   end
 
   def test_sync_script_set_custom_meta_description
+    run_sync
 
+
+    article_1 = File.read("#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md")
+    article_2 = File.read("#{WORKING_DIR}#{FAKE_API_ARTICLE_2[:slug]}/index.md")
+
+    assert_includes article_1, "description: In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
+    assert_includes article_2, "description: Test-driven development (TDD) is a cornerstone of agile methodology. It involves creating unit..."
+    assert File.directory?("#{WORKING_DIR}#{FAKE_API_ARTICLE_2[:slug]}")
+
+    change_article_meta_description
+
+    run_sync
+
+    assert_includes article_1, "description: In one of the applications, that we are developing, we needed to implement the storing of 10 last..."
+    assert_includes article_2, "description: Custom description"
   end
 end
