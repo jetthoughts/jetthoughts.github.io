@@ -136,10 +136,6 @@ module ArticleUpdater
     end
   end
 
-  def meta_description()
-
-  end
-
   def generate_markdown(article_data, slug, description)
     cover_image = article_data["cover_image"]
     metatags_image = {}
