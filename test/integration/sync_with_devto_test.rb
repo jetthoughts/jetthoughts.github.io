@@ -200,4 +200,8 @@ class SyncWithDevToTest < Minitest::Test
         :synced=>true
       }
   end
+
+  def test_sync_script_set_custom_meta_description
+
+  end
 end
