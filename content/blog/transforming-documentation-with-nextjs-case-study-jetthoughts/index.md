@@ -3,9 +3,13 @@ dev_to_id: 2117299
 title: 'Transforming Documentation with Next.js: A Case Study with JetThoughts'
 description: Well-structured documentation is crucial for all open-source projects, but it becomes even more vital...
 created_at: '2024-11-22T17:51:46Z'
-edited_at: '2024-11-22T19:29:13Z'
+edited_at: '2024-11-23T17:48:17Z'
 draft: false
-tags: []
+tags:
+- webdev
+- documentation
+- programming
+- javascript
 canonical_url: https://jetthoughts.com/blog/transforming-documentation-with-nextjs-case-study-jetthoughts/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-documentation-with-nextjs-case-study-jetthoughts/cover.png
 slug: transforming-documentation-with-nextjs-case-study-jetthoughts
