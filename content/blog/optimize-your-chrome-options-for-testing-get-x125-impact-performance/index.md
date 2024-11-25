@@ -1,7 +1,7 @@
 ---
 dev_to_id: 1560068
 title: Optimize your Chrome options for testing to get x1.25 impact
-description: "\U0001F680 Increase Browser Test Speed with Chrome Options Optimization \U0001F680  Are you looking to supercharge your..."
+description: Boost your Ruby on Rails testing efficiency. Our consultant shares tricks to optimize Chrome options for a 125% performance impact.
 created_at: '2023-08-05T13:23:55Z'
 edited_at: '2024-11-01T21:06:09Z'
 draft: false
