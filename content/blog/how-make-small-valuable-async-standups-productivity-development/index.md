@@ -3,7 +3,7 @@ dev_to_id: 470562
 title: How to make small, valuable async standups
 description: How to share the current status of the development especially working remotely? How to make the mess...
 created_at: '2020-09-30T20:42:38Z'
-edited_at: '2024-11-01T21:07:02Z'
+edited_at: '2024-11-25T15:41:49Z'
 draft: false
 tags:
 - productivity

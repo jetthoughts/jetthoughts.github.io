@@ -3,7 +3,7 @@ dev_to_id: 1853596
 title: A typical day at JetThoughts
 description: 'In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the...'
 created_at: '2024-05-15T07:22:32Z'
-edited_at: '2024-11-01T19:05:41Z'
+edited_at: '2024-11-25T15:37:03Z'
 draft: false
 tags:
 - agile

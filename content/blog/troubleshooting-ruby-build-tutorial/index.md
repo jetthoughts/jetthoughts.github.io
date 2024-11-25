@@ -3,7 +3,7 @@ dev_to_id: 1215921
 title: Troubleshooting ruby build
 description: Have you found problems building ruby on a local machine? How to configure your local environment...
 created_at: '2022-10-10T16:14:36Z'
-edited_at: '2024-11-01T21:06:23Z'
+edited_at: '2024-11-25T15:40:24Z'
 draft: false
 tags:
 - ruby

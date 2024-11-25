@@ -3,7 +3,7 @@ dev_to_id: 1877546
 title: How to Setup a Project That Can Host Up to 1000 Users for Free
 description: 'Basic Heroku Setup or Staging Configuration    Hosting service: Heroku Database:...'
 created_at: '2024-06-05T05:47:43Z'
-edited_at: '2024-11-01T17:07:14Z'
+edited_at: '2024-11-25T15:35:57Z'
 draft: false
 tags:
 - heroku

@@ -3,7 +3,7 @@ dev_to_id: 2057856
 title: 'Rails 8: Introducing the New Default Asset Pipeline – Propshaft'
 description: The Rails asset pipeline helps manage static assets like CSS, JavaScript, and images. It improves...
 created_at: '2024-10-25T14:36:50Z'
-edited_at: '2024-11-01T15:05:58Z'
+edited_at: '2024-11-25T15:31:45Z'
 draft: false
 tags:
 - rails

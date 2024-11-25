@@ -3,7 +3,7 @@ dev_to_id: 462554
 title: Who is to blame when a project fails?
 description: Large projects continue to fail, often with disastrous results for the organizations involved. Do you...
 created_at: '2020-09-22T07:38:55Z'
-edited_at: '2024-11-01T15:10:50Z'
+edited_at: '2024-11-25T15:41:54Z'
 draft: false
 tags:
 - blame

@@ -3,7 +3,7 @@ dev_to_id: 1877640
 title: Onboarding Tests into Legacy Project
 description: What solution should you apply to get the first results in a short time in the legacy project? What...
 created_at: '2024-06-05T06:37:41Z'
-edited_at: '2024-11-01T17:06:49Z'
+edited_at: '2024-11-25T15:35:09Z'
 draft: false
 tags:
 - testing

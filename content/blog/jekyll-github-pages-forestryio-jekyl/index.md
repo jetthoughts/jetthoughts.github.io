@@ -3,7 +3,7 @@ dev_to_id: 1880471
 title: Jekyll + GitHub Pages + Forestry.io
 description: I’ve recently migrated the jetthoughts.com website on Jekyll to Forestry.io. I’d like to share my...
 created_at: '2024-06-07T13:36:24Z'
-edited_at: '2024-11-01T17:06:13Z'
+edited_at: '2024-11-25T15:33:54Z'
 draft: false
 tags:
 - jekyl

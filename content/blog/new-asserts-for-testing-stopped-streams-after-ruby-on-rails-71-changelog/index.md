@@ -3,7 +3,7 @@ dev_to_id: 1851499
 title: New asserts for testing stopped streams after Ruby on Rails 7.1.
 description: Previously, developers encountered a significant challenge verifying if streams ceased operation...
 created_at: '2024-05-13T15:10:06Z'
-edited_at: '2024-11-01T21:05:53Z'
+edited_at: '2024-11-25T15:39:17Z'
 draft: false
 tags:
 - changelog

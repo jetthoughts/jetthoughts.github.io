@@ -3,7 +3,7 @@ dev_to_id: 1885724
 title: 'Why and When to Use Waterfall vs. Agile: A Business Perspective'
 description: 'Waterfall Methodology              Use Cases:      Well-defined requirements: Waterfall is...'
 created_at: '2024-06-12T13:00:53Z'
-edited_at: '2024-11-01T17:06:08Z'
+edited_at: '2024-11-25T15:33:43Z'
 draft: false
 tags:
 - agile

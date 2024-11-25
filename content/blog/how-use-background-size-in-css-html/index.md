@@ -3,7 +3,7 @@ dev_to_id: 1116924
 title: How to use background-size in CSS
 description: The CSS background-size property sets the size of the background image of the element. Images can be...
 created_at: '2022-06-17T10:49:34Z'
-edited_at: '2024-11-01T21:06:44Z'
+edited_at: '2024-11-25T15:41:07Z'
 draft: false
 tags:
 - css

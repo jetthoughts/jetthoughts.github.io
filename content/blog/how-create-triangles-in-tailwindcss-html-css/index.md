@@ -3,7 +3,7 @@ dev_to_id: 1222970
 title: How to create triangles in TailwindCSS
 description: In this post, we are going to see four examples of how to draw a triangle in TailwindCSS using...
 created_at: '2022-10-18T10:46:16Z'
-edited_at: '2024-11-01T21:06:21Z'
+edited_at: '2024-11-25T15:40:21Z'
 draft: false
 tags:
 - html

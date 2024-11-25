@@ -3,7 +3,7 @@ dev_to_id: 1853571
 title: Feature Branches and Where to Find Them
 description: Here we want to go through the feature branch process, show what downsides this approach...
 created_at: '2024-05-15T07:17:21Z'
-edited_at: '2024-11-01T19:05:44Z'
+edited_at: '2024-11-25T15:37:08Z'
 draft: false
 tags:
 - development

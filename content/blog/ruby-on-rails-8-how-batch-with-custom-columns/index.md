@@ -3,7 +3,7 @@ dev_to_id: 2086243
 title: 'Ruby on Rails 8: How to Batch with Custom Columns'
 description: 'Ruby on Rails 8 introduces a handy feature for developers handling large datasets: batching with...'
 created_at: '2024-11-08T08:42:28Z'
-edited_at: '2024-11-08T21:14:49Z'
+edited_at: '2024-11-25T15:42:11Z'
 draft: false
 tags:
 - rails

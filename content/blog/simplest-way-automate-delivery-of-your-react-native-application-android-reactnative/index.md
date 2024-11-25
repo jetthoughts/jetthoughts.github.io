@@ -3,7 +3,7 @@ dev_to_id: 1877570
 title: The simplest way to automate delivery of your React Native Application
 description: Introduction   Delivering mobile application’s updates is not as simple as in the case of a...
 created_at: '2024-06-05T06:08:07Z'
-edited_at: '2024-11-01T17:07:04Z'
+edited_at: '2024-11-25T15:35:37Z'
 draft: false
 tags:
 - android
@@ -103,7 +103,7 @@ First, you need to [register on Fabric](https://fabric.io/sign_up). Then you nee
 
 To run distribution you’ll need secret keys. You can find you key and secret by visiting your [organization’s settings page](https://www.fabric.io/settings/organizations) and clicking on the respective links under the organization’s name.
 
-![](file_4.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_3.jpeg)
 
 ### Install Fastlane as Fabric Kit CLI
 
@@ -169,7 +169,7 @@ And in a few minutes, you should have an email with download link to a new versi
 
 ## Automize Build and Distributions of Application
 
-![Automatic Delivery](file_5.png)
+![Automatic Delivery](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_4.png)
 
 Here comes the main part — how to make [CircleCI 2.0](https://circleci.com/) do deploy for you.
 
@@ -296,7 +296,7 @@ cd android && bundle exec fastlane android beta
 
 Don’t forget that this script uses fabric keys from environment variables so you need to add env vars to circle ci. Here is the list of environment variables:
 
-![](file_6.jpeg)
+![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_5.jpeg)
 
 To test it out you need to add CircleCI to your repository on Github. And then you need to push a commit to the master branch. CircleCI should run build based on the config script and deploy your app.
 

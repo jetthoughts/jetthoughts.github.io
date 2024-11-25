@@ -3,7 +3,7 @@ dev_to_id: 2103920
 title: 'Ruby on Rails Case Study: How JetThoughts Improved OpenApply''s Code and UX'
 description: OpenApply is a smart software tool that makes admissions and enrollment easier for students...
 created_at: '2024-11-14T09:38:27Z'
-edited_at: '2024-11-22T13:06:57Z'
+edited_at: '2024-11-25T15:42:19Z'
 draft: false
 tags:
 - ruby

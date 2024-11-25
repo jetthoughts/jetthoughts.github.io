@@ -3,7 +3,7 @@ dev_to_id: 1858929
 title: 'SQL: Get records having min/max value per group'
 description: Here's one possible solution for a case when you need to fetch a set of records unique on one (or...
 created_at: '2024-05-20T07:01:49Z'
-edited_at: '2024-11-01T19:05:25Z'
+edited_at: '2024-11-25T15:36:16Z'
 draft: false
 tags:
 - mysql

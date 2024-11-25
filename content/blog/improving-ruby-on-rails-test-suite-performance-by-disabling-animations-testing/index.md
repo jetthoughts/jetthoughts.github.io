@@ -3,7 +3,7 @@ dev_to_id: 1877661
 title: Improving Ruby on Rails Test Suite Performance by Disabling Animations
 description: Optimize your Ruby on Rails testing strategy. Our consulting services show how to enhance test suite performance by disabling animations.
 created_at: '2024-06-05T07:08:39Z'
-edited_at: '2024-11-01T17:06:43Z'
+edited_at: '2024-11-25T15:34:56Z'
 draft: false
 tags:
 - rails

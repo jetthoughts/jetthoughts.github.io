@@ -3,7 +3,7 @@ dev_to_id: 1148536
 title: How to create triangles in CSS
 description: In this post, we are going to see a simple method to draw a triangle in CSS using borders.    &lt;div...
 created_at: '2022-07-22T08:32:10Z'
-edited_at: '2024-11-01T21:06:39Z'
+edited_at: '2024-11-25T15:40:57Z'
 draft: false
 tags:
 - css

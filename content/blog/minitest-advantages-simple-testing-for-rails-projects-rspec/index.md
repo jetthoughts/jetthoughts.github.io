@@ -3,7 +3,7 @@ dev_to_id: 2102152
 title: 'Minitest Advantages: Simple Testing for Rails Projects'
 description: Minitest and RSpec are great testing tools for Ruby on Rails, each with its style, strengths, and...
 created_at: '2024-11-13T08:47:37Z'
-edited_at: '2024-11-14T11:36:13Z'
+edited_at: '2024-11-25T15:42:16Z'
 draft: false
 tags:
 - rspec

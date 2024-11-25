@@ -3,7 +3,7 @@ dev_to_id: 1852579
 title: We got 3 main principles for writing Technical Blog posts. Here’s what we learned.
 description: After 100 articles of the research on how to write Technical Blog post simple and quickly, without...
 created_at: '2024-05-14T11:40:41Z'
-edited_at: '2024-11-01T21:05:45Z'
+edited_at: '2024-11-25T15:39:01Z'
 draft: false
 tags:
 - writing

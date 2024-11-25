@@ -3,7 +3,7 @@ dev_to_id: 1877638
 title: How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers
 description: As its client base grew, Faria Education Group (FEG) needed to ensure its OpenApply product could...
 created_at: '2024-06-05T06:34:42Z'
-edited_at: '2024-11-01T17:06:52Z'
+edited_at: '2024-11-25T15:35:14Z'
 draft: false
 tags:
 - development

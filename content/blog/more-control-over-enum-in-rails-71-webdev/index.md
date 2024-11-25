@@ -3,7 +3,7 @@ dev_to_id: 1774708
 title: More control over enum in Rails 7.1
 description: ActiveRecord::Enum in Rails have long been a convenient tool for representing a set of symbolic...
 created_at: '2024-02-28T09:32:44Z'
-edited_at: '2024-11-01T21:05:57Z'
+edited_at: '2024-11-25T15:39:31Z'
 draft: false
 tags:
 - rails

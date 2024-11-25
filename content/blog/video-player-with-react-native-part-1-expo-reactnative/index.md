@@ -3,7 +3,7 @@ dev_to_id: 1877622
 title: 'Video player with React Native. Part 1: Expo'
 description: Nowadays there are plenty of solutions to build an application for a mobile platform. If we are...
 created_at: '2024-06-05T06:20:41Z'
-edited_at: '2024-11-01T17:06:56Z'
+edited_at: '2024-11-25T15:35:22Z'
 draft: false
 tags:
 - reactnative

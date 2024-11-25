@@ -3,7 +3,7 @@ dev_to_id: 1853466
 title: Speed up GitHub PR’s review of your React applications
 description: Would you like to speed up PR’s review of React application, when you use Jest snapshot...
 created_at: '2024-05-15T05:55:46Z'
-edited_at: '2024-11-01T19:06:04Z'
+edited_at: '2024-11-25T15:37:44Z'
 draft: false
 tags:
 - development

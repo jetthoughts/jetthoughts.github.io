@@ -3,7 +3,7 @@ dev_to_id: 1852562
 title: Tips to attract readers to read your post
 description: Do you know how to keep readers’ attention? We had been experimenting with different ways to make...
 created_at: '2024-05-14T11:25:32Z'
-edited_at: '2024-11-01T21:05:51Z'
+edited_at: '2024-11-25T15:39:11Z'
 draft: false
 tags:
 - blogging

@@ -3,7 +3,7 @@ dev_to_id: 1877729
 title: 'Fractional CTO: A Comprehensive Review of the First Two Weeks in a Startup'
 description: In a world where startups need to move fast and make informed decisions, the role of a Fractional...
 created_at: '2024-06-05T08:19:05Z'
-edited_at: '2024-11-01T17:06:38Z'
+edited_at: '2024-11-25T15:34:46Z'
 draft: false
 tags:
 - consulting

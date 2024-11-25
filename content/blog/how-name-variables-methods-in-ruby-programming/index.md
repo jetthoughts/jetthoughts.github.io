@@ -3,7 +3,7 @@ dev_to_id: 1877535
 title: How To Name Variables And Methods In Ruby
 description: How To Name Variables And Methods In Ruby               What’s in a name? that which we call...
 created_at: '2024-06-05T05:33:19Z'
-edited_at: '2024-11-01T17:07:20Z'
+edited_at: '2024-11-25T15:36:08Z'
 draft: false
 tags:
 - programming

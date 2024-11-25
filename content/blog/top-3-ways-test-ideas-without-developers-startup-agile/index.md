@@ -3,7 +3,7 @@ dev_to_id: 1911406
 title: Top 3 Ways to Test Ideas Without Developers
 description: Intro   Startups move fast, and testing ideas is critical. It helps make intelligent...
 created_at: '2024-07-04T10:36:58Z'
-edited_at: '2024-11-01T17:05:56Z'
+edited_at: '2024-11-25T15:33:15Z'
 draft: false
 tags:
 - startup

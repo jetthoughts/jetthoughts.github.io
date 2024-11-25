@@ -3,7 +3,7 @@ dev_to_id: 2085026
 title: How to Vet and Hire Engineers as a non-Technical Founder
 description: You don't need an in-house tech expert to find the right developer. Follow these steps to get the...
 created_at: '2024-11-07T21:50:51Z'
-edited_at: '2024-11-07T23:44:45Z'
+edited_at: '2024-11-25T15:42:14Z'
 draft: false
 tags:
 - startup

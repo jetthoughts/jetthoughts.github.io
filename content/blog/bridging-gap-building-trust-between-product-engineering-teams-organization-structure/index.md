@@ -3,7 +3,7 @@ dev_to_id: 1893839
 title: 'Bridging the Gap: Building Trust Between Product and Engineering Teams'
 description: Companies often see their product and engineering teams competing. This lack of cooperation breeds...
 created_at: '2024-06-19T16:45:35Z'
-edited_at: '2024-11-01T17:06:07Z'
+edited_at: '2024-11-25T15:33:41Z'
 draft: false
 tags:
 - organization

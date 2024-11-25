@@ -3,7 +3,7 @@ dev_to_id: 1877558
 title: Test Driven Thinking for Solving Common Ruby Pitfalls
 description: Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for...
 created_at: '2024-06-05T05:53:53Z'
-edited_at: '2024-11-01T17:07:08Z'
+edited_at: '2024-11-25T15:35:45Z'
 draft: false
 tags:
 - rails
