@@ -3,7 +3,7 @@ dev_to_id: 1853575
 title: How to know what your team is doing?
 description: What techniques do you use to work with the team in an async, remote environment? How to...
 created_at: '2024-05-15T07:19:53Z'
-edited_at: '2024-11-25T15:37:05Z'
+edited_at: '2024-11-26T16:04:23Z'
 draft: false
 tags:
 - remote

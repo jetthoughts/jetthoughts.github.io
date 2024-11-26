@@ -3,7 +3,7 @@ dev_to_id: 1877534
 title: 4 Steps to Bring Life into a Struggling Project
 description: 4 Steps to Bring Life into a Struggling Project     At the initial stages of a new business...
 created_at: '2024-06-05T05:31:06Z'
-edited_at: '2024-11-25T15:36:11Z'
+edited_at: '2024-11-26T16:03:53Z'
 draft: false
 tags:
 - startup

@@ -3,7 +3,7 @@ dev_to_id: 1880380
 title: How does your company work with clients to understand their needs?
 description: In today's competitive business landscape, understanding and meeting client needs is crucial for the...
 created_at: '2024-06-07T12:41:25Z'
-edited_at: '2024-11-25T15:34:06Z'
+edited_at: '2024-11-26T16:02:07Z'
 draft: false
 tags:
 - lean

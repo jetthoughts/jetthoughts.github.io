@@ -3,7 +3,7 @@ dev_to_id: 1853611
 title: Cons of the private chats for team collaboration
 description: Communication between team members is a very important part of the software development process....
 created_at: '2024-05-15T07:34:55Z'
-edited_at: '2024-11-25T15:36:55Z'
+edited_at: '2024-11-26T16:04:13Z'
 draft: false
 tags:
 - communication

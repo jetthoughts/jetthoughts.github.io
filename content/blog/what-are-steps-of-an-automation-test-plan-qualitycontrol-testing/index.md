@@ -3,7 +3,7 @@ dev_to_id: 1852952
 title: What are the steps of an Automation Test Plan?
 description: 'Step 1: Defining the Scope of Automation   Here are the things to consider while identifying...'
 created_at: '2024-05-14T17:02:29Z'
-edited_at: '2024-11-25T15:37:50Z'
+edited_at: '2024-11-26T16:05:02Z'
 draft: false
 tags:
 - qualitycontrol

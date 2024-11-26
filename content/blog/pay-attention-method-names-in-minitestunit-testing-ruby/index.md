@@ -3,7 +3,7 @@ dev_to_id: 1879467
 title: Pay Attention to Method Names in Minitest::Unit
 description: "**TL,DR: *don’t define any methods with names name, message, time, pass in Minitest::Unit test..."
 created_at: '2024-06-06T17:07:35Z'
-edited_at: '2024-11-25T15:34:38Z'
+edited_at: '2024-11-26T16:02:33Z'
 draft: false
 tags:
 - testing

@@ -3,7 +3,7 @@ dev_to_id: 1880211
 title: Effortless Code Conventions Review for Pull Request Changes
 description: Reliably arranged source code helps hackability. You can filter code speedier if its...
 created_at: '2024-06-07T10:03:27Z'
-edited_at: '2024-11-25T15:34:30Z'
+edited_at: '2024-11-26T16:02:26Z'
 draft: false
 tags:
 - ruby

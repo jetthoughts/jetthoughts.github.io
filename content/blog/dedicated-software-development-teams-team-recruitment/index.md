@@ -3,7 +3,7 @@ dev_to_id: 1880485
 title: Dedicated Software Development Teams
 description: Dedicated Software Development Teams   We’ve compiled everything you need to know about...
 created_at: '2024-06-07T13:49:53Z'
-edited_at: '2024-11-25T15:33:48Z'
+edited_at: '2024-11-26T16:01:52Z'
 draft: false
 tags:
 - team

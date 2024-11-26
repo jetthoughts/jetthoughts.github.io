@@ -3,7 +3,7 @@ dev_to_id: 1877654
 title: Optimize your Chrome options for testing to get x1.25 impact
 description: Enhance your Ruby on Rails development team's testing. Learn tricks to optimize Chrome options for a 125% performance boost.
 created_at: '2024-06-05T06:54:46Z'
-edited_at: '2024-11-25T15:34:59Z'
+edited_at: '2024-11-26T16:02:49Z'
 draft: false
 tags:
 - testing

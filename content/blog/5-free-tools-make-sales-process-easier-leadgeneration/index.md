@@ -3,7 +3,7 @@ dev_to_id: 1852719
 title: 5 Free tools to make the sales process easier
 description: What if I told you that there is no need to spend all your budget on super modern CRMs and...
 created_at: '2024-05-14T13:47:15Z'
-edited_at: '2024-11-25T15:38:17Z'
+edited_at: '2024-11-26T16:05:19Z'
 draft: false
 tags:
 - sales

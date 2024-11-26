@@ -3,7 +3,7 @@ dev_to_id: 1852749
 title: Design Rails JSON API with performance in mind
 description: Caching can reduce load time and increase the throughput of your API endpoints without...
 created_at: '2024-05-14T14:16:46Z'
-edited_at: '2024-11-25T15:37:59Z'
+edited_at: '2024-11-26T16:05:07Z'
 draft: false
 tags:
 - rails

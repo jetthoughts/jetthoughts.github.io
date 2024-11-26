@@ -3,7 +3,7 @@ dev_to_id: 1877642
 title: Simultaneous work on the feature for frontend and backend developers
 description: Simultaneous work on the feature for frontend and backend developers   How do split features...
 created_at: '2024-06-05T06:43:35Z'
-edited_at: '2024-11-25T15:35:05Z'
+edited_at: '2024-11-26T16:02:54Z'
 draft: false
 tags:
 - development

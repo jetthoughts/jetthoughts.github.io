@@ -3,7 +3,7 @@ dev_to_id: 1852568
 title: Collecting JavaScript code coverage with Capybara in Ruby on Rails application
 description: Having JavaScript code covered by Capybara system tests, can we utilize them for the code...
 created_at: '2024-05-14T11:32:21Z'
-edited_at: '2024-11-25T15:39:06Z'
+edited_at: '2024-11-26T16:05:54Z'
 draft: false
 tags:
 - capybara

@@ -3,7 +3,7 @@ dev_to_id: 1852752
 title: Regular automatic dependencies update with CircleCI
 description: Resolving the auto-upgrade issue will allow having edge gems versions with little to no...
 created_at: '2024-05-14T14:18:44Z'
-edited_at: '2024-11-25T15:37:57Z'
+edited_at: '2024-11-26T16:05:04Z'
 draft: false
 tags:
 - github

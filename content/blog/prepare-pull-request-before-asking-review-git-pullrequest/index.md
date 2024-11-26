@@ -3,7 +3,7 @@ dev_to_id: 1852617
 title: Prepare the Pull Request before asking to Review
 description: How to avoid being the victim of an open loop trying to get your Pull Request verified while working...
 created_at: '2024-05-14T12:27:37Z'
-edited_at: '2024-11-25T15:38:47Z'
+edited_at: '2024-11-26T16:05:38Z'
 draft: false
 tags:
 - git

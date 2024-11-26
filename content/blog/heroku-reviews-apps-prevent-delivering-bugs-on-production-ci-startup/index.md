@@ -3,7 +3,7 @@ dev_to_id: 1877581
 title: Heroku Reviews Apps prevent delivering bugs on production
 description: Are you afraid to deploy a master branch to the production? Do you still mess with staging...
 created_at: '2024-06-05T06:16:42Z'
-edited_at: '2024-11-25T15:35:26Z'
+edited_at: '2024-11-26T16:03:16Z'
 draft: false
 tags:
 - ci

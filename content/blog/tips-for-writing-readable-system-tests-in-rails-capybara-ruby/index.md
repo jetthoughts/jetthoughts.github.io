@@ -3,7 +3,7 @@ dev_to_id: 1853549
 title: Tips for writing readable system tests in Rails
 description: Want to make system tests easy to main tain? We have selected some best practice tips to...
 created_at: '2024-05-15T06:56:33Z'
-edited_at: '2024-11-25T15:37:18Z'
+edited_at: '2024-11-26T16:04:36Z'
 draft: false
 tags:
 - capybara

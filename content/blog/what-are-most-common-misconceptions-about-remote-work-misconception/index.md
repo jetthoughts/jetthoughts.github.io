@@ -3,7 +3,7 @@ dev_to_id: 1852712
 title: What are the most common misconceptions about remote work?
 description: A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the...
 created_at: '2024-05-14T13:38:49Z'
-edited_at: '2024-11-25T15:38:20Z'
+edited_at: '2024-11-26T16:05:21Z'
 draft: false
 tags:
 - remote

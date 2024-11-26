@@ -3,7 +3,7 @@ dev_to_id: 1877720
 title: 'Myth or Reality: Can Test-Driven Development in Agile Replace QA?'
 description: Test-driven development (TDD) is a cornerstone of agile methodology. It involves creating unit...
 created_at: '2024-06-05T08:11:36Z'
-edited_at: '2024-11-25T15:34:48Z'
+edited_at: '2024-11-26T16:02:40Z'
 draft: false
 tags:
 - agile

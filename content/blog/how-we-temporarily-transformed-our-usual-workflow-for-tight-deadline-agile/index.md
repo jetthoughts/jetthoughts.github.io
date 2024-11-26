@@ -3,7 +3,7 @@ dev_to_id: 1877544
 title: How We Temporarily Transformed Our Usual Workflow for a Tight Deadline
 description: Time makes rules   Every time when we start working on a new project, short iteration or...
 created_at: '2024-06-05T05:45:06Z'
-edited_at: '2024-11-25T15:36:00Z'
+edited_at: '2024-11-26T16:03:44Z'
 draft: false
 tags:
 - workflow

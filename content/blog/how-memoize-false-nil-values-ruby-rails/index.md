@@ -3,7 +3,7 @@ dev_to_id: 1877561
 title: How To Memoize False and Nil Values
 description: 'TL;DR: if method can return false or nil, and you want to memoize it, use defined?(@_result)...'
 created_at: '2024-06-05T05:55:50Z'
-edited_at: '2024-11-25T15:35:43Z'
+edited_at: '2024-11-26T16:03:30Z'
 draft: false
 tags:
 - ruby

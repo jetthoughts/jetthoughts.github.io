@@ -3,7 +3,7 @@ dev_to_id: 1852741
 title: How to avoid N+1 query using SQL views (materialized) in Rails application
 description: Consider the way to reduce the queries when calculating the average values and find the...
 created_at: '2024-05-14T14:05:48Z'
-edited_at: '2024-11-25T15:38:07Z'
+edited_at: '2024-11-26T16:05:12Z'
 draft: false
 tags:
 - ruby

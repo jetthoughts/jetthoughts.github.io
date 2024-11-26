@@ -3,7 +3,7 @@ dev_to_id: 1853478
 title: Why is it hard to find a great developer on Upwork and other freelance platforms?
 description: Finding good developers is a challenge. Nowadays, professionals are rare. Not all developers get to...
 created_at: '2024-05-15T06:10:42Z'
-edited_at: '2024-11-25T15:37:34Z'
+edited_at: '2024-11-26T16:04:47Z'
 draft: false
 tags:
 - senior

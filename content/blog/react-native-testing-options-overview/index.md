@@ -3,7 +3,7 @@ dev_to_id: 1853475
 title: React Native Testing Options Overview
 description: After investigating 100 articles about testing React Native applications I detected 2 main methods of...
 created_at: '2024-05-15T06:05:38Z'
-edited_at: '2024-11-25T15:37:37Z'
+edited_at: '2024-11-26T16:04:50Z'
 draft: false
 tags:
 - testing

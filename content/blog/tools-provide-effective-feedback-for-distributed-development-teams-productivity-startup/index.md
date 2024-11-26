@@ -3,7 +3,7 @@ dev_to_id: 1853640
 title: Tools to provide effective feedback for distributed development teams
 description: How to share info in a remote async environment? What is the best way to keep everyone in the...
 created_at: '2024-05-15T07:58:27Z'
-edited_at: '2024-11-25T15:36:40Z'
+edited_at: '2024-11-26T16:04:01Z'
 draft: false
 tags:
 - productivity
