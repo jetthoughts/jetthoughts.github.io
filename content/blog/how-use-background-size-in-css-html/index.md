@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1116924
+dev_to_url: https://dev.to/jetthoughts/how-to-use-background-size-in-css-3pj
 title: How to use background-size in CSS
 description: The CSS background-size property sets the size of the background image of the element. Images can be...
 created_at: '2022-06-17T10:49:34Z'

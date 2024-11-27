@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853475
+dev_to_url: https://dev.to/jetthoughts/react-native-testing-options-overview-5fna
 title: React Native Testing Options Overview
 description: After investigating 100 articles about testing React Native applications I detected 2 main methods of...
 created_at: '2024-05-15T06:05:38Z'

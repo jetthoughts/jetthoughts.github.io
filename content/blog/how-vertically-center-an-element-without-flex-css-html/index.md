@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1103884
+dev_to_url: https://dev.to/jetthoughts/how-to-vertically-center-an-element-without-flex-4apn
 title: How to vertically center an element without Flex
 description: How vertically center with Flex you can view Vertical align with a full screen across Tailwind...
 created_at: '2022-06-03T12:58:50Z'

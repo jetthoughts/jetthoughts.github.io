@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1297134
+dev_to_url: https://dev.to/jetthoughts/how-wip-limits-improves-effectiveness-30i3
 title: How WIP Limits improves effectiveness?
 description: A work-in-progress (WIP) limit is used in agile project management to improve team effectiveness. The...
 created_at: '2022-12-15T06:56:46Z'

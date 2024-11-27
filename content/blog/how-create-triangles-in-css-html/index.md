@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1148536
+dev_to_url: https://dev.to/jetthoughts/how-to-create-triangles-in-css-2a6k
 title: How to create triangles in CSS
 description: In this post, we are going to see a simple method to draw a triangle in CSS using borders.    &lt;div...
 created_at: '2022-07-22T08:32:10Z'

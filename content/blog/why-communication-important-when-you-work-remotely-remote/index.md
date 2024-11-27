@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853539
+dev_to_url: https://dev.to/jetthoughts/why-communication-is-so-important-when-you-work-remotely-b9l
 title: Why communication is so important when you work remotely?
 description: Communication at work is one of the most important aspects of any business.  But why? Let’s take a...
 created_at: '2024-05-15T06:47:42Z'

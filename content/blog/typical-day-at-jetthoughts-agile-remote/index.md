@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853596
+dev_to_url: https://dev.to/jetthoughts/a-typical-day-at-jetthoughts-2p9
 title: A typical day at JetThoughts
 description: 'In this article, I want to tell you about a typical day at JetThoughts: culture, values, and the...'
 created_at: '2024-05-15T07:22:32Z'

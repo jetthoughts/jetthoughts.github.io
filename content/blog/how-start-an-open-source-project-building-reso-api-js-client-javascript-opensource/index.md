@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852618
+dev_to_url: https://dev.to/jetthoughts/how-to-start-an-open-source-project-building-reso-api-js-client-3p25
 title: How to start an Open Source project. Building RESO API JS client
 description: Would you like to understand how to start your new Open Source project in a week? How to build a...
 created_at: '2024-05-14T12:29:45Z'

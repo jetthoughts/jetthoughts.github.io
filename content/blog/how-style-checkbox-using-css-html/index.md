@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1109046
+dev_to_url: https://dev.to/jetthoughts/how-to-style-a-checkbox-using-css-1fod
 title: How to style a checkbox using CSS
 description: In this post I’l show you exactly how to make awesome checkboxes with just CSS.    &lt;div&gt;  ...
 created_at: '2022-06-09T09:02:15Z'

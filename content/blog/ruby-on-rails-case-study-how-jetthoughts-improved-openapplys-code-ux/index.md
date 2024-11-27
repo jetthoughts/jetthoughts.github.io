@@ -1,6 +1,7 @@
 ---
 dev_to_id: 2103920
 title: 'Ruby on Rails Case Study: How JetThoughts Improved OpenApply''s Code and UX'
+dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-and-ux-5acc
 description: OpenApply is a smart software tool that makes admissions and enrollment easier for students...
 created_at: '2024-11-14T09:38:27Z'
 edited_at: '2024-11-25T15:42:19Z'
@@ -45,7 +46,7 @@ To tackle these issues, JetThoughts provided a part-time Fractional Chief Techno
 From the start, JetThoughts delivered valuable technical guidance based on years of experience. We met to set clear expectations, learn about the current software, and outline our plan.
 
 1. **Stabilizing Code:** We focused on fixing existing bugs while implementing analytics and coding standards to prevent future issues.
-   
+
 2. **User Interface Redesign:** Collaborating with OpenApply, we redesigned the user interface and upgraded the Ruby on Rails backend.
 
 3. **Optimizing Development Processes:** We streamlined internal development processes to boost efficiency.

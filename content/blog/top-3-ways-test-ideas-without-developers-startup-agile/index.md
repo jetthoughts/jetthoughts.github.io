@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1911406
+dev_to_url: https://dev.to/jetthoughts/top-3-ways-to-test-ideas-without-developers-1fjd
 title: Top 3 Ways to Test Ideas Without Developers
 description: Intro   Startups move fast, and testing ideas is critical. It helps make intelligent...
 created_at: '2024-07-04T10:36:58Z'

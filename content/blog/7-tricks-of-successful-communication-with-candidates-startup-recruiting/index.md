@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880416
+dev_to_url: https://dev.to/jetthoughts/7-tricks-of-successful-communication-with-candidates-2mg7
 title: 7 tricks of successful communication with candidates
 description: Nowadays attracting good candidates is a pretty hard process, thereby, recruiters often face the...
 created_at: '2024-06-07T13:12:12Z'

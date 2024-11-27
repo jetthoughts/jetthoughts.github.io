@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1852738
+dev_to_url: https://dev.to/jetthoughts/rails-virtual-attributes-use-cases-58j1
 title: Rails virtual attributes use cases
 description: You want to keep some data but do not want to create the new column in the database? Your data should...
 created_at: '2024-05-14T13:57:52Z'

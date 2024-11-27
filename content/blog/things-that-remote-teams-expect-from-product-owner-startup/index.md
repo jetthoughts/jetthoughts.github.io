@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853617
+dev_to_url: https://dev.to/jetthoughts/things-that-remote-teams-expect-from-the-product-owner-4n8c
 title: Things that remote teams expect from the product owner
 description: Modern digital product development methods require a flexible approach. It is much more efficient...
 created_at: '2024-05-15T07:41:57Z'

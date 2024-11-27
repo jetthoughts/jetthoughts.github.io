@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1144505
+dev_to_url: https://dev.to/jetthoughts/how-to-setup-default-values-for-attributes-in-ruby-on-rails-l8m
 title: How To Setup Default Values For Attributes In Ruby On Rails
 description: Have you ever thought setting default values for attributes in Ruby on Rails could be...
 created_at: '2022-07-19T06:01:04Z'

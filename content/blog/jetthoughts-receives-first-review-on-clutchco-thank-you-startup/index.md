@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853469
+dev_to_url: https://dev.to/jetthoughts/jetthoughts-receives-first-review-on-clutchco-thank-you-3i48
 title: 'JetThoughts receives First Review on Clutch.co: Thank you'
 description: Our team at JetThoughts has an expertise of the Ruby on Rails development service line, and we’re...
 created_at: '2024-05-15T05:59:12Z'

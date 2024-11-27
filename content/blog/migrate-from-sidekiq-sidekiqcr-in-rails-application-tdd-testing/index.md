@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853610
+dev_to_url: https://dev.to/jetthoughts/migrate-from-sidekiq-to-sidekiqcr-in-rails-application-1a85
 title: Migrate from Sidekiq to Sidekiq.cr in Rails application
 description: Where is it better to start the Sidekiq jobs transition from Ruby to Crystal in order to...
 created_at: '2024-05-15T07:33:16Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853556
+dev_to_url: https://dev.to/jetthoughts/simplest-step-by-step-guide-creating-a-post-2nf6
 title: Simplest step by step guide creating a post
 description: For novice authors who are going to share their thoughts with public through the posts, we...
 created_at: '2024-05-15T07:07:41Z'

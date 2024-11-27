@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877729
+dev_to_url: https://dev.to/jetthoughts/fractional-cto-a-comprehensive-review-of-the-first-two-weeks-in-a-startup-did
 title: 'Fractional CTO: A Comprehensive Review of the First Two Weeks in a Startup'
 description: In a world where startups need to move fast and make informed decisions, the role of a Fractional...
 created_at: '2024-06-05T08:19:05Z'

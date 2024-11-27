@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1783325
+dev_to_url: https://dev.to/jetthoughts/setting-up-docker-for-ruby-on-rails-7-50cd
 title: Setting Up Docker for Ruby on Rails 7
 description: 'Introduction:   Docker is essential for modern software development, ensuring a consistent...'
 created_at: '2024-03-07T13:14:02Z'

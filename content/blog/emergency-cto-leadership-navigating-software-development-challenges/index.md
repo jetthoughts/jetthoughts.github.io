@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1945366
+dev_to_url: https://dev.to/jetthoughts/emergency-cto-leadership-navigating-software-development-challenges-20hk
 title: 'Emergency CTO Leadership: Navigating Software Development Challenges'
 description: In the fast-paced world of software, hurdles are a given. From sudden user spikes to tech debt or a...
 created_at: '2024-08-02T13:00:26Z'

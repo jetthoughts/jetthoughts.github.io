@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880239
+dev_to_url: https://dev.to/jetthoughts/revise-your-stylesheets-part-1-color-scheme-1a9k
 title: Revise Your Stylesheets. Part 1. Color Scheme
 description: Revise Your Stylesheets. Part 1. Color Scheme   Ever wonder how many colors exist in your...
 created_at: '2024-06-07T10:32:47Z'

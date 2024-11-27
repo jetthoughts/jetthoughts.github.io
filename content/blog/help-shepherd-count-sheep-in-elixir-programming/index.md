@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880218
+dev_to_url: https://dev.to/jetthoughts/help-shepherd-to-count-sheep-in-elixir-gg7
 title: Help shepherd to count sheep in Elixir
 description: I have been thinking about learning a functional language for a long time. So recently I’ve started...
 created_at: '2024-06-07T10:14:43Z'

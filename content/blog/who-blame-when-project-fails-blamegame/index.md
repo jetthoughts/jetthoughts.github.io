@@ -1,5 +1,6 @@
 ---
 dev_to_id: 462554
+dev_to_url: https://dev.to/jetthoughts/who-is-to-blame-when-a-project-fails-2ahn
 title: Who is to blame when a project fails?
 description: Large projects continue to fail, often with disastrous results for the organizations involved. Do you...
 created_at: '2020-09-22T07:38:55Z'

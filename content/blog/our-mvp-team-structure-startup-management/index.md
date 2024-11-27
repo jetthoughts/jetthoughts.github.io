@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1205578
+dev_to_url: https://dev.to/jetthoughts/our-mvp-team-structure-1nia
 title: Team Structure for MVP
 description: 'In structuring a team for MVP, we should consider the following: there is a massive number of...'
 created_at: '2022-09-28T14:58:08Z'

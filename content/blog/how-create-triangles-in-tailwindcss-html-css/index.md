@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1222970
+dev_to_url: https://dev.to/jetthoughts/how-to-create-triangles-in-tailwindcss-2in
 title: How to create triangles in TailwindCSS
 description: In this post, we are going to see four examples of how to draw a triangle in TailwindCSS using...
 created_at: '2022-10-18T10:46:16Z'

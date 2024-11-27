@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877639
+dev_to_url: https://dev.to/jetthoughts/checklist-for-the-non-tech-founder-dim
 title: Checklist for the non-tech founder
 description: If either agency, dev shop, or offshore team is building a product for you, it’s important to know...
 created_at: '2024-06-05T06:36:16Z'

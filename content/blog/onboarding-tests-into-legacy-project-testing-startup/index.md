@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877640
+dev_to_url: https://dev.to/jetthoughts/onboarding-tests-into-legacy-project-54f3
 title: Onboarding Tests into Legacy Project
 description: What solution should you apply to get the first results in a short time in the legacy project? What...
 created_at: '2024-06-05T06:37:41Z'

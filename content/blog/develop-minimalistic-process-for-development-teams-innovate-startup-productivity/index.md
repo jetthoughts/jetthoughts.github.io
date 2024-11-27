@@ -1,5 +1,6 @@
 ---
 dev_to_id: 2040573
+dev_to_url: https://dev.to/jetthoughts/develop-a-minimalistic-process-for-development-teams-to-innovate-3im5
 title: Develop a Minimalistic Process for Development Teams to Innovate
 description: 'I just finished reading "Continuous Discovery Habits: Discover Products That Create Customer Value...'
 created_at: '2024-10-16T12:21:53Z'

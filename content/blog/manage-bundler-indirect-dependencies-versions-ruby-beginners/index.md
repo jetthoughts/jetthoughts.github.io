@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1091289
+dev_to_url: https://dev.to/jetthoughts/manage-bundler-indirect-dependencies-versions-ep7
 title: Manage Bundler indirect dependencies versions
 description: Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new...
 created_at: '2022-05-20T16:20:34Z'

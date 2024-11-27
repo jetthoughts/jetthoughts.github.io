@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1880485
+dev_to_url: https://dev.to/jetthoughts/dedicated-software-development-teams-1c1e
 title: Dedicated Software Development Teams
 description: Dedicated Software Development Teams   We’ve compiled everything you need to know about...
 created_at: '2024-06-07T13:49:53Z'

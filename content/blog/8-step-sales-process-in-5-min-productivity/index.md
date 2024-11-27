@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853531
+dev_to_url: https://dev.to/jetthoughts/8-step-sales-process-in-5-min-581g
 title: 8-Step Sales Process in 5 min
 description: The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in...
 created_at: '2024-05-15T06:34:55Z'

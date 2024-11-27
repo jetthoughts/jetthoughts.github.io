@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877540
+dev_to_url: https://dev.to/jetthoughts/cleaning-up-your-rails-views-with-view-objects-426b
 title: Cleaning Up Your Rails Views With View Objects
 description: Why logic in views is a bad idea?   The main reason not to put the complex logic into your...
 created_at: '2024-06-05T05:39:17Z'

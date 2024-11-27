@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853472
+dev_to_url: https://dev.to/jetthoughts/services-and-tools-to-automatize-development-for-the-remote-teams-4dg7
 title: Services and tools to automatize development for the remote teams
 description: We save a lot of time on development and create better products due to well-formed...
 created_at: '2024-05-15T06:02:44Z'

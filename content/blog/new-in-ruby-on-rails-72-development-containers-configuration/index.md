@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1872098
+dev_to_url: https://dev.to/jetthoughts/new-in-ruby-on-rails-72-development-containers-configuration-a57
 title: 'New in Ruby on Rails 7.2: Development Containers Configuration'
 description: Development container is a full-featured coding environment. Rails 7.2 introduces configurations for...
 created_at: '2024-05-31T13:45:09Z'

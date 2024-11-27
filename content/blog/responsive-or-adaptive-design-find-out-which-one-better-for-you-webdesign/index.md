@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1877550
+dev_to_url: https://dev.to/jetthoughts/responsive-or-adaptive-design-find-out-which-one-is-better-for-you-1cc7
 title: Responsive or Adaptive Design? Find out which one is better for you
 description: JetThoughts has launched a new project recently. Whole front-end team was set and started...
 created_at: '2024-06-05T05:49:07Z'

@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853466
+dev_to_url: https://dev.to/jetthoughts/speed-up-github-prs-review-of-your-react-applications-4n8o
 title: Speed up GitHub PR’s review of your React applications
 description: Would you like to speed up PR’s review of React application, when you use Jest snapshot...
 created_at: '2024-05-15T05:55:46Z'

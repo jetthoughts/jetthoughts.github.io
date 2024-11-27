@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1182433
+dev_to_url: https://dev.to/jetthoughts/data-migrations-with-rails-291b
 title: Data migrations with Rails
 description: Data migration is a common part of working with databases, and Ruby on Rails developers have many...
 created_at: '2022-09-02T17:01:27Z'

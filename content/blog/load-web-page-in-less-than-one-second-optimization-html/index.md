@@ -1,5 +1,6 @@
 ---
 dev_to_id: 1853553
+dev_to_url: https://dev.to/jetthoughts/load-web-page-in-less-than-one-second-2146
 title: Load web page in less than one second
 description: How to improve the website load time without much effort? What optimizations and improvements can...
 created_at: '2024-05-15T07:04:49Z'
