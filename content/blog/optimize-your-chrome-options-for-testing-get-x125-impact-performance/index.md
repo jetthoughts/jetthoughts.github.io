@@ -4,7 +4,7 @@ dev_to_url: https://dev.to/jetthoughts/optimize-your-chrome-options-for-testing-
 title: Optimize your Chrome options for testing to get x1.25 impact
 description: Boost your Ruby on Rails testing efficiency. Our consultant shares tricks to optimize Chrome options for a 125% performance impact.
 created_at: '2023-08-05T13:23:55Z'
-edited_at: '2024-11-25T15:39:55Z'
+edited_at: '2024-11-27T16:36:30Z'
 draft: false
 tags:
 - testing
@@ -12,14 +12,17 @@ tags:
 - productivity
 - browser
 canonical_url: https://jetthoughts.com/blog/optimize-your-chrome-options-for-testing-get-x125-impact-performance/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/optimize-your-chrome-options-for-testing-get-x125-impact-performance/cover.png
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/optimize-your-chrome-options-for-testing-get-x125-impact-performance/cover.jpeg
 slug: optimize-your-chrome-options-for-testing-get-x125-impact-performance
 metatags:
-  image: cover.png
+  image: cover.jpeg
 ---
 🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀
 
 Are you looking to supercharge your browser tests and optimize their speed? By fine-tuning your Chrome browser options, you can significantly enhance the performance of your automated tests.
+
+
+![Image description](file_0.jpeg)
 
 Below are some Chrome options that helped me get x1.25 improvement:
 
