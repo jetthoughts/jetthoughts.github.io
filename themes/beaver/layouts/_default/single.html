@@ -47,6 +47,11 @@
     </article>
 
     <div class="single-content single-post-wrapper">
+
+      {{ if .Params.dev_to_url }}
+      <a href="{{ .Params.dev_to_url }}#comments" class="btn btn-primary comment-link" rel="nofollow noopener">Comments</a>
+      {{ end }}
+
       {{ partial "blog/share.html" . }}
 
       {{ partial "blog/related-posts.html" . }}
