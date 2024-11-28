@@ -37,3 +37,5 @@
 .heading-component:hover>.heading-self-link {
   visibility: visible;
 }
+
+.comment-link {text-decoration: none!important; margin-top: 2rem}

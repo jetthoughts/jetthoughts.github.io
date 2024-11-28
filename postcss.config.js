@@ -19,6 +19,8 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 
       // sdb
       "jt-active",
+
+      "comment-link",
     ],
 
     deep: [
