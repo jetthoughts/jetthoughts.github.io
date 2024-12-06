@@ -2,9 +2,9 @@
 dev_to_id: 1853571
 dev_to_url: https://dev.to/jetthoughts/feature-branches-and-where-to-find-them-46a7
 title: Feature Branches and Where to Find Them
-description: Here we want to go through the feature branch process, show what downsides this approach...
+description: Here we want to go through the feature branch process, show what downsides this approach may have...
 created_at: '2024-05-15T07:17:21Z'
-edited_at: '2024-11-26T16:04:25Z'
+edited_at: '2024-12-06T11:38:00Z'
 draft: false
 tags:
 - development
@@ -17,7 +17,7 @@ slug: feature-branches-where-find-them-development-coding
 metatags:
   image: cover.jpeg
 ---
-> # Here we want to go through the feature branch process, show what downsides this approach may have and share why it causes us pain.
+> Here we want to go through the feature branch process, show what downsides this approach may have and share why it causes us pain.
 
 ![Photo by [Yancy Min](https://unsplash.com/@yancymin?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](file_0.jpeg)
 

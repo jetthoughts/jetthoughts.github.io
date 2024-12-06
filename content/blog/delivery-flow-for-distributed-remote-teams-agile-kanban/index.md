@@ -2,9 +2,9 @@
 dev_to_id: 1852603
 dev_to_url: https://dev.to/jetthoughts/delivery-flow-for-distributed-remote-teams-19k9
 title: Delivery Flow for Distributed Remote Teams
-description: Process which help the team make effective decisions to better live up to expectations...
+description: Process which help the team make effective decisions to better live up to expectations while...
 created_at: '2024-05-14T12:11:00Z'
-edited_at: '2024-11-26T16:05:45Z'
+edited_at: '2024-12-06T11:36:36Z'
 draft: false
 tags:
 - agile
@@ -17,7 +17,7 @@ slug: delivery-flow-for-distributed-remote-teams-agile-kanban
 metatags:
   image: cover.png
 ---
-> # Process which help the team make effective decisions to better live up to expectations while prioritizing, visualizing progress, and preventing bottlenecks.
+> Process which help the team make effective decisions to better live up to expectations while prioritizing, visualizing progress, and preventing bottlenecks.
 
 ![](file_0.png)
 
@@ -82,20 +82,10 @@ Merge PR to master and run auto-deploy to production/staging.
 
 The key feature of Kanban is to reduce WIP. By violating those limitations, show us bottlenecks, which we should clean up.
 
- 1. **Moving items back to the previous lists is prohibited:** You could move cards only to the next lists in the row. For example, you could not return a card from ***Verify*** to ***Backlog***.
-
-![](file_3.png)
-
-2. **In Progress list limit:** 1 item per Developer
-
-![](file_4.png)
-
-3. **Developer’s issue limit:** 2 items per Developer from ***In Progress*** until ***Done***
-
-![](file_5.png)
-
-4. **Time limit per issue:** 2 days per issue from ***In Progress*** until ***Done***
-
+1. **Moving items back to the previous lists is prohibited:** You could move cards only to the next lists in the row. For example, you could not return a card from ***Verify*** to ***Backlog***. ![](file_3.png)
+1. **In Progress list limit:** 1 item per Developer ![](file_4.png)
+1. **Developer’s issue limit:** 2 items per Developer from ***In Progress*** until ***Done*** ![](file_5.png)
+1. **Time limit per issue:** 2 days per issue from ***In Progress*** until ***Done***.
 When we have spent too much time on the issue: we should split it into several issues in the middle of progress to accomplish this rule.
 
 ## Workarounds

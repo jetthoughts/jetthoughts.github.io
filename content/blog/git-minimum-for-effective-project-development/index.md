@@ -2,9 +2,9 @@
 dev_to_id: 1853605
 dev_to_url: https://dev.to/jetthoughts/git-minimum-for-effective-project-development-2ce1
 title: Git minimum for effective project development
-description: Git minimum for effective project development             For beginners who are not familiar...
+description: For beginners who are not familiar with Git or GitFlow, we grabbed the most common commands to be...
 created_at: '2024-05-15T07:29:21Z'
-edited_at: '2024-11-26T16:04:18Z'
+edited_at: '2024-12-06T11:38:39Z'
 draft: false
 tags:
 - development
@@ -17,9 +17,7 @@ slug: git-minimum-for-effective-project-development
 metatags:
   image: cover.png
 ---
-
-## Git minimum for effective project development
-> # For beginners who are not familiar with [Git](https://git-scm.com/) or [GitFlow](https://datasift.github.io/gitflow/), we grabbed the most common commands to be effective from the first day.
+> For beginners who are not familiar with [Git](https://git-scm.com/) or [GitFlow](https://datasift.github.io/gitflow/), we grabbed the most common commands to be effective from the first day.
 
 ![](file_0.png)
 

@@ -4,7 +4,7 @@ dev_to_url: https://dev.to/jetthoughts/checklist-for-the-non-tech-founder-dim
 title: Checklist for the non-tech founder
 description: If either agency, dev shop, or offshore team is building a product for you, it’s important to know...
 created_at: '2024-06-05T06:36:16Z'
-edited_at: '2024-11-26T16:02:59Z'
+edited_at: '2024-12-06T11:32:55Z'
 draft: false
 tags:
 - agile
@@ -25,20 +25,21 @@ The development process, in general, is something that’s not easy to have cont
 
 Here are some common rules when you’re starting the project:
 
-**Be an owner — **it’s important to have admin access to the code your team is working on, you will always be able to grant access to your team members, it gets you in charge of who has access to what. Have this approach towards every tool you are using for development, starting from GitHub to any of SaaS accounts, Clouds, AppStore, GooglePlay, etc.
+**Be an owner —** it’s important to have admin access to the code your team is working on, you will always be able to grant access to your team members, it gets you in charge of who has access to what. Have this approach towards every tool you are using for development, starting from GitHub to any of SaaS accounts, Clouds, AppStore, GooglePlay, etc.
 
-**Know your tech stack **— you might think that the newest tools and libraries are really good for development, but it’s not always like this, it might get some hype at the beginning but be abandoned 6 months later, so it’s better to use common tech stacks rather than going with pretty old or super modern ones, it’s all about the balance.
+**Know your tech stack** — you might think that the newest tools and libraries are really good for development, but it’s not always like this, it might get some hype at the beginning but be abandoned 6 months later, so it’s better to use common tech stacks rather than going with pretty old or super modern ones, it’s all about the balance.
 
 The tech stack should be stable and widely used, it is easier to find developers and cheaper building and supporting the product with commonly used ones. Ruby on Rails and React are great to build your app on, and this stack allows you to scale it to a more complex system in the future.
 
 Apart from that, there are a lot of important things to check when it comes to the development itself.
 
 In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings you the answers to the most common questions:
-> # How to know if my team is not going the wrong direction, how to remove uncertainty in the development process?
+
+> How to know if my team is not going the wrong direction, how to remove uncertainty in the development process?
 
 ### 1. GitHub Сommits is everything
 
-* **Regular Git commits **of developers — that’s what helps the tasks to be done and the best way to understand if development flow is going fine.
+* **Regular Git commits** of developers — that’s what helps the tasks to be done and the best way to understand if development flow is going fine.
 
 * You might have difficulties to understand what this or that part of the code means, but you’re definitely able to see commits frequency and observe the path from the feature to just appear in a list to its full implementation.
 
