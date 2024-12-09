@@ -22,6 +22,13 @@ You can apply new custom css to main style file here:
 
 `/themes/beaver/static/style.css`
 
+
+## To check modified styles like in production run server command
+
+```bash
+hugo server -e production
+```
+
 ## Data
 
 `companies` get from `data/companies.yaml` file

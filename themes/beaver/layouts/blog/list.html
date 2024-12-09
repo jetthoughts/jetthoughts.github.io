@@ -14,10 +14,18 @@
     (resources.Get "css/skin-65eda28877e04.css")
     (resources.Get "css/single-post.css")
     (resources.Get "css/footer.css")
-    | resources.Concat "css/blog/list.css" | postCSS  | minify | fingerprint | resources.PostProcess
   }}
 
+  {{ if hugo.IsDevelopment }}
+  {{- range $CSS }}
+  <link rel="stylesheet" href="{{ (. | fingerprint).RelPermalink }}">
+  {{ end }}
+  {{ else }}
+  {{- $CSS = $CSS | resources.Concat "css/blog/list.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
   <link href="{{ $CSS.RelPermalink }}" media="all" rel="stylesheet" />
+  {{ end }}
+
+
 
   {{ if eq .Type "tags" }}
     {{ $blogIndex := .Site.GetPage "blog" }}

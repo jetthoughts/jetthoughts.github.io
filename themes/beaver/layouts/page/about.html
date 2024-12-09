@@ -8,9 +8,18 @@ $dynamicCSS586
 (resources.Get "css/586.css")
 (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/about-us.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+}}
 
+{{ if hugo.IsDevelopment }}
+{{- range $CSS }}
+<link rel="stylesheet" href="{{ (. | fingerprint).RelPermalink }}">
+{{ end }}
+{{ else }}
+{{- $CSS = $CSS | resources.Concat "css/about-us.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{ end }}
+
+
 {{ partial "header/json-ld-company.html" . }}
 {{ end }}
 

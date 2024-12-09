@@ -3,8 +3,7 @@
 {{ end }}
 
 {{ define "header" }}
-
-{{- $CSS := slice
+{{ $CSS := slice
 (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
 (resources.Get "css/586.css")
 (resources.Get "css/style.css")
@@ -13,10 +12,17 @@
 (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
 (resources.Get "css/skin-65eda28877e04.css")
 (resources.Get "css/single-post.css")
-(resources.Get "css/footer.css")
-| resources.Concat "css/blog/single.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+(resources.Get "css/footer.css") }}
 
+
+{{ if hugo.IsDevelopment }}
+{{- range $CSS }}
+<link rel="stylesheet" href="{{ (. | fingerprint).RelPermalink }}">
+{{ end }}
+{{ else }}
+{{- $CSS = $CSS | resources.Concat "css/blog/single.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 <link href='{{ $CSS.RelPermalink }}' media='all' rel='stylesheet'/>
+{{ end }}
 
 {{ with .Params.created_at }}
 <meta content='{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:published_time'/>

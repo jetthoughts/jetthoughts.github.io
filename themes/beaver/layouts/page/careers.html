@@ -2,10 +2,26 @@
 {{ partial "header/critical/careers.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{ $CSS := slice
-(resources.Get "css/careers.css") (resources.Get "css/3086-layout2.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/homepage.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/footer.css") | resources.Concat "css/_careers.css"
-| postCSS | minify | fingerprint | resources.PostProcess }}
+(resources.Get "css/careers.css")
+(resources.Get "css/3086-layout2.css")
+$dynamicCSS586 (resources.Get "css/586.css")
+(resources.Get "css/homepage.css")
+(resources.Get "css/base-4.min.css")
+(resources.Get "css/style.css")
+(resources.Get "css/skin-65eda28877e04.css")
+(resources.Get "css/footer.css")
+}}
 
+
+{{ if hugo.IsDevelopment }}
+{{- range $CSS }}
+<link rel="stylesheet" href="{{ (. | fingerprint).RelPermalink }}">
+{{ end }}
+{{ else }}
+{{- $CSS = $CSS | resources.Concat "css/_careers.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{ end }}
+
 {{ end }}
 
 {{ define "main" }}

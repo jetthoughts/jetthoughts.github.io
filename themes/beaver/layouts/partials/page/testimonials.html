@@ -1,6 +1,12 @@
-{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | postCSS | minify | fingerprint | resources.PostProcess }}
+{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" }}
+
+{{ if hugo.IsDevelopment }}
+<link rel="stylesheet" href="{{ ($nonCriticalCSS | fingerprint).RelPermalink }}">
+{{ else }}
+{{- $nonCriticalCSS = $nonCriticalCSS | postCSS  | minify | fingerprint | resources.PostProcess}}
 <link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
+{{ end }}
 
 <div class="fl-col-group fl-node-1a4igunq3xvj fl-col-group-custom-width" data-node="1a4igunq3xvj">
    <div class="fl-col fl-node-38ejkdz2v4cq fl-col-small-custom-width" data-node="38ejkdz2v4cq">
