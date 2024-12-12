@@ -4,7 +4,7 @@ dev_to_url: https://dev.to/jetthoughts/linking-postgresql-data-through-time-when
 title: 'Linking Data in PostgreSQL Without Explicit Keys: A Practical Guide'
 description: Databases often evolve in unpredictable ways. Tables that were initially designed to operate...
 created_at: '2024-12-02T13:25:12Z'
-edited_at: '2024-12-12T13:12:23Z'
+edited_at: '2024-12-12T13:32:30Z'
 draft: false
 tags:
 - database
@@ -63,9 +63,7 @@ VALUES
 ```
 
 ## The Solution
-We need to create a relationship between these tables where the time difference between created_at values is no greater than 2 seconds.
-
-This can be achieved with a query that calculates the time difference using EXTRACT(EPOCH) and filters rows that meet the condition.
+Therefore, we need to create that relation among these tables where the created time difference between the created_at values in both tables is not longer than 2 seconds apart. This can be achieved with a query calculated on time difference via EXTRACT(EPOCH) filtering out the rows that fulfill that condition.
 
 ## Creating a View
 
