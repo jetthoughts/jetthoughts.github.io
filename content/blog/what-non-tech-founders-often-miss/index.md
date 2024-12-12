@@ -1,10 +1,10 @@
 ---
 dev_to_id: 2110985
-title: What Non-Tech Founders Often Miss
 dev_to_url: https://dev.to/jetthoughts/what-non-tech-founders-often-miss-f1k
+title: What Non-Tech Founders Often Miss
 description: I have worked with many non-technical founders. They often make the same mistakes, which wastes time...
 created_at: '2024-11-18T17:23:57Z'
-edited_at: '2024-11-25T15:42:21Z'
+edited_at: '2024-12-12T11:57:56Z'
 draft: false
 tags:
 - startup
@@ -18,6 +18,9 @@ metatags:
   image: cover.png
 ---
 I have worked with many non-technical founders. They often make the same mistakes, which wastes time and money. They mean well, but problems happen. Here are common issues and how they affect projects.
+
+
+![A clean, minimalist illustration showing a split-screen composition. On the left side, there's a founder sketching a grand castle in the air with broad, confident strokes. On the right side, there's a more detailed technical blueprint with specific measurements, notes, and architectural elements. Between them, there's a bridge being built from both sides, symbolizing the need to connect vision with practical implementation.](file_0.png)
 
 ## 1. Know Your Users
 
