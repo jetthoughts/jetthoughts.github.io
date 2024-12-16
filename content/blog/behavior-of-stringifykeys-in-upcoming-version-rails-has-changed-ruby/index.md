@@ -1,19 +1,21 @@
 ---
 dev_to_id: 2157632
 dev_to_url: https://dev.to/jetthoughts/the-behavior-of-stringifykeys-in-the-upcoming-version-of-rails-has-changed-67h
-title: The behavior of StringifyKeys in the upcoming version of Rails has changed.
+title: The behavior of stringify_keys in the upcoming version of Rails has changed.
 description: A new Rails update fixes how the stringify_keys handles different types of hash keys. This change...
 created_at: '2024-12-15T12:48:42Z'
-edited_at:
+edited_at: '2024-12-16T11:37:04Z'
 draft: false
 tags:
 - ruby
 - rails
 - news
 - tutorial
-canonical_url: https://dev.to/jetthoughts/the-behavior-of-stringifykeys-in-the-upcoming-version-of-rails-has-changed-67h
-cover_image:
+canonical_url: https://jetthoughts.com/blog/behavior-of-stringifykeys-in-upcoming-version-rails-has-changed-ruby/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/behavior-of-stringifykeys-in-upcoming-version-rails-has-changed-ruby/cover.png
 slug: behavior-of-stringifykeys-in-upcoming-version-rails-has-changed-ruby
+metatags:
+  image: cover.png
 ---
 A new Rails update fixes how the `stringify_keys` handles different types of hash keys. This change makes the code more reliable and consistent.
 

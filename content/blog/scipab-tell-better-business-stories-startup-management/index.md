@@ -4,12 +4,14 @@ dev_to_url: https://dev.to/jetthoughts/scipab-tell-better-business-stories-15im
 title: 'SCIPAB: Tell Better Business Stories'
 description: What is SCIPAB?   SCIPAB helps you make your point fast. Think of it as a recipe for clear...
 created_at: '2024-12-16T00:36:51Z'
-edited_at:
+edited_at: '2024-12-16T11:39:16Z'
 draft: false
 tags:
 - startup
 - management
-canonical_url: https://dev.to/jetthoughts/scipab-tell-better-business-stories-15im
+- tutorial
+- productivity
+canonical_url: https://jetthoughts.com/blog/scipab-tell-better-business-stories-startup-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/scipab-tell-better-business-stories-startup-management/cover.png
 slug: scipab-tell-better-business-stories-startup-management
 metatags:
