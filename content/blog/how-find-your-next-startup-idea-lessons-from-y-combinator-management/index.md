@@ -4,13 +4,13 @@ dev_to_url: https://dev.to/jetthoughts/how-to-find-your-next-startup-idea-lesson
 title: 'How to Find Your Next Startup Idea: Lessons from Y Combinator'
 description: Success in startups starts with the right idea. Y Combinator has funded hundreds of billion-dollar...
 created_at: '2024-12-19T20:01:04Z'
-edited_at:
+edited_at: '2024-12-19T20:29:37Z'
 draft: false
 tags:
 - startup
 - management
 - tutorial
-canonical_url: https://dev.to/jetthoughts/how-to-find-your-next-startup-idea-lessons-from-y-combinator-10be
+canonical_url: https://jetthoughts.com/blog/how-find-your-next-startup-idea-lessons-from-y-combinator-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-find-your-next-startup-idea-lessons-from-y-combinator-management/cover.png
 slug: how-find-your-next-startup-idea-lessons-from-y-combinator-management
 metatags:
@@ -29,13 +29,9 @@ Some ideas look perfect but never work. We call these "tar pit ideas." The class
 Here are the key questions to ask:
 
 1. Do you have founder-market fit? You need the right skills and experience for your idea.
-
 2. Is the market big? Look for markets worth billions now, or small markets that grow fast.
-
 3. Does it solve a real problem? Take Brex. Before them, startups couldn't get credit cards. That's a real problem.
-
 4. Do you want this product? Do your friends want it? If not, talk to potential users.
-
 5. Did something change to make this possible now? New tech or rules often create opportunities.
 
 ## Three Surprising Signs of Good Ideas
