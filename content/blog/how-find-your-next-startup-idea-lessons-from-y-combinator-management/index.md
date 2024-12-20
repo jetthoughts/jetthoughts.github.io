@@ -4,7 +4,7 @@ dev_to_url: https://dev.to/jetthoughts/how-to-find-your-next-startup-idea-lesson
 title: 'How to Find Your Next Startup Idea: Lessons from Y Combinator'
 description: Success in startups starts with the right idea. Y Combinator has funded hundreds of billion-dollar...
 created_at: '2024-12-19T20:01:04Z'
-edited_at: '2024-12-19T20:29:37Z'
+edited_at: '2024-12-20T09:53:40Z'
 draft: false
 tags:
 - startup
@@ -17,6 +17,8 @@ metatags:
   image: cover.png
 ---
 Success in startups starts with the right idea. Y Combinator has funded hundreds of billion-dollar companies. Here's what we learned about finding great startup ideas.
+
+{% youtube https://youtu.be/Th8JoIan4dg?si=KWVt8xOkpbee36So %}
 
 ## The Common Mistakes
 
