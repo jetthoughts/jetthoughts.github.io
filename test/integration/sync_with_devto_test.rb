@@ -177,6 +177,16 @@ class SyncWithDevToTest < Minitest::Test
     assert_includes content, "file_0.jpeg"
   end
 
+  def test_sync_script_replaces_youtube_links
+    run_sync
+
+    markdown_file = "#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md"
+    content = File.read(markdown_file)
+
+    assert_includes content, "{{< youtube id=0RKpf3rK57I loading=lazy start=30 >}}"
+    refute_includes content, "{{< youtube 0RKpf3rK57I >}}"
+  end
+
   def test_sync_script_apply_custom_slugs_from_file
     run_sync
 
