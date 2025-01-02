@@ -18,7 +18,7 @@ metatags:
 ---
 Success in startups starts with the right idea. Y Combinator has funded hundreds of billion-dollar companies. Here's what we learned about finding great startup ideas.
 
-{% youtube "https://youtu.be/Th8JoIan4dg?si=KWVt8xOkpbee36So" %}
+{{< youtube Th8JoIan4dg >}}
 
 ## The Common Mistakes
 
