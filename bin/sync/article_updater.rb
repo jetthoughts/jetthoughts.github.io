@@ -168,6 +168,6 @@ module ArticleUpdater
   end
 
   def prepare_youtube_links(markdown)
-    markdown.gsub(/\{\{\< youtube ([a-zA-Z0-9_-]+) \>\}\}/, '{{< youtube id=\1 loading=lazy >}}')
+    markdown.gsub(/\{% youtube "https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)(?:\?.*?)?" %\}/, '{{< youtube \1 >}}')
   end
 end

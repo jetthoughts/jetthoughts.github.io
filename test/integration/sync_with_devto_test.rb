@@ -183,8 +183,8 @@ class SyncWithDevToTest < Minitest::Test
     markdown_file = "#{WORKING_DIR}#{FAKE_API_ARTICLE_1[:slug]}/index.md"
     content = File.read(markdown_file)
 
-    assert_includes content, "{{< youtube id=0RKpf3rK57I loading=lazy start=30 >}}"
-    refute_includes content, "{{< youtube 0RKpf3rK57I >}}"
+    assert_includes content, "{{< youtube Th8JoIan4dg >}}"
+    refute_includes content, "{% youtube \"https://youtu.be/Th8JoIan4dg?si=KWVt8xOkpbee36So\" %}"
   end
 
   def test_sync_script_apply_custom_slugs_from_file
