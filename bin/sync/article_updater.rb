@@ -162,6 +162,12 @@ module ArticleUpdater
       "slug" => slug
     }.merge(metatags_image)
 
+    article_data["body_markdown"] = prepare_youtube_links(article_data["body_markdown"])
+
     "#{article_hash.to_yaml(line_width: -1)}---\n#{article_data["body_markdown"]}"
+  end
+
+  def prepare_youtube_links(markdown)
+    markdown.gsub(/\{\{\< youtube ([a-zA-Z0-9_-]+) \>\}\}/, '{{< youtube id=\1 loading=lazy >}}')
   end
 end
