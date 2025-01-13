@@ -2,12 +2,14 @@
 dev_to_id: 2187647
 dev_to_url: https://dev.to/jetthoughts/why-ai-hasnt-blown-our-mindsyet-1f7e
 title: Why AI Hasn’t Blown Our Minds…Yet
-description: While many of AI's use cases have yet to be invented, it's already beginning to make a profound impact on the world behind the scenes. In this episode, Dalton and Michael explore the current state of AI tech and grapple with whether or not it lives up to their expectations.
+description: In a world buzzing with talk about artificial intelligence, many are left wondering why it hasn't yet...
 created_at: '2025-01-03T14:47:23Z'
-edited_at:
+edited_at: '2025-01-13T00:56:55Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/why-ai-hasnt-blown-our-mindsyet-1f7e
+tags:
+- startup
+- tutorial
+canonical_url: https://jetthoughts.com/blog/why-ai-hasnt-blown-our-mindsyet/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-ai-hasnt-blown-our-mindsyet/cover.jpeg
 slug: why-ai-hasnt-blown-our-mindsyet
 metatags:
