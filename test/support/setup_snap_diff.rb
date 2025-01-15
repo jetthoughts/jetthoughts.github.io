@@ -8,15 +8,7 @@ Capybara::Screenshot::Diff.driver = :vips
 Capybara::Screenshot::Diff.delayed = false
 Capybara.default_max_wait_time = 5
 
-module Rails
-  def self.root
-    Dir.pwd
-  end
-
-  def self.application
-    Capybara.app
-  end
-end
+Capybara::Screenshot.root = Dir.pwd
 
 module SnapDiffHelpers
   def screenshot(*, **)

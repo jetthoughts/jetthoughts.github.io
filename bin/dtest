@@ -2,5 +2,7 @@
 
 set -eo pipefail
 
+bin/docked sh bin/setup
+
 bin/build --destination public-test --baseURL http://localhost:1314
 bin/docked t "$@"

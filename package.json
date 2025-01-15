@@ -12,11 +12,11 @@
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "esbuild": "^0.23.1",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-nested": "^6.2.0",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "prettier-plugin-go-template": "^0.0.15",
     "surge": "^0.24.6"
   }
