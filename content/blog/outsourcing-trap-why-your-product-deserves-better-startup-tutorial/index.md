@@ -4,14 +4,14 @@ dev_to_url: https://dev.to/jetthoughts/the-outsourcing-trap-why-your-product-des
 title: 'The Outsourcing Trap: Why Your Product Deserves Better'
 description: Here's my twenty years of battling bullshit practices in software development consulting. Every...
 created_at: '2025-01-12T19:47:16Z'
-edited_at:
+edited_at: '2025-01-22T22:10:42Z'
 draft: false
 tags:
 - startup
 - tutorial
 - management
 - leadership
-canonical_url: https://dev.to/jetthoughts/the-outsourcing-trap-why-your-product-deserves-better-46i8
+canonical_url: https://jetthoughts.com/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/cover.jpeg
 slug: outsourcing-trap-why-your-product-deserves-better-startup-tutorial
 metatags:

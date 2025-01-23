@@ -2,12 +2,12 @@
 dev_to_id: 2180768
 dev_to_url: https://dev.to/jetthoughts/innovative-ruby-on-rails-projects-to-boost-your-development-skills-in-2024-1je9
 title: Innovative Ruby on Rails Projects to Boost Your Development Skills in 2024
-description: Explore innovative Ruby on Rails projects to enhance your skills in 2024. Perfect for developers at any level.
+description: Ruby on Rails, often just called Rails, is a popular framework for building web applications. If...
 created_at: '2024-12-29T17:47:43Z'
-edited_at:
+edited_at: '2025-01-22T22:14:18Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/innovative-ruby-on-rails-projects-to-boost-your-development-skills-in-2024-1je9
+canonical_url: https://jetthoughts.com/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/cover.jpeg
 slug: innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024
 metatags:
@@ -53,7 +53,7 @@ Developing a social media app with Rails is both fun and educational. You'll lea
 *   Implement real-time chat features
 *   Manage user-generated content
 
-These projects not only enhance your Rails skills but also prepare you for real-world challenges. Whether you're interested in [go lang](https://jetthoughts.com/blog/how-learn-ruby-tutorial/) or exploring what [react development companies](#45f1) can offer, these Rails projects provide a solid foundation.
+These projects not only enhance your Rails skills but also prepare you for real-world challenges. Whether you're interested in go lang (https://jetthoughts.com/blog/how-learn-ruby-tutorial/) or exploring what [react development companies](#45f1) can offer, these Rails projects provide a solid foundation.
 
 ## Mastering Advanced Ruby on Rails Techniques
 
