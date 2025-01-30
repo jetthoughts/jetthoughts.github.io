@@ -2,12 +2,16 @@
 dev_to_id: 2190242
 dev_to_url: https://dev.to/jetthoughts/mastering-debugging-insights-from-chelsea-troy-on-ruby-663-3ngf
 title: 'Mastering Debugging: Insights from Chelsea Troy on RUBY 663'
-description: Explore key insights from Chelsea Troy on mastering debugging skills in the latest Ruby Rogues episode, focusing on techniques and strategies for effective troubleshooting.
+description: In a recent episode of Ruby Rogues, Chelsea Troy shared her expertise on debugging, emphasizing the...
 created_at: '2025-01-05T17:47:13Z'
-edited_at:
+edited_at: '2025-01-30T02:52:36Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-debugging-insights-from-chelsea-troy-on-ruby-663-3ngf
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/mastering-debugging-insights-from-chelsea-troy-on-ruby-663/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-debugging-insights-from-chelsea-troy-on-ruby-663/cover.jpeg
 slug: mastering-debugging-insights-from-chelsea-troy-on-ruby-663
 metatags:

@@ -2,12 +2,16 @@
 dev_to_id: 2244342
 dev_to_url: https://dev.to/jetthoughts/innovative-rails-companies-leading-the-tech-revolution-in-2025-44gi
 title: Innovative Rails Companies Leading the Tech Revolution in 2025
-description: Explore how innovative rails companies are leading the tech revolution in 2025 with AI, robotics, and more!
+description: In 2025, the rail industry is buzzing with innovation, and it's the rails companies at the forefront...
 created_at: '2025-01-27T11:24:35Z'
-edited_at:
+edited_at: '2025-01-30T02:36:38Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/innovative-rails-companies-leading-the-tech-revolution-in-2025-44gi
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/innovative-rails-companies-leading-tech-revolution-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-rails-companies-leading-tech-revolution-in-2025/cover.jpeg
 slug: innovative-rails-companies-leading-tech-revolution-in-2025
 metatags:

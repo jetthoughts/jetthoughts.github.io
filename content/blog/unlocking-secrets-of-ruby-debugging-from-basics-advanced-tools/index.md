@@ -2,12 +2,16 @@
 dev_to_id: 2172773
 dev_to_url: https://dev.to/jetthoughts/unlocking-the-secrets-of-ruby-debugging-from-basics-to-advanced-tools-5dd6
 title: 'Unlocking the Secrets of Ruby Debugging: From Basics to Advanced Tools'
-description: Explore effective Ruby debugging techniques from basic puts statements to advanced debuggers, enhancing your coding skills and understanding.
+description: Debugging is a critical skill for Ruby developers, and a recent blog post from the RubyMine team...
 created_at: '2024-12-24T12:12:38Z'
-edited_at:
+edited_at: '2025-01-30T03:22:54Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-the-secrets-of-ruby-debugging-from-basics-to-advanced-tools-5dd6
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools/cover.jpeg
 slug: unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools
 metatags:

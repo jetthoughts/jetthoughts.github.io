@@ -2,12 +2,16 @@
 dev_to_id: 2201190
 dev_to_url: https://dev.to/jetthoughts/signs-your-company-is-recovering-from-zirp-2408
 title: Signs Your Company Is Recovering From ZIRP
-description: As Dalton & Michael discuss, ZIRP (Zero Interest Rate Policy) has left many companies struggling. This article explores key signs that indicate whether your company is recovering from the effects of ZIRP and what it means for your future.
+description: In the wake of the Zero Interest Rate Policy (ZIRP), many companies are still trying to find their...
 created_at: '2025-01-12T03:13:22Z'
-edited_at:
+edited_at: '2025-01-30T02:47:38Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/signs-your-company-is-recovering-from-zirp-2408
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/signs-your-company-recovering-from-zirp/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/signs-your-company-recovering-from-zirp/cover.jpeg
 slug: signs-your-company-recovering-from-zirp
 metatags:

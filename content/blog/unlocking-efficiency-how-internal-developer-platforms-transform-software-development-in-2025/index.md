@@ -2,12 +2,16 @@
 dev_to_id: 2186624
 dev_to_url: https://dev.to/jetthoughts/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025-4okn
 title: 'Unlocking Efficiency: How Internal Developer Platforms Transform Software Development in 2025'
-description: Discover how internal developer platforms boost efficiency and transform software development in 2025.
+description: In 2025, software development is getting a major upgrade with internal developer platforms (IDPs)....
 created_at: '2025-01-02T21:55:13Z'
-edited_at:
+edited_at: '2025-01-30T02:54:30Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025-4okn
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025/cover.jpeg
 slug: unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025
 metatags:

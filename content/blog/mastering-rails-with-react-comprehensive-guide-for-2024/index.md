@@ -2,12 +2,16 @@
 dev_to_id: 2170904
 dev_to_url: https://dev.to/jetthoughts/mastering-rails-with-react-a-comprehensive-guide-for-2024-363j
 title: 'Mastering Rails with React: A Comprehensive Guide for 2024'
-description: Master Rails with React in 2024! From setup to scaling, learn to build robust apps with ease.
+description: If you're looking to mix the power of Rails with the flexibility of React, this guide is for you....
 created_at: '2024-12-23T11:17:03Z'
-edited_at:
+edited_at: '2025-01-30T03:23:52Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-rails-with-react-a-comprehensive-guide-for-2024-363j
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/mastering-rails-with-react-comprehensive-guide-for-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-rails-with-react-comprehensive-guide-for-2024/cover.jpeg
 slug: mastering-rails-with-react-comprehensive-guide-for-2024
 metatags:

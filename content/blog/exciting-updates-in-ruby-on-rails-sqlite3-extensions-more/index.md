@@ -2,12 +2,16 @@
 dev_to_id: 2175960
 dev_to_url: https://dev.to/jetthoughts/exciting-updates-in-ruby-on-rails-sqlite3-extensions-and-more-3d75
 title: 'Exciting Updates in Ruby on Rails: SQLite3 Extensions and More'
-description: Explore the latest updates in Ruby on Rails, including support for SQLite3 extensions, a new tutorial, and enhancements to database management.
+description: This week in Ruby on Rails, significant updates have been announced, including support for loading...
 created_at: '2024-12-26T13:13:47Z'
-edited_at:
+edited_at: '2025-01-30T03:20:00Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/exciting-updates-in-ruby-on-rails-sqlite3-extensions-and-more-3d75
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/exciting-updates-in-ruby-on-rails-sqlite3-extensions-more/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exciting-updates-in-ruby-on-rails-sqlite3-extensions-more/cover.jpeg
 slug: exciting-updates-in-ruby-on-rails-sqlite3-extensions-more
 metatags:

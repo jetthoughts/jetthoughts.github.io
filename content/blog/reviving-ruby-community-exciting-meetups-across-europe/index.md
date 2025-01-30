@@ -2,12 +2,16 @@
 dev_to_id: 2179540
 dev_to_url: https://dev.to/jetthoughts/reviving-the-ruby-community-exciting-meetups-across-europe-52af
 title: 'Reviving the Ruby Community: Exciting Meetups Across Europe'
-description: Explore the revival of Ruby meetups across Europe, highlighting GenevaRB's unique traditions and upcoming events that foster community and collaboration among developers.
+description: The Ruby programming community is experiencing a vibrant resurgence in Europe, with numerous meetups...
 created_at: '2024-12-28T14:07:24Z'
-edited_at:
+edited_at: '2025-01-30T03:18:00Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/reviving-the-ruby-community-exciting-meetups-across-europe-52af
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/reviving-ruby-community-exciting-meetups-across-europe/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/reviving-ruby-community-exciting-meetups-across-europe/cover.jpeg
 slug: reviving-ruby-community-exciting-meetups-across-europe
 metatags:

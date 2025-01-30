@@ -2,12 +2,16 @@
 dev_to_id: 2178713
 dev_to_url: https://dev.to/jetthoughts/sales-pre-pmf-should-be-done-by-the-founders-99l
 title: Sales Pre-PMF Should Be Done By The Founders
-description: Explore why founders should handle sales in early-stage startups before achieving product-market fit. Learn about the unique challenges and advantages of founder-led sales.
+description: In the early stages of a startup, founders often find themselves at a crossroads when it comes to...
 created_at: '2024-12-28T05:16:44Z'
-edited_at:
+edited_at: '2025-01-30T03:18:28Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/sales-pre-pmf-should-be-done-by-the-founders-99l
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/sales-pre-pmf-should-be-done-by-founders/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/sales-pre-pmf-should-be-done-by-founders/cover.jpeg
 slug: sales-pre-pmf-should-be-done-by-founders
 metatags:

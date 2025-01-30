@@ -2,12 +2,16 @@
 dev_to_id: 2247477
 dev_to_url: https://dev.to/jetthoughts/finding-the-right-co-founder-a-guide-for-startups-fei
 title: 'Finding The Right Co-Founder: A Guide For Startups'
-description: Building a startup is tough, and having the right co-founder can make all the difference. This guide explores why co-founders are essential, how to find one, and tips for maintaining a strong partnership.
+description: Building a startup is no small feat, especially when you’re trying to break into a competitive...
 created_at: '2025-01-29T03:47:34Z'
-edited_at:
+edited_at: '2025-01-30T02:35:12Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/finding-the-right-co-founder-a-guide-for-startups-fei
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/finding-right-co-founder-guide-for-startups/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/finding-right-co-founder-guide-for-startups/cover.jpeg
 slug: finding-right-co-founder-guide-for-startups
 metatags:

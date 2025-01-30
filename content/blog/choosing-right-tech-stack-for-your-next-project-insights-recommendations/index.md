@@ -2,12 +2,16 @@
 dev_to_id: 2167582
 dev_to_url: https://dev.to/jetthoughts/choosing-the-right-tech-stack-for-your-next-project-insights-and-recommendations-101b
 title: 'Choosing the Right Tech Stack for Your Next Project: Insights and Recommendations'
-description: Explore key insights and recommendations for selecting the right tech stack for your next project, based on a recent discussion in the Rails community.
+description: In the ever-evolving world of technology, selecting the right tech stack for a new project can be a...
 created_at: '2024-12-20T23:09:56Z'
-edited_at:
+edited_at: '2025-01-30T03:26:07Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/choosing-the-right-tech-stack-for-your-next-project-insights-and-recommendations-101b
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/choosing-right-tech-stack-for-your-next-project-insights-recommendations/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/choosing-right-tech-stack-for-your-next-project-insights-recommendations/cover.jpeg
 slug: choosing-right-tech-stack-for-your-next-project-insights-recommendations
 metatags:

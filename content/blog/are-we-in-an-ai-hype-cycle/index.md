@@ -2,12 +2,16 @@
 dev_to_id: 2174810
 dev_to_url: https://dev.to/jetthoughts/are-we-in-an-ai-hype-cycle-243k
 title: Are We In An AI Hype Cycle?
-description: Is the latest excitement around AI just another round of dot-com or crypto style hype? The Lightcone hosts discuss where AI might be if the hype cycle is real and what may remain once the buzz wears off.
+description: The recent surge in excitement around artificial intelligence (AI) has sparked discussions about...
 created_at: '2024-12-26T02:26:43Z'
-edited_at:
+edited_at: '2025-01-30T03:20:25Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/are-we-in-an-ai-hype-cycle-243k
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/are-we-in-an-ai-hype-cycle/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/are-we-in-an-ai-hype-cycle/cover.jpeg
 slug: are-we-in-an-ai-hype-cycle
 metatags:

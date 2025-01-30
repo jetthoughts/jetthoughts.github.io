@@ -2,12 +2,16 @@
 dev_to_id: 2184395
 dev_to_url: https://dev.to/jetthoughts/mastering-user-retention-insights-from-startup-school-fl0
 title: 'Mastering User Retention: Insights from Startup School'
-description: Learn how to measure and improve user retention with insights from David Lieb at Startup School. Discover the importance of cohort retention and how to track user engagement effectively.
+description: In the world of startups, understanding user retention is crucial for success. In a recent episode of...
 created_at: '2025-01-01T11:41:43Z'
-edited_at:
+edited_at: '2025-01-30T02:56:30Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-user-retention-insights-from-startup-school-fl0
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/mastering-user-retention-insights-from-startup-school/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-user-retention-insights-from-startup-school/cover.jpeg
 slug: mastering-user-retention-insights-from-startup-school
 metatags:

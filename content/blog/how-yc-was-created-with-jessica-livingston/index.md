@@ -2,12 +2,16 @@
 dev_to_id: 2214216
 dev_to_url: https://dev.to/jetthoughts/how-yc-was-created-with-jessica-livingston-3a0j
 title: How YC Was Created With Jessica Livingston
-description: Explore the origins of Y Combinator through the eyes of co-founder Jessica Livingston. Discover the unique culture, the importance of community, and the lessons learned from the first batch of founders.
+description: In a recent conversation at the Lightcone podcast, Jessica Livingston, one of the co-founders of Y...
 created_at: '2025-01-16T09:07:24Z'
-edited_at:
+edited_at: '2025-01-30T02:44:23Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/how-yc-was-created-with-jessica-livingston-3a0j
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/how-yc-was-created-with-jessica-livingston/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-yc-was-created-with-jessica-livingston/cover.jpeg
 slug: how-yc-was-created-with-jessica-livingston
 metatags:

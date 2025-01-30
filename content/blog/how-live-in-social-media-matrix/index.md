@@ -2,12 +2,16 @@
 dev_to_id: 2181492
 dev_to_url: https://dev.to/jetthoughts/how-to-live-in-the-social-media-matrix-35d0
 title: How To Live In The Social Media Matrix
-description: Explore the implications of living in the social media matrix. Understand the risks and benefits of your online presence, and learn how to navigate this landscape wisely.
+description: In today’s digital age, we find ourselves entangled in a web of social media that often feels like a...
 created_at: '2024-12-30T08:32:44Z'
-edited_at:
+edited_at: '2025-01-30T03:16:16Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/how-to-live-in-the-social-media-matrix-35d0
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/how-live-in-social-media-matrix/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-live-in-social-media-matrix/cover.jpeg
 slug: how-live-in-social-media-matrix
 metatags:

@@ -2,13 +2,14 @@
 dev_to_id: 2167570
 dev_to_url: https://dev.to/jetthoughts/unveiling-python-312-a-leap-forward-in-programming-excellence-47bb
 title: 'Unveiling Python 3.12: A Leap Forward in Programming Excellence'
-description: Python 3.12 has been released, featuring new syntax, performance enhancements, and security improvements, marking a significant step forward for the programming language.
+description: The Python Software Foundation has officially released Python 3.12 on October 2, 2023, introducing a...
 created_at: '2024-12-20T22:58:43Z'
-edited_at:
+edited_at: '2025-01-30T03:27:29Z'
 draft: false
 tags:
 - python
-canonical_url: https://dev.to/jetthoughts/unveiling-python-312-a-leap-forward-in-programming-excellence-47bb
+- tutorial
+canonical_url: https://jetthoughts.com/blog/unveiling-python-312-leap-forward-in-programming-excellence/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unveiling-python-312-leap-forward-in-programming-excellence/cover.jpeg
 slug: unveiling-python-312-leap-forward-in-programming-excellence
 metatags:

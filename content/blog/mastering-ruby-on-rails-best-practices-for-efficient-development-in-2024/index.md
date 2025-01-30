@@ -2,12 +2,16 @@
 dev_to_id: 2182252
 dev_to_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024-2mm
 title: Mastering Ruby on Rails Best Practices for Efficient Development in 2024
-description: Master Ruby on Rails best practices for efficient development in 2024. Learn coding, testing, and deployment tips.
+description: Ruby on Rails is still one of the go-to frameworks for web development in 2024. It's known for making...
 created_at: '2024-12-30T18:37:45Z'
-edited_at:
+edited_at: '2025-01-30T03:14:36Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024-2mm
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024/cover.jpeg
 slug: mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024
 metatags:

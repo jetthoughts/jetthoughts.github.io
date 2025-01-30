@@ -2,12 +2,16 @@
 dev_to_id: 2193530
 dev_to_url: https://dev.to/jetthoughts/weekly-ruby-roundup-highlights-from-ruby-4-1435
 title: 'Weekly Ruby Roundup: Highlights from Ruby #4'
-description: Explore the latest updates from the Ruby community, including conference announcements, blogging tools, and programming insights in this week's Ruby roundup.
+description: This week in the Ruby community was bustling with activity, featuring a variety of articles and...
 created_at: '2025-01-07T18:42:25Z'
-edited_at:
+edited_at: '2025-01-30T02:49:57Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/weekly-ruby-roundup-highlights-from-ruby-4-1435
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/weekly-ruby-roundup-highlights-from-4/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/weekly-ruby-roundup-highlights-from-4/cover.jpeg
 slug: weekly-ruby-roundup-highlights-from-4
 metatags:

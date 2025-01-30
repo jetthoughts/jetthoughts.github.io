@@ -2,12 +2,16 @@
 dev_to_id: 2167581
 dev_to_url: https://dev.to/jetthoughts/from-slim-to-erb-a-developers-journey-back-to-classic-templates-3ipd
 title: 'From SLIM to ERB: A Developer''s Journey Back to Classic Templates'
-description: Explore the debate between SLIM and ERB templating engines in Ruby on Rails as a developer shares their journey back to ERB after years with SLIM.
+description: In a recent discussion on Reddit, a developer shared their experience of transitioning back to ERB...
 created_at: '2024-12-20T23:09:29Z'
-edited_at:
+edited_at: '2025-01-30T03:26:35Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/from-slim-to-erb-a-developers-journey-back-to-classic-templates-3ipd
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/from-slim-erb-developers-journey-back-classic-templates/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/from-slim-erb-developers-journey-back-classic-templates/cover.jpeg
 slug: from-slim-erb-developers-journey-back-classic-templates
 metatags:

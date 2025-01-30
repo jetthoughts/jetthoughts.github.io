@@ -2,12 +2,16 @@
 dev_to_id: 2187802
 dev_to_url: https://dev.to/jetthoughts/unlocking-the-power-of-hexagonal-architecture-in-rails-development-1ehh
 title: Unlocking the Power of Hexagonal Architecture in Rails Development
-description: Explore the insights from Alistair Cockburn's talk on Hexagonal Architecture and its application in Rails development, highlighting the importance of the Ports & Adapters pattern.
+description: Last night, Fito and I watched Alistair Cockburn's Hexagonal Architecture talk from the Tech...
 created_at: '2025-01-03T16:47:24Z'
-edited_at:
+edited_at: '2025-01-30T02:53:46Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-the-power-of-hexagonal-architecture-in-rails-development-1ehh
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/unlocking-power-of-hexagonal-architecture-in-rails-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-power-of-hexagonal-architecture-in-rails-development/cover.jpeg
 slug: unlocking-power-of-hexagonal-architecture-in-rails-development
 metatags:

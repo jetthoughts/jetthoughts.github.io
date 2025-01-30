@@ -2,12 +2,16 @@
 dev_to_id: 2171786
 dev_to_url: https://dev.to/jetthoughts/how-to-influence-decision-makers-1h5j
 title: How To Influence Decision Makers
-description: Learn how to effectively influence decision-makers with insights from Dalton Caldwell and Michael Seibel. Discover the importance of personal branding, relationships, and emotional intelligence in shaping favorable outcomes.
+description: In today's fast-paced world, the ability to influence decision-makers is crucial for anyone looking...
 created_at: '2024-12-23T23:16:44Z'
-edited_at:
+edited_at: '2025-01-30T03:23:20Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/how-to-influence-decision-makers-1h5j
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/how-influence-decision-makers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-influence-decision-makers/cover.jpeg
 slug: how-influence-decision-makers
 metatags:

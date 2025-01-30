@@ -2,11 +2,15 @@
 dev_to_id: 2240087
 dev_to_url: https://dev.to/jetthoughts/how-to-convert-customers-with-cold-emails-startup-school-996
 title: How To Convert Customers With Cold Emails | Startup School
-description: Learn how to write cold emails that convert with expert tips from YC Group Partner Aaron Epstein. Discover strategies for effective outreach, including the importance of warm introductions, mapping your funnel, and personalizing your messages.
+description: In the world of startups, cold emailing can be a game changer. Whether you're looking to boost...
 created_at: '2025-01-25T11:38:14Z'
-edited_at:
+edited_at: '2025-01-30T02:37:45Z'
 draft: false
-tags: []
+tags:
+- startup
+- management
+- productivity
+- tutorial
 canonical_url: https://dev.to/jetthoughts/how-to-convert-customers-with-cold-emails-startup-school-996
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-convert-customers-with-cold-emails-startup-school/cover.jpeg
 slug: how-convert-customers-with-cold-emails-startup-school

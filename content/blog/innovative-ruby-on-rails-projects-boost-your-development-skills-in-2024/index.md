@@ -4,9 +4,13 @@ dev_to_url: https://dev.to/jetthoughts/innovative-ruby-on-rails-projects-to-boos
 title: Innovative Ruby on Rails Projects to Boost Your Development Skills in 2024
 description: Ruby on Rails, often just called Rails, is a popular framework for building web applications. If...
 created_at: '2024-12-29T17:47:43Z'
-edited_at: '2025-01-22T22:14:18Z'
+edited_at: '2025-01-30T03:16:52Z'
 draft: false
-tags: []
+tags:
+- startup
+- management
+- productivity
+- tutorial
 canonical_url: https://jetthoughts.com/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/cover.jpeg
 slug: innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024

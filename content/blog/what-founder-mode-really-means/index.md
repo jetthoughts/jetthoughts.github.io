@@ -2,12 +2,16 @@
 dev_to_id: 2242904
 dev_to_url: https://dev.to/jetthoughts/what-founder-mode-really-means-1ab8
 title: What Founder Mode Really Means
-description: Explore the concept of 'founder mode' as discussed by Airbnb CEO Brian Chesky. Learn how founders can maintain their influence in growing companies, tackle bureaucracy, and foster effective management.
+description: In a recent talk at a Y Combinator alumni event, Airbnb CEO Brian Chesky shared insights on the...
 created_at: '2025-01-27T00:47:24Z'
-edited_at:
+edited_at: '2025-01-30T02:37:12Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/what-founder-mode-really-means-1ab8
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/what-founder-mode-really-means/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-founder-mode-really-means/cover.jpeg
 slug: what-founder-mode-really-means
 metatags:

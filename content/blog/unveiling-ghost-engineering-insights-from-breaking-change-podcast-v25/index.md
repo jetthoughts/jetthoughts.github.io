@@ -2,12 +2,16 @@
 dev_to_id: 2184627
 dev_to_url: https://dev.to/jetthoughts/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25-3088
 title: 'Unveiling Ghost Engineering: Insights from Breaking Change Podcast v25'
-description: Explore the latest insights on Ghost Engineering from Breaking Change podcast v25, featuring expert opinions and real-world applications.
+description: In the latest episode of the Breaking Change podcast, host Justin Searls dives into the intriguing...
 created_at: '2025-01-01T15:56:43Z'
-edited_at:
+edited_at: '2025-01-30T02:55:42Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25-3088
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25/cover.jpeg
 slug: unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25
 metatags:

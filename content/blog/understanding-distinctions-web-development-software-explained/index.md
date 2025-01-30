@@ -2,12 +2,16 @@
 dev_to_id: 2223826
 dev_to_url: https://dev.to/jetthoughts/understanding-the-distinctions-web-development-and-software-development-explained-4eh3
 title: 'Understanding the Distinctions: Web Development and Software Development Explained'
-description: Explore the differences between web and software development, their skills, tools, and career paths.
+description: When it comes to tech careers, web development and software development often get tossed around like...
 created_at: '2025-01-19T06:45:24Z'
-edited_at:
+edited_at: '2025-01-30T02:42:37Z'
 draft: false
-tags: []
-canonical_url: https://dev.to/jetthoughts/understanding-the-distinctions-web-development-and-software-development-explained-4eh3
+tags:
+- startup
+- management
+- productivity
+- tutorial
+canonical_url: https://jetthoughts.com/blog/understanding-distinctions-web-development-software-explained/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/understanding-distinctions-web-development-software-explained/cover.jpeg
 slug: understanding-distinctions-web-development-software-explained
 metatags:
