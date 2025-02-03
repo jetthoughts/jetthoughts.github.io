@@ -1,6 +1,8 @@
 ---
-title: Join Us And Take Your Career To The Next Level
-description: Join us and become part of an elite group of developers consisting of international teams at the forefront of Software and Innovation.
+title: "Elevate Your Career with JetThoughts: Join Our Elite Development Team
+Why?"
+description: "Join JetThoughts and advance your career in a dynamic, supportive environment. Explore exciting job opportunities in software development and become part of a world-class team dedicated to innovation and growth.
+Why?"
 author: Paul Keen
 type: page
 slug: careers

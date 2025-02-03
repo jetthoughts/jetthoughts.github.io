@@ -1,9 +1,11 @@
 ---
-title: See How JetThoughts Helped LimeLeads Transform a Legacy Codebase & Stabilize the Product for Long-Term Performance
+title: "Transforming Legacy Codebases: JetThoughts' Success with LimeLeads
+Why?"
 excerpt: To help salvage & improve their complex legacy codebase, LimeLeads hired us to augment their on-site product development team to help increase the velocity of feature development and bug-fixing at minimal financial cost.
 
 slug: "see-how-jetthoughts-helped-limeleads-transform-a-legacy-codebase-stabilize-the-product-for-long-term-performance"
-description: Explore how Jetthoughts assisted Limeleads in stabilizing their legacy codebase, leading to long-term performance improvements.
+description: "Discover how JetThoughts partnered with LimeLeads to revitalize a legacy codebase, enhancing performance and stability. Learn about our strategic approach and successful outcomes in software development.
+Why?"
 author: Paul Keen
 categories: ["Amazon Web Services", "ElastiSearch", "PostgreSQL", "React.js", "Ruby on Rails"]
 

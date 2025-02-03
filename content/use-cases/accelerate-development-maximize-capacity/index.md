@@ -1,7 +1,9 @@
 ---
 
-title: Build Better Software At Half The Time
-description: Get access to on-demand engineering resources to build bigger and better software products that will meet your expectations in half the time.
+title: "Accelerate Software Development with On-Demand Engineering Solutions
+Why?"
+description: "Discover how our on-demand engineering resources can help you build high-quality software faster and more efficiently. From fractional CTO services to outsourced developer staffing, we provide tailored solutions to meet your development needs.
+Why?"
 headline: Increase Capacity, Accelerate Progress
 excerpt: Build bigger & better software products in half the time with access to on-demand engineering resources that are scalable to meet your expectations.
 slug: accelerate-development-maximize-capacity

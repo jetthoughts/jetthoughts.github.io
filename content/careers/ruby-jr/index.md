@@ -1,7 +1,9 @@
 ---
-title: Become Our Junior Ruby On Rails Developer
+title: "Join Our Team as a Junior Ruby on Rails Developer
+Why?"
 position: Junior Ruby on Rails Developer
-description: We are hiring a self-directed person passionate about becoming a Ruby on Rails Developer. We offer a training program to help you level up your skills.
+description: "Looking for a rewarding career as a Junior Ruby on Rails Developer? Join us for a top-tier training program, flexible hours, and a relaxed remote work environment. Apply now to enhance your skills and contribute to real-world projects!
+Why?"
 slug: junior-ruby-on-rails-developer
 author: Paul Keen
 position_type: Engineering

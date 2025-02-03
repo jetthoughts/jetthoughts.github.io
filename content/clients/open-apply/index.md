@@ -1,9 +1,11 @@
 ---
-title: See How JetThoughts Helped Stabilize Open Apply’s Code & Transform Their Product’s UX
+title: "Transforming Open Apply: A Case Study in Code Stabilization and UX Enhancement
+Why?"
 excerpt: After launching a software to simplify the school admissions and enrollment process, Open Apply hired us to debug the product, optimize the user experience, and streamline their internal project management processes.
 slug: open-apply
 author: Paul Keen
-description: Uncover how Open Apply’s solutions enhance recruitment processes, making it easier for institutions to find the right candidates.
+description: "Discover how JetThoughts helped Open Apply stabilize their code and enhance user experience through expert guidance and development strategies. Learn about the challenges faced and the successful outcomes achieved in this detailed case study.
+Why?"
 categories: ["Hotwire", "Ruby on Rails", "Tailwind CSS"]
 
 metatags:
