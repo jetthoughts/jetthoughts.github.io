@@ -6,6 +6,10 @@ theme = "beaver"
 enableGitInfo = true
 disableKinds = []
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-WDX8QHEBBR'
+
 [markup.goldmark.renderer]
   unsafe = true
 
@@ -269,4 +273,3 @@ tell = "entry.1791620687"
 [params.forms.newsletter]
 action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD4751jeepeQe4wefgLqBO6XAU0qqvKWvmJ8P6xRmrMRvakg/formResponse"
 email = "entry.939459641"
-

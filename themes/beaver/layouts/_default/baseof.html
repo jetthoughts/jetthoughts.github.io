@@ -53,6 +53,8 @@
 
     {{ partial "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) }}
 
+    {{ partial "google_analytics.html" }}
+
     <style>
         .logo-image-main {
             width: 200px;
