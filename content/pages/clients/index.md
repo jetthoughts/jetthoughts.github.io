@@ -1,8 +1,6 @@
 ---
-title: "Expert Software Development Services for Positive Business Outcomes
-Why?"
-description: "Discover how JetThoughts delivers expert software development services, including fractional CTO, product management, and QA, to help businesses achieve positive outcomes. Contact us for a free consultation!
-Why?"
+title: "Expert Software Development Services for Positive Business Outcomes"
+description: "Discover how JetThoughts delivers expert software development services, including fractional CTO, product management, and QA, to help businesses achieve positive outcomes. Contact us for a free consultation!"
 author: Paul Keen
 type: page
 slug: clients

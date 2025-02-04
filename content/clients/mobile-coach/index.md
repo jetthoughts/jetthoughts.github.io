@@ -1,10 +1,8 @@
 ---
-title: "Transforming Mobile Coach: A Case Study in Scalable Development Solutions
-Why?"
+title: "Transforming Mobile Coach: A Case Study in Scalable Development Solutions"
 excerpt: To help take their enterprise chatbot platform to the next level, Mobile Coach hired us to support and build new features for a group of internal products related to the core platform and help scale both their R&D & engineering team.
 slug: mobile-coach
-description: "Discover how JetThoughts partnered with Mobile Coach to enhance their chatbot platform, scale their development team, and achieve significant user growth. Learn about our strategic approach and successful outcomes in this detailed case study.
-Why?"
+description: "Discover how JetThoughts partnered with Mobile Coach to enhance their chatbot platform, scale their development team, and achieve significant user growth. Learn about our strategic approach and successful outcomes in this detailed case study."
 author: Paul Keen
 categories: ["Amazon Web Services", "AngularJS", "PostgreSQL", "Ruby on Rails"]
 

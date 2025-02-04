@@ -1,8 +1,6 @@
 ---
-title: "On-Demand Access to Pre-Trained Software Developers
-Why?"
-description: "Accelerate your software development with on-demand access to pre-trained developers. Reduce hiring costs and streamline your projects with our fully-managed staffing solutions. Contact us today!
-Why?"
+title: "On-Demand Access to Pre-Trained Software Developers"
+description: "Accelerate your software development with on-demand access to pre-trained developers. Reduce hiring costs and streamline your projects with our fully-managed staffing solutions. Contact us today!"
 headline: On-demand software development staffing
 excerpt: Grow an engineering team faster while eliminating recruiting, training, & payroll costs with access to pre-trained developers ready to deploy in weeks.
 slug: outsourced-developer-staffing
