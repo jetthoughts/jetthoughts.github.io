@@ -1,8 +1,6 @@
 ---
-title: "Accelerate Product Development with Expert Fractional Leadership
-Why?"
-description: "Unlock your product's potential with on-demand fractional leadership. Our experts bridge the gap between business and technology, ensuring faster, high-quality product development tailored to your needs. Contact us today!
-Why?"
+title: "Accelerate Product Development with Expert Fractional Leadership"
+description: "Unlock your product's potential with on-demand fractional leadership. Our experts bridge the gap between business and technology, ensuring faster, high-quality product development tailored to your needs. Contact us today!"
 headline: On-demand fractional chief product officers
 excerpt: Bridge the gap between the business team, software developers, and customers with access to product management experts to help accelerate development.
 slug: fractional-product-management
