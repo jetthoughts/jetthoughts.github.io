@@ -1,10 +1,10 @@
 ---
 dev_to_id: 2266552
 dev_to_url: https://dev.to/jetthoughts/the-overnight-success-of-kalshi-3ngd
-title: The "Overnight Success" Of Kalshi
-description: In which Michael and I congratulate Kalshi for their "overnight success" on the app store charts 5+ years in the making.
+title: The ‘Overnight Success’ Of Kalshi
+description: In the world of startups, the term "overnight success" often masks the years of hard work and...
 created_at: '2025-02-08T19:22:33Z'
-edited_at:
+edited_at: '2025-02-09T12:02:09Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/the-overnight-success-of-kalshi-3ngd
