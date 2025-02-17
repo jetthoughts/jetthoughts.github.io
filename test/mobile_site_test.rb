@@ -35,13 +35,9 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_visit_blog_post
     visit "/blog/"
 
-    new_window = window_opened_by do
-      find(".blog-post .post-content .link", match: :first).click
-    end
+    find(".blog a.link", match: :first).click
 
-    within_window new_window do
-      assert_text "Read next"
-    end
+    assert_selector ".single-content header .heading"
   end
 
   def test_blog_post
