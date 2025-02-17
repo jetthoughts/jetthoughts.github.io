@@ -6,8 +6,6 @@ require_relative "article_cleaner"
 require_relative "dev_to_adapter"
 
 class Sync
-  include ArticleUpdater
-
   DEFAULT_WORKING_DIR = "content/blog/".freeze
   SYNC_STATUS_FILE = "sync_status.yml".freeze
 
@@ -23,29 +21,23 @@ class Sync
     new(**kwargs).perform(force)
   end
 
-  def sync_status
-    YAML.load_file(@working_dir / SYNC_STATUS_FILE)
-  rescue Errno::ENOENT
-    logger.warn "Warning: #{SYNC_STATUS_FILE} not found."
-    {}
-  rescue Psych::SyntaxError => e
-    logger.error "YAML parsing error in #{SYNC_STATUS_FILE}: #{e.message}"
-    {}
-  end
-
   def perform(force)
     sync_checker.update_sync_status
-    download_new_articles(force)
+    article_updater.download_new_articles(force)
     article_cleaner.cleanup_renamed_articles
   end
 
   private
 
-  def article_cleaner
-    @article_cleaner ||= ArticleCleaner.new(working_dir.to_s, logger)
-  end
-
   def sync_checker
     @sync_checker ||= ArticleSyncChecker.new(working_dir.to_s, http_client, logger:)
+  end
+
+  def article_updater
+    @article_updater ||= ArticleUpdater.new(working_dir.to_s, http_client, logger:)
+  end
+
+  def article_cleaner
+    @article_cleaner ||= ArticleCleaner.new(working_dir.to_s, logger)
   end
 end
