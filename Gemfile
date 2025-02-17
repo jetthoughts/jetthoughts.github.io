@@ -12,6 +12,7 @@ gem "rackup"
 gem "puma"
 
 gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
+gem 'simplecov', require: false
 gem "vips"
 
 # system libs
