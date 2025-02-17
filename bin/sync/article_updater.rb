@@ -2,6 +2,7 @@ require "fileutils"
 require_relative "retryable"
 require_relative "images_downloader"
 require_relative "article_fetcher"
+require_relative "article_cleaner"
 
 module ArticleUpdater
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
