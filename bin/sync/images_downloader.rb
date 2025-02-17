@@ -12,6 +12,8 @@ class ImagesDownloader
   include Retryable
   include Logging
 
+  class NetworkError < StandardError; end
+
   attr_reader :slug, :working_dir, :http_client, :remote_data, :local_data
 
   def initialize(slug, http_client, working_dir, remote_data, local_data)
@@ -31,7 +33,14 @@ class ImagesDownloader
     content = process_images(content)
 
     remote_data["body_markdown"] = content
+
     save_content(content)
+  rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
+    logger.error "Network error while downloading images: #{e.message}"
+    raise NetworkError, "Failed to download images: #{e.message}"
+  rescue => e
+    logger.error "Error processing images: #{e.message}"
+    raise
   end
 
   private

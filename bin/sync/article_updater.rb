@@ -9,6 +9,8 @@ class ArticleUpdater
   include Retryable
   include Logging
 
+  class NetworkError < StandardError; end
+
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
   DEV_TO_API_URL = "https://dev.to/api/articles".freeze
   DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
@@ -57,6 +59,9 @@ class ArticleUpdater
           mark_as_synced(article_id, updated_article["edited_at"])
         end
       end
+    rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
+      logger.error "Network error: #{e.message}"
+      raise NetworkError, "Failed to download articles: #{e.message}"
     rescue => e
       logger.error "Error processing articles: #{e.message}"
       raise
