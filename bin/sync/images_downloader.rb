@@ -1,13 +1,18 @@
 require "fileutils"
 require "uri"
-require_relative "retryable"
 require "pathname"
+require_relative "retryable"
+require_relative "article_fetcher"
+require_relative "logging"
 
 IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?://[^\s\)]+)\)}
 REPO_URL = "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master".freeze
 
 class ImagesDownloader
   include Retryable
+  include Logging
+
+  attr_reader :slug, :working_dir, :http_client, :remote_data, :local_data
 
   def initialize(slug, http_client, working_dir, remote_data, local_data)
     @slug = slug
@@ -20,53 +25,52 @@ class ImagesDownloader
   def perform
     FileUtils.mkdir_p(page_bundle_dir) unless page_bundle_dir.exist?
 
-    # TODO: Replace with `@remote_data["body_markdown"]`
-    content = File.read(index_path)
+    content = remote_data["body_markdown"]
 
-    content = process_cover_image(content, index_path)
+    content = process_cover_image(content)
     content = process_images(content)
 
-    File.write(index_path, content)
-    @remote_data["body_markdown"] = content
+    remote_data["body_markdown"] = content
+    save_content(content)
   end
 
   private
+
+  def save_content(content)
+    File.write(index_path, content)
+  end
 
   def index_path
     @_index ||= page_bundle_dir / "index.md"
   end
 
   def work_dir
-    @_work_dir ||= Pathname.new(@working_dir).cleanpath
+    @_work_dir ||= Pathname.new(working_dir).cleanpath
   end
 
   def page_bundle_dir
-    @_page_bundle_dir ||= work_dir / @slug
+    @_page_bundle_dir ||= work_dir / slug
   end
 
   def fetcher
-    @_fetcher ||= ArticleFetcher.new(@http_client)
+    @_fetcher ||= ArticleFetcher.new(http_client)
   end
 
-  def process_cover_image(content, file_path)
-    cover_image = @remote_data["cover_image"]
+  def process_cover_image(content)
+    cover_image = remote_data["cover_image"]
+    return content unless cover_image
 
-    if cover_image
-      ext = ext_from_image_url(cover_image)
-      cover_path = to_relative_path("cover#{ext}")
+    ext = ext_from_image_url(cover_image)
+    cover_path = to_relative_path("cover#{ext}")
 
-      if download_image(cover_image, cover_path)
-        updated_content = content.sub(cover_image, to_absolute_url(cover_path))
-        File.write(file_path, updated_content)
-
-        @remote_data["cover_image"] = to_absolute_url(cover_path)
-        return updated_content
-      else
-        FileUtils.rm_f(cover_path)
-      end
+    if download_image(cover_image, cover_path)
+      absolute_url = to_absolute_url(cover_path)
+      remote_data["cover_image"] = absolute_url
+      content.sub(cover_image, absolute_url)
+    else
+      FileUtils.rm_f(cover_path)
+      content
     end
-
-    content
   end
 
   def to_absolute_url(cover_path)
@@ -83,16 +87,15 @@ class ImagesDownloader
       alt_text = $~[:alt]
       image_url = $~[:url]
 
-      # TODO: Move detect ext after downloaded file, and replace the original name only after that
       ext = ext_from_image_url(image_url)
       new_file = "file_#{index}#{ext}"
-
       new_path = to_relative_path(new_file)
 
       if download_image(image_url, new_path)
         index += 1
         "![#{alt_text}](#{new_file})"
       else
+        logger.warn "Failed to download image: #{image_url}"
         match
       end
     end
@@ -106,10 +109,11 @@ class ImagesDownloader
     image = fetcher.fetch_image(url)
     if image
       File.binwrite(dest, image)
-      puts "#{dest} downloaded from #{url}"
-      return true
+      logger.info "#{dest} downloaded from #{url}"
+      true
+    else
+      logger.error "Failed to download image from #{url}"
+      false
     end
-
-    false
   end
 end
