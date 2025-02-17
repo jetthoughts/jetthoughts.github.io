@@ -25,6 +25,7 @@ class ArticleUpdaterTest < Minitest::Test
   end
 
   def setup
+    super
     @temp_dir = Dir.mktmpdir
     @articles = [
       {
@@ -40,7 +41,7 @@ class ArticleUpdaterTest < Minitest::Test
       }
     ]
     @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client, logger: Logger.new(IO::NULL))
+    @updater = ArticleUpdater.new(@temp_dir, @http_client)
   end
 
   def teardown

@@ -1,19 +1,20 @@
 require "json"
 require "yaml"
-require "logger"
+require_relative "logging"
 
 class ArticleSyncChecker
+  include Logging
+
   USERNAME = "jetthoughts".freeze
   DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
   USELESS_WORDS = %w[and the a but to is so].freeze
   DEFAULT_SOURCE = "dev_to".freeze
 
-  attr_reader :working_dir, :http_client, :logger, :sync_file_name
+  attr_reader :working_dir, :http_client, :sync_file_name
 
-  def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE, logger: Logger.new($stdout))
+  def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE)
     @working_dir = Pathname.new(working_dir)
     @http_client = http_client
-    @logger = logger
     @sync_file_name = sync_file_name
   end
 
@@ -43,7 +44,7 @@ class ArticleSyncChecker
   end
 
   def sync_file_path
-    @_sync_file_path ||= working_dir /  sync_file_name
+    @_sync_file_path ||= working_dir / sync_file_name
   end
 
   def save_sync_status

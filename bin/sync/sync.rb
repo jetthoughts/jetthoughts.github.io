@@ -1,20 +1,21 @@
 require "yaml"
-require "logger"
+require_relative "logging"
 require_relative "article_sync_checker"
 require_relative "article_updater"
 require_relative "article_cleaner"
 require_relative "dev_to_adapter"
 
 class Sync
+  include Logging
+
   DEFAULT_WORKING_DIR = "content/blog/".freeze
   SYNC_STATUS_FILE = "sync_status.yml".freeze
 
-  attr_reader :http_client, :working_dir, :logger
+  attr_reader :http_client, :working_dir
 
-  def initialize(http_client: DevToAdapter.new, working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout))
+  def initialize(http_client: DevToAdapter.new, working_dir: DEFAULT_WORKING_DIR)
     @http_client = http_client
     @working_dir = Pathname.new(working_dir)
-    @logger = logger
   end
 
   def self.perform(force = false, **kwargs)

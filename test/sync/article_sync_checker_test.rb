@@ -16,6 +16,7 @@ class ArticleSyncCheckerTest < Minitest::Test
   end
 
   def setup
+    super
     @temp_dir = Dir.mktmpdir
     @articles = [
       {
@@ -28,7 +29,7 @@ class ArticleSyncCheckerTest < Minitest::Test
       }
     ]
     @http_client = TestHttpClient.new(@articles)
-    @checker = ArticleSyncChecker.new(@temp_dir, @http_client, logger: Logger.new(IO::NULL))
+    @checker = ArticleSyncChecker.new(@temp_dir, @http_client)
   end
 
   def teardown
@@ -45,7 +46,7 @@ class ArticleSyncCheckerTest < Minitest::Test
     status = YAML.load_file(File.join(@temp_dir, ArticleSyncChecker::DEFAULT_SYNC_STATUS_FILE))
 
     assert_equal 1, status.size
-    assert_equal "test-article-ruby-rails", status[1][:slug]
+    assert_equal "test-article-ruby-rails-testing", status[1][:slug]
     assert_equal "2025-02-17T10:00:00Z", status[1][:edited_at]
     assert_equal false, status[1][:synced]
     assert_equal ArticleSyncChecker::DEFAULT_SOURCE, status[1][:source]
@@ -91,7 +92,7 @@ class ArticleSyncCheckerTest < Minitest::Test
       "tags" => "a, ruby, the, testing"
     }
     @http_client = TestHttpClient.new([article])
-    @checker = ArticleSyncChecker.new(@temp_dir, @http_client, logger: Logger.new(IO::NULL))
+    @checker = ArticleSyncChecker.new(@temp_dir, @http_client)
 
     @checker.update_sync_status
     status = YAML.load_file(File.join(@temp_dir, ArticleSyncChecker::DEFAULT_SYNC_STATUS_FILE))
