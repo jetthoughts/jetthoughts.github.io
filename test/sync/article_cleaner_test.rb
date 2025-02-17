@@ -1,16 +1,14 @@
 # frozen_string_literal: true
 
-require "unit_helper"
+require_relative "test_helper"
 require_relative "../../bin/sync/article_cleaner"
 
 class ArticleCleanerTest < Minitest::Test
-  def setup
-    @temp_dir = Dir.mktmpdir
-    @cleaner = ArticleCleaner.new(@temp_dir)
-  end
+  include TestHelper
 
-  def teardown
-    FileUtils.remove_entry @temp_dir if Dir.exist?(@temp_dir)
+  def setup
+    @temp_dir = create_temp_dir
+    @cleaner = ArticleCleaner.new(@temp_dir)
   end
 
   def test_cleanup_renamed_articles_with_no_working_dir
@@ -27,7 +25,21 @@ class ArticleCleanerTest < Minitest::Test
   end
 
   def test_cleanup_renamed_articles_with_valid_sync_file
-    create_sync_file([{ slug: "keep-article" }, { slug: "another-article" }])
+    create_sync_file(
+      @temp_dir,
+      1 => {
+        edited_at: "2025-02-17T10:00:00Z",
+        slug: "keep-article",
+        synced: true,
+        source: "dev_to"
+      },
+      2 => {
+        edited_at: "2025-02-17T10:00:00Z",
+        slug: "another-article",
+        synced: true,
+        source: "dev_to"
+      }
+    )
     create_article_dir("keep-article")
     create_article_dir("remove-article")
 
@@ -39,7 +51,7 @@ class ArticleCleanerTest < Minitest::Test
   end
 
   def test_cleanup_renamed_articles_with_invalid_yaml
-    create_sync_file_with_content("invalid: yaml: content: - ")
+    create_sync_file(@temp_dir, "invalid: yaml: content: - ")
     create_article_dir("test-article")
 
     deleted_folders = @cleaner.cleanup_renamed_articles
@@ -49,7 +61,7 @@ class ArticleCleanerTest < Minitest::Test
   end
 
   def test_cleanup_renamed_articles_with_invalid_article_structure
-    create_sync_file_with_content("article1:\n  invalid_key: value")
+    create_sync_file(@temp_dir, "article1:\n  invalid_key: value")
     create_article_dir("test-article")
 
     deleted_folders = @cleaner.cleanup_renamed_articles
@@ -64,14 +76,5 @@ class ArticleCleanerTest < Minitest::Test
     dir_path = File.join(@temp_dir, name)
     FileUtils.mkdir_p(dir_path)
     File.write(File.join(dir_path, ArticleCleaner::ARTICLE_FILE), "# Test Content")
-  end
-
-  def create_sync_file(articles)
-    content = articles.each_with_index.to_h { |article, i| ["article#{i + 1}", article] }
-    create_sync_file_with_content(content.to_yaml)
-  end
-
-  def create_sync_file_with_content(content)
-    File.write(File.join(@temp_dir, ArticleCleaner::SYNC_STATUS_FILE), content)
   end
 end

@@ -13,7 +13,7 @@ class Sync
 
   attr_reader :http_client, :working_dir
 
-  def initialize(http_client: DevToAdapter.new, working_dir: DEFAULT_WORKING_DIR)
+  def initialize(http_client: DevToClient.new, working_dir: DEFAULT_WORKING_DIR)
     @http_client = http_client
     @working_dir = Pathname.new(working_dir)
   end

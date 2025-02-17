@@ -31,10 +31,6 @@ class ArticleFetcher
     end
   end
 
-  def original_image_url(url)
-    remove_cdn(url)
-  end
-
   def ext_from_image_url(image_url)
     File.extname(URI(remove_cdn(image_url)).path)
   end

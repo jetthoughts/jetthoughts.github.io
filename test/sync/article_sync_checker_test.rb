@@ -1,39 +1,16 @@
 # frozen_string_literal: true
 
-require "unit_helper"
+require_relative "test_helper"
 require_relative "../../bin/sync/article_sync_checker"
 
 class ArticleSyncCheckerTest < Minitest::Test
-  class TestHttpClient
-    def initialize(articles)
-      @articles = articles
-    end
-
-    def get_articles(username, _)
-      raise ArgumentError, "Invalid username" unless username == ArticleSyncChecker::USERNAME
-      OpenStruct.new(body: @articles.to_json)
-    end
-  end
+  include TestHelper
 
   def setup
-    super
-    @temp_dir = Dir.mktmpdir
-    @articles = [
-      {
-        "id" => 1,
-        "title" => "Test Article",
-        "slug" => "test-article-123",
-        "tags" => "ruby, rails, testing",
-        "edited_at" => "2025-02-17T10:00:00Z",
-        "created_at" => "2025-02-17T09:00:00Z"
-      }
-    ]
+    @temp_dir = create_temp_dir
+    @articles = [sample_article]
     @http_client = TestHttpClient.new(@articles)
     @checker = ArticleSyncChecker.new(@temp_dir, @http_client)
-  end
-
-  def teardown
-    FileUtils.remove_entry @temp_dir if Dir.exist?(@temp_dir)
   end
 
   def test_update_sync_status_creates_file_if_not_exists
@@ -54,6 +31,7 @@ class ArticleSyncCheckerTest < Minitest::Test
 
   def test_update_sync_status_with_existing_unmodified_article
     create_sync_file(
+      @temp_dir,
       1 => {
         edited_at: "2025-02-17T10:00:00Z",
         slug: "test-article-ruby-rails",
@@ -70,6 +48,7 @@ class ArticleSyncCheckerTest < Minitest::Test
 
   def test_update_sync_status_with_modified_article
     create_sync_file(
+      @temp_dir,
       1 => {
         edited_at: "2025-02-17T09:00:00Z",
         slug: "test-article-ruby-rails",
@@ -86,12 +65,12 @@ class ArticleSyncCheckerTest < Minitest::Test
   end
 
   def test_slug_generation_removes_useless_words
-    article = {
-      "id" => 2,
-      "slug" => "the-best-and-most-useful-tips-123",
-      "tags" => "a, ruby, the, testing"
-    }
-    @http_client = TestHttpClient.new([article])
+    @articles = [sample_article(
+                   "id" => 2,
+                   "slug" => "the-best-and-most-useful-tips-123",
+                   "tags" => "a, ruby, the, testing"
+                 )]
+    @http_client = TestHttpClient.new(@articles)
     @checker = ArticleSyncChecker.new(@temp_dir, @http_client)
 
     @checker.update_sync_status
@@ -102,7 +81,7 @@ class ArticleSyncCheckerTest < Minitest::Test
 
   private
 
-  def create_sync_file(content)
-    File.write(File.join(@temp_dir, ArticleSyncChecker::DEFAULT_SYNC_STATUS_FILE), content.to_yaml)
+  def create_sync_file(temp_dir, content)
+    File.write(File.join(temp_dir, ArticleSyncChecker::DEFAULT_SYNC_STATUS_FILE), content.to_yaml)
   end
 end

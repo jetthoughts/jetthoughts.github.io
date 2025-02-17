@@ -1,7 +1,7 @@
 require "httparty"
 require "faraday"
 
-class DevToAdapter
+class DevToClient
   BASE_URL = "https://dev.to/api"
 
   def initialize(http_client: Faraday)
