@@ -11,7 +11,7 @@ class ArticleCleaner
   attr_reader :working_dir
 
   def initialize(working_dir)
-    @working_dir = working_dir
+    @working_dir = Pathname.new(working_dir)
   end
 
   def cleanup_renamed_articles
