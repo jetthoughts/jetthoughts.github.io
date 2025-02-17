@@ -4,6 +4,7 @@ module ArticleSyncChecker
   USERNAME = "jetthoughts".freeze
   SYNC_STATUS_FILE = "sync_status.yml".freeze
   USELESS_WORDS = %w[and the a but to is so].freeze
+  DEFAULT_SOURCE = "dev_to".freeze
 
   def update_sync_status
     ensure_sync_status_file_exists
@@ -51,7 +52,8 @@ module ArticleSyncChecker
       @sync_status[id] ||= {
         edited_at: edited_at,
         slug: slug(article),
-        synced: false
+        synced: false,
+        source: DEFAULT_SOURCE
       }
 
       if @sync_status[id][:edited_at] != edited_at

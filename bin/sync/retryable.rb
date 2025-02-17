@@ -2,7 +2,7 @@ module Retryable
   RETRY_CONFIG = {
     max_attempts: 5,
     base_delay: 2
-  }.freeze
+  }
 
   def with_retries(operation:)
     attempts = 0
@@ -17,6 +17,7 @@ module Retryable
 
         retry
       end
+
       puts "#{operation} failed after #{RETRY_CONFIG[:max_attempts]} attempts: #{e.message}"
     end
   end
