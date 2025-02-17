@@ -15,7 +15,7 @@ class Sync
 
   def initialize(http_client: DevToClient.new, working_dir: DEFAULT_WORKING_DIR)
     @http_client = http_client
-    @working_dir = Pathname.new(working_dir)
+    @working_dir = Pathname.new(working_dir).cleanpath
   end
 
   def self.perform(force = false, **kwargs)
@@ -31,14 +31,14 @@ class Sync
   private
 
   def sync_checker
-    @sync_checker ||= ArticleSyncChecker.new(working_dir.to_s, http_client, logger:)
+    @sync_checker ||= ArticleSyncChecker.new(working_dir, http_client)
   end
 
   def article_updater
-    @article_updater ||= ArticleUpdater.new(working_dir.to_s, http_client, logger:)
+    @article_updater ||= ArticleUpdater.new(working_dir, http_client)
   end
 
   def article_cleaner
-    @article_cleaner ||= ArticleCleaner.new(working_dir.to_s, logger)
+    @article_cleaner ||= ArticleCleaner.new(working_dir)
   end
 end
