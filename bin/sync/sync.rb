@@ -22,7 +22,7 @@ class Sync
   end
 
   def sync_status
-    YAML.load_file(File.join(@working_dir, SYNC_STATUS_FILE))
+    YAML.load_file(@working_dir / SYNC_STATUS_FILE)
   rescue Errno::ENOENT
     puts "Warning: #{YAML_STATUS_FILE} not found."
     {}

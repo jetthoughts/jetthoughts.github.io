@@ -29,10 +29,16 @@ module ArticleUpdater
           next
         end
 
-        updated_article = update_meta_on_dev_to(article_id, local_data[:slug], { description: local_data[:description] })
-        next unless updated_article
-
-        mark_as_synced(article_id, updated_article["edited_at"])
+        # unless ENV["DEVELOPMENT"]
+        #   updated_article = update_meta_on_dev_to(
+        #     article_id,
+        #     local_data[:slug],
+        #     { description: local_data[:description] }
+        #   )
+        #   next unless updated_article
+        #
+        #   mark_as_synced(article_id, updated_article["edited_at"])
+        # end
       end
     rescue => e
       puts "Error processing articles: #{e.message}"
