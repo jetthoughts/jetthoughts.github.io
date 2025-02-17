@@ -6,7 +6,6 @@ require_relative "article_cleaner"
 require_relative "dev_to_adapter"
 
 class Sync
-  include ArticleSyncChecker
   include ArticleUpdater
 
   DEFAULT_WORKING_DIR = "content/blog/".freeze
@@ -35,7 +34,7 @@ class Sync
   end
 
   def perform(force)
-    update_sync_status
+    sync_checker.update_sync_status
     download_new_articles(force)
     article_cleaner.cleanup_renamed_articles
   end
@@ -44,5 +43,9 @@ class Sync
 
   def article_cleaner
     @article_cleaner ||= ArticleCleaner.new(working_dir.to_s, logger)
+  end
+
+  def sync_checker
+    @sync_checker ||= ArticleSyncChecker.new(working_dir.to_s, http_client, logger:)
   end
 end
