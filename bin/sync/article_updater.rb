@@ -1,53 +1,83 @@
 require "fileutils"
+require "yaml"
+require "logger"
 require_relative "retryable"
 require_relative "images_downloader"
 require_relative "article_fetcher"
-require_relative "article_cleaner"
 
-module ArticleUpdater
+class ArticleUpdater
+  include Retryable
+
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
   DEV_TO_API_URL = "https://dev.to/api/articles".freeze
-  YAML_STATUS_FILE = "sync_status.yml".freeze
+  DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
 
-  include Retryable
+  attr_reader :working_dir, :http_client, :logger, :sync_file_name
+
+  def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE, logger: Logger.new($stdout))
+    raise ArgumentError, "working_dir is required" if working_dir.nil?
+
+    @working_dir = Pathname.new(working_dir)
+    @http_client = http_client
+    @logger = logger
+    @sync_file_name = sync_file_name
+  end
 
   def download_new_articles(force = false)
     raise ArgumentError, "http_client is required" if http_client.nil?
-    raise ArgumentError, "working_dir is required" if working_dir.nil?
 
     articles = force ? all_articles : non_synced_articles
 
     begin
       articles.each do |article_id, local_data|
         remote_data = fetch_remote_article(article_id)
-        next unless remote_data
+        unless remote_data
+          logger.error "Error fetching article ID: #{article_id}"
+          next
+        end
 
         save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
         download_images(local_data[:slug], http_client, working_dir, remote_data, local_data)
 
         if has_updated_canonical_url?(remote_data) && has_updated_meta_description?(remote_data)
+          logger.debug "Article ID: #{article_id} already synced."
           mark_as_synced(article_id, nil)
           next
         end
 
-        # unless ENV["DEVELOPMENT"]
-        #   updated_article = update_meta_on_dev_to(
-        #     article_id,
-        #     local_data[:slug],
-        #     { description: local_data[:description] }
-        #   )
-        #   next unless updated_article
-        #
-        #   mark_as_synced(article_id, updated_article["edited_at"])
-        # end
+        if ENV["SYNC_ENV"] == "test"
+          logger.debug "Syncing metadata for article ID: #{article_id}..."
+          updated_article = update_meta_on_dev_to(
+            article_id,
+            local_data[:slug],
+            { description: local_data[:description] }
+          )
+          next unless updated_article
+
+          mark_as_synced(article_id, updated_article["edited_at"])
+        end
       end
     rescue => e
-      puts "Error processing articles: #{e.message}"
+      logger.error "Error processing articles: #{e.message}"
       raise
     end
   end
 
   private
+
+  def sync_status
+    YAML.load_file(sync_file_path)
+  rescue Errno::ENOENT
+    logger.warn "Warning: #{sync_file_name} not found."
+    {}
+  rescue Psych::SyntaxError => e
+    logger.error "YAML parsing error in #{sync_file_name}: #{e.message}"
+    {}
+  end
+
+  def sync_file_path
+    @_sync_file_path ||= working_dir / sync_file_name
+  end
 
   def fetch_remote_article(article_id)
     ArticleFetcher.new(http_client).fetch(article_id)
@@ -69,7 +99,7 @@ module ArticleUpdater
   end
 
   def download_images(slug, http_client, working_dir, remote_data, local_data)
-    puts "Downloading images to #{working_dir} / #{slug} ..."
+    logger.info "Downloading images to #{working_dir} / #{slug} ..."
     ImagesDownloader.new(slug, http_client, working_dir, remote_data, local_data).perform
   end
 
@@ -79,10 +109,11 @@ module ArticleUpdater
     if data[article_id]
       data[article_id][:edited_at] = edited_at || data[article_id][:edited_at]
       data[article_id][:synced] = true
-      File.write(File.join(working_dir, YAML_STATUS_FILE), data.to_yaml)
-      puts "Article ID: #{article_id} updated successfully."
+      logger.debug "Saving sync status to #{sync_file_path}"
+      File.write(sync_file_path, data.to_yaml)
+      logger.info "Article ID: #{article_id} updated successfully."
     else
-      puts "Article ID: #{article_id} not found."
+      logger.warn "Article ID: #{article_id} not found."
     end
   end
 
@@ -100,15 +131,18 @@ module ArticleUpdater
       }.compact
     }
 
-    with_retries(operation: "Updating canonical_url for article #{article_id}") do
+    begin
       response = http_client.update_article(url, headers: headers, body: body.to_json)
 
       if response.success?
-        puts "Update canonical_url result: #{canonical_url}\n"
+        logger.info "Update canonical_url result: #{canonical_url}\n"
         JSON.parse(response.body)
       else
         raise "Failed to update canonical_url: #{response.code} - #{response.message}"
       end
+    rescue => e
+      logger.error "Error updating article #{article_id}: #{e.message}"
+      nil
     end
   end
 
@@ -121,8 +155,8 @@ module ArticleUpdater
   end
 
   def save_article_as_markdown(article_data, slug, description)
-    dir_path = "#{working_dir}#{slug}"
-    file_name = "#{dir_path}/index.md"
+    dir_path = working_dir / slug
+    file_name = dir_path / "index.md"
 
     begin
       FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
@@ -133,9 +167,9 @@ module ArticleUpdater
       content = assemble_post_file(metadata, markdown)
       File.write(file_name, content)
 
-      puts "\nArticle saved: #{file_name}"
+      logger.info "\nArticle saved: #{file_name}"
     rescue => e
-      puts "Error saving article #{slug}: #{e.message}"
+      logger.error "Error saving article #{slug}: #{e.message}"
       raise
     end
   end
