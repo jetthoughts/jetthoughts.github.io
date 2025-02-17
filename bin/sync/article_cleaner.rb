@@ -1,9 +1,17 @@
 require "fileutils"
 require "yaml"
+require "logger"
 
-module ArticleCleaner
+class ArticleCleaner
   SYNC_STATUS_FILE = "sync_status.yml".freeze
   ARTICLE_FILE = "index.md".freeze
+
+  attr_reader :working_dir, :logger
+
+  def initialize(working_dir, logger = Logger.new($stdout))
+    @working_dir = working_dir
+    @logger = logger
+  end
 
   def cleanup_renamed_articles
     raise ArgumentError, "Working directory doesn't exist" unless Dir.exist?(working_dir)
@@ -19,9 +27,9 @@ module ArticleCleaner
         begin
           FileUtils.rm_rf(folder_path)
           deleted_folders << folder_name
-          puts "Deleted folder: #{folder_name}"
+          logger.info "Deleted folder: #{folder_name}"
         rescue => e
-          puts "Failed to delete folder #{folder_name}: #{e.message}"
+          logger.warn "Failed to delete folder #{folder_name}: #{e.message}"
         end
       end
     end

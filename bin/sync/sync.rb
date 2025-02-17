@@ -1,4 +1,5 @@
 require "yaml"
+require "logger"
 require_relative "article_sync_checker"
 require_relative "article_updater"
 require_relative "article_cleaner"
@@ -7,14 +8,16 @@ require_relative "dev_to_adapter"
 class Sync
   include ArticleSyncChecker
   include ArticleUpdater
-  include ArticleCleaner
 
   DEFAULT_WORKING_DIR = "content/blog/".freeze
-  YAML_STATUS_FILE = "sync_status.yml".freeze
+  SYNC_STATUS_FILE = "sync_status.yml".freeze
 
-  def initialize(http_client: DevToAdapter.new, working_dir: DEFAULT_WORKING_DIR)
+  attr_reader :http_client, :working_dir, :logger
+
+  def initialize(http_client: DevToAdapter.new, working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout))
     @http_client = http_client
     @working_dir = Pathname.new(working_dir)
+    @logger = logger
   end
 
   def self.perform(force = false, **kwargs)
@@ -24,20 +27,22 @@ class Sync
   def sync_status
     YAML.load_file(@working_dir / SYNC_STATUS_FILE)
   rescue Errno::ENOENT
-    puts "Warning: #{YAML_STATUS_FILE} not found."
+    logger.warn "Warning: #{SYNC_STATUS_FILE} not found."
     {}
   rescue Psych::SyntaxError => e
-    puts "YAML parsing error in #{YAML_STATUS_FILE}: #{e.message}"
+    logger.error "YAML parsing error in #{SYNC_STATUS_FILE}: #{e.message}"
     {}
   end
 
   def perform(force)
     update_sync_status
     download_new_articles(force)
-    cleanup_renamed_articles
+    article_cleaner.cleanup_renamed_articles
   end
 
   private
 
-  attr_reader :http_client, :working_dir
+  def article_cleaner
+    @article_cleaner ||= ArticleCleaner.new(working_dir.to_s, logger)
+  end
 end
