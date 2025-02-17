@@ -1,25 +1,25 @@
 require "fileutils"
 require "yaml"
-require "logger"
+require_relative "logging"
 require_relative "retryable"
 require_relative "images_downloader"
 require_relative "article_fetcher"
 
 class ArticleUpdater
   include Retryable
+  include Logging
 
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
   DEV_TO_API_URL = "https://dev.to/api/articles".freeze
   DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
 
-  attr_reader :working_dir, :http_client, :logger, :sync_file_name
+  attr_reader :working_dir, :http_client, :sync_file_name
 
-  def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE, logger: Logger.new($stdout))
+  def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE)
     raise ArgumentError, "working_dir is required" if working_dir.nil?
 
     @working_dir = Pathname.new(working_dir)
     @http_client = http_client
-    @logger = logger
     @sync_file_name = sync_file_name
   end
 

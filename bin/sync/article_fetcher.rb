@@ -1,6 +1,7 @@
 require_relative "retryable"
 
 class ArticleFetcher
+  include Logging
   include Retryable
 
   def initialize(http_client)

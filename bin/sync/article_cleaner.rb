@@ -1,16 +1,17 @@
 require "fileutils"
 require "yaml"
-require "logger"
+require_relative "logging"
 
 class ArticleCleaner
+  include Logging
+
   SYNC_STATUS_FILE = "sync_status.yml".freeze
   ARTICLE_FILE = "index.md".freeze
 
-  attr_reader :working_dir, :logger
+  attr_reader :working_dir
 
-  def initialize(working_dir, logger = Logger.new($stdout))
+  def initialize(working_dir)
     @working_dir = working_dir
-    @logger = logger
   end
 
   def cleanup_renamed_articles

@@ -6,7 +6,7 @@ require_relative "../../bin/sync/article_cleaner"
 class ArticleCleanerTest < Minitest::Test
   def setup
     @temp_dir = Dir.mktmpdir
-    @cleaner = ArticleCleaner.new(@temp_dir, Logger.new(IO::NULL))
+    @cleaner = ArticleCleaner.new(@temp_dir)
   end
 
   def teardown

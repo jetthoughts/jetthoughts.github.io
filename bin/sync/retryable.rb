@@ -12,13 +12,14 @@ module Retryable
     rescue => e
       if attempts < RETRY_CONFIG[:max_attempts]
         delay = RETRY_CONFIG[:base_delay] * attempts
-        puts "#{operation} failed, attempt #{attempts}/#{RETRY_CONFIG[:max_attempts]}. Retrying in #{delay}s..."
+        logger.warn "#{operation} failed, attempt #{attempts}/#{RETRY_CONFIG[:max_attempts]}. Retrying in #{delay}s..."
         sleep(delay)
 
         retry
       end
 
-      puts "#{operation} failed after #{RETRY_CONFIG[:max_attempts]} attempts: #{e.message}"
+      logger.error "#{operation} failed after #{RETRY_CONFIG[:max_attempts]} attempts: #{e.message}"
+      nil
     end
   end
 end
