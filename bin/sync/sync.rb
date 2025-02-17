@@ -14,7 +14,7 @@ class Sync
 
   def initialize(http_client: DevToAdapter.new, working_dir: DEFAULT_WORKING_DIR)
     @http_client = http_client
-    @working_dir = working_dir
+    @working_dir = Pathname.new(working_dir)
   end
 
   def self.perform(force = false, **kwargs)

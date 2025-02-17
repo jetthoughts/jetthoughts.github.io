@@ -1,6 +1,7 @@
 require "fileutils"
 require_relative "retryable"
 require_relative "images_downloader"
+require_relative "article_fetcher"
 
 module ArticleUpdater
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
@@ -13,22 +14,22 @@ module ArticleUpdater
     raise ArgumentError, "http_client is required" if http_client.nil?
     raise ArgumentError, "working_dir is required" if working_dir.nil?
 
-    articles = force ? all_articles : unsynced_articles
+    articles = force ? all_articles : non_synced_articles
 
     begin
-      articles.each do |article_id, attributes|
-        article_data = fetch_article(article_id)
-        next unless article_data
+      articles.each do |article_id, local_data|
+        remote_data = fetch_remote_article(article_id)
+        next unless remote_data
 
-        save_article_as_markdown(article_data, attributes[:slug], attributes[:description])
-        download_images(attributes[:slug], http_client, working_dir)
+        save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
+        download_images(local_data[:slug], http_client, working_dir, remote_data, local_data)
 
-        if has_updated_canonical_url?(article_data) && has_updated_meta_description?(article_data)
+        if has_updated_canonical_url?(remote_data) && has_updated_meta_description?(remote_data)
           mark_as_synced(article_id, nil)
           next
         end
 
-        updated_article = update_meta_on_dev_to(article_id, attributes[:slug], { description: attributes[:description] })
+        updated_article = update_meta_on_dev_to(article_id, local_data[:slug], { description: local_data[:description] })
         next unless updated_article
 
         mark_as_synced(article_id, updated_article["edited_at"])
@@ -40,6 +41,10 @@ module ArticleUpdater
   end
 
   private
+
+  def fetch_remote_article(article_id)
+    ArticleFetcher.new(http_client).fetch(article_id)
+  end
 
   def has_updated_canonical_url?(article_data)
     data = sync_status
@@ -56,8 +61,9 @@ module ArticleUpdater
     article_data["description"] == sync_status[article_data["id"]][:description]
   end
 
-  def download_images(slug, http_client, working_dir)
-    ImagesDownloader.new(slug, http_client, working_dir).call
+  def download_images(slug, http_client, working_dir, remote_data, local_data)
+    puts "Downloading images to #{working_dir} / #{slug} ..."
+    ImagesDownloader.new(slug, http_client, working_dir, remote_data, local_data).perform
   end
 
   def mark_as_synced(article_id, edited_at)
@@ -78,7 +84,7 @@ module ArticleUpdater
 
     canonical_url = JT_BLOG_HOST + "#{slug}/"
     url = "#{DEV_TO_API_URL}/#{article_id}"
-    headers = {"api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json"}
+    headers = { "api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json" }
 
     body = {
       article: {
@@ -99,7 +105,7 @@ module ArticleUpdater
     end
   end
 
-  def unsynced_articles
+  def non_synced_articles
     sync_status.select { |_key, value| value[:synced] == false }
   end
 
@@ -107,28 +113,19 @@ module ArticleUpdater
     sync_status
   end
 
-  def fetch_article(article_id)
-    url = "#{DEV_TO_API_URL}/#{article_id}"
-
-    with_retries(operation: "Fetching article #{article_id}") do
-      response = http_client.get_article(url)
-      if response.success?
-        JSON.parse(response.body)
-      else
-        raise "Failed to fetch article #{article_id}: #{response.code} - #{response.message}"
-      end
-    end
-  end
-
   def save_article_as_markdown(article_data, slug, description)
-    markdown_content = generate_markdown(article_data, slug, description)
-
     dir_path = "#{working_dir}#{slug}"
     file_name = "#{dir_path}/index.md"
 
     begin
       FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
-      File.write(file_name, markdown_content)
+
+      metadata = generate_metadata(article_data, slug, description)
+      markdown = article_data["body_markdown"] = prepare_markdown(article_data["body_markdown"])
+
+      content = assemble_post_file(metadata, markdown)
+      File.write(file_name, content)
+
       puts "\nArticle saved: #{file_name}"
     rescue => e
       puts "Error saving article #{slug}: #{e.message}"
@@ -136,19 +133,8 @@ module ArticleUpdater
     end
   end
 
-  def generate_markdown(article_data, slug, description)
-    cover_image = article_data["cover_image"]
-    metatags_image = {}
-
-    unless cover_image.to_s.empty?
-      metatags_image = {
-        "metatags" => {
-          "image" => "cover#{File.extname(cover_image)}"
-        }
-      }
-    end
-
-    article_hash = {
+  def generate_metadata(article_data, slug, description)
+    metadata = {
       "dev_to_id" => article_data["id"],
       "dev_to_url" => article_data["url"],
       "title" => article_data["title"],
@@ -158,13 +144,25 @@ module ArticleUpdater
       "draft" => false,
       "tags" => article_data["tags"],
       "canonical_url" => article_data["canonical_url"],
-      "cover_image" => cover_image,
+      "cover_image" => article_data["cover_image"],
       "slug" => slug
-    }.merge(metatags_image)
+    }
 
-    article_data["body_markdown"] = prepare_youtube_links(article_data["body_markdown"])
+    unless article_data["cover_image"].to_s.empty?
+      metadata["metatags"] = {
+        "image" => "cover#{File.extname(article_data["cover_image"])}"
+      }
+    end
 
-    "#{article_hash.to_yaml(line_width: -1)}---\n#{article_data["body_markdown"]}"
+    metadata
+  end
+
+  def prepare_markdown(markdown)
+    prepare_youtube_links(markdown)
+  end
+
+  def assemble_post_file(metadata, markdown)
+    "#{metadata.to_yaml(line_width: -1)}---\n#{markdown}"
   end
 
   def prepare_youtube_links(markdown)
