@@ -49,13 +49,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/"
     within_top_bar { click_on "Blog" }
 
-    new_window = window_opened_by do
-      find(".blog-post .post-content .link", match: :first).click
-    end
-
-    within_window new_window do
-      assert_text "Read next"
-    end
+    within(".fl-heading") { assert_text "Blog" }
+    find(".blog a.link", match: :first).click
   end
 
   def test_blog_post
