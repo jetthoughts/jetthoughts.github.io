@@ -8,10 +8,13 @@ require "support/factories"
 require "pathname"
 require "yaml"
 
+require "sync/app"
+
 class SyncTestCase < Minitest::Test
   def setup
     super
-    setup_temp_dir
+    working_dir = setup_temp_dir
+    @app = App.new(working_dir: working_dir, http_client: TestHttpClient.new([]))
   end
 
   def teardown

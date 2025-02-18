@@ -14,19 +14,17 @@ class ArticleUpdater
 
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
 
-  attr_reader :working_dir, :http_client, :storage
+  attr_reader :working_dir, :storage, :article_fetcher
 
-  def initialize(working_dir, http_client, storage: nil)
-    raise ArgumentError, "working_dir is required" if working_dir.nil?
+  def initialize(working_dir = nil, http_client = nil, storage: nil, app: nil)
+    @working_dir = working_dir ? Pathname.new(working_dir) : app&.working_dir
+    raise ArgumentError, "working_dir is required" if @working_dir.nil?
 
-    @working_dir = Pathname.new(working_dir)
-    @http_client = http_client
-    @storage = storage || SyncStatusStorage.new(@working_dir)
+    @article_fetcher = http_client ? ArticleFetcher.new(http_client) : app&.fetcher
+    @storage = storage || app&.storage || SyncStatusStorage.new(@working_dir)
   end
 
   def download_new_articles(force = false, dry_run: false)
-    raise ArgumentError, "http_client is required" if http_client.nil?
-
     articles = force ? all_articles : non_synced_articles
 
     articles.each do |article_id, local_data|
@@ -37,7 +35,7 @@ class ArticleUpdater
       end
 
       save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
-      download_images_and_update_article(local_data[:slug], http_client, working_dir, remote_data, local_data)
+      download_images_and_update_article(local_data[:slug], working_dir, remote_data, local_data)
 
       articles_sync_status = storage.load
       if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
@@ -79,16 +77,16 @@ class ArticleUpdater
   end
 
   def article_fetcher
-    @_article_fetcher ||= ArticleFetcher.new(http_client)
+    @article_fetcher ||= ArticleFetcher.new(http_client)
   end
 
   def fetch_remote_article(article_id)
     article_fetcher.fetch(article_id)
   end
 
-  def download_images_and_update_article(slug, http_client, working_dir, remote_data, local_data)
+  def download_images_and_update_article(slug, working_dir, remote_data, local_data)
     logger.info "Downloading images to #{working_dir} / #{slug} ..."
-    ImagesDownloader.new(slug, http_client, working_dir, remote_data, local_data).perform
+    ImagesDownloader.new(slug, article_fetcher, working_dir, remote_data, local_data).perform
   end
 
   def mark_as_synced(article_id, edited_at)
