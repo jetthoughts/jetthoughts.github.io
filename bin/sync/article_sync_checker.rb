@@ -1,6 +1,6 @@
 require "json"
-require "yaml"
 require_relative "logging"
+require_relative "sync_status_storage"
 
 class ArticleSyncChecker
   include Logging
@@ -10,47 +10,22 @@ class ArticleSyncChecker
   USELESS_WORDS = %w[and the a but to is so].freeze
   DEFAULT_SOURCE = "dev_to".freeze
 
-  attr_reader :working_dir, :http_client, :sync_file_name
+  attr_reader :working_dir, :http_client, :storage
 
   def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE)
     @working_dir = Pathname.new(working_dir)
     @http_client = http_client
-    @sync_file_name = sync_file_name
+    @storage = SyncStatusStorage.new(@working_dir, file_name: sync_file_name)
   end
 
   def update_sync_status
-    ensure_sync_status_file_exists
-    @sync_status = sync_status
+    storage.ensure_file_exists
+    @sync_status = storage.load
     update_status(fetch_articles)
-    save_sync_status
+    storage.save(@sync_status)
   end
 
   private
-
-  def sync_status
-    YAML.load_file(sync_file_path)
-  rescue Errno::ENOENT
-    logger.warn "Warning: #{sync_file_name} not found."
-    {}
-  rescue Psych::SyntaxError => e
-    logger.error "YAML parsing error in #{sync_file_name}: #{e.message}"
-    {}
-  end
-
-  def ensure_sync_status_file_exists
-    unless File.exist?(sync_file_path)
-      File.write(sync_file_path, {}.to_yaml)
-    end
-  end
-
-  def sync_file_path
-    @_sync_file_path ||= working_dir / sync_file_name
-  end
-
-  def save_sync_status
-    logger.debug "Saving sync status to #{sync_file_path}"
-    File.write(sync_file_path, @sync_status.to_yaml)
-  end
 
   def fetch_articles
     response = http_client.get_articles(USERNAME, 0)
