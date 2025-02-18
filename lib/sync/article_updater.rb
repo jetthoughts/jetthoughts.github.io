@@ -16,12 +16,10 @@ class ArticleUpdater
 
   attr_reader :working_dir, :storage, :article_fetcher
 
-  def initialize(working_dir = nil, http_client = nil, storage: nil, app: nil)
-    @working_dir = working_dir ? Pathname.new(working_dir) : app&.working_dir
-    raise ArgumentError, "working_dir is required" if @working_dir.nil?
-
-    @article_fetcher = http_client ? ArticleFetcher.new(http_client) : app&.fetcher
-    @storage = storage || app&.storage || SyncStatusStorage.new(@working_dir)
+  def initialize(app:)
+    @working_dir = Pathname.new(app.working_dir)
+    @article_fetcher = app.fetcher || ArticleFetcher.new(app.http_client)
+    @storage = storage || app.storage || SyncStatusStorage.new(@working_dir)
   end
 
   def download_new_articles(force = false, dry_run: false)
