@@ -1,9 +1,9 @@
 require "fileutils"
 require "uri"
 require "pathname"
-require "retryable"
+require "sync/retryable"
 require "sync/article_fetcher"
-require "logging"
+require "sync/logging"
 
 IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?://[^\s\)]+)\)}
 REPO_URL = "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master".freeze
