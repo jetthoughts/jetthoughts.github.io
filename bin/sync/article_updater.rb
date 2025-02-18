@@ -38,7 +38,7 @@ class ArticleUpdater
         end
 
         save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
-        download_images(local_data[:slug], http_client, working_dir, remote_data, local_data)
+        download_images_and_update_article(local_data[:slug], http_client, working_dir, remote_data, local_data)
 
         articles_sync_status = sync_status
         if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
@@ -92,7 +92,7 @@ class ArticleUpdater
     article_fetcher.fetch(article_id)
   end
 
-  def download_images(slug, http_client, working_dir, remote_data, local_data)
+  def download_images_and_update_article(slug, http_client, working_dir, remote_data, local_data)
     logger.info "Downloading images to #{working_dir} / #{slug} ..."
     ImagesDownloader.new(slug, http_client, working_dir, remote_data, local_data).perform
   end
