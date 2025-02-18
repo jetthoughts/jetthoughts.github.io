@@ -3,12 +3,12 @@
 require "sync_test_case"
 require "sync"
 
-class SyncTest < SyncTestCase
+class SyncScriptTest < SyncTestCase
   def setup
     super
     @http_client = TestHttpClient.new([sample_article])
     @app = create_app
-    @sync = Sync.new(app: @app)
+    @sync = SyncScript.new(app: @app)
   end
 
   def test_uses_app_storage_for_sync_checker
@@ -59,7 +59,7 @@ class SyncTest < SyncTestCase
   def test_perform_skips_article_cleaner_in_dry_run
     create_article_with_metadata("old-article", {}, "# Test Content")
 
-    Sync.new(app: create_app_with_dry_run).perform
+    SyncScript.new(app: create_app_with_dry_run).perform
 
     assert_path_exists File.join(@temp_dir, "old-article"), "Should not delete articles in dry run"
   end

@@ -6,7 +6,7 @@ require "sync/article_cleaner"
 require "sync/dev_to_client"
 require "sync/app"
 
-class Sync
+class SyncScript
   include Logging
 
   attr_reader :app
@@ -33,7 +33,7 @@ class Sync
   end
 
   def article_updater
-    @article_updater ||= ArticleUpdater.new(app: app)
+    @article_updater ||= Sync::ArticleUpdater.new(app: app)
   end
 
   def article_cleaner
