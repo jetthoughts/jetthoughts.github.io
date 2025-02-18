@@ -7,9 +7,9 @@ require "sync/sync_status_storage"
 class App
   include Logging
 
-  DEFAULT_WORKING_DIR = "content/blog/".freeze
+  DEFAULT_WORKING_DIR = "content/blog"
 
-  attr_reader :working_dir, :logger, :storage, :http_client, :fetcher
+  attr_reader :working_dir, :logger, :storage, :http_client, :fetcher, :args
 
   def initialize(args: [], working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout), http_client: nil, fetcher: nil)
     @args = args

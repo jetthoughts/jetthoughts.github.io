@@ -23,60 +23,71 @@ class ArticleUpdater
     @storage = app.storage
   end
 
-  def can_pull?(dry_run)
-    !dry_run
-  end
+  def download_articles
+    article_sync_statuses = app.force? ? all_articles : non_synced_articles
 
-  def download_new_articles(force: app.force?, dry_run: app.dry_run?)
-    articles = force ? all_articles : non_synced_articles
-
-    articles.each do |article_id, local_data|
-      sync_status[article_id][:synced] = false
-      remote_data = fetch_remote_article(article_id)
-
-      unless remote_data
-        logger.error "Error fetching article ID: #{article_id}"
-        next
-      end
-
-      if can_pull?(dry_run)
-        save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
-        download_images_and_update_article(local_data[:slug], working_dir, remote_data, local_data)
-        sync_status[article_id][:synced] = true
-      end
-
-      # Update metadata on dev.to if it is not up to date
-      if article_fetcher.has_updated_metadata?(remote_data, sync_status[article_id], local_data[:slug])
-        logger.debug "Article ID: #{article_id} already synced."
-        sync_status[article_id][:synced] = true
-      else
-        sync_status[article_id][:synced] = false # NOTE: We know that dev.to article does not have required metadata
-
-        if ENV["SYNC_ENV"] == "test" && can_push?(dry_run) # TODO: Remove SYNC_ENV condition
-          logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_id}..."
-          updated_article = article_fetcher.update_meta_on_dev_to(
-            article_id,
-            {description: description_for(local_data), canonical_url: canonical_url_for(local_data)}
-          )
-          # NOTE: We do not need to update the sync if there is no change on the dev.to side
-          if updated_article
-            sync_status[article_id][:edited_at] = updated_article["edited_at"]
-            sync_status[article_id][:synced] = true
-          end
-        end
-      end
-
-      save_sync_status_changes
-    rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
-      logger.error "Network error: #{e.message}"
-      raise NetworkError, "Failed to download article #{article_id}: #{e.message}"
-    rescue => e
-      logger.error "Error processing article #{article_id}: #{e.message}"
-      raise
+    article_sync_statuses.each do |article_id, article_sync_status|
+      download_article(article_id, article_sync_status)
     end
   end
 
   private
+
+  def can_pull?(_dry_run)
+    true
+  end
+
+  def download_article(article_id, article_sync_status)
+    remote_article = fetch_remote_article(article_id)
+
+    unless remote_article
+      logger.error "Error fetching article ID: #{article_id}"
+      return
+    end
+
+    save_content_and_images(article_sync_status, remote_article)
+
+    # Update metadata on dev.to if it is not up to date
+    update_remote_metadata(article_sync_status, remote_article)
+
+    save_sync_status_changes
+  rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
+    logger.error "Network error: #{e.message}"
+    raise NetworkError, "Failed to download article #{article_id}: #{e.message}"
+  rescue => e
+    logger.error "Error processing article #{article_id}: #{e.message}"
+    raise e
+  end
+
+  def update_remote_metadata(article_sync_status, remote_data)
+    if article_fetcher.has_updated_metadata?(remote_data, article_sync_status, article_sync_status[:slug])
+      logger.debug "Article ID: #{article_sync_status[:slug]} already synced."
+      article_sync_status[:synced] = true
+    else
+      article_sync_status[:synced] = false # NOTE: We know that dev.to article does not have required metadata
+
+      if ENV["SYNC_ENV"] == "test" && can_push?(app.dry_run?) # TODO: Remove SYNC_ENV condition
+        logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_sync_status[:slug]}..."
+        updated_article = article_fetcher.update_meta_on_dev_to(
+          remote_data["id"],
+          {description: description_for(article_sync_status), canonical_url: canonical_url_for(article_sync_status)}
+        )
+        # NOTE: We do not need to update the sync if there is no change on the dev.to side
+        if updated_article
+          article_sync_status[:edited_at] = updated_article["edited_at"]
+          article_sync_status[:synced] = true
+        end
+      end
+    end
+  end
+
+  def save_content_and_images(article_sync_status, remote_data)
+    return unless can_pull?(app.dry_run?)
+
+    save_article_as_markdown(remote_data, article_sync_status[:slug], article_sync_status[:description])
+    download_images_and_update_article(article_sync_status[:slug], working_dir, remote_data, article_sync_status)
+    article_sync_status[:synced] = true
+  end
 
   def can_push?(dry_run)
     !dry_run
