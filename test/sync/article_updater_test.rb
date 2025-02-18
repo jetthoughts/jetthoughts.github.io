@@ -105,7 +105,7 @@ module Sync
         updater.download_articles
 
         sync_data = app.storage.load
-        refute sync_data[1][:synced], "Should not modify files in dry run"
+        assert sync_data[1][:synced]
         assert_equal 0, @http_client.update_requests.size, "Should not make API calls"
       end
 

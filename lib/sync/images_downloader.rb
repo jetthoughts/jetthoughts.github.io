@@ -8,6 +8,53 @@ require "sync/logging"
 IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?://[^\s\)]+)\)}
 REPO_URL = "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master".freeze
 
+class PostStorage
+  attr_reader :working_dir
+
+  def initialize(working_dir)
+    @working_dir = Pathname.new(working_dir).cleanpath
+  end
+
+  CONTENT_FILE_NAME = "index.md"
+
+  def content_path(slug)
+    asset_path(slug, CONTENT_FILE_NAME)
+  end
+
+  def page_bundle_dir(slug)
+    working_dir / slug
+  end
+
+  def remove_asset(slug, asset_name)
+    FileUtils.rm_f(page_bundle_dir(slug) / asset_name)
+  end
+
+  def read_content(slug)
+    File.read(content_path(slug))
+  end
+
+  def save_content(slug, content)
+    ensure_page_bundle_directory(slug)
+    File.write(content_path(slug), content)
+  end
+
+  def add_media_asset(slug, asset_name, media_content)
+    ensure_page_bundle_directory(slug)
+    File.binwrite(asset_path(slug, asset_name), media_content)
+  end
+
+  private
+
+  def ensure_page_bundle_directory(slug)
+    FileUtils.mkdir_p(page_bundle_dir(slug)) unless page_bundle_dir(slug).directory?
+  end
+
+  def asset_path(slug, asset_name)
+    page_bundle_dir(slug) / asset_name
+  end
+
+end
+
 class ImagesDownloader
   include Retryable
   include Logging
@@ -16,16 +63,17 @@ class ImagesDownloader
 
   attr_reader :slug, :working_dir, :remote_data, :local_data, :fetcher
 
-  def initialize(slug, fetcher, working_dir, remote_data, local_data, app: nil)
+  def initialize(slug, remote_data = nil, local_data = nil, app:)
     @slug = slug
-    @working_dir = app&.working_dir || working_dir && Pathname.new(working_dir).cleanpath
-    @fetcher = app&.fetcher || fetcher
+    @working_dir = app.working_dir
+    @fetcher = app.fetcher
     @remote_data = remote_data
     @local_data = local_data
+    @post_storage = PostStorage.new(@working_dir)
   end
 
   def perform
-    content = File.read(index_path)
+    content = read_content
 
     content = process_cover_image(content)
     content = process_images(content)
@@ -41,20 +89,24 @@ class ImagesDownloader
 
   private
 
-  def save_content(content)
-    File.write(index_path, content)
+  def read_content
+    @post_storage.read_content(slug)
   end
 
-  def index_path
-    @_index ||= page_bundle_dir / "index.md"
+  def save_content(content)
+    @post_storage.save_content(slug, content)
+  end
+
+  def content_path
+    @_index ||= @post_storage.content_path(slug)
   end
 
   def work_dir
-    @_work_dir ||= Pathname.new(working_dir).cleanpath
+    @_work_dir ||= @post_storage.working_dir
   end
 
   def page_bundle_dir
-    @_page_bundle_dir ||= work_dir / slug
+    @_page_bundle_dir ||= @post_storage.page_bundle_dir(slug)
   end
 
   def process_cover_image(content)
@@ -62,19 +114,24 @@ class ImagesDownloader
     return content unless cover_image
 
     ext = ext_from_image_url(cover_image)
-    cover_path = to_relative_path("cover#{ext}")
+    cover_image_file_name = "cover#{ext}"
+    cover_path = to_relative_path(cover_image_file_name)
 
-    if download_image(cover_image, cover_path)
-      absolute_url = to_absolute_url(cover_path)
-      remote_data["cover_image"] = absolute_url
-      content.sub(cover_image, absolute_url)
+    if download_image(cover_image, cover_image_file_name)
+      cover_image_public_url = to_public_url(cover_path)
+      remote_data["cover_image"] = cover_image_public_url
+      content.sub(cover_image, cover_image_public_url)
     else
-      FileUtils.rm_f(cover_path)
+      remove_cover_image(cover_image_file_name)
       content
     end
   end
 
-  def to_absolute_url(cover_path)
+  def remove_cover_image(cover_image_file_name)
+    @post_storage.remove_asset(slug, cover_image_file_name)
+  end
+
+  def to_public_url(cover_path)
     "#{REPO_URL}/#{cover_path}"
   end
 
@@ -90,9 +147,8 @@ class ImagesDownloader
 
       ext = ext_from_image_url(image_url)
       new_file = "file_#{index}#{ext}"
-      new_path = to_relative_path(new_file)
 
-      if download_image(image_url, new_path)
+      if download_image(image_url, new_file)
         index += 1
         "![#{alt_text}](#{new_file})"
       else
@@ -106,15 +162,19 @@ class ImagesDownloader
     fetcher.ext_from_image_url(image_url)
   end
 
-  def download_image(url, dest)
+  def download_image(url, as_file_name)
     image = fetcher.fetch_image(url)
     if image
-      File.binwrite(dest, image)
-      logger.info "#{dest} downloaded from #{url}"
+      add_media_asset(as_file_name, image)
+      logger.info "#{as_file_name} downloaded from #{url}"
       true
     else
       logger.error "Failed to download image from #{url}"
       false
     end
+  end
+
+  def add_media_asset(asset_name, media_content)
+    @post_storage.add_media_asset(slug, asset_name, media_content)
   end
 end
