@@ -3,6 +3,8 @@
 require_relative "../unit_helper"
 require_relative "test_http_client"
 require_relative "factories"
+require "pathname"
+require "yaml"
 
 module TestHelper
   def setup
