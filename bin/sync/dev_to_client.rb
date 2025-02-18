@@ -21,6 +21,6 @@ class DevToClient
   end
 
   def update_article(url, headers:, body:)
-    @http_client.put(url, headers: headers, body: body)
+    @http_client.put(url, body, headers)
   end
 end
