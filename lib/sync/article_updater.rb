@@ -4,6 +4,68 @@ require "sync/logging"
 require "sync/retryable"
 require "sync/images_downloader"
 
+class Post
+  def initialize(storage, article, status)
+    @storage = storage
+    @article = article
+    @status = status
+  end
+
+  def save
+    content = build_markdown_content(@article, @status)
+    @storage.save_content(@status[:slug], content)
+  end
+
+  def content
+    @storage.read_content(slug)
+  end
+
+  def slug
+    @status[:slug]
+  end
+
+  def cover_image
+    @article["cover_image"]
+  end
+
+  private
+
+  def build_markdown_content(article, status)
+    metadata = generate_metadata(article, status)
+    content = prepare_markdown(article["body_markdown"].to_s)
+    "#{metadata.to_yaml(line_width: -1)}---\n#{content}"
+  end
+
+  def prepare_markdown(markdown)
+    markdown.gsub(
+      /\{% youtube "https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)(?:\?.*?)?" %\}/,
+      '{{< youtube \1 >}}'
+    )
+  end
+
+  def generate_metadata(article, status)
+    {
+      "dev_to_id" => article["id"],
+      "dev_to_url" => article["url"],
+      "title" => article["title"],
+      "description" => status[:description] || article["description"],
+      "created_at" => article["created_at"],
+      "edited_at" => article["edited_at"],
+      "draft" => false,
+      "tags" => article["tags"],
+      "canonical_url" => article["canonical_url"],
+      "cover_image" => article["cover_image"],
+      "slug" => status[:slug],
+      "metatags" => generate_metatags(article)
+    }.compact
+  end
+
+  def generate_metatags(article)
+    return nil if article["cover_image"].to_s.empty?
+    {"image" => "cover#{File.extname(article['cover_image'])}"}
+  end
+end
+
 module Sync
   class ArticleUpdater
     include Retryable
@@ -44,48 +106,19 @@ module Sync
 
     def save_content(article, status)
       # return if app.dry_run?
-      write_markdown_file(article, status)
+      post = Post.new(PostStorage.new(working_dir), article, status)
+
+      write_markdown_file(post)
       download_images(article, status)
       status[:synced] = true
     end
 
-    def write_markdown_file(article, status)
-      content = build_markdown_content(article, status)
-
-      PostStorage.new(working_dir).save_content(status[:slug], content)
-
-      logger.info("\nArticle saved: #{status[:slug]}")
+    def write_markdown_file(post)
+      post.save
+      logger.info("\nArticle saved: #{post.slug}")
     rescue => e
-      logger.error("Error saving article #{status[:slug]}: #{e.message}")
+      logger.error("Error saving article #{post.slug}: #{e.message}")
       raise
-    end
-
-    def build_markdown_content(article, status)
-      metadata = generate_metadata(article, status)
-      content = prepare_markdown(article["body_markdown"].to_s)
-      "#{metadata.to_yaml(line_width: -1)}---\n#{content}"
-    end
-
-    def generate_metadata(article, status)
-      {
-        "dev_to_id" => article["id"],
-        "dev_to_url" => article["url"],
-        "title" => article["title"],
-        "description" => status[:description] || article["description"],
-        "created_at" => article["created_at"],
-        "edited_at" => article["edited_at"],
-        "draft" => false,
-        "tags" => article["tags"],
-        "canonical_url" => article["canonical_url"],
-        "cover_image" => article["cover_image"],
-        "slug" => status[:slug],
-        "metatags" => generate_metatags(article)
-      }.compact
-    end
-
-    def generate_metatags(article)
-      return nil if article["cover_image"].to_s.empty?
-      {"image" => "cover#{File.extname(article['cover_image'])}"}
     end
 
     def update_metadata(article, status)
@@ -160,21 +193,6 @@ module Sync
     def save_sync_status
       storage.save(all_articles)
       logger.info("Sync statuses updated!")
-    end
-
-    def content_path_for(slug)
-      PostStorage.new(working_dir).content_path(slug)
-    end
-
-    def ensure_directory(path)
-      FileUtils.mkdir_p(path) unless path.directory?
-    end
-
-    def prepare_markdown(markdown)
-      markdown.gsub(
-        /\{% youtube "https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)(?:\?.*?)?" %\}/,
-        '{{< youtube \1 >}}'
-      )
     end
   end
 end
