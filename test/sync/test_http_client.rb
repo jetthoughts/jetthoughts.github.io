@@ -33,6 +33,10 @@ class TestHttpClient
     OpenStruct.new(success?: true, body: { edited_at: Time.now.utc }.to_json)
   end
 
+  def update_article(*)
+    { edited_at: Time.now.utc }
+  end
+
   def download(url)
     OpenStruct.new(success?: !url.include?("fail"), body: "fake-image-data")
   end
