@@ -51,7 +51,6 @@ module Sync
     def write_markdown_file(article, status)
       content_path = content_path_for(status[:slug])
       ensure_directory(content_path.dirname)
-
       File.write(content_path, build_markdown_content(article, status))
       logger.info("\nArticle saved: #{content_path}")
     rescue => e
@@ -123,8 +122,6 @@ module Sync
       logger.info("Downloading images to #{working_dir} / #{status[:slug]} ...")
       ImagesDownloader.new(
         status[:slug],
-        article_fetcher,
-        working_dir,
         article,
         status,
         app: app
@@ -164,7 +161,7 @@ module Sync
     end
 
     def content_path_for(slug)
-      working_dir.join(slug, CONTENT_FILE)
+      PostStorage.new(working_dir).content_path(slug)
     end
 
     def ensure_directory(path)

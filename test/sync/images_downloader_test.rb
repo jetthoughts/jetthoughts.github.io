@@ -14,8 +14,8 @@ class ImagesDownloaderTest < SyncTestCase
       "body_markdown" => @content
     )
     @local_data = { slug: @slug }
-    @http_client = TestHttpClient.new([@remote_data])
-    @downloader = ImagesDownloader.new(@slug, ArticleFetcher.new(@http_client), @temp_dir, @remote_data, @local_data)
+    @articles.replace([@remote_data])
+    @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
     create_article_with_metadata(@slug, @remote_data, @content)
 
@@ -60,7 +60,7 @@ class ImagesDownloaderTest < SyncTestCase
 
   def test_handles_missing_cover_image
     @remote_data["cover_image"] = nil
-    @downloader = ImagesDownloader.new(@slug, ArticleFetcher.new(@http_client), @temp_dir, @remote_data, @local_data)
+    @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
     @downloader.perform
 
@@ -69,7 +69,7 @@ class ImagesDownloaderTest < SyncTestCase
 
   def test_handles_failed_cover_image_download
     @remote_data["cover_image"] = "https://example.com/fail.jpg"
-    @downloader = ImagesDownloader.new(@slug, ArticleFetcher.new(@http_client), @temp_dir, @remote_data, @local_data)
+    @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
     @downloader.perform
 
