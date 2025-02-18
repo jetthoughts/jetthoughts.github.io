@@ -13,7 +13,7 @@ class App
 
   def initialize(args: [], working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout), http_client: nil)
     @args = args
-    @working_dir = working_dir
+    @working_dir = Pathname.new(working_dir)
     @logger = logger
     @storage = SyncStatusStorage.new(@working_dir)
     @storage.ensure_file_exists

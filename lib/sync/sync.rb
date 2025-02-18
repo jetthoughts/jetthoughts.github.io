@@ -1,10 +1,10 @@
 require "yaml"
-require "logging"
+require "sync/logging"
 require "sync/article_sync_checker"
 require "sync/article_updater"
 require "sync/article_cleaner"
 require "sync/dev_to_client"
-require "app"
+require "sync/app"
 
 class Sync
   include Logging
@@ -33,7 +33,7 @@ class Sync
   end
 
   def article_updater
-    @article_updater ||= ArticleUpdater.new(nil, nil, app: app)
+    @article_updater ||= ArticleUpdater.new(app: app)
   end
 
   def article_cleaner

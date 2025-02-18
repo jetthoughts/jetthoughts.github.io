@@ -13,7 +13,7 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_download_new_articles_without_working_dir
-    assert_raises(ArgumentError, "working_dir is required") { ArticleUpdater.new(nil, @http_client) }
+    assert_raises(ArgumentError, "working_dir is required") { ArticleUpdater.new }
   end
 
   def test_download_new_articles_creates_directory
@@ -69,12 +69,11 @@ class ArticleUpdaterTest < SyncTestCase
 
   def test_generates_metadata_with_cover_image
     create_sync_file(@temp_dir, create_sync_status)
-    @articles = [sample_article(
-                   "cover_image" => "https://example.com/image.jpg",
-                   "body_markdown" => "# Test Content"
-                 )]
+    @articles = [
+      sample_article("cover_image" => "https://example.com/image.jpg", "body_markdown" => "# Test Content")
+    ]
     @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client)
+    @updater = ArticleUpdater.new(app: App.new(working_dir: @temp_dir, http_client: @http_client))
 
     @updater.download_new_articles
 
@@ -89,7 +88,7 @@ class ArticleUpdaterTest < SyncTestCase
     create_sync_file(@temp_dir, create_sync_status)
     @articles = [sample_article("cover_image" => nil)]
     @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client)
+    @updater = ArticleUpdater.new(app: App.new(working_dir: @temp_dir, http_client: @http_client))
 
     @updater.download_new_articles
 
