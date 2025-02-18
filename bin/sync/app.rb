@@ -2,20 +2,21 @@
 
 require "logger"
 require_relative "logging"
+require_relative "sync_status_storage"
 
 class App
   include Logging
 
   DEFAULT_WORKING_DIR = "content/blog/".freeze
-  DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
 
-  attr_reader :working_dir, :sync_status_file, :logger
+  attr_reader :working_dir, :logger, :storage
 
-  def initialize(args: [], working_dir: DEFAULT_WORKING_DIR, sync_status_file: DEFAULT_SYNC_STATUS_FILE, logger: Logger.new($stdout))
+  def initialize(args: [], working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout))
     @args = args
     @working_dir = working_dir
-    @sync_status_file = sync_status_file
     @logger = logger
+    @storage = SyncStatusStorage.new(@working_dir)
+    @storage.ensure_file_exists
   end
 
   def dry_run?

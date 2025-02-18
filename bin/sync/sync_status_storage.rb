@@ -22,13 +22,15 @@ class SyncStatusStorage
   def load(force: false)
     @_cache = nil if force
 
-    @_cache ||= YAML.load_file(sync_file_path)
-  rescue Errno::ENOENT
-    logger.warn "Warning: #{sync_file_path} not found."
-    {}
-  rescue Psych::SyntaxError => e
-    logger.error "YAML parsing error in #{sync_file_path}: #{e.message}"
-    {}
+    @_cache ||= begin
+      YAML.load_file(sync_file_path)
+    rescue Errno::ENOENT
+      logger.warn "Warning: #{sync_file_path} not found."
+      {}
+    rescue Psych::SyntaxError => e
+      logger.error "YAML parsing error in #{sync_file_path}: #{e.message}"
+      {}
+    end
   end
 
   def save(sync_status)

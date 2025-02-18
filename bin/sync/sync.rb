@@ -29,14 +29,14 @@ class Sync
   private
 
   def sync_checker
-    @sync_checker ||= ArticleSyncChecker.new(app.working_dir, http_client)
+    @sync_checker ||= ArticleSyncChecker.new(app.working_dir, http_client, storage: app.storage)
   end
 
   def article_updater
-    @article_updater ||= ArticleUpdater.new(app.working_dir, http_client)
+    @article_updater ||= ArticleUpdater.new(app.working_dir, http_client, storage: app.storage)
   end
 
   def article_cleaner
-    @article_cleaner ||= ArticleCleaner.new(app.working_dir)
+    @article_cleaner ||= ArticleCleaner.new(app.working_dir, storage: app.storage)
   end
 end

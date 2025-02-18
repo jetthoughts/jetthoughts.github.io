@@ -7,7 +7,7 @@ module TestFactories
         "id" => 1,
         "title" => "Test Article",
         "body_markdown" => "# Test Content",
-        "slug" => "test-article",
+        "slug" => "test-article-123",
         "tags" => "ruby, rails, testing",
         "edited_at" => "2025-02-17T10:00:00Z",
         "created_at" => "2025-02-17T09:00:00Z",

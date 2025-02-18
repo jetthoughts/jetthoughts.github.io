@@ -77,6 +77,17 @@ class ArticleSyncCheckerTest < Minitest::Test
     assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
   end
 
+  def test_uses_provided_storage
+    storage = SyncStatusStorage.new(@temp_dir)
+    checker = ArticleSyncChecker.new(@temp_dir, @http_client, storage: storage)
+    assert_equal storage, checker.storage, "Should use the provided storage instance"
+  end
+
+  def test_creates_new_storage_when_not_provided
+    checker = ArticleSyncChecker.new(@temp_dir, @http_client)
+    assert_instance_of SyncStatusStorage, checker.storage, "Should create a new storage instance"
+  end
+
   private
 
   def create_sync_file(temp_dir, content)

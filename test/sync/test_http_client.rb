@@ -15,7 +15,7 @@ class TestHttpClient
 
   def get_articles(username, _)
     raise ArgumentError, "Invalid username" unless username == USERNAME
-    OpenStruct.new(body: @articles.to_json)
+    OpenStruct.new(body: @articles.to_json, success?: true)
   end
 
   def get_article(id)

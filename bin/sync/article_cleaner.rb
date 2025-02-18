@@ -1,24 +1,25 @@
 require "fileutils"
 require "yaml"
 require_relative "logging"
+require_relative "sync_status_storage"
 
 class ArticleCleaner
   include Logging
 
-  SYNC_STATUS_FILE = "sync_status.yml".freeze
   ARTICLE_FILE = "index.md".freeze
 
-  attr_reader :working_dir
+  attr_reader :working_dir, :storage
 
-  def initialize(working_dir)
+  def initialize(working_dir, storage: nil)
     @working_dir = Pathname.new(working_dir)
+    @storage = storage || SyncStatusStorage.new(@working_dir)
   end
 
   def cleanup_renamed_articles
     raise ArgumentError, "Working directory doesn't exist" unless Dir.exist?(working_dir)
 
     deleted_folders = []
-    slugs = load_slugs_from_yaml
+    slugs = load_slugs_from_storage
 
     Dir.glob("#{working_dir}/*").each do |folder_path|
       next unless File.directory?(folder_path) && File.exist?("#{folder_path}/#{ARTICLE_FILE}")
@@ -39,19 +40,17 @@ class ArticleCleaner
 
   private
 
-  def load_slugs_from_yaml
-    yaml_path = File.join(working_dir, SYNC_STATUS_FILE)
-
+  def load_slugs_from_storage
     begin
-      yaml_data = YAML.load_file(yaml_path)
-      raise "Invalid YAML structure" unless yaml_data.is_a?(Hash)
+      storage_data = storage.load
+      raise "Invalid storage data structure" unless storage_data.is_a?(Hash)
 
-      yaml_data.values.map do |article|
+      storage_data.values.map do |article|
         raise "Invalid article data structure" unless article.is_a?(Hash) && article[:slug]
         article[:slug]
       end
     rescue => e
-      logger.error "Failed to load slugs from YAML: #{e.message}"
+      logger.error "Failed to load slugs from storage: #{e.message}"
       []
     end
   end
