@@ -18,15 +18,13 @@ class ImagesDownloader
 
   def initialize(slug, fetcher, working_dir, remote_data, local_data, app: nil)
     @slug = slug
-    @working_dir = working_dir || app&.working_dir
-    @fetcher = fetcher
+    @working_dir = app&.working_dir || working_dir && Pathname.new(working_dir).cleanpath
+    @fetcher = app&.fetcher || fetcher
     @remote_data = remote_data
     @local_data = local_data
   end
 
   def perform
-    FileUtils.mkdir_p(page_bundle_dir) unless page_bundle_dir.exist?
-
     content = File.read(index_path)
 
     content = process_cover_image(content)

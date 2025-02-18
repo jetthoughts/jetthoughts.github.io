@@ -49,10 +49,10 @@ class ArticleFetcher
     end
   end
 
-  def has_synced_metadata?(article_data, sync_data, expected_slug)
+  def has_updated_metadata?(article_data, article_sync_data, expected_slug)
     logger.debug("Checking if metadata is synced for article #{article_data["id"]}")
     has_updated_canonical_url?(article_data, expected_slug) &&
-      has_updated_meta_description?(article_data, sync_data)
+      has_updated_meta_description?(article_data, article_sync_data)
   end
 
   def has_updated_canonical_url?(article_data, expected_slug)
@@ -62,12 +62,12 @@ class ArticleFetcher
     article_data["canonical_url"].split("/").last == expected_slug
   end
 
-  def has_updated_meta_description?(article_data, sync_data)
+  def has_updated_meta_description?(article_data, article_sync_data)
     logger.debug("Checking if meta description has been updated for article #{article_data["id"]}")
-    return false unless sync_data[article_data["id"]]
-    return true if sync_data[article_data["id"]][:description].nil?
+    return false unless article_sync_data
+    return true if article_sync_data[:description].nil?
 
-    article_data["description"] == sync_data[article_data["id"]][:description]
+    article_data["description"] == article_sync_data[:description]
   end
 
   def ext_from_image_url(image_url)
