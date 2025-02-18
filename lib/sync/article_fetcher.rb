@@ -15,7 +15,7 @@ class ArticleFetcher
 
   def fetch_articles
     with_retries(operation: "Fetching articles list") do
-      response = http_client.get_articles(USERNAME, 1)
+      response = http_client.get_articles(USERNAME, 0)
       if response.success?
         articles = JSON.parse(response.body)
         articles.map { |article| process_article(article) }

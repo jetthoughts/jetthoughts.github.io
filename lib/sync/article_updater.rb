@@ -43,16 +43,18 @@ module Sync
     end
 
     def save_content(article, status)
+      # return if app.dry_run?
       write_markdown_file(article, status)
       download_images(article, status)
       status[:synced] = true
     end
 
     def write_markdown_file(article, status)
-      content_path = content_path_for(status[:slug])
-      ensure_directory(content_path.dirname)
-      File.write(content_path, build_markdown_content(article, status))
-      logger.info("\nArticle saved: #{content_path}")
+      content = build_markdown_content(article, status)
+
+      PostStorage.new(working_dir).save_content(status[:slug], content)
+
+      logger.info("\nArticle saved: #{status[:slug]}")
     rescue => e
       logger.error("Error saving article #{status[:slug]}: #{e.message}")
       raise
