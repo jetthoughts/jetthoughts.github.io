@@ -58,7 +58,7 @@ class ArticleSyncChecker
   end
 
   def slug(article)
-    slug_parts = article["slug"].split("-")[0..-2]
+    slug_parts = dev_to_slug_without_salt(article)
     tags = article["tags"] ? article["tags"].split(", ") : []
     selected_tags = tags.first(10)
     [slug_parts, selected_tags]
@@ -68,6 +68,10 @@ class ArticleSyncChecker
       .compact
       .first(6)
       .join("-")
+  end
+
+  def dev_to_slug_without_salt(article)
+    article["slug"].split("-")[0..-2]
   end
 
   def update_status(articles)
