@@ -1,4 +1,5 @@
 require "uri"
+require "json"
 
 require "sync/retryable"
 require "sync/logging"
@@ -12,28 +13,28 @@ class ArticleFetcher
     @http_client = http_client
   end
 
-  def fetch(article_id)
-    with_retries(operation: "Fetching article #{article_id}") do
-      response = http_client.get_article(article_id)
+  def fetch_articles
+    with_retries(operation: "Fetching articles list") do
+      response = http_client.get_articles(USERNAME, 1)
       if response.success?
-        JSON.parse(response.body)
+        articles = JSON.parse(response.body)
+        articles.map { |article| process_article(article) }
       else
-        raise "Failed to fetch article #{article_id}: #{response.code} - #{response.message}"
+        raise "Failed to fetch articles: #{response.code} - #{response.message}"
       end
     end
   end
 
-  def fetch_articles
-    response = http_client.get_articles(USERNAME, 0)
-    if response.success?
-      JSON.parse(response.body)
-    else
-      logger.error "Failed to fetch articles: #{response.code} - #{response.message}"
-      []
+  def fetch(article_id)
+    with_retries(operation: "Fetching article #{article_id}") do
+      response = http_client.get_article(article_id)
+      if response.success?
+        article = JSON.parse(response.body)
+        process_article(article)
+      else
+        raise "Failed to fetch article #{article_id}: #{response.code} - #{response.message}"
+      end
     end
-  rescue => e
-    logger.error "Error fetching articles: #{e.message}"
-    []
   end
 
   def fetch_image(url)
@@ -94,4 +95,14 @@ class ArticleFetcher
   private
 
   attr_reader :http_client
+
+  def process_article(article)
+    article["devto_slug"] = article["slug"]
+    article["slug"] = dev_to_slug_without_salt(article["devto_slug"])
+    article
+  end
+
+  def dev_to_slug_without_salt(slug)
+    slug.split("-")[0..-2].join("-")
+  end
 end
