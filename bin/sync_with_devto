@@ -2,5 +2,5 @@
 
 require_relative "sync/sync.rb"
 
-app = App.new(args: ARGV)
+app = App.new(args: ARGV, logger: Logger.new(STDOUT, level: :debug))
 Sync.perform(app: app)
