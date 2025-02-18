@@ -7,6 +7,7 @@ require "minitest/autorun"
 require "logger"
 require "ostruct"
 require "json"
+require "yaml"
 
 # NOTE: Reduce test time on retry
 require_relative "../bin/sync/retryable"
