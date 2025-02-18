@@ -33,20 +33,28 @@ class ArticleSyncChecker
   def update_statuses_for(articles)
     articles.each do |article|
       id = article["id"]
-      edited_at = article["edited_at"] || article["created_at"]
+      changed_at = article["edited_at"] || article["created_at"]
 
-      @sync_status[id] ||= {
-        edited_at: edited_at,
-        slug: generate_slug(article),
-        synced: false,
-        source: DEFAULT_SOURCE
-      }
+      @sync_status[id] ||= build_new_status(article, changed_at)
 
-      if @sync_status[id][:edited_at] != edited_at
-        @sync_status[id][:edited_at] = edited_at
+      if desynchronized?(changed_at, id)
+        @sync_status[id][:edited_at] = changed_at
         @sync_status[id][:synced] = false
       end
     end
+  end
+
+  def desynchronized?(edited_at, id)
+    @sync_status[id][:edited_at] != edited_at
+  end
+
+  def build_new_status(article, edited_at)
+    {
+      edited_at: edited_at,
+      slug: generate_slug(article),
+      synced: false,
+      source: DEFAULT_SOURCE
+    }
   end
 
   def generate_slug(article)

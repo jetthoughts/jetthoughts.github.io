@@ -6,18 +6,12 @@ require "sync/article_updater"
 class ArticleUpdaterTest < SyncTestCase
   def setup
     super
-    @articles = [sample_article]
-    @http_client = TestHttpClient.new(@articles)
-    @app = App.new(working_dir: @temp_dir, http_client: @http_client)
+    @articles << sample_article
     @updater = ArticleUpdater.new(app: @app)
   end
 
-  def test_download_new_articles_without_working_dir
-    assert_raises(ArgumentError, "working_dir is required") { ArticleUpdater.new }
-  end
-
   def test_download_new_articles_creates_directory
-    create_sync_file(@temp_dir, create_sync_status)
+    @app.storage.save(create_sync_status)
 
     @updater.download_new_articles
 
@@ -25,7 +19,7 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_download_new_articles_creates_markdown_file
-    create_sync_file(@temp_dir, create_sync_status)
+    @app.storage.save(create_sync_status)
 
     @updater.download_new_articles
 
@@ -35,16 +29,16 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_download_new_articles_updates_sync_status
-    create_sync_file(@temp_dir, create_sync_status(synced: false))
+    @app.storage.save(create_sync_status(synced: false))
 
     @updater.download_new_articles
 
-    sync_data = YAML.load_file(File.join(@temp_dir, "sync_status.yml"))
+    sync_data = @app.storage.load
     assert sync_data[1][:synced], "Article should be marked as synced"
   end
 
   def test_download_new_articles_skips_synced_articles
-    create_sync_file(@temp_dir, create_sync_status(synced: true, slug: "test-article"))
+    @app.storage.save(create_sync_status(synced: true, slug: "test-article"))
     create_article_dir("test-article", "# Original Content")
 
     @updater.download_new_articles
@@ -54,7 +48,7 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_download_new_articles_with_synced_metadata
-    create_sync_file(@temp_dir, create_sync_status(synced: true))
+    @app.storage.save(create_sync_status(synced: true))
     create_article_with_metadata("test-article", {
       "title" => "Original Title",
       "description" => "Original Description"
@@ -68,12 +62,10 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_generates_metadata_with_cover_image
-    create_sync_file(@temp_dir, create_sync_status)
-    @articles = [
+    @app.storage.save(create_sync_status)
+    @articles.replace([
       sample_article("cover_image" => "https://example.com/image.jpg", "body_markdown" => "# Test Content")
-    ]
-    @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(app: App.new(working_dir: @temp_dir, http_client: @http_client))
+    ])
 
     @updater.download_new_articles
 
@@ -85,10 +77,8 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_generates_metadata_without_cover_image
-    create_sync_file(@temp_dir, create_sync_status)
-    @articles = [sample_article("cover_image" => nil)]
-    @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(app: App.new(working_dir: @temp_dir, http_client: @http_client))
+    @app.storage.save(create_sync_status)
+    @articles.replace([sample_article("cover_image" => nil)])
 
     @updater.download_new_articles
 
@@ -98,12 +88,46 @@ class ArticleUpdaterTest < SyncTestCase
   end
 
   def test_download_new_articles_in_dry_run_mode
-    create_sync_file(@temp_dir, create_sync_status(synced: false))
+    @app.storage.save(create_sync_status(synced: false))
 
     @updater.download_new_articles(force: false, dry_run: true)
 
-    sync_data = YAML.load_file(File.join(@temp_dir, "sync_status.yml"))
+    sync_data = @app.storage.load
     refute sync_data[1][:synced], "Article should not be marked as synced in dry run mode"
     assert_equal 0, @http_client.update_requests.size, "No update requests should be made in dry run mode"
+  end
+
+  def test_uses_app_storage
+    assert_equal @app.storage.object_id, @updater.storage.object_id, "Should use storage from app"
+  end
+
+  def test_uses_app_fetcher
+    assert_equal @app.fetcher.object_id, @updater.article_fetcher.object_id, "Should use fetcher from app"
+  end
+
+  def test_uses_app_working_dir
+    assert_equal @app.working_dir, @updater.working_dir, "Should use working_dir from app"
+  end
+
+  def test_uses_app_dry_run_setting
+    @app = App.new(args: ["--dry"], working_dir: @temp_dir, http_client: @http_client)
+    @updater = ArticleUpdater.new(app: @app)
+
+    @app.storage.save(create_sync_status(synced: false))
+    @updater.download_new_articles
+
+    sync_data = @app.storage.load
+    refute sync_data[1][:synced], "Should respect app's dry run setting"
+  end
+
+  def test_uses_app_force_setting
+    @app = App.new(args: ["--force"], working_dir: @temp_dir, http_client: @http_client)
+    @updater = ArticleUpdater.new(app: @app)
+    @app.storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
+
+    @updater.download_new_articles
+
+    sync_data = @app.storage.load
+    refute_equal "2023-02-17T09:00:00Z", sync_data[1][:edited_at], "Should respect app's force setting"
   end
 end
