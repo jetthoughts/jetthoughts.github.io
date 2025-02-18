@@ -1,6 +1,6 @@
 require "yaml"
 require "pathname"
-require "logging"
+require "sync/logging"
 
 class SyncStatusStorage
   include Logging

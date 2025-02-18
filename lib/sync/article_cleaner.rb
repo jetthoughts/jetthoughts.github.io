@@ -1,6 +1,6 @@
 require "fileutils"
 require "yaml"
-require "logging"
+require "sync/logging"
 require "sync/sync_status_storage"
 
 class ArticleCleaner

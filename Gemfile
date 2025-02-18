@@ -10,6 +10,7 @@ gem "selenium-webdriver"
 gem "rack"
 gem "rackup"
 gem "puma"
+gem "ostruct"
 
 gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
 gem 'simplecov', require: false

@@ -1,7 +1,7 @@
 require "uri"
 
-require "retryable"
-require "logging"
+require "sync/retryable"
+require "sync/logging"
 
 class ArticleFetcher
   include Logging
