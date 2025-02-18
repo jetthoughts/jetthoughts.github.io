@@ -6,18 +6,12 @@ require "sync/article_cleaner"
 class ArticleCleanerTest < SyncTestCase
   def setup
     super
-    @cleaner = ArticleCleaner.new(@temp_dir)
+    @cleaner = ArticleCleaner.new(app: @app)
   end
 
   def test_uses_provided_storage
-    storage = SyncStatusStorage.new(@temp_dir)
-    cleaner = ArticleCleaner.new(@temp_dir, storage: storage)
-    assert_equal storage, cleaner.storage, "Should use the provided storage instance"
-  end
-
-  def test_creates_new_storage_when_not_provided
-    cleaner = ArticleCleaner.new(@temp_dir)
-    assert_instance_of SyncStatusStorage, cleaner.storage, "Should create a new storage instance"
+    cleaner = ArticleCleaner.new(app: @app)
+    assert_equal @app.storage, cleaner.storage, "Should use the provided storage instance"
   end
 
   def test_cleanup_renamed_articles_with_nonexistent_directory

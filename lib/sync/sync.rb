@@ -9,11 +9,10 @@ require "sync/app"
 class Sync
   include Logging
 
-  attr_reader :http_client, :app
+  attr_reader :app
 
-  def initialize(app: App.new, http_client: nil)
+  def initialize(app: App.new)
     @app = app
-    @http_client = http_client || app.http_client
   end
 
   def self.perform(**kwargs)
@@ -21,7 +20,9 @@ class Sync
   end
 
   def perform
-    sync_checker.update_sync_status
+    fetch_articles = app.fetcher.fetch_articles
+    sync_checker.update_sync_statuses_for(fetch_articles)
+
     article_updater.download_new_articles(app.force?, dry_run: app.dry_run?)
     article_cleaner.cleanup_renamed_articles unless app.dry_run?
   end
@@ -37,6 +38,6 @@ class Sync
   end
 
   def article_cleaner
-    @article_cleaner ||= ArticleCleaner.new(app.working_dir, storage: app.storage)
+    @article_cleaner ||= ArticleCleaner.new(app: app)
   end
 end
