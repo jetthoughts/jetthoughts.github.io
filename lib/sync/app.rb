@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "logging"
+require "sync/logging"
 require "sync/article_fetcher"
 require "sync/sync_status_storage"
 

@@ -10,8 +10,10 @@ class SyncStatusStorageTest < SyncTestCase
   end
 
   def test_creates_file_if_not_exists
-    refute File.exist?(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
+    FileUtils.rm_f(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
+
     @storage.ensure_file_exists
+
     assert File.exist?(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
   end
 

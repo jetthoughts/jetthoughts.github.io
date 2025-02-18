@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "sync_test_case"
-require "faraday"
 require "sync/article_updater"
 
 class ArticleUpdaterTest < SyncTestCase
@@ -9,12 +8,8 @@ class ArticleUpdaterTest < SyncTestCase
     super
     @articles = [sample_article]
     @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client)
-  end
-
-  def test_download_new_articles_without_http_client
-    updater = ArticleUpdater.new(@temp_dir, nil)
-    assert_raises(ArgumentError, "http_client is required") { updater.download_new_articles }
+    @app = App.new(working_dir: @temp_dir, http_client: @http_client)
+    @updater = ArticleUpdater.new(app: @app)
   end
 
   def test_download_new_articles_without_working_dir

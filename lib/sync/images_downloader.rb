@@ -14,12 +14,12 @@ class ImagesDownloader
 
   class NetworkError < StandardError; end
 
-  attr_reader :slug, :working_dir, :http_client, :remote_data, :local_data
+  attr_reader :slug, :working_dir, :remote_data, :local_data, :fetcher
 
-  def initialize(slug, http_client, working_dir, remote_data, local_data)
+  def initialize(slug, fetcher, working_dir, remote_data, local_data, app: nil)
     @slug = slug
-    @working_dir = working_dir
-    @http_client = http_client
+    @working_dir = working_dir || app&.working_dir
+    @fetcher = fetcher
     @remote_data = remote_data
     @local_data = local_data
   end
@@ -57,10 +57,6 @@ class ImagesDownloader
 
   def page_bundle_dir
     @_page_bundle_dir ||= work_dir / slug
-  end
-
-  def fetcher
-    @_fetcher ||= ArticleFetcher.new(http_client)
   end
 
   def process_cover_image(content)

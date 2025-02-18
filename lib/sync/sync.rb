@@ -33,7 +33,7 @@ class Sync
   end
 
   def article_updater
-    @article_updater ||= ArticleUpdater.new(app.working_dir, app.http_client, storage: app.storage)
+    @article_updater ||= ArticleUpdater.new(nil, nil, app: app)
   end
 
   def article_cleaner
