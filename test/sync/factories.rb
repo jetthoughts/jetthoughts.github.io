@@ -2,7 +2,7 @@
 
 module TestFactories
   class Article
-    def self.create(overrides = {})
+    def self.build_details(overrides = {})
       {
         "id" => 1,
         "title" => "Test Article",

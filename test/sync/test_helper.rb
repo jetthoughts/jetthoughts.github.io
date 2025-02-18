@@ -47,7 +47,7 @@ module TestHelper
   end
 
   def sample_article(...)
-    TestFactories::Article.create(...)
+    TestFactories::Article.build_details(...)
   end
 end
 

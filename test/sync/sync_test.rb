@@ -6,9 +6,9 @@ require_relative "../../bin/sync/sync"
 class SyncTest < Minitest::Test
   def setup
     super
-    @app = App.new(working_dir: @temp_dir)
     @http_client = TestHttpClient.new([sample_article])
-    @sync = Sync.new(app: @app, http_client: @http_client)
+    @app = create_app
+    @sync = Sync.new(app: @app)
   end
 
   def test_uses_app_storage_for_sync_checker
@@ -57,20 +57,20 @@ class SyncTest < Minitest::Test
   end
 
   def test_perform_skips_article_cleaner_in_dry_run
-    app_with_dry_run = App.new(working_dir: @temp_dir, args: ["--dry"])
-    sync = Sync.new(app: app_with_dry_run, http_client: @http_client)
+    create_article_with_metadata("old-article", {}, "# Test Content")
 
-    create_test_article("old-article")
-    sync.perform
+    Sync.new(app: create_app_with_dry_run).perform
 
     assert_path_exists File.join(@temp_dir, "old-article"), "Should not delete articles in dry run"
   end
 
   private
 
-  def create_test_article(name)
-    dir = File.join(@temp_dir, name)
-    FileUtils.mkdir_p(dir)
-    File.write(File.join(dir, "index.md"), "# Test Content")
+  def create_app(**)
+    App.new(working_dir: @temp_dir, http_client: @http_client, **)
+  end
+
+  def create_app_with_dry_run
+    create_app(args: ["--dry"])
   end
 end
