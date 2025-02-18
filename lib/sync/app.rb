@@ -11,14 +11,14 @@ class App
 
   attr_reader :working_dir, :logger, :storage, :http_client, :fetcher
 
-  def initialize(args: [], working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout), http_client: nil)
+  def initialize(args: [], working_dir: DEFAULT_WORKING_DIR, logger: Logger.new($stdout), http_client: nil, fetcher: nil)
     @args = args
     @working_dir = Pathname.new(working_dir)
     @logger = logger
     @storage = SyncStatusStorage.new(@working_dir)
     @storage.ensure_file_exists
     @http_client = http_client
-    @fetcher = ArticleFetcher.new(@http_client)
+    @fetcher = fetcher || ArticleFetcher.new(@http_client)
   end
 
   def dry_run?

@@ -6,6 +6,7 @@ require "sync/logging"
 class ArticleFetcher
   include Logging
   include Retryable
+  USERNAME = "jetthoughts".freeze
 
   def initialize(http_client)
     @http_client = http_client
@@ -21,6 +22,21 @@ class ArticleFetcher
       end
     end
   end
+
+
+  def fetch_articles
+    response = http_client.get_articles(USERNAME, 0)
+    if response.success?
+      JSON.parse(response.body)
+    else
+      logger.error "Failed to fetch articles: #{response.code} - #{response.message}"
+      []
+    end
+  rescue => e
+    logger.error "Error fetching articles: #{e.message}"
+    []
+  end
+
 
   def fetch_image(url)
     original_image_url = remove_cdn(url)

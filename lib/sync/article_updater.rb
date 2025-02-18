@@ -17,7 +17,7 @@ class ArticleUpdater
   attr_reader :working_dir, :storage, :article_fetcher
 
   def initialize(app:)
-    @working_dir = Pathname.new(app.working_dir)
+    @working_dir = app.working_dir
     @article_fetcher = app.fetcher || ArticleFetcher.new(app.http_client)
     @storage = storage || app.storage || SyncStatusStorage.new(@working_dir)
   end

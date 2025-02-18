@@ -29,7 +29,7 @@ class Sync
   private
 
   def sync_checker
-    @sync_checker ||= ArticleSyncChecker.new(app.working_dir, app.http_client, storage: app.storage)
+    @sync_checker ||= ArticleSyncChecker.new(app: app)
   end
 
   def article_updater

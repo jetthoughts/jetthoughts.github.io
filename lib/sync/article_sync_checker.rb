@@ -5,40 +5,26 @@ require "sync/sync_status_storage"
 class ArticleSyncChecker
   include Logging
 
-  USERNAME = "jetthoughts".freeze
   DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
   USELESS_WORDS = %w[and the a but to is so].freeze
   DEFAULT_SOURCE = "dev_to".freeze
 
-  attr_reader :working_dir, :http_client, :storage
+  attr_reader :working_dir, :http_client, :storage, :fetcher
 
-  def initialize(working_dir, http_client, storage: nil)
-    @working_dir = Pathname.new(working_dir)
-    @http_client = http_client
-    @storage = storage || SyncStatusStorage.new(@working_dir)
+  def initialize(working_dir = nil, http_client = nil, storage: nil, app: nil)
+    @working_dir = working_dir && Pathname.new(working_dir) || app&.working_dir
+    @storage = storage || app&.storage || SyncStatusStorage.new(@working_dir)
+    @fetcher = app&.fetcher || ArticleFetcher.new(http_client)
   end
 
   def update_sync_status
     storage.ensure_file_exists
     @sync_status = storage.load || {}
-    update_status(fetch_articles)
+    update_statuses_for(fetcher.fetch_articles)
     storage.save(@sync_status)
   end
 
   private
-
-  def fetch_articles
-    response = http_client.get_articles(USERNAME, 0)
-    if response.success?
-      JSON.parse(response.body)
-    else
-      logger.error "Failed to fetch articles: #{response.code} - #{response.message}"
-      []
-    end
-  rescue => e
-    logger.error "Error fetching articles: #{e.message}"
-    []
-  end
 
   def slug(article)
     slug_parts = dev_to_slug_without_salt(article)
@@ -57,7 +43,7 @@ class ArticleSyncChecker
     article["slug"].split("-")[0..-2]
   end
 
-  def update_status(articles)
+  def update_statuses_for(articles)
     articles.each do |article|
       id = article["id"]
       edited_at = article["edited_at"] || article["created_at"]

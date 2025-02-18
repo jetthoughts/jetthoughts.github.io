@@ -14,7 +14,9 @@ class SyncTestCase < Minitest::Test
   def setup
     super
     working_dir = setup_temp_dir
-    @app = App.new(working_dir: working_dir, http_client: TestHttpClient.new([]))
+    @articles = []
+    @http_client = TestHttpClient.new(@articles)
+    @app = App.new(working_dir: working_dir, http_client: @http_client)
   end
 
   def teardown
