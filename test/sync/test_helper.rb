@@ -2,42 +2,53 @@
 
 require_relative "../unit_helper"
 require_relative "test_http_client"
+require_relative "factories"
 
 module TestHelper
-  def create_temp_dir
-    @__created_tmp_dir = Dir.mktmpdir
+  def setup
+    super
+    setup_temp_dir
   end
 
-  def remove_temp_dir
-    FileUtils.remove_entry @__created_tmp_dir if defined?(@__created_tmp_dir) && Dir.exist?(@__created_tmp_dir)
+  def teardown
+    teardown_temp_dir
+    super
   end
 
+  def setup_temp_dir
+    @temp_dir = Dir.mktmpdir
+  end
+
+  def teardown_temp_dir
+    FileUtils.remove_entry_secure(@temp_dir) if @temp_dir && Dir.exist?(@temp_dir)
+  end
+
+  # Factory method shortcuts
   def create_sync_file(dir, content, filename = "sync_status.yml")
-    File.write(File.join(dir, filename), content.to_yaml)
+    TestFactories::SyncStatus.create_file(dir, content, filename)
   end
 
-  def sample_article(overrides = {})
-    {
-      "id" => 1,
-      "title" => "Test Article",
-      "body_markdown" => "# Test Content",
-      "slug" => "test-article-123",
-      "tags" => "ruby, rails, testing",
-      "edited_at" => "2025-02-17T10:00:00Z",
-      "created_at" => "2025-02-17T09:00:00Z",
-      "url" => "https://dev.to/test-article",
-      "description" => "Test description",
-      "cover_image" => nil,
-      "canonical_url" => nil
-    }.merge(overrides)
+  def create_article_dir(slug, content = "# Test Content")
+    TestFactories::Article.create_page_bundle(@temp_dir, slug, content)
+  end
+
+  def create_article_with_metadata(slug, metadata = {}, content = "# Test Content")
+    TestFactories::Article.create_with_metadata(@temp_dir, slug, metadata, content)
+  end
+
+  def read_markdown_metadata(file_path)
+    TestFactories::Article.read_metadata(file_path)
+  end
+
+  def create_sync_status(...)
+    TestFactories::SyncStatus.create(...)
+  end
+
+  def sample_article(...)
+    TestFactories::Article.create(...)
   end
 end
 
 class Minitest::Test
   include TestHelper
-
-  def teardown
-    super
-    remove_temp_dir
-  end
 end

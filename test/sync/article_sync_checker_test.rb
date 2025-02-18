@@ -7,7 +7,7 @@ class ArticleSyncCheckerTest < Minitest::Test
   include TestHelper
 
   def setup
-    @temp_dir = create_temp_dir
+    super
     @articles = [sample_article]
     @http_client = TestHttpClient.new(@articles)
     @checker = ArticleSyncChecker.new(@temp_dir, @http_client)
@@ -19,14 +19,16 @@ class ArticleSyncCheckerTest < Minitest::Test
   end
 
   def test_update_sync_status_with_new_article
-    @checker.update_sync_status
-    status = YAML.load_file(File.join(@temp_dir, ArticleSyncChecker::DEFAULT_SYNC_STATUS_FILE))
+    @http_client.articles = [sample_article("id" => 2, "slug" => "test-article-123", "tags" => "ruby, rails, testing")]
 
+    @checker.update_sync_status
+
+    status = YAML.load_file(File.join(@temp_dir, ArticleSyncChecker::DEFAULT_SYNC_STATUS_FILE))
     assert_equal 1, status.size
-    assert_equal "test-article-ruby-rails-testing", status[1][:slug]
-    assert_equal "2025-02-17T10:00:00Z", status[1][:edited_at]
-    assert_equal false, status[1][:synced]
-    assert_equal ArticleSyncChecker::DEFAULT_SOURCE, status[1][:source]
+    assert_equal "test-article-ruby-rails-testing", status[2][:slug]
+    assert_equal "2025-02-17T10:00:00Z", status[2][:edited_at]
+    assert_equal false, status[2][:synced]
+    assert_equal ArticleSyncChecker::DEFAULT_SOURCE, status[2][:source]
   end
 
   def test_update_sync_status_with_existing_unmodified_article

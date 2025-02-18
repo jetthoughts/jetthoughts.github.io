@@ -6,6 +6,8 @@ require "json"
 class TestHttpClient
   USERNAME = "jetthoughts".freeze
 
+  attr_accessor :articles
+
   def initialize(articles)
     @articles = articles
   end

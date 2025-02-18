@@ -7,7 +7,7 @@ class ArticleCleanerTest < Minitest::Test
   include TestHelper
 
   def setup
-    @temp_dir = create_temp_dir
+    super
     @cleaner = ArticleCleaner.new(@temp_dir)
   end
 

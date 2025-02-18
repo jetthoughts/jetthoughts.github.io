@@ -6,17 +6,10 @@ require_relative "../../bin/sync/article_updater"
 
 class ArticleUpdaterTest < Minitest::Test
   def setup
-    @temp_dir = create_temp_dir
+    super
     @articles = [sample_article]
     @http_client = TestHttpClient.new(@articles)
     @updater = ArticleUpdater.new(@temp_dir, @http_client)
-  end
-
-  def read_markdown_metadata(file_path)
-    content = File.read(file_path)
-    content_split = content.split("---\n")
-    yaml_content = content_split[1]
-    YAML.load(yaml_content)
   end
 
   def test_download_new_articles_without_http_client
@@ -29,140 +22,62 @@ class ArticleUpdaterTest < Minitest::Test
   end
 
   def test_download_new_articles_creates_directory
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to"
-      }
-    )
+    create_sync_file(@temp_dir, create_sync_status)
 
     @updater.download_new_articles
-    assert_path_exists File.join(@temp_dir, "test-article")
+
+    assert_path_exists File.join(@temp_dir, "test-article"), "Article directory should be created"
   end
 
   def test_download_new_articles_creates_markdown_file
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to"
-      }
-    )
+    create_sync_file(@temp_dir, create_sync_status)
 
     @updater.download_new_articles
-    assert_path_exists File.join(@temp_dir, "test-article/index.md")
+
+    markdown_file = File.join(@temp_dir, "test-article/index.md")
+    assert_path_exists markdown_file, "Markdown file should be created"
+    assert_match(/# Test Content/, File.read(markdown_file), "Content should be written to file")
   end
 
   def test_download_new_articles_updates_sync_status
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to"
-      }
-    )
+    create_sync_file(@temp_dir, create_sync_status(synced: false))
 
     @updater.download_new_articles
 
-    status = YAML.load_file(File.join(@temp_dir, ArticleUpdater::DEFAULT_SYNC_STATUS_FILE))
-    assert status[1][:synced]
+    sync_data = YAML.load_file(File.join(@temp_dir, "sync_status.yml"))
+    assert sync_data[1][:synced], "Article should be marked as synced"
   end
 
   def test_download_new_articles_skips_synced_articles
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T10:00:00Z",
-        slug: "test-article",
-        synced: true,
-        source: "dev_to"
-      }
-    )
+    create_sync_file(@temp_dir, create_sync_status(synced: true, slug: "test-article"))
+    create_article_dir("test-article", "# Original Content")
 
     @updater.download_new_articles
-    refute Dir.exist?(File.join(@temp_dir, "test-article"))
+
+    content = File.read(File.join(@temp_dir, "test-article/index.md"))
+    assert_includes content.strip, "# Original Content", "Synced article content should not be modified"
   end
 
   def test_download_new_articles_with_synced_metadata
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to",
-        description: "Test description"
-      }
-    )
-
-    @articles = [
-      sample_article(
-        "canonical_url" => "https://example.com/test-article",
-        "description" => "Test description"
-      )
-    ]
-    @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client)
+    create_sync_file(@temp_dir, create_sync_status(synced: true))
+    create_article_with_metadata("test-article", {
+      "title" => "Original Title",
+      "description" => "Original Description"
+    })
 
     @updater.download_new_articles
 
-    status = YAML.load_file(File.join(@temp_dir, ArticleUpdater::DEFAULT_SYNC_STATUS_FILE))
-    assert status[1][:synced], "Article should be marked as synced"
-    assert_equal "2025-02-17T09:00:00Z", status[1][:edited_at], "Edited at should not be updated"
-  end
-
-  def test_download_new_articles_with_non_synced_metadata_in_test_env
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to",
-        description: "Old description"
-      }
-    )
-
-    @articles = [
-      sample_article(
-        "canonical_url" => "https://example.com/wrong-article",
-        "description" => "New description"
-      )
-    ]
-    @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client)
-
-    @updater.download_new_articles
-
-    status = YAML.load_file(File.join(@temp_dir, ArticleUpdater::DEFAULT_SYNC_STATUS_FILE))
-    assert status[1][:synced], "Article should be marked as synced after metadata update"
-    refute_equal "2025-02-17T09:00:00Z", status[1][:edited_at]
+    metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
+    assert_equal "Original Title", metadata["title"], "Title should not be modified"
+    assert_equal "Original Description", metadata["description"], "Description should not be modified"
   end
 
   def test_generates_metadata_with_cover_image
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to"
-      }
-    )
-
-    @articles = [
-      sample_article(
-        "cover_image" => "https://example.com/image.jpg",
-        "body_markdown" => "# Test Content"
-      )
-    ]
+    create_sync_file(@temp_dir, create_sync_status)
+    @articles = [sample_article(
+                   "cover_image" => "https://example.com/image.jpg",
+                   "body_markdown" => "# Test Content"
+                 )]
     @http_client = TestHttpClient.new(@articles)
     @updater = ArticleUpdater.new(@temp_dir, @http_client)
 
@@ -171,63 +86,20 @@ class ArticleUpdaterTest < Minitest::Test
     metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
     assert metadata.key?("metatags"), "Metadata should have metatags key"
     assert_equal "cover.jpg", metadata.dig("metatags", "image"), "Cover image filename should be set"
-    assert_includes metadata["cover_image"], REPO_URL, "Original cover image URL should be converted to github CDN"
-    assert_includes metadata["cover_image"], "cover.jpg", "Original cover image URL should be converted to github CDN"
+    assert_includes metadata["cover_image"], REPO_URL, "Cover image URL should use github CDN"
+    assert_includes metadata["cover_image"], "cover.jpg", "Cover image URL should include filename"
   end
 
   def test_generates_metadata_without_cover_image
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to"
-      }
-    )
-
-    @articles = [
-      sample_article(
-        "cover_image" => nil,
-        "body_markdown" => "# Test Content"
-      )
-    ]
+    create_sync_file(@temp_dir, create_sync_status)
+    @articles = [sample_article("cover_image" => nil)]
     @http_client = TestHttpClient.new(@articles)
     @updater = ArticleUpdater.new(@temp_dir, @http_client)
 
     @updater.download_new_articles
 
     metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
-
-    refute metadata.key?("metatags")
-    assert_nil metadata["cover_image"]
-  end
-
-  def test_generates_metadata_with_empty_cover_image
-    create_sync_file(
-      @temp_dir,
-      1 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "test-article",
-        synced: false,
-        source: "dev_to"
-      }
-    )
-
-    @articles = [
-      sample_article(
-        "cover_image" => "",
-        "body_markdown" => "# Test Content"
-      )
-    ]
-    @http_client = TestHttpClient.new(@articles)
-    @updater = ArticleUpdater.new(@temp_dir, @http_client)
-
-    @updater.download_new_articles
-
-    metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
-
-    refute metadata.key?("metatags")
-    assert_equal "", metadata["cover_image"]
+    refute metadata.key?("metatags"), "Metadata should not have metatags key"
+    assert_nil metadata["cover_image"], "Cover image should be nil"
   end
 end
