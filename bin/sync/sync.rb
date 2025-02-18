@@ -3,7 +3,7 @@ require_relative "logging"
 require_relative "article_sync_checker"
 require_relative "article_updater"
 require_relative "article_cleaner"
-require_relative "dev_to_adapter"
+require_relative "dev_to_client"
 
 class Sync
   include Logging
