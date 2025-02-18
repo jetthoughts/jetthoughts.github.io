@@ -8,6 +8,10 @@ require "logger"
 require "ostruct"
 require "json"
 require "yaml"
+require "fileutils"
+require "tmpdir"
+require "pathname"
+require "faraday"
 
 # NOTE: Reduce test time on retry
 require_relative "../bin/sync/retryable"
