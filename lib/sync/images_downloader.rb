@@ -131,10 +131,11 @@ class ImagesDownloader
   end
 
   def to_public_url(cover_path)
-    "#{REPO_URL}/#{cover_path}"
+    URI.join(REPO_URL, URI.encode_www_form_component(cover_path.to_s)).to_s
   end
 
   def to_relative_path(cover_image_name)
+    raise ArgumentError, "Invalid image name" if cover_image_name.nil? || cover_image_name.empty?
     page_bundle_dir / cover_image_name
   end
 
