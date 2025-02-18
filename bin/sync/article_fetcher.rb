@@ -1,4 +1,7 @@
+require "uri"
+
 require_relative "retryable"
+require_relative "logging"
 
 class ArticleFetcher
   include Logging
@@ -31,12 +34,34 @@ class ArticleFetcher
     end
   end
 
+  def has_synced_metadata?(article_data, sync_data, expected_slug)
+    logger.debug("Checking if metadata is synced for article #{article_data["id"]}")
+    has_updated_canonical_url?(article_data, expected_slug) &&
+      has_updated_meta_description?(article_data, sync_data)
+  end
+
+  def has_updated_canonical_url?(article_data, expected_slug)
+    logger.debug("Checking if canonical URL has been updated for #{expected_slug}")
+    return false if article_data["canonical_url"].nil?
+
+    article_data["canonical_url"].split("/").last == expected_slug
+  end
+
+  def has_updated_meta_description?(article_data, sync_data)
+    logger.debug("Checking if meta description has been updated for article #{article_data["id"]}")
+    return false unless sync_data[article_data["id"]]
+    return true if sync_data[article_data["id"]][:description].nil?
+
+    article_data["description"] == sync_data[article_data["id"]][:description]
+  end
+
   def ext_from_image_url(image_url)
     File.extname(URI(remove_cdn(image_url)).path)
   end
 
   def remove_cdn(url)
-    encoded_url = "https" + url.split("https").last
+    return url unless url.include?("https")
+    encoded_url = "https" + url.to_s.split("https").last
     max_attempts = 5
     attempts = 0
 

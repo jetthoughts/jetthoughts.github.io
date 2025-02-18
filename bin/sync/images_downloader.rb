@@ -27,12 +27,10 @@ class ImagesDownloader
   def perform
     FileUtils.mkdir_p(page_bundle_dir) unless page_bundle_dir.exist?
 
-    content = remote_data["body_markdown"]
+    content = File.read(index_path)
 
     content = process_cover_image(content)
     content = process_images(content)
-
-    remote_data["body_markdown"] = content
 
     save_content(content)
   rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
