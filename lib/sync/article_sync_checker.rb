@@ -9,18 +9,21 @@ class ArticleSyncChecker
   USELESS_WORDS = %w[and the a but to is so].freeze
   DEFAULT_SOURCE = "dev_to".freeze
 
-  attr_reader :working_dir, :http_client, :storage, :fetcher
+  attr_reader :storage, :fetcher
 
-  def initialize(working_dir = nil, http_client = nil, storage: nil, app: nil)
-    @working_dir = working_dir && Pathname.new(working_dir) || app&.working_dir
-    @storage = storage || app&.storage || SyncStatusStorage.new(@working_dir)
-    @fetcher = app&.fetcher || ArticleFetcher.new(http_client)
+  def initialize(app:)
+    @storage = app.storage
+    @fetcher = app.fetcher
   end
 
   def update_sync_status
-    storage.ensure_file_exists
-    @sync_status = storage.load || {}
-    update_statuses_for(fetcher.fetch_articles)
+    fetch_articles = fetcher.fetch_articles
+    update_sync_statuses_for(fetch_articles)
+  end
+
+  def update_sync_statuses_for(fetch_articles)
+    @sync_status = storage.load
+    update_statuses_for(fetch_articles)
     storage.save(@sync_status)
   end
 

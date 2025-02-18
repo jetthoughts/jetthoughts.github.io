@@ -23,7 +23,6 @@ class ArticleFetcher
     end
   end
 
-
   def fetch_articles
     response = http_client.get_articles(USERNAME, 0)
     if response.success?
@@ -36,7 +35,6 @@ class ArticleFetcher
     logger.error "Error fetching articles: #{e.message}"
     []
   end
-
 
   def fetch_image(url)
     original_image_url = remove_cdn(url)
@@ -88,7 +86,6 @@ class ArticleFetcher
 
     encoded_url
   end
-
 
   def update_meta_on_dev_to(...)
     http_client.update_article(...)

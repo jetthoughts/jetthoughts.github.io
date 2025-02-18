@@ -10,13 +10,13 @@ class ArticleCleaner
 
   attr_reader :working_dir, :storage
 
-  def initialize(working_dir, storage: nil)
-    @working_dir = Pathname.new(working_dir)
-    @storage = storage || SyncStatusStorage.new(@working_dir)
+  def initialize(app:)
+    @working_dir = app.working_dir
+    @storage = app.storage || SyncStatusStorage.new(@working_dir)
   end
 
   def cleanup_renamed_articles
-    raise ArgumentError, "Working directory doesn't exist" unless Dir.exist?(working_dir)
+    raise ArgumentError, "Working directory doesn't exist" unless working_dir.exist?
 
     deleted_folders = []
     slugs = load_slugs_from_storage
@@ -41,17 +41,15 @@ class ArticleCleaner
   private
 
   def load_slugs_from_storage
-    begin
-      storage_data = storage.load
-      raise "Invalid storage data structure" unless storage_data.is_a?(Hash)
+    storage_data = storage.load
+    raise "Invalid storage data structure" unless storage_data.is_a?(Hash)
 
-      storage_data.values.map do |article|
-        raise "Invalid article data structure" unless article.is_a?(Hash) && article[:slug]
-        article[:slug]
-      end
-    rescue => e
-      logger.error "Failed to load slugs from storage: #{e.message}"
-      []
+    storage_data.values.map do |article|
+      raise "Invalid article data structure" unless article.is_a?(Hash) && article[:slug]
+      article[:slug]
     end
+  rescue => e
+    logger.error "Failed to load slugs from storage: #{e.message}"
+    []
   end
 end
