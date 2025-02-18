@@ -43,8 +43,6 @@ class PostStorage
     File.binwrite(asset_path(slug, asset_name), media_content)
   end
 
-  private
-
   def ensure_page_bundle_directory(slug)
     FileUtils.mkdir_p(page_bundle_dir(slug)) unless page_bundle_dir(slug).directory?
   end
@@ -70,12 +68,13 @@ class ImagesDownloader
     @remote_data = remote_data
     @local_data = local_data
     @post_storage = PostStorage.new(@working_dir)
+    @post = Post.new(@post_storage, remote_data, local_data)
   end
 
   def perform
     content = read_content
 
-    content = process_cover_image(content)
+    content = process_cover_image(@post, content)
     content = process_images(content)
 
     save_content(content)
@@ -90,7 +89,7 @@ class ImagesDownloader
   private
 
   def read_content
-    @post_storage.read_content(slug)
+    @post.content
   end
 
   def save_content(content)
@@ -109,15 +108,15 @@ class ImagesDownloader
     @_page_bundle_dir ||= @post_storage.page_bundle_dir(slug)
   end
 
-  def process_cover_image(content)
-    cover_image = remote_data["cover_image"]
+  def process_cover_image(post, content)
+    cover_image = post.cover_image
     return content unless cover_image
 
     ext = ext_from_image_url(cover_image)
     cover_image_file_name = "cover#{ext}"
-    cover_path = to_relative_path(cover_image_file_name)
 
     if download_image(cover_image, cover_image_file_name)
+      cover_path = to_relative_path(cover_image_file_name)
       cover_image_public_url = to_public_url(cover_path)
       remote_data["cover_image"] = cover_image_public_url
       content.sub(cover_image, cover_image_public_url)
