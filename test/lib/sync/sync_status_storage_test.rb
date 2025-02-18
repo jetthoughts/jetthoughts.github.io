@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/sync_status_storage"
+require "sync_test_case"
+require "sync/sync_status_storage"
 
-class SyncStatusStorageTest < Minitest::Test
-  include TestHelper
-
+class SyncStatusStorageTest < SyncTestCase
   def setup
     super
     @storage = SyncStatusStorage.new(@temp_dir)
@@ -27,7 +25,7 @@ class SyncStatusStorageTest < Minitest::Test
       synced: false
     )
     create_sync_file(@temp_dir, sync_status)
-    
+
     assert_equal sync_status, @storage.load
   end
 
@@ -37,7 +35,7 @@ class SyncStatusStorageTest < Minitest::Test
       synced: true
     )
     @storage.save(sync_status)
-    
+
     assert_equal sync_status, YAML.load_file(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
   end
 

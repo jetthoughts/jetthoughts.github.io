@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "sync/sync.rb"
+require_relative "../lib/sync/sync.rb"
 
 app = App.new(
   args: ARGV,

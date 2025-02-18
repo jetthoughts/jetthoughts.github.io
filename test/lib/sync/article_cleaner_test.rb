@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/article_cleaner"
+require "sync_test_case"
+require "sync/article_cleaner"
 
-class ArticleCleanerTest < Minitest::Test
-  include TestHelper
-
+class ArticleCleanerTest < SyncTestCase
   def setup
     super
     @cleaner = ArticleCleaner.new(@temp_dir)

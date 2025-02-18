@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/sync"
+require "sync_test_case"
+require "sync"
 
-class SyncTest < Minitest::Test
+class SyncTest < SyncTestCase
   def setup
     super
     @http_client = TestHttpClient.new([sample_article])

@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/article_fetcher"
+require "sync_test_case"
+require "sync/article_fetcher"
 
-class ArticleFetcherTest < Minitest::Test
+class ArticleFetcherTest < SyncTestCase
   def setup
+    super
     @articles = [
       sample_article(
         "id" => "success",

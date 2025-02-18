@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/app"
+require "sync_test_case"
+require "app"
 
-class AppTest < Minitest::Test
+class AppTest < SyncTestCase
   def setup
     super
     @app = App.new(working_dir: @temp_dir, http_client: TestHttpClient.new([]))
@@ -11,7 +11,7 @@ class AppTest < Minitest::Test
 
   def test_initializes_with_storage
     assert_instance_of SyncStatusStorage, @app.storage, "Should initialize with a storage instance"
-    assert_equal @temp_dir, @app.storage.sync_file_path.dirname.to_s, "Storage should use the correct working directory"
+    assert_equal @temp_dir.to_s, @app.storage.sync_file_path.dirname.to_s, "Storage should use the correct working directory"
   end
 
   def test_dry_run_with_dry_flag

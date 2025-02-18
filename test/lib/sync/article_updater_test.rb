@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
+require "sync_test_case"
 require "faraday"
-require_relative "../../bin/sync/article_updater"
+require "sync/article_updater"
 
-class ArticleUpdaterTest < Minitest::Test
+class ArticleUpdaterTest < SyncTestCase
   def setup
     super
     @articles = [sample_article]
