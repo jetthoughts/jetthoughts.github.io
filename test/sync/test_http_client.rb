@@ -6,10 +6,11 @@ require "json"
 class TestHttpClient
   USERNAME = "jetthoughts".freeze
 
-  attr_accessor :articles
+  attr_accessor :articles, :update_requests
 
   def initialize(articles)
     @articles = articles
+    @update_requests = []
   end
 
   def get_articles(username, _)
@@ -29,11 +30,8 @@ class TestHttpClient
     OpenStruct.new(success?: false, code: 500, message: e.message)
   end
 
-  def update_article(*, **)
-    OpenStruct.new(success?: true, body: { edited_at: Time.now.utc }.to_json)
-  end
-
-  def update_article(*)
+  def update_article(article_id, data)
+    @update_requests << {article_id: article_id, data: data}
     { edited_at: Time.now.utc }
   end
 

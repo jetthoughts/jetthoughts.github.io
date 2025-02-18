@@ -102,4 +102,14 @@ class ArticleUpdaterTest < Minitest::Test
     refute metadata.key?("metatags"), "Metadata should not have metatags key"
     assert_nil metadata["cover_image"], "Cover image should be nil"
   end
+
+  def test_download_new_articles_in_dry_run_mode
+    create_sync_file(@temp_dir, create_sync_status(synced: false))
+
+    @updater.download_new_articles(false, dry_run: true)
+
+    sync_data = YAML.load_file(File.join(@temp_dir, "sync_status.yml"))
+    refute sync_data[1][:synced], "Article should not be marked as synced in dry run mode"
+    assert_equal 0, @http_client.update_requests.size, "No update requests should be made in dry run mode"
+  end
 end

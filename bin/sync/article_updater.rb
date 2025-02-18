@@ -24,7 +24,7 @@ class ArticleUpdater
     @sync_file_name = sync_file_name
   end
 
-  def download_new_articles(force = false)
+  def download_new_articles(force = false, dry_run: false)
     raise ArgumentError, "http_client is required" if http_client.nil?
 
     articles = force ? all_articles : non_synced_articles
@@ -43,11 +43,11 @@ class ArticleUpdater
         articles_sync_status = sync_status
         if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
           logger.debug "Article ID: #{article_id} already synced."
-          mark_as_synced(article_id, nil)
+          mark_as_synced(article_id, nil) unless dry_run
           next
         end
 
-        if ENV["SYNC_ENV"] == "test"
+        if ENV["SYNC_ENV"] == "test" && !dry_run
           logger.debug "Syncing metadata for article ID: #{article_id}..."
           updated_article = update_meta_on_dev_to(
             article_id,

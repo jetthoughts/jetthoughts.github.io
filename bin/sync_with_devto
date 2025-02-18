@@ -2,5 +2,5 @@
 
 require_relative "sync/sync.rb"
 
-force = ARGV.include?('-f') ? true : false
-Sync.perform(force)
+app = App.new(args: ARGV)
+Sync.perform(app: app)
