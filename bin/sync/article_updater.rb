@@ -12,7 +12,6 @@ class ArticleUpdater
   class NetworkError < StandardError; end
 
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
-  DEV_TO_API_URL = "https://dev.to/api/articles".freeze
   DEFAULT_SYNC_STATUS_FILE = "sync_status.yml".freeze
 
   attr_reader :working_dir, :http_client, :sync_file_name
@@ -115,30 +114,10 @@ class ArticleUpdater
   def update_meta_on_dev_to(article_id, slug, meta = {})
     raise ArgumentError, "Missing dev.to api-key header" unless ENV["DEVTO_API_KEY"]
 
-    canonical_url = JT_BLOG_HOST + "#{slug}/"
-    url = "#{DEV_TO_API_URL}/#{article_id}"
-    headers = {"api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json"}
-
-    body = {
-      article: {
-        canonical_url: canonical_url,
-        description: meta[:description]
-      }.compact
-    }
-
-    begin
-      response = http_client.update_article(url, headers: headers, body: body.to_json)
-
-      if response.success?
-        logger.info "Update canonical_url result: #{canonical_url}\n"
-        JSON.parse(response.body)
-      else
-        raise "Failed to update canonical_url: #{response.code} - #{response.message}"
-      end
-    rescue => e
-      logger.error "Error updating article #{article_id}: #{e.message}"
-      nil
-    end
+    @http_client.update_article(article_id, {
+      description: meta[:description],
+      canonical_url: "#{JT_BLOG_HOST}#{slug}/"
+    })
   end
 
   def non_synced_articles

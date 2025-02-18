@@ -73,18 +73,16 @@ class DevToClientTest < Minitest::Test
   end
 
   def test_update_article_sends_put_request
-    url = "#{DevToClient::BASE_URL}/articles/123"
-    headers = {"api-key" => "test-key"}
-    body = {article: {body_markdown: "# Test"}}.to_json
+    content = "# Test"
 
-    @stubs.put(url) do |env|
-      assert_equal body, env.body
-      assert_equal "test-key", env.request_headers["api-key"]
-      [200, {}, {status: "success"}.to_json]
+    @stubs.put("https://dev.to/api/articles/123") do |env|
+      assert_equal({article: {body_markdown: content}}.to_json, env.body)
+
+      [200, {}, {edited_at: "202502181200"}.to_json]
     end
 
-    response = @client.update_article(url, headers: headers, body: body)
-    assert_equal 200, response.status
+    response = @client.update_article(123, {body_markdown: content})
+    assert_equal "202502181200", response["edited_at"]
     @stubs.verify_stubbed_calls
   end
 
