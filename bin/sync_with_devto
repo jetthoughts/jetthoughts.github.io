@@ -2,5 +2,11 @@
 
 require_relative "sync/sync.rb"
 
-app = App.new(args: ARGV, logger: Logger.new(STDOUT, level: :debug))
+app = App.new(
+  args: ARGV,
+  logger: Logger.new(STDOUT, level: :debug),
+  http_client: DevToClient.new,
+  working_dir: "content/blog"
+)
+
 Sync.perform(app: app)

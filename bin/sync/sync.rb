@@ -11,9 +11,9 @@ class Sync
 
   attr_reader :http_client, :app
 
-  def initialize(app: App.new, http_client: DevToClient.new)
+  def initialize(app: App.new, http_client: nil)
     @app = app
-    @http_client = http_client
+    @http_client = http_client || app.http_client
   end
 
   def self.perform(**kwargs)
@@ -29,11 +29,11 @@ class Sync
   private
 
   def sync_checker
-    @sync_checker ||= ArticleSyncChecker.new(app.working_dir, http_client, storage: app.storage)
+    @sync_checker ||= ArticleSyncChecker.new(app.working_dir, app.http_client, storage: app.storage)
   end
 
   def article_updater
-    @article_updater ||= ArticleUpdater.new(app.working_dir, http_client, storage: app.storage)
+    @article_updater ||= ArticleUpdater.new(app.working_dir, app.http_client, storage: app.storage)
   end
 
   def article_cleaner

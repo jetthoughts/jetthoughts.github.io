@@ -6,7 +6,7 @@ require_relative "../../bin/sync/app"
 class AppTest < Minitest::Test
   def setup
     super
-    @app = App.new(working_dir: @temp_dir)
+    @app = App.new(working_dir: @temp_dir, http_client: TestHttpClient.new([]))
   end
 
   def test_initializes_with_storage
