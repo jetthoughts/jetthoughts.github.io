@@ -43,19 +43,17 @@ class ArticleUpdater
         articles_sync_status = sync_status
         if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
           logger.debug "Article ID: #{article_id} already synced."
-          mark_as_synced(article_id, nil) unless dry_run
+          mark_as_synced(article_id, nil)
           next
         end
 
         if ENV["SYNC_ENV"] == "test" && !dry_run
-          logger.debug "Syncing metadata for article ID: #{article_id}..."
-          updated_article = update_meta_on_dev_to(
-            article_id,
-            local_data[:slug],
-            {description: local_data[:description]}
-          )
+          logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_id}..."
+          updated_article = article_fetcher.update_meta_on_dev_to(article_id, {description: description_for(local_data), canonical_url: canonical_url_for(local_data)})
+          # NOTE: We do not need to update the sync if there is no change on the dev.to side
           next unless updated_article
 
+          # NOTE: Update the sync status file with the new edited_at timestamp
           mark_as_synced(article_id, updated_article["edited_at"])
         end
       end
@@ -69,6 +67,14 @@ class ArticleUpdater
   end
 
   private
+
+  def description_for(local_data)
+    local_data[:description]
+  end
+
+  def canonical_url_for(local_data)
+    "#{JT_BLOG_HOST}#{local_data[:slug]}/"
+  end
 
   def sync_status
     YAML.load_file(sync_file_path)
@@ -109,15 +115,6 @@ class ArticleUpdater
     else
       logger.warn "Article ID: #{article_id} not found."
     end
-  end
-
-  def update_meta_on_dev_to(article_id, slug, meta = {})
-    raise ArgumentError, "Missing dev.to api-key header" unless ENV["DEVTO_API_KEY"]
-
-    @http_client.update_article(article_id, {
-      description: meta[:description],
-      canonical_url: "#{JT_BLOG_HOST}#{slug}/"
-    })
   end
 
   def non_synced_articles

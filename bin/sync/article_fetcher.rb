@@ -73,6 +73,11 @@ class ArticleFetcher
     encoded_url
   end
 
+
+  def update_meta_on_dev_to(...)
+    http_client.update_article(...)
+  end
+
   private
 
   attr_reader :http_client
