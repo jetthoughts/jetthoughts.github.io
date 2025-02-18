@@ -69,4 +69,30 @@ class ImagesDownloaderTest < Minitest::Test
     refute File.exist?(File.join(@article_dir, "cover.jpg"))
     assert_equal "https://example.com/fail.jpg", @remote_data["cover_image"]
   end
+
+  def test_preserves_metadata_and_updates_cover_image
+    # Create a file with existing metadata
+    metadata = {
+      "title" => "Test Article",
+      "description" => "Test Description",
+      "metatags" => { "image" => "cover.jpg" },
+      "cover_image" => "https://example.com/remote_cover.jpg"
+    }
+    content = "---\n#{YAML.dump(metadata)}---\n\n# Content"
+    File.write(File.join(@article_dir, "index.md"), content)
+
+    @remote_data["cover_image"] = "https://example.com/remote_cover.jpg"
+    @downloader.perform
+
+    # Verify metadata is preserved but cover_image is updated
+    updated_content = File.read(File.join(@article_dir, "index.md"))
+    updated_metadata = YAML.load(updated_content.match(/---\n(.*?)\n---/m)[1])
+
+    assert_equal "Test Article", updated_metadata["title"], "Title should be preserved"
+    assert_equal "Test Description", updated_metadata["description"], "Description should be preserved"
+    assert_equal "cover.jpg", updated_metadata.dig("metatags", "image"), "Cover image in metatags should be updated"
+    assert_includes updated_metadata["cover_image"], REPO_URL, "Cover image URL should be converted to github CDN"
+    assert_includes updated_metadata["cover_image"], "cover.jpg", "Cover image filename should be updated"
+    assert_path_exists File.join(@article_dir, "cover.jpg"), "Cover image file should be downloaded"
+  end
 end
