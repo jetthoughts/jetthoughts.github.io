@@ -32,7 +32,7 @@ class TestHttpClient
 
   def update_article(article_id, data)
     @update_requests << {article_id: article_id, data: data}
-    { edited_at: Time.now.utc }
+    {"edited_at" => Time.now.utc}
   end
 
   def download(url)
