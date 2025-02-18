@@ -23,39 +23,50 @@ class ArticleUpdater
     @storage = app.storage
   end
 
+  def can_pull?(dry_run)
+    !dry_run
+  end
+
   def download_new_articles(force: app.force?, dry_run: app.dry_run?)
     articles = force ? all_articles : non_synced_articles
 
     articles.each do |article_id, local_data|
+      sync_status[article_id][:synced] = false
       remote_data = fetch_remote_article(article_id)
+
       unless remote_data
         logger.error "Error fetching article ID: #{article_id}"
         next
       end
 
-      save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
-      download_images_and_update_article(local_data[:slug], working_dir, remote_data, local_data)
+      if can_pull?(dry_run)
+        save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
+        download_images_and_update_article(local_data[:slug], working_dir, remote_data, local_data)
+        sync_status[article_id][:synced] = true
+      end
 
-      mark_as_synced = if article_fetcher.has_synced_metadata?(remote_data, sync_status, local_data[:slug])
+      # Update metadata on dev.to if it is not up to date
+      if article_fetcher.has_updated_metadata?(remote_data, sync_status[article_id], local_data[:slug])
         logger.debug "Article ID: #{article_id} already synced."
-        true
-      elsif ENV["SYNC_ENV"] == "test" && !dry_run # TODO: Remove SYNC_ENV condition
-        logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_id}..."
-        updated_article = article_fetcher.update_meta_on_dev_to(
-          article_id,
-          {description: description_for(local_data), canonical_url: canonical_url_for(local_data)}
-        )
-        # NOTE: We do not need to update the sync if there is no change on the dev.to side
-        if updated_article
-          sync_status[article_id][:edited_at] = updated_article["edited_at"]
-          true
+        sync_status[article_id][:synced] = true
+      else
+        sync_status[article_id][:synced] = false # NOTE: We know that dev.to article does not have required metadata
+
+        if ENV["SYNC_ENV"] == "test" && can_push?(dry_run) # TODO: Remove SYNC_ENV condition
+          logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_id}..."
+          updated_article = article_fetcher.update_meta_on_dev_to(
+            article_id,
+            {description: description_for(local_data), canonical_url: canonical_url_for(local_data)}
+          )
+          # NOTE: We do not need to update the sync if there is no change on the dev.to side
+          if updated_article
+            sync_status[article_id][:edited_at] = updated_article["edited_at"]
+            sync_status[article_id][:synced] = true
+          end
         end
       end
 
-      if mark_as_synced
-        logger.debug "Marking article as synced at #{mark_as_synced}..."
-        mark_as_synced(article_id)
-      end
+      save_sync_status_changes
     rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
       logger.error "Network error: #{e.message}"
       raise NetworkError, "Failed to download article #{article_id}: #{e.message}"
@@ -66,6 +77,10 @@ class ArticleUpdater
   end
 
   private
+
+  def can_push?(dry_run)
+    !dry_run
+  end
 
   def description_for(local_data)
     local_data[:description]
@@ -85,19 +100,12 @@ class ArticleUpdater
 
   def download_images_and_update_article(slug, working_dir, remote_data, local_data)
     logger.info "Downloading images to #{working_dir} / #{slug} ..."
-    ImagesDownloader.new(slug, article_fetcher, working_dir, remote_data, local_data).perform
+    ImagesDownloader.new(slug, article_fetcher, working_dir, remote_data, local_data, app: app).perform
   end
 
-  def mark_as_synced(article_id)
-    data = storage.load
-
-    if data[article_id]
-      data[article_id][:synced] = true
-      storage.save(data)
-      logger.info "Article ID: #{article_id} updated successfully."
-    else
-      logger.warn "Article ID: #{article_id} not found."
-    end
+  def save_sync_status_changes
+    storage.save(sync_status)
+    logger.info "Sync statuses updated!"
   end
 
   def non_synced_articles

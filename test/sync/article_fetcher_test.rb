@@ -64,22 +64,22 @@ class ArticleFetcherTest < SyncTestCase
 
   def test_has_updated_meta_description_with_no_sync_data
     article_data = { "id" => 3, "description" => "Test description" }
-    refute @fetcher.has_updated_meta_description?(article_data, @sync_data)
+    refute @fetcher.has_updated_meta_description?(article_data, @sync_data[3])
   end
 
   def test_has_updated_meta_description_with_no_local_description
     article_data = { "id" => 2, "description" => "Test description" }
-    assert @fetcher.has_updated_meta_description?(article_data, @sync_data)
+    assert @fetcher.has_updated_meta_description?(article_data, @sync_data[2])
   end
 
   def test_has_updated_meta_description_with_matching_description
     article_data = { "id" => 1, "description" => "Test description" }
-    assert @fetcher.has_updated_meta_description?(article_data, @sync_data)
+    assert @fetcher.has_updated_meta_description?(article_data, @sync_data[1])
   end
 
   def test_has_updated_meta_description_with_different_description
     article_data = { "id" => 1, "description" => "New description" }
-    refute @fetcher.has_updated_meta_description?(article_data, @sync_data)
+    refute @fetcher.has_updated_meta_description?(article_data, @sync_data[1])
   end
 
   def test_has_synced_metadata_when_both_match
@@ -88,7 +88,7 @@ class ArticleFetcherTest < SyncTestCase
       "description" => "Test description",
       "canonical_url" => "https://example.com/test-article"
     }
-    assert @fetcher.has_synced_metadata?(article_data, @sync_data, "test-article")
+    assert @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
   end
 
   def test_has_synced_metadata_when_url_mismatch
@@ -97,7 +97,7 @@ class ArticleFetcherTest < SyncTestCase
       "description" => "Test description",
       "canonical_url" => "https://example.com/wrong-article"
     }
-    refute @fetcher.has_synced_metadata?(article_data, @sync_data, "test-article")
+    refute @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
   end
 
   def test_has_synced_metadata_when_description_mismatch
@@ -106,7 +106,7 @@ class ArticleFetcherTest < SyncTestCase
       "description" => "Wrong description",
       "canonical_url" => "https://example.com/test-article"
     }
-    refute @fetcher.has_synced_metadata?(article_data, @sync_data, "test-article")
+    refute @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
   end
 
   def test_has_synced_metadata_when_no_url
@@ -114,7 +114,7 @@ class ArticleFetcherTest < SyncTestCase
       "id" => 1,
       "description" => "Test description"
     }
-    refute @fetcher.has_synced_metadata?(article_data, @sync_data, "test-article")
+    refute @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
   end
 
   def test_has_synced_metadata_when_no_sync_data
@@ -123,7 +123,7 @@ class ArticleFetcherTest < SyncTestCase
       "description" => "Test description",
       "canonical_url" => "https://example.com/test-article"
     }
-    refute @fetcher.has_synced_metadata?(article_data, @sync_data, "test-article")
+    refute @fetcher.has_updated_metadata?(article_data, @sync_data[3], "test-article")
   end
 
   def test_remove_cdn
