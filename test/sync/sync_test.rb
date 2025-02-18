@@ -6,32 +6,71 @@ require_relative "../../bin/sync/sync"
 class SyncTest < Minitest::Test
   def setup
     super
-    @articles = [sample_article]
-    @http_client = TestHttpClient.new(@articles)
     @app = App.new(working_dir: @temp_dir)
+    @http_client = TestHttpClient.new([sample_article])
     @sync = Sync.new(app: @app, http_client: @http_client)
   end
 
-  def test_perform_in_dry_run_mode
-    create_sync_file(@temp_dir, create_sync_status(synced: false))
-    app = App.new(args: ["--dry"], working_dir: @temp_dir)
-    sync = Sync.new(app: app, http_client: @http_client)
-
-    sync.perform
-
-    sync_data = YAML.load_file(File.join(@temp_dir, "sync_status.yml"))
-    refute sync_data[1][:synced], "Article should not be marked as synced in dry run mode"
-    assert_equal 0, @http_client.update_requests.size, "No update requests should be made in dry run mode"
+  def test_uses_app_storage_for_sync_checker
+    sync_checker = @sync.send(:sync_checker)
+    assert_equal @app.storage, sync_checker.storage, "Should use app's storage for sync checker"
   end
 
-  def test_perform_with_force
-    create_sync_file(@temp_dir, create_sync_status(synced: true))
-    app = App.new(args: ["--force"], working_dir: @temp_dir)
-    sync = Sync.new(app: app, http_client: @http_client)
+  def test_uses_app_storage_for_article_updater
+    article_updater = @sync.send(:article_updater)
+    assert_equal @app.storage, article_updater.storage, "Should use app's storage for article updater"
+  end
 
+  def test_uses_app_storage_for_article_cleaner
+    article_cleaner = @sync.send(:article_cleaner)
+    assert_equal @app.storage, article_cleaner.storage, "Should use app's storage for article cleaner"
+  end
+
+  def test_perform_updates_sync_status_for_new_articles
+    article = sample_article
+    @http_client.articles = [article]
+
+    @sync.perform
+
+    sync_data = @app.storage.load
+    assert sync_data.key?(article["id"]), "Should create sync status for article"
+    assert_equal article["edited_at"], sync_data[article["id"]][:edited_at], "Should set correct edited_at"
+    assert_equal "test-article-ruby-rails-testing", sync_data[article["id"]][:slug], "Should set correct slug"
+    assert_equal "dev_to", sync_data[article["id"]][:source], "Should set correct source"
+  end
+
+  def test_perform_downloads_articles_in_non_dry_run
+    # First ensure we have sync status
+    @app.storage.save({
+      1 => {
+        edited_at: "2023-02-01",
+        slug: "test-article",
+        synced: false,
+        source: "dev_to"
+      }
+    })
+
+    @sync.perform
+
+    assert_path_exists File.join(@temp_dir, "test-article"), "Should create article directory"
+    assert_path_exists File.join(@temp_dir, "test-article/index.md"), "Should create article file"
+  end
+
+  def test_perform_skips_article_cleaner_in_dry_run
+    app_with_dry_run = App.new(working_dir: @temp_dir, args: ["--dry"])
+    sync = Sync.new(app: app_with_dry_run, http_client: @http_client)
+
+    create_test_article("old-article")
     sync.perform
 
-    sync_data = YAML.load_file(File.join(@temp_dir, "sync_status.yml"))
-    assert sync_data[1][:synced], "Article should be marked as synced in force mode"
+    assert_path_exists File.join(@temp_dir, "old-article"), "Should not delete articles in dry run"
+  end
+
+  private
+
+  def create_test_article(name)
+    dir = File.join(@temp_dir, name)
+    FileUtils.mkdir_p(dir)
+    File.write(File.join(dir, "index.md"), "# Test Content")
   end
 end

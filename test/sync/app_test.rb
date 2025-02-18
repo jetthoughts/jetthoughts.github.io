@@ -6,46 +6,36 @@ require_relative "../../bin/sync/app"
 class AppTest < Minitest::Test
   def setup
     super
-    @app = App.new
+    @app = App.new(working_dir: @temp_dir)
   end
 
-  def test_default_configuration
-    assert_equal false, @app.dry_run?
-    assert_equal false, @app.force?
-    assert_equal "content/blog/", @app.working_dir
-    assert_equal "sync_status.yml", @app.sync_status_file
-    assert_instance_of Logger, @app.logger
+  def test_initializes_with_storage
+    assert_instance_of SyncStatusStorage, @app.storage, "Should initialize with a storage instance"
+    assert_equal @temp_dir, @app.storage.sync_file_path.dirname.to_s, "Storage should use the correct working directory"
   end
 
-  def test_configuration_with_args
-    app = App.new(args: %w[--dry -f])
-    assert_equal true, app.dry_run?
-    assert_equal true, app.force?
+  def test_dry_run_with_dry_flag
+    app = App.new(args: ["--dry"])
+    assert app.dry_run?, "Should be in dry run mode with --dry flag"
   end
 
-  def test_configuration_with_custom_working_dir
-    app = App.new(working_dir: "custom/path/")
-    assert_equal "custom/path/", app.working_dir
+  def test_dry_run_without_dry_flag
+    app = App.new
+    refute app.dry_run?, "Should not be in dry run mode without --dry flag"
   end
 
-  def test_configuration_with_custom_sync_status_file
-    app = App.new(sync_status_file: "custom_sync.yml")
-    assert_equal "custom_sync.yml", app.sync_status_file
+  def test_force_with_force_flag
+    app = App.new(args: ["--force"])
+    assert app.force?, "Should be in force mode with --force flag"
   end
 
-  def test_configuration_with_custom_logger
-    custom_logger = Logger.new(StringIO.new)
-    app = App.new(logger: custom_logger)
-    assert_equal custom_logger, app.logger
+  def test_force_with_short_force_flag
+    app = App.new(args: ["-f"])
+    assert app.force?, "Should be in force mode with -f flag"
   end
 
-  def test_parse_args_with_long_and_short_options
-    app = App.new(args: %w[--force --dry])
-    assert app.force?
-    assert app.dry_run?
-
-    app = App.new(args: %w[-f --dry])
-    assert app.force?
-    assert app.dry_run?
+  def test_force_without_force_flag
+    app = App.new
+    refute app.force?, "Should not be in force mode without force flag"
   end
 end

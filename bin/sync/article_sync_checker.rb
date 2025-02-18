@@ -12,15 +12,15 @@ class ArticleSyncChecker
 
   attr_reader :working_dir, :http_client, :storage
 
-  def initialize(working_dir, http_client, sync_file_name: DEFAULT_SYNC_STATUS_FILE)
+  def initialize(working_dir, http_client, storage: nil)
     @working_dir = Pathname.new(working_dir)
     @http_client = http_client
-    @storage = SyncStatusStorage.new(@working_dir, file_name: sync_file_name)
+    @storage = storage || SyncStatusStorage.new(@working_dir)
   end
 
   def update_sync_status
     storage.ensure_file_exists
-    @sync_status = storage.load
+    @sync_status = storage.load || {}
     update_status(fetch_articles)
     storage.save(@sync_status)
   end
@@ -29,7 +29,15 @@ class ArticleSyncChecker
 
   def fetch_articles
     response = http_client.get_articles(USERNAME, 0)
-    JSON.parse(response.body)
+    if response.success?
+      JSON.parse(response.body)
+    else
+      logger.error "Failed to fetch articles: #{response.code} - #{response.message}"
+      []
+    end
+  rescue => e
+    logger.error "Error fetching articles: #{e.message}"
+    []
   end
 
   def slug(article)
