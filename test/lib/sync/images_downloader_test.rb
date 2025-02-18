@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/images_downloader"
+require "sync_test_case"
+require "sync/images_downloader"
 
-class ImagesDownloaderTest < Minitest::Test
+class ImagesDownloaderTest < SyncTestCase
   def setup
     super
     @slug = "test-article"

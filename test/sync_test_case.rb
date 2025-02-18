@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
-require_relative "../unit_helper"
-require_relative "test_http_client"
-require_relative "factories"
+require "test_helper"
+
+require "support/test_http_client"
+require "support/factories"
+
 require "pathname"
 require "yaml"
 
-module TestHelper
+class SyncTestCase < Minitest::Test
   def setup
     super
     setup_temp_dir
@@ -18,7 +20,7 @@ module TestHelper
   end
 
   def setup_temp_dir
-    @temp_dir = Dir.mktmpdir
+    @temp_dir = Pathname.new(Dir.mktmpdir)
   end
 
   def teardown_temp_dir
@@ -49,8 +51,4 @@ module TestHelper
   def sample_article(...)
     TestFactories::Article.build_details(...)
   end
-end
-
-class Minitest::Test
-  include TestHelper
 end

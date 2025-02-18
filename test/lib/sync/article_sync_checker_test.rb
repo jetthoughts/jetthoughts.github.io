@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/article_sync_checker"
+require "sync_test_case"
+require "sync/article_sync_checker"
 
-class ArticleSyncCheckerTest < Minitest::Test
-  include TestHelper
-
+class ArticleSyncCheckerTest < SyncTestCase
   def setup
     super
     @articles = [sample_article]

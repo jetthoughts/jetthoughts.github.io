@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../../bin/sync/dev_to_client"
+require "sync_test_case"
+require "sync/dev_to_client"
 
-class DevToClientTest < Minitest::Test
+class DevToClientTest < SyncTestCase
   def setup
     super
     @conn = Faraday.new do |builder|
