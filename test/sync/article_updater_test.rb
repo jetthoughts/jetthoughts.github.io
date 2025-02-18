@@ -13,7 +13,7 @@ class ArticleUpdaterTest < SyncTestCase
   def test_download_new_articles_creates_directory
     @app.storage.save(create_sync_status)
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     assert_path_exists File.join(@temp_dir, "test-article"), "Article directory should be created"
   end
@@ -21,7 +21,7 @@ class ArticleUpdaterTest < SyncTestCase
   def test_download_new_articles_creates_markdown_file
     @app.storage.save(create_sync_status)
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     markdown_file = File.join(@temp_dir, "test-article/index.md")
     assert_path_exists markdown_file, "Markdown file should be created"
@@ -31,7 +31,7 @@ class ArticleUpdaterTest < SyncTestCase
   def test_download_new_articles_updates_sync_status
     @app.storage.save(create_sync_status(synced: false))
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     sync_data = @app.storage.load
     assert sync_data[1][:synced], "Article should be marked as synced"
@@ -41,7 +41,7 @@ class ArticleUpdaterTest < SyncTestCase
     @app.storage.save(create_sync_status(synced: true, slug: "test-article"))
     create_article_dir("test-article", "# Original Content")
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     content = File.read(File.join(@temp_dir, "test-article/index.md"))
     assert_includes content.strip, "# Original Content", "Synced article content should not be modified"
@@ -54,7 +54,7 @@ class ArticleUpdaterTest < SyncTestCase
       "description" => "Original Description"
     })
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
     assert_equal "Original Title", metadata["title"], "Title should not be modified"
@@ -67,7 +67,7 @@ class ArticleUpdaterTest < SyncTestCase
       sample_article("cover_image" => "https://example.com/image.jpg", "body_markdown" => "# Test Content")
     ])
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
     assert metadata.key?("metatags"), "Metadata should have metatags key"
@@ -80,7 +80,7 @@ class ArticleUpdaterTest < SyncTestCase
     @app.storage.save(create_sync_status)
     @articles.replace([sample_article("cover_image" => nil)])
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
     refute metadata.key?("metatags"), "Metadata should not have metatags key"
@@ -89,12 +89,15 @@ class ArticleUpdaterTest < SyncTestCase
 
   def test_download_new_articles_in_dry_run_mode
     @app.storage.save(create_sync_status(synced: false))
+    @app.args << "--dry"
 
-    @updater.download_new_articles(force: false, dry_run: true)
+    @updater.download_articles
 
     sync_data = @app.storage.load
     refute sync_data[1][:synced], "Article should not be marked as synced in dry run mode"
     assert_equal 0, @http_client.update_requests.size, "No update requests should be made in dry run mode"
+  ensure
+    @app.args.delete("--dry")
   end
 
   def test_uses_app_storage
@@ -114,7 +117,7 @@ class ArticleUpdaterTest < SyncTestCase
     @updater = ArticleUpdater.new(app: @app)
 
     @app.storage.save(create_sync_status(synced: false))
-    @updater.download_new_articles
+    @updater.download_articles
 
     sync_data = @app.storage.load
     refute sync_data[1][:synced], "Should respect app's dry run setting"
@@ -125,7 +128,7 @@ class ArticleUpdaterTest < SyncTestCase
     @updater = ArticleUpdater.new(app: @app)
     @app.storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
 
-    @updater.download_new_articles
+    @updater.download_articles
 
     sync_data = @app.storage.load
     refute_equal "2023-02-17T09:00:00Z", sync_data[1][:edited_at], "Should respect app's force setting"

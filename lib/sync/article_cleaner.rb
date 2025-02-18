@@ -8,11 +8,12 @@ class ArticleCleaner
 
   ARTICLE_FILE = "index.md".freeze
 
-  attr_reader :working_dir, :storage
+  attr_reader :working_dir, :storage, :app
 
   def initialize(app:)
     @working_dir = app.working_dir
     @storage = app.storage || SyncStatusStorage.new(@working_dir)
+    @app = app
   end
 
   def cleanup_renamed_articles
@@ -27,14 +28,18 @@ class ArticleCleaner
       folder_name = File.basename(folder_path)
       unless slugs.include?(folder_name)
         begin
-          FileUtils.rm_rf(folder_path)
-          deleted_folders << folder_name
+          unless app.dry_run?
+            FileUtils.rm_rf(folder_path)
+            deleted_folders << folder_name
+          end
           logger.info "Deleted folder: #{folder_name}"
         rescue => e
-          logger.warn "Failed to delete folder #{folder_name}: #{e.message}"
+          logger.error "Failed to delete folder #{folder_name}: #{e.message}"
+          raise
         end
       end
     end
+
     deleted_folders
   end
 
@@ -50,6 +55,6 @@ class ArticleCleaner
     end
   rescue => e
     logger.error "Failed to load slugs from storage: #{e.message}"
-    []
+    raise
   end
 end
