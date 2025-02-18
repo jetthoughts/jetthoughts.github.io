@@ -14,15 +14,16 @@ class ArticleUpdater
 
   JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
 
-  attr_reader :working_dir, :storage, :article_fetcher
+  attr_reader :working_dir, :storage, :article_fetcher, :app
 
   def initialize(app:)
+    @app = app
     @working_dir = app.working_dir
     @article_fetcher = app.fetcher || ArticleFetcher.new(app.http_client)
-    @storage = storage || app.storage || SyncStatusStorage.new(@working_dir)
+    @storage = app.storage
   end
 
-  def download_new_articles(force = false, dry_run: false)
+  def download_new_articles(force: app.force?, dry_run: app.dry_run?)
     articles = force ? all_articles : non_synced_articles
 
     articles.each do |article_id, local_data|
@@ -72,10 +73,6 @@ class ArticleUpdater
 
   def sync_status
     storage.load
-  end
-
-  def article_fetcher
-    @article_fetcher ||= ArticleFetcher.new(http_client)
   end
 
   def fetch_remote_article(article_id)

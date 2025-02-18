@@ -23,7 +23,7 @@ class Sync
     fetch_articles = app.fetcher.fetch_articles
     sync_checker.update_sync_statuses_for(fetch_articles)
 
-    article_updater.download_new_articles(app.force?, dry_run: app.dry_run?)
+    article_updater.download_new_articles(force: app.force?, dry_run: app.dry_run?)
     article_cleaner.cleanup_renamed_articles unless app.dry_run?
   end
 
