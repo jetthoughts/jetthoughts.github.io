@@ -29,39 +29,37 @@ class ArticleUpdater
 
     articles = force ? all_articles : non_synced_articles
 
-    begin
-      articles.each do |article_id, local_data|
-        remote_data = fetch_remote_article(article_id)
-        unless remote_data
-          logger.error "Error fetching article ID: #{article_id}"
-          next
-        end
+    articles.each do |article_id, local_data|
+      remote_data = fetch_remote_article(article_id)
+      unless remote_data
+        logger.error "Error fetching article ID: #{article_id}"
+        next
+      end
 
-        save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
-        download_images_and_update_article(local_data[:slug], http_client, working_dir, remote_data, local_data)
+      save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
+      download_images_and_update_article(local_data[:slug], http_client, working_dir, remote_data, local_data)
 
-        articles_sync_status = storage.load
-        if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
-          logger.debug "Article ID: #{article_id} already synced."
-          mark_as_synced(article_id, nil)
-          next
-        end
+      articles_sync_status = storage.load
+      if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
+        logger.debug "Article ID: #{article_id} already synced."
+        mark_as_synced(article_id, nil)
+        next
+      end
 
-        if ENV["SYNC_ENV"] == "test" && !dry_run
-          logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_id}..."
-          updated_article = article_fetcher.update_meta_on_dev_to(article_id, {description: description_for(local_data), canonical_url: canonical_url_for(local_data)})
-          # NOTE: We do not need to update the sync if there is no change on the dev.to side
-          next unless updated_article
+      if ENV["SYNC_ENV"] == "test" && !dry_run
+        logger.debug "Overriding dev.to description and canonical_url for article ID: #{article_id}..."
+        updated_article = article_fetcher.update_meta_on_dev_to(article_id, {description: description_for(local_data), canonical_url: canonical_url_for(local_data)})
+        # NOTE: We do not need to update the sync if there is no change on the dev.to side
+        next unless updated_article
 
-          # NOTE: Update the sync status file with the new edited_at timestamp
-          mark_as_synced(article_id, updated_article["edited_at"])
-        end
+        # NOTE: Update the sync status file with the new edited_at timestamp
+        mark_as_synced(article_id, updated_article["edited_at"])
       end
     rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
       logger.error "Network error: #{e.message}"
-      raise NetworkError, "Failed to download articles: #{e.message}"
+      raise NetworkError, "Failed to download article #{article_id}: #{e.message}"
     rescue => e
-      logger.error "Error processing articles: #{e.message}"
+      logger.error "Error processing article #{article_id}: #{e.message}"
       raise
     end
   end
