@@ -26,7 +26,9 @@ module TestHelper
       "edited_at" => "2025-02-17T10:00:00Z",
       "created_at" => "2025-02-17T09:00:00Z",
       "url" => "https://dev.to/test-article",
-      "description" => "Test description"
+      "description" => "Test description",
+      "cover_image" => nil,
+      "canonical_url" => nil
     }.merge(overrides)
   end
 end

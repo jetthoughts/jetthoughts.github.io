@@ -41,7 +41,8 @@ class ArticleUpdater
         save_article_as_markdown(remote_data, local_data[:slug], local_data[:description])
         download_images(local_data[:slug], http_client, working_dir, remote_data, local_data)
 
-        if has_updated_canonical_url?(remote_data) && has_updated_meta_description?(remote_data)
+        articles_sync_status = sync_status
+        if article_fetcher.has_synced_metadata?(remote_data, articles_sync_status, local_data[:slug])
           logger.debug "Article ID: #{article_id} already synced."
           mark_as_synced(article_id, nil)
           next
@@ -52,7 +53,7 @@ class ArticleUpdater
           updated_article = update_meta_on_dev_to(
             article_id,
             local_data[:slug],
-            { description: local_data[:description] }
+            {description: local_data[:description]}
           )
           next unless updated_article
 
@@ -81,26 +82,15 @@ class ArticleUpdater
   end
 
   def sync_file_path
-    @_sync_file_path ||= working_dir / sync_file_name
+    @_sync_file_path ||= path_to(sync_file_name)
+  end
+
+  def article_fetcher
+    @_article_fetcher ||= ArticleFetcher.new(http_client)
   end
 
   def fetch_remote_article(article_id)
-    ArticleFetcher.new(http_client).fetch(article_id)
-  end
-
-  def has_updated_canonical_url?(article_data)
-    data = sync_status
-
-    return false if article_data["canonical_url"].nil?
-
-    article_data["canonical_url"].split("/").last == data[article_data["id"]][:slug]
-  end
-
-  def has_updated_meta_description?(article_data)
-    return false unless sync_status[article_data["id"]]
-    return true if sync_status[article_data["id"]][:description].nil?
-
-    article_data["description"] == sync_status[article_data["id"]][:description]
+    article_fetcher.fetch(article_id)
   end
 
   def download_images(slug, http_client, working_dir, remote_data, local_data)
@@ -127,7 +117,7 @@ class ArticleUpdater
 
     canonical_url = JT_BLOG_HOST + "#{slug}/"
     url = "#{DEV_TO_API_URL}/#{article_id}"
-    headers = { "api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json" }
+    headers = {"api-key" => ENV["DEVTO_API_KEY"], "Content-Type" => "application/json"}
 
     body = {
       article: {
@@ -160,23 +150,36 @@ class ArticleUpdater
   end
 
   def save_article_as_markdown(article_data, slug, description)
-    dir_path = working_dir / slug
-    file_name = dir_path / "index.md"
+    content_path = content_path_for(slug)
 
     begin
-      FileUtils.mkdir_p(dir_path) unless Dir.exist?(dir_path)
-
       metadata = generate_metadata(article_data, slug, description)
       markdown = article_data["body_markdown"] = prepare_markdown(article_data["body_markdown"])
 
       content = assemble_post_file(metadata, markdown)
-      File.write(file_name, content)
+      File.write(content_path, content)
 
-      logger.info "\nArticle saved: #{file_name}"
+      logger.info "\nArticle saved: #{content_path}"
     rescue => e
       logger.error "Error saving article #{slug}: #{e.message}"
       raise
     end
+  end
+
+  def content_path_for(slug)
+    page_bundle_path_for(slug) / "index.md"
+  end
+
+  def page_bundle_path_for(slug)
+    result = path_to(slug)
+
+    FileUtils.mkdir_p(result) unless Dir.exist?(result)
+
+    result
+  end
+
+  def path_to(slug)
+    working_dir / slug
   end
 
   def generate_metadata(article_data, slug, description)
