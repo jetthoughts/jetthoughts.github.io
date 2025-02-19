@@ -36,11 +36,11 @@ class SyncTestCase < Minitest::Test
   end
 
   # Factory method shortcuts
-  def create_sync_file(dir, content, filename = "sync_status.yml")
-    TestFactories::SyncStatus.create_file(dir, content, filename)
+  def create_sync_file(dir, content)
+    TestFactories::SyncStatus.create_file(dir, content)
   end
 
-  def create_article_dir(slug, content = "# Test Content")
+  def create_article(slug, content = "# Test Content")
     TestFactories::Article.create_page_bundle(@temp_dir, slug, content)
   end
 
@@ -48,8 +48,8 @@ class SyncTestCase < Minitest::Test
     TestFactories::Article.create_with_metadata(@temp_dir, slug, metadata, content)
   end
 
-  def read_markdown_metadata(file_path)
-    TestFactories::Article.read_metadata(file_path)
+  def read_markdown_metadata(...)
+    TestFactories::Article.read_metadata(...)
   end
 
   def create_sync_status(...)

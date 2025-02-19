@@ -39,6 +39,8 @@ module Sync
     end
 
     def save
+      @storage.ensure_page_bundle_directory(slug)
+
       @content = assemble_content
       @storage.save_content(slug, assemble_content)
       logger.info("\nArticle saved: #{slug}")
