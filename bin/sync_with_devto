@@ -8,7 +8,8 @@ require "sync/app"
 require "sync/sync_script"
 
 logger = Logger.new(STDOUT, level: :debug)
-app = App.new(args: ARGV, logger: logger, http_client: DevToClient.new, working_dir: "content/blog")
-Post.configure(app.working_dir)
+
+app = App.new(args: ARGV, logger: logger, fetcher: ArticleFetcher.new, working_dir: "content/blog")
+Sync::Post.configure(app.working_dir)
 
 SyncScript.perform(app: app)

@@ -9,7 +9,7 @@ class ArticleFetcher
   include Retryable
   USERNAME = "jetthoughts".freeze
 
-  def initialize(http_client)
+  def initialize(http_client = DevToClient.new)
     @http_client = http_client
   end
 
