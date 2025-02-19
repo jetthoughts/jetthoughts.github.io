@@ -37,7 +37,7 @@ module Sync
 
       def test_skips_synced_articles
         @app.storage.save(create_sync_status(synced: true, slug: "test-article"))
-        create_article_dir("test-article", "# Original Content")
+        create_article("test-article", "# Original Content")
 
         @updater.download_articles
 
@@ -54,7 +54,8 @@ module Sync
 
         @updater.download_articles
 
-        metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
+        metadata = Sync::Post.new("test-article").load.metadata
+
         assert_equal "Original Title", metadata["title"]
         assert_equal "Original Description", metadata["description"]
       end
@@ -75,7 +76,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = read_markdown_metadata(Post.storage.content_path("test-article"))
+        metadata = Sync::Post.new("test-article").load.metadata
         assert_equal "cover.jpg", metadata.dig("metatags", "image")
         assert_includes metadata["cover_image"], "cover.jpg"
       end
@@ -85,7 +86,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = read_markdown_metadata(File.join(Post.storage.working_dir, "test-article/index.md"))
+        metadata = Sync::Post.new("test-article").load.metadata
         refute metadata.key?("metatags")
         assert_nil metadata["cover_image"]
       end

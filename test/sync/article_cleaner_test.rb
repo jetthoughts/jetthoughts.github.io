@@ -15,12 +15,13 @@ class ArticleCleanerTest < SyncTestCase
   end
 
   def test_cleanup_renamed_articles_with_nonexistent_directory
-    FileUtils.rm_rf(@temp_dir)
+    FileUtils.rm_rf(@app.working_dir)
+
     assert_raises(ArgumentError) { @cleaner.cleanup_renamed_articles }
   end
 
   def test_cleanup_renamed_articles_with_empty_storage
-    create_article_dir("old-article")
+    create_article_with_metadata("old-article")
     deleted = @cleaner.cleanup_renamed_articles
     assert_includes deleted, "old-article", "Should delete article not in storage"
   end
@@ -32,22 +33,14 @@ class ArticleCleanerTest < SyncTestCase
     }
     @cleaner.storage.save(storage_data)
 
-    create_article_dir("keep-article")
-    create_article_dir("also-keep")
-    create_article_dir("delete-me")
+    create_article_with_metadata("keep-article")
+    create_article_with_metadata("also-keep")
+    create_article_with_metadata("delete-me")
 
     deleted = @cleaner.cleanup_renamed_articles
 
     assert_includes deleted, "delete-me", "Should delete article not in storage"
     refute_includes deleted, "keep-article", "Should keep article in storage"
     refute_includes deleted, "also-keep", "Should keep article in storage"
-  end
-
-  private
-
-  def create_article_dir(name)
-    dir = File.join(@temp_dir, name)
-    FileUtils.mkdir_p(dir)
-    File.write(File.join(dir, "index.md"), "# Test Content")
   end
 end

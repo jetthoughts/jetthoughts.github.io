@@ -27,12 +27,12 @@ class ImagesDownloaderTest < SyncTestCase
     @downloader.perform
 
     assert_path_exists File.join(@article_dir, "cover.jpg"), "Cover image should be downloaded"
-    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+    metadata = read_markdown_metadata(slug: @slug)
     assert_includes metadata["cover_image"], Sync::Post::REPO_URL, "Cover image URL should be updated to use REPO_URL"
   end
 
   def test_downloads_inline_images
-    File.write(File.join(@article_dir, "index.md"), @remote_data["body_markdown"])
+    create_article_with_metadata(@slug, @remote_data.except("body_markdown"), @remote_data["body_markdown"])
 
     @downloader.perform
 
@@ -65,7 +65,7 @@ class ImagesDownloaderTest < SyncTestCase
     @downloader.perform
 
     refute_path_exists File.join(@article_dir, "cover.jpg"), "No cover.jpg should be created when cover_image is nil"
-    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+    metadata = read_markdown_metadata(slug: @slug)
     assert_nil metadata["cover_image"], "Cover image URL should remain unchanged"
   end
 
@@ -75,7 +75,7 @@ class ImagesDownloaderTest < SyncTestCase
 
     @downloader.perform
 
-    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+    metadata = read_markdown_metadata(slug: @slug)
 
     refute_path_exists File.join(@article_dir, "cover.jpg"), "No cover.jpg should be created when download fails"
     assert_equal "https://example.com/fail.jpg", metadata["cover_image"], "Cover image URL should remain unchanged"
@@ -91,7 +91,7 @@ class ImagesDownloaderTest < SyncTestCase
 
     @downloader.perform
 
-    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+    metadata = read_markdown_metadata(slug: @slug)
 
     assert_equal "Test Article", metadata["title"], "Title should be preserved"
     assert_equal "Test Article Description", metadata["description"], "Description should be preserved"

@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "sync/post"
+require "sync/post_storage"
+
 module TestFactories
   class Article
     def self.build_details(overrides = {})
@@ -28,21 +31,17 @@ module TestFactories
         "description" => "Test Description"
       }.merge(metadata)
 
-      dir = File.join(temp_dir, slug)
-      FileUtils.mkdir_p(dir)
+      post = Sync::Post.new(slug, storage: Sync::PostStorage.new(temp_dir))
+      post.metadata = metadata
+      post.body_markdown = content
 
-      full_content = "#{metadata.to_yaml}---\n\n#{content}"
-      File.write(File.join(dir, "index.md"), full_content)
-      dir
+      post.save
+
+      post.page_bundle_dir
     end
 
-    def self.read_metadata(file_path)
-      content = File.read(file_path)
-      content_split = content.split("---\n")
-      return {} if content_split.size < 2
-
-      yaml_content = content_split[1]
-      YAML.load(yaml_content)
+    def self.read_metadata(slug:)
+      Sync::Post.new(slug).load.metadata
     end
   end
 
@@ -58,8 +57,8 @@ module TestFactories
       }
     end
 
-    def self.create_file(dir, content, filename = "sync_status.yml")
-      File.write(File.join(dir, filename), content.to_yaml)
+    def self.create_file(dir, content)
+      SyncStatusStorage.new(dir).save(content)
     end
   end
 end

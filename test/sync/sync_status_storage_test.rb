@@ -42,7 +42,8 @@ class SyncStatusStorageTest < SyncTestCase
   end
 
   def test_handles_invalid_yaml
-    File.write(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE), "invalid: yaml: content: - ")
+    File.write(@storage.sync_file_path, "invalid: yaml: content: - ")
+
     assert_equal({}, @storage.load)
   end
 end
