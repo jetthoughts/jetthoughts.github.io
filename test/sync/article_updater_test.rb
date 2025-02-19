@@ -22,7 +22,7 @@ module Sync
         @app.storage.save(create_sync_status)
         @updater.download_articles
 
-        markdown_file = File.join(@temp_dir, "test-article/index.md")
+        markdown_file = Post.storage.content_path("test-article")
         assert_path_exists markdown_file, "Markdown file should be created"
         assert_match(/# Test Content/, File.read(markdown_file), "Content should be written to file")
       end
@@ -75,7 +75,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
+        metadata = read_markdown_metadata(Post.storage.content_path("test-article"))
         assert_equal "cover.jpg", metadata.dig("metatags", "image")
         assert_includes metadata["cover_image"], "cover.jpg"
       end
@@ -85,7 +85,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = read_markdown_metadata(File.join(@temp_dir, "test-article/index.md"))
+        metadata = read_markdown_metadata(File.join(Post.storage.working_dir, "test-article/index.md"))
         refute metadata.key?("metatags")
         assert_nil metadata["cover_image"]
       end

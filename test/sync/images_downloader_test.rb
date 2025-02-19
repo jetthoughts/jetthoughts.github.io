@@ -7,28 +7,28 @@ class ImagesDownloaderTest < SyncTestCase
   def setup
     super
     @slug = "test-article"
-    @article_dir = File.join(@temp_dir, @slug)
     @content = "# Title\n\n![Alt text](https://example.com/image1.png)\n![Another](https://example.com/image2.jpg)"
-    @remote_data = sample_article(
-      "cover_image" => "https://example.com/cover.jpg",
-      "body_markdown" => @content
-    )
-    @local_data = { slug: @slug }
-    @articles.replace([@remote_data])
-    @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
+    @local_data = {slug: @slug}
+    @remote_data = sample_article("cover_image" => "https://example.com/cover.jpg", "body_markdown" => @content)
+    @articles.replace([@remote_data])
     create_article_with_metadata(@slug, @remote_data, @content)
+
+    @post = Sync::Post.new(@slug)
+    @article_dir = @post.page_bundle_dir
+    @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
     FileUtils.mkdir_p(@article_dir)
   end
 
   def test_downloads_cover_image
-    File.write(File.join(@article_dir, "index.md"), @remote_data["body_markdown"])
+    create_article_with_metadata(@slug, {"cover_image" => "https://example.com/success.jpg"})
 
     @downloader.perform
 
     assert_path_exists File.join(@article_dir, "cover.jpg"), "Cover image should be downloaded"
-    assert_includes @remote_data["cover_image"], REPO_URL, "Cover image URL should be updated to use REPO_URL"
+    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+    assert_includes metadata["cover_image"], Sync::Post::REPO_URL, "Cover image URL should be updated to use REPO_URL"
   end
 
   def test_downloads_inline_images
@@ -46,7 +46,7 @@ class ImagesDownloaderTest < SyncTestCase
 
   def test_handles_failed_image_downloads
     @remote_data["body_markdown"] = "![Fail](https://example.com/fail.jpg)\n![Success](https://example.com/image.png)"
-    File.write(File.join(@article_dir, "index.md"), @remote_data["body_markdown"])
+    create_article_with_metadata(@slug, @remote_data.except("body_markdown"), @remote_data["body_markdown"])
 
     @downloader.perform
 
@@ -59,39 +59,44 @@ class ImagesDownloaderTest < SyncTestCase
   end
 
   def test_handles_missing_cover_image
-    @remote_data["cover_image"] = nil
+    create_article_with_metadata(@slug, {"cover_image" => nil})
     @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
     @downloader.perform
 
     refute_path_exists File.join(@article_dir, "cover.jpg"), "No cover.jpg should be created when cover_image is nil"
+    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+    assert_nil metadata["cover_image"], "Cover image URL should remain unchanged"
   end
 
   def test_handles_failed_cover_image_download
-    @remote_data["cover_image"] = "https://example.com/fail.jpg"
+    create_article_with_metadata(@slug, {"cover_image" => "https://example.com/fail.jpg"})
     @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 
     @downloader.perform
 
+    metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
+
     refute_path_exists File.join(@article_dir, "cover.jpg"), "No cover.jpg should be created when download fails"
-    assert_equal "https://example.com/fail.jpg", @remote_data["cover_image"], "Cover image URL should remain unchanged"
+    assert_equal "https://example.com/fail.jpg", metadata["cover_image"], "Cover image URL should remain unchanged"
   end
 
   def test_preserves_metadata_and_updates_cover_image
     create_article_with_metadata(@slug, {
-      "metatags" => { "image" => "cover.jpg" },
+      "metatags" => {"image" => "cover.jpg"},
+      "title" => "Test Article",
+      "description" => "Test Article Description",
       "cover_image" => "https://example.com/remote_cover.jpg"
     })
 
-    @remote_data["cover_image"] = "https://example.com/remote_cover.jpg"
     @downloader.perform
 
     metadata = read_markdown_metadata(File.join(@article_dir, "index.md"))
 
     assert_equal "Test Article", metadata["title"], "Title should be preserved"
-    assert_equal "Test Description", metadata["description"], "Description should be preserved"
+    assert_equal "Test Article Description", metadata["description"], "Description should be preserved"
     assert_equal "cover.jpg", metadata.dig("metatags", "image"), "Cover image in metatags should be updated"
-    assert_includes metadata["cover_image"], REPO_URL, "Cover image URL should be converted to github CDN"
+    assert_includes metadata["cover_image"], Sync::Post::REPO_URL, "Cover image URL should be converted to github CDN"
     assert_includes metadata["cover_image"], "cover.jpg", "Cover image filename should be updated"
     assert_path_exists File.join(@article_dir, "cover.jpg"), "Cover image file should be downloaded"
   end
