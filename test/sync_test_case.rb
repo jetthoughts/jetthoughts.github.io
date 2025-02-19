@@ -9,14 +9,17 @@ require "pathname"
 require "yaml"
 
 require "sync/app"
+require "sync/article_updater"
 
 class SyncTestCase < Minitest::Test
   def setup
     super
     working_dir = setup_temp_dir
+
     @articles = []
     @http_client = TestHttpClient.new(@articles)
-    @app = App.new(working_dir: working_dir, http_client: @http_client)
+    @app = App.new(working_dir:, http_client: @http_client)
+    Sync::Post.configure(working_dir)
   end
 
   def teardown
