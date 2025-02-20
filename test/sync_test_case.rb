@@ -7,10 +7,9 @@ require "support/factories"
 
 require "pathname"
 require "yaml"
+require "logger"
 
 require "sync/app"
-require "sync/configuration"
-require "sync/article_updater"
 
 class SyncTestCase < Minitest::Test
   # NOTE: Uncomment to run tests in parallel when it will be more than 1 minute
@@ -25,6 +24,7 @@ class SyncTestCase < Minitest::Test
 
     App.configure do |config|
       config.working_dir = working_dir
+      config.logger = Logger.new(IO::NULL, level: Logger::DEBUG) unless ENV["DEBUG"]
     end
 
     @app = App.new(fetcher: Sync::DevToArticleFetcher.new(@http_client))

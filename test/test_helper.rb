@@ -20,7 +20,3 @@ require "faraday"
 # NOTE: Reduce test time on retry
 require "sync/retryable"
 Retryable::RETRY_CONFIG[:base_delay] = 0
-
-# Configure logging for tests
-require "sync/logging"
-Logging.logger = Logger.new(IO::NULL, level: Logger::DEBUG) unless ENV["DEBUG"]
