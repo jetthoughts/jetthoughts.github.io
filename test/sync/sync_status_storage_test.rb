@@ -6,15 +6,15 @@ require "sync/sync_status_storage"
 class SyncStatusStorageTest < SyncTestCase
   def setup
     super
-    @storage = SyncStatusStorage.new(@temp_dir)
+    @storage = SyncStatusStorage.new(@app.working_dir)
   end
 
   def test_creates_file_if_not_exists
-    FileUtils.rm_f(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
+    FileUtils.rm_f(File.join(@app.working_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
 
     @storage.ensure_file_exists
 
-    assert File.exist?(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
+    assert File.exist?(File.join(@app.working_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
   end
 
   def test_loads_empty_hash_for_nonexistent_file
@@ -26,7 +26,7 @@ class SyncStatusStorageTest < SyncTestCase
       edited_at: "2024-01-01",
       synced: false
     )
-    create_sync_file(@temp_dir, sync_status)
+    create_sync_file(@app.working_dir, sync_status)
 
     assert_equal sync_status, @storage.load
   end
@@ -38,7 +38,7 @@ class SyncStatusStorageTest < SyncTestCase
     )
     @storage.save(sync_status)
 
-    assert_equal sync_status, YAML.load_file(File.join(@temp_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
+    assert_equal sync_status, YAML.load_file(File.join(@app.working_dir, SyncStatusStorage::DEFAULT_SYNC_STATUS_FILE))
   end
 
   def test_handles_invalid_yaml

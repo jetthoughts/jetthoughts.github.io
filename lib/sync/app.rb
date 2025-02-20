@@ -25,10 +25,9 @@ class App
     Thread.current[:sync_app_config] = nil
   end
 
-  def initialize(args: [], working_dir: App.config.working_dir, logger: App.config.logger, http_client: nil, fetcher: nil)
+  def initialize(args: [], working_dir: App.config.working_dir, http_client: nil, fetcher: nil)
     @args = args
     @working_dir = Pathname.new(working_dir).cleanpath
-    @logger = logger
 
     @fetcher = fetcher || Sync::DevToArticleFetcher.new(http_client || DevToClient.new)
     @http_client = @fetcher.http_client

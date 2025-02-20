@@ -6,8 +6,7 @@ require "sync"
 class SyncScriptTest < SyncTestCase
   def setup
     super
-    @http_client = TestHttpClient.new([sample_article])
-    @app = create_app
+    @articles << sample_article
     @sync = SyncScript.new(app: @app)
   end
 
@@ -52,25 +51,15 @@ class SyncScriptTest < SyncTestCase
 
     @sync.perform
 
-    assert_path_exists File.join(@temp_dir, "test-article"), "Should create article directory"
-    assert_path_exists File.join(@temp_dir, "test-article/index.md"), "Should create article file"
+    assert_path_exists @app.working_dir / "test-article", "Should create article directory"
+    assert_path_exists @app.working_dir / "test-article/index.md", "Should create article file"
   end
 
   def test_perform_skips_article_cleaner_in_dry_run
     create_article_with_metadata("old-article", {}, "# Test Content")
 
-    SyncScript.new(app: create_app_with_dry_run).perform
+    SyncScript.new(app: create_app(args: ["--dry"])).perform
 
-    assert_path_exists File.join(@temp_dir, "old-article"), "Should not delete articles in dry run"
-  end
-
-  private
-
-  def create_app(**)
-    App.new(working_dir: @temp_dir, http_client: @http_client, **)
-  end
-
-  def create_app_with_dry_run
-    create_app(args: ["--dry"])
+    assert_path_exists @app.working_dir / "old-article", "Should not delete articles in dry run"
   end
 end

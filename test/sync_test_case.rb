@@ -19,15 +19,15 @@ class SyncTestCase < Minitest::Test
     super
     working_dir = setup_temp_dir
 
-    @articles = []
-    @http_client = TestHttpClient.new(@articles)
-
     App.configure do |config|
       config.working_dir = working_dir
       config.logger = Logger.new(IO::NULL, level: Logger::DEBUG) unless ENV["DEBUG"]
     end
 
-    @app = App.new(fetcher: Sync::DevToArticleFetcher.new(@http_client))
+    @articles = []
+    @http_client = TestHttpClient.new(@articles)
+    @fetcher = Sync::DevToArticleFetcher.new(@http_client)
+    @app = App.new(fetcher: @fetcher)
   end
 
   def teardown
@@ -67,5 +67,10 @@ class SyncTestCase < Minitest::Test
 
   def sample_article(...)
     TestFactories::Article.build_details(...)
+  end
+
+
+  def create_app(**)
+    App.new(http_client: @http_client, **)
   end
 end
