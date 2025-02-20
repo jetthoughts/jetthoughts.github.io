@@ -41,7 +41,7 @@ module Sync
 
         @updater.download_articles
 
-        content = File.read(File.join(@temp_dir, "test-article/index.md"))
+        content = File.read(File.join(@app.working_dir, "test-article/index.md"))
         assert_includes content.strip, "# Original Content", "Synced article content should not be modified"
       end
 
@@ -99,9 +99,9 @@ module Sync
       end
 
       def test_respects_dry_run_mode
-        app = App.new(args: ["--dry"], working_dir: @temp_dir, http_client: @http_client)
+        app = create_app_with("--dry")
         updater = ArticleUpdater.new(app: app)
-        app.status_storage.save(create_sync_status(synced: false))
+        app.status_storage.save(create_sync_status(id: 1, synced: false))
 
         updater.download_articles
 
@@ -111,7 +111,7 @@ module Sync
       end
 
       def test_respects_force_mode
-        app = App.new(args: ["--force"], working_dir: @temp_dir, http_client: @http_client)
+        app = create_app_with("--force")
         updater = ArticleUpdater.new(app: app)
         app.status_storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
 
@@ -127,6 +127,12 @@ module Sync
         assert_equal @app.status_storage.object_id, updater.storage.object_id
         assert_equal @app.fetcher.object_id, updater.article_fetcher.object_id
         assert_equal @app.working_dir, updater.working_dir
+      end
+
+      private
+
+      def create_app_with(arg)
+        App.new(args: [arg], http_client: @http_client)
       end
     end
   end

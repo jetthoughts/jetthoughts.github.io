@@ -7,15 +7,13 @@ module Sync
   class ArticleFetcherTest < SyncTestCase
     def setup
       super
-      @articles = [
+      @articles.replace [
         sample_article(
           "id" => "success",
           "title" => "Test Article",
           "body" => "Test content"
         )
       ]
-      @http_client = TestHttpClient.new(@articles)
-      @fetcher = DevToArticleFetcher.new(@http_client)
       @sync_data = {
         1 => {
           edited_at: "2025-02-17T10:00:00Z",

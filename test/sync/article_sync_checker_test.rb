@@ -8,7 +8,6 @@ class ArticleSyncCheckerTest < SyncTestCase
   def setup
     super
     @articles << sample_article
-    @app = App.new(working_dir: @temp_dir, http_client: @http_client)
     @checker = ArticleSyncChecker.new(app: @app)
   end
 
@@ -37,7 +36,7 @@ class ArticleSyncCheckerTest < SyncTestCase
       synced: true,
       source: ArticleSyncChecker::DEFAULT_SOURCE
     )
-    create_sync_file(@temp_dir, sync_status)
+    create_sync_file(@app.working_dir, sync_status)
 
     @checker.update_sync_status
     status = @app.status_storage.load
@@ -52,7 +51,7 @@ class ArticleSyncCheckerTest < SyncTestCase
       synced: true,
       source: ArticleSyncChecker::DEFAULT_SOURCE
     )
-    create_sync_file(@temp_dir, sync_status)
+    create_sync_file(@app.working_dir, sync_status)
 
     @checker.update_sync_status
     status = @app.status_storage.load
@@ -87,9 +86,8 @@ class ArticleSyncCheckerTest < SyncTestCase
   end
 
   def test_uses_app_fetcher_when_provided
-    app = App.new(working_dir: @temp_dir, http_client: @http_client)
-    checker = ArticleSyncChecker.new(app: app)
-    assert_equal app.fetcher, checker.fetcher
+    checker = ArticleSyncChecker.new(app: @app)
+    assert_equal @app.fetcher, checker.fetcher
   end
 
   def test_creates_new_fetcher_when_app_not_provided
@@ -120,7 +118,7 @@ class ArticleSyncCheckerTest < SyncTestCase
         source: ArticleSyncChecker::DEFAULT_SOURCE
       }
     }
-    create_sync_file(@temp_dir, existing_status)
+    create_sync_file(@app.working_dir, existing_status)
 
     @checker.update_sync_status
 
