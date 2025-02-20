@@ -11,6 +11,4 @@ App.configure do |config|
   config.logger = Logger.new(STDOUT, level: :debug)
 end
 
-Logging.logger = App.config.logger
-
 App.new(args: ARGV).run
