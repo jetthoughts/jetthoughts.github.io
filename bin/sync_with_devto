@@ -7,12 +7,10 @@ $LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
 require "sync/app"
 require "sync/sync_script"
 
-logger = Logger.new(STDOUT, level: :debug)
-
 App.configure do |config|
-  config.logger = logger
+  config.logger = Logger.new(STDOUT, level: :debug)
 end
 
-app = App.new(args: ARGV, fetcher: ArticleFetcher.new)
+Logging.logger = App.config.logger
 
-SyncScript.perform(app: app)
+App.new(args: ARGV).run

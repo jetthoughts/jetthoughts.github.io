@@ -27,7 +27,7 @@ class SyncTestCase < Minitest::Test
       config.working_dir = working_dir
     end
 
-    @app = App.new(fetcher: ArticleFetcher.new(@http_client))
+    @app = App.new(fetcher: Sync::DevToArticleFetcher.new(@http_client))
   end
 
   def teardown

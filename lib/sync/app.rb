@@ -2,8 +2,9 @@
 
 require "sync/logging"
 require "sync/configuration"
-require "sync/article_fetcher"
+require "sync/dev_to_article_fetcher"
 require "sync/sync_status_storage"
+require "sync/sync_script"
 
 class App
   include Logging
@@ -29,7 +30,7 @@ class App
     @working_dir = Pathname.new(working_dir).cleanpath
     @logger = logger
 
-    @fetcher = fetcher || ArticleFetcher.new(http_client || DevToClient.new)
+    @fetcher = fetcher || Sync::DevToArticleFetcher.new(http_client || DevToClient.new)
     @http_client = @fetcher.http_client
   end
 
@@ -43,5 +44,9 @@ class App
 
   def force?
     @args.include?("-f") || @args.include?("--force")
+  end
+
+  def run
+    SyncScript.perform(app: self)
   end
 end
