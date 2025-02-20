@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "sync/logging"
-
 module Sync
   class Configuration
     attr_accessor :logger
@@ -9,7 +7,6 @@ module Sync
 
     def initialize
       self.working_dir = "content/blog"
-      self.logger = Logging.logger
     end
 
     def working_dir=(value)

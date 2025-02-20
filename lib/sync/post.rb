@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "sync/logging"
 require "sync/post_storage"
 
 module Sync
