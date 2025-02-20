@@ -12,12 +12,12 @@ class ArticleCleaner
 
   def initialize(app:)
     @working_dir = app.working_dir
-    @storage = app.storage || SyncStatusStorage.new(@working_dir)
+    @storage = app.status_storage
     @app = app
   end
 
   def cleanup_renamed_articles
-    raise ArgumentError, "Working directory doesn't exist" unless working_dir.exist?
+    raise ArgumentError, "Working directory doesn't exist" unless working_dir.directory?
 
     deleted_folders = []
     slugs = load_slugs_from_storage

@@ -19,8 +19,7 @@ class ImagesDownloader
     @fetcher = app.fetcher
     @remote_data = remote_data
     @local_data = local_data
-    @post_storage = Sync::Post.storage
-    @post = Sync::Post.for(remote_data, local_data)
+    @post = Sync::Post.create_from_remote_details(remote_data, local_data)
   end
 
   def perform
@@ -49,10 +48,6 @@ class ImagesDownloader
     else
       @post.remove_cover_image
     end
-  end
-
-  def remove_cover_image(cover_image_file_name)
-    @post_storage.remove_asset(slug, cover_image_file_name)
   end
 
   IMG_REGEX = %r{!\[(?<alt>(?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\((?<url>https?://[^\s\)]+)\)}
@@ -99,6 +94,6 @@ class ImagesDownloader
   end
 
   def add_media_asset(asset_name, media_content)
-    @post_storage.add_media_asset(slug, asset_name, media_content)
+    @post.add_media_asset(asset_name, media_content)
   end
 end

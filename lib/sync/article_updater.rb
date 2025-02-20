@@ -21,7 +21,7 @@ module Sync
       @app = app
       @working_dir = app.working_dir
       @article_fetcher = app.fetcher
-      @storage = app.storage
+      @storage = app.status_storage
     end
 
     def download_articles
@@ -38,17 +38,20 @@ module Sync
       article = fetch_article(id)
       return unless article
 
-      save_content(article, status)
+      post = save_content(article, status)
       update_metadata(article, status)
       save_sync_status
     end
 
     def save_content(article, status)
       # return if app.dry_run?
-      Post.for(article, status).save
+      post = Post.create_from_remote_details(article, status)
+      post.save
 
       download_images(article, status)
       status[:synced] = true
+
+      post
     end
 
     def update_metadata(article, status)

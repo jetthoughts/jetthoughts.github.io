@@ -6,12 +6,12 @@ require "app"
 class AppTest < SyncTestCase
   def setup
     super
-    @app = App.new(working_dir: @temp_dir, http_client: TestHttpClient.new([]))
+    @app = App.new
   end
 
-  def test_initializes_with_storage
-    assert_instance_of SyncStatusStorage, @app.storage, "Should initialize with a storage instance"
-    assert_equal @temp_dir.to_s, @app.storage.sync_file_path.dirname.to_s, "Storage should use the correct working directory"
+  def test_provide_storage_instance
+    assert_instance_of SyncStatusStorage, @app.status_storage, "Should initialize with a storage instance"
+    assert_equal @temp_dir.to_s, @app.status_storage.sync_file_path.dirname.to_s, "Storage should use the correct working directory"
   end
 
   def test_dry_run_with_dry_flag

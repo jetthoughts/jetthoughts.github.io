@@ -19,24 +19,24 @@ module Sync
       end
 
       def test_creates_article_directory_and_markdown_file
-        @app.storage.save(create_sync_status)
+        @app.status_storage.save(create_sync_status)
         @updater.download_articles
 
-        markdown_file = Post.storage.content_path("test-article")
+        markdown_file = Sync::Post.new("test-article").page_bundle_dir.join("index.md")
         assert_path_exists markdown_file, "Markdown file should be created"
         assert_match(/# Test Content/, File.read(markdown_file), "Content should be written to file")
       end
 
       def test_updates_sync_status_after_download
-        @app.storage.save(create_sync_status(synced: false))
+        @app.status_storage.save(create_sync_status(synced: false))
         @updater.download_articles
 
-        sync_data = @app.storage.load
+        sync_data = @app.status_storage.load
         assert sync_data[1][:synced], "Article should be marked as synced"
       end
 
       def test_skips_synced_articles
-        @app.storage.save(create_sync_status(synced: true, slug: "test-article"))
+        @app.status_storage.save(create_sync_status(synced: true, slug: "test-article"))
         create_article("test-article", "# Original Content")
 
         @updater.download_articles
@@ -46,7 +46,7 @@ module Sync
       end
 
       def test_preserves_existing_metadata
-        @app.storage.save(create_sync_status(synced: true))
+        @app.status_storage.save(create_sync_status(synced: true))
         create_article_with_metadata("test-article", {
           "title" => "Original Title",
           "description" => "Original Description"
@@ -66,7 +66,7 @@ module Sync
         super
         @articles << sample_article
         @updater = ArticleUpdater.new(app: @app)
-        @app.storage.save(create_sync_status)
+        @app.status_storage.save(create_sync_status)
       end
 
       def test_handles_article_with_cover_image
@@ -101,11 +101,11 @@ module Sync
       def test_respects_dry_run_mode
         app = App.new(args: ["--dry"], working_dir: @temp_dir, http_client: @http_client)
         updater = ArticleUpdater.new(app: app)
-        app.storage.save(create_sync_status(synced: false))
+        app.status_storage.save(create_sync_status(synced: false))
 
         updater.download_articles
 
-        sync_data = app.storage.load
+        sync_data = app.status_storage.load
         assert sync_data[1][:synced]
         assert_equal 0, @http_client.update_requests.size, "Should not make API calls"
       end
@@ -113,18 +113,18 @@ module Sync
       def test_respects_force_mode
         app = App.new(args: ["--force"], working_dir: @temp_dir, http_client: @http_client)
         updater = ArticleUpdater.new(app: app)
-        app.storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
+        app.status_storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
 
         updater.download_articles
 
-        sync_data = app.storage.load
+        sync_data = app.status_storage.load
         refute_equal "2023-02-17T09:00:00Z", sync_data[1][:edited_at]
       end
 
       def test_uses_app_dependencies
         updater = ArticleUpdater.new(app: @app)
 
-        assert_equal @app.storage.object_id, updater.storage.object_id
+        assert_equal @app.status_storage.object_id, updater.storage.object_id
         assert_equal @app.fetcher.object_id, updater.article_fetcher.object_id
         assert_equal @app.working_dir, updater.working_dir
       end

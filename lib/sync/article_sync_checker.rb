@@ -13,7 +13,7 @@ class ArticleSyncChecker
   attr_reader :storage, :fetcher
 
   def initialize(app:)
-    @storage = app.storage
+    @storage = app.status_storage
     @fetcher = app.fetcher
   end
 

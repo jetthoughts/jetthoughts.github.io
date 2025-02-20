@@ -9,6 +9,8 @@ class ArticleFetcher
   include Retryable
   USERNAME = "jetthoughts".freeze
 
+  attr_reader :http_client
+
   def initialize(http_client = DevToClient.new)
     @http_client = http_client
   end
@@ -51,23 +53,22 @@ class ArticleFetcher
 
   def has_updated_metadata?(article_data, article_sync_data, expected_slug)
     logger.debug("Checking if metadata is synced for article #{article_data["id"]}")
-    has_updated_canonical_url?(article_data, expected_slug) &&
-      has_updated_meta_description?(article_data, article_sync_data)
+
+    return true unless article_sync_data
+
+    has_updated_canonical_url?(article_data["canonical_url"], expected_slug) &&
+      has_updated_meta_description?(article_data["description"], article_sync_data[:description])
   end
 
-  def has_updated_canonical_url?(article_data, expected_slug)
+  def has_updated_canonical_url?(remote_canonical_url, expected_slug)
     logger.debug("Checking if canonical URL has been updated for #{expected_slug}")
-    return false if article_data["canonical_url"].nil?
+    return false if remote_canonical_url.nil?
 
-    article_data["canonical_url"].split("/").last == expected_slug
+    remote_canonical_url.split("/").last == expected_slug
   end
 
-  def has_updated_meta_description?(article_data, article_sync_data)
-    logger.debug("Checking if meta description has been updated for article #{article_data["id"]}")
-    return false unless article_sync_data
-    return true if article_sync_data[:description].nil?
-
-    article_data["description"] == article_sync_data[:description]
+  def has_updated_meta_description?(remote_description, local_description)
+    local_description.nil? || local_description.empty? || remote_description == local_description
   end
 
   def ext_from_image_url(image_url)
@@ -93,8 +94,6 @@ class ArticleFetcher
   end
 
   private
-
-  attr_reader :http_client
 
   def process_article(article)
     article["devto_slug"] = article["slug"]

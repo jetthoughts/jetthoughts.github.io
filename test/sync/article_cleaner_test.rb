@@ -11,7 +11,7 @@ class ArticleCleanerTest < SyncTestCase
 
   def test_uses_provided_storage
     cleaner = ArticleCleaner.new(app: @app)
-    assert_equal @app.storage, cleaner.storage, "Should use the provided storage instance"
+    assert_equal @app.status_storage, cleaner.storage, "Should use the provided storage instance"
   end
 
   def test_cleanup_renamed_articles_with_nonexistent_directory

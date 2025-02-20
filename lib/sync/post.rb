@@ -7,39 +7,33 @@ module Sync
     include Logging
     REPO_URL = "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master"
 
-    class << self
-      DEFAULT_WORKING_DIR = "content/blog"
+    attr_accessor :slug, :metadata, :body_markdown
 
-      def configure(working_dir = DEFAULT_WORKING_DIR)
-        @storage = PostStorage.new(working_dir)
-      end
-
-      def storage
-        @storage ||= configure
-      end
-
-      attr_writer :storage
-    end
-
-    attr_accessor :slug, :storage, :metadata, :body_markdown
-
-    def initialize(slug, storage: Post.storage)
-      @storage = storage
+    def initialize(slug)
       @slug = slug
     end
 
-    def self.for(article, status, storage: Post.storage)
-      metadata = generate_metadata(article, status)
+    def storage
+      @storage ||= PostStorage.new(App.config.working_dir)
+    end
+
+    def self.create_from_remote_details(article, status)
       content = prepare_markdown(article["body_markdown"].to_s)
 
-      Post.new(status[:slug], storage:).tap do |post|
+      # Generate metadata from remote article attributes
+      metadata = generate_metadata(article)
+      # Merge with sync status overrides
+      metadata["slug"] = status[:slug]
+      metadata["description"] = status[:description] || metadata["description"]
+
+      Post.new(status[:slug]).tap do |post|
         post.metadata = metadata
         post.body_markdown = content
       end
     end
 
     def save
-      @storage.ensure_page_bundle_directory(slug)
+      storage.ensure_page_bundle_directory(slug)
 
       @content = assemble_content
       @storage.save_content(slug, assemble_content)
@@ -50,7 +44,11 @@ module Sync
     end
 
     def content
-      @content ||= @storage.read_content(slug)
+      @content ||= storage.read_content(slug)
+    end
+
+    def content_path
+      @content_path ||= storage.content_path(slug)
     end
 
     def cover_image
@@ -101,10 +99,15 @@ module Sync
 
       self
     end
+
     alias reload load
 
     def page_bundle_dir
-      @storage.page_bundle_dir(slug)
+      storage.page_bundle_dir(slug)
+    end
+
+    def add_media_asset(asset_name, media_content)
+      storage.add_media_asset(slug, asset_name, media_content)
     end
 
     private
@@ -120,22 +123,21 @@ module Sync
       )
     end
 
-    def self.generate_metadata(article, status)
+    def self.generate_metadata(article)
       {
+        # "remote_url" => article["url"],
+        # "remote_id" => article["id"],
+        # "source" => "dev_to",
         "dev_to_id" => article["id"],
-        "remote_id" => article["id"],
-        "source" => "dev_to",
         "dev_to_url" => article["url"],
-        "remote_url" => article["url"],
         "title" => article["title"],
-        "description" => status[:description] || article["description"],
+        "description" => article["description"],
         "created_at" => article["created_at"],
         "edited_at" => article["edited_at"],
         "draft" => false,
         "tags" => article["tags"],
         "canonical_url" => article["canonical_url"],
         "cover_image" => article["cover_image"],
-        "slug" => status[:slug],
         "metatags" => generate_metatags(article)
       }.compact
     end
