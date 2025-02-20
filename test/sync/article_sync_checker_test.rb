@@ -94,7 +94,7 @@ class ArticleSyncCheckerTest < SyncTestCase
 
   def test_creates_new_fetcher_when_app_not_provided
     checker = ArticleSyncChecker.new(app: @app)
-    assert_instance_of ArticleFetcher, checker.fetcher
+    assert_instance_of Sync::DevToArticleFetcher, checker.fetcher
   end
 
   def test_updates_sync_status_with_empty_articles

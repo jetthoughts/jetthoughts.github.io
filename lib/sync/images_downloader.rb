@@ -2,7 +2,7 @@ require "fileutils"
 require "uri"
 require "pathname"
 require "sync/retryable"
-require "sync/article_fetcher"
+require "sync/dev_to_article_fetcher"
 require "sync/logging"
 
 
