@@ -31,7 +31,7 @@ module TestFactories
         "description" => "Test Description"
       }.merge(metadata)
 
-      post = Sync::Post.new(slug, storage: Sync::PostStorage.new(temp_dir))
+      post = Sync::Post.new(slug)
       post.metadata = metadata
       post.body_markdown = content
 

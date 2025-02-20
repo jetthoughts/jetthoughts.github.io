@@ -24,4 +24,4 @@ Retryable::RETRY_CONFIG[:base_delay] = 0
 # Configure logging for tests
 require "sync/logging"
 Logging.configure(level: Logger::DEBUG)
-Logging.logger = Logger.new(IO::NULL)
+Logging.logger = Logger.new(IO::NULL) unless ENV["DEBUG"]

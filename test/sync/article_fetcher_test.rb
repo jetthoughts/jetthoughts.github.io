@@ -49,37 +49,37 @@ class ArticleFetcherTest < SyncTestCase
 
   def test_has_updated_canonical_url_with_no_url
     article_data = { "id" => 1 }
-    refute @fetcher.has_updated_canonical_url?(article_data, "test-article")
+    refute @fetcher.has_updated_canonical_url?(article_data["canonical_url"], "test-article")
   end
 
   def test_has_updated_canonical_url_with_matching_slug
     article_data = { "id" => 1, "canonical_url" => "https://example.com/test-article" }
-    assert @fetcher.has_updated_canonical_url?(article_data, "test-article")
+    assert @fetcher.has_updated_canonical_url?(article_data["canonical_url"], "test-article")
   end
 
   def test_has_updated_canonical_url_with_different_slug
     article_data = { "id" => 1, "canonical_url" => "https://example.com/wrong-article" }
-    refute @fetcher.has_updated_canonical_url?(article_data, "test-article")
+    refute @fetcher.has_updated_canonical_url?(article_data["canonical_url"], "test-article")
   end
 
   def test_has_updated_meta_description_with_no_sync_data
     article_data = { "id" => 3, "description" => "Test description" }
-    refute @fetcher.has_updated_meta_description?(article_data, @sync_data[3])
+    assert @fetcher.has_updated_meta_description?(article_data["description"], nil)
   end
 
   def test_has_updated_meta_description_with_no_local_description
     article_data = { "id" => 2, "description" => "Test description" }
-    assert @fetcher.has_updated_meta_description?(article_data, @sync_data[2])
+    assert @fetcher.has_updated_meta_description?(article_data["description"], @sync_data[2][:description])
   end
 
   def test_has_updated_meta_description_with_matching_description
     article_data = { "id" => 1, "description" => "Test description" }
-    assert @fetcher.has_updated_meta_description?(article_data, @sync_data[1])
+    assert @fetcher.has_updated_meta_description?(article_data["description"], @sync_data[1][:description])
   end
 
   def test_has_updated_meta_description_with_different_description
     article_data = { "id" => 1, "description" => "New description" }
-    refute @fetcher.has_updated_meta_description?(article_data, @sync_data[1])
+    refute @fetcher.has_updated_meta_description?(article_data["description"], @sync_data[1][:description])
   end
 
   def test_has_synced_metadata_when_both_match
@@ -123,7 +123,7 @@ class ArticleFetcherTest < SyncTestCase
       "description" => "Test description",
       "canonical_url" => "https://example.com/test-article"
     }
-    refute @fetcher.has_updated_metadata?(article_data, @sync_data[3], "test-article")
+    assert @fetcher.has_updated_metadata?(article_data, @sync_data[3], "test-article")
   end
 
   def test_remove_cdn

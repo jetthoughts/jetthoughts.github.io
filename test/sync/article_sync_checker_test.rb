@@ -14,7 +14,7 @@ class ArticleSyncCheckerTest < SyncTestCase
 
   def test_update_sync_status_creates_file_if_not_exists
     @checker.update_sync_status
-    assert @app.storage.sync_file_path.exist?
+    assert @app.status_storage.sync_file_path.exist?
   end
 
   def test_update_sync_status_with_new_article
@@ -22,7 +22,7 @@ class ArticleSyncCheckerTest < SyncTestCase
 
     @checker.update_sync_status
 
-    status = @app.storage.load
+    status = @app.status_storage.load
     assert_equal 1, status.size
     assert_equal "test-article-ruby-rails-testing", status[2][:slug]
     assert_equal "2025-02-17T10:00:00Z", status[2][:edited_at]
@@ -40,7 +40,7 @@ class ArticleSyncCheckerTest < SyncTestCase
     create_sync_file(@temp_dir, sync_status)
 
     @checker.update_sync_status
-    status = @app.storage.load
+    status = @app.status_storage.load
 
     assert_equal true, status[1][:synced]
   end
@@ -55,7 +55,7 @@ class ArticleSyncCheckerTest < SyncTestCase
     create_sync_file(@temp_dir, sync_status)
 
     @checker.update_sync_status
-    status = @app.storage.load
+    status = @app.status_storage.load
 
     assert_equal "2025-02-17T10:00:00Z", status[1][:edited_at]
     assert_equal false, status[1][:synced]
@@ -71,14 +71,14 @@ class ArticleSyncCheckerTest < SyncTestCase
     @checker = ArticleSyncChecker.new(app: @app)
 
     @checker.update_sync_status
-    status = @app.storage.load
+    status = @app.status_storage.load
 
     assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
   end
 
   def test_uses_provided_storage
     checker = ArticleSyncChecker.new(app: @app)
-    assert_equal @app.storage, checker.storage, "Should use the provided storage instance"
+    assert_equal @app.status_storage, checker.storage, "Should use the provided storage instance"
   end
 
   def test_creates_new_storage_when_not_provided
@@ -101,7 +101,7 @@ class ArticleSyncCheckerTest < SyncTestCase
     @articles.clear
     @checker.update_sync_status
 
-    status = @app.storage.load
+    status = @app.status_storage.load
     assert_equal({}, status)
   end
 
@@ -124,17 +124,17 @@ class ArticleSyncCheckerTest < SyncTestCase
 
     @checker.update_sync_status
 
-    status = @app.storage.load
+    status = @app.status_storage.load
     assert_equal "old-article", status[99][:slug], "Should preserve existing article status"
     assert_equal "existed-article", status[1][:slug], "Should add new article status"
   end
 
   def test_app_storage_is_shared_between_checker_and_app
     @checker.update_sync_status
-    app_status = @app.storage.load
+    app_status = @app.status_storage.load
     checker_status = @checker.storage.load
 
     assert_equal app_status, checker_status, "App and checker should share the same storage data"
-    assert_equal @app.storage.object_id, @checker.storage.object_id, "App and checker should use the same storage instance"
+    assert_equal @app.status_storage.object_id, @checker.storage.object_id, "App and checker should use the same storage instance"
   end
 end

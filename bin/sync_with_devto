@@ -9,7 +9,10 @@ require "sync/sync_script"
 
 logger = Logger.new(STDOUT, level: :debug)
 
-app = App.new(args: ARGV, logger: logger, fetcher: ArticleFetcher.new, working_dir: "content/blog")
-Sync::Post.configure(app.working_dir)
+App.configure do |config|
+  config.logger = logger
+end
+
+app = App.new(args: ARGV, fetcher: ArticleFetcher.new)
 
 SyncScript.perform(app: app)

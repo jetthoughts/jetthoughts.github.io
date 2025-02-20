@@ -9,21 +9,30 @@ require "pathname"
 require "yaml"
 
 require "sync/app"
+require "sync/configuration"
 require "sync/article_updater"
 
 class SyncTestCase < Minitest::Test
+  # NOTE: Uncomment to run tests in parallel when it will be more than 1 minute
+  # parallelize_me!
+
   def setup
     super
     working_dir = setup_temp_dir
 
     @articles = []
     @http_client = TestHttpClient.new(@articles)
-    @app = App.new(working_dir:, http_client: @http_client)
-    Sync::Post.configure(working_dir)
+
+    App.configure do |config|
+      config.working_dir = working_dir
+    end
+
+    @app = App.new(fetcher: ArticleFetcher.new(@http_client))
   end
 
   def teardown
     teardown_temp_dir
+    App.reset_config
     super
   end
 
