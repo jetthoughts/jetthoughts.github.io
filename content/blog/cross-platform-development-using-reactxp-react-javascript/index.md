@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/cross-platform-development-using-reactxp-3poc
+source: dev_to
+remote_id: 1853624
 dev_to_id: 1853624
 dev_to_url: https://dev.to/jetthoughts/cross-platform-development-using-reactxp-3poc
 title: Cross-platform development using ReactXP
@@ -13,9 +16,9 @@ tags:
 - typescript
 canonical_url: https://jetthoughts.com/blog/cross-platform-development-using-reactxp-react-javascript/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cross-platform-development-using-reactxp-react-javascript/cover.png
-slug: cross-platform-development-using-reactxp-react-javascript
 metatags:
   image: cover.png
+slug: cross-platform-development-using-reactxp-react-javascript
 ---
 
 ## Cross-platform development using ReactXP

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-create-a-technical-post-in-a-short-time-4i53
+source: dev_to
+remote_id: 1852622
 dev_to_id: 1852622
 dev_to_url: https://dev.to/jetthoughts/how-to-create-a-technical-post-in-a-short-time-4i53
 title: How to create a technical post in a short time
@@ -12,9 +15,9 @@ tags:
 - tips
 canonical_url: https://jetthoughts.com/blog/how-create-technical-post-in-short-time-writing-blogging/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-create-technical-post-in-short-time-writing-blogging/cover.jpeg
-slug: how-create-technical-post-in-short-time-writing-blogging
 metatags:
   image: cover.jpeg
+slug: how-create-technical-post-in-short-time-writing-blogging
 ---
 *After reading thousands of posts, it’s time to share a workflow that will help those who are creating amazing things to blog more easily and often.*
 

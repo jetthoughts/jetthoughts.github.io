@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-know-what-your-team-is-doing-23go
+source: dev_to
+remote_id: 1853575
 dev_to_id: 1853575
 dev_to_url: https://dev.to/jetthoughts/how-to-know-what-your-team-is-doing-23go
 title: How to know what your team is doing?
@@ -13,9 +16,9 @@ tags:
 - process
 canonical_url: https://jetthoughts.com/blog/how-know-what-your-team-doing-remote-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-know-what-your-team-doing-remote-startup/cover.jpeg
-slug: how-know-what-your-team-doing-remote-startup
 metatags:
   image: cover.jpeg
+slug: how-know-what-your-team-doing-remote-startup
 ---
 ![Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/clients?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

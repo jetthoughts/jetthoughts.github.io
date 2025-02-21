@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/transforming-documentation-with-nextjs-a-case-study-with-jetthoughts-2c5o
+source: dev_to
+remote_id: 2117299
 dev_to_id: 2117299
 dev_to_url: https://dev.to/jetthoughts/transforming-documentation-with-nextjs-a-case-study-with-jetthoughts-2c5o
 title: 'Transforming Documentation with Next.js: A Case Study with JetThoughts'
@@ -13,9 +16,9 @@ tags:
 - javascript
 canonical_url: https://jetthoughts.com/blog/transforming-documentation-with-nextjs-case-study-jetthoughts/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-documentation-with-nextjs-case-study-jetthoughts/cover.png
-slug: transforming-documentation-with-nextjs-case-study-jetthoughts
 metatags:
   image: cover.png
+slug: transforming-documentation-with-nextjs-case-study-jetthoughts
 ---
 Well-structured documentation is crucial for all open-source projects, but it becomes even more vital for Open Core solutions like CodeVerse, especially when large businesses rely on them. Our project with CodeVerse, where we completely reimagined their documentation platform, is a perfect case study for tech founders and developers aiming for superior documentation.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/8-step-sales-process-in-5-min-581g
+source: dev_to
+remote_id: 1853531
 dev_to_id: 1853531
 dev_to_url: https://dev.to/jetthoughts/8-step-sales-process-in-5-min-581g
 title: 8-Step Sales Process in 5 min
@@ -12,9 +15,9 @@ tags:
 - checklist
 canonical_url: https://jetthoughts.com/blog/8-step-sales-process-in-5-min-productivity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/8-step-sales-process-in-5-min-productivity/cover.png
-slug: 8-step-sales-process-in-5-min-productivity
 metatags:
   image: cover.png
+slug: 8-step-sales-process-in-5-min-productivity
 ---
 The essential part of Sales Planning is to clearly see which steps you as a sales rep should cover in order to get the results you envisioned for your company.
 

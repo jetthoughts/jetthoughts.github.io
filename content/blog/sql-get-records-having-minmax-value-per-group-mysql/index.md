@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/sql-get-records-having-minmax-value-per-group-2cnh
+source: dev_to
+remote_id: 1858929
 dev_to_id: 1858929
 dev_to_url: https://dev.to/jetthoughts/sql-get-records-having-minmax-value-per-group-2cnh
 title: 'SQL: Get records having min/max value per group'
@@ -13,9 +16,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/sql-get-records-having-minmax-value-per-group-mysql/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/sql-get-records-having-minmax-value-per-group-mysql/cover.png
-slug: sql-get-records-having-minmax-value-per-group-mysql
 metatags:
   image: cover.png
+slug: sql-get-records-having-minmax-value-per-group-mysql
 ---
 Here's one possible solution for a case when you need to fetch a set of records unique on one (or several) column with a min/max value in the other column (usually a timestamp). The solution doesn't require any changes to the DB scheme (denormalization or creation of views) and can be performed in the scope of a single SQL query.
 

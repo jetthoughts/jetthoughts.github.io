@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/recent-searches-sorting-hashes-how-they-are-connected-4965
+source: dev_to
+remote_id: 1879395
 dev_to_id: 1879395
 dev_to_url: https://dev.to/jetthoughts/recent-searches-sorting-hashes-how-they-are-connected-4965
 title: 'Recent Searches & Sorting Hashes: How They are Connected'
@@ -12,9 +15,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/recent-searches-sorting-hashes-how-they-are-connected-ruby-rails/cover.jpeg
-slug: recent-searches-sorting-hashes-how-they-are-connected-ruby-rails
 metatags:
   image: cover.jpeg
+slug: recent-searches-sorting-hashes-how-they-are-connected-ruby-rails
 ---
 
 ![Unsplash Photo: [Caspar Rubin](https://unsplash.com/@casparrubin)](file_0.jpeg)

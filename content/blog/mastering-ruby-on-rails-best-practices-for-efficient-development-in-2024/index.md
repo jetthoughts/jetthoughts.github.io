@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024-2mm
+source: dev_to
+remote_id: 2182252
 dev_to_id: 2182252
 dev_to_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024-2mm
 title: Mastering Ruby on Rails Best Practices for Efficient Development in 2024
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024/cover.jpeg
-slug: mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024
 metatags:
   image: cover.jpeg
+slug: mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024
 ---
 Ruby on Rails is still one of the go-to frameworks for web development in 2024. It's known for making developers' lives easier with its conventions and a focus on getting things done fast. But to really get the most out of Rails, you gotta stick to some best practices. They help keep your code clean, your apps fast, and your users happy. In this article, we'll break down some key practices you should follow to master Ruby on Rails in 2024.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-to-do-for-the-developer-when-the-wip-limit-is-reached-50i
+source: dev_to
+remote_id: 1852581
 dev_to_id: 1852581
 dev_to_url: https://dev.to/jetthoughts/what-to-do-for-the-developer-when-the-wip-limit-is-reached-50i
 title: What to do for the developer when the WIP limit is reached
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-do-for-developer-when-wip-limit-reached-agile-kanban/cover.jpeg
-slug: what-do-for-developer-when-wip-limit-reached-agile-kanban
 metatags:
   image: cover.jpeg
+slug: what-do-for-developer-when-wip-limit-reached-agile-kanban
 ---
 
 Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep reading this article in order to find out the perfect solution when you or your teammates-developers reach WIP limits.

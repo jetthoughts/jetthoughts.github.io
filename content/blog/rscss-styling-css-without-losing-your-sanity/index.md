@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/rscss-styling-css-without-losing-your-sanity-2c1a
+source: dev_to
+remote_id: 1852739
 dev_to_id: 1852739
 dev_to_url: https://dev.to/jetthoughts/rscss-styling-css-without-losing-your-sanity-2c1a
 title: RSCSS. Styling CSS without losing your sanity
@@ -13,9 +16,9 @@ tags:
 - scss
 canonical_url: https://jetthoughts.com/blog/rscss-styling-css-without-losing-your-sanity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rscss-styling-css-without-losing-your-sanity/cover.png
-slug: rscss-styling-css-without-losing-your-sanity
 metatags:
   image: cover.png
+slug: rscss-styling-css-without-losing-your-sanity
 ---
 Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out with the methodology? Decided to use RSCSS but don’t know how to start?
 

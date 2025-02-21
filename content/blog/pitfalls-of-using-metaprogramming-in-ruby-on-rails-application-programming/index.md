@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-hbp
+source: dev_to
+remote_id: 1115250
 dev_to_id: 1115250
 dev_to_url: https://dev.to/jetthoughts/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-hbp
 title: Pitfalls of using metaprogramming in Ruby on Rails application
@@ -12,9 +15,9 @@ tags:
 - beginners
 canonical_url: https://jetthoughts.com/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/cover.png
-slug: pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming
 metatags:
   image: cover.png
+slug: pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming
 ---
 Do you know that metaprogramming is easy to add but hard to support? Developers underestimated risks related to using metaprogramming in the code, which causes development slowdowns and business financial problems.
 
@@ -68,7 +71,3 @@ Before accepting code with metaprogramming, you need to be sure that:
 * One of the toil: you need to invest a lot of time in the code review stage to make sure that there are no unexpected behaviors;
 * You are required to hire more experienced developers who will be aware of metaprogramming's risks and could spot related problems faster.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> _If you enjoyed this story, we recommend reading our latest tech stories and trending tech stories._

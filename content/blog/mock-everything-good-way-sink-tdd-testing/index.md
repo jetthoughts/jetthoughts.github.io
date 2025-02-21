@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mock-everything-is-a-good-way-to-sink-2ha
+source: dev_to
+remote_id: 1877556
 dev_to_id: 1877556
 dev_to_url: https://dev.to/jetthoughts/mock-everything-is-a-good-way-to-sink-2ha
 title: Mock Everything Is a Good Way to Sink
@@ -12,9 +15,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/mock-everything-good-way-sink-tdd-testing/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mock-everything-good-way-sink-tdd-testing/cover.jpeg
-slug: mock-everything-good-way-sink-tdd-testing
 metatags:
   image: cover.jpeg
+slug: mock-everything-good-way-sink-tdd-testing
 ---
 ***Have you found a lot of code with mocks and stubs? But how do you feel about it? When I see mocks/stubs, I am always looking for the way to remove them.***
 

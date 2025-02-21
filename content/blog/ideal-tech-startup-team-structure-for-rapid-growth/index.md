@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-ideal-tech-startup-team-structure-for-rapid-growth-1d82
+source: dev_to
+remote_id: 2174205
 dev_to_id: 2174205
 dev_to_url: https://dev.to/jetthoughts/the-ideal-tech-startup-team-structure-for-rapid-growth-1d82
 title: The ideal tech startup team structure for rapid growth
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/ideal-tech-startup-team-structure-for-rapid-growth/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ideal-tech-startup-team-structure-for-rapid-growth/cover.jpeg
-slug: ideal-tech-startup-team-structure-for-rapid-growth
 metatags:
   image: cover.jpeg
+slug: ideal-tech-startup-team-structure-for-rapid-growth
 ---
 Putting together a tech startup team is like piecing together a puzzle. There's no one-size-fits-all, but getting the right team structure in place is key for growth. You need a mix of visionaries, tech wizards, and money gurus to make things happen. But it's not just about filling roles; it's about creating a structure that lets your team thrive and adapt as you scale. Let's dig into what makes the ideal tech startup team structure for rapid growth.
 

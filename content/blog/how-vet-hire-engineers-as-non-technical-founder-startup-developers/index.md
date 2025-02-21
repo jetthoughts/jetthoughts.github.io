@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-vet-and-hire-engineers-as-a-non-technical-founder-4mfd
+source: dev_to
+remote_id: 2085026
 dev_to_id: 2085026
 dev_to_url: https://dev.to/jetthoughts/how-to-vet-and-hire-engineers-as-a-non-technical-founder-4mfd
 title: How to Vet and Hire Engineers as a non-Technical Founder
@@ -13,9 +16,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/cover.jpeg
-slug: how-vet-hire-engineers-as-non-technical-founder-startup-developers
 metatags:
   image: cover.jpeg
+slug: how-vet-hire-engineers-as-non-technical-founder-startup-developers
 ---
 You don't need an in-house tech expert to find the right developer. Follow these steps to get the best help.
 
@@ -73,6 +76,3 @@ Use contracts that cover clear termination terms and deliverables. To protect yo
 
 The interview does not provide real experience. Running a paid 2-week trial project is a great solution to confirm a match. [Some staffing agencies offer free trials](https://jetthoughts.com/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/).
 
----
-
-You can find the right developer without being technical. Use these steps to guide you. With the right team, your startup can succeed.

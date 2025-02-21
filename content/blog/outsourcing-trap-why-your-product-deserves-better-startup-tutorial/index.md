@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-outsourcing-trap-why-your-product-deserves-better-46i8
+source: dev_to
+remote_id: 2202253
 dev_to_id: 2202253
 dev_to_url: https://dev.to/jetthoughts/the-outsourcing-trap-why-your-product-deserves-better-46i8
 title: 'The Outsourcing Trap: Why Your Product Deserves Better'
@@ -13,9 +16,9 @@ tags:
 - leadership
 canonical_url: https://jetthoughts.com/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/cover.jpeg
-slug: outsourcing-trap-why-your-product-deserves-better-startup-tutorial
 metatags:
   image: cover.jpeg
+slug: outsourcing-trap-why-your-product-deserves-better-startup-tutorial
 ---
 Here's my twenty years of battling bullshit practices in software development consulting. Every month, I meet founders who've been burned by outsourcing agencies promising unicorns and delivering donkeys.
 
@@ -103,8 +106,3 @@ If you're stuck with outsourced code you're not happy with, stop throwing good m
 
 Remember: Every line of code is a liability. Choose carefully who writes yours.
 
----
-
-Want to continue this conversation? Let's connect at [JetThoughts](https://jetthoughts.com). As a fractional CTO, I help founders avoid these expensive mistakes every day.
-
-P.S. If you found this valuable, visit our [case studies](https://jetthoughts.com/cases) where I share more hard truths about building successful software products.

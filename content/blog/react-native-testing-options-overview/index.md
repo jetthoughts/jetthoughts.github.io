@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/react-native-testing-options-overview-5fna
+source: dev_to
+remote_id: 1853475
 dev_to_id: 1853475
 dev_to_url: https://dev.to/jetthoughts/react-native-testing-options-overview-5fna
 title: React Native Testing Options Overview
@@ -13,9 +16,9 @@ tags:
 - detox
 canonical_url: https://jetthoughts.com/blog/react-native-testing-options-overview/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/react-native-testing-options-overview/cover.jpeg
-slug: react-native-testing-options-overview
 metatags:
   image: cover.jpeg
+slug: react-native-testing-options-overview
 ---
 After investigating 100 articles about testing React Native applications I detected 2 main methods of testing which helped me succeed and can definitely help you.
 

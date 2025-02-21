@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/4-steps-to-bring-life-into-a-struggling-project-470g
+source: dev_to
+remote_id: 1877534
 dev_to_id: 1877534
 dev_to_url: https://dev.to/jetthoughts/4-steps-to-bring-life-into-a-struggling-project-470g
 title: 4 Steps to Bring Life into a Struggling Project
@@ -13,9 +16,9 @@ tags:
 - kanban
 canonical_url: https://jetthoughts.com/blog/4-steps-bring-life-into-struggling-project-startup-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-steps-bring-life-into-struggling-project-startup-management/cover.jpeg
-slug: 4-steps-bring-life-into-struggling-project-startup-management
 metatags:
   image: cover.jpeg
+slug: 4-steps-bring-life-into-struggling-project-startup-management
 ---
 
 ## 4 Steps to Bring Life into a Struggling Project
@@ -166,5 +169,5 @@ Are you ready to move to bring your struggling project back to live? [Contact us
 
 * Carbon Five’s Posts: [The 10 Practices of Healthy Engineering Teams](http://blog.carbonfive.com/2016/02/17/the-10-practices-of-healthy-engineering-teams-part-1/)
 
-**Paul Keen** is an Open Source Contributor, and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
+**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
 >  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

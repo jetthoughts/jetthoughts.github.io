@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-does-the-onboarding-look-like-in-jetthoughts-21ld
+source: dev_to
+remote_id: 1853524
 dev_to_id: 1853524
 dev_to_url: https://dev.to/jetthoughts/how-does-the-onboarding-look-like-in-jetthoughts-21ld
 title: How does the onboarding look like in JetThoughts?
@@ -13,9 +16,9 @@ tags:
 - onboarding
 canonical_url: https://jetthoughts.com/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/cover.jpeg
-slug: how-does-onboarding-look-like-in-jetthoughts-productivity-startup
 metatags:
   image: cover.jpeg
+slug: how-does-onboarding-look-like-in-jetthoughts-productivity-startup
 ---
 
 ## How does the onboarding look like in JetThoughts?

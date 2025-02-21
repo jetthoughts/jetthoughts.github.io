@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-is-ruby-on-rails-middleware-54hn
+source: dev_to
+remote_id: 1277349
 dev_to_id: 1277349
 dev_to_url: https://dev.to/jetthoughts/what-is-ruby-on-rails-middleware-54hn
 title: What is Ruby on Rails Middleware.
@@ -9,9 +12,9 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/what-ruby-on-rails-middleware/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-ruby-on-rails-middleware/cover.png
-slug: what-ruby-on-rails-middleware
 metatags:
   image: cover.png
+slug: what-ruby-on-rails-middleware
 ---
 
 ![Image description](file_0.png)

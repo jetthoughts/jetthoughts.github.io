@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/minitest-advantages-simple-testing-for-rails-projects-4467
+source: dev_to
+remote_id: 2102152
 dev_to_id: 2102152
 dev_to_url: https://dev.to/jetthoughts/minitest-advantages-simple-testing-for-rails-projects-4467
 title: 'Minitest Advantages: Simple Testing for Rails Projects'
@@ -13,9 +16,9 @@ tags:
 - ruby
 canonical_url: https://jetthoughts.com/blog/minitest-advantages-simple-testing-for-rails-projects-rspec/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/minitest-advantages-simple-testing-for-rails-projects-rspec/cover.png
-slug: minitest-advantages-simple-testing-for-rails-projects-rspec
 metatags:
   image: cover.png
+slug: minitest-advantages-simple-testing-for-rails-projects-rspec
 ---
 
 Minitest and RSpec are great testing tools for Ruby on Rails, each with its style, strengths, and weaknesses. This article will walk you through how they stack up, covering their main features, benefits, and the kinds of projects they fit best. By the end, you'll understand why we like Minitest more—especially when we're focused on keeping things simple and sticking with a TDD (Test-Driven Development) approach.

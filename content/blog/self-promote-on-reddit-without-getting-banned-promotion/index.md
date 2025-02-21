@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/self-promote-on-reddit-without-getting-banned-3pm2
+source: dev_to
+remote_id: 1880466
 dev_to_id: 1880466
 dev_to_url: https://dev.to/jetthoughts/self-promote-on-reddit-without-getting-banned-3pm2
 title: Self-promote on Reddit without getting banned
@@ -12,9 +15,9 @@ tags:
 - advice
 canonical_url: https://jetthoughts.com/blog/self-promote-on-reddit-without-getting-banned-promotion/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/self-promote-on-reddit-without-getting-banned-promotion/cover.jpeg
-slug: self-promote-on-reddit-without-getting-banned-promotion
 metatags:
   image: cover.jpeg
+slug: self-promote-on-reddit-without-getting-banned-promotion
 ---
 We are happy to share our experience on important aspects of starting self-promoting posts on Reddit. What do you need for it? What are the steps? We aim to identify the challenges affecting and easily face them.
 

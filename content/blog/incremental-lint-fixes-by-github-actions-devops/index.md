@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/incremental-lint-fixes-by-github-actions-38o8
+source: dev_to
+remote_id: 1189342
 dev_to_id: 1189342
 dev_to_url: https://dev.to/jetthoughts/incremental-lint-fixes-by-github-actions-38o8
 title: Incremental lint fixes by GitHub Actions
@@ -13,9 +16,9 @@ tags:
 - codequality
 canonical_url: https://jetthoughts.com/blog/incremental-lint-fixes-by-github-actions-devops/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/incremental-lint-fixes-by-github-actions-devops/cover.png
-slug: incremental-lint-fixes-by-github-actions-devops
 metatags:
   image: cover.png
+slug: incremental-lint-fixes-by-github-actions-devops
 ---
 How do you apply new lint rules to the legacy project with active development? Have you added `standard` gem recently, and now you are required to change a lot of files but could not apply them at once.
 
@@ -130,80 +133,3 @@ Pushes and creates PR with changes.
 > _**Need to use Personal Tokens only for GitHub** to get it you should use [GitHub Docs: Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)._ And more details why we need to use Personal Tokens: [GitHub Docs: Triggering a workflow from a workflow](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow)
 
 ```yaml
----
-name: Auto-fix
-
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: '0 0 * * 1,3' # Each Monday and Wednesday
-
-env:
-  CI: true
-  RAILS_ENV: test
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
-
-jobs:
-  rubocop:
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_USERNAME: jetthoughts
-      GITHUB_REPONAME: jt_tools
-
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-
-      - name: Create Pull Request with RuboCop fixes (3 retries)
-        continue-on-error: true
-        run: |
-          bin/ci-generates-lint-fix || bin/ci-generates-lint-fix || bin/ci-generates-lint-fix
-```
-
-### Bonus: mark PR to be auto-merged and request code review
-
-```yaml
----
-name: Enable auto-merge for bots' PRs
-
-on: pull_request
-
-permissions:
-  pull-requests: write
-  statuses: write
-  contents: write
-
-jobs:
-  select_for_auto_merge:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'github-actions[bot]' ||  startsWith(github.head_ref, 'auto-') }}
-    steps:
-      - name: Enable auto-merge for bots' PRs
-        run: |
-          gh pr merge --auto --rebase "$PR_URL"
-          gh pr edit "$PR_URL" --add-reviewer "@jetthoughts/developers" --add-label "Need to review"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-```
-
-## And we got "Atomic Habit."
-
-After several weeks you will get cleaned code, and there was no harm to Code Reviewers or Developers ;)
-
-![Result of the script](file_2.png)
-
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).

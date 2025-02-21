@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/a-typical-day-at-jetthoughts-2p9
+source: dev_to
+remote_id: 1853596
 dev_to_id: 1853596
 dev_to_url: https://dev.to/jetthoughts/a-typical-day-at-jetthoughts-2p9
 title: A typical day at JetThoughts
@@ -13,9 +16,9 @@ tags:
 - process
 canonical_url: https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/typical-day-at-jetthoughts-agile-remote/cover.jpeg
-slug: typical-day-at-jetthoughts-agile-remote
 metatags:
   image: cover.jpeg
+slug: typical-day-at-jetthoughts-agile-remote
 ---
 
 ![Photo by [Jon Tyson](https://unsplash.com/@jontyson?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](file_0.jpeg)

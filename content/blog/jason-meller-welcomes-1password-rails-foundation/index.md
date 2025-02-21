@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/jason-meller-welcomes-1password-to-the-rails-foundation-29p8
+source: dev_to
+remote_id: 2182000
 dev_to_id: 2182000
 dev_to_url: https://dev.to/jetthoughts/jason-meller-welcomes-1password-to-the-rails-foundation-29p8
 title: Jason Meller Welcomes 1Password to the Rails Foundation
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/jason-meller-welcomes-1password-rails-foundation/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jason-meller-welcomes-1password-rails-foundation/cover.jpeg
-slug: jason-meller-welcomes-1password-rails-foundation
 metatags:
   image: cover.jpeg
+slug: jason-meller-welcomes-1password-rails-foundation
 ---
 In a significant move for both the Rails community and 1Password, Jason Meller announced that 1Password has officially joined the Rails Foundation. This partnership aims to enhance the security and efficiency of web applications built on the Rails framework, leveraging 1Password's expertise in password management and security solutions.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/transforming-titans-outsourcing-odyssey-4mb8
+source: dev_to
+remote_id: 1911972
 dev_to_id: 1911972
 dev_to_url: https://dev.to/jetthoughts/transforming-titans-outsourcing-odyssey-4mb8
 title: 'Transforming Titans: A Novel Journey of Agile Leadership in Outsourcing'
@@ -13,9 +16,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/transforming-titans-outsourcing-odyssey-leadership-agile/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-titans-outsourcing-odyssey-leadership-agile/cover.png
-slug: transforming-titans-outsourcing-odyssey-leadership-agile
 metatags:
   image: cover.png
+slug: transforming-titans-outsourcing-odyssey-leadership-agile
 ---
 ### **Chapter 1: The New Beginning**
 

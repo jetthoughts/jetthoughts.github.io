@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/y-combinator-co-founder-jessica-livingston-on-the-beginnings-of-yc-3kp
+source: dev_to
+remote_id: 2234058
 dev_to_id: 2234058
 dev_to_url: https://dev.to/jetthoughts/y-combinator-co-founder-jessica-livingston-on-the-beginnings-of-yc-3kp
 title: Y Combinator Co-Founder Jessica Livingston on the Beginnings of YC
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/y-combinator-co-founder-jessica-livingston-on-beginnings-of-yc/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/y-combinator-co-founder-jessica-livingston-on-beginnings-of-yc/cover.jpeg
-slug: y-combinator-co-founder-jessica-livingston-on-beginnings-of-yc
 metatags:
   image: cover.jpeg
+slug: y-combinator-co-founder-jessica-livingston-on-beginnings-of-yc
 ---
 [![Y Combinator Co-Founder Jessica Livingston on the Beginnings of YC](file_0.jpg)](https://www.youtube.com/watch?v=ywdFD0cAq2E)
 

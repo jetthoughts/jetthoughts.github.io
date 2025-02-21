@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-non-tech-founders-often-miss-f1k
+source: dev_to
+remote_id: 2110985
 dev_to_id: 2110985
 dev_to_url: https://dev.to/jetthoughts/what-non-tech-founders-often-miss-f1k
 title: What Non-Tech Founders Often Miss
@@ -13,9 +16,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/what-non-tech-founders-often-miss/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-non-tech-founders-often-miss/cover.png
-slug: what-non-tech-founders-often-miss
 metatags:
   image: cover.png
+slug: what-non-tech-founders-often-miss
 ---
 I have worked with many non-technical founders. They often make the same mistakes, which wastes time and money. They mean well, but problems happen. Here are common issues and how they affect projects.
 

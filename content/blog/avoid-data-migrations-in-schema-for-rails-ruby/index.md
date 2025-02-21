@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/avoid-data-migrations-in-the-schema-migrations-for-rails-5hdi
+source: dev_to
+remote_id: 1877645
 dev_to_id: 1877645
 dev_to_url: https://dev.to/jetthoughts/avoid-data-migrations-in-the-schema-migrations-for-rails-5hdi
 title: Avoid data migrations in the schema migrations for Rails
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/avoid-data-migrations-in-schema-for-rails-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/avoid-data-migrations-in-schema-for-rails-ruby/cover.png
-slug: avoid-data-migrations-in-schema-for-rails-ruby
 metatags:
   image: cover.png
+slug: avoid-data-migrations-in-schema-for-rails-ruby
 ---
 
 ## Avoid data migrations in the schema migrations for Rails

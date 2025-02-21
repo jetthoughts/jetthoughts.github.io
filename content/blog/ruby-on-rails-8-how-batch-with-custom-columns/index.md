@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/ruby-on-rails-8-how-to-batch-with-custom-columns-510p
+source: dev_to
+remote_id: 2086243
 dev_to_id: 2086243
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-8-how-to-batch-with-custom-columns-510p
 title: 'Ruby on Rails 8: How to Batch with Custom Columns'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/ruby-on-rails-8-how-batch-with-custom-columns/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-8-how-batch-with-custom-columns/cover.png
-slug: ruby-on-rails-8-how-batch-with-custom-columns
 metatags:
   image: cover.png
+slug: ruby-on-rails-8-how-batch-with-custom-columns
 ---
 Ruby on Rails 8 introduces a handy feature for developers handling large datasets: batching with custom columns. This upgrade lets you batch records by specific attributes, not just the primary key.
 

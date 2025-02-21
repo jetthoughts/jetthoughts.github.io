@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/rails-virtual-attributes-use-cases-58j1
+source: dev_to
+remote_id: 1852738
 dev_to_id: 1852738
 dev_to_url: https://dev.to/jetthoughts/rails-virtual-attributes-use-cases-58j1
 title: Rails virtual attributes use cases
@@ -13,9 +16,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/rails-virtual-attributes-use-cases-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-virtual-attributes-use-cases-ruby/cover.jpeg
-slug: rails-virtual-attributes-use-cases-ruby
 metatags:
   image: cover.jpeg
+slug: rails-virtual-attributes-use-cases-ruby
 ---
 You want to keep some data but do not want to create the new column in the database? Your data should be stored in a form different from the one the user got to deal with?
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-founder-mode-really-means-1ab8
+source: dev_to
+remote_id: 2242904
 dev_to_id: 2242904
 dev_to_url: https://dev.to/jetthoughts/what-founder-mode-really-means-1ab8
 title: What Founder Mode Really Means
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/what-founder-mode-really-means/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-founder-mode-really-means/cover.jpeg
-slug: what-founder-mode-really-means
 metatags:
   image: cover.jpeg
+slug: what-founder-mode-really-means
 ---
 [![What Founder Mode Really Means](file_0.webp)](https://www.youtube.com/watch?v=FlonCU9txXI)
 

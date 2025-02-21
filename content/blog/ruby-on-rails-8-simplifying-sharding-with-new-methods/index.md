@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/ruby-on-rails-8-simplifying-sharding-with-new-methods-48m9
+source: dev_to
+remote_id: 2086267
 dev_to_id: 2086267
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-8-simplifying-sharding-with-new-methods-48m9
 title: 'Ruby on Rails 8: Simplifying Sharding with New Methods'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/ruby-on-rails-8-simplifying-sharding-with-new-methods/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-8-simplifying-sharding-with-new-methods/cover.png
-slug: ruby-on-rails-8-simplifying-sharding-with-new-methods
 metatags:
   image: cover.png
+slug: ruby-on-rails-8-simplifying-sharding-with-new-methods
 ---
 Ruby on Rails 8 brings helpful updates for working with sharded databases. The new methods `.shard_keys`, `.sharded?`, and `.connected_to_all_shards` make it easier to manage multiple shards. If you handle sharded data, these tools can streamline your workflow.
 

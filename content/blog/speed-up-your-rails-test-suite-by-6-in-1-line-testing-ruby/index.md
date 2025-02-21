@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/speed-up-your-rails-test-suite-by-6-in-1-line-22an
+source: dev_to
+remote_id: 1880245
 dev_to_id: 1880245
 dev_to_url: https://dev.to/jetthoughts/speed-up-your-rails-test-suite-by-6-in-1-line-22an
 title: Speed Up Your Rails Test Suite By 6% In 1 Line
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/cover.jpeg
-slug: speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby
 metatags:
   image: cover.jpeg
+slug: speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby
 ---
 ![](file_0.jpeg)
 

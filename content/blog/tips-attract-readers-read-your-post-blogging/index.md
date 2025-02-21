@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/tips-to-attract-readers-to-read-your-post-2n9j
+source: dev_to
+remote_id: 1852562
 dev_to_id: 1852562
 dev_to_url: https://dev.to/jetthoughts/tips-to-attract-readers-to-read-your-post-2n9j
 title: Tips to attract readers to read your post
@@ -12,9 +15,9 @@ tags:
 - writing
 canonical_url: https://jetthoughts.com/blog/tips-attract-readers-read-your-post-blogging/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tips-attract-readers-read-your-post-blogging/cover.jpeg
-slug: tips-attract-readers-read-your-post-blogging
 metatags:
   image: cover.jpeg
+slug: tips-attract-readers-read-your-post-blogging
 ---
 Do you know how to keep readers’ attention? We had been experimenting with different ways to make articles more attractive until we found and checked the best steps to do it. Let’s read!
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/responsive-or-adaptive-design-find-out-which-one-is-better-for-you-1cc7
+source: dev_to
+remote_id: 1877550
 dev_to_id: 1877550
 dev_to_url: https://dev.to/jetthoughts/responsive-or-adaptive-design-find-out-which-one-is-better-for-you-1cc7
 title: Responsive or Adaptive Design? Find out which one is better for you
@@ -12,9 +15,9 @@ tags:
 - layouts
 canonical_url: https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/cover.jpeg
-slug: responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign
 metatags:
   image: cover.jpeg
+slug: responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign
 ---
 ![](file_0.jpeg)
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/direct-upload-with-rails-dropzonejs-52bh
+source: dev_to
+remote_id: 2014071
 dev_to_id: 2014071
 dev_to_url: https://dev.to/jetthoughts/direct-upload-with-rails-dropzonejs-52bh
 title: Direct Upload with Rails & Dropzone.js
@@ -12,9 +15,9 @@ tags:
 - javascript
 canonical_url: https://jetthoughts.com/blog/direct-upload-with-rails-dropzonejs-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/direct-upload-with-rails-dropzonejs-webdev/cover.png
-slug: direct-upload-with-rails-dropzonejs-webdev
 metatags:
   image: cover.png
+slug: direct-upload-with-rails-dropzonejs-webdev
 ---
 Configuring direct file uploads in Rails is now easier than ever. In this article, I'll show you how to create a file upload component in Rails 7. We'll use Active Storage, Stimulus, and Dropzone.js to make the process smooth and user-friendly.
 

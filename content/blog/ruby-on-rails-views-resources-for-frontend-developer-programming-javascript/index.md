@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/ruby-on-rails-views-resources-for-frontend-developer-3pi9
+source: dev_to
+remote_id: 1559624
 dev_to_id: 1559624
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-views-resources-for-frontend-developer-3pi9
 title: Ruby on Rails Views Resources for Frontend Developer
@@ -13,9 +16,9 @@ tags:
 - frontend
 canonical_url: https://jetthoughts.com/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-views-resources-for-frontend-developer-programming-javascript/cover.png
-slug: ruby-on-rails-views-resources-for-frontend-developer-programming-javascript
 metatags:
   image: cover.png
+slug: ruby-on-rails-views-resources-for-frontend-developer-programming-javascript
 ---
 🚀 Excited to share some awesome resources to help front-end developers onboard into the Ruby on Rails Views kitchen! 🎉
 
@@ -58,14 +61,4 @@ metatags:
 ![Hotrails.dev](file_8.png)
 
 **[Hotrails.dev](https://hotrails.dev):** For a compilation of various Hotwire tutorials, hotrails.dev is the place to go! Find a treasure trove of resources to master the art of building interactive Rails views.
-
----
-
-🌟 There you have it! With these resources, you'll be well-equipped to dive into Ruby on Rails Views and Hotwire. Happy coding and feel free to reach out if you have any questions or need further guidance. Remember, you've got this! 💪 
-
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
 

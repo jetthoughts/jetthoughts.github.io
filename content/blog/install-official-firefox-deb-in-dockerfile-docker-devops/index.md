@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/install-official-firefox-deb-in-dockerfile-12pb
+source: dev_to
+remote_id: 1740002
 dev_to_id: 1740002
 dev_to_url: https://dev.to/jetthoughts/install-official-firefox-deb-in-dockerfile-12pb
 title: Install Official Firefox .deb in Dockerfile
@@ -12,9 +15,9 @@ tags:
 - tooling
 canonical_url: https://jetthoughts.com/blog/install-official-firefox-deb-in-dockerfile-docker-devops/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/install-official-firefox-deb-in-dockerfile-docker-devops/cover.jpeg
-slug: install-official-firefox-deb-in-dockerfile-docker-devops
 metatags:
   image: cover.jpeg
+slug: install-official-firefox-deb-in-dockerfile-docker-devops
 ---
 Mozilla announced its dedicated APT repo for Debian-based distros, including Ubuntu, containing new stable releases of Firefox as a DEB package with the release of Firefox 122 in January 2023.
 

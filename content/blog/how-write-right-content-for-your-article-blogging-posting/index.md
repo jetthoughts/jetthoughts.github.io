@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-write-the-right-content-for-your-article-46c1
+source: dev_to
+remote_id: 1853550
 dev_to_id: 1853550
 dev_to_url: https://dev.to/jetthoughts/how-to-write-the-right-content-for-your-article-46c1
 title: How To Write The Right Content For Your Article
@@ -12,9 +15,9 @@ tags:
 - contentwriting
 canonical_url: https://jetthoughts.com/blog/how-write-right-content-for-your-article-blogging-posting/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-write-right-content-for-your-article-blogging-posting/cover.jpeg
-slug: how-write-right-content-for-your-article-blogging-posting
 metatags:
   image: cover.jpeg
+slug: how-write-right-content-for-your-article-blogging-posting
 ---
 There are moments when you’re full of motivation, ideas come up with your mind and straight onto the page. But there are other moments when you take up hours of your time, before getting to that last sentence. You’re almost about giving up.
 

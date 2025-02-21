@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-convert-customers-with-cold-emails-startup-school-996
+source: dev_to
+remote_id: 2240087
 dev_to_id: 2240087
 dev_to_url: https://dev.to/jetthoughts/how-to-convert-customers-with-cold-emails-startup-school-996
 title: How To Convert Customers With Cold Emails | Startup School
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://dev.to/jetthoughts/how-to-convert-customers-with-cold-emails-startup-school-996
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-convert-customers-with-cold-emails-startup-school/cover.jpeg
-slug: how-convert-customers-with-cold-emails-startup-school
 metatags:
   image: cover.jpeg
+slug: how-convert-customers-with-cold-emails-startup-school
 ---
 [![How To Convert Customers With Cold Emails | Startup School](file_0.webp)](https://www.youtube.com/watch?v=7Kh_fpxP1yY)
 

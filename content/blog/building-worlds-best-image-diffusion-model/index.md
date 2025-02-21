@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/building-the-worlds-best-image-diffusion-model-5139
+source: dev_to
+remote_id: 2206146
 dev_to_id: 2206146
 dev_to_url: https://dev.to/jetthoughts/building-the-worlds-best-image-diffusion-model-5139
 title: Building The World's Best Image Diffusion Model
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/building-worlds-best-image-diffusion-model/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/building-worlds-best-image-diffusion-model/cover.jpeg
-slug: building-worlds-best-image-diffusion-model
 metatags:
   image: cover.jpeg
+slug: building-worlds-best-image-diffusion-model
 ---
 In a recent episode of Lightcone, Suhail Doshi, founder of Playground, shared insights into creating a state-of-the-art AI image diffusion model. Playground allows users to interact with the model like a graphic designer, making it easier to generate images and text for various applications. Suhail discussed the challenges and breakthroughs his team faced while developing this innovative tool.
 

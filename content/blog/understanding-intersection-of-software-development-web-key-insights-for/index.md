@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/understanding-the-intersection-of-software-development-and-web-development-key-insights-for-3ked
+source: dev_to
+remote_id: 2209607
 dev_to_id: 2209607
 dev_to_url: https://dev.to/jetthoughts/understanding-the-intersection-of-software-development-and-web-development-key-insights-for-3ked
 title: 'Understanding the Intersection of Software Development and Web Development: Key Insights for Aspiring Developers'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/understanding-intersection-of-software-development-web-key-insights-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/understanding-intersection-of-software-development-web-key-insights-for/cover.jpeg
-slug: understanding-intersection-of-software-development-web-key-insights-for
 metatags:
   image: cover.jpeg
+slug: understanding-intersection-of-software-development-web-key-insights-for
 ---
 Hey there! So, you're thinking about diving into the world of software development and web development, huh? It's a pretty exciting field with lots to learn and explore. Whether you're just starting out or looking to expand your skills, understanding the intersection of these two areas can open up a lot of opportunities. Let's break it down and see what key insights can help you on your journey.
 

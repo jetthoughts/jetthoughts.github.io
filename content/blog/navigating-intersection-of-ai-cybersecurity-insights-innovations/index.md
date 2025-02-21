@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/navigating-the-intersection-of-ai-and-cybersecurity-insights-and-innovations-4c5b
+source: dev_to
+remote_id: 2268173
 dev_to_id: 2268173
 dev_to_url: https://dev.to/jetthoughts/navigating-the-intersection-of-ai-and-cybersecurity-insights-and-innovations-4c5b
 title: 'Navigating the Intersection of AI and Cybersecurity: Insights and Innovations'
 description: Explore the challenges and opportunities at the intersection of AI and cybersecurity, highlighting the importance of collaboration, ethical considerations, and workforce development.
 created_at: '2025-02-09T23:42:44Z'
-edited_at:
+edited_at: '2025-02-10T04:06:23Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/navigating-the-intersection-of-ai-and-cybersecurity-insights-and-innovations-4c5b
+canonical_url: https://jetthoughts.com/blog/navigating-intersection-of-ai-cybersecurity-insights-innovations/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/navigating-intersection-of-ai-cybersecurity-insights-innovations/cover.jpeg
-slug: navigating-intersection-of-ai-cybersecurity-insights-innovations
 metatags:
   image: cover.jpeg
+slug: navigating-intersection-of-ai-cybersecurity-insights-innovations
 ---
 In a recent episode of the Executive Guidance podcast, experts discussed the transformative impact of artificial intelligence (AI) on cybersecurity. The conversation highlighted the challenges and opportunities that arise from integrating AI into security frameworks, emphasizing the need for collaboration between public and private sectors to enhance government technology and workforce efficiency.
 

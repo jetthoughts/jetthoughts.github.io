@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/reviving-defense-technology-silicon-valleys-next-chapter-gej
+source: dev_to
+remote_id: 2222412
 dev_to_id: 2222412
 dev_to_url: https://dev.to/jetthoughts/reviving-defense-technology-silicon-valleys-next-chapter-gej
 title: 'Reviving Defense Technology: Silicon Valley''s Next Chapter'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/reviving-defense-technology-silicon-valleys-next-chapter/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/reviving-defense-technology-silicon-valleys-next-chapter/cover.jpeg
-slug: reviving-defense-technology-silicon-valleys-next-chapter
 metatags:
   image: cover.jpeg
+slug: reviving-defense-technology-silicon-valleys-next-chapter
 ---
 The U.S. has long been a leader in defense technology, but recent trends show that the defense contractors we rely on have become sluggish and inefficient. New tech companies, especially those emerging from Silicon Valley, like Palantir and SpaceX, are stepping up to fill this gap. As we gear up for the next Y Combinator batch, there’s hope that more founders will venture into this space.
 

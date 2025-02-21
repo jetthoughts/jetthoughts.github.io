@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/develop-a-minimalistic-process-for-development-teams-to-innovate-3im5
+source: dev_to
+remote_id: 2040573
 dev_to_id: 2040573
 dev_to_url: https://dev.to/jetthoughts/develop-a-minimalistic-process-for-development-teams-to-innovate-3im5
 title: Develop a Minimalistic Process for Development Teams to Innovate
@@ -11,9 +14,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/develop-minimalistic-process-for-development-teams-innovate-startup-productivity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/develop-minimalistic-process-for-development-teams-innovate-startup-productivity/cover.png
-slug: develop-minimalistic-process-for-development-teams-innovate-startup-productivity
 metatags:
   image: cover.png
+slug: develop-minimalistic-process-for-development-teams-innovate-startup-productivity
 ---
 I just finished reading ["Continuous Discovery Habits: Discover Products That Create Customer Value and Business Value."](https://www.goodreads.com/book/show/58046715-continuous-discovery-habits?ref=rae_0) The book combines [Impact Mapping](https://www.impactmapping.org/), Customer Interview, and [LDJ](https://go.ajsmart.com/ldj) to create a process that can be used to develop innovative products.
 
@@ -29,8 +32,3 @@ In 2024, I aim to create a simple process that even inexperienced startup founde
 - Use **User Story Mapping**, [ShapeUp](https://basecamp.com/shapeup), and exercises from [Design Sprint](https://www.ajsmart.com/how-to-design-sprint) to create a Minimum Viable Feature (MVF) and deliver value.
 - Conducting **retrospectives** to improve the process and identify what matters for the team is vital.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

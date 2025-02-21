@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/own-heroku-review-apps-with-github-actions-and-kamal-2-407n
+source: dev_to
+remote_id: 2053767
 dev_to_id: 2053767
 dev_to_url: https://dev.to/jetthoughts/own-heroku-review-apps-with-github-actions-and-kamal-2-407n
 title: Own Heroku Review Apps with GitHub Actions and Kamal 2
@@ -13,9 +16,9 @@ tags:
 - heroku
 canonical_url: https://jetthoughts.com/blog/own-heroku-review-apps-with-github-actions-kamal-2-devops-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/own-heroku-review-apps-with-github-actions-kamal-2-devops-development/cover.jpeg
-slug: own-heroku-review-apps-with-github-actions-kamal-2-devops-development
 metatags:
   image: cover.jpeg
+slug: own-heroku-review-apps-with-github-actions-kamal-2-devops-development
 ---
 Continuous delivery is vital in modern software development. It ensures that code changes are released quickly and reliably. **Heroku Review Apps** help in this process by creating temporary environments for each pull request. This makes it easy to test changes before merging them into the main branch.
 
@@ -236,8 +239,3 @@ Using GitHub Actions and Kamal 2, we can automate deployment like Heroku Review 
 
 Automation simplifies your workflow. It lets you focus on developing great features. **Try out these scripts and see how they can improve your development process.**
 
----
-
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jetthoughts.com).*

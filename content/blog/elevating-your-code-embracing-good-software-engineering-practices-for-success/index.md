@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/elevating-your-code-embracing-good-software-engineering-practices-for-success-5h6a
+source: dev_to
+remote_id: 2164998
 dev_to_id: 2164998
 dev_to_url: https://dev.to/jetthoughts/elevating-your-code-embracing-good-software-engineering-practices-for-success-5h6a
 title: 'Elevating Your Code: Embracing Good Software Engineering Practices for Success'
 description: Ever thought about what makes a software engineer successful? It's not just about knowing how to...
 created_at: '2024-12-19T10:51:54Z'
-edited_at:
+edited_at: '2024-12-19T11:07:44Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/elevating-your-code-embracing-good-software-engineering-practices-for-success-5h6a
+canonical_url: https://jetthoughts.com/blog/elevating-your-code-embracing-good-software-engineering-practices-for-success/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/elevating-your-code-embracing-good-software-engineering-practices-for-success/cover.jpeg
-slug: elevating-your-code-embracing-good-software-engineering-practices-for-success
 metatags:
   image: cover.jpeg
+slug: elevating-your-code-embracing-good-software-engineering-practices-for-success
 ---
 Ever thought about what makes a software engineer successful? It's not just about knowing how to code. It's about embracing good software engineering practices. These practices help you write better code, work well with your team, and create software that really works. In this article, we'll explore some of these key practices and how they can make a difference in your work.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/help-shepherd-to-count-sheep-in-elixir-gg7
+source: dev_to
+remote_id: 1880218
 dev_to_id: 1880218
 dev_to_url: https://dev.to/jetthoughts/help-shepherd-to-count-sheep-in-elixir-gg7
 title: Help shepherd to count sheep in Elixir
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/help-shepherd-count-sheep-in-elixir-programming/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/help-shepherd-count-sheep-in-elixir-programming/cover.jpeg
-slug: help-shepherd-count-sheep-in-elixir-programming
 metatags:
   image: cover.jpeg
+slug: help-shepherd-count-sheep-in-elixir-programming
 ---
 ![Shepard (Mass Effect)](file_0.jpeg)
 

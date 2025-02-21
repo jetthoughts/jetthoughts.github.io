@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/cons-of-the-private-chats-for-team-collaboration-4d13
+source: dev_to
+remote_id: 1853611
 dev_to_id: 1853611
 dev_to_url: https://dev.to/jetthoughts/cons-of-the-private-chats-for-team-collaboration-4d13
 title: Cons of the private chats for team collaboration
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/cons-of-private-chats-for-team-collaboration-communication-process/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cons-of-private-chats-for-team-collaboration-communication-process/cover.jpeg
-slug: cons-of-private-chats-for-team-collaboration-communication-process
 metatags:
   image: cover.jpeg
+slug: cons-of-private-chats-for-team-collaboration-communication-process
 ---
 Communication between team members is a very important part of the software development process. Especially when the team works remotely.
 

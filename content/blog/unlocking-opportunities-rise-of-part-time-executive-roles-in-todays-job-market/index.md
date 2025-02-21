@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unlocking-opportunities-the-rise-of-part-time-executive-roles-in-todays-job-market-4b20
+source: dev_to
+remote_id: 2191163
 dev_to_id: 2191163
 dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-the-rise-of-part-time-executive-roles-in-todays-job-market-4b20
 title: 'Unlocking Opportunities: The Rise of Part Time Executive Roles in Today''s Job Market'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unlocking-opportunities-rise-of-part-time-executive-roles-in-todays-job-market/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-opportunities-rise-of-part-time-executive-roles-in-todays-job-market/cover.jpeg
-slug: unlocking-opportunities-rise-of-part-time-executive-roles-in-todays-job-market
 metatags:
   image: cover.jpeg
+slug: unlocking-opportunities-rise-of-part-time-executive-roles-in-todays-job-market
 ---
 Part-time executive roles are becoming a big thing in today's job market. More and more executives are choosing to work part-time, and it's changing the way companies think about leadership. This trend is not just about cutting costs or filling gaps; it's about flexibility, work-life balance, and bringing in diverse skills. For companies, it's a chance to get the expertise they need without the full-time commitment. For executives, it's a way to keep their careers going while having more control over their time.
 

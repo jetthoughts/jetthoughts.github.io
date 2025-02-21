@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/creating-a-minimum-lovable-product-balancing-functionality-and-user-delight-15ej
+source: dev_to
+remote_id: 1943646
 dev_to_id: 1943646
 dev_to_url: https://dev.to/jetthoughts/creating-a-minimum-lovable-product-balancing-functionality-and-user-delight-15ej
 title: 'Creating a Minimum Lovable Product: Balancing Functionality and User Delight'
@@ -8,7 +11,6 @@ edited_at: '2024-11-25T15:32:56Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/creating-minimum-lovable-product-balancing-functionality-user-delight/
-cover_image: 
 slug: creating-minimum-lovable-product-balancing-functionality-user-delight
 ---
 In the fast-paced world of startups, it's key to create a product that works well and makes users happy. This guide shows how to build a Minimum Lovable Product (MLP) that achieves this balance.

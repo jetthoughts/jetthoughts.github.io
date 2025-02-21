@@ -1,18 +1,20 @@
 ---
-dev_to_id: 2158231
-dev_to_url: https://dev.to/jetthoughts/what-every-non-technical-founder-must-know-when-building-a-tech-product-30me
+remote_url: https://dev.to/jetthoughts/what-every-non-technical-founder-must-know-when-building-a-tech-product-577j
+source: dev_to
+remote_id: 2158232
+dev_to_id: 2158232
+dev_to_url: https://dev.to/jetthoughts/what-every-non-technical-founder-must-know-when-building-a-tech-product-577j
 title: What Every Non-Technical Founder Must Know When Building a Tech Product
 description: For twenty years, I’ve helped non-technical founders navigate software development. Many have...
 created_at: '2024-12-16T01:44:39Z'
-edited_at:
+edited_at: '2024-12-16T04:09:08Z'
 draft: false
 tags:
 - startup
 - management
 - tutorial
 - webdev
-canonical_url: https://dev.to/jetthoughts/what-every-non-technical-founder-must-know-when-building-a-tech-product-30me
-cover_image:
+canonical_url: https://jetthoughts.com/blog/what-every-non-technical-founder-must-know-when-building-tech-product-startup-management/
 slug: what-every-non-technical-founder-must-know-when-building-tech-product-startup-management
 ---
 For twenty years, I’ve helped non-technical founders navigate software development. Many have succeeded, while some faced challenges. I’ve noticed the key difference lies in their approach to technical aspects. I’d love to share insights on collaborating with remote development teams!
@@ -330,6 +332,3 @@ Remember: Many successful founders started without technical knowledge. They suc
 
 Whether you choose to learn everything yourself or get expert help, focus on building something people want. The technical details will follow.
 
----
-
-[Contact us to learn how our fractional CTO services can help you build your product right the first time.]

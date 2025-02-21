@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/transforming-brands-through-product-led-storytelling-39j2
+source: dev_to
+remote_id: 2272400
 dev_to_id: 2272400
 dev_to_url: https://dev.to/jetthoughts/transforming-brands-through-product-led-storytelling-39j2
 title: Transforming Brands Through Product-Led Storytelling
 description: Explore how product-led storytelling can transform brands and enhance customer experiences, featuring insights from industry leaders on effective marketing strategies.
 created_at: '2025-02-12T02:47:13Z'
-edited_at:
+edited_at: '2025-02-12T04:06:44Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/transforming-brands-through-product-led-storytelling-39j2
+canonical_url: https://jetthoughts.com/blog/transforming-brands-through-product-led-storytelling/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-brands-through-product-led-storytelling/cover.jpeg
-slug: transforming-brands-through-product-led-storytelling
 metatags:
   image: cover.jpeg
+slug: transforming-brands-through-product-led-storytelling
 ---
 In a recent episode of the Executive Guidance podcast, industry experts discussed the transformative power of product-led storytelling in marketing. The conversation highlighted how innovative product strategies can enhance brand perception and customer experiences, particularly in a competitive landscape.
 

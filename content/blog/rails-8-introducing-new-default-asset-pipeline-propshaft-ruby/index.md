@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/rails-8-introducing-the-new-default-asset-pipeline-propshaft-5cpp
+source: dev_to
+remote_id: 2057856
 dev_to_id: 2057856
 dev_to_url: https://dev.to/jetthoughts/rails-8-introducing-the-new-default-asset-pipeline-propshaft-5cpp
 title: 'Rails 8: Introducing the New Default Asset Pipeline – Propshaft'
@@ -12,9 +15,9 @@ tags:
 - changelog
 canonical_url: https://jetthoughts.com/blog/rails-8-introducing-new-default-asset-pipeline-propshaft-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-8-introducing-new-default-asset-pipeline-propshaft-ruby/cover.jpeg
-slug: rails-8-introducing-new-default-asset-pipeline-propshaft-ruby
 metatags:
   image: cover.jpeg
+slug: rails-8-introducing-new-default-asset-pipeline-propshaft-ruby
 ---
 
 The Rails asset pipeline helps manage static assets like CSS, JavaScript, and images. It improves delivery speed by compressing and combining these files. Sprockets used to be the main tool for this, providing useful features like precompilation and versioning. However, it was often too complicated.

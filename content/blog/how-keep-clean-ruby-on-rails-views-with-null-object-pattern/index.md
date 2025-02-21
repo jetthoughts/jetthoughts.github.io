@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-keep-clean-ruby-on-rails-views-with-the-null-object-pattern-9be
+source: dev_to
+remote_id: 1375276
 dev_to_id: 1375276
 dev_to_url: https://dev.to/jetthoughts/how-to-keep-clean-ruby-on-rails-views-with-the-null-object-pattern-9be
 title: How to keep clean Ruby on Rails views with the Null Object pattern
@@ -12,9 +15,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/how-keep-clean-ruby-on-rails-views-with-null-object-pattern/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-keep-clean-ruby-on-rails-views-with-null-object-pattern/cover.png
-slug: how-keep-clean-ruby-on-rails-views-with-null-object-pattern
 metatags:
   image: cover.png
+slug: how-keep-clean-ruby-on-rails-views-with-null-object-pattern
 ---
 
 ![Image description](file_0.png)

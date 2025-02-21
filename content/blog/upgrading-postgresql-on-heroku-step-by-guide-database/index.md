@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/upgrading-postgresql-on-heroku-a-step-by-step-guide-4beb
+source: dev_to
+remote_id: 1760994
 dev_to_id: 1760994
 dev_to_url: https://dev.to/jetthoughts/upgrading-postgresql-on-heroku-a-step-by-step-guide-4beb
 title: 'Upgrading PostgreSQL on Heroku: A Step-by-Step Guide'
@@ -13,9 +16,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/upgrading-postgresql-on-heroku-step-by-guide-database/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/upgrading-postgresql-on-heroku-step-by-guide-database/cover.jpeg
-slug: upgrading-postgresql-on-heroku-step-by-guide-database
 metatags:
   image: cover.jpeg
+slug: upgrading-postgresql-on-heroku-step-by-guide-database
 ---
 Are you looking to upgrade your PostgreSQL database on Heroku? Whether it's for performance improvements or staying up-to-date with the latest features, upgrading your database is a crucial task. In this guide, we'll walk you through the process of upgrading PostgreSQL on Heroku with clear, step-by-step instructions.
 

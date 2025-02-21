@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-we-configure-simplecov-for-our-ruby-on-rails-projects-3hlp
+source: dev_to
+remote_id: 1673284
 dev_to_id: 1673284
 dev_to_url: https://dev.to/jetthoughts/how-we-configure-simplecov-for-our-ruby-on-rails-projects-3hlp
 title: How we configure Simplecov for our Ruby on Rails projects.
@@ -12,7 +15,6 @@ tags:
 - testing
 - tutorial
 canonical_url: https://jetthoughts.com/blog/how-we-configure-simplecov-for-our-ruby-on-rails-projects/
-cover_image: 
 slug: how-we-configure-simplecov-for-our-ruby-on-rails-projects
 ---
 

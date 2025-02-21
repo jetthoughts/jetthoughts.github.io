@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/regular-automatic-dependencies-update-with-circleci-1ihf
+source: dev_to
+remote_id: 1852752
 dev_to_id: 1852752
 dev_to_url: https://dev.to/jetthoughts/regular-automatic-dependencies-update-with-circleci-1ihf
 title: Regular automatic dependencies update with CircleCI
@@ -13,9 +16,9 @@ tags:
 - rails
 canonical_url: https://jetthoughts.com/blog/regular-automatic-dependencies-update-with-circleci-github-circle/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/regular-automatic-dependencies-update-with-circleci-github-circle/cover.png
-slug: regular-automatic-dependencies-update-with-circleci-github-circle
 metatags:
   image: cover.png
+slug: regular-automatic-dependencies-update-with-circleci-github-circle
 ---
 > ### Resolving the auto-upgrade issue will allow having edge gems versions with little to no effort. How could you achieve this with CI (specifically CircleCI)?
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/inexpensive-is-not-cheap-choosing-software-development-company-for-your-project-ak0
+source: dev_to
+remote_id: 1877566
 dev_to_id: 1877566
 dev_to_url: https://dev.to/jetthoughts/inexpensive-is-not-cheap-choosing-software-development-company-for-your-project-ak0
 title: Inexpensive is Not Cheap. Choosing Software Development Company for Your Project
@@ -11,9 +14,9 @@ tags:
 - mvp
 canonical_url: https://jetthoughts.com/blog/inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp/cover.jpeg
-slug: inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp
 metatags:
   image: cover.jpeg
+slug: inexpensive-not-cheap-choosing-software-development-company-for-your-project-outsource-mvp
 ---
 ![](file_0.jpeg)
 

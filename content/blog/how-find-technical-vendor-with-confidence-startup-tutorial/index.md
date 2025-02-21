@@ -1,21 +1,24 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-find-technical-vendor-with-confidence-435n
+source: dev_to
+remote_id: 2163209
 dev_to_id: 2163209
 dev_to_url: https://dev.to/jetthoughts/how-to-find-technical-vendor-with-confidence-435n
 title: How to find technical vendor with confidence
 description: Finding the right tech vendor can feel like a wild ride. One minute you're confident, the next you're...
 created_at: '2024-12-18T13:26:24Z'
-edited_at:
+edited_at: '2024-12-18T14:08:11Z'
 draft: false
 tags:
 - startup
 - tutorial
 - management
 - career
-canonical_url: https://dev.to/jetthoughts/how-to-find-technical-vendor-with-confidence-435n
+canonical_url: https://jetthoughts.com/blog/how-find-technical-vendor-with-confidence-startup-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-find-technical-vendor-with-confidence-startup-tutorial/cover.jpeg
-slug: how-find-technical-vendor-with-confidence-startup-tutorial
 metatags:
   image: cover.jpeg
+slug: how-find-technical-vendor-with-confidence-startup-tutorial
 ---
 Finding the right tech vendor can feel like a wild ride. One minute you're confident, the next you're second-guessing every decision. It's not just about picking someone who can do the job; it's about finding a partner you can trust. You want someone who gets your business and can grow with you. With the rise of fractional CTO services, there's a new player in the game to help you make those tough calls. Let's break down how you can confidently choose the right vendor for your needs.
 

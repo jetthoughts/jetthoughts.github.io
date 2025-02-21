@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/simplest-step-by-step-guide-creating-a-post-2nf6
+source: dev_to
+remote_id: 1853556
 dev_to_id: 1853556
 dev_to_url: https://dev.to/jetthoughts/simplest-step-by-step-guide-creating-a-post-2nf6
 title: Simplest step by step guide creating a post
@@ -13,9 +16,9 @@ tags:
 - guide
 canonical_url: https://jetthoughts.com/blog/simplest-step-by-guide-creating-post-blogging-writing/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-step-by-guide-creating-post-blogging-writing/cover.jpeg
-slug: simplest-step-by-guide-creating-post-blogging-writing
 metatags:
   image: cover.jpeg
+slug: simplest-step-by-guide-creating-post-blogging-writing
 ---
 ![Photo by [Aaron Burden](https://unsplash.com/@aaronburden?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](file_0.jpeg)
 

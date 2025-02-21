@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/are-we-in-an-ai-hype-cycle-243k
+source: dev_to
+remote_id: 2174810
 dev_to_id: 2174810
 dev_to_url: https://dev.to/jetthoughts/are-we-in-an-ai-hype-cycle-243k
 title: Are We In An AI Hype Cycle?
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/are-we-in-an-ai-hype-cycle/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/are-we-in-an-ai-hype-cycle/cover.jpeg
-slug: are-we-in-an-ai-hype-cycle
 metatags:
   image: cover.jpeg
+slug: are-we-in-an-ai-hype-cycle
 ---
 The recent surge in excitement around artificial intelligence (AI) has sparked discussions about whether we are witnessing a genuine technological revolution or merely another hype cycle reminiscent of the dot-com boom. The Lightcone hosts delve into the current state of AI, exploring its implications for startups and the broader tech landscape.
 

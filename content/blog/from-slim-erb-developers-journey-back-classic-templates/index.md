@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/from-slim-to-erb-a-developers-journey-back-to-classic-templates-3ipd
+source: dev_to
+remote_id: 2167581
 dev_to_id: 2167581
 dev_to_url: https://dev.to/jetthoughts/from-slim-to-erb-a-developers-journey-back-to-classic-templates-3ipd
 title: 'From SLIM to ERB: A Developer''s Journey Back to Classic Templates'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/from-slim-erb-developers-journey-back-classic-templates/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/from-slim-erb-developers-journey-back-classic-templates/cover.jpeg
-slug: from-slim-erb-developers-journey-back-classic-templates
 metatags:
   image: cover.jpeg
+slug: from-slim-erb-developers-journey-back-classic-templates
 ---
 In a recent discussion on Reddit, a developer shared their experience of transitioning back to ERB (Embedded Ruby) after years of using SLIM (a lightweight templating engine). This shift has sparked a conversation among developers about the pros and cons of each templating system, highlighting personal preferences and the evolving landscape of Ruby on Rails development.
 

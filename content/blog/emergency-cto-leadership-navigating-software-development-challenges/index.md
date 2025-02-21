@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/emergency-cto-leadership-navigating-software-development-challenges-20hk
+source: dev_to
+remote_id: 1945366
 dev_to_id: 1945366
 dev_to_url: https://dev.to/jetthoughts/emergency-cto-leadership-navigating-software-development-challenges-20hk
 title: 'Emergency CTO Leadership: Navigating Software Development Challenges'
@@ -8,7 +11,6 @@ edited_at: '2024-11-25T15:32:48Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/emergency-cto-leadership-navigating-software-development-challenges/
-cover_image: 
 slug: emergency-cto-leadership-navigating-software-development-challenges
 ---
 In the fast-paced world of software, hurdles are a given. From sudden user spikes to tech debt or a key team member leaving, firms often need swift expert help. An emergency CTO can ease through these rough patches.

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-3e4d
+source: dev_to
+remote_id: 2231142
 dev_to_id: 2231142
 dev_to_url: https://dev.to/jetthoughts/building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-3e4d
 title: 'Building Trust at Scale: How ToolTime Runs 76 Microservices through Empowerment'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://dev.to/jetthoughts/building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-3e4d
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-startup-management/cover.jpeg
-slug: building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-startup-management
 metatags:
   image: cover.jpeg
+slug: building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-startup-management
 ---
 If you're an engineering leader wrestling with scaling teams while preserving autonomy, this story will transform your thoughts about trust and technical leadership. 
 
@@ -127,10 +130,3 @@ The journey requires dedication and patience to build the right culture. But ask
 
 The water might be deep, but now you have a map for swimming.
 
----
-
-_Ready to transform your engineering culture? Start with one practice from the roadmap above and share your results. This post is part of my ongoing exploration of technical leadership in Berlin. If you're a tech leader with a story to share, [reach out](https://jetthoughts.com/contact-us/)._
-
----
-
-**Author:** [Paul Keen](https://www.linkedin.com/in/paul-keen/) is a Fractional CTO and Engineering Leader who has helped multiple startups go from idea to market.

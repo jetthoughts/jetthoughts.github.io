@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/preview-ui-changes-with-ruby-on-rails-variants-3k9e
+source: dev_to
+remote_id: 1108673
 dev_to_id: 1108673
 dev_to_url: https://dev.to/jetthoughts/preview-ui-changes-with-ruby-on-rails-variants-3k9e
 title: Preview UI changes with Ruby on Rails variants
@@ -12,9 +15,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/preview-ui-changes-with-ruby-on-rails-variants/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/preview-ui-changes-with-ruby-on-rails-variants/cover.png
-slug: preview-ui-changes-with-ruby-on-rails-variants
 metatags:
   image: cover.png
+slug: preview-ui-changes-with-ruby-on-rails-variants
 ---
 When implementing new design for a live application we usually don’t want our users to see an unfinished implementation, but we might want to give some users the ability to preview it on the live (production or staging) environment, for designers, product owners, our most loyal customers.
 

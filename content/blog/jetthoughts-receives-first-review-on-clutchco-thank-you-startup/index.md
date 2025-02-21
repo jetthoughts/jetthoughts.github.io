@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/jetthoughts-receives-first-review-on-clutchco-thank-you-3i48
+source: dev_to
+remote_id: 1853469
 dev_to_id: 1853469
 dev_to_url: https://dev.to/jetthoughts/jetthoughts-receives-first-review-on-clutchco-thank-you-3i48
 title: 'JetThoughts receives First Review on Clutch.co: Thank you'
@@ -13,9 +16,9 @@ tags:
 - company
 canonical_url: https://jetthoughts.com/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jetthoughts-receives-first-review-on-clutchco-thank-you-startup/cover.jpeg
-slug: jetthoughts-receives-first-review-on-clutchco-thank-you-startup
 metatags:
   image: cover.jpeg
+slug: jetthoughts-receives-first-review-on-clutchco-thank-you-startup
 ---
 ![](file_0.jpeg)
 

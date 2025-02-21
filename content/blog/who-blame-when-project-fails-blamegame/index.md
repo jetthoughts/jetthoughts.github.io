@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/who-is-to-blame-when-a-project-fails-2ahn
+source: dev_to
+remote_id: 462554
 dev_to_id: 462554
 dev_to_url: https://dev.to/jetthoughts/who-is-to-blame-when-a-project-fails-2ahn
 title: Who is to blame when a project fails?
@@ -12,9 +15,9 @@ tags:
 - projectfailure
 canonical_url: https://jetthoughts.com/blog/who-blame-when-project-fails-blamegame/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/who-blame-when-project-fails-blamegame/cover.jpg
-slug: who-blame-when-project-fails-blamegame
 metatags:
   image: cover.jpg
+slug: who-blame-when-project-fails-blamegame
 ---
 Large projects continue to fail, often with disastrous results for the organizations involved. Do you know the reasons they fail and how to avoid them? Why does this kind of thing keep happening?
 

@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-you-need-to-know-about-building-a-startup-org-structure-30ao
+source: dev_to
+remote_id: 2164751
 dev_to_id: 2164751
 dev_to_url: https://dev.to/jetthoughts/what-you-need-to-know-about-building-a-startup-org-structure-30ao
 title: What You Need to Know About Building a Startup Org Structure
 description: Starting a new business is like setting off on an adventure. You have a great idea, a small team, and...
 created_at: '2024-12-19T09:40:02Z'
-edited_at:
+edited_at: '2024-12-19T10:08:21Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/what-you-need-to-know-about-building-a-startup-org-structure-30ao
+canonical_url: https://jetthoughts.com/blog/what-you-need-know-about-building-startup-org-structure/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-you-need-know-about-building-startup-org-structure/cover.jpeg
-slug: what-you-need-know-about-building-startup-org-structure
 metatags:
   image: cover.jpeg
+slug: what-you-need-know-about-building-startup-org-structure
 ---
 Starting a new business is like setting off on an adventure. You have a great idea, a small team, and big dreams. But how do you organize your team to make sure everything runs smoothly? That's where creating a startup organizational structure comes in. It's not about stuffing your fresh, energetic team into a stiff corporate box. Instead, it's about finding a setup that works for your unique goals and needs. This guide will help you figure out the basics of building a structure that lets your startup grow without losing its spark.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-use-nth-child-in-css-535
+source: dev_to
+remote_id: 1113061
 dev_to_id: 1113061
 dev_to_url: https://dev.to/jetthoughts/how-to-use-nth-child-in-css-535
 title: How to use :nth-child in CSS
@@ -13,9 +16,9 @@ tags:
 - jetthoughts
 canonical_url: https://jetthoughts.com/blog/how-use-nth-child-in-css-html/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-use-nth-child-in-css-html/cover.png
-slug: how-use-nth-child-in-css-html
 metatags:
   image: cover.png
+slug: how-use-nth-child-in-css-html
 ---
 The `:nth-child` pseudo-class allows to select one and more elements based on their source order.
 ```html

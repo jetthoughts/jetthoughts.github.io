@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/best-practices-for-optimizing-ruby-on-rails-performance-b5b
+source: dev_to
+remote_id: 1877716
 dev_to_id: 1877716
 dev_to_url: https://dev.to/jetthoughts/best-practices-for-optimizing-ruby-on-rails-performance-b5b
 title: Best practices for optimizing Ruby on Rails performance
@@ -13,9 +16,9 @@ tags:
 - optimisation
 canonical_url: https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/best-practices-for-optimizing-ruby-on-rails-performance/cover.jpeg
-slug: best-practices-for-optimizing-ruby-on-rails-performance
 metatags:
   image: cover.jpeg
+slug: best-practices-for-optimizing-ruby-on-rails-performance
 ---
 ![Best practices for optimizing Ruby on Rails performance](file_0.jpeg)
 

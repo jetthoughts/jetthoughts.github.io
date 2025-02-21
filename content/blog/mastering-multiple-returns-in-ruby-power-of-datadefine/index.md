@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-multiple-returns-in-ruby-the-power-of-datadefine-3ng8
+source: dev_to
+remote_id: 2169440
 dev_to_id: 2169440
 dev_to_url: https://dev.to/jetthoughts/mastering-multiple-returns-in-ruby-the-power-of-datadefine-3ng8
 title: 'Mastering Multiple Returns in Ruby: The Power of Data.define'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/mastering-multiple-returns-in-ruby-power-of-datadefine/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-multiple-returns-in-ruby-power-of-datadefine/cover.jpeg
-slug: mastering-multiple-returns-in-ruby-power-of-datadefine
 metatags:
   image: cover.jpeg
+slug: mastering-multiple-returns-in-ruby-power-of-datadefine
 ---
 In the world of Ruby programming, returning multiple values from a method can often lead to confusion and bugs. A recent discussion highlighted the challenges developers face when using traditional methods to return multiple outputs. This article explores a modern solution using `Data.define`, which simplifies the process and enhances code readability.
 

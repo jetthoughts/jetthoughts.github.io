@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/once-you-identify-the-problem-and-fix-it-you-can-always-launch-again-55cm
+source: dev_to
+remote_id: 2239206
 dev_to_id: 2239206
 dev_to_url: https://dev.to/jetthoughts/once-you-identify-the-problem-and-fix-it-you-can-always-launch-again-55cm
 title: Once You Identify The Problem And Fix It, You Can Always Launch Again
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/once-you-identify-problem-fix-it-can-always-launch-again/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/once-you-identify-problem-fix-it-can-always-launch-again/cover.jpeg
-slug: once-you-identify-problem-fix-it-can-always-launch-again
 metatags:
   image: cover.jpeg
+slug: once-you-identify-problem-fix-it-can-always-launch-again
 ---
 [![Once You Identify The Problem And Fix It, You Can Always Launch Again](file_0.jpg)](https://www.youtube.com/watch?v=PHgqbdcWTuk)
 

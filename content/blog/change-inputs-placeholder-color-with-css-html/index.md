@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/change-inputs-placeholder-color-with-css-b4i
+source: dev_to
+remote_id: 1099690
 dev_to_id: 1099690
 dev_to_url: https://dev.to/jetthoughts/change-inputs-placeholder-color-with-css-b4i
 title: Change input’s placeholder color with CSS
@@ -13,9 +16,9 @@ tags:
 - jetthoughts
 canonical_url: https://jetthoughts.com/blog/change-inputs-placeholder-color-with-css-html/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/change-inputs-placeholder-color-with-css-html/cover.jpg
-slug: change-inputs-placeholder-color-with-css-html
 metatags:
   image: cover.jpg
+slug: change-inputs-placeholder-color-with-css-html
 ---
 Most modern browsers support the simple pseudo-element:
 ```css

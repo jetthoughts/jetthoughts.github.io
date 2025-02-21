@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-your-form-submission-fails-hotwire-cloudflare-and-missing-validation-messages-1a3o
+source: dev_to
+remote_id: 2024297
 dev_to_id: 2024297
 dev_to_url: https://dev.to/jetthoughts/why-your-form-submission-fails-hotwire-cloudflare-and-missing-validation-messages-1a3o
 title: 'Why Your Form Submission Fails: Hotwire/Turbo 1.x, Cloudflare, and Missing Validation Messages'
@@ -13,9 +16,9 @@ tags:
 - challenge
 canonical_url: https://jetthoughts.com/blog/why-your-form-submission-fails-hotwire-cloudflare-missing-validation-messages-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-your-form-submission-fails-hotwire-cloudflare-missing-validation-messages-rails/cover.jpeg
-slug: why-your-form-submission-fails-hotwire-cloudflare-missing-validation-messages-rails
 metatags:
   image: cover.jpeg
+slug: why-your-form-submission-fails-hotwire-cloudflare-missing-validation-messages-rails
 ---
 Recently, we encountered a bug in our application. A user reported that after submitting a form, nothing happened. No messages appeared, and the form didn’t update. We set out to find the issue.
 

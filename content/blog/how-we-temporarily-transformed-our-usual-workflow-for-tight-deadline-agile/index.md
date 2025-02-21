@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-we-temporarily-transformed-our-usual-workflow-for-a-tight-deadline-4fm9
+source: dev_to
+remote_id: 1877544
 dev_to_id: 1877544
 dev_to_url: https://dev.to/jetthoughts/how-we-temporarily-transformed-our-usual-workflow-for-a-tight-deadline-4fm9
 title: How We Temporarily Transformed Our Usual Workflow for a Tight Deadline
@@ -11,9 +14,9 @@ tags:
 - agile
 canonical_url: https://jetthoughts.com/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile/cover.jpeg
-slug: how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile
 metatags:
   image: cover.jpeg
+slug: how-we-temporarily-transformed-our-usual-workflow-for-tight-deadline-agile
 ---
 
 ![Unsplash Photo: [榮達 陳](https://unsplash.com/@dareen0987)](file_0.jpeg)

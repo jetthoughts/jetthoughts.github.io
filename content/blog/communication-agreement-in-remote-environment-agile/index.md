@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/communication-agreement-in-a-remote-environment-5b72
+source: dev_to
+remote_id: 462581
 dev_to_id: 462581
 dev_to_url: https://dev.to/jetthoughts/communication-agreement-in-a-remote-environment-5b72
 title: Communication Agreement in a remote environment
@@ -13,9 +16,9 @@ tags:
 - startup
 canonical_url: https://jetthoughts.com/blog/communication-agreement-in-remote-environment-agile/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/communication-agreement-in-remote-environment-agile/cover.png
-slug: communication-agreement-in-remote-environment-agile
 metatags:
   image: cover.png
+slug: communication-agreement-in-remote-environment-agile
 ---
 
 ## Communication Agreement in a remote environment

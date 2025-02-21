@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/video-player-with-react-native-part-1-expo-43h0
+source: dev_to
+remote_id: 1877622
 dev_to_id: 1877622
 dev_to_url: https://dev.to/jetthoughts/video-player-with-react-native-part-1-expo-43h0
 title: 'Video player with React Native. Part 1: Expo'
@@ -13,9 +16,9 @@ tags:
 - react
 canonical_url: https://jetthoughts.com/blog/video-player-with-react-native-part-1-expo-reactnative/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/video-player-with-react-native-part-1-expo-reactnative/cover.jpeg
-slug: video-player-with-react-native-part-1-expo-reactnative
 metatags:
   image: cover.jpeg
+slug: video-player-with-react-native-part-1-expo-reactnative
 ---
 ![](file_0.jpeg)
 

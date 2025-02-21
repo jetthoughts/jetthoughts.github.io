@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025-4okn
+source: dev_to
+remote_id: 2186624
 dev_to_id: 2186624
 dev_to_url: https://dev.to/jetthoughts/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025-4okn
 title: 'Unlocking Efficiency: How Internal Developer Platforms Transform Software Development in 2025'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025/cover.jpeg
-slug: unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025
 metatags:
   image: cover.jpeg
+slug: unlocking-efficiency-how-internal-developer-platforms-transform-software-development-in-2025
 ---
 In 2025, software development is getting a major upgrade with internal developer platforms (IDPs). These platforms are changing how developers work, making things faster and easier. Gone are the days of waiting for IT to set things up. Now, developers can do more on their own, thanks to self-service tools. This means more time to focus on creating cool stuff and less time dealing with setup hassles. Let's dive into how IDPs are shaking things up in the tech world.
 

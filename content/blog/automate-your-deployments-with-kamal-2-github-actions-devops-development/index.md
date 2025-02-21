@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/automate-your-deployments-with-kamal-2-and-github-actions-10mc
+source: dev_to
+remote_id: 2034339
 dev_to_id: 2034339
 dev_to_url: https://dev.to/jetthoughts/automate-your-deployments-with-kamal-2-and-github-actions-10mc
 title: Automate Your Deployments with Kamal 2 and GitHub Actions
@@ -13,9 +16,9 @@ tags:
 - automation
 canonical_url: https://jetthoughts.com/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/cover.jpeg
-slug: automate-your-deployments-with-kamal-2-github-actions-devops-development
 metatags:
   image: cover.jpeg
+slug: automate-your-deployments-with-kamal-2-github-actions-devops-development
 ---
 Deployments shouldn’t be complex. You don’t need a lot of complicated configurations. That’s where Kamal 2 helps. It makes setting up servers and deploying easy.
 
@@ -259,6 +262,3 @@ This configuration helps Kamal manage the build process. It sets the architectur
 
 That’s it! This setup gives you an easy, repeatable deployment process using Kamal 2 and GitHub Actions.
 
----
-
-If you follow along and set this up, you’ll save time on deployments. Let me know if you have issues or want to customize this further. I’d love to hear about your experience with Kamal.

@@ -1,21 +1,24 @@
 ---
+remote_url: https://dev.to/jetthoughts/from-chaos-to-flow-how-work-in-progress-limits-transform-remote-product-development-1l4h
+source: dev_to
+remote_id: 2157625
 dev_to_id: 2157625
 dev_to_url: https://dev.to/jetthoughts/from-chaos-to-flow-how-work-in-progress-limits-transform-remote-product-development-1l4h
 title: 'From Chaos to Flow: How Work-in-Progress Limits Transform Remote Product Development'
 description: "\"I felt like a circus performer spinning plates. Each new project added another wobbling dish. I..."
 created_at: '2024-12-15T12:34:48Z'
-edited_at:
+edited_at: '2024-12-15T13:11:21Z'
 draft: false
 tags:
 - webdev
 - startup
 - management
 - productivity
-canonical_url: https://dev.to/jetthoughts/from-chaos-to-flow-how-work-in-progress-limits-transform-remote-product-development-1l4h
+canonical_url: https://jetthoughts.com/blog/from-chaos-flow-how-work-in-progress-limits-transform-remote-product-development-webdev-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/from-chaos-flow-how-work-in-progress-limits-transform-remote-product-development-webdev-startup/cover.png
-slug: from-chaos-flow-how-work-in-progress-limits-transform-remote-product-development-webdev-startup
 metatags:
   image: cover.png
+slug: from-chaos-flow-how-work-in-progress-limits-transform-remote-product-development-webdev-startup
 ---
 > "I felt like a circus performer spinning plates. Each new project added another wobbling dish. I knew something had to break – either the plates or me."
 
@@ -121,6 +124,3 @@ The choice is yours. Keep spinning plates until they crash. Or build a system th
 
 Take the first step. Your future self will thank you.
 
----
-
-Got questions about implementing WIP limits in your organization? Share your challenges in the comments. Let's solve them together.

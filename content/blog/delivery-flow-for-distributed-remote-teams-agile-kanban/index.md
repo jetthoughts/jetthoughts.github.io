@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/delivery-flow-for-distributed-remote-teams-19k9
+source: dev_to
+remote_id: 1852603
 dev_to_id: 1852603
 dev_to_url: https://dev.to/jetthoughts/delivery-flow-for-distributed-remote-teams-19k9
 title: Delivery Flow for Distributed Remote Teams
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/cover.png
-slug: delivery-flow-for-distributed-remote-teams-agile-kanban
 metatags:
   image: cover.png
+slug: delivery-flow-for-distributed-remote-teams-agile-kanban
 ---
 > Process which help the team make effective decisions to better live up to expectations while prioritizing, visualizing progress, and preventing bottlenecks.
 

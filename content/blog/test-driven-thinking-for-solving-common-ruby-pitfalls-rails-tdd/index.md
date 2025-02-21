@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/test-driven-thinking-for-solving-common-ruby-pitfalls-3gb7
+source: dev_to
+remote_id: 1877558
 dev_to_id: 1877558
 dev_to_url: https://dev.to/jetthoughts/test-driven-thinking-for-solving-common-ruby-pitfalls-3gb7
 title: Test Driven Thinking for Solving Common Ruby Pitfalls
@@ -12,9 +15,9 @@ tags:
 - testing
 canonical_url: https://jetthoughts.com/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/cover.jpeg
-slug: test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd
 metatags:
   image: cover.jpeg
+slug: test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd
 ---
 
 ![Unsplash Photo: [Robert Adams](https://unsplash.com/@adamsr)](file_0.jpeg)

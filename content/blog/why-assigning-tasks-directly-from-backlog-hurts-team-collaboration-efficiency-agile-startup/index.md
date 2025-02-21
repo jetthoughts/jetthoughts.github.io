@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-assigning-tasks-directly-from-the-backlog-hurts-team-collaboration-and-efficiency-2mbm
+source: dev_to
+remote_id: 2017433
 dev_to_id: 2017433
 dev_to_url: https://dev.to/jetthoughts/why-assigning-tasks-directly-from-the-backlog-hurts-team-collaboration-and-efficiency-2mbm
 title: Why Assigning Tasks Directly from the Backlog Hurts Team Collaboration and Efficiency
@@ -13,9 +16,9 @@ tags:
 - devops
 canonical_url: https://jetthoughts.com/blog/why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup/cover.jpeg
-slug: why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup
 metatags:
   image: cover.jpeg
+slug: why-assigning-tasks-directly-from-backlog-hurts-team-collaboration-efficiency-agile-startup
 ---
 In the fast-paced world of startups, poor task management can cripple team productivity and drain profits. Many companies unknowingly harm their teams by assigning tasks directly from the backlog to individual developers. This practice can delay projects and increase costs by up to 50%.
 

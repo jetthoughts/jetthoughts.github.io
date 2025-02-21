@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/feature-branches-and-where-to-find-them-46a7
+source: dev_to
+remote_id: 1853571
 dev_to_id: 1853571
 dev_to_url: https://dev.to/jetthoughts/feature-branches-and-where-to-find-them-46a7
 title: Feature Branches and Where to Find Them
@@ -13,9 +16,9 @@ tags:
 - git
 canonical_url: https://jetthoughts.com/blog/feature-branches-where-find-them-development-coding/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/feature-branches-where-find-them-development-coding/cover.jpeg
-slug: feature-branches-where-find-them-development-coding
 metatags:
   image: cover.jpeg
+slug: feature-branches-where-find-them-development-coding
 ---
 > Here we want to go through the feature branch process, show what downsides this approach may have and share why it causes us pain.
 

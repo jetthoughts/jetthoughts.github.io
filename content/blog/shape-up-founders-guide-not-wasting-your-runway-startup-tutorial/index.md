@@ -1,21 +1,24 @@
 ---
+remote_url: https://dev.to/jetthoughts/shape-up-a-founders-guide-to-not-wasting-your-runway-9kk
+source: dev_to
+remote_id: 2201599
 dev_to_id: 2201599
 dev_to_url: https://dev.to/jetthoughts/shape-up-a-founders-guide-to-not-wasting-your-runway-9kk
 title: 'Shape Up: A Founder''s Guide to Not Wasting Your Runway'
 description: Last month, a founder called me in panic mode. "Paul, we've burned through half our seed round, and...
 created_at: '2025-01-12T10:50:52Z'
-edited_at:
+edited_at: '2025-01-12T10:53:33Z'
 draft: false
 tags:
 - startup
 - tutorial
 - product
 - management
-canonical_url: https://dev.to/jetthoughts/shape-up-a-founders-guide-to-not-wasting-your-runway-9kk
+canonical_url: https://jetthoughts.com/blog/shape-up-founders-guide-not-wasting-your-runway-startup-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/shape-up-founders-guide-not-wasting-your-runway-startup-tutorial/cover.png
-slug: shape-up-founders-guide-not-wasting-your-runway-startup-tutorial
 metatags:
   image: cover.png
+slug: shape-up-founders-guide-not-wasting-your-runway-startup-tutorial
 ---
 Last month, a founder called me in panic mode. "Paul, we've burned through half our seed round, and our MVP isn't even close to done. What are we doing wrong?"
 
@@ -134,6 +137,3 @@ Want to know how this plays out in real life? When Agent Inbox came to us, they 
 
 Thinking about giving Shape Up a shot? I've made pretty much every mistake you can imagine (and then some). Head over to jetthoughts.com - let's chat about how to dodge those same bullets in your startup.
 
----
-
-*Paul Keen is a Fractional CTO and engineering leader who has helped multiple startups go from idea to market. He was recognized as one of the top 50 contributors to Ruby on Rails and has built and sold three R&D departments from the ground up.*

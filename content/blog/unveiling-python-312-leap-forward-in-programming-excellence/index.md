@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unveiling-python-312-a-leap-forward-in-programming-excellence-47bb
+source: dev_to
+remote_id: 2167570
 dev_to_id: 2167570
 dev_to_url: https://dev.to/jetthoughts/unveiling-python-312-a-leap-forward-in-programming-excellence-47bb
 title: 'Unveiling Python 3.12: A Leap Forward in Programming Excellence'
@@ -11,9 +14,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unveiling-python-312-leap-forward-in-programming-excellence/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unveiling-python-312-leap-forward-in-programming-excellence/cover.jpeg
-slug: unveiling-python-312-leap-forward-in-programming-excellence
 metatags:
   image: cover.jpeg
+slug: unveiling-python-312-leap-forward-in-programming-excellence
 ---
 The Python Software Foundation has officially released Python 3.12 on October 2, 2023, introducing a host of new features and performance enhancements. This latest version aims to improve the developer experience and optimize the language for modern programming needs.
 

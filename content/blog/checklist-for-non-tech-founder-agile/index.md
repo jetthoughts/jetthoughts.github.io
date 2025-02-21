@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/checklist-for-the-non-tech-founder-dim
+source: dev_to
+remote_id: 1877639
 dev_to_id: 1877639
 dev_to_url: https://dev.to/jetthoughts/checklist-for-the-non-tech-founder-dim
 title: Checklist for the non-tech founder
@@ -13,9 +16,9 @@ tags:
 - process
 canonical_url: https://jetthoughts.com/blog/checklist-for-non-tech-founder-agile/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/checklist-for-non-tech-founder-agile/cover.jpeg
-slug: checklist-for-non-tech-founder-agile
 metatags:
   image: cover.jpeg
+slug: checklist-for-non-tech-founder-agile
 ---
 ![Photo by [Blake Wisz](https://unsplash.com/@blakewisz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/non-tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

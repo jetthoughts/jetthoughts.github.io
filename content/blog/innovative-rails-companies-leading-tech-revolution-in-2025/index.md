@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/innovative-rails-companies-leading-the-tech-revolution-in-2025-44gi
+source: dev_to
+remote_id: 2244342
 dev_to_id: 2244342
 dev_to_url: https://dev.to/jetthoughts/innovative-rails-companies-leading-the-tech-revolution-in-2025-44gi
 title: Innovative Rails Companies Leading the Tech Revolution in 2025
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/innovative-rails-companies-leading-tech-revolution-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-rails-companies-leading-tech-revolution-in-2025/cover.jpeg
-slug: innovative-rails-companies-leading-tech-revolution-in-2025
 metatags:
   image: cover.jpeg
+slug: innovative-rails-companies-leading-tech-revolution-in-2025
 ---
 In 2025, the rail industry is buzzing with innovation, and it's the rails companies at the forefront who are making waves. These companies are not just riding the tech wave; they're leading it. From AI to green technologies, they're transforming how we think about trains and rail systems. This article dives into the exciting advancements and the companies behind them, setting the stage for a new era in rail travel.
 

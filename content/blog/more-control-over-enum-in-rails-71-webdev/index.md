@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/more-control-over-enum-in-rails-71-28b6
+source: dev_to
+remote_id: 1774708
 dev_to_id: 1774708
 dev_to_url: https://dev.to/jetthoughts/more-control-over-enum-in-rails-71-28b6
 title: More control over enum in Rails 7.1
@@ -12,9 +15,9 @@ tags:
 - ruby
 canonical_url: https://jetthoughts.com/blog/more-control-over-enum-in-rails-71-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/more-control-over-enum-in-rails-71-webdev/cover.png
-slug: more-control-over-enum-in-rails-71-webdev
 metatags:
   image: cover.png
+slug: more-control-over-enum-in-rails-71-webdev
 ---
 `ActiveRecord::Enum` in Rails have long been a convenient tool for representing a set of symbolic values within a model. However, using `enum` can sometimes lead to unexpected behavior, especially when it comes to the automatic generation of instance methods. 
 For instance, consider an `Order` model with an `enum` for status:
@@ -67,7 +70,3 @@ Now we can define custom methods tailored to the specific needs without worrying
 
 - **Improved Performance**: By reducing the number of automatically generated methods, there may be a slight improvement in application performance, especially in cases where models have numerous `enum` attributes.
 
----
-**Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
