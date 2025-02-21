@@ -4,7 +4,7 @@ dev_to_url: https://dev.to/jetthoughts/the-simplest-way-to-automate-delivery-of-
 title: The simplest way to automate delivery of your React Native Application
 description: Introduction   Delivering mobile application’s updates is not as simple as in the case of a...
 created_at: '2024-06-05T06:08:07Z'
-edited_at: '2024-11-26T16:03:24Z'
+edited_at: '2025-02-21T11:12:25Z'
 draft: false
 tags:
 - android
@@ -26,7 +26,7 @@ For a new React Native project, it is crucial to building a clear working proces
 
 Usually, a business owner is in a different time zone or has a limited amount of time to spend on a project. Therefore, you need to establish a reliable asynchronous communication mechanism. There should be an agreed way of regular verbal or written communication.
 
-![](file_0.png)
+![DACI cycle](file_0.png)
 
 Still, that’s only a part of a good workflow. Business owner’s involvement in the development process is vital. They should have a way to see the current status of the project and app. In this way, they can give relevant and timely feedback to your developers’ team and manage the project in general. This is an easy and convenient way for a business owner to enjoy full control over a project and achieve the desired result.
 
@@ -54,7 +54,7 @@ In this article, we are going to provide simple and detailed step-by-step instru
 
 ## Instruction Plan
 
-![](file_1.png)
+![Image description](file_1.png)
 
 Here is quick overview of the instruction:
 
@@ -66,7 +66,7 @@ Here is quick overview of the instruction:
 
 ## Add Configuration to Allow Releases to be Run on Real Devices
 
-![Sign Application](file_2.png)
+![Image description](file_2.png)
 
 Android requires that all applications should be digitally signed with a certificate before they can be installed (at least release version), so to distribute your Android applications to mobile devices, you’ll need to generate signed release file.
 
@@ -90,7 +90,7 @@ It generates, signs and saves release file to *android/app/build/outputs/apk/app
 
 ## Setup Application Distribution
 
-![Deliver Application](file_3.png)
+![Image description](file_3.png)
 
 There are many distribution services. We have chosen [Fabric Kit](https://get.fabric.io/). It is one of the most popular, allows distribution both to iOS and Android and has many other features in its Kit. To integrate Fabric to your application you need to complete the next two steps.
 
@@ -104,7 +104,8 @@ First, you need to [register on Fabric](https://fabric.io/sign_up). Then you nee
 
 To run distribution you’ll need secret keys. You can find you key and secret by visiting your [organization’s settings page](https://www.fabric.io/settings/organizations) and clicking on the respective links under the organization’s name.
 
-![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_3.jpeg)
+![Image description](file_4.png)
+
 
 ### Install Fastlane as Fabric Kit CLI
 
@@ -170,7 +171,9 @@ And in a few minutes, you should have an email with download link to a new versi
 
 ## Automize Build and Distributions of Application
 
-![Automatic Delivery](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_4.png)
+
+![Image description](file_5.png)
+
 
 Here comes the main part — how to make [CircleCI 2.0](https://circleci.com/) do deploy for you.
 
@@ -297,7 +300,8 @@ cd android && bundle exec fastlane android beta
 
 Don’t forget that this script uses fabric keys from environment variables so you need to add env vars to circle ci. Here is the list of environment variables:
 
-![](https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/file_5.jpeg)
+
+![Image description](file_6.png)
 
 To test it out you need to add CircleCI to your repository on Github. And then you need to push a commit to the master branch. CircleCI should run build based on the config script and deploy your app.
 
