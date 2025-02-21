@@ -4,9 +4,13 @@ dev_to_url: https://dev.to/jetthoughts/stop-using-faker-and-random-data-in-the-t
 title: Stop using Faker and random data in the test fixtures.
 description: Faker/FFaker can seem like the perfect solution to generate data for testing.  In theory, Faker...
 created_at: '2024-06-27T15:47:25Z'
-edited_at: '2024-11-25T15:33:38Z'
+edited_at: '2025-02-21T15:40:37Z'
 draft: false
-tags: []
+tags:
+- ruby
+- programming
+- tutorial
+- testing
 canonical_url: https://jetthoughts.com/blog/stop-using-faker-random-data-in-test-fixtures/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stop-using-faker-random-data-in-test-fixtures/cover.png
 slug: stop-using-faker-random-data-in-test-fixtures
@@ -14,7 +18,6 @@ metatags:
   image: cover.png
 ---
 ![Image description](file_0.png)
-
 
 
 **Faker/FFaker** can seem like the perfect solution to generate data for testing.
@@ -35,7 +38,7 @@ This is a frustrating process since tests might fail only once every ten or hund
 
 Faker produces tones of tests that are hard to debug. It isn’t easy to understand why the test failed and harder to reproduce the same test scenario.
 
-![](file_1.png)
+![Image description](file_1.png)
 
 Code will produce problems in which someone **spends more than 10 hours finding that problem** or triangulating the issue.
 
