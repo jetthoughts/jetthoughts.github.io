@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/cleaning-up-your-rails-views-with-view-objects-426b
+source: dev_to
+remote_id: 1877540
 dev_to_id: 1877540
 dev_to_url: https://dev.to/jetthoughts/cleaning-up-your-rails-views-with-view-objects-426b
 title: Cleaning Up Your Rails Views With View Objects
@@ -13,9 +16,9 @@ tags:
 - programming
 canonical_url: https://jetthoughts.com/blog/cleaning-up-your-rails-views-with-view-objects-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cleaning-up-your-rails-views-with-view-objects-development/cover.jpeg
-slug: cleaning-up-your-rails-views-with-view-objects-development
 metatags:
   image: cover.jpeg
+slug: cleaning-up-your-rails-views-with-view-objects-development
 ---
 ![](file_0.jpeg)
 

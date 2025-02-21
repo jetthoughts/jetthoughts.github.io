@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/onboarding-tests-into-legacy-project-54f3
+source: dev_to
+remote_id: 1877640
 dev_to_id: 1877640
 dev_to_url: https://dev.to/jetthoughts/onboarding-tests-into-legacy-project-54f3
 title: Onboarding Tests into Legacy Project
@@ -12,9 +15,9 @@ tags:
 - agile
 canonical_url: https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/onboarding-tests-into-legacy-project-testing-startup/cover.png
-slug: onboarding-tests-into-legacy-project-testing-startup
 metatags:
   image: cover.png
+slug: onboarding-tests-into-legacy-project-testing-startup
 ---
 What solution should you apply to get the first results in a short time in the legacy project? What to do when it’s hard to change a project and you cannot inject dependencies? How to get some confidence in a reasonable time?
 

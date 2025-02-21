@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/heroku-reviews-apps-prevent-delivering-bugs-on-production-jfb
+source: dev_to
+remote_id: 1877581
 dev_to_id: 1877581
 dev_to_url: https://dev.to/jetthoughts/heroku-reviews-apps-prevent-delivering-bugs-on-production-jfb
 title: Heroku Reviews Apps prevent delivering bugs on production
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup/cover.jpeg
-slug: heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup
 metatags:
   image: cover.jpeg
+slug: heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup
 ---
 
 > # Are you afraid to deploy a master branch to the production? Do you still mess with staging servers? Do you spend a lot of time to find out which [Pull Request](https://help.github.com/articles/about-pull-requests/) (PR) has introduced a bug?

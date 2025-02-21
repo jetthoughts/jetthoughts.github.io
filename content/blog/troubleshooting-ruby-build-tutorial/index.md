@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/troubleshooting-ruby-build-fm2
+source: dev_to
+remote_id: 1215921
 dev_to_id: 1215921
 dev_to_url: https://dev.to/jetthoughts/troubleshooting-ruby-build-fm2
 title: Troubleshooting ruby build
@@ -13,9 +16,9 @@ tags:
 - help
 canonical_url: https://jetthoughts.com/blog/troubleshooting-ruby-build-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/troubleshooting-ruby-build-tutorial/cover.png
-slug: troubleshooting-ruby-build-tutorial
 metatags:
   image: cover.png
+slug: troubleshooting-ruby-build-tutorial
 ---
 Have you found problems building ruby on a local machine? How to configure your local environment once and for all?
 
@@ -128,7 +131,3 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig:$PKG_CONFIG_PAT
 
 [ruby-build Wiki](https://github.com/rbenv/ruby-build/wiki) is good to learn.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).

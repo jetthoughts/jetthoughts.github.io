@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/fractional-cto-a-comprehensive-review-of-the-first-two-weeks-in-a-startup-did
+source: dev_to
+remote_id: 1877729
 dev_to_id: 1877729
 dev_to_url: https://dev.to/jetthoughts/fractional-cto-a-comprehensive-review-of-the-first-two-weeks-in-a-startup-did
 title: 'Fractional CTO: A Comprehensive Review of the First Two Weeks in a Startup'
@@ -12,9 +15,9 @@ tags:
 - service
 canonical_url: https://jetthoughts.com/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/cover.png
-slug: fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management
 metatags:
   image: cover.png
+slug: fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management
 ---
 ![](file_0.png)
 

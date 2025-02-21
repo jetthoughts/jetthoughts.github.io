@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/weekly-ruby-roundup-highlights-from-ruby-4-1435
+source: dev_to
+remote_id: 2193530
 dev_to_id: 2193530
 dev_to_url: https://dev.to/jetthoughts/weekly-ruby-roundup-highlights-from-ruby-4-1435
 title: 'Weekly Ruby Roundup: Highlights from Ruby #4'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/weekly-ruby-roundup-highlights-from-4/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/weekly-ruby-roundup-highlights-from-4/cover.jpeg
-slug: weekly-ruby-roundup-highlights-from-4
 metatags:
   image: cover.jpeg
+slug: weekly-ruby-roundup-highlights-from-4
 ---
 This week in the Ruby community was bustling with activity, featuring a variety of articles and announcements that cater to developers and enthusiasts alike. From conference dates to innovative blogging tools, here’s a recap of the key highlights.
 

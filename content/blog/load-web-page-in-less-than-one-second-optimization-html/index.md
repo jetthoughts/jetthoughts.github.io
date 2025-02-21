@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/load-web-page-in-less-than-one-second-2146
+source: dev_to
+remote_id: 1853553
 dev_to_id: 1853553
 dev_to_url: https://dev.to/jetthoughts/load-web-page-in-less-than-one-second-2146
 title: Load web page in less than one second
@@ -13,9 +16,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/load-web-page-in-less-than-one-second-optimization-html/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/load-web-page-in-less-than-one-second-optimization-html/cover.jpeg
-slug: load-web-page-in-less-than-one-second-optimization-html
 metatags:
   image: cover.jpeg
+slug: load-web-page-in-less-than-one-second-optimization-html
 ---
 How to improve the website load time without much effort? What optimizations and improvements can help to speed up page loading? Consider a web page as an example and prove that downloading in less than one second is possible.
 

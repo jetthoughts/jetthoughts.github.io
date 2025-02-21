@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-setup-a-project-that-can-host-up-to-1000-users-for-free-fe8
+source: dev_to
+remote_id: 1877546
 dev_to_id: 1877546
 dev_to_url: https://dev.to/jetthoughts/how-to-setup-a-project-that-can-host-up-to-1000-users-for-free-fe8
 title: How to Setup a Project That Can Host Up to 1000 Users for Free
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup/cover.jpeg
-slug: how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup
 metatags:
   image: cover.jpeg
+slug: how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup
 ---
 ![Unsplash Photo: [Parker Byrd](https://unsplash.com/@parkerabyrd)](file_0.jpeg)
 

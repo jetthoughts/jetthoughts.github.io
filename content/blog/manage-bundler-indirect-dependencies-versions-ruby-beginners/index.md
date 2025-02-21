@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/manage-bundler-indirect-dependencies-versions-ep7
+source: dev_to
+remote_id: 1091289
 dev_to_id: 1091289
 dev_to_url: https://dev.to/jetthoughts/manage-bundler-indirect-dependencies-versions-ep7
 title: Manage Bundler indirect dependencies versions
@@ -12,9 +15,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/manage-bundler-indirect-dependencies-versions-ruby-beginners/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/manage-bundler-indirect-dependencies-versions-ruby-beginners/cover.png
-slug: manage-bundler-indirect-dependencies-versions-ruby-beginners
 metatags:
   image: cover.png
+slug: manage-bundler-indirect-dependencies-versions-ruby-beginners
 ---
 Have you seen that bundler stuck on finding how to upgrade your gems? What to do if there is a new breaking version of the indirect dependency, causing deployment fails?
 ![Bundler looks for options](file_0.png)
@@ -31,6 +34,3 @@ Yep, that's all. We just need to add indirect dependency as direct. And do not f
 
 With explicit version constraints assigned for indirect (and now direct) dependency, the bundler will have to satisfy them and will change other gems.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).

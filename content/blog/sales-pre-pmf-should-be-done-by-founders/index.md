@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/sales-pre-pmf-should-be-done-by-the-founders-99l
+source: dev_to
+remote_id: 2178713
 dev_to_id: 2178713
 dev_to_url: https://dev.to/jetthoughts/sales-pre-pmf-should-be-done-by-the-founders-99l
 title: Sales Pre-PMF Should Be Done By The Founders
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/sales-pre-pmf-should-be-done-by-founders/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/sales-pre-pmf-should-be-done-by-founders/cover.jpeg
-slug: sales-pre-pmf-should-be-done-by-founders
 metatags:
   image: cover.jpeg
+slug: sales-pre-pmf-should-be-done-by-founders
 ---
 In the early stages of a startup, founders often find themselves at a crossroads when it comes to sales. While it may seem tempting to hire experienced salespeople to drive revenue, the reality is that founders are uniquely positioned to sell their own products, especially before achieving product-market fit (PMF).
 

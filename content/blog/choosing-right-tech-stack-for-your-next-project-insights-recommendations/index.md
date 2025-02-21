@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/choosing-the-right-tech-stack-for-your-next-project-insights-and-recommendations-101b
+source: dev_to
+remote_id: 2167582
 dev_to_id: 2167582
 dev_to_url: https://dev.to/jetthoughts/choosing-the-right-tech-stack-for-your-next-project-insights-and-recommendations-101b
 title: 'Choosing the Right Tech Stack for Your Next Project: Insights and Recommendations'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/choosing-right-tech-stack-for-your-next-project-insights-recommendations/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/choosing-right-tech-stack-for-your-next-project-insights-recommendations/cover.jpeg
-slug: choosing-right-tech-stack-for-your-next-project-insights-recommendations
 metatags:
   image: cover.jpeg
+slug: choosing-right-tech-stack-for-your-next-project-insights-recommendations
 ---
 In the ever-evolving world of technology, selecting the right tech stack for a new project can be a daunting task. A recent discussion on Reddit's Rails community highlighted various considerations and suggestions for developers embarking on new ventures. This article summarizes the key takeaways from that conversation, providing insights into the best practices for tech stack selection.
 

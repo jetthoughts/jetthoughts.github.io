@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-our-expertise-helped-curb-real-estate-communication-chaos-53m8
+source: dev_to
+remote_id: 1877624
 dev_to_id: 1877624
 dev_to_url: https://dev.to/jetthoughts/how-our-expertise-helped-curb-real-estate-communication-chaos-53m8
 title: How Our Expertise Helped Curb Real Estate Communication Chaos
@@ -9,9 +12,9 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/cover.jpeg
-slug: how-our-expertise-helped-curb-real-estate-communication-chaos
 metatags:
   image: cover.jpeg
+slug: how-our-expertise-helped-curb-real-estate-communication-chaos
 ---
 
 ## **How Our Expertise Helped Curb Real Estate Communication Chaos**

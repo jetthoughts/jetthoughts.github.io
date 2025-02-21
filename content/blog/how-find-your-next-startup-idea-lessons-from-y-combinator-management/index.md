@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-find-your-next-startup-idea-lessons-from-y-combinator-10be
+source: dev_to
+remote_id: 2165781
 dev_to_id: 2165781
 dev_to_url: https://dev.to/jetthoughts/how-to-find-your-next-startup-idea-lessons-from-y-combinator-10be
 title: 'How to Find Your Next Startup Idea: Lessons from Y Combinator'
@@ -12,9 +15,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/how-find-your-next-startup-idea-lessons-from-y-combinator-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-find-your-next-startup-idea-lessons-from-y-combinator-management/cover.png
-slug: how-find-your-next-startup-idea-lessons-from-y-combinator-management
 metatags:
   image: cover.png
+slug: how-find-your-next-startup-idea-lessons-from-y-combinator-management
 ---
 Success in startups starts with the right idea. Y Combinator has funded hundreds of billion-dollar companies. Here's what we learned about finding great startup ideas.
 

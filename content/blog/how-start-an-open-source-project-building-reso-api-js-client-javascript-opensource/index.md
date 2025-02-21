@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-start-an-open-source-project-building-reso-api-js-client-3p25
+source: dev_to
+remote_id: 1852618
 dev_to_id: 1852618
 dev_to_url: https://dev.to/jetthoughts/how-to-start-an-open-source-project-building-reso-api-js-client-3p25
 title: How to start an Open Source project. Building RESO API JS client
@@ -13,9 +16,9 @@ tags:
 - management
 canonical_url: https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/cover.jpeg
-slug: how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource
 metatags:
   image: cover.jpeg
+slug: how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource
 ---
 Would you like to understand how to start your new Open Source project in a week? How to build a rapid development process and bootstrap your ideas faster?
 

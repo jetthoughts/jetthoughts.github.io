@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/tldr-move-cicd-scripts-into-automation-373c
+source: dev_to
+remote_id: 1205643
 dev_to_id: 1205643
 dev_to_url: https://dev.to/jetthoughts/tldr-move-cicd-scripts-into-automation-373c
 title: 'TL;DR: Move CI/CD scripts into .automation'
@@ -13,9 +16,9 @@ tags:
 - tooling
 canonical_url: https://jetthoughts.com/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tldr-move-cicd-scripts-into-automation-devops-productivity/cover.png
-slug: tldr-move-cicd-scripts-into-automation-devops-productivity
 metatags:
   image: cover.png
+slug: tldr-move-cicd-scripts-into-automation-devops-productivity
 ---
 Today our `/bin` folder has become overwhelmed with different development tools and scripts.
 
@@ -43,7 +46,3 @@ So, all my last `bin/ci-setup` will become: `.automation/tests/setup`. Or if I n
 
 Here is a good example: https://github.com/github/super-linter/tree/main/.automation
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).

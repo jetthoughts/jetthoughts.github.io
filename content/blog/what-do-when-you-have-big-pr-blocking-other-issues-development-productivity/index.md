@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-to-do-when-you-have-a-big-pr-blocking-other-issues-2cfn
+source: dev_to
+remote_id: 1997076
 dev_to_id: 1997076
 dev_to_url: https://dev.to/jetthoughts/what-to-do-when-you-have-a-big-pr-blocking-other-issues-2cfn
 title: What to Do When You Have a Big PR Blocking Other Issues
@@ -13,9 +16,9 @@ tags:
 - devops
 canonical_url: https://jetthoughts.com/blog/what-do-when-you-have-big-pr-blocking-other-issues-development-productivity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-do-when-you-have-big-pr-blocking-other-issues-development-productivity/cover.jpeg
-slug: what-do-when-you-have-big-pr-blocking-other-issues-development-productivity
 metatags:
   image: cover.jpeg
+slug: what-do-when-you-have-big-pr-blocking-other-issues-development-productivity
 ---
 Sometimes, despite your best efforts, you end up with a large pull request (PR) that blocks other tasks. It can slow down the whole team and cause frustration. So, how do you handle it? Here's a simple guide to managing a big PR without causing chaos.
 
@@ -38,32 +41,4 @@ Slice the PR into Smaller Parts
 After deciding to close the PR, break it into smaller, focused pieces. Slicing means pulling out parts of the code that can be handled on their own. This lets different parts of the work move forward without blocking each other.
 
 How to slice it:
---------------------
-
--   **Find natural breakpoints** in the code. Split features or bug fixes where it makes sense.
--   **Prioritize critical parts**. Pull out the most urgent pieces holding up other tasks and merge them first.
--   **Keep each slice focused**. Each new PR should handle one task to make reviewing easier.
-
-Ask for Help
-================
-
-If the PR feels too big, ask for help. Your team can help you slice the PR or review different parts. Working together will speed things up and prevent delays.
-
-Keep the Team Updated
-=========================
-
-Make sure your team knows what's happening. Explain why the PR is being sliced into smaller pieces. This will keep everyone in sync and reduce frustration because they'll see that progress is happening.
-
-Learn for Next Time
-=======================
-
-Think about why the PR got so big. Could you have split it earlier? Did you try to do too many things at once? Use this experience to keep future PRs smaller. Keeping them focused helps your workflow and avoids delays.
-
-Clear Next Steps
-================
-
-When you spot these signs, take action. **Admit the PR is too big** and stop working on it. **Schedule time to slice it into smaller PRs**. Each smaller PR should handle only one task and be merged separately. This speeds up reviews, reduces errors, and makes testing easier.
-
----
-
-Keeping PRs small and focused allows your team to work faster and with fewer issues. Watch for the signs and take action to avoid significant PR bottlenecks.
+-----------------

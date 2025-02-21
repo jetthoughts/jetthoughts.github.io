@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25-3088
+source: dev_to
+remote_id: 2184627
 dev_to_id: 2184627
 dev_to_url: https://dev.to/jetthoughts/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25-3088
 title: 'Unveiling Ghost Engineering: Insights from Breaking Change Podcast v25'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25/cover.jpeg
-slug: unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25
 metatags:
   image: cover.jpeg
+slug: unveiling-ghost-engineering-insights-from-breaking-change-podcast-v25
 ---
 In the latest episode of the Breaking Change podcast, host Justin Searls dives into the intriguing concept of "Ghost Engineering." This episode, v25, explores the nuances of this emerging field, offering listeners a blend of technical insights and thought-provoking discussions.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-1fh2
+source: dev_to
+remote_id: 1667161
 dev_to_id: 1667161
 dev_to_url: https://dev.to/jetthoughts/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-1fh2
 title: Integrating Bun with Vite Ruby for Lightning-Fast Frontend Builds
@@ -13,9 +16,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript/cover.png
-slug: integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript
 metatags:
   image: cover.png
+slug: integrating-bun-with-vite-ruby-for-lightning-fast-frontend-builds-rails-javascript
 ---
 With the recent release of [Bun](https://bun.sh/) and its newfound support for Vite, coupled with _Ruby on Rails 7.1_ incorporating native support for Bun, developers can now enhance their web development workflow significantly. Here is the effortless process of enabling _Bun_ for [Vite Ruby](https://vite-ruby.netlify.app/), ultimately streamlining your front-end builds.
 
@@ -55,8 +58,3 @@ By setting the `viteBinPath` to your shim bin, you're instructing _Vite Ruby_ to
 
 The impact of this integration is tangible. Migrating to Bun has slashed asset processing time **by 1-2 minutes**, from installing dependencies to compiling assets. This optimization is particularly crucial for teams practicing _Continuous Delivery_, where quicker builds can significantly boost overall productivity.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

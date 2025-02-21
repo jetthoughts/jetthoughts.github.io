@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/tools-to-provide-effective-feedback-for-distributed-development-teams-55gm
+source: dev_to
+remote_id: 1853640
 dev_to_id: 1853640
 dev_to_url: https://dev.to/jetthoughts/tools-to-provide-effective-feedback-for-distributed-development-teams-55gm
 title: Tools to provide effective feedback for distributed development teams
@@ -13,9 +16,9 @@ tags:
 - tips
 canonical_url: https://jetthoughts.com/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup/cover.jpeg
-slug: tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup
 metatags:
   image: cover.jpeg
+slug: tools-provide-effective-feedback-for-distributed-development-teams-productivity-startup
 ---
 ![Photo by [Jakob Owens](https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/video?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

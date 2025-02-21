@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/a-practical-guide-to-writing-introductions-4d5k
+source: dev_to
+remote_id: 1852747
 dev_to_id: 1852747
 dev_to_url: https://dev.to/jetthoughts/a-practical-guide-to-writing-introductions-4d5k
 title: A Practical Guide To Writing Introductions
@@ -13,9 +16,9 @@ tags:
 - blog
 canonical_url: https://jetthoughts.com/blog/practical-guide-writing-introductions-introduction/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/practical-guide-writing-introductions-introduction/cover.jpeg
-slug: practical-guide-writing-introductions-introduction
 metatags:
   image: cover.jpeg
+slug: practical-guide-writing-introductions-introduction
 ---
 *Are you struggling with the introduction as it’s absolutely annoying thing that has to be written? It simply summarises the main points of your article. So why so much noise about it?*
 

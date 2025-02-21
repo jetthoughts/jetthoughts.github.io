@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/pay-attention-to-method-names-in-minitestunit-2828
+source: dev_to
+remote_id: 1879467
 dev_to_id: 1879467
 dev_to_url: https://dev.to/jetthoughts/pay-attention-to-method-names-in-minitestunit-2828
 title: Pay Attention to Method Names in Minitest::Unit
@@ -13,9 +16,9 @@ tags:
 - rails
 canonical_url: https://jetthoughts.com/blog/pay-attention-method-names-in-minitestunit-testing-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/pay-attention-method-names-in-minitestunit-testing-ruby/cover.jpeg
-slug: pay-attention-method-names-in-minitestunit-testing-ruby
 metatags:
   image: cover.jpeg
+slug: pay-attention-method-names-in-minitestunit-testing-ruby
 ---
 ![](file_0.jpeg)
 

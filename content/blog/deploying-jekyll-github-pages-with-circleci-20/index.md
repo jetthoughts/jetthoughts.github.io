@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/deploying-jekyll-to-github-pages-with-circleci-20-3gbp
+source: dev_to
+remote_id: 1853461
 dev_to_id: 1853461
 dev_to_url: https://dev.to/jetthoughts/deploying-jekyll-to-github-pages-with-circleci-20-3gbp
 title: Deploying Jekyll to GitHub Pages with CircleCI 2.0
@@ -13,9 +16,9 @@ tags:
 - circleci
 canonical_url: https://jetthoughts.com/blog/deploying-jekyll-github-pages-with-circleci-20/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/deploying-jekyll-github-pages-with-circleci-20/cover.jpeg
-slug: deploying-jekyll-github-pages-with-circleci-20
 metatags:
   image: cover.jpeg
+slug: deploying-jekyll-github-pages-with-circleci-20
 ---
 ![](file_0.jpeg)
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/react-ruby-on-rails-without-any-gems-3clf
+source: dev_to
+remote_id: 1877637
 dev_to_id: 1877637
 dev_to_url: https://dev.to/jetthoughts/react-ruby-on-rails-without-any-gems-3clf
 title: React + Ruby on Rails without any gems
@@ -12,9 +15,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/react-ruby-on-rails-without-any-gems-typescript/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/react-ruby-on-rails-without-any-gems-typescript/cover.jpeg
-slug: react-ruby-on-rails-without-any-gems-typescript
 metatags:
   image: cover.jpeg
+slug: react-ruby-on-rails-without-any-gems-typescript
 ---
 
 ## React + Ruby on Rails without any gems

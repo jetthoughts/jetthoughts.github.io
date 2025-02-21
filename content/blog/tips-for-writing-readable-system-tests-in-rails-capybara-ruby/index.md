@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/tips-for-writing-readable-system-tests-in-rails-4dnc
+source: dev_to
+remote_id: 1853549
 dev_to_id: 1853549
 dev_to_url: https://dev.to/jetthoughts/tips-for-writing-readable-system-tests-in-rails-4dnc
 title: Tips for writing readable system tests in Rails
@@ -13,9 +16,9 @@ tags:
 - testing
 canonical_url: https://jetthoughts.com/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tips-for-writing-readable-system-tests-in-rails-capybara-ruby/cover.jpg
-slug: tips-for-writing-readable-system-tests-in-rails-capybara-ruby
 metatags:
   image: cover.jpg
+slug: tips-for-writing-readable-system-tests-in-rails-capybara-ruby
 ---
 > # Want to make system tests easy to main tain? We have selected some best practice tips to help achieve this.
 

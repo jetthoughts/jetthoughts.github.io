@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/4-lines-to-speed-up-your-rails-test-suite-on-circleci-32lp
+source: dev_to
+remote_id: 1880171
 dev_to_id: 1880171
 dev_to_url: https://dev.to/jetthoughts/4-lines-to-speed-up-your-rails-test-suite-on-circleci-32lp
 title: 4 lines to Speed Up your Rails Test Suite on CircleCI
@@ -9,9 +12,9 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/cover.jpeg
-slug: 4-lines-speed-up-your-rails-test-suite-on-circleci
 metatags:
   image: cover.jpeg
+slug: 4-lines-speed-up-your-rails-test-suite-on-circleci
 ---
 ![](file_0.jpeg)
 

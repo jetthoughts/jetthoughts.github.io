@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/innovative-companies-using-rails-how-they-leverage-ruby-on-rails-for-success-in-2024-4ej9
+source: dev_to
+remote_id: 2176165
 dev_to_id: 2176165
 dev_to_url: https://dev.to/jetthoughts/innovative-companies-using-rails-how-they-leverage-ruby-on-rails-for-success-in-2024-4ej9
 title: 'Innovative Companies Using Rails: How They Leverage Ruby on Rails for Success in 2024'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/innovative-companies-using-rails-how-they-leverage-ruby-on-for-success-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-companies-using-rails-how-they-leverage-ruby-on-for-success-in-2024/cover.jpeg
-slug: innovative-companies-using-rails-how-they-leverage-ruby-on-for-success-in-2024
 metatags:
   image: cover.jpeg
+slug: innovative-companies-using-rails-how-they-leverage-ruby-on-for-success-in-2024
 ---
 In the world of web development, Ruby on Rails is still kicking in 2024. This framework, known for its speed and simplicity, is the backbone for many successful companies. From travel giants to e-commerce leaders, Rails is the go-to for building dynamic and scalable web applications. Let's check out how some big names are using Rails to stay ahead of the game.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-setup-default-values-for-attributes-in-ruby-on-rails-l8m
+source: dev_to
+remote_id: 1144505
 dev_to_id: 1144505
 dev_to_url: https://dev.to/jetthoughts/how-to-setup-default-values-for-attributes-in-ruby-on-rails-l8m
 title: How To Setup Default Values For Attributes In Ruby On Rails
@@ -13,9 +16,9 @@ tags:
 - beginners
 canonical_url: https://jetthoughts.com/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-setup-default-values-for-attributes-in-ruby-on-rails-programming/cover.png
-slug: how-setup-default-values-for-attributes-in-ruby-on-rails-programming
 metatags:
   image: cover.png
+slug: how-setup-default-values-for-attributes-in-ruby-on-rails-programming
 ---
 _Have you ever thought setting default values for attributes in Ruby on Rails could be problematic?_
 
@@ -141,7 +144,3 @@ end
 ```
 (This will add invalid data in the DB or raise Runtime Error)
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jetthoughts.com/blog/).

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/stress-testing-your-rails-application-using-jmeter-5h1i
+source: dev_to
+remote_id: 1880292
 dev_to_id: 1880292
 dev_to_url: https://dev.to/jetthoughts/stress-testing-your-rails-application-using-jmeter-5h1i
 title: Stress Testing Your Rails Application Using JMeter
@@ -13,9 +16,9 @@ tags:
 - jmeter
 canonical_url: https://jetthoughts.com/blog/stress-testing-your-rails-application-using-jmeter-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stress-testing-your-rails-application-using-jmeter-ruby/cover.jpeg
-slug: stress-testing-your-rails-application-using-jmeter-ruby
 metatags:
   image: cover.jpeg
+slug: stress-testing-your-rails-application-using-jmeter-ruby
 ---
 
 ## Stress Testing Your Rails Application Using JMeter

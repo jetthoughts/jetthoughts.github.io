@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/cheap-tests-with-ghost-inspector-31me
+source: dev_to
+remote_id: 1853649
 dev_to_id: 1853649
 dev_to_url: https://dev.to/jetthoughts/cheap-tests-with-ghost-inspector-31me
 title: Cheap tests with Ghost Inspector
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/cheap-tests-with-ghost-inspector-webdev-legacy/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cheap-tests-with-ghost-inspector-webdev-legacy/cover.png
-slug: cheap-tests-with-ghost-inspector-webdev-legacy
 metatags:
   image: cover.png
+slug: cheap-tests-with-ghost-inspector-webdev-legacy
 ---
 What do you do when a legacy project has no tests and adding them is difficult? Before making new changes, the developer wants to ensure the old code works as expected.
 
@@ -59,6 +62,3 @@ The extension works by recording your actions in the browser, such as clicking a
 
 This service allowed us to cover the most critical public cases. It took less time than writing new tests for old code from scratch, which was enough to ensure that new changes would not break the old features.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).

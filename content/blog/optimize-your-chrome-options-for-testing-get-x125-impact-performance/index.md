@@ -1,10 +1,13 @@
 ---
+remote_url: https://dev.to/jetthoughts/optimize-your-chrome-options-for-testing-to-get-x125-impact-p74
+source: dev_to
+remote_id: 1560068
 dev_to_id: 1560068
 dev_to_url: https://dev.to/jetthoughts/optimize-your-chrome-options-for-testing-to-get-x125-impact-p74
 title: Optimize your Chrome options for testing to get x1.25 impact
 description: Boost your Ruby on Rails testing efficiency. Our consultant shares tricks to optimize Chrome options for a 125% performance impact.
 created_at: '2023-08-05T13:23:55Z'
-edited_at: '2024-11-27T16:36:30Z'
+edited_at: '2024-11-27T17:07:02Z'
 draft: false
 tags:
 - testing
@@ -13,9 +16,9 @@ tags:
 - browser
 canonical_url: https://jetthoughts.com/blog/optimize-your-chrome-options-for-testing-get-x125-impact-performance/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/optimize-your-chrome-options-for-testing-get-x125-impact-performance/cover.jpeg
-slug: optimize-your-chrome-options-for-testing-get-x125-impact-performance
 metatags:
   image: cover.jpeg
+slug: optimize-your-chrome-options-for-testing-get-x125-impact-performance
 ---
 🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀
 
@@ -170,8 +173,3 @@ end
 
 Remember that not all of these options may be relevant to your specific testing needs, so evaluating their impact on your test environment and application behavior is essential. Happy optimizing! 🚀💨
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

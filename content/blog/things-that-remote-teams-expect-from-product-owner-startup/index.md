@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/things-that-remote-teams-expect-from-the-product-owner-4n8c
+source: dev_to
+remote_id: 1853617
 dev_to_id: 1853617
 dev_to_url: https://dev.to/jetthoughts/things-that-remote-teams-expect-from-the-product-owner-4n8c
 title: Things that remote teams expect from the product owner
@@ -13,9 +16,9 @@ tags:
 - management
 canonical_url: https://jetthoughts.com/blog/things-that-remote-teams-expect-from-product-owner-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/things-that-remote-teams-expect-from-product-owner-startup/cover.jpeg
-slug: things-that-remote-teams-expect-from-product-owner-startup
 metatags:
   image: cover.jpeg
+slug: things-that-remote-teams-expect-from-product-owner-startup
 ---
 ![[Photo by Helloquence](https://unsplash.com/photos/5fNmWej4tAA)](file_0.jpeg)
 

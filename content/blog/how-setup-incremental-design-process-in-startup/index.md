@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-setup-incremental-design-process-in-a-startup-5b69
+source: dev_to
+remote_id: 1877667
 dev_to_id: 1877667
 dev_to_url: https://dev.to/jetthoughts/how-to-setup-incremental-design-process-in-a-startup-5b69
 title: How to Setup Incremental Design Process in a Startup
@@ -12,9 +15,9 @@ tags:
 - startup
 canonical_url: https://jetthoughts.com/blog/how-setup-incremental-design-process-in-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-setup-incremental-design-process-in-startup/cover.jpeg
-slug: how-setup-incremental-design-process-in-startup
 metatags:
   image: cover.jpeg
+slug: how-setup-incremental-design-process-in-startup
 ---
 ![[https://www.mo-hr.com/en/Specifications/Performance](https://www.mo-hr.com/en/Specifications/Performance)](file_0.jpeg)
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unlocking-the-secrets-of-ruby-debugging-from-basics-to-advanced-tools-5dd6
+source: dev_to
+remote_id: 2172773
 dev_to_id: 2172773
 dev_to_url: https://dev.to/jetthoughts/unlocking-the-secrets-of-ruby-debugging-from-basics-to-advanced-tools-5dd6
 title: 'Unlocking the Secrets of Ruby Debugging: From Basics to Advanced Tools'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools/cover.jpeg
-slug: unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools
 metatags:
   image: cover.jpeg
+slug: unlocking-secrets-of-ruby-debugging-from-basics-advanced-tools
 ---
 Debugging is a critical skill for Ruby developers, and a recent blog post from the RubyMine team sheds light on effective debugging techniques. The article, inspired by a presentation at the EuRuKo 2024 conference, explores various tools and methods to help developers tackle bugs efficiently.
 

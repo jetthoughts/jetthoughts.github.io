@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-best-consumer-companies-incorporate-both-virality-and-network-effect-to-grow-organically-2bcm
+source: dev_to
+remote_id: 2253819
 dev_to_id: 2253819
 dev_to_url: https://dev.to/jetthoughts/the-best-consumer-companies-incorporate-both-virality-and-network-effect-to-grow-organically-2bcm
 title: The Best Consumer Companies Incorporate Both Virality And Network Effect To Grow Organically
 description: Explore how the best consumer companies use virality and network effects to grow their user base organically. Learn about key concepts and successful examples.
 created_at: '2025-02-01T11:42:14Z'
-edited_at:
+edited_at: '2025-02-01T11:44:21Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-best-consumer-companies-incorporate-both-virality-and-network-effect-to-grow-organically-2bcm
+canonical_url: https://jetthoughts.com/blog/best-consumer-companies-incorporate-both-virality-network-effect-grow-organically/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/best-consumer-companies-incorporate-both-virality-network-effect-grow-organically/cover.jpeg
-slug: best-consumer-companies-incorporate-both-virality-network-effect-grow-organically
 metatags:
   image: cover.jpeg
+slug: best-consumer-companies-incorporate-both-virality-network-effect-grow-organically
 ---
 [![The Best Consumer Companies Incorporate Both Virality And Network Effect To Grow Organically](file_0.jpg)](https://www.youtube.com/watch?v=nty_szMaNTs)
 

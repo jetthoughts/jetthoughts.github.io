@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-ultimate-showdown-figma-adobe-xd-and-sketch-for-ui-design-50k7
+source: dev_to
+remote_id: 2256889
 dev_to_id: 2256889
 dev_to_url: https://dev.to/jetthoughts/the-ultimate-showdown-figma-adobe-xd-and-sketch-for-ui-design-50k7
 title: 'The Ultimate Showdown: Figma, Adobe XD, and Sketch for UI Design'
 description: Explore the strengths and weaknesses of Figma, Adobe XD, and Sketch to determine the best UI design tool for your project needs.
 created_at: '2025-02-03T14:09:24Z'
-edited_at:
+edited_at: '2025-02-03T14:18:01Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-ultimate-showdown-figma-adobe-xd-and-sketch-for-ui-design-50k7
+canonical_url: https://jetthoughts.com/blog/ultimate-showdown-figma-adobe-xd-sketch-for-ui-design/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ultimate-showdown-figma-adobe-xd-sketch-for-ui-design/cover.jpeg
-slug: ultimate-showdown-figma-adobe-xd-sketch-for-ui-design
 metatags:
   image: cover.jpeg
+slug: ultimate-showdown-figma-adobe-xd-sketch-for-ui-design
 ---
 In the ever-evolving world of UI design, choosing the right tool can significantly impact the workflow and outcome of a project. As of 2024, Figma, Adobe XD, and Sketch are three of the most popular platforms, each offering unique features tailored to different design needs. This article explores their strengths and weaknesses to help designers make an informed choice.
 

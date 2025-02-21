@@ -1,18 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/technical-bias-the-invisible-force-shaping-our-architecture-decisions-1cpc
+source: dev_to
+remote_id: 2157559
 dev_to_id: 2157559
 dev_to_url: https://dev.to/jetthoughts/technical-bias-the-invisible-force-shaping-our-architecture-decisions-1cpc
 title: 'Technical Bias: The Invisible Force Shaping Our Architecture Decisions'
 description: 'After 20+ years in tech leadership, I''ve observed a pattern that should concern us all: our cognitive...'
 created_at: '2024-12-15T11:38:39Z'
-edited_at:
+edited_at: '2024-12-15T12:10:31Z'
 draft: false
 tags:
 - startup
 - productivity
 - programming
 - career
-canonical_url: https://dev.to/jetthoughts/technical-bias-the-invisible-force-shaping-our-architecture-decisions-1cpc
-cover_image:
+canonical_url: https://jetthoughts.com/blog/technical-bias-invisible-force-shaping-our-architecture-decisions-startup-productivity/
 slug: technical-bias-invisible-force-shaping-our-architecture-decisions-startup-productivity
 ---
 After 20+ years in tech leadership, I've observed a pattern that should concern us all: our cognitive biases quietly dictate our architectural decisions, often at the expense of practical solutions.

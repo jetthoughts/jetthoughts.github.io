@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/signs-your-company-is-recovering-from-zirp-2408
+source: dev_to
+remote_id: 2201190
 dev_to_id: 2201190
 dev_to_url: https://dev.to/jetthoughts/signs-your-company-is-recovering-from-zirp-2408
 title: Signs Your Company Is Recovering From ZIRP
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/signs-your-company-recovering-from-zirp/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/signs-your-company-recovering-from-zirp/cover.jpeg
-slug: signs-your-company-recovering-from-zirp
 metatags:
   image: cover.jpeg
+slug: signs-your-company-recovering-from-zirp
 ---
 In the wake of the Zero Interest Rate Policy (ZIRP), many companies are still trying to find their footing. This blog post explores the signs that indicate whether your company is on the mend from the effects of ZIRP, also humorously referred to as "Zirpes".
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-does-your-company-work-with-clients-to-understand-their-needs-3nic
+source: dev_to
+remote_id: 1880380
 dev_to_id: 1880380
 dev_to_url: https://dev.to/jetthoughts/how-does-your-company-work-with-clients-to-understand-their-needs-3nic
 title: How does your company work with clients to understand their needs?
@@ -11,9 +14,9 @@ tags:
 - process
 canonical_url: https://jetthoughts.com/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-does-your-company-work-with-clients-understand-their-needs-lean-process/cover.jpeg
-slug: how-does-your-company-work-with-clients-understand-their-needs-lean-process
 metatags:
   image: cover.jpeg
+slug: how-does-your-company-work-with-clients-understand-their-needs-lean-process
 ---
 In today's competitive business landscape, understanding and meeting client needs is crucial for the success and growth of any company. One effective approach to achieving this is through a process called Lean Inception. Lean Inception is a collaborative and iterative process that helps businesses gain a deep understanding of their clients’ needs and challenges. By using discovery techniques such as design sprints and continuous discovery, companies can uncover real problems and pre-validate ideas through prototyping and customer research.
 

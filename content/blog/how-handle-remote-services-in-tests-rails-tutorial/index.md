@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-handle-remote-services-in-tests-33af
+source: dev_to
+remote_id: 1853545
 dev_to_id: 1853545
 dev_to_url: https://dev.to/jetthoughts/how-to-handle-remote-services-in-tests-33af
 title: How to handle remote services in tests
@@ -13,9 +16,9 @@ tags:
 - ruby
 canonical_url: https://jetthoughts.com/blog/how-handle-remote-services-in-tests-rails-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-handle-remote-services-in-tests-rails-tutorial/cover.png
-slug: how-handle-remote-services-in-tests-rails-tutorial
 metatags:
   image: cover.png
+slug: how-handle-remote-services-in-tests-rails-tutorial
 ---
 > ### Do you have difficulties in adding the new tests and their readability decreased due to mocks and stubs? Let’s try to get rid of external requests in tests.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-ai-hasnt-blown-our-mindsyet-1f7e
+source: dev_to
+remote_id: 2187647
 dev_to_id: 2187647
 dev_to_url: https://dev.to/jetthoughts/why-ai-hasnt-blown-our-mindsyet-1f7e
 title: Why AI Hasn’t Blown Our Minds…Yet
@@ -11,9 +14,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/why-ai-hasnt-blown-our-mindsyet/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-ai-hasnt-blown-our-mindsyet/cover.jpeg
-slug: why-ai-hasnt-blown-our-mindsyet
 metatags:
   image: cover.jpeg
+slug: why-ai-hasnt-blown-our-mindsyet
 ---
 In a world buzzing with talk about artificial intelligence, many are left wondering why it hasn't yet transformed our daily lives as expected. Dalton and Michael dive into the current state of AI, exploring its real-world applications and the hype surrounding it.
 

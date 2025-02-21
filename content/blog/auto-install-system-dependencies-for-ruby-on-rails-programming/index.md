@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/auto-install-system-dependencies-for-ruby-on-rails-48kf
+source: dev_to
+remote_id: 1200329
 dev_to_id: 1200329
 dev_to_url: https://dev.to/jetthoughts/auto-install-system-dependencies-for-ruby-on-rails-48kf
 title: Auto-install system dependencies for Ruby on Rails
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/auto-install-system-dependencies-for-ruby-on-rails-programming/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/auto-install-system-dependencies-for-ruby-on-rails-programming/cover.jpg
-slug: auto-install-system-dependencies-for-ruby-on-rails-programming
 metatags:
   image: cover.jpg
+slug: auto-install-system-dependencies-for-ruby-on-rails-programming
 ---
 Let's integrate Homebrew into our Ruby on Rails Project local set up.
 
@@ -56,7 +59,3 @@ I prefer to add it in the beginning before installing other dependencies.
 
 These will help new onboarding set up development with one command only. Reduces the number of instructions from `README`.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).

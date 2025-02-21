@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unlocking-opportunities-how-fractional-jobs-are-redefining-the-future-of-work-6fo
+source: dev_to
+remote_id: 2170884
 dev_to_id: 2170884
 dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-how-fractional-jobs-are-redefining-the-future-of-work-6fo
 title: 'Unlocking Opportunities: How Fractional Jobs Are Redefining the Future of Work'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unlocking-opportunities-how-fractional-jobs-are-redefining-future-of-work/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-opportunities-how-fractional-jobs-are-redefining-future-of-work/cover.jpeg
-slug: unlocking-opportunities-how-fractional-jobs-are-redefining-future-of-work
 metatags:
   image: cover.jpeg
+slug: unlocking-opportunities-how-fractional-jobs-are-redefining-future-of-work
 ---
 Fractional jobs are shaking up the way we think about work. Instead of the usual 9-to-5 grind, more people are opting for roles that let them work part-time across different companies. This setup isn't just a passing trend; it's becoming a key part of the modern job market. With technology making it easier to connect with employers, fractional work is opening doors for both workers and businesses. Whether it's about saving costs or finding the right talent, these jobs are changing the game.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-vertically-center-an-element-without-flex-4apn
+source: dev_to
+remote_id: 1103884
 dev_to_id: 1103884
 dev_to_url: https://dev.to/jetthoughts/how-to-vertically-center-an-element-without-flex-4apn
 title: How to vertically center an element without Flex
@@ -12,7 +15,6 @@ tags:
 - webdev
 - jetthoughts
 canonical_url: https://jetthoughts.com/blog/how-vertically-center-an-element-without-flex-css-html/
-cover_image: 
 slug: how-vertically-center-an-element-without-flex-css-html
 ---
 How vertically center with Flex you can view [Vertical align with a full screen across Tailwind CSS](https://jtway.co/vertical-align-with-a-full-screen-across-tailwind-css-5c6ad91c3e4f)

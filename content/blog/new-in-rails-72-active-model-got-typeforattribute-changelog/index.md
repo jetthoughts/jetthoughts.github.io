@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1
+source: dev_to
+remote_id: 1910828
 dev_to_id: 1910828
 dev_to_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1
 title: 'New in Rails 7.2: Active Model Got type_for_attribute'
@@ -11,9 +14,9 @@ tags:
 - changelog
 canonical_url: https://jetthoughts.com/blog/new-in-rails-72-active-model-got-typeforattribute-changelog/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-in-rails-72-active-model-got-typeforattribute-changelog/cover.png
-slug: new-in-rails-72-active-model-got-typeforattribute-changelog
 metatags:
   image: cover.png
+slug: new-in-rails-72-active-model-got-typeforattribute-changelog
 ---
 ## What's New?
 

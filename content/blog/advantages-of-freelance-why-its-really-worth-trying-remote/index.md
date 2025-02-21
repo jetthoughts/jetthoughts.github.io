@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/advantages-of-freelance-why-its-really-worth-trying-3ldj
+source: dev_to
+remote_id: 1880404
 dev_to_id: 1880404
 dev_to_url: https://dev.to/jetthoughts/advantages-of-freelance-why-its-really-worth-trying-3ldj
 title: Advantages of freelance — why it’s really worth trying?
@@ -11,9 +14,9 @@ tags:
 - remote
 canonical_url: https://jetthoughts.com/blog/advantages-of-freelance-why-its-really-worth-trying-remote/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/advantages-of-freelance-why-its-really-worth-trying-remote/cover.jpeg
-slug: advantages-of-freelance-why-its-really-worth-trying-remote
 metatags:
   image: cover.jpeg
+slug: advantages-of-freelance-why-its-really-worth-trying-remote
 ---
 *Every day freelance is becoming more and more popular among all industries where it’s possible to introduce. However, many people still don’t dare to take the first step and finally understand whether this opportunity is suitable for them. We decided to highlight all the key pros of freelance, which may help someone to make their choice.*
 

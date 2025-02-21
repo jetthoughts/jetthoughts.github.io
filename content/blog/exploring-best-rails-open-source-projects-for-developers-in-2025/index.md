@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/exploring-the-best-rails-open-source-projects-for-developers-in-2025-5a0d
+source: dev_to
+remote_id: 2252261
 dev_to_id: 2252261
 dev_to_url: https://dev.to/jetthoughts/exploring-the-best-rails-open-source-projects-for-developers-in-2025-5a0d
 title: Exploring the Best Rails Open Source Projects for Developers in 2025
 description: Discover top Rails open source projects in 2025 that boost skills and innovation for developers.
 created_at: '2025-01-31T12:57:54Z'
-edited_at:
+edited_at: '2025-01-31T13:08:15Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-the-best-rails-open-source-projects-for-developers-in-2025-5a0d
+canonical_url: https://jetthoughts.com/blog/exploring-best-rails-open-source-projects-for-developers-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-best-rails-open-source-projects-for-developers-in-2025/cover.jpeg
-slug: exploring-best-rails-open-source-projects-for-developers-in-2025
 metatags:
   image: cover.jpeg
+slug: exploring-best-rails-open-source-projects-for-developers-in-2025
 ---
 So, you're diving into the world of Rails open source projects in 2025? That's a smart move. Rails is still rocking the web development scene, and open source projects are like a playground for developers. You get to learn, contribute, and maybe even make some new friends along the way. Plus, there's a ton of cool stuff happening in the Rails community right now.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/over-complicated-pricing-could-kill-a-sales-process-3afg
+source: dev_to
+remote_id: 2190249
 dev_to_id: 2190249
 dev_to_url: https://dev.to/jetthoughts/over-complicated-pricing-could-kill-a-sales-process-3afg
 title: Over-Complicated Pricing Could Kill A Sales Process
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/over-complicated-pricing-could-kill-sales-process/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/over-complicated-pricing-could-kill-sales-process/cover.jpeg
-slug: over-complicated-pricing-could-kill-sales-process
 metatags:
   image: cover.jpeg
+slug: over-complicated-pricing-could-kill-sales-process
 ---
 In the world of sales, pricing strategies can make or break a deal. Recently, a discussion highlighted the importance of keeping pricing simple. Over-complicating pricing can lead to confusion and ultimately kill a sales process. Here’s what you need to know.
 

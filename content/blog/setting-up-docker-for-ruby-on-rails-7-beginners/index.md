@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/setting-up-docker-for-ruby-on-rails-7-50cd
+source: dev_to
+remote_id: 1783325
 dev_to_id: 1783325
 dev_to_url: https://dev.to/jetthoughts/setting-up-docker-for-ruby-on-rails-7-50cd
 title: Setting Up Docker for Ruby on Rails 7
@@ -12,7 +15,6 @@ tags:
 - docker
 - postgres
 canonical_url: https://jetthoughts.com/blog/setting-up-docker-for-ruby-on-rails-7-beginners/
-cover_image: 
 slug: setting-up-docker-for-ruby-on-rails-7-beginners
 ---
 ## Introduction:

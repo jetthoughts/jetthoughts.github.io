@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/custom-ordering-without-custom-sql-with-ruby-on-rails-7-33o
+source: dev_to
+remote_id: 1677293
 dev_to_id: 1677293
 dev_to_url: https://dev.to/jetthoughts/custom-ordering-without-custom-sql-with-ruby-on-rails-7-33o
 title: Custom ordering without custom SQL with Ruby on Rails 7
@@ -13,9 +16,9 @@ tags:
 - sql
 canonical_url: https://jetthoughts.com/blog/custom-ordering-without-sql-with-ruby-on-rails-7/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/custom-ordering-without-sql-with-ruby-on-rails-7/cover.png
-slug: custom-ordering-without-sql-with-ruby-on-rails-7
 metatags:
   image: cover.png
+slug: custom-ordering-without-sql-with-ruby-on-rails-7
 ---
 ![Custom order SQL](file_0.png)
 

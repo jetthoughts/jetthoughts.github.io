@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/rails-8-brings-viewobjects-why-theyre-awesome-and-how-to-use-them-323c
+source: dev_to
+remote_id: 2130465
 dev_to_id: 2130465
 dev_to_url: https://dev.to/jetthoughts/rails-8-brings-viewobjects-why-theyre-awesome-and-how-to-use-them-323c
 title: 'Rails 8 Brings ViewObjects: Why They’re Awesome and How to Use Them'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/rails-8-brings-viewobjects-why-theyre-awesome-how-use-them-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-8-brings-viewobjects-why-theyre-awesome-how-use-them-ruby/cover.png
-slug: rails-8-brings-viewobjects-why-theyre-awesome-how-use-them-ruby
 metatags:
   image: cover.png
+slug: rails-8-brings-viewobjects-why-theyre-awesome-how-use-them-ruby
 ---
 Rails 8 brings an exciting addition to its arsenal: ViewComponents, powered by the ViewComponent::Base class. This feature is a game-changer for managing UI logic, offering developers a clean, reusable, and testable approach to building components.
 

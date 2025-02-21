@@ -126,9 +126,9 @@ module Sync
 
     def self.generate_metadata(article)
       {
-        # "remote_url" => article["url"],
-        # "remote_id" => article["id"],
-        # "source" => "dev_to",
+        "remote_url" => article["url"],
+        "source" => "dev_to",
+        "remote_id" => article["id"],
         "dev_to_id" => article["id"],
         "dev_to_url" => article["url"],
         "title" => article["title"],

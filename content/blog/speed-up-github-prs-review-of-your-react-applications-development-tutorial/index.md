@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/speed-up-github-prs-review-of-your-react-applications-4n8o
+source: dev_to
+remote_id: 1853466
 dev_to_id: 1853466
 dev_to_url: https://dev.to/jetthoughts/speed-up-github-prs-review-of-your-react-applications-4n8o
 title: Speed up GitHub PR’s review of your React applications
@@ -13,9 +16,9 @@ tags:
 - jest
 canonical_url: https://jetthoughts.com/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/speed-up-github-prs-review-of-your-react-applications-development-tutorial/cover.jpeg
-slug: speed-up-github-prs-review-of-your-react-applications-development-tutorial
 metatags:
   image: cover.jpeg
+slug: speed-up-github-prs-review-of-your-react-applications-development-tutorial
 ---
 Would you like to speed up PR’s review of React application, when you use Jest snapshot testing?
 
