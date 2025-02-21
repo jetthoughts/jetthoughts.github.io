@@ -27,8 +27,8 @@
 
 .blog h1,
 .blog .heading {
-  font-size: 72px;
-  line-height: 92px;
+  font-size: 48px;
+  line-height: 60px;
   font-weight: 700;
   margin: 0 0 32px !important;
 
@@ -114,8 +114,22 @@
   text-decoration: none;
 }
 
+.blog table {
+  margin: 22px 0;
+}
 
+.blog th,
+.blog td {
+  border: 1px solid #e9eaeb;
+  padding: 5px 10px;
+  font-size: 16px;
+}
 
 input[type=submit]:disabled {
   opacity: 0.25
+}
+
+.blog ol,
+.blog ul {
+  padding-left: 24px;
 }
