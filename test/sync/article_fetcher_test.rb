@@ -41,8 +41,8 @@ module Sync
       assert_nil @fetcher.fetch("not_found")
     end
 
-    def test_fetch_image_success
-      image_data = @fetcher.fetch_image("https://example.com/image.jpg")
+    def test_fetch_asset_success
+      image_data = @fetcher.fetch_asset("https://example.com/image.jpg")
       assert_equal "fake-image-data", image_data
     end
 

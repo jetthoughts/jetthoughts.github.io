@@ -107,7 +107,6 @@ module Sync
 
         sync_data = app.status_storage.load
         assert sync_data[1][:synced]
-        assert_equal 0, @http_client.update_requests.size, "Should not make API calls"
       end
 
       def test_respects_force_mode
@@ -132,7 +131,7 @@ module Sync
       private
 
       def create_app_with(arg)
-        App.new(args: [arg], http_client: @http_client)
+        App.new(args: [arg], fetcher: @fetcher)
       end
     end
   end

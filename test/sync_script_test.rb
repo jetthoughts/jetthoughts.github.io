@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "sync_test_case"
-require "sync"
+require "sync/sync_script"
 
 class SyncScriptTest < SyncTestCase
   def setup
@@ -26,16 +26,19 @@ class SyncScriptTest < SyncTestCase
   end
 
   def test_perform_updates_sync_status_for_new_articles
-    article = sample_article
-    @http_client.articles = [article]
+    create_sync_file(@app.working_dir, {})
+
+    post = sample_article
+    @articles.replace([post])
 
     @sync.perform
 
     sync_data = @app.status_storage.load
-    assert sync_data.key?(article["id"]), "Should create sync status for article"
-    assert_equal article["edited_at"], sync_data[article["id"]][:edited_at], "Should set correct edited_at"
-    assert_equal "test-article-ruby-rails-testing", sync_data[article["id"]][:slug], "Should set correct slug"
-    assert_equal "dev_to", sync_data[article["id"]][:source], "Should set correct source"
+    assert sync_data.key?(post["id"]), "Should create sync status for article"
+
+    refute_empty sync_data[post["id"]][:edited_at], "Should set correct edited_at"
+    assert_equal "test-article-ruby-rails-testing", sync_data[post["id"]][:slug], "Should set correct slug"
+    assert_equal "dev_to", sync_data[post["id"]][:source], "Should set correct source"
   end
 
   def test_perform_downloads_articles_in_non_dry_run

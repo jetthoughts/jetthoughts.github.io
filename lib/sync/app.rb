@@ -11,7 +11,7 @@ class App
 
   DEFAULT_WORKING_DIR = "content/blog"
 
-  attr_reader :working_dir, :logger, :http_client, :fetcher, :args
+  attr_reader :working_dir, :logger, :fetcher, :args
 
   def self.config
     Thread.current[:sync_app_config] ||= Sync::Configuration.new
@@ -25,12 +25,10 @@ class App
     Thread.current[:sync_app_config] = nil
   end
 
-  def initialize(args: [], working_dir: App.config.working_dir, http_client: nil, fetcher: nil)
+  def initialize(args: [], working_dir: App.config.working_dir, fetcher: nil)
     @args = args
     @working_dir = Pathname.new(working_dir).cleanpath
-
-    @fetcher = fetcher || Sync::DevToArticleFetcher.new(http_client)
-    @http_client = @fetcher.http_client
+    @fetcher = fetcher
   end
 
   def status_storage

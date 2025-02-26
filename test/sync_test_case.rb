@@ -16,7 +16,6 @@ class SyncTestCase < Minitest::Test
   # parallelize_me!
 
   def setup
-    super
     working_dir = setup_temp_dir
 
     App.configure do |config|
@@ -25,8 +24,7 @@ class SyncTestCase < Minitest::Test
     end
 
     @articles = []
-    @http_client = TestHttpClient.new(@articles)
-    @fetcher = Sync::DevToArticleFetcher.new(@http_client)
+    @fetcher = Sync::Sources::DevTo.new(http_client: TestHttpClient.new(@articles))
     @app = App.new(fetcher: @fetcher)
   end
 
@@ -69,8 +67,7 @@ class SyncTestCase < Minitest::Test
     TestFactories::Article.build_details(...)
   end
 
-
   def create_app(**)
-    App.new(http_client: @http_client, **)
+    App.new(fetcher: @fetcher, **)
   end
 end

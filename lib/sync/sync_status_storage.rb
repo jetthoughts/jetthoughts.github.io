@@ -15,7 +15,6 @@ class SyncStatusStorage
 
   def ensure_file_exists
     return if sync_file_path.exist?
-
     sync_file_path.write({}.to_yaml)
   end
 
@@ -23,7 +22,7 @@ class SyncStatusStorage
     @_cache = nil if force
 
     @_cache ||= begin
-      YAML.load_file(sync_file_path)
+      YAML.safe_load_file(sync_file_path, permitted_classes: [Time, Symbol])
     rescue Errno::ENOENT
       logger.warn "Warning: #{sync_file_path} not found."
       {}
@@ -35,7 +34,7 @@ class SyncStatusStorage
 
   def save(sync_status)
     logger.debug "Saving sync status to #{sync_file_path}"
-    @_cache = sync_status
+    @_cache = nil
     sync_file_path.write(sync_status.to_yaml)
   end
 end

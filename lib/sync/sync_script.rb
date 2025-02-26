@@ -5,6 +5,7 @@ require "sync/article_updater"
 require "sync/article_cleaner"
 require "sync/dev_to_client"
 require "sync/app"
+require "sync/source"
 
 class SyncScript
   include Logging
@@ -20,9 +21,14 @@ class SyncScript
   end
 
   def perform
-    fetch_articles = app.fetcher.fetch_articles
-    sync_checker.update_sync_statuses_for(fetch_articles)
+    remote_articles = app.fetcher.fetch_all
+    puts "flush from remote"
+    sync_checker.update_sync_statuses_for(remote_articles)
+
+    puts "download"
     article_updater.download_articles
+
+    puts "cleanup"
     article_cleaner.cleanup_renamed_articles
   end
 

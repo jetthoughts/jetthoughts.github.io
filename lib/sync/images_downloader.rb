@@ -82,7 +82,7 @@ class ImagesDownloader
   end
 
   def download_image(url, as_file_name)
-    image = fetcher.fetch_image(url)
+    image = fetcher.fetch_asset(url)
     if image
       add_media_asset(as_file_name, image)
       logger.info "#{as_file_name} downloaded from #{url}"
