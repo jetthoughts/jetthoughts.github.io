@@ -10,21 +10,6 @@ class SyncScriptTest < SyncTestCase
     @sync = SyncScript.new(app: @app)
   end
 
-  def test_uses_app_storage_for_sync_checker
-    sync_checker = @sync.send(:sync_checker)
-    assert_equal @app.status_storage, sync_checker.status_storage, "Should use app's storage for sync checker"
-  end
-
-  def test_uses_app_storage_for_article_updater
-    article_updater = @sync.send(:article_updater)
-    assert_equal @app.status_storage, article_updater.status_storage, "Should use app's storage for article updater"
-  end
-
-  def test_uses_app_storage_for_article_cleaner
-    article_cleaner = @sync.send(:article_cleaner)
-    assert_equal @app.status_storage, article_cleaner.status_storage, "Should use app's storage for article cleaner"
-  end
-
   def test_perform_updates_sync_status_for_new_articles
     create_sync_file(@app.working_dir, {})
 

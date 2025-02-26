@@ -22,13 +22,8 @@ class SyncScript
 
   def perform
     remote_articles = app.fetcher.fetch_all
-    puts "flush from remote"
     sync_checker.update_sync_statuses_for(remote_articles)
-
-    puts "download"
     article_updater.download_articles
-
-    puts "cleanup"
     article_cleaner.cleanup_renamed_articles
   end
 

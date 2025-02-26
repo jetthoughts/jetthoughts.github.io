@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "sync_test_case"
-require "app"
+require "sync/app"
 
 class AppTest < SyncTestCase
   def setup
