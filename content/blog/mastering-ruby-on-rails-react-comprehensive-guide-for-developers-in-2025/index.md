@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-and-react-a-comprehensive-guide-for-developers-in-2025-5836
+source: dev_to
+remote_id: 2291366
 dev_to_id: 2291366
 dev_to_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-and-react-a-comprehensive-guide-for-developers-in-2025-5836
 title: 'Mastering Ruby on Rails and React: A Comprehensive Guide for Developers in 2025'
 description: Master Ruby on Rails & React in 2025! Build dynamic apps with ease. Perfect for devs at all levels.
 created_at: '2025-02-21T11:30:46Z'
-edited_at:
+edited_at: '2025-02-21T11:34:48Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-and-react-a-comprehensive-guide-for-developers-in-2025-5836
+canonical_url: https://jetthoughts.com/blog/mastering-ruby-on-rails-react-comprehensive-guide-for-developers-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-ruby-on-rails-react-comprehensive-guide-for-developers-in-2025/cover.jpeg
-slug: mastering-ruby-on-rails-react-comprehensive-guide-for-developers-in-2025
 metatags:
   image: cover.jpeg
+slug: mastering-ruby-on-rails-react-comprehensive-guide-for-developers-in-2025
 ---
 So, you're curious about Ruby on Rails and React, huh? Well, you've come to the right place. This guide is all about getting your hands dirty with these two powerful frameworks. Whether you're just starting or looking to sharpen your skills, we've got something for everyone. From setting up your environment to deploying your first app, we'll walk you through the whole process. And don't worry, it's not all tech talk—there's plenty of practical advice to help you along the way. Let's get started!
 
