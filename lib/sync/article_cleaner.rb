@@ -1,5 +1,7 @@
 require "fileutils"
 require "yaml"
+require "tqdm"
+
 require "sync/logging"
 require "sync/sync_status_storage"
 
@@ -22,7 +24,7 @@ class ArticleCleaner
     deleted_folders = []
     slugs = load_slugs_from_storage
 
-    Dir.glob("#{working_dir}/*").each do |folder_path|
+    Dir.glob("#{working_dir}/*").with_progress(desc: "Cleanup left overs").each do |folder_path|
       next unless File.directory?(folder_path) && File.exist?("#{folder_path}/#{ARTICLE_FILE}")
 
       folder_name = File.basename(folder_path)

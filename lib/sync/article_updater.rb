@@ -25,7 +25,7 @@ module Sync
     end
 
     def download_articles
-      articles_to_sync.each do |id, status|
+      articles_to_sync.with_progress(desc: "Download Articles").each do |id, status|
         with_error_handling(id) do
           process_article(id, status)
         end

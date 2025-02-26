@@ -8,7 +8,7 @@ require "sync/app"
 require "sync/sync_script"
 
 App.configure do |config|
-  config.logger = Logger.new(STDOUT, level: :debug)
+  config.logger = Logger.new(STDOUT, level: :warn)
 end
 
 App.new(args: ARGV).run

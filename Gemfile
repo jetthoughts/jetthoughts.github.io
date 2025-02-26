@@ -12,6 +12,8 @@ gem "rackup"
 gem "puma"
 gem "ostruct"
 
+gem "tqdm"
+
 gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
 gem 'simplecov', require: false
 gem "vips"
