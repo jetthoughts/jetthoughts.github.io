@@ -75,6 +75,29 @@ class ArticleSyncCheckerTest < SyncTestCase
     assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
   end
 
+  def test_slug_generation_prevent_collisions
+    @articles.replace([
+      sample_article(
+        "id" => 2,
+        "slug" => "the-best-and-most-useful-tips-123",
+        "tags" => "a, ruby, the, testing"
+      ),
+      sample_article(
+        "id" => 3,
+        "slug" => "the-best-and-most-useful-tips-124",
+        "tags" => "a, ruby, the, testing"
+      )
+    ])
+
+    @checker = ArticleSyncChecker.new(app: @app)
+
+    @checker.update_sync_status
+    status = @app.status_storage.load
+
+    assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
+    assert_match /best-most-useful-tips-ruby-testing-\w{3}/, status[3][:slug]
+  end
+
   def test_uses_provided_storage
     checker = ArticleSyncChecker.new(app: @app)
     assert_equal @app.status_storage, checker.storage, "Should use the provided storage instance"

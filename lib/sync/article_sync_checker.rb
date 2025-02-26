@@ -64,12 +64,22 @@ class ArticleSyncChecker
     slug_parts = article["slug"].split("-")
     tags = article["tags"] ? article["tags"].split(", ") : []
     selected_tags = tags.first(10)
-    [slug_parts, selected_tags]
+    result = [slug_parts, selected_tags]
       .flatten
       .uniq
       .reject { |segment| USELESS_WORDS.include?(segment) }
       .compact
       .first(6)
       .join("-")
+
+    if duplicated?(result)
+      result += "-#{SecureRandom.hex(2)}"
+    end
+
+    result
+  end
+
+  def duplicated?(slug)
+    @sync_status.map { _2 && _2[:slug] }.compact.uniq.include?(slug)
   end
 end
