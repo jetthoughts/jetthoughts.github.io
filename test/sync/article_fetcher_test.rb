@@ -48,37 +48,37 @@ module Sync
 
     def test_has_updated_canonical_url_with_no_url
       article_data = {"id" => 1}
-      refute @fetcher.has_updated_canonical_url?(article_data["canonical_url"], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
     end
 
     def test_has_updated_canonical_url_with_matching_slug
       article_data = {"id" => 1, "canonical_url" => "https://example.com/test-article"}
-      assert @fetcher.has_updated_canonical_url?(article_data["canonical_url"], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
     end
 
     def test_has_updated_canonical_url_with_different_slug
       article_data = {"id" => 1, "canonical_url" => "https://example.com/wrong-article"}
-      refute @fetcher.has_updated_canonical_url?(article_data["canonical_url"], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
     end
 
     def test_has_updated_meta_description_with_no_sync_data
       article_data = {"id" => 3, "description" => "Test description"}
-      assert @fetcher.has_updated_meta_description?(article_data["description"], nil)
+      assert @fetcher.need_to_update_remote?(article_data, nil)
     end
 
     def test_has_updated_meta_description_with_no_local_description
-      article_data = {"id" => 2, "description" => "Test description"}
-      assert @fetcher.has_updated_meta_description?(article_data["description"], @sync_data[2][:description])
+      article_data = {"id" => 2, "description" => "Test description", "canonical_url" => "/#{@sync_data[2][:slug]}"}
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[2].except(:description))
     end
 
     def test_has_updated_meta_description_with_matching_description
-      article_data = {"id" => 1, "description" => "Test description"}
-      assert @fetcher.has_updated_meta_description?(article_data["description"], @sync_data[1][:description])
+      article_data = {"id" => 1, "description" => "Test description", "canonical_url" => "/#{@sync_data[1][:slug]}"}
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_updated_meta_description_with_different_description
       article_data = {"id" => 1, "description" => "New description"}
-      refute @fetcher.has_updated_meta_description?(article_data["description"], @sync_data[1][:description])
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_both_match
@@ -87,7 +87,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/test-article"
       }
-      assert @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_url_mismatch
@@ -96,7 +96,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/wrong-article"
       }
-      refute @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
     end
 
     def test_has_synced_metadata_when_description_mismatch
@@ -105,7 +105,7 @@ module Sync
         "description" => "Wrong description",
         "canonical_url" => "https://example.com/test-article"
       }
-      refute @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
     end
 
     def test_has_synced_metadata_when_no_url
@@ -113,7 +113,7 @@ module Sync
         "id" => 1,
         "description" => "Test description"
       }
-      refute @fetcher.has_updated_metadata?(article_data, @sync_data[1], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
     end
 
     def test_has_synced_metadata_when_no_sync_data
@@ -122,7 +122,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/test-article"
       }
-      assert @fetcher.has_updated_metadata?(article_data, @sync_data[3], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[3], "test-article")
     end
 
     def test_remove_cdn

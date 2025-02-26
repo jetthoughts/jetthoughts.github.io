@@ -12,8 +12,8 @@ module Sync
 
     attr_reader :http_client
 
-    def initialize(http_client = DevToClient.new)
-      @http_client = http_client
+    def initialize(http_client = nil)
+      @http_client = http_client || DevToClient.new
     end
 
     def fetch_articles
@@ -52,24 +52,14 @@ module Sync
       end
     end
 
-    def has_updated_metadata?(article_data, article_sync_data, expected_slug)
+    # Do we need to update the remote article details?
+    def need_to_update_remote?(article_data, article_sync_data, expected_slug = nil)
       logger.debug("Checking if metadata is synced for article #{article_data["id"]}")
 
       return true unless article_sync_data
 
-      has_updated_canonical_url?(article_data["canonical_url"], expected_slug) &&
+      has_updated_canonical_url?(article_data["canonical_url"], article_sync_data[:slug]) &&
         has_updated_meta_description?(article_data["description"], article_sync_data[:description])
-    end
-
-    def has_updated_canonical_url?(remote_canonical_url, expected_slug)
-      logger.debug("Checking if canonical URL has been updated for #{expected_slug}")
-      return false if remote_canonical_url.nil?
-
-      remote_canonical_url.split("/").last == expected_slug
-    end
-
-    def has_updated_meta_description?(remote_description, local_description)
-      local_description.nil? || local_description.empty? || remote_description == local_description
     end
 
     def ext_from_image_url(image_url)
@@ -95,6 +85,17 @@ module Sync
     end
 
     private
+
+    def has_updated_canonical_url?(remote_canonical_url, expected_slug)
+      logger.debug("Checking if canonical URL has been updated for #{expected_slug}")
+      return false if remote_canonical_url.nil?
+
+      remote_canonical_url.split("/").last == expected_slug
+    end
+
+    def has_updated_meta_description?(remote_description, local_description)
+      local_description.nil? || local_description.empty? || remote_description == local_description
+    end
 
     def process_article(article)
       article["devto_slug"] = article["slug"]

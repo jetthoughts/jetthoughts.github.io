@@ -29,7 +29,7 @@ class App
     @args = args
     @working_dir = Pathname.new(working_dir).cleanpath
 
-    @fetcher = fetcher || Sync::DevToArticleFetcher.new(http_client || DevToClient.new)
+    @fetcher = fetcher || Sync::DevToArticleFetcher.new(http_client)
     @http_client = @fetcher.http_client
   end
 

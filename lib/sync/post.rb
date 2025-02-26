@@ -10,12 +10,13 @@ module Sync
 
     attr_accessor :slug, :metadata, :body_markdown
 
-    def initialize(slug)
+    def initialize(slug, app: App.config)
       @slug = slug
+      @app = app
     end
 
     def storage
-      @storage ||= PostStorage.new(App.config.working_dir)
+      @storage ||= PostStorage.new(@app.working_dir)
     end
 
     def self.create_from_remote_details(article, status)

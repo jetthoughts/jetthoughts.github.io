@@ -1,5 +1,7 @@
 require "fileutils"
 require "yaml"
+require "tqdm"
+
 require "sync/logging"
 require "sync/retryable"
 require "sync/images_downloader"
@@ -65,7 +67,7 @@ module Sync
     end
 
     def metadata_up_to_date?(article, status)
-      if article_fetcher.has_updated_metadata?(article, status, status[:slug])
+      if article_fetcher.need_to_update_remote?(article, status)
         status[:synced] = true
         logger.debug("Article ID: #{status[:slug]} already synced.")
         true
