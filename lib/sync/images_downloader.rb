@@ -28,7 +28,7 @@ class ImagesDownloader
     @post.body_markdown = process_images(@post.body_markdown)
     @post.save
   rescue ::Timeout::Error, ::Faraday::ConnectionFailed => e
-    logger.error "Network error while downloading images: #{e.message}"
+    logger.error "Network error while downloading images for #{@post.slug} / #{@post.remote_url}: #{e.message}"
     raise NetworkError, "Failed to download images: #{e.message}"
   rescue => e
     logger.error "Error processing images: #{e.message}"

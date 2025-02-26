@@ -35,7 +35,7 @@ module Sync
           article = JSON.parse(response.body)
           process_article(article)
         else
-          raise "Failed to fetch article #{article_id}: #{response.code} - #{response.message}"
+          raise "Failed to fetch article #{article_id}: #{response.body}"
         end
       end
     end

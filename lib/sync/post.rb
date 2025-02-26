@@ -112,6 +112,12 @@ module Sync
       storage.add_media_asset(slug, asset_name, media_content)
     end
 
+    def remote_url
+      load unless metadata
+
+      metadata["remote_url"]
+    end
+
     private
 
     def assemble_content

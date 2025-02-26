@@ -38,7 +38,10 @@ module Sync
 
     def process_article(id, status)
       article = fetch_article(id)
-      return unless article
+      unless article
+        status[:synced] = false
+        return
+      end
 
       post = save_content(article, status)
       update_metadata(article, status)
