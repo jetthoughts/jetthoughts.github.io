@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/exploring-innovative-ruby-on-rails-open-source-projects-for-developers-4ale
+source: dev_to
+remote_id: 2297339
 dev_to_id: 2297339
 dev_to_url: https://dev.to/jetthoughts/exploring-innovative-ruby-on-rails-open-source-projects-for-developers-4ale
 title: Exploring Innovative Ruby on Rails Open Source Projects for Developers
 description: Discover hidden gems and top Ruby on Rails open source projects to boost your skills and career in 2025.
 created_at: '2025-02-25T14:08:25Z'
-edited_at:
+edited_at: '2025-02-25T14:18:18Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-innovative-ruby-on-rails-open-source-projects-for-developers-4ale
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-innovative-ruby-on-rails-open-source-projects-for-developers/cover.jpeg
-slug: exploring-innovative-ruby-on-rails-open-source-projects-for-developers
+canonical_url: https://jetthoughts.com/blog/exploring-innovative-ruby-on-rails-open-source-projects-for-developers/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-innovative-ruby-on-rails-open/cover.jpeg
 metatags:
   image: cover.jpeg
+slug: exploring-innovative-ruby-on-rails-open
 ---
 Ruby on Rails open source projects are like a treasure chest for developers. They're packed with tools, ideas, and opportunities to grow your skills. Whether you're a beginner or a seasoned pro, these projects let you learn, collaborate, and contribute to something meaningful. Plus, they're a great way to connect with a community that’s all about sharing and innovation.
 
