@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/4-tricks-to-write-catchy-headlines-2m96
+source: dev_to
+remote_id: 1852733
 dev_to_id: 1852733
 dev_to_url: https://dev.to/jetthoughts/4-tricks-to-write-catchy-headlines-2m96
 title: 4 Tricks to Write Catchy Headlines
@@ -13,9 +16,9 @@ tags:
 - writing
 canonical_url: https://jetthoughts.com/blog/4-tricks-write-catchy-headlines-contentwriting/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-tricks-write-catchy-headlines-contentwriting/cover.jpeg
-slug: 4-tricks-write-catchy-headlines-contentwriting
 metatags:
   image: cover.jpeg
+slug: 4-tricks-write-catchy-headlines-contentwriting
 ---
 How to improve your writing, and create not just a good headline, but a catchy one? No matter what your content type is, and if you’re either writing a small post or an in-depth report.
 

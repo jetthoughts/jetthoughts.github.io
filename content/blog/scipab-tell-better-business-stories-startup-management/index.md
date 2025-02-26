@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/scipab-tell-better-business-stories-15im
+source: dev_to
+remote_id: 2158197
 dev_to_id: 2158197
 dev_to_url: https://dev.to/jetthoughts/scipab-tell-better-business-stories-15im
 title: 'SCIPAB: Tell Better Business Stories'
@@ -13,9 +16,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/scipab-tell-better-business-stories-startup-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/scipab-tell-better-business-stories-startup-management/cover.png
-slug: scipab-tell-better-business-stories-startup-management
 metatags:
   image: cover.png
+slug: scipab-tell-better-business-stories-startup-management
 ---
 ## What is SCIPAB?
 SCIPAB helps you make your point fast. Think of it as a recipe for clear business communication. Each letter stands for a step in your message. Business moves fast. Your communication must keep up. SCIPAB cuts through noise and gets to the point.

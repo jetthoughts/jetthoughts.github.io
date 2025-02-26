@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-effectively-hire-ruby-developers-for-your-next-project-4hfc
+source: dev_to
+remote_id: 2269845
 dev_to_id: 2269845
 dev_to_url: https://dev.to/jetthoughts/how-to-effectively-hire-ruby-developers-for-your-next-project-4hfc
 title: How to Effectively Hire Ruby Developers for Your Next Project
 description: Learn how to hire Ruby developers effectively for your project. Discover key skills, platforms, and tips.
 created_at: '2025-02-10T17:53:24Z'
-edited_at:
+edited_at: '2025-02-10T17:54:37Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/how-to-effectively-hire-ruby-developers-for-your-next-project-4hfc
+canonical_url: https://jetthoughts.com/blog/how-effectively-hire-ruby-developers-for-your-next-project/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-effectively-hire-ruby-developers-for-your-next-project/cover.jpeg
-slug: how-effectively-hire-ruby-developers-for-your-next-project
 metatags:
   image: cover.jpeg
+slug: how-effectively-hire-ruby-developers-for-your-next-project
 ---
 Hiring Ruby developers can feel like a big task. You want someone who knows their stuff but also fits in with your team. In this guide, we'll walk you through the steps to find the right Ruby talent for your project. From understanding their role to making an offer they can't refuse, we've got you covered.
 

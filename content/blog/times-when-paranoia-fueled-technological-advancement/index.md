@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-times-when-paranoia-fueled-technological-advancement-45le
+source: dev_to
+remote_id: 2193606
 dev_to_id: 2193606
 dev_to_url: https://dev.to/jetthoughts/the-times-when-paranoia-fueled-technological-advancement-45le
 title: The Times When Paranoia Fueled Technological Advancement
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/times-when-paranoia-fueled-technological-advancement/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/times-when-paranoia-fueled-technological-advancement/cover.jpeg
-slug: times-when-paranoia-fueled-technological-advancement
 metatags:
   image: cover.jpeg
+slug: times-when-paranoia-fueled-technological-advancement
 ---
 In a world where fear often drives innovation, the conversation between Dalton and Michael sheds light on how paranoia has played a role in some of the most significant technological advancements over the last 75 years. From the internet to cryptocurrency, the influence of conspiracy theories and distrust has shaped our modern landscape.
 

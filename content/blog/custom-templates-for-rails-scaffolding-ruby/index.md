@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/custom-templates-for-rails-scaffolding-4ge0
+source: dev_to
+remote_id: 1212480
 dev_to_id: 1212480
 dev_to_url: https://dev.to/jetthoughts/custom-templates-for-rails-scaffolding-4ge0
 title: Custom templates for Rails scaffolding
@@ -13,9 +16,9 @@ tags:
 - programming
 canonical_url: https://jetthoughts.com/blog/custom-templates-for-rails-scaffolding-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/custom-templates-for-rails-scaffolding-ruby/cover.png
-slug: custom-templates-for-rails-scaffolding-ruby
 metatags:
   image: cover.png
+slug: custom-templates-for-rails-scaffolding-ruby
 ---
 
 ![Image description](file_0.png)

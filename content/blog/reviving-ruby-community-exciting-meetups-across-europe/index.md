@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/reviving-the-ruby-community-exciting-meetups-across-europe-52af
+source: dev_to
+remote_id: 2179540
 dev_to_id: 2179540
 dev_to_url: https://dev.to/jetthoughts/reviving-the-ruby-community-exciting-meetups-across-europe-52af
 title: 'Reviving the Ruby Community: Exciting Meetups Across Europe'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/reviving-ruby-community-exciting-meetups-across-europe/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/reviving-ruby-community-exciting-meetups-across-europe/cover.jpeg
-slug: reviving-ruby-community-exciting-meetups-across-europe
 metatags:
   image: cover.jpeg
+slug: reviving-ruby-community-exciting-meetups-across-europe
 ---
 The Ruby programming community is experiencing a vibrant resurgence in Europe, with numerous meetups and events being organized to foster collaboration and knowledge sharing among developers. This revival is marked by the re-establishment of groups like GenevaRB and the launch of new initiatives aimed at connecting Ruby enthusiasts across the continent.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-avoid-callbacks-using-services-p7l
+source: dev_to
+remote_id: 1198201
 dev_to_id: 1198201
 dev_to_url: https://dev.to/jetthoughts/how-to-avoid-callbacks-using-services-p7l
 title: How to avoid callbacks using services.
@@ -13,9 +16,9 @@ tags:
 - ruby
 canonical_url: https://jetthoughts.com/blog/how-avoid-callbacks-using-services-rails-refactoring/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-avoid-callbacks-using-services-rails-refactoring/cover.png
-slug: how-avoid-callbacks-using-services-rails-refactoring
 metatags:
   image: cover.png
+slug: how-avoid-callbacks-using-services-rails-refactoring
 ---
 ![example code for using service](file_0.png)
 

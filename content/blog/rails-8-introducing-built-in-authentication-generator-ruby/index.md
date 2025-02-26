@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/rails-8-introducing-the-built-in-authentication-generator-1l77
+source: dev_to
+remote_id: 2126561
 dev_to_id: 2126561
 dev_to_url: https://dev.to/jetthoughts/rails-8-introducing-the-built-in-authentication-generator-1l77
 title: 'Rails 8: Introducing the Built-in Authentication Generator'
@@ -13,9 +16,9 @@ tags:
 - changelog
 canonical_url: https://jetthoughts.com/blog/rails-8-introducing-built-in-authentication-generator-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-8-introducing-built-in-authentication-generator-ruby/cover.png
-slug: rails-8-introducing-built-in-authentication-generator-ruby
 metatags:
   image: cover.png
+slug: rails-8-introducing-built-in-authentication-generator-ruby
 ---
 Ruby on Rails developers face a common task: building user login systems. Rails 8 brings a built-in solution. This guide helps Rails developers create authentication without extra gems.
 

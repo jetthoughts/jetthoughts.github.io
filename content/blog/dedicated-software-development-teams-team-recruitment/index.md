@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/dedicated-software-development-teams-1c1e
+source: dev_to
+remote_id: 1880485
 dev_to_id: 1880485
 dev_to_url: https://dev.to/jetthoughts/dedicated-software-development-teams-1c1e
 title: Dedicated Software Development Teams
@@ -12,9 +15,9 @@ tags:
 - hr
 canonical_url: https://jetthoughts.com/blog/dedicated-software-development-teams-team-recruitment/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/dedicated-software-development-teams-team-recruitment/cover.jpeg
-slug: dedicated-software-development-teams-team-recruitment
 metatags:
   image: cover.jpeg
+slug: dedicated-software-development-teams-team-recruitment
 ---
 
 ## Dedicated Software Development Teams

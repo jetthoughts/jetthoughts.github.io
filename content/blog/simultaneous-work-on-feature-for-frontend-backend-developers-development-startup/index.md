@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/simultaneous-work-on-the-feature-for-frontend-and-backend-developers-1463
+source: dev_to
+remote_id: 1877642
 dev_to_id: 1877642
 dev_to_url: https://dev.to/jetthoughts/simultaneous-work-on-the-feature-for-frontend-and-backend-developers-1463
 title: Simultaneous work on the feature for frontend and backend developers
@@ -12,9 +15,9 @@ tags:
 - continousdelivery
 canonical_url: https://jetthoughts.com/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simultaneous-work-on-feature-for-frontend-backend-developers-development-startup/cover.png
-slug: simultaneous-work-on-feature-for-frontend-backend-developers-development-startup
 metatags:
   image: cover.png
+slug: simultaneous-work-on-feature-for-frontend-backend-developers-development-startup
 ---
 
 ## Simultaneous work on the feature for frontend and backend developers

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-link-creation-in-rails-best-practices-unveiled-4eea
+source: dev_to
+remote_id: 2167580
 dev_to_id: 2167580
 dev_to_url: https://dev.to/jetthoughts/mastering-link-creation-in-rails-best-practices-unveiled-4eea
 title: 'Mastering Link Creation in Rails: Best Practices Unveiled'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/mastering-link-creation-in-rails-best-practices-unveiled/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-link-creation-in-rails-best-practices-unveiled/cover.jpeg
-slug: mastering-link-creation-in-rails-best-practices-unveiled
 metatags:
   image: cover.jpeg
+slug: mastering-link-creation-in-rails-best-practices-unveiled
 ---
 In the world of Ruby on Rails, creating URLs efficiently is crucial for developers. A recent discussion on Reddit's Rails community highlighted various methods for generating `link_to` URLs, showcasing preferences and best practices among seasoned developers. This article delves into the insights shared by the community, providing a comprehensive overview of the preferred techniques for creating links in Rails applications.
 

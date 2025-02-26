@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-we-hire-developers-at-jetthoughts-3gkp
+source: dev_to
+remote_id: 1877577
 dev_to_id: 1877577
 dev_to_url: https://dev.to/jetthoughts/how-we-hire-developers-at-jetthoughts-3gkp
 title: How We Hire Developers at JetThoughts
@@ -12,9 +15,9 @@ tags:
 - culture
 canonical_url: https://jetthoughts.com/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-we-hire-developers-at-jetthoughts-recruiting-hr/cover.jpg
-slug: how-we-hire-developers-at-jetthoughts-recruiting-hr
 metatags:
   image: cover.jpg
+slug: how-we-hire-developers-at-jetthoughts-recruiting-hr
 ---
 
 ## How We Hire Developers at JetThoughts

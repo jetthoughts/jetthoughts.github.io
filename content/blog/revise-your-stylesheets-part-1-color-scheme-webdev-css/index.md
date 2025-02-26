@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/revise-your-stylesheets-part-1-color-scheme-1a9k
+source: dev_to
+remote_id: 1880239
 dev_to_id: 1880239
 dev_to_url: https://dev.to/jetthoughts/revise-your-stylesheets-part-1-color-scheme-1a9k
 title: Revise Your Stylesheets. Part 1. Color Scheme
@@ -11,9 +14,9 @@ tags:
 - css
 canonical_url: https://jetthoughts.com/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/revise-your-stylesheets-part-1-color-scheme-webdev-css/cover.jpeg
-slug: revise-your-stylesheets-part-1-color-scheme-webdev-css
 metatags:
   image: cover.jpeg
+slug: revise-your-stylesheets-part-1-color-scheme-webdev-css
 ---
 
 ![](file_0.jpeg)

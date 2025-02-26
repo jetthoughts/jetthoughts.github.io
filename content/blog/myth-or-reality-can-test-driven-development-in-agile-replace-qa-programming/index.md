@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/myth-or-reality-can-test-driven-development-in-agile-replace-qa-3k22
+source: dev_to
+remote_id: 1877720
 dev_to_id: 1877720
 dev_to_url: https://dev.to/jetthoughts/myth-or-reality-can-test-driven-development-in-agile-replace-qa-3k22
 title: 'Myth or Reality: Can Test-Driven Development in Agile Replace QA?'
@@ -13,9 +16,9 @@ tags:
 - qa
 canonical_url: https://jetthoughts.com/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming/cover.png
-slug: myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming
 metatags:
   image: cover.png
+slug: myth-or-reality-can-test-driven-development-in-agile-replace-qa-programming
 ---
 ![](file_0.png)
 

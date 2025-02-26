@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/stimulus-keyboard-event-filter-4370
+source: dev_to
+remote_id: 1698810
 dev_to_id: 1698810
 dev_to_url: https://dev.to/jetthoughts/stimulus-keyboard-event-filter-4370
 title: Stimulus Keyboard Event Filter
@@ -8,7 +11,6 @@ edited_at: '2024-11-25T15:39:41Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/stimulus-keyboard-event-filter/
-cover_image: 
 slug: stimulus-keyboard-event-filter
 ---
 **What it was**

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/red-flags-to-watch-for-in-a-big-pr-when-to-stop-split-or-rework-1lgb
+source: dev_to
+remote_id: 1997095
 dev_to_id: 1997095
 dev_to_url: https://dev.to/jetthoughts/red-flags-to-watch-for-in-a-big-pr-when-to-stop-split-or-rework-1lgb
 title: 'Red Flags to Watch for in a Big PR: When to Stop, Split, or Rework'
@@ -13,9 +16,9 @@ tags:
 - devops
 canonical_url: https://jetthoughts.com/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/cover.png
-slug: red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity
 metatags:
   image: cover.png
+slug: red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity
 ---
 Big pull requests (PRs) can [cause delays and block progress](https://jetthoughts.com/blog/how-small-pr-improves-team-productivity-development/). As a developer, it's important to spot the signs that a PR is too large and needs to be split or reworked. Here are the key red flags to look out for and what to do about them.
 
@@ -67,6 +70,3 @@ Your PR touches too many project parts, from new features to bug fixes and refac
 When you identify these red flags, the first step is to **acknowledge the problem**. Decide to **stop working on the current PR**. Then, **schedule time to break the PR into smaller, more focused ones**.  
 Each smaller PR should handle only one issue or change and be merged separately. This approach speeds up reviews, reduces errors, and makes testing easier. More we shared in [What to Do When You Have a Big PR Blocking Other Issues](https://jetthoughts.com/blog/what-do-when-you-have-big-pr-blocking-other-issues-development-productivity/).
 
----
-
-Keeping PRs small and focused, your team can work faster and more efficiently. Remember to watch for these red flags to avoid delays and confusion.

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/simple-lead-generation-tactics-11np
+source: dev_to
+remote_id: 1852632
 dev_to_id: 1852632
 dev_to_url: https://dev.to/jetthoughts/simple-lead-generation-tactics-11np
 title: Simple Lead Generation Tactics
@@ -12,9 +15,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/simple-lead-generation-tactics-startup-sails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simple-lead-generation-tactics-startup-sails/cover.jpeg
-slug: simple-lead-generation-tactics-startup-sails
 metatags:
   image: cover.jpeg
+slug: simple-lead-generation-tactics-startup-sails
 ---
 ![Photo by [Denys Nevozhai](https://unsplash.com/photos/7nrsVjvALnA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/roads?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

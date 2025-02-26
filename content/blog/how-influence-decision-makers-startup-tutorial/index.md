@@ -1,20 +1,23 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-influence-decision-makers-1fmo
+source: dev_to
+remote_id: 2167568
 dev_to_id: 2167568
 dev_to_url: https://dev.to/jetthoughts/how-to-influence-decision-makers-1fmo
 title: How To Influence Decision Makers
 description: In today's fast-paced world, the ability to influence decision-makers is crucial for success. Whether...
 created_at: '2024-12-20T22:50:56Z'
-edited_at: '2024-12-20T22:56:48Z'
+edited_at: '2024-12-20T23:47:59Z'
 draft: false
 tags:
 - startup
 - tutorial
 - beginners
-canonical_url: https://dev.to/jetthoughts/how-to-influence-decision-makers-1fmo
+canonical_url: https://jetthoughts.com/blog/how-influence-decision-makers-startup-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-influence-decision-makers-startup-tutorial/cover.jpeg
-slug: how-influence-decision-makers-startup-tutorial
 metatags:
   image: cover.jpeg
+slug: how-influence-decision-makers-startup-tutorial
 ---
 In today's fast-paced world, the ability to influence decision-makers is crucial for success. Whether you're seeking a promotion, trying to secure funding for your startup, or aiming to leave a positive mark in your organization, understanding how to navigate these situations can set you apart. In this article, we explore key strategies to enhance your influence and create favorable outcomes.
 

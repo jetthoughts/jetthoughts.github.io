@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/anonymous-block-argument-in-ruby-bp1
+source: dev_to
+remote_id: 1739418
 dev_to_id: 1739418
 dev_to_url: https://dev.to/jetthoughts/anonymous-block-argument-in-ruby-bp1
 title: Anonymous block argument in Ruby
@@ -11,9 +14,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/anonymous-block-argument-in-ruby-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/anonymous-block-argument-in-ruby-tutorial/cover.png
-slug: anonymous-block-argument-in-ruby-tutorial
 metatags:
   image: cover.png
+slug: anonymous-block-argument-in-ruby-tutorial
 ---
 In the Ruby programming language, it is possible to use default block parameters instead of variables. This feature allows for more concise and expressive code.
 
@@ -52,8 +55,3 @@ In this case, it refers to the current element being iterated over.
 
 These features provide more flexibility and readability when working with blocks in Ruby. They allow for more concise code and reduce the need for explicit variable declarations.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

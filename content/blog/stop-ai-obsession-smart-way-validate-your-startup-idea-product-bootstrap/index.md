@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/stop-the-ai-obsession-the-smart-way-to-validate-your-startup-idea-1a33
+source: dev_to
+remote_id: 2057569
 dev_to_id: 2057569
 dev_to_url: https://dev.to/jetthoughts/stop-the-ai-obsession-the-smart-way-to-validate-your-startup-idea-1a33
 title: 'Stop the AI Obsession: The Smart Way to Validate Your Startup Idea'
@@ -13,9 +16,9 @@ tags:
 - startup
 canonical_url: https://jetthoughts.com/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/cover.png
-slug: stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap
 metatags:
   image: cover.png
+slug: stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap
 ---
 Many founders today fixate on AI. They think adding AI to their product will draw users in droves, and they believe AI is the magic ingredient for success. But this obsession can mislead. It distracts from the core task of building a product that solves real customer problems.
 
@@ -153,8 +156,3 @@ Remember, AI is not a silver bullet. It's a powerful tool when used correctly—
 
 Stay focused on what matters most—delivering value to your customers.
 
----
-
-Have an idea you want to validate? Don't get lost in the hype of AI. Start by connecting with your customers.
-
-If you're unsure where to begin, reach out. I'm here to help. Let's discuss simple, effective ways to prove your concept. Together, we can build a solid foundation before bringing AI into the mix.

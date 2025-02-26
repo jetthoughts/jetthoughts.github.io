@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-jetthoughts-implements-joels-test-497h
+source: dev_to
+remote_id: 1877555
 dev_to_id: 1877555
 dev_to_url: https://dev.to/jetthoughts/how-jetthoughts-implements-joels-test-497h
 title: How JetThoughts implements Joel’s test?
@@ -13,9 +16,9 @@ tags:
 - startup
 canonical_url: https://jetthoughts.com/blog/how-jetthoughts-implements-joels-test-deveopment-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-jetthoughts-implements-joels-test-deveopment-management/cover.jpeg
-slug: how-jetthoughts-implements-joels-test-deveopment-management
 metatags:
   image: cover.jpeg
+slug: how-jetthoughts-implements-joels-test-deveopment-management
 ---
 ![Unsplash Photo: [Matt Briney](http://unsplash.com/@mbriney?utm_campaign=photographer-credit)](file_0.jpeg)
 

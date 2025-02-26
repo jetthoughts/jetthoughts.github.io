@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-live-in-the-social-media-matrix-35d0
+source: dev_to
+remote_id: 2181492
 dev_to_id: 2181492
 dev_to_url: https://dev.to/jetthoughts/how-to-live-in-the-social-media-matrix-35d0
 title: How To Live In The Social Media Matrix
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/how-live-in-social-media-matrix/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-live-in-social-media-matrix/cover.jpeg
-slug: how-live-in-social-media-matrix
 metatags:
   image: cover.jpeg
+slug: how-live-in-social-media-matrix
 ---
 In today’s digital age, we find ourselves entangled in a web of social media that often feels like a modern-day Matrix. Just like in the iconic film, where humans unknowingly serve as batteries for machines, we too are providing energy—our content—to powerful social media companies. This article explores the implications of our online presence and how we can navigate this landscape wisely.
 

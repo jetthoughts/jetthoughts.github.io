@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/innovative-ruby-on-rails-projects-to-boost-your-development-skills-in-2024-1je9
+source: dev_to
+remote_id: 2180768
 dev_to_id: 2180768
 dev_to_url: https://dev.to/jetthoughts/innovative-ruby-on-rails-projects-to-boost-your-development-skills-in-2024-1je9
 title: Innovative Ruby on Rails Projects to Boost Your Development Skills in 2024
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/cover.jpeg
-slug: innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024
 metatags:
   image: cover.jpeg
+slug: innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024
 ---
 Ruby on Rails, often just called Rails, is a popular framework for building web applications. If you're looking to sharpen your skills in 2024, diving into innovative Rails projects can be a game-changer. Whether you're a newbie or a seasoned developer, these projects can offer fresh challenges and learning opportunities. This article will explore some exciting projects that can help you grow your development skills using Ruby on Rails.
 

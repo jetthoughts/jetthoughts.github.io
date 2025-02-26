@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-evolution-of-engineering-leadership-in-berlin-insights-from-a-vp-engineerings-journey-1kgo
+source: dev_to
+remote_id: 2261958
 dev_to_id: 2261958
 dev_to_url: https://dev.to/jetthoughts/the-evolution-of-engineering-leadership-in-berlin-insights-from-a-vp-engineerings-journey-1kgo
 title: 'The Evolution of Engineering Leadership in Berlin: Insights from a VP Engineering''s Journey'
@@ -13,9 +16,9 @@ tags:
 - devops
 canonical_url: https://dev.to/jetthoughts/the-evolution-of-engineering-leadership-in-berlin-insights-from-a-vp-engineerings-journey-1kgo
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/evolution-of-engineering-leadership-in-berlin-insights-from-vp-engineerings-journey-product-management/cover.jpg
-slug: evolution-of-engineering-leadership-in-berlin-insights-from-vp-engineerings-journey-product-management
 metatags:
   image: cover.jpg
+slug: evolution-of-engineering-leadership-in-berlin-insights-from-vp-engineerings-journey-product-management
 ---
 With Berlin's startup ecosystem growing 28% in the first half of 2024, the path to engineering leadership is transforming alongside this expansion. As part of my ongoing exploration of technical leadership in Berlin, I recently had an insightful conversation with [Matan Eylon, VP of Engineering](https://www.linkedin.com/in/mataneylon/) at [Nostos Genomics](https://www.nostos-genomics.com/). His journey from test automation specialist to executive leadership offers valuable perspectives on how engineering management is evolving in Germany's leading innovation hub.
 
@@ -134,6 +137,3 @@ The evolution of engineering leadership in Berlin represents a unique blend of t
 
 For those aspiring to technical leadership roles in Berlin, the path forward requires a combination of technical expertise, people skills, and strategic thinking. The city's treatment of engineering management as a distinct profession, coupled with its strong market growth, creates unique opportunities for career development and impact.
 
----
-
-*[Paul Keen](https://www.linkedin.com/in/paul-keen/) is a technical leader and consultant exploring engineering leadership practices in Berlin. This post is part of a series examining how different organizations and leaders approach technical leadership in Berlin's growing tech ecosystem.*

@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/now-anyone-can-code-how-ai-agents-can-build-your-whole-app-3146
+source: dev_to
+remote_id: 2258704
 dev_to_id: 2258704
 dev_to_url: https://dev.to/jetthoughts/now-anyone-can-code-how-ai-agents-can-build-your-whole-app-3146
 title: 'Now Anyone Can Code: How AI Agents Can Build Your Whole App'
 description: Explore how Replit Agent is revolutionizing coding by allowing anyone to build apps with simple prompts. Discover the technology behind this AI tool and its potential to democratize software development.
 created_at: '2025-02-04T13:08:04Z'
-edited_at:
+edited_at: '2025-02-04T13:08:57Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/now-anyone-can-code-how-ai-agents-can-build-your-whole-app-3146
+canonical_url: https://jetthoughts.com/blog/now-anyone-can-code-how-ai-agents-build-your-whole-app/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/now-anyone-can-code-how-ai-agents-build-your-whole-app/cover.jpeg
-slug: now-anyone-can-code-how-ai-agents-build-your-whole-app
 metatags:
   image: cover.jpeg
+slug: now-anyone-can-code-how-ai-agents-build-your-whole-app
 ---
 [![Now Anyone Can Code: How AI Agents Can Build Your Whole App](file_0.jpg)](https://www.youtube.com/watch?v=jbIQfoldLag)
 

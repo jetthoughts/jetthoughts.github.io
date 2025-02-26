@@ -1,20 +1,23 @@
 ---
+remote_url: https://dev.to/jetthoughts/stop-looking-for-product-market-fit-4ic7
+source: dev_to
+remote_id: 2167036
 dev_to_id: 2167036
 dev_to_url: https://dev.to/jetthoughts/stop-looking-for-product-market-fit-4ic7
 title: Stop Looking for Product Market Fit
 description: Everyone's obsessed with product-market fit. As if it's some magical moment when confetti falls from...
 created_at: '2024-12-20T15:21:45Z'
-edited_at:
+edited_at: '2024-12-20T15:28:06Z'
 draft: false
 tags:
 - startup
 - tutorial
 - design
-canonical_url: https://dev.to/jetthoughts/stop-looking-for-product-market-fit-4ic7
+canonical_url: https://jetthoughts.com/blog/stop-looking-for-product-market-fit-startup-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stop-looking-for-product-market-fit-startup-tutorial/cover.png
-slug: stop-looking-for-product-market-fit-startup-tutorial
 metatags:
   image: cover.png
+slug: stop-looking-for-product-market-fit-startup-tutorial
 ---
 Everyone's obsessed with product-market fit. As if it's some magical moment when confetti falls from the sky and Mark Andreessen sends you a congratulatory text.
 

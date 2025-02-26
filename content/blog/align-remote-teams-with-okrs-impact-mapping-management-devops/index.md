@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/align-remote-teams-with-okrs-and-impact-mapping-3g97
+source: dev_to
+remote_id: 1556678
 dev_to_id: 1556678
 dev_to_url: https://dev.to/jetthoughts/align-remote-teams-with-okrs-and-impact-mapping-3g97
 title: Align remote teams with OKRs and Impact Mapping
@@ -11,9 +14,9 @@ tags:
 - devops
 canonical_url: https://jetthoughts.com/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/align-remote-teams-with-okrs-impact-mapping-management-devops/cover.png
-slug: align-remote-teams-with-okrs-impact-mapping-management-devops
 metatags:
   image: cover.png
+slug: align-remote-teams-with-okrs-impact-mapping-management-devops
 ---
 In today's fast-paced business environment, remote distributed teams are becoming increasingly common, especially among pre-seed startups.
 
@@ -74,8 +77,3 @@ Embracing these techniques will not only lead to a more efficient development pr
 
 So, why not give it a try and witness the positive impact on your startup's growth?
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

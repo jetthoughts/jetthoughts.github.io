@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/optimizing-search-performance-with-elastic-searchs-profile-api-5fjl
+source: dev_to
+remote_id: 2166649
 dev_to_id: 2166649
 dev_to_url: https://dev.to/jetthoughts/optimizing-search-performance-with-elastic-searchs-profile-api-5fjl
 title: Optimizing Search Performance with Elastic Search's Profile API
 description: Learn how to optimize search performance using Elastic Search's Profile API, including tips on limiting fields and avoiding wildcard searches.
 created_at: '2024-12-20T09:58:00Z'
-edited_at:
+edited_at: '2024-12-20T10:30:01Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/optimizing-search-performance-with-elastic-searchs-profile-api-5fjl
+canonical_url: https://jetthoughts.com/blog/optimizing-search-performance-with-elastic-searchs-profile-api/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/optimizing-search-performance-with-elastic-searchs-profile-api/cover.jpeg
-slug: optimizing-search-performance-with-elastic-searchs-profile-api
 metatags:
   image: cover.jpeg
+slug: optimizing-search-performance-with-elastic-searchs-profile-api
 ---
 Recently, a production application faced significant delays in query times, with some searches taking up to 60 seconds. The application utilizes Elastic Search for customer searches, but as the database has grown over the years, the performance has suffered. This article explores how the Profile API in Elastic Search can be leveraged to diagnose and improve query performance.
 

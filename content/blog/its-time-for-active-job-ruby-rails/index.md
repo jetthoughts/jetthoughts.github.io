@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/its-time-for-active-job-eph
+source: dev_to
+remote_id: 1880305
 dev_to_id: 1880305
 dev_to_url: https://dev.to/jetthoughts/its-time-for-active-job-eph
 title: It’s Time For Active Job
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/its-time-for-active-job-ruby-rails/cover.jpeg
-slug: its-time-for-active-job-ruby-rails
 metatags:
   image: cover.jpeg
+slug: its-time-for-active-job-ruby-rails
 ---
 
 ## It’s Time For Active Job

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-user-retention-insights-from-startup-school-fl0
+source: dev_to
+remote_id: 2184395
 dev_to_id: 2184395
 dev_to_url: https://dev.to/jetthoughts/mastering-user-retention-insights-from-startup-school-fl0
 title: 'Mastering User Retention: Insights from Startup School'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/mastering-user-retention-insights-from-startup-school/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-user-retention-insights-from-startup-school/cover.jpeg
-slug: mastering-user-retention-insights-from-startup-school
 metatags:
   image: cover.jpeg
+slug: mastering-user-retention-insights-from-startup-school
 ---
 In the world of startups, understanding user retention is crucial for success. In a recent episode of Startup School, David Lieb, a partner at Y Combinator, delves into the concept of **cohort retention**. This method helps founders track how many new users continue to engage with their product over time, providing a clear picture of whether they’ve created something people truly want.
 

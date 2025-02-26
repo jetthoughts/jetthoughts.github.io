@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/delayedjob-and-pg-error-no-connection-to-server-21e4
+source: dev_to
+remote_id: 1880232
 dev_to_id: 1880232
 dev_to_url: https://dev.to/jetthoughts/delayedjob-and-pg-error-no-connection-to-server-21e4
 title: DelayedJob and PG Error No Connection to Server
@@ -12,9 +15,9 @@ tags:
 - postgres
 canonical_url: https://jetthoughts.com/blog/delayedjob-pg-error-no-connection-server-rails-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/delayedjob-pg-error-no-connection-server-rails-ruby/cover.png
-slug: delayedjob-pg-error-no-connection-server-rails-ruby
 metatags:
   image: cover.png
+slug: delayedjob-pg-error-no-connection-server-rails-ruby
 ---
 
 ## DelayedJob and PG Error No Connection to Server

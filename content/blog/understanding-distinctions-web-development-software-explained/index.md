@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/understanding-the-distinctions-web-development-and-software-development-explained-4eh3
+source: dev_to
+remote_id: 2223826
 dev_to_id: 2223826
 dev_to_url: https://dev.to/jetthoughts/understanding-the-distinctions-web-development-and-software-development-explained-4eh3
 title: 'Understanding the Distinctions: Web Development and Software Development Explained'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/understanding-distinctions-web-development-software-explained/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/understanding-distinctions-web-development-software-explained/cover.jpeg
-slug: understanding-distinctions-web-development-software-explained
 metatags:
   image: cover.jpeg
+slug: understanding-distinctions-web-development-software-explained
 ---
 When it comes to tech careers, web development and software development often get tossed around like they're the same thing. But they're not. Web development is like crafting the storefront of a shop, making it look good and work well for customers. Software development, on the other hand, is like building tools and applications that people use, whether on a computer, phone, or other devices. Both are super important in the tech world, but they require different skills and focus on different things. Let's dive into what sets them apart and what you need to know if you're thinking about a career in either field.
 

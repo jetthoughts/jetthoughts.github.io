@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/5-free-tools-to-make-the-sales-process-easier-3ad4
+source: dev_to
+remote_id: 1852719
 dev_to_id: 1852719
 dev_to_url: https://dev.to/jetthoughts/5-free-tools-to-make-the-sales-process-easier-3ad4
 title: 5 Free tools to make the sales process easier
@@ -12,9 +15,9 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/5-free-tools-make-sales-process-easier-leadgeneration/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/5-free-tools-make-sales-process-easier-leadgeneration/cover.jpeg
-slug: 5-free-tools-make-sales-process-easier-leadgeneration
 metatags:
   image: cover.jpeg
+slug: 5-free-tools-make-sales-process-easier-leadgeneration
 ---
 ![Photo by Jesse Orico on [Unsplash](https://unsplash.com/search/photos/writing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

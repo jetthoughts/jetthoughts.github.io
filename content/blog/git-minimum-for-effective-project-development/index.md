@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/git-minimum-for-effective-project-development-2ce1
+source: dev_to
+remote_id: 1853605
 dev_to_id: 1853605
 dev_to_url: https://dev.to/jetthoughts/git-minimum-for-effective-project-development-2ce1
 title: Git minimum for effective project development
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/git-minimum-for-effective-project-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/git-minimum-for-effective-project-development/cover.png
-slug: git-minimum-for-effective-project-development
 metatags:
   image: cover.png
+slug: git-minimum-for-effective-project-development
 ---
 > For beginners who are not familiar with [Git](https://git-scm.com/) or [GitFlow](https://datasift.github.io/gitflow/), we grabbed the most common commands to be effective from the first day.
 

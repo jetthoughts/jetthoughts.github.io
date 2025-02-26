@@ -1,21 +1,24 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-your-startup-needs-a-single-source-of-truth-and-how-to-create-it-2f7i
+source: dev_to
+remote_id: 2204021
 dev_to_id: 2204021
 dev_to_url: https://dev.to/jetthoughts/why-your-startup-needs-a-single-source-of-truth-and-how-to-create-it-2f7i
 title: Why Your Startup Needs a Single Source of Truth (And How to Create It)
 description: 'In my years helping startups as a technical leader, one pattern emerges clearly: most early-stage...'
 created_at: '2025-01-13T13:05:34Z'
-edited_at:
+edited_at: '2025-01-13T13:09:18Z'
 draft: false
 tags:
 - startup
 - tutorial
 - management
 - programming
-canonical_url: https://dev.to/jetthoughts/why-your-startup-needs-a-single-source-of-truth-and-how-to-create-it-2f7i
+canonical_url: https://jetthoughts.com/blog/why-your-startup-needs-single-source-of-truth-how-create-it-tutorial/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-your-startup-needs-single-source-of-truth-how-create-it-tutorial/cover.png
-slug: why-your-startup-needs-single-source-of-truth-how-create-it-tutorial
 metatags:
   image: cover.png
+slug: why-your-startup-needs-single-source-of-truth-how-create-it-tutorial
 ---
 In my years helping startups as a technical leader, one pattern emerges clearly: most early-stage failures stem from misalignment, not technical problems. GitHub's own journey illustrates this perfectly. They succeeded not because they had the best technology, but because they mastered organization-wide alignment from day one.
 

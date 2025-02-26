@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/new-in-ruby-on-rails-72-development-containers-configuration-a57
+source: dev_to
+remote_id: 1872098
 dev_to_id: 1872098
 dev_to_url: https://dev.to/jetthoughts/new-in-ruby-on-rails-72-development-containers-configuration-a57
 title: 'New in Ruby on Rails 7.2: Development Containers Configuration'
@@ -13,9 +16,9 @@ tags:
 - changelog
 canonical_url: https://jetthoughts.com/blog/new-in-ruby-on-rails-72-development-containers-configuration/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-in-ruby-on-rails-72-development-containers-configuration/cover.png
-slug: new-in-ruby-on-rails-72-development-containers-configuration
 metatags:
   image: cover.png
+slug: new-in-ruby-on-rails-72-development-containers-configuration
 ---
 
 Development container is a full-featured coding environment. **Rails 7.2** introduces configurations for these containers in your application, including a `.devcontainer` folder with `Dockerfile`, `docker-compose.yml`, and `devcontainer.json`.

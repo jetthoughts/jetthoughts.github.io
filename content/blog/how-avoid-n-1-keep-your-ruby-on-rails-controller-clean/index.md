@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-avoid-n-1-and-keep-your-ruby-on-rails-controller-clean-bb
+source: dev_to
+remote_id: 1907419
 dev_to_id: 1907419
 dev_to_url: https://dev.to/jetthoughts/how-to-avoid-n-1-and-keep-your-ruby-on-rails-controller-clean-bb
 title: How to avoid N + 1 and keep your Ruby on Rails controller clean
@@ -13,9 +16,9 @@ tags:
 - designpatterns
 canonical_url: https://jetthoughts.com/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/cover.png
-slug: how-avoid-n-1-keep-your-ruby-on-rails-controller-clean
 metatags:
   image: cover.png
+slug: how-avoid-n-1-keep-your-ruby-on-rails-controller-clean
 ---
 
 > ## Where to put the logic related to database queries optimization in a Ruby on Rails application. We want to answer this question by showing you the ‘Facade’ approach.

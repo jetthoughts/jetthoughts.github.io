@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-is-it-hard-to-find-a-great-developer-on-upwork-and-other-freelance-platforms-37aj
+source: dev_to
+remote_id: 1853478
 dev_to_id: 1853478
 dev_to_url: https://dev.to/jetthoughts/why-is-it-hard-to-find-a-great-developer-on-upwork-and-other-freelance-platforms-37aj
 title: Why is it hard to find a great developer on Upwork and other freelance platforms?
@@ -12,9 +15,9 @@ tags:
 - recruiting
 canonical_url: https://jetthoughts.com/blog/why-it-hard-find-great-developer-on-upwork-other-freelance-platforms-senior/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-it-hard-find-great-developer-on-upwork-other-freelance-platforms-senior/cover.jpeg
-slug: why-it-hard-find-great-developer-on-upwork-other-freelance-platforms-senior
 metatags:
   image: cover.jpeg
+slug: why-it-hard-find-great-developer-on-upwork-other-freelance-platforms-senior
 ---
 Finding good developers is a challenge. Nowadays, professionals are rare. Not all developers get to this stage and the ones that do are in demand. They don’t have much trouble finding work, they have been working for stable customers for years …
 

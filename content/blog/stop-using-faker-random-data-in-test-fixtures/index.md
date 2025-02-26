@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/stop-using-faker-and-random-data-in-the-test-fixtures-4cg7
+source: dev_to
+remote_id: 1902786
 dev_to_id: 1902786
 dev_to_url: https://dev.to/jetthoughts/stop-using-faker-and-random-data-in-the-test-fixtures-4cg7
 title: Stop using Faker and random data in the test fixtures.
@@ -13,9 +16,9 @@ tags:
 - testing
 canonical_url: https://jetthoughts.com/blog/stop-using-faker-random-data-in-test-fixtures/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stop-using-faker-random-data-in-test-fixtures/cover.png
-slug: stop-using-faker-random-data-in-test-fixtures
 metatags:
   image: cover.png
+slug: stop-using-faker-random-data-in-test-fixtures
 ---
 ![Image description](file_0.png)
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-make-small-valuable-async-standups-3cc7
+source: dev_to
+remote_id: 470562
 dev_to_id: 470562
 dev_to_url: https://dev.to/jetthoughts/how-to-make-small-valuable-async-standups-3cc7
 title: How to make small, valuable async standups
@@ -13,9 +16,9 @@ tags:
 - standup
 canonical_url: https://jetthoughts.com/blog/how-make-small-valuable-async-standups-productivity-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-make-small-valuable-async-standups-productivity-development/cover.png
-slug: how-make-small-valuable-async-standups-productivity-development
 metatags:
   image: cover.png
+slug: how-make-small-valuable-async-standups-productivity-development
 ---
 ![Alt Text](file_0.png)
 *How to share the current status of the development especially working remotely? How to make the message more understandable, valuable and short at the same time? There are some basic requirements for standups we defined from our experience.*

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/automating-ssl-certificate-generation-with-traefik-and-kamal-a-step-by-step-guide-27a3
+source: dev_to
+remote_id: 1966362
 dev_to_id: 1966362
 dev_to_url: https://dev.to/jetthoughts/automating-ssl-certificate-generation-with-traefik-and-kamal-a-step-by-step-guide-27a3
 title: 'Automating SSL Certificate Generation with Traefik and Kamal: A Step-by-Step Guide'
@@ -9,9 +12,9 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/cover.png
-slug: automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide
 metatags:
   image: cover.png
+slug: automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide
 ---
 In this guide, we'll explore how to configure Traefik with Kamal to automatically obtain and manage SSL certificates for your Ruby on Rails application. We'll break down a working configuration and explain each line to help you understand how to set up a secure deployment environment.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-are-the-next-steps-when-your-project-is-failing-1ai8
+source: dev_to
+remote_id: 462546
 dev_to_id: 462546
 dev_to_url: https://dev.to/jetthoughts/what-are-the-next-steps-when-your-project-is-failing-1ai8
 title: What are the next steps when your project is failing?
@@ -10,9 +13,9 @@ tags:
 - management
 canonical_url: https://jetthoughts.com/blog/what-are-next-steps-when-your-project-failing-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-are-next-steps-when-your-project-failing-management/cover.png
-slug: what-are-next-steps-when-your-project-failing-management
 metatags:
   image: cover.png
+slug: what-are-next-steps-when-your-project-failing-management
 ---
 Projects fail for all kinds of reasons. Customers can change their objectives, key team members can leave for other companies, communication is pure, budgets can disappear, materials can be delayed, and priorities can go un-managed.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-yc-was-created-with-jessica-livingston-3a0j
+source: dev_to
+remote_id: 2214216
 dev_to_id: 2214216
 dev_to_url: https://dev.to/jetthoughts/how-yc-was-created-with-jessica-livingston-3a0j
 title: How YC Was Created With Jessica Livingston
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/how-yc-was-created-with-jessica-livingston/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-yc-was-created-with-jessica-livingston/cover.jpeg
-slug: how-yc-was-created-with-jessica-livingston
 metatags:
   image: cover.jpeg
+slug: how-yc-was-created-with-jessica-livingston
 ---
 In a recent conversation at the Lightcone podcast, Jessica Livingston, one of the co-founders of Y Combinator (YC), shared her insights on the early days of YC and the unique culture that has shaped it into a powerhouse for startups. Her stories reflect the passion and determination that fueled the creation of YC back in 2005.
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-get-remote-teams-to-high-perform-555g
+source: dev_to
+remote_id: 1877574
 dev_to_id: 1877574
 dev_to_url: https://dev.to/jetthoughts/how-to-get-remote-teams-to-high-perform-555g
 title: How to Get Remote Teams to High Perform
@@ -13,9 +16,9 @@ tags:
 - remote
 canonical_url: https://jetthoughts.com/blog/how-get-remote-teams-high-perform-agile-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-get-remote-teams-high-perform-agile-development/cover.jpeg
-slug: how-get-remote-teams-high-perform-agile-development
 metatags:
   image: cover.jpeg
+slug: how-get-remote-teams-high-perform-agile-development
 ---
 
 ## How to Get Remote Teams to High Perform

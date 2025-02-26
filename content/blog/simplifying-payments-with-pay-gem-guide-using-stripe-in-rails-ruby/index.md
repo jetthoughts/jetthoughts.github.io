@@ -1,21 +1,24 @@
 ---
+remote_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide-to-using-stripe-in-rails-12ga
+source: dev_to
+remote_id: 2133274
 dev_to_id: 2133274
 dev_to_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide-to-using-stripe-in-rails-12ga
 title: 'Simplifying Payments with Pay gem: A Guide to Using Stripe in Rails'
 description: Payment integration can be challenging when building web applications. The Pay gem makes handling...
 created_at: '2024-12-03T09:36:14Z'
-edited_at:
+edited_at: '2024-12-12T14:07:22Z'
 draft: false
 tags:
 - ruby
 - rails
 - tutorial
 - stripe
-canonical_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide-to-using-stripe-in-rails-12ga
+canonical_url: https://jetthoughts.com/blog/simplifying-payments-with-pay-gem-guide-using-stripe-in-rails-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplifying-payments-with-pay-gem-guide-using-stripe-in-rails-ruby/cover.jpeg
-slug: simplifying-payments-with-pay-gem-guide-using-stripe-in-rails-ruby
 metatags:
   image: cover.jpeg
+slug: simplifying-payments-with-pay-gem-guide-using-stripe-in-rails-ruby
 ---
 Payment integration can be challenging when building web applications. The Pay gem makes handling subscriptions and payments a whole lot easier in Rails applications. It integrates applications with Stripe, Paddle, Braintree, or Lemon Squeezy to manage payments. In this article, we will go through one and, in practice, explain how it works and then set it up using a simple example.
 

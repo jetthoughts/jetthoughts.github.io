@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/jekyll-github-pages-forestryio-3f24
+source: dev_to
+remote_id: 1880471
 dev_to_id: 1880471
 dev_to_url: https://dev.to/jetthoughts/jekyll-github-pages-forestryio-3f24
 title: Jekyll + GitHub Pages + Forestry.io
@@ -12,9 +15,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/jekyll-github-pages-forestryio-jekyl/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jekyll-github-pages-forestryio-jekyl/cover.jpeg
-slug: jekyll-github-pages-forestryio-jekyl
 metatags:
   image: cover.jpeg
+slug: jekyll-github-pages-forestryio-jekyl
 ---
 I’ve recently migrated the [jetthoughts.com](https://www.jetthoughts.com/) website on [Jekyll](https://jekyllrb.com/) to [Forestry.io](https://forestry.io/). I’d like to share my process with you, as well as a few tips about building a Jekyll site with GitHub Pages and [Forestry.io](https://forestry.io/).
 

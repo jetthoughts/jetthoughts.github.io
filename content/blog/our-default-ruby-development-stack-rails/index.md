@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/our-default-ruby-development-stack-72k
+source: dev_to
+remote_id: 1880251
 dev_to_id: 1880251
 dev_to_url: https://dev.to/jetthoughts/our-default-ruby-development-stack-72k
 title: Our Default Ruby Development Stack
@@ -12,9 +15,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/our-default-ruby-development-stack-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/our-default-ruby-development-stack-rails/cover.jpeg
-slug: our-default-ruby-development-stack-rails
 metatags:
   image: cover.jpeg
+slug: our-default-ruby-development-stack-rails
 ---
 
 ## Our Default Ruby Development Stack

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/effective-project-onboarding-checklist-42k
+source: dev_to
+remote_id: 1853643
 dev_to_id: 1853643
 dev_to_url: https://dev.to/jetthoughts/effective-project-onboarding-checklist-42k
 title: Effective project onboarding checklist
@@ -13,9 +16,9 @@ tags:
 - career
 canonical_url: https://jetthoughts.com/blog/effective-project-onboarding-checklist-management-productivity/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/effective-project-onboarding-checklist-management-productivity/cover.jpeg
-slug: effective-project-onboarding-checklist-management-productivity
 metatags:
   image: cover.jpeg
+slug: effective-project-onboarding-checklist-management-productivity
 ---
 To avoid the onboarding slip and remove expectations and misunderstandings, the **[JetThoughts](https://www.jetthoughts.com)** team defined a checklist of items to clarify. We will discuss how to start the project, but we won't discuss the onboarding process.
 
@@ -144,6 +147,3 @@ For the first time, it is better to start with simple, small, and precise tasks 
 
 This list can be modified during the process and adapted to specific requirements. However, at the beginning of cooperation, it could help to lay a solid foundation of friendly and professional relations and find the understanding between the customer and performer.
 
----
-
-**Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).

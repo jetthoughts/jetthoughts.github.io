@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/what-are-the-steps-of-an-automation-test-plan-3l7k
+source: dev_to
+remote_id: 1852952
 dev_to_id: 1852952
 dev_to_url: https://dev.to/jetthoughts/what-are-the-steps-of-an-automation-test-plan-3l7k
 title: What are the steps of an Automation Test Plan?
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/cover.jpeg
-slug: what-are-steps-of-an-automation-test-plan-qualitycontrol-testing
 metatags:
   image: cover.jpeg
+slug: what-are-steps-of-an-automation-test-plan-qualitycontrol-testing
 ---
 ## Step 1: Defining the Scope of Automation
 
@@ -67,7 +70,3 @@ KPIs are indicators, not end-states. They indicate where strong and weak points 
 
 If you enjoyed this post, we recommend reading this one **[Onboarding Tests into Legacy Project](https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/)**
 
----
-
-**Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  *If you enjoyed this story, we recommend reading our latest and trending tech stories.*

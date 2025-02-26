@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/cleaning-routines-to-keep-your-project-without-bugs-167f
+source: dev_to
+remote_id: 1852630
 dev_to_id: 1852630
 dev_to_url: https://dev.to/jetthoughts/cleaning-routines-to-keep-your-project-without-bugs-167f
 title: Cleaning routines to keep your project without bugs
@@ -12,9 +15,9 @@ tags:
 - issues
 canonical_url: https://jetthoughts.com/blog/cleaning-routines-keep-your-project-without-bugs-agile/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cleaning-routines-keep-your-project-without-bugs-agile/cover.jpeg
-slug: cleaning-routines-keep-your-project-without-bugs-agile
 metatags:
   image: cover.jpeg
+slug: cleaning-routines-keep-your-project-without-bugs-agile
 ---
 ![Photo by [Oliver Hale](https://unsplash.com/@4themorningshoot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/clean?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

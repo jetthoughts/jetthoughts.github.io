@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/prepare-the-pull-request-before-asking-to-review-2o87
+source: dev_to
+remote_id: 1852617
 dev_to_id: 1852617
 dev_to_url: https://dev.to/jetthoughts/prepare-the-pull-request-before-asking-to-review-2o87
 title: Prepare the Pull Request before asking to Review
@@ -13,9 +16,9 @@ tags:
 - workflow
 canonical_url: https://jetthoughts.com/blog/prepare-pull-request-before-asking-review-git-pullrequest/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/prepare-pull-request-before-asking-review-git-pullrequest/cover.png
-slug: prepare-pull-request-before-asking-review-git-pullrequest
 metatags:
   image: cover.png
+slug: prepare-pull-request-before-asking-review-git-pullrequest
 ---
 How to avoid being the victim of an open loop trying to get your Pull Request verified while working asynchronously? In [JetThoughts](https://www.jetthoughts.com/), we set some rules. They help optimize the process of verifying Pull Requests for the remote team.
 
@@ -86,10 +89,3 @@ To speed up verification, authors should lead their pull requests. Use clear cal
 
 This checklist helps coworkers avoid bad code and mistakes, saving time during reviews. Issues caught by reviewers lower team productivity. Honest feedback motivates us to improve our code.
 
----
-
-**Sergey Sviridov** works as a software engineer at [JetThoughts](https://www.jetthoughts.com/). You can connect with him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
-
-**Andriy Parashchuk** is also a software engineer at [JetThoughts](https://www.jetthoughts.com/). You can find him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
-
-> *If you liked this story, we recommend our [latest tech stories](https://www.jetthoughts.com/blog/)*

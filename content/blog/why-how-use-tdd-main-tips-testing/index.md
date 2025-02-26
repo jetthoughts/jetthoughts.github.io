@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-and-how-to-use-tdd-main-tips-4mcc
+source: dev_to
+remote_id: 539418
 dev_to_id: 539418
 dev_to_url: https://dev.to/jetthoughts/why-and-how-to-use-tdd-main-tips-4mcc
 title: Why and how to use TDD. Main tips
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/why-how-use-tdd-main-tips-testing/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-how-use-tdd-main-tips-testing/cover.jpg
-slug: why-how-use-tdd-main-tips-testing
 metatags:
   image: cover.jpg
+slug: why-how-use-tdd-main-tips-testing
 ---
 
 *How do I start developing the component from scratch? How do I know what architecture it should have? What parameters should the component accept? Could the TDD usage help find the answers?*

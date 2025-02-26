@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/effortless-code-conventions-review-for-pull-request-changes-4p4k
+source: dev_to
+remote_id: 1880211
 dev_to_id: 1880211
 dev_to_url: https://dev.to/jetthoughts/effortless-code-conventions-review-for-pull-request-changes-4p4k
 title: Effortless Code Conventions Review for Pull Request Changes
@@ -13,9 +16,9 @@ tags:
 - codereview
 canonical_url: https://jetthoughts.com/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/cover.jpeg
-slug: effortless-code-conventions-review-for-pull-request-changes-ruby-ci
 metatags:
   image: cover.jpeg
+slug: effortless-code-conventions-review-for-pull-request-changes-ruby-ci
 ---
 
 

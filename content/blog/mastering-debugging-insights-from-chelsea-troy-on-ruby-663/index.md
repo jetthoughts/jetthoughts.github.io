@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-debugging-insights-from-chelsea-troy-on-ruby-663-3ngf
+source: dev_to
+remote_id: 2190242
 dev_to_id: 2190242
 dev_to_url: https://dev.to/jetthoughts/mastering-debugging-insights-from-chelsea-troy-on-ruby-663-3ngf
 title: 'Mastering Debugging: Insights from Chelsea Troy on RUBY 663'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/mastering-debugging-insights-from-chelsea-troy-on-ruby-663/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-debugging-insights-from-chelsea-troy-on-ruby-663/cover.jpeg
-slug: mastering-debugging-insights-from-chelsea-troy-on-ruby-663
 metatags:
   image: cover.jpeg
+slug: mastering-debugging-insights-from-chelsea-troy-on-ruby-663
 ---
 In a recent episode of Ruby Rogues, Chelsea Troy shared her expertise on debugging, emphasizing the importance of honing one's skills to become a proficient troubleshooter. The session, titled "Black-Belt Debugging with Chelsea Troy - RUBY 663," provided listeners with valuable insights into improving their debugging techniques and instincts.
 

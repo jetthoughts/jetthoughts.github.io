@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/why-and-when-to-use-waterfall-vs-agile-a-business-perspective-1nk8
+source: dev_to
+remote_id: 1885724
 dev_to_id: 1885724
 dev_to_url: https://dev.to/jetthoughts/why-and-when-to-use-waterfall-vs-agile-a-business-perspective-1nk8
 title: 'Why and When to Use Waterfall vs. Agile: A Business Perspective'
@@ -12,9 +15,9 @@ tags:
 - startup
 canonical_url: https://jetthoughts.com/blog/why-when-use-waterfall-vs-agile-business-perspective-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/why-when-use-waterfall-vs-agile-business-perspective-management/cover.png
-slug: why-when-use-waterfall-vs-agile-business-perspective-management
 metatags:
   image: cover.png
+slug: why-when-use-waterfall-vs-agile-business-perspective-management
 ---
 ## Waterfall Methodology
 
@@ -86,20 +89,3 @@ Some people find that Agile and Waterfall on the same team would be trouble. How
 
 Some experts recommend the mixing of the two models. They argue that using both Agile and Waterfall methods in projects can provide the benefits of both methods.
 
----
-
-**[Paul Keen](https://www.linkedin.com/in/paul-keen/)** is a CTO at [JetThoughts](https://jetthoughts.com/).
-
-
----
-
-<sup>References:</sup>
-<sup>
--  <sup>[Iron triangle project management and agile](https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle)</sup>
-</sup>
-
-<sup>Images by:</sup>
-<sup>
-- <sup>[Szoke, Akos](https://www.blogger.com/profile/05240832433109599062) on [Planning constraints in agile projects](https://blog.kese.hu/2021/10/planning-constraints-in-agile-projects.html)</sup>
-- <sup>[Iron triangle project management and agile](https://www.atlassian.com/agile/agile-at-scale/agile-iron-triangle)</sup>
-</sup>

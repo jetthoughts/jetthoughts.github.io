@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/new-methods-that-help-implement-authentication-in-ruby-on-rails-71-1eb2
+source: dev_to
+remote_id: 1673299
 dev_to_id: 1673299
 dev_to_url: https://dev.to/jetthoughts/new-methods-that-help-implement-authentication-in-ruby-on-rails-71-1eb2
 title: New methods that help implement authentication in Ruby on Rails 7.1
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/cover.png
-slug: new-methods-that-help-implement-authentication-in-ruby-on-rails-71
 metatags:
   image: cover.png
+slug: new-methods-that-help-implement-authentication-in-ruby-on-rails-71
 ---
 
 ![Image description](file_0.png)

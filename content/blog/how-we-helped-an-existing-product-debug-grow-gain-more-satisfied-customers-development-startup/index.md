@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-we-helped-an-existing-product-debug-grow-and-gain-more-satisfied-customers-554b
+source: dev_to
+remote_id: 1877638
 dev_to_id: 1877638
 dev_to_url: https://dev.to/jetthoughts/how-we-helped-an-existing-product-debug-grow-and-gain-more-satisfied-customers-554b
 title: How We Helped an Existing Product Debug, Grow, and Gain More (Satisfied) Customers
@@ -13,9 +16,9 @@ tags:
 - enterprise
 canonical_url: https://jetthoughts.com/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup/cover.jpeg
-slug: how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup
 metatags:
   image: cover.jpeg
+slug: how-we-helped-an-existing-product-debug-grow-gain-more-satisfied-customers-development-startup
 ---
 ![Photo by [NeONBRAND](https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/education?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 

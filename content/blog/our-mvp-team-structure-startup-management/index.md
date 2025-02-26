@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/our-mvp-team-structure-1nia
+source: dev_to
+remote_id: 1205578
 dev_to_id: 1205578
 dev_to_url: https://dev.to/jetthoughts/our-mvp-team-structure-1nia
 title: Team Structure for MVP
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/our-mvp-team-structure-startup-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/our-mvp-team-structure-startup-management/cover.jpeg
-slug: our-mvp-team-structure-startup-management
 metatags:
   image: cover.jpeg
+slug: our-mvp-team-structure-startup-management
 ---
 In structuring a team for MVP, we should consider the following: there is a massive number of uncertainties. We have to work with assumptions and bets.
 
@@ -59,13 +62,3 @@ They aim to make the product error-free. Onboard _Continuous Delivery_ by using 
 
 They monitor performance because speed is a feature of every application.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
-
-> If you enjoyed this story, we recommend reading our latest tech stories and trending [tech stories](https://jtway.co/trending).
-
----
-
-<sup>Infographic from https://www.strategyzer.com/blog/posts/2015/4/23/5-lean-startup-essentials-to-reduce-risk-and-uncertainty</sup>
-<sup>Cover Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/manager-developers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></sup>

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-memoize-false-and-nil-values-50g3
+source: dev_to
+remote_id: 1877561
 dev_to_id: 1877561
 dev_to_url: https://dev.to/jetthoughts/how-to-memoize-false-and-nil-values-50g3
 title: How To Memoize False and Nil Values
@@ -13,9 +16,9 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/how-memoize-false-nil-values-ruby-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-memoize-false-nil-values-ruby-rails/cover.jpeg
-slug: how-memoize-false-nil-values-ruby-rails
 metatags:
   image: cover.jpeg
+slug: how-memoize-false-nil-values-ruby-rails
 ---
 
 ![Unsplash Photo: [Mike Petrucci](https://unsplash.com/@mikepetrucci)](file_0.jpeg)

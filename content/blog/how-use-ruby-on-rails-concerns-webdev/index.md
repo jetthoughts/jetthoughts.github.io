@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-use-ruby-on-rails-concerns-47mj
+source: dev_to
+remote_id: 1170570
 dev_to_id: 1170570
 dev_to_url: https://dev.to/jetthoughts/how-to-use-ruby-on-rails-concerns-47mj
 title: How to use Ruby on Rails Concerns
@@ -13,9 +16,9 @@ tags:
 - bestpractices
 canonical_url: https://jetthoughts.com/blog/how-use-ruby-on-rails-concerns-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-use-ruby-on-rails-concerns-webdev/cover.png
-slug: how-use-ruby-on-rails-concerns-webdev
 metatags:
   image: cover.png
+slug: how-use-ruby-on-rails-concerns-webdev
 ---
 
 A Rails concern is a module that extends the `ActiveSupport::Concern` module.

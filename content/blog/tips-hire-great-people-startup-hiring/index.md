@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/tips-to-hire-great-people-54ab
+source: dev_to
+remote_id: 1853537
 dev_to_id: 1853537
 dev_to_url: https://dev.to/jetthoughts/tips-to-hire-great-people-54ab
 title: Tips to hire great people
@@ -12,9 +15,9 @@ tags:
 - tips
 canonical_url: https://jetthoughts.com/blog/tips-hire-great-people-startup-hiring/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/tips-hire-great-people-startup-hiring/cover.jpeg
-slug: tips-hire-great-people-startup-hiring
 metatags:
   image: cover.jpeg
+slug: tips-hire-great-people-startup-hiring
 ---
 At JetThoughts, we don’t typically fire our employees. We always strive to find the right people who share our beliefs and values and are committed to long-term cooperation.
 
@@ -67,7 +70,3 @@ If you are the founder and want your company to prosper, do your best to avoid e
 ## P.S.
 Make sure all those values are noted in your ATS. You can provide scores per each core value. For this, we use [Trello](https://trello.com/), but there are more specialized tools to help organize working with candidates like [Recruiting CRM](https://www.recruitingcrm.com/), Indeed Recruiter, etc.
 
----
-
-**Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jetthoughts.com/blog).*

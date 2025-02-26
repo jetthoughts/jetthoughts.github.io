@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/working-with-llms-in-ruby-on-rails-a-simple-guide-1dm6
+source: dev_to
+remote_id: 1978541
 dev_to_id: 1978541
 dev_to_url: https://dev.to/jetthoughts/working-with-llms-in-ruby-on-rails-a-simple-guide-1dm6
 title: 'Working with LLMs in Ruby on Rails: A Simple Guide'
@@ -13,9 +16,9 @@ tags:
 - rails
 canonical_url: https://jetthoughts.com/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/cover.jpeg
-slug: working-with-llms-in-ruby-on-rails-simple-guide-llm
 metatags:
   image: cover.jpeg
+slug: working-with-llms-in-ruby-on-rails-simple-guide-llm
 ---
 ## Why You Need to Work with LLMs Today
 Large Language Models (LLMs) are reshaping how we build apps. Knowing how to use LLMs lets you create smart, interactive tools that understand and generate text. This skill is now key in modern development. Whether you build chatbots or text analyzers, LLMs can add value. So, let’s dive into how to run an LLM server locally and use it in a Ruby on Rails (RoR) project.

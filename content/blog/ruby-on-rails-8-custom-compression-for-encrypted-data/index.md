@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/ruby-on-rails-8-custom-compression-for-encrypted-data-48n5
+source: dev_to
+remote_id: 2086252
 dev_to_id: 2086252
 dev_to_url: https://dev.to/jetthoughts/ruby-on-rails-8-custom-compression-for-encrypted-data-48n5
 title: 'Ruby on Rails 8: Custom Compression for Encrypted Data'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/cover.png
-slug: ruby-on-rails-8-custom-compression-for-encrypted-data
 metatags:
   image: cover.png
+slug: ruby-on-rails-8-custom-compression-for-encrypted-data
 ---
 In Ruby on Rails 8, ActiveRecord’s encryption features are more flexible than ever. You can now set a custom compression algorithm for encrypted attributes. This update lets you manage data size while keeping it secure. Whether you're storing large encrypted text or using custom compression algorithms, this feature can streamline storage and retrieval.
 

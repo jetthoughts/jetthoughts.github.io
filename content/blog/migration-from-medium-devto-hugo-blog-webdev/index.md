@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/migration-from-medium-to-devto-and-hugo-28bj
+source: dev_to
+remote_id: 1846033
 dev_to_id: 1846033
 dev_to_url: https://dev.to/jetthoughts/migration-from-medium-to-devto-and-hugo-28bj
 title: Migration from Medium to Hugo + dev.to API
@@ -12,9 +15,9 @@ tags:
 - cms
 canonical_url: https://jetthoughts.com/blog/migration-from-medium-devto-hugo-blog-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/migration-from-medium-devto-hugo-blog-webdev/cover.jpg
-slug: migration-from-medium-devto-hugo-blog-webdev
 metatags:
   image: cover.jpg
+slug: migration-from-medium-devto-hugo-blog-webdev
 ---
 
 ![Photo by Stephen Phillips - Hostreviews.co.uk on Unsplash](file_0.jpg)

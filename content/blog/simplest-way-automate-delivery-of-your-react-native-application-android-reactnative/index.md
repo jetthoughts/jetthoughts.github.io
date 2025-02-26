@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-simplest-way-to-automate-delivery-of-your-react-native-application-1e6o
+source: dev_to
+remote_id: 1877570
 dev_to_id: 1877570
 dev_to_url: https://dev.to/jetthoughts/the-simplest-way-to-automate-delivery-of-your-react-native-application-1e6o
 title: The simplest way to automate delivery of your React Native Application
@@ -12,9 +15,9 @@ tags:
 - circleci
 canonical_url: https://jetthoughts.com/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/simplest-way-automate-delivery-of-your-react-native-application-android-reactnative/cover.png
-slug: simplest-way-automate-delivery-of-your-react-native-application-android-reactnative
 metatags:
   image: cover.png
+slug: simplest-way-automate-delivery-of-your-react-native-application-android-reactnative
 ---
 ## Introduction
 

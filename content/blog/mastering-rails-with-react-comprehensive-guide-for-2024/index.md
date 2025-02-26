@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/mastering-rails-with-react-a-comprehensive-guide-for-2024-363j
+source: dev_to
+remote_id: 2170904
 dev_to_id: 2170904
 dev_to_url: https://dev.to/jetthoughts/mastering-rails-with-react-a-comprehensive-guide-for-2024-363j
 title: 'Mastering Rails with React: A Comprehensive Guide for 2024'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/mastering-rails-with-react-comprehensive-guide-for-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-rails-with-react-comprehensive-guide-for-2024/cover.jpeg
-slug: mastering-rails-with-react-comprehensive-guide-for-2024
 metatags:
   image: cover.jpeg
+slug: mastering-rails-with-react-comprehensive-guide-for-2024
 ---
 If you're looking to mix the power of Rails with the flexibility of React, this guide is for you. We're diving into how these two can work together to make awesome web apps. From the basics to more advanced stuff, you'll learn how to set up, build, and even scale your apps. Whether you're just starting out or looking to polish your skills, there's something here for everyone.
 

@@ -49,22 +49,43 @@ We can use surge.sh to deploy.
 
 `bin/surge/deploy`
 
-
 ## Populate Blog with Dev.to Posts
 
-To download all new posts and their updates from `dev.to` need to run
+To sync posts with dev.to, use the following command:
 
 ```bash
-bin/from_devto -f
+bin/sync_with_devto
 ```
+
+### Available Options
+
+- `--dry` - Dry run mode. Shows what would be synced without making any changes to dev.to or sync status
+- `--force` or `-f` - Force sync all articles, even if they are already synced
+- Both options can be combined: `bin/sync_with_devto --dry --force`
+
+### Common Use Cases
+
+1. Preview changes before syncing:
+   ```bash
+   bin/sync_with_devto --dry
+   ```
+
+2. Force sync all articles (useful after making changes to URL mappings):
+   ```bash
+   bin/sync_with_devto --force
+   ```
+
+3. Preview what would be force synced:
+   ```bash
+   bin/sync_with_devto --dry --force
+   ```
 
 ## How to set custom URLs for posts
 
 1. Open `devto_urls_mapping.csv`
 2. Change the URLs that you want to update (you should not change the first number in the line, this is the foreign key for the article on dev.to )
 3. Save `devto_urls_mapping.csv`
-4. Run `bin/from_devto -f`
-
+4. Run `bin/sync_with_devto`
 
 ## How to create a new post
 

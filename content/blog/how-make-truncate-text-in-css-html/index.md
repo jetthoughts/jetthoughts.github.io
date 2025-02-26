@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-make-truncate-text-in-css-4chi
+source: dev_to
+remote_id: 1156418
 dev_to_id: 1156418
 dev_to_url: https://dev.to/jetthoughts/how-to-make-truncate-text-in-css-4chi
 title: How to make truncate text in CSS
@@ -12,9 +15,9 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/how-make-truncate-text-in-css-html/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-make-truncate-text-in-css-html/cover.png
-slug: how-make-truncate-text-in-css-html
 metatags:
   image: cover.png
+slug: how-make-truncate-text-in-css-html
 ---
 ```html
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

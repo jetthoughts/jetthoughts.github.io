@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-3ni7
+source: dev_to
+remote_id: 1852621
 dev_to_id: 1852621
 dev_to_url: https://dev.to/jetthoughts/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-3ni7
 title: The Ultimate Guide to the Sales Onboarding in IT Companies
@@ -12,9 +15,9 @@ tags:
 - outstaffing
 canonical_url: https://jetthoughts.com/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration/cover.png
-slug: ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration
 metatags:
   image: cover.png
+slug: ultimate-guide-sales-onboarding-in-it-companies-sails-leadgeneration
 ---
 ![[Illustration by Freepik Storyset](https://storyset.com/illustration/team/pana)](file_0.png)
 

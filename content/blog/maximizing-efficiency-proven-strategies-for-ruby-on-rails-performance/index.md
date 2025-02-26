@@ -1,17 +1,20 @@
 ---
+remote_url: https://dev.to/jetthoughts/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance-3db0
+source: dev_to
+remote_id: 2262713
 dev_to_id: 2262713
 dev_to_url: https://dev.to/jetthoughts/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance-3db0
 title: 'Maximizing Efficiency: Proven Strategies for Ruby on Rails Performance'
 description: Boost Ruby on Rails performance with tips on optimization, caching, and server tweaks. Get faster results now!
 created_at: '2025-02-06T15:38:23Z'
-edited_at:
+edited_at: '2025-02-06T15:45:05Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance-3db0
+canonical_url: https://jetthoughts.com/blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/cover.jpeg
-slug: maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance
 metatags:
   image: cover.jpeg
+slug: maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance
 ---
 Ever feel like your Ruby on Rails app is running slower than a snail in molasses? You're not alone. Many developers face this issue, but the good news is, there are ways to speed things up. This guide dives into practical strategies to boost Ruby on Rails performance. Whether you're dealing with database lags, server hiccups, or just want to streamline your app, we've got you covered. Let's roll up our sleeves and get to work.
 

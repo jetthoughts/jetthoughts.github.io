@@ -5,12 +5,17 @@ gem "minitest"
 gem "capybara"
 gem "launchy"
 gem "httparty"
+gem "faraday"
 gem "selenium-webdriver"
 gem "rack"
 gem "rackup"
 gem "puma"
+gem "ostruct"
+
+gem "tqdm"
 
 gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
+gem 'simplecov', require: false
 gem "vips"
 
 # system libs

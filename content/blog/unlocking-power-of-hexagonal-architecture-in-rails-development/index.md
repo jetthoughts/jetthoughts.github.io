@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/unlocking-the-power-of-hexagonal-architecture-in-rails-development-1ehh
+source: dev_to
+remote_id: 2187802
 dev_to_id: 2187802
 dev_to_url: https://dev.to/jetthoughts/unlocking-the-power-of-hexagonal-architecture-in-rails-development-1ehh
 title: Unlocking the Power of Hexagonal Architecture in Rails Development
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/unlocking-power-of-hexagonal-architecture-in-rails-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-power-of-hexagonal-architecture-in-rails-development/cover.jpeg
-slug: unlocking-power-of-hexagonal-architecture-in-rails-development
 metatags:
   image: cover.jpeg
+slug: unlocking-power-of-hexagonal-architecture-in-rails-development
 ---
 Last night, Fito and I watched Alistair Cockburn's Hexagonal Architecture talk from the Tech Excellence Conference. We really enjoyed it, and despite thinking I already understood the pattern, I learned a ton. In fact, before you continue reading, you should go watch it. Go ahead! I'll wait...
 

@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/finding-the-right-co-founder-a-guide-for-startups-fei
+source: dev_to
+remote_id: 2247477
 dev_to_id: 2247477
 dev_to_url: https://dev.to/jetthoughts/finding-the-right-co-founder-a-guide-for-startups-fei
 title: 'Finding The Right Co-Founder: A Guide For Startups'
@@ -13,9 +16,9 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/finding-right-co-founder-guide-for-startups/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/finding-right-co-founder-guide-for-startups/cover.jpeg
-slug: finding-right-co-founder-guide-for-startups
 metatags:
   image: cover.jpeg
+slug: finding-right-co-founder-guide-for-startups
 ---
 [![Finding The Right Co-Founder: A Guide For Startups](file_0.webp)](https://www.youtube.com/watch?v=Fk9BCr5pLTU)
 

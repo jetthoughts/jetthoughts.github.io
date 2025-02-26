@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/jetthoughts-is-on-goodfirms-radar-for-delivering-effortless-ruby-on-rails-development-services-to-business-of-various-niches-1g8b
+source: dev_to
+remote_id: 1880548
 dev_to_id: 1880548
 dev_to_url: https://dev.to/jetthoughts/jetthoughts-is-on-goodfirms-radar-for-delivering-effortless-ruby-on-rails-development-services-to-business-of-various-niches-1g8b
 title: JetThoughts Is On GoodFirms Radar for Delivering Effortless Ruby on Rails Development Services to Business of Various Niches
@@ -12,9 +15,9 @@ tags:
 - service
 canonical_url: https://jetthoughts.com/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches/cover.jpeg
-slug: jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches
 metatags:
   image: cover.jpeg
+slug: jetthoughts-on-goodfirms-radar-for-delivering-effortless-ruby-rails-development-services-business-of-various-niches
 ---
 ![badge from goodfirms](file_0.jpeg)
 

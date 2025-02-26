@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-to-learn-ruby-4pib
+source: dev_to
+remote_id: 1877579
 dev_to_id: 1877579
 dev_to_url: https://dev.to/jetthoughts/how-to-learn-ruby-4pib
 title: How to Learn Ruby
@@ -12,7 +15,6 @@ tags:
 - beginners
 - rails
 canonical_url: https://jetthoughts.com/blog/how-learn-ruby-tutorial/
-cover_image: 
 slug: how-learn-ruby-tutorial
 ---
 Starting to learn a new programming language or a new framework every person faces a problem — what should I start studying with? In this article I will outline the basic resources, which I consider to be the best for Ruby on Rails beginners.

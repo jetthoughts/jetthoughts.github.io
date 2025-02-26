@@ -1,4 +1,7 @@
 ---
+remote_url: https://dev.to/jetthoughts/how-a-large-transaction-can-be-a-source-of-db-deadlocks-and-how-this-can-be-fixed-39lg
+source: dev_to
+remote_id: 1454204
 dev_to_id: 1454204
 dev_to_url: https://dev.to/jetthoughts/how-a-large-transaction-can-be-a-source-of-db-deadlocks-and-how-this-can-be-fixed-39lg
 title: How a large transaction can be a source of DB deadlocks and how this can be fixed.
@@ -13,9 +16,9 @@ tags:
 - programming
 canonical_url: https://jetthoughts.com/blog/how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database/cover.png
-slug: how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database
 metatags:
   image: cover.png
+slug: how-large-transaction-can-be-source-of-db-deadlocks-this-fixed-ruby-database
 ---
 
 ![Image description](file_0.png)
