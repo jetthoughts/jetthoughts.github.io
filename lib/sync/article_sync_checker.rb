@@ -18,13 +18,13 @@ class ArticleSyncChecker
   end
 
   def update_sync_status
-    fetch_articles = fetcher.fetch_articles
-    update_sync_statuses_for(fetch_articles)
+    fetch_all = fetcher.fetch_all
+    update_sync_statuses_for(fetch_all)
   end
 
-  def update_sync_statuses_for(fetch_articles)
+  def update_sync_statuses_for(fetch_all)
     @sync_status = storage.load
-    update_statuses_for(fetch_articles)
+    update_statuses_for(fetch_all)
     storage.save(@sync_status)
   end
 
@@ -46,8 +46,8 @@ class ArticleSyncChecker
     end
   end
 
-  def desynchronized?(edited_at, id)
-    @sync_status[id][:edited_at] != edited_at
+  def desynchronized?(changed_at, id)
+    @sync_status[id][:edited_at] != changed_at
   end
 
   def build_new_status(article, edited_at)

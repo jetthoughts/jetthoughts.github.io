@@ -41,8 +41,8 @@ module Sync
       assert_nil @fetcher.fetch("not_found")
     end
 
-    def test_fetch_image_success
-      image_data = @fetcher.fetch_image("https://example.com/image.jpg")
+    def test_fetch_asset_success
+      image_data = @fetcher.fetch_asset("https://example.com/image.jpg")
       assert_equal "fake-image-data", image_data
     end
 
@@ -96,7 +96,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/wrong-article"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_description_mismatch
@@ -105,7 +105,7 @@ module Sync
         "description" => "Wrong description",
         "canonical_url" => "https://example.com/test-article"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_no_url
@@ -113,7 +113,7 @@ module Sync
         "id" => 1,
         "description" => "Test description"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_no_sync_data
@@ -122,7 +122,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/test-article"
       }
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[3], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[3])
     end
 
     def test_remove_cdn

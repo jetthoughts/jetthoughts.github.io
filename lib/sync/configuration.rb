@@ -2,11 +2,12 @@
 
 module Sync
   class Configuration
-    attr_accessor :logger
+    attr_accessor :logger, :sources
     attr_reader :working_dir
 
     def initialize
       self.working_dir = "content/blog"
+      self.sources = ["dev_to"]
     end
 
     def working_dir=(value)

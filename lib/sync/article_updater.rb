@@ -82,7 +82,7 @@ module Sync
     end
 
     def update_remote_metadata(id, status)
-      article_fetcher.update_meta_on_dev_to(
+      article_fetcher.update(
         id,
         {
           description: status[:description],
