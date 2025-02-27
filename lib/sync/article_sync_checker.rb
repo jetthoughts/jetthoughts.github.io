@@ -13,7 +13,6 @@ class ArticleSyncChecker
 
   def initialize(app:)
     @storage = app.status_storage
-    @fetcher = Sync::Source.for
   end
 
   def update_sync_status
