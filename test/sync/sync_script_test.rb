@@ -23,7 +23,7 @@ class SyncScriptTest < SyncTestCase
 
     refute_empty sync_data[post["id"]][:edited_at], "Should set correct edited_at"
     assert_equal "test-article-ruby-rails-testing", sync_data[post["id"]][:slug], "Should set correct slug"
-    assert_equal "dev_to", sync_data[post["id"]][:source], "Should set correct source"
+    assert_equal "test", sync_data[post["id"]][:source], "Should set correct source"
   end
 
   def test_perform_downloads_articles_in_non_dry_run
@@ -33,7 +33,7 @@ class SyncScriptTest < SyncTestCase
         edited_at: "2023-02-01",
         slug: "test-article",
         synced: false,
-        source: "dev_to"
+        source: "test"
       }
     })
 

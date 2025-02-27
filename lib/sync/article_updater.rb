@@ -17,12 +17,11 @@ module Sync
     JT_BLOG_HOST = "https://jetthoughts.com/blog/".freeze
     CONTENT_FILE = "index.md".freeze
 
-    attr_reader :working_dir, :storage, :article_fetcher, :app
+    attr_reader :working_dir, :storage, :app
 
     def initialize(app:)
       @app = app
       @working_dir = app.working_dir
-      @article_fetcher = app.fetcher
       @storage = app.status_storage
     end
 
@@ -37,7 +36,7 @@ module Sync
     private
 
     def process_article(id, status)
-      article = fetch_article(id)
+      article = fetch_article(id, status)
       unless article
         status[:synced] = false
         return
@@ -76,7 +75,7 @@ module Sync
     end
 
     def metadata_up_to_date?(article, status)
-      unless article_fetcher.need_to_update_remote?(article, status)
+      unless fetcher_for(status).need_to_update_remote?(article, status)
         status[:synced] = true
         logger.debug("Article ID: #{status[:slug]} already synced.")
         true
@@ -88,7 +87,7 @@ module Sync
     end
 
     def update_remote_metadata(id, status)
-      article_fetcher.update(
+      fetcher_for(status).update(
         id,
         {
           description: status[:description],
@@ -116,10 +115,14 @@ module Sync
       raise
     end
 
-    def fetch_article(id)
-      article = article_fetcher.fetch(id)
+    def fetch_article(id, status)
+      article = fetcher_for(status).fetch(id)
       logger.error("Error fetching article ID: #{id}") unless article
       article
+    end
+
+    def fetcher_for(status)
+      Sync::Source.for(status["source"])
     end
 
     def articles_to_sync

@@ -12,11 +12,11 @@ class ImagesDownloader
 
   class NetworkError < StandardError; end
 
-  attr_reader :slug, :remote_data, :local_data, :fetcher
+  attr_reader :slug, :remote_data, :local_data
 
   def initialize(slug, remote_data = nil, local_data = nil, app:)
     @slug = slug
-    @fetcher = app.fetcher
+    @fetcher = Sync::Source.for(local_data[:source])
     @remote_data = remote_data
     @local_data = local_data
     @post = Sync::Post.create_from_remote_details(remote_data, local_data)
@@ -78,11 +78,11 @@ class ImagesDownloader
   end
 
   def ext_from_image_url(image_url)
-    fetcher.ext_from_image_url(image_url)
+    @fetcher.ext_from_image_url(image_url)
   end
 
   def download_image(url, as_file_name)
-    image = fetcher.fetch_asset(url)
+    image = @fetcher.fetch_asset(url)
     if image
       add_media_asset(as_file_name, image)
       logger.info "#{as_file_name} downloaded from #{url}"

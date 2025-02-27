@@ -4,31 +4,16 @@ require "sync_test_case"
 require "sync/dev_to_article_fetcher"
 
 module Sync
-  class ArticleFetcherTest < SyncTestCase
+  class Sources::DevToTest < SyncTestCase
     def setup
       super
-      @articles.replace [
-        sample_article(
-          "id" => "success",
-          "title" => "Test Article",
-          "body" => "Test content"
-        )
-      ]
-      @sync_data = {
-        1 => {
-          edited_at: "2025-02-17T10:00:00Z",
-          slug: "test-article",
-          synced: true,
-          source: "dev_to",
-          description: "Test description"
-        },
-        2 => {
-          edited_at: "2025-02-17T10:00:00Z",
-          slug: "another-article",
-          synced: true,
-          source: "dev_to"
-        }
-      }
+      @fetcher = Sync::Sources::DevTo.new(http_client: TestHttpClient.new(@articles))
+
+      @articles << sample_article("id" => "success", "title" => "Test Article", "body" => "Test content")
+
+      @sync_data = {}
+      @sync_data.merge!(create_sync_status(id: 1, slug: "test-article", description: "Test description"))
+      @sync_data.merge!(create_sync_status(id: 2, slug: "another-article", source: "test"))
     end
 
     def test_fetch_successful_article

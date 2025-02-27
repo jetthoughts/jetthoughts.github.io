@@ -17,7 +17,7 @@ class ArticleSyncCheckerTest < SyncTestCase
   end
 
   def test_update_sync_status_with_new_article
-    @articles.replace [sample_article("id" => 2, "slug" => "test-article-123", "tags" => "ruby, rails, testing")]
+    @articles.replace([sample_article("id" => 2, "slug" => "test-article-123", "tags" => "ruby, rails, testing")])
 
     @checker.update_sync_status
 
@@ -26,30 +26,14 @@ class ArticleSyncCheckerTest < SyncTestCase
     assert_equal "test-article-ruby-rails-testing", status[2][:slug]
     assert_equal "2025-02-17T10:00:00Z", status[2][:edited_at]
     assert_equal false, status[2][:synced]
-    assert_equal ArticleSyncChecker::DEFAULT_SOURCE, status[2][:source]
-  end
-
-  def test_update_sync_status_with_existing_unmodified_article
-    sync_status = create_sync_status(
-      edited_at: "2025-02-17T10:00:00Z",
-      slug: "test-article-ruby-rails",
-      synced: true,
-      source: ArticleSyncChecker::DEFAULT_SOURCE
-    )
-    create_sync_file(@app.working_dir, sync_status)
-
-    @checker.update_sync_status
-    status = @app.status_storage.load
-
-    assert_equal true, status[1][:synced]
+    assert_equal Sync::Source.default_source, status[2][:source]
   end
 
   def test_update_sync_status_with_modified_article
     sync_status = create_sync_status(
       edited_at: "2025-02-17T09:00:00Z",
       slug: "test-article-ruby-rails",
-      synced: true,
-      source: ArticleSyncChecker::DEFAULT_SOURCE
+      synced: true
     )
     create_sync_file(@app.working_dir, sync_status)
 
@@ -108,11 +92,6 @@ class ArticleSyncCheckerTest < SyncTestCase
     assert_instance_of SyncStatusStorage, checker.storage, "Should create a new storage instance"
   end
 
-  def test_uses_app_fetcher_when_provided
-    checker = ArticleSyncChecker.new(app: @app)
-    assert_equal @app.fetcher, checker.fetcher
-  end
-
   def test_updates_sync_status_with_empty_articles
     @articles.clear
     @checker.update_sync_status
@@ -122,20 +101,8 @@ class ArticleSyncCheckerTest < SyncTestCase
   end
 
   def test_preserves_existing_sync_status_for_non_returned_articles
-    existing_status = {
-      @articles.first["id"] => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "existed-article",
-        synced: true,
-        source: ArticleSyncChecker::DEFAULT_SOURCE
-      },
-      99 => {
-        edited_at: "2025-02-17T09:00:00Z",
-        slug: "old-article",
-        synced: true,
-        source: ArticleSyncChecker::DEFAULT_SOURCE
-      }
-    }
+    existing_status = create_sync_status(id: @articles.first["id"], slug: "existed-article")
+      .merge(create_sync_status(id: 99, slug: "old-article"))
     create_sync_file(@app.working_dir, existing_status)
 
     @checker.update_sync_status

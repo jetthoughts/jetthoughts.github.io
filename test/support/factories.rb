@@ -46,19 +46,13 @@ module TestFactories
   end
 
   class SyncStatus
-    def self.create(edited_at: "2025-02-17T09:00:00Z", slug: "test-article", synced: false, source: "dev_to", id: 1)
-      {
-        id => {
-          edited_at: edited_at,
-          slug: slug,
-          synced: synced,
-          source: source
-        }
-      }
-    end
+    DEFAULT_ATTRIBUTES = {
+      edited_at: "2025-02-17T09:00:00Z", slug: "test-article", synced: false, source: "test", id: 1, description: nil
+    }
 
-    def self.create_file(dir, content)
-      SyncStatusStorage.new(dir).save(content)
+    def self.create(**attributes)
+      sync_record_attrs = DEFAULT_ATTRIBUTES.merge(attributes)
+      {sync_record_attrs[:id] => sync_record_attrs}
     end
   end
 end

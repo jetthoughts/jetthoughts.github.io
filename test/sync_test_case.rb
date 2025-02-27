@@ -10,6 +10,9 @@ require "yaml"
 require "logger"
 
 require "sync/app"
+require "sync/source"
+
+Sync::Source.default_source = "test"
 
 class SyncTestCase < Minitest::Test
   # NOTE: Uncomment to run tests in parallel when it will be more than 1 minute
@@ -24,8 +27,19 @@ class SyncTestCase < Minitest::Test
     end
 
     @articles = []
-    @fetcher = Sync::Sources::DevTo.new(http_client: TestHttpClient.new(@articles))
-    @app = App.new(fetcher: @fetcher)
+    Sync::Source.register("test", create_test_source_for(@articles))
+    @app = App.new
+  end
+
+  def create_test_source_for(articles = [])
+    # Register a test version of the DevTo source that uses our test HTTP client
+    Class.new(Sync::Sources::DevTo) do
+      singleton_class.attr_accessor :articles
+
+      def initialize(*)
+        super(http_client: TestHttpClient.new(self.class.articles))
+      end
+    end.tap { _1.articles = articles }
   end
 
   def teardown
@@ -44,7 +58,7 @@ class SyncTestCase < Minitest::Test
 
   # Factory method shortcuts
   def create_sync_file(dir, content)
-    TestFactories::SyncStatus.create_file(dir, content)
+    SyncStatusStorage.new(dir).save(content)
   end
 
   def create_article(slug, content = "# Test Content")
@@ -68,6 +82,6 @@ class SyncTestCase < Minitest::Test
   end
 
   def create_app(**)
-    App.new(fetcher: @fetcher, **)
+    App.new(**)
   end
 end

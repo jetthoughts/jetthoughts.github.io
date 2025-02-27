@@ -9,7 +9,7 @@ class ImagesDownloaderTest < SyncTestCase
     @slug = "test-article"
     @content = "# Title\n\n![Alt text](https://example.com/image1.png)\n![Another](https://example.com/image2.jpg)"
 
-    @local_data = {slug: @slug}
+    @local_data = create_sync_status(slug: @slug)[1]
     @remote_data = sample_article("cover_image" => "https://example.com/cover.jpg", "body_markdown" => @content)
     @articles.replace([@remote_data])
     create_article_with_metadata(@slug, @remote_data, @content)

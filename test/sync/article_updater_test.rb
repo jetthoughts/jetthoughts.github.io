@@ -124,7 +124,6 @@ module Sync
         updater = ArticleUpdater.new(app: @app)
 
         assert_equal @app.status_storage.object_id, updater.storage.object_id
-        assert_equal @app.fetcher.object_id, updater.article_fetcher.object_id
         assert_equal @app.working_dir, updater.working_dir
       end
 

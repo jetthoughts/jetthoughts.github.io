@@ -7,7 +7,6 @@ module Sync
 
     def initialize
       self.working_dir = "content/blog"
-      self.sources = ["dev_to"]
     end
 
     def working_dir=(value)
