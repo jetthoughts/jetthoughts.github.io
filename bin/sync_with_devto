@@ -11,4 +11,6 @@ App.configure do |config|
   config.logger = Logger.new(STDOUT, level: :warn)
 end
 
+Sync::Source.register("dev_to", Sync::Sources::DevTo)
+
 App.new(args: ARGV).run
