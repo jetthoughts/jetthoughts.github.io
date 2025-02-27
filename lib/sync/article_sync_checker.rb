@@ -7,18 +7,17 @@ require "sync/sync_status_storage"
 class ArticleSyncChecker
   include Logging
 
-  DEFAULT_SOURCE = "dev_to"
   USELESS_WORDS = %w[and the a but to is so].freeze
 
-  attr_reader :storage, :fetcher
+  attr_reader :storage
 
   def initialize(app:)
     @storage = app.status_storage
-    @fetcher = app.fetcher
+    @fetcher = Sync::Source.for
   end
 
   def update_sync_status
-    fetch_all = fetcher.fetch_all
+    fetch_all = @fetcher.fetch_all
     update_sync_statuses_for(fetch_all)
   end
 
@@ -37,7 +36,7 @@ class ArticleSyncChecker
 
       @sync_status[id] ||= build_new_status(article, changed_at)
       @sync_status[id][:remote_id] = id
-      @sync_status[id][:source] = DEFAULT_SOURCE
+      @sync_status[id][:source] = Sync::Source.default_source
 
       if desynchronized?(changed_at, id)
         @sync_status[id][:edited_at] = changed_at
@@ -56,7 +55,7 @@ class ArticleSyncChecker
       slug: generate_slug(article),
       remote_id: article["id"],
       synced: false,
-      source: DEFAULT_SOURCE
+      source: Sync::Source.default_source
     }
   end
 

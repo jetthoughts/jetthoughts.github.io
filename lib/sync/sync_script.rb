@@ -21,8 +21,7 @@ class SyncScript
   end
 
   def perform
-    remote_articles = app.fetcher.fetch_all
-    sync_checker.update_sync_statuses_for(remote_articles)
+    sync_checker.update_sync_status
     article_updater.download_articles
     article_cleaner.cleanup_renamed_articles
   end

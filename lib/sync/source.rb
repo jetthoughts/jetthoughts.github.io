@@ -10,20 +10,18 @@ module Sync
       "sanity" => Sources::Sanity
     }
 
-    def self.for(name, options = {})
-      KLASSES_MAPPING.fetch(name).new(options)
+    singleton_class.attr_accessor :default_source
+    self.default_source = "dev_to"
+
+    singleton_class.attr_accessor :sources
+    self.sources = KLASSES_MAPPING.dup
+
+    def self.for(name = nil, options = {})
+      sources.fetch(name || self.default_source).new(options)
     end
 
-    def register(name, klass)
-      KLASSES_MAPPING[name] = klass
-    end
-
-    def self.all(*sources)
-      sources = Array[sources].flatten
-      sources = App.config.sources if sources.empty?
-
-      active_sources = KLASSES_MAPPING.slice(*sources)
-      active_sources.values.map { _1.new }
+    def self.register(name, klass)
+      sources[name] = klass
     end
   end
 end
