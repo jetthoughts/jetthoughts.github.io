@@ -7,8 +7,15 @@ require "sync/app"
 class ArticleSyncCheckerTest < SyncTestCase
   def setup
     super
-    @articles << sample_article
+    @another_articles = []
+    Sync::Source.register("another_test", create_test_source_for(@another_articles))
+    @articles.replace([sample_article])
     @checker = ArticleSyncChecker.new(app: @app)
+  end
+
+  def teardown
+    super
+    Sync::Source.unregister("another_test")
   end
 
   def test_update_sync_status_creates_file_if_not_exists
@@ -79,7 +86,7 @@ class ArticleSyncCheckerTest < SyncTestCase
     status = @app.status_storage.load
 
     assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
-    assert_match /best-most-useful-tips-ruby-testing-\w{3}/, status[3][:slug]
+    assert_match(/best-most-useful-tips-ruby-testing-\w{3}/, status[3][:slug])
   end
 
   def test_uses_provided_storage
@@ -119,5 +126,17 @@ class ArticleSyncCheckerTest < SyncTestCase
 
     assert_equal app_status, checker_status, "App and checker should share the same storage data"
     assert_equal @app.status_storage.object_id, @checker.storage.object_id, "App and checker should use the same storage instance"
+  end
+
+  def test_update_sync_status_with_multiple_sources
+    @articles.replace([sample_article("id" => 2, "slug" => "test-123", "source" => "test")])
+    @another_articles.replace([sample_article("id" => 3, "slug" => "another_test-234", "source" => "another_test")])
+
+    @checker.update_sync_status
+
+    status = @app.status_storage.load
+    assert_equal 2, status.size
+    assert_match(/^test/, status[2][:slug])
+    assert_match(/^another_test/, status[3][:slug])
   end
 end

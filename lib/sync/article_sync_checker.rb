@@ -17,8 +17,11 @@ class ArticleSyncChecker
   end
 
   def update_sync_status
-    fetch_all = @fetcher.fetch_all
-    update_sync_statuses_for(fetch_all)
+    Sync::Source.source_names.each do |source_name|
+      fetcher = Sync::Source.for(source_name)
+      remote_articles = fetcher.fetch_all
+      update_sync_statuses_for(remote_articles)
+    end
   end
 
   def update_sync_statuses_for(fetch_all)
