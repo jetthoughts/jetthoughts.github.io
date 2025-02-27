@@ -34,9 +34,8 @@ class ArticleSyncChecker
       id = article["id"]
       changed_at = article["edited_at"] || article["created_at"]
 
-      @sync_status[id] ||= build_new_status(article, changed_at)
-      @sync_status[id][:remote_id] = id
-      @sync_status[id][:source] = Sync::Source.default_source
+      @sync_status[id] = build_new_status(article, changed_at).merge(@sync_status[id] || {})
+      @sync_status[id][:slug] ||= generate_slug(article)
 
       if desynchronized?(changed_at, id)
         @sync_status[id][:edited_at] = changed_at
@@ -52,7 +51,6 @@ class ArticleSyncChecker
   def build_new_status(article, edited_at)
     {
       edited_at: edited_at,
-      slug: generate_slug(article),
       remote_id: article["id"],
       synced: false,
       source: Sync::Source.default_source
