@@ -29,10 +29,10 @@ module Sync
 
       def test_updates_sync_status_after_download
         @app.status_storage.save(create_sync_status(synced: false))
+        create_sync_status(synced: false)
         @updater.download_articles
 
-        sync_data = @app.status_storage.load
-        assert sync_data[1][:synced], "Article should be marked as synced"
+        assert find_sync_record(1)[:synced], "Article should be marked as synced"
       end
 
       def test_skips_synced_articles
@@ -105,8 +105,7 @@ module Sync
 
         updater.download_articles
 
-        sync_data = app.status_storage.load
-        assert sync_data[1][:synced]
+        assert find_sync_record(1)[:synced]
       end
 
       def test_respects_force_mode
@@ -116,8 +115,7 @@ module Sync
 
         updater.download_articles
 
-        sync_data = app.status_storage.load
-        refute_equal "2023-02-17T09:00:00Z", sync_data[1][:edited_at]
+        refute_equal "2023-02-17T09:00:00Z", find_sync_record(1)[:edited_at]
       end
 
       def test_uses_app_dependencies

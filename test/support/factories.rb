@@ -8,6 +8,7 @@ module TestFactories
     def self.build_details(overrides = {})
       {
         "id" => 1,
+        "source" => "test",
         "title" => "Test Article",
         "body_markdown" => "# Test Content",
         "slug" => "test-article-123",
@@ -21,11 +22,11 @@ module TestFactories
       }.merge(overrides)
     end
 
-    def self.create_page_bundle(temp_dir, slug, content = "# Test Content")
-      create_with_metadata(temp_dir, slug, {}, content)
+    def self.create_page_bundle(slug, content = "# Test Content")
+      create_with_metadata(slug, {}, content)
     end
 
-    def self.create_with_metadata(temp_dir, slug, metadata = {}, content = "# Test Content")
+    def self.create_with_metadata(slug, metadata = {}, content = "# Test Content")
       metadata = {
         "title" => "Test Article",
         "description" => "Test Description"
@@ -52,7 +53,7 @@ module TestFactories
 
     def self.create(**attributes)
       sync_record_attrs = DEFAULT_ATTRIBUTES.merge(attributes)
-      {sync_record_attrs[:id] => sync_record_attrs}
+      {"#{sync_record_attrs[:source]}_#{sync_record_attrs[:id]}" => sync_record_attrs}
     end
   end
 end

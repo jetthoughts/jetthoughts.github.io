@@ -12,8 +12,6 @@ require "logger"
 require "sync/app"
 require "sync/source"
 
-Sync::Source.default_source = "test"
-
 class SyncTestCase < Minitest::Test
   # NOTE: Uncomment to run tests in parallel when it will be more than 1 minute
   # parallelize_me!
@@ -27,19 +25,14 @@ class SyncTestCase < Minitest::Test
     end
 
     @articles = []
-    Sync::Source.register("test", create_test_source_for(@articles))
-    @app = App.new
+    @app = create_app
   end
 
-  def create_test_source_for(articles = [])
-    # Register a test version of the DevTo source that uses our test HTTP client
-    Class.new(Sync::Sources::DevTo) do
-      singleton_class.attr_accessor :articles
+  class Sync::Sources::Test < Sync::Sources::DevTo
+  end
 
-      def initialize(*)
-        super(http_client: TestHttpClient.new(self.class.articles))
-      end
-    end.tap { _1.articles = articles }
+  def create_test_source_for(articles = [], as: "test")
+    Sync::Sources::Test.new(name: as, http_client: TestHttpClient.new(articles))
   end
 
   def teardown
@@ -62,11 +55,11 @@ class SyncTestCase < Minitest::Test
   end
 
   def create_article(slug, content = "# Test Content")
-    TestFactories::Article.create_page_bundle(@temp_dir, slug, content)
+    TestFactories::Article.create_page_bundle(slug, content)
   end
 
   def create_article_with_metadata(slug, metadata = {}, content = "# Test Content")
-    TestFactories::Article.create_with_metadata(@temp_dir, slug, metadata, content)
+    TestFactories::Article.create_with_metadata(slug, metadata, content)
   end
 
   def read_markdown_metadata(...)
@@ -82,6 +75,17 @@ class SyncTestCase < Minitest::Test
   end
 
   def create_app(**)
+    Sync::Source.register(create_test_source_for(@articles))
     App.new(**)
+  end
+
+  def sync_records_count
+    status = @app.status_storage.load
+    status.size
+  end
+
+  def find_sync_record(record_id, statuses = nil, source: "test")
+    status = statuses || @app.status_storage.load
+    status[record_id] || status["#{source}_#{record_id}"]
   end
 end
