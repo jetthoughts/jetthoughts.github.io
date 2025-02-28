@@ -116,13 +116,15 @@ module Sync
     end
 
     def fetch_article(id, status)
-      article = fetcher_for(status).fetch(id)
+      article = fetcher_for(status).fetch(status[:remote_id] || status[:id])
       logger.error("Error fetching article ID: #{id}") unless article
       article
     end
 
     def fetcher_for(status)
-      Sync::Source.for(status["source"])
+      source_name = status["source"] || status[:source]
+      status if !(source_name) || source_name == "dev_to"
+      Sync::Source.for(source_name)
     end
 
     def articles_to_sync

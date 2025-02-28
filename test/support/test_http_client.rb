@@ -19,7 +19,7 @@ class TestHttpClient
   end
 
   def get_article(id)
-    result = @articles.find { id.to_s == _1["id"].to_s }
+    result = @articles.find { id.to_s == (_1["remote_id"] || _1["id"]).to_s }
 
     if result
       OpenStruct.new(body: result.to_json, success?: true)

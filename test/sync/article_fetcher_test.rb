@@ -103,7 +103,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/test-article"
       }
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[3])
+      assert @fetcher.need_to_update_remote?(article_data, find_sync_record(3, @sync_data))
     end
 
     def test_remove_cdn

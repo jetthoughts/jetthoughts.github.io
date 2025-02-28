@@ -23,9 +23,9 @@ class ArticleSyncChecker
     end
   end
 
-  def update_sync_statuses_for(fetch_all)
+  def update_sync_statuses_for(remote_articles)
     @sync_status = storage.load
-    update_statuses_for(fetch_all)
+    update_statuses_for(remote_articles)
     storage.save(@sync_status)
   end
 
@@ -33,7 +33,14 @@ class ArticleSyncChecker
 
   def update_statuses_for(articles)
     articles.each do |article|
-      id = article["id"]
+      id = "#{article["source"]}_#{article["id"]}"
+
+      # Fallback to previous
+      if !@sync_status[id] && @sync_status[article["id"]]
+        @sync_status[id] = @sync_status[article["id"]]
+        @sync_status.delete(article["id"])
+      end
+
       changed_at = article["edited_at"] || article["created_at"]
 
       @sync_status[id] = build_new_status(article, changed_at).merge(@sync_status[id] || {})
@@ -55,7 +62,7 @@ class ArticleSyncChecker
       edited_at: edited_at,
       remote_id: article["id"],
       synced: false,
-      source: Sync::Source.default_source
+      source: article["source"] || Sync::Source.default_source
     }
   end
 

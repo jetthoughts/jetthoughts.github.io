@@ -95,7 +95,7 @@ module Sync
       def process_article(article)
         article["devto_slug"] = article["slug"]
         article["slug"] = dev_to_slug_without_salt(article["devto_slug"])
-        article["source"] = "dev_to"
+        article["source"] = name
         article
       end
 

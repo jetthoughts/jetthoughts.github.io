@@ -1,14 +1,18 @@
 # lib/sync/sources/base.rb
+
+require "active_support/inflector"
+
 module Sync
   module Sources
     class Base
       include Logging
       include Retryable
 
-      attr_reader :client
+      attr_reader :client, :name
 
       def initialize(options = {})
         @client = build_client(options)
+        @name = options[:name] || self.class.name.tableize
       end
 
       def fetch_all

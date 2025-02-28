@@ -8,12 +8,13 @@ module Sync
     singleton_class.attr_accessor :sources
     self.sources = {}
 
-    def self.for(name = nil, options = {})
-      sources.fetch(name || self.default_source).new(options)
+    def self.for(name = nil)
+      raise name if name == "dev_to"
+      sources.fetch(name || self.default_source)
     end
 
-    def self.register(name, klass)
-      sources[name] = klass
+    def self.register(source)
+      sources[source.name] = source
     end
 
     def self.unregister(name)

@@ -8,7 +8,7 @@ class ArticleSyncCheckerTest < SyncTestCase
   def setup
     super
     @another_articles = []
-    Sync::Source.register("another_test", create_test_source_for(@another_articles))
+    Sync::Source.register(create_test_source_for(@another_articles, as: "another_test"))
     @articles.replace([sample_article])
     @checker = ArticleSyncChecker.new(app: @app)
   end
@@ -28,12 +28,14 @@ class ArticleSyncCheckerTest < SyncTestCase
 
     @checker.update_sync_status
 
-    status = @app.status_storage.load
-    assert_equal 1, status.size
-    assert_equal "test-article-ruby-rails-testing", status[2][:slug]
-    assert_equal "2025-02-17T10:00:00Z", status[2][:edited_at]
-    assert_equal false, status[2][:synced]
-    assert_equal Sync::Source.default_source, status[2][:source]
+    number_of_sync_records = sync_records_count
+    sync_record = find_sync_record(2)
+
+    assert_equal 1, number_of_sync_records
+    assert_equal "test-article-ruby-rails-testing", sync_record[:slug]
+    assert_equal "2025-02-17T10:00:00Z", sync_record[:edited_at]
+    assert_equal false, sync_record[:synced]
+    assert_equal "test", sync_record[:source]
   end
 
   def test_update_sync_status_with_modified_article
@@ -45,10 +47,9 @@ class ArticleSyncCheckerTest < SyncTestCase
     create_sync_file(@app.working_dir, sync_status)
 
     @checker.update_sync_status
-    status = @app.status_storage.load
 
-    assert_equal "2025-02-17T10:00:00Z", status[1][:edited_at]
-    assert_equal false, status[1][:synced]
+    assert_equal "2025-02-17T10:00:00Z", find_sync_record(1)[:edited_at]
+    assert_equal false, find_sync_record(1)[:synced]
   end
 
   def test_slug_generation_removes_useless_words
@@ -61,9 +62,8 @@ class ArticleSyncCheckerTest < SyncTestCase
     @checker = ArticleSyncChecker.new(app: @app)
 
     @checker.update_sync_status
-    status = @app.status_storage.load
 
-    assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
+    assert_equal "best-most-useful-tips-ruby-testing", find_sync_record(2)[:slug]
   end
 
   def test_slug_generation_prevent_collisions
@@ -83,10 +83,8 @@ class ArticleSyncCheckerTest < SyncTestCase
     @checker = ArticleSyncChecker.new(app: @app)
 
     @checker.update_sync_status
-    status = @app.status_storage.load
-
-    assert_equal "best-most-useful-tips-ruby-testing", status[2][:slug]
-    assert_match(/best-most-useful-tips-ruby-testing-\w{3}/, status[3][:slug])
+    assert_equal "best-most-useful-tips-ruby-testing", find_sync_record(2)[:slug]
+    assert_match(/best-most-useful-tips-ruby-testing-\w{3}/, find_sync_record(3)[:slug])
   end
 
   def test_uses_provided_storage
@@ -114,9 +112,8 @@ class ArticleSyncCheckerTest < SyncTestCase
 
     @checker.update_sync_status
 
-    status = @app.status_storage.load
-    assert_equal "old-article", status[99][:slug], "Should preserve existing article status"
-    assert_equal "existed-article", status[1][:slug], "Should add new article status"
+    assert_equal "old-article", find_sync_record(99)[:slug], "Should preserve existing article status"
+    assert_equal "existed-article", find_sync_record(1)[:slug], "Should add new article status"
   end
 
   def test_app_storage_is_shared_between_checker_and_app
@@ -130,13 +127,12 @@ class ArticleSyncCheckerTest < SyncTestCase
 
   def test_update_sync_status_with_multiple_sources
     @articles.replace([sample_article("id" => 2, "slug" => "test-123", "source" => "test")])
-    @another_articles.replace([sample_article("id" => 3, "slug" => "another_test-234", "source" => "another_test")])
+    @another_articles.replace([sample_article("id" => 3, "slug" => "another_test-234")])
 
     @checker.update_sync_status
 
-    status = @app.status_storage.load
-    assert_equal 2, status.size
-    assert_match(/^test/, status[2][:slug])
-    assert_match(/^another_test/, status[3][:slug])
+    assert_equal 2, sync_records_count
+    assert_match(/^test/, find_sync_record(2)[:slug])
+    assert_match(/^another_test/, find_sync_record(3, source: "another_test")[:slug])
   end
 end
