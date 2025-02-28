@@ -62,7 +62,7 @@ class ArticleSyncChecker
       edited_at: edited_at,
       remote_id: article["id"],
       synced: false,
-      source: article["source"] || Sync::Source.default_source
+      source: article["source"]
     }
   end
 
@@ -86,6 +86,6 @@ class ArticleSyncChecker
   end
 
   def duplicated?(slug)
-    @sync_status.map { _2 && _2[:slug] }.compact.uniq.include?(slug)
+    @sync_status.values.compact.map { it[:slug] }.compact.uniq.include?(slug)
   end
 end
