@@ -22,7 +22,7 @@ module Sync
         @app.status_storage.save(create_sync_status)
         @updater.download_articles
 
-        markdown_file = Sync::Post.new("test-article").page_bundle_dir.join("index.md")
+        markdown_file = Sync::Post.new("test-article", working_dir: @app.working_dir).page_bundle_dir.join("index.md")
         assert_path_exists markdown_file, "Markdown file should be created"
         assert_match(/# Test Content/, File.read(markdown_file), "Content should be written to file")
       end
@@ -54,7 +54,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = Sync::Post.new("test-article").load.metadata
+        metadata = Sync::Post.new("test-article", working_dir: @app.working_dir).load.metadata
 
         assert_equal "Original Title", metadata["title"]
         assert_equal "Original Description", metadata["description"]
@@ -76,7 +76,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = Sync::Post.new("test-article").load.metadata
+        metadata = Sync::Post.new("test-article", working_dir: @app.working_dir).load.metadata
         assert_equal "cover.jpg", metadata.dig("metatags", "image")
         assert_includes metadata["cover_image"], "cover.jpg"
       end
@@ -86,7 +86,7 @@ module Sync
 
         @updater.download_articles
 
-        metadata = Sync::Post.new("test-article").load.metadata
+        metadata = Sync::Post.new("test-article", working_dir: @app.working_dir).load.metadata
         refute metadata.key?("metatags")
         assert_nil metadata["cover_image"]
       end
@@ -99,21 +99,19 @@ module Sync
       end
 
       def test_respects_dry_run_mode
-        app = create_app_with("--dry")
-        updater = ArticleUpdater.new(app: app)
-        app.status_storage.save(create_sync_status(id: 1, synced: false))
+        @app = create_app(args: ["--dry"])
+        @app.status_storage.save(create_sync_status(id: 1, synced: false))
 
-        updater.download_articles
+        ArticleUpdater.new(app: @app).download_articles
 
         assert find_sync_record(1)[:synced]
       end
 
       def test_respects_force_mode
-        app = create_app_with("--force")
-        updater = ArticleUpdater.new(app: app)
-        app.status_storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
+        @app = create_app(args: ["--force"])
+        @app.status_storage.save(create_sync_status(synced: true, edited_at: "2023-02-17T09:00:00Z"))
 
-        updater.download_articles
+        ArticleUpdater.new(app: @app).download_articles
 
         refute_equal "2023-02-17T09:00:00Z", find_sync_record(1)[:edited_at]
       end
@@ -123,12 +121,6 @@ module Sync
 
         assert_equal @app.status_storage.object_id, updater.storage.object_id
         assert_equal @app.working_dir, updater.working_dir
-      end
-
-      private
-
-      def create_app_with(arg)
-        App.new(args: [arg], fetcher: @fetcher)
       end
     end
   end

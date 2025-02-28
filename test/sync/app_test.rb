@@ -4,11 +4,6 @@ require "sync_test_case"
 require "sync/app"
 
 class AppTest < SyncTestCase
-  def setup
-    super
-    @app = App.new
-  end
-
   def test_provide_storage_instance
     assert_instance_of SyncStatusStorage, @app.status_storage, "Should initialize with a storage instance"
     assert_equal @temp_dir.to_s, @app.status_storage.sync_file_path.dirname.to_s, "Storage should use the correct working directory"

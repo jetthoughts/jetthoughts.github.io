@@ -14,25 +14,25 @@ class App
   attr_reader :working_dir, :logger, :fetcher, :args
 
   def self.config
-    Thread.current[:sync_app_config] ||= Sync::Configuration.new
+    @config ||= Sync::Configuration.new
   end
 
   def self.configure
     yield config
   end
 
-  def self.reset_config
-    Thread.current[:sync_app_config] = nil
-  end
-
-  def initialize(args: [], working_dir: App.config.working_dir, fetcher: nil)
+  def initialize(args: [], working_dir: App.config.working_dir, register: nil)
     @args = args
     @working_dir = Pathname.new(working_dir).cleanpath
-    @fetcher = fetcher
+    @register = register
   end
 
   def status_storage
     @storage ||= SyncStatusStorage.new(@working_dir).tap(&:ensure_file_exists)
+  end
+
+  def register
+    @register ||= Sync::Source::Lookup.new
   end
 
   def dry_run?

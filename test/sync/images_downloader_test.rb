@@ -14,7 +14,7 @@ class ImagesDownloaderTest < SyncTestCase
     @articles.replace([@remote_data])
     create_article_with_metadata(@slug, @remote_data, @content)
 
-    @post = Sync::Post.new(@slug)
+    @post = Sync::Post.new(@slug, working_dir: @app.working_dir)
     @article_dir = @post.page_bundle_dir
     @downloader = ImagesDownloader.new(@slug, @remote_data, @local_data, app: @app)
 

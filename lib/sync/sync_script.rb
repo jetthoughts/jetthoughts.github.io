@@ -12,7 +12,7 @@ class SyncScript
 
   attr_reader :app
 
-  def initialize(app: App.new)
+  def initialize(app:)
     @app = app
   end
 

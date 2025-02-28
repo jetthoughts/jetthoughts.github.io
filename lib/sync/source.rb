@@ -2,23 +2,26 @@
 
 module Sync
   class Source
-    singleton_class.attr_accessor :sources
-    self.sources = {}
+    class Lookup
+      def initialize(&block)
+        @sources = {}
+      end
 
-    def self.for(name = nil)
-      sources.fetch(name)
-    end
+      def for(name)
+        @sources.fetch(name)
+      end
 
-    def self.register(source)
-      sources[source.name] = source
-    end
+      def register(source)
+        @sources[source.name] = source
+      end
 
-    def self.unregister(name)
-      sources.delete(name)
-    end
+      def unregister(name)
+        @sources.delete(name)
+      end
 
-    def self.source_names
-      sources.keys
+      def source_names
+        @sources.keys
+      end
     end
   end
 end
