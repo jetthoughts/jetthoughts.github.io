@@ -12,32 +12,33 @@ require "logger"
 require "sync/app"
 require "sync/source"
 
+App.configure do |config|
+  config.logger = Logger.new(IO::NULL, level: Logger::DEBUG) unless ENV["DEBUG"]
+end
+
 class SyncTestCase < Minitest::Test
   # NOTE: Uncomment to run tests in parallel when it will be more than 1 minute
   # parallelize_me!
 
   def setup
-    working_dir = setup_temp_dir
-
-    App.configure do |config|
-      config.working_dir = working_dir
-      config.logger = Logger.new(IO::NULL, level: Logger::DEBUG) unless ENV["DEBUG"]
-    end
+    @working_dir = setup_temp_dir
 
     @articles = []
+    @register = Sync::Source::Lookup.new.tap do
+      it.register(Sync::Sources::Test.new(@articles, "test"))
+    end
+
     @app = create_app
   end
 
   class Sync::Sources::Test < Sync::Sources::DevTo
-  end
-
-  def create_test_source_for(articles = [], as: "test")
-    Sync::Sources::Test.new(name: as, http_client: TestHttpClient.new(articles))
+    def initialize(articles = [], name = "test")
+      super(name: name, http_client: TestHttpClient.new(articles))
+    end
   end
 
   def teardown
     teardown_temp_dir
-    App.reset_config
     super
   end
 
@@ -55,15 +56,15 @@ class SyncTestCase < Minitest::Test
   end
 
   def create_article(slug, content = "# Test Content")
-    TestFactories::Article.create_page_bundle(slug, content)
+    TestFactories::Article.create_page_bundle(slug, content, app: @app)
   end
 
   def create_article_with_metadata(slug, metadata = {}, content = "# Test Content")
-    TestFactories::Article.create_with_metadata(slug, metadata, content)
+    TestFactories::Article.create_with_metadata(slug, metadata, content, app: @app)
   end
 
-  def read_markdown_metadata(...)
-    TestFactories::Article.read_metadata(...)
+  def read_markdown_metadata(**)
+    TestFactories::Article.read_metadata(app: @app, **)
   end
 
   def create_sync_status(...)
@@ -75,8 +76,7 @@ class SyncTestCase < Minitest::Test
   end
 
   def create_app(**)
-    Sync::Source.register(create_test_source_for(@articles))
-    App.new(**)
+    App.new(register: @register, working_dir: @working_dir, **)
   end
 
   def sync_records_count

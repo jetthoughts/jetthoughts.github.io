@@ -49,7 +49,7 @@ module Sync
 
     def save_content(article, status)
       # return if app.dry_run?
-      post = Post.create_from_remote_details(article, status)
+      post = Post.create_from_remote_details(article, status, app: @app)
       post.save
 
       download_images(article, status)
@@ -122,9 +122,7 @@ module Sync
     end
 
     def fetcher_for(status)
-      source_name = status["source"] || status[:source]
-      status if !(source_name) || source_name == "dev_to"
-      Sync::Source.for(source_name)
+      app.register.for(status["source"] || status[:source])
     end
 
     def articles_to_sync

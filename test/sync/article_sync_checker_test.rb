@@ -8,14 +8,14 @@ class ArticleSyncCheckerTest < SyncTestCase
   def setup
     super
     @another_articles = []
-    Sync::Source.register(create_test_source_for(@another_articles, as: "another_test"))
+    @app.register.register(Sync::Sources::Test.new(@another_articles, "another_test"))
     @articles.replace([sample_article])
     @checker = ArticleSyncChecker.new(app: @app)
   end
 
   def teardown
     super
-    Sync::Source.unregister("another_test")
+    @app.register.unregister("another_test")
   end
 
   def test_update_sync_status_creates_file_if_not_exists

@@ -22,17 +22,17 @@ module TestFactories
       }.merge(overrides)
     end
 
-    def self.create_page_bundle(slug, content = "# Test Content")
-      create_with_metadata(slug, {}, content)
+    def self.create_page_bundle(slug, content = "# Test Content", app:)
+      create_with_metadata(slug, {}, content, app:)
     end
 
-    def self.create_with_metadata(slug, metadata = {}, content = "# Test Content")
+    def self.create_with_metadata(slug, metadata = {}, content = "# Test Content", app:)
       metadata = {
         "title" => "Test Article",
         "description" => "Test Description"
       }.merge(metadata)
 
-      post = Sync::Post.new(slug)
+      post = Sync::Post.new(slug, working_dir: app.working_dir)
       post.metadata = metadata
       post.body_markdown = content
 
@@ -41,8 +41,8 @@ module TestFactories
       post.page_bundle_dir
     end
 
-    def self.read_metadata(slug:)
-      Sync::Post.new(slug).load.metadata
+    def self.read_metadata(slug:, app:)
+      Sync::Post.new(slug, working_dir: app.working_dir).load.metadata
     end
   end
 

@@ -16,10 +16,10 @@ class ImagesDownloader
 
   def initialize(slug, remote_data = nil, local_data = nil, app:)
     @slug = slug
-    @fetcher = Sync::Source.for(local_data[:source])
+    @fetcher = app.register.for(local_data[:source])
     @remote_data = remote_data
     @local_data = local_data
-    @post = Sync::Post.create_from_remote_details(remote_data, local_data)
+    @post = Sync::Post.create_from_remote_details(remote_data, local_data, app:)
   end
 
   def perform

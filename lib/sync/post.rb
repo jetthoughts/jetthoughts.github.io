@@ -10,16 +10,16 @@ module Sync
 
     attr_accessor :slug, :metadata, :body_markdown
 
-    def initialize(slug, app: App.config)
+    def initialize(slug, working_dir: nil)
       @slug = slug
-      @app = app
+      @working_dir = working_dir || App.config.working_dir
     end
 
     def storage
-      @storage ||= PostStorage.new(@app.working_dir)
+      @storage ||= PostStorage.new(@working_dir)
     end
 
-    def self.create_from_remote_details(article, status)
+    def self.create_from_remote_details(article, status, app: nil)
       content = prepare_markdown(article["body_markdown"].to_s)
 
       # Generate metadata from remote article attributes
@@ -28,7 +28,7 @@ module Sync
       metadata["slug"] = status[:slug]
       metadata["description"] = status[:description] || metadata["description"]
 
-      Post.new(status[:slug]).tap do |post|
+      Post.new(status[:slug], working_dir: (app || App.config).working_dir).tap do |post|
         post.metadata = metadata
         post.body_markdown = content
       end

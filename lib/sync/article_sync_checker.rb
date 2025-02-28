@@ -12,12 +12,13 @@ class ArticleSyncChecker
   attr_reader :storage
 
   def initialize(app:)
+    @register = app.register
     @storage = app.status_storage
   end
 
   def update_sync_status
-    Sync::Source.source_names.each do |source_name|
-      fetcher = Sync::Source.for(source_name)
+    @register.source_names.each do |source_name|
+      fetcher = @register.for(source_name)
       remote_articles = fetcher.fetch_all
       update_sync_statuses_for(remote_articles)
     end

@@ -7,7 +7,7 @@ module Sync
     def test_loads_metadata_from_content_file
       create_article_with_metadata("test-article", {"cover_image" => "https://example.com/test.jpg"})
 
-      post = Post.new("test-article").load
+      post = Post.new("test-article", working_dir: @app.working_dir).load
 
       assert_equal "https://example.com/test.jpg", post.cover_image
     end
