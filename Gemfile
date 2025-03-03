@@ -14,6 +14,8 @@ gem "ostruct"
 
 gem "tqdm"
 
+gem "sanity-ruby"
+
 gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
 gem 'simplecov', require: false
 gem "vips"

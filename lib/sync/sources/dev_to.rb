@@ -10,6 +10,10 @@ module Sync
     class DevTo < Base
       USERNAME = "jetthoughts"
 
+      def initialize(options = nil)
+        super({name: "dev_to"}.merge(options || {}))
+      end
+
       def fetch_all
         with_retries(operation: "Fetching articles list") do
           response = client.get_articles(USERNAME, 0)
@@ -17,7 +21,7 @@ module Sync
             articles = JSON.parse(response.body)
             articles.map { |article| process_article(article) }
           else
-            raise "Failed to fetch articles: #{response.body}"
+            raise RetryableError, "Failed to fetch articles: #{response.body}"
           end
         end
       end
@@ -29,7 +33,7 @@ module Sync
             article = JSON.parse(response.body)
             process_article(article)
           else
-            raise "Failed to fetch an article: #{response.body}"
+            raise RetryableError, "Failed to fetch an article: #{response.body}"
           end
         end
       end
@@ -41,7 +45,7 @@ module Sync
           if response.success?
             response.body
           else
-            raise "Failed to download #{url}: #{response.code} #{response.message}"
+            raise RetryableError, "Failed to download #{url}: #{response.code} #{response.message}"
           end
         end
       end

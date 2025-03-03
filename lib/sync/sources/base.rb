@@ -1,7 +1,5 @@
 # lib/sync/sources/base.rb
 
-require "active_support/inflector"
-
 module Sync
   module Sources
     class Base
@@ -12,7 +10,7 @@ module Sync
 
       def initialize(options = {})
         @client = build_client(options)
-        @name = options[:name] || self.class.name.tableize
+        @name = options[:name] || self.class.name.downcase
       end
 
       def fetch_all

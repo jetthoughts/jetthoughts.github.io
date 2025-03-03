@@ -6,11 +6,15 @@ $LOAD_PATH.unshift(lib_dir) unless $LOAD_PATH.include?(lib_dir)
 
 require "sync/app"
 require "sync/sync_script"
+require "sync/source"
+require "sync/sources/sanity"
 
 App.configure do |config|
   config.logger = Logger.new(STDOUT, level: :warn)
 end
 
-Sync::Source.register(Sync::Sources::DevTo.new)
+register = Sync::Source::Lookup.new
+register.register(Sync::Sources::DevTo.new)
+register.register(Sync::Sources::Sanity.new)
 
-App.new(args: ARGV).run
+App.new(args: ARGV, register: register).run

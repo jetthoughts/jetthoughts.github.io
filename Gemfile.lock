@@ -25,6 +25,8 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    activemodel (8.0.1)
+      activesupport (= 8.0.1)
     activesupport (8.0.1)
       base64
       benchmark (>= 0.3)
@@ -147,6 +149,8 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
     rubyzip (2.4.1)
+    sanity-ruby (0.6.0)
+      activemodel
     securerandom (0.4.1)
     selenium-webdriver (4.28.0)
       base64 (~> 0.2)
@@ -203,6 +207,7 @@ DEPENDENCIES
   puma
   rack
   rackup
+  sanity-ruby
   selenium-webdriver
   simplecov
   standard

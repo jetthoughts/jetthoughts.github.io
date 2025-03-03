@@ -68,7 +68,7 @@ class ArticleSyncChecker
   end
 
   def generate_slug(article)
-    slug_parts = article["slug"].split("-")
+    slug_parts = article["slug"]&.split("-") || []
     tags = article["tags"] ? article["tags"].split(", ") : []
     selected_tags = tags.first(10)
     result = [slug_parts, selected_tags]
