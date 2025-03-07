@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/the-evolution-of-engineering-leadership-i
 title: 'The Evolution of Engineering Leadership in Berlin: Insights from a VP Engineering''s Journey'
 description: With Berlin's startup ecosystem growing 28% in the first half of 2024, the path to engineering...
 created_at: '2025-02-06T08:24:40Z'
-edited_at: '2025-02-06T08:32:08Z'
+edited_at: '2025-03-07T14:28:22Z'
 draft: false
 tags:
 - product
