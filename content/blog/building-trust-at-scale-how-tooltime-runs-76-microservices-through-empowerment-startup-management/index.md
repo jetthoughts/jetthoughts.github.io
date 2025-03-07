@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/building-trust-at-scale-how-tooltime-runs
 title: 'Building Trust at Scale: How ToolTime Runs 76 Microservices through Empowerment'
 description: If you're an engineering leader wrestling with scaling teams while preserving autonomy, this story...
 created_at: '2025-01-21T13:13:11Z'
-edited_at: '2025-01-22T15:29:55Z'
+edited_at: '2025-03-07T14:43:59Z'
 draft: false
 tags:
 - startup
