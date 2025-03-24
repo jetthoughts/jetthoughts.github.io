@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/revolutionizing-engineering-the-future-of
 title: 'Revolutionizing Engineering: The Future of AI-Aided Tools'
 description: Explore how AI is set to transform engineering tools, making them more accessible and efficient. Discover the potential of AI-aided engineering tools for the future.
 created_at: '2025-03-12T07:42:34Z'
+edited_at: '2025-03-24T12:44:15Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/revolutionizing-engineering-the-future-of-ai-aided-tools-26gc

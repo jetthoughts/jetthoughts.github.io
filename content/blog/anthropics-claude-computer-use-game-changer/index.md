@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/anthropics-claude-computer-use-a-game-cha
 title: 'Anthropic’s Claude Computer Use: A Game Changer in AI'
 description: Discover how Anthropic’s Claude Computer Use is revolutionizing AI. This innovative tool allows AI to browse, click, and type, automating tasks and changing how we interact with technology.
 created_at: '2025-03-23T02:44:24Z'
+edited_at: '2025-03-24T12:45:06Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/anthropics-claude-computer-use-a-game-changer-in-ai-3ihp

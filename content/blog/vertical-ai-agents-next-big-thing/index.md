@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/vertical-ai-agents-the-next-big-thing-in-
 title: 'Vertical AI Agents: The Next Big Thing in Tech'
 description: Explore the rise of vertical AI agents and their potential to revolutionize the tech landscape. Discover how these agents could create billion-dollar companies by automating repetitive tasks and streamlining operations.
 created_at: '2025-03-16T17:52:14Z'
+edited_at: '2025-03-24T12:45:28Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/vertical-ai-agents-the-next-big-thing-in-tech-7cb

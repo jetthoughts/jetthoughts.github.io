@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/twitter-vs-x-product-lessons-for-startup-
 title: 'Twitter vs. X: Product Lessons For Startup Founders'
 description: Since Elon Musk took over Twitter and rebranded it as X, the platform has added new features, implemented major UX modifications, and made controversial changes to its algorithm. What can founders learn from this? Join us as we explore key lessons for product design.
 created_at: '2025-03-14T15:03:24Z'
+edited_at: '2025-03-24T12:44:27Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/twitter-vs-x-product-lessons-for-startup-founders-5abb

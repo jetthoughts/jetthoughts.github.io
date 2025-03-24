@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/revolutionizing-mobile-apps-the-impact-of
 title: 'Revolutionizing Mobile Apps: The Impact of Augmented Reality'
 description: Explore how Augmented Reality is revolutionizing mobile app development, enhancing user experiences across various sectors, and driving significant market growth.
 created_at: '2025-03-17T02:09:34Z'
+edited_at: '2025-03-24T12:44:32Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/revolutionizing-mobile-apps-the-impact-of-augmented-reality-jf1

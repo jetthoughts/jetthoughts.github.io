@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/revolutionizing-chip-design-with-llms-686
 title: Revolutionizing Chip Design with LLMs
 description: Explore how Large Language Models (LLMs) are transforming chip design, making custom ASICs and FPGAs faster and cheaper. Discover the business opportunities in this evolving landscape.
 created_at: '2025-03-08T05:37:23Z'
+edited_at: '2025-03-24T12:45:53Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/revolutionizing-chip-design-with-llms-686

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-the-secrets-of-remote-developme
 title: 'Unlocking the Secrets of Remote Development: Insights from Craig Cannon'
 description: Explore insights from Craig Cannon on effectively working with remote developers, including hiring strategies, communication tips, and overcoming common challenges.
 created_at: '2025-03-15T01:07:24Z'
+edited_at: '2025-03-24T12:44:25Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-the-secrets-of-remote-development-insights-from-craig-cannon-2ad8

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/exploring-rust-on-rails-the-future-of-web
 title: 'Exploring Rust on Rails: The Future of Web Development for Solo Developers'
 description: Discover how rust on rails is transforming web development for solo developers with speed and efficiency.
 created_at: '2025-03-22T02:09:13Z'
+edited_at: '2025-03-24T12:45:08Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/exploring-rust-on-rails-the-future-of-web-development-for-solo-developers-1318

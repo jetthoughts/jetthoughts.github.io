@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/10-essential-developer-best-practices-for
 title: 10 Essential Developer Best Practices for Building Robust Software in 2025
 description: Discover 10 developer best practices to build robust software in 2025 and tackle modern coding challenges!
 created_at: '2025-03-24T03:03:25Z'
+edited_at: '2025-03-24T12:45:02Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/10-essential-developer-best-practices-for-building-robust-software-in-2025-2iof

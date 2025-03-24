@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/maximizing-efficiency-the-ultimate-guide-
 title: 'Maximizing Efficiency: The Ultimate Guide to In-House Software Development in 2025'
 description: Unlock the secrets to in-house software development success in 2025 with our ultimate guide!
 created_at: '2025-03-09T19:45:23Z'
+edited_at: '2025-03-24T12:45:57Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/maximizing-efficiency-the-ultimate-guide-to-in-house-software-development-in-2025-4an6

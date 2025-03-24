@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/why-i-hire-engineering-unlocking-the-secr
 title: 'Why I Hire Engineering: Unlocking the Secrets to Successful Recruitment in Tech'
 description: Discover how to hire engineering talent effectively with tips on recruitment, interviews, and onboarding.
 created_at: '2025-03-10T07:43:43Z'
+edited_at: '2025-03-24T12:45:58Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/why-i-hire-engineering-unlocking-the-secrets-to-successful-recruitment-in-tech-2le1

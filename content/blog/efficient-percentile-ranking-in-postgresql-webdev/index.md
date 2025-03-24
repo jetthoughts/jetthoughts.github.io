@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/efficient-percentile-ranking-in-postgresq
 title: Efficient Percentile Ranking in PostgreSQL
 description: When analyzing data, percentiles help us understand the relative ranking of records within a dataset....
 created_at: '2025-03-11T10:41:15Z'
+edited_at: '2025-03-24T12:43:58Z'
 draft: false
 tags:
 - webdev

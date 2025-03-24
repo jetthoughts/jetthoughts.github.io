@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-growth-the-essential-structure-
 title: 'Unlocking Growth: The Essential Structure of a Modern Marketing Agency'
 description: Explore the ideal structure for a modern marketing agency, focusing on key roles and the importance of flexibility and specialized skills for growth.
 created_at: '2025-03-13T00:12:55Z'
+edited_at: '2025-03-24T12:44:17Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-growth-the-essential-structure-of-a-modern-marketing-agency-cl3

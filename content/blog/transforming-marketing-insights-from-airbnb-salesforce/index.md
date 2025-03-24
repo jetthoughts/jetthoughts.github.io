@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/transforming-marketing-insights-from-airb
 title: 'Transforming Marketing: Insights from Airbnb, Salesforce, and Logitech'
 description: Explore insights from Hayley Nelson on building agile, content-driven marketing teams at Airbnb, Salesforce, and Logitech, focusing on storytelling, customer insights, and modern marketing strategies.
 created_at: '2025-03-21T04:33:33Z'
+edited_at: '2025-03-24T12:45:10Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/transforming-marketing-insights-from-airbnb-salesforce-and-logitech-3c25

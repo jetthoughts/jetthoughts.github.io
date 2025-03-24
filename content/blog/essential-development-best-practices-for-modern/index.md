@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/essential-development-best-practices-for-
 title: Essential Development Best Practices for Modern Software Projects in 2025
 description: Discover essential development best practices for 2025 to enhance your software projects and team collaboration.
 created_at: '2025-03-11T20:35:13Z'
+edited_at: '2025-03-24T12:44:13Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/essential-development-best-practices-for-modern-software-projects-in-2025-f2f
