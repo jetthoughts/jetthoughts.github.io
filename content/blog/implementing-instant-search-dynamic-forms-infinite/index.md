@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/implementing-instant-search-dynamic-forms
 title: Implementing Instant Search, Dynamic Forms, and Infinite Scroll with Hotwire and Turbo in Rails
 description: Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common...
 created_at: '2025-03-26T20:00:54Z'
-edited_at: '2025-03-26T20:56:17Z'
+edited_at: '2025-03-26T21:21:03Z'
 draft: false
 tags:
 - rails
@@ -161,7 +161,7 @@ end
 
 Here's the magic ingredient - a search form that submits automatically when the user types or changes a dropdown:
 
-```html+erb
+```html
 <%# app/views/admin/employees/_search_and_filters.html.erb %>
 <section id="name_filter">
   <%= form_with(
@@ -272,7 +272,7 @@ An important architectural decision is wrapping both the search form and results
 
 For example, imagine selecting "Engineering" team changes available manager options. With a single frame, one request can update both the managers dropdown and the filtered results without awkward intermediate states:
 
-```erb
+```html
 <%# In your controller response %>
 <%= turbo_stream.update :categorized_employees do %>
   <%= render "search_and_filters", filter: @filter, teams: @teams, managers: @filtered_managers %>
@@ -286,7 +286,7 @@ Without this pattern, managing dependent form fields becomes a complicated chain
 
 When the search form is submitted, your controller responds with this elegant Turbo Stream:
 
-```erb
+```html
 <%# app/views/admin/employees/search.turbo_stream.erb %>
 <%= turbo_stream.update "employees_table_rows" do %>
   <%= render partial: "admin/employees/employee", collection: @employees %>
@@ -300,7 +300,7 @@ See how this updates just the table rows without refreshing anything else? That'
 
 For a modern UX, forget about page numbers. Here's how to implement a "Load More" button:
 
-```erb
+```html
 <%# app/views/admin/employees/_load_next_employees.html.erb %>
 <tr id="load_more">
   <td colspan="6" class="text-center">
@@ -318,7 +318,7 @@ For a modern UX, forget about page numbers. Here's how to implement a "Load More
 
 When clicking "Load More", we append new rows instead of replacing existing ones:
 
-```erb
+```html
 <%# app/views/admin/employees/search_more.turbo_stream.erb %>
 <%= turbo_stream.remove "load_more" %>
 <%= turbo_stream.append "employees_table_rows" do %>
@@ -333,7 +333,7 @@ When clicking "Load More", we append new rows instead of replacing existing ones
 
 Flash messages should feel seamless too. Here's the pattern:
 
-```erb
+```html
 <%# app/views/shared/_flash.html.erb %>
 <%= turbo_frame_tag :flash do %>
   <% flash.each do |type, message| %>
@@ -371,7 +371,7 @@ end
 
 ### ❌ Don't Put Turbo Frames Around Table Rows
 
-```erb
+```html
 <!-- DON'T DO THIS: It breaks HTML validity -->
 <%= turbo_frame_tag "employee_row" do %>
   <tr>...</tr>
@@ -396,30 +396,7 @@ Always include flash updates in your Turbo Stream responses when actions change 
 
 Redirects in Turbo Stream responses don't work as expected. Instead, render the appropriate streams directly.
 
-## 9. Troubleshooting Your Hotwire Implementation
-
-### "My Turbo Stream response isn't updating the DOM—why?"
-
-Check these common causes:
-- Did you respond with `format.turbo_stream`?
-- Is your target element ID correct?
-- Are you using `turbo_stream.update` when you should be using `append`/`prepend`?
-
-### "Filters work, but pagination breaks after search"
-
-This usually happens when your pagination isn't properly integrated with your filter parameters. Make sure:
-- All filter params are passed to pagination links
-- Your controller maintains filter state between requests
-- Pagination links include the correct format (turbo_stream)
-
-### "My form submits but nothing happens"
-
-Common fixes:
-- Check browser console for JavaScript errors
-- Ensure `local: false` is set on your form
-- Verify you have a matching `turbo_frame` id in a response
-
-## 10. Real-World Performance Considerations
+## 9. Real-World Performance Considerations
 
 When implementing these patterns in production, keep these tips in mind:
 
