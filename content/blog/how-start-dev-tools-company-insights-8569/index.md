@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/how-to-start-a-dev-tools-company-insights
 title: 'How To Start A Dev Tools Company: Insights From YC'
 description: Learn how to start a dev tools company with insights from YC's Nicolas Dessaigne. Discover key strategies for finding your idea, building your product, and engaging with users.
 created_at: '2025-03-26T07:52:27Z'
+edited_at: '2025-03-26T20:45:19Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/how-to-start-a-dev-tools-company-insights-from-yc-3ome
