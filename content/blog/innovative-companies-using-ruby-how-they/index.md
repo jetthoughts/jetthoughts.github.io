@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/innovative-companies-using-ruby-how-they-
 title: 'Innovative Companies Using Ruby: How They Leverage Its Power in 2025'
 description: Discover how innovative companies using Ruby on Rails thrive in 2025 with rapid development and scalability.
 created_at: '2025-03-26T04:31:26Z'
+edited_at: '2025-03-26T06:27:04Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/innovative-companies-using-ruby-how-they-leverage-its-power-in-2025-2i02
