@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/implementing-instant-search-dynamic-forms
 title: Implementing Instant Search, Dynamic Forms, and Infinite Scroll with Hotwire and Turbo in Rails
 description: Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common...
 created_at: '2025-03-26T20:00:54Z'
+edited_at: '2025-03-26T20:40:12Z'
 draft: false
 tags:
 - rails
@@ -22,6 +23,8 @@ slug: implementing-instant-search-dynamic-forms-infinite
 Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common pitfalls lead to broken interactions, performance bottlenecks, or unmaintainable code. In this guide, I'll walk you through the idiomatic integration of Hotwire for the most common use case: a browse page with instant search, infinite scrolling, dynamic per-record actions, and cursor-based pagination—all with minimal JavaScript and maximum performance.
 
 > **TL;DR:** This post shows you how to build an interactive employee directory with instant search, dynamic forms, and infinite scrolling using just Hotwire (minimal JS).
+
+![example of the interactive application](file_0.gif)
 
 ## 5-Minute Quick Start Guide
 
@@ -363,6 +366,8 @@ def destroy
   end
 end
 ```
+
+![Example list of employees page with table, filters, search](file_1.png)
 
 ## 8. Common Gotchas and How to Fix Them
 
