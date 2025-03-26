@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/implementing-instant-search-dynamic-forms
 title: Implementing Instant Search, Dynamic Forms, and Infinite Scroll with Hotwire and Turbo in Rails
 description: Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common...
 created_at: '2025-03-26T20:00:54Z'
-edited_at: '2025-03-26T20:40:12Z'
+edited_at: '2025-03-26T20:49:39Z'
 draft: false
 tags:
 - rails
@@ -20,7 +20,7 @@ metatags:
   image: cover.png
 slug: implementing-instant-search-dynamic-forms-infinite
 ---
-Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common pitfalls lead to broken interactions, performance bottlenecks, or unmaintainable code. In this guide, I'll walk you through the idiomatic integration of Hotwire for the most common use case: a browse page with instant search, infinite scrolling, dynamic per-record actions, and cursor-based pagination—all with minimal JavaScript and maximum performance.
+Despite [Hotwire's](https://hotwired.dev/) growing popularity, many developers struggle with implementing it correctly. Common pitfalls lead to broken interactions, performance bottlenecks, or unmaintainable code. In this guide, I'll walk you through the idiomatic integration of Hotwire for the most common use case: a browse page with instant search, infinite scrolling, dynamic per-record actions, and cursor-based pagination—all with minimal JavaScript and maximum performance.
 
 > **TL;DR:** This post shows you how to build an interactive employee directory with instant search, dynamic forms, and infinite scrolling using just Hotwire (minimal JS).
 
@@ -103,7 +103,7 @@ class Employee::Filter
 end
 ```
 
-> **🧠 Why use a Form Object?** Without this, your controller becomes a dumping ground for filter logic or your model gets bloated with scopes that only apply to this specific UI. Form objects give you:
+> **🧠 Why use a [Form Object](https://thoughtbot.com/ruby-science/introduce-form-object.html)?** Without this, your controller becomes a dumping ground for filter logic or your model gets bloated with scopes that only apply to this specific UI. Form objects give you:
 > - **Testability**: Unit test filters without controller overhead
 > - **Reusability**: The same filter works across different views or APIs
 > - **Clean parameters**: Explicit whitelist prevents mass assignment vulnerabilities
@@ -221,7 +221,7 @@ export default class extends Controller {
 
 HTML tables require special care with Turbo. You can't wrap `<tr>` elements directly with Turbo Frames as it breaks HTML validity. Here's how to do it right:
 
-```erb
+```html+erb
 <%# app/views/admin/employees/_employees_list.html.erb %>
 <%= turbo_frame_tag :categorized_employees do %>
   <%= render "search_and_filters", filter: @filter, teams: @teams %>
