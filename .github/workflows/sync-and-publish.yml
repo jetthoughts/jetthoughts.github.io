@@ -17,6 +17,11 @@ permissions:
   pages: write
   id-token: write
 
+# Concurrency allows you to run multiple jobs in parallel, but only one job at a time
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   run_sync:
