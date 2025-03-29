@@ -21,31 +21,33 @@ jobs:
         id: parse
         run: |
           ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP 'UPLOAD_ZIP:\s*\K\S+')
-          echo "url=$ZIP_URL" >> $GITHUB_OUTPUT
-          echo "issue=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
-
-      - name: Download and process ZIP
-        run: |
-          wget "${{ steps.parse.outputs.url }}" -O upload.zip
-          unzip upload.zip -d "posts/${{ steps.parse.outputs.issue }}"
-          rm upload.zip
-
-      - name: Commit files
-        run: |
-          git config --global user.name "Issue Processor"
-          git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Add files from issue #${{ steps.parse.outputs.issue }}"
-          git push
-
-      - name: Update issue
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: ${{ steps.parse.outputs.issue }},
-              body: '✅ Files processed and committed!\n' +
-                    'View: https://github.com/${{ github.repository }}/tree/main/posts/${{ steps.parse.outputs.issue }}'
-            })
+          echo "url=$ZIP_URL"
+          echo "issue=${{ github.event.issue.number }}"
+#          echo "url=$ZIP_URL" >> $GITHUB_OUTPUT
+#          echo "issue=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+#
+#      - name: Download and process ZIP
+#        run: |
+#          wget "${{ steps.parse.outputs.url }}" -O upload.zip
+#          unzip upload.zip -d "posts/${{ steps.parse.outputs.issue }}"
+#          rm upload.zip
+#
+#      - name: Commit files
+#        run: |
+#          git config --global user.name "Issue Processor"
+#          git config --global user.email "actions@github.com"
+#          git add .
+#          git commit -m "Add files from issue #${{ steps.parse.outputs.issue }}"
+#          git push
+#
+#      - name: Update issue
+#        uses: actions/github-script@v6
+#        with:
+#          script: |
+#            github.rest.issues.createComment({
+#              owner: context.repo.owner,
+#              repo: context.repo.repo,
+#              issue_number: ${{ steps.parse.outputs.issue }},
+#              body: '✅ Files processed and committed!\n' +
+#                    'View: https://github.com/${{ github.repository }}/tree/main/posts/${{ steps.parse.outputs.issue }}'
+#            })
