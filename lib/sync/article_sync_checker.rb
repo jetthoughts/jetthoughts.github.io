@@ -20,6 +20,7 @@ class ArticleSyncChecker
     @register.source_names.each do |source_name|
       fetcher = @register.for(source_name)
       remote_articles = fetcher.fetch_all
+      next unless remote_articles
       update_sync_statuses_for(remote_articles)
     end
   end

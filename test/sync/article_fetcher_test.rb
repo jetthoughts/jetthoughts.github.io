@@ -52,22 +52,22 @@ module Sync
     end
 
     def test_not_need_to_update_remote_update_without_local_description
-      article_data = {"id" => 2, "description" => "Test description", "canonical_url" => "/#{@sync_data[2][:slug]}"}
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[2].except(:description))
+      article_data = {"id" => 2, "description" => "Test description", "canonical_url" => "/#{find_sync_record(2, @sync_data)[:slug]}"}
+      refute @fetcher.need_to_update_remote?(article_data, find_sync_record(2, @sync_data).except(:description))
     end
 
     def test_has_updated_meta_description_with_matching_description
       article_data = {
         "id" => 1,
-        "description" => @sync_data[1][:description],
-        "canonical_url" => "https://example.com/#{@sync_data[1][:slug]}"
+        "description" => find_sync_record(1, @sync_data)[:description],
+        "canonical_url" => "https://example.com/#{find_sync_record(1, @sync_data)[:slug]}"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
+      refute @fetcher.need_to_update_remote?(article_data, find_sync_record(1, @sync_data))
     end
 
     def test_has_updated_meta_description_with_different_description
       article_data = {"id" => 1, "description" => "New description"}
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
+      assert @fetcher.need_to_update_remote?(article_data, find_sync_record(1, @sync_data))
     end
 
     def test_has_synced_metadata_when_url_mismatch
@@ -77,7 +77,7 @@ module Sync
         "canonical_url" => "https://example.com/wrong-article"
       }
 
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
+      assert @fetcher.need_to_update_remote?(article_data, find_sync_record(1, @sync_data))
     end
 
     def test_has_synced_metadata_when_description_mismatch
@@ -86,7 +86,7 @@ module Sync
         "description" => "New description",
         "canonical_url" => "https://example.com/test-article"
       }
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
+      assert @fetcher.need_to_update_remote?(article_data, find_sync_record(1, @sync_data))
     end
 
     def test_has_synced_metadata_when_no_url
@@ -94,7 +94,7 @@ module Sync
         "id" => 1,
         "description" => "Test description"
       }
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
+      assert @fetcher.need_to_update_remote?(article_data, find_sync_record(1, @sync_data))
     end
 
     def test_has_synced_metadata_when_no_sync_data

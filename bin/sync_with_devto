@@ -15,6 +15,6 @@ end
 
 register = Sync::Source::Lookup.new
 register.register(Sync::Sources::DevTo.new)
-register.register(Sync::Sources::Sanity.new)
+# register.register(Sync::Sources::Sanity.new)
 
 App.new(args: ARGV, register: register).run
