@@ -7,10 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/mastering-mvp-software-design-essential-s
 title: 'Mastering MVP Software Design: Essential Strategies for Successful Development'
 description: Unlock MVP software design secrets! Discover strategies, user feedback tips, and real-world examples for success.
 created_at: '2025-03-07T18:59:14Z'
-edited_at: '2025-03-24T12:45:51Z'
+edited_at: '2025-03-29T19:56:22Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-mvp-software-design-essential-strategies-for-successful-development-1kc7
+canonical_url: https://jetthoughts.com/blog/mastering-mvp-software-design-essential-strategies/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-mvp-software-design-essential-strategies/cover.jpeg
 metatags:
   image: cover.jpeg
