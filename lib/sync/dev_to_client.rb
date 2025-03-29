@@ -1,4 +1,3 @@
-require "httparty"
 require "faraday"
 
 class DevToClient
