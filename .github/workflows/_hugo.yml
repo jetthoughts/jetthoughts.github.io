@@ -3,6 +3,11 @@
 on:
   workflow_call:
 
+env:
+  HUGO_ENVIRONMENT: production
+  HUGO_ENV: production
+  HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+
 jobs:
   build:
     outputs:
@@ -27,11 +32,14 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install
 
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
       - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
         run: |
           PATH="app/bin:$PATH" hugo \
             --minify \
