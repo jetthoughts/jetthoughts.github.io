@@ -30,12 +30,8 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3.0
-
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+          ruby-version: 3.4.2
+          bundler-cache: true
 
       - name: Run sync script
         env:
