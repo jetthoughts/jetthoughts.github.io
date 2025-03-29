@@ -31,7 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -44,9 +43,9 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]
           then
-            bin/sync_with_devto -f
+            bundle exec bin/sync_with_devto -f
           else
-            bin/sync_with_devto
+            bundle exec bin/sync_with_devto
           fi
 
       - name: Commit and push if it changed
