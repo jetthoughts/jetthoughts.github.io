@@ -6,7 +6,11 @@ on:
 
 jobs:
   handle-upload:
-    if: contains(github.event.comment.body, 'UPLOAD_ZIP:')
+    if: |
+      (contains(github.event.comment.body, 'UPLOAD_ZIP:') || 
+      contains(github.event.comment.body, '.zip)')) && 
+      contains(fromJSON('["pftg"]'), github.event.comment.user.login)
+
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,7 +24,14 @@ jobs:
       - name: Parse comment
         id: parse
         run: |
-          ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP 'UPLOAD_ZIP:\s*\K\S+')
+          # Try to find URL from UPLOAD_ZIP: format
+          ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP 'UPLOAD_ZIP:\s*\K\S+' || echo "")
+          
+          # If not found, try to find URL from markdown link format
+          if [ -z "$ZIP_URL" ]; then
+            ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | grep -oP '(https?://.*?\.zip)')
+          fi
+
           echo "url=$ZIP_URL"
           echo "issue=${{ github.event.issue.number }}"
           echo "url=$ZIP_URL" >> $GITHUB_OUTPUT
@@ -32,12 +43,12 @@ jobs:
           unzip upload.zip -d "posts/${{ steps.parse.outputs.issue }}"
           rm upload.zip
 
-#      - name: Commit files
-#        run: |
-#          git config --global user.name "Issue Processor"
-#          git config --global user.email "actions@github.com"
-#          git add .
-#          git commit -m "Add files from issue #${{ steps.parse.outputs.issue }}"
+      - name: Commit files
+        run: |
+          git config --global user.name "Issue Processor"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Add files from issue #${{ steps.parse.outputs.issue }}"
 #          git push
 #
 #      - name: Update issue
