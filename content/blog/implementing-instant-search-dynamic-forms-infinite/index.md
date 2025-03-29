@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/implementing-instant-search-dynamic-forms
 title: Implementing Instant Search, Dynamic Forms, and Infinite Scroll with Hotwire and Turbo in Rails
 description: Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common...
 created_at: '2025-03-26T20:00:54Z'
-edited_at: '2025-03-27T09:58:29Z'
+edited_at: '2025-03-29T11:44:47Z'
 draft: false
 tags:
 - rails

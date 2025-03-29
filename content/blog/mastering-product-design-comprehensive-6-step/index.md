@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/mastering-product-design-a-comprehensive-
 title: 'Mastering Product Design: A Comprehensive 6-Step Guide'
 description: Explore a comprehensive 6-step guide to mastering the product design process, ensuring user needs are met while achieving business objectives.
 created_at: '2025-03-27T07:27:35Z'
+edited_at: '2025-03-29T11:44:29Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/mastering-product-design-a-comprehensive-6-step-guide-2ph3

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-marketing-success-a-strategic-g
 title: 'Unlocking Marketing Success: A Strategic Guide for Small Businesses'
 description: Explore a strategic guide for small businesses on selecting the best marketing channels to increase ROI and ensure effective outreach.
 created_at: '2025-03-29T08:27:14Z'
+edited_at: '2025-03-29T11:44:33Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-marketing-success-a-strategic-guide-for-small-businesses-o1m
