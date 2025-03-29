@@ -32,3 +32,5 @@ hugo.linux
 
 # Capybara
 capybara-*.png
+
+!/.github/
