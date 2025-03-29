@@ -48,17 +48,17 @@ module Sync
 
     def test_has_updated_canonical_url_with_no_url
       article_data = {"id" => 1}
-      refute @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
+      assert @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
     end
 
     def test_has_updated_canonical_url_with_matching_slug
       article_data = {"id" => 1, "canonical_url" => "https://example.com/test-article"}
-      assert @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
+      refute @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
     end
 
     def test_has_updated_canonical_url_with_different_slug
       article_data = {"id" => 1, "canonical_url" => "https://example.com/wrong-article"}
-      refute @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
+      assert @fetcher.need_to_update_remote?(article_data, {slug: "test-article"})
     end
 
     def test_has_updated_meta_description_with_no_sync_data
@@ -66,27 +66,22 @@ module Sync
       assert @fetcher.need_to_update_remote?(article_data, nil)
     end
 
-    def test_has_updated_meta_description_with_no_local_description
+    def test_not_need_to_update_remote_update_without_local_description
       article_data = {"id" => 2, "description" => "Test description", "canonical_url" => "/#{@sync_data[2][:slug]}"}
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[2].except(:description))
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[2].except(:description))
     end
 
     def test_has_updated_meta_description_with_matching_description
-      article_data = {"id" => 1, "description" => "Test description", "canonical_url" => "/#{@sync_data[1][:slug]}"}
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
+      article_data = {
+        "id" => 1,
+        "description" => @sync_data[1][:description],
+        "canonical_url" => "https://example.com/#{@sync_data[1][:slug]}"
+      }
+      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_updated_meta_description_with_different_description
       article_data = {"id" => 1, "description" => "New description"}
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1])
-    end
-
-    def test_has_synced_metadata_when_both_match
-      article_data = {
-        "id" => 1,
-        "description" => "Test description",
-        "canonical_url" => "https://example.com/test-article"
-      }
       assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
@@ -96,16 +91,17 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/wrong-article"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
+
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_description_mismatch
       article_data = {
         "id" => 1,
-        "description" => "Wrong description",
+        "description" => "New description",
         "canonical_url" => "https://example.com/test-article"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_no_url
@@ -113,7 +109,7 @@ module Sync
         "id" => 1,
         "description" => "Test description"
       }
-      refute @fetcher.need_to_update_remote?(article_data, @sync_data[1], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[1])
     end
 
     def test_has_synced_metadata_when_no_sync_data
@@ -122,7 +118,7 @@ module Sync
         "description" => "Test description",
         "canonical_url" => "https://example.com/test-article"
       }
-      assert @fetcher.need_to_update_remote?(article_data, @sync_data[3], "test-article")
+      assert @fetcher.need_to_update_remote?(article_data, @sync_data[3])
     end
 
     def test_remove_cdn

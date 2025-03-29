@@ -43,7 +43,7 @@ module Sync
         return
       end
 
-      post = save_content(article, status)
+      save_content(article, status)
       update_metadata(article, status)
       save_sync_status
     end
@@ -60,8 +60,14 @@ module Sync
     end
 
     def update_metadata(article, status)
-      return if metadata_up_to_date?(article, status)
-      return unless should_update_metadata?
+      if metadata_up_to_date?(article, status)
+        logger.debug("Metadata is up to date for article ID: #{status[:slug]}")
+        return
+      end
+      unless should_update_metadata?
+        logger.debug("Skipping metadata update for article ID: #{status[:slug]} (dry run)")
+        return
+      end
 
       logger.debug("Updating dev.to metadata for article ID: #{status[:slug]}...")
       if (updated = update_remote_metadata(article["id"], status))
@@ -70,7 +76,7 @@ module Sync
     end
 
     def metadata_up_to_date?(article, status)
-      if article_fetcher.need_to_update_remote?(article, status)
+      unless article_fetcher.need_to_update_remote?(article, status)
         status[:synced] = true
         logger.debug("Article ID: #{status[:slug]} already synced.")
         true
@@ -78,7 +84,7 @@ module Sync
     end
 
     def should_update_metadata?
-      ENV["SYNC_ENV"] == "test" && !app.dry_run?
+      ENV["SYNC_ENV"] != "test" || !app.dry_run?
     end
 
     def update_remote_metadata(id, status)

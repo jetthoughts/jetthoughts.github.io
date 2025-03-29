@@ -53,13 +53,13 @@ module Sync
     end
 
     # Do we need to update the remote article details?
-    def need_to_update_remote?(article_data, article_sync_data, expected_slug = nil)
+    def need_to_update_remote?(article_data, article_sync_data)
       logger.debug("Checking if metadata is synced for article #{article_data["id"]}")
 
       return true unless article_sync_data
 
-      has_updated_canonical_url?(article_data["canonical_url"], article_sync_data[:slug]) &&
-        has_updated_meta_description?(article_data["description"], article_sync_data[:description])
+      !has_updated_canonical_url?(article_data["canonical_url"], article_sync_data[:slug]) ||
+        !has_updated_meta_description?(article_data["description"], article_sync_data[:description])
     end
 
     def ext_from_image_url(image_url)
