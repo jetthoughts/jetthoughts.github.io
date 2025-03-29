@@ -1,11 +1,13 @@
 require "uri"
 require "json"
 
+require "sync/fetcher"
 require "sync/retryable"
 require "sync/logging"
 
 module Sync
   class DevToArticleFetcher
+    include Fetcher
     include Logging
     include Retryable
     USERNAME = "jetthoughts".freeze
