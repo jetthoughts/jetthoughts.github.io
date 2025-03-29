@@ -7,8 +7,8 @@ on:
 jobs:
   handle-upload:
     if: |
-      (contains(github.event.comment.body, 'UPLOAD_ZIP:') || 
-      contains(github.event.comment.body, '.zip)')) && 
+      (contains(github.event.comment.body, 'UPLOAD_ZIP:') ||
+      contains(github.event.comment.body, '.zip)')) &&
       contains(fromJSON('["pftg"]'), github.event.comment.user.login)
 
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
         run: |
           # Try to find URL from UPLOAD_ZIP: format
           ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP 'UPLOAD_ZIP:\s*\K\S+' || echo "")
-          
+
           # If not found, try to find URL from markdown link format
           if [ -z "$ZIP_URL" ]; then
             ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | grep -oP '(https?://.*?\.zip)')
@@ -38,27 +38,40 @@ jobs:
           echo "issue=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
       - name: Download and process ZIP
+        if: steps.parse.outputs.url != ''
         run: |
           wget "${{ steps.parse.outputs.url }}" -O upload.zip
-          unzip upload.zip -d "posts/${{ steps.parse.outputs.issue }}"
+          mkdir -p "tmp/posts/${{ steps.parse.outputs.issue }}"
+          unzip upload.zip -d "tmp/posts/${{ steps.parse.outputs.issue }}"
           rm upload.zip
 
-      - name: Commit files
+      - name: Create branch and commit files
+        if: steps.parse.outputs.url != ''
         run: |
           git config --global user.name "Issue Processor"
           git config --global user.email "actions@github.com"
+
+          # Create a new branch
+          BRANCH_NAME="add-files-issue-${{ steps.parse.outputs.issue }}"
+          git checkout -b $BRANCH_NAME
+          
           git add .
           git commit -m "Add files from issue #${{ steps.parse.outputs.issue }}"
-#          git push
-#
-#      - name: Update issue
-#        uses: actions/github-script@v6
-#        with:
-#          script: |
-#            github.rest.issues.createComment({
-#              owner: context.repo.owner,
-#              repo: context.repo.repo,
-#              issue_number: ${{ steps.parse.outputs.issue }},
-#              body: '✅ Files processed and committed!\n' +
-#                    'View: https://github.com/${{ github.repository }}/tree/main/posts/${{ steps.parse.outputs.issue }}'
-#            })
+          git push origin $BRANCH_NAME
+
+      - name: Create Pull Request
+        if: steps.parse.outputs.url != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --title "Add files from issue #${{ steps.parse.outputs.issue }}" \
+            --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}.\n\nAutomatically created by the Process Issue Attachments workflow." \
+            --base master
+
+      - name: Update issue
+        if: steps.parse.outputs.url != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ steps.parse.outputs.issue }} --body "✅ Files processed and a Pull Request has been created!\nView PR: https://github.com/${{ github.repository }}/pulls"
