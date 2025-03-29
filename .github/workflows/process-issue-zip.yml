@@ -2,7 +2,7 @@ name: Process Issue Attachments
 
 on:
   issue_comment:
-    types: [created, updated]
+    types: [created, edited, deleted]
 
 jobs:
   handle-upload:
