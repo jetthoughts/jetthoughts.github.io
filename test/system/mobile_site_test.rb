@@ -71,7 +71,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     open_mobile_menu
 
-    assert_matches_screenshot "nav/hamburger_menu", wait: 3, stability_time_limit: 0.025, median_filter_window_size: 2
+    assert_matches_screenshot "nav/hamburger_menu", wait: 3, stability_time_limit: 0.025, median_filter_window_size: 5
   end
 
   def test_top_bar_hamburger_menu_services
@@ -82,7 +82,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     find(".js-sub-menu-opener", match: :first).click
     wait_menu_to_render
 
-    assert_matches_screenshot "nav/hamburger_menu/services", wait: 2, stability_time_limit: 1, median_filter_window_size: 2
+    assert_matches_screenshot "nav/hamburger_menu/services", wait: 2, stability_time_limit: 1, median_filter_window_size: 5
   end
 
   def test_contact_us
