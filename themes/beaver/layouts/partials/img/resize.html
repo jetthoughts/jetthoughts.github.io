@@ -3,6 +3,9 @@
 {{- $width := default 50 .width -}}
 {{- $class := default "" .class -}}
 
-{{- $resized := $image.Resize (printf "%dx webp" $width) -}}
+{{- $resized := $image -}}
+{{- if not (strings.HasSuffix $image.RelPermalink ".gif") -}}
+  {{- $resized = $image.Resize (printf "%dx webp" $width) -}}
+{{- end -}}
 
 <img loading="lazy" src="{{ $resized.RelPermalink }}" class="{{ $class }}" alt="{{ $title }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
