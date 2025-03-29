@@ -21,6 +21,8 @@ hugo.linux
 # JavaScript
 /node_modules/
 
+/vendor/
+
 # Other
 .DS_Store
 .*
