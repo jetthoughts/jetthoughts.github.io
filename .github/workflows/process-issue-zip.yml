@@ -34,8 +34,6 @@ jobs:
               grep -oP '(https?://.*?\.zip)')
           fi
 
-          echo "url=$ZIP_URL"
-          echo "issue=${{ github.event.issue.number }}"
           echo "url=$ZIP_URL" >> $GITHUB_OUTPUT
           echo "issue=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
@@ -71,10 +69,10 @@ jobs:
             --title "Add files from issue #${{ steps.parse.outputs.issue }}" \
             --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}. \
             Automatically created by the Process Issue Attachments workflow.")
-          echo "pr_url=$pr_url" >> $GITHUB_ENV
+          echo "pr_url=$pr_url" >> $GITHUB_OUTPUT
 
       - name: Update issue
-        if: steps.parse.outputs.url != ''
+        if: steps.parse.outputs.issue != '' && steps.create_pr.outputs.pr_url != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
