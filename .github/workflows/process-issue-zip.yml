@@ -2,7 +2,7 @@ name: Process Issue Attachments
 
 on:
   issue_comment:
-    types: [created, edited, deleted]
+    types: [ created, edited, deleted ]
 
 jobs:
   handle-upload:
@@ -29,7 +29,9 @@ jobs:
 
           # If not found, try to find URL from markdown link format
           if [ -z "$ZIP_URL" ]; then
-            ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | grep -oP '(https?://.*?\.zip)')
+            ZIP_URL=$(echo "${{ github.event.comment.body }}" | 
+              grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | 
+              grep -oP '(https?://.*?\.zip)')
           fi
 
           echo "url=$ZIP_URL"
@@ -61,17 +63,21 @@ jobs:
 
       - name: Create Pull Request
         if: steps.parse.outputs.url != ''
+        id: create_pr
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh pr create \
+          pr_url=$(gh pr create --base master \
             --title "Add files from issue #${{ steps.parse.outputs.issue }}" \
-            --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}.\n\nAutomatically created by the Process Issue Attachments workflow." \
-            --base master
+            --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}.\n\n\
+            Automatically created by the Process Issue Attachments workflow.")
+          echo "pr_url=$pr_url" >> $GITHUB_ENV
 
       - name: Update issue
         if: steps.parse.outputs.url != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh issue comment ${{ steps.parse.outputs.issue }} --body "✅ Files processed and a Pull Request has been created!\nView PR: https://github.com/${{ github.repository }}/pulls"
+          gh issue comment ${{ steps.parse.outputs.issue }} \
+            --body "✅ Files processed and a Pull Request has been created!\n\
+            View PR: ${{ steps.parse.create_pr.pr_url }}"
