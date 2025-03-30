@@ -69,7 +69,7 @@ jobs:
         run: |
           pr_url=$(gh pr create --base master \
             --title "Add files from issue #${{ steps.parse.outputs.issue }}" \
-            --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}.\n\n\
+            --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}. \
             Automatically created by the Process Issue Attachments workflow.")
           echo "pr_url=$pr_url" >> $GITHUB_ENV
 
@@ -79,5 +79,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue comment ${{ steps.parse.outputs.issue }} \
-            --body "✅ Files processed and a Pull Request has been created!\n\
-            View PR: ${{ steps.parse.create_pr.pr_url }}"
+            --body "✅ Files processed and a Pull Request has been created! \
+            View PR: ${{ steps.create_pr.outputs.pr_url }}"
