@@ -2,12 +2,11 @@ name: Process Issue Attachments
 
 on:
   issue_comment:
-    types: [ created, edited, deleted ]
+    types: [ created ]
 
 jobs:
   handle-upload:
     if: |
-      (contains(github.event.comment.body, 'UPLOAD_ZIP:') ||
       contains(github.event.comment.body, '.zip)')) &&
       contains(fromJSON('["pftg"]'), github.event.comment.user.login)
 
@@ -24,15 +23,9 @@ jobs:
       - name: Parse comment
         id: parse
         run: |
-          # Try to find URL from UPLOAD_ZIP: format
-          ZIP_URL=$(echo "${{ github.event.comment.body }}" | grep -oP 'UPLOAD_ZIP:\s*\K\S+' || echo "")
-
-          # If not found, try to find URL from markdown link format
-          if [ -z "$ZIP_URL" ]; then
-            ZIP_URL=$(echo "${{ github.event.comment.body }}" | 
-              grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | 
-              grep -oP '(https?://.*?\.zip)')
-          fi
+          ZIP_URL=$(echo "${{ github.event.comment.body }}" | 
+            grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | 
+            grep -oP '(https?://.*?\.zip)')
 
           echo "url=$ZIP_URL" >> $GITHUB_OUTPUT
           echo "issue=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
