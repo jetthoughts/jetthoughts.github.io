@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/top-communication-tools-for-remote-teams-
 title: 'Top Communication Tools for Remote Teams: Enhancing Collaboration and Productivity'
 description: Explore the top communication tools for remote teams, including Slack, ProofHub, Twist, Workplace by Facebook, and Skype, to enhance collaboration and productivity.
 created_at: '2025-04-04T11:12:34Z'
+edited_at: '2025-04-04T11:16:53Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/top-communication-tools-for-remote-teams-enhancing-collaboration-and-productivity-3bdd
+canonical_url: https://jetthoughts.com/blog/top-communication-tools-for-remote-teams/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/top-communication-tools-for-remote-teams/cover.jpeg
 metatags:
   image: cover.jpeg
