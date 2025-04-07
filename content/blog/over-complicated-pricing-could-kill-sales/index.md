@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/over-complicated-pricing-could-kill-a-sal
 title: Over-Complicated Pricing Could Kill A Sales Process
 description: Discover why simple pricing is crucial for your sales process. Learn the benefits of recurring revenue over usage-based pricing and how it can protect your business.
 created_at: '2025-04-07T00:38:14Z'
+edited_at: '2025-04-07T08:06:12Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/over-complicated-pricing-could-kill-a-sales-process-3gcj
+canonical_url: https://jetthoughts.com/blog/over-complicated-pricing-could-kill-sales/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/over-complicated-pricing-could-kill-sales/cover.jpeg
 metatags:
   image: cover.jpeg
