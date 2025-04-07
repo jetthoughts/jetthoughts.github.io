@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/exploring-innovative-open-source-front-en
 title: Exploring Innovative Open Source Front End Projects to Boost Your Skills in 2025
 description: Discover top open source front end projects to enhance your skills and boost your portfolio in 2025!
 created_at: '2025-04-07T10:46:25Z'
+edited_at: '2025-04-07T10:53:10Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-innovative-open-source-front-end-projects-to-boost-your-skills-in-2025-335a
+canonical_url: https://jetthoughts.com/blog/exploring-innovative-open-source-front-end/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-innovative-open-source-front-end/cover.jpeg
 metatags:
   image: cover.jpeg
