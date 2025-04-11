@@ -2410,7 +2410,7 @@ dev_to_2317570:
 dev_to_2366018:
   :edited_at: '2025-04-11T15:02:58Z'
   :remote_id: 2366018
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: unlocking-power-of-ruby-on-rails
 dev_to_2366017:
