@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/2024-the-year-startups-thrived-against-al
 title: '2024: The Year Startups Thrived Against All Odds'
 description: 2024 has been a remarkable year for startups, filled with unexpected successes and lessons learned. The Lightcone hosts reflect on the biggest trends, moments, and setbacks that shaped the startup landscape.
 created_at: '2025-04-02T07:57:27Z'
+edited_at: '2025-04-11T15:02:06Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/2024-the-year-startups-thrived-against-all-odds-43jl
+canonical_url: https://jetthoughts.com/blog/2024-year-startups-thrived-against-all/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/2024-year-startups-thrived-against-all/cover.jpeg
 metatags:
   image: cover.jpeg

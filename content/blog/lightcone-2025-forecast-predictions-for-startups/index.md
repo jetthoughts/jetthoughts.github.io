@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-lightcone-2025-forecast-predictions-f
 title: 'The Lightcone 2025 Forecast: Predictions for Startups, AI, and Crypto'
 description: In this blog post, we explore predictions for 2025 in AI, crypto, and startups, including the potential for more Nobel prizes and the mainstream adoption of stable coins.
 created_at: '2025-04-09T03:49:24Z'
+edited_at: '2025-04-11T15:02:24Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-lightcone-2025-forecast-predictions-for-startups-ai-and-crypto-5h01
+canonical_url: https://jetthoughts.com/blog/lightcone-2025-forecast-predictions-for-startups/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/lightcone-2025-forecast-predictions-for-startups/cover.jpeg
 metatags:
   image: cover.jpeg

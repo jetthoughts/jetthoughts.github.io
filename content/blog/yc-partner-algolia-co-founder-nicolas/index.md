@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/yc-partner-and-algolia-co-founder-nicolas
 title: YC Partner and Algolia Co-Founder Nicolas Dessaigne’s Advice for Founders Starting Out
 description: Nicolas Dessaigne, co-founder of Algolia, shares essential advice for new founders. Learn why starting now, engaging with users, and launching early are key to success.
 created_at: '2025-03-31T15:18:14Z'
+edited_at: '2025-04-11T15:02:13Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/yc-partner-and-algolia-co-founder-nicolas-dessaignes-advice-for-founders-starting-out-3b93
+canonical_url: https://jetthoughts.com/blog/yc-partner-algolia-co-founder-nicolas/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/yc-partner-algolia-co-founder-nicolas/cover.jpeg
 metatags:
   image: cover.jpeg

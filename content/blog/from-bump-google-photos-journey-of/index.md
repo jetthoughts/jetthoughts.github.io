@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/from-bump-to-google-photos-the-journey-of
 title: 'From Bump to Google Photos: The Journey of David Lieb and His Team'
 description: Discover how David Lieb and his team transformed their struggles with Bump and Flock into the creation of Google Photos, a leading photo-sharing app.
 created_at: '2025-03-29T12:07:24Z'
-edited_at: '2025-03-29T18:40:29Z'
+edited_at: '2025-04-11T15:03:02Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/from-bump-google-photos-journey-of/

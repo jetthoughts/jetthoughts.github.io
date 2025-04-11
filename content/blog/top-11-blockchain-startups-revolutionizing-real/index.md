@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/top-11-blockchain-startups-revolutionizin
 title: Top 11 Blockchain Startups Revolutionizing Real Estate
 description: Explore the top 11 blockchain startups in real estate that are transforming the industry with innovative solutions to enhance transparency, efficiency, and security in property transactions.
 created_at: '2025-04-06T12:21:14Z'
+edited_at: '2025-04-11T15:03:06Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/top-11-blockchain-startups-revolutionizing-real-estate-2ol2
+canonical_url: https://jetthoughts.com/blog/top-11-blockchain-startups-revolutionizing-real/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/top-11-blockchain-startups-revolutionizing-real/cover.jpeg
 metatags:
   image: cover.jpeg

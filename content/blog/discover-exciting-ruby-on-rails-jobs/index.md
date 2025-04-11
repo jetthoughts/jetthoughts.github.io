@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/discover-exciting-ruby-on-rails-jobs-near
 title: 'Discover Exciting Ruby on Rails Jobs Near Me: Your Path to a Thriving Career'
 description: Explore local and remote ruby on rails jobs near me, plus tips to boost your career in tech!
 created_at: '2025-04-03T08:45:43Z'
+edited_at: '2025-04-11T15:01:57Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/discover-exciting-ruby-on-rails-jobs-near-me-your-path-to-a-thriving-career-3i9a
+canonical_url: https://jetthoughts.com/blog/discover-exciting-ruby-on-rails-jobs/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/discover-exciting-ruby-on-rails-jobs/cover.jpeg
 metatags:
   image: cover.jpeg

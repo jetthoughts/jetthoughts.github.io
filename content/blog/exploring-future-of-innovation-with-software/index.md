@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/exploring-the-future-of-innovation-with-s
 title: 'Exploring the Future of Innovation with Software Co: A Leader in Software Development'
 description: Discover how Software Co drives innovation in software development for a competitive edge and enhanced productivity.
 created_at: '2025-03-30T06:38:22Z'
-edited_at: '2025-03-30T08:05:05Z'
+edited_at: '2025-04-11T15:02:53Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-future-of-innovation-with-software/

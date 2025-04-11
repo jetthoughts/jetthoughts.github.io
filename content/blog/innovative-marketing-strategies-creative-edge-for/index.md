@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/innovative-marketing-strategies-the-creat
 title: 'Innovative Marketing Strategies: The Creative Edge for Leading Brands'
 description: Explore how leading brands are driving demand through innovative marketing strategies that blend creativity with data-driven insights.
 created_at: '2025-03-31T09:32:13Z'
+edited_at: '2025-04-11T15:02:15Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/innovative-marketing-strategies-the-creative-edge-for-leading-brands-1c63
+canonical_url: https://jetthoughts.com/blog/innovative-marketing-strategies-creative-edge-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-marketing-strategies-creative-edge-for/cover.jpeg
 metatags:
   image: cover.jpeg

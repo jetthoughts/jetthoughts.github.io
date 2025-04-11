@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/how-to-hire-a-ruby-on-rails-developer-tip
 title: 'How to Hire a Ruby on Rails Developer: Tips for Finding the Perfect Fit'
 description: Discover tips to hire Ruby on Rails developers who fit your project needs and avoid common hiring mistakes.
 created_at: '2025-04-05T09:45:15Z'
+edited_at: '2025-04-11T15:01:48Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/how-to-hire-a-ruby-on-rails-developer-tips-for-finding-the-perfect-fit-51o6
+canonical_url: https://jetthoughts.com/blog/how-hire-ruby-on-rails-developer/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-hire-ruby-on-rails-developer/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-success-innovative-tech-talent-
 title: 'Unlocking Success: Innovative Tech Talent Solutions for the Modern Workforce'
 description: Explore innovative tech talent solutions to attract, retain, and empower the modern workforce effectively.
 created_at: '2025-04-07T07:58:34Z'
+edited_at: '2025-04-11T15:02:29Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-success-innovative-tech-talent-solutions-for-the-modern-workforce-o4f
+canonical_url: https://jetthoughts.com/blog/unlocking-success-innovative-tech-talent-solutions/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-success-innovative-tech-talent-solutions/cover.jpeg
 metatags:
   image: cover.jpeg

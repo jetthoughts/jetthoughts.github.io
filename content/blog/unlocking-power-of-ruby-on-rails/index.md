@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-the-power-of-ruby-on-rails-micr
 title: Unlocking the Power of Ruby on Rails Microservices for Scalable Applications
 description: Discover how ruby on rails microservices boost scalability, flexibility, and performance in your applications!
 created_at: '2025-03-30T06:38:24Z'
+edited_at: '2025-04-11T15:02:58Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-the-power-of-ruby-on-rails-microservices-for-scalable-applications-4bcp
+canonical_url: https://jetthoughts.com/blog/unlocking-power-of-ruby-on-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-power-of-ruby-on-rails/cover.jpeg
 metatags:
   image: cover.jpeg
