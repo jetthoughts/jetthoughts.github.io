@@ -2464,7 +2464,7 @@ dev_to_2375867:
 dev_to_2377791:
   :edited_at: '2025-04-11T15:01:57Z'
   :remote_id: 2377791
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: discover-exciting-ruby-on-rails-jobs
 dev_to_2377790:
