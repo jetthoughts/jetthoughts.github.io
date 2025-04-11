@@ -2488,7 +2488,7 @@ dev_to_2380806:
 dev_to_2382293:
   :edited_at: '2025-04-11T15:01:51Z'
   :remote_id: 2382293
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: astranis-launches-four-satellites-with-spacex
 dev_to_2383700:
