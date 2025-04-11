@@ -2494,7 +2494,7 @@ dev_to_2382293:
 dev_to_2383700:
   :edited_at: '2025-04-11T15:01:48Z'
   :remote_id: 2383700
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: how-hire-ruby-on-rails-developer
 dev_to_2386053:
