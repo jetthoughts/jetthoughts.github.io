@@ -2512,7 +2512,7 @@ dev_to_2387977:
 dev_to_2387165:
   :edited_at: '2025-04-11T15:02:31Z'
   :remote_id: 2387165
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: over-complicated-pricing-could-kill-sales
 dev_to_2388328:
