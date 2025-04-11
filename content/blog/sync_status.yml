@@ -2482,7 +2482,7 @@ dev_to_2380807:
 dev_to_2380806:
   :edited_at: '2025-04-11T15:02:49Z'
   :remote_id: 2380806
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: top-communication-tools-for-remote-teams
 dev_to_2382293:
