@@ -7,14 +7,14 @@ dev_to_url: https://dev.to/jetthoughts/the-art-of-form-objects-elegant-search-fi
 title: "The Art of Form Objects: Elegant Search Filtering in Rails \U0001F50D"
 description: "Beyond Primitive Search: A Journey into Compositional Design \U0001F331   Search functionality in..."
 created_at: '2025-04-21T10:58:53Z'
-edited_at: '2025-04-21T10:59:37Z'
+edited_at: '2025-04-21T11:16:05Z'
 draft: false
 tags:
 - rails
 - webdev
 - programming
 - tutorial
-canonical_url: https://dev.to/jetthoughts/the-art-of-form-objects-elegant-search-filtering-in-rails-46f
+canonical_url: https://jetthoughts.com/blog/art-of-form-objects-elegant-search/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/art-of-form-objects-elegant-search/cover.png
 metatags:
   image: cover.png
