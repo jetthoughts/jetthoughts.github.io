@@ -2560,7 +2560,7 @@ dev_to_2421658:
 dev_to_2421657:
   :edited_at: '2025-04-21T10:31:19Z'
   :remote_id: 2421657
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: from-bump-google-photos-journey-of-2eff
 dev_to_2421699:
