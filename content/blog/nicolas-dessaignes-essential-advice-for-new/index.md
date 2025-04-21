@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/nicolas-dessaignes-essential-advice-for-n
 title: Nicolas Dessaigne's Essential Advice for New Founders
 description: Nicolas Dessaigne shares essential advice for new founders, emphasizing the importance of starting now, fast iterations, and engaging with users to build successful products.
 created_at: '2025-04-21T10:17:14Z'
+edited_at: '2025-04-21T10:31:16Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/nicolas-dessaignes-essential-advice-for-new-founders-44k8
+canonical_url: https://jetthoughts.com/blog/nicolas-dessaignes-essential-advice-for-new/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/nicolas-dessaignes-essential-advice-for-new/cover.jpeg
 metatags:
   image: cover.jpeg
