@@ -7,13 +7,14 @@ dev_to_url: https://dev.to/jetthoughts/solving-kamals-target-failed-to-become-he
 title: 'Solving Kamal''s "Target Failed to Become Healthy" Error: A Practical Debugging Guide'
 description: The Silent Deployment Killer   Deployment should be the triumphant final step in your...
 created_at: '2025-04-21T10:38:59Z'
+edited_at: '2025-04-21T10:45:51Z'
 draft: false
 tags:
 - rails
 - kamal
 - tutorial
 - devops
-canonical_url: https://dev.to/jetthoughts/solving-kamals-target-failed-to-become-healthy-error-a-practical-debugging-guide-25a6
+canonical_url: https://jetthoughts.com/blog/solving-kamals-target-failed-become-healthy/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/solving-kamals-target-failed-become-healthy/cover.png
 metatags:
   image: cover.png
