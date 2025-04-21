@@ -7,13 +7,14 @@ dev_to_url: https://dev.to/jetthoughts/turbocharge-your-rails-apps-with-smart-da
 title: Turbocharge Your Rails Apps with Smart Database Indexing
 description: Is your Rails application running slow? Are search queries taking forever to complete? The solution...
 created_at: '2025-04-21T13:19:24Z'
+edited_at: '2025-04-21T13:33:23Z'
 draft: false
 tags:
 - rails
 - tutorial
 - programming
 - database
-canonical_url: https://dev.to/jetthoughts/turbocharge-your-rails-apps-with-smart-database-indexing-2a26
+canonical_url: https://jetthoughts.com/blog/turbocharge-your-rails-apps-with-smart/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/turbocharge-your-rails-apps-with-smart/cover.png
 metatags:
   image: cover.png
