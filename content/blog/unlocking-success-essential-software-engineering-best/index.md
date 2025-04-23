@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-success-essential-software-engi
 title: 'Unlocking Success: Essential Software Engineering Best Practices for 2025'
 description: Explore essential software engineering best practices for 2025 to boost your career and stay ahead in tech!
 created_at: '2025-04-23T11:35:24Z'
+edited_at: '2025-04-23T16:27:05Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-success-essential-software-engineering-best-practices-for-2025-11nc
+canonical_url: https://jetthoughts.com/blog/unlocking-success-essential-software-engineering-best/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-success-essential-software-engineering-best/cover.jpeg
 metatags:
   image: cover.jpeg
