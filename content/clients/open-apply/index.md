@@ -1,6 +1,5 @@
 ---
-title: "Transforming Open Apply: A Case Study in Code Stabilization and UX Enhancement
-Why?"
+title: "Open Apply Case Study: Code Stabilization & UX Enhancement"
 excerpt: After launching a software to simplify the school admissions and enrollment process, Open Apply hired us to debug the product, optimize the user experience, and streamline their internal project management processes.
 slug: open-apply
 author: Paul Keen

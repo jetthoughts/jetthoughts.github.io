@@ -1,5 +1,5 @@
 ---
-title: "Transform Your Software Development: Expert CTO & Engineering Services"
+title: "Expert CTO & Engineering Services for Accelerated Software Development"
 layout: index
 description: "Unlock your product's potential with our on-demand CTO services, expert engineering teams, and tailored software solutions. Accelerate development, enhance quality, and achieve your business goals with JetThoughts."
 

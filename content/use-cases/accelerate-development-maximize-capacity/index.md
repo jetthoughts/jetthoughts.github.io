@@ -1,6 +1,6 @@
 ---
 
-title: "Accelerate Software Development with On-Demand Engineering Solutions"
+title: "On-Demand Engineering Solutions for Accelerated Software Development"
 description: "Discover how our on-demand engineering resources can help you build high-quality software faster and more efficiently. From fractional CTO services to outsourced developer staffing, we provide tailored solutions to meet your development needs."
 headline: Increase Capacity, Accelerate Progress
 excerpt: Build bigger & better software products in half the time with access to on-demand engineering resources that are scalable to meet your expectations.

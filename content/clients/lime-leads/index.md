@@ -1,5 +1,5 @@
 ---
-title: "Transforming Legacy Codebases: JetThoughts' Success with LimeLeads"
+title: "Revitalizing Legacy Code: JetThoughts' Transformation of LimeLeads"
 excerpt: To help salvage & improve their complex legacy codebase, LimeLeads hired us to augment their on-site product development team to help increase the velocity of feature development and bug-fixing at minimal financial cost.
 
 slug: "see-how-jetthoughts-helped-limeleads-transform-a-legacy-codebase-stabilize-the-product-for-long-term-performance"

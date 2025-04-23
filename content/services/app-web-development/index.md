@@ -1,6 +1,6 @@
 ---
 
-title: "Affordable High-Quality App & Web Development Services"
+title: "Expert App & Web Development Services | JetThoughts"
 description: "Discover JetThoughts' fully-managed app and web development services that provide high-quality solutions at a fraction of the cost. Our expert team is ready to help you accelerate your project and reduce overhead expenses. Contact us today!"
 headline: Fully-Managed App & Web development
 excerpt: Build better products while eliminating the costs of payroll, training, & management with a pre-trained team of developers ready to deploy in weeks.

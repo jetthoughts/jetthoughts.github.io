@@ -1,6 +1,6 @@
 ---
 
-title: Access Top-tier Software Development Talent
+title: "Top-tier Software Development Talent & Recruiting Services"
 description: Grow your engineering team faster through access to a talent network of pre-vetted developers at a fraction of the cost.
 headline: Fully-managed recruiting for developers
 excerpt: Grow an engineering team faster while eliminating the workload of recruiting and interviewing with access to pre-vetted top-tier software development talent.
