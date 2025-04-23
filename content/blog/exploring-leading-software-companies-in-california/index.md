@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/exploring-the-leading-software-companies-
 title: 'Exploring the Leading Software Companies in California, USA: A 2025 Overview'
 description: Discover top software companies in California, USA, and their impact on tech trends and innovation in 2025.
 created_at: '2025-04-23T11:35:24Z'
+edited_at: '2025-04-23T11:52:57Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-the-leading-software-companies-in-california-usa-a-2025-overview-2m3n
+canonical_url: https://jetthoughts.com/blog/exploring-leading-software-companies-in-california/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-leading-software-companies-in-california/cover.jpeg
 metatags:
   image: cover.jpeg
