@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-creativity-the-best-open-source
 title: 'Unlocking Creativity: The Best Open Source Website Development Tools for 2025'
 description: Discover the top open source website development tools for 2025 to boost your creativity and streamline projects!
 created_at: '2025-04-29T14:23:14Z'
+edited_at: '2025-04-29T14:30:36Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-creativity-the-best-open-source-website-development-tools-for-2025-20o
+canonical_url: https://jetthoughts.com/blog/unlocking-creativity-best-open-source-website/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-creativity-best-open-source-website/cover.jpeg
 metatags:
   image: cover.jpeg
