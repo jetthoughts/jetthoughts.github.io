@@ -2692,7 +2692,7 @@ dev_to_2448933:
 dev_to_2451613:
   :edited_at: '2025-05-04T10:55:44Z'
   :remote_id: 2451613
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: unlocking-future-role-of-developer-experience
 dev_to_2452415:
