@@ -2602,7 +2602,7 @@ dev_to_2426946:
 dev_to_2427475:
   :edited_at: '2025-05-04T10:56:32Z'
   :remote_id: 2427475
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: rails-71-how-ruby-on-developers
 dev_to_2429674:
