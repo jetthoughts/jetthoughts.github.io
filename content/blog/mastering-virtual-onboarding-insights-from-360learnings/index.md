@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/mastering-virtual-onboarding-insights-fro
 title: 'Mastering Virtual Onboarding: Insights from 360Learning''s Approach'
 description: Explore how 360Learning has revolutionized virtual onboarding for developers, enhancing retention and productivity through a structured three-phase process.
 created_at: '2025-05-02T14:28:24Z'
+edited_at: '2025-05-04T10:55:36Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-virtual-onboarding-insights-from-360learnings-approach-24k1
+canonical_url: https://jetthoughts.com/blog/mastering-virtual-onboarding-insights-from-360learnings/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-virtual-onboarding-insights-from-360learnings/cover.jpeg
 metatags:
   image: cover.jpeg

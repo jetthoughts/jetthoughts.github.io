@@ -7,14 +7,14 @@ dev_to_url: https://dev.to/jetthoughts/how-to-send-custom-email-content-types-in
 title: 'How to Send Custom Email Content Types in Ruby on Rails: Expert Developer''s Guide'
 description: Introduction   This comprehensive guide is designed for Ruby on Rails developers who need to...
 created_at: '2025-04-20T08:12:52Z'
-edited_at: '2025-04-20T08:21:57Z'
+edited_at: '2025-05-04T10:56:48Z'
 draft: false
 tags:
 - rails
 - programming
 - webdev
 - beginners
-canonical_url: https://dev.to/jetthoughts/how-to-send-custom-email-content-types-in-ruby-on-rails-expert-developers-guide-2g8l
+canonical_url: https://jetthoughts.com/blog/how-send-custom-email-content-types/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-send-custom-email-content-types/cover.png
 metatags:
   image: cover.png

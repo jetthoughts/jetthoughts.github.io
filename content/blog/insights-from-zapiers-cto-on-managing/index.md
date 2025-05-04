@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/insights-from-zapiers-cto-on-managing-rem
 title: Insights from Zapier's CTO on Managing Remote Engineering Teams
 description: Explore insights from Bryan Helmig, CTO of Zapier, on managing remote engineering teams, hiring practices, and effective communication strategies.
 created_at: '2025-04-30T13:40:14Z'
+edited_at: '2025-05-04T10:55:47Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/insights-from-zapiers-cto-on-managing-remote-engineering-teams-43d5
+canonical_url: https://jetthoughts.com/blog/insights-from-zapiers-cto-on-managing/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/insights-from-zapiers-cto-on-managing/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-future-of-ai-are-we-hitting-the-limit
 title: 'The Future of AI: Are We Hitting the Limits of Scaling Laws?'
 description: Explore the debate on scaling laws in AI. Are we reaching the limits of larger models, or is a new paradigm emerging? Discover the future of AI in this insightful article.
 created_at: '2025-05-04T01:27:23Z'
+edited_at: '2025-05-04T10:55:33Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-future-of-ai-are-we-hitting-the-limits-of-scaling-laws-3f7k
+canonical_url: https://jetthoughts.com/blog/future-of-ai-are-we-hitting/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/future-of-ai-are-we-hitting/cover.jpeg
 metatags:
   image: cover.jpeg

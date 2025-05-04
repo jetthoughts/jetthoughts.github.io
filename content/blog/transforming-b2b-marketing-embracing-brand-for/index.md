@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/transforming-b2b-marketing-embracing-bran
 title: 'Transforming B2B Marketing: Embracing Brand for Sustainable Growth'
 description: Explore Peter Weinberg's insights on B2B marketing, emphasizing the importance of brand for long-term growth and the balance between brand and performance marketing.
 created_at: '2025-04-26T12:07:13Z'
+edited_at: '2025-05-04T10:56:14Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/transforming-b2b-marketing-embracing-brand-for-sustainable-growth-5ahi
+canonical_url: https://jetthoughts.com/blog/transforming-b2b-marketing-embracing-brand-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-b2b-marketing-embracing-brand-for/cover.jpeg
 metatags:
   image: cover.jpeg

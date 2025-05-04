@@ -7,13 +7,14 @@ dev_to_url: https://dev.to/jetthoughts/rails-71-how-ruby-on-rails-developers-can
 title: 'Rails 7.1: How Ruby on Rails Developers Can Use the .with Query Method for CTEs'
 description: For Ruby on Rails developers looking to level up their database query skills, Rails 7.1 introduced a...
 created_at: '2025-04-23T16:02:26Z'
+edited_at: '2025-05-04T10:56:32Z'
 draft: false
 tags:
 - rails
 - tutorial
 - database
 - programming
-canonical_url: https://dev.to/jetthoughts/rails-71-how-ruby-on-rails-developers-can-use-the-with-query-method-for-ctes-2p9a
+canonical_url: https://jetthoughts.com/blog/rails-71-how-ruby-on-developers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-71-how-ruby-on-developers/cover.png
 metatags:
   image: cover.png

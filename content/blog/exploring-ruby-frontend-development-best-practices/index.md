@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/exploring-ruby-frontend-development-best-
 title: 'Exploring Ruby Frontend Development: Best Practices and Tools for Modern Web Applications'
 description: Discover best practices and tools for ruby frontend development to enhance your web applications!
 created_at: '2025-04-29T14:24:02Z'
+edited_at: '2025-05-04T10:55:53Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-ruby-frontend-development-best-practices-and-tools-for-modern-web-applications-10c7
+canonical_url: https://jetthoughts.com/blog/exploring-ruby-frontend-development-best-practices/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-ruby-frontend-development-best-practices/cover.jpeg
 metatags:
   image: cover.jpeg

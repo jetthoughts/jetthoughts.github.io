@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/harnessing-ai-a-guide-for-startups-2chn
 title: 'Harnessing AI: A Guide for Startups'
 description: Discover how startups can leverage AI to enhance their business models. Learn about the importance of community, real-world applications, and when to consider AI integration.
 created_at: '2025-05-01T22:34:24Z'
+edited_at: '2025-05-04T10:55:38Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/harnessing-ai-a-guide-for-startups-2chn
+canonical_url: https://jetthoughts.com/blog/harnessing-ai-guide-for-startups/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/harnessing-ai-guide-for-startups/cover.jpeg
 metatags:
   image: cover.jpeg

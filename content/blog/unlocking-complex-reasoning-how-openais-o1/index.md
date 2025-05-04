@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-complex-reasoning-how-openais-o
 title: 'Unlocking Complex Reasoning: How OpenAI’s O1 and O3 Models Work'
 description: Explore how OpenAI’s O1 and O3 models use a chain of thought process to tackle complex reasoning tasks, mimicking human problem-solving skills.
 created_at: '2025-04-25T13:28:24Z'
+edited_at: '2025-05-04T10:56:18Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-complex-reasoning-how-openais-o1-and-o3-models-work-3ddl
+canonical_url: https://jetthoughts.com/blog/unlocking-complex-reasoning-how-openais-o1/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-complex-reasoning-how-openais-o1/cover.jpeg
 metatags:
   image: cover.jpeg

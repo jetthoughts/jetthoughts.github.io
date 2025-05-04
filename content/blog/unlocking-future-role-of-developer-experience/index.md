@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-the-future-the-role-of-a-develo
 title: 'Unlocking the Future: The Role of a Developer Experience Engineer in Modern Software Development'
 description: Explore the vital role of a developer experience engineer in enhancing productivity and satisfaction in software teams.
 created_at: '2025-05-01T15:07:54Z'
+edited_at: '2025-05-04T10:55:44Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-the-future-the-role-of-a-developer-experience-engineer-in-modern-software-development-105
+canonical_url: https://jetthoughts.com/blog/unlocking-future-role-of-developer-experience/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-future-role-of-developer-experience/cover.jpeg
 metatags:
   image: cover.jpeg

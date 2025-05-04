@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/discover-the-best-business-hiring-near-me
 title: 'Discover the Best Business Hiring Near Me: Opportunities for Your Career in 2025'
 description: Find exciting local job opportunities and tips for business hiring near me in 2025. Start your career today!
 created_at: '2025-05-02T10:18:24Z'
+edited_at: '2025-05-04T10:55:41Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/discover-the-best-business-hiring-near-me-opportunities-for-your-career-in-2025-2afc
+canonical_url: https://jetthoughts.com/blog/discover-best-business-hiring-near-me/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/discover-best-business-hiring-near-me/cover.jpeg
 metatags:
   image: cover.jpeg

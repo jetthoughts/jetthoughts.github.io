@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/choosing-the-right-frontend-development-a
 title: Choosing the Right Frontend Development Agency for Your Business in 2025
 description: Find the perfect frontend development agency for your business in 2025 with our expert tips and insights!
 created_at: '2025-04-25T12:22:29Z'
+edited_at: '2025-05-04T10:56:20Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/choosing-the-right-frontend-development-agency-for-your-business-in-2025-3he
+canonical_url: https://jetthoughts.com/blog/choosing-right-frontend-development-agency-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/choosing-right-frontend-development-agency-for/cover.jpeg
 metatags:
   image: cover.jpeg

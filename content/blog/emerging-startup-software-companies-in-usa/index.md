@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/emerging-startup-software-companies-in-th
 title: 'Emerging Startup Software Companies in the USA: A 2025 Overview'
 description: Explore the top startup software companies in the USA for 2025, from AI to ecommerce and health tech innovations.
 created_at: '2025-04-27T13:11:24Z'
+edited_at: '2025-05-04T10:56:11Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/emerging-startup-software-companies-in-the-usa-a-2025-overview-762
+canonical_url: https://jetthoughts.com/blog/emerging-startup-software-companies-in-usa/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/emerging-startup-software-companies-in-usa/cover.jpeg
 metatags:
   image: cover.jpeg

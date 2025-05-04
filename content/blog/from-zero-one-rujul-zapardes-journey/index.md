@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/from-zero-to-one-rujul-zapardes-journey-i
 title: 'From Zero to One: Rujul Zaparde''s Journey in Enterprise Sales'
 description: Explore Rujul Zaparde's journey from zero to one in enterprise sales. Learn how cold outreach and gathering insights helped him and his partner secure their first customers.
 created_at: '2025-04-27T16:14:14Z'
+edited_at: '2025-05-04T10:56:09Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/from-zero-to-one-rujul-zapardes-journey-in-enterprise-sales-1c8m

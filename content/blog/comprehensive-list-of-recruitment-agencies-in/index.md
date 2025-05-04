@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/comprehensive-list-of-recruitment-agencie
 title: Comprehensive List of Recruitment Agencies in the USA for 2025
 description: Explore our 2025 list of recruitment agencies in the USA, covering tech, diversity, remote work, and more!
 created_at: '2025-04-25T10:18:24Z'
+edited_at: '2025-05-04T10:56:24Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/comprehensive-list-of-recruitment-agencies-in-the-usa-for-2025-1kck
+canonical_url: https://jetthoughts.com/blog/comprehensive-list-of-recruitment-agencies-in/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/comprehensive-list-of-recruitment-agencies-in/cover.jpeg
 metatags:
   image: cover.jpeg
