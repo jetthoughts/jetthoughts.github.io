@@ -2632,7 +2632,7 @@ dev_to_2433121:
 dev_to_2433235:
   :edited_at: '2025-05-04T10:56:18Z'
   :remote_id: 2433235
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: unlocking-complex-reasoning-how-openais-o1
 dev_to_2435934:
