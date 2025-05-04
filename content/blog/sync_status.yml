@@ -2572,7 +2572,7 @@ dev_to_2421699:
 dev_to_2421730:
   :edited_at: '2025-05-04T10:56:42Z'
   :remote_id: 2421730
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: art-of-form-objects-elegant-search
 dev_to_2422049:
