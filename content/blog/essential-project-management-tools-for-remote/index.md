@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/essential-project-management-tools-for-re
 title: Essential Project Management Tools for Remote Teams
 description: Explore essential project management tools for remote teams, including Asana, Trello, Paymo, Basecamp, and Jira, to enhance productivity and collaboration.
 created_at: '2025-05-04T15:29:24Z'
-edited_at: '2025-05-04T15:36:28Z'
+edited_at: '2025-05-05T08:30:08Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/essential-project-management-tools-for-remote/
