@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-innovation-the-essential-guide-
 title: 'Unlocking Innovation: The Essential Guide to Developer Experience Platforms in 2025'
 description: Explore how developer experience platforms are revolutionizing software development in 2025 for better productivity.
 created_at: '2025-05-05T17:15:25Z'
+edited_at: '2025-05-06T10:51:16Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-innovation-the-essential-guide-to-developer-experience-platforms-in-2025-1aoj
+canonical_url: https://jetthoughts.com/blog/unlocking-innovation-essential-guide-developer-experience/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-innovation-essential-guide-developer-experience/cover.jpeg
 metatags:
   image: cover.jpeg
