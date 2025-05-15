@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/building-an-effective-dev-team-strategies
 title: 'Building an Effective Dev Team: Strategies for Success in Software Development'
 description: Discover strategies to build a successful dev team for software development and boost project success!
 created_at: '2025-05-11T20:41:38Z'
+edited_at: '2025-05-15T16:26:01Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/building-an-effective-dev-team-strategies-for-success-in-software-development-2fbk
+canonical_url: https://jetthoughts.com/blog/building-an-effective-dev-team-strategies/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/building-an-effective-dev-team-strategies/cover.jpeg
 metatags:
   image: cover.jpeg

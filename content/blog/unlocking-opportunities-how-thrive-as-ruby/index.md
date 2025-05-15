@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-opportunities-how-to-thrive-as-
 title: 'Unlocking Opportunities: How to Thrive as a Ruby Engineer in Today''s Tech Landscape'
 description: Discover essential skills, networking tips, and best practices to thrive as a Ruby engineer in today's tech world.
 created_at: '2025-05-07T18:27:25Z'
+edited_at: '2025-05-15T16:25:44Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-opportunities-how-to-thrive-as-a-ruby-engineer-in-todays-tech-landscape-3813
+canonical_url: https://jetthoughts.com/blog/unlocking-opportunities-how-thrive-as-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-opportunities-how-thrive-as-ruby/cover.jpeg
 metatags:
   image: cover.jpeg

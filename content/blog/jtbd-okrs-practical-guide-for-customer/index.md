@@ -7,13 +7,14 @@ dev_to_url: https://dev.to/jetthoughts/jtbd-okrs-a-practical-guide-for-customer-
 title: 'JTBD + OKRs: A Practical Guide for Customer-Focused Teams'
 description: Stop building features nobody wants. Start with customer jobs, then measure what matters.          ...
 created_at: '2025-05-04T20:30:39Z'
+edited_at: '2025-05-15T16:26:12Z'
 draft: false
 tags:
 - programming
 - management
 - startup
 - tutorial
-canonical_url: https://dev.to/jetthoughts/jtbd-okrs-a-practical-guide-for-customer-focused-teams-2g4c
+canonical_url: https://jetthoughts.com/blog/jtbd-okrs-practical-guide-for-customer/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jtbd-okrs-practical-guide-for-customer/cover.png
 metatags:
   image: cover.png

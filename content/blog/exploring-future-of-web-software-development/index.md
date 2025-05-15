@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/exploring-the-future-of-web-and-software-
 title: 'Exploring the Future of Web and Software Development: Trends and Innovations for 2025'
 description: Discover key trends and innovations shaping web and software development in 2025, from AI to low-code solutions.
 created_at: '2025-05-09T19:34:15Z'
+edited_at: '2025-05-15T16:25:52Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-the-future-of-web-and-software-development-trends-and-innovations-for-2025-35ef
+canonical_url: https://jetthoughts.com/blog/exploring-future-of-web-software-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-future-of-web-software-development/cover.jpeg
 metatags:
   image: cover.jpeg

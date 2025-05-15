@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/how-start-up-recruiters-can-transform-you
 title: How Start Up Recruiters Can Transform Your Business in 2025
 description: Discover how start up recruiters can elevate your business in 2025 with innovative hiring strategies and insights.
 created_at: '2025-05-09T10:18:14Z'
+edited_at: '2025-05-15T16:25:50Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/how-start-up-recruiters-can-transform-your-business-in-2025-pgc
+canonical_url: https://jetthoughts.com/blog/how-start-up-recruiters-can-transform/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-start-up-recruiters-can-transform/cover.jpeg
 metatags:
   image: cover.jpeg

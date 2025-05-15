@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/how-scaling-laws-will-determine-ais-futur
 title: How Scaling Laws Will Determine AI's Future | YC Decoded
 description: Explore the debate on scaling laws in AI and how they shape the future of large language models. Discover insights from the YC Decoded episode featuring Garry Tan.
 created_at: '2025-05-12T10:20:24Z'
+edited_at: '2025-05-15T16:26:03Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/how-scaling-laws-will-determine-ais-future-yc-decoded-3nah
+canonical_url: https://jetthoughts.com/blog/how-scaling-laws-will-determine-ais/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-scaling-laws-will-determine-ais/cover.jpeg
 metatags:
   image: cover.jpeg

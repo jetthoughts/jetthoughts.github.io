@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-remote-work-success-lessons-fro
 title: 'Unlocking Remote Work Success: Lessons from Mattermost''s Journey'
 description: Explore Mattermost's journey in remote work and discover three key productivity hacks that can transform your remote team dynamics.
 created_at: '2025-05-06T16:32:26Z'
+edited_at: '2025-05-15T16:25:41Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-remote-work-success-lessons-from-mattermosts-journey-32me
+canonical_url: https://jetthoughts.com/blog/unlocking-remote-work-success-lessons-from/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-remote-work-success-lessons-from/cover.jpeg
 metatags:
   image: cover.jpeg
