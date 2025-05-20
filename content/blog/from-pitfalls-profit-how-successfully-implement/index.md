@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/from-pitfalls-to-profit-how-to-successful
 title: 'From Pitfalls to Profit: How to Successfully Implement Async'
 description: TL;DR    Despite promising $3.2M in annual savings for a 60-person team, 68% of async...
 created_at: '2025-05-19T23:55:29Z'
-edited_at: '2025-05-20T08:06:25Z'
+edited_at: '2025-05-20T12:34:26Z'
 draft: false
 tags:
 - productivity
@@ -15,6 +15,9 @@ tags:
 - tutorial
 - communication
 canonical_url: https://jetthoughts.com/blog/from-pitfalls-profit-how-successfully-implement/
+cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/from-pitfalls-profit-how-successfully-implement/cover.png
+metatags:
+  image: cover.png
 slug: from-pitfalls-profit-how-successfully-implement
 ---
 ## TL;DR
@@ -44,6 +47,8 @@ According to research across multiple companies, 68% of failed async transitions
 The costs of poor implementation can be significant. Let's examine what's really at stake.
 
 ## The Real-World Costs of Flawed Async Implementation
+
+![Side-by-side sketched comparison](file_1.png)
 
 ### Financial Impact
 
@@ -82,6 +87,9 @@ These human costs eventually translate to recruitment expenses and lost institut
 
 ### 1. Cultural Resistance
 
+![Hand-drawn circular diagram with "Leadership" in center, with radiating impact lines to](file_2.png)
+
+
 Many organizations fail because they don't address the deeply ingrained meeting culture.
 
 Legacy workflows make people perceive async methods as isolating. Managers accustomed to real-time oversight often resist systems that prioritize outcomes over presence.
@@ -97,6 +105,9 @@ Critical decisions stall when stakeholders respond at different rates. A simple 
 To mitigate this, adopt GitLab's handbook approach. Their mandate to document all decisions in public forums reduced ambiguity by 62%. Automattic's internal survey showed 88% of employees felt async workflows improved their ability to focus on deep work.
 
 ### 3. Tool Overload
+
+![Hand-drawn brain with multiple arrows shooting out to different platform icons (Slack, email, Zoom, docs, etc.) showing the mental load.](file_3.png)
+
 
 The typical async workplace juggles Slack, email, project management apps, and documents.
 
@@ -132,6 +143,8 @@ Companies like Remote invest in async-certified managers, reducing implementatio
 
 Despite these challenges, async communication remains economically advantageous when implemented correctly.
 
+![Hand-drawn horizontal timeline showing four phases](file_4.png)
+
 Start with these four principles for successful adoption:
 
 1. **Phase in gradually** – Begin with documentation-heavy processes before tackling real-time activities. New Work SE replaced daily standups with Slack diaries first, reducing meeting time by 6 hours/week before moving to more advanced async workflows.
@@ -144,10 +157,10 @@ Start with these four principles for successful adoption:
 
 Remember that async isn't binary. The most successful companies maintain a thoughtful blend of communication styles.
 
+![Hand-drawn balance scale with](file_5.png)
+
+
 ## The Implementation Economics
-
-![Hand-sketched graph plotting](file_1.png)
-
 
 Successful async transformation requires investment before delivering returns:
 
@@ -157,6 +170,8 @@ Successful async transformation requires investment before delivering returns:
 | Doist       | $150K               | $22,500                 | 31%               |
 | Shopify     | $310K               | $14,200                 | 19%               |
 | New Work SE | $95K                | $9,800                  | 27%               |
+
+![Hand-sketched graph plotting](file_6.png)
 
 These figures demonstrate that while implementation costs vary, the return on investment is consistently strong across different company sizes and industries.
 
