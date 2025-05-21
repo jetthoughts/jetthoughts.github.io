@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/the-async-advantage-how-switching-communi
 title: 'The Async Advantage: How Switching Communication Styles Saves $3.2M Annually'
 description: TL;DR    Companies waste millions on unnecessary meetings - for a 60-person team, the total...
 created_at: '2025-05-19T22:38:19Z'
-edited_at: '2025-05-19T23:09:45Z'
+edited_at: '2025-05-21T11:40:29Z'
 draft: false
 tags:
 - productivity
@@ -67,7 +67,7 @@ Every time someone interrupts your work for a meeting, it takes about 25 minutes
 
 That means a one-hour meeting actually costs 85 minutes of productive time. Multiplied across your entire team, this adds up fast.
 
-Atlassian estimates that context-switching costs the global economy **$450 billion annually**.[^4]
+> Atlassian estimates that context-switching costs the global economy **$450 billion annually**.[^4]
 
 ## Real Companies, Real Results
 
@@ -156,12 +156,11 @@ Total: **~40 meeting hours/week** costing ~$3.5k/week or $170k/year.
 
 The total cost drops to **$669k/year**.
 
-**Bottom Line:** Shifting to async saves $3.28M annually (83% reduction). With additional benefits from increased productivity and reduced turnover, the investment in async communication delivers exceptional returns.[^11]
+> **Bottom Line:** Shifting to async saves $3.28M annually (83% reduction). With additional benefits from increased productivity and reduced turnover, the investment in async communication delivers exceptional returns.[^11]
 
 ## Where Async Works Best
 
 !["How Async Actually Works" Handwritten Process Sketch](file_3.png)
-
 
 Async communication isn't right for everything. It works best for:
 
@@ -201,7 +200,7 @@ Ready to capture those gains? Start with these steps:
 
 5. **Start with one meeting type.** Replace daily standups with written updates or asynchronous video messages.
 
-Companies that consolidate on async-first platforms achieve **90% cost savings** on software licenses compared to using multiple sync tools.[^5]
+> Companies that consolidate on async-first platforms achieve **90% cost savings** on software licenses compared to using multiple sync tools.[^5]
 
 ## Beyond Money: The Human Benefits
 
@@ -210,7 +209,7 @@ Companies that consolidate on async-first platforms achieve **90% cost savings**
 
 Async-first communication doesn't just save money. It transforms work culture in ways that truly matter to developers.
 
-Moving to async communication doesn't reduce team alignment. In fact, it often improves it through better documentation and clearer communication. What it does eliminate is the pressure to be "always on."
+> Moving to async communication doesn't reduce team alignment. In fact, it often improves it through better documentation and clearer communication. What it does eliminate is the pressure to be "always on."
 
 Your developers no longer feel chained to their machines waiting for the next impromptu meeting. They can disconnect when needed, focus deeply without fear of interruption, and work during their peak productivity hours.
 
