@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/discover-the-best-programming-companies-n
 title: 'Discover the Best Programming Companies Near Me: A Comprehensive Guide for 2025'
 description: Explore top programming companies near me in 2025! Find the best local developers for your next project.
 created_at: '2025-05-21T12:40:25Z'
+edited_at: '2025-05-23T14:03:34Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/discover-the-best-programming-companies-near-me-a-comprehensive-guide-for-2025-17ge
+canonical_url: https://jetthoughts.com/blog/discover-best-programming-companies-near-me/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/discover-best-programming-companies-near-me/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/from-pitfalls-to-profit-how-to-successful
 title: 'From Pitfalls to Profit: How to Successfully Implement Async'
 description: TL;DR    Despite promising $3.2M in annual savings for a 60-person team, 68% of async...
 created_at: '2025-05-19T23:55:29Z'
-edited_at: '2025-05-21T11:38:49Z'
+edited_at: '2025-05-23T14:03:44Z'
 draft: false
 tags:
 - productivity

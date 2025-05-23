@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-success-the-importance-of-an-ex
 title: 'Unlocking Success: The Importance of an Experience Developer in Modern Tech'
 description: Explore how experience developers boost productivity and innovation in tech, shaping successful businesses.
 created_at: '2025-05-23T13:36:14Z'
+edited_at: '2025-05-23T14:03:14Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-success-the-importance-of-an-experience-developer-in-modern-tech-1gfd
+canonical_url: https://jetthoughts.com/blog/unlocking-success-importance-of-an-experience/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-success-importance-of-an-experience/cover.jpeg
 metatags:
   image: cover.jpeg

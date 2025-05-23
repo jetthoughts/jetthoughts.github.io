@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-future-of-compliance-and-audit-how-ai
 title: 'The Future of Compliance and Audit: How AI is Changing the Game'
 description: Explore how AI and automation are transforming compliance and audit processes, making them more efficient and less time-consuming.
 created_at: '2025-05-23T11:37:16Z'
+edited_at: '2025-05-23T14:03:22Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-future-of-compliance-and-audit-how-ai-is-changing-the-game-1ok1
+canonical_url: https://jetthoughts.com/blog/future-of-compliance-audit-how-ai/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/future-of-compliance-audit-how-ai/cover.jpeg
 metatags:
   image: cover.jpeg

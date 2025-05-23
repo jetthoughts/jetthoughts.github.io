@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-creativity-designers-share-insi
 title: 'Unlocking Creativity: Designers Share Insights on Adobe Firefly’s Generative AI Features'
 description: Explore how Adobe Firefly's generative AI features are transforming design workflows, enhancing creativity, and providing insights from industry experts.
 created_at: '2025-05-22T11:36:25Z'
+edited_at: '2025-05-23T14:03:29Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-creativity-designers-share-insights-on-adobe-fireflys-generative-ai-features-5963
+canonical_url: https://jetthoughts.com/blog/unlocking-creativity-designers-share-insights-on/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-creativity-designers-share-insights-on/cover.jpeg
 metatags:
   image: cover.jpeg

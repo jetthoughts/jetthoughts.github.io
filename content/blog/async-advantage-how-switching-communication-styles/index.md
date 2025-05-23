@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/the-async-advantage-how-switching-communi
 title: 'The Async Advantage: How Switching Communication Styles Saves $3.2M Annually'
 description: TL;DR    Companies waste millions on unnecessary meetings - for a 60-person team, the total...
 created_at: '2025-05-19T22:38:19Z'
-edited_at: '2025-05-21T11:40:29Z'
+edited_at: '2025-05-23T14:03:48Z'
 draft: false
 tags:
 - productivity
