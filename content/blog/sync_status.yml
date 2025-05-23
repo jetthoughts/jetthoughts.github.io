@@ -2884,6 +2884,6 @@ dev_to_2518771:
 dev_to_2518915:
   :edited_at: '2025-05-23T14:03:14Z'
   :remote_id: 2518915
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: unlocking-success-importance-of-an-experience
