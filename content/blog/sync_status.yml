@@ -2836,7 +2836,7 @@ dev_to_2502308:
 dev_to_2502302:
   :edited_at: '2025-05-23T14:03:55Z'
   :remote_id: 2502302
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: unlocking-ais-future-insights-from-bob
 dev_to_2503956:
