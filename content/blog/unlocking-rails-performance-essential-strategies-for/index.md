@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-rails-performance-essential-str
 title: 'Unlocking Rails Performance: Essential Strategies for Optimizing Your Applications'
 description: Discover essential strategies to boost your Rails performance and optimize your applications for better user experience.
 created_at: '2025-05-25T14:20:41Z'
-edited_at: '2025-05-25T14:28:25Z'
+edited_at: '2025-05-26T06:46:26Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-rails-performance-essential-strategies-for/

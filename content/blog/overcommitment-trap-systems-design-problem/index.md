@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/the-overcommitment-trap-a-systems-design-
 title: 'The Overcommitment Trap: A Systems Design Problem'
 description: Traditional thinking treats overcommitment as a willpower issue. But what if it's actually a product...
 created_at: '2025-05-23T12:45:12Z'
-edited_at: '2025-05-23T12:49:12Z'
+edited_at: '2025-05-26T06:46:31Z'
 draft: false
 tags:
 - programming

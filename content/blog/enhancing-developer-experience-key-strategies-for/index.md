@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/enhancing-developer-experience-key-strate
 title: 'Enhancing Developer Experience: Key Strategies for Boosting Productivity in 2025'
 description: Explore key strategies to enhance developer experience and boost productivity in 2025 with innovative tools and practices.
 created_at: '2025-05-25T14:20:41Z'
+edited_at: '2025-05-26T06:46:20Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/enhancing-developer-experience-key-strategies-for-boosting-productivity-in-2025-3f82
+canonical_url: https://jetthoughts.com/blog/enhancing-developer-experience-key-strategies-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/enhancing-developer-experience-key-strategies-for/cover.jpeg
 metatags:
   image: cover.jpeg

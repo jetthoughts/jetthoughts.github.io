@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-potential-6-compelling-reasons-
 title: 'Unlocking Potential: 6 Compelling Reasons to Outsource Software Development to Peru in 2024'
 description: Discover why outsourcing software development to Peru is a smart move in 2024. Explore the advantages, challenges, and key insights into Peru's growing tech landscape.
 created_at: '2025-05-24T12:24:14Z'
+edited_at: '2025-05-26T04:11:29Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-potential-6-compelling-reasons-to-outsource-software-development-to-peru-in-2024-23c3
+canonical_url: https://jetthoughts.com/blog/unlocking-potential-6-compelling-reasons-outsource/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-potential-6-compelling-reasons-outsource/cover.jpeg
 metatags:
   image: cover.jpeg
