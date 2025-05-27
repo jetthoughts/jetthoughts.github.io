@@ -2938,7 +2938,7 @@ dev_to_2533291:
 dev_to_2533980:
   :edited_at: '2025-05-27T20:40:43Z'
   :remote_id: 2533980
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: essential-tips-for-hiring-software-developers
 dev_to_2533979:
