@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/navigating-the-talent-landscape-it-staff-
 title: 'Navigating the Talent Landscape: IT Staff Augmentation vs. In-House Recruitment'
 description: Explore the key differences between IT staff augmentation and in-house recruitment, helping businesses make informed hiring decisions in the tech industry.
 created_at: '2025-05-26T13:20:24Z'
+edited_at: '2025-05-27T20:40:57Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/navigating-the-talent-landscape-it-staff-augmentation-vs-in-house-recruitment-3pgn
+canonical_url: https://jetthoughts.com/blog/navigating-talent-landscape-it-staff-augmentation/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/navigating-talent-landscape-it-staff-augmentation/cover.jpeg
 metatags:
   image: cover.jpeg

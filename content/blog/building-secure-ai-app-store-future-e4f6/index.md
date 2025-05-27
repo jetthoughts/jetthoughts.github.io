@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/building-a-secure-ai-app-store-the-future
 title: 'Building A Secure AI App Store: The Future of Privacy and Innovation'
 description: Explore the vision for a secure AI App Store that prioritizes user privacy, simplifies app discovery, and supports developers. Learn how this innovative platform can reshape the tech landscape.
 created_at: '2025-05-26T11:38:24Z'
+edited_at: '2025-05-27T20:41:01Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/building-a-secure-ai-app-store-the-future-of-privacy-and-innovation-2aof
+canonical_url: https://jetthoughts.com/blog/building-secure-ai-app-store-future-e4f6/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/building-secure-ai-app-store-future-e4f6/cover.jpeg
 metatags:
   image: cover.jpeg

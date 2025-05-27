@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/exploring-different-staffing-agencies-fin
 title: 'Exploring Different Staffing Agencies: Finding the Right Fit for Your Workforce Needs'
 description: Discover how different staffing agencies can help you find the perfect talent for your workforce needs!
 created_at: '2025-05-27T11:48:44Z'
+edited_at: '2025-05-27T20:40:53Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/exploring-different-staffing-agencies-finding-the-right-fit-for-your-workforce-needs-4c3o
+canonical_url: https://jetthoughts.com/blog/exploring-different-staffing-agencies-finding-right/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-different-staffing-agencies-finding-right/cover.jpeg
 metatags:
   image: cover.jpeg
