@@ -2950,6 +2950,6 @@ dev_to_2533979:
 dev_to_2534265:
   :edited_at: '2025-05-27T20:40:39Z'
   :remote_id: 2534265
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: bob-mcgrew-ai-agents-path-agi
