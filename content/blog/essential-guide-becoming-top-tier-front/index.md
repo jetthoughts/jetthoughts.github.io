@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-essential-guide-to-becoming-a-top-tie
 title: The Essential Guide to Becoming a Top-Tier Front End Designer
 description: Become a top-tier front end designer! Learn essential skills, master technologies, and land your dream gig. Let's go!
 created_at: '2025-05-29T16:30:25Z'
+edited_at: '2025-06-04T03:28:54Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-essential-guide-to-becoming-a-top-tier-front-end-designer-5hd4
+canonical_url: https://jetthoughts.com/blog/essential-guide-becoming-top-tier-front/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/essential-guide-becoming-top-tier-front/cover.jpeg
 metatags:
   image: cover.jpeg

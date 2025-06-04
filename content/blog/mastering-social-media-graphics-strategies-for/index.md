@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/mastering-social-media-graphics-strategie
 title: 'Mastering Social Media Graphics: Strategies for Engagement and Brand Recognition'
 description: Discover how strategic graphic design can transform your social media presence, driving engagement and building brand recognition. Learn about consistent branding, clear typography, and compelling visual storytelling.
 created_at: '2025-06-02T06:12:59Z'
+edited_at: '2025-06-04T03:28:21Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/mastering-social-media-graphics-strategies-for-engagement-and-brand-recognition-2knd
+canonical_url: https://jetthoughts.com/blog/mastering-social-media-graphics-strategies-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-social-media-graphics-strategies-for/cover.jpeg
 metatags:
   image: cover.jpeg

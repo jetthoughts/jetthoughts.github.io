@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/ais-ux-revolution-a-design-expert-unpacks
 title: 'AI''s UX Revolution: A Design Expert Unpacks Benefits and Success Strategies'
 description: Explore how AI is revolutionizing UX design, offering personalized experiences, enhanced assistance, and proactive recommendations. Learn about the benefits, challenges, and strategic design approaches for successful AI integration in digital products.
 created_at: '2025-05-31T06:35:25Z'
+edited_at: '2025-06-04T03:28:30Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/ais-ux-revolution-a-design-expert-unpacks-benefits-and-success-strategies-5foa
+canonical_url: https://jetthoughts.com/blog/ais-ux-revolution-design-expert-unpacks/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ais-ux-revolution-design-expert-unpacks/cover.jpeg
 metatags:
   image: cover.jpeg

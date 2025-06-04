@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/finding-your-dream-ruby-work-a-comprehens
 title: 'Finding Your Dream Ruby Work: A Comprehensive Guide'
 description: Find your dream ruby work! This guide helps you master Ruby, build a portfolio, and land awesome jobs. Get hired!
 created_at: '2025-05-29T16:52:27Z'
+edited_at: '2025-06-04T03:28:57Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/finding-your-dream-ruby-work-a-comprehensive-guide-4lg5
+canonical_url: https://jetthoughts.com/blog/finding-your-dream-ruby-work-comprehensive/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/finding-your-dream-ruby-work-comprehensive/cover.jpeg
 metatags:
   image: cover.jpeg

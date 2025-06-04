@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/ai-commercial-open-source-software-aicoss
 title: AI Commercial Open Source Software (AICOSS)
 description: Explore the big opportunity for startups in open source AI, similar to how RedHat and GitLab succeeded. Learn why businesses need support for open source AI models like DeepSeek and Llama.
 created_at: '2025-05-29T20:40:36Z'
+edited_at: '2025-06-04T03:29:01Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/ai-commercial-open-source-software-aicoss-22f4
+canonical_url: https://jetthoughts.com/blog/ai-commercial-open-source-software-aicoss/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ai-commercial-open-source-software-aicoss/cover.jpeg
 metatags:
   image: cover.jpeg

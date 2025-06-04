@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/vertical-ai-agents-4lf6
 title: Vertical AI Agents
 description: 'At a recent event, a founder asked Sam Altman "If you were 24 and starting a startup today, what would you build?" His answer: A vertical AI agent.'
 created_at: '2025-06-03T16:33:51Z'
-edited_at: '2025-06-03T16:35:02Z'
+edited_at: '2025-06-04T03:28:17Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/vertical-ai-agents/

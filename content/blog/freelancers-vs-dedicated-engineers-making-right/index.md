@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/freelancers-vs-dedicated-engineers-making
 title: 'Freelancers vs. Dedicated Engineers: Making the Right Choice for Your Project'
 description: Explore the pros and cons of hiring freelancers versus dedicated engineers for your software development projects. Make an informed decision based on your project's needs.
 created_at: '2025-05-28T14:17:46Z'
+edited_at: '2025-06-04T03:28:40Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/freelancers-vs-dedicated-engineers-making-the-right-choice-for-your-project-icn
