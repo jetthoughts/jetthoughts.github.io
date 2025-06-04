@@ -2992,7 +2992,7 @@ dev_to_2547316:
 dev_to_2551121:
   :edited_at: '2025-06-04T03:28:25Z'
   :remote_id: 2551121
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: devtools-for-ai-agents
 dev_to_2553933:
