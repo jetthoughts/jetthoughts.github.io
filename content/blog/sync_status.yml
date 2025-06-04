@@ -3022,6 +3022,6 @@ dev_to_2559946:
 dev_to_2559945:
   :edited_at: '2025-06-04T03:29:08Z'
   :remote_id: 2559945
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: mastering-data-labeling-key-effective-machine
