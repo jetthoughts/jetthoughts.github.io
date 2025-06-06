@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/boosting-satisfaction-and-sales-an-e-comm
 title: 'Boosting Satisfaction and Sales: An E-commerce Checkout Design Case Study'
 description: Discover how a major retailer boosted satisfaction and sales by redesigning its e-commerce checkout flow, focusing on user empathy and streamlining the purchase process.
 created_at: '2025-06-06T05:00:47Z'
+edited_at: '2025-06-06T08:06:16Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/boosting-satisfaction-and-sales-an-e-commerce-checkout-design-case-study-335a
+canonical_url: https://jetthoughts.com/blog/boosting-satisfaction-sales-an-e-commerce/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/boosting-satisfaction-sales-an-e-commerce/cover.jpeg
 metatags:
   image: cover.jpeg
