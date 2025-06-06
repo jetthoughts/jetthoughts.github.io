@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/devtools-for-ai-agents-22mm
 title: Devtools for AI Agents
 description: AI agents are changing how we work and live. They make decisions and improve human tasks. Learn about the tools and platforms that are building the future of AI agents.
 created_at: '2025-06-06T17:54:33Z'
+edited_at: '2025-06-06T18:06:22Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/devtools-for-ai-agents-22mm
+canonical_url: https://jetthoughts.com/blog/devtools-for-ai-agents-45a4/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/devtools-for-ai-agents-45a4/cover.jpeg
 metatags:
   image: cover.jpeg
