@@ -23,5 +23,5 @@ class ApplicationSystemTestCase < Minitest::Test
   include Capybara::DSL
   include Capybara::Minitest::Assertions
   include CapybaraScreenshotDiff::DSL
-  include SnapDiffHelpers
+  include CapybaraScreenshotDiff::Minitest::Assertions
 end
