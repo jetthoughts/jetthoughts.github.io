@@ -157,6 +157,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_free_consultation
     visit "/"
+
     click_on "Talk to an Expert", exact: false, match: :first
 
     assert_text "Free Consultation"

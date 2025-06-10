@@ -1,4 +1,13 @@
 #!/bin/sh
 
-test_files="${1:-test/*_test.rb}"
-bundle exec ruby -Itest $test_files
+set -e
+
+bin/build --destination public-test --baseURL http://localhost:1314
+
+if [ -z "$1" ]; then
+  find test -type f -name '*_test.rb' -exec bundle exec ruby -Itest {} +
+else
+  # Behavior when arguments are provided: pass them to ruby
+  echo "Running tests for: $@" >&2
+  bundle exec ruby -Itest "$@"
+fi
