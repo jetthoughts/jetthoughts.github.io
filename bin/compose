@@ -1,10 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-set -eo pipefail
+set -e
 
 # Set Docker platform for ARM-based Macs (M1/M2 chips)
-if [[ "$(uname -m)" == arm* && "$(uname)" == Darwin ]]; then
-  export DOCKER_DEFAULT_PLATFORM=linux/arm64/v8
+if [ "$(uname -s)" = "Darwin" ]; then
+  case "$(uname -m)" in
+    arm*)
+      export DOCKER_DEFAULT_PLATFORM=linux/arm64/v8
+      ;;
+  esac
 fi
 
 docker compose \

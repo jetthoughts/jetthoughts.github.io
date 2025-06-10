@@ -26,3 +26,8 @@ docker-compose*
 
 !.bun-version
 !.ruby-version
+
+node_modules
+Makefile
+helm-charts
+.editorconfig

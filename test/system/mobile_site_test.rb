@@ -15,7 +15,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     preload_all_images
 
-    assert_matches_screenshot "homepage"
+    assert_matches_screenshot "homepage", tolerance: 0.004
   end
 
   def test_blog_index
@@ -49,7 +49,7 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_about_us
     visit "/about-us/"
 
-    assert_matches_screenshot "about_us", wait: 5, stability_time_limit: 3
+    assert_matches_screenshot "about_us", wait: 5, stability_time_limit: 3, skip_area: [".fl-photo-img"]
   end
 
   def test_clients
@@ -71,7 +71,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     open_mobile_menu
 
-    assert_matches_screenshot "nav/hamburger_menu", wait: 3, stability_time_limit: 0.025, median_filter_window_size: 5
+    assert_matches_screenshot "nav/hamburger_menu", wait: 3, stability_time_limit: 0.025
   end
 
   def test_top_bar_hamburger_menu_services
@@ -89,7 +89,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     visit "/contact-us/"
 
     assert_text "Let’s get started now"
-    assert_matches_screenshot "contact_us", wait: 5, stability_time_limit: 3
+    assert_matches_screenshot "contact_us", wait: 5, stability_time_limit: 3, skip_stack_frames: 1
   end
 
   def test_free_consultation

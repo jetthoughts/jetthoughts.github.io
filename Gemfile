@@ -16,7 +16,7 @@ gem "tqdm"
 
 gem "sanity-ruby"
 
-gem "capybara-screenshot-diff", github: "snap-diff/snap_diff-capybara"
+gem "capybara-screenshot-diff"
 gem 'simplecov', require: false
 gem "vips"
 
