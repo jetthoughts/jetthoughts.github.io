@@ -3064,7 +3064,7 @@ dev_to_2571297:
 dev_to_2571323:
   :edited_at: '2025-06-12T12:01:46Z'
   :remote_id: 2571323
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: compliance-audit-c04a
 dev_to_2571322:
