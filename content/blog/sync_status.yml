@@ -3052,7 +3052,7 @@ dev_to_2571017:
 dev_to_2571016:
   :edited_at: '2025-06-12T12:16:57Z'
   :remote_id: 2571016
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: mastering-front-end-build-tools-for
 dev_to_2571297:
