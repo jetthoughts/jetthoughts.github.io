@@ -3166,6 +3166,6 @@ dev_to_2581330:
 dev_to_2581673:
   :edited_at: '2025-06-12T12:02:24Z'
   :remote_id: 2581673
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: rise-of-open-source-ai-opportunities
