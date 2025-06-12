@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-rise-of-open-source-ai-opportunities-
 title: 'The Rise of Open Source AI: Opportunities for Startups'
 description: Explore the exciting opportunities in open source AI for startups. Learn how to fill the gap in commercial support and thrive in this evolving landscape.
 created_at: '2025-06-10T10:43:52Z'
+edited_at: '2025-06-12T12:02:24Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-rise-of-open-source-ai-opportunities-for-startups-1l6a
+canonical_url: https://jetthoughts.com/blog/rise-of-open-source-ai-opportunities/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rise-of-open-source-ai-opportunities/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/ai-revolution-what-nobody-else-is-seeing-
 title: 'AI Revolution: What Nobody Else Is Seeing'
 description: Explore the latest trends in AI startups as Paul Buchheit discusses the unprecedented demand for AI solutions and the exciting opportunities for founders in this rapidly evolving landscape.
 created_at: '2025-06-07T14:50:22Z'
-edited_at: '2025-06-07T14:52:59Z'
+edited_at: '2025-06-12T12:01:52Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/ai-revolution-what-nobody-else-seeing-335c/

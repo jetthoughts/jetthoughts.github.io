@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-content-personalization-with-ai
 title: 'Unlocking Content Personalization with AI: A Strategic Toolset Guide'
 description: Explore how AI and generative AI tools can revolutionize content personalization for marketing teams, addressing growing customer demands and budget constraints. Learn about key use cases, essential tools, and important considerations for successful implementation.
 created_at: '2025-06-07T19:37:24Z'
+edited_at: '2025-06-12T12:02:02Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/unlocking-content-personalization-with-ai-a-strategic-toolset-guide-34ol
+canonical_url: https://jetthoughts.com/blog/unlocking-content-personalization-with-ai-strategic/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-content-personalization-with-ai-strategic/cover.jpeg
 metatags:
   image: cover.jpeg

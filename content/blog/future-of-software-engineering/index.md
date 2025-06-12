@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-future-of-software-engineering-445m
 title: The Future of Software Engineering
 description: AI will change software development. This means more human developers are needed to manage AI agents. Learn how AI will lower software costs and create new roles for engineers.
 created_at: '2025-06-07T08:25:15Z'
+edited_at: '2025-06-12T12:01:49Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-future-of-software-engineering-445m
+canonical_url: https://jetthoughts.com/blog/future-of-software-engineering/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/future-of-software-engineering/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-potential-the-rise-of-software-
 title: 'Unlocking Potential: The Rise of Software Development Outsourcing in Armenia for 2024'
 description: Explore the rise of Armenia as a key destination for software development outsourcing in 2024, highlighting its skilled workforce, competitive costs, and government support.
 created_at: '2025-06-06T17:55:20Z'
-edited_at: '2025-06-06T18:06:16Z'
+edited_at: '2025-06-12T12:01:39Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-potential-rise-of-software-development/
