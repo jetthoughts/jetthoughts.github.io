@@ -3154,7 +3154,7 @@ dev_to_2576580:
 dev_to_2578678:
   :edited_at: '2025-06-12T12:16:32Z'
   :remote_id: 2578678
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: engineering-unlocks-behind-deepseek-yc-decoded
 dev_to_2581330:
