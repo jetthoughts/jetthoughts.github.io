@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/the-engineering-unlocks-behind-deepseek-y
 title: The Engineering Unlocks Behind DeepSeek | YC Decoded
 description: Explore the engineering innovations behind DeepSeek's R1 and V3 models, their efficiency, and the impact of reinforcement learning on AI breakthroughs.
 created_at: '2025-06-09T11:37:34Z'
+edited_at: '2025-06-12T12:16:32Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/the-engineering-unlocks-behind-deepseek-yc-decoded-5a44
+canonical_url: https://jetthoughts.com/blog/engineering-unlocks-behind-deepseek-yc-decoded/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/engineering-unlocks-behind-deepseek-yc-decoded/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/datacenters-3j2j
 title: Datacenters
 description: Learn why the world needs more data centers and high-tech factories. Discover how new companies are building software and tools to make these facilities run on their own.
 created_at: '2025-06-06T17:44:16Z'
+edited_at: '2025-06-12T12:16:50Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/datacenters-3j2j
+canonical_url: https://jetthoughts.com/blog/datacenters/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/datacenters/cover.jpeg
 metatags:
   image: cover.jpeg

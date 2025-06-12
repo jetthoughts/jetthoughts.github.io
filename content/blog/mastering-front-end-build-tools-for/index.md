@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/mastering-front-end-build-tools-for-effic
 title: Mastering Front End Build Tools for Efficient Web Development
 description: Master front end build tools for efficient web dev! Automate tasks, optimize performance, and streamline your workflow.
 created_at: '2025-06-06T16:08:43Z'
-edited_at: '2025-06-06T16:17:53Z'
+edited_at: '2025-06-12T12:16:57Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-front-end-build-tools-for/

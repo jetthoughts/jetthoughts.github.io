@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/leading-software-company-new-york-innovat
 title: 'Leading Software Company New York: Innovations and Opportunities in 2025'
 description: Explore NYC's booming software company scene in 2025! Discover top tech trends, job opportunities, and innovative startups.
 created_at: '2025-06-06T17:55:21Z'
-edited_at: '2025-06-06T18:06:12Z'
+edited_at: '2025-06-12T12:16:43Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/leading-software-company-new-york-innovations/

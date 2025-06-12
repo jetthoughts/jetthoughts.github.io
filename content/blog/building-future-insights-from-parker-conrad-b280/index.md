@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/building-the-future-insights-from-parker-
 title: 'Building The Future: Insights From Parker Conrad'
 description: Explore Parker Conrad's journey from early tech experiences to building Rippling, a $13.5 billion company. Discover insights on entrepreneurship, the future of software, and the role of AI in business.
 created_at: '2025-06-06T16:08:57Z'
+edited_at: '2025-06-12T12:16:55Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/building-the-future-insights-from-parker-conrad-498d
+canonical_url: https://jetthoughts.com/blog/building-future-insights-from-parker-conrad-b280/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/building-future-insights-from-parker-conrad-b280/cover.jpeg
 metatags:
   image: cover.jpeg

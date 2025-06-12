@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/ai-personal-staff-for-everyone-m93
 title: AI Personal Staff for Everyone
 description: The world’s richest people employ large staffs of humans, like tax accountants, lawyers, money managers, personal trainers, and even private doctors. AI will soon be good enough to do all these jobs for everyone. Who’s building this?
 created_at: '2025-06-07T14:52:39Z'
-edited_at: '2025-06-07T14:52:54Z'
+edited_at: '2025-06-12T12:17:02Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/ai-personal-staff-for-everyone-2881/

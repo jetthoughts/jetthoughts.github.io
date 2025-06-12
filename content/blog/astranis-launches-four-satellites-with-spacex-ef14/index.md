@@ -7,9 +7,10 @@ dev_to_url: https://dev.to/jetthoughts/astranis-launches-four-satellites-with-sp
 title: 'Astranis Launches Four Satellites with SpaceX: A New Era in Broadband'
 description: Astranis successfully launched four broadband satellites aboard SpaceX's Falcon 9, marking a historic achievement for commercial satellite manufacturing. Discover how this startup evolved from a small apartment to a leader in the tech industry.
 created_at: '2025-06-07T14:52:40Z'
+edited_at: '2025-06-12T12:16:37Z'
 draft: false
 tags: []
-canonical_url: https://dev.to/jetthoughts/astranis-launches-four-satellites-with-spacex-a-new-era-in-broadband-3ekf
+canonical_url: https://jetthoughts.com/blog/astranis-launches-four-satellites-with-spacex-ef14/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/astranis-launches-four-satellites-with-spacex-ef14/cover.jpeg
 metatags:
   image: cover.jpeg
