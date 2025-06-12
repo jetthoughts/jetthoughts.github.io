@@ -3106,7 +3106,7 @@ dev_to_2571469:
 dev_to_2572722:
   :edited_at: '2025-06-12T12:01:49Z'
   :remote_id: 2572722
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: future-of-software-engineering
 dev_to_2573781:
