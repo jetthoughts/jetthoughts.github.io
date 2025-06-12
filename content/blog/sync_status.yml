@@ -3142,7 +3142,7 @@ dev_to_2574133:
 dev_to_2576581:
   :edited_at: '2025-06-12T12:16:34Z'
   :remote_id: 2576581
-  :synced: false
+  :synced: true
   :source: dev_to
   :slug: finding-your-niche-software-developer-startup
 dev_to_2576580:
