@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/calming-the-delivery-chaos-a-jetthoughts-
 title: Calming the Delivery Chaos (A JetThoughts Field Note)
 description: "“We have four teams, three backlogs, two release channels, and one flaming emergency chat.”  — a..."
 created_at: '2025-06-20T14:43:51Z'
+edited_at: '2025-06-20T15:06:24Z'
 draft: false
 tags:
 - startup
