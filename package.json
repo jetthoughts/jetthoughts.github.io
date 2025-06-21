@@ -10,9 +10,9 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.21",
-    "cssnano": "^7.0.6",
+    "cssnano": "^7.0.7",
     "esbuild": "^0.23.1",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-nested": "^6.2.0",
@@ -21,6 +21,6 @@
     "surge": "^0.24.6"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001721"
+    "caniuse-lite": "^1.0.30001724"
   }
 }
