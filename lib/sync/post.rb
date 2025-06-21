@@ -42,7 +42,7 @@ module Sync
       logger.info("\nArticle saved: #{slug}")
     rescue => e
       logger.error("Error saving article #{slug}: #{e.message}")
-      raise
+      raise "Error saving article #{slug}: #{e.message}"
     end
 
     def content
@@ -93,7 +93,7 @@ module Sync
     end
 
     def load
-      content_split = content.split("---\n")
+      content_split = content.split("---\n", 3)
       return self if content_split.size < 2
 
       self.metadata = YAML.load(content_split[1])
@@ -102,7 +102,7 @@ module Sync
       self
     end
 
-    alias reload load
+    alias_method :reload, :load
 
     def page_bundle_dir
       storage.page_bundle_dir(slug)

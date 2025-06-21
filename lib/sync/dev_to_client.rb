@@ -37,7 +37,8 @@ class DevToClient
         logger.info "Update successful\n"
         JSON.parse(response.body)
       else
-        raise "Failed to update canonical_url: #{response.code} - #{response.message}"
+        logger.error "Failed to update article #{article_id}: #{response.body}"
+        raise "Failed to update canonical_url: #{response.body}"
       end
     rescue => e
       logger.error "Error updating article #{article_id}: #{e.message}"
