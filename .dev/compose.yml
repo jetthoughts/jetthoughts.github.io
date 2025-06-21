@@ -15,6 +15,17 @@ x-backend: &backend
     IRB_HISTFILE: /usr/local/hist/.irb_history
 
 services:
+  hugo:
+    image: hugomods/hugo:exts-non-root-0.145.0
+    stdin_open: true
+    tty: true
+    volumes:
+      - ..:/src:cached
+      - hugo_cache:/tmp/hugo_cache
+    ports:
+      - '1313:1313'
+    command: server --bind 0.0.0.0
+
   sh:
     <<: *backend
     command: sh
@@ -34,3 +45,4 @@ volumes:
   bundle:
   history:
   node_modules:
+  hugo_cache:
