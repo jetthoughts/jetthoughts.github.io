@@ -7,7 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/fixing-slow-engineering-teams-an-extended
 title: Fixing Slow Engineering Teams — An Extended Field Guide for Founders
 description: 'TL;DR — Series A companies often stall out after product‑market fit: deadlines slip, vendor hand‑offs...'
 created_at: '2025-06-20T16:16:34Z'
-edited_at: '2025-06-21T15:54:42Z'
+edited_at: '2025-06-21T16:04:36Z'
 draft: false
 tags:
 - management
@@ -43,6 +43,7 @@ slug: fixing-slow-engineering-teams-an-extended
 8. [Executive Summary](#executive-summary)
 9. [Glossary for Busy Execs](#glossary-for-busy-execs)
 10. [Next Step](#next-step)
+
 
 ---
 
