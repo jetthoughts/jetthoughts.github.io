@@ -1,8 +1,4 @@
-#!/bin/sh
-
-set -e
-
-bin/build --destination public-test --baseURL http://localhost:1314
+#!/usr/bin/env sh
 
 if [ -z "$1" ]; then
   find test -type f -name '*_test.rb' -exec bundle exec ruby -Itest {} +

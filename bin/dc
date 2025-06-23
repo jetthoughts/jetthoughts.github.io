@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-set -e
-
 # Set Docker platform for ARM-based Macs (M1/M2 chips)
 if [ "$(uname -s)" = "Darwin" ]; then
   case "$(uname -m)" in
@@ -11,7 +9,10 @@ if [ "$(uname -s)" = "Darwin" ]; then
   esac
 fi
 
-docker compose \
-  -f .dev/compose.yml \
+echo "Running docker compose with project name: ${DOCKED_PROJECT_NAME:-jtcom}"
+pwd
+
+docker "compose" \
+  -f ".dev/compose.yml" \
   -p "${DOCKED_PROJECT_NAME:-jtcom}" \
   "$@"
