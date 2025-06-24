@@ -1,5 +1,3 @@
-# syntax=docker/dockerfile:1
-
 ARG RUBY_VERSION=3.4
 
 # use the official Bun image
@@ -10,9 +8,9 @@ WORKDIR /usr/src/app
 # install dependencies into temp directory
 # this will cache them and speed up future builds
 FROM base AS install
-RUN mkdir -p /temp/dev
-COPY package.json bun.lockb /temp/dev/
-RUN cd /temp/dev && bun install
+WORKDIR /temp/dev
+COPY package.json bun.lockb ./
+RUN bun install
 
 # Install Ruby dependencies in a separate stage
 FROM ruby:$RUBY_VERSION-alpine AS ruby-gems
