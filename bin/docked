@@ -1,5 +1,3 @@
 #!/usr/bin/env sh
 
-set -e
-
-bin/compose run --rm --quiet-pull --remove-orphans "$@"
+bin/dc run --rm --quiet-pull --remove-orphans "$@"

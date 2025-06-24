@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
 
-set -euo pipefail
-
 #hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn "$@"
 bin/docked hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn "$@"

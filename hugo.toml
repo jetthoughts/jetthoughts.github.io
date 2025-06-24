@@ -242,10 +242,6 @@ disableKinds = []
   weight = 20
 
 
-[outputFormats]
-  [outputFormats.html]
-    isPlainText = true
-
 [params.forms.career]
 action = "https://docs.google.com/forms/d/e/1FAIpQLSfHFrlRzMK2EdIKNNLJuo9Kl4O_eRHLwvOLKNP2d0y06d2YCQ/formResponse"
 first_name = "entry.1569799146"
@@ -269,4 +265,3 @@ tell = "entry.1791620687"
 [params.forms.newsletter]
 action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD4751jeepeQe4wefgLqBO6XAU0qqvKWvmJ8P6xRmrMRvakg/formResponse"
 email = "entry.939459641"
-

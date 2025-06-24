@@ -2,9 +2,7 @@
 title: Receive Valuable Information from Our Blog Page
 description: Our blog page consists of articles that offer updated information and the most updated tips to help you achieve your goals.
 author: Paul Keen
-type: page
 slug: blog
-layout: blog
 
 metatags:
   image: og-blog.jpg

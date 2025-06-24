@@ -15,8 +15,8 @@ x-backend: &backend
     IRB_HISTFILE: /usr/local/hist/.irb_history
 
 services:
-  hugo:
-    image: hugomods/hugo:exts-non-root-0.145.0
+  hugo: &hugo
+    image: hugomods/hugo:exts-non-root-0.147.0
     stdin_open: true
     tty: true
     volumes:
@@ -28,7 +28,11 @@ services:
 
   sh:
     <<: *backend
-    command: sh
+    command: bash
+
+  t-setup:
+    <<: *hugo
+    command: hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn
 
   t:
     <<: *backend
@@ -41,6 +45,10 @@ services:
         reservations:
           cpus: '1.5'
           memory: '512M'
+
+    depends_on:
+      t-setup:
+        condition: service_completed_successfully
 volumes:
   bundle:
   history:
