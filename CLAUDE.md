@@ -1,5 +1,170 @@
 # Claude Code Configuration - SPARC Development Environment
 
+## 📚 KNOWLEDGE-DRIVEN DEVELOPMENT
+
+**This project follows comprehensive knowledge management practices. All agents MUST consult the structured knowledge base before proposing solutions.**
+
+**Knowledge Base Location**: `/knowledge/` - Complete practices, processes, solutions, and templates
+**Documentation Base Location**: `/docs/` - Project documentation and architectural decisions
+**Knowledge Index**: `/knowledge/KNOWLEDGE_INDEX.md` - Navigation guide for all knowledge
+
+### 🎯 Core Knowledge Principles
+1. **Research-First Development**: Use `claude-context`, `context7`, `docs MCP` to validate all approaches
+2. **Pattern Consistency**: Follow established patterns from knowledge base solutions
+3. **Quality Assurance**: Apply comprehensive validation checklists for all implementations
+4. **Security-First**: Implement security practices from knowledge base frameworks
+5. **TDD Methodology**: Follow test-driven development from knowledge base practices
+
+### Agent Memory Coordination
+```bash
+# Each agent uses unique coordination key
+tests/generated/{agent-name}/*
+
+# Check existing tests before creating new ones
+npx claude-flow@alpha hooks memory-search \
+  --pattern "tests/generated/*" \
+  --key "*{test-topic}*"
+```
+
+### Quick Reference Resources
+- **Quick Reference**: `/knowledge/20.04-tdd-quick-reference.md`
+- **Implementation Guide**: `/knowledge/20.03-tdd-enforcement-how-to.md`
+- **Standards Reference**: `/knowledge/20.01-tdd-standards-reference.md`
+- **Methodology Details**: `/knowledge/32.01-tdd-methodology-explanation.md`
+
+## 🗂️ KNOWLEDGE ORGANIZATION REQUIREMENTS
+
+### 📋 Johnny Decimal + Diátaxis Compliance (MANDATORY)
+
+**ALL new content in `/knowledge/` and `/docs/` folders MUST follow these standards:**
+
+#### File Naming Convention
+```
+AC.ID-content-type.md
+```
+
+Where:
+- **AC** = Area Code (10-99)
+- **ID** = Unique identifier within area (01-99)
+- **content-type** = Diátaxis classification
+
+**Example**: `20.15-testing-tutorial.md` (Area 20, ID 15, Tutorial content)
+
+#### Johnny Decimal Areas (Required Structure)
+```
+10-19  Core Development Practices
+20-29  Testing & Quality Assurance
+30-39  Architecture & Design Patterns
+40-49  Security & Compliance
+50-59  Deployment & Operations
+60-69  Project Management & Processes
+70-79  Templates & Boilerplates
+80-89  Integration & APIs
+90-99  System Administration
+```
+
+#### Diátaxis Content Classification (Required)
+- **tutorial** - Learning-oriented step-by-step guides
+- **how-to** - Problem-solving oriented practical guides
+- **explanation** - Understanding-oriented theoretical background
+- **reference** - Information-oriented lookup materials
+
+### 🔍 Content Health Standards
+
+#### Mandatory Quality Gates for All Knowledge Content
+1. **Structural Integrity**
+   - Johnny Decimal compliance check
+   - Diátaxis classification verification
+   - Cross-reference validation
+   - Naming convention adherence
+
+2. **Content Quality Standards**
+   - Clear, actionable headings
+   - Consistent terminology usage
+   - Complete examples and code snippets
+   - Links to related content
+
+3. **Duplication Prevention**
+   - Content similarity scanning
+   - Redundancy elimination
+   - Consolidation recommendations
+   - Cross-reference optimization
+
+4. **Consistency Monitoring**
+   - Template adherence checking
+   - Style guide compliance
+   - Formatting standardization
+   - Metadata completeness
+
+### 🛡️ Enforcement Mechanisms
+
+#### Pre-Content Creation Validation
+**ALL agents creating knowledge/docs content MUST:**
+
+1. **Research Phase** (Before Writing):
+```bash
+# Search existing content for duplication
+claude-context search "[topic]" --path "/knowledge/" --limit 20
+claude-context search "[topic]" --path "/docs/" --limit 20
+
+# Validate Johnny Decimal area assignment
+echo "🏷️ Assigning Johnny Decimal area for: [topic]"
+echo "🔍 Checking area availability in current structure"
+
+# Determine Diátaxis classification
+echo "📚 Content type classification:"
+echo "- Tutorial: Step-by-step learning guide?"
+echo "- How-to: Problem-solving guide?"
+echo "- Explanation: Conceptual background?"
+echo "- Reference: Lookup information?"
+```
+
+2. **Structure Validation** (During Creation):
+```bash
+# Validate file naming convention
+filename_pattern="^[0-9]{2}\.[0-9]{2}-(tutorial|how-to|explanation|reference)\.md$"
+echo "✅ Filename follows AC.ID-content-type.md pattern"
+
+# Check Johnny Decimal area consistency
+area_code=$(echo "$filename" | cut -d'.' -f1)
+echo "🗂️ Area code: $area_code - Validating against established areas"
+
+# Verify Diátaxis classification alignment
+content_type=$(echo "$filename" | grep -o '\-(tutorial|how-to|explanation|reference)' | sed 's/-//')
+echo "📖 Content type: $content_type - Validating content structure"
+```
+
+3. **Cross-Reference Maintenance** (After Creation):
+```bash
+# Update knowledge index
+echo "📇 Updating /knowledge/KNOWLEDGE_INDEX.md with new entry"
+
+# Validate cross-references
+echo "🔗 Checking all internal links for validity"
+
+# Trigger reindexing for search optimization
+echo "🔄 Triggering knowledge base reindexing"
+```
+
+### 🚨 Zero-Legacy Knowledge Policy
+
+**CRITICAL: All knowledge management follows zero-legacy tolerance:**
+
+1. **Immediate Compliance**: No grandfathering of existing content - ALL content must be migrated to new structure
+2. **Complete Migration**: Partial compliance is not acceptable - full Johnny Decimal + Diátaxis adoption required
+3. **Automated Enforcement**: Pre-commit hooks prevent non-compliant content creation
+4. **Continuous Monitoring**: Real-time validation of all knowledge/docs changes
+
+### 📊 Knowledge Health Metrics
+
+**Required monitoring and reporting:**
+
+1. **Structural Health**: 100% Johnny Decimal + Diátaxis compliance
+2. **Content Quality**: >95% content quality score
+3. **Cross-Reference Integrity**: 0 broken internal links
+4. **Duplication Rate**: <5% content similarity
+5. **Search Optimization**: >90% findability score
+
 ## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
 
 **ABSOLUTE RULES**:
@@ -44,6 +209,93 @@
 - `/config` - Configuration files
 - `/scripts` - Utility scripts
 - `/examples` - Example code
+
+## 🛡️ ANTI-DUPLICATION ENFORCEMENT SYSTEM
+
+### 🚫 CRITICAL: FILE DUPLICATION PREVENTION
+
+**ZERO TOLERANCE POLICY**: Creating duplicate files is the #1 anti-pattern that creates maintenance burden and technical debt.
+
+#### Forbidden Duplication Patterns
+```bash
+# ❌ ABSOLUTELY FORBIDDEN PATTERNS:
+existing_file.py + existing_file_refactored.py
+service.py + service_refactored.py
+component.tsx + component_new.tsx
+utils.js + utils_updated.js
+config.json + config_v2.json
+README.md + README_new.md
+
+# ✅ CORRECT APPROACH: ALWAYS EDIT EXISTING FILES
+# Use Edit/MultiEdit tools to modify existing files directly
+Edit(existing_file.py, old_content, new_content)
+MultiEdit(existing_file.py, [{old_string, new_string}, ...])
+```
+
+### 📋 MANDATORY VALIDATION PROTOCOL
+
+**ALL agents MUST follow this validation sequence:**
+
+#### Phase 1: Pre-Creation Validation (MANDATORY)
+```bash
+# Step 1: Search for existing similar files
+claude-context search "[filename_root]" --path "." --limit 20
+
+# Step 2: Check for existing variations
+find . -name "*[base_name]*" -type f | grep -E "\.(py|js|ts|tsx|md|json)$"
+
+# Step 3: Validate Edit vs Write tool usage
+if [[ -f "$TARGET_FILE" ]]; then
+  echo "🚫 DUPLICATION BLOCKED: File exists, MUST use Edit tools"
+  echo "✅ CORRECT ACTION: Edit('$TARGET_FILE', old_content, new_content)"
+  exit 1
+fi
+
+# Step 4: Memory-based duplication tracking
+npx claude-flow@alpha hooks memory-search --pattern "files/created/*" --key "*$BASE_NAME*"
+```
+
+#### Phase 2: During-Work Validation (ENFORCED)
+```bash
+# Continuous monitoring during file operations
+validate_file_operation() {
+  local operation="$1"
+  local file_path="$2"
+
+  if [[ "$operation" == "Write" && -f "$file_path" ]]; then
+    echo "🚨 DUPLICATION VIOLATION: Attempting to Write existing file"
+    echo "🛑 BLOCKED: Use Edit tools for existing files"
+    echo "📝 REQUIRED: Edit('$file_path', old_content, new_content)"
+    return 1
+  fi
+
+  # Check for suffix patterns
+  if echo "$file_path" | grep -E "_(refactored|new|updated|v[0-9]|copy|backup)\."; then
+    echo "🚨 SUFFIX VIOLATION: Forbidden file suffix detected"
+    echo "🛑 BLOCKED: Never create files with suffixes like _refactored, _new, etc."
+    return 1
+  fi
+}
+```
+
+#### Phase 3: Post-Task Validation (AUTOMATIC)
+```bash
+# Automatic duplication detection after task completion
+post_task_duplication_scan() {
+  echo "🔍 Scanning for accidental duplications..."
+
+  # Find potential duplicates by similar names
+  find . -type f -name "*.*" | \
+  sed 's/\.[^.]*$//' | \
+  sort | uniq -d | while read base; do
+    duplicates=$(find . -name "${base}*" -type f)
+    if [ $(echo "$duplicates" | wc -l) -gt 1 ]; then
+      echo "🚨 DUPLICATION DETECTED: $duplicates"
+      echo "🛠️ REQUIRED ACTION: Consolidate or remove duplicates"
+    fi
+  done
+}
+```
 
 ## Project Overview
 
@@ -182,10 +434,10 @@ claude mcp add claude-flow npx claude-flow@alpha mcp start
   Task("Test Engineer", "Write Jest tests. Check memory for API contracts.", "tester")
   Task("DevOps Engineer", "Setup Docker and CI/CD. Document in memory.", "cicd-engineer")
   Task("Security Auditor", "Review authentication. Report findings via hooks.", "reviewer")
-  
+
   // All todos batched together
   TodoWrite { todos: [...8-10 todos...] }
-  
+
   // All file operations together
   Write "backend/server.js"
   Write "frontend/App.jsx"
@@ -234,7 +486,7 @@ npx claude-flow@alpha hooks session-end --export-metrics true
   Task("Database agent", "Design and implement database schema. Store decisions in memory.", "code-analyzer")
   Task("Tester agent", "Create comprehensive test suite with 90% coverage.", "tester")
   Task("Reviewer agent", "Review code quality and security. Document findings.", "reviewer")
-  
+
   // Batch ALL todos in ONE call
   TodoWrite { todos: [
     {id: "1", content: "Research API patterns", status: "in_progress", priority: "high"},
@@ -246,7 +498,7 @@ npx claude-flow@alpha hooks session-end --export-metrics true
     {id: "7", content: "API documentation", status: "pending", priority: "low"},
     {id: "8", content: "Performance optimization", status: "pending", priority: "low"}
   ]}
-  
+
   // Parallel file operations
   Bash "mkdir -p app/{src,tests,docs,config}"
   Write "app/package.json"
