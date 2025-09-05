@@ -3,24 +3,25 @@
   "version": "1.0.0",
   "description": "1. Change config.toml file acording to your settings\r 2. Change Google forms",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "bin/rake test TEST=test/sync",
+    "test:unit": "bin/rake test TEST=test/sync",
+    "test:rebuild": "REBUILD=1 bin/dtest",
+    "lint": "bundle exec standardrb",
+    "typecheck": "echo 'No typecheck configured' && exit 0"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.21",
-    "cssnano": "^7.0.7",
+    "cssnano": "^7.1.1",
     "esbuild": "^0.23.1",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-nested": "^6.2.0",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "prettier-plugin-go-template": "^0.0.15",
     "surge": "^0.24.6"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001724"
+    "caniuse-lite": "^1.0.30001739"
   }
 }

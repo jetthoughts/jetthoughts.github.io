@@ -65,7 +65,7 @@ COPY --from=install /temp/dev/node_modules ./node_modules
 RUN git config --global --add safe.directory /app
 
 # To run browser tests need to run Xvfb
-RUN	printf '#!/bin/sh\nset -e\necho "Running bundle check..."\nbundle check || bundle install\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 &\nXVFB_PID=$!\necho "Executing command: $@"...\nexec "$@"\nkill $XVFB_PID\n' > /docker-entrypoint.sh && \
+RUN	printf '#!/bin/sh\nset -e\necho "Running bundle check..."\nbundle check || bundle install\necho "Checking node_modules..."\nif [ ! -d "/app/node_modules" ] || [ -z "$(ls -A /app/node_modules)" ]; then\n  echo "Installing Node.js dependencies..."\n  bun install\nfi\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 &\nXVFB_PID=$!\necho "Executing command: $@"...\nexec "$@"\nkill $XVFB_PID\n' > /docker-entrypoint.sh && \
 	chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
