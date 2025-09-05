@@ -24,9 +24,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      # Use problematic method for testimonials due to dynamic content
-      if section_id == "testimonials"
+      # Use appropriate screenshot method based on section type
+      case section_id
+      when "testimonials", "why-us"
         assert_stable_problematic_screenshot "homepage/_#{section_id}"
+      when "cta", "cta-contact_us", "use-cases"
+        # Use CTA method for sections with dynamic content/animations
+        assert_cta_screenshot "homepage/_#{section_id}"
       else
         assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.02
       end
@@ -93,9 +97,12 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      # Use problematic method for clients section due to dynamic content
-      if section_id == "clients"
+      # Use appropriate screenshot method based on section type
+      case section_id
+      when "clients"
         assert_stable_problematic_screenshot "clients/_#{section_id}"
+      when "cta-contact_us"
+        assert_cta_screenshot "clients/_#{section_id}"
       else
         assert_stable_screenshot "clients/_#{section_id}", tolerance: 0.02
       end

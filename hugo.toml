@@ -210,7 +210,7 @@ disableKinds = []
   url = "/services/outsourced-developer-staffing/"
   weight = 50
 [[menu.services]]
-  name = "Software QA &amp; CAT"
+  name = "Software QA & CAT"
   url = "/services/software-qa-cat/"
   weight = 60
 

@@ -36,14 +36,15 @@ services:
   t:
     <<: *backend
     entrypoint: bin/test
+    shm_size: 256mb  # Shared memory size for Chrome browser
     deploy:
       resources:
         limits:
           cpus: '3.0'
-          memory: '1GB'
+          memory: '2GB'  # Increased for Chrome browser stability
         reservations:
           cpus: '1.5'
-          memory: '512M'
+          memory: '1GB'  # Increased base reservation
 
     depends_on:
       t-setup:

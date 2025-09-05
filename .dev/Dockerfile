@@ -28,13 +28,16 @@ ENV \
     BUNDLE_RETRY=3 \
     BUNDLE_PATH=/opt/bundle \
     DEBUG_COLORS=true \
+    DOCKER=true \
+    ENABLE_SELENIUM_FIXES=true \
     LANG=C.UTF-8 \
     NODE_ENV=production \
     OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
     PATH="/app/bin:/opt/bundle/bin:/usr/local/bin/:$PATH" \
     PRECOMPILED_ASSETS=true \
     RUBY_YJIT_ENABLE=1 \
-    TEST_SERVER_PORT=1314
+    TEST_SERVER_PORT=1314 \
+    DISPLAY=:99
 
 # Upgrade system
 RUN apk update --no-cache && apk upgrade --no-cache

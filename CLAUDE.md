@@ -585,3 +585,4 @@ Never save working files, text/mds and tests to the root folder.
 - always spawn swarm to handle requests
 - After each task spawn appropriate agent to run the whole test suite with `bin/dtest` to confirm there is no breaking changes have been introduced, by making all tests pass. If there are broken test request review and handling them!
 - if there are broken tests related to screenshots then need to manaully review appropriate diffs and evaluate them. if they are ok then commit them; if not request a fix!
+- prioritize to use claude-context for search through codebase over average search

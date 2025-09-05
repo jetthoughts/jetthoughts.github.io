@@ -4,7 +4,6 @@ require "sync/logging"
 require "sync/configuration"
 require "sync/dev_to_article_fetcher"
 require "sync/sync_status_storage"
-require "sync/sync_script"
 
 class App
   include Logging
