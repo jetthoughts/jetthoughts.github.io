@@ -8,15 +8,19 @@
       "author": {
         "@type": "Organization",
         "name": "JetThoughts",
-        "url": "https://jetthoughts.com/"
+        "url": "https://jetthoughts.com/",
+        "logo": "https://jetthoughts.com/images/jetthoughts-logo.png"
       },
       "datePublished": "{{ with .Params.created_at }}{{ . }}{{ else }}{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}{{ end }}",
       "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
       "mainEntityOfPage": "{{ .Permalink }}",
+      "publisher": {{ .Site.Data.company | jsonify }},
       {{ with (.Resources.Get .Params.metatags.image) }}
         "image": {
           "@type": "ImageObject",
-          "url": "{{ (. | fingerprint).Permalink }}"
+          "url": "{{ (. | fingerprint).Permalink }}",
+          "width": "{{ .Width }}",
+          "height": "{{ .Height }}"
         },
       {{ end }}
       "keywords": [

@@ -11,9 +11,9 @@
         <span class="arrow js-sub-menu-opener" aria-label="Expand submenu"></span>
         <a href="{{ .URL }}" class="link" aria-expanded="false">{{ .Name | safeHTML }}</a>
 
-        <ul class="sub-menu">
+        <ul class="sub-menu" role="menu" aria-label="Submenu">
           {{ range .Children }}
-            <li class="sub-item">
+            <li class="sub-item" role="menuitem">
               <a href="{{ .URL }}" class="sub-link">
                 <div class="sub-image">
                   {{ partial "svgiw" (dict "svg" (printf "theme/%s" .Identifier) "width" "27" "height" "27") }}
