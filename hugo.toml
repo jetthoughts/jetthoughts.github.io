@@ -51,6 +51,9 @@ disableKinds = []
   priority = 0.5
 
 [params]
+  performanceMonitoring = true
+  googleAnalytics = "G-XXXXXXXXXX"
+  privacyCompliant = true
   email="info@jetthoughts.com"
   phone="+1 754 216 9568"
   description="JetThoughts’s expert team of developers and consultants has helped clients launch highly tailored projects, and we’d love to help you, too."

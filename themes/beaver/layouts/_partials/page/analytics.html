@@ -1,0 +1,16 @@
+{{ if and (not hugo.IsServer) (site.Params.googleAnalytics) }}
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+{{ if site.Params.privacyCompliant }}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied'
+  });
+{{ end }}
+  gtag('js', new Date());
+  gtag('config', '{{ site.Params.googleAnalytics }}');
+</script>
+{{ end }}

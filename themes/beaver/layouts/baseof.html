@@ -50,6 +50,7 @@
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
     {{ partialCached "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) .RelPermalink }}
 
@@ -63,12 +64,15 @@
     {{ block "header" . }} {{ end }}
 
     {{ partialCached "page/favicons.html" . "favicons" }}
+    {{ partial "page/analytics.html" . }}
     <link rel="shortcut icon" href="{{ (resources.Get "/img/favicon/favicon.ico" | fingerprint).RelPermalink }}">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="{{ (resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint).RelPermalink }}">
     <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
 
     {{ $navCss := resources.Get "css/navigation.css" | minify | fingerprint }}
+    <link rel="preload" as="style" href="{{ $navCss.RelPermalink }}">
     <link rel="stylesheet" href="{{ $navCss.RelPermalink }}">
 </head>
 
@@ -83,7 +87,10 @@
 </div>
 {{ partialCached "page/footer.html" . "footer" }}
 {{ block "footer" . }} {{ end }}
+{{ partial "page/core-web-vitals.html" . }}
 {{ partialCached "page/site-scripts" . "site-scripts" }}
-
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+</script>
 </body>
 </html>

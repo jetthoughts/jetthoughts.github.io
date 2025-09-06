@@ -1,0 +1,8 @@
+{
+  "name": "JetThoughts - Software Development Blog",
+  "short_name": "JetThoughts",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
