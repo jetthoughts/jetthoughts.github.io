@@ -845,3 +845,4 @@ Never save working files, text/mds and tests to the root folder.
 - verify tests after each change and request to rework on found issues
 - prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
 - spawn swarm: prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
+- always activate micro cycle/iterative/incremental sprints work for each big enough requests, and schedule refelctions at the end of each iterration/cycle.

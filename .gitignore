@@ -66,3 +66,5 @@ modules/
 node_modules/
 tmp/
 hive/
+swarm/
+validation-build/

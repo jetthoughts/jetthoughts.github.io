@@ -26,6 +26,7 @@ disableKinds = []
 
 [build.processing.css]
   bundle = true
+  fingerprint = "sha256"
 
 [[redirects]]
   from = "/tags/:slug/"
