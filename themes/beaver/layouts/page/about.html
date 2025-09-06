@@ -3,12 +3,12 @@
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $CSS := slice
 (resources.Get "css/701-layout.css")
-(resources.Get "css/skin-65eda28877e04.css")
+(resources.Get "css/theme-main.css")
 $dynamicCSS586
-(resources.Get "css/586.css")
-(resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
+(resources.Get "css/services-layout.css")
+(resources.Get "css/component-bundle.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/about-us.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/about-us.css" }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ partial "header/json-ld-company.html" . }}

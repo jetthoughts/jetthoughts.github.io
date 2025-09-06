@@ -128,12 +128,24 @@ img.mfp-img {
   outline: 0
 }
 
+/* Accessibility: Restore focus styles with :focus-visible */
+.pp-advanced-menu a:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+}
+
 .pp-advanced-menu .sub-menu {
   width: 220px
 }
 
 .pp-advanced-menu .pp-menu-nav {
   outline: 0
+}
+
+/* Accessibility: Restore focus styles for menu navigation */
+.pp-advanced-menu .pp-menu-nav:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
 }
 
 .fl-module[data-node] .pp-advanced-menu .pp-advanced-menu-expanded .sub-menu {
@@ -145,6 +157,14 @@ img.mfp-img {
 
 .pp-advanced-menu .pp-has-submenu:focus, .pp-advanced-menu .pp-has-submenu .sub-menu:focus, .pp-advanced-menu .pp-has-submenu-container:focus {
   outline: 0
+}
+
+/* Accessibility: Restore focus styles for submenu elements */
+.pp-advanced-menu .pp-has-submenu:focus-visible,
+.pp-advanced-menu .pp-has-submenu .sub-menu:focus-visible,
+.pp-advanced-menu .pp-has-submenu-container:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
 }
 
 .pp-advanced-menu .pp-has-submenu-container {
@@ -245,6 +265,13 @@ img.mfp-img {
 
 .pp-advanced-menu-mobile-toggle .pp-hamburger:focus {
   outline: none
+}
+
+/* Accessibility: Restore focus styles for hamburger menu */
+.pp-advanced-menu-mobile-toggle .pp-hamburger:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box {
@@ -496,6 +523,13 @@ html:not(.pp-full-screen-menu-open) .fl-builder-edit .pp-advanced-menu .pp-menu-
   -webkit-transition: background-color .3s;
   -moz-transition: background-color .3s;
   transition: background-color .3s
+}
+
+/* Accessibility: Restore focus styles for menu close button */
+.pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:before, .pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:after {

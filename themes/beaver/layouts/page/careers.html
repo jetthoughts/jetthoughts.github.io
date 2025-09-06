@@ -1,11 +1,9 @@
 {{ define "header" }}
 {{ partial "header/critical/careers.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{ $CSS := slice
-(resources.Get "css/careers.css") (resources.Get "css/3086-layout2.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/homepage.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/footer.css") | resources.Concat "css/_careers.css"
-| postCSS | minify | fingerprint | resources.PostProcess }}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $staticCareersCSS := slice
+(resources.Get "css/careers.css") (resources.Get "css/3086-layout2.css") (resources.Get "css/services-layout.css") (resources.Get "css/homepage.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticCareersCSS (slice $dynamicCSS586)) "page" "careers") }}
 {{ end }}
 
 {{ define "main" }}
@@ -452,7 +450,7 @@
                                                                 <div class='gform_heading'>
                                                                    <p class='gform_required_legend'>&quot;<span class="gfield_required gfield_required_asterisk">*</span>&quot; indicates required fields</p>
                                                                 </div>
-                                                                <form method='post' target="_blank" action='{{ .Site.Params.forms.newsletter.action }}'>
+                                                                <form method='post' target="_blank" rel="noopener noreferrer" action='{{ .Site.Params.forms.newsletter.action }}'>
                                                                    <div class='gform-body gform_body'>
                                                                       <div id='gform_fields_4' class='gform_fields top_label form_sublabel_below description_below'>
                                                                          <div id="field_4_1" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"  data-js-reload="field_4_1" >

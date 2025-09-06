@@ -2,10 +2,8 @@
 {{ partial "header/critical/services.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
-
-{{- $CSS := slice (resources.Get "css/737-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") $dynamicCSSUseCases | resources.Concat "css/services.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $staticServicesCSS := slice (resources.Get "css/737-layout.css") (resources.Get "css/component-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticServicesCSS (slice $dynamicCSS586 $dynamicCSSUseCases)) "page" "services") }}
 {{ end }}
 
 
@@ -13,8 +11,10 @@
 {{ $tabs := slice
 (resources.Get "js/tabs.js")
 | resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
-}}
+| js.Build (dict "minify" true) | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $tabs = $tabs  -}}
+{{- end -}}
 <script defer src="{{ $tabs.RelPermalink }}"></script>
 {{ end }}
 
@@ -259,7 +259,7 @@
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-w8dym2q746pj fl-row-default-height fl-row-align-center">
                       <div class="fl-row-content-wrap">
                          <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                            {{ partial "technologies.html" (dict "colorVariant" "dark"  "site" .Site) }}
+                            {{ partialCached "technologies.html" (dict "colorVariant" "dark"  "site" .Site) "technologies-dark" }}
                          </div>
                       </div>
                       </div>
@@ -278,9 +278,9 @@
                             <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
 
-                               {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                               {{ partialCached "page/use-cases.html" (dict "addHeadline" true) "use-cases-with-headline" }}
 
-                               {{ partial "page/testimonials.html" . }}
+                               {{ partialCached "page/testimonials.html" . "testimonials" }}
                                <div class="fl-col-group fl-node-ygpn8524mqh7 fl-col-group-custom-width" data-node="ygpn8524mqh7">
                                  <div class="fl-col fl-node-ohd51ixf3842 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="ohd51ixf3842">
                                    <div class="fl-col-content fl-node-content">

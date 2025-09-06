@@ -1,0 +1,14 @@
+/* Mobile screenshot fixes for 404 page and blog posts */
+@media (max-width: 860px) {
+  /* Fix: 404 page black rectangle shape layer */
+  .fl-builder-layer .fl-shape {
+    fill: transparent !important;
+    display: none;
+  }
+
+  /* Fix: Blog post content visibility on mobile */
+  .single-content {
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+}

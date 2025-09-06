@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="{{ (resources.Get "img/favicon/mstile-150x150.png" | fingerprint).RelPermalink }}"/>
+            <square150x150logo src="{{ (resources.Get "img/favicon/mstile-150x150.png" | fingerprint "md5").RelPermalink }}"/>
             <TileColor>#00aba9</TileColor>
         </tile>
     </msapplication>

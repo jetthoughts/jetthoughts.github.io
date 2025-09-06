@@ -10,33 +10,29 @@
       <title>{{ .Title }}</title>
     {{ end }}
 
+    {{ $description := "" }}
     {{ if eq .Section "tags" }}
-    {{ $tagName := lower .Title }}
-    {{ $tagData := index .Site.Data.tags $tagName }}
-
-    <meta name="description" content="{{ $tagData.description | default "" }}" />
-    <meta property="og:description" content="{{ $tagData.description | default "" }}" />
+      {{ $tagData := index .Site.Data.tags (lower .Title) }}
+      {{ $description = $tagData.description | default "" }}
     {{ else }}
-    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
-    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
+      {{ $description = .Description | default .Params.description | default "" }}
     {{ end }}
+    <meta name="description" content="{{ $description }}" />
+    <meta property="og:description" content="{{ $description }}" />
 
 
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
 
+    {{ $canonical := .Permalink }}
     {{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
-      {{ $canonical := .Permalink | replace "/tags/" "/blog/tags/" }}
-      <link rel="canonical" href="{{ $canonical }}" />
-    {{ else }}
-      <link rel="canonical" href="{{ .Permalink }}" />
+      {{ $canonical = $canonical | replace "/tags/" "/blog/tags/" }}
     {{ end }}
+    <link rel="canonical" href="{{ $canonical }}" />
 
 
-    {{ if and (eq .Section "blog") (eq .Kind "page") }}
-      <meta property="og:type" content="article">
-    {{ else }}
-      <meta property="og:type" content="website">
-    {{ end }}
+    {{ $ogType := "website" }}
+    {{ if and (eq .Section "blog") (eq .Kind "page") }}{{ $ogType = "article" }}{{ end }}
+    <meta property="og:type" content="{{ $ogType }}">
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="{{ .Title }} - JTWay, JetThoughts’ team blog" />
@@ -44,14 +40,15 @@
     <meta property="og:site_name" content="jetthoughts.com" />
     <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
 
-    <meta name="twitter:title" content="{{ .Title}} - JetThoughts’ team blog, JTWay" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ .Title}} - JetThoughts' team blog, JTWay" />
     <meta name="twitter:site" content="@jetthoughts" />
-    <meta name="twitter:creator" content="@jetthoughts" />
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-    {{ partial "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) }}
+    {{ partialCached "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) .RelPermalink }}
 
     <style>
         .logo-image-main {
@@ -62,32 +59,38 @@
     </style>
     {{ block "header" . }} {{ end }}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ (resources.Get "img/favicon/apple-touch-icon.png" | fingerprint).RelPermalink }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ (resources.Get "img/favicon/favicon-32x32.png" | fingerprint).RelPermalink }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ (resources.Get "img/favicon/favicon-16x16.png" | fingerprint).RelPermalink }}">
-    <link rel="manifest" href="{{ (resources.Get "img/favicon/site.webmanifest" | resources.ExecuteAsTemplate "site.webmanifest" . | fingerprint).RelPermalink }}">
-    <link rel="mask-icon" href="{{ (resources.Get "img/favicon/safari-pinned-tab.svg" | fingerprint).RelPermalink }}" color="#5bbad5">
-    <link rel="shortcut icon" href="{{ (resources.Get "/img/favicon/favicon.ico" | fingerprint).RelPermalink }}">
+    {{ partialCached "page/favicons.html" . "favicons" }}
+    {{ partial "page/analytics.html" . }}
+    {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
+    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}">
     <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-config" content="{{ (resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint).RelPermalink }}">
+    {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
+    <meta name="msapplication-config" content="{{ $browserConfig.RelPermalink }}">
     <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
 
-    {{ $navCss := resources.Get "css/navigation.css" | minify | fingerprint }}
+    {{ $navCss := resources.Get "css/navigation.css" | minify | fingerprint "md5" }}
+    <link rel="preload" as="style" href="{{ $navCss.RelPermalink }}">
     <link rel="stylesheet" href="{{ $navCss.RelPermalink }}">
 </head>
 
-<body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-<a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
+<body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage" lang="en">
+{{ if ne hugo.Environment "production" }}
+  {{ partial "debug/template-info.html" . }}
+{{ end }}
 <div class="fl-page">
 
-{{ partial "page/header.html" . }}
+{{ partialCached "page/header.html" . "header" }}
 
 {{ block "main" . }} {{ end }}
 
 </div>
-{{ partial "page/footer.html" . }}
+{{ partialCached "page/footer.html" . "footer" }}
 {{ block "footer" . }} {{ end }}
-{{ partial "page/site-scripts" . }}
 
+{{ partialCached "page/site-scripts" . "site-scripts" }}
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+</script>
 </body>
 </html>

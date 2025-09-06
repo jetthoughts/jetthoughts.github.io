@@ -27,9 +27,9 @@ x-backend: &backend
     - bundle:/opt/bundle
     - history:/usr/local/hist
   environment:
+    <<: *hugo-env
     HISTFILE: /usr/local/hist/.bash_history
     IRB_HISTFILE: /usr/local/hist/.irb_history
-    HUGO_CACHEDIR: /tmp/hugo_cache
     BUNDLE_JOBS: 4
     BUNDLE_PATH: /opt/bundle
 
@@ -94,6 +94,8 @@ services:
       CHROME_LOG_LEVEL: "3"  # Suppress Chrome logs
       RUBY_GC_HEAP_GROWTH_FACTOR: "1.1"
       RUBY_GC_HEAP_GROWTH_MAX_SLOTS: "40000"
+      PRECOMPILED_ASSETS: true
+      TEST_SERVER_PORT: 1314
     deploy:
       resources:
         limits:
@@ -122,10 +124,6 @@ volumes:
     driver: local
   hugo_cache:
     driver: local
-    driver_opts:
-      type: tmpfs
-      device: tmpfs
-      o: size=4096m,noatime  # Increased size and proper permissions
   hugo_resources:
     driver: local
   test_screenshots:

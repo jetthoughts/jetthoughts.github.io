@@ -154,7 +154,7 @@
 }
 
 .use-cases .tab-panel .item {
-  background-image: url({{ (resources.Get "img/icons/theme/homepage_tick_circle.svg" | fingerprint).RelPermalink }});
+  background-image: url({{ (resources.Get "img/icons/theme/homepage_tick_circle.svg" | fingerprint "md5").RelPermalink }});
   background-repeat: no-repeat;
   background-position: 0 50%; /* Center the bullet vertically */
   background-size: 24px 24px; /* Size of the bullet */
