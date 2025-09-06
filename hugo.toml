@@ -27,6 +27,19 @@ disableKinds = []
 [build.processing.css]
   bundle = true
   fingerprint = "sha256"
+  concatenate = true
+  integrity = true
+
+[build.processing.js]
+  bundle = true
+  fingerprint = "sha256"
+
+[imaging]
+  quality = 85
+  resampleFilter = "lanczos"
+
+[minify]
+  minifyOutput = true
 
 [[redirects]]
   from = "/tags/:slug/"
