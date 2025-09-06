@@ -51,7 +51,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
-    {{ partial "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) }}
+    {{ partialCached "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) .RelPermalink }}
 
     <style>
         .logo-image-main {
@@ -62,11 +62,7 @@
     </style>
     {{ block "header" . }} {{ end }}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ (resources.Get "img/favicon/apple-touch-icon.png" | fingerprint).RelPermalink }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ (resources.Get "img/favicon/favicon-32x32.png" | fingerprint).RelPermalink }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ (resources.Get "img/favicon/favicon-16x16.png" | fingerprint).RelPermalink }}">
-    <link rel="manifest" href="{{ (resources.Get "img/favicon/site.webmanifest" | resources.ExecuteAsTemplate "site.webmanifest" . | fingerprint).RelPermalink }}">
-    <link rel="mask-icon" href="{{ (resources.Get "img/favicon/safari-pinned-tab.svg" | fingerprint).RelPermalink }}" color="#5bbad5">
+    {{ partialCached "page/favicons.html" . "favicons" }}
     <link rel="shortcut icon" href="{{ (resources.Get "/img/favicon/favicon.ico" | fingerprint).RelPermalink }}">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="{{ (resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint).RelPermalink }}">

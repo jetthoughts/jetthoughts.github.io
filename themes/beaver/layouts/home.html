@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                        <div class="fl-module fl-node-cbhworulayqn">
                                           <div class="fl-module-content fl-node-content">
-                                             {{ partial "companies.html" . }}
+                                             {{ partialCached "companies.html" . "companies" }}
                                           </div>
                                        </div>
                                     </div>
@@ -435,7 +435,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                  </div>
                               </div>
 
-                              {{ partial "technologies.html" (dict "colorVariant" "white"  "site" .Site) }}
+                              {{ partialCached "technologies.html" (dict "colorVariant" "white"  "site" .Site) "technologies-white" }}
 
                               <div id="clients" class="fl-col-group fl-node-1iahtp297j5b fl-col-group-custom-width" data-node="1iahtp297j5b">
                                  <div class="fl-col fl-node-74apslrkzt59 fl-col-small-custom-width fl-col-has-cols" data-node="74apslrkzt59">
@@ -486,14 +486,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                 <div class="pp-content-posts" style="--items-count: 3;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
                                                    <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
 
-                                                      {{ $pages := where .Site.RegularPages "Type" "clients" }}
-                                                      {{ $pages = $pages | first 3 }}
-
-
-                                                      {{ range $pages }}
-                                                      {{ .Scratch.Set "logoVariant" "white" }}
-                                                      {{ partial "clients/grid-single.html" . }}
-                                                      {{ end }}
+                                                      {{ partialCached "clients/homepage-grid.html" . "clients-homepage" }}
 
                                                    </div>
                                                    <div class="fl-clear"></div>
@@ -673,9 +666,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                  </div>
                               </div>
 
-                            {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                            {{ partialCached "page/use-cases.html" (dict "addHeadline" true) "use-cases-with-headline" }}
 
-                            {{ partial "page/testimonials.html" . }}
+                            {{ partialCached "page/testimonials.html" . "testimonials" }}
                               <div id="cta-contact_us" class="fl-col-group fl-node-niok604vy81f fl-col-group-custom-width" data-node="niok604vy81f">
                                  <div class="fl-col fl-node-8x91uqrnkeb7 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="8x91uqrnkeb7">
                                     <div class="fl-col-content fl-node-content">

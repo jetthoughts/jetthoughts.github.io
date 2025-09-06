@@ -65,3 +65,4 @@ hive-mind-prompt-*.txt
 modules/
 node_modules/
 tmp/
+hive/

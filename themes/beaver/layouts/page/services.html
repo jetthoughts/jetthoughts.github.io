@@ -259,7 +259,7 @@
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-w8dym2q746pj fl-row-default-height fl-row-align-center">
                       <div class="fl-row-content-wrap">
                          <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                            {{ partial "technologies.html" (dict "colorVariant" "dark"  "site" .Site) }}
+                            {{ partialCached "technologies.html" (dict "colorVariant" "dark"  "site" .Site) "technologies-dark" }}
                          </div>
                       </div>
                       </div>
@@ -278,9 +278,9 @@
                             <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
 
-                               {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                               {{ partialCached "page/use-cases.html" (dict "addHeadline" true) "use-cases-with-headline" }}
 
-                               {{ partial "page/testimonials.html" . }}
+                               {{ partialCached "page/testimonials.html" . "testimonials" }}
                                <div class="fl-col-group fl-node-ygpn8524mqh7 fl-col-group-custom-width" data-node="ygpn8524mqh7">
                                  <div class="fl-col fl-node-ohd51ixf3842 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="ohd51ixf3842">
                                    <div class="fl-col-content fl-node-content">

@@ -50,9 +50,7 @@
                                                                 <div class="pp-content-posts" style="--items-count: 6;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
                                                                     <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
 
-                                                                        {{ range where site.RegularPages "Type" "clients" }}
-                                                                        {{ partial "clients/grid-single.html" . }}
-                                                                        {{ end }}
+                                                                        {{ partialCached "clients/all-clients-grid.html" . "all-clients" }}
 
                                                                     </div>
                                                                     <div class="fl-clear"></div>
@@ -69,9 +67,7 @@
                                                                  <div class="pp-content-post-carousel pp-equal-height clearfix" itemscope="itemscope" itemtype="https://schema.org/Collection">
                                                                     <div class="pp-content-posts-inner owl-carousel owl-theme">
 
-                                                                        {{ range where site.RegularPages "Type" "clients" }}
-                                                                        {{ partial "clients/grid-single.html" . }}
-                                                                        {{ end }}
+                                                                        {{ partialCached "clients/all-clients-grid.html" . "all-clients" }}
 
                                                                     </div>
                                                                  </div>
@@ -85,9 +81,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{ partial "technologies.html" (dict "colorVariant" "dark"  "site" .Site) }}
+                                        {{ partialCached "technologies.html" (dict "colorVariant" "dark"  "site" .Site) "technologies-dark" }}
 
-                                        {{ partial "page/testimonials" . }}
+                                        {{ partialCached "page/testimonials" . "testimonials" }}
 
                                         <div id="cta-contact_us" class="fl-col-group fl-node-f14gkcmxeo5i fl-col-group-custom-width" data-node="f14gkcmxeo5i">
                                             <div class="fl-col fl-node-spwc0eio5znl fl-col-small-custom-width fl-col-has-cols blue-border" data-node="spwc0eio5znl">
