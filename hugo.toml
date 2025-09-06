@@ -3,8 +3,8 @@ languageCode = "en-us"
 title = "JetThoughts"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme = "beaver"
-enableGitInfo = true
-disableKinds = []
+enableGitInfo = false
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -20,26 +20,30 @@ disableKinds = []
     tag = "tags"
 
 [build]
-  writeStats = true
+  writeStats = false
+  noJSConfigInAssets = true
+  noChmod = true
+  useResourceCacheWhen = "fallback"
   [build.buildStats]
-    enable = true
+    enable = false
 
 [build.processing.css]
-  bundle = true
-  fingerprint = "sha256"
-  concatenate = true
-  integrity = true
+  bundle = false
+  fingerprint = false
+  concatenate = false
+  integrity = false
 
 [build.processing.js]
-  bundle = true
-  fingerprint = "sha256"
+  bundle = false
+  fingerprint = false
 
 [imaging]
-  quality = 85
-  resampleFilter = "lanczos"
+  quality = 70
+  resampleFilter = "box"
+  anchor = "smart"
 
 [minify]
-  minifyOutput = true
+  minifyOutput = false
 
 [[redirects]]
   from = "/tags/:slug/"
@@ -282,3 +286,25 @@ tell = "entry.1791620687"
 [params.forms.newsletter]
 action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD4751jeepeQe4wefgLqBO6XAU0qqvKWvmJ8P6xRmrMRvakg/formResponse"
 email = "entry.939459641"
+
+# Performance settings for modules and resources - Sprint 6-10
+# Phase 2: Complete 20-iteration optimization cycle
+[caches]
+  [caches.modules]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.templates]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.assets]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.getresource]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.getjson]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.images]
+    dir = ":cacheDir"
+    maxAge = "24h"
