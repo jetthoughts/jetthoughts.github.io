@@ -12,8 +12,6 @@ gem "rackup"
 gem "puma"
 gem "ostruct"
 
-gem "tqdm"
-
 gem "sanity-ruby"
 
 gem "capybara-screenshot-diff"

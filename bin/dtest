@@ -1,6 +1,13 @@
 #!/usr/bin/env sh
 
-set -e
+set -euo pipefail
 
-bin/build --destination public-test --baseURL http://localhost:1314
+rm -rf docker_test_output public-dtest || true
+
+# Build Hugo locally first (much faster) with separate output dir
+echo "Building Hugo site for tests (public-dtest)..."
+hugo --environment production --destination public-dtest --gc --logLevel warn
+
+# Now run the tests in Docker
+echo "Running tests..."
 bin/docked t "$@"

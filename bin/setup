@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -e
+set -euo pipefail
 
 ( (type brew >/dev/null 2>&1) && (brew bundle check || brew bundle --no-upgrade --no-lock) ) \
   || (echo "*** Please install manually system dependencies: ***" && cat Brewfile)

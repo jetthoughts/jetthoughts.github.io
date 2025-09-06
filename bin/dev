@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -euo pipefail
+
+# Signal forwarding for proper shutdown handling
+trap 'exit 130' INT
+trap 'exit 143' TERM
+
+echo "Fast development server starting at http://localhost:1313"
+exec hugo server --config hugo.toml,hugo.dev.toml --bind 0.0.0.0 --port 1313 --environment development --renderToMemory --logLevel info --noHTTPCache "$@"

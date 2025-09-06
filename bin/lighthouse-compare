@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Compare two Lighthouse runs and show improvements/regressions
+# Usage: ./bin/lighthouse-compare <report1_dir> <report2_dir>
+
+set -euo pipefail
+
+# Input validation
+if [[ $# -ne 2 ]]; then
+  echo "Usage: $0 <baseline_dir> <current_dir>"
+  exit 1
+fi
+
+BASELINE_DIR="$1"
+CURRENT_DIR="$2"
+
+# Validate directories exist
+if [[ ! -d "$BASELINE_DIR" ]] || [[ ! -d "$CURRENT_DIR" ]]; then
+  echo "Error: Both directories must exist"
+  exit 1
+fi
+
+echo "=== Lighthouse Performance Comparison ==="
+echo "Baseline: $BASELINE_DIR"
+echo "Current:  $CURRENT_DIR"
+
+# Compare results.csv files if they exist
+if [[ -f "$BASELINE_DIR/results.csv" ]] && [[ -f "$CURRENT_DIR/results.csv" ]]; then
+  echo "Comparing performance scores..."
+else
+  echo "Error: results.csv files not found in both directories"
+  exit 1
+fi

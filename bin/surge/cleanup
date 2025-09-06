@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eo pipefail
+set -euo pipefail
 
 # Directory to clean up
 TARGET_DIR="public/blog"
@@ -22,7 +22,7 @@ ALLOWED_FILES_STRING=${ALLOWED_FILES_STRING:1}
 # Iterate over all files in the target directory
 for file in "$TARGET_DIR"/*; do
   # Get the base name of the file
-  basefile=$(basename -s $TARGET_DIR "$file")
+  basefile=$(basename "$file")
 
   # Check if the file is in the allowed list
   if [[ ! "$ALLOWED_FILES_STRING" =~ (^|\||[[:space:]])"$basefile"($|\||[[:space:]]) ]]; then

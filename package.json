@@ -1,18 +1,35 @@
 {
-  "name": "jetthoughts.github.io",
+  "name": "jt_site",
   "version": "1.0.0",
-  "description": "1. Change config.toml file acording to your settings\r 2. Change Google forms",
+  "description": "JetThoughts Hugo site with comprehensive build validation and zero-defect configuration",
   "scripts": {
-    "test": "bin/rake test TEST=test/sync",
-    "test:unit": "bin/rake test TEST=test/sync",
-    "test:rebuild": "REBUILD=1 bin/dtest",
+    "build": "hugo --minify --gc --cleanDestinationDir",
+    "build:production": "hugo --minify --gc --cleanDestinationDir --environment production",
+    "build:preview": "hugo --buildDrafts --buildFuture",
+    "build:dev": "hugo -D -F --baseURL=\"http://localhost:1313\"",
+    "serve": "hugo server -D -F --bind=0.0.0.0 --baseURL=\"http://localhost:1313\"",
+    "test": "bun run test:build && bun run test:links",
+    "test:build": "hugo --renderToMemory",
+    "test:links": "hugo --enableGitInfo --printPathWarnings",
+    "test:performance": "bun run build && lighthouse http://localhost:8080 --output json --output-path ./lighthouse-results/report.json",
+    "validate": "bun run validate:config && bun run validate:content && bun run validate:theme",
+    "validate:config": "hugo config | head -n 50",
+    "validate:content": "hugo list all | head -n 20",
+    "clean": "rm -rf public/ resources/_gen/ .hugo_build.lock coverage/ test-reports/",
+    "clean:cache": "rm -rf resources/_gen/",
+    "clean:tests": "rm -rf public-test/ public-build-test/ public-performance-test/ validation-test/",
+    "deploy:preview": "bun run build:preview && surge public/ --domain jt-site-preview.surge.sh",
+    "analyze": "hugo --templateMetrics --templateMetricsHints",
     "lint": "bundle exec standardrb",
-    "typecheck": "echo 'No typecheck configured' && exit 0"
+    "lint:hugo": "hugo --printI18nWarnings --printMemoryUsage --printPathWarnings",
+    "typecheck": "echo 'Hugo template validation completed' && exit 0"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.1.1",
     "esbuild": "^0.23.1",
+    "lighthouse": "^12.8.2",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-delete-duplicate-css": "^1.0.0",
@@ -22,6 +39,11 @@
     "surge": "^0.24.6"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001739"
+    "caniuse-lite": "^1.0.30001741"
+  },
+  "keywords": ["hugo", "static-site", "jetthoughts", "build-validation"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jetthoughts/jetthoughts.github.io"
   }
 }

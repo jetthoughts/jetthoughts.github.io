@@ -5,7 +5,6 @@ require "sync/retryable"
 require "sync/dev_to_article_fetcher"
 require "sync/logging"
 
-
 class ImagesDownloader
   include Retryable
   include Logging

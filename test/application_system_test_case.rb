@@ -30,7 +30,12 @@ class ApplicationSystemTestCase < Minitest::Test
 
   # Simple screenshot assertion - fail fast if issues arise
   def assert_stable_screenshot(name, **options)
-    sleep(options[:wait] || 1) # Simple wait, no complex preparation
+    # Use Capybara's built-in wait mechanism instead of sleep
+    wait_time = options.delete(:wait) || 1
+
+    # Wait for any pending animations or loading to complete
+    has_css?('body', wait: wait_time) # This ensures page is ready
+
     options[:tolerance] ||= 0.05 # 5% tolerance for cross-platform rendering differences
     assert_matches_screenshot(name, **options)
   end
