@@ -15,6 +15,66 @@
 4. **Security-First**: Implement security practices from knowledge base frameworks
 5. **TDD Methodology**: Follow test-driven development from knowledge base practices
 
+### 🎯 Quality Framework Integration (MANDATORY)
+
+**CRITICAL UPDATE**: All Hugo site development agents MUST follow the enhanced quality framework for zero-defect development.
+
+#### Quality Framework References (HIGHEST PRIORITY)
+
+- **`/knowledge/90.01-zero-defect-philosophy-explanation.md`** - Zero-Defect Philosophy (MANDATORY CONSULTATION)
+- **`/knowledge/90.02-prevention-first-methodology-how-to.md`** - Prevention-First Methodology
+- **`/knowledge/90.03-consistency-pattern-library-reference.md`** - Consistency Pattern Library
+- **`/knowledge/36.01-technical-debt-elimination-how-to.md`** - Technical Debt Elimination Protocols
+
+#### Enhanced Quality Gate Coordination
+
+```yaml
+quality_framework_integration:
+  zero_defect_philosophy: true
+  prevention_first_methodology: required
+  consistency_pattern_validation: true
+  technical_debt_elimination: mandatory
+  
+hugo_quality_coordination_hooks:
+  pre_task_quality_validation: |
+    # Consult quality framework before any Hugo site task
+    echo "📊 Quality Framework Consultation: $TASK"
+    echo "   - AC.90.01: Zero-Defect Philosophy"
+    echo "   - AC.90.02: Prevention-First Methodology" 
+    echo "   - AC.90.03: Consistency Pattern Library"
+    echo "   - AC.36.01: Technical Debt Elimination"
+    
+  during_task_quality_monitoring: |
+    # Continuous quality validation during Hugo development
+    echo "🔍 Quality Monitoring: Ensuring zero-defect site quality"
+    
+  post_task_quality_assessment: |
+    # Final quality compliance validation
+    echo "✅ Quality Assessment Complete: Zero defects in site development"
+```
+
+#### Hugo Site Quality Considerations
+
+**Hugo-Specific Quality Framework Application:**
+
+1. **Content Quality**: Zero tolerance for broken links, missing images, or malformed markdown
+2. **Performance Quality**: Optimal build times and fast page loading with proper optimization
+3. **Accessibility Quality**: Full compliance with WCAG guidelines and semantic HTML
+4. **SEO Quality**: Proper metadata, structured data, and search engine optimization
+5. **Visual Quality**: Consistent design, responsive layout, and cross-browser compatibility
+
+#### Memory Namespace Patterns for Quality Framework
+
+```bash
+# Quality framework coordination namespaces for Hugo site
+quality/hugo/zero-defect/*           # Zero-defect validation results
+quality/hugo/prevention-first/*      # Prevention-first methodology application
+quality/hugo/consistency/*           # Consistency pattern validation
+quality/hugo/technical-debt/*        # Technical debt elimination tracking
+quality/hugo/content-quality/*       # Content quality validation results
+quality/hugo/performance/*           # Performance optimization tracking
+```
+
 ### Agent Memory Coordination
 ```bash
 # Each agent uses unique coordination key
@@ -164,6 +224,168 @@ echo "🔄 Triggering knowledge base reindexing"
 3. **Cross-Reference Integrity**: 0 broken internal links
 4. **Duplication Rate**: <5% content similarity
 5. **Search Optimization**: >90% findability score
+
+## 🧬 MICRO NON-BREAKING CHANGES PROTOCOL
+
+### Critical Implementation Requirements
+
+**MANDATORY FOR ALL AGENTS**: All code changes MUST follow the strict micro-refactoring protocols to ensure system stability and rapid iteration cycles.
+
+#### The 3-Line Rule (ENFORCED)
+```yaml
+micro_refactoring_compliance:
+  max_lines_per_change: 3
+  max_total_lines_per_task: 50
+  test_after_each_change: required
+  rollback_on_failure: automatic
+  continuous_validation: true
+```
+
+#### Implementation Protocol
+
+**Phase 1: Task Decomposition**
+- Break ALL tasks into 3-line micro-changes
+- Plan maximum 50 lines total per complete task
+- Identify rollback points for each micro-step
+- Ensure each micro-change is independently testable
+
+**Phase 2: Micro-Change Execution** 
+```bash
+# Execute EVERY change as micro-step
+for micro_change in "${micro_changes[@]}"; do
+    # 1. Make 3-line change
+    apply_micro_change "$micro_change"
+    
+    # 2. Test immediately
+    if ! run_tests; then
+        echo "❌ ROLLBACK: Micro-change failed tests"
+        git checkout -- .
+        exit 1
+    fi
+    
+    # 3. Validate working state
+    verify_system_stability
+done
+```
+
+**Phase 3: Continuous Validation**
+- Test after EVERY 3-line change
+- Validate system remains in working state
+- Rollback immediately on any failure
+- Document successful micro-patterns
+
+#### Rollback Procedures
+
+**Immediate Rollback Triggers:**
+- Any test failure after micro-change
+- System instability detected
+- Build failure or compilation error
+- Performance degradation detected
+
+**Rollback Execution:**
+```bash
+# Automatic rollback protocol
+rollback_micro_change() {
+    echo "🔄 Rolling back failed micro-change..."
+    git checkout -- .
+    echo "✅ System restored to last working state"
+    validate_rollback_success
+}
+```
+
+#### Agent Integration Requirements
+
+**ALL AGENTS MUST:**
+1. **Plan in micro-steps**: Decompose tasks to 3-line changes
+2. **Execute incrementally**: Apply changes one micro-step at a time  
+3. **Test continuously**: Validate after each micro-change
+4. **Rollback immediately**: Revert on any failure
+5. **Document patterns**: Record successful micro-change patterns
+
+#### Handbook Compliance Integration
+
+**Core Handbook Principles (ENFORCED):**
+- **Always start fixing bugs with reproduction test**
+- **Avoid fallbacks - fail fast, do not hide errors**
+- **Do not override or monkey patch external dependencies**  
+- **Use always the simplest naive solutions (KISS, YAGNI)**
+- **After each new change check tests - rollback on fail**
+- **ENFORCE: Use TDD only for adding new behaviors; micro refactoring for refinement**
+- **Split work into smallest non-breaking tasks with intensive test verification**
+- **Guarantee working solution at any time**
+- **Prioritize radical KISS, YAGNI, Readability, Low Cognitive Load**
+
+#### Enforcement Mechanisms
+
+```bash
+# Hook integration for micro-change validation
+pre_change_validation() {
+    echo "🧬 Validating micro-change compliance..."
+    
+    # Check change size
+    local lines_changed=$(git diff --cached --numstat | awk '{sum+=$1+$2} END {print sum}')
+    if [[ $lines_changed -gt 3 ]]; then
+        echo "❌ BLOCKING: Change exceeds 3-line limit ($lines_changed lines)"
+        return 1
+    fi
+    
+    # Ensure tests exist and pass
+    if ! run_comprehensive_tests; then
+        echo "❌ BLOCKING: Tests must pass before micro-change"
+        return 1
+    fi
+}
+
+post_change_validation() {
+    echo "🔍 Validating micro-change success..."
+    
+    # Run tests immediately after change
+    if ! run_comprehensive_tests; then
+        echo "❌ ROLLBACK: Tests failed after micro-change"
+        git checkout -- .
+        return 1
+    fi
+    
+    echo "✅ Micro-change validated successfully"
+}
+```
+
+#### Verification Requirements
+
+**Mandatory Verification After Each Micro-Change:**
+
+1. **Immediate Test Validation**
+   ```bash
+   # Run after EVERY 3-line change
+   hugo build --verbose --dry-run  # Hugo build validation
+   npm test                        # Unit/integration tests
+   npm run lint                    # Code quality checks
+   ```
+
+2. **System Stability Verification**
+   ```bash
+   # Verify system remains in working state
+   hugo server --bind 0.0.0.0 --port 1313 &
+   sleep 5
+   curl -f http://localhost:1313/ || rollback_change
+   pkill hugo
+   ```
+
+3. **Performance Impact Validation**
+   ```bash
+   # Ensure no performance regression
+   build_time=$(time hugo build 2>&1 | grep real)
+   if [[ $build_time > baseline_time ]]; then
+       echo "❌ Performance regression detected"
+       rollback_change
+   fi
+   ```
+
+**Reverification Protocol:**
+- ALL agents MUST use paired validation (coder + reviewer)
+- Complex changes (>1 micro-step) REQUIRE reviewer agent verification
+- Critical changes (security, architecture) MANDATE paired validation
+- Simple changes (≤3 lines) MAY use single agent with post-completion validation
 
 ## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
 
@@ -341,6 +563,8 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 ### Core Development
 `coder`, `reviewer`, `tester`, `planner`, `researcher`
 
+**CRITICAL**: All agents MUST use generic names without project prefixes. Use `coordinator` NOT `jt-coordinator`.
+
 ### Swarm Coordination
 `hierarchical-coordinator`, `mesh-coordinator`, `adaptive-coordinator`, `collective-intelligence-coordinator`, `swarm-memory-manager`
 
@@ -443,6 +667,38 @@ claude mcp add claude-flow npx claude-flow@alpha mcp start
   Write "frontend/App.jsx"
   Write "database/schema.sql"
 ```
+
+## 🚀 Enhanced Agent Capabilities with Quality Framework
+
+### Cross-Agent Coordination Protocols
+
+**Enhanced agent coordination includes quality framework integration:**
+
+```yaml
+enhanced_agent_capabilities:
+  quality_framework_integration: true
+  zero_defect_methodology: required
+  prevention_first_coordination: true
+  consistency_pattern_enforcement: true
+  technical_debt_prevention: mandatory
+
+cross_agent_memory_patterns:
+  quality_validation_results: "quality/*/validation/*"
+  prevention_methodology_state: "quality/*/prevention/*" 
+  consistency_patterns: "quality/*/consistency/*"
+  debt_elimination_tracking: "quality/*/technical-debt/*"
+  content_quality_validation: "quality/*/content-quality/*"
+  performance_optimization: "quality/*/performance/*"
+```
+
+### Quality-Enhanced Agent Enhancement References
+
+**ALL Hugo site development agents MUST reference these enhanced capabilities:**
+
+- **Enhanced Quality-Driven Development**: Zero-defect philosophy integration for site quality
+- **Prevention-First Coordination**: Proactive quality issue prevention in content and code
+- **Consistency Pattern Validation**: Automated pattern compliance checking for site consistency
+- **Technical Debt Elimination**: Real-time debt detection and resolution in site architecture
 
 ## 📋 Agent Coordination Protocol
 
@@ -586,3 +842,6 @@ Never save working files, text/mds and tests to the root folder.
 - After each task spawn appropriate agent to run the whole test suite with `bin/dtest` to confirm there is no breaking changes have been introduced, by making all tests pass. If there are broken test request review and handling them!
 - if there are broken tests related to screenshots then need to manaully review appropriate diffs and evaluate them. if they are ok then commit them; if not request a fix!
 - prioritize to use claude-context for search through codebase over average search
+- verify tests after each change and request to rework on found issues
+- prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
+- spawn swarm: prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes

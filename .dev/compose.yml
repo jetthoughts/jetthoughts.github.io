@@ -12,8 +12,15 @@ x-backend: &backend
   environment:
     HISTFILE: /usr/local/hist/.bash_history
     IRB_HISTFILE: /usr/local/hist/.irb_history
+    HUGO_CACHEDIR: /tmp/hugo_cache
 
 services:
+  cache-init:
+    image: alpine:latest
+    volumes:
+      - hugo_cache:/tmp/hugo_cache
+    command: sh -c "chown -R 1000:1000 /tmp/hugo_cache && chmod -R 755 /tmp/hugo_cache"
+
   hugo: &hugo
     image: hugomods/hugo:exts-non-root-0.149.1
     stdin_open: true
@@ -23,7 +30,11 @@ services:
       - hugo_cache:/tmp/hugo_cache
     ports:
       - '1313:1313'
-    command: server --bind 0.0.0.0
+    command: hugo server --bind 0.0.0.0
+    environment:
+      - HUGO_CACHEDIR=/tmp/hugo_cache
+    depends_on:
+      - cache-init
 
   sh:
     <<: *backend
@@ -32,6 +43,10 @@ services:
   t-setup:
     <<: *hugo
     command: hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn
+    environment:
+      - HUGO_CACHEDIR=/tmp/hugo_cache
+    depends_on:
+      - cache-init
 
   t:
     <<: *backend

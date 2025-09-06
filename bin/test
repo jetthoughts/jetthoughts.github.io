@@ -1,9 +1,7 @@
 #!/usr/bin/env sh
 
 if [ -z "$1" ]; then
-  bin/rake test
+  bundle exec rake test
 else
-  # Behavior when arguments are provided: pass them to ruby
-  echo "Running tests for: $@" >&2
   bundle exec ruby -Itest "$@"
 fi
