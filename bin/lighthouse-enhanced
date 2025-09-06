@@ -1,0 +1,183 @@
+#!/usr/bin/env sh
+# Lighthouse Performance Benchmarking Script
+# Runs Lighthouse audits on critical pages with 90+ score validation
+
+set -e  # Exit on any error
+
+# Configuration
+BASE_URL="${LIGHTHOUSE_URL:-http://localhost:1313}"
+PAGES="${LIGHTHOUSE_PAGES:-/,/services/fractional-cto/,/clients/}"
+THRESHOLD="${LIGHTHOUSE_THRESHOLD:-90}"
+OUTPUT_DIR="lighthouse-results"
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Logging functions
+log_info() { echo -e "${GREEN}✓${NC} $1"; }
+log_warn() { echo -e "${YELLOW}⚠${NC} $1"; }
+log_error() { echo -e "${RED}✗${NC} $1"; }
+
+# Setup results directory
+setup_output_dir() {
+  mkdir -p "$OUTPUT_DIR"
+  log_info "Results directory: $OUTPUT_DIR"
+}
+
+# Check if server is running
+check_server() {
+  if ! curl -sf "$BASE_URL" > /dev/null 2>&1; then
+    log_error "Server not running at $BASE_URL"
+    log_info "Start server with: bin/dev"
+    exit 1
+  fi
+  log_info "Server confirmed at $BASE_URL"
+}
+
+# Run lighthouse for single URL
+run_lighthouse() {
+  local url="$1"
+  local page_name
+  page_name=$(echo "$url" | sed 's/[^a-zA-Z0-9]/_/g' | sed 's/^_//' | sed 's/_$//')
+  [ -z "$page_name" ] && page_name="home"
+  
+  local output_file="$OUTPUT_DIR/${page_name}.json"
+  
+  log_info "Testing: $url"
+  
+  # Run Lighthouse with optimized settings for CI
+  if npx lighthouse "$url" \
+    --output=json \
+    --output-path="$output_file" \
+    --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+    --quiet \
+    --only-categories=performance,accessibility,best-practices,seo > /dev/null 2>&1; then
+    
+    analyze_results "$output_file" "$url"
+  else
+    log_error "Lighthouse failed for $url"
+    return 1
+  fi
+}
+
+# Analyze results and check thresholds
+analyze_results() {
+  local json_file="$1"
+  local url="$2"
+  
+  if [ ! -f "$json_file" ]; then
+    log_error "Results file not found: $json_file"
+    return 1
+  fi
+  
+  # Extract scores using basic JSON parsing
+  local performance
+  local accessibility
+  local best_practices
+  local seo
+  
+  performance=$(grep -o '"performance":{"score":[0-9.]*' "$json_file" | sed 's/.*://' | head -1)
+  accessibility=$(grep -o '"accessibility":{"score":[0-9.]*' "$json_file" | sed 's/.*://' | head -1)
+  best_practices=$(grep -o '"best-practices":{"score":[0-9.]*' "$json_file" | sed 's/.*://' | head -1)
+  seo=$(grep -o '"seo":{"score":[0-9.]*' "$json_file" | sed 's/.*://' | head -1)
+  
+  # Convert to percentage
+  performance=$(echo "$performance * 100" | bc 2>/dev/null || echo "0")
+  accessibility=$(echo "$accessibility * 100" | bc 2>/dev/null || echo "0")
+  best_practices=$(echo "$best_practices * 100" | bc 2>/dev/null || echo "0")
+  seo=$(echo "$seo * 100" | bc 2>/dev/null || echo "0")
+  
+  # Round to integers
+  performance=${performance%.*}
+  accessibility=${accessibility%.*}
+  best_practices=${best_practices%.*}
+  seo=${seo%.*}
+  
+  echo "  Performance: ${performance}/100"
+  echo "  Accessibility: ${accessibility}/100"
+  echo "  Best Practices: ${best_practices}/100"
+  echo "  SEO: ${seo}/100"
+  
+  # Check thresholds
+  local failed=0
+  if [ "$performance" -lt "$THRESHOLD" ]; then
+    log_warn "Performance below threshold: $performance < $THRESHOLD"
+    failed=1
+  fi
+  if [ "$accessibility" -lt "$THRESHOLD" ]; then
+    log_warn "Accessibility below threshold: $accessibility < $THRESHOLD"
+    failed=1
+  fi
+  if [ "$best_practices" -lt "$THRESHOLD" ]; then
+    log_warn "Best Practices below threshold: $best_practices < $THRESHOLD"
+    failed=1
+  fi
+  if [ "$seo" -lt "$THRESHOLD" ]; then
+    log_warn "SEO below threshold: $seo < $THRESHOLD"
+    failed=1
+  fi
+  
+  if [ "$failed" -eq 0 ]; then
+    log_info "All scores above $THRESHOLD threshold ✓"
+  fi
+  
+  return $failed
+}
+
+# Generate summary report
+generate_summary() {
+  local total_pages="$1"
+  local failed_pages="$2"
+  
+  echo ""
+  echo "=== Lighthouse Benchmark Summary ==="
+  echo "Threshold: $THRESHOLD"
+  echo "Pages tested: $total_pages"
+  echo "Pages failed: $failed_pages"
+  echo "Success rate: $(echo "scale=1; ($total_pages - $failed_pages) * 100 / $total_pages" | bc)%"
+  echo ""
+  
+  if [ "$failed_pages" -eq 0 ]; then
+    log_info "All pages meet performance standards!"
+  else
+    log_error "$failed_pages pages below performance threshold"
+    echo "Check individual results in: $OUTPUT_DIR/"
+    return 1
+  fi
+}
+
+# Main execution
+main() {
+  echo "🔍 Lighthouse Performance Benchmark"
+  echo "Threshold: $THRESHOLD+"
+  echo ""
+  
+  setup_output_dir
+  check_server
+  
+  local total_pages=0
+  local failed_pages=0
+  
+  # Convert comma-separated pages to array-like iteration
+  IFS=',' read -ra PAGE_ARRAY <<< "$PAGES"
+  
+  for page in "${PAGE_ARRAY[@]}"; do
+    page=$(echo "$page" | sed 's/^[ \t]*//;s/[ \t]*$//')  # Trim whitespace
+    total_pages=$((total_pages + 1))
+    
+    if ! run_lighthouse "${BASE_URL}${page}"; then
+      failed_pages=$((failed_pages + 1))
+    fi
+    echo ""
+  done
+  
+  generate_summary "$total_pages" "$failed_pages"
+}
+
+# Execute if run directly
+if [ "${BASH_SOURCE[0]}" = "${0}" ] || [ -z "${BASH_SOURCE[0]}" ]; then
+  main "$@"
+fi
