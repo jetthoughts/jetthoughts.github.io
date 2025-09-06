@@ -293,9 +293,6 @@ email = "entry.939459641"
   [caches.modules]
     dir = ":cacheDir"
     maxAge = "24h"
-  [caches.templates]
-    dir = ":cacheDir"
-    maxAge = "24h"
   [caches.assets]
     dir = ":cacheDir"
     maxAge = "24h"
@@ -306,5 +303,11 @@ email = "entry.939459641"
     dir = ":cacheDir"
     maxAge = "24h"
   [caches.images]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.getcsv]
+    dir = ":cacheDir"
+    maxAge = "24h"
+  [caches.misc]
     dir = ":cacheDir"
     maxAge = "24h"

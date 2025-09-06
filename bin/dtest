@@ -2,5 +2,6 @@
 
 set -e
 
-bin/build --destination public-test --baseURL http://localhost:1314
+rm -rf public-test
+bin/docked hugo --destination public-test --baseURL http://localhost:1314 --environment production
 bin/docked t "$@"
