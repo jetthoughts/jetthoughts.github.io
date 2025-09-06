@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+hugo server --config hugo.toml,hugo.dev.toml --templateMetrics --templateMetricsHints --printPathWarnings --printUnusedTemplates --logLevel debug "$@"
+echo "Debug development server with enhanced error reporting started"

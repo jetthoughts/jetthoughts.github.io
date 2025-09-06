@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+hugo server --config hugo.toml,hugo.dev.toml --bind 0.0.0.0 --port 1313 --environment development --renderToMemory --logLevel info --noHTTPCache "$@"
+echo "Fast development server started at http://localhost:1313"
