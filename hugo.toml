@@ -43,7 +43,7 @@ useResourceCacheWhen = "always"
   anchor = "smart"
 
 [minify]
-  minifyOutput = false
+  minifyOutput = true
 
 [[redirects]]
   from = "/tags/:slug/"

@@ -85,8 +85,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Clients"
     end
 
-    sleep 1
-
+    assert_selector("h1", text: "Real people. Real experiences", wait: 3)
     assert_stable_screenshot "clients"
   end
 
@@ -126,8 +125,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       find("a", text: "Services", visible: true, wait: 5).hover
     end
 
-    sleep 1
-
+    assert_selector(".sub-menu", visible: true, wait: 2)
     assert_quick_screenshot "nav/services"
   end
 
@@ -160,8 +158,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       find("a", text: "Use Cases", visible: true, wait: 5).hover
     end
 
-    sleep 1
-
+    assert_selector(".sub-menu", visible: true, wait: 2)
     assert_quick_screenshot "nav/use_cases"
   end
 

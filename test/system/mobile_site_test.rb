@@ -122,6 +122,6 @@ class MobileSiteTest < ApplicationSystemTestCase
   def preload_all_images
     scroll_to :bottom
     scroll_to :top
-    sleep 2
+    ScreenshotPreparation.wait_for_assets_to_load(page, timeout: 3)
   end
 end
