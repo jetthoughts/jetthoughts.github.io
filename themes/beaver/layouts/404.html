@@ -1,7 +1,7 @@
 {{ define "header" }}
 {{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $CSS := slice $dynamicCSS (resources.Get "css/404.css") (resources.Get "css/base-4.min.css") (resources.Get "css/skin-65eda28877e04.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/footer.css") | resources.Concat "css/single/404.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+{{- $CSS := slice $dynamicCSS (resources.Get "css/404.css") (resources.Get "css/base-layout.css") (resources.Get "css/theme-main.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/mobile-fixes.css") (resources.Get "css/footer.css") | resources.Concat "css/single/404.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 {{ define "main" }}

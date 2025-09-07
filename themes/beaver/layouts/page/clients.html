@@ -2,7 +2,7 @@
 {{ partial "header/critical/clients.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 
-{{- $CSS := slice (resources.Get "css/3082-layout.css") (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") | resources.Concat "css/clients.css" | postCSS  | minify | fingerprint | resources.PostProcess }}
+{{- $CSS := slice (resources.Get "css/3082-layout.css") (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") | resources.Concat "css/clients.css" | postCSS  | minify | fingerprint | resources.PostProcess }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
@@ -133,4 +133,3 @@
 </div>
 
 {{ end }}
-
