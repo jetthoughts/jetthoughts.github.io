@@ -3,5 +3,5 @@
 set -e
 
 rm -rf public-test || true
-bin/docked hugo --destination public-test --baseURL http://localhost:1314 --environment production
+bin/docked hugo --destination public-test --baseURL http://localhost:1314 --environment production --forceSyncStatic --logLevel warn
 bin/docked t "$@"

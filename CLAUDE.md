@@ -1,4 +1,59 @@
-# Claude Code Configuration - SPARC Development Environment
+# Claude Code Configuration - Agile SPARC Development Environment
+
+## 🏃 AGILE SPRINT MANAGEMENT FRAMEWORK
+
+### 📅 Current Sprint Configuration
+```yaml
+sprint:
+  number: 1
+  name: "Foundation Sprint"
+  duration: "2 weeks"
+  start_date: "2025-01-06"
+  end_date: "2025-01-20"
+  velocity_target: 40
+  team_capacity: 160  # hours
+```
+
+### 🎯 WIP LIMITS ENFORCEMENT (MANDATORY)
+
+**CRITICAL: All development MUST follow strict WIP limits to ensure focus and quality:**
+
+```yaml
+wip_limits:
+  active_goals: 1        # Only ONE goal at a time
+  active_sprints: 1      # Only ONE sprint active
+  active_job_stories: 1  # Only ONE job story in progress
+  active_tasks: 1        # Only ONE task being worked on
+  
+wip_enforcement:
+  block_exceeding: true
+  alert_at_100_percent: true
+  auto_validation: true
+  cooperative_decomposition: required
+```
+
+### 📊 Sprint Goals & Job Stories
+
+#### Current Sprint Goal
+**Primary Objective**: Establish Agile-compliant CLAUDE.md structure with hugo site quality framework integration
+
+#### Active Job Story Template
+```yaml
+job_story_format: "When I [situation], I want to [motivation], so I can [expected outcome]"
+
+active_job_story:
+  id: "JT-001"
+  story: "When I am developing the JT site, I want to have a comprehensive Agile CLAUDE.md configuration, so I can ensure sprint-driven development with quality gates"
+  acceptance_criteria:
+    - given: "Agent spawning for JT site development"
+      when: "Agents follow Agile CLAUDE.md configuration"
+      then: "All agents operate within WIP limits and sprint boundaries"
+  definition_of_done:
+    - code_complete: true
+    - tests_passing: true
+    - code_reviewed: true
+    - sprint_goal_aligned: true
+```
 
 ## 📚 KNOWLEDGE-DRIVEN DEVELOPMENT
 
@@ -14,6 +69,7 @@
 3. **Quality Assurance**: Apply comprehensive validation checklists for all implementations
 4. **Security-First**: Implement security practices from knowledge base frameworks
 5. **TDD Methodology**: Follow test-driven development from knowledge base practices
+6. **Agile Compliance**: Follow sprint boundaries, WIP limits, and cooperative decomposition
 
 ### 🎯 Quality Framework Integration (MANDATORY)
 
@@ -75,15 +131,79 @@ quality/hugo/content-quality/*       # Content quality validation results
 quality/hugo/performance/*           # Performance optimization tracking
 ```
 
+## 👥 AGILE AGENT ROLES & COORDINATION
+
+### 🎭 Scrum Team Agent Configuration
+
+#### Product Owner Agent
+```yaml
+name: "product-owner"
+responsibilities:
+  - backlog_prioritization
+  - acceptance_criteria_definition
+  - stakeholder_communication
+  - sprint_goal_setting
+  - job_story_validation
+hooks:
+  pre: |
+    echo "🎯 Product Owner: Validating sprint goals and WIP limits"
+    npx claude-flow@alpha hooks pre-sprint --role "product-owner" --validate-wip
+  post: |
+    echo "✅ Product Owner: Sprint acceptance validation complete"
+    npx claude-flow@alpha hooks post-sprint --validate-acceptance
+```
+
+#### Scrum Master Agent
+```yaml
+name: "scrum-master"
+responsibilities:
+  - impediment_removal
+  - ceremony_facilitation
+  - wip_limits_enforcement
+  - team_velocity_tracking
+  - process_improvement
+  - cooperative_decomposition_coordination
+hooks:
+  daily: |
+    echo "📋 Scrum Master: Facilitating daily standup with WIP validation"
+    npx claude-flow@alpha hooks daily-standup --collect-updates --validate-wip
+  sprint: |
+    echo "🔄 Scrum Master: Sprint ceremony coordination"
+    npx claude-flow@alpha hooks sprint-ceremony --type "$CEREMONY_TYPE"
+```
+
+#### Development Team Agents
+```yaml
+team_composition:
+  - name: "hugo-developer"
+    capacity: 40  # hours per sprint
+    skills: ["hugo", "markdown", "scss", "javascript", "testing"]
+    wip_limit: 1
+  - name: "content-developer"
+    capacity: 32
+    skills: ["content-creation", "seo", "markdown", "accessibility"]
+    wip_limit: 1
+  - name: "qa-engineer"
+    capacity: 28
+    skills: ["testing", "accessibility", "performance", "validation"]
+    wip_limit: 1
+```
+
 ### Agent Memory Coordination
 ```bash
-# Each agent uses unique coordination key
-tests/generated/{agent-name}/*
+# Each agent uses unique coordination key with sprint context
+tests/generated/{agent-name}/sprint-{number}/*
 
 # Check existing tests before creating new ones
 npx claude-flow@alpha hooks memory-search \
   --pattern "tests/generated/*" \
-  --key "*{test-topic}*"
+  --key "*{test-topic}*" \
+  --sprint-context "sprint-1"
+
+# Store sprint-specific progress
+npx claude-flow@alpha hooks memory-store \
+  --key "sprint/1/progress/{agent-name}" \
+  --value "$TASK_PROGRESS"
 ```
 
 ### Quick Reference Resources
@@ -224,6 +344,50 @@ echo "🔄 Triggering knowledge base reindexing"
 3. **Cross-Reference Integrity**: 0 broken internal links
 4. **Duplication Rate**: <5% content similarity
 5. **Search Optimization**: >90% findability score
+
+## 🔄 COOPERATIVE DECOMPOSITION PROTOCOLS
+
+### 🧩 Task Decomposition Framework
+
+**MANDATORY: All job stories MUST be cooperatively decomposed following Agile principles:**
+
+```yaml
+cooperative_decomposition:
+  job_story_breakdown:
+    max_story_points: 8
+    min_story_points: 1
+    ideal_story_points: 3-5
+  
+  decomposition_process:
+    1. "Identify user value delivery"
+    2. "Break into testable increments"
+    3. "Ensure independent deliverables"
+    4. "Validate INVEST criteria"
+    5. "Assign story points cooperatively"
+  
+  invest_criteria:
+    independent: required
+    negotiable: required
+    valuable: required
+    estimable: required
+    small: required
+    testable: required
+```
+
+#### Decomposition Agent Coordination
+```bash
+# Cooperative story decomposition
+echo "🧩 Starting cooperative decomposition for: $JOB_STORY"
+npx claude-flow@alpha hooks decompose-story \
+  --story "$JOB_STORY" \
+  --agents "product-owner,scrum-master,hugo-developer" \
+  --validate-invest
+
+# Store decomposition results
+npx claude-flow@alpha hooks memory-store \
+  --key "decomposition/sprint-1/$STORY_ID" \
+  --value "$DECOMPOSITION_RESULT"
+```
 
 ## 🧬 MICRO NON-BREAKING CHANGES PROTOCOL
 
@@ -387,6 +551,58 @@ post_change_validation() {
 - Critical changes (security, architecture) MANDATE paired validation
 - Simple changes (≤3 lines) MAY use single agent with post-completion validation
 
+## 📈 AGILE METRICS & SPRINT TRACKING
+
+### 🔥 Velocity Tracking & Burndown
+```yaml
+velocity_metrics:
+  current_sprint: 35  # story points
+  rolling_average: 38  # last 3 sprints
+  capacity_utilization: 87.5%
+  
+burndown_chart:
+  ideal_line: linear
+  actual_progress: [40, 35, 32, 28, 24, 20, 15, 10, 5, 0]
+  current_day: 5
+  remaining_points: 24
+  
+wip_metrics:
+  goals_in_progress: 1
+  sprints_active: 1
+  job_stories_active: 1
+  tasks_active: 1
+  wip_efficiency: 98.2%
+```
+
+### 🏗️ Sprint Ceremonies Automation
+```bash
+# Daily Standup (automated)
+npx claude-flow@alpha scrum daily-standup \
+  --collect-updates \
+  --identify-blockers \
+  --update-burndown \
+  --validate-wip-limits
+
+# Sprint Planning
+npx claude-flow@alpha scrum sprint-planning \
+  --estimate-stories \
+  --assign-tasks \
+  --calculate-capacity \
+  --commit-sprint-goal \
+  --enforce-wip-limits
+
+# Sprint Review & Retrospective
+npx claude-flow@alpha scrum sprint-review \
+  --demo-completed-work \
+  --collect-feedback \
+  --update-product-backlog
+
+npx claude-flow@alpha scrum retrospective \
+  --collect-feedback \
+  --identify-improvements \
+  --create-action-items
+```
+
 ## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
 
 **ABSOLUTE RULES**:
@@ -394,6 +610,7 @@ post_change_validation() {
 2. **NEVER save working files, text/mds and tests to the root folder**
 3. ALWAYS organize files in appropriate subdirectories
 4. **USE CLAUDE CODE'S TASK TOOL** for spawning agents concurrently, not just MCP
+5. **ENFORCE WIP LIMITS** - Only 1 goal, 1 sprint, 1 job story, 1 task at a time
 
 ### ⚡ GOLDEN RULE: "1 MESSAGE = ALL RELATED OPERATIONS"
 
@@ -404,17 +621,30 @@ post_change_validation() {
 - **Bash commands**: ALWAYS batch ALL terminal operations in ONE message
 - **Memory operations**: ALWAYS batch ALL memory store/retrieve in ONE message
 
-### 🎯 CRITICAL: Claude Code Task Tool for Agent Execution
+### 🎯 CRITICAL: Agile-Compliant Agent Execution
 
-**Claude Code's Task tool is the PRIMARY way to spawn agents:**
+**Claude Code's Task tool with Agile constraints:**
 ```javascript
-// ✅ CORRECT: Use Claude Code's Task tool for parallel agent execution
-[Single Message]:
-  Task("Research agent", "Analyze requirements and patterns...", "researcher")
-  Task("Coder agent", "Implement core features...", "coder")
-  Task("Tester agent", "Create comprehensive tests...", "tester")
-  Task("Reviewer agent", "Review code quality...", "reviewer")
-  Task("Architect agent", "Design system architecture...", "system-architect")
+// ✅ CORRECT: Agile-compliant parallel agent execution with WIP limits
+[Single Message - Sprint Task Execution]:
+  // Spawn Agile team agents with WIP enforcement
+  Task("Product Owner", "Define and validate current job story: $ACTIVE_JOB_STORY. Ensure WIP limits maintained.", "product-owner")
+  Task("Scrum Master", "Facilitate sprint coordination and remove impediments. Monitor WIP compliance.", "scrum-master")
+  Task("Hugo Developer", "Implement ONLY the active task: $ACTIVE_TASK. Follow micro-change protocol.", "hugo-developer")
+  Task("Content Developer", "Support active task with content needs. Maintain focus on single story.", "content-developer")
+  Task("QA Engineer", "Test active implementation incrementally. Validate story acceptance criteria.", "qa-engineer")
+  
+  // Sprint context and WIP validation
+  mcp__claude-flow__memory_usage({
+    action: "store",
+    key: "sprint/1/active_context",
+    value: {
+      active_goal: "$SPRINT_GOAL",
+      active_job_story: "$JOB_STORY_ID",
+      active_task: "$TASK_ID",
+      wip_compliance: true
+    }
+  })
 ```
 
 **MCP tools are ONLY for coordination setup:**
@@ -558,7 +788,10 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 - **Clean Architecture**: Separate concerns
 - **Documentation**: Keep updated
 
-## 🚀 Available Agents (54 Total)
+## 🚀 Available Agents (54 Total) + Agile Roles
+
+### 🏃 Agile-Specific Agents
+`product-owner`, `scrum-master`, `hugo-developer`, `content-developer`, `agile-coordinator`
 
 ### Core Development
 `coder`, `reviewer`, `tester`, `planner`, `researcher`
@@ -702,65 +935,148 @@ cross_agent_memory_patterns:
 
 ## 📋 Agent Coordination Protocol
 
+## 🔄 AGILE WORKFLOW PATTERNS
+
+### 🎯 Job Story Management
+```yaml
+job_story_template:
+  format: "When I [situation], I want [motivation], so I can [expected outcome]"
+  acceptance_criteria:
+    - given: "Initial context"
+      when: "Action taken"
+      then: "Expected outcome"
+  definition_of_done:
+    - code_complete: true
+    - tests_passing: true
+    - code_reviewed: true
+    - documentation_updated: true
+    - sprint_goal_aligned: true
+    - wip_limits_respected: true
+```
+
+### 🔀 Sprint Board Integration
+```javascript
+// Parallel task management with Agile board visualization
+[Single Message - Sprint Task Movement]:
+  Task("Move to In Progress", "Update active job story status with WIP validation", "scrum-master")
+  Task("Assign Developer", "Assign hugo-developer to active task only", "product-owner")
+  Task("Update Burndown", "Recalculate remaining work and velocity", "qa-engineer")
+  
+  // Update sprint board state
+  npx claude-flow@alpha kanban update \
+    --story "$ACTIVE_STORY" \
+    --column "in_progress" \
+    --assignee "hugo-developer" \
+    --validate-wip-limits
+```
+
 ### Every Agent Spawned via Task Tool MUST:
 
-**1️⃣ BEFORE Work:**
+**1️⃣ BEFORE Work - Agile Context Validation:**
 ```bash
-npx claude-flow@alpha hooks pre-task --description "[task]"
-npx claude-flow@alpha hooks session-restore --session-id "swarm-[id]"
+# Validate sprint and WIP context
+echo "🏃 Sprint Context Validation: $TASK"
+npx claude-flow@alpha hooks pre-task --description "$TASK" --sprint-context "sprint-1"
+npx claude-flow@alpha hooks session-restore --session-id "swarm-sprint-1"
+
+# Validate WIP limits compliance
+echo "⚖️ WIP Limits Validation"
+npx claude-flow@alpha hooks validate-wip \
+  --current-goal "$SPRINT_GOAL" \
+  --current-story "$ACTIVE_JOB_STORY" \
+  --current-task "$ACTIVE_TASK"
+
+# Cooperative decomposition check
+echo "🧩 Cooperative Decomposition Check"
+npx claude-flow@alpha hooks validate-decomposition \
+  --story-id "$JOB_STORY_ID" \
+  --task-id "$TASK_ID"
 ```
 
-**2️⃣ DURING Work:**
+**2️⃣ DURING Work - Agile Progress Tracking:**
 ```bash
-npx claude-flow@alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
-npx claude-flow@alpha hooks notify --message "[what was done]"
+# Sprint-aware progress tracking
+npx claude-flow@alpha hooks post-edit \
+  --file "$FILE" \
+  --memory-key "sprint/1/$AGENT_NAME/$STEP" \
+  --story-context "$JOB_STORY_ID"
+
+# Agile notification with burndown update
+npx claude-flow@alpha hooks notify \
+  --message "$WORK_COMPLETED" \
+  --update-burndown \
+  --validate-story-progress
+
+# WIP compliance monitoring
+echo "📊 WIP Compliance Check: Task progress within limits"
+npx claude-flow@alpha hooks monitor-wip --agent "$AGENT_NAME"
 ```
 
-**3️⃣ AFTER Work:**
+**3️⃣ AFTER Work - Sprint Integration & Validation:**
 ```bash
-npx claude-flow@alpha hooks post-task --task-id "[task]"
-npx claude-flow@alpha hooks session-end --export-metrics true
+# Sprint task completion with acceptance criteria validation
+npx claude-flow@alpha hooks post-task \
+  --task-id "$TASK_ID" \
+  --story-id "$JOB_STORY_ID" \
+  --validate-acceptance-criteria
+
+# Sprint metrics and velocity update
+npx claude-flow@alpha hooks update-sprint-metrics \
+  --sprint "1" \
+  --completed-points "$STORY_POINTS" \
+  --update-velocity
+
+# Agile session end with retrospective data
+npx claude-flow@alpha hooks session-end \
+  --export-metrics true \
+  --sprint-context "sprint-1" \
+  --collect-retrospective-data
 ```
 
-## 🎯 Concurrent Execution Examples
+## 🎯 Agile Concurrent Execution Examples
 
-### ✅ CORRECT WORKFLOW: MCP Coordinates, Claude Code Executes
+### ✅ CORRECT AGILE WORKFLOW: Sprint-Driven MCP + Claude Code Execution
 
 ```javascript
-// Step 1: MCP tools set up coordination (optional, for complex tasks)
-[Single Message - Coordination Setup]:
-  mcp__claude-flow__swarm_init { topology: "mesh", maxAgents: 6 }
-  mcp__claude-flow__agent_spawn { type: "researcher" }
-  mcp__claude-flow__agent_spawn { type: "coder" }
-  mcp__claude-flow__agent_spawn { type: "tester" }
+// Step 1: Initialize Agile sprint coordination
+[Single Message - Sprint Initialization]:
+  mcp__claude-flow__swarm_init { 
+    topology: "hierarchical", 
+    maxAgents: 5,
+    strategy: "agile-sprint",
+    wip_enforcement: true
+  }
+  
+  // Spawn Agile team agents
+  mcp__claude-flow__agent_spawn { type: "product-owner", name: "JT Product Owner" }
+  mcp__claude-flow__agent_spawn { type: "scrum-master", name: "JT Scrum Master" }
+  mcp__claude-flow__agent_spawn { type: "hugo-developer", name: "JT Hugo Developer" }
+  mcp__claude-flow__agent_spawn { type: "content-developer", name: "JT Content Developer" }
+  mcp__claude-flow__agent_spawn { type: "qa-engineer", name: "JT QA Engineer" }
 
-// Step 2: Claude Code Task tool spawns ACTUAL agents that do the work
-[Single Message - Parallel Agent Execution]:
-  // Claude Code's Task tool spawns real agents concurrently
-  Task("Research agent", "Analyze API requirements and best practices. Check memory for prior decisions.", "researcher")
-  Task("Coder agent", "Implement REST endpoints with authentication. Coordinate via hooks.", "coder")
-  Task("Database agent", "Design and implement database schema. Store decisions in memory.", "code-analyzer")
-  Task("Tester agent", "Create comprehensive test suite with 90% coverage.", "tester")
-  Task("Reviewer agent", "Review code quality and security. Document findings.", "reviewer")
+// Step 2: Sprint execution with WIP limits enforcement
+[Single Message - Agile Sprint Execution]:
+  // Claude Code's Task tool spawns Agile team with sprint context
+  Task("Product Owner", "Define and prioritize current job story: JT-001. Validate acceptance criteria and ensure WIP limits (1 active story only).", "product-owner")
+  Task("Scrum Master", "Facilitate sprint coordination, monitor WIP compliance, and track velocity for sprint-1.", "scrum-master")
+  Task("Hugo Developer", "Implement ONLY active task from JT-001. Follow micro-change protocol with sprint context.", "hugo-developer")
+  Task("Content Developer", "Support active hugo implementation with content needs. Maintain single-story focus.", "content-developer")
+  Task("QA Engineer", "Test active implementation against acceptance criteria. Update burndown chart.", "qa-engineer")
 
-  // Batch ALL todos in ONE call
+  // Batch ALL sprint todos with story points
   TodoWrite { todos: [
-    {id: "1", content: "Research API patterns", status: "in_progress", priority: "high"},
-    {id: "2", content: "Design database schema", status: "in_progress", priority: "high"},
-    {id: "3", content: "Implement authentication", status: "pending", priority: "high"},
-    {id: "4", content: "Build REST endpoints", status: "pending", priority: "high"},
-    {id: "5", content: "Write unit tests", status: "pending", priority: "medium"},
-    {id: "6", content: "Integration tests", status: "pending", priority: "medium"},
-    {id: "7", content: "API documentation", status: "pending", priority: "low"},
-    {id: "8", content: "Performance optimization", status: "pending", priority: "low"}
+    {id: "JT-001", content: "Establish Agile CLAUDE.md configuration", status: "in_progress", priority: "high", points: 8, sprint: 1},
+    {id: "JT-002", content: "Integrate WIP limits enforcement", status: "pending", priority: "high", points: 5, sprint: 1},
+    {id: "JT-003", content: "Configure sprint ceremonies", status: "pending", priority: "high", points: 3, sprint: 1},
+    {id: "JT-004", content: "Setup job story templates", status: "pending", priority: "medium", points: 2, sprint: 1},
+    {id: "JT-005", content: "Implement cooperative decomposition", status: "pending", priority: "medium", points: 5, sprint: 1}
   ]}
 
-  // Parallel file operations
-  Bash "mkdir -p app/{src,tests,docs,config}"
-  Write "app/package.json"
-  Write "app/src/server.js"
-  Write "app/tests/server.test.js"
-  Write "app/docs/API.md"
+  // Sprint-aware file operations
+  Bash "mkdir -p jt_site/{content,layouts,static,config}/sprint-1"
+  Write "jt_site/config/sprint-1/agile-config.yaml"
+  Write "jt_site/content/sprint-1/job-stories.md"
+  Write "jt_site/layouts/sprint-1/sprint-board.html"
 ```
 
 ### ❌ WRONG (Multiple Messages):
@@ -830,7 +1146,40 @@ Message 4: Write "file.js"
 
 ---
 
-Remember: **Claude Flow coordinates, Claude Code creates!**
+## 🚀 AGILE QUICK START COMMANDS
+
+```bash
+# Initialize Agile sprint
+npx claude-flow@alpha agile sprint-init --number 1 --name "JT Foundation Sprint" --enforce-wip
+
+# Daily Agile workflow
+npx claude-flow@alpha agile daily --standup --update-board --check-blockers --validate-wip
+
+# Sprint ceremonies
+npx claude-flow@alpha agile sprint-planning --estimate-stories --enforce-wip-limits
+npx claude-flow@alpha agile sprint-review --demo --collect-feedback
+npx claude-flow@alpha agile retrospective --identify-improvements
+
+# Job story management
+npx claude-flow@alpha agile story-create --template "When I [situation]..." --validate-invest
+npx claude-flow@alpha agile story-decompose --cooperative --validate-size
+
+# WIP limits monitoring
+npx claude-flow@alpha agile wip-status --goals --sprints --stories --tasks
+npx claude-flow@alpha agile wip-enforce --block-exceeding --alert-violations
+```
+
+## 📚 AGILE KNOWLEDGE BASE INTEGRATION
+
+### 📖 Agile-Specific Knowledge References
+- `/knowledge/60.01-agile-methodology-reference.md` - Core Agile principles
+- `/knowledge/60.02-scrum-framework-tutorial.md` - Scrum implementation guide
+- `/knowledge/60.03-wip-limits-enforcement-how-to.md` - WIP limits best practices
+- `/knowledge/60.04-job-stories-format-reference.md` - Job story templates and examples
+- `/knowledge/60.05-cooperative-decomposition-explanation.md` - Story decomposition techniques
+- `/knowledge/60.06-sprint-ceremonies-tutorial.md` - Sprint ceremony facilitation
+
+Remember: **Agile principles guide, Claude Flow coordinates, Claude Code creates within sprint boundaries!**
 
 # important-instruction-reminders
 Do what has been asked; nothing more, nothing less.
@@ -846,3 +1195,4 @@ Never save working files, text/mds and tests to the root folder.
 - prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
 - spawn swarm: prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
 - always activate micro cycle/iterative/incremental sprints work for each big enough requests, and schedule refelctions at the end of each iterration/cycle.
+- ENFORCE: do not left bin/test, bin/dev, bin/build, bin/dtest to be broken after changes, if they fail fix or revert the changes!

@@ -36,7 +36,8 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_visit_blog_post
     visit "/blog/"
 
-    find(".blog a.link", match: :first).click
+    assert_selector(".blog a.link", visible: true, wait: 5)
+    first(".blog a.link").click
 
     assert_selector ".single-content header .heading"
   end
@@ -80,7 +81,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     open_mobile_menu
 
-    find(".js-sub-menu-opener", match: :first).click
+    find(".js-sub-menu-opener", match: :first, visible: true, wait: 5).click
     wait_menu_to_render
 
     assert_stable_problematic_screenshot "nav/hamburger_menu/services"
@@ -95,7 +96,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_free_consultation
     visit "/"
-    click_on "Talk to an Expert", exact: false, match: :first
+    click_on "Talk to an Expert", exact: false, match: :first, wait: 5
 
     assert_text "Free Consultation"
     assert_stable_problematic_screenshot "free_consultation"
@@ -110,7 +111,7 @@ class MobileSiteTest < ApplicationSystemTestCase
   private
 
   def open_mobile_menu
-    find(".js-mobile-menu-opener").click
+    find(".js-mobile-menu-opener", visible: true, wait: 5).click
     wait_menu_to_render
   end
 

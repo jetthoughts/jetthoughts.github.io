@@ -59,7 +59,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
     within_top_bar { click_on "Blog" }
 
     within(".fl-heading") { assert_text "Blog" }
-    find(".blog a.link", match: :first).click
+    assert_selector(".blog a.link", visible: true, wait: 5)
+    first(".blog a.link").click
   end
 
   def test_blog_post
@@ -122,7 +123,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/"
 
     within_top_bar do
-      find("a", text: "Services").hover
+      find("a", text: "Services", visible: true, wait: 5).hover
     end
 
     sleep 1
@@ -134,7 +135,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/"
 
     within_top_bar do
-      find("a", text: "Services").hover
+      find("a", text: "Services", visible: true, wait: 5).hover
       click_on "Fractional CTO"
     end
 
@@ -145,7 +146,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/"
 
     within_top_bar do
-      find("a", text: "Services").hover
+      find("a", text: "Services", visible: true, wait: 5).hover
       click_on "App/Web Development"
     end
 
@@ -156,7 +157,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/"
 
     within_top_bar do
-      find("a", text: "Use Cases").hover
+      find("a", text: "Use Cases", visible: true, wait: 5).hover
     end
 
     sleep 1
@@ -166,7 +167,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_contact_us
     visit "/"
-    click_on "Contact Us", exact: false, match: :first
+    click_on "Contact Us", exact: false, match: :first, wait: 5
 
     assert_text "Let’s get started now"
     assert_stable_problematic_screenshot "contact_us"
@@ -175,7 +176,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_free_consultation
     visit "/"
 
-    click_on "Talk to an Expert", exact: false, match: :first
+    click_on "Talk to an Expert", exact: false, match: :first, wait: 5
 
     assert_text "Free Consultation"
     assert_stable_problematic_screenshot "free_consultation"

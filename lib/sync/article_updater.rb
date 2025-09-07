@@ -1,6 +1,5 @@
 require "fileutils"
 require "yaml"
-require "tqdm"
 
 require "sync/logging"
 require "sync/retryable"
@@ -26,7 +25,9 @@ module Sync
     end
 
     def download_articles
-      articles_to_sync.with_progress(desc: "Download Articles").each do |id, status|
+      articles_list = articles_to_sync
+      logger.info "Download Articles: processing #{articles_list.size} articles"
+      articles_list.each do |id, status|
         with_error_handling(id) do
           process_article(id, status)
         end

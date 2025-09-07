@@ -68,3 +68,5 @@ tmp/
 hive/
 swarm/
 validation-build/
+public*test/
+lighthouse-*/

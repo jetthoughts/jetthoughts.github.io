@@ -107,32 +107,6 @@ img {
   height: auto
 }
 
-.fl-screen-reader-text {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden
-}
-
-.fl-screen-reader-text:focus {
-  position: static;
-  width: auto;
-  height: auto
-}
-
-body.rtl .fl-screen-reader-text {
-  right: -10000px
-}
-
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  overflow: hidden
-}
 
 .container {
   padding-left: 20px;
