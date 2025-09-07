@@ -1,8 +1,7 @@
 {{ define "header" }}
 {{ partial "header/critical/clients.html" . }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-
-{{- $CSS := slice (resources.Get "css/3082-layout.css") (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") | resources.Concat "css/clients.css" | postCSS  | minify | fingerprint | resources.PostProcess }}
+{{- $staticClientsCSS := slice (resources.Get "css/3082-layout.css") (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
+{{- $CSS := union $staticClientsCSS (slice (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)) | resources.Concat "css/clients.css" | postCSS  | minify | fingerprint | resources.PostProcess }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
@@ -44,13 +43,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    {{ $allClientsGrid := partialCached "clients/all-clients-grid.html" . "all-clients" }}
                                                     <div id="clients" class="fl-module fl-module-pp-content-grid fl-node-z9jw2gxm5ev0 fl-visible-desktop fl-visible-large fl-visible-medium fl-visible-mobile jt-clickable" data-node="z9jw2gxm5ev0">
                                                         <div class="fl-module-content fl-node-content">
                                                             <div class="pp-posts-wrapper">
                                                                 <div class="pp-content-posts" style="--items-count: 6;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
                                                                     <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
 
-                                                                        {{ partialCached "clients/all-clients-grid.html" . "all-clients" }}
+                                                                        {{ $allClientsGrid }}
 
                                                                     </div>
                                                                     <div class="fl-clear"></div>
@@ -67,7 +67,7 @@
                                                                  <div class="pp-content-post-carousel pp-equal-height clearfix" itemscope="itemscope" itemtype="https://schema.org/Collection">
                                                                     <div class="pp-content-posts-inner owl-carousel owl-theme">
 
-                                                                        {{ partialCached "clients/all-clients-grid.html" . "all-clients" }}
+                                                                        {{ $allClientsGrid }}
 
                                                                     </div>
                                                                  </div>

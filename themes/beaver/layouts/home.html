@@ -16,22 +16,10 @@ function loadCSS(url) {
 
    document.head.appendChild(link);
 }
-{{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
+{{- $dynamicStyles := slice (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .) (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .) (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .) }}
 
-{{- $nonCriticalCSS := slice
-   (resources.Get "css/companies.css")
-   (resources.Get "css/footer.css")
-   (resources.Get "css/homepage.css")
-   $dynamicCSS
-   (resources.Get "css/590-layout.css")
-   (resources.Get "css/theme-main.css")
-   (resources.Get "css/style.css")
-   $dynamicCSS586
-   (resources.Get "css/services-layout.css")
-   (resources.Get "css/technologies.css")
-   $dynamicCSSUseCases
+{{- $staticCSS := slice (resources.Get "css/companies.css") (resources.Get "css/footer.css") (resources.Get "css/homepage.css") (resources.Get "css/590-layout.css") (resources.Get "css/theme-main.css") (resources.Get "css/style.css") (resources.Get "css/services-layout.css") (resources.Get "css/technologies.css") }}
+{{- $nonCriticalCSS := union $staticCSS $dynamicStyles
 | resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
 }}
 
