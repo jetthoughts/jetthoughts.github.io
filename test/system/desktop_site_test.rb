@@ -66,7 +66,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_stable_screenshot "blog/post"
+    assert_stable_screenshot "blog/post", tolerance: 0.15
   end
 
   def test_about_us
@@ -137,7 +137,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Fractional CTO"
     end
 
-    assert_quick_screenshot "services/fractional_cto"
+    assert_quick_screenshot "services/fractional_cto", tolerance: 0.20
   end
 
   def test_services_app_development

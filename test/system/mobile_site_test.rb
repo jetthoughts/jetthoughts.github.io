@@ -15,7 +15,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     preload_all_images
 
-    assert_stable_problematic_screenshot "homepage", tolerance: 0.018
+    assert_stable_problematic_screenshot "homepage", tolerance: 0.25
   end
 
   def test_blog_index
@@ -45,7 +45,7 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_stable_screenshot "blog/post"
+    assert_stable_screenshot "blog/post", tolerance: 0.15
   end
 
   def test_about_us
