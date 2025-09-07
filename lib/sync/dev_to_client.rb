@@ -45,5 +45,4 @@ class DevToClient
       nil
     end
   end
-
 end

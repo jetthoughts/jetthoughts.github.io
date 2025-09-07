@@ -37,6 +37,77 @@ wip_enforcement:
 #### Current Sprint Goal
 **Primary Objective**: Establish Agile-compliant CLAUDE.md structure with hugo site quality framework integration
 
+### 📝 Job Stories Format (Complete Templates)
+
+#### Job Story Template Structure
+
+```yaml
+job_story_template:
+  format: "When I [situation], I want to [motivation], so I can [expected outcome]"
+
+  components:
+    situation:
+      description: "The context and circumstances when the need arises"
+      examples:
+        - "When I am reviewing pull requests"
+        - "When I need to deploy a new feature"
+        - "When I encounter a bug in production"
+
+    motivation:
+      description: "What the user wants to accomplish (the desire)"
+      examples:
+        - "I want to ensure code quality standards"
+        - "I want to minimize deployment risks"
+        - "I want to quickly identify root causes"
+
+    expected_outcome:
+      description: "The benefit or value delivered (the outcome)"
+      examples:
+        - "so I can maintain high code quality across the team"
+        - "so I can deploy with confidence and minimal downtime"
+        - "so I can restore service quickly and prevent recurrence"
+
+  quality_criteria:
+    - independent: "Can be developed and delivered independently"
+    - negotiable: "Details can be discussed and refined"
+    - valuable: "Delivers clear business or user value"
+    - estimable: "Size and complexity can be estimated"
+    - small: "Can be completed within one sprint"
+    - testable: "Has clear acceptance criteria"
+```
+
+#### Job Story Examples for JT Site Development
+
+```yaml
+example_job_stories:
+  content_management:
+    id: "JT-CONTENT-001"
+    story: "When I am creating new blog posts, I want to use standardized templates and workflows, so I can maintain consistency and reduce publishing time"
+    acceptance_criteria:
+      - given: "A new blog post needs to be created"
+        when: "I use the content creation workflow"
+        then: "The post follows standard structure and is ready for review"
+    story_points: 5
+
+  site_performance:
+    id: "JT-PERF-001"
+    story: "When I deploy site updates, I want automated performance validation, so I can ensure user experience remains optimal"
+    acceptance_criteria:
+      - given: "Site changes are ready for deployment"
+        when: "Performance tests run automatically"
+        then: "Performance metrics meet or exceed baseline requirements"
+    story_points: 8
+
+  accessibility_compliance:
+    id: "JT-A11Y-001"
+    story: "When I develop new site features, I want automated accessibility checking, so I can ensure compliance with WCAG guidelines"
+    acceptance_criteria:
+      - given: "New UI components are implemented"
+        when: "Accessibility tests are executed"
+        then: "All components meet WCAG 2.1 AA standards"
+    story_points: 3
+```
+
 #### Active Job Story Template
 ```yaml
 job_story_format: "When I [situation], I want to [motivation], so I can [expected outcome]"
@@ -574,33 +645,379 @@ wip_metrics:
   wip_efficiency: 98.2%
 ```
 
-### 🏗️ Sprint Ceremonies Automation
+### 🎯 Prioritization Frameworks
+
+#### MoSCoW Method Implementation
+
+```yaml
+moscow_prioritization:
+  framework:
+    must_have:
+      description: "Critical requirements that must be delivered for success"
+      criteria:
+        - business_critical: "Essential for business operation"
+        - compliance_required: "Regulatory or legal requirement"
+        - user_blocking: "Prevents core user workflows"
+      jt_site_examples:
+        - responsive_design: "Site must work on all devices"
+        - content_publishing: "Ability to publish and manage blog content"
+        - site_performance: "Page load times under 3 seconds"
+
+    should_have:
+      description: "Important but not critical; can be delayed if necessary"
+      criteria:
+        - user_experience: "Significantly improves user experience"
+        - competitive_advantage: "Provides business differentiation"
+        - efficiency_gain: "Improves operational efficiency"
+      jt_site_examples:
+        - advanced_search: "Enhanced content search capabilities"
+        - social_sharing: "Social media integration and sharing"
+        - newsletter_signup: "Email subscription functionality"
+
+    could_have:
+      description: "Nice to have features that add value but aren't essential"
+      criteria:
+        - enhancement: "Enhances existing functionality"
+        - convenience: "Provides user convenience"
+        - future_planning: "Sets foundation for future features"
+      jt_site_examples:
+        - dark_mode: "Dark theme option for users"
+        - comment_system: "Blog post commenting functionality"
+        - content_rating: "User rating system for articles"
+
+    wont_have:
+      description: "Features explicitly excluded from current scope"
+      criteria:
+        - out_of_scope: "Not aligned with current objectives"
+        - resource_intensive: "Requires more resources than available"
+        - low_value: "Provides minimal user or business value"
+      jt_site_examples:
+        - e_commerce: "Online store functionality"
+        - user_accounts: "User registration and profiles"
+        - real_time_chat: "Live chat support system"
+
+  prioritization_process:
+    step_1_requirement_gathering:
+      - identify_all_requirements: "List all potential features and requirements"
+      - stakeholder_input: "Collect input from all stakeholders"
+      - user_research: "Validate requirements against user needs"
+
+    step_2_moscow_classification:
+      - collaborative_categorization: "Team assigns MoSCoW categories"
+      - business_value_assessment: "Evaluate business impact of each item"
+      - technical_feasibility: "Assess implementation complexity"
+
+    step_3_validation_refinement:
+      - stakeholder_review: "Validate categorization with stakeholders"
+      - capacity_alignment: "Ensure Must/Should items fit sprint capacity"
+      - dependency_analysis: "Identify and resolve dependencies"
+```
+
+#### WSJF (Weighted Shortest Job First) Calculations
+
+```yaml
+wsjf_prioritization:
+  calculation_formula:
+    wsjf_score: "(User_Business_Value + Time_Criticality + Risk_Reduction) / Job_Size"
+
+  scoring_criteria:
+    user_business_value:
+      scale: "1-10 (Fibonacci: 1, 2, 3, 5, 8)"
+      definition: "Relative benefit to users and business"
+
+    time_criticality:
+      scale: "1-10 (Fibonacci: 1, 2, 3, 5, 8)"
+      definition: "How time-sensitive the feature is"
+
+    risk_reduction:
+      scale: "1-10 (Fibonacci: 1, 2, 3, 5, 8)"
+      definition: "How much risk the feature mitigates"
+
+    job_size:
+      scale: "1-13 (Fibonacci: 1, 2, 3, 5, 8, 13)"
+      definition: "Relative size/effort required for implementation"
+
+  jt_site_wsjf_examples:
+    responsive_design:
+      user_business_value: 8
+      time_criticality: 8
+      risk_reduction: 5
+      job_size: 5
+      wsjf_score: 4.2  # (8+8+5)/5
+
+    content_management:
+      user_business_value: 8
+      time_criticality: 5
+      risk_reduction: 3
+      job_size: 3
+      wsjf_score: 5.3  # (8+5+3)/3
+
+    social_sharing:
+      user_business_value: 3
+      time_criticality: 2
+      risk_reduction: 1
+      job_size: 2
+      wsjf_score: 3.0  # (3+2+1)/2
+
+  wsjf_coordination_protocol:
+    scoring_session:
+      participants: [ "product-owner", "scrum-master", "technical-lead", "stakeholder-rep" ]
+      duration: "60 minutes"
+      process:
+        - feature_presentation: "Present each feature for scoring"
+        - individual_scoring: "Each participant scores independently"
+        - discussion_alignment: "Discuss score differences and align"
+        - final_calculation: "Calculate WSJF scores and rank features"
+```
+
+#### Prioritization Coordination Commands
+
 ```bash
+# MoSCoW prioritization session
+echo "📊 MoSCoW Prioritization Session"
+Task("Product Owner", "Lead MoSCoW categorization with stakeholder input and business value focus", "product-owner")
+Task("Technical Lead", "Assess technical feasibility and implementation complexity for prioritization", "system-architect")
+Task("Scrum Master", "Facilitate prioritization discussion and ensure capacity alignment", "scrum-master")
+
+# WSJF calculation session  
+echo "⚖️ WSJF Calculation Session"
+npx claude-flow@alpha prioritization wsjf-calculate \
+  --features "$FEATURE_LIST" \
+  --participants "product-owner,scrum-master,technical-lead" \
+  --store-results "backlog/prioritization/$(date +%s)"
+
+# Store prioritization results
+npx claude-flow@alpha hooks memory-store \
+  --key "prioritization/moscow/$(date +%s)" \
+  --value "$MOSCOW_RESULTS"
+  
+npx claude-flow@alpha hooks memory-store \
+  --key "prioritization/wsjf/$(date +%s)" \
+  --value "$WSJF_RESULTS"
+```
+
+### 🏗️ Sprint Ceremonies (Detailed Structure with Mandatory Participation)
+
+#### Sprint Planning Ceremony
+
+```yaml
+sprint_planning:
+  ceremony_structure:
+    duration: "2-4 hours (2-week sprint)"
+    mandatory_participants: [ "product-owner", "scrum-master", "development-team", "stakeholders" ]
+
+  part_1_what_to_do:
+    duration: "50% of ceremony time"
+    activities:
+      - sprint_goal_definition:
+          responsibility: "product-owner"
+          outcome: "Clear, measurable sprint goal"
+          validation: "Team understanding and commitment"
+
+      - backlog_review:
+          responsibility: "product-owner"
+          outcome: "Prioritized and refined backlog items"
+          validation: "Stories meet Definition of Ready"
+
+      - story_selection:
+          responsibility: "development-team"
+          outcome: "Sprint backlog with committed stories"
+          validation: "Capacity and velocity alignment"
+
+      - wip_limits_validation:
+          responsibility: "scrum-master"
+          outcome: "WIP limits respected in planning"
+          validation: "Single active goal/sprint/story confirmation"
+
+  part_2_how_to_do:
+    duration: "50% of ceremony time"
+    activities:
+      - task_decomposition:
+          responsibility: "development-team"
+          outcome: "Stories broken into actionable tasks"
+          validation: "Tasks are <8 hours, clearly defined"
+
+      - technical_planning:
+          responsibility: "technical-lead"
+          outcome: "Technical approach and architecture decisions"
+          validation: "Feasibility and risk assessment complete"
+
+      - capacity_planning:
+          responsibility: "scrum-master"
+          outcome: "Realistic sprint commitment based on team capacity"
+          validation: "Historical velocity and availability considered"
+
+      - definition_of_done_review:
+          responsibility: "entire-team"
+          outcome: "Shared understanding of completion criteria"
+          validation: "All team members can articulate DoD"
+
+ceremony_coordination:
+  pre_planning_preparation:
+    - backlog_refinement_complete: "All stories refined and estimated"
+    - velocity_data_available: "Historical velocity data prepared"
+    - capacity_calculation: "Team availability and capacity calculated"
+    - research_completed: "Technical research for complex stories done"
+
+  during_planning_facilitation:
+    - timebox_management: "Scrum Master enforces timeboxes"
+    - participation_facilitation: "All team members contribute actively"
+    - decision_documentation: "Key decisions and assumptions documented"
+    - commitment_validation: "Team genuinely commits to sprint goal"
+
+  post_planning_validation:
+    - sprint_board_setup: "Sprint board configured with selected stories"
+    - capacity_vs_commitment: "Commitment aligns with team capacity"
+    - dependencies_identified: "External dependencies documented"
+    - communication_plan: "Stakeholder communication plan established"
+```
+
+#### Daily Standup Ceremony
+
+```yaml
+daily_standup:
+  ceremony_structure:
+    duration: "15 minutes maximum"
+    frequency: "Daily at consistent time"
+    mandatory_participants: [ "development-team", "scrum-master" ]
+    optional_participants: [ "product-owner", "stakeholders" ]
+
+  three_questions_format:
+    what_did_i_do:
+      focus: "Progress toward sprint goal"
+      validation: "Specific accomplishments, not just activities"
+      wip_check: "Confirm single-task focus maintained"
+
+    what_will_i_do:
+      focus: "Next steps toward sprint goal"
+      validation: "Clear, actionable next steps"
+      capacity_check: "Realistic based on remaining capacity"
+
+    what_impediments:
+      focus: "Blockers preventing progress"
+      validation: "Specific impediments requiring help"
+      action_plan: "Clear owner and resolution plan"
+
+  wip_limits_validation:
+    active_task_check: "Each team member working on exactly one task"
+    story_progress_check: "Only one story active per team member"
+    sprint_goal_alignment: "All work aligns with sprint goal"
+    impediment_escalation: "WIP-blocking impediments escalated immediately"
+
+  standup_outcomes:
+    transparency: "Team has visibility into all work and progress"
+    coordination: "Team coordination and collaboration optimized"
+    impediment_identification: "Blockers identified and escalated quickly"
+    sprint_goal_focus: "Team remains focused on sprint goal achievement"
+```
+
+#### Sprint Review Ceremony
+
+```yaml
+sprint_review:
+  ceremony_structure:
+    duration: "1-2 hours (2-week sprint)"
+    mandatory_participants: [ "product-owner", "scrum-master", "development-team", "key-stakeholders" ]
+
+  review_activities:
+    sprint_goal_assessment:
+      responsibility: "scrum-master"
+      outcome: "Clear assessment of sprint goal achievement"
+      validation: "Objective measurement against defined criteria"
+
+    product_increment_demo:
+      responsibility: "development-team"
+      outcome: "Working software demonstrated to stakeholders"
+      validation: "All completed stories meet Definition of Done"
+
+    stakeholder_feedback:
+      responsibility: "product-owner"
+      outcome: "Stakeholder input on product direction and priorities"
+      validation: "Feedback documented and prioritized"
+
+    backlog_updates:
+      responsibility: "product-owner"
+      outcome: "Product backlog updated based on review insights"
+      validation: "New priorities and stories added as needed"
+
+  quality_validation:
+    completed_work_only: "Only fully completed, tested work demonstrated"
+    working_software: "All demos use working software, not mockups"
+    stakeholder_engagement: "Stakeholders actively participate and provide feedback"
+    backlog_evolution: "Product backlog evolves based on learnings"
+```
+
+#### Sprint Retrospective Ceremony
+
+```yaml
+sprint_retrospective:
+  ceremony_structure:
+    duration: "1-1.5 hours (2-week sprint)"
+    mandatory_participants: [ "scrum-master", "development-team" ]
+    optional_participants: [ "product-owner" ]
+
+  retrospective_format:
+    what_went_well:
+      focus: "Positive practices and successes to continue"
+      validation: "Specific examples with measurable impact"
+      action: "Document practices to maintain"
+
+    what_could_improve:
+      focus: "Challenges and areas for improvement"
+      validation: "Specific issues with actionable solutions"
+      action: "Prioritize improvements for next sprint"
+
+    action_items:
+      focus: "Concrete steps to implement improvements"
+      validation: "Clear owner, timeline, and success criteria"
+      action: "Commit to specific improvements"
+
+  improvement_tracking:
+    action_item_monitoring: "Track completion of retrospective actions"
+    metric_improvement: "Measure impact of implemented changes"
+    continuous_evolution: "Process improvements compound over time"
+    team_ownership: "Team owns their process improvement"
+
+  wip_limits_retrospective:
+    wip_compliance_review: "Assess WIP limits adherence during sprint"
+    bottleneck_identification: "Identify workflow bottlenecks"
+    process_optimization: "Optimize workflow to support WIP limits"
+    commitment_vs_delivery: "Review capacity planning accuracy"
+```
+
+#### Sprint Ceremonies Automation
+```bash
+# Sprint Planning (automated coordination)
+npx claude-flow@alpha scrum sprint-planning \
+  --duration "4-hours" \
+  --participants "product-owner,scrum-master,hugo-developer,content-developer,qa-engineer" \
+  --sprint-goal "$SPRINT_GOAL" \
+  --enforce-wip-limits \
+  --validate-capacity
+
 # Daily Standup (automated)
 npx claude-flow@alpha scrum daily-standup \
   --collect-updates \
   --identify-blockers \
   --update-burndown \
-  --validate-wip-limits
+  --validate-wip-limits \
+  --duration "15-minutes"
 
-# Sprint Planning
-npx claude-flow@alpha scrum sprint-planning \
-  --estimate-stories \
-  --assign-tasks \
-  --calculate-capacity \
-  --commit-sprint-goal \
-  --enforce-wip-limits
-
-# Sprint Review & Retrospective
+# Sprint Review (automated demo and feedback collection)
 npx claude-flow@alpha scrum sprint-review \
   --demo-completed-work \
   --collect-feedback \
-  --update-product-backlog
+  --update-product-backlog \
+  --assess-sprint-goal \
+  --duration "2-hours"
 
+# Sprint Retrospective (automated improvement tracking)
 npx claude-flow@alpha scrum retrospective \
   --collect-feedback \
   --identify-improvements \
-  --create-action-items
+  --create-action-items \
+  --track-previous-actions \
+  --duration "90-minutes"
 ```
 
 ## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
@@ -882,7 +1299,7 @@ claude mcp add claude-flow npx claude-flow@alpha mcp start
 
 ### Example Full-Stack Development:
 
-```javascript
+```
 // Single message with all agent spawning via Claude Code's Task tool
 [Parallel Agent Execution]:
   Task("Backend Developer", "Build REST API with Express. Use hooks for coordination.", "backend-dev")
@@ -952,6 +1369,155 @@ job_story_template:
     - documentation_updated: true
     - sprint_goal_aligned: true
     - wip_limits_respected: true
+```
+
+### 🗺️ User Story Mapping (Complete Methodology)
+
+#### Story Mapping Framework
+
+```yaml
+story_mapping:
+  methodology:
+    purpose: "Visualize user journey and organize stories by value delivery"
+    structure:
+      - user_activities: "High-level user goals and workflows"
+      - user_tasks: "Specific tasks users perform"
+      - user_stories: "Detailed stories that support tasks"
+      - story_details: "Acceptance criteria and technical details"
+
+  mapping_process:
+    phase_1_discovery:
+      - identify_user_personas: "Define primary and secondary users"
+      - map_user_journey: "Document end-to-end user experience"
+      - identify_activities: "Extract main user activities"
+
+    phase_2_organization:
+      - break_into_tasks: "Decompose activities into specific tasks"
+      - write_user_stories: "Create stories supporting each task"
+      - add_story_details: "Define acceptance criteria and DoD"
+
+    phase_3_prioritization:
+      - vertical_slicing: "Identify minimum viable releases"
+      - horizontal_grouping: "Organize by user workflow priority"
+      - sprint_planning: "Assign stories to sprints based on value"
+
+  jt_site_user_activities:
+    content_consumption:
+      description: "Users reading and engaging with blog content"
+      tasks:
+        - browse_articles: "Find and read relevant articles"
+        - search_content: "Search for specific topics or information"
+        - share_content: "Share articles on social media or email"
+
+    knowledge_exploration:
+      description: "Users exploring JetThoughts expertise and services"
+      tasks:
+        - review_portfolio: "Browse case studies and project examples"
+        - learn_about_team: "Understand team expertise and approach"
+        - contact_inquiry: "Submit consultation or project inquiries"
+
+    professional_networking:
+      description: "Users connecting with JetThoughts professionals"
+      tasks:
+        - view_team_profiles: "Learn about individual team members"
+        - connect_social: "Follow on social media platforms"
+        - subscribe_updates: "Subscribe to newsletter or RSS feed"
+```
+
+#### Story Mapping Coordination Protocol
+
+```bash
+# User story mapping session coordination
+echo "🗺️ Initiating user story mapping for: $EPIC"
+npx claude-flow@alpha story-map init \
+  --epic "$EPIC" \
+  --personas "$USER_PERSONAS" \
+  --activities "$USER_ACTIVITIES"
+
+# Collaborative mapping with agents
+Task("User Research", "Analyze user journey and identify key activities for JT site", "researcher")
+Task("Story Mapper", "Create story map structure and organize by user value", "product-owner")
+Task("Technical Mapper", "Add technical considerations and dependencies to story map", "system-architect")
+
+# Store mapping results in memory
+npx claude-flow@alpha hooks memory-store \
+  --key "story-mapping/jt-site/$(date +%s)" \
+  --value "$MAPPING_RESULT"
+```
+
+### 🧩 Cooperative Decomposition (Grooming Session Protocols)
+
+#### Decomposition Session Framework
+
+```yaml
+cooperative_decomposition:
+  session_structure:
+    preparation_phase:
+      duration: "15 minutes"
+      activities:
+        - review_story_context: "Understand story background and user value"
+        - research_technical_requirements: "Identify technical dependencies"
+        - prepare_decomposition_materials: "Gather templates and estimation tools"
+
+    research_first_approach:
+      duration: "20 minutes"
+      mandatory_research:
+        - existing_patterns: "Search codebase for similar implementations"
+        - framework_capabilities: "Validate Hugo and tool capabilities"
+        - knowledge_base_consultation: "Review established patterns and practices"
+        - cross_reference_validation: "Check for related work and dependencies"
+
+    decomposition_phase:
+      duration: "30 minutes"
+      collaborative_process:
+        - story_analysis: "Break story into logical components"
+        - task_identification: "Identify specific development tasks"
+        - dependency_mapping: "Map technical and business dependencies"
+        - estimation_session: "Collaboratively estimate effort using planning poker"
+
+    validation_phase:
+      duration: "15 minutes"
+      quality_gates:
+        - invest_criteria_check: "Validate Independent, Negotiable, Valuable, Estimable, Small, Testable"
+        - acceptance_criteria_review: "Ensure clear and testable acceptance criteria"
+        - definition_of_done_alignment: "Confirm DoD compliance"
+        - wip_limits_validation: "Ensure decomposition supports WIP limits"
+
+  research_first_protocols:
+    mandatory_tools:
+      - claude_context: "Search existing codebase patterns"
+      - context7: "Validate framework specifications"
+      - knowledge_base: "Consult established practices"
+      - docs_mcp: "Reference documentation patterns"
+
+    research_validation:
+      pattern_consistency: "Ensure new work aligns with existing patterns"
+      framework_compliance: "Validate against Hugo and tool capabilities"
+      knowledge_integration: "Apply learned practices from knowledge base"
+      dependency_analysis: "Identify and validate all dependencies"
+```
+
+#### Grooming Session Coordination
+
+```bash
+# Pre-grooming research phase (MANDATORY)
+echo "🔍 Pre-Grooming Research Phase for: $STORY_ID"
+Task("Research Agent", "Research existing patterns, framework capabilities, and knowledge base practices for story context", "researcher")
+Task("Pattern Validator", "Validate story alignment with existing codebase patterns and architecture", "system-architect")
+Task("Knowledge Consultant", "Consult knowledge base for established practices and solutions", "planner")
+
+# Cooperative decomposition session
+echo "🧩 Cooperative Decomposition Session for: $STORY_ID"
+Task("Product Owner", "Lead story analysis and value clarification with acceptance criteria validation", "product-owner")
+Task("Scrum Master", "Facilitate collaborative decomposition and ensure INVEST criteria compliance", "scrum-master")
+Task("Technical Lead", "Identify technical tasks, dependencies, and implementation approach", "system-architect")
+Task("Developer", "Estimate implementation effort and validate technical feasibility", "hugo-developer")
+Task("QA Engineer", "Define testing approach and validate acceptance criteria testability", "qa-engineer")
+
+# Post-grooming validation and storage
+npx claude-flow@alpha hooks memory-store \
+  --key "grooming/decomposition/$STORY_ID" \
+  --value "$DECOMPOSITION_RESULT"
 ```
 
 ### 🔀 Sprint Board Integration
@@ -1146,27 +1712,586 @@ Message 4: Write "file.js"
 
 ---
 
+### 🔧 Agile Enforcement Hooks (Pre/During/Post Sprint Validation)
+
+#### Pre-Sprint Quality Gates
+
+```yaml
+pre_sprint_validation:
+  mandatory_gates:
+    backlog_readiness:
+      validation: "All sprint stories meet Definition of Ready"
+      criteria:
+        - acceptance_criteria_complete: "Clear, testable acceptance criteria"
+        - story_estimation_complete: "Relative sizing using story points"
+        - dependencies_identified: "External dependencies documented"
+        - technical_approach_defined: "High-level technical approach agreed"
+      enforcement: "Sprint cannot start without ready backlog"
+
+    team_capacity_validation:
+      validation: "Team capacity accurately calculated and realistic"
+      criteria:
+        - availability_confirmed: "Team member availability verified"
+        - velocity_data_reviewed: "Historical velocity data considered"
+        - capacity_buffer_included: "Buffer for unforeseen work included"
+        - wip_limits_planned: "WIP limits integrated into planning"
+      enforcement: "Sprint commitment must align with capacity"
+
+    sprint_goal_definition:
+      validation: "Clear, measurable sprint goal established"
+      criteria:
+        - business_value_clear: "Business value articulated"
+        - success_criteria_defined: "Measurable success criteria"
+        - stakeholder_alignment: "Key stakeholders aligned on goal"
+        - single_goal_focus: "One primary goal per sprint (WIP limit)"
+      enforcement: "Sprint requires single, clear goal"
+
+  pre_sprint_hooks:
+    research_validation:
+      - pattern_research: "Research existing implementation patterns"
+      - framework_validation: "Validate framework capabilities"
+      - knowledge_consultation: "Consult knowledge base practices"
+      - dependency_analysis: "Analyze technical dependencies"
+
+    quality_preparation:
+      - testing_strategy: "Define testing approach for sprint stories"
+      - performance_criteria: "Establish performance acceptance criteria"
+      - accessibility_requirements: "Define accessibility compliance requirements"
+      - security_considerations: "Identify security requirements and validations"
+```
+
+#### During-Sprint Monitoring Hooks
+
+```yaml
+during_sprint_monitoring:
+  daily_validation_hooks:
+    wip_compliance_check:
+      frequency: "Every daily standup"
+      validation: "WIP limits maintained across team"
+      alerts:
+        - multiple_active_tasks: "Team member working on multiple tasks"
+        - story_overflow: "More than one story active per person"
+        - goal_drift: "Work not aligned with sprint goal"
+      enforcement: "Immediate correction required"
+
+    progress_tracking:
+      frequency: "Daily after standup"
+      validation: "Progress toward sprint goal measurable"
+      metrics:
+        - story_completion_rate: "Stories completed vs planned"
+        - task_burndown: "Task hours remaining vs ideal"
+        - impediment_resolution: "Time to resolve impediments"
+        - velocity_tracking: "Actual vs planned story points"
+      enforcement: "Corrective action for significant deviations"
+
+    quality_gate_monitoring:
+      frequency: "After each story completion"
+      validation: "All quality gates passed before story acceptance"
+      gates:
+        - definition_of_done: "All DoD criteria met"
+        - acceptance_criteria: "All acceptance criteria satisfied"
+        - code_review_complete: "Code review completed and approved"
+        - testing_complete: "All testing levels completed"
+      enforcement: "Story not accepted until all gates passed"
+
+  continuous_improvement_hooks:
+    impediment_escalation:
+      trigger: "Impediment blocks work for >24 hours"
+      action: "Automatic escalation to Scrum Master"
+      tracking: "Impediment resolution time monitoring"
+
+    capacity_adjustment:
+      trigger: "Significant capacity change during sprint"
+      action: "Sprint scope adjustment with stakeholder communication"
+      validation: "Revised commitment still achieves sprint goal"
+
+    early_warning_system:
+      trigger: "Sprint goal at risk based on current progress"
+      action: "Stakeholder communication and mitigation planning"
+      options: "Scope adjustment, resource reallocation, or impediment resolution"
+```
+
+#### Post-Sprint Validation Hooks
+
+```yaml
+post_sprint_validation:
+  sprint_completion_gates:
+    goal_achievement_assessment:
+      validation: "Sprint goal achievement objectively measured"
+      criteria:
+        - success_metrics_met: "All sprint goal metrics achieved"
+        - stakeholder_satisfaction: "Stakeholder acceptance of deliverables"
+        - quality_standards_met: "All quality gates passed"
+        - technical_debt_addressed: "No new technical debt introduced"
+      outcome: "Clear success/failure determination with lessons learned"
+
+    deliverable_validation:
+      validation: "All completed work meets Definition of Done"
+      criteria:
+        - functional_completeness: "All functionality working as specified"
+        - testing_completeness: "All testing levels completed successfully"
+        - documentation_complete: "User and technical documentation updated"
+        - deployment_ready: "Work ready for production deployment"
+      outcome: "Only fully completed work considered done"
+
+    process_effectiveness_review:
+      validation: "Sprint process effectiveness evaluated"
+      metrics:
+        - commitment_accuracy: "Planned vs actual story completion"
+        - estimation_accuracy: "Estimated vs actual effort"
+        - impediment_impact: "Time lost to impediments"
+        - wip_compliance_rate: "WIP limits adherence percentage"
+      outcome: "Process improvement recommendations for next sprint"
+
+  post_sprint_hooks:
+    retrospective_preparation:
+      - metrics_compilation: "Compile sprint metrics and data"
+      - feedback_collection: "Collect team and stakeholder feedback"
+      - improvement_analysis: "Analyze improvement opportunities"
+      - action_item_review: "Review previous retrospective actions"
+
+    knowledge_capture:
+      - pattern_documentation: "Document successful patterns"
+      - lesson_learned_storage: "Store lessons learned in knowledge base"
+      - best_practice_updates: "Update team best practices"
+      - failure_analysis: "Analyze and document failures for prevention"
+
+    next_sprint_preparation:
+      - backlog_prioritization: "Update and prioritize product backlog"
+      - capacity_planning: "Plan capacity for next sprint"
+      - impediment_resolution: "Resolve outstanding impediments"
+      - process_adjustments: "Implement process improvements"
+```
+
+#### Agile Enforcement Coordination Commands
+
+```bash
+# Pre-sprint validation (mandatory before sprint start)
+echo "✅ Pre-Sprint Validation Gates"
+Task("Backlog Validator", "Validate all stories meet Definition of Ready and have complete acceptance criteria", "product-owner")
+Task("Capacity Planner", "Calculate realistic team capacity with historical velocity and availability data", "scrum-master")
+Task("Sprint Goal Validator", "Ensure single, clear, measurable sprint goal with stakeholder alignment", "product-owner")
+
+# During-sprint monitoring hooks (automated daily)
+echo "📊 During-Sprint Monitoring Hooks"
+npx claude-flow@alpha hooks daily-wip-check \
+  --validate-limits \
+  --alert-violations \
+  --track-progress
+
+npx claude-flow@alpha hooks quality-gate-monitor \
+  --check-dod \
+  --validate-acceptance \
+  --enforce-standards
+
+# Post-sprint validation (mandatory after sprint end)
+echo "🎯 Post-Sprint Validation Gates"
+Task("Goal Achievement Assessor", "Objectively measure sprint goal achievement against defined success criteria", "scrum-master")
+Task("Quality Validator", "Validate all completed work meets Definition of Done and quality standards", "qa-engineer")
+Task("Process Analyzer", "Analyze sprint process effectiveness and identify improvement opportunities", "scrum-master")
+
+# Store validation results in memory
+npx claude-flow@alpha hooks memory-store \
+  --key "sprint-validation/pre-sprint/$(date +%s)" \
+  --value "$PRE_SPRINT_VALIDATION"
+  
+npx claude-flow@alpha hooks memory-store \
+  --key "sprint-validation/post-sprint/$(date +%s)" \
+  --value "$POST_SPRINT_VALIDATION"
+```
+
+### 🤝 Cross-Agent Collaboration (Story Handoff Protocols)
+
+#### Agent Collaboration Framework
+
+```yaml
+cross_agent_collaboration:
+  story_handoff_protocol:
+    research_to_development:
+      handoff_criteria:
+        - pattern_analysis_complete: "Existing patterns analyzed and documented"
+        - framework_validation_done: "Framework capabilities validated"
+        - technical_approach_defined: "High-level technical approach documented"
+        - dependency_map_created: "All dependencies identified and mapped"
+      handoff_artifacts:
+        - research_summary: "Summary of findings and recommendations"
+        - pattern_library: "Relevant patterns and examples"
+        - technical_specifications: "Detailed technical requirements"
+        - risk_assessment: "Identified risks and mitigation strategies"
+      coordination_memory: "research/handoffs/story-$STORY_ID"
+
+    development_to_testing:
+      handoff_criteria:
+        - implementation_complete: "All functionality implemented according to acceptance criteria"
+        - code_review_passed: "Code review completed and approved"
+        - unit_tests_written: "Comprehensive unit tests created and passing"
+        - documentation_updated: "Code and API documentation updated"
+      handoff_artifacts:
+        - implementation_summary: "Summary of implementation approach"
+        - test_data_scenarios: "Test data and scenarios for validation"
+        - deployment_instructions: "Instructions for testing environment setup"
+        - known_limitations: "Any known limitations or edge cases"
+      coordination_memory: "development/handoffs/story-$STORY_ID"
+
+    testing_to_review:
+      handoff_criteria:
+        - functional_testing_complete: "All functional tests executed and passed"
+        - performance_testing_done: "Performance criteria validated"
+        - accessibility_testing_complete: "Accessibility compliance verified"
+        - security_testing_passed: "Security validations completed"
+      handoff_artifacts:
+        - test_results_summary: "Comprehensive test results documentation"
+        - performance_metrics: "Performance test results and analysis"
+        - accessibility_report: "Accessibility compliance report"
+        - defect_log: "Any defects found and resolution status"
+      coordination_memory: "testing/handoffs/story-$STORY_ID"
+
+    review_to_deployment:
+      handoff_criteria:
+        - quality_review_passed: "Code and implementation quality approved"
+        - business_acceptance_complete: "Business stakeholders accept deliverable"
+        - deployment_readiness_confirmed: "All deployment prerequisites met"
+        - rollback_plan_prepared: "Rollback procedures documented and tested"
+      handoff_artifacts:
+        - quality_assessment: "Final quality assessment and approval"
+        - business_sign_off: "Stakeholder acceptance documentation"
+        - deployment_checklist: "Pre-deployment validation checklist"
+        - rollback_procedures: "Detailed rollback procedures"
+      coordination_memory: "review/handoffs/story-$STORY_ID"
+
+  collaboration_coordination_hooks:
+    pre_handoff_validation:
+      - completion_criteria_check: "All handoff criteria met"
+      - artifact_preparation: "All handoff artifacts prepared"
+      - receiving_agent_readiness: "Receiving agent ready and available"
+      - dependency_resolution: "All blocking dependencies resolved"
+
+    handoff_execution:
+      - context_transfer: "Complete context transferred to receiving agent"
+      - knowledge_sharing: "Relevant knowledge and lessons shared"
+      - collaboration_setup: "Ongoing collaboration channels established"
+      - progress_tracking: "Handoff progress tracked in memory"
+
+    post_handoff_validation:
+      - understanding_confirmation: "Receiving agent confirms understanding"
+      - progress_continuation: "Work continues without delays or gaps"
+      - feedback_loop_established: "Feedback mechanism for clarifications"
+      - coordination_success: "Successful handoff recorded in memory"
+```
+
+#### Story Handoff Coordination Commands
+
+```bash
+# Research to Development handoff
+echo "🔬➡️💻 Research to Development Handoff for: $STORY_ID"
+Task("Research Agent", "Complete pattern analysis, framework validation, and technical approach documentation for handoff to development", "researcher")
+Task("Development Agent", "Receive research context, validate technical approach, and begin implementation planning", "hugo-developer")
+
+# Store handoff artifacts in memory
+npx claude-flow@alpha hooks memory-store \
+  --key "handoffs/research-to-dev/$STORY_ID" \
+  --value "$RESEARCH_HANDOFF_ARTIFACTS"
+
+# Development to Testing handoff
+echo "💻➡️🧪 Development to Testing Handoff for: $STORY_ID"
+Task("Development Agent", "Complete implementation, pass code review, and prepare testing handoff artifacts", "hugo-developer")
+Task("QA Agent", "Receive implementation context, validate completeness, and begin testing planning", "qa-engineer")
+
+# Store handoff artifacts
+npx claude-flow@alpha hooks memory-store \
+  --key "handoffs/dev-to-test/$STORY_ID" \
+  --value "$DEVELOPMENT_HANDOFF_ARTIFACTS"
+
+# Testing to Review handoff
+echo "🧪➡️👀 Testing to Review Handoff for: $STORY_ID"
+Task("QA Agent", "Complete all testing levels, document results, and prepare review handoff artifacts", "qa-engineer")
+Task("Review Agent", "Receive testing context, validate quality, and begin final review process", "reviewer")
+
+# Store handoff artifacts
+npx claude-flow@alpha hooks memory-store \
+  --key "handoffs/test-to-review/$STORY_ID" \
+  --value "$TESTING_HANDOFF_ARTIFACTS"
+
+# Review to Deployment handoff
+echo "👀➡️🚀 Review to Deployment Handoff for: $STORY_ID"
+Task("Review Agent", "Complete quality and business review, confirm deployment readiness", "reviewer")
+Task("DevOps Agent", "Receive deployment context, validate prerequisites, and execute deployment", "cicd-engineer")
+
+# Store final handoff artifacts
+npx claude-flow@alpha hooks memory-store \
+  --key "handoffs/review-to-deploy/$STORY_ID" \
+  --value "$REVIEW_HANDOFF_ARTIFACTS"
+```
+
+### 📈 Velocity Tracking (Burndown Charts and Metrics Dashboard)
+
+#### Velocity Metrics Framework
+
+```yaml
+velocity_tracking:
+  velocity_calculation:
+    story_points_method:
+      formula: "Completed Story Points / Sprint Duration"
+      measurement: "Story points completed per sprint"
+      trending: "3-sprint rolling average for stability"
+
+    throughput_method:
+      formula: "Completed Stories / Sprint Duration"
+      measurement: "Number of stories completed per sprint"
+      trending: "Historical throughput analysis"
+
+    cycle_time_method:
+      formula: "Average time from start to completion"
+      measurement: "Days to complete average story"
+      trending: "Cycle time reduction over time"
+
+  jt_site_velocity_baseline:
+    historical_data:
+      sprint_1:
+        planned_points: 40
+        completed_points: 35
+        velocity: 35
+        completion_rate: 87.5%
+
+    current_metrics:
+      rolling_velocity: 38  # 3-sprint average
+      velocity_trend: "stable"  # increasing, stable, decreasing
+      predictability: 92%  # consistency of delivery
+
+    capacity_factors:
+      team_size: 5
+      sprint_duration: 14  # days
+      daily_capacity: 6    # hours per person
+      total_capacity: 420  # hours per sprint
+      focus_factor: 75%    # actual productive time
+      effective_capacity: 315  # hours
+
+  burndown_chart_data:
+    ideal_burndown:
+      formula: "Total Points - (Points per Day * Days Elapsed)"
+      slope: "Linear decline to zero"
+
+    actual_burndown:
+      daily_tracking: "Points remaining each day"
+      completion_pattern: "Actual vs ideal comparison"
+
+    sprint_metrics:
+      total_points: 40
+      daily_ideal_burn: 2.86  # points per day
+      current_day: 7
+      ideal_remaining: 20
+      actual_remaining: 24
+      variance: -4  # behind schedule
+
+  performance_indicators:
+    velocity_consistency:
+      measurement: "Standard deviation of sprint velocities"
+      target: "<15% variance"
+      current: "12% variance"
+      status: "meeting_target"
+
+    sprint_goal_achievement:
+      measurement: "Percentage of sprints achieving stated goal"
+      target: ">90% achievement rate"
+      current: "85% achievement"
+      status: "below_target"
+
+    story_completion_rate:
+      measurement: "Stories completed vs committed"
+      target: ">80% completion rate"
+      current: "87% completion"
+      status: "exceeding_target"
+```
+
+#### Metrics Dashboard Configuration
+
+```yaml
+metrics_dashboard:
+  real_time_metrics:
+    current_sprint_progress:
+      - sprint_goal_progress: "Visual progress toward sprint goal"
+      - story_completion_status: "Status of each story (not started, in progress, done)"
+      - burndown_chart: "Actual vs ideal burndown visualization"
+      - team_capacity_utilization: "Current vs planned capacity usage"
+
+    daily_metrics:
+      - velocity_tracking: "Current velocity vs historical average"
+      - cycle_time_trends: "Average story completion time trends"
+      - impediment_tracking: "Active impediments and resolution time"
+      - wip_limits_compliance: "WIP limits adherence monitoring"
+
+    quality_metrics:
+      - defect_rate: "Defects found per story point delivered"
+      - rework_percentage: "Percentage of work requiring rework"
+      - technical_debt_accumulation: "Technical debt growth/reduction"
+      - customer_satisfaction: "Stakeholder satisfaction scores"
+
+  historical_analysis:
+    velocity_trends:
+      - 6_month_velocity: "Velocity trend over 6 months"
+      - seasonal_patterns: "Velocity patterns by time period"
+      - team_changes_impact: "Velocity impact of team changes"
+
+    predictive_analytics:
+      - velocity_forecasting: "Predicted velocity for next 3 sprints"
+      - capacity_planning: "Projected capacity based on historical data"
+      - delivery_estimation: "Estimated completion dates for epics"
+
+  automated_reporting:
+    daily_reports:
+      - standup_metrics: "Key metrics for daily standup"
+      - impediment_alerts: "Automated alerts for blocking issues"
+      - wip_violations: "Automated WIP limit violation notifications"
+
+    sprint_reports:
+      - sprint_summary: "Complete sprint performance summary"
+      - retrospective_data: "Data-driven retrospective insights"
+      - improvement_tracking: "Progress on improvement initiatives"
+```
+
+#### Velocity Tracking Automation Commands
+
+```bash
+# Daily velocity and burndown updates
+echo "📊 Daily Velocity Tracking Update"
+npx claude-flow@alpha metrics velocity-update \
+  --sprint "1" \
+  --completed-points "$DAILY_COMPLETED_POINTS" \
+  --remaining-points "$REMAINING_POINTS" \
+  --update-burndown
+
+# Real-time dashboard updates
+npx claude-flow@alpha dashboard update \
+  --sprint-progress "$SPRINT_PROGRESS" \
+  --velocity-trend "$VELOCITY_TREND" \
+  --impediment-count "$ACTIVE_IMPEDIMENTS" \
+  --wip-compliance "$WIP_COMPLIANCE_RATE"
+
+# Weekly velocity analysis
+echo "📈 Weekly Velocity Analysis"
+Task("Metrics Analyst", "Analyze weekly velocity trends, identify patterns, and update forecasting models", "performance-benchmarker")
+Task("Dashboard Updater", "Update dashboard with latest metrics and generate performance reports", "scrum-master")
+
+# Sprint velocity calculation and storage
+npx claude-flow@alpha hooks memory-store \
+  --key "velocity/sprint-1/final" \
+  --value "completed_points:35,planned_points:40,velocity:35,completion_rate:87.5"
+
+# Historical velocity tracking
+npx claude-flow@alpha hooks memory-store \
+  --key "velocity/historical/$(date +%s)" \
+  --value "rolling_average:38,trend:stable,predictability:92"
+
+# Automated reporting
+npx claude-flow@alpha reporting generate \
+  --type "velocity-dashboard" \
+  --sprint "1" \
+  --include-trends \
+  --include-forecasts \
+  --export-format "dashboard"
+```
+
 ## 🚀 AGILE QUICK START COMMANDS
 
 ```bash
-# Initialize Agile sprint
-npx claude-flow@alpha agile sprint-init --number 1 --name "JT Foundation Sprint" --enforce-wip
+# Initialize Agile sprint with comprehensive framework
+npx claude-flow@alpha agile sprint-init \
+  --number 1 \
+  --name "JT Foundation Sprint" \
+  --enforce-wip \
+  --setup-ceremonies \
+  --initialize-metrics
 
-# Daily Agile workflow
-npx claude-flow@alpha agile daily --standup --update-board --check-blockers --validate-wip
+# Daily Agile workflow with full validation
+npx claude-flow@alpha agile daily \
+  --standup \
+  --update-board \
+  --check-blockers \
+  --validate-wip \
+  --update-burndown \
+  --collect-metrics
 
-# Sprint ceremonies
-npx claude-flow@alpha agile sprint-planning --estimate-stories --enforce-wip-limits
-npx claude-flow@alpha agile sprint-review --demo --collect-feedback
-npx claude-flow@alpha agile retrospective --identify-improvements
+# Sprint ceremonies with mandatory participation
+npx claude-flow@alpha agile sprint-planning \
+  --estimate-stories \
+  --enforce-wip-limits \
+  --capacity-planning \
+  --goal-setting \
+  --mandatory-participation
+  
+npx claude-flow@alpha agile sprint-review \
+  --demo \
+  --collect-feedback \
+  --assess-goal-achievement \
+  --update-backlog
+  
+npx claude-flow@alpha agile retrospective \
+  --identify-improvements \
+  --track-action-items \
+  --analyze-metrics \
+  --plan-process-changes
 
-# Job story management
-npx claude-flow@alpha agile story-create --template "When I [situation]..." --validate-invest
-npx claude-flow@alpha agile story-decompose --cooperative --validate-size
+# Job story management with templates
+npx claude-flow@alpha agile story-create \
+  --template "When I [situation], I want [motivation], so I can [outcome]" \
+  --validate-invest \
+  --estimate-complexity
+  
+npx claude-flow@alpha agile story-decompose \
+  --cooperative \
+  --research-first \
+  --validate-size \
+  --create-tasks
 
-# WIP limits monitoring
-npx claude-flow@alpha agile wip-status --goals --sprints --stories --tasks
-npx claude-flow@alpha agile wip-enforce --block-exceeding --alert-violations
+# User story mapping
+npx claude-flow@alpha agile story-map \
+  --create-user-journey \
+  --identify-activities \
+  --organize-stories \
+  --prioritize-value
+
+# Prioritization frameworks
+npx claude-flow@alpha agile prioritize \
+  --method "moscow" \
+  --stakeholder-input \
+  --validate-categories
+  
+npx claude-flow@alpha agile prioritize \
+  --method "wsjf" \
+  --calculate-scores \
+  --rank-features
+
+# WIP limits monitoring and enforcement
+npx claude-flow@alpha agile wip-status \
+  --goals \
+  --sprints \
+  --stories \
+  --tasks \
+  --show-violations
+  
+npx claude-flow@alpha agile wip-enforce \
+  --block-exceeding \
+  --alert-violations \
+  --auto-rebalance
+
+# Cross-agent collaboration
+npx claude-flow@alpha agile handoff \
+  --from "researcher" \
+  --to "hugo-developer" \
+  --story-id "JT-001" \
+  --validate-artifacts
+
+# Velocity tracking and metrics
+npx claude-flow@alpha agile velocity \
+  --calculate \
+  --update-trends \
+  --forecast-capacity \
+  --generate-dashboard
+  
+npx claude-flow@alpha agile burndown \
+  --update-daily \
+  --compare-ideal \
+  --alert-deviations
 ```
 
 ## 📚 AGILE KNOWLEDGE BASE INTEGRATION
@@ -1196,3 +2321,4 @@ Never save working files, text/mds and tests to the root folder.
 - spawn swarm: prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
 - always activate micro cycle/iterative/incremental sprints work for each big enough requests, and schedule refelctions at the end of each iterration/cycle.
 - ENFORCE: do not left bin/test, bin/dev, bin/build, bin/dtest to be broken after changes, if they fail fix or revert the changes!
+- Focus on one iteration in one time. WIP: 1 milestone, 1 sprint/iterratin/cycle, 1 job story, 1 task

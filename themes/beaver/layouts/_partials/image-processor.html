@@ -1,0 +1,20 @@
+{{ $src := .src }}
+{{ $formats := .formats }}
+{{ $sizes := .sizes }}
+{{ $data := newScratch }}
+
+{{ range $format := $formats }}
+  {{ range $index, $size := $sizes }}
+    {{ $resizedImage := $src }}
+
+    {{ if gt $src.Width $size }}
+      {{ $resizedImage = $src.Resize (printf "%dx %s" $size $format) }}
+    {{ else }}
+      {{ $resizedImage = $src.Resize (printf "%dx%d %s" $src.Width $src.Height $format) }}
+    {{ end }}
+
+    {{ $data.Set (printf "%s-%d" $format $index) $resizedImage }}
+  {{ end }}
+{{ end }}
+
+{{ return $data }}

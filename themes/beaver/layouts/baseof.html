@@ -10,33 +10,29 @@
       <title>{{ .Title }}</title>
     {{ end }}
 
+    {{ $description := "" }}
     {{ if eq .Section "tags" }}
-    {{ $tagName := lower .Title }}
-    {{ $tagData := index .Site.Data.tags $tagName }}
-
-    <meta name="description" content="{{ $tagData.description | default "" }}" />
-    <meta property="og:description" content="{{ $tagData.description | default "" }}" />
+      {{ $tagData := index .Site.Data.tags (lower .Title) }}
+      {{ $description = $tagData.description | default "" }}
     {{ else }}
-    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
-    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
+      {{ $description = .Description | default .Params.description | default "" }}
     {{ end }}
+    <meta name="description" content="{{ $description }}" />
+    <meta property="og:description" content="{{ $description }}" />
 
 
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
 
+    {{ $canonical := .Permalink }}
     {{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
-      {{ $canonical := .Permalink | replace "/tags/" "/blog/tags/" }}
-      <link rel="canonical" href="{{ $canonical }}" />
-    {{ else }}
-      <link rel="canonical" href="{{ .Permalink }}" />
+      {{ $canonical = $canonical | replace "/tags/" "/blog/tags/" }}
     {{ end }}
+    <link rel="canonical" href="{{ $canonical }}" />
 
 
-    {{ if and (eq .Section "blog") (eq .Kind "page") }}
-      <meta property="og:type" content="article">
-    {{ else }}
-      <meta property="og:type" content="website">
-    {{ end }}
+    {{ $ogType := "website" }}
+    {{ if and (eq .Section "blog") (eq .Kind "page") }}{{ $ogType = "article" }}{{ end }}
+    <meta property="og:type" content="{{ $ogType }}">
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="{{ .Title }} - JTWay, JetThoughts’ team blog" />
@@ -65,9 +61,11 @@
 
     {{ partialCached "page/favicons.html" . "favicons" }}
     {{ partial "page/analytics.html" . }}
-    <link rel="shortcut icon" href="{{ (resources.Get "/img/favicon/favicon.ico" | fingerprint).RelPermalink }}">
+    {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint }}
+    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}">
     <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-config" content="{{ (resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint).RelPermalink }}">
+    {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint }}
+    <meta name="msapplication-config" content="{{ $browserConfig.RelPermalink }}">
     <meta name="theme-color" content="#ffffff">
     <link rel="manifest" href="/manifest.json">
 
