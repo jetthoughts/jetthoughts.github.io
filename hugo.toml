@@ -23,7 +23,7 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
   writeStats = false
   noJSConfigInAssets = true
   noChmod = true
-useResourceCacheWhen = "never"
+useResourceCacheWhen = "always"
   [build.buildStats]
     enable = false
 

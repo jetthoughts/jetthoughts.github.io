@@ -116,7 +116,7 @@ class MobileSiteTest < ApplicationSystemTestCase
   end
 
   def wait_menu_to_render
-    sleep 1
+    assert_selector(".js-sub-menu-opener", visible: true, wait: 2)
   end
 
   def preload_all_images

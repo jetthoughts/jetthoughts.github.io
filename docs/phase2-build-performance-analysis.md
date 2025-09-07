@@ -24,7 +24,7 @@ This comprehensive analysis establishes the performance baseline for Phase 2 opt
 ```go
 {{- $CSS := slice
 (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
-(resources.Get "css/586.css")
+(resources.Get "css/services-layout.css")
 (resources.Get "css/style.css")
 // ... 8 CSS files total
 | resources.Concat "css/blog/single.css" | postCSS | minify | fingerprint "sha256" }}

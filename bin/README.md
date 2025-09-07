@@ -25,7 +25,7 @@ This directory contains utility scripts for the JetThoughts Hugo site.
 
 - `setup` - Initial project setup
 - `rake` - Ruby task runner
-- `npx` - NPM package runner (using bunx)
+- `bunx` - NPM package runner (using bunx)
 - `sync_with_devto` - Sync blog posts with dev.to
 
 ## Deprecated

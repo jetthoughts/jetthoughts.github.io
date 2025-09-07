@@ -20,7 +20,7 @@ function loadCSS(url) {
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
 
-{{ = slice
+{{- $nonCriticalCSS := slice
    (resources.Get "css/companies.css")
    (resources.Get "css/footer.css")
    (resources.Get "css/homepage.css")
