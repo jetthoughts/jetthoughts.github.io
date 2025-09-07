@@ -2,7 +2,14 @@ baseURL = "http://localhost:1313/"
 buildDrafts = true
 buildExpired = true
 
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
+
 [build]
 writeStats = false
 noJSConfigInAssets = true
 useResourceCacheWhen = "fallback"
+
+[imaging]
+quality = 70
+resampleFilter = "box"
+anchor = "smart"

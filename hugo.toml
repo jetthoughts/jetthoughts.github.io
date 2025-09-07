@@ -1,10 +1,16 @@
+# Production: Secure base URL with canonical configuration
 baseURL = "https://jetthoughts.com/"
+canonifyURLs = true
 languageCode = "en-us"
 title = "JetThoughts"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme = "beaver"
-enableGitInfo = false
-disableKinds = ["RSS", "sitemap", "robotsTXT"]
+# Production: Enable GitInfo for better caching
+enableGitInfo = true
+# Production: Environment-specific settings
+env = "production"
+# Production: Enable RSS, sitemap, robots.txt for SEO
+# disableKinds = ["RSS", "sitemap", "robotsTXT"]
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -20,30 +26,37 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
     tag = "tags"
 
 [build]
-  writeStats = false
+# Production: Enable build stats for optimization analysis
+writeStats = true
   noJSConfigInAssets = true
   noChmod = true
 useResourceCacheWhen = "always"
   [build.buildStats]
-    enable = false
+  enable = true
 
 [build.processing.css]
-  bundle = false
-  fingerprint = false
-  concatenate = false
-  integrity = false
+# Production: Enable CSS optimization and security
+bundle = true
+fingerprint = true
+concatenate = true
+integrity = true
 
 [build.processing.js]
-  bundle = false
-  fingerprint = false
+# Production: Enable JS optimization and security
+bundle = true
+fingerprint = true
 
 [imaging]
-  quality = 70
-  resampleFilter = "box"
+# Production: Optimize image quality and processing
+quality = 85
+resampleFilter = "lanczos"
   anchor = "smart"
 
 [minify]
+# Production: Enable comprehensive minification
   minifyOutput = true
+[minify.tdewolff.html]
+keepWhitespace = false
 
 [[redirects]]
   from = "/tags/:slug/"
@@ -51,13 +64,19 @@ useResourceCacheWhen = "always"
   status = 301
 
 [sitemap]
+# Production: Optimized sitemap configuration
   changeFreq = 'weekly'
   priority = 0.5
+filename = "sitemap.xml"
 
 [params]
+# Production: Enhanced security and performance monitoring
   performanceMonitoring = true
   googleAnalytics = "G-XXXXXXXXXX"
   privacyCompliant = true
+# Production: Security headers and policies
+security = true
+contentSecurityPolicy = true
   email="info@jetthoughts.com"
   phone="+1 754 216 9568"
   description="JetThoughts’s expert team of developers and consultants has helped clients launch highly tailored projects, and we’d love to help you, too."
@@ -304,10 +323,17 @@ email = "entry.939459641"
     maxAge = "24h"
   [caches.images]
     dir = ":cacheDir"
-    maxAge = "720h"
+  # Production: Extended cache for optimized images
+  maxAge = "8760h"
   [caches.getcsv]
     dir = ":cacheDir"
     maxAge = "24h"
   [caches.misc]
     dir = ":cacheDir"
     maxAge = "24h"
+
+# Production: Output formats for enhanced SEO and performance
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+page = ["HTML"]
+section = ["HTML", "RSS"]

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "JetThoughts Hugo site with comprehensive build validation and zero-defect configuration",
   "scripts": {
-    "build": "hugo --minify",
+    "build": "hugo --minify --gc --cleanDestinationDir",
+    "build:production": "hugo --minify --gc --cleanDestinationDir --environment production",
     "build:preview": "hugo --buildDrafts --buildFuture",
     "build:dev": "hugo -D -F --baseURL=\"http://localhost:1313\"",
     "serve": "hugo server -D -F --bind=0.0.0.0 --baseURL=\"http://localhost:1313\"",
