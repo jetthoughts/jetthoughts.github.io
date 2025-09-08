@@ -30,25 +30,45 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      # Tier 1: Dependencies cache (changes infrequently)
       - uses: actions/cache@v4
+        name: Cache dependencies
         with:
           path: |
             ~/.bun/install/cache
             node_modules
-          key: ${{ runner.os }}-bun-deps-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/bun.lockb', '**/package.json') }}
           restore-keys: |
-            ${{ runner.os }}-bun-deps-
-            ${{ runner.os }}-bun-
+            ${{ runner.os }}-deps-
 
       - uses: oven-sh/setup-bun@v2
       - run: bun install
 
+      # Tier 2: Hugo build cache (changes with any build-affecting file)
       - uses: actions/cache@v4
+        name: Cache Hugo build resources
         with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          path: |
+            ${{ env.HUGO_CACHEDIR }}
+            resources/_gen
+            .hugo_build.lock
+          key: ${{ runner.os }}-hugo-build-${{ hashFiles('hugo.toml', 'hugo.dev.toml', 'postcss.config.js', 'package.json', 'themes/**', 'layouts/**') }}
           restore-keys: |
-            ${{ runner.os }}-hugomod-
+            ${{ runner.os }}-hugo-build-
+            ${{ runner.os }}-hugo-
+
+      # Tier 3: Content and template cache (comprehensive file tracking)
+      - uses: actions/cache@v4
+        name: Cache Hugo content and assets
+        with:
+          path: |
+            public
+            hugo_stats.json
+          key: ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**', 'assets/**', 'static/**', 'layouts/**', 'themes/**/*.html', 'themes/**/*.scss', 'themes/**/*.js', 'hugo.toml', 'hugo.dev.toml', 'postcss.config.js') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**', 'assets/**', 'static/**') }}
+            ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**') }}
+            ${{ runner.os }}-hugo-content-
 
       - name: Build with Hugo
         run: |
