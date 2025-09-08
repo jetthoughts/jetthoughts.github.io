@@ -1,0 +1,39 @@
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-ujmtgq8xb530 fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="ujmtgq8xb530">
+   <div class="fl-row-content-wrap">
+      <div class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
+         {{ partial "svg" "theme/bottom-blue-curved-line" }}
+      </div>
+      <div class="fl-row-content fl-row-fixed-width fl-node-content">
+         <div class="fl-col-group fl-node-hupejrf4a28x fl-col-group-custom-width" data-node="hupejrf4a28x">
+            <div class="fl-col fl-node-dpmvbgkwihyl fl-col-small-custom-width fl-col-has-cols companies-logo blue-border" data-node="dpmvbgkwihyl">
+               <div class="fl-col-content fl-node-content">
+                  <div class="fl-col-group fl-node-zmc4burd8nga fl-col-group-nested fl-col-group-equal-height fl-col-group-align-top fl-col-group-custom-width" data-node="zmc4burd8nga">
+
+                      {{ range .Params.overview }}
+                      <div class="fl-col fl-node-ha6dj4z7r51f fl-col-small fl-col-small-custom-width" data-node="ha6dj4z7r51f">
+                          <div class="fl-col-content fl-node-content">
+                             <div class="fl-module fl-module-rich-text fl-node-wz23lfh6kojx jt-counter-number" data-node="wz23lfh6kojx">
+                                <div class="fl-module-content fl-node-content">
+                                   <div class="fl-rich-text">
+                                      <p><span class="counter-value active" data-count="{{ .value }}">{{ .value }}</span>+</p>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="fl-module fl-module-rich-text fl-node-guh2aqtf7z6s" data-node="guh2aqtf7z6s">
+                                <div class="fl-module-content fl-node-content">
+                                   <div class="fl-rich-text">
+                                      <p>{{ .name }}</p>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                      {{ end }}
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

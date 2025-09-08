@@ -1,9 +1,8 @@
 {{ define "header" }}
 {{ partial "header/critical/clients.html" . }}
 {{- $staticClientsCSS := slice (resources.Get "css/3082-layout.css") (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
-{{- $CSS := union $staticClientsCSS (slice (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)) | resources.Concat "css/clients.css" | postCSS  | minify | fingerprint | resources.PostProcess }}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $dynamicCSS := slice (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .) -}}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticClientsCSS $dynamicCSS) "page" "clients") }}
 {{ end }}
 
 {{ define "main" }}

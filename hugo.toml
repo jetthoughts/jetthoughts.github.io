@@ -29,6 +29,7 @@ env = "production"
 # Production: Enable build stats for optimization analysis
 writeStats = true
   noJSConfigInAssets = true
+  numWorkerMultiplier = 4
   noChmod = true
 useResourceCacheWhen = "always"
   [build.buildStats]
@@ -48,9 +49,9 @@ fingerprint = true
 
 [imaging]
 # Production: Optimize image quality and processing
-quality = 85
-resampleFilter = "lanczos"
-  anchor = "smart"
+quality = 80
+resampleFilter = "box"
+anchor = "smart"
 
 [minify]
 # Production: Enable comprehensive minification

@@ -2,10 +2,8 @@
 {{ partial "header/critical/services.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
-
-{{- $CSS := slice (resources.Get "css/737-layout.css") (resources.Get "css/component-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") $dynamicCSSUseCases | resources.Concat "css/services.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $staticServicesCSS := slice (resources.Get "css/737-layout.css") (resources.Get "css/component-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticServicesCSS (slice $dynamicCSS586 $dynamicCSSUseCases)) "page" "services") }}
 {{ end }}
 
 

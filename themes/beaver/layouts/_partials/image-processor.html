@@ -1,5 +1,5 @@
 {{ $src := .src }}
-{{ $formats := .formats }}
+{{ $formats := .formats | default (slice "webp" "jpeg") }}
 {{ $sizes := .sizes }}
 {{ $data := newScratch }}
 
