@@ -550,6 +550,127 @@ rollback_micro_change() {
 - **Guarantee working solution at any time**
 - **Prioritize radical KISS, YAGNI, Readability, Low Cognitive Load**
 
+## 🛡️ VERIFICATION-FIRST DEVELOPMENT (MANDATORY)
+
+### Prevent Regressions Through Verification
+
+**ALL development work MUST start with verification to prevent issues like the PostCSS bug that was "fixed" 3+ times.**
+
+#### Core Principle: Reproduce Before Fix
+**No work begins without a failing test that proves the issue exists.**
+
+### The Verification-First Protocol
+
+#### 1️⃣ START with Reproduction Test (MANDATORY)
+```javascript
+Task("Developer", `
+  BEFORE any work:
+  1. Create a test that reproduces the issue:
+     - Clear ALL caches: rm -rf public resources/_gen hugo_stats.json .cache
+     - Run in production mode: HUGO_ENV=production hugo --minify
+     - Test MUST fail to prove issue exists
+  2. Save the test command for re-verification
+  3. ONLY proceed to fix after test fails correctly
+`, "coder")
+```
+
+#### 2️⃣ Use claude-context for Comprehensive Search (MANDATORY)
+```javascript
+Task("Developer", `
+  SEARCH using claude-context (NOT grep):
+  1. Index if needed:
+     npx claude-context index_codebase --path "."
+  2. Search comprehensively:
+     npx claude-context search_code --query "[issue description]" --path "."
+  3. Create complete inventory of ALL affected files
+  4. Store inventory in memory:
+     npx claude-flow@alpha hooks memory-store --key "work/[TASK]/inventory" --value "[file_list]"
+  5. Report: "Found X files: [list all]" BEFORE starting work
+`, "researcher")
+```
+
+#### 3️⃣ Track Progress with Memory (MANDATORY)
+```javascript
+Task("Developer", `
+  TRACK all changes:
+  - After finding each file:
+    npx claude-flow@alpha hooks memory-store --key "work/[TASK]/[FILE]" --value "found"
+  - After fixing each file:
+    npx claude-flow@alpha hooks memory-store --key "work/[TASK]/[FILE]" --value "fixed"
+  - After verifying each file:
+    npx claude-flow@alpha hooks memory-store --key "work/[TASK]/[FILE]" --value "verified"
+  
+  Before claiming completion:
+    - Run reproduction test with empty cache
+    - Check all files are verified in memory
+    - ONLY claim success when test passes
+`, "coder")
+```
+
+### Simple Template for ALL Work
+
+**Use this simplified template for any development task:**
+
+```javascript
+Task("Verification-First Developer", `
+  Work on [TASK] using verification-first protocol:
+  
+  🧪 STEP 1: REPRODUCE
+  - Write test that FAILS showing the issue
+  - Clear cache: rm -rf public resources/_gen
+  - Test command: [specific test or build command]
+  - Confirm test fails before proceeding
+  
+  🔍 STEP 2: SEARCH with claude-context
+  - Use: npx claude-context search_code --query "[what to search]" --path "."
+  - Find ALL related files (not just first few)
+  - List all files found before starting
+  
+  🔧 STEP 3: FIX
+  - Fix each file systematically
+  - Run test after EACH change
+  - Track progress in memory
+  
+  ✅ STEP 4: VERIFY
+  - Clear all caches
+  - Run original test
+  - ONLY claim success when test passes
+`, "coder")
+```
+
+### Why This Prevents Regressions
+
+1. **Reproduction Test**: Ensures we understand the actual problem
+2. **claude-context Search**: Finds ALL instances, not just obvious ones
+3. **Memory Tracking**: Prevents forgetting what was checked
+4. **Empty Cache Testing**: Reveals hidden dependencies
+
+### Memory Pattern (Simplified)
+
+```yaml
+work/
+  [task_name]/
+    test_command     # The reproduction test
+    inventory        # All files found
+    [file_path]      # Status: found|fixed|verified
+```
+
+### Quick Verification Commands
+
+```bash
+# Search comprehensively
+npx claude-context search_code --query "PostCSS" --path "."
+
+# Track in memory
+npx claude-flow@alpha hooks memory-store --key "work/TASK/file.html" --value "fixed"
+
+# Check progress
+npx claude-flow@alpha hooks memory-search --pattern "work/TASK/*" --key "*"
+
+# Verify with empty cache
+rm -rf public resources/_gen && hugo --environment production
+```
+
 #### Enforcement Mechanisms
 
 ```bash
@@ -1079,6 +1200,177 @@ npx claude-flow@alpha scrum retrospective \
 - `/scripts` - Utility scripts
 - `/examples` - Example code
 
+## 🛡️ REGRESSION PREVENTION PROTOCOL (MANDATORY)
+
+### Critical Bug Fix Requirements
+
+**ALL bug fixes MUST follow this protocol to prevent regression:**
+
+#### 1️⃣ Comprehensive Search Before Fix
+- NEVER fix based on first few grep results
+- ALWAYS search with multiple patterns and variations
+- Create complete inventory BEFORE starting fixes
+- Use memory to track all found instances
+
+#### 2️⃣ Verification-First Development  
+- Write failing test FIRST
+- Test must simulate production environment
+- Clear all caches before testing
+- Only claim success when test passes
+
+#### 3️⃣ Progress Tracking
+- Use memory namespaces: fixes/{issue}/inventory
+- Track: total-found, attempted, completed, verified
+- Block success claims without 100% completion
+
+### 🔍 Comprehensive Search Protocol
+
+**MANDATORY SEARCH PATTERNS FOR ALL BUG FIXES:**
+
+```bash
+# Phase 1: Multi-Pattern Search (REQUIRED)
+comprehensive_search() {
+    local issue="$1"
+    local pattern="$2"
+    
+    echo "🔍 Comprehensive Search Protocol for: $issue"
+    
+    # Search with all variations
+    patterns=("$pattern" "${pattern,,}" "${pattern^^}" "${pattern^}")
+    file_types=("*.html" "*.js" "*.css" "*.md" "*.tsx" "*.ts" "*.json" "*.yaml" "*.yml")
+    
+    # Create complete inventory
+    find . -type f \( ${file_types[@]/#/-name } \) | \
+    xargs grep -l -E "(${patterns[0]}|${patterns[1]}|${patterns[2]}|${patterns[3]})" > /tmp/fix_inventory_$issue.txt
+    
+    local count=$(wc -l < /tmp/fix_inventory_$issue.txt)
+    echo "📋 Found $count files requiring fixes"
+    
+    # Store in memory
+    npx claude-flow@alpha hooks memory-store --key "fixes/$issue/total-found" --value "$count"
+    npx claude-flow@alpha hooks memory-store --key "fixes/$issue/inventory" --value "$(cat /tmp/fix_inventory_$issue.txt)"
+    
+    if [ "$count" -eq 0 ]; then
+        echo "⚠️ WARNING: No files found - pattern might be incorrect"
+        return 1
+    fi
+    
+    echo "✅ Comprehensive search complete: $count files identified"
+    return 0
+}
+```
+
+### 🧪 Verification-First Development Protocol
+
+**MANDATORY TEST CREATION BEFORE ANY FIX:**
+
+```bash
+# Phase 2: Create Failing Test (REQUIRED)
+create_verification_test() {
+    local issue="$1"
+    local description="$2"
+    
+    echo "🧪 Creating verification test for: $issue"
+    
+    # Test script must fail before fix
+    cat > /tmp/verify_test_$issue.sh << 'EOF'
+#!/bin/bash
+set -e
+
+# Clear all caches to simulate production
+rm -rf public resources/_gen .cache tmp
+
+# Production build test
+echo "🏗️ Testing production build..."
+hugo --environment production --minify
+
+# Additional validation can go here
+echo "✅ Production build successful"
+EOF
+
+    chmod +x /tmp/verify_test_$issue.sh
+    
+    # Test MUST fail before fix
+    if /tmp/verify_test_$issue.sh; then
+        echo "⚠️ WARNING: Test passed - issue might already be fixed or test incorrect"
+        echo "🔍 Please verify the issue exists and test is correct"
+        return 1
+    fi
+    
+    echo "✅ Verification test fails as expected - ready to proceed with fix"
+    npx claude-flow@alpha hooks memory-store --key "fixes/$issue/test-created" --value "true"
+    return 0
+}
+```
+
+### 📊 Progress Tracking Protocol
+
+**MANDATORY PROGRESS TRACKING:**
+
+```bash
+# Phase 3: Track Fix Progress (REQUIRED)
+track_fix_progress() {
+    local issue="$1"
+    local file="$2"
+    local status="$3"  # attempted|completed|verified
+    
+    # Update progress counters
+    local current=$(npx claude-flow@alpha hooks memory-retrieve --key "fixes/$issue/$status" 2>/dev/null || echo "0")
+    local new_count=$((current + 1))
+    
+    npx claude-flow@alpha hooks memory-store --key "fixes/$issue/$status" --value "$new_count"
+    
+    # Store file-specific progress
+    npx claude-flow@alpha hooks memory-store --key "fixes/$issue/files/$file" --value "$status"
+    
+    echo "📊 Progress Update: $file marked as $status"
+}
+
+# Validation before claiming success
+validate_fix_completion() {
+    local issue="$1"
+    
+    local total=$(npx claude-flow@alpha hooks memory-retrieve --key "fixes/$issue/total-found")
+    local verified=$(npx claude-flow@alpha hooks memory-retrieve --key "fixes/$issue/verified" 2>/dev/null || echo "0")
+    
+    if [ "$verified" != "$total" ]; then
+        echo "❌ BLOCKED: Cannot claim success"
+        echo "📊 Progress: $verified/$total files verified"
+        echo "🚫 Must fix ALL files before claiming success"
+        return 1
+    fi
+    
+    # Final verification test
+    if ! /tmp/verify_test_$issue.sh; then
+        echo "❌ BLOCKED: Final verification test failed"
+        return 1
+    fi
+    
+    echo "✅ All fixes verified successfully: $total/$total"
+    return 0
+}
+```
+
+### 🛡️ Anti-Regression Memory System
+
+**Memory namespace patterns for tracking fixes:**
+
+```bash
+# Anti-regression memory organization
+fixes/{issue_type}/
+├── total-found              # Total files requiring fixes
+├── inventory                 # Complete list of affected files  
+├── attempted                 # Number of files fix was attempted on
+├── completed                 # Number of files fix was completed on
+├── verified                  # Number of files where fix was verified
+├── test-created             # Whether verification test was created
+├── test-passed              # Whether final test passed
+└── files/
+    ├── file1.html           # Status: attempted|completed|verified
+    ├── file2.js             # Status: attempted|completed|verified
+    └── ...
+```
+
 ## 🛡️ ANTI-DUPLICATION ENFORCEMENT SYSTEM
 
 ### 🚫 CRITICAL: FILE DUPLICATION PREVENTION
@@ -1349,6 +1641,218 @@ cross_agent_memory_patterns:
 - **Prevention-First Coordination**: Proactive quality issue prevention in content and code
 - **Consistency Pattern Validation**: Automated pattern compliance checking for site consistency
 - **Technical Debt Elimination**: Real-time debt detection and resolution in site architecture
+
+## 🚨 BUG FIX ENFORCEMENT RULES
+
+### Automatic Failure Conditions
+
+**Agents will be automatically marked as FAILED if they:**
+
+1. **Claim fix without comprehensive search**
+   - Fixing based on `head -5` or partial results
+   - Not checking all file types and variations
+   - Missing files from inventory
+
+2. **Test with cache present**
+   - Not clearing resources/_gen before testing
+   - Using cached build results
+   - Testing different environment than production
+
+3. **Incomplete progress tracking**
+   - Not using memory to track fixes
+   - Claiming success with partial completion
+   - No verification test created
+
+### Bug Fix Agent Protocol
+
+**When spawning agents for bug fixes, ALWAYS include:**
+
+```javascript
+Task("Bug Fixer", `
+  Fix the [ISSUE] following MANDATORY protocol:
+  
+  1. COMPREHENSIVE SEARCH:
+     - Search ALL file types with ALL pattern variations
+     - Create complete inventory before starting
+     - Store inventory in memory: fixes/[ISSUE]/inventory
+  
+  2. VERIFICATION FIRST:
+     - Write test that FAILS before fix
+     - Test with: rm -rf cache && production build
+     - Only proceed when test fails correctly
+  
+  3. TRACK PROGRESS:
+     - Update memory after EACH file fixed
+     - Track: attempted, completed, verified
+     - Cannot claim success until 100% verified
+  
+  4. FINAL VALIDATION:
+     - Run verification test
+     - Check all files in inventory are fixed
+     - Verify with empty cache
+  
+  BLOCKED from claiming success without:
+  ✓ Complete inventory of ALL affected files
+  ✓ Verification test passing
+  ✓ Memory showing 100% completion
+`, "coder")
+```
+
+### Memory Enforcement
+
+**Check before allowing success claim:**
+
+```bash
+# Pre-success validation hook
+validate_bug_fix_success() {
+    local issue="$1"
+    
+    # Check comprehensive search was done
+    local total=$(npx claude-flow@alpha hooks memory-retrieve --key "fixes/$issue/total-found" 2>/dev/null)
+    if [ -z "$total" ] || [ "$total" -eq 0 ]; then
+        echo "❌ BLOCKED: No comprehensive search performed"
+        echo "🔍 Must run comprehensive_search function first"
+        return 1
+    fi
+    
+    # Check verification test was created
+    local test_created=$(npx claude-flow@alpha hooks memory-retrieve --key "fixes/$issue/test-created" 2>/dev/null)
+    if [ "$test_created" != "true" ]; then
+        echo "❌ BLOCKED: No verification test created"
+        echo "🧪 Must create failing verification test first"
+        return 1
+    fi
+    
+    # Check all files were verified
+    local verified=$(npx claude-flow@alpha hooks memory-retrieve --key "fixes/$issue/verified" 2>/dev/null || echo "0")
+    if [ "$verified" != "$total" ]; then
+        echo "❌ BLOCKED: Cannot claim success"
+        echo "📊 Progress: $verified/$total files verified"
+        echo "🚫 Must fix ALL files before claiming success"
+        return 1
+    fi
+    
+    # Final verification test
+    if [ ! -f "/tmp/verify_test_$issue.sh" ]; then
+        echo "❌ BLOCKED: Verification test script missing"
+        return 1
+    fi
+    
+    if ! /tmp/verify_test_$issue.sh; then
+        echo "❌ BLOCKED: Final verification test failed"
+        echo "🔧 Fix is incomplete - test still fails"
+        return 1
+    fi
+    
+    echo "✅ All validation gates passed - success claim approved"
+    return 0
+}
+```
+
+### Claude-Flow Hooks Configuration
+
+**Create regression prevention hooks:**
+
+```yaml
+# .claude-flow/hooks/regression-prevention.yaml
+hooks:
+  bug-fix-protocol:
+    pre-fix:
+      - name: comprehensive-search
+        required: true
+        script: |
+          echo "🔍 Running comprehensive search..."
+          if ! comprehensive_search "$ISSUE" "$PATTERN"; then
+            echo "❌ Comprehensive search failed"
+            exit 1
+          fi
+          
+      - name: create-verification-test
+        required: true
+        script: |
+          echo "🧪 Creating verification test..."
+          if ! create_verification_test "$ISSUE" "$DESCRIPTION"; then
+            echo "❌ Verification test creation failed"
+            exit 1
+          fi
+    
+    during-fix:
+      - name: track-progress
+        required: true
+        script: |
+          echo "📊 Tracking fix progress..."
+          track_fix_progress "$ISSUE" "$FILE" "$STATUS"
+          
+      - name: validate-each-fix
+        required: true
+        script: |
+          echo "✅ Validating individual fix..."
+          # Verify fix was applied correctly
+          if ! grep -q "$EXPECTED_RESULT" "$FILE"; then
+            echo "❌ Fix validation failed for $FILE"
+            exit 1
+          fi
+    
+    post-fix:
+      - name: validate-completion
+        required: true
+        script: |
+          echo "🎯 Validating fix completion..."
+          if ! validate_fix_completion "$ISSUE"; then
+            echo "❌ Fix completion validation failed"
+            exit 1
+          fi
+          
+      - name: cleanup
+        required: false
+        script: |
+          echo "🧹 Cleaning up temporary files..."
+          rm -f /tmp/fix_inventory_$ISSUE.txt
+          rm -f /tmp/verify_test_$ISSUE.sh
+```
+
+### Regression Prevention Examples
+
+**Example: PostCSS Bug Fix Protocol**
+
+```bash
+# Example: Fixing PostCSS references
+ISSUE="postcss-references"
+PATTERN="postcss"
+
+# 1. Comprehensive Search (MANDATORY)
+comprehensive_search "$ISSUE" "$PATTERN"
+# Result: Found 9 files (not just 4!)
+
+# 2. Create Verification Test (MANDATORY)
+create_verification_test "$ISSUE" "PostCSS references causing build failures"
+# Result: Test fails as expected
+
+# 3. Fix Each File with Progress Tracking
+for file in $(cat /tmp/fix_inventory_$ISSUE.txt); do
+    echo "🔧 Fixing: $file"
+    
+    # Apply fix
+    sed -i 's/postcss/PostCSS/g' "$file"
+    track_fix_progress "$ISSUE" "$file" "attempted"
+    
+    # Verify fix
+    if grep -q "PostCSS" "$file" && ! grep -q "postcss" "$file"; then
+        track_fix_progress "$ISSUE" "$file" "completed"
+        
+        # Test still fails? Mark as verified when all done
+        track_fix_progress "$ISSUE" "$file" "verified"
+        echo "✅ Fixed: $file"
+    else
+        echo "❌ Fix failed: $file"
+        exit 1
+    fi
+done
+
+# 4. Final Validation (MANDATORY)
+validate_fix_completion "$ISSUE"
+# Result: All 9 files fixed and test passes
+```
 
 ## 📋 Agent Coordination Protocol
 
@@ -2323,3 +2827,4 @@ Never save working files, text/mds and tests to the root folder.
 - ENFORCE: do not left bin/test, bin/dev, bin/build, bin/dtest to be broken after changes, if they fail fix or revert the changes!
 - Focus on one iteration in one time. WIP: 1 milestone, 1 sprint/iterratin/cycle, 1 job story, 1 task
 - do not left one time verification scripts just to test one regression, or it should be minitests or it should be removed after task completed
+- do not add custom scripts hooks for agents and use only native claude and calude-flow npx invocations.
