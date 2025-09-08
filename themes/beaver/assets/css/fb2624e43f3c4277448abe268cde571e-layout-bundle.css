@@ -1751,7 +1751,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  border-bottom-width: px;
+  border-bottom-width: 0px;
   border-color: ;
   background-color: ;
   color: #121212;
@@ -1986,7 +1986,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
+    border-bottom-width: 0px;
     background-color: ;
   }
 
@@ -2020,7 +2020,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
+    border-bottom-width: 0px;
     background-color: ;
   }
 

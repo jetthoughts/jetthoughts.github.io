@@ -2133,7 +2133,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   .gform_page_footer
   .button {
   width: auto;
-  background-color:;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 25px;
@@ -2155,7 +2154,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   .gform_wrapper
   .gform_page_footer
   .button:hover {
-  background:;
 }
 
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield input[type="file"] {

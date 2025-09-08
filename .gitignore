@@ -63,10 +63,10 @@ claude-flow.ps1
 hive-mind-prompt-*.txt
 
 modules/
-node_modules/
 tmp/
 hive/
 swarm/
 validation-build/
-public*test/
 lighthouse-*/
+public-test*/
+*.bak

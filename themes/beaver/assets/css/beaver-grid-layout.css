@@ -1978,7 +1978,6 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-left-width: 0px;
   border-right-width: 0px;
   border-color:;
-  background-color:;
   color: #121212;
 }
 
@@ -2115,9 +2114,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  border-bottom-width: px;
   border-color:;
-  background-color:;
   color: #121212;
 }
 
@@ -2142,7 +2139,6 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus,
 .fl-node-menu .sub-menu > li.current-menu-item > a,
 .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
-  background-color:;
   color: #1a8cff;
 }
 
@@ -2456,8 +2452,6 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
   .fl-node-menu .sub-menu > li > a,
   .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
-    background-color:;
   }
 
   .fl-node-menu .sub-menu {
@@ -2492,8 +2486,6 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 
   .fl-node-menu .sub-menu > li > a,
   .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
-    background-color:;
   }
 
   .fl-node-menu .pp-advanced-menu-mobile {
@@ -5796,7 +5788,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   .gform_page_footer
   .button {
   width: auto;
-  background-color:;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 25px;
