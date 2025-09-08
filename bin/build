@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 
-#hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn "$@"
+set -e
+
+if [ -n "$REBUILD" ]; then
+  bin/dc build
+fi
+
 bin/docked hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn "$@"

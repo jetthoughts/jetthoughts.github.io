@@ -14,7 +14,7 @@
                 <div class="headline">Services</div>
                 <ul>
                     {{ range .Site.Menus.services }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ .URL }}">{{ .Name | safeHTML }}</a></li>
                     {{ end }}
                 </ul>
             </nav>
@@ -22,7 +22,7 @@
                 <div class="headline">Company</div>
                 <ul>
                     {{ range .Site.Menus.company }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ .URL }}">{{ .Name | safeHTML }}</a></li>
                     {{ end }}
                 </ul>
             </nav>
@@ -30,7 +30,7 @@
                 <div class="headline">Resources</div>
                 <ul>
                     {{ range .Site.Menus.resources }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    <li><a href="{{ .URL }}">{{ .Name | safeHTML }}</a></li>
                     {{ end }}
                 </ul>
             </nav>

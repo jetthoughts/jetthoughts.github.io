@@ -28,13 +28,16 @@ ENV \
     BUNDLE_RETRY=3 \
     BUNDLE_PATH=/opt/bundle \
     DEBUG_COLORS=true \
+    DOCKER=true \
+    ENABLE_SELENIUM_FIXES=true \
     LANG=C.UTF-8 \
     NODE_ENV=production \
     OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
     PATH="/app/bin:/opt/bundle/bin:/usr/local/bin/:$PATH" \
     PRECOMPILED_ASSETS=true \
     RUBY_YJIT_ENABLE=1 \
-    TEST_SERVER_PORT=1314
+    TEST_SERVER_PORT=1314 \
+    DISPLAY=:99
 
 # Upgrade system
 RUN apk update --no-cache && apk upgrade --no-cache
@@ -65,7 +68,7 @@ COPY --from=install /temp/dev/node_modules ./node_modules
 RUN git config --global --add safe.directory /app
 
 # To run browser tests need to run Xvfb
-RUN	printf '#!/bin/sh\nset -e\necho "Running bundle check..."\nbundle check || bundle install\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 &\nXVFB_PID=$!\necho "Executing command: $@"...\nexec "$@"\nkill $XVFB_PID\n' > /docker-entrypoint.sh && \
+RUN	printf '#!/bin/sh\nset -e\necho "Running bundle check..."\nbundle check || bundle install\necho "Checking node_modules..."\nif [ ! -d "/app/node_modules" ] || [ -z "$(ls -A /app/node_modules)" ]; then\n  echo "Installing Node.js dependencies..."\n  bun install\nfi\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 &\nXVFB_PID=$!\necho "Executing command: $@"...\nexec "$@"\nkill $XVFB_PID\n' > /docker-entrypoint.sh && \
 	chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

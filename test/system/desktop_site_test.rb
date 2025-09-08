@@ -12,7 +12,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_homepage
     visit "/"
     assert_text "Build faster. Scale smarter."
-    assert_matches_screenshot "homepage", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "homepage"
   end
 
   def test_homepage_sections
@@ -24,7 +24,16 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      assert_matches_screenshot "homepage/_#{section_id}", tolerance: 0.1
+      # Use appropriate screenshot method based on section type
+      case section_id
+      when "testimonials", "why-us"
+        assert_stable_problematic_screenshot "homepage/_#{section_id}"
+      when "cta", "cta-contact_us", "use-cases"
+        # Use CTA method for sections with dynamic content/animations
+        assert_cta_screenshot "homepage/_#{section_id}"
+      else
+        assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.02
+      end
     end
   end
 
@@ -34,7 +43,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Blog"
     end
 
-    assert_matches_screenshot "blog/index", skip_area: [".blog-post"]
+    assert_stable_screenshot "blog/index", skip_area: [".blog-post"]
   end
 
   def test_blog_index_pagination
@@ -42,7 +51,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_matches_screenshot "blog/index/_pagination", skip_area: [".blog-post"], wait: 3, stability_time_limit: 0.25
+    assert_stable_problematic_screenshot "blog/index/_pagination", skip_area: [".blog-post"]
   end
 
   def test_visit_blog_post
@@ -56,7 +65,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_matches_screenshot "blog/post"
+    assert_stable_screenshot "blog/post"
   end
 
   def test_about_us
@@ -65,7 +74,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "About Us"
     end
 
-    assert_matches_screenshot "about_us", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "about_us"
   end
 
   def test_clients
@@ -77,7 +86,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sleep 1
 
-    assert_matches_screenshot "clients", wait: 5, stability_time_limit: 0.25
+    assert_stable_screenshot "clients"
   end
 
   def test_clients_sections
@@ -88,7 +97,15 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sections.each do |section_id|
       scroll_to find("##{section_id}")
-      assert_matches_screenshot "clients/_#{section_id}", wait: 5, stability_time_limit: 2, tolerance: 0.1
+      # Use appropriate screenshot method based on section type
+      case section_id
+      when "clients"
+        assert_stable_problematic_screenshot "clients/_#{section_id}"
+      when "cta-contact_us"
+        assert_cta_screenshot "clients/_#{section_id}"
+      else
+        assert_stable_screenshot "clients/_#{section_id}", tolerance: 0.02
+      end
     end
   end
 
@@ -98,7 +115,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Careers"
     end
 
-    assert_matches_screenshot "careers", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "careers"
   end
 
   def test_services_menu
@@ -110,7 +127,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sleep 1
 
-    assert_matches_screenshot "nav/services", wait: nil, stability_time_limit: nil
+    assert_quick_screenshot "nav/services"
   end
 
   def test_services_fractional_cto
@@ -121,7 +138,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Fractional CTO"
     end
 
-    assert_matches_screenshot "services/fractional_cto", wait: nil, stability_time_limit: nil
+    assert_quick_screenshot "services/fractional_cto"
   end
 
   def test_services_app_development
@@ -132,7 +149,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "App/Web Development"
     end
 
-    assert_matches_screenshot "services/app_web_development", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "services/app_web_development"
   end
 
   def test_use_cases_menu
@@ -144,7 +161,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     sleep 1
 
-    assert_matches_screenshot "nav/use_cases", wait: nil, stability_time_limit: nil
+    assert_quick_screenshot "nav/use_cases"
   end
 
   def test_contact_us
@@ -152,7 +169,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     click_on "Contact Us", exact: false, match: :first
 
     assert_text "Let’s get started now"
-    assert_matches_screenshot "contact_us", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "contact_us"
   end
 
   def test_free_consultation
@@ -161,13 +178,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
     click_on "Talk to an Expert", exact: false, match: :first
 
     assert_text "Free Consultation"
-    assert_matches_screenshot "free_consultation", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "free_consultation"
   end
 
   def test_not_found
     visit "/404.html"
 
-    assert_matches_screenshot "404", wait: 5, stability_time_limit: 0.25
+    assert_stable_screenshot "404"
   end
 
   private

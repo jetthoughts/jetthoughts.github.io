@@ -2,6 +2,7 @@
 
 require "selenium-webdriver"
 
+# Essential Chrome arguments only - fail fast if any cause issues
 CHROME_ARGS = {
   "allow-running-insecure-content" => nil,
   "autoplay-policy" => "user-gesture-required",
@@ -20,6 +21,7 @@ CHROME_ARGS = {
   "disable-domain-reliability" => nil,
   "disable-extensions" => nil,
   "disable-features" => "TranslateUI,BlinkGenPropertyTrees,LazyImageLoading",
+  "disable-gpu" => nil,
   "disable-hang-monitor" => nil,
   "disable-infobars" => nil,
   "disable-ipc-flooding-protection" => nil,
@@ -48,10 +50,6 @@ CHROME_ARGS = {
   "test-type" => nil,
   "use-mock-keychain" => nil
 }
-
-if Gem.win_platform?
-  CHROME_ARGS["disable-gpu"] = nil
-end
 
 def build_options_for(opts)
   options = Selenium::WebDriver::Chrome::Options.new

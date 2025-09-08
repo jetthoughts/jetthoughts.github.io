@@ -9,7 +9,7 @@
 
       <li class="item {{if $active }}-active{{ end }}">
         <span class="arrow js-sub-menu-opener"></span>
-        <a href="{{ .URL }}" class="link">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="link">{{ .Name | safeHTML }}</a>
 
         <ul class="sub-menu">
           {{ range .Children }}
@@ -20,8 +20,8 @@
 
                 </div>
                 <div class="sub-holder">
-                  <div class="sub-name">{{ .Title }}</div>
-                  <div class="sub-text">{{ .Name }}</div>
+                  <div class="sub-name">{{ .Title | safeHTML }}</div>
+                  <div class="sub-text">{{ .Name | safeHTML }}</div>
                 </div>
               </a>
             </li>
@@ -33,9 +33,9 @@
     {{ else }}
       <li class="item {{if $active }}-active{{ end }}">
         {{ if eq .URL "/contact-us/" }}
-          <a href="{{ .URL }}" class="btn btn-primary">{{ .Name }}</a>
+          <a href="{{ .URL }}" class="btn btn-primary">{{ .Name | safeHTML }}</a>
         {{ else }}
-          <a href="{{ .URL }}" class="link">{{ .Name }}</a>
+          <a href="{{ .URL }}" class="link">{{ .Name | safeHTML }}</a>
         {{ end }}
       </li>
     {{ end }}

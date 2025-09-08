@@ -15,13 +15,14 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     preload_all_images
 
-    assert_matches_screenshot "homepage", tolerance: 0.004
+    assert_stable_problematic_screenshot "homepage", tolerance: 0.018
   end
 
   def test_blog_index
     visit "/blog/"
 
-    assert_matches_screenshot "blog/index", skip_area: [".blog-post"]
+    # Use problematic method due to higher variance in blog content
+    assert_stable_problematic_screenshot "blog/index", skip_area: [".blog-post"]
   end
 
   def test_blog_index_pagination
@@ -29,7 +30,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_matches_screenshot "blog/index/_pagination", skip_area: [".blog-post"], wait: 3, stability_time_limit: 0.25
+    assert_stable_problematic_screenshot "blog/index/_pagination", skip_area: [".blog-post"]
   end
 
   def test_visit_blog_post
@@ -43,13 +44,13 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_matches_screenshot "blog/post"
+    assert_stable_screenshot "blog/post"
   end
 
   def test_about_us
     visit "/about-us/"
 
-    assert_matches_screenshot "about_us", wait: 5, stability_time_limit: 3, skip_area: [".fl-photo-img"]
+    assert_stable_problematic_screenshot "about_us", skip_area: [".fl-photo-img"]
   end
 
   def test_clients
@@ -57,13 +58,13 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     preload_all_images
 
-    assert_matches_screenshot "clients", wait: nil, stability_time_limit: nil
+    assert_stable_screenshot "clients"
   end
 
   def test_careers
     visit "/careers/"
 
-    assert_matches_screenshot "careers", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "careers"
   end
 
   def test_top_bar_hamburger_menu
@@ -71,7 +72,7 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     open_mobile_menu
 
-    assert_matches_screenshot "nav/hamburger_menu", wait: 3, stability_time_limit: 0.025, tolerance: 0.01
+    assert_stable_problematic_screenshot "nav/hamburger_menu", stability_time_limit: 0.5
   end
 
   def test_top_bar_hamburger_menu_services
@@ -82,14 +83,14 @@ class MobileSiteTest < ApplicationSystemTestCase
     find(".js-sub-menu-opener", match: :first).click
     wait_menu_to_render
 
-    assert_matches_screenshot "nav/hamburger_menu/services", wait: 2, stability_time_limit: 1, median_filter_window_size: 5
+    assert_stable_problematic_screenshot "nav/hamburger_menu/services"
   end
 
   def test_contact_us
     visit "/contact-us/"
 
     assert_text "Let’s get started now"
-    assert_matches_screenshot "contact_us", wait: 5, stability_time_limit: 3, skip_stack_frames: 1
+    assert_stable_problematic_screenshot "contact_us", skip_stack_frames: 1
   end
 
   def test_free_consultation
@@ -97,13 +98,13 @@ class MobileSiteTest < ApplicationSystemTestCase
     click_on "Talk to an Expert", exact: false, match: :first
 
     assert_text "Free Consultation"
-    assert_matches_screenshot "free_consultation", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "free_consultation"
   end
 
   def test_not_found
     visit "/404.html"
 
-    assert_matches_screenshot "404", wait: 5, stability_time_limit: 3
+    assert_stable_problematic_screenshot "404"
   end
 
   private

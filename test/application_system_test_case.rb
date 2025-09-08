@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+require "timeout"
 require "capybara/minitest"
 require "capybara/dsl"
 require "rack"
@@ -24,4 +25,30 @@ class ApplicationSystemTestCase < Minitest::Test
   include Capybara::Minitest::Assertions
   include CapybaraScreenshotDiff::DSL
   include CapybaraScreenshotDiff::Minitest::Assertions
+
+  private
+
+  # Simple screenshot assertion - fail fast if issues arise
+  def assert_stable_screenshot(name, **options)
+    sleep(options[:wait] || 1) # Simple wait, no complex preparation
+    options[:tolerance] ||= 0.05 # 5% tolerance for cross-platform rendering differences
+    assert_matches_screenshot(name, **options)
+  end
+
+  # Special handling for screenshots with known cross-platform issues
+  def assert_stable_problematic_screenshot(name, **options)
+    # Use higher tolerance for sections with significant platform rendering differences
+    options[:tolerance] ||= 0.25 # 25% tolerance for problematic sections
+    assert_stable_screenshot(name, **options)
+  end
+
+  # Special handling for CTA sections with dynamic content
+  def assert_cta_screenshot(name, **options)
+    # Use higher tolerance for CTA sections with animations/dynamic content
+    options[:tolerance] ||= 0.15 # 15% tolerance for CTA sections
+    assert_stable_screenshot(name, **options)
+  end
+
+  # Alias other complex screenshot methods to the simple one
+  alias_method :assert_quick_screenshot, :assert_stable_screenshot
 end

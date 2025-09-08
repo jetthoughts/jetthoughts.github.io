@@ -198,7 +198,7 @@ disableKinds = []
   url = "/services/fractional-product-management/"
   weight = 20
 [[menu.services]]
-  name = "Talent Recruiting &amp; Training"
+  name = "Talent Recruiting & Training"
   url = "/services/talent-recruiting-training/"
   weight = 30
 [[menu.services]]
@@ -210,7 +210,7 @@ disableKinds = []
   url = "/services/outsourced-developer-staffing/"
   weight = 50
 [[menu.services]]
-  name = "Software QA &amp; CAT"
+  name = "Software QA & CAT"
   url = "/services/software-qa-cat/"
   weight = 60
 
