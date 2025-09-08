@@ -1,8 +1,15 @@
+const fs = require("fs");
+
 const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./hugo_stats.json"],
+  content: fs.existsSync("./hugo_stats.json") ? ["./hugo_stats.json"] : [],
   defaultExtractor: (content) => {
-    const els = JSON.parse(content).htmlElements
-    return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])]
+    if (!content) return [];
+    try {
+      const els = JSON.parse(content).htmlElements;
+      return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])];
+    } catch (e) {
+      return [];
+    }
   },
   safelist: {
     standard: [
