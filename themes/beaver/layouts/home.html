@@ -20,7 +20,7 @@ function loadCSS(url) {
 
 {{- $staticCSS := slice (resources.Get "css/companies.css") (resources.Get "css/footer.css") (resources.Get "css/homepage.css") (resources.Get "css/590-layout.css") (resources.Get "css/theme-main.css") (resources.Get "css/style.css") (resources.Get "css/services-layout.css") (resources.Get "css/technologies.css") }}
 {{- $nonCriticalCSS := union $staticCSS $dynamicStyles
-| resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
+| resources.Concat "css/_non_critical_homepage.css" | minify | fingerprint | resources.PostProcess
 }}
 
 document.addEventListener("DOMContentLoaded", function () {

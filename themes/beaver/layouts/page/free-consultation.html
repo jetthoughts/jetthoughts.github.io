@@ -2,7 +2,7 @@
 {{ partial "header/critical/free-consultation.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $CSS := slice (resources.Get "css/homepage-layout.css") (resources.Get "css/component-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/free-consultation.css"
-| postCSS | minify | fingerprint | resources.PostProcess}}
+| minify | fingerprint | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}

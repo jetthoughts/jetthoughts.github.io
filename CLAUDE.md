@@ -2322,3 +2322,4 @@ Never save working files, text/mds and tests to the root folder.
 - always activate micro cycle/iterative/incremental sprints work for each big enough requests, and schedule refelctions at the end of each iterration/cycle.
 - ENFORCE: do not left bin/test, bin/dev, bin/build, bin/dtest to be broken after changes, if they fail fix or revert the changes!
 - Focus on one iteration in one time. WIP: 1 milestone, 1 sprint/iterratin/cycle, 1 job story, 1 task
+- do not left one time verification scripts just to test one regression, or it should be minitests or it should be removed after task completed
