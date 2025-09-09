@@ -8,6 +8,8 @@ x-backend: &backend
       - jetthoughts.com-test:1.0.0
     args:
       BUILDKIT_INLINE_CACHE: 1
+    cache_to:
+      - type=inline
   stdin_open: true
   tty: true
   volumes:
@@ -73,11 +75,12 @@ services:
           memory: '1.5GB'
     environment:
       PARALLEL_WORKERS: 4  # Enable parallel testing
-      CHROME_FLAGS: "--disable-gpu --disable-dev-shm-usage --no-sandbox"
+      CHROME_FLAGS: "--disable-gpu --no-sandbox" # "--disable-gpu --disable-dev-shm-usage --no-sandbox"
 
     depends_on:
       t-setup:
         condition: service_completed_successfully
+    user: "1000:1000"
 volumes:
   bundle:
     driver: local

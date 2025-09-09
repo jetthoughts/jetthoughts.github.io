@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -e
+set -euo pipefail
 
 rm -rf docker_test_output || true
 bin/docked hugo --destination docker_test_output --baseURL http://localhost:1314 --environment production --forceSyncStatic --logLevel warn

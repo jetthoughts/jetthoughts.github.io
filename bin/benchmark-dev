@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-echo "=== Development Server Performance Benchmark ==="
-echo "1. Docker-based development server:"
-time timeout 5s bin/docked hugo server --timeout 3s >/dev/null 2>&1 || true
-echo "2. Optimized native development server:"
-time timeout 5s bin/dev --timeout 3s >/dev/null 2>&1 || true
-echo "=== Performance Analysis Complete ==="

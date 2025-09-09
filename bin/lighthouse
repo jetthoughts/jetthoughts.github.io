@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 # Lighthouse Performance Benchmark Script
 # Tests complex pages against 90+ threshold requirements

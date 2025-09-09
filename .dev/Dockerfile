@@ -45,7 +45,12 @@ ENV \
     TEST_SERVER_PORT=1314 \
     DISPLAY=:99 \
     HUGO_CACHEDIR=/tmp/hugo_cache \
-    HUGO_NUMWORKERSMULTIPLIER=4
+    HUGO_NUMWORKERSMULTIPLIER=4,
+    MALLOC_ARENA_MAX=2,
+    RUBY_GC_HEAP_INIT_SLOTS=600000,
+    RUBY_GC_HEAP_FREE_SLOTS=600000,
+    RUBY_GC_HEAP_GROWTH_FACTOR=1.25,
+    RUBY_GC_HEAP_GROWTH_MAX_SLOTS=300000
 
 # Install system dependencies with cache mount
 RUN --mount=type=cache,target=/var/cache/apk \
