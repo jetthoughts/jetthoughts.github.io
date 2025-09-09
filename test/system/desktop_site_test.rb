@@ -59,8 +59,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
     within_top_bar { click_on "Blog" }
 
     within(".fl-heading") { assert_text "Blog" }
-    assert_selector(".blog a.link", visible: true, wait: 5)
-    first(".blog a.link").click
+    # Replace assert_selector + first().click with single find().click
+    find(".blog a.link", match: :first, visible: true, wait: 5).click
   end
 
   def test_blog_post
@@ -164,16 +164,20 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_contact_us
     visit "/"
-    click_on "Contact Us", exact: false, match: :first, wait: 5
+    # Add more specific scoping for Contact Us button
+    within(".navigation") do
+      click_on "Contact Us", exact: false, wait: 5
+    end
 
-    assert_text "Let’s get started now"
+    assert_text "Let's get started now"
     assert_stable_problematic_screenshot "contact_us"
   end
 
   def test_free_consultation
     visit "/"
 
-    click_on "Talk to an Expert", exact: false, match: :first, wait: 5
+    # Add more specific scoping for Talk to an Expert button
+    find("a", text: "Talk to an Expert", match: :first, wait: 5).click
 
     assert_text "Free Consultation"
     assert_stable_problematic_screenshot "free_consultation"

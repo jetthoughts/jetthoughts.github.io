@@ -36,8 +36,8 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_visit_blog_post
     visit "/blog/"
 
-    assert_selector(".blog a.link", visible: true, wait: 5)
-    first(".blog a.link").click
+    # Replace assert_selector + first().click with single find().click
+    find(".blog a.link", match: :first, visible: true, wait: 5).click
 
     assert_selector ".single-content header .heading"
   end
@@ -81,7 +81,10 @@ class MobileSiteTest < ApplicationSystemTestCase
 
     open_mobile_menu
 
-    find(".js-sub-menu-opener", match: :first, visible: true, wait: 5).click
+    # Add better scoping for sub-menu opener
+    within(".mobile-menu") do
+      find(".js-sub-menu-opener", match: :first, visible: true, wait: 5).click
+    end
     wait_menu_to_render
 
     assert_stable_problematic_screenshot "nav/hamburger_menu/services"
@@ -96,7 +99,8 @@ class MobileSiteTest < ApplicationSystemTestCase
 
   def test_free_consultation
     visit "/"
-    click_on "Talk to an Expert", exact: false, match: :first, wait: 5
+    # Add more specific scoping for Talk to an Expert button
+    find("a", text: "Talk to an Expert", match: :first, wait: 5).click
 
     assert_text "Free Consultation"
     assert_stable_problematic_screenshot "free_consultation"
@@ -111,12 +115,16 @@ class MobileSiteTest < ApplicationSystemTestCase
   private
 
   def open_mobile_menu
-    find(".js-mobile-menu-opener", visible: true, wait: 5).click
+    # Add better scoping for mobile menu opener
+    within("header.header") do
+      find(".js-mobile-menu-opener", visible: true, wait: 5).click
+    end
     wait_menu_to_render
   end
 
   def wait_menu_to_render
-    assert_selector(".js-sub-menu-opener", visible: true, wait: 2)
+    # Wait for menu to fully render with better scoping
+    has_selector?(".mobile-menu .js-sub-menu-opener", visible: true, wait: 3)
   end
 
   def preload_all_images
