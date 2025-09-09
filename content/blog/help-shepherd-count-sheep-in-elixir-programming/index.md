@@ -47,7 +47,7 @@ The correct answer would be 17.
 
 defmodule Shepherd do
   def count_sheeps(sheeps) do
-    # Only true/false values can be presented in the sheeps list
+    # Only true/false values can appear in the sheep list.
   end
 end
 ```
