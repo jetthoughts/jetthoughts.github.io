@@ -14,7 +14,7 @@ $dynamicCSS586
 (resources.Get "css/theme-main.css")
 (resources.Get "css/single-post.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/blog.css" | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/blog.css" | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint }}

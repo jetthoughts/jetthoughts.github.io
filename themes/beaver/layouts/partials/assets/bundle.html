@@ -11,7 +11,9 @@
 {{/* Create bundle name and process CSS */}}
 {{- if $cssFiles -}}
   {{- $bundleName := printf "css/bundle-%s.css" $page -}}
-  {{- $css := $cssFiles | resources.Concat $bundleName | minify | fingerprint | resources.PostProcess -}}
   
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" media="{{ $media }}" />
+  {{/* Enhanced asset processing with integrity and cache optimization */}}
+  {{- $css := $cssFiles | resources.Concat $bundleName | minify | fingerprint "sha384" | resources.PostProcess -}}
+  
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous" media="{{ $media }}" />
 {{- end -}}

@@ -28,12 +28,21 @@ env = "production"
 [build]
 # Production: Enable build stats for optimization analysis
 writeStats = true
-  noJSConfigInAssets = true
-  numWorkerMultiplier = 4
-  noChmod = true
+noJSConfigInAssets = true
+numWorkerMultiplier = 4
+noChmod = true
 useResourceCacheWhen = "always"
+
+# Module configuration for asset mounting
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "themes/beaver/assets"
+    target = "assets"
   [build.buildStats]
-  enable = true
+    enable = true
 
 [build.processing.css]
 # Production: Enable CSS optimization and security

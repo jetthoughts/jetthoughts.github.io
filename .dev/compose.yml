@@ -4,37 +4,45 @@ x-backend: &backend
   build:
     context: ../
     dockerfile: ./.dev/Dockerfile
+    cache_from:
+      - jetthoughts.com-test:1.0.0
+    args:
+      BUILDKIT_INLINE_CACHE: 1
   stdin_open: true
   tty: true
   volumes:
-    - ..:/app:cached
+    - ..:/app:delegated  # Better performance on macOS
+    - /app/node_modules  # Exclude node_modules from sync
+    - bundle:/opt/bundle  # Persistent bundle cache
     - history:/usr/local/hist
   environment:
     HISTFILE: /usr/local/hist/.bash_history
     IRB_HISTFILE: /usr/local/hist/.irb_history
     HUGO_CACHEDIR: /tmp/hugo_cache
+    BUNDLE_JOBS: 4
+    BUNDLE_PATH: /opt/bundle
 
 services:
-  cache-init:
-    image: alpine:latest
-    volumes:
-      - hugo_cache:/tmp/hugo_cache
-    command: sh -c "chown -R 1000:1000 /tmp/hugo_cache && chmod -R 755 /tmp/hugo_cache"
 
   hugo: &hugo
     image: hugomods/hugo:exts-non-root-0.149.1
     stdin_open: true
     tty: true
     volumes:
-      - ..:/src:cached
+      - ..:/src:delegated  # Better performance
       - hugo_cache:/tmp/hugo_cache
+      - /src/public  # Exclude generated files
+      - /src/resources  # Exclude resources
     ports:
       - '1313:1313'
-    command: hugo server --bind 0.0.0.0
+    command: hugo server --bind 0.0.0.0 --disableFastRender --gc
     environment:
       - HUGO_CACHEDIR=/tmp/hugo_cache
-    depends_on:
-      - cache-init
+      - HUGO_NUMWORKERSMULTIPLIER=4  # Parallel processing
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
 
   sh:
     <<: *backend
@@ -42,29 +50,44 @@ services:
 
   t-setup:
     <<: *hugo
-    command: hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn
+    command: hugo --minify --environment production --gc --cleanDestinationDir --logLevel warn
     environment:
       - HUGO_CACHEDIR=/tmp/hugo_cache
-    depends_on:
-      - cache-init
+      - HUGO_NUMWORKERSMULTIPLIER=4
+    volumes:
+      - ..:/src:delegated
+      - hugo_cache:/tmp/hugo_cache
+      - hugo_build_cache:/src/public:delegated
 
   t:
     <<: *backend
     entrypoint: bin/test
-    shm_size: 256mb  # Shared memory size for Chrome browser
+    shm_size: 512mb  # Increased for better Chrome performance
     deploy:
       resources:
         limits:
-          cpus: '3.0'
-          memory: '2GB'  # Increased for Chrome browser stability
+          cpus: '4.0'  # More CPU for parallel tests
+          memory: '3GB'  # More memory for stability
         reservations:
-          cpus: '1.5'
-          memory: '1GB'  # Increased base reservation
+          cpus: '2.0'
+          memory: '1.5GB'
+    environment:
+      PARALLEL_WORKERS: 4  # Enable parallel testing
+      CHROME_FLAGS: "--disable-gpu --disable-dev-shm-usage --no-sandbox"
 
     depends_on:
       t-setup:
         condition: service_completed_successfully
 volumes:
   bundle:
+    driver: local
   history:
+    driver: local
   hugo_cache:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: size=500m,uid=1000,gid=1000
+  hugo_build_cache:
+    driver: local

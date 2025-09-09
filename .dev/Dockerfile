@@ -10,15 +10,21 @@ WORKDIR /usr/src/app
 FROM base AS install
 WORKDIR /temp/dev
 COPY package.json bun.lockb ./
-RUN bun install
+# Use cache mount for faster builds
+RUN --mount=type=cache,target=/root/.bun \
+    bun install --frozen-lockfile
 
 # Install Ruby dependencies in a separate stage
 FROM ruby:$RUBY_VERSION-alpine AS ruby-gems
-RUN apk update --no-cache && apk upgrade --no-cache
-RUN apk add --no-cache build-base make g++ git libjpeg-turbo-dev vips-dev
+# Use cache mount for apk packages
+RUN --mount=type=cache,target=/var/cache/apk \
+    apk update && apk upgrade && \
+    apk add build-base make g++ git libjpeg-turbo-dev vips-dev
 WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
-RUN bundle install --jobs $(nproc) --retry 3 --path /opt/bundle
+# Use cache mount for gem downloads
+RUN --mount=type=cache,target=/usr/local/bundle/cache \
+    bundle install --jobs $(nproc) --retry 3 --path /opt/bundle
 
 FROM ruby:$RUBY_VERSION-alpine
 COPY --from=base /usr/local/bin/bun /usr/local/bin/
@@ -37,19 +43,22 @@ ENV \
     PRECOMPILED_ASSETS=true \
     RUBY_YJIT_ENABLE=1 \
     TEST_SERVER_PORT=1314 \
-    DISPLAY=:99
+    DISPLAY=:99 \
+    HUGO_CACHEDIR=/tmp/hugo_cache \
+    HUGO_NUMWORKERSMULTIPLIER=4
 
-# Upgrade system
-RUN apk update --no-cache && apk upgrade --no-cache
-
-# Install system dependencies (runtime focused)
-RUN apk -v add --no-cache \
+# Install system dependencies with cache mount
+RUN --mount=type=cache,target=/var/cache/apk \
+    apk update && apk upgrade && \
+    apk add --no-cache \
       git \
       libjpeg-turbo \
       vips \
       chromium \
       chromium-chromedriver \
-      xvfb
+      xvfb \
+      htop \
+      iotop
 
 # Upgrade RubyGems
 RUN echo "gem: --no-document" > ~/.gemrc
@@ -67,8 +76,8 @@ COPY --from=install /temp/dev/node_modules ./node_modules
 # Add an exception for /app
 RUN git config --global --add safe.directory /app
 
-# To run browser tests need to run Xvfb
-RUN	printf '#!/bin/sh\nset -e\necho "Running bundle check..."\nbundle check || bundle install\necho "Checking node_modules..."\nif [ ! -d "/app/node_modules" ] || [ -z "$(ls -A /app/node_modules)" ]; then\n  echo "Installing Node.js dependencies..."\n  bun install\nfi\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 &\nXVFB_PID=$!\necho "Executing command: $@"...\nexec "$@"\nkill $XVFB_PID\n' > /docker-entrypoint.sh && \
+# Optimized entrypoint with parallel checks
+RUN printf '#!/bin/sh\nset -e\n\n# Run checks in parallel\n{\n  echo "Checking Ruby dependencies..." && bundle check || bundle install\n} &\nPID1=$!\n\n{\n  echo "Checking Node.js dependencies..."\n  if [ ! -d "/app/node_modules" ] || [ -z "$(ls -A /app/node_modules 2>/dev/null)" ]; then\n    echo "Installing Node.js dependencies..."\n    bun install\n  fi\n} &\nPID2=$!\n\n# Wait for parallel checks\nwait $PID1 $PID2\n\n# Start Xvfb\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 -ac +extension GLX +render -noreset &\nXVFB_PID=$!\nsleep 1\n\necho "Executing: $@"\nexec "$@"\n\nkill $XVFB_PID 2>/dev/null || true\n' > /docker-entrypoint.sh && \
 	chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

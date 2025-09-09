@@ -1,0 +1,112 @@
+#!/bin/bash
+set -e
+
+# Pre-task validation - BLOCKS work if tests fail
+validate_before_work() {
+  echo "🚨 MANDATORY: Pre-task test validation..."
+  if ! bin/test; then
+    echo "❌ BLOCKED: Tests must pass before starting work"
+    echo "Fix existing tests first!"
+    exit 1
+  fi
+  echo "✅ Tests passing - work can begin"
+}
+
+# During-task validation with automatic rollback (FAST - use bin/test)
+validate_and_rollback() {
+  echo "🔍 Quick validation with bin/test..."
+  if ! bin/test; then
+    echo "❌ TESTS FAILED - ROLLING BACK"
+    git checkout -- .
+    echo "🔄 Rolled back to last working state"
+    echo "⚠️  Changes reverted due to test failure"
+    exit 1
+  fi
+  echo "✅ Tests still passing"
+}
+
+# Quick validation after each change (non-blocking suggestion)
+quick_validate() {
+  echo "⚡ Quick test check..."
+  if ! bin/test; then
+    echo "⚠️  WARNING: Tests failing after change"
+    echo "Consider reverting or fixing immediately"
+    return 1
+  fi
+  echo "✅ Quick test passing"
+  return 0
+}
+
+# Post-task validation gate (COMPREHENSIVE - all validation)
+validate_completion() {
+  echo "🎯 Comprehensive validation before completion..."
+  
+  # First run quick tests
+  echo "1️⃣ Running bin/test (quick validation)..."
+  if ! bin/test; then
+    echo "❌ BLOCKED: Local tests failing"
+    exit 1
+  fi
+  
+  # Then run docker tests
+  echo "2️⃣ Running bin/dtest (docker validation)..."
+  if ! bin/dtest; then
+    echo "❌ BLOCKED: Docker tests failing"
+    exit 1
+  fi
+  
+  # Finally verify build works
+  echo "3️⃣ Running bin/build (build validation)..."
+  if ! bin/build; then
+    echo "❌ BLOCKED: Build failing"
+    exit 1
+  fi
+  
+  echo "✅ ALL VALIDATION PASSING:"
+  echo "   ✓ bin/test - Local tests pass"
+  echo "   ✓ bin/dtest - Docker tests pass"
+  echo "   ✓ bin/build - Build succeeds"
+  echo "🎉 Task can be marked complete!"
+}
+
+# Test-first validation for bug fixes
+require_reproduction_test() {
+  local issue="$1"
+  echo "🧪 Checking for reproduction test..."
+  
+  if [ -z "$issue" ]; then
+    echo "❌ BLOCKED: Issue name required"
+    exit 1
+  fi
+  
+  # Check if reproduction test exists
+  if [ ! -f "test/reproductions/${issue}.sh" ]; then
+    echo "❌ BLOCKED: Create reproduction test first"
+    echo "Required: test/reproductions/${issue}.sh"
+    exit 1
+  fi
+  
+  echo "✅ Reproduction test found"
+}
+
+# Memory coordination for test status
+store_test_status() {
+  local status="$1"
+  local agent="$2"
+  
+  npx claude-flow@alpha hooks memory-store \
+    --key "test-status/current" \
+    --value "{\"status\":\"$status\",\"agent\":\"$agent\",\"time\":\"$(date)\"}"
+}
+
+# Check if another agent broke tests
+check_swarm_test_status() {
+  local status=$(npx claude-flow@alpha hooks memory-retrieve --key "test-status/current" 2>/dev/null || echo '{"status":"unknown"}')
+  
+  if echo "$status" | grep -q '"status":"failing"'; then
+    echo "⚠️  WARNING: Another agent has broken tests"
+    echo "Status: $status"
+    echo "❌ BLOCKED: Fix tests before proceeding"
+    exit 1
+  fi
+}

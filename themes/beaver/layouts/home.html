@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ $tabs := slice
 (resources.Get "js/tabs.js")
 | resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
+| js.Build (dict "minify" true) | fingerprint | resources.PostProcess
 }}
 
 <script defer src="{{ $tabs.RelPermalink }}"></script>

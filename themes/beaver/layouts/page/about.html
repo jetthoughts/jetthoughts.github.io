@@ -8,7 +8,7 @@ $dynamicCSS586
 (resources.Get "css/services-layout.css")
 (resources.Get "css/component-bundle.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/about-us.css" | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/about-us.css" | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ partial "header/json-ld-company.html" . }}

@@ -2,6 +2,6 @@
 
 set -e
 
-rm -rf public-test || true
-bin/docked hugo --destination public-test --baseURL http://localhost:1314 --environment production --forceSyncStatic --logLevel warn
+rm -rf docker_test_output || true
+bin/docked hugo --destination docker_test_output --baseURL http://localhost:1314 --environment production --forceSyncStatic --logLevel warn
 bin/docked t "$@"

@@ -70,3 +70,4 @@ validation-build/
 lighthouse-*/
 public-test*/
 *.bak
+docker_test_output/

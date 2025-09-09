@@ -14,7 +14,7 @@
     (resources.Get "css/theme-main.css")
     (resources.Get "css/single-post.css")
     (resources.Get "css/footer.css")
-    | resources.Concat "css/blog/list.css" | minify | fingerprint | resources.PostProcess
+    | resources.Concat "css/blog/list.css" | resources.PostProcess
   }}
 
   <link href="{{ $CSS.RelPermalink }}" media="all" rel="stylesheet" />
