@@ -3574,3 +3574,70 @@ body.fl-framework-bootstrap-4 .fl-woo-content-right {
     width: 100%;
   }
 }
+
+/* Accessibility Focus Styles - Import accessibility-focus.css functionality */
+
+/* Focus Visible Support for Interactive Elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+}
+
+/* Enhanced Button Focus Styles */
+button:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(26, 140, 255, 0.5);
+}
+
+/* Form Control Focus Styles */
+input[type="text"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="date"]:focus-visible,
+input[type="month"]:focus-visible,
+input[type="week"]:focus-visible,
+input[type="time"]:focus-visible,
+input[type="number"]:focus-visible,
+input[type="search"]:focus-visible,
+input[type="url"]:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 1px;
+  border-color: #1a8cff;
+}
+
+/* Custom Form Control Focus (Checkboxes & Radios) */
+input[type="checkbox"]:focus-visible + label::before,
+input[type="radio"]:focus-visible + label::before {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *:focus-visible {
+    transition: none !important;
+  }
+}
