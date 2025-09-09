@@ -75,7 +75,9 @@
 </head>
 
 <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage" lang="en">
-{{ partial "debug/template-info.html" . }}
+{{ if ne hugo.Environment "production" }}
+  {{ partial "debug/template-info.html" . }}
+{{ end }}
 <div class="fl-page">
 
 {{ partialCached "page/header.html" . "header" }}
