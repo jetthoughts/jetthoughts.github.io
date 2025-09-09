@@ -6,7 +6,7 @@
 {{/* Check if image is a GIF - if so, render it directly */}}
 {{ if eq (path.Ext $src.RelPermalink | lower) ".gif" }}
   <img loading="lazy"
-       src="{{ ($src | fingerprint).RelPermalink }}"
+       src="{{ ($src | fingerprint "md5").RelPermalink }}"
        alt="{{ $alt }}"
        height="{{ $src.Height }}"
        width="{{ $src.Width }}">

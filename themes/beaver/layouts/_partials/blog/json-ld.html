@@ -18,7 +18,7 @@
       {{ with (.Resources.Get .Params.metatags.image) }}
         "image": {
           "@type": "ImageObject",
-          "url": "{{ (. | fingerprint).Permalink }}",
+          "url": "{{ (. | fingerprint "md5").Permalink }}",
           "width": "{{ .Width }}",
           "height": "{{ .Height }}"
         },

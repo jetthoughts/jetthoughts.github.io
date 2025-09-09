@@ -17,7 +17,7 @@ $dynamicCSS586
 | resources.Concat "css/blog.css" | resources.PostProcess}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
-{{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint }}
+{{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint "md5" }}
 <link rel="stylesheet" href="{{ $paginationCss.RelPermalink }}">
 
 

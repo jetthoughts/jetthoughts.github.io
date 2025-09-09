@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -euo pipefail
+
 # Set Docker platform for ARM-based Macs (M1/M2 chips)
 if [ "$(uname -s)" = "Darwin" ]; then
   case "$(uname -m)" in

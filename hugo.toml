@@ -45,14 +45,14 @@ useResourceCacheWhen = "always"
     enable = true
 
 [build.processing.css]
-# Production: Enable CSS optimization and security
+# Production: Enable CSS optimization with MD5 fingerprinting
 bundle = true
 fingerprint = true
 concatenate = true
-integrity = true
+# Note: integrity removed - MD5 doesn't support SRI
 
 [build.processing.js]
-# Production: Enable JS optimization and security
+# Production: Enable JS optimization with MD5 fingerprinting
 bundle = true
 fingerprint = true
 

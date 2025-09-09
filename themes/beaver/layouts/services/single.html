@@ -1,7 +1,10 @@
 {{ define "header" }}
 {{ partial "header/critical/single/services.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $CSS := slice (resources.Get "css/2949-layout.css") (resources.Get "css/component-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/single/services.css" | resources.PostProcess}}
+{{- $CSS := slice (resources.Get "css/2949-layout.css") (resources.Get "css/component-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/single/services.css" -}}
+{{- if hugo.IsProduction -}}
+  {{- $CSS = $CSS | resources.PostProcess -}}
+{{- end -}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}

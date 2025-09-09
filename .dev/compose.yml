@@ -31,14 +31,13 @@ services:
     volumes:
       - ..:/src:delegated  # Better performance
       - hugo_cache:/tmp/hugo_cache
-      - /src/public  # Exclude generated files
-      - /src/resources  # Exclude resources
     ports:
       - '1313:1313'
     command: hugo server --bind 0.0.0.0 --disableFastRender --gc
     environment:
       - HUGO_CACHEDIR=/tmp/hugo_cache
       - HUGO_NUMWORKERSMULTIPLIER=4  # Parallel processing
+    user: "1000:1000"
     ulimits:
       nofile:
         soft: 65536
@@ -57,7 +56,8 @@ services:
     volumes:
       - ..:/src:delegated
       - hugo_cache:/tmp/hugo_cache
-      - hugo_build_cache:/src/public:delegated
+      - hugo_build_cache:/src/public:rw
+    user: "1000:1000"
 
   t:
     <<: *backend

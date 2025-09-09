@@ -20,8 +20,10 @@ function loadCSS(url) {
 
 {{- $staticCSS := slice (resources.Get "css/companies.css") (resources.Get "css/footer.css") (resources.Get "css/homepage.css") (resources.Get "css/590-layout.css") (resources.Get "css/theme-main.css") (resources.Get "css/style.css") (resources.Get "css/services-layout.css") (resources.Get "css/technologies.css") }}
 {{- $nonCriticalCSS := union $staticCSS $dynamicStyles
-| resources.Concat "css/_non_critical_homepage.css" | minify | fingerprint | resources.PostProcess
-}}
+| resources.Concat "css/_non_critical_homepage.css" | minify | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $nonCriticalCSS = $nonCriticalCSS | resources.PostProcess -}}
+{{- end -}}
 
 document.addEventListener("DOMContentLoaded", function () {
    loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
@@ -31,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ $tabs := slice
 (resources.Get "js/tabs.js")
 | resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | fingerprint | resources.PostProcess
-}}
+| js.Build (dict "minify" true) | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $tabs = $tabs | resources.PostProcess -}}
+{{- end -}}
 
 <script defer src="{{ $tabs.RelPermalink }}"></script>
 
@@ -216,9 +220,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                  </div>
                               </div>
 
-                            {{ partialCached "page/use-cases.html" (dict "addHeadline" true) "use-cases-with-headline" }}
+                            {{ partialCached "page/use-cases.html" (dict "addHeadline" true) (printf "use-cases-with-headline-%s-%s" .Site.Language.Lang .RelPermalink) }}
 
-                            {{ partialCached "page/testimonials.html" . "testimonials" }}
+                            {{ partialCached "page/testimonials.html" . (printf "testimonials-%s-%s" .Site.Language.Lang .RelPermalink) }}
                               <div id="cta-contact_us" class="fl-col-group fl-node-niok604vy81f fl-col-group-custom-width" data-node="niok604vy81f">
                                  <div class="fl-col fl-node-8x91uqrnkeb7 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="8x91uqrnkeb7">
                                     <div class="fl-col-content fl-node-content">

@@ -1,7 +1,9 @@
 {{ $js := slice
   (resources.Get "js/navigation.js")
   | resources.Concat "js/_site.js"
-  | js.Build (dict "minify" true) | fingerprint | resources.PostProcess
-}}
+  | js.Build (dict "minify" true) | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $js = $js | resources.PostProcess -}}
+{{- end -}}
 
 <script defer src="{{ $js.RelPermalink }}"></script>

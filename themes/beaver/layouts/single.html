@@ -14,7 +14,10 @@
 (resources.Get "css/theme-main.css")
 (resources.Get "css/single-post.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/blog/single.css" | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/blog/single.css" | minify | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $CSS = $CSS | resources.PostProcess -}}
+{{- end -}}
 
 <link href='{{ $CSS.RelPermalink }}' media='all' rel='stylesheet'/>
 
