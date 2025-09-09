@@ -1,6 +1,11 @@
 {{- $pages := where site.RegularPages "Type" "in" (slice "blog" "case-studies" "careers") -}}
 {{- $items := slice -}}
 {{- range $pages -}}
-  {{- $items = $items | append (dict "title" .Title "url" .Permalink "date" .Date "summary" .Summary) -}}
+  {{- $items = $items | append (dict
+      "title" .Title
+      "url" .Permalink
+      "date" (.Date.Format "2006-01-02T15:04:05Z07:00")
+      "summary" (.Summary | plainify | truncate 180)
+    ) -}}
 {{- end -}}
 {{ dict "items" $items | jsonify }}
