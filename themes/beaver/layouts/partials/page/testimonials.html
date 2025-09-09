@@ -1,4 +1,4 @@
-{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | fingerprint "md5" | resources.PostProcess }}
+{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | fingerprint "md5"  }}
 <link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 

@@ -1,6 +1,9 @@
 const fs = require("fs");
 
-const purgecss = require("@fullhuman/postcss-purgecss")({
+// Only run PurgeCSS in production
+const isProduction = process.env.HUGO_ENVIRONMENT === "production" || process.env.NODE_ENV === "production";
+
+const purgecss = isProduction ? require("@fullhuman/postcss-purgecss")({
   content: fs.existsSync("./hugo_stats.json") ? ["./hugo_stats.json"] : [],
   defaultExtractor: (content) => {
     if (!content) return [];
@@ -38,13 +41,13 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
       /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/
     ]
   },
-})
+}) : null;
 
 module.exports = {
   plugins: [
     require("postcss-nested"),
-    purgecss,
+    ...(purgecss ? [purgecss] : []),
     require("postcss-delete-duplicate-css")({ isRemoveNull: true, isRemoveComment: true }),
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("autoprefixer"), require("cssnano")] : []),
+    ...(isProduction ? [require("autoprefixer"), require("cssnano")] : []),
   ],
 }

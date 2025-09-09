@@ -87,7 +87,7 @@
 </div>
 {{ partialCached "page/footer.html" . "footer" }}
 {{ block "footer" . }} {{ end }}
-{{ partialCached "page/core-web-vitals.html" . "core-web-vitals" }}
+
 {{ partialCached "page/site-scripts" . "site-scripts" }}
 <script>
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');

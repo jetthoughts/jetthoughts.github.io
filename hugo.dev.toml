@@ -6,7 +6,6 @@ buildFuture = true
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
 
 [build]
-writeStats = false
 noJSConfigInAssets = true
 useResourceCacheWhen = "fallback"
 

@@ -3,19 +3,6 @@
 {{ end }}
 
 {{ define "footer" }}
-<script>
-function loadCSS(url) {
-   const link = document.createElement('link');
-   link.href = url;
-   link.rel = 'preload';
-   link.as = "style"
-   link.onload = function() {
-      this.onload=null;
-      this.rel = 'stylesheet';
-   };
-
-   document.head.appendChild(link);
-}
 {{- $dynamicStyles := slice (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .) (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .) (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .) }}
 
 {{- $staticCSS := slice (resources.Get "css/companies.css") (resources.Get "css/footer.css") (resources.Get "css/homepage.css") (resources.Get "css/590-layout.css") (resources.Get "css/theme-main.css") (resources.Get "css/style.css") (resources.Get "css/services-layout.css") (resources.Get "css/technologies.css") }}
@@ -25,10 +12,10 @@ function loadCSS(url) {
   {{- $nonCriticalCSS = $nonCriticalCSS | resources.PostProcess -}}
 {{- end -}}
 
-document.addEventListener("DOMContentLoaded", function () {
-   loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
-})
-</script>
+{{/* Use synchronous CSS loading for reliability */}}
+<link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}" media="all">
+{{/* Add preload hint for performance */}}
+<link rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style">
 
 {{ $tabs := slice
 (resources.Get "js/tabs.js")

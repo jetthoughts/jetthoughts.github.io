@@ -10,7 +10,7 @@
 {{ $tabs := slice
 (resources.Get "js/tabs.js")
 | resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | fingerprint "md5" | resources.PostProcess
+| js.Build (dict "minify" true) | fingerprint "md5" 
 }}
 <script defer src="{{ $tabs.RelPermalink }}"></script>
 {{ end }}

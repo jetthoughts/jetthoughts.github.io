@@ -8,7 +8,7 @@ theme = "beaver"
 # Production: Enable GitInfo for better caching
 enableGitInfo = true
 # Production: Environment-specific settings
-env = "production"
+environment = "production"
 # Production: Enable RSS, sitemap, robots.txt for SEO
 # disableKinds = ["RSS", "sitemap", "robotsTXT"]
 
@@ -27,9 +27,7 @@ env = "production"
 
 [build]
 # Production: Enable build stats for optimization analysis
-writeStats = true
 noJSConfigInAssets = true
-numWorkerMultiplier = 4
 noChmod = true
 useResourceCacheWhen = "always"
 

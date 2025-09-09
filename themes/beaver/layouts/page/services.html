@@ -13,7 +13,7 @@
 | resources.Concat "js/_tabs.js"
 | js.Build (dict "minify" true) | fingerprint "md5" -}}
 {{- if hugo.IsProduction -}}
-  {{- $tabs = $tabs | resources.PostProcess -}}
+  {{- $tabs = $tabs  -}}
 {{- end -}}
 <script defer src="{{ $tabs.RelPermalink }}"></script>
 {{ end }}
