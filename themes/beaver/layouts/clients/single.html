@@ -74,7 +74,7 @@
                        <div class="fl-module fl-module-rich-text fl-node-h0r9d45m3eiv case-name" data-node="h0r9d45m3eiv">
                           <div class="fl-module-content fl-node-content">
                              <div class="fl-rich-text">
-                              <p><a href="{{ .Page.Params.client.website }}" target="_blank" rel="noopener">{{ .Page.Params.client.name }}</a></p>
+                              <p><a href="{{ .Page.Params.client.website }}" target="_blank" rel="noopener noreferrer">{{ .Page.Params.client.name }}</a></p>
                              </div>
                           </div>
                        </div>
@@ -183,6 +183,7 @@
                                          title="{{ $.Page.Title }}"
                                          data-description=""
                                          target="_blank"
+                                         rel="noopener noreferrer"
                                          itemprop="contentUrl">
                                          <img loading="lazy" decoding="async" class="pp-gallery-img no-lazyload skip-lazy"
                                          src="{{ $imageItemW1024.RelPermalink }}"

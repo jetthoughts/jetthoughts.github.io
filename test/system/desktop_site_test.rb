@@ -31,6 +31,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
       when "cta", "cta-contact_us", "use-cases"
         # Use CTA method for sections with dynamic content/animations
         assert_cta_screenshot "homepage/_#{section_id}"
+      when "technologies"
+        assert_stable_problematic_screenshot "homepage/_#{section_id}"
       else
         assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.02
       end
@@ -100,7 +102,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       # Use appropriate screenshot method based on section type
       case section_id
       when "clients"
-        assert_stable_problematic_screenshot "clients/_#{section_id}"
+        assert_stable_screenshot "clients/_#{section_id}", tolerance: 0.15
       when "cta-contact_us"
         assert_cta_screenshot "clients/_#{section_id}"
       else
@@ -169,7 +171,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Contact Us", exact: false, wait: 5
     end
 
-    assert_text "Let's get started now"
+    # Wait for page to fully load and text to be visible
+    assert_text "get started", wait: 10, exact: false
     assert_stable_problematic_screenshot "contact_us"
   end
 

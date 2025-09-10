@@ -82,7 +82,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     open_mobile_menu
 
     # Add better scoping for sub-menu opener
-    within(".mobile-menu") do
+    within(".navigation") do
       find(".js-sub-menu-opener", match: :first, visible: true, wait: 5).click
     end
     wait_menu_to_render
@@ -115,16 +115,14 @@ class MobileSiteTest < ApplicationSystemTestCase
   private
 
   def open_mobile_menu
-    # Add better scoping for mobile menu opener
-    within("header.header") do
-      find(".js-mobile-menu-opener", visible: true, wait: 5).click
-    end
+    # Mobile menu opener is outside the header element
+    find(".js-mobile-menu-opener", visible: true, wait: 5).click
     wait_menu_to_render
   end
 
   def wait_menu_to_render
-    # Wait for menu to fully render with better scoping
-    has_selector?(".mobile-menu .js-sub-menu-opener", visible: true, wait: 3)
+    # Wait for navigation menu to fully render
+    has_selector?(".navigation .js-sub-menu-opener", visible: true, wait: 3)
   end
 
   def preload_all_images
