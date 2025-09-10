@@ -8,6 +8,7 @@ env:
   HUGO_ENV: production
   HUGO_CACHEDIR: /tmp/hugo_cache
 
+
 jobs:
   build:
     timeout-minutes: 15
@@ -72,7 +73,7 @@ jobs:
 
       - name: Build with Hugo
         run: |
-          PATH="app/bin:$PATH" hugo \
+          PATH="./node_modules/.bin:app/bin:$PATH" hugo \
             --minify \
             --gc \
             --cleanDestinationDir \

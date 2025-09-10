@@ -4,8 +4,9 @@ ARG RUBY_VERSION=3.4
 #=============================================================================
 # Stage 1: Node.js dependencies
 #=============================================================================
-FROM oven/bun:1 AS node-deps
+FROM oven/bun:1-alpine AS node-deps
 WORKDIR /temp/dev
+RUN --mount=type=cache,target=/var/cache/apk apk add --no-cache build-base python3 pkgconfig vips-dev
 COPY package.json bun.lockb ./
 # Use cache mount for faster builds
 RUN --mount=type=cache,target=/root/.bun \
@@ -25,7 +26,8 @@ COPY Gemfile Gemfile.lock ./
 
 # Use cache mount for gem downloads
 RUN --mount=type=cache,target=/usr/local/bundle/cache \
-    bundle install --jobs $(nproc) --retry 3 --path /opt/bundle
+    echo "gem: --no-document" > /root/.gemrc && \
+    bundle install --jobs 4 --retry 3 --path /opt/bundle
 
 #=============================================================================
 # Stage 3: Final runtime image
@@ -85,9 +87,6 @@ RUN --mount=type=cache,target=/var/cache/apk \
         htop \
         && rm -rf /var/cache/apk/*
 
-# Optimize RubyGems (disable documentation)
-RUN echo "gem: --no-document" > ~/.gemrc
-
 # Set up application directory with proper permissions
 RUN mkdir -p /app /tmp/hugo_cache && \
     chown -R appuser:appgroup /app /tmp/hugo_cache
@@ -98,7 +97,7 @@ COPY --from=ruby-deps --chown=appuser:appgroup /opt/bundle /opt/bundle
 COPY --from=node-deps --chown=appuser:appgroup /temp/dev/node_modules ./node_modules
 
 # Git configuration for safe directory access
-RUN git config --global --add safe.directory /app
+RUN git config --system --add safe.directory /app
 
 # Copy and set up entrypoint script with security hardening
 COPY .dev/docker-entrypoint.sh /docker-entrypoint.sh
