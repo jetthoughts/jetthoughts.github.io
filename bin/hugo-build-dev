@@ -1,0 +1,140 @@
+#!/usr/bin/env bash
+# Quick development builds for JetThoughts site
+
+set -e
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Configuration
+HUGO_ENV="development"
+OUTPUT_DIR="public-dev"
+
+show_help() {
+    cat << EOF
+Hugo Development Build - Fast builds for development
+
+USAGE:
+    $0 [OPTIONS]
+
+OPTIONS:
+    -o, --output DIR     Output directory (default: $OUTPUT_DIR)
+    -c, --clean          Clean before building
+    -t, --timing         Show build timing information
+    -d, --drafts         Include draft content
+    -f, --future         Include future content
+    -e, --expired        Include expired content
+    -h, --help           Show this help message
+
+EXAMPLES:
+    $0                   # Quick development build
+    $0 -c                # Clean build
+    $0 -d -f -t          # Include drafts/future with timing output
+    $0 -o public-test    # Build to custom directory
+
+EOF
+}
+
+# Default options
+CLEAN=""
+TIMING=""
+DRAFTS=""
+FUTURE=""
+EXPIRED=""
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -o|--output)
+            OUTPUT_DIR="$2"
+            shift 2
+            ;;
+        -c|--clean)
+            CLEAN="true"
+            shift
+            ;;
+        -t|--timing)
+            TIMING="--templateMetrics"
+            shift
+            ;;
+        -d|--drafts)
+            DRAFTS="--buildDrafts"
+            shift
+            ;;
+        -f|--future)
+            FUTURE="--buildFuture"
+            shift
+            ;;
+        -e|--expired)
+            EXPIRED="--buildExpired"
+            shift
+            ;;
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+        *)
+            echo -e "${RED}Error: Unknown option $1${NC}" >&2
+            show_help
+            exit 1
+            ;;
+    esac
+done
+
+# Pre-flight checks
+if ! command -v hugo &> /dev/null; then
+    echo -e "${RED}Error: Hugo is not installed or not in PATH${NC}" >&2
+    exit 1
+fi
+
+# Display build info
+echo -e "${BLUE}Hugo Development Build${NC}"
+echo -e "Environment: ${YELLOW}$HUGO_ENV${NC}"
+echo -e "Output: ${GREEN}$OUTPUT_DIR${NC}"
+echo
+
+# Clean if requested
+if [[ "$CLEAN" == "true" ]]; then
+    echo -e "${YELLOW}Cleaning previous build artifacts...${NC}"
+    rm -rf "$OUTPUT_DIR" resources/_gen/ .hugo_build.lock 2>/dev/null || true
+    echo
+fi
+
+# Record start time
+START_TIME=$(date +%s)
+
+# Run Hugo build with development optimizations
+echo -e "${YELLOW}Building site...${NC}"
+hugo build \
+    --environment "$HUGO_ENV" \
+    --destination "$OUTPUT_DIR" \
+    --cleanDestinationDir \
+    $TIMING \
+    $DRAFTS \
+    $FUTURE \
+    $EXPIRED
+
+# Calculate and display build time
+END_TIME=$(date +%s)
+BUILD_TIME=$((END_TIME - START_TIME))
+
+echo
+echo -e "${GREEN}✓ Build completed successfully${NC}"
+echo -e "Build time: ${BLUE}${BUILD_TIME}s${NC}"
+echo -e "Output directory: ${GREEN}$OUTPUT_DIR${NC}"
+
+# Display directory size
+if command -v du &> /dev/null; then
+    SIZE=$(du -sh "$OUTPUT_DIR" | cut -f1)
+    echo -e "Site size: ${BLUE}$SIZE${NC}"
+fi
+
+# Count generated files
+if command -v find &> /dev/null; then
+    FILE_COUNT=$(find "$OUTPUT_DIR" -type f | wc -l | tr -d ' ')
+    echo -e "Generated files: ${BLUE}$FILE_COUNT${NC}"
+fi

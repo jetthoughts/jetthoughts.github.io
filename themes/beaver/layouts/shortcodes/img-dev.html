@@ -1,0 +1,44 @@
+{{/*
+  Development-Optimized Image Shortcode
+  Minimal image processing for fast development builds
+  
+  Usage: {{< img-dev src="image.jpg" alt="Description" width="800" >}}
+  
+  Features:
+  - Single format output (no WebP conversion in development)
+  - Minimal resizing for speed
+  - Production builds use full WebP optimization
+*/}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" | default "800" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+
+{{- if $src -}}
+  {{- $img := resources.Get $src -}}
+  
+  {{- if $img -}}
+    {{- if hugo.IsProduction -}}
+      {{/* Production: Full WebP optimization */}}
+      {{- $webp := $img.Resize (printf "%sx webp" $width) -}}
+      {{- $fallback := $img.Resize (printf "%sx" $width) -}}
+      
+      <picture class="{{ $class }}">
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+        <img src="{{ $fallback.RelPermalink }}" alt="{{ $alt }}" 
+             width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+             loading="{{ $loading }}" decoding="async">
+      </picture>
+    {{- else -}}
+      {{/* Development: Simple single format for speed */}}
+      {{- $processed := $img.Resize (printf "%sx" $width) -}}
+      <img src="{{ $processed.RelPermalink }}" alt="{{ $alt }}" 
+           width="{{ $processed.Width }}" height="{{ $processed.Height }}"
+           loading="{{ $loading }}" class="{{ $class }}">
+    {{- end -}}
+  {{- else -}}
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="{{ $loading }}" class="{{ $class }}">
+  {{- end -}}
+{{- end -}}

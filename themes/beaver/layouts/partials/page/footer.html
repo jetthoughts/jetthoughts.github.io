@@ -1,0 +1,3 @@
+{{/* Cache footer globally with menu hash as cache key to invalidate when menus change */}}
+{{ $menuHash := (printf "%s%s%s" (.Site.Menus.services | jsonify) (.Site.Menus.company | jsonify) (.Site.Menus.resources | jsonify)) | md5 }}
+{{ partialCached "page/footer-content.html" . $menuHash }}

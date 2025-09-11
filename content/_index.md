@@ -1,7 +1,7 @@
 ---
-title: "Expert CTO & Engineering Services for Accelerated Software Development"
+title: "Expert Software Development & Consulting | JetThoughts"
 layout: index
-description: "Unlock your product's potential with our on-demand CTO services, expert engineering teams, and tailored software solutions. Accelerate development, enhance quality, and achieve your business goals with JetThoughts."
+description: "Expert software development & consulting with 95% client retention. Reduce costs 50% while accelerating delivery 3x faster. Free consultation ✓"
 
 headline: Build faster. Scale smarter.
 excerpt: Streamline development, accelerate delivery, & achieve your product vision with access to turnkey engineering resources backed by world-class technical talent.

@@ -1,0 +1,56 @@
+paul_keen:
+  name: "Paul Keen"
+  title: "Chief Technology Officer & Open Source Contributor"
+  company: "JetThoughts"
+  bio: "Experienced technology leader with 15+ years developing scalable software solutions. Specialized in Ruby on Rails, React, and agile methodologies. Active open source contributor and technical thought leader."
+  image: "/img/team/paul-keen.jpg"
+  experience_years: 15
+  email: "paul@jetthoughts.com"
+  linkedin: "https://www.linkedin.com/in/paul-keen/"
+  github: "https://github.com/pftg"
+  twitter: "https://twitter.com/paul_keen"
+  
+  expertise:
+    - "Ruby on Rails Development"
+    - "React & Frontend Technologies"
+    - "Software Architecture & Design"
+    - "Agile Development Methodologies"
+    - "Open Source Development"
+    - "Technical Leadership"
+    - "API Design & Development"
+    - "Database Design & Optimization"
+    - "DevOps & Cloud Infrastructure"
+    - "Code Quality & Testing"
+  
+  certifications:
+    - name: "AWS Certified Solutions Architect"
+      issuer: "Amazon Web Services"
+      link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+    
+    - name: "Certified ScrumMaster (CSM)"
+      issuer: "Scrum Alliance"
+      link: "https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm"
+  
+  publications:
+    - title: "Building Scalable Ruby on Rails Applications"
+      publication: "JetThoughts Technical Blog"
+      link: "/blog/"
+    
+    - title: "Modern React Development Best Practices"
+      publication: "JetThoughts Technical Blog"
+      link: "/blog/"
+
+# Additional team members can be added here
+mykola_borysenko:
+  name: "Mykola Borysenko"
+  title: "Senior Full-Stack Developer"
+  company: "JetThoughts"
+  bio: "Expert full-stack developer with deep expertise in Ruby on Rails and modern JavaScript frameworks."
+  experience_years: 8
+  
+  expertise:
+    - "Ruby on Rails Development"
+    - "JavaScript & TypeScript"
+    - "Database Design"
+    - "API Development"
+    - "Testing & QA"

@@ -1,5 +1,12 @@
 # Claude Code Configuration - Agile SPARC Development Environment
 
+## 📚 CRITICAL: Agent Handbook Reference
+
+**ALL AGENTS MUST READ**: `docs/60.01-agent-guidance-reference.md` before any project work
+- Understand resource organization (knowledge/ vs docs/)
+- Learn project-specific templates and guidelines
+- Master claude-context search patterns
+
 ## 🏃 AGILE SPRINT MANAGEMENT FRAMEWORK
 
 ### ⚡ CRITICAL DISTINCTION: Sprints vs Iterations vs Micro-Refactoring
@@ -204,17 +211,32 @@ active_job_story:
 
 **This project follows comprehensive knowledge management practices. All agents MUST consult the structured knowledge base before proposing solutions.**
 
-**Knowledge Base Location**: `/knowledge/` - Complete practices, processes, solutions, and templates
-**Documentation Base Location**: `/docs/` - Project documentation and architectural decisions
-**Knowledge Index**: `/knowledge/KNOWLEDGE_INDEX.md` - Navigation guide for all knowledge
+**Knowledge Base Location**: `/knowledge/` - Shared read-only practices, patterns, and methodologies
+**Documentation Base Location**: `/docs/` - Project-specific documentation, templates, and configurations
+**Knowledge Index**: `/knowledge/KNOWLEDGE_INDEX.md` - Navigation guide for shared knowledge
+**Agent Guidance**: `/docs/60.01-agent-guidance-reference.md` - Critical project-specific guidance for all agents
 
 ### 🎯 Core Knowledge Principles
-1. **Package-Search Priority Development**: Use `package-search` MCP as PRIMARY tool for dependency research, `claude-context` for local patterns, `context7` as fallback only. MANDATORY: AC.82.01
-2. **Pattern Consistency**: Follow established patterns from knowledge base solutions
-3. **Quality Assurance**: Apply comprehensive validation checklists for all implementations
-4. **Security-First**: Implement security practices from knowledge base frameworks
-5. **TDD Methodology**: Follow test-driven development from knowledge base practices
-6. **Agile Compliance**: Follow sprint boundaries, WIP limits, and cooperative decomposition
+1. **Claude-Context Search Priority**: Use `claude-context` as PRIMARY tool for searching docs/ and knowledge/ folders
+2. **Package-Search for Dependencies**: Use `package-search` MCP for external dependency research
+3. **Pattern Consistency**: Follow established patterns from knowledge base solutions
+4. **Quality Assurance**: Apply comprehensive validation checklists for all implementations
+5. **Security-First**: Implement security practices from knowledge base frameworks
+6. **TDD Methodology**: Follow test-driven development from knowledge base practices
+7. **Agile Compliance**: Follow sprint boundaries, WIP limits, and cooperative decomposition
+
+### 🔍 Search Strategy (MANDATORY)
+```bash
+# ALWAYS index documentation first
+npx claude-context index_codebase --path "docs/"
+npx claude-context index_codebase --path "knowledge/"
+
+# Search project-specific resources
+npx claude-context search_code --query "[topic]" --path "docs/"
+
+# Search shared knowledge
+npx claude-context search_code --query "[pattern]" --path "knowledge/"
+```
 
 ### 🎯 Quality Framework Integration (MANDATORY)
 
@@ -1834,10 +1856,33 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 
 ## 🚀 Quick Setup
 
+### Claude-Context and Claude-Flow Tools Setup
+
+**These tools are npx-runnable and require no local installation:**
+
 ```bash
-# Add Claude Flow MCP server
+# Claude-Context - AI-powered codebase search and indexing
+# Available commands:
+npx claude-context index_codebase --path "."          # Index current directory
+npx claude-context search_code --query "search-term" --path "."  # Search indexed code
+npx claude-context clear_index --path "."            # Clear search index
+
+# Claude-Flow - Multi-agent orchestration and workflow automation  
+# Available commands:
+npx claude-flow@alpha sparc modes                    # List available SPARC modes
+npx claude-flow@alpha sparc tdd "feature"           # Run TDD workflow
+npx claude-flow@alpha hooks memory-store --key "key" --value "value"  # Store in memory
+npx claude-flow@alpha hooks memory-search --pattern "pattern"         # Search memory
+
+# Add Claude Flow MCP server for enhanced integration
 claude mcp add claude-flow npx claude-flow@alpha mcp start
 ```
+
+**Key Benefits:**
+- **Claude-Context**: Semantic codebase search with 90%+ accuracy vs traditional grep
+- **Claude-Flow**: Multi-agent coordination with 2.8-4.4x speed improvement
+- **Zero Installation**: Both tools run via npx without local dependencies
+- **Hugo-Optimized**: Designed for static site generators and markdown content
 
 ## MCP Tool Categories
 

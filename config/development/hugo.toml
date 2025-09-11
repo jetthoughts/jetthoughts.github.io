@@ -10,21 +10,44 @@ buildExpired = true
 buildFuture = true
 
 # Disable resource-intensive features for faster builds
-disableKinds = ["RSS", "sitemap", "robotsTXT"]
+disableKinds = ["RSS", "sitemap", "robotsTXT", "section", "taxonomy", "term"]
+
+# Skip expensive processing in development
+ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
 
 # Build optimizations for development speed
 [build]
   # Skip Hugo stats generation (not needed for PurgeCSS in dev)
   writeStats = false
+  # Use resource cache in development for faster rebuilds
+  useResourceCacheWhen = "always"
+  [build.buildStats]
+    enabled = false
 
 # Fast image processing for development
 [imaging]
-  # Lower quality for faster processing
-  quality = 70
+  # Much lower quality for faster processing in development
+  quality = 50
+  # Disable expensive image processing features in development
+  resampleFilter = "NearestNeighbor"
+  # Reduce anchor complexity
+  anchor = "center"
 
 # Disable minification in development
 [minify]
   minifyOutput = false
+
+# Watch mode optimizations
+[server]
+  # Optimize for file watching and fast rebuilds
+  disableFastRender = false
+  disableLiveReload = false
+  watch = true
+  headers = [
+    {for = "/**", values = {Cache-Control = "no-cache, no-store, must-revalidate"}},
+    {for = "/**", values = {Pragma = "no-cache"}},
+    {for = "/**", values = {Expires = "0"}}
+  ]
 
 # Development-specific parameters
 [params]
@@ -32,3 +55,6 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
   environment = "development"
   # Skip analytics in development
   skipAnalytics = true
+  # Disable heavy features for faster builds
+  enableSearch = false
+  enableCommentsCount = false

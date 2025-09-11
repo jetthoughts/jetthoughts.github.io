@@ -1,0 +1,34 @@
+# Minimal Development Configuration
+# Designed for maximum speed with minimal processing
+
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "JetThoughts"
+theme = "beaver"
+
+# Disable everything possible for speed
+disableKinds = ["RSS", "sitemap", "robotsTXT", "section", "taxonomy", "term", "home"]
+
+# Minimal build settings
+[build]
+  writeStats = false
+  useResourceCacheWhen = "always"
+
+# Skip image processing entirely
+[imaging]
+  quality = 30
+  resampleFilter = "NearestNeighbor"
+
+# No minification
+[minify]
+  minifyOutput = false
+
+# Fast server
+[server]
+  disableFastRender = false
+  disableLiveReload = false
+  watch = true
+
+[params]
+  environment = "development"
+  skipAnalytics = true

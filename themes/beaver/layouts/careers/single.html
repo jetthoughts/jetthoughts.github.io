@@ -28,7 +28,8 @@
                            </div>
                         </div>
                         <div class="fl-col-group fl-node-0enadgf5wp84 fl-col-group-equal-height fl-col-group-align-top fl-col-group-custom-width" data-node="0enadgf5wp84">
-                            {{ range .Params.requirements }}
+                            {{ with .Params.requirements }}
+                            {{ range . }}
                                 <div class="fl-col fl-node-nmsh5axc3k28 fl-col-small fl-col-small-custom-width" data-node="nmsh5axc3k28">
                                     <div class="fl-col-content fl-node-content">
                                         <div class="fl-module fl-module-rich-text fl-node-qs2ucemf7j56" data-node="qs2ucemf7j56">
@@ -47,6 +48,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                {{ end }}
                                 {{ end }}
                            <div class="fl-col fl-node-5m4it1br29ze fl-col-small fl-col-small-custom-width" data-node="5m4it1br29ze">
                               <div class="fl-col-content fl-node-content">

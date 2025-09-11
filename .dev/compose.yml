@@ -1,130 +1,85 @@
 ---
-# Shared environment variables for Hugo services
-x-hugo-env: &hugo-env
-  HUGO_CACHEDIR: /tmp/hugo_cache
-  HUGO_NUMWORKERMULTIPLIER: 4
-
-# Shared Hugo volumes
-x-hugo-volumes: &hugo-volumes
-  - ..:/app:delegated
-  - hugo_cache:/tmp/hugo_cache
-
-# Backend service template
-x-backend: &backend
-  image: jetthoughts.com-test:1.0.0
-  build:
-    context: ../
-    dockerfile: ./.dev/Dockerfile
-    args:
-      BUILDKIT_INLINE_CACHE: 1
-  stdin_open: true
-  tty: true
-  init: true  # Proper signal handling
-  restart: unless-stopped
-  volumes:
-    - ..:/app:delegated
-    - /app/node_modules
-    - bundle:/opt/bundle
-    - history:/usr/local/hist
-  environment:
-    <<: *hugo-env
-    HISTFILE: /usr/local/hist/.bash_history
-    IRB_HISTFILE: /usr/local/hist/.irb_history
-    BUNDLE_JOBS: 4
-    BUNDLE_PATH: /opt/bundle
+# Simplified Docker Compose configuration for JetThoughts Hugo development
+# Optimized for fast feedback loops with minimal complexity
 
 services:
-  # Hugo development server
+  # Hugo development server (port 1313)
   hugo:
     image: hugomods/hugo:exts-non-root-0.149.1
     working_dir: /app
-    stdin_open: true
-    tty: true
-    init: true
-    volumes: *hugo-volumes
+    volumes:
+      - ..:/app:delegated
     ports:
       - '1313:1313'
-    command: hugo server --bind 0.0.0.0 --disableFastRender --gc --poll 1s
+    command: hugo server --bind 0.0.0.0 --poll 1s
     environment:
-      <<: *hugo-env
-    ulimits:
-      nofile:
-        soft: 65536
-        hard: 65536
+      HUGO_CACHEDIR: /app/.hugo_cache
+    restart: unless-stopped
+
+  # Hugo watch mode for tests (build-only, no server)
+  hugo-watch:
+    image: hugomods/hugo:exts-non-root-0.149.1
+    working_dir: /app
+    volumes:
+      - ..:/app:delegated
+    command: 
+      - hugo
+      - --destination=public-dtest
+      - --environment=production
+      - --watch
+      - --poll=1s
+    environment:
+      HUGO_CACHEDIR: /app/.hugo_cache
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:1313/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+      test: ["CMD", "test", "-f", "/app/public-dtest/index.html"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 60s
 
   # Interactive shell
   sh:
-    <<: *backend
-    command: bash
-
-  # Hugo build for tests (one-shot) - renamed from t-setup
-  build:
-    image: hugomods/hugo:exts-non-root-0.149.1
-    command: hugo --environment production --destination public-dtest --gc --logLevel warn
+    image: jetthoughts.com-test:1.0.0
+    build:
+      context: ../
+      dockerfile: ./.dev/Dockerfile
     working_dir: /app
-    volumes: *hugo-volumes
-    environment:
-      <<: *hugo-env
-      HUGO_NUMWORKERMULTIPLIER: 3  # Faster builds
-    stdin_open: false
-    tty: false
-    deploy:
-      resources:
-        limits:
-          cpus: '3.0'
-          memory: '4GB'
-
-  # Test runner
-  t:
-    <<: *backend
-    command: bin/test  # Changed from entrypoint to command to allow Xvfb to start
-    shm_size: 2gb  # Increased for better Chrome stability
-    environment:
-      HUGO_DEFAULT_PATH: "public-dtest"  # Use separate test build directory
-      PARALLEL_WORKERS: 6
-      CHROME_FLAGS: "--disable-gpu --no-sandbox --disable-dev-shm-usage --disable-extensions --disable-logging --disable-background-timer-throttling"
-      CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
-      CHROME_LOG_LEVEL: "3"  # Suppress Chrome logs
-      RUBY_GC_HEAP_GROWTH_FACTOR: "1.1"
-      RUBY_GC_HEAP_GROWTH_MAX_SLOTS: "40000"
-      PRECOMPILED_ASSETS: true
-      TEST_SERVER_PORT: 1314
-    deploy:
-      resources:
-        limits:
-          cpus: '4.0'
-          memory: '8GB'
-        reservations:
-          cpus: '2.0'
-          memory: '4GB'
+    stdin_open: true
+    tty: true
     volumes:
       - ..:/app:delegated
       - /app/node_modules
       - bundle:/opt/bundle
       - history:/usr/local/hist
-      - test_screenshots:/app/tmp/screenshots  # For test failure screenshots
-    healthcheck:
-      test: ["CMD", "pgrep", "-f", "Xvfb"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
+    environment:
+      HISTFILE: /usr/local/hist/.bash_history
+      IRB_HISTFILE: /usr/local/hist/.irb_history
+      BUNDLE_PATH: /opt/bundle
+    command: bash
+
+  # Test runner with Hugo dependency
+  t:
+    image: jetthoughts.com-test:1.0.0
+    build:
+      context: ../
+      dockerfile: ./.dev/Dockerfile
+    working_dir: /app
+    command: bin/test
+    depends_on:
+      hugo-watch:
+        condition: service_healthy
+    volumes:
+      - ..:/app:delegated
+      - /app/node_modules
+      - bundle:/opt/bundle
+      - test_screenshots:/app/tmp/screenshots
+    environment:
+      HUGO_DEFAULT_PATH: "public-dtest"
+      CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
+      CHROME_FLAGS: "--disable-gpu --no-sandbox --disable-dev-shm-usage"
 
 volumes:
   bundle:
-    driver: local
   history:
-    driver: local
-  hugo_cache:
-    driver: local
-  hugo_resources:
-    driver: local
   test_screenshots:
-    driver: local

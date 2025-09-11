@@ -1,0 +1,109 @@
+{{/* Optimized Image Component for Core Web Vitals
+  Features: WebP/AVIF support, lazy loading, responsive images,
+  Proper sizing to prevent CLS, SEO-friendly alt text
+  
+  Usage: {{ partial "seo/optimized-image.html" (dict "src" "image.jpg" "alt" "Description" "sizes" "default") }}
+*/}}
+
+{{- $src := .src -}}
+{{- $alt := .alt | default "Image" -}}
+{{- $sizes := .sizes | default "default" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $class := .class | default "" -}}
+{{- $width := .width | default 800 -}}
+{{- $height := .height | default 600 -}}
+
+{{- $image := "" -}}
+{{- if $.Page.Resources -}}
+  {{- $image = $.Page.Resources.Get $src -}}
+{{- end -}}
+
+{{- if not $image -}}
+  {{- $image = resources.Get $src -}}
+{{- end -}}
+
+{{- if $image -}}
+  {{/* Define responsive sizes based on context */}}
+  {{- $sizeConfig := dict 
+    "hero" (slice 1920 1200 800 600 400)
+    "featured" (slice 1200 800 600 400)
+    "thumbnail" (slice 400 300 200)
+    "default" (slice 800 600 400)
+  -}}
+  
+  {{- $imageSizes := index $sizeConfig $sizes -}}
+  {{- if not $imageSizes -}}
+    {{- $imageSizes = index $sizeConfig "default" -}}
+  {{- end -}}
+  
+  {{/* Generate WebP versions */}}
+  {{- $webpImages := slice -}}
+  {{- $jpegImages := slice -}}
+  
+  {{- range $imageSizes -}}
+    {{- $webpImg := $image.Resize (printf "%dx webp q85" .) -}}
+    {{- $jpegImg := $image.Resize (printf "%dx jpeg q85" .) -}}
+    {{- $webpImages = $webpImages | append (printf "%s %dw" $webpImg.RelPermalink .) -}}
+    {{- $jpegImages = $jpegImages | append (printf "%s %dw" $jpegImg.RelPermalink .) -}}
+  {{- end -}}
+  
+  {{/* Generate primary image dimensions */}}
+  {{- $primaryWebP := $image.Resize (printf "%dx%d webp q85" $width $height) -}}
+  {{- $primaryJPEG := $image.Resize (printf "%dx%d jpeg q85" $width $height) -}}
+  
+  <picture{{ with $class }} class="{{ . }}"{{ end }}>
+    {{/* WebP source with srcset */}}
+    <source 
+      srcset="{{ delimit $webpImages ", " }}"
+      sizes="{{- if eq $sizes "hero" -}}100vw{{- else if eq $sizes "featured" -}}(max-width: 768px) 100vw, 50vw{{- else if eq $sizes "thumbnail" -}}(max-width: 768px) 50vw, 25vw{{- else -}}(max-width: 768px) 100vw, 800px{{- end -}}"
+      type="image/webp">
+    
+    {{/* JPEG fallback with srcset */}}
+    <source 
+      srcset="{{ delimit $jpegImages ", " }}"
+      sizes="{{- if eq $sizes "hero" -}}100vw{{- else if eq $sizes "featured" -}}(max-width: 768px) 100vw, 50vw{{- else if eq $sizes "thumbnail" -}}(max-width: 768px) 50vw, 25vw{{- else -}}(max-width: 768px) 100vw, 800px{{- end -}}"
+      type="image/jpeg">
+    
+    {{/* Fallback img element */}}
+    <img 
+      src="{{ $primaryJPEG.RelPermalink }}"
+      alt="{{ $alt | htmlEscape }}"
+      width="{{ $primaryJPEG.Width }}"
+      height="{{ $primaryJPEG.Height }}"
+      loading="{{ $loading }}"
+      decoding="async"
+      {{- if eq $loading "lazy" }}
+      style="background-color: #f0f0f0;"
+      {{- end }}
+      {{ with $class }}class="{{ . }}"{{ end }}>
+  </picture>
+
+  {{/* SEO-friendly image schema */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "@id": "{{ $.Page.Permalink }}#image-{{ $src | urlize }}",
+    "url": "{{ $primaryWebP.Permalink }}",
+    "contentUrl": "{{ $primaryWebP.Permalink }}",
+    "width": {{ $primaryWebP.Width }},
+    "height": {{ $primaryWebP.Height }},
+    "caption": {{ $alt | jsonify }},
+    "encodingFormat": "image/webp",
+    "thumbnail": {
+      "@type": "ImageObject",
+      "url": "{{ ($image.Resize "400x300 webp q85").Permalink }}",
+      "width": 400,
+      "height": 300
+    },
+    "representativeOfPage": {{ if or (in $src "hero") (in $src "featured") }}true{{ else }}false{{ end }}
+  }
+  </script>
+
+{{- else -}}
+  {{/* Fallback for missing images */}}
+  <div class="image-placeholder{{ with $class }} {{ . }}{{ end }}" 
+       style="width: {{ $width }}px; height: {{ $height }}px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #666;">
+    <span>{{ $alt | htmlEscape }}</span>
+  </div>
+{{- end -}}

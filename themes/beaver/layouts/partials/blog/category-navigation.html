@@ -1,0 +1,128 @@
+{{/* Enhanced Category Navigation for Blog 
+  Creates topic-based navigation with post counts */}}
+{{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+
+{{/* Extract and count all tags */}}
+{{ $tagCounts := dict }}
+{{ range $blogPosts }}
+  {{ with .Params.tags }}
+  {{ range . }}
+    {{ $tag := . }}
+    {{ $count := index $tagCounts $tag | default 0 }}
+    {{ $tagCounts = merge $tagCounts (dict $tag (add $count 1)) }}
+  {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Sort tags by count */}}
+{{ $sortedTags := slice }}
+{{ range $tag, $count := $tagCounts }}
+  {{ if ge $count 3 }} {{/* Only show tags with 3+ posts */}}
+    {{ $sortedTags = $sortedTags | append (dict "tag" $tag "count" $count) }}
+  {{ end }}
+{{ end }}
+{{ $sortedTags = sort $sortedTags "count" "desc" }}
+{{ $topTags := first 12 $sortedTags }}
+
+{{ with $topTags }}
+<section class="blog-category-navigation" style="margin: 2rem 0; padding: 2rem; background: #ffffff; border: 1px solid #e9ecef; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="color: #333; margin-bottom: 0.5rem; font-size: 1.5em;">🏷️ Explore by Topic</h2>
+    <p style="color: #666; margin: 0; font-size: 1rem;">Discover articles organized by technology and expertise areas</p>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+    {{ range . }}
+      {{ $tag := .tag }}
+      {{ $count := .count }}
+      
+      {{/* Define colors for different topics */}}
+      {{ $color := "#0066cc" }}
+      {{ if in "ruby rails activerecord" ($tag | lower) }}
+        {{ $color = "#cc0000" }}
+      {{ else if in "javascript react typescript frontend" ($tag | lower) }}
+        {{ $color = "#f7df1e" }}
+      {{ else if in "testing qa automation" ($tag | lower) }}
+        {{ $color = "#28a745" }}
+      {{ else if in "startup management cto leadership" ($tag | lower) }}
+        {{ $color = "#6f42c1" }}
+      {{ else if in "development webdev programming" ($tag | lower) }}
+        {{ $color = "#17a2b8" }}
+      {{ end }}
+      
+      <a href="/blog/tags/{{ $tag | urlize }}/" 
+         style="display: block; padding: 1rem; background: linear-gradient(135deg, {{ $color }}15 0%, {{ $color }}05 100%); border: 1px solid {{ $color }}30; border-radius: 8px; text-decoration: none; transition: all 0.3s ease; position: relative; overflow: hidden;"
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px {{ $color }}20'"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+        
+        <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 0.5rem;">
+          <h3 style="color: {{ $color }}; margin: 0; font-size: 1rem; font-weight: 600; text-transform: capitalize;">
+            #{{ $tag }}
+          </h3>
+          <span style="background: {{ $color }}; color: white; padding: 0.2em 0.5em; border-radius: 12px; font-size: 0.75em; font-weight: 500;">
+            {{ $count }}
+          </span>
+        </div>
+        
+        <p style="color: #666; margin: 0; font-size: 0.85em; line-height: 1.3;">
+          {{ if eq $count 1 }}{{ $count }} article{{ else }}{{ $count }} articles{{ end }} 
+          {{ if in "ruby rails" ($tag | lower) }}
+            about Ruby on Rails development and best practices
+          {{ else if in "javascript react typescript" ($tag | lower) }}
+            covering modern frontend technologies
+          {{ else if in "testing qa" ($tag | lower) }}
+            on software quality and testing strategies  
+          {{ else if in "startup management cto" ($tag | lower) }}
+            focused on technical leadership
+          {{ else }}
+            on {{ $tag | lower }} development
+          {{ end }}
+        </p>
+        
+        {{/* Add subtle icon */}}
+        <div style="position: absolute; top: 0.5rem; right: 0.5rem; opacity: 0.1; font-size: 2rem;">
+          {{ if in "ruby rails" ($tag | lower) }}💎
+          {{ else if in "javascript react" ($tag | lower) }}🚀  
+          {{ else if in "testing qa" ($tag | lower) }}🧪
+          {{ else if in "startup management" ($tag | lower) }}📈
+          {{ else }}💻{{ end }}
+        </div>
+      </a>
+    {{ end }}
+  </div>
+  
+  {{/* Recent posts from popular categories */}}
+  <div style="border-top: 1px solid #e9ecef; padding-top: 2rem;">
+    <h3 style="color: #333; margin-bottom: 1.5rem; font-size: 1.2em; text-align: center;">📰 Latest Articles</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      {{ $recentPosts := first 6 (sort $blogPosts "Params.created_at" "desc") }}
+      {{ range $recentPosts }}
+        <article style="border: 1px solid #e9ecef; border-radius: 6px; padding: 1rem; background: #fafafa;">
+          <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95em; line-height: 1.3;">
+            <a href="{{ .RelPermalink }}" style="color: #0066cc; text-decoration: none;">{{ .Title }}</a>
+          </h4>
+          
+          {{ with .Params.tags }}
+            <div style="margin-bottom: 0.5rem;">
+              {{ range first 2 . }}
+                <span style="background: #e3f2fd; color: #1976d2; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.7em; margin-right: 0.2em;">#{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          
+          {{ with .Params.created_at }}
+            <time style="color: #999; font-size: 0.8em;">{{ dateFormat "Jan 2, 2006" . }}</time>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e9ecef;">
+    <a href="/blog/" style="background: #0066cc; color: white; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; display: inline-block;">
+      View All {{ len $blogPosts }} Articles
+    </a>
+  </div>
+</section>
+{{ end }}

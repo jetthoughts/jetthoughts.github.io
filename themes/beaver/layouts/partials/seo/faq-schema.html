@@ -1,0 +1,25 @@
+{{/* FAQ Schema - JSON-LD structured data for service pages with FAQs */}}
+{{ if .Params.faqs }}
+{{/* Build FAQ array as native Go maps/slices for proper JSON structure */}}
+{{ $faqMainEntity := slice }}
+{{ range .Params.faqs }}
+  {{ $questionObj := dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer) }}
+  {{ $faqMainEntity = $faqMainEntity | append $questionObj }}
+{{ end }}
+
+{{ $faqSchema := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqMainEntity }}
+
+<script type="application/ld+json">
+{{ $faqSchema | jsonify }}
+</script>
+{{ end }}
+
+{{/* Alternative implementation for service pages without explicit FAQ data */}}
+{{/* This extracts FAQ-style content from service page content if structured with Q&A format */}}
+{{ if and (eq .Section "services") (not .Params.faqs) }}
+  {{/* Look for common FAQ patterns in content and create schema */}}
+  {{ $content := .Content | plainify }}
+  {{ if or (strings.Contains $content "What is") (strings.Contains $content "How do") (strings.Contains $content "Why should") }}
+    <!-- FAQ patterns detected in content - consider adding structured FAQ data to frontmatter -->
+  {{ end }}
+{{ end }}
