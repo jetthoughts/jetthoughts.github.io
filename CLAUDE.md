@@ -568,7 +568,7 @@ Task("Developer", `
   
   BEFORE any work:
   1. 🚨 MUST create reproduction test that FAILS:
-     - Run in production mode: HUGO_ENV=production hugo --minify
+     - Run in production mode: HUGO_ENVIRONMENT=production hugo --minify
      - Test MUST fail to prove issue exists
      - BLOCKED from proceeding if test passes
   

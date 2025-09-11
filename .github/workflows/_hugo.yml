@@ -5,7 +5,6 @@ on:
 
 env:
   HUGO_ENVIRONMENT: production
-  HUGO_ENV: production
   HUGO_CACHEDIR: /tmp/hugo_cache
 
 

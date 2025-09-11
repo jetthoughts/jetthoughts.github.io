@@ -31,7 +31,7 @@ This document provides a comprehensive analysis of the CI/CD pipeline for the Je
 ```yaml
 Environment Variables:
 - HUGO_ENVIRONMENT: production
-- HUGO_ENV: production
+- HUGO_ENVIRONMENT: production
 - HUGO_CACHEDIR: /tmp/hugo_cache
 
 Build Steps:
@@ -218,7 +218,7 @@ Components:
 ```yaml
 Production:
 - HUGO_ENVIRONMENT: production
-- HUGO_ENV: production  
+- HUGO_ENVIRONMENT: production  
 - HUGO_CACHEDIR: /tmp/hugo_cache
 
 Staging:

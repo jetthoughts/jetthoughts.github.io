@@ -131,7 +131,7 @@ SELENIUM_BROWSER=chrome_headless
 SELENIUM_DRIVER_PATH=/usr/local/bin/chromedriver
 
 # Hugo Configuration (optional)
-HUGO_ENV=development
+HUGO_ENVIRONMENT=development
 HUGO_BASEURL=http://localhost:1313
 
 # Performance

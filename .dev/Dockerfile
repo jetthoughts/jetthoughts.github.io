@@ -34,10 +34,6 @@ RUN --mount=type=cache,target=/usr/local/bundle/cache \
 #=============================================================================
 FROM ruby:$RUBY_VERSION-alpine
 
-# Create non-root user for security
-RUN addgroup -g 1000 -S appgroup && \
-    adduser -u 1000 -S appuser -G appgroup
-
 # Copy Bun binary for Node.js package management
 COPY --from=node-deps /usr/local/bin/bun /usr/local/bin/
 
@@ -53,7 +49,6 @@ ENV \
     ENABLE_SELENIUM_FIXES=true \
     LANG=C.UTF-8 \
     NODE_ENV=production \
-    OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
     PATH="/app/bin:/opt/bundle/bin:/usr/local/bin/:$PATH" \
     PRECOMPILED_ASSETS=true \
     RUBY_YJIT_ENABLE=1 \
@@ -74,49 +69,34 @@ ENV \
 RUN --mount=type=cache,target=/var/cache/apk \
     apk update && apk upgrade && \
     apk add --no-cache \
-        # Version control
         git \
-        # Image processing
         libjpeg-turbo \
         vips \
-        # Browser testing
         chromium \
         chromium-chromedriver \
         xvfb \
-        # System utilities (minimal for production)
         htop \
-        && rm -rf /var/cache/apk/*
+        nss freetype ttf-freefont font-noto
 
 # Set up application directory with proper permissions
-RUN mkdir -p /app /tmp/hugo_cache && \
-    chown -R appuser:appgroup /app /tmp/hugo_cache
+RUN mkdir -p /app /tmp/hugo_cache  /app/resources
 WORKDIR /app
 
 # Copy dependencies from build stages with proper ownership
-COPY --from=ruby-deps --chown=appuser:appgroup /opt/bundle /opt/bundle
-COPY --from=node-deps --chown=appuser:appgroup /temp/dev/node_modules ./node_modules
+COPY --from=ruby-deps /opt/bundle /opt/bundle
+COPY --from=node-deps /temp/dev/node_modules ./node_modules
 
 # Git configuration for safe directory access
 RUN git config --system --add safe.directory /app
 
 # Copy and set up entrypoint script with security hardening
 COPY .dev/docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh && \
-    chown root:root /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 # Health check for container monitoring
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD pgrep -f "ruby\|bun" > /dev/null || exit 1
 
-# Switch to non-root user for security
-USER appuser
-
 # Set entrypoint and default command
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["bin/test"]
-
-# Add labels for metadata
-LABEL maintainer="jetthoughts-dev-team" \
-      version="1.0" \
-      description="JetThoughts test environment with Ruby and Node.js" \
-      org.opencontainers.image.source="https://github.com/jetthoughts/jetthoughts.github.io"

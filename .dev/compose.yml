@@ -6,9 +6,8 @@ x-hugo-env: &hugo-env
 
 # Shared Hugo volumes
 x-hugo-volumes: &hugo-volumes
-  - ..:/src:delegated
+  - ..:/app:delegated
   - hugo_cache:/tmp/hugo_cache
-  - hugo_resources:/src/resources:delegated
 
 # Backend service template
 x-backend: &backend
@@ -38,6 +37,7 @@ services:
   # Hugo development server
   hugo:
     image: hugomods/hugo:exts-non-root-0.149.1
+    working_dir: /app
     stdin_open: true
     tty: true
     init: true
@@ -68,11 +68,11 @@ services:
   build:
     image: hugomods/hugo:exts-non-root-0.149.1
     command: hugo --environment production --destination public-dtest --gc --logLevel warn
-    working_dir: /src
+    working_dir: /app
     volumes: *hugo-volumes
     environment:
       <<: *hugo-env
-      HUGO_NUMWORKERSMULTIPLIER: 8  # Faster builds
+      HUGO_NUMWORKERSMULTIPLIER: 3  # Faster builds
     stdin_open: false
     tty: false
     deploy:
@@ -90,12 +90,10 @@ services:
       HUGO_DEFAULT_PATH: "public-dtest"  # Use separate test build directory
       PARALLEL_WORKERS: 6
       CHROME_FLAGS: "--disable-gpu --no-sandbox --disable-dev-shm-usage --disable-extensions --disable-logging --disable-background-timer-throttling"
-      # Enhanced debugging
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
       CHROME_LOG_LEVEL: "3"  # Suppress Chrome logs
       RUBY_GC_HEAP_GROWTH_FACTOR: "1.1"
       RUBY_GC_HEAP_GROWTH_MAX_SLOTS: "40000"
-      MALLOC_ARENA_MAX: "2"
     deploy:
       resources:
         limits:
@@ -127,7 +125,7 @@ volumes:
     driver_opts:
       type: tmpfs
       device: tmpfs
-      o: size=4096m,uid=1000,gid=1000,noatime  # Increased size and proper permissions
+      o: size=4096m,noatime  # Increased size and proper permissions
   hugo_resources:
     driver: local
   test_screenshots:
