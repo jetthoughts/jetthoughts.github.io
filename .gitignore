@@ -61,3 +61,16 @@ claude-flow
 claude-flow.bat
 claude-flow.ps1
 hive-mind-prompt-*.txt
+
+modules/
+tmp/
+hive/
+swarm/
+validation-build/
+lighthouse-*/
+public-test*/
+*.bak
+docker_test_output/
+*.backup
+public-*
+!.dev/docker-entrypoint.sh

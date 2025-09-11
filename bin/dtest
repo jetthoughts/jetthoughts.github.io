@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 
-set -e
+set -euo pipefail
 
-bin/build --destination public-test --baseURL http://localhost:1314
+rm -rf public-dtest || true
+
+echo "Building Hugo site for tests (public-dtest)..."
+hugo --noBuildLock --environment production --destination public-dtest --gc --logLevel warn
+
+# Now run the tests in Docker
+echo "Running tests..."
 bin/docked t "$@"

@@ -1,4 +1,5 @@
-const purgecss = require("@fullhuman/postcss-purgecss")({
+const createPurgeCss = require("@fullhuman/postcss-purgecss").default || require("@fullhuman/postcss-purgecss");
+const purgecss = createPurgeCss({
   content: ["./hugo_stats.json"],
   defaultExtractor: (content) => {
     const els = JSON.parse(content).htmlElements
@@ -36,8 +37,9 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 module.exports = {
   plugins: [
     require("postcss-nested"),
+    process.env.HUGO_ENVIRONMENT === "production" ? require("autoprefixer") : null,
     purgecss,
     require("postcss-delete-duplicate-css")({ isRemoveNull: true, isRemoveComment: true }),
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [require("autoprefixer"), require("cssnano")] : []),
+    process.env.HUGO_ENVIRONMENT === "production" ? require("cssnano") : null,
   ],
 }
