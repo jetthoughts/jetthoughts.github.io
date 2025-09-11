@@ -51,7 +51,6 @@ jobs:
           path: |
             ${{ env.HUGO_CACHEDIR }}
             resources/_gen
-            .hugo_build.lock
           key: ${{ runner.os }}-hugo-build-${{ hashFiles('hugo.toml', 'hugo.dev.toml', 'postcss.config.js', 'package.json', 'themes/**', 'layouts/**') }}
           restore-keys: |
             ${{ runner.os }}-hugo-build-
