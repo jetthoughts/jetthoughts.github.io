@@ -1,4 +1,9 @@
+// PostCSS Configuration - Environment-aware optimization
+const isDevelopment = process.env.HUGO_ENVIRONMENT === "development";
+
+// Skip expensive PurgeCSS in development for faster rebuilds
 const createPurgeCss = require("@fullhuman/postcss-purgecss").default || require("@fullhuman/postcss-purgecss");
+
 const purgecss = createPurgeCss({
   content: ["./hugo_stats.json"],
   defaultExtractor: (content) => {
@@ -32,14 +37,23 @@ const purgecss = createPurgeCss({
       /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/
     ]
   },
-})
+});
 
 module.exports = {
   plugins: [
+    // Always include nested CSS support
     require("postcss-nested"),
-    process.env.HUGO_ENVIRONMENT === "production" ? require("autoprefixer") : null,
-    purgecss,
-    require("postcss-delete-duplicate-css")({ isRemoveNull: true, isRemoveComment: true }),
-    process.env.HUGO_ENVIRONMENT === "production" ? require("cssnano") : null,
-  ],
-}
+
+    // Skip autoprefixer in development for faster processing
+    isDevelopment ? null : require("autoprefixer"),
+
+    // Skip PurgeCSS in development (major speed improvement)
+    isDevelopment ? null : purgecss,
+
+    // Skip duplicate removal in development
+    isDevelopment ? null : require("postcss-delete-duplicate-css")({ isRemoveNull: true, isRemoveComment: true }),
+
+    // Skip minification in development
+    isDevelopment ? null : require("cssnano"),
+  ].filter(Boolean), // Remove null plugins
+};

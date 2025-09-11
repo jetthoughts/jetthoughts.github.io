@@ -3584,3 +3584,4 @@ Never save working files, text/mds and tests to the root folder.
 - ⚠️ ESCALATION: If cannot fix within requirements, escalate rather than violate
 - ✅ SUCCESS CRITERIA: Original requirements met + issue resolved
 - ❌ FAILURE PATTERN: Changing requirements to fit solution instead of fixing solution
+- For hugo code use hugo idiomatic way; for ruby use ruby, minitest and rails idiomatic ways

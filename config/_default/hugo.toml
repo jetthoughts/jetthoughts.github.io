@@ -6,7 +6,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-ShareAli
 theme = "beaver"
 enableGitInfo = true
 disableKinds = []
-environment = "production"
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -23,20 +22,6 @@ environment = "production"
 
 [build]
   writeStats = true
-  noJSConfigInAssets = true
-  noChmod = true
-  useResourceCacheWhen = "fallback"
-  [build.buildStats]
-    enable = true
-
-[build.processing.css]
-  bundle = true
-  fingerprint = true
-  concatenate = true
-
-[build.processing.js]
-  bundle = true
-  fingerprint = true
 
 [imaging]
   quality = 80
@@ -45,9 +30,6 @@ environment = "production"
 
 [minify]
   minifyOutput = true
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-      keepWhitespace = false
 
 [[redirects]]
   from = "/tags/:slug/"

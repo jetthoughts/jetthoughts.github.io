@@ -1,10 +1,30 @@
 #!/usr/bin/env sh
 
+# Simplified Hugo Development Server
+# Uses Hugo's idiomatic config/_default/ + config/development/ pattern
+
 set -euo pipefail
 
 # Signal forwarding for proper shutdown handling
 trap 'exit 130' INT
 trap 'exit 143' TERM
 
-echo "Fast development server starting at http://localhost:1313"
-exec hugo server --config hugo.toml,hugo.dev.toml --bind 0.0.0.0 --port 1313 --environment development --renderToMemory --logLevel info --noHTTPCache "$@"
+echo "🚀 Starting Hugo development server with simplified configuration"
+echo "📍 Server will be available at: http://localhost:1313"
+echo "⚙️  Using Hugo's standard environment cascade:"
+echo "    - config/_default/hugo.toml (base configuration)"
+echo "    - config/development/hugo.toml (development overrides)"
+echo ""
+
+# Hugo automatically:
+# - Uses 'development' environment with `hugo server`
+# - Enables buildDrafts, buildExpired, buildFuture
+# - Applies development config overrides
+# - Optimizes for fast rebuilds
+
+exec hugo server \
+  --bind 0.0.0.0 \
+  --port 1313 \
+  --renderToMemory \
+  --noHTTPCache \
+  "$@"

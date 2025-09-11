@@ -1,0 +1,34 @@
+# Development Environment Configuration
+# Overrides base config for fast development iteration
+
+# Development-specific base URL
+baseURL = "http://localhost:1313/"
+
+# Hugo automatically enables these in development, but explicit is better
+buildDrafts = true
+buildExpired = true
+buildFuture = true
+
+# Disable resource-intensive features for faster builds
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
+
+# Build optimizations for development speed
+[build]
+  # Skip Hugo stats generation (not needed for PurgeCSS in dev)
+  writeStats = false
+
+# Fast image processing for development
+[imaging]
+  # Lower quality for faster processing
+  quality = 70
+
+# Disable minification in development
+[minify]
+  minifyOutput = false
+
+# Development-specific parameters
+[params]
+  # Enable development-specific features
+  environment = "development"
+  # Skip analytics in development
+  skipAnalytics = true
