@@ -12,9 +12,9 @@
 {{- if $cssFiles -}}
   {{- $bundleName := printf "css/bundle-%s.css" $page -}}
 
-  {{- $css := $cssFiles | resources.Concat $bundleName | minify | fingerprint "md5" -}}
+  {{- $css := $cssFiles | resources.Concat $bundleName | postCSS | minify | fingerprint "md5" -}}
   {{- if hugo.IsProduction -}}
-    {{- $css = $css  -}}
+    {{- $css = $css | resources.PostProcess -}}
   {{- end -}}
 
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" media="{{ $media }}" />

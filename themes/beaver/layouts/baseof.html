@@ -69,7 +69,10 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="manifest" href="/manifest.json">
 
-    {{ $navCss := resources.Get "css/navigation.css" | minify | fingerprint "md5" }}
+    {{ $navCss := resources.Get "css/navigation.css" | postCSS | minify | fingerprint "md5" -}}
+    {{- if hugo.IsProduction -}}
+      {{- $navCss = $navCss | resources.PostProcess -}}
+    {{- end -}}
     <link rel="preload" as="style" href="{{ $navCss.RelPermalink }}">
     <link rel="stylesheet" href="{{ $navCss.RelPermalink }}">
 </head>

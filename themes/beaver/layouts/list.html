@@ -14,10 +14,16 @@ $dynamicCSS586
 (resources.Get "css/theme-main.css")
 (resources.Get "css/single-post.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/blog.css" }}
+| resources.Concat "css/blog.css" | postCSS | minify | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $CSS = $CSS | resources.PostProcess -}}
+{{- end -}}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
-{{ $paginationCss := resources.Get "css/pagination.css" | minify | fingerprint "md5" }}
+{{ $paginationCss := resources.Get "css/pagination.css" | postCSS | minify | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $paginationCss = $paginationCss | resources.PostProcess -}}
+{{- end -}}
 <link rel="stylesheet" href="{{ $paginationCss.RelPermalink }}">
 
 
