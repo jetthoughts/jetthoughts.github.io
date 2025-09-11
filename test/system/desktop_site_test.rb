@@ -15,6 +15,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_problematic_screenshot "homepage"
   end
 
+  def test_top_image_have_highest_priority
+    visit "/"
+    within ".fl-photo-content.fl-photo-img-jpeg" do
+      assert_css "img[fetchpriority=high]"
+    end
+  end
+
   # Generate individual test methods for each homepage section
   %w[clients technologies cta-contact_us footer].each do |section_id|
     define_method("test_homepage_section_#{section_id.tr("-", "_")}") do

@@ -7,7 +7,7 @@ set -euo pipefail
 
 # Configuration
 BASE_URL="${1:-http://localhost:1313}"
-OUTPUT_DIR="test/lighthouse-reports"
+OUTPUT_DIR="_reports/lighthouse-reports"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 REPORT_DIR="${OUTPUT_DIR}/${TIMESTAMP}"
 MIN_SCORE=90
@@ -24,13 +24,11 @@ declare -a COMPLEX_PAGES=(
     "/"
     "/about-us/"
     "/blog/"
-    "/services/"
     "/services/fractional-cto/"
-    "/services/product-development/"
-    "/services/ui-ux-design/"
-    "/services/web-development/"
+    "/services/app-web-development/"
     "/blog/tags/ruby/"
     "/blog/tags/rails/"
+    "/blog/when-small-method-choices-cascade-into/"
 )
 
 echo -e "${BLUE}=== JetThoughts Lighthouse Performance Benchmark ===${NC}"

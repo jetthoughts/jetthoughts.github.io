@@ -135,7 +135,7 @@ active_job_story:
 **Knowledge Index**: `/knowledge/KNOWLEDGE_INDEX.md` - Navigation guide for all knowledge
 
 ### 🎯 Core Knowledge Principles
-1. **Research-First Development**: Use `claude-context`, `context7`, `docs MCP` to validate all approaches
+1. **Package-Search Priority Development**: Use `package-search` MCP as PRIMARY tool for dependency research, `claude-context` for local patterns, `context7` as fallback only. MANDATORY: AC.82.01
 2. **Pattern Consistency**: Follow established patterns from knowledge base solutions
 3. **Quality Assurance**: Apply comprehensive validation checklists for all implementations
 4. **Security-First**: Implement security practices from knowledge base frameworks
@@ -549,6 +549,61 @@ rollback_micro_change() {
 - **Split work into smallest non-breaking tasks with intensive test verification**
 - **Guarantee working solution at any time**
 - **Prioritize radical KISS, YAGNI, Readability, Low Cognitive Load**
+
+## 🔍 PACKAGE-SEARCH MCP PRIORITY (MANDATORY)
+
+**STATUS**: PRODUCTION ACTIVE  
+**COMPLIANCE**: MANDATORY for all Hugo/Jekyll dependency research  
+**REFERENCE**: AC.82.01 Package-Search MCP Priority
+
+### Core Mandate for jt_site
+
+**ALL Hugo site agents MUST prioritize package-search MCP** for external dependency research:
+
+```yaml
+research_hierarchy:
+  1_primary: "package-search MCP - npm, golang packages for Hugo/Jekyll"
+  2_secondary: "claude-context - local Hugo patterns and config"
+  3_fallback: "context7 - documentation only when package-search unavailable"
+```
+
+### Required Usage Pattern for Hugo Development
+
+```python
+# MANDATORY: Search Hugo-related packages FIRST
+mcp__package-search__package_search_hybrid(
+    registry_name="npm",  # For Hugo/Jekyll npm packages
+    package_name="hugo",  # Or "jekyll", "postcss", etc.
+    semantic_queries=["static site generation", "template patterns", "build optimization"],
+    pattern=r"hugo|jekyll|static.*site"
+)
+
+# For Go packages (Hugo is written in Go)
+mcp__package-search__package_search_hybrid(
+    registry_name="golang_proxy",
+    package_name="gohugoio/hugo",
+    semantic_queries=["template rendering", "content processing"],
+    pattern=r"func.*Render|type.*Page"
+)
+```
+
+### Hugo/Jekyll Specific Examples
+
+- **Template patterns**: `semantic_queries=["Hugo template functions", "Jekyll liquid templates"]`
+- **Build optimization**: `semantic_queries=["static site build performance", "asset pipeline"]`
+- **CSS/PostCSS**: `semantic_queries=["PostCSS configuration", "TailwindCSS Hugo integration"]`
+- **SEO patterns**: `semantic_queries=["SEO optimization for static sites"]`
+
+### Validation Requirements
+
+```bash
+# Pre-task validation for Hugo agents
+echo "🔍 Package Search Priority: ACTIVE for Hugo/Jekyll"
+echo "📦 Searching for static site patterns in: $PACKAGE_NAME"
+
+# Post-task metrics
+echo "✅ Package-search utilized for Hugo dependency research"
+```
 
 ## 🛡️ VERIFICATION-FIRST DEVELOPMENT (MANDATORY)
 

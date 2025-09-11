@@ -74,3 +74,4 @@ docker_test_output/
 *.backup
 public-*
 !.dev/docker-entrypoint.sh
+_reports/
