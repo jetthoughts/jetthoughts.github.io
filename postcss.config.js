@@ -1,4 +1,5 @@
-const purgecss = require("@fullhuman/postcss-purgecss").default({
+const createPurgeCss = require("@fullhuman/postcss-purgecss").default || require("@fullhuman/postcss-purgecss");
+const purgecss = createPurgeCss({
   content: ["./hugo_stats.json"],
   defaultExtractor: (content) => {
     const els = JSON.parse(content).htmlElements

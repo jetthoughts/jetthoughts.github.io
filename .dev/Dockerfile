@@ -57,7 +57,7 @@ ENV \
     DISPLAY=:99 \
     # Hugo configuration
     HUGO_CACHEDIR=/tmp/hugo_cache \
-    HUGO_NUMWORKERSMULTIPLIER=4 \
+    HUGO_NUMWORKERMULTIPLIER=4 \
     # Memory optimization (tuned values)
     MALLOC_ARENA_MAX=2 \
     RUBY_GC_HEAP_INIT_SLOTS=800000 \

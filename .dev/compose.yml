@@ -2,7 +2,7 @@
 # Shared environment variables for Hugo services
 x-hugo-env: &hugo-env
   HUGO_CACHEDIR: /tmp/hugo_cache
-  HUGO_NUMWORKERSMULTIPLIER: 4
+  HUGO_NUMWORKERMULTIPLIER: 4
 
 # Shared Hugo volumes
 x-hugo-volumes: &hugo-volumes
@@ -72,7 +72,7 @@ services:
     volumes: *hugo-volumes
     environment:
       <<: *hugo-env
-      HUGO_NUMWORKERSMULTIPLIER: 3  # Faster builds
+      HUGO_NUMWORKERMULTIPLIER: 3  # Faster builds
     stdin_open: false
     tty: false
     deploy:
