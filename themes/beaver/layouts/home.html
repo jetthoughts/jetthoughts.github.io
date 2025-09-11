@@ -18,7 +18,7 @@
 (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
 }}
 
-{{ $nonCriticalCSS := $nonCriticalResources | resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint "md5" | resources.PostProcess }}
+{{ $nonCriticalCSSUrl := partial "assets/css-url-processor.html" (dict "cssFiles" $nonCriticalResources "page" "homepage") }}
 <script>
 function loadCSS(url) {
    const link = document.createElement('link');
@@ -34,19 +34,12 @@ function loadCSS(url) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-   loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
+   loadCSS("{{ $nonCriticalCSSUrl }}")
 })
 </script>
 
-{{ $tabs := slice
-(resources.Get "js/tabs.js")
-| resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $tabs = $tabs | resources.PostProcess -}}
-{{- end -}}
-
-<script defer src="{{ $tabs.RelPermalink }}"></script>
+{{ $tabsResources := slice (resources.Get "js/tabs.js") }}
+{{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}
 
 {{ partial "header/json-ld-company.html" . }}
 {{ end }}

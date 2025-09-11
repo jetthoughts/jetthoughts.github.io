@@ -1,0 +1,40 @@
+{{/*
+  Centralized JS Processing Pipeline
+  Eliminates duplication of JS build patterns across templates
+  
+  Usage: {{ partial "assets/js-processor.html" (dict 
+    "resources" $jsFiles 
+    "bundleName" "bundle-homepage"
+    "defer" true
+    "async" false
+  ) }}
+*/}}
+
+{{- $resources := .resources | default slice -}}
+{{- $bundleName := .bundleName | default "bundle" -}}
+{{- $defer := .defer | default false -}}
+{{- $async := .async | default false -}}
+
+{{- if $resources -}}
+  {{/* Step 1: Concatenate resources */}}
+  {{- $bundle := $resources | resources.Concat (printf "js/%s.js" $bundleName) -}}
+  
+  {{/* Step 2: Build with environment-aware minification */}}
+  {{- $processed := $bundle | js.Build (dict "minify" hugo.IsProduction) -}}
+  
+  {{/* Step 3: Fingerprint for cache busting */}}
+  {{- $processed = $processed | fingerprint "md5" -}}
+  
+  {{/* Step 4: PostProcess for production */}}
+  {{- if hugo.IsProduction -}}
+    {{- $processed = $processed | resources.PostProcess -}}
+  {{- end -}}
+  
+  {{/* Output script tag with appropriate attributes */}}
+  <script src="{{ $processed.RelPermalink }}"
+          {{- if $defer }} defer{{- end }}
+          {{- if $async }} async{{- end }}
+          {{- if hugo.IsProduction }} integrity="{{ $processed.Data.Integrity }}" crossorigin="anonymous"{{- end }}>
+  </script>
+  
+{{- end -}}

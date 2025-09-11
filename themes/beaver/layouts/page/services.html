@@ -8,14 +8,7 @@
 
 
 {{ define "footer" }}
-{{ $tabs := slice
-(resources.Get "js/tabs.js")
-| resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $tabs = $tabs | resources.PostProcess -}}
-{{- end -}}
-<script defer src="{{ $tabs.RelPermalink }}"></script>
+{{ partial "assets/js-processor.html" (dict "resources" (slice (resources.Get "js/tabs.js")) "bundleName" "tabs" "defer" true) }}
 {{ end }}
 
 

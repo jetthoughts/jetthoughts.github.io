@@ -69,12 +69,8 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="manifest" href="/manifest.json">
 
-    {{ $navCss := resources.Get "css/navigation.css" | postCSS | minify | fingerprint "md5" -}}
-    {{- if hugo.IsProduction -}}
-      {{- $navCss = $navCss | resources.PostProcess -}}
-    {{- end -}}
-    <link rel="preload" as="style" href="{{ $navCss.RelPermalink }}">
-    <link rel="stylesheet" href="{{ $navCss.RelPermalink }}">
+    {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
+    {{ partial "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) }}
 </head>
 
 <body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage" lang="en">

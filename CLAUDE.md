@@ -2,30 +2,104 @@
 
 ## 🏃 AGILE SPRINT MANAGEMENT FRAMEWORK
 
-### 📅 Current Sprint Configuration
+### ⚡ CRITICAL DISTINCTION: Sprints vs Iterations vs Micro-Refactoring
+
+**IMPORTANT**: This configuration properly separates three distinct concepts:
+
+```yaml
+hierarchy_clarification:
+  sprints:
+    definition: "2-week development periods for major goal achievement"
+    duration: "14 days"
+    team_capacity: "400 hours (5 developers × 2 weeks × 40 hours)"
+    contains: "2 weekly iterations"
+    focus: "Sprint goal delivery and stakeholder value"
+    
+  iterations:
+    definition: "1-week development cycles within sprints"
+    duration: "7 days"
+    team_capacity: "200 hours (5 developers × 40 hours)"
+    purpose: "Focused development work with rapid feedback"
+    planning_unit: "Primary unit for capacity and story planning"
+    
+  micro_refactoring:
+    definition: "Quality technique for safe code changes during development"
+    scope: "Individual code modifications within iteration tasks"
+    size_limit: "3 lines per change, 50 lines per task"
+    purpose: "Maintain code quality and prevent regressions"
+    relationship: "Technique used WITHIN iteration development work"
+
+key_understanding:
+  - "Iterations are NOT 3-line changes"
+  - "Iterations are 1-week development cycles with 5 developers"
+  - "Micro-refactoring is a quality technique used during iterations"
+  - "WIP limits apply at iteration level, not micro-change level"
+```
+
+### 📅 Sprint and Iteration Structure
+
+**SPRINT FRAMEWORK**: 2-week sprints containing 2 weekly iterations for focused development cycles.
+
 ```yaml
 sprint:
   number: 1
   name: "Foundation Sprint"
-  duration: "2 weeks"
+  duration: "2 weeks"  # Contains 2 weekly iterations
   start_date: "2025-01-06"
   end_date: "2025-01-20"
   velocity_target: 40
-  team_capacity: 160  # hours
+  total_capacity: 400  # hours (5 developers × 2 weeks × 40 hours)
+  
+iteration_structure:
+  iteration_1:
+    duration: "1 week"
+    dates: "2025-01-06 to 2025-01-12"
+    team_size: 5  # developers
+    capacity_per_developer: 40  # hours per week
+    total_iteration_capacity: 200  # hours (5 × 40)
+    focus: "Foundation setup and core implementation"
+    
+  iteration_2:
+    duration: "1 week"
+    dates: "2025-01-13 to 2025-01-20"
+    team_size: 5  # developers
+    capacity_per_developer: 40  # hours per week
+    total_iteration_capacity: 200  # hours (5 × 40)
+    focus: "Integration, testing, and sprint goal completion"
+
+team_capacity_calculation:
+  developers: 5
+  hours_per_developer_per_week: 40
+  weekly_iteration_capacity: 200  # hours
+  sprint_capacity: 400  # hours (2 iterations)
+  focus_factor: 75%  # actual productive time
+  effective_sprint_capacity: 300  # hours
 ```
 
 ### 🎯 WIP LIMITS ENFORCEMENT (MANDATORY)
 
-**CRITICAL: All development MUST follow strict WIP limits to ensure focus and quality:**
+**CRITICAL: All development MUST follow strict WIP limits at iteration and developer levels:**
 
 ```yaml
 wip_limits:
+  # Organizational Level
   active_goals: 1        # Only ONE goal at a time
   active_sprints: 1      # Only ONE sprint active
-  active_job_stories: 1  # Only ONE job story in progress
-  active_tasks: 1        # Only ONE task being worked on
+  active_iterations: 1   # Only ONE iteration active at a time
+  
+  # Team Level (per iteration)
+  active_job_stories: 3  # Maximum 3 stories in progress (5 developers)
+  active_tasks: 5        # One task per developer maximum
+  
+  # Developer Level
+  stories_per_developer: 1     # Only ONE story per developer
+  tasks_per_developer: 1       # Only ONE task per developer
+  micro_changes_per_task: unlimited  # 3-line changes within tasks
   
 wip_enforcement:
+  iteration_level: true    # Enforce at weekly iteration level
+  developer_level: true    # Enforce at individual developer level
+  micro_change_level: false # Micro-refactoring is a technique, not WIP unit
   block_exceeding: true
   alert_at_100_percent: true
   auto_validation: true
@@ -243,21 +317,43 @@ hooks:
     npx claude-flow@alpha hooks sprint-ceremony --type "$CEREMONY_TYPE"
 ```
 
-#### Development Team Agents
+#### Development Team Agents (5-Developer Team)
 ```yaml
 team_composition:
+  - name: "lead-developer"
+    capacity: 40  # hours per iteration (1 week)
+    sprint_capacity: 80  # hours per sprint (2 weeks)
+    skills: ["architecture", "hugo", "javascript", "mentoring"]
+    wip_limit: 1  # one story at a time
+    
   - name: "hugo-developer"
-    capacity: 40  # hours per sprint
+    capacity: 40  # hours per iteration
+    sprint_capacity: 80  # hours per sprint
     skills: ["hugo", "markdown", "scss", "javascript", "testing"]
     wip_limit: 1
+    
+  - name: "frontend-developer"
+    capacity: 40  # hours per iteration
+    sprint_capacity: 80  # hours per sprint
+    skills: ["css", "javascript", "responsive-design", "accessibility"]
+    wip_limit: 1
+    
   - name: "content-developer"
-    capacity: 32
+    capacity: 40  # hours per iteration
+    sprint_capacity: 80  # hours per sprint
     skills: ["content-creation", "seo", "markdown", "accessibility"]
     wip_limit: 1
+    
   - name: "qa-engineer"
-    capacity: 28
+    capacity: 40  # hours per iteration
+    sprint_capacity: 80  # hours per sprint
     skills: ["testing", "accessibility", "performance", "validation"]
     wip_limit: 1
+
+iteration_capacity_totals:
+  weekly_iteration: 200  # hours (5 × 40)
+  sprint_total: 400      # hours (2 × 200)
+  effective_capacity: 300 # hours (75% focus factor)
 ```
 
 ### Agent Memory Coordination
@@ -460,29 +556,48 @@ npx claude-flow@alpha hooks memory-store \
   --value "$DECOMPOSITION_RESULT"
 ```
 
-## 🧬 MICRO NON-BREAKING CHANGES PROTOCOL
+## 🧬 MICRO-REFACTORING DEVELOPMENT TECHNIQUE
 
-### Critical Implementation Requirements
+### Development Quality Protocol (Used Within Iterations)
 
-**MANDATORY FOR ALL AGENTS**: All code changes MUST follow the strict micro-refactoring protocols to ensure system stability and rapid iteration cycles.
+**IMPORTANT DISTINCTION**: Micro-refactoring is a DEVELOPMENT TECHNIQUE used WITHIN weekly iterations, NOT the definition of iterations themselves.
 
-#### The 3-Line Rule (ENFORCED)
+**CLARIFICATION**:
+- **ITERATIONS**: 1-week development cycles (200 hours with 5 developers)
+- **MICRO-REFACTORING**: Quality technique for making small, safe changes during development
+- **SPRINTS**: 2-week periods containing 2 iterations
+
+#### The 3-Line Micro-Refactoring Technique (Quality Practice)
 ```yaml
-micro_refactoring_compliance:
-  max_lines_per_change: 3
-  max_total_lines_per_task: 50
+micro_refactoring_technique:
+  purpose: "Safe, testable changes during iteration development"
+  scope: "Individual code changes within iteration tasks"
+  max_lines_per_micro_change: 3
+  max_total_lines_per_task: 50  # Within iteration tasks
   test_after_each_change: required
   rollback_on_failure: automatic
   continuous_validation: true
+  
+context_clarification:
+  used_within: "Weekly iteration development work"
+  not_used_for: "Defining iteration duration or capacity"
+  relationship: "Quality technique supporting iteration delivery"
+  wip_application: "Applied to individual code changes, not iteration planning"
 ```
 
-#### Implementation Protocol
+#### Implementation Protocol (Within Iteration Tasks)
 
-**Phase 1: Task Decomposition**
-- Break ALL tasks into 3-line micro-changes
-- Plan maximum 50 lines total per complete task
-- Identify rollback points for each micro-step
+**Phase 1: Iteration Task Breakdown**
+- Break iteration tasks into small, manageable units
+- Apply micro-refactoring technique to individual code changes
+- Plan maximum 50 lines total per iteration task
+- Identify rollback points for each micro-change
 - Ensure each micro-change is independently testable
+
+**Iteration Context**:
+- Micro-refactoring applies to code changes WITHIN iteration tasks
+- Iteration planning focuses on story delivery and team capacity
+- Quality technique supports but doesn't define iteration structure
 
 **Phase 2: Micro-Change Execution** 
 ```bash
@@ -530,12 +645,18 @@ rollback_micro_change() {
 
 #### Agent Integration Requirements
 
-**ALL AGENTS MUST:**
-1. **Plan in micro-steps**: Decompose tasks to 3-line changes
-2. **Execute incrementally**: Apply changes one micro-step at a time  
-3. **Test continuously**: Validate after each micro-change
-4. **Rollback immediately**: Revert on any failure
-5. **Document patterns**: Record successful micro-change patterns
+**ALL AGENTS MUST (During Iteration Development):**
+1. **Plan iteration tasks**: Decompose iteration work into deliverable units
+2. **Apply micro-refactoring**: Use 3-line technique for code changes within tasks
+3. **Execute incrementally**: Apply micro-changes one step at a time within tasks
+4. **Test continuously**: Validate after each micro-change
+5. **Rollback immediately**: Revert failed micro-changes
+6. **Document patterns**: Record successful micro-refactoring patterns
+
+**Iteration vs Micro-Refactoring Distinction**:
+- **Iteration Planning**: Focus on story delivery, team capacity, weekly goals
+- **Micro-Refactoring**: Focus on safe code changes during development
+- **Integration**: Micro-refactoring supports iteration delivery quality
 
 #### Handbook Compliance Integration
 
@@ -2936,11 +3057,15 @@ velocity_tracking:
 
     capacity_factors:
       team_size: 5
-      sprint_duration: 14  # days
-      daily_capacity: 6    # hours per person
-      total_capacity: 420  # hours per sprint
+      sprint_duration: 14  # days (2 iterations × 7 days)
+      iteration_duration: 7  # days per iteration
+      daily_capacity: 8    # hours per person per day
+      weekly_capacity: 40  # hours per person per iteration
+      iteration_capacity: 200  # hours per iteration (5 × 40)
+      total_sprint_capacity: 400  # hours per sprint (2 × 200)
       focus_factor: 75%    # actual productive time
-      effective_capacity: 315  # hours
+      effective_iteration_capacity: 150  # hours (200 × 75%)
+      effective_sprint_capacity: 300  # hours (400 × 75%)
 
   burndown_chart_data:
     ideal_burndown:
@@ -3430,9 +3555,10 @@ Never save working files, text/mds and tests to the root folder.
 - verify tests after each change and request to rework on found issues
 - prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
 - spawn swarm: prevent deletion of valid tests to make them pass. IMPORTANT: pre-validate changes with reviewer to avoid breaking changes
-- always activate micro cycle/iterative/incremental sprints work for each big enough requests, and schedule refelctions at the end of each iterration/cycle.
+- always activate weekly iteration/incremental development work for significant requests, and schedule reflections at the end of each iteration.
 - 🚨 ZERO TOLERANCE: bin/test, bin/dev, bin/build, bin/dtest MUST work after changes - fix or revert immediately!
-- Focus on one iteration in one time. WIP: 1 milestone, 1 sprint/iterratin/cycle, 1 job story, 1 task
+- Focus on one iteration at a time. WIP: 1 milestone, 1 sprint (2 weeks), 1 active iteration (1 week), limited job stories per iteration
+- Use micro-refactoring (3-line changes) as a QUALITY TECHNIQUE within iteration development, not as iteration definition
 - do not left one time verification scripts just to test one regression, or it should be minitests or it should be removed after task completed
 - do not add custom scripts hooks for agents and use only native claude and caude-flow npx invocations.
 

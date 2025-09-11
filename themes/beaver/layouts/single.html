@@ -4,22 +4,24 @@
 
 {{ define "header" }}
 
-{{- $CSS := slice
-(resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
-(resources.Get "css/services-layout.css")
-(resources.Get "css/style.css")
-(resources.Get "css/base-layout.css")
-(resources.Get "css/homepage-layout.css")
-(resources.Get "css/component-bundle.css")
-(resources.Get "css/theme-main.css")
-(resources.Get "css/single-post.css")
-(resources.Get "css/footer.css")
-| resources.Concat "css/blog/single.css" | postCSS | minify | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $CSS = $CSS | resources.PostProcess -}}
-{{- end -}}
+{{- $cssFiles := slice
+  (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+  (resources.Get "css/services-layout.css")
+  (resources.Get "css/style.css")
+  (resources.Get "css/base-layout.css")
+  (resources.Get "css/homepage-layout.css")
+  (resources.Get "css/component-bundle.css")
+  (resources.Get "css/theme-main.css")
+  (resources.Get "css/single-post.css")
+  (resources.Get "css/footer.css")
+}}
 
-<link href='{{ $CSS.RelPermalink }}' media='all' rel='stylesheet'/>
+{{ partial "assets/css-processor.html" (dict 
+  "resources" $cssFiles 
+  "bundleName" "blog-single"
+  "context" .
+  "media" "all"
+) }}
 
 {{ with .Params.created_at }}
 <meta content='{{ . | time.Format "2006-01-02T15:04:05Z07:00" }}' property='article:published_time'/>

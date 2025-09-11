@@ -3,23 +3,25 @@
 {{ end }}
 
 {{ define "header" }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $CSS := slice
-$dynamicCSS586
-(resources.Get "css/services-layout.css")
-(resources.Get "css/style.css")
-(resources.Get "css/base-layout.css")
-(resources.Get "css/homepage-layout.css")
-(resources.Get "css/component-bundle.css")
-(resources.Get "css/theme-main.css")
-(resources.Get "css/single-post.css")
-(resources.Get "css/footer.css")
-| resources.Concat "css/blog.css" | postCSS | minify | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $CSS = $CSS | resources.PostProcess -}}
-{{- end -}}
+{{- $cssFiles := slice
+  (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+  (resources.Get "css/services-layout.css")
+  (resources.Get "css/style.css")
+  (resources.Get "css/base-layout.css")
+  (resources.Get "css/homepage-layout.css")
+  (resources.Get "css/component-bundle.css")
+  (resources.Get "css/theme-main.css")
+  (resources.Get "css/single-post.css")
+  (resources.Get "css/footer.css")
+}}
 
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{ partial "assets/css-processor.html" (dict 
+  "resources" $cssFiles 
+  "bundleName" "blog-list"
+  "context" .
+  "media" "all"
+) }}
+
 {{ $paginationCss := resources.Get "css/pagination.css" | postCSS | minify | fingerprint "md5" -}}
 {{- if hugo.IsProduction -}}
   {{- $paginationCss = $paginationCss | resources.PostProcess -}}

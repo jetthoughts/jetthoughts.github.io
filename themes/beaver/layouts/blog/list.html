@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "header" }}
-  {{- $CSS := slice
+  {{- $cssFiles := slice
     (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/pagination.css")
     (resources.Get "css/services-layout.css")
@@ -14,10 +14,14 @@
     (resources.Get "css/theme-main.css")
     (resources.Get "css/single-post.css")
     (resources.Get "css/footer.css")
-    | resources.Concat "css/blog/list.css" 
   }}
 
-  <link href="{{ $CSS.RelPermalink }}" media="all" rel="stylesheet" />
+  {{ partial "assets/css-processor.html" (dict 
+    "resources" $cssFiles 
+    "bundleName" "blog-list"
+    "context" .
+    "media" "all"
+  ) }}
 
   {{ if eq .Type "tags" }}
     {{ $blogIndex := .Site.GetPage "blog" }}

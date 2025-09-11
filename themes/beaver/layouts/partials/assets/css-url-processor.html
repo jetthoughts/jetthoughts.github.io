@@ -1,0 +1,13 @@
+{{/*
+  CSS URL Processor - Returns processed CSS URL only (for lazy loading)
+  Usage: {{ $cssUrl := partial "assets/css-url-processor.html" (dict "cssFiles" $cssFiles "page" "pageName") }}
+*/}}
+
+{{- $cssFiles := .cssFiles | default slice -}}
+{{- $page := .page | default "default" -}}
+
+{{- if $cssFiles -}}
+  {{- $bundleName := printf "css/bundle-%s.css" $page -}}
+  {{- $css := $cssFiles | resources.Concat $bundleName | postCSS | minify | fingerprint "md5" -}}
+  {{- if hugo.IsProduction -}}{{- $css = $css | resources.PostProcess -}}{{- end -}}{{- $css.RelPermalink -}}
+{{- end -}}
