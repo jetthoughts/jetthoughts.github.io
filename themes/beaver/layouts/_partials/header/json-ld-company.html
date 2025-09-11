@@ -1,10 +1,10 @@
 <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "Organization",
         "name": "{{ .Site.Title }}",
         "url": "{{ .Site.BaseURL }}",
-        "logo": "{{ (resources.Get "img/favicon/android-chrome-512x512.png" | fingerprint).RelPermalink }}",
+        "logo": "{{ (resources.Get "img/favicon/android-chrome-512x512.png" | fingerprint "md5").RelPermalink }}",
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer support",

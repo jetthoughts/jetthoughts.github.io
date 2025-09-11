@@ -3,12 +3,12 @@
     "short_name": "{{ .Site.Title }}",
     "icons": [
         {
-            "src": "{{ (resources.Get "img/favicon/android-chrome-192x192.png" | fingerprint).RelPermalink }}",
+            "src": "{{ (resources.Get "img/favicon/android-chrome-192x192.png" | fingerprint "md5").RelPermalink }}",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "{{ (resources.Get "img/favicon/android-chrome-512x512.png" | fingerprint).RelPermalink }}",
+            "src": "{{ (resources.Get "img/favicon/android-chrome-512x512.png" | fingerprint "md5").RelPermalink }}",
             "sizes": "512x512",
             "type": "image/png"
         }

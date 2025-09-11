@@ -1,0 +1,86 @@
+{{/* Breadcrumb Navigation Component
+  Features: JSON-LD structured data, accessibility, performance optimized
+*/}}
+{{- $page := . -}}
+{{- $site := .Site -}}
+
+{{/* Generate breadcrumb items */}}
+{{- $breadcrumbs := slice -}}
+
+{{/* Home breadcrumb */}}
+{{- $homeCrumb := dict "url" $site.BaseURL "title" "Home" -}}
+{{- $breadcrumbs = $breadcrumbs | append $homeCrumb -}}
+
+{{/* Section breadcrumbs */}}
+{{- if not .IsHome -}}
+  {{- if eq .Section "blog" -}}
+    {{- $blogCrumb := dict "url" (relref . "/blog") "title" "Blog" -}}
+    {{- $breadcrumbs = $breadcrumbs | append $blogCrumb -}}
+  {{- else if eq .Section "services" -}}
+    {{- $servicesCrumb := dict "url" (relref . "/services") "title" "Services" -}}
+    {{- $breadcrumbs = $breadcrumbs | append $servicesCrumb -}}
+  {{- else if eq .Section "use-cases" -}}
+    {{- $useCasesCrumb := dict "url" (relref . "/use-cases") "title" "Use Cases" -}}
+    {{- $breadcrumbs = $breadcrumbs | append $useCasesCrumb -}}
+  {{- end -}}
+
+  {{/* Current page */}}
+  {{- if not (.IsSection) -}}
+    {{- $currentCrumb := dict "url" .Permalink "title" .Title -}}
+    {{- $breadcrumbs = $breadcrumbs | append $currentCrumb -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* JSON-LD structured data */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- range $index, $crumb := $breadcrumbs -}}
+      {{- if $index }},{{ end }}
+      {
+        "@type": "ListItem",
+        "position": {{ add $index 1 }},
+        "name": "{{ $crumb.title }}",
+        "item": "{{ $crumb.url }}"
+      }
+    {{- end -}}
+  ]
+}
+</script> {{/* Visible breadcrumb navigation */}}
+{{ if gt (len $breadcrumbs) 1 }}
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol
+      class="breadcrumb-list"
+      vocab="https://schema.org/"
+      typeof="BreadcrumbList">
+      {{ range $index, $crumb := $breadcrumbs }}
+        <li
+          property="itemListElement"
+          typeof="ListItem"
+          class="breadcrumb-item{{ if eq $index (sub (len $breadcrumbs) 1) }}
+            breadcrumb-current
+          {{ end }}">
+          {{ if eq $index (sub (len $breadcrumbs) 1) }}
+            <span property="name" class="breadcrumb-text"
+              >{{ $crumb.title }}</span
+            >
+          {{ else }}
+            <a
+              property="item"
+              typeof="WebPage"
+              href="{{ $crumb.url }}"
+              class="breadcrumb-link">
+              <span property="name">{{ $crumb.title }}</span>
+            </a>
+          {{ end }}
+          <meta property="position" content="{{ add $index 1 }}" />
+          {{ if ne $index (sub (len $breadcrumbs) 1) }}
+            <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </nav>
+{{ end }}

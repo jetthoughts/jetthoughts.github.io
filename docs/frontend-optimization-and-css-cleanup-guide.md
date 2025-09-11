@@ -118,7 +118,7 @@ display: initial;
 {{/* Step 3-5: Production-specific processing */}}
 {{- if hugo.IsProduction -}}
   {{/* Fingerprint for cache busting */}}
-  {{- $processedCSS = $processedCSS | fingerprint -}}
+  {{- $processedCSS = $processedCSS | fingerprint "md5" -}}
   
   {{/* PostProcess MUST be last */}}
   {{- $processedCSS = $processedCSS | resources.PostProcess -}}
@@ -329,10 +329,10 @@ $border-color: transparent !default;
 **Solution**: Always use this order:
 ```go
 {{/* CORRECT ORDER */}}
-resource | postCSS | fingerprint | resources.PostProcess
+resource | postCSS | fingerprint "md5" | resources.PostProcess
 
 {{/* WRONG ORDER */}}
-resource | postCSS | resources.PostProcess | fingerprint  // Breaks!
+resource | postCSS | resources.PostProcess | fingerprint "md5"  // Breaks!
 ```
 
 ### Issue 3: Visual Test Failures

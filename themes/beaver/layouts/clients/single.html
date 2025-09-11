@@ -2,7 +2,10 @@
 {{ partial "header/critical/single/clients.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 
-{{- $CSS := slice (resources.Get "css/3114-layout.css") (resources.Get "css/fb2624e43f3c4277448abe268cde571e-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/footer.css") | resources.Concat "css/single/clients.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+{{- $CSS := slice (resources.Get "css/homepage-layout.css") (resources.Get "css/fb2624e43f3c4277448abe268cde571e-layout-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/single/clients.css" | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $CSS = $CSS  -}}
+{{- end -}}
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 
@@ -71,7 +74,7 @@
                        <div class="fl-module fl-module-rich-text fl-node-h0r9d45m3eiv case-name" data-node="h0r9d45m3eiv">
                           <div class="fl-module-content fl-node-content">
                              <div class="fl-rich-text">
-                              <p><a href="{{ .Page.Params.client.website }}" target="_blank" rel="noopener">{{ .Page.Params.client.name }}</a></p>
+                              <p><a href="{{ .Page.Params.client.website }}" target="_blank" rel="noopener noreferrer">{{ .Page.Params.client.name }}</a></p>
                              </div>
                           </div>
                        </div>
@@ -180,6 +183,7 @@
                                          title="{{ $.Page.Title }}"
                                          data-description=""
                                          target="_blank"
+                                         rel="noopener noreferrer"
                                          itemprop="contentUrl">
                                          <img loading="lazy" decoding="async" class="pp-gallery-img no-lazyload skip-lazy"
                                          src="{{ $imageItemW1024.RelPermalink }}"
@@ -240,6 +244,7 @@
                                       {{ $pages = $pages | first 3 }}
 
                                       {{ range $pages }}
+                                      {{ .Scratch.Set "logoVariant" "white" }}
                                       {{ partial "clients/grid-single.html" . }}
                                       {{ end }}
 

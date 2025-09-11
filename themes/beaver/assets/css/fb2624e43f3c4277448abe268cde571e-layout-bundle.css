@@ -518,7 +518,7 @@
 }
 
 .fl-photo-content:hover .fl-photo-caption-hover {
-  opacity: 100;
+  opacity: 1;
   filter: alpha(opacity=100);
 }
 
@@ -1702,8 +1702,8 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-bottom-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  border-color: ;
-  background-color: ;
+  border-color: transparent;
+  background-color: inherit;
   color: #121212;
 }
 
@@ -1751,9 +1751,9 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  border-bottom-width: px;
-  border-color: ;
-  background-color: ;
+  border-bottom-width: 0px;
+  border-color: transparent;
+  background-color: inherit;
   color: #121212;
 }
 
@@ -1765,7 +1765,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus, .fl-node-menu .sub-menu > li.current-menu-item > a, .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
-  background-color: ;
+  background-color: inherit;
   color: #1a8cff;
 }
 
@@ -1986,8 +1986,8 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
-    background-color: ;
+    border-bottom-width: 0px;
+    background-color: inherit;
   }
 
   .fl-node-menu .sub-menu {
@@ -2020,8 +2020,8 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
-    background-color: ;
+    border-bottom-width: 0px;
+    background-color: inherit;
   }
 
   .fl-node-menu .pp-advanced-menu-mobile {
@@ -2793,7 +2793,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 .fl-node-yqpsldhfovz6 .fl-module-content .pp-social-icon a:hover {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.11);
-  border-color: ;
+  border-color: transparent;
 }
 
 .fl-node-yqpsldhfovz6 .fl-module-content .pp-social-icon:nth-child(1) a {
@@ -3660,9 +3660,9 @@ div.fancybox-container {
 .fl-node-74cwydp2ahsq .pp-gallery-overlay .pp-overlay-icon span {
   width: auto;
   height: auto;
-  color: ;
+  color: inherit;
   font-size: 30px;
-  background-color: ;
+  background-color: inherit;
 }
 
 .fl-node-74cwydp2ahsq .pp-gallery-overlay .pp-overlay-icon span:before {
@@ -4206,12 +4206,12 @@ div.fancybox-container {
 }
 
 .fl-node-adblszvmw7uo .pp-image-overlay .pp-overlay-icon span {
-  color: ;
+  color: inherit;
   font-size: 30px;
 }
 
 .fl-node-adblszvmw7uo .pp-image-overlay .pp-caption {
-  color: ;
+  color: inherit;
 }
 
 .fl-node-adblszvmw7uo .pp-image-carousel.pp-image-carousel-slideshow, .fl-node-adblszvmw7uo .pp-image-carousel {
@@ -6314,7 +6314,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gform-button, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gform_footer .gform_button, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gform_page_footer .button, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
   width: auto;
-  background-color: ;
+  background-color: inherit;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 25px;
@@ -6326,7 +6326,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gform-button:hover, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gform_footer .gform_button:hover, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gform_page_footer .button:hover {
-  background: ;
+  background: transparent;
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input[type=file] {

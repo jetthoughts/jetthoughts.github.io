@@ -1,10 +1,12 @@
 baseURL = "https://jetthoughts.com/"
+canonifyURLs = true
 languageCode = "en-us"
 title = "JetThoughts"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme = "beaver"
 enableGitInfo = true
 disableKinds = []
+environment = "production"
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -21,11 +23,31 @@ disableKinds = []
 
 [build]
   writeStats = true
+  noJSConfigInAssets = true
+  noChmod = true
+  useResourceCacheWhen = "fallback"
   [build.buildStats]
     enable = true
 
 [build.processing.css]
   bundle = true
+  fingerprint = true
+  concatenate = true
+
+[build.processing.js]
+  bundle = true
+  fingerprint = true
+
+[imaging]
+  quality = 80
+  resampleFilter = "box"
+  anchor = "smart"
+
+[minify]
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
 
 [[redirects]]
   from = "/tags/:slug/"

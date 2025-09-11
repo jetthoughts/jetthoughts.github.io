@@ -1,0 +1,7 @@
+{{ $pages := where .Site.RegularPages "Type" "clients" }}
+{{ $pages = $pages | first 3 }}
+
+{{ range $pages }}
+{{ .Scratch.Set "logoVariant" "white" }}
+{{ partial "clients/grid-single.html" . }}
+{{ end }}

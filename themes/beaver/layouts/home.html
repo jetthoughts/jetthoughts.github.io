@@ -3,6 +3,22 @@
 {{ end }}
 
 {{ define "footer" }}
+
+{{- $nonCriticalResources := slice
+(resources.Get "css/companies.css")
+(resources.Get "css/footer.css")
+(resources.Get "css/homepage.css")
+(resources.Get "css/590-layout.css")
+(resources.Get "css/theme-main.css")
+(resources.Get "css/style.css")
+(resources.Get "css/services-layout.css")
+(resources.Get "css/technologies.css")
+(resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
+(resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+(resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
+}}
+
+{{ $nonCriticalCSS := $nonCriticalResources | resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint "md5" | resources.PostProcess }}
 <script>
 function loadCSS(url) {
    const link = document.createElement('link');
@@ -16,24 +32,6 @@ function loadCSS(url) {
 
    document.head.appendChild(link);
 }
-{{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
-
-{{ $nonCriticalCSS := slice
-   (resources.Get "css/companies.css")
-   (resources.Get "css/footer.css")
-   (resources.Get "css/homepage.css")
-   $dynamicCSS
-   (resources.Get "css/590-layout.css")
-   (resources.Get "css/skin-65eda28877e04.css")
-   (resources.Get "css/style.css")
-   $dynamicCSS586
-   (resources.Get "css/586.css")
-   (resources.Get "css/technologies.css")
-   $dynamicCSSUseCases
-| resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
-}}
 
 document.addEventListener("DOMContentLoaded", function () {
    loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
@@ -43,8 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
 {{ $tabs := slice
 (resources.Get "js/tabs.js")
 | resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
-}}
+| js.Build (dict "minify" true) | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $tabs = $tabs | resources.PostProcess -}}
+{{- end -}}
 
 <script defer src="{{ $tabs.RelPermalink }}"></script>
 
@@ -59,455 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <article class="fl-post post-590 page type-page status-publish hentry" id="fl-post-590" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
                <div class="fl-post-content clearfix" itemprop="text">
                   <div class="fl-builder-content fl-builder-content-590 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="590">
-                     <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-dn129i74qg6m fl-row-default-height fl-row-align-center" data-node="dn129i74qg6m">
-                        <div class="fl-row-content-wrap">
-                           <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                              <div class="fl-col-group fl-node-hptklxb98v20 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width fl-col-group-responsive-reversed" data-node="hptklxb98v20">
-                                 <div class="fl-col fl-node-fwc7x53r0dpl fl-col-small fl-col-small-custom-width" data-node="fwc7x53r0dpl">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-heading fl-node-j23qxyn7ofsc" data-node="j23qxyn7ofsc">
-                                          <div class="fl-module-content fl-node-content">
-                                             <h1 class="fl-heading">
-                                                <span class="fl-heading-text">Build faster. Scale smarter.</span>
-                                             </h1>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-rich-text fl-node-8yibs7gtxvjp" data-node="8yibs7gtxvjp">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-rich-text">
-                                                <p>Streamline development, accelerate delivery, &amp; achieve your product vision with access to turnkey engineering resources backed by world-class technical talent.</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-button fl-node-ls7iak3ydobn" data-node="ls7iak3ydobn">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-button-wrap fl-button-width-auto fl-button-left">
-                                                <a href="{{ relURL "free-consultation/" }}" target="_self" class="fl-button">
-                                                <span class="fl-button-text">Talk to an Expert</span>
-                                                </a>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="fl-col fl-node-bi013pcl2qtv fl-col-small fl-col-small-custom-width fl-col-has-cols" data-node="bi013pcl2qtv">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-photo fl-node-m6xb85qn107l" data-node="m6xb85qn107l">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-photo fl-photo-align-right">
-                                                <div class="fl-photo-content fl-photo-img-jpeg">
-
-                                                   {{ $image := .Page.Resources.Get "build-faster-scale-smarter.jpeg" }}
-                                                   {{ $title := "Build Faster Scale Smarter" }}
-                                                   {{ partial "img/homepage.html" (dict "image" $image "title" $title) }}
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-col-group fl-node-crdpb4gxkwzy fl-col-group-nested fl-col-group-custom-width" data-node="crdpb4gxkwzy">
-                                          <div class="fl-col fl-node-pifywec9vd5m fl-col-small-custom-width jt-exp-box" data-node="pifywec9vd5m">
-                                             <div class="fl-col-content fl-node-content">
-                                                <div class="fl-module fl-module-photo fl-node-uqmxksgj6zd4" data-node="uqmxksgj6zd4">
-                                                   <div class="fl-module-content fl-node-content">
-                                                      <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
-                                                         <div class="fl-photo-content fl-photo-img-png">
-                                                            {{ partial "svg" "logo-dark" }}
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                                <div class="fl-module fl-module-rich-text fl-node-s3wp4tod8vfm jt-counter-number-ready" data-node="s3wp4tod8vfm">
-                                                   <div class="fl-module-content fl-node-content">
-                                                      <div class="fl-rich-text">
-                                                         <p><span class="counter-value active" data-count="{{ .Params.overview_first_value }}">{{ .Params.overview_first_value }}</span>+</p>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                                <div class="fl-module fl-module-rich-text fl-node-mvlu0rkbgc18" data-node="mvlu0rkbgc18">
-                                                   <div class="fl-module-content fl-node-content">
-                                                      <div class="fl-rich-text">
-                                                         <p>{{ .Params.overview_first_name }}</p>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                                <div class="fl-module fl-module-button fl-node-2div407rylu5" data-node="2div407rylu5">
-                                                   <div class="fl-module-content fl-node-content">
-                                                      <div class="fl-button-wrap fl-button-width-full fl-button-center">
-                                                         <a title="Use Cases" href="{{ relURL "use-cases/" }}" target="_self" class="fl-button">
-                                                         <span class="fl-button-text">Learn More</span>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div id="companies" class="fl-col-group fl-node-cpk7wgj6dhy0 fl-col-group-custom-width" data-node="cpk7wgj6dhy0">
-                                 <div class="fl-col fl-node-we18l5hvkso9 fl-col-small-custom-width" data-node="we18l5hvkso9">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-rich-text fl-node-pqwe8j7o3l6z" data-node="pqwe8j7o3l6z">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-rich-text">
-                                                <p>We helped over <strong><span style="color: #1a8cff;">20+ companies</span></strong> that went beyond their goals with our teams</p>
-                                             </div>
-                                          </div>
-                                       </div>
-
-                                       <div class="fl-module fl-node-cbhworulayqn">
-                                          <div class="fl-module-content fl-node-content">
-                                             {{ partial "companies.html" . }}
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="fl-row fl-row-full-width fl-row-bg-color fl-node-ujmtgq8xb530 fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="ujmtgq8xb530">
-                        <div class="fl-row-content-wrap">
-                           <div class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
-                              {{ partial "svg" "theme/bottom-blue-curved-line" }}
-                           </div>
-                           <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                              <div class="fl-col-group fl-node-hupejrf4a28x fl-col-group-custom-width" data-node="hupejrf4a28x">
-                                 <div class="fl-col fl-node-dpmvbgkwihyl fl-col-small-custom-width fl-col-has-cols companies-logo blue-border" data-node="dpmvbgkwihyl">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-col-group fl-node-zmc4burd8nga fl-col-group-nested fl-col-group-equal-height fl-col-group-align-top fl-col-group-custom-width" data-node="zmc4burd8nga">
-
-
-                                           {{ range .Params.overview }}
-                                           <div class="fl-col fl-node-ha6dj4z7r51f fl-col-small fl-col-small-custom-width" data-node="ha6dj4z7r51f">
-                                               <div class="fl-col-content fl-node-content">
-                                                  <div class="fl-module fl-module-rich-text fl-node-wz23lfh6kojx jt-counter-number" data-node="wz23lfh6kojx">
-                                                     <div class="fl-module-content fl-node-content">
-                                                        <div class="fl-rich-text">
-                                                           <p><span class="counter-value active" data-count="{{ .value }}">{{ .value }}</span>+</p>
-                                                        </div>
-                                                     </div>
-                                                  </div>
-                                                  <div class="fl-module fl-module-rich-text fl-node-guh2aqtf7z6s" data-node="guh2aqtf7z6s">
-                                                     <div class="fl-module-content fl-node-content">
-                                                        <div class="fl-rich-text">
-                                                           <p>{{ .name }}</p>
-                                                        </div>
-                                                     </div>
-                                                  </div>
-                                               </div>
-                                            </div>
-                                           {{ end }}
-
-
-
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div id="services" class="fl-row fl-row-full-width fl-row-bg-photo fl-node-1753mb2hg4k0 fl-row-default-height fl-row-align-center" data-node="1753mb2hg4k0">
-                        <div class="fl-row-content-wrap">
-                           <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                              <div class="fl-col-group fl-node-zogqefj89rav" data-node="zogqefj89rav">
-                                   <div class="fl-col fl-node-xuo6d7cwbmyf" data-node="xuo6d7cwbmyf">
-                                      <div class="fl-col-content fl-node-content">
-                                         <div class="fl-module fl-module-rich-text fl-node-gzqkfypea6jx" data-node="gzqkfypea6jx">
-                                            <div class="fl-module-content fl-node-content">
-                                               <div class="fl-rich-text">
-                                                  <p>SERVICES</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-heading fl-node-b4fxsgdij6z1" data-node="b4fxsgdij6z1">
-                                          <div class="fl-module-content fl-node-content">
-                                             <h2 class="fl-heading">
-                                                <span class="fl-heading-text">We optimize technology</span>
-                                             </h2>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-rich-text fl-node-0hc83erkafob" data-node="0hc83erkafob">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-rich-text">
-                                                <p>From technical strategy and innovation to talent acquisition and software development, we help empower products and teams at any stage.</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="fl-col-group fl-node-6ewrcbxp1zdq fl-col-group-custom-width" data-node="6ewrcbxp1zdq">
-                                 <div class="fl-col fl-node-paujk1bwfe0l fl-col-small fl-col-small-custom-width hover-box" data-node="paujk1bwfe0l">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-infobox fl-node-dxali8vntcr0 jt-service-box" data-node="dxali8vntcr0">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-infobox-wrap">
-                                                <div class="pp-infobox layout-5">
-                                                   <div class="pp-icon-wrapper animated">
-                                                      <div class="pp-infobox-image">
-                                                         {{ partial "svgiw" (dict "svg" "theme/fractional-cto" "width" "30" "height" "30") }}
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-infobox-title-wrapper">
-                                                      <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/fractional-cto/" }}" target="_self">Fractional CTO</a></h3>
-                                                   </div>
-                                                   <div class="pp-infobox-description">
-                                                      <div class="pp-description-wrap">
-                                                         <p>Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations.</p>
-                                                      </div>
-                                                      <div class="pp-infobox-button pp-button-wrap">
-                                                         <a title="Fractional CTO" class="pp-more-link pp-button" href="{{ relURL "services/fractional-cto/" }}" role="button" target="_self">
-                                                         Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="fl-col fl-node-9xrz1vbyfomu fl-col-small fl-col-small-custom-width hover-box" data-node="9xrz1vbyfomu">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-infobox fl-node-075ztwhd3cxn jt-service-box" data-node="075ztwhd3cxn">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-infobox-wrap">
-                                                <div class="pp-infobox layout-5">
-                                                   <div class="pp-icon-wrapper animated">
-                                                      <div class="pp-infobox-image">
-                                                         {{ partial "svgiw" (dict "svg" "theme/app-web" "width" "30" "height" "30") }}
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-infobox-title-wrapper">
-                                                      <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/app-web-development/" }}" target="_self">App/Web Development</a></h3>
-                                                   </div>
-                                                   <div class="pp-infobox-description">
-                                                      <div class="pp-description-wrap">
-                                                         <p>Whether you’re a startup building new products or an established business upgrading existing systems, we help deliver positive outcomes.</p>
-                                                      </div>
-                                                      <div class="pp-infobox-button pp-button-wrap">
-                                                         <a title="App/Web Development" class="pp-more-link pp-button" href="{{ relURL "services/app-web-development/" }}" role="button" target="_self">
-                                                         Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="fl-col fl-node-dcks70njr95q fl-col-small fl-col-small-custom-width hover-box" data-node="dcks70njr95q">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-infobox fl-node-lajty926uxf5 jt-service-box" data-node="lajty926uxf5">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-infobox-wrap">
-                                                <div class="pp-infobox layout-5">
-                                                   <div class="pp-icon-wrapper animated">
-                                                      <div class="pp-infobox-image">
-                                                         {{ partial "svgiw" (dict "svg" "theme/software-qa" "width" "30" "height" "30") }}
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-infobox-title-wrapper">
-                                                      <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/software-qa-cat/" }}" target="_self">Software QA & CAT</a></h3>
-                                                   </div>
-                                                   <div class="pp-infobox-description">
-                                                      <div class="pp-description-wrap">
-                                                         <p>Accelerate development, streamline release cycles, and eliminate roadblocks with fully-managed software testing &amp; QA services.</p>
-                                                      </div>
-                                                      <div class="pp-infobox-button pp-button-wrap">
-                                                         <a title="Software QA & CAT" class="pp-more-link pp-button" href="{{ relURL "services/software-qa-cat/" }}" role="button" target="_self">
-                                                         Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="fl-col-group fl-node-cdgq32wlx8et" data-node="cdgq32wlx8et">
-                                 <div class="fl-col fl-node-cratlqvibo3x" data-node="cratlqvibo3x">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-spacer fl-node-mkyhv3e21dx4 fl-visible-desktop fl-visible-large fl-visible-medium" data-node="mkyhv3e21dx4">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-spacer-module"></div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="fl-col-group fl-node-cst8idgykz9j fl-col-group-custom-width" data-node="cst8idgykz9j">
-                                 <div class="fl-col fl-node-reqazbvwfnj9 fl-col-small fl-col-small-custom-width hover-box" data-node="reqazbvwfnj9">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-infobox fl-node-do5fjakv8b29 jt-service-box" data-node="do5fjakv8b29">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-infobox-wrap">
-                                                <div class="pp-infobox layout-5">
-                                                   <div class="pp-icon-wrapper animated">
-                                                      <div class="pp-infobox-image">
-                                                         {{ partial "svgiw" (dict "svg" "theme/fractional-product" "width" "30" "height" "30") }}
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-infobox-title-wrapper">
-                                                      <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/fractional-product-management/" }}" target="_self">Fractional Product Management</a></h3>
-                                                   </div>
-                                                   <div class="pp-infobox-description">
-                                                      <div class="pp-description-wrap">
-                                                         <p>Get on-demand access to a product expert to help design UX, plan &amp; prioritize your roadmap, and manage development schedules.</p>
-                                                      </div>
-                                                      <div class="pp-infobox-button pp-button-wrap">
-                                                         <a title="Fractional Product Management" class="pp-more-link pp-button" href="{{ relURL "services/fractional-product-management/" }}" role="button" target="_self">
-                                                         Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="fl-col fl-node-5syfq06jvt8x fl-col-small fl-col-small-custom-width hover-box" data-node="5syfq06jvt8x">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-infobox fl-node-3eq5kcmfz0an jt-service-box" data-node="3eq5kcmfz0an">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-infobox-wrap">
-                                                <div class="pp-infobox layout-5">
-                                                   <div class="pp-icon-wrapper animated">
-                                                      <div class="pp-infobox-image">
-                                                         {{ partial "svgiw" (dict "svg" "theme/outsourced-developer"  "width" "30" "height" "30") }}
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-infobox-title-wrapper">
-                                                      <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/outsourced-developer-staffing/" }}" target="_self">Outsourced Developer Staffing</a></h3>
-                                                   </div>
-                                                   <div class="pp-infobox-description">
-                                                      <div class="pp-description-wrap">
-                                                         <p>Increase your development capacity &amp; reduce administrative workloads with pre-trained engineers that are ready to deploy within weeks.</p>
-                                                      </div>
-                                                      <div class="pp-infobox-button pp-button-wrap">
-                                                         <a title="Outsourced Developer Staffing" class="pp-more-link pp-button" href="{{ relURL "services/outsourced-developer-staffing/" }}" role="button" target="_self">
-                                                         Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="fl-col fl-node-r5mpnlqz427o fl-col-small fl-col-small-custom-width hover-box" data-node="r5mpnlqz427o">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-pp-infobox fl-node-v3gpr4klqmob jt-service-box" data-node="v3gpr4klqmob">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-infobox-wrap">
-                                                <div class="pp-infobox layout-5">
-                                                   <div class="pp-icon-wrapper animated">
-                                                      <div class="pp-infobox-image">
-                                                         {{ partial "svgiw" (dict "svg" "theme/talent-recruiting"  "width" "30" "height" "30") }}
-                                                      </div>
-                                                   </div>
-                                                   <div class="pp-infobox-title-wrapper">
-                                                      <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/talent-recruiting-training/" }}" target="_self">Talent Recruiting and Training</a></h3>
-                                                   </div>
-                                                   <div class="pp-infobox-description">
-                                                      <div class="pp-description-wrap">
-                                                         <p>Scale your development team &amp; simplify the talent acquisition process with top-caliber candidates that are pre-vetted by our team.</p>
-                                                      </div>
-                                                      <div class="pp-infobox-button pp-button-wrap">
-                                                         <a title="Talent Recruiting and Training" class="pp-more-link pp-button" href="{{ relURL "services/talent-recruiting-training/" }}" role="button" target="_self">
-                                                         Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                              {{ partial "technologies.html" (dict "colorVariant" "white"  "site" .Site) }}
-
-                              <div id="clients" class="fl-col-group fl-node-1iahtp297j5b fl-col-group-custom-width" data-node="1iahtp297j5b">
-                                 <div class="fl-col fl-node-74apslrkzt59 fl-col-small-custom-width fl-col-has-cols" data-node="74apslrkzt59">
-                                    <div class="fl-col-content fl-node-content">
-                                       <div class="fl-module fl-module-rich-text fl-node-fly7i4ba56vm" data-node="fly7i4ba56vm">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="fl-rich-text">
-                                                <p>CLIENTS + CASE STUDIES</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-heading fl-node-u7al3nqdbz5k" data-node="u7al3nqdbz5k">
-                                          <div class="fl-module-content fl-node-content">
-                                             <h2 class="fl-heading">
-                                                <span class="fl-heading-text">Our client experiences</span>
-                                             </h2>
-                                          </div>
-                                       </div>
-                                       <div class="fl-col-group fl-node-57684l13ktgb fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="57684l13ktgb">
-                                          <div class="fl-col fl-node-n23v5ji8wk41 fl-col-small fl-col-small-custom-width" data-node="n23v5ji8wk41">
-                                             <div class="fl-col-content fl-node-content">
-                                                <div class="fl-module fl-module-rich-text fl-node-adg2vro8wqt6" data-node="adg2vro8wqt6">
-                                                   <div class="fl-module-content fl-node-content">
-                                                      <div class="fl-rich-text">
-                                                         <p>We’ve delivered successful project outcomes in a variety of industries, ranging from early-stage startups to established enterprises.</p>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="fl-col fl-node-pqa234eb9d50 fl-col-small fl-col-small-custom-width" data-node="pqa234eb9d50">
-                                             <div class="fl-col-content fl-node-content">
-                                                <div class="fl-module fl-module-button fl-node-5uitzm02y7oj" data-node="5uitzm02y7oj">
-                                                   <div class="fl-module-content fl-node-content">
-                                                      <div class="fl-button-wrap fl-button-width-auto fl-button-right">
-                                                         <a href="{{ relURL "clients/" }}" target="_self" class="fl-button">
-                                                         <span class="fl-button-text">View All Clients</span>
-                                                         </a>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="fl-module fl-module-pp-content-grid fl-node-ocvfdn5wibp8 jt-clickable" data-node="ocvfdn5wibp8">
-                                          <div class="fl-module-content fl-node-content">
-                                             <div class="pp-posts-wrapper">
-                                                <div class="pp-content-posts" style="--items-count: 3;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
-                                                   <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
-
-                                                      {{ $pages := where .Site.RegularPages "Type" "clients" }}
-                                                      {{ $pages = $pages | first 3 }}
-
-
-                                                      {{ range $pages }}
-                                                      {{ .Scratch.Set "logoVariant" "white" }}
-                                                      {{ partial "clients/grid-single.html" . }}
-                                                      {{ end }}
-
-                                                   </div>
-                                                   <div class="fl-clear"></div>
-                                                </div>
-                                                <!-- .pp-content-posts -->
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                    {{ partial "homepage/hero.html" . }}
+                    {{ partial "homepage/stats.html" . }}
+                    {{ partial "homepage/services.html" . }}
                      <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-pym08gf9wr2o fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="pym08gf9wr2o">
                         <div class="fl-row-content-wrap">
                            <div class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
@@ -673,9 +227,9 @@ document.addEventListener("DOMContentLoaded", function () {
                                  </div>
                               </div>
 
-                            {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                             {{ partialCached "page/use-cases.html" (dict "addHeadline" true) (printf "use-cases-with-headline-%s-%s" .Site.Language.Lang .RelPermalink) }}
 
-                            {{ partial "page/testimonials.html" . }}
+                             {{ partialCached "page/testimonials.html" . (printf "testimonials-%s-%s" .Site.Language.Lang .RelPermalink) }}
                               <div id="cta-contact_us" class="fl-col-group fl-node-niok604vy81f fl-col-group-custom-width" data-node="niok604vy81f">
                                  <div class="fl-col fl-node-8x91uqrnkeb7 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="8x91uqrnkeb7">
                                     <div class="fl-col-content fl-node-content">

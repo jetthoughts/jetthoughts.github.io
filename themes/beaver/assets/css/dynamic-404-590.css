@@ -1,3 +1,3 @@
 .fl-node-jucnbqyew63f > .fl-col-content, .fl-node-04h8akisgvow > .fl-col-content {
-    background-image: url({{ (resources.Get "img/start-trial-cta.webp" | fingerprint).RelPermalink }});
+    background-image: url({{ (resources.Get "img/start-trial-cta.webp" | fingerprint "md5").RelPermalink }});
 }
