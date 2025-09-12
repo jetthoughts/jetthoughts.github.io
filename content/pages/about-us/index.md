@@ -1,6 +1,6 @@
 ---
-title: Learn More About Us and Our Story JetThoughts
-description: We choose to work with a few clients while giving each of them more attention in the spotlight so we can improve and create long-term relationships.
+title: "About JetThoughts: 17+ Years, 95% Client Retention"
+description: "Meet JetThoughts: 17+ years experience, 95% client retention, 5+ year average relationships. Expert software development team focused on quality. Learn our story."
 author: Paul Keen
 type: page
 slug: about-us

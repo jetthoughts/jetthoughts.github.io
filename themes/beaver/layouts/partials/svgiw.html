@@ -1,0 +1,6 @@
+{{ $svg := .svg }}
+{{ $svgPath := printf "img/icons/%s.svg" $svg }}
+{{ $svgFile := resources.Get $svgPath | fingerprint "md5" }}
+{{ $svgRelPermalink := $svgFile.RelPermalink }}
+
+<img fetchpriority="low" loading="lazy" src="{{ $svgRelPermalink }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} alt="{{ with .alt }}{{ . }}{{ else }}{{ $svg | humanize | title }} icon{{ end }}">

@@ -172,6 +172,7 @@
 
                               {{ range .Params.gallery }}
                               {{ $imageItem := $.Page.Resources.Get . }}
+                              {{ if $imageItem }}
                               {{ $imageItemW1024 := $imageItem.Resize "1024x webp q75" }}
 
 
@@ -185,9 +186,13 @@
                                          target="_blank"
                                          rel="noopener noreferrer"
                                          itemprop="contentUrl">
+                                         {{ if $imageItemW1024 }}
                                          <img loading="lazy" decoding="async" class="pp-gallery-img no-lazyload skip-lazy"
                                          src="{{ $imageItemW1024.RelPermalink }}"
                                          alt="{{ $.Page.Title }}" itemprop="thumbnail" width="{{ $imageItemW1024.Width }}" height="{{ $imageItemW1024.Height }}" />
+                                         {{ else }}
+                                         <div class="image-placeholder">Image not available</div>
+                                         {{ end }}
                                          <!-- Overlay Wrapper -->
                                          <div class="pp-gallery-overlay">
                                             <div class="pp-overlay-inner">
@@ -195,10 +200,13 @@
                                          </div>
                                          <!-- Overlay Wrapper Closed -->
                                       </a>
+                                      {{ if $imageItemW1024 }}
                                       <meta itemprop="width" content="{{ $imageItemW1024.Width }}" />
                                       <meta itemprop="height" content="{{ $imageItemW1024.Height }}" />
+                                      {{ end }}
                                    </div>
                                 </div>
+                              {{ end }}
 
                                 {{ end }}
 

@@ -1,0 +1,85 @@
+{{/*
+  Voice Search & Speakable Schema Implementation
+  Optimizes content for voice search queries and Google Assistant
+*/}}
+
+{{- if and .Params.quick_answers (gt (len .Params.quick_answers) 0) -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".quick-answer",
+      ".faq-answer",
+      "h1",
+      "h2.voice-optimized"
+    ]
+  },
+  "mainEntity": [
+    {{- range $index, $qa := .Params.quick_answers -}}
+    {{- if $index -}},{{- end -}}
+    {
+      "@type": "Question",
+      "@id": "{{ $qa.question | urlize }}",
+      "name": "{{ $qa.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $qa.quick_answer }}",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".quick-answer-{{ $index }}"]
+        }
+      }
+    }
+    {{- end -}}
+  ]
+}
+</script>
+{{- end -}}
+
+{{/*
+  How-To Schema for Process Content
+  Optimizes step-by-step content for voice search
+*/}}
+{{- if .Params.how_to_steps -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ .Params.how_to.title | default .Title }}",
+  "description": "{{ .Params.how_to.description | default .Description }}",
+  "totalTime": "{{ .Params.how_to.total_time | default "PT30M" }}",
+  {{ with .Params.how_to.supplies }}
+  "supply": [
+    {{- range $index, $supply := . -}}
+    {{- if $index -}},{{- end -}}
+    {
+      "@type": "HowToSupply",
+      "name": "{{ $supply }}"
+    }
+    {{- end -}}
+  ],
+  {{ end }}
+  {{ with .Params.how_to_steps }}
+  "step": [
+    {{- range $index, $step := . -}}
+    {{- if $index -}},{{- end -}}
+    {
+      "@type": "HowToStep",
+      "name": "{{ $step.name }}",
+      "text": "{{ $step.description }}",
+      "url": "{{ $.Permalink }}#step-{{ add $index 1 }}",
+      "speakable": {
+        "@type": "SpeakableSpecification", 
+        "cssSelector": [".how-to-step-{{ $index }}"]
+      }
+    }
+    {{- end -}}
+  ]
+  {{ end }}
+}
+</script>
+{{- end -}}

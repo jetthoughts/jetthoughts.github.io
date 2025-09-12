@@ -43,7 +43,7 @@
 
       <header>
         <h1 class="heading">{{ .Title }}</h1>
-        <div class="post-tags" style="margin-bottom: 1rem;">{{ range .Params.tags }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}</div>
+        <div class="post-tags" style="margin-bottom: 1rem;">{{ with .Params.tags }}{{ range . }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}{{ end }}</div>
         {{ if .Params.created_at }}
         <div class="post-date" style="color: rgba(33, 37, 41, 0.75);margin-bottom: 1rem;">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</div>
         {{ end }}

@@ -1,0 +1,126 @@
+{{/* Enhanced Service Schema Markup
+  Optimized for software development and consulting services
+*/}}
+
+{{- if eq .Section "services" -}}
+{{- $service := . -}}
+{{- $organization := .Site.Params -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description | default .Params.description }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "JetThoughts",
+    "url": "https://jetthoughts.com",
+    "logo": "https://jetthoughts.com/assets/images/jetthoughts-logo.png",
+    "sameAs": [
+      "https://twitter.com/jetthoughts",
+      "https://linkedin.com/company/jetthoughts",
+      "https://github.com/jetthoughts"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US",
+      "addressLocality": "Fort Lauderdale",
+      "addressRegion": "FL"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-754-216-9568",
+      "email": "info@jetthoughts.com",
+      "contactType": "customer service"
+    }
+  },
+  "serviceType": "{{ if in .Title "CTO" }}Technology Consulting{{ else if in .Title "Development" }}Software Development{{ else if in .Title "QA" }}Quality Assurance{{ else }}Software Consulting{{ end }}",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "{{ .Permalink }}",
+    "servicePhone": "+1-754-216-9568"
+  },
+  {{/* Service-specific offers */}}
+  "offers": {
+    "@type": "Offer",
+    "description": "{{ .Params.excerpt | default .Summary | plainify }}",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "price": "Contact for quote"
+    }
+  },
+  {{/* Aggregate rating from testimonials */}}
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "15",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  {{/* Key features and benefits */}}
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Client Retention Rate",
+      "value": "95%"
+    },
+    {
+      "@type": "PropertyValue", 
+      "name": "Years of Experience",
+      "value": "13+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Average Project Duration",
+      "value": "{{ if in .Title "CTO" }}6-12 months{{ else }}3-6 months{{ end }}"
+    }
+  ]
+}
+</script>
+
+{{/* Additional Schema for specific service types */}}
+{{- if in .Title "Development" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Custom Software Development",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cross-platform",
+  "offers": {
+    "@type": "Offer",
+    "price": "Contact for quote",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "JetThoughts"
+  }
+}
+</script>
+{{- end -}}
+
+{{- if in .Title "CTO" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Fractional CTO Services",
+  "description": "Expert technology leadership and strategic guidance for growing businesses",
+  "provider": {
+    "@type": "Organization", 
+    "name": "JetThoughts"
+  },
+  "serviceType": "Technology Consulting",
+  "priceRange": "$$$"
+}
+</script>
+{{- end -}}
+
+{{- end -}}

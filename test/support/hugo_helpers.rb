@@ -6,12 +6,8 @@ class Hugo
   end
 
   HUGO_OPTIONS = %w[
-    --cleanDestinationDir
-    --environment production
-    --forceSyncStatic
-    --gc
-    --logLevel warn
-    --minify
+    --environment test
+    --logLevel debug
   ].freeze
 
   def precompile(port:)

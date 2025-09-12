@@ -122,27 +122,52 @@
                    <div class="pp-reviews-swiper swiper-container">
                       <!-- Slides wrapper -->
                       <div class="swiper-wrapper">
-                        {{ range .Site.Params.testimonials }}
+                        {{ if .Site.Data.testimonials.testimonials }}
+                          {{ range .Site.Data.testimonials.testimonials }}
                           <div class="pp-review-item pp-review-item-0 swiper-slide">
                             <div class="pp-review">
                                 <div class="pp-review-content">
                                     <div class="pp-review-text">
-                                        <p>{{ .description }}</p>
+                                        <p>{{ index . "description" | default "No description" }}</p>
                                     </div>
                                 </div>
                                 <div class="pp-review-header">
-                                  <cite class="pp-review-cite"> <span class="pp-review-name">{{ .name }}</span>
+                                  <cite class="pp-review-cite"> <span class="pp-review-name">{{ index . "name" | default "Anonymous" }}</span>
                                     <div class="pp-rating">
                                         {{ $image := resources.Get "img/stars.png" }}
                                         {{ $title := "five stars" }}
                                         {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 106 "class" "alignnone size-full") }}
                                     </div>
-                                    <span class="pp-review-title">{{ .title }}</span>
+                                    <span class="pp-review-title">{{ index . "title" | default "Customer" }}{{ with index . "company" }}, {{ . }}{{ end }}</span>
                                   </cite>
                                   <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
                                 </div>
                             </div>
                         </div>
+                          {{ end }}
+                        {{ else if .Site.Params.testimonials }}
+                          {{ range .Site.Params.testimonials }}
+                          <div class="pp-review-item pp-review-item-0 swiper-slide">
+                            <div class="pp-review">
+                                <div class="pp-review-content">
+                                    <div class="pp-review-text">
+                                        <p>{{ index . "description" | default "No description" }}</p>
+                                    </div>
+                                </div>
+                                <div class="pp-review-header">
+                                  <cite class="pp-review-cite"> <span class="pp-review-name">{{ index . "name" | default "Anonymous" }}</span>
+                                    <div class="pp-rating">
+                                        {{ $image := resources.Get "img/stars.png" }}
+                                        {{ $title := "five stars" }}
+                                        {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 106 "class" "alignnone size-full") }}
+                                    </div>
+                                    <span class="pp-review-title">{{ index . "title" | default "Customer" }}{{ with index . "company" }}, {{ . }}{{ end }}</span>
+                                  </cite>
+                                  <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                          {{ end }}
                         {{ end }}
                       </div>
                    </div>

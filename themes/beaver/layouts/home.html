@@ -19,6 +19,8 @@
 }}
 
 {{ $nonCriticalCSSUrl := partial "assets/css-url-processor.html" (dict "cssFiles" $nonCriticalResources "page" "homepage") }}
+{{/* Phase 2: CSS Processor Integration - Prepare for systematic rollout */}}
+{{/* TODO: Replace css-url-processor with css-processor for centralized processing */}}
 <script>
 function loadCSS(url) {
    const link = document.createElement('link');

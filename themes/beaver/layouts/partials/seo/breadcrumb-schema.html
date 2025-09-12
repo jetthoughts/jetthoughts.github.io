@@ -1,0 +1,78 @@
+{{/* Breadcrumb Schema - JSON-LD structured data for navigation */}}
+{{ $breadcrumbs := slice }}
+{{ $baseURL := .Site.BaseURL }}
+
+{{/* Always include Home */}}
+{{ $breadcrumbs = $breadcrumbs | append (dict "name" "Home" "url" $baseURL "position" 1) }}
+
+{{/* Build breadcrumb path based on page structure */}}
+{{ $position := 2 }}
+
+{{ if ne .Type "homepage" }}
+  {{ if eq .Section "blog" }}
+    {{ if eq .Kind "section" }}
+      {{/* Blog listing page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Blog" "url" (printf "%sblog/" $baseURL) "position" $position) }}
+    {{ else if eq .Kind "page" }}
+      {{/* Individual blog post */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Blog" "url" (printf "%sblog/" $baseURL) "position" $position) }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
+    {{ end }}
+  {{ else if eq .Section "services" }}
+    {{ if eq .Kind "section" }}
+      {{/* Services listing page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Services" "url" (printf "%sservices/" $baseURL) "position" $position) }}
+    {{ else if eq .Kind "page" }}
+      {{/* Individual service page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Services" "url" (printf "%sservices/" $baseURL) "position" $position) }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
+    {{ end }}
+  {{ else if eq .Section "use-cases" }}
+    {{ if eq .Kind "section" }}
+      {{/* Use Cases listing page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Use Cases" "url" (printf "%suse-cases/" $baseURL) "position" $position) }}
+    {{ else if eq .Kind "page" }}
+      {{/* Individual use case page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Use Cases" "url" (printf "%suse-cases/" $baseURL) "position" $position) }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
+    {{ end }}
+  {{ else if eq .Section "clients" }}
+    {{ if eq .Kind "section" }}
+      {{/* Clients listing page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Clients" "url" (printf "%sclients/" $baseURL) "position" $position) }}
+    {{ else if eq .Kind "page" }}
+      {{/* Individual client page */}}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Clients" "url" (printf "%sclients/" $baseURL) "position" $position) }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
+    {{ end }}
+  {{ else if ne .Section "" }}
+    {{/* Other sections */}}
+    {{ $breadcrumbs = $breadcrumbs | append (dict "name" (.Section | title) "url" (printf "%s%s/" $baseURL .Section) "position" $position) }}
+    {{ if eq .Kind "page" }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
+    {{ end }}
+  {{ else if eq .Kind "page" }}
+    {{/* Top-level pages */}}
+    {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
+  {{ end }}
+{{ end }}
+
+{{/* Only render if there are more than 1 breadcrumb items */}}
+{{ if gt (len $breadcrumbs) 1 }}
+{{/* Build itemListElement as Go slice of maps for proper JSON escaping */}}
+{{ $itemListElement := slice }}
+{{ range $crumb := $breadcrumbs }}
+  {{ $item := dict "@type" "ListItem" "position" $crumb.position "name" $crumb.name "item" $crumb.url }}
+  {{ $itemListElement = $itemListElement | append $item }}
+{{ end }}
+
+{{ $schema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $itemListElement }}
+<script type="application/ld+json">
+{{ $schema | jsonify }}
+</script>
+{{ end }}

@@ -1,0 +1,228 @@
+#!/usr/bin/env bash
+# Clear Hugo caches and temporary files for JetThoughts site
+
+set -e
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+show_help() {
+    cat << EOF
+Hugo Cache Cleaner - Clear Hugo caches and temporary files
+
+USAGE:
+    $0 [OPTIONS]
+
+OPTIONS:
+    -a, --all            Clean everything (default)
+    -c, --cache          Clean only cache files
+    -b, --build          Clean only build artifacts
+    -r, --resources      Clean only generated resources
+    -n, --dry-run        Show what would be deleted without deleting
+    -v, --verbose        Verbose output
+    -h, --help           Show this help message
+
+EXAMPLES:
+    $0                   # Clean all cache and build files
+    $0 -c                # Clean only cache files
+    $0 -b                # Clean only build artifacts
+    $0 -n                # Dry run - show what would be deleted
+    $0 -v                # Verbose output
+
+DIRECTORIES CLEANED:
+    • public/            - Generated site output
+    • public-*/          - Development build outputs
+    • resources/_gen/    - Generated resources (images, CSS, JS)
+    • .hugo_build.lock   - Build lock file
+    • hugo_stats.json    - Hugo statistics
+    
+CACHE DIRECTORIES:
+    • System cache (varies by OS)
+    • Module cache
+    • Resource cache
+
+EOF
+}
+
+# Default options
+CLEAN_ALL="true"
+CLEAN_CACHE=""
+CLEAN_BUILD=""
+CLEAN_RESOURCES=""
+DRY_RUN=""
+VERBOSE=""
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -a|--all)
+            CLEAN_ALL="true"
+            CLEAN_CACHE=""
+            CLEAN_BUILD=""
+            CLEAN_RESOURCES=""
+            shift
+            ;;
+        -c|--cache)
+            CLEAN_ALL=""
+            CLEAN_CACHE="true"
+            shift
+            ;;
+        -b|--build)
+            CLEAN_ALL=""
+            CLEAN_BUILD="true"
+            shift
+            ;;
+        -r|--resources)
+            CLEAN_ALL=""
+            CLEAN_RESOURCES="true"
+            shift
+            ;;
+        -n|--dry-run)
+            DRY_RUN="true"
+            shift
+            ;;
+        -v|--verbose)
+            VERBOSE="true"
+            shift
+            ;;
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+        *)
+            echo -e "${RED}Error: Unknown option $1${NC}" >&2
+            show_help
+            exit 1
+            ;;
+    esac
+done
+
+# Function to safely remove files/directories
+safe_remove() {
+    local target="$1"
+    local description="$2"
+    
+    if [[ -e "$target" ]]; then
+        if [[ "$DRY_RUN" == "true" ]]; then
+            echo -e "${YELLOW}Would remove:${NC} $target ($description)"
+        else
+            if [[ "$VERBOSE" == "true" ]]; then
+                echo -e "${YELLOW}Removing:${NC} $target ($description)"
+            fi
+            rm -rf "$target"
+        fi
+    elif [[ "$VERBOSE" == "true" ]]; then
+        echo -e "${BLUE}Not found:${NC} $target ($description)"
+    fi
+}
+
+# Function to get directory size
+get_size() {
+    local target="$1"
+    if [[ -e "$target" ]] && command -v du &> /dev/null; then
+        du -sh "$target" 2>/dev/null | cut -f1
+    else
+        echo "N/A"
+    fi
+}
+
+echo -e "${BLUE}Hugo Cache Cleaner${NC}"
+if [[ "$DRY_RUN" == "true" ]]; then
+    echo -e "${YELLOW}DRY RUN MODE - No files will be deleted${NC}"
+fi
+echo
+
+# Calculate total size before cleaning
+TOTAL_SIZE_BEFORE=0
+if command -v du &> /dev/null; then
+    for dir in public public-* resources/_gen; do
+        if [[ -e "$dir" ]]; then
+            SIZE=$(du -s "$dir" 2>/dev/null | cut -f1)
+            TOTAL_SIZE_BEFORE=$((TOTAL_SIZE_BEFORE + SIZE))
+        fi
+    done
+fi
+
+# Clean based on options
+if [[ "$CLEAN_ALL" == "true" || "$CLEAN_BUILD" == "true" ]]; then
+    echo -e "${YELLOW}Cleaning build artifacts...${NC}"
+    safe_remove "public" "Main site output"
+    safe_remove "public-dev" "Development build output"
+    safe_remove "public-test" "Test build output"
+    # Clean any other public-* directories
+    for dir in public-*; do
+        if [[ -d "$dir" ]]; then
+            safe_remove "$dir" "Custom build output"
+        fi
+    done
+    safe_remove ".hugo_build.lock" "Build lock file"
+    safe_remove "hugo_stats.json" "Hugo statistics"
+fi
+
+if [[ "$CLEAN_ALL" == "true" || "$CLEAN_RESOURCES" == "true" ]]; then
+    echo -e "${YELLOW}Cleaning generated resources...${NC}"
+    safe_remove "resources/_gen" "Generated resources (images, CSS, JS)"
+    safe_remove "assets/jsconfig.json" "JS configuration"
+fi
+
+if [[ "$CLEAN_ALL" == "true" || "$CLEAN_CACHE" == "true" ]]; then
+    echo -e "${YELLOW}Cleaning Hugo caches...${NC}"
+    
+    # Try to detect Hugo cache directory
+    HUGO_CACHE_DIR=""
+    if [[ -n "$TMPDIR" ]]; then
+        HUGO_CACHE_DIR="$TMPDIR/hugo_cache"
+    elif [[ -d "/tmp" ]]; then
+        HUGO_CACHE_DIR="/tmp/hugo_cache"
+    fi
+    
+    if [[ -n "$HUGO_CACHE_DIR" ]]; then
+        safe_remove "$HUGO_CACHE_DIR" "Hugo system cache"
+    fi
+    
+    # Clean user cache directory (varies by OS)
+    case "$(uname -s)" in
+        Darwin)
+            safe_remove "$HOME/Library/Caches/hugo" "Hugo user cache (macOS)"
+            ;;
+        Linux)
+            safe_remove "$HOME/.cache/hugo" "Hugo user cache (Linux)"
+            ;;
+    esac
+fi
+
+# Show summary
+echo
+if [[ "$DRY_RUN" != "true" ]]; then
+    echo -e "${GREEN}✓ Cleanup completed${NC}"
+    
+    # Calculate space freed
+    if command -v du &> /dev/null && [[ "$TOTAL_SIZE_BEFORE" -gt 0 ]]; then
+        TOTAL_SIZE_AFTER=0
+        for dir in public public-* resources/_gen; do
+            if [[ -e "$dir" ]]; then
+                SIZE=$(du -s "$dir" 2>/dev/null | cut -f1)
+                TOTAL_SIZE_AFTER=$((TOTAL_SIZE_AFTER + SIZE))
+            fi
+        done
+        
+        SPACE_FREED=$((TOTAL_SIZE_BEFORE - TOTAL_SIZE_AFTER))
+        if [[ "$SPACE_FREED" -gt 0 ]]; then
+            # Convert KB to human readable
+            if [[ "$SPACE_FREED" -gt 1048576 ]]; then
+                SPACE_FREED_MB=$((SPACE_FREED / 1024))
+                echo -e "Space freed: ${GREEN}${SPACE_FREED_MB} MB${NC}"
+            else
+                echo -e "Space freed: ${GREEN}${SPACE_FREED} KB${NC}"
+            fi
+        fi
+    fi
+else
+    echo -e "${YELLOW}Dry run completed - no files were deleted${NC}"
+fi
+
+echo -e "Next Hugo build will regenerate all cached files and resources."

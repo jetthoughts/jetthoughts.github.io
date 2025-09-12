@@ -1,0 +1,23 @@
+disableKinds = ["RSS", "sitemap", "robotsTXT"]
+timeout = "10s"
+enableRobotsTXT = false
+enableGitInfo = false
+
+[build]
+  writeStats = false
+
+[minify]
+  minifyOutput = false
+
+[server]
+  headers = [
+    {for = "/**", values = {Cache-Control = "no-cache, no-store, must-revalidate"}},
+    {for = "/**", values = {Pragma = "no-cache"}},
+    {for = "/**", values = {Expires = "0"}}
+  ]
+
+[params]
+  skipAnalytics = true
+  enableSearch = false
+  enableCommentsCount = false
+  ignoreImageProcessing = true

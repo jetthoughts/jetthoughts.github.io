@@ -1,0 +1,115 @@
+{{/* Open Graph and Twitter Card Meta Tags Component
+  Features: Dynamic content adapters, image optimization, fallbacks
+*/}}
+{{- $page := . -}}
+{{- $site := .Site -}}
+
+{{/* Title generation */}}
+{{- $title := "" -}}
+{{- if .IsHome -}}
+  {{- $title = $site.Title -}}
+{{- else -}}
+  {{- $title = printf "%s - %s" .Title $site.Title -}}
+{{- end -}}
+
+{{/* Description with content adapter */}}
+{{- $description := "" -}}
+{{- with .Description -}}
+  {{- $description = . -}}
+{{- else with .Params.description -}}
+  {{- $description = . -}}
+{{- else with .Summary -}}
+  {{- $description = . | plainify | truncate 160 -}}
+{{- else -}}
+  {{- $description = $site.Params.description | default "" -}}
+{{- end -}}
+
+{{/* Image handling with optimization */}}
+{{- $image := "" -}}
+{{- $imageWidth := "" -}}
+{{- $imageHeight := "" -}}
+
+{{/* Try page-specific image first */}}
+{{- with .Params.image -}}
+  {{- $resource := $page.Resources.Get . -}}
+  {{- if $resource -}}
+    {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+    {{- $image = $optimized.Permalink -}}
+    {{- $imageWidth = $optimized.Width -}}
+    {{- $imageHeight = $optimized.Height -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Fallback to site default image */}}
+{{- if not $image -}}
+  {{- with $site.Params.defaultImage -}}
+    {{- $image = . | absURL -}}
+    {{- $imageWidth = "1200" -}}
+    {{- $imageHeight = "630" -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Open Graph tags */}}
+<meta
+  property="og:type"
+  content="{{ if .IsHome }}
+    website
+  {{ else }}
+    article
+  {{ end }}" />
+<meta property="og:title" content="{{ $title }}" />
+{{ with $description }}
+  <meta property="og:description" content="{{ . }}" />
+{{ end }}
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ $site.Title }}" />
+{{ with $image }}<meta property="og:image" content="{{ . }}" />{{ end }}
+{{ with $imageWidth }}
+  <meta property="og:image:width" content="{{ . }}" />
+{{ end }}
+{{ with $imageHeight }}
+  <meta property="og:image:height" content="{{ . }}" />
+{{ end }}
+<meta
+  property="og:locale"
+  content="{{ $site.Language.LanguageCode | default "en_US" }}" />
+
+{{/* Article-specific Open Graph tags */}}
+{{ if and (not .IsHome) (eq .Section "blog") }}
+  <meta
+    property="article:published_time"
+    content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+  <meta
+    property="article:modified_time"
+    content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{ with .Params.author }}
+    <meta property="article:author" content="{{ . }}" />
+  {{ end }}
+  {{ with .Params.tags }}
+  {{ range . }}
+    <meta property="article:tag" content="{{ . }}" />
+  {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Twitter Card tags */}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+{{ with $description }}
+  <meta name="twitter:description" content="{{ . }}" />
+{{ end }}
+{{ with $image }}<meta name="twitter:image" content="{{ . }}" />{{ end }}
+{{ with $site.Params.social.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+{{ end }}
+{{ with .Params.author }}
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{ end }}
+
+{{/* Additional meta tags */}}
+{{ with .Params.keywords }}
+  <meta name="keywords" content="{{ delimit . ", " }}" />
+{{ end }}
+<meta
+  name="theme-color"
+  content="{{ $site.Params.themeColor | default "#000000" }}" />
