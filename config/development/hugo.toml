@@ -10,7 +10,8 @@ buildExpired = true
 buildFuture = true
 
 # Disable resource-intensive features for faster builds
-disableKinds = ["RSS", "sitemap", "robotsTXT", "section", "taxonomy", "term"]
+# Note: Keeping "section" enabled so blog index pages work in development
+disableKinds = ["RSS", "sitemap", "robotsTXT", "taxonomy", "term"]
 
 # Skip expensive processing in development
 ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
