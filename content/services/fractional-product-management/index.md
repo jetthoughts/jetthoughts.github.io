@@ -38,12 +38,12 @@ overview:
       value: JetThoughts provides on-demand access to product leadership on a fractional, part-time, or full-time basis to help companies of any size level up their software development operations. From market research, product strategy, and UX/UI to prototyping, sales engineering, and managing a development team, we can provide the technical support needed to build excellent software products.
   outcome:
     - name: Years of Industry Experience
-      value: 13
+      value: 17
     - name: Years of Average Client Relationship
       value: 5
     - name: Years of Average Developer Experience
       value: 8
 
 
-date: 2022-10-17T08:30:34+00:00
+date: 2025-01-12T08:30:34+00:00
 ---

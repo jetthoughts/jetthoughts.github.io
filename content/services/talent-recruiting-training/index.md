@@ -39,12 +39,12 @@ overview:
       value: JetThoughts provides on-demand access to a talent network of pre-vetted developers to help companies build a high-caliber software development team faster and at a fraction of the costs. As a fully-managed recruiting service, we can handle everything from researching and vetting candidates to interviewing, evaluating, and ranking developer talent.
   outcome:
     - name: Years of Industry Experience
-      value: 13
+      value: 17
     - name: Years of Average Client Relationship
       value: 5
     - name: Years of Average Developer Experience
       value: 8
 
 
-date: 2022-10-17T08:30:34+00:00
+date: 2025-01-12T08:30:34+00:00
 ---

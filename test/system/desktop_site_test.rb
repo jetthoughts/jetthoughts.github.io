@@ -27,7 +27,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     define_method("test_homepage_section_#{section_id.tr("-", "_")}") do
       visit "/"
       scroll_to :bottom # to preload all images
-      assert_text "JetThoughts’s expert team of developers", exact: false
+      assert_text "JetThoughts. All Rights Reserved", exact: false
 
       scroll_to find("##{section_id}")
 

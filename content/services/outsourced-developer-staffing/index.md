@@ -38,12 +38,12 @@ overview:
       value: JetThoughts provides on-demand access to pre-trained developers to help companies grow their software development team at a fraction of the costs. As a fully-managed staffing service, we can handle everything from vetting, training, and onboarding to managing payroll, benefits, and HR compliance.
   outcome:
     - name: Years of Industry Experience
-      value: 13
+      value: 17
     - name: Years of Average Client Relationship
       value: 5
     - name: Years of Average Developer Experience
       value: 8
 
 
-date: 2022-10-17T08:30:34+00:00
+date: 2025-01-12T08:30:34+00:00
 ---

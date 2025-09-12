@@ -7,7 +7,6 @@ class Hugo
 
   HUGO_OPTIONS = %w[
     --environment test
-    --logLevel debug
   ].freeze
 
   def precompile(port:)

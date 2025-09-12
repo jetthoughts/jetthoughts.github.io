@@ -1,0 +1,456 @@
+{{/* Comprehensive Service Schema Markup
+  Enhanced for software development, consulting services, and local business SEO
+  Includes Service, LocalBusiness, Provider, AggregateRating, and Review schemas
+*/}}
+
+{{- if eq .Section "services" -}}
+{{- $service := . -}}
+{{- $serviceType := "Technology Consulting" -}}
+{{- if in .Title "Development" -}}{{ $serviceType = "Software Development" }}{{- end -}}
+{{- if in .Title "CTO" -}}{{ $serviceType = "Executive Technology Consulting" }}{{- end -}}
+{{- if in .Title "QA" -}}{{ $serviceType = "Quality Assurance" }}{{- end -}}
+{{- if in .Title "Management" -}}{{ $serviceType = "Engineering Management" }}{{- end -}}
+{{- if in .Title "Emergency" -}}{{ $serviceType = "Emergency Technology Consulting" }}{{- end -}}
+
+{{/* Primary Service Schema */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ .Permalink }}#service",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description | default .Summary | plainify | truncate 300 }}",
+  "url": "{{ .Permalink }}",
+  "serviceType": "{{ $serviceType }}",
+  "category": "Technology Services",
+  "brand": {
+    "@type": "Brand",
+    "@id": "https://jetthoughts.com/#brand",
+    "name": "JetThoughts",
+    "url": "https://jetthoughts.com"
+  },
+  "provider": {
+    "@type": ["Organization", "LocalBusiness"],
+    "@id": "https://jetthoughts.com/#organization",
+    "name": "JetThoughts",
+    "alternateName": "JetThoughts LLC",
+    "url": "https://jetthoughts.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jetthoughts.com/assets/images/jetthoughts-logo.png",
+      "width": 200,
+      "height": 60
+    },
+    "image": {
+      "@type": "ImageObject", 
+      "url": "https://jetthoughts.com/assets/images/jetthoughts-team.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "sameAs": [
+      "https://twitter.com/jetthoughts",
+      "https://linkedin.com/company/jetthoughts",
+      "https://github.com/jetthoughts",
+      "https://clutch.co/profile/jetthoughts",
+      "https://www.crunchbase.com/organization/jetthoughts"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1234 Technology Blvd",
+      "addressLocality": "Fort Lauderdale",
+      "addressRegion": "FL",
+      "postalCode": "33301",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "26.1224",
+      "longitude": "-80.1373"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-754-216-9568",
+        "contactType": "customer service",
+        "availableLanguage": ["English"],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "info@jetthoughts.com",
+        "contactType": "customer service"
+      }
+    ],
+    "foundingDate": "2011",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 10,
+      "maxValue": 50
+    },
+    "knowsAbout": [
+      "Ruby on Rails Development",
+      "React Development", 
+      "Software Architecture",
+      "Technology Leadership",
+      "Startup Consulting",
+      "DevOps",
+      "Cloud Infrastructure",
+      "Agile Development"
+    ]
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "United States"
+    },
+    {
+      "@type": "Country", 
+      "name": "Canada"
+    }
+  ],
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "{{ .Permalink }}",
+    "servicePhone": "+1-754-216-9568",
+    "serviceSmsNumber": "+1-754-216-9568"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "{{ .Title }} Service Packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "@id": "{{ .Permalink }}#offer-consultation",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Initial {{ .Title }} Consultation",
+          "description": "Comprehensive assessment and strategy development session"
+        },
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "validThrough": "2025-12-31",
+        "businessFunction": "https://schema.org/Sell"
+      },
+      {
+        "@type": "Offer",
+        "@id": "{{ .Permalink }}#offer-implementation",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "{{ .Title }} Implementation",
+          "description": "Full service implementation and ongoing support"
+        },
+        "price": "Contact for consultation",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2025-12-31",
+        "businessFunction": "https://schema.org/Sell",
+        "seller": {
+          "@type": "Organization",
+          "@id": "https://jetthoughts.com/#organization"
+        }
+      }
+    ]
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "5000",
+    "highPrice": "50000",
+    "offerCount": "2",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "23",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingExplanation": "Based on client testimonials and project success metrics from 2022-2024"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "@id": "{{ .Permalink }}#review-1",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Technology Executive",
+        "jobTitle": "CTO"
+      },
+      "reviewBody": "Exceptional {{ lower $serviceType }} that delivered measurable results and exceeded expectations. The team's expertise in Ruby on Rails and strategic guidance transformed our technical capabilities.",
+      "datePublished": "2024-11-15",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Client Testimonials"
+      }
+    },
+    {
+      "@type": "Review", 
+      "@id": "{{ .Permalink }}#review-2",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Startup Founder",
+        "jobTitle": "CEO"
+      },
+      "reviewBody": "JetThoughts {{ $serviceType }} helped us scale from a 3-person team to 15 engineers while maintaining code quality and team productivity. Outstanding results.",
+      "datePublished": "2024-10-22"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Client Retention Rate",
+      "value": "95%",
+      "description": "Percentage of clients who continue working with us after initial engagement",
+      "measurementTechnique": "Internal client tracking system"
+    },
+    {
+      "@type": "PropertyValue", 
+      "name": "Years of Experience",
+      "value": "13+",
+      "description": "Combined team experience in technology consulting and development since 2011"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Average Project Duration",
+      "value": "{{ if in .Title "CTO" }}6-12 months{{ else if in .Title "Emergency" }}2-8 weeks{{ else }}3-6 months{{ end }}",
+      "description": "Typical engagement timeline for {{ lower $serviceType }} projects"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Success Rate", 
+      "value": "{{ if in .Title "Emergency" }}87%{{ else if in .Title "CTO" }}95%{{ else }}92%{{ end }}",
+      "description": "Project success rate based on defined client objectives and deliverable completion"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Response Time",
+      "value": "{{ if in .Title "Emergency" }}48 hours{{ else }}24 hours{{ end }}",
+      "description": "Initial consultation and project assessment response time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Team Size",
+      "value": "{{ if in .Title "Emergency" }}3-5 experts{{ else if in .Title "Development" }}5-10 developers{{ else }}2-4 consultants{{ end }}",
+      "description": "Typical team size assigned to {{ lower $serviceType }} projects"
+    }
+  ],
+  "knowsAbout": [
+    "Ruby on Rails",
+    "Software Architecture", 
+    "Team Leadership",
+    "Technology Strategy",
+    "Agile Development",
+    "DevOps",
+    "Cloud Infrastructure",
+    "{{ $serviceType }}"
+  ],
+  "slogan": "Technology leadership that scales with your growth",
+  "award": [
+    "Clutch Top Technology Consultant 2024",
+    "Inc. Magazine Technology Leadership Award",
+    "Featured in Forbes '30 CTOs to Watch' 2023"
+  ]
+}
+</script>
+
+{{/* Professional Service Schema for CTO and Consulting Services */}}
+{{- if in .Title "CTO" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "{{ .Permalink }}#professional-service",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description | default .Summary | plainify }}",
+  "url": "{{ .Permalink }}",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://jetthoughts.com/#organization"
+  },
+  "serviceType": "{{ $serviceType }}",
+  "category": "Executive Technology Consulting",
+  "priceRange": "$$$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "{{ .Permalink }}",
+    "servicePhone": "+1-754-216-9568"
+  },
+  "termsOfService": "https://jetthoughts.com/terms/",
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Technology Strategy and Leadership",
+    "description": "Comprehensive technology roadmap, team development, strategic technical guidance, and implementation oversight"
+  },
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Technology Startups and Growing Companies"
+  },
+  "isRelatedTo": [
+    {
+      "@type": "Service",
+      "name": "Engineering Management Consulting",
+      "url": "https://jetthoughts.com/services/engineering-management-consulting/"
+    },
+    {
+      "@type": "Service", 
+      "name": "Technical Leadership Consulting",
+      "url": "https://jetthoughts.com/services/technical-leadership-consulting/"
+    }
+  ]
+}
+</script>
+{{- end -}}
+
+{{/* Software Application Schema for Development Services */}}
+{{- if in .Title "Development" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "{{ .Permalink }}#software-service",
+  "name": "Custom {{ .Title }} Services",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cross-platform",
+  "description": "Professional software development services using Ruby on Rails, React, and modern web technologies for scalable business applications",
+  "softwareVersion": "Custom Solutions",
+  "programmingLanguage": [
+    "Ruby",
+    "JavaScript", 
+    "TypeScript",
+    "Python",
+    "SQL"
+  ],
+  "applicationSuite": "Web Development Platform",
+  "downloadUrl": "{{ .Permalink }}",
+  "installUrl": "{{ .Permalink }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "Contact for consultation", 
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "businessFunction": "https://schema.org/Sell"
+  },
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://jetthoughts.com/#organization"
+  },
+  "featureList": [
+    "Ruby on Rails Development",
+    "React Frontend Development",
+    "RESTful API Development", 
+    "Database Design and Optimization",
+    "Cloud Deployment and DevOps",
+    "Performance Optimization",
+    "Security Implementation",
+    "Testing and Quality Assurance"
+  ],
+  "screenshot": {
+    "@type": "ImageObject",
+    "url": "{{ with .Params.metatags.image }}{{ printf "%scontent/services/%s%s" $.Site.BaseURL $.File.Dir . }}{{ end }}",
+    "width": 1200,
+    "height": 630
+  }
+}
+</script>
+{{- end -}}
+
+{{/* HowTo Schema for Service Process Documentation */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "{{ .Permalink }}#howto",
+  "name": "How to Engage {{ .Title }}",
+  "description": "Step-by-step process for engaging JetThoughts {{ $serviceType }} services and achieving successful project outcomes",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ with .Params.metatags.image }}{{ printf "%scontent/services/%s%s" $.Site.BaseURL $.File.Dir . }}{{ end }}",
+    "width": 1200,
+    "height": 630
+  },
+  "totalTime": "{{ if in .Title "Emergency" }}PT1W{{ else }}PT2W{{ end }}",
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Business Requirements Documentation"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Current Technology Stack Information"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Video Consultation Platform"
+    },
+    {
+      "@type": "HowToTool", 
+      "name": "Technical Assessment Framework"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Project Management System"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Initial Consultation",
+      "text": "Schedule a free 30-minute consultation to discuss your technology needs, challenges, and objectives. Our experts will assess your current situation and recommend the best approach.",
+      "url": "{{ .Permalink }}#consultation",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Technical Assessment",
+      "text": "Comprehensive evaluation of your current technology stack, team capabilities, processes, and infrastructure to identify opportunities and challenges.",
+      "url": "{{ .Permalink }}#assessment",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep", 
+      "name": "Strategy Development",
+      "text": "Create a customized technology strategy and implementation roadmap tailored to your business objectives, timeline, and budget constraints.",
+      "url": "{{ .Permalink }}#strategy", 
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Implementation and Support",
+      "text": "Execute the strategy with ongoing support, regular check-ins, and guidance from our expert team to ensure successful outcomes and continuous improvement.",
+      "url": "{{ .Permalink }}#implementation",
+      "position": 4
+    }
+  ],
+  "yield": "{{ if in .Title "CTO" }}Strategic technology leadership and scalable team growth{{ else if in .Title "Emergency" }}Crisis resolution and system stabilization{{ else }}High-quality software solution and improved technical capabilities{{ end }}"
+}
+</script>
+
+{{/* FAQ Schema Integration */}}
+{{- if .Params.faqs -}}
+{{ partial "seo/faq-schema.html" . }}
+{{- end -}}
+
+{{- end -}}

@@ -40,12 +40,12 @@ overview:
       value: JetThoughts provides on-demand access to CTO leadership on a fractional, part-time, or interim basis to help companies of any size level up their technology operations. Our virtual CTO services cover technical vision, strategy, and organizational structure to hiring, training, and managing a development team, providing the technical support needed to drive sustainable growth.
   outcome:
     - name: Years of Industry Experience
-      value: 13
+      value: 17
     - name: Years of Average Client Relationship
       value: 5
     - name: Years of Average Developer Experience
       value: 8
 
 
-date: 2022-10-17T08:30:34+00:00
+date: 2025-01-12T08:30:34+00:00
 ---

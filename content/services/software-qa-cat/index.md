@@ -39,12 +39,12 @@ overview:
       value: JetThoughts provides on-demand access to a team of pre-trained product testing experts to help companies build faster and worry less about costly mistakes. As a fully-managed service, we can handle everything from setting up testing automation and QA processes to troubleshooting potential issues.
   outcome:
     - name: Years of Industry Experience
-      value: 13
+      value: 17
     - name: Years of Average Client Relationship
       value: 5
     - name: Years of Average Developer Experience
       value: 8
 
 
-date: 2022-10-17T08:30:34+00:00
+date: 2025-01-12T08:30:34+00:00
 ---
