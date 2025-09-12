@@ -22,12 +22,13 @@ services:
     working_dir: /app
     volumes:
       - ..:/app:delegated
-    command: 
+    command:
       - hugo
       - --destination=public-dtest
       - --environment=production
       - --watch
       - --poll=1s
+      - --baseURL=http://localhost:1314
     environment:
       HUGO_CACHEDIR: /app/.hugo_cache
     restart: unless-stopped
