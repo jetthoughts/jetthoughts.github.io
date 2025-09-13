@@ -42,4 +42,28 @@ class BaseSchemaTest < Minitest::Test
       assert schema_data.key?(field), "Missing #{field}"
     end
   end
+
+  # Additional helper methods for common schema validation patterns
+  def assert_valid_url(url, message = nil)
+    assert_match %r{https?://.*}, url, message || "Should be a valid URL: #{url}"
+  end
+
+  def assert_valid_date(date_string, message = nil)
+    assert_match /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/, date_string,
+                message || "Should be a valid ISO date: #{date_string}"
+  end
+
+  def assert_schema_type(schema_data, expected_type)
+    assert_equal expected_type, schema_data["@type"], "Schema type should be #{expected_type}"
+  end
+
+  def find_schemas_by_type(doc, schema_type)
+    extract_json_ld_schemas(doc).select { |schema| schema["@type"] == schema_type }
+  end
+
+  def assert_required_meta_tags(doc, *tag_selectors)
+    tag_selectors.each do |selector|
+      assert doc.css(selector).any?, "Missing required meta tag: #{selector}"
+    end
+  end
 end
