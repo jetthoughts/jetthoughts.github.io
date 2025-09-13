@@ -19,9 +19,9 @@ hugo.linux
 /.hugo_build.lock
 
 # JavaScript
-/node_modules/
+node_modules/
 
-/vendor/
+vendor/
 
 # Other
 .DS_Store

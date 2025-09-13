@@ -1,0 +1,15 @@
+{{/* Cache performance monitoring and debugging helper */}}
+{{ if hugo.IsServer }}
+<!-- Cache Debug Info -->
+<!-- 
+Template Cache Status:
+- Header: {{ if partialCached "page/header-content.html" . }}Cached{{ else }}Not Cached{{ end }}
+- Footer: {{ if partialCached "page/footer-content.html" . }}Cached{{ else }}Not Cached{{ end }}
+- Testimonials: {{ if .Site.Data.testimonials }}Data Available{{ else }}No Data{{ end }}
+
+Performance Metrics:
+- Build Started: {{ .Site.BuildDrafts }}
+- Environment: {{ hugo.Environment }}
+- Hugo Version: {{ hugo.Version }}
+-->
+{{ end }}

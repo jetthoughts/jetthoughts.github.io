@@ -1,0 +1,26 @@
+{{ $service := .Get "service" }}
+{{ $priceRange := .Get "price_range" }}
+{{ $currency := .Get "currency" | default "USD" }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ $service }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "JetThoughts",
+    "url": "https://jetthoughts.com",
+    "logo": "https://jetthoughts.com/assets/images/logo.png"
+  },
+  "serviceType": "Technology Consulting",
+  "areaServed": "Global",
+  "offers": {
+    "@type": "Offer",
+    "priceRange": "{{ $priceRange }}",
+    "priceCurrency": "{{ $currency }}",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "{{ now.Format "2006-01-02" }}"
+  }
+}
+</script>

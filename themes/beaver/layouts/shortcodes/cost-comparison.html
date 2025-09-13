@@ -1,0 +1,124 @@
+{{ $title := .Get "title" | default "Cost Comparison" }}
+{{ $option1 := .Get "option1" }}
+{{ $cost1 := .Get "cost1" }}
+{{ $option2 := .Get "option2" }}
+{{ $cost2 := .Get "cost2" }}
+{{ $savings := .Get "savings" }}
+
+<div class="cost-comparison-table" itemscope itemtype="https://schema.org/ComparisonTable">
+  <h3 itemprop="name">{{ $title }}</h3>
+  
+  <div class="comparison-container">
+    <div class="comparison-option">
+      <h4 class="option-title">{{ $option1 }}</h4>
+      <div class="cost-display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <span class="cost-amount" itemprop="price">{{ $cost1 }}</span>
+        <span class="cost-period" itemprop="priceCurrency">USD</span>
+      </div>
+    </div>
+    
+    <div class="comparison-vs">
+      <span>VS</span>
+    </div>
+    
+    <div class="comparison-option recommended">
+      <h4 class="option-title">{{ $option2 }}</h4>
+      <div class="cost-display" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <span class="cost-amount" itemprop="price">{{ $cost2 }}</span>
+        <span class="cost-period" itemprop="priceCurrency">USD</span>
+      </div>
+      {{ if $savings }}
+      <div class="savings-badge">
+        <span>Save {{ $savings }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<style>
+.cost-comparison-table {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.comparison-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.comparison-option {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.comparison-option:hover {
+  transform: translateY(-5px);
+}
+
+.comparison-option.recommended {
+  border: 3px solid #4CAF50;
+  position: relative;
+}
+
+.option-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cost-display {
+  margin-bottom: 1rem;
+}
+
+.cost-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2E86AB;
+  display: block;
+}
+
+.comparison-vs {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 0 1rem;
+}
+
+.savings-badge {
+  background: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .comparison-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .comparison-vs {
+    transform: rotate(90deg);
+  }
+}
+</style>

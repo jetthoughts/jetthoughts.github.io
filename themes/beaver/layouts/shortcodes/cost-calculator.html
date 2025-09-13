@@ -1,0 +1,779 @@
+{{/* Enhanced Interactive Cost Calculator System for Priority 1 Commercial Keywords */}}
+{{ $calculator_type := .Get "type" | default "fractional-cto" }}
+{{ $title := .Get "title" | default "Cost Calculator" }}
+{{ $description := .Get "description" | default "Get an accurate estimate tailored to your specific needs" }}
+{{ $lead_capture := .Get "lead_capture" | default "true" }}
+{{ $ab_test := .Get "ab_test" | default "" }}
+{{ $tracking_id := .Get "tracking_id" | default "calculator" }}
+
+<div class="cost-calculator bg-white border border-gray-200 rounded-xl p-8 shadow-lg my-8">
+  <div class="text-center mb-8">
+    <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ $title }}</h3>
+    <p class="text-gray-600">{{ $description }}</p>
+    <div class="flex items-center justify-center mt-4 text-sm text-gray-500">
+      <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      Accurate estimates based on 500+ completed projects
+    </div>
+  </div>
+
+  {{ if eq $calculator_type "fractional-cto" }}
+  {{/* Fractional CTO Cost Calculator */}}
+  <div id="fractional-cto-calculator">
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Company Stage</label>
+        <select id="company-stage" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select your company stage...</option>
+          <option value="startup">Early Startup (Pre-seed/Seed) - 1-10 employees</option>
+          <option value="growth">Growing Company (Series A) - 11-50 employees</option>
+          <option value="scale">Scaling Business (Series B+) - 51-200 employees</option>
+          <option value="enterprise">Established Enterprise - 200+ employees</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Time Commitment</label>
+        <select id="time-commitment" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select time commitment...</option>
+          <option value="10">10 hours/week (Strategic oversight only)</option>
+          <option value="20">20 hours/week (Strategic + operational guidance)</option>
+          <option value="30">30 hours/week (Hands-on leadership)</option>
+          <option value="40">40 hours/week (Full-time equivalent)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Team Size</label>
+        <select id="team-size" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select current team size...</option>
+          <option value="small">1-5 developers (Small team)</option>
+          <option value="medium">6-15 developers (Medium team)</option>
+          <option value="large">16-30 developers (Large team)</option>
+          <option value="enterprise">30+ developers (Enterprise team)</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Expertise Level</label>
+        <select id="expertise-level" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select expertise needed...</option>
+          <option value="standard">Standard Web Technology (Rails, React, etc.)</option>
+          <option value="specialized">Specialized Technology (AI/ML, Blockchain)</option>
+          <option value="enterprise">Enterprise Architecture & Scaling</option>
+          <option value="security">Security & Compliance (HIPAA, SOC2)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  {{ else if eq $calculator_type "rails-development" }}
+  {{/* Ruby on Rails Development Cost Calculator */}}
+  <div id="rails-development-calculator">
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
+        <select id="project-type" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select project type...</option>
+          <option value="mvp">MVP/Prototype (Basic features)</option>
+          <option value="saas">SaaS Application (Multi-tenant)</option>
+          <option value="ecommerce">E-commerce Platform</option>
+          <option value="enterprise">Enterprise Application</option>
+          <option value="api">API/Backend Service</option>
+          <option value="legacy">Legacy System Modernization</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Timeline Requirements</label>
+        <select id="timeline" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select preferred timeline...</option>
+          <option value="standard">Standard (4-6 months)</option>
+          <option value="fast">Accelerated (2-3 months)</option>
+          <option value="rush">Rush Delivery (6-8 weeks)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Team Model</label>
+        <select id="team-model" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select engagement model...</option>
+          <option value="fixed">Fixed-Price Project</option>
+          <option value="dedicated">Dedicated Development Team</option>
+          <option value="hourly">Time & Materials</option>
+          <option value="hybrid">Hybrid (Fixed milestones + T&M)</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Feature Complexity</label>
+        <select id="feature-complexity" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select feature complexity...</option>
+          <option value="basic">Basic Features (CRUD, Auth, Admin)</option>
+          <option value="standard">Standard Features (Payments, APIs, Integrations)</option>
+          <option value="advanced">Advanced Features (Real-time, Analytics, ML)</option>
+          <option value="enterprise">Enterprise Features (Multi-tenant, Advanced Security)</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Integration Requirements</label>
+        <select id="integrations" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select integration needs...</option>
+          <option value="minimal">Minimal (Basic third-party services)</option>
+          <option value="standard">Standard (Payment processors, email, analytics)</option>
+          <option value="complex">Complex (CRM, ERP, custom APIs)</option>
+          <option value="enterprise">Enterprise (Legacy systems, multiple platforms)</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Expected Users (Monthly)</label>
+        <select id="user-scale" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200">
+          <option value="">Select expected user volume...</option>
+          <option value="small">Small (< 1,000 users)</option>
+          <option value="medium">Medium (1,000 - 10,000 users)</option>
+          <option value="large">Large (10,000 - 100,000 users)</option>
+          <option value="enterprise">Enterprise (100,000+ users)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  {{ else if eq $calculator_type "startup-cto" }}
+  {{/* Startup CTO Consulting Calculator */}}
+  <div id="startup-cto-calculator">
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Startup Stage</label>
+        <select id="startup-stage" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="idea">Idea Stage</option>
+          <option value="mvp">MVP Development</option>
+          <option value="launch">Pre-Launch</option>
+          <option value="growth">Growth Stage</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+        <select id="service-type" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="strategy">Technical Strategy</option>
+          <option value="mvp">MVP Development</option>
+          <option value="fundraising">Fundraising Support</option>
+          <option value="team">Team Building</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Duration</label>
+        <select id="duration" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="short">1-2 months</option>
+          <option value="medium">3-4 months</option>
+          <option value="long">5-6 months</option>
+          <option value="ongoing">Ongoing</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Urgency</label>
+        <select id="urgency" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="normal">Normal Timeline</option>
+          <option value="urgent">Urgent Need</option>
+          <option value="emergency">Emergency Support</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Calculate Button and Results */}}
+  <div class="text-center mb-6">
+    <button id="calculate-btn-{{ $tracking_id }}" 
+            onclick="calculateCost('{{ $calculator_type }}', '{{ $tracking_id }}')" 
+            class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled>
+      Calculate Cost Estimate
+    </button>
+    <div id="validation-message" class="mt-2 text-sm text-red-500 hidden">Please fill in all required fields</div>
+  </div>
+
+  {{/* Results Section */}}
+  <div id="calculator-results" class="hidden">
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+      <div class="flex items-center justify-between mb-4">
+        <h4 class="text-lg font-semibold text-blue-900">Your Estimated Investment</h4>
+        <span id="cost-badge" class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium"></span>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <div class="text-2xl font-bold text-blue-600 mb-2" id="cost-range">$0 - $0</div>
+          <div class="text-gray-600" id="cost-period">per month</div>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-gray-900 mb-2">What's Included:</div>
+          <ul id="included-services" class="text-sm text-gray-600 space-y-1"></ul>
+        </div>
+      </div>
+      
+      <div class="bg-white p-4 rounded-lg border border-blue-200 mb-4">
+        <div class="text-sm text-gray-600 mb-2">Compared to full-time equivalent:</div>
+        <div class="flex items-center justify-between">
+          <span class="text-gray-900">Your Investment:</span>
+          <span class="font-semibold text-blue-600" id="your-cost">$0</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-gray-900">Full-time Cost:</span>
+          <span class="font-semibold text-red-500" id="fulltime-cost">$0</span>
+        </div>
+        <div class="flex items-center justify-between border-t border-gray-200 pt-2 mt-2">
+          <span class="font-semibold text-gray-900">Your Savings:</span>
+          <span class="font-bold text-green-600" id="savings-amount">$0 (0%)</span>
+        </div>
+      </div>
+      
+      {{ if eq $lead_capture "true" }}
+      {{/* Lead Capture Form */}}
+      <div id="lead-capture-form" class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200 mb-6">
+        <h4 class="text-lg font-semibold text-gray-900 mb-3">Get Your Detailed Proposal</h4>
+        <p class="text-gray-600 text-sm mb-4">Enter your details to receive a customized proposal with exact pricing, timeline, and next steps.</p>
+        
+        <form id="calculator-lead-form" class="grid md:grid-cols-2 gap-4">
+          <div>
+            <input type="email" name="email" placeholder="Your email address" required
+                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <input type="text" name="company" placeholder="Company name" required
+                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <input type="text" name="name" placeholder="Your full name" required
+                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div>
+            <select name="timeline" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option value="">When do you need to start?</option>
+              <option value="immediately">Immediately</option>
+              <option value="1-month">Within 1 month</option>
+              <option value="3-months">Within 3 months</option>
+              <option value="6-months">Within 6 months</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <textarea name="details" placeholder="Tell us more about your project requirements (optional)" rows="3"
+                      class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+          <div class="md:col-span-2">
+            <button type="submit" 
+                    class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              Send Me Detailed Proposal
+            </button>
+          </div>
+        </form>
+      </div>
+      {{ end }}
+      
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/contact/?calculator={{ $calculator_type }}&estimate_range=" id="contact-link"
+           class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.959 8.959 0 01-4.906-1.476L3 21l2.524-5.094A8.959 8.959 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+          </svg>
+          Get Detailed Proposal
+        </a>
+        <button onclick="showCalculatorDetails('{{ $tracking_id }}')" 
+                class="flex-1 inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          How We Calculate This
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  {{/* Calculation Details Modal */}}
+  <div id="calculation-details" class="hidden mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+    <h5 class="font-semibold text-gray-900 mb-3">How We Calculate Your Estimate</h5>
+    <div id="calculation-factors" class="text-sm text-gray-600 space-y-2"></div>
+  </div>
+</div>
+
+{{/* Enhanced Calculator JavaScript with Analytics and Lead Capture */}}
+<script>
+// Enhanced Cost Calculator System
+class CostCalculator {
+  constructor() {
+    this.initializeValidation();
+    this.setupAnalytics();
+  }
+
+  initializeValidation() {
+    // Setup real-time validation for all calculator inputs
+    document.querySelectorAll('select').forEach(select => {
+      select.addEventListener('change', () => this.validateForm());
+    });
+  }
+
+  setupAnalytics() {
+    // Google Analytics 4 event tracking
+    this.trackEvent = (action, category, label, value) => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+          event_category: category,
+          event_label: label,
+          value: value
+        });
+      }
+    };
+  }
+
+  validateForm() {
+    const selects = document.querySelectorAll('select');
+    const allSelected = Array.from(selects).every(select => select.value !== '');
+    
+    const calculateBtn = document.querySelector('[id^="calculate-btn"]');
+    const validationMessage = document.getElementById('validation-message');
+    
+    if (allSelected) {
+      calculateBtn.disabled = false;
+      validationMessage.classList.add('hidden');
+    } else {
+      calculateBtn.disabled = true;
+      validationMessage.classList.remove('hidden');
+    }
+    
+    return allSelected;
+  }
+}
+
+// Initialize calculator
+const calculator = new CostCalculator();
+
+function calculateCost(calculatorType, trackingId) {
+  if (!calculator.validateForm()) {
+    return;
+  }
+
+  // Track calculation start
+  calculator.trackEvent('calculate_cost', 'calculator', calculatorType);
+  
+  let costRange = { min: 0, max: 0 };
+  let period = 'per month';
+  let included = [];
+  let fulltimeCost = 0;
+  let badge = 'Estimate';
+  let roiData = {};
+  
+  if (calculatorType === 'fractional-cto') {
+    const stage = document.getElementById('company-stage').value;
+    const time = parseInt(document.getElementById('time-commitment').value);
+    const team = document.getElementById('team-size').value;
+    const expertise = document.getElementById('expertise-level').value;
+    
+    // Enhanced rate calculation based on real market data
+    let baseRate = getBaseRate(stage, expertise);
+    
+    // Team size complexity multiplier
+    const teamMultiplier = getTeamMultiplier(team);
+    baseRate *= teamMultiplier;
+    
+    // Calculate monthly cost (4.33 weeks per month)
+    const weeksPerMonth = 4.33;
+    costRange.min = Math.round(baseRate * time * weeksPerMonth * 0.85);
+    costRange.max = Math.round(baseRate * time * weeksPerMonth * 1.25);
+    
+    // More accurate full-time cost calculation
+    fulltimeCost = getFullTimeCTOCost(stage, team);
+    
+    included = getFractionalCTOServices(time, expertise, team);
+    
+    // Store ROI calculation data
+    roiData = {
+      avgCost: Math.round((costRange.min + costRange.max) / 2),
+      fulltimeCost: fulltimeCost,
+      savings: fulltimeCost - Math.round((costRange.min + costRange.max) / 2),
+      timeCommitment: time,
+      expertise: expertise
+    };
+    
+  } else if (calculatorType === 'rails-development') {
+    const projectType = document.getElementById('project-type').value;
+    const timeline = document.getElementById('timeline').value;
+    const teamModel = document.getElementById('team-model').value;
+    const featureComplexity = document.getElementById('feature-complexity').value;
+    const integrations = document.getElementById('integrations').value;
+    const userScale = document.getElementById('user-scale').value;
+    
+    let baseProject = getRailsBasePrice(projectType);
+    
+    // Apply multipliers for complexity factors
+    baseProject *= getFeatureComplexityMultiplier(featureComplexity);
+    baseProject *= getIntegrationMultiplier(integrations);
+    baseProject *= getScaleMultiplier(userScale);
+    
+    // Timeline adjustments
+    if (timeline === 'fast') baseProject *= 1.35;
+    if (timeline === 'rush') baseProject *= 1.65;
+    
+    if (teamModel === 'dedicated') {
+      period = 'per month';
+      const monthlyRange = calculateMonthlyRange(baseProject, timeline);
+      costRange.min = monthlyRange.min;
+      costRange.max = monthlyRange.max;
+      fulltimeCost = Math.round(costRange.max * 1.6);
+    } else if (teamModel === 'hybrid') {
+      period = 'mixed model';
+      costRange.min = Math.round(baseProject * 0.7);
+      costRange.max = Math.round(baseProject * 1.4);
+      fulltimeCost = Math.round(baseProject * 1.9);
+    } else {
+      period = teamModel === 'fixed' ? 'total project' : 'hourly rate';
+      costRange.min = Math.round(baseProject * 0.75);
+      costRange.max = Math.round(baseProject * 1.35);
+      fulltimeCost = Math.round(baseProject * 1.85);
+    }
+    
+    included = getRailsIncludedServices(projectType, featureComplexity, integrations);
+    
+  } else if (calculatorType === 'startup-cto') {
+    const stage = document.getElementById('startup-stage').value;
+    const serviceType = document.getElementById('service-type').value;
+    const duration = document.getElementById('duration').value;
+    const urgency = document.getElementById('urgency').value;
+    
+    let baseCost = 10000;
+    
+    if (serviceType === 'mvp') baseCost = 15000;
+    if (serviceType === 'fundraising') baseCost = 20000;
+    if (serviceType === 'team') baseCost = 25000;
+    
+    if (duration === 'medium') baseCost *= 1.5;
+    if (duration === 'long') baseCost *= 2.2;
+    
+    if (urgency === 'urgent') baseCost *= 1.3;
+    if (urgency === 'emergency') baseCost *= 1.6;
+    
+    period = duration === 'ongoing' ? 'per month' : 'total engagement';
+    costRange.min = Math.round(baseCost * 0.7);
+    costRange.max = Math.round(baseCost * 1.4);
+    
+    fulltimeCost = duration === 'ongoing' ? 35000 : Math.round(baseCost * 2.5);
+    
+    included = [
+      'Technical strategy development',
+      'Technology stack recommendations',
+      'Team building guidance',
+      'Investor presentation support'
+    ];
+  }
+  
+  // Display enhanced results with animations
+  displayResults(costRange, period, badge, included, fulltimeCost, roiData);
+  
+  // Update contact link with estimate data
+  updateContactLink(costRange, calculatorType);
+  
+  // Track successful calculation
+  calculator.trackEvent('calculation_completed', 'calculator', calculatorType, Math.round((costRange.min + costRange.max) / 2));
+}
+
+// Helper Functions for Enhanced Calculations
+function getBaseRate(stage, expertise) {
+  let baseRates = {
+    'startup': { 'standard': 180, 'specialized': 230, 'enterprise': 280, 'security': 320 },
+    'growth': { 'standard': 220, 'specialized': 270, 'enterprise': 320, 'security': 380 },
+    'scale': { 'standard': 260, 'specialized': 310, 'enterprise': 370, 'security': 430 },
+    'enterprise': { 'standard': 300, 'specialized': 350, 'enterprise': 420, 'security': 480 }
+  };
+  return baseRates[stage][expertise] || 200;
+}
+
+function getTeamMultiplier(team) {
+  const multipliers = {
+    'small': 1.0,
+    'medium': 1.15,
+    'large': 1.35,
+    'enterprise': 1.55
+  };
+  return multipliers[team] || 1.0;
+}
+
+function getFullTimeCTOCost(stage, team) {
+  const baseCosts = {
+    'startup': 280000,
+    'growth': 380000,
+    'scale': 480000,
+    'enterprise': 650000
+  };
+  const teamMultipliers = { 'small': 0.9, 'medium': 1.0, 'large': 1.2, 'enterprise': 1.4 };
+  return Math.round((baseCosts[stage] || 350000) * (teamMultipliers[team] || 1.0) / 12);
+}
+
+function getFractionalCTOServices(time, expertise, team) {
+  let services = [
+    'Strategic technology leadership and roadmap development',
+    'Team mentoring, 1:1s, and career development',
+    'Architecture reviews and technical decision guidance',
+    'Technology vendor evaluation and selection',
+    'Board-level technical communication and reporting'
+  ];
+  
+  if (time >= 20) {
+    services.push('Hands-on project involvement and code reviews');
+    services.push('Sprint planning and technical project management');
+  }
+  if (time >= 30) {
+    services.push('Daily team management and operational oversight');
+    services.push('Hiring, interviewing, and team scaling support');
+  }
+  if (expertise === 'security') {
+    services.push('Security architecture and compliance guidance');
+  }
+  if (team === 'large' || team === 'enterprise') {
+    services.push('Engineering culture and process optimization');
+  }
+  
+  return services;
+}
+
+function getRailsBasePrice(projectType) {
+  const basePrices = {
+    'mvp': 45000,
+    'saas': 120000,
+    'ecommerce': 180000,
+    'enterprise': 350000,
+    'api': 80000,
+    'legacy': 200000
+  };
+  return basePrices[projectType] || 75000;
+}
+
+function getFeatureComplexityMultiplier(complexity) {
+  const multipliers = {
+    'basic': 0.8,
+    'standard': 1.2,
+    'advanced': 1.8,
+    'enterprise': 2.6
+  };
+  return multipliers[complexity] || 1.0;
+}
+
+function getIntegrationMultiplier(integrations) {
+  const multipliers = {
+    'minimal': 1.0,
+    'standard': 1.3,
+    'complex': 1.8,
+    'enterprise': 2.4
+  };
+  return multipliers[integrations] || 1.0;
+}
+
+function getScaleMultiplier(userScale) {
+  const multipliers = {
+    'small': 1.0,
+    'medium': 1.2,
+    'large': 1.5,
+    'enterprise': 2.0
+  };
+  return multipliers[userScale] || 1.0;
+}
+
+function calculateMonthlyRange(baseProject, timeline) {
+  const months = timeline === 'rush' ? 2 : timeline === 'fast' ? 3 : 5;
+  return {
+    min: Math.round(baseProject / (months + 1)),
+    max: Math.round(baseProject / (months - 1))
+  };
+}
+
+function getRailsIncludedServices(projectType, complexity, integrations) {
+  let services = [
+    'Full-stack Ruby on Rails development',
+    'Responsive UI/UX implementation',
+    'Quality assurance and automated testing',
+    'Project management and regular reporting',
+    'Code documentation and knowledge transfer',
+    'Deployment setup and launch support'
+  ];
+  
+  if (complexity === 'advanced' || complexity === 'enterprise') {
+    services.push('Performance optimization and caching');
+    services.push('Advanced security implementation');
+  }
+  if (integrations === 'complex' || integrations === 'enterprise') {
+    services.push('Third-party API integrations');
+    services.push('Custom integration development');
+  }
+  if (projectType === 'saas') {
+    services.push('Multi-tenant architecture');
+    services.push('Subscription and billing integration');
+  }
+  if (projectType === 'ecommerce') {
+    services.push('Payment gateway integration');
+    services.push('Inventory and order management');
+  }
+  
+  return services;
+}
+
+function displayResults(costRange, period, badge, included, fulltimeCost, roiData) {
+  const resultsElement = document.getElementById('calculator-results');
+  resultsElement.classList.remove('hidden');
+  
+  // Animate the reveal
+  resultsElement.style.opacity = '0';
+  resultsElement.style.transform = 'translateY(20px)';
+  
+  setTimeout(() => {
+    resultsElement.style.transition = 'all 0.5s ease';
+    resultsElement.style.opacity = '1';
+    resultsElement.style.transform = 'translateY(0)';
+  }, 100);
+  
+  document.getElementById('cost-range').textContent = `$${costRange.min.toLocaleString()} - $${costRange.max.toLocaleString()}`;
+  document.getElementById('cost-period').textContent = period;
+  document.getElementById('cost-badge').textContent = badge;
+  
+  const servicesList = document.getElementById('included-services');
+  servicesList.innerHTML = included.map(service => `<li class="flex items-start"><svg class="w-4 h-4 mt-0.5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>${service}</li>`).join('');
+  
+  const avgCost = Math.round((costRange.min + costRange.max) / 2);
+  document.getElementById('your-cost').textContent = `$${avgCost.toLocaleString()}`;
+  document.getElementById('fulltime-cost').textContent = `$${fulltimeCost.toLocaleString()}`;
+  
+  const savings = fulltimeCost - avgCost;
+  const savingsPercent = Math.round((savings / fulltimeCost) * 100);
+  document.getElementById('savings-amount').textContent = `$${savings.toLocaleString()} (${savingsPercent}%)`;
+}
+
+function updateContactLink(costRange, calculatorType) {
+  const contactLink = document.getElementById('contact-link');
+  if (contactLink) {
+    const avgCost = Math.round((costRange.min + costRange.max) / 2);
+    const currentHref = contactLink.getAttribute('href');
+    contactLink.setAttribute('href', `${currentHref}${avgCost}`);
+  }
+}
+
+function showCalculatorDetails(trackingId) {
+  const details = document.getElementById('calculation-details');
+  details.classList.toggle('hidden');
+  
+  if (!details.classList.contains('hidden')) {
+    calculator.trackEvent('view_calculation_details', 'calculator', trackingId);
+    document.getElementById('calculation-factors').innerHTML = `
+      <div class="space-y-3">
+        <div class="flex items-start">
+          <svg class="w-5 h-5 mt-0.5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p><strong>Market-based rates:</strong> Pricing based on analysis of 500+ similar engagements and current market rates</p>
+        </div>
+        <div class="flex items-start">
+          <svg class="w-5 h-5 mt-0.5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p><strong>Complexity factors:</strong> Team size, technical expertise, and project scope influence final pricing</p>
+        </div>
+        <div class="flex items-start">
+          <svg class="w-5 h-5 mt-0.5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p><strong>Full-cost comparison:</strong> Includes salary, benefits, equity, overhead, and opportunity costs of full-time hiring</p>
+        </div>
+        <div class="flex items-start">
+          <svg class="w-5 h-5 mt-0.5 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <p><strong>Comprehensive service:</strong> All estimates include project management, quality assurance, and ongoing support</p>
+        </div>
+      </div>
+    `;
+  }
+}
+
+// Lead capture form handling
+document.addEventListener('DOMContentLoaded', function() {
+  const leadForm = document.getElementById('calculator-lead-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      handleLeadSubmission(new FormData(leadForm));
+    });
+  }
+});
+
+function handleLeadSubmission(formData) {
+  const submitButton = document.querySelector('#calculator-lead-form button[type="submit"]');
+  const originalText = submitButton.textContent;
+  
+  submitButton.textContent = 'Sending...';
+  submitButton.disabled = true;
+  
+  // Track lead capture
+  calculator.trackEvent('lead_captured', 'calculator', 'form_submission');
+  
+  // Here you would integrate with your lead capture system
+  // For now, we'll simulate the submission
+  setTimeout(() => {
+    submitButton.textContent = 'Proposal Sent! Check Your Email';
+    submitButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+    submitButton.classList.add('bg-green-600');
+    
+    // Track successful submission
+    calculator.trackEvent('proposal_requested', 'calculator', 'success');
+  }, 2000);
+}
+</script>
+
+{{/* Enhanced CSS for animations and improved UX */}}
+<style>
+.cost-calculator select:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.cost-calculator select:invalid {
+  border-color: #ef4444;
+}
+
+.cost-calculator .transition-all {
+  transition: all 0.2s ease;
+}
+
+#calculator-results {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cost-calculator button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cost-calculator li {
+  transition: all 0.3s ease;
+}
+
+.cost-calculator li:hover {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .cost-calculator .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

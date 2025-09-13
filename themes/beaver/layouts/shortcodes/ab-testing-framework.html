@@ -1,0 +1,203 @@
+{{/* A/B Testing Framework for Cost Calculators */}}
+{{ $test_id := .Get "test_id" | default "default-test" }}
+{{ $variant_a := .Get "variant_a" | default "" }}
+{{ $variant_b := .Get "variant_b" | default "" }}
+{{ $split_percentage := .Get "split" | default "50" }}
+{{ $tracking_id := .Get "tracking_id" | default "ab-test" }}
+
+<div id="ab-test-{{ $test_id }}" class="ab-test-container" data-test-id="{{ $test_id }}">
+  {{/* Variant A - Default */}}
+  <div id="variant-a-{{ $test_id }}" class="ab-variant" data-variant="a" style="display: none;">
+    {{ .Inner | markdownify }}
+  </div>
+  
+  {{/* Variant B - Alternative */}}
+  <div id="variant-b-{{ $test_id }}" class="ab-variant" data-variant="b" style="display: none;">
+    {{ if $variant_b }}
+      {{ $variant_b | markdownify }}
+    {{ else }}
+      {{/* Default variant B content */}}
+      <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl shadow-xl">
+        <h3 class="text-3xl font-bold mb-4 text-center">🚀 Limited Time: Free CTO Assessment</h3>
+        <p class="text-xl text-center mb-6">Get personalized technology strategy recommendations worth $2,500 - absolutely free!</p>
+        {{ .Inner | markdownify }}
+        <div class="text-center mt-6">
+          <span class="inline-flex items-center px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-full text-sm">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            100+ startups saved $200K+ with our guidance
+          </span>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{/* A/B Testing JavaScript */}}
+<script>
+(function() {
+  const testId = '{{ $test_id }}';
+  const splitPercentage = {{ $split_percentage }};
+  const trackingId = '{{ $tracking_id }}';
+  
+  // Check for existing variant assignment
+  let assignedVariant = localStorage.getItem(`ab-test-${testId}`);
+  
+  if (!assignedVariant) {
+    // Assign variant based on split percentage
+    assignedVariant = (Math.random() * 100) < splitPercentage ? 'a' : 'b';
+    localStorage.setItem(`ab-test-${testId}`, assignedVariant);
+    
+    // Track variant assignment
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'ab_test_assigned', {
+        event_category: 'ab_testing',
+        event_label: `${testId}_variant_${assignedVariant}`,
+        custom_parameter_1: testId,
+        custom_parameter_2: assignedVariant
+      });
+    }
+  }
+  
+  // Show the assigned variant
+  const variantElement = document.getElementById(`variant-${assignedVariant}-${testId}`);
+  if (variantElement) {
+    variantElement.style.display = 'block';
+    variantElement.classList.add('ab-variant-active');
+  }
+  
+  // Track variant view
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'ab_test_viewed', {
+      event_category: 'ab_testing',
+      event_label: `${testId}_variant_${assignedVariant}`,
+      custom_parameter_1: testId,
+      custom_parameter_2: assignedVariant
+    });
+  }
+  
+  // Enhanced conversion tracking for calculators
+  document.addEventListener('DOMContentLoaded', function() {
+    // Track calculator interactions
+    const calculatorButtons = document.querySelectorAll('[onclick*="calculateCost"]');
+    calculatorButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'ab_test_interaction', {
+            event_category: 'ab_testing',
+            event_label: `${testId}_variant_${assignedVariant}_calculator_click`,
+            custom_parameter_1: testId,
+            custom_parameter_2: assignedVariant,
+            custom_parameter_3: 'calculator_click'
+          });
+        }
+      });
+    });
+    
+    // Track form submissions
+    const leadForms = document.querySelectorAll('form[id*="calculator-lead-form"]');
+    leadForms.forEach(form => {
+      form.addEventListener('submit', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'ab_test_conversion', {
+            event_category: 'ab_testing',
+            event_label: `${testId}_variant_${assignedVariant}_form_submit`,
+            custom_parameter_1: testId,
+            custom_parameter_2: assignedVariant,
+            custom_parameter_3: 'form_submission'
+          });
+        }
+      });
+    });
+    
+    // Track contact link clicks
+    const contactLinks = document.querySelectorAll('a[href*="/contact/"]');
+    contactLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'ab_test_conversion', {
+            event_category: 'ab_testing',
+            event_label: `${testId}_variant_${assignedVariant}_contact_click`,
+            custom_parameter_1: testId,
+            custom_parameter_2: assignedVariant,
+            custom_parameter_3: 'contact_click'
+          });
+        }
+      });
+    });
+  });
+  
+  // Exposure method for external tracking
+  window.getABTestVariant = function(id) {
+    if (id === testId) {
+      return assignedVariant;
+    }
+    return null;
+  };
+  
+  // Method to force variant assignment (for testing)
+  window.setABTestVariant = function(id, variant) {
+    if (id === testId && (variant === 'a' || variant === 'b')) {
+      localStorage.setItem(`ab-test-${id}`, variant);
+      location.reload();
+    }
+  };
+})();
+</script>
+
+{{/* A/B Testing CSS */}}
+<style>
+.ab-test-container {
+  position: relative;
+}
+
+.ab-variant {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ab-variant-active {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Variant B specific styling */
+.ab-variant[data-variant="b"] .cost-calculator {
+  border: 3px solid #3b82f6;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.ab-variant[data-variant="b"] .cost-calculator h3 {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Debug mode (remove in production) */
+[data-debug="true"] .ab-variant {
+  border: 2px dashed #ccc;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+[data-debug="true"] .ab-variant::before {
+  content: "Variant: " attr(data-variant);
+  display: block;
+  background: #f0f0f0;
+  padding: 5px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+</style>

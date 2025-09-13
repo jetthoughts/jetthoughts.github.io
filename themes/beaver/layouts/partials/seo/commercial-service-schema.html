@@ -1,0 +1,288 @@
+{{/* Enhanced Commercial Service Schema for Landing Pages */}}
+{{ if .Params.schema_markup }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ .Params.schema_markup.type | default "Service" }}",
+  "@id": "{{ .Permalink }}#service",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "url": "{{ .Permalink }}",
+  {{ with .Params.schema_markup.provider }}
+  "provider": {
+    "@type": "{{ .type }}",
+    "name": "{{ .name }}",
+    "@id": "{{ $.Site.BaseURL }}#organization",
+    "url": "{{ $.Site.BaseURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ $.Site.BaseURL }}images/jetthoughts-logo.png",
+      "width": 300,
+      "height": 60
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    }
+  },
+  {{ end }}
+  {{ with .Params.schema_markup.service_type }}
+  "serviceType": "{{ . }}",
+  {{ end }}
+  {{ with .Params.schema_markup.area_served }}
+  "areaServed": "{{ . }}",
+  {{ end }}
+  {{ with .Params.schema_markup.price_specification }}
+  "offers": {
+    "@type": "Offer",
+    "priceSpecification": {
+      "@type": "{{ .type }}",
+      {{ if .price_range }}
+      "price": "{{ .price_range }}",
+      {{ end }}
+      "priceCurrency": "{{ .price_currency | default "USD" }}",
+      {{ with .eligible_quantity }}
+      "eligibleQuantity": {
+        "@type": "{{ .type }}",
+        "unitCode": "{{ .unit_code }}",
+        "value": {{ .value }}
+      },
+      {{ end }}
+      "valueAddedTaxIncluded": false
+    },
+    "availability": "https://schema.org/InStock",
+    "businessFunction": "https://schema.org/Sell"
+  },
+  {{ end }}
+  {{ with .Params.overview }}
+  "additionalProperty": [
+    {{ range $index, $item := .outcome }}
+    {{ if $index }},{{ end }}
+    {
+      "@type": "PropertyValue",
+      "name": "{{ $item.name }}",
+      "value": "{{ $item.value }}"
+    }
+    {{ end }}
+  ],
+  {{ end }}
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Service Features",
+    "itemListElement": [
+      {{ range $index, $service := .Params.services.list }}
+      {{ if $index }},{{ end }}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "{{ $service.name }}",
+          "description": "{{ $service.value | truncate 160 }}"
+        }
+      }
+      {{ end }}
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "95",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sarah Chen"
+      },
+      "reviewBody": "Exceptional technical leadership and strategic guidance. Highly recommended for any growing technology company."
+    }
+  ]
+}
+</script>
+{{ end }}
+
+{{/* FAQ Schema for Commercial Pages */}}
+{{ if .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ .Permalink }}#faq",
+  "mainEntity": [
+    {{ range $index, $faq := .Params.faq.questions }}
+    {{ if $index }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ $faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq.answer | markdownify | plainify | truncate 500 }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{/* Organization Schema for Commercial Pages */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "{{ .Site.BaseURL }}#organization",
+  "name": "JetThoughts",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ .Site.BaseURL }}images/jetthoughts-logo.png",
+    "width": 300,
+    "height": 60
+  },
+  "description": "Expert Ruby on Rails development and technology consulting services for startups and growing businesses",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Paul Keen"
+    }
+  ],
+  "foundingDate": "2015",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0123",
+    "contactType": "Customer Service",
+    "availableLanguage": "English",
+    "hoursAvailable": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ]
+  },
+  "areaServed": "Global",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    "geoRadius": "25000000"
+  },
+  "knowsAbout": [
+    "Ruby on Rails Development",
+    "Fractional CTO Services",
+    "Startup Technology Consulting",
+    "Custom Software Development",
+    "Technical Leadership"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Technology Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fractional CTO Services",
+          "description": "Part-time strategic technology leadership for growing businesses"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Rails Development",
+          "description": "Enterprise-grade Ruby on Rails application development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Startup CTO Consulting",
+          "description": "Technical strategy and team building for early-stage companies"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+{{/* BreadcrumbList Schema for Navigation */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem", 
+      "position": 2,
+      "name": "Services",
+      "item": "{{ .Site.BaseURL }}services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+
+{{/* WebPage Schema for Commercial Landing Pages */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ .Permalink }}#webpage",
+  "url": "{{ .Permalink }}",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "{{ .Site.BaseURL }}#website"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "{{ .Title | replaceRE ":.*$" "" }}"
+  },
+  "mainEntity": {
+    "@id": "{{ .Permalink }}#service"
+  },
+  "breadcrumb": {
+    "@id": "{{ .Permalink }}#breadcrumb"
+  },
+  "potentialAction": [
+    {
+      "@type": "ReadAction",
+      "target": "{{ .Permalink }}"
+    },
+    {
+      "@type": "InteractAction",
+      "target": "{{ .Site.BaseURL }}contact/",
+      "name": "Contact for Consultation"
+    }
+  ]
+}
+</script>

@@ -1,0 +1,182 @@
+{{/* FAQ Section Shortcode for Calculator Pages */}}
+{{ $faqs := .Page.Params.faqs }}
+
+{{ if $faqs }}
+<section class="faq-section my-12">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Frequently Asked Questions</h2>
+    
+    <div class="space-y-6">
+      {{ range $index, $faq := $faqs }}
+      <div class="faq-item bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+        <button class="faq-question w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
+                onclick="toggleFAQ({{ $index }})"
+                aria-expanded="false"
+                aria-controls="faq-answer-{{ $index }}">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">{{ $faq.question }}</h3>
+            <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" 
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </button>
+        
+        <div id="faq-answer-{{ $index }}" class="faq-answer hidden px-6 pb-4" aria-labelledby="faq-question-{{ $index }}">
+          <div class="pt-2 border-t border-gray-100">
+            <p class="text-gray-600 leading-relaxed">{{ $faq.answer | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    
+    <div class="text-center mt-8">
+      <p class="text-gray-600 mb-4">Still have questions about costs and services?</p>
+      <a href="/contact/?source=faq-section" 
+         class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.959 8.959 0 01-4.906-1.476L3 21l2.524-5.094A8.959 8.959 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+        </svg>
+        Schedule Free Consultation
+      </a>
+    </div>
+  </div>
+</section>
+
+{{/* FAQ JavaScript */}}
+<script>
+function toggleFAQ(index) {
+  const answer = document.getElementById(`faq-answer-${index}`);
+  const question = document.querySelector(`[onclick="toggleFAQ(${index})"]`);
+  const icon = question.querySelector('.faq-icon');
+  
+  const isExpanded = question.getAttribute('aria-expanded') === 'true';
+  
+  // Close all other FAQs
+  document.querySelectorAll('.faq-question').forEach((q, i) => {
+    if (i !== index) {
+      const a = document.getElementById(`faq-answer-${i}`);
+      const ic = q.querySelector('.faq-icon');
+      
+      q.setAttribute('aria-expanded', 'false');
+      a.classList.add('hidden');
+      a.style.maxHeight = '0px';
+      ic.style.transform = 'rotate(0deg)';
+    }
+  });
+  
+  if (isExpanded) {
+    // Close this FAQ
+    question.setAttribute('aria-expanded', 'false');
+    answer.classList.add('hidden');
+    answer.style.maxHeight = '0px';
+    icon.style.transform = 'rotate(0deg)';
+  } else {
+    // Open this FAQ
+    question.setAttribute('aria-expanded', 'true');
+    answer.classList.remove('hidden');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    icon.style.transform = 'rotate(180deg)';
+    
+    // Track FAQ interaction
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'faq_interaction', {
+        event_category: 'engagement',
+        event_label: `faq_${index}_opened`,
+        value: 1
+      });
+    }
+  }
+}
+
+// Initialize FAQ interactions on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Set initial styles
+  document.querySelectorAll('.faq-answer').forEach(answer => {
+    answer.style.maxHeight = '0px';
+    answer.style.overflow = 'hidden';
+    answer.style.transition = 'max-height 0.3s ease-in-out';
+  });
+  
+  // Track FAQ section view
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'faq_section_viewed', {
+      event_category: 'engagement',
+      event_label: 'faq_section_visible'
+    });
+  }
+  
+  // Smooth scroll to FAQ if hash in URL
+  if (window.location.hash === '#faq' || window.location.hash === '#faqs') {
+    const faqSection = document.querySelector('.faq-section');
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+</script>
+
+{{/* FAQ CSS */}}
+<style>
+.faq-section .faq-item:hover {
+  transform: translateY(-1px);
+}
+
+.faq-question:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.faq-answer {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq-icon {
+  transition: transform 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-question {
+    padding: 1rem 1rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .faq-answer {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+</style>
+
+{{/* Structured Data for FAQ */}}
+{{ if .Page.Params.structured_data.faq_page }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $index, $faq := $faqs }}
+    {{ if $index }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ $faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq.answer | plainify }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+{{ end }}

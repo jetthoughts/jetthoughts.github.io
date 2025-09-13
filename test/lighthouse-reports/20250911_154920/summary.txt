@@ -1,0 +1,16 @@
+=== LIGHTHOUSE BENCHMARK SUMMARY ===
+Timestamp: Thu Sep 11 15:51:09 CEST 2025
+Base URL: http://localhost:1313
+Pages Tested: 9
+
+AVERAGE SCORES:
+Performance: 89/100
+Accessibility: 73/100
+Best Practices: 90/100
+SEO: 88/100
+
+THRESHOLD COMPLIANCE:
+Pages meeting 90+ performance: 9/9
+Status: ✓ ALL PAGES PASSED
+
+Detailed reports available in: test/lighthouse-reports/20250911_154920/

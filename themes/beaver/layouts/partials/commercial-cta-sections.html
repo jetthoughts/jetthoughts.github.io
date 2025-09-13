@@ -1,0 +1,174 @@
+{{/* Commercial CTA Sections for Landing Pages */}}
+{{ if .Params.cta_sections }}
+
+{{/* Primary CTA Section */}}
+{{ with .Params.cta_sections.primary }}
+<section class="commercial-cta primary-cta bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ .headline }}</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">{{ .description }}</p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="{{ .button_link }}" 
+         class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.959 8.959 0 01-4.906-1.476L3 21l2.524-5.094A8.959 8.959 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+        </svg>
+        {{ .button_text }}
+      </a>
+      
+      <a href="/contact/" 
+         class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        Free Consultation
+      </a>
+    </div>
+    
+    <div class="mt-8 text-sm opacity-80">
+      <p>✓ Free 30-minute consultation • ✓ No commitment required • ✓ Expert technical assessment</p>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* Secondary CTA Section */}}
+{{ with .Params.cta_sections.secondary }}
+<section class="commercial-cta secondary-cta bg-gray-50 py-12">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-2/3 mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ .headline }}</h3>
+          <p class="text-gray-600 text-lg">{{ .description }}</p>
+        </div>
+        <div class="md:w-1/3 md:pl-8">
+          <a href="{{ .button_link }}" 
+             class="inline-flex items-center justify-center w-full px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-md">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            {{ .button_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
+
+{{/* Pricing Section CTA */}}
+{{ if .Params.pricing }}
+<section class="commercial-pricing-cta bg-white py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">{{ .Params.pricing.headline }}</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">{{ .Params.pricing.description }}</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {{ range .Params.pricing.models }}
+      <div class="pricing-card bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 transition-colors duration-200 relative">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ .name }}</h3>
+          <div class="text-3xl font-bold text-blue-600 mb-2">{{ .range }}</div>
+          <p class="text-gray-600">{{ .description }}</p>
+        </div>
+        
+        <ul class="space-y-3 mb-8">
+          {{ range .includes }}
+          <li class="flex items-center text-gray-700">
+            <svg class="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            {{ . }}
+          </li>
+          {{ end }}
+        </ul>
+        
+        <div class="text-center">
+          <a href="/contact/?package={{ .name | urlize }}" 
+             class="inline-flex items-center justify-center w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+            Get Started
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    
+    <div class="text-center mt-12">
+      <p class="text-gray-600 mb-6">Not sure which option is right for you?</p>
+      <a href="/contact/" 
+         class="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        Schedule Free Consultation
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* Related Services Cross-sell */}}
+{{ if .Params.related_services }}
+<section class="related-services-cta bg-gray-50 py-16">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">{{ .Params.related_services.headline }}</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">{{ .Params.related_services.description }}</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      {{ range .Params.related_services.services }}
+      <div class="related-service-card bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ .title }}</h3>
+        <p class="text-gray-600 mb-4">{{ .description }}</p>
+        <a href="{{ .link }}" 
+           class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+          Learn More
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* Trust Signals and Social Proof */}}
+<section class="trust-signals py-12 bg-white border-t border-gray-200">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
+      <div class="flex items-center space-x-2 text-gray-600">
+        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <span>95% Client Retention Rate</span>
+      </div>
+      <div class="flex items-center space-x-2 text-gray-600">
+        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <span>10+ Years Experience</span>
+      </div>
+      <div class="flex items-center space-x-2 text-gray-600">
+        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <span>200+ Successful Projects</span>
+      </div>
+      <div class="flex items-center space-x-2 text-gray-600">
+        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <span>Free 30-Min Consultation</span>
+      </div>
+    </div>
+  </div>
+</section>
