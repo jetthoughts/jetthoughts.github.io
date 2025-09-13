@@ -5,53 +5,27 @@
 {{/* Always include Home */}}
 {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Home" "url" $baseURL "position" 1) }}
 
+{{/* Section name mapping for consistent titles */}}
+{{- $sectionNames := dict
+  "blog" "Blog"
+  "services" "Services"
+  "use-cases" "Use Cases"
+  "clients" "Clients"
+-}}
+
 {{/* Build breadcrumb path based on page structure */}}
 {{ $position := 2 }}
 
 {{ if ne .Type "homepage" }}
-  {{ if eq .Section "blog" }}
-    {{ if eq .Kind "section" }}
-      {{/* Blog listing page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Blog" "url" (printf "%sblog/" $baseURL) "position" $position) }}
-    {{ else if eq .Kind "page" }}
-      {{/* Individual blog post */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Blog" "url" (printf "%sblog/" $baseURL) "position" $position) }}
-      {{ $position = add $position 1 }}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
-    {{ end }}
-  {{ else if eq .Section "services" }}
-    {{ if eq .Kind "section" }}
-      {{/* Services listing page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Services" "url" (printf "%sservices/" $baseURL) "position" $position) }}
-    {{ else if eq .Kind "page" }}
-      {{/* Individual service page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Services" "url" (printf "%sservices/" $baseURL) "position" $position) }}
-      {{ $position = add $position 1 }}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
-    {{ end }}
-  {{ else if eq .Section "use-cases" }}
-    {{ if eq .Kind "section" }}
-      {{/* Use Cases listing page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Use Cases" "url" (printf "%suse-cases/" $baseURL) "position" $position) }}
-    {{ else if eq .Kind "page" }}
-      {{/* Individual use case page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Use Cases" "url" (printf "%suse-cases/" $baseURL) "position" $position) }}
-      {{ $position = add $position 1 }}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
-    {{ end }}
-  {{ else if eq .Section "clients" }}
-    {{ if eq .Kind "section" }}
-      {{/* Clients listing page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Clients" "url" (printf "%sclients/" $baseURL) "position" $position) }}
-    {{ else if eq .Kind "page" }}
-      {{/* Individual client page */}}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" "Clients" "url" (printf "%sclients/" $baseURL) "position" $position) }}
-      {{ $position = add $position 1 }}
-      {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}
-    {{ end }}
-  {{ else if ne .Section "" }}
-    {{/* Other sections */}}
-    {{ $breadcrumbs = $breadcrumbs | append (dict "name" (.Section | title) "url" (printf "%s%s/" $baseURL .Section) "position" $position) }}
+  {{ if and .Section (ne .Section "") }}
+    {{/* Get section display name */}}
+    {{ $sectionName := index $sectionNames .Section | default (.Section | title) }}
+    {{ $sectionURL := printf "%s%s/" $baseURL .Section }}
+
+    {{/* Add section breadcrumb */}}
+    {{ $breadcrumbs = $breadcrumbs | append (dict "name" $sectionName "url" $sectionURL "position" $position) }}
+
+    {{/* Add page breadcrumb if this is an individual page */}}
     {{ if eq .Kind "page" }}
       {{ $position = add $position 1 }}
       {{ $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) }}

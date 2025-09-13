@@ -1,13 +1,13 @@
 {{/* Enhanced SEO Meta Tags Optimization
   Features: Optimized titles, compelling descriptions, schema integration
-  Character limits: Title 50-60, Description 150-160 
+  Character limits: Title 50-60, Description 150-160
 */}}
 
 {{- $page := . -}}
 {{- $site := .Site -}}
 
 {{/* Power words for title enhancement */}}
-{{- $powerWords := dict 
+{{- $powerWords := dict
   "services" (slice "Expert" "Proven" "Professional" "Comprehensive")
   "blog" (slice "Essential" "Advanced" "Complete" "Ultimate")
   "about" (slice "Trusted" "Experienced" "Award-Winning")
@@ -245,7 +245,9 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-{{/* Preconnect to external resources */}}
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+{{- if hugo.IsProduction -}}
+  {{/* Preconnect to external resources */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+{{- end -}}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+echo "🚀 Rebuilding Docker images with optimizations..."
+
+# Clean up old containers and images for fresh build
+echo "🧹 Cleaning up old containers and images..."
+bin/dc down --volumes --remove-orphans || true
+docker system prune -f || true
+
+# Build with optimized settings
+echo "🔨 Building optimized Docker image..."
+DOCKER_BUILDKIT=1 bin/dc build --no-cache --parallel t
+
+echo "✅ Docker rebuild complete!"
+echo "💡 Run 'bin/dtest' to test the optimizations"

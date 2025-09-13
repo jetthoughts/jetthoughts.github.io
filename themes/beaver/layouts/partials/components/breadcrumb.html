@@ -32,23 +32,17 @@
 {{- end -}}
 
 {{/* JSON-LD structured data */}}
+{{- $itemList := slice -}}
+{{- range $index, $crumb := $breadcrumbs -}}
+  {{- $item := dict "@type" "ListItem" "position" (add $index 1) "name" $crumb.title "item" $crumb.url -}}
+  {{- $itemList = $itemList | append $item -}}
+{{- end -}}
+{{- $schema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $itemList -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {{- range $index, $crumb := $breadcrumbs -}}
-      {{- if $index }},{{ end }}
-      {
-        "@type": "ListItem",
-        "position": {{ add $index 1 }},
-        "name": "{{ $crumb.title }}",
-        "item": "{{ $crumb.url }}"
-      }
-    {{- end -}}
-  ]
-}
-</script> {{/* Visible breadcrumb navigation */}}
+{{ $schema | jsonify }}
+</script>
+
+{{/* Visible breadcrumb navigation */}}
 {{ if gt (len $breadcrumbs) 1 }}
   <nav aria-label="Breadcrumb" class="breadcrumb-nav">
     <ol

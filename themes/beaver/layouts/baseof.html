@@ -6,10 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
-    {{/* Enhanced SEO Meta Tags */}}
     {{ partial "seo/enhanced-meta-tags.html" . }}
-
-    {{/* Preconnect links now handled in enhanced-meta-tags.html */}}
 
     <style>
         .logo-image-main {
@@ -90,6 +87,7 @@
 </div>
 {{ partialCached "page/footer.html" . "footer" }}
 {{ block "footer" . }} {{ end }}
+
 
 {{ partialCached "page/site-scripts" . "site-scripts" }}
 <script>

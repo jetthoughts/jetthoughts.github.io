@@ -81,3 +81,5 @@ Capybara.current_driver = Capybara.javascript_driver
 Capybara.disable_animation = true
 Capybara.threadsafe = false
 Capybara.default_max_wait_time = 10
+
+Capybara.save_path = "tmp/capybara/"

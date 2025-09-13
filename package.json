@@ -14,7 +14,7 @@
     "test:performance": "bun run build && lighthouse http://localhost:8080 --output json --output-path ./lighthouse-results/report.json",
     "clean": "rm -rf public/ resources/_gen/ .hugo_build.lock coverage/ test-reports/",
     "clean:cache": "rm -rf resources/_gen/",
-    "clean:tests": "rm -rf public-test/ public-build-test/ public-performance-test/ validation-test/",
+    "clean:tests": "rm -rf _dest/public-dtest/ _dest/public-build-dtest/ _dest/public-performance-dtest/ _dest/validation-dtest/",
     "deploy:preview": "bun run build:preview && surge public/ --domain jt-site-preview.surge.sh",
     "analyze": "hugo --templateMetrics --templateMetricsHints",
     "lint": "bundle exec standardrb",

@@ -3,48 +3,65 @@
 # Optimized for fast feedback loops with minimal complexity
 
 services:
-  # Hugo development server (port 1313)
+  # Hugo development server (port 1313) - optimized
   hugo:
     image: hugomods/hugo:exts-non-root-0.149.1
     working_dir: /app
     volumes:
       - ..:/app:delegated
+      - hugo_cache:/tmp/hugo_cache
     ports:
       - '1313:1313'
-    command: hugo server --bind 0.0.0.0 --poll 1s
+    command: hugo server --bind 0.0.0.0 --poll 500ms --disableFastRender=false
     environment:
-      HUGO_CACHEDIR: /app/.hugo_cache
+      HUGO_CACHEDIR: /tmp/hugo_cache
+      HUGO_NUMWORKERMULTIPLIER: 8
+      HUGO_ENABLEGITINFO: false
     restart: unless-stopped
+    mem_limit: 512m
+    cpus: '2.0'
 
-  # Hugo watch mode for tests (build-only, no server)
+  # Hugo watch mode for tests (optimized for speed)
   hugo-watch:
-    image: hugomods/hugo:exts-non-root-0.149.1
+    build:
+      context: .
+      dockerfile: Dockerfile.hugo
     working_dir: /app
     volumes:
       - ..:/app:delegated
+      - hugo_cache:/tmp/hugo_cache
+      - build_output:/tmp/build_output/public-dtest
     command:
       - hugo
-      - --destination=public-dtest
+      - --destination=/tmp/build_output/public-dtest
       - --environment=production
       - --watch
       - --poll=1s
       - --baseURL=http://localhost:1314
+      - --gc=false
+      - --ignoreCache=false
+      - --minify=false
     environment:
-      HUGO_CACHEDIR: /app/.hugo_cache
-    restart: unless-stopped
+      HUGO_CACHEDIR: /tmp/hugo_cache
+      HUGO_NUMWORKERMULTIPLIER: 8
+      HUGO_ENABLEGITINFO: false
+    restart: "no"
+    mem_limit: 1g
+    cpus: '3.0'
     healthcheck:
-      test: ["CMD", "test", "-f", "/app/public-dtest/index.html"]
-      interval: 5s
-      timeout: 3s
-      retries: 20
-      start_period: 60s
+      test: ["CMD", "test", "-f", "/tmp/build_output/public-dtest/index.html"]
+      interval: 2s
+      timeout: 1s
+      retries: 10
+      start_period: 15s
 
-  # Interactive shell
+  # Interactive shell (optimized)
   sh:
     image: jetthoughts.com-test:1.0.0
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
+      target: runtime
     working_dir: /app
     stdin_open: true
     tty: true
@@ -58,13 +75,16 @@ services:
       IRB_HISTFILE: /usr/local/hist/.irb_history
       BUNDLE_PATH: /opt/bundle
     command: bash
+    mem_limit: 1g
+    cpus: '2.0'
 
-  # Test runner with Hugo dependency
+  # Test runner with optimized dependency management
   t:
     image: jetthoughts.com-test:1.0.0
     build:
       context: ../
       dockerfile: ./.dev/Dockerfile
+      target: runtime
     working_dir: /app
     command: bin/test
     depends_on:
@@ -75,12 +95,28 @@ services:
       - /app/node_modules
       - bundle:/opt/bundle
       - test_screenshots:/app/tmp/screenshots
+      - build_output:/tmp/build_output/public-dtest
     environment:
-      HUGO_DEFAULT_PATH: "public-dtest"
+      HUGO_DEFAULT_PATH: "/tmp/build_output/public-dtest"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
-      CHROME_FLAGS: "--disable-gpu --no-sandbox --disable-dev-shm-usage"
+      CHROME_FLAGS: "--disable-gpu --no-sandbox --disable-dev-shm-usage --disable-extensions --disable-plugins --disable-background-timer-throttling"
+      PARALLEL_TEST_PROCESSORS: 4
+      RUBY_THREAD_VM_STACK_SIZE: 1048576
+    mem_limit: 2g
+    cpus: '4.0'
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
 
 volumes:
   bundle:
+    driver: local
   history:
+    driver: local
   test_screenshots:
+    driver: local
+  hugo_cache:
+    driver: local
+  build_output:
+    driver: local

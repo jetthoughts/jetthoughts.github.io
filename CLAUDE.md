@@ -19,12 +19,19 @@
 
 **Full Details**: See `docs/60.02-agile-framework-reference.md`
 
-## 🧪 QUALITY STANDARDS
+## 🧪 QUALITY STANDARDS & SIMPLICITY
 
 **TDD Enforcement**: ACTIVE across all agents
 **Coverage Targets**: >80% statements, >75% branches
 **Micro-Refactoring**: ≤3 lines per change, ≤50 lines per task
 **Zero Tolerance**: Breaking changes, incomplete functionality
+
+**SIMPLICITY REQUIREMENTS**:
+- Scripts under 50 lines when possible
+- Functions under 20 lines
+- Clear, self-documenting code
+- Remove unused code immediately
+- Consolidate duplicate functionality
 
 **Complete Framework**: See `docs/60.03-tdd-quality-enforcement.md`
 
@@ -48,11 +55,24 @@
 
 **Complete Guidelines**: See `docs/60.05-knowledge-organization.md`
 
-## 🛡️ ANTI-DUPLICATION ENFORCEMENT
+## 🛡️ SIMPLICITY & ANTI-DUPLICATION ENFORCEMENT
 
-**Zero Tolerance**: File suffixes (_refactored, _new, _v2, etc.) BLOCKED
+**CRITICAL MANDATE**: Always choose the SIMPLEST solution that works
+**Zero Tolerance**:
+- File suffixes (_refactored, _new, _v2, etc.) BLOCKED
+- Overengineered custom solutions when standard tools exist
+- Complex abstractions when simple code works
+- Multiple similar scripts or files
+
 **Tool Usage**: Edit/MultiEdit for existing files, Write only for new files
-**Validation**: Pre/during/post-task duplication scanning
+**Validation**: Pre/during/post-task duplication and complexity scanning
+
+**SIMPLICITY PRINCIPLES**:
+- Use existing tools/libraries before building custom solutions
+- Delete complex code in favor of simple alternatives
+- One file per purpose, no redundant variations
+- Readable code over clever code
+- Standard patterns over custom frameworks
 
 **Full System**: See `docs/60.06-anti-duplication-system.md`
 
@@ -88,24 +108,22 @@
 2. **Story Breakdown**: Job stories → tasks → micro-refactoring steps
 3. **Agent Coordination**: Four-Eyes pairing for all development
 4. **Quality Gates**: TDD enforcement with continuous validation
-5. **Knowledge Management**: Document patterns in structured system
+   a) **Simplicity First**: Always choose simplest working solution
+   b) **Cleanup**: Remove redundant files/code immediately
+7. **Knowledge Management**: Document patterns in structured system
 
 ### Quick Commands
 ```bash
-# Development
-npm start                    # Start development server
-npm test                     # Run test suite
-npm run build               # Production build
+# Development (Hugo-based)
+bin/hugo-dev                 # Start development server
+bin/hugo-build               # Build site
+bin/hugo-clean               # Clean build artifacts
+bin/test                     # Run tests
+bin/dtest                    # Run Docker (slow) Integration tests to verify production
 
-# SPARC Workflow
-npx claude-flow@alpha sparc tdd "feature"
-npx claude-flow@alpha sparc run architect "design"
-npx claude-flow@alpha sparc batch spec-pseudocode "task"
-
-# Agent Coordination
-npx claude-flow@alpha swarm init --topology mesh
-npx claude-flow@alpha agent spawn --type coder --capabilities react,typescript
-npx claude-flow@alpha task orchestrate "implement feature X"
+# Simplicity Checks
+find bin/ -name "*.sh" -o -name "*-*" | wc -l   # Count scripts (keep minimal)
+grep -r "TODO\|FIXME\|HACK" bin/ || echo "Clean!"  # No technical debt
 ```
 
 ### Memory Management
@@ -126,6 +144,8 @@ mcp_servers: ["claude-flow", "ruv-swarm", "flow-nexus"]
 quality_enforcement: true
 four_eyes_mandatory: true
 knowledge_management_active: true
+simplicity_enforcement: true
+complexity_alerts: true
 ```
 
 ---

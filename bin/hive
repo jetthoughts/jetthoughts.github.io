@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+set -Eeuo pipefail
+
+npx claude-flow@alpha hive-mind spawn "{$@}" --auto-spawn --claude

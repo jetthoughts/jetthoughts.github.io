@@ -1,0 +1,78 @@
+{{/* Reusable Organization Data for Schema Markup */}}
+{{- $organizationData := dict
+  "@type" (slice "Organization" "LocalBusiness")
+  "@id" "https://jetthoughts.com/#organization"
+  "name" "JetThoughts"
+  "alternateName" "JetThoughts LLC"
+  "url" "https://jetthoughts.com"
+  "logo" (dict
+    "@type" "ImageObject"
+    "url" "https://jetthoughts.com/assets/images/jetthoughts-logo.png"
+    "width" 200
+    "height" 60
+  )
+  "image" (dict
+    "@type" "ImageObject"
+    "url" "https://jetthoughts.com/assets/images/jetthoughts-team.jpg"
+    "width" 1200
+    "height" 630
+  )
+  "sameAs" (slice
+    "https://twitter.com/jetthoughts"
+    "https://linkedin.com/company/jetthoughts"
+    "https://github.com/jetthoughts"
+    "https://clutch.co/profile/jetthoughts"
+    "https://www.crunchbase.com/organization/jetthoughts"
+  )
+  "address" (dict
+    "@type" "PostalAddress"
+    "streetAddress" "1234 Technology Blvd"
+    "addressLocality" "Fort Lauderdale"
+    "addressRegion" "FL"
+    "postalCode" "33301"
+    "addressCountry" "US"
+  )
+  "geo" (dict
+    "@type" "GeoCoordinates"
+    "latitude" "26.1224"
+    "longitude" "-80.1373"
+  )
+  "contactPoint" (slice
+    (dict
+      "@type" "ContactPoint"
+      "telephone" "+1-754-216-9568"
+      "contactType" "customer service"
+      "availableLanguage" (slice "English")
+      "hoursAvailable" (dict
+        "@type" "OpeningHoursSpecification"
+        "dayOfWeek" (slice "Monday" "Tuesday" "Wednesday" "Thursday" "Friday")
+        "opens" "09:00"
+        "closes" "17:00"
+      )
+    )
+    (dict
+      "@type" "ContactPoint"
+      "email" "info@jetthoughts.com"
+      "contactType" "customer service"
+    )
+  )
+  "foundingDate" "2011"
+  "numberOfEmployees" (dict
+    "@type" "QuantitativeValue"
+    "minValue" 10
+    "maxValue" 50
+  )
+  "knowsAbout" (slice
+    "Ruby on Rails Development"
+    "React Development"
+    "Software Architecture"
+    "Technology Leadership"
+    "Startup Consulting"
+    "DevOps"
+    "Cloud Infrastructure"
+    "Agile Development"
+  )
+-}}
+
+{{/* Return the organization data */}}
+{{- return $organizationData -}}
