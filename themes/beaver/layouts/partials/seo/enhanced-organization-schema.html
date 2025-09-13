@@ -86,10 +86,9 @@
     "reviewCount": "25",
     "bestRating": "5",
     "worstRating": "1"
-  },
+  }{{ with .Site.Params.testimonials }},
   
   {{/* Include testimonials as reviews */}}
-  {{ with .Site.Params.testimonials }}
   "review": [
     {{- range $index, $testimonial := . -}}
     {{- if gt $index 0 }},{{ end }}
@@ -111,8 +110,7 @@
       }
     }
     {{- end }}
-  ],
-  {{ end }}
+  ]{{ end }},
   
   "makesOffer": [
     {

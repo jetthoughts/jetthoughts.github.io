@@ -44,15 +44,11 @@
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
   },
-  {{ with .Params.tags }}
-  "keywords": {{ . | jsonify }},
-  {{ end }}
   "articleSection": "{{ .Section | title }}",
   "wordCount": {{ .WordCount }},
-  {{ with .Params.categories }}
-  "about": {{ . | jsonify }},
-  {{ end }}
-  "url": "{{ .Permalink }}",
+  "url": "{{ .Permalink }}"{{ with .Params.tags }},
+  "keywords": {{ . | jsonify }}{{ end }}{{ with .Params.categories }},
+  "about": {{ . | jsonify }}{{ end }},
   "isPartOf": {
     "@type": "Blog",
     "@id": "{{ .Site.BaseURL }}blog/",
