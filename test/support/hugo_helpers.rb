@@ -12,7 +12,7 @@ class Hugo
   def precompile(port:)
     options = HUGO_OPTIONS.join(" ")
     system(
-      "hugo #{options} --baseURL \"http://localhost:#{port}\" --destination \"#{destination}\"",
+      "hugo #{options} --noBuildLock --baseURL \"http://localhost:#{port}\" --destination \"#{destination}\"",
       exception: true
     )
     self
@@ -22,10 +22,10 @@ class Hugo
     that = self
     Rack::Builder.new do
       use RequestLogger if ENV["DEBUG"]
-      
+
       # Custom middleware to handle Hugo-style directory routing
       use HugoDirectoryHandler, that.destination_path
-      
+
       use Rack::Static,
         urls: ["/"],
         root: that.destination_path,
@@ -51,14 +51,14 @@ class HugoDirectoryHandler
     @app = app
     @destination_path = destination_path
   end
-  
+
   def call(env)
     request = Rack::Request.new(env)
     path = request.path
-    
+
     # Try to serve the direct path first
     file_path = File.join(@destination_path, path)
-    
+
     # If it's a directory request, try to serve index.html
     if File.directory?(file_path)
       index_path = File.join(file_path, "index.html")
@@ -68,12 +68,12 @@ class HugoDirectoryHandler
       end
     elsif !File.exist?(file_path) && !path.end_with?("/")
       # Try directory + index.html pattern
-      dir_index_path = File.join(@destination_path, path, "index.html") 
+      dir_index_path = File.join(@destination_path, path, "index.html")
       if File.exist?(dir_index_path)
         env["PATH_INFO"] = File.join(path, "index.html")
       end
     end
-    
+
     @app.call(env)
   end
 end
