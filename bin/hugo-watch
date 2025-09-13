@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -Eeuo pipefail
 
 # Start Hugo in watch mode for test environment
 # Automatically updates public-dtest folder when files change
