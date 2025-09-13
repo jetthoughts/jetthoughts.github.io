@@ -22,6 +22,9 @@ class Hugo
     that = self
     Rack::Builder.new do
       use RequestLogger if ENV["DEBUG"]
+      
+      # Handle directory requests by serving index.html files
+      use HugoDirectoryHandler, that.destination_path
 
       use Rack::Static,
         urls: ["/"],
@@ -53,5 +56,34 @@ class RequestLogger
     request = Rack::Request.new(env)
     puts "Received #{request.request_method} request for #{request.path}"
     @app.call(env)
+  end
+end
+
+class HugoDirectoryHandler
+  def initialize(app, public_path)
+    @app = app
+    @public_path = public_path
+  end
+
+  def call(env)
+    request = Rack::Request.new(env)
+    path = request.path_info
+    
+    # If path ends with / and there's an index.html, serve it
+    if path.end_with?('/')
+      index_file = File.join(@public_path, path, 'index.html')
+      if File.exist?(index_file)
+        return serve_file(index_file)
+      end
+    end
+    
+    @app.call(env)
+  end
+
+  private
+
+  def serve_file(file_path)
+    content = File.read(file_path)
+    [200, {'Content-Type' => 'text/html'}, [content]]
   end
 end

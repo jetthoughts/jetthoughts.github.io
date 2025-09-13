@@ -35,7 +35,7 @@ class TestimonialShortcodeTest < ApplicationSystemTestCase
       assert_selector ".pp-review-title"
       
       # Verify rating display
-      assert_selector ".pp-rating img[title='five stars']"
+      assert_selector ".pp-rating img[alt='five stars']"
     end
   end
   
@@ -128,7 +128,8 @@ class TestimonialShortcodeTest < ApplicationSystemTestCase
       # Check rating images have proper alt text
       if has_selector?(".pp-rating img")
         img = find(".pp-rating img")
-        assert img[:title].present?, "Rating image should have title attribute"
+        assert img[:alt].present?, "Rating image should have alt attribute"
+        assert_equal "five stars", img[:alt], "Rating image should have correct alt text"
       end
     end
   end

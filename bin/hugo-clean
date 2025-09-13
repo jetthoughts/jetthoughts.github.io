@@ -153,6 +153,7 @@ if [[ "$CLEAN_ALL" == "true" || "$CLEAN_BUILD" == "true" ]]; then
     safe_remove "public" "Main site output"
     safe_remove "public-dev" "Development build output"
     safe_remove "public-test" "Test build output"
+    safe_remove "public-dtest" "Docker test build output"
     # Clean any other public-* directories
     for dir in public-*; do
         if [[ -d "$dir" ]]; then
