@@ -2,7 +2,7 @@
 
 set -Eeuo pipefail
 
-if [ -n "$REBUILD" ]; then
+if [ -n "${REBUILD:-}" ]; then
   bin/dc build
 fi
 
