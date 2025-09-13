@@ -1,4 +1,4 @@
-baseUrl = "http://localhost:1314"
+baseURL = "http://localhost:1314"
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
 timeout = "10s"
 enableRobotsTXT = false
