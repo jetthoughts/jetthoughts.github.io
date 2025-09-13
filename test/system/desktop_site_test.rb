@@ -68,7 +68,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     within_top_bar { click_on "Blog" }
 
     within(".fl-heading") { assert_text "Blog" }
-    # Replace assert_selector + first().click with single find().click
+
     find(".blog a.link", match: :first, visible: true, wait: 5).click
   end
 

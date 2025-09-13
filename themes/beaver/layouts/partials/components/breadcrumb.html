@@ -38,8 +38,10 @@
   {{- $itemList = $itemList | append $item -}}
 {{- end -}}
 {{- $schema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $itemList -}}
+
 <script type="application/ld+json">
-{{ $schema | jsonify }}
+  {{ $schema | jsonify | safeJS }}
+
 </script>
 
 {{/* Visible breadcrumb navigation */}}

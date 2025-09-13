@@ -66,6 +66,6 @@
 {{- end -}}
 
 <script type="application/ld+json">
-{{ $articleSchema | jsonify }}
+{{ $articleSchema | jsonify | safeJS }}
 </script>
 {{ end }}

@@ -225,7 +225,7 @@
 
 {{/* Primary Service Schema using jsonify */}}
 <script type="application/ld+json">
-{{ $serviceSchema | jsonify }}
+{{ $serviceSchema | jsonify | safeJS }}
 </script>
 
 {{/* Professional Service Schema for CTO and Consulting Services */}}
@@ -272,7 +272,7 @@
 -}}
 
 <script type="application/ld+json">
-{{ $professionalServiceSchema | jsonify }}
+{{ $professionalServiceSchema | jsonify | safeJS }}
 </script>
 {{- end -}}
 
@@ -323,7 +323,7 @@
 {{- end -}}
 
 <script type="application/ld+json">
-{{ $softwareApplicationSchema | jsonify }}
+{{ $softwareApplicationSchema | jsonify | safeJS }}
 </script>
 {{- end -}}
 
@@ -397,7 +397,7 @@
 {{- end -}}
 
 <script type="application/ld+json">
-{{ $howToSchema | jsonify }}
+{{ $howToSchema | jsonify | safeJS }}
 </script>
 
 {{/* FAQ Schema Integration */}}

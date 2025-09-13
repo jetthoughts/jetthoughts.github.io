@@ -3,7 +3,6 @@
 # Optimized for fast feedback loops with minimal complexity
 
 services:
-  # Hugo development server (port 1313) - optimized
   hugo:
     image: hugomods/hugo:exts-non-root-0.149.1
     working_dir: /app
@@ -12,7 +11,7 @@ services:
       - hugo_cache:/tmp/hugo_cache
     ports:
       - '1313:1313'
-    command: hugo server --bind 0.0.0.0 --poll 500ms --disableFastRender=false
+    command: server --bind 0.0.0.0 --poll 500ms --disableFastRender=false
     environment:
       HUGO_CACHEDIR: /tmp/hugo_cache
       HUGO_NUMWORKERMULTIPLIER: 8
@@ -20,40 +19,6 @@ services:
     restart: unless-stopped
     mem_limit: 512m
     cpus: '2.0'
-
-  # Hugo watch mode for tests (optimized for speed)
-  hugo-watch:
-    build:
-      context: .
-      dockerfile: Dockerfile.hugo
-    working_dir: /app
-    volumes:
-      - ..:/app:delegated
-      - hugo_cache:/tmp/hugo_cache
-      - build_output:/tmp/build_output/public-dtest
-    command:
-      - hugo
-      - --destination=/tmp/build_output/public-dtest
-      - --environment=production
-      - --watch
-      - --poll=1s
-      - --baseURL=http://localhost:1314
-      - --gc=false
-      - --ignoreCache=false
-      - --minify=false
-    environment:
-      HUGO_CACHEDIR: /tmp/hugo_cache
-      HUGO_NUMWORKERMULTIPLIER: 8
-      HUGO_ENABLEGITINFO: false
-    restart: "no"
-    mem_limit: 1g
-    cpus: '3.0'
-    healthcheck:
-      test: ["CMD", "test", "-f", "/tmp/build_output/public-dtest/index.html"]
-      interval: 2s
-      timeout: 1s
-      retries: 10
-      start_period: 15s
 
   # Interactive shell (optimized)
   sh:
@@ -67,16 +32,13 @@ services:
     tty: true
     volumes:
       - ..:/app:delegated
-      - /app/node_modules
       - bundle:/opt/bundle
       - history:/usr/local/hist
     environment:
       HISTFILE: /usr/local/hist/.bash_history
       IRB_HISTFILE: /usr/local/hist/.irb_history
       BUNDLE_PATH: /opt/bundle
-    command: bash
-    mem_limit: 1g
-    cpus: '2.0'
+    command: sh
 
   # Test runner with optimized dependency management
   t:
@@ -87,19 +49,13 @@ services:
       target: runtime
     working_dir: /app
     command: bin/test
-    depends_on:
-      hugo-watch:
-        condition: service_healthy
     volumes:
       - ..:/app:delegated
-      - /app/node_modules
+      - node_modules:/app/node_modules
       - bundle:/opt/bundle
-      - test_screenshots:/app/tmp/screenshots
-      - build_output:/tmp/build_output/public-dtest
     environment:
-      HUGO_DEFAULT_PATH: "/tmp/build_output/public-dtest"
+      HUGO_DEFAULT_PATH: "_dest/public-dtest"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
-      CHROME_FLAGS: "--disable-gpu --no-sandbox --disable-dev-shm-usage --disable-extensions --disable-plugins --disable-background-timer-throttling"
       PARALLEL_TEST_PROCESSORS: 4
       RUBY_THREAD_VM_STACK_SIZE: 1048576
     mem_limit: 2g
@@ -110,13 +66,11 @@ services:
         hard: -1
 
 volumes:
+  node_modules:
+    driver: local
   bundle:
     driver: local
   history:
     driver: local
-  test_screenshots:
-    driver: local
   hugo_cache:
-    driver: local
-  build_output:
     driver: local

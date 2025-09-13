@@ -25,5 +25,3 @@ disableKinds = []
 [params]
   # Production environment
   environment = "production"
-  # Enable analytics in production
-  skipAnalytics = false

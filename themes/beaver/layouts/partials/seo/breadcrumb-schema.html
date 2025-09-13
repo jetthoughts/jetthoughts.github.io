@@ -47,6 +47,6 @@
 
 {{ $schema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $itemListElement }}
 <script type="application/ld+json">
-{{ $schema | jsonify }}
+{{ $schema | jsonify | safeJS }}
 </script>
 {{ end }}

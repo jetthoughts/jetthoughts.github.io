@@ -1,6 +1,6 @@
 {{/* Service Schema - JSON-LD structured data for service pages */}}
 {{- if and (eq .Section "services") (eq .Kind "page") -}}
-{{- $schema := dict 
+{{- $schema := dict
   "@context" "https://schema.org"
   "@type" "Service"
   "name" .Title
@@ -50,6 +50,6 @@
   )) -}}
 {{- end -}}
 <script type="application/ld+json">
-{{ $schema | jsonify }}
+{{ $schema | jsonify | safeJS }}
 </script>
 {{- end -}}

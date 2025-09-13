@@ -54,8 +54,5 @@ ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
 [params]
   # Enable development-specific features
   environment = "development"
-  # Skip analytics in development
-  skipAnalytics = true
-  # Disable heavy features for faster builds
   enableSearch = false
   enableCommentsCount = false

@@ -10,7 +10,7 @@
 {{ $faqSchema := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqMainEntity }}
 
 <script type="application/ld+json">
-{{ $faqSchema | jsonify }}
+{{ $faqSchema | jsonify | safeJS }}
 </script>
 {{ end }}
 

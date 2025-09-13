@@ -49,7 +49,7 @@ disableKinds = []
   testimonials_description = "Don't just take our word for it. See what our clients say about our services."
 
   # GA4 Analytics Configuration
-  googleAnalytics = "G-XXXXXXXXXX"  # Replace with actual GA4 Measurement ID
+  googleAnalytics = "G-T1N27FC30F"
   privacyCompliant = true
 
 [[params.testimonials]]
