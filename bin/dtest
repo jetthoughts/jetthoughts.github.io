@@ -3,7 +3,7 @@
 set -euo pipefail
 
 echo "Building Hugo site for tests (public-dtest)..."
-hugo --noBuildLock --environment test --destination _dest/public-dtest --gc --logLevel warn --baseURL="http://localhost:1314" --gc --cleanDestinationDir
+hugo --noBuildLock --environment test --gc --cleanDestinationDir --destination _dest/public-dtest --logLevel warn --baseURL="http://localhost:1314"
 
 # Now run the tests in Docker
 echo "Running tests..."

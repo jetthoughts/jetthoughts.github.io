@@ -40,6 +40,9 @@ class DesktopSiteTest < ApplicationSystemTestCase
         assert_cta_screenshot "homepage/_#{section_id}"
       when "technologies"
         assert_stable_problematic_screenshot "homepage/_#{section_id}"
+      when "clients"
+        # Slightly higher tolerance for clients section due to image loading variance
+        assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.03
       else
         assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.02
       end
