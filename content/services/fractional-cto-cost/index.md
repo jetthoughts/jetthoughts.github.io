@@ -74,7 +74,7 @@ cta:
   primary_button: "Get Free Consultation"
   secondary_button: "View Pricing Examples"
 
-date: 2025-01-13T10:30:00Z
+created_at: 2025-01-13T10:30:00Z
 ---
 
 ## Fractional CTO Cost Guide: Complete Pricing Breakdown

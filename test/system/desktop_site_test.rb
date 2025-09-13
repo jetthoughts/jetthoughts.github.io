@@ -69,7 +69,10 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     within(".fl-heading") { assert_text "Blog" }
 
-    find(".blog a.link", match: :first, visible: true, wait: 5).click
+    # Wait for blog posts to load and find the first clickable link
+    within(".blog") do
+      find("a.link", match: :first, visible: true, wait: 10).click
+    end
   end
 
   def test_blog_post

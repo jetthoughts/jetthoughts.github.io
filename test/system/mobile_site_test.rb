@@ -36,8 +36,10 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_visit_blog_post
     visit "/blog/"
 
-    # Replace assert_selector + first().click with single find().click
-    find(".blog a.link", match: :first, visible: true, wait: 5).click
+    # Wait for blog posts to load and find the first clickable link within the blog container
+    within(".blog") do
+      find("a.link", match: :first, visible: true, wait: 10).click
+    end
 
     # Wait for navigation to complete and page to load
     assert_selector ".single-content header .heading", wait: 10

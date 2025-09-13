@@ -33,7 +33,7 @@ testimonial:
 
 gallery: ["Corsis-app.png", "unnamed.png"]
 
-date: 2022-10-17T08:30:34+00:00
+created_at: 2022-10-17T08:30:34+00:00
 ---
 
 Crosslake is a technology advisory services firm that include consultant-led, self-administered evaluations of a company's adherence to industry best practices.

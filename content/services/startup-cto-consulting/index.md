@@ -45,5 +45,5 @@ overview:
     - name: Technical Team Building Success Rate (%)
       value: 94
 
-date: 2025-01-12T15:30:00+00:00
+created_at: 2025-01-12T15:30:00+00:00
 ---

@@ -1,7 +1,7 @@
 ---
 title: "5 Warning Signs Your Startup Needs Technical Leadership"
 description: "Discover the critical warning signs your startup needs fractional CTO services. Learn how technical leadership prevents costly development crises and accelerates startup growth."
-date: 2025-01-12T16:30:00Z
+created_at: 2025-01-12T16:30:00Z
 # optional for clarity in themes using it:
 publishDate: 2025-01-12T16:30:00Z
 draft: false

@@ -124,5 +124,5 @@ crisis_success_stories:
         - "Compliance deadlines met with full documentation"
         - "Customer retention rate maintained at 94%"
 
-date: 2025-01-12T14:30:00+00:00
+created_at: 2025-01-12T14:30:00+00:00
 ---

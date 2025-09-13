@@ -55,7 +55,7 @@ decision_framework:
     - "Competitive technology differentiation planning"
     - "Long-term technical leadership partnership"
 
-date: 2025-01-12T16:00:00+00:00
+created_at: 2025-01-12T16:00:00+00:00
 ---
 
 ## When Technical Disasters Strike vs When Growth Demands Strategy

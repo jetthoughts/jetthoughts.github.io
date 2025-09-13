@@ -1,7 +1,7 @@
 ---
 title: "The Developer Mindset: Why It's the First and Most Important Thing for Success"
 description: "After analyzing 200+ developer careers, we discovered the #1 predictor of success isn't technical skills—it's mindset. Learn the 5 core mindset shifts that separate high-performing developers from the rest."
-date: '2025-01-13T14:30:00Z'
+created_at: '2025-01-13T14:30:00Z'
 lastmod: '2025-09-12T00:00:00Z'
 draft: false
 tags:

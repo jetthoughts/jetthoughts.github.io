@@ -2,7 +2,6 @@
 title: 'When Your Startup Needs Emergency CTO Leadership: A Field Guide'
 description: Emergency CTO expert reveals proven crisis rescue strategies for failing startups. Learn rapid stabilization tactics and team rebuilding techniques.
 created_at: '2025-01-12T14:00:00Z'
-date: '2025-01-12T14:00:00Z'
 draft: false
 tags:
 - emergency-cto

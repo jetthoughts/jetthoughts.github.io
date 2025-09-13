@@ -38,7 +38,7 @@ testimonial:
 
 gallery: ["ai-screen-2.png", "ai-screen-1.png", "ai-screen-3.png"]
 
-date: 2022-12-17T08:30:34+00:00
+created_at: 2022-12-17T08:30:34+00:00
 ---
 Agent Inbox is an industry-leading real estate messaging platform that leverages Multiple Listing Services (MLS) data to help centralize & streamline deal-making for realtors.
 

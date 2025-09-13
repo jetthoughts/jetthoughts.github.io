@@ -45,5 +45,5 @@ overview:
     - name: Technical Leader Retention Rate (%)
       value: 98
 
-date: 2025-01-12T15:45:00+00:00
+created_at: 2025-01-12T15:45:00+00:00
 ---

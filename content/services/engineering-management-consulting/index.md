@@ -45,5 +45,5 @@ overview:
     - name: Average Time to Productivity for New Hires (Days)
       value: 21
 
-date: 2025-01-12T15:00:00+00:00
+created_at: 2025-01-12T15:00:00+00:00
 ---

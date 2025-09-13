@@ -122,5 +122,5 @@ trust_indicators:
     - "ACM Distinguished Speaker"
     - "Ruby Central Board Advisory Member"
 
-date: 2025-01-12T15:15:00+00:00
+created_at: 2025-01-12T15:15:00+00:00
 ---
