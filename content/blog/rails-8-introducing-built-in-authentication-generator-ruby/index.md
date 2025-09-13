@@ -25,6 +25,7 @@ Ruby on Rails developers face a common task: building user login systems. Rails 
 ## What Ruby Developers Will Build
 
 As a Rails developer, you'll create:
+
 - A secure authentication system
 - Public and private pages
 - A test suite for user flows
@@ -50,6 +51,7 @@ bin/rails generate authentication
 ```
 
 The generator creates Rails files:
+
 - ERB view templates
 - Rails controllers
 - Ruby models
@@ -78,6 +80,7 @@ User.create(email_address: "you@example.com", password: "test-password-123")
 ## Rails Controllers
 
 Rails developers work with two types of access:
+
 - Public pages for visitors
 - Private pages for users
 
@@ -133,12 +136,14 @@ rails s
 ```
 
 Test these Rails routes:
+
 1. `/home` - Public access
 2. `/dashboard` - Login required
 
 ## Rails Security Tips
 
 Ruby developers follow these practices:
+
 - Use secure passwords
 - Keep Rails updated
 - Monitor logs
@@ -151,6 +156,7 @@ View the Ruby code: [Rails Authentication Source](https://github.com/rails/rails
 ## Tasks for Rails Developers
 
 Try these Ruby tasks:
+
 1. Build a signup flow
 2. Create a password reset
 3. Add session persistence
@@ -159,6 +165,7 @@ Try these Ruby tasks:
 ## Next Steps for Rails Developers
 
 You can extend this:
+
 - Add OAuth support
 - Create admin roles
 - Add API authentication

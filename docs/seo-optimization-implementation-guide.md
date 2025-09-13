@@ -5,6 +5,7 @@
 ### 1. Meta Description Optimization
 
 **Files to Update:**
+
 - `/content/blog/when-your-startup-needs-emergency-cto-leadership/index.md`
 - `/content/services/*/index.md` (all service pages)
 
@@ -19,6 +20,7 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
 ```
 
 **Optimization Rules:**
+
 - Target 150-160 characters
 - Include primary keyword in first 60 characters
 - Use active voice and compelling CTAs
@@ -27,6 +29,7 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
 ### 2. SVG Icon Alt Attribute Implementation
 
 **Template for All SVG Icons:**
+
 ```html
 <!-- Current (Inaccessible) -->
 <svg class="icon">
@@ -41,6 +44,7 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
 ```
 
 **Hugo Shortcode Implementation:**
+
 ```go
 <!-- layouts/shortcodes/accessible-icon.html -->
 <svg class="icon {{ .Get "class" }}" 
@@ -58,6 +62,7 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
 **Target Page:** `/content/services/fractional-cto-services/index.md`
 
 **Meta Tags Update:**
+
 ```yaml
 title: "Fractional CTO Cost & Services | JetThoughts Technical Leadership"
 description: "Discover fractional CTO cost structures and services. Get expert technical leadership without full-time commitment. Flexible pricing from $8,000-15,000/month."
@@ -65,6 +70,7 @@ keywords: ["fractional CTO cost", "fractional CTO services", "part-time CTO pric
 ```
 
 **Content Structure:**
+
 ```markdown
 # Fractional CTO Cost & Services
 
@@ -98,6 +104,7 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 ### 1. FAQ Schema for Service Pages
 
 **Implementation Template:**
+
 ```html
 <!-- layouts/partials/seo/faq-schema.html -->
 {{ if .Params.faqs }}
@@ -126,6 +133,7 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 ### 2. Service Schema Enhancement
 
 **Template:** `layouts/partials/seo/service-schema-enhanced.html`
+
 ```html
 <script type="application/ld+json">
 {
@@ -169,12 +177,14 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 
 **Hub Page:** Fractional CTO Services (main service page)
 **Cluster Pages:**
+
 - "Fractional CTO vs Full-time CTO Comparison"
 - "Emergency CTO Leadership Guide"
 - "Ruby on Rails Development Cost Analysis"
 - "Technical Leadership for Startups"
 
 **Linking Template:**
+
 ```html
 <!-- layouts/partials/related-services.html -->
 {{ $related := where .Site.Pages ".Params.service_cluster" "eq" .Params.service_cluster }}
@@ -200,6 +210,7 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 ### 1. Core Web Vitals Enhancement
 
 **Critical CSS Optimization:**
+
 ```html
 <!-- layouts/partials/performance/critical-css.html -->
 {{ $critical := resources.Get "scss/critical.scss" | resources.ToCSS | resources.Minify }}
@@ -207,6 +218,7 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 ```
 
 **Image Optimization:**
+
 ```html
 <!-- layouts/shortcodes/optimized-image.html -->
 {{ $image := resources.Get (.Get "src") }}
@@ -227,24 +239,28 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 ## IMPLEMENTATION CHECKLIST
 
 ### Week 1: Critical Fixes
+
 - [ ] Update meta descriptions for all pages >160 characters
 - [ ] Add alt attributes to all SVG icons
 - [ ] Implement accessible icon shortcode
 - [ ] Test accessibility score improvement
 
 ### Week 2: Keyword Implementation
+
 - [ ] Optimize "fractional CTO cost" content
 - [ ] Create "Ruby on Rails development cost" guide
 - [ ] Update service page titles and descriptions
 - [ ] Implement FAQ schema on service pages
 
 ### Week 3: Schema & Linking
+
 - [ ] Deploy enhanced service schema
 - [ ] Create topic cluster linking structure
 - [ ] Add related services sections
 - [ ] Implement breadcrumb schema
 
 ### Week 4: Performance & Testing
+
 - [ ] Deploy critical CSS optimization
 - [ ] Implement lazy loading for images
 - [ ] Run comprehensive Lighthouse audits
@@ -252,14 +268,16 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 
 ## MONITORING & VALIDATION
 
-### SEO Metrics to Track:
+### SEO Metrics to Track
+
 1. **Organic traffic growth** (weekly)
 2. **Keyword ranking positions** (bi-weekly)
 3. **Core Web Vitals scores** (weekly)
 4. **Click-through rates** (monthly)
 5. **Conversion rates** (monthly)
 
-### Tools for Monitoring:
+### Tools for Monitoring
+
 - Google Search Console
 - Google PageSpeed Insights
 - GTmetrix for performance
@@ -267,6 +285,7 @@ keywords: ["Ruby on Rails development cost", "custom Rails development", "Rails 
 - Google Analytics 4 for traffic analysis
 
 **Expected Timeline for Results:**
+
 - Critical fixes: Immediate (accessibility score improvement)
 - Keyword ranking improvements: 4-8 weeks
 - Traffic growth: 6-12 weeks

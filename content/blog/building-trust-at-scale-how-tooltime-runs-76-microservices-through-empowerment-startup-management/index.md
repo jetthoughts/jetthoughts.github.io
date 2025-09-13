@@ -20,12 +20,11 @@ metatags:
   image: cover.jpeg
 slug: building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-startup-management
 ---
-If you're an engineering leader wrestling with scaling teams while preserving autonomy, this story will transform your thoughts about trust and technical leadership. 
+If you're an engineering leader wrestling with scaling teams while preserving autonomy, this story will transform your thoughts about trust and technical leadership.
 
 I've spent months exploring how Berlin's top tech companies handle growth. But what I found at [ToolTime](https://www.tooltime.app/) wasn't just another management philosophy – a masterclass in building self-sustaining engineering cultures.
 
 ![Slawomir Smiechura Photo](file_0.jpeg)
-
 
 Picture this: 76 microservices, 20 developers, no dedicated SRE team, and zero traditional managers. Impossible? That's what I thought, too. However, ToolTime's approach challenges everything we assume about technical leadership and team scaling.
 
@@ -81,6 +80,7 @@ Six squads, zero traditional managers. ToolTime's engineering leaders function m
 Slawomir explained. His role? Create fertile ground where good engineering practices grow naturally.
 
 Their product development thrives on this autonomy:
+
 - Quarterly themes replace detailed specifications
 - Teams own solutions end-to-end
 - Design and research flow separately from implementation
@@ -129,4 +129,3 @@ Berlin's tech scene stands at a crossroads between traditional German engineerin
 The journey requires dedication and patience to build the right culture. But ask yourself: would you rather invest time pushing people to perform or create an environment where performance emerges naturally?
 
 The water might be deep, but now you have a map for swimming.
-

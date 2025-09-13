@@ -24,6 +24,7 @@ Configuring direct file uploads in Rails is now easier than ever. In this articl
 ![Dropzone with direct upload](file_0.png)
 
 ## Prerequisites
+
 Before you begin, make sure you have the following set up:
 
 1. **Install Active Storage**: If you haven't already, run `rails active_storage:install` and then migrate your database.
@@ -31,6 +32,7 @@ Before you begin, make sure you have the following set up:
 3. **Configure CORS for Your Storage Service**: If you use a cloud storage service like AWS S3, configure Cross-Origin Resource Sharing (CORS). This allows your frontend to communicate with the storage service securely. For details on setting up CORS for Active Storage, see the [Rails documentation](https://edgeguides.rubyonrails.org/active_storage_overview.html#cross-origin-resource-sharing-cors-configuration).
 
 ## Step 1: Setting Up the Dropzone Controller
+
 First, create a `dropzone_controller.js` file. This Stimulus controller manages file uploads and integrates with Dropzone.js and Active Storage's Direct Upload.
 
 **Key Features**:
@@ -187,6 +189,7 @@ function createDropZone(controller) {
 ```
 
 ## Step 2: Creating the Dropzone HTML Template
+
 Next, create a template `_dropzone_files_input.html.erb`, which will be rendered in your form.
 **Key Features:**
 
@@ -264,6 +267,7 @@ Here's the HTML template:
 ```
 
 ## Step 3: Adding Styles
+
 To give the dropzone a clean and modern look, add some CSS styles:
 
 ```scss
@@ -352,6 +356,7 @@ To give the dropzone a clean and modern look, add some CSS styles:
 ```
 
 ## Step 4: Using the Component in a Form
+
 Finally, render the component inside your form like this:
 
 ```ruby
@@ -364,11 +369,13 @@ Finally, render the component inside your form like this:
       attachments: @post.files
     ) %>
 ```
+
 This rendering adds file upload functionality to your form. You can customize it further by adjusting parameters for file size, file count, and more.
 
 ## Possible Improvements
 
 #### Add Image Thumbnails
+
 To show image thumbnails, set `createImageThumbnails` to `true` when creating a `Dropzone` instance. Then, modify the preview template to render the [thumbnail](https://www.adobe.com/express/create/thumbnail/youtube) image:
 
 ```html
@@ -384,6 +391,7 @@ To show image thumbnails, set `createImageThumbnails` to `true` when creating a 
 ```
 
 #### Invoke `change` Events
+
 If you have a `form_controller.js` with custom validation logic, and you need to validate each time a file is added or removed, you can use this approach:
 
 ```javascript
@@ -422,4 +430,5 @@ removeElement(el) {
 ```
 
 ## Conclusion
+
 By integrating Rails 7 with Active Storage, Stimulus, and Dropzone.js, you can create a powerful and flexible file upload component. This setup provides users with features like drag-and-drop, progress bars, and easy file management.

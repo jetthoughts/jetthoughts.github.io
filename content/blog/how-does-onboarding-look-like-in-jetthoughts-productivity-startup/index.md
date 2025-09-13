@@ -31,7 +31,7 @@ slug: how-does-onboarding-look-like-in-jetthoughts-productivity-startup
 
 ## Who is this ‘Buddy’ and which qualities should he have?
 
-When I started working, [*JetThoughts](http://jetthoughts.com)* introduced *Buddy *to assist me.
+When I started working, [*JetThoughts](http://jetthoughts.com)*introduced*Buddy *to assist me.
 
 *Buddy* is a helping person. It’s about supporting another person’s learning through a one-to-one relationship. It’s a practice for transferring knowledge and promoting the best practices at work.
 
@@ -63,7 +63,7 @@ When the task is done, you should move it to column *Verify* and be waiting for 
 
 ![](file_2.png)
 
-*Remember*: There should be no more than two cards *In Progress *and no more than three cards in *Verify* at the same time!
+*Remember*: There should be no more than two cards *In Progress*and no more than three cards in *Verify* at the same time!
 
 *Rule*: By default, the task shouldn’t take more than 1.5 days. If you don’t succeed in achieving this, you should designate it as a problem, write the status of what has been done at the moment and what decisions have been made and choose a solution: split task, continue for some more time or cancel the task execution.
 
@@ -90,4 +90,4 @@ When you work remotely, you want to have some kind of a standup meeting regularl
 Good luck with growing out your teams and successfully onboarding your new employees. It may require a bit of trial and error to nail down the best process for your organization, but it is time and effort well spent to make sure you set the right tone with new employees.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

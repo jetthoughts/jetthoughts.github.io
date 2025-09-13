@@ -36,6 +36,7 @@ faqs:
 ## What Is Emergency CTO Leadership?
 
 Emergency CTO leadership provides:
+
 - **Immediate technical crisis intervention** within 24-48 hours
 - **Rapid team stabilization** through confidence rebuilding and clear communication
 - **Technical debt prioritization** to prevent system failures
@@ -74,16 +75,19 @@ Here's the kicker: these problems are like a three-legged stool. You can't fix t
 ### The 3-Phase Emergency CTO Methodology
 
 **Phase 1: Rapid Assessment & Stabilization** (Days 1-7)
+
 - Team confidence audit and communication channel establishment
 - Critical system vulnerability identification
 - Immediate process fixes for quick wins
 
 **Phase 2: Strategic Intervention & Process Implementation** (Days 8-30)  
+
 - [Technical debt management](/services/technical-leadership-consulting/) prioritization
 - Team restructuring and workflow optimization
 - Crisis communication with stakeholders
 
 **Phase 3: Long-term Sustainability & Handover** (Days 31-60)
+
 - Antifragile system design and implementation  
 - [Engineering management](/services/engineering-management-consulting/) process establishment
 - Knowledge transfer and team empowerment
@@ -207,6 +211,7 @@ The companies that call me at midnight aren't broken. They're just stuck. With t
 ### When should a startup consider emergency CTO leadership?
 
 **Emergency CTO leadership is needed when:**
+
 - Your technical team is losing confidence and morale
 - Deadlines are consistently missed due to technical debt
 - You've lost key technical personnel and face critical delivery deadlines
@@ -218,6 +223,7 @@ The companies that call me at midnight aren't broken. They're just stuck. With t
 ### How quickly can emergency CTO leadership make an impact?
 
 **Emergency CTO leadership delivers results in phases:**
+
 - **Week 1**: Immediate crisis stabilization and improved team communication
 - **Weeks 2-3**: Measurable improvements in team confidence and delivery velocity  
 - **Weeks 4-8**: Systematic process improvements and technical debt resolution
@@ -226,12 +232,14 @@ The companies that call me at midnight aren't broken. They're just stuck. With t
 ### What's the difference between emergency CTO services and regular fractional CTO services?
 
 **Emergency CTO Services:**
+
 - **Focus**: Immediate crisis intervention and stabilization
 - **Timeline**: Intensive 30-60 day engagement
 - **Approach**: Rapid assessment, team rebuilding, process fixes
 - **Scope**: Crisis management, team confidence restoration, technical debt triage
 
 **Regular Fractional CTO Services:**
+
 - **Focus**: Strategic planning and long-term growth
 - **Timeline**: Ongoing partnership (3-12+ months)
 - **Approach**: Strategic planning, technology roadmaps, team scaling
@@ -240,6 +248,7 @@ The companies that call me at midnight aren't broken. They're just stuck. With t
 ### Can emergency CTO leadership help with non-technical team issues?
 
 **Emergency CTO leadership addresses both technical and human challenges:**
+
 - **Team confidence rebuilding** through quick wins and clear communication
 - **Stakeholder communication improvement** between technical and business teams  
 - **Decision-making process establishment** to eliminate bottlenecks and confusion
@@ -250,6 +259,7 @@ The companies that call me at midnight aren't broken. They're just stuck. With t
 ### What happens after the immediate crisis is resolved?
 
 **Post-crisis focus shifts to long-term sustainability:**
+
 - **Antifragile system design** that becomes stronger under stress
 - **Documentation implementation** for all critical processes and systems
 - **Cross-training programs** to eliminate single points of failure

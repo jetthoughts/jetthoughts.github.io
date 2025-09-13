@@ -20,7 +20,7 @@ metatags:
   image: cover.jpg
 slug: tips-for-writing-readable-system-tests-in-rails-capybara-ruby
 ---
-> # Want to make system tests easy to main tain? We have selected some best practice tips to help achieve this.
+> # Want to make system tests easy to main tain? We have selected some best practice tips to help achieve this
 
 ![](file_0.jpg)
 
@@ -29,6 +29,7 @@ slug: tips-for-writing-readable-system-tests-in-rails-capybara-ruby
 The [Four-Phase Test](http://xunitpatterns.com/Four%20Phase%20Test.html) is a testing pattern, applicable to all programming languages and unit tests (not so much integration tests).
 
 There are four distinct phases of the test. They are executed sequentially.
+
 ```
     test do
       setup
@@ -37,24 +38,31 @@ There are four distinct phases of the test. They are executed sequentially.
       teardown
     end
 ```
+
 ### setup
 
 During setup, setup initial state.
+
 ```ruby
     user = User.new(password: 'password')
 ```
+
 ### exercise
 
 At this stage, run/execute a tested scenario.
+
 ```ruby
     user.save
 ```
+
 ### verify
 
 Here, the result of the exercise is verified against the developer’s expectations.
+
 ```ruby
     user.encrypted_password.should_not be_nil
 ```
+
 ### teardown
 
 During the teardown, the system under test is reset to its pre-setup state.
@@ -152,4 +160,4 @@ However, you are increasing the enjoyment of system tests because your tests bec
 Follow the tips or not? It is up to you to decide!
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

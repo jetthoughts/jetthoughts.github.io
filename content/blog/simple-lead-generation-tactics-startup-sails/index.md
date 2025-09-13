@@ -38,12 +38,19 @@ Then the email would pop up, which you should fill into a cell of your spreadshe
 This structure allows you to fill out all the necessary data in your email mockup to be sent and make such cold emails less generic and more personal. Once it’s done, start writing your email, and from here — you are now able to make it super specific by autocomplete <<>> so that each lead would get a highly personalized message from you, which increase the chance of getting the answer.
 
 Here is the email example where we use most of the data pulled from the lead table (you can also use it to personalize the subj line of each email). Tip: the <<First Line>> is usually some kind of warm-up line like a compliment, where the info about their business is used:
-> # Hey <<First name>>,
+
+> # Hey <<First name>>
+>
 > # <<First Line>>
-> # I helped digital agencies like Agency 1 and Agency 2 with professional web development we did for them.
-> # Figured <<Company Name>> might need an extra pair of hands working on it.
-> # Ping me if that’s something you might be interested in.
-> # Thanks,
+>
+> # I helped digital agencies like Agency 1 and Agency 2 with professional web development we did for them
+>
+> # Figured <<Company Name>> might need an extra pair of hands working on it
+>
+> # Ping me if that’s something you might be interested in
+>
+> # Thanks
+>
 > #Adam
 
 As a result, your email is super personal and tailored, now, it’s time to send it to your leads. To do that, [Yet Another Mail Merge](https://yet-another-mail-merge.com/) comes to help.
@@ -59,4 +66,4 @@ Now, you are ready to send your first cold email. *Yet Another Mail Merge* would
 Good luck with your first email campaign! If you have any questions — feel free to comment and ask.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

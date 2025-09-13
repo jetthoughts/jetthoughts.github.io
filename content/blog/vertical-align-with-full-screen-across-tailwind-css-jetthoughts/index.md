@@ -21,7 +21,7 @@ metatags:
 slug: vertical-align-with-full-screen-across-tailwind-css-jetthoughts
 ---
 How can vertically align an element with Tailwind CSS by Flex?
- 
+
 ## Justify-Center and Items-Center
 
 - `flex` : To use a flex-div as a container.
@@ -36,7 +36,7 @@ How can vertically align an element with Tailwind CSS by Flex?
 ```
 
 ![Image description](file_0.png)
- 
+
 This is already pretty well documented in the [Tailwind CSS](https://tailwindcss.com/docs/align-items#center) docs.
 
 ## Another way to use Flex for to align items
@@ -50,7 +50,3 @@ In this case need to set `margin: auto` to wrapper of children element.
   </div>
 </div>
 ```
-
-
-
-

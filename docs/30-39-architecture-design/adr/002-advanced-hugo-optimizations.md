@@ -1,11 +1,13 @@
 # ADR-002: Advanced Hugo Site Optimizations - Top 20 Quick Wins
 
 ## Status
+
 Proposed
 
 ## Context
 
 Post-ADR-001 implementation analysis reveals current state:
+
 - **Build Time**: 18.4 seconds (baseline measurement with Hugo v0.150.0+extended)
 - **Template Caching**: Partial implementation with opportunities for expansion
 - **Asset Pipeline**: 2.5MB CSS across 35 files, 110 HTML template files
@@ -18,10 +20,12 @@ Based on extensive package-search research of `gohugoio/hugo` and PostCSS ecosys
 
 ### Category: Performance (Build & Runtime) - 7 Improvements
 
-#### 1. **Image WebP Auto-Conversion with Lazy Loading** 
+#### 1. **Image WebP Auto-Conversion with Lazy Loading**
+
 - **Impact**: High | **Effort**: Small | **ROI Score**: 9.5
 - **Implementation**: Hugo 0.150+ extended edition supports WebP encoding
 - **Benefit**: 25-50% image size reduction, improved Core Web Vitals
+
 ```go
 {{/* Auto WebP with lazy loading */}}
 {{ $image := resources.Get .Params.image }}
@@ -31,26 +35,32 @@ Based on extensive package-search research of `gohugoio/hugo` and PostCSS ecosys
 ```
 
 #### 2. **Template Metrics-Driven Caching Expansion**
+
 - **Impact**: High | **Effort**: Small | **ROI Score**: 9.0  
 - **Implementation**: Use `hugo --templateMetrics` findings to identify high-impact caching opportunities
 - **Benefit**: 30-50% build time reduction for repeated partials
+
 ```bash
 # Identify top candidates with Hugo metrics
 hugo --templateMetrics --templateMetricsHints | head -10
 ```
 
 #### 3. **CSS Bundle Consolidation with Hugo Pipes**
+
 - **Impact**: High | **Effort**: Medium | **ROI Score**: 8.5
 - **Implementation**: Replace 35 CSS files with 2-3 logical bundles
 - **Benefit**: Reduced HTTP requests, better caching, 40% faster CSS processing
+
 ```go
 {{ $css := resources.Match "css/*.css" | resources.Concat "bundle.css" | postCSS | minify | fingerprint }}
 ```
 
 #### 4. **PostCSS PurgeCSS Integration**
+
 - **Impact**: High | **Effort**: Small | **ROI Score**: 8.5
 - **Implementation**: Remove unused CSS classes automatically
 - **Benefit**: 60-80% CSS size reduction
+
 ```js
 // postcss.config.js
 module.exports = {
@@ -63,9 +73,11 @@ module.exports = {
 ```
 
 #### 5. **Hugo Stats + Tailwind CSS Tree-Shaking**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 8.0
 - **Implementation**: Use hugo_stats.json for precise CSS purging
 - **Benefit**: Eliminate all unused CSS, reduced bundle size
+
 ```toml
 # hugo.toml
 [build]
@@ -76,9 +88,11 @@ module.exports = {
 ```
 
 #### 6. **Resource Caching Optimization**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 7.5
 - **Implementation**: Fine-tune Hugo cache settings for development/production
 - **Benefit**: 20-30% faster rebuilds during development
+
 ```toml
 # config/development/hugo.toml
 [caches.assets]
@@ -88,9 +102,11 @@ module.exports = {
 ```
 
 #### 7. **Critical CSS Extraction and Inlining**
+
 - **Impact**: Medium | **Effort**: Medium | **ROI Score**: 7.0
 - **Implementation**: Inline above-the-fold CSS, async load rest
 - **Benefit**: Improved First Contentful Paint by 200-500ms
+
 ```go
 {{ $critical := resources.Get "css/critical.css" | postCSS | minify }}
 <style>{{ $critical.Content | safeCSS }}</style>
@@ -99,9 +115,11 @@ module.exports = {
 ### Category: Developer Experience - 5 Improvements
 
 #### 8. **Hugo Development Server Optimization**
+
 - **Impact**: High | **Effort**: Small | **ROI Score**: 9.0
 - **Implementation**: Optimized dev server configuration with fast rebuild
 - **Benefit**: Sub-second rebuilds, improved hot-reload performance
+
 ```toml
 # Development mode optimizations
 [build]
@@ -111,9 +129,11 @@ module.exports = {
 ```
 
 #### 9. **Template Rendering Pipeline Optimization**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 8.0
 - **Implementation**: Reorganize partials by render frequency and complexity
 - **Benefit**: Better template cache utilization, faster builds
+
 ```
 layouts/partials/
 ├── cached/     # Heavy, rarely-changing partials
@@ -122,9 +142,11 @@ layouts/partials/
 ```
 
 #### 10. **Build Performance Monitoring Dashboard**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 7.5
 - **Implementation**: Automated build performance tracking
 - **Benefit**: Data-driven optimization decisions, regression detection
+
 ```bash
 # Build monitoring script
 echo "Build started: $(date)" >> build-metrics.log
@@ -132,9 +154,11 @@ time hugo --quiet --minify >> build-metrics.log 2>&1
 ```
 
 #### 11. **Hot Module Replacement for Assets**
+
 - **Impact**: Medium | **Effort**: Medium | **ROI Score**: 7.0
 - **Implementation**: Enhanced watch mode for CSS/JS changes
 - **Benefit**: Faster development cycles, preserved browser state
+
 ```js
 // Asset watch optimization
 if (process.env.NODE_ENV === 'development') {
@@ -143,9 +167,11 @@ if (process.env.NODE_ENV === 'development') {
 ```
 
 #### 12. **Content Validation Automation**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 6.5
 - **Implementation**: Automated front matter and markdown validation
 - **Benefit**: Catch content errors early, improved author experience
+
 ```yaml
 # Content validation script
 required_fields: [title, description, date]
@@ -155,9 +181,11 @@ max_content_length: 50000
 ### Category: SEO & Content - 4 Improvements
 
 #### 13. **Automated Schema.org Markup Generation**
+
 - **Impact**: High | **Effort**: Small | **ROI Score**: 8.5
 - **Implementation**: Dynamic JSON-LD schema based on content type
 - **Benefit**: Improved search visibility, rich snippets
+
 ```go
 {{/* Auto-generate Article schema */}}
 {{ $schema := dict 
@@ -170,9 +198,11 @@ max_content_length: 50000
 ```
 
 #### 14. **Progressive Web App (PWA) Enhancements**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 8.0
 - **Implementation**: Enhanced manifest.json and service worker
 - **Benefit**: Improved mobile experience, offline capability
+
 ```json
 {
   "name": "JetThoughts",
@@ -184,9 +214,11 @@ max_content_length: 50000
 ```
 
 #### 15. **Automated Sitemap Enhancement**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 7.5
 - **Implementation**: Enhanced sitemap with priority and change frequency
 - **Benefit**: Better search engine crawling, improved SEO
+
 ```go
 {{ range .Data.Pages }}
 <url>
@@ -199,9 +231,11 @@ max_content_length: 50000
 ```
 
 #### 16. **Content Security Policy (CSP) Automation**
+
 - **Impact**: Medium | **Effort**: Medium | **ROI Score**: 7.0
 - **Implementation**: Automated CSP header generation based on used resources
 - **Benefit**: Enhanced security, better browser optimization
+
 ```go
 {{ $nonce := crypto.FNV32a (now.Unix) }}
 <meta http-equiv="Content-Security-Policy" 
@@ -211,9 +245,11 @@ max_content_length: 50000
 ### Category: Security & Accessibility - 4 Improvements
 
 #### 17. **Accessibility Automation Suite**
+
 - **Impact**: High | **Effort**: Medium | **ROI Score**: 7.5
 - **Implementation**: Automated alt text validation, semantic HTML checks
 - **Benefit**: WCAG 2.1 AA compliance, improved user experience
+
 ```go
 {{/* Auto-validate accessibility */}}
 {{ range .Site.RegularPages }}
@@ -224,9 +260,11 @@ max_content_length: 50000
 ```
 
 #### 18. **HTTPS and Security Headers Optimization**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 7.0
 - **Implementation**: Enhanced security headers via Hugo configuration
 - **Benefit**: Improved security score, better browser trust
+
 ```toml
 # Security headers configuration
 [server.headers]
@@ -238,9 +276,11 @@ max_content_length: 50000
 ```
 
 #### 19. **Image Optimization Pipeline Enhancement**
+
 - **Impact**: Medium | **Effort**: Small | **ROI Score**: 6.5
 - **Implementation**: Automated responsive images with srcset
 - **Benefit**: Optimized images for all devices, improved performance
+
 ```go
 {{ $image := resources.Get .Params.image }}
 {{ $small := $image.Resize "400x webp q75" }}
@@ -253,9 +293,11 @@ max_content_length: 50000
 ```
 
 #### 20. **Performance Budget Monitoring**
+
 - **Impact**: Medium | **Effort**: Medium | **ROI Score**: 6.0
 - **Implementation**: Automated performance metrics tracking and alerts
 - **Benefit**: Prevent performance regressions, maintain optimization
+
 ```yaml
 # Performance budget
 budgets:
@@ -292,24 +334,28 @@ budgets:
 ## Quick Implementation Roadmap
 
 ### Week 1: High-Impact Quick Wins (P1-P5)
+
 - **Total Effort**: 30 hours
 - **Focus**: Performance and build time optimization
 - **Expected Build Time Reduction**: 40-60%
 - **Deliverables**: WebP images, expanded caching, dev server optimization, CSS bundling, PurgeCSS
 
 ### Week 2: Developer Experience & SEO (P6-P10)  
+
 - **Total Effort**: 28 hours
 - **Focus**: Developer workflow and search optimization
 - **Expected Developer Productivity Gain**: 50%
 - **Deliverables**: Schema markup, template optimization, PWA features, monitoring
 
 ### Week 3: Quality & Reliability (P11-P15)
+
 - **Total Effort**: 36 hours  
 - **Focus**: Caching, accessibility, and advanced optimizations
 - **Expected Quality Score Improvement**: 25-30%
 - **Deliverables**: Advanced caching, sitemap, accessibility automation, critical CSS
 
 ### Week 4: Security & Advanced Features (P16-P20)
+
 - **Total Effort**: 37 hours
 - **Focus**: Security hardening and performance monitoring
 - **Expected Security Score Improvement**: 20-25%
@@ -318,24 +364,28 @@ budgets:
 ## Expected Outcomes
 
 ### Performance Improvements
+
 - **Build Time**: 40-60% reduction (from 18.4s to 7-11s)
 - **Asset Size**: 50-70% CSS reduction, 25-50% image reduction
 - **Core Web Vitals**: LCP improvement of 200-500ms
 - **Development Server**: Sub-second rebuilds
 
 ### Developer Experience
+
 - **Hot Reload**: 80% faster development cycles
 - **Build Monitoring**: Real-time performance tracking
 - **Content Validation**: Early error detection
 - **Template Organization**: 50% reduction in template complexity
 
 ### SEO & Accessibility
+
 - **Schema Coverage**: 100% automated structured data
 - **PWA Score**: 90+ PWA compatibility
 - **Accessibility Score**: WCAG 2.1 AA compliance
 - **Security Headers**: A+ security rating
 
 ### Monitoring Metrics
+
 - Lighthouse Performance Score: Target 95+
 - Lighthouse SEO Score: Target 95+
 - Lighthouse Accessibility Score: Target 95+
@@ -344,16 +394,19 @@ budgets:
 ## Risk Assessment
 
 ### Low Risk (P1-P10)
+
 - Well-established Hugo features
 - Minimal breaking changes
 - Easy rollback capability
 
 ### Medium Risk (P11-P20)
+
 - Some configuration complexity
 - Potential for build pipeline changes
 - Testing requirements for advanced features
 
 ### Mitigation Strategies
+
 - Incremental implementation by priority
 - Feature flags for A/B testing
 - Comprehensive backup before changes

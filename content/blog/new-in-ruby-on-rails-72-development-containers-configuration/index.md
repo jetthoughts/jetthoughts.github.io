@@ -31,10 +31,13 @@ The default dev container includes:
 - A Headless Chrome container for system tests
 
 Generate a new application with a development container using:
+
 ```bash
 rails new myapp --devcontainer
 ```
+
 After this, you will see the result of the generator:
+
 ```bash
       ...
       create  storage/.keep
@@ -46,13 +49,17 @@ After this, you will see the result of the generator:
       create  .devcontainer/compose.yaml
       ...
 ```
+
 As you can see, the generator created files that correspond to the container configuration.
 
 For existing applications, use:
+
 ```bash
 rails devcontainer
 ```
+
 Result:
+
 ```bash
 ╰─ $ rails devcontainer
 Generating Dev Container with the following options:

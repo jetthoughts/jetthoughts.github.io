@@ -21,7 +21,7 @@ slug: jekyll-github-pages-forestryio-jekyl
 ---
 I’ve recently migrated the [jetthoughts.com](https://www.jetthoughts.com/) website on [Jekyll](https://jekyllrb.com/) to [Forestry.io](https://forestry.io/). I’d like to share my process with you, as well as a few tips about building a Jekyll site with GitHub Pages and [Forestry.io](https://forestry.io/).
 
-![Photo by [Richard T](https://unsplash.com/photos/yovhXPl8V1M) on[ Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
+![Photo by [Richard T](https://unsplash.com/photos/yovhXPl8V1M) on[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 
 The Advantages:
 
@@ -40,6 +40,7 @@ A novice developer or writer who has little knowledge and a small stack of techn
 ## YML or Markdown
 
 To get started, you need to make sure that all the content that you want to respond to is in static files.
+
 ```yaml
     description:
       title: Careers
@@ -69,7 +70,9 @@ To get started, you need to make sure that all the content that you want to resp
           - Understanding of project design, microservice architecture
           - Experience with AWS S3
 ```
+
 If not then you need to move step by step all the static content. To do this, you will need to use [Liquid](https://shopify.github.io/liquid/) syntax to display and create lists with HTML markup.
+
 ```html
     <div class="container">
       {% assign careers = site.data.careers.careers.careers %}  <h2 class="title">{{ careers.title }}</h2>
@@ -92,6 +95,7 @@ If not then you need to move step by step all the static content. To do this, yo
       </ul>
     </div>
 ```
+
 We will not dwell on this as you can view the whole process on the Jekyll [website](https://jekyllrb.com/docs/datafiles/).
 
 ## Site settings
@@ -99,6 +103,7 @@ We will not dwell on this as you can view the whole process on the Jekyll [websi
 Your site settings are configured from .forestry/settings.yml.
 
 Forestry stores the settings and configuration of the CMS for each site in a .forestry/ folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Forestry CMS pre-configured.
+
 ```
     new_page_extension: md
     auto_deploy: false
@@ -121,11 +126,12 @@ Forestry stores the settings and configuration of the CMS for each site in a .fo
     use_front_matter_path: false
     file_template: ":filename:"
 ```
+
 ## Setup Forestry.io
 
 Now the easy part is adding our CMS to our website. Before we get started head on over to [Forestry.io](https://forestry.io/) and create your account. It’s free for personal use and allows you to add up to 3 users per website*.*
 
-In the top right-hand corner of the page, click on Add Site*, *then simply select Other (Gridsome, Next, Nuxt…)for select your GitHub repository.
+In the top right-hand corner of the page, click on Add Site*,*then simply select Other (Gridsome, Next, Nuxt…)for select your GitHub repository.
 
 ![](file_1.jpg)
 
@@ -163,4 +169,4 @@ How to do it? I have already described this in my [post](https://jtway.co/deploy
 I hope this simple guide to creating and setting up a free website will help you. Good luck!
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

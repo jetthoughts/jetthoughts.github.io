@@ -225,6 +225,49 @@ active_job_story:
 6. **TDD Methodology**: Follow test-driven development from knowledge base practices
 7. **Agile Compliance**: Follow sprint boundaries, WIP limits, and cooperative decomposition
 
+## 🧪 TESTING FRAMEWORK (CRITICAL - PREVENT DUPLICATION)
+
+**MANDATORY: ALL agents MUST research existing testing tools before adding new ones**
+
+### Existing Testing Stack (DO NOT DUPLICATE)
+- **Framework**: Ruby Minitest (NOT Jest, NOT JS)
+- **System Tests**: Capybara with screenshot testing
+- **Location**: `/test/` directory
+- **Test Types**:
+  - System tests: `/test/system/`
+  - Unit tests: `/test/sync/`
+  - Test helpers: `/test/support/`
+
+### How to Add Tests for Hugo Components
+1. **ALWAYS check existing tests first**: `ls test/system/`
+2. **Use Ruby Minitest**: Create `.rb` files, NOT `.js`
+3. **For shortcodes/partials**: Add system tests that validate rendered HTML
+4. **Location**: `/test/system/shortcodes/` or `/test/system/partials/`
+
+### Testing Hugo Shortcodes and Partials
+```ruby
+# Example: test/system/shortcodes/testimonial_test.rb
+class TestimonialShortcodeTest < ApplicationSystemTestCase
+  def test_testimonial_renders_correctly
+    visit "/page-with-testimonial"
+    assert_selector ".testimonial-card"
+    assert_text "Expected testimonial content"
+  end
+end
+```
+
+### Running Tests
+```bash
+bin/test              # Run all tests
+bin/test test/system  # Run system tests only
+```
+
+### PREVENTION RULES
+- ❌ NEVER add Jest, Mocha, or JS testing frameworks
+- ❌ NEVER create duplicate test directories
+- ✅ ALWAYS use existing Ruby Minitest framework
+- ✅ ALWAYS research with `find test/ -name "*.rb"` first
+
 ### 🔍 Search Strategy (MANDATORY)
 ```bash
 # ALWAYS index documentation first
@@ -3630,3 +3673,4 @@ Never save working files, text/mds and tests to the root folder.
 - ✅ SUCCESS CRITERIA: Original requirements met + issue resolved
 - ❌ FAILURE PATTERN: Changing requirements to fit solution instead of fixing solution
 - For hugo code use hugo idiomatic way; for ruby use ruby, minitest and rails idiomatic ways
+- ENFORECE: ALWAYS DELEGATE HANDLING OF THE TASKS TO SWARM. SWARM MUST FOLLOW PROJECT (docs/) AND COMPANY (knowledge/) HANDBOOKS

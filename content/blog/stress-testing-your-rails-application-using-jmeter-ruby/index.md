@@ -147,9 +147,11 @@ conversation-url_matchNr
 The last one contains the number of matches (5 in our case).
 
 OK, the next thing is this:
+
 ```
 '${__V(conversation-url_${__Random(1,${conversation-url_matchNr})})}'
 ```
+
 The ${__Random(1,${conversation-url_matchNr})} here generates the random number between 1 and the number of matches. And the __V() function gets the variable content by its name.
 
 ## 3. Metrics
@@ -245,4 +247,4 @@ This article covers only the basic usage of these great tools.
 Image courtesy of Stuart Miles / FreeDigitalPhotos.net
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

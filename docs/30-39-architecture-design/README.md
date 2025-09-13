@@ -11,11 +11,13 @@ This area contains architectural decision records, design patterns, and technica
 ## Key Documents
 
 ### Architecture Decision Records (ADR)
+
 - `001-hugo-dx-improvements.md` - Hugo developer experience improvements
 - `002-advanced-hugo-optimizations.md` - Advanced Hugo optimization strategies  
 - `2025-01-SEO-optimization-strategy.md` - SEO optimization architectural decisions
 
 ### Design Patterns
+
 - `hugo-pipes-design.md` - Hugo pipes architecture design
 - `page-bundles-architecture.md` - Page bundles architectural patterns
 - `hugo-pipes-validation.md` - Hugo pipes validation design
@@ -23,6 +25,7 @@ This area contains architectural decision records, design patterns, and technica
 ## Architecture Standards
 
 All architecture documentation follows ADR template standards:
+
 - Clear problem statement and context
 - Considered options and trade-offs
 - Decision rationale and consequences

@@ -20,7 +20,7 @@ metatags:
   image: cover.png
 slug: how-handle-remote-services-in-tests-rails-tutorial
 ---
-> ### Do you have difficulties in adding the new tests and their readability decreased due to mocks and stubs? Let’s try to get rid of external requests in tests.
+> ### Do you have difficulties in adding the new tests and their readability decreased due to mocks and stubs? Let’s try to get rid of external requests in tests
 
 ![](file_0.png)
 
@@ -155,4 +155,4 @@ In this way `PostsSource::Fake will` be used for the test environment and `Posts
 The real response still needs to be tested, and most likely, it will be stubbed. But dependency injection allows decreasing the number of stubbing usages in the tests.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

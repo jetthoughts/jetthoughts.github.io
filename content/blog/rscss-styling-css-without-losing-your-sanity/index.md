@@ -24,7 +24,6 @@ Thinking of a beautiful and grammatically correct CSS code over and over again b
 
 Then this article is just for you. We will not go through the theory but move on to practice right away.
 
-
 ![Image description](file_0.png)
 
 ## What we will use?
@@ -250,7 +249,7 @@ The only advice here is to try to insert only one component per file. Other than
 
 Here is the full practical example of applying the methodology:
 
-https://codepen.io/andriyparashchuk/pen/WqrrWK?editors=1100
+<https://codepen.io/andriyparashchuk/pen/WqrrWK?editors=1100>
 
 ## Final considerations
 
@@ -261,4 +260,4 @@ So that you have a foundation to decide whether it’s worth studying and adopti
 Good luck to everyone!
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -30,7 +30,4 @@ In order for the scroll to appear, you need to limit its `height` by adding heig
 
 If you do not add this, your block will stretch to the entire height.
 
-
 ![Image description](file_0.png)
-
-

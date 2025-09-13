@@ -21,11 +21,9 @@ metatags:
 slug: how-avoid-n-1-keep-your-ruby-on-rails-controller-clean
 ---
 
-> ## Where to put the logic related to database queries optimization in a Ruby on Rails application. We want to answer this question by showing you the ‘Facade’ approach.
-
+> ## Where to put the logic related to database queries optimization in a Ruby on Rails application. We want to answer this question by showing you the ‘Facade’ approach
 
 ![Image description](file_0.png)
-
 
 ### Outline the problem
 
@@ -78,9 +76,7 @@ end
 
 If we need to show some films with their average ratings, this *avg_rating* method will issue an *avg* query every time it’s called, which will lead to a lot of individual queries.
 
-
 ![Image description](file_1.png)
-
 
 ### How to reduce the query to two
 
@@ -114,9 +110,7 @@ end
 
 And now we receive data without N+1 problem:
 
-
 ![Image description](file_2.png)
-
 
 ### Where to store code for receiving data
 
@@ -151,7 +145,7 @@ class FilmCarrier
 end
 ```
 
-The class method *wrap *is an implementation of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern) pattern. It returns an array of the *FilmCarrier *instances for each film from the scope with the instance method *avg_rating.*
+The class method *wrap*is an implementation of the [Facade](https://en.wikipedia.org/wiki/Facade_pattern) pattern. It returns an array of the *FilmCarrier*instances for each film from the scope with the instance method *avg_rating.*
 
 And now we have clean controller:
 
@@ -186,4 +180,4 @@ end
 * The code is easier to test
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

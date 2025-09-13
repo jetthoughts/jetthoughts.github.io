@@ -23,6 +23,7 @@ slug: sql-get-records-having-minmax-value-per-group-mysql
 Here's one possible solution for a case when you need to fetch a set of records unique on one (or several) column with a min/max value in the other column (usually a timestamp). The solution doesn't require any changes to the DB scheme (denormalization or creation of views) and can be performed in the scope of a single SQL query.
 
 ## Scenario
+
 Imagine you have a table named `customer_subscriptions` with the following fields:
 
 - `user_name` (we'll use name instead of `user_id` for simplicity here consider `user_name` to be unique for this example)

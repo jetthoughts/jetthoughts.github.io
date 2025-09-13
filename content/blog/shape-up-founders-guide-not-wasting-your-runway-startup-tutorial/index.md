@@ -72,24 +72,26 @@ At OpenApply, we used this timeframe to rebuild their entire admission system. E
 
 ## Real Talk: What This Looks Like in Practice
 
-
 ![shapeup cycles time line](file_1.png)
 
 Let me walk you through a typical cycle:
 
 ### Week 1-2: Shaping
+
 - Monday: List top three business problems
 - Tuesday-Wednesday: Rough solution sketches
 - Thursday: Scope hammering (my favorite part)
 - Friday: Final pitch prep
 
 ### Weeks 3-8: Building
+
 - Small team (2-3 people max)
 - No daily standups (yes, really)
 - Weekly demos only
 - Code ships when it's ready
 
 ### Weeks 9-10: Cooldown
+
 - Bug fixes
 - Small improvements
 - Planning next cycle
@@ -108,12 +110,14 @@ I've seen many teams stumble with Shape Up. Here are the big ones:
 ## Is Shape Up Right for Your Startup?
 
 Shape Up might be right for you if:
+
 - You're pre-product market fit
 - Have limited runway
 - Need to move fast without breaking things
 - Want to avoid building features nobody uses
 
 It might not be right if:
+
 - You have a large existing customer base
 - Need to maintain multiple product versions
 - Have strict regulatory requirements
@@ -136,4 +140,3 @@ Shape Up isn't perfect - nothing is. But after helping dozens of startups find t
 Want to know how this plays out in real life? When Agent Inbox came to us, they were spinning their wheels. Two months later, they had paying customers using their product. No magic, just a better way to build.
 
 Thinking about giving Shape Up a shot? I've made pretty much every mistake you can imagine (and then some). Head over to jetthoughts.com - let's chat about how to dodge those same bullets in your startup.
-

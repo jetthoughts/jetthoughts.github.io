@@ -30,10 +30,11 @@ To fight with non-consistent source code formatting there are static analysis to
 
 We decided to share code formatting feedback directly on [GitHub](https://github.com/) by commenting *Pull Requests* changes.
 
-There is a suitable tool for this job - [pronto](https://github.com/mmozuras/pronto). With help of *CI *(in our case that’s [CircleCI](https://circleci.com/)) we run it for each *Pull Request*.
+There is a suitable tool for this job - [pronto](https://github.com/mmozuras/pronto). With help of *CI*(in our case that’s [CircleCI](https://circleci.com/)) we run it for each *Pull Request*.
 
 ## Our *CircleCI 2.0* configuration to run pronto
->  **NOTE: **In order to reduce mess with dependencies we put all our linters and ***pronto*** into separate ***Gemfile.tools***.
+>
+> **NOTE:**In order to reduce mess with dependencies we put all our linters and ***pronto*** into separate ***Gemfile.tools***.
 
 ```yaml
 # .circleci/config.yml
@@ -142,4 +143,4 @@ Let’s remove the waste of time for trivial problems and spend it on codding!
 [Contact us](https://jetthoughts.com/contact-us/) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

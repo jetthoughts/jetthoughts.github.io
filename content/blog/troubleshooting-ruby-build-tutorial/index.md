@@ -81,7 +81,6 @@ export RUBY_CONFIGURE_OPTS="$RUBY_CONFIGURE_OPTS --with-jemalloc"
 
 #### Best place to have ENV configuration
 
-
 All those settings are better placed in `.profile`, `.bashenv` or `.zshenv`, then you do not need to recall them each time you install or reinstall ruby.
 
 My `.zshenv` looks like:
@@ -130,4 +129,3 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig:$PKG_CONFIG_PAT
 ## Next
 
 [ruby-build Wiki](https://github.com/rbenv/ruby-build/wiki) is good to learn.
-

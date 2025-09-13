@@ -75,4 +75,3 @@ Use contracts that cover clear termination terms and deliverables. To protect yo
 ## 11. Run a 2-week trial project
 
 The interview does not provide real experience. Running a paid 2-week trial project is a great solution to confirm a match. [Some staffing agencies offer free trials](https://jetthoughts.com/blog/trial-period-for-staff-augmentation-in-jetthoughts-startup-engagement/).
-

@@ -63,6 +63,7 @@ The breakthrough came during a critical deadline when she had no choice but to d
 **The Practical Shift**: Growth-minded developers actively seek out what they don't know. They volunteer for projects slightly outside their comfort zone, ask questions during code reviews, and treat debugging sessions as learning laboratories rather than embarrassing evidence of mistakes.
 
 **What This Looks Like in Practice**:
+
 - Saying "I don't know, but I can find out" instead of pretending to understand
 - Taking notes during technical discussions instead of nodding along
 - Volunteering for projects that require learning new technologies
@@ -84,6 +85,7 @@ The turning point came when his manager shared the company's onboarding feedback
 **The Practical Shift**: Self-compassionate developers treat themselves with the same kindness they'd offer a colleague facing similar challenges. They separate their identity from their code, understanding that debugging doesn't reflect their worth as a developer.
 
 **What This Looks Like in Practice**:
+
 - Talking to yourself like you would a good friend facing the same challenge
 - Celebrating small wins and learning moments, not just major achievements  
 - Recognizing that struggle and confusion are normal parts of the learning process
@@ -105,6 +107,7 @@ The shift came when she identified a unglamorous but critical performance bottle
 **The Practical Shift**: Intrinsically motivated developers find satisfaction in the craft itself—elegant solutions, well-designed systems, and positive user impact. They're driven by mastery, autonomy, and purpose rather than external rewards.
 
 **What This Looks Like in Practice**:
+
 - Choosing projects based on learning potential and impact, not just visibility
 - Getting excited about solving difficult problems, even if no one will notice
 - Taking ownership of code quality and user experience beyond requirements
@@ -127,6 +130,7 @@ The reality check came from his CTO: "We need working authentication today, not 
 **The Practical Shift**: Progress-oriented developers understand that perfect code is often the enemy of useful software. They embrace iterative improvement, rapid prototyping, and user feedback over theoretical optimization.
 
 **What This Looks Like in Practice**:
+
 - Starting with the simplest solution that could work, then optimizing if needed
 - Setting time limits for decision-making to prevent analysis paralysis
 - Shipping MVPs and iterating based on real user feedback
@@ -149,6 +153,7 @@ Her transition moment came during a critical debugging session. Rather than solv
 **The Practical Shift**: Systems thinking developers understand that their code exists within larger technical, business, and human systems. They optimize for team success, user impact, and long-term maintainability rather than individual productivity.
 
 **What This Looks Like in Practice**:
+
 - Asking "how does this affect our users?" before implementing solutions
 - Considering the maintainability and readability of code for future team members
 - Identifying and addressing root causes, not just symptoms
@@ -172,7 +177,7 @@ Let me share three examples from development teams I've worked with recently:
 **Case Study 1: The Debugging Breakthrough**
 Two developers spent a day debugging a production issue. The fixed-mindset developer grew increasingly frustrated, convinced the bug proved he wasn't cut out for backend development. The growth-mindset developer treated it as a learning opportunity, took detailed notes on the debugging process, and created documentation to help others solve similar issues. Six months later, the growth-minded developer was leading the backend team's incident response process.
 
-**Case Study 2: The Technology Transition** 
+**Case Study 2: The Technology Transition**
 When a startup decided to migrate from PHP to Node.js, two senior developers had completely different responses. One saw it as a threat to his expertise and resisted the change, eventually leaving the company. The other saw it as an opportunity to learn modern development practices and volunteered to lead the migration effort. He became the Node.js expert and was promoted to engineering manager within a year.
 
 **Case Study 3: The Code Review Culture**
@@ -183,6 +188,7 @@ In a team struggling with code quality, one developer started approaching code r
 Take a moment for honest self-reflection. As you read through challenging code, encounter bugs, or face new technology requirements, what's your internal dialogue?
 
 **Growth Mindset Indicators**:
+
 - You get excited by problems you don't immediately know how to solve
 - You ask questions during code reviews to understand different approaches  
 - You volunteer for projects involving unfamiliar technologies
@@ -190,6 +196,7 @@ Take a moment for honest self-reflection. As you read through challenging code, 
 - You celebrate learning from mistakes more than avoiding them
 
 **Fixed Mindset Warning Signs**:
+
 - You avoid tasks where you might look inexperienced
 - You feel threatened by colleagues who know more than you do
 - You interpret feedback as personal criticism rather than improvement opportunities
@@ -201,21 +208,25 @@ Take a moment for honest self-reflection. As you read through challenging code, 
 Mindset changes don't happen overnight, but they can be deliberately cultivated. Here's the framework I use with developers ready to make the shift:
 
 ### Week 1-2: Awareness Building
+
 - **Notice your self-talk** during challenging coding sessions. Are you being self-critical or self-compassionate?
 - **Track your learning moments**. Keep a simple log of things you learned each day, including from mistakes and failures.
 - **Identify your comfort zone edges**. What types of projects or technologies do you instinctively avoid?
 
 ### Week 3-4: Experimentation
+
 - **Choose one small challenge** slightly outside your comfort zone. Maybe it's contributing to an open source project or volunteering for a task involving unfamiliar technology.
 - **Practice growth language**. Replace "I don't know" with "I don't know yet" or "I'm learning about that."
 - **Ask one curious question** during each code review or technical discussion.
 
 ### Week 5-6: Building Systems
+
 - **Create learning rituals**. Set aside 30 minutes each week for exploring new technologies or concepts, even if they're not immediately relevant to your current projects.
 - **Find your intrinsic motivations**. What aspects of development genuinely excite you? Optimize for more of those experiences.
 - **Start thinking systems**. Before implementing solutions, ask: "How does this affect the broader system/team/user experience?"
 
 ### Week 7-8: Integration and Reinforcement
+
 - **Seek feedback actively**. Ask colleagues what they observe about your approach to challenges and learning.
 - **Mentor someone else**. Teaching others reinforces your own growth mindset and builds systems thinking.
 - **Document your progress**. Keep track of mindset shifts and their impact on your work and career satisfaction.

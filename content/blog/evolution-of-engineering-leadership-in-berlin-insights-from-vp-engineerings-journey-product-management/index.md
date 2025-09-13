@@ -41,16 +41,19 @@ One of the most striking insights from Matan's experience is the fundamental dif
 At Nostos Genomics, Matan leads a distributed team that reflects Berlin's international tech landscape. With 24.1% of German workers now operating remotely at least part-time, his experience managing a 15-person team across eight countries offers valuable insights for modern engineering leadership:
 
 #### 1. Structured Communication
+
 - Regular one-on-ones (minimum 30 minutes biweekly)
 - Transparent information flow between engineering and product teams
 - Digital-first communication strategies adapted for remote work
 
 #### 2. Performance Tracking and Metrics
+
 - Data-driven dashboards monitoring key performance indicators
 - T-shirt sizing for estimation instead of traditional story points
 - Sprint velocity and predictability metrics
 
 #### 3. Cultural Integration
+
 - Cross-functional collaboration across distributed teams
 - Integration strategies for multicultural teams
 - Building cohesive culture across time zones
@@ -111,7 +114,6 @@ Berlin's tech scene stands out in its approach to engineering management as a di
 
 ![shaping team diagram](file_1.png)
 
-
 As Berlin's tech ecosystem continues to grow, with startup funding reaching record levels and talent pools expanding, several key trends are shaping the future of engineering leadership:
 
 ### Emerging Trends
@@ -136,4 +138,3 @@ As Berlin's tech ecosystem continues to grow, with startup funding reaching reco
 The evolution of engineering leadership in Berlin represents a unique blend of traditional German organizational principles with modern tech culture. As demonstrated by the city's impressive growth metrics and rising salaries, Berlin's approach to technical leadership is proving successful in building and scaling effective engineering teams.
 
 For those aspiring to technical leadership roles in Berlin, the path forward requires a combination of technical expertise, people skills, and strategic thinking. The city's treatment of engineering management as a distinct profession, coupled with its strong market growth, creates unique opportunities for career development and impact.
-

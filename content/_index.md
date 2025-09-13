@@ -1,7 +1,7 @@
 ---
 title: "Expert Software Development & Consulting | JetThoughts"
 layout: index
-description: "Expert software development & consulting with 95% client retention. Reduce costs 50% while accelerating delivery 3x faster. Free consultation ✓"
+description: "Expert software development & consulting with high client retention. Reduce costs up to 50% while accelerating delivery up to 3x faster. Free consultation ✓"
 
 headline: Build faster. Scale smarter.
 excerpt: Streamline development, accelerate delivery, & achieve your product vision with access to turnkey engineering resources backed by world-class technical talent.

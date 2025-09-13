@@ -204,9 +204,11 @@ end
 ## Pro Tips for Index Mastery
 
 ### 1. Order Matters in Compound Indexes
+
 Put your most selective columns first to maximize efficiency. If users filter by `manager_id` more often than `status`, put `manager_id` first in your compound index.
 
 ### 2. Monitor Index Usage
+
 Not sure if your indexes are being used? Check with:
 
 ```sql
@@ -219,6 +221,7 @@ ORDER BY idx_scan DESC;
 Low `idx_scan` values may indicate unused indexes that are just slowing down writes.
 
 ### 3. Remember the Index Size Tradeoff
+
 Indexes speed up reads but slow down writes and take up storage space. Always verify your indexes are being used:
 
 ```sql
@@ -229,23 +232,29 @@ WHERE status = 0 AND manager_id = 1;
 Look for `Index Scan` in the results, not `Seq Scan`.
 
 ### 4. Partial Indexes Save Space and Boost Performance
+
 If most of your queries target a specific subset of data (like active records), partial indexes can dramatically reduce index size and improve INSERT performance.
 
 ### 5. Text Search Requires Special Treatment
+
 Standard BTree indexes don't help with `LIKE '%term%'` queries. Use GIN indexes with trigrams for these scenarios. Your users will thank you when their searches don't time out!
 
 ## Common Pitfalls to Avoid
 
 ### 1. Over-Indexing
+
 Not every column needs an index. Too many indexes slow down writes and waste space. Index strategically based on your most common queries.
 
 ### 2. Under-Indexing Critical Paths
+
 Missing indexes on foreign keys or frequently filtered columns can cause major performance issues. Always index foreign keys and columns used in WHERE clauses.
 
 ### 3. Using the Wrong Index Type
+
 A BTree index won't help with full-text search, and a GIN index is overkill for exact matches. Choose the right tool for the job.
 
 ### 4. Neglecting Index Maintenance
+
 Indexes need care too. Regular `VACUUM ANALYZE` operations keep them performing optimally.
 
 ## How to Test Your Indexes
@@ -277,10 +286,10 @@ end
 Smart indexing is one of the most powerful yet underutilized ways to improve Rails application performance. With the right indexes in place, even complex searches can return results in milliseconds instead of seconds.
 
 Remember:
+
 - Index columns you filter on frequently
 - Choose the right index type for your query patterns
 - Monitor and maintain your indexes
 - Test with realistic data volumes
 
 Your database will thank you, and so will your users!
-

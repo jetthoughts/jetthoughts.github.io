@@ -104,4 +104,4 @@ Do not deal with proposals from potential customers/partners that are not part o
 Members of the team make high-quality decisions together and have the support and commitment of the group to carry out the decisions made. CEO hopes to communicate with the Sales team every day without distracting them from their work.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

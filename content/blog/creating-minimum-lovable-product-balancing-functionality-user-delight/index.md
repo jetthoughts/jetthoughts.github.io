@@ -27,7 +27,6 @@ Start by finding the main features your product needs to solve its problem. Thes
 - Getting feedback from users
 - Picking features based on user needs and business goals
 
-
 ## 3. Make Users Happy
 
 To make users happy, you need more than good looks; you need to connect with them emotionally through design and experience:
@@ -36,7 +35,6 @@ To make users happy, you need more than good looks; you need to connect with the
 - Personal touches
 - Fast-loading pages
 
-
 ## 4. Balance Features with Delight
 
 Finding the right mix of function and delight takes planning. This part covers ways to use user feedback, improve step-by-step, and keep getting better:
@@ -44,7 +42,6 @@ Finding the right mix of function and delight takes planning. This part covers w
 - Agile development methods
 - Regular user tests and feedback loops
 - Small updates based on what users say
-
 
 ## 5. Learn from Others
 

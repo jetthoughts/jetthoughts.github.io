@@ -37,7 +37,7 @@ After that, you need to look for their contact information. I usually use [Hunte
 
 After you found the potential buyers and you know their contact information, it’s time to start connecting.
 
-If you plan to send messages and emails manually that are too customized, then I will recommend my favorite 2 bloggers for cold-email customization: 
+If you plan to send messages and emails manually that are too customized, then I will recommend my favorite 2 bloggers for cold-email customization:
 [Josh Braun](https://www.linkedin.com/in/josh-braun/)
 [Alex Berman](https://youtube.com/playlist?list=PLtkcfOqeArMa9-nmJR8wxAOfSU4kzYpBj)
 
@@ -48,7 +48,7 @@ In case you are sending slightly personalized messages, use automation tools suc
 Not all the leads you generated are potential buyers. To know that, you need to qualify them first. The best way to do so is during the first call/meeting.
 
 You can trust your intuition and ask the questions that come to your mind during the conversation, but I would recommend you a better way:
->  USE SALES QUALIFICATION FRAMEWORKS!!!
+> USE SALES QUALIFICATION FRAMEWORKS!!!
 
 There are lots and lots of them on the internet, but here is my favorite:
 
@@ -67,23 +67,27 @@ Show them similar case study examples and focus on each step of how you solved t
 There are 4 main objections every salesperson encounters 95% of the time. Here is my takeaway of the best answers to each of them
 
 ### 1. Too expensive/I don’t have a budget
->  “The price of our product is more expensive compared to what?”
->  “Putting price aside for a moment, were there other matters you needed me to review?”
->  “Our client testimonials are always great and we are constantly hearing from them that our product/service has been well worth the investment”
+>
+> “The price of our product is more expensive compared to what?”
+> “Putting price aside for a moment, were there other matters you needed me to review?”
+> “Our client testimonials are always great and we are constantly hearing from them that our product/service has been well worth the investment”
 
 ### 2. I’m not the decision-maker
->  “Could you please introduce me to the person responsible?”
->  “Who besides you is involved in making the decision?”
+>
+> “Could you please introduce me to the person responsible?”
+> “Who besides you is involved in making the decision?”
 
 ### 3. We are happy with what we have now
->  “What are the features that are most important to you?”
->  “What are the benefits of another offer?
+>
+> “What are the features that are most important to you?”
+> “What are the benefits of another offer?
 
 ### 4. No thanks/I will get back to you
->  “When you agreed to talk I thought I was prepared and knew what you need, what did I miss?”
->  “Clearly I wasn’t focused correctly. What would have been the most important thing that you wanted me to review?
->  “I’m puzzled. Usually, I get great feedback from the companies like yours. Where was I lacking in being clear about the savings we offer?
->  “ Rather than you getting back to me let’s get a date in the calendar today for me to come back and dig deeper with more specifics about the value”.
+>
+> “When you agreed to talk I thought I was prepared and knew what you need, what did I miss?”
+> “Clearly I wasn’t focused correctly. What would have been the most important thing that you wanted me to review?
+> “I’m puzzled. Usually, I get great feedback from the companies like yours. Where was I lacking in being clear about the savings we offer?
+> “ Rather than you getting back to me let’s get a date in the calendar today for me to come back and dig deeper with more specifics about the value”.
 
 ## Closing
 
@@ -92,8 +96,8 @@ Here are the proven techniques that are widely used in the world:
 ### 1. Creating an urgency
 
 This technique is also called “Now or Never Close” and it shows your customer that the best timing for getting the most profitable deal is now:
->  “We won’t have this price anymore”.
->  “ We have a 35% discount, only for those who register today”.
+> “We won’t have this price anymore”.
+> “ We have a 35% discount, only for those who register today”.
 
 ### 2. Creating a value-package
 
@@ -104,16 +108,16 @@ You qualified your customer and presented to them, you know what their needs are
 Throughout the entire process, you need to have two main goals: Understand what their pain is and How you can eliminate this particular pain with your offering.
 
 By asking the right questions during each step of the conversation, you can even close your sale faster.
->  “How in your opinion will my offer solve your problem?”
->  “Is there any reason why you can’t proceed with this offer?”
+> “How in your opinion will my offer solve your problem?”
+> “Is there any reason why you can’t proceed with this offer?”
 
 Even if their answer is negative this closing technique allows you to elaborate right away and see where you were lacking more explanation in your presentation. Eventually, this win-win technique will help you significantly.
 
 ### 4. Making Assumptions
 
 This is simply asking the questions where you automatically assume that they liked your product. Make sure you have some positive facts that will support your actions. If they do, you can use the following sentences:
->  “Did my offering allign with your expectations?”
->  “Does it seem like something that will save your operational costs in the future?”
+> “Did my offering allign with your expectations?”
+> “Does it seem like something that will save your operational costs in the future?”
 
 ### 5. Taking the toy away
 
@@ -132,4 +136,4 @@ Instead of complaining about not having enough sales, ask yourself “Who are th
 You see, your potential clients as everybody else, trust people they know more than they trust strangers who offer them their services. Make sure you are using the referral opportunity to the fullest.
 
 **Victoria Sakurova** is a Business Development Specialist at [JetThoughts](https://www.jetthoughts.com/). Follow her on [Linkedin](https://www.linkedin.com/in/victoriasakurova/).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

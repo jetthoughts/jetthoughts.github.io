@@ -49,9 +49,10 @@ The developer wasn't being lazy or incompetent. The signup form was connected to
 
 **The Cost**: Companies experiencing high change friction see their development velocity drop by 60-80% over 6-12 months. What's worse, the friction compounds—each new feature makes future changes even harder.
 
-**Early Detection**: 
+**Early Detection**:
+
 - Developers frequently mention needing to "understand the impact" of simple changes
-- Feature estimates become increasingly unreliable 
+- Feature estimates become increasingly unreliable
 - You hear phrases like "it should be simple, but..." more often
 - Time spent in debugging sessions exceeds time spent writing new code
 
@@ -68,6 +69,7 @@ The breaking point came during Black Friday when a payment bug that should have 
 **The Hidden Risk**: These avoided areas typically contain your most business-critical logic. When (not if) they break, the impact is maximum while your ability to respond is minimum.
 
 **Early Detection**:
+
 - Certain team members become "single points of failure" for specific features
 - Developers consistently route around specific modules or files
 - Code reviews take significantly longer for certain areas
@@ -85,6 +87,7 @@ I watched one startup spend six weeks in meetings trying to decide how to handle
 **The Productivity Killer**: While your team debates architecture, your competitors are shipping features. Decision paralysis is often worse than making imperfect decisions quickly.
 
 **Early Detection**:
+
 - Technical discussions span multiple meetings without resolution
 - The same technical questions keep being rehashed in different formats
 - Developers start implementing different approaches to the same problem
@@ -95,7 +98,7 @@ I watched one startup spend six weeks in meetings trying to decide how to handle
 
 **The Pattern**: When faced with adding new features or fixing bugs, your team increasingly suggests rewriting entire components or systems instead of modifying existing code.
 
-This is the startup equivalent of "the house is so messy, let's just burn it down and start over." 
+This is the startup equivalent of "the house is so messy, let's just burn it down and start over."
 
 I've seen teams spend four months "rewriting the user authentication system" when the original request was to add social login. The rewrite fixed the social login issue but broke user permissions, notification systems, and audit logs. Six months later, they were still finding and fixing integration issues.
 
@@ -104,6 +107,7 @@ I've seen teams spend four months "rewriting the user authentication system" whe
 **The Rewrite Trap**: Full rewrites almost never work as expected. They take 3-5x longer than estimated, often introduce new bugs, and usually end up with the same architectural problems as the original code because the underlying decision-making process hasn't changed.
 
 **Early Detection**:
+
 - "Rewrite" becomes the default answer to technical challenges
 - Developers resist adding features to existing systems
 - Code reviews frequently include comments about "this entire module needs refactoring"
@@ -125,6 +129,7 @@ The founders interpreted this as "our team isn't hungry anymore" or "they're get
 **The Morale Death Spiral**: When developers lose confidence in the codebase, they lose confidence in their ability to deliver. This creates a self-reinforcing cycle where fear of breaking things leads to more cautious, slower development, which leads to more frustration and less confidence.
 
 **Early Detection**:
+
 - Developers become increasingly conservative with estimates
 - Team meetings focus more on risks than opportunities  
 - Enthusiasm for new technical challenges noticeably decreases
@@ -186,6 +191,7 @@ Give your team opportunities to experience success with technical improvements. 
 Sometimes these warning signs indicate you need immediate expert intervention:
 
 **Red Alert Signals**:
+
 - Multiple warning signs are present simultaneously
 - You've lost 2+ senior technical team members in the past 3 months
 - You're facing a critical deadline (funding, launch, compliance) within 60 days

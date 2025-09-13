@@ -21,7 +21,7 @@ metatags:
 slug: where-read-env-variables-in-ruby-on-rails-application
 ---
 
-### The ENV variables should not be used outside the *config* folder. This rule will allow the developer to quickly find errors and places where they occurred and not keep in his head a bunch of dependency components.
+### The ENV variables should not be used outside the *config* folder. This rule will allow the developer to quickly find errors and places where they occurred and not keep in his head a bunch of dependency components
 
 What if the project has too many dependencies from the environment variables? This may lead to the formation of implicit dependencies, confuse the developer’s expectations.
 
@@ -44,9 +44,10 @@ The configuration of the current working environment can be arranged in the *con
  2. *environments* subfolder
 
  3. *application.rb* file
->  The only exception is the test helpers. The ENV variables usage can greatly simplify or improve test execution.
+
+> The only exception is the test helpers. The ENV variables usage can greatly simplify or improve test execution.
 
 By following this rule you can avoid problems with the implicit dependencies and your application behavior will be expected.
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

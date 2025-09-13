@@ -23,6 +23,7 @@ In this guide, we'll explore how to configure Traefik with Kamal to automaticall
 Traefik is a modern reverse proxy and load balancer designed to handle dynamic containerized environments. It simplifies routing, SSL certificate management, and more. When used with Kamal, Traefik can automate SSL certificate acquisition and renewal, making it easier to deploy secure, production-ready Rails applications.
 
 ## Configuration Overview
+
 Below is the key part of the configuration file provided, which includes the necessary settings for Traefik to automatically manage SSL certificates:
 
 ```yaml
@@ -125,16 +126,20 @@ traefik:
 ```
 
 ## Step-by-Step Explanation
+
 Let's break down the configuration to understand how each line contributes to automating SSL certificate management with Traefik.
 
 ### Application and Image Configuration
+
 ```yaml
 service: myapp
 image: username/myapp
 ```
+
 **Purpose:** These lines define the application name (myapp) and the container image (username/myapp) that Kamal will deploy.
 
 ### Server Configuration with Traefik Labels
+
 ```yaml
 servers:
   web:
@@ -147,6 +152,7 @@ servers:
 ```
 
 **Purpose:**
+
 - **hosts**: Specifies the VPS IP address (192.168.0.1) where the application will be deployed.
 - **labels**: The labels configure how Traefik should route traffic and handle SSL certificates for the myapp service:
   - **traefik.http.routers.myapp.entrypoints**: websecure: Directs traffic for this service to the websecure entry point, which handles HTTPS on port 443.
@@ -173,7 +179,9 @@ traefik:
     certificatesResolvers.letsencrypt.acme.httpchallenge: true
     certificatesResolvers.letsencrypt.acme.httpchallenge.entrypoint: web
 ```
+
 **Purpose:**
+
 - **publish**: "443:443": Exposes port 443, enabling Traefik to handle HTTPS traffic.
 - **volume**: "/letsencrypt/acme.json:/letsencrypt/acme.json": Mounts a volume to store SSL certificate data in acme.json, ensuring certificates persist across restarts.
 - **entryPoints.web.address**: ":80": Defines the entry point for HTTP traffic on port 80, which is necessary for the initial Let's Encrypt certificate validation.
@@ -185,12 +193,15 @@ certificatesResolvers.letsencrypt.acme.email: Specifies the email address for Le
 - **certificatesResolvers.letsencrypt.acme.httpchallenge.entrypoint**: web: Associates the HTTP challenge with the HTTP entry point, allowing Let's Encrypt to validate domain ownership.
 
 ## Final Steps: Deploy and Validate
-Deploy Your Application: Run the deployment using Kamal, with the Traefik configuration in place. 
+
+Deploy Your Application: Run the deployment using Kamal, with the Traefik configuration in place.
+
 ```bash
 kamal deploy
 ```
 
 Monitor Logs: Check the Traefik logs to ensure SSL certificates are being generated and renewed properly.
+
 ```bash
 kamal traefik logs
 ```
@@ -198,4 +209,5 @@ kamal traefik logs
 Access the Application: Visit your application using the domain `myapp-domain.com` to verify that it’s accessible over HTTPS and that the connection is secure.
 
 ## Conclusion
+
 With this setup, you've successfully configured Traefik to automatically manage SSL certificates for your Rails application deployed with Kamal. This integration not only simplifies the deployment process but also ensures that your application is securely accessible over HTTPS. By following this guide, you can achieve a streamlined and secure deployment pipeline for your web applications.

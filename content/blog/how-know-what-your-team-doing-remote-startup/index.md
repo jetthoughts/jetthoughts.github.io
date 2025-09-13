@@ -25,7 +25,8 @@ slug: how-know-what-your-team-doing-remote-startup
 What techniques do you use to work with the team in an async, remote environment? How to collaborate effectively within the distributed team located in different timezones and deliver tangible results on top of that?
 
 In [JetThoughts](https://www.jetthoughts.com/), we got some common tactics we use when dealing with clients. They were built having [these tips](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899) in mind.
-> # It’s vital to built trust and rapport with the client, so here are some best practices on how to achieve that.
+
+> # It’s vital to built trust and rapport with the client, so here are some best practices on how to achieve that
 
 ### 1. Over-communication by everyday updates
 
@@ -50,12 +51,13 @@ Big tasks should always be split into smaller ones. How to define big tasks? It�
 Every sprint should be finished with a product demo — which shows off all the new features, bug fixes, UI changes that were done throughout the whole sprint.
 
 When it comes to your sprint results, huge features, or significant changes in functionality need to be visualized and explained.
->  **TIP:** We heavily use [Loom](https://www.loom.com/) for screencasts recording, both internally and externally. It’s always better to record a screencast one time and send the link to every member you’d like to get feedback from, rather than go through calls or chats and showing it during a screen sharing session, prepare visuals, etc.
+> **TIP:** We heavily use [Loom](https://www.loom.com/) for screencasts recording, both internally and externally. It’s always better to record a screencast one time and send the link to every member you’d like to get feedback from, rather than go through calls or chats and showing it during a screen sharing session, prepare visuals, etc.
 
 ### 4. Task-checking
 
 Ideally, product owners or their representatives should be involved in the checking process and have everything they need to check all the tasks, except for really techy-ones, and the whole git-flow should be built around it. The last comment should mention them using ‘@' and the credentials along with test cases, checking algorithms should be provided.
-> # This cheat-sheet will help you with managing your project even without prior experience and will help you to get a better understanding of how it works in practice.
+
+> # This cheat-sheet will help you with managing your project even without prior experience and will help you to get a better understanding of how it works in practice
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

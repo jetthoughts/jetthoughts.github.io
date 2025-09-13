@@ -25,7 +25,6 @@ Mozilla recommends this way because it ensures Firefox and all the required libr
 
 To install from a Dockerfile, follow these steps:
 
-
 ```dockerfile
 # Install Firefox from Mozilla
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \

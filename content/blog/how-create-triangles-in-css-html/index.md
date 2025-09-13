@@ -20,6 +20,7 @@ metatags:
 slug: how-create-triangles-in-css-html
 ---
 In this post, we are going to see a simple method to draw a triangle in CSS using borders.
+
 ```html
 <div class="triangle-up"></div>
 <div class="triangle-down"></div>
@@ -28,6 +29,7 @@ In this post, we are going to see a simple method to draw a triangle in CSS usin
 ```
 
 ## Triangle Up
+
 Triangle is one of the simplest shapes in geometry. It can be drawn with just three straight lines and a couple of angles.
 
 1. Set a width and height of 0.
@@ -46,9 +48,11 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-bottom: 15px solid red;
 }
 ```
+
 ![Image description](file_0.png)
 
 ## Triangle Down
+
 ```css
 .triangle-down {
   width: 0; 
@@ -58,9 +62,11 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-top: 15px solid blue;
 }
 ```
+
 ![Image description](file_1.png)
 
 ## Triangle Left
+
 ```css
 .triangle-left {
   width: 0; 
@@ -70,9 +76,11 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-right: 15px solid yellow; 
 }
 ```
+
 ![Image description](file_2.png)
 
 ## Triangle Right
+
 ```css
 .triangle-right {
   width: 0; 
@@ -82,6 +90,5 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
   border-left: 15px solid green;
 }
 ```
-![Image description](file_3.png)
- 
 
+![Image description](file_3.png)

@@ -20,7 +20,7 @@ metatags:
   image: cover.png
 slug: how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby
 ---
-> ### Consider the way to reduce the queries when calculating the average values and find the place where to do it in the Ruby on Rails application.
+> ### Consider the way to reduce the queries when calculating the average values and find the place where to do it in the Ruby on Rails application
 
 ![](file_0.png)
 
@@ -47,7 +47,7 @@ it will produce a lot of individual queries:
 ![](file_1.jpeg)
 
 The issue is:
->  How to reduce the queries and where to do it?
+> How to reduce the queries and where to do it?
 
 ### Calculate average value on the database level
 
@@ -81,7 +81,7 @@ Run in the terminal command:
 
 rails g scenic:view film_rating
 
-It will generate two files *db/views/film_ratings_v01.sql *and *db/migrate/[date]_create_film_ratings.rb. *In the first one, we will place the raw SQL query. The second file will contain the migration to migrate/rollback the creation of our view.
+It will generate two files *db/views/film_ratings_v01.sql*and *db/migrate/[date]_create_film_ratings.rb.*In the first one, we will place the raw SQL query. The second file will contain the migration to migrate/rollback the creation of our view.
 
  <iframe src="https://medium.com/media/087563711d22b960c9b141690562725f" frameborder=0></iframe>
 
@@ -93,7 +93,7 @@ Now we can create the related model and interact with it as with the usual Ruby 
 
 As soon as materialized views cache the underlying query’s result to a temporary table we have to control when the cache is refreshed. A *refresh* method can be called at any time to update the data.
 
-Now, we will deal with the *FilmRating *in the controller
+Now, we will deal with the *FilmRating*in the controller
 
  <iframe src="https://medium.com/media/cc8d127c8d1de39a324300fb4cfab2ea" frameborder=0></iframe>
 
@@ -116,4 +116,4 @@ the query for getting average rates of all films will look like:
 * Control when the cache needs to be refreshed
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

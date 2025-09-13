@@ -32,9 +32,9 @@ There is another option called [React Native Testing Library](https://github.com
 
 ## Jest overview
 
-More than 500 companies use Jest in their tech stacks, including Airbnb**, **Facebook**, **and Instagram.
+More than 500 companies use Jest in their tech stacks, including Airbnb**, **Facebook**,**and Instagram.
 
-### Reasons why companies use Jest:
+### Reasons why companies use Jest
 
 * Open-source
 
@@ -54,14 +54,15 @@ Automatically mocks CommonJS modules returned by *require()* as a result most ex
 
 DOM APIs are mocked. Tests run in parallel via a Node.js command-line utility.
 
-### Russel Werner, Lead Engineer at StackShare:
->  Jest is fast and convenient and it has plenty of community support behind it. It lets us run our unit tests with Enzyme and snapshot tests.
+### Russel Werner, Lead Engineer at StackShare
+>
+> Jest is fast and convenient and it has plenty of community support behind it. It lets us run our unit tests with Enzyme and snapshot tests.
 
 ## Enzyme overview
 
 The Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your Components’ output. Enzyme’s API is meant to be intuitive by simulating jQuery’s API for DOM manipulation and traversal.
 
-Companies like Airbnb**, **BlaBlaCar**, **and Redox Engine use Enzyme in their tech stacks.
+Companies like Airbnb**, **BlaBlaCar**,**and Redox Engine use Enzyme in their tech stacks.
 
 ```js
 import React from 'react';
@@ -107,7 +108,7 @@ The high speed of native mobile development requires us to adopt continuous inte
 
 Companies reportedly use Detox in their tech stacks, including Glorgo, Dropboy, and Jumpn.
 
-### Core features:
+### Core features
 
 * Automatically Synchronized. Stops flakiness at the core by monitoring asynchronous operations in your app
 
@@ -139,7 +140,7 @@ Appium is an open-source test automation framework. You can use it with native, 
 
 More than 50 companies constantly use Appium in their tech stacks, including N26, Intuit, and PedidosYa.
 
-### Why developers like Appium:
+### Why developers like Appium
 
 * Open-source
 
@@ -151,8 +152,9 @@ More than 50 companies constantly use Appium in their tech stacks, including N26
 
 * Within the same script, you can switch seamlessly between native app automation and WebView automation, all using the WebDriver model that’s already the standard for web automation
 
-### Kevin Roulleau, QA Engineer Freelance at happn:
->  *I chose WebdriverIO and Appium to implement E2E tests solution on a native mobile app. WebdriverIO goes well beyond just implementing the Selenium / Appium protocol and allows us to run tests in parallel out of the box. Appium has the big advantage of supporting iOS and Android platforms, so the test codebase and tools are exactly the same, which greatly reduces the learning curve and implementation time.*
+### Kevin Roulleau, QA Engineer Freelance at happn
+>
+> *I chose WebdriverIO and Appium to implement E2E tests solution on a native mobile app. WebdriverIO goes well beyond just implementing the Selenium / Appium protocol and allows us to run tests in parallel out of the box. Appium has the big advantage of supporting iOS and Android platforms, so the test codebase and tools are exactly the same, which greatly reduces the learning curve and implementation time.*
 
 ## Summary
 
@@ -162,5 +164,5 @@ Using Jest in pair with Enzyme will give you coverage of the individual componen
 
 For integration tests, you can use already discovered solutions, as well as new ones that are more convenient to use but for which you need to do additional configuration. Detox is built from the ground up to support React Native projects as well as pure native ones. Appium supports app automation across a variety of platforms, like iOS, Android, Windows, and Mac.
 
-**Ilya Novohatskyi **is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/ilya-novohatskyi-a61644114/) or [GitHub](https://github.com/sweatC).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+**Ilya Novohatskyi**is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/ilya-novohatskyi-a61644114/) or [GitHub](https://github.com/sweatC).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

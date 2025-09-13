@@ -192,6 +192,7 @@ popular_comments = Comment.with(comment_likes: comment_likes)
 ```
 
 This pattern is particularly useful when you need to:
+
 1. Calculate aggregate values that would normally require subqueries
 2. Reference the same aggregation multiple times in your query
 3. Keep your queries clean and maintainable

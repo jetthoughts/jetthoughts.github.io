@@ -25,6 +25,7 @@ The logic of small applications can be present as a series of transactions. Usin
 ![Alt Text](file_0.png)
 
 ## The Problem Setup
+
 There is a Ruby on Rails API application that has Post, User, and Like models. Users should be able to like posts.
 
 ![Alt Text](file_1.png)
@@ -51,13 +52,17 @@ module Api
   end
 end
 ```
-### The obvious disadvantages of this code are:
+
+### The obvious disadvantages of this code are
+
 - The controller implements business logic, although controllers should be only coordinate the interaction between the user, the views, and the model.
 - To cover this code with tests, you need to test the entire action of the controller. To test the controller, you usually need to do more preconditions.
 - If you have two controllers for likes, you need to repeat code.
 
 ### The tests first
+
 Let’s write a test and thus solve two problems:
+
 - Define the service interface.
 - Get the finished test.
 
@@ -94,10 +99,12 @@ class ToggleLikeActionScriptTest < ActiveSupport::TestCase
   end
 end
 ```
+
 Now you have a test and you can implement Service.
 
 ## Service implementation
-From the tests, you can see that the service is most closely follows the [Transaction Script pattern](https://martinfowler.com/eaaCatalog/transactionScript.html)	 or kind of Service Object.
+
+From the tests, you can see that the service is most closely follows the [Transaction Script pattern](https://martinfowler.com/eaaCatalog/transactionScript.html)  or kind of Service Object.
 > The Transaction Script should follow the Single Responsibility Principle.
 
 ```ruby
@@ -124,6 +131,7 @@ class ToggleLikeActionScript
   end
 end
 ```
+
 So, we have a service and test. Let’s, clean up the controller:
 
 ```ruby
@@ -144,20 +152,24 @@ module Api
   end
 end
 ```
+
 As you can see, our controller has now looked cleaner. 'toggle like' functionality now takes only one line and by the name of the class, we can immediately understand what is happening in Transaction Script.
 
 ## Recommended transaction script structure
+
 - The initialization method with incoming arguments.
 - The single public method that runs the action.
 - OpenStruct with a success? and either a payload or an error as a result. (This item is desirable but not required)
 
 ## When to use the Transaction Scripts
+
 - The action is complex
 - The action involves multiple models
 - Using internal services
 - When you are going to add ActiveRecord callback but only for one case
 
 ## The pros of the transaction script usage
+
 - The controller does not deal with business logic
 - The code could be reused without duplication
 - Easier to test, a test environment reproduction is not difficult

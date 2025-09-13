@@ -21,7 +21,7 @@ slug: how-influence-decision-makers-startup-tutorial
 ---
 In today's fast-paced world, the ability to influence decision-makers is crucial for success. Whether you're seeking a promotion, trying to secure funding for your startup, or aiming to leave a positive mark in your organization, understanding how to navigate these situations can set you apart. In this article, we explore key strategies to enhance your influence and create favorable outcomes.
 
-{% youtube https://youtu.be/8PB0l7x73rM %}
+{% youtube <https://youtu.be/8PB0l7x73rM> %}
 
 ### Key Takeaways
 

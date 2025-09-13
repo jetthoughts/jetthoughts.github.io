@@ -34,6 +34,7 @@ This can be a problem for teams that value quick feedback and continuous integra
 ## Disabling animations in Ruby on Rails
 
 Fortunately, disabling most of the animations in the Ruby on Rails test suite could be achieved by a minor layout update:
+
 ```ruby
     <% if Rails.env.test? %>
       <script>
@@ -53,6 +54,7 @@ Fortunately, disabling most of the animations in the Ruby on Rails test suite co
       </style>
     <% end %>
 ```
+
 Those disabling animations might cause specific tests to fail if they hinge on animation timing. Nevertheless, these tests can be revamped to utilize alternate timing mechanisms such as sleep or wait.
 
 ## Benefits of disabling animations

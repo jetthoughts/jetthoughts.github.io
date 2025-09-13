@@ -20,7 +20,7 @@ metatags:
   image: cover.png
 slug: running-tests-in-containers-with-docker-compose-coding-tutorial
 ---
-> ### The main advantages of this way are to have independent environment for the tests running and to reduce the complexity of the test environment setup. Just load and run tests. Consider how to achieve this.
+> ### The main advantages of this way are to have independent environment for the tests running and to reduce the complexity of the test environment setup. Just load and run tests. Consider how to achieve this
 
 ![](file_0.png)
 
@@ -127,6 +127,7 @@ The db service configuration consists of image name (provided by CircleCI), DB a
 ### Usage
 
 Docker and docker-compose do a lot of work to make life easier for developers now, but it’s still a lot to remember and type:
+
 ```
     export CURRENT_UID=$(id -u):$(id -g)
 
@@ -142,6 +143,7 @@ Docker and docker-compose do a lot of work to make life easier for developers no
 
     docker-compose run app bin/rspec
 ```
+
 All these can be extracted into a few utility scripts:
 
 ```
@@ -180,12 +182,14 @@ docker-compose run app bin/rspec
 ```
 
 Now setting up and running tests inside a docker container is achieved by only running:
+
 ```
     bin/dc-setup
 
     bin/dc-test
 ```
+
 Docker is a powerful tool to use in your development process. It can make starting and switching between projects fast and easy, and help to ensure that everyone is staying up to date with the technologies being used.
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

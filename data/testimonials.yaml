@@ -32,7 +32,6 @@ testimonials:
       - "Achieved 10,000+ active users within 6 months"
     technologies: ["Ruby on Rails", "Vue.js", "PostgreSQL", "Stripe API"]
     location: "San Francisco, USA"
-    
   - name: "David Rodriguez"
     rating: 5
     title: "VP of Engineering"
@@ -92,7 +91,7 @@ case_studies:
     challenge: "Build MVP fintech platform with complex financial calculations and regulatory compliance"
     solution: "Developed secure, scalable platform with real-time transaction processing"
     duration: "12 months"
-    team_size: 4
+    team_size: "4 developers"
     technologies: ["Ruby on Rails", "Vue.js", "PostgreSQL", "Stripe API", "AWS"]
     metrics:
       development_speed: "3 months ahead of schedule"
@@ -107,21 +106,20 @@ case_studies:
     challenge: "Modernize legacy platform while maintaining 100% uptime during peak shopping seasons"
     solution: "Implemented gradual migration strategy with microservices architecture"
     duration: "24 months"
-    team_size: 8
+    team_size: "8 developers"
     technologies: ["Ruby on Rails", "React", "Elasticsearch", "Redis", "AWS"]
     metrics:
       downtime: "0 minutes during migration"
       performance_improvement: "300% faster page loads"
       conversion_increase: "25% higher conversion rates"
       cost_reduction: "40% lower infrastructure costs"
-      
   - title: "Healthcare Platform: HIPAA-Compliant Patient Management"
-    client: "HealthTech Innovations" 
+    client: "HealthTech Innovations"
     industry: "Healthcare"
     challenge: "Build HIPAA-compliant platform for managing patient records and provider workflows"
     solution: "Secure, encrypted platform with role-based access and audit trails"
     duration: "15 months"
-    team_size: 6
+    team_size: "6 developers"
     technologies: ["Ruby on Rails", "React", "PostgreSQL", "Docker", "AWS"]
     metrics:
       compliance: "HIPAA certified"

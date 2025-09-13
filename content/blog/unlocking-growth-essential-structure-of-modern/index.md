@@ -30,11 +30,11 @@ In the rapidly evolving landscape of marketing, agencies are rethinking their st
 The core team is the backbone of any marketing agency. This group typically includes executives, account managers, strategists, and campaign delivery personnel. Their roles are crucial for maintaining client relationships and ensuring the agency's operational stability.
 
 *   Key Roles:
-    *   Executives
-    *   Account Managers
-    *   Strategists
-    *   Creative Directors
-    *   Designers
+  *   Executives
+  *   Account Managers
+  *   Strategists
+  *   Creative Directors
+  *   Designers
 
 These individuals are not only responsible for billable work but also for pitching new clients and securing future projects, making them invaluable assets to the agency.
 
@@ -55,10 +55,10 @@ While most of these roles are filled by full-time employees, agencies may also e
 Freelancers play a critical role in the modern marketing agency structure. They provide specialized skills that may not be needed on a full-time basis, allowing agencies to remain agile and responsive to client demands.
 
 *   Examples of Freelance Roles:
-    *   Video Editors
-    *   Technical SEO Experts
-    *   Influencer Marketing Specialists
-    *   Graphic Designers
+  *   Video Editors
+  *   Technical SEO Experts
+  *   Influencer Marketing Specialists
+  *   Graphic Designers
 
 This flexible approach enables agencies to scale their workforce quickly for high-impact projects, such as seasonal campaigns or major product launches, without the overhead of maintaining a large permanent staff.
 

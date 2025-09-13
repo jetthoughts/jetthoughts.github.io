@@ -27,7 +27,7 @@ We will work not only with the legacy but with the team that loses belief in the
 
 We will cover the steps that you can use today. No investment, no requirements. Inspire other developers.
 
-### Post Outline:
+### Post Outline
 
 * What should we expect in a Legacy code base?
 
@@ -48,7 +48,8 @@ Here are the most common problems which characterized legacy, which we need to t
  3. Developers are not confident with new changes. There is a big risk that new changes will introduce a new bug or break data. We should avoid big or complex refactorings of the business logic while integrating tests.
 
  4. Application logic is tightly coupled with different parts.
->  Schedule regular review those points to track intiative performance.
+
+> Schedule regular review those points to track intiative performance.
 
 ## Solution Highoverview
 
@@ -59,7 +60,8 @@ Here are the most common problems which characterized legacy, which we need to t
  3. Avoid E2E pitfalls
 
  4. What to test and how to get small wins?
->  E2E tests are cheap and cheerful!
+
+> E2E tests are cheap and cheerful!
 
 ## Reproduce Test Environment
 
@@ -70,17 +72,17 @@ Before making the test environment consistent, let’s think about where we are 
 So you should set up a fast test environment for *CI/CD* first, and only after that think about how developers can have the same on the local machine.
 
 Most *CI/CD* allows testing pipelines from the local machine, which will reduce the scope of work.
->  Select any cloud CI/CD with a feature to run pipeline on local machine
+> Select any cloud CI/CD with a feature to run pipeline on local machine
 
 Today *CI/CD* uses containerization similar to *Docker Compose*, where you can define the test environment and all related services required for running it.
->  On CI/CD provide build and run tests
+> On CI/CD provide build and run tests
 
 ## Start from E2E tests
 
 Tight coupling of the components and limited knowledge of the whole business logic prevents us to use any *Unit* testing frameworks without much investment in the refactoring.
 
 The best tool which could be set up as a separate service is *E2E*. We do not need to inject in the middle of the request process. So you will add tests without changing business logic.
->  No 100% coverage goal. We will add minimum E2E tests to buy us some confidence for integrating Unit tests.
+> No 100% coverage goal. We will add minimum E2E tests to buy us some confidence for integrating Unit tests.
 
 PROs:
 
@@ -148,11 +150,11 @@ Train your system to do simple actions like form filling and submitting.
 
 Do not forget to have deterministic tests first
 
-## Go, get’em!
+## Go, get’em
 
 Avoid any hacks and tricks. You will get the first results from the first commit!
 
 Invest in the small wins, and you will find yourselves in a satisfied and stressless environment.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

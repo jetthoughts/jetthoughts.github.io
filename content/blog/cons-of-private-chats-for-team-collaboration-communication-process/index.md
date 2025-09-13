@@ -51,7 +51,7 @@ Based on such principles, the private chats and direct messages, that are not ac
 ## The only exception to the rule
 
 Sometimes there are situations when you need to use the direct message or call to chat with someone. In this case, after each private discussion, there should be a summary posted to a general channel with the discussion goals and decisions that were made and quick recaps.
->  *Sharing the communication onto the public channel help preventing a lot of blockers and bottlenecks in advance and maintaining a healthy environment within the team.*
+> *Sharing the communication onto the public channel help preventing a lot of blockers and bottlenecks in advance and maintaining a healthy environment within the team.*
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

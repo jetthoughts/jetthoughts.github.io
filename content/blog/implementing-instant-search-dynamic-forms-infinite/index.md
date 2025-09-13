@@ -26,12 +26,11 @@ Despite [Hotwire's](https://hotwired.dev/) growing popularity, many developers s
 
 ![interactive browse employees page](file_0.gif)
 
-
 ## 5-Minute Quick Start Guide
 
 For the impatient developers, here's the executive summary:
 
-1. **Create Search Form with Dynamic Fields**: Encapsulate search logic outside your controller 
+1. **Create Search Form with Dynamic Fields**: Encapsulate search logic outside your controller
 2. **Structure your HTML with Turbo Frames**: Wrap your search form and results table in frames
 3. **Add auto-submission with Stimulus**: Create a 5-line controller to debounce input events
 4. **Setup infinite scrolling**: Use auto-loading next pages with lazy loading turbo frames
@@ -105,6 +104,7 @@ end
 ```
 
 > **🧠 Why use a [Form Object](https://thoughtbot.com/ruby-science/introduce-form-object.html)?** Without this, your controller becomes a dumping ground for filter logic or your model gets bloated with scopes that only apply to this specific UI. Form objects give you:
+>
 > - **Testability**: Unit test filters without controller overhead
 > - **Reusability**: The same filter works across different views or APIs
 > - **Clean parameters**: Explicit whitelist prevents mass assignment vulnerabilities
@@ -257,6 +257,7 @@ HTML tables require special care with Turbo. You can't wrap `<tr>` elements dire
 ```
 
 > **🔍 Key Concept:** Notice our nested frame structure:
+>
 > - Outer frame `:categorized_employees` contains search + results
 > - Inner frame `:filtered_employees` holds just the table
 > - We use `turbo_cache: false` to prevent stale results
@@ -421,4 +422,3 @@ Tweet your solution to [@JetThoughts](https://x.com/jetthoughts) for a code revi
 - [Hotwire Official Documentation](https://hotwired.dev/)
 - [Stimulus Handbook](https://stimulus.hotwired.dev/handbook/introduction)
 - [Ruby on Rails Documentation](https://guides.rubyonrails.org/)
-

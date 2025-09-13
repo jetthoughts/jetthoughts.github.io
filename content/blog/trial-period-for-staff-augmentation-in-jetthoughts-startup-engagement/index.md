@@ -47,5 +47,5 @@ If you’re not completely satisfied, you won’t be billed. From there, we can 
 We understand that sometimes you can actually really forget about the ending of the Trial period. That’s why you’ll get a notification in two days before ending.
 
 Given the potential pitfalls, if you are considering using the Trial period with us for your next hire, feel free to contact us and discuss further.
->  *Ruslana is a Sales&Marketing Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *Ruslana is a Sales&Marketing Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

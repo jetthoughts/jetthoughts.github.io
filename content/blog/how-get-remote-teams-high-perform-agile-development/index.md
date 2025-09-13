@@ -45,7 +45,7 @@ Also, we have *Weekly High-Overview “Stand-up”*. Compared to daily stand up,
 
 **Tools:** [*Slack](https://slack.com)*
 
-### Good posts on how to do this right:
+### Good posts on how to do this right
 
 * [Slack Tips Tuesday: How a Developer’s Daily Update Should Look](https://x-team.com/blog/developer-daily-standup/)
 
@@ -59,7 +59,7 @@ Several lists will help you to be on the same page: *Roadmap*, *Backlog*, *Ready
 
 **Tools:** [*GitHub](https://github.com)*
 
-### Make it right by following:
+### Make it right by following
 
 * [Delivery Flow for Distributed Remote Teams](https://jtway.co/delivery-flow-for-distributed-remote-teams-5218828b0d1a)
 
@@ -79,7 +79,7 @@ To build *Roadmap* we ask questions like: where will you be in **3 weeks**, **3 
 
 **Tools:** [*GitHub](https://github.com)*
 
-### Do not forget to check:
+### Do not forget to check
 
 * [The 666 roadmap](https://blog.intercom.com/666-product-roadmap/)
 
@@ -93,7 +93,7 @@ We split our work into **2 days** size atomic units. This prevents bottlenecks a
 
 **Tools:** [CircleCI](https://circleci.com)
 
-### Learn more:
+### Learn more
 
 * [The Power of Small Wins](https://hbr.org/2011/05/the-power-of-small-wins)
 
@@ -109,7 +109,7 @@ Regular check-in is a good opportunity to select what is the matter now. It is m
 
 **Tools:** [Hangouts](https://hangouts.google.com/)
 
-### Hey, have you checked this:
+### Hey, have you checked this
 
 * [Atlassian’s Team Play: Retrospective](https://www.atlassian.com/team-playbook/plays/retrospective)
 
@@ -128,4 +128,4 @@ In the post we covered such techniques:
 * Monthly Retrospectives & Regular Feedback
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

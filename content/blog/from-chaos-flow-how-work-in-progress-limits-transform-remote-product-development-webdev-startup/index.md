@@ -39,6 +39,7 @@ Picture your brain as a computer. Every time you switch tasks, it needs to reloa
 The same happens to your development team. A developer deep in coding gets interrupted by an urgent bug fix. Twenty minutes later, they return to their original task. The code that was crystal clear now looks foreign. They spend precious minutes rebuilding their mental model.
 
 This constant task-switching creates a domino effect:
+
 - Quality drops as developers rush between tasks
 - Simple projects take weeks longer than planned
 - Team morale sinks as nothing seems to get done
@@ -111,6 +112,7 @@ Start tomorrow. Pick one team or process. Set a simple WIP limit. Watch what hap
 # The Bigger Picture
 
 WIP limits aren't just about managing tasks. They create space for:
+
 - Innovation
 - Quality work
 - Team growth
@@ -123,4 +125,3 @@ You can achieve the same results. Your remote teams can deliver better products,
 The choice is yours. Keep spinning plates until they crash. Or build a system that brings order to chaos.
 
 Take the first step. Your future self will thank you.
-

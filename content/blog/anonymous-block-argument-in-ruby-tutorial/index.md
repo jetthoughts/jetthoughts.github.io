@@ -54,4 +54,3 @@ irb(main):012> [1, 2, 3].each { it }
 In this case, it refers to the current element being iterated over.
 
 These features provide more flexibility and readability when working with blocks in Ruby. They allow for more concise code and reduce the need for explicit variable declarations.
-

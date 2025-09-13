@@ -10,6 +10,7 @@ Documentation for external integrations, APIs, and third-party service connectio
 ## Johnny Decimal Classification
 
 This area (80-89) contains documentation related to:
+
 - External API integrations
 - Third-party service connections
 - Data synchronization processes

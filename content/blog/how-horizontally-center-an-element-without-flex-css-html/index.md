@@ -21,6 +21,7 @@ metatags:
 slug: how-horizontally-center-an-element-without-flex-css-html
 ---
 Centered elements with Flex it is very easy to style, what about not use Flex?
+
 ```html
 <div class="wrapper">
   <div class="inner">Centered</div>
@@ -28,7 +29,9 @@ Centered elements with Flex it is very easy to style, what about not use Flex?
 ```
 
 ## Table
+
 It will make the inner element center horizontally and it works without setting a specific width.
+
 ```css
 .wrapper {
   display: table;
@@ -37,7 +40,9 @@ It will make the inner element center horizontally and it works without setting 
 ```
 
 ## Fixed width
+
 Need to apply this CSS to the inner. You should set any width less than the containing wrapper will work. The `margin: 0` auto is what does the actual centering.
+
 ```css
 .inner {
   max-width: 25%;
@@ -46,7 +51,9 @@ Need to apply this CSS to the inner. You should set any width less than the cont
 ```
 
 ## Display: Inline-Block
+
 `display: inline-block` makes the inner element into an inline element that can be centered with `text-align: center`
+
 ```css
 .wrapper {
   text-align: center;

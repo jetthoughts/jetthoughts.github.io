@@ -7,6 +7,7 @@ This document outlines the comprehensive design for implementing Hugo Pipes asse
 ## Current Asset Structure Analysis
 
 ### Current CSS Organization (87K+ total lines)
+
 - **Large Layout Files**: 590-layout.css (13,128 lines), multiple page-specific layouts
 - **Component Files**: component-bundle.css (2,773 lines), navigation.css (439 lines)  
 - **Theme Files**: theme-main.css (3,643 lines), base-layout.css (2,892 lines)
@@ -14,6 +15,7 @@ This document outlines the comprehensive design for implementing Hugo Pipes asse
 - **Small Components**: 35 files under 200 lines each
 
 ### Current Processing System
+
 - **CSS Processor**: `/themes/beaver/layouts/partials/assets/css-processor.html`
   - Concatenation via `resources.Concat`
   - PostCSS processing with environment-aware optimization
@@ -26,6 +28,7 @@ This document outlines the comprehensive design for implementing Hugo Pipes asse
   - Fingerprinting and PostProcess for production
 
 ### Current PostCSS Configuration
+
 ```javascript
 // Smart development optimization
 const isDevelopment = process.env.HUGO_ENVIRONMENT === "development";
@@ -44,6 +47,7 @@ plugins: [
 ### Phase 1: Core Pipeline Setup
 
 #### 1.1 Asset Resource Organization
+
 ```
 assets/
 ├── scss/
@@ -76,6 +80,7 @@ assets/
 ```
 
 #### 1.2 Master SCSS Structure
+
 ```scss
 // main.scss - Single source of truth
 @import 'variables';
@@ -107,6 +112,7 @@ assets/
 #### 2.1 Critical CSS Extraction Strategy
 
 **Implementation Approach**:
+
 1. **Above-the-fold CSS Identification**
    - Header/navigation styles
    - Hero section styles
@@ -114,6 +120,7 @@ assets/
    - Essential responsive breakpoints
 
 2. **Critical CSS Partial Creation**
+
 ```html
 <!-- themes/beaver/layouts/partials/assets/critical-css.html -->
 {{- $critical := resources.Get "scss/critical.scss" | toCSS | minify | fingerprint -}}
@@ -121,6 +128,7 @@ assets/
 ```
 
 3. **Non-Critical CSS Lazy Loading**
+
 ```html
 <!-- Load non-critical CSS asynchronously -->
 {{- $nonCritical := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint -}}
@@ -131,6 +139,7 @@ assets/
 #### 2.2 Asset Bundle Strategy
 
 **Page-Specific Bundles**:
+
 ```go
 {{/* Homepage Bundle */}}
 {{- $homepageCSS := slice
@@ -158,6 +167,7 @@ assets/
 #### 2.3 JavaScript Bundling with Hugo Pipes
 
 **Modern JS Processing**:
+
 ```go
 {{/* Main JavaScript Bundle */}}
 {{- $js := resources.Get "js/main.js" 
@@ -175,11 +185,13 @@ assets/
 #### 3.1 Asset Preprocessing Pipeline
 
 **SCSS Processing Chain**:
+
 ```
 SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint → PostProcess
 ```
 
 **Environment-Specific Optimization**:
+
 ```go
 {{/* Development: Fast compilation */}}
 {{- if eq hugo.Environment "development" -}}
@@ -199,6 +211,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
 #### 3.2 Image Processing Pipeline
 
 **Responsive Image Generation**:
+
 ```go
 {{/* Generate multiple image sizes */}}
 {{- $image := resources.Get "images/hero.jpg" -}}
@@ -218,6 +231,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
 #### 4.1 Dynamic Asset Loading
 
 **Conditional CSS Loading**:
+
 ```go
 {{/* Load page-specific CSS only when needed */}}
 {{- if eq .Type "services" -}}
@@ -229,6 +243,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
 #### 4.2 Asset Versioning & Cache Optimization
 
 **Fingerprinting Strategy**:
+
 ```go
 {{/* Different hashing for different environments */}}
 {{- if hugo.IsProduction -}}
@@ -241,6 +256,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
 ## Implementation Phases
 
 ### Phase 1: Foundation (Week 1)
+
 1. **Asset Restructuring**
    - Move existing CSS to SCSS structure
    - Create master import files
@@ -252,6 +268,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
    - Implement inline critical CSS
 
 ### Phase 2: Optimization (Week 2)
+
 1. **Bundle Strategy**
    - Page-specific CSS bundles
    - JavaScript module bundling
@@ -263,6 +280,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
    - Autoprefixer setup
 
 ### Phase 3: Advanced Features (Week 3)
+
 1. **Image Processing**
    - Responsive image pipeline
    - WebP conversion
@@ -276,16 +294,19 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
 ## Performance Targets
 
 ### Build Time Optimization
+
 - **Current Build Time**: ~45-60 seconds
 - **Target Build Time**: 18-27 seconds (40-60% reduction)
 - **Development Builds**: <10 seconds
 
 ### Asset Size Optimization
+
 - **CSS Size Reduction**: 30-50% via tree-shaking and bundling
 - **JavaScript Bundling**: 20-40% reduction via code splitting
 - **Image Optimization**: 40-70% size reduction via modern formats
 
 ### Core Web Vitals Improvements
+
 - **LCP Improvement**: Critical CSS → sub-1.5s LCP target
 - **CLS Optimization**: Proper font loading → <0.1 CLS
 - **FID Enhancement**: Optimized JS loading → <100ms FID
@@ -293,6 +314,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
 ## Migration Strategy
 
 ### Backward Compatibility Plan
+
 1. **Dual Processing Mode**
    - Keep existing CSS processors during migration
    - Gradually migrate page by page
@@ -304,6 +326,7 @@ SCSS Source → Hugo toCSS → PostCSS → PurgeCSS → Minify → Fingerprint �
    - Rollback capability at each phase
 
 ### Testing Strategy
+
 1. **Visual Regression Testing**
    - Screenshot comparison tests
    - Cross-browser compatibility
@@ -348,6 +371,7 @@ themes/beaver/
 ## Development Workflow
 
 ### Build Scripts Enhancement
+
 ```bash
 #!/bin/bash
 # Enhanced hugo-build-pipes
@@ -362,6 +386,7 @@ hugo --environment production \
 ```
 
 ### Development Mode Optimizations
+
 ```bash
 # Fast development builds
 hugo server \
@@ -376,6 +401,7 @@ hugo server \
 ## Success Metrics
 
 ### Quantitative Metrics
+
 - Build time reduction: 40-60%
 - CSS bundle size reduction: 30-50%  
 - First Contentful Paint improvement: 25-40%
@@ -383,6 +409,7 @@ hugo server \
 - Cumulative Layout Shift reduction: 50-70%
 
 ### Qualitative Metrics
+
 - Developer experience improvement
 - Maintainability enhancement
 - Code organization clarity
@@ -391,6 +418,7 @@ hugo server \
 ## Risk Assessment & Mitigation
 
 ### High-Risk Items
+
 1. **CSS Cascade Changes**: Risk of styling breakage
    - *Mitigation*: Comprehensive visual regression testing
    - *Rollback*: Keep existing CSS as fallback
@@ -400,6 +428,7 @@ hugo server \
    - *Rollback*: Revert to existing processors
 
 ### Medium-Risk Items
+
 1. **Performance Regression**: Risk of worse performance
    - *Mitigation*: Continuous performance monitoring
    - *Rollback*: Performance-based rollback triggers

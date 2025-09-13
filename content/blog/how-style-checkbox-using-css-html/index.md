@@ -21,12 +21,14 @@ metatags:
 slug: how-style-checkbox-using-css-html
 ---
 In this post I’l show you exactly how to make awesome checkboxes with just CSS.
+
 ```html
 <div>
   <input id="first_name" type="checkbox" checked="checked">
   <label for="first_name">First Name</label>
 </div>
 ```
+
 Let’s take a few simple steps:
 
 - Hide the browser’s default checkbox.
@@ -36,6 +38,7 @@ Let’s take a few simple steps:
 - Show or hide the checkmark when checked.
 
 ## Hide the browser’s default checkbox
+
 ```css
 input {
   position: absolute;
@@ -46,6 +49,7 @@ input {
 ```
 
 ## Create a custom checkbox
+
 ```css
 label {
   position: relative;
@@ -68,6 +72,7 @@ label:before {
 ```
 
 ## On mouse-over, add a darkly on 10% background color
+
 ```css
 label:hover:before {
   background-color: #1AE6E6;
@@ -75,6 +80,7 @@ label:hover:before {
 ```
 
 ## Style the checkmark/indicator
+
 ```css
 label:after {
   content: '';
@@ -91,6 +97,7 @@ label:after {
 ```
 
 ## Show or hide the checkmark when checked
+
 ```css
 input:checked + label:after {
   opacity: 1;

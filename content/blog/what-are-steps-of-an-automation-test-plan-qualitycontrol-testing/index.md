@@ -69,4 +69,3 @@ KPIs are indicators, not end-states. They indicate where strong and weak points 
 ![Photo by [Bruno Nascimento](https://unsplash.com/@bruno_nascimento?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/steps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 
 If you enjoyed this post, we recommend reading this one **[Onboarding Tests into Legacy Project](https://jetthoughts.com/blog/onboarding-tests-into-legacy-project-testing-startup/)**
-

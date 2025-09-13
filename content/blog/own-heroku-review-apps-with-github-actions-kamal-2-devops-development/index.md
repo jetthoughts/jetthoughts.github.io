@@ -28,7 +28,7 @@ However, Heroku Review Apps have limitations. They can be expensive and may not 
 
 ## The Problem
 
-Heroku Review Apps are useful but have limitations. They can be expensive and may not fit all needs. In our context, we have a limited number of servers and need to use them efficiently. If you use GitHub, Kamal 2, and a VPS, you might want a similar workflow. 
+Heroku Review Apps are useful but have limitations. They can be expensive and may not fit all needs. In our context, we have a limited number of servers and need to use them efficiently. If you use GitHub, Kamal 2, and a VPS, you might want a similar workflow.
 
 ## Overview of the Solution
 
@@ -36,7 +36,7 @@ We will use GitHub Actions to automate server assignment and deployment of Revie
 
 For a detailed guide on setting up auto-deployment from GitHub Actions with Kamal 2, check out our previous post: [Automate Your Deployments with Kamal 2 and GitHub Actions](https://jetthoughts.com/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).
 
-### We'll divide the automation into three steps:
+### We'll divide the automation into three steps
 
 1. Assign a server to each PR.
 2. Deploy the Review App.
@@ -238,4 +238,3 @@ This manual step helps keep servers available.
 Using GitHub Actions and Kamal 2, we can automate deployment like Heroku Review Apps. While this is the simplest version, more advanced solutions can provision servers on-demand using tools like Terraform. This setup is scalable, cost-effective, and customizable. It integrates your GitHub workflows with your infrastructure.
 
 Automation simplifies your workflow. It lets you focus on developing great features. **Try out these scripts and see how they can improve your development process.**
-

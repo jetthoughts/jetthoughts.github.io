@@ -29,4 +29,3 @@ I hear some version of that quote every couple of weeks. Same melody, different 
 Releases feel like a wedding reception conga line: noisy, everyone bumping into each other, nobody sure who’s leading. Releases feel like a wedding reception conga line: noisy, everyone bumping into each other, nobody sure who’s leading.
 
 Below is how we help teams like that settle the rhythm without losing the groove. No silver bullets. Just a handful of nudges that compound fast.
-

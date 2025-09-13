@@ -36,9 +36,9 @@ The conversation around AI often swings between two extremes: it’s either over
 One of the first areas where AI is making a noticeable impact is in customer service. We’ve all had frustrating experiences with customer support, whether it’s Xfinity, Verizon, or United Airlines. These interactions are notoriously bad, and AI is stepping in to improve them. While you might not notice these changes immediately, they are happening behind the scenes.
 
 *   Why AI in Customer Service?
-    *   It addresses a significant pain point in customer interactions.
-    *   It’s competing against a system that is already failing.
-    *   Many companies are hesitant to promote their AI solutions due to job concerns and potential backlash from bad press.
+  *   It addresses a significant pain point in customer interactions.
+  *   It’s competing against a system that is already failing.
+  *   Many companies are hesitant to promote their AI solutions due to job concerns and potential backlash from bad press.
 
 ### Developers and AI Tools
 

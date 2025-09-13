@@ -20,7 +20,7 @@ metatags:
   image: cover.jpeg
 slug: services-tools-automatize-development-for-remote-teams-workflow-automation
 ---
-> ### We save a lot of time on development and create better products due to well-formed workflow. Tools and services that help us to implement the workflow we will describe below.
+> ### We save a lot of time on development and create better products due to well-formed workflow. Tools and services that help us to implement the workflow we will describe below
 
 ![Photo by [Frederic Köberl](https://unsplash.com/@internetztube?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 
@@ -104,5 +104,5 @@ We developed a gem [jt_tools](https://github.com/jetthoughts/jt_tools) that will
 
 You will have everything pre-setup and ready for use.
 
-**Dmitry Gorodnichy ***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/gorodnichy/)* *or [GitHub](https://github.com/dgorodnichy).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+**Dmitry Gorodnichy***is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/gorodnichy/)* *or [GitHub](https://github.com/dgorodnichy).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

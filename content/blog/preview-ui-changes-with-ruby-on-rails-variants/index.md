@@ -24,16 +24,18 @@ When implementing new design for a live application we usually don’t want our 
 Here's one of the simplest ways to do it without introducing complex feature switching mechanisms.
 
 ## The Rails way
+
 Fortunately Ruby on Rails got us covered on this one with the help of [view variants](https://guides.rubyonrails.org/layouts_and_rendering.html#the-variants-option). In short, it allows us to define several different view templates for the same controller action, and determine which one should be rendered on the controller level.
 
-
 Let's say we have a Dashboard#show and want to change the way data is presented. Then we need to create a new view `show.html+redesign.erb`, so we end up with two views for the same action:
+
 ```ruby
 app/views/dashboard/show.html.erb
 app/views/dashboard/show.html+redesign.erb
 ```
 
 To render dashboard with new design we can explicitly pass the variant name to the action renderer:
+
 ```ruby
 def show
   render variants: [:redesign]
@@ -41,6 +43,7 @@ end
 ```
 
 But since we want it on demand only and don't want to affect other users, we need a way to switch it on/off. We can do that by requiring users to pass a preview parameter with their request:
+
 ```ruby
 def show
   render variants: [:redesign] if params[:preview]
@@ -52,6 +55,7 @@ end
 Let's extract this into a concern so it'll be easier to reuse for other pages, and also we want to make as little as possible modifications of the exiting code.
 
 Also we can store the preview flag in the session, so that users won't have to pass the `preview` param with each request.
+
 ```ruby
 module RedesignPreview
   extend ActiveSupport::Concern
@@ -82,6 +86,7 @@ end
 ```
 
 And then use it in our `DashboardController` enabling redesign only for `#show` action:
+
 ```ruby
 class DashboardController < ApplicationController
   include RedesignPreview
@@ -91,6 +96,7 @@ end
 ```
 
 Now to preview redesign users can pass the `preview` parameter and reset back to the usual:
+
 ```
 http://example.com/dashboard?preview=1 # to enable preview
 http://example.com/dashboard?preview_reset=1 # to disable preview
@@ -113,6 +119,7 @@ end
 ```
 
 Also, we can change our `RedesignPreview` concern a bit to make it more flexible and support different preview variants:
+
 ```ruby
 module RedesignPreview
   extend ActiveSupport::Concern
@@ -134,7 +141,9 @@ module RedesignPreview
   ...
 end
 ```
+
 And pass variant as a parameter:
+
 ```ruby
 with_redesign_preview only: :show, 
                       if: :redesign_preview?, 

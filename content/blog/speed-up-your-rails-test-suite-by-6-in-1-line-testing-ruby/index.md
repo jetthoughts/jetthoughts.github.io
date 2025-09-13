@@ -76,8 +76,10 @@ end
 ```
 
 And then to run the tests with logging enabled, you execute command:
+
 ```
-    $ RAILS_ENABLE_TEST_LOG=1 rake test
+    RAILS_ENABLE_TEST_LOG=1 rake test
 ```
+
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

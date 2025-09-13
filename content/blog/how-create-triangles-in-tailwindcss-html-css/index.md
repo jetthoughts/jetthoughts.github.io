@@ -77,10 +77,3 @@ Triangle is one of the simplest shapes in geometry. You can draw it with three s
 ![Image description](file_3.png)
 
 In this post, we showed examples of a simple equilateral triangle. If you need a triangle with different sides, you can play with the width of the border `[*px]`.
-
-
-
-
-
-
-

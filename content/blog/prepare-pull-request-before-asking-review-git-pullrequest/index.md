@@ -81,11 +81,10 @@ Check for the green lights from all the external services. All tools used for yo
 
 ## Use call to action
 
-To speed up verification, authors should lead their pull requests. Use clear calls to action like "Please review" or "Please verify," instead of "Done." Route requests to the reviewer for personal attention. Use preferred communication channels to echo your request. 
+To speed up verification, authors should lead their pull requests. Use clear calls to action like "Please review" or "Please verify," instead of "Done." Route requests to the reviewer for personal attention. Use preferred communication channels to echo your request.
 
 > Also, check the review's progress and remind the reviewer if needed.
 
 ## The motivation to do the best
 
 This checklist helps coworkers avoid bad code and mistakes, saving time during reviews. Issues caught by reviewers lower team productivity. Honest feedback motivates us to improve our code.
-

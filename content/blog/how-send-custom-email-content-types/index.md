@@ -21,6 +21,7 @@ metatags:
 slug: how-send-custom-email-content-types
 ---
 ## Introduction
+
 This comprehensive guide is designed for Ruby on Rails developers who need to implement custom email content types in their applications. We'll demonstrate how to enhance your Ruby on Rails development skills by implementing AMP for Email as an example, though these techniques apply to any custom content type you might need in your projects.
 
 ![Image description](file_0.png)
@@ -124,6 +125,7 @@ When implementing custom email content types in your Ruby on Rails projects, fol
 1. **Implement Robust Fallbacks**: Professional Rails developers always provide both HTML and plain text versions of all emails to ensure deliverability for clients that don't support your custom format.
 
 2. **Optimize Content Type Order**: A key technique used by experienced Ruby on Rails developers is to specify the `parts_order` in your mailer to control which version clients prioritize:
+
    ```ruby
    parts_order: %w[text/plain text/x-amp-html text/html]
    ```
@@ -151,12 +153,14 @@ format.amp_html { render(variants: [:amp]) }
 For effective email functionality development, experienced Ruby on Rails developers rely on these debugging techniques:
 
 1. **Verify Email Content Types**: Ensure proper format implementation with this Rails console command:
+
    ```ruby
    email = ExampleMailer.multi_format_email(user)
    email.parts.map(&:content_type)
    ```
 
 2. **Configure Development Environment for Email Testing**: Set up your Rails development environment to preview emails:
+
    ```ruby
    # config/initializers/development.rb
    config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/previews"
@@ -167,6 +171,7 @@ For effective email functionality development, experienced Ruby on Rails develop
 ## Advanced Tips for Ruby on Rails Developers
 
 ### Performance Optimization
+
 Experienced developers know that email rendering can impact application performance. Consider using background jobs for email generation:
 
 ```ruby
@@ -185,6 +190,7 @@ SendCustomEmailJob.perform_later(user.id)
 ```
 
 ### Development Environment Setup
+
 For a smooth development workflow, configure your Rails environment:
 
 ```ruby

@@ -24,7 +24,7 @@ While you are struggling with breaking into the market; small bugs, UX problems,
 ![Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-wearing-black-framed-eyeglasses-7534779/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)](file_0.jpeg)
 
 And for start over there is no time, there are obligations which you need to deliver now.
->  So what can you do now, just after reading this post? How do make things smoother and make deliveries stable and predictable?
+> So what can you do now, just after reading this post? How do make things smoother and make deliveries stable and predictable?
 
 ## Why is all that happening?
 
@@ -83,4 +83,4 @@ Laser Focus will make sure that our solution will provide the best experience fo
 Applying those the most common Lean / Kanban practices will give you and the **team satisfaction in 2 weeks** already.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -57,4 +57,3 @@ By setting the `viteBinPath` to your shim bin, you're instructing _Vite Ruby_ to
 ## The Results: A Faster Workflow
 
 The impact of this integration is tangible. Migrating to Bun has slashed asset processing time **by 1-2 minutes**, from installing dependencies to compiling assets. This optimization is particularly crucial for teams practicing _Continuous Delivery_, where quicker builds can significantly boost overall productivity.
-

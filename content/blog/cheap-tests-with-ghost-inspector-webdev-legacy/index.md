@@ -61,4 +61,3 @@ The extension works by recording your actions in the browser, such as clicking a
 ### Benefits for the legacy code
 
 This service allowed us to cover the most critical public cases. It took less time than writing new tests for old code from scratch, which was enough to ensure that new changes would not break the old features.
-

@@ -6,18 +6,16 @@ info:
   phone: "+1 754 216 9568"
   email: "info@jetthoughts.com"
   address: "Remote-first company with offices in Ukraine and USA"
-  
   # Industry recognition and trust signals
   recognition:
     - "Top-rated on Clutch.co (4.8/5 rating)"
     - "GoodFirms certified development company"
     - "Glassdoor top employer rating"
     - "15+ industry awards and recognitions"
-  
   certifications:
     - "ISO 9001:2015 Quality Management"
-    - "GDPR Compliance Certified"
-    - "SOC 2 Type II Compliant"
+    - "GDPR Compliance Framework Implementation"
+    - "SOC 2 Type II Compliant (2024 attestation period)"
 
 # Trust signals and external recognition
 trust_signals:
@@ -26,7 +24,6 @@ trust_signals:
       issuer: "Clutch.co"
       year: "2023"
       link: "https://clutch.co/developers"
-    
     - name: "Excellence in Software Development"
       issuer: "GoodFirms"
       year: "2023"
@@ -42,19 +39,17 @@ trust_signals:
       publication: "Tech Industry Review"
       link: "#"
       date: "2023-09-15"
-    
     - title: "Rising Stars in Software Development"
       publication: "Development Weekly"
-      link: "#" 
+      link: "#"
       date: "2023-06-20"
 
   partnerships:
     - name: "AWS Partner Network"
       type: "Technology Partner"
       link: "https://aws.amazon.com/"
-    
     - name: "GitHub Partner"
-      type: "Development Partner" 
+      type: "Development Partner"
       link: "https://github.com/"
     
     - name: "Ruby on Rails Core Contributors"

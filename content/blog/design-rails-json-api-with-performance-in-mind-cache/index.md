@@ -20,7 +20,7 @@ metatags:
   image: cover.png
 slug: design-rails-json-api-with-performance-in-mind-cache
 ---
-> ### Caching can reduce load time and increase the throughput of your API endpoints without in-depth optimization. But there are certain design principles you should follow to make your endpoints cacheable and gain all benefits caching can provide for your app.
+> ### Caching can reduce load time and increase the throughput of your API endpoints without in-depth optimization. But there are certain design principles you should follow to make your endpoints cacheable and gain all benefits caching can provide for your app
 
 ![](file_0.png)
 
@@ -103,4 +103,4 @@ For that just wrap response rendering with [stale?](https://apidock.com/rails/Ac
 Caching is a great way to increase the performance of your API. But it also adds an extra layer of complexity and a responsibility to keep the cache fresh and consistent.
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

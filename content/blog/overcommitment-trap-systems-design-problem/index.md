@@ -21,32 +21,33 @@ Traditional thinking treats overcommitment as a willpower issue. But what if it'
 
 ![man with multiple distractions](file_0.png)
 
-## Reframing the Dynamic:
+## Reframing the Dynamic
+
 Teams under pressure don't just take on more work—they fundamentally alter their decision-making architecture. The system shifts from "optimize for outcomes" to "optimize for activity." This creates a feedback loop where busyness becomes the primary signal of progress.
 
-## The Underlying Pattern:
+## The Underlying Pattern
 
 - **Input overload** → Context switching costs compound
 - **Cognitive load increases** → Decision quality decreases
 - **Local optimizations** → Global system performance degrades
 - **Short-term reactive mode** → Strategic work gets deprioritized
 
-## Systems Lens:
+## Systems Lens
 
 Think of team capacity not as a bucket you fill, but as a network's bandwidth. When you exceed optimal load, you don't get proportional output—you get exponentially diminishing returns plus system instability.
 
-## Design Principles for Pressure:
+## Design Principles for Pressure
 
 - **Explicit capacity modeling**: Make workload visible and measurable
 - **Default to subtraction**: Build "what stops" into planning rituals  
 - **Adaptive throttling**: Design automatic pressure release mechanisms
 - **Local autonomy**: Let teams self-regulate based on real-time feedback
 
-## The Meta-Challenge:
+## The Meta-Challenge
 
 Organizations often reward overcommitment behavior while simultaneously wanting sustainable performance. This creates a classic misaligned incentive structure.
 
-## Practical Takeaway:
+## Practical Takeaway
 
 Treat overcommitment as a system architecture problem, not a people problem. Design organizational constraints that make saying "no" the easier path.
 

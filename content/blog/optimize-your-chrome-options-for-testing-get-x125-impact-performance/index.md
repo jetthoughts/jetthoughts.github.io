@@ -24,7 +24,6 @@ slug: optimize-your-chrome-options-for-testing-get-x125-impact-performance
 
 Are you looking to supercharge your browser tests and optimize their speed? By fine-tuning your Chrome browser options, you can significantly enhance the performance of your automated tests.
 
-
 ![Image description](file_0.jpeg)
 
 Below are some Chrome options that helped me get x1.25 improvement:
@@ -172,4 +171,3 @@ end
 ## Disclaimer
 
 Remember that not all of these options may be relevant to your specific testing needs, so evaluating their impact on your test environment and application behavior is essential. Happy optimizing! 🚀💨
-

@@ -23,7 +23,9 @@ slug: simplifying-payments-with-pay-gem-guide-using-stripe-in-rails-ruby
 Payment integration can be challenging when building web applications. The Pay gem makes handling subscriptions and payments a whole lot easier in Rails applications. It integrates applications with Stripe, Paddle, Braintree, or Lemon Squeezy to manage payments. In this article, we will go through one and, in practice, explain how it works and then set it up using a simple example.
 
 ## What is Pay?
+
 The Pay gem is a library for handling payments and subscriptions in Rails. It abstracts many common tasks, such as:
+
 - Creating and managing customer records on Stripe.
 - Handling subscriptions, invoices, and payment methods.
 - Managing webhooks for real-time payment updates.
@@ -31,17 +33,21 @@ The Pay gem is a library for handling payments and subscriptions in Rails. It ab
 Instead of writing custom code to interact with the Stripe API, Pay provides a Rails-friendly interface that saves time and reduces complexity.
 
 ## How Does Pay Work?
+
 Pay integrates with your Rails models to handle payments and subscriptions. For example, you can add a pay_customer relationship to your User model, allowing each user to manage their payments. Pay also listens for webhooks from Stripe, so your app stays updated when payments are made or subscriptions change.
 
 ## Setting Up Pay for Stripe
+
 Here’s how to get started:
 
 #### 1. Install the Gem
+
 Add Pay to your Gemfile and install it:
 
 ```ruby
 gem 'pay'
 ```
+
 Run the `bundle install` command to install it:
 
 ```bash
@@ -49,12 +55,14 @@ bundle install
 ```
 
 #### 2. Configure Pay
+
 Run the generator to set up Pay’s migrations and configuration:
 
 ```bash
 rails generate pay:install  
 rails db:migrate  
 ```
+
 Edit the generated `config/initializers/pay.rb` file to enable Stripe:
 
 ```ruby
@@ -64,6 +72,7 @@ Pay.setup do |config|
   config.default_plan_name = "default-plan"
 end
 ```
+
 Set your Stripe keys in your environment variables or `credentials.yml.enc`:
 
 ```yaml
@@ -74,6 +83,7 @@ stripe:
 ```
 
 #### 3. Connect Pay to Your Models
+
 In your User model, add the `Pay::Billable` module with using `pay_customer` method:
 
 ```ruby
@@ -81,14 +91,17 @@ class User < ApplicationRecord
   pay_customer
 end
 ```
+
 This allows users to have payment methods, subscriptions, and invoices.
 
 ### 4. Set Up Stripe Webhooks
+
 To handle real-time updates from Stripe, set up a webhook endpoint. Run this command:
 
 ```bash
 rails generate pay:webhooks
 ```
+
 This creates a `Pay::Webhooks::StripeController` that processes Stripe events. Register the webhook URL in the Stripe dashboard, typically at:
 
 ```ruby
@@ -96,9 +109,11 @@ https://your-app.com/pay/webhooks/stripe
 ```
 
 ## Example: Creating a Subscription
+
 Here’s a simple example of how to create a subscription:
 
 #### 1. Add a Button for Payment
+
 In your view, include a form to collect a payment method:
 
 ```erb
@@ -107,9 +122,11 @@ In your view, include a form to collect a payment method:
   <button type="submit">Submit Payment</button>
 <% end %>
 ```
+
 Stripe provides JavaScript tools to handle card input fields securely.
 
 #### 2. Attach a Payment Method to the User
+
 In the controller:
 
 ```ruby
@@ -121,7 +138,9 @@ class StripeController < ApplicationController
   end
 end
 ```
+
 #### 3. Create a Subscription
+
 Now, you can create a subscription for the user:
 
 ```ruby
@@ -134,6 +153,7 @@ end
 ```
 
 ## How Pay Keeps Things Simple
+
 Instead of directly interacting with the Stripe API, Pay handles the heavy lifting. It:
 
 - Saves payment methods and creates customers on Stripe automatically.
@@ -141,6 +161,7 @@ Instead of directly interacting with the Stripe API, Pay handles the heavy lifti
 - Ensures webhooks update your app without custom code.
 
 ## Conclusion
+
 The Pay gem simplifies integrating Stripe with Rails. By abstracting common payment tasks, it lets you focus on your app's features instead of payment processing details.
 
 If you’re starting with payments in Rails, consider using Pay—it’s designed to save you time and make your code cleaner.

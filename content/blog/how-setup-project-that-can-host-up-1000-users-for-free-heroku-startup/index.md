@@ -125,4 +125,4 @@ When dealing with image processing, we can use [S3](https://aws.amazon.com/s3) a
 I recommend using [Cloudinary](https://cloudinary.com) as an image management solution. Once uploaded to Cloudinary, images are stored on Cloudinary’s Amazon S3 account. If you wish, you can automatically back your images to your own S3 as well. As an alternative service, you can use [Blitline](https://www.blitline.com) for image processing.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

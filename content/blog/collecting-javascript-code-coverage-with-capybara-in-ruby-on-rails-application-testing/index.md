@@ -27,7 +27,7 @@ slug: collecting-javascript-code-coverage-with-capybara-in-ruby-on-rails-applica
 We want to be sure that all code responsible for key user journey scenarios of our app is covered with tests.
 
 For example, there is a Ruby on Rails application that uses [Webpacker](https://github.com/rails/webpacker) and has JavaScript files that are covered by the system tests. [Capybara](https://github.com/teamcapybara/capybara) is used as the system testing tool.
->  How to get code coverage combining the results of system and unit tests?
+> How to get code coverage combining the results of system and unit tests?
 
 ### Inject getting coverage for JavaScript code
 
@@ -41,11 +41,11 @@ The Istanbul Instrumenter Loader will be run on the Webpack compilation stage fo
 
 ### Getting coverage after testing in the browser
 
-After running the system test, the browser stores the coverage value in the global variable *_coverage_**. ***We need to extract from the page and save it.
+After running the system test, the browser stores the coverage value in the global variable **coverage***. ***We need to extract from the page and save it.
 
  <iframe src="https://medium.com/media/f80bf6e4f0cad89401e3d9aaa0494b3a" frameborder=0></iframe>
 
-This helper will store the coverage value from the ***_coverage_*** variable into the JSON file. We need to call it after each system test.
+This helper will store the coverage value from the ****coverage**** variable into the JSON file. We need to call it after each system test.
 
 ### Aggregate the coverage values
 
@@ -82,4 +82,4 @@ And that’s all — we just got the JavaScript coverage without writing any act
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

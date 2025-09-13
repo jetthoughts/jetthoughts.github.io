@@ -33,6 +33,7 @@ Let me share what I've seen work.
 ![fish with problems](file_0.png)
 
 Every week your team stays misaligned costs you:
+
 - Developer hours spent on unused features
 - Market opportunities slipping away
 - Budget draining into the wrong priorities
@@ -40,6 +41,7 @@ Every week your team stays misaligned costs you:
 Like a garden choked by weeds, your product loses vital nutrients to things that don't matter.
 
 > Pause and Consider:
+>
 > - What's your weekly burn rate?
 > - How many features have you built that users rarely touch?
 > - What would focusing on the right things be worth?
@@ -61,21 +63,25 @@ One founder I know saved $50,000 in just two months by cutting features that wer
 Like planting a garden, Lean Inception requires an initial investment of care. But the returns are profound:
 
 **Day 1: Planting Seeds**
+
 - Clear vision that everyone understands
 - Aligned team moving in one direction
 - Focused energy on what matters
 
 **Day 2: Nurturing Growth**
+
 - User patterns revealed
 - Waste eliminated before it starts
 - Natural pathways identified
 
 **Day 3: Harvesting Wisdom**
+
 - Core features selected with confidence
 - Resources allocated efficiently
 - Clear path to market value
 
 **Day 4: Planning Next Growth**
+
 - Measurable success markers
 - Actionable next steps
 - Team roles clarified
@@ -85,11 +91,13 @@ Like planting a garden, Lean Inception requires an initial investment of care. B
 Sarah's story shows the tangible impact:
 
 Before Lean Inception:
+
 - 6 months of scattered development
 - $120,000 spent on unused features
 - Team confusion and stress
 
 After four days of Lean Inception:
+
 - Development time cut by 40%
 - Core features launched in 8 weeks
 - First paying customers within 3 months
@@ -99,12 +107,14 @@ She didn't just save money. She created momentum.
 ## The Natural Return on Investment
 
 Think about your current development costs:
+
 - Developer salaries
 - Project delays
 - Feature rework
 - Lost market opportunities
 
 Now imagine:
+
 - Teams aligned on priorities
 - Features users actually want
 - Faster time to market
@@ -126,6 +136,7 @@ The framework works because it follows natural laws of growth. No forcing. No pu
 ## Why This Matters Now
 
 In today's market:
+
 - Resources are precious
 - Time is critical
 - Competition is fierce
@@ -135,6 +146,7 @@ You can't afford to guess. You need a proven path.
 ## The Investment That Pays Back
 
 Consider the cost of not acting:
+
 - How many more features will you build that no one uses?
 - How many more weeks will your team spend misaligned?
 - How much longer will you wait to see real results?
@@ -152,6 +164,7 @@ You have three options:
 Like watching a garden grow, you'll see results emerge naturally. But unlike a garden, these results show up in your bottom line.
 
 > Pause and Consider:
+>
 > - What would 40% faster development mean for your business?
 > - How would clear direction change your team's productivity?
 > - What's the cost of waiting another month?
@@ -165,4 +178,3 @@ Every successful product starts with a moment of decision. This is yours.
 1. Measurable results.
 
 Your product garden awaits. Time to let it thrive.
-

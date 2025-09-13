@@ -29,7 +29,6 @@ A part-time product manager is crucial for your startup's success. They help by:
 - **Reviewing Opportunities**: They look at market trends and competitors.
 - **Prioritizing Features**: They decide which features are most important.
 
-
 ### Full-stack Developers
 
 You need two full-stack developers who know Ruby on Rails or Laravel. Look for these traits:
@@ -39,7 +38,6 @@ You need two full-stack developers who know Ruby on Rails or Laravel. Look for t
 - **Async Updates**: Regular updates via Slack or email keep everyone in sync.
 - **Small Chunks Delivery**: Deliver work in small parts for quick feedback.
 
-
 ## Daily Releases Matter
 
 Daily releases are key to keeping momentum:
@@ -47,7 +45,6 @@ Daily releases are key to keeping momentum:
 1. **Get Feedback Fast**: Quick user feedback helps fix issues early.
 1. **High Quality**: Smaller changes make it easier to spot errors.
 1. **Boost Morale**: Seeing daily progress keeps the team motivated.
-
 
 ## Structuring Your Team
 
@@ -61,7 +58,6 @@ To get the best from your remote team:
 1. Have daily stand-up meetings to stay aligned.
 1. Do peer code reviews to ensure quality.
 1. Keep detailed documentation of all project aspects.
-
 
 ## Conclusion
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fast development server with optimal settings for JetThoughts site
 
-set -e
+set -euo pipefail
 
 # Colors for output
 RED='\033[0;31m'
@@ -87,7 +87,7 @@ if ! command -v hugo &> /dev/null; then
 fi
 
 # Check if port is available
-if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null; then
+if lsof -Pi ":$PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
     echo -e "${YELLOW}Warning: Port $PORT is already in use${NC}" >&2
     echo "Please choose a different port with -p/--port option"
     exit 1

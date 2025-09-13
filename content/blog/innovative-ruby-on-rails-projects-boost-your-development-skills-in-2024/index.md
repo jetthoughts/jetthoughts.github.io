@@ -60,7 +60,7 @@ Developing a social media app with Rails is both fun and educational. You'll lea
 *   Implement real-time chat features
 *   Manage user-generated content
 
-These projects not only enhance your Rails skills but also prepare you for real-world challenges. Whether you're interested in go lang (https://jetthoughts.com/blog/how-learn-ruby-tutorial/) or exploring what [react development companies](#45f1) can offer, these Rails projects provide a solid foundation.
+These projects not only enhance your Rails skills but also prepare you for real-world challenges. Whether you're interested in go lang (<https://jetthoughts.com/blog/how-learn-ruby-tutorial/>) or exploring what [react development companies](#45f1) can offer, these Rails projects provide a solid foundation.
 
 ## Mastering Advanced Ruby on Rails Techniques
 

@@ -81,7 +81,7 @@ We define such questions:
 
 * How and when do retrospectives take place?
 
-### 'Who does what?' questions:
+### 'Who does what?' questions
 
 Before running the development process, it should be clarified and agreed upon by both the client and developer. So it's essential to know the role of everyone working on the project:
 
@@ -146,4 +146,3 @@ For the first time, it is better to start with simple, small, and precise tasks 
 ## Conclusion
 
 This list can be modified during the process and adapted to specific requirements. However, at the beginning of cooperation, it could help to lay a solid foundation of friendly and professional relations and find the understanding between the customer and performer.
-

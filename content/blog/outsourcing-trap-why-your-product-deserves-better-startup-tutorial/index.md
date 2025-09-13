@@ -33,6 +33,7 @@ I saw this firsthand at JetThoughts when Agent Inbox came to us. They'd spent a 
 After founding three successful R&D departments and working with over 160 companies, I'll tell you what these agencies won't: Quality developers don't want to work for them.
 
 Think about it. Why would any skilled developer choose:
+
 - Zero ownership over the product
 - Being treated like a code-typing machine
 - Half the market rate
@@ -46,6 +47,7 @@ They won't. That's why these agencies are stuck with junior developers pretendin
 "But Paul," founders tell me, "the rates are so much lower!"
 
 Sure, just like that "Rolex" you can buy for $50. Let me show you what Agent Inbox got for their "bargain" development:
+
 - Zero test coverage
 - Security vulnerabilities you could sail a yacht through
 - Database queries that would make PostgreSQL have an existential crisis
@@ -57,11 +59,10 @@ Here's what really pisses me off: These agencies sell coding like it's data entr
 
 Spoiler alert: It doesn't.
 
-
 ![circles](file_0.png)
 
-
 Real software development needs:
+
 - Deep understanding of the business problem
 - Genuine care about user experience
 - Pride in craftsmanship
@@ -74,8 +75,8 @@ At [JetThoughts](https://jetthoughts.com), we rebuilt Agent Inbox's platform in 
 
 ![fish](file_1.png)
 
-
 Want to know the real price of cheap development? Here's what I've seen across hundreds of projects:
+
 - Codebases so bad they need complete rewrites
 - Features that break in production
 - Security holes waiting to be exploited
@@ -105,4 +106,3 @@ Quality software is crafted, not assembled. It requires thought, experience, and
 If you're stuck with outsourced code you're not happy with, stop throwing good money after bad. Step back, simplify your requirements, and find people who actually give a damn about your product's success.
 
 Remember: Every line of code is a liability. Choose carefully who writes yours.
-

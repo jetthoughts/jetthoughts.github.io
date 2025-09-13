@@ -34,8 +34,7 @@ For those of you who don’t know who Joel Spolsky is here are some facts:
 
 * Wrote [an awesome post](http://www.joelonsoftware.com/articles/fog0000000043.html) about test to rate the quality of software team.
 
-## 12 steps of Joel’s test in reality of JetThoughts projects:
-
+## 12 steps of Joel’s test in reality of JetThoughts projects
 
 ### Do you use source control?
 

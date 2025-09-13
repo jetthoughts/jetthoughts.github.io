@@ -96,6 +96,7 @@ This creates a targeted exception that allows health check requests while keepin
 - In your application startup command: Listen on 0.0.0.0:port (not just localhost)
 
 Example deploy.yml configuration:
+
 ```yaml
 proxy:
   ssl: true
@@ -126,12 +127,14 @@ config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
 - Increase server RAM/CPU (recommended for production)
 - Add swap space as a temporary measure:
+
   ```bash
   sudo fallocate -l 1G /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile
   sudo swapon /swapfile
   ```
+
 - Restart your server before deployment to clear memory
 
 ### 5. Application Initialization Failures
@@ -228,6 +231,7 @@ The key insight? Most "target failed to become healthy" errors are multiple issu
 To avoid this error in future deployments, here's a comprehensive configuration template for Rails applications using Kamal:
 
 1. In `config/environments/production.rb`:
+
 ```ruby
 # Allow health checks without SSL redirects
 config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
@@ -240,6 +244,7 @@ config.timeout_seconds = 30
 ```
 
 2. In `deploy.yml`:
+
 ```yaml
 proxy:
   ssl: true  # Set to false if using external SSL termination
@@ -252,6 +257,7 @@ proxy:
 ```
 
 3. In your Dockerfile:
+
 ```dockerfile
 # Ensure port is exposed
 EXPOSE 3000
@@ -261,6 +267,7 @@ CMD ["./bin/rails", "server", "-b", "0.0.0.0", "-p", "3000"]
 ```
 
 4. Add a specific health check endpoint for more reliability:
+
 ```ruby
 # In config/routes.rb
 get '/up', to: proc { [200, {}, ['OK']] }
@@ -301,4 +308,3 @@ Kamal's maintainers are actively improving error reporting and health check mech
 Remember that deployment tools are abstractions that make common cases easy but edge cases challenging. By understanding what happens beneath these abstractions, you gain the power to diagnose and resolve the issues that inevitably arise.
 
 The next time you encounter this error, approach it methodically, test each layer of the system, and you'll find that what initially seemed like an impenetrable wall becomes a solvable puzzle.
-

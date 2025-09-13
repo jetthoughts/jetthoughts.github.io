@@ -31,4 +31,3 @@ In 2024, I aim to create a simple process that even inexperienced startup founde
 - Use **LDJ** to prioritize assumptions, experiment with tests, and ideate solutions that satisfy both business and customers.
 - Use **User Story Mapping**, [ShapeUp](https://basecamp.com/shapeup), and exercises from [Design Sprint](https://www.ajsmart.com/how-to-design-sprint) to create a Minimum Viable Feature (MVF) and deliver value.
 - Conducting **retrospectives** to improve the process and identify what matters for the team is vital.
-

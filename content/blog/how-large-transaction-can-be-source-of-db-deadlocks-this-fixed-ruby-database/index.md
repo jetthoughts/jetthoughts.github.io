@@ -57,6 +57,7 @@ ActiveRecord::Base.transaction do
   Notification.create(user_id: current_user.id, message: message)
 end
 ```
+
 If we execute queries to search or retrieve data before the start of the transaction, then we will reduce the likelihood of locking tables in the database and can speed up the transaction.
 
 ```ruby
@@ -134,6 +135,7 @@ We can generate such a query using the following function:
       )
     end
 ```
+
 Now let’s use the new function in a transaction.
 
 ```ruby

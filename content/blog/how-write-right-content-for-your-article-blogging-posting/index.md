@@ -32,7 +32,7 @@ Let’s get to it.
 ## Step #1 — The Power of Headlines
 
 The headline has the ability to make or break a blog post. It impacts how (and if) it’s found in search engines and social bookmarking sites, it influences whether people visit your blog in News Readers, it affects whether people leave a comment and is vital in whether people actually read what you have to say.
->  Read more here how to write catchy headlines [https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222](https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222)
+> Read more here how to write catchy headlines [https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222](https://jtway.co/4-tricks-to-write-catchy-headlines-16d963cf5222)
 
 ## Step #2 — Build an idea bank
 
@@ -71,7 +71,7 @@ Few extra principles to be more original:
 ## Step #4 — The Value of Scannable Content
 
 Online readers tend to scan content. As a result, if you place visual cues in your posts that draw the eye to important points you’ll find people stick with you longer into your posts.
->  Read more here [https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8](https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8)
+> Read more here [https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8](https://jtway.co/tips-to-attract-readers-to-read-your-post-e693dfcdbeb8)
 
 ## Step #5 — Shortness is the key
 
@@ -99,4 +99,4 @@ What it takes is commitment and trust in the systems that have already been prov
 
 Good luck!
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

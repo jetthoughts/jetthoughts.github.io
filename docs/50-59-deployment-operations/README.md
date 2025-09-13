@@ -11,6 +11,7 @@ Documentation for deployment processes, operations, and infrastructure managemen
 ## Johnny Decimal Classification
 
 This area (50-59) contains documentation related to:
+
 - Deployment procedures and automation
 - Operations and infrastructure management
 - CI/CD pipeline configuration and analysis

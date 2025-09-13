@@ -9,7 +9,6 @@ paul_keen:
   linkedin: "https://www.linkedin.com/in/paul-keen/"
   github: "https://github.com/pftg"
   twitter: "https://twitter.com/paul_keen"
-  
   expertise:
     - "Ruby on Rails Development"
     - "React & Frontend Technologies"
@@ -21,21 +20,17 @@ paul_keen:
     - "Database Design & Optimization"
     - "DevOps & Cloud Infrastructure"
     - "Code Quality & Testing"
-  
   certifications:
     - name: "AWS Certified Solutions Architect"
       issuer: "Amazon Web Services"
       link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
-    
     - name: "Certified ScrumMaster (CSM)"
       issuer: "Scrum Alliance"
       link: "https://www.scrumalliance.org/certifications/practitioners/certified-scrummaster-csm"
-  
   publications:
     - title: "Building Scalable Ruby on Rails Applications"
       publication: "JetThoughts Technical Blog"
       link: "/blog/"
-    
     - title: "Modern React Development Best Practices"
       publication: "JetThoughts Technical Blog"
       link: "/blog/"
@@ -47,7 +42,6 @@ mykola_borysenko:
   company: "JetThoughts"
   bio: "Expert full-stack developer with deep expertise in Ruby on Rails and modern JavaScript frameworks."
   experience_years: 8
-  
   expertise:
     - "Ruby on Rails Development"
     - "JavaScript & TypeScript"
