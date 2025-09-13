@@ -32,6 +32,7 @@ testimonials:
       - "Achieved 10,000+ active users within 6 months"
     technologies: ["Ruby on Rails", "Vue.js", "PostgreSQL", "Stripe API"]
     location: "San Francisco, USA"
+
   - name: "David Rodriguez"
     rating: 5
     title: "VP of Engineering"
@@ -113,6 +114,7 @@ case_studies:
       performance_improvement: "300% faster page loads"
       conversion_increase: "25% higher conversion rates"
       cost_reduction: "40% lower infrastructure costs"
+
   - title: "Healthcare Platform: HIPAA-Compliant Patient Management"
     client: "HealthTech Innovations"
     industry: "Healthcare"
@@ -126,3 +128,4 @@ case_studies:
       providers_onboarded: "500+ healthcare providers"
       daily_records: "100,000+ patient records processed"
       availability: "99.95% uptime"
+

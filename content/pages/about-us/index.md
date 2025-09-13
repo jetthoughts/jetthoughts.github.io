@@ -1,6 +1,6 @@
 ---
-title: "About JetThoughts: 17+ Years, 95% Client Retention"
-description: "Meet JetThoughts: 17+ years experience, 95% client retention, 5+ year average relationships. Expert software development team focused on quality. Learn our story."
+title: "About JetThoughts: 13+ Years, 95% Client Retention"
+description: "Meet JetThoughts: 13+ years experience, 95% client retention, 5+ year average relationships. Expert software development team focused on quality. Learn our story."
 author: Paul Keen
 type: page
 slug: about-us

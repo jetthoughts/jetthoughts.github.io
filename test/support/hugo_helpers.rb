@@ -1,7 +1,7 @@
 class Hugo
   attr_reader :destination
 
-  def initialize(path: ENV.fetch("HUGO_DEFAULT_PATH", "public-test"))
+  def initialize(path: ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test"))
     @destination = path
   end
 
@@ -22,7 +22,7 @@ class Hugo
     that = self
     Rack::Builder.new do
       use RequestLogger if ENV["DEBUG"]
-      
+
       # Handle directory requests by serving index.html files
       use HugoDirectoryHandler, that.destination_path
 
@@ -68,7 +68,7 @@ class HugoDirectoryHandler
   def call(env)
     request = Rack::Request.new(env)
     path = request.path_info
-    
+
     # If path ends with / and there's an index.html, serve it
     if path.end_with?('/')
       index_file = File.join(@public_path, path, 'index.html')
@@ -76,7 +76,7 @@ class HugoDirectoryHandler
         return serve_file(index_file)
       end
     end
-    
+
     @app.call(env)
   end
 
