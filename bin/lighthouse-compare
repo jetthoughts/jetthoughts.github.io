@@ -2,7 +2,7 @@
 # Compare two Lighthouse runs and show improvements/regressions
 # Usage: ./bin/lighthouse-compare <report1_dir> <report2_dir>
 
-set -euo pipefail
+set -Eeuo pipefail
 
 # Input validation
 if [[ $# -ne 2 ]]; then

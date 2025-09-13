@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fast development server with optimal settings for JetThoughts site
 
-set -euo pipefail
+set -Eeuo pipefail
 
 # Colors for output
 RED='\033[0;31m'

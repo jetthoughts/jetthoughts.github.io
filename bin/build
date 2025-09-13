@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -Eeuo pipefail
+
 if [ -n "$REBUILD" ]; then
   bin/dc build
 fi

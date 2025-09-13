@@ -33,13 +33,13 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
 ```html
 <!-- Current (Inaccessible) -->
 <svg class="icon">
-  <use xlink:href="#menu-icon"></use>
+  <use href="#menu-icon"></use>
 </svg>
 
 <!-- Optimized (Accessible) -->
 <svg class="icon" aria-label="Navigation menu" role="img">
   <title>Open navigation menu</title>
-  <use xlink:href="#menu-icon"></use>
+  <use href="#menu-icon"></use>
 </svg>
 ```
 
@@ -51,7 +51,7 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
      aria-label="{{ .Get "label" }}" 
      role="img">
   <title>{{ .Get "title" | default (.Get "label") }}</title>
-  <use xlink:href="#{{ .Get "icon" }}"></use>
+  <use href="#{{ .Get "icon" }}"></use>
 </svg>
 ```
 
