@@ -6,7 +6,7 @@ class BaseSchemaTest < Minitest::Test
   private
 
   def root_path
-    ENV.fetch("HUGO_DEFAULT_PATH", "public-test")
+    ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test")
   end
 
   def parse_html_file(relative_path)
