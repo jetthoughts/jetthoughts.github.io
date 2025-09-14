@@ -28,7 +28,6 @@ trust_signals:
       issuer: "GoodFirms"
       year: "2023"
       link: "https://www.goodfirms.co/"
-    
     - name: "Top Ruby on Rails Development Company"
       issuer: "TopDevelopers.co"
       year: "2022"
@@ -51,7 +50,6 @@ trust_signals:
     - name: "GitHub Partner"
       type: "Development Partner"
       link: "https://github.com/"
-    
     - name: "Ruby on Rails Core Contributors"
       type: "Open Source Partnership"
       link: "https://rubyonrails.org/"

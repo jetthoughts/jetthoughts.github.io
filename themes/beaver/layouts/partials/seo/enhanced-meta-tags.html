@@ -47,7 +47,7 @@
   {{- end -}}
 {{- else if eq .Type "pages" -}}
   {{- if in .Title "About" -}}
-    {{- $title = "About JetThoughts: 13+ Years, 95% Client Retention" -}}
+    {{- $title = "About JetThoughts: 18+ Years, 95% Client Retention" -}}
   {{- else if in .Title "Contact" -}}
     {{- $title = "Contact JetThoughts - Free Consultation Available" -}}
   {{- else -}}
@@ -72,7 +72,7 @@
   {{- $description = "Expert software development & consulting with 95% client retention. Reduce costs 50% while accelerating delivery 3x faster. Free consultation ✓" -}}
 {{- else if eq .Section "services" -}}
   {{- if .IsSection -}}
-    {{- $description = "Transform your business with expert software development services. 13+ years experience, 95% client retention. Get your free consultation today ✓" -}}
+    {{- $description = "Transform your business with expert software development services. 18+ years experience, 95% client retention. Get your free consultation today ✓" -}}
   {{- else -}}
     {{/* Service-specific descriptions */}}
     {{- with .Params.description -}}
@@ -91,7 +91,7 @@
   {{- end -}}
 {{- else if eq .Section "blog" -}}
   {{- if .IsSection -}}
-    {{- $description = "540+ expert articles on software development, Ruby on Rails, React, and tech leadership. Learn from 13+ years of industry experience ✓" -}}
+    {{- $description = "540+ expert articles on software development, Ruby on Rails, React, and tech leadership. Learn from 18+ years of industry experience ✓" -}}
   {{- else -}}
     {{- with .Description -}}
       {{- $description = . -}}

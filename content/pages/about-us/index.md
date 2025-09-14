@@ -1,6 +1,6 @@
 ---
-title: "About JetThoughts: 13+ Years, 95% Client Retention"
-description: "Meet JetThoughts: 13+ years experience, 95% client retention, 5+ year average relationships. Expert software development team focused on quality. Learn our story."
+title: "About JetThoughts: 18+ Years, 95% Client Retention"
+description: "Meet JetThoughts: 18+ years experience, 95% client retention, 5+ year average relationships. Expert software development team focused on quality. Learn our story."
 author: Paul Keen
 type: page
 slug: about-us
@@ -51,9 +51,9 @@ team_expertise:
   headline2: Proven experience and industry recognition
   items:
     - name: Technical Leadership Excellence
-      description: Our CTOs and technical leads average 13+ years of software development experience with proven track records scaling teams from startup to enterprise level. Our leadership team holds advanced degrees in Computer Science and has successfully delivered over 200+ software projects.
+      description: Our CTOs and technical leads average 15+ years of software development experience with proven track records scaling teams from startup to enterprise level. Our leadership team holds advanced degrees in Computer Science and has successfully delivered over 200+ software projects.
       credentials: 
-        - "13+ years average technical experience"
+        - "15+ years average technical experience"
         - "Master's degrees in Computer Science"
         - "200+ successfully delivered projects"
         - "AWS & Google Cloud certified architects"

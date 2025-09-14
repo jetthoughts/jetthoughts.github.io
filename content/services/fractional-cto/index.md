@@ -27,7 +27,7 @@ faqs:
   - question: "How does the engagement model work?"
     answer: "We offer flexible engagement models including part-time (10-20 hours/week), project-based contracts, interim CTO roles during transitions, and strategic consulting relationships. Most clients start with a part-time arrangement that can scale up or down based on your needs and growth stage."
   - question: "What experience do your Fractional CTOs have?"
-    answer: "Our Fractional CTOs average 8+ years of development experience with 13+ years of industry experience. They've led technical teams, managed complex software projects, and helped companies scale from startup to enterprise level. All have hands-on experience with modern technology stacks and proven track records of successful product delivery."
+    answer: "Our Fractional CTOs average 8+ years of development experience with 15+ years of industry experience. They've led technical teams, managed complex software projects, and helped companies scale from startup to enterprise level. All have hands-on experience with modern technology stacks and proven track records of successful product delivery."
 
 overview:
   headline: The power of a CTO at a fraction of the cost
@@ -40,7 +40,7 @@ overview:
       value: JetThoughts provides on-demand access to CTO leadership on a fractional, part-time, or interim basis to help companies of any size level up their technology operations. Our virtual CTO services cover technical vision, strategy, and organizational structure to hiring, training, and managing a development team, providing the technical support needed to drive sustainable growth.
   outcome:
     - name: Years of Industry Experience
-      value: 17
+      value: 18
     - name: Years of Average Client Relationship
       value: 5
     - name: Years of Average Developer Experience
