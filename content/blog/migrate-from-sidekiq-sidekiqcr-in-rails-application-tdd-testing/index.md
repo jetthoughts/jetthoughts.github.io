@@ -36,8 +36,8 @@ That’s all for the Rails application!!!
 
 ## Crystal Part
 
-In order to support the worker implementation on *Crystal*, this part should have *Sidekig.cr. *As it is pointed in the [documentation](https://github.com/mperham/sidekiq.cr/wiki/Getting-Started#create-some-jobs-using-the-client-api):
->  Crystal can push jobs for a Ruby process to consume, and vice versa. 
+In order to support the worker implementation on *Crystal*, this part should have *Sidekig.cr.*As it is pointed in the [documentation](https://github.com/mperham/sidekiq.cr/wiki/Getting-Started#create-some-jobs-using-the-client-api):
+> Crystal can push jobs for a Ruby process to consume, and vice versa.
 The Crystal Web UI can monitor Ruby processes, and vice versa.
 
 The next requisition is the ability to work with a database that is the same for the *Rails* and the *Crystal* parts. There are several frameworks based on *Crystal*, which allow such a database connection. To make a choice, we formed the following requirements:
@@ -71,26 +71,34 @@ WORKER_CR_CONCURRENCY- is the environment variable that defines the maximum size
 This worker will be responsible for fetching the record from the database and running some services:
 
 The worker’s name should match WORKER_NAME defined in the *Rails* service:
+
 ```
     WORKER_NAME = 'Broolik::Worker::URLChecker'
 ```
+
 Specify the queue for the job the same as in the *Rails* *ScheduleUrlCheckService*:
+
 ```
     'queue' => 'worker.cr'
 ```
+
 ## Make friends Crystal and Ruby
 
 Thus, the installation of the *Crystal* part is started using the command:
+
 ```
     crystal build src/sidekiq.cr -o bin/sidekiq.cr --release
 ```
+
 Finally, run:
+
 ```
     bin/sidekiq.cr -q worker.cr -c 100 -e production
 ```
+
 ## Link to the example
 
 You can find this example in our repository [jetthoughts/broolik-worker.cr](https://github.com/jetthoughts/broolik-worker.cr).
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

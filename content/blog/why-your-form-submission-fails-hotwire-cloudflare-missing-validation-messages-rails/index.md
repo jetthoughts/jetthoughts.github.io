@@ -41,6 +41,7 @@ After making this change, we tested the form again in production. The validation
 **What to Do If You Face a Similar Issue**
 
 **Check Your Proxy Settings**: Check if you’re using a service like Cloudflare and understand how it handles different HTTP status codes and responses.
+
 - **Review Error Handling in Your Application**: Consider modifying how your application responds to validation errors. Using a 200 status code with error information in the body can bypass proxy limitations.
 - **Test in Multiple Environments**: To understand the issue's scope and reproduce it in both development and production.
 - **Consult Documentation**: Look into the proxy service's documentation for workarounds or settings that might help.

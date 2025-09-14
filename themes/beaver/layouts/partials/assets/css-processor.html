@@ -1,0 +1,61 @@
+{{/*
+  Centralized CSS Processing Pipeline
+  Eliminates duplication across templates by providing a single source of truth for CSS processing
+  
+  Usage: {{ partial "assets/css-processor.html" (dict 
+    "resources" $cssFiles 
+    "bundleName" "bundle-homepage"
+    "context" .
+    "critical" false
+    "media" "all"
+  ) }}
+*/}}
+
+{{- $resources := .resources | default slice -}}
+{{- $bundleName := .bundleName | default "bundle" -}}
+{{- $context := .context | default . -}}
+{{- $critical := .critical | default false -}}
+{{- $media := .media | default "all" -}}
+{{- $silent := .silent | default false -}}
+
+{{/* Filter out any nil resources */}}
+{{- $filteredResources := slice -}}
+{{- range $resources -}}
+  {{- if . -}}{{- $filteredResources = $filteredResources | append . -}}{{- end -}}
+{{- end -}}
+{{- $resources = $filteredResources -}}
+
+{{- $processed := "" -}}
+
+{{- if and $resources (gt (len $resources) 0) -}}
+  {{/* Step 1: Concatenate resources */}}
+  {{- $bundle := $resources | resources.Concat (printf "css/%s.css" $bundleName) -}}
+  
+  {{/* Step 2: PostCSS processing (always applied for consistency) */}}
+  {{- $processed := $bundle | postCSS -}}
+  
+  {{/* Step 3: Environment-specific optimization */}}
+  {{- if hugo.IsProduction -}}
+    {{/* Production: minify, fingerprint, and postprocess */}}
+    {{- $processed = $processed | minify | fingerprint "md5" -}}
+    {{- $processed = $processed | resources.PostProcess -}}
+  {{- else -}}
+    {{/* Development: just fingerprint for cache busting */}}
+    {{- $processed = $processed | fingerprint "md5" -}}
+  {{- end -}}
+  
+  {{/* Output appropriate link tag or inline style (unless silent mode) */}}
+  {{- if and (not $silent) $processed -}}
+    {{- if $critical -}}
+      <style>{{ $processed.Content | safeCSS }}</style>
+    {{- else -}}
+      <link rel="stylesheet" href="{{ $processed.RelPermalink }}" 
+            media="{{ $media }}"
+            {{- if hugo.IsProduction }} integrity="{{ $processed.Data.Integrity }}"{{- end }}>
+    {{- end -}}
+  {{- end -}}
+  
+  {{/* CSS processor outputs HTML directly - no return value */}}
+{{- else -}}
+  {{/* No resources to process */}}
+{{- end -}}

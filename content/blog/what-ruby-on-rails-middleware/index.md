@@ -29,7 +29,7 @@ A list of tasks that are commonly solved with the help of middleware:
 - Security
 - Serving static files (css, js, images, etc)
 
-## How to make your own middleware.
+## How to make your own middleware
 
 Every Rails application is based on Rack server. Rack allow us to create middleware layers. Middleware must have call method, this is the interface that requires the Rake app.
 
@@ -102,4 +102,5 @@ Processing by PostsController#index as HTML
   ↳ app/controllers/posts_controller.rb:12:in `index'
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 824)
 ```
+
 You can see that the controller received a modified value for the secret_key parameter.

@@ -20,11 +20,12 @@ metatags:
   image: cover.png
 slug: deploying-ruby-on-rails-applications-with-kamal-devops-docker
 ---
-With the release of Rails 8, [Kamal will be the default tool for deploying Rails applications](https://jetthoughts.com/blog/kamal-integration-in-rails-8-by-default-ruby/), simplifying the process for developers. This change is significant as it standardizes deployment, making it easier for both new and experienced developers to get their applications up and running. Utilizing a VPS for hosting your Rails applications is also a cost-effective alternative to platforms like Heroku, providing greater flexibility and control over your infrastructure. 
+With the release of Rails 8, [Kamal will be the default tool for deploying Rails applications](https://jetthoughts.com/blog/kamal-integration-in-rails-8-by-default-ruby/), simplifying the process for developers. This change is significant as it standardizes deployment, making it easier for both new and experienced developers to get their applications up and running. Utilizing a VPS for hosting your Rails applications is also a cost-effective alternative to platforms like Heroku, providing greater flexibility and control over your infrastructure.
 
 In this guide, we will walk you through the steps to deploy a new Rails application on a VPS server using Kamal.
 
 ## Creating new application
+
 ```bash
 ╰─ $ rails -v
 Rails 7.2.0.beta3
@@ -51,6 +52,7 @@ Rails 7.2.0.beta3
 ```
 
 As you can see, the new Ruby on Rails application generates a Dockerfile that we will use in our Deployment process:
+
 ```Dockerfile
 # syntax = docker/dockerfile:1
 
@@ -231,28 +233,33 @@ registry:
 
 Lets update this config step by step:
 
-- Update service name. It should be the same as your application 
-name: 
+- Update service name. It should be the same as your application
+name:
+
 ```yml
 service: sample_app
 ```
 
 - Servers. Here you must set your VPS IP.
+
 ```yml
 servers:
   - 192.168.0.1
 ```
 
-- Registry. Here you can set your username and password on 
-DockerHub. During deploy your docker image will be upload on 
+- Registry. Here you can set your username and password on
+DockerHub. During deploy your docker image will be upload on
 DockerHub.
+
 ```yml
 registry:
   username: sample-user
   password:
     - KAMAL_REGISTRY_PASSWORD
 ```
+
 `KAMAL_REGISTRY_PASSWORD` you need to set in `.env` file:
+
 ```bash
 ╰─ $ cat .env
 
@@ -261,9 +268,10 @@ RAILS_MASTER_KEY=<rails master key>
 POSTGRES_PASSWORD=<your postgres password>
 ```
 
-Note: All security-sensitive information you need to set in `.env` file. Then this data will be accessible in `secrets`. 
+Note: All security-sensitive information you need to set in `.env` file. Then this data will be accessible in `secrets`.
 
 - Set ENV variables
+
 ```yml
 env:
   clear:
@@ -277,15 +285,18 @@ env:
     - RAILS_MASTER_KEY
     - POSTGRES_PASSWORD
 ```
+
 `RAILS_MASTER_KEY` should be stored in `.env`.
 
 - Setup deployment user
+
 ```yml
 ssh:
   user: deploy
 ```
 
 - Setup postgres container:
+
 ```yml
 accessories:
   db:
@@ -307,7 +318,8 @@ accessories:
 
 At this stage, we've finished configuring Kamal. Now, let's move on to the steps we need to take on our VPS server to ensure a successful deployment.
 
-## Configure VPS.
+## Configure VPS
+
 The only thing we need to do on the VPS is to create a user that we will use for deployment. To do this, login by SSH into your VPS server and follow these steps:
 
 ```bash
@@ -318,6 +330,7 @@ sudo usermod -aG docker deploy
 ```
 
 ## Deployment
+
 At this stage, everything is ready for configuring the server and performing the first deployment.
 
 Run the following command in your project's folder on your local machine:
@@ -325,6 +338,7 @@ Run the following command in your project's folder on your local machine:
 ```bash
 kamal setup
 ```
+
 Next, enter the password for your deploy user. After a few minutes, you will have a production-ready application deployed. You can access it in your browser using the IP address of your VPS.
 
 Once your project is set up, you can view more detailed information about the status of your application using the `kamal details` command.
@@ -349,6 +363,7 @@ Accessory db Host: 192.168.0.1
 CONTAINER ID   IMAGE         COMMAND                  CREATED       STATUS       PORTS                                       NAMES
 a55b30ab8a29   postgres:15   "docker-entrypoint.s…"   11 days ago   Up 11 days   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   sample_app-db
 ```
+
 As we can see, three containers have started:
 
 - [traefik](https://traefik.io/traefik/)
@@ -361,6 +376,7 @@ This means that our application has been successfully deployed.
 &nbsp;
 
 ## Bonus: Frequently Used Kamal Commands
+
 `kamal deploy`: This command deploys your application to the specified environment. It builds the Docker image, pushes it to the container registry, and then updates the services on your VPS to run the new version of the application.
 
 `kamal env push`: This command pushes your local environment variables to the remote server. It ensures that your application on the VPS has the correct environment variables set, which are necessary for it to run properly.

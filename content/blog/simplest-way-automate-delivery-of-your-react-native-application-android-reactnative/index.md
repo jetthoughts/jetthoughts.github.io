@@ -89,7 +89,7 @@ To check that your release is actually signed run this command:
 cd android && ./gradlew assembleRelease
 ```
 
-It generates, signs and saves release file to *android/app/build/outputs/apk/app-release.apk. *If the signing process is not successful then you get *app-release-unsigned.apk*.
+It generates, signs and saves release file to *android/app/build/outputs/apk/app-release.apk.*If the signing process is not successful then you get *app-release-unsigned.apk*.
 
 ## Setup Application Distribution
 
@@ -108,7 +108,6 @@ First, you need to [register on Fabric](https://fabric.io/sign_up). Then you nee
 To run distribution you’ll need secret keys. You can find you key and secret by visiting your [organization’s settings page](https://www.fabric.io/settings/organizations) and clicking on the respective links under the organization’s name.
 
 ![Image description](file_4.png)
-
 
 ### Install Fastlane as Fabric Kit CLI
 
@@ -174,9 +173,7 @@ And in a few minutes, you should have an email with download link to a new versi
 
 ## Automize Build and Distributions of Application
 
-
 ![Image description](file_5.png)
-
 
 Here comes the main part — how to make [CircleCI 2.0](https://circleci.com/) do deploy for you.
 
@@ -289,7 +286,7 @@ echo “API_URL=$API_URL” >> .env
 echo “APP_NAME=$APP_NAME” >> .env
 ```
 
-* Then we run *bundle *to install fastlane.
+* Then we run *bundle*to install fastlane.
 
 ```
 bundle install
@@ -302,7 +299,6 @@ cd android && bundle exec fastlane android beta
 ```
 
 Don’t forget that this script uses fabric keys from environment variables so you need to add env vars to circle ci. Here is the list of environment variables:
-
 
 ![Image description](file_6.png)
 
@@ -322,7 +318,7 @@ In the next article, we will cover the same thing but for iOS.
 
 Stay tuned!
 
-## List of recommended articles:
+## List of recommended articles
 
  1. [Beta Testing React Native Android Applications with Crashlytics](https://medium.com/komenco/beta-testing-your-react-native-android-application-with-crashlytics-483c7e66a423)
 
@@ -333,4 +329,4 @@ Stay tuned!
  4. [Fabric Integration for React Native on Android](http://blog.mojotech.com/fabric-integration-for-react-native-on-android/)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

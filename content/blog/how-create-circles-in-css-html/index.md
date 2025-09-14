@@ -20,12 +20,15 @@ metatags:
 slug: how-create-circles-in-css-html
 ---
 Let's look at a few tricks in CSS able to create basic shapes like circles.
+
 ```html
 <div class="circle"></div>
 ```
 
 ## Border-Radius
+
 For this case need to use the border-radius property and set the value to 50%. Then combine the height and width properties with a matching value.
+
 ```css
 .circle {
   width: 100px;
@@ -34,10 +37,13 @@ For this case need to use the border-radius property and set the value to 50%. T
   background: lightgreen;
 }
 ```
+
 ![Image description](file_0.png)
 
 ## Circle()
+
 In this, the circle is created using the shape-outside property. You must also apply a clip-path with the appropriate property to make the circle appear.
+
 ```css
 .circle {
   width: 100px;
@@ -47,5 +53,6 @@ In this, the circle is created using the shape-outside property. You must also a
   background: yellow; 
 }
 ```
+
 ![Image description](file_1.png)
   

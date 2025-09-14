@@ -36,7 +36,7 @@ All of the above is normal. We just need to be prepared for such beginnings and 
 You might think that it’s better to start giving them more information about the company so they can sell right away. Believe it or not, relationships are more important at the beginning than processes themselves.
 
 New reps are afraid that they won’t get along with the existing team and therefore, won’t be motivated enough to make successful sales decisions.
->  Remember, the better relationship between your reps, the happier and the more inspired they are when selling your product.
+> Remember, the better relationship between your reps, the happier and the more inspired they are when selling your product.
 
 ## **Give them access**
 
@@ -75,7 +75,8 @@ Don’t forget that every organization has different rules when it comes to thin
 * Task management and customer relationship platforms that are used on a daily basis
 
 * And many more
->  Showing them how those things are done in your company will make them feel less anxious and ready for the next steps of onboarding.
+
+> Showing them how those things are done in your company will make them feel less anxious and ready for the next steps of onboarding.
 
 ## **Involve others in teaching**
 
@@ -104,4 +105,4 @@ Here are my 2 favorite takeaways from the Sales courses I watched that will help
 Make sure you cover all the steps and only then start measuring your new sales reps’ success rates.
 
 ***Victoria Sakurova **is a Business Development Specialist at [JetThoughts](https://www.jetthoughts.com/). Follow her on [Linkedin](https://www.linkedin.com/in/victoriasakurova/).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

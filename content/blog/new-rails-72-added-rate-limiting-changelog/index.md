@@ -22,6 +22,5 @@ Ruby on Rails 7.2 added rate limiting to Action Controller. It's cool and easy t
 
 ![rate_limit in Rails 7.2](file_0.png)
 
-
 What's New?
 --------

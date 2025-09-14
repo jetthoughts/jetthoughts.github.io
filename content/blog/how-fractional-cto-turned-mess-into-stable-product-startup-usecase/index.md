@@ -27,4 +27,3 @@ Maybe your app breaks at the worst times. Maybe its design confuses users. These
 Here's a story about a company in that exact spot. They were losing clients left and right. Bugs piled up. The vendor they trusted wasn't delivering. The owner wasn't technical and felt lost. We stepped in as a fractional CTO, found the real issues, and turned things around. Here's what happened.
 
 ![old and new gears](file_0.jpeg)
-

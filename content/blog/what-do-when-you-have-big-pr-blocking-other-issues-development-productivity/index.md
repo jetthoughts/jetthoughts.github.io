@@ -40,5 +40,5 @@ Slice the PR into Smaller Parts
 
 After deciding to close the PR, break it into smaller, focused pieces. Slicing means pulling out parts of the code that can be handled on their own. This lets different parts of the work move forward without blocking each other.
 
-How to slice it:
+How to slice it
 -----------------

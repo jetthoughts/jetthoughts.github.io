@@ -1,0 +1,25 @@
+require_relative "base_schema_test"
+
+class BreadcrumbSchemaTest < BaseSchemaTest
+  def test_blog_post_has_breadcrumb_list_schema
+    doc = parse_html_file("blog/4-lines-speed-up-your-rails-test-suite-on-circleci/index.html")
+    schemas = extract_json_ld_schemas(doc)
+
+    refute_empty schemas, "No JSON-LD script tags found"
+
+    breadcrumb_found = schemas.any? { |schema| schema["@type"] == "BreadcrumbList" }
+    assert breadcrumb_found, "BreadcrumbList schema not found in JSON-LD scripts"
+  end
+
+  def test_breadcrumb_schema_has_valid_structure
+    doc = parse_html_file("blog/4-lines-speed-up-your-rails-test-suite-on-circleci/index.html")
+    breadcrumb_data = schema_data(doc, "BreadcrumbList")
+
+    refute_nil breadcrumb_data, "BreadcrumbList script not found"
+
+    assert_schema_context(breadcrumb_data)
+    assert_equal "BreadcrumbList", breadcrumb_data["@type"]
+    assert breadcrumb_data.key?("itemListElement"), "Missing itemListElement"
+    refute_empty breadcrumb_data["itemListElement"], "itemListElement should not be empty"
+  end
+end

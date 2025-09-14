@@ -761,8 +761,8 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-bottom-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  border-color: ;
-  background-color: ;
+  border-color: transparent;
+  background-color: inherit;
   color: #121212;
 }
 
@@ -810,9 +810,9 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  border-bottom-width: px;
-  border-color: ;
-  background-color: ;
+  border-bottom-width: 0px;
+  border-color: transparent;
+  background-color: inherit;
   color: #121212;
 }
 
@@ -824,7 +824,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus, .fl-node-menu .sub-menu > li.current-menu-item > a, .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
-  background-color: ;
+  background-color: inherit;
   color: #1a8cff;
 }
 
@@ -1045,8 +1045,8 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
-    background-color: ;
+    border-bottom-width: 0px;
+    background-color: inherit;
   }
 
   .fl-node-menu .sub-menu {
@@ -1079,8 +1079,8 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
-    border-bottom-width: px;
-    background-color: ;
+    border-bottom-width: 0px;
+    background-color: inherit;
   }
 
   .fl-node-menu .pp-advanced-menu-mobile {
@@ -1840,7 +1840,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 .fl-node-yqpsldhfovz6 .fl-module-content .pp-social-icon a:hover {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.11);
-  border-color: ;
+  border-color: transparent;
 }
 
 .fl-node-yqpsldhfovz6 .fl-module-content .pp-social-icon:nth-child(1) a {

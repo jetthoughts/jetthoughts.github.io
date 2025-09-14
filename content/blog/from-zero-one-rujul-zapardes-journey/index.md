@@ -43,7 +43,7 @@ Rujul and his partner, Lou, decided to sell to their first ten customers through
 
 Every morning, Rujul and Lou would max out their LinkedIn connections. They reached out to people who accepted their requests. This method was cost-effective and allowed them to gather valuable insights.
 
-### Steps They Took:
+### Steps They Took
 
 1.  **Maxed Out LinkedIn Connections**: They connected with as many relevant people as possible.
 2.  **Engaged with New Connections**: They messaged those who accepted their requests.
@@ -53,7 +53,7 @@ Every morning, Rujul and Lou would max out their LinkedIn connections. They reac
 
 In just a few weeks, they compiled **107 pages of notes** from their conversations. This document became a treasure trove of information about customer needs and market dynamics.
 
-### What They Learned:
+### What They Learned
 
 *   **Customer Pain Points**: Understanding what problems customers face is key.
 *   **Market Trends**: Insights into the industry can guide product development.
@@ -62,7 +62,7 @@ In just a few weeks, they compiled **107 pages of notes** from their conversatio
 
 Rujul highlights that their business is primarily driven by outbound sales. This means they actively seek out customers rather than waiting for them to come to them.
 
-### Benefits of Outbound Sales:
+### Benefits of Outbound Sales
 
 *   **Control Over Sales Process**: They can target specific companies and industries.
 *   **Faster Customer Acquisition**: They can reach potential customers quickly.

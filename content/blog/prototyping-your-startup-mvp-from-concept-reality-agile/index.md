@@ -25,7 +25,6 @@ An MVP is the simplest version of your product that still solves the main proble
 - **Why:** See how an MVP can speed up finding the right market fit.
 - **Examples:** Look at famous startups that began with an MVP.
 
-
 ## Steps to Build Your MVP
 
 Making an MVP needs good planning. Here are the steps:
@@ -58,7 +57,6 @@ Picking the right tools can make building your MVP easier:
 - **Development Frameworks:** Ruby on Rails, PHP
 - **Prototyping Platforms:** InVision, Adobe XD, Proto.io
 
-
 ## Mistakes to Avoid
 
 Watch out for these common errors when making your MVP:
@@ -66,7 +64,6 @@ Watch out for these common errors when making your MVP:
 - Adding too many features
 - Skipping market research
 - Ignoring user feedback during improvements
-
 
 ## Wrap-Up
 

@@ -31,7 +31,7 @@ testimonial:
 
 gallery: ["ocs-customizable-solutions.png", "ocs-eliminating-risk-optimizing-human-capital.png", "ocs-return-work-with-confidence-1024x805.png",  "ocs-data-operations-analytics-reporting-1024x746.png"]
 
-date: 2022-10-17T08:30:34+00:00
+created_at: 2022-10-17T08:30:34+00:00
 ---
 
 **Client Overview**

@@ -44,11 +44,9 @@ slug: fixing-slow-engineering-teams-an-extended
 9. [Glossary for Busy Execs](#glossary-for-busy-execs)
 10. [Next Step](#next-step)
 
-
 ---
 
 ## Why Teams Slow Down After Seed Funding
-
 
 ![overloaded cart with timer](file_0.png)
 
@@ -292,7 +290,7 @@ Automation is the keystone that locks improvements in place.
 
 If your roadmap is stalling, a 30‑minute call can surface hidden org‑design debt and craft a 60‑day pilot.
 
-**Book here → \[https://jetthoughts.com/contact-us/]**
+**Book here → \[<https://jetthoughts.com/contact-us/>]**
 We’ll benchmark cycle time, defect velocity, and deploy cadence, then share a customized plan (plus references from founders who’ve made the leap).
 
 > *JetThoughts — We build teams that build products, faster.*

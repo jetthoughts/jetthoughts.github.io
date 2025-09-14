@@ -33,4 +33,3 @@ We have joined tables, but we don’t get any data from the users table. Therefo
 ![Image description](file_1.png)
 
 As you can see, we don’t have any additional queries because we use eager loading and we get the data about the user from memory instead of querying the database.
-

@@ -121,6 +121,7 @@ It is also good to create _components.scss with our custom components:
 ```css
 @import 'components/components.search-bar';
 ```
+
 So, as you can see, it’s pretty easy.
 
 ## Correct use of RSCSS
@@ -211,6 +212,7 @@ In this example, we will use [Yarn](https://yarnpkg.com/en/), but you can use an
 As a first step, let’s add stylelint and stylelint-rscss to dependentsyarn add — dev stylelint stylelint-rscss
 
 In the second step, we should create the .stylelintrc file in your project:
+
 ```
     {
       “extends”: [
@@ -218,7 +220,9 @@ In the second step, we should create the .stylelintrc file in your project:
       ]
     }
 ```
+
 And the last action is to add a script to your package.json:
+
 ```
     {
       “scripts”: {
@@ -226,10 +230,13 @@ And the last action is to add a script to your package.json:
       }
     }
 ```
+
 That’s all, now let’s just run it:
+
 ```
 yarn lint
 ```
+
 ## You cannot go wrong with ITCSS and RSCSS
 
 I liked the RSCSS approach very much since it ends up changing a lot — not only in styling but also in the way of scaling components and making them powerful.
@@ -239,4 +246,4 @@ ITCSS doesn’t force you to use certain naming conventions. It doesn’t force 
 Thank you for reading my article, and let’s make something pretty using it.
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

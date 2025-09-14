@@ -99,6 +99,7 @@ end
   <%= discussion.name_with_time %>
 </div>
 ```
+
 The second case is when your view logic is based on several not connected models or even on the request. When you are facing this problem the *View Object* can implement the ***“Presenter”*** part of the ***MVP*** pattern.
 
 The ***MVP*** (*Model-View-Presenter*) is a pattern well-known in *C#*/*Java* world. It is mostly used to build interfaces (views, in our case). It allows us to separate concerns: the model encapsulates domain logic, the presenter takes all the view logic and the view [knows nothing](http://youtu.be/Pkyy57iMaB0).
@@ -154,6 +155,6 @@ The main pros of using this solution are:
 * Test *View Objects* logic is as easy as test ruby classes. As in decorators solution, you can feed *View Objects* with stubs to increase the tests speed.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
 
 *Image courtesy of Vectorolie/FreeDigitalPhotos.net*

@@ -42,9 +42,9 @@ Now let’s take a break and look into DelayedJob internals. [Delayed::Job](http
 
 So, what events do we have there?
 
-### Job-related events:
+### Job-related events
 
-```
+```ruby
  :enqueue
  :perform
  :error
@@ -52,9 +52,9 @@ So, what events do we have there?
  :invoke_job
 ```
 
-### Worker-related events:
+### Worker-related events
 
-```
+```ruby
 :execute
 :loop
 :perform

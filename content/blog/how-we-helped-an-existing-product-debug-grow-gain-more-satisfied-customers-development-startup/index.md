@@ -79,4 +79,4 @@ Additionally, we reduced the time required to onboard new employees and initiate
 ***With the addition of a more empowered workforce, an established system for streamlined growth, and an improved overall product, OpenApply is now able to more efficiently help both students and schools throughout the admissions and enrollment processes, easing the stress of everyone involved.***
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

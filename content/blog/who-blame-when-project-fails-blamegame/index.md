@@ -23,14 +23,14 @@ Large projects continue to fail, often with disastrous results for the organizat
 
 Let’s discover the ways to secure a stable and efficient development lifecycle of yours.
 
-##It’s not me, it’s you
+## It’s not me, it’s you
 How many business relationships have ended with those words? Blame and game — two words that should never be joined together.
 
 The blame game is no fun to play and there are never any winners. The truth is, project success depends on each and every team member. Every single person’s motivation and proficiency matter.
 
 Actually, there are so many reasons that the project fails: unclear project requirements, lack of timely testing, lack of experienced project manager, poor communication, etc. Blame isn’t a good thing on any project, regardless of whether resources are collocated or not. In fact, you would waste your time looking for who is blamed, better try to take it, and find new solutions to rescue from failure.
 
-##Who is to blame?
+## Who is to blame?
 All projects are like a Boat where a leader will show the direction, motivate the team members, and provide them with positive energy from time to time to make sure that all team members remain committed towards a single goal of achieving the project completion milestones.
 
 But often we have seen that leaders forgot to do the above-said part i.e., but expect a good result and start pinpointing fingers to an individual by saying he has a wrong attitude and has not got the right skill set to drive the boat or the project. This eventually results in confusion & misunderstandings.
@@ -42,4 +42,4 @@ He ensures that the Product Backlog items are transparent & clearly expressed an
 Remember every project is teamwork and it is the coordination among leaders and other team members which determines the success of the project.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

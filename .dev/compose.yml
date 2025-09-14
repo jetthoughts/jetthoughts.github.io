@@ -1,55 +1,76 @@
 ---
-x-backend: &backend
-  image: jetthoughts.com-test:1.0.0
-  build:
-    context: ../
-    dockerfile: ./.dev/Dockerfile
-  stdin_open: true
-  tty: true
-  volumes:
-    - ..:/app:cached
-    - history:/usr/local/hist
-  environment:
-    HISTFILE: /usr/local/hist/.bash_history
-    IRB_HISTFILE: /usr/local/hist/.irb_history
+# Simplified Docker Compose configuration for JetThoughts Hugo development
+# Optimized for fast feedback loops with minimal complexity
 
 services:
-  hugo: &hugo
+  hugo:
     image: hugomods/hugo:exts-non-root-0.149.1
-    stdin_open: true
-    tty: true
+    working_dir: /app
     volumes:
-      - ..:/src:cached
+      - ..:/app:delegated
       - hugo_cache:/tmp/hugo_cache
     ports:
       - '1313:1313'
-    command: server --bind 0.0.0.0
+    command: server --bind 0.0.0.0 --poll 500ms --disableFastRender=false
+    environment:
+      HUGO_CACHEDIR: /tmp/hugo_cache
+      HUGO_NUMWORKERMULTIPLIER: 8
+      HUGO_ENABLEGITINFO: false
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: '2.0'
 
+  # Interactive shell (optimized)
   sh:
-    <<: *backend
-    command: bash
+    image: jetthoughts.com-test:1.0.0
+    build:
+      context: ../
+      dockerfile: ./.dev/Dockerfile
+      target: runtime
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    volumes:
+      - ..:/app:delegated
+      - bundle:/opt/bundle
+      - history:/usr/local/hist
+    environment:
+      HISTFILE: /usr/local/hist/.bash_history
+      IRB_HISTFILE: /usr/local/hist/.irb_history
+      BUNDLE_PATH: /opt/bundle
+    command: sh
 
-  t-setup:
-    <<: *hugo
-    command: hugo --minify --environment production --forceSyncStatic --cleanDestinationDir --logLevel warn
-
+  # Test runner with optimized dependency management
   t:
-    <<: *backend
-    entrypoint: bin/test
-    shm_size: 256mb  # Shared memory size for Chrome browser
-    deploy:
-      resources:
-        limits:
-          cpus: '3.0'
-          memory: '2GB'  # Increased for Chrome browser stability
-        reservations:
-          cpus: '1.5'
-          memory: '1GB'  # Increased base reservation
+    image: jetthoughts.com-test:1.0.0
+    build:
+      context: ../
+      dockerfile: ./.dev/Dockerfile
+      target: runtime
+    working_dir: /app
+    command: bin/test
+    volumes:
+      - ..:/app:delegated
+      - node_modules:/app/node_modules
+      - bundle:/opt/bundle
+    environment:
+      HUGO_DEFAULT_PATH: "_dest/public-dtest"
+      CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
+      PARALLEL_TEST_PROCESSORS: 4
+      RUBY_THREAD_VM_STACK_SIZE: 1048576
+    mem_limit: 2g
+    cpus: '4.0'
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
 
-    depends_on:
-      t-setup:
-        condition: service_completed_successfully
 volumes:
+  node_modules:
+    driver: local
   bundle:
+    driver: local
   history:
+    driver: local
   hugo_cache:
+    driver: local

@@ -65,7 +65,7 @@ Here is the list, ordered by priority:
 
 ## Taking everything into account
 
-This list is quite simple, and this should be enough, the main rule: *whatever your team chooses, do not add new logic. *Limitations prevent overloading your work processes, allowing you to deliver value to end customers as fast as possible. Big companies such as Toyota use this technique.
+This list is quite simple, and this should be enough, the main rule: *whatever your team chooses, do not add new logic.*Limitations prevent overloading your work processes, allowing you to deliver value to end customers as fast as possible. Big companies such as Toyota use this technique.
 
 Check out useful links if you want to be advanced in this theme:
 
@@ -78,4 +78,4 @@ Check out useful links if you want to be advanced in this theme:
 * [https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

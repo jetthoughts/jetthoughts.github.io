@@ -29,7 +29,7 @@ Reddit is a large community made up of thousands of smaller communities, making 
 
 The first thing you need to pay attention to is your account — it is weighty to be an active user. Reddit features a basic unit to measure a reflection of how much your contributions signify to the community — your Karma.
 
-### We need karma to start self-promote!
+### We need karma to start self-promote
 
 It is hard to find a subreddit for self-promotion with 0 karma points; maybe only some unpopular subreddits will allow it.
 
@@ -62,10 +62,12 @@ Reddit may have relaxed its position on self-promotion, but almost every subredd
 The rules page will be visible to all visitors who can view specific subreddit. The vast majority including rules about Self-promotion which describe the main condition:
 
 * **Your content is high-quality:**
->  Your resource should be technically accurate, polished, and pedagogically sound. Your resource should not “feel spammy”
+
+> Your resource should be technically accurate, polished, and pedagogically sound. Your resource should not “feel spammy”
 
 * **Your post body contains more than just a link:**
->  Explain what your resource is teaching and how it improves on the status quo. Don’t just drop a link and move on.
+
+> Explain what your resource is teaching and how it improves on the status quo. Don’t just drop a link and move on.
 
 * **You respect Reddit's global policies regarding [self-promotion](https://reddit.zendesk.com/hc/en-us/articles/205926439-Reddiquette).**
 
@@ -94,4 +96,4 @@ Anyway, self-promotion on Reddit is a great approach to make your posts more pop
 Good luck!
 
 **Oleh** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/oleh-barchuk-0b9813192/) or [GitHub](https://github.com/phoenixixixix).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

@@ -1,7 +1,7 @@
 ---
-title: "Expert CTO & Engineering Services for Accelerated Software Development"
+title: "Expert Software Development & Consulting | JetThoughts"
 layout: index
-description: "Unlock your product's potential with our on-demand CTO services, expert engineering teams, and tailored software solutions. Accelerate development, enhance quality, and achieve your business goals with JetThoughts."
+description: "Expert software development & consulting with high client retention. Reduce costs up to 50% while accelerating delivery up to 3x faster. Free consultation ✓"
 
 headline: Build faster. Scale smarter.
 excerpt: Streamline development, accelerate delivery, & achieve your product vision with access to turnkey engineering resources backed by world-class technical talent.
@@ -20,5 +20,5 @@ overview:
   - name: Years is Our Average Developer Turnover
     value: 4
 
-date: 2024-03-15
+created_at: 2024-03-15
 ---

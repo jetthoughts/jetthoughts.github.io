@@ -22,7 +22,6 @@ slug: stop-using-faker-random-data-in-test-fixtures
 ---
 ![Image description](file_0.png)
 
-
 **Faker/FFaker** can seem like the perfect solution to generate data for testing.
 
 In theory, Faker increases development speed while allowing you to have real-looking test data and having your database populated with more records while you’re doing development.
@@ -47,7 +46,8 @@ Code will produce problems in which someone **spends more than 10 hours finding 
 
 Primely tests must describe one specific case to be **explicit and deterministic***.* Repeatability of results requires repeatability of test fixture setup and repeatability of the interactions with the software under test.
 
-### Ther is a simple example where the test produces an error:
+### Ther is a simple example where the test produces an error
+
 ```
     test 'with faker' do
       *product *= Product.new(title: **Faker::App.name**)
@@ -58,6 +58,7 @@ Primely tests must describe one specific case to be **explicit and deterministic
     => test::Assertion: Expected: "Rails App"
     =>  Actual: "**Daltfresh**"
 ```
+
 That will be the trouble to debug by title to find out where the title Daltfresh was used because it is generated randomly, and, e.g., on the next run, we will see another title.
 
 ## Reduced performance
@@ -74,25 +75,17 @@ For one of our projects, we **reduced it by** **20% (more than 20 min)** by repl
 
 The problem is that random data breaks [F.I.R.S.T principles of testing](https://medium.com/@tasdikrahman/f-i-r-s-t-principles-of-testing-1a497acda8d6).
 
-
 ![Image description](file_2.png)
-
-
 
 Performance issues may violate the fast testing principle.
 
-
 ![Image description](file_3.png)
 
-
-
 ## Effect on development
->  *As a result above together gives a meaningful impact on the project, and in fact, the sum will be a critical slowdown in development. This is incredibly frustrating.*
-
+>
+> *As a result above together gives a meaningful impact on the project, and in fact, the sum will be a critical slowdown in development. This is incredibly frustrating.*
 
 ![Image description](file_4.png)
-
-
 
 Persistent troubleshooting instead of productive development not only frustrates customers who encounter them but frustrates team members who constantly address them.
 
@@ -101,6 +94,7 @@ Persistent troubleshooting instead of productive development not only frustrates
 It depends on the case of data — unique or scalar.
 
 Here we use a **Sequence** to get the unique title:
+
 ```
     factory :product do
       sequence(:title) { |*n*| "Title #{*n*}"}
@@ -114,7 +108,9 @@ Here we use a **Sequence** to get the unique title:
       assert_equal 'Entered title', *product*.title
     end
 ```
-Using a **Constant **to get the pre-defined title:
+
+Using a **Constant**to get the pre-defined title:
+
 ```
     test 'with constant' do
       *product *= Product.new(title: 'Book')
@@ -122,10 +118,11 @@ Using a **Constant **to get the pre-defined title:
       assert_equal 'Entered title', *product*.title
     end
 ```
+
 Using Sequences and Constants it is easier for us to determine and repeat the failing test.
 
 **Oleh** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/oleh-barchuk-0b9813192/) or [GitHub](https://github.com/phoenixixixix).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
 
 **References:**
 

@@ -21,12 +21,13 @@ slug: 4-lines-speed-up-your-rails-test-suite-on-circleci
 Most of our projects have a big code base of assets which dramatically reduce not only browser page rendering but also increase passing test suites.
 
 The *Rails* asset pipeline provides an *assets:precompile* *rake* task to allow assets to be compiled and cached up front rather than compiled every time the app boots.
->  We found that with precompiled assets all test suite is passed faster. For some project, we got **50% improvement**.
+> We found that with precompiled assets all test suite is passed faster. For some project, we got **50% improvement**.
 
 This approach shows how you can skip compilation of assets every time you run a test.
 
 ## Solution
->  This solution for CircleCI, but you could migrate it to other CI.
+>
+> This solution for CircleCI, but you could migrate it to other CI.
 
 Add precompile assets step with caching result into *.circle/config.yml*:
 
@@ -77,7 +78,8 @@ Rails.application.configure do
   end
 end
 ```
+
 ## Conclusion
 
 This configuration allowed us to reduce and in most cases completely drop time on the assets compilation in tests.
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co) and [trending tech stories](https://jtway.co/trending).

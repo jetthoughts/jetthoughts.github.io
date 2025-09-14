@@ -1,0 +1,27 @@
+# Production Environment Configuration
+# Optimizations for production builds
+
+# Production environment settings
+environment = "production"
+
+# Enable all content types in production
+disableKinds = []
+
+# Production build optimizations
+[build]
+  # Enable Hugo stats generation for PurgeCSS
+  writeStats = true
+
+# High-quality image processing for production
+[imaging]
+  # Higher quality for production
+  quality = 80
+
+# Enable minification in production
+[minify]
+  minifyOutput = true
+
+# Production-specific parameters
+[params]
+  # Production environment
+  environment = "production"

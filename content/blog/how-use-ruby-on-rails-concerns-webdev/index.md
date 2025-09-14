@@ -26,6 +26,7 @@ A Rails concern is a module that extends the `ActiveSupport::Concern` module.
 You can use Сoncerns to store common code for several classes there, or for refactoring to separate semantically similar code in separate modules.
 
 A concern provides two blocks:
+
 ```ruby
 module SampleConcern
   extend ActiveSupport::Concern
@@ -40,15 +41,17 @@ module SampleConcern
 end
 ```
 
-## included:
+## included
+
 The code inside the included block is evaluated in the context of the including class.
 
-## class_methods:
+## class_methods
+
 Here you can implement methods that will become methods of the class to which the container is included.
 
 Let’s look at an example:
 
-## Concern:
+## Concern
 
 ```ruby
 module AuthenticationConcern
@@ -69,17 +72,21 @@ module AuthenticationConcern
 end
 ```
 
-## Controller:
+## Controller
+
 ```ruby
 class ApiBaseController < ActionController::Base
   include AuthenticationConcern
   ...
 end
 ```
+
 By using Сoncerns, we have moved the code responsible for user authorization to a separate module.
 
 ## Testing
+
 Concerns are also convenient in that they can be tested in isolation instead of covering all classes where the concern is included with tests.
+
 ```ruby
 require 'rails_helper'
 class FakeController < ApplicationController

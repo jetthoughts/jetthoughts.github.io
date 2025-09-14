@@ -38,19 +38,21 @@ This practice is well known, but development team might have some objections to 
 I would agree with them in case there are some real issues to implement it. But, nowadays, we have a lot of tools, like [Kubernetes](https://jtway.co/tagged/kubernetes) and [Docker](https://jtway.co/tagged/docker), which reduce the complexity of isolated testing environment creation. And it’s time to clean up a technical debt in both delivery and development process as it is crucially important.
 
 ## Here comes Heroku Review Apps
+>
 > # [If a human operator needs to touch your system during normal operations, you have a bug.](https://landing.google.com/sre/book/chapters/eliminating-toil.html)
+>
 > # [Carla Geisser, Google Site Reliability Engineering](https://landing.google.com/sre/book/chapters/eliminating-toil.html)
 
 To create *Isolated Testing Environment* per each PR you could use the local scripts or automatize such routine with tools like *Continuous Integration*.
 
 For Web Applications, there is a “[*Reviews Apps](https://devcenter.heroku.com/articles/github-integration-review-apps)” feature *by Heroku.
->  *Review Apps* run the code in any [GitHub](https://github.com) PR in a complete, disposable [Heroku](https://heroku.com) application. *Review Apps* each have a unique URL you can share. It’s then super easy for anyone to try the new code.
+> *Review Apps* run the code in any [GitHub](https://github.com) PR in a complete, disposable [Heroku](https://heroku.com) application. *Review Apps* each have a unique URL you can share. It’s then super easy for anyone to try the new code.
 
 ## How to start?
 
 On Heroku, there is [a guide on how to setup the Review Apps](https://devcenter.heroku.com/articles/github-integration-review-apps#setup) feature.
 
-We have some extra changes in order to obtain a better experience. This is an example for *Ruby on Rails *but could be adopted for other web frameworks.
+We have some extra changes in order to obtain a better experience. This is an example for *Ruby on Rails*but could be adopted for other web frameworks.
 
 ## Update configuration
 
@@ -95,4 +97,4 @@ And finally we got improved customers’ and clients’ satisfaction and appreci
 * [The simplest way to automate delivery of your React Native Application](https://jtway.co/the-simplest-way-to-automate-delivery-of-your-react-native-application-f37f2c71eb1d)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

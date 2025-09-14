@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+bin/dc down --volumes --remove-orphans || true
+docker system prune -f || true
+
+DOCKER_BUILDKIT=1 bin/dc build --no-cache

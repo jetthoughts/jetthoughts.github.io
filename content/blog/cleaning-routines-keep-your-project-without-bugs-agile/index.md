@@ -52,4 +52,4 @@ It’s not enough to only track those bugs and issues, but also fix them in a ti
 4. Every sprint planning: take at least 2–3 tissues to the current sprint to work on.
 
 That’s how you maintain your project bug-free and reliable.
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

@@ -1,0 +1,213 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Lighthouse Performance Benchmark Script
+# Tests complex pages against 90+ threshold requirements
+
+# Configuration
+BASE_URL="${1:-http://localhost:1313}"
+OUTPUT_DIR="_reports/lighthouse-reports"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+REPORT_DIR="${OUTPUT_DIR}/${TIMESTAMP}"
+MIN_SCORE=90
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Complex pages to test (based on JetThoughts site structure)
+declare -a COMPLEX_PAGES=(
+    "/"
+    "/about-us/"
+    "/blog/"
+    "/services/fractional-cto/"
+    "/services/app-web-development/"
+    "/blog/tags/ruby/"
+    "/blog/tags/rails/"
+    "/blog/when-small-method-choices-cascade-into/"
+)
+
+echo -e "${BLUE}=== JetThoughts Lighthouse Performance Benchmark ===${NC}"
+echo -e "Base URL: ${BASE_URL}"
+echo -e "Minimum Score Threshold: ${MIN_SCORE}"
+echo -e "Report Directory: ${REPORT_DIR}"
+echo -e "Testing ${#COMPLEX_PAGES[@]} complex pages..."
+echo ""
+
+# Create report directory
+mkdir -p "${REPORT_DIR}"
+
+# Function to run Lighthouse test
+run_lighthouse_test() {
+    local url="$1"
+    local page_name="$2"
+    local report_file="${REPORT_DIR}/${page_name}.report.json"
+    local html_file="${REPORT_DIR}/${page_name}.report.html"
+
+    echo -e "${BLUE}Testing: ${url}${NC}"
+
+    # Run Lighthouse with performance focus
+    bunx lighthouse "${url}" \
+        --output=json,html \
+        --output-path="${REPORT_DIR}/${page_name}" \
+        --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+        --preset=desktop \
+        --quiet \
+        --disable-storage-reset \
+        --throttling-method=simulate \
+        --form-factor=desktop 2>/dev/null || {
+            echo -e "${RED}FAILED: Could not run Lighthouse for ${url}${NC}"
+            return 1
+        }
+
+    # Parse scores from JSON report
+    if [[ -f "${report_file}" ]]; then
+        local performance_score=$(jq -r '.categories.performance.score * 100 | floor' "${report_file}")
+        local accessibility_score=$(jq -r '.categories.accessibility.score * 100 | floor' "${report_file}")
+        local best_practices_score=$(jq -r '.categories["best-practices"].score * 100 | floor' "${report_file}")
+        local seo_score=$(jq -r '.categories.seo.score * 100 | floor' "${report_file}")
+
+        # Core Web Vitals
+        local fcp=$(jq -r '.audits["first-contentful-paint"].displayValue' "${report_file}")
+        local lcp=$(jq -r '.audits["largest-contentful-paint"].displayValue' "${report_file}")
+        local cls=$(jq -r '.audits["cumulative-layout-shift"].displayValue' "${report_file}")
+        local tti=$(jq -r '.audits["interactive"].displayValue' "${report_file}")
+
+        echo -e "  Performance: ${performance_score}/100"
+        echo -e "  Accessibility: ${accessibility_score}/100"
+        echo -e "  Best Practices: ${best_practices_score}/100"
+        echo -e "  SEO: ${seo_score}/100"
+        echo -e "  FCP: ${fcp}, LCP: ${lcp}, CLS: ${cls}, TTI: ${tti}"
+
+        # Check threshold compliance
+        if [[ ${performance_score} -ge ${MIN_SCORE} ]]; then
+            echo -e "  ${GREEN}✓ PASSED${NC} - Performance score meets ${MIN_SCORE}+ threshold"
+        else
+            echo -e "  ${RED}✗ FAILED${NC} - Performance score ${performance_score} below ${MIN_SCORE} threshold"
+            echo "performance_fail" >> "${REPORT_DIR}/failures.log"
+        fi
+
+        # Store results for summary
+        echo "${page_name},${performance_score},${accessibility_score},${best_practices_score},${seo_score}" >> "${REPORT_DIR}/results.csv"
+    else
+        echo -e "  ${RED}ERROR: No report generated${NC}"
+        return 1
+    fi
+    echo ""
+}
+
+# Function to check if server is accessible
+check_server() {
+    echo -e "${BLUE}Checking server accessibility...${NC}"
+    if curl -sf "${BASE_URL}" >/dev/null 2>&1; then
+        echo -e "${GREEN}✓ Server is accessible${NC}"
+        return 0
+    else
+        echo -e "${RED}✗ Server not accessible at ${BASE_URL}${NC}"
+        echo -e "${YELLOW}Tip: Start server with 'bin/dev' or 'hugo server'${NC}"
+        return 1
+    fi
+}
+
+# Function to generate summary report
+generate_summary() {
+    local results_file="${REPORT_DIR}/results.csv"
+    local summary_file="${REPORT_DIR}/summary.txt"
+
+    if [[ ! -f "${results_file}" ]]; then
+        echo -e "${RED}No results to summarize${NC}"
+        return 1
+    fi
+
+    echo "=== LIGHTHOUSE BENCHMARK SUMMARY ===" > "${summary_file}"
+    echo "Timestamp: $(date)" >> "${summary_file}"
+    echo "Base URL: ${BASE_URL}" >> "${summary_file}"
+    echo "Pages Tested: ${#COMPLEX_PAGES[@]}" >> "${summary_file}"
+    echo "" >> "${summary_file}"
+
+    # Calculate averages
+    local avg_perf=$(awk -F',' '{sum+=$2} END {print int(sum/NR)}' "${results_file}")
+    local avg_a11y=$(awk -F',' '{sum+=$3} END {print int(sum/NR)}' "${results_file}")
+    local avg_bp=$(awk -F',' '{sum+=$4} END {print int(sum/NR)}' "${results_file}")
+    local avg_seo=$(awk -F',' '{sum+=$5} END {print int(sum/NR)}' "${results_file}")
+
+    echo "AVERAGE SCORES:" >> "${summary_file}"
+    echo "Performance: ${avg_perf}/100" >> "${summary_file}"
+    echo "Accessibility: ${avg_a11y}/100" >> "${summary_file}"
+    echo "Best Practices: ${avg_bp}/100" >> "${summary_file}"
+    echo "SEO: ${avg_seo}/100" >> "${summary_file}"
+    echo "" >> "${summary_file}"
+
+    # Count failures
+    local failures=0
+    if [[ -f "${REPORT_DIR}/failures.log" ]]; then
+        failures=$(wc -l < "${REPORT_DIR}/failures.log")
+    fi
+
+    echo "THRESHOLD COMPLIANCE:" >> "${summary_file}"
+    echo "Pages meeting 90+ performance: $((${#COMPLEX_PAGES[@]} - failures))/${#COMPLEX_PAGES[@]}" >> "${summary_file}"
+
+    if [[ $failures -eq 0 ]]; then
+        echo "Status: ✓ ALL PAGES PASSED" >> "${summary_file}"
+        echo -e "\n${GREEN}🎉 ALL PAGES PASSED! Average Performance: ${avg_perf}/100${NC}"
+    else
+        echo "Status: ✗ ${failures} PAGES FAILED" >> "${summary_file}"
+        echo -e "\n${RED}⚠️  ${failures} pages failed to meet 90+ performance threshold${NC}"
+    fi
+
+    echo "" >> "${summary_file}"
+    echo "Detailed reports available in: ${REPORT_DIR}/" >> "${summary_file}"
+
+    # Display summary
+    echo -e "${BLUE}=== BENCHMARK COMPLETE ===${NC}"
+    cat "${summary_file}"
+}
+
+# Main execution
+main() {
+    # Check if jq is available for JSON parsing
+    if ! command -v jq &> /dev/null; then
+        echo -e "${RED}Error: jq is required for parsing Lighthouse reports${NC}"
+        echo "Install with: brew install jq"
+        exit 1
+    fi
+
+    # Check server accessibility
+    if ! check_server; then
+        exit 1
+    fi
+
+    # Initialize results file
+    echo "page,performance,accessibility,best_practices,seo" > "${REPORT_DIR}/results.csv"
+
+    # Test each complex page
+    local failed_tests=0
+    for page in "${COMPLEX_PAGES[@]}"; do
+        local url="${BASE_URL}${page}"
+        local page_name=$(echo "${page}" | sed 's/[^a-zA-Z0-9]/_/g' | sed 's/__/_/g' | sed 's/^_//' | sed 's/_$//')
+        [[ -z "$page_name" ]] && page_name="homepage"
+
+        if ! run_lighthouse_test "${url}" "${page_name}"; then
+            ((failed_tests++))
+        fi
+    done
+
+    # Generate summary report
+    generate_summary
+
+    # Exit with appropriate code
+    if [[ -f "${REPORT_DIR}/failures.log" ]]; then
+        echo -e "${YELLOW}Some performance issues detected. Check reports in: ${REPORT_DIR}/${NC}"
+        exit 1
+    else
+        echo -e "${GREEN}All tests passed! Reports available in: ${REPORT_DIR}/${NC}"
+        exit 0
+    fi
+}
+
+# Run main function
+main "$@"

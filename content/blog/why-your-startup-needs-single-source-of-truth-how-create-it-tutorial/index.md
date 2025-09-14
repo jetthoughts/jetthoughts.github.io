@@ -43,6 +43,7 @@ Here's the approach that successful tech companies use:
 Stripe's early success came partly from their clear leadership structure. Patrick Collison handled business decisions while John Collison managed product direction. This clarity helped them move fast without stepping on each other's toes.
 
 Modern startups need similar clarity for:
+
 - Product vision
 - Technical decisions
 - Customer needs
@@ -57,6 +58,7 @@ Instagram's early story teaches us about focus. Before becoming a photo-sharing 
 Basecamp (formerly 37signals) pioneered this approach. Their public "Getting Real" manifesto shows how simple documentation beats complex processes every time.
 
 A good documentation system answers:
+
 - What are we building?
 - Why are we building it?
 - How will we know it's successful?
@@ -68,6 +70,7 @@ A good documentation system answers:
 Buffer's transparency journey offers a great example. They make everything public - salaries, equity, even revenue numbers. But more importantly, they keep updates simple and regular through their public blog and dashboard.
 
 Each update should answer:
+
 - What did we finish?
 - What's next?
 - What's blocking us?
@@ -83,6 +86,7 @@ Gitlab's public handbook again provides the gold standard. Their 2000+ page hand
 ## Real-World Success Stories
 
 Let's look at HashiCorp's journey. They grew from a small open-source project to a billion-dollar company while staying aligned through:
+
 1. Clear ownership of different products
 2. Public roadmaps
 3. Regular community updates
@@ -92,6 +96,7 @@ Let's look at HashiCorp's journey. They grew from a small open-source project to
 ## Start Small, Start Now
 
 You don't need to copy GitLab's entire handbook or Stripe's structure immediately. Start with one practice:
+
 - Daily written updates
 - Clear area owners
 - A simple shared roadmap

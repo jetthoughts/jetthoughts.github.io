@@ -1,0 +1,143 @@
+/*
+ * Accessibility Focus Styles
+ * Provides WCAG-compliant focus indicators for all interactive elements
+ */
+
+/* Focus Visible Support for Older Browsers */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+/* Default Focus Styles for Interactive Elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+}
+
+/* Custom Form Control Focus Styles */
+
+/* Custom Checkbox Focus Styles */
+input[type="checkbox"]:focus-visible + label::before,
+input[type="checkbox"]:focus + label::before {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Custom Radio Button Focus Styles */
+input[type="radio"]:focus-visible + label::before,
+input[type="radio"]:focus + label::before {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+/* Gravity Forms Focus Styles */
+.gform_wrapper input[type="checkbox"]:focus-visible + label::before,
+.gform_wrapper input[type="checkbox"]:focus + label::before {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
+}
+
+.gform_wrapper input[type="radio"]:focus-visible + label::before,
+.gform_wrapper input[type="radio"]:focus + label::before {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
+}
+
+/* Enhanced Focus for Submit Buttons */
+.gform_wrapper input[type="submit"]:focus-visible,
+.gform_wrapper .gform_button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(26, 140, 255, 0.5);
+}
+
+/* Skip Link Focus Styles */
+.skip-link:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: unset;
+  outline: 3px solid #1a8cff;
+  outline-offset: 2px;
+  background: #1a8cff;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100000;
+}
+
+/* Focus Styles for Social Icons */
+.pp-social-icon a:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Focus Styles for Custom Styled Links */
+.fl-button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(26, 140, 255, 0.5);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 3px solid;
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *:focus-visible {
+    transition: none;
+  }
+}
+
+/* Mobile/Touch Focus Enhancements */
+@media (max-width: 768px) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+}
+
+/* Focus Trap for Modal Content */
+.modal:focus-within {
+  outline: none;
+}
+
+.modal [tabindex]:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+}
+
+/* Keyboard Navigation Indicators for Dropdowns */
+.dropdown-menu a:focus-visible,
+.sub-menu a:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: -2px;
+  background-color: rgba(26, 140, 255, 0.1);
+}

@@ -21,12 +21,14 @@ metatags:
 slug: from-pitfalls-profit-how-successfully-implement
 ---
 ## TL;DR
+
 * Despite promising $3.2M in annual savings for a 60-person team, 68% of async transitions fail due to leadership resistance
 * Failed implementations cost companies an average of $2.4M in wasted resources and lost productivity
 * Six major pitfalls include cultural resistance, communication gaps, tool overload, collaboration bottlenecks, team cohesion erosion, and technical barriers
 * Successful companies like GitLab, Doist, and Shopify invest $95K-$310K in implementation but receive $9,800-$22,500 in annual savings per employee with 19-31% productivity gains
 
 ## Contents
+
 1. [Why Async Adoption Often Fails](#why-async-adoption-often-fails)
 2. [The Real-World Costs of Flawed Async Implementation](#the-real-world-costs-of-flawed-async-implementation)
 3. [Six Major Pitfalls to Avoid](#six-major-pitfalls-to-avoid)
@@ -89,7 +91,6 @@ These human costs eventually translate to recruitment expenses and lost institut
 
 ![Hand-drawn circular diagram with "Leadership" in center, with radiating impact lines to](file_2.png)
 
-
 Many organizations fail because they don't address the deeply ingrained meeting culture.
 
 Legacy workflows make people perceive async methods as isolating. Managers accustomed to real-time oversight often resist systems that prioritize outcomes over presence.
@@ -107,7 +108,6 @@ Critical decisions stall when stakeholders respond at different rates. A simple 
 ### 3. Tool Overload
 
 ![Hand-drawn brain with multiple arrows shooting out to different platform icons (Slack, email, Zoom, docs, etc.) showing the mental load.](file_3.png)
-
 
 The typical async workplace juggles Slack, email, project management apps, and documents.
 
@@ -158,7 +158,6 @@ Start with these four principles for successful adoption:
 Remember that async isn't binary. The most successful companies maintain a thoughtful blend of communication styles.
 
 ![Hand-drawn balance scale with](file_5.png)
-
 
 ## The Implementation Economics
 

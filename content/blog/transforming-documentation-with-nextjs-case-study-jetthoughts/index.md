@@ -23,6 +23,7 @@ slug: transforming-documentation-with-nextjs-case-study-jetthoughts
 Well-structured documentation is crucial for all open-source projects, but it becomes even more vital for Open Core solutions like CodeVerse, especially when large businesses rely on them. Our project with CodeVerse, where we completely reimagined their documentation platform, is a perfect case study for tech founders and developers aiming for superior documentation.
 
 ![Illustrates the challenges CodeVerse faced with its previous Jekyll and Gatsby documentation and website setup, highlighting inflexibility, update difficulties, and inconsistent user experience.  A diagram shows the decision to use Next.js.](file_0.png)
+
 ## The Challenge
 
 CodeVerse helps teams better manage their code and collaborate. As they grew, they faced significant issues with their documentation and website. They used separate tools: Jekyll for documentation and Gatsby for their website. Here’s where they ran into problems:
@@ -33,8 +34,8 @@ CodeVerse helps teams better manage their code and collaborate. As they grew, th
 
 To fix these problems, CodeVerse needed an easy-to-use solution that would allow it to grow.
 
-
 ![Explains why CodeVerse chose Next.js and Vercel for its new documentation platform.](file_1.png)
+
 ## Choosing Next.js and Vercel
 
 After looking at different frameworks, the CodeVerse team decided on Next.js, a React-based framework. Why did they choose Next.js?
@@ -43,6 +44,7 @@ After looking at different frameworks, the CodeVerse team decided on Next.js, a 
 - **Dynamic Features**: It supports static and dynamic pages, has built-in optimization for images, and can quickly create pages for better performance.
 
 ![Details the custom documentation solutions created using Next.js, focusing on version control, interactive features, and teamwork using GitHub integration](file_2.png)
+
 ### Why Vercel Was the Right Hosting Choice
 
 To host their platform, CodeVerse chose Vercel’s Enterprise plan. Here’s why this was a smart move:
@@ -54,6 +56,7 @@ To host their platform, CodeVerse chose Vercel’s Enterprise plan. Here’s why
 Before this switch, builds could take forever—over 20 minutes! But with Vercel, they could deploy changes faster and with more flexibility.
 
 ![Highlights the ease of document deployment with Vercel's Preview Deployments and the positive impact of Next.js features, resulting in increased website traffic.  Includes a call to action.](file_3.png)
+
 ## Custom Solutions for CodeVerse
 
 With Next.js, we created the perfect documentation experience tailored to CodeVerse’s needs:

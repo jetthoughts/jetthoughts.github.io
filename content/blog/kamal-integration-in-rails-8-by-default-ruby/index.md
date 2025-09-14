@@ -21,20 +21,24 @@ metatags:
 slug: kamal-integration-in-rails-8-by-default-ruby
 ---
 
-In **Rails 8**, Kamal will be included by default. This change aims to simplify deployment and infrastructure management processes for developers. 
+In **Rails 8**, Kamal will be included by default. This change aims to simplify deployment and infrastructure management processes for developers.
 
 ## What is Kamal?
+
 Kamal is a deployment tool that works with Docker and Kubernetes. It automates and simplifies the deployment of applications, providing support for containerization and orchestration.
 
 ## Key Changes
+
 **Adding Kamal to the Gemfile:**
 The Gemfile of new Rails applications will now include the kamal gem by default:
+
 ```ruby
 gem 'kamal', '~> 1.0'
 ```
 
 **Automatic Generation of Kamal Configuration File:**
 When creating a new Rails application, a Kamal configuration file will now be generated automatically, allowing for basic deployment parameters to be set up immediately.
+
 ```yaml
 # Name of your application. Used to uniquely configure containers.
 service: app_name
@@ -123,20 +127,21 @@ asset_path: /rails/public/assets
 #       - data:/data
 ```
 
-**Updates to Rails Generators:** 
+**Updates to Rails Generators:**
 Rails generators now support Kamal, enabling the use of standard Rails commands to create and configure applications with Kamal in mind.
 
 ## Benefits of Kamal Integration
 
-**Simplified Deployment:** 
+**Simplified Deployment:**
 Kamal automates the deployment process, making it easy to set up and deploy applications.
 
-**Support for Docker and Kubernetes:** 
+**Support for Docker and Kubernetes:**
 Kamal integrates with Docker and Kubernetes, allowing the use of containerization and orchestration systems.
 
 **Unified Technology Stack:**
 With Kamal built into Rails, developers get a unified stack for development and deployment, simplifying project management.
 
-More information here: 
-- https://github.com/rails/rails/pull/51798
-- https://kamal-deploy.org/
+More information here:
+
+- <https://github.com/rails/rails/pull/51798>
+- <https://kamal-deploy.org/>

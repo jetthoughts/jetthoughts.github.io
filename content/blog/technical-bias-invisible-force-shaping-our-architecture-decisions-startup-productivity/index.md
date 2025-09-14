@@ -49,6 +49,7 @@ As technical directors, we need to shift our approach:
 ### Measure Impact, Not Intent
 
 Instead of tracking story points or sprint velocities, start measuring:
+
 - Time spent working around architectural limitations
 - Resources invested in maintaining forced technical decisions
 - Actual business impact of our technology choices
@@ -56,6 +57,7 @@ Instead of tracking story points or sprint velocities, start measuring:
 ### Challenge the Default
 
 Before your following architecture review, ask:
+
 - Are we rejecting this solution because of technical limitations or team preferences?
 - What's the actual cost of choosing our preferred stack over alternatives?
 - How much of our technical debt stems from emotional decisions?
@@ -63,6 +65,7 @@ Before your following architecture review, ask:
 ## The Path Forward
 
 We must acknowledge that despite decades of experience, we're not immune to bias. I've started requiring all architectural decisions to include:
+
 - Concrete performance metrics
 - Maintenance cost projections
 - Skill availability analysis
@@ -73,6 +76,7 @@ These requirements have often revealed that our "obvious" technical choices were
 ## A Call to Action
 
 As technical leaders, we must:
+
 1. Create environments where architectural decisions are challenged based on data, not opinion
 2. Regularly review our technology choices against real-world performance metrics
 3. Build teams that value pragmatism over popularity

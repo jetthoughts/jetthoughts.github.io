@@ -22,7 +22,6 @@ slug: what-non-tech-founders-often-miss
 ---
 I have worked with many non-technical founders. They often make the same mistakes, which wastes time and money. They mean well, but problems happen. Here are common issues and how they affect projects.
 
-
 ![A clean, minimalist illustration showing a split-screen composition. On the left side, there's a founder sketching a grand castle in the air with broad, confident strokes. On the right side, there's a more detailed technical blueprint with specific measurements, notes, and architectural elements. Between them, there's a bridge being built from both sides, symbolizing the need to connect vision with practical implementation.](file_0.png)
 
 ## 1. Know Your Users

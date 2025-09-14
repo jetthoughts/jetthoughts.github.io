@@ -58,7 +58,7 @@ Considering all the facts mentioned above, do you think it is a high time to tur
 
 On the other hand, there is still a chance to steer a middle course without breaking a bank.
 
-## Don’t choose cheap, don’t choose top-of-the-range. Choose inexpensive.
+## Don’t choose cheap, don’t choose top-of-the-range. Choose inexpensive
 
 There is a number of companies who have a constant flow of the clients coming by references and do not need to spend time and money on advertising and sales representatives. These companies choose the developers carefully so they do not grow up quickly by hiring a lot of undergrads. Their steady grow is based on the number of new projects from the returning respectable clients.
 

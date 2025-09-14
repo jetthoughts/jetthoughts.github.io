@@ -161,4 +161,4 @@ This way you can not worry about updating the dependencies. Trying to automate s
 You can find this script as well as other optimization tricks in our repository [jetthoughts/jt_tools](https://github.com/jetthoughts/jt_tools/blob/master/lib/install/bin/circleci-auto_upgrade_tools).
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

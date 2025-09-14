@@ -1,0 +1,18 @@
+<ul class="client-logos">
+  {{ range $index, $tech := .Site.Data.companies }}
+    <li class="client-logo">
+      {{ $image := resources.Get $tech.image }}
+      {{ if $image }}
+        {{ $resized := $image.Resize "200x webp Smart q75" }}
+        <img
+          alt="{{ $tech.name }}"
+          class="image"
+          decoding="async"
+          height="{{ $resized.Height }}"
+          src="{{ $resized.RelPermalink | safeURL }}"
+          width="{{ $resized.Width }}"
+        />
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

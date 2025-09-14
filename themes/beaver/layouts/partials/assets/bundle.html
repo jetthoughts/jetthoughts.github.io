@@ -1,0 +1,21 @@
+{{/*
+  Reusable CSS Bundle Processor
+  Usage: {{ partial "assets/bundle.html" (dict "cssFiles" $cssFiles "page" "pageName") }}
+  Note: cssFiles should be a slice of resource objects from resources.Get
+*/}}
+
+{{- $cssFiles := .cssFiles | default slice -}}
+{{- $page := .page | default "default" -}}
+{{- $media := .media | default "all" -}}
+
+{{/* Create bundle name and process CSS */}}
+{{- if $cssFiles -}}
+  {{- $bundleName := printf "css/bundle-%s.css" $page -}}
+
+  {{- $css := $cssFiles | resources.Concat $bundleName | postCSS | minify | fingerprint "md5" -}}
+  {{- if hugo.IsProduction -}}
+    {{- $css = $css | resources.PostProcess -}}
+  {{- end -}}
+
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" media="{{ $media }}" />
+{{- end -}}

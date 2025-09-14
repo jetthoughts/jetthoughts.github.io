@@ -106,10 +106,8 @@ Here's a simple deployment process using Heroku:
 4.  Push your code to Heroku.
 
     heroku create
-    
 
     git push heroku main
-    
 
 Your app is now live! Keep in mind, deploying is not just about getting your app online. You also need to think about scaling and monitoring to handle more users and ensure your app runs smoothly.
 

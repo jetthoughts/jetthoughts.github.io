@@ -1,0 +1,138 @@
+{{/* Enhanced Sitemap with Priority Scoring and Image Integration
+  Features: Dynamic priority based on content type, change frequency optimization,
+  Image sitemap integration, multilingual support ready
+*/}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{- range .Data.Pages -}}
+    {{- if not .Params.private -}}
+    {{- $priority := 0.5 -}}
+    {{- $changefreq := "weekly" -}}
+    
+    {{/* Dynamic Priority Scoring */}}
+    {{- if .IsHome -}}
+      {{- $priority = 1.0 -}}
+      {{- $changefreq = "daily" -}}
+    {{- else if eq .Section "services" -}}
+      {{- if .IsSection -}}
+        {{- $priority = 0.9 -}}
+      {{- else -}}
+        {{/* Individual service pages get high priority */}}
+        {{- $priority = 0.9 -}}
+        {{- $changefreq = "monthly" -}}
+      {{- end -}}
+    {{- else if eq .Section "blog" -}}
+      {{- if .IsSection -}}
+        {{- $priority = 0.8 -}}
+        {{- $changefreq = "daily" -}}
+      {{- else -}}
+        {{/* Blog post priority based on recency and popularity */}}
+        {{- $daysSincePublish := div (sub now.Unix .Date.Unix) 86400 -}}
+        {{- if lt $daysSincePublish 30 -}}
+          {{- $priority = 0.8 -}}
+          {{- $changefreq = "weekly" -}}
+        {{- else if lt $daysSincePublish 90 -}}
+          {{- $priority = 0.7 -}}
+          {{- $changefreq = "monthly" -}}
+        {{- else if lt $daysSincePublish 365 -}}
+          {{- $priority = 0.6 -}}
+          {{- $changefreq = "monthly" -}}
+        {{- else -}}
+          {{- $priority = 0.5 -}}
+          {{- $changefreq = "yearly" -}}
+        {{- end -}}
+      {{- end -}}
+    {{- else if eq .Section "clients" -}}
+      {{- if .IsSection -}}
+        {{- $priority = 0.8 -}}
+      {{- else -}}
+        {{- $priority = 0.7 -}}
+        {{- $changefreq = "monthly" -}}
+      {{- end -}}
+    {{- else if eq .Section "use-cases" -}}
+      {{- if .IsSection -}}
+        {{- $priority = 0.7 -}}
+      {{- else -}}
+        {{- $priority = 0.8 -}}
+        {{- $changefreq = "monthly" -}}
+      {{- end -}}
+    {{- else if in .Title "About" -}}
+      {{- $priority = 0.8 -}}
+      {{- $changefreq = "monthly" -}}
+    {{- else if in .Title "Contact" -}}
+      {{- $priority = 0.9 -}}
+      {{- $changefreq = "monthly" -}}
+    {{- else if eq .Section "careers" -}}
+      {{- $priority = 0.6 -}}
+      {{- $changefreq = "weekly" -}}
+    {{- else if eq .Kind "taxonomy" -}}
+      {{- $priority = 0.4 -}}
+      {{- $changefreq = "weekly" -}}
+    {{- end -}}
+
+    <url>
+      <loc>{{ .Permalink }}</loc>
+      {{- if not .Lastmod.IsZero }}
+      <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
+      {{- else if not .Date.IsZero }}
+      <lastmod>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
+      {{- end }}
+      <changefreq>{{ $changefreq }}</changefreq>
+      <priority>{{ $priority }}</priority>
+
+      {{/* Image Sitemap Integration */}}
+      {{- $images := slice -}}
+      
+      {{/* Featured/cover image */}}
+      {{- with .Params.cover_image -}}
+        {{- $resource := $.Resources.Get . -}}
+        {{- if $resource -}}
+          {{- $images = $images | append $resource -}}
+        {{- end -}}
+      {{- end -}}
+      
+      {{/* Meta image */}}
+      {{- with .Params.metatags.image -}}
+        {{- $resource := $.Resources.Get . -}}
+        {{- if $resource -}}
+          {{- $images = $images | append $resource -}}
+        {{- end -}}
+      {{- end -}}
+      
+      {{/* Content images - scan page bundle resources */}}
+      {{- range .Resources.ByType "image" -}}
+        {{- if not (in $images .) -}}
+          {{- $images = $images | append . -}}
+        {{- end -}}
+      {{- end -}}
+      
+      {{/* Output image entries (max 1000 per page as per Google guidelines) */}}
+      {{- range first 20 $images -}}
+        {{- $imageTitle := .Title | default $.Title -}}
+        {{- $imageCaption := .Params.caption | default $imageTitle -}}
+        
+        <image:image>
+          <image:loc>{{ .Permalink }}</image:loc>
+          {{- if $imageTitle }}
+          <image:title>{{ $imageTitle | htmlEscape }}</image:title>
+          {{- end }}
+          {{- if $imageCaption }}
+          <image:caption>{{ $imageCaption | htmlEscape }}</image:caption>
+          {{- end }}
+        </image:image>
+      {{- end -}}
+
+      {{/* Multilingual support - hreflang for future */}}
+      {{- range .AllTranslations }}
+      <xhtml:link
+        rel="alternate"
+        hreflang="{{ .Language.Lang }}"
+        href="{{ .Permalink }}"
+        />
+      {{- end }}
+    </url>
+    {{- end -}}
+  {{- end -}}
+</urlset>

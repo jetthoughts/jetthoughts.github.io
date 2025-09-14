@@ -54,22 +54,28 @@ Here we are going to go through the process of building an app from scratch. The
 
 ## How to run
 
-### For Web:
-```
+### For Web
+
+```bash
 npm run web-watch
 ```
+
 This compiles the TypeScript code and recompiles it whenever any files are changed.
 
 Open index.html in your browser to view the result.
 
-### For React Native:
-```
+### For React Native
+
+```bash
 run npm run rn-watch
 ```
+
 This compiles the TypeScript code and recompiles it whenever any files are changed.
-```
+
+```bash
 run npm start
 ```
+
 This starts the React Native Packager.
 
 ## Create the main screen
@@ -101,4 +107,4 @@ We initialized the state with video value where we will store the chosen video w
 ReactXP is a powerful solution with a set of various useful components and best practices implemented into it. It will let you deal with both ReactJS (web) and React Native (iOS, Android) having a single codebase. ReactXP is a good choice for your first JavaScript app. You won’t have an informational glut, as you will only see the TypeScript code and no iOS/Android internals.
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

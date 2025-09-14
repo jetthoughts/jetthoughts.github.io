@@ -84,7 +84,7 @@ In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings 
 
 * If there is no live version, screencasts and demos with progress should be provided every 2 days
 
-### 6. Production flow and proactivity:
+### 6. Production flow and proactivity
 
 * Problems should be proactively taken care of, ‘post factum’ approach is a no go.
 
@@ -94,7 +94,7 @@ In [JetThoughts](https://www.jetthoughts.com) we built a checklist which brings 
 
 * [Zero Bug Policy](https://medium.com/qualityfaster/the-zero-bug-policy-b0bd987be684) is a top priority. If things are not working, this is something needed to be taken care of right away. Strive to the bug-free environment to concentrate on new features and customer requests.
 
-### 7. Kanban and Agile:
+### 7. Kanban and Agile
 
 We highly recommend using these methodologies in your company for product delivery, and a lot of things in this checklist would get a new meaning once you understand the principles to follow.
 
@@ -125,4 +125,4 @@ We highly recommend using these methodologies in your company for product delive
 That’s the basic flow that allows you as a founder and/or a project manager to deal with development.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

@@ -58,7 +58,7 @@ builder:
 
 4\. Set up secrets in `.kamal/secrets`
 
-```
+```bash
 KAMAL_REGISTRY_USERNAME=$KAMAL_REGISTRY_USERNAME
 KAMAL_REGISTRY_PASSWORD=$KAMAL_REGISTRY_PASSWORD
 RAILS_MASTER_KEY=$RAILS_MASTER_KEY
@@ -138,7 +138,7 @@ jobs:
 
 All secrets need to be added to the GitHub Actions secrets manager. You need to provide `SSH_PRIVATE_KEY` and `RAILS_PRODUCTION_MASTER_KEY`. Here’s [GitHub’s guide on how to add them](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-## Let me explain what each part does and why it’s needed.
+## Let me explain what each part does and why it’s needed
 
 ```yaml
 
@@ -243,7 +243,7 @@ This step sets up SSH. It creates the SSH directory, adds the private key, and s
 
 Finally, we run the Kamal deploy command. The `RAILS_MASTER_KEY` is used to decrypt credentials, and we authenticate with the Docker registry using GitHub secrets for username and password.
 
-### Next, let’s look at the deploy configuration file at `config/deploy.yml`:
+### Next, let’s look at the deploy configuration file at `config/deploy.yml`
 
 ```yaml
 # Configure builder setup.
@@ -259,6 +259,4 @@ builder:
 
 This configuration helps Kamal manage the build process. It sets the architecture (`amd64`), uses GitHub Actions for caching, and stores secrets like `RAILS_MASTER_KEY` securely.
 
-
 That’s it! This setup gives you an easy, repeatable deployment process using Kamal 2 and GitHub Actions.
-

@@ -1,76 +1,101 @@
+# Multi-stage Dockerfile for JetThoughts test environment
 ARG RUBY_VERSION=3.4
 
-# use the official Bun image
-# see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1 AS base
-WORKDIR /usr/src/app
+#=============================================================================
+# Stage 1: Base image with common dependencies (parallel stage)
+#=============================================================================
+FROM ruby:$RUBY_VERSION-alpine AS base
+RUN apk update && apk upgrade && \
+    apk add --no-cache \
+        build-base make g++ git \
+        libjpeg-turbo-dev vips-dev \
+        python3 pkgconfig
 
-# install dependencies into temp directory
-# this will cache them and speed up future builds
-FROM base AS install
+#=============================================================================
+# Stage 2: Node.js dependencies (parallel with ruby-deps)
+#=============================================================================
+FROM oven/bun:1-alpine AS node-deps
 WORKDIR /temp/dev
+RUN apk add --no-cache build-base python3 pkgconfig vips-dev
 COPY package.json bun.lockb ./
-RUN bun install
+# Enhanced cache mount with retry logic for network issues
+RUN --mount=type=cache,target=/root/.bun,sharing=locked \
+    bun install --frozen-lockfile --verbose
 
-# Install Ruby dependencies in a separate stage
-FROM ruby:$RUBY_VERSION-alpine AS ruby-gems
-RUN apk update --no-cache && apk upgrade --no-cache
-RUN apk add --no-cache build-base make g++ git libjpeg-turbo-dev vips-dev
+#=============================================================================
+# Stage 3: Ruby dependencies (parallel with node-deps)
+#=============================================================================
+FROM base AS ruby-deps
 WORKDIR /usr/src/app
 COPY Gemfile Gemfile.lock ./
-RUN bundle install --jobs $(nproc) --retry 3 --path /opt/bundle
 
-FROM ruby:$RUBY_VERSION-alpine
-COPY --from=base /usr/local/bin/bun /usr/local/bin/
+# Enhanced bundle install with optimized settings
+RUN --mount=type=cache,target=/usr/local/bundle/cache,sharing=locked \
+    --mount=type=cache,target=/root/.bundle \
+    echo "gem: --no-document" > /root/.gemrc && \
+    bundle config set --local deployment false && \
+    bundle config set --local path /opt/bundle && \
+    bundle config set --local jobs 4 && \
+    bundle config set --local retry 3 && \
+    bundle config set --local without development:assets && \
+    bundle install
+
+#=============================================================================
+# Stage 4: Final runtime image (optimized)
+#=============================================================================
+FROM ruby:$RUBY_VERSION-alpine AS runtime
 
 ENV \
     BUNDLE_JOBS=4 \
-    BUNDLE_RETRY=3 \
     BUNDLE_PATH=/opt/bundle \
+    BUNDLE_RETRY=3 \
     DEBUG_COLORS=true \
+    DISPLAY=:99 \
     DOCKER=true \
     ENABLE_SELENIUM_FIXES=true \
+    HUGO_CACHEDIR=/tmp/hugo_cache \
+    HUGO_ENABLEGITINFO=false \
+    HUGO_NUMWORKERMULTIPLIER=4 \
     LANG=C.UTF-8 \
+    MALLOC_ARENA_MAX=2 \
     NODE_ENV=production \
-    OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES \
-    PATH="/app/bin:/opt/bundle/bin:/usr/local/bin/:$PATH" \
+    PATH="/app/bin:/app/node_modules/.bin:/opt/bundle/bin:/usr/local/bin/:$PATH" \
     PRECOMPILED_ASSETS=true \
+    RUBY_GC_HEAP_FREE_SLOTS=1000000 \
+    RUBY_GC_HEAP_GROWTH_FACTOR=1.2 \
+    RUBY_GC_HEAP_GROWTH_MAX_SLOTS=500000 \
+    RUBY_GC_HEAP_INIT_SLOTS=1000000 \
+    RUBY_GC_MALLOC_LIMIT=16777216 \
+    RUBY_GC_OLDMALLOC_LIMIT=67108864 \
     RUBY_YJIT_ENABLE=1 \
-    TEST_SERVER_PORT=1314 \
-    DISPLAY=:99
+    TEST_SERVER_PORT=1314
 
-# Upgrade system
-RUN apk update --no-cache && apk upgrade --no-cache
+# Install all runtime dependencies in single layer with cache
+RUN apk update && apk upgrade && \
+    apk add --no-cache \
+        git \
+        libjpeg-turbo vips \
+        chromium chromium-chromedriver \
+        xvfb \
+        nss freetype ttf-freefont font-noto
 
-# Install system dependencies (runtime focused)
-RUN apk -v add --no-cache \
-      git \
-      libjpeg-turbo \
-      vips \
-      chromium \
-      chromium-chromedriver \
-      xvfb
+# Copy Bun binary for Node.js package management
+COPY --from=node-deps /usr/local/bin/bun /usr/local/bin/
 
-# Upgrade RubyGems
-RUN echo "gem: --no-document" > ~/.gemrc
 
-# Create a directory for the app code
-RUN mkdir -p /app
+# Set up application directory structure
 WORKDIR /app
 
-# Copy installed Ruby gems from the ruby-gems stage
-COPY --from=ruby-gems /opt/bundle /opt/bundle
+VOLUME /app/node_modules
+VOLUME /opt/bundle
 
-# Copy pre-built node_modules from the 'install' stage
-COPY --from=install /temp/dev/node_modules ./node_modules
+# Copy dependencies from build stages (optimized order)
+COPY --from=ruby-deps /opt/bundle /opt/bundle
+COPY --from=node-deps /temp/dev/node_modules ./node_modules
 
-# Add an exception for /app
-RUN git config --global --add safe.directory /app
+COPY .dev/docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod a+r+x /docker-entrypoint.sh && git config --system --add safe.directory /app
 
-# To run browser tests need to run Xvfb
-RUN	printf '#!/bin/sh\nset -e\necho "Running bundle check..."\nbundle check || bundle install\necho "Checking node_modules..."\nif [ ! -d "/app/node_modules" ] || [ -z "$(ls -A /app/node_modules)" ]; then\n  echo "Installing Node.js dependencies..."\n  bun install\nfi\necho "Starting Xvfb..."\nXvfb :99 -screen 0 1920x1080x24 &\nXVFB_PID=$!\necho "Executing command: $@"...\nexec "$@"\nkill $XVFB_PID\n' > /docker-entrypoint.sh && \
-	chmod +x /docker-entrypoint.sh
-
+# Set entrypoint and default command
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Use Bash as the default command
 CMD ["bin/test"]

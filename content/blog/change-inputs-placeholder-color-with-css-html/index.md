@@ -21,15 +21,19 @@ metatags:
 slug: change-inputs-placeholder-color-with-css-html
 ---
 Most modern browsers support the simple pseudo-element:
+
 ```css
 ::placeholder {
   color: #9400d3;
 }
 ```
+
 but what if you need to apply color to a placeholder in older browsers?
 
 ## WebKit, Blink, and Edge
+
 WebKit, Blink (Safari, Google Chrome, Opera 15+), and Microsoft Edge are using a pseudo-element `::-webkit-input-placeholder`
+
 ```css
 ::-webkit-input-placeholder {
   color: #9400d3;
@@ -37,17 +41,22 @@ WebKit, Blink (Safari, Google Chrome, Opera 15+), and Microsoft Edge are using a
 ```
 
 ## Mozilla Firefox 4 to 18
+
 Using a pseudo-class: `:-moz-placeholder`
+
 ```css
 :-moz-placeholder {
   color: #9400d3;
   opacity: 1;
 }
 ```
+
 Firefox’s placeholder appears to be defaulting with reduced opacity, so needs to use `opacity: 1` here.
 
 ## Mozilla Firefox 19+
+
 Using a pseudo-element: `::-moz-placeholder`, but the old selector will still work for a while.
+
 ```css
 ::-moz-placeholder {
   color: #9400d3;
@@ -56,7 +65,9 @@ Using a pseudo-element: `::-moz-placeholder`, but the old selector will still wo
 ```
 
 ## Internet Explorer 10-11
+
 Using a pseudo-class: `:-ms-input-placeholder`
+
 ```css
 :-ms-input-placeholder {
   color: #9400d3;

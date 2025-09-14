@@ -45,9 +45,11 @@ Make compression your stylesheets, and insert them inline directly in the HTML d
 ### Scripts
 
 Try to use as few third-party JavaScript libraries as possible, but if you can not do without them, then use the minified versions.
+
 ```
     <script src="/assets/slick.min-72c6a94....js"></script>
 ```
+
 ### Fonts
 
 You should also understand that any custom font that you connect adds to half a second to the page loading time. Therefore it is strongly recommended to use fonts by default.
@@ -67,6 +69,7 @@ The first thing you can do is compress all images. Some pictures can be compress
 Not necessary to download all images at once. We can upload images when the user scrolls page and images appear on the page. Let’s write a simple script for this:
 
 Just getting all images of the page with class names .lazy
+
 ```js
     var lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
 
@@ -92,12 +95,15 @@ Our function is to substitute data attributes
         }
       };
 ```
+
 Add addEventListener for scroll, resize and orientationchange
+
 ```js
     document.addEventListener('scroll', lazyLoad);
     window.addEventListener('resize', lazyLoad);
     window.addEventListener('orientationchange', lazyLoad);
 ```
+
 Now when you go to the page you will not waste time downloading all pictures that are not in the user’s field of view. But when the user scrolls our page, pictures will be loaded without loss load time.
 
 ## Summary
@@ -105,4 +111,4 @@ Now when you go to the page you will not waste time downloading all pictures tha
 Web sites today have become much more complex and diverse. But despite this, they can still boot in less than one second. Just adhere to the described optimization steps.
 
 **Andriy Parashchuk** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/andriy-parashchuk-3aa56468/) or [GitHub](https://github.com/andriyParashchuk).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

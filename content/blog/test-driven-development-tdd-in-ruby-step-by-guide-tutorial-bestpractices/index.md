@@ -23,4 +23,3 @@ slug: test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices
 In Test-Driven Development (TDD), you start with tests, not code. First, write a test that defines what the code should do. Then write the code to make the test pass, focusing on small, clear steps. This approach in Ruby helps keep each part of the code clear and on target with what it’s supposed to do, often making it easier to adjust and maintain down the line. TDD can make a difference in breaking down problems into smaller, manageable steps, which tends to reduce bugs and make sure each part does what’s actually needed.
 
 In this article, we’ll explore the TDD lifecycle—red, green, refactor—through a small example of an `Order` class that handles items and calculates the total price.
-

@@ -83,7 +83,7 @@ This happens because before the validation ActiveRecord serializes the hash in a
 As you can see, the lines are completely different.
 
 [Official documentation](http://www.ruby-doc.org/core-2.1.2/Hash.html) says:
->  Hashes enumerate their values in the order that the corresponding keys were inserted.
+> Hashes enumerate their values in the order that the corresponding keys were inserted.
 
 Obviously, the hash serialization occurs in the same order in which values are added to the hash.
 
@@ -130,7 +130,8 @@ end
 
 And here are results which we have got:
 
-*For **20 **keys in hash:*
+*For **20**keys in hash:*
+
 ```
                     user      system     total       real
     new_hash      0.000000   0.000000   0.000000 (  0.000015)
@@ -141,7 +142,9 @@ And here are results which we have got:
     old_sort_by   0.000000   0.000000   0.000000 (  0.000042)
     sort          0.000000   0.000000   0.000000 (  0.000050)
 ```
-*And for **100 **items:*
+
+*And for **100**items:*
+
 ```
                     user      system      total      real
     new_hash      0.000000   0.000000   0.000000 (  0.000046)
@@ -152,7 +155,9 @@ And here are results which we have got:
     sort          0.000000   0.000000   0.000000 (  0.000275)
     old_sort      0.000000   0.000000   0.000000 (  0.000286)
 ```
-*And for **100’000 **items:*
+
+*And for **100’000**items:*
+
 ```
                     user      system     total       real
     new_hash      0.090000   0.010000   0.100000 (  0.094235)
@@ -163,7 +168,9 @@ And here are results which we have got:
     sort          0.640000   0.010000   0.650000 (  0.668481)
     old_sort      0.680000   0.000000   0.680000 (  0.689761)
 ```
-*And for **1’000’000 **records (by the way, if you have a hash with 1’000’000 keys, then you are doing something wrong):*
+
+*And for **1’000’000**records (by the way, if you have a hash with 1’000’000 keys, then you are doing something wrong):*
+
 ```
                     user     system      total        real
     by_deleting!  1.620000   0.010000   1.630000 (  1.656473)
@@ -174,6 +181,7 @@ And here are results which we have got:
     old_sort      8.860000   0.150000   9.010000 (  9.091311)
     sort          9.610000   0.120000   9.730000 (  9.843766)
 ```
+
 Consequently, we can see that creating a ‘new hash’ is the fastest way to sort a hash, less fast is ‘by deleting!’ (but it modifies an original array and this is not always allowed). And the shortest way (‘sort’)is also the longest one (from 3x for 20 items to 7x for 1’000’000 items).
 
 In my opinion, a ‘sort by’ method is a golden mean for sorting hashes. It is simple to understand what it does, it is not so time-consuming as a ‘sort’ method and not so difficult to read as ‘new hash’.

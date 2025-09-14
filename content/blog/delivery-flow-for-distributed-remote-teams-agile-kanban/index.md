@@ -30,14 +30,15 @@ We use several lists: *Backlog, Ready, In Progress, Code Review, Verify, Done*
 
 On the Board, issues are listed as Kanban Cards. Each list represents *status/progress* in the Development Pipeline.
 
-The lifecycle of the Card takes its place in *Backlog* and finishes in *Done *row.
+The lifecycle of the Card takes its place in *Backlog* and finishes in *Done*row.
 
 Members are responsible for checking the appropriate list for a new card, take necessary actions, and move it to the next stage.
->  The Developer is personally responsible for the Card and needs to do everything he can to reach the Done for his Card.
+> The Developer is personally responsible for the Card and needs to do everything he can to reach the Done for his Card.
 
 ## Prioritization
 
 Default conventions for priority are: work on Cards based on their position in Pipeline.
+
 > # From the Right to the Left List and from the Top to the Bottom in the List
 
 ![](file_1.png)
@@ -61,17 +62,17 @@ Issues which has been added and ordered by the product owner or decision-makers.
 ## Ready List
 
 Purpose of the list to show how much will be delivered till the end of the week/Sprint.
->  All team members should build this list on week/sprint kickoff review: by confirming that backlog issues have everything needed, filled out in detail and splitting backlog top issues into two days’ tasks.
+> All team members should build this list on week/sprint kickoff review: by confirming that backlog issues have everything needed, filled out in detail and splitting backlog top issues into two days’ tasks.
 
 ## In Progress
 
 The Developer takes the top issue/card from the ***Ready list***, assigns it to himself and move into ***In Progress*** list.
->  One issue per Developer on the list — is the primary constraint.
+> One issue per Developer on the list — is the primary constraint.
 
 ## Code Review
 
 As soon as the card/issue comes to ***Code Review***, someone takes it and adds the feedback.
->  Because this list has higher priority and as soon as the Developer will reach the WIP limits: we have to clean up this list before **Ready **or **In Progress **lists.
+> Because this list has higher priority and as soon as the Developer will reach the WIP limits: we have to clean up this list before **Ready**or **In Progress**lists.
 
 ## Verify/QA List
 
@@ -148,4 +149,4 @@ If you find yourself in a situation where you have to violate the workflow, you 
 * [Checklist for the non-tech founder](https://jtway.co/checklist-for-the-non-tech-founder-5c638133f899)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

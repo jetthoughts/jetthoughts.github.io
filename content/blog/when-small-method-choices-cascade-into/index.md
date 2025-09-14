@@ -155,6 +155,7 @@ After debugging enough cache-related outages, I've learned that caching isn't re
 The approach that's worked best for me involves multiple layers with different consistency guarantees:
 
 **Browser caching for immutable assets:**
+
 ```javascript
 // Webpack config for long-term caching
 output: {
@@ -220,6 +221,7 @@ When a single variant updates, only that fragment invalidates. For a product wit
 Every minute you shave off CI is a minute returned to every developer, multiple times per day. The compound effect adds up to hours per week per person.
 
 **Docker layer optimization:**
+
 ```dockerfile
 FROM node:18-alpine AS base
 
@@ -237,6 +239,7 @@ RUN npm run build
 ```
 
 But the real win is using BuildKit's cache mounts:
+
 ```dockerfile
 RUN --mount=type=cache,target=/root/.npm \
     npm ci --only=production
@@ -307,12 +310,14 @@ Every pull request runs against these budgets. Exceed them and the build fails. 
 ## Some numbers from actual systems
 
 **E-commerce platform (last year):**
+
 - Switched from individual Redis keys to hash data structures
 - Added covering indexes for product catalog queries  
 - Implemented fragment caching with 5-minute TTL
 - **Result:** 47ms → 12ms 95th percentile response time
 
 **B2B SaaS dashboard:**
+
 - Replaced nested GraphQL N+1 patterns with DataLoader
 - Set up database connection pooling via PgBouncer
 - Moved CI from Jenkins to GitHub Actions with build caching

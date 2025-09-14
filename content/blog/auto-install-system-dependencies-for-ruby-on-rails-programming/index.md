@@ -22,11 +22,11 @@ slug: auto-install-system-dependencies-for-ruby-on-rails-programming
 ---
 Let's integrate Homebrew into our Ruby on Rails Project local set up.
 
-There is a convention for Ruby on Rails projects to use `bin/setup` to set up and install/update required dependencies. But by default, it does not include system dependencies. 
+There is a convention for Ruby on Rails projects to use `bin/setup` to set up and install/update required dependencies. But by default, it does not include system dependencies.
 
 We are going to use [the Homebrew Bundle tool](https://github.com/Homebrew/homebrew-bundle) for this.
 
-First, we need to have a `Brewfile` with: 
+First, we need to have a `Brewfile` with:
 
 ```ruby
 # Redis - For ActionCable support (and Sidekiq, caching, etc.)
@@ -58,4 +58,3 @@ end
 I prefer to add it in the beginning before installing other dependencies.
 
 These will help new onboarding set up development with one command only. Reduces the number of instructions from `README`.
-

@@ -26,6 +26,7 @@ But here's the thing: Product-market fit isn't an event. It's not something you 
 ## The Silicon Valley Trap
 
 Silicon Valley wants you to think you need to:
+
 1. Raise millions
 2. Hire fast
 3. Scale faster
@@ -50,6 +51,7 @@ That's it. Everything else is noise.
 Forget your total signups. Meaningless. Forget your Twitter followers. Who cares.
 
 Watch these instead:
+
 - How many users return within 7 days?
 - What's your NPS score?
 - What's your renewal rate?
@@ -61,6 +63,7 @@ Real businesses need real metrics.
 Here's something nobody tells you: Stay under 20 people until you know what you're doing.
 
 Why?
+
 - You can move fast
 - You can change direction
 - You can actually talk to customers
@@ -94,6 +97,7 @@ No framework needed. No consultant required. Just honest work and open eyes.
 ## What This Means for You
 
 Tomorrow morning:
+
 - Delete your product roadmap
 - Cancel your strategy meetings
 - Talk to one customer
@@ -104,14 +108,16 @@ Do that every day for a year. You'll be shocked where you end up.
 ## The Three Stages Every Startup Must Navigate
 
 ### Stage 1: Finding Your Direction
+
 You start with an idea. But ideas are worthless without execution. Here's what you need to know:
 
 **Problem Alert #1: Building Without Talking to Users**
-* What founders do: Lock themselves in a room and build for six months
-* What works: Talk to users before writing a single line of code
-* Real Example: The Weebly team spent their first six months building. Result? Only 12 signups on their best day.
+- What founders do: Lock themselves in a room and build for six months
+- What works: Talk to users before writing a single line of code
+- Real Example: The Weebly team spent their first six months building. Result? Only 12 signups on their best day.
 
 **The Fix:**
+
 1. Talk to 10 potential users this week
 2. Write down their exact words
 3. Look for patterns in their problems
@@ -119,16 +125,17 @@ You start with an idea. But ideas are worthless without execution. Here's what y
 ### Stage 2: Building the Right Thing
 
 **Key Metrics to Watch:**
-* Daily Active Users (DAU)
-* 7-day return rate (should be >30%)
-* NPS score (aim for >50)
+- Daily Active Users (DAU)
+- 7-day return rate (should be >30%)
+- NPS score (aim for >50)
 
 **Problem Alert #2: Focusing on the Wrong Numbers**
-* What founders do: Chase total signups
-* What works: Track how many users come back
-* Real Example: Dropbox ignored total signups. They focused on how many users synced files in their first day.
+- What founders do: Chase total signups
+- What works: Track how many users come back
+- Real Example: Dropbox ignored total signups. They focused on how many users synced files in their first day.
 
 **The Fix:**
+
 1. Set up analytics on day one
 2. Track only three key metrics
 3. Review numbers weekly with your team
@@ -136,66 +143,66 @@ You start with an idea. But ideas are worthless without execution. Here's what y
 ### Stage 3: Finding Product-Market Fit
 
 You'll know you've found it when:
-* Users come back without prompting
-* Your NPS score tops 50
-* Paying customers stick around
+- Users come back without prompting
+- Your NPS score tops 50
+- Paying customers stick around
 
 **Problem Alert #3: Scaling Too Early**
-* What founders do: Hire fast after raising money
-* What works: Stay under 20 people until you find fit
-* Real Example: Weebly kept their team tiny for 18 months. After finding fit, they grew to 350 people.
+- What founders do: Hire fast after raising money
+- What works: Stay under 20 people until you find fit
+- Real Example: Weebly kept their team tiny for 18 months. After finding fit, they grew to 350 people.
 
 ## The Action Plan: Your First 90 Days
 
 ### Week 1-4: Research Phase
-* Talk to 40 potential users
-* Build a landing page
-* Test your core idea
+- Talk to 40 potential users
+- Build a landing page
+- Test your core idea
 
 Why this matters: Most founders skip research. Don't. It saves months of building the wrong thing.
 
 ### Week 5-8: Build Phase
-* Create your MVP in 2 weeks
-* Get 5 users to try it
-* Watch them use it (stay silent)
+- Create your MVP in 2 weeks
+- Get 5 users to try it
+- Watch them use it (stay silent)
 
 Why this matters: Real users break your assumptions. Let them.
 
 ### Week 9-12: Measure Phase
-* Track daily active users
-* Measure 7-day return rate
-* Calculate NPS score
+- Track daily active users
+- Measure 7-day return rate
+- Calculate NPS score
 
 Why this matters: Numbers don't lie. They tell you when to pivot.
 
 ## Real Numbers That Matter
 
 ### Early Stage Metrics
-* Week 1: Talk to 10 users
-* Week 2: Get 5 test users
-* Week 4: Launch MVP
+- Week 1: Talk to 10 users
+- Week 2: Get 5 test users
+- Week 4: Launch MVP
 
 ### Growth Stage Metrics
-* Month 3: 30% weekly return rate
-* Month 6: 50+ NPS score
-* Month 12: 60% annual renewal rate
+- Month 3: 30% weekly return rate
+- Month 6: 50+ NPS score
+- Month 12: 60% annual renewal rate
 
 ## Common Traps and How to Avoid Them
 
 ### The Feature Trap
-* What it looks like: "We just need one more feature!"
-* Why it's dangerous: You delay launching
-* The fix: Launch with one core feature
+- What it looks like: "We just need one more feature!"
+- Why it's dangerous: You delay launching
+- The fix: Launch with one core feature
 
 ### The Funding Trap
-* What it looks like: "We need money to build"
-* Why it's dangerous: You waste time fundraising
-* The fix: Bootstrap until you have users
+- What it looks like: "We need money to build"
+- Why it's dangerous: You waste time fundraising
+- The fix: Bootstrap until you have users
 
 ### The Scaling Trap
-* What it looks like: "Let's hire more developers!"
-* Why it's dangerous: You burn cash faster
-* The fix: Stay small until you find fit
+- What it looks like: "Let's hire more developers!"
+- Why it's dangerous: You burn cash faster
+- The fix: Stay small until you find fit
 
 ## Your Next Steps
 
@@ -208,14 +215,14 @@ Remember: Every successful startup you admire started with these same steps. The
 ## Quick Reference Guide
 
 ### Signs You're on Track
-* Users ask when they can pay
-* People tell friends without prompting
-* Usage grows without marketing
+- Users ask when they can pay
+- People tell friends without prompting
+- Usage grows without marketing
 
 ### Signs You Need to Pivot
-* Users don't come back
-* Growth relies on ads
-* People say "nice idea" but don't use it
+- Users don't come back
+- Growth relies on ads
+- People say "nice idea" but don't use it
 
 ## Final Thoughts
 
@@ -224,6 +231,7 @@ Remember: Every massive success started as a tiny experiment that worked.
 Your job isn't to find product-market fit. Your job is to serve customers so well they can't imagine going anywhere else.
 
 Follow these steps:
+
 1. Talk to users
 2. Build something small
 3. Measure what matters

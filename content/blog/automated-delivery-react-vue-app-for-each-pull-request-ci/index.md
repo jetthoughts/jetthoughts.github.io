@@ -63,4 +63,4 @@ Here is how to make notification in GitHub. We publish a comment with a link ins
 In this article, we have discovered how to create our own JS app Delivery without using a SaaS solution that can not fit your requirements. And you can verify it wasn’t so hard. Using auto-deployments, we have reduced bugs appearing up to 50% because of easier functional testing, and the price is just a small script!
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

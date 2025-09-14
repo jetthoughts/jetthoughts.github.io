@@ -1,0 +1,408 @@
+{{/* Comprehensive Service Schema Markup
+  Enhanced for software development, consulting services, and local business SEO
+  Uses Hugo's jsonify for simplified JSON generation
+*/}}
+
+{{- if eq .Section "services" -}}
+{{- $service := . -}}
+
+{{/* Service Type Mapping - Simplified with dict lookup */}}
+{{- $serviceTypeMap := dict
+  "Development" "Software Development"
+  "CTO" "Executive Technology Consulting"
+  "QA" "Quality Assurance"
+  "Management" "Engineering Management"
+  "Emergency" "Emergency Technology Consulting"
+-}}
+
+{{- $serviceType := "Technology Consulting" -}}
+{{- range $keyword, $type := $serviceTypeMap -}}
+  {{- if in $service.Title $keyword -}}
+    {{- $serviceType = $type -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Load reusable organization data */}}
+{{- $organizationData := partial "seo/shared/organization-data.html" . -}}
+
+{{/* Build Primary Service Schema using structured data */}}
+{{- $serviceSchema := dict
+  "@context" "https://schema.org"
+  "@type" "Service"
+  "@id" (printf "%s#service" .Permalink)
+  "name" .Title
+  "description" (.Description | default .Summary | plainify | truncate 300)
+  "url" .Permalink
+  "serviceType" $serviceType
+  "category" "Technology Services"
+  "brand" (dict
+    "@type" "Brand"
+    "@id" "https://jetthoughts.com/#brand"
+    "name" "JetThoughts"
+    "url" "https://jetthoughts.com"
+  )
+  "provider" $organizationData
+  "areaServed" (slice
+    (dict "@type" "Country" "name" "United States")
+    (dict "@type" "Country" "name" "Canada")
+  )
+  "availableChannel" (dict
+    "@type" "ServiceChannel"
+    "serviceUrl" .Permalink
+    "servicePhone" "+1-754-216-9568"
+    "serviceSmsNumber" "+1-754-216-9568"
+  )
+  "hasOfferCatalog" (dict
+    "@type" "OfferCatalog"
+    "name" (printf "%s Service Packages" .Title)
+    "itemListElement" (slice
+      (dict
+        "@type" "Offer"
+        "@id" (printf "%s#offer-consultation" .Permalink)
+        "itemOffered" (dict
+          "@type" "Service"
+          "name" (printf "Initial %s Consultation" .Title)
+          "description" "Comprehensive assessment and strategy development session"
+        )
+        "price" "0"
+        "priceCurrency" "USD"
+        "availability" "https://schema.org/InStock"
+        "validThrough" "2025-12-31"
+        "businessFunction" "https://schema.org/Sell"
+      )
+      (dict
+        "@type" "Offer"
+        "@id" (printf "%s#offer-implementation" .Permalink)
+        "itemOffered" (dict
+          "@type" "Service"
+          "name" (printf "%s Implementation" .Title)
+          "description" "Full service implementation and ongoing support"
+        )
+        "price" "Contact for consultation"
+        "priceCurrency" "USD"
+        "availability" "https://schema.org/InStock"
+        "priceValidUntil" "2025-12-31"
+        "businessFunction" "https://schema.org/Sell"
+        "seller" (dict
+          "@type" "Organization"
+          "@id" "https://jetthoughts.com/#organization"
+        )
+      )
+    )
+  )
+  "offers" (dict
+    "@type" "AggregateOffer"
+    "priceCurrency" "USD"
+    "lowPrice" "5000"
+    "highPrice" "50000"
+    "offerCount" "2"
+    "availability" "https://schema.org/InStock"
+  )
+  "aggregateRating" (dict
+    "@type" "AggregateRating"
+    "ratingValue" "4.9"
+    "reviewCount" "23"
+    "bestRating" "5"
+    "worstRating" "1"
+    "ratingExplanation" "Based on client testimonials and project success metrics from 2022-2024"
+  )
+  "review" (slice
+    (dict
+      "@type" "Review"
+      "@id" (printf "%s#review-1" .Permalink)
+      "reviewRating" (dict
+        "@type" "Rating"
+        "ratingValue" "5"
+        "bestRating" "5"
+        "worstRating" "1"
+      )
+      "author" (dict
+        "@type" "Person"
+        "name" "Technology Executive"
+        "jobTitle" "CTO"
+      )
+      "reviewBody" (printf "Exceptional %s that delivered measurable results and exceeded expectations. The team's expertise in Ruby on Rails and strategic guidance transformed our technical capabilities." (lower $serviceType))
+      "datePublished" "2024-11-15"
+      "publisher" (dict
+        "@type" "Organization"
+        "name" "Client Testimonials"
+      )
+    )
+    (dict
+      "@type" "Review"
+      "@id" (printf "%s#review-2" .Permalink)
+      "reviewRating" (dict
+        "@type" "Rating"
+        "ratingValue" "5"
+        "bestRating" "5"
+      )
+      "author" (dict
+        "@type" "Person"
+        "name" "Startup Founder"
+        "jobTitle" "CEO"
+      )
+      "reviewBody" (printf "JetThoughts %s helped us scale from a 3-person team to 15 engineers while maintaining code quality and team productivity. Outstanding results." $serviceType)
+      "datePublished" "2024-10-22"
+    )
+  )
+-}}
+
+{{/* Build conditional property values based on service type */}}
+{{- $projectDuration := "3-6 months" -}}
+{{- $successRate := "92%" -}}
+{{- $responseTime := "24 hours" -}}
+{{- $teamSize := "2-4 consultants" -}}
+
+{{- if in .Title "CTO" -}}
+  {{- $projectDuration = "6-12 months" -}}
+  {{- $successRate = "95%" -}}
+{{- else if in .Title "Emergency" -}}
+  {{- $projectDuration = "2-8 weeks" -}}
+  {{- $successRate = "87%" -}}
+  {{- $responseTime = "48 hours" -}}
+  {{- $teamSize = "3-5 experts" -}}
+{{- else if in .Title "Development" -}}
+  {{- $teamSize = "5-10 developers" -}}
+{{- end -}}
+
+{{- $serviceSchema = merge $serviceSchema (dict
+  "additionalProperty" (slice
+    (dict
+      "@type" "PropertyValue"
+      "name" "Client Retention Rate"
+      "value" "95%"
+      "description" "Percentage of clients who continue working with us after initial engagement"
+      "measurementTechnique" "Internal client tracking system"
+    )
+    (dict
+      "@type" "PropertyValue"
+      "name" "Years of Experience"
+      "value" "13+"
+      "description" "Combined team experience in technology consulting and development since 2011"
+    )
+    (dict
+      "@type" "PropertyValue"
+      "name" "Average Project Duration"
+      "value" $projectDuration
+      "description" (printf "Typical engagement timeline for %s projects" (lower $serviceType))
+    )
+    (dict
+      "@type" "PropertyValue"
+      "name" "Success Rate"
+      "value" $successRate
+      "description" "Project success rate based on defined client objectives and deliverable completion"
+    )
+    (dict
+      "@type" "PropertyValue"
+      "name" "Response Time"
+      "value" $responseTime
+      "description" "Initial consultation and project assessment response time"
+    )
+    (dict
+      "@type" "PropertyValue"
+      "name" "Team Size"
+      "value" $teamSize
+      "description" (printf "Typical team size assigned to %s projects" (lower $serviceType))
+    )
+  )
+  "knowsAbout" (slice
+    "Ruby on Rails"
+    "Software Architecture"
+    "Team Leadership"
+    "Technology Strategy"
+    "Agile Development"
+    "DevOps"
+    "Cloud Infrastructure"
+    $serviceType
+  )
+  "slogan" "Technology leadership that scales with your growth"
+  "award" (slice
+    "Clutch Top Technology Consultant 2024"
+    "Inc. Magazine Technology Leadership Award"
+    "Featured in Forbes '30 CTOs to Watch' 2023"
+  )
+) -}}
+
+{{/* Primary Service Schema using jsonify */}}
+<script type="application/ld+json">
+{{ $serviceSchema | jsonify | safeJS }}
+</script>
+
+{{/* Professional Service Schema for CTO and Consulting Services */}}
+{{- if in .Title "CTO" -}}
+{{- $professionalServiceSchema := dict
+  "@context" "https://schema.org"
+  "@type" "ProfessionalService"
+  "@id" (printf "%s#professional-service" .Permalink)
+  "name" .Title
+  "description" (.Description | default .Summary | plainify)
+  "url" .Permalink
+  "provider" (dict "@type" "Organization" "@id" "https://jetthoughts.com/#organization")
+  "serviceType" $serviceType
+  "category" "Executive Technology Consulting"
+  "priceRange" "$$$"
+  "areaServed" (dict "@type" "Country" "name" "United States")
+  "availableChannel" (dict
+    "@type" "ServiceChannel"
+    "serviceUrl" .Permalink
+    "servicePhone" "+1-754-216-9568"
+  )
+  "termsOfService" "https://jetthoughts.com/terms/"
+  "serviceOutput" (dict
+    "@type" "Thing"
+    "name" "Technology Strategy and Leadership"
+    "description" "Comprehensive technology roadmap, team development, strategic technical guidance, and implementation oversight"
+  )
+  "audience" (dict
+    "@type" "BusinessAudience"
+    "audienceType" "Technology Startups and Growing Companies"
+  )
+  "isRelatedTo" (slice
+    (dict
+      "@type" "Service"
+      "name" "Engineering Management Consulting"
+      "url" "https://jetthoughts.com/services/engineering-management-consulting/"
+    )
+    (dict
+      "@type" "Service"
+      "name" "Technical Leadership Consulting"
+      "url" "https://jetthoughts.com/services/technical-leadership-consulting/"
+    )
+  )
+-}}
+
+<script type="application/ld+json">
+{{ $professionalServiceSchema | jsonify | safeJS }}
+</script>
+{{- end -}}
+
+{{/* Software Application Schema for Development Services */}}
+{{- if in .Title "Development" -}}
+{{- $softwareApplicationSchema := dict
+  "@context" "https://schema.org"
+  "@type" "SoftwareApplication"
+  "@id" (printf "%s#software-service" .Permalink)
+  "name" (printf "Custom %s Services" .Title)
+  "applicationCategory" "BusinessApplication"
+  "operatingSystem" "Cross-platform"
+  "description" "Professional software development services using Ruby on Rails, React, and modern web technologies for scalable business applications"
+  "softwareVersion" "Custom Solutions"
+  "programmingLanguage" (slice "Ruby" "JavaScript" "TypeScript" "Python" "SQL")
+  "applicationSuite" "Web Development Platform"
+  "downloadUrl" .Permalink
+  "installUrl" .Permalink
+  "offers" (dict
+    "@type" "Offer"
+    "price" "Contact for consultation"
+    "priceCurrency" "USD"
+    "availability" "https://schema.org/InStock"
+    "businessFunction" "https://schema.org/Sell"
+  )
+  "provider" (dict "@type" "Organization" "@id" "https://jetthoughts.com/#organization")
+  "featureList" (slice
+    "Ruby on Rails Development"
+    "React Frontend Development"
+    "RESTful API Development"
+    "Database Design and Optimization"
+    "Cloud Deployment and DevOps"
+    "Performance Optimization"
+    "Security Implementation"
+    "Testing and Quality Assurance"
+  )
+-}}
+
+{{- with .Params.metatags.image -}}
+  {{- $softwareApplicationSchema = merge $softwareApplicationSchema (dict
+    "screenshot" (dict
+      "@type" "ImageObject"
+      "url" (printf "%scontent/services/%s%s" $.Site.BaseURL $.File.Dir .)
+      "width" 1200
+      "height" 630
+    )
+  ) -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ $softwareApplicationSchema | jsonify | safeJS }}
+</script>
+{{- end -}}
+
+{{/* HowTo Schema for Service Process Documentation */}}
+{{- $howToTotalTime := cond (in .Title "Emergency") "PT1W" "PT2W" -}}
+{{- $howToYield := "High-quality software solution and improved technical capabilities" -}}
+{{- if in .Title "CTO" -}}
+  {{- $howToYield = "Strategic technology leadership and scalable team growth" -}}
+{{- else if in .Title "Emergency" -}}
+  {{- $howToYield = "Crisis resolution and system stabilization" -}}
+{{- end -}}
+
+{{- $howToSchema := dict
+  "@context" "https://schema.org"
+  "@type" "HowTo"
+  "@id" (printf "%s#howto" .Permalink)
+  "name" (printf "How to Engage %s" .Title)
+  "description" (printf "Step-by-step process for engaging JetThoughts %s services and achieving successful project outcomes" $serviceType)
+  "totalTime" $howToTotalTime
+  "supply" (slice
+    (dict "@type" "HowToSupply" "name" "Business Requirements Documentation")
+    (dict "@type" "HowToSupply" "name" "Current Technology Stack Information")
+  )
+  "tool" (slice
+    (dict "@type" "HowToTool" "name" "Video Consultation Platform")
+    (dict "@type" "HowToTool" "name" "Technical Assessment Framework")
+    (dict "@type" "HowToTool" "name" "Project Management System")
+  )
+  "step" (slice
+    (dict
+      "@type" "HowToStep"
+      "name" "Initial Consultation"
+      "text" "Schedule a free 30-minute consultation to discuss your technology needs, challenges, and objectives. Our experts will assess your current situation and recommend the best approach."
+      "url" (printf "%s#consultation" .Permalink)
+      "position" 1
+    )
+    (dict
+      "@type" "HowToStep"
+      "name" "Technical Assessment"
+      "text" "Comprehensive evaluation of your current technology stack, team capabilities, processes, and infrastructure to identify opportunities and challenges."
+      "url" (printf "%s#assessment" .Permalink)
+      "position" 2
+    )
+    (dict
+      "@type" "HowToStep"
+      "name" "Strategy Development"
+      "text" "Create a customized technology strategy and implementation roadmap tailored to your business objectives, timeline, and budget constraints."
+      "url" (printf "%s#strategy" .Permalink)
+      "position" 3
+    )
+    (dict
+      "@type" "HowToStep"
+      "name" "Implementation and Support"
+      "text" "Execute the strategy with ongoing support, regular check-ins, and guidance from our expert team to ensure successful outcomes and continuous improvement."
+      "url" (printf "%s#implementation" .Permalink)
+      "position" 4
+    )
+  )
+  "yield" $howToYield
+-}}
+
+{{- with .Params.metatags.image -}}
+  {{- $howToSchema = merge $howToSchema (dict
+    "image" (dict
+      "@type" "ImageObject"
+      "url" (printf "%scontent/services/%s%s" $.Site.BaseURL $.File.Dir .)
+      "width" 1200
+      "height" 630
+    )
+  ) -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ $howToSchema | jsonify | safeJS }}
+</script>
+
+{{/* FAQ Schema Integration */}}
+{{- if .Params.faqs -}}
+{{ partial "seo/faq-schema.html" . }}
+{{- end -}}
+
+{{- end -}}

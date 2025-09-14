@@ -90,4 +90,4 @@ We are:
 In this article, we have covered a lot of things about JetThoughts. Culture, our principles/values, and the way we communicate and develop. That’s all, eight hours of speaking, thinking, and listening passed very quickly. I hope this gives some insight into JetThoughts, and how we work.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

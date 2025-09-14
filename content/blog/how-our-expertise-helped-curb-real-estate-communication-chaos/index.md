@@ -26,11 +26,12 @@ slug: how-our-expertise-helped-curb-real-estate-communication-chaos
 If you asked [*Elliot Koolik](https://www.linkedin.com/in/elliotkoolik/)* for one complaint about his job, he’d have an answer ready for you in an instant. ***Inefficient communication.***
 
 [*Koolik](https://www.linkedin.com/in/elliotkoolik/)* had been selling real estate in sunny [Boca Raton, Florida](https://en.wikipedia.org/wiki/Boca_Raton,_Florida) for nearly 25 years. He enjoyed the fast-paced nature of the industry, with properties going on and off the market, showings happening all over the town, and constantly evolving deals.
-> # But he struggled to keep up with the communication necessary to maximize his productivity every day.
+
+> # But he struggled to keep up with the communication necessary to maximize his productivity every day
 
 Too much time was spent checking email, deciphering text messages, and sifting through various messaging apps in an attempt to keep up with the multiple conversations happening at once.
 
-He and business partner *Tyler Gordon *vented frustrations before turning that energy into ideas for how to transform communication in the real estate industry. They wondered: *What if there was a way to centralize all communication into one platform?*
+He and business partner *Tyler Gordon*vented frustrations before turning that energy into ideas for how to transform communication in the real estate industry. They wondered: *What if there was a way to centralize all communication into one platform?*
 
 ![](file_1.png)
 
@@ -54,7 +55,7 @@ The team grew from 1 to 6 developers within the first year and we gained trust a
 
 We went through our fair share of ups and downs during a 4-year period. But by far, the ups outweighed the downs. We’re proud to say we helped [Agent Inbox](https://www.jetthoughts.com/agentinbox) launch mobile and desktop versions of its messaging platform, filled with features that were beloved by users, and even helped them reach 100,000 users in under a year, which surpassed expectations.
 
-On the back end, we worked to migrate data from [Spark](https://sparkplatform.com/docs) (a data processing engine) to a custom, in-house [RETS ](https://en.wikipedia.org/wiki/Real_Estate_Transaction_Standard)(real estate transaction standard) aggregator, which helped dramatically grow the customer base. We also moved [Agent Inbox](https://www.jetthoughts.com/agentinbox) to a hybrid solution using [React.js](https://reactjs.org/) and [Ruby on Rails](https://rubyonrails.org/), replacing their [single-page-application](https://en.wikipedia.org/wiki/Single-page_application) solution with [server-side rendering](https://flaviocopes.com/react-server-side-rendering/) to improve project stability and speed. (This move came from our experience knowing that small teams working on various platforms simultaneously often end up inadvertently wasting time and money.)
+On the back end, we worked to migrate data from [Spark](https://sparkplatform.com/docs) (a data processing engine) to a custom, in-house [RETS](https://en.wikipedia.org/wiki/Real_Estate_Transaction_Standard)(real estate transaction standard) aggregator, which helped dramatically grow the customer base. We also moved [Agent Inbox](https://www.jetthoughts.com/agentinbox) to a hybrid solution using [React.js](https://reactjs.org/) and [Ruby on Rails](https://rubyonrails.org/), replacing their [single-page-application](https://en.wikipedia.org/wiki/Single-page_application) solution with [server-side rendering](https://flaviocopes.com/react-server-side-rendering/) to improve project stability and speed. (This move came from our experience knowing that small teams working on various platforms simultaneously often end up inadvertently wasting time and money.)
 
 ![](file_4.png)
 
@@ -67,4 +68,4 @@ We designed a non-trivial algorithm for finding the best routes so agents can pl
 With all of this in mind — and with a powerful, custom messaging solution on the market — we’re confident that if you asked [*Elliot Koolik](https://www.linkedin.com/in/elliotkoolik/)* again about his #1 job complaint, inefficient communication would no longer be his answer.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -3,15 +3,16 @@
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $CSS := slice
 (resources.Get "css/701-layout.css")
-(resources.Get "css/skin-65eda28877e04.css")
+(resources.Get "css/theme-main.css")
 $dynamicCSS586
-(resources.Get "css/586.css")
-(resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
+(resources.Get "css/services-layout.css")
+(resources.Get "css/component-bundle.css")
 (resources.Get "css/footer.css")
-| resources.Concat "css/about-us.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+| resources.Concat "css/about-us.css" }}
 
 <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ partial "header/json-ld-company.html" . }}
+{{ partial "seo/organization-enhanced-schema.html" . }}
 {{ end }}
 
 {{ define "main" }}
@@ -208,6 +209,109 @@ $dynamicCSS586
                                   </div>
                                </div>
                             </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <!-- Team Expertise Section -->
+                <div class="fl-row fl-row-full-width fl-row-bg-color fl-node-team-expertise fl-row-default-height fl-row-align-center" data-node="team-expertise">
+                   <div class="fl-row-content-wrap">
+                      <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                         <div class="fl-col-group fl-node-team-expertise-header fl-col-group-custom-width" data-node="team-expertise-header">
+                            <div class="fl-col fl-node-team-expertise-title fl-col-small-custom-width" data-node="team-expertise-title">
+                               <div class="fl-col-content fl-node-content">
+                                  <div class="fl-module fl-module-rich-text fl-node-team-expertise-headline" data-node="team-expertise-headline">
+                                     <div class="fl-module-content fl-node-content">
+                                        <div class="fl-rich-text">
+                                           <p>{{ .Params.team_expertise.headline }}</p>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="fl-module fl-module-heading fl-node-team-expertise-subheading" data-node="team-expertise-subheading">
+                                     <div class="fl-module-content fl-node-content">
+                                        <h2 class="fl-heading">
+                                           <span class="fl-heading-text">{{ .Params.team_expertise.headline2 }}</span>
+                                        </h2>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="fl-col-group fl-node-team-expertise-items fl-col-group-custom-width" data-node="team-expertise-items">
+                            {{ range .Params.team_expertise.items }}
+                            <div class="fl-col fl-node-expertise-item fl-col-small fl-col-small-custom-width" data-node="expertise-item">
+                               <div class="fl-col-content fl-node-content">
+                                  <div class="fl-module fl-module-pp-infobox fl-node-expertise-box" data-node="expertise-box">
+                                     <div class="fl-module-content fl-node-content">
+                                        <div class="pp-infobox-wrap">
+                                           <div class="pp-infobox layout-5">
+                                              <div class="pp-infobox-title-wrapper">
+                                                 <h3 class="pp-infobox-title">{{ .name }}</h3>
+                                              </div>
+                                              <div class="pp-infobox-description">
+                                                 <div class="pp-description-wrap">
+                                                    <p>{{ .description | safeHTML }}</p>
+                                                    <ul class="expertise-credentials">
+                                                       {{ range .credentials }}
+                                                       <li>{{ . }}</li>
+                                                       {{ end }}
+                                                    </ul>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                            {{ end }}
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <!-- Authority Signals Section -->
+                <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-authority-signals fl-row-default-height fl-row-align-center" data-node="authority-signals">
+                   <div class="fl-row-content-wrap">
+                      <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                         <div class="fl-col-group fl-node-authority-header fl-col-group-custom-width" data-node="authority-header">
+                            <div class="fl-col fl-node-authority-title fl-col-small-custom-width" data-node="authority-title">
+                               <div class="fl-col-content fl-node-content">
+                                  <div class="fl-module fl-module-rich-text fl-node-authority-headline" data-node="authority-headline">
+                                     <div class="fl-module-content fl-node-content">
+                                        <div class="fl-rich-text">
+                                           <p>{{ .Params.authority_signals.headline }}</p>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="fl-module fl-module-heading fl-node-authority-subheading" data-node="authority-subheading">
+                                     <div class="fl-module-content fl-node-content">
+                                        <h2 class="fl-heading">
+                                           <span class="fl-heading-text">{{ .Params.authority_signals.headline2 }}</span>
+                                        </h2>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="fl-col-group fl-node-authority-items fl-col-group-custom-width" data-node="authority-items">
+                            {{ range .Params.authority_signals.items }}
+                            <div class="fl-col fl-node-authority-category fl-col-small fl-col-small-custom-width" data-node="authority-category">
+                               <div class="fl-col-content fl-node-content">
+                                  <div class="fl-module fl-module-rich-text fl-node-authority-category-title" data-node="authority-category-title">
+                                     <div class="fl-module-content fl-node-content">
+                                        <div class="fl-rich-text">
+                                           <h4>{{ .category }}</h4>
+                                           <ul class="authority-list">
+                                              {{ range .items }}
+                                              <li>{{ . }}</li>
+                                              {{ end }}
+                                           </ul>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                            {{ end }}
                          </div>
                       </div>
                    </div>

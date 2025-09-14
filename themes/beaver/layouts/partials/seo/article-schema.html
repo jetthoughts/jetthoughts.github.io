@@ -1,0 +1,71 @@
+{{/* Article Schema - JSON-LD structured data for blog posts */}}
+{{ if eq .Section "blog" }}
+
+{{/* Build article schema using structured data */}}
+{{- $articleSchema := dict
+  "@context" "https://schema.org"
+  "@type" "Article"
+  "headline" .Title
+  "description" ((.Description | default .Summary | plainify) | truncate 160)
+  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+  "author" (dict "@type" "Person" "name" (.Params.author | default "JetThoughts Team"))
+  "publisher" (dict
+    "@type" "Organization"
+    "name" .Site.Title
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" (printf "%simg/logo.png" .Site.BaseURL)
+      "width" 200
+      "height" 36
+    )
+  )
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+  "articleSection" (.Section | title)
+  "wordCount" .WordCount
+  "url" .Permalink
+  "isPartOf" (dict
+    "@type" "Blog"
+    "@id" (printf "%sblog/" .Site.BaseURL)
+    "name" "JetThoughts Blog"
+  )
+-}}
+
+{{/* Add image if available */}}
+{{- with .Params.metatags.image -}}
+  {{- $imageResource := $.Resources.Get . -}}
+  {{- if $imageResource -}}
+    {{- $articleSchema = merge $articleSchema (dict
+      "image" (dict
+        "@type" "ImageObject"
+        "url" $imageResource.Permalink
+        "width" ($imageResource.Width | default 1200)
+        "height" ($imageResource.Height | default 630)
+      )
+    ) -}}
+  {{- else -}}
+    {{- $articleSchema = merge $articleSchema (dict
+      "image" (dict
+        "@type" "ImageObject"
+        "url" (printf "%s%s" $.Site.BaseURL .)
+        "width" 1200
+        "height" 630
+      )
+    ) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Add keywords if available */}}
+{{- with .Params.tags -}}
+  {{- $articleSchema = merge $articleSchema (dict "keywords" .) -}}
+{{- end -}}
+
+{{/* Add categories if available */}}
+{{- with .Params.categories -}}
+  {{- $articleSchema = merge $articleSchema (dict "about" .) -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ $articleSchema | jsonify | safeJS }}
+</script>
+{{ end }}

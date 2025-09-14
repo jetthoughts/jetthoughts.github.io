@@ -39,9 +39,9 @@ Do not mess with schema and data migrations! Separate those problems. There is a
 
 As usual, there are ready solutions with a lot of helpers to make this work:
 
-* [https://github.com/ilyakatz/data-migrate](https://github.com/ilyakatz/data-migrate)
+- [https://github.com/ilyakatz/data-migrate](https://github.com/ilyakatz/data-migrate)
 
-* [https://github.com/theSteveMitchell/after_party](https://github.com/theSteveMitchell/after_party)
+- [https://github.com/theSteveMitchell/after_party](https://github.com/theSteveMitchell/after_party)
 
 But you can also do this without gems by following a simple convention.
 

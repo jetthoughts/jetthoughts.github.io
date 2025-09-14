@@ -1,0 +1,178 @@
+{{/* Enhanced Organization Schema with Testimonials
+  Features comprehensive business information and client reviews
+*/}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://jetthoughts.com/#organization",
+  "name": "JetThoughts",
+  "alternateName": "JT",
+  "legalName": "JetThoughts LLC",
+  "url": "https://jetthoughts.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://jetthoughts.com/assets/images/jetthoughts-logo-large.png",
+    "width": 400,
+    "height": 72
+  },
+  "image": "https://jetthoughts.com/assets/images/jetthoughts-og-image.jpg",
+  "description": "Expert software development and technology consulting services with 18+ years of experience and 95% client retention rate.",
+  
+  "foundingDate": "2011",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "15-50"
+  },
+  
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US",
+    "addressLocality": "Fort Lauderdale",
+    "addressRegion": "FL",
+    "postalCode": "33301"
+  },
+  
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-754-216-9568",
+      "email": "info@jetthoughts.com",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    {
+      "@type": "ContactPoint",
+      "email": "careers@jetthoughts.com", 
+      "contactType": "recruitment",
+      "availableLanguage": "English"
+    }
+  ],
+  
+  "sameAs": [
+    "https://twitter.com/jetthoughts",
+    "https://linkedin.com/company/jetthoughts",
+    "https://github.com/jetthoughts",
+    "https://dev.to/jetthoughts",
+    "https://facebook.com/jetthoughts"
+  ],
+  
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Software Development Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Fractional CTO Services",
+        "description": "Strategic technology leadership and team building"
+      },
+      {
+        "@type": "OfferCatalog", 
+        "name": "App & Web Development",
+        "description": "Custom software development and digital solutions"
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Software QA & Testing",
+        "description": "Quality assurance and testing automation services"
+      }
+    ]
+  },
+  
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "25",
+    "bestRating": "5",
+    "worstRating": "1"
+  }{{ with .Site.Params.testimonials }},
+  
+  {{/* Include testimonials as reviews */}}
+  "review": [
+    {{- range $index, $testimonial := . -}}
+    {{- if gt $index 0 }},{{ end }}
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "{{ $testimonial.name }}"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ $testimonial.rating }}",
+        "bestRating": "5"
+      },
+      "reviewBody": {{ $testimonial.description | jsonify }},
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ $testimonial.title | default "Client" }}"
+      }
+    }
+    {{- end }}
+  ]{{ end }},
+  
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Software Development Consulting",
+        "description": "Expert software development and technology consulting"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    }
+  ],
+  
+  "knowsAbout": [
+    "Software Development",
+    "Ruby on Rails",
+    "React",
+    "JavaScript", 
+    "Technology Consulting",
+    "CTO Services",
+    "Quality Assurance",
+    "Web Development",
+    "Mobile App Development"
+  ],
+  
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Software Development Industry"
+  },
+  
+  "award": [
+    "95% Client Retention Rate",
+    "18+ Years Industry Experience",
+    "540+ Published Articles"
+  ]
+}
+</script>
+
+{{/* LocalBusiness Schema for local SEO */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "JetThoughts",
+  "url": "https://jetthoughts.com",
+  "telephone": "+1-754-216-9568",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US",
+    "addressLocality": "Fort Lauderdale", 
+    "addressRegion": "FL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "26.1224",
+    "longitude": "-80.1373"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "priceRange": "$$$",
+  "servesCuisine": "Software Development Services"
+}
+</script>

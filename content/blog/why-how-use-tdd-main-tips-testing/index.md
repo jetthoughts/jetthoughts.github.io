@@ -56,7 +56,7 @@ He needs to write the tests based on user requirements and put in place the logi
 * **The total time spent on development decreases.**
 At first, TDD seems to take more time. But it saves time in debugging, error-hunting, refactoring, and understanding code.
 
-### Some tips for TDD users.
+### Some tips for TDD users
 
 1. In the case when you develop the logic from zero, write the first simple test. Imagine that you have an ideal interface; do not pay attention to the details for the future.
 2. When adding new logic to a class (component), first refactor it. This readies the component for new functions. It ensures that new additions need minimal code and don't change existing code. Then, ensure all tests pass. Finally, write a test for the new logic.

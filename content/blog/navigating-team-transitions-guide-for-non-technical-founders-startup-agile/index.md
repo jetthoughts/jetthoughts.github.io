@@ -32,6 +32,5 @@ ADKAR steers organizations through intricate changes. It is your guide to a smoo
 
 It is a powerful tool. This framework is not a buzzword. It will build your confidence in managing this transition.
 
-
-Awareness: Be transparent.
+Awareness: Be transparent
 ----------------------

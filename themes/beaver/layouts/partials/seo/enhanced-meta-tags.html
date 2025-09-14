@@ -1,0 +1,253 @@
+{{/* Enhanced SEO Meta Tags Optimization
+  Features: Optimized titles, compelling descriptions, schema integration
+  Character limits: Title 50-60, Description 150-160
+*/}}
+
+{{- $page := . -}}
+{{- $site := .Site -}}
+
+{{/* Power words for title enhancement */}}
+{{- $powerWords := dict
+  "services" (slice "Expert" "Proven" "Professional" "Comprehensive")
+  "blog" (slice "Essential" "Advanced" "Complete" "Ultimate")
+  "about" (slice "Trusted" "Experienced" "Award-Winning")
+  "default" (slice "Leading" "Innovative" "Reliable")
+-}}
+
+{{/* Title Generation with Emotional Triggers */}}
+{{- $title := "" -}}
+{{- $titleSuffix := " | JetThoughts" -}}
+{{- $maxTitleLength := 60 -}}
+
+{{- if .IsHome -}}
+  {{- $title = "Expert Software Development & Consulting | JetThoughts" -}}
+{{- else if eq .Section "services" -}}
+  {{- if .IsSection -}}
+    {{- $title = "Expert Software Development Services | JetThoughts" -}}
+  {{- else -}}
+    {{/* Individual service pages - optimize for conversion */}}
+    {{- $serviceTitle := .Title -}}
+    {{- if in .Title "Fractional CTO" -}}
+      {{- $title = "Expert Fractional CTO: 95% Client Retention | JetThoughts" -}}
+    {{- else if in .Title "App & Web" -}}
+      {{- $title = "App & Web Development: 3x Faster Delivery | JetThoughts" -}}
+    {{- else if in .Title "QA" -}}
+      {{- $title = "Software QA & Testing: Zero Defect Delivery | JetThoughts" -}}
+    {{- else -}}
+      {{- $title = printf "%s - Expert Solutions | JetThoughts" .Title -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if eq .Section "blog" -}}
+  {{- if .IsSection -}}
+    {{- $title = "Expert Software Development Blog - 540+ Articles | JT" -}}
+  {{- else -}}
+    {{/* Individual blog posts */}}
+    {{- $blogTitle := .Title | truncate 45 "" -}}
+    {{- $title = printf "%s | JetThoughts Blog" $blogTitle -}}
+  {{- end -}}
+{{- else if eq .Type "pages" -}}
+  {{- if in .Title "About" -}}
+    {{- $title = "About JetThoughts: 18+ Years, 95% Client Retention" -}}
+  {{- else if in .Title "Contact" -}}
+    {{- $title = "Contact JetThoughts - Free Consultation Available" -}}
+  {{- else -}}
+    {{- $title = printf "%s | JetThoughts" .Title -}}
+  {{- end -}}
+{{- else -}}
+  {{- $title = printf "%s | JetThoughts" .Title -}}
+{{- end -}}
+
+{{/* Ensure title doesn't exceed character limit */}}
+{{- if gt (len $title) $maxTitleLength -}}
+  {{- $title = $title | truncate $maxTitleLength "…" -}}
+{{- end -}}
+
+<title>{{ $title }}</title>
+
+{{/* Enhanced Meta Description with CTAs and Benefits */}}
+{{- $description := "" -}}
+{{- $maxDescLength := 160 -}}
+
+{{- if .IsHome -}}
+  {{- $description = "Expert software development & consulting with 95% client retention. Reduce costs 50% while accelerating delivery 3x faster. Free consultation ✓" -}}
+{{- else if eq .Section "services" -}}
+  {{- if .IsSection -}}
+    {{- $description = "Transform your business with expert software development services. 18+ years experience, 95% client retention. Get your free consultation today ✓" -}}
+  {{- else -}}
+    {{/* Service-specific descriptions */}}
+    {{- with .Params.description -}}
+      {{- $description = . -}}
+    {{- else -}}
+      {{- if in .Title "Fractional CTO" -}}
+        {{- $description = "Get expert CTO leadership without full-time costs. Strategic tech vision, team building, 95% client retention. Free consultation ✓" -}}
+      {{- else if in .Title "App & Web" -}}
+        {{- $description = "Expert app & web development with 3x faster delivery. Reduce costs 50%, maintain quality. 540+ successful projects ✓" -}}
+      {{- else if in .Title "QA" -}}
+        {{- $description = "Accelerate development with zero-defect software testing. Streamline releases, eliminate roadblocks. Expert QA team ready ✓" -}}
+      {{- else -}}
+        {{- $description = printf "%s - Professional solutions with proven results. Get your free consultation today ✓" .Title -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else if eq .Section "blog" -}}
+  {{- if .IsSection -}}
+    {{- $description = "540+ expert articles on software development, Ruby on Rails, React, and tech leadership. Learn from 18+ years of industry experience ✓" -}}
+  {{- else -}}
+    {{- with .Description -}}
+      {{- $description = . -}}
+    {{- else with .Params.description -}}
+      {{- $description = . -}}
+    {{- else with .Summary -}}
+      {{- $description = . | plainify | truncate 140 "…" -}}
+    {{- else -}}
+      {{- $description = "Expert insights on software development, best practices, and technology trends from JetThoughts' experienced development team." -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Description -}}
+    {{- $description = . -}}
+  {{- else with .Params.description -}}
+    {{- $description = . -}}
+  {{- else with .Summary -}}
+    {{- $description = . | plainify | truncate 140 "…" -}}
+  {{- else -}}
+    {{- $description = $site.Params.description | default "JetThoughts - Expert software development and consulting services." -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Ensure description doesn't exceed character limit */}}
+{{- if gt (len $description) $maxDescLength -}}
+  {{- $description = $description | truncate $maxDescLength "…" -}}
+{{- end -}}
+
+<meta name="description" content="{{ $description }}" />
+
+{{/* Enhanced Robots Meta */}}
+{{- $robots := "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" -}}
+{{- if .Params.noindex -}}
+  {{- $robots = "noindex, nofollow" -}}
+{{- else if eq .Section "tags" -}}
+  {{- $robots = "index, follow, max-snippet:150, max-image-preview:large" -}}
+{{- end -}}
+<meta name="robots" content="{{ $robots }}" />
+
+{{/* Canonical URL with proper handling */}}
+{{- $canonical := .Permalink -}}
+{{- if and (eq .Kind "taxonomy") (eq .Section "tags") -}}
+  {{- $canonical = $canonical | replace "/tags/" "/blog/tags/" -}}
+{{- end -}}
+<link rel="canonical" href="{{ $canonical }}" />
+
+{{/* Keywords Meta for relevant pages */}}
+{{- $keywords := slice -}}
+{{- if eq .Section "services" -}}
+  {{- $keywords = slice "software development" "consulting" "CTO" "web development" "app development" "QA testing" "jetthoughts" -}}
+{{- else if eq .Section "blog" -}}
+  {{- with .Params.tags -}}
+    {{- $keywords = . -}}
+  {{- else -}}
+    {{- $keywords = slice "software development" "programming" "ruby on rails" "react" "javascript" "development blog" -}}
+  {{- end -}}
+{{- else if in .Title "About" -}}
+  {{- $keywords = slice "jetthoughts team" "software consultancy" "development experience" "client testimonials" -}}
+{{- end -}}
+
+{{- if $keywords -}}
+<meta name="keywords" content="{{ delimit $keywords ", " }}" />
+{{- end -}}
+
+{{/* Enhanced Open Graph Tags */}}
+{{- $ogType := "website" -}}
+{{- if and (eq .Section "blog") (eq .Kind "page") -}}
+  {{- $ogType = "article" -}}
+{{- else if eq .Section "services" -}}
+  {{- $ogType = "website" -}}
+{{- end -}}
+
+<meta property="og:type" content="{{ $ogType }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="JetThoughts" />
+<meta property="og:locale" content="en_US" />
+
+{{/* Article-specific Open Graph */}}
+{{- if eq $ogType "article" -}}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+{{- with .Params.author -}}
+<meta property="article:author" content="{{ . }}" />
+{{- end -}}
+{{- with .Params.tags -}}
+{{- range . -}}
+<meta property="article:tag" content="{{ . }}" />
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{/* Enhanced Twitter Cards */}}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:site" content="@jetthoughts" />
+{{- with .Params.author -}}
+<meta name="twitter:creator" content="@{{ . | lower | replaceRE " " "" }}" />
+{{- end -}}
+
+{{/* Optimized Image Handling */}}
+{{- $image := "" -}}
+{{- $imageWidth := "" -}}
+{{- $imageHeight := "" -}}
+
+{{/* Try metatags.image first (current pattern) */}}
+{{- with .Params.metatags.image -}}
+  {{- $resource := $page.Resources.Get . -}}
+  {{- if $resource -}}
+    {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+    {{- $image = $optimized.Permalink -}}
+    {{- $imageWidth = $optimized.Width -}}
+    {{- $imageHeight = $optimized.Height -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Fallback to cover_image */}}
+{{- if not $image -}}
+  {{- with .Params.cover_image -}}
+    {{- $resource := $page.Resources.Get . -}}
+    {{- if $resource -}}
+      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+      {{- $image = $optimized.Permalink -}}
+      {{- $imageWidth = $optimized.Width -}}
+      {{- $imageHeight = $optimized.Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Site default image fallback */}}
+{{- if not $image -}}
+  {{- $image = "https://jetthoughts.com/assets/images/og-default.jpg" -}}
+  {{- $imageWidth = "1200" -}}
+  {{- $imageHeight = "630" -}}
+{{- end -}}
+
+{{/* Output image meta tags */}}
+{{- if $image -}}
+<meta property="og:image" content="{{ $image }}" />
+<meta property="og:image:width" content="{{ $imageWidth }}" />
+<meta property="og:image:height" content="{{ $imageHeight }}" />
+<meta property="og:image:type" content="image/webp" />
+<meta name="twitter:image" content="{{ $image }}" />
+{{- end -}}
+
+{{/* Additional Performance and UX Meta Tags */}}
+<meta name="theme-color" content="#007bff" />
+<meta name="msapplication-TileColor" content="#007bff" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+{{- if hugo.IsProduction -}}
+  {{/* Preconnect to external resources */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+{{- end -}}

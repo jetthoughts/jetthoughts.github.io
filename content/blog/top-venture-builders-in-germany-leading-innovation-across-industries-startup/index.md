@@ -21,5 +21,5 @@ Fed up! Are you aiming to create a new company but you are weak from a tech posi
 
 ![Image description](file_0.png)
 
-The pros and cons of venture builders.
+The pros and cons of venture builders
 -----------------------------------

@@ -518,7 +518,7 @@
 }
 
 .fl-photo-content:hover .fl-photo-caption-hover {
-  opacity: 100;
+  opacity: 1;
   filter: alpha(opacity=100);
 }
 
@@ -1966,10 +1966,10 @@ img.mfp-img {
 }
 
 .fl-node-2qjtxd5mnu0o .pp-infobox-icon-inner span.pp-icon, .fl-node-2qjtxd5mnu0o .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fl-node-2qjtxd5mnu0o .pp-infobox-wrap .pp-infobox {
@@ -2175,10 +2175,10 @@ img.mfp-img {
 }
 
 .fl-node-fsx06y1qr7am .pp-infobox-icon-inner span.pp-icon, .fl-node-fsx06y1qr7am .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fl-node-fsx06y1qr7am .pp-infobox-wrap .pp-infobox {
@@ -2384,10 +2384,10 @@ img.mfp-img {
 }
 
 .fl-node-t9y6kecruwx0 .pp-infobox-icon-inner span.pp-icon, .fl-node-t9y6kecruwx0 .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fl-node-t9y6kecruwx0 .pp-infobox-wrap .pp-infobox {
@@ -2610,10 +2610,10 @@ img.mfp-img {
 }
 
 .fl-node-7dpf8coyqrj1 .pp-infobox-icon-inner span.pp-icon, .fl-node-7dpf8coyqrj1 .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fl-node-7dpf8coyqrj1 .pp-infobox-wrap .pp-infobox {
@@ -2819,10 +2819,10 @@ img.mfp-img {
 }
 
 .fl-node-silug3152ocd .pp-infobox-icon-inner span.pp-icon, .fl-node-silug3152ocd .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fl-node-silug3152ocd .pp-infobox-wrap .pp-infobox {
@@ -3028,10 +3028,10 @@ img.mfp-img {
 }
 
 .fl-node-xowkfsrzlcn8 .pp-infobox-icon-inner span.pp-icon, .fl-node-xowkfsrzlcn8 .pp-infobox-image img {
-  border-top-left-radius: px;
-  border-top-right-radius: px;
-  border-bottom-left-radius: px;
-  border-bottom-right-radius: px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fl-node-xowkfsrzlcn8 .pp-infobox-wrap .pp-infobox {
@@ -4997,7 +4997,6 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gform-button, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gform_footer .gform_button, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper.gf_browser_ie .gform_footer .gform_button, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gform_page_footer .button, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper.gf_browser_ie .gform_page_footer .button {
   width: auto;
-  background-color: ;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 25px;
@@ -5009,7 +5008,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gform-button:hover, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gform_footer .gform_button:hover, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gform_page_footer .button:hover {
-  background: ;
+  background: transparent;
 }
 
 .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gfield input[type=file] {

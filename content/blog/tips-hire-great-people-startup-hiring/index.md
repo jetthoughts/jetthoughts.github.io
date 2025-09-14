@@ -23,7 +23,6 @@ At JetThoughts, we don’t typically fire our employees. We always strive to fin
 
 ![Photo by rawpixel](file_0.jpeg)
 
-
 We are a small remote team. Unlike mid-sized or big companies, where people could meet you one day and not recognize you the day after, JetThoughts is where everyone knows everyone else.
 
 When hiring, we are looking for people who are comfortable working and communicating with others, so it’s about skills and personality.
@@ -31,26 +30,33 @@ When hiring, we are looking for people who are comfortable working and communica
 It becomes crucial for us to know the person we will work with, as communication is everything in remote teams. So, the new employee should be a good fit and understand the workflow, culture, and values.
 
 ## Trust
+
 It is the most important thing for us. We trust the person who decided to work with us, and we expect him not to lie, slack, or take sweet time to get the job done. We are trying to do everything so that our team members would not be interested in doing any of the above.
 
 ## Transparency
+
 We are transparent and open-minded. The best example of this is our pay structure scheme. Our team members determine the knowledge level of newcomers during the technical interview, and based on that, the salary level is defined.
 
 ## Self-management
+
 We assume that a person can adapt to asynchronous processes, autonomously deal with tasks, communicate with others, and effectively interact within a remote environment.
 
 ## Fulfillment
+
 We maintain an inclusive environment where we can thrive professionally and personally. We maintain a sustainable pace of productivity and entire lives outside of work. We maximize our ability to take on any project by creating a diverse team that can bring their experience and perspectives together to solve problems. We are proud of our work and believe it is meaningful and worth existing and improves society and human well-being.
 
 ## Efficiency
+
 Every gear in the company turns more efficiently when the work is focused yet fast, practical yet economical, and flexible yet simple. JetThoughts is about being able to do more with less. When everyone works together in balance, the time flows as smoothly as any of our luxury watches. We believe in hard work and extra effort to get things done. We believe in operational excellence and realize there is always room for improvement in everything we do. This means that our work is never done.
 
 ## Passion
+
 We love what we do. It never works—it’s always fun, and we enthusiastically take on new challenges.
 
 Passion will drive us to pour our hearts and souls into every new venture, every day because this is what we love to do. We will celebrate our successes and inspire others with excellence and a tenacious attitude.
 
 ## Choose great people
+
 As we mentioned before, JetThoughts has a fully transparent system regarding the payment structure scheme, and we follow some rules when a new team member joins.
 
 Besides the technical interview, we try to understand the person, the way he thinks, and the attitude and values he promotes, and we compare all of these to what we are into as a team.
@@ -67,6 +73,6 @@ Based on such criteria, the role and salary will be defined. The technical revie
 
 If you are the founder and want your company to prosper, do your best to avoid employment termination. Be concise in your job descriptions, look for people with high motivation, and pay attention to adaptation, constant feedback, and mentoring. The person who has come to a new place should see clear objectives and understand how they relate to the company goals. Regularly discuss progress and processes, no matter how good your team is.
 
-## P.S.
-Make sure all those values are noted in your ATS. You can provide scores per each core value. For this, we use [Trello](https://trello.com/), but there are more specialized tools to help organize working with candidates like [Recruiting CRM](https://www.recruitingcrm.com/), Indeed Recruiter, etc.
+## P.S
 
+Make sure all those values are noted in your ATS. You can provide scores per each core value. For this, we use [Trello](https://trello.com/), but there are more specialized tools to help organize working with candidates like [Recruiting CRM](https://www.recruitingcrm.com/), Indeed Recruiter, etc.

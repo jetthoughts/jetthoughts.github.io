@@ -67,4 +67,4 @@ The time you spend commuting can now be spent with your family. For many, the ph
 Those working in offices find it difficult to steal out time for their loved ones. It’s evident that weekends are there for sure, but sometimes people need to spend their days off on the other things. However, as you are working from home itself, you have your family around you, and during the breaks, you take, you can just go and spend some quality time with them.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

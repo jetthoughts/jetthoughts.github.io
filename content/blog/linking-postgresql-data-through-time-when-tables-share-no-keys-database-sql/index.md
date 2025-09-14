@@ -25,6 +25,7 @@ Databases often evolve in unpredictable ways. Tables that were initially designe
 In this article, we’ll explore how to link two tables in PostgreSQL based on their creation timestamps when no explicit keys exist. Specifically, we’ll demonstrate how to establish a relationship between records where the difference in creation times is no more than 2 seconds.
 
 ## The Problem
+
 Let’s consider a realistic example: an e-commerce platform where orders and payments were initially tracked independently.
 
 - **No explicit linking keys** were added between these tables because they were designed for separate workflows.
@@ -32,6 +33,7 @@ Let’s consider a realistic example: an e-commerce platform where orders and pa
 - The only feasible way to connect them is by using their created_at timestamps, assuming payments happen within a few seconds of the corresponding order being placed.
 
 ## The Data
+
 Here’s how the tables are structured:
 
 ### Orders Table  
@@ -41,7 +43,6 @@ Here’s how the tables are structured:
 | `id`         | `SERIAL`    | Primary key                    |  
 | `order_number` | `VARCHAR` | Unique identifier for the order|  
 | `created_at` | `TIMESTAMP` | Timestamp of order creation    |  
-
 
 ### Payments Table
 
@@ -66,6 +67,7 @@ VALUES
 ```
 
 ## The Solution
+
 Therefore, we need to create that relation among these tables where the created time difference between the created_at values in both tables is not longer than 2 seconds apart. This can be achieved with a query calculated on time difference via EXTRACT(EPOCH) filtering out the rows that fulfill that condition.
 
 ## Creating a View
@@ -102,20 +104,22 @@ Result:
 |----------|--------------|------------|----------------|-----------------------|-----------------------|  
 | 1        | ORD001       | 1          | TXN12345       | 2024-12-01 10:00:00  | 2024-12-01 10:00:01   |  
 
-
 Here, the first order (ORD001) is linked to the first payment (TXN12345) because the timestamps differ by only 1 second. The second order and payment are not linked due to the greater time difference.
 
 ### Why This Approach Works
+
 This solution is effective in scenarios where explicit foreign keys are missing, and retrofitting them isn’t feasible. By leveraging timestamp-based linking:
 
 - No schema changes are required, making it safe for existing systems.
 - Flexible linking is possible, based on business-specific rules.
 
 However, this method has limitations:
+
 - Timestamp precision is critical; inaccurate timestamps could lead to incorrect links.
 - Performance may degrade as the dataset grows because the query compares every possible pair.
 
 ## Conclusion
+
 When working with systems where tables were not originally designed to be related, linking records by timestamps can provide a practical workaround. PostgreSQL’s robust query capabilities make it easy to establish relationships dynamically.
 
 This approach isn’t perfect for every use case, but it’s a valuable tool when retrofitting connections into an existing database without disrupting the current setup.

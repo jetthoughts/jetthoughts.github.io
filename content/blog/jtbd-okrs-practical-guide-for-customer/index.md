@@ -88,6 +88,7 @@ JTBD gives you direction. OKRs give you a map.
 JTBD shows what customers need. OKRs track how well you're meeting those needs.
 
 Together, they create a system where:
+
 1. Customer jobs inform what goals matter
 2. OKRs track progress toward enabling those jobs
 3. Success means actual customer outcomes, not shipped features
@@ -98,7 +99,6 @@ Now, let's put this into practice.
 
 The best way to discover jobs is through customer interviews that focus on their decision journey.
 
-
 ![Customer Timeline Journey Map](file_1.png)
 
 Here's how to do it right:
@@ -106,6 +106,7 @@ Here's how to do it right:
 ### Step 1: Find the Right People
 
 Talk to customers who recently:
+
 - Started using your product
 - Switched from a competitor
 - Stopped using your product
@@ -159,6 +160,7 @@ Now identify:
 2. Desired outcomes: How would they measure success?
 
 For example:
+
 - Job: "Help me coordinate team work so nothing falls through cracks"
 - Outcomes: "Minimize time spent tracking status," "Maximize confidence that nothing is overlooked"
 
@@ -179,6 +181,7 @@ Example: "Our product helps team leads organize projects so they never miss dead
 ### Step 2: Select Top Desired Outcomes
 
 From your interviews, pick the outcomes that:
+
 - Multiple customers mentioned
 - Are currently underserved
 - Would provide a competitive advantage
@@ -192,6 +195,7 @@ Phrase objectives as customer outcomes, not features.
 Instead of "Launch automation features," try "Make project coordination effortless for our customers."
 
 Good objectives are:
+
 - Customer-focused
 - Clear but inspiring
 - Ambitious but achievable
@@ -210,6 +214,7 @@ For each objective, create 2-4 key results that measure success:
 "Increase 30-day retention from 40% to 60%"
 
 Each KR needs:
+
 - Current baseline
 - Target number
 - Deadline
@@ -227,11 +232,13 @@ Notice how each KR links directly to a customer outcome from your research.
 ### Step 5: Track and Learn
 
 Review progress weekly:
+
 - Are metrics improving?
 - If not, what might work better?
 - What new customer insights have we found?
 
 At quarter's end, evaluate:
+
 - Did we hit our targets?
 - Did improving these metrics actually delight customers?
 - What new jobs or outcomes have we discovered?
@@ -283,6 +290,7 @@ A medical software company had poor adoption. Their JTBD interviews revealed doc
 They set a new objective: "Make our software the time-saving assistant for every clinic doctor."
 
 Key results included:
+
 - Reduce documentation time from 10 to 7 minutes
 - Cut reported errors by 50%
 - Raise doctor satisfaction from 75 to 85 NPS
@@ -298,6 +306,7 @@ A fitness app had poor retention despite many tracking features. JTBD interviews
 Their new objective: "Become our users' personal motivator for healthy living."
 
 Key results:
+
 - Increase 4-week retention from 20% to 50%
 - Achieve 4.5/5 motivation rating (up from 3)
 - Increase users hitting weekly goals from 40% to 70%
@@ -348,4 +357,3 @@ Stop building features. Start enabling progress.
 When you understand what job customers hire your product to do, and measure success by how well you help them do that job, you build products people actually want.
 
 And that's what drives sustainable growth – one delighted customer at a time.
-

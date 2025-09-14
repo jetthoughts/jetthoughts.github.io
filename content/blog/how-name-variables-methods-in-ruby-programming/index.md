@@ -24,8 +24,11 @@ slug: how-name-variables-methods-in-ruby-programming
 ## How To Name Variables And Methods In Ruby
 
 ![](file_0.jpeg)
+
 > # What’s in a name? that which we call a rose
+>
 > #By any other name would smell as sweet.
+>
 > # *― William Shakespeare, Romeo and Juliet*
 
 Junior developers often struggle to choose good names for variables and methods they write. Or even dismiss the need in proper names without any struggle at all. I blame computer science education with its strange love for one-letter variables (or, when all letters are taken, then one-letter-and-a-number).
@@ -74,9 +77,11 @@ end
 What’s wrong with that? The result of the query is indeed a Hash, and we iterate over its keys and values (and it’s okay to call them k, v). Right?
 
 No. What’s wrong is that we named the variables by properties, irrelevant to the context. The line
+
 ```
     hash.each do |k, v|
 ```
+
 tells us we’re iterating over some Hash while the following line implies that this hash has some “coat” for keys (still not clear what this is without looking at the top of the code), and the line after that tells that the values are some “count”.
 
 But if we choose relevant names, each line tells the full story:
@@ -100,7 +105,9 @@ Such long names are actually a good thing, but not because it’s good to have s
 ![](file_2.jpeg)
 
 ## Though this be madness, yet there is method in ‘t
+>
 > # *It may be necessary to use methods other than constitutional ones*
+>
 > # *― Robert Mugabe*
 
 The first and the only president of Zimbabwe justified the use of unconstitutional methods in his struggle to move away from white minority rule of Rhodesia, but it turned out dreadful for the people, resulting in total corruption and poor economy.
@@ -117,11 +124,11 @@ Properties that describe some action that was performed on the entity are named 
 
 Also, note that method names take the class name into account, so if the class is named User, there is no point in having a method named user_email in that class. It’s just User#email. It makes sense to have an entity as a part of the method name only when this entity is represented by another class, or when it refers to other instance of the class, not the same we’re calling the method on. For example, Book#author_name, User#invited_by_user.
 
-**Mutator **(setter) methods are ones that used to assign properties of the object. In Java, they are usually named as set_<property_name>, but in Ruby, it’s just <property_name>=(value). Namely, User#email=(value), Comment#body=(value) etc.
+**Mutator**(setter) methods are ones that used to assign properties of the object. In Java, they are usually named as set_<property_name>, but in Ruby, it’s just <property_name>=(value). Namely, User#email=(value), Comment#body=(value) etc.
 
 If your mutator method has to accept two or more arguments, you can’t have a method ending in =. Well, technically you can, but to invoke it you’ll have to use metaprogramming tricks. In that case, you have to strongly reconsider your approaches, and why you need a setter with multiple arguments in the first place. You probably need to create a separate class for that property at this point. Again, a good choice of names guides your application design.
 
-**Imperative **methods either change some state (of the object, the app or even the outside world), or return some new data or transform existing data without mutating it.
+**Imperative**methods either change some state (of the object, the app or even the outside world), or return some new data or transform existing data without mutating it.
 
 They are usually named with a verb or a phrase in an imperative mood. Like Report#generate, Document#write_to_file(path), MessageService#send(from, to, body).
 
@@ -131,7 +138,7 @@ Examples of *“safe”* and *“dangerous”* methods are Array#sort and Array#
 
 Other such examples are #update and #update! from ActiveRecord::Persistence, first one returning false in a case of validation errors and saving those errors in the model, and the second one raising an exception if the record is invalid. But if you don’t provide safe alternatives and all methods in the class are dangerous, there’s little point in using exclamation marks then.
 
-**Predicate **methods always return *boolean*. They describe the object status in a yes/no manner, or if it’s a private method they can contain a named part of some long conditional. Their names should always end with a question mark.
+**Predicate**methods always return *boolean*. They describe the object status in a yes/no manner, or if it’s a private method they can contain a named part of some long conditional. Their names should always end with a question mark.
 
 Grammatically the names can be anything from adjectives like TrafficLight#green? to full-fledged sentences like WeatherService#should_i_take_an_umbrella?.
 
@@ -140,4 +147,4 @@ The general rule of thumb for picking a name for a predicate method: it should b
 Of course, there may be methods that don’t fit into any of these four categories, and we did not cover class methods here at all, but in general, it’s all the same: the name should make sense and it should contain just the right amount of context to be clear — not more and not less.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

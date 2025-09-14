@@ -1,0 +1,3 @@
+{{/* Cached authors data access - invalidates when authors.yaml changes */}}
+{{ $authorsHash := .Site.Data.authors | jsonify | md5 }}
+{{ return partialCached "data/authors-content.html" . $authorsHash }}

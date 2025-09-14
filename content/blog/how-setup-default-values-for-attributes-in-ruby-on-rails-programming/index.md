@@ -22,9 +22,7 @@ slug: how-setup-default-values-for-attributes-in-ruby-on-rails-programming
 ---
 _Have you ever thought setting default values for attributes in Ruby on Rails could be problematic?_
 
-
 ![code example how to set default value for attribute](file_0.png)
-
 
 Since attributes are uninitialized when a new model is created without any parameters, default values will be set according to the attribute type.
 
@@ -93,7 +91,7 @@ class User < ApplicationRecord
 end
 ```
 
-## Option 4: Through Rails Attributes API 
+## Option 4: Through Rails Attributes API
 
 And last most ideal way is to use [Rails Attributes API](https://api.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html#method-i-attribute). You can add default value in the model like `attribute :my_string, :string, default: "new default"`
 
@@ -123,16 +121,20 @@ Product.new.my_default_proc # => 2015-05-30 11:04:49 -0600
 
 And that's it!
 
-## It is worth mentioning:
+## It is worth mentioning
+
 - Do not override with default values original changes, which breaks the ActiveRecord contract:
+
 ```ruby
 def set_defaults
   name = "First Last"
 end
 ```
+
 (This unexpected behavior will confuse developers)
 
 - Do not set defaults after validations. Prefer to add default values only before validation to make sure that we support consistency
+
 ```ruby
 before_save :set_defaults
 
@@ -142,5 +144,5 @@ def set_defaults
   name = nil if name.blank?
 end
 ```
-(This will add invalid data in the DB or raise Runtime Error)
 
+(This will add invalid data in the DB or raise Runtime Error)

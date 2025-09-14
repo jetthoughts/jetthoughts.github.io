@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Simple Hugo cleanup script
+
+set -euo pipefail
+
+echo "Cleaning Hugo build artifacts..."
+
+# Clean build outputs
+rm -rf public/ public-* _dest/ resources/_gen/ .hugo_build.lock hugo_stats.json
+
+# Clean cache directories
+rm -rf /tmp/hugo_cache "$HOME/.cache/hugo" "$HOME/Library/Caches/hugo" 2>/dev/null || true
+
+echo "✓ Cleanup complete"

@@ -86,6 +86,7 @@ end
 ## What advantages does this approach give us?
 
 Suppose we have users that can be created from the Admin panel and through the API. Depending on the creation method, we may perform different actions on the user. It is very convenient to create two separate services for creating a user. For example: `Admin::CreateUser` and `Api::CreateUser`
+
 - Such services are accessible to test.
 - They are easy to expand.
 - The code becomes much more transparent and more predictable.

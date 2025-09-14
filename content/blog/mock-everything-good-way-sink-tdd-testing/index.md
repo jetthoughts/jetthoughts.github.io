@@ -23,7 +23,7 @@ slug: mock-everything-good-way-sink-tdd-testing
 
 ![](file_0.jpeg)
 
-## Application lifecycle with mocking everything strategy:
+## Application lifecycle with mocking everything strategy
 
  1. Everything starts from a happy developer and a clean architecture with fastest tests.
 
@@ -37,11 +37,11 @@ slug: mock-everything-good-way-sink-tdd-testing
 
  6. And even after reviewing all tests, we still have considerable misgivings.
 
-## What has just happened:
+## What has just happened
 
 With mocks, we cannot rely on implemented architecture because using mocks/stubs we built a fake application from small chunks. And placed them in different parts of test suites. As it turns out, changes to application architecture will not make our tests fail. So we should look for all our chunks and update them ourselves. And that’s duplication, baby!
 
-## Mocking/Stubbing Principles:
+## Mocking/Stubbing Principles
 
 Mocks and Stubs are powerful tools and should be put to a good use. Here are my principles when to use them:
 
@@ -51,7 +51,7 @@ Mocks and Stubs are powerful tools and should be put to a good use. Here are my 
 
 In other cases when I have a desire to mock something, then this is the first sign of a poor design. And I understand if I cannot add tests for simple application behavior on initial stages, then how I will support it when it will become a whale of an application? Mocked behavior is a sort of our technical debts which we should fix as soon as possible.
 
-## Summary:
+## Summary
 
 Do not overuse mocks and stubs ;) Most popular alternatives to mocks and stubs are fakes, which have some advantages of mocks, but are much easier to support.
 

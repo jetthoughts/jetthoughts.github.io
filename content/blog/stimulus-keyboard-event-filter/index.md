@@ -14,14 +14,16 @@ canonical_url: https://jetthoughts.com/blog/stimulus-keyboard-event-filter/
 slug: stimulus-keyboard-event-filter
 ---
 **What it was**
-In the last update of Stimulus `v3.2.2`, the ability to filter the event by `PageDown` and `PageUp` keys was added. 
+In the last update of Stimulus `v3.2.2`, the ability to filter the event by `PageDown` and `PageUp` keys was added.
 
 Before that, in `v3.2.1`, it looked like this:
 
 ```html
 <div data-action="keyup->myController#myfunction"></div>
 ```
+
 and some like this...
+
 ```js
 import { Controller } from "stimulus";
 
@@ -45,8 +47,10 @@ export default class extends Controller {
   }
 }
 ```
+
 **What the new**
 For now, you can call `page_up`/`page_down` in action, like:
+
 ```html
 <div data-action="keydown.page_up->myController#myfunction"></div>
 ```

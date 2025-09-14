@@ -23,9 +23,10 @@ slug: rails-8-brings-viewobjects-why-theyre-awesome-how-use-them-ruby
 Rails 8 brings an exciting addition to its arsenal: ViewComponents, powered by the ViewComponent::Base class. This feature is a game-changer for managing UI logic, offering developers a clean, reusable, and testable approach to building components.
 
 ## What Are ViewComponents?
+
 ViewComponents encapsulate a piece of your UI into a Ruby class, allowing you to define rendering logic in one place. Instead of scattering presentation logic across views, helpers, and partials, ViewComponents consolidate it into an object that’s easy to maintain and test.
 
-### Key benefits include:
+### Key benefits include
 
 - **Reusability**: Create components once and use them in multiple places.
 - **Testability**: Easily test components in isolation.
@@ -33,9 +34,11 @@ ViewComponents encapsulate a piece of your UI into a Ruby class, allowing you to
 - **Encapsulation**: All logic and rendering for a component live in a single, cohesive unit.
 
 ## Example: Product Card with ViewComponent
+
 Let’s build a product card component for an e-commerce site to demonstrate how ViewComponents work. This card will display the product's name, price, and availability status.
 
 ### Step 1: Create the Component Class
+
 Manually create a new Ruby class for the component:
 
 ```ruby
@@ -60,9 +63,11 @@ class ProductCardComponent < ViewComponent::Base
   end
 end
 ```
+
 This class encapsulates all logic for the product card, including calculating the price, determining stock status, and generating CSS classes dynamically.
 
 ### Step 2: Create the Component Template
+
 Add the corresponding view template:
 
 ```erb
@@ -73,9 +78,11 @@ Add the corresponding view template:
   <p>Status: <%= stock_status %></p>
 </div>
 ```
+
 This template uses methods from the component class to render HTML dynamically based on the product’s attributes.
 
 ### Step 3: Use the Component in a View
+
 Render the component in any Rails view using the render helper:
 
 ```erb
@@ -86,9 +93,11 @@ Render the component in any Rails view using the render helper:
   <% end %>
 </div>
 ```
+
 This approach replaces repetitive HTML and logic with a single line, making the view cleaner and easier to maintain.
 
 ### Step 4: Test the Component
+
 Write tests for the component to ensure it behaves correctly:
 
 ```ruby
@@ -117,13 +126,15 @@ class ProductCardComponentTest < ViewComponent::TestCase
   end
 end
 ```
+
 This ensures your component behaves correctly for various product states.
 
 ## Why ViewComponents Are Awesome
+
 - **Clean and Reusable Code**: Consolidating logic into reusable components reduces duplication and keeps views clean.
 - **Improved Testability**: Isolated tests for each component make your UI code more reliable.
 - **Better Performance**: Compiled templates improve rendering speed compared to partials.
 -  **Scalability**: As your application grows, managing UI becomes easier with well-organized components.
 
-##Conclusion
+## Conclusion
 ViewComponents in Rails 8 provide a modern way to manage UI logic, making it reusable, testable, and performant. By leveraging ViewComponent::Base, developers can build clean, maintainable components that fit seamlessly into Rails’ ecosystem. Embrace this new feature to take your Rails applications to the next level!

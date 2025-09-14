@@ -38,4 +38,3 @@ In addition, microservices can be complex to manage and maintain, especially in 
 ## Verdict: for complex applications with large team
 
 In general, microservices are a good choice for applications that require a large team and expected to grow and evolve over time, and for applications that require a high degree of scalability and resilience.
-

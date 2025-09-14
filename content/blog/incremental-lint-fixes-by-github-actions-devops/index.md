@@ -98,17 +98,20 @@ current_date=$(date +"%Y%m%d%H%M")
 new_branch_name="auto-fix-lint-${current_date}"
 git checkout -b "$new_branch_name"
 ```
+
 Create a unique branch to store our changes.
 
 ```bash
 git config user.name "jt-bot"
 git config user.email "bot@jetthoughts.com"
 ```
+
 Set up Git to make commits.
 
 ```bash
 bin/rubocop --no-server --fail-level "E" -a $(bin/rubocop --no-server -L **/*.rb | sort -R | head -n 5 | tr "\n" " ")
 ```
+
 This line finds all supported by Rubocop files, shuffle and take top 5 (you can update it).
 
 ```bash
@@ -116,6 +119,7 @@ git commit -am "$commit_message" ||
   (bin/rubocop -aF --fail-level "A" && exit 1) ||
   git commit -am "$commit_message" ||  exit 1
 ```
+
 If there are no changes from the previous step, we try to find the first file with changes.
 
 ```bash
@@ -126,6 +130,7 @@ git push "https://${GITHUB_TOKEN}@github.com/${GITHUB_USERNAME}/${GITHUB_REPONAM
     -d '{"title":"'"$commit_message"'","base":"develop","head":"'"$GITHUB_USERNAME"':'"$new_branch_name"'"}' \
     "https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/pulls"
 ```
+
 Pushes and creates PR with changes.
 
 ### 2. GitHub Action Flow with Scheduler

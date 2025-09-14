@@ -24,13 +24,13 @@ Today our `/bin` folder has become overwhelmed with different development tools 
 
 We put everything there: local automations, _CI/CD_ helpers, _PAAS_ release scripts, `Dockerfile` helpers, etc.
 
-It becomes too hard to find appropriate tools for your problem in that mess. 
+It becomes too hard to find appropriate tools for your problem in that mess.
 
 ![Messy bin folder](file_0.png)
 
 I had several revisions on decomposing the `/bin` scripts and the whole directory, but I still have not found one solution.
 
-I have played with subfolders `/bin/heorku/release` and prefixes `/bin/ci-setup`. Each strategy has pros & cons. 
+I have played with subfolders `/bin/heorku/release` and prefixes `/bin/ci-setup`. Each strategy has pros & cons.
 
 ## CI/CD is on the way out
 
@@ -42,7 +42,6 @@ Exploring some _GitHub Actions_ documentation, I found this neat folder: `/.auto
 
 So, all my last `bin/ci-setup` will become: `.automation/tests/setup`. Or if I need to put composed steps for _GitHub Actions_, I'll have `.automation/actions/prepare.yml`
 
-### References:
+### References
 
-Here is a good example: https://github.com/github/super-linter/tree/main/.automation
-
+Here is a good example: <https://github.com/github/super-linter/tree/main/.automation>

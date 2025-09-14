@@ -60,7 +60,7 @@ Use batching by date and ID to archive older records while keeping recent ones a
 
 ### 3. Custom Sorting for Tasks
 
-Batching by custom criteria like priority and date lets you prioritize tasks while processing. 
+Batching by custom criteria like priority and date lets you prioritize tasks while processing.
 
    ```ruby
    Task.in_batches(cursor: [:priority, :created_at]) do |batch|

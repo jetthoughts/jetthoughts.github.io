@@ -202,7 +202,7 @@ Okay, you've got a shiny new Rails app. Now what? Time to actually _run_ this th
 
 ### Starting the Rails Server
 
-To fire up your Rails app, you'll use the command line. Navigate to your app's directory (the one created by `rails new`). Then, type `bin/rails server` and hit Enter. This command starts the _Puma web server_, which is like the engine that drives your application. You should see a bunch of text scrolling by, ending with something like "Listening on http://127.0.0.1:3000".
+To fire up your Rails app, you'll use the command line. Navigate to your app's directory (the one created by `rails new`). Then, type `bin/rails server` and hit Enter. This command starts the _Puma web server_, which is like the engine that drives your application. You should see a bunch of text scrolling by, ending with something like "Listening on <http://127.0.0.1:3000>".
 
 ### Accessing Your App Locally
 

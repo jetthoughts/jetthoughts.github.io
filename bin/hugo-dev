@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Simple Hugo development server
+
+set -euo pipefail
+
+# Default settings
+PORT=1313
+BIND="127.0.0.1"
+
+# Parse simple options
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -p) PORT="$2"; shift 2 ;;
+        -b) BIND="$2"; shift 2 ;;
+        -h) echo "Usage: $0 [-p port] [-b bind_address]"; exit 0 ;;
+        *) echo "Unknown option: $1"; exit 1 ;;
+    esac
+done
+
+# Check if port is in use
+if lsof -Pi ":$PORT" -sTCP:LISTEN -t >/dev/null 2>&1; then
+    echo "Error: Port $PORT is already in use"
+    exit 1
+fi
+
+echo "Starting Hugo development server..."
+echo "URL: http://$BIND:$PORT"
+echo "Press Ctrl+C to stop"
+
+# Clean and start
+rm -rf public/ resources/_gen/ .hugo_build.lock 2>/dev/null || true
+
+exec hugo server --environment development --port "$PORT" --bind "$BIND" --disableFastRender=false

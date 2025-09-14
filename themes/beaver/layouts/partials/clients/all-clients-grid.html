@@ -1,0 +1,3 @@
+{{ range where site.RegularPages "Type" "clients" }}
+{{ partial "clients/grid-single.html" . }}
+{{ end }}

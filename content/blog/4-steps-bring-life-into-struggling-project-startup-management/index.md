@@ -47,7 +47,7 @@ To move the project forward, each category needs to be permanently eliminated.
 
 ![](file_1.jpg)
 
-### Signs of the Darkness Problem:
+### Signs of the Darkness Problem
 
  1. Can not see progress in real-time;
 
@@ -77,7 +77,7 @@ At a quick glance, everyone has transparency in the project and can see the foll
 
 ![](file_3.jpg)
 
-### Signs of the Confusion Problem:
+### Signs of the Confusion Problem
 
  1. Setting up New Production, Staging or Development instances takes too much time, especially for people who are new to the team;
 
@@ -93,7 +93,7 @@ When we ensure the processes for product delivery, all development aspects are s
 
 ![](file_4.jpg)
 
-### Signs of the Rust Problem:
+### Signs of the Rust Problem
 
  1. Delivering new features takes excessive time to build, integrate and verify;
 
@@ -119,7 +119,7 @@ In combination with Kanban, we can eliminate Staled Code by limiting Work In Pro
 
 ![](file_5.jpg)
 
-### Signs of the “Deja Vu” Problem:
+### Signs of the “Deja Vu” Problem
 
  1. The same bugs frequently reappear;
 
@@ -161,7 +161,7 @@ These recommendations are amongst many requirements when integrating effective l
 
 Are you ready to move to bring your struggling project back to live? [Contact us](https://jetthoughts.com/contact-us/) to find out more about how we work. We’re excited to help you — as always, we’d love to hear what you think!
 
-### See also:
+### See also
 
 * Atlassian’s Guide: [The Agile Coach](https://www.atlassian.com/agile)
 
@@ -170,4 +170,4 @@ Are you ready to move to bring your struggling project back to live? [Contact us
 * Carbon Five’s Posts: [The 10 Practices of Healthy Engineering Teams](http://blog.carbonfive.com/2016/02/17/the-10-practices-of-healthy-engineering-teams-part-1/)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

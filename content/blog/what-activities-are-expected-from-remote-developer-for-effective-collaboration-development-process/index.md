@@ -20,7 +20,7 @@ metatags:
   image: cover.jpeg
 slug: what-activities-are-expected-from-remote-developer-for-effective-collaboration-development-process
 ---
-### In order to build trust relationships with remote non-technical founders, we designed the easiest and effective routine for remote developers to provide.
+### In order to build trust relationships with remote non-technical founders, we designed the easiest and effective routine for remote developers to provide
 
 ![Photo by [Roman Synkevych](https://unsplash.com/@synkevych?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](file_0.jpeg)
 
@@ -34,7 +34,7 @@ According to the prioritization, the developer should start investigating the to
 
 * **Check the Acceptance Criteria**. *They must be present, explicit, and achievable within two days (otherwise, such an issue should be split into several parts).*
 
-* **Update the issue status**. If there are no questions and blockers, the ticket with an issue should be moved to the *In Progress*** **column.
+* **Update the issue status**. If there are no questions and blockers, the ticket with an issue should be moved to the *In Progress*****column.
 
 * **Create and push a new branch.** The developer creates the new branch with the name that starts with the issue’s id, makes the first change, and pushes it to the remote repository.
 
@@ -56,7 +56,7 @@ How to prepare the PR we discussed in [“Prepare the Pull Request before asking
 
 * **Self-review** (imagine that you are a reviewer and you see someone else’s PR)
 
-* **Test in the staging environment **(check the presence of explicit instruction about how to test the issue and it should be understandable for the non-technical reviewer)
+* **Test in the staging environment**(check the presence of explicit instruction about how to test the issue and it should be understandable for the non-technical reviewer)
 
 ### 4. Final stage or turn in work
 
@@ -64,8 +64,9 @@ How to prepare the PR we discussed in [“Prepare the Pull Request before asking
 
 * **Provide fixes and comments replies**
 
-* **Merge / Deploy **(check deployment in Production)
->  *This is the full cycle of actions that are expected from the developer, especially working remotely. Compliance with these rules will help to build trust with the customer, and also to avoid questions about what the employee is doing from management.*
+* **Merge / Deploy**(check deployment in Production)
+
+> *This is the full cycle of actions that are expected from the developer, especially working remotely. Compliance with these rules will help to build trust with the customer, and also to avoid questions about what the employee is doing from management.*
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

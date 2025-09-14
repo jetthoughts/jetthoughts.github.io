@@ -33,15 +33,16 @@ For a long time, we've been running a corporate blog on Medium, but recently, we
 **Support sub-path /blog.**
    Having a blog as a path on our domain enhances our domain rank, a feature not achievable with Medium.
 
-## Simplify subsequent blog migration through Headless CMS.
+## Simplify subsequent blog migration through Headless CMS
 
 We have changed blog engines several times and spent much time on migration, and developers would not like to change tools each time. We decided to set up one CMS to store all our posts and sync those posts across different blog engines or platforms separately.
 
 Considering the wide variety of Headless CMS options available today, categorized into self-hosted/cloud-hosted, API-based/git-based, and no headless(static), we have started exploring modern options for managing a technical blog.
 
-Due to some of our articles already being on the dev.to, we decided to check whether this platform can be used as a Headless CMS. 
+Due to some of our articles already being on the dev.to, we decided to check whether this platform can be used as a Headless CMS.
 
 **So, what advantages have we found in using dev.to:**
+
 - Free.
 - Convenient API. We can receive an article in Markdown form and data for SEO optimization.
 - Our authors are already familiar with the dev.to interface, and the process of writing posts has already been set up for them.
@@ -49,7 +50,7 @@ Due to some of our articles already being on the dev.to, we decided to check whe
 
 It is handy to receive articles in Markdown format as we use **Hugo**, a static site generator for our corporate website. Hugo handles Markdown files, and it would be convenient if the blog also operated on Hugo, reducing the number of tools used.
 
-##Migration approach
+## Migration approach
 
 1. **Migrate posts from Medium to dev.to:** This can be done in various ways, including online tools, a browser extension, or a custom script.
 

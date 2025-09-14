@@ -518,7 +518,7 @@
 }
 
 .fl-photo-content:hover .fl-photo-caption-hover {
-  opacity: 100;
+  opacity: 1;
   filter: alpha(opacity=100);
 }
 

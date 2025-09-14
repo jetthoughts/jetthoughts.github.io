@@ -194,7 +194,7 @@ end
 
 When I first saw this kata I had very small grasp on how to solve it or cycle through a list in Elixir in general. So I had to look for some clues in guides.
 
-Also during my little investigation I browsed docs on *Enum* and *List *and I was curious to try few functions from there too. Lastly, while I am still on that task I decided to try out syntax peculiarities of Elixir that I already read about.
+Also during my little investigation I browsed docs on *Enum* and *List*and I was curious to try few functions from there too. Lastly, while I am still on that task I decided to try out syntax peculiarities of Elixir that I already read about.
 
 So this ends my little story on learning a new language. I think this is an interesting approach: take a relatively simple task in a new language and try to solve it in different ways. I see quite a few benefits here.
 

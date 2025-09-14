@@ -34,9 +34,9 @@ Creativity has always played a pivotal role in marketing, but its significance h
 In a digital-first world, some brands are rediscovering the power of traditional advertising methods. For instance, Writer, a generative AI company, has successfully utilized out-of-home (OOH) advertising, such as billboards, to enhance brand awareness. This strategy has proven effective, with many customers citing these ads as a key factor in their brand recognition.
 
 *   Benefits of OOH Advertising:
-    *   High visibility in crowded markets.
-    *   Increased brand recall and engagement.
-    *   Ability to measure impact through geotargeting and digital interactions.
+  *   High visibility in crowded markets.
+  *   Increased brand recall and engagement.
+  *   Ability to measure impact through geotargeting and digital interactions.
 
 ### Inspiring Action Through Digital Experiences
 

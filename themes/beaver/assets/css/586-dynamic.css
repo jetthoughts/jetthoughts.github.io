@@ -3,13 +3,13 @@
     width: 70px;
     height: 70px;
     display: block;
-    background-image: url({{ (resources.Get "img/icons/theme/confirmation-icon.svg" | fingerprint).RelPermalink }});
+    background-image: url({{ (resources.Get "img/icons/theme/confirmation-icon.svg" | fingerprint "md5").RelPermalink }});
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .jt-reviews-box .pp-reviews-wrapper .pp-swiper-button:hover span::before {
-    background-image: url({{ (resources.Get "img/icons/theme/hover-arrow-icon-hover.svg" | fingerprint).RelPermalink }});
+    background-image: url({{ (resources.Get "img/icons/theme/hover-arrow-icon-hover.svg" | fingerprint "md5").RelPermalink }});
 }
 
 .cs-testimonial .cs-testimonial-wrapper::before {
@@ -17,7 +17,7 @@
     display: block;
     width: 60px;
     height: 60px;
-    background-image: url({{ (resources.Get "img/testimonial-quote.png" | fingerprint).RelPermalink }});
+    background-image: url({{ (resources.Get "img/testimonial-quote.png" | fingerprint "md5").RelPermalink }});
     background-size: contain;
     position: absolute;
     top: 0;

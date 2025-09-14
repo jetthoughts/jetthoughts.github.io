@@ -27,24 +27,24 @@ Rails has a very handy tool for rapid development called scaffolding. Often prog
 
 We need to override the templates provided by the Rails. You can find them in this way:
 
-```
+```bash
 ╰─ $ bundle show railties
 /Users/sampleuser/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3
 ```
 
 It means that the files we are interested in are located in this path:
 
-```
+```text
 /Users/sampleuser/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/generators/erb/scaffold/templates
 ```
 
 In order to override these files, we need to copy them to our application directory:
 
-```
-$ cp -a /Users/sampleuser/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/. ~/projects/custom-templates-app/lib
+```bash
+cp -a /Users/sampleuser/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/. ~/projects/custom-templates-app/lib
 ```
 
-```
+```bash
 $ ls -la ~/projects/custom-templates-app/lib/rails/generators/erb/scaffold/templates
 total 48
 drwxr-xr-x  sampleuser  staff   256 Apr  7 10:56 .
@@ -60,10 +60,12 @@ drwxr-xr-x  sampleuser  staff   128 Apr  7 10:56 ..
 So, now we have templates that we can adapt to our design.
 
 Lets try to generate new resource with using default templates:
+
+```bash
+rails g scaffold Post title:string description:text
+rails db:migrate
 ```
-$ rails g scaffold Post title:string description:text
-$ rails db:migrate
-```
+
 As a result, we get standard templates, which now need to be manually adjusted to fit the site design.
 
 ![Image description](file_1.png)
@@ -73,7 +75,8 @@ As a result, we get standard templates, which now need to be manually adjusted t
 It’s time to update the templates to use custom styles. I suggest using Bootstrap.
 
 **_form.html.erb.tt:**
-```
+
+```erb
 <%%= form_with(model: <%= model_resource_name %>) do |form| %>
   <%% if <%= singular_table_name %>.errors.any? %>
     <div id="error_explanation">
@@ -114,8 +117,10 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
   </div>
 <%% end %>
 ```
+
 **edit.html.erb.tt:**
-```
+
+```erb
 <div class="container-fluid">
   <h1>Editing <%= singular_table_name.titleize %></h1>
   <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
@@ -123,8 +128,10 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
   <%%= link_to 'Back', <%= index_helper %>_path, class: "btn btn-light min-width-btn" %>
 </div>
 ```
+
 **index.html.erb.tt:**
-```
+
+```erb
 <div class="container-fluid">
   <p id="notice"><%%= notice %></p>
   <h1><%= plural_table_name.titleize %></h1>
@@ -154,16 +161,20 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
   <%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path, class: "btn btn-success min-width-btn" %>
 </div>
 ```
+
 **new.html.erb:**
-```
+
+```erb
 <div class="container-fluid">
   <h1>New <%= singular_table_name.titleize %></h1>
   <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
   <%%= link_to 'Back', <%= index_helper %>_path, class: "btn btn-light min-width-btn" %>
 </div>
 ```
+
 **show.html.erb:**
-```
+
+```erb
 <div class="container-fluid">
   <p id="notice"><%%= notice %></p>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
@@ -192,18 +203,16 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
   <%%= link_to 'Back', <%= index_helper %>_path, class: "btn btn-light min-width-btn" %>
 </div>
 ```
+
 Now let’s delete the files created by the previous generator and generate using the new templates:
+
+```bash
+rails d scaffold Post title:string description:text
+rails g scaffold Post title:string description:text
 ```
-$ rails d scaffold Post title:string description:text
-$ rails g scaffold Post title:string description:text
-```
+
 Result:
 
 ![Image description](file_3.png)
 
 ![Image description](file_4.png)
-
-
-
-
-

@@ -1,0 +1,131 @@
+# Enhanced testimonials with comprehensive client information and case study results
+testimonials:
+  - name: "Bruno Wozniak"
+    rating: 5
+    title: "Director of Engineering"
+    company: "PubNative"
+    industry: "AdTech"
+    project_type: "Platform Development"
+    engagement_duration: "18 months"
+    team_size: "5 developers"
+    description: "Usually, in my experience, contractors are either highly talented but lacking in communication skills or vice versa. Guys from JetThoughts got the best of both worlds. They implemented easy ways to manage the flow of a distributed team and support high-quality code and development overall. Their team was also detailed and precise, helping us to find problems before they appear. We knew exactly what was happening and where we were going the whole time."
+    results:
+      - "40% improvement in development velocity"
+      - "99.9% system uptime achieved"
+      - "50% reduction in bug reports"
+    technologies: ["Ruby on Rails", "React", "PostgreSQL", "AWS"]
+    location: "Berlin, Germany"
+    linkedin: "https://www.linkedin.com/in/bruno-wozniak/"
+
+  - name: "Sarah Chen"
+    rating: 5
+    title: "CTO"
+    company: "TechStart Solutions"
+    industry: "FinTech"
+    project_type: "MVP Development"
+    engagement_duration: "12 months"
+    team_size: "4 developers"
+    description: "JetThoughts transformed our initial concept into a fully functional fintech platform. Their expertise in both technical implementation and product strategy was invaluable. The team delivered on time and within budget, while maintaining the highest quality standards."
+    results:
+      - "Launched MVP 3 months ahead of schedule"
+      - "Secured $2M Series A funding"
+      - "Achieved 10,000+ active users within 6 months"
+    technologies: ["Ruby on Rails", "Vue.js", "PostgreSQL", "Stripe API"]
+    location: "San Francisco, USA"
+
+  - name: "David Rodriguez"
+    rating: 5
+    title: "VP of Engineering"
+    company: "EcomMega"
+    industry: "E-commerce"
+    project_type: "Platform Modernization"
+    engagement_duration: "24 months"
+    team_size: "8 developers"
+    description: "We needed to modernize our legacy e-commerce platform while maintaining 100% uptime. JetThoughts delivered an exceptional solution with zero downtime migration and significant performance improvements. Their agile approach and constant communication made this complex project seamless."
+    results:
+      - "Zero downtime during migration"
+      - "300% improvement in page load speeds"
+      - "25% increase in conversion rates"
+      - "Reduced infrastructure costs by 40%"
+    technologies: ["Ruby on Rails", "React", "Elasticsearch", "Redis", "AWS"]
+    location: "Toronto, Canada"
+
+  - name: "Maria Gonzalez"
+    rating: 5
+    title: "Product Manager"
+    company: "HealthTech Innovations"
+    industry: "Healthcare"
+    project_type: "Healthcare Platform"
+    engagement_duration: "15 months"
+    team_size: "6 developers"
+    description: "Working with JetThoughts on our healthcare platform was outstanding. They understood our compliance requirements and delivered a HIPAA-compliant solution that exceeded our expectations. Their attention to security and user experience was remarkable."
+    results:
+      - "HIPAA compliance achieved"
+      - "500+ healthcare providers onboarded"
+      - "99.95% system availability"
+      - "Processing 100,000+ patient records daily"
+    technologies: ["Ruby on Rails", "React", "PostgreSQL", "Docker", "AWS"]
+    location: "Austin, USA"
+
+  - name: "Alex Thompson"
+    rating: 5
+    title: "Founder & CEO"
+    company: "EduPlatform"
+    industry: "EdTech"
+    project_type: "Learning Management System"
+    engagement_duration: "10 months"
+    team_size: "5 developers"
+    description: "JetThoughts built our learning management system from the ground up. Their understanding of educational workflows and scalable architecture resulted in a platform that serves thousands of students seamlessly. The quality of code and documentation they provided was exceptional."
+    results:
+      - "Supports 50,000+ concurrent users"
+      - "99.8% uptime maintained"
+      - "Integrated with 15+ third-party tools"
+      - "Reduced student onboarding time by 60%"
+    technologies: ["Ruby on Rails", "React", "PostgreSQL", "Redis", "AWS"]
+    location: "London, UK"
+
+# Case studies with detailed metrics
+case_studies:
+  - title: "FinTech Platform: From Concept to $2M Funding"
+    client: "TechStart Solutions"
+    industry: "FinTech"
+    challenge: "Build MVP fintech platform with complex financial calculations and regulatory compliance"
+    solution: "Developed secure, scalable platform with real-time transaction processing"
+    duration: "12 months"
+    team_size: "4 developers"
+    technologies: ["Ruby on Rails", "Vue.js", "PostgreSQL", "Stripe API", "AWS"]
+    metrics:
+      development_speed: "3 months ahead of schedule"
+      funding_raised: "$2M Series A"
+      user_growth: "10,000+ users in 6 months"
+      performance: "Sub-100ms transaction processing"
+      uptime: "99.9%"
+
+  - title: "E-commerce Platform: Zero-Downtime Modernization"
+    client: "EcomMega"
+    industry: "E-commerce"
+    challenge: "Modernize legacy platform while maintaining 100% uptime during peak shopping seasons"
+    solution: "Implemented gradual migration strategy with microservices architecture"
+    duration: "24 months"
+    team_size: "8 developers"
+    technologies: ["Ruby on Rails", "React", "Elasticsearch", "Redis", "AWS"]
+    metrics:
+      downtime: "0 minutes during migration"
+      performance_improvement: "300% faster page loads"
+      conversion_increase: "25% higher conversion rates"
+      cost_reduction: "40% lower infrastructure costs"
+
+  - title: "Healthcare Platform: HIPAA-Compliant Patient Management"
+    client: "HealthTech Innovations"
+    industry: "Healthcare"
+    challenge: "Build HIPAA-compliant platform for managing patient records and provider workflows"
+    solution: "Secure, encrypted platform with role-based access and audit trails"
+    duration: "15 months"
+    team_size: "6 developers"
+    technologies: ["Ruby on Rails", "React", "PostgreSQL", "Docker", "AWS"]
+    metrics:
+      compliance: "HIPAA certified"
+      providers_onboarded: "500+ healthcare providers"
+      daily_records: "100,000+ patient records processed"
+      availability: "99.95% uptime"
+

@@ -37,11 +37,13 @@ respond_with and the class-level respond_to methods [have been extracted](http:/
 ### Other dependencies
 
 You need to installbootstrap and jquery. Don’t forget to include them to asset pipeline.
-```
+
+```ruby
     gem 'bootstrap'
 
     gem 'jquery-rails'
 ```
+
 ## Step 1. Modify your layout files
 
 ```html
@@ -225,4 +227,4 @@ I’ve created a small [demo application](https://remote-modals-rails.herokuapp.
 UPD: Updated for Rails 5 And Bootstrap 4.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

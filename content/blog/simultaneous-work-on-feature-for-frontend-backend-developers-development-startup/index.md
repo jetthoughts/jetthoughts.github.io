@@ -31,9 +31,10 @@ How do split features on static and backend for 2 developers to prevent blockers
 ![](file_1.png)
 
 For simplicity, we agreed to set a convention:
-> # if there is a param preview in the URL, you should activate all hidden features on the page.
 
-### When to use it:
+> # if there is a param preview in the URL, you should activate all hidden features on the page
+
+### When to use it
 
  1. No need to have custom feature flags’ param per each feature, preview will be reused for all of them.
 
@@ -58,7 +59,8 @@ If we will merge the backend first, then will get a broken *UX*.
 ![Photo by [Moses Londo](https://unsplash.com/@moseslondo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/dilemma?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_2.jpeg)
 
 ## Overview alternative solution
-> # No, no, no! Stop long-lived feature branches usage!
+>
+> # No, no, no! Stop long-lived feature branches usage
 
 I believe you will propose *long-lived feature branches* as a solution.
 
@@ -67,4 +69,4 @@ In our *Continuous Delivery* implementation, we use a lot of rebases to sync cod
 Alternative to long-lived branches is *Feature Flags*. But we need some tiny/limited versions of it, prefer to use conventions for internal use instead of complex *UI* to manage it and support flexibilities, what features to show, and to whom.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our[ latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our[latest tech stories](https://jtway.co/latest) and trending [tech stories](https://jtway.co/trending).*

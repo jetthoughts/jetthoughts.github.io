@@ -20,23 +20,29 @@ slug: simpler-way-set-content-types-in-rails-ruby
 Rails now lets you set content types with less code. This new feature makes your work easier.
 
 ## The Change
+
 You can now use a short symbol instead of a long text string. Here's what it looks like:
 
 Old way:
+
 ```ruby
 response.content_type = "text/html"
 ```
 
 New way:
+
 ```ruby
 response.content_type = :html
 ```
 
 ## Benefits
+
 This change helps in three ways. First, your code becomes shorter. Second, it matches how Rails handles other formats. Third, you don't need to remember the full content type text.
 
 ## Using the Feature
+
 To try this, update your Rails version. Then start using symbols for your content types.
 
 ## Credit
+
 [Petrik de Heus](https://github.com/peternijssen) built this feature. His work helps make Rails better for everyone.

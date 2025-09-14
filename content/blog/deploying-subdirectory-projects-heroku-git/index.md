@@ -71,7 +71,7 @@ This solution is perfect when you need a simple manual deploy to Heroku or if yo
 
 ### **Solution 2: Heroku way (inline buildpack)**
 
-Create a Heroku app as usual and connect it with your GitHub repository. Add the https://github.com/heroku/heroku-buildpack-inline.git buildpack as first for your application. After that, create the bin directory in the repository root and create compile, detect, release files. You can leave detect and release files are basically empty, all logic will reside in compile:
+Create a Heroku app as usual and connect it with your GitHub repository. Add the <https://github.com/heroku/heroku-buildpack-inline.git> buildpack as first for your application. After that, create the bin directory in the repository root and create compile, detect, release files. You can leave detect and release files are basically empty, all logic will reside in compile:
 
  <iframe src="https://medium.com/media/eee533bca9b638d4349e9af2b6b3c183" frameborder=0></iframe>
 
@@ -100,4 +100,4 @@ Cons:
 From our perspective, this solution is preferable because it provides the ability for finer configuration and allows us to utilize Heroku Review Apps which is a great part of our development [process](https://jtway.co/make-master-stable-again-b15c9ff3b129).
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

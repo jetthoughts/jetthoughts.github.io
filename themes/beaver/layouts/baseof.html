@@ -6,52 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
-    {{ block "title" . }}
-      <title>{{ .Title }}</title>
-    {{ end }}
-
-    {{ if eq .Section "tags" }}
-    {{ $tagName := lower .Title }}
-    {{ $tagData := index .Site.Data.tags $tagName }}
-
-    <meta name="description" content="{{ $tagData.description | default "" }}" />
-    <meta property="og:description" content="{{ $tagData.description | default "" }}" />
-    {{ else }}
-    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
-    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Params.description }}{{ .Params.description }}{{ end }}" />
-    {{ end }}
-
-
-    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
-
-    {{ if and (eq .Kind "taxonomy") (eq .Section "tags") }}
-      {{ $canonical := .Permalink | replace "/tags/" "/blog/tags/" }}
-      <link rel="canonical" href="{{ $canonical }}" />
-    {{ else }}
-      <link rel="canonical" href="{{ .Permalink }}" />
-    {{ end }}
-
-
-    {{ if and (eq .Section "blog") (eq .Kind "page") }}
-      <meta property="og:type" content="article">
-    {{ else }}
-      <meta property="og:type" content="website">
-    {{ end }}
-
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:title" content="{{ .Title }} - JTWay, JetThoughts’ team blog" />
-    <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:site_name" content="jetthoughts.com" />
-    <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
-
-    <meta name="twitter:title" content="{{ .Title}} - JetThoughts’ team blog, JTWay" />
-    <meta name="twitter:site" content="@jetthoughts" />
-    <meta name="twitter:creator" content="@jetthoughts" />
-
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-
-    {{ partial "page/cover_image.html" (.Page.Resources.Get .Page.Params.metatags.image) }}
+    {{ partial "seo/enhanced-meta-tags.html" . }}
 
     <style>
         .logo-image-main {
@@ -59,35 +14,84 @@
             height: 36px;
             display: inline-block
         }
+        /* Skip navigation link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            z-index: 999999;
+            color: #fff;
+            background: #000;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: top 0.3s ease;
+        }
+        .skip-link:focus,
+        .skip-link:active {
+            top: 6px;
+        }
+        /* Screen reader only text */
+        .sr-only {
+            position: absolute !important;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .sr-only:focus {
+            position: static !important;
+            clip: auto;
+            clip-path: none;
+            width: auto;
+            height: auto;
+            overflow: visible;
+        }
     </style>
     {{ block "header" . }} {{ end }}
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ (resources.Get "img/favicon/apple-touch-icon.png" | fingerprint).RelPermalink }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ (resources.Get "img/favicon/favicon-32x32.png" | fingerprint).RelPermalink }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ (resources.Get "img/favicon/favicon-16x16.png" | fingerprint).RelPermalink }}">
-    <link rel="manifest" href="{{ (resources.Get "img/favicon/site.webmanifest" | resources.ExecuteAsTemplate "site.webmanifest" . | fingerprint).RelPermalink }}">
-    <link rel="mask-icon" href="{{ (resources.Get "img/favicon/safari-pinned-tab.svg" | fingerprint).RelPermalink }}" color="#5bbad5">
-    <link rel="shortcut icon" href="{{ (resources.Get "/img/favicon/favicon.ico" | fingerprint).RelPermalink }}">
+    {{ partialCached "page/favicons.html" . "favicons" }}
+    {{ partial "page/analytics.html" . }}
+    {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
+    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}">
     <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-config" content="{{ (resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint).RelPermalink }}">
+    {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
+    <meta name="msapplication-config" content="{{ $browserConfig.RelPermalink }}">
     <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
 
-    {{ $navCss := resources.Get "css/navigation.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $navCss.RelPermalink }}">
+    {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
+    {{ partial "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) }}
+
+    {{/* Enhanced SEO Schema Markup */}}
+    {{ partial "seo/enhanced-organization-schema.html" . }}
+    {{ partial "seo/comprehensive-service-schema.html" . }}
+    {{ partial "seo/local-business-schema.html" . }}
+    {{ partial "seo/article-schema.html" . }}
+    {{ partial "seo/breadcrumb-schema.html" . }}
+    {{ partial "seo/faq-schema.html" . }}
 </head>
 
-<body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-<a aria-label="Skip to content" class="fl-screen-reader-text" href="#fl-main-content">Skip to content</a>
+<body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage" lang="en">
+<a class="skip-link sr-only" href="#main-content">Skip to main content</a>
 <div class="fl-page">
 
-{{ partial "page/header.html" . }}
+{{ partialCached "page/header.html" . "header" }}
 
+<main id="main-content" role="main">
 {{ block "main" . }} {{ end }}
+</main>
 
 </div>
-{{ partial "page/footer.html" . }}
+{{ partialCached "page/footer.html" . "footer" }}
 {{ block "footer" . }} {{ end }}
-{{ partial "page/site-scripts" . }}
 
+
+{{ partialCached "page/site-scripts" . "site-scripts" }}
+<script>
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+</script>
 </body>
 </html>

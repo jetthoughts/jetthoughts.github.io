@@ -25,8 +25,10 @@ Data migration is a common part of working with databases, and Ruby on Rails dev
 The easiest way is just to have data migrations alongside with schema migrations. But as your code base grows this might become a problem.
 
 ## Problems
+
 **_Code coupling_**
 Data migrations depend on the existing code(models, service objects, etc.) over time code changes potentially breaking the migrations. Let's say you have a `Order` model and want to update a recently added attribute `fulfilled` to `true` for all orders created last year. You can do it with a simple migration:
+
 ```ruby
 class UpdateFulfilledIn2021 < ActiveRecord::Migration
   def up
@@ -35,6 +37,7 @@ class UpdateFulfilledIn2021 < ActiveRecord::Migration
   end
 end
 ```
+
 The above migration might fail:
 
 1. If `Order` model gets renamed or removed completely.
@@ -48,8 +51,10 @@ Data migrations might take a lot of time to execute, depending on the amount of 
 It's hard to write tests for migrations ensuring that the data is updated in a correct way, since a single error might lead to whole application data corruption requiring some down time to recover DB back to correct state.
 
 ## Possible solutions
+
 **_Inline model stubs_**
 Just define models class stubs with minimal required definitions. That way original model changes won't affect the migration. For the example from above:
+
 ```ruby
 class UpdateFulfilledIn2021 < ActiveRecord::Migration  
   class OrderStub < ApplicationRecord
@@ -73,6 +78,7 @@ Cons:
 
 **_Pure SQL_**
 Alternatively you can use pure SQL to modify your data.
+
 ```ruby
 def up 
   execute(
@@ -94,6 +100,7 @@ Cons:
 - No progress indication for long running updates;
 
 _**Rake tasks**_
+
 ```ruby
 task update_fulfilled_in_2021: :environment do
   OrderStub.all.where("created_at < '2022-01-01'")
@@ -118,6 +125,7 @@ rails g data_migration update_fulfilled_in_2021
 ```
 
 Generated data migrations are stored in `db/data` and then could be run with:
+
 ```bash
 rake data:migrate
 ```
@@ -133,10 +141,11 @@ Cons:
 - Additional setup;
 
 ## Conclusion
+
 Each solution is good in it's own circumstances.
 
-For easy one time updates you can utilize Rails schema migrations or execute pure SQL. 
+For easy one time updates you can utilize Rails schema migrations or execute pure SQL.
 
-If you need to perform more complex data updates once in a month or so, then rake tasks might help you with that. 
+If you need to perform more complex data updates once in a month or so, then rake tasks might help you with that.
 
 But as your code base grows and migrations get bigger & more complex it's better to utilize full data migration automation gem with version control and a way to test the updates before they hit the production database.

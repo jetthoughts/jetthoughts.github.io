@@ -88,4 +88,4 @@ Each test set is called *specs* — represents tests for specific purposes like 
 Once a basic version of our RESO API client is created, we have decided to publish it to npm. All code is available here: [https://www.npmjs.com/package/reso_webapi_js](https://www.npmjs.com/package/reso_webapi_js)
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

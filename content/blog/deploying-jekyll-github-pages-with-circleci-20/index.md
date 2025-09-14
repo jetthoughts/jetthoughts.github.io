@@ -30,13 +30,13 @@ One of the reasons is that some of the gems in your Gemfile are not supported by
 
 With CircleCI, auto-publishing your site on GitHub Pages is as easy as drinking a coffee.
 
-## Requirements:
+## Requirements
 
 * GitHub account (you obviously have one already)
 
 * Repository with the name {username}.github.io
 
-## Next steps:
+## Next steps
 
  1. Create repository on GitHub
 
@@ -128,33 +128,43 @@ echo "deployed successfully"
 This script does the following things:
 
 * First, we set the Git Configuration. We will receive a data from the settings, which we define in the next step
-```
+
+```bash
     git config user.name "$USER_NAME"
     git config user.email "$USER_EMAIL"
 ```
+
 * Switches the branch to master and update branch
-```
+
+```bash
     git checkout master
     git pull origin master
 ```
+
 * Next, we will remove all files except the generated site directory and required git folders
-```
+
+```bash
     find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 ```
+
 * When our folder is stripped from unrequired files we move our generated site in the root folder and remove the empty generated site folder
-```
+
+```bash
     mv _site/* .
     rm -R _site/
 ```
+
 * Our project is ready for deploying! So we are running git commands for deploying to the master branch
-```
+
+```bash
     git add -fA
     git commit --allow-empty -m "$(git log develop -1 --pretty=%B)"
     git push origin master
 ```
+
 You can change the configuration above to do great things using CircleCI. Remember, automating something is always more difficult than doing it manually. But it’s worth taking the time up front to figure it out, as it will save you lots of work and frustration in the long run.
 
 ## Conclusion
 
 That’s it, from now on when you commit to develop branch it will automatically run its tests and on success, it will deploy your website to GitHub Pages!
->  *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co) and [trending tech stories](https://jtway.co/trending).*
+> *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co) and [trending tech stories](https://jtway.co/trending).*

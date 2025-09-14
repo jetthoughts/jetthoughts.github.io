@@ -36,7 +36,7 @@ Using numbers and data into your headline is an effective way to make your headl
 
 Use unique rationales to write great headlines. The word “rationale” simply means “an underlying reason on why something should be done.”
 
-***Some of the rationales that you can include in your headlines are: ***Tips, Reasons, Lessons, Tricks, Ideas, Ways, Principles, Facts, Secrets, Strategies
+***Some of the rationales that you can include in your headlines are:***Tips, Reasons, Lessons, Tricks, Ideas, Ways, Principles, Facts, Secrets, Strategies
 
 ![](file_1.jpeg)
 
@@ -66,9 +66,9 @@ Useful can mean several things — practical, helpful, valuable, informative, wo
 
 What makes a headline good is it’s a formula. Every content marketer has one or more formulas for writing headlines. When using formulas, make sure to include power words that will get people to buy your product or join your waiting list.
 
-* *‘Little known ways’ *formula: How many times have you used this formula to write a catchy headline? Discovered that the *‘little known ways [put your solution here]’* formula is typically a social magnet.
+* *‘Little known ways’*formula: How many times have you used this formula to write a catchy headline? Discovered that the *‘little known ways [put your solution here]’* formula is typically a social magnet.
 
-* *‘Get rid of [problem] once and for all’ *formula: Who wouldn’t want to permanently get rid of an annoying problem that they’re faced with on a daily basis? When you write your headlines with this strategy in mind, you’ll captivate your audience from start to finish, because they want to know the secret, too.
+* *‘Get rid of [problem] once and for all’*formula: Who wouldn’t want to permanently get rid of an annoying problem that they’re faced with on a daily basis? When you write your headlines with this strategy in mind, you’ll captivate your audience from start to finish, because they want to know the secret, too.
 
 **Ruslana** is a Lead Generation Manager at [JetThoughts](https://www.jetthoughts.com/). Follow her on [LinkedIn](https://www.linkedin.com/in/ruslana-brykaliuk-970016135/).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

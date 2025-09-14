@@ -2,19 +2,13 @@
 {{ partial "header/critical/use-cases.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
-
-{{- $CSS := slice (resources.Get "css/3021-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") $dynamicCSSUseCases | resources.Concat "css/use-cases.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $staticUseCasesCSS := slice (resources.Get "css/3021-layout.css") (resources.Get "css/component-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticUseCasesCSS (slice $dynamicCSS586 $dynamicCSSUseCases)) "page" "use-cases") }}
 {{ end }}
 
 {{ define "footer" }}
-{{ $tabs := slice
-(resources.Get "js/tabs.js")
-| resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
-}}
-<script defer src="{{ $tabs.RelPermalink }}"></script>
+{{ $tabsResources := slice (resources.Get "js/tabs.js") }}
+{{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}
 {{ end }}
 
 {{ define "main" }}

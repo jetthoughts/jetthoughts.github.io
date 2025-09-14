@@ -26,6 +26,7 @@ slug: how-memoize-false-nil-values-ruby-rails
 **TL;DR: if method can return false or nil, and you want to memoize it, use defined?(@_result) instead of ||=.**
 
 Memoization is a useful technique which helps to achieve cleaner and more efficient code. When some expensive method of an object is called, we save its value to an instance variable, so that we don’t have to do those heavy calculations again.
+
 ```ruby
 class Book
   def word_count
@@ -35,7 +36,8 @@ class Book
   end 
 end
 ```
-The ||= is a conditional assignment operator which translates as: *“if left side is truthy (not *false *and not *nil*), then stop right there; otherwise assign right side to the left side”*. And since in Ruby the last statement gets returned by a method, in one case it returns result of sections.sum, and in other case the previously assigned instance variable @_word_count.
+
+The ||= is a conditional assignment operator which translates as: *“if left side is truthy (not*false *and not *nil*), then stop right there; otherwise assign right side to the left side”*. And since in Ruby the last statement gets returned by a method, in one case it returns result of sections.sum, and in other case the previously assigned instance variable @_word_count.
 
 This idiom is so simple that it’s easy to start using it everywhere without much thinking. But there are cases where it won’t work. We talk about *falsey* values. Consider the following methods, one of which tells if the book is referenced from any other book, and other finds the last book that referenced this one:
 
@@ -79,4 +81,4 @@ defined? is Ruby’s reserved word to check if expression is currently defined. 
 To sum up, ||= is too good to forget about it, but when doing memoization, just think if the result may be boolean or nil, and if yes, use defined?.
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

@@ -26,7 +26,7 @@ In structuring a team for MVP, we should consider the following: there is a mass
 
 The goal for the business is to find a good enough solution for a reasonable budget: _ROI_. It's vital to have the fastest feedback loop to prevent dramatic waste.
 
-## Here is how I see the team structure:
+## Here is how I see the team structure
 
 - [Project Manager / Owner](#pm)
 - [Designer](#designer)
@@ -34,7 +34,7 @@ The goal for the business is to find a good enough solution for a reasonable bud
 
 ## Product Manager / Owner<a name="pm"></a>
 
-They define the product's vision, so the rest of the team will follow. 
+They define the product's vision, so the rest of the team will follow.
 
 One of their functions is to communicate with all the product stakeholders (sponsors, developers, designers, customers).
 
@@ -61,4 +61,3 @@ Make architectural decisions.
 They aim to make the product error-free. Onboard _Continuous Delivery_ by using automations, tests and code review.
 
 They monitor performance because speed is a feature of every application.
-

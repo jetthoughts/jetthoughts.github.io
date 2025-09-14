@@ -26,14 +26,13 @@ If you are using Ruby version >= 2.5 you can simply go with:
 SecureRandom.alphanumeric(length)
 ```
 
-For older versions you can utilize a little numeric convertion hack: `Integer#to_s` method accepts an argument representing the base. 
+For older versions you can utilize a little numeric convertion hack: `Integer#to_s` method accepts an argument representing the base.
 For example:
 
 ```ruby
 13.to_s(2)  # => "1101" in binary
 13.to_s(16) # => "d" in hex
 ```
-
 
 ```ruby
 def alphanumerical_code(length)
@@ -50,7 +49,6 @@ end
 
 In case if you need to build something more specific and have more control, you can create your own generator.
 Let's say we need a random alphanumeric string generator, which excludes some of the letters, so the strings are more easily distinguished by customer in printed media.
-
 
 ```ruby
 class Generator

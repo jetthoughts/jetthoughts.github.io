@@ -94,6 +94,7 @@ It’s fair to note that Minitest::Spec warns its users when they try to use the
 ```ruby
 let(:name) { 'Bob' }
 ```
+
 –and your test won’t load:
 
 *ArgumentError: let ‘name’ cannot override a method in Minitest::Spec. Please use another name.*

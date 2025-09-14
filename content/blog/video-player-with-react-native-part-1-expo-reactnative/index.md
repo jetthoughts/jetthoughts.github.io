@@ -64,7 +64,7 @@ Let’s start to add real features. First thing is the home screen with a list o
 
     "orientation": "landscape"
 
-2. Use fixtures to fake API call for now.
+ 2. Use fixtures to fake API call for now.
 
 Add fixture file for the list of videos:
 
@@ -105,9 +105,11 @@ export default {
 ```
 
 3. Add carousel package:
+
 ```
     yarn add react-native-snap-carousel
 ```
+
 4. Add screen itself. Add the main component, then its parts [VideoCarousel](https://gist.github.com/obliviusm/62f1bbfb51f428a0f6212787709e0236) and [PreviewSlide](https://gist.github.com/obliviusm/db1ad9f96cac6befed036b8d1c662e0e).
 
 5. Add Spinner. It is used during API calls when there is no content yet.
@@ -157,6 +159,7 @@ Add fixture to show video:
   "nextVideoId": "c1r342c2"
 }
 ```
+
 Add one more method to fixture API to get a video:
 
 ```
@@ -212,9 +215,9 @@ The last thing is to use real API.
 
     yarn add apisause
 
-2. Add our API service [api.ts](https://gist.github.com/obliviusm/33181f6a9db1cb0801db87f8a04fa04a)
+ 2. Add our API service [api.ts](https://gist.github.com/obliviusm/33181f6a9db1cb0801db87f8a04fa04a)
 
-3. To use this service we need to replace FixtureApi in Playback and Home components:
+ 3. To use this service we need to replace FixtureApi in Playback and Home components:
 
     import api from '../../services/api'
 
@@ -279,4 +282,4 @@ Our company has got React Native experience and set up good process/pipelines fo
 In the next article, we will explore another cross-platform technology — [*ReactXP](https://microsoft.github.io/reactxp/)*. Stay tuned!
 
 **Paul Keen** is an Open Source Contributor and a Chief Technology Officer at [JetThoughts](https://www.jetthoughts.com). Follow him on [LinkedIn](https://www.linkedin.com/in/paul-keen/) or [GitHub](https://github.com/pftg).
->  If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).
+> If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).

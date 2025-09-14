@@ -1,0 +1,179 @@
+<div class="testimonial">
+  <div class="testimonial-content">
+    <div class="quote-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#667eea"/>
+      </svg>
+    </div>
+    
+    <blockquote>
+      "{{ .Get "quote" }}"
+    </blockquote>
+    
+    <div class="testimonial-author">
+      <div class="author-info">
+        <cite class="author-name">{{ .Get "author" }}</cite>
+        <span class="author-title">{{ .Get "title" }}</span>
+      </div>
+      
+      {{ if .Get "company-logo" }}
+      <div class="company-logo">
+        <img src="/images/testimonials/{{ .Get "company-logo" }}" alt="Company logo" loading="lazy">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<style>
+.testimonial {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.testimonial-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -12px;
+  left: 2rem;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #2d3748;
+  margin: 1rem 0;
+  font-weight: 400;
+  quotes: none;
+}
+
+.testimonial-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.author-title {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-top: 0.25rem;
+}
+
+.company-logo {
+  max-width: 120px;
+  opacity: 0.7;
+}
+
+.company-logo img {
+  max-height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.testimonial:hover .company-logo img {
+  filter: grayscale(0%);
+}
+
+/* Alternative testimonial styles */
+.testimonial.style-minimal {
+  text-align: center;
+}
+
+.testimonial.style-minimal .testimonial-content {
+  border-left: none;
+  border-top: 4px solid #667eea;
+}
+
+.testimonial.style-minimal .quote-icon {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial.style-card {
+  transform: perspective(1000px) rotateX(0deg);
+  transition: transform 0.3s ease;
+}
+
+.testimonial.style-card:hover {
+  transform: perspective(1000px) rotateX(2deg);
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    margin: 1rem;
+    padding: 0;
+  }
+  
+  .testimonial-content {
+    padding: 1.5rem;
+  }
+  
+  .testimonial blockquote {
+    font-size: 1.1rem;
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .company-logo {
+    align-self: center;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .testimonial-content {
+    background: #1a202c;
+    border-left-color: #667eea;
+  }
+  
+  .testimonial blockquote {
+    color: #e2e8f0;
+  }
+  
+  .author-name {
+    color: #f7fafc;
+  }
+  
+  .author-title {
+    color: #a0aec0;
+  }
+  
+  .quote-icon {
+    background: #1a202c;
+  }
+}
+</style>

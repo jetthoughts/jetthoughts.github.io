@@ -49,7 +49,7 @@ To tackle these issues, JetThoughts provided a part-time Fractional Chief Techno
 From the start, JetThoughts delivered valuable technical guidance based on years of experience. We met to set clear expectations, learn about the current software, and outline our plan.
 
 1. **Stabilizing Code:** We focused on fixing existing bugs while implementing analytics and coding standards to prevent future issues.
-   
+
 2. **User Interface Redesign:** Collaborating with OpenApply, we redesigned the user interface and upgraded the Ruby on Rails backend.
 
 3. **Optimizing Development Processes:** We streamlined internal development processes to boost efficiency.
