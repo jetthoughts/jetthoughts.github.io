@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+bun run test:build
+
+bun run lint
+
+bin/dtest

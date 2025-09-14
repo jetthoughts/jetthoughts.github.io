@@ -1,7 +1,22 @@
-{{/* Contextual Internal Links
+{{/* Contextual Internal Links with partialCached optimization
   Provides topic-specific internal link suggestions */}}
 {{ $currentTags := .Params.tags }}
 {{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+
+{{/* Create cache key from current tags + blog posts hash */}}
+{{ $tagsHash := sha256 (jsonify $currentTags) }}
+{{ $postsHash := sha256 (jsonify (slice (len $blogPosts) (index $blogPosts 0).Date)) }}
+{{ $cacheKey := printf "contextual-%s-%s" $tagsHash $postsHash }}
+
+{{/* Use partialCached for the content generation */}}
+{{ $contextData := dict "currentTags" $currentTags "blogPosts" $blogPosts "currentPage" . }}
+{{ return (partialCached "blog/contextual-links-cached" $contextData $cacheKey) }}
+
+{{/* Cached content generation */}}
+{{ define "partials/blog/contextual-links-cached" }}
+{{ $currentTags := .currentTags }}
+{{ $blogPosts := .blogPosts }}
+{{ $currentPage := .currentPage }}
 
 {{/* Create topic clusters based on tags */}}
 {{ $topicClusters := dict 
@@ -58,7 +73,7 @@
         {{ $postTags := $post.Params.tags }}
         {{ range $postTags }}
           {{ if in $cluster.cluster.keywords (. | lower) }}
-            {{ if ne $post.Permalink $.Permalink }}
+            {{ if ne $post.Permalink $currentPage.Permalink }}
               {{ $clusterPosts = $clusterPosts | append $post }}
             {{ end }}
           {{ end }}
@@ -96,4 +111,5 @@
     </a>
   </div>
 </section>
+{{ end }}
 {{ end }}

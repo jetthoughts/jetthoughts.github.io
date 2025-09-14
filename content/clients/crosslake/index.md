@@ -1,6 +1,7 @@
 ---
 title: "Transforming Legacy Software: JetThoughts' Success with Crosslake"
 excerpt: To help salvage an aging legacy project, Crosslake hired us to take over responsibility for ongoing architecture and development for a proprietary software in desperate need of a technical owner.
+date: 2022-10-17T08:30:34+00:00
 
 slug: "see-how-jetthoughts-helped-crosslake-transform-a-legacy-software-project-gain-control-over-a-complex-codebase"
 description: "Discover how JetThoughts partnered with Crosslake to revitalize a complex legacy software project, enhancing performance and control. Learn about the strategies that led to reduced release cycles and improved efficiency."

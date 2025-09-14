@@ -15,7 +15,7 @@ gem "ostruct"
 gem "sanity-ruby"
 
 gem "capybara-screenshot-diff"
-gem 'simplecov', require: false
+gem "simplecov", require: false
 gem "vips"
 
 # system libs

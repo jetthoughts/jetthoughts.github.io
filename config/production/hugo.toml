@@ -10,6 +10,7 @@ disableKinds = []
 # Production build optimizations
 [build]
   # Enable Hugo stats generation for PurgeCSS
+  numWorkers = 4  # Limit concurrent workers to reduce memory spikes
   writeStats = true
 
 # High-quality image processing for production
@@ -25,3 +26,9 @@ disableKinds = []
 [params]
   # Production environment
   environment = "production"
+
+[outputs]
+    home = ["HTML"]  # Only build HTML, skip JSON/RSS in tests
+    section = ["HTML"]
+    taxonomy = ["HTML"]
+    term = ["HTML"]

@@ -2771,3 +2771,48 @@ body:not(.single-fl-theme-layout)
     padding: 1.5rem;
   }
 }
+
+/* About page - Team Expertise & Authority sections styling */
+.expertise-credentials,
+.authority-list {
+  margin: 1rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.expertise-credentials li,
+.authority-list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.expertise-credentials li:before,
+.authority-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.authority-list li:before {
+  content: "★";
+  color: #1a8cff;
+}
+
+/* Additional styling for better visual hierarchy */
+.pp-infobox .expertise-credentials,
+.pp-infobox .authority-list {
+  margin-top: 1rem;
+}
+
+.pp-infobox .expertise-credentials li,
+.pp-infobox .authority-list li {
+  font-size: 0.9rem;
+  color: #555;
+}

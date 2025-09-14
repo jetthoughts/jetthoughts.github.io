@@ -72,9 +72,10 @@ public-test*/
 *.bak
 docker_test_output/
 *.backup
-public-*
+public*
 !.dev/docker-entrypoint.sh
 _reports/
 *debug*/
 
 _dest/
+_temp/

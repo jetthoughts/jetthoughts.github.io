@@ -1,15 +1,21 @@
 {{ define "header" }}
 {{ partial "header/critical/single/careers.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-
-{{- $CSS := slice (resources.Get "css/homepage-layout.css") (resources.Get "css/beaver-grid-layout.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/homepage.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/single/careers.css" -}}
-{{- if hugo.IsProduction -}}
-  {{- $CSS = $CSS  -}}
-{{- end -}}
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $careersResources := slice
+(resources.Get "css/homepage-layout.css")
+(resources.Get "css/beaver-grid-layout.css")
+$dynamicCSS586
+(resources.Get "css/services-layout.css")
+(resources.Get "css/homepage.css")
+(resources.Get "css/base-layout.css")
+(resources.Get "css/style.css")
+(resources.Get "css/theme-main.css")
+(resources.Get "css/footer.css")
+-}}
+{{ partial "assets/css-processor.html" (dict "resources" $careersResources "bundleName" "single-careers") }}
 {{ end }}
 {{ define "main" }}
-         <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+         <div id="fl-main-content" class="fl-page-content" role="main">
             <div class="fl-builder-content fl-builder-content-3050 fl-builder-global-templates-locked" data-post-id="3050">
                <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-3debxjmt89f4 fl-row-default-height fl-row-align-center" data-node="3debxjmt89f4">
                   <div class="fl-row-content-wrap">

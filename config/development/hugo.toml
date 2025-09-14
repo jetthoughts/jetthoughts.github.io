@@ -21,7 +21,7 @@ ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
   # Skip Hugo stats generation (not needed for PurgeCSS in dev)
   writeStats = false
   # Use resource cache in development for faster rebuilds
-  useResourceCacheWhen = "always"
+  useResourceCacheWhen = "fallback"
   [build.buildStats]
     enabled = false
 

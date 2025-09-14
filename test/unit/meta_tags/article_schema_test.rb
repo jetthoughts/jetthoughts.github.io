@@ -1,11 +1,11 @@
-require_relative "base_schema_test"
+require_relative "../base_page_test"
 
-class ArticleSchemaTest < BaseSchemaTest
+class ArticleSchemaTest < BasePageTest
   def test_blog_post_has_article_schema
     doc = parse_html_file("blog/devtools-for-ai-agents/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Article")
 
-    article_schema = schemas.find { |s| s["@type"] == "Article" }
+    article_schema = schemas.first
     refute_nil article_schema, "Article schema not found in blog post"
   end
 
@@ -22,9 +22,9 @@ class ArticleSchemaTest < BaseSchemaTest
 
   def test_article_has_valid_author
     doc = parse_html_file("blog/devtools-for-ai-agents/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Article")
 
-    article_schema = schemas.find { |s| s["@type"] == "Article" }
+    article_schema = schemas.first
 
     assert article_schema.key?("author"), "Missing author field"
     author = article_schema["author"]
@@ -35,9 +35,9 @@ class ArticleSchemaTest < BaseSchemaTest
 
   def test_article_has_valid_publisher
     doc = parse_html_file("blog/devtools-for-ai-agents/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Article")
 
-    article_schema = schemas.find { |s| s["@type"] == "Article" }
+    article_schema = schemas.first
 
     assert article_schema.key?("publisher"), "Missing publisher field"
     publisher = article_schema["publisher"]

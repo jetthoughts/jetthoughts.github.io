@@ -1,11 +1,11 @@
-require_relative "base_schema_test"
+require_relative "../base_page_test"
 
-class OrganizationSchemaTest < BaseSchemaTest
+class OrganizationSchemaTest < BasePageTest
   def test_organization_schema_exists
     doc = parse_html_file("about-us/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Organization")
 
-    org_schema = schemas.find { |schema| schema["@type"] == "Organization" }
+    org_schema = schemas.first
 
     refute_nil org_schema, "Organization schema not found"
   end
@@ -23,9 +23,9 @@ class OrganizationSchemaTest < BaseSchemaTest
 
   def test_organization_has_contact_point
     doc = parse_html_file("about-us/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Organization")
 
-    org_schema = schemas.find { |schema| schema["@type"] == "Organization" }
+    org_schema = schemas.first
 
     assert org_schema.key?("contactPoint"), "Missing contactPoint"
     refute_empty org_schema["contactPoint"], "contactPoint should not be empty"

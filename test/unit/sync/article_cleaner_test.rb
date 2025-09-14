@@ -28,8 +28,8 @@ class ArticleCleanerTest < SyncTestCase
 
   def test_cleanup_renamed_articles_with_valid_storage
     storage_data = {
-      1 => { slug: "keep-article", synced: true },
-      2 => { slug: "also-keep", synced: true }
+      1 => {slug: "keep-article", synced: true},
+      2 => {slug: "also-keep", synced: true}
     }
     @cleaner.storage.save(storage_data)
 
