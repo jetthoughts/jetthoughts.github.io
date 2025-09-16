@@ -5,7 +5,7 @@ remote_id: 2848690
 dev_to_id: 2848690
 dev_to_url: https://dev.to/jetthoughts/when-machines-learn-to-delete-an-8-week-experiment-in-ai-autonomy-2ak
 title: 'When Machines Learn to Delete: An 8-Week Experiment in AI Autonomy'
-description: 'In 8 weeks, AI agents achieved:    -73% code duplication  -81% breaking changes  4x deployment...'
+description: 'In 8 weeks, AI agents cut duplication 73% and boosted confidence 4x by unlearning bad habits. Here’s the playbook for smarter, simpler automation.'
 created_at: '2025-09-16T10:58:56Z'
 draft: false
 tags:
