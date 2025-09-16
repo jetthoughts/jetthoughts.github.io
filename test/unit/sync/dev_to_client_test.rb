@@ -20,9 +20,9 @@ class DevToClientTest < SyncTestCase
     # Faraday test adapter requires exact URL match, so we need to use a dynamic stub
     @stubs.get(/./) do |env|
       if env.url.to_s.start_with?("#{DevToClient::BASE_URL}/articles") &&
-        env.params["username"] == username &&
-        env.params["page"] == page.to_s &&
-        env.params["per_page"].to_i.between?(8999, 9999)
+          env.params["username"] == username &&
+          env.params["page"] == page.to_s &&
+          env.params["per_page"].to_i.between?(8999, 9999)
         [200, {}, articles.to_json]
       end
     end

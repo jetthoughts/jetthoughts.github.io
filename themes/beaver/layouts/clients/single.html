@@ -1,16 +1,21 @@
 {{ define "header" }}
 {{ partial "header/critical/single/clients.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-
-{{- $CSS := slice (resources.Get "css/homepage-layout.css") (resources.Get "css/fb2624e43f3c4277448abe268cde571e-layout-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/single/clients.css" | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $CSS = $CSS  -}}
-{{- end -}}
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $clientsResources := slice
+(resources.Get "css/homepage-layout.css")
+(resources.Get "css/fb2624e43f3c4277448abe268cde571e-layout-bundle.css")
+$dynamicCSS586
+(resources.Get "css/services-layout.css")
+(resources.Get "css/base-layout.css")
+(resources.Get "css/style.css")
+(resources.Get "css/theme-main.css")
+(resources.Get "css/footer.css")
+-}}
+{{ partial "assets/css-processor.html" (dict "resources" $clientsResources "bundleName" "single-clients") }}
 {{ end }}
 
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+<div id="fl-main-content" class="fl-page-content" role="main">
   <div class="fl-builder-content fl-builder-content-2998 fl-builder-global-templates-locked" data-post-id="2998">
      <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-pljy58ha90t6 fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="pljy58ha90t6">
         <div class="fl-row-content-wrap">
@@ -43,7 +48,7 @@
                        </div>
                        <div class="fl-module fl-module-photo fl-node-upmnzwl7ocg0" data-node="upmnzwl7ocg0">
                           <div class="fl-module-content fl-node-content">
-                             <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                             <div class="fl-photo fl-photo-align-left">
                                 <div class="fl-photo-content fl-photo-img-jpg">
                                    {{ $image := .Page.Resources.Get .Page.Params.client.cover_image }}
                                    {{ $title := .Page.Params.client.name }}
@@ -168,7 +173,7 @@
                     <div class="fl-col-content fl-node-content">
                        <div class="fl-module fl-module-pp-gallery fl-node-74cwydp2ahsq fl-visible-desktop fl-visible-large case-gallery" data-node="74cwydp2ahsq">
                           <div class="fl-module-content fl-node-content">
-                             <div class="pp-photo-gallery" itemscope="itemscope" itemtype="https://schema.org/ImageGallery">
+                             <div class="pp-photo-gallery">
 
                               {{ range .Params.gallery }}
                               {{ $imageItem := $.Page.Resources.Get . }}
@@ -176,7 +181,7 @@
                               {{ $imageItemW1024 := $imageItem.Resize "1024x webp q75" }}
 
 
-                                <div class="pp-photo-gallery-item" itemprop="associatedMedia" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
+                                <div class="pp-photo-gallery-item">
                                    <div class="pp-photo-gallery-content">
                                       <a
                                          href="{{ $imageItem.RelPermalink }}"
@@ -185,11 +190,11 @@
                                          data-description=""
                                          target="_blank"
                                          rel="noopener noreferrer"
-                                         itemprop="contentUrl">
+                                         >
                                          {{ if $imageItemW1024 }}
                                          <img loading="lazy" decoding="async" class="pp-gallery-img no-lazyload skip-lazy"
                                          src="{{ $imageItemW1024.RelPermalink }}"
-                                         alt="{{ $.Page.Title }}" itemprop="thumbnail" width="{{ $imageItemW1024.Width }}" height="{{ $imageItemW1024.Height }}" />
+                                         alt="{{ $.Page.Title }}" width="{{ $imageItemW1024.Width }}" height="{{ $imageItemW1024.Height }}" />
                                          {{ else }}
                                          <div class="image-placeholder">Image not available</div>
                                          {{ end }}
@@ -201,8 +206,8 @@
                                          <!-- Overlay Wrapper Closed -->
                                       </a>
                                       {{ if $imageItemW1024 }}
-                                      <meta itemprop="width" content="{{ $imageItemW1024.Width }}" />
-                                      <meta itemprop="height" content="{{ $imageItemW1024.Height }}" />
+                                      <meta content="{{ $imageItemW1024.Width }}" />
+                                      <meta content="{{ $imageItemW1024.Height }}" />
                                       {{ end }}
                                    </div>
                                 </div>
@@ -246,7 +251,7 @@
                           <div class="fl-module-content fl-node-content">
                              <div class="pp-posts-wrapper">
                                 <div class="pp-content-posts" style="--items-count: 3;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
-                                   <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
+                                   <div class="pp-content-post-grid pp-equal-height pp-css-grid">
 
                                       {{ $pages := where .Site.RegularPages "Type" "clients" }}
                                       {{ $pages = $pages | first 3 }}

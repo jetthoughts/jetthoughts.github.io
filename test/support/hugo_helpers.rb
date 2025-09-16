@@ -1,18 +1,40 @@
+require 'pathname'
+
 class Hugo
   attr_reader :destination
 
   def initialize(path: ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test"))
-    @destination = path
+    @destination = Pathname.new(path).expand_path
   end
 
   HUGO_OPTIONS = %w[
     --environment test
+    --buildDrafts
+    --logLevel warn
+    --noBuildLock
+    --gc
+    --minify
+    --enableGitInfo=false
+    --quiet
   ].freeze
 
+  def precompiled?
+    ENV["PRECOMPILED_ASSETS"]
+  end
+
   def precompile(port:)
+    # Skip Hugo execution in Docker environment - use precompiled assets
+    return self if precompiled?
+
     options = HUGO_OPTIONS.join(" ")
+    # Only add baseURL if port is specified (for system tests)
+    base_url_option = port ? "--baseURL=\"http://localhost:#{port}\"" : ""
+    hugo_build_cmd = "hugo #{options} #{base_url_option} --destination=\"#{destination}\"".strip
+    warn "Hugo: #{hugo_build_cmd}" if ENV["DEBUG"]
+
+    # Use Hugo's built-in caching for faster test builds
     system(
-      "hugo #{options} --noBuildLock --baseURL \"http://localhost:#{port}\" --destination \"#{destination}\"",
+      hugo_build_cmd,
       exception: true
     )
     self
@@ -46,7 +68,6 @@ class Hugo
   end
 end
 
-
 class RequestLogger
   def initialize(app)
     @app = app
@@ -54,7 +75,7 @@ class RequestLogger
 
   def call(env)
     request = Rack::Request.new(env)
-    puts "Received #{request.request_method} request for #{request.path}"
+    warn "Received #{request.request_method} request for #{request.path}" if ENV["DEBUG"]
     @app.call(env)
   end
 end
@@ -70,8 +91,8 @@ class HugoDirectoryHandler
     path = request.path_info
 
     # If path ends with / and there's an index.html, serve it
-    if path.end_with?('/')
-      index_file = File.join(@public_path, path, 'index.html')
+    if path.end_with?("/")
+      index_file = File.join(@public_path, path, "index.html")
       if File.exist?(index_file)
         return serve_file(index_file)
       end
@@ -84,6 +105,6 @@ class HugoDirectoryHandler
 
   def serve_file(file_path)
     content = File.read(file_path)
-    [200, {'Content-Type' => 'text/html'}, [content]]
+    [200, {"Content-Type" => "text/html"}, [content]]
   end
 end

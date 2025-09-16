@@ -1,14 +1,11 @@
-require_relative "base_schema_test"
+require_relative "../base_page_test"
 
-class BreadcrumbSchemaTest < BaseSchemaTest
+class BreadcrumbSchemaTest < BasePageTest
   def test_blog_post_has_breadcrumb_list_schema
     doc = parse_html_file("blog/4-lines-speed-up-your-rails-test-suite-on-circleci/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "BreadcrumbList")
 
-    refute_empty schemas, "No JSON-LD script tags found"
-
-    breadcrumb_found = schemas.any? { |schema| schema["@type"] == "BreadcrumbList" }
-    assert breadcrumb_found, "BreadcrumbList schema not found in JSON-LD scripts"
+    refute_empty schemas, "No BreadcrumbList schemas found"
   end
 
   def test_breadcrumb_schema_has_valid_structure

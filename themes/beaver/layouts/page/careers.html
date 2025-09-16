@@ -7,12 +7,12 @@
 {{ end }}
 
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+<div id="fl-main-content" class="fl-page-content" role="main">
     <div class="fl-content-full container">
        <div class="row">
           <div class="fl-content col-md-12">
-             <article class="fl-post post-3086 page type-page status-publish hentry" id="fl-post-3086" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
-                <div class="fl-post-content clearfix" itemprop="text">
+             <article class="fl-post post-3086 page type-page status-publish hentry" id="fl-post-3086">
+                <div class="fl-post-content clearfix">
                    <div class="fl-builder-content fl-builder-content-3086 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="3086">
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-ydac1kbu0mr5 fl-row-default-height fl-row-align-center" data-node="ydac1kbu0mr5">
                          <div class="fl-row-content-wrap">
@@ -364,23 +364,23 @@
                                            <div class="fl-module-content fl-node-content">
                                               <div class="pp-posts-wrapper">
                                                  <div class="pp-content-posts" style="--items-count: 2;--column-xl: 2;--column-lg: 2;--column-md: 2;--column-sm: 1;">
-                                                    <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
+                                                    <div class="pp-content-post-grid pp-equal-height pp-css-grid">
 
                                                       {{ range where site.RegularPages "Type" "careers" }}
 
-                                                        <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3048 jt-careers type-jt-careers status-publish hentry jt_careers_category-engineering" itemscope itemtype="https://schema.org/CreativeWork" data-id="3048" onmouseover="changeIcon(this)" onmouseout="changeIconBack(this)">
-                                                            <meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" content="{{ .Params.position }}" />
-                                                            <meta itemprop="datePublished" content="{{ dateFormat "2006-01-02" .Date }}" />
-                                                            <meta itemprop="dateModified" content="{{ dateFormat "2006-01-02" .Lastmod }}" />
-                                                            <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                                                                <meta itemprop="name" content="JetThoughts" />
+                                                        <div class="pp-content-post pp-content-grid-post pp-grid-custom post-3048 jt-careers type-jt-careers status-publish hentry jt_careers_category-engineering" data-id="3048" onmouseover="changeIcon(this)" onmouseout="changeIconBack(this)">
+                                                            <meta content="{{ .Params.position }}" />
+                                                            <meta content="{{ dateFormat "2006-01-02" .Date }}" />
+                                                            <meta content="{{ dateFormat "2006-01-02" .Lastmod }}" />
+                                                            <div>
+                                                                <meta content="JetThoughts" />
                                                             </div>
-                                                            <div itemscope itemprop="author" itemtype="https://schema.org/Person">
-                                                                <meta itemprop="name" content="{{.Params.author }}" />
+                                                            <div>
+                                                                <meta content="{{.Params.author }}" />
                                                             </div>
-                                                            <div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter">
-                                                                <meta itemprop="interactionType" content="https://schema.org/CommentAction" />
-                                                                <meta itemprop="userInteractionCount" content="0" />
+                                                            <div>
+                                                                <meta content="https://schema.org/CommentAction" />
+                                                                <meta content="0" />
                                                             </div>
                                                             <div class="pp-content-grid-post-text">
                                                                 <div class="career-cat">

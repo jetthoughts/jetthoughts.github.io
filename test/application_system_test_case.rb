@@ -14,10 +14,31 @@ require_relative "support/hugo_helpers"
 hugo_builder = Hugo.new
 Capybara.app = hugo_builder.app
 
+# Support both precompiled assets (fixed port) and dynamic port scenarios
 if ENV["PRECOMPILED_ASSETS"]
-  Capybara.server_port = ENV.fetch("TEST_SERVER_PORT") { 1314 }
+  # Use fixed port for precompiled assets (performance optimization)
+  Capybara.server_port = ENV.fetch("TEST_SERVER_PORT", "1314").to_i
+  # Assets are already precompiled with the correct baseURL
 else
+  # Use dynamic port assignment for flexibility
   hugo_builder.precompile(port: Capybara.current_session.server.port)
+end
+
+module NavigationHelpers
+  def within_top_bar(&block)
+    within(".navigation", &block)
+  end
+
+  def visit_via_menu(menu_text, submenu_text = nil)
+    within_top_bar do
+      if submenu_text
+        find("a", text: menu_text, visible: true, wait: 5).hover
+        click_on submenu_text
+      else
+        click_on menu_text
+      end
+    end
+  end
 end
 
 class ApplicationSystemTestCase < Minitest::Test
@@ -25,35 +46,53 @@ class ApplicationSystemTestCase < Minitest::Test
   include Capybara::Minitest::Assertions
   include CapybaraScreenshotDiff::DSL
   include CapybaraScreenshotDiff::Minitest::Assertions
+  include NavigationHelpers
+
+  # Ruby hash-based configuration for screenshot sections
+  SECTION_CONFIGS = {
+    'cta' => { tolerance: 0.03 },
+    'cta-contact_us' => { tolerance: 0.03 },
+    'clients' => { tolerance: 0.03 },
+    'use-cases' => { tolerance: 0.03 },
+    'technologies' => { tolerance: 0.02 },
+    'testimonials' => { tolerance: 0.02 },
+    'why-us' => { tolerance: 0.02 }
+  }.freeze
+
+  DEFAULT_SCREENSHOT_CONFIG = { tolerance: 0.03 }.freeze
 
   private
 
-  # Simple screenshot assertion - fail fast if issues arise
-  def assert_stable_screenshot(name, **options)
+  def preload_all_images
+    scroll_to :bottom
+    scroll_to :top
+  end
+
+  # Unified screenshot assertion with Ruby hash-based configuration
+  def assert_screenshot(name, **options)
     # Use Capybara's built-in wait mechanism instead of sleep
     wait_time = options.delete(:wait) || 1
+    has_css?("body", wait: wait_time) # This ensures page is ready
 
-    # Wait for any pending animations or loading to complete
-    has_css?('body', wait: wait_time) # This ensures page is ready
+    # Apply Ruby hash-based section configuration
+    section_config = screenshot_config_for(name)
+    final_options = section_config.merge(options)
 
-    options[:tolerance] ||= 0.05 # 5% tolerance for cross-platform rendering differences
-    assert_matches_screenshot(name, **options)
+    assert_matches_screenshot(name, **final_options)
   end
 
-  # Special handling for screenshots with known cross-platform issues
-  def assert_stable_problematic_screenshot(name, **options)
-    # Use higher tolerance for sections with significant platform rendering differences
-    options[:tolerance] ||= 0.25 # 25% tolerance for problematic sections
-    assert_stable_screenshot(name, **options)
+  def screenshot_config_for(name)
+    section_key = extract_section_key(name)
+    SECTION_CONFIGS.fetch(section_key, DEFAULT_SCREENSHOT_CONFIG)
   end
 
-  # Special handling for CTA sections with dynamic content
-  def assert_cta_screenshot(name, **options)
-    # Use higher tolerance for CTA sections with animations/dynamic content
-    options[:tolerance] ||= 0.15 # 15% tolerance for CTA sections
-    assert_stable_screenshot(name, **options)
+  def extract_section_key(name)
+    # Extract section identifier from screenshot name (e.g., "homepage/_cta" -> "cta")
+    name.to_s.split('/_').last || name.to_s.split('/').last
   end
 
-  # Alias other complex screenshot methods to the simple one
-  alias_method :assert_quick_screenshot, :assert_stable_screenshot
+  # Backward compatibility aliases - will be deprecated once all tests updated
+  alias_method :assert_stable_screenshot, :assert_screenshot
+  alias_method :assert_cta_screenshot, :assert_screenshot
+  alias_method :assert_quick_screenshot, :assert_screenshot
 end

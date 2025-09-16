@@ -16,8 +16,8 @@
   (resources.Get "css/footer.css")
 }}
 
-{{ partial "assets/css-processor.html" (dict 
-  "resources" $cssFiles 
+{{ partial "assets/css-processor.html" (dict
+  "resources" $cssFiles
   "bundleName" "blog-single"
   "context" .
   "media" "all"
@@ -36,14 +36,13 @@
 
 {{ define "main" }}
 
-<div id="fl-main-content" class="blog" itemprop="mainContentOfPage" role="main">
+<div id="fl-main-content" class="blog" role="main">
   <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
-    <article class="single-content" style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px"
-             itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+    <article class="single-content" style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px">
 
       <header>
-        <h1 class="heading">{{ .Title }}</h1>
+        <h1 class="fl-heading">{{ .Title }}</h1>
         <div class="post-tags" style="margin-bottom: 1rem;">{{ with .Params.tags }}{{ range . }}<a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a> {{ end }}{{ end }}</div>
         {{ if .Params.created_at }}
         <div class="post-date" style="color: rgba(33, 37, 41, 0.75);margin-bottom: 1rem;">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</div>
@@ -63,7 +62,7 @@
 
       {{ partial "blog/share.html" . }}
 
-      {{ partial "blog/related-posts.html" . }}
+      {{ partialCached "blog/related-posts.html" . (printf "related-posts-%s" .RelPermalink) }}
     </div>
 
   </div>

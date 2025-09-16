@@ -1,6 +1,7 @@
 ---
 title: "Transforming Ideas into Software: JetThoughts' Success with OrchestrateCS"
 excerpt: To help make their startup idea a reality, OrchestrateCS hired us to help them go from zero to revenue by making their an initial MVP they could use to go-to-market.
+date: 2022-10-17T08:30:34+00:00
 slug: "see-how-jetthoughts-helped-orchestratecs-go-from-an-idea-to-software-in-just-60-days"
 description: Discover how Jetthoughts guided OrchestrateCS from idea to software in just 60 days, showcasing efficiency in execution.
 author: Paul Keen

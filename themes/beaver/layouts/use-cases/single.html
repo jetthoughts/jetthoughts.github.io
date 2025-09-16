@@ -1,18 +1,25 @@
 {{ define "header" }}
 {{ partial "header/critical/single/use-cases.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-
-{{ $CSS := slice (resources.Get "css/3027-layout.css") (resources.Get "css/component-bundle.css") $dynamicCSS586 (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") | resources.Concat "css/single/use-cases.css" -}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $useCasesResources := slice
+(resources.Get "css/3027-layout.css")
+(resources.Get "css/component-bundle.css")
+$dynamicCSS586
+(resources.Get "css/services-layout.css")
+(resources.Get "css/base-layout.css")
+(resources.Get "css/style.css")
+(resources.Get "css/theme-main.css")
+(resources.Get "css/footer.css")
+-}}
+{{ partial "assets/css-processor.html" (dict "resources" $useCasesResources "bundleName" "single-use-cases") }}
 {{ end }}
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+<div id="fl-main-content" class="fl-page-content" role="main">
    <div class="fl-content-full container">
       <div class="row">
          <div class="fl-content col-md-12">
-            <article class="fl-post post-3027 page type-page status-publish hentry" id="fl-post-3027" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
-               <div class="fl-post-content clearfix" itemprop="text">
+            <article class="fl-post post-3027 page type-page status-publish hentry" id="fl-post-3027">
+               <div class="fl-post-content clearfix">
                   <div class="fl-builder-content fl-builder-content-3027 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="3027">
                      <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-ybgzh4il31w2 fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="ybgzh4il31w2">
                         <div class="fl-row-content-wrap">
@@ -54,7 +61,7 @@
                                        </div>
                                        <div class="fl-module fl-module-photo fl-node-8xown02sy9ki blue-border" data-node="8xown02sy9ki">
                                           <div class="fl-module-content fl-node-content">
-                                             <div class="fl-photo fl-photo-align-left" itemscope itemtype="https://schema.org/ImageObject">
+                                             <div class="fl-photo fl-photo-align-left">
                                                 <div class="fl-photo-content fl-photo-img-jpg">
 
                                                    {{ $image := .Page.Resources.Get .Page.Params.cover_image }}
@@ -69,7 +76,7 @@
 
 
                                                    <img fetchpriority="high" decoding="async" class="fl-photo-img wp-image-3073 size-full" src="{{ $image.RelPermalink }}" alt="{{ title .Page.Params.cover_image }}"
-                                                      itemprop="image" height="{{ $image.Height }}" width="{{ $image.Width }}" srcset="{{ $image.RelPermalink }} 2048w,
+                                                      height="{{ $image.Height }}" width="{{ $image.Width }}" srcset="{{ $image.RelPermalink }} 2048w,
                                                       {{ $imageW300.RelPermalink }} 300w,
                                                       {{ $imageW1024.RelPermalink }} 1024w,
                                                       {{ $imageW768.RelPermalink }} 768w,
@@ -194,7 +201,7 @@
                                           <div class="fl-module-content fl-node-content">
                                              <div class="pp-posts-wrapper">
                                                 <div class="pp-content-posts" style="--items-count: 3;--column-xl: 3;--column-lg: 3;--column-md: 3;--column-sm: 1;">
-                                                   <div class="pp-content-post-grid pp-equal-height pp-css-grid" itemscope="itemscope" itemtype="https://schema.org/Collection">
+                                                   <div class="pp-content-post-grid pp-equal-height pp-css-grid">
                                                       {{ $pages := where .Site.RegularPages "Type" "clients" }}
                                                       {{ $pages = $pages | first 3 }}
 

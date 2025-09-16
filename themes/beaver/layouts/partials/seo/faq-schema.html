@@ -1,25 +1,66 @@
-{{/* FAQ Schema - JSON-LD structured data for service pages with FAQs */}}
-{{ if .Params.faqs }}
-{{/* Build FAQ array as native Go maps/slices for proper JSON structure */}}
-{{ $faqMainEntity := slice }}
-{{ range .Params.faqs }}
-  {{ $questionObj := dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer) }}
-  {{ $faqMainEntity = $faqMainEntity | append $questionObj }}
+{{/* Enhanced FAQ Schema - JSON-LD structured data with deduplication support */}}
+{{ $faqs := .Params.faqs }}
+{{ if .Params.faq.questions }}
+  {{ $faqs = .Params.faq.questions }}
 {{ end }}
 
-{{ $faqSchema := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqMainEntity }}
+{{ if $faqs }}
+{{/* Build FAQ array with duplicate question detection */}}
+{{ $faqMainEntity := slice }}
+{{ $processedQuestions := slice }}
+
+{{ range $faqs }}
+  {{/* Create a normalized question key for duplicate detection */}}
+  {{ $normalizedQuestion := .question | lower | replaceRE "[^a-z0-9]+" "-" | replaceRE "^-+|-+$" "" }}
+
+  {{/* Only add question if it hasn't been processed yet (prevents duplicates within page) */}}
+  {{ if not (in $processedQuestions $normalizedQuestion) }}
+    {{/* Create service-specific unique identifier for the question */}}
+    {{ $uniqueId := printf "%s-%s" $.Params.slug $normalizedQuestion }}
+
+    {{/* Build question object with unique identifier */}}
+    {{ $questionObj := dict
+      "@type" "Question"
+      "@id" (printf "#faq-%s" $uniqueId)
+      "name" .question
+      "acceptedAnswer" (dict "@type" "Answer" "text" .answer)
+    }}
+
+    {{ $faqMainEntity = $faqMainEntity | append $questionObj }}
+    {{ $processedQuestions = $processedQuestions | append $normalizedQuestion }}
+  {{ end }}
+{{ end }}
+
+{{/* Only generate schema if we have unique FAQs */}}
+{{ if gt (len $faqMainEntity) 0 }}
+  {{ $faqSchema := dict
+    "@context" "https://schema.org"
+    "@type" "FAQPage"
+    "mainEntity" $faqMainEntity
+    "url" .Permalink
+    "about" (dict
+      "@type" "Service"
+      "name" .Title
+      "provider" (dict "@type" "Organization" "name" "JetThoughts")
+    )
+  }}
 
 <script type="application/ld+json">
 {{ $faqSchema | jsonify | safeJS }}
 </script>
 {{ end }}
+{{ end }}
 
-{{/* Alternative implementation for service pages without explicit FAQ data */}}
-{{/* This extracts FAQ-style content from service page content if structured with Q&A format */}}
-{{ if and (eq .Section "services") (not .Params.faqs) }}
-  {{/* Look for common FAQ patterns in content and create schema */}}
+{{/* Enhanced content-based FAQ detection for service pages */}}
+{{ if and (eq .Section "services") (not .Params.faqs) (not .Params.faq.questions) }}
+  {{/* Provide guidance for adding structured FAQ data */}}
   {{ $content := .Content | plainify }}
   {{ if or (strings.Contains $content "What is") (strings.Contains $content "How do") (strings.Contains $content "Why should") }}
-    <!-- FAQ patterns detected in content - consider adding structured FAQ data to frontmatter -->
+    <!--
+    FAQ patterns detected in content. Consider adding structured FAQ data to frontmatter:
+    faqs:
+      - question: "Your question here"
+        answer: "Your answer here"
+    -->
   {{ end }}
 {{ end }}

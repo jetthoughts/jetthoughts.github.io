@@ -1,7 +1,8 @@
-require_relative "base_schema_test"
+require_relative "../base_page_test"
 require "json"
 
-class SeoSchemaTest < BaseSchemaTest
+# ARCHITECTURAL: Inherit from refactored BaseSchemaTest with strict assertions
+class SeoSchemaTest < BasePageTest
   # Unit tests for SEO schema validation and structured data
   # Tests rendered HTML output from public-test directory (no server required)
 
@@ -27,31 +28,30 @@ class SeoSchemaTest < BaseSchemaTest
       schema_scripts.each_with_index do |script, index|
         json_content = script.text.strip
 
-        # Skip empty scripts
-        next if json_content.empty?
-
-        # Validate JSON syntax
-        begin
-          parsed_json = JSON.parse(json_content)
-          refute_nil parsed_json, "Schema #{index} on #{file_path} should parse as valid JSON"
-
-          # Ensure it's a proper Schema.org object
-          if parsed_json.is_a?(Hash)
-            assert parsed_json.key?("@context"), "Schema #{index} on #{file_path} should have @context"
-            assert parsed_json.key?("@type"), "Schema #{index} on #{file_path} should have @type"
-            assert_equal "https://schema.org", parsed_json["@context"],
-              "Schema #{index} on #{file_path} should use Schema.org context"
-          end
-
-          # Check for common malformation issues
-          refute_includes json_content, '"string"',
-            "Schema #{index} on #{file_path} should not contain literal 'string' values"
-          refute_includes json_content, 'Invalid top level element',
-            "Schema #{index} on #{file_path} should not have invalid elements"
-
-        rescue JSON::ParserError => e
-          flunk "Schema #{index} on #{file_path} contains invalid JSON: #{e.message}\nContent: #{json_content}"
+        # ARCHITECTURAL: Use skip instead of silent continue
+        if json_content.empty?
+          skip "Schema #{index} on #{file_path} is empty - might indicate template issue"
         end
+
+        # ARCHITECTURAL: Use strict validation method that fails fast
+        parsed_json = assert_valid_json(json_content, "Schema #{index} on #{file_path}")
+
+        # Ensure it's a proper Schema.org object
+        assert parsed_json.is_a?(Hash),
+          "Schema #{index} on #{file_path} should be a Hash, got #{parsed_json.class}"
+
+        assert parsed_json.key?("@context"),
+          "Schema #{index} on #{file_path} must have @context"
+        assert parsed_json.key?("@type"),
+          "Schema #{index} on #{file_path} must have @type"
+        assert_equal "https://schema.org", parsed_json["@context"],
+          "Schema #{index} on #{file_path} must use Schema.org context"
+
+        # Check for common malformation issues
+        refute_includes json_content, '"string"',
+          "Schema #{index} on #{file_path} contains literal 'string' placeholder"
+        refute_includes json_content, "Invalid top level element",
+          "Schema #{index} on #{file_path} contains invalid elements"
       end
     end
   end
@@ -62,9 +62,7 @@ class SeoSchemaTest < BaseSchemaTest
 
     doc = parse_html_file(blog_file)
 
-    article_schemas = doc.css('script[type="application/ld+json"]').select do |script|
-      script.text.include?('"@type": "Article"') || script.text.include?("'@type': 'Article'")
-    end
+    article_schemas = find_schema_elements_by_type(doc, 'Article')
 
     assert article_schemas.count > 0, "Article schema should be present on blog posts"
 
@@ -84,11 +82,7 @@ class SeoSchemaTest < BaseSchemaTest
   def test_organization_schema_structure
     doc = parse_html_file("about-us/index.html")
 
-    org_schemas = doc.css('script[type="application/ld+json"]').select do |script|
-      content = script.text
-      content.include?('"@type": "Organization"') || content.include?("'@type': 'Organization'") ||
-      content.include?('"@type": "LocalBusiness"') || content.include?("'@type': 'LocalBusiness'")
-    end
+    org_schemas = find_schema_elements_by_type(doc, 'Organization', 'LocalBusiness')
 
     assert org_schemas.count > 0, "Organization schema should be present"
 
@@ -183,9 +177,7 @@ class SeoSchemaTest < BaseSchemaTest
 
       if test_case[:expected_type]
         # Single expected type
-        relevant_schemas = doc.css('script[type="application/ld+json"]').select do |script|
-          script.text.include?(%("@type": "#{test_case[:expected_type]}"))
-        end
+        relevant_schemas = find_schema_elements_by_type(doc, test_case[:expected_type])
 
         assert relevant_schemas.count > 0,
           "Expected to find #{test_case[:expected_type]} schema on #{test_case[:file]}"
@@ -210,13 +202,10 @@ class SeoSchemaTest < BaseSchemaTest
           json_content = script.text.strip
           next if json_content.empty?
 
-          begin
-            parsed = JSON.parse(json_content)
-            if parsed.is_a?(Hash) && parsed["@type"]
-              found_types << parsed["@type"]
-            end
-          rescue JSON::ParserError
-            # Skip malformed JSON for this test
+          # ARCHITECTURAL: Fail fast on invalid JSON instead of silently skipping
+          parsed = assert_valid_json(json_content, "Schema type collection for #{test_case[:page]}")
+          if parsed.is_a?(Hash) && parsed["@type"]
+            found_types << parsed["@type"]
           end
         end
 
@@ -235,7 +224,7 @@ class SeoSchemaTest < BaseSchemaTest
 
     json_ld_scripts.each_with_index do |script, index|
       # Verify proper script attributes
-      assert_equal "application/ld+json", script['type'],
+      assert_equal "application/ld+json", script["type"],
         "Script #{index} should have correct type attribute"
 
       # Content should not be empty
@@ -243,13 +232,10 @@ class SeoSchemaTest < BaseSchemaTest
       refute content.empty?, "Script #{index} should not be empty"
 
       # Should be valid JSON
-      begin
-        parsed = JSON.parse(content)
-        assert parsed.is_a?(Hash) || parsed.is_a?(Array),
-          "Script #{index} should contain valid JSON object or array"
-      rescue JSON::ParserError => e
-        flunk "Script #{index} should contain valid JSON: #{e.message}"
-      end
+      # ARCHITECTURAL: Use strict validation helper
+      parsed = assert_valid_json(content, "Schema script #{index}")
+      assert parsed.is_a?(Hash) || parsed.is_a?(Array),
+        "Script #{index} must be a JSON object or array, got #{parsed.class}"
     end
   end
 

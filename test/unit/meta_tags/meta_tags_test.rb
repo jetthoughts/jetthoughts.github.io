@@ -1,6 +1,6 @@
-require_relative "base_schema_test"
+require_relative "../base_page_test"
 
-class MetaTagsTest < BaseSchemaTest
+class MetaTagsTest < BasePageTest
   # Unit tests for meta tags functionality and SEO validation
   # Tests rendered HTML output from public-test directory (no server required)
 
@@ -10,7 +10,7 @@ class MetaTagsTest < BaseSchemaTest
     canonical_links = doc.css("link[rel='canonical']")
     assert canonical_links.any?, "Homepage should have canonical link"
 
-    canonical_href = canonical_links.first['href']
+    canonical_href = canonical_links.first["href"]
     assert canonical_href, "Canonical link should have href attribute"
     # Canonical URL should be a properly formatted URL
     assert_match %r{https?://.*/$}, canonical_href, "Canonical URL should be properly formatted: #{canonical_href}"

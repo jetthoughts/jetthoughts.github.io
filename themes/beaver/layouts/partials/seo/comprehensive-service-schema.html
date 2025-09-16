@@ -110,6 +110,11 @@
     (dict
       "@type" "Review"
       "@id" (printf "%s#review-1" .Permalink)
+      "itemReviewed" (dict
+        "@type" "Service"
+        "@id" (printf "%s#service" .Permalink)
+        "name" .Title
+      )
       "reviewRating" (dict
         "@type" "Rating"
         "ratingValue" "5"
@@ -131,6 +136,11 @@
     (dict
       "@type" "Review"
       "@id" (printf "%s#review-2" .Permalink)
+      "itemReviewed" (dict
+        "@type" "Service"
+        "@id" (printf "%s#service" .Permalink)
+        "name" .Title
+      )
       "reviewRating" (dict
         "@type" "Rating"
         "ratingValue" "5"

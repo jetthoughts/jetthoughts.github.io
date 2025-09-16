@@ -1,6 +1,6 @@
-require_relative "base_schema_test"
+require_relative "base_page_test"
 
-class HugoPartialsTest < BaseSchemaTest
+class HugoPartialsTest < BasePageTest
   # Unit tests for Hugo partial templates functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 
@@ -24,16 +24,16 @@ class HugoPartialsTest < BaseSchemaTest
 
     # CSS should be processed and optimized
     css_links.each do |link|
-      href = link['href']
+      href = link["href"]
       next if href&.start_with?("http") # Skip external CSS
 
       # Local CSS should be minified and have integrity hash
       assert href&.include?(".min.") || href&.match?(/\.[a-f0-9]+\.css$/),
         "CSS file should be minified or fingerprinted: #{href}"
 
-      if link['integrity']
-        assert_match /^(sha\d+|md5)-/, link['integrity'],
-          "CSS file should have valid integrity attribute: #{href}"
+      if link["integrity"]
+        assert_match(/^(sha\d+|md5)-/, link["integrity"],
+          "CSS file should have valid integrity attribute: #{href}")
       end
     end
   end
@@ -58,7 +58,7 @@ class HugoPartialsTest < BaseSchemaTest
     # Copyright and legal
     assert doc.css("footer .footer-bottom").any?, "Footer should contain bottom section"
     copyright_text = doc.css("footer").text
-    assert_match /© \d{4}/, copyright_text, "Footer should contain copyright year"
+    assert_match(/© \d{4}/, copyright_text, "Footer should contain copyright year")
   end
 
   def test_seo_partials_integration
@@ -88,7 +88,7 @@ class HugoPartialsTest < BaseSchemaTest
     # CSS processor partial results
     css_files = doc.css("head link[rel='stylesheet']")
     css_files.each do |link|
-      href = link['href']
+      href = link["href"]
       next if href&.start_with?("http")
 
       # Should be processed through Hugo pipes
@@ -97,12 +97,12 @@ class HugoPartialsTest < BaseSchemaTest
     end
 
     # JavaScript files if any
-    js_files = doc.css("script[src]").select { |s| !s['src']&.start_with?("http") }
+    js_files = doc.css("script[src]").select { |s| !s["src"]&.start_with?("http") }
     js_files.each do |script|
-      src = script['src']
+      src = script["src"]
 
       # Should have performance attributes
-      assert script['defer'] || script['async'],
+      assert script["defer"] || script["async"],
         "JS file should have async/defer: #{src}"
     end
   end
@@ -147,14 +147,14 @@ class HugoPartialsTest < BaseSchemaTest
 
       social_links.each do |link|
         # Proper attributes for social sharing
-        assert_equal "_blank", link['target'],
+        assert_equal "_blank", link["target"],
           "Social links should open in new tab"
-        assert link['rel']&.include?("noopener"),
+        assert link["rel"]&.include?("noopener"),
           "Social links should have security attributes"
 
         # Accessibility
-        aria_label = link['aria-label']
-        title = link['title']
+        aria_label = link["aria-label"]
+        title = link["title"]
         assert aria_label&.length&.positive? || title&.length&.positive?,
           "Social links should have accessibility labels"
 
@@ -205,7 +205,7 @@ class HugoPartialsTest < BaseSchemaTest
 
     # Google Analytics or similar tracking
     gtag_scripts = doc.css("script").select do |s|
-      s.text.include?("gtag") || s['src']&.include?("googletagmanager")
+      s.text.include?("gtag") || s["src"]&.include?("googletagmanager")
     end
 
     if gtag_scripts.any?
@@ -291,7 +291,7 @@ class HugoPartialsTest < BaseSchemaTest
     # Preload critical resources
     preload_links = doc.css("head link[rel='preload']")
     preload_links.each do |link|
-      as_attr = link['as']
+      as_attr = link["as"]
       assert %w[style script font image].include?(as_attr),
         "Preload links should specify resource type"
     end
@@ -299,11 +299,9 @@ class HugoPartialsTest < BaseSchemaTest
     # DNS prefetch for external resources
     prefetch_links = doc.css("head link[rel='preconnect'], head link[rel='dns-prefetch']")
     prefetch_links.each do |link|
-      href = link['href']
+      href = link["href"]
       # Allow external URLs and protocol-relative URLs (starting with //)
-      valid_prefetch = href&.start_with?("http") ||
-                      href&.start_with?("/") ||
-                      href&.start_with?("//")
+      valid_prefetch = href&.start_with?("http", "/", "//")
       assert valid_prefetch,
         "Prefetch should be for external domains or CDN paths, got: #{href}"
     end

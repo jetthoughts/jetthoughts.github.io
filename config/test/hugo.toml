@@ -1,24 +1,27 @@
-baseURL = "http://localhost:1314"
+baseURL = "http://localhost:1314/"
+relativeURLs = true
+environment = "test"
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
-timeout = "10s"
-enableRobotsTXT = false
-enableGitInfo = false
 
 [build]
   writeStats = false
+  noChmod = true
+  noTimes = true
 
 [minify]
-  minifyOutput = false
+  minifyOutput = true
+  [minify.tdewolff.html]
+    keepWhitespace = true  # Reduce processing overhead
 
-[server]
-  headers = [
-    {for = "/**", values = {Cache-Control = "no-cache, no-store, must-revalidate"}},
-    {for = "/**", values = {Pragma = "no-cache"}},
-    {for = "/**", values = {Expires = "0"}}
-  ]
-
+# Test-specific parameters
 [params]
+  # Test environment
+  environment = "test"
+
+  # Disable heavy features in test mode
+  analytics = false
   googleAnalytics = false
-  enableSearch = false
-  enableCommentsCount = false
-  ignoreImageProcessing = true
+  enableImageOptimization = false
+
+[taxonomies]
+  tag = "tags"

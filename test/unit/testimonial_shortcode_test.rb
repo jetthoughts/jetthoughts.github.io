@@ -1,6 +1,6 @@
-require_relative "base_schema_test"
+require_relative "base_page_test"
 
-class TestimonialShortcodeTest < BaseSchemaTest
+class TestimonialShortcodeTest < BasePageTest
   # Unit tests for testimonial shortcode functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 
@@ -118,7 +118,7 @@ class TestimonialShortcodeTest < BaseSchemaTest
     rating_imgs = first_testimonial.css(".pp-rating img")
     if rating_imgs.any?
       rating_imgs.each do |img|
-        alt_text = img['alt']
+        alt_text = img["alt"]
         assert alt_text && !alt_text.empty?, "Rating image should have alt attribute"
         assert_equal "five stars", alt_text, "Rating image should have correct alt text"
       end
