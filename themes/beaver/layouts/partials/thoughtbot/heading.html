@@ -1,0 +1,53 @@
+{{/*
+  thoughtbot/heading partial
+  Transforms headings to thoughtbot-style sentence case
+
+  Usage:
+  {{ partial "thoughtbot/heading.html" (dict "text" "OUR CORE VALUES" "level" "h2" "class" "section-heading") }}
+
+  Parameters:
+  - text: The heading text to transform
+  - level: HTML heading level (h1, h2, h3, etc.) - default: h2
+  - class: CSS class to apply - default: ""
+  - transform: transformation type - default: "sentence"
+    - "sentence": Convert to sentence case (first word capitalized)
+    - "lower": Convert to lowercase
+    - "preserve": Keep original case
+*/}}
+
+{{ $text := .text | default "" }}
+{{ $level := .level | default "h2" }}
+{{ $class := .class | default "" }}
+{{ $transform := .transform | default "sentence" }}
+
+{{ if $text }}
+  {{ $transformedText := $text }}
+
+  {{ if eq $transform "sentence" }}
+    {{/* Convert to sentence case: first letter uppercase, rest lowercase except for proper nouns */}}
+    {{ $transformedText = $text | lower | title }}
+    {{/* Fix common cases where title case isn't appropriate */}}
+    {{ $transformedText = replace $transformedText "And " "and " }}
+    {{ $transformedText = replace $transformedText "Or " "or " }}
+    {{ $transformedText = replace $transformedText "The " "the " }}
+    {{ $transformedText = replace $transformedText "In " "in " }}
+    {{ $transformedText = replace $transformedText "On " "on " }}
+    {{ $transformedText = replace $transformedText "At " "at " }}
+    {{ $transformedText = replace $transformedText "To " "to " }}
+    {{ $transformedText = replace $transformedText "For " "for " }}
+    {{ $transformedText = replace $transformedText "With " "with " }}
+    {{ $transformedText = replace $transformedText "Of " "of " }}
+    {{/* Ensure first letter is always capitalized */}}
+    {{ $firstChar := substr $transformedText 0 1 | upper }}
+    {{ $restText := substr $transformedText 1 }}
+    {{ $transformedText = printf "%s%s" $firstChar $restText }}
+  {{ else if eq $transform "lower" }}
+    {{ $transformedText = $text | lower }}
+  {{ end }}
+
+  {{ if $class }}
+    <{{ $level }} class="{{ $class }}">{{ $transformedText | markdownify }}</{{ $level }}>
+  {{ else }}
+    <{{ $level }}>{{ $transformedText | markdownify }}</{{ $level }}>
+  {{ end }}
+{{ end }}

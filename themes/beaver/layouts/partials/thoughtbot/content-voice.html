@@ -1,0 +1,58 @@
+{{/*
+  thoughtbot/content-voice partial
+  Applies thoughtbot content voice transformations
+
+  Usage:
+  {{ partial "thoughtbot/content-voice.html" (dict "content" "Get In Touch With One Of Our Experts" "type" "cta") }}
+
+  Parameters:
+  - content: The content text to transform
+  - type: Type of content transformation
+    - "cta": Call-to-action text (sentence case, action-oriented)
+    - "description": Description text (sentence case, clear and concise)
+    - "title": Title text (sentence case)
+    - "preserve": Keep original formatting
+*/}}
+
+{{ $content := .content | default "" }}
+{{ $type := .type | default "description" }}
+
+{{ if $content }}
+  {{ $transformedContent := $content }}
+
+  {{ if eq $type "cta" }}
+    {{/* CTA transformations: sentence case, action-oriented */}}
+    {{ $transformedContent = $content | lower }}
+    {{ $firstChar := substr $transformedContent 0 1 | upper }}
+    {{ $restText := substr $transformedContent 1 }}
+    {{ $transformedContent = printf "%s%s" $firstChar $restText }}
+
+    {{/* Replace common CTA phrases to be more direct */}}
+    {{ $transformedContent = replace $transformedContent "get in touch with" "contact" }}
+    {{ $transformedContent = replace $transformedContent "reach out to" "contact" }}
+    {{ $transformedContent = replace $transformedContent "feel free to" "" }}
+    {{ $transformedContent = trim $transformedContent " " }}
+
+  {{ else if eq $type "description" }}
+    {{/* Description transformations: sentence case, clear language */}}
+    {{ $transformedContent = $content | lower }}
+    {{ $firstChar := substr $transformedContent 0 1 | upper }}
+    {{ $restText := substr $transformedContent 1 }}
+    {{ $transformedContent = printf "%s%s" $firstChar $restText }}
+
+    {{/* Replace wordy phrases with clearer alternatives */}}
+    {{ $transformedContent = replace $transformedContent "in order to" "to" }}
+    {{ $transformedContent = replace $transformedContent "for the purpose of" "to" }}
+    {{ $transformedContent = replace $transformedContent "due to the fact that" "because" }}
+    {{ $transformedContent = replace $transformedContent "at this point in time" "now" }}
+
+  {{ else if eq $type "title" }}
+    {{/* Title transformations: sentence case */}}
+    {{ $transformedContent = $content | lower }}
+    {{ $firstChar := substr $transformedContent 0 1 | upper }}
+    {{ $restText := substr $transformedContent 1 }}
+    {{ $transformedContent = printf "%s%s" $firstChar $restText }}
+  {{ end }}
+
+  {{ $transformedContent | markdownify }}
+{{ end }}

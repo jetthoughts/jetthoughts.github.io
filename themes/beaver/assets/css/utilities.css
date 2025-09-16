@@ -1,0 +1,26 @@
+/* ============================
+   CSS Utilities - JT Site
+   ============================ */
+
+/* Spacing Utilities */
+.u-mt-1 { margin-top: 1rem; }
+.u-mb-1 { margin-bottom: 1rem; }
+.u-p-1 { padding: 1rem; }
+.u-reset { margin: 0; padding: 0; }
+.u-no-margin { margin: 0; }
+
+/* Text Utilities */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+
+/* Display Utilities */
+.u-flex { display: flex; }
+.u-block { display: block; }
+.u-hidden { display: none; }
+
+/* Transition Utilities */
+.u-transition { transition: all 0.3s ease-in-out; }
+
+/* Color Utilities */
+.u-text-primary { color: #121212; }
+.u-text-muted { color: #757575; }

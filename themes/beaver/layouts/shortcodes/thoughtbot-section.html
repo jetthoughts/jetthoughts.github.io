@@ -1,0 +1,39 @@
+{{/*
+  thoughtbot-section shortcode
+  Creates a section with thoughtbot-style sentence case heading and content
+
+  Usage:
+  {{< thoughtbot-section title="Our approach to software development" >}}
+  Content goes here...
+  {{< /thoughtbot-section >}}
+
+  Or with params:
+  {{< thoughtbot-section
+      title="Our approach to software development"
+      subtitle="Building products that scale"
+      class="featured-section" >}}
+  Content goes here...
+  {{< /thoughtbot-section >}}
+*/}}
+
+{{ $title := .Get "title" | default "" }}
+{{ $subtitle := .Get "subtitle" | default "" }}
+{{ $class := .Get "class" | default "thoughtbot-section" }}
+{{ $content := .Inner }}
+
+<section class="{{ $class }}">
+  {{ if $title }}
+    <header class="section-header">
+      {{ if $subtitle }}
+        <p class="section-subtitle">{{ $subtitle | markdownify }}</p>
+      {{ end }}
+      <h2 class="section-title">{{ $title | markdownify }}</h2>
+    </header>
+  {{ end }}
+
+  {{ if $content }}
+    <div class="section-content">
+      {{ $content | markdownify }}
+    </div>
+  {{ end }}
+</section>
