@@ -1,66 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US" prefix="og: https://ogp.me/ns#">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
     {{ partial "seo/enhanced-meta-tags.html" . }}
 
+
     <style>
-        .logo-image-main {
-            width: 200px;
-            height: 36px;
-            display: inline-block
-        }
-        /* Skip navigation link for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            z-index: 999999;
-            color: #fff;
-            background: #000;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 3px;
-            font-weight: bold;
-            transition: top 0.3s ease;
-        }
-        .skip-link:focus,
-        .skip-link:active {
-            top: 6px;
-        }
-        /* Screen reader only text */
-        .sr-only {
-            position: absolute !important;
-            clip: rect(1px, 1px, 1px, 1px);
-            clip-path: inset(50%);
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-        .sr-only:focus {
-            position: static !important;
-            clip: auto;
-            clip-path: none;
-            width: auto;
-            height: auto;
-            overflow: visible;
-        }
+      .logo-image-main {
+        width: 200px;
+        height: 36px;
+        display: inline-block;
+      }
+      /* Skip navigation link for accessibility */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        z-index: 999999;
+        color: #fff;
+        background: #000;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 3px;
+        font-weight: bold;
+        transition: top 0.3s ease;
+      }
+      .skip-link:focus,
+      .skip-link:active {
+        top: 6px;
+      }
+      /* Screen reader only text */
+      .sr-only {
+        position: absolute !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .sr-only:focus {
+        position: static !important;
+        clip: auto;
+        clip-path: none;
+        width: auto;
+        height: auto;
+        overflow: visible;
+      }
     </style>
-    {{ block "header" . }} {{ end }}
+    {{ block "header" . }}{{ end }}
 
     {{ partialCached "page/favicons.html" . "favicons" }}
     {{ partial "page/analytics.html" . }}
     {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
-    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}">
-    <meta name="msapplication-TileColor" content="#00aba9">
+    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
     {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
-    <meta name="msapplication-config" content="{{ $browserConfig.RelPermalink }}">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="manifest" href="/manifest.json">
+    <meta
+      name="msapplication-config"
+      content="{{ $browserConfig.RelPermalink }}" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.json" />
 
     {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
     {{ partial "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) }}
@@ -72,26 +75,33 @@
     {{ partial "seo/article-schema.html" . }}
     {{ partial "seo/breadcrumb-schema.html" . }}
     {{ partial "seo/faq-schema.html" . }}
-</head>
+  </head>
 
-<body class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active" itemscope="itemscope" itemtype="https://schema.org/WebPage" lang="en">
-<a class="skip-link sr-only" href="#main-content">Skip to main content</a>
-<div class="fl-page">
-
-{{ partialCached "page/header.html" . "header" }}
-
-<main id="main-content" role="main">
-{{ block "main" . }} {{ end }}
-</main>
-
-</div>
-{{ partialCached "page/footer.html" . "footer" }}
-{{ block "footer" . }} {{ end }}
+  <body
+    class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active"
+    lang="en">
+    <a class="skip-link sr-only" href="#main-content">Skip to main content</a>
+    <div class="fl-page">
+      {{ partialCached "page/header.html" . "header" }}
 
 
-{{ partialCached "page/site-scripts" . "site-scripts" }}
-<script>
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
-</script>
-</body>
+      <main id="main-content" role="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+    {{ partialCached "page/footer.html" . "footer" }}
+    {{ block "footer" . }}{{ end }}
+
+    {{ partialCached "page/site-scripts" . "site-scripts" }}
+    {{ if .Store.Get "features.mermaid" }}
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script>
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    {{ end }}
+    <script>
+      if ("serviceWorker" in navigator)
+        navigator.serviceWorker.register("/sw.js");
+    </script>
+  </body>
 </html>

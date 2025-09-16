@@ -22,11 +22,8 @@
   "media" "all"
 ) }}
 
-{{ $paginationCss := resources.Get "css/pagination.css" | postCSS | minify | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $paginationCss = $paginationCss | resources.PostProcess -}}
-{{- end -}}
-<link rel="stylesheet" href="{{ $paginationCss.RelPermalink }}">
+{{- $paginationResources := slice (resources.Get "css/pagination.css") -}}
+{{ partial "assets/css-processor.html" (dict "resources" $paginationResources "bundleName" "pagination" "context" .) }}
 
 
 {{ if eq .Type "tags" }}
@@ -43,7 +40,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+  <div id="fl-main-content" class="fl-page-content" role="main">
     <div class="fl-builder-content fl-builder-content-741 fl-builder-global-templates-locked" data-post-id="741">
       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-efmcw3bh18k5 fl-row-default-height fl-row-align-center fl-row-has-layers"
         data-node="efmcw3bh18k5">

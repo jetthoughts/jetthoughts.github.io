@@ -1,6 +1,7 @@
 ---
 title: "Mobile Coach Case Study: Scalable Development Solutions for Chatbot Platforms"
 excerpt: To help take their enterprise chatbot platform to the next level, Mobile Coach hired us to support and build new features for a group of internal products related to the core platform and help scale both their R&D & engineering team.
+date: 2022-12-15T08:30:34+00:00
 slug: mobile-coach
 description: "Discover how JetThoughts partnered with Mobile Coach to enhance their chatbot platform, scale their development team, and achieve significant user growth. Learn about our strategic approach and successful outcomes in this detailed case study."
 author: Paul Keen

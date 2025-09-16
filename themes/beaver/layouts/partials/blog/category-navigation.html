@@ -1,6 +1,17 @@
-{{/* Enhanced Category Navigation for Blog 
+{{/* Enhanced Category Navigation for Blog with partialCached optimization
   Creates topic-based navigation with post counts */}}
 {{ $blogPosts := where .Site.RegularPages "Section" "blog" }}
+
+{{/* Create cache key from blog posts count + latest post date */}}
+{{ $postsHash := sha256 (jsonify (slice (len $blogPosts) (index $blogPosts 0).Date)) }}
+{{ $cacheKey := printf "category-nav-%s" $postsHash }}
+
+{{/* Use partialCached for the entire navigation generation */}}
+{{ return (partialCached "blog/category-navigation-cached" $blogPosts $cacheKey) }}
+
+{{/* Cached content generation */}}
+{{ define "partials/blog/category-navigation-cached" }}
+{{ $blogPosts := . }}
 
 {{/* Extract and count all tags */}}
 {{ $tagCounts := dict }}
@@ -125,4 +136,5 @@
     </a>
   </div>
 </section>
+{{ end }}
 {{ end }}

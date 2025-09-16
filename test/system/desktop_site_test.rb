@@ -12,7 +12,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_homepage
     visit "/"
     assert_text "Build faster. Scale smarter."
-    assert_stable_problematic_screenshot "homepage"
+    assert_screenshot "homepage", tolerance: 0.10
   end
 
   def test_top_image_have_highest_priority
@@ -22,31 +22,38 @@ class DesktopSiteTest < ApplicationSystemTestCase
     end
   end
 
-  # Generate individual test methods for each homepage section
-  %w[clients technologies cta-contact_us footer].each do |section_id|
-    define_method("test_homepage_section_#{section_id.tr("-", "_")}") do
-      visit "/"
-      scroll_to :bottom # to preload all images
-      assert_text "JetThoughts. All Rights Reserved", exact: false
+  # Explicit test methods for each homepage section (Ruby readability over metaprogramming)
+  def test_homepage_section_clients
+    verify_homepage_section("clients")
+  end
 
-      scroll_to find("##{section_id}")
+  def test_homepage_section_technologies
+    verify_homepage_section("technologies")
+  end
 
-      # Use appropriate screenshot method based on section type
-      case section_id
-      when "testimonials", "why-us"
-        assert_stable_problematic_screenshot "homepage/_#{section_id}"
-      when "cta", "cta-contact_us", "use-cases"
-        # Use CTA method for sections with dynamic content/animations
-        assert_cta_screenshot "homepage/_#{section_id}"
-      when "technologies"
-        assert_stable_problematic_screenshot "homepage/_#{section_id}"
-      when "clients"
-        # Slightly higher tolerance for clients section due to image loading variance
-        assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.03
-      else
-        assert_stable_screenshot "homepage/_#{section_id}", tolerance: 0.02
-      end
-    end
+  def test_homepage_section_cta_contact_us
+    verify_homepage_section("cta-contact_us")
+  end
+
+  def test_homepage_section_footer
+    verify_homepage_section("footer")
+  end
+
+  private
+
+  def verify_homepage_section(section_id)
+    visit "/"
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+    scroll_to find("##{section_id}")
+    # Ruby hash-based config automatically handles tolerance per section
+    assert_screenshot "homepage/_#{section_id}"
+  end
+
+  def verify_clients_section(section_id)
+    scroll_to find("##{section_id}")
+    # Ruby hash-based config handles tolerance automatically
+    assert_screenshot "clients/_#{section_id}"
   end
 
   def test_blog_index
@@ -63,7 +70,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_stable_problematic_screenshot "blog/index/_pagination", skip_area: [".blog-post"]
+    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post"]
   end
 
   def test_visit_blog_post
@@ -81,16 +88,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_stable_screenshot "blog/post", tolerance: 0.15
+    assert_stable_screenshot "blog/post", tolerance: 0.03
   end
 
   def test_about_us
     visit "/"
-    within_top_bar do
-      click_on "About Us"
-    end
-
-    assert_stable_problematic_screenshot "about_us"
+    visit_via_menu("About Us")
+    assert_screenshot "about_us"
   end
 
   def test_clients
@@ -106,22 +110,12 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_clients_sections
     visit "/"
-    scroll_to :bottom # to preload all images
+    scroll_to :bottom # preload all images
 
-    sections = %w[clients technologies cta-contact_us footer]
-
-    sections.each do |section_id|
-      scroll_to find("##{section_id}")
-      # Use appropriate screenshot method based on section type
-      case section_id
-      when "clients"
-        assert_stable_screenshot "clients/_#{section_id}", tolerance: 0.15
-      when "cta-contact_us"
-        assert_cta_screenshot "clients/_#{section_id}"
-      else
-        assert_stable_screenshot "clients/_#{section_id}", tolerance: 0.02
-      end
-    end
+    verify_clients_section("clients")
+    verify_clients_section("technologies")
+    verify_clients_section("cta-contact_us")
+    verify_clients_section("footer")
   end
 
   def test_careers
@@ -130,7 +124,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "Careers"
     end
 
-    assert_stable_problematic_screenshot "careers"
+    assert_stable_screenshot "careers"
   end
 
   def test_services_menu
@@ -146,13 +140,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_services_fractional_cto
     visit "/"
-
-    within_top_bar do
-      find("a", text: "Services", visible: true, wait: 5).hover
-      click_on "Fractional CTO"
-    end
-
-    assert_quick_screenshot "services/fractional_cto", tolerance: 0.20
+    visit_via_menu("Services", "Fractional CTO")
+    assert_screenshot "services/fractional_cto", tolerance: 0.20
   end
 
   def test_services_app_development
@@ -163,7 +152,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       click_on "App/Web Development"
     end
 
-    assert_stable_problematic_screenshot "services/app_web_development"
+    assert_stable_screenshot "services/app_web_development"
   end
 
   def test_use_cases_menu
@@ -186,7 +175,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     # Wait for page to fully load and text to be visible
     assert_text "get started", wait: 10, exact: false
-    assert_stable_problematic_screenshot "contact_us"
+    assert_stable_screenshot "contact_us"
   end
 
   def test_free_consultation
@@ -196,7 +185,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     find("a", text: "Talk to an Expert", match: :first, wait: 5).click
 
     assert_text "Free Consultation"
-    assert_stable_problematic_screenshot "free_consultation"
+    assert_stable_screenshot "free_consultation"
   end
 
   def test_not_found
@@ -205,7 +194,29 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "404"
   end
 
+  def test_about_page_section_core_values
+    visit "/about-us/"
+    preload_all_images
+
+    scroll_to(find(".fl-node-os8vrc1dwlji"))
+    assert_stable_screenshot "about_page/values", tolerance: 0.1
+  end
+
+  def test_about_page_section_achievements
+    visit "/about-us/"
+    preload_all_images
+
+    scroll_to(find(".fl-node-nb2thxdw075q"))
+    assert_stable_screenshot "about_page/achievements", tolerance: 0.1
+  end
+
   private
+
+  def verify_clients_section(section_id)
+    scroll_to find("##{section_id}")
+    # Ruby hash-based config handles tolerance automatically
+    assert_screenshot "clients/_#{section_id}"
+  end
 
   def within_top_bar
     within ".navigation" do

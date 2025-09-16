@@ -437,3 +437,12 @@
     padding-right: 15px;
   }
 }
+
+/* Fix for homepage content spacing after services dropdown */
+.fl-rich-text p {
+  margin-bottom: 0 !important;
+}
+
+.fl-rich-text p:not(:first-child) {
+  margin-top: 22px;
+}

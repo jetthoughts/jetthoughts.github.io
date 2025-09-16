@@ -1,11 +1,11 @@
-require_relative "base_schema_test"
+require_relative "../base_page_test"
 
-class ServiceSchemaTest < BaseSchemaTest
+class ServiceSchemaTest < BasePageTest
   def test_service_page_has_service_schema
     doc = parse_html_file("services/fractional-cto/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Service")
 
-    service_schema = schemas.find { |s| s["@type"] == "Service" }
+    service_schema = schemas.first
     refute_nil service_schema, "Service schema not found"
   end
 
@@ -22,9 +22,9 @@ class ServiceSchemaTest < BaseSchemaTest
 
   def test_service_has_valid_provider
     doc = parse_html_file("services/fractional-cto/index.html")
-    schemas = extract_json_ld_schemas(doc)
+    schemas = find_schemas_by_type(doc, "Service")
 
-    service_schema = schemas.find { |s| s["@type"] == "Service" }
+    service_schema = schemas.first
 
     assert service_schema.key?("provider"), "Missing provider field"
     provider = service_schema["provider"]

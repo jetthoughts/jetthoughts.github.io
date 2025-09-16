@@ -68,7 +68,7 @@ Actually, it's perfect for startups. Here's why:
 2. Short enough to maintain urgency
 3. Forces tough decisions about what really matters
 
-At OpenApply, we used this timeframe to rebuild their entire admission system. Each six-week cycle delivered a complete, shippable piece of functionality. No half-finished features, no technical debt piling up.
+This timeframe allows teams to rebuild entire systems systematically. Each six-week cycle delivers complete, shippable functionality. No half-finished features, no technical debt piling up.
 
 ## Real Talk: What This Looks Like in Practice
 

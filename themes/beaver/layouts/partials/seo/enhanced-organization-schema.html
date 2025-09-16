@@ -94,6 +94,11 @@
     {{- if gt $index 0 }},{{ end }}
     {
       "@type": "Review",
+      "itemReviewed": {
+        "@type": "Organization",
+        "@id": "https://jetthoughts.com/#organization",
+        "name": "JetThoughts"
+      },
       "author": {
         "@type": "Person",
         "name": "{{ $testimonial.name }}"
