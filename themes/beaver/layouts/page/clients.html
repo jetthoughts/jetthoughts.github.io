@@ -1,7 +1,7 @@
 {{ define "header" }}
 {{ partial "header/critical/clients.html" . }}
-{{- $staticClientsCSS := slice (resources.Get "css/3082-layout.css") (resources.Get "css/e93d9b85e7803f50c80b8a698f8d12f9-layout-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
-{{- $dynamicCSS := slice (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .) -}}
+{{- $staticClientsCSS := slice (resources.Get "css/fl-clients-layout.css") (resources.Get "css/fl-clients-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
+{{- $dynamicCSS := slice (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .) -}}
 {{ partial "assets/bundle.html" (dict "cssFiles" (union $staticClientsCSS $dynamicCSS) "page" "clients") }}
 {{ end }}
 

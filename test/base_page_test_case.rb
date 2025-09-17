@@ -4,7 +4,7 @@ require "json"
 
 require "support/hugo_helpers"
 
-Hugo.new.precompile(port: nil)
+Hugo.new.precompile
 
 class BasePageTestCase < Minitest::Test
   private
