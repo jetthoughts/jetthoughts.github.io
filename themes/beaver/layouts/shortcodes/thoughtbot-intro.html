@@ -1,0 +1,30 @@
+{{/*
+  thoughtbot-intro shortcode
+  Creates a thoughtbot-style introduction section with problem/solution pattern
+
+  Usage:
+  {{< thoughtbot-intro problem="Describe the problem" solution="Present the solution" >}}
+
+  Parameters:
+  - problem: The problem statement to highlight
+  - solution: The solution statement to present
+*/}}
+
+{{ $problem := .Get "problem" | default "" }}
+{{ $solution := .Get "solution" | default "" }}
+
+<div class="thoughtbot-intro">
+  {{ if $problem }}
+    <div class="intro-problem">
+      <h3 class="intro-problem-title">The Challenge</h3>
+      <p class="intro-problem-text">{{ $problem | markdownify }}</p>
+    </div>
+  {{ end }}
+
+  {{ if $solution }}
+    <div class="intro-solution">
+      <h3 class="intro-solution-title">Our Approach</h3>
+      <p class="intro-solution-text">{{ $solution | markdownify }}</p>
+    </div>
+  {{ end }}
+</div>
