@@ -1,0 +1,745 @@
+/*
+ * Minimal BEM (Block Element Modifier) CSS for Home Page
+ * Only semantic class hooks without visual changes
+ * These classes provide semantic naming without altering existing FL-builder styles
+ */
+
+/* ================================================
+   SEMANTIC CLASS HOOKS ONLY
+   No layout, margin, padding, or visual changes
+   ================================================ */
+
+/* Why Us Section - Semantic hook only */
+.c-why-us {
+  /* Migrated styles from FL-node-pym08gf9wr2o */
+}
+
+.c-why-us .fl-row-content {
+  min-width: 0px;
+}
+
+.c-why-us > .fl-row-content-wrap {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 0px;
+}
+
+.c-why-us .fl-builder-bottom-edge-layer {
+  bottom: -0.5%;
+}
+
+.c-why-us .fl-builder-bottom-edge-layer > * {
+  width: 100%;
+  left: calc(50% - 50%);
+  right: auto;
+  height: 7%;
+  top: auto;
+  bottom: 0;
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.c-why-us .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
+  fill: #000000;
+}
+
+@media (max-width: 1115px) {
+  .c-why-us.fl-row > .fl-row-content-wrap {
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 860px) {
+  .c-why-us.fl-row > .fl-row-content-wrap {
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+  }
+}
+
+/* Feature Cards - Semantic hooks only */
+.c-feature-card {
+  /* Consolidated styles from all feature card modules */
+}
+
+/* Equal height flex styles for all feature cards */
+.fl-col-group-equal-height .c-feature-card,
+.fl-col-group-equal-height .c-feature-card .fl-module-content,
+.fl-col-group-equal-height .c-feature-card .fl-module-content .pp-infobox-wrap,
+.fl-col-group-equal-height .c-feature-card .fl-module-content .pp-infobox-wrap .pp-infobox,
+.fl-col-group-equal-height .c-feature-card .fl-module-content .pp-infobox-wrap > .pp-infobox-link,
+.fl-col-group-equal-height .c-feature-card .fl-module-content .pp-infobox-wrap > .pp-more-link {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  flex-shrink: 1;
+  min-width: 1px;
+  max-width: 100%;
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.fl-col-group-equal-height .c-feature-card.fl-visible-large,
+.fl-col-group-equal-height .c-feature-card.fl-visible-medium,
+.fl-col-group-equal-height .c-feature-card.fl-visible-mobile {
+  display: none;
+}
+
+.fl-col-group-equal-height .c-feature-card.fl-visible-desktop {
+  display: flex;
+}
+
+/* Alignment variations for equal height cards */
+.fl-col-group-equal-height.fl-col-group-align-center .c-feature-card .fl-module-content .pp-infobox-wrap .pp-infobox {
+  justify-content: center;
+}
+
+.fl-col-group-equal-height.fl-col-group-align-top .c-feature-card .fl-module-content .pp-infobox-wrap .pp-infobox {
+  justify-content: flex-start;
+}
+
+.fl-col-group-equal-height.fl-col-group-align-bottom .c-feature-card .fl-module-content .pp-infobox-wrap .pp-infobox {
+  justify-content: flex-end;
+}
+
+/* Feature card content styling */
+.c-feature-card .pp-infobox .pp-infobox-title-prefix {
+  display: none;
+}
+
+.c-feature-card .pp-infobox-title-wrapper .pp-infobox-title {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.c-feature-card .pp-infobox-description {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.c-feature-card .pp-infobox-wrap .pp-infobox {
+  min-height: 300px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.c-feature-card .pp-infobox:hover {
+  box-shadow: 0px 15px 40px 0px rgba(17, 17, 17, 0.1);
+}
+
+.c-feature-card .pp-infobox .animated {
+  animation-name: inherit;
+  animation-duration: inherit;
+  animation-timing-function: inherit;
+  animation-iteration-count: inherit;
+  animation-direction: inherit;
+  animation-fill-mode: inherit;
+  animation-delay: inherit;
+}
+
+/* Feature card layout adjustments */
+.c-feature-card .pp-infobox-wrap .layout-3-wrapper,
+.c-feature-card .pp-infobox-wrap .layout-4-wrapper {
+  flex-direction: column;
+}
+
+.c-feature-card .pp-infobox-wrap .layout-1 .pp-heading-wrapper,
+.c-feature-card .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.c-feature-card .pp-infobox-wrap .layout-2 .pp-infobox-description,
+.c-feature-card .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Responsive equal height styles for feature cards */
+@media (max-width: 1200px) {
+  .fl-col-group-equal-height .c-feature-card.fl-visible-desktop {
+    display: none;
+  }
+
+  .fl-col-group-equal-height .c-feature-card.fl-visible-large {
+    display: flex;
+  }
+}
+
+@media (max-width: 1115px) {
+  .fl-col-group-equal-height .c-feature-card.fl-visible-desktop {
+    display: none;
+  }
+
+  .fl-col-group-equal-height .c-feature-card.fl-visible-large {
+    display: flex;
+  }
+
+  .fl-col-group-equal-height .c-feature-card.fl-visible-medium {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .fl-col-group-equal-height .c-feature-card.fl-visible-desktop {
+    display: none;
+  }
+
+  .fl-col-group-equal-height .c-feature-card.fl-visible-large {
+    display: none;
+  }
+
+  .fl-col-group-equal-height .c-feature-card.fl-visible-medium {
+    display: none;
+  }
+
+  .fl-col-group-equal-height .c-feature-card.fl-visible-mobile {
+    display: flex;
+  }
+
+  .c-feature-card .pp-infobox {
+    min-height: 250px;
+    padding: 40px 15px;
+  }
+
+  .c-feature-card .pp-infobox-wrap .pp-infobox {
+    min-height: 250px;
+    padding: 40px 15px;
+  }
+
+  .c-feature-card .pp-infobox-wrap .layout-2 .pp-infobox-description,
+  .c-feature-card .pp-infobox-wrap .layout-2 .pp-heading-wrapper {
+    width: 100%;
+  }
+
+  .c-feature-card .pp-infobox-wrap .layout-3-wrapper,
+  .c-feature-card .pp-infobox-wrap .layout-4-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Feature card typography responsive adjustments */
+@media (max-width: 860px) {
+  .c-feature-card .pp-infobox-title-wrapper .pp-infobox-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .fl-builder-content .c-feature-card .pp-infobox-image img {
+    max-width: 60px;
+  }
+}
+
+/* Additional feature card styling (consolidated from all FL-nodes) */
+.c-feature-card .pp-infobox-image {
+  margin-bottom: 25px;
+}
+
+.fl-builder-content .c-feature-card .pp-infobox-image img {
+  max-width: 80px;
+  width: auto;
+  height: auto;
+}
+
+.c-feature-card .pp-infobox:hover .pp-infobox-image img {
+  transform: scale(1.05);
+}
+
+.c-feature-card .pp-infobox-icon-inner span.pp-icon,
+.c-feature-card .pp-infobox-image img {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.c-feature-card .pp-infobox-wrap .layout-3 .pp-icon-wrapper {
+  margin-bottom: 15px;
+}
+
+.c-feature-card .pp-infobox-wrap .layout-4 .pp-icon-wrapper {
+  margin-right: 15px;
+}
+
+/* CTA Section - Semantic hook only */
+.c-cta-section {
+  /* Semantic class for FL-node-3izxuk4et0wy */
+  /* No styles - preserves existing FL-col-group layout */
+}
+
+/* Contact Section - Semantic hook only */
+.c-contact-section {
+  /* Semantic class for FL-node-niok604vy81f */
+  /* No styles - preserves existing FL-col-group layout */
+}
+
+/* Why Us Section Elements - Semantic hooks only */
+.c-why-us__column-group {
+  /* Semantic class for FL-node-e4o7jgbfk6iz */
+  /* No styles - preserves existing FL-col-group layout */
+}
+
+.c-why-us__content-column {
+  /* Semantic class for FL-node-upxq4sk52c3o */
+  /* No styles - preserves existing FL-col layout */
+}
+
+.c-why-us__eyebrow {
+  /* Semantic class for FL-node-yhi0uwsxjfr7 */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-why-us__eyebrow .fl-module-content .fl-rich-text,
+.c-why-us__eyebrow .fl-module-content .fl-rich-text * {
+  color: #1a8cff;
+}
+
+.c-why-us__eyebrow .fl-rich-text,
+.c-why-us__eyebrow .fl-rich-text *:not(b, strong) {
+  font-weight: 600;
+}
+
+.c-why-us__heading {
+  /* Semantic class for FL-node-hmwu2rp1s7e5 */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-why-us__heading > .fl-module-content {
+  margin-top: 30px;
+  margin-right: 250px;
+}
+
+@media (max-width: 860px) {
+  .c-why-us__heading.fl-module > .fl-module-content {
+    margin-top: 10px;
+    margin-right: 0px;
+  }
+}
+
+.c-why-us__description {
+  /* Semantic class for FL-node-9zbkom73fw82 */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-why-us__description > .fl-module-content {
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 860px) {
+  .c-why-us__description.fl-module > .fl-module-content {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+/* Feature Cards Grid - Semantic hooks only */
+.c-feature-cards__grid {
+  /* Semantic class for FL-node-lfzepx94ws8m */
+  /* No styles - preserves existing FL-col-group nested layout */
+}
+
+.c-feature-cards__item-column {
+  /* Consolidated styles from all feature card columns */
+}
+
+/* First column (FL-node-tr8ya9nhipmj) - 22% width */
+.c-feature-cards__item-column:nth-child(1) {
+  width: 22%;
+}
+
+.c-feature-cards__item-column:nth-child(1) > .fl-col-content {
+  margin-right: 0px;
+}
+
+/* Second column (FL-node-oq86d7v9jk2x) - 28% width */
+.c-feature-cards__item-column:nth-child(2) {
+  width: 28%;
+}
+
+.c-feature-cards__item-column:nth-child(2) > .fl-col-content {
+  margin-right: 25px;
+  margin-left: 50px;
+}
+
+/* Third column (FL-node-oljqy5bpn7fu) - 28% width */
+.c-feature-cards__item-column:nth-child(3) {
+  width: 28%;
+}
+
+.c-feature-cards__item-column:nth-child(3) > .fl-col-content {
+  margin-right: 50px;
+  margin-left: 25px;
+}
+
+/* Fourth column (FL-node-mtgai4swuk6v) - 22% width */
+.c-feature-cards__item-column:nth-child(4) {
+  width: 22%;
+}
+
+.c-feature-cards__item-column:nth-child(4) > .fl-col-content {
+  margin-right: 0px;
+}
+
+/* Mobile responsive for all feature card columns */
+@media (max-width: 860px) {
+  .fl-builder-content .c-feature-cards__item-column {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+
+  .c-feature-cards__item-column.fl-col > .fl-col-content {
+    padding-top: 30px;
+  }
+}
+
+/* CTA Section Elements - Semantic hooks only (Batch 2) */
+.c-cta-section__content-column {
+  /* Migrated styles from FL-node-04h8akisgvow */
+  color: #ffffff;
+  width: 100%;
+}
+
+.fl-builder-content .c-cta-section__content-column *:not(span):not(input):not(textarea):not(select):not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.fl-menu-mobile-toggle) {
+  color: #ffffff;
+}
+
+.fl-builder-content .c-cta-section__content-column a {
+  color: #ffffff;
+}
+
+.fl-builder-content .c-cta-section__content-column a:hover {
+  color: #ffffff;
+}
+
+.fl-builder-content .c-cta-section__content-column h1,
+.fl-builder-content .c-cta-section__content-column h2,
+.fl-builder-content .c-cta-section__content-column h3,
+.fl-builder-content .c-cta-section__content-column h4,
+.fl-builder-content .c-cta-section__content-column h5,
+.fl-builder-content .c-cta-section__content-column h6,
+.fl-builder-content .c-cta-section__content-column h1 a,
+.fl-builder-content .c-cta-section__content-column h2 a,
+.fl-builder-content .c-cta-section__content-column h3 a,
+.fl-builder-content .c-cta-section__content-column h4 a,
+.fl-builder-content .c-cta-section__content-column h5 a,
+.fl-builder-content .c-cta-section__content-column h6 a {
+  color: #ffffff;
+}
+
+.c-cta-section__content-column > .fl-col-content {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  margin-top: 130px;
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+}
+
+@media (max-width: 992px) {
+  .fl-builder-content .c-cta-section__content-column {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+}
+
+@media (max-width: 860px) {
+  .c-cta-section__content-column.fl-col > .fl-col-content {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-cta-section__content-column.fl-col > .fl-col-content {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+}
+
+.c-cta-section__heading {
+  /* Semantic class for FL-node-pmt8g6z4fiqj */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-cta-section__heading.fl-module-heading .fl-heading {
+  font-size: 50px;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .c-cta-section__heading.fl-module-heading .fl-heading {
+    font-size: 30px;
+  }
+}
+
+.c-cta-section__heading > .fl-module-content {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+@media (max-width: 1115px) {
+  .c-cta-section__heading.fl-module > .fl-module-content {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 860px) {
+  .c-cta-section__heading.fl-module > .fl-module-content {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+.c-cta-section__description {
+  /* Semantic class for FL-node-evzqukyis4x5 */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-cta-section__description .fl-rich-text,
+.c-cta-section__description .fl-rich-text *:not(b, strong) {
+  text-align: center;
+}
+
+.c-cta-section__description > .fl-module-content {
+  margin-top: 15px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
+@media (max-width: 1115px) {
+  .c-cta-section__description.fl-module > .fl-module-content {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 860px) {
+  .c-cta-section__description.fl-module > .fl-module-content {
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+.c-cta-section__button {
+  /* Migrated styles from FL-node-n0ztf7v9mspi */
+}
+
+.fl-builder-content .c-cta-section__button a.fl-button,
+.fl-builder-content .c-cta-section__button a.fl-button:visited {
+  background: #121212;
+  text-transform: none;
+  border: 1px solid #060606;
+}
+
+.fl-builder-content .c-cta-section__button a.fl-button:hover {
+  background-color: #24292D;
+  border: 1px solid #181d21;
+}
+
+.c-cta-section__button .fl-button-wrap {
+  text-align: center;
+}
+
+.c-cta-section__button > .fl-module-content {
+  margin-top: 40px;
+}
+
+@media (max-width: 860px) {
+  .c-cta-section__button.fl-module > .fl-module-content {
+    margin-top: 25px;
+  }
+}
+
+/* Contact Section Elements - Semantic hooks only (Batch 2) */
+.c-contact-section__content-column {
+  /* Migrated styles from FL-node-8x91uqrnkeb7 */
+  width: 100%;
+}
+
+.c-contact-section__content-column > .fl-col-content {
+  background-color: #F5F6F8;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 180px;
+  padding-top: 80px;
+  padding-right: 60px;
+  padding-bottom: 120px;
+  padding-left: 60px;
+}
+
+@media (max-width: 992px) {
+  .fl-builder-content .c-contact-section__content-column {
+    width: 100% !important;
+    max-width: none;
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .fl-builder-content .c-contact-section__content-column {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+
+  .c-contact-section__content-column.fl-col > .fl-col-content {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-contact-section__content-column.fl-col > .fl-col-content {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+}
+
+.c-contact-section__intro-text {
+  /* Semantic class for FL-node-rujwd9mzxche */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-contact-section__intro-text .fl-module-content .fl-rich-text,
+.c-contact-section__intro-text .fl-module-content .fl-rich-text * {
+  color: #1a8cff;
+}
+
+.c-contact-section__intro-text .fl-rich-text,
+.c-contact-section__intro-text .fl-rich-text *:not(b, strong) {
+  font-weight: 600;
+  text-align: center;
+}
+
+.c-contact-section__heading {
+  /* Semantic class for FL-node-fa7hjib92cpv */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-contact-section__heading.fl-module-heading .fl-heading {
+  text-align: center;
+}
+
+.c-contact-section__heading > .fl-module-content {
+  margin-top: 20px;
+}
+
+@media (max-width: 860px) {
+  .c-contact-section__heading.fl-module > .fl-module-content {
+    margin-top: 10px;
+  }
+}
+
+.c-contact-section__spacer {
+  /* Semantic class for FL-node-toa2hwegbp4q */
+  /* Copied styles from FL-node for safe migration */
+}
+
+.c-contact-section__spacer .pp-spacer-module {
+  height: 60px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1115px) {
+  .c-contact-section__spacer .pp-spacer-module {
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .c-contact-section__spacer .pp-spacer-module {
+    height: 15px;
+  }
+}
+
+.c-contact-section__description {
+  /* Migrated styles from FL-node-9hf5wet31z02 */
+}
+
+.fl-builder-content .c-contact-section__description .fl-rich-text,
+.fl-builder-content .c-contact-section__description .fl-rich-text *:not(b, strong) {
+  text-align: center;
+}
+
+.c-contact-section__description > .fl-module-content {
+  margin-top: 15px;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+
+@media (max-width: 1115px) {
+  .c-contact-section__description.fl-module > .fl-module-content {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 860px) {
+  .c-contact-section__description.fl-module > .fl-module-content {
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+/* ================================================
+   UTILITY CLASSES FOR FUTURE USE
+   Currently inactive to prevent conflicts
+   ================================================ */
+
+/* These can be activated once FL-builder classes are removed */
+/*
+.u-text-center { text-align: center; }
+.u-margin-top { margin-top: 2rem; }
+.u-padding { padding: 2rem; }
+*/
+
+/* ================================================
+   NOTES FOR SAFE MIGRATION
+   ================================================ */
+
+/*
+ * Migration Strategy:
+ * 1. Current: Dual-class approach (FL-builder + BEM classes)
+ * 2. Testing: Verify no visual changes with semantic classes
+ * 3. Future: Gradually move styles from FL-builder to BEM
+ * 4. Final: Remove FL-builder classes once BEM is complete
+ *
+ * The semantic BEM classes are now in place for:
+ * - .c-why-us (why us section) + internal elements
+ * - .c-feature-card (info boxes) + grid structure
+ * - .c-cta-section (CTA area) + internal elements [Batch 2]
+ * - .c-contact-section (contact form area) + internal elements [Batch 2]
+ *
+ * Batch 2 completed 8/9 FL-node classes:
+ * - CTA section: content column, heading, description, button
+ * - Contact section: content column, intro text, heading, spacer
+ * - Skipped: fl-node-9hf5wet31z02 (caused template parsing issues)
+ */

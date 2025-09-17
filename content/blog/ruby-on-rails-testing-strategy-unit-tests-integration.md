@@ -164,6 +164,8 @@ Unit tests are your first line of defense. They're fast, focused, and catch regr
 Models contain your business logic, so test them well:
 
 ### Comprehensive model testing
+
+```ruby
 # spec/models/user_spec.rb
 RSpec.describe User, type: :model do
   # Test associations
@@ -503,6 +505,8 @@ end
 ```
 
 > **💡 Tip:** Test edge cases and error conditions as thoroughly as the happy path. Your users will find these edge cases in production!
+
+---
 
 ## Integration testing strategies
 
@@ -860,6 +864,8 @@ RSpec.feature 'Post Management', type: :feature do
 end
 ```
 
+---
+
 ## End-to-end testing setup
 
 System tests ensure your entire application works together.
@@ -1012,6 +1018,8 @@ end
 
 > **⚠️ Warning:** System tests are slow and can be flaky. Use them sparingly for critical user journeys, and prefer faster integration tests for most scenarios.
 
+---
+
 ## Test-driven development workflow
 
 TDD helps you write better code and catch bugs early.
@@ -1100,6 +1108,7 @@ end
 
 Apply TDD to controller actions:
 
+```ruby
 # RED: Write failing controller test
 # spec/controllers/posts_controller_spec.rb
 RSpec.describe PostsController do
@@ -1211,6 +1220,9 @@ class PostsController < ApplicationController
     render :new, status: :unprocessable_entity
   end
 end
+```
+
+---
 
 ## CI/CD integration
 

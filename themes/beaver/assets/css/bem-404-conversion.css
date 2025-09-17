@@ -1,0 +1,65 @@
+/**
+ * BEM Conversion CSS for 404 Page
+ * Conservative dual-class approach: keeping fl-node classes while adding semantic BEM
+ * Phase 1: Add BEM classes alongside fl-node for safe transition
+ * Phase 2: Remove fl-node classes after validation (future task)
+ */
+
+/* Error Page Main Container */
+.error-page {
+  /* BEM class for main 404 page container */
+  /* Semantic: Main error page wrapper */
+}
+
+/* Error Page Hero Section */
+.error-page__hero {
+  /* Replaces: fl-node-cydnh3z89fkb */
+  /* Semantic: Main hero row with background layers */
+}
+
+.error-page__hero-content {
+  /* Replaces: fl-node-content (within hero) */
+  /* Semantic: Hero content wrapper */
+}
+
+/* Error Page Main Section (Two-Column Layout) */
+.error-page__main-section {
+  /* Replaces: fl-node-p0fg9w7ec5ut */
+  /* Semantic: Two-column layout for message and image */
+}
+
+/* Error Page Message Column */
+.error-page__message-col {
+  /* Replaces: fl-node-0ptma2d86ugo */
+  /* Semantic: Left column with error message */
+}
+
+/* Error Page Image Column */
+.error-page__image-col {
+  /* Replaces: fl-node-1amo8q937zkf */
+  /* Semantic: Right column with 404 illustration */
+}
+
+/* Error Page Spacer Section */
+.error-page__spacer-section {
+  /* Replaces: fl-node-wngd074viayh */
+  /* Semantic: Spacing section between hero and CTA */
+}
+
+/* Error Page CTA Section */
+.error-page__cta-section {
+  /* Replaces: fl-node-l0ph4ozc7qgv */
+  /* Semantic: Call-to-action section */
+}
+
+/* BEM Mapping Reference for 404 Page
+ * This mapping shows the fl-node to BEM class conversion for dual-class approach:
+ *
+ * fl-page-content → error-page (main container)
+ * fl-node-cydnh3z89fkb → error-page__hero (hero section)
+ * fl-node-p0fg9w7ec5ut → error-page__main-section (two-column layout)
+ * fl-node-0ptma2d86ugo → error-page__message-col (message column)
+ * fl-node-1amo8q937zkf → error-page__image-col (image column)
+ * fl-node-wngd074viayh → error-page__spacer-section (spacer section)
+ * fl-node-l0ph4ozc7qgv → error-page__cta-section (CTA section)
+ */

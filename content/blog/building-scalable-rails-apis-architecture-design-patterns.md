@@ -23,6 +23,8 @@ Here's the thing: we've built Rails APIs that handle millions of requests daily 
 
 Let's walk through the patterns and practices that'll help you build APIs that can grow with your business.
 
+---
+
 ## API architecture best practices
 
 Before we dive into code, let's establish the foundation for a scalable Rails API.
@@ -117,6 +119,8 @@ class Api::V1::BaseController < ActionController::API
 end
 ```
 
+---
+
 ## Authentication and authorization
 
 Secure your API without sacrificing performance.
@@ -167,6 +171,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, length: { minimum: 6 }
 end
+
+---
 
 ### Implement role-based authorization
 
@@ -270,6 +276,8 @@ class Api::V1::PostsController < Api::V1::BaseController
 
   attr_reader :current_user
 end
+
+---
 
 ## Serialization patterns
 
@@ -396,6 +404,8 @@ class Api::V1::BaseController < ActionController::API
 end
 ```
 
+---
+
 ## Rate limiting and throttling
 
 Protect your API from abuse and ensure fair usage.
@@ -486,7 +496,6 @@ class RateLimiter
   end
 end
 
-```ruby
 # config/application.rb
 config.middleware.use RateLimiter, requests_per_minute: 100
 ```
@@ -550,6 +559,8 @@ class TieredRateLimiter
   end
 end
 ```
+
+---
 
 ## API versioning strategies
 
@@ -653,6 +664,8 @@ class Api::V1::PostsController < Api::V1::BaseController
   end
 end
 ```
+
+---
 
 ## Testing API endpoints
 
@@ -783,6 +796,8 @@ end
 
 > **💡 Tip:** Test your rate limiting, authentication, and error handling as thoroughly as your happy path. These edge cases often cause production issues.
 
+---
+
 ## Monitoring and observability
 
 Know what's happening in production.
@@ -869,6 +884,8 @@ class Api::V1::HealthController < Api::V1::BaseController
   end
 end
 ```
+
+---
 
 ## Ready to build your scalable Rails API?
 

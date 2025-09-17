@@ -1,8 +1,8 @@
 {{ define "header" }}
 {{ partial "header/critical/careers.html" . }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+{{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $staticCareersCSS := slice
-(resources.Get "css/careers.css") (resources.Get "css/3086-layout2.css") (resources.Get "css/services-layout.css") (resources.Get "css/homepage.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") }}
+(resources.Get "css/careers.css") (resources.Get "css/fl-careers-layout.css") (resources.Get "css/services-layout.css") (resources.Get "css/homepage.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") }}
 {{ partial "assets/bundle.html" (dict "cssFiles" (union $staticCareersCSS (slice $dynamicCSS586)) "page" "careers") }}
 {{ end }}
 

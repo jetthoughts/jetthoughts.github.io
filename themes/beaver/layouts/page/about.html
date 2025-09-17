@@ -1,8 +1,9 @@
 {{ define "header" }}
   {{ partial "header/critical/about-us.html" . }}
-  {{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+  {{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
   {{- $aboutResources := slice
-    (resources.Get "css/701-layout.css")
+    (resources.Get "css/components.css")
+    (resources.Get "css/fl-about-layout.css")
     (resources.Get "css/theme-main.css")
     $dynamicCSS586
     (resources.Get "css/services-layout.css")
