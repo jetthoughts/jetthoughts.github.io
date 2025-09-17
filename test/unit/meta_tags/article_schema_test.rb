@@ -1,6 +1,6 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
-class ArticleSchemaTest < BasePageTest
+class ArticleSchemaTest < BasePageTestCase
   def test_blog_post_has_article_schema
     doc = parse_html_file("blog/devtools-for-ai-agents/index.html")
     schemas = find_schemas_by_type(doc, "Article")

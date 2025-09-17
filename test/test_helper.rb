@@ -17,6 +17,5 @@ require "tmpdir"
 require "pathname"
 require "faraday"
 
-# NOTE: Reduce test time on retry
 require "sync/retryable"
 Retryable::RETRY_CONFIG[:base_delay] = 0
