@@ -1,6 +1,6 @@
-require_relative "base_page_test"
+require "base_page_test_case"
 
-class TemplateCleanupValidationTest < BasePageTest
+class TemplateCleanupValidationTest < BasePageTestCase
   # Comprehensive validation of all 29 templates after cleanup
   # Ensures template attribute removal doesn't break Hugo site functionality
 

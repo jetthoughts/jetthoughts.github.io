@@ -1,8 +1,7 @@
-require_relative "base_page_test"
+require "base_page_test_case"
 
-class AssetUrlValidationTest < BasePageTest
+class AssetUrlValidationTest < BasePageTestCase
   DEFAULT_TEST_HTML_FILE = '404.html'
-
 
   def test_svg_icons_use_relative_urls_with_fingerprinting
     # Test that Hugo properly generates fingerprinted asset URLs

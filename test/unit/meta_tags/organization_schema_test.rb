@@ -1,6 +1,6 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
-class OrganizationSchemaTest < BasePageTest
+class OrganizationSchemaTest < BasePageTestCase
   def test_organization_schema_exists
     doc = parse_html_file("about-us/index.html")
     schemas = find_schemas_by_type(doc, "Organization")

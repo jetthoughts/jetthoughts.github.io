@@ -1,8 +1,8 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 require "json"
 
 # ARCHITECTURAL: Inherit from refactored BaseSchemaTest with strict assertions
-class SeoSchemaTest < BasePageTest
+class SeoSchemaTest < BasePageTestCase
   # Unit tests for SEO schema validation and structured data
   # Tests rendered HTML output from public-test directory (no server required)
 
