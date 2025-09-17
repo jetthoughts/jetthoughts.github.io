@@ -1,5 +1,5 @@
 # JetThoughts Content Writing Style Guide
-*Adapted from thoughtbot AI writing principles*
+*Based on proven technical content writing best practices*
 
 ## Core voice and personality
 
@@ -64,7 +64,7 @@ Replace formal language with accessible alternatives:
 
 ## Hugo-specific implementation
 
-### Using markdown alternatives instead of thoughtbot shortcodes
+### Using markdown alternatives for content structure
 ```markdown
 ## Database queries running slow?
 Let's optimize them together.
@@ -81,7 +81,7 @@ Consider next steps and explore related posts for deeper learning.
 ```
 
 ### Style validation approach
-Content should be manually reviewed against this style guide to ensure compliance with thoughtbot writing principles. Focus on voice, tone, and readability rather than automated validation.
+Content should be manually reviewed against this style guide to ensure compliance with JetThoughts writing principles. Focus on voice, tone, and readability rather than automated validation.
 
 ## Quality checklist
 
@@ -96,7 +96,7 @@ Before publishing any content:
 
 ## Examples
 
-### Good example (thoughtbot style):
+### Good example (JetThoughts style):
 > "Have you ever wondered why your Rails app slows down over time? We've been there too. Let's explore three simple techniques that'll help you identify and fix performance bottlenecks."
 
 ### Avoid (overly formal):
@@ -126,8 +126,8 @@ Before publishing any content:
 
 ## Resources
 
-- **Original thoughtbot guide**: `/Users/pftg/Downloads/thoughtbot-ai-writing-guide.md`
-- **Hugo shortcodes**: `themes/beaver/layouts/shortcodes/thoughtbot-*.html`
+- **JetThoughts style guide**: Based on 18+ years of technical content expertise
+- **Hugo implementation**: Standard markdown with Hugo shortcodes and partials
 
 ## Final notes
 
