@@ -1,24 +1,45 @@
 name: unit-tests
 
 on:
+  push:
+    paths-ignore:
+      - 'public/**'
+      - 'resources/**'
+  pull_request:
   workflow_dispatch:
 
 jobs:
+  compile:
+    uses: ./.github/workflows/_hugo_build.yml
+    with:
+      environment: 'test'
+      destination: '_dest/public-test-build'
+      artifact_name: 'hugo-public-test'
+      hugo_version: '0.149.1'
+
   unit:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
+    needs: compile
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Download compiled site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hugo-public-test
+          path: _dest/public-test-from-artifact
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4'
+          ruby-version: '3.4.5'
           bundler-cache: true
 
       - name: Run unit tests
         env:
           PRECOMPILED_ASSETS: '1'
           TEST_SERVER_PORT: '1314'
+          HUGO_DEFAULT_PATH: '_dest/public-test-from-artifact'
         run: bundle exec rake test TEST='test/unit/**/*_test.rb'

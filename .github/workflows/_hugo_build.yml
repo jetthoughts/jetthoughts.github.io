@@ -1,0 +1,135 @@
+# Reusable Hugo build workflow
+# Provides a compiled site artifact for callers (tests, deployers).
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'Hugo environment (e.g., production, test)'
+        required: false
+        default: 'test'
+        type: string
+      baseURL:
+        description: 'Base URL to use (optional)'
+        required: false
+        type: string
+      destination:
+        description: 'Destination directory for build output'
+        required: false
+        default: '_dest/public-test-build'
+        type: string
+      artifact_name:
+        description: 'Name of uploaded build artifact'
+        required: false
+        default: 'hugo-dist'
+        type: string
+      hugo_version:
+        description: 'Hugo version to install'
+        required: false
+        default: '0.149.1'
+        type: string
+    outputs:
+      dest_dir:
+        description: 'Path to compiled output directory'
+        value: ${{ jobs.build.outputs.dest_dir }}
+
+env:
+  HUGO_CACHEDIR: /tmp/hugo_cache
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      dest_dir: ${{ steps.out.outputs.dest_dir }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ inputs.hugo_version }}
+          extended: true
+
+      # Tier 1: Dependencies cache (changes infrequently)
+      - uses: actions/cache@v4
+        name: Cache dependencies
+        with:
+          path: |
+            ~/.bun/install/cache
+            node_modules
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
+
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+
+      # Tier 2: Hugo build cache (changes with any build-affecting file)
+      - uses: actions/cache@v4
+        name: Cache Hugo build resources
+        with:
+          path: |
+            ${{ env.HUGO_CACHEDIR }}
+            resources/_gen
+          key: ${{ runner.os }}-hugo-build-${{ hashFiles('hugo.toml', 'hugo.dev.toml', 'postcss.config.js', 'package.json', 'themes/**', 'layouts/**') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-build-
+            ${{ runner.os }}-hugo-
+
+      # Tier 3: Content and template cache (comprehensive file tracking)
+      - uses: actions/cache@v4
+        name: Cache Hugo content and assets
+        with:
+          path: |
+            public
+            hugo_stats.json
+          key: ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**', 'assets/**', 'static/**', 'layouts/**', 'themes/**/*.html', 'themes/**/*.scss', 'themes/**/*.js', 'hugo.toml', 'hugo.dev.toml', 'postcss.config.js') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**', 'assets/**', 'static/**') }}
+            ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**') }}
+            ${{ runner.os }}-hugo-content-
+
+      - name: Build with Hugo
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST_DIR="${{ inputs.destination }}"
+          ENVIRONMENT="${{ inputs.environment }}"
+          BASE_URL="${{ inputs.baseURL }}"
+          export PATH="./node_modules/.bin:app/bin:$PATH"
+
+          # Construct flags per environment
+          FLAGS=("--minify" "--gc" "--environment" "$ENVIRONMENT" "--destination" "$DEST_DIR")
+
+          if [[ "$ENVIRONMENT" == "production" ]]; then
+            FLAGS+=("--cleanDestinationDir")
+          else
+            FLAGS+=("--buildDrafts" "--logLevel" "warn" "--noBuildLock" "--enableGitInfo=false" "--quiet")
+          fi
+
+          if [[ -n "$BASE_URL" ]]; then
+            FLAGS+=("--baseURL" "$BASE_URL")
+          fi
+
+          echo "+ hugo ${FLAGS[*]}"
+          hugo "${FLAGS[@]}"
+
+          echo "DEST_DIR=$DEST_DIR" >> "$GITHUB_ENV"
+
+      - name: Set outputs
+        id: out
+        run: echo "dest_dir=${{ env.DEST_DIR }}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload compiled site (standard artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: ${{ env.DEST_DIR }}
+          if-no-files-found: error
+          retention-days: 3
+

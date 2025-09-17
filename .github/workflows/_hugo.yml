@@ -7,78 +7,27 @@ env:
   HUGO_ENVIRONMENT: production
   HUGO_CACHEDIR: /tmp/hugo_cache
 
-
 jobs:
-  build:
-    timeout-minutes: 15
-    outputs:
-      page_url: ${{ steps.pages.outputs.url }}
+  compile:
+    uses: ./.github/workflows/_hugo_build.yml
+    with:
+      environment: 'production'
+      baseURL: 'https://jetthoughts.com/'
+      destination: 'public'
+      artifact_name: 'hugo-pages-dist'
+      hugo_version: '0.149.1'
+
+  package-pages:
     runs-on: ubuntu-latest
+    needs: compile
     steps:
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
         with:
-          hugo-version: 0.149.1
-          extended: true
+          name: hugo-pages-dist
+          path: public
 
-      - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
-      # Tier 1: Dependencies cache (changes infrequently)
-      - uses: actions/cache@v4
-        name: Cache dependencies
-        with:
-          path: |
-            ~/.bun/install/cache
-            node_modules
-          key: ${{ runner.os }}-deps-${{ hashFiles('**/bun.lockb', '**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-deps-
-
-      - uses: oven-sh/setup-bun@v2
-      - run: bun install
-
-      # Tier 2: Hugo build cache (changes with any build-affecting file)
-      - uses: actions/cache@v4
-        name: Cache Hugo build resources
-        with:
-          path: |
-            ${{ env.HUGO_CACHEDIR }}
-            resources/_gen
-          key: ${{ runner.os }}-hugo-build-${{ hashFiles('hugo.toml', 'hugo.dev.toml', 'postcss.config.js', 'package.json', 'themes/**', 'layouts/**') }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-build-
-            ${{ runner.os }}-hugo-
-
-      # Tier 3: Content and template cache (comprehensive file tracking)
-      - uses: actions/cache@v4
-        name: Cache Hugo content and assets
-        with:
-          path: |
-            public
-            hugo_stats.json
-          key: ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**', 'assets/**', 'static/**', 'layouts/**', 'themes/**/*.html', 'themes/**/*.scss', 'themes/**/*.js', 'hugo.toml', 'hugo.dev.toml', 'postcss.config.js') }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**', 'assets/**', 'static/**') }}
-            ${{ runner.os }}-hugo-content-${{ hashFiles('content/**', 'data/**') }}
-            ${{ runner.os }}-hugo-content-
-
-      - name: Build with Hugo
-        run: |
-          PATH="./node_modules/.bin:app/bin:$PATH" hugo \
-            --minify \
-            --gc \
-            --cleanDestinationDir \
-            --baseURL "https://jetthoughts.com/" \
-            --environment production
-
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
@@ -87,11 +36,15 @@ jobs:
     timeout-minutes: 15
     environment:
       name: github-pages
-      url: ${{ needs.build.outputs.page_url }}
+      url: ${{ steps.pages.outputs.url }}
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    needs: build
+    needs: package-pages
     steps:
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
