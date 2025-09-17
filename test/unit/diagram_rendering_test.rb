@@ -1,4 +1,4 @@
-require_relative "base_page_test"
+require "base_page_test_case"
 
 class DiagramRenderingTest < BasePageTestCase
   # Unit tests for diagram rendering functionality (Mermaid support)

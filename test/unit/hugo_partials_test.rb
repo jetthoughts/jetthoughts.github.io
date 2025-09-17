@@ -1,4 +1,4 @@
-require_relative "base_page_test"
+require "base_page_test_case"
 
 class HugoPartialsTest < BasePageTestCase
   # Unit tests for Hugo partial templates functionality and rendering

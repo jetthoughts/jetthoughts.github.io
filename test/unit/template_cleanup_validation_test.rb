@@ -1,4 +1,4 @@
-require_relative "base_page_test"
+require "base_page_test_case"
 
 class TemplateCleanupValidationTest < BasePageTestCase
   # Comprehensive validation of all 29 templates after cleanup

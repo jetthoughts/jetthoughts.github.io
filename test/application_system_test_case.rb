@@ -7,9 +7,9 @@ require "capybara/dsl"
 require "rack"
 require "puma"
 
-require_relative "support/setup_capybara"
-require_relative "support/setup_snap_diff"
-require_relative "support/hugo_helpers"
+require "support/setup_capybara"
+require "support/setup_snap_diff"
+require "support/hugo_helpers"
 
 # Support both precompiled assets (fixed port) and dynamic port scenarios
 if ENV["TEST_SERVER_PORT"]

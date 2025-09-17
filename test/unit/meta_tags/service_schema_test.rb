@@ -1,4 +1,4 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
 class ServiceSchemaTest < BasePageTestCase
   def test_service_page_has_service_schema

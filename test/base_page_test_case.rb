@@ -2,8 +2,8 @@ require "minitest/autorun"
 require "nokogiri"
 require "json"
 
-require_relative "../support/hugo_helpers"
-# Build Hugo without baseURL for unit tests (they don't need specific ports)
+require "support/hugo_helpers"
+
 Hugo.new.precompile(port: nil)
 
 class BasePageTestCase < Minitest::Test

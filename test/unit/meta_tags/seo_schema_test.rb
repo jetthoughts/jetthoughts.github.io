@@ -1,4 +1,4 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 require "json"
 
 # ARCHITECTURAL: Inherit from refactored BaseSchemaTest with strict assertions

@@ -1,4 +1,4 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
 class ArticleSchemaTest < BasePageTestCase
   def test_blog_post_has_article_schema

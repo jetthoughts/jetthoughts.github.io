@@ -1,4 +1,4 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
 class MetaTagsTest < BasePageTestCase
   # Unit tests for meta tags functionality and SEO validation

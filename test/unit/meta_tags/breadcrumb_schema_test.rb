@@ -1,4 +1,4 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
 class BreadcrumbSchemaTest < BasePageTestCase
   def test_blog_post_has_breadcrumb_list_schema

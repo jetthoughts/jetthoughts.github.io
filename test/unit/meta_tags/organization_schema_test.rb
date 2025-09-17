@@ -1,4 +1,4 @@
-require_relative "../base_page_test"
+require "base_page_test_case"
 
 class OrganizationSchemaTest < BasePageTestCase
   def test_organization_schema_exists

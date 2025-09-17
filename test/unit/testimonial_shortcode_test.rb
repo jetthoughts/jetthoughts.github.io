@@ -1,4 +1,4 @@
-require_relative "base_page_test"
+require "base_page_test_case"
 
 class TestimonialShortcodeTest < BasePageTestCase
   # Unit tests for testimonial shortcode functionality and rendering
