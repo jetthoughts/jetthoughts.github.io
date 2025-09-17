@@ -8,13 +8,14 @@
     (resources.Get "css/companies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/homepage.css")
-    (resources.Get "css/590-layout.css")
+    (resources.Get "css/fl-homepage-layout.css")
+    (resources.Get "css/bem-home-page-minimal.css")
     (resources.Get "css/theme-main.css")
     (resources.Get "css/style.css")
     (resources.Get "css/services-layout.css")
     (resources.Get "css/technologies.css")
-    (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
-    (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/cta-backgrounds.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
   }}
 
@@ -42,7 +43,7 @@
                 {{ partial "homepage/stats.html" . }}
                 {{ partial "homepage/services.html" . }}
                 <div
-                  class="fl-row fl-row-full-width fl-row-bg-photo fl-node-pym08gf9wr2o fl-row-default-height fl-row-align-center fl-row-has-layers"
+                  class="fl-row fl-row-full-width fl-row-bg-photo c-why-us fl-row-default-height fl-row-align-center fl-row-has-layers"
                   data-node="pym08gf9wr2o">
                   <div class="fl-row-content-wrap">
                     <div
@@ -53,14 +54,14 @@
                       id="why-us"
                       class="fl-row-content fl-row-fixed-width fl-node-content">
                       <div
-                        class="fl-col-group fl-node-e4o7jgbfk6iz fl-col-group-custom-width"
+                        class="fl-col-group c-why-us__column-group fl-col-group-custom-width"
                         data-node="e4o7jgbfk6iz">
                         <div
-                          class="fl-col fl-node-upxq4sk52c3o fl-col-small-custom-width fl-col-has-cols"
+                          class="fl-col c-why-us__content-column fl-col-small-custom-width fl-col-has-cols"
                           data-node="upxq4sk52c3o">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-rich-text fl-node-yhi0uwsxjfr7"
+                              class="fl-module fl-module-rich-text c-why-us__eyebrow"
                               data-node="yhi0uwsxjfr7">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -69,7 +70,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-heading fl-node-hmwu2rp1s7e5"
+                              class="fl-module fl-module-heading c-why-us__heading"
                               data-node="hmwu2rp1s7e5">
                               <div class="fl-module-content fl-node-content">
                                 <h2 class="fl-heading">
@@ -81,7 +82,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-9zbkom73fw82"
+                              class="fl-module fl-module-rich-text c-why-us__description"
                               data-node="9zbkom73fw82">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -93,14 +94,14 @@
                               </div>
                             </div>
                             <div
-                              class="fl-col-group fl-node-lfzepx94ws8m fl-col-group-nested fl-col-group-custom-width fl-col-group-equal-height"
+                              class="fl-col-group c-feature-cards__grid fl-col-group-nested fl-col-group-custom-width fl-col-group-equal-height"
                               data-node="lfzepx94ws8m">
                               <div
-                                class="fl-col fl-node-tr8ya9nhipmj fl-col-small fl-col-small-custom-width"
+                                class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="tr8ya9nhipmj">
                                 <div class="fl-col-content fl-node-content">
                                   <div
-                                    class="fl-module fl-module-pp-infobox fl-node-5oyrwk91ufhg"
+                                    class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="5oyrwk91ufhg">
                                     <div
                                       class="fl-module-content fl-node-content">
@@ -136,11 +137,11 @@
                                 </div>
                               </div>
                               <div
-                                class="fl-col fl-node-oq86d7v9jk2x fl-col-small fl-col-small-custom-width"
+                                class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="oq86d7v9jk2x">
                                 <div class="fl-col-content fl-node-content">
                                   <div
-                                    class="fl-module fl-module-pp-infobox fl-node-5b7e9qxr14h8"
+                                    class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="5b7e9qxr14h8">
                                     <div
                                       class="fl-module-content fl-node-content">
@@ -176,11 +177,11 @@
                                 </div>
                               </div>
                               <div
-                                class="fl-col fl-node-oljqy5bpn7fu fl-col-small fl-col-small-custom-width"
+                                class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="oljqy5bpn7fu">
                                 <div class="fl-col-content fl-node-content">
                                   <div
-                                    class="fl-module fl-module-pp-infobox fl-node-gyioc8tzs3nr"
+                                    class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="gyioc8tzs3nr">
                                     <div
                                       class="fl-module-content fl-node-content">
@@ -216,11 +217,11 @@
                                 </div>
                               </div>
                               <div
-                                class="fl-col fl-node-mtgai4swuk6v fl-col-small fl-col-small-custom-width"
+                                class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="mtgai4swuk6v">
                                 <div class="fl-col-content fl-node-content">
                                   <div
-                                    class="fl-module fl-module-pp-infobox fl-node-woz0n3a5ep9x"
+                                    class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="woz0n3a5ep9x">
                                     <div
                                       class="fl-module-content fl-node-content">
@@ -261,15 +262,15 @@
                       </div>
                       <div
                         id="cta"
-                        class="fl-col-group fl-node-3izxuk4et0wy fl-col-group-custom-width"
+                        class="fl-col-group c-cta-section fl-col-group-custom-width"
                         data-node="3izxuk4et0wy"
                         style="margin-bottom: 130px">
                         <div
-                          class="fl-col fl-node-04h8akisgvow fl-col-small-custom-width"
+                          class="fl-col c-cta-section__content-column fl-col-small-custom-width"
                           data-node="04h8akisgvow">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-heading fl-node-pmt8g6z4fiqj"
+                              class="fl-module fl-module-heading c-cta-section__heading"
                               data-node="pmt8g6z4fiqj">
                               <div class="fl-module-content fl-node-content">
                                 <h2 class="fl-heading">
@@ -281,7 +282,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-evzqukyis4x5"
+                              class="fl-module fl-module-rich-text c-cta-section__description"
                               data-node="evzqukyis4x5">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -294,7 +295,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-button fl-node-n0ztf7v9mspi"
+                              class="fl-module fl-module-button c-cta-section__button"
                               data-node="n0ztf7v9mspi">
                               <div class="fl-module-content fl-node-content">
                                 <div
@@ -319,20 +320,20 @@
                       {{ partialCached "page/testimonials.html" . (printf "testimonials-%s-%s" .Site.Language.Lang .RelPermalink) }}
                       <div
                         id="cta-contact_us"
-                        class="fl-col-group fl-node-niok604vy81f fl-col-group-custom-width"
+                        class="fl-col-group c-contact-section fl-col-group-custom-width"
                         data-node="niok604vy81f">
                         <div
-                          class="fl-col fl-node-8x91uqrnkeb7 fl-col-small-custom-width fl-col-has-cols blue-border"
+                          class="fl-col c-contact-section__content-column fl-col-small-custom-width fl-col-has-cols blue-border"
                           data-node="8x91uqrnkeb7">
                           <div class="fl-col-content fl-node-content">
                             <div
-                              class="fl-module fl-module-rich-text fl-node-rujwd9mzxche"
+                              class="fl-module fl-module-rich-text c-contact-section__intro-text"
                               data-node="rujwd9mzxche">
                               <div
                                 class="fl-module-content fl-node-content"></div>
                             </div>
                             <div
-                              class="fl-module fl-module-heading fl-node-fa7hjib92cpv"
+                              class="fl-module fl-module-heading c-contact-section__heading"
                               data-node="fa7hjib92cpv">
                               <div class="fl-module-content fl-node-content">
                                 <h2 class="fl-heading">
@@ -343,7 +344,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-rich-text fl-node-9hf5wet31z02"
+                              class="fl-module fl-module-rich-text c-contact-section__description"
                               data-node="9hf5wet31z02">
                               <div class="fl-module-content fl-node-content">
                                 <div class="fl-rich-text">
@@ -356,7 +357,7 @@
                               </div>
                             </div>
                             <div
-                              class="fl-module fl-module-pp-spacer fl-node-toa2hwegbp4q fl-visible-desktop fl-visible-large fl-visible-medium"
+                              class="fl-module fl-module-pp-spacer c-contact-section__spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                               data-node="toa2hwegbp4q">
                               <div class="fl-module-content fl-node-content">
                                 <div class="pp-spacer-module"></div>

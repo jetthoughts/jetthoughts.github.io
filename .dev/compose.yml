@@ -55,12 +55,11 @@ services:
       - bundle:/opt/bundle
       - hugo_cache_dtest:/tmp/hugo_cache_dtest
     environment:
+      HUGO_PUBLIC_DIR: "_dest/public-dtest"
       HUGO_DEFAULT_PATH: "_dest/public-dtest"
       HUGO_CACHEDIR: "/tmp/hugo_cache_dtest"
       HUGO_ENABLEGITINFO: "false"
-      TEST_QUIET: "true"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
-      PARALLEL_TEST_PROCESSORS: 4
       RUBY_THREAD_VM_STACK_SIZE: 1048576
     mem_limit: 2g
     cpus: '4.0'

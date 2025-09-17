@@ -42,6 +42,8 @@ Rails 7 isn't just another version bump. It's a significant leap forward that br
 
 The best part? Most Rails 6 apps can upgrade with minimal code changes. Let's dive into how you can make it happen.
 
+---
+
 ## Pre-upgrade preparation checklist
 
 Before we touch any code, let's make sure you're set up for success. This preparation phase will save you hours of debugging later.
@@ -107,6 +109,8 @@ mysqldump -u username -p your_database_name > backup_before_rails7.sql
 
 # Don't forget to test your backup!
 ```
+
+---
 
 ## Step-by-step migration process
 
@@ -219,6 +223,8 @@ resources :posts, defaults: { format: :json }
 get '/admin/*path', to: 'admin#show', constraints: ->(req) { req.subdomain == 'admin' }
 ```
 
+---
+
 ## Handling breaking changes
 
 Most Rails 6 apps will upgrade smoothly, but there are a few breaking changes to watch for.
@@ -266,6 +272,8 @@ sanitize(user_content)
 # Be explicit about allowed tags if needed
 sanitize(user_content, tags: %w[p br strong em])
 ```
+
+---
 
 ## Testing your upgraded app
 
@@ -320,6 +328,8 @@ curl -w "@curl-format.txt" -o /dev/null -s "http://localhost:3000/"
 #     ----------\n
 #     time_total:       %{time_total}\n
 ```
+
+---
 
 ## Post-upgrade optimization tips
 
@@ -376,6 +386,8 @@ Rails.application.config.content_security_policy do |policy|
 end
 ```
 
+---
+
 ## What to do if something breaks
 
 Even with careful preparation, you might run into issues. Here's how to troubleshoot:
@@ -403,6 +415,8 @@ If you're stuck:
 3. Ask on Stack Overflow with the `ruby-on-rails` and `rails-7` tags
 
 Remember: if you're having trouble, you can always revert to your previous Rails version while you troubleshoot. That's why we're working on a feature branch!
+
+---
 
 ## Ready to upgrade with confidence?
 

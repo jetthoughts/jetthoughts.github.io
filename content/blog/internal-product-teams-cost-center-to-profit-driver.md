@@ -17,6 +17,8 @@ If you're leading internal products at a large corporation, you've probably been
 
 Here's what we've learned after helping internal teams at Fortune 500 companies prove their worth: your team isn't actually a cost center. You're just measuring the wrong things.
 
+---
+
 ## The perception problem that's killing internal teams
 
 When executives look at internal product teams, they see budget allocation without clear returns. It's not their fault. Traditional business metrics don't capture the real value these teams create.
@@ -44,6 +46,8 @@ We recently worked with a Fortune 500 company whose CFO was ready to eliminate t
 
 The problem wasn't performance—it was perception.
 
+---
+
 ## The hidden value your team already creates
 
 Before we dive into measurement frameworks, let's identify the value that's already there but invisible to traditional accounting.
@@ -70,6 +74,8 @@ The challenge is attribution. How do you prove that your internal CRM enhancemen
 Security frameworks, compliance tools, and monitoring systems prevent catastrophic failures. The value of not having a data breach is enormous, but it's hard to quantify prevention.
 
 We worked with a client whose internal security monitoring platform detected and prevented 47 potential security incidents in one year. The estimated cost of just one successful breach would have been $2.3M in fines, remediation, and lost business.
+
+---
 
 ## The ROI measurement framework that changes everything
 
@@ -169,6 +175,8 @@ For our Fortune 500 client, this looked like:
 - Development costs: $3M annually
 - **Net TEI: $1.7M (57% ROI)**
 
+---
+
 ## Stakeholder communication that wins budget battles
 
 The best ROI framework in the world won't help if you can't communicate value to non-technical executives. Here's how to translate technical impact into business language.
@@ -217,6 +225,8 @@ Document specific examples of business value creation. Instead of general statem
 **Strong Example:**
 "The customer service platform we built reduced average ticket resolution time from 4.5 hours to 1.8 hours. For our 200 daily tickets, this saves 540 hours monthly, worth $32K in labor costs. Customer satisfaction scores increased from 3.2 to 4.1, and we've seen a 28% reduction in escalated cases."
 
+---
+
 ## Case study: How a 12-person team created $5M in value
 
 Let's look at a real example of transformation. A mid-size financial services company had a 12-person internal development team that was constantly defending their budget.
@@ -255,6 +265,8 @@ We helped them implement a comprehensive value measurement framework and stakeho
 Instead of facing budget cuts, the team received approval for 3 additional developers and a $400K platform modernization project.
 
 The key wasn't just measuring value—it was communicating that value in terms executives understood and cared about.
+
+---
 
 ## Practical implementation: Your 90-day transformation plan
 
@@ -311,6 +323,8 @@ gantt
     Optimization Planning    :c2, 2025-03-27, 14d
 ```
 
+---
+
 ## Common pitfalls and how to avoid them
 
 We've seen internal product leaders make the same mistakes repeatedly. Here's how to avoid them:
@@ -326,6 +340,8 @@ We've seen internal product leaders make the same mistakes repeatedly. Here's ho
 
 **Pitfall 4: Measuring value only during budget season**
 *Solution:* Establish continuous value measurement and regular communication. Quarterly business reviews work better than annual budget justifications.
+
+---
 
 ## Building long-term strategic value
 
@@ -356,6 +372,8 @@ Beyond CRM improvements, collaborate on predictive analytics that help identify 
 
 **Operations Partnership Example:**
 Move beyond process automation to intelligent operations platforms that adapt to changing business conditions. The result might be 40% better resource utilization.
+
+---
 
 ## Your transformation starts now
 
