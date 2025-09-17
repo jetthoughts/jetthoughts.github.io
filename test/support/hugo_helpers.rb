@@ -3,8 +3,10 @@ require 'pathname'
 class Hugo
   attr_reader :destination
 
-  def initialize(path: ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test"))
-    @destination = Pathname.new(path).expand_path
+  def initialize(path: nil, port: nil)
+    base_path = path || ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test")
+    @destination = build_destination_path(base_path, port)
+    @port = port
   end
 
   HUGO_OPTIONS = %w[
@@ -18,25 +20,19 @@ class Hugo
     --quiet
   ].freeze
 
-  def precompiled?
-    ENV["PRECOMPILED_ASSETS"]
-  end
-
   def precompile(port:)
-    # Skip Hugo execution in Docker environment - use precompiled assets
-    return self if precompiled?
+    return self if ENV["PRECOMPILED_ASSETS"]
+
+    port ||= @port
+
+    base_url_option = port ? "--baseURL=\"http://localhost:#{port}\"" : ""
 
     options = HUGO_OPTIONS.join(" ")
-    # Only add baseURL if port is specified (for system tests)
-    base_url_option = port ? "--baseURL=\"http://localhost:#{port}\"" : ""
     hugo_build_cmd = "hugo #{options} #{base_url_option} --destination=\"#{destination}\"".strip
+
     warn "Hugo: #{hugo_build_cmd}" if ENV["DEBUG"]
 
-    # Use Hugo's built-in caching for faster test builds
-    system(
-      hugo_build_cmd,
-      exception: true
-    )
+    system(hugo_build_cmd, exception: true)
     self
   end
 
@@ -65,6 +61,16 @@ class Hugo
 
   def destination_path
     File.expand_path(@destination, Dir.pwd)
+  end
+
+  private
+
+  def build_destination_path(base_path, port)
+    if port
+      Pathname.new("#{base_path}-#{port}").expand_path
+    else
+      Pathname.new(base_path).expand_path
+    end
   end
 end
 
