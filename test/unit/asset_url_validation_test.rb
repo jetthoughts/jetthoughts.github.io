@@ -1,6 +1,6 @@
 require_relative "base_page_test"
 
-class AssetUrlValidationTest < BasePageTest
+class AssetUrlValidationTest < BasePageTestCase
   DEFAULT_TEST_HTML_FILE = '404.html'
 
 

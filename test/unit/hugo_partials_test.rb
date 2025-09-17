@@ -1,6 +1,6 @@
 require_relative "base_page_test"
 
-class HugoPartialsTest < BasePageTest
+class HugoPartialsTest < BasePageTestCase
   # Unit tests for Hugo partial templates functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 

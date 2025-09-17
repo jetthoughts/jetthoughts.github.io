@@ -1,6 +1,6 @@
 require_relative "../base_page_test"
 
-class MetaTagsTest < BasePageTest
+class MetaTagsTest < BasePageTestCase
   # Unit tests for meta tags functionality and SEO validation
   # Tests rendered HTML output from public-test directory (no server required)
 

@@ -10,6 +10,7 @@ class Hugo
   end
 
   HUGO_OPTIONS = %w[
+    hugo
     --environment test
     --buildDrafts
     --logLevel warn
@@ -25,14 +26,12 @@ class Hugo
 
     port ||= @port
 
-    base_url_option = port ? "--baseURL=\"http://localhost:#{port}\"" : ""
-
-    options = HUGO_OPTIONS.join(" ")
-    hugo_build_cmd = "hugo #{options} #{base_url_option} --destination=\"#{destination}\"".strip
-
-    warn "Hugo: #{hugo_build_cmd}" if ENV["DEBUG"]
-
-    system(hugo_build_cmd, exception: true)
+    # Build hugo command using argv array to avoid shell quoting issues
+    args = HUGO_OPTIONS.dup
+    args += %W[--baseURL http://localhost:#{port}] if port
+    args += %W[--destination #{destination}]
+    warn "Hugo: #{args.join(' ')}" if ENV["DEBUG"]
+    system(*args, exception: true)
     self
   end
 

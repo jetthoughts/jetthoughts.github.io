@@ -1,6 +1,6 @@
 require_relative "base_page_test"
 
-class TestimonialShortcodeTest < BasePageTest
+class TestimonialShortcodeTest < BasePageTestCase
   # Unit tests for testimonial shortcode functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 
