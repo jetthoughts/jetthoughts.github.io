@@ -11,11 +11,18 @@ meta_title: "Rails Performance Optimization: 15 Proven Techniques | JetThoughts"
 meta_description: "Speed up your Rails app with 15 proven performance optimization techniques. Database queries, caching, background jobs, and more expert tips."
 ---
 
-{{< thoughtbot-intro problem="Is your Rails app getting slower as it grows? Users complaining about long load times?" solution="Let's fix that with 15 battle-tested performance optimization techniques" >}}
 
 Have you ever watched your Rails app go from lightning-fast to frustratingly slow? We've been there. That smooth, snappy app you launched starts feeling sluggish as you add features, gain users, and accumulate data.
 
 The good news? Most Rails performance problems follow predictable patterns, and there are proven techniques to fix them. We'll walk through 15 optimization strategies that have consistently delivered dramatic speed improvements for our clients.
+
+## The Challenge
+
+Is your Rails app getting slower as it grows? Users complaining about long load times?
+
+## Our Approach
+
+Let's fix that with 15 battle-tested performance optimization techniques that have consistently delivered dramatic speed improvements.
 
 ## Identifying performance bottlenecks
 
@@ -25,7 +32,9 @@ Before we start optimizing, let's figure out what's actually slow. Guessing at p
 
 First things first: you need data. Without metrics, you're flying blind.
 
-{{< thoughtbot-example title="Setting up basic performance monitoring" language="ruby" >}}
+### Setting up basic performance monitoring
+
+```ruby
 # Gemfile
 gem 'newrelic_rpm' # or gem 'skylight'
 
@@ -51,13 +60,15 @@ class ApplicationController < ActionController::Base
     Rails.logger.info "Action #{action_name} took #{duration.round(3)}s"
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### 2. Use Rails' built-in profiling tools
 
 Rails gives you some excellent tools right out of the box:
 
-{{< thoughtbot-example title="Built-in Rails profiling" language="bash" >}}
+### Built-in Rails profiling
+
+```bash
 # Check your logs for slow queries
 tail -f log/development.log | grep "ms)"
 
@@ -68,13 +79,15 @@ rails c
 # Profile memory usage
 > require 'memory_profiler'
 > MemoryProfiler.report { expensive_operation }.pretty_print
-{{< /thoughtbot-example >}}
+```
 
 ### 3. Identify your slowest endpoints
 
 Focus your optimization efforts where they'll have the biggest impact:
 
-{{< thoughtbot-example title="Finding slow endpoints" language="ruby" >}}
+### Finding slow endpoints
+
+```ruby
 # config/initializers/slow_request_logger.rb
 class SlowRequestLogger
   def initialize(app, threshold: 1000)
@@ -97,7 +110,7 @@ class SlowRequestLogger
 end
 
 Rails.application.config.middleware.use SlowRequestLogger
-{{< /thoughtbot-example >}}
+```
 
 ## Database optimization techniques
 
@@ -107,7 +120,9 @@ Most Rails performance problems live in the database layer. Let's fix the most c
 
 This is the big one. N+1 queries can turn a fast page into a crawling nightmare.
 
-{{< thoughtbot-example title="Fixing N+1 queries with includes" language="ruby" >}}
+### Fixing N+1 queries with includes
+
+```ruby
 # BAD: This creates N+1 queries
 @posts = Post.limit(10)
 @posts.each { |post| puts post.author.name }
@@ -120,17 +135,17 @@ This is the big one. N+1 queries can turn a fast page into a crawling nightmare.
 @posts = Post.joins(:author)
              .select('posts.*, authors.name as author_name')
              .limit(10)
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="tip" >}}
-Use the `bullet` gem in development to catch N+1 queries automatically. It'll save you hours of debugging!
-{{< /thoughtbot-callout >}}
+> **💡 Tip:** Use the `bullet` gem in development to catch N+1 queries automatically. It'll save you hours of debugging!
 
 ### 5. Add strategic database indexes
 
 Missing indexes are silent performance killers:
 
-{{< thoughtbot-example title="Adding effective indexes" language="ruby" >}}
+### Adding effective indexes
+
+```ruby
 # migration: add_indexes_for_performance.rb
 class AddIndexesForPerformance < ActiveRecord::Migration[7.0]
   def change
@@ -147,13 +162,15 @@ class AddIndexesForPerformance < ActiveRecord::Migration[7.0]
     add_index :posts, [:status, :created_at]
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### 6. Optimize your most expensive queries
 
 Find and fix your slowest database queries:
 
-{{< thoughtbot-example title="Query optimization techniques" language="sql" >}}
+### Query optimization techniques
+
+```sql
 -- Use EXPLAIN to understand query execution
 EXPLAIN ANALYZE SELECT * FROM posts
 WHERE author_id = 123
@@ -171,13 +188,15 @@ GROUP BY posts.id, authors.name
 ORDER BY posts.published_at DESC;
 
 -- Try breaking it into smaller, indexed queries
-{{< /thoughtbot-example >}}
+```
 
 ### 7. Use database-level pagination
 
 Skip counting when you don't need exact page numbers:
 
-{{< thoughtbot-example title="Efficient pagination" language="ruby" >}}
+### Efficient pagination
+
+```ruby
 # Instead of offset/limit (slow on large datasets)
 Post.published.order(:created_at).limit(20).offset(page * 20)
 
@@ -195,7 +214,7 @@ end
 
 # Pass the last post ID for the next page
 @next_cursor = @posts.last&.id
-{{< /thoughtbot-example >}}
+```
 
 ## Caching strategies that actually work
 
@@ -205,7 +224,9 @@ Caching can dramatically speed up your app, but only if you do it right.
 
 Cache the expensive parts of your templates:
 
-{{< thoughtbot-example title="Smart fragment caching" language="erb" >}}
+### Smart fragment caching
+
+```erb
 <!-- app/views/posts/show.html.erb -->
 <% cache @post do %>
   <h1><%= @post.title %></h1>
@@ -226,13 +247,15 @@ Cache the expensive parts of your templates:
 <% cache 'navigation', expires_in: 30.minutes do %>
   <%= render 'shared/navigation' %>
 <% end %>
-{{< /thoughtbot-example >}}
+```
 
 ### 9. Smart low-level caching
 
 Cache expensive calculations and external API calls:
 
-{{< thoughtbot-example title="Low-level caching patterns" language="ruby" >}}
+### Low-level caching patterns
+
+```ruby
 class User < ApplicationRecord
   def expensive_calculation
     Rails.cache.fetch("user_#{id}_calculation", expires_in: 1.hour) do
@@ -262,13 +285,15 @@ class WeatherService
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### 10. Use Redis for session storage
 
 File-based sessions don't scale. Redis does:
 
-{{< thoughtbot-example title="Redis session configuration" language="ruby" >}}
+### Redis session configuration
+
+```ruby
 # Gemfile
 gem 'redis-rails'
 
@@ -284,7 +309,7 @@ Rails.application.config.session_store :redis_store,
   ],
   expire_after: 2.weeks,
   key: "_#{Rails.application.class.module_parent_name.downcase}_session"
-{{< /thoughtbot-example >}}
+```
 
 ## Background job optimization
 
@@ -294,7 +319,9 @@ Move slow operations out of the request cycle.
 
 Don't make users wait for slow operations:
 
-{{< thoughtbot-example title="Background job patterns" language="ruby" >}}
+### Background job patterns
+
+```ruby
 class User < ApplicationRecord
   after_create :send_welcome_email_async
   after_update :sync_to_external_service_async, if: :saved_change_to_email?
@@ -324,13 +351,15 @@ end
 # Process different types of jobs with different priorities
 # config/application.rb
 config.active_job.queue_adapter = :sidekiq
-{{< /thoughtbot-example >}}
+```
 
 ### 12. Optimize background job performance
 
 Make your background jobs faster and more reliable:
 
-{{< thoughtbot-example title="Job optimization techniques" language="ruby" >}}
+### Job optimization techniques
+
+```ruby
 class DataExportJob < ApplicationJob
   queue_as :low_priority
 
@@ -353,7 +382,7 @@ class DataExportJob < ApplicationJob
     GC.start if Random.rand(10) == 0
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Memory usage optimization
 
@@ -363,7 +392,9 @@ Ruby's garbage collector works hard, but you can help it out.
 
 Creating fewer objects means less garbage collection pressure:
 
-{{< thoughtbot-example title="Memory-efficient Ruby patterns" language="ruby" >}}
+### Memory-efficient Ruby patterns
+
+```ruby
 # BAD: Creates many temporary objects
 def format_names(users)
   users.map { |user| "#{user.first_name} #{user.last_name}".titleize }
@@ -385,13 +416,15 @@ data = { "name" => user.name, "email" => user.email }
 
 # GOOD
 data = { name: user.name, email: user.email }
-{{< /thoughtbot-example >}}
+```
 
 ### 14. Stream large responses
 
 Don't load huge datasets into memory:
 
-{{< thoughtbot-example title="Streaming responses" language="ruby" >}}
+### Streaming responses
+
+```ruby
 class ReportsController < ApplicationController
   def export_users
     respond_to do |format|
@@ -413,13 +446,15 @@ class ReportsController < ApplicationController
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### 15. Monitor and optimize memory usage
 
 Keep an eye on your app's memory consumption:
 
-{{< thoughtbot-example title="Memory monitoring" language="ruby" >}}
+### Memory monitoring
+
+```ruby
 # Add to your ApplicationController
 class ApplicationController < ActionController::Base
   if Rails.env.development?
@@ -457,11 +492,9 @@ class MemoryReporter
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="warning" >}}
-Remember: premature optimization is the root of all evil. Always measure first, then optimize. Don't guess at what's slow – profile and find out for sure.
-{{< /thoughtbot-callout >}}
+> **⚠️ Warning:** Remember: premature optimization is the root of all evil. Always measure first, then optimize. Don't guess at what's slow – profile and find out for sure.
 
 ## Measuring your success
 
@@ -486,7 +519,6 @@ Performance optimization is both an art and a science. The techniques we've cove
 
 The key is to approach optimization systematically: measure first, identify bottlenecks, apply targeted fixes, and measure again. Don't try to implement everything at once – pick the 3-4 techniques that address your biggest pain points first.
 
-{{< thoughtbot-conclusion next-steps="true" related-posts="true" >}}
 
 **Start with these high-impact optimizations:**
 
@@ -508,4 +540,17 @@ Our performance optimization services include:
 
 Ready to make your Rails app blazing fast? [Contact us for a performance audit](https://jetthoughts.com/contact/) and let's discuss how we can speed up your application.
 
-{{< /thoughtbot-conclusion >}}
+## Next Steps
+
+Ready to implement these performance optimizations in your Rails app?
+
+1. Start with measuring your current performance baseline
+2. Focus on the highest-impact optimizations first (N+1 queries, indexes)
+3. Implement caching strategically where it matters most
+4. Move heavy operations to background jobs
+5. Monitor and measure your improvements continuously
+
+## Related Resources
+
+Need expert help with Rails performance? Contact JetThoughts for a comprehensive performance audit.
+

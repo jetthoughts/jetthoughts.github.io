@@ -64,19 +64,20 @@ Replace formal language with accessible alternatives:
 
 ## Hugo-specific implementation
 
-### Using the thoughtbot shortcodes
-```hugo
-{{< thoughtbot-intro problem="Database queries running slow?" solution="Let's optimize them together" >}}
+### Using markdown alternatives instead of thoughtbot shortcodes
+```markdown
+## Database queries running slow?
+Let's optimize them together.
 
-{{< thoughtbot-example title="Optimizing a slow query" language="ruby" >}}
+### Optimizing a slow query
+```ruby
 # Your code here
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="tip" >}}
-Remember: Always measure before optimizing!
-{{< /thoughtbot-callout >}}
+> **Tip**: Remember: Always measure before optimizing!
 
-{{< thoughtbot-conclusion next-steps="true" related-posts="true" >}}
+## Conclusion
+Consider next steps and explore related posts for deeper learning.
 ```
 
 ### Style validation approach

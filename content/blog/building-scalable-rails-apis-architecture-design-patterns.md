@@ -11,7 +11,11 @@ meta_title: "Building Scalable Rails APIs: Architecture & Design Patterns | JetT
 meta_description: "Building a Rails API that scales from thousands to millions of requests? Our complete guide covers authentication, serialization, rate limiting, and proven scaling patterns."
 ---
 
-{{< thoughtbot-intro problem="Building an API that can handle millions of requests without breaking a sweat?" solution="Let's build it right from the start with proven architecture patterns and Rails best practices" >}}
+## The Challenge
+Building an API that can handle millions of requests without breaking a sweat?
+
+## Our Approach
+Let's build it right from the start with proven architecture patterns and Rails best practices
 
 Have you ever built an API that worked great with a few hundred users, only to crash under real-world load? We've been there. What starts as a simple Rails API can quickly become a bottleneck when you need to scale.
 
@@ -27,7 +31,9 @@ Before we dive into code, let's establish the foundation for a scalable Rails AP
 
 If you're building a dedicated API, start with Rails in API mode. It's leaner and faster:
 
-{{< thoughtbot-example title="Creating a new Rails API" language="bash" >}}
+### Creating a new Rails API
+
+```bash
 # Create a new Rails API-only application
 rails new my_api --api --database=postgresql
 
@@ -36,13 +42,15 @@ rails new my_api --api --database=postgresql
 # - No view-related middleware
 # - No asset pipeline
 # - Optimized for JSON responses
-{{< /thoughtbot-example >}}
+```
 
 ### Design your API structure upfront
 
 Good APIs are designed, not evolved. Plan your resource structure before you start coding:
 
-{{< thoughtbot-example title="RESTful API design" language="ruby" >}}
+### RESTful API design
+
+```ruby
 # config/routes.rb
 Rails.application.routes.draw do
   namespace :api do
@@ -60,13 +68,15 @@ Rails.application.routes.draw do
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Use consistent response formats
 
 Consistency makes your API easier to use and debug:
 
-{{< thoughtbot-example title="Standardized API responses" language="ruby" >}}
+### Standardized API responses
+
+```ruby
 # app/controllers/api/v1/base_controller.rb
 class Api::V1::BaseController < ActionController::API
   include ActionController::HttpAuthentication::Token::ControllerMethods
@@ -105,7 +115,7 @@ class Api::V1::BaseController < ActionController::API
     render_error("Missing parameter: #{exception.param}", nil, :bad_request)
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Authentication and authorization
 
@@ -115,7 +125,9 @@ Secure your API without sacrificing performance.
 
 JSON Web Tokens work great for APIs because they're stateless and scalable:
 
-{{< thoughtbot-example title="JWT authentication implementation" language="ruby" >}}
+### JWT authentication implementation
+
+```ruby
 # Gemfile
 gem 'jwt'
 
@@ -155,13 +167,14 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, length: { minimum: 6 }
 end
-{{< /thoughtbot-example >}}
 
 ### Implement role-based authorization
 
 Keep your authorization logic clean and testable:
 
-{{< thoughtbot-example title="Authorization with Pundit" language="ruby" >}}
+### Authorization with Pundit
+
+```ruby
 # Gemfile
 gem 'pundit'
 
@@ -257,7 +270,6 @@ class Api::V1::PostsController < Api::V1::BaseController
 
   attr_reader :current_user
 end
-{{< /thoughtbot-example >}}
 
 ## Serialization patterns
 
@@ -267,7 +279,9 @@ Choose the right serialization approach for your performance needs.
 
 Alba is lightning-fast and gives you fine-grained control:
 
-{{< thoughtbot-example title="High-performance serialization with Alba" language="ruby" >}}
+### High-performance serialization with Alba
+
+```ruby
 # Gemfile
 gem 'alba'
 
@@ -329,17 +343,16 @@ class Api::V1::UsersController < Api::V1::BaseController
     )
   end
 end
-{{< /thoughtbot-example >}}
 
-{{< thoughtbot-callout type="tip" >}}
-Profile your serialization! Use different serializers for different endpoints. List views need minimal data, while detail views can include more comprehensive information.
-{{< /thoughtbot-callout >}}
+> **💡 Tip:** Profile your serialization! Use different serializers for different endpoints. List views need minimal data, while detail views can include more comprehensive information.
 
 ### Efficient association loading
 
 Avoid N+1 queries in your API responses:
 
-{{< thoughtbot-example title="Smart preloading for APIs" language="ruby" >}}
+### Smart preloading for APIs
+
+```ruby
 class Api::V1::PostsController < Api::V1::BaseController
   def index
     @posts = Post.published
@@ -381,7 +394,7 @@ class Api::V1::BaseController < ActionController::API
     includes.any? ? base_query.includes(includes) : base_query
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Rate limiting and throttling
 
@@ -391,7 +404,9 @@ Protect your API from abuse and ensure fair usage.
 
 Use Redis to track and limit API usage:
 
-{{< thoughtbot-example title="Redis rate limiting middleware" language="ruby" >}}
+### Redis rate limiting middleware
+
+```ruby
 # Gemfile
 gem 'redis'
 gem 'connection_pool'
@@ -471,15 +486,18 @@ class RateLimiter
   end
 end
 
+```ruby
 # config/application.rb
 config.middleware.use RateLimiter, requests_per_minute: 100
-{{< /thoughtbot-example >}}
+```
 
 ### Tiered rate limiting
 
 Offer different limits based on user tiers:
 
-{{< thoughtbot-example title="Tiered rate limiting system" language="ruby" >}}
+### Tiered rate limiting system
+
+```ruby
 class TieredRateLimiter
   TIER_LIMITS = {
     'free' => 100,
@@ -531,7 +549,7 @@ class TieredRateLimiter
     ["ip:#{request.remote_ip}", 'free']
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## API versioning strategies
 
@@ -541,7 +559,9 @@ Plan for change from day one.
 
 Keep it simple with URL-based versioning:
 
-{{< thoughtbot-example title="Clean API versioning structure" language="ruby" >}}
+### Clean API versioning structure
+
+```ruby
 # config/routes.rb
 Rails.application.routes.draw do
   namespace :api do
@@ -583,13 +603,15 @@ class Api::V2::UsersController < Api::V2::BaseController
     render json: V2::UserSerializer.new(users)
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Backwards compatibility helpers
 
 Make API evolution smoother:
 
-{{< thoughtbot-example title="Backwards compatibility patterns" language="ruby" >}}
+### Backwards compatibility patterns
+
+```ruby
 # app/controllers/api/base_controller.rb
 class Api::BaseController < ActionController::API
   private
@@ -630,7 +652,7 @@ class Api::V1::PostsController < Api::V1::BaseController
     deprecated_warning('This endpoint will be removed in v2', 6.months.from_now)
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Testing API endpoints
 
@@ -640,7 +662,9 @@ Comprehensive testing ensures your API works reliably.
 
 Test your API endpoints thoroughly:
 
-{{< thoughtbot-example title="Comprehensive API testing" language="ruby" >}}
+### Comprehensive API testing
+
+```ruby
 # Gemfile (test group)
 gem 'rspec-rails'
 gem 'factory_bot_rails'
@@ -755,11 +779,9 @@ end
 RSpec.configure do |config|
   config.include ApiHelpers, type: :request
 end
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="tip" >}}
-Test your rate limiting, authentication, and error handling as thoroughly as your happy path. These edge cases often cause production issues.
-{{< /thoughtbot-callout >}}
+> **💡 Tip:** Test your rate limiting, authentication, and error handling as thoroughly as your happy path. These edge cases often cause production issues.
 
 ## Monitoring and observability
 
@@ -769,7 +791,9 @@ Know what's happening in production.
 
 Track the metrics that matter:
 
-{{< thoughtbot-example title="API monitoring setup" language="ruby" >}}
+### API monitoring setup
+
+```ruby
 # app/controllers/api/base_controller.rb
 class Api::BaseController < ActionController::API
   around_action :log_api_metrics
@@ -844,7 +868,7 @@ class Api::V1::HealthController < Api::V1::BaseController
     memory_usage < 1000 # Less than 1GB
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Ready to build your scalable Rails API?
 
@@ -852,7 +876,7 @@ Building scalable APIs is about making the right architectural decisions from th
 
 The key is to implement these patterns incrementally. Start with the basics (proper structure, authentication, serialization) and add more sophisticated features (rate limiting, versioning, advanced monitoring) as your API grows.
 
-{{< thoughtbot-conclusion next-steps="true" related-posts="true" >}}
+## Next Steps
 
 **Start building your scalable API:**
 
@@ -874,7 +898,14 @@ Our API development services include:
 
 Ready to build an API that scales? [Contact us for an API development consultation](https://jetthoughts.com/contact/) and let's discuss your project requirements.
 
-{{< /thoughtbot-conclusion >}}
+## Related Resources
+
+Want to dive deeper into Rails API development? Check out these related guides:
+
+- [Ruby on Rails Performance Optimization: 15 Proven Techniques for Faster Applications](/blog/rails-performance-optimization-15-proven-techniques/)
+- [Rails 7 Upgrade Guide: Step-by-Step Migration from Rails 6](/blog/rails-7-upgrade-guide-step-by-step-migration/)
+- [Ruby on Rails Testing Strategy: Complete Guide to Unit Tests & Integration](/blog/ruby-on-rails-testing-strategy-unit-tests-integration/)
+
 
 ---
 

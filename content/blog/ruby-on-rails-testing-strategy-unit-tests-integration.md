@@ -11,7 +11,13 @@ meta_title: "Rails Testing Strategy: Complete Guide to Unit & Integration Tests 
 meta_description: "Master Rails testing with our comprehensive guide covering unit tests, integration testing, TDD workflow, and CI/CD integration. Build bulletproof Rails apps."
 ---
 
-{{< thoughtbot-intro problem="Tired of bugs slipping through to production? Stressed about deploying changes that might break existing features?" solution="Let's build a bulletproof testing strategy that catches issues before your users ever see them" >}}
+## The Challenge
+
+Tired of bugs slipping through to production? Stressed about deploying changes that might break existing features?
+
+## Our Approach
+
+Let's build a bulletproof testing strategy that catches issues before your users ever see them
 
 Have you ever deployed what seemed like a simple change, only to get a panicked call that half your app is broken? We've all been there. That sinking feeling when you realize a small tweak to one feature accidentally broke something completely unrelated.
 
@@ -25,7 +31,9 @@ A good testing strategy follows the testing pyramid: lots of fast unit tests, so
 
 Here's how the pyramid works for Rails applications:
 
-{{< thoughtbot-example title="Rails testing pyramid structure" language="ruby" >}}
+### Rails testing pyramid structure
+
+```
 # Fast and numerous - 70% of your tests
 Unit Tests (Models, Services, Helpers)
 ├── Model validations and associations
@@ -46,13 +54,15 @@ End-to-End Tests (System specs, Browser tests)
 ├── JavaScript interactions
 ├── Cross-browser compatibility
 └── Full application workflows
-{{< /thoughtbot-example >}}
+```
 
 ### Setting up your Rails testing environment
 
 Let's get your testing foundation right:
 
-{{< thoughtbot-example title="Essential testing gems" language="ruby" >}}
+### Essential testing gems
+
+```ruby
 # Gemfile
 group :development, :test do
   gem 'rspec-rails', '~> 6.0'
@@ -73,11 +83,13 @@ end
 
 # Install and configure
 rails generate rspec:install
-{{< /thoughtbot-example >}}
+```
 
 ### Configure RSpec for optimal performance
 
-{{< thoughtbot-example title="RSpec configuration" language="ruby" >}}
+### RSpec configuration
+
+```ruby
 # spec/rails_helper.rb
 require 'spec_helper'
 require File.expand_path('../config/environment', __dir__)
@@ -141,7 +153,7 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Unit testing with RSpec
 
@@ -151,7 +163,7 @@ Unit tests are your first line of defense. They're fast, focused, and catch regr
 
 Models contain your business logic, so test them well:
 
-{{< thoughtbot-example title="Comprehensive model testing" language="ruby" >}}
+### Comprehensive model testing
 # spec/models/user_spec.rb
 RSpec.describe User, type: :model do
   # Test associations
@@ -297,13 +309,15 @@ FactoryBot.define do
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Testing services and business logic
 
 Service objects encapsulate complex business logic and deserve thorough testing:
 
-{{< thoughtbot-example title="Service object testing" language="ruby" >}}
+### Service object testing
+
+```ruby
 # app/services/user_registration_service.rb
 class UserRegistrationService
   include ActiveModel::Model
@@ -486,11 +500,9 @@ RSpec.describe UserRegistrationService do
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="tip" >}}
-Test edge cases and error conditions as thoroughly as the happy path. Your users will find these edge cases in production!
-{{< /thoughtbot-callout >}}
+> **💡 Tip:** Test edge cases and error conditions as thoroughly as the happy path. Your users will find these edge cases in production!
 
 ## Integration testing strategies
 
@@ -500,7 +512,9 @@ Integration tests ensure your components work together correctly.
 
 Test your API endpoints thoroughly:
 
-{{< thoughtbot-example title="Comprehensive request specs" language="ruby" >}}
+### Comprehensive request specs
+
+```ruby
 # spec/requests/api/v1/posts_spec.rb
 RSpec.describe 'Posts API', type: :request do
   let(:user) { create(:user) }
@@ -684,13 +698,15 @@ RSpec.describe 'Posts API', type: :request do
     JWT.encode(payload, Rails.application.secret_key_base)
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Feature specs for user workflows
 
 Test complete user journeys:
 
-{{< thoughtbot-example title="Feature spec testing" language="ruby" >}}
+### Feature spec testing
+
+```ruby
 # spec/features/user_registration_spec.rb
 RSpec.feature 'User Registration', type: :feature, js: true do
   background do
@@ -842,7 +858,7 @@ RSpec.feature 'Post Management', type: :feature do
     expect(page).not_to have_content('Published Post')
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## End-to-end testing setup
 
@@ -852,7 +868,9 @@ System tests ensure your entire application works together.
 
 Test critical user journeys with browser automation:
 
-{{< thoughtbot-example title="System testing setup" language="ruby" >}}
+### System testing setup
+
+```ruby
 # spec/support/capybara.rb
 require 'capybara/rspec'
 require 'selenium-webdriver'
@@ -990,11 +1008,9 @@ RSpec.describe 'Complete User Journey', type: :system, js: true do
     page.driver.browser.action.send_keys(:return).perform
   end
 end
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="warning" >}}
-System tests are slow and can be flaky. Use them sparingly for critical user journeys, and prefer faster integration tests for most scenarios.
-{{< /thoughtbot-callout >}}
+> **⚠️ Warning:** System tests are slow and can be flaky. Use them sparingly for critical user journeys, and prefer faster integration tests for most scenarios.
 
 ## Test-driven development workflow
 
@@ -1004,7 +1020,9 @@ TDD helps you write better code and catch bugs early.
 
 Follow the classic TDD cycle:
 
-{{< thoughtbot-example title="TDD workflow example" language="ruby" >}}
+### TDD workflow example
+
+```ruby
 # Step 1: RED - Write a failing test
 # spec/models/post_spec.rb
 RSpec.describe Post do
@@ -1076,13 +1094,12 @@ class Post < ApplicationRecord
     [1, (word_count / AVERAGE_READING_SPEED.to_f).ceil].max
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Testing controllers with TDD
 
 Apply TDD to controller actions:
 
-{{< thoughtbot-example title="Controller TDD example" language="ruby" >}}
 # RED: Write failing controller test
 # spec/controllers/posts_controller_spec.rb
 RSpec.describe PostsController do
@@ -1194,7 +1211,6 @@ class PostsController < ApplicationController
     render :new, status: :unprocessable_entity
   end
 end
-{{< /thoughtbot-example >}}
 
 ## CI/CD integration
 
@@ -1204,7 +1220,9 @@ Automate your testing to catch issues early.
 
 Set up continuous testing:
 
-{{< thoughtbot-example title="GitHub Actions Rails testing" language="yaml" >}}
+### Continuous integration setup
+
+```yaml
 # .github/workflows/test.yml
 name: Rails Tests
 
@@ -1303,13 +1321,15 @@ jobs:
       with:
         name: screenshots
         path: tmp/screenshots
-{{< /thoughtbot-example >}}
+```
 
 ### Test optimization strategies
 
 Make your tests faster and more reliable:
 
-{{< thoughtbot-example title="Test performance optimization" language="ruby" >}}
+### Test coverage reporting
+
+```ruby
 # spec/support/test_performance.rb
 RSpec.configure do |config|
   # Use database transactions for speed
@@ -1365,7 +1385,34 @@ end
 
 # Run tests in parallel
 # bundle exec parallel_rspec spec/
-{{< /thoughtbot-example >}}
+```
+
+### Performance testing
+
+```ruby
+# Gemfile - for performance monitoring
+group :test do
+  gem 'benchmark-ips'
+  gem 'memory_profiler'
+end
+
+# spec/performance/model_performance_spec.rb
+RSpec.describe 'Model Performance' do
+  it 'processes large datasets efficiently' do
+    expect {
+      1000.times { User.create!(email: Faker::Internet.email) }
+    }.to perform_under(5.seconds)
+  end
+
+  it 'has acceptable memory usage' do
+    report = MemoryProfiler.report do
+      100.times { Post.includes(:author).limit(10).load }
+    end
+
+    expect(report.total_allocated_memsize).to be < 10.megabytes
+  end
+end
+```
 
 ## Ready to build bulletproof Rails apps?
 
@@ -1373,7 +1420,8 @@ A comprehensive testing strategy isn't just about catching bugs – it's about b
 
 The key is to start simple and build your testing muscle over time. Don't try to achieve 100% coverage on day one. Focus on testing the most critical parts of your application first, then expand your coverage as you grow.
 
-{{< thoughtbot-conclusion next-steps="true" related-posts="true" >}}
+
+## Next Steps
 
 **Start building your testing strategy:**
 
@@ -1395,4 +1443,3 @@ Our testing and quality assurance services include:
 
 Ready to build confidence in your Rails application? [Contact us for a testing strategy consultation](https://jetthoughts.com/contact/) and let's discuss how we can help you ship better software faster.
 
-{{< /thoughtbot-conclusion >}}

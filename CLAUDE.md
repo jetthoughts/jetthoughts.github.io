@@ -1271,16 +1271,28 @@ end
 
 ### 🔍 **SEARCH THROUGH HANDBOOKS & FRAMEWORKS**
 
-#### **Handbook Search**: **`claude-context`** - Intelligent semantic search
-```bash
-# Search global company standards (via symlink)
-claude-context search "[topic]" --path "/knowledge/"
+#### **🔍 Recommended Search Workflow**
+```yaml
+Phase 1 - Semantic Discovery (LEANN or claude-context):
+  - Use claude-context, LEANN and similar mcp tools for understanding existing code patterns
+  - Natural language queries for architectural understanding
+  - Pattern discovery before implementation
+  - Search handbooks for established standards
+  - Validate against global and project guidelines
+  - Ensure compliance with documentation
 
-# Search project-specific adaptations (Hugo/JT Site specific)
-claude-context search "[topic]" --path "docs/"
+Phase 2 - External Package Research, and context7 (MANDATORY for dependencies):
+  purpose: "Research ALL external packages/libraries BEFORE integration"
+  tools:
+    documentation: "context7 - Get official docs for ANY framework/library"
+    source_analysis: "package-search - Analyze actual package source code"
+  workflow: "ALWAYS research packages before go get/hugo mod get"
 
-# Search both handbooks simultaneously
-claude-context search "[topic]" --path "."
+Phase 3 - Cross-Validation:
+  combine: "Merge findings from all sources (LEANN + claude-context + packages)"
+  validate: "Ensure external packages align with internal patterns discovered via LEANN"
+  approve: "Expert consensus required before implementation proceeds"
+  document: "Store unified research findings in memory coordination namespace"
 ```
 
 #### **Framework & Package Research**: Multiple MCP Tools
@@ -1307,36 +1319,154 @@ mcp__qdrant_Docs__search_qdrant                 # Qdrant
 mcp__claude-flow_Docs__search_claude_flow       # Claude Flow
 ```
 
-### 🛠️ **MCP TOOLS HIERARCHY & PRIORITIZATION**
+## 🛠️ **AGENT TOOL REQUIREMENTS** (MANDATORY)
 
-#### **Tier 1: Primary Research Tools** (Use First)
-- **`claude-context`** - PRIMARY tool for searching handbooks (`/knowledge/` and `/docs/`)
-  - Intelligent semantic search with context awareness
-  - Supports path filtering and comprehensive codebase indexing
-  - MANDATORY for all handbook and documentation searches
+### 🎯 **Agent Tool Requirements Matrix**
+```yaml
+agent_tool_requirements:
+  coder:
+    mandatory_tools: ["leann-server", "claude-context", "context7", "package-search"]
+    research_protocol: "Pattern discovery + standards validation + package research"
 
-#### **Tier 2: Framework & Package Research** (Use for External Dependencies)
-- **`context7`** - Framework documentation (resolve-library-id, get-library-docs)
-  - Comprehensive library documentation with up-to-date information
-  - Context7-compatible library ID resolution
-- **`package-search`** - Package source code analysis (npm, PyPI, crates.io, Go)
-  - Semantic and regex hybrid search across package registries
-  - Direct source code reading and pattern matching
+  researcher:
+    mandatory_tools: ["leann-server", "claude-context", "searxng", "context7"]
+    comprehensive_search: "Multi-source validation across all available tools"
 
-#### **Tier 3: Specialized Framework Documentation MCPs** (Domain-Specific)
-- **`peewee_Docs`** - Peewee ORM documentation and code search
-- **`crewAI-tools_Docs`** - CrewAI multi-agent framework docs
-- **`fastembed_Docs`** - FastEmbed documentation
-- **`qdrant_Docs`** - Qdrant vector database docs
-- **`claude-flow_Docs`** - Claude Flow documentation
+  reviewer:
+    mandatory_tools: ["leann-server", "claude-context", "package-search"]
+    pattern_validation: "Code patterns + standards compliance validation"
 
-#### **Tier 4: Web Search** (Use Last Resort)
-- **`searxng`** - Web search aggregator for online resources
-- **`brave-search`** - Web and local search for documentation
+  tester:
+    mandatory_tools: ["leann-server", "claude-context", "package-search"]
+    testing_protocol: "Test pattern discovery + standards validation"
+
+  planner:
+    mandatory_tools: ["leann-server", "claude-context", "searxng"]
+    planning_protocol: "Architecture patterns + standards + web research validation"
+
+  architect:
+    mandatory_tools: ["leann-server", "claude-context", "context7", "package-search"]
+    architecture_protocol: "System patterns + standards + framework validation"
+```
+
+### 🔍 **TOOL HIERARCHY DOCUMENTATION**
+```yaml
+tool_hierarchy:
+  core: "leann-server, claude-context (codebase search, handbook navigation)"
+  documentation: "context7 (online documentation)"
+  packages: "package-search (dependency analysis)"
+  web: "searxng, brave-search (current practices)"
+
+static_site_tool_hierarchy:
+  patterns: "leann-server (existing Hugo/Jekyll patterns)"
+  standards: "claude-context (static site standards and practices)"
+  specialized: "context7 (Hugo/Jekyll framework documentation)"
+  packages: "package-search (NPM/Gem package analysis)"
+  priority_5_web: "searxng + brave-search - Static site community research"
+
+enforcement_static: "ZERO TOLERANCE - Static site agents must follow specialized tool hierarchy"
+```
+
+### 🔍 **EXTERNAL PACKAGE RESEARCH** (MANDATORY Before Dependencies)
+
+#### **Hugo/Go Modules Research Protocol** (ZERO TOLERANCE)
+```bash
+# MANDATORY: Research before ANY go get/hugo mod get
+
+# Step 1: Get framework documentation
+context7 resolve-library-id "hugo"               # Get library ID
+context7 get-library-docs "/gohugoio/hugo" --topic "shortcodes"
+
+# Step 2: Analyze Go module source code for implementation patterns
+mcp__package-search__package_search_hybrid \
+  --registry_name "golang_proxy" \
+  --package_name "github.com/gohugoio/hugo" \
+  --semantic_queries '["shortcode implementation", "template processing"]'
+
+# Step 3: Pattern-based source code search
+mcp__package-search__package_search_grep \
+  --registry_name "golang_proxy" \
+  --package_name "github.com/spf13/cobra" \
+  --pattern "func.*Command" \
+  --languages '["Go"]'
+
+# Step 4: Read specific implementation files
+mcp__package-search__package_search_read_file \
+  --registry_name "golang_proxy" \
+  --package_name "github.com/spf13/viper" \
+  --filename_sha256 "[hash_from_search]" \
+  --start_line 1 --end_line 50
+```
+
+#### **Hugo/Go Module Research Examples** (Copy-Paste Ready)
+```bash
+# Research Hugo before theme modifications
+context7 resolve-library-id "hugo"
+mcp__package-search__package_search_hybrid \
+  --registry_name "golang_proxy" --package_name "github.com/gohugoio/hugo" \
+  --semantic_queries '["theme template processing", "shortcode creation patterns"]'
+
+# Research Go modules before adding dependencies
+context7 resolve-library-id "cobra"
+mcp__package-search__package_search_grep \
+  --registry_name "golang_proxy" --package_name "github.com/spf13/cobra" \
+  --pattern "func.*Execute" --languages '["Go"]'
+
+# Research Viper before configuration management
+context7 resolve-library-id "viper"
+mcp__package-search__package_search_hybrid \
+  --registry_name "golang_proxy" --package_name "github.com/spf13/viper" \
+  --semantic_queries '["configuration binding", "environment variable handling"]'
+
+# Research YAML processing before data files
+context7 resolve-library-id "yaml"
+mcp__package-search__package_search_grep \
+  --registry_name "golang_proxy" --package_name "gopkg.in/yaml.v3" \
+  --pattern "func.*Unmarshal" --languages '["Go"]'
+```
+
+#### **MANDATORY Workflow: Adding New Go Modules**
+```bash
+# STEP 1: MANDATORY RESEARCH (Before any installation)
+echo "🔍 RESEARCHING: [module_name] before installation"
+context7 resolve-library-id "[module_name]"
+context7 get-library-docs "/[org]/[module_name]" --topic "[specific_use_case]"
+
+# STEP 2: SOURCE CODE ANALYSIS (Understanding implementation)
+mcp__package-search__package_search_hybrid \
+  --registry_name "golang_proxy" --package_name "[module_name]" \
+  --semantic_queries '["[your_use_case]", "[integration_pattern]"]'
+
+# STEP 3: IMPLEMENTATION VERIFICATION (Before integration)
+mcp__package-search__package_search_grep \
+  --registry_name "golang_proxy" --package_name "[module_name]" \
+  --pattern "[specific_pattern]" --languages '["Go"]'
+
+# STEP 4: ONLY AFTER RESEARCH - Install module
+echo "✅ RESEARCH COMPLETE: Installing [module_name]"
+go get [module_name]  # or hugo mod get [module_name]
+echo "📦 INSTALLED: [module_name] with research-validated integration"
+```
+
+### 🛠️ **RESEARCH TOOLS**
+
+```yaml
+research_tools_hierarchy:
+  - "leann-server, claude-context (codebase semantic search, handbook system navigation)"
+  - "context7 (online documentation)"
+  - "package-search (dependencies online codebase semantic search)"
+  - "RivalSearchMCP, brave-search, searxng (current best practices)"
+```
+
+**Core Tools**: `leann-server`, `claude-context`, `context7`, `package-search`, `searxng`, `brave-search`
+
+**Specialized**: `peewee_Docs`, `crewAI-tools_Docs`, `fastembed_Docs`, `qdrant_Docs`, `claude-flow_Docs`
 
 #### **MCP Tool Usage Priority Protocol**
 ```bash
 # Step 1: ALWAYS start with claude-context for local knowledge
+# Step 2: MANDATORY package research before any go get/hugo mod get
+# Step 3: Use context7 for Hugo/Go framework documentation
 claude-context search "[topic]" --path "[target-path]"
 
 # Step 2: Use framework MCPs for external libraries
@@ -4362,9 +4492,10 @@ mcp__memory__add_observations \
 jt_site_agent_mcp_requirements:
   mandatory_tools_usage:
     research_phase:
-      - "claude-context (handbook system navigation)"
-      - "context7 (Hugo/Jekyll documentation)"
-      - "brave-search (current best practices)"
+      - "leann-server, claude-context (codebase semantic search, handbook system navigation)"
+      - "context7 (online documentation)"
+      - "package-search (dependencies online codebase semantic search)"
+      - "RivalSearchMCP, brave-search, searchng,  (current best practices)"
 
     implementation_phase:
       - "memory coordination (cross-agent communication)"

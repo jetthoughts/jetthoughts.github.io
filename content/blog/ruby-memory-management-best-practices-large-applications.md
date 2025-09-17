@@ -11,7 +11,11 @@ meta_title: "Ruby Memory Management: Best Practices for Large Applications | Jet
 meta_description: "Master Ruby memory management with our comprehensive guide. Learn to prevent memory leaks, optimize garbage collection, and build memory-efficient Rails apps."
 ---
 
-{{< thoughtbot-intro problem="Memory leaks killing your app's performance? Watching your Rails server's memory usage creep up until it crashes?" solution="Let's master Ruby memory management and build apps that stay lean and fast" >}}
+## The Challenge
+Memory leaks killing your app's performance? Watching your Rails server's memory usage creep up until it crashes?
+
+## Our Approach
+Let's master Ruby memory management and build apps that stay lean and fast
 
 Have you ever deployed a Rails app that starts using 100MB of memory, only to find it consuming 2GB after a few days? Memory creep is one of the most insidious performance problems in Ruby applications. It starts small, grows slowly, and then suddenly your servers are crashing with out-of-memory errors.
 
@@ -25,7 +29,9 @@ Before we can optimize memory usage, we need to understand how Ruby handles memo
 
 Ruby uses several types of memory allocation that behave differently:
 
-{{< thoughtbot-example title="Ruby memory allocation types" language="ruby" >}}
+### Ruby memory allocation types
+
+```ruby
 # Object allocation - creates new Ruby objects
 user = User.new                    # Allocates memory for User object
 users = User.all.to_a             # Allocates memory for array and each user
@@ -44,13 +50,15 @@ config = { host: 'localhost', port: 3000 }  # Allocates hash
 
 # Block and Proc allocation
 callback = proc { |x| x * 2 }     # Allocates memory for proc object
-{{< /thoughtbot-example >}}
+```
 
 ### Ruby's garbage collection basics
 
 Ruby uses a mark-and-sweep garbage collector with generational improvements:
 
-{{< thoughtbot-example title="Understanding GC behavior" language="ruby" >}}
+### Understanding GC behavior
+
+```ruby
 # Monitor garbage collection
 GC.start                          # Force garbage collection
 puts GC.stat                      # View GC statistics
@@ -76,13 +84,15 @@ puts "Total allocations: #{gc_stats[:total_allocated_objects]}"
 puts "GC runs: #{gc_stats[:count]}"
 puts "Heap pages: #{gc_stats[:heap_allocated_pages]}"
 puts "Free slots: #{gc_stats[:heap_free_slots]}"
-{{< /thoughtbot-example >}}
+```
 
 ### Memory generations and object lifecycle
 
 Ruby uses generational GC - newer objects are collected more frequently:
 
-{{< thoughtbot-example title="Object generations in Ruby" language="ruby" >}}
+### Object generations in Ruby
+
+```ruby
 # Short-lived objects (collected frequently)
 def process_request
   temp_data = JSON.parse(request.body)  # Dies after method returns
@@ -109,11 +119,9 @@ CONSTANTS = {                          # Lives forever
 ObjectSpace.each_object(String) do |str|
   puts "String: #{str[0..20]}... Generation: #{GC.generation(str)}"
 end
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="tip" >}}
-Use `GC.generation(object)` to see which generation an object belongs to. Generation 0 objects are newest and collected most frequently.
-{{< /thoughtbot-callout >}}
+> **💡 Tip:** Use `GC.generation(object)` to see which generation an object belongs to. Generation 0 objects are newest and collected most frequently.
 
 ## Common memory leak patterns
 
@@ -123,7 +131,9 @@ Let's identify and fix the most common memory leak patterns in Ruby applications
 
 Symbols are never garbage collected, making them dangerous when created from user input:
 
-{{< thoughtbot-example title="Symbol leak prevention" language="ruby" >}}
+### Symbol leak prevention
+
+```ruby
 # BAD: Creates unlimited symbols from user input
 class PostsController < ApplicationController
   def index
@@ -170,13 +180,15 @@ symbols_before = Symbol.all_symbols.count
 # ... run suspicious code ...
 symbols_after = Symbol.all_symbols.count
 puts "Symbols created: #{symbols_after - symbols_before}"
-{{< /thoughtbot-example >}}
+```
 
 ### Pattern 2: Cached object accumulation
 
 Caches that grow unbounded will eventually consume all available memory:
 
-{{< thoughtbot-example title="Safe caching patterns" language="ruby" >}}
+### Safe caching patterns
+
+```ruby
 # BAD: Unbounded cache growth
 class UserCache
   def self.cache
@@ -238,13 +250,15 @@ class MemoryAwareCache
     `ps -o rss= -p #{Process.pid}`.to_i / 1024.0
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Pattern 3: Event listener and callback leaks
 
 Object references in callbacks can prevent garbage collection:
 
-{{< thoughtbot-example title="Callback memory leak prevention" language="ruby" >}}
+### Callback memory leak prevention
+
+```ruby
 # BAD: Callback holds reference to large object
 class DataProcessor
   def initialize(large_dataset)
@@ -317,13 +331,15 @@ class DataProcessor
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Pattern 4: String and array concatenation leaks
 
 Inefficient string and array operations can create memory pressure:
 
-{{< thoughtbot-example title="Efficient string and array operations" language="ruby" >}}
+### Efficient string and array operations
+
+```ruby
 # BAD: Creates many intermediate strings
 def build_html(items)
   html = ""
@@ -372,7 +388,7 @@ def collect_data(sources)
   end
   result
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Profiling memory usage
 
@@ -382,7 +398,9 @@ You can't optimize what you don't measure. Let's set up comprehensive memory pro
 
 The memory_profiler gem gives detailed insights into object allocation:
 
-{{< thoughtbot-example title="Memory profiling with memory_profiler" language="ruby" >}}
+### Memory profiling with memory_profiler
+
+```ruby
 # Gemfile
 gem 'memory_profiler'
 
@@ -433,13 +451,15 @@ end
 report.allocated_memory_by_class.first(10).each do |klass, size|
   puts "#{klass}: #{size} bytes"
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Real-time memory monitoring
 
 Set up continuous memory monitoring in your Rails application:
 
-{{< thoughtbot-example title="Real-time memory monitoring" language="ruby" >}}
+### Real-time memory monitoring
+
+```ruby
 # app/services/memory_monitor.rb
 class MemoryMonitor
   MEMORY_THRESHOLD_MB = 500
@@ -536,13 +556,15 @@ end
 
 # Add to application.rb
 config.middleware.use MemoryTrackingMiddleware
-{{< /thoughtbot-example >}}
+```
 
 ### Memory benchmarking
 
 Compare memory usage of different approaches:
 
-{{< thoughtbot-example title="Memory benchmarking techniques" language="ruby" >}}
+### Memory benchmarking techniques
+
+```ruby
 require 'benchmark/memory'
 
 # Compare different approaches
@@ -622,7 +644,7 @@ end
 result2 = MemoryBenchmark.compare("Optimized approach") do
   # More efficient code
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Garbage collection optimization
 
@@ -632,7 +654,9 @@ Understanding and tuning Ruby's garbage collector can significantly improve perf
 
 Ruby's GC behavior can be tuned via environment variables:
 
-{{< thoughtbot-example title="GC tuning for production" language="bash" >}}
+### GC tuning for production
+
+```bash
 # Environment variables for GC tuning
 
 # Increase heap size to reduce GC frequency
@@ -655,13 +679,15 @@ export RUBY_GC_OLDMALLOC_LIMIT_MAX=128000000
 export RUBY_GC_HEAP_INIT_SLOTS=100000
 export RUBY_GC_HEAP_FREE_SLOTS=10000
 export RUBY_GC_HEAP_GROWTH_FACTOR=1.05
-{{< /thoughtbot-example >}}
+```
 
 ### Custom GC strategies
 
 Implement application-specific GC strategies:
 
-{{< thoughtbot-example title="Custom GC management" language="ruby" >}}
+### Custom GC management
+
+```ruby
 # Smart GC triggering based on request patterns
 class SmartGarbageCollector
   def self.after_request(controller)
@@ -752,13 +778,15 @@ class ApplicationJob < ActiveJob::Base
     `ps -o rss= -p #{Process.pid}`.to_i / 1024.0
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### GC performance monitoring
 
 Track GC performance over time:
 
-{{< thoughtbot-example title="GC performance tracking" language="ruby" >}}
+### GC performance tracking
+
+```ruby
 # app/services/gc_monitor.rb
 class GcMonitor
   def self.start_monitoring
@@ -837,7 +865,7 @@ class GcReportJob < ApplicationJob
     GcReport.create!(report)
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Memory-efficient coding practices
 
@@ -845,7 +873,9 @@ Write code that's naturally memory-friendly from the start.
 
 ### Efficient data processing patterns
 
-{{< thoughtbot-example title="Memory-efficient data processing" language="ruby" >}}
+### Memory-efficient data processing
+
+```ruby
 # BAD: Loads everything into memory
 def process_all_users
   User.all.each do |user|  # Loads ALL users into memory
@@ -905,11 +935,13 @@ def process_large_file(filename)
         process_batch(batch)
       end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Smart caching strategies
 
-{{< thoughtbot-example title="Memory-conscious caching" language="ruby" >}}
+### Memory-conscious caching
+
+```ruby
 # Cache only what you need, when you need it
 class UserStatsCache
   CACHE_TTL = 1.hour
@@ -1015,11 +1047,13 @@ class SizeLimitedCache
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ### Avoiding common memory pitfalls
 
-{{< thoughtbot-example title="Memory pitfall prevention" language="ruby" >}}
+### Memory pitfall prevention
+
+```ruby
 # 1. Avoid creating unnecessary objects in loops
 # BAD
 def format_users(users)
@@ -1119,11 +1153,9 @@ end
 def build_query(conditions)
   "SELECT * FROM users WHERE #{conditions.join(' AND ')}"
 end
-{{< /thoughtbot-example >}}
+```
 
-{{< thoughtbot-callout type="warning" >}}
-Don't micro-optimize too early! Focus on the biggest memory users first. Profile your application to find the real bottlenecks before applying these techniques.
-{{< /thoughtbot-callout >}}
+> **⚠️ Warning:** Don't micro-optimize too early! Focus on the biggest memory users first. Profile your application to find the real bottlenecks before applying these techniques.
 
 ## Production monitoring and alerting
 
@@ -1131,7 +1163,9 @@ Set up comprehensive monitoring to catch memory issues before they affect users.
 
 ### Memory alerting system
 
-{{< thoughtbot-example title="Production memory monitoring" language="ruby" >}}
+### Production memory monitoring
+
+```ruby
 # config/initializers/memory_monitoring.rb (production only)
 if Rails.env.production?
   class ProductionMemoryMonitor
@@ -1254,15 +1288,13 @@ if defined?(Sidekiq)
     end
   end
 end
-{{< /thoughtbot-example >}}
+```
 
 ## Ready to master Ruby memory management?
 
 Memory management in Ruby doesn't have to be mysterious. By understanding how Ruby allocates and collects memory, identifying common leak patterns, and implementing smart monitoring, you can build applications that stay lean and fast even as they scale.
 
 The key is to start with good practices from the beginning: avoid creating unnecessary objects, use efficient data processing patterns, and monitor your memory usage in production. When issues do arise, you'll have the tools and knowledge to diagnose and fix them quickly.
-
-{{< thoughtbot-conclusion next-steps="true" related-posts="true" >}}
 
 **Start optimizing your Ruby memory usage:**
 
@@ -1284,4 +1316,3 @@ Our memory optimization services include:
 
 Ready to build memory-efficient Ruby applications? [Contact us for a memory optimization consultation](https://jetthoughts.com/contact/) and let's discuss how we can help your application run leaner and faster.
 
-{{< /thoughtbot-conclusion >}}
