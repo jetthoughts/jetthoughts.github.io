@@ -1,0 +1,298 @@
+/* ==========================================================================
+   Form Component System
+   BEM-compliant form components to replace FL-node-specific styles
+   Conservative implementation with dual-class support for backward compatibility
+   ========================================================================== */
+
+/**
+ * Base Form Component
+ * Replaces: .fl-node-*[form-related] selectors
+ * Usage: Apply to <form> elements or form wrappers
+ */
+.c-form {
+  /* Base form styles */
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+/* Form container */
+.c-form__container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Form row */
+.c-form__row {
+  margin-bottom: 1.5rem;
+}
+
+.c-form__row:last-child {
+  margin-bottom: 0;
+}
+
+/* Form group */
+.c-form__group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+/* Form label */
+.c-form__label,
+.gform_wrapper .gfield_label,
+[class*="fl-node-"] label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--jt-text-primary, #121212);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Form field (input, textarea, select) */
+.c-form__field,
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="email"],
+.gform_wrapper input[type="tel"],
+.gform_wrapper input[type="url"],
+.gform_wrapper input[type="number"],
+.gform_wrapper input[type="password"],
+[class*="fl-node-"] input[type="text"],
+[class*="fl-node-"] input[type="email"],
+[class*="fl-node-"] input[type="tel"],
+[class*="fl-node-"] input[type="url"],
+[class*="fl-node-"] input[type="number"],
+[class*="fl-node-"] input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  background-clip: padding-box;
+  border: 1px solid var(--jt-gray-medium, #d1d1d1);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.c-form__field:focus,
+.gform_wrapper input[type="text"]:focus,
+.gform_wrapper input[type="email"]:focus,
+.gform_wrapper input[type="tel"]:focus,
+.gform_wrapper input[type="url"]:focus,
+.gform_wrapper input[type="number"]:focus,
+.gform_wrapper input[type="password"]:focus,
+[class*="fl-node-"] input[type="text"]:focus,
+[class*="fl-node-"] input[type="email"]:focus,
+[class*="fl-node-"] input[type="tel"]:focus,
+[class*="fl-node-"] input[type="url"]:focus,
+[class*="fl-node-"] input[type="number"]:focus,
+[class*="fl-node-"] input[type="password"]:focus {
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  border-color: var(--jt-primary, #1a8cff);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(26, 140, 255, 0.25);
+}
+
+.c-form__field::placeholder,
+.gform_wrapper input::placeholder,
+[class*="fl-node-"] input::placeholder {
+  color: var(--jt-text-secondary, #7e7e7e);
+  opacity: 1;
+}
+
+.c-form__field:disabled,
+.gform_wrapper input:disabled,
+[class*="fl-node-"] input:disabled {
+  background-color: var(--jt-gray-light, #f8f9fa);
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+/* Textarea specific */
+.c-form__textarea,
+.gform_wrapper textarea,
+[class*="fl-node-"] textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  background-clip: padding-box;
+  border: 1px solid var(--jt-gray-medium, #d1d1d1);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.c-form__textarea:focus,
+.gform_wrapper textarea:focus,
+[class*="fl-node-"] textarea:focus {
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  border-color: var(--jt-primary, #1a8cff);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(26, 140, 255, 0.25);
+}
+
+/* Select specific */
+.c-form__select,
+.gform_wrapper select,
+[class*="fl-node-"] select {
+  width: 100%;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  padding: 0.75rem 2.25rem 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  border: 1px solid var(--jt-gray-medium, #d1d1d1);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.c-form__select:focus,
+.gform_wrapper select:focus,
+[class*="fl-node-"] select:focus {
+  border-color: var(--jt-primary, #1a8cff);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(26, 140, 255, 0.25);
+}
+
+/* Checkbox and Radio wrapper */
+.c-form__check {
+  display: block;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+}
+
+.c-form__check input {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+/* Help text */
+.c-form__help {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--jt-text-secondary, #7e7e7e);
+}
+
+/* Error message */
+.c-form__error {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--jt-danger, #dc3545);
+}
+
+/* Form actions (button group) */
+.c-form__actions,
+.gform_wrapper .gform_footer {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Form button */
+.c-form__button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.c-form__button--primary,
+.gform_wrapper .gform_button {
+  color: var(--jt-white, #ffffff);
+  background-color: var(--jt-primary, #1a8cff);
+  border-color: var(--jt-primary, #1a8cff);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.c-form__button--primary:hover,
+.gform_wrapper .gform_button:hover {
+  background-color: var(--jt-primary-dark, #0066cc);
+  border-color: var(--jt-primary-dark, #0066cc);
+}
+
+.c-form__button--secondary {
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-gray-light, #f8f9fa);
+  border-color: var(--jt-gray-medium, #d1d1d1);
+}
+
+.c-form__button--secondary:hover {
+  background-color: var(--jt-gray-medium, #d1d1d1);
+}
+
+/* Form modifiers */
+.c-form--inline .c-form__group {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.c-form--horizontal .c-form__group {
+  display: flex;
+  align-items: center;
+}
+
+.c-form--horizontal .c-form__label {
+  flex: 0 0 30%;
+  margin-bottom: 0;
+  padding-right: 1rem;
+}
+
+.c-form--horizontal .c-form__field {
+  flex: 1 1 auto;
+}
+
+.c-form--compact .c-form__group {
+  margin-bottom: 0.75rem;
+}
+
+.c-form--compact .c-form__field {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Backward compatibility mapping */
+.gform_wrapper {
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.gform_wrapper .gform_body {
+  width: 100%;
+  max-width: 100%;
+}
+
+.gform_wrapper .gfield {
+  position: relative;
+  margin-bottom: 1.25rem;
+}

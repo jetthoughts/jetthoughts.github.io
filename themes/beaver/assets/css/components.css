@@ -1,5 +1,6 @@
 /* Component Library - BEM Convention with c- prefix */
 @import 'components/content-block';
+@import 'components/forms';
 @import 'utilities/colors';
 @import 'utilities/color-accessibility';
 
