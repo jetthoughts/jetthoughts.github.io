@@ -31,7 +31,7 @@
 
 .heading-component .heading-self-link {
   text-decoration: none;
-  color: #1a8cff;
+  color: var(--jt-primary);
   visibility: hidden;
 }
 .heading-component:hover>.heading-self-link {

@@ -2628,6 +2628,10 @@ echo "🔍 Cross-page consistency validation..."
 - [ ] **Typography Consistency**: Font sizes, weights, line heights match design system
 - [ ] **Color Accuracy**: Exact color matching to design specifications
 - [ ] **Layout Precision**: Margins, padding, alignment pixel-perfect
+- [ ] **🆕 MOBILE CSS VARIABLE VALIDATION**: Direct hex values in @media queries for mobile
+- [ ] **🆕 PARALLEL DEVICE TESTING**: Simultaneous mobile and desktop visual regression testing
+- [ ] **🆕 SUB-PIXEL DIFFERENCE DETECTION**: Enhanced screenshot comparison for mobile rendering
+- [ ] **🆕 CROSS-DEVICE COLOR CONSISTENCY**: Verify colors render identically across device types
 
 ### 🛠️ PROACTIVE VISUAL TESTING REQUIREMENTS
 
@@ -2641,13 +2645,23 @@ bin/lighthouse --screenshots || { echo "❌ Visual testing failed"; exit 1; }
 echo "🌐 Cross-browser validation..."
 # Test in multiple browser engines - agents must verify consistent rendering
 
-# 3. MANDATORY: Mobile responsiveness validation
+# 3. MANDATORY: Mobile responsiveness validation with CSS variable testing
 echo "📱 Mobile responsiveness check..."
+echo "🆕 MOBILE CSS VARIABLE PROTOCOL:"
+echo "   • Test CSS variables vs direct hex values in @media queries"
+echo "   • Capture mobile screenshots at multiple breakpoints"
+echo "   • Compare mobile rendering against desktop pixel-by-pixel"
+echo "   • Validate sub-pixel rendering consistency"
 # Test mobile breakpoints - agents must provide mobile screenshots
 
 # 4. MANDATORY: Performance impact of visual changes
 echo "⚡ Performance impact assessment..."
 bin/lighthouse --performance || { echo "❌ Performance degraded"; exit 1; }
+
+# 5. 🆕 MANDATORY: Mobile CSS variable compatibility check
+echo "📱 Mobile CSS variable compatibility validation..."
+echo "🔍 Checking for CSS variable rendering differences on mobile..."
+echo "⚠️  If CSS variables cause mobile rendering issues, use direct hex values in @media queries"
 ```
 
 ### 🎯 REFERENCE SCREENSHOT MANAGEMENT
@@ -2682,6 +2696,10 @@ _screenshots/comparisons/
 - Fail to verify asset loading and rendering
 - Don't compare before/after visual states
 - Skip performance impact assessment of visual changes
+- **🆕 MOBILE CSS VARIABLE FAILURES**: Use CSS variables in mobile @media queries without testing sub-pixel differences
+- **🆕 PARALLEL TESTING OMISSION**: Test only desktop OR mobile instead of both simultaneously
+- **🆕 SUB-PIXEL REGRESSION**: Introduce visual changes that cause <1% but detectable differences
+- **🆕 CROSS-DEVICE INCONSISTENCY**: Allow different color rendering between desktop and mobile
 
 ### 🔍 VISUAL VALIDATION AGENT PAIRING
 
@@ -2690,6 +2708,8 @@ _screenshots/comparisons/
 - **Designer + Frontend Developer**: Visual design implementation
 - **Performance Expert + Visual Validator**: Visual optimization tasks
 - **Accessibility Expert + UI Developer**: Accessibility-related visual changes
+- **🆕 Mobile CSS Expert + Cross-Device Tester**: Color migrations and mobile-specific CSS changes
+- **🆕 Visual Regression Specialist + Screenshot Validator**: Sub-pixel difference detection and validation
 
 ## 👥 FOUR-EYES PRINCIPLE (MANDATORY) - AUTOMATIC PAIRING ENFORCEMENT
 
@@ -3543,6 +3563,29 @@ hugo_deployment_workflow_protocol() {
     echo "   Task('Performance Validator', 'Validate deployment performance and monitoring', 'performance-expert')"
     echo "   Task('Deployment Validator', 'Test deployment process and rollback procedures', 'deployment-validator')"
 }
+
+# 🆕 CSS Color Migration Workflow Delegation (Added Sept 18, 2025)
+hugo_css_color_migration_protocol() {
+    local migration_scope="$1"
+
+    echo "🎨 HUGO CSS COLOR MIGRATION - MANDATORY CROSS-DEVICE EXPERT SWARM"
+
+    echo "🐝 SPAWNING: CSS Color Migration Expert Swarm"
+    echo "   Task('Mobile CSS Expert', 'Lead mobile CSS architecture and validate cross-device rendering', 'mobile-css-expert')"
+    echo "   Task('Color System Architect', 'Design CSS variable strategy and mobile compatibility', 'color-system-architect')"
+    echo "   Task('Visual Regression Specialist', 'Implement parallel desktop/mobile screenshot testing', 'visual-regression-specialist')"
+    echo "   Task('Cross-Device Tester', 'Validate color consistency across device types', 'cross-device-tester')"
+    echo "   Task('CSS Performance Expert', 'Optimize color system performance impact', 'css-performance-expert')"
+    echo "   Task('Sub-Pixel Validator', 'Detect and prevent sub-pixel rendering differences', 'sub-pixel-validator')"
+    echo "   Task('Migration Coordinator', 'Orchestrate rollback procedures and validation gates', 'migration-coordinator')"
+    echo ""
+    echo "🔍 MANDATORY VALIDATION PROTOCOL:"
+    echo "   1. Parallel desktop AND mobile testing (never test one without the other)"
+    echo "   2. CSS variable compatibility testing on mobile browsers"
+    echo "   3. Direct hex value fallbacks in @media queries for mobile"
+    echo "   4. Sub-pixel difference detection and validation"
+    echo "   5. Automatic rollback triggers for any visual regression >0.1%"
+}
 ```
 
 #### **SWARM COORDINATION MEMORY NAMESPACES FOR HUGO WORKFLOWS**
@@ -3577,6 +3620,12 @@ hugo_memory_coordination_setup() {
 
     # Content coordination
     echo "📋 CONTENT COORDINATION: $base_namespace/content"
+
+    # 🆕 CSS color migration coordination (Added Sept 18, 2025)
+    echo "📋 CSS COLOR MIGRATION: $base_namespace/css-colors"
+    echo "📋 MOBILE RENDERING: $base_namespace/mobile-validation"
+    echo "📋 VISUAL REGRESSION: $base_namespace/visual-regression"
+    echo "📋 CROSS-DEVICE TESTING: $base_namespace/cross-device"
 }
 ```
 
@@ -3618,7 +3667,7 @@ hugo_memory_coordination_setup() {
    b) **Cleanup**: Remove redundant files/code immediately
 7. **Knowledge Management**: Document patterns in structured system
 
-## 🚀 Available Agents (95+ Total - Hugo/Static Site Specialized)
+## 🚀 Available Agents (102+ Total - Hugo/Static Site + Mobile CSS Specialized)
 
 ### Expert Agents (7) - Hugo Specialized + Ruby Testing Expert
 `security-expert`, `qa-expert`, `architecture-expert`, `performance-expert`, `knowledge-expert`, `ruby-coder`, `ruby-reviewer`
@@ -3635,14 +3684,14 @@ hugo_memory_coordination_setup() {
 ### Performance & Optimization (9)
 `perf-analyzer`, `performance-monitor`, `task-orchestrator`, `memory-coordinator`, `smart-agent`, `topology-optimizer`, `load-balancer`, `lighthouse-auditor`, `web-vitals-optimizer`
 
-### Testing & Validation (6)
-`tdd-london-swarm`, `production-validator`, `content-validator`, `link-checker`, `accessibility-tester`, `cross-browser-tester`
+### Testing & Validation (10) - Enhanced with Mobile CSS Validation
+`tdd-london-swarm`, `production-validator`, `content-validator`, `link-checker`, `accessibility-tester`, `cross-browser-tester`, `🆕 mobile-css-expert`, `🆕 visual-regression-specialist`, `🆕 cross-device-tester`, `🆕 sub-pixel-validator`
 
 ### Content & SEO Management (7)
 `content-organizer`, `seo-optimizer`, `meta-generator`, `structured-data-validator`, `taxonomy-manager`, `content-auditor`, `keyword-researcher`
 
-### Quality & Maintenance (8)
-`quality-guardian`, `code-formatter`, `dependency-auditor`, `security-scanner`, `performance-budgets`, `build-optimizer`, `cache-strategist`, `cdn-optimizer`
+### Quality & Maintenance (11) - Enhanced with CSS Color System
+`quality-guardian`, `code-formatter`, `dependency-auditor`, `security-scanner`, `performance-budgets`, `build-optimizer`, `cache-strategist`, `cdn-optimizer`, `🆕 color-system-architect`, `🆕 css-performance-expert`, `🆕 migration-coordinator`
 
 ### 🛡️ EXISTING PROJECT TOOLS - AGENTS MUST USE THESE
 ```bash
