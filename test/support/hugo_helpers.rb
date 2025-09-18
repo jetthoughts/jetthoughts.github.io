@@ -27,7 +27,7 @@ class Hugo
     return self if ENV["PRECOMPILED_ASSETS"]
 
     args = HUGO_OPTIONS.dup
-    args += %W[--baseURL http://localhost:#{@port}] if port
+    args += %W[--baseURL http://localhost:#{@port}] if @port
     args += %W[--destination #{destination}]
     warn "Hugo: #{args.join(" ")}" if ENV["DEBUG"]
     system(*args, exception: true)
