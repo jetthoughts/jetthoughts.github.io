@@ -1,0 +1,357 @@
+/**
+ * Typography Component (c-typography)
+ *
+ * Unified typography system consolidating scattered font styles
+ * Provides consistent type scale with CSS variables and BEM methodology
+ *
+ * CYCLE 5: Typography System Enhancement
+ * Target: 30-40% reduction of 1,900+ typography references
+ */
+
+/* ==========================================================================
+   Typography Variables (CSS Custom Properties)
+   ========================================================================== */
+
+:root {
+  // Type Scale (Major Third - 1.25 ratio)
+  --font-size-xs: 0.8rem;    // 12.8px @ 16px base
+  --font-size-sm: 1rem;      // 16px
+  --font-size-md: 1.25rem;   // 20px
+  --font-size-lg: 1.563rem;  // 25px
+  --font-size-xl: 1.953rem;  // 31.25px
+  --font-size-2xl: 2.441rem; // 39px
+  --font-size-3xl: 3.052rem; // 48.8px
+
+  // Font Weights
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // Line Heights
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  // Font Families
+  --font-family-primary: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
+
+/* ==========================================================================
+   Base Typography
+   ========================================================================== */
+
+.c-typography {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--jt-text-color, #121212);
+}
+
+/* ==========================================================================
+   Heading Components
+   ========================================================================== */
+
+.c-heading {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0 0 1rem;
+  color: var(--jt-text-color, #121212);
+
+  // Dual-class support for existing headings
+  &.fl-heading,
+  &.fl-rich-text h1,
+  &.fl-rich-text h2,
+  &.fl-rich-text h3,
+  &.fl-rich-text h4,
+  &.fl-rich-text h5,
+  &.fl-rich-text h6 {
+    margin: 0 0 1rem;
+  }
+}
+
+/* Heading Size Modifiers */
+.c-heading--xl,
+h1.c-heading,
+.c-heading.h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.c-heading--lg,
+h2.c-heading,
+.c-heading.h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.c-heading--md,
+h3.c-heading,
+.c-heading.h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.c-heading--sm,
+h4.c-heading,
+.c-heading.h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.c-heading--xs,
+h5.c-heading,
+.c-heading.h5,
+h6.c-heading,
+.c-heading.h6 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   Text Components
+   ========================================================================== */
+
+.c-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  margin: 0 0 1rem;
+
+  // Dual-class support for FL-Builder content
+  &.fl-rich-text,
+  &.fl-rich-text p {
+    margin: 0 0 1rem;
+  }
+}
+
+/* Text Size Modifiers */
+.c-text--xs {
+  font-size: var(--font-size-xs);
+}
+
+.c-text--sm {
+  font-size: var(--font-size-sm);
+}
+
+.c-text--lg {
+  font-size: var(--font-size-lg);
+}
+
+.c-text--xl {
+  font-size: var(--font-size-xl);
+}
+
+/* Text Weight Modifiers */
+.c-text--light {
+  font-weight: var(--font-weight-light);
+}
+
+.c-text--medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.c-text--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.c-text--bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Text Style Modifiers */
+.c-text--italic {
+  font-style: italic;
+}
+
+.c-text--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.c-text--center {
+  text-align: center;
+}
+
+.c-text--right {
+  text-align: right;
+}
+
+/* ==========================================================================
+   Special Typography Components
+   ========================================================================== */
+
+.c-lead {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 1.5rem;
+}
+
+.c-caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--jt-text-color, #666);
+  margin: 0.5rem 0;
+}
+
+.c-quote {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  line-height: var(--line-height-relaxed);
+  border-left: 4px solid var(--jt-primary-color, #1a8cff);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.c-code {
+  font-family: var(--font-family-mono);
+  font-size: 0.875em;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   Responsive Typography
+   ========================================================================== */
+
+// Mobile adjustments (use direct values, not variables)
+@media (max-width: 768px) {
+  .c-heading--xl,
+  h1.c-heading {
+    font-size: 2.5rem; // Reduced from 3.052rem
+  }
+
+  .c-heading--lg,
+  h2.c-heading {
+    font-size: 2rem; // Reduced from 2.441rem
+  }
+
+  .c-heading--md,
+  h3.c-heading {
+    font-size: 1.75rem; // Reduced from 1.953rem
+  }
+
+  .c-lead {
+    font-size: 1.125rem; // Reduced from 1.563rem
+  }
+}
+
+@media (max-width: 480px) {
+  .c-heading--xl,
+  h1.c-heading {
+    font-size: 2rem;
+  }
+
+  .c-heading--lg,
+  h2.c-heading {
+    font-size: 1.75rem;
+  }
+
+  .c-heading--md,
+  h3.c-heading {
+    font-size: 1.5rem;
+  }
+
+  .c-lead {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================================================
+   FL-Builder Content Integration
+   ========================================================================== */
+
+.fl-rich-text {
+  // Apply typography system to FL-Builder content
+  h1 { @extend .c-heading--xl; }
+  h2 { @extend .c-heading--lg; }
+  h3 { @extend .c-heading--md; }
+  h4 { @extend .c-heading--sm; }
+  h5, h6 { @extend .c-heading--xs; }
+
+  p { @extend .c-text; }
+
+  strong, b {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  em, i {
+    font-style: italic;
+  }
+
+  small {
+    @extend .c-text--xs;
+  }
+
+  code {
+    @extend .c-code;
+  }
+
+  blockquote {
+    @extend .c-quote;
+  }
+}
+
+/* ==========================================================================
+   Link Styling
+   ========================================================================== */
+
+.c-link {
+  color: var(--jt-primary-color, #1a8cff);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken(var(--jt-primary-color, #1a8cff), 10%);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid var(--jt-primary-color, #1a8cff);
+    outline-offset: 2px;
+  }
+}
+
+/* ==========================================================================
+   List Styling
+   ========================================================================== */
+
+.c-list {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  // Dual-class support
+  &.fl-rich-text ul,
+  &.fl-rich-text ol {
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.c-list--unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.c-list--inline {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
