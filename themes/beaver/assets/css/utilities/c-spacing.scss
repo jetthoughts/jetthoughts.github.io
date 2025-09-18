@@ -1,0 +1,307 @@
+/**
+ * Spacing Utilities (c-spacing)
+ *
+ * Unified spacing system consolidating scattered margin/padding values
+ * Provides consistent spacing scale with CSS variables and utility classes
+ *
+ * CYCLE 6: Spacing System Enhancement
+ * Target: 25-30% reduction of 6,973+ spacing references
+ */
+
+/* ==========================================================================
+   Spacing Variables (CSS Custom Properties)
+   ========================================================================== */
+
+:root {
+  // Spacing Scale (8px base, geometric progression)
+  --spacing-0: 0;
+  --spacing-xs: 0.25rem;  // 4px
+  --spacing-sm: 0.5rem;   // 8px
+  --spacing-md: 1rem;     // 16px
+  --spacing-lg: 1.5rem;   // 24px
+  --spacing-xl: 2rem;     // 32px
+  --spacing-2xl: 3rem;    // 48px
+  --spacing-3xl: 4rem;    // 64px
+  --spacing-4xl: 6rem;    // 96px
+  --spacing-5xl: 8rem;    // 128px
+
+  // Component-specific spacing
+  --spacing-component-padding: var(--spacing-lg);
+  --spacing-section-padding: var(--spacing-2xl);
+  --spacing-container-padding: var(--spacing-md);
+}
+
+/* ==========================================================================
+   Margin Utilities
+   ========================================================================== */
+
+// All sides
+.u-margin-0 { margin: var(--spacing-0) !important; }
+.u-margin-xs { margin: var(--spacing-xs) !important; }
+.u-margin-sm { margin: var(--spacing-sm) !important; }
+.u-margin-md { margin: var(--spacing-md) !important; }
+.u-margin-lg { margin: var(--spacing-lg) !important; }
+.u-margin-xl { margin: var(--spacing-xl) !important; }
+.u-margin-2xl { margin: var(--spacing-2xl) !important; }
+.u-margin-3xl { margin: var(--spacing-3xl) !important; }
+
+// Horizontal (left + right)
+.u-margin-x-0 { margin-left: var(--spacing-0) !important; margin-right: var(--spacing-0) !important; }
+.u-margin-x-xs { margin-left: var(--spacing-xs) !important; margin-right: var(--spacing-xs) !important; }
+.u-margin-x-sm { margin-left: var(--spacing-sm) !important; margin-right: var(--spacing-sm) !important; }
+.u-margin-x-md { margin-left: var(--spacing-md) !important; margin-right: var(--spacing-md) !important; }
+.u-margin-x-lg { margin-left: var(--spacing-lg) !important; margin-right: var(--spacing-lg) !important; }
+.u-margin-x-xl { margin-left: var(--spacing-xl) !important; margin-right: var(--spacing-xl) !important; }
+.u-margin-x-auto { margin-left: auto !important; margin-right: auto !important; }
+
+// Vertical (top + bottom)
+.u-margin-y-0 { margin-top: var(--spacing-0) !important; margin-bottom: var(--spacing-0) !important; }
+.u-margin-y-xs { margin-top: var(--spacing-xs) !important; margin-bottom: var(--spacing-xs) !important; }
+.u-margin-y-sm { margin-top: var(--spacing-sm) !important; margin-bottom: var(--spacing-sm) !important; }
+.u-margin-y-md { margin-top: var(--spacing-md) !important; margin-bottom: var(--spacing-md) !important; }
+.u-margin-y-lg { margin-top: var(--spacing-lg) !important; margin-bottom: var(--spacing-lg) !important; }
+.u-margin-y-xl { margin-top: var(--spacing-xl) !important; margin-bottom: var(--spacing-xl) !important; }
+
+// Individual sides
+.u-margin-top-0 { margin-top: var(--spacing-0) !important; }
+.u-margin-top-xs { margin-top: var(--spacing-xs) !important; }
+.u-margin-top-sm { margin-top: var(--spacing-sm) !important; }
+.u-margin-top-md { margin-top: var(--spacing-md) !important; }
+.u-margin-top-lg { margin-top: var(--spacing-lg) !important; }
+.u-margin-top-xl { margin-top: var(--spacing-xl) !important; }
+.u-margin-top-2xl { margin-top: var(--spacing-2xl) !important; }
+
+.u-margin-bottom-0 { margin-bottom: var(--spacing-0) !important; }
+.u-margin-bottom-xs { margin-bottom: var(--spacing-xs) !important; }
+.u-margin-bottom-sm { margin-bottom: var(--spacing-sm) !important; }
+.u-margin-bottom-md { margin-bottom: var(--spacing-md) !important; }
+.u-margin-bottom-lg { margin-bottom: var(--spacing-lg) !important; }
+.u-margin-bottom-xl { margin-bottom: var(--spacing-xl) !important; }
+.u-margin-bottom-2xl { margin-bottom: var(--spacing-2xl) !important; }
+
+.u-margin-left-0 { margin-left: var(--spacing-0) !important; }
+.u-margin-left-xs { margin-left: var(--spacing-xs) !important; }
+.u-margin-left-sm { margin-left: var(--spacing-sm) !important; }
+.u-margin-left-md { margin-left: var(--spacing-md) !important; }
+.u-margin-left-lg { margin-left: var(--spacing-lg) !important; }
+.u-margin-left-xl { margin-left: var(--spacing-xl) !important; }
+.u-margin-left-auto { margin-left: auto !important; }
+
+.u-margin-right-0 { margin-right: var(--spacing-0) !important; }
+.u-margin-right-xs { margin-right: var(--spacing-xs) !important; }
+.u-margin-right-sm { margin-right: var(--spacing-sm) !important; }
+.u-margin-right-md { margin-right: var(--spacing-md) !important; }
+.u-margin-right-lg { margin-right: var(--spacing-lg) !important; }
+.u-margin-right-xl { margin-right: var(--spacing-xl) !important; }
+.u-margin-right-auto { margin-right: auto !important; }
+
+/* ==========================================================================
+   Padding Utilities
+   ========================================================================== */
+
+// All sides
+.u-padding-0 { padding: var(--spacing-0) !important; }
+.u-padding-xs { padding: var(--spacing-xs) !important; }
+.u-padding-sm { padding: var(--spacing-sm) !important; }
+.u-padding-md { padding: var(--spacing-md) !important; }
+.u-padding-lg { padding: var(--spacing-lg) !important; }
+.u-padding-xl { padding: var(--spacing-xl) !important; }
+.u-padding-2xl { padding: var(--spacing-2xl) !important; }
+.u-padding-3xl { padding: var(--spacing-3xl) !important; }
+
+// Horizontal (left + right)
+.u-padding-x-0 { padding-left: var(--spacing-0) !important; padding-right: var(--spacing-0) !important; }
+.u-padding-x-xs { padding-left: var(--spacing-xs) !important; padding-right: var(--spacing-xs) !important; }
+.u-padding-x-sm { padding-left: var(--spacing-sm) !important; padding-right: var(--spacing-sm) !important; }
+.u-padding-x-md { padding-left: var(--spacing-md) !important; padding-right: var(--spacing-md) !important; }
+.u-padding-x-lg { padding-left: var(--spacing-lg) !important; padding-right: var(--spacing-lg) !important; }
+.u-padding-x-xl { padding-left: var(--spacing-xl) !important; padding-right: var(--spacing-xl) !important; }
+
+// Vertical (top + bottom)
+.u-padding-y-0 { padding-top: var(--spacing-0) !important; padding-bottom: var(--spacing-0) !important; }
+.u-padding-y-xs { padding-top: var(--spacing-xs) !important; padding-bottom: var(--spacing-xs) !important; }
+.u-padding-y-sm { padding-top: var(--spacing-sm) !important; padding-bottom: var(--spacing-sm) !important; }
+.u-padding-y-md { padding-top: var(--spacing-md) !important; padding-bottom: var(--spacing-md) !important; }
+.u-padding-y-lg { padding-top: var(--spacing-lg) !important; padding-bottom: var(--spacing-lg) !important; }
+.u-padding-y-xl { padding-top: var(--spacing-xl) !important; padding-bottom: var(--spacing-xl) !important; }
+
+// Individual sides
+.u-padding-top-0 { padding-top: var(--spacing-0) !important; }
+.u-padding-top-xs { padding-top: var(--spacing-xs) !important; }
+.u-padding-top-sm { padding-top: var(--spacing-sm) !important; }
+.u-padding-top-md { padding-top: var(--spacing-md) !important; }
+.u-padding-top-lg { padding-top: var(--spacing-lg) !important; }
+.u-padding-top-xl { padding-top: var(--spacing-xl) !important; }
+.u-padding-top-2xl { padding-top: var(--spacing-2xl) !important; }
+
+.u-padding-bottom-0 { padding-bottom: var(--spacing-0) !important; }
+.u-padding-bottom-xs { padding-bottom: var(--spacing-xs) !important; }
+.u-padding-bottom-sm { padding-bottom: var(--spacing-sm) !important; }
+.u-padding-bottom-md { padding-bottom: var(--spacing-md) !important; }
+.u-padding-bottom-lg { padding-bottom: var(--spacing-lg) !important; }
+.u-padding-bottom-xl { padding-bottom: var(--spacing-xl) !important; }
+.u-padding-bottom-2xl { padding-bottom: var(--spacing-2xl) !important; }
+
+.u-padding-left-0 { padding-left: var(--spacing-0) !important; }
+.u-padding-left-xs { padding-left: var(--spacing-xs) !important; }
+.u-padding-left-sm { padding-left: var(--spacing-sm) !important; }
+.u-padding-left-md { padding-left: var(--spacing-md) !important; }
+.u-padding-left-lg { padding-left: var(--spacing-lg) !important; }
+.u-padding-left-xl { padding-left: var(--spacing-xl) !important; }
+
+.u-padding-right-0 { padding-right: var(--spacing-0) !important; }
+.u-padding-right-xs { padding-right: var(--spacing-xs) !important; }
+.u-padding-right-sm { padding-right: var(--spacing-sm) !important; }
+.u-padding-right-md { padding-right: var(--spacing-md) !important; }
+.u-padding-right-lg { padding-right: var(--spacing-lg) !important; }
+.u-padding-right-xl { padding-right: var(--spacing-xl) !important; }
+
+/* ==========================================================================
+   Component-Specific Spacing Classes
+   ========================================================================== */
+
+.c-section {
+  padding: var(--spacing-section-padding) 0;
+
+  // Dual-class support for FL-Builder sections
+  &.fl-row,
+  &.fl-row-content {
+    padding: var(--spacing-section-padding) 0;
+  }
+}
+
+.c-container {
+  padding-left: var(--spacing-container-padding);
+  padding-right: var(--spacing-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+
+  // Dual-class support
+  &.fl-row-fixed-width,
+  &.fl-row-content {
+    padding-left: var(--spacing-container-padding);
+    padding-right: var(--spacing-container-padding);
+  }
+}
+
+.c-content-block {
+  padding: var(--spacing-component-padding);
+
+  // Dual-class support for FL-Builder modules
+  &.fl-module,
+  &.fl-module-content {
+    padding: var(--spacing-component-padding);
+  }
+}
+
+/* ==========================================================================
+   Responsive Spacing (Mobile)
+   ========================================================================== */
+
+// Mobile adjustments (use direct values, not variables)
+@media (max-width: 768px) {
+  :root {
+    --spacing-section-padding: 1.5rem; // Reduced from 3rem
+    --spacing-container-padding: 0.75rem; // Reduced from 1rem
+  }
+
+  .c-section {
+    padding: 1.5rem 0;
+  }
+
+  .c-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  // Mobile-specific utilities
+  .u-margin-mobile-0 { margin: 0 !important; }
+  .u-margin-mobile-sm { margin: 0.5rem !important; }
+  .u-padding-mobile-0 { padding: 0 !important; }
+  .u-padding-mobile-sm { padding: 0.5rem !important; }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-section-padding: 1rem;
+    --spacing-container-padding: 0.5rem;
+  }
+
+  .c-section {
+    padding: 1rem 0;
+  }
+
+  .c-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* ==========================================================================
+   FL-Builder Integration Classes
+   ========================================================================== */
+
+// Apply spacing system to common FL-Builder patterns
+.fl-row {
+  // Section-level spacing
+  &.fl-row-bg-none {
+    padding: var(--spacing-lg) 0;
+  }
+
+  &.fl-row-bg-photo,
+  &.fl-row-bg-video {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+.fl-col-content {
+  // Component-level spacing
+  padding: var(--spacing-md);
+}
+
+.fl-module-content {
+  // Module-level spacing
+  margin-bottom: var(--spacing-md);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   PowerPack Content Integration
+   ========================================================================== */
+
+.pp-content-post {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pp-content-grid {
+  gap: var(--spacing-md);
+
+  &.pp-content-grid-tight {
+    gap: var(--spacing-sm);
+  }
+
+  &.pp-content-grid-loose {
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ==========================================================================
+   Negative Margins (for special cases)
+   ========================================================================== */
+
+.u-margin-negative-xs { margin: calc(-1 * var(--spacing-xs)) !important; }
+.u-margin-negative-sm { margin: calc(-1 * var(--spacing-sm)) !important; }
+.u-margin-negative-md { margin: calc(-1 * var(--spacing-md)) !important; }
+
+.u-margin-top-negative-xs { margin-top: calc(-1 * var(--spacing-xs)) !important; }
+.u-margin-top-negative-sm { margin-top: calc(-1 * var(--spacing-sm)) !important; }
+.u-margin-top-negative-md { margin-top: calc(-1 * var(--spacing-md)) !important; }
