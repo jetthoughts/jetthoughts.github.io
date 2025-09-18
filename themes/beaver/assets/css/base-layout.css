@@ -38,6 +38,9 @@
   --font-family-monospace:
     SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
+  /* JetThoughts Brand Colors */
+  --jt-primary: #1a8cff;
+  --jt-dark: #121212;
 }
 *,
 *::before,

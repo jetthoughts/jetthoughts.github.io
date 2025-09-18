@@ -2055,6 +2055,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .menu > li.current-menu-item > a,
 .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
   color: #1a8cff;
+  color: var(--jt-primary, #1a8cff); /* Progressive enhancement with fallback */
 }
 
 .fl-node-menu
