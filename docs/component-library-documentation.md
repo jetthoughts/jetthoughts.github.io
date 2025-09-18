@@ -164,11 +164,82 @@ To use these components in Hugo layouts:
 - Create additional grid utilities (gap modifiers, alignment)
 - Build form components (inputs, selects, checkboxes)
 
+## Hugo Partial Components
+
+In addition to the CSS components documented above, Phase 5 introduced **Hugo partial components** that extract FL-Builder modules into reusable template partials:
+
+### Component Library Structure
+```
+docs/components/
+├── README.md                  # Overview and quick start
+├── components-guide.md        # Complete usage guide
+├── migration-guide.md         # FL-Builder migration
+├── service-card.md           # Service Card reference
+└── best-practices.md         # Development patterns
+```
+
+### Available Hugo Components
+
+1. **[Service Card Component](components/service-card.md)**
+   - Location: `themes/beaver/layouts/partials/components/service-card.html`
+   - Purpose: Service offerings with icons, descriptions, and CTAs
+   - Usage: Homepage service grid, service template pages
+
+2. **[Use Case Card Component](components/components-guide.md#use-case-card-component)**
+   - Location: `themes/beaver/layouts/partials/components/use-case-card.html`
+   - Purpose: Business scenarios with cover images and detailed descriptions
+   - Features: Dual content (menu + page data), image support, flexible hierarchy
+
+3. **[Hero Section Component](components/components-guide.md#hero-section-component)**
+   - Location: `themes/beaver/layouts/partials/components/hero-section.html`
+   - Purpose: Landing page headers with CTAs and optional images
+   - Features: SVG backgrounds, responsive design, semantic HTML
+
+4. **[CTA Block Component](components/components-guide.md#cta-block-component)**
+   - Location: `themes/beaver/layouts/partials/components/cta-block.html`
+   - Purpose: Call-to-action sections with flexible styling
+   - Features: Border customization, responsive spacers, centered layout
+
+5. **[Testimonial Component](components/components-guide.md#testimonial-component)**
+   - Location: `themes/beaver/layouts/partials/components/testimonial.html`
+   - Purpose: Complete testimonial sections with badges, ratings, and carousel
+   - Features: Badge integration, Swiper carousel, data integration, CSS optimization
+
+### Quick Start with Hugo Components
+```go
+{{/* Service card example */}}
+{{ partial "components/service-card.html" (dict
+  "icon" "fractional-cto"
+  "title" "Fractional CTO"
+  "description" "Get on-demand access to a CTO to help guide your technical vision."
+  "link" "services/fractional-cto/"
+  "cta_text" "Learn More"
+) }}
+```
+
+### Integration Benefits
+- **Template Reusability**: Components used across multiple pages
+- **FL-Builder Compatibility**: Maintains existing CSS classes and styling
+- **Performance**: Cleaner HTML output and reduced duplication
+- **Maintainability**: Version-controlled templates with comprehensive documentation
+- **SEO**: Semantic HTML structure and proper heading hierarchy
+
+See [docs/components/README.md](components/README.md) for complete Hugo component documentation.
+
 ## Testing
 
-All components have been tested with:
+### CSS Components
+All CSS components have been tested with:
 - Hugo build validation
 - Cross-browser compatibility
 - Responsive breakpoint testing
 - Accessibility keyboard navigation
 - Visual regression testing
+
+### Hugo Partial Components
+All Hugo partial components include:
+- Parameter validation with sensible defaults
+- FL-Builder CSS class preservation
+- Asset dependency management
+- Data integration testing
+- Migration compatibility verification

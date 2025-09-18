@@ -1,4 +1,8 @@
 {{/* Enhanced FAQ Schema - JSON-LD structured data with deduplication support */}}
+{{/* Prevent duplicate FAQ schema generation on the same page */}}
+{{ if not (.Page.Scratch.Get "faq_schema_generated") }}
+{{ .Page.Scratch.Set "faq_schema_generated" true }}
+
 {{ $faqs := .Params.faqs }}
 {{ if .Params.faq.questions }}
   {{ $faqs = .Params.faq.questions }}
@@ -50,6 +54,8 @@
 </script>
 {{ end }}
 {{ end }}
+
+{{ end }}{{/* End of faq_schema_generated check */}}
 
 {{/* Enhanced content-based FAQ detection for service pages */}}
 {{ if and (eq .Section "services") (not .Params.faqs) (not .Params.faq.questions) }}

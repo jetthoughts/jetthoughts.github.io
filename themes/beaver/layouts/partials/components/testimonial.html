@@ -1,0 +1,208 @@
+{{/*
+  Testimonial Component
+
+  Usage:
+  {{ partial "components/testimonial.html" (dict
+    "section_title" "TESTIMONIALS"
+    "heading" "Most clients stay over 3 years. Some stayed beyond 6."
+    "description" "Don't just take our word for it. See what our clients say about our services."
+    "show_badges" true
+    "show_rating" true
+    "rating" "4.8"
+    "rating_text" "Based on 32 client reviews"
+    "node_id" "testimonials-main"
+  ) }}
+
+  Parameters:
+  - section_title: Section label (e.g., "TESTIMONIALS")
+  - heading: Main testimonial section heading
+  - description: Section description text
+  - show_badges: Whether to show company badges (default: true)
+  - show_rating: Whether to show rating section (default: true)
+  - rating: Rating score (default: "4.8")
+  - rating_text: Rating description (default: "Based on client reviews")
+  - node_id: Optional FL-Builder node ID (defaults to testimonials)
+*/}}
+
+{{- $section_title := .section_title | default "TESTIMONIALS" -}}
+{{- $heading := .heading | default "What Our Clients Say" -}}
+{{- $description := .description | default "See what our clients say about our services." -}}
+{{- $show_badges := .show_badges | default true -}}
+{{- $show_rating := .show_rating | default true -}}
+{{- $rating := .rating | default "4.8" -}}
+{{- $rating_text := .rating_text | default "Based on client reviews" -}}
+{{- $node_id := .node_id | default "testimonials" -}}
+
+{{- $nonCriticalCSS := resources.Get "css/swiper.min.css" | fingerprint "md5" -}}
+<link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
+
+<div class="fl-col-group fl-node-{{ $node_id }}-header fl-col-group-custom-width" data-node="{{ $node_id }}-header">
+  <div class="fl-col fl-node-{{ $node_id }}-header-col fl-col-small-custom-width" data-node="{{ $node_id }}-header-col">
+    <div class="fl-col-content fl-node-content">
+      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-section-title" data-node="{{ $node_id }}-section-title">
+        <div class="fl-module-content fl-node-content">
+          <div class="fl-rich-text c-content-block__text">
+            <p class="c-content-block__paragraph">{{ $section_title }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="fl-module fl-module-heading fl-node-{{ $node_id }}-heading" data-node="{{ $node_id }}-heading">
+        <div class="fl-module-content fl-node-content">
+          <h2 class="fl-heading">
+            <span class="fl-heading-text">{{ $heading }}</span>
+          </h2>
+        </div>
+      </div>
+      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-description" data-node="{{ $node_id }}-description">
+        <div class="fl-module-content fl-node-content">
+          <div class="fl-rich-text c-content-block__text">
+            <p class="c-content-block__paragraph">{{ $description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .my-flex-container {
+    display: flex;
+    flex-direction: row;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  @media (max-width: 800px) {
+    .my-flex-container {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+{{- if $show_badges -}}
+<div id="{{ $node_id }}-badges" class="my-flex-container" style="display:flex;justify-content: center !important;column-gap:2rem">
+  <div style="display:flex;justify-content: center !important;column-gap:2rem">
+    <div style="text-align: center;">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.goodfirms.co/company/jetthoughts-llc">
+        {{- $image := resources.Get "img/badges/top-software-development-companies.svg" -}}
+        <img loading="lazy" decoding="async" width="50" height="50" class="logo-image"
+             src="{{ $image.RelPermalink }}"
+             title="Top Software Development Company" alt="Top Software Development Company on GoodFirms">
+      </a>
+    </div>
+    <div style="text-align: center;">
+      {{- $image := resources.Get "img/badges/clutch.png" -}}
+      {{- $title := "Clutch banner" -}}
+      {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
+    </div>
+    <div style="text-align: center;">
+      {{- $image := resources.Get "img/badges/glassdoor.png" -}}
+      {{- $title := "Glassdoor logo" -}}
+      {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
+    </div>
+    <div style="text-align: center;">
+      {{- $image := resources.Get "img/badges/top-rated.png" -}}
+      {{- $title := "Top Rated" -}}
+      {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
+    </div>
+    <div style="text-align: center;">
+      {{- $image := resources.Get "img/badges/tewa.png" -}}
+      {{- $title := "Top Web Development Companies" -}}
+      {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 50 "class" "logo-image") }}
+    </div>
+  </div>
+
+  {{- if $show_rating -}}
+  <div>
+    <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-rating jt-rating" data-node="{{ $node_id }}-rating">
+      <div class="fl-module-content fl-node-content">
+        <div class="fl-rich-text c-content-block__text">
+          <p class="c-content-block__paragraph">
+            <strong>{{ $rating }}</strong>/5.0
+            {{- $image := resources.Get "img/stars.png" -}}
+            {{- $title := "" -}}
+            {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 212 "class" "alignnone size-full") }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-rating-text" data-node="{{ $node_id }}-rating-text">
+      <div class="fl-module-content fl-node-content">
+        <div class="fl-rich-text c-content-block__text">
+          <p class="c-content-block__paragraph">{{ $rating_text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{- end -}}
+</div>
+{{- end -}}
+
+<div class="fl-col-group fl-node-{{ $node_id }}-reviews fl-col-group-custom-width" data-node="{{ $node_id }}-reviews">
+  <div class="fl-col fl-node-{{ $node_id }}-reviews-col fl-col-small-custom-width" data-node="{{ $node_id }}-reviews-col">
+    <div class="fl-col-content fl-node-content">
+      <div class="fl-module fl-module-pp-reviews fl-node-{{ $node_id }}-swiper jt-reviews-box" data-node="{{ $node_id }}-swiper">
+        <div class="fl-module-content fl-node-content">
+          <div class="pp-reviews-wrapper pp-reviews-default">
+            <div class="pp-reviews-swiper swiper-container">
+              <div class="swiper-wrapper">
+                {{- if .Site.Data.testimonials.testimonials -}}
+                  {{- range .Site.Data.testimonials.testimonials -}}
+                  <div class="pp-review-item pp-review-item-0 swiper-slide">
+                    <div class="pp-review">
+                      <div class="pp-review-content">
+                        <div class="pp-review-text">
+                          <p>{{ index . "description" | default "No description" }}</p>
+                        </div>
+                      </div>
+                      <div class="pp-review-header">
+                        <cite class="pp-review-cite">
+                          <span class="pp-review-name">{{ index . "name" | default "Anonymous" }}</span>
+                          <div class="pp-rating">
+                            {{- $image := resources.Get "img/stars.png" -}}
+                            {{- $title := "five stars" -}}
+                            {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 106 "class" "alignnone size-full") }}
+                          </div>
+                          <span class="pp-review-title">{{ index . "title" | default "Customer" }}{{ with index . "company" }}, {{ . }}{{ end }}</span>
+                        </cite>
+                        <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  {{- end -}}
+                {{- else if .Site.Params.testimonials -}}
+                  {{- range .Site.Params.testimonials -}}
+                  <div class="pp-review-item pp-review-item-0 swiper-slide">
+                    <div class="pp-review">
+                      <div class="pp-review-content">
+                        <div class="pp-review-text">
+                          <p>{{ index . "description" | default "No description" }}</p>
+                        </div>
+                      </div>
+                      <div class="pp-review-header">
+                        <cite class="pp-review-cite">
+                          <span class="pp-review-name">{{ index . "name" | default "Anonymous" }}</span>
+                          <div class="pp-rating">
+                            {{- $image := resources.Get "img/stars.png" -}}
+                            {{- $title := "five stars" -}}
+                            {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 106 "class" "alignnone size-full") }}
+                          </div>
+                          <span class="pp-review-title">{{ index . "title" | default "Customer" }}{{ with index . "company" }}, {{ . }}{{ end }}</span>
+                        </cite>
+                        <div class="pp-review-icon"><i class="" aria-hidden="true"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  {{- end -}}
+                {{- end -}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

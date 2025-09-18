@@ -1,0 +1,80 @@
+{{/*
+  Use Case Card Component
+
+  Usage:
+  {{ partial "components/use-case-card.html" (dict
+    "icon" "submenu-fractional"
+    "title" "Fractional CTO"
+    "description" "Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations."
+    "headline" "Launch faster, go to market smarter"
+    "excerpt" "Gain market feedback, secure product validation, and accelerate the path to revenue without slowing down or going broke."
+    "link" "use-cases/startup-mvp-prototyping-development/"
+    "cta_text" "Learn About This Use Case"
+    "cover_image" "startup-mvp-prototyping-development.jpg"
+    "node_id" "use-case-startup"
+  ) }}
+
+  Parameters:
+  - icon: SVG icon name from menu_custom (e.g., "submenu-fractional")
+  - title: Use case title from menu_custom
+  - description: Use case description from menu_custom
+  - headline: Primary headline from frontmatter
+  - excerpt: Brief description from frontmatter
+  - link: Relative URL to use case page
+  - cta_text: Call-to-action button text
+  - cover_image: Cover image filename
+  - node_id: Optional FL-Builder node ID (defaults to generated)
+*/}}
+
+{{- $icon := .icon | default "submenu-fractional" -}}
+{{- $title := .title | default "Use Case Title" -}}
+{{- $description := .description | default "Use case description." -}}
+{{- $headline := .headline | default .title -}}
+{{- $excerpt := .excerpt | default .description -}}
+{{- $link := .link | default "#" -}}
+{{- $cta_text := .cta_text | default "Learn More" -}}
+{{- $cover_image := .cover_image | default "default-use-case.jpg" -}}
+{{- $node_id := .node_id | default (printf "use-case-%s" (replace $icon "-" "")) -}}
+
+<div class="fl-col fl-node-{{ $node_id }} fl-col-small fl-col-small-custom-width hover-box" data-node="{{ $node_id }}">
+  <div class="fl-col-content fl-node-content">
+    <div class="fl-module fl-module-pp-infobox fl-node-{{ $node_id }}-box jt-use-case-box" data-node="{{ $node_id }}-box">
+      <div class="fl-module-content fl-node-content">
+        <div class="pp-infobox-wrap">
+          <div class="pp-infobox layout-5">
+            {{- if $cover_image -}}
+            <div class="pp-infobox-image-wrapper">
+              <div class="pp-infobox-image">
+                <img src="{{ relURL (printf "images/use-cases/%s" $cover_image) }}" alt="{{ $headline }}" class="use-case-image" />
+              </div>
+            </div>
+            {{- end -}}
+            <div class="pp-icon-wrapper animated">
+              <div class="pp-infobox-icon">
+                {{ partial "svgiw" (dict "svg" (printf "theme/%s" $icon) "width" "30" "height" "30") }}
+              </div>
+            </div>
+            <div class="pp-infobox-title-wrapper">
+              <h3 class="pp-infobox-title">
+                <a class="pp-title-link" href="{{ relURL $link }}" target="_self">{{ $headline }}</a>
+              </h3>
+            </div>
+            <div class="pp-infobox-subtitle">
+              <p class="use-case-subtitle">{{ $title }}</p>
+            </div>
+            <div class="pp-infobox-description">
+              <div class="pp-description-wrap">
+                <p>{{ $excerpt }}</p>
+              </div>
+              <div class="pp-infobox-button pp-button-wrap">
+                <a title="{{ $headline }}" class="pp-more-link pp-button" href="{{ relURL $link }}" role="button" target="_self">
+                  {{ $cta_text }} <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
