@@ -1,5 +1,7 @@
 /* Component Library - BEM Convention with c- prefix */
 @import 'components/content-block';
+@import 'utilities/colors';
+@import 'utilities/color-accessibility';
 
 /* ========================================
    Button Component (c-button)
