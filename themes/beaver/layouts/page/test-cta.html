@@ -1,0 +1,210 @@
+{{ define "header" }}
+{{ partial "header/critical/services.html" . }}
+{{- $staticCTACSS := slice (resources.Get "css/component-bundle.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" $staticCTACSS "page" "test-cta") }}
+{{ end }}
+
+{{ define "main" }}
+<div id="fl-main-content" class="fl-page-content" role="main">
+    <div class="fl-content-full container">
+       <div class="row">
+          <div class="fl-content col-md-12">
+             <article class="fl-post" id="fl-post-test-cta">
+                <div class="fl-post-content clearfix">
+                   <div class="fl-builder-content fl-builder-content-test-cta fl-builder-content-primary" data-post-id="test-cta">
+
+                      <!-- Test CTA Header Section -->
+                      <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-test-cta-header fl-row-default-height fl-row-align-center" data-node="test-cta-header">
+                         <div class="fl-row-content-wrap">
+                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                               <div class="fl-col-group fl-node-test-cta-header-group" data-node="test-cta-header-group">
+                                  <div class="fl-col fl-node-test-cta-header-col" data-node="test-cta-header-col">
+                                     <div class="fl-col-content fl-node-content">
+                                        <div class="fl-module fl-module-rich-text fl-node-test-cta-category" data-node="test-cta-category">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-rich-text">
+                                                 <p>CTA TESTING</p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="fl-module fl-module-heading fl-node-test-cta-title" data-node="test-cta-title">
+                                           <div class="fl-module-content fl-node-content">
+                                              <h1 class="fl-heading">
+                                                 <span class="fl-heading-text">Call-to-Action Component Testing</span>
+                                              </h1>
+                                           </div>
+                                        </div>
+                                        <div class="fl-module fl-module-rich-text fl-node-test-cta-description" data-node="test-cta-description">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-rich-text">
+                                                 <p>Testing CTA blocks in various contexts to ensure proper styling, functionality, and responsiveness across different page layouts.</p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+
+                      <!-- Test CTA Blocks Section -->
+                      <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-test-cta-blocks fl-row-default-height fl-row-align-center" data-node="test-cta-blocks">
+                         <div class="fl-row-content-wrap">
+                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+
+                               <!-- Primary CTA Test -->
+                               <div class="fl-col-group fl-node-test-cta-primary fl-col-group-custom-width" data-node="test-cta-primary">
+                                  <div class="fl-col fl-node-test-cta-primary-col fl-col-small-custom-width" data-node="test-cta-primary-col">
+                                     <div class="fl-col-content fl-node-content">
+                                        <div class="fl-module fl-module-heading fl-node-test-cta-primary-title" data-node="test-cta-primary-title">
+                                           <div class="fl-module-content fl-node-content">
+                                              <h2 class="fl-heading">
+                                                 <span class="fl-heading-text">Primary CTA Button Test</span>
+                                              </h2>
+                                           </div>
+                                        </div>
+                                        <div class="fl-module fl-module-rich-text fl-node-test-cta-primary-desc" data-node="test-cta-primary-desc">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-rich-text">
+                                                 <p>Testing primary call-to-action button styling and functionality.</p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="fl-module fl-module-button fl-node-test-cta-primary-btn" data-node="test-cta-primary-btn">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                                                 <a href="{{ relURL "test/components/" }}" target="_self" class="fl-button">
+                                                 <span class="fl-button-text">Start Component Testing</span>
+                                                 </a>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+
+                               <!-- Secondary CTA Test -->
+                               <div class="fl-col-group fl-node-test-cta-secondary fl-col-group-custom-width" data-node="test-cta-secondary">
+                                  <div class="fl-col fl-node-test-cta-secondary-col fl-col-small-custom-width" data-node="test-cta-secondary-col">
+                                     <div class="fl-col-content fl-node-content">
+                                        <div class="fl-module fl-module-heading fl-node-test-cta-secondary-title" data-node="test-cta-secondary-title">
+                                           <div class="fl-module-content fl-node-content">
+                                              <h2 class="fl-heading">
+                                                 <span class="fl-heading-text">Secondary CTA Button Test</span>
+                                              </h2>
+                                           </div>
+                                        </div>
+                                        <div class="fl-module fl-module-rich-text fl-node-test-cta-secondary-desc" data-node="test-cta-secondary-desc">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-rich-text">
+                                                 <p>Testing secondary call-to-action button styling and behavior.</p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="fl-module fl-module-button fl-node-test-cta-secondary-btn" data-node="test-cta-secondary-btn">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-button-wrap fl-button-width-full fl-button-center">
+                                                 <a title="View Test Results" href="{{ relURL "test/components/results/" }}" target="_self" class="fl-button">
+                                                 <span class="fl-button-text">View Test Results</span>
+                                                 </a>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+
+                               <!-- CTA Block Test (like services page) -->
+                               <div class="fl-col-group fl-node-test-cta-block fl-col-group-custom-width" data-node="test-cta-block">
+                                 <div class="fl-col fl-node-test-cta-block-col fl-col-small-custom-width fl-col-has-cols blue-border" data-node="test-cta-block-col">
+                                   <div class="fl-col-content fl-node-content">
+                                     <div class="fl-module fl-module-heading fl-node-test-cta-block-title" data-node="test-cta-block-title">
+                                       <div class="fl-module-content fl-node-content">
+                                         <h2 class="fl-heading">
+                                           <span class="fl-heading-text">Let's start testing now</span>
+                                         </h2>
+                                       </div>
+                                     </div>
+                                     <div class="fl-module fl-module-rich-text fl-node-test-cta-block-text" data-node="test-cta-block-text">
+                                       <div class="fl-module-content fl-node-content">
+                                         <div class="fl-rich-text">
+                                           <p>Get comprehensive component validation & testing results for your extracted components at no cost.</p>
+                                         </div>
+                                       </div>
+                                     </div>
+                                     <div class="fl-module fl-module-pp-spacer fl-node-test-cta-spacer fl-visible-desktop fl-visible-large fl-visible-medium" data-node="test-cta-spacer">
+                                       <div class="fl-module-content fl-node-content">
+                                         <div class="pp-spacer-module"></div>
+                                       </div>
+                                     </div>
+                                     <div class="fl-col-group fl-node-test-cta-nested fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="test-cta-nested">
+                                       <div class="fl-module fl-module-button fl-node-test-cta-nested-btn" data-node="test-cta-nested-btn">
+                                         <div class="fl-module-content fl-node-content">
+                                           <div class="fl-button-wrap-center fl-button-width-auto fl-button-center">
+                                             <a href="{{ relURL "contact-us/" }}" target="_self" class="fl-button">
+                                               <span class="fl-button-text">Contact Us</span>
+                                             </a>
+                                           </div>
+                                         </div>
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               <!-- Multiple CTA Context Test -->
+                               <div class="fl-col-group fl-node-test-cta-multiple fl-col-group-custom-width" data-node="test-cta-multiple">
+                                  <div class="fl-col fl-node-test-cta-multi-1 fl-col-small fl-col-small-custom-width" data-node="test-cta-multi-1">
+                                     <div class="fl-col-content fl-node-content">
+                                        <div class="fl-module fl-module-button fl-node-test-cta-multi-btn-1" data-node="test-cta-multi-btn-1">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-button-wrap fl-button-width-auto fl-button-left">
+                                                 <a href="{{ relURL "free-consultation/" }}" target="_self" class="fl-button">
+                                                 <span class="fl-button-text">Free Consultation</span>
+                                                 </a>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="fl-col fl-node-test-cta-multi-2 fl-col-small fl-col-small-custom-width" data-node="test-cta-multi-2">
+                                     <div class="fl-col-content fl-node-content">
+                                        <div class="fl-module fl-module-button fl-node-test-cta-multi-btn-2" data-node="test-cta-multi-btn-2">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-button-wrap fl-button-width-auto fl-button-center">
+                                                 <a href="{{ relURL "services/" }}" target="_self" class="fl-button">
+                                                 <span class="fl-button-text">View Services</span>
+                                                 </a>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="fl-col fl-node-test-cta-multi-3 fl-col-small fl-col-small-custom-width" data-node="test-cta-multi-3">
+                                     <div class="fl-col-content fl-node-content">
+                                        <div class="fl-module fl-module-button fl-node-test-cta-multi-btn-3" data-node="test-cta-multi-btn-3">
+                                           <div class="fl-module-content fl-node-content">
+                                              <div class="fl-button-wrap fl-button-width-auto fl-button-right">
+                                                 <a href="{{ relURL "use-cases/" }}" target="_self" class="fl-button">
+                                                 <span class="fl-button-text">Use Cases</span>
+                                                 </a>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+
+                            </div>
+                         </div>
+                      </div>
+
+                   </div>
+                </div>
+             </article>
+          </div>
+       </div>
+    </div>
+</div>
+{{ end }}

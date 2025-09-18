@@ -1,0 +1,62 @@
+{{/*
+  CTA Block Component
+
+  Usage:
+  {{ partial "components/cta-block.html" (dict
+    "heading" "Let's get started now"
+    "description" "Get in touch with one of our experts to get a technical strategy & planning session for your project at no cost."
+    "cta_text" "Contact Us"
+    "cta_link" "contact-us/"
+    "node_id" "cta-main"
+    "border_class" "blue-border"
+  ) }}
+
+  Parameters:
+  - heading: CTA section heading
+  - description: CTA description text
+  - cta_text: Call-to-action button text
+  - cta_link: Relative URL for CTA button
+  - node_id: Optional FL-Builder node ID (defaults to generated)
+  - border_class: Optional border styling class
+*/}}
+
+{{- $heading := .heading | default "Get Started Today" -}}
+{{- $description := .description | default "Contact us to learn more about how we can help." -}}
+{{- $cta_text := .cta_text | default "Contact Us" -}}
+{{- $cta_link := .cta_link | default "contact-us/" -}}
+{{- $node_id := .node_id | default "cta-block" -}}
+{{- $border_class := .border_class | default "blue-border" -}}
+
+<div class="fl-col-group fl-node-{{ $node_id }}-group fl-col-group-custom-width" data-node="{{ $node_id }}-group">
+  <div class="fl-col fl-node-{{ $node_id }}-col fl-col-small-custom-width fl-col-has-cols {{ $border_class }}" data-node="{{ $node_id }}-col">
+    <div class="fl-col-content fl-node-content">
+      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-spacer" data-node="{{ $node_id }}-spacer">
+        <div class="fl-module-content fl-node-content"></div>
+      </div>
+      <div class="fl-module fl-module-heading fl-node-{{ $node_id }}-heading" data-node="{{ $node_id }}-heading">
+        <div class="fl-module-content fl-node-content">
+          <h2 class="fl-heading">
+            <span class="fl-heading-text">{{ $heading }}</span>
+          </h2>
+        </div>
+      </div>
+      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-description" data-node="{{ $node_id }}-description">
+        <div class="fl-module-content fl-node-content">
+          <div class="fl-rich-text c-content-block__text">
+            <p class="c-content-block__paragraph">{{ $description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="fl-module fl-module-pp-spacer fl-node-{{ $node_id }}-spacer-bottom fl-visible-desktop fl-visible-large fl-visible-medium" data-node="{{ $node_id }}-spacer-bottom">
+        <div class="fl-module-content fl-node-content">
+          <div class="pp-spacer-module"></div>
+        </div>
+      </div>
+      <div class="fl-button-wrap-center fl-button-width-auto fl-button-center">
+        <a href="{{ relURL $cta_link }}" target="_self" class="fl-button">
+          <span class="fl-button-text">{{ $cta_text }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -411,8 +411,7 @@
 </script>
 
 {{/* FAQ Schema Integration */}}
-{{- if .Params.faqs -}}
-{{ partial "seo/faq-schema.html" . }}
-{{- end -}}
+{{/* FAQ schema is already included in baseof.html with duplication protection */}}
+{{/* No need to call it again here to prevent duplicate acceptedAnswer fields */}}
 
 {{- end -}}

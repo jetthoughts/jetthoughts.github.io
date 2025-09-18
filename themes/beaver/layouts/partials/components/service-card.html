@@ -1,0 +1,61 @@
+{{/*
+  Service Card Component
+
+  Usage:
+  {{ partial "components/service-card.html" (dict
+    "icon" "fractional-cto"
+    "title" "Fractional CTO"
+    "description" "Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations."
+    "link" "services/fractional-cto/"
+    "cta_text" "Learn About Fractional CTO Services"
+    "node_id" "dxali8vntcr0"
+  ) }}
+
+  Parameters:
+  - icon: SVG icon name (e.g., "fractional-cto", "app-web")
+  - title: Service title
+  - description: Service description text
+  - link: Relative URL to service page
+  - cta_text: Call-to-action button text
+  - node_id: Optional FL-Builder node ID (defaults to generated)
+*/}}
+
+{{- $icon := .icon | default "default-service" -}}
+{{- $title := .title | default "Service Title" -}}
+{{- $description := .description | default "Service description." -}}
+{{- $link := .link | default "#" -}}
+{{- $cta_text := .cta_text | default "Learn More" -}}
+{{- $node_id := .node_id | default (printf "service-%s" (replace $icon "-" "")) -}}
+
+<div class="fl-col fl-node-{{ $node_id }} fl-col-small fl-col-small-custom-width hover-box" data-node="{{ $node_id }}">
+  <div class="fl-col-content fl-node-content">
+    <div class="fl-module fl-module-pp-infobox fl-node-{{ $node_id }}-box jt-service-box" data-node="{{ $node_id }}-box">
+      <div class="fl-module-content fl-node-content">
+        <div class="pp-infobox-wrap">
+          <div class="pp-infobox layout-5">
+            <div class="pp-icon-wrapper animated">
+              <div class="pp-infobox-image">
+                {{ partial "svgiw" (dict "svg" (printf "theme/%s" $icon) "width" "30" "height" "30") }}
+              </div>
+            </div>
+            <div class="pp-infobox-title-wrapper">
+              <h3 class="pp-infobox-title">
+                <a class="pp-title-link" href="{{ relURL $link }}" target="_self">{{ $title }}</a>
+              </h3>
+            </div>
+            <div class="pp-infobox-description">
+              <div class="pp-description-wrap">
+                <p>{{ $description }}</p>
+              </div>
+              <div class="pp-infobox-button pp-button-wrap">
+                <a title="{{ $title }}" class="pp-more-link pp-button" href="{{ relURL $link }}" role="button" target="_self">
+                  {{ $cta_text }} <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

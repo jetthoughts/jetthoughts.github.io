@@ -1,4 +1,5 @@
 /* Component Library - BEM Convention with c- prefix */
+@import 'components/content-block';
 
 /* ========================================
    Button Component (c-button)

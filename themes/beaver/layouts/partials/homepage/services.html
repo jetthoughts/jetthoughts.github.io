@@ -6,8 +6,8 @@
                  <div class="fl-col-content fl-node-content">
                     <div class="fl-module fl-module-rich-text fl-node-gzqkfypea6jx" data-node="gzqkfypea6jx">
                        <div class="fl-module-content fl-node-content">
-                          <div class="fl-rich-text">
-                             <p>SERVICES</p>
+                          <div class="fl-rich-text c-content-block__text">
+                             <p class="c-content-block__paragraph">SERVICES</p>
                         </div>
                      </div>
                   </div>
@@ -20,8 +20,8 @@
                   </div>
                   <div class="fl-module fl-module-rich-text fl-node-0hc83erkafob" data-node="0hc83erkafob">
                      <div class="fl-module-content fl-node-content">
-                        <div class="fl-rich-text">
-                           <p>From technical strategy and innovation to talent acquisition and software development, we help empower products and teams at any stage.</p>
+                        <div class="fl-rich-text c-content-block__text">
+                           <p class="c-content-block__paragraph">From technical strategy and innovation to talent acquisition and software development, we help empower products and teams at any stage.</p>
                         </div>
                      </div>
                   </div>
@@ -29,36 +29,14 @@
             </div>
          </div>
          <div class="fl-col-group fl-node-6ewrcbxp1zdq fl-col-group-custom-width" data-node="6ewrcbxp1zdq">
-            <div class="fl-col fl-node-paujk1bwfe0l fl-col-small fl-col-small-custom-width hover-box" data-node="paujk1bwfe0l">
-               <div class="fl-col-content fl-node-content">
-                  <div class="fl-module fl-module-pp-infobox fl-node-dxali8vntcr0 jt-service-box" data-node="dxali8vntcr0">
-                     <div class="fl-module-content fl-node-content">
-                        <div class="pp-infobox-wrap">
-                           <div class="pp-infobox layout-5">
-                              <div class="pp-icon-wrapper animated">
-                                 <div class="pp-infobox-image">
-                                    {{ partial "svgiw" (dict "svg" "theme/fractional-cto" "width" "30" "height" "30") }}
-                                 </div>
-                              </div>
-                              <div class="pp-infobox-title-wrapper">
-                                 <h3 class="pp-infobox-title"><a class="pp-title-link" href="{{ relURL "services/fractional-cto/" }}" target="_self">Fractional CTO</a></h3>
-                              </div>
-                              <div class="pp-infobox-description">
-                                 <div class="pp-description-wrap">
-                                    <p>Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations.</p>
-                                 </div>
-                                 <div class="pp-infobox-button pp-button-wrap">
-                                    <a title="Fractional CTO" class="pp-more-link pp-button" href="{{ relURL "services/fractional-cto/" }}" role="button" target="_self">
-                                    Learn About Fractional CTO Services <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            {{ partial "components/service-card.html" (dict
+              "icon" "fractional-cto"
+              "title" "Fractional CTO"
+              "description" "Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations."
+              "link" "services/fractional-cto/"
+              "cta_text" "Learn About Fractional CTO Services"
+              "node_id" "paujk1bwfe0l"
+            ) }}
             <div class="fl-col fl-node-9xrz1vbyfomu fl-col-small fl-col-small-custom-width hover-box" data-node="9xrz1vbyfomu">
                <div class="fl-col-content fl-node-content">
                   <div class="fl-module fl-module-pp-infobox fl-node-075ztwhd3cxn jt-service-box" data-node="075ztwhd3cxn">

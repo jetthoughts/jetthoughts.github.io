@@ -1,0 +1,96 @@
+{{ define "header" }}
+{{ partial "header/critical/use-cases.html" . }}
+{{- $testCSS := resources.Get "css/component-bundle.css" }}
+<style>{{ $testCSS.Content | safeCSS }}</style>
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+
+      <!-- Hero Section Test -->
+      <div class="test-section">
+        <h2>1. Hero Section Component</h2>
+        {{ partial "components/hero-section.html" (dict
+          "headline" "Test Hero: Build Better Software Faster"
+          "excerpt" "Experience rapid development with our expert team. Get to market quickly without compromising quality."
+          "cta_text" "Get Started Today"
+          "cta_link" "contact-us/"
+          "node_id" "test-hero"
+        ) }}
+      </div>
+
+      <!-- Use Case Cards Test -->
+      <div class="test-section">
+        <h2>2. Use Case Cards Component</h2>
+        <div class="fl-row">
+          <div class="fl-row-content-wrap">
+            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+              <div class="fl-col-group fl-node-test-cases fl-col-group-equal-height" data-node="test-cases">
+
+                <!-- Test with Startup MVP data -->
+                {{ partial "components/use-case-card.html" (dict
+                  "icon" "submenu-fractional"
+                  "title" "Fractional CTO"
+                  "description" "Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations."
+                  "headline" "Launch faster, go to market smarter"
+                  "excerpt" "Gain market feedback, secure product validation, and accelerate the path to revenue without slowing down or going broke."
+                  "link" "use-cases/startup-mvp-prototyping-development/"
+                  "cta_text" "Learn About This Use Case"
+                  "cover_image" "startup-mvp-prototyping-development.jpg"
+                  "node_id" "test-startup"
+                ) }}
+
+                <!-- Test with Emergency CTO data -->
+                {{ partial "components/use-case-card.html" (dict
+                  "icon" "submenu-fractional"
+                  "title" "Fractional CTO"
+                  "description" "Get on-demand access to a CTO to help guide your technical vision, accelerate team-building, and improve development team operations."
+                  "headline" "CTO Leadership When You Need It"
+                  "excerpt" "Don't let technology problems catch you off guard with on-demand access to technical expertise to help fill the leadership gap between software and IT operations."
+                  "link" "use-cases/emergency-cto-leadership/"
+                  "cta_text" "Learn About This Use Case"
+                  "cover_image" "emergency-cto-leadership.jpg"
+                  "node_id" "test-emergency"
+                ) }}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Block Test -->
+      <div class="test-section">
+        <h2>3. CTA Block Component</h2>
+        {{ partial "components/cta-block.html" (dict
+          "heading" "Ready to Get Started?"
+          "description" "Contact our team for a free consultation and discover how we can help accelerate your project."
+          "cta_text" "Schedule Consultation"
+          "cta_link" "free-consultation/"
+          "node_id" "test-cta"
+          "border_class" "blue-border"
+        ) }}
+      </div>
+
+      <!-- Testimonial Test -->
+      <div class="test-section">
+        <h2>4. Testimonial Component</h2>
+        {{ partial "components/testimonial.html" (dict
+          "section_title" "CLIENT TESTIMONIALS"
+          "heading" "Trusted by Companies Worldwide"
+          "description" "See what our clients say about working with us."
+          "show_badges" true
+          "show_rating" true
+          "rating" "4.8"
+          "rating_text" "Based on 32+ client reviews"
+          "node_id" "test-testimonials"
+        ) }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
