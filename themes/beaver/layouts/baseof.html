@@ -65,7 +65,7 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="manifest" href="/manifest.json" />
 
-    {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
+    {{- $navigationResources := slice (resources.Get "css/theme-main.css") (resources.Get "css/navigation.css") -}}
     {{ partial "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) }}
 
     {{/* Enhanced SEO Schema Markup */}}

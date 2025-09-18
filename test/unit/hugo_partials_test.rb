@@ -1,6 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class HugoPartialsTest < BasePageTestCase
+class HugoPartialsTest < PageTestCase
   # Unit tests for Hugo partial templates functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 

@@ -1,3 +1,9 @@
+---
+Global Reference: /knowledge/20.01-tdd-methodology-reference.md
+Authority: Secondary (Extends Global Standards)
+Last Synced: 2024-01-19
+---
+
 # 20-29: Testing & Quality Assurance
 
 This area contains all testing documentation, quality assurance procedures, and performance optimization guides.

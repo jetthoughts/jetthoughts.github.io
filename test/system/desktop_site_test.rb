@@ -39,21 +39,124 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_homepage_section("footer")
   end
 
-  private
+  def test_homepage_section_hero
+    verify_homepage_section("hero")
+  end
 
-  def verify_homepage_section(section_id)
+  def test_homepage_section_stats
+    verify_homepage_section("stats")
+  end
+
+  def test_homepage_section_why_us
+    verify_homepage_section("why-us")
+  end
+
+  def test_homepage_section_use_cases
     visit "/"
     scroll_to :bottom # preload all images
     assert_text "JetThoughts. All Rights Reserved", exact: false
-    scroll_to find("##{section_id}")
-    # Ruby hash-based config automatically handles tolerance per section
-    assert_screenshot "homepage/_#{section_id}"
+    # Use cases is loaded via partial, need to find the container
+    scroll_to find("#use-cases") rescue scroll_to find(".use-cases")
+    assert_screenshot "homepage/_use_cases", tolerance: 0.09
   end
 
-  def verify_clients_section(section_id)
-    scroll_to find("##{section_id}")
-    # Ruby hash-based config handles tolerance automatically
-    assert_screenshot "clients/_#{section_id}"
+  def test_homepage_section_testimonials
+    visit "/"
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+    # Testimonials is loaded via partial, need to find the container
+    scroll_to find("#testimonials") rescue scroll_to find(".testimonials")
+    assert_screenshot "homepage/_testimonials"
+  end
+
+  def test_services_outsourced_developer_staffing
+    visit "/services/outsourced-developer-staffing/"
+    assert_stable_screenshot "services/outsourced_developer_staffing"
+  end
+
+  def test_services_fractional_product_management
+    visit "/services/fractional-product-management/"
+    assert_stable_screenshot "services/fractional_product_management"
+  end
+
+  def test_services_software_qa_cat
+    visit "/services/software-qa-cat/"
+    assert_stable_screenshot "services/software_qa_cat"
+  end
+
+  def test_services_fractional_cto_cost
+    visit "/services/fractional-cto-cost/"
+    assert_stable_screenshot "services/fractional_cto_cost"
+  end
+
+  def test_services_emergency_cto_leadership
+    visit "/services/emergency-cto-leadership/"
+    assert_stable_screenshot "services/emergency_cto_leadership"
+  end
+
+  def test_services_startup_cto_consulting
+    visit "/services/startup-cto-consulting/"
+    assert_stable_screenshot "services/startup_cto_consulting"
+  end
+
+  def test_services_technical_leadership_consulting
+    visit "/services/technical-leadership-consulting/"
+    assert_stable_screenshot "services/technical_leadership_consulting"
+  end
+
+  def test_services_engineering_management_consulting
+    visit "/services/engineering-management-consulting/"
+    assert_stable_screenshot "services/engineering_management_consulting"
+  end
+
+  def test_services_talent_recruiting_training
+    visit "/services/talent-recruiting-training/"
+    assert_stable_screenshot "services/talent_recruiting_training"
+  end
+
+  def test_services_fractional_cto_services
+    visit "/services/fractional-cto-services/"
+    assert_stable_screenshot "services/fractional_cto_services"
+  end
+
+  def test_services_index
+    visit "/services/"
+    assert_stable_screenshot "services/index"
+  end
+
+  def test_use_cases_emergency_cto_leadership
+    visit "/use-cases/emergency-cto-leadership/"
+    assert_stable_screenshot "use_cases/emergency_cto_leadership"
+  end
+
+  def test_use_cases_accelerate_development_maximize_capacity
+    visit "/use-cases/accelerate-development-maximize-capacity/"
+    assert_stable_screenshot "use_cases/accelerate_development_maximize_capacity"
+  end
+
+  def test_use_cases_automate_product_qa_testing
+    visit "/use-cases/automate-product-qa-testing/"
+    assert_stable_screenshot "use_cases/automate_product_qa_testing"
+  end
+
+  def test_use_cases_salvage_existing_project
+    visit "/use-cases/salvage-existing-project/"
+    assert_stable_screenshot "use_cases/salvage_existing_project"
+  end
+
+  def test_use_cases_empower_existing_engineering_team
+    visit "/use-cases/empower-existing-engineering-team/"
+    assert_stable_screenshot "use_cases/empower_existing_engineering_team"
+  end
+
+  def test_use_cases_startup_mvp_prototyping_development
+    visit "/use-cases/startup-mvp-prototyping-development/"
+    assert_stable_screenshot "use_cases/startup_mvp_prototyping_development"
+  end
+
+  def test_privacy_policy
+    visit "/privacy-policy/"
+    assert_stable_screenshot "privacy_policy"
   end
 
   def test_blog_index
@@ -108,14 +211,12 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "clients"
   end
 
-  def test_clients_sections
+  def test_misc_sections
     visit "/"
-    scroll_to :bottom # preload all images
-
-    verify_clients_section("clients")
-    verify_clients_section("technologies")
-    verify_clients_section("cta-contact_us")
-    verify_clients_section("footer")
+    verify_section("clients")
+    verify_section("technologies")
+    verify_section("cta-contact_us")
+    verify_section("footer")
   end
 
   def test_careers
@@ -135,13 +236,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
     end
 
     assert_selector(".sub-menu", visible: true, wait: 2)
-    assert_quick_screenshot "nav/services"
+    assert_screenshot "nav/services", tolerance: 0.01
   end
 
   def test_services_fractional_cto
     visit "/"
     visit_via_menu("Services", "Fractional CTO")
-    assert_screenshot "services/fractional_cto", tolerance: 0.20
+    assert_screenshot "services/fractional_cto"
   end
 
   def test_services_app_development
@@ -210,12 +311,47 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "about_page/achievements", tolerance: 0.1
   end
 
+  def test_clients_agent_inbox
+    visit "/clients/agent-inbox/"
+    assert_stable_screenshot "clients/agent_inbox"
+  end
+
+  def test_clients_lime_leads
+    visit "/clients/see-how-jetthoughts-helped-limeleads-transform-a-legacy-codebase-stabilize-the-product-for-long-term-performance/"
+    assert_stable_screenshot "clients/lime_leads"
+  end
+
+  def test_clients_mobile_coach
+    visit "/clients/mobile-coach/"
+    assert_stable_screenshot "clients/mobile_coach"
+  end
+
+  def test_clients_open_apply
+    visit "/clients/open-apply/"
+    assert_stable_screenshot "clients/open_apply"
+  end
+
+  def test_clients_crosslake
+    visit "/clients/see-how-jetthoughts-helped-crosslake-transform-a-legacy-software-project-gain-control-over-a-complex-codebase/"
+    assert_stable_screenshot "clients/crosslake"
+  end
+
+  def test_clients_ocs
+    visit "/clients/see-how-jetthoughts-helped-orchestratecs-go-from-an-idea-to-software-in-just-60-days/"
+    assert_stable_screenshot "clients/ocs"
+  end
+
   private
 
-  def verify_clients_section(section_id)
+  def verify_homepage_section(section_id)
+    visit "/"
+    verify_section(section_id)
+  end
+
+  def verify_section(section_id)
+    preload_all_images
     scroll_to find("##{section_id}")
-    # Ruby hash-based config handles tolerance automatically
-    assert_screenshot "clients/_#{section_id}"
+    assert_screenshot "homepage/_#{section_id}"
   end
 
   def within_top_bar

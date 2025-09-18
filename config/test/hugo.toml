@@ -1,15 +1,21 @@
-baseURL = "http://localhost:1314/"
-relativeURLs = true
+baseURL = "/"
 environment = "test"
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
+buildDrafts = true
+enableGitInfo = false
 
 [build]
   writeStats = false
   noChmod = true
   noTimes = true
+  [build.buildStats]
+    disableClasses = false
+    disableIDs = false
+    disableTags = false
+    enable = false
 
 [minify]
-  minifyOutput = true
+  minifyOutput = false
   [minify.tdewolff.html]
     keepWhitespace = true  # Reduce processing overhead
 
@@ -22,6 +28,9 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
   analytics = false
   googleAnalytics = false
   enableImageOptimization = false
+
+  # Enable Mermaid.js for diagram rendering tests
+  disableMermaid = false
 
 [taxonomies]
   tag = "tags"

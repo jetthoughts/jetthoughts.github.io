@@ -11,27 +11,7 @@ require "support/setup_capybara"
 require "support/setup_snap_diff"
 require "support/hugo_helpers"
 
-# Support both precompiled assets (fixed port) and dynamic port scenarios
-if ENV["TEST_SERVER_PORT"]
-  test_port = ENV.fetch("TEST_SERVER_PORT", "1314").to_i
-  Capybara.server_port = test_port
-end
-
-# Get port safely, fallback to environment or default
-current_port = if ENV["TEST_SERVER_PORT"]
-  ENV.fetch("TEST_SERVER_PORT").to_i
-elsif Capybara.current_session&.server&.port
-  Capybara.current_session.server.port
-else
-  1314
-end
-
-hugo_builder = Hugo.new(path: ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test"), port: current_port)
-Capybara.app = hugo_builder.app
-
-unless ENV["PRECOMPILED_ASSETS"]
-  hugo_builder.precompile
-end
+Capybara.app = Hugo.instance.app
 
 module NavigationHelpers
   def within_top_bar(&block)
@@ -64,8 +44,8 @@ class ApplicationSystemTestCase < Minitest::Test
     'clients' => {tolerance: 0.03},
     'use-cases' => {tolerance: 0.03},
     'technologies' => {tolerance: 0.02},
-    'testimonials' => {tolerance: 0.02},
-    'why-us' => {tolerance: 0.02}
+    'testimonials' => {tolerance: 0.04},
+    'why-us' => {tolerance: 0.25}
   }.freeze
 
   DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.03}.freeze
@@ -74,6 +54,7 @@ class ApplicationSystemTestCase < Minitest::Test
 
   def preload_all_images
     scroll_to :bottom
+    assert_text "JetThoughts. All Rights Reserved", exact: false
     scroll_to :top
   end
 

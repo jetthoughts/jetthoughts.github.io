@@ -1,6 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class BreadcrumbSchemaTest < BasePageTestCase
+class BreadcrumbSchemaTest < PageTestCase
   def test_blog_post_has_breadcrumb_list_schema
     doc = parse_html_file("blog/4-lines-speed-up-your-rails-test-suite-on-circleci/index.html")
     schemas = find_schemas_by_type(doc, "BreadcrumbList")

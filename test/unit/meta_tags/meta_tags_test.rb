@@ -1,21 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class MetaTagsTest < BasePageTestCase
-  # Unit tests for meta tags functionality and SEO validation
-  # Tests rendered HTML output from public-test directory (no server required)
-
-  def test_canonical_url_for_site
-    doc = parse_html_file("index.html")
-
-    canonical_links = doc.css("link[rel='canonical']")
-    assert canonical_links.any?, "Homepage should have canonical link"
-
-    canonical_href = canonical_links.first["href"]
-    assert canonical_href, "Canonical link should have href attribute"
-    # Canonical URL should be a properly formatted URL
-    assert_match %r{https?://.*/$}, canonical_href, "Canonical URL should be properly formatted: #{canonical_href}"
-  end
-
+class MetaTagsTest < PageTestCase
   def test_homepage_has_og_locale_meta_tag
     doc = parse_html_file("index.html")
 

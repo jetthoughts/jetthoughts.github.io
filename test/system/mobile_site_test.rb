@@ -134,13 +134,11 @@ class MobileSiteTest < ApplicationSystemTestCase
   private
 
   def open_mobile_menu
-    # Mobile menu opener is outside the header element
     find(".js-mobile-menu-opener", visible: true, wait: 5).click
     wait_menu_to_render
   end
 
   def wait_menu_to_render
-    # Wait for navigation menu to fully render
     has_selector?(".navigation .js-sub-menu-opener", visible: true, wait: 3)
   end
 end

@@ -1,6 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class TestimonialShortcodeTest < BasePageTestCase
+class TestimonialShortcodeTest < PageTestCase
   # Unit tests for testimonial shortcode functionality and rendering
   # Tests rendered HTML output from public-test directory (no server required)
 

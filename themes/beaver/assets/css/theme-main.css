@@ -1,6 +1,9 @@
 :root {
   --jt-primary-color: #1a8cff;
   --jt-text-color: #121212;
+  --jt-primary: #1a8cff;
+  --jt-text-primary: #121212;
+  --jt-white: #ffffff;
 }
 
 body {
@@ -24,6 +27,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   font-style: normal;
+  margin: 0;
   padding: 0;
   word-wrap: break-word;
 }

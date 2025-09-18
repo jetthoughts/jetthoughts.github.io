@@ -1,6 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class ServiceSchemaTest < BasePageTestCase
+class ServiceSchemaTest < PageTestCase
   def test_service_page_has_service_schema
     doc = parse_html_file("services/fractional-cto/index.html")
     schemas = find_schemas_by_type(doc, "Service")

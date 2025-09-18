@@ -1,6 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class HugoAssetValidationTest < BasePageTestCase
+class HugoAssetValidationTest < PageTestCase
   EXPECTED_HOST = "localhost"
 
   # Asset pattern constants

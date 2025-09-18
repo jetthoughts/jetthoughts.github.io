@@ -1,3 +1,9 @@
+---
+Global Reference: /knowledge/30.01-agent-coordination-patterns.md
+Authority: Secondary (Extends Global Standards)
+Last Synced: 2024-01-19
+---
+
 # Hugo Pipes Asset Pipeline Design Plan
 
 ## Executive Summary

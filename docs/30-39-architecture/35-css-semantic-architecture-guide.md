@@ -1,8 +1,25 @@
+---
+Global Reference: /knowledge/30.01-agent-coordination-patterns.md
+Authority: Secondary (Extends Global Standards)
+Last Synced: 2024-01-19
+---
+
 # CSS Semantic Architecture Guide
+*Explanation-Oriented Content - AC.ID: 35.01*
+
+## 🌐 Global Handbook Compliance (Supreme Authority)
+
+**Global References**:
+- `/knowledge/30.01-agent-coordination-patterns.md` (SUPREME AUTHORITY)
+- `/knowledge/50.01-global-file-management.md` (SUPREME AUTHORITY)
+
+**Authority Resolution**: Global architectural patterns and file management protocols supersede CSS-specific preferences
+**Extension Statement**: This CSS architecture extends Global architectural standards with CSS-specific semantic organization
+**Key Compliance**: Implements Global architectural consistency, Global file organization, and Global pattern standardization
 
 ## Executive Summary
 
-This document defines the comprehensive semantic CSS architecture for the JetThoughts site, establishing naming conventions, component hierarchy, utility classes, and migration strategy from legacy Beaver Builder classes to a modern, maintainable CSS architecture.
+This document defines the comprehensive semantic CSS architecture for the JetThoughts site, establishing naming conventions, component hierarchy, utility classes, and migration strategy from legacy Beaver Builder classes to a modern, maintainable CSS architecture that fully complies with Global Handbook architectural standards.
 
 ## Current State Analysis
 
@@ -518,4 +535,17 @@ assets/css/
 
 ## Conclusion
 
-This semantic CSS architecture provides a solid foundation for maintainable, scalable frontend development. The migration from legacy Beaver Builder classes to semantic naming will improve code quality, developer experience, and site performance.
+This semantic CSS architecture provides a solid foundation for maintainable, scalable frontend development that fully complies with Global Handbook architectural standards. The migration from legacy Beaver Builder classes to semantic naming will improve code quality, developer experience, and site performance while maintaining Global architectural consistency.
+
+---
+
+## Document Metadata
+
+- **AC.ID**: 35.01
+- **Diátaxis Type**: explanation
+- **Global Handbook References**:
+  - `/knowledge/30.01-agent-coordination-patterns.md` (SUPREME AUTHORITY)
+  - `/knowledge/50.01-global-file-management.md` (SUPREME AUTHORITY)
+- **Authority Level**: Secondary (extends Global standards)
+- **Last Updated**: 2025-09-18
+- **Cross-References**: [Global architectural patterns, Global file organization, Global pattern standardization]

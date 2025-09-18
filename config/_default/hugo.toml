@@ -1,10 +1,10 @@
 baseURL = "https://jetthoughts.com/"
-canonifyURLs = true
+#canonifyURLs = true
 languageCode = "en-us"
 title = "JetThoughts"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme = "beaver"
-enableGitInfo = true
+enableGitInfo = false
 disableKinds = []
 
 [markup.goldmark.renderer]

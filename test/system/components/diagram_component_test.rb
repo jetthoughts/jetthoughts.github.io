@@ -4,6 +4,7 @@ require "application_system_test_case"
 
 class DiagramComponentTest < ApplicationSystemTestCase
   def setup
+    # Now using desktop_chrome driver to test if browser crashes are fixed
     Capybara.current_driver = :desktop_chrome
     super
   end
@@ -11,17 +12,11 @@ class DiagramComponentTest < ApplicationSystemTestCase
   def test_diagram_content_page
     visit "/test/components/diagram/"
 
-    # Wait for page to load
     assert_text "Test Page for Diagram Rendering"
 
-    # Verify mermaid diagrams are rendered as div elements
-    assert_css "div.mermaid", minimum: 2, wait: 3
+    assert_css "div.mermaid", minimum: 2, wait: 1
+    assert_css "[id^=mermaid-]"
 
-    # Verify essential diagram elements are present (text nodes in the rendered diagrams)
-    assert_text "Start"  # From the flowchart
-    assert_text "User"   # From the sequence diagram
-
-    # Take screenshot with higher tolerance for dynamic SVG rendering
     assert_stable_screenshot "components/diagram", tolerance: 0.08
   end
 end

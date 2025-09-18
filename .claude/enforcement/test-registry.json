@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "mandatory_tests": [
+    {"name": "bin/test", "type": "unit", "required": true},
+    {"name": "bin/dtest", "type": "integration", "required": true},
+    {"name": "bin/smoke", "type": "smoke", "required": true},
+    {"name": "hugo-build", "type": "build", "required": true}
+  ],
+  "execution_history": [],
+  "enforcement_active": true
+}

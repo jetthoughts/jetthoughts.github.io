@@ -21,7 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     subMenuOpeners.forEach((subMenuOpener) => {
         subMenuOpener.addEventListener("click", function (e) {
-            e.target.parentElement.classList.toggle("-open");
+            e.preventDefault();
+            const parentItem = e.target.parentElement;
+
+            // Close other open menus
+            document.querySelectorAll(".navigation .item.-open").forEach(item => {
+                if (item !== parentItem) item.classList.remove("-open");
+            });
+
+            // Toggle current menu
+            parentItem.classList.toggle("-open");
         });
     });
 });

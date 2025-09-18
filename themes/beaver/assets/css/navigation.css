@@ -379,9 +379,15 @@
   }
 
   /* Mobile-specific color overrides to fix CSS variable inconsistencies */
-  .navigation .btn {
+  .navigation .btn:not(.btn-primary) {
     background-color: #121212 !important;
     color: #ffffff !important;
+  }
+
+  /* Ensure Contact Us button stays blue */
+  .navigation .btn.btn-primary {
+    background-color: var(--jt-primary) !important;
+    color: var(--jt-white) !important;
   }
 
   .navigation .item {

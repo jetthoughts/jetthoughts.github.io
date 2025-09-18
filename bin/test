@@ -2,16 +2,8 @@
 
 set -euo pipefail
 
-# Hugo optimization for test performance
-export HUGO_CACHEDIR="${HUGO_CACHEDIR:-/tmp/hugo_cache_test}"
-export HUGO_ENABLEGITINFO="false"
-export TEST_QUIET="true"
-
-# Ensure cache directory exists
-mkdir -p "$HUGO_CACHEDIR"
-
 if [ $# -eq 0 ]; then
-  bundle exec rake test
+  bin/rake test:all
 else
   bundle exec ruby -Itest "$@"
 fi

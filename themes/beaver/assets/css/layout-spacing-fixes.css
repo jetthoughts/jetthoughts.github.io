@@ -1,0 +1,197 @@
+/**
+ * Layout Spacing Fixes
+ *
+ * Restores proper padding and margins for content body areas after
+ * FL-Builder layout system override issues.
+ */
+
+/* ==========================================================================
+   Main Content Container Fixes
+   ========================================================================== */
+
+/* Fix FL-Builder row content wrapper padding - CONSERVATIVE */
+.fl-row-content-wrap {
+  padding-top: var(--spacing-md, 1rem);
+  padding-right: var(--spacing-sm, 0.5rem);
+  padding-bottom: var(--spacing-md, 1rem);
+  padding-left: var(--spacing-sm, 0.5rem);
+}
+
+/* Fix FL-Builder row fixed width containers */
+.fl-row-fixed-width {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Specific fixes for main content areas */
+#fl-main-content .fl-row-content-wrap {
+  padding-top: var(--spacing-sm, 0.5rem);
+  padding-bottom: var(--spacing-sm, 0.5rem);
+}
+
+/* Fix column content padding */
+.fl-col-content {
+  padding-top: var(--spacing-xs, 0.25rem);
+  padding-right: var(--spacing-xs, 0.25rem);
+  padding-bottom: var(--spacing-xs, 0.25rem);
+  padding-left: var(--spacing-xs, 0.25rem);
+}
+
+/* ==========================================================================
+   Single Content Page Fixes
+   ========================================================================== */
+
+/* Fix single article content padding */
+.single-content {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding-left: var(--spacing-md, 1rem) !important;
+  padding-right: var(--spacing-md, 1rem) !important;
+}
+
+/* Fix content text area max-width */
+.fl-rich-text.c-content-block__text {
+  max-width: 43rem !important;
+  margin: 0 auto !important;
+}
+
+/* ==========================================================================
+   Container System Integration
+   ========================================================================== */
+
+/* Ensure containers use the unified spacing system */
+.c-container,
+.container,
+.container-fluid {
+  padding-left: var(--spacing-container-padding, 1rem) !important;
+  padding-right: var(--spacing-container-padding, 1rem) !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Section spacing - MINIMAL CONSERVATIVE APPROACH */
+.c-section,
+.fl-row {
+  /* Commenting out aggressive section padding */
+  /* padding-top: var(--spacing-section-padding, 1.5rem) !important; */
+  /* padding-bottom: var(--spacing-section-padding, 1.5rem) !important; */
+}
+
+/* ==========================================================================
+   Mobile Responsive Fixes
+   ========================================================================== */
+
+@media (max-width: 1115px) {
+  .fl-row[data-node] > .fl-row-content-wrap {
+    padding-top: var(--spacing-md, 1rem) !important;
+    padding-right: var(--spacing-md, 1rem) !important;
+    padding-bottom: var(--spacing-md, 1rem) !important;
+    padding-left: var(--spacing-md, 1rem) !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .fl-row-content-wrap {
+    padding-top: var(--spacing-lg, 1.5rem) !important;
+    padding-right: var(--spacing-md, 1rem) !important;
+    padding-bottom: var(--spacing-lg, 1.5rem) !important;
+    padding-left: var(--spacing-md, 1rem) !important;
+  }
+
+  .fl-row[data-node] .fl-row-content-wrap {
+    padding-left: var(--spacing-md, 1rem) !important;
+    padding-right: var(--spacing-md, 1rem) !important;
+  }
+
+  .fl-row[data-node] > .fl-row-content-wrap {
+    padding-top: var(--spacing-lg, 1.5rem) !important;
+    padding-right: var(--spacing-md, 1rem) !important;
+    padding-bottom: var(--spacing-lg, 1.5rem) !important;
+    padding-left: var(--spacing-md, 1rem) !important;
+  }
+
+  .single-content {
+    padding-left: var(--spacing-md, 1rem) !important;
+    padding-right: var(--spacing-md, 1rem) !important;
+  }
+
+  .c-container,
+  .container {
+    padding-left: var(--spacing-container-padding, 0.75rem) !important;
+    padding-right: var(--spacing-container-padding, 0.75rem) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .fl-row-content-wrap {
+    padding-top: var(--spacing-md, 1rem) !important;
+    padding-right: var(--spacing-sm, 0.5rem) !important;
+    padding-bottom: var(--spacing-md, 1rem) !important;
+    padding-left: var(--spacing-sm, 0.5rem) !important;
+  }
+
+  .single-content {
+    padding-left: var(--spacing-sm, 0.5rem) !important;
+    padding-right: var(--spacing-sm, 0.5rem) !important;
+  }
+
+  .c-container,
+  .container {
+    padding-left: var(--spacing-container-padding, 0.5rem) !important;
+    padding-right: var(--spacing-container-padding, 0.5rem) !important;
+  }
+}
+
+/* ==========================================================================
+   Header Navigation Specific Fixes
+   ========================================================================== */
+
+/* Fix header navigation spacing */
+.fl-node-header-nav-row > .fl-row-content-wrap {
+  padding-top: 10px !important;
+  padding-bottom: 0px !important;
+  padding-left: var(--spacing-sm, 0.5rem) !important;
+  padding-right: var(--spacing-sm, 0.5rem) !important;
+}
+
+.fl-node-header-nav-row .fl-row-content {
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ==========================================================================
+   Content Body Specific Fixes
+   ========================================================================== */
+
+/* Ensure main content area has proper spacing */
+main#main-content {
+  min-height: calc(100vh - 200px);
+  padding-top: var(--spacing-md, 1rem);
+  padding-bottom: var(--spacing-md, 1rem);
+}
+
+/* Fix page wrapper */
+.fl-page {
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Module Content Fixes
+   ========================================================================== */
+
+/* Fix FL module content spacing */
+.fl-module-content {
+  margin-top: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: var(--spacing-md, 1rem) !important;
+  margin-left: 0px !important;
+  padding: var(--spacing-sm, 0.5rem) !important;
+}
+
+/* Last module should not have bottom margin */
+.fl-module-content:last-child {
+  margin-bottom: 0 !important;
+}

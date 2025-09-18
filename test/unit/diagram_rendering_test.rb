@@ -1,6 +1,6 @@
-require "base_page_test_case"
+require "page_test_case"
 
-class DiagramRenderingTest < BasePageTestCase
+class DiagramRenderingTest < PageTestCase
   # Unit tests for diagram rendering functionality (Mermaid support)
   # Tests rendered HTML output from public-test directory (no server required)
 

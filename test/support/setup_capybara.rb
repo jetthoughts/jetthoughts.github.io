@@ -2,53 +2,35 @@
 
 require "selenium-webdriver"
 
-# Essential Chrome arguments only - fail fast if any cause issues
+# Configure Selenium to automatically manage Chrome driver
+Selenium::WebDriver.logger.output = File.join(Dir.tmpdir, "selenium.log")
+Selenium::WebDriver.logger.level = :warn
+
+# Minimal Chrome arguments for maximum stability during testing
 CHROME_ARGS = {
-  "allow-running-insecure-content" => nil,
-  "autoplay-policy" => "user-gesture-required",
-  "disable-add-to-shelf" => nil,
-  "disable-background-networking" => nil,
+  "headless" => nil,
+  "no-sandbox" => nil,
+  "disable-dev-shm-usage" => nil,
+  "disable-gpu" => nil,
+  "disable-extensions" => nil,
+  "disable-web-security" => nil,
+  "disable-features" => "VizDisplayCompositor",
   "disable-background-timer-throttling" => nil,
   "disable-backgrounding-occluded-windows" => nil,
-  "disable-breakpad" => nil,
-  "disable-checker-imaging" => nil,
-  "disable-client-side-phishing-detection" => nil,
-  "disable-component-extensions-with-background-pages" => nil,
-  "disable-datasaver-prompt" => nil,
-  "disable-default-apps" => nil,
-  "disable-desktop-notifications" => nil,
-  "disable-dev-shm-usage" => nil,
-  "disable-domain-reliability" => nil,
-  "disable-extensions" => nil,
-  "disable-features" => "TranslateUI,BlinkGenPropertyTrees,LazyImageLoading",
-  "disable-gpu" => nil,
-  "disable-hang-monitor" => nil,
-  "disable-infobars" => nil,
-  "disable-ipc-flooding-protection" => nil,
-  "disable-logging" => nil,
-  "disable-notifications" => nil,
-  "disable-popup-blocking" => nil,
-  "disable-prompt-on-repost" => nil,
   "disable-renderer-backgrounding" => nil,
-  "disable-setuid-sandbox" => nil,
-  "disable-site-isolation-trials" => nil,
-  "disable-sync" => nil,
-  "disable-web-security" => nil,
-  "enable-automation" => nil,
-  "force-color-profile" => "srgb",
-  "force-device-scale-factor" => "1",
-  "headless" => nil,
-  "ignore-certificate-errors" => nil,
-  "incognito" => nil,
-  "js-flags" => "--random-seed=1157259157",
-  "metrics-recording-only" => nil,
-  "mute-audio" => nil,
-  "no-default-browser-check" => nil,
+  "disable-infobars" => nil,
+  "disable-popup-blocking" => nil,
+  "disable-default-apps" => nil,
+  "disable-hang-monitor" => nil,
   "no-first-run" => nil,
-  "no-sandbox" => nil,
-  "password-store" => "basic",
-  "test-type" => nil,
-  "use-mock-keychain" => nil
+  "disable-crash-reporter" => nil,
+  "disable-logging" => nil,
+  "log-level" => "3",
+  "silent" => nil,
+  # Additional arguments for connection stability
+  "disable-ipc-flooding-protection" => nil,
+  "disable-session-crashed-bubble" => nil,
+  "force-device-scale-factor" => "1"
 }
 
 def build_options_for(opts)
@@ -80,6 +62,7 @@ Capybara.javascript_driver = :desktop_chrome
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.disable_animation = true
 Capybara.threadsafe = false
-Capybara.default_max_wait_time = 10
+Capybara.default_max_wait_time = ENV.fetch("CAPYBARA_WAIT_TIME", "10").to_i
+Capybara.server_errors = []
 
 Capybara.save_path = "tmp/capybara/"
