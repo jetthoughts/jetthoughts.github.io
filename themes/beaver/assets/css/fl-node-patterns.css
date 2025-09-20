@@ -85,8 +85,8 @@
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield select, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield textarea {
-  color: #121212;
-  background-color: #ffffff;
+  color: var(--jt-dark);
+  background-color: var(--jt-white);
   width: 100% !important;
 }
 
