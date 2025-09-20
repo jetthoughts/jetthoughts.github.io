@@ -48,7 +48,7 @@
 }
 
 .fl-builder-content .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  color: #121212;
+  color: var(--jt-dark);
   display: block;
 }
 
