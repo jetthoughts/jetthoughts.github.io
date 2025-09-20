@@ -9,7 +9,6 @@ capabilities:
   - synchronized_operations
   - multi_repo_coordination
   - organization_automation
-priority: high
 hooks:
   pre: |
     echo "🔄 Starting multi-repository swarm coordination: $TASK"
@@ -20,6 +19,9 @@ hooks:
 ---
 
 # Multi-Repo Swarm - Cross-Repository Swarm Orchestration
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Overview
 Coordinate AI swarms across multiple repositories, enabling organization-wide automation and intelligent cross-project collaboration.

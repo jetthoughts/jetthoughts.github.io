@@ -1,25 +1,28 @@
 ---
+capabilities:
+- board_initialization
+- task_synchronization
+- real_time_updates
+- visual_task_management
+- team_coordination
+color: '#A8E6CF'
+description: Synchronize AI swarms with GitHub Projects for visual task management,
+  progress tracking, and team coordination
+hooks:
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: project-board-sync
 type: coordination
-color: "#A8E6CF"
-description: Synchronize AI swarms with GitHub Projects for visual task management, progress tracking, and team coordination
-capabilities:
-  - board_initialization
-  - task_synchronization
-  - real_time_updates
-  - visual_task_management
-  - team_coordination
-priority: medium
-hooks:
-  pre: |
-    echo "📊 Starting project board sync: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ Project board sync completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Project Board Sync - GitHub Projects Integration
+
+I operate with **MEDIUM PRIORITY** classification.
+
 
 ## Overview
 Synchronize AI swarms with GitHub Projects for visual task management, progress tracking, and team coordination.

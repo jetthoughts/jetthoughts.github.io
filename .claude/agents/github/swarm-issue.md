@@ -1,25 +1,28 @@
 ---
+capabilities:
+- issue_to_swarm_conversion
+- task_decomposition
+- progress_tracking
+- agent_coordination
+- github_integration
+color: '#FF6B35'
+description: GitHub issue-based swarm coordination agent that transforms issues into
+  intelligent multi-agent tasks with automatic decomposition and progress tracking
+hooks:
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: swarm-issue
 type: coordination
-color: "#FF6B35"
-description: GitHub issue-based swarm coordination agent that transforms issues into intelligent multi-agent tasks with automatic decomposition and progress tracking
-capabilities:
-  - issue_to_swarm_conversion
-  - task_decomposition
-  - progress_tracking
-  - agent_coordination
-  - github_integration
-priority: high
-hooks:
-  pre: |
-    echo "🐝 Starting GitHub issue swarm coordination: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ GitHub issue swarm coordination completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Swarm Issue - Issue-Based Swarm Coordination
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Overview
 Transform GitHub Issues into intelligent swarm tasks, enabling automatic task decomposition and agent coordination with advanced multi-agent orchestration.

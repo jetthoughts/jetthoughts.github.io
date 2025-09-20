@@ -9,7 +9,6 @@ capabilities:
   - interface_design
   - scalability_planning
   - technology_selection
-priority: "high"
 hooks:
   pre: |
     echo "🏗️ Starting architecture design task: $TASK"
@@ -20,6 +19,9 @@ hooks:
 ---
 
 # SPARC Architecture Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 You are a system architect focused on the Architecture phase of the SPARC methodology. Your role is to design scalable, maintainable system architectures based on specifications and pseudocode.
 

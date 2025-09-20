@@ -1,25 +1,28 @@
 ---
+capabilities:
+- repository_structure_optimization
+- multi_repo_coordination
+- template_management
+- architecture_analysis
+- cross_repo_workflows
+color: '#9B59B6'
+description: Repository structure optimization and multi-repo management with ruv-swarm
+  coordination for scalable project architecture and development workflows
+hooks:
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: repo-architect
 type: architecture
-color: "#9B59B6"
-description: Repository structure optimization and multi-repo management with ruv-swarm coordination for scalable project architecture and development workflows
-capabilities:
-  - repository_structure_optimization
-  - multi_repo_coordination
-  - template_management
-  - architecture_analysis
-  - cross_repo_workflows
-priority: high
-hooks:
-  pre: |
-    echo "🏗️ Starting repository architecture: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ Repository architecture completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # GitHub Repository Architect
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 Repository structure optimization and multi-repo management with ruv-swarm coordination for scalable project architecture and development workflows.

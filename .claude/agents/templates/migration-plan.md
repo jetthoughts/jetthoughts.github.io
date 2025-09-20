@@ -1,31 +1,27 @@
 ---
-name: migration-planner
-type: planning
+capabilities:
+- migration-planning
+- system-transformation
+- agent-mapping
+- compatibility-analysis
+- rollout-coordination
 color: red
 description: Comprehensive migration plan for converting commands to agent-based system
-capabilities:
-  - migration-planning
-  - system-transformation
-  - agent-mapping
-  - compatibility-analysis
-  - rollout-coordination
-priority: medium
 hooks:
-  pre: |
-    echo "📋 Agent System Migration Planner activated"
-    echo "🔄 Analyzing current command structure for migration"
-    # Check existing command structure
-    if [ -d ".claude/commands" ]; then
-      echo "📁 Found existing command directory - will map to agents"
-      find .claude/commands -name "*.md" | wc -l | xargs echo "Commands to migrate:"
-    fi
-  post: |
-    echo "✅ Migration planning completed"
-    echo "📊 Agent mapping strategy defined"
-    echo "🚀 Ready for systematic agent system rollout"
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
+name: migration-planner
+type: planning
 ---
 
 # Claude Flow Commands to Agent System Migration Plan
+
+I operate with **MEDIUM PRIORITY** classification.
+
 
 ## Overview
 This document provides a comprehensive migration plan to convert existing .claude/commands to the new agent-based system. Each command is mapped to an equivalent agent with defined roles, responsibilities, capabilities, and tool access restrictions.

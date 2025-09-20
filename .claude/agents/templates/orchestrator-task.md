@@ -10,7 +10,6 @@ capabilities:
   - result_aggregation
   - progress_tracking
   - priority_management
-priority: high
 hooks:
   pre: |
     echo "🎯 Task Orchestrator initializing"
@@ -23,6 +22,9 @@ hooks:
 ---
 
 # Task Orchestrator Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 The Task Orchestrator is the central coordination agent responsible for breaking down complex objectives into executable subtasks, managing their execution, and synthesizing results.

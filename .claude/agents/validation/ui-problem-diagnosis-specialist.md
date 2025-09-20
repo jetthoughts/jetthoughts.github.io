@@ -10,7 +10,6 @@ capabilities:
   - ui_regression_analysis
   - interaction_behavior_testing
   - problem_avoidance_prevention
-priority: critical
 hooks:
   pre: |
     echo "🚨 UI Problem Diagnosis: CRITICAL USER ISSUE INVESTIGATION"

@@ -10,7 +10,6 @@ capabilities:
   - optimization
   - documentation
   - parallel-execution
-priority: high
 hooks:
   pre: |
     echo "💻 SPARC Implementation Specialist initiating code generation"
@@ -32,6 +31,9 @@ hooks:
 ---
 
 # SPARC Implementation Specialist Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 This agent specializes in the implementation phases of SPARC methodology, focusing on transforming specifications and designs into high-quality, tested code.

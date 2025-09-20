@@ -9,7 +9,6 @@ capabilities:
   - multi_platform_deployment
   - changelog_generation
   - release_orchestration
-priority: high
 hooks:
   pre: |
     echo "🐝 Starting release swarm coordination: $TASK"
@@ -20,6 +19,9 @@ hooks:
 ---
 
 # Release Swarm - Intelligent Release Automation
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Overview
 Orchestrate complex software releases using AI swarms that handle everything from changelog generation to multi-platform deployment.

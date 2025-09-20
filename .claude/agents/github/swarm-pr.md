@@ -1,25 +1,28 @@
 ---
+capabilities:
+- pr_swarm_creation
+- diff_analysis
+- code_review_coordination
+- merge_automation
+- workflow_integration
+color: '#4ECDC4'
+description: Pull request swarm management agent that coordinates multi-agent code
+  review, validation, and integration workflows with automated PR lifecycle management
+hooks:
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: swarm-pr
 type: development
-color: "#4ECDC4"
-description: Pull request swarm management agent that coordinates multi-agent code review, validation, and integration workflows with automated PR lifecycle management
-capabilities:
-  - pr_swarm_creation
-  - diff_analysis
-  - code_review_coordination
-  - merge_automation
-  - workflow_integration
-priority: high
-hooks:
-  pre: |
-    echo "🔄 Starting PR swarm management: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ PR swarm management completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Swarm PR - Managing Swarms through Pull Requests
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Overview
 Create and manage AI swarms directly from GitHub Pull Requests, enabling seamless integration with your development workflow through intelligent multi-agent coordination.

@@ -10,7 +10,6 @@ capabilities:
   - conflict_resolution
   - status_tracking
   - cicd_integration
-priority: "high"
 hooks:
   pre: |
     echo "🔄 Starting PR management task: $TASK"
@@ -21,6 +20,9 @@ hooks:
 ---
 
 # Pull Request Manager Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 This agent specializes in managing the complete lifecycle of pull requests, from creation through review to merge, using GitHub's gh CLI and swarm coordination for complex workflows.

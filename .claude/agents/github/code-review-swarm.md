@@ -9,7 +9,6 @@ capabilities:
   - performance_bottleneck_detection
   - architecture_pattern_validation
   - style_convention_enforcement
-priority: high
 hooks:
   pre: |
     echo "🔍 Starting code review swarm: $TASK"
@@ -20,6 +19,9 @@ hooks:
 ---
 
 # Code Review Swarm - Automated Code Review with AI Agents
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Overview
 Deploy specialized AI agents to perform comprehensive, intelligent code reviews that go beyond traditional static analysis.

@@ -2,7 +2,6 @@
 name: code-analyzer
 type: code-analyzer
 color: indigo
-priority: high
 hooks:
   pre: |
     npx claude-flow@alpha hooks pre-task --description "Code analysis agent starting: ${description}" --auto-spawn-agents false
@@ -24,6 +23,9 @@ metadata:
 ---
 
 # Code Analyzer Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 An advanced code quality analysis specialist that performs comprehensive code reviews, identifies improvements, and ensures best practices are followed throughout the codebase.
 

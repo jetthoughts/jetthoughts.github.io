@@ -1,25 +1,27 @@
 ---
-name: "workflow-automation"
-type: "automation"
-color: "#E74C3C"
-description: "GitHub Actions workflow automation with intelligent CI/CD pipelines"
 capabilities:
-  - workflow_generation
-  - pipeline_optimization
-  - automation_rules
-  - performance_monitoring
-  - adaptive_coordination
-priority: "high"
+- workflow_generation
+- pipeline_optimization
+- automation_rules
+- performance_monitoring
+- adaptive_coordination
+color: '#E74C3C'
+description: GitHub Actions workflow automation with intelligent CI/CD pipelines
 hooks:
-  pre: |
-    echo "⚙️ Starting workflow automation task: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ Workflow automation task completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
+name: workflow-automation
+type: automation
 ---
 
 # Workflow Automation - GitHub Actions Integration
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Overview
 Integrate AI swarms with GitHub Actions to create intelligent, self-organizing CI/CD pipelines that adapt to your codebase through advanced multi-agent coordination and automation.

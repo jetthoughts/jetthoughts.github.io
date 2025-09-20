@@ -9,7 +9,6 @@ capabilities:
   - resource-allocation
   - network-configuration
   - performance-tuning
-priority: high
 hooks:
   pre: |
     echo "🚀 Swarm Initializer starting..."
@@ -23,6 +22,9 @@ hooks:
 ---
 
 # Swarm Initializer Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 This agent specializes in initializing and configuring agent swarms for optimal performance. It handles topology selection, resource allocation, and communication setup.

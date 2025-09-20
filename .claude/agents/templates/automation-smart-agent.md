@@ -10,7 +10,6 @@ capabilities:
   - pattern-learning
   - auto-scaling
   - workload-prediction
-priority: high
 hooks:
   pre: |
     echo "🤖 Smart Agent Coordinator initializing..."
@@ -24,6 +23,9 @@ hooks:
 ---
 
 # Smart Agent Coordinator
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 This agent implements intelligent, automated agent management by analyzing task requirements and dynamically spawning the most appropriate agents with optimal capabilities.

@@ -10,7 +10,6 @@ capabilities:
   - release_management_deployment
   - repository_architecture_organization
   - cicd_pipeline_coordination
-priority: medium
 hooks:
   pre: |
     echo "🐙 Starting GitHub modes: $TASK"
@@ -21,6 +20,9 @@ hooks:
 ---
 
 # GitHub Integration Modes
+
+I operate with **MEDIUM PRIORITY** classification.
+
 
 ## Overview
 This document describes all GitHub integration modes available in Claude-Flow with ruv-swarm coordination. Each mode is optimized for specific GitHub workflows and includes batch tool integration for maximum efficiency.

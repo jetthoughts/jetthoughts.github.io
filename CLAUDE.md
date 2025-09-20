@@ -51,6 +51,64 @@
 
 ---
 
+## 🚨 MANDATORY EXPERT CONSULTATION FOR CONFIGURATION CHANGES (ZERO TOLERANCE)
+
+### 🛡️ CONFIGURATION CHANGE ENFORCEMENT PROTOCOL
+
+**CRITICAL MANDATE**: ALL changes to CLAUDE.md or .claude/ directory MUST spawn claude-flow-specialist for validation and compliance verification.
+
+#### **🔒 MANDATORY TRIGGERS - ZERO TOLERANCE**
+
+**IMMEDIATE EXPERT SPAWNING REQUIRED FOR**:
+- Any modification to CLAUDE.md file
+- Any changes to .claude/agents/ directory
+- Any changes to .claude/hooks/ directory
+- Any configuration updates or agent behavior modifications
+- Any frontmatter field additions or modifications
+- Any agent description changes or capability updates
+
+#### **🎯 MANDATORY SPAWN PATTERN**
+
+```javascript
+// REQUIRED: Must spawn claude-flow expert for ALL configuration changes
+Task("Claude-Flow Expert", "Validate configuration changes and ensure compliance with claude-flow standards. Verify 7-field frontmatter requirements and reject custom fields.", "claude-flow-specialist")
+```
+
+#### **📋 STANDARD 7-FIELD FRONTMATTER REQUIREMENTS**
+
+**ONLY THESE 7 FIELDS ARE ALLOWED**:
+1. `name` - Agent identifier
+2. `description` - Agent behavioral description
+3. `model` - Model specification
+4. `capabilities` - Agent capabilities array
+5. `hooks` - Pre/post operation hooks
+6. `memory` - Memory configuration
+7. `coordination` - Cross-agent coordination rules
+
+**🚫 FORBIDDEN**: Custom frontmatter fields are ABSOLUTELY PROHIBITED and will be rejected by claude-flow-specialist validation.
+
+#### **⚠️ ENFORCEMENT CONSEQUENCES**
+
+- **Configuration changes without expert validation will be REJECTED**
+- **Non-compliant frontmatter will be BLOCKED**
+- **Custom fields will be REMOVED by claude-flow-specialist**
+- **Agents making unauthorized config changes will be SUSPENDED**
+
+#### **🔍 VALIDATION CHECKLIST FOR CLAUDE-FLOW EXPERT**
+
+**The claude-flow-specialist MUST verify**:
+- ✅ All frontmatter uses only the 7 standard fields
+- ✅ Agent descriptions follow behavioral (not code) patterns
+- ✅ Hooks use only approved claude-flow commands
+- ✅ Memory coordination follows established protocols
+- ✅ No custom or experimental frontmatter fields
+- ✅ Configuration changes maintain ecosystem compatibility
+- ✅ Agent capabilities align with specialized roles
+
+**CRITICAL**: This ensures all configuration changes maintain claude-flow compliance and prevent broken agent configurations that could destabilize the entire development ecosystem.
+
+---
+
 ## 🚨 CRITICAL: COMPREHENSIVE AGENT VIOLATION PREVENTION SYSTEM - ZERO TOLERANCE
 
 ### ⚠️ AGENTS CANNOT BYPASS THESE REQUIREMENTS - AUTOMATED BLOCKING ACTIVE

@@ -1,25 +1,29 @@
 ---
+capabilities:
+- package_synchronization
+- version_alignment
+- dependency_management
+- cross_package_integration
+- documentation_sync
+color: '#9B59B6'
+description: Multi-repository synchronization coordinator that manages version alignment,
+  dependency synchronization, and cross-package integration with intelligent swarm
+  orchestration
+hooks:
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: sync-coordinator
 type: coordination
-color: "#9B59B6"
-description: Multi-repository synchronization coordinator that manages version alignment, dependency synchronization, and cross-package integration with intelligent swarm orchestration
-capabilities:
-  - package_synchronization
-  - version_alignment
-  - dependency_management
-  - cross_package_integration
-  - documentation_sync
-priority: high
-hooks:
-  pre: |
-    echo "🔄 Starting multi-repository synchronization: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ Multi-repository synchronization completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # GitHub Sync Coordinator
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 Multi-package synchronization and version alignment with ruv-swarm coordination for seamless integration between claude-code-flow and ruv-swarm packages through intelligent multi-agent orchestration.

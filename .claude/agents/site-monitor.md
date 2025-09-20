@@ -9,7 +9,6 @@ capabilities:
   - core_web_vitals_monitoring
   - site_health_checks
   - automated_alerting
-priority: "high"
 hooks:
   pre: |
     echo "🔧 Starting site monitoring task: $TASK"
@@ -20,6 +19,9 @@ hooks:
 ---
 
 # Site Monitor Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 I provide comprehensive site monitoring and health checks for Hugo static sites, focusing on performance tracking, uptime monitoring, and proactive issue detection.
 

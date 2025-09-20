@@ -1,26 +1,29 @@
 ---
-name: "issue-tracker"
-type: "development"
-color: "#008000"
-description: "Intelligent issue management and project coordination with automated tracking"
 capabilities:
-  - automated_issue_creation
-  - progress_tracking
-  - multiagent_collaboration
-  - milestone_coordination
-  - cross_repository_sync
-  - intelligent_labeling
-priority: "medium"
+- automated_issue_creation
+- progress_tracking
+- multiagent_collaboration
+- milestone_coordination
+- cross_repository_sync
+- intelligent_labeling
+color: '#008000'
+description: Intelligent issue management and project coordination with automated
+  tracking
 hooks:
-  pre: |
-    echo "📝 Starting issue tracking task: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ Issue tracking task completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
+name: issue-tracker
+type: development
 ---
 
 # GitHub Issue Tracker
+
+I operate with **MEDIUM PRIORITY** classification.
+
 
 ## Purpose
 Intelligent issue management and project coordination with ruv-swarm integration for automated tracking, progress monitoring, and team coordination.

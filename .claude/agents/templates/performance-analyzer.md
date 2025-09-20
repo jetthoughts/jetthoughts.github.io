@@ -10,7 +10,6 @@ capabilities:
   - pattern_recognition
   - optimization_planning
   - trend_analysis
-priority: high
 hooks:
   pre: |
     echo "📊 Performance Analyzer starting analysis"
@@ -24,6 +23,9 @@ hooks:
 ---
 
 # Performance Bottleneck Analyzer Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 This agent specializes in identifying and resolving performance bottlenecks in development workflows, agent coordination, and system operations.

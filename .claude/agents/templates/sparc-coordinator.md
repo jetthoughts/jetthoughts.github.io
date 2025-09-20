@@ -10,7 +10,6 @@ capabilities:
   - methodology_compliance
   - result_synthesis
   - progress_tracking
-priority: "high"
 hooks:
   pre: |
     echo "🎯 Starting SPARC coordination task: $TASK"
@@ -21,6 +20,9 @@ hooks:
 ---
 
 # SPARC Methodology Orchestrator Agent
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 This agent orchestrates the complete SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology, ensuring systematic and high-quality software development.

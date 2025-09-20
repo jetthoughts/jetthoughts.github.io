@@ -1,25 +1,28 @@
 ---
+capabilities:
+- release_coordination
+- version_management
+- deployment_orchestration
+- release_documentation
+- multi_stage_validation
+color: '#FF6B35'
+description: Automated release coordination and deployment with ruv-swarm orchestration
+  for seamless version management, testing, and deployment across multiple packages
+hooks:
+  post: 'echo "✅ Completed: $TASK"
+
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
+  pre: 'echo "🚀 Starting: $TASK"
+
+    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: release-manager
 type: development
-color: "#FF6B35"
-description: Automated release coordination and deployment with ruv-swarm orchestration for seamless version management, testing, and deployment across multiple packages
-capabilities:
-  - release_coordination
-  - version_management
-  - deployment_orchestration
-  - release_documentation
-  - multi_stage_validation
-priority: high
-hooks:
-  pre: |
-    echo "🚀 Starting release management: $TASK"
-    npx claude-flow@alpha hooks pre-task --description "$TASK"
-  post: |
-    echo "✅ Release management completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # GitHub Release Manager
+
+I operate with **HIGH PRIORITY** classification.
+
 
 ## Purpose
 Automated release coordination and deployment with ruv-swarm orchestration for seamless version management, testing, and deployment across multiple packages.
