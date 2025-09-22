@@ -1,0 +1,61 @@
+// Tab Component - Dual-Class Migration
+// Migrates .pp-tabs patterns to .c-tabs system
+
+// Base tab component with CSS variables
+.c-tabs {
+  --tab-label-bg: #f5f6f8;
+  --tab-label-bg-active: #ffffff;
+  --tab-label-text: #333333;
+  --tab-panel-bg: #ffffff;
+  --tab-border-radius: 14px;
+  --tab-padding: 28px 35px;
+
+  display: flex;
+  gap: 1rem;
+}
+
+// Tab labels container
+.c-tabs__labels {
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-tabs__label {
+  padding: var(--tab-padding);
+  border-radius: var(--tab-border-radius);
+  background-color: var(--tab-label-bg);
+  color: var(--tab-label-text);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-align: left;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  &.is-active {
+    background-color: var(--tab-label-bg-active);
+  }
+}
+
+// Tab panels container
+.c-tabs__panels {
+  width: 57%;
+}
+
+.c-tabs__panel {
+  display: none;
+  background-color: var(--tab-panel-bg);
+
+  &.is-active {
+    display: block;
+  }
+}
+
+// FL-Builder Compatibility - Dual Class Strategy
+// Applies .c-tabs styles to existing .jt-tabs .pp-tabs elements
+.jt-tabs .pp-tabs.c-tabs {
+  @extend .c-tabs;
+}
