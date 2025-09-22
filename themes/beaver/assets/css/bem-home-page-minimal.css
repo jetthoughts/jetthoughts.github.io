@@ -4,6 +4,11 @@
  * These classes provide semantic naming without altering existing FL-builder styles
  */
 
+/* CSS Custom Properties for Future Use */
+:root {
+  --color-primary: #1a8cff;
+}
+
 /* ================================================
    SEMANTIC CLASS HOOKS ONLY
    No layout, margin, padding, or visual changes
@@ -737,6 +742,7 @@
  *
  * ROLLBACK PROCEDURES:
  * - Micro-change 1 (.u-text-center): git revert d6da6140
+ * - Micro-change 2 (.u-margin-auto): git revert 61c5bb73
  *
  * The semantic BEM classes are now in place for:
  * - .c-why-us (why us section) + internal elements
