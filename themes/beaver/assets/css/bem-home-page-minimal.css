@@ -716,6 +716,7 @@
 
 /* Micro-change 1: Safe utility class addition */
 .u-text-center { text-align: center; }
+.u-margin-auto { margin-left: auto; margin-right: auto; }
 
 /* These can be activated once FL-builder classes are removed */
 /*
@@ -733,6 +734,9 @@
  * 2. Testing: Verify no visual changes with semantic classes
  * 3. Future: Gradually move styles from FL-builder to BEM
  * 4. Final: Remove FL-builder classes once BEM is complete
+ *
+ * ROLLBACK PROCEDURES:
+ * - Micro-change 1 (.u-text-center): git revert d6da6140
  *
  * The semantic BEM classes are now in place for:
  * - .c-why-us (why us section) + internal elements
