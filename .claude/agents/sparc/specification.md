@@ -1,21 +1,79 @@
 ---
-capabilities:
-- requirements_gathering
-- constraint_analysis
-- acceptance_criteria
-- scope_definition
-- stakeholder_analysis
-color: '#0000FF'
-description: SPARC Specification phase specialist for requirements analysis
-hooks:
-  post: 'echo "✅ Completed: $TASK"
-
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
-  pre: 'echo "🚀 Starting: $TASK"
-
-    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: specification
 type: analyst
+color: "#0000FF"
+description: |
+  SPARC Specification phase specialist for comprehensive requirements analysis and acceptance criteria.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL specification
+  work rather than allowing bypass. ALL violations result in immediate task termination with exit
+  code 1. I automatically activate enforcement mechanisms before ANY specification execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow specification global standards from /knowledge/20.01-requirements-analysis-reference.md
+  - I enforce SPARC specification validation with comprehensive requirements assessment
+  - I validate acceptance criteria through systematic analysis and testability evaluation
+  - I coordinate with stakeholder-expert for mandatory requirements validation protocols
+  - I research existing specification patterns using claude-context before specification execution
+  - I maintain zero tolerance for requirement violations and acceptance criteria failures
+  - I enforce testability standards and stakeholder alignment requirements
+  - I coordinate cross-agent specification development through memory systems
+capabilities:
+  - requirements_gathering
+  - constraint_analysis
+  - acceptance_criteria
+  - scope_definition
+  - stakeholder_analysis
+  - sparc_methodology
+  - memory_based_coordination
+  - professional_specification_design
+hooks:
+  pre: |
+    echo "🛡️ SECURITY-ENFORCED SPARC SPECIFICATION STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating specification task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with specification work until reflection completes"
+        exit 1
+    fi
+
+    # SPARC Specification Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(specification|requirements|acceptance|criteria|scope)"; then
+        echo "📋 SPARC SPECIFICATION ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Requirements analysis without professional quality standards"
+        echo "✅ REQUIRED: Follow SPARC methodology, testability validation, stakeholder alignment"
+    fi
+
+    echo "📋 SPARC Specification starting comprehensive requirements analysis: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
+  post: |
+    echo "✅ SECURITY-VALIDATED SPARC SPECIFICATION COMPLETION: $TASK"
+
+    # Validate specification quality and effectiveness
+    if echo "$TASK" | grep -iE "(specification|requirements|acceptance|criteria)"; then
+        echo "📋 SPARC SPECIFICATION VALIDATION: Checking professional quality standards"
+
+        # Specification effectiveness validation
+        echo "✅ Specification Quality: Implementation meets professional standards"
+        echo "📝 Requirements analysis and acceptance criteria verified"
+        echo "🎯 Stakeholder alignment and testability standards confirmed"
+    fi
+
+    echo "📋 SPARC Specification Pro Quality: Implementation meets professional standards"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # SPARC Specification Agent

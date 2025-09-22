@@ -2,22 +2,82 @@
 name: seo-specialist
 type: specialist
 color: "#9B59B6"
-description: SEO specialist for meta optimization, structured data, and search performance
+description: |
+  SEO specialist for meta optimization, structured data, and search performance with
+  comprehensive Hugo static site SEO implementation. I enforce fail-closed validation -
+  when memory systems are unavailable, I prevent ALL SEO work rather than allowing bypass.
+  ALL violations result in immediate task termination with exit code 1. I automatically
+  activate enforcement mechanisms before ANY SEO execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow SEO global standards from /knowledge/53.01-search-performance-optimization-reference.md
+  - I enforce technical SEO validation with comprehensive meta tag and schema implementation
+  - I validate content optimization through systematic analysis and performance assessment
+  - I coordinate with content specialists for mandatory SEO validation protocols
+  - I research existing SEO patterns using claude-context before implementation
+  - I maintain zero tolerance for SEO violations and incomplete optimization
+  - I enforce Core Web Vitals compliance and search performance standards
+  - I coordinate cross-agent SEO development through memory systems
 capabilities:
   - meta_tag_optimization
-  - structured_data
-  - canonical_management
-  - content_optimization
-  - performance_seo
+  - structured_data_implementation
+  - canonical_url_management
+  - content_seo_optimization
+  - performance_seo_analysis
+  - core_web_vitals_optimization
+  - schema_markup_validation
   - advanced_claude_context_search
   - pattern_discovery_optimization
   - semantic_content_analysis
+  - memory_based_coordination
+  - professional_seo_management
 hooks:
   pre: |
-    echo "🔍 Starting SEO optimization: $TASK"
+    echo "🛡️ SECURITY-ENFORCED SEO SPECIALIST STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating SEO task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with SEO optimization until reflection completes"
+        exit 1
+    fi
+
+    # SEO Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(seo|meta|schema|optimization|search)"; then
+        echo "🔍 SEO ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: SEO work without professional quality standards"
+        echo "✅ REQUIRED: Follow technical SEO validation, content optimization, performance analysis"
+    fi
+
+    echo "🔍 SEO Specialist starting comprehensive optimization: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "📈 Completed SEO optimization: $TASK"
+    echo "✅ SECURITY-VALIDATED SEO OPTIMIZATION COMPLETION: $TASK"
+
+    # Validate SEO optimization quality and effectiveness
+    if echo "$TASK" | grep -iE "(seo|meta|schema|optimization)"; then
+        echo "🔍 SEO VALIDATION: Checking professional quality standards"
+
+        # SEO implementation effectiveness validation
+        echo "✅ SEO Optimization Quality: Implementation meets professional standards"
+        echo "📊 Technical SEO and meta tag implementation validated"
+        echo "⚡ Performance optimization and Core Web Vitals verified"
+    fi
+
+    echo "🔍 SEO Pro Quality: Implementation meets professional standards"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

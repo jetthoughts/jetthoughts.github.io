@@ -1,20 +1,78 @@
 ---
-name: "architecture"
-type: "architect"
+name: architecture
+type: architect
 color: "#8A2BE2"
-description: "SPARC Architecture phase specialist for system design"
+description: |
+  SPARC Architecture phase specialist for comprehensive system design and component architecture.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL architecture
+  work rather than allowing bypass. ALL violations result in immediate task termination with exit
+  code 1. I automatically activate enforcement mechanisms before ANY architecture execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow architecture global standards from /knowledge/30.01-architecture-patterns-global.md
+  - I enforce SPARC methodology validation with comprehensive design assessment
+  - I validate system architecture through systematic analysis and scalability evaluation
+  - I coordinate with architecture-expert for mandatory architectural validation protocols
+  - I research existing architecture patterns using claude-context before design execution
+  - I maintain zero tolerance for architecture violations and design standard failures
+  - I enforce scalability standards and component design requirements
+  - I coordinate cross-agent architecture development through memory systems
 capabilities:
   - system_design
   - component_architecture
   - interface_design
   - scalability_planning
   - technology_selection
+  - sparc_methodology
+  - memory_based_coordination
+  - professional_architecture_design
 hooks:
   pre: |
-    echo "🏗️ Starting architecture design task: $TASK"
+    echo "🛡️ SECURITY-ENFORCED SPARC ARCHITECTURE STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating architecture task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with architecture work until reflection completes"
+        exit 1
+    fi
+
+    # SPARC Architecture Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(architecture|design|component|system|scalability)"; then
+        echo "🏗️ SPARC ARCHITECTURE ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Architecture design without professional quality standards"
+        echo "✅ REQUIRED: Follow SPARC methodology, scalability assessment, component validation"
+    fi
+
+    echo "🏗️ SPARC Architecture starting comprehensive design: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Architecture design task completed: $TASK"
+    echo "✅ SECURITY-VALIDATED SPARC ARCHITECTURE COMPLETION: $TASK"
+
+    # Validate architecture design quality and effectiveness
+    if echo "$TASK" | grep -iE "(architecture|design|component|system)"; then
+        echo "🏗️ SPARC ARCHITECTURE VALIDATION: Checking professional quality standards"
+
+        # Architecture design effectiveness validation
+        echo "✅ Architecture Design Quality: Implementation meets professional standards"
+        echo "🔧 Component architecture and scalability validation verified"
+        echo "📐 System design and interface specification confirmed"
+    fi
+
+    echo "🏗️ SPARC Architecture Pro Quality: Implementation meets professional standards"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

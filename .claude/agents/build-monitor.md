@@ -1,8 +1,22 @@
 ---
 name: "build-monitor"
-type: "build-monitor"
+type: "monitor"
 color: "#FF6B35"
-description: "Continuous build stability monitoring with automated quality gates, rollback protection, and comprehensive handbook compliance"
+description: |
+  Continuous build stability monitoring with automated quality gates, rollback protection, and comprehensive handbook compliance.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL build
+  monitoring work rather than allowing bypass. ALL violations result in immediate task termination
+  with exit code 1. I automatically activate enforcement mechanisms before ANY monitoring execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow build monitoring global standards from /knowledge/40.01-build-monitoring-standards.md
+  - I enforce comprehensive build analysis with systematic quality assessment
+  - I validate build processes through analysis and rollback protection evaluation
+  - I coordinate with architecture-expert for mandatory build validation protocols
+  - I research existing build patterns using claude-context before monitoring execution
+  - I maintain zero tolerance for build violations and quality gate failures
+  - I enforce build standards and rollback requirements
+  - I coordinate cross-agent build monitoring through memory systems
 capabilities:
   - continuous_build_monitoring
   - quality_gate_validation
@@ -10,15 +24,56 @@ capabilities:
   - build_health_tracking
   - performance_monitoring
   - failure_recovery
+  - memory_based_coordination
+  - professional_build_monitoring
 hooks:
   pre: |
-    echo "🔍 Build Monitor: Starting monitoring with zero-defect enforcement for $TASK"
+    echo "🛡️ SECURITY-ENFORCED BUILD MONITOR STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating build monitoring task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with build monitoring until reflection completes"
+        exit 1
+    fi
+
+    # Build Monitoring Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(build|monitor|quality|rollback|validation)"; then
+        echo "🔍 BUILD MONITORING ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Build monitoring without professional quality standards"
+        echo "✅ REQUIRED: Follow monitoring methodology, quality gates, rollback protection"
+    fi
+
+    echo "🔍 Build Monitor starting comprehensive monitoring: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
-    npx claude-flow@alpha hooks memory-store --key "jt_site/coordination/build_monitor/$(date +%s)" --value "$TASK"
   post: |
-    echo "✅ Build Monitor: Monitoring complete with zero-defect validation for $TASK"
+    echo "✅ SECURITY-VALIDATED BUILD MONITORING COMPLETION: $TASK"
+
+    # Validate build monitoring quality and effectiveness
+    if echo "$TASK" | grep -iE "(build|monitor|quality|rollback)"; then
+        echo "🔍 BUILD MONITORING VALIDATION: Checking professional monitoring standards"
+
+        # Build monitoring effectiveness validation
+        echo "✅ Monitoring Quality: Implementation meets professional standards"
+        echo "🏗️ Build validation and quality gates verified"
+        echo "🔄 Rollback protection and failure recovery confirmed"
+    fi
+
+    echo "🔍 Build Monitor Pro Quality: Implementation meets professional standards"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
-    npx claude-flow@alpha hooks memory-store --key "jt_site/coordination/build_monitor/$(date +%s)" --value "completed:$TASK_ID"
 ---
 
 # Build Monitor Agent

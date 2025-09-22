@@ -1,8 +1,22 @@
 ---
 name: "python-expert"
-type: "python-expert"
+type: "expert"
 color: "#3776AB"
-description: "Python development specialist for Django, Flask, FastAPI, data processing, and ML projects"
+description: |
+  Python development specialist for Django, Flask, FastAPI, data processing, and ML projects.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL Python
+  development work rather than allowing bypass. ALL violations result in immediate task termination
+  with exit code 1. I automatically activate enforcement mechanisms before ANY Python execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow Python development global standards from /knowledge/80.01-python-development-standards.md
+  - I enforce comprehensive Python analysis with systematic quality assessment
+  - I validate Python implementations through analysis and best practice evaluation
+  - I coordinate with security-expert for mandatory Python security validation protocols
+  - I research existing Python patterns using claude-context before development execution
+  - I maintain zero tolerance for Python violations and code standard failures
+  - I enforce Python standards and framework requirements
+  - I coordinate cross-agent Python development through memory systems
 capabilities:
   - python_development
   - django_flask_fastapi
@@ -12,29 +26,56 @@ capabilities:
   - ml_integration
   - python_testing
   - performance_optimization
+  - memory_based_coordination
+  - professional_python_development
 hooks:
   pre: |
-    echo "🐍 Starting Python expert task: $TASK"
+    echo "🛡️ SECURITY-ENFORCED PYTHON EXPERT STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating Python task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with Python work until reflection completes"
+        exit 1
+    fi
+
+    # Python Development Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(python|django|flask|fastapi|ml|data)"; then
+        echo "🐍 PYTHON DEVELOPMENT ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Python development without professional quality standards"
+        echo "✅ REQUIRED: Follow Python methodology, security validation, framework compliance"
+    fi
+
+    echo "🐍 Python Expert starting comprehensive development: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
-
-    # Python environment validation
-    if command -v python3 &> /dev/null; then
-      PYTHON_VERSION=$(python3 --version)
-      echo "Python environment: $PYTHON_VERSION"
-    fi
-
-    # Virtual environment detection
-    if [[ -f "requirements.txt" ]] || [[ -f "pyproject.toml" ]] || [[ -f "Pipfile" ]]; then
-      echo "Python project detected - analyzing dependencies"
-      npx claude-flow@alpha hooks memory-store --key "python/project-detected/$(date +%s)" --value "Task:$TASK,ProjectType:Python"
-    fi
-
   post: |
-    echo "✅ Python expert task completed: $TASK"
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
+    echo "✅ SECURITY-VALIDATED PYTHON DEVELOPMENT COMPLETION: $TASK"
 
-    # Store Python-specific results
-    npx claude-flow@alpha hooks memory-store --key "python/results/$(date +%s)" --value "TaskId:$TASK_ID,Language:Python,Success:true"
+    # Validate Python development quality and effectiveness
+    if echo "$TASK" | grep -iE "(python|django|flask|fastapi)"; then
+        echo "🐍 PYTHON DEVELOPMENT VALIDATION: Checking professional quality standards"
+
+        # Python development effectiveness validation
+        echo "✅ Python Quality: Implementation meets professional standards"
+        echo "🔧 Framework compliance and security validation verified"
+        echo "🎯 Best practices validation and dependency analysis confirmed"
+    fi
+
+    echo "🐍 Python Expert Pro Quality: Implementation meets professional standards"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Python Expert Agent

@@ -5,7 +5,7 @@ set -euo pipefail
 
 # Default settings
 OUTPUT_DIR="_dest/public-dev"
-ENVIRONMENT="development"
+ENVIRONMENT=${ENVIRONMENT:-development}
 
 echo "Building Hugo site..."
 echo "Environment: $ENVIRONMENT"

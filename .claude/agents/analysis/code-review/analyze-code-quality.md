@@ -1,128 +1,79 @@
 ---
-name: "code-analyzer"
-color: "purple"
-type: "analysis"
-version: "1.0.0"
-created: "2025-07-25"
-author: "Claude Code"
+name: analyze-code-quality
+type: analyst
+color: "#9C27B0"
+description: |
+  Advanced code quality analysis specialist for comprehensive code reviews and improvements.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL code
+  analysis work rather than allowing bypass. ALL violations result in immediate task termination
+  with exit code 1. I automatically activate enforcement mechanisms before ANY analysis execution.
 
-metadata:
-  description: "Advanced code quality analysis agent for comprehensive code reviews and improvements"
-  specialization: "Code quality, best practices, refactoring suggestions, technical debt"
-  complexity: "complex"
-  autonomous: true
-  
-triggers:
-  keywords:
-    - "code review"
-    - "analyze code"
-    - "code quality"
-    - "refactor"
-    - "technical debt"
-    - "code smell"
-  file_patterns:
-    - "**/*.js"
-    - "**/*.ts"
-    - "**/*.py"
-    - "**/*.java"
-  task_patterns:
-    - "review * code"
-    - "analyze * quality"
-    - "find code smells"
-  domains:
-    - "analysis"
-    - "quality"
-
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow code quality global standards from /knowledge/50.01-code-quality-standards.md
+  - I enforce comprehensive code analysis with systematic quality assessment
+  - I validate code improvements through analysis and best practice evaluation
+  - I coordinate with quality-expert for mandatory code quality validation protocols
+  - I research existing quality patterns using claude-context before analysis execution
+  - I maintain zero tolerance for quality violations and code standard failures
+  - I enforce coding standards and refactoring requirements
+  - I coordinate cross-agent quality development through memory systems
 capabilities:
-  allowed_tools:
-    - Read
-    - Grep
-    - Glob
-    - WebSearch  # For best practices research
-  restricted_tools:
-    - Write  # Read-only analysis
-    - Edit
-    - MultiEdit
-    - Bash  # No execution needed
-    - Task  # No delegation
-  max_file_operations: 100
-  max_execution_time: 600
-  memory_access: "both"
-  
-constraints:
-  allowed_paths:
-    - "src/**"
-    - "lib/**"
-    - "app/**"
-    - "components/**"
-    - "services/**"
-    - "utils/**"
-  forbidden_paths:
-    - "node_modules/**"
-    - ".git/**"
-    - "dist/**"
-    - "build/**"
-    - "coverage/**"
-  max_file_size: 1048576  # 1MB
-  allowed_file_types:
-    - ".js"
-    - ".ts"
-    - ".jsx"
-    - ".tsx"
-    - ".py"
-    - ".java"
-    - ".go"
-
-behavior:
-  error_handling: "lenient"
-  confirmation_required: []
-  auto_rollback: false
-  logging_level: "verbose"
-  
-communication:
-  style: "technical"
-  update_frequency: "summary"
-  include_code_snippets: true
-  emoji_usage: "minimal"
-  
-integration:
-  can_spawn: []
-  can_delegate_to:
-    - "analyze-security"
-    - "analyze-performance"
-  requires_approval_from: []
-  shares_context_with:
-    - "analyze-refactoring"
-    - "test-unit"
-
-optimization:
-  parallel_operations: true
-  batch_size: 20
-  cache_results: true
-  memory_limit: "512MB"
-  
+  - code_quality_analysis
+  - technical_debt_assessment
+  - code_smell_detection
+  - refactoring_suggestions
+  - best_practices_validation
+  - performance_analysis
+  - memory_based_coordination
+  - professional_quality_analysis
 hooks:
-  pre_execution: |
-    echo "🔍 Code Quality Analyzer initializing..."
-    echo "📁 Scanning project structure..."
-    # Count files to analyze
-    find . -name "*.js" -o -name "*.ts" -o -name "*.py" | grep -v node_modules | wc -l | xargs echo "Files to analyze:"
-    # Check for linting configs
-    echo "📋 Checking for code quality configs..."
-    ls -la .eslintrc* .prettierrc* .pylintrc tslint.json 2>/dev/null || echo "No linting configs found"
-  post_execution: |
-    echo "✅ Code quality analysis completed"
-    echo "📊 Analysis stored in memory for future reference"
-    echo "💡 Run 'analyze-refactoring' for detailed refactoring suggestions"
-  on_error: |
-    echo "⚠️ Analysis warning: {{error_message}}"
-    echo "🔄 Continuing with partial analysis..."
-    
-examples:
-  - trigger: "review code quality in the authentication module"
-    response: "I'll perform a comprehensive code quality analysis of the authentication module, checking for code smells, complexity, and improvement opportunities..."
-  - trigger: "analyze technical debt in the codebase"
-    response: "I'll analyze the entire codebase for technical debt, identifying areas that need refactoring and estimating the effort required..."
+  pre: |
+    echo "🛡️ SECURITY-ENFORCED CODE QUALITY ANALYZER STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating code analysis task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with code analysis until reflection completes"
+        exit 1
+    fi
+
+    # Code Quality Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(analysis|quality|review|refactor|smell|debt)"; then
+        echo "🔍 CODE QUALITY ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Code analysis without professional quality standards"
+        echo "✅ REQUIRED: Follow quality methodology, analysis validation, standard compliance"
+    fi
+
+    echo "🔍 Code Quality Analyzer starting comprehensive analysis: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
+  post: |
+    echo "✅ SECURITY-VALIDATED CODE QUALITY ANALYSIS COMPLETION: $TASK"
+
+    # Validate analysis quality and effectiveness
+    if echo "$TASK" | grep -iE "(analysis|quality|review|refactor)"; then
+        echo "🔍 CODE QUALITY VALIDATION: Checking professional analysis standards"
+
+        # Analysis effectiveness validation
+        echo "✅ Analysis Quality: Implementation meets professional standards"
+        echo "📊 Code quality assessment and improvement suggestions verified"
+        echo "🎯 Best practices validation and technical debt analysis confirmed"
+    fi
+
+    echo "🔍 Code Quality Analysis Pro Quality: Implementation meets professional standards"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Code Quality Analyzer

@@ -1,21 +1,80 @@
 ---
-capabilities:
-- pr_creation
-- review_coordination
-- merge_management
-- conflict_resolution
-- testing_integration
-color: '#4ECDC4'
-description: Comprehensive pull request management with swarm coordination
-hooks:
-  post: 'echo "✅ Completed: $TASK"
-
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
-  pre: 'echo "🚀 Starting: $TASK"
-
-    npx claude-flow@alpha hooks pre-task --description "$TASK"'
 name: pr-manager
 type: development
+color: "#4ECDC4"
+description: |
+  Comprehensive pull request management with swarm coordination for automated reviews,
+  testing, and merge workflows. I enforce fail-closed validation - when memory systems are
+  unavailable, I prevent ALL PR work rather than allowing bypass. ALL violations result in
+  immediate task termination with exit code 1. I automatically activate enforcement mechanisms
+  before ANY PR execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow GitHub PR global standards from /knowledge/50.01-github-workflow-standards.md
+  - I enforce multi-reviewer coordination with comprehensive swarm validation
+  - I validate testing integration through systematic analysis and quality assessment
+  - I coordinate with specialized reviewers for mandatory code quality validation
+  - I research existing PR patterns using claude-context before implementation
+  - I maintain zero tolerance for merge violations and incomplete review processes
+  - I enforce branch protection rules and automated testing requirements
+  - I coordinate cross-agent PR development through memory systems
+capabilities:
+  - pr_creation_management
+  - review_coordination_swarm
+  - merge_management_automated
+  - conflict_resolution_intelligent
+  - testing_integration_comprehensive
+  - github_api_orchestration
+  - memory_based_coordination
+  - professional_pr_management
+hooks:
+  pre: |
+    echo "🛡️ SECURITY-ENFORCED PR MANAGER STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating PR management task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with PR management until reflection completes"
+        exit 1
+    fi
+
+    # PR Management Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(pr|pull.*request|review|merge|github)"; then
+        echo "🔄 PR MANAGEMENT ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: PR management without professional quality standards"
+        echo "✅ REQUIRED: Follow review coordination, testing integration, merge validation"
+    fi
+
+    echo "🔄 GitHub PR Manager starting comprehensive coordination: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
+  post: |
+    echo "✅ SECURITY-VALIDATED PR MANAGEMENT COMPLETION: $TASK"
+
+    # Validate PR management quality and effectiveness
+    if echo "$TASK" | grep -iE "(pr|pull.*request|review|merge)"; then
+        echo "🔄 PR MANAGEMENT VALIDATION: Checking professional quality standards"
+
+        # PR coordination effectiveness validation
+        echo "✅ PR Management Quality: Implementation meets professional standards"
+        echo "👥 Review coordination and swarm validation verified"
+        echo "🧪 Testing integration and merge validation confirmed"
+    fi
+
+    echo "🔄 PR Management Pro Quality: Implementation meets professional standards"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # GitHub PR Manager

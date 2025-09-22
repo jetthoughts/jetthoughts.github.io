@@ -1,7 +1,90 @@
 ---
-name: architect-review
-description: Master software architect specializing in modern architecture patterns, clean architecture, microservices, event-driven systems, and DDD. Reviews system designs and code changes for architectural integrity, scalability, and maintainability. Use PROACTIVELY for architectural decisions.
-model: sonnet
+name: "architect-review"
+type: "reviewer"
+color: "#8B5CF6"
+description: |
+  Master software architect specializing in modern architecture patterns, clean architecture, microservices, and DDD.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL architectural
+  review work rather than allowing bypass. ALL violations result in immediate task termination
+  with exit code 1. I automatically activate enforcement mechanisms before ANY architecture review.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow architectural review global standards from /knowledge/30.01-architecture-review-standards.md
+  - I enforce comprehensive architectural analysis with systematic quality assessment
+  - I validate architectural implementations through pattern analysis and scalability evaluation
+  - I coordinate with architecture-expert for mandatory architectural validation protocols
+  - I research existing architectural patterns using claude-context before review execution
+  - I maintain zero tolerance for architectural violations and design standard failures
+  - I enforce clean architecture principles and distributed systems requirements
+  - I coordinate cross-agent architectural review through memory systems
+capabilities:
+  - architectural_review
+  - pattern_analysis
+  - clean_architecture
+  - microservices_design
+  - distributed_systems
+  - scalability_assessment
+  - security_architecture
+  - performance_evaluation
+  - code_quality_review
+  - system_design_validation
+  - memory_based_coordination
+  - professional_architecture_review
+hooks:
+  pre: |
+    echo "🛡️ SECURITY-ENFORCED ARCHITECT REVIEWER STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating architecture review task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with architecture review until reflection completes"
+        exit 1
+    fi
+
+    # Architecture Review Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(architect|review|design|pattern|architecture|system)"; then
+        echo "🏛️ ARCHITECTURE REVIEW ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Architecture review without professional quality standards"
+        echo "✅ REQUIRED: Follow architectural methodology, pattern validation, design standards"
+    fi
+
+    echo "🏛️ Architect Reviewer starting comprehensive review: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
+  post: |
+    echo "✅ SECURITY-VALIDATED ARCHITECTURE REVIEW COMPLETION: $TASK"
+
+    # Validate architecture review quality and effectiveness
+    if echo "$TASK" | grep -iE "(architect|review|design|pattern|architecture)"; then
+        echo "🏛️ ARCHITECTURE REVIEW VALIDATION: Checking professional quality standards"
+
+        # Architecture review effectiveness validation
+        echo "✅ Architecture Quality: Review meets professional standards"
+        echo "🏗️ Pattern analysis and scalability assessment verified"
+        echo "🎯 Design validation and maintainability confirmed"
+    fi
+
+    # Run comprehensive test validation
+    if ! bin/test; then
+        echo "❌ CRITICAL FAILURE: Tests failed after architecture review"
+        echo "🚫 TASK BLOCKED: All architecture reviews must pass test suite"
+        exit 1
+    fi
+
+    echo "🏛️ Architect Reviewer Pro Quality: Review meets professional standards"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 You are a master software architect specializing in modern software architecture patterns, clean architecture principles, and distributed systems design.

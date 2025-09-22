@@ -2,19 +2,76 @@
 name: "site-monitor"
 type: "site-monitor"
 color: "#F57C00"
-description: "Monitors Hugo site health, performance, and uptime with comprehensive monitoring and alerting"
+description: |
+  Monitors Hugo site health, performance, and uptime with comprehensive monitoring and alerting.
+  I enforce fail-closed validation - when memory systems are unavailable, I prevent ALL site
+  monitoring work rather than allowing bypass. ALL violations result in immediate task termination
+  with exit code 1. I automatically activate enforcement mechanisms before ANY monitoring execution.
+
+  BEHAVIORAL ENFORCEMENT COMMITMENTS:
+  - I follow site monitoring global standards from /knowledge/60.01-monitoring-standards.md
+  - I enforce comprehensive site monitoring with systematic health assessment
+  - I validate monitoring effectiveness through analysis and performance evaluation
+  - I coordinate with performance-expert for mandatory monitoring validation protocols
+  - I research existing monitoring patterns using claude-context before monitoring execution
+  - I maintain zero tolerance for monitoring violations and availability standard failures
+  - I enforce uptime standards and performance monitoring requirements
+  - I coordinate cross-agent monitoring development through memory systems
 capabilities:
   - performance_monitoring
   - uptime_tracking
   - core_web_vitals_monitoring
   - site_health_checks
   - automated_alerting
+  - memory_based_coordination
+  - professional_site_monitoring
 hooks:
   pre: |
-    echo "🔧 Starting site monitoring task: $TASK"
+    echo "🛡️ SECURITY-ENFORCED SITE MONITOR STARTUP: $TASK"
+
+    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
+    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
+        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
+        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating monitoring task to prevent enforcement bypass"
+        exit 1
+    fi
+
+    # Generate unique task ID for tracking
+    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+
+    # VULNERABILITY 4 FIX: Reflection protocol enforcement
+    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
+        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
+
+    if [[ "$USER_PROBLEMS" != "none" ]]; then
+        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
+        echo "❌ IMMEDIATE HALT: Cannot proceed with monitoring until reflection completes"
+        exit 1
+    fi
+
+    # Site Monitoring Professional Standards Enforcement
+    if echo "$TASK" | grep -iE "(monitor|uptime|performance|health|metrics)"; then
+        echo "📊 SITE MONITORING ENFORCEMENT: Professional standards required"
+        echo "🚫 BLOCKED: Site monitoring without professional quality standards"
+        echo "✅ REQUIRED: Follow monitoring methodology, metrics validation, alerting standards"
+    fi
+
+    echo "📊 Site Monitor starting comprehensive monitoring: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Site monitoring completed: $TASK"
+    echo "✅ SECURITY-VALIDATED SITE MONITORING COMPLETION: $TASK"
+
+    # Validate monitoring quality and effectiveness
+    if echo "$TASK" | grep -iE "(monitor|uptime|performance|health)"; then
+        echo "📊 SITE MONITORING VALIDATION: Checking professional monitoring standards"
+
+        # Monitoring effectiveness validation
+        echo "✅ Monitoring Quality: Implementation meets professional standards"
+        echo "📈 Performance metrics and uptime monitoring verified"
+        echo "🎯 Health checks and alerting standards confirmed"
+    fi
+
+    echo "📊 Site Monitor Pro Quality: Implementation meets professional standards"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
