@@ -15,6 +15,39 @@
   color: var(--accordion-text-color);
 }
 
+.c-accordion__header {
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid var(--accordion-border-color);
+}
+
+// JavaScript State Classes - Phase 4
+.c-accordion__item {
+  // Default closed state
+  .c-accordion__content {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.is-open {
+    .c-accordion__content {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      max-height: 1000px;
+    }
+
+    .c-accordion__header {
+      background-color: var(--accordion-header-bg);
+    }
+  }
+}
+
 // FL-Builder Compatibility - Dual Class Strategy
 // Applies .c-accordion styles to existing FL-Builder tab nodes
 .fl-node-vo75i29j3fmz.c-accordion {
