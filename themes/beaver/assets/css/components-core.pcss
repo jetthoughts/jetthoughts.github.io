@@ -1,0 +1,153 @@
+/* ========================================
+   Core Components Bundle - Essential Layout
+
+   This bundle contains only the most critical
+   components needed for basic site layout.
+
+   Target: <14KB critical CSS
+   ======================================== */
+
+/* CSS Custom Properties for consistency */
+:root {
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+}
+
+/* ========================================
+   Layout Foundation (c-container, c-grid)
+   ======================================== */
+
+/* Container component for consistent max-width */
+.c-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .c-container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+/* Grid component - responsive by default */
+.c-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+}
+
+.c-grid--2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.c-grid--3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 767px) {
+  .c-grid--2-col,
+  .c-grid--3-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Flexbox Utilities (Essential Only)
+   ======================================== */
+
+.c-flex {
+  display: flex;
+}
+
+.c-flex--column {
+  flex-direction: column;
+}
+
+.c-flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.c-flex--between {
+  justify-content: space-between;
+}
+
+.c-flex--wrap {
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   Button Component (Core Styles Only)
+   ======================================== */
+
+.c-button {
+  display: inline-block;
+  padding: 12px var(--spacing-lg);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.c-button:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.c-button:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.c-button--small {
+  padding: 8px var(--spacing-md);
+  font-size: 0.875rem;
+}
+
+.c-button--large {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.125rem;
+}
+
+/* ========================================
+   Typography Core (Headlines Only)
+   ======================================== */
+
+.c-title {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 var(--spacing-md);
+}
+
+.c-title--xl {
+  font-size: 2.5rem;
+}
+
+.c-title--lg {
+  font-size: 2rem;
+}
+
+.c-title--md {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .c-title--xl {
+    font-size: 2rem;
+  }
+
+  .c-title--lg {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,275 @@
+/* ========================================
+   Responsive Utilities - Consolidated Media Queries
+
+   All responsive utilities grouped by breakpoint
+   to reduce CSS bundle size and improve loading.
+   ======================================== */
+
+/* ========================================
+   CSS Custom Properties for Breakpoints
+   ======================================== */
+
+:root {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+/* ========================================
+   Small Screens (up to 639px)
+   ======================================== */
+
+@media (max-width: 639px) {
+  /* Grid adjustments */
+  .c-grid--2-col,
+  .c-grid--3-col,
+  .c-grid--4-col {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Typography scaling */
+  .c-title--xl {
+    font-size: 2rem;
+  }
+
+  .c-title--lg {
+    font-size: 1.75rem;
+  }
+
+  /* Navigation mobile */
+  .c-nav__toggle {
+    display: flex;
+  }
+
+  .c-nav__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white, #ffffff);
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    gap: 0;
+  }
+
+  /* Container adjustments */
+  .c-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Button adjustments */
+  .c-button--large {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1rem;
+  }
+
+  /* Modal adjustments */
+  .c-modal__content {
+    max-width: 95vw;
+    margin: var(--spacing-md);
+  }
+}
+
+/* ========================================
+   Medium Screens (640px to 767px)
+   ======================================== */
+
+@media (min-width: 640px) and (max-width: 767px) {
+  /* Two-column layouts */
+  .c-grid--2-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .c-grid--3-col,
+  .c-grid--4-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Typography adjustments */
+  .c-title--xl {
+    font-size: 2.25rem;
+  }
+}
+
+/* ========================================
+   Large Screens (768px to 1023px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Container padding */
+  .c-container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  /* Grid layouts */
+  .c-grid--3-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .c-grid--4-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Navigation horizontal */
+  .c-nav__list {
+    flex-direction: row;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .c-nav__toggle {
+    display: none;
+  }
+}
+
+/* ========================================
+   Extra Large Screens (1024px+)
+   ======================================== */
+
+@media (min-width: 1024px) {
+  /* Full grid layouts */
+  .c-grid--3-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .c-grid--4-col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Enhanced spacing */
+  .c-grid {
+    gap: var(--spacing-xl);
+  }
+
+  /* Typography full scale */
+  .c-title--xl {
+    font-size: 3rem;
+  }
+
+  .c-title--lg {
+    font-size: 2.5rem;
+  }
+
+  /* Modal optimal size */
+  .c-modal__content {
+    max-width: 800px;
+  }
+}
+
+/* ========================================
+   Print Optimizations
+   ======================================== */
+
+@media print {
+  /* Remove shadows and effects */
+  .c-shadow-soft,
+  .c-shadow-medium,
+  .c-shadow-strong {
+    box-shadow: none !important;
+  }
+
+  /* Flatten layouts */
+  .c-grid {
+    display: block;
+  }
+
+  .c-grid > * {
+    margin-bottom: var(--spacing-lg);
+    break-inside: avoid;
+  }
+
+  /* Navigation simplified */
+  .c-nav__list {
+    display: none;
+  }
+
+  /* Remove interactive elements */
+  .c-nav__toggle,
+  .c-modal,
+  .c-tooltip {
+    display: none !important;
+  }
+
+  /* Typography optimization */
+  .c-title--xl {
+    font-size: 24pt;
+  }
+
+  .c-title--lg {
+    font-size: 20pt;
+  }
+
+  .c-title--md {
+    font-size: 16pt;
+  }
+
+  /* Colors to black/white */
+  .c-button {
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+}
+
+/* ========================================
+   Reduced Motion Support
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations */
+  .c-fade-in,
+  .c-slide-up,
+  .c-bounce {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .c-spinner {
+    animation: none !important;
+  }
+
+  /* Remove transitions */
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   High Contrast Support
+   ======================================== */
+
+@media (prefers-contrast: high) {
+  /* Increase border visibility */
+  .c-card,
+  .c-form__input,
+  .c-button {
+    border-width: 2px !important;
+  }
+
+  /* Remove subtle effects */
+  .c-glass-effect {
+    background: var(--color-white, #ffffff) !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Enhance focus indicators */
+  .c-button:focus,
+  .c-form__input:focus {
+    outline-width: 3px !important;
+    outline-offset: 3px !important;
+  }
+}

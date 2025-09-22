@@ -66,4 +66,17 @@
   color: var(--color-white, #ffffff);
 }
 
+/* Icon hover interactions - Phase 4 */
+.fl-button:hover .fl-button-icon,
+.c-button:hover .c-button__icon {
+  margin-right: 15px;
+  transition: margin-right 0.3s ease-in-out;
+}
+
+.fl-button-icon,
+.c-button__icon {
+  transition: margin-right 0.3s ease-in-out;
+  margin-right: 8px;
+}
+
 /* Migration complete: Dual-class button component ready for integration */

@@ -1,0 +1,322 @@
+/* ========================================
+   Decorative Components Bundle
+
+   Visual enhancements, animations, and
+   non-critical styling components.
+
+   Loaded last for progressive enhancement.
+   ======================================== */
+
+/* ========================================
+   Animation & Transition Utilities
+   ======================================== */
+
+.c-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.c-slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.c-bounce {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* ========================================
+   Enhanced Visual Effects
+   ======================================== */
+
+.c-gradient-bg {
+  background: linear-gradient(135deg,
+    var(--color-primary, #3b82f6) 0%,
+    var(--color-secondary, #8b5cf6) 100%);
+}
+
+.c-glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.c-shadow-soft {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.c-shadow-medium {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.c-shadow-strong {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   Badge Components (Decorative)
+   ======================================== */
+
+.c-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.c-badge--primary {
+  background: var(--color-primary, #3b82f6);
+  color: white;
+}
+
+.c-badge--success {
+  background: var(--color-success, #10b981);
+  color: white;
+}
+
+.c-badge--warning {
+  background: var(--color-warning, #f59e0b);
+  color: white;
+}
+
+.c-badge--error {
+  background: var(--color-error, #ef4444);
+  color: white;
+}
+
+.c-badge--outline {
+  background: transparent;
+  border: 1px solid currentColor;
+}
+
+/* ========================================
+   Progress & Loading Components
+   ======================================== */
+
+.c-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--color-gray-200, #e5e7eb);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.c-progress__bar {
+  height: 100%;
+  background: var(--color-primary, #3b82f6);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.c-progress--animated .c-progress__bar {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%
+  );
+  background-size: 20px 20px;
+  animation: progressStripes 1s linear infinite;
+}
+
+@keyframes progressStripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
+
+.c-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-gray-200, #e5e7eb);
+  border-top-color: var(--color-primary, #3b82f6);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   Tooltip Components
+   ======================================== */
+
+.c-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.c-tooltip__content {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gray-900, #111827);
+  color: white;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.c-tooltip__content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-gray-900, #111827);
+}
+
+.c-tooltip:hover .c-tooltip__content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* ========================================
+   Decorative Dividers & Separators
+   ======================================== */
+
+.c-divider {
+  height: 1px;
+  background: var(--color-border, #e2e8f0);
+  margin: var(--spacing-lg) 0;
+  border: none;
+}
+
+.c-divider--gradient {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border, #e2e8f0),
+    transparent
+  );
+}
+
+.c-divider--thick {
+  height: 3px;
+  border-radius: 2px;
+}
+
+.c-divider--dotted {
+  background: none;
+  border-top: 2px dotted var(--color-border, #e2e8f0);
+  height: 0;
+}
+
+/* ========================================
+   Icon Enhancement Utilities
+   ======================================== */
+
+.c-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.c-icon--sm {
+  width: 0.875em;
+  height: 0.875em;
+}
+
+.c-icon--lg {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.c-icon--xl {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.c-icon--spin {
+  animation: spin 1s linear infinite;
+}
+
+.c-icon--pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ========================================
+   Print Styles (Optimization)
+   ======================================== */
+
+@media print {
+  .c-fade-in,
+  .c-slide-up,
+  .c-bounce {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .c-shadow-soft,
+  .c-shadow-medium,
+  .c-shadow-strong {
+    box-shadow: none !important;
+  }
+
+  .c-glass-effect {
+    background: white !important;
+    backdrop-filter: none !important;
+  }
+}

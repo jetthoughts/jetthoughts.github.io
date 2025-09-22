@@ -1,0 +1,252 @@
+/* ========================================
+   Interactive Components Bundle
+
+   Components that require JavaScript interaction
+   or enhanced user interface functionality.
+
+   Loaded after core components.
+   ======================================== */
+
+/* ========================================
+   Form Components (Interactive)
+   ======================================== */
+
+.c-form__group {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+}
+
+.c-form__label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text, #333);
+}
+
+.c-form__input {
+  width: 100%;
+  padding: 12px var(--spacing-md);
+  border: 2px solid var(--color-border, #e2e8f0);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.c-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.c-form__input--error {
+  border-color: var(--color-error, #ef4444);
+}
+
+.c-form__error {
+  color: var(--color-error, #ef4444);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+/* ========================================
+   Card Components (Enhanced)
+   ======================================== */
+
+.c-card {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+}
+
+.c-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.c-card__header {
+  padding: var(--spacing-lg);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+}
+
+.c-card__body {
+  padding: var(--spacing-lg);
+  flex: 1;
+}
+
+.c-card__footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  background: var(--color-gray-50, #f9fafb);
+}
+
+.c-card--feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-card--clickable {
+  cursor: pointer;
+}
+
+/* ========================================
+   Navigation Components (Enhanced)
+   ======================================== */
+
+.c-nav {
+  display: flex;
+  align-items: center;
+}
+
+.c-nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-lg);
+}
+
+.c-nav__item {
+  position: relative;
+}
+
+.c-nav__link {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  border-radius: var(--border-radius-sm);
+}
+
+.c-nav__link:hover,
+.c-nav__link--active {
+  background: var(--color-primary-light, rgba(59, 130, 246, 0.1));
+  color: var(--color-primary, #3b82f6);
+}
+
+/* Mobile navigation toggle */
+.c-nav__toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  gap: 4px;
+}
+
+.c-nav__toggle-line {
+  width: 24px;
+  height: 2px;
+  background: var(--color-text, #333);
+  transition: all 0.3s ease;
+}
+
+.c-nav__toggle--active .c-nav__toggle-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.c-nav__toggle--active .c-nav__toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.c-nav__toggle--active .c-nav__toggle-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media (max-width: 767px) {
+  .c-nav__toggle {
+    display: flex;
+  }
+
+  .c-nav__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white, #ffffff);
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    gap: 0;
+  }
+
+  .c-nav__list--open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .c-nav__item {
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+  }
+
+  .c-nav__link {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+/* ========================================
+   Modal/Dialog Components
+   ======================================== */
+
+.c-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.c-modal--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-modal__content {
+  background: var(--color-white, #ffffff);
+  border-radius: var(--border-radius-md);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.c-modal--open .c-modal__content {
+  transform: scale(1);
+}
+
+.c-modal__header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text-light, #6b7280);
+}
+
+.c-modal__body {
+  padding: var(--spacing-lg);
+}
