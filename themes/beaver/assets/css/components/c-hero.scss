@@ -1,0 +1,30 @@
+// Hero Section Component - Dual-Class Migration
+// Migrates .fl-node-* hero patterns to .c-hero system
+
+// Base hero component with CSS variables
+.c-hero {
+  --hero-bg-color: #ffffff;
+  --hero-text-color: #333333;
+  --hero-padding: 4rem 2rem;
+
+  // Base styles
+  position: relative;
+  padding: var(--hero-padding);
+  background-color: var(--hero-bg-color);
+  color: var(--hero-text-color);
+}
+
+// FL-Builder Compatibility - Dual Class Strategy
+// Applies .c-hero styles to existing FL-Builder nodes
+.fl-node-dn129i74qg6m.c-hero {
+  @extend .c-hero;
+}
+
+.fl-node-fwc7x53r0dpl.c-hero {
+  @extend .c-hero;
+}
+
+.fl-node-bi013pcl2qtv.c-hero,
+.fl-node-pifywec9vd5m.c-hero {
+  @extend .c-hero;
+}
