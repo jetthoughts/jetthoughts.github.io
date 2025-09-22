@@ -743,6 +743,7 @@
  * ROLLBACK PROCEDURES:
  * - Micro-change 1 (.u-text-center): git revert d6da6140
  * - Micro-change 2 (.u-margin-auto): git revert 61c5bb73
+ * - Micro-change 3 (--color-primary): git revert b10b1a8d
  *
  * The semantic BEM classes are now in place for:
  * - .c-why-us (why us section) + internal elements
