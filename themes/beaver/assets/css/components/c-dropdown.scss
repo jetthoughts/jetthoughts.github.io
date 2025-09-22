@@ -1,0 +1,107 @@
+// Dropdown Component - Dual-Class Migration
+// JavaScript-dependent dropdown/menu toggle component
+
+// Base dropdown component with CSS variables
+.c-dropdown {
+  --dropdown-bg: #ffffff;
+  --dropdown-border: #e7e7e7;
+  --dropdown-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --dropdown-z-index: 100;
+  --dropdown-min-width: 200px;
+
+  position: relative;
+  display: inline-block;
+}
+
+// Dropdown toggle button
+.c-dropdown__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: 2px solid var(--jt-primary-color);
+    outline-offset: 2px;
+  }
+}
+
+// Dropdown menu
+.c-dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: var(--dropdown-min-width);
+  background-color: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 4px;
+  box-shadow: var(--dropdown-shadow);
+  z-index: var(--dropdown-z-index);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+// JavaScript State Classes - Phase 4
+.c-dropdown.is-open {
+  .c-dropdown__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+// Dropdown menu items
+.c-dropdown__item {
+  list-style: none;
+  margin: 0;
+}
+
+.c-dropdown__link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--jt-text-color);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--jt-light-gray);
+  }
+
+  &:focus {
+    background-color: var(--jt-primary-color);
+    color: white;
+    outline: none;
+  }
+}
+
+// Mobile-specific dropdown behavior
+@media (max-width: 768px) {
+  .c-dropdown__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: auto;
+    border-radius: 0;
+    transform: translateX(100%);
+  }
+
+  .c-dropdown.is-open .c-dropdown__menu {
+    transform: translateX(0);
+  }
+}
+
+// FL-Builder Compatibility - Dual Class Strategy
+// Applies .c-dropdown styles to existing FL-Builder menu nodes
+.fl-node-menu.c-dropdown {
+  @extend .c-dropdown;
+}
