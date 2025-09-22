@@ -13,7 +13,7 @@
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content {
-  background-color: #ffffff;
+  background-color: var(--jt-white);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -48,7 +48,7 @@
 }
 
 .fl-builder-content .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  color: #121212;
+  color: var(--jt-dark);
   display: block;
 }
 
@@ -85,8 +85,8 @@
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield select, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield textarea {
-  color: #121212;
-  background-color: #ffffff;
+  color: var(--jt-dark);
+  background-color: var(--jt-white);
   width: 100% !important;
 }
 

@@ -1,6 +1,11 @@
+:root {
+  --jt-primary-color: #1a8cff;
+  --jt-text-color: #121212;
+}
+
 body {
   background-color: #fff;
-  color: #121212;
+  color: var(--jt-text-color);
   font-family:
     system-ui,
     -apple-system,
@@ -40,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #121212;
+  color: var(--jt-text-color);
   font-family:
     system-ui,
     -apple-system,

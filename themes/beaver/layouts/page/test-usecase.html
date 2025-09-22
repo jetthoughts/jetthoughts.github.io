@@ -1,0 +1,104 @@
+{{ define "header" }}
+{{ partial "header/critical/services.html" . }}
+{{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
+{{- $staticUseCasesCSS := slice (resources.Get "css/component-bundle.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticUseCasesCSS (slice $dynamicCSSUseCases)) "page" "test-usecases") }}
+{{ end }}
+
+{{ define "footer" }}
+{{ partial "assets/js-processor.html" (dict "resources" (slice (resources.Get "js/tabs.js")) "bundleName" "tabs" "defer" true) }}
+{{ end }}
+
+{{ define "main" }}
+<div id="fl-main-content" class="fl-page-content" role="main">
+    <div class="fl-content-full container">
+       <div class="row">
+          <div class="fl-content col-md-12">
+             <article class="fl-post" id="fl-post-test-usecase">
+                <div class="fl-post-content clearfix">
+                   <div class="fl-builder-content fl-builder-content-test-usecase fl-builder-content-primary" data-post-id="test-usecase">
+
+                      <!-- Test Use Cases Section -->
+                      <div id="test-use-cases" class="use-cases">
+                         <p class="heading">TEST USE CASES</p>
+                         <h2 class="subheading">Testing component functionality in isolation</h2>
+                         <p class="description">We validate that extracted components maintain their original behavior and styling when used independently from their source context.</p>
+
+                         <div class="tabs-container js-tabs-container">
+                             <div class="tabs" role="tablist" aria-label="Test use cases">
+                                 <h2 class="tab-title js-tab" id="test-use-cases-tab-1"
+                                     role="tab" tabindex="0" aria-selected="true" aria-controls="test-use-cases-panel-1" data-controls="test-use-cases-panel-1"
+                                 >Component Isolation Testing</h2>
+                                 <h2 class="tab-title js-tab" id="test-use-cases-tab-2"
+                                     role="tab" tabindex="-1" aria-selected="false" aria-controls="test-use-cases-panel-2" data-controls="test-use-cases-panel-2"
+                                 >Style Consistency Validation</h2>
+                                 <h2 class="tab-title js-tab" id="test-use-cases-tab-3"
+                                     role="tab" tabindex="-1" aria-selected="false" aria-controls="test-use-cases-panel-3" data-controls="test-use-cases-panel-3"
+                                 >Performance Impact Assessment</h2>
+                             </div>
+
+                             <div class="tab-panels">
+
+                                 <h2 class="js-tab tab-title-mobile" id="test-use-cases-tab-1-mobile"
+                                     data-controls="test-use-cases-panel-1"  tabindex="0"
+                                 >Component Isolation Testing</h2>
+
+                                 <div class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="test-use-cases-tab-1" id="test-use-cases-panel-1">
+                                     <h3 class="heading">Component Isolation Testing</h3>
+                                     <ul class="list">
+                                         <li class="item">
+                                             Each extracted component must render correctly when placed in a new page context independent of its original implementation.</li>
+                                         <li class="item">
+                                             All FL-Builder CSS classes and styling must be preserved and functional in the isolated component implementation.</li>
+                                         <li class="item">
+                                             JavaScript functionality, including tab navigation and interactive elements, must work properly in the new context.</li>
+                                     </ul>
+                                     <a class="action-button" title="Component Isolation Testing" href="{{ relURL "test/components/isolation/" }}">View Isolation Test Results</a>
+                                 </div>
+
+                                 <h2 class="tab-title-mobile js-tab" id="test-use-cases-tab-2-mobile"
+                                    data-controls="test-use-cases-panel-2" tabindex="-1"
+                                 >Style Consistency Validation</h2>
+
+                                 <div class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="test-use-cases-tab-2" id="test-use-cases-panel-2" hidden>
+                                     <h3 class="heading">Style Consistency Validation</h3>
+                                     <ul class="list">
+                                         <li class="item">
+                                             Visual consistency must be maintained between original components and their extracted versions across all viewport sizes.</li>
+                                         <li class="item">
+                                             Color schemes, typography, spacing, and layout patterns must match the original design specifications exactly.</li>
+                                         <li class="item">
+                                             Hover effects, animations, and interactive state changes must function identically to the original implementations.</li>
+                                     </ul>
+                                     <a class="action-button" title="Style Consistency Validation" href="{{ relURL "test/components/style-validation/" }}">Check Style Consistency</a>
+                                 </div>
+
+                                 <h2 class="tab-title-mobile js-tab" id="test-use-cases-tab-3-mobile"
+                                     data-controls="test-use-cases-panel-3" tabindex="-1"
+                                 >Performance Impact Assessment</h2>
+
+                                 <div class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="test-use-cases-tab-3" id="test-use-cases-panel-3" hidden>
+                                     <h3 class="heading">Performance Impact Assessment</h3>
+                                     <ul class="list">
+                                         <li class="item">
+                                             Component extraction should not introduce performance regressions in page load times or runtime performance.</li>
+                                         <li class="item">
+                                             Bundle sizes and CSS loading patterns should remain optimal after component refactoring is complete.</li>
+                                         <li class="item">
+                                             Lighthouse scores and Core Web Vitals metrics must meet or exceed the baseline measurements from original pages.</li>
+                                     </ul>
+                                     <a class="action-button" title="Performance Impact Assessment" href="{{ relURL "test/components/performance/" }}">Review Performance Metrics</a>
+                                 </div>
+
+                             </div>
+                         </div>
+                      </div>
+
+                   </div>
+                </div>
+             </article>
+          </div>
+       </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,152 @@
+/*
+ * Content Block Component - BEM Convention with Dual-Class Strategy
+ * Following pattern from bem-home-page-minimal.css and components.css
+ * Preserves FL-Builder compatibility while adding semantic BEM structure
+ */
+
+/* ========================================
+   Content Block Component (c-content-block)
+   ======================================== */
+
+/* Base content block component */
+.c-content-block {
+  /* Base styles - minimal, extensible foundation */
+  display: block;
+  line-height: 1.6;
+}
+
+/* Content block text element */
+.c-content-block__text {
+  /* Text container base styles */
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Content block heading element */
+.c-content-block__heading {
+  /* Heading base styles */
+  margin-bottom: var(--spacing-sm, 0.75rem);
+  line-height: 1.2;
+}
+
+/* Content block paragraph element */
+.c-content-block__paragraph {
+  /* Paragraph base styles */
+  margin-bottom: var(--spacing-md, 1rem);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ========================================
+   Content Block Modifiers
+   ======================================== */
+
+/* Large text modifier */
+.c-content-block--large-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* Centered content modifier */
+.c-content-block--centered {
+  text-align: center;
+}
+
+/* ========================================
+   Common Typography Modifiers
+   Based on fl-rich-text pattern analysis
+   ======================================== */
+
+/* Font weight modifiers - from most common patterns */
+.c-content-block--weight-light { font-weight: 300; }
+.c-content-block--weight-normal { font-weight: 400; }
+.c-content-block--weight-medium { font-weight: 500; }
+.c-content-block--weight-semibold { font-weight: 600; }
+.c-content-block--weight-bold { font-weight: 700; }
+.c-content-block--weight-extra-bold { font-weight: 800; }
+
+/* Text alignment modifiers - from most common patterns */
+.c-content-block--text-left { text-align: left; }
+.c-content-block--text-center { text-align: center; }
+.c-content-block--text-right { text-align: right; }
+
+/* Color modifiers - from most common brand patterns */
+.c-content-block--color-primary { color: #1a8cff; }
+.c-content-block--color-dark { color: #121212; }
+.c-content-block--color-light { color: #ffffff; }
+.c-content-block--color-muted { color: #969798; }
+.c-content-block--color-background { color: #F5F6F8; }
+.c-content-block--color-accent { color: #e63946; }
+
+/* ========================================
+   FL-Builder Compatibility Layer
+   Dual-Class Strategy Implementation
+   ======================================== */
+
+/* FL-Builder rich text module compatibility */
+.fl-rich-text {
+  /* Extend base content block functionality */
+  @extend .c-content-block__text;
+
+  /* Preserve all existing FL-Builder functionality */
+  /* No overrides - only semantic enhancement */
+}
+
+/* FL-Builder heading compatibility within rich text */
+.fl-rich-text h1,
+.fl-rich-text h2,
+.fl-rich-text h3,
+.fl-rich-text h4,
+.fl-rich-text h5,
+.fl-rich-text h6 {
+  @extend .c-content-block__heading;
+}
+
+/* FL-Builder paragraph compatibility within rich text */
+.fl-rich-text p {
+  @extend .c-content-block__paragraph;
+}
+
+/* ========================================
+   Common FL-Rich-Text Pattern Optimizations
+   Safe consolidations of repeated patterns
+   ======================================== */
+
+/*
+ * Pattern 1: Semibold text with primary color (appears 20+ times)
+ * Common in eyebrow text, labels, and highlights
+ */
+.fl-rich-text.pattern-eyebrow,
+.c-content-block--eyebrow {
+  color: #1a8cff;
+  font-weight: 600;
+}
+
+/*
+ * Pattern 2: Centered content (appears 100+ times)
+ * Most common text alignment pattern
+ */
+.fl-rich-text.pattern-centered,
+.c-content-block--centered {
+  text-align: center;
+}
+
+/*
+ * Pattern 3: Strong elements consistency
+ * Ensures bold text maintains weight across all contexts
+ */
+.fl-rich-text strong,
+.c-content-block strong {
+  font-weight: 700;
+}
+
+/*
+ * Pattern 4: Universal not(b, strong) selector optimization
+ * This pattern appears in 150+ places - consolidate base behavior
+ */
+.fl-rich-text:not(.pattern-preserve-strong) *:not(b, strong) {
+  /* Inherits from parent rather than overriding per-node */
+  font-weight: inherit;
+}

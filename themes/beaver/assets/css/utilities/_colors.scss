@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Color Utility Classes
+   ========================================================================== */
+
+/*
+ * Text Color Utilities
+ * Use these classes for consistent text coloring throughout the site
+ */
+.text-primary {
+  color: var(--jt-primary) !important;
+}
+
+.text-secondary {
+  color: var(--jt-text-secondary) !important;
+}
+
+.text-dark {
+  color: var(--jt-dark) !important;
+}
+
+.text-white {
+  color: var(--jt-white) !important;
+}
+
+.text-black {
+  color: var(--jt-black) !important;
+}
+
+.text-gray-light {
+  color: var(--jt-gray-light) !important;
+}
+
+.text-gray-secondary {
+  color: var(--jt-gray-secondary) !important;
+}
+
+.text-gray-medium {
+  color: var(--jt-gray-medium) !important;
+}
+
+.text-gray-dark {
+  color: var(--jt-gray-dark) !important;
+}
+
+.text-error {
+  color: var(--jt-error) !important;
+}
+
+/*
+ * Background Color Utilities
+ * Use these classes for consistent background coloring
+ */
+.bg-primary {
+  background-color: var(--jt-primary) !important;
+}
+
+.bg-dark {
+  background-color: var(--jt-dark) !important;
+}
+
+.bg-white {
+  background-color: var(--jt-white) !important;
+}
+
+.bg-black {
+  background-color: var(--jt-black) !important;
+}
+
+.bg-gray-light {
+  background-color: var(--jt-gray-light) !important;
+}
+
+.bg-gray-border {
+  background-color: var(--jt-gray-border) !important;
+}
+
+.bg-gray-secondary {
+  background-color: var(--jt-gray-secondary) !important;
+}
+
+.bg-gray-medium {
+  background-color: var(--jt-gray-medium) !important;
+}
+
+.bg-gray-dark {
+  background-color: var(--jt-gray-dark) !important;
+}
+
+.bg-error {
+  background-color: var(--jt-error) !important;
+}
+
+/*
+ * Border Color Utilities
+ * Use these classes for consistent border coloring
+ */
+.border-primary {
+  border-color: var(--jt-primary) !important;
+}
+
+.border-dark {
+  border-color: var(--jt-dark) !important;
+}
+
+.border-white {
+  border-color: var(--jt-white) !important;
+}
+
+.border-black {
+  border-color: var(--jt-black) !important;
+}
+
+.border-gray-light {
+  border-color: var(--jt-gray-light) !important;
+}
+
+.border-gray-border {
+  border-color: var(--jt-gray-border) !important;
+}
+
+.border-gray-secondary {
+  border-color: var(--jt-gray-secondary) !important;
+}
+
+.border-gray-medium {
+  border-color: var(--jt-gray-medium) !important;
+}
+
+.border-gray-dark {
+  border-color: var(--jt-gray-dark) !important;
+}
+
+.border-error {
+  border-color: var(--jt-error) !important;
+}
+
+/*
+ * Interactive State Utilities
+ * Use these classes for hover and focus states
+ */
+.hover\:text-primary:hover {
+  color: var(--jt-primary-hover, var(--jt-primary)) !important;
+}
+
+.hover\:text-secondary:hover {
+  color: var(--jt-text-secondary-hover, var(--jt-text-secondary)) !important;
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--jt-primary-hover, var(--jt-primary)) !important;
+}
+
+.hover\:bg-dark:hover {
+  background-color: var(--jt-dark-hover, var(--jt-dark)) !important;
+}
+
+.focus\:border-primary:focus {
+  border-color: var(--jt-primary) !important;
+  outline: 2px solid var(--jt-primary);
+  outline-offset: 2px;
+}
+
+.focus\:border-error:focus {
+  border-color: var(--jt-error) !important;
+  outline: 2px solid var(--jt-error);
+  outline-offset: 2px;
+}
+
+/*
+ * Component-Specific Color Utilities
+ * Common color patterns used across components
+ */
+.cta-primary {
+  background-color: var(--jt-primary);
+  color: var(--jt-white);
+  border-color: var(--jt-primary);
+}
+
+.cta-primary:hover {
+  background-color: var(--jt-primary-hover, var(--jt-primary));
+  border-color: var(--jt-primary-hover, var(--jt-primary));
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: var(--jt-primary);
+  border-color: var(--jt-primary);
+}
+
+.cta-secondary:hover {
+  background-color: var(--jt-primary);
+  color: var(--jt-white);
+}
+
+.link-primary {
+  color: var(--jt-primary);
+  text-decoration: none;
+}
+
+.link-primary:hover {
+  color: var(--jt-primary-hover, var(--jt-primary));
+  text-decoration: underline;
+}
+
+.link-secondary {
+  color: var(--jt-text-secondary);
+  text-decoration: none;
+}
+
+.link-secondary:hover {
+  color: var(--jt-text-primary);
+  text-decoration: underline;
+}
+
+/*
+ * Shadow and Overlay Utilities
+ */
+.shadow-dark {
+  box-shadow: 0 2px 8px rgba(18, 18, 18, 0.1);
+}
+
+.shadow-primary {
+  box-shadow: 0 2px 8px rgba(26, 140, 255, 0.2);
+}
+
+.overlay-dark {
+  position: relative;
+}
+
+.overlay-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 18, 18, 0.5);
+  pointer-events: none;
+}
+
+/*
+ * Accessibility Utilities
+ * High contrast and accessibility-focused color combinations
+ */
+.text-high-contrast {
+  color: var(--jt-black);
+  background-color: var(--jt-white);
+}
+
+.bg-high-contrast {
+  background-color: var(--jt-black);
+  color: var(--jt-white);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

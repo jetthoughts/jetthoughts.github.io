@@ -1,0 +1,60 @@
+/**
+ * Card Component (c-card)
+ *
+ * CYCLE 8: Card System Enhancement
+ * Unified card system consolidating 15+ card variations
+ * Target: 45-50% reduction of card CSS patterns
+ */
+
+.c-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+}
+
+.c-card__header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid #eee;
+}
+
+.c-card__body {
+  padding: var(--spacing-lg);
+}
+
+.c-card__footer {
+  padding: var(--spacing-lg);
+  border-top: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+.c-card--feature {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.c-card--horizontal {
+  display: flex;
+  align-items: center;
+}
+
+// FL-Builder/PowerPack integration
+.pp-content-post {
+  @extend .c-card;
+}
+
+.pp-content-grid-post {
+  @extend .c-card;
+}
+
+.fl-module-content {
+  &.card-style {
+    @extend .c-card;
+  }
+}
