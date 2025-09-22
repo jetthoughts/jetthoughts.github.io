@@ -9,13 +9,16 @@ disableKinds = []
 
 # Production build optimizations
 [build]
-  # Enable Hugo stats generation for PurgeCSS
-  numWorkers = 4  # Limit concurrent workers to reduce memory spikes
+  # Optimized worker configuration for better performance
+  numWorkers = 2  # Reduced to prevent memory spikes and timeouts
   writeStats = true
+
+  # Cache configuration for faster rebuilds
+  [build.buildStats]
+    enable = true
 
 # High-quality image processing for production
 [imaging]
-  # Higher quality for production
   quality = 80
 
 # Enable minification in production

@@ -5,7 +5,7 @@ class Hugo
 
   def initialize(path: nil, port: nil)
     base_path = path || ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test")
-    base_path = "#{base_path}-#{port % 5}" if !ENV["PRECOMPILED_ASSETS"] && port
+    base_path = "#{base_path}-#{rand(5)}" unless ENV["PRECOMPILED_ASSETS"]
 
     @destination = Pathname.new(base_path).expand_path
     @port = port
@@ -13,6 +13,7 @@ class Hugo
 
   HUGO_OPTIONS = %w[
     hugo
+    --baseURL /
     --environment test
     --buildDrafts
     --logLevel warn
@@ -27,7 +28,6 @@ class Hugo
     return self if ENV["PRECOMPILED_ASSETS"]
 
     args = HUGO_OPTIONS.dup
-    args += %W[--baseURL http://localhost:#{@port}] if port
     args += %W[--destination #{destination}]
     warn "Hugo: #{args.join(" ")}" if ENV["DEBUG"]
     system(*args, exception: true)

@@ -27,7 +27,4 @@ echo "Starting Hugo development server..."
 echo "URL: http://$BIND:$PORT"
 echo "Press Ctrl+C to stop"
 
-# Clean and start
-rm -rf public/ resources/_gen/ .hugo_build.lock 2>/dev/null || true
-
-exec hugo server --environment development --port "$PORT" --bind "$BIND" --disableFastRender=false
+exec hugo server --noBuildLock --environment development --port "$PORT" --bind "$BIND"

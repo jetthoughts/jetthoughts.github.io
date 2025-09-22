@@ -30,7 +30,7 @@ hugo_builder = Hugo.new(path: ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test"
 Capybara.app = hugo_builder.app
 
 unless ENV["PRECOMPILED_ASSETS"]
-  hugo_builder.precompile(port: current_port)
+  hugo_builder.precompile
 end
 
 module NavigationHelpers

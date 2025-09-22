@@ -93,6 +93,9 @@ run_lighthouse_test() {
 
         # Store results for summary
         echo "${page_name},${performance_score},${accessibility_score},${best_practices_score},${seo_score}" >> "${REPORT_DIR}/results.csv"
+
+        # Extract CSS-specific metrics
+        extract_css_metrics "${report_file}" "${page_name}"
     else
         echo -e "  ${RED}ERROR: No report generated${NC}"
         return 1
@@ -111,6 +114,94 @@ check_server() {
         echo -e "${YELLOW}Tip: Start server with 'bin/dev' or 'hugo server'${NC}"
         return 1
     fi
+}
+
+# Function to extract CSS performance metrics
+extract_css_metrics() {
+    local report_file="$1"
+    local page_name="$2"
+    local css_metrics_file="${REPORT_DIR}/css_metrics.csv"
+
+    if [[ -f "${report_file}" ]]; then
+        # Extract CSS-specific metrics
+        local render_blocking_resources=$(jq -r '.audits["render-blocking-resources"].score' "${report_file}")
+        local unused_css=$(jq -r '.audits["unused-css-rules"].score' "${report_file}")
+        local css_bundle_size=$(jq -r '.audits["unused-css-rules"].details.overallSavingsBytes // 0' "${report_file}")
+        local minify_css_score=$(jq -r '.audits["unminified-css"].score // 1' "${report_file}")
+
+        # Core Web Vitals impact from CSS
+        local fcp_score=$(jq -r '.audits["first-contentful-paint"].score' "${report_file}")
+        local lcp_score=$(jq -r '.audits["largest-contentful-paint"].score' "${report_file}")
+        local cls_score=$(jq -r '.audits["cumulative-layout-shift"].score' "${report_file}")
+
+        # CSS-specific opportunities
+        local critical_request_chains=$(jq -r '.audits["critical-request-chains"].score // 1' "${report_file}")
+
+        echo "${page_name},${render_blocking_resources},${unused_css},${css_bundle_size},${minify_css_score},${fcp_score},${lcp_score},${cls_score},${critical_request_chains}" >> "${css_metrics_file}"
+
+        echo -e "  CSS Metrics:"
+        echo -e "    Render Blocking: ${render_blocking_resources} | Unused CSS: ${unused_css}"
+        echo -e "    Bundle Size Impact: ${css_bundle_size} bytes | Minification: ${minify_css_score}"
+        echo -e "    FCP Impact: ${fcp_score} | LCP Impact: ${lcp_score} | CLS Impact: ${cls_score}"
+    fi
+}
+
+# Function to generate CSS migration-specific summary
+generate_css_migration_summary() {
+    local css_metrics_file="${REPORT_DIR}/css_metrics.csv"
+    local css_summary_file="${REPORT_DIR}/css_migration_summary.txt"
+
+    if [[ ! -f "${css_metrics_file}" ]]; then
+        echo "No CSS metrics collected"
+        return 1
+    fi
+
+    echo "=== CSS MIGRATION PERFORMANCE IMPACT ===" > "${css_summary_file}"
+    echo "Timestamp: $(date)" >> "${css_summary_file}"
+    echo "Pages Analyzed: ${#COMPLEX_PAGES[@]}" >> "${css_summary_file}"
+    echo "" >> "${css_summary_file}"
+
+    # Calculate CSS-specific averages
+    local avg_render_blocking=$(awk -F',' 'NR>1 {sum+=$2} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
+    local avg_unused_css=$(awk -F',' 'NR>1 {sum+=$3} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
+    local total_css_waste=$(awk -F',' 'NR>1 {sum+=$4} END {print sum}' "${css_metrics_file}")
+    local avg_fcp_impact=$(awk -F',' 'NR>1 {sum+=$6} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
+    local avg_lcp_impact=$(awk -F',' 'NR>1 {sum+=$7} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
+
+    echo "CSS PERFORMANCE METRICS:" >> "${css_summary_file}"
+    echo "Render Blocking Resources: ${avg_render_blocking}% optimized" >> "${css_summary_file}"
+    echo "Unused CSS Rules: ${avg_unused_css}% optimized" >> "${css_summary_file}"
+    echo "Total CSS Waste: ${total_css_waste} bytes" >> "${css_summary_file}"
+    echo "FCP Impact: ${avg_fcp_impact}% performance" >> "${css_summary_file}"
+    echo "LCP Impact: ${avg_lcp_impact}% performance" >> "${css_summary_file}"
+    echo "" >> "${css_summary_file}"
+
+    # CSS Migration Quality Gates
+    echo "CSS MIGRATION QUALITY GATES:" >> "${css_summary_file}"
+
+    if (( $(echo "${avg_render_blocking} > 80" | bc -l) )); then
+        echo "✓ Render Blocking: PASSED (${avg_render_blocking}%)" >> "${css_summary_file}"
+    else
+        echo "✗ Render Blocking: FAILED (${avg_render_blocking}% < 80%)" >> "${css_summary_file}"
+    fi
+
+    if (( $(echo "${total_css_waste} < 50000" | bc -l) )); then
+        echo "✓ CSS Bundle Size: PASSED (${total_css_waste} bytes waste)" >> "${css_summary_file}"
+    else
+        echo "✗ CSS Bundle Size: FAILED (${total_css_waste} bytes waste > 50KB)" >> "${css_summary_file}"
+    fi
+
+    if (( $(echo "${avg_fcp_impact} > 85" | bc -l) )); then
+        echo "✓ FCP Impact: PASSED (${avg_fcp_impact}%)" >> "${css_summary_file}"
+    else
+        echo "✗ FCP Impact: FAILED (${avg_fcp_impact}% < 85%)" >> "${css_summary_file}"
+    fi
+
+    echo "" >> "${css_summary_file}"
+    echo "CSS migration recommendations available in detailed reports." >> "${css_summary_file}"
+
+    echo -e "${BLUE}=== CSS MIGRATION ANALYSIS ===${NC}"
+    cat "${css_summary_file}"
 }
 
 # Function to generate summary report
@@ -165,6 +256,9 @@ generate_summary() {
     # Display summary
     echo -e "${BLUE}=== BENCHMARK COMPLETE ===${NC}"
     cat "${summary_file}"
+
+    # Generate CSS migration-specific summary
+    generate_css_migration_summary
 }
 
 # Main execution
@@ -181,8 +275,9 @@ main() {
         exit 1
     fi
 
-    # Initialize results file
+    # Initialize results files
     echo "page,performance,accessibility,best_practices,seo" > "${REPORT_DIR}/results.csv"
+    echo "page,render_blocking,unused_css,css_bundle_size,minify_css,fcp_score,lcp_score,cls_score,critical_chains" > "${REPORT_DIR}/css_metrics.csv"
 
     # Test each complex page
     local failed_tests=0

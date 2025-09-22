@@ -6,7 +6,6 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
 [build]
   writeStats = false
   noChmod = true
-  noTimes = true
 
 [minify]
   minifyOutput = true
@@ -25,3 +24,7 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
 
 [taxonomies]
   tag = "tags"
+
+[imaging]
+  quality = 30
+  resampleFilter = "NearestNeighbor"
