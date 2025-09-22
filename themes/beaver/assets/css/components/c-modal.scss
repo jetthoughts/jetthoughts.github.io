@@ -16,12 +16,30 @@
   background-color: var(--modal-bg);
   z-index: var(--modal-z-index);
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 
   &.is-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
   }
+}
+
+// Modal content styling
+.c-modal__content {
+  background-color: var(--modal-content-bg);
+  border-radius: 8px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.c-modal.is-open .c-modal__content {
+  transform: scale(1);
 }
 
 // FL-Builder Compatibility - Dual Class Strategy
