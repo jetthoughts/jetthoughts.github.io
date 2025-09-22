@@ -714,9 +714,11 @@
    Currently inactive to prevent conflicts
    ================================================ */
 
+/* Micro-change 1: Safe utility class addition */
+.u-text-center { text-align: center; }
+
 /* These can be activated once FL-builder classes are removed */
 /*
-.u-text-center { text-align: center; }
 .u-margin-top { margin-top: 2rem; }
 .u-padding { padding: 2rem; }
 */
