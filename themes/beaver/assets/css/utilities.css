@@ -13,10 +13,30 @@
 .u-text-center { text-align: center; }
 .u-text-left { text-align: left; }
 
+/* Text Alignment Component Utilities */
+.c-text-align-left { text-align: left; }
+.c-text-align-center { text-align: center; }
+.c-text-align-right { text-align: right; }
+
 /* Display Utilities */
 .u-flex { display: flex; }
 .u-block { display: block; }
 .u-hidden { display: none; }
+
+/* Layout Clearfix Utilities */
+.c-clear { clear: both; }
+
+.c-clearfix:before,
+.c-clearfix:after { display: table; content: " "; }
+
+.c-clearfix:after { clear: both; }
+
+/* Responsive Visibility Utilities */
+.c-visible-large,
+.c-visible-medium,
+.c-visible-mobile { display: none; }
+
+.c-visible-desktop { display: block; }
 
 /* Transition Utilities */
 .u-transition { transition: all 0.3s ease-in-out; }

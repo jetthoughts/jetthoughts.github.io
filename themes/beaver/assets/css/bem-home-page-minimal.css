@@ -9,6 +9,14 @@
   --color-primary: #1a8cff;
   --infobox-spacing: 15px;
   --infobox-margin: 25px;
+  --form-background: #F5F6F8;
+  --form-field-spacing: 20px;
+  --cta-button-bg: #121212;
+  --cta-button-hover-bg: #24292D;
+  --cta-button-margin: 40px;
+  --cta-section-spacing: 15px;
+  --cta-text-color: #ffffff;
+  --cta-button-border: #060606;
 }
 
 /* ================================================
@@ -71,6 +79,10 @@
   :root {
     --infobox-spacing: 12px; /* Reduced for mobile */
     --infobox-margin: 20px;  /* Reduced for mobile */
+    --form-background: #F5F6F8; /* Same value for mobile consistency */
+    --form-field-spacing: 15px; /* Reduced for mobile */
+    --cta-button-margin: 25px; /* Reduced for mobile */
+    --cta-section-spacing: 12px; /* Reduced for mobile */
   }
 }
 
@@ -731,6 +743,7 @@
 /* Micro-change 1: Safe utility class addition */
 .u-text-center { text-align: center; }
 .u-margin-auto { margin-left: auto; margin-right: auto; }
+.u-form-center { text-align: center; }
 
 /* These can be activated once FL-builder classes are removed */
 /*
