@@ -1,0 +1,50 @@
+/* components/navigation-migration.css */
+/* Phase 0: Navigation Component Migration - Dual-class strategy */
+.navigation,
+.c-nav {
+  /* Base navigation container styles */
+  @media (max-width: 1024px) {
+    position: fixed;
+    background-color: #ffffff; /* var(--jt-white) mobile fix */
+  }
+}
+
+.navigation .nav,
+.c-nav__list {
+  /* Navigation list base styles */
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.navigation .nav li,
+.c-nav__item {
+  /* Navigation item base styles */
+}
+
+.navigation .nav .link,
+.c-nav__link {
+  /* Navigation link base styles */
+  @media (max-width: 1024px) {
+    color: #121212; /* var(--jt-text-primary) mobile fix */
+    display: block;
+  }
+}
+
+.menu-opener,
+.c-nav__toggle {
+  /* Mobile menu toggle styles */
+  @media (max-width: 1024px) {
+    border-color: #121212; /* var(--jt-text-primary) mobile fix */
+    display: block;
+  }
+}
+
+.menu-opener:before,
+.c-nav__toggle:before {
+  /* Mobile toggle hamburger line */
+  @media (max-width: 1024px) {
+    background-color: #121212; /* var(--jt-text-primary) mobile fix */
+  }
+}
