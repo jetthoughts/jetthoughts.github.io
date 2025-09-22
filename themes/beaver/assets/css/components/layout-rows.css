@@ -1,0 +1,15 @@
+/* Phase 0: Row Layout Migration - Dual-class strategy */
+/* Maintains FL-Builder compatibility while adding BEM classes */
+
+/* Basic row container component */
+.c-row,
+.c-row__content {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+}
+
+/* Row content wrapper component */
+.c-row__content-wrap {
+  position: relative;
+}

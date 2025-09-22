@@ -1,0 +1,62 @@
+/* Phase 0: Forms Component Migration - Dual-class strategy */
+/* Maintains FL-Builder compatibility while adding BEM classes */
+
+/* Form wrapper component */
+.c-form {
+  max-width: 100%;
+}
+
+.c-form--contact {
+  background-color: var(--jt-white);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Form field component */
+.c-form__field {
+  list-style-type: none !important;
+  margin-bottom: 20px;
+}
+
+/* Form title hiding component */
+.c-form__title--hidden {
+  display: none;
+}
+
+/* Form description hiding component */
+.c-form__description--hidden {
+  display: none;
+}
+
+/* Form label component */
+.c-form__label {
+  color: var(--jt-dark);
+  display: block;
+}
+
+/* Required field indicator */
+.c-form__required {
+  color: #ff0000;
+}
+
+/* Complex input containers */
+.c-form__input-complex input,
+.c-form__input-complex select {
+  margin-bottom: 6px;
+}
+
+.c-form__input-complex span {
+  margin-bottom: 8px;
+}
+
+/* Full-width input fields */
+.c-form__input--full {
+  width: 100% !important;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 640px) {
+  .c-form__field--half {
+    padding-right: 0;
+  }
+}

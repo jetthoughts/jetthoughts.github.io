@@ -1,0 +1,11 @@
+/* components/buttons-migration.css */
+/* Phase 0: Button Component Migration - Dual-class strategy */
+.fl-builder-content a.fl-button,
+.fl-builder-content a.fl-button:visited,
+.c-button {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 12px 30px;
+  display: inline-block;
+  box-sizing: border-box;

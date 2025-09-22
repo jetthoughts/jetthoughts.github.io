@@ -1,0 +1,43 @@
+/* Layout Foundation Migration - Dual-class strategy */
+/* BEM equivalents alongside FL-Builder foundation */
+
+/* Box-sizing foundation - Universal inheritance */
+.c-layout *,
+.c-layout *:before,
+.c-layout *:after {
+  box-sizing: border-box;
+}
+
+/* Clearfix utilities */
+.c-clearfix:before,
+.c-clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.c-clearfix:after {
+  clear: both;
+}
+
+/* Screen reader utility */
+.c-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Responsive visibility utilities */
+.c-visible-large,
+.c-visible-medium,
+.c-visible-mobile {
+  display: none;
+}
+
+.c-visible-desktop {
+  display: block;
+}
