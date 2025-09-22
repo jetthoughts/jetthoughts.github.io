@@ -9,3 +9,61 @@
   padding: 12px 30px;
   display: inline-block;
   box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  border: 2px solid transparent;
+  background-color: var(--color-primary, #007cba);
+  cursor: pointer;
+  color: var(--color-white, #ffffff);
+  vertical-align: middle;
+  user-select: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+
+/* Hover states for both FL-Builder and BEM classes */
+.fl-builder-content a.fl-button:hover,
+.c-button:hover {
+  background-color: var(--color-primary-dark, #005a87);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus states for accessibility */
+.fl-builder-content a.fl-button:focus,
+.c-button:focus {
+  outline: 2px solid var(--color-focus, #4a90e2);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+/* Active states for button press feedback */
+.fl-builder-content a.fl-button:active,
+.c-button:active {
+  background-color: var(--color-primary-darker, #004066);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Size variants - Large button modifier */
+.fl-builder-content a.fl-button.fl-button-large,
+.c-button--large {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Color variants - Secondary button style */
+.fl-builder-content a.fl-button.fl-button-secondary,
+.c-button--secondary {
+  background-color: var(--color-secondary, #6c757d);
+  border-color: var(--color-secondary, #6c757d);
+  color: var(--color-white, #ffffff);
+}
+
+/* Migration complete: Dual-class button component ready for integration */
