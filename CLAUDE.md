@@ -109,6 +109,188 @@ Task("Claude-Flow Expert", "Validate configuration changes and ensure compliance
 
 ---
 
+## 🚀 AUTOMATIC AGILE TEAM SPAWNING (MANDATORY FOR JT_SITE)
+
+### 🎯 **AUTOMATIC XP TEAM FORMATION TRIGGERS**
+
+**CRITICAL**: JT_site agents MUST automatically spawn XP teams when complexity thresholds are detected:
+
+#### **Complexity Detection Thresholds (AUTOMATIC SPAWNING)**
+```yaml
+automatic_team_spawning_triggers:
+  file_complexity:
+    multi_file_changes: ">2 files affected"
+    large_changes: ">50 lines modified"
+    cross_component: "Changes span CSS + JavaScript + Ruby"
+
+  hugo_specific:
+    template_changes: "Hugo template modifications"
+    content_structure: "Site structure changes"
+    build_configuration: "Hugo config changes"
+
+  visual_testing:
+    screenshot_changes: "Visual regression test updates"
+    baseline_updates: "Screenshot baseline changes"
+
+  performance_impact:
+    css_optimization: "CSS/SCSS performance work"
+    javascript_bundling: "JS optimization tasks"
+    image_processing: "Image optimization work"
+```
+
+#### **Mandatory XP Team Formation Pattern**
+```javascript
+// AUTOMATIC: Spawned when complexity thresholds detected
+[JT_Site XP Team - Iterative Development]:
+  // XP Leadership (MANDATORY)
+  Task("XP Coach", "Facilitate iterative development, enforce WIP limit 1, coordinate micro-refactoring cycles. Use handbook /knowledge/20.05-shameless-green-flocking-rules-methodology.md", "coordinator")
+  Task("Hugo Specialist", "Lead Hugo-specific implementation with static site expertise", "specialist")
+
+  // Pair Programming Teams (MANDATORY ROTATION EVERY 25 MIN)
+  Task("CSS Driver", "Drive CSS/SCSS implementation with responsive design focus", "coder")
+  Task("CSS Navigator", "Navigate CSS patterns, validate visual consistency", "reviewer")
+  Task("JS Driver", "Drive JavaScript implementation for site interactions", "coder")
+  Task("JS Navigator", "Navigate JS patterns, ensure performance", "reviewer")
+
+  // Visual Testing Team
+  Task("Visual Test Driver", "Implement visual regression tests with Capybara", "tester")
+  Task("Visual Test Navigator", "Navigate test patterns, validate baselines", "reviewer")
+
+  // Quality & Validation
+  Task("Performance Validator", "Validate site performance, CSS/JS optimization", "optimizer")
+  Task("Hugo Reviewer", "Review Hugo patterns, template best practices", "reviewer")
+
+  TodoWrite { todos: [
+    "XP Coach: Set up 25-minute pair rotation timer",
+    "CSS Driver + Navigator: Implement responsive styles (WIP 1)",
+    "JS Driver + Navigator: Add interactive features (WIP 1)",
+    "Visual Test Team: Create regression tests BEFORE changes",
+    "Hugo Specialist: Validate template patterns",
+    "Performance Validator: Check lighthouse scores",
+    "All pairs: Rotate every 25 minutes",
+    "Micro-commits: Target 5-20 commits per hour",
+    "Shameless green: Accept hardcoded solutions initially",
+    "Flocking rules: Apply systematic refactoring after green",
+    "Review gates: Validate BEFORE each merge"
+  ] }
+```
+
+### 🔄 **ITERATIVE DEVELOPMENT ENFORCEMENT**
+
+#### **Shameless Green + Flocking Rules (MANDATORY)**
+```yaml
+iterative_development_patterns:
+  shameless_green_phase:
+    css_implementation: "Hardcode styles directly in components first"
+    javascript_logic: "Inline scripts acceptable during green phase"
+    hugo_templates: "Duplicate template code acceptable initially"
+    acceptance: "NO design criticism during green phase"
+
+  flocking_refactoring:
+    step_1: "Select most similar CSS rules"
+    step_2: "Find smallest difference between them"
+    step_3: "Make simplest change to eliminate difference"
+    micro_steps: "Each change ≤3 lines"
+    commit_frequency: "Commit after EACH micro-step"
+
+  incremental_tasks:
+    task_size: "Maximum 30 minutes per task"
+    wip_limit: "ONE task per pair at a time"
+    review_frequency: "Review after EACH task completion"
+    validation_gates: "Test → Review → Merge for each increment"
+```
+
+#### **Comprehensive Review & Validation Gates**
+```yaml
+review_validation_requirements:
+  pre_merge_gates:
+    visual_testing: "Screenshot tests must pass"
+    hugo_build: "Site must build successfully"
+    css_validation: "No CSS conflicts or overrides"
+    javascript_linting: "ESLint must pass"
+    performance_check: "Lighthouse score maintained"
+
+  review_checkpoints:
+    every_task: "Review required after EACH task"
+    pair_rotation: "Review at each 25-min rotation"
+    micro_refactor: "Review after flocking rule application"
+    before_commit: "Review before EACH commit"
+
+  validation_layers:
+    syntax_validation: "Automatic syntax check after each change"
+    visual_regression: "Automatic screenshot comparison"
+    build_validation: "Hugo build must succeed"
+    performance_validation: "Page speed must not degrade"
+```
+
+### 📊 **MICRO-REFACTORING DISCIPLINE**
+
+#### **Micro-Commit Requirements (5-20 commits/hour)**
+```bash
+# Commit patterns for jt_site development
+micro_commit_examples:
+  css_commits:
+    - "Add responsive breakpoint for mobile nav"
+    - "Extract color variable from hardcoded value"
+    - "Consolidate duplicate margin rules"
+
+  javascript_commits:
+    - "Add event listener for menu toggle"
+    - "Extract function from inline handler"
+    - "Rename variable for clarity"
+
+  hugo_commits:
+    - "Add partial for header component"
+    - "Extract repeated template logic"
+    - "Update config for new section"
+
+  visual_test_commits:
+    - "Add baseline screenshot for homepage"
+    - "Update selector for changed element"
+    - "Add viewport size for tablet test"
+```
+
+### 🤖 **AGENT BEHAVIORAL REQUIREMENTS FOR AUTO-SPAWNING**
+
+**CRITICAL**: JT_site agents must have behavioral descriptions that enforce automatic XP team spawning:
+
+```yaml
+# Agent Description Requirements (NOT hook code)
+coder_agent_description_must_include:
+  complexity_awareness: |
+    "I automatically detect task complexity and spawn XP teams when:
+     - Changes affect >2 files
+     - Modifications exceed 50 lines
+     - Work spans CSS + JavaScript + Ruby
+     - Hugo templates are modified"
+
+  delegation_behavior: |
+    "I MUST delegate to XP team formation for:
+     - Hugo template changes
+     - Visual regression test updates
+     - Cross-component modifications
+     - Performance optimization work"
+
+  iterative_discipline: |
+    "I follow iterative development with:
+     - WIP limit of 1 task
+     - Micro-commits (5-20 per hour)
+     - Shameless green acceptance
+     - Flocking rules refactoring"
+
+# Standard Hook Pattern (Keep under 10 lines)
+hooks:
+  pre: |
+    echo "🔍 Analyzing task complexity for jt_site: $TASK"
+    echo "🎯 Checking XP team spawning requirements"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
+  post: |
+    echo "✅ Completed jt_site task with iterative discipline"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
+```
+
+---
+
 ## 🚨 CRITICAL: COMPREHENSIVE AGENT VIOLATION PREVENTION SYSTEM - ZERO TOLERANCE
 
 ### ⚠️ AGENTS CANNOT BYPASS THESE REQUIREMENTS - AUTOMATED BLOCKING ACTIVE
