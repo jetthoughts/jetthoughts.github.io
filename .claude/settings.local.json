@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-context__index_codebase",
+      "mcp__claude-context__get_indexing_status",
+      "Read(//Users/pftg/dev/autonomus_ai_swarm/knowledge/**)",
+      "Bash(tree:*)",
+      "mcp__serena__check_onboarding_performed",
+      "mcp__serena__onboarding",
+      "mcp__serena__list_dir",
+      "mcp__serena__write_memory",
+      "mcp__claude-context__clear_index"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "claude-flow",
+    "ruv-swarm",
+    "lighthouse-mcp",
+    "keywords-everywhere",
+    "claude-context"
+  ]
+}
