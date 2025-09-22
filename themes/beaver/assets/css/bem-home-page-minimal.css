@@ -120,7 +120,8 @@
 }
 
 /* Feature card content styling */
-.c-feature-card .pp-infobox .pp-infobox-title-prefix {
+.c-feature-card .pp-infobox .pp-infobox-title-prefix,
+.c-feature-card__title-prefix {
   display: none;
 }
 
