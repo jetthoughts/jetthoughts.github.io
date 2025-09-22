@@ -1,0 +1,30 @@
+// Service Grid Component - Dual-Class Migration
+// Migrates .fl-node-* service grid patterns to .c-service-grid system
+
+// Base service grid component with CSS variables
+.c-service-grid {
+  --grid-gap: 2rem;
+  --grid-columns: 3;
+  --service-card-bg: #ffffff;
+  --service-card-text: #333333;
+
+  // Base grid layout
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gap);
+}
+
+// FL-Builder Compatibility - Dual Class Strategy
+// Applies .c-service-grid styles to existing FL-Builder nodes
+.fl-node-5dzyge41jmoa.c-service-grid {
+  @extend .c-service-grid;
+}
+
+.fl-node-10d3e2kq8tox.c-service-grid {
+  @extend .c-service-grid;
+}
+
+.fl-node-x6rqpedlc9y5.c-service-grid,
+.fl-node-2x7c5i3nmohu.c-service-grid {
+  @extend .c-service-grid;
+}
