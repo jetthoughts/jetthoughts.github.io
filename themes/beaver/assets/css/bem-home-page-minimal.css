@@ -66,6 +66,12 @@
     padding-bottom: 0px;
     padding-left: 20px;
   }
+
+  /* Mobile CSS variable fallbacks with direct hex values */
+  :root {
+    --infobox-spacing: 12px; /* Reduced for mobile */
+    --infobox-margin: 20px;  /* Reduced for mobile */
+  }
 }
 
 /* Feature Cards - Semantic hooks only */
