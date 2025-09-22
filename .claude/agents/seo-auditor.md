@@ -1,6 +1,6 @@
 ---
 name: "seo-auditor"
-type: "auditor"
+type: "reviewer"
 color: "#2E7D32"
 description: |
   Performs comprehensive SEO audits using Lighthouse MCP and Keywords Everywhere for Hugo static sites.

@@ -1,6 +1,6 @@
 ---
 name: "python-expert"
-type: "expert"
+type: "specialist"
 color: "#3776AB"
 description: |
   Python development specialist for Django, Flask, FastAPI, data processing, and ML projects.

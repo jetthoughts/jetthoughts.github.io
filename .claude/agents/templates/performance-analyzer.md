@@ -1,7 +1,7 @@
 ---
 name: perf-analyzer
 color: "amber"
-type: analysis
+type: optimizer
 description: Performance bottleneck analyzer for identifying and resolving workflow inefficiencies
 capabilities:
   - performance_analysis
