@@ -6349,3 +6349,4 @@ The configuration maintains all existing safeguards while adding XP discipline a
 - Always spawn a whole xp team swarm to handle the task through claude-flow  and ruv-swarm
 - DO NOT ADD NEW SCRIPTS FOR DEVELOPERS TO USE! All ad hoc scripts need to be deleted after task completion!
 - FOR MICRO REFACTORING IT WILL BE ENOUGH TO USE `bin/rake test:critical`
+- IMPORTANT: After each micro changes (< 10 lines) of the production code run `bin/rake test:critical`. After changes others code review and validate the changes with following four-eyes principle
