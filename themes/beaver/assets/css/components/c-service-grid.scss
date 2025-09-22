@@ -14,6 +14,30 @@
   gap: var(--grid-gap);
 }
 
+// Service card hover interactions - Phase 4
+.c-service-card {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--service-card-bg);
+  color: var(--service-card-text);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    .c-service-card__title a {
+      color: #121212 !important;
+    }
+
+    .c-service-card__description {
+      color: #121212 !important;
+    }
+
+    .c-service-card__link {
+      color: var(--jt-primary-color) !important;
+    }
+  }
+}
+
 // FL-Builder Compatibility - Dual Class Strategy
 // Applies .c-service-grid styles to existing FL-Builder nodes
 .fl-node-5dzyge41jmoa.c-service-grid {
