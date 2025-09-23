@@ -23,24 +23,6 @@ RUN --mount=type=cache,target=/root/.bun,sharing=locked \
     bun install --frozen-lockfile --verbose
 
 #=============================================================================
-# Stage 3: Ruby dependencies (parallel with node-deps)
-#=============================================================================
-FROM base AS ruby-deps
-WORKDIR /usr/src/app
-COPY Gemfile Gemfile.lock ./
-
-# Enhanced bundle install with optimized settings
-RUN --mount=type=cache,target=/usr/local/bundle/cache,sharing=locked \
-    --mount=type=cache,target=/root/.bundle \
-    echo "gem: --no-document" > /root/.gemrc && \
-    bundle config set --local deployment false && \
-    bundle config set --local path /opt/bundle && \
-    bundle config set --local jobs 4 && \
-    bundle config set --local retry 3 && \
-    bundle config set --local without development:assets && \
-    bundle install
-
-#=============================================================================
 # Stage 4: Final runtime image (optimized)
 #=============================================================================
 FROM ruby:$RUBY_VERSION-alpine AS runtime
@@ -77,20 +59,33 @@ RUN apk update && apk upgrade && \
         libjpeg-turbo vips \
         chromium chromium-chromedriver \
         xvfb \
+        build-base make g++ git \
+        libjpeg-turbo-dev vips-dev \
+        python3 pkgconfig \
         nss freetype ttf-freefont font-noto
 
 # Copy Bun binary for Node.js package management
 COPY --from=node-deps /usr/local/bin/bun /usr/local/bin/
 
-
 # Set up application directory structure
 WORKDIR /app
+
+COPY Gemfile Gemfile.lock ./
+
+# Enhanced bundle install with optimized settings
+RUN --mount=type=cache,target=/usr/local/bundle/cache,sharing=locked \
+    --mount=type=cache,target=/root/.bundle \
+    echo "gem: --no-document" > /root/.gemrc && \
+    bundle config set --local deployment false && \
+    bundle config set --local path /opt/bundle && \
+    bundle config set --local jobs 4 && \
+    bundle config set --local retry 3 && \
+    bundle config set --local without development:assets && \
+    bundle install
 
 VOLUME /app/node_modules
 VOLUME /opt/bundle
 
-# Copy dependencies from build stages (optimized order)
-COPY --from=ruby-deps /opt/bundle /opt/bundle
 COPY --from=node-deps /temp/dev/node_modules ./node_modules
 
 COPY .dev/docker-entrypoint.sh /docker-entrypoint.sh

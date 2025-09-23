@@ -11,22 +11,12 @@ require "support/setup_capybara"
 require "support/setup_snap_diff"
 require "support/hugo_helpers"
 
-# Support both precompiled assets (fixed port) and dynamic port scenarios
 if ENV["TEST_SERVER_PORT"]
   test_port = ENV.fetch("TEST_SERVER_PORT", "1314").to_i
   Capybara.server_port = test_port
 end
 
-# Get port safely, fallback to environment or default
-current_port = if ENV["TEST_SERVER_PORT"]
-  ENV.fetch("TEST_SERVER_PORT").to_i
-elsif Capybara.current_session&.server&.port
-  Capybara.current_session.server.port
-else
-  1314
-end
-
-hugo_builder = Hugo.new(path: ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test"), port: current_port)
+hugo_builder = Hugo.instance
 Capybara.app = hugo_builder.app
 
 unless ENV["PRECOMPILED_ASSETS"]
@@ -59,13 +49,13 @@ class ApplicationSystemTestCase < Minitest::Test
 
   # Ruby hash-based configuration for screenshot sections
   SECTION_CONFIGS = {
-    'cta' => {tolerance: 0.03},
-    'cta-contact_us' => {tolerance: 0.03},
-    'clients' => {tolerance: 0.03},
-    'use-cases' => {tolerance: 0.03},
-    'technologies' => {tolerance: 0.02},
-    'testimonials' => {tolerance: 0.02},
-    'why-us' => {tolerance: 0.02}
+    "cta" => {tolerance: 0.03},
+    "cta-contact_us" => {tolerance: 0.03},
+    "clients" => {tolerance: 0.03},
+    "use-cases" => {tolerance: 0.03},
+    "technologies" => {tolerance: 0.02},
+    "testimonials" => {tolerance: 0.02},
+    "why-us" => {tolerance: 0.02}
   }.freeze
 
   DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.03}.freeze
@@ -79,11 +69,8 @@ class ApplicationSystemTestCase < Minitest::Test
 
   # Unified screenshot assertion with Ruby hash-based configuration
   def assert_screenshot(name, **options)
-    # Use Capybara's built-in wait mechanism instead of sleep
-    wait_time = options.delete(:wait) || 1
-    has_css?("body", wait: wait_time) # This ensures page is ready
+    has_css?("body", wait: options.delete(:wait) || 2)
 
-    # Apply Ruby hash-based section configuration
     section_config = screenshot_config_for(name)
     final_options = section_config.merge(options)
 
@@ -96,8 +83,7 @@ class ApplicationSystemTestCase < Minitest::Test
   end
 
   def extract_section_key(name)
-    # Extract section identifier from screenshot name (e.g., "homepage/_cta" -> "cta")
-    name.to_s.split('/_').last || name.to_s.split('/').last
+    name.to_s.split("/_").last || name.to_s.split("/").last
   end
 
   # Backward compatibility aliases - will be deprecated once all tests updated

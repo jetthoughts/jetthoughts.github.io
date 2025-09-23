@@ -3,34 +3,35 @@ require "pathname"
 class Hugo
   attr_reader :destination
 
-  def initialize(path: nil, port: nil)
+  def self.instance
+    @instance ||= new
+  end
+
+  def initialize(path: nil)
     base_path = path || ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test")
     base_path = "#{base_path}-#{rand(5)}" unless ENV["PRECOMPILED_ASSETS"]
 
     @destination = Pathname.new(base_path).expand_path
-    @port = port
   end
 
   HUGO_OPTIONS = %w[
     hugo
     --baseURL /
-    --environment test
+    --environment production
     --buildDrafts
-    --logLevel warn
     --noBuildLock
-    --gc
-    --minify
-    --enableGitInfo=false
     --quiet
   ].freeze
 
   def precompile
     return self if ENV["PRECOMPILED_ASSETS"]
+    return self if @_precompiled
 
     args = HUGO_OPTIONS.dup
     args += %W[--destination #{destination}]
     warn "Hugo: #{args.join(" ")}" if ENV["DEBUG"]
     system(*args, exception: true)
+    @_precompiled = true
     self
   end
 

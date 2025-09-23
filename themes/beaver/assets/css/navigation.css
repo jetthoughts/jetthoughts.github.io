@@ -14,8 +14,8 @@
 }
 
 .btn-primary {
-  background-color: var(--jt-primary);
-  color: var(--jt-white) !important;
+  background-color: #1a8cff;
+  color: #fff !important;
 }
 
 .btn-primary:hover {
@@ -55,7 +55,7 @@
 .navigation {
   @media (max-width: 1024px) {
     position: fixed;
-    background-color: var(--jt-white);
+    background-color: #fff;
     top: 0;
     bottom: 0;
     width: 320px;
@@ -69,7 +69,7 @@
   display: none;
   width: 30px;
   height: 19px;
-  border: solid var(--jt-text-primary);
+  border: solid #121212;
   border-width: 3px 0;
   position: relative;
   cursor: pointer;
@@ -84,7 +84,7 @@
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: var(--jt-text-primary);
+  background-color: #121212;
   left: 0;
   top: 50%;
   margin-top: -1px;
@@ -104,7 +104,7 @@
   content: '';
   position: absolute;
   height: 2px;
-  background-color: var(--jt-text-primary);
+  background-color: #121212;
   left: 4px;
   right: 4px;
   top: 50%;
@@ -116,7 +116,7 @@
   content: '';
   position: absolute;
   height: 2px;
-  background-color: var(--jt-text-primary);
+  background-color: #121212;
   left: 4px;
   right: 4px;
   top: 50%;
@@ -163,7 +163,7 @@
   margin-top: -6px;
   width: 9px;
   height: 9px;
-  border-color: var(--jt-text-primary);
+  border-color: #121212;
   border-style: solid;
   border-width: 0 2px 2px 0;
   transform-origin: 70% 70%;
@@ -178,22 +178,22 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  color: var(--jt-text-primary);
+  color: #121212;
   text-decoration: none;
   transition: .3s;
 }
 
 .navigation .-active .link {
-  color: var(--jt-primary);
+  color: #1a8cff;
 }
 
 .navigation .item.-active .arrow {
-  border-color: var(--jt-primary);
+  border-color: #1a8cff;
 }
 
 .navigation .sub-menu {
   display: none;
-  background-color: var(--jt-white);
+  background-color: #fff;
   box-shadow: 0 10px 40px rgba(0,0,0,.1);
   border-radius: 20px;
   padding: 30px 30px 0;
@@ -221,7 +221,7 @@
   height: 0;
   border-style: solid;
   border-width: 15px 0 15px 15px;
-  border-color: transparent transparent transparent var(--jt-white);
+  border-color: transparent transparent transparent #fff;
   right: unset!important;
   top: -20px !important;
   left: 45% !important;
@@ -266,12 +266,12 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: var(--jt-text-primary);
+  color: #121212;
   transition: .3s;
 }
 
 .navigation .sub-item:hover .sub-name {
-  color: var(--jt-primary);
+  color: #1a8cff;
 }
 
 .navigation .sub-text {
@@ -289,50 +289,16 @@
   }
 
   .navigation .item:hover .link {
-    color: var(--jt-primary);
+    color: #1a8cff;
   }
 
   .navigation .item:hover .arrow {
     transform: rotate(225deg);
-    border-color: var(--jt-primary);
+    border-color: #1a8cff;
   }
 }
 
 @media (max-width: 1024px) {
-  .menu-opener {
-    border-color: #121212;
-  }
-
-  .menu-opener:before {
-    background-color: #121212;
-  }
-
-  .menu-close:before,
-  .menu-close:after {
-    background-color: #121212;
-  }
-
-  .navigation .link {
-    color: #121212;
-  }
-
-  .navigation .item .arrow {
-    border-color: #121212;
-  }
-
-  .navigation .sub-name {
-    color: #121212;
-  }
-
-  .navigation {
-    background-color: #ffffff;
-  }
-
-  .navigation .sub-menu {
-    background-color: #ffffff;
-  }
-
-
   .navigation.-open {
     right: 0;
     overflow-y: auto;
@@ -372,16 +338,10 @@
     font-weight: 300;
     line-height: 22px;
     font-size: 16px;
-    background-color: var(--jt-text-primary);
-    color: var(--jt-white);
+    background-color: #121212;
+    color: #fff;
     border-radius: 6px;
     margin-top: 15px;
-  }
-
-  /* Mobile-specific color overrides to fix CSS variable inconsistencies */
-  .navigation .btn {
-    background-color: #121212 !important;
-    color: #ffffff !important;
   }
 
   .navigation .item {

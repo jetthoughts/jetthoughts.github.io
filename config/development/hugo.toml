@@ -2,12 +2,13 @@
 # Overrides base config for fast development iteration
 
 # Development-specific base URL
-baseURL = "http://localhost:1313/"
+baseURL = "/"
 
 # Hugo automatically enables these in development, but explicit is better
 buildDrafts = true
 buildExpired = true
 buildFuture = true
+relativeURLs = true
 
 # Disable resource-intensive features for faster builds
 # Note: Keeping "section" enabled so blog index pages work in development
