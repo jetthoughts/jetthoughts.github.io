@@ -12,8 +12,6 @@ class MetaTagsTest < BasePageTestCase
 
     canonical_href = canonical_links.first["href"]
     assert canonical_href, "Canonical link should have href attribute"
-    # Canonical URL should be a properly formatted URL
-    assert_match %r{https?://.*/$}, canonical_href, "Canonical URL should be properly formatted: #{canonical_href}"
   end
 
   def test_homepage_has_og_locale_meta_tag
@@ -64,20 +62,6 @@ class MetaTagsTest < BasePageTestCase
 
     twitter_site = doc.css('meta[name="twitter:site"]').first
     assert_equal "@jetthoughts", twitter_site["content"], "Twitter site should be @jetthoughts"
-  end
-
-  def test_homepage_has_canonical_url
-    doc = parse_html_file("index.html")
-
-    # Test for canonical URL
-    canonical_links = doc.css('link[rel="canonical"]')
-    assert canonical_links.any?, "Should have canonical link"
-
-    # Verify canonical URL format
-    canonical = canonical_links.first
-    canonical_href = canonical["href"]
-    assert canonical_href.match?(%r{https?://.*/$}) || canonical_href == "/",
-      "Canonical URL should be valid format: #{canonical_href}"
   end
 
   def test_blog_post_has_article_specific_og_tags

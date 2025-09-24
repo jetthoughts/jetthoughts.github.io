@@ -43,43 +43,6 @@
   /* JetThoughts Brand Colors */
   --jt-primary: #1a8cff;
   --jt-dark: #121212;
-  --jt-white: #ffffff;
-  --jt-black: #000000;
-  --jt-gray-light: #f5f5f5;
-  --jt-gray-border: #e6e6e6;
-  --jt-gray-secondary: #7e7e7e;
-  --jt-gray-medium: #aaaaaa;
-  --jt-gray-dark: #333333;
-  --jt-text-primary: #121212;
-  --jt-text-secondary: #969798;
-  --jt-error: #DD6420;
-
-  /* Interactive State Variables */
-  --jt-primary-hover: #0073e6;
-  --jt-primary-active: #005cb3;
-  --jt-text-secondary-hover: #666666;
-  --jt-dark-hover: #2a2a2a;
-
-  /* Semantic Color Aliases */
-  --jt-success: #28a745;
-  --jt-warning: #ffc107;
-  --jt-info: var(--jt-primary);
-  --jt-danger: var(--jt-error);
-
-  /* Surface Colors */
-  --jt-surface-primary: var(--jt-white);
-  --jt-surface-secondary: var(--jt-gray-light);
-  --jt-surface-dark: var(--jt-dark);
-
-  /* Border Colors */
-  --jt-border-light: var(--jt-gray-border);
-  --jt-border-medium: var(--jt-gray-medium);
-  --jt-border-dark: var(--jt-gray-dark);
-
-  /* Content Colors */
-  --jt-content-primary: var(--jt-text-primary);
-  --jt-content-secondary: var(--jt-text-secondary);
-  --jt-content-inverse: var(--jt-white);
 }
 
 /* Grid Consolidation System */
@@ -90,7 +53,7 @@
 .grid-col-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* FL-Builder Compatibility: Responsive Modifiers */
-@media (max-width: var(--fl-breakpoint-medium)) {
+@media (max-width: 1115px) {
   .grid-col-2, .grid-col-3, .grid-col-4 { grid-template-columns: 1fr; }
 }
 
@@ -2953,12 +2916,12 @@ a.text-dark:focus {
 /* Responsive Utilities - Consolidates duplicate media queries */
 /* Use these classes to replace duplicate @media (max-width: 1115px) and @media (max-width: 860px) */
 
-@media (max-width: var(--fl-breakpoint-medium)) { /* 1115px */
+@media (max-width: 1115px) { /* 1115px */
   .responsive-single-col { grid-template-columns: 1fr !important; }
   .medium-hidden { display: none !important; }
 }
 
-@media (max-width: var(--fl-breakpoint-mobile)) { /* 860px */
+@media (max-width: 860px) { /* 860px */
   .mobile-single-col { grid-template-columns: 1fr !important; }
   .mobile-hidden { display: none !important; }
 }

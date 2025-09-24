@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1314/"
+baseURL = "/"
 relativeURLs = true
 environment = "test"
 disableKinds = ["RSS", "sitemap", "robotsTXT"]
@@ -8,7 +8,7 @@ disableKinds = ["RSS", "sitemap", "robotsTXT"]
   noChmod = true
 
 [minify]
-  minifyOutput = true
+  minifyOutput = false
   [minify.tdewolff.html]
     keepWhitespace = true  # Reduce processing overhead
 

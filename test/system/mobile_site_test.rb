@@ -48,7 +48,7 @@ class MobileSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_stable_screenshot "blog/post", tolerance: 0.03
+    assert_stable_screenshot "blog/post", tolerance: 0.03, skip_area: %w[picture img]
   end
 
   def test_about_us

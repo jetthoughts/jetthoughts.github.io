@@ -15,7 +15,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
 }
 
@@ -24,7 +24,7 @@ select:focus-visible,
 /* Custom Checkbox Focus Styles */
 input[type="checkbox"]:focus-visible + label::before,
 input[type="checkbox"]:focus + label::before {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
   border-radius: 3px;
 }
@@ -32,7 +32,7 @@ input[type="checkbox"]:focus + label::before {
 /* Custom Radio Button Focus Styles */
 input[type="radio"]:focus-visible + label::before,
 input[type="radio"]:focus + label::before {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
   border-radius: 50%;
 }
@@ -40,14 +40,14 @@ input[type="radio"]:focus + label::before {
 /* Gravity Forms Focus Styles */
 .gform_wrapper input[type="checkbox"]:focus-visible + label::before,
 .gform_wrapper input[type="checkbox"]:focus + label::before {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
 }
 
 .gform_wrapper input[type="radio"]:focus-visible + label::before,
 .gform_wrapper input[type="radio"]:focus + label::before {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(26, 140, 255, 0.2);
 }
@@ -68,9 +68,9 @@ input[type="radio"]:focus + label::before {
   margin: 0;
   overflow: visible;
   clip: unset;
-  outline: 3px solid var(--jt-primary);
+  outline: 3px solid #1a8cff;
   outline-offset: 2px;
-  background: var(--jt-primary);
+  background: #1a8cff;
   color: #fff;
   padding: 8px 16px;
   text-decoration: none;
@@ -79,7 +79,7 @@ input[type="radio"]:focus + label::before {
 
 /* Focus Styles for Social Icons */
 .pp-social-icon a:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -130,14 +130,14 @@ input[type="radio"]:focus + label::before {
 }
 
 .modal [tabindex]:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
 }
 
 /* Keyboard Navigation Indicators for Dropdowns */
 .dropdown-menu a:focus-visible,
 .sub-menu a:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: -2px;
   background-color: rgba(26, 140, 255, 0.1);
 }

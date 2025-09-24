@@ -25,9 +25,9 @@ Capybara::Screenshot.window_size = nil
 Capybara::Screenshot.stability_time_limit = ENV.fetch("SCREENSHOT_STABILITY_TIME", "1.0").to_f
 
 # tolerance: Allowed difference percentage between baseline and current screenshot
-# Increased from 0.005 (0.5%) to 0.03 (3%) to handle cross-platform rendering differences
+# Increased from 0.005 (0.5%) to 0.01 (1%) to handle cross-platform rendering differences
 # across different environments, versions, and operating systems
-Capybara::Screenshot::Diff.tolerance = ENV.fetch("SCREENSHOT_TOLERANCE", "0.03").to_f
+Capybara::Screenshot::Diff.tolerance = ENV.fetch("SCREENSHOT_TOLERANCE", "0.005").to_f
 
 Capybara::Screenshot::Diff.driver = :vips
 Capybara::Screenshot::Diff.delayed = false
