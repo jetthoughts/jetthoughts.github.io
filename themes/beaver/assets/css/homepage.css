@@ -130,7 +130,7 @@ img.mfp-img {
 
 /* Accessibility: Restore focus styles with :focus-visible */
 .pp-advanced-menu a:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
 }
 
@@ -144,7 +144,7 @@ img.mfp-img {
 
 /* Accessibility: Restore focus styles for menu navigation */
 .pp-advanced-menu .pp-menu-nav:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
 }
 
@@ -163,7 +163,7 @@ img.mfp-img {
 .pp-advanced-menu .pp-has-submenu:focus-visible,
 .pp-advanced-menu .pp-has-submenu .sub-menu:focus-visible,
 .pp-advanced-menu .pp-has-submenu-container:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
 }
 
@@ -189,7 +189,7 @@ img.mfp-img {
 
 .pp-advanced-menu .pp-toggle-arrows .pp-menu-toggle:before, .pp-advanced-menu .pp-toggle-none .pp-menu-toggle:before {
   content: '';
-  border-color: var(--jt-gray-dark)
+  border-color: #333
 }
 
 .pp-advanced-menu .pp-menu-expanded .pp-menu-toggle {
@@ -207,7 +207,7 @@ img.mfp-img {
   padding: 8px;
   background-color: transparent;
   border: none;
-  color: var(--jt-gray-dark);
+  color: #333;
   border-radius: 0;
   cursor: pointer;
   line-height: 0;
@@ -269,7 +269,7 @@ img.mfp-img {
 
 /* Accessibility: Restore focus styles for hamburger menu */
 .pp-advanced-menu-mobile-toggle .pp-hamburger:focus-visible {
-  outline: 2px solid var(--jt-primary);
+  outline: 2px solid #1a8cff;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -292,7 +292,7 @@ img.mfp-img {
 }
 
 .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
-  background-color: var(--jt-black);
+  background-color: #000;
   position: absolute;
   width: 30px;
   height: 3px;
@@ -527,7 +527,7 @@ html:not(.pp-full-screen-menu-open) .fl-builder-edit .pp-advanced-menu .pp-menu-
 
 /* Accessibility: Restore focus styles for menu close button */
 .pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:focus-visible {
-  outline: 2px solid var(--jt-white);
+  outline: 2px solid #fff;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -538,7 +538,7 @@ html:not(.pp-full-screen-menu-open) .fl-builder-edit .pp-advanced-menu .pp-menu-
   left: 50%;
   width: 2px;
   height: 40px;
-  background-color: var(--jt-white);
+  background-color: #fff;
   -webkit-transition: -webkit-transform .3s;
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
@@ -560,7 +560,7 @@ html:not(.pp-full-screen-menu-open) .fl-builder-edit .pp-advanced-menu .pp-menu-
   width: 320px;
   height: 100%;
   opacity: 0;
-  background: var(--jt-gray-dark);
+  background: #333;
   overflow-y: auto;
   overflow-x: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -641,7 +641,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu {
   left: 0 !important;
   right: 0 !important;
   width: 100%;
-  background: var(--jt-white)
+  background: #fff
 }
 
 ul.pp-advanced-menu-horizontal li.mega-menu.pp-has-submenu:hover > ul.sub-menu, ul.pp-advanced-menu-horizontal li.mega-menu.pp-has-submenu.pp-active > ul.sub-menu {
@@ -809,30 +809,30 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-bottom-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  color: var(--jt-text-primary)
+  color: #121212
 }
 
 .fl-node-menu .pp-advanced-menu .menu > li > a:hover, .fl-node-menu .pp-advanced-menu .menu > li > a:focus, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a:focus {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-menu-toggle:before {
-  border-color: var(--jt-text-primary)
+  border-color: #121212
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.focus .pp-menu-toggle:before {
-  border-color: var(--jt-primary)
+  border-color: #1a8cff
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li a:focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li a:focus .pp-menu-toggle:before {
-  border-color: var(--jt-primary)
+  border-color: #1a8cff
 }
 
 .fl-node-menu .menu > li > a:hover, .fl-node-menu .menu > li > a:focus, .fl-node-menu .menu > li:hover > .pp-has-submenu-container > a, .fl-node-menu .menu > li.focus > .pp-has-submenu-container > a, .fl-node-menu .menu > li.current-menu-item > a, .fl-node-menu .menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: var(--jt-primary)
+  color: #1a8cff
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-arrows li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .pp-has-submenu-container.focus .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none li.current-menu-item > .pp-has-submenu-container .pp-menu-toggle:before {
-  border-color: var(--jt-primary)
+  border-color: #1a8cff
 }
 
 .fl-node-menu .menu .pp-has-submenu .sub-menu {
@@ -840,7 +840,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .sub-menu {
-  background-color: var(--jt-white)
+  background-color: #fff
 }
 
 @media (min-width: 860px) {
@@ -850,13 +850,13 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu {
-  background: var(--jt-white)
+  background: #fff
 }
 
 .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
   border-width: 0;
   border-style: solid;
-  color: var(--jt-text-primary)
+  color: #121212
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus {
@@ -867,15 +867,15 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .sub-menu > li > a:hover, .fl-node-menu .sub-menu > li > a:focus, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:hover, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus, .fl-node-menu .sub-menu > li.current-menu-item > a, .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
-  color: var(--jt-primary)
+  color: #1a8cff
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu .pp-menu-toggle:before {
-  border-color: var(--jt-text-primary)
+  border-color: #121212
 }
 
 .fl-node-menu .pp-advanced-menu .pp-toggle-arrows .sub-menu li:hover .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu .pp-toggle-none .sub-menu li:hover .pp-menu-toggle:before {
-  border-color: var(--jt-primary)
+  border-color: #1a8cff
 }
 
 .fl-node-menu .pp-advanced-menu .pp-menu-toggle:before {
@@ -1038,7 +1038,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle {
-  color: var(--jt-text-primary)
+  color: #121212
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
@@ -1046,12 +1046,12 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:before, .fl-node-menu .pp-advanced-menu-mobile-toggle .pp-hamburger .pp-hamburger-box .pp-hamburger-inner:after {
-  background-color: var(--jt-text-primary);
+  background-color: #121212;
   height: 3px
 }
 
 .fl-node-menu .pp-advanced-menu-mobile-toggle rect {
-  fill: var(--jt-text-primary)
+  fill: #121212
 }
 
 @media (min-width: 861px) {
@@ -1084,7 +1084,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   }
 
   .fl-node-menu .pp-advanced-menu .menu > li > a, .fl-node-menu .pp-advanced-menu .menu > li > .pp-has-submenu-container > a {
-    color: var(--jt-text-primary)
+    color: #121212
   }
 
   .fl-node-menu .sub-menu > li > a, .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
@@ -1113,12 +1113,12 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .pp-off-canvas-menu {
-  background-color: var(--jt-white)
+  background-color: #fff
 }
 
 .fl-node-menu .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn {
   font-size: 30px;
-  color: var(--jt-text-primary)
+  color: #121212
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu {
@@ -1138,7 +1138,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .menu li a, .fl-node-menu .pp-advanced-menu.off-canvas .menu li .pp-has-submenu-container a {
-  color: var(--jt-text-primary);
+  color: #121212;
   border-style: solid;
   border-bottom-color: transparent;
   -webkit-transition: all .3s ease-in-out;
@@ -1154,7 +1154,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-none .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .sub-menu .pp-menu-toggle:before, .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-none .sub-menu .pp-menu-toggle:before {
-  border-color: var(--jt-text-primary)
+  border-color: #121212
 }
 
 .fl-node-menu .pp-advanced-menu.off-canvas .pp-toggle-arrows .pp-menu-toggle {
@@ -1404,7 +1404,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-node-530uo7f2gcli > .fl-row-content-wrap {
-  background-color: var(--jt-black);
+  background-color: #000;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -1437,24 +1437,24 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-node-ntfp1iza9jy8 {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 *:not(span):not(input):not(textarea):not(select):not(a):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.fl-menu-mobile-toggle) {
-  color: var(--jt-white);
+  color: #fff;
   margin-top: 5px;
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a {
-  color: var(--jt-text-secondary)
+  color: #969798
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a:hover {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 h1, .fl-builder-content .fl-node-ntfp1iza9jy8 h2, .fl-builder-content .fl-node-ntfp1iza9jy8 h3, .fl-builder-content .fl-node-ntfp1iza9jy8 h4, .fl-builder-content .fl-node-ntfp1iza9jy8 h5, .fl-builder-content .fl-node-ntfp1iza9jy8 h6, .fl-builder-content .fl-node-ntfp1iza9jy8 h1 a, .fl-builder-content .fl-node-ntfp1iza9jy8 h2 a, .fl-builder-content .fl-node-ntfp1iza9jy8 h3 a, .fl-builder-content .fl-node-ntfp1iza9jy8 h4 a, .fl-builder-content .fl-node-ntfp1iza9jy8 h5 a, .fl-builder-content .fl-node-ntfp1iza9jy8 h6 a {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-node-ntfp1iza9jy8 {
@@ -1489,11 +1489,11 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a {
-  color: var(--jt-text-secondary)
+  color: #969798
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a:hover {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-node-5dcip6gnz2at {
@@ -1522,11 +1522,11 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a {
-  color: var(--jt-text-secondary)
+  color: #969798
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a:hover {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-node-7p1us6kjlz9d {
@@ -1555,11 +1555,11 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a {
-  color: var(--jt-text-secondary)
+  color: #969798
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a:hover {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-node-fxtbmly0wvq4 {
@@ -1694,7 +1694,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-lsrnf83ijm06 .fl-module-content .fl-rich-text * {
-  color: var(--jt-text-secondary)
+  color: #969798
 }
 
 .fl-builder-content .fl-node-lsrnf83ijm06 .fl-rich-text, .fl-builder-content .fl-node-lsrnf83ijm06 .fl-rich-text *:not(b,strong) {
@@ -1717,7 +1717,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading a, .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text *, .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text {
-  color: var(--jt-white)
+  color: #fff
 }
 
 @media (max-width: 860px) {
@@ -1741,7 +1741,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-row .fl-col .fl-node-zevlimhbtfcq h5.fl-heading a, .fl-row .fl-col .fl-node-zevlimhbtfcq h5.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-zevlimhbtfcq h5.fl-heading .fl-heading-text *, .fl-node-zevlimhbtfcq h5.fl-heading .fl-heading-text {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-builder-content .fl-node-q8ul0bi34dvt .fl-rich-text, .fl-builder-content .fl-node-q8ul0bi34dvt .fl-rich-text *:not(b,strong) {
@@ -1759,7 +1759,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-row .fl-col .fl-node-e1085k37ypqb h5.fl-heading a, .fl-row .fl-col .fl-node-e1085k37ypqb h5.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-e1085k37ypqb h5.fl-heading .fl-heading-text *, .fl-node-e1085k37ypqb h5.fl-heading .fl-heading-text {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-builder-content .fl-node-dt8uqacr4y16 .fl-rich-text, .fl-builder-content .fl-node-dt8uqacr4y16 .fl-rich-text *:not(b,strong) {
@@ -1797,7 +1797,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
 }
 
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text * {
-  color: var(--jt-white)
+  color: #fff
 }
 
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-rich-text, .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-rich-text *:not(b,strong) {
@@ -1845,14 +1845,14 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
   display: inline-block;
   float: left;
   text-align: center;
-  color: var(--jt-white);
+  color: #fff;
   background-color: transparent;
   border-radius: 100px;
   border: 0 solid
 }
 
 .fl-node-yqpsldhfovz6 .fl-module-content .pp-social-icon a:hover {
-  color: var(--jt-white);
+  color: #fff;
   background-color: rgba(255, 255, 255, .11);
 }
 

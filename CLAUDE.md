@@ -24,7 +24,7 @@
 ### 🛠️ **XP TEAM CORRECTIONS APPLIED**
 1. **Hardcoded Port Violations**: Removed hardcoded port 1314, replaced with ENV.fetch("TEST_SERVER_PORT", "1314")
 2. **Test Masking Violations**: Removed skip() method that violated zero-tolerance test masking policy
-3. **Hardcoded Path Violations**: Replaced "_dest/public-test" with ENV.fetch('HUGO_PUBLIC_DIR', '_dest/public-test')
+3. **Hardcoded Path Violations**: Replaced "_dest/public-test" with ENV.fetch('HUGO_DEFAULT_PATH', '_dest/public-test')
 4. **Micro-Refactoring Discipline**: Applied ≤3 line changes with syntax validation after each step
 
 ### 📖 **XP PRINCIPLES SUCCESSFULLY ENFORCED**

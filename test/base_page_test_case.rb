@@ -4,13 +4,13 @@ require "json"
 
 require "support/hugo_helpers"
 
-Hugo.new.precompile
+Hugo.instance.precompile
 
 class BasePageTestCase < Minitest::Test
   private
 
   def root_path
-    ENV.fetch("HUGO_DEFAULT_PATH", "_dest/public-test")
+    Hugo.instance.destination_path
   end
 
   def parse_html_file(relative_path)

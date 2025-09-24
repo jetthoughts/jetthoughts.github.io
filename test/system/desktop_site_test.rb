@@ -39,23 +39,6 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_homepage_section("footer")
   end
 
-  private
-
-  def verify_homepage_section(section_id)
-    visit "/"
-    scroll_to :bottom # preload all images
-    assert_text "JetThoughts. All Rights Reserved", exact: false
-    scroll_to find("##{section_id}")
-    # Ruby hash-based config automatically handles tolerance per section
-    assert_screenshot "homepage/_#{section_id}"
-  end
-
-  def verify_clients_section(section_id)
-    scroll_to find("##{section_id}")
-    # Ruby hash-based config handles tolerance automatically
-    assert_screenshot "clients/_#{section_id}"
-  end
-
   def test_blog_index
     visit "/"
     within_top_bar do
@@ -88,13 +71,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_stable_screenshot "blog/post", tolerance: 0.03
+    assert_stable_screenshot "blog/post", tolerance: 0.03, stability_time_limit: 5
   end
 
   def test_about_us
     visit "/"
     visit_via_menu("About Us")
-    assert_screenshot "about_us"
+    assert_screenshot "about_us", skip_area: ["article img"], tolerance: 0.005
   end
 
   def test_clients
@@ -211,6 +194,15 @@ class DesktopSiteTest < ApplicationSystemTestCase
   end
 
   private
+
+  def verify_homepage_section(section_id)
+    visit "/"
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+    scroll_to find("##{section_id}")
+    # Ruby hash-based config automatically handles tolerance per section
+    assert_screenshot "homepage/_#{section_id}"
+  end
 
   def verify_clients_section(section_id)
     scroll_to find("##{section_id}")

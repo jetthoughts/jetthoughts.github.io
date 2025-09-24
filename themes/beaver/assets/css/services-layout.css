@@ -212,8 +212,8 @@ body input[type="submit"] {
   top: 0;
   width: 18px;
   height: 18px;
-  border: 2px solid var(--jt-primary-color);
-  background-color: var(--jt-primary-color);
+  border: 2px solid #1a8cff;
+  background-color: #1a8cff;
   z-index: 0;
   border-radius: 4px;
 }
@@ -345,9 +345,9 @@ body input[type="submit"] {
   .gchoice
   input:focus
   + label {
-  background: var(--jt-primary-color) !important;
+  background: #1a8cff !important;
   color: #fff;
-  border-color: var(--jt-primary-color);
+  border-color: #1a8cff;
 }
 
 .gform_wrapper
@@ -377,7 +377,7 @@ body input[type="submit"] {
   .gfield_radio
   .gchoice
   label:hover {
-  border-color: var(--jt-primary-color);
+  border-color: #1a8cff;
 }
 
 @media (max-width: 860px) {
@@ -483,7 +483,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   color: #fff;
   font-size: 10px;
   padding: 3px 6px;
-  background-color: var(--jt-primary-color);
+  background-color: #1a8cff;
   border-radius: 10px;
   display: inline-block;
   margin-left: 5px;
@@ -538,7 +538,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
-  color: var(--jt-primary-color) !important;
+  color: #1a8cff !important;
 }
 
 .jt-service-box:hover
@@ -546,7 +546,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   .pp-infobox-button
   .pp-more-link
   i {
-  color: var(--jt-primary-color) !important;
+  color: #1a8cff !important;
 }
 
 .jt-case-study > .fl-col-content {
@@ -585,7 +585,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study > .fl-col-content:hover {
-  border-color: var(--jt-primary-color) !important;
+  border-color: #1a8cff !important;
 }
 
 .jt-case-study.jt-case-study--light li {
@@ -593,7 +593,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study.jt-case-study--light li a {
-  color: var(--jt-primary-color) !important;
+  color: #1a8cff !important;
   font-weight: 700 !important;
 }
 
@@ -675,7 +675,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div a {
   padding: 12px 25px;
-  background-color: var(--jt-primary-color);
+  background-color: #1a8cff;
   color: #fff;
   border-radius: 25px;
   font-family:
@@ -920,7 +920,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 /* Blog */
 .blog-archive-search .pp-post-filters-wrapper .pp-post-filters-toggle {
-  background-color: var(--jt-primary-color);
+  background-color: #1a8cff;
   padding: 9px 20px;
   border-radius: 21px;
   margin-bottom: 20px;
@@ -1197,7 +1197,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .single-author .pp-description-wrap .author-social a {
   padding: 9px 12px;
-  background-color: var(--jt-text-color);
+  background-color: #121212;
   color: #fff;
   border-radius: 6px;
   font-size: 14px;
@@ -1215,7 +1215,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .single-author .pp-description-wrap .author-social a:hover {
   background-color: #fff;
-  color: var(--jt-text-color);
+  color: #121212;
 }
 
 .single-author .pp-description-wrap .author-social.social-linkedin + p {
@@ -1242,8 +1242,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .uk-toc ul li.active a {
-  border-left-color: var(--jt-primary-color);
-  color: var(--jt-primary-color) !important;
+  border-left-color: #1a8cff;
+  color: #1a8cff !important;
 }
 
 /* Client Details */
@@ -1446,7 +1446,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   margin-right: 10px;
   background: rgba(26, 141, 255, 0.1);
   border: unset;
-  color: var(--jt-primary-color);
+  color: #1a8cff;
   padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;

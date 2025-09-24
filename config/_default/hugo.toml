@@ -4,7 +4,7 @@ languageCode = "en-us"
 title = "JetThoughts"
 copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 theme = "beaver"
-enableGitInfo = true
+enableGitInfo = false
 disableKinds = []
 
 [markup.goldmark.renderer]
@@ -286,3 +286,6 @@ tell = "entry.1791620687"
 [params.forms.newsletter]
 action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdD4751jeepeQe4wefgLqBO6XAU0qqvKWvmJ8P6xRmrMRvakg/formResponse"
 email = "entry.939459641"
+
+# Skip expensive processing in development
+ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]

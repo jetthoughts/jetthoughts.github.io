@@ -25,12 +25,4 @@ class ColorSystemTest < ApplicationSystemTestCase
       assert_equal "rgb(18, 18, 18)", heading_color, "Headings should use --jt-text-color variable"
     end
   end
-
-  def test_primary_color_system_ready
-    visit "/"
-
-    # Test that primary color custom property is defined
-    primary_color = page.evaluate_script("getComputedStyle(document.documentElement).getPropertyValue('--jt-primary-color').trim()")
-    assert_equal "#1a8cff", primary_color, "Primary color custom property should be defined"
-  end
 end

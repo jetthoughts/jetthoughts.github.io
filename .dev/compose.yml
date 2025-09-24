@@ -15,7 +15,6 @@ services:
     environment:
       HUGO_CACHEDIR: /tmp/hugo_cache
       HUGO_NUMWORKERMULTIPLIER: 8
-      HUGO_ENABLEGITINFO: false
     restart: unless-stopped
     mem_limit: 512m
     cpus: '2.0'
@@ -32,12 +31,10 @@ services:
     tty: true
     volumes:
       - ..:/app:delegated
-      - bundle:/opt/bundle
       - history:/usr/local/hist
     environment:
       HISTFILE: /usr/local/hist/.bash_history
       IRB_HISTFILE: /usr/local/hist/.irb_history
-      BUNDLE_PATH: /opt/bundle
     command: sh
 
   # Test runner with optimized dependency management
@@ -51,14 +48,10 @@ services:
     command: bin/test
     volumes:
       - ..:/app:delegated
-      - node_modules:/app/node_modules
-      - bundle:/opt/bundle
       - hugo_cache_dtest:/tmp/hugo_cache_dtest
     environment:
-      HUGO_PUBLIC_DIR: "_dest/public-dtest"
       HUGO_DEFAULT_PATH: "_dest/public-dtest"
       HUGO_CACHEDIR: "/tmp/hugo_cache_dtest"
-      HUGO_ENABLEGITINFO: "false"
       CAPYBARA_SCREENSHOT_ON_FAILURE: "true"
       RUBY_THREAD_VM_STACK_SIZE: 1048576
     mem_limit: 2g
