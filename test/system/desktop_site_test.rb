@@ -11,12 +11,18 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_homepage
     visit "/"
+
+    preload_all_images
+
     assert_text "Build faster. Scale smarter."
     assert_screenshot "homepage", tolerance: 0.10
   end
 
   def test_top_image_have_highest_priority
     visit "/"
+
+    preload_all_images
+
     within ".fl-photo-content.fl-photo-img-jpeg" do
       assert_css "img[fetchpriority=high]"
     end

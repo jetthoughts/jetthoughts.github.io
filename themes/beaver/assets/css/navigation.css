@@ -22,6 +22,18 @@
   background-color: #007af4;
 }
 
+/* Mobile-specific button styles with direct hex values for consistent rendering */
+@media (max-width: 768px) {
+  .btn-primary {
+    background-color: #1a8cff;
+    color: #fff !important;
+  }
+
+  .btn-primary:hover {
+    background-color: #007af4;
+  }
+}
+
 .top-panel {
   padding: 15px 20px 0;
   position: absolute;
@@ -55,7 +67,7 @@
 .navigation {
   @media (max-width: 1024px) {
     position: fixed;
-    background-color: #fff;
+    background-color: #FFFFFF;
     top: 0;
     bottom: 0;
     width: 320px;
@@ -110,6 +122,8 @@
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .menu-close:after {
@@ -122,6 +136,8 @@
   top: 50%;
   margin-top: -1px;
   transform: rotate(-45deg);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .navigation.-open .menu-close {
@@ -169,6 +185,8 @@
   transform-origin: 70% 70%;
   transform: rotate(45deg);
   transition: .3s;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .navigation .link {
@@ -193,7 +211,7 @@
 
 .navigation .sub-menu {
   display: none;
-  background-color: #fff;
+  background-color: #FFFFFF;
   box-shadow: 0 10px 40px rgba(0,0,0,.1);
   border-radius: 20px;
   padding: 30px 30px 0;
@@ -207,6 +225,8 @@
   width: 888px;
   transform: translateX(-40%);
   font-size: 0;
+  backface-visibility: hidden;
+  will-change: transform;
   line-height: 0;
 
   @media (max-width: 1080px) {
@@ -221,7 +241,7 @@
   height: 0;
   border-style: solid;
   border-width: 15px 0 15px 15px;
-  border-color: transparent transparent transparent #fff;
+  border-color: transparent transparent transparent #FFFFFF;
   right: unset!important;
   top: -20px !important;
   left: 45% !important;
@@ -280,7 +300,7 @@
   font-weight: 300;
   margin-bottom: 0;
   margin-top: 5px;
-  color: #7e7e7e;
+  color: #666666;
 }
 
 @media (min-width: 1025px) {
@@ -299,6 +319,40 @@
 }
 
 @media (max-width: 1024px) {
+  .menu-opener {
+    border-color: #121212;
+  }
+
+  .menu-opener:before {
+    background-color: #121212;
+  }
+
+  .menu-close:before,
+  .menu-close:after {
+    background-color: #121212;
+  }
+
+  .navigation .link {
+    color: #121212;
+  }
+
+  .navigation .item .arrow {
+    border-color: #121212;
+  }
+
+  .navigation .sub-name {
+    color: #121212;
+  }
+
+  .navigation {
+    background-color: #FFFFFF;
+  }
+
+  .navigation .sub-menu {
+    background-color: #FFFFFF;
+  }
+
+
   .navigation.-open {
     right: 0;
     overflow-y: auto;
@@ -342,6 +396,12 @@
     color: #fff;
     border-radius: 6px;
     margin-top: 15px;
+  }
+
+  /* Mobile-specific color overrides to fix CSS variable inconsistencies */
+  .navigation .btn {
+    background-color: #121212 !important;
+    color: #FFFFFF !important;
   }
 
   .navigation .item {

@@ -53,7 +53,7 @@
 .grid-col-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* FL-Builder Compatibility: Responsive Modifiers */
-@media (max-width: var(--fl-breakpoint-medium)) {
+@media (max-width: 1115px) {
   .grid-col-2, .grid-col-3, .grid-col-4 { grid-template-columns: 1fr; }
 }
 
@@ -2916,12 +2916,12 @@ a.text-dark:focus {
 /* Responsive Utilities - Consolidates duplicate media queries */
 /* Use these classes to replace duplicate @media (max-width: 1115px) and @media (max-width: 860px) */
 
-@media (max-width: var(--fl-breakpoint-medium)) { /* 1115px */
+@media (max-width: 1115px) { /* 1115px */
   .responsive-single-col { grid-template-columns: 1fr !important; }
   .medium-hidden { display: none !important; }
 }
 
-@media (max-width: var(--fl-breakpoint-mobile)) { /* 860px */
+@media (max-width: 860px) { /* 860px */
   .mobile-single-col { grid-template-columns: 1fr !important; }
   .mobile-hidden { display: none !important; }
 }

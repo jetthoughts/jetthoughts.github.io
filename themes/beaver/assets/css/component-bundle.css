@@ -182,7 +182,7 @@ img.mfp-img {
 .pp-advanced-menu .pp-toggle-arrows .pp-menu-toggle:before,
 .pp-advanced-menu .pp-toggle-none .pp-menu-toggle:before {
   content: "";
-  border-color: #333;
+  border-color: #333333;
 }
 
 .pp-advanced-menu .pp-menu-expanded .pp-menu-toggle {
@@ -200,7 +200,7 @@ img.mfp-img {
   padding: 8px;
   background-color: transparent;
   border: none;
-  color: #333;
+  color: #333333;
   border-radius: 0;
   cursor: pointer;
   line-height: 0;
@@ -292,7 +292,7 @@ img.mfp-img {
   .pp-hamburger
   .pp-hamburger-box
   .pp-hamburger-inner:after {
-  background-color: #000;
+  background-color: #000000;
   position: absolute;
   width: 30px;
   height: 3px;
@@ -632,7 +632,7 @@ html:not(.pp-off-canvas-menu-open)
   width: 320px;
   height: 100%;
   opacity: 0;
-  background: #333;
+  background: #333333;
   overflow-y: auto;
   overflow-x: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -1070,7 +1070,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   border-style: solid;
   border-bottom-width: 0px;
   border-color: transparent;
-  
+
   color: #121212;
 }
 
@@ -1095,7 +1095,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a:focus,
 .fl-node-menu .sub-menu > li.current-menu-item > a,
 .fl-node-menu .sub-menu > li.current-menu-item > .pp-has-submenu-container > a {
-  
+
   color: #1a8cff;
 }
 
@@ -1410,7 +1410,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .fl-node-menu .sub-menu > li > a,
   .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
     border-bottom-width: 0px;
-    
+
   }
 
   .fl-node-menu .sub-menu {
@@ -1446,7 +1446,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
   .fl-node-menu .sub-menu > li > a,
   .fl-node-menu .sub-menu > li > .pp-has-submenu-container > a {
     border-bottom-width: 0px;
-    
+
   }
 
   .fl-node-menu .pp-advanced-menu-mobile {
@@ -1891,7 +1891,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-node-530uo7f2gcli > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: #000000;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -2758,15 +2758,15 @@ body:not(.single-fl-theme-layout)
   .trust-details {
     grid-template-columns: 1fr;
   }
-  
+
   .rating-display {
     grid-template-columns: 1fr;
   }
-  
+
   .rating-stats {
     grid-template-columns: 1fr;
   }
-  
+
   .trust-signals-comprehensive section {
     padding: 1.5rem;
   }
@@ -2785,7 +2785,7 @@ body:not(.single-fl-theme-layout)
   position: relative;
   padding: 0.5rem 0 0.5rem 1.5rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #333333;
   line-height: 1.4;
 }
 
