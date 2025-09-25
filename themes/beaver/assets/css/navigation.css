@@ -19,7 +19,7 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--jt-primary-hover);
+  background-color: #007af4;
 }
 
 /* Mobile-specific button styles with direct hex values for consistent rendering */
@@ -300,7 +300,7 @@
   font-weight: 300;
   margin-bottom: 0;
   margin-top: 5px;
-  color: var(--jt-text-secondary);
+  color: #666666;
 }
 
 @media (min-width: 1025px) {
@@ -320,36 +320,36 @@
 
 @media (max-width: 1024px) {
   .menu-opener {
-    border-color: var(--jt-text-primary);
+    border-color: #121212;
   }
 
   .menu-opener:before {
-    background-color: var(--jt-text-primary);
+    background-color: #121212;
   }
 
   .menu-close:before,
   .menu-close:after {
-    background-color: var(--jt-text-primary);
+    background-color: #121212;
   }
 
   .navigation .link {
-    color: var(--jt-text-primary);
+    color: #121212;
   }
 
   .navigation .item .arrow {
-    border-color: var(--jt-text-primary);
+    border-color: #121212;
   }
 
   .navigation .sub-name {
-    color: var(--jt-text-primary);
+    color: #121212;
   }
 
   .navigation {
-    background-color: var(--jt-white);
+    background-color: #FFFFFF;
   }
 
   .navigation .sub-menu {
-    background-color: var(--jt-white);
+    background-color: #FFFFFF;
   }
 
 
@@ -400,8 +400,8 @@
 
   /* Mobile-specific color overrides to fix CSS variable inconsistencies */
   .navigation .btn {
-    background-color: var(--jt-text-primary) !important;
-    color: var(--jt-white) !important;
+    background-color: #121212 !important;
+    color: #FFFFFF !important;
   }
 
   .navigation .item {
