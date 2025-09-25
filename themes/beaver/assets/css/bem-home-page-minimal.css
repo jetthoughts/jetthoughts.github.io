@@ -4,6 +4,21 @@
  * These classes provide semantic naming without altering existing FL-builder styles
  */
 
+/* CSS Custom Properties for Future Use */
+:root {
+  --color-primary: #1a8cff;
+  --infobox-spacing: 15px;
+  --infobox-margin: 25px;
+  --form-background: #F5F6F8;
+  --form-field-spacing: 20px;
+  --cta-button-bg: #121212;
+  --cta-button-hover-bg: #24292D;
+  --cta-button-margin: 40px;
+  --cta-section-spacing: 15px;
+  --cta-text-color: #ffffff;
+  --cta-button-border: #060606;
+}
+
 /* ================================================
    SEMANTIC CLASS HOOKS ONLY
    No layout, margin, padding, or visual changes
@@ -59,6 +74,16 @@
     padding-bottom: 0px;
     padding-left: 20px;
   }
+
+  /* Mobile CSS variable fallbacks with direct hex values */
+  :root {
+    --infobox-spacing: 12px; /* Reduced for mobile */
+    --infobox-margin: 20px;  /* Reduced for mobile */
+    --form-background: #F5F6F8; /* Same value for mobile consistency */
+    --form-field-spacing: 15px; /* Reduced for mobile */
+    --cta-button-margin: 25px; /* Reduced for mobile */
+    --cta-section-spacing: 12px; /* Reduced for mobile */
+  }
 }
 
 /* Feature Cards - Semantic hooks only */
@@ -113,7 +138,8 @@
 }
 
 /* Feature card content styling */
-.c-feature-card .pp-infobox .pp-infobox-title-prefix {
+.c-feature-card .pp-infobox .pp-infobox-title-prefix,
+.c-feature-card__title-prefix {
   display: none;
 }
 
@@ -714,9 +740,13 @@
    Currently inactive to prevent conflicts
    ================================================ */
 
+/* Micro-change 1: Safe utility class addition */
+.u-text-center { text-align: center; }
+.u-margin-auto { margin-left: auto; margin-right: auto; }
+.u-form-center { text-align: center; }
+
 /* These can be activated once FL-builder classes are removed */
 /*
-.u-text-center { text-align: center; }
 .u-margin-top { margin-top: 2rem; }
 .u-padding { padding: 2rem; }
 */
@@ -731,6 +761,11 @@
  * 2. Testing: Verify no visual changes with semantic classes
  * 3. Future: Gradually move styles from FL-builder to BEM
  * 4. Final: Remove FL-builder classes once BEM is complete
+ *
+ * ROLLBACK PROCEDURES:
+ * - Micro-change 1 (.u-text-center): git revert d6da6140
+ * - Micro-change 2 (.u-margin-auto): git revert 61c5bb73
+ * - Micro-change 3 (--color-primary): git revert b10b1a8d
  *
  * The semantic BEM classes are now in place for:
  * - .c-why-us (why us section) + internal elements

@@ -1,0 +1,29 @@
+// Team Member Component - Dual-Class Migration
+// Migrates .fl-node-* team member patterns to .c-team-member system
+
+// Base team member component with CSS variables
+.c-team-member {
+  --team-card-bg: #ffffff;
+  --team-card-text: #333333;
+  --team-card-padding: 2rem;
+
+  // Base card styles
+  background-color: var(--team-card-bg);
+  color: var(--team-card-text);
+  padding: var(--team-card-padding);
+}
+
+// FL-Builder Compatibility - Dual Class Strategy
+// Applies .c-team-member styles to existing FL-Builder nodes
+.fl-node-2div407rylu5.c-team-member {
+  @extend .c-team-member;
+}
+
+.fl-node-el3fhm25cy0g.c-team-member {
+  @extend .c-team-member;
+}
+
+.fl-node-mvlu0rkbgc18.c-team-member,
+.fl-node-pqwe8j7o3l6z.c-team-member {
+  @extend .c-team-member;
+}

@@ -1,0 +1,13 @@
+/* Phase 0: Column Layout Migration - Dual-class strategy */
+/* Maintains FL-Builder compatibility while adding BEM classes */
+
+/* Basic column component */
+.c-col {
+  float: left;
+  min-height: 1px;
+}
+
+/* Column content component */
+.c-col__content {
+  position: relative;
+}

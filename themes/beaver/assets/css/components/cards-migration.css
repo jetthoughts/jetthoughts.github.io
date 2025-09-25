@@ -1,0 +1,24 @@
+/* components/cards-migration.css */
+/* Phase 0: Card Component Migration - Dual-class strategy */
+.cs-testimonial,
+.c-card--testimonial {
+  /* Base testimonial card styles */
+}
+
+.cs-testimonial .cs-content,
+.c-card__content {
+  /* Testimonial content base styles */
+}
+
+.cs-testimonial .cs-cite,
+.c-card__cite {
+  /* Testimonial citation/author styles */
+}
+
+.cs-testimonial .cs-image,
+.c-card__image {
+  /* Testimonial image/avatar styles */
+}
+
+/* Phase 0 Complete: Basic testimonial card structure
+ * Next: Use-case cards (medium risk) */
