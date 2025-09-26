@@ -19,6 +19,19 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: best-practices-for-optimizing-ruby-on-rails-performance
+faqs:
+  - question: "Why is Rails performance optimization important?"
+    answer: "Rails performance optimization is crucial for SEO rankings (search engines favor faster websites), better user experience with faster page loads, and cost savings through reduced server resource usage and hosting expenses."
+  - question: "What are the most effective ways to optimize Rails database performance?"
+    answer: "Use database indexing, optimize ActiveRecord queries with includes() and joins(), implement query caching, use pagination for large datasets, and consider database-specific optimizations like connection pooling."
+  - question: "How does caching improve Rails application performance?"
+    answer: "Caching stores frequently accessed data in memory, reducing database queries and computational overhead. Rails supports various caching strategies including page caching, action caching, fragment caching, and low-level caching with Redis or Memcached."
+  - question: "What server optimization strategies work best for Rails?"
+    answer: "Choose appropriate server configurations for your traffic, implement load balancing to distribute requests across multiple servers, use cloud platforms like AWS or Google Cloud for better uptime, and configure web servers like Nginx for static asset serving."
+  - question: "How can I optimize Rails asset delivery?"
+    answer: "Minify CSS and JavaScript files, compress images, use CDNs for global asset delivery, implement browser caching headers, and leverage Rails asset pipeline for efficient asset compilation and fingerprinting."
+  - question: "What background job strategies improve Rails performance?"
+    answer: "Use Sidekiq or Resque for processing heavy tasks asynchronously, implement job queues for email sending and file processing, and separate CPU-intensive operations from user-facing request-response cycles."
 ---
 ![Best practices for optimizing Ruby on Rails performance](file_0.jpeg)
 

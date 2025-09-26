@@ -9,6 +9,13 @@
   --jt-text-secondary: #7e7e7e;
 }
 
+/* Logo Styles */
+.logo-image-main {
+  width: 200px;
+  height: 36px;
+  display: inline-block;
+}
+
 body {
   background-color: #fff;
   color: #121212;

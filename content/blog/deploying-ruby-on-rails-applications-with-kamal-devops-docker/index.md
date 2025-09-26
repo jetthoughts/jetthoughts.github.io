@@ -19,6 +19,21 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.png
 slug: deploying-ruby-on-rails-applications-with-kamal-devops-docker
+faqs:
+  - question: "What is Kamal and why should I use it for Rails deployment?"
+    answer: "Kamal is the default deployment tool for Rails 8 applications that simplifies the process of deploying Rails applications to any VPS. It uses Docker containers and provides a cost-effective alternative to platforms like Heroku while giving you greater flexibility and control over your infrastructure."
+  - question: "What are the prerequisites for deploying with Kamal?"
+    answer: "You need a VPS server, Docker installed on the server, a container registry account (like Docker Hub), and a Rails application with the Kamal configuration files (deploy.yml and .env)."
+  - question: "How do I configure environment variables for Kamal deployment?"
+    answer: "Environment variables are configured in the .env file for sensitive data like KAMAL_REGISTRY_PASSWORD, RAILS_MASTER_KEY, and POSTGRES_PASSWORD. Non-sensitive variables can be set in the deploy.yml file under the env section."
+  - question: "What user permissions are needed on the VPS for Kamal?"
+    answer: "You need to create a deploy user with sudo privileges and Docker group membership. Use commands like 'sudo useradd --create-home -s /bin/bash deploy' and 'sudo usermod -aG docker deploy' to set up the proper permissions."
+  - question: "How do I set up a database with Kamal?"
+    answer: "Configure the database as an accessory service in deploy.yml under the accessories section. For PostgreSQL, specify the image, host, port, environment variables, and volume mapping for data persistence."
+  - question: "What does 'kamal setup' command do?"
+    answer: "The 'kamal setup' command configures the server and performs the first deployment. It installs necessary dependencies, sets up Docker containers, configures Traefik for load balancing, and deploys your application."
+  - question: "How do I monitor my deployed application?"
+    answer: "Use commands like 'kamal details' to see container status, 'kamal app logs' to view application logs, and 'kamal app exec -i bin/rails console' to access the Rails console directly on the server."
 ---
 With the release of Rails 8, [Kamal will be the default tool for deploying Rails applications](https://jetthoughts.com/blog/kamal-integration-in-rails-8-by-default-ruby/), simplifying the process for developers. This change is significant as it standardizes deployment, making it easier for both new and experienced developers to get their applications up and running. Utilizing a VPS for hosting your Rails applications is also a cost-effective alternative to platforms like Heroku, providing greater flexibility and control over your infrastructure.
 

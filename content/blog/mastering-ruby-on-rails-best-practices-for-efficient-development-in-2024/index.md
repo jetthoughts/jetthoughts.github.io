@@ -19,6 +19,21 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024
+faqs:
+  - question: "What is Ruby on Rails used for?"
+    answer: "Ruby on Rails is a web application framework that helps developers build websites and web apps quickly and efficiently. It follows the MVC (Model-View-Controller) pattern and emphasizes convention over configuration."
+  - question: "Why should I follow Rails conventions?"
+    answer: "Following Rails conventions makes your code more predictable and easier for others to understand. It reduces the need for custom configurations, saving time and effort."
+  - question: "What are RESTful controllers in Rails?"
+    answer: "RESTful controllers in Rails organize actions around standard HTTP methods like GET, POST, PUT, and DELETE. This structure makes APIs more intuitive and easier to maintain."
+  - question: "How can I keep my Rails app secure?"
+    answer: "To keep your Rails app secure, use built-in security features, regularly update your Rails version and dependencies, and handle user inputs carefully to prevent attacks like SQL injection."
+  - question: "What are ActiveRecord associations?"
+    answer: "ActiveRecord associations in Rails define relationships between models, such as one-to-many or many-to-many. They help manage related data efficiently within the database."
+  - question: "Why is testing important in Rails development?"
+    answer: "Testing ensures that your Rails application works as expected and helps catch bugs early. It provides confidence when making changes, making your app more reliable and maintainable."
+  - question: "How do I optimize Rails performance?"
+    answer: "Rails performance can be optimized through caching strategies, using background jobs for long-running tasks, optimizing database queries with ActiveRecord scopes, and implementing proper view helpers and partials."
 ---
 Ruby on Rails is still one of the go-to frameworks for web development in 2024. It's known for making developers' lives easier with its conventions and a focus on getting things done fast. But to really get the most out of Rails, you gotta stick to some best practices. They help keep your code clean, your apps fast, and your users happy. In this article, we'll break down some key practices you should follow to master Ruby on Rails in 2024.
 

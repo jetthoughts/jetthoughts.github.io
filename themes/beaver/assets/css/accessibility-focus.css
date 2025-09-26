@@ -1,7 +1,47 @@
 /*
  * Accessibility Focus Styles
  * Provides WCAG-compliant focus indicators for all interactive elements
+ * Skip navigation and screen reader utilities
  */
+
+/* Skip navigation link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  z-index: 999999;
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  top: 6px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.sr-only:focus {
+  position: static !important;
+  clip: auto;
+  clip-path: none;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
 
 /* Focus Visible Support for Older Browsers */
 .js-focus-visible :focus:not(.focus-visible) {

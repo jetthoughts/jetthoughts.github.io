@@ -9,48 +9,6 @@
     {{ partial "seo/enhanced-meta-tags.html" . }}
 
 
-    <style>
-      .logo-image-main {
-        width: 200px;
-        height: 36px;
-        display: inline-block;
-      }
-      /* Skip navigation link for accessibility */
-      .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        z-index: 999999;
-        color: #fff;
-        background: #000;
-        text-decoration: none;
-        padding: 8px 16px;
-        border-radius: 3px;
-        font-weight: bold;
-        transition: top 0.3s ease;
-      }
-      .skip-link:focus,
-      .skip-link:active {
-        top: 6px;
-      }
-      /* Screen reader only text */
-      .sr-only {
-        position: absolute !important;
-        clip: rect(1px, 1px, 1px, 1px);
-        clip-path: inset(50%);
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-      }
-      .sr-only:focus {
-        position: static !important;
-        clip: auto;
-        clip-path: none;
-        width: auto;
-        height: auto;
-        overflow: visible;
-      }
-    </style>
     {{ block "header" . }}{{ end }}
 
     {{ partialCached "page/favicons.html" . "favicons" }}
@@ -94,7 +52,9 @@
 
     {{ partialCached "page/site-scripts" . "site-scripts" }}
     {{ if .Store.Get "features.mermaid" }}
-      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"
+              integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+              crossorigin="anonymous"></script>
       <script>
         mermaid.initialize({ startOnLoad: true });
       </script>
