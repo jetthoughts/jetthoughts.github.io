@@ -636,8 +636,8 @@
   text-decoration: none;
 }
 
-.fl-slideshow,
-.fl-slideshow * {
+.c-slideshow, .fl-slideshow,
+.c-slideshow *, .fl-slideshow * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
