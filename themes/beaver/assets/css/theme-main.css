@@ -350,7 +350,8 @@ img {
   text-transform: none;
 }
 
-.fl-full-width .fl-page-nav {
+.fl-full-width .fl-page-nav,
+.c-full-width .fl-page-nav {
   margin: 0 auto;
 }
 
