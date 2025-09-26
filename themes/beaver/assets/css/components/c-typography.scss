@@ -269,6 +269,7 @@ h6.c-heading,
    FL-Builder Content Integration
    ========================================================================== */
 
+.c-rich-text,
 .fl-rich-text {
   // Apply typography system to FL-Builder content
   h1 { @extend .c-heading--xl; }
