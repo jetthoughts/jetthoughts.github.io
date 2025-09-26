@@ -736,8 +736,11 @@ img.mfp-img {
   opacity: 0;
 }
 
+.fl-builder-preview .c-animation,
 .fl-builder-preview .fl-animation,
+.fl-builder-edit .c-animation,
 .fl-builder-edit .fl-animation,
+.c-animated,
 .fl-animated {
   opacity: 1;
 }
