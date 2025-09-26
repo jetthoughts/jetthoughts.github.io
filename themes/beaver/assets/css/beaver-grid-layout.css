@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 
-.fl-row:before,
-.fl-row:after,
+.c-row:before, .fl-row:before,
+.c-row:after, .fl-row:after,
 .fl-row-content:before,
 .fl-row-content:after,
 .fl-col-group:before,
