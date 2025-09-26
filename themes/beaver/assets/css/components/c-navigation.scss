@@ -47,7 +47,8 @@
 }
 
 // FL-Builder menu integration
-.fl-menu {
+.fl-menu,
+.c-menu {
   @extend .c-nav;
   @extend .c-nav--horizontal;
 }
