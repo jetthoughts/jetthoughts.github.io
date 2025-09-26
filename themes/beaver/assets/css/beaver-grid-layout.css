@@ -530,7 +530,8 @@
   min-width: 1px;
 }
 
-.fl-photo {
+.fl-photo,
+.c-photo {
   line-height: 0;
   position: relative;
 }
