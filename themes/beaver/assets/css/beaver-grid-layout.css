@@ -715,7 +715,7 @@ img.mfp-img {
   margin-bottom: 15px;
 }
 
-.fl-form-field input.fl-form-error {
+.c-form-field input.c-form-error, .fl-form-field input.fl-form-error {
   border-color: #dd6420;
 }
 
