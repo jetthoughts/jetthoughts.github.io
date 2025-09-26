@@ -107,16 +107,6 @@
   -webkit-transform: translate(-50%, -50%);
 }
 
-.fl-bg-video-fallback {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0px;
-  left: 0px;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
 
 .fl-row-bg-slideshow, .fl-row-bg-slideshow .fl-row-content {
   position: relative;
