@@ -1900,6 +1900,9 @@ img.mfp-img {
 @media (min-width: 1115px) {
   body.fl-fixed-width:not(.fl-nav-vertical):not(.fl-fixed-header):not(
       .fl-shrink
+    ),
+  body.c-fixed-width:not(.fl-nav-vertical):not(.fl-fixed-header):not(
+      .fl-shrink
     ) {
     padding: 0;
   }
