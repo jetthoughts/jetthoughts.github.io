@@ -745,7 +745,7 @@ img.mfp-img {
   opacity: 1;
 }
 
-.fl-animated {
+.c-animated, .fl-animated {
   animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
 }
