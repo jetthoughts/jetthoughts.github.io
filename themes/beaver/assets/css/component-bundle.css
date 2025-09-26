@@ -2834,3 +2834,8 @@ body:not(.single-fl-theme-layout)
   min-height: 100vh;
   display: flex;
 }
+
+/* Services CTA - Shameless Green FL-Builder Replication */
+.c-services-cta.fl-col-group-custom-width {
+  /* CTA specific styles will be added as needed */
+}
