@@ -91,6 +91,21 @@
 }
 
 /* ========================================
+   Layout Utilities - Gap Spacing Patterns
+   ======================================== */
+
+/* Consolidates gap: 1rem pattern found in 10+ locations */
+.u-gap-md {
+  gap: 1rem !important;
+}
+
+/* Flex + gap combination (5+ duplicates) */
+.u-flex-gap {
+  display: flex !important;
+  gap: 1rem !important;
+}
+
+/* ========================================
    Display Utilities - Common Patterns
    ======================================== */
 
