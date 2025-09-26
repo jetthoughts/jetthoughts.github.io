@@ -11,7 +11,7 @@ $dynamicCSS586
 (resources.Get "css/theme-main.css")
 (resources.Get "css/footer.css")
 -}}
-{{ partial "assets/css-processor.html" (dict "resources" $pageSingleResources "bundleName" "privacy-policy") }}
+{{ partialCached "assets/css-processor.html" (dict "resources" $pageSingleResources "bundleName" "privacy-policy") "privacy-policy" }}
 {{ end }}
 {{ define "main" }}
 <div id="fl-main-content" class="fl-page-content" role="main">

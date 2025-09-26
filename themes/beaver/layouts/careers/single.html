@@ -12,7 +12,7 @@
     (resources.Get "css/theme-main.css")
     (resources.Get "css/footer.css")
   -}}
-  {{ partial "assets/css-processor.html" (dict "resources" $careersResources "bundleName" "single-careers") }}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $careersResources "bundleName" "single-careers") "single-careers" }}
 {{ end }}
 {{ define "main" }}
   <div id="fl-main-content" class="fl-page-content" role="main">

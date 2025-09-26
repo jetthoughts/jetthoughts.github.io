@@ -18,6 +18,19 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: rails-8-introducing-new-default-asset-pipeline-propshaft-ruby
+faqs:
+  - question: "What is Propshaft in Rails 8?"
+    answer: "Propshaft is the new default asset pipeline in Rails 8, designed to be more lightweight and straightforward than Sprockets. It focuses solely on serving traditional static assets like images, CSS, and non-JavaScript assets, allowing developers to choose their own JavaScript bundling tools."
+  - question: "How does Propshaft differ from Sprockets?"
+    answer: "Propshaft is simpler than Sprockets, focusing only on direct file linking and caching for static assets. Unlike Sprockets, it doesn't handle JavaScript bundling, letting developers use modern tools like esbuild or Vite for JavaScript asset management."
+  - question: "Do I need to migrate from Sprockets to Propshaft?"
+    answer: "Migration is not mandatory. Rails 8 applications will use Propshaft by default, but existing applications can continue using Sprockets. You can also manually switch between them based on your project's needs."
+  - question: "What JavaScript bundling tools work with Propshaft?"
+    answer: "Propshaft works with modern JavaScript bundlers like esbuild, Vite, Webpack, Rollup, and other tools of your choice. Since Propshaft doesn't handle JavaScript compilation, you have the flexibility to use any bundling solution."
+  - question: "What are the main benefits of using Propshaft?"
+    answer: "Propshaft offers simplicity with fewer configuration options, better performance for static asset serving, reduced complexity compared to Sprockets, and the freedom to choose modern JavaScript tooling that best fits your application."
+  - question: "How do I configure Propshaft in my Rails application?"
+    answer: "Propshaft requires minimal configuration and works out of the box with Rails 8. You can customize asset paths, configure compilers for different file types, and set up caching strategies through simple configuration options."
 ---
 
 The Rails asset pipeline helps manage static assets like CSS, JavaScript, and images. It improves delivery speed by compressing and combining these files. Sprockets used to be the main tool for this, providing useful features like precompilation and versioning. However, it was often too complicated.

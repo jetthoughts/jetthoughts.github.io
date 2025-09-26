@@ -3047,6 +3047,7 @@ fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after 
   min-height: 1px;
 }
 
+.c-column,
 .fl-col {
   float: left;
   min-height: 1px;

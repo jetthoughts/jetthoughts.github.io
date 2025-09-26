@@ -9,6 +9,13 @@
   --jt-text-secondary: #7e7e7e;
 }
 
+/* Logo Styles */
+.logo-image-main {
+  width: 200px;
+  height: 36px;
+  display: inline-block;
+}
+
 body {
   background-color: #fff;
   color: #121212;
@@ -343,7 +350,8 @@ img {
   text-transform: none;
 }
 
-.fl-full-width .fl-page-nav {
+.fl-full-width .fl-page-nav,
+.c-full-width .fl-page-nav {
   margin: 0 auto;
 }
 
@@ -1078,7 +1086,7 @@ a img.aligncenter {
   margin-right: 5px;
 }
 
-.fl-widget {
+.c-widget, .fl-widget {
   margin-bottom: 40px;
 }
 
@@ -1891,6 +1899,9 @@ img.mfp-img {
 
 @media (min-width: 1115px) {
   body.fl-fixed-width:not(.fl-nav-vertical):not(.fl-fixed-header):not(
+      .fl-shrink
+    ),
+  body.c-fixed-width:not(.fl-nav-vertical):not(.fl-fixed-header):not(
       .fl-shrink
     ) {
     padding: 0;
@@ -3084,15 +3095,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .fl-page button:visited,
 .fl-responsive-preview-content button:visited,
+.c-responsive-preview-content button:visited,
 .fl-button-lightbox-content button:visited,
 .fl-page input[type="button"],
 .fl-responsive-preview-content input[type="button"],
+.c-responsive-preview-content input[type="button"],
 .fl-button-lightbox-content input[type="button"],
 .fl-page input[type="submit"],
 .fl-responsive-preview-content input[type="submit"],
+.c-responsive-preview-content input[type="submit"],
 .fl-button-lightbox-content input[type="submit"],
 .fl-page a.fl-button,
 .fl-responsive-preview-content a.fl-button,
+.c-responsive-preview-content a.fl-button,
 .fl-button-lightbox-content a.fl-button,
 .fl-page a.fl-button:visited,
 .fl-responsive-preview-content a.fl-button:visited,

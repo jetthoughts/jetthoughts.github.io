@@ -6,14 +6,14 @@
   box-sizing: border-box;
 }
 
-.fl-row:before,
-.fl-row:after,
+.c-row:before, .fl-row:before,
+.c-row:after, .fl-row:after,
 .fl-row-content:before,
 .fl-row-content:after,
 .fl-col-group:before,
 .fl-col-group:after,
-.fl-col:before,
-.fl-col:after,
+.c-col:before, .fl-col:before,
+.c-col:after, .fl-col:after,
 .fl-module:before,
 .fl-module:after,
 .fl-module-content:before,
@@ -22,10 +22,10 @@
   content: " ";
 }
 
-.fl-row:after,
+.c-row:after, .fl-row:after,
 .fl-row-content:after,
 .fl-col-group:after,
-.fl-col:after,
+.c-col:after, .fl-col:after,
 .fl-module:after,
 .fl-module-content:after {
   clear: both;
@@ -530,7 +530,8 @@
   min-width: 1px;
 }
 
-.fl-photo {
+.fl-photo,
+.c-photo {
   line-height: 0;
   position: relative;
 }
@@ -635,22 +636,22 @@
   text-decoration: none;
 }
 
-.fl-slideshow,
-.fl-slideshow * {
+.c-slideshow, .fl-slideshow,
+.c-slideshow *, .fl-slideshow * {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-.fl-slideshow .fl-slideshow-image img {
+.c-slideshow .c-slideshow-image img, .fl-slideshow .fl-slideshow-image img {
   max-width: none !important;
 }
 
-.fl-slideshow-social {
+.c-slideshow-social, .fl-slideshow-social {
   line-height: 0 !important;
 }
 
-.fl-slideshow-social * {
+.c-slideshow-social *, .fl-slideshow-social * {
   margin: 0 !important;
 }
 
@@ -710,11 +711,11 @@ img.mfp-img {
   font-size: 30px;
 }
 
-.fl-form-field {
+.c-form-field, .fl-form-field {
   margin-bottom: 15px;
 }
 
-.fl-form-field input.fl-form-error {
+.c-form-field input.c-form-error, .fl-form-field input.fl-form-error {
   border-color: #dd6420;
 }
 
@@ -731,17 +732,20 @@ img.mfp-img {
   opacity: 0.5;
 }
 
-.fl-animation {
+.c-animation, .fl-animation {
   opacity: 0;
 }
 
+.fl-builder-preview .c-animation,
 .fl-builder-preview .fl-animation,
+.fl-builder-edit .c-animation,
 .fl-builder-edit .fl-animation,
+.c-animated,
 .fl-animated {
   opacity: 1;
 }
 
-.fl-animated {
+.c-animated, .fl-animated {
   animation-fill-mode: both;
   -webkit-animation-fill-mode: both;
 }

@@ -10,7 +10,7 @@
   (resources.Get "css/mobile-fixes.css")
   (resources.Get "css/footer.css")
 }}
-{{ partial "assets/css-processor.html" (dict "resources" $cssResources "bundleName" "404") }}
+{{ partialCached "assets/css-processor.html" (dict "resources" $cssResources "bundleName" "404") "404" }}
 {{ end }}
 
 {{ define "main" }}

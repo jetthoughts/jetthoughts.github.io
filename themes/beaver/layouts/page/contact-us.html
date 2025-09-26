@@ -11,7 +11,7 @@ $dynamicCSS586
 (resources.Get "css/theme-main.css")
 (resources.Get "css/footer.css")
 -}}
-{{ partial "assets/css-processor.html" (dict "resources" $contactUsResources "bundleName" "contact-us") }}
+{{ partialCached "assets/css-processor.html" (dict "resources" $contactUsResources "bundleName" "contact-us") "contact-us" }}
 {{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
