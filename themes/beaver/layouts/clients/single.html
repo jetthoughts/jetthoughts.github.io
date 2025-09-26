@@ -12,7 +12,7 @@
     (resources.Get "css/theme-main.css")
     (resources.Get "css/footer.css")
   -}}
-  {{ partial "assets/css-processor.html" (dict "resources" $clientsResources "bundleName" "single-clients") }}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $clientsResources "bundleName" "single-clients") "single-clients" }}
 {{ end }}
 
 {{ define "main" }}

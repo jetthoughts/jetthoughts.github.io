@@ -10,7 +10,7 @@
     (resources.Get "css/component-bundle.css")
     (resources.Get "css/footer.css")
   }}
-  {{ partial "assets/css-processor.html" (dict "resources" $aboutResources "bundleName" "about-us" "context" .) }}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $aboutResources "bundleName" "about-us" "context" .) "about-us" }}
   {{ partial "header/json-ld-company.html" . }}
   {{ partial "seo/organization-enhanced-schema.html" . }}
 {{ end }}

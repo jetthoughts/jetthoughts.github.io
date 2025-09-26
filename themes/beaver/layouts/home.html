@@ -19,7 +19,7 @@
     (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
   }}
 
-  {{ partial "assets/css-processor.html" (dict "resources" $nonCriticalResources "bundleName" "homepage") }}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $nonCriticalResources "bundleName" "homepage") "homepage" }}
 
   {{ $tabsResources := slice (resources.Get "js/tabs.js") }}
   {{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}

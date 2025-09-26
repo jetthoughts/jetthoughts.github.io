@@ -24,7 +24,7 @@
     <link rel="manifest" href="/manifest.json" />
 
     {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
-    {{ partial "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) }}
+    {{ partialCached "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) "navigation" }}
 
     {{/* Enhanced SEO Schema Markup */}}
     {{ partial "seo/enhanced-organization-schema.html" . }}
