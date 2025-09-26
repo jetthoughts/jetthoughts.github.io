@@ -2828,3 +2828,9 @@ body:not(.single-fl-theme-layout)
   min-height: 100vh;
   display: flex;
 }
+
+/* Services Clients - Shameless Green FL-Builder Replication */
+.c-services-clients.fl-row-default-height .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
