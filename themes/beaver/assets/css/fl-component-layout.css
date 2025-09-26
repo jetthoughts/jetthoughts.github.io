@@ -638,18 +638,6 @@ img.mfp-img {
   opacity: 0.5;
 }
 
-.fl-animation {
-  opacity: 0;
-}
-
-.fl-builder-preview .fl-animation, .fl-builder-edit .fl-animation, .fl-animated {
-  opacity: 1;
-}
-
-.fl-animated {
-  animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
-}
 
 .fl-button.fl-button-icon-animation i {
   width: 0 !important;
