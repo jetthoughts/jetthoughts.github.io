@@ -711,7 +711,7 @@ img.mfp-img {
   font-size: 30px;
 }
 
-.fl-form-field {
+.c-form-field, .fl-form-field {
   margin-bottom: 15px;
 }
 
