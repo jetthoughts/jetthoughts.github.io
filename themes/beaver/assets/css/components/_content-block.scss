@@ -86,6 +86,7 @@
    ======================================== */
 
 /* FL-Builder rich text module compatibility */
+.c-content-text,
 .fl-rich-text {
   /* Extend base content block functionality */
   @extend .c-content-block__text;
@@ -146,6 +147,7 @@
  * Pattern 4: Universal not(b, strong) selector optimization
  * This pattern appears in 150+ places - consolidate base behavior
  */
+.c-content-text:not(.pattern-preserve-strong) *:not(b, strong),
 .fl-rich-text:not(.pattern-preserve-strong) *:not(b, strong) {
   /* Inherits from parent rather than overriding per-node */
   font-weight: inherit;

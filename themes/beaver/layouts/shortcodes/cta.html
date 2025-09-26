@@ -10,15 +10,15 @@ Usage: {{< cta title="Title" description="Description" button-text="Text" button
 <div class="cta-block">
   <div class="cta-block__content">
     {{ if $title }}
-    <h3 class="cta-block__title">{{ $title }}</h3>
+    <h3 class="cta-block__title u-text-center">{{ $title }}</h3>
     {{ end }}
 
     {{ if $description }}
-    <p class="cta-block__description">{{ $description }}</p>
+    <p class="cta-block__description u-text-center">{{ $description }}</p>
     {{ end }}
 
     {{ if and $buttonText $buttonUrl }}
-    <div class="cta-block__action">
+    <div class="cta-block__action u-text-center">
       <a href="{{ $buttonUrl }}" class="cta-block__button btn btn--primary">
         {{ $buttonText }}
       </a>

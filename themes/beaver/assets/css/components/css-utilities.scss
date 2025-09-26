@@ -1,0 +1,88 @@
+/*
+ * CSS Utilities - Common Pattern Consolidation
+ * Consolidates the most frequently duplicated CSS patterns found across files
+ *
+ * PATTERNS CONSOLIDATED:
+ * - margin-bottom: 0 (found 12+ duplicate instances)
+ * - font-weight: 700 (found 10+ duplicate instances)
+ * - text-align patterns (found 8+ duplicate instances)
+ *
+ * Usage: Apply utility classes to reduce duplication
+ * Generated: CSS Consolidation Expert analysis
+ */
+
+/* ========================================
+   Margin Utilities - Most Common Duplicates
+   ======================================== */
+
+/* Consolidates margin-bottom: 0 pattern found in:
+ * - services-layout.css (12 instances)
+ * - Multiple form elements
+ * - Typography elements
+ * - Component spacing resets
+ */
+.u-margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+/* Additional margin utilities for other common patterns */
+.u-margin-bottom-sm {
+  margin-bottom: 0.75rem !important; /* 12px */
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 1rem !important; /* 16px */
+}
+
+/* ========================================
+   Typography Utilities - Common Font Weights
+   ======================================== */
+
+/* Consolidates font-weight: 700 pattern found in:
+ * - services-layout.css (4 instances)
+ * - component-bundle.css (4 instances)
+ * - fl-component-layout.css (3 instances)
+ * - Navigation elements, headings, emphasis text
+ */
+.u-font-weight-bold {
+  font-weight: 700 !important;
+}
+
+/* Additional common font weights */
+.u-font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.u-font-weight-normal {
+  font-weight: 400 !important;
+}
+
+/* ========================================
+   Text Alignment Utilities - Common Patterns
+   ======================================== */
+
+/* Common text alignment patterns found across components */
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+/* ========================================
+   Display Utilities - Common Patterns
+   ======================================== */
+
+/* Common display patterns found in multiple components */
+.u-display-block {
+  display: block !important;
+}
+
+.u-display-none {
+  display: none !important;
+}
