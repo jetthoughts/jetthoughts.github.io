@@ -2816,3 +2816,9 @@ body:not(.single-fl-theme-layout)
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Services Hero - Shameless Green FL-Builder Replication */
+.c-services-hero.fl-row-default-height .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
