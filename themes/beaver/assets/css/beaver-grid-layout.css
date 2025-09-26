@@ -643,7 +643,7 @@
   box-sizing: content-box;
 }
 
-.fl-slideshow .fl-slideshow-image img {
+.c-slideshow .c-slideshow-image img, .fl-slideshow .fl-slideshow-image img {
   max-width: none !important;
 }
 
