@@ -86,6 +86,7 @@
    ======================================== */
 
 /* FL-Builder rich text module compatibility */
+.c-content-text,
 .fl-rich-text {
   /* Extend base content block functionality */
   @extend .c-content-block__text;
