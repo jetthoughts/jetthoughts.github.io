@@ -651,7 +651,7 @@
   line-height: 0 !important;
 }
 
-.fl-slideshow-social * {
+.c-slideshow-social *, .fl-slideshow-social * {
   margin: 0 !important;
 }
 
