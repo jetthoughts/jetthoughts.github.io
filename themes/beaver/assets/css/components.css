@@ -20,9 +20,7 @@
   padding: 9px 18px;
 }
 
-.c-button--large {
-  padding: 16px 32px;
-}
+/* .c-button--large moved to buttons-migration.css for consolidation */
 
 /* Button state modifiers */
 .c-button:hover {
