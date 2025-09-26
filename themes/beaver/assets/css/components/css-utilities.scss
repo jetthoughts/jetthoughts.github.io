@@ -75,6 +75,22 @@
 }
 
 /* ========================================
+   Form Field Utilities - Common Patterns
+   ======================================== */
+
+/* Consolidates padding: 0.75rem 1rem pattern found in:
+ * - .c-form__field, .c-form__textarea, .c-form__select
+ */
+.u-form-field-padding {
+  padding: 0.75rem 1rem !important;
+}
+
+/* Consolidates form field transition pattern (3 duplicates) */
+.u-form-field-transition {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+/* ========================================
    Display Utilities - Common Patterns
    ======================================== */
 
