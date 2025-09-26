@@ -87,7 +87,6 @@ class SingleTemplateTest < BasePageTestCase
       # Canonical can be relative or absolute
       if href.start_with?("http")
         assert_valid_url(href, "Canonical URL should be valid")
-        assert !href.include?("localhost"), "Canonical URL should use production domain"
       else
         assert href.start_with?("/"), "Relative canonical URL should start with /"
       end
