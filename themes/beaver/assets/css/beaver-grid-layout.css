@@ -732,7 +732,7 @@ img.mfp-img {
   opacity: 0.5;
 }
 
-.fl-animation {
+.c-animation, .fl-animation {
   opacity: 0;
 }
 
