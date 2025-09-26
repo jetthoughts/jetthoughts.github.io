@@ -107,16 +107,6 @@
   -webkit-transform: translate(-50%, -50%);
 }
 
-.fl-bg-video-fallback {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0px;
-  left: 0px;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
 
 .fl-row-bg-slideshow, .fl-row-bg-slideshow .fl-row-content {
   position: relative;
@@ -617,39 +607,7 @@ img.mfp-img {
   font-size: 30px;
 }
 
-.fl-form-field {
-  margin-bottom: 15px;
-}
 
-.fl-form-field input.fl-form-error {
-  border-color: #DD6420;
-}
-
-.fl-form-error-message {
-  clear: both;
-  color: #DD6420;
-  display: none;
-  padding-top: 8px;
-  font-size: 12px;
-  font-weight: lighter;
-}
-
-.fl-form-button-disabled {
-  opacity: 0.5;
-}
-
-.fl-animation {
-  opacity: 0;
-}
-
-.fl-builder-preview .fl-animation, .fl-builder-edit .fl-animation, .fl-animated {
-  opacity: 1;
-}
-
-.fl-animated {
-  animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
-}
 
 .fl-button.fl-button-icon-animation i {
   width: 0 !important;
@@ -1056,9 +1014,6 @@ img.mfp-img {
   }
 }
 
-.fl-node-7zdx61osbq4a {
-  width: 100%;
-}
 
 .fl-builder-content .fl-node-f29vwky6nx4s a {
   color: #ffffff;
@@ -1257,9 +1212,6 @@ img.mfp-img {
   }
 }
 
-.fl-node-2x7c5i3nmohu {
-  width: 26%;
-}
 
 .fl-node-0qv8y5e3of4j {
   width: 27%;

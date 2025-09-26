@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 
-.c-row:before, .fl-row:before,
-.c-row:after, .fl-row:after,
+.c-row:before,
+.c-row:after,
 .fl-row-content:before,
 .fl-row-content:after,
 .fl-col-group:before,
@@ -22,7 +22,7 @@
   content: " ";
 }
 
-.c-row:after, .fl-row:after,
+.c-row:after,
 .fl-row-content:after,
 .fl-col-group:after,
 .c-col:after, .fl-col:after,
@@ -530,7 +530,6 @@
   min-width: 1px;
 }
 
-.fl-photo,
 .c-photo {
   line-height: 0;
   position: relative;

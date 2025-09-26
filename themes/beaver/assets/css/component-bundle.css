@@ -2816,3 +2816,65 @@ body:not(.single-fl-theme-layout)
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Services Hero - Shameless Green FL-Builder Replication */
+.c-services-hero.fl-row-default-height .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Services Hero - Pure BEM (Final Consolidation) */
+.c-services-hero .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Services Overview - Shameless Green FL-Builder Replication */
+.c-services-overview.fl-row-default-height .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Services Overview - Pure BEM (Final Consolidation) */
+.c-services-overview .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Services Clients - Shameless Green FL-Builder Replication */
+.c-services-clients.fl-row-default-height .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Services Clients - Pure BEM (Final Consolidation) */
+.c-services-clients .fl-row-content-wrap {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Services CTA - Shameless Green FL-Builder Replication */
+.c-services-cta.fl-col-group-custom-width {
+  /* CTA specific styles will be added as needed */
+}
+
+/* Standalone BEM Components - Final Consolidation Phase */
+/* These classes can completely replace FL-Builder dependencies */
+
+.c-services-hero-standalone {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.c-services-overview-standalone {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.c-services-clients-standalone {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
