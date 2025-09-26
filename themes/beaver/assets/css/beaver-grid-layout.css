@@ -25,7 +25,7 @@
 .fl-row:after,
 .fl-row-content:after,
 .fl-col-group:after,
-.fl-col:after,
+.c-col:after, .fl-col:after,
 .fl-module:after,
 .fl-module-content:after {
   clear: both;
