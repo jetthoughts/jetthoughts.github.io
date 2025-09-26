@@ -106,6 +106,19 @@
 }
 
 /* ========================================
+   Typography Utilities - Body Text Patterns
+   ======================================== */
+
+/* Consolidates font-size: 1rem + line-height: 1.5 pattern found in:
+ * - forms.css (8+ instances in form fields and controls)
+ * - Multiple form elements with consistent typography
+ */
+.u-text-body {
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
+/* ========================================
    Display Utilities - Common Patterns
    ======================================== */
 
