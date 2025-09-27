@@ -5,6 +5,17 @@
    Usage: Homepage hero, service page headers, about page banners
 
    Phase 1: Dual-class approach - works alongside FL classes
+
+   Example Usage:
+   <div class="fl-row-bg-photo c-hero c-hero--centered">
+     <div class="fl-row-content c-hero__content">
+       <h1 class="fl-heading c-hero__title">Welcome to JetThoughts</h1>
+       <p class="fl-module-rich-text c-hero__description">Build faster. Scale smarter.</p>
+       <div class="c-hero__cta">
+         <a href="#contact" class="fl-button c-hero__cta-button">Get Started</a>
+       </div>
+     </div>
+   </div>
    ========================================================================== */
 
 /* Base hero wrapper */
