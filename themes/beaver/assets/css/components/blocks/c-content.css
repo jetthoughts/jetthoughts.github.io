@@ -5,6 +5,21 @@
    Usage: Main content sections across all pages
 
    Phase 1: Dual-class approach - works alongside FL classes
+
+   Example Usage:
+   <section class="fl-row c-content">
+     <div class="fl-col-content c-content__wrapper">
+       <div class="c-content__body">
+         <h2 class="fl-heading c-content__title">Our Services</h2>
+         <div class="fl-module-rich-text">
+           <p>Expert software development and consulting...</p>
+         </div>
+       </div>
+       <div class="c-content__media">
+         <img src="services.jpg" alt="Our development team">
+       </div>
+     </div>
+   </section>
    ========================================================================== */
 
 /* Base content section */
