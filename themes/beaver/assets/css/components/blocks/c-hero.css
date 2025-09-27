@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Hero Component (c-hero)
+
+   Purpose: Replace FL-Builder hero sections with reusable BEM component
+   Usage: Homepage hero, service page headers, about page banners
+
+   Phase 1: Dual-class approach - works alongside FL classes
+   ========================================================================== */
+
+/* Base hero wrapper */
+.c-hero {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Content container */
+.c-hero__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+/* Hero title */
+.c-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--jt-primary-text, #333);
+}
+
+/* Hero description/subtitle */
+.c-hero__description {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: var(--jt-secondary-text, #666);
+  max-width: 600px;
+}
+
+/* Call-to-action wrapper */
+.c-hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+/* CTA buttons */
+.c-hero__cta .fl-button,
+.c-hero__cta-button {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: var(--jt-primary, #1a8cff);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.c-hero__cta .fl-button:hover,
+.c-hero__cta-button:hover {
+  background-color: var(--jt-primary-dark, #0066cc);
+  transform: translateY(-2px);
+}
+
+/* Variations */
+.c-hero--centered {
+  text-align: center;
+}
+
+.c-hero--centered .c-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-hero--centered .c-hero__description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-hero--centered .c-hero__cta {
+  justify-content: center;
+}
+
+/* Dark theme variation */
+.c-hero--dark {
+  background-color: var(--jt-dark-bg, #1a1a1a);
+  color: white;
+}
+
+.c-hero--dark .c-hero__title {
+  color: white;
+}
+
+.c-hero--dark .c-hero__description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Overlay for better text readability on images */
+.c-hero--has-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .c-hero {
+    min-height: 400px;
+    padding: 60px 0;
+  }
+
+  .c-hero__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .c-hero__description {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .c-hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .c-hero__cta .fl-button,
+  .c-hero__cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Integration with FL-Builder during migration */
+.fl-row-bg-photo.c-hero {
+  /* Inherits FL background photo handling */
+  /* Overrides with BEM styles where needed */
+}
+
+.fl-heading.c-hero__title {
+  /* Maintains FL heading styles */
+  /* Enhances with BEM component styles */
+}
