@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Content Block Component (c-content)
+
+   Purpose: Replace FL module-rich-text and fl-col-content patterns
+   Usage: Main content sections across all pages
+
+   Phase 1: Dual-class approach - works alongside FL classes
+   ========================================================================== */
+
+/* Base content section */
+.c-content {
+  padding: 60px 0;
+  width: 100%;
+  background-color: var(--jt-bg-light, #fff);
+}
+
+/* Content wrapper for max-width control */
+.c-content__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Section title */
+.c-content__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  color: var(--jt-primary-text, #333);
+}
+
+/* Main content body */
+.c-content__body {
+  flex: 1;
+}
+
+.c-content__body p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: var(--jt-body-text, #555);
+}
+
+.c-content__body ul,
+.c-content__body ol {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.c-content__body li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: var(--jt-body-text, #555);
+}
+
+/* Media elements */
+.c-content__media {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.c-content__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.c-content__media video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Variations */
+
+/* Reversed layout - media on left */
+.c-content--reversed .c-content__wrapper {
+  flex-direction: row-reverse;
+}
+
+/* Centered text variation */
+.c-content--centered {
+  text-align: center;
+}
+
+.c-content--centered .c-content__wrapper {
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.c-content--centered .c-content__media {
+  max-width: 100%;
+  margin-top: 32px;
+}
+
+/* Full-width variation */
+.c-content--full-width .c-content__wrapper {
+  max-width: none;
+  padding: 0 40px;
+}
+
+/* Dark background variation */
+.c-content--dark {
+  background-color: var(--jt-dark-bg, #1a1a1a);
+  color: white;
+}
+
+.c-content--dark .c-content__title {
+  color: white;
+}
+
+.c-content--dark .c-content__body p,
+.c-content--dark .c-content__body li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* No media variation */
+.c-content--text-only .c-content__wrapper {
+  max-width: 900px;
+}
+
+.c-content--text-only .c-content__body {
+  width: 100%;
+}
+
+/* Small padding variation */
+.c-content--compact {
+  padding: 40px 0;
+}
+
+/* Large padding variation */
+.c-content--spacious {
+  padding: 100px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .c-content__wrapper {
+    gap: 40px;
+  }
+
+  .c-content__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .c-content__media {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-content {
+    padding: 40px 0;
+  }
+
+  .c-content__wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .c-content__title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .c-content__body p,
+  .c-content__body li {
+    font-size: 16px;
+  }
+
+  .c-content__media {
+    flex: none;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  /* On mobile, reversed layout becomes normal */
+  .c-content--reversed .c-content__wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Integration with FL-Builder during migration */
+.fl-module-rich-text.c-content__body {
+  /* Inherits FL rich text styles */
+  /* Overrides with BEM component styles */
+}
+
+.fl-col-content.c-content {
+  /* Maintains FL column structure */
+  /* Enhances with BEM patterns */
+}
