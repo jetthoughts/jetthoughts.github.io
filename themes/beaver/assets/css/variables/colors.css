@@ -1,3 +1,5 @@
 /* CSS Color Variables - Foundation */
 :root {
   --color-white: #ffffff;
+  --color-dark: #121212;
+  --color-primary: #1a8cff;
