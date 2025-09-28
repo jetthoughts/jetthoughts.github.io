@@ -1,0 +1,36 @@
+/* Flexbox Utility Patterns - Extracted from fl-homepage-layout.css */
+
+/* Cross-browser flexbox display */
+.u-flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+/* Inline flexbox display */
+.u-inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* Flexbox direction utilities */
+.u-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Flexbox wrapping */
+.u-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
