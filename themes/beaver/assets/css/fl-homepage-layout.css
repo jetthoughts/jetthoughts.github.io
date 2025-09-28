@@ -3521,18 +3521,6 @@ img.mfp-img {
 }
 
 
-@media (max-width: 1115px) {
-  .fl-visible-desktop, .fl-visible-large, .fl-visible-mobile, .fl-col-group-equal-height .fl-col.fl-visible-desktop, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-mobile {
-    display: none;
-  }
-
-  .fl-visible-medium {
-    display: block;
-  }
-
-  .fl-col-group-equal-height .fl-col.fl-visible-medium {
-    display: flex;
-  }
 
   .fl-col-group.fl-col-group-medium-reversed {
     display: -webkit-flex;
@@ -3548,7 +3536,6 @@ img.mfp-img {
     padding-bottom: 20px;
     padding-left: 20px;
   }
-}
 
 @media (max-width: 860px) {
   .fl-visible-desktop, .fl-visible-large, .fl-visible-medium, .fl-col-group-equal-height .fl-col.fl-visible-desktop, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-medium {
