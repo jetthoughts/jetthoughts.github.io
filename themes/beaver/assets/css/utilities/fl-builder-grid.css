@@ -69,3 +69,105 @@
 .fl-builder-ie-11 .fl-col-group-equal-height, .fl-builder-ie-11 .fl-col-group-equal-height .fl-col, .fl-builder-ie-11 .fl-col-group-equal-height .fl-col-content, .fl-builder-ie-11 .fl-col-group-equal-height .fl-module, .fl-col-group-equal-height.fl-col-group-align-center .fl-col-group {
   min-height: 1px;
 }
+
+/* FL-Builder Row Background Media */
+.fl-builder-mobile .fl-row-bg-photo .fl-row-content-wrap {
+  background-attachment: scroll;
+}
+
+.fl-row-bg-video, .fl-row-bg-video .fl-row-content, .fl-row-bg-embed, .fl-row-bg-embed .fl-row-content {
+  position: relative;
+}
+
+.fl-row-bg-video .fl-bg-video, .fl-row-bg-embed .fl-bg-embed-code {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fl-row-bg-video .fl-bg-video video, .fl-row-bg-embed .fl-bg-embed-code video {
+  bottom: 0;
+  left: 0px;
+  max-width: none;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+
+.fl-row-bg-video .fl-bg-video video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.fl-row-bg-video .fl-bg-video iframe, .fl-row-bg-embed .fl-bg-embed-code iframe {
+  pointer-events: none;
+  width: 100vw;
+  height: 56.25vw;
+  max-width: none;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.fl-bg-video-fallback {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/* FL-Builder Row Background Slideshow */
+.fl-row-bg-slideshow, .fl-row-bg-slideshow .fl-row-content {
+  position: relative;
+}
+
+.fl-row .fl-bg-slideshow {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.fl-builder-edit .fl-row .fl-bg-slideshow * {
+  bottom: 0;
+  height: auto !important;
+  left: 0;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+
+/* FL-Builder Row Background Overlay */
+.fl-row-bg-overlay .fl-row-content-wrap:after {
+  border-radius: inherit;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.fl-row-bg-overlay .fl-row-content {
+  position: relative;
+  z-index: 1;
+}
