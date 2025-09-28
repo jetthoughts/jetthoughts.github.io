@@ -147,11 +147,6 @@
 
 .pp-tabs-horizontal .pp-tabs-labels {
   position: relative;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -10517,11 +10512,6 @@ body .pp-post-feed-meta {
 
 .pp-tabs-horizontal .pp-tabs-labels {
   position: relative;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
   margin: 0 auto;
   padding: 0;
   list-style: none;
