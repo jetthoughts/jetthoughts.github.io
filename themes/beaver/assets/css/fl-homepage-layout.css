@@ -1,4 +1,5 @@
 @import "utilities/clearfix.css";
+@import "utilities/flexbox.css";
 
 .el-flex {
   flex-direction: column;
