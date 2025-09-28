@@ -8,6 +8,7 @@
 @import "utilities/foundation/reset.css";
 @import "utilities/foundation/clearfix.css";
 @import "utilities/foundation/screen-reader.css";
+@import "utilities/foundation/container.css";
 
 
 /* Responsive visibility utilities */
