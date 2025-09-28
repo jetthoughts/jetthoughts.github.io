@@ -13,3 +13,19 @@
 .fl-col-group-equal-height .fl-col.fl-visible-desktop {
   display: flex;
 }
+
+/* Large screens (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .fl-visible-desktop, .fl-visible-medium, .fl-visible-mobile,
+  .fl-col-group-equal-height .fl-col.fl-visible-desktop,
+  .fl-col-group-equal-height .fl-col.fl-visible-medium,
+  .fl-col-group-equal-height .fl-col.fl-visible-mobile {
+    display: none;
+  }
+  .fl-visible-large {
+    display: block;
+  }
+  .fl-col-group-equal-height .fl-col.fl-visible-large {
+    display: flex;
+  }
+}
