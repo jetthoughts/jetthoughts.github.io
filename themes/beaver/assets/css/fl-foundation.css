@@ -7,18 +7,8 @@
 
 @import "utilities/foundation/reset.css";
 @import "utilities/foundation/clearfix.css";
+@import "utilities/foundation/screen-reader.css";
 
-/* Screen reader only */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 
 /* Responsive visibility utilities */
 .fl-visible-large,
