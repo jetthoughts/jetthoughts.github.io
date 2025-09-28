@@ -2,6 +2,7 @@
 @import "utilities/flexbox.css";
 @import "utilities/fl-builder-visibility.css";
 @import "utilities/fl-builder-grid.css";
+@import "utilities/fl-builder-basic.css";
 
 .el-flex {
   flex-direction: column;
