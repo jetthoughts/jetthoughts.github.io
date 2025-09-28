@@ -1,5 +1,6 @@
 @import "utilities/clearfix.css";
 @import "utilities/flexbox.css";
+@import "utilities/fl-builder-visibility.css";
 
 .el-flex {
   flex-direction: column;
