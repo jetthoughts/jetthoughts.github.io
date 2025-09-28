@@ -5,14 +5,8 @@
    These foundation styles maintain backward compatibility during migration.
    ========================================================================== */
 
-/* Box sizing reset */
-.fl-builder-content *,
-.fl-builder-content *:before,
-.fl-builder-content *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+@import "utilities/foundation/reset.css";
+
 
 /* Clearfix utilities */
 .fl-row:before, .fl-row:after,
