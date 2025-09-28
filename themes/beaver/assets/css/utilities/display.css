@@ -4,3 +4,6 @@
 .d-none { display: none; }
 .d-table-cell { display: table-cell; }
 .d-block { display: block; }
+.d-table { display: table; }
+.d-none-important { display: none !important; }
+.d-block-important { display: block !important; }
