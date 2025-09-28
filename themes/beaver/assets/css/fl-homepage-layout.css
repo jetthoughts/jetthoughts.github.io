@@ -3,6 +3,8 @@
 @import "utilities/display.css";
 @import "utilities/typography/text-utilities.css";
 @import "utilities/colors/backgrounds.css";
+@import "utilities/margins.css";
+@import "utilities/padding.css";
 @import "utilities/fl-builder-visibility.css";
 @import "utilities/fl-builder-grid.css";
 @import "utilities/fl-builder-basic.css";
