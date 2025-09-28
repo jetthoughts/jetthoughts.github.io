@@ -1,0 +1,6 @@
+/* Padding Utilities - Extracted from fl-homepage-layout.css */
+/* Micro-commit 3: Basic padding utilities (3 lines) */
+
+.p-0 { padding: 0; }
+.p-30 { padding: 30px; }
+.p-20-10 { padding: 20px 10px; }
