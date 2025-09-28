@@ -5,9 +5,6 @@
 @import "utilities/fl-builder-basic.css";
 @import "utilities/fl-builder-components.css";
 
-.el-flex {
-  flex-direction: column;
-}
 
 .pp-tab-description {
   position: relative;
