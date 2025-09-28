@@ -1,0 +1,9 @@
+/* Clearfix Utility Pattern - Extracted from fl-homepage-layout.css */
+.pp-clearfix:before, .pp-clearfix:after {
+  content: "";
+  display: table;
+}
+
+.pp-clearfix:after {
+  clear: both;
+}
