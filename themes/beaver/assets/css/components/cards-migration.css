@@ -43,6 +43,21 @@
   /* Service card description styling */
 }
 
+/* Hero section dual-class integration */
+.fl-row-bg-photo.c-hero,
+.fl-row.c-hero {
+  /* Apply c-hero base styles to FL-Builder hero rows */
+}
+
+.fl-heading.c-hero__title {
+  /* Hero title dual-class integration */
+}
+
+.fl-row-content.c-hero__content {
+  /* Hero content wrapper dual-class integration */
+}
+
 /* Phase 0 Complete: Basic testimonial card structure
  * Phase 1: Service card dual-class integration
+ * Phase 2: Hero section dual-class integration (Sprint 1 methodology)
  * Next: Use-case cards (medium risk) */
