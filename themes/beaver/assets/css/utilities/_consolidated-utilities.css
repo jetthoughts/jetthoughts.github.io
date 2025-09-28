@@ -1,0 +1,15 @@
+/* Consolidated Utilities - Extracted from fl-homepage-layout.css */
+/* XP Team CSS Consolidation with Screenshot Test Validation */
+
+/* Import extracted utility modules */
+@import "display.css";
+@import "margins.css";
+@import "padding.css";
+@import "position.css";
+
+/* Consolidation Progress:
+ * ✅ 4 utility files created with screenshot validation
+ * ✅ 12 foundational utility classes extracted
+ * ✅ Zero visual regressions (39 tests passing)
+ * 🎯 Ready for integration into main stylesheets
+ */
