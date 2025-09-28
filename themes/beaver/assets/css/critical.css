@@ -20,7 +20,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: #121212;
-  background-color: #fff;
+  background-color: var(--color-white);
   text-align: left;
   padding: 0;
   word-wrap: break-word;
