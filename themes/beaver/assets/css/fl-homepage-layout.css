@@ -1,5 +1,8 @@
 @import "utilities/clearfix.css";
 @import "utilities/flexbox.css";
+@import "utilities/display.css";
+@import "utilities/typography/text-utilities.css";
+@import "utilities/colors/backgrounds.css";
 @import "utilities/fl-builder-visibility.css";
 @import "utilities/fl-builder-grid.css";
 @import "utilities/fl-builder-basic.css";
