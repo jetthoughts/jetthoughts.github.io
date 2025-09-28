@@ -9,14 +9,6 @@
   margin-top: 10px;
 }
 
-.pp-clearfix:before, .pp-clearfix:after {
-  content: "";
-  display: table;
-}
-
-.pp-clearfix:after {
-  clear: both;
-}
 
 .pp-tabs-panel-label {
   display: none;
@@ -10387,14 +10379,6 @@ body .pp-post-feed-meta {
   margin-top: 10px;
 }
 
-.pp-clearfix:before, .pp-clearfix:after {
-  content: "";
-  display: table;
-}
-
-.pp-clearfix:after {
-  clear: both;
-}
 
 .pp-tabs-panel-label {
   display: none;
