@@ -1,0 +1,7 @@
+/* Text Utilities - Extracted from fl-homepage-layout.css */
+/* Typography patterns for consistent text styling */
+
+/* Text alignment utilities */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
