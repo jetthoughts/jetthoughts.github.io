@@ -2,8 +2,13 @@
 
 COMMENTED TO MAKE TESTS PASS
 
+@import 'components/foundation';
+@import 'components/alerts';
+@import 'components/forms';
+
 @import 'components/content-block';
 @import 'components/css-utilities';
+
 @import 'components/blocks/c-hero';
 @import 'components/blocks/c-content';
  */

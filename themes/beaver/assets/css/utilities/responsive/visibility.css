@@ -1,0 +1,41 @@
+/* FL-Builder Responsive Visibility Utilities */
+/* Phase 2: Grid System Consolidation - Visibility Utilities */
+
+/* Default Visibility - Desktop First */
+.fl-visible-desktop {
+  display: block;
+}
+
+.fl-visible-large, .fl-visible-medium, .fl-visible-mobile {
+  display: none;
+}
+
+/* Large Screen Visibility */
+@media (max-width: 1200px) {
+  .fl-visible-desktop, .fl-visible-medium, .fl-visible-mobile {
+    display: none;
+  }
+  .fl-visible-large {
+    display: block;
+  }
+}
+
+/* Medium Screen Visibility */
+@media (max-width: 1115px) {
+  .fl-visible-desktop, .fl-visible-large, .fl-visible-mobile {
+    display: none;
+  }
+  .fl-visible-medium {
+    display: block;
+  }
+}
+
+/* Mobile Screen Visibility */
+@media (max-width: 860px) {
+  .fl-visible-desktop, .fl-visible-large, .fl-visible-medium {
+    display: none;
+  }
+  .fl-visible-mobile {
+    display: block;
+  }
+}

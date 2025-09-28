@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Foundation Component System
+   BEM-compliant foundation components extracted from FL-Builder core
+   Conservative implementation with full FL-Builder backward compatibility
+   ========================================================================== */
+
+@import "../utilities/foundation/reset.css";
+@import "../utilities/foundation/clearfix.css";
+@import "../utilities/foundation/screen-reader.css";
+@import "../utilities/foundation/container.css";
+
+/**
+ * Base Layout Components
+ * Replaces: .fl-row, .fl-col, .fl-module foundation patterns
+ * Usage: Essential layout structure with BEM methodology
+ */
+
+/* Layout Row Component */
+.c-layout-row,
+.fl-row {
+  position: relative;
+}
+
+.c-layout-row__content-wrap,
+.fl-row-content-wrap {
+  position: relative;
+}
+
+.c-layout-row__content,
+.fl-row-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Layout Column System */
+.c-layout-col-group,
+.fl-col-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-layout-col,
+.fl-col {
+  flex: 0 0 100%;
+  max-width: 100%;
+}

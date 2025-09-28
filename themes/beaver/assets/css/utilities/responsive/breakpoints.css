@@ -1,0 +1,78 @@
+/* FL-Builder Responsive Breakpoints */
+/* Phase 2: Grid System Consolidation - Responsive Breakpoints */
+
+/* Medium Breakpoint - Tablet Layout Adjustments */
+@media (max-width: 1115px) {
+  .fl-row[data-node] > .fl-row-content-wrap {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: auto;
+  }
+}
+
+/* Mobile Breakpoint - Mobile Layout Adjustments */
+@media (max-width: 860px) {
+  .fl-col {
+    clear: both;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto !important;
+  }
+
+  .fl-col-small:not(.fl-col-small-full-width) {
+    max-width: 400px;
+  }
+
+  .fl-row[data-node] .fl-row-content-wrap {
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .fl-builder-content a.fl-button,
+  .fl-builder-content a.fl-button:visited {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+}
+
+/* Container Responsive Adjustments */
+@media (min-width: 860px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .fl-content {
+    margin: 40px 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .container {
+    width: 1180px;
+    max-width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
