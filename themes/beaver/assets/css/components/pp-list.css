@@ -35,3 +35,9 @@
   padding-bottom: 25px;
   position: relative;
 }
+
+/* List Item Content Flex (conservative scoping) */
+.pp-list-wrap .pp-list-item-content {
+  display: flex;
+  align-items: center;
+}
