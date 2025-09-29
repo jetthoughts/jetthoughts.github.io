@@ -50,3 +50,52 @@
   display: inline-block;
   margin: 0;
 }
+
+/* Grid Hover Transitions with Parent Scoping */
+.pp-content-post-grid .pp-content-post,
+.pp-content-post-grid .pp-content-post:hover {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Grid Style 4 Hover Effects */
+.pp-content-post-grid .pp-content-post.pp-grid-style-4:hover .pp-post-image img {
+  transform: scale(1.1);
+}
+
+/* Grid Style 7 Hover Effects */
+.pp-content-post-grid .pp-content-post.pp-grid-style-7:hover .pp-content-body {
+  transition: background-color 0.3s ease-in;
+}
+
+/* Grid Style 9 Hover Effects */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9:hover .pp-post-featured-img {
+  transform: scale(1.1);
+}
+
+/* Pagination and Link Hover Transitions */
+.pp-content-post-grid .pp-more-link-button:hover,
+.pp-content-post-grid .pp-content-grid-pagination li a.page-numbers:hover {
+  transition: all 0.2s ease-in;
+}
+
+/* Grid Loading States */
+.pp-content-post-grid .pp-content-grid-load-more a.loading .pp-grid-loader-icon {
+  display: inline;
+}
+
+/* Grid Filtering States */
+.pp-content-post-grid.pp-is-filtering .pp-content-post {
+  opacity: 0.5;
+}
+
+/* Load More and Infinite Scroll */
+.pp-content-post-grid .pp-content-grid #infscr-loading {
+  display: none;
+}
+
+/* Alternate Layout Support */
+.pp-content-post-grid.pp-content-alternate .pp-content-post .pp-content-alternate-wrap .pp-content-grid-image,
+.pp-content-post-grid.pp-content-alternate .pp-content-post .pp-content-alternate-wrap .pp-content-grid-inner {
+  width: 50%;
+  overflow: hidden;
+}
