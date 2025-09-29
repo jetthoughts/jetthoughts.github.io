@@ -421,3 +421,33 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
   border-color: #e63946;
   border-width: 1px !important;
 }
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 11)                         */
+/* ========================================================================== */
+
+/* Form confirmation message styling */
+.fl-node-nkrzpgyfwo7s .gform_confirmation_wrapper .gform_confirmation_message,
+.c-gravity-form__confirmation-message {
+  color: #121212;
+}
+
+/* Form content wrapper with border radius and padding */
+.fl-node-nkrzpgyfwo7s .pp-gf-content,
+.c-gravity-form__content {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+}
+
+/* Form title size styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_title,
+.fl-node-nkrzpgyfwo7s .form-title,
+.c-gravity-form__title {
+  font-size: 30px;
+}
