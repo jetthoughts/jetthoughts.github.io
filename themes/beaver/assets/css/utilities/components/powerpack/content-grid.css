@@ -187,3 +187,10 @@
   padding: 5px 0;
   font-size: 13px;
 }
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-data {
+  margin-left: 20px;
+  float: left;
+  width: 70%;
+  text-align: left;
+}
