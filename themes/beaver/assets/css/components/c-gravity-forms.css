@@ -391,3 +391,33 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
   background-color: transparent;
   width: 100%;
 }
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 10)                         */
+/* ========================================================================== */
+
+/* Error field label styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield.gfield_error .gfield_label,
+.c-gravity-form__field--error .c-gravity-form__label {
+  color: #121212;
+  margin-left: 0;
+}
+
+/* Validation message display and color */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error .validation_message,
+.c-gravity-form__validation-message {
+  display: block;
+  color: #e63946;
+  border-color: #e63946;
+}
+
+/* Error input field border styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error .ginput_container select,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error .ginput_container textarea,
+.c-gravity-form__field--error .c-gravity-form__input,
+.c-gravity-form__field--error .c-gravity-form__select,
+.c-gravity-form__field--error .c-gravity-form__textarea {
+  border-color: #e63946;
+  border-width: 1px !important;
+}
