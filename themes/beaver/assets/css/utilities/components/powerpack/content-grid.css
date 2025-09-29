@@ -150,3 +150,9 @@
 .pp-content-post a, .pp-content-post .pp-post-content, .pp-content-post .pp-post-meta {
   transition: color 0.3s ease-in-out;
 }
+
+/* Grid Style 9 Post Image */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-image a {
+  width: 100%;
+  height: 100%;
+}
