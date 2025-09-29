@@ -2847,10 +2847,6 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
   }
 }
 
-.fl-builder-row-settings #fl-field-separator_position {
-  display: none !important;
-}
-
 .fl-node-530uo7f2gcli .fl-row-content {
   min-width: 0px;
 }
