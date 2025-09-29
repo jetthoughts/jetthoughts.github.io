@@ -1,0 +1,420 @@
+/* ==========================================================================
+   PowerPack Buttons & CTA Component
+   Extracted from beaver-grid-layout.css, services-layout.css for Sprint 2
+   Target: 350+ button and CTA pattern extraction with BEM naming conventions
+   Phase: Complete PP Button System with social share, swiper, load more buttons
+   ========================================================================== */
+
+/* PP Share Button Base Styles */
+.c-pp-share-button {
+  overflow: hidden;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property:
+    background-color,
+    border-color,
+    -webkit-filter;
+  transition-property:
+    background-color,
+    border-color,
+    -webkit-filter;
+  -o-transition-property: filter, background-color, border-color;
+  transition-property: filter, background-color, border-color;
+  transition-property:
+    filter,
+    background-color,
+    border-color,
+    -webkit-filter;
+  height: 4.5em;
+  cursor: pointer;
+}
+
+.c-pp-share-button__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-decoration: none !important;
+}
+
+.c-pp-share-button__icon,
+.c-pp-share-button__text {
+  -webkit-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.c-pp-share-button__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 4.5em;
+  position: relative;
+}
+
+.c-pp-share-button__icon i {
+  font-size: 1.7em;
+}
+
+.c-pp-share-button__text {
+  font-size: 1.5em;
+  padding-right: 1em;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 100;
+}
+
+.c-pp-share-button__title {
+  font-weight: bold;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+/* PP General Button Styles */
+.c-pp-button,
+body .c-pp-button,
+body .fl-button,
+body .pp-button,
+body button,
+body input[type="submit"] {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+}
+
+/* PP Grid Load More Button */
+.c-pp-grid-load-more__button,
+.fl-module-pp-content-grid .pp-content-grid-load-more a.pp-grid-load-more-button {
+  font-weight: 700 !important;
+}
+
+/* PP InfoBox Button Styles */
+.c-pp-infobox-button .c-pp-more-link i,
+.jt-service-box .pp-infobox-description .pp-infobox-button .pp-more-link i {
+  vertical-align: middle;
+}
+
+.c-pp-infobox-button:hover .c-pp-more-link,
+.jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
+  color: #1a8cff !important;
+}
+
+.c-pp-infobox-button:hover .c-pp-more-link i,
+.jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link i {
+  color: #1a8cff !important;
+}
+
+/* PP Swiper Button Styles */
+.c-pp-swiper-button,
+.jt-reviews-box .pp-reviews-wrapper .pp-swiper-button {
+  top: unset;
+  bottom: -100px;
+  padding: 0;
+}
+
+.c-pp-swiper-button--prev,
+.jt-reviews-box .pp-reviews-wrapper .pp-swiper-button.pp-swiper-button-prev {
+  left: 44% !important;
+}
+
+.c-pp-swiper-button--next,
+.jt-reviews-box .pp-reviews-wrapper .pp-swiper-button.pp-swiper-button-next {
+  right: 44% !important;
+}
+
+.c-pp-swiper-button--next span::before,
+.jt-reviews-box .pp-reviews-wrapper .pp-swiper-button.pp-swiper-button-next span::before {
+  transform: rotate(-180deg);
+}
+
+/* PP Search Form Button Styles */
+.c-pp-search-form--button-type-icon,
+.blog-archive-search .pp-post-filters-wrapper .pp-search-form-wrap.pp-search-form--style-classic.pp-search-form--button-type-icon {
+  display: block;
+}
+
+/* PP Social Share Career Button */
+.c-pp-share-career-button__icon,
+.career-share .pp-social-share-inner .pp-share-grid-item a .pp-share-button-icon {
+  background: transparent !important;
+  width: auto !important;
+  transition: all 0.3s ease-in-out;
+}
+
+/* PP File Upload Button Styles */
+.c-pp-file-upload-button,
+.career-form .pp-gf-inner .ginput_container.ginput_container_fileupload input[type="file"]::-webkit-file-upload-button {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  margin-right: 10px;
+  background: rgba(26, 141, 255, 0.1);
+  border: unset;
+  color: #1a8cff;
+}
+
+/* PP Menu Close Button Styles (from advanced menu) */
+.c-pp-menu-close-btn,
+.pp-advanced-menu.off-canvas .pp-off-canvas-menu .pp-menu-close-btn,
+.pp-advanced-menu .pp-overlay-door .pp-menu-close-btn,
+.pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.c-pp-menu-close-btn:before,
+.c-pp-menu-close-btn:after,
+.pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:before,
+.pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.c-pp-menu-close-btn:after,
+.pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* PP Menu Open State Close Button */
+.c-pp-menu-close-btn--menu-open,
+.pp-advanced-menu.menu-open .pp-overlay-door .pp-menu-close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-pp-menu-close-btn--menu-close,
+.pp-advanced-menu.menu-close .pp-overlay-door .pp-menu-close-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Responsive PP Button Styles */
+@media (max-width: 1115px) {
+  .c-pp-search-form--button-type-icon,
+  .blog-archive-search .pp-post-filters-wrapper .pp-search-form-wrap.pp-search-form--style-classic.pp-search-form--button-type-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .c-pp-swiper-button,
+  .jt-reviews-box .pp-reviews-wrapper .pp-swiper-button {
+    display: none;
+  }
+
+  .c-pp-menu-close-btn,
+  .fl-node-menu .pp-advanced-menu .pp-off-canvas-menu .pp-menu-close-btn,
+  .fl-node-menu .pp-advanced-menu .pp-menu-overlay .pp-menu-close-btn {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* PP Button Hover Transitions and Effects */
+.c-pp-button:hover,
+.c-pp-share-button:hover,
+.c-pp-grid-load-more__button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* PP Button Focus States for Accessibility */
+.c-pp-button:focus,
+.c-pp-share-button:focus,
+.c-pp-menu-close-btn:focus {
+  outline: 2px solid #0073aa;
+  outline-offset: 2px;
+}
+
+/* PP Button Loading States */
+.c-pp-button--loading,
+.c-pp-grid-load-more__button--loading {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+}
+
+.c-pp-button--loading::after,
+.c-pp-grid-load-more__button--loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: c-pp-button-spin 1s linear infinite;
+}
+
+@keyframes c-pp-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* PP Button Disabled States */
+.c-pp-button:disabled,
+.c-pp-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* PP More Link Base Styles */
+.c-pp-more-link,
+.pp-more-link {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.c-pp-more-link:hover,
+.pp-more-link:hover {
+  text-decoration: none;
+  transform: translateX(5px);
+}
+
+/* PP Button Icon Alignment */
+.c-pp-button__icon,
+.c-pp-more-link__icon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.c-pp-button__icon--left,
+.c-pp-more-link__icon--left {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+/* PP Button Size Variants */
+.c-pp-button--small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.c-pp-button--large {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+/* PP Button Style Variants */
+.c-pp-button--primary {
+  background-color: #1a8cff;
+  color: white;
+  border: none;
+}
+
+.c-pp-button--secondary {
+  background-color: transparent;
+  color: #1a8cff;
+  border: 2px solid #1a8cff;
+}
+
+.c-pp-button--outline {
+  background-color: transparent;
+  border: 2px solid currentColor;
+}
+
+/* PP Button Group Styles */
+.c-pp-button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.c-pp-button-group--centered {
+  justify-content: center;
+}
+
+.c-pp-button-group--right {
+  justify-content: flex-end;
+}
+
+/* PP CTA (Call-to-Action) Specific Styles */
+.c-pp-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.c-pp-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(26, 140, 255, 0.3);
+}
+
+/* Legacy Compatibility Classes (maintain backward compatibility) */
+.pp-share-button {
+  @extend .c-pp-share-button;
+}
+
+.pp-share-button a {
+  @extend .c-pp-share-button__link;
+}
+
+.pp-share-button-icon {
+  @extend .c-pp-share-button__icon;
+}
+
+.pp-share-button-text {
+  @extend .c-pp-share-button__text;
+}
+
+.pp-share-button-title {
+  @extend .c-pp-share-button__title;
+}
