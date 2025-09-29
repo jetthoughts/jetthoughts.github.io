@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Migration Performance Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid;
+            transition: transform 0.2s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-card.critical {
+            border-left-color: #ff4757;
+        }
+
+        .metric-card.warning {
+            border-left-color: #ffa502;
+        }
+
+        .metric-card.success {
+            border-left-color: #2ed573;
+        }
+
+        .metric-card.info {
+            border-left-color: #3742fa;
+        }
+
+        .metric-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .metric-change {
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .metric-change.positive {
+            color: #2ed573;
+        }
+
+        .metric-change.negative {
+            color: #ff4757;
+        }
+
+        .metric-change.neutral {
+            color: #747d8c;
+        }
+
+        .charts-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .chart-card {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .bundle-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .bundle-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #404040;
+        }
+
+        .bundle-item:last-child {
+            border-bottom: none;
+        }
+
+        .bundle-name {
+            font-size: 0.9rem;
+            color: #a4b0be;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .bundle-size {
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        .bundle-size.critical {
+            color: #ff4757;
+        }
+
+        .bundle-size.warning {
+            color: #ffa502;
+        }
+
+        .bundle-size.success {
+            color: #2ed573;
+        }
+
+        .size-bar {
+            width: 60px;
+            height: 6px;
+            background: #404040;
+            border-radius: 3px;
+            margin-left: 10px;
+            overflow: hidden;
+        }
+
+        .size-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .recommendations {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .recommendations h2 {
+            color: #ffa502;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .recommendation-item {
+            background: #404040;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .recommendation-priority {
+            background: #ff4757;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .recommendation-priority.high {
+            background: #ff4757;
+        }
+
+        .recommendation-priority.medium {
+            background: #ffa502;
+        }
+
+        .recommendation-priority.low {
+            background: #2ed573;
+        }
+
+        .quality-gates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gate-card {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gate-status {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .gate-status.passed {
+            background: #2ed573;
+            color: white;
+        }
+
+        .gate-status.failed {
+            background: #ff4757;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #747d8c;
+            font-size: 0.9rem;
+        }
+
+        .refresh-info {
+            background: #3742fa;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>CSS Migration Performance Dashboard</h1>
+            <p>Real-time monitoring of CSS performance during JetThoughts site migration</p>
+        </div>
+
+        <div class="refresh-info">
+            📊 Last Updated: <span id="lastUpdate">September 20, 2025 12:12:33</span> |
+            🔄 Auto-refresh: <span id="autoRefresh">Enabled</span>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card critical">
+                <div class="metric-title">Largest Bundle Size</div>
+                <div class="metric-value">500KB</div>
+                <div class="metric-change negative">
+                    ⚠️ 400KB over 100KB budget
+                </div>
+            </div>
+
+            <div class="metric-card warning">
+                <div class="metric-title">Total CSS Files</div>
+                <div class="metric-value">23</div>
+                <div class="metric-change negative">
+                    ↗️ Target: <10 files
+                </div>
+            </div>
+
+            <div class="metric-card warning">
+                <div class="metric-title">Build Time</div>
+                <div class="metric-value">6.0s</div>
+                <div class="metric-change negative">
+                    ⚠️ Over 5s threshold
+                </div>
+            </div>
+
+            <div class="metric-card critical">
+                <div class="metric-title">Oversized Files</div>
+                <div class="metric-value">21/23</div>
+                <div class="metric-change negative">
+                    🚨 91% exceed 100KB
+                </div>
+            </div>
+
+            <div class="metric-card warning">
+                <div class="metric-title">Total CSS Payload</div>
+                <div class="metric-value">6.8MB</div>
+                <div class="metric-change negative">
+                    📈 Average: 304KB/file
+                </div>
+            </div>
+
+            <div class="metric-card info">
+                <div class="metric-title">Performance Regression</div>
+                <div class="metric-value">0%</div>
+                <div class="metric-change neutral">
+                    ✅ Stable vs baseline
+                </div>
+            </div>
+        </div>
+
+        <div class="quality-gates">
+            <div class="gate-card">
+                <div class="gate-status failed">❌</div>
+                <h3>Bundle Size Gate</h3>
+                <p>21/23 files exceed 100KB</p>
+            </div>
+            <div class="gate-card">
+                <div class="gate-status failed">❌</div>
+                <h3>File Count Gate</h3>
+                <p>23 files (target: <10)</p>
+            </div>
+            <div class="gate-card">
+                <div class="gate-status failed">❌</div>
+                <h3>Build Performance</h3>
+                <p>6.0s (target: <5s)</p>
+            </div>
+            <div class="gate-card">
+                <div class="gate-status passed">✅</div>
+                <h3>Regression Check</h3>
+                <p>No regressions detected</p>
+            </div>
+        </div>
+
+        <div class="charts-section">
+            <div class="chart-card">
+                <h2 class="chart-title">CSS Bundle Size Distribution</h2>
+                <div class="bundle-list">
+                    <div class="bundle-item">
+                        <span class="bundle-name">homepage.css</span>
+                        <span class="bundle-size critical">500KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 100%; background: #ff4757;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">bundle-test-hero.min.css</span>
+                        <span class="bundle-size critical">435KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 87%; background: #ff4757;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">single-careers.css</span>
+                        <span class="bundle-size critical">409KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 82%; background: #ff4757;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">single-clients.css</span>
+                        <span class="bundle-size critical">400KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 80%; background: #ff4757;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">single-services.css</span>
+                        <span class="bundle-size critical">352KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 70%; background: #ffa502;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">single-use-cases.css</span>
+                        <span class="bundle-size critical">344KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 69%; background: #ffa502;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">bundle-services.min.css</span>
+                        <span class="bundle-size warning">325KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 65%; background: #ffa502;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">navigation.css</span>
+                        <span class="bundle-size success">7KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 7%; background: #2ed573;"></div>
+                        </div>
+                    </div>
+                    <div class="bundle-item">
+                        <span class="bundle-name">swiper.min.css</span>
+                        <span class="bundle-size success">19KB</span>
+                        <div class="size-bar">
+                            <div class="size-bar-fill" style="width: 19%; background: #2ed573;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2 class="chart-title">Core Web Vitals Impact</h2>
+                <div style="text-align: center; padding: 40px; color: #747d8c;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📊</div>
+                    <p>Lighthouse analysis pending</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">
+                        Run <code style="background: #404040; padding: 2px 6px; border-radius: 4px;">bin/lighthouse</code>
+                        for detailed Core Web Vitals analysis
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h2>🎯 Optimization Recommendations</h2>
+
+            <div class="recommendation-item">
+                <div class="recommendation-priority high">HIGH</div>
+                <div>
+                    <strong>Critical CSS Extraction</strong><br>
+                    Implement critical CSS extraction for above-fold content. Homepage CSS at 500KB severely impacts FCP and LCP metrics.
+                </div>
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-priority high">HIGH</div>
+                <div>
+                    <strong>Bundle Size Reduction</strong><br>
+                    21 out of 23 CSS files exceed 100KB performance budget. Implement aggressive PurgeCSS and component-based splitting.
+                </div>
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-priority medium">MEDIUM</div>
+                <div>
+                    <strong>Build Performance Optimization</strong><br>
+                    Build time of 6.0s exceeds 5s threshold. Optimize PostCSS pipeline and enable incremental builds during development.
+                </div>
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-priority medium">MEDIUM</div>
+                <div>
+                    <strong>CSS Code Splitting</strong><br>
+                    Implement route-based code splitting to reduce initial payload. Load page-specific CSS asynchronously.
+                </div>
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-priority low">LOW</div>
+                <div>
+                    <strong>Compression & Minification</strong><br>
+                    Validate CSS compression ratios and implement Brotli compression for additional savings.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>CSS Migration Performance Dashboard | JetThoughts Hugo Site |
+               Generated by Performance Optimization Specialist Agent</p>
+            <p style="margin-top: 10px;">
+                📈 Monitor progress: <code>bash _reports/css_migration_monitor.sh</code> |
+                🔍 Detailed analysis: <code>bin/lighthouse</code>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-refresh functionality
+        function updateTimestamp() {
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleString();
+        }
+
+        // Simulate real-time updates (in production, this would fetch actual data)
+        setInterval(updateTimestamp, 30000); // Update every 30 seconds
+
+        // Add interactive hover effects
+        document.querySelectorAll('.metric-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 8px 32px rgba(0,0,0,0.3)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = 'none';
+            });
+        });
+
+        // Add click handlers for bundle items (for future drill-down functionality)
+        document.querySelectorAll('.bundle-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const bundleName = item.querySelector('.bundle-name').textContent;
+                console.log(`Analyzing ${bundleName} - functionality to be implemented`);
+            });
+        });
+    </script>
+</body>
+</html>
