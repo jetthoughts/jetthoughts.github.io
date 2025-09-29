@@ -295,3 +295,22 @@
 .pp-content-post-grid .pp-content-post.pp-grid-style-9:hover .pp-post-featured-img img {
   transform: scale3d(1.1, 1.1, 1);
 }
+
+/* Post Image and Photo Content General Styles */
+.pp-content-post-grid:not(.pp-css-grid) .pp-content-post .pp-post-image,
+.pp-content-post-grid .pp-content-post-carousel .pp-content-post .pp-post-image {
+  position: relative;
+}
+
+.pp-content-post-grid .pp-content-post .pp-post-image .pp-post-featured-img a {
+  display: block;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-image a {
+  width: 100%;
+  height: 100%;
+}
+
+.pp-content-post-grid .pp-content-post .pp-post-image .fl-photo-content {
+  display: block;
+}
