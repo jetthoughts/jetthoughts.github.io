@@ -1,0 +1,80 @@
+/**
+ * Navigation Component (c-navigation)
+ *
+ * CYCLE 7: Navigation System Enhancement
+ * Unified navigation component consolidating menu and nav styles
+ * Target: 35-40% reduction of navigation CSS
+ */
+
+.c-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item {
+  margin: 0;
+}
+
+.c-nav__link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #121212;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.c-nav__link:hover {
+  background-color: #1a8cff;
+  color: white;
+}
+
+.c-nav--horizontal {
+  flex-direction: row;
+}
+
+.c-nav--vertical {
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .c-nav--mobile {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* FL-Builder menu integration */
+.fl-menu,
+.c-menu {
+  /* Base navigation styles */
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Horizontal navigation */
+  flex-direction: row;
+}
+
+.fl-menu-item,
+.c-menu-item {
+  /* Navigation item styles */
+  margin: 0;
+}
+
+.fl-menu-link {
+  /* Navigation link styles */
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #121212;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.fl-menu-link:hover {
+  background-color: #1a8cff;
+  color: white;
+}

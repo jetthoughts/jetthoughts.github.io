@@ -1,0 +1,50 @@
+/* FL-Builder Basic Utilities */
+
+/* FL-Builder Clearfix System */
+.fl-clear {
+  clear: both;
+}
+
+.fl-clearfix:before, .fl-clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.fl-clearfix:after {
+  clear: both;
+}
+
+/* FL-Builder Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* FL-Builder Column Base Patterns */
+.c-column,
+.fl-col {
+  float: left;
+  min-height: 1px;
+}
+
+.fl-col-bg-overlay .fl-col-content {
+  position: relative;
+}
+
+.fl-col-bg-overlay .fl-col-content:after {
+  border-radius: inherit;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}

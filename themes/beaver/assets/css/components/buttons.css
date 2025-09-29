@@ -1,0 +1,22 @@
+/* Essential Button Styles - Above-the-fold CTAs */
+.fl-builder-content a.fl-button,
+.fl-builder-content a.fl-button:visited {
+  display: inline-block;
+  background-color: #1a8cff;
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.45;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.fl-builder-content a.fl-button *,
+.fl-builder-content a.fl-button:visited * {
+  color: #fff;
+}

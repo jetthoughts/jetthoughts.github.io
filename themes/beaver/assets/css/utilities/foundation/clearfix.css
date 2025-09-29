@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Clearfix Utility
+   Foundation utility for FL-Builder layout clearfix patterns
+   Consolidates clearfix patterns from multiple layout files
+   ========================================================================== */
+
+/* FL-Builder Core Clearfix Patterns */
+.fl-row:before, .fl-row:after,
+.fl-row-content:before, .fl-row-content:after,
+.fl-col-group:before, .fl-col-group:after,
+.fl-col:before, .fl-col:after,
+.fl-module:before, .fl-module:after,
+.fl-module-content:before, .fl-module-content:after {
+  display: table;
+  content: " ";
+}
+
+.fl-row:after, .fl-row-content:after,
+.fl-col-group:after, .fl-col:after,
+.fl-module:after, .fl-module-content:after {
+  clear: both;
+}
+
+/* General Clearfix Utilities */
+.fl-clear {
+  clear: both;
+}
+
+.fl-clearfix:before, .fl-clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.fl-clearfix:after {
+  clear: both;
+}
+
+/* Utility Clearfix Class */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}

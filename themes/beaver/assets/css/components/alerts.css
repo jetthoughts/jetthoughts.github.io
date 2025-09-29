@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Alert Component System
+   BEM-compliant alert components to replace FL-node-specific styles
+   Conservative implementation with dual-class support for backward compatibility
+   ========================================================================== */
+
+/**
+ * Base Alert Component
+ * Replaces: .validation_error, .gform_validation_errors, table-warning styles
+ * Usage: Apply to alert/notice containers
+ */
+.c-alert {
+  /* Base alert styles */
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+/* Alert variants */
+.c-alert--success {
+  color: var(--jt-success-text, #155724);
+  background-color: var(--jt-success-bg, #d4edda);
+  border-color: var(--jt-success-border, #c3e6cb);
+}
+
+.c-alert--warning,
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  color: var(--jt-warning-text, #856404);
+  background-color: var(--jt-warning-bg, #fff3cd);
+  border-color: var(--jt-warning-border, #ffeaa7);
+}
+
+.c-alert--danger {
+  color: var(--jt-danger-text, #721c24);
+  background-color: var(--jt-danger-bg, #f8d7da);
+  border-color: var(--jt-danger-border, #f5c6cb);
+}
+
+/* FL-Builder backward compatibility mapping */
+.validation_error,
+.gform_wrapper .validation_error,
+.gform_wrapper .gform_validation_errors,
+.gform_wrapper .gform_validation_errors > h2 {
+  @extend .c-alert;
+  @extend .c-alert--danger;
+}

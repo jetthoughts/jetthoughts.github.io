@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Screen Reader Utility
+   Foundation utility for accessibility - hiding content visually while keeping
+   it available to screen readers and assistive technologies
+   ========================================================================== */
+
+/* Screen Reader Only - Modern approach */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* FL-Builder Screen Reader Text - Legacy approach */
+.fl-screen-reader-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

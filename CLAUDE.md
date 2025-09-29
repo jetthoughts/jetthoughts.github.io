@@ -1771,46 +1771,48 @@ mcp__claude-flow_Docs__search_claude_flow       # Claude Flow
 ```yaml
 agent_tool_requirements:
   coder:
-    mandatory_tools: ["leann-server", "claude-context", "context7", "package-search"]
-    research_protocol: "Pattern discovery + standards validation + package research"
+    mandatory_tools: ["claude-context", "serena", "context7", "package-search"]
+    research_protocol: "claude-context for patterns → serena for symbols → implementation"
 
   researcher:
-    mandatory_tools: ["leann-server", "claude-context", "searxng", "context7"]
-    comprehensive_search: "Multi-source validation across all available tools"
+    mandatory_tools: ["claude-context", "serena", "searxng", "context7"]
+    comprehensive_search: "Indexed search first, then symbol navigation, then web"
 
   reviewer:
-    mandatory_tools: ["leann-server", "claude-context", "package-search"]
-    pattern_validation: "Code patterns + standards compliance validation"
+    mandatory_tools: ["claude-context", "serena", "package-search"]
+    pattern_validation: "Find patterns with claude-context, verify refs with serena"
 
   tester:
-    mandatory_tools: ["leann-server", "claude-context", "package-search"]
-    testing_protocol: "Test pattern discovery + standards validation"
+    mandatory_tools: ["claude-context", "serena", "package-search"]
+    testing_protocol: "Find test patterns → Navigate test symbols → Validate"
 
   planner:
-    mandatory_tools: ["leann-server", "claude-context", "searxng"]
-    planning_protocol: "Architecture patterns + standards + web research validation"
+    mandatory_tools: ["claude-context", "serena", "searxng"]
+    planning_protocol: "Search existing architecture → Understand symbols → Plan"
 
   architect:
-    mandatory_tools: ["leann-server", "claude-context", "context7", "package-search"]
-    architecture_protocol: "System patterns + standards + framework validation"
+    mandatory_tools: ["claude-context", "serena", "context7", "package-search"]
+    architecture_protocol: "Understand patterns → Navigate dependencies → Design"
 ```
 
 ### 🔍 **TOOL HIERARCHY DOCUMENTATION**
 ```yaml
 tool_hierarchy:
-  core: "leann-server, claude-context (codebase search, handbook navigation)"
-  documentation: "context7 (online documentation)"
-  packages: "package-search (dependency analysis)"
-  web: "searxng, brave-search (current practices)"
+  priority_1_indexed_search: "claude-context (830 files, 4184 chunks, semantic understanding)"
+  priority_2_symbol_navigation: "serena (precise symbols, safe refactoring, dependencies)"
+  priority_3_documentation: "context7 (online documentation)"
+  priority_4_packages: "package-search (dependency analysis)"
+  priority_5_web: "searxng, brave-search (current practices)"
 
 static_site_tool_hierarchy:
-  patterns: "leann-server (existing Hugo/Jekyll patterns)"
-  standards: "claude-context (static site standards and practices)"
+  patterns: "claude-context (indexed Hugo patterns, instant search)"
+  symbols: "serena (Hugo helper classes, template functions)"
+  standards: "claude-context (docs/ and /knowledge/ indexed)"
   specialized: "context7 (Hugo/Jekyll framework documentation)"
   packages: "package-search (NPM/Gem package analysis)"
-  priority_5_web: "searxng + brave-search - Static site community research"
+  web_fallback: "searxng + brave-search - Only if not found above"
 
-enforcement_static: "ZERO TOLERANCE - Static site agents must follow specialized tool hierarchy"
+enforcement_static: "ZERO TOLERANCE - Must use claude-context FIRST, serena for refactoring"
 ```
 
 ### 🔍 **EXTERNAL PACKAGE RESEARCH** (MANDATORY Before Dependencies)
@@ -1898,7 +1900,8 @@ echo "📦 INSTALLED: [module_name] with research-validated integration"
 
 ```yaml
 research_tools_hierarchy:
-  - "leann-server, claude-context (codebase semantic search, handbook system navigation)"
+  - "claude-context (PRIMARY - indexed codebase semantic search, 830 files, 4184 chunks)"
+  - "serena (ESSENTIAL - precise symbol navigation, refactoring safety)"
   - "context7 (online documentation)"
   - "package-search (dependencies online codebase semantic search)"
   - "RivalSearchMCP, brave-search, searxng (current best practices)"
@@ -1910,21 +1913,23 @@ research_tools_hierarchy:
 
 #### **MCP Tool Usage Priority Protocol**
 ```bash
-# Step 1: ALWAYS start with claude-context for local knowledge
-# Step 2: MANDATORY package research before any go get/hugo mod get
-# Step 3: Use context7 for Hugo/Go framework documentation
-claude-context search "[topic]" --path "[target-path]"
+# Step 1: ALWAYS start with claude-context for indexed codebase search
+mcp__claude-context__search_code --path "." --query "[concept/pattern/implementation]"
 
-# Step 2: Use framework MCPs for external libraries
-context7 resolve-library-id "[library]" && context7 get-library-docs "[id]"
+# Step 2: Use serena for precise symbol navigation and structure
+mcp__serena__get_symbols_overview --relative_path "[file-from-step1]"
+mcp__serena__find_symbol --name_path "[symbol]" --relative_path "[path]"
 
-# Step 3: Package analysis for implementation details
+# Step 3: MANDATORY package research before any go get/hugo mod get
 mcp__package-search__package_search_hybrid --package_name "[pkg]" --semantic_queries '["[query]"]'
 
-# Step 4: Specialized MCPs for domain expertise
+# Step 4: Use context7 for Hugo/Go framework documentation
+context7 resolve-library-id "[library]" && context7 get-library-docs "[id]"
+
+# Step 5: Specialized MCPs for domain expertise
 mcp__[domain]_Docs__search_[domain]_documentation --query "[specific-topic]"
 
-# Step 5: Web search only when local sources insufficient
+# Step 6: Web search only when not found in indexed sources
 mcp__searxng__search "[topic] [additional-context]"
 ```
 
@@ -4217,6 +4222,30 @@ hugo_memory_coordination_setup() {
 └── CLAUDE.md               # This configuration
 ```
 
+## 📁 Active Projects
+
+### CSS Migration Project (ID: 2509) - ✅ CLEANUP COMPLETED
+**Location**: `docs/projects/2509-css-migration/`
+**Status**: Phase 2 - Critical CSS Consolidation
+**Documentation**: See PROJECT-SUMMARY.md in project folder
+**Last Cleanup**: 2025-01-27 - Removed 18 duplicate files from root docs/
+
+Key Documents:
+- `10-19-analysis/10.01-critical-findings.md` - Critical issues and blockers
+- `30-39-documentation/30.01-progress-tracker.md` - Current progress
+- `30-39-documentation/30.02-roadmap.md` - Migration roadmap
+
+**Cleanup Achievement**:
+- ✅ Removed 18 duplicated CSS migration files from root docs/ directory
+- ✅ All CSS migration documentation now consolidated in project folder
+- ✅ Zero CSS migration files remaining outside project structure
+
+Context for Analysts:
+- Review critical findings before any CSS work
+- Check progress tracker for current status
+- All CSS migration work is now properly consolidated in project directory
+- Follow roadmap for phased implementation
+
 ### Agent Roles (JT Site)
 - **Frontend Developer**: React/TypeScript UI development
 - **Backend Developer**: Node.js/Express API development
@@ -5323,6 +5352,166 @@ jt_site_script_prevention:
 **Authority**: Enhanced MCP tool enforcement for Hugo/Jekyll workflow
 **Integration**: GitHub MCP tools for repository management
 **Compliance**: Use MCP tools for research, coordination, and GitHub integration
+
+### 🔍 CRITICAL MCP TOOLS: claude-context & serena
+
+#### **claude-context: Indexed Codebase Search (PRIMARY RESEARCH TOOL)**
+
+**WHY USE**: claude-context provides lightning-fast semantic search across the entire codebase with intelligent code understanding. It's 100x faster than grep/find and understands code context, not just text matching.
+
+**WHAT IT DOES**:
+- Semantic search across 830 indexed files (4,184 searchable chunks)
+- Finds code by meaning, not just keywords
+- Returns ranked results with code snippets and context
+- Searches across documentation, code, tests, and configuration simultaneously
+- Understands programming concepts and patterns
+
+**HOW TO USE**:
+```bash
+# Search for concepts, patterns, or implementations
+mcp__claude-context__search_code \
+  --path "/Users/pftg/dev/jetthoughts.github.io" \
+  --query "authentication middleware implementation" \
+  --limit 10
+
+# Search specific directories for focused results
+mcp__claude-context__search_code \
+  --path "/Users/pftg/dev/jetthoughts.github.io" \
+  --query "Hugo template patterns" \
+  --extensionFilter '[".html", ".tmpl"]' \
+  --limit 5
+
+# Check indexing status
+mcp__claude-context__get_indexing_status \
+  --path "/Users/pftg/dev/jetthoughts.github.io"
+```
+
+**WHEN TO USE**:
+- **ALWAYS FIRST** when researching any implementation
+- Before writing any new code (check existing patterns)
+- When looking for similar implementations
+- To understand architectural patterns
+- To find test examples and patterns
+- When debugging (find related code quickly)
+- For impact analysis (what code relates to this feature?)
+
+**REAL EXAMPLES**:
+```bash
+# Find all Hugo shortcode implementations
+mcp__claude-context__search_code --path "." --query "Hugo shortcode implementation patterns"
+
+# Understand CSS migration strategy
+mcp__claude-context__search_code --path "." --query "FL-Builder to BEM CSS migration dual-class system"
+
+# Find test patterns for Ruby
+mcp__claude-context__search_code --path "." --query "Ruby Minitest assertion patterns"
+
+# Locate security configurations
+mcp__claude-context__search_code --path "." --query "CSP headers security configuration"
+```
+
+#### **serena: Precise Symbol Navigation & Code Analysis**
+
+**WHY USE**: serena provides surgical precision for navigating code symbols (classes, methods, functions) and understanding code structure. It's essential for refactoring, understanding dependencies, and making safe code changes.
+
+**WHAT IT DOES**:
+- Lists all symbols (classes, methods, functions) in files
+- Finds symbol definitions and references
+- Shows symbol relationships and dependencies
+- Enables precise code navigation
+- Supports safe refactoring with symbol-aware operations
+
+**HOW TO USE**:
+```bash
+# List directory structure
+mcp__serena__list_dir \
+  --relative_path "themes/beaver" \
+  --recursive true
+
+# Get overview of symbols in a file
+mcp__serena__get_symbols_overview \
+  --relative_path "test/support/hugo_helpers.rb"
+
+# Find specific symbol (class/method/function)
+mcp__serena__find_symbol \
+  --name_path "Hugo" \
+  --relative_path "test/support/hugo_helpers.rb" \
+  --depth 1 \
+  --include_body false
+
+# Search for patterns in code
+mcp__serena__search_for_pattern \
+  --substring_pattern "baseURL.*=.*" \
+  --relative_path "config" \
+  --context_lines_before 2 \
+  --context_lines_after 2
+
+# Find references to a symbol
+mcp__serena__find_referencing_symbols \
+  --name_path "Hugo/precompile" \
+  --relative_path "test/support/hugo_helpers.rb"
+```
+
+**WHEN TO USE**:
+- When you need to understand file/directory structure
+- Before modifying classes or methods (understand structure first)
+- For safe refactoring (find all references before changing)
+- To understand code dependencies
+- When you need exact symbol locations
+- For impact analysis of changes
+- To navigate complex codebases efficiently
+
+**REAL EXAMPLES**:
+```bash
+# Understand Hugo helper structure
+mcp__serena__get_symbols_overview --relative_path "test/support/hugo_helpers.rb"
+
+# Find all CSS component files
+mcp__serena__list_dir --relative_path "themes/beaver/assets/css/components" --recursive true
+
+# Locate specific test methods
+mcp__serena__find_symbol --name_path "test_" --relative_path "test" --substring_matching true
+
+# Find configuration patterns
+mcp__serena__search_for_pattern --substring_pattern "ENV.fetch" --relative_path "test/support"
+```
+
+### 🎯 COMBINED USAGE PATTERNS
+
+**Research Workflow (USE BOTH TOOLS)**:
+```bash
+# 1. Start with claude-context for broad understanding
+mcp__claude-context__search_code --path "." --query "user authentication flow"
+
+# 2. Use serena to dive into specific files found
+mcp__serena__get_symbols_overview --relative_path "path/found/by/claude-context.rb"
+
+# 3. Find exact implementations
+mcp__serena__find_symbol --name_path "authenticate" --relative_path "app/auth"
+
+# 4. Check references before modifying
+mcp__serena__find_referencing_symbols --name_path "authenticate" --relative_path "app/auth/user.rb"
+```
+
+**Debugging Workflow**:
+```bash
+# 1. Find error patterns with claude-context
+mcp__claude-context__search_code --path "." --query "error handling 404 not found"
+
+# 2. Navigate to specific error handlers
+mcp__serena__find_symbol --name_path "handle_404" --substring_matching true
+
+# 3. Trace error flow
+mcp__serena__find_referencing_symbols --name_path "handle_404" --relative_path "app/errors.rb"
+```
+
+### ⚠️ CRITICAL USAGE RULES
+
+1. **ALWAYS use claude-context FIRST** for research and understanding
+2. **ALWAYS use serena for precise symbol navigation** and before refactoring
+3. **NEVER rely on grep/find** when these tools are available
+4. **NEVER modify code** without checking references with serena
+5. **ALWAYS verify patterns exist** with claude-context before implementing new ones
 
 ### 🔍 MANDATORY MCP Research Pattern for JT Site
 ```bash

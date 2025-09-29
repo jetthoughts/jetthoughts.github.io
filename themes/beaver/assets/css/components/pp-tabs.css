@@ -1,0 +1,28 @@
+/* ==========================================================================
+   PowerPack Tabs Component
+   Extracted FL-Builder PowerPack tabs patterns with proper scoping
+   Conservative implementation with full FL-Builder backward compatibility
+   ========================================================================== */
+
+/**
+ * pp-tabs: Tab Navigation System
+ * Usage: Tabbed content interfaces with labels and panels
+ * Scoping: All selectors use .pp-tabs-container prefix to prevent global conflicts
+ */
+
+/* Tabs Base Structure */
+.pp-tabs-container .pp-tabs .pp-tabs-labels {
+  width: 43%;
+}
+
+/* Tab Label Styling */
+.pp-tabs-container .pp-tabs .pp-tabs-labels .pp-tabs-label {
+  padding: 28px 35px;
+  border-radius: 14px;
+  border: unset;
+}
+
+/* Tab Label Spacing */
+.pp-tabs-container .pp-tabs .pp-tabs-labels .pp-tabs-label:not(:first-child) {
+  margin-top: 10px;
+}

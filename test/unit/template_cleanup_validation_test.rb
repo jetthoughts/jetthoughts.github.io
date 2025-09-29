@@ -281,6 +281,46 @@ class TemplateCleanupValidationTest < BasePageTestCase
     end
   end
 
+  def test_fl_node_removal_layout_preservation
+    # Validates that FL-node class removal preserves essential layout structure
+    @test_pages.each do |page_name, file_path|
+      next unless test_page_exists?(page_name)
+
+      doc = parse_html_file(file_path)
+
+      # Essential FL structural classes should remain (layout-critical)
+      structural_classes = %w[fl-row-content fl-col-content fl-module-content fl-row fl-col fl-module]
+
+      # Verify structural FL classes are preserved for layout
+      structural_elements = doc.css(".fl-row-content, .fl-col-content, .fl-module-content")
+      if structural_elements.any?
+        # If FL structure exists, validate it's complete
+        assert doc.css(".fl-row").any?, "#{page_name} should preserve fl-row layout structure"
+        assert doc.css(".fl-row-content").any?, "#{page_name} should preserve fl-row-content layout"
+      end
+
+      # Decorative FL-node classes should be safely removable without layout impact
+      # This test ensures the page renders correctly regardless of FL-node-[hash] presence
+      page_content = doc.css("main, article, .content, body").first
+      assert page_content, "#{page_name} should have main content area after FL-node cleanup"
+
+      # Verify no broken class references remain after cleanup
+      broken_class_patterns = [
+        "fl-node-undefined",
+        "fl-node-null",
+        "fl-node-error",
+        "data-node=\"undefined\"",
+        "data-node=\"null\""
+      ]
+
+      broken_class_patterns.each do |pattern|
+        page_html = doc.to_html
+        assert !page_html.include?(pattern),
+          "#{page_name} should not have broken FL-node references: #{pattern}"
+      end
+    end
+  end
+
   def test_accessibility_basics
     @test_pages.each do |page_name, file_path|
       next unless test_page_exists?(page_name)

@@ -1,0 +1,6 @@
+/* Typography Foundation - Critical above-the-fold */
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}

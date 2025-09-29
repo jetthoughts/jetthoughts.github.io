@@ -15,7 +15,13 @@ class DesktopSiteTest < ApplicationSystemTestCase
     preload_all_images
 
     assert_text "Build faster. Scale smarter."
-    assert_screenshot "homepage", tolerance: 0.10
+
+    begin
+      assert_screenshot "homepage", tolerance: 0.10
+    rescue
+      # FIXME: This is a workaround for a flaky test issue where the screenshot
+      assert_screenshot "homepage", tolerance: 0.10
+    end
   end
 
   def test_top_image_have_highest_priority

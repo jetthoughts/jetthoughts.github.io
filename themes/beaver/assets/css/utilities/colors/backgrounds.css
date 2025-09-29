@@ -1,0 +1,6 @@
+/* Background Color Utilities - Extracted from fl-homepage-layout.css */
+/* Background color utilities for consistent theming */
+
+.bg-transparent { background-color: transparent; }
+.bg-gray-light { background-color: #f0f0f0; }
+.bg-gray { background-color: #eee; }
