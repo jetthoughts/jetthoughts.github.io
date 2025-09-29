@@ -2282,10 +2282,6 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
   background: transparent;
 }
 
-.fl-builder-row-settings #fl-field-separator_position {
-  display: none !important;
-}
-
 .fl-node-header-nav-row .fl-row-content {
   min-width: 0px;
 }
