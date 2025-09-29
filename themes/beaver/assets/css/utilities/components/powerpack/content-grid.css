@@ -224,3 +224,7 @@
   overflow: hidden;
   height: 270px;
 }
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-content-grid-image {
+  height: 100%;
+}
