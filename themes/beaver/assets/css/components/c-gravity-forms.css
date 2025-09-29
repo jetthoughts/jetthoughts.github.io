@@ -361,3 +361,33 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
   background-color: transparent;
   border-style: none;
 }
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 9)                          */
+/* ========================================================================== */
+
+/* Validation error styling with color and border */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .validation_error,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors > h2,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper li.gfield.gfield_error,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+.c-gravity-form__validation-error {
+  color: #790000 !important;
+  border-color: #e63946 !important;
+}
+
+/* Validation error display control */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .validation_error,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors > h2,
+.c-gravity-form__validation-error--hidden {
+  display: none !important;
+}
+
+/* Error field background and width */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield.gfield_error,
+.c-gravity-form__field--error {
+  background-color: transparent;
+  width: 100%;
+}
