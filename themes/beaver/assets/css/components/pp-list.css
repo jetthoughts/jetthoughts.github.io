@@ -27,3 +27,11 @@
   position: relative;
   z-index: 3;
 }
+
+/* List Item Wrapper (conservative scoping) */
+.pp-list-wrap .pp-list-item {
+  overflow: visible;
+  list-style: none;
+  padding-bottom: 25px;
+  position: relative;
+}
