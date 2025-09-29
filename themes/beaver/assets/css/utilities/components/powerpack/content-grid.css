@@ -67,6 +67,17 @@
   text-decoration: none;
 }
 
+/* Pagination Active States */
+.pp-content-post-grid .pp-content-grid-pagination .page-numbers.current {
+  font-weight: bold;
+}
+
+/* Pagination Disabled States */
+.pp-content-post-grid .pp-content-grid-pagination .page-numbers.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /* Content Grid Load More */
 .pp-content-grid-load-more a {
   display: inline-block;
@@ -74,6 +85,12 @@
 
 .pp-content-grid-load-more a.disabled {
   opacity: 0.5;
+}
+
+/* Load More Button Hover Effects */
+.pp-content-post-grid .pp-content-grid-load-more a:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
 }
 
 /* Content Grid Empty State */
@@ -141,6 +158,11 @@
   opacity: 0.5;
 }
 
+/* Content Filtering Animations */
+.pp-content-post-grid .pp-content-post.pp-filtering-in {
+  animation: fadeInUp 0.4s ease-in-out;
+}
+
 /* Content Carousel Specific Styles */
 .pp-content-post-carousel .owl-carousel {
   overflow: hidden;
@@ -149,6 +171,12 @@
 /* Content Post Base Styles */
 .pp-content-post a, .pp-content-post .pp-post-content, .pp-content-post .pp-post-meta {
   transition: color 0.3s ease-in-out;
+}
+
+/* Grid Item Focus States */
+.pp-content-post-grid .pp-content-post:focus-within {
+  outline: 2px solid #0073aa;
+  outline-offset: 2px;
 }
 
 /* Grid Style 9 Post Image */
@@ -313,4 +341,17 @@
 
 .pp-content-post-grid .pp-content-post .pp-post-image .fl-photo-content {
   display: block;
+}
+
+/* Responsive Breakpoint Adjustments */
+@media (max-width: 768px) {
+  .pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-data {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Final Transition Timings */
+.pp-content-post-grid .pp-content-post * {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
