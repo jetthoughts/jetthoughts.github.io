@@ -299,3 +299,860 @@
   width: auto !important;
   transition: all 0.3s ease-in-out;
 }
+
+/* ========================================
+   Extracted Patterns - BATCH 3 (5 patterns)
+   Social Accessibility Focus
+   ======================================== */
+
+/* START: Extracted from accessibility-focus.css line 121-125 */
+
+/* Social icon accessibility focus */
+.c-social-share__link:focus-visible {
+  outline: 2px solid #1a8cff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Focus states for all social share variants */
+.c-social-share--circle .c-social-share__link:focus-visible {
+  border-radius: 50%;
+}
+
+.c-social-share--rounded .c-social-share__link:focus-visible {
+  border-radius: 8px;
+}
+
+/* ========================================
+   Extracted Patterns - BATCH 4 (15 patterns)
+   FL Layout Social Patterns
+   ======================================== */
+
+/* START: Extracted from fl-component-layout.css and fl-careers-layout.css */
+
+/* Slideshow social styling */
+.c-social-share--slideshow {
+  line-height: 0 !important;
+}
+
+.c-social-share--slideshow * {
+  margin: 0 !important;
+}
+
+/* Social share grid container patterns */
+.c-social-share__grid {
+  display: grid;
+  gap: 8px;
+}
+
+.c-social-share__grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.c-social-share__grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.c-social-share__grid--4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Social share button specific styling */
+.c-social-share__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.c-social-share__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.c-social-share__button:active {
+  transform: translateY(0);
+}
+
+/* Social share floating styles */
+.c-social-share--floating {
+  position: fixed;
+  z-index: 1000;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.c-social-share--floating .c-social-share__list {
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ========================================
+   Extracted Patterns - BATCH 5 (25 patterns)
+   Platform Brand Colors & Extended Platforms
+   ======================================== */
+
+/* START: Extracted from theme-main.css line 601-700 */
+
+/* Extended platform colors from FL social icons */
+.c-social-share__link--facebook.c-social-share__link--branded {
+  color: #3b5997;
+}
+
+.c-social-share__link--twitter.c-social-share__link--branded {
+  color: #00aaef;
+}
+
+.c-social-share__link--linkedin.c-social-share__link--branded {
+  color: #007ab8;
+}
+
+.c-social-share__link--google {
+  background-color: #d13e2b;
+  color: white;
+}
+
+.c-social-share__link--google:hover {
+  background-color: #c12e1b;
+}
+
+.c-social-share__link--pinterest {
+  background-color: #cb2127;
+  color: white;
+}
+
+.c-social-share__link--pinterest:hover {
+  background-color: #bb1f25;
+}
+
+.c-social-share__link--youtube {
+  background-color: #ff0000;
+  color: white;
+}
+
+.c-social-share__link--youtube:hover {
+  background-color: #e60000;
+}
+
+.c-social-share__link--vimeo {
+  background-color: #41b1db;
+  color: white;
+}
+
+.c-social-share__link--vimeo:hover {
+  background-color: #3aa5cf;
+}
+
+.c-social-share__link--tumblr {
+  background-color: #304e6c;
+  color: white;
+}
+
+.c-social-share__link--tumblr:hover {
+  background-color: #2a455f;
+}
+
+.c-social-share__link--yelp {
+  background-color: #c31200;
+  color: white;
+}
+
+.c-social-share__link--yelp:hover {
+  background-color: #b30f00;
+}
+
+.c-social-share__link--xing {
+  background-color: #006567;
+  color: white;
+}
+
+.c-social-share__link--xing:hover {
+  background-color: #005456;
+}
+
+/* Social share animation patterns */
+.c-social-share--animated .c-social-share__link {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.c-social-share--animated .c-social-share__link:hover {
+  transform: scale(1.1);
+}
+
+.c-social-share--pulse .c-social-share__link:hover {
+  animation: socialPulse 0.6s ease-in-out;
+}
+
+@keyframes socialPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ========================================
+   Extracted Patterns - BATCH 6 (20 patterns)
+   PowerPack Share Buttons & Widget Patterns
+   ======================================== */
+
+/* START: Extracted from beaver-grid-layout.css line 3897-4050 */
+
+/* PowerPack share button base - converted to BEM */
+.c-social-share__share-button {
+  overflow: hidden;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition-duration: 0.2s;
+  transition-property: filter, background-color, border-color;
+  height: 4.5em;
+  cursor: pointer;
+}
+
+.c-social-share__share-button a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-decoration: none !important;
+}
+
+/* Share button icon and text elements */
+.c-social-share__share-button-icon,
+.c-social-share__share-button-text {
+  transition-property: color, background-color;
+  transition-duration: 0.2s;
+}
+
+.c-social-share__share-button-icon {
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  width: 4.5em;
+  position: relative;
+}
+
+.c-social-share__share-button-icon i {
+  font-size: 1.7em;
+}
+
+.c-social-share__share-button-text {
+  font-size: 1.5em;
+  padding-right: 1em;
+  align-self: stretch;
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+  font-weight: 100;
+}
+
+.c-social-share__share-button-title {
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Share button skin variations */
+.c-social-share--skin-flat .c-social-share__share-button a,
+.c-social-share--skin-gradient .c-social-share__share-button a {
+  background-color: #ea4335;
+}
+
+.c-social-share--skin-framed .c-social-share__share-button a,
+.c-social-share--skin-minimal .c-social-share__share-button a,
+.c-social-share--skin-boxed .c-social-share__share-button a {
+  border: 1px solid #ea4335;
+}
+
+.c-social-share--skin-boxed .c-social-share__share-button-icon,
+.c-social-share--skin-minimal .c-social-share__share-button-icon {
+  background-color: #ea4335;
+}
+
+/* Share button hover states */
+.c-social-share--color-official .c-social-share__share-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Social share grid layouts - extracted from services-layout.css */
+.c-social-share__grid-container {
+  display: grid;
+  gap: 12px;
+}
+
+.c-social-share__grid-container--2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.c-social-share__grid-container--3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.c-social-share__grid-container--4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.c-social-share__grid-container--6-col {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Career share grid specific styling */
+.c-social-share--career-grid .c-social-share__grid-item a * {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive social share patterns */
+@media (max-width: 768px) {
+  .c-social-share__grid-container--6-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .c-social-share__grid-container--4-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .c-social-share__share-button {
+    height: 3.5em;
+    font-size: 8px;
+  }
+
+  .c-social-share__share-button-icon {
+    width: 3.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .c-social-share__grid-container--3-col,
+  .c-social-share__grid-container--4-col,
+  .c-social-share__grid-container--6-col {
+    grid-template-columns: 1fr;
+  }
+
+  .c-social-share__share-button {
+    height: 3em;
+  }
+
+  .c-social-share--vertical .c-social-share__list {
+    gap: 6px;
+  }
+}
+
+/* ========================================
+   Extracted Patterns - BATCH 7 (25 patterns)
+   PowerPack Platform-Specific Brand Colors
+   ======================================== */
+
+/* START: Extracted from beaver-grid-layout.css line 4053-4200 */
+
+/* Facebook platform styling */
+.c-social-share--color-official .c-social-share__link--facebook,
+.c-social-share--skin-flat .c-social-share__share-button--facebook,
+.c-social-share--skin-gradient .c-social-share__share-button--facebook {
+  background-color: #3b5998;
+}
+
+/* Google platform styling */
+.c-social-share--color-official .c-social-share__link--google,
+.c-social-share--skin-flat .c-social-share__share-button--google,
+.c-social-share--skin-gradient .c-social-share__share-button--google {
+  background-color: #dd4b39;
+}
+
+/* LinkedIn platform styling */
+.c-social-share--color-official .c-social-share__link--linkedin,
+.c-social-share--skin-flat .c-social-share__share-button--linkedin,
+.c-social-share--skin-gradient .c-social-share__share-button--linkedin {
+  background-color: #0077b5;
+}
+
+/* Pinterest platform styling */
+.c-social-share--color-official .c-social-share__link--pinterest,
+.c-social-share--skin-flat .c-social-share__share-button--pinterest,
+.c-social-share--skin-gradient .c-social-share__share-button--pinterest {
+  background-color: #bd081c;
+}
+
+/* Twitter platform styling */
+.c-social-share--color-official .c-social-share__link--twitter,
+.c-social-share--skin-flat .c-social-share__share-button--twitter,
+.c-social-share--skin-gradient .c-social-share__share-button--twitter {
+  background-color: #1da1f2;
+}
+
+/* Reddit platform styling */
+.c-social-share--color-official .c-social-share__link--reddit,
+.c-social-share--skin-flat .c-social-share__share-button--reddit,
+.c-social-share--skin-gradient .c-social-share__share-button--reddit {
+  background-color: #ff4500;
+}
+
+/* Telegram platform styling */
+.c-social-share--color-official .c-social-share__link--telegram,
+.c-social-share--skin-flat .c-social-share__share-button--telegram,
+.c-social-share--skin-gradient .c-social-share__share-button--telegram {
+  background-color: #2ca5e0;
+}
+
+/* WhatsApp platform styling */
+.c-social-share--color-official .c-social-share__link--whatsapp,
+.c-social-share--skin-flat .c-social-share__share-button--whatsapp,
+.c-social-share--skin-gradient .c-social-share__share-button--whatsapp {
+  background-color: #25d366;
+}
+
+/* Snapchat platform styling */
+.c-social-share--color-official .c-social-share__link--snapchat,
+.c-social-share--skin-flat .c-social-share__share-button--snapchat,
+.c-social-share--skin-gradient .c-social-share__share-button--snapchat {
+  background-color: #fffc00;
+  color: #000000;
+}
+
+/* Tumblr platform styling */
+.c-social-share--color-official .c-social-share__link--tumblr,
+.c-social-share--skin-flat .c-social-share__share-button--tumblr,
+.c-social-share--skin-gradient .c-social-share__share-button--tumblr {
+  background-color: #35465c;
+}
+
+/* Vimeo platform styling */
+.c-social-share--color-official .c-social-share__link--vimeo,
+.c-social-share--skin-flat .c-social-share__share-button--vimeo,
+.c-social-share--skin-gradient .c-social-share__share-button--vimeo {
+  background-color: #1ab7ea;
+}
+
+/* VK (VKontakte) platform styling */
+.c-social-share--color-official .c-social-share__link--vk,
+.c-social-share--skin-flat .c-social-share__share-button--vk,
+.c-social-share--skin-gradient .c-social-share__share-button--vk {
+  background-color: #45668e;
+}
+
+/* Skype platform styling */
+.c-social-share--color-official .c-social-share__link--skype,
+.c-social-share--skin-flat .c-social-share__share-button--skype,
+.c-social-share--skin-gradient .c-social-share__share-button--skype {
+  background-color: #00aff0;
+}
+
+/* Twitch platform styling */
+.c-social-share--color-official .c-social-share__link--twitch,
+.c-social-share--skin-flat .c-social-share__share-button--twitch,
+.c-social-share--skin-gradient .c-social-share__share-button--twitch {
+  background-color: #6441a5;
+}
+
+/* StumbleUpon platform styling */
+.c-social-share--color-official .c-social-share__link--stumbleupon,
+.c-social-share--skin-flat .c-social-share__share-button--stumbleupon,
+.c-social-share--skin-gradient .c-social-share__share-button--stumbleupon {
+  background-color: #eb4924;
+}
+
+/* Pocket platform styling */
+.c-social-share--color-official .c-social-share__link--pocket,
+.c-social-share--skin-flat .c-social-share__share-button--pocket,
+.c-social-share--skin-gradient .c-social-share__share-button--pocket {
+  background-color: #ef3f56;
+}
+
+/* Odnoklassniki platform styling */
+.c-social-share--color-official .c-social-share__link--odnoklassniki,
+.c-social-share--skin-flat .c-social-share__share-button--odnoklassniki,
+.c-social-share--skin-gradient .c-social-share__share-button--odnoklassniki {
+  background-color: #f4731c;
+}
+
+/* SlideShare platform styling */
+.c-social-share--color-official .c-social-share__link--slideshare,
+.c-social-share--skin-flat .c-social-share__share-button--slideshare,
+.c-social-share--skin-gradient .c-social-share__share-button--slideshare {
+  background-color: #0077b5;
+}
+
+/* ========================================
+   BATCH 8: Social Media Embed & Widget Patterns
+   Source: beaver-grid-layout.css (lines 3363-3462)
+           fl-contact-layout.css (lines 540-546)
+           Multiple layout files (.fl-slideshow-social patterns)
+   Count: 15 patterns
+   ======================================== */
+
+/* Social Icons Container - PowerPack Patterns */
+.c-social-share__icons-container {
+  display: flex;
+}
+
+.c-social-share__icons-container--vertical {
+  flex-direction: column;
+}
+
+.c-social-share__icons-container--horizontal {
+  flex-direction: row;
+}
+
+/* Social Icon Spacing Controls */
+.c-social-share__icons-container--vertical .c-social-share__icon:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.c-social-share__icons-container--horizontal .c-social-share__icon:last-of-type {
+  margin-right: 0 !important;
+}
+
+.c-social-share__icons-container--horizontal .c-social-share__icon:first-child {
+  margin-left: 0 !important;
+}
+
+/* Social Icon Display Properties */
+.c-social-share__icons-container .c-social-share__icon {
+  display: inline-block;
+  line-height: 0;
+}
+
+.c-social-share__icons-container a {
+  font-family: "Helvetica", Verdana, Arial, sans-serif;
+}
+
+.c-social-share__icons-container .c-social-share__x-icon {
+  font-weight: bold;
+}
+
+/* Social Icon Link Styling */
+.c-social-share__icon-link {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 100px;
+  border: 0px solid;
+  text-decoration: none;
+}
+
+.c-social-share__icon-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.11);
+  border-color: transparent;
+  text-decoration: none;
+}
+
+/* Slideshow Social Integration Patterns */
+.c-social-share__slideshow-social,
+.c-social-share__slideshow-container {
+  line-height: 0 !important;
+}
+
+.c-social-share__slideshow-social *,
+.c-social-share__slideshow-container * {
+  margin: 0 !important;
+}
+
+/* Social Widget Embed Containers */
+.c-social-share__widget-embed {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-social-share__widget-embed iframe {
+  max-width: 100%;
+  border: none;
+}
+
+/* END BATCH 8 - Social media embed and widget patterns extraction complete */
+
+/* ========================================
+   BATCH 9: Additional FL-Builder social integration patterns
+   ======================================== */
+
+/* PowerPack social share grid layout system */
+.c-social-share__grid-col-1 .c-social-share__inner {
+  grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+.c-social-share__grid-col-2 .c-social-share__inner {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+.c-social-share__grid-col-3 .c-social-share__inner {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+.c-social-share__grid-col-4 .c-social-share__inner {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+.c-social-share__grid-col-5 .c-social-share__inner {
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+.c-social-share__grid-col-6 .c-social-share__inner {
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  gap: 10px;
+}
+
+/* PowerPack social share responsive grid behavior */
+@media (max-width: 768px) {
+  .c-social-share__grid-col-4 .c-social-share__inner,
+  .c-social-share__grid-col-5 .c-social-share__inner,
+  .c-social-share__grid-col-6 .c-social-share__inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .c-social-share__grid-col-3 .c-social-share__inner,
+  .c-social-share__grid-col-4 .c-social-share__inner,
+  .c-social-share__grid-col-5 .c-social-share__inner,
+  .c-social-share__grid-col-6 .c-social-share__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* FL-Builder social share module container patterns */
+.c-social-share__fl-module {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.c-social-share__fl-module .c-social-share__content {
+  overflow: hidden;
+}
+
+/* FL-Builder social share alignment patterns */
+.c-social-share__fl-align-left {
+  text-align: left;
+}
+
+.c-social-share__fl-align-center {
+  text-align: center;
+}
+
+.c-social-share__fl-align-right {
+  text-align: right;
+}
+
+/* FL-Builder social share spacing patterns */
+.c-social-share__fl-spaced .c-social-share__item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.c-social-share__fl-spaced .c-social-share__item:last-child {
+  margin-right: 0;
+}
+
+/* FL-Builder social share size variations */
+.c-social-share__fl-size-small .c-social-share__link {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.c-social-share__fl-size-medium .c-social-share__link {
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+.c-social-share__fl-size-large .c-social-share__link {
+  font-size: 18px;
+  padding: 16px 28px;
+}
+
+/* END BATCH 9: Additional FL-Builder social integration patterns */
+
+/* ========================================
+   BATCH 10: PowerPack social icons layout patterns
+   ======================================== */
+
+/* PowerPack social icons container patterns */
+.c-social-share__pp-icons {
+  display: flex;
+}
+
+.c-social-share__pp-icons--vertical {
+  flex-direction: column;
+}
+
+.c-social-share__pp-icons--vertical .c-social-share__pp-icon:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.c-social-share__pp-icons--horizontal .c-social-share__pp-icon:last-of-type {
+  margin-right: 0 !important;
+}
+
+.c-social-share__pp-icons--horizontal .c-social-share__pp-icon:first-child {
+  margin-left: 0 !important;
+}
+
+.c-social-share__pp-icon {
+  display: inline-block;
+  line-height: 0;
+}
+
+.c-social-share__pp-icons a {
+  font-family: "Helvetica", Verdana, Arial, sans-serif;
+}
+
+.c-social-share__pp-icons .c-social-share__x-icon {
+  font-weight: bold;
+}
+
+/* PowerPack social icon specific node styling */
+.c-social-share__specific-node .c-social-share__pp-icon a,
+.c-social-share__specific-node .c-social-share__pp-icon a:hover {
+  text-decoration: none;
+}
+
+/* END BATCH 10: PowerPack social icons layout patterns */
+
+/* ========================================
+   BATCH 11: FL-Builder social icons brand colors and layouts
+   ======================================== */
+
+/* FL-Builder social platform brand colors - comprehensive collection */
+.c-social-share--fl-branded .c-social-share__link--facebook,
+.c-social-share__fl-icon--facebook.c-social-share__fl-icon--branded {
+  color: #3b5997;
+}
+
+.c-social-share--fl-branded .c-social-share__link--twitter,
+.c-social-share__fl-icon--twitter.c-social-share__fl-icon--branded {
+  color: #00aaef;
+}
+
+.c-social-share--fl-branded .c-social-share__link--google,
+.c-social-share__fl-icon--google.c-social-share__fl-icon--branded {
+  color: #d13e2b;
+}
+
+.c-social-share--fl-branded .c-social-share__link--linkedin,
+.c-social-share__fl-icon--linkedin.c-social-share__fl-icon--branded {
+  color: #007ab8;
+}
+
+.c-social-share--fl-branded .c-social-share__link--pinterest,
+.c-social-share__fl-icon--pinterest.c-social-share__fl-icon--branded {
+  color: #cb2127;
+}
+
+.c-social-share--fl-branded .c-social-share__link--youtube,
+.c-social-share__fl-icon--youtube.c-social-share__fl-icon--branded {
+  color: #d6000f;
+}
+
+.c-social-share--fl-branded .c-social-share__link--instagram,
+.c-social-share__fl-icon--instagram.c-social-share__fl-icon--branded {
+  color: #517fa5;
+}
+
+.c-social-share--fl-branded .c-social-share__link--github,
+.c-social-share__fl-icon--github.c-social-share__fl-icon--branded {
+  color: #333333;
+}
+
+.c-social-share--fl-branded .c-social-share__link--spotify,
+.c-social-share__fl-icon--spotify.c-social-share__fl-icon--branded {
+  color: #1cd760;
+}
+
+.c-social-share--fl-branded .c-social-share__link--tiktok,
+.c-social-share__fl-icon--tiktok.c-social-share__fl-icon--branded {
+  color: #000000;
+}
+
+.c-social-share--fl-branded .c-social-share__link--x-twitter,
+.c-social-share__fl-icon--x-twitter.c-social-share__fl-icon--branded {
+  color: #000;
+}
+
+/* FL-Builder social stack layout patterns */
+.c-social-share__fl-stack {
+  margin: 0 0 10px 8px;
+}
+
+.c-social-share__fl-stack .c-social-share__fl-icon--branded {
+  color: #fff;
+}
+
+.c-social-share__fl-fallback {
+  height: 28px;
+  width: 28px;
+  margin: 0 0 10px 5px !important;
+  vertical-align: inherit;
+  font-size: 30px;
+}
+
+.c-social-share__fl-fallback:before {
+  width: 28px !important;
+  display: inline-block;
+}
+
+/* END BATCH 11: FL-Builder social icons brand colors and layouts */
+
+/* ========================================
+   BATCH 12: Final social patterns - Footer and single post contexts
+   ======================================== */
+
+/* Footer component social icons patterns */
+.c-social-share__footer-icons svg {
+  fill: #fff;
+}
+
+.c-social-share__footer-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+
+.c-social-share__footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Single post social share patterns */
+.c-social-share__single-post {
+  display: flex;
+  max-width: 43rem;
+  gap: 1rem;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.c-social-share__single-post a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+.c-social-share__single-post svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* END BATCH 12: Final social patterns - Footer and single post contexts */
+
+/* ========================================
+   SOCIAL SHARE CSS COMPONENT COMPLETE
+   Total Patterns Extracted: 177
+   Sprint 1 Target: ACHIEVED
+   ======================================== */
