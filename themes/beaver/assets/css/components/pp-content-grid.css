@@ -38,3 +38,10 @@
   margin: 0 0 15px;
   font-weight: 600;
 }
+
+/* Grid Pagination */
+.pp-content-grid-pagination ul.page-numbers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
