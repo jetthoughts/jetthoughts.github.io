@@ -16,6 +16,9 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     assert_text "Build faster. Scale smarter."
 
+    # Move mouse to (0,0) to prevent menu hover state causing flakiness
+    page.driver.browser.action.move_to_location(0, 0).perform
+
     begin
       assert_screenshot "homepage", tolerance: 0.10
     rescue
