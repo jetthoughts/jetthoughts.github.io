@@ -1,0 +1,23 @@
+/* ==========================================================================
+   COMPONENT: TESTIMONIALS
+   ========================================================================== */
+
+/*
+ * Testimonial blocks extracted from FL-Builder legacy patterns
+ * Target: 156 Testimonial patterns
+ * Sprint 3: Testimonials CSS Extraction Team
+ *
+ * BEM Structure:
+ * .c-testimonials - Block
+ * .c-testimonials__container - Element (testimonial container)
+ * .c-testimonials__quote - Element (quote icon/text)
+ * .c-testimonials__content - Element (testimonial content)
+ * .c-testimonials__author - Element (author attribution)
+ * .c-testimonials__avatar - Element (author image)
+ */
+
+/* Base Testimonials Component */
+.c-testimonials {
+  position: relative;
+  padding: 40px 0;
+}
