@@ -194,3 +194,8 @@
   width: 70%;
   text-align: left;
 }
+
+/* Grid Style 6 Image and Date */
+.pp-content-post-grid .pp-content-post.pp-grid-style-6 .pp-post-image {
+  text-align: center;
+}
