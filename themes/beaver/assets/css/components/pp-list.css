@@ -21,3 +21,9 @@
   display: block;
   padding: 10px;
 }
+
+/* List Icon Wrapper */
+.pp-list-icon-wrapper {
+  position: relative;
+  z-index: 3;
+}

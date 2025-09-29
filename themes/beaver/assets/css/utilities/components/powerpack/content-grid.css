@@ -80,3 +80,73 @@
 .pp-content-grid-empty {
   text-align: center;
 }
+
+/* Content Grid Hover Transitions */
+.pp-content-post, .pp-content-post:hover {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Grid Style 4 Hover Effects */
+.pp-content-post.pp-grid-style-4:hover .pp-post-image img {
+  -moz-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+/* Grid Style 7 Hover Effects */
+.pp-content-post.pp-grid-style-7:hover .pp-content-body {
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+/* Pagination and Link Hover Transitions */
+.pp-content-post .pp-more-link-button:hover, .pp-content-grid-pagination li a.page-numbers:hover, .pp-content-post .pp-add-to-cart a {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/* Content Grid Loading States */
+.pp-content-grid-load-more a.loading .pp-grid-loader-icon {
+  display: inline;
+}
+
+.pp-content-grid-loader {
+  margin-top: 10px;
+}
+
+/* Grid Style 9 Hover Effects */
+.pp-content-post.pp-grid-style-9:hover .pp-post-featured-img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+.pp-content-post.pp-grid-style-9:hover .pp-post-featured-img a:last-child:before {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+/* Content Grid Filtering States */
+.pp-content-post-grid.pp-is-filtering .pp-content-post {
+  opacity: 0.5;
+}
+
+/* Content Carousel Specific Styles */
+.pp-content-post-carousel .owl-carousel {
+  overflow: hidden;
+}
+
+/* Content Post Base Styles */
+.pp-content-post a, .pp-content-post .pp-post-content, .pp-content-post .pp-post-meta {
+  transition: color 0.3s ease-in-out;
+}

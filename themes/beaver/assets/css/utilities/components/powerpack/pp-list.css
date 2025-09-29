@@ -9,3 +9,20 @@
   display: flex;
   align-items: flex-start;
 }
+
+/* List Item More Link */
+.pp-list-item > .pp-more-link {
+  margin-top: 10px;
+}
+
+/* List Connector */
+.pp-list-connector {
+  position: relative;
+  display: block;
+}
+
+/* Info List Styles */
+.pp-infolist-wrap .pp-list-item {
+  margin-bottom: 20px;
+  position: relative;
+}
