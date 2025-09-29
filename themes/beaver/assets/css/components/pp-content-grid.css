@@ -21,3 +21,9 @@
   display: block;
   line-height: 0;
 }
+
+/* Grid Image Styling */
+.pp-content-grid-image img {
+  display: block;
+  width: 100%;
+}
