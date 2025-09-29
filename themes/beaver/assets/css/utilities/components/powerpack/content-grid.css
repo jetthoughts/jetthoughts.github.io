@@ -156,3 +156,9 @@
   width: 100%;
   height: 100%;
 }
+
+/* Grid Style 4 Image Overflow */
+.pp-content-post-grid .pp-content-post.pp-grid-style-4 .pp-post-image {
+  overflow: hidden;
+  position: relative;
+}
