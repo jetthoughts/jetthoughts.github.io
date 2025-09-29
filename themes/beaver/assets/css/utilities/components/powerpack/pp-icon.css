@@ -1,0 +1,12 @@
+/* ==========================================================================
+   PowerPack Icon Component
+   Modular Icon component styles extracted from fl-clients-alt-bundle.css
+   for better organization and reusability
+   ========================================================================== */
+
+/* Icon Wrapper Base Styles */
+.pp-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
