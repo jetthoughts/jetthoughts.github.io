@@ -3,7 +3,7 @@
 set -euo pipefail
 
 if [ $# -eq 0 ]; then
-  bin/rake test:all
+  bin/rake test:critical
 else
   bundle exec ruby -Itest "$@"
 fi

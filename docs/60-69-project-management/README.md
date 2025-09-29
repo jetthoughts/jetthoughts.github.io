@@ -6,7 +6,7 @@ This area contains project management documentation, agent guidance, and process
 
 ### Agent Guidance & Processes
 
-- `60.01-agent-guidance-reference.md` - Agent guidance and coordination reference
+- See `../60.01-agent-guidance-reference.md` - Primary agent guidance and coordination reference (consolidated)
 - `60.02-docs-overview-reference.md` - Documentation overview and structure
 - `60.03-project-setup-tutorial.md` - Project setup and initialization
 

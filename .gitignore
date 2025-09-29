@@ -81,3 +81,5 @@ _reports/
 _dest/
 _temp/
 _tmp/
+
+*.local.*

@@ -46,8 +46,29 @@ const purgecss = createPurgeCss({
   rejectedCss: true
 });
 
+// PostCSS plugins
+const postcssMixins = require('postcss-mixins');
+const postcssExtend = require('postcss-extend-rule');
+// Optional simple vars support (disabled by default) can be enabled later:
+// const postcssSimpleVars = require('postcss-simple-vars');
+
 module.exports = {
   plugins: [
+    // Process @import statements first (must be first in order)
+    require("postcss-import")({
+      path: ["themes/beaver/assets/css"],
+      skipDuplicates: true
+    }),
+
+    // Mixins first so they can be expanded before nesting/extend
+    process.env.POSTCSS_ENABLE_MIXINS === 'false' ? null : postcssMixins(),
+
+    // Enable @extend like SCSS (only light usage expected) - placed early so extended selectors participate in nesting
+    process.env.POSTCSS_ENABLE_EXTEND === 'false' ? null : postcssExtend(),
+
+    // (Optional) Uncomment if $var style variables are introduced later
+    // postcssSimpleVars(),
+
     // Always include nested CSS support
     require("postcss-nested"),
 
