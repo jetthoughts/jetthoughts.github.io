@@ -71,3 +71,7 @@
 .pp-content-grid-load-more a {
   display: inline-block;
 }
+
+.pp-content-grid-load-more a.disabled {
+  opacity: 0.5;
+}
