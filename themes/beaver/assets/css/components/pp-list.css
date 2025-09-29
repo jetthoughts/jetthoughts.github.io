@@ -41,3 +41,20 @@
   display: flex;
   align-items: center;
 }
+
+/* List More Link */
+.pp-list-wrap .pp-list-item > .pp-more-link {
+  margin-top: 10px;
+}
+
+/* List Connector */
+.pp-list-wrap .pp-list-connector {
+  position: relative;
+  display: block;
+}
+
+/* Info List Support */
+.pp-infolist-wrap .pp-list-item {
+  margin-bottom: 20px;
+  position: relative;
+}
