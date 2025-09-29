@@ -228,3 +228,19 @@
 .pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-content-grid-image {
   height: 100%;
 }
+
+/* Grid Style 9 Post Featured Image Background */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-featured-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
