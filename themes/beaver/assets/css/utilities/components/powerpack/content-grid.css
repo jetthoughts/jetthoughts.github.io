@@ -217,3 +217,10 @@
 .pp-content-post-grid .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date span {
   display: block;
 }
+
+/* Grid Style 9 Base Container */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 {
+  position: relative;
+  overflow: hidden;
+  height: 270px;
+}
