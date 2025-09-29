@@ -1,0 +1,60 @@
+/* ==========================================================================
+   PowerPack Content Grid Component
+   Modular Content Grid component styles extracted from fl-clients-alt-bundle.css
+   for better organization and reusability
+   ========================================================================== */
+
+/* Content Grid Base Styles */
+.pp-content-grid-post .pp-content-category-list,
+.pp-content-carousel-post .pp-content-category-list {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  position: relative;
+  z-index: 2;
+}
+
+.pp-content-grid-post .pp-content-grid-more,
+.pp-content-carousel-post .pp-content-carousel-more {
+  display: inline-block;
+}
+
+/* Content Grid Image Styles */
+.pp-content-grid-image > a,
+.pp-content-carousel-image > a {
+  display: block;
+}
+
+.pp-content-grid-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Content Grid Content */
+.pp-content-grid-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.pp-content-grid-title,
+.pp-content-carousel-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Content Grid Alternate Layout */
+.pp-content-post-grid.pp-content-alternate .pp-content-post .pp-content-alternate-wrap .pp-content-grid-image,
+.pp-content-post-grid.pp-content-alternate .pp-content-post .pp-content-alternate-wrap .pp-content-grid-inner {
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Content Grid Infinite Scroll Loading */
+.pp-content-grid #infscr-loading {
+  display: none;
+}
+
+/* Content Grid Pagination */
+.pp-content-grid-pagination ul.page-numbers {
+  margin: 0;
+  padding: 0;
+}
