@@ -15,6 +15,11 @@ COMMENTED TO MAKE TESTS PASS */
 /* Social Share Component */
 @import 'components/c-social-share';
 
+/* Sprint 3 Components - Hero Sections, CTA Blocks, Testimonials */
+@import 'components/c-hero-sections';
+@import 'components/c-cta-blocks';
+@import 'components/c-testimonials';
+
 /* ========================================
    Button Component (c-button)
    ======================================== */
