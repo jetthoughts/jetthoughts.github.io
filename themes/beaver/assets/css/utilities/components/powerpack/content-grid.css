@@ -181,3 +181,9 @@
   padding: 5px 0px;
   font-size: 15px;
 }
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-month {
+  display: block;
+  padding: 5px 0;
+  font-size: 13px;
+}
