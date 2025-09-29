@@ -47,5 +47,7 @@
 @media (max-width: 1115px) {
   .fl-builder-content .fl-node-header-nav-contact-us-btn {
     width: 16% !important;
+    max-width: none;
+    flex: 0 1 auto;
   }
 }
