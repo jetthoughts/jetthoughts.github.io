@@ -32,3 +32,9 @@
 .pp-content-grid-content p:last-of-type {
   margin-bottom: 0;
 }
+
+/* Grid Title Component */
+.pp-content-grid-title {
+  margin: 0 0 15px;
+  font-weight: 600;
+}
