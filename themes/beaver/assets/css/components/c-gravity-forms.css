@@ -81,3 +81,51 @@
   margin-bottom: 20px;
   margin-top: 0;
 }
+
+/* Input Field Component */
+.c-gravity-form__input {
+  /* Replaces input[type="text"], input[type="email"], etc. styles */
+  width: 100% !important;
+  height: 50px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  border: 1px solid var(--jt-gray-medium, #d1d1d1);
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.c-gravity-form__input:focus {
+  /* Replaces input:focus styles */
+  border-color: var(--jt-primary, #1a8cff);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(26, 140, 255, 0.25);
+}
+
+.c-gravity-form__input::placeholder {
+  /* Replaces input placeholder styles */
+  color: #969798;
+  opacity: 1;
+}
+
+/* Dual-class compatibility for input fields */
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield select,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea {
+  color: #121212;
+  background-color: #ffffff;
+  height: 50px;
+  border-style: solid;
+  border-width: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]):focus,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield select:focus,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea:focus {
+  border-color: #121212;
+}
