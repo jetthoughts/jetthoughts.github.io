@@ -129,3 +129,40 @@
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea:focus {
   border-color: #121212;
 }
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 1)                          */
+/* ========================================================================== */
+
+/* Dual-class compatibility for legend element */
+.pp-gf-content legend,
+.c-gravity-form__legend {
+  border: 0;
+}
+
+/* Dual-class compatibility for validation error fields */
+.pp-gf-content .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half),
+.c-gravity-form__field--validation-error {
+  max-width: 100% !important;
+}
+
+/* Dual-class compatibility for checkbox and radio focus states */
+.pp-gf-content .gform_wrapper .gfield input[type="checkbox"]:focus,
+.pp-gf-content .gform_wrapper .gfield input[type="radio"]:focus,
+.c-gravity-form__checkbox:focus,
+.c-gravity-form__radio:focus {
+  width: auto;
+  text-align: left !important;
+}
+
+/* Dual-class compatibility for half-width input fields */
+.gform_wrapper .top_label li.gfield.gf_left_half input.medium,
+.gform_wrapper .top_label li.gfield.gf_right_half input.medium,
+.gform_wrapper .top_label li.gfield.gf_left_half select.medium,
+.gform_wrapper .top_label li.gfield.gf_right_half select.medium,
+.c-gravity-form__field--left-half .c-gravity-form__input,
+.c-gravity-form__field--right-half .c-gravity-form__input,
+.c-gravity-form__field--left-half .c-gravity-form__select,
+.c-gravity-form__field--right-half .c-gravity-form__select {
+  width: 100% !important;
+}
