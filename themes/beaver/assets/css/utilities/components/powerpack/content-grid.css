@@ -213,3 +213,7 @@
   line-height: 1.5;
   position: relative;
 }
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date span {
+  display: block;
+}
