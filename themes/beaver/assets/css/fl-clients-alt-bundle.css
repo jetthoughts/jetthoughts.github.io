@@ -6,9 +6,6 @@
 
 
 
-.fl-clear {
-  clear: both;
-}
 
 .fl-clearfix:before, .fl-clearfix:after {
   display: table;
