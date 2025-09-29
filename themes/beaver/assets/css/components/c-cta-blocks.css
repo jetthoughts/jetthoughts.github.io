@@ -42,3 +42,10 @@
 .fl-node-header-nav-contact-us-btn {
   width: 12%;
 }
+
+/* CTA Button Responsive Width - Header Contact Button */
+@media (max-width: 1115px) {
+  .fl-builder-content .fl-node-header-nav-contact-us-btn {
+    width: 16% !important;
+  }
+}
