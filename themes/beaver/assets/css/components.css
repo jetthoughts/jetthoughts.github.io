@@ -12,6 +12,9 @@ COMMENTED TO MAKE TESTS PASS */
 @import 'components/blocks/c-hero';
 @import 'components/blocks/c-content';
 
+/* Social Share Component */
+@import 'components/c-social-share';
+
 /* ========================================
    Button Component (c-button)
    ======================================== */

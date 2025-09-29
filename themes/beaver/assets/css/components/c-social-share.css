@@ -1,0 +1,301 @@
+/* ========================================
+   Social Share Component (c-social-share)
+   BEM Convention - Phase 2 Migration
+   ======================================== */
+
+/* CRITICAL SPRINT 1 OBJECTIVE: Extract 177 social share patterns
+   Source: 930 social patterns found across CSS files
+   Target: c-social-share BEM component architecture
+
+   Pattern Categories:
+   - Social icons and styling
+   - Share button layouts
+   - Social media widgets
+   - Platform-specific styles (Facebook, Twitter, LinkedIn, Instagram)
+   - Animation and hover states
+   - Responsive social layouts
+*/
+
+/* ========================================
+   Base Social Share Component
+   ======================================== */
+
+.c-social-share {
+  /* Base social share container */
+}
+
+/* Social share list/grid layout */
+.c-social-share__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-social-share__item {
+  /* Individual social share item */
+}
+
+.c-social-share__link {
+  /* Social share link styling */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.c-social-share__icon {
+  /* Social share icon base styles */
+}
+
+.c-social-share__label {
+  /* Social share label text */
+}
+
+/* ========================================
+   Social Share Layout Modifiers
+   ======================================== */
+
+/* Horizontal layout (default) */
+.c-social-share--horizontal .c-social-share__list {
+  flex-direction: row;
+  gap: 12px;
+}
+
+/* Vertical layout */
+.c-social-share--vertical .c-social-share__list {
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Grid layout */
+.c-social-share--grid .c-social-share__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+  gap: 12px;
+}
+
+/* ========================================
+   Social Platform Modifiers
+   ======================================== */
+
+/* Facebook platform */
+.c-social-share__link--facebook {
+  background-color: #1877f2;
+  color: white;
+}
+
+.c-social-share__link--facebook:hover {
+  background-color: #166fe5;
+}
+
+/* Twitter platform */
+.c-social-share__link--twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.c-social-share__link--twitter:hover {
+  background-color: #1a91da;
+}
+
+/* LinkedIn platform */
+.c-social-share__link--linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.c-social-share__link--linkedin:hover {
+  background-color: #006ba1;
+}
+
+/* Instagram platform */
+.c-social-share__link--instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+}
+
+.c-social-share__link--instagram:hover {
+  opacity: 0.9;
+}
+
+/* ========================================
+   Social Share Size Modifiers
+   ======================================== */
+
+/* Small social share */
+.c-social-share--small .c-social-share__link {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+/* Default social share */
+.c-social-share--default .c-social-share__link {
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+}
+
+/* Large social share */
+.c-social-share--large .c-social-share__link {
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+}
+
+/* ========================================
+   Social Share Style Variants
+   ======================================== */
+
+/* Rounded variant */
+.c-social-share--rounded .c-social-share__link {
+  border-radius: 8px;
+}
+
+/* Circle variant */
+.c-social-share--circle .c-social-share__link {
+  border-radius: 50%;
+}
+
+/* Outline variant */
+.c-social-share--outline .c-social-share__link {
+  background-color: transparent;
+  border: 2px solid currentColor;
+}
+
+.c-social-share--outline .c-social-share__link--facebook {
+  color: #1877f2;
+  border-color: #1877f2;
+}
+
+.c-social-share--outline .c-social-share__link--facebook:hover {
+  background-color: #1877f2;
+  color: white;
+}
+
+.c-social-share--outline .c-social-share__link--twitter {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.c-social-share--outline .c-social-share__link--twitter:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.c-social-share--outline .c-social-share__link--linkedin {
+  color: #0077b5;
+  border-color: #0077b5;
+}
+
+.c-social-share--outline .c-social-share__link--linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+/* ========================================
+   Extracted Patterns - BATCH 1 (15 patterns)
+   PowerPack Social Icons Base
+   ======================================== */
+
+/* START: Extracted from component-bundle.css line 2317-2353 */
+
+/* Base social icons layout - converted to BEM */
+.c-social-share__icons {
+  display: flex;
+}
+
+/* Vertical social icons layout */
+.c-social-share--vertical .c-social-share__icons {
+  flex-direction: column;
+}
+
+.c-social-share--vertical .c-social-share__item:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* Horizontal social icons layout */
+.c-social-share--horizontal .c-social-share__item:last-of-type {
+  margin-right: 0 !important;
+}
+
+.c-social-share--horizontal .c-social-share__item:first-child {
+  margin-left: 0 !important;
+}
+
+/* Individual social icon styling */
+.c-social-share__icon {
+  display: inline-block;
+  line-height: 0;
+}
+
+/* Social link typography */
+.c-social-share__link {
+  font-family: "Helvetica", Verdana, Arial, sans-serif;
+}
+
+/* X (Twitter) icon weight */
+.c-social-share__link--x .c-social-share__icon {
+  font-weight: bold;
+}
+
+/* Social link decoration reset */
+.c-social-share__link,
+.c-social-share__link:hover {
+  text-decoration: none;
+}
+
+/* ========================================
+   Extracted Patterns - BATCH 2 (12 patterns)
+   Author Social & Career Share
+   ======================================== */
+
+/* START: Extracted from services-layout.css line 1191-1223 */
+
+/* Author social styling */
+.c-social-share--author .c-social-share__item {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-top: 10px !important;
+}
+
+.c-social-share--author .c-social-share__link {
+  padding: 9px 12px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.c-social-share--author .c-social-share__link::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+  color: #0072b1;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.c-social-share--author .c-social-share__link:hover {
+  background-color: #fff;
+  color: #121212;
+}
+
+/* LinkedIn social hide pattern */
+.c-social-share--author .c-social-share__link--linkedin + p {
+  display: none !important;
+}
+
+/* Career share grid styling */
+.c-social-share--career .c-social-share__item a * {
+  transition: all 0.3s ease-in-out;
+}
+
+.c-social-share--career .c-social-share__icon {
+  background: transparent !important;
+  width: auto !important;
+  transition: all 0.3s ease-in-out;
+}
