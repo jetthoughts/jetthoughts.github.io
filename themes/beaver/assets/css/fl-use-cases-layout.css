@@ -2951,19 +2951,8 @@ img.mfp-img {
   }
 }
 
-.pp-infobox:before, .pp-infobox:after {
-  content: " ";
-  display: table;
-}
-
-.pp-infobox:after {
-  clear: both;
-}
-
-.pp-infobox-wrap .pp-infobox-link {
-  text-decoration: none;
-  display: block;
-}
+/* Moved: PowerPack InfoBox base styles - now in utilities/components/powerpack/infobox.css */
+/* Moved: PowerPack InfoBox clearfix and link wrapper - now in utilities/components/powerpack/infobox.css */
 
 .pp-infobox-title-prefix {
   display: block;

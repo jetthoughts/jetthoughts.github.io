@@ -1,0 +1,55 @@
+/* ==========================================================================
+   PowerPack InfoBox Component
+   Modular InfoBox component styles extracted from fl-use-cases-layout.css
+   for better organization and reusability
+   ========================================================================== */
+
+/* InfoBox Base Styles */
+.pp-infobox:before, .pp-infobox:after {
+  content: " ";
+  display: table;
+}
+
+.pp-infobox:after {
+  clear: both;
+}
+
+.pp-infobox-wrap .pp-infobox-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* InfoBox Title Components */
+.pp-infobox-title-prefix {
+  display: block;
+}
+
+.pp-infobox-title-wrapper .pp-infobox-title {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+/* InfoBox Description */
+.pp-infobox-description p {
+  margin-bottom: 15px;
+}
+
+.pp-infobox-description p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* InfoBox Links */
+.pp-more-link {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.pp-infobox .pp-more-link {
+  display: inline-block;
+}
+
+.pp-more-link:hover {
+  text-decoration: none;
+}
