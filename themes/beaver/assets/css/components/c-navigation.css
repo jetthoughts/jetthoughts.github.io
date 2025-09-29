@@ -24,11 +24,11 @@
   color: #121212;
   text-decoration: none;
   transition: all 0.2s ease;
+}
 
-  &:hover {
-    background-color: #1a8cff;
-    color: white;
-  }
+.c-nav__link:hover {
+  background-color: #1a8cff;
+  color: white;
 }
 
 .c-nav--horizontal {
@@ -39,25 +39,42 @@
   flex-direction: column;
 }
 
-.c-nav--mobile {
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .c-nav--mobile {
     flex-direction: column;
     width: 100%;
   }
 }
 
-// FL-Builder menu integration
+/* FL-Builder menu integration */
 .fl-menu,
 .c-menu {
-  @extend .c-nav;
-  @extend .c-nav--horizontal;
+  /* Base navigation styles */
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Horizontal navigation */
+  flex-direction: row;
 }
 
 .fl-menu-item,
 .c-menu-item {
-  @extend .c-nav__item;
+  /* Navigation item styles */
+  margin: 0;
 }
 
 .fl-menu-link {
-  @extend .c-nav__link;
+  /* Navigation link styles */
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #121212;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.fl-menu-link:hover {
+  background-color: #1a8cff;
+  color: white;
 }

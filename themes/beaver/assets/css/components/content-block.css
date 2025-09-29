@@ -33,10 +33,10 @@
 .c-content-block__paragraph {
   /* Paragraph base styles */
   margin-bottom: var(--spacing-md, 1rem);
+}
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+.c-content-block__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 /* ========================================
@@ -89,7 +89,8 @@
 .c-content-text,
 .fl-rich-text {
   /* Extend base content block functionality */
-  @extend .c-content-block__text;
+  color: inherit;
+  font-family: inherit;
 
   /* Preserve all existing FL-Builder functionality */
   /* No overrides - only semantic enhancement */
@@ -102,12 +103,19 @@
 .fl-rich-text h4,
 .fl-rich-text h5,
 .fl-rich-text h6 {
-  @extend .c-content-block__heading;
+  /* Heading base styles */
+  margin-bottom: var(--spacing-sm, 0.75rem);
+  line-height: 1.2;
 }
 
 /* FL-Builder paragraph compatibility within rich text */
 .fl-rich-text p {
-  @extend .c-content-block__paragraph;
+  /* Paragraph base styles */
+  margin-bottom: var(--spacing-md, 1rem);
+}
+
+.fl-rich-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* ========================================
