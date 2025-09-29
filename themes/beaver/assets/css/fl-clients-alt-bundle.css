@@ -7,10 +7,6 @@
 
 
 
-.fl-clearfix:before, .fl-clearfix:after {
-  display: table;
-  content: " ";
-}
 
 .fl-clearfix:after {
   clear: both;
