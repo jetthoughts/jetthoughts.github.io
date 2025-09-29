@@ -26,3 +26,8 @@
 .fl-node-header-nav-contat-us-btn-nested .fl-button-wrap {
   text-align: right;
 }
+
+/* CTA Button Padding - Header Contact Button */
+.fl-builder-content .fl-node-header-nav-contat-us-btn-nested .fl-button-wrap a.fl-button {
+  padding: 9px 18px 10px 18px;
+}
