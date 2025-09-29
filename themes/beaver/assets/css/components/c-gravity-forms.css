@@ -259,3 +259,33 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .c-gravity-form__title--hidden {
   display: none;
 }
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 5 - Conservative)           */
+/* ========================================================================== */
+
+/* Form description display control for FL-Builder */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper span.gform_description,
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .form-description,
+.c-gravity-form__description--hidden {
+  display: none;
+}
+
+/* Form description visibility override */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .form-description,
+.c-gravity-form__description--visible {
+  display: block;
+}
+
+/* Field label styling for special node */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield .gfield_label,
+.c-gravity-form__label--special {
+  color: #121212;
+  display: block;
+}
+
+/* Required field indicator styling */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_required,
+.c-gravity-form__required {
+  color: #ff0000;
+}
