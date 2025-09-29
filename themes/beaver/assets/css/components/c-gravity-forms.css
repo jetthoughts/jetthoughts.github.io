@@ -289,3 +289,34 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .c-gravity-form__required {
   color: #ff0000;
 }
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 6)                          */
+/* ========================================================================== */
+
+/* Product price special color styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper span.ginput_product_price,
+.c-gravity-form__product-price--special {
+  color: #900900 !important;
+}
+
+/* Section styling with border */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gsection,
+.c-gravity-form__section {
+  border-bottom-width: 1px;
+  border-bottom-color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* Section title styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper h2.gsection_title,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper h3.gsection_title,
+.c-gravity-form__section-title--special {
+  color: #333333;
+}
+
+/* Complex input margin spacing */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .ginput_complex span,
+.c-gravity-form__complex-span--spacing {
+  margin-bottom: 8px;
+}
