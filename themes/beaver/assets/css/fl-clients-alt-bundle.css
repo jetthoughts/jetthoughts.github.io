@@ -16,9 +16,6 @@
 
 
 
-.fl-row-bg-video, .fl-row-bg-video .fl-row-content, .fl-row-bg-embed, .fl-row-bg-embed .fl-row-content {
-  position: relative;
-}
 
 .fl-row-bg-video .fl-bg-video, .fl-row-bg-embed .fl-bg-embed-code {
   bottom: 0;
