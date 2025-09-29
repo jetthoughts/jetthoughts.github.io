@@ -14,26 +14,11 @@ capabilities:
   - collaborative_intelligence
 hooks:
   pre: |
-    echo "🤖 Starting CrewAI expert task: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
-
-    # CrewAI project detection
-    if [[ -f "*crew*" ]] || [[ -d "*crew*" ]] || [[ "$TASK" =~ (crew|crewai|multi.?agent) ]]; then
-      echo "CrewAI project context detected"
-      npx claude-flow@alpha hooks memory-store --key "crewai/project-detected/$(date +%s)" --value "Task:$TASK,Framework:CrewAI"
-    fi
-
-    # Check for CrewAI dependencies
-    if [[ -f "requirements.txt" ]] && grep -q "crewai" requirements.txt; then
-      echo "CrewAI dependency found in requirements.txt"
-    fi
-
   post: |
-    echo "✅ CrewAI expert task completed: $TASK"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
-
-    # Store CrewAI-specific results
-    npx claude-flow@alpha hooks memory-store --key "crewai/results/$(date +%s)" --value "TaskId:$TASK_ID,Framework:CrewAI,Success:true"
 ---
 
 # CrewAI Agent Expert

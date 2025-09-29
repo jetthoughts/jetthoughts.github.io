@@ -34,11 +34,10 @@ capabilities:
   - memory_based_validation
 hooks:
   pre: |
-    echo "💎 Ruby Coder starting $TASK with TDD enforcement"
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Ruby Coder completed $TASK with quality validation"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

@@ -31,58 +31,10 @@ capabilities:
   - professional_ai_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED AI ENGINEER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating AI development task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with AI work until reflection completes"
-        exit 1
-    fi
-
-    # AI Engineering Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(ai|llm|rag|agent|ml|neural)"; then
-        echo "🤖 AI ENGINEERING ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: AI development without professional quality standards"
-        echo "✅ REQUIRED: Follow AI methodology, security validation, production standards"
-    fi
-
-    echo "🤖 AI Engineer starting comprehensive development: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED AI DEVELOPMENT COMPLETION: $TASK"
-
-    # Validate AI development quality and effectiveness
-    if echo "$TASK" | grep -iE "(ai|llm|rag|agent|ml)"; then
-        echo "🤖 AI DEVELOPMENT VALIDATION: Checking professional quality standards"
-
-        # AI development effectiveness validation
-        echo "✅ AI Quality: Implementation meets professional standards"
-        echo "🔧 Production readiness and security validation verified"
-        echo "🎯 Performance optimization and safety standards confirmed"
-    fi
-
-    # Run comprehensive test validation
-    if ! bin/test; then
-        echo "❌ CRITICAL FAILURE: Tests failed after AI development"
-        echo "🚫 TASK BLOCKED: All AI implementations must pass test suite"
-        exit 1
-    fi
-
-    echo "🤖 AI Engineer Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

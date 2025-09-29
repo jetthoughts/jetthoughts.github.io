@@ -32,51 +32,10 @@ capabilities:
   - professional_cannibalization_detection
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO CANNIBALIZATION DETECTOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating cannibalization analysis task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with cannibalization analysis until reflection completes"
-        exit 1
-    fi
-
-    # SEO Cannibalization Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(keyword.*overlap|cannibalization|content.*duplication|search.*intent|topic.*clustering)"; then
-        echo "🔍 SEO CANNIBALIZATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Cannibalization analysis without professional quality standards"
-        echo "✅ REQUIRED: Follow SEO methodology, overlap validation, differentiation standards"
-    fi
-
-    echo "🔍 SEO Cannibalization Detector starting comprehensive analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CANNIBALIZATION ANALYSIS COMPLETION: $TASK"
-
-    # Validate cannibalization analysis quality and effectiveness
-    if echo "$TASK" | grep -iE "(keyword.*overlap|cannibalization|content.*duplication)"; then
-        echo "🔍 CANNIBALIZATION ANALYSIS VALIDATION: Checking professional quality standards"
-
-        # Cannibalization analysis effectiveness validation
-        echo "✅ Analysis Quality: Detection meets professional standards"
-        echo "🎯 SEO overlap detection and differentiation verified"
-        echo "🔍 Keyword conflicts and resolution strategies confirmed"
-    fi
-
-    echo "🔍 SEO Cannibalization Detector Pro Quality: Analysis meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

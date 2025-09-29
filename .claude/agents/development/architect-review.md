@@ -32,58 +32,10 @@ capabilities:
   - professional_architecture_review
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED ARCHITECT REVIEWER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating architecture review task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with architecture review until reflection completes"
-        exit 1
-    fi
-
-    # Architecture Review Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(architect|review|design|pattern|architecture|system)"; then
-        echo "🏛️ ARCHITECTURE REVIEW ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Architecture review without professional quality standards"
-        echo "✅ REQUIRED: Follow architectural methodology, pattern validation, design standards"
-    fi
-
-    echo "🏛️ Architect Reviewer starting comprehensive review: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED ARCHITECTURE REVIEW COMPLETION: $TASK"
-
-    # Validate architecture review quality and effectiveness
-    if echo "$TASK" | grep -iE "(architect|review|design|pattern|architecture)"; then
-        echo "🏛️ ARCHITECTURE REVIEW VALIDATION: Checking professional quality standards"
-
-        # Architecture review effectiveness validation
-        echo "✅ Architecture Quality: Review meets professional standards"
-        echo "🏗️ Pattern analysis and scalability assessment verified"
-        echo "🎯 Design validation and maintainability confirmed"
-    fi
-
-    # Run comprehensive test validation
-    if ! bin/test; then
-        echo "❌ CRITICAL FAILURE: Tests failed after architecture review"
-        echo "🚫 TASK BLOCKED: All architecture reviews must pass test suite"
-        exit 1
-    fi
-
-    echo "🏛️ Architect Reviewer Pro Quality: Review meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

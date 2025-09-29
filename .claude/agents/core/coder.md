@@ -72,35 +72,15 @@ capabilities:
 priority: high
 hooks:
   pre: |
-    echo "🚀 MCP TOOLS READY: claude-context and serena prioritized for 100x speed"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
     if ! bin/test >/dev/null 2>&1; then
       echo "ALERT: Test broken detected"
+      exit 1
     fi
 
-    # MCP TOOL ADOPTION TRACKING: Record tool usage patterns
-    echo "📊 MCP ADOPTION: Recording tool usage for performance analysis"
-    npx claude-flow@alpha hooks memory-store \
-        --key "mcp-tool-adoption/coder/$(date +%s)" \
-        --value "claude-context:used,serena:used,performance:100x-improvement,task:$TASK"
-
-    # RETROSPECTIVE LEARNING: Enhanced with MCP tool patterns
-    echo "🧠 RETROSPECTIVE LEARNING: MCP-enhanced institutional memory"
-    if [[ -n "$TASK_SUCCESS" && "$TASK_SUCCESS" == "true" ]]; then
-        echo "📚 MCP SUCCESS PATTERN: Recording claude-context and serena usage"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/mcp_success_patterns/$(date +%Y%m%d)/$(echo $TASK | cut -c1-20)" \
-            --value "task:$TASK,agent:coder,outcome:success,tools:claude-context+serena,timestamp:$(date +%s)"
-    fi
-
-    # Store MCP tool effectiveness for cross-agent intelligence
-    echo "🔗 CROSS-AGENT MCP INTELLIGENCE: Sharing tool effectiveness with team"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/mcp_team_learning/coder/$(date +%s)" \
-        --value "task_type:$(echo $TASK | cut -d' ' -f1),mcp_tools:claude-context+serena,speed_improvement:100x"
-
-    echo "🚀 MCP PROTOCOL COMPLETE: claude-context and serena priority established"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

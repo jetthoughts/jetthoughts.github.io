@@ -28,51 +28,10 @@ capabilities:
   - professional_analytics_reporting
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED ANALYTICS REPORTER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating analytics task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with analytics work until reflection completes"
-        exit 1
-    fi
-
-    # Analytics Reporting Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(analytics|report|data|metrics|performance)"; then
-        echo "📊 ANALYTICS REPORTING ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Analytics reporting without professional quality standards"
-        echo "✅ REQUIRED: Follow data methodology, accuracy validation, visualization standards"
-    fi
-
-    echo "📊 Analytics Reporter starting comprehensive reporting: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED ANALYTICS REPORTING COMPLETION: $TASK"
-
-    # Validate analytics reporting quality and effectiveness
-    if echo "$TASK" | grep -iE "(analytics|report|data|metrics)"; then
-        echo "📊 ANALYTICS REPORTING VALIDATION: Checking professional quality standards"
-
-        # Analytics reporting effectiveness validation
-        echo "✅ Analytics Quality: Implementation meets professional standards"
-        echo "📈 Data accuracy and visualization standards verified"
-        echo "🎯 Trend analysis and insights validation confirmed"
-    fi
-
-    echo "📊 Analytics Reporter Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

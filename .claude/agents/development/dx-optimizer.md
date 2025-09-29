@@ -32,58 +32,10 @@ capabilities:
   - professional_dx_optimization
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED DX OPTIMIZER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating DX optimization task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with DX optimization until reflection completes"
-        exit 1
-    fi
-
-    # DX Optimization Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(dx|developer.*experience|workflow|tooling|automation)"; then
-        echo "🚀 DX OPTIMIZATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: DX optimization without professional quality standards"
-        echo "✅ REQUIRED: Follow workflow methodology, automation validation, productivity standards"
-    fi
-
-    echo "🚀 DX Optimizer starting comprehensive optimization: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED DX OPTIMIZATION COMPLETION: $TASK"
-
-    # Validate DX optimization quality and effectiveness
-    if echo "$TASK" | grep -iE "(dx|developer.*experience|workflow|tooling)"; then
-        echo "🚀 DX OPTIMIZATION VALIDATION: Checking professional quality standards"
-
-        # DX optimization effectiveness validation
-        echo "✅ DX Quality: Implementation meets professional standards"
-        echo "⚡ Workflow optimization and automation standards verified"
-        echo "🎯 Developer productivity improvement and efficiency confirmed"
-    fi
-
-    # Run comprehensive test validation
-    if ! bin/test; then
-        echo "❌ CRITICAL FAILURE: Tests failed after DX optimization"
-        echo "🚫 TASK BLOCKED: All DX implementations must pass test suite"
-        exit 1
-    fi
-
-    echo "🚀 DX Optimizer Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

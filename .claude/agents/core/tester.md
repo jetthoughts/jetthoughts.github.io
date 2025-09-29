@@ -48,112 +48,15 @@ capabilities:
   - testing_integration_management
 hooks:
   pre: |
-    if ! bin/rake test:all >/dev/null 2>&1; then
-      echo "ALERT: Test broken detected"
-    fi
-
-    echo "🛡️ SECURITY-ENFORCED TESTER STARTUP: $TASK"
-    echo "🔍 PRIMARY TOOLS: claude-context (830 files, 4,184 chunks) → serena → other MCP tools"
-    echo "📊 100x FASTER: Semantic test analysis and symbol navigation before grep/find/glob"
-
-    # MCP TOOL PRIORITY ENFORCEMENT: claude-context and serena FIRST
-    echo "🚀 MCP TOOL HIERARCHY: Enforcing claude-context and serena priority for testing"
-    echo "   1️⃣ claude-context: Semantic test analysis (100x faster than grep)"
-    echo "   2️⃣ serena: Precise test symbol navigation and coverage tracking"
-    echo "   3️⃣ Other MCP tools: context7, package-search, brave-search for external research"
-    echo "   ⚠️  grep/find/glob: LAST RESORT only after MCP tools exhausted"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating testing task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with testing until reflection completes"
-        exit 1
-    fi
-
-    # RETROSPECTIVE LEARNING: Sprint 2 Crisis Prevention Protocol
-    echo "🧠 INSTITUTIONAL MEMORY: Checking Sprint 2 crisis prevention patterns"
-    SPRINT2_PATTERNS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/sprint2_crisis/test_masking_patterns" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$SPRINT2_PATTERNS" != "none" ]]; then
-        echo "⚠️ SPRINT 2 CRISIS PREVENTION: Historical test masking patterns detected in memory"
-        echo "🛡️ ENHANCED VIGILANCE: Applying enhanced test quality enforcement based on past crisis"
-        echo "🔍 TOLERANCE LOCK: Visual regression tolerance LOCKED at ≤3% based on Sprint 2 lessons"
-        echo "🚫 MASKING PREVENTION: Enhanced detection of skip(), visible:all, timeout increases activated"
-    fi
-
-    # Check for test masking failure patterns from institutional memory
-    MASKING_HISTORY=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/failure_patterns/test_masking/$(echo $TASK | cut -c1-15)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$MASKING_HISTORY" != "none" ]]; then
-        echo "🚨 INSTITUTIONAL MEMORY ALERT: Similar tasks have historical test masking issues"
-        echo "📚 PREVENTION ACTIVATION: Applying learned prevention mechanisms: $MASKING_HISTORY"
-        echo "🔒 ENHANCED CONSTRAINTS: Additional neurological constraints activated for known failure patterns"
-    fi
-
-    echo "🛡️ Tester starting $TASK with security enforcement and test quality standards"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
     if ! bin/rake test:all >/dev/null 2>&1; then
       echo "ALERT: Test broken detected"
+      exit 1
     fi
 
-    echo "✅ SECURITY-VALIDATED TESTING COMPLETION: $TASK"
-    echo "🎯 MCP TOOL ADOPTION: claude-context and serena priority successfully implemented"
-    echo "📈 TESTING SPEED: 100x performance improvement through semantic test analysis"
-
-    # MCP TOOL ADOPTION TRACKING
-    echo "📊 MCP TOOL PERFORMANCE TRACKING:"
-    echo "   • claude-context: 830 files indexed, 4,184 chunks analyzed for test patterns"
-    echo "   • serena: Precise test symbol navigation completed"
-    echo "   • Speed improvement: 100x faster than traditional grep/find approaches"
-    echo "   • Test analysis quality: Enhanced semantic understanding achieved"
-
-    # Validate testing quality and behavioral compliance
-    if echo "$TASK" | grep -iE "(test|validate|spec|coverage)"; then
-        echo "🧪 TESTING VALIDATION: Checking test quality and behavior validation"
-        echo "✅ Testing meets TDD standards and quality requirements"
-        echo "🔍 Test coverage and assertion completeness verified"
-    fi
-
-    # RETROSPECTIVE LEARNING: Contribute testing intelligence to institutional memory
-    echo "🧠 INSTITUTIONAL MEMORY: Contributing testing outcomes to collective intelligence"
-
-    # Record successful test quality patterns
-    if [[ -z "$TEST_MASKING_DETECTED" ]]; then
-        echo "📚 LEARNING CONTRIBUTION: Recording successful test quality enforcement"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/success_patterns/test_quality/$(date +%Y%m%d)/$(echo $TASK | cut -c1-20)" \
-            --value "task:$TASK,agent:tester,outcome:clean_tests,no_masking_detected,timestamp:$(date +%s)"
-    fi
-
-    # Contribute to Sprint 2 crisis prevention knowledge
-    echo "🛡️ SPRINT 2 PREVENTION: Recording crisis prevention effectiveness"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/sprint2_prevention/tester/$(date +%s)" \
-        --value "task_type:$(echo $TASK | cut -d' ' -f1),masking_prevention_applied,tolerance_limits_enforced"
-
-    # Share behavioral testing insights across agent ecosystem
-    echo "🔗 CROSS-AGENT INTELLIGENCE: Sharing test quality insights with team"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/team_learning/tester/behavioral_patterns/$(date +%s)" \
-        --value "task:behavioral_testing,patterns_enforced,quality_maintained"
-
-    echo "🧪 Tester security validation completed successfully"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

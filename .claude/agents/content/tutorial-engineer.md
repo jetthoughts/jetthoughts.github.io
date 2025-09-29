@@ -32,51 +32,10 @@ capabilities:
   - professional_tutorial_engineering
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED TUTORIAL ENGINEER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating tutorial development task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with tutorial development until reflection completes"
-        exit 1
-    fi
-
-    # Tutorial Development Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(tutorial|guide|documentation|educational|learning)"; then
-        echo "📚 TUTORIAL DEVELOPMENT ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Tutorial development without professional quality standards"
-        echo "✅ REQUIRED: Follow pedagogical methodology, learning validation, educational standards"
-    fi
-
-    echo "📚 Tutorial Engineer starting comprehensive development: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED TUTORIAL DEVELOPMENT COMPLETION: $TASK"
-
-    # Validate tutorial development quality and effectiveness
-    if echo "$TASK" | grep -iE "(tutorial|guide|documentation|educational)"; then
-        echo "📚 TUTORIAL DEVELOPMENT VALIDATION: Checking professional quality standards"
-
-        # Tutorial development effectiveness validation
-        echo "✅ Educational Quality: Tutorial meets professional standards"
-        echo "🎯 Pedagogical design and learning effectiveness verified"
-        echo "📖 Progressive disclosure and hands-on learning confirmed"
-    fi
-
-    echo "📚 Tutorial Engineer Pro Quality: Development meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

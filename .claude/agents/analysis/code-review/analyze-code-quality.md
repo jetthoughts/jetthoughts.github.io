@@ -28,51 +28,10 @@ capabilities:
   - professional_quality_analysis
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED CODE QUALITY ANALYZER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating code analysis task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with code analysis until reflection completes"
-        exit 1
-    fi
-
-    # Code Quality Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(analysis|quality|review|refactor|smell|debt)"; then
-        echo "🔍 CODE QUALITY ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Code analysis without professional quality standards"
-        echo "✅ REQUIRED: Follow quality methodology, analysis validation, standard compliance"
-    fi
-
-    echo "🔍 Code Quality Analyzer starting comprehensive analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CODE QUALITY ANALYSIS COMPLETION: $TASK"
-
-    # Validate analysis quality and effectiveness
-    if echo "$TASK" | grep -iE "(analysis|quality|review|refactor)"; then
-        echo "🔍 CODE QUALITY VALIDATION: Checking professional analysis standards"
-
-        # Analysis effectiveness validation
-        echo "✅ Analysis Quality: Implementation meets professional standards"
-        echo "📊 Code quality assessment and improvement suggestions verified"
-        echo "🎯 Best practices validation and technical debt analysis confirmed"
-    fi
-
-    echo "🔍 Code Quality Analysis Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

@@ -65,111 +65,15 @@ capabilities:
   - professional_hugo_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED HUGO DEVELOPER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating Hugo development task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with Hugo development until reflection completes"
-        exit 1
-    fi
-
-    # RETROSPECTIVE LEARNING: Enhanced Hugo development pattern intelligence with claude-context search
-    echo "🧠 INSTITUTIONAL MEMORY: Accessing Hugo development pattern intelligence"
-    echo "🔍 CLAUDE-CONTEXT SEARCH: Analyzing Hugo failure patterns from institutional library"
-
-    # Enhanced pattern search using claude-context as requested
-    HUGO_PATTERN_SEARCH=$(npx claude-flow@alpha hooks search-patterns \
-        --search-tool "claude-context" \
-        --pattern "hugo $(echo $TASK | cut -c1-15)" \
-        --namespace "retrospective/hugo_patterns" 2>/dev/null || echo "none")
-
-    HUGO_PATTERNS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/hugo_patterns/$(echo $TASK | cut -c1-20)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$HUGO_PATTERNS" != "none" || "$HUGO_PATTERN_SEARCH" != "none" ]]; then
-        echo "📚 HISTORICAL INTELLIGENCE: Hugo patterns found via memory and claude-context search"
-        echo "🏗️ ENHANCED DEVELOPMENT FOCUS: Memory patterns: $HUGO_PATTERNS"
-        echo "🔍 SEARCH INTELLIGENCE: Claude-context patterns: $HUGO_PATTERN_SEARCH"
-        echo "🛡️ VISUAL REGRESSION VIGILANCE: Enhanced detection based on comprehensive pattern analysis"
-    fi
-
-    # Check for Hugo complexity patterns using enhanced search capabilities
-    COMPLEXITY_SEARCH=$(npx claude-flow@alpha hooks search-patterns \
-        --search-tool "claude-context" \
-        --pattern "hugo complexity crisis" \
-        --namespace "retrospective/hugo_complexity" 2>/dev/null || echo "none")
-
-    COMPLEXITY_HISTORY=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/hugo_complexity/$(echo $TASK | cut -c1-15)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$COMPLEXITY_HISTORY" != "none" || "$COMPLEXITY_SEARCH" != "none" ]]; then
-        echo "⚠️ COMPLEXITY ALERT: Historical Hugo complexity issues detected via enhanced search"
-        echo "📚 PREVENTION ACTIVATION: Memory patterns: $COMPLEXITY_HISTORY"
-        echo "🔍 SEARCH INTELLIGENCE: Claude-context patterns: $COMPLEXITY_SEARCH"
-        echo "🔒 ENHANCED SAFEGUARDS: Additional neurological constraints activated for complex Hugo patterns"
-        echo "🚨 SPRINT 2 PREVENTION: Crisis-level complexity monitoring activated based on institutional memory"
-    fi
-
-    # Hugo Development Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(hugo|template|shortcode|theme|build)"; then
-        echo "🏗️ HUGO DEVELOPMENT ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Hugo development without professional quality standards"
-        echo "✅ REQUIRED: Follow template validation, performance optimization, build compliance"
-    fi
-
-    echo "🏗️ Hugo Site Developer starting comprehensive development: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED HUGO DEVELOPMENT COMPLETION: $TASK"
-
-    # Validate Hugo development quality and performance
-    if echo "$TASK" | grep -iE "(hugo|template|shortcode|theme)"; then
-        echo "🏗️ HUGO DEVELOPMENT VALIDATION: Checking professional quality standards"
-
-        # Hugo development effectiveness validation
-        echo "✅ Hugo Development Quality: Implementation meets professional standards"
-        echo "🏗️ Template validation and performance optimization verified"
-        echo "🧪 Build compliance and static site optimization confirmed"
+    if ! bin/rake test:critical >/dev/null 2>&1; then
+      echo "ALERT: Test broken detected"
+      exit 1
     fi
 
-    # RETROSPECTIVE LEARNING: Contribute Hugo development intelligence
-    echo "🧠 INSTITUTIONAL MEMORY: Contributing Hugo development outcomes"
-
-    # Record successful Hugo patterns
-    if [[ -z "$VISUAL_REGRESSION_DETECTED" && -z "$BUILD_FAILURES" ]]; then
-        echo "📚 LEARNING CONTRIBUTION: Recording successful Hugo development approach"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/success_patterns/hugo_development/$(date +%Y%m%d)/$(echo $TASK | cut -c1-20)" \
-            --value "task:$TASK,agent:hugo-site-developer,outcome:clean_build,no_regressions,timestamp:$(date +%s)"
-    fi
-
-    # Contribute to Hugo complexity management intelligence
-    echo "🏗️ HUGO COMPLEXITY INTELLIGENCE: Recording complexity management patterns"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/hugo_complexity_management/$(date +%s)" \
-        --value "task_type:$(echo $TASK | cut -d' ' -f1),complexity_managed,safeguards_applied"
-
-    # Share Hugo development insights across agent ecosystem
-    echo "🔗 CROSS-AGENT INTELLIGENCE: Sharing Hugo development insights with team"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/team_learning/hugo_developer/patterns/$(date +%s)" \
-        --value "task:hugo_development,professional_standards_met,visual_quality_maintained"
-
-    echo "🏗️ Hugo Development Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

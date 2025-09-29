@@ -12,14 +12,11 @@ capabilities:
   - workload-prediction
 hooks:
   pre: |
-    echo "🤖 Smart Agent Coordinator initializing..."
-    echo "📊 Analyzing task requirements and resource availability"
-    # Check current swarm status
-    memory_retrieve "current_swarm_status" || echo "No active swarm detected"
+    echo "🚀 Starting task: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Smart coordination complete"
-    memory_store "last_coordination_$(date +%s)" "Intelligent agent coordination executed"
-    echo "💡 Agent spawning patterns learned and stored"
+    echo "✅ Completed task: $TASK"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Smart Agent Coordinator

@@ -30,54 +30,10 @@ capabilities:
   - pattern_discovery_research
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED ARCHITECTURE EXPERT STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating architectural task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with architecture until reflection completes"
-        exit 1
-    fi
-
-    # Architectural Research Enforcement
-    if echo "$TASK" | grep -iE "(design|architecture|structure|pattern)"; then
-        echo "🏗️ ARCHITECTURE RESEARCH ENFORCEMENT: Pattern analysis required"
-        echo "🚫 BLOCKED: Architecture work without research validation"
-        echo "✅ REQUIRED: Research existing patterns, validate against global standards"
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED ARCHITECTURE COMPLETION: $TASK"
-
-    # Validate architectural decisions documentation
-    if echo "$TASK" | grep -iE "(design|architecture|pattern|structure)"; then
-        echo "🏗️ ARCHITECTURE VALIDATION: Checking decision documentation"
-
-        # Verify architectural decisions are testable and maintainable
-        echo "📋 ARCHITECTURAL QUALITY GATES:"
-        echo "   ✓ Simplicity first - avoid over-engineering"
-        echo "   ✓ Existing tools leveraged before new solutions"
-        echo "   ✓ SOLID principles applied"
-        echo "   ✓ Clear migration path defined"
-        echo "   ✓ Performance implications considered"
-        echo "   ✓ Security implications validated"
-    fi
-
-    echo "🏗️ Architecture Quality: Design meets standards and is implementable"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

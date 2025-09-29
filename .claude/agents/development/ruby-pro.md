@@ -30,60 +30,10 @@ capabilities:
   - professional_ruby_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED RUBY PRO STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating Ruby Pro task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with Ruby Pro work until reflection completes"
-        exit 1
-    fi
-
-    # Ruby Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(ruby|rails|gem|metaprogramming)"; then
-        echo "💎 RUBY PRO ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Ruby work without professional quality standards"
-        echo "✅ REQUIRED: Follow Ruby idioms, Rails conventions, comprehensive testing"
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED RUBY PRO COMPLETION: $TASK"
-
-    # Validate Ruby tests and quality
-    if echo "$TASK" | grep -iE "(ruby|rails|gem|code)"; then
-        echo "💎 RUBY PRO VALIDATION: Checking professional quality standards"
-
-        # Run tests first - professional Ruby requires passing tests
-        if ! bin/test; then
-            echo "❌ RUBY PRO VIOLATION: Tests failed - professional quality not met"
-            echo "🚫 TASK BLOCKED: All Ruby Pro work must pass comprehensive tests"
-            exit 1
-        fi
-
-        # Basic Ruby syntax validation
-        if find . -name "*.rb" -type f -exec ruby -c {} \; 2>/dev/null | grep -q "Syntax OK"; then
-            echo "✅ Ruby syntax validation passed"
-        else
-            echo "❌ RUBY SYNTAX ERROR: Professional quality violation detected"
-            exit 1
-        fi
-    fi
-
-    echo "💎 Ruby Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

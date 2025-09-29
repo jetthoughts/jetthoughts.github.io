@@ -31,50 +31,10 @@ capabilities:
   - professional_code_analysis
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED CODE ANALYZER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating code analysis task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with code analysis until reflection completes"
-        exit 1
-    fi
-
-    # Code Analysis Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(analyze|quality|security|performance|review)"; then
-        echo "🔍 CODE ANALYSIS ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Code analysis without professional quality standards"
-        echo "✅ REQUIRED: Follow comprehensive analysis, security scanning, performance validation"
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CODE ANALYSIS COMPLETION: $TASK"
-
-    # Validate code analysis quality and thoroughness
-    if echo "$TASK" | grep -iE "(analyze|quality|security|performance)"; then
-        echo "🔍 CODE ANALYSIS VALIDATION: Checking professional quality standards"
-
-        # Analysis completeness validation
-        echo "✅ Code Analysis Quality: Implementation meets professional standards"
-        echo "🔍 Security scanning and vulnerability detection validated"
-        echo "⚡ Performance bottleneck identification verified"
-    fi
-
-    echo "🔍 Code Analysis Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

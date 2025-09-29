@@ -32,51 +32,10 @@ capabilities:
   - professional_ruby_review
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED RUBY REVIEWER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating Ruby review task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with Ruby review until reflection completes"
-        exit 1
-    fi
-
-    # Ruby Review Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(review|validate|assess|audit|quality)"; then
-        echo "🔍 RUBY REVIEW ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Ruby code review without professional quality standards"
-        echo "✅ REQUIRED: Follow comprehensive review, Ruby idioms validation, testing assessment"
-    fi
-
-    echo "💎 Ruby Code Reviewer starting comprehensive review: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED RUBY REVIEW COMPLETION: $TASK"
-
-    # Validate Ruby review quality and thoroughness
-    if echo "$TASK" | grep -iE "(review|validate|assess|quality)"; then
-        echo "🔍 RUBY REVIEW VALIDATION: Checking professional quality standards"
-
-        # Review completeness validation
-        echo "✅ Ruby Review Quality: Implementation meets professional standards"
-        echo "💎 Ruby idioms and Rails patterns validated"
-        echo "🧪 Test quality and coverage assessment verified"
-    fi
-
-    echo "💎 Ruby Review Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

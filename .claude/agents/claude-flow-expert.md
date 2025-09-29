@@ -31,51 +31,10 @@ capabilities:
   - memory_based_coordination
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED CLAUDE-FLOW EXPERT STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating claude-flow validation task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with claude-flow validation until reflection completes"
-        exit 1
-    fi
-
-    # Claude-Flow Validation Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(validate|configure|compliance|quality|pattern)"; then
-        echo "⚙️ CLAUDE-FLOW VALIDATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Configuration validation without professional quality standards"
-        echo "✅ REQUIRED: Follow 7-field frontmatter, best practices enforcement, quality gate validation"
-    fi
-
-    echo "⚙️ Claude-Flow Expert starting comprehensive validation: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CLAUDE-FLOW VALIDATION COMPLETION: $TASK"
-
-    # Validate claude-flow configuration quality and compliance
-    if echo "$TASK" | grep -iE "(validate|configure|compliance|quality)"; then
-        echo "⚙️ CLAUDE-FLOW VALIDATION: Checking professional quality standards"
-
-        # Configuration validation completeness
-        echo "✅ Claude-Flow Validation Quality: Implementation meets professional standards"
-        echo "📋 7-field frontmatter structure and best practices validated"
-        echo "🎯 Quality gate validation and ecosystem compatibility verified"
-    fi
-
-    echo "⚙️ Claude-Flow Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

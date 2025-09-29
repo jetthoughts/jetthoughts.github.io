@@ -33,11 +33,10 @@ capabilities:
   - professional_swarm_coordination
 hooks:
   pre: |
-    echo "👑 Hierarchical Coordinator starting $TASK with strategic planning"
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Hierarchical Coordinator completed $TASK with swarm supervision"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

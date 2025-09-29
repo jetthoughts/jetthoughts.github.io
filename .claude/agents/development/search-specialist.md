@@ -30,50 +30,10 @@ capabilities:
   - professional_research_methods
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEARCH SPECIALIST STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating search task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with search research until reflection completes"
-        exit 1
-    fi
-
-    # Search Research Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(search|research|investigate|analyze|verify)"; then
-        echo "🔍 SEARCH RESEARCH ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Web research without professional quality standards"
-        echo "✅ REQUIRED: Follow advanced search techniques, multi-source verification, credibility assessment"
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED SEARCH RESEARCH COMPLETION: $TASK"
-
-    # Validate search research quality and thoroughness
-    if echo "$TASK" | grep -iE "(search|research|investigate|verify)"; then
-        echo "🔍 SEARCH RESEARCH VALIDATION: Checking professional quality standards"
-
-        # Research quality validation
-        echo "✅ Search Research Quality: Implementation meets professional standards"
-        echo "📊 Multi-source verification and fact-checking validated"
-        echo "🎯 Advanced search techniques and credibility assessment verified"
-    fi
-
-    echo "🔍 Search Research Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

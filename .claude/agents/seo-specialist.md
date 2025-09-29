@@ -33,51 +33,10 @@ capabilities:
   - professional_seo_management
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO SPECIALIST STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating SEO task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with SEO optimization until reflection completes"
-        exit 1
-    fi
-
-    # SEO Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(seo|meta|schema|optimization|search)"; then
-        echo "🔍 SEO ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: SEO work without professional quality standards"
-        echo "✅ REQUIRED: Follow technical SEO validation, content optimization, performance analysis"
-    fi
-
-    echo "🔍 SEO Specialist starting comprehensive optimization: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED SEO OPTIMIZATION COMPLETION: $TASK"
-
-    # Validate SEO optimization quality and effectiveness
-    if echo "$TASK" | grep -iE "(seo|meta|schema|optimization)"; then
-        echo "🔍 SEO VALIDATION: Checking professional quality standards"
-
-        # SEO implementation effectiveness validation
-        echo "✅ SEO Optimization Quality: Implementation meets professional standards"
-        echo "📊 Technical SEO and meta tag implementation validated"
-        echo "⚡ Performance optimization and Core Web Vitals verified"
-    fi
-
-    echo "🔍 SEO Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

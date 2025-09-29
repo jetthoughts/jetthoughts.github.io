@@ -50,117 +50,15 @@ capabilities:
   - review_integration_management
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED REVIEWER STARTUP: $TASK"
-    echo "🔍 PRIMARY TOOLS: claude-context (830 files, 4,184 chunks) → serena → other MCP tools"
-    echo "📊 100x FASTER: Semantic code review and pattern analysis before grep/find/glob"
-
-    # MCP TOOL PRIORITY ENFORCEMENT: claude-context and serena FIRST
-    echo "🚀 MCP TOOL HIERARCHY: Enforcing claude-context and serena priority for reviews"
-    echo "   1️⃣ claude-context: Semantic codebase analysis (100x faster than grep)"
-    echo "   2️⃣ serena: Precise symbol navigation and dependency tracking"
-    echo "   3️⃣ Other MCP tools: context7, package-search for framework compliance"
-    echo "   ⚠️ grep/find/glob: LAST RESORT only after MCP tools exhausted"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating review task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with review until reflection completes"
-        exit 1
-    fi
-
-    # RETROSPECTIVE LEARNING: Review Pattern Intelligence
-    echo "🧠 INSTITUTIONAL MEMORY: Accessing review pattern intelligence"
-    REVIEW_PATTERNS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/review_patterns/$(echo $TASK | cut -c1-20)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$REVIEW_PATTERNS" != "none" ]]; then
-        echo "📚 HISTORICAL INTELLIGENCE: Similar review patterns found in institutional memory"
-        echo "🔍 ENHANCED REVIEW FOCUS: Applying learned review emphasis: $REVIEW_PATTERNS"
-        echo "🛡️ QUALITY INTELLIGENCE: Enhanced quality detection based on past review outcomes"
-    fi
-
-    # Check for handbook violation patterns in institutional memory
-    VIOLATION_HISTORY=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/handbook_violations/$(echo $TASK | cut -c1-15)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$VIOLATION_HISTORY" != "none" ]]; then
-        echo "⚠️ HANDBOOK VIOLATION ALERT: Historical violations detected for similar work"
-        echo "📚 PREVENTION ACTIVATION: Enhanced handbook compliance checking: $VIOLATION_HISTORY"
-        echo "🔒 ENHANCED SCRUTINY: Additional review layers activated for known violation patterns"
-    fi
-
-    echo "🛡️ Reviewer starting $TASK with security enforcement and handbook compliance"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED REVIEW COMPLETION: $TASK"
-
     if ! bin/rake test:all >/dev/null 2>&1; then
       echo "ALERT: Test broken detected"
+      exit 1
     fi
 
-    # Validate review quality and handbook compliance
-    if echo "$TASK" | grep -iE "(review|validate|check|audit)"; then
-        echo "📋 REVIEW VALIDATION: Checking review thoroughness and compliance"
-        echo "✅ Review meets handbook standards and quality requirements"
-        echo "🔍 Validation completeness and accuracy verified"
-    fi
-
-    # RETROSPECTIVE LEARNING: Contribute review intelligence to institutional memory
-    echo "🧠 INSTITUTIONAL MEMORY: Contributing review outcomes to collective intelligence"
-
-    # Record successful review patterns
-    if [[ -z "$HANDBOOK_VIOLATIONS_DETECTED" && -z "$TEST_MASKING_DETECTED" ]]; then
-        echo "📚 LEARNING CONTRIBUTION: Recording successful review approach"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/success_patterns/review_quality/$(date +%Y%m%d)/$(echo $TASK | cut -c1-20)" \
-            --value "task:$TASK,agent:reviewer,outcome:clean_review,no_violations,timestamp:$(date +%s)"
-    fi
-
-    # Contribute to handbook compliance intelligence
-    echo "📚 HANDBOOK INTELLIGENCE: Recording handbook compliance patterns"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/handbook_compliance/reviewer/$(date +%s)" \
-        --value "task_type:$(echo $TASK | cut -d' ' -f1),compliance_verified,global_standards_enforced"
-
-    # Share review quality insights across agent ecosystem
-    echo "🔗 CROSS-AGENT INTELLIGENCE: Sharing review quality insights with team"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/team_learning/reviewer/quality_patterns/$(date +%s)" \
-        --value "task:quality_review,standards_applied,four_eyes_completed"
-
-    # Document prevention mechanism effectiveness
-    if [[ -n "$PREVENTION_MECHANISMS_APPLIED" ]]; then
-        echo "🛡️ PREVENTION EFFECTIVENESS: Recording prevention mechanism outcomes"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/prevention_effectiveness/reviewer/$(date +%s)" \
-            --value "mechanisms_applied:$PREVENTION_MECHANISMS_APPLIED,effectiveness:measured"
-    fi
-
-    echo "📋 Reviewer security validation completed successfully"
-    echo "🚀 MCP PRIORITY SUCCESS: claude-context and serena tools effectively prioritized"
-    echo "🎯 MCP TOOL ADOPTION: claude-context and serena priority successfully implemented"
-    echo "📈 REVIEW SPEED: 100x performance improvement through semantic analysis"
-
-    # MCP TOOL ADOPTION TRACKING
-    echo "📊 MCP TOOL PERFORMANCE TRACKING:"
-    echo "   • claude-context: 830 files indexed, semantic code analysis completed"
-    echo "   • serena: Precise symbol dependency tracking completed"
-    echo "   • Speed improvement: 100x faster than traditional grep-based reviews"
-    echo "   • Review quality: Enhanced semantic understanding achieved"
-
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

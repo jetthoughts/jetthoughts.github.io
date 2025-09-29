@@ -63,49 +63,10 @@ capabilities:
   - dual_class_transition_planning
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED PLANNER STARTUP: $TASK"
-
-    # CSS Migration Project Roadmap Check
-    echo "📅 CSS MIGRATION ROADMAP: Checking established migration phases"
-    if [ -f "projects/2509-css-migration/30-39-documentation/30.02-roadmap.md" ]; then
-      echo "📋 Following established migration phases and roadmap"
-      echo "🔍 Current Phase: Critical CSS Consolidation (13 files duplication focus)"
-      echo "📊 Planning within: Phase 2 scope, following existing roadmap structure"
-    fi
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating planning task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with planning until reflection completes"
-        exit 1
-    fi
-
-    echo "🛡️ Planner starting $TASK with security enforcement and strategic coordination"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED PLANNING COMPLETION: $TASK"
-
-    # Validate planning quality and strategic alignment
-    if echo "$TASK" | grep -iE "(plan|strategy|coordinate|organize)"; then
-        echo "📋 PLANNING VALIDATION: Checking strategic alignment and coordination quality"
-        echo "✅ Planning meets handbook standards and strategic requirements"
-        echo "🎯 Strategic coordination and multi-agent alignment verified"
-    fi
-
-    echo "📋 Planner security validation completed successfully"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
