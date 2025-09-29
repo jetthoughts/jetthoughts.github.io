@@ -15,9 +15,6 @@
 
 
 
-.fl-builder-mobile .fl-row-bg-photo .fl-row-content-wrap {
-  background-attachment: scroll;
-}
 
 .fl-row-bg-video, .fl-row-bg-video .fl-row-content, .fl-row-bg-embed, .fl-row-bg-embed .fl-row-content {
   position: relative;
