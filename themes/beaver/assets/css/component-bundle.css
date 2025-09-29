@@ -2896,3 +2896,12 @@ body:not(.single-fl-theme-layout)
 
 /* Include PowerPack InfoBox Component (410 lines) */
 @import "components/c-pp-infobox.css";
+
+/* Sprint 3: Core Components Integration */
+/* Hero Sections, CTA Blocks, and Testimonials */
+
+/* Include Hero Sections Component (312+ patterns, 1095 lines) */
+@import "components/c-hero-sections.css";
+
+/* Include CTA Blocks Component (189+ patterns, 53 lines) */
+@import "components/c-cta-blocks.css";
