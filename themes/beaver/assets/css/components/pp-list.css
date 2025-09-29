@@ -1,0 +1,23 @@
+/* ==========================================================================
+   PowerPack List Component
+   Extracted FL-Builder PowerPack list patterns with proper scoping
+   Conservative implementation with full FL-Builder backward compatibility
+   ========================================================================== */
+
+/**
+ * pp-list: Info List System
+ * Usage: Structured lists with icons, connectors, and content
+ * Scoping: All selectors use .pp-list- or .pp-infolist- prefix to prevent global conflicts
+ */
+
+/* List Item Base */
+.pp-list-item {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* List Item Content */
+.pp-list-item-content {
+  display: block;
+  padding: 10px;
+}
