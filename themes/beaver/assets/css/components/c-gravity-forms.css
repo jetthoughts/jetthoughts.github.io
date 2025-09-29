@@ -199,3 +199,35 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .c-gravity-form__radio-field .c-gravity-form__input {
   width: auto !important;
 }
+
+/* Complex input display handling */
+.pp-gf-content .gform_wrapper .ginput_complex span.ginput_full,
+.c-gravity-form__complex-span {
+  display: block;
+}
+
+/* Field description styling */
+.pp-gf-content .gform_wrapper .gfield .gfield_description,
+.c-gravity-form__description {
+  padding-top: 5px;
+}
+
+/* Section title styling */
+.pp-gf-content .gform_wrapper h2.gsection_title,
+.c-gravity-form__section-title {
+  margin-bottom: 0;
+}
+
+/* Mobile responsive - half field padding reset */
+@media only screen and (max-width: 640px) {
+  .pp-gf-content .gform_wrapper ul.gform_fields li.gfield.gf_left_half,
+  .c-gravity-form__field--left-half {
+    padding-right: 0;
+  }
+}
+
+/* Node-specific wrapper styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper,
+.c-gravity-form__wrapper--special {
+  max-width: 100%;
+}
