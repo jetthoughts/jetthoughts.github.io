@@ -1,0 +1,11 @@
+/* ==========================================================================
+   PowerPack List Component
+   Modular List component styles extracted from fl-clients-alt-bundle.css
+   for better organization and reusability
+   ========================================================================== */
+
+/* List Item Base Styles */
+.pp-list-item {
+  display: flex;
+  align-items: flex-start;
+}
