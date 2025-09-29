@@ -2954,37 +2954,11 @@ img.mfp-img {
 /* Moved: PowerPack InfoBox base styles - now in utilities/components/powerpack/infobox.css */
 /* Moved: PowerPack InfoBox clearfix and link wrapper - now in utilities/components/powerpack/infobox.css */
 
-.pp-infobox-title-prefix {
-  display: block;
-}
+/* Moved: PowerPack InfoBox title components - now in utilities/components/powerpack/infobox.css */
 
-.pp-infobox-title-wrapper .pp-infobox-title {
-  margin-bottom: 5px;
-  margin-top: 0;
-}
+/* Moved: PowerPack InfoBox description styles - now in utilities/components/powerpack/infobox.css */
 
-.pp-infobox-description p {
-  margin-bottom: 15px;
-}
-
-.pp-infobox-description p:last-of-type {
-  margin-bottom: 0 !important;
-}
-
-.pp-more-link {
-  color: inherit;
-  display: block;
-  text-decoration: none;
-  box-shadow: none;
-}
-
-.pp-infobox .pp-more-link {
-  display: inline-block;
-}
-
-.pp-more-link:hover {
-  text-decoration: none;
-}
+/* Moved: PowerPack InfoBox link and hover styles - now in utilities/components/powerpack/infobox.css */
 
 .pp-infobox-icon-inner .dashicons, .pp-infobox-icon-inner .dashicons-before:before {
   height: auto;
