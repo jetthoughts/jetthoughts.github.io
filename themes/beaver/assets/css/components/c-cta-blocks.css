@@ -31,3 +31,9 @@
 .fl-builder-content .fl-node-header-nav-contat-us-btn-nested .fl-button-wrap a.fl-button {
   padding: 9px 18px 10px 18px;
 }
+
+/* CTA Button Typography - Header Contact Button */
+.fl-builder-content .fl-node-header-nav-contat-us-btn-nested a.fl-button,
+.fl-builder-content .fl-node-header-nav-contat-us-btn-nested a.fl-button:visited {
+  font-size: 15px;
+}
