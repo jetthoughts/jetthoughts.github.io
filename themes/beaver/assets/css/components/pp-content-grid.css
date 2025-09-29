@@ -1,0 +1,23 @@
+/* ==========================================================================
+   PowerPack Content Grid Component
+   Extracted FL-Builder PowerPack patterns with proper scoping
+   Conservative implementation with full FL-Builder backward compatibility
+   ========================================================================== */
+
+/**
+ * pp-content-grid: Core Layout System
+ * Usage: Grid-based content layouts for posts and articles
+ * Scoping: All selectors use .pp-content- prefix to prevent global conflicts
+ */
+
+/* Grid Container - Post Layout */
+.pp-content-grid-post {
+  @extend .c-card;
+  position: relative;
+}
+
+/* Grid Image Container */
+.pp-content-grid-image > a {
+  display: block;
+  line-height: 0;
+}
