@@ -45,3 +45,8 @@
   margin: 0;
   padding: 0;
 }
+
+.pp-content-grid-pagination li {
+  display: inline-block;
+  margin: 0;
+}
