@@ -12,9 +12,6 @@
 
 
 
-.fl-col-group-equal-height .fl-col.fl-visible-desktop {
-  display: flex;
-}
 
 .fl-row, .fl-row-content {
   margin-left: auto;
