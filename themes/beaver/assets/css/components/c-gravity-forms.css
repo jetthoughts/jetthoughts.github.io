@@ -166,3 +166,36 @@
 .c-gravity-form__field--right-half .c-gravity-form__select {
   width: 100% !important;
 }
+
+/* Complex input field handling */
+.gform_wrapper .ginput_complex input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="image"]):not([type="file"]),
+.c-gravity-form__complex-input {
+  width: 100% !important;
+}
+
+/* Browser-specific checkbox and radio adjustments */
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
+.c-gravity-form__checkbox--chrome,
+.c-gravity-form__radio--chrome {
+  margin-top: 0 !important;
+}
+
+/* Complex field label positioning */
+div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.c-gravity-form__complex-label {
+  margin-bottom: 0;
+}
+
+/* Field margin reset */
+.pp-gf-content .gform_wrapper ul li.gfield,
+.c-gravity-form__field {
+  margin-top: 0;
+}
+
+/* Radio field special input handling */
+.pp-gf-content .gform_wrapper ul.gfield_radio li input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.c-gravity-form__radio-field .c-gravity-form__input {
+  width: auto !important;
+}
