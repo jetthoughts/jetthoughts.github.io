@@ -1,9 +1,10 @@
 /**
  * Navigation Component (c-navigation)
  *
- * CYCLE 7: Navigation System Enhancement
- * Unified navigation component consolidating menu and nav styles
- * Target: 35-40% reduction of navigation CSS
+ * SPRINT 1: Navigation CSS Extraction - 82 Patterns
+ * Comprehensive BEM-based navigation system consolidating all nav patterns
+ * Target: Complete extraction of navigation patterns from legacy CSS
+ * Progress: Extracting patterns 1-82 using c-navigation prefix
  */
 
 .c-nav {
@@ -77,4 +78,795 @@
 .fl-menu-link:hover {
   background-color: #1a8cff;
   color: white;
+}
+
+/* ===== BATCH 1: Main Navigation Patterns (Patterns 1-15) ===== */
+
+/* Pattern 1: Main navigation container */
+.c-navigation {
+  @media (max-width: 1024px) {
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    right: -320px;
+    z-index: 10;
+    transition: .3s;
+  }
+}
+
+/* Pattern 2: Mobile menu opener */
+.c-navigation__menu-opener {
+  display: none;
+  width: 30px;
+  height: 19px;
+  border: solid #121212;
+  border-width: 3px 0;
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+/* Pattern 3: Menu opener hamburger line */
+.c-navigation__menu-opener:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #121212;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+}
+
+/* Pattern 4: Menu close button */
+.c-navigation__menu-close {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  cursor: pointer;
+}
+
+/* Pattern 5: Menu close X lines */
+.c-navigation__menu-close:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #121212;
+  left: 4px;
+  right: 4px;
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Pattern 6: Menu close second X line */
+.c-navigation__menu-close:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #121212;
+  left: 4px;
+  right: 4px;
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(-45deg);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Pattern 7: Navigation list container */
+.c-navigation__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pattern 8: Navigation item */
+.c-navigation__item {
+  padding: 15px 0;
+  margin-right: 9px;
+  position: relative;
+}
+
+/* Pattern 9: Last navigation item */
+.c-navigation__item:last-child {
+  margin-right: 0;
+}
+
+/* Pattern 10: Navigation item arrow */
+.c-navigation__item-arrow {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -6px;
+  width: 9px;
+  height: 9px;
+  border-color: #121212;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  transform-origin: 70% 70%;
+  transform: rotate(45deg);
+  transition: .3s;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Pattern 11: Navigation link base */
+.c-navigation__link {
+  padding: 15px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #121212;
+  text-decoration: none;
+  transition: .3s;
+}
+
+/* Pattern 12: Active navigation link */
+.c-navigation__item--active .c-navigation__link {
+  color: #1a8cff;
+}
+
+/* Pattern 13: Active navigation arrow */
+.c-navigation__item--active .c-navigation__item-arrow {
+  border-color: #1a8cff;
+}
+
+/* Pattern 14: Mobile navigation open state */
+.c-navigation--open {
+  @media (max-width: 1024px) {
+    right: 0;
+    overflow-y: auto;
+  }
+}
+
+/* Pattern 15: Menu close button visibility in open state */
+.c-navigation--open .c-navigation__menu-close {
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+/* ===== BATCH 2: Submenu and Dropdown Patterns (Patterns 16-30) ===== */
+
+/* Pattern 16: Submenu container */
+.c-navigation__submenu {
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 0 10px 40px rgba(0,0,0,.1);
+  border-radius: 20px;
+  padding: 30px 30px 0;
+  margin: 30px 0 0;
+  position: absolute;
+  top: 100%;
+  margin-top: 0;
+  left: 0;
+  z-index: 10;
+  text-align: left;
+  width: 888px;
+  transform: translateX(-40%);
+  font-size: 0;
+  backface-visibility: hidden;
+  will-change: transform;
+  line-height: 0;
+
+  @media (max-width: 1080px) {
+    width: 720px;
+  }
+}
+
+/* Pattern 17: Submenu arrow pointer */
+.c-navigation__submenu:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent #ffffff;
+  right: unset!important;
+  top: -20px !important;
+  left: 45% !important;
+  transform: rotate(270deg) !important;
+}
+
+/* Pattern 18: Submenu item */
+.c-navigation__submenu-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* Pattern 19: Submenu link */
+.c-navigation__submenu-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Pattern 20: Submenu item image */
+.c-navigation__submenu-image {
+  float: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 27px;
+  height: auto;
+}
+
+/* Pattern 21: Submenu image SVG styling */
+.c-navigation__submenu-image .a {
+  stroke-width: 1.5;
+}
+
+/* Pattern 22: Submenu content holder */
+.c-navigation__submenu-holder {
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 45px;
+  padding: 0 20px;
+}
+
+/* Pattern 23: Submenu item title */
+.c-navigation__submenu-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #121212;
+  transition: .3s;
+}
+
+/* Pattern 24: Submenu item hover title */
+.c-navigation__submenu-item:hover .c-navigation__submenu-name {
+  color: #1a8cff;
+}
+
+/* Pattern 25: Submenu item description */
+.c-navigation__submenu-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: #666666;
+}
+
+/* Pattern 26: Desktop hover submenu display */
+@media (min-width: 1025px) {
+  .c-navigation__item:hover .c-navigation__submenu {
+    display: block;
+  }
+
+  .c-navigation__item:hover .c-navigation__link {
+    color: #1a8cff;
+  }
+
+  .c-navigation__item:hover .c-navigation__item-arrow {
+    transform: rotate(225deg);
+    border-color: #1a8cff;
+  }
+}
+
+/* Pattern 27: Menu opener hidden when nav open */
+.c-navigation--open + .c-navigation__menu-opener {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+/* Pattern 28: Navigation overlay background */
+.c-navigation:before {
+  @media (max-width: 1024px) {
+    position: fixed;
+    content: '';
+    left: 0;
+    right: 320px;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: -1;
+    opacity: 0;
+    transition: .3s;
+    display: none;
+  }
+}
+
+/* Pattern 29: Overlay visible when navigation open */
+.c-navigation--open:before {
+  @media (max-width: 1024px) {
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* Pattern 30: Mobile list layout when open */
+.c-navigation--open .c-navigation__list {
+  @media (max-width: 1024px) {
+    display: block;
+    padding: 70px 20px 20px;
+  }
+}
+
+/* ===== BATCH 3: Mobile Navigation Patterns (Patterns 31-45) ===== */
+
+/* Pattern 31: Body overflow hidden when navigation open */
+.c-body--navigation-open {
+  @media (max-width: 1024px) {
+    overflow: hidden;
+  }
+}
+
+/* Pattern 32: Mobile navigation button styling */
+.c-navigation__mobile-btn {
+  @media (max-width: 1024px) {
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    line-height: 22px;
+    font-size: 16px;
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    border-radius: 6px;
+    margin-top: 15px;
+  }
+}
+
+/* Pattern 33: Mobile navigation item */
+.c-navigation__mobile-item {
+  @media (max-width: 1024px) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Pattern 34: Mobile navigation link */
+.c-navigation__mobile-link {
+  @media (max-width: 1024px) {
+    padding: 14px 0;
+    color: #121212;
+    font-size: 18px;
+    padding-right: 15px;
+  }
+}
+
+/* Pattern 35: Mobile submenu holder */
+.c-navigation__mobile-submenu-holder {
+  @media (max-width: 1024px) {
+    padding-right: 0;
+  }
+}
+
+/* Pattern 36: Mobile submenu styling */
+.c-navigation__mobile-submenu {
+  @media (max-width: 1024px) {
+    width: auto;
+    position: static;
+    padding: 0;
+    margin: 0 -15px;
+    transform: none;
+    box-shadow: none;
+    transition: .3s;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+}
+
+/* Pattern 37: Mobile submenu open state */
+.c-navigation__item--open .c-navigation__mobile-submenu {
+  @media (max-width: 1024px) {
+    max-height: 350px;
+  }
+}
+
+/* Pattern 38: Mobile submenu pseudo-elements hidden */
+.c-navigation__mobile-submenu:before,
+.c-navigation__mobile-submenu:after {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+/* Pattern 39: Mobile submenu item */
+.c-navigation__mobile-submenu-item {
+  @media (max-width: 1024px) {
+    width: auto;
+    display: block;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+}
+
+/* Pattern 40: Mobile submenu link flex display */
+.c-navigation__mobile-submenu-link {
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Pattern 41: Mobile submenu image float reset */
+.c-navigation__mobile-submenu-image {
+  @media (max-width: 1024px) {
+    float: none;
+  }
+}
+
+/* Pattern 42: Mobile submenu name styling */
+.c-navigation__mobile-submenu-name {
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 24px;
+    color: #121212;
+  }
+}
+
+/* Pattern 43: Mobile submenu text hidden */
+.c-navigation__mobile-submenu-text {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+/* Pattern 44: Mobile item arrow positioning */
+.c-navigation__mobile-item-arrow {
+  @media (max-width: 1024px) {
+    top: 25px;
+    right: 15px;
+    border-color: #121212;
+  }
+}
+
+/* Pattern 45: Mobile arrow touch area */
+.c-navigation__mobile-item-arrow:before {
+  @media (max-width: 1024px) {
+    content: '';
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: -15px;
+    bottom: -15px;
+    cursor: pointer;
+  }
+}
+
+/* ===== BATCH 4: Header Navigation Layout Patterns (Patterns 46-60) ===== */
+
+/* Pattern 46: Header navigation row content */
+.c-navigation__header-row-content {
+  max-width: 1280px;
+}
+
+/* Pattern 47: Header navigation row wrapper */
+.c-navigation__header-row-wrap {
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+
+/* Pattern 48: Header navigation logo container */
+.c-navigation__header-logo {
+  width: 19%;
+}
+
+/* Pattern 49: Header logo responsive medium screens */
+@media (max-width: 1115px) {
+  .c-navigation__header-logo {
+    width: 19% !important;
+    max-width: none;
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+}
+
+/* Pattern 50: Header logo responsive small screens */
+@media (max-width: 860px) {
+  .c-navigation__header-logo {
+    width: 50% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+}
+
+/* Pattern 51: Header navigation menu column */
+.c-navigation__header-menu-col {
+  width: 69%;
+}
+
+/* Pattern 52: Header menu column responsive */
+@media (max-width: 1115px) {
+  .c-navigation__header-menu-col {
+    width: 65% !important;
+    max-width: none;
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+}
+
+/* Pattern 53: Header contact button container */
+.c-navigation__header-contact-btn {
+  width: 12%;
+}
+
+/* Pattern 54: Header contact button responsive */
+@media (max-width: 1115px) {
+  .c-navigation__header-contact-btn {
+    width: 16% !important;
+    max-width: none;
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+}
+
+/* Pattern 55: Header logo photo styling */
+.c-navigation__header-logo-photo {
+  height: 65px;
+  width: 100px;
+}
+
+/* Pattern 56: Header logo photo content and image */
+.c-navigation__header-logo-photo-content,
+.c-navigation__header-logo-photo-img {
+  height: 65px !important;
+}
+
+/* Pattern 57: Mobile navigation state reset hover effects */
+@media (max-width: 1024px) {
+  .c-navigation__item:hover .c-navigation__item-arrow {
+    border-color: inherit;
+  }
+
+  .c-navigation__item:hover .c-navigation__link,
+  .c-navigation__submenu-item:hover .c-navigation__submenu-name {
+    color: inherit;
+  }
+}
+
+/* Pattern 58: Mobile arrow open state rotation */
+.c-navigation__item--open .c-navigation__item-arrow {
+  @media (max-width: 1024px) {
+    transform: rotate(225deg);
+  }
+}
+
+/* Pattern 59: Mobile menu opener color fixes */
+@media (max-width: 1024px) {
+  .c-navigation__menu-opener {
+    border-color: #121212;
+  }
+
+  .c-navigation__menu-opener:before {
+    background-color: #121212;
+  }
+
+  .c-navigation__menu-close:before,
+  .c-navigation__menu-close:after {
+    background-color: #121212;
+  }
+}
+
+/* Pattern 60: Mobile color consistency overrides */
+@media (max-width: 1024px) {
+  .c-navigation {
+    background-color: #ffffff;
+  }
+
+  .c-navigation__submenu {
+    background-color: #ffffff;
+  }
+
+  .c-navigation__link {
+    color: #121212;
+  }
+
+  .c-navigation__item-arrow {
+    border-color: #121212;
+  }
+
+  .c-navigation__submenu-name {
+    color: #121212;
+  }
+}
+
+/* ===== BATCH 5: PP Advanced Menu Integration Patterns (Patterns 61-82) ===== */
+
+/* Pattern 61: PP Advanced Menu base styles */
+.c-navigation__pp-menu ul,
+.c-navigation__pp-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pattern 62: PP Advanced Menu clearfix */
+.c-navigation__pp-menu .menu:before,
+.c-navigation__pp-menu .menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Pattern 63: PP Advanced Menu horizontal layout */
+.c-navigation__pp-menu--horizontal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Pattern 64: PP Advanced Menu base menu styling */
+.c-navigation__pp-menu .menu {
+  padding-left: 0;
+}
+
+/* Pattern 65: PP Advanced Menu list item positioning */
+.c-navigation__pp-menu li {
+  position: relative;
+}
+
+/* Pattern 66: PP Advanced Menu link styling */
+.c-navigation__pp-menu a {
+  display: block;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* Pattern 67: PP Advanced Menu link hover and focus */
+.c-navigation__pp-menu a:hover,
+.c-navigation__pp-menu a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* Pattern 68: PP Advanced Menu submenu width */
+.c-navigation__pp-menu .sub-menu {
+  width: 220px;
+}
+
+/* Pattern 69: PP Advanced Menu nav outline reset */
+.c-navigation__pp-menu-nav {
+  outline: 0;
+}
+
+/* Pattern 70: PP Advanced Menu submenu focus states */
+.c-navigation__pp-menu .pp-has-submenu:focus,
+.c-navigation__pp-menu .pp-has-submenu .sub-menu:focus,
+.c-navigation__pp-menu .pp-has-submenu-container:focus {
+  outline: 0;
+}
+
+/* Pattern 71: PP Advanced Menu submenu container */
+.c-navigation__pp-menu .pp-has-submenu-container {
+  position: relative;
+}
+
+/* Pattern 72: PP Advanced Menu accordion submenu hidden */
+.c-navigation__pp-menu--accordion .pp-has-submenu > .sub-menu {
+  display: none;
+}
+
+/* Pattern 73: PP Advanced Menu toggle positioning */
+.c-navigation__pp-menu-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Pattern 74: PP Advanced Menu toggle arrow styling */
+.c-navigation__pp-menu-toggle--arrows:before,
+.c-navigation__pp-menu-toggle--none:before {
+  content: "";
+  border-color: #333;
+}
+
+/* Pattern 75: PP Advanced Menu expanded toggle hidden */
+.c-navigation__pp-menu--expanded .c-navigation__pp-menu-toggle {
+  display: none;
+}
+
+/* Pattern 76: PP Advanced Menu mobile container */
+.c-navigation__pp-menu--mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pattern 77: Mobile PP menu toggle button */
+.c-navigation__pp-mobile-toggle {
+  display: none;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 5px;
+  outline: 0;
+}
+
+/* Pattern 78: Mobile PP menu hamburger lines */
+.c-navigation__pp-hamburger {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+}
+
+/* Pattern 79: PP hamburger box container */
+.c-navigation__pp-hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+}
+
+/* Pattern 80: PP hamburger inner lines */
+.c-navigation__pp-hamburger-inner {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+  top: 50%;
+  margin-top: -1px;
+  transition: all 0.25s ease;
+}
+
+/* Pattern 81: PP hamburger inner pseudo-elements */
+.c-navigation__pp-hamburger-inner:before,
+.c-navigation__pp-hamburger-inner:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+/* Pattern 82: PP hamburger top and bottom lines */
+.c-navigation__pp-hamburger-inner:before {
+  top: -8px;
+}
+
+.c-navigation__pp-hamburger-inner:after {
+  top: 8px;
+}
+
+/* ===== Legacy FL-Builder and PP Integration Selectors ===== */
+
+/* Backward compatibility for existing FL-Builder selectors */
+.fl-menu,
+.fl-menu-item,
+.fl-menu-link,
+.pp-advanced-menu,
+.pp-has-submenu,
+.pp-menu-toggle {
+  /* Legacy selectors maintained for backward compatibility */
+  /* New implementations should use c-navigation__ prefixed classes */
 }

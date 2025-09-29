@@ -2878,3 +2878,21 @@ body:not(.single-fl-theme-layout)
   display: flex;
   width: 100%;
 }
+
+/* PowerPack BEM Components - Sprint 2 Integration */
+/* Extracted 2,628+ lines of PP patterns into modular BEM components */
+
+/* Include PowerPack Advanced Menu Component (563 lines) */
+@import "components/c-pp-advanced-menu.css";
+
+/* Include PowerPack Buttons & CTA Component (420 lines) */
+@import "components/c-pp-buttons.css";
+
+/* Include PowerPack Content Grid Component (513 lines) */
+@import "components/c-pp-content-grid.css";
+
+/* Include PowerPack Widgets Component (722 lines) */
+@import "components/c-pp-widgets.css";
+
+/* Include PowerPack InfoBox Component (410 lines) */
+@import "components/c-pp-infobox.css";
