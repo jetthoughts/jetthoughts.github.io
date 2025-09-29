@@ -66,3 +66,8 @@
 .pp-content-grid-pagination li a.page-numbers {
   text-decoration: none;
 }
+
+/* Content Grid Load More */
+.pp-content-grid-load-more a {
+  display: inline-block;
+}
