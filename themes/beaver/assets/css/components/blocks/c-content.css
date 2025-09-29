@@ -203,13 +203,3 @@
   }
 }
 
-/* Integration with FL-Builder during migration */
-.fl-module-rich-text.c-content__body {
-  /* Inherits FL rich text styles */
-  /* Overrides with BEM component styles */
-}
-
-.fl-col-content.c-content {
-  /* Maintains FL column structure */
-  /* Enhances with BEM patterns */
-}

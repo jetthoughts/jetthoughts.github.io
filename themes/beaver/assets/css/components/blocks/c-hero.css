@@ -68,7 +68,6 @@
 }
 
 /* CTA buttons */
-.c-hero__cta .fl-button,
 .c-hero__cta-button {
   display: inline-block;
   padding: 14px 32px;
@@ -82,7 +81,6 @@
   border: 2px solid transparent;
 }
 
-.c-hero__cta .fl-button:hover,
 .c-hero__cta-button:hover {
   background-color: var(--jt-primary-dark, #0066cc);
   transform: translateY(-2px);
@@ -156,20 +154,9 @@
     align-items: stretch;
   }
 
-  .c-hero__cta .fl-button,
   .c-hero__cta-button {
     width: 100%;
     text-align: center;
   }
 }
 
-/* Integration with FL-Builder during migration */
-.fl-row-bg-photo.c-hero {
-  /* Inherits FL background photo handling */
-  /* Overrides with BEM styles where needed */
-}
-
-.fl-heading.c-hero__title {
-  /* Maintains FL heading styles */
-  /* Enhances with BEM component styles */
-}
