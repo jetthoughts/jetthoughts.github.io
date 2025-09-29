@@ -37,3 +37,8 @@
 .fl-builder-content .fl-node-header-nav-contat-us-btn-nested a.fl-button:visited {
   font-size: 15px;
 }
+
+/* CTA Button Width - Header Contact Button */
+.fl-node-header-nav-contact-us-btn {
+  width: 12%;
+}
