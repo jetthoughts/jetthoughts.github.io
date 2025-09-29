@@ -1,4 +1,5 @@
 {{ define "header" }}
+{{ partial "header/critical/base-critical.html" . }}
 {{ partial "header/critical/services.html" . }}
 {{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}

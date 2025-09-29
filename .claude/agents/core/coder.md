@@ -72,62 +72,12 @@ capabilities:
 priority: high
 hooks:
   pre: |
-    echo "🎯 JT_Site coder with MCP tool priority protocol: $TASK"
-    echo "🔍 PRIMARY TOOLS: claude-context (830 files, 4,184 chunks) → serena → other MCP tools"
-    echo "📊 100x FASTER: Semantic search and symbol navigation before grep/find/glob"
-
-    # MCP TOOL PRIORITY ENFORCEMENT: claude-context and serena FIRST
-    echo "🚀 MCP TOOL HIERARCHY: Enforcing claude-context and serena priority"
-    echo "   1️⃣ claude-context: Semantic codebase search (100x faster than grep)"
-    echo "   2️⃣ serena: Precise symbol navigation and code analysis"
-    echo "   3️⃣ package-search: Framework and dependency research"
-    echo "   4️⃣ context7: Official documentation validation"
-    echo "   5️⃣ grep/find/glob: LAST RESORT ONLY"
-
-    # RETROSPECTIVE LEARNING: Enhanced with claude-context semantic search
-    echo "🧠 RETROSPECTIVE LEARNING: claude-context semantic analysis (PRIMARY)"
-    echo "📚 SEMANTIC SEARCH: Analyzing task patterns through 4,184 indexed chunks"
-
-    # PRIMARY: claude-context semantic search for patterns (100x faster)
-    echo "🔍 claude-context SEARCH: Semantic pattern analysis across 830 files"
-    FAILURE_SEARCH_RESULTS=$(npx claude-flow@alpha hooks search-patterns \
-        --search-tool "claude-context" \
-        --pattern "$(echo $TASK | cut -c1-20)" \
-        --namespace "retrospective/failure_patterns" 2>/dev/null || echo "none")
-
-    # PRIMARY: serena symbol navigation for precise code analysis
-    echo "🎯 serena ANALYSIS: Precise symbol navigation and relationships"
-    SYMBOL_PATTERNS=$(npx claude-flow@alpha hooks symbol-search \
-        --search-tool "serena" \
-        --pattern "$(echo $TASK | grep -o '[A-Za-z_][A-Za-z0-9_]*' | head -1)" \
-        --namespace "retrospective/symbol_patterns" 2>/dev/null || echo "none")
-
-    # SECONDARY: Memory coordination for cross-agent learning
-    PAST_FAILURES=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/failure_patterns/$(echo $TASK | cut -c1-20)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$FAILURE_SEARCH_RESULTS" != "none" || "$SYMBOL_PATTERNS" != "none" || "$PAST_FAILURES" != "none" ]]; then
-        echo "⚠️ MCP TOOL ALERT: Pattern analysis complete via claude-context and serena"
-        echo "📚 CLAUDE-CONTEXT RESULTS: $FAILURE_SEARCH_RESULTS"
-        echo "🎯 SERENA ANALYSIS: $SYMBOL_PATTERNS"
-        echo "💾 MEMORY CONTEXT: $PAST_FAILURES"
-        echo "🛡️ ENHANCED SAFEGUARDS: MCP-based pattern recognition active"
-    else
-        echo "✅ MCP VALIDATION: Clean pattern analysis via claude-context (830 files)"
-        echo "🔍 SEMANTIC CONFIRMATION: No failure patterns in 4,184 chunks"
-        echo "🎯 SYMBOL CONFIRMATION: Clean symbol analysis via serena"
-    fi
-
     echo "🚀 MCP TOOLS READY: claude-context and serena prioritized for 100x speed"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
     if ! bin/test >/dev/null 2>&1; then
       echo "ALERT: Test broken detected"
     fi
-
-    echo "✅ JT_Site task completed with MCP tool priority protocol"
-    echo "📈 100x FASTER: claude-context and serena utilization validated"
-    echo "🎯 TOOL ADOPTION: Semantic search and symbol navigation prioritized"
 
     # MCP TOOL ADOPTION TRACKING: Record tool usage patterns
     echo "📊 MCP ADOPTION: Recording tool usage for performance analysis"
