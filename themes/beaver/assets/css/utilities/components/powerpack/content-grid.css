@@ -168,3 +168,10 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
+/* Grid Style 5 Content Post Date */
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-date {
+  float: left;
+  text-align: center;
+  width: 38px;
+}
