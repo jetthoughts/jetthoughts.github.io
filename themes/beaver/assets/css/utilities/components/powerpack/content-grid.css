@@ -175,3 +175,9 @@
   text-align: center;
   width: 38px;
 }
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-day {
+  display: block;
+  padding: 5px 0px;
+  font-size: 15px;
+}
