@@ -231,3 +231,31 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
 .c-gravity-form__wrapper--special {
   max-width: 100%;
 }
+
+/* Special content background styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content,
+.c-gravity-form__content--special {
+  background-color: #f5f6f8;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Field list styling for special node */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper ul li.gfield,
+.c-gravity-form__wrapper--special .c-gravity-form__field {
+  list-style-type: none !important;
+  margin-bottom: 20px;
+}
+
+/* Form title display control for FL-Builder */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_title,
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .form-title,
+.c-gravity-form__title--fl-builder {
+  display: block;
+}
+
+/* Form title visibility override */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_title,
+.c-gravity-form__title--hidden {
+  display: none;
+}
