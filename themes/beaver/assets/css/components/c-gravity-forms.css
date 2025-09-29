@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Gravity Forms Component System
+   BEM-compliant Gravity Forms components to replace FL-node-specific styles
+   Conservative implementation with dual-class support for backward compatibility
+
+   Extracted from: homepage-layout.css, fl-contact-layout.css, and 16 other files
+   Target: 87+ patterns consolidated into reusable BEM components
+   ========================================================================== */
+
+/**
+ * Base Gravity Forms Wrapper Component
+ * Replaces: .fl-node-*[gform-related] and .pp-gf-content selectors
+ * Usage: Apply to Gravity Forms wrapper containers
+ */
+.c-gravity-form {
+  /* Base wrapper styles */
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.c-gravity-form__wrapper {
+  /* Replaces .gform_wrapper base styles */
+  position: relative;
+  width: 100% !important;
+  max-width: 100%;
+}
+
+.c-gravity-form__body {
+  /* Replaces .gform_body styles */
+  width: 100% !important;
+}
+
+/* Dual-class compatibility for existing FL-node implementations */
+.pp-gf-content .gform_wrapper,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper {
+  max-width: 100%;
+}
+
+.pp-gf-content .gform_wrapper form,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper form {
+  position: relative;
+}
+
+.pp-gf-content .gform_wrapper .gform_body,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gform_body {
+  width: 100% !important;
+}
