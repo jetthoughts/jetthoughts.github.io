@@ -62,3 +62,7 @@
 .pp-content-grid-pagination li {
   display: inline-block;
 }
+
+.pp-content-grid-pagination li a.page-numbers {
+  text-decoration: none;
+}
