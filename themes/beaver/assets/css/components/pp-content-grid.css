@@ -27,3 +27,8 @@
   display: block;
   width: 100%;
 }
+
+/* Grid Content Area */
+.pp-content-grid-content p:last-of-type {
+  margin-bottom: 0;
+}
