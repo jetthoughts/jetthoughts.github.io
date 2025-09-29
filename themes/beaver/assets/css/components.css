@@ -10,7 +10,7 @@ COMMENTED TO MAKE TESTS PASS */
 @import 'components/css-utilities';
 
 @import 'components/blocks/c-hero';
-/* @import 'components/blocks/c-content'; */
+@import 'components/blocks/c-content';
 
 /* ========================================
    Button Component (c-button)
