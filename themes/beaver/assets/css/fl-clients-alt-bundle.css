@@ -8,9 +8,6 @@
 
 
 
-.fl-clearfix:after {
-  clear: both;
-}
 
 .sr-only {
   position: absolute;
