@@ -57,7 +57,7 @@ body input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -73,7 +73,7 @@ body input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -212,8 +212,8 @@ body input[type="submit"] {
   top: 0;
   width: 18px;
   height: 18px;
-  border: 2px solid #1a8cff;
-  background-color: #1a8cff;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
   z-index: 0;
   border-radius: 4px;
 }
@@ -345,9 +345,9 @@ body input[type="submit"] {
   .gchoice
   input:focus
   + label {
-  background: #1a8cff !important;
+  background: var(--color-primary) !important;
   color: var(--color-white);
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 .gform_wrapper
@@ -377,7 +377,7 @@ body input[type="submit"] {
   .gfield_radio
   .gchoice
   label:hover {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 @media (max-width: 860px) {
@@ -483,7 +483,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   color: var(--color-white);
   font-size: 10px;
   padding: 3px 6px;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   border-radius: 10px;
   display: inline-block;
   margin-left: 5px;
@@ -538,7 +538,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
 }
 
 .jt-service-box:hover
@@ -546,7 +546,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   .pp-infobox-button
   .pp-more-link
   i {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
 }
 
 .jt-case-study > .fl-col-content {
@@ -585,7 +585,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study > .fl-col-content:hover {
-  border-color: #1a8cff !important;
+  border-color: var(--color-primary) !important;
 }
 
 .jt-case-study.jt-case-study--light li {
@@ -593,7 +593,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study.jt-case-study--light li a {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
   font-weight: 700 !important;
 }
 
@@ -675,7 +675,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div a {
   padding: 12px 25px;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: 25px;
   font-family:
@@ -920,7 +920,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 /* Blog */
 .blog-archive-search .pp-post-filters-wrapper .pp-post-filters-toggle {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   padding: 9px 20px;
   border-radius: 21px;
   margin-bottom: 20px;
@@ -1242,8 +1242,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .uk-toc ul li.active a {
-  border-left-color: #1a8cff;
-  color: #1a8cff !important;
+  border-left-color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 /* Client Details */
@@ -1446,7 +1446,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   margin-right: 10px;
   background: rgba(26, 141, 255, 0.1);
   border: unset;
-  color: #1a8cff;
+  color: var(--color-primary);
   padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;
