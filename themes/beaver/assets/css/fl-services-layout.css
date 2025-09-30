@@ -5408,7 +5408,7 @@ img.mfp-img {
 }
 
 .fl-node-08kl1yzxeout .pp-swiper-button {
-  color: #000000;
+  color: var(--color-black);
   padding-left: 13px;
   padding-right: 13px;
   padding-bottom: 5px;
