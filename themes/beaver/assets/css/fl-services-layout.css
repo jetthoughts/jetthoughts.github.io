@@ -5913,7 +5913,7 @@ img.mfp-img {
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-description {
