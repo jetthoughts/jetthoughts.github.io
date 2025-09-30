@@ -3118,7 +3118,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-hl3t85x4f6cr .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-hl3t85x4f6cr .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-hl3t85x4f6cr .fl-rich-text, .fl-builder-content .fl-node-hl3t85x4f6cr .fl-rich-text *:not(b, strong) {
@@ -3136,7 +3136,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-nmlkaetdxo0q .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-nmlkaetdxo0q .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-nmlkaetdxo0q .fl-rich-text, .fl-builder-content .fl-node-nmlkaetdxo0q .fl-rich-text *:not(b, strong) {
@@ -3162,7 +3162,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-uy0d41vnxm86 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-uy0d41vnxm86 .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-uy0d41vnxm86 .fl-rich-text, .fl-builder-content .fl-node-uy0d41vnxm86 .fl-rich-text *:not(b, strong) {
@@ -4183,14 +4183,14 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li a.page-numbers, .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li span.page-numbers {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #1a8cff;
   margin-right: 5px;
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li a.page-numbers:hover, .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li span.current, .fl-node-t2084qdhsoz6 .pp-content-grid-pagination li span[aria-current] {
   background-color: #1a8cff;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-load-more {
@@ -4199,7 +4199,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-load-more a {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #1a8cff;
   text-align: center;
   text-decoration: none;
@@ -4208,7 +4208,7 @@ body .pp-post-feed-meta {
 
 .fl-node-t2084qdhsoz6 .pp-content-grid-load-more a:hover {
   background-color: #1a8cff;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-post .pp-post-title {
@@ -4244,7 +4244,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-post .pp-more-link-button, .fl-node-t2084qdhsoz6 .pp-content-post .pp-more-link-button:visited, .fl-node-t2084qdhsoz6 .pp-content-post .pp-add-to-cart a, .fl-node-t2084qdhsoz6 .pp-content-post .pp-add-to-cart a:visited, .fl-node-t2084qdhsoz6 .pp-post-event-calendar-cost form .tribe-button, .fl-node-t2084qdhsoz6 .pp-post-event-calendar-cost form .tribe-button:visited {
-  color: #ffffff;
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -4279,13 +4279,13 @@ body .pp-post-feed-meta {
 
 .fl-node-t2084qdhsoz6 .pp-content-post .pp-post-image .pp-content-category-list {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   right: auto;
   left: 0;
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-post .pp-post-image .pp-content-category-list a {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-day {
@@ -4297,14 +4297,14 @@ body .pp-post-feed-meta {
 
 .fl-node-t2084qdhsoz6 .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-month {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-t2084qdhsoz6 .pp-content-post .pp-post-image .pp-post-title {
@@ -4893,7 +4893,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gfield select, .fl-node-erl54g069p1u .pp-gf-content .gform_wrapper .gfield textarea {
   color: #121212;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   width: 100% !important;
   outline: none;
 }
