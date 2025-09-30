@@ -2529,7 +2529,7 @@ img.mfp-img {
 }
 
 .fl-node-h2wjp3zb7afk .pp-infobox:hover {
-  background: #F5F6F8;
+  background: var(--bg-light);
 }
 
 .fl-node-h2wjp3zb7afk .pp-infobox .pp-more-link {
