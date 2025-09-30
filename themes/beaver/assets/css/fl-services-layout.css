@@ -4468,7 +4468,7 @@ img.mfp-img {
 }
 
 .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label.pp-tab-active .pp-toggle-icon {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-fy2sd3rz1qtj .pp-tabs-horizontal.pp-tabs-default .pp-tabs-label.pp-tab-active {
