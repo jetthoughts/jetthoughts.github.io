@@ -27,9 +27,9 @@
 {{- $cta_text := .cta_text | default "Learn More" -}}
 {{- $node_id := .node_id | default (printf "service-%s" (replace $icon "-" "")) -}}
 
-<div class="fl-col fl-node-{{ $node_id }} fl-col-small fl-col-small-custom-width hover-box" data-node="{{ $node_id }}">
+<div class="fl-col service-card fl-col-small fl-col-small-custom-width hover-box" data-node="{{ $node_id }}">
   <div class="fl-col-content fl-node-content">
-    <div class="fl-module fl-module-pp-infobox fl-node-{{ $node_id }}-box jt-service-box" data-node="{{ $node_id }}-box">
+    <div class="fl-module fl-module-pp-infobox service-card__box jt-service-box" data-node="{{ $node_id }}-box">
       <div class="fl-module-content fl-node-content">
         <div class="pp-infobox-wrap">
           <div class="pp-infobox layout-5">
