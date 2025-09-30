@@ -445,6 +445,80 @@ description: |
 
 ---
 
+## ⚡ AUTONOMOUS EXECUTION MODE (Goal-Driven Work)
+
+**Purpose**: Enable continuous, goal-driven work without unnecessary approval stops for repetitive tasks.
+
+### 🎯 Graduated Spawning Strategy (Smart Delegation)
+
+**Solo Execution** (✅ NO swarm spawning):
+- Simple repetitive tasks with clear patterns (CSS file consolidation, duplicated code removal)
+- Single-file changes with existing tests
+- Micro-refactoring cycles (<10 lines of code)
+- Pattern-based work with established approach
+- **Critical**: Run `bin/rake test:critical` after each change, commit on green, continue to next item
+
+**Pair Execution** (2 agents):
+- Moderate complexity requiring validation (new features, cross-file refactoring)
+- Changes affecting 2-3 components
+- Test creation requiring behavioral focus validation
+- **Pattern**: Driver + Navigator, 25min rotation
+
+**Team Execution** (Full XP team):
+- Complex architecture changes affecting >3 components
+- New TDD cycles requiring specialized phase coordination
+- System design requiring expert consultation
+- **Pattern**: Full XP team with TDD specialists
+
+### 🚫 When NOT to Spawn Swarms
+
+**Anti-Patterns** (causing approval loops):
+- ❌ Spawning swarm for every file in 9,072-item goal
+- ❌ Stopping for approvals on repetitive mechanical work
+- ❌ Four-eyes validation for established patterns
+- ❌ Reflection protocols for user frustration (not actual violations)
+
+**Correct Solo Approach**:
+```yaml
+solo_execution_pattern:
+  task: "Consolidate CSS duplications (9,072 items)"
+  approach: "Autonomous batch processing"
+  validation: "bin/rake test:critical after each file"
+  commit_strategy: "Micro-commits on green tests"
+  approval_gates: "NONE (continuous work to goal completion)"
+  stop_conditions: "Critical test failures ONLY"
+```
+
+### 🔄 Reflection Protocol Calibration
+
+**Reflection triggers ADJUSTED for goal-driven work**:
+
+**DO trigger reflection**:
+- ✅ Actual handbook violations (test smells, implementation testing)
+- ✅ Breaking changes or test failures
+- ✅ Critical security issues
+
+**DO NOT trigger reflection**:
+- ❌ User reports frustration with agent stopping behavior
+- ❌ User requests continuous execution multiple times
+- ❌ Simple pattern-based work (CSS consolidation)
+- ❌ Mechanical repetitive tasks with established approach
+
+**Correct Agent Response to "Keep going, don't stop"**:
+```yaml
+continuous_execution_response: |
+  "✅ Understood: Entering autonomous execution mode.
+  - Working through goal items continuously
+  - Testing after each change with bin/rake test:critical
+  - Committing on green tests
+  - Continuing to next item
+  - Will ONLY stop on critical test failures
+
+  Proceeding with [next item from goal]..."
+```
+
+---
+
 ## 🐝 SWARM DELEGATION & XP TEAM PATTERNS
 
 **Reference**: `/knowledge/30.01-agent-coordination-patterns.md` (Global coordination patterns)
@@ -452,11 +526,11 @@ description: |
 
 ### 🚨 MANDATORY XP TEAM DELEGATION with TDD Specialists
 
-**Delegation triggers** (Zero Tolerance):
+**Delegation triggers** (for COMPLEX work only):
 - Complex TDD cycles requiring specialized agent coordination
-- Multi-file changes affecting >2 components
+- Multi-file changes affecting >3 components (NOT simple consolidation)
 - Performance-critical optimizations requiring triangulation strategy
-- Test quality validation requiring expert review
+- New test quality validation requiring expert review (NOT established patterns)
 
 ### 📋 Enhanced XP Team Pattern with TDD Agents (Copy-Paste Ready)
 
@@ -636,10 +710,18 @@ expert_consultation_required:
 agent_startup_protocol:
   step_1_global_standards:    "claude-context search '[task]' --path '/knowledge/'"
   step_2_project_adaptations: "claude-context search '[task]' --path '/projects/jt_site/docs/'"
-  step_3_tdd_phase_check:     "Determine TDD phase (RED/GREEN/REFACTOR)"
-  step_4_test_smell_check:    "Validate behavioral focus, reject implementation tests"
-  step_5_swarm_coordination:  "Spawn XP team with TDD specialists if needed"
-  step_6_reflection_readiness: "HALT and REFLECT if violations detected"
+  step_3_complexity_check:    "Determine: Solo (simple repetitive) vs Pair (moderate) vs Team (complex)"
+  step_4_tdd_phase_check:     "Determine TDD phase (RED/GREEN/REFACTOR) if applicable"
+  step_5_test_smell_check:    "Validate behavioral focus, reject implementation tests"
+  step_6_swarm_coordination:  "Spawn XP team ONLY for complex >3 component changes"
+  step_7_reflection_readiness: "HALT and REFLECT ONLY for actual violations (not user frustration)"
+
+# Autonomous execution mode (for repetitive goals)
+autonomous_mode:
+  trigger: "User requests continuous work, large goal (>100 items), repetitive pattern"
+  approach: "Solo execution, test after each change, commit on green, continue"
+  stop_only_on: "Critical test failures"
+  no_approval_gates: "Work continuously to goal completion"
 
 # TDD Cycle (official claude-flow pattern)
 tdd_cycle:
@@ -669,11 +751,19 @@ memory_patterns:
 ---
 
 **Remember**: This comprehensive configuration enforces unified handbook system compliance with Hugo/JAMstack specializations. All agents MUST follow the dual-source handbook system (global standards FIRST, project adaptations SECOND) and maintain zero-tolerance policies for duplication, quality, and security violations.
+
+### 📝 Operational Principles
+
 - Each new learning after each incident should be tracked in CLAUDE.md
-- Do not mask bugs with exciption handlers at all. Only if it requested then add exception handler!
-- Use the most conservative way, through cooperatin and follwoing xp practices.
-- Always spawn a whole xp team swarm to handle the task through claude-flow  and ruv-swarm
+- Do not mask bugs with exception handlers at all. Only if it requested then add exception handler!
+- Use the most conservative way, through cooperation and following xp practices.
+- **Graduated spawning**: Solo for simple repetitive work, Pair for moderate complexity, Team for complex architecture
 - DO NOT ADD NEW SCRIPTS FOR DEVELOPERS TO USE! All ad hoc scripts need to be deleted after task completion!
 - FOR MICRO REFACTORING IT WILL BE ENOUGH TO USE `bin/rake test:critical`
 - IMPORTANT: After each micro changes (< 10 lines) of the production code run `bin/rake test:critical`. After changes others code review and validate the changes with following four-eyes principle
-- **🎯 Ultimate Mandate**: "Follow official claude-flow TDD methodology with specialized agent roles (test-writer, minimal-implementer, refactor-specialist). Implement RED-GREEN-REFACTOR cycle with shameless green acceptance. Use Fake It/Obvious/Triangulation strategies. Behavior-focused testing ONLY - refuse implementation/existence/configuration tests. Use claude-flow tools exclusively. HALT and REFLECT on violations. Coordinate via XP teams with TDD specialists. Memory-based phase coordination. Target >95% coverage. Zero test smells."
+
+### 🎯 Ultimate Mandates
+
+**Core TDD Mandate**: "Follow official claude-flow TDD methodology with specialized agent roles (test-writer, minimal-implementer, refactor-specialist). Implement RED-GREEN-REFACTOR cycle with shameless green acceptance. Use Fake It/Obvious/Triangulation strategies. Behavior-focused testing ONLY - refuse implementation/existence/configuration tests. Use claude-flow tools exclusively. HALT and REFLECT on ACTUAL violations (not user frustration). Coordinate via XP teams ONLY for complex work. Memory-based phase coordination. Target >95% coverage. Zero test smells."
+
+**Autonomous Execution Mandate**: "For repetitive goal-driven work (CSS consolidation, duplication removal), execute autonomously in solo mode. Test after each change with bin/rake test:critical. Commit on green. Continue to next item. NO approval gates. NO swarm spawning for simple patterns. ONLY stop on critical test failures. When user says 'keep going, don't stop', respect continuous execution request."
