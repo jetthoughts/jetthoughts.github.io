@@ -1451,7 +1451,7 @@ img.mfp-img {
 }
 
 .fl-node-ohd51ixf3842 > .fl-col-content {
-  background-color: #F5F6F8;
+  background-color: var(--bg-light);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
