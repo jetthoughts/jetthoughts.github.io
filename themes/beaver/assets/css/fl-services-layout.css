@@ -985,7 +985,7 @@ img.mfp-img {
 }
 
 .fl-node-s4nzp8mbkgoi .fl-builder-bottom-edge-layer .fl-shape-content .fl-shape {
-  fill: #000000;
+  fill: var(--color-black);
 }
 
 .fl-node-s4nzp8mbkgoi > .fl-row-content-wrap {
