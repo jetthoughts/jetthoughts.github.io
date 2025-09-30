@@ -1,5 +1,5 @@
 :root {
-  --jt-primary-color: #1a8cff;
+  --jt-primary-color: var(--color-primary);
   --jt-text-color: #121212;
   --jt-primary: #1a8cff;
   --jt-text-primary: #121212;
@@ -160,12 +160,12 @@ h6 {
 }
 
 a {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 a:hover,
 a:focus {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 blockquote {
@@ -909,7 +909,7 @@ img {
 }
 
 .post-edit-link {
-  color: #1a8cff;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: normal;
 }
@@ -1344,7 +1344,7 @@ a.button:hover {
 button,
 input[type="button"],
 input[type="submit"] {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   font-size: 18px;
   line-height: 1.45;
@@ -1363,7 +1363,7 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
   text-decoration: none;
@@ -1375,7 +1375,7 @@ input[type="submit"]:active,
 button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: #fff;
   border: 1px solid #006ddc;
   outline: none;
@@ -1687,13 +1687,13 @@ img.mfp-img {
 
   .fl-page-nav .navbar-nav li > a:hover,
   .fl-page-nav .navbar-nav li > a:focus {
-    color: #1a8cff;
+    color: var(--color-primary);
   }
 
   .fl-page-nav .navbar-nav li.current-menu-ancestor > a,
   .fl-page-nav .navbar-nav li.current-menu-parent > a,
   .fl-page-nav .navbar-nav li.current-menu-item > a {
-    color: #1a8cff;
+    color: var(--color-primary);
   }
 
   .fl-page-nav .navbar-nav li.current-menu-item ~ li.current-menu-item > a {
@@ -3143,7 +3143,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .fl-page-nav
   .navbar-toggle:visited {
   color: #fff;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   font-family:
     system-ui,
     -apple-system,
@@ -3638,7 +3638,7 @@ input[type="url"]:focus-visible,
 textarea:focus-visible {
   outline: 2px solid #1a8cff;
   outline-offset: 1px;
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 /* Custom Form Control Focus (Checkboxes & Radios) */
