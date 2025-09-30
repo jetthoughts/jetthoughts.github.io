@@ -992,7 +992,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
     padding: 5px 20px;
     border-radius: 20px;
     min-height: 40px !important;
-    background: #f5f6f8 !important;
+    background: var(--bg-light) !important;
   }
 
   .blog-archive-search
@@ -1178,7 +1178,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   font-size: 16px;
   border: unset;
   padding: 20px;
-  background-color: #f5f6f8;
+  background-color: var(--bg-light);
   border-radius: 16px;
   word-break: unset !important;
 }
@@ -1577,7 +1577,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   }
 
   .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-label {
-    background-color: #f5f6f8 !important;
+    background-color: var(--bg-light) !important;
     padding: 20px !important;
   }
 
@@ -1660,17 +1660,17 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
   .uk-toc .pp-toc-container.pp-toc-initialized {
     padding: 20px;
-    background-color: #f5f6f8;
+    background-color: var(--bg-light);
     border-radius: 8px;
   }
 
   .uk-toc .pp-toc-container.pp-toc-initialized .pp-toc-header {
-    background-color: #f5f6f8 !important;
+    background-color: var(--bg-light) !important;
   }
 
   .uk-toc .pp-toc-container.pp-toc-initialized .pp-toc-body {
     padding-top: 15px !important;
-    background-color: #f5f6f8 !important;
+    background-color: var(--bg-light) !important;
   }
 
   .uk-toc .pp-toc-container.pp-toc-initialized .pp-toc-body ul li a {
