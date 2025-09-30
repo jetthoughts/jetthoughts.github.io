@@ -5,6 +5,7 @@
 {{ define "footer" }}
 
   {{- $nonCriticalResources := slice
+    (resources.Get "css/variables/colors.css")
     (resources.Get "css/companies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/homepage.css")
