@@ -1910,7 +1910,7 @@ img.mfp-img {
 }
 
 .fl-row .fl-col .fl-node-uqwbmyf657l4 h2.fl-heading a, .fl-row .fl-col .fl-node-uqwbmyf657l4 h2.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-uqwbmyf657l4 h2.fl-heading .fl-heading-text *, .fl-node-uqwbmyf657l4 h2.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-uqwbmyf657l4.fl-module-heading .fl-heading {
@@ -1939,11 +1939,11 @@ img.mfp-img {
 }
 
 .fl-row .fl-col .fl-node-o5ydgp3m9tcr h3.fl-heading a, .fl-row .fl-col .fl-node-o5ydgp3m9tcr h3.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-o5ydgp3m9tcr h3.fl-heading .fl-heading-text *, .fl-node-o5ydgp3m9tcr h3.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-efbstj6rlc8n .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-efbstj6rlc8n .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-efbstj6rlc8n .fl-rich-text, .fl-builder-content .fl-node-efbstj6rlc8n .fl-rich-text *:not(b, strong) {
@@ -1951,11 +1951,11 @@ img.mfp-img {
 }
 
 .fl-row .fl-col .fl-node-pj3c1xg5lar8 h3.fl-heading a, .fl-row .fl-col .fl-node-pj3c1xg5lar8 h3.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-pj3c1xg5lar8 h3.fl-heading .fl-heading-text *, .fl-node-pj3c1xg5lar8 h3.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-dfqgrol9zs2j .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-dfqgrol9zs2j .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-dfqgrol9zs2j .fl-rich-text, .fl-builder-content .fl-node-dfqgrol9zs2j .fl-rich-text *:not(b, strong) {
@@ -1963,11 +1963,11 @@ img.mfp-img {
 }
 
 .fl-row .fl-col .fl-node-ilsckb5g8yaj h3.fl-heading a, .fl-row .fl-col .fl-node-ilsckb5g8yaj h3.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-ilsckb5g8yaj h3.fl-heading .fl-heading-text *, .fl-node-ilsckb5g8yaj h3.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-n9hpl3zriqt8 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-n9hpl3zriqt8 .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-n9hpl3zriqt8 .fl-rich-text, .fl-builder-content .fl-node-n9hpl3zriqt8 .fl-rich-text *:not(b, strong) {
@@ -1995,7 +1995,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-3n6dx0h4vygc .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-3n6dx0h4vygc .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-3n6dx0h4vygc .fl-rich-text, .fl-builder-content .fl-node-3n6dx0h4vygc .fl-rich-text *:not(b, strong) {
@@ -2014,7 +2014,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-s5j7bntxyh4e .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-s5j7bntxyh4e .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-s5j7bntxyh4e .fl-rich-text, .fl-builder-content .fl-node-s5j7bntxyh4e .fl-rich-text *:not(b, strong) {
@@ -2032,7 +2032,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-ute0nrysdz75 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-ute0nrysdz75 .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-ute0nrysdz75 .fl-rich-text, .fl-builder-content .fl-node-ute0nrysdz75 .fl-rich-text *:not(b, strong) {
@@ -2051,7 +2051,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-5fklh2jq9sgw .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-5fklh2jq9sgw .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-5fklh2jq9sgw .fl-rich-text, .fl-builder-content .fl-node-5fklh2jq9sgw .fl-rich-text *:not(b, strong) {
@@ -2069,7 +2069,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-ikafc2edow5g .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-ikafc2edow5g .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-ikafc2edow5g .fl-rich-text, .fl-builder-content .fl-node-ikafc2edow5g .fl-rich-text *:not(b, strong) {
@@ -2094,7 +2094,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-myer7f0l1acw .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-myer7f0l1acw .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-myer7f0l1acw .fl-rich-text, .fl-builder-content .fl-node-myer7f0l1acw .fl-rich-text *:not(b, strong) {
@@ -3121,7 +3121,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-grid-pagination li a.page-numbers, .fl-node-mt94wrn1fzxj .pp-content-grid-pagination li span.page-numbers {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #000000;
   margin-right: 5px;
 }
@@ -3136,7 +3136,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-grid-load-more a {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #000000;
   text-align: center;
   text-decoration: none;
@@ -3180,7 +3180,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-post .pp-more-link-button, .fl-node-mt94wrn1fzxj .pp-content-post .pp-more-link-button:visited, .fl-node-mt94wrn1fzxj .pp-content-post .pp-add-to-cart a, .fl-node-mt94wrn1fzxj .pp-content-post .pp-add-to-cart a:visited, .fl-node-mt94wrn1fzxj .pp-post-event-calendar-cost form .tribe-button, .fl-node-mt94wrn1fzxj .pp-post-event-calendar-cost form .tribe-button:visited {
-  color: #ffffff;
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -3215,13 +3215,13 @@ body .pp-post-feed-meta {
 
 .fl-node-mt94wrn1fzxj .pp-content-post .pp-post-image .pp-content-category-list {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   right: auto;
   left: 0;
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-post .pp-post-image .pp-content-category-list a {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-day {
@@ -3233,14 +3233,14 @@ body .pp-post-feed-meta {
 
 .fl-node-mt94wrn1fzxj .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-month {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-mt94wrn1fzxj .pp-content-post .pp-post-image .pp-post-title {
@@ -4813,14 +4813,14 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text {
-  color: #ffffff;
+  color: var(--color-white);
   margin-top: 0px;
   margin-bottom: 0px;
   transition: color 0.2s ease-in-out;
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-description {
@@ -5090,7 +5090,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -5159,7 +5159,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield select, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield textarea {
   color: #121212;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   width: 100% !important;
   outline: none;
 }
