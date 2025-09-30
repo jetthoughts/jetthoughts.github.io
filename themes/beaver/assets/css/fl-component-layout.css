@@ -1013,7 +1013,7 @@ img.mfp-img {
 
 
 .fl-builder-content .fl-node-f29vwky6nx4s a {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-f29vwky6nx4s a:hover {
@@ -1573,7 +1573,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-zmit95d7f3gw .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-zmit95d7f3gw .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-zmit95d7f3gw .fl-rich-text, .fl-builder-content .fl-node-zmit95d7f3gw .fl-rich-text *:not(b, strong) {
@@ -1584,7 +1584,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-b76ngexvt1ms .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-b76ngexvt1ms .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-b76ngexvt1ms > .fl-module-content {
@@ -1598,7 +1598,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-9tjbkyq0wp8s .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-9tjbkyq0wp8s .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-9tjbkyq0wp8s .fl-rich-text, .fl-builder-content .fl-node-9tjbkyq0wp8s .fl-rich-text *:not(b, strong) {
@@ -1618,7 +1618,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-243oisqhp09g .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-243oisqhp09g .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-243oisqhp09g .fl-rich-text, .fl-builder-content .fl-node-243oisqhp09g .fl-rich-text *:not(b, strong) {
@@ -1636,7 +1636,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-f0cuyevjlhp4 .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-f0cuyevjlhp4 .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-f0cuyevjlhp4 .fl-rich-text, .fl-builder-content .fl-node-f0cuyevjlhp4 .fl-rich-text *:not(b, strong) {
@@ -1656,7 +1656,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-v84gc70xtrsf .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-v84gc70xtrsf .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-v84gc70xtrsf .fl-rich-text, .fl-builder-content .fl-node-v84gc70xtrsf .fl-rich-text *:not(b, strong) {
@@ -1674,7 +1674,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-nz7ea3huogbf .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-nz7ea3huogbf .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-nz7ea3huogbf .fl-rich-text, .fl-builder-content .fl-node-nz7ea3huogbf .fl-rich-text *:not(b, strong) {
@@ -1694,7 +1694,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-hieuj5zs6k7c .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-hieuj5zs6k7c .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-n1taf6k8y549 > .fl-module-content {
@@ -2723,7 +2723,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-c62a1otdremk .pp-content-grid-pagination li a.page-numbers, .fl-node-c62a1otdremk .pp-content-grid-pagination li span.page-numbers {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #000000;
   margin-right: 5px;
 }
@@ -2738,7 +2738,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-c62a1otdremk .pp-content-grid-load-more a {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color: #000000;
   text-align: center;
   text-decoration: none;
@@ -2782,7 +2782,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-c62a1otdremk .pp-content-post .pp-more-link-button, .fl-node-c62a1otdremk .pp-content-post .pp-more-link-button:visited, .fl-node-c62a1otdremk .pp-content-post .pp-add-to-cart a, .fl-node-c62a1otdremk .pp-content-post .pp-add-to-cart a:visited, .fl-node-c62a1otdremk .pp-post-event-calendar-cost form .tribe-button, .fl-node-c62a1otdremk .pp-post-event-calendar-cost form .tribe-button:visited {
-  color: #ffffff;
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -2817,13 +2817,13 @@ body .pp-post-feed-meta {
 
 .fl-node-c62a1otdremk .pp-content-post .pp-post-image .pp-content-category-list {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   right: auto;
   left: 0;
 }
 
 .fl-node-c62a1otdremk .pp-content-post .pp-post-image .pp-content-category-list a {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-c62a1otdremk .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-day {
@@ -2835,14 +2835,14 @@ body .pp-post-feed-meta {
 
 .fl-node-c62a1otdremk .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-month {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
 .fl-node-c62a1otdremk .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-c62a1otdremk .pp-content-post .pp-post-image .pp-post-title {
@@ -4418,14 +4418,14 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text {
-  color: #ffffff;
+  color: var(--color-white);
   margin-top: 0px;
   margin-bottom: 0px;
   transition: color 0.2s ease-in-out;
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-description {
@@ -4695,7 +4695,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -4764,7 +4764,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield select, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield textarea {
   color: #121212;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   width: 100% !important;
   outline: none;
 }
