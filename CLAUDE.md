@@ -321,6 +321,53 @@ test_creation_behavior:
 
 ---
 
+## 🧪 TEST FORMAT REQUIREMENTS (MANDATORY)
+
+**Reference**: `docs/60.06-test-format-requirements-reference.md` (Complete test format documentation)
+
+**CRITICAL AGENT DIRECTIVES**:
+
+### ✅ REQUIRED: Ruby/Minitest Tests ONLY
+- **Framework**: Minitest (NOT RSpec - jt_site uses Minitest)
+- **System Tests**: `test/system/` with Capybara + ApplicationSystemTestCase
+- **Unit Tests**: `test/unit/` with ActiveSupport::TestCase
+- **Visual Regression**: `assert_stable_screenshot` with tolerance: 0.03
+- **Test Runner**: `bin/rake test` or `bin/rake test:critical`
+
+### ❌ FORBIDDEN: Bash Test Scripts (ZERO TOLERANCE)
+- **NEVER** create `*.sh` files in `test/` directory
+- **NEVER** create bash functions for testing (test_*, validate_*)
+- **NEVER** use grep/find to check code existence as "tests"
+- Bash scripts are ONLY for automation (builds, deploys), NEVER testing
+
+### 🎯 Agent Decision Protocol (MANDATORY)
+
+**Before creating any test, ask**: "Am I testing BEHAVIOR or code existence?"
+
+```yaml
+test_creation_decision:
+  if_behavior:
+    action: "✅ Create Minitest test in test/system/ or test/unit/"
+    example: "Button renders, button is clickable, button looks correct"
+
+  if_code_existence:
+    action: "❌ STOP - Create behavioral test instead"
+    example: "CSS class exists in file = WRONG, Button works for users = CORRECT"
+
+  critical_rules:
+    - "Test what USERS see and do, not what CODE contains"
+    - "Use Minitest + Capybara, never bash scripts"
+    - "Visual validation via screenshots, not grep"
+    - "Run tests via bin/rake test, not shell scripts"
+```
+
+**Automatic Rejection Triggers**:
+- Request to create `test_*.sh` or `*_test.sh` → REJECT, create `*_test.rb` instead
+- Request to grep/find CSS files as "test" → REJECT, create Capybara test instead
+- Request for bash validation script → REJECT, use Minitest behavioral test
+
+---
+
 ## 🚨 ZERO TOLERANCE ENFORCEMENT (MANDATORY)
 
 ### 🛑 MANDATORY REFLECTION PROTOCOL
