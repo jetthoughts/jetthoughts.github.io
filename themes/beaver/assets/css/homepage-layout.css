@@ -649,7 +649,7 @@
 }
 
 .c-builder-content .bx-wrapper .bx-viewport {
-  background: transparent;
+  background: var(--bg-transparent);
   border: none;
   box-shadow: none;
   -moz-box-shadow: none;
