@@ -2382,12 +2382,12 @@ body .pp-post-feed-meta {
 
 .fl-node-z9jw2gxm5ev0 .pp-content-grid-pagination li a.page-numbers, .fl-node-z9jw2gxm5ev0 .pp-content-grid-pagination li span.page-numbers {
   background-color: rgba(255, 255, 255, 0);
-  color: #1a8cff;
+  color: var(--color-primary);
   margin-right: 5px;
 }
 
 .fl-node-z9jw2gxm5ev0 .pp-content-grid-pagination li a.page-numbers:hover, .fl-node-z9jw2gxm5ev0 .pp-content-grid-pagination li span.current, .fl-node-z9jw2gxm5ev0 .pp-content-grid-pagination li span[aria-current] {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -2398,14 +2398,14 @@ body .pp-post-feed-meta {
 
 .fl-node-z9jw2gxm5ev0 .pp-content-grid-load-more a {
   background-color: rgba(255, 255, 255, 0);
-  color: #1a8cff;
+  color: var(--color-primary);
   text-align: center;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
 .fl-node-z9jw2gxm5ev0 .pp-content-grid-load-more a:hover {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
 
@@ -2792,7 +2792,7 @@ body .pp-post-feed-meta {
   border-style: solid;
   border-width: 0;
   background-clip: border-box;
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
   border-top-width: 1px;
   border-right-width: 1px;
   border-bottom-width: 1px;
@@ -3281,7 +3281,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-builder-content .fl-node-c83w0r7k2b6s .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-c83w0r7k2b6s .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-c83w0r7k2b6s .fl-rich-text, .fl-builder-content .fl-node-c83w0r7k2b6s .fl-rich-text *:not(b, strong) {
@@ -3511,7 +3511,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text, .fl-builder-content .fl-node-byg0v6ftixrd .fl-rich-text *:not(b, strong) {
@@ -4499,7 +4499,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-2jbfoa50irmx .fl-module-content .fl-rich-text, .fl-builder-content .fl-node-2jbfoa50irmx .fl-module-content .fl-rich-text * {
-  color: #1a8cff;
+  color: var(--color-primary);
 }
 
 .fl-builder-content .fl-node-2jbfoa50irmx .fl-rich-text, .fl-builder-content .fl-node-2jbfoa50irmx .fl-rich-text *:not(b, strong) {
