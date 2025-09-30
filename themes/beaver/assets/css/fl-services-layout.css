@@ -470,7 +470,7 @@
 .fl-photo-caption-hover {
   background: rgba(0, 0, 0, 0.7);
   bottom: 0;
-  color: #fff;
+  color: var(--color-white);
   left: 0;
   opacity: 0;
   filter: alpha(opacity=0);
