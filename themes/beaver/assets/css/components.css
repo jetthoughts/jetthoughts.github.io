@@ -2,6 +2,9 @@
 
 COMMENTED TO MAKE TESTS PASS */
 
+/* Sprint 3 - c-button Component (GREEN Phase - Shameless Green Implementation) */
+@import 'components/c-button';
+
 /* @import 'components/foundation'; */
 @import 'components/alerts';
 /* @import 'components/forms'; */

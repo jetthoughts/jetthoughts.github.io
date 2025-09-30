@@ -1,0 +1,155 @@
+/* ==============================================================
+   c-button BEM Component - GREEN PHASE (Shameless Green Implementation)
+   Sprint 3: CSS Migration
+   Reference: /knowledge/20.05-shameless-green-flocking-rules-methodology.md
+   ============================================================== */
+
+/* SHAMELESS GREEN PRINCIPLE:
+ * - Accept hardcoded implementations initially
+ * - Accept duplication between this and .fl-button
+ * - Focus ONLY on making tests pass
+ * - NO premature optimization or consolidation
+ * - REFACTOR phase will apply flocking rules to eliminate duplication
+ */
+
+/* Primary Button Variant - HARDCODED for GREEN phase */
+.c-button--primary {
+  /* Base button styling - DUPLICATED from .fl-button (acceptable in GREEN) */
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: none;
+
+  /* Primary variant colors - HARDCODED */
+  background-color: #1a8cff;
+  color: #ffffff;
+  border: 2px solid #1a8cff;
+
+  /* Transition for hover state */
+  transition: all 0.2s ease-in-out;
+}
+
+.c-button--primary:hover {
+  /* Hover state - HARDCODED */
+  background-color: #0066cc;
+  border-color: #0066cc;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.c-button--primary:active {
+  /* Active state - DUPLICATED from .fl-button (acceptable in GREEN) */
+  position: relative;
+  top: 1px;
+}
+
+/* Secondary Button Variant - DUPLICATED from primary (acceptable in GREEN) */
+.c-button--secondary {
+  /* Base button styling - DUPLICATED (will be extracted in REFACTOR phase) */
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: none;
+
+  /* Secondary variant colors - HARDCODED */
+  background-color: #ffffff;
+  color: #121212;
+  border: 2px solid #121212;
+
+  /* Transition for hover state */
+  transition: all 0.2s ease-in-out;
+}
+
+.c-button--secondary:hover {
+  /* Hover state - HARDCODED */
+  background-color: #121212;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.c-button--secondary:active {
+  /* Active state - DUPLICATED */
+  position: relative;
+  top: 1px;
+}
+
+/* Tertiary Button Variant - DUPLICATED (acceptable in GREEN) */
+.c-button--tertiary {
+  /* Base button styling - DUPLICATED (will be extracted in REFACTOR phase) */
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: none;
+
+  /* Tertiary variant colors - HARDCODED */
+  background-color: transparent;
+  color: #1a8cff;
+  border: 2px solid transparent;
+
+  /* Transition for hover state */
+  transition: all 0.2s ease-in-out;
+}
+
+.c-button--tertiary:hover {
+  /* Hover state - HARDCODED */
+  background-color: rgba(26, 140, 255, 0.1);
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.c-button--tertiary:active {
+  /* Active state - DUPLICATED */
+  position: relative;
+  top: 1px;
+}
+
+/* Mobile Touch Target Size Enhancement (iOS/Android best practices) */
+@media (max-width: 860px) {
+  .c-button--primary,
+  .c-button--secondary,
+  .c-button--tertiary {
+    /* Ensure minimum 44px touch target (Apple HIG + Android Material) */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* GREEN PHASE NOTES FOR REFACTOR PHASE:
+ *
+ * DUPLICATION TO BE ADDRESSED IN REFACTOR:
+ * 1. Base button styles duplicated 3 times (border-radius, padding, font-size, etc.)
+ * 2. Active state duplicated 3 times (position: relative; top: 1px)
+ * 3. Transition duplicated 3 times
+ * 4. Text-decoration: none duplicated in hover states
+ *
+ * FLOCKING RULES APPLICATION (REFACTOR phase):
+ * Rule 1: Select things most alike - All three variants share base styling
+ * Rule 2: Find smallest difference - Only color/background differs between variants
+ * Rule 3: Make simplest change - Extract .c-button base class with shared properties
+ *
+ * EXPECTED REFACTOR OUTCOME:
+ * .c-button (base) - shared properties
+ * .c-button--primary - only color overrides
+ * .c-button--secondary - only color overrides
+ * .c-button--tertiary - only color overrides
+ */
