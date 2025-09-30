@@ -329,7 +329,7 @@
 
 .pp-tabs-style-5 .pp-tabs-label {
   padding: 0 !important;
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
   overflow: hidden;
 }
 
@@ -392,7 +392,7 @@
 
 .pp-tabs-style-7 .pp-tabs-label {
   padding: 0 !important;
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
 }
 
 .pp-tabs-style-7 .pp-tabs-label .pp-tab-label-inner {
@@ -427,7 +427,7 @@
 
 .pp-tabs-style-8 .pp-tabs-label {
   padding: 0 !important;
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
   margin: 0 15px;
   overflow: hidden;
 }
@@ -588,7 +588,7 @@
   }
 
   .pp-tabs .pp-tabs-default .pp-tabs-label, .pp-tabs .pp-tabs-default .pp-tabs-label.pp-tab-active, .pp-tabs .pp-tabs-style-5 .pp-tabs-label, .pp-tabs .pp-tabs-style-6 .pp-tabs-label, .pp-tabs .pp-tabs-style-6 .pp-tabs-label.pp-tab-active, .pp-tabs .pp-tabs-style-7 .pp-tabs-label, .pp-tabs .pp-tabs-style-7 .pp-tabs-label.pp-tab-active, .pp-tabs .pp-tabs-style-8 .pp-tabs-label {
-    background-color: transparent !important;
+    background-color: var(--bg-transparent) !important;
   }
 
   .pp-tabs-style-1 .pp-tabs-label {
@@ -794,7 +794,7 @@
 }
 
 .fl-node-vo75i29j3fmz .pp-tabs-style-6 .pp-tabs-label, .fl-node-vo75i29j3fmz .pp-tabs-style-6 .pp-tabs-label.pp-tab-active, .fl-node-vo75i29j3fmz .pp-tabs-style-6 .pp-tabs-label.pp-tab-active:hover, .fl-node-vo75i29j3fmz .pp-tabs .pp-tabs-style-6 .pp-tabs-label:hover {
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
   color: #121212 !important;
 }
 
@@ -9945,7 +9945,7 @@ body .pp-post-feed-meta {
 
 .pp-tabs-style-5 .pp-tabs-label {
   padding: 0 !important;
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
   overflow: hidden;
 }
 
@@ -10008,7 +10008,7 @@ body .pp-post-feed-meta {
 
 .pp-tabs-style-7 .pp-tabs-label {
   padding: 0 !important;
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
 }
 
 .pp-tabs-style-7 .pp-tabs-label .pp-tab-label-inner {
@@ -10043,7 +10043,7 @@ body .pp-post-feed-meta {
 
 .pp-tabs-style-8 .pp-tabs-label {
   padding: 0 !important;
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
   margin: 0 15px;
   overflow: hidden;
 }
@@ -10204,7 +10204,7 @@ body .pp-post-feed-meta {
   }
 
   .pp-tabs .pp-tabs-default .pp-tabs-label, .pp-tabs .pp-tabs-default .pp-tabs-label.pp-tab-active, .pp-tabs .pp-tabs-style-5 .pp-tabs-label, .pp-tabs .pp-tabs-style-6 .pp-tabs-label, .pp-tabs .pp-tabs-style-6 .pp-tabs-label.pp-tab-active, .pp-tabs .pp-tabs-style-7 .pp-tabs-label, .pp-tabs .pp-tabs-style-7 .pp-tabs-label.pp-tab-active, .pp-tabs .pp-tabs-style-8 .pp-tabs-label {
-    background-color: transparent !important;
+    background-color: var(--bg-transparent) !important;
   }
 
   .pp-tabs-style-1 .pp-tabs-label {
@@ -10410,7 +10410,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-vo75i29j3fmz .pp-tabs-style-6 .pp-tabs-label, .fl-node-vo75i29j3fmz .pp-tabs-style-6 .pp-tabs-label.pp-tab-active, .fl-node-vo75i29j3fmz .pp-tabs-style-6 .pp-tabs-label.pp-tab-active:hover, .fl-node-vo75i29j3fmz .pp-tabs .pp-tabs-style-6 .pp-tabs-label:hover {
-  background-color: transparent !important;
+  background-color: var(--bg-transparent) !important;
   color: #121212 !important;
 }
 
