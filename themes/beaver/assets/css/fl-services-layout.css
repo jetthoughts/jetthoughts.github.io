@@ -5906,7 +5906,7 @@ img.mfp-img {
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text {
-  color: #ffffff;
+  color: var(--color-white);
   margin-top: 0px;
   margin-bottom: 0px;
   transition: color 0.2s ease-in-out;
