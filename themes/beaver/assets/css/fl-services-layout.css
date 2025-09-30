@@ -5941,7 +5941,7 @@ img.mfp-img {
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-wrap .layout-3 .pp-list-connector {
-  border-top-color: #000000;
+  border-top-color: var(--color-black);
   border-top-style: none;
   border-top-width: 1px;
 }
