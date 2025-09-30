@@ -5399,7 +5399,7 @@ img.mfp-img {
 }
 
 .fl-node-08kl1yzxeout .swiper-pagination-bullet-active {
-  background: #000000;
+  background: var(--color-black);
 }
 
 .fl-node-08kl1yzxeout .pp-swiper-button svg {
