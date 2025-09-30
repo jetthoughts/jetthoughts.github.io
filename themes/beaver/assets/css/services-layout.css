@@ -190,7 +190,7 @@ body input[type="submit"] {
   + label:before {
   width: 15px;
   height: 18px;
-  border: 3px solid #fff;
+  border: 3px solid var(--color-white);
   left: 6px;
   top: 10px;
   -webkit-transform: rotateZ(37deg);
@@ -235,8 +235,8 @@ body input[type="submit"] {
   margin-top: 1px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-right: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
   -webkit-transform: rotateZ(37deg);
   transform: rotateZ(37deg);
   -webkit-transform-origin: 100% 100%;
@@ -346,7 +346,7 @@ body input[type="submit"] {
   input:focus
   + label {
   background: #1a8cff !important;
-  color: #fff;
+  color: var(--color-white);
   border-color: #1a8cff;
 }
 
@@ -463,7 +463,7 @@ footer .legal-links .fl-rich-text ul li:not(:first-child) {
 }
 
 footer .legal-links .fl-rich-text ul li a {
-  color: #fff;
+  color: var(--color-white);
 }
 
 footer .footer-menu .fl-rich-text p:not(:first-child) {
@@ -476,11 +476,11 @@ footer .footer-menu .fl-rich-text p a {
 }
 
 footer .footer-menu .fl-rich-text p a:hover {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
-  color: #fff;
+  color: var(--color-white);
   font-size: 10px;
   padding: 3px 6px;
   background-color: #1a8cff;
@@ -566,7 +566,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   padding: 7px 15px;
   background-color: #272727;
   border-radius: 21px;
-  color: #fff;
+  color: var(--color-white);
   transition: all 0.3s ease-in-out;
 }
 
@@ -580,7 +580,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study > .fl-col-content .jt-case-category .fl-rich-text ul li a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -676,7 +676,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div a {
   padding: 12px 25px;
   background-color: #1a8cff;
-  color: #fff;
+  color: var(--color-white);
   border-radius: 25px;
   font-family:
     system-ui,
@@ -930,11 +930,11 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   .pp-post-filters-wrapper
   .pp-post-filters-toggle
   span.toggle-text {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 .blog-archive-search .pp-post-filters-wrapper .pp-post-filters-toggle::after {
-  color: #fff;
+  color: var(--color-white);
 }
 
 @media (max-width: 1115px) {
@@ -1198,7 +1198,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 .single-author .pp-description-wrap .author-social a {
   padding: 9px 12px;
   background-color: #121212;
-  color: #fff;
+  color: var(--color-white);
   border-radius: 6px;
   font-size: 14px;
   text-decoration: none;
@@ -1214,7 +1214,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .single-author .pp-description-wrap .author-social a:hover {
-  background-color: #fff;
+  background-color: var(--color-white);
   color: #121212;
 }
 
@@ -1268,7 +1268,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .case-outcome .cs-outcome-wrapper .cs-outcome .outcome-value {
-  color: #fff;
+  color: var(--color-white);
   font-size: 40px;
   font-weight: 600;
   line-height: 1;
@@ -1282,7 +1282,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .case-outcome .cs-outcome-wrapper .cs-outcome .outcome-text {
-  color: #fff;
+  color: var(--color-white);
   margin-top: 10px;
   font-size: 16px;
 }
@@ -1425,7 +1425,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   border-radius: 8px;
   text-align: left;
   height: 50px;
-  background-color: #fff !important;
+  background-color: var(--color-white) !important;
   cursor: pointer;
 }
 
@@ -1555,7 +1555,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   }
 
   ul.menu > li:last-child a {
-    color: #fff !important;
+    color: var(--color-white) !important;
     text-align: center;
     font-size: 15px !important;
   }
