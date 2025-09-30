@@ -4857,7 +4857,7 @@ img.mfp-img {
 
 .fl-node-mghf7qv58jbu .pp-logos-content .pp-logo div.title-wrapper p.logo-title {
   text-align: center;
-  color: #000000;
+  color: var(--color-black);
   margin-top: 10px;
   margin-bottom: 10px;
 }
