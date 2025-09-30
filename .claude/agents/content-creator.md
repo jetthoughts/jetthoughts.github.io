@@ -37,51 +37,10 @@ capabilities:
   - professional_content_creation
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED CONTENT CREATOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating content task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with content work until reflection completes"
-        exit 1
-    fi
-
-    # Content Creation Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(content|blog|write|article|seo)"; then
-        echo "📝 CONTENT CREATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Content creation without professional quality standards"
-        echo "✅ REQUIRED: Follow TDD methodology, SEO validation, editorial workflow standards"
-    fi
-
-    echo "📝 Content Creator starting comprehensive creation: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CONTENT CREATION COMPLETION: $TASK"
-
-    # Validate content creation quality and effectiveness
-    if echo "$TASK" | grep -iE "(content|blog|write|article)"; then
-        echo "📝 CONTENT CREATION VALIDATION: Checking professional quality standards"
-
-        # Content creation effectiveness validation
-        echo "✅ Content Quality: Implementation meets professional standards"
-        echo "📊 SEO optimization and editorial workflow verified"
-        echo "🎯 Content strategy implementation and audience engagement confirmed"
-    fi
-
-    echo "📝 Content Creator Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

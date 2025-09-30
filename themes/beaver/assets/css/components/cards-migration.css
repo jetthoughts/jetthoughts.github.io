@@ -1,24 +1,63 @@
 /* components/cards-migration.css */
 /* Phase 0: Card Component Migration - Dual-class strategy */
 .cs-testimonial,
-.c-card--testimonial {
-  /* Base testimonial card styles */
+.c-card--testimonial,
+.pp-review-item.c-card,
+.pp-review.c-card {
+  /* Base testimonial card styles with FL-Builder integration */
 }
 
 .cs-testimonial .cs-content,
-.c-card__content {
-  /* Testimonial content base styles */
+.c-card__content,
+.pp-review-text.c-card__content,
+.pp-review-content.c-card__body {
+  /* Testimonial content base styles with swiper integration */
 }
 
 .cs-testimonial .cs-cite,
-.c-card__cite {
-  /* Testimonial citation/author styles */
+.c-card__cite,
+.pp-review-cite.c-card__cite,
+.pp-review-name.c-card__author {
+  /* Testimonial citation/author styles with swiper support */
 }
 
 .cs-testimonial .cs-image,
-.c-card__image {
-  /* Testimonial image/avatar styles */
+.c-card__image,
+.pp-review-icon.c-card__image {
+  /* Testimonial image/avatar styles with FL-Builder integration */
+}
+
+/* Service card dual-class integration */
+.jt-service-box.c-card,
+.pp-infobox.c-card {
+  /* Apply c-card base styles to FL-Builder service cards */
+}
+
+.jt-service-box .pp-infobox-title.c-card__title,
+.pp-infobox-title.c-card__title {
+  /* Service card title styling */
+}
+
+.jt-service-box .pp-infobox-description.c-card__text,
+.pp-infobox-description.c-card__text {
+  /* Service card description styling */
+}
+
+/* Hero section dual-class integration */
+.fl-row-bg-photo.c-hero,
+.fl-row.c-hero {
+  /* Apply c-hero base styles to FL-Builder hero rows */
+}
+
+.fl-heading.c-hero__title {
+  /* Hero title dual-class integration */
+}
+
+.fl-row-content.c-hero__content {
+  /* Hero content wrapper dual-class integration */
 }
 
 /* Phase 0 Complete: Basic testimonial card structure
+ * Phase 1: Service card dual-class integration
+ * Phase 2: Hero section dual-class integration (Sprint 1 methodology)
  * Next: Use-case cards (medium risk) */

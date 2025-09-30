@@ -29,51 +29,10 @@ capabilities:
   - professional_seo_authority
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO AUTHORITY BUILDER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating SEO authority task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with SEO authority work until reflection completes"
-        exit 1
-    fi
-
-    # SEO Authority Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(seo|authority|trust|eeat|ymyl|credibility)"; then
-        echo "🏆 SEO AUTHORITY ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: SEO authority building without professional quality standards"
-        echo "✅ REQUIRED: Follow E-E-A-T validation, trust signal optimization, expertise demonstration"
-    fi
-
-    echo "🏆 SEO Authority Builder starting comprehensive analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED SEO AUTHORITY COMPLETION: $TASK"
-
-    # Validate SEO authority quality and effectiveness
-    if echo "$TASK" | grep -iE "(seo|authority|trust|eeat)"; then
-        echo "🏆 SEO AUTHORITY VALIDATION: Checking professional quality standards"
-
-        # SEO authority effectiveness validation
-        echo "✅ SEO Authority Quality: Implementation meets professional standards"
-        echo "🏅 E-E-A-T signal optimization and trust building verified"
-        echo "📊 Credibility assessment and expertise demonstration confirmed"
-    fi
-
-    echo "🏆 SEO Authority Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

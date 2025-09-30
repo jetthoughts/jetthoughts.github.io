@@ -1,0 +1,21 @@
+/* Modal Component - migrated from SCSS to PostCSS nested syntax */
+.c-modal,
+.fl-node-ncg61wov0ytq.c-modal {
+  --modal-bg: rgba(0, 0, 0, 0.8);
+  --modal-content-bg: #ffffff;
+  --modal-z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-bg);
+  z-index: var(--modal-z-index);
+  display: none;
+  &.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

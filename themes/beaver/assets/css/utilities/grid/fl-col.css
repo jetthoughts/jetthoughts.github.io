@@ -1,0 +1,14 @@
+/* FL-Col Core Layout Patterns */
+/* Phase 2: Grid System Consolidation - FL-Col Utilities */
+
+/* FL-Col Base Structure - Essential Grid Column */
+.fl-col {
+  float: left;
+  min-height: 1px;
+}
+
+/* FL-Col Content Container - Column Content Wrapper */
+.fl-col-content {
+  margin: 0;
+  padding: 0;
+}

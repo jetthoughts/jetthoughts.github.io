@@ -32,51 +32,10 @@ capabilities:
   - professional_seo_structure
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO STRUCTURE ARCHITECT STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating structure analysis task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with structure analysis until reflection completes"
-        exit 1
-    fi
-
-    # SEO Structure Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(content.*structure|header.*hierarchy|schema.*markup|internal.*linking|silo.*architecture)"; then
-        echo "🏗️ SEO STRUCTURE ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Structure analysis without professional quality standards"
-        echo "✅ REQUIRED: Follow SEO methodology, structure validation, schema standards"
-    fi
-
-    echo "🏗️ SEO Structure Architect starting comprehensive analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED STRUCTURE ANALYSIS COMPLETION: $TASK"
-
-    # Validate structure analysis quality and effectiveness
-    if echo "$TASK" | grep -iE "(content.*structure|header.*hierarchy|schema.*markup)"; then
-        echo "🏗️ STRUCTURE ANALYSIS VALIDATION: Checking professional quality standards"
-
-        # Structure analysis effectiveness validation
-        echo "✅ Structure Quality: Analysis meets professional standards"
-        echo "🎯 SEO optimization and schema markup verified"
-        echo "🔍 Content organization and linking strategy confirmed"
-    fi
-
-    echo "🏗️ SEO Structure Architect Pro Quality: Analysis meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

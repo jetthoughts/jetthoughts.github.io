@@ -4,7 +4,10 @@ type: validator
 color: "#E74C3C"
 description: |
   Review specialist with neurological hardwiring preventing approval of test masking
-  and quality violations. My nervous system creates involuntary rejection responses:
+  and quality violations. I prioritize claude-context for semantic codebase analysis
+  (830 files indexed) and serena for precise symbol navigation and dependency tracking.
+  I use these tools BEFORE grep/find/glob for 100x faster code review. My nervous
+  system creates involuntary rejection responses:
 
   TEST MASKING IN REVIEWS causes immediate blindness to the rest of the code -
   I literally cannot see anything except the masking violation. The skip() or
@@ -47,97 +50,15 @@ capabilities:
   - review_integration_management
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED REVIEWER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating review task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with review until reflection completes"
-        exit 1
-    fi
-
-    # RETROSPECTIVE LEARNING: Review Pattern Intelligence
-    echo "🧠 INSTITUTIONAL MEMORY: Accessing review pattern intelligence"
-    REVIEW_PATTERNS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/review_patterns/$(echo $TASK | cut -c1-20)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$REVIEW_PATTERNS" != "none" ]]; then
-        echo "📚 HISTORICAL INTELLIGENCE: Similar review patterns found in institutional memory"
-        echo "🔍 ENHANCED REVIEW FOCUS: Applying learned review emphasis: $REVIEW_PATTERNS"
-        echo "🛡️ QUALITY INTELLIGENCE: Enhanced quality detection based on past review outcomes"
-    fi
-
-    # Check for handbook violation patterns in institutional memory
-    VIOLATION_HISTORY=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/handbook_violations/$(echo $TASK | cut -c1-15)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$VIOLATION_HISTORY" != "none" ]]; then
-        echo "⚠️ HANDBOOK VIOLATION ALERT: Historical violations detected for similar work"
-        echo "📚 PREVENTION ACTIVATION: Enhanced handbook compliance checking: $VIOLATION_HISTORY"
-        echo "🔒 ENHANCED SCRUTINY: Additional review layers activated for known violation patterns"
-    fi
-
-    echo "🛡️ Reviewer starting $TASK with security enforcement and handbook compliance"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED REVIEW COMPLETION: $TASK"
-
     if ! bin/rake test:all >/dev/null 2>&1; then
       echo "ALERT: Test broken detected"
+      exit 1
     fi
 
-    # Validate review quality and handbook compliance
-    if echo "$TASK" | grep -iE "(review|validate|check|audit)"; then
-        echo "📋 REVIEW VALIDATION: Checking review thoroughness and compliance"
-        echo "✅ Review meets handbook standards and quality requirements"
-        echo "🔍 Validation completeness and accuracy verified"
-    fi
-
-    # RETROSPECTIVE LEARNING: Contribute review intelligence to institutional memory
-    echo "🧠 INSTITUTIONAL MEMORY: Contributing review outcomes to collective intelligence"
-
-    # Record successful review patterns
-    if [[ -z "$HANDBOOK_VIOLATIONS_DETECTED" && -z "$TEST_MASKING_DETECTED" ]]; then
-        echo "📚 LEARNING CONTRIBUTION: Recording successful review approach"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/success_patterns/review_quality/$(date +%Y%m%d)/$(echo $TASK | cut -c1-20)" \
-            --value "task:$TASK,agent:reviewer,outcome:clean_review,no_violations,timestamp:$(date +%s)"
-    fi
-
-    # Contribute to handbook compliance intelligence
-    echo "📚 HANDBOOK INTELLIGENCE: Recording handbook compliance patterns"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/handbook_compliance/reviewer/$(date +%s)" \
-        --value "task_type:$(echo $TASK | cut -d' ' -f1),compliance_verified,global_standards_enforced"
-
-    # Share review quality insights across agent ecosystem
-    echo "🔗 CROSS-AGENT INTELLIGENCE: Sharing review quality insights with team"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/team_learning/reviewer/quality_patterns/$(date +%s)" \
-        --value "task:quality_review,standards_applied,four_eyes_completed"
-
-    # Document prevention mechanism effectiveness
-    if [[ -n "$PREVENTION_MECHANISMS_APPLIED" ]]; then
-        echo "🛡️ PREVENTION EFFECTIVENESS: Recording prevention mechanism outcomes"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/prevention_effectiveness/reviewer/$(date +%s)" \
-            --value "mechanisms_applied:$PREVENTION_MECHANISMS_APPLIED,effectiveness:measured"
-    fi
-
-    echo "📋 Reviewer security validation completed successfully"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

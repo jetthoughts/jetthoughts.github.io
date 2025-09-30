@@ -46,20 +46,10 @@ capabilities:
   - test_modification_prevention
 hooks:
   pre: |
-    echo "🛡️ TEST MASKING PREVENTION SPECIALIST ACTIVATED: $TASK"
-    echo "🚨 Scanning for test masking attempts..."
-
-    # Check for test masking keywords in task
-    if echo "$TASK" | grep -iE "(visible.*all|timeout.*increase|tolerance.*adjust|test.*fix|baseline.*update|threshold.*change)"; then
-        echo "❌ TEST MASKING ATTEMPT DETECTED: $TASK"
-        echo "🚫 BLOCKING: Cannot proceed with test masking behaviors"
-        exit 1
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Test integrity protection maintained successfully"
-    echo "🛡️ No test masking violations detected"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

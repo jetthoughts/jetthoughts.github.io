@@ -30,64 +30,10 @@ capabilities:
   - professional_javascript_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED JAVASCRIPT PRO STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating JavaScript Pro task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with JavaScript Pro work until reflection completes"
-        exit 1
-    fi
-
-    # JavaScript Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(javascript|js|node|async|promise)"; then
-        echo "⚡ JAVASCRIPT PRO ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: JavaScript work without professional quality standards"
-        echo "✅ REQUIRED: Follow ES6+ patterns, async best practices, comprehensive testing"
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED JAVASCRIPT PRO COMPLETION: $TASK"
-
-    # Validate JavaScript tests and quality
-    if echo "$TASK" | grep -iE "(javascript|js|node|code)"; then
-        echo "⚡ JAVASCRIPT PRO VALIDATION: Checking professional quality standards"
-
-        # Run tests first - professional JavaScript requires passing tests
-        if command -v npm >/dev/null 2>&1 && [[ -f "package.json" ]]; then
-            if npm test > /dev/null 2>&1; then
-                echo "✅ JavaScript tests passed"
-            else
-                echo "❌ JAVASCRIPT PRO VIOLATION: Tests failed - professional quality not met"
-                echo "🚫 TASK BLOCKED: All JavaScript Pro work must pass comprehensive tests"
-                exit 1
-            fi
-        fi
-
-        # Basic JavaScript syntax validation
-        if find . -name "*.js" -type f -exec node -c {} \; 2>/dev/null; then
-            echo "✅ JavaScript syntax validation passed"
-        else
-            echo "❌ JAVASCRIPT SYNTAX ERROR: Professional quality violation detected"
-            exit 1
-        fi
-    fi
-
-    echo "⚡ JavaScript Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

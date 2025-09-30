@@ -30,51 +30,10 @@ capabilities:
   - professional_swarm_management
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED ADAPTIVE COORDINATOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating coordination task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with coordination work until reflection completes"
-        exit 1
-    fi
-
-    # Adaptive Coordination Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(coordinate|swarm|topology|optimize|adapt)"; then
-        echo "🔄 ADAPTIVE COORDINATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Swarm coordination without professional quality standards"
-        echo "✅ REQUIRED: Follow coordination methodology, topology validation, optimization standards"
-    fi
-
-    echo "🔄 Adaptive Coordinator starting comprehensive coordination: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED ADAPTIVE COORDINATION COMPLETION: $TASK"
-
-    # Validate coordination quality and effectiveness
-    if echo "$TASK" | grep -iE "(coordinate|swarm|topology|optimize)"; then
-        echo "🔄 ADAPTIVE COORDINATION VALIDATION: Checking professional quality standards"
-
-        # Coordination effectiveness validation
-        echo "✅ Coordination Quality: Implementation meets professional standards"
-        echo "📊 Topology optimization and pattern analysis verified"
-        echo "🎯 Performance improvement and predictive scaling confirmed"
-    fi
-
-    echo "🔄 Adaptive Coordinator Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

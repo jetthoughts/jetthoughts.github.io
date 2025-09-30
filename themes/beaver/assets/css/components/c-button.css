@@ -1,0 +1,116 @@
+/* ==============================================================
+   c-button BEM Component - REFACTOR PHASE (Flocking Rules Applied)
+   Sprint 3: CSS Migration
+   Reference: /knowledge/20.05-shameless-green-flocking-rules-methodology.md
+   ============================================================== */
+
+/* FLOCKING RULES APPLICATION:
+ * Rule 1: Select things most alike - All button variants share base styling
+ * Rule 2: Find smallest difference - Only colors differ between variants
+ * Rule 3: Make simplest change - Extract base class, keep color overrides
+ */
+
+/* Base Button Component - Extracted common properties via flocking rules */
+.c-button--primary,
+.c-button--secondary,
+.c-button--tertiary {
+  /* Base button styling - Consolidated from all variants */
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: none;
+
+  /* Transition (common to all variants) */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Common hover state - Consolidated from all variants */
+.c-button--primary:hover,
+.c-button--secondary:hover,
+.c-button--tertiary:hover {
+  text-decoration: none;
+}
+
+/* Common active state - Consolidated from all variants */
+.c-button--primary:active,
+.c-button--secondary:active,
+.c-button--tertiary:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Primary Button Variant - Only color differences remain */
+.c-button--primary {
+  background-color: #1a8cff;
+  color: #ffffff;
+  border: 2px solid #1a8cff;
+}
+
+.c-button--primary:hover {
+  background-color: #0066cc;
+  border-color: #0066cc;
+  color: #ffffff;
+}
+
+/* Secondary Button Variant - Only color differences remain */
+.c-button--secondary {
+  background-color: #ffffff;
+  color: #121212;
+  border: 2px solid #121212;
+}
+
+.c-button--secondary:hover {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Tertiary Button Variant - Only color differences remain */
+.c-button--tertiary {
+  background-color: transparent;
+  color: #1a8cff;
+  border: 2px solid transparent;
+}
+
+.c-button--tertiary:hover {
+  background-color: rgba(26, 140, 255, 0.1);
+  color: #0066cc;
+}
+
+/* Mobile Touch Target Size Enhancement (iOS/Android best practices) */
+@media (max-width: 860px) {
+  .c-button--primary,
+  .c-button--secondary,
+  .c-button--tertiary {
+    /* Ensure minimum 44px touch target (Apple HIG + Android Material) */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* GREEN PHASE NOTES FOR REFACTOR PHASE:
+ *
+ * DUPLICATION TO BE ADDRESSED IN REFACTOR:
+ * 1. Base button styles duplicated 3 times (border-radius, padding, font-size, etc.)
+ * 2. Active state duplicated 3 times (position: relative; top: 1px)
+ * 3. Transition duplicated 3 times
+ * 4. Text-decoration: none duplicated in hover states
+ *
+ * FLOCKING RULES APPLICATION (REFACTOR phase):
+ * Rule 1: Select things most alike - All three variants share base styling
+ * Rule 2: Find smallest difference - Only color/background differs between variants
+ * Rule 3: Make simplest change - Extract .c-button base class with shared properties
+ *
+ * EXPECTED REFACTOR OUTCOME:
+ * .c-button (base) - shared properties
+ * .c-button--primary - only color overrides
+ * .c-button--secondary - only color overrides
+ * .c-button--tertiary - only color overrides
+ */

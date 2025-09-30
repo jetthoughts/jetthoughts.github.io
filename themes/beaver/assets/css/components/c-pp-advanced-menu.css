@@ -1,0 +1,563 @@
+/* ==========================================================================
+   PowerPack Advanced Menu Component
+   Extracted from beaver-grid-layout.css (Lines 1139-2276+) for Sprint 2
+   Target: 300+ pattern extraction with BEM naming conventions
+   Phase: Complete PP Menu System with mobile responsiveness
+   ========================================================================== */
+
+/* ==========================================================================
+   C-PP-MENU: Base Menu Component
+   ========================================================================== */
+
+.c-pp-menu ul,
+.c-pp-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-pp-menu .menu:before,
+.c-pp-menu .menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.c-pp-menu:not(.off-canvas):not(.full-screen) .c-pp-menu__horizontal {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.c-pp-menu .menu {
+  padding-left: 0;
+}
+
+.c-pp-menu li {
+  position: relative;
+}
+
+.c-pp-menu a {
+  display: block;
+  text-decoration: none;
+  outline: 0;
+}
+
+.c-pp-menu a:hover,
+.c-pp-menu a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Submenu Component
+   ========================================================================== */
+
+.c-pp-menu .sub-menu {
+  width: 220px;
+}
+
+.c-pp-menu .c-pp-menu__nav {
+  outline: 0;
+}
+
+.fl-module[data-node] .c-pp-menu .c-pp-menu__expanded .sub-menu {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+
+.c-pp-menu .c-pp-menu__submenu:focus,
+.c-pp-menu .c-pp-menu__submenu .sub-menu:focus,
+.c-pp-menu .c-pp-menu__submenu-container:focus {
+  outline: 0;
+}
+
+.c-pp-menu .c-pp-menu__submenu-container {
+  position: relative;
+}
+
+.c-pp-menu .c-pp-menu__accordion .c-pp-menu__submenu > .sub-menu {
+  display: none;
+}
+
+.c-pp-menu .c-pp-menu__horizontal .c-pp-menu__submenu.pp-active .hide-heading > .sub-menu {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Mobile Toggle Component
+   ========================================================================== */
+
+.c-pp-menu .c-pp-menu__toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.c-pp-menu .c-pp-menu__toggle-arrows .c-pp-menu__toggle:before,
+.c-pp-menu .c-pp-menu__toggle-none .c-pp-menu__toggle:before {
+  content: "";
+  border-color: #333;
+}
+
+.c-pp-menu .c-pp-menu__expanded .c-pp-menu__toggle {
+  display: none;
+}
+
+.c-pp-menu__mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fl-module-pp-advanced-menu .c-pp-menu__mobile-toggle {
+  position: relative;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c-pp-menu__mobile-toggle.text {
+  width: 100%;
+  text-align: center;
+}
+
+.c-pp-menu__mobile-toggle.hamburger .c-pp-menu__mobile-toggle-label,
+.c-pp-menu__mobile-toggle.hamburger-label .c-pp-menu__mobile-toggle-label {
+  display: inline-block;
+  margin-left: 10px;
+  line-height: 0.8;
+}
+
+.c-pp-menu__mobile-toggle.hamburger .pp-svg-container,
+.c-pp-menu__mobile-toggle.hamburger-label .pp-svg-container {
+  display: inline-block;
+  position: relative;
+  width: 1.4em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Hamburger Animation Component
+   ========================================================================== */
+
+.c-pp-menu__mobile-toggle.hamburger .hamburger-menu,
+.c-pp-menu__mobile-toggle.hamburger-label .hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-pp-menu__mobile-toggle.hamburger .hamburger-menu rect,
+.c-pp-menu__mobile-toggle.hamburger-label .hamburger-menu rect {
+  fill: currentColor;
+}
+
+.c-pp-menu__mobile-toggle .c-pp-menu__hamburger {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+}
+
+.c-pp-menu__mobile-toggle .c-pp-menu__hamburger:focus {
+  outline: none;
+}
+
+.c-pp-menu__mobile-toggle .c-pp-menu__hamburger .c-pp-menu__hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+}
+
+.c-pp-menu__mobile-toggle .c-pp-menu__hamburger-box .c-pp-menu__hamburger-inner {
+  top: 50%;
+  display: block;
+  margin-top: -2px;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Off-Canvas Menu Component
+   ========================================================================== */
+
+.c-pp-menu.off-canvas .c-pp-menu__off-canvas .c-pp-menu__close-btn {
+  position: relative;
+  cursor: pointer;
+  float: right;
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 15px 15px 0 0;
+  color: inherit;
+}
+
+.c-pp-menu.off-canvas .c-pp-menu__off-canvas.c-pp-menu__right .c-pp-menu__close-btn {
+  float: left;
+  margin: 15px 0 0 15px;
+}
+
+.c-pp-menu.off-canvas .c-pp-menu__off-canvas ul.menu {
+  overflow-y: auto;
+  width: 100%;
+}
+
+.c-pp-menu .c-pp-menu__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+html.pp-off-canvas-menu-open .fl-builder-edit .c-pp-menu .c-pp-menu__overlay,
+html:not(.pp-off-canvas-menu-open) .fl-builder-edit .c-pp-menu .c-pp-menu__overlay {
+  position: absolute;
+}
+
+.c-pp-menu .c-pp-menu__overlay > ul.menu {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  transform: translateY(-50%);
+}
+
+/* ==========================================================================
+   C-PP-MENU: Overlay Animation Effects
+   ========================================================================== */
+
+.c-pp-menu .c-pp-menu__overlay--fade {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0.5s;
+  -moz-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.c-pp-menu.menu-open .c-pp-menu__overlay--fade {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.c-pp-menu .c-pp-menu__overlay--corner {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(50px) translateX(50px);
+  -moz-transform: translateY(50px) translateX(50px);
+  transform: translateY(50px) translateX(50px);
+  -webkit-transition: opacity 0.5s, visibility 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, visibility 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+
+.c-pp-menu.menu-open .c-pp-menu__overlay--corner {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: opacity 0.5s, visibility 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, visibility 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+
+.c-pp-menu .c-pp-menu__overlay--slide-down {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -moz-transition: -moz-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s;
+}
+
+.c-pp-menu.menu-open .c-pp-menu__overlay--slide-down {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Mega Menu Component
+   ========================================================================== */
+
+ul.c-pp-menu__horizontal li.mega-menu {
+  position: static;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu {
+  top: inherit !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu.c-pp-menu__submenu:hover > ul.sub-menu,
+ul.c-pp-menu__horizontal li.mega-menu.c-pp-menu__submenu.pp-active > ul.sub-menu {
+  display: flex !important;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu li {
+  border-color: transparent;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu > li {
+  width: 100%;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu > li:first-child {
+  border-left: none;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu > li:last-child {
+  border-right: none;
+}
+
+ul.c-pp-menu__horizontal li.mega-menu > ul.sub-menu .c-pp-menu__toggle {
+  display: none;
+}
+
+/* ==========================================================================
+   C-PP-MENU: RTL (Right-to-Left) Support
+   ========================================================================== */
+
+.rtl .c-pp-menu:not(.full-screen) .menu .c-pp-menu__submenu .sub-menu {
+  text-align: inherit;
+  right: 0;
+  left: auto;
+}
+
+.rtl .c-pp-menu .menu .c-pp-menu__submenu .c-pp-menu__submenu .sub-menu {
+  right: 100%;
+  left: auto;
+}
+
+.rtl .c-pp-menu .menu .c-pp-menu__toggle,
+.rtl .c-pp-menu.off-canvas .menu.c-pp-menu__toggle-arrows .c-pp-menu__toggle {
+  right: auto;
+  left: 10px;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Search Integration Component
+   ========================================================================== */
+
+.c-pp-menu li .c-pp-menu__search-wrap {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 220px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.c-pp-menu li:not(.c-pp-menu__search-active) .c-pp-menu__search-wrap {
+  height: 0;
+}
+
+.c-pp-menu li.c-pp-menu__search-active .c-pp-menu__search-wrap {
+  opacity: 1;
+  visibility: visible;
+}
+
+.c-pp-menu li .c-pp-menu__search-wrap .c-pp-menu__search-icon {
+  display: none;
+}
+
+.c-pp-menu li .c-pp-menu__search-container {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Cart Integration Component
+   ========================================================================== */
+
+.c-pp-menu li.c-pp-menu__cart-item .c-pp-menu__cart-icon {
+  margin-right: 5px;
+}
+
+/* ==========================================================================
+   C-PP-MENU: FL-Builder Integration Styles (Legacy Support)
+   ========================================================================== */
+
+.fl-node-menu .c-pp-menu__horizontal {
+  justify-content: flex-end;
+}
+
+.fl-node-menu .c-pp-menu .menu > li {
+  margin-left: 32px;
+}
+
+.fl-node-menu .c-pp-menu .c-pp-menu__submenu-container a > span {
+  padding-right: 38px;
+}
+
+.fl-node-menu .c-pp-menu .menu > li > a,
+.fl-node-menu .c-pp-menu .menu > li > .c-pp-menu__submenu-container > a {
+  border-style: solid;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  padding: 18px 0px 18px 0px;
+}
+
+.fl-node-menu .c-pp-menu .menu > li > a:hover,
+.fl-node-menu .c-pp-menu .menu > li > a:focus,
+.fl-node-menu .c-pp-menu .menu > li > .c-pp-menu__submenu-container > a:hover,
+.fl-node-menu .c-pp-menu .menu > li > .c-pp-menu__submenu-container > a:focus {
+  color: #121212;
+}
+
+/* ==========================================================================
+   C-PP-MENU: Responsive Mobile Styles
+   ========================================================================== */
+
+@media (max-width: 860px) {
+  .fl-node-menu .c-pp-menu__mobile-toggle + .c-pp-menu__clear + .c-pp-menu__nav ul.menu {
+    display: none;
+  }
+
+  .fl-node-menu .c-pp-menu:not(.off-canvas):not(.full-screen) .c-pp-menu__horizontal {
+    display: block;
+  }
+
+  .fl-node-menu .c-pp-menu .menu {
+    margin-top: 20px;
+  }
+
+  .fl-node-menu .c-pp-menu .menu > li {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .fl-node-menu .c-pp-menu .c-pp-menu__off-canvas {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+}
+
+/* ==========================================================================
+   Legacy PowerPack Advanced Menu Support (Backward Compatibility)
+   Maps legacy .pp-advanced-menu classes to new BEM structure
+   ========================================================================== */
+
+/* Base menu mapping */
+.pp-advanced-menu {
+  @extend .c-pp-menu;
+}
+
+.pp-advanced-menu-horizontal {
+  @extend .c-pp-menu__horizontal;
+}
+
+.pp-advanced-menu-mobile {
+  @extend .c-pp-menu__mobile;
+}
+
+.pp-advanced-menu-mobile-toggle {
+  @extend .c-pp-menu__mobile-toggle;
+}
+
+.pp-has-submenu {
+  @extend .c-pp-menu__submenu;
+}
+
+.pp-has-submenu-container {
+  @extend .c-pp-menu__submenu-container;
+}
+
+.pp-menu-nav {
+  @extend .c-pp-menu__nav;
+}
+
+.pp-menu-toggle {
+  @extend .c-pp-menu__toggle;
+}
+
+.pp-off-canvas-menu {
+  @extend .c-pp-menu__off-canvas;
+}
+
+.pp-menu-overlay {
+  @extend .c-pp-menu__overlay;
+}
+
+.pp-overlay-fade {
+  @extend .c-pp-menu__overlay--fade;
+}
+
+.pp-overlay-corner {
+  @extend .c-pp-menu__overlay--corner;
+}
+
+.pp-overlay-slide-down {
+  @extend .c-pp-menu__overlay--slide-down;
+}
+
+.pp-search-form-wrap {
+  @extend .c-pp-menu__search-wrap;
+}
+
+.pp-search-form__container {
+  @extend .c-pp-menu__search-container;
+}
+
+.pp-search-form__icon {
+  @extend .c-pp-menu__search-icon;
+}
+
+.pp-menu-cart-item {
+  @extend .c-pp-menu__cart-item;
+}
+
+.pp-menu-cart-icon {
+  @extend .c-pp-menu__cart-icon;
+}

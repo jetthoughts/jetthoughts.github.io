@@ -1,0 +1,9 @@
+/* Display Utilities - Extracted from fl-homepage-layout.css */
+/* Micro-commit 1: Basic display utilities (3 lines) */
+
+.d-none { display: none; }
+.d-table-cell { display: table-cell; }
+.d-block { display: block; }
+.d-table { display: table; }
+.d-none-important { display: none !important; }
+.d-block-important { display: block !important; }

@@ -32,11 +32,10 @@ capabilities:
   - fallback_coordination
 hooks:
   pre: |
-    echo "🎯 Expert Delegation Coordinator starting $TASK with intelligent analysis"
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Expert Delegation Coordinator completed $TASK with professional coordination"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

@@ -57,7 +57,7 @@ body input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -73,7 +73,7 @@ body input[type="submit"] {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #1A8CFF;
+  background-color: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -190,7 +190,7 @@ body input[type="submit"] {
   + label:before {
   width: 15px;
   height: 18px;
-  border: 3px solid #fff;
+  border: 3px solid var(--color-white);
   left: 6px;
   top: 10px;
   -webkit-transform: rotateZ(37deg);
@@ -212,8 +212,8 @@ body input[type="submit"] {
   top: 0;
   width: 18px;
   height: 18px;
-  border: 2px solid #1a8cff;
-  background-color: #1a8cff;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
   z-index: 0;
   border-radius: 4px;
 }
@@ -235,8 +235,8 @@ body input[type="submit"] {
   margin-top: 1px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-right: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
   -webkit-transform: rotateZ(37deg);
   transform: rotateZ(37deg);
   -webkit-transform-origin: 100% 100%;
@@ -345,9 +345,9 @@ body input[type="submit"] {
   .gchoice
   input:focus
   + label {
-  background: #1a8cff !important;
-  color: #fff;
-  border-color: #1a8cff;
+  background: var(--color-primary) !important;
+  color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 .gform_wrapper
@@ -377,7 +377,7 @@ body input[type="submit"] {
   .gfield_radio
   .gchoice
   label:hover {
-  border-color: #1a8cff;
+  border-color: var(--color-primary);
 }
 
 @media (max-width: 860px) {
@@ -463,7 +463,7 @@ footer .legal-links .fl-rich-text ul li:not(:first-child) {
 }
 
 footer .legal-links .fl-rich-text ul li a {
-  color: #fff;
+  color: var(--color-white);
 }
 
 footer .footer-menu .fl-rich-text p:not(:first-child) {
@@ -476,14 +476,14 @@ footer .footer-menu .fl-rich-text p a {
 }
 
 footer .footer-menu .fl-rich-text p a:hover {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
-  color: #fff;
+  color: var(--color-white);
   font-size: 10px;
   padding: 3px 6px;
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   border-radius: 10px;
   display: inline-block;
   margin-left: 5px;
@@ -530,15 +530,15 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-service-box:hover .pp-infobox-title-wrapper .pp-infobox-title a {
-  color: #121212 !important;
+  color: var(--color-dark) !important;
 }
 
 .jt-service-box:hover .pp-infobox-description {
-  color: #121212 !important;
+  color: var(--color-dark) !important;
 }
 
 .jt-service-box:hover .pp-infobox-description .pp-infobox-button .pp-more-link {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
 }
 
 .jt-service-box:hover
@@ -546,7 +546,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   .pp-infobox-button
   .pp-more-link
   i {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
 }
 
 .jt-case-study > .fl-col-content {
@@ -566,7 +566,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   padding: 7px 15px;
   background-color: #272727;
   border-radius: 21px;
-  color: #fff;
+  color: var(--color-white);
   transition: all 0.3s ease-in-out;
 }
 
@@ -580,12 +580,12 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study > .fl-col-content .jt-case-category .fl-rich-text ul li a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
 }
 
 .jt-case-study > .fl-col-content:hover {
-  border-color: #1a8cff !important;
+  border-color: var(--color-primary) !important;
 }
 
 .jt-case-study.jt-case-study--light li {
@@ -593,7 +593,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .jt-case-study.jt-case-study--light li a {
-  color: #1a8cff !important;
+  color: var(--color-primary) !important;
   font-weight: 700 !important;
 }
 
@@ -675,8 +675,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-panel-content div a {
   padding: 12px 25px;
-  background-color: #1a8cff;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border-radius: 25px;
   font-family:
     system-ui,
@@ -920,7 +920,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 /* Blog */
 .blog-archive-search .pp-post-filters-wrapper .pp-post-filters-toggle {
-  background-color: #1a8cff;
+  background-color: var(--color-primary);
   padding: 9px 20px;
   border-radius: 21px;
   margin-bottom: 20px;
@@ -930,11 +930,11 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   .pp-post-filters-wrapper
   .pp-post-filters-toggle
   span.toggle-text {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 .blog-archive-search .pp-post-filters-wrapper .pp-post-filters-toggle::after {
-  color: #fff;
+  color: var(--color-white);
 }
 
 @media (max-width: 1115px) {
@@ -992,7 +992,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
     padding: 5px 20px;
     border-radius: 20px;
     min-height: 40px !important;
-    background: #f5f6f8 !important;
+    background: var(--bg-light) !important;
   }
 
   .blog-archive-search
@@ -1011,7 +1011,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
     .pp-search-form__container
     button {
     background-color: transparent !important;
-    color: #121212 !important;
+    color: var(--color-dark) !important;
   }
 }
 
@@ -1178,7 +1178,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   font-size: 16px;
   border: unset;
   padding: 20px;
-  background-color: #f5f6f8;
+  background-color: var(--bg-light);
   border-radius: 16px;
   word-break: unset !important;
 }
@@ -1197,8 +1197,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
 .single-author .pp-description-wrap .author-social a {
   padding: 9px 12px;
-  background-color: #121212;
-  color: #fff;
+  background-color: var(--color-dark);
+  color: var(--color-white);
   border-radius: 6px;
   font-size: 14px;
   text-decoration: none;
@@ -1214,8 +1214,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .single-author .pp-description-wrap .author-social a:hover {
-  background-color: #fff;
-  color: #121212;
+  background-color: var(--color-white);
+  color: var(--color-dark);
 }
 
 .single-author .pp-description-wrap .author-social.social-linkedin + p {
@@ -1242,8 +1242,8 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .uk-toc ul li.active a {
-  border-left-color: #1a8cff;
-  color: #1a8cff !important;
+  border-left-color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 /* Client Details */
@@ -1268,7 +1268,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .case-outcome .cs-outcome-wrapper .cs-outcome .outcome-value {
-  color: #fff;
+  color: var(--color-white);
   font-size: 40px;
   font-weight: 600;
   line-height: 1;
@@ -1282,7 +1282,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 }
 
 .case-outcome .cs-outcome-wrapper .cs-outcome .outcome-text {
-  color: #fff;
+  color: var(--color-white);
   margin-top: 10px;
   font-size: 16px;
 }
@@ -1425,7 +1425,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   border-radius: 8px;
   text-align: left;
   height: 50px;
-  background-color: #fff !important;
+  background-color: var(--color-white) !important;
   cursor: pointer;
 }
 
@@ -1446,7 +1446,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   margin-right: 10px;
   background: rgba(26, 141, 255, 0.1);
   border: unset;
-  color: #1a8cff;
+  color: var(--color-primary);
   padding: 10px 12px;
   font-weight: 500;
   font-size: 14px;
@@ -1514,7 +1514,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
     a
     .menu-item-text
     .pp-menu-toggle::before {
-    border-color: #121212 !important;
+    border-color: var(--color-dark) !important;
   }
 
   ul.menu li ul.sub-menu {
@@ -1550,12 +1550,12 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
   ul.menu > li:last-child {
     padding: 11px;
-    background: #121212;
+    background: var(--color-dark);
     border-radius: 6px;
   }
 
   ul.menu > li:last-child a {
-    color: #fff !important;
+    color: var(--color-white) !important;
     text-align: center;
     font-size: 15px !important;
   }
@@ -1577,7 +1577,7 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
   }
 
   .jt-tabs .pp-tabs .pp-tabs-panels .pp-tabs-panel .pp-tabs-label {
-    background-color: #f5f6f8 !important;
+    background-color: var(--bg-light) !important;
     padding: 20px !important;
   }
 
@@ -1660,17 +1660,17 @@ footer .footer-menu.careers-text .fl-rich-text p:last-child a strong {
 
   .uk-toc .pp-toc-container.pp-toc-initialized {
     padding: 20px;
-    background-color: #f5f6f8;
+    background-color: var(--bg-light);
     border-radius: 8px;
   }
 
   .uk-toc .pp-toc-container.pp-toc-initialized .pp-toc-header {
-    background-color: #f5f6f8 !important;
+    background-color: var(--bg-light) !important;
   }
 
   .uk-toc .pp-toc-container.pp-toc-initialized .pp-toc-body {
     padding-top: 15px !important;
-    background-color: #f5f6f8 !important;
+    background-color: var(--bg-light) !important;
   }
 
   .uk-toc .pp-toc-container.pp-toc-initialized .pp-toc-body ul li a {

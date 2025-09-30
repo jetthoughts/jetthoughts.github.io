@@ -29,51 +29,10 @@ capabilities:
   - professional_memory_coordination
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED MEMORY COORDINATOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating memory coordination task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with memory coordination until reflection completes"
-        exit 1
-    fi
-
-    # Memory Coordination Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(memory|persist|namespace|coordinate|synchronize)"; then
-        echo "🧠 MEMORY COORDINATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Memory coordination without professional quality standards"
-        echo "✅ REQUIRED: Follow namespace validation, persistence protocols, synchronization standards"
-    fi
-
-    echo "🧠 Memory Coordinator starting comprehensive coordination: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED MEMORY COORDINATION COMPLETION: $TASK"
-
-    # Validate memory coordination quality and effectiveness
-    if echo "$TASK" | grep -iE "(memory|persist|namespace|coordinate)"; then
-        echo "🧠 MEMORY COORDINATION VALIDATION: Checking professional quality standards"
-
-        # Memory coordination effectiveness validation
-        echo "✅ Memory Coordination Quality: Implementation meets professional standards"
-        echo "💾 Namespace validation and persistence protocols verified"
-        echo "🔄 Cross-agent synchronization and security standards confirmed"
-    fi
-
-    echo "🧠 Memory Coordination Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

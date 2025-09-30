@@ -5,56 +5,11 @@
    These foundation styles maintain backward compatibility during migration.
    ========================================================================== */
 
-/* Box sizing reset */
-.fl-builder-content *,
-.fl-builder-content *:before,
-.fl-builder-content *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+@import "utilities/foundation/reset.css";
+@import "utilities/foundation/clearfix.css";
+@import "utilities/foundation/screen-reader.css";
+@import "utilities/foundation/container.css";
 
-/* Clearfix utilities */
-.fl-row:before, .fl-row:after,
-.fl-row-content:before, .fl-row-content:after,
-.fl-col-group:before, .fl-col-group:after,
-.fl-col:before, .fl-col:after,
-.fl-module:before, .fl-module:after,
-.fl-module-content:before, .fl-module-content:after {
-  display: table;
-  content: " ";
-}
-
-.fl-row:after, .fl-row-content:after,
-.fl-col-group:after, .fl-col:after,
-.fl-module:after, .fl-module-content:after {
-  clear: both;
-}
-
-.fl-clear {
-  clear: both;
-}
-
-.fl-clearfix:before, .fl-clearfix:after {
-  display: table;
-  content: " ";
-}
-
-.fl-clearfix:after {
-  clear: both;
-}
-
-/* Screen reader only */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 
 /* Responsive visibility utilities */
 .fl-visible-large,

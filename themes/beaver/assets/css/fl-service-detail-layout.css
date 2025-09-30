@@ -1,8 +1,5 @@
-.fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+@import "utilities/foundation/reset.css";
+
 
 .fl-row:before, .fl-row:after, .fl-row-content:before, .fl-row-content:after, .fl-col-group:before, .fl-col-group:after, .fl-col:before, .fl-col:after, .fl-module:before, .fl-module:after, .fl-module-content:before, .fl-module-content:after {
   display: table;
@@ -25,6 +22,7 @@
 .fl-clearfix:after {
   clear: both;
 }
+
 
 .sr-only {
   position: absolute;

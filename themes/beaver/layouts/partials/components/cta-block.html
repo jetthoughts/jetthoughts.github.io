@@ -27,27 +27,27 @@
 {{- $node_id := .node_id | default "cta-block" -}}
 {{- $border_class := .border_class | default "blue-border" -}}
 
-<div class="fl-col-group fl-node-{{ $node_id }}-group fl-col-group-custom-width" data-node="{{ $node_id }}-group">
-  <div class="fl-col fl-node-{{ $node_id }}-col fl-col-small-custom-width fl-col-has-cols {{ $border_class }}" data-node="{{ $node_id }}-col">
+<div class="fl-col-group cta-block__group fl-col-group-custom-width" data-node="{{ $node_id }}-group">
+  <div class="fl-col cta-block__col fl-col-small-custom-width fl-col-has-cols {{ $border_class }}" data-node="{{ $node_id }}-col">
     <div class="fl-col-content fl-node-content">
-      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-spacer" data-node="{{ $node_id }}-spacer">
+      <div class="fl-module fl-module-rich-text cta-block__spacer" data-node="{{ $node_id }}-spacer">
         <div class="fl-module-content fl-node-content"></div>
       </div>
-      <div class="fl-module fl-module-heading fl-node-{{ $node_id }}-heading" data-node="{{ $node_id }}-heading">
+      <div class="fl-module fl-module-heading cta-block__heading" data-node="{{ $node_id }}-heading">
         <div class="fl-module-content fl-node-content">
           <h2 class="fl-heading">
             <span class="fl-heading-text">{{ $heading }}</span>
           </h2>
         </div>
       </div>
-      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-description" data-node="{{ $node_id }}-description">
+      <div class="fl-module fl-module-rich-text cta-block__description" data-node="{{ $node_id }}-description">
         <div class="fl-module-content fl-node-content">
           <div class="fl-rich-text c-content-block__text">
             <p class="c-content-block__paragraph">{{ $description }}</p>
           </div>
         </div>
       </div>
-      <div class="fl-module fl-module-pp-spacer fl-node-{{ $node_id }}-spacer-bottom fl-visible-desktop fl-visible-large fl-visible-medium" data-node="{{ $node_id }}-spacer-bottom">
+      <div class="fl-module fl-module-pp-spacer cta-block__spacer-bottom fl-visible-desktop fl-visible-large fl-visible-medium" data-node="{{ $node_id }}-spacer-bottom">
         <div class="fl-module-content fl-node-content">
           <div class="pp-spacer-module"></div>
         </div>

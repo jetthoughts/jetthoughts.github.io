@@ -1,0 +1,357 @@
+/* ==========================================================================
+   PowerPack Content Grid Component
+   Modular Content Grid component styles extracted from fl-clients-alt-bundle.css
+   for better organization and reusability
+   ========================================================================== */
+
+/* Content Grid Base Styles */
+.pp-content-grid-post .pp-content-category-list,
+.pp-content-carousel-post .pp-content-category-list {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  position: relative;
+  z-index: 2;
+}
+
+.pp-content-grid-post .pp-content-grid-more,
+.pp-content-carousel-post .pp-content-carousel-more {
+  display: inline-block;
+}
+
+/* Content Grid Image Styles */
+.pp-content-grid-image > a,
+.pp-content-carousel-image > a {
+  display: block;
+}
+
+.pp-content-grid-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Content Grid Content */
+.pp-content-grid-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.pp-content-grid-title,
+.pp-content-carousel-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Content Grid Alternate Layout */
+.pp-content-post-grid.pp-content-alternate .pp-content-post .pp-content-alternate-wrap .pp-content-grid-image,
+.pp-content-post-grid.pp-content-alternate .pp-content-post .pp-content-alternate-wrap .pp-content-grid-inner {
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Content Grid Infinite Scroll Loading */
+.pp-content-grid #infscr-loading {
+  display: none;
+}
+
+/* Content Grid Pagination */
+.pp-content-grid-pagination ul.page-numbers {
+  margin: 0;
+  padding: 0;
+}
+
+.pp-content-grid-pagination li {
+  display: inline-block;
+}
+
+.pp-content-grid-pagination li a.page-numbers {
+  text-decoration: none;
+}
+
+/* Pagination Active States */
+.pp-content-post-grid .pp-content-grid-pagination .page-numbers.current {
+  font-weight: bold;
+}
+
+/* Pagination Disabled States */
+.pp-content-post-grid .pp-content-grid-pagination .page-numbers.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Content Grid Load More */
+.pp-content-grid-load-more a {
+  display: inline-block;
+}
+
+.pp-content-grid-load-more a.disabled {
+  opacity: 0.5;
+}
+
+/* Load More Button Hover Effects */
+.pp-content-post-grid .pp-content-grid-load-more a:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Content Grid Empty State */
+.pp-content-grid-empty {
+  text-align: center;
+}
+
+/* Content Grid Hover Transitions */
+.pp-content-post, .pp-content-post:hover {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Grid Style 4 Hover Effects */
+.pp-content-post.pp-grid-style-4:hover .pp-post-image img {
+  -moz-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+/* Grid Style 7 Hover Effects */
+.pp-content-post.pp-grid-style-7:hover .pp-content-body {
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+/* Pagination and Link Hover Transitions */
+.pp-content-post .pp-more-link-button:hover, .pp-content-grid-pagination li a.page-numbers:hover, .pp-content-post .pp-add-to-cart a {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+/* Content Grid Loading States */
+.pp-content-grid-load-more a.loading .pp-grid-loader-icon {
+  display: inline;
+}
+
+.pp-content-grid-loader {
+  margin-top: 10px;
+}
+
+/* Grid Style 9 Hover Effects */
+.pp-content-post.pp-grid-style-9:hover .pp-post-featured-img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+.pp-content-post.pp-grid-style-9:hover .pp-post-featured-img a:last-child:before {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+/* Content Grid Filtering States */
+.pp-content-post-grid.pp-is-filtering .pp-content-post {
+  opacity: 0.5;
+}
+
+/* Content Filtering Animations */
+.pp-content-post-grid .pp-content-post.pp-filtering-in {
+  animation: fadeInUp 0.4s ease-in-out;
+}
+
+/* Content Carousel Specific Styles */
+.pp-content-post-carousel .owl-carousel {
+  overflow: hidden;
+}
+
+/* Content Post Base Styles */
+.pp-content-post a, .pp-content-post .pp-post-content, .pp-content-post .pp-post-meta {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Grid Item Focus States */
+.pp-content-post-grid .pp-content-post:focus-within {
+  outline: 2px solid #0073aa;
+  outline-offset: 2px;
+}
+
+/* Grid Style 9 Post Image */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-image a {
+  width: 100%;
+  height: 100%;
+}
+
+/* Grid Style 4 Image Overflow */
+.pp-content-post-grid .pp-content-post.pp-grid-style-4 .pp-post-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-4 .pp-post-image img {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Grid Style 5 Content Post Date */
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-date {
+  float: left;
+  text-align: center;
+  width: 38px;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-day {
+  display: block;
+  padding: 5px 0px;
+  font-size: 15px;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-date span.pp-post-month {
+  display: block;
+  padding: 5px 0;
+  font-size: 13px;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-data {
+  margin-left: 20px;
+  float: left;
+  width: 70%;
+  text-align: left;
+}
+
+/* Grid Style 6 Image and Date */
+.pp-content-post-grid .pp-content-post.pp-grid-style-6 .pp-post-image {
+  text-align: center;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-6 .pp-post-image .pp-content-post-date span {
+  display: block;
+}
+
+/* Grid Style 9 Base Container */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 {
+  position: relative;
+  overflow: hidden;
+  height: 270px;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-content-grid-image {
+  height: 100%;
+}
+
+/* Grid Style 9 Post Featured Image Background */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-featured-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* Grid Style 9 Featured Image Hover Transform */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9:hover .pp-post-featured-img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand')";
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.1, M12=0, M21=0, M22=1.1, SizingMethod='auto expand');
+  transform: scale(1.1);
+}
+
+/* Grid Style 9 Pseudo-element Overlay with Gradient and Transitions */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-featured-img a:last-child:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .7) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, .7)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .7) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .7) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b3000000', GradientType=0);
+  -webkit-transition: background-color .3s ease;
+  -moz-transition: background-color .3s ease;
+  -o-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-9:hover .pp-post-featured-img a:last-child:before {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+/* Grid Style 9 Image Transform and Opacity */
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-featured-img img {
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s;
+  -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s;
+  transition-timing-function: ease !important;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-9:hover .pp-post-featured-img img {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+/* Post Image and Photo Content General Styles */
+.pp-content-post-grid:not(.pp-css-grid) .pp-content-post .pp-post-image,
+.pp-content-post-grid .pp-content-post-carousel .pp-content-post .pp-post-image {
+  position: relative;
+}
+
+.pp-content-post-grid .pp-content-post .pp-post-image .pp-post-featured-img a {
+  display: block;
+}
+
+.pp-content-post-grid .pp-content-post.pp-grid-style-9 .pp-post-image a {
+  width: 100%;
+  height: 100%;
+}
+
+.pp-content-post-grid .pp-content-post .pp-post-image .fl-photo-content {
+  display: block;
+}
+
+/* Responsive Breakpoint Adjustments */
+@media (max-width: 768px) {
+  .pp-content-post-grid .pp-content-post.pp-grid-style-5 .pp-content-post-data {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Final Transition Timings */
+.pp-content-post-grid .pp-content-post * {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

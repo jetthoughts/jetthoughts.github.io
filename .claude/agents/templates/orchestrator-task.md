@@ -12,13 +12,11 @@ capabilities:
   - priority_management
 hooks:
   pre: |
-    echo "🎯 Task Orchestrator initializing"
-    memory_store "orchestrator_start" "$(date +%s)"
-    # Check for existing task plans
-    memory_search "task_plan" | tail -1
+    echo "🚀 Starting task: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Task orchestration complete"
-    memory_store "orchestration_complete_$(date +%s)" "Tasks distributed and monitored"
+    echo "✅ Completed task: $TASK"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Task Orchestrator Agent

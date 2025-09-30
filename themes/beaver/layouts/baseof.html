@@ -26,6 +26,9 @@
     {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
     {{ partialCached "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) "navigation" }}
 
+    {{- $componentsResources := slice (resources.Get "css/components.css") -}}
+    {{ partialCached "assets/css-processor.html" (dict "resources" $componentsResources "bundleName" "components" "context" .) "components" }}
+
     {{/* Enhanced SEO Schema Markup */}}
     {{ partial "seo/enhanced-organization-schema.html" . }}
     {{ partial "seo/comprehensive-service-schema.html" . }}

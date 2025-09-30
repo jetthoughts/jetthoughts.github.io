@@ -1,0 +1,10 @@
+/* CSS Color Variables - Foundation */
+:root {
+  --color-white: #ffffff;
+  --color-dark: #121212;
+  --color-gray: #969798;
+  --color-primary: #1a8cff;
+  --color-black: #000000;
+  --bg-light: #F5F6F8;
+  --bg-transparent: transparent;
+}

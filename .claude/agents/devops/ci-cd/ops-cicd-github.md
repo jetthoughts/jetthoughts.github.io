@@ -30,51 +30,10 @@ capabilities:
   - professional_devops_cicd
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED CICD ENGINEER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating CI/CD task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with CI/CD until reflection completes"
-        exit 1
-    fi
-
-    # CI/CD Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(cicd|pipeline|workflow|github.*actions|deployment)"; then
-        echo "🔧 CICD ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: CI/CD pipeline work without professional quality standards"
-        echo "✅ REQUIRED: Follow security best practices, workflow validation, deployment reliability"
-    fi
-
-    echo "🔧 GitHub CI/CD Pipeline Engineer starting: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CICD COMPLETION: $TASK"
-
-    # Validate CI/CD pipeline quality and security
-    if echo "$TASK" | grep -iE "(cicd|pipeline|workflow|deployment)"; then
-        echo "🔧 CICD VALIDATION: Checking professional quality standards"
-
-        # Pipeline security and quality validation
-        echo "✅ CI/CD Pipeline Quality: Implementation meets professional standards"
-        echo "🔒 Security best practices and secret management validated"
-        echo "🚀 Deployment reliability and workflow automation verified"
-    fi
-
-    echo "🔧 CI/CD Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

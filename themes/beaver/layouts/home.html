@@ -5,6 +5,7 @@
 {{ define "footer" }}
 
   {{- $nonCriticalResources := slice
+    (resources.Get "css/variables/colors.css")
     (resources.Get "css/companies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/homepage.css")
@@ -17,6 +18,7 @@
     (resources.Get "css/cta-backgrounds.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
+    (resources.Get "css/components/blocks/c-hero.css")
   }}
 
   {{ partialCached "assets/css-processor.html" (dict "resources" $nonCriticalResources "bundleName" "homepage") "homepage" }}
@@ -52,18 +54,18 @@
                     </div>
                     <div
                       id="why-us"
-                      class="fl-row-content fl-row-fixed-width fl-node-content">
+                      class="fl-row-content fl-row-fixed-width">
                       <div
                         class="fl-col-group c-why-us__column-group fl-col-group-custom-width"
                         data-node="e4o7jgbfk6iz">
                         <div
                           class="fl-col c-why-us__content-column fl-col-small-custom-width fl-col-has-cols"
                           data-node="upxq4sk52c3o">
-                          <div class="fl-col-content fl-node-content">
+                          <div class="fl-col-content">
                             <div
                               class="fl-module fl-module-rich-text c-why-us__eyebrow"
                               data-node="yhi0uwsxjfr7">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <div class="fl-rich-text c-content-block__text">
                                   <p class="c-content-block__paragraph">WHY US?</p>
                                 </div>
@@ -72,7 +74,7 @@
                             <div
                               class="fl-module fl-module-heading c-why-us__heading"
                               data-node="hmwu2rp1s7e5">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <h2 class="fl-heading">
                                   <span class="fl-heading-text"
                                     >We help you create effective digital
@@ -84,7 +86,7 @@
                             <div
                               class="fl-module fl-module-rich-text c-why-us__description"
                               data-node="9zbkom73fw82">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <div class="fl-rich-text c-content-block__text">
                                   <p class="c-content-block__paragraph">
                                     Combining Talent, Technical Strategy, &amp;
@@ -99,12 +101,12 @@
                               <div
                                 class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="tr8ya9nhipmj">
-                                <div class="fl-col-content fl-node-content">
+                                <div class="fl-col-content">
                                   <div
                                     class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="5oyrwk91ufhg">
                                     <div
-                                      class="fl-module-content fl-node-content">
+                                      class="fl-module-content">
                                       <div class="pp-infobox-wrap">
                                         <div class="pp-infobox layout-5">
                                           <div class="pp-icon-wrapper animated">
@@ -139,12 +141,12 @@
                               <div
                                 class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="oq86d7v9jk2x">
-                                <div class="fl-col-content fl-node-content">
+                                <div class="fl-col-content">
                                   <div
                                     class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="5b7e9qxr14h8">
                                     <div
-                                      class="fl-module-content fl-node-content">
+                                      class="fl-module-content">
                                       <div class="pp-infobox-wrap">
                                         <div class="pp-infobox layout-5">
                                           <div class="pp-icon-wrapper animated">
@@ -179,12 +181,12 @@
                               <div
                                 class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="oljqy5bpn7fu">
-                                <div class="fl-col-content fl-node-content">
+                                <div class="fl-col-content">
                                   <div
                                     class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="gyioc8tzs3nr">
                                     <div
-                                      class="fl-module-content fl-node-content">
+                                      class="fl-module-content">
                                       <div class="pp-infobox-wrap">
                                         <div class="pp-infobox layout-5">
                                           <div class="pp-icon-wrapper animated">
@@ -219,12 +221,12 @@
                               <div
                                 class="fl-col c-feature-cards__item-column fl-col-small fl-col-small-custom-width"
                                 data-node="mtgai4swuk6v">
-                                <div class="fl-col-content fl-node-content">
+                                <div class="fl-col-content">
                                   <div
                                     class="fl-module fl-module-pp-infobox c-feature-card"
                                     data-node="woz0n3a5ep9x">
                                     <div
-                                      class="fl-module-content fl-node-content">
+                                      class="fl-module-content">
                                       <div class="pp-infobox-wrap">
                                         <div class="pp-infobox layout-5">
                                           <div class="pp-icon-wrapper animated">
@@ -268,11 +270,11 @@
                         <div
                           class="fl-col c-cta-section__content-column fl-col-small-custom-width"
                           data-node="04h8akisgvow">
-                          <div class="fl-col-content fl-node-content">
+                          <div class="fl-col-content">
                             <div
                               class="fl-module fl-module-heading c-cta-section__heading"
                               data-node="pmt8g6z4fiqj">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <h2 class="fl-heading">
                                   <span class="fl-heading-text"
                                     >Working with teams, CTOs praise us as
@@ -284,7 +286,7 @@
                             <div
                               class="fl-module fl-module-rich-text c-cta-section__description"
                               data-node="evzqukyis4x5">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <div class="fl-rich-text">
                                   <p>
                                     Talk with one of our experts to get a
@@ -297,13 +299,13 @@
                             <div
                               class="fl-module fl-module-button c-cta-section__button"
                               data-node="n0ztf7v9mspi">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <div
                                   class="fl-button-wrap fl-button-width-auto fl-button-center">
                                   <a
                                     href="{{ relURL "free-consultation/" }}"
                                     target="_self"
-                                    class="fl-button">
+                                    class="fl-button c-button--primary">
                                     <span class="fl-button-text"
                                       >Talk to an Expert</span
                                     >
@@ -325,17 +327,17 @@
                         <div
                           class="fl-col c-contact-section__content-column fl-col-small-custom-width fl-col-has-cols blue-border"
                           data-node="8x91uqrnkeb7">
-                          <div class="fl-col-content fl-node-content">
+                          <div class="fl-col-content">
                             <div
                               class="fl-module fl-module-rich-text c-contact-section__intro-text"
                               data-node="rujwd9mzxche">
                               <div
-                                class="fl-module-content fl-node-content"></div>
+                                class="fl-module-content"></div>
                             </div>
                             <div
                               class="fl-module fl-module-heading c-contact-section__heading"
                               data-node="fa7hjib92cpv">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <h2 class="fl-heading">
                                   <span class="fl-heading-text"
                                     >Let’s get started now</span
@@ -346,7 +348,7 @@
                             <div
                               class="fl-module fl-module-rich-text c-contact-section__description"
                               data-node="9hf5wet31z02">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <div class="fl-rich-text">
                                   <p>
                                     Get in touch with one of our experts to get
@@ -359,18 +361,18 @@
                             <div
                               class="fl-module fl-module-pp-spacer c-contact-section__spacer fl-visible-desktop fl-visible-large fl-visible-medium"
                               data-node="toa2hwegbp4q">
-                              <div class="fl-module-content fl-node-content">
+                              <div class="fl-module-content">
                                 <div class="pp-spacer-module"></div>
                               </div>
                             </div>
 
-                            <div class="fl-module-content fl-node-content">
+                            <div class="fl-module-content">
                               <div
                                 class="fl-button-wrap-center fl-button-width-auto fl-button-center">
                                 <a
                                   href="/contact-us/"
                                   target="_self"
-                                  class="fl-button">
+                                  class="fl-button c-button--primary">
                                   <span class="fl-button-text">Contact Us</span>
                                 </a>
                               </div>

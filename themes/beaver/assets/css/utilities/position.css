@@ -1,0 +1,6 @@
+/* Position Utilities - Extracted from fl-homepage-layout.css */
+/* Micro-commit 4: Basic position utilities (3 lines) */
+
+.pos-relative { position: relative; }
+.pos-absolute { position: absolute; }
+.pos-static { position: static; }

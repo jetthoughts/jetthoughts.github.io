@@ -32,51 +32,10 @@ capabilities:
   - professional_content_planning
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO CONTENT PLANNER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating content planning task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with content planning until reflection completes"
-        exit 1
-    fi
-
-    # Content Planning Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(content.*plan|seo.*strategy|topic.*cluster|content.*calendar|keyword.*strategy)"; then
-        echo "📝 CONTENT PLANNING ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Content planning without professional quality standards"
-        echo "✅ REQUIRED: Follow SEO methodology, content validation, search optimization standards"
-    fi
-
-    echo "📝 SEO Content Planner starting comprehensive planning: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CONTENT PLANNING COMPLETION: $TASK"
-
-    # Validate content planning quality and effectiveness
-    if echo "$TASK" | grep -iE "(content.*plan|seo.*strategy|topic.*cluster)"; then
-        echo "📝 CONTENT PLANNING VALIDATION: Checking professional quality standards"
-
-        # Content planning effectiveness validation
-        echo "✅ Content Quality: Planning meets professional standards"
-        echo "🎯 SEO optimization and topic clustering verified"
-        echo "🔍 Search intent mapping and content strategy confirmed"
-    fi
-
-    echo "📝 SEO Content Planner Pro Quality: Planning meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

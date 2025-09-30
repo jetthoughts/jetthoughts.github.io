@@ -1,0 +1,18 @@
+/* Testimonial Slider Component - Dual-Class Migration
+ * Migrates .fl-node-* testimonial slider patterns to .c-testimonial-slider system
+ */
+.c-testimonial-slider {
+  --slider-bg: #ffffff;
+  --slider-text: #333333;
+  --slider-padding: 2rem;
+  /* Base slider styles */
+  background-color: var(--slider-bg);
+  color: var(--slider-text);
+  padding: var(--slider-padding);
+}
+/* FL-Builder Compatibility - Dual Class Strategy */
+.fl-node-08kl1yzxeout.c-testimonial-slider { @extend .c-testimonial-slider; }
+.fl-node-cbhworulayqn.c-testimonial-slider { @extend .c-testimonial-slider; }
+.fl-node-d09l8jp3qrgf.c-testimonial-slider,
+.fl-node-7d9wg1x8ua5m.c-testimonial-slider { @extend .c-testimonial-slider; }
+

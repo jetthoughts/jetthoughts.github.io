@@ -32,51 +32,10 @@ capabilities:
   - professional_content_refreshing
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO CONTENT REFRESHER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating content refreshing task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with content refreshing until reflection completes"
-        exit 1
-    fi
-
-    # SEO Content Freshness Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(content.*refresh|freshness.*update|outdated.*content|content.*decay|statistics.*update)"; then
-        echo "🔄 SEO FRESHNESS ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Content refreshing without professional quality standards"
-        echo "✅ REQUIRED: Follow SEO methodology, freshness validation, update standards"
-    fi
-
-    echo "🔄 SEO Content Refresher starting comprehensive analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CONTENT REFRESHING COMPLETION: $TASK"
-
-    # Validate content refreshing quality and effectiveness
-    if echo "$TASK" | grep -iE "(content.*refresh|freshness.*update|outdated.*content)"; then
-        echo "🔄 CONTENT REFRESHING VALIDATION: Checking professional quality standards"
-
-        # Content refreshing effectiveness validation
-        echo "✅ Refresh Quality: Analysis meets professional standards"
-        echo "🎯 SEO freshness optimization and update strategy verified"
-        echo "🔍 Content decay assessment and refresh priorities confirmed"
-    fi
-
-    echo "🔄 SEO Content Refresher Pro Quality: Analysis meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

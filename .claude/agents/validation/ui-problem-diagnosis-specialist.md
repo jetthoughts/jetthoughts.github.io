@@ -32,11 +32,10 @@ capabilities:
   - professional_ui_diagnosis
 hooks:
   pre: |
-    echo "🔍 UI Problem Diagnosis starting $TASK with user authority priority"
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ UI Problem Diagnosis completed $TASK with functional validation"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

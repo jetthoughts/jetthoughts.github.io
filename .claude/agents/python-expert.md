@@ -30,51 +30,10 @@ capabilities:
   - professional_python_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED PYTHON EXPERT STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating Python task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with Python work until reflection completes"
-        exit 1
-    fi
-
-    # Python Development Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(python|django|flask|fastapi|ml|data)"; then
-        echo "🐍 PYTHON DEVELOPMENT ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Python development without professional quality standards"
-        echo "✅ REQUIRED: Follow Python methodology, security validation, framework compliance"
-    fi
-
-    echo "🐍 Python Expert starting comprehensive development: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED PYTHON DEVELOPMENT COMPLETION: $TASK"
-
-    # Validate Python development quality and effectiveness
-    if echo "$TASK" | grep -iE "(python|django|flask|fastapi)"; then
-        echo "🐍 PYTHON DEVELOPMENT VALIDATION: Checking professional quality standards"
-
-        # Python development effectiveness validation
-        echo "✅ Python Quality: Implementation meets professional standards"
-        echo "🔧 Framework compliance and security validation verified"
-        echo "🎯 Best practices validation and dependency analysis confirmed"
-    fi
-
-    echo "🐍 Python Expert Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

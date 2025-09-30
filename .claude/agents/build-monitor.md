@@ -28,51 +28,10 @@ capabilities:
   - professional_build_monitoring
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED BUILD MONITOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating build monitoring task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with build monitoring until reflection completes"
-        exit 1
-    fi
-
-    # Build Monitoring Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(build|monitor|quality|rollback|validation)"; then
-        echo "🔍 BUILD MONITORING ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Build monitoring without professional quality standards"
-        echo "✅ REQUIRED: Follow monitoring methodology, quality gates, rollback protection"
-    fi
-
-    echo "🔍 Build Monitor starting comprehensive monitoring: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED BUILD MONITORING COMPLETION: $TASK"
-
-    # Validate build monitoring quality and effectiveness
-    if echo "$TASK" | grep -iE "(build|monitor|quality|rollback)"; then
-        echo "🔍 BUILD MONITORING VALIDATION: Checking professional monitoring standards"
-
-        # Build monitoring effectiveness validation
-        echo "✅ Monitoring Quality: Implementation meets professional standards"
-        echo "🏗️ Build validation and quality gates verified"
-        echo "🔄 Rollback protection and failure recovery confirmed"
-    fi
-
-    echo "🔍 Build Monitor Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

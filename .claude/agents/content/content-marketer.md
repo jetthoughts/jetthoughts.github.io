@@ -1,4 +1,3 @@
-
 ---
 name: content-marketer
 type: specialist
@@ -33,50 +32,10 @@ capabilities:
   - professional_content_marketing
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED CONTENT MARKETER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating Content Marketing task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with content marketing until reflection completes"
-        exit 1
-    fi
-
-    # Content Marketing Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(content|marketing|seo|social|email)"; then
-        echo "📝 CONTENT MARKETING ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Content marketing without professional quality standards"
-        echo "✅ REQUIRED: Follow SEO optimization, analytics tracking, comprehensive strategy"
-    fi
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CONTENT MARKETING COMPLETION: $TASK"
-
-    # Validate content marketing quality and performance
-    if echo "$TASK" | grep -iE "(content|marketing|strategy|optimization)"; then
-        echo "📝 CONTENT MARKETING VALIDATION: Checking professional quality standards"
-
-        # Content quality validation
-        echo "✅ Content Marketing Quality: Implementation meets professional standards"
-        echo "📊 Performance metrics and analytics tracking validated"
-        echo "🎯 SEO optimization and distribution strategy verified"
-    fi
-
-    echo "📝 Content Marketing Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

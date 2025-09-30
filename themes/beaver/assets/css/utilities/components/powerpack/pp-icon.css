@@ -1,0 +1,25 @@
+/* ==========================================================================
+   PowerPack Icon Component
+   Modular Icon component styles extracted from fl-clients-alt-bundle.css
+   for better organization and reusability
+   ========================================================================== */
+
+/* Icon Wrapper Base Styles */
+.pp-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon Layout Variations */
+.pp-infolist-wrap .layout-1 .pp-icon-wrapper {
+  margin-right: 15px;
+}
+
+.pp-infolist-wrap .layout-2 .pp-icon-wrapper {
+  margin-bottom: 15px;
+}
+
+.pp-infolist-wrap .layout-3 .pp-icon-wrapper {
+  margin-left: 15px;
+}

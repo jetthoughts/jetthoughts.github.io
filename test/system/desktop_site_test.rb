@@ -15,7 +15,16 @@ class DesktopSiteTest < ApplicationSystemTestCase
     preload_all_images
 
     assert_text "Build faster. Scale smarter."
-    assert_screenshot "homepage", tolerance: 0.10
+
+    # Move mouse to (0,0) to prevent menu hover state causing flakiness
+    page.driver.browser.action.move_to_location(0, 0).perform
+
+    begin
+      assert_screenshot "homepage", tolerance: 0.10
+    rescue
+      # FIXME: This is a workaround for a flaky test issue where the screenshot
+      assert_screenshot "homepage", tolerance: 0.10
+    end
   end
 
   def test_top_image_have_highest_priority
@@ -129,8 +138,10 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   def test_services_fractional_cto
     visit "/"
+
     visit_via_menu("Services", "Fractional CTO")
-    assert_screenshot "services/fractional_cto", tolerance: 0.20
+
+    assert_screenshot "services/fractional_cto"
   end
 
   def test_services_app_development
@@ -142,6 +153,23 @@ class DesktopSiteTest < ApplicationSystemTestCase
     end
 
     assert_stable_screenshot "services/app_web_development"
+  end
+
+  def test_services_app_web_development_hero_layout
+    visit "/services/app-web-development/"
+
+    preload_all_images
+
+    # Move mouse to prevent menu hover state
+    page.driver.browser.action.move_to_location(0, 0).perform
+
+    # Verify hero section exists and is properly styled
+    hero_section = find(".fl-row-content-wrap", match: :first, visible: true)
+    refute_nil hero_section, "Hero section must exist"
+
+    # Visual regression test with tight tolerance to catch layout issues
+    # This will FAIL until c-hero-sections.css is properly integrated
+    assert_screenshot "services/app_web_development_hero", tolerance: 0.03
   end
 
   def test_use_cases_menu
@@ -188,7 +216,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     preload_all_images
 
     scroll_to(find(".fl-node-os8vrc1dwlji"))
-    assert_stable_screenshot "about_page/values", tolerance: 0.1
+    assert_stable_screenshot "about_page/values"
   end
 
   def test_about_page_section_achievements

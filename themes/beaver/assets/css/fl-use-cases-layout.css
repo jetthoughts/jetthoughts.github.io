@@ -1,12 +1,14 @@
-.fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/* PowerPack Component Imports - handled via Hugo resources concatenation */
+/* See themes/beaver/layouts/page/use-cases.html for PowerPack CSS inclusion */
 
-.fl-row:before, .fl-row:after, .fl-row-content:before, .fl-row-content:after, .fl-col-group:before, .fl-col-group:after, .fl-col:before, .fl-col:after, .fl-module:before, .fl-module:after, .fl-module-content:before, .fl-module-content:after {
+/* Removed: box-sizing reset - now in utilities/foundation/reset.css */
+/* .fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
+  -webkit-box-sizing: border-box; */
+/* Removed: see utilities/foundation/reset.css */
+
+/* Removed: FL-Builder clearfix before - now in utilities/foundation/clearfix.css */
+/* .fl-row:before, .fl-row:after, .fl-row-content:before, .fl-row-content:after, .fl-col-group:before, .fl-col-group:after, .fl-col:before, .fl-col:after, .fl-module:before, .fl-module:after, .fl-module-content:before, .fl-module-content:after {
   display: table;
-  content: " ";
 }
 
 .fl-row:after, .fl-row-content:after, .fl-col-group:after, .fl-col:after, .fl-module:after, .fl-module-content:after {
@@ -2952,51 +2954,14 @@ img.mfp-img {
   }
 }
 
-.pp-infobox:before, .pp-infobox:after {
-  content: " ";
-  display: table;
-}
+/* Moved: PowerPack InfoBox base styles - now in utilities/components/powerpack/infobox.css */
+/* Moved: PowerPack InfoBox clearfix and link wrapper - now in utilities/components/powerpack/infobox.css */
 
-.pp-infobox:after {
-  clear: both;
-}
+/* Moved: PowerPack InfoBox title components - now in utilities/components/powerpack/infobox.css */
 
-.pp-infobox-wrap .pp-infobox-link {
-  text-decoration: none;
-  display: block;
-}
+/* Moved: PowerPack InfoBox description styles - now in utilities/components/powerpack/infobox.css */
 
-.pp-infobox-title-prefix {
-  display: block;
-}
-
-.pp-infobox-title-wrapper .pp-infobox-title {
-  margin-bottom: 5px;
-  margin-top: 0;
-}
-
-.pp-infobox-description p {
-  margin-bottom: 15px;
-}
-
-.pp-infobox-description p:last-of-type {
-  margin-bottom: 0 !important;
-}
-
-.pp-more-link {
-  color: inherit;
-  display: block;
-  text-decoration: none;
-  box-shadow: none;
-}
-
-.pp-infobox .pp-more-link {
-  display: inline-block;
-}
-
-.pp-more-link:hover {
-  text-decoration: none;
-}
+/* Moved: PowerPack InfoBox link and hover styles - now in utilities/components/powerpack/infobox.css */
 
 .pp-infobox-icon-inner .dashicons, .pp-infobox-icon-inner .dashicons-before:before {
   height: auto;

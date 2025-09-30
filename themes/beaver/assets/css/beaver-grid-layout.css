@@ -1,10 +1,4 @@
-.fl-builder-content *,
-.fl-builder-content *:before,
-.fl-builder-content *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+@import "utilities/foundation/reset.css";
 
 .c-row:before,
 .c-row:after,

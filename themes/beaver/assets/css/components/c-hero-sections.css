@@ -1,0 +1,1095 @@
+/* ==========================================================================
+   COMPONENT: HERO SECTIONS
+   ========================================================================== */
+
+/*
+ * Hero sections extracted from FL-Builder legacy patterns
+ * Target: 312 Hero section patterns
+ * Sprint 3: Hero Sections CSS Extraction Team
+ *
+ * BEM Structure:
+ * .c-hero-sections - Block
+ * .c-hero-sections__content - Element (content container)
+ * .c-hero-sections__overlay - Element (overlay layer)
+ * .c-hero-sections__media - Element (video/image background)
+ * .c-hero-sections__cta - Element (call-to-action)
+ * .c-hero-sections__navigation - Element (navigation overlay)
+ *
+ * Modifiers:
+ * --parallax - Parallax effect
+ * --video-bg - Video background
+ * --overlay-dark - Dark overlay
+ * --centered - Centered content
+ * --full-height - Full viewport height
+ */
+
+/* Base Hero Sections Component */
+.c-hero-sections {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.c-hero-sections__content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0;
+}
+
+.c-hero-sections__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.c-hero-sections__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   HEADER HERO BACKGROUND PATTERNS - EXTRACTION 1-25
+   ========================================================================== */
+
+/* Pattern 1: FL-Builder Row Background Photo */
+.c-hero-sections.fl-row-bg-photo {
+  background-attachment: scroll;
+}
+
+/* Pattern 2: Mobile Background Attachment Fix */
+.fl-builder-mobile .c-hero-sections.fl-row-bg-photo .c-hero-sections__content {
+  background-attachment: scroll;
+}
+
+/* Pattern 3: Video Background Hero */
+.c-hero-sections--video-bg {
+  position: relative;
+}
+
+.c-hero-sections--video-bg .c-hero-sections__media {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* Pattern 4: Video Element Positioning */
+.c-hero-sections--video-bg .c-hero-sections__media video {
+  bottom: 0;
+  left: 0;
+  max-width: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Pattern 5: Video Iframe Background */
+.c-hero-sections--video-bg .c-hero-sections__media iframe {
+  pointer-events: none;
+  width: 100vw;
+  height: 56.25vw;
+  max-width: none;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+/* Pattern 6: Video Fallback Background */
+.c-hero-sections__video-fallback {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* Pattern 7: Slideshow Background Hero */
+.c-hero-sections--slideshow {
+  position: relative;
+}
+
+.c-hero-sections--slideshow .c-hero-sections__slideshow {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* Pattern 8: Background Overlay System */
+.c-hero-sections--overlay-dark::after {
+  border-radius: inherit;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Pattern 9: Content Over Overlay */
+.c-hero-sections--overlay-dark .c-hero-sections__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pattern 10: Full Height Flex Layout */
+.c-hero-sections--full-height .c-hero-sections__content {
+  display: flex;
+  min-height: 100vh;
+  flex: 1 1 auto;
+}
+
+/* Pattern 11: Center Aligned Content */
+.c-hero-sections--centered .c-hero-sections__content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pattern 12: Bottom Aligned Content */
+.c-hero-sections--bottom-aligned .c-hero-sections__content {
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+}
+
+/* Pattern 13: Parallax Background */
+.c-hero-sections--parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Pattern 14: Parallax Mobile Override */
+@supports (-webkit-touch-callout: inherit) {
+  .c-hero-sections--parallax {
+    background-position: center !important;
+    background-attachment: scroll !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .c-hero-sections--parallax {
+    background-position: center !important;
+    background-attachment: scroll !important;
+  }
+}
+
+/* Pattern 15: Fixed Width Container */
+.c-hero-sections--fixed-width .c-hero-sections__content {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Pattern 16: Edge Layer Shapes */
+.c-hero-sections__edge-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Pattern 17: Bottom Edge Layers */
+.c-hero-sections__edge-layer--bottom {
+  z-index: 2;
+}
+
+/* Pattern 18: Shape Layer SVG */
+.c-hero-sections__edge-layer .c-hero-sections__shape {
+  fill: #aaa;
+  stroke: none;
+  stroke-width: 0;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Pattern 19: Services Hero Specific */
+.c-hero-sections--services {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+/* Pattern 20: Error Page Hero */
+.c-hero-sections--error-page {
+  background-color: var(--jt-error-bg, #f8f9fa);
+  padding: 100px 0;
+}
+
+/* Pattern 21: Header Navigation Hero */
+.c-hero-sections--header-nav {
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Pattern 22: Overlap Top */
+.c-hero-sections--overlap-top .c-hero-sections__content {
+  display: inline-flex;
+  width: 100%;
+}
+
+/* Pattern 23: Equal Height Columns in Hero */
+.c-hero-sections--equal-height .c-hero-sections__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Pattern 24: Hero with Form Integration */
+.c-hero-sections__form-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+}
+
+/* Pattern 25: Hero CTA Positioning */
+.c-hero-sections__cta-wrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   HERO OVERLAY AND CONTENT POSITIONING PATTERNS - EXTRACTION 26-50
+   ========================================================================== */
+
+/* Pattern 26: Hero Content Z-Index Layering */
+.c-hero-sections--overlay-dark .c-hero-sections__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pattern 27: Hero Overlay After Element */
+.c-hero-sections--has-overlay::after {
+  border-radius: inherit;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Pattern 28: Hero Flex Content Layout */
+.c-hero-sections--flex-content .c-hero-sections__content {
+  display: flex;
+  min-height: 100vh;
+  flex: 1 1 auto;
+}
+
+/* Pattern 29: Hero Content Centering */
+.c-hero-sections--content-center {
+  align-items: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+}
+
+/* Pattern 30: Hero Content Bottom Alignment */
+.c-hero-sections--content-bottom {
+  align-items: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-box-pack: end;
+  -ms-flex-align: end;
+  -ms-flex-pack: end;
+}
+
+/* Pattern 31: Hero Equal Height Layout */
+.c-hero-sections--equal-height {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.c-hero-sections--equal-height .c-hero-sections__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* Pattern 32: Hero Title Typography Large */
+.c-hero-sections__title--large {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+/* Pattern 33: Hero Title Typography Medium */
+.c-hero-sections__title--medium {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+/* Pattern 34: Hero Title Typography Gradient */
+.c-hero-sections__title--gradient {
+  background: linear-gradient(135deg, var(--jt-primary) 0%, var(--jt-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pattern 35: Hero Subtitle Typography */
+.c-hero-sections__subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--jt-text-muted, #666);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Pattern 36: Hero Text Animation Fade In */
+.c-hero-sections__text--fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pattern 37: Hero Text Animation Slide Up */
+.c-hero-sections__text--slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: heroSlideUp 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes heroSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pattern 38: Hero Text Animation Type Writer */
+.c-hero-sections__text--typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--jt-primary, #1a8cff);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  animation: heroTypeWriter 3s steps(30) 1s forwards, heroCursor 0.8s infinite;
+}
+
+@keyframes heroTypeWriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes heroCursor {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--jt-primary, #1a8cff); }
+}
+
+/* Pattern 39: Hero Shape Layer Integration */
+.c-hero-sections--has-shapes .c-hero-sections__shape-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.c-hero-sections--has-shapes .c-hero-sections__shape-layer svg {
+  fill: rgba(255, 255, 255, 0.1);
+  stroke: none;
+  stroke-width: 0;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Pattern 40: Hero Content Grid Layout */
+.c-hero-sections--grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.c-hero-sections--grid-content .c-hero-sections__content-left {
+  grid-column: 1;
+}
+
+.c-hero-sections--grid-content .c-hero-sections__content-right {
+  grid-column: 2;
+}
+
+/* Pattern 41: Hero Badge/Label Positioning */
+.c-hero-sections__badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(26, 140, 255, 0.1);
+  color: var(--jt-primary, #1a8cff);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(26, 140, 255, 0.2);
+}
+
+/* Pattern 42: Hero Stats/Numbers Display */
+.c-hero-sections__stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.c-hero-sections__stat-item {
+  text-align: center;
+}
+
+.c-hero-sections__stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--jt-primary, #1a8cff);
+  display: block;
+  line-height: 1;
+}
+
+.c-hero-sections__stat-label {
+  font-size: 14px;
+  color: var(--jt-text-muted, #666);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Pattern 43: Hero Content Width Constraints */
+.c-hero-sections--narrow-content .c-hero-sections__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.c-hero-sections--wide-content .c-hero-sections__content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Pattern 44: Hero Social Proof Elements */
+.c-hero-sections__social-proof {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
+.c-hero-sections__social-proof-label {
+  font-size: 14px;
+  color: var(--jt-text-muted, #666);
+  font-weight: 500;
+}
+
+.c-hero-sections__social-proof-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.c-hero-sections__social-proof-logo {
+  height: 32px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.c-hero-sections__social-proof-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Pattern 45: Hero Breadcrumb Navigation */
+.c-hero-sections__breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.c-hero-sections__breadcrumb a {
+  color: var(--jt-text-muted, #666);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.c-hero-sections__breadcrumb a:hover {
+  color: var(--jt-primary, #1a8cff);
+}
+
+.c-hero-sections__breadcrumb-separator {
+  margin: 0 8px;
+  color: var(--jt-text-muted, #666);
+}
+
+/* Pattern 46: Hero Scroll Indicator */
+.c-hero-sections__scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.c-hero-sections__scroll-indicator:hover {
+  color: white;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.c-hero-sections__scroll-arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 10px auto 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  animation: heroScrollPulse 2s infinite ease-in-out;
+}
+
+@keyframes heroScrollPulse {
+  0%, 100% { opacity: 0.5; transform: rotate(45deg) translateY(0); }
+  50% { opacity: 1; transform: rotate(45deg) translateY(5px); }
+}
+
+/* Pattern 47: Hero Media Overlay Blend */
+.c-hero-sections--blend-overlay .c-hero-sections__overlay {
+  background: linear-gradient(135deg,
+    rgba(26, 140, 255, 0.8) 0%,
+    rgba(17, 82, 147, 0.9) 100%);
+  mix-blend-mode: multiply;
+}
+
+/* Pattern 48: Hero Content Animation Delay */
+.c-hero-sections__content--animated .c-hero-sections__title {
+  animation-delay: 0.2s;
+}
+
+.c-hero-sections__content--animated .c-hero-sections__description {
+  animation-delay: 0.4s;
+}
+
+.c-hero-sections__content--animated .c-hero-sections__cta {
+  animation-delay: 0.6s;
+}
+
+/* Pattern 49: Hero Mobile Content Stack */
+@media (max-width: 768px) {
+  .c-hero-sections--grid-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .c-hero-sections__stats {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .c-hero-sections__social-proof {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .c-hero-sections__social-proof-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Pattern 50: Hero Content Max Width Mobile */
+@media (max-width: 768px) {
+  .c-hero-sections__title--large {
+    font-size: 36px;
+  }
+
+  .c-hero-sections__title--medium {
+    font-size: 28px;
+  }
+
+  .c-hero-sections__subtitle {
+    font-size: 18px;
+  }
+
+  .c-hero-sections__stat-number {
+    font-size: 32px;
+  }
+}
+
+/* ==========================================================================
+   HERO VIDEO AND IMAGE BACKGROUND PATTERNS - EXTRACTION 51-75
+   ========================================================================== */
+
+/* Pattern 51: Hero Video Background Container */
+.c-hero-sections--video-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-hero-sections--video-background .c-hero-sections__video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Pattern 52: Hero Video Element Positioning */
+.c-hero-sections__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Pattern 53: Hero Video Iframe Responsive */
+.c-hero-sections__video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  max-width: none;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+}
+
+/* Pattern 54: Hero Video Fallback Background */
+.c-hero-sections__video-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Pattern 55: Hero Image Background Responsive */
+.c-hero-sections--image-bg {
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Pattern 56: Hero Image Background Fixed */
+.c-hero-sections--image-bg-fixed {
+  background-attachment: fixed;
+}
+
+/* Mobile override for fixed backgrounds */
+@supports (-webkit-touch-callout: inherit) {
+  .c-hero-sections--image-bg-fixed {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Pattern 57: Hero Image Background Parallax */
+.c-hero-sections--image-parallax {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Pattern 58: Hero Media Overlay Dark */
+.c-hero-sections--media-overlay-dark .c-hero-sections__media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+/* Pattern 59: Hero Media Overlay Light */
+.c-hero-sections--media-overlay-light .c-hero-sections__media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+/* Pattern 60: Hero Media Overlay Gradient */
+.c-hero-sections--media-overlay-gradient .c-hero-sections__media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 140, 255, 0.8) 0%,
+    rgba(17, 82, 147, 0.6) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+/* Pattern 61: Hero Image Blur Background */
+.c-hero-sections--image-blur {
+  position: relative;
+}
+
+.c-hero-sections--image-blur::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: 0;
+}
+
+/* Pattern 62: Hero Video Autoplay Controls */
+.c-hero-sections__video--autoplay {
+  autoplay: true;
+  muted: true;
+  loop: true;
+  playsinline: true;
+}
+
+/* Pattern 63: Hero Media Filter Effects */
+.c-hero-sections--media-sepia .c-hero-sections__media {
+  filter: sepia(0.8);
+}
+
+.c-hero-sections--media-grayscale .c-hero-sections__media {
+  filter: grayscale(1);
+}
+
+.c-hero-sections--media-brightness .c-hero-sections__media {
+  filter: brightness(0.7);
+}
+
+.c-hero-sections--media-contrast .c-hero-sections__media {
+  filter: contrast(1.2);
+}
+
+/* Pattern 64: Hero Ken Burns Effect */
+.c-hero-sections--ken-burns .c-hero-sections__media {
+  animation: kenBurnsEffect 20s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes kenBurnsEffect {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.1) translate(-2%, -1%);
+  }
+}
+
+/* Pattern 65: Hero Media Aspect Ratio */
+.c-hero-sections--aspect-16-9 {
+  aspect-ratio: 16/9;
+}
+
+.c-hero-sections--aspect-4-3 {
+  aspect-ratio: 4/3;
+}
+
+.c-hero-sections--aspect-21-9 {
+  aspect-ratio: 21/9;
+}
+
+/* Pattern 66: Hero Video Poster Frame */
+.c-hero-sections__video-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.c-hero-sections__video-poster.is-playing {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Pattern 67: Hero Media Loading States */
+.c-hero-sections__media-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.c-hero-sections__media-loading::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: mediaLoadingSpin 1s linear infinite;
+}
+
+@keyframes mediaLoadingSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Pattern 68: Hero Multi-Layer Background */
+.c-hero-sections--multi-layer {
+  position: relative;
+}
+
+.c-hero-sections__bg-layer-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.c-hero-sections__bg-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Pattern 69: Hero Background Attachment Mobile */
+@media (max-width: 768px) {
+  .c-hero-sections--image-bg-fixed,
+  .c-hero-sections--image-parallax {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+
+  .c-hero-sections__video-iframe {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Pattern 70: Hero Video Play Button Overlay */
+.c-hero-sections__video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(26, 140, 255, 0.9);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-hero-sections__video-play-btn:hover {
+  background: rgba(26, 140, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.c-hero-sections__video-play-btn::after {
+  content: '▶';
+  margin-left: 4px;
+}
+
+/* Pattern 71: Hero Image Lazy Loading */
+.c-hero-sections__image--lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.c-hero-sections__image--lazy.is-loaded {
+  opacity: 1;
+}
+
+/* Pattern 72: Hero Background Position Variants */
+.c-hero-sections--bg-top {
+  background-position: center top;
+}
+
+.c-hero-sections--bg-bottom {
+  background-position: center bottom;
+}
+
+.c-hero-sections--bg-left {
+  background-position: left center;
+}
+
+.c-hero-sections--bg-right {
+  background-position: right center;
+}
+
+/* Pattern 73: Hero Media Zoom on Scroll */
+.c-hero-sections--zoom-scroll .c-hero-sections__media {
+  transition: transform 0.1s linear;
+}
+
+/* Applied via JavaScript on scroll */
+.c-hero-sections--zoom-scroll.is-scrolling .c-hero-sections__media {
+  transform: scale(1.05);
+}
+
+/* Pattern 74: Hero Image Srcset Support */
+.c-hero-sections__image--responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Pattern 75: Hero Media Error States */
+.c-hero-sections__media-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+}
+
+.c-hero-sections__media-error-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.c-hero-sections__media-error-text {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.c-hero-sections__media-retry-btn {
+  background: rgba(26, 140, 255, 0.8);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.c-hero-sections__media-retry-btn:hover {
+  background: rgba(26, 140, 255, 1);
+}

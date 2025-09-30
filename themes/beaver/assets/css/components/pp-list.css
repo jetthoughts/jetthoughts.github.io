@@ -1,0 +1,60 @@
+/* ==========================================================================
+   PowerPack List Component
+   Extracted FL-Builder PowerPack list patterns with proper scoping
+   Conservative implementation with full FL-Builder backward compatibility
+   ========================================================================== */
+
+/**
+ * pp-list: Info List System
+ * Usage: Structured lists with icons, connectors, and content
+ * Scoping: All selectors use .pp-list- or .pp-infolist- prefix to prevent global conflicts
+ */
+
+/* List Item Base */
+.pp-list-item {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* List Item Content */
+.pp-list-item-content {
+  display: block;
+  padding: 10px;
+}
+
+/* List Icon Wrapper */
+.pp-list-icon-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+/* List Item Wrapper (conservative scoping) */
+.pp-list-wrap .pp-list-item {
+  overflow: visible;
+  list-style: none;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+/* List Item Content Flex (conservative scoping) */
+.pp-list-wrap .pp-list-item-content {
+  display: flex;
+  align-items: center;
+}
+
+/* List More Link */
+.pp-list-wrap .pp-list-item > .pp-more-link {
+  margin-top: 10px;
+}
+
+/* List Connector */
+.pp-list-wrap .pp-list-connector {
+  position: relative;
+  display: block;
+}
+
+/* Info List Support */
+.pp-infolist-wrap .pp-list-item {
+  margin-bottom: 20px;
+  position: relative;
+}

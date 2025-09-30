@@ -11,14 +11,11 @@ capabilities:
   - performance-tuning
 hooks:
   pre: |
-    echo "🚀 Swarm Initializer starting..."
-    echo "📡 Preparing distributed coordination systems"
-    # Check for existing swarms
-    memory_search "swarm_status" | tail -1 || echo "No existing swarms found"
+    echo "🚀 Starting task: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Swarm initialization complete"
-    memory_store "swarm_init_$(date +%s)" "Swarm successfully initialized with optimal topology"
-    echo "🌐 Inter-agent communication channels established"
+    echo "✅ Completed task: $TASK"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Swarm Initializer Agent

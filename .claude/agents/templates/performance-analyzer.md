@@ -12,14 +12,11 @@ capabilities:
   - trend_analysis
 hooks:
   pre: |
-    echo "📊 Performance Analyzer starting analysis"
-    memory_store "analysis_start" "$(date +%s)"
-    # Collect baseline metrics
-    echo "📈 Collecting baseline performance metrics"
+    echo "🚀 Starting task: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Performance analysis complete"
-    memory_store "perf_analysis_complete_$(date +%s)" "Performance report generated"
-    echo "💡 Optimization recommendations available"
+    echo "✅ Completed task: $TASK"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
 # Performance Bottleneck Analyzer Agent

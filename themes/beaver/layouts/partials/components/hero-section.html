@@ -30,7 +30,7 @@
 {{- $node_id := .node_id | default "hero-section" -}}
 {{- $bg_class := .bg_class | default "fl-row-bg-photo" -}}
 
-<div class="fl-row fl-row-full-width {{ $bg_class }} fl-node-{{ $node_id }} fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="{{ $node_id }}">
+<div class="fl-row fl-row-full-width {{ $bg_class }} hero-section fl-row-default-height fl-row-align-center fl-row-has-layers" data-node="{{ $node_id }}">
   <div class="fl-row-content-wrap">
     <div class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
       <svg class="fl-builder-layer-align-bottom-center" viewBox="0 0 800 450" preserveAspectRatio="none">
@@ -41,17 +41,17 @@
       </svg>
     </div>
     <div class="fl-row-content fl-row-fixed-width fl-node-content">
-      <div class="fl-col-group fl-node-{{ $node_id }}-group" data-node="{{ $node_id }}-group">
-        <div class="fl-col fl-node-{{ $node_id }}-col" data-node="{{ $node_id }}-col">
+      <div class="fl-col-group hero-section__group" data-node="{{ $node_id }}-group">
+        <div class="fl-col hero-section__col" data-node="{{ $node_id }}-col">
           <div class="fl-col-content fl-node-content">
-            <div class="fl-module fl-module-heading fl-node-{{ $node_id }}-heading" data-node="{{ $node_id }}-heading">
+            <div class="fl-module fl-module-heading hero-section__heading" data-node="{{ $node_id }}-heading">
               <div class="fl-module-content fl-node-content">
                 <h1 class="fl-heading">
                   <span class="fl-heading-text">{{ $headline }}</span>
                 </h1>
               </div>
             </div>
-            <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-excerpt" data-node="{{ $node_id }}-excerpt">
+            <div class="fl-module fl-module-rich-text hero-section__excerpt" data-node="{{ $node_id }}-excerpt">
               <div class="fl-module-content fl-node-content">
                 <div class="fl-rich-text c-content-block__text">
                   <p class="c-content-block__paragraph">{{ $excerpt }}</p>
@@ -59,7 +59,7 @@
               </div>
             </div>
             {{- if $cta_text -}}
-            <div class="fl-module fl-module-button fl-node-{{ $node_id }}-cta" data-node="{{ $node_id }}-cta">
+            <div class="fl-module fl-module-button hero-section__cta" data-node="{{ $node_id }}-cta">
               <div class="fl-module-content fl-node-content">
                 <div class="fl-button-wrap fl-button-width-auto fl-button-left">
                   <a href="{{ relURL $cta_link }}" target="_self" class="fl-button">
@@ -70,7 +70,7 @@
             </div>
             {{- end -}}
             {{- if $cover_image -}}
-            <div class="fl-module fl-module-photo fl-node-{{ $node_id }}-photo blue-border" data-node="{{ $node_id }}-photo">
+            <div class="fl-module fl-module-photo hero-section__photo blue-border" data-node="{{ $node_id }}-photo">
               <div class="fl-module-content fl-node-content">
                 <div class="fl-photo fl-photo-align-left">
                   <div class="fl-photo-content fl-photo-img-jpg">

@@ -1,0 +1,199 @@
+/* ========================================
+   Navigation Component (c-nav)
+   ======================================== */
+
+/* c-nav: Main navigation component */
+.c-nav {
+  /* Container for navigation elements */
+}
+
+.c-nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item {
+  position: relative;
+}
+
+.c-nav__item--active {
+  /* Active state for current page */
+}
+
+.c-nav__item--dropdown {
+  /* Dropdown menu item */
+}
+
+.c-nav__link {
+  display: block;
+  text-decoration: none;
+  padding: 12px 16px;
+}
+
+.c-nav__link:hover {
+  text-decoration: none;
+}
+
+.c-nav__link--primary {
+  /* Primary CTA style */
+}
+
+/* Sub-navigation (dropdown) */
+.c-nav__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+.c-nav__item--dropdown:hover .c-nav__submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.c-nav__submenu-item {
+  /* Individual submenu item */
+}
+
+.c-nav__submenu-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.c-nav__submenu-link:last-child {
+  border-bottom: none;
+}
+
+.c-nav__submenu-link:hover {
+  background-color: #f9fafb;
+  text-decoration: none;
+}
+
+.c-nav__submenu-icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+  width: 27px;
+  height: 27px;
+}
+
+.c-nav__submenu-content {
+  flex: 1;
+}
+
+.c-nav__submenu-title {
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.c-nav__submenu-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Mobile menu components */
+.c-nav__mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.c-nav__mobile-close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Arrow indicator for dropdowns */
+.c-nav__arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  /* Ensure arrow is clickable with adequate touch target */
+  padding: 8px;
+  margin: -8px;
+}
+
+.c-nav__item--dropdown:hover .c-nav__arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile dropdown open state */
+.c-nav__item.-open .c-nav__arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile responsive */
+@media (max-width: 1024px) {
+  .c-nav__mobile-toggle {
+    display: block;
+  }
+
+  /* For dual-class navigation (navigation + c-nav), disable conflicting c-nav mobile positioning */
+  .navigation.c-nav .c-nav__list {
+    /* Let legacy navigation.css handle the mobile menu positioning and animations */
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    z-index: auto !important;
+    flex-direction: row !important;
+  }
+
+  /* When mobile menu is open, allow vertical list layout */
+  .navigation.c-nav--mobile-open .c-nav__list,
+  .navigation.c-nav.-open .c-nav__list {
+    flex-direction: column !important;
+  }
+
+  .navigation.c-nav.-open .c-nav__mobile-close {
+    display: block;
+  }
+
+  /* Submenu handling for dual-class system */
+  .navigation.c-nav .c-nav__submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    margin-left: 20px;
+    margin-top: 8px;
+    /* Inherit display from legacy CSS */
+  }
+
+  /* This is the key fix: Show submenu when parent item has -open class */
+  .navigation.c-nav .c-nav__item.-open .c-nav__submenu {
+    display: block !important;
+    max-height: none !important;
+  }
+}

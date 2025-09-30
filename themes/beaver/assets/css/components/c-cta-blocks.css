@@ -1,0 +1,53 @@
+/* ==========================================================================
+   COMPONENT: CTA BLOCKS
+   ========================================================================== */
+
+/*
+ * CTA (Call-to-Action) blocks extracted from FL-Builder legacy patterns
+ * Target: 189 CTA block patterns
+ * Sprint 3: CTA Blocks CSS Extraction Team
+ *
+ * BEM Structure:
+ * .c-cta-blocks - Block
+ * .c-cta-blocks__container - Element (content container)
+ * .c-cta-blocks__heading - Element (CTA heading)
+ * .c-cta-blocks__description - Element (CTA description text)
+ * .c-cta-blocks__button - Element (action button)
+ * .c-cta-blocks__background - Element (background layer)
+ */
+
+/* Base CTA Blocks Component */
+.c-cta-blocks {
+  position: relative;
+  padding: 60px 0;
+}
+
+/* CTA Button Alignment - Header Contact Button */
+.fl-node-header-nav-contat-us-btn-nested .fl-button-wrap {
+  text-align: right;
+}
+
+/* CTA Button Padding - Header Contact Button */
+.fl-builder-content .fl-node-header-nav-contat-us-btn-nested .fl-button-wrap a.fl-button {
+  padding: 9px 18px 10px 18px;
+}
+
+/* CTA Button Typography - Header Contact Button */
+.fl-builder-content .fl-node-header-nav-contat-us-btn-nested a.fl-button,
+.fl-builder-content .fl-node-header-nav-contat-us-btn-nested a.fl-button:visited {
+  font-size: 15px;
+}
+
+/* CTA Button Width - Header Contact Button */
+.fl-node-header-nav-contact-us-btn {
+  width: 12%;
+}
+
+/* CTA Button Responsive Width - Header Contact Button */
+@media (max-width: 1115px) {
+  .fl-builder-content .fl-node-header-nav-contact-us-btn {
+    width: 16% !important;
+    max-width: none;
+    flex: 0 1 auto;
+  }
+}

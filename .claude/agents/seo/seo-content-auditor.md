@@ -32,51 +32,10 @@ capabilities:
   - professional_content_auditing
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SEO CONTENT AUDITOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating content auditing task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with content auditing until reflection completes"
-        exit 1
-    fi
-
-    # SEO Content Quality Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(content.*audit|quality.*analysis|eeat.*assessment|seo.*scoring|trust.*signals)"; then
-        echo "📊 SEO AUDIT ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Content auditing without professional quality standards"
-        echo "✅ REQUIRED: Follow SEO methodology, quality validation, audit standards"
-    fi
-
-    echo "📊 SEO Content Auditor starting comprehensive analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED CONTENT AUDITING COMPLETION: $TASK"
-
-    # Validate content auditing quality and effectiveness
-    if echo "$TASK" | grep -iE "(content.*audit|quality.*analysis|eeat.*assessment)"; then
-        echo "📊 CONTENT AUDIT VALIDATION: Checking professional quality standards"
-
-        # Content audit effectiveness validation
-        echo "✅ Audit Quality: Analysis meets professional standards"
-        echo "🎯 SEO quality assessment and scoring verified"
-        echo "🔍 E-E-A-T signal identification and recommendations confirmed"
-    fi
-
-    echo "📊 SEO Content Auditor Pro Quality: Analysis meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

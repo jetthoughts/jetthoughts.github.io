@@ -1,0 +1,453 @@
+/* ==========================================================================
+   Gravity Forms Component System
+   BEM-compliant Gravity Forms components to replace FL-node-specific styles
+   Conservative implementation with dual-class support for backward compatibility
+
+   Extracted from: homepage-layout.css, fl-contact-layout.css, and 16 other files
+   Target: 87+ patterns consolidated into reusable BEM components
+   ========================================================================== */
+
+/**
+ * Base Gravity Forms Wrapper Component
+ * Replaces: .fl-node-*[gform-related] and .pp-gf-content selectors
+ * Usage: Apply to Gravity Forms wrapper containers
+ */
+.c-gravity-form {
+  /* Base wrapper styles */
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.c-gravity-form__wrapper {
+  /* Replaces .gform_wrapper base styles */
+  position: relative;
+  width: 100% !important;
+  max-width: 100%;
+}
+
+.c-gravity-form__body {
+  /* Replaces .gform_body styles */
+  width: 100% !important;
+}
+
+/* Dual-class compatibility for existing FL-node implementations */
+.pp-gf-content .gform_wrapper,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper {
+  max-width: 100%;
+}
+
+.pp-gf-content .gform_wrapper form,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper form {
+  position: relative;
+}
+
+.pp-gf-content .gform_wrapper .gform_body,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gform_body {
+  width: 100% !important;
+}
+
+/* Field List Component */
+.c-gravity-form__fields {
+  /* Replaces ul.gform_fields styles */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.c-gravity-form__field {
+  /* Replaces li.gfield styles */
+  margin-bottom: 1.25rem;
+  padding-right: 0;
+  list-style-type: none !important;
+}
+
+/* Field half-width layout */
+.c-gravity-form__field--left-half {
+  /* Replaces .gf_left_half styles */
+  padding-right: 16px;
+}
+
+/* Dual-class compatibility for field lists */
+.pp-gf-content .gform_wrapper ul.gform_fields,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper ul.gform_fields {
+  padding: 0;
+}
+
+.pp-gf-content .gform_wrapper ul.gform_fields li.gfield,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper ul li.gfield {
+  padding-right: 0;
+  list-style-type: none !important;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* Input Field Component */
+.c-gravity-form__input {
+  /* Replaces input[type="text"], input[type="email"], etc. styles */
+  width: 100% !important;
+  height: 50px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--jt-text-primary, #121212);
+  background-color: var(--jt-white, #ffffff);
+  border: 1px solid var(--jt-gray-medium, #d1d1d1);
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.c-gravity-form__input:focus {
+  /* Replaces input:focus styles */
+  border-color: var(--jt-primary, #1a8cff);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(26, 140, 255, 0.25);
+}
+
+.c-gravity-form__input::placeholder {
+  /* Replaces input placeholder styles */
+  color: #969798;
+  opacity: 1;
+}
+
+/* Dual-class compatibility for input fields */
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield select,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea {
+  color: #121212;
+  background-color: #ffffff;
+  height: 50px;
+  border-style: solid;
+  border-width: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]):focus,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield select:focus,
+.fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea:focus {
+  border-color: #121212;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 1)                          */
+/* ========================================================================== */
+
+/* Dual-class compatibility for legend element */
+.pp-gf-content legend,
+.c-gravity-form__legend {
+  border: 0;
+}
+
+/* Dual-class compatibility for validation error fields */
+.pp-gf-content .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half),
+.c-gravity-form__field--validation-error {
+  max-width: 100% !important;
+}
+
+/* Dual-class compatibility for checkbox and radio focus states */
+.pp-gf-content .gform_wrapper .gfield input[type="checkbox"]:focus,
+.pp-gf-content .gform_wrapper .gfield input[type="radio"]:focus,
+.c-gravity-form__checkbox:focus,
+.c-gravity-form__radio:focus {
+  width: auto;
+  text-align: left !important;
+}
+
+/* Dual-class compatibility for half-width input fields */
+.gform_wrapper .top_label li.gfield.gf_left_half input.medium,
+.gform_wrapper .top_label li.gfield.gf_right_half input.medium,
+.gform_wrapper .top_label li.gfield.gf_left_half select.medium,
+.gform_wrapper .top_label li.gfield.gf_right_half select.medium,
+.c-gravity-form__field--left-half .c-gravity-form__input,
+.c-gravity-form__field--right-half .c-gravity-form__input,
+.c-gravity-form__field--left-half .c-gravity-form__select,
+.c-gravity-form__field--right-half .c-gravity-form__select {
+  width: 100% !important;
+}
+
+/* Complex input field handling */
+.gform_wrapper .ginput_complex input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="image"]):not([type="file"]),
+.c-gravity-form__complex-input {
+  width: 100% !important;
+}
+
+/* Browser-specific checkbox and radio adjustments */
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input,
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type="checkbox"],
+.gform_wrapper.gf_browser_chrome .gfield_radio li input[type="radio"],
+.c-gravity-form__checkbox--chrome,
+.c-gravity-form__radio--chrome {
+  margin-top: 0 !important;
+}
+
+/* Complex field label positioning */
+div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label,
+.c-gravity-form__complex-label {
+  margin-bottom: 0;
+}
+
+/* Field margin reset */
+.pp-gf-content .gform_wrapper ul li.gfield,
+.c-gravity-form__field {
+  margin-top: 0;
+}
+
+/* Radio field special input handling */
+.pp-gf-content .gform_wrapper ul.gfield_radio li input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.c-gravity-form__radio-field .c-gravity-form__input {
+  width: auto !important;
+}
+
+/* Complex input display handling */
+.pp-gf-content .gform_wrapper .ginput_complex span.ginput_full,
+.c-gravity-form__complex-span {
+  display: block;
+}
+
+/* Field description styling */
+.pp-gf-content .gform_wrapper .gfield .gfield_description,
+.c-gravity-form__description {
+  padding-top: 5px;
+}
+
+/* Section title styling */
+.pp-gf-content .gform_wrapper h2.gsection_title,
+.c-gravity-form__section-title {
+  margin-bottom: 0;
+}
+
+/* Mobile responsive - half field padding reset */
+@media only screen and (max-width: 640px) {
+  .pp-gf-content .gform_wrapper ul.gform_fields li.gfield.gf_left_half,
+  .c-gravity-form__field--left-half {
+    padding-right: 0;
+  }
+}
+
+/* Node-specific wrapper styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper,
+.c-gravity-form__wrapper--special {
+  max-width: 100%;
+}
+
+/* Special content background styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content,
+.c-gravity-form__content--special {
+  background-color: #f5f6f8;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Field list styling for special node */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper ul li.gfield,
+.c-gravity-form__wrapper--special .c-gravity-form__field {
+  list-style-type: none !important;
+  margin-bottom: 20px;
+}
+
+/* Form title display control for FL-Builder */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_title,
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .form-title,
+.c-gravity-form__title--fl-builder {
+  display: block;
+}
+
+/* Form title visibility override */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_title,
+.c-gravity-form__title--hidden {
+  display: none;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 5 - Conservative)           */
+/* ========================================================================== */
+
+/* Form description display control for FL-Builder */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper span.gform_description,
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .form-description,
+.c-gravity-form__description--hidden {
+  display: none;
+}
+
+/* Form description visibility override */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .form-description,
+.c-gravity-form__description--visible {
+  display: block;
+}
+
+/* Field label styling for special node */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield .gfield_label,
+.c-gravity-form__label--special {
+  color: #121212;
+  display: block;
+}
+
+/* Required field indicator styling */
+.fl-builder-content .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_required,
+.c-gravity-form__required {
+  color: #ff0000;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 6)                          */
+/* ========================================================================== */
+
+/* Product price special color styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper span.ginput_product_price,
+.c-gravity-form__product-price--special {
+  color: #900900 !important;
+}
+
+/* Section styling with border */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gsection,
+.c-gravity-form__section {
+  border-bottom-width: 1px;
+  border-bottom-color: #cccccc;
+  margin-bottom: 20px;
+}
+
+/* Section title styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper h2.gsection_title,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper h3.gsection_title,
+.c-gravity-form__section-title--special {
+  color: #333333;
+}
+
+/* Complex input margin spacing */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .ginput_complex span,
+.c-gravity-form__complex-span--spacing {
+  margin-bottom: 8px;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 7)                          */
+/* ========================================================================== */
+
+/* Medium input and select width */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .top_label input.medium,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .top_label select.medium,
+.c-gravity-form__medium-input {
+  width: 100% !important;
+}
+
+/* Medium textarea width */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper textarea.medium,
+.c-gravity-form__medium-textarea {
+  width: 100% !important;
+}
+
+/* Complex input right alignment reset */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .ginput_complex .ginput_right,
+.c-gravity-form__complex-right {
+  margin-left: 0 !important;
+}
+
+/* Form footer alignment */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_footer,
+.c-gravity-form__footer {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 8 - Conservative)           */
+/* ========================================================================== */
+
+/* File input styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield input[type="file"],
+.c-gravity-form__file-input {
+  background-color: transparent;
+  border-style: none;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 9)                          */
+/* ========================================================================== */
+
+/* Validation error styling with color and border */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .validation_error,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors > h2,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper li.gfield.gfield_error,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning,
+.c-gravity-form__validation-error {
+  color: #790000 !important;
+  border-color: #e63946 !important;
+}
+
+/* Validation error display control */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .validation_error,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_validation_errors > h2,
+.c-gravity-form__validation-error--hidden {
+  display: none !important;
+}
+
+/* Error field background and width */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield.gfield_error,
+.c-gravity-form__field--error {
+  background-color: transparent;
+  width: 100%;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 10)                         */
+/* ========================================================================== */
+
+/* Error field label styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield.gfield_error .gfield_label,
+.c-gravity-form__field--error .c-gravity-form__label {
+  color: #121212;
+  margin-left: 0;
+}
+
+/* Validation message display and color */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error .validation_message,
+.c-gravity-form__validation-message {
+  display: block;
+  color: #e63946;
+  border-color: #e63946;
+}
+
+/* Error input field border styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error .ginput_container select,
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield_error .ginput_container textarea,
+.c-gravity-form__field--error .c-gravity-form__input,
+.c-gravity-form__field--error .c-gravity-form__select,
+.c-gravity-form__field--error .c-gravity-form__textarea {
+  border-color: #e63946;
+  border-width: 1px !important;
+}
+
+/* ========================================================================== */
+/* EXTRACTED FROM BEAVER-GRID-LAYOUT.CSS (Batch 11)                         */
+/* ========================================================================== */
+
+/* Form confirmation message styling */
+.fl-node-nkrzpgyfwo7s .gform_confirmation_wrapper .gform_confirmation_message,
+.c-gravity-form__confirmation-message {
+  color: #121212;
+}
+
+/* Form content wrapper with border radius and padding */
+.fl-node-nkrzpgyfwo7s .pp-gf-content,
+.c-gravity-form__content {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+}
+
+/* Form title size styling */
+.fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gform_title,
+.fl-node-nkrzpgyfwo7s .form-title,
+.c-gravity-form__title {
+  font-size: 30px;
+}

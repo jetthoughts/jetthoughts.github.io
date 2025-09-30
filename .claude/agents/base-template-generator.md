@@ -28,51 +28,10 @@ capabilities:
   - professional_template_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED TEMPLATE GENERATOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating template task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with template work until reflection completes"
-        exit 1
-    fi
-
-    # Template Generation Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(template|generate|boilerplate|scaffold)"; then
-        echo "🏗️ TEMPLATE GENERATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Template generation without professional quality standards"
-        echo "✅ REQUIRED: Follow architectural methodology, pattern validation, best practices"
-    fi
-
-    echo "🏗️ Template Generator starting comprehensive generation: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED TEMPLATE GENERATION COMPLETION: $TASK"
-
-    # Validate template generation quality and effectiveness
-    if echo "$TASK" | grep -iE "(template|generate|boilerplate|scaffold)"; then
-        echo "🏗️ TEMPLATE GENERATION VALIDATION: Checking professional quality standards"
-
-        # Template generation effectiveness validation
-        echo "✅ Template Quality: Implementation meets professional standards"
-        echo "📐 Architectural compliance and pattern validation verified"
-        echo "🎯 Best practices validation and extensibility confirmed"
-    fi
-
-    echo "🏗️ Template Generator Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

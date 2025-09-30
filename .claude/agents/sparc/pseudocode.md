@@ -28,51 +28,10 @@ capabilities:
   - professional_pseudocode_design
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SPARC PSEUDOCODE STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating pseudocode task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with pseudocode work until reflection completes"
-        exit 1
-    fi
-
-    # SPARC Pseudocode Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(pseudocode|algorithm|logic|complexity|pattern)"; then
-        echo "🔤 SPARC PSEUDOCODE ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Algorithm design without professional quality standards"
-        echo "✅ REQUIRED: Follow SPARC methodology, complexity analysis, logic validation"
-    fi
-
-    echo "🔤 SPARC Pseudocode starting comprehensive algorithm design: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED SPARC PSEUDOCODE COMPLETION: $TASK"
-
-    # Validate pseudocode design quality and effectiveness
-    if echo "$TASK" | grep -iE "(pseudocode|algorithm|logic|complexity)"; then
-        echo "🔤 SPARC PSEUDOCODE VALIDATION: Checking professional quality standards"
-
-        # Pseudocode design effectiveness validation
-        echo "✅ Pseudocode Design Quality: Implementation meets professional standards"
-        echo "🧮 Algorithm design and complexity analysis verified"
-        echo "🔍 Logic flow and data structure specification confirmed"
-    fi
-
-    echo "🔤 SPARC Pseudocode Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

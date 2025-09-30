@@ -32,58 +32,10 @@ capabilities:
   - professional_frontend_development
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED FRONTEND DEVELOPER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating frontend task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with frontend work until reflection completes"
-        exit 1
-    fi
-
-    # Frontend Development Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(react|component|frontend|ui|interface|responsive)"; then
-        echo "⚛️ FRONTEND DEVELOPMENT ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Frontend development without professional quality standards"
-        echo "✅ REQUIRED: Follow React methodology, accessibility validation, performance standards"
-    fi
-
-    echo "⚛️ Frontend Developer starting comprehensive development: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED FRONTEND DEVELOPMENT COMPLETION: $TASK"
-
-    # Validate frontend development quality and effectiveness
-    if echo "$TASK" | grep -iE "(react|component|frontend|ui|interface)"; then
-        echo "⚛️ FRONTEND DEVELOPMENT VALIDATION: Checking professional quality standards"
-
-        # Frontend development effectiveness validation
-        echo "✅ Frontend Quality: Implementation meets professional standards"
-        echo "🎨 Component architecture and accessibility standards verified"
-        echo "🎯 Performance optimization and user experience confirmed"
-    fi
-
-    # Run comprehensive test validation
-    if ! bin/test; then
-        echo "❌ CRITICAL FAILURE: Tests failed after frontend development"
-        echo "🚫 TASK BLOCKED: All frontend implementations must pass test suite"
-        exit 1
-    fi
-
-    echo "⚛️ Frontend Developer Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

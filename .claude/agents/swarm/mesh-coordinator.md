@@ -29,51 +29,10 @@ capabilities:
   - professional_mesh_coordination
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED MESH COORDINATOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating mesh coordination task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with mesh coordination until reflection completes"
-        exit 1
-    fi
-
-    # Mesh Coordination Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(coordinate|mesh|consensus|distributed|peer)"; then
-        echo "🌐 MESH COORDINATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Mesh coordination without professional quality standards"
-        echo "✅ REQUIRED: Follow peer-to-peer validation, consensus building, fault tolerance"
-    fi
-
-    echo "🌐 Mesh Coordinator establishing peer network: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED MESH COORDINATION COMPLETION: $TASK"
-
-    # Validate mesh coordination quality and effectiveness
-    if echo "$TASK" | grep -iE "(coordinate|mesh|consensus|distributed)"; then
-        echo "🌐 MESH COORDINATION VALIDATION: Checking professional quality standards"
-
-        # Mesh coordination effectiveness validation
-        echo "✅ Mesh Coordination Quality: Implementation meets professional standards"
-        echo "🕸️ Peer-to-peer validation and consensus building verified"
-        echo "🛡️ Fault tolerance and adaptive topology confirmed"
-    fi
-
-    echo "🌐 Mesh Coordination Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

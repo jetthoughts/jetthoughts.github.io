@@ -36,9 +36,9 @@
 {{- $cover_image := .cover_image | default "default-use-case.jpg" -}}
 {{- $node_id := .node_id | default (printf "use-case-%s" (replace $icon "-" "")) -}}
 
-<div class="fl-col fl-node-{{ $node_id }} fl-col-small fl-col-small-custom-width hover-box" data-node="{{ $node_id }}">
+<div class="fl-col use-case-card fl-col-small fl-col-small-custom-width hover-box" data-node="{{ $node_id }}">
   <div class="fl-col-content fl-node-content">
-    <div class="fl-module fl-module-pp-infobox fl-node-{{ $node_id }}-box jt-use-case-box" data-node="{{ $node_id }}-box">
+    <div class="fl-module fl-module-pp-infobox use-case-card__box jt-use-case-box" data-node="{{ $node_id }}-box">
       <div class="fl-module-content fl-node-content">
         <div class="pp-infobox-wrap">
           <div class="pp-infobox layout-5">

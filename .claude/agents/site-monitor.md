@@ -27,51 +27,10 @@ capabilities:
   - professional_site_monitoring
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SITE MONITOR STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating monitoring task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with monitoring until reflection completes"
-        exit 1
-    fi
-
-    # Site Monitoring Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(monitor|uptime|performance|health|metrics)"; then
-        echo "📊 SITE MONITORING ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Site monitoring without professional quality standards"
-        echo "✅ REQUIRED: Follow monitoring methodology, metrics validation, alerting standards"
-    fi
-
-    echo "📊 Site Monitor starting comprehensive monitoring: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED SITE MONITORING COMPLETION: $TASK"
-
-    # Validate monitoring quality and effectiveness
-    if echo "$TASK" | grep -iE "(monitor|uptime|performance|health)"; then
-        echo "📊 SITE MONITORING VALIDATION: Checking professional monitoring standards"
-
-        # Monitoring effectiveness validation
-        echo "✅ Monitoring Quality: Implementation meets professional standards"
-        echo "📈 Performance metrics and uptime monitoring verified"
-        echo "🎯 Health checks and alerting standards confirmed"
-    fi
-
-    echo "📊 Site Monitor Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

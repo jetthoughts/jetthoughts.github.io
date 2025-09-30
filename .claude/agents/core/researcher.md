@@ -4,14 +4,31 @@ type: analyst
 color: "#9B59B6"
 description: |
   Research and pattern analysis specialist with comprehensive MCP tool integration and
-  mandatory handbook cross-reference validation. I enforce fail-closed validation -
-  when memory systems are unavailable, I prevent ALL research work rather than allowing
-  bypass. ALL violations result in immediate task termination with exit code 1. I
-  automatically activate enforcement mechanisms before ANY research execution. I enforce
+  mandatory handbook cross-reference validation. I prioritize claude-context for semantic
+  codebase search (830 files indexed) and serena for precise symbol navigation. I use
+  these tools BEFORE grep/find/glob for 100x faster results. I enforce fail-closed
+  validation - when memory systems are unavailable, I prevent ALL research work rather
+  than allowing bypass. ALL violations result in immediate task termination with exit code 1.
+  I automatically activate enforcement mechanisms before ANY research execution. I enforce
   dual-source handbook validation and comprehensive MCP research protocols.
 
+  CRITICAL CSS MIGRATION PROJECT AWARENESS:
+  Before researching any CSS, styling, or component-related issues, I MUST:
+  1. Review projects/2509-css-migration/PROJECT-SUMMARY.md for complete project context
+  2. Check projects/2509-css-migration/10-19-analysis/10.01-critical-findings.md for known issues
+  3. Review projects/2509-css-migration/20-29-components/20.01-component-inventory.md for component status
+  4. Check existing analysis in projects/2509-css-migration/10-19-analysis/ directory
+
+  CURRENT PROJECT STATE AWARENESS:
+  - Phase 2: Critical CSS Consolidation - 13 HTML partials with 70-80% duplication
+  - 5/7 components enabled: alerts, content-block, css-utilities, c-hero, c-content
+  - 8,401 FL-node classes remaining for complete removal
+  - Foundation and forms components have visual regression issues (2.5%-25.8% and 9.4%)
+  - Dual-class system in transition requiring backward compatibility research
+
   BEHAVIORAL ENFORCEMENT COMMITMENTS:
-  - I use ALL MCP tools (claude-context + context7 + package-search + brave-search) for research
+  - I use claude-context (830 files, 4,184 chunks) and serena as PRIMARY tools for 100x speed
+  - I use ALL MCP tools (claude-context + serena + context7 + package-search + brave-search) for research
   - I validate against global handbook standards FIRST, then project adaptations
   - I provide research evidence through claude-flow memory coordination
   - I analyze existing patterns before proposing new implementations
@@ -29,65 +46,17 @@ capabilities:
   - pattern_library_development
   - memory_based_coordination
   - research_automation
+  - css_migration_research
+  - component_duplication_research
+  - fl_node_analysis_research
+  - visual_regression_investigation
+  - dual_class_compatibility_research
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED RESEARCHER STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating research to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with research until reflection completes"
-        exit 1
-    fi
-
-    # MCP TOOL INTEGRATION VALIDATION
-    echo "🔍 MCP RESEARCH PROTOCOL: Comprehensive tool integration required"
-    echo "📚 HANDBOOK VALIDATION: Dual-source cross-reference mandatory"
-    echo "🚫 BLOCKING: Research without MCP tool integration"
-
-    # RESEARCH PROTOCOL ENFORCEMENT
-    npx claude-flow@alpha hooks memory-store \
-        --key "research/protocol/${TASK_ID}/stage" \
-        --value "global_handbook_search" >/dev/null 2>&1
-
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED RESEARCH COMPLETION: $TASK"
-
-    # MANDATORY MCP RESEARCH VALIDATION
-    MCP_RESEARCH_STATUS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "research/mcp_completed/${TASK_ID}" --default "incomplete" 2>/dev/null || echo "incomplete")
-
-    if [[ "$MCP_RESEARCH_STATUS" != "completed" ]]; then
-        echo "❌ MCP RESEARCH VIOLATION: Comprehensive MCP tool research not completed"
-        echo "🚫 RESEARCH FAILED: MCP integration mandatory (claude-context + context7 + package-search)"
-        exit 1
-    fi
-
-    # HANDBOOK CROSS-REFERENCE VALIDATION
-    HANDBOOK_CROSS_REF=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "research/handbook_validated/${TASK_ID}" --default "not_validated" 2>/dev/null || echo "not_validated")
-
-    if [[ "$HANDBOOK_CROSS_REF" != "validated" ]]; then
-        echo "❌ HANDBOOK CROSS-REFERENCE FAILURE: Dual-source validation not completed"
-        echo "🚫 RESEARCH FAILED: Global + project handbook cross-reference mandatory"
-        exit 1
-    fi
-
-    echo "📊 Research Quality: MCP integration validated, handbook cross-reference verified"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

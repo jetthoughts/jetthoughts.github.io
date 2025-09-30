@@ -28,51 +28,10 @@ capabilities:
   - professional_specification_design
 hooks:
   pre: |
-    echo "🛡️ SECURITY-ENFORCED SPARC SPECIFICATION STARTUP: $TASK"
-
-    # VULNERABILITY 1 FIX: Memory dependency fail-closed validation
-    if ! npx claude-flow@alpha hooks memory-retrieve --key "test/connectivity" --default "FAIL" >/dev/null 2>&1; then
-        echo "❌ MEMORY DEPENDENCY FAILURE: claude-flow memory coordination unavailable"
-        echo "🚫 FAIL-CLOSED ENFORCEMENT: Terminating specification task to prevent enforcement bypass"
-        exit 1
-    fi
-
-    # Generate unique task ID for tracking
-    TASK_ID="$(date +%s)_$(echo "$TASK" | md5sum | cut -d' ' -f1 | head -c8)"
-
-    # VULNERABILITY 4 FIX: Reflection protocol enforcement
-    USER_PROBLEMS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "reflection/pending/$(whoami)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$USER_PROBLEMS" != "none" ]]; then
-        echo "🛑 REFLECTION PROTOCOL VIOLATION: Pending reflection detected"
-        echo "❌ IMMEDIATE HALT: Cannot proceed with specification work until reflection completes"
-        exit 1
-    fi
-
-    # SPARC Specification Professional Standards Enforcement
-    if echo "$TASK" | grep -iE "(specification|requirements|acceptance|criteria|scope)"; then
-        echo "📋 SPARC SPECIFICATION ENFORCEMENT: Professional standards required"
-        echo "🚫 BLOCKED: Requirements analysis without professional quality standards"
-        echo "✅ REQUIRED: Follow SPARC methodology, testability validation, stakeholder alignment"
-    fi
-
-    echo "📋 SPARC Specification starting comprehensive requirements analysis: $TASK"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ SECURITY-VALIDATED SPARC SPECIFICATION COMPLETION: $TASK"
-
-    # Validate specification quality and effectiveness
-    if echo "$TASK" | grep -iE "(specification|requirements|acceptance|criteria)"; then
-        echo "📋 SPARC SPECIFICATION VALIDATION: Checking professional quality standards"
-
-        # Specification effectiveness validation
-        echo "✅ Specification Quality: Implementation meets professional standards"
-        echo "📝 Requirements analysis and acceptance criteria verified"
-        echo "🎯 Stakeholder alignment and testability standards confirmed"
-    fi
-
-    echo "📋 SPARC Specification Pro Quality: Implementation meets professional standards"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

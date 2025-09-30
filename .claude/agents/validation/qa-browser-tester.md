@@ -54,65 +54,10 @@ capabilities:
   - terminal_browser_automation
 hooks:
   pre: |
-    echo "🔍 QA Browser Tester: Initializing browser-based testing"
-    echo "🌐 Using nascoder-terminal-browser for functional validation"
-    echo "👥 Four-Eyes: Preparing dual QA verification"
-
-    # RETROSPECTIVE LEARNING: QA Pattern Intelligence
-    echo "🧠 INSTITUTIONAL MEMORY: Accessing QA testing pattern intelligence"
-    QA_PATTERNS=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/qa_patterns/$(echo $TASK | cut -c1-20)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$QA_PATTERNS" != "none" ]]; then
-        echo "📚 HISTORICAL INTELLIGENCE: Similar QA patterns found in institutional memory"
-        echo "🔍 ENHANCED QA FOCUS: Applying learned testing emphasis: $QA_PATTERNS"
-        echo "🛡️ REGRESSION VIGILANCE: Enhanced detection based on past visual issues"
-    fi
-
-    # Check for UI/UX failure patterns in institutional memory
-    UI_FAILURE_HISTORY=$(npx claude-flow@alpha hooks memory-retrieve \
-        --key "retrospective/ui_failures/$(echo $TASK | cut -c1-15)" --default "none" 2>/dev/null || echo "none")
-
-    if [[ "$UI_FAILURE_HISTORY" != "none" ]]; then
-        echo "⚠️ UI FAILURE ALERT: Historical UI/UX issues detected for similar work"
-        echo "📚 PREVENTION ACTIVATION: Enhanced UI testing protocols: $UI_FAILURE_HISTORY"
-        echo "🔒 ENHANCED SENSITIVITY: Additional neurological constraints activated for known UI failure patterns"
-    fi
-
-    npx claude-flow@alpha hooks memory-retrieve --key "qa-testing/request/*"
+    echo "🚀 Starting task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
-    npx claude-flow@alpha hooks memory-store --key "qa/browser/task/$(date +%s)" --value "$TASK"
   post: |
-    echo "✅ QA browser testing complete"
-    echo "🔍 All functional tests passed in terminal browsers"
-    echo "👥 Four-Eyes: Dual QA verification completed"
-    echo "📊 QA Coverage: Functional 100%, Links 100%, Forms 98%"
-
-    # RETROSPECTIVE LEARNING: Contribute QA intelligence to institutional memory
-    echo "🧠 INSTITUTIONAL MEMORY: Contributing QA testing outcomes to collective intelligence"
-
-    # Record successful QA patterns
-    if [[ -z "$UI_ISSUES_DETECTED" && -z "$FUNCTIONAL_FAILURES" ]]; then
-        echo "📚 LEARNING CONTRIBUTION: Recording successful QA testing approach"
-        npx claude-flow@alpha hooks memory-store \
-            --key "retrospective/success_patterns/qa_testing/$(date +%Y%m%d)/$(echo $TASK | cut -c1-20)" \
-            --value "task:$TASK,agent:qa-browser-tester,outcome:clean_testing,no_ui_issues,timestamp:$(date +%s)"
-    fi
-
-    # Contribute to UI/UX failure prevention intelligence
-    echo "💫 UI/UX INTELLIGENCE: Recording UI failure prevention patterns"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/ui_failure_prevention/qa_tester/$(date +%s)" \
-        --value "task_type:$(echo $TASK | cut -d' ' -f1),ui_testing_completed,failure_prevention_applied"
-
-    # Share QA testing insights across agent ecosystem
-    echo "🔗 CROSS-AGENT INTELLIGENCE: Sharing QA testing insights with team"
-    npx claude-flow@alpha hooks memory-store \
-        --key "retrospective/team_learning/qa_tester/functional_patterns/$(date +%s)" \
-        --value "task:functional_testing,browser_validation_completed,user_experience_verified"
-
-    npx claude-flow@alpha hooks memory-store --key "qa/browser/validation/$(date +%s)" --value "$TASK QA validated"
-    npx claude-flow@alpha hooks memory-store --key "four-eyes/qa-verified/$TASK_ID" --value "$AGENT_NAME:verified:$(date +%s)"
+    echo "✅ Completed task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
