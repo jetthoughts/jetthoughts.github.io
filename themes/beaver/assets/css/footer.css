@@ -78,7 +78,7 @@
 }
 
 .footer-component a {
-    color: #969798;
+    color: var(--color-gray);
     text-decoration: none;
 }
 
