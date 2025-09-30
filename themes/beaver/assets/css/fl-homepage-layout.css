@@ -1323,7 +1323,7 @@
 .pp-review {
   border: 1px solid #e8e8e8;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -10939,7 +10939,7 @@ body .pp-post-feed-meta {
 .pp-review {
   border: 1px solid #e8e8e8;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
