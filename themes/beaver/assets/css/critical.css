@@ -118,7 +118,7 @@ p {
 }
 
 a {
-  color: #1a8cff;
+  color: var(--color-primary);
   text-decoration: none;
   background-color: transparent;
 }
