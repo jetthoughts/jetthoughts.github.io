@@ -1653,7 +1653,7 @@ html:not(.pp-off-canvas-menu-open)
   left: 50%;
   width: 2px;
   height: 40px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
@@ -2095,7 +2095,7 @@ ul.pp-advanced-menu-horizontal li.mega-menu > ul.sub-menu ul.sub-menu {
 }
 
 .fl-node-menu .pp-advanced-menu .sub-menu {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 @media (min-width: 860px) {
@@ -2961,7 +2961,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-node-ntfp1iza9jy8 {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content
@@ -2969,7 +2969,7 @@ body:not(.single-fl-theme-layout)
   *:not(span):not(input):not(textarea):not(select):not(a):not(h1):not(h2):not(
     h3
   ):not(h4):not(h5):not(h6):not(.fl-menu-mobile-toggle) {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a {
@@ -2977,7 +2977,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 a:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-ntfp1iza9jy8 h1,
@@ -2992,7 +2992,7 @@ body:not(.single-fl-theme-layout)
 .fl-builder-content .fl-node-ntfp1iza9jy8 h4 a,
 .fl-builder-content .fl-node-ntfp1iza9jy8 h5 a,
 .fl-builder-content .fl-node-ntfp1iza9jy8 h6 a {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-ntfp1iza9jy8 {
@@ -3031,7 +3031,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-5dcip6gnz2at a:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-5dcip6gnz2at {
@@ -3064,7 +3064,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-7p1us6kjlz9d a:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-7p1us6kjlz9d {
@@ -3097,7 +3097,7 @@ body:not(.single-fl-theme-layout)
 }
 
 .fl-builder-content .fl-node-fxtbmly0wvq4 a:hover {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-node-fxtbmly0wvq4 {
@@ -3262,7 +3262,7 @@ body:not(.single-fl-theme-layout)
 .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text,
 .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text *,
 .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 @media (max-width: 860px) {
@@ -3290,7 +3290,7 @@ body:not(.single-fl-theme-layout)
 .fl-row .fl-col .fl-node-zevlimhbtfcq h5.fl-heading .fl-heading-text,
 .fl-row .fl-col .fl-node-zevlimhbtfcq h5.fl-heading .fl-heading-text *,
 .fl-node-zevlimhbtfcq h5.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-q8ul0bi34dvt .fl-rich-text,
@@ -3312,7 +3312,7 @@ body:not(.single-fl-theme-layout)
 .fl-row .fl-col .fl-node-e1085k37ypqb h5.fl-heading .fl-heading-text,
 .fl-row .fl-col .fl-node-e1085k37ypqb h5.fl-heading .fl-heading-text *,
 .fl-node-e1085k37ypqb h5.fl-heading .fl-heading-text {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-dt8uqacr4y16 .fl-rich-text,
@@ -3352,7 +3352,7 @@ body:not(.single-fl-theme-layout)
 
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text,
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-module-content .fl-rich-text * {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .fl-builder-content .fl-node-9c2hyrnig0m4 .fl-rich-text,
@@ -3402,14 +3402,14 @@ body:not(.single-fl-theme-layout)
   display: inline-block;
   float: left;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-white);
   background-color: rgba(255, 255, 255, 0);
   border-radius: 100px;
   border: 0px solid;
 }
 
 .fl-node-yqpsldhfovz6 .fl-module-content .pp-social-icon a:hover {
-  color: #ffffff;
+  color: var(--color-white);
   background-color: rgba(255, 255, 255, 0.11);
   border-color: transparent;
 }
@@ -5615,7 +5615,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield select,
 .fl-node-nkrzpgyfwo7s .pp-gf-content .gform_wrapper .gfield textarea {
   color: #121212;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   width: 100% !important;
   outline: none;
 }
