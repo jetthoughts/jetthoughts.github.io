@@ -1,20 +1,20 @@
 /* ==============================================================
-   c-button BEM Component - GREEN PHASE (Shameless Green Implementation)
+   c-button BEM Component - REFACTOR PHASE (Flocking Rules Applied)
    Sprint 3: CSS Migration
    Reference: /knowledge/20.05-shameless-green-flocking-rules-methodology.md
    ============================================================== */
 
-/* SHAMELESS GREEN PRINCIPLE:
- * - Accept hardcoded implementations initially
- * - Accept duplication between this and .fl-button
- * - Focus ONLY on making tests pass
- * - NO premature optimization or consolidation
- * - REFACTOR phase will apply flocking rules to eliminate duplication
+/* FLOCKING RULES APPLICATION:
+ * Rule 1: Select things most alike - All button variants share base styling
+ * Rule 2: Find smallest difference - Only colors differ between variants
+ * Rule 3: Make simplest change - Extract base class, keep color overrides
  */
 
-/* Primary Button Variant - HARDCODED for GREEN phase */
-.c-button--primary {
-  /* Base button styling - DUPLICATED from .fl-button (acceptable in GREEN) */
+/* Base Button Component - Extracted common properties via flocking rules */
+.c-button--primary,
+.c-button--secondary,
+.c-button--tertiary {
+  /* Base button styling - Consolidated from all variants */
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -26,99 +26,60 @@
   text-decoration: none;
   text-shadow: none;
 
-  /* Primary variant colors - HARDCODED */
+  /* Transition (common to all variants) */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Common hover state - Consolidated from all variants */
+.c-button--primary:hover,
+.c-button--secondary:hover,
+.c-button--tertiary:hover {
+  text-decoration: none;
+}
+
+/* Common active state - Consolidated from all variants */
+.c-button--primary:active,
+.c-button--secondary:active,
+.c-button--tertiary:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Primary Button Variant - Only color differences remain */
+.c-button--primary {
   background-color: #1a8cff;
   color: #ffffff;
   border: 2px solid #1a8cff;
-
-  /* Transition for hover state */
-  transition: all 0.2s ease-in-out;
 }
 
 .c-button--primary:hover {
-  /* Hover state - HARDCODED */
   background-color: #0066cc;
   border-color: #0066cc;
-  text-decoration: none;
   color: #ffffff;
 }
 
-.c-button--primary:active {
-  /* Active state - DUPLICATED from .fl-button (acceptable in GREEN) */
-  position: relative;
-  top: 1px;
-}
-
-/* Secondary Button Variant - DUPLICATED from primary (acceptable in GREEN) */
+/* Secondary Button Variant - Only color differences remain */
 .c-button--secondary {
-  /* Base button styling - DUPLICATED (will be extracted in REFACTOR phase) */
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 18px;
-  padding: 12px 24px;
-  text-decoration: none;
-  text-shadow: none;
-
-  /* Secondary variant colors - HARDCODED */
   background-color: #ffffff;
   color: #121212;
   border: 2px solid #121212;
-
-  /* Transition for hover state */
-  transition: all 0.2s ease-in-out;
 }
 
 .c-button--secondary:hover {
-  /* Hover state - HARDCODED */
   background-color: #121212;
   color: #ffffff;
-  text-decoration: none;
 }
 
-.c-button--secondary:active {
-  /* Active state - DUPLICATED */
-  position: relative;
-  top: 1px;
-}
-
-/* Tertiary Button Variant - DUPLICATED (acceptable in GREEN) */
+/* Tertiary Button Variant - Only color differences remain */
 .c-button--tertiary {
-  /* Base button styling - DUPLICATED (will be extracted in REFACTOR phase) */
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 18px;
-  padding: 12px 24px;
-  text-decoration: none;
-  text-shadow: none;
-
-  /* Tertiary variant colors - HARDCODED */
   background-color: transparent;
   color: #1a8cff;
   border: 2px solid transparent;
-
-  /* Transition for hover state */
-  transition: all 0.2s ease-in-out;
 }
 
 .c-button--tertiary:hover {
-  /* Hover state - HARDCODED */
   background-color: rgba(26, 140, 255, 0.1);
-  text-decoration: none;
   color: #0066cc;
-}
-
-.c-button--tertiary:active {
-  /* Active state - DUPLICATED */
-  position: relative;
-  top: 1px;
 }
 
 /* Mobile Touch Target Size Enhancement (iOS/Android best practices) */
