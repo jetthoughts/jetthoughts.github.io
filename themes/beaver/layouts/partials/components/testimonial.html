@@ -37,24 +37,24 @@
 <link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 
-<div class="fl-col-group fl-node-{{ $node_id }}-header fl-col-group-custom-width" data-node="{{ $node_id }}-header">
-  <div class="fl-col fl-node-{{ $node_id }}-header-col fl-col-small-custom-width" data-node="{{ $node_id }}-header-col">
+<div class="fl-col-group testimonial__header fl-col-group-custom-width" data-node="{{ $node_id }}-header">
+  <div class="fl-col testimonial__header-col fl-col-small-custom-width" data-node="{{ $node_id }}-header-col">
     <div class="fl-col-content fl-node-content">
-      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-section-title" data-node="{{ $node_id }}-section-title">
+      <div class="fl-module fl-module-rich-text testimonial__section-title" data-node="{{ $node_id }}-section-title">
         <div class="fl-module-content fl-node-content">
           <div class="fl-rich-text c-content-block__text">
             <p class="c-content-block__paragraph">{{ $section_title }}</p>
           </div>
         </div>
       </div>
-      <div class="fl-module fl-module-heading fl-node-{{ $node_id }}-heading" data-node="{{ $node_id }}-heading">
+      <div class="fl-module fl-module-heading testimonial__heading" data-node="{{ $node_id }}-heading">
         <div class="fl-module-content fl-node-content">
           <h2 class="fl-heading">
             <span class="fl-heading-text">{{ $heading }}</span>
           </h2>
         </div>
       </div>
-      <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-description" data-node="{{ $node_id }}-description">
+      <div class="fl-module fl-module-rich-text testimonial__description" data-node="{{ $node_id }}-description">
         <div class="fl-module-content fl-node-content">
           <div class="fl-rich-text c-content-block__text">
             <p class="c-content-block__paragraph">{{ $description }}</p>
@@ -117,7 +117,7 @@
 
   {{- if $show_rating -}}
   <div>
-    <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-rating jt-rating" data-node="{{ $node_id }}-rating">
+    <div class="fl-module fl-module-rich-text testimonial__rating jt-rating" data-node="{{ $node_id }}-rating">
       <div class="fl-module-content fl-node-content">
         <div class="fl-rich-text c-content-block__text">
           <p class="c-content-block__paragraph">
@@ -129,7 +129,7 @@
         </div>
       </div>
     </div>
-    <div class="fl-module fl-module-rich-text fl-node-{{ $node_id }}-rating-text" data-node="{{ $node_id }}-rating-text">
+    <div class="fl-module fl-module-rich-text testimonial__rating-text" data-node="{{ $node_id }}-rating-text">
       <div class="fl-module-content fl-node-content">
         <div class="fl-rich-text c-content-block__text">
           <p class="c-content-block__paragraph">{{ $rating_text }}</p>
@@ -141,10 +141,10 @@
 </div>
 {{- end -}}
 
-<div class="fl-col-group fl-node-{{ $node_id }}-reviews fl-col-group-custom-width" data-node="{{ $node_id }}-reviews">
-  <div class="fl-col fl-node-{{ $node_id }}-reviews-col fl-col-small-custom-width" data-node="{{ $node_id }}-reviews-col">
+<div class="fl-col-group testimonial__reviews fl-col-group-custom-width" data-node="{{ $node_id }}-reviews">
+  <div class="fl-col testimonial__reviews-col fl-col-small-custom-width" data-node="{{ $node_id }}-reviews-col">
     <div class="fl-col-content fl-node-content">
-      <div class="fl-module fl-module-pp-reviews fl-node-{{ $node_id }}-swiper jt-reviews-box" data-node="{{ $node_id }}-swiper">
+      <div class="fl-module fl-module-pp-reviews testimonial__swiper jt-reviews-box" data-node="{{ $node_id }}-swiper">
         <div class="fl-module-content fl-node-content">
           <div class="pp-reviews-wrapper pp-reviews-default">
             <div class="pp-reviews-swiper swiper-container">
