@@ -4449,8 +4449,8 @@ img.mfp-img {
 }
 
 .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label.pp-tab-active, .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label.pp-tab-active:hover, .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label:hover, .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label:focus {
-  background-color: #F5F6F8;
-  color: #121212;
+  background-color: var(--bg-light);
+  color: var(--color-dark);
 }
 
 .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label .pp-tab-description {
