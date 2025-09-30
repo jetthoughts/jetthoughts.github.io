@@ -1876,7 +1876,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   .gform_wrapper
   .gfield
   .gfield_label {
-  color: #121212;
+  color: var(--color-dark);
   display: block;
 }
 
@@ -1906,7 +1906,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   span.ginput_product_price_label,
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper span.ginput_quantity_label,
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield_html {
-  color: #121212 !important;
+  color: var(--color-dark) !important;
   font-family:
     system-ui,
     -apple-system,
@@ -1955,7 +1955,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   ):not([type="image"]):not([type="file"]),
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield select,
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea {
-  color: #121212;
+  color: var(--color-dark);
   background-color: #ffffff;
   width: 100% !important;
   outline: none;
@@ -2060,7 +2060,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   ):not([type="image"]):not([type="file"]):focus,
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield select:focus,
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .gfield textarea:focus {
-  border-color: #121212;
+  border-color: var(--color-dark);
 }
 
 .fl-node-bmn85orw3pj1 .pp-gf-content .gform_wrapper .top_label input.medium,
@@ -2191,7 +2191,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
   .gform_wrapper
   .gfield.gfield_error
   .gfield_label {
-  color: #121212;
+  color: var(--color-dark);
   margin-left: 0;
 }
 
@@ -2279,7 +2279,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-bmn85orw3pj1 .gform_confirmation_wrapper .gform_confirmation_message {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-bmn85orw3pj1 .pp-gf-content {
@@ -2546,7 +2546,7 @@ span.pp-accordion-button-icon {
 
 .fl-node-lokc5ru7ftaj .pp-accordion-item .pp-accordion-button {
   background-color: #f5f6f8;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-lokc5ru7ftaj .pp-accordion-item .pp-accordion-button:hover,
@@ -2578,14 +2578,14 @@ span.pp-accordion-button-icon {
 
 .fl-node-lokc5ru7ftaj .pp-accordion-item .pp-accordion-content {
   background-color: #ffffff;
-  color: #121212;
+  color: var(--color-dark);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .fl-node-lokc5ru7ftaj .pp-accordion-item .pp-accordion-button-icon {
   font-size: 18px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-lokc5ru7ftaj .pp-accordion-item .pp-accordion-button-icon:before {
@@ -2595,7 +2595,7 @@ span.pp-accordion-button-icon {
 .fl-node-lokc5ru7ftaj .pp-accordion-item .pp-accordion-icon {
   font-size: 15px;
   width: 18.75px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-lokc5ru7ftaj
@@ -2658,7 +2658,7 @@ span.pp-accordion-button-icon {
 
 .fl-node-hwc8puan960k .pp-accordion-item .pp-accordion-button {
   background-color: #f5f6f8;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-hwc8puan960k .pp-accordion-item .pp-accordion-button:hover,
@@ -2690,14 +2690,14 @@ span.pp-accordion-button-icon {
 
 .fl-node-hwc8puan960k .pp-accordion-item .pp-accordion-content {
   background-color: #ffffff;
-  color: #121212;
+  color: var(--color-dark);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .fl-node-hwc8puan960k .pp-accordion-item .pp-accordion-button-icon {
   font-size: 18px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-hwc8puan960k .pp-accordion-item .pp-accordion-button-icon:before {
@@ -2707,7 +2707,7 @@ span.pp-accordion-button-icon {
 .fl-node-hwc8puan960k .pp-accordion-item .pp-accordion-icon {
   font-size: 15px;
   width: 18.75px;
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-hwc8puan960k
