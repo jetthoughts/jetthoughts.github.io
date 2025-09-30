@@ -1,7 +1,7 @@
 # Remaining Work to Achieve Final CSS Migration Goal
 
 **Date**: 2025-09-30
-**Status**: Component Phase Complete - 3 Major Work Streams Remaining
+**Status**: Sprint 1-4 Complete (24 items) - Sprint 5 Ready for Approval - 9,072 Items Remaining
 
 ---
 
@@ -31,9 +31,42 @@
 
 ---
 
-## 🚧 What Remains: 3 Major Work Streams
+## 🚧 What Remains: 4 Phases (9,072 Items Total)
 
-### Work Stream 1: Static FL-Node HTML References
+**Sprint Roadmap**: 17 sprints estimated to achieve 100% completion
+**Current Sprint**: Sprint 5 ready for approval (2-3 days estimated)
+
+### Phase 1: Critical CSS Consolidation (HIGHEST PRIORITY)
+**Sprint Coverage**: Sprint 5-6
+**Current State**: 14 critical CSS files with 70-80% duplication
+**Sprint 5 Status**: 📋 Ready for Product Owner approval
+
+**Files to Consolidate**:
+1. `critical.css` (base file - keep)
+2-8. First 7 files (Sprint 5): base-layout, homepage-layout, services-layout, fl-homepage-layout, fl-services-layout, fl-about-layout, fl-careers-layout
+9-14. Remaining 7 files (Sprint 6): fl-clients-layout, fl-use-cases-layout, fl-service-detail-layout, fl-contact-layout, fl-component-layout, beaver-grid-layout
+
+**Sprint 5 Goal**:
+- Consolidate first 7/14 files (50% of Phase 1)
+- Eliminate 35-40% CSS duplication
+- Duration: 2-3 days
+- Team: 6 specialized agents (XP pairs)
+
+**Sprint 6 Goal**:
+- Consolidate remaining 7/14 files (100% Phase 1)
+- Achieve 70-80% total duplication elimination
+- Duration: 2-3 days
+
+**Success Criteria Phase 1**:
+- 14 files → 1 consolidated base file
+- 70-80% duplication eliminated
+- All tests passing
+- Zero visual regressions
+
+---
+
+### Phase 2: Static FL-Node HTML References (HIGH PRIORITY)
+**Sprint Coverage**: Sprint 7-10
 **Current State**: **572 references** in page templates
 
 **Breakdown by File Type**:
@@ -74,8 +107,15 @@ Total: 572 HTML references requiring BEM replacement
 
 ---
 
-### Work Stream 2: Static FL-Node CSS Rules
-**Current State**: **8,486 CSS references** targeting FL-node classes
+**Sprint Breakdown**:
+- **Sprint 7-8**: Batch 1 - Top 10 high-impact files (274 refs = 47.9%)
+- **Sprint 9-10**: Batch 2 - Remaining 34 files (298 refs = 52.1%)
+
+---
+
+### Phase 3: Static FL-Node CSS Rules (MEDIUM PRIORITY)
+**Sprint Coverage**: Sprint 11-16
+**Current State**: **8,449 CSS references** targeting FL-node classes (updated count)
 
 **Breakdown by File Type**:
 ```
@@ -129,8 +169,11 @@ Total: 8,486 CSS rules requiring rewrite/consolidation
 
 ---
 
-### Work Stream 3: Critical CSS Consolidation
-**Current State**: **14 duplicate critical CSS files** with 70-80% overlap
+---
+
+### Phase 4: Remaining CSS Analysis (LOW PRIORITY)
+**Sprint Coverage**: Sprint 17
+**Current State**: **91 CSS files** requiring analysis (105 total - 14 critical)
 
 **Files Requiring Consolidation**:
 ```
@@ -185,46 +228,53 @@ Result: 14 files → 1 base + optional page-specific
 
 ## 📊 Total Remaining Work Summary
 
-| Work Stream | Items | Estimated Commits | Estimated Hours | Priority |
-|-------------|-------|-------------------|-----------------|----------|
-| **Static FL-Node HTML** | 572 refs | 500-700 | 40-60h | HIGH |
-| **Static FL-Node CSS** | 8,486 rules | 800-1,000 | 60-80h | HIGH |
-| **Critical CSS Consolidation** | 14 files | 100-150 | 20-30h | MEDIUM |
-| **TOTAL** | **9,072 items** | **1,400-1,850** | **120-170h** | - |
+| Phase | Items | Sprint Coverage | Estimated Hours | Priority |
+|-------|-------|-----------------|-----------------|----------|
+| **Phase 1: Critical CSS** | 14 files | Sprint 5-6 | 20-30h | HIGHEST |
+| **Phase 2: HTML Migration** | 572 refs | Sprint 7-10 | 40-60h | HIGH |
+| **Phase 3: CSS Rules** | 8,449 rules | Sprint 11-16 | 60-80h | MEDIUM |
+| **Phase 4: CSS Analysis** | 91 files | Sprint 17 | TBD | LOW |
+| **TOTAL** | **9,072 items** | **17 sprints** | **120-170h+** | - |
 
-**Total Remaining**: ~9,000 items requiring systematic refactoring
+**Total Remaining**: 9,072 items requiring systematic refactoring across 17 sprints
 
 ---
 
-## 🎯 Recommended Approach to Final Goal
+## 🎯 Sprint-by-Sprint Execution Plan
 
-### Phase 1: Critical CSS Consolidation (Quickest Win)
-**Duration**: 1 week
-**Reason**: Independent work stream, doesn't block other work
-**Team**: 1 CSS architect + 1 tester
-**Deliverable**: 14 files → 1 base critical CSS file
+### Sprint 5: Critical CSS Phase 1 (CURRENT - Awaiting Approval)
+**Duration**: 2-3 days
+**Status**: 📋 Ready for Product Owner approval
+**Goal**: Consolidate first 7 critical CSS files
+**Team**: 6 specialized agents (CSS-Architect, CSS-Driver, CSS-Navigator, Visual-Test-Driver, XP-Coach, TDD-Coordinator)
+**Expected Outcome**: 35-40% duplication eliminated, 7/14 files consolidated
 
-### Phase 2: Page-Template FL-Node Refactoring (Coordinated)
-**Duration**: 6-8 weeks
-**Reason**: Requires HTML + CSS paired refactoring
-**Team**: 2 XP pairs (HTML coder + CSS coder) × 2 pairs = 4 agents
-**Strategy**:
-1. File-by-file approach (careers.html first with 57 refs)
-2. HTML change + corresponding CSS change in same commit
-3. Test after EVERY file (bin/rake test:critical)
-4. Visual regression validation (screenshot tests)
+### Sprint 6: Critical CSS Phase 2
+**Duration**: 2-3 days
+**Goal**: Consolidate remaining 7 critical CSS files (Phase 1 complete)
+**Expected Outcome**: 70-80% total duplication eliminated, 14→1 base file
 
-**Phased Rollout**:
-- **Week 1-2**: careers.html + about.html (104 refs)
-- **Week 3-4**: services.html + clients/single.html (72 refs)
-- **Week 5-6**: Remaining page templates (300 refs)
-- **Week 7-8**: Test files + cleanup (93 refs)
+### Sprint 7-8: HTML Migration Batch 1
+**Duration**: 8-10 days
+**Goal**: Migrate top 10 high-impact HTML files (274 refs)
+**Team**: HTML-Driver + CSS-Navigator + Visual-Test-Driver pairs
+**Strategy**: Coordinated HTML + CSS changes in atomic commits
 
-### Phase 3: Final CSS Rule Consolidation
-**Duration**: 2-3 weeks
-**Reason**: Cleanup after HTML migration complete
-**Team**: 1 CSS refactoring specialist + 1 reviewer
-**Deliverable**: Remove unused FL-node CSS rules, consolidate duplicates
+### Sprint 9-10: HTML Migration Batch 2
+**Duration**: 8-10 days
+**Goal**: Migrate remaining 34 HTML files (298 refs)
+**Expected Outcome**: 572/572 HTML references → semantic BEM classes
+
+### Sprint 11-16: CSS Rules Migration
+**Duration**: 24-32 days
+**Goal**: Eliminate all 8,449 FL-node CSS rules
+**Team**: CSS-Refactor-Specialist + Flocking-Rules-Expert
+**Strategy**: Flocking rules systematic consolidation
+
+### Sprint 17: Final Validation
+**Duration**: 3-5 days
+**Goal**: 100% goal completion validation
+**Deliverables**: Full regression suite, production deployment readiness
 
 ---
 
@@ -331,5 +381,7 @@ Result: 14 files → 1 base + optional page-specific
 ---
 
 **Last Updated**: 2025-09-30
-**Author**: CSS Migration Hive Mind Coordination Team
-**Status**: Awaiting decision on continuation strategy
+**Author**: CSS Migration Product Owner (Goal Guardian)
+**Status**: Sprint 5 ready for approval - 9,072 items remaining across 17 sprints
+**Next Action**: Product Owner approval decision on Sprint 5 execution
+**Reference**: Full Sprint 5 plan in `/docs/projects/2509-css-migration/30-39-documentation/30.03-sprint-5-plan.md`
