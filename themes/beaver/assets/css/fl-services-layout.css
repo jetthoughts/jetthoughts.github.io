@@ -4445,7 +4445,7 @@ img.mfp-img {
 }
 
 .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label {
-  color: #121212;
+  color: var(--color-dark);
 }
 
 .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label.pp-tab-active, .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label.pp-tab-active:hover, .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label:hover, .fl-node-fy2sd3rz1qtj .pp-tabs .pp-tabs-label:focus {
