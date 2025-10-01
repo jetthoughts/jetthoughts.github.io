@@ -17,6 +17,7 @@
 @import "fl-clients-layout.css";
 @import "fl-use-cases-layout.css";
 @import "fl-service-detail-layout.css";
+@import "fl-contact-layout.css";
 
 /* CSS Reset & Box Model - Critical for layout */
 *, *::before, *::after {
