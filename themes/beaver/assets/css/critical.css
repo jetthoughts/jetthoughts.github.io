@@ -7,6 +7,7 @@
 @import "utilities/responsive/breakpoints.css";
 @import "utilities/responsive/visibility.css";
 @import "components/buttons.css";
+@import "base-layout.css";
 
 /* CSS Reset & Box Model - Critical for layout */
 *, *::before, *::after {
