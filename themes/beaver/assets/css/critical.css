@@ -20,6 +20,7 @@
 @import "fl-contact-layout.css";
 @import "fl-component-layout.css";
 @import "beaver-grid-layout.css";
+@import "fl-foundation.css";
 
 /* CSS Reset & Box Model - Critical for layout */
 *, *::before, *::after {
