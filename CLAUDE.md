@@ -74,7 +74,7 @@ jt_site_specific_adaptations:
 - Interface design needs to be driven by usage patterns
 
 **Agent Pattern**:
-```javascript
+```
 // Spawn test-writer agent for RED phase
 [RED Phase - Test-First]:
   Task("Test Writer", "Write failing BEHAVIOR-focused test for [feature]. Follow Kent Beck Rule 1: Don't write code before failing test. Reference /knowledge/20.11-tdd-agent-delegation-how-to.md", "test-writer")
@@ -102,7 +102,7 @@ jt_site_specific_adaptations:
 - Focus on getting tests to pass quickly
 
 **Agent Pattern**:
-```javascript
+```
 // Spawn minimal-implementer after RED phase completes
 [GREEN Phase - Shameless Green]:
   Task("Minimal Implementer", "Implement embarrassingly simple code to pass tests. Accept hardcoding, accept duplication. Follow Kent Beck: 'Make test work quickly, committing whatever sins necessary'. Reference /knowledge/20.05-shameless-green-flocking-rules-methodology.md", "minimal-implementer")
@@ -130,7 +130,7 @@ jt_site_specific_adaptations:
 - Apply flocking rules for systematic refactoring
 
 **Agent Pattern**:
-```javascript
+```
 // Spawn refactor-specialist after GREEN phase
 [REFACTOR Phase - Flocking Rules]:
   Task("Refactor Specialist", "Apply flocking rules systematically: (1) Select things most alike (2) Find smallest difference (3) Make simplest change to remove difference. Reference /knowledge/20.05-shameless-green-flocking-rules-methodology.md", "refactor-specialist")
@@ -156,7 +156,7 @@ jt_site_specific_adaptations:
 ### 📊 TDD Implementation Strategies (Official Claude-Flow)
 
 #### **Strategy 1: Fake It (High Complexity)**
-```javascript
+```
 // Start with constants and gradually generalize
 class UserAuthentication {
   authenticate(credentials) {
@@ -170,7 +170,7 @@ class UserAuthentication {
 ```
 
 #### **Strategy 2: Obvious Implementation (Low Complexity)**
-```javascript
+```
 // Directly implement the real solution when obvious
 class Calculator {
   add(a, b) {
@@ -180,7 +180,7 @@ class Calculator {
 ```
 
 #### **Strategy 3: Triangulation (Complex Business Rules)**
-```javascript
+```
 // Use multiple examples to force generalization
 describe('PriceCalculator', () => {
   it('applies 10% discount for orders over $100', () => {
@@ -217,7 +217,7 @@ tdd_memory_namespaces:
 
 ### 📋 Complete TDD Cycle Pattern (Copy-Paste Ready)
 
-```javascript
+```
 // Official Claude-Flow TDD Cycle with Shameless Green Integration
 [Complete TDD Cycle - jt_site Feature]:
   // Phase 1: RED - Test-First Development
@@ -534,7 +534,7 @@ continuous_execution_response: |
 
 ### 📋 Enhanced XP Team Pattern with TDD Agents (Copy-Paste Ready)
 
-```javascript
+```
 // Full XP Team for jt_site features with official TDD integration
 [XP Team Formation with TDD Specialists]:
   // XP Leadership (MANDATORY)

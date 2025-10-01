@@ -37,6 +37,7 @@ capybara-*.png
 
 !/.github/
 
+
 # Claude Flow generated files
 .claude/checkpoints/
 .claude/settings.local.json
@@ -44,6 +45,9 @@ capybara-*.png
 claude-flow.config.json
 .swarm/
 .hive-mind/
+.claude-flow/
+memory/
+coordination/
 memory/claude-flow-data.json
 memory/sessions/*
 !memory/sessions/README.md
