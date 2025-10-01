@@ -12,6 +12,7 @@
 @import "services-layout.css";
 @import "fl-homepage-layout.css";
 @import "fl-services-layout.css";
+@import "fl-about-layout.css";
 
 /* CSS Reset & Box Model - Critical for layout */
 *, *::before, *::after {
