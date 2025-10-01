@@ -8,6 +8,7 @@
 @import "utilities/responsive/visibility.css";
 @import "components/buttons.css";
 @import "base-layout.css";
+@import "homepage-layout.css";
 
 /* CSS Reset & Box Model - Critical for layout */
 *, *::before, *::after {
