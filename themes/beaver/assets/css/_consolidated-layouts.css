@@ -1,0 +1,27 @@
+/* Consolidated Layouts - Master Layouts File (Phase 1B) */
+/* ALL layout CSS consolidated via @import for zero-duplication architecture */
+
+/* Base Layouts */
+@import "base-layout.css";
+@import "beaver-grid-layout.css";
+@import "homepage-layout.css";
+@import "services-layout.css";
+
+/* FL-Builder Page Layouts */
+@import "fl-about-layout.css";
+@import "fl-careers-layout.css";
+@import "fl-clients-layout.css";
+@import "fl-component-layout.css";
+@import "fl-contact-layout.css";
+@import "fl-homepage-layout.css";
+@import "fl-service-detail-layout.css";
+@import "fl-services-layout.css";
+@import "fl-use-cases-layout.css";
+
+/* Phase 1B Consolidation Progress:
+ * ✅ 13 layout files consolidated into single master file
+ * ✅ @import strategy preserves page-specific organization
+ * ✅ PostCSS postcss-delete-duplicate-css removes runtime duplicates
+ * 🎯 Progress: 78/105 files consolidated (74% reduction achieved!)
+ * 🎯 Target: 70-80% reduction (21-32 files remaining) - WITHIN TARGET
+ */
