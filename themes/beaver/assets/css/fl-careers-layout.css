@@ -1103,12 +1103,13 @@ img.mfp-img {
   width: 100%;
 }
 
-.fl-node-yx43bujcaiqn {
+/* Feature card column - 3-column layout on desktop, stacked on mobile */
+.c-feature-card {
   width: 32%;
 }
 
 @media (max-width: 860px) {
-  .fl-builder-content .fl-node-yx43bujcaiqn {
+  .fl-builder-content .c-feature-card {
     width: 100% !important;
     max-width: none;
     clear: none;
@@ -1116,28 +1117,29 @@ img.mfp-img {
   }
 }
 
-.fl-node-yx43bujcaiqn > .fl-col-content {
+.c-feature-card > .fl-col-content {
   margin-right: 30px;
 }
 
 @media ( max-width: 860px ) {
-  .fl-node-yx43bujcaiqn.fl-col > .fl-col-content {
+  .c-feature-card.fl-col > .fl-col-content {
     margin-right: 0px;
   }
 }
 
 @media ( max-width: 860px ) {
-  .fl-node-yx43bujcaiqn.fl-col > .fl-col-content {
+  .c-feature-card.fl-col > .fl-col-content {
     padding-top: 30px;
   }
 }
 
-.fl-node-ktz4ipj39vd6 {
+/* Feature card - middle card (wider with both side margins) */
+.c-feature-card--second {
   width: 36%;
 }
 
 @media (max-width: 860px) {
-  .fl-builder-content .fl-node-ktz4ipj39vd6 {
+  .fl-builder-content .c-feature-card--second {
     width: 100% !important;
     max-width: none;
     clear: none;
@@ -1145,51 +1147,33 @@ img.mfp-img {
   }
 }
 
-.fl-node-ktz4ipj39vd6 > .fl-col-content {
+.c-feature-card--second > .fl-col-content {
   margin-right: 30px;
   margin-left: 30px;
 }
 
 @media ( max-width: 860px ) {
-  .fl-node-ktz4ipj39vd6.fl-col > .fl-col-content {
+  .c-feature-card--second.fl-col > .fl-col-content {
     margin-right: 0px;
     margin-left: 0px;
   }
 }
 
 @media ( max-width: 860px ) {
-  .fl-node-ktz4ipj39vd6.fl-col > .fl-col-content {
+  .c-feature-card--second.fl-col > .fl-col-content {
     padding-top: 30px;
   }
 }
 
-.fl-node-m39uvorzy5g8 {
-  width: 32%;
-}
-
-@media (max-width: 860px) {
-  .fl-builder-content .fl-node-m39uvorzy5g8 {
-    width: 100% !important;
-    max-width: none;
-    clear: none;
-    float: left;
-  }
-}
-
-.fl-node-m39uvorzy5g8 > .fl-col-content {
+/* Feature card - third card (no right margin, only left) */
+.c-feature-card--third > .fl-col-content {
   margin-right: 0px;
   margin-left: 30px;
 }
 
 @media ( max-width: 860px ) {
-  .fl-node-m39uvorzy5g8.fl-col > .fl-col-content {
+  .c-feature-card--third.fl-col > .fl-col-content {
     margin-left: 0px;
-  }
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-m39uvorzy5g8.fl-col > .fl-col-content {
-    padding-top: 30px;
   }
 }
 
