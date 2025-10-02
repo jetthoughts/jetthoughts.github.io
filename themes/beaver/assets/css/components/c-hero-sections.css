@@ -1135,3 +1135,40 @@
 .fl-node-ydac1kbu0mr5 .fl-row-content {
   min-width: 0px;
 }
+
+/* fl-node-w02opu1zjdef - Careers Hero Section Variant (23/43) */
+.c-hero-section--careers-2 > .fl-row-content-wrap,
+.fl-node-w02opu1zjdef > .fl-row-content-wrap {
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.c-hero-section--careers-2 > .fl-row-content-wrap,
+.fl-node-w02opu1zjdef > .fl-row-content-wrap {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+@media ( max-width: 1115px ) {
+  .c-hero-section--careers-2.fl-row > .fl-row-content-wrap,
+  .fl-node-w02opu1zjdef.fl-row > .fl-row-content-wrap {
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+}
+
+@media ( max-width: 860px ) {
+  .c-hero-section--careers-2.fl-row > .fl-row-content-wrap,
+  .fl-node-w02opu1zjdef.fl-row > .fl-row-content-wrap {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+.c-hero-section--careers-2 .fl-row-content,
+.fl-node-w02opu1zjdef .fl-row-content {
+  min-width: 0px;
+}
