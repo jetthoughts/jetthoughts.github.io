@@ -34,3 +34,30 @@
 .c-testimonial-section .fl-row-content {
   min-width: 0px;
 }
+
+/* Testimonial Column Layout */
+.c-testimonial-section__column--photo {
+  width: 25%;
+}
+
+.c-testimonial-section__column--text {
+  width: 75%;
+}
+
+.c-testimonial-section__column--text > .fl-col-content {
+  padding-left: 40px;
+}
+
+@media (max-width: 860px) {
+  .fl-builder-content .c-testimonial-section__column--photo,
+  .fl-builder-content .c-testimonial-section__column--text {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+
+  .c-testimonial-section__column--text.fl-col > .fl-col-content {
+    padding-left: 0px;
+  }
+}
