@@ -4,7 +4,7 @@ description: "Test page to validate testimonial component functionality with rea
 type: "page"
 layout: "test-testimonials"
 slug: "test-testimonials-page"
-draft: false
+draft: true
 date: 2025-01-18
 ---
 

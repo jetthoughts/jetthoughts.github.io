@@ -4,7 +4,7 @@ description: "Test page to validate hero section component functionality"
 type: "page"
 layout: "test-hero"
 slug: "test-hero-page"
-draft: false
+draft: true
 date: 2025-01-18
 overview_first_value: "250"
 overview_first_name: "Test Projects Completed"

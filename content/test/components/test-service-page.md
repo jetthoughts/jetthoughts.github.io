@@ -4,7 +4,7 @@ description: "Test page to validate service-card component functionality"
 type: "page"
 layout: "test-service"
 slug: "test-service-page"
-draft: false
+draft: true
 date: 2025-01-18
 ---
 

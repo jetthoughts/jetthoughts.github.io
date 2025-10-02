@@ -4,7 +4,7 @@ description: "Test page to validate CTA block component functionality"
 type: "page"
 layout: "test-cta"
 slug: "test-cta-page"
-draft: false
+draft: true
 date: 2025-01-18
 ---
 
