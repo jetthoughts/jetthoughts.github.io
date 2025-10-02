@@ -1,6 +1,6 @@
 ---
 name: "dx-optimizer"
-type: "optimizer"
+type: optimizer
 color: "#00D9FF"
 description: |
   Developer Experience specialist focused on improving tooling, setup, and workflows to eliminate development friction.

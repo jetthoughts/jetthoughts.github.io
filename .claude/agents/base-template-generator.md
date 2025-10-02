@@ -1,6 +1,6 @@
 ---
 name: "base-template-generator"
-type: "architect"
+type: architect
 color: "#FF8C00"
 description: |
   Creates foundational templates, boilerplate code, and starter configurations following best practices.

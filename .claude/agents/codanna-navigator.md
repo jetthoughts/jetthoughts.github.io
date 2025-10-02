@@ -1,6 +1,6 @@
 ---
 name: "codanna-navigator"
-type: "analyst"
+type: analyst
 color: "#8A2BE2"
 description: |
   Codanna-powered code navigation specialist for comprehensive codebase exploration and analysis.

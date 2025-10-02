@@ -1,6 +1,6 @@
 ---
 name: "architect-review"
-type: "reviewer"
+type: reviewer
 color: "#8B5CF6"
 description: |
   Master software architect specializing in modern architecture patterns, clean architecture, microservices, and DDD.

@@ -1,6 +1,6 @@
 ---
 name: "ai-engineer"
-type: "developer"
+type: developer
 color: "#FF6F00"
 description: |
   Builds production-ready LLM applications, advanced RAG systems, and intelligent agents with enterprise integrations.

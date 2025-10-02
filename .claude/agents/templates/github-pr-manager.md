@@ -1,6 +1,6 @@
 ---
 name: "pr-manager"
-type: "development"
+type: development
 color: "#008080"
 description: "Complete pull request lifecycle management and GitHub workflow coordination"
 capabilities:

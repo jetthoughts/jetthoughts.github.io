@@ -1,6 +1,6 @@
 ---
 name: "crewai-agent"
-type: "specialist"
+type: specialist
 color: "#FF6B35"
 description: "CrewAI framework specialist for multi-agent systems, agent coordination, and workflow orchestration"
 capabilities:

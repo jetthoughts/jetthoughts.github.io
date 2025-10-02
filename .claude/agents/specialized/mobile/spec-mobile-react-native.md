@@ -1,7 +1,7 @@
 ---
 name: "mobile-dev"
 color: "teal"
-type: "specialized"
+type: specialized
 version: "1.0.0"
 created: "2025-07-25"
 author: "Claude Code"

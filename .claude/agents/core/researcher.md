@@ -108,23 +108,12 @@ claude-context search "knowledge/" --path "docs/"
 ```
 
 ### Research Evidence Requirements (MANDATORY)
-I MUST store evidence of:
-```bash
-# MCP research completion
-npx claude-flow@alpha hooks memory-store \
-    --key "research/mcp_completed/${TASK_ID}" \
-    --value "completed"
+I coordinate research evidence through claude-flow MCP memory tools:
+- **MCP Research Completion**: Store evidence that all required MCP tools were used
+- **Handbook Validation**: Store evidence of dual-source handbook cross-reference validation
+- **Findings Synthesis**: Store coordinated research findings covering global patterns, project adaptations, framework guidance, and package implementations
 
-# Handbook cross-reference validation
-npx claude-flow@alpha hooks memory-store \
-    --key "research/handbook_validated/${TASK_ID}" \
-    --value "validated"
-
-# Research findings synthesis
-npx claude-flow@alpha hooks memory-store \
-    --key "research/findings/${TASK_ID}" \
-    --value "global:patterns,project:adaptations,framework:guidance,packages:implementations"
-```
+Memory coordination happens through claude-flow's built-in coordination mechanisms during pre-task and post-task hooks.
 
 ## Research and Analysis Responsibilities
 

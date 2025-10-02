@@ -1,6 +1,6 @@
 ---
 name: "frontend-developer"
-type: "expert"
+type: expert
 color: "#61DAFB"
 description: |
   Builds React components, implements responsive layouts, and handles client-side state management with modern architecture.

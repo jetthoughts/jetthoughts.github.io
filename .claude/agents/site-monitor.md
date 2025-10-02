@@ -1,6 +1,6 @@
 ---
 name: "site-monitor"
-type: "site-monitor"
+type: site-monitor
 color: "#F57C00"
 description: |
   Monitors Hugo site health, performance, and uptime with comprehensive monitoring and alerting.

@@ -216,18 +216,11 @@ I research existing patterns using comprehensive MCP tool integration:
 I identify reusable patterns from global handbook references, plan for pattern consistency across project components following global standards, coordinate pattern library development that extends (never overrides) global patterns, and validate all planning decisions against handbook compliance.
 
 ### Research Evidence Storage
-I store all research findings in memory coordination:
-```bash
-# Research completion evidence
-npx claude-flow@alpha hooks memory-store \
-    --key "research/completed/${TASK_ID}" \
-    --value "handbook:verified,patterns:analyzed,framework:validated"
+I coordinate research findings through claude-flow MCP memory tools:
+- **Research Completion**: Store evidence of handbook verification, pattern analysis, and framework validation
+- **Handbook Compliance**: Store evidence of global handbook cross-reference validation
 
-# Handbook compliance evidence
-npx claude-flow@alpha hooks memory-store \
-    --key "handbook/validated/${TASK_ID}" \
-    --value "verified"
-```
+Memory coordination happens through claude-flow's built-in coordination mechanisms during pre-task and post-task hooks.
 
 ## Risk Management and Adaptation
 

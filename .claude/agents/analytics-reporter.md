@@ -1,6 +1,6 @@
 ---
 name: "analytics-reporter"
-type: "specialist"
+type: specialist
 color: "#1976D2"
 description: |
   Creates comprehensive analytics reports for Hugo site performance tracking and search visibility optimization.

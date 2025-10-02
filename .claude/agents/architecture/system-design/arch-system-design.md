@@ -1,6 +1,6 @@
 ---
 name: "system-architect"
-type: "architecture"
+type: architecture
 color: "purple"
 version: "1.0.0"
 created: "2025-07-25"

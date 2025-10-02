@@ -1,6 +1,6 @@
 ---
 name: "sparc-coordinator"
-type: "coordinator"
+type: coordinator
 color: "#FF8C00"
 description: "SPARC methodology orchestrator for systematic development phase coordination"
 capabilities:
