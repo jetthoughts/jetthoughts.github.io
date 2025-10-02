@@ -1,0 +1,36 @@
+/* Component: Testimonial Section (c-testimonial-section)
+ * Purpose: Full-width testimonial row with photo and text on careers page
+ * Extracted from: fl-node-dkc4gbvj193z (10/43)
+ * BEM Naming: c-testimonial-section
+ */
+
+.c-testimonial-section > .fl-row-content-wrap {
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.c-testimonial-section > .fl-row-content-wrap {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+@media ( max-width: 1115px ) {
+  .c-testimonial-section.fl-row > .fl-row-content-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media ( max-width: 860px ) {
+  .c-testimonial-section.fl-row > .fl-row-content-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.c-testimonial-section .fl-row-content {
+  min-width: 0px;
+}

@@ -915,34 +915,7 @@ img.mfp-img {
 
 /* fl-node-ydac1kbu0mr5 - EXTRACTED to c-hero-sections.css (22/43) */
 
-/* fl-node-w02opu1zjdef - EXTRACTED to c-hero-sections.css (23/43) */
-
-.fl-node-dkc4gbvj193z > .fl-row-content-wrap {
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
-.fl-node-dkc4gbvj193z > .fl-row-content-wrap {
-  padding-top: 130px;
-  padding-bottom: 130px;
-}
-
-@media ( max-width: 1115px ) {
-  .fl-node-dkc4gbvj193z.fl-row > .fl-row-content-wrap {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-dkc4gbvj193z.fl-row > .fl-row-content-wrap {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
+/* fl-node-dkc4gbvj193z - EXTRACTED to c-testimonial-section.css (10/43) */
 
 .fl-node-f0p6suehzirx > .fl-row-content-wrap {
 
@@ -3691,11 +3664,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 /* fl-node-ydac1kbu0mr5 .fl-row-content - EXTRACTED to c-hero-sections.css (22/43) */
 
-/* fl-node-w02opu1zjdef .fl-row-content - EXTRACTED to c-hero-sections.css (23/43) */
-
-.fl-node-dkc4gbvj193z .fl-row-content {
-  min-width: 0px;
-}
+/* fl-node-dkc4gbvj193z .fl-row-content - EXTRACTED to c-testimonial-section.css (10/43) */
 
 .fl-node-f0p6suehzirx .fl-row-content {
   min-width: 0px;
