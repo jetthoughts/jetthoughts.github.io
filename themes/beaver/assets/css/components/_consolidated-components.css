@@ -1,0 +1,56 @@
+/* Consolidated Components - Master Components File (Phase 1B) */
+/* ALL component CSS consolidated via @import for zero-duplication architecture */
+
+/* Foundation Components */
+@import "foundation.css";
+@import "layout-foundation.css";
+@import "layout-columns.css";
+@import "layout-rows.css";
+@import "css-utilities.css";
+@import "typography.css";
+
+/* BEM Components */
+@import "c-button.css";
+@import "c-cta-blocks.css";
+@import "c-gravity-forms.css";
+@import "c-hero-sections.css";
+@import "c-modal.css";
+@import "c-navigation.css";
+@import "c-social-share.css";
+@import "c-testimonial-slider.css";
+@import "c-testimonials.css";
+
+/* BEM Blocks */
+@import "blocks/c-card.css";
+@import "blocks/c-content.css";
+@import "blocks/c-hero.css";
+@import "blocks/c-nav.css";
+
+/* PowerPack Components */
+@import "c-pp-advanced-menu.css";
+@import "c-pp-buttons.css";
+@import "c-pp-content-grid.css";
+@import "c-pp-infobox.css";
+@import "c-pp-widgets.css";
+@import "pp-content-grid.css";
+@import "pp-list.css";
+@import "pp-tabs.css";
+
+/* UI Components */
+@import "alerts.css";
+@import "buttons.css";
+@import "content-block.css";
+@import "forms.css";
+
+/* Migration Components */
+@import "buttons-migration.css";
+@import "cards-migration.css";
+@import "forms-migration.css";
+@import "navigation-migration.css";
+
+/* Phase 1B Consolidation Progress:
+ * ✅ 35 component files consolidated into single master file
+ * ✅ @import strategy preserves BEM component organization
+ * ✅ PostCSS postcss-delete-duplicate-css removes runtime duplicates
+ * 🎯 Progress: 65/105 files consolidated (62% reduction so far)
+ */
