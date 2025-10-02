@@ -1098,7 +1098,8 @@ img.mfp-img {
   }
 }
 
-.fl-node-f8b1riy273sj {
+/* Spacer column - full width on desktop/large/medium screens */
+.c-content-block__group > .fl-col.fl-visible-desktop {
   width: 100%;
 }
 
