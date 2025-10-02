@@ -2,6 +2,7 @@
 @import "utilities/foundation/clearfix.css";
 @import "components/c-infobox.css";
 @import "components/c-spacer--benefits-2.css";
+@import "components/c-feature-card--row2.css";
 
 
 .sr-only {
@@ -1176,95 +1177,6 @@ img.mfp-img {
 @media ( max-width: 860px ) {
   .c-feature-card--third.fl-col > .fl-col-content {
     margin-left: 0px;
-  }
-}
-
-.fl-node-oxvacq3nkrmt {
-  width: 32%;
-}
-
-@media (max-width: 860px) {
-  .fl-builder-content .fl-node-oxvacq3nkrmt {
-    width: 100% !important;
-    max-width: none;
-    clear: none;
-    float: left;
-  }
-}
-
-.fl-node-oxvacq3nkrmt > .fl-col-content {
-  margin-right: 30px;
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-oxvacq3nkrmt.fl-col > .fl-col-content {
-    margin-right: 0px;
-  }
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-oxvacq3nkrmt.fl-col > .fl-col-content {
-    padding-top: 30px;
-  }
-}
-
-.fl-node-j89kuaibv574 {
-  width: 35%;
-}
-
-@media (max-width: 860px) {
-  .fl-builder-content .fl-node-j89kuaibv574 {
-    width: 100% !important;
-    max-width: none;
-    clear: none;
-    float: left;
-  }
-}
-
-.fl-node-j89kuaibv574 > .fl-col-content {
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-j89kuaibv574.fl-col > .fl-col-content {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-j89kuaibv574.fl-col > .fl-col-content {
-    padding-top: 30px;
-  }
-}
-
-.fl-node-gz025t4lvoui {
-  width: 33%;
-}
-
-@media (max-width: 860px) {
-  .fl-builder-content .fl-node-gz025t4lvoui {
-    width: 100% !important;
-    max-width: none;
-    clear: none;
-    float: left;
-  }
-}
-
-.fl-node-gz025t4lvoui > .fl-col-content {
-  margin-left: 30px;
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-gz025t4lvoui.fl-col > .fl-col-content {
-    margin-left: 0px;
-  }
-}
-
-@media ( max-width: 860px ) {
-  .fl-node-gz025t4lvoui.fl-col > .fl-col-content {
-    padding-top: 30px;
   }
 }
 

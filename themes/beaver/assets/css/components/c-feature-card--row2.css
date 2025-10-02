@@ -1,0 +1,72 @@
+/* Feature card row 2 (second set of 3 benefit cards) */
+
+/* First card in row 2: 32% width, right margin */
+.c-feature-card--row2-first {
+  width: 32%;
+}
+
+.c-feature-card--row2-first > .fl-col-content {
+  margin-right: 30px;
+}
+
+@media (max-width: 860px) {
+  .fl-builder-content .c-feature-card--row2-first {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+
+  .c-feature-card--row2-first.fl-col > .fl-col-content {
+    margin-right: 0px;
+    padding-top: 30px;
+  }
+}
+
+/* Second card in row 2: 35% width, left and right margins */
+.c-feature-card--row2-second {
+  width: 35%;
+}
+
+.c-feature-card--row2-second > .fl-col-content {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+@media (max-width: 860px) {
+  .fl-builder-content .c-feature-card--row2-second {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+
+  .c-feature-card--row2-second.fl-col > .fl-col-content {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 30px;
+  }
+}
+
+/* Third card in row 2: 33% width, left margin */
+.c-feature-card--row2-third {
+  width: 33%;
+}
+
+.c-feature-card--row2-third > .fl-col-content {
+  margin-left: 30px;
+}
+
+@media (max-width: 860px) {
+  .fl-builder-content .c-feature-card--row2-third {
+    width: 100% !important;
+    max-width: none;
+    clear: none;
+    float: left;
+  }
+
+  .c-feature-card--row2-third.fl-col > .fl-col-content {
+    margin-left: 0px;
+    padding-top: 30px;
+  }
+}
