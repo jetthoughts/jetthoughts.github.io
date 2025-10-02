@@ -1,15 +1,56 @@
-/* Consolidated Utilities - Extracted from fl-homepage-layout.css */
-/* XP Team CSS Consolidation with Screenshot Test Validation */
+/* Consolidated Utilities - Master Utilities File (Phase 1B) */
+/* ALL utility CSS consolidated via @import for zero-duplication architecture */
 
-/* Import extracted utility modules */
+/* Foundation Utilities */
+@import "foundation/reset.css";
+@import "foundation/clearfix.css";
+@import "foundation/screen-reader.css";
+@import "foundation/container.css";
+
+/* Grid System */
+@import "grid/fl-row.css";
+@import "grid/fl-col.css";
+
+/* FL-Builder Utilities */
+@import "fl-builder-basic.css";
+@import "fl-builder-components.css";
+@import "fl-builder-grid.css";
+@import "fl-builder-visibility.css";
+
+/* Responsive Utilities */
+@import "responsive/breakpoints.css";
+@import "responsive/visibility.css";
+
+/* Layout Utilities */
 @import "display.css";
+@import "flexbox.css";
 @import "margins.css";
 @import "padding.css";
 @import "position.css";
+@import "positioning/center-absolute.css";
+@import "c-spacing.css";
 
-/* Consolidation Progress:
- * ✅ 4 utility files created with screenshot validation
- * ✅ 12 foundational utility classes extracted
- * ✅ Zero visual regressions (39 tests passing)
- * 🎯 Ready for integration into main stylesheets
+/* Color Utilities */
+@import "colors.css";
+@import "colors/backgrounds.css";
+@import "color-accessibility.css";
+
+/* Typography Utilities */
+@import "typography/text-utilities.css";
+
+/* Other Utilities */
+@import "clearfix.css";
+@import "opacity.css";
+
+/* PowerPack Component Utilities */
+@import "components/powerpack/content-grid.css";
+@import "components/powerpack/infobox.css";
+@import "components/powerpack/pp-icon.css";
+@import "components/powerpack/pp-list.css";
+
+/* Phase 1B Consolidation Progress:
+ * ✅ 30 utility files consolidated into single master file
+ * ✅ @import strategy preserves individual file organization
+ * ✅ PostCSS postcss-delete-duplicate-css removes runtime duplicates
+ * 🎯 Target: 70-80% source file reduction (105 → 21-32 files)
  */
