@@ -1,6 +1,7 @@
 @import "utilities/foundation/reset.css";
 @import "utilities/foundation/clearfix.css";
 @import "components/c-infobox.css";
+@import "components/c-spacer--benefits-2.css";
 
 
 .sr-only {
@@ -1178,10 +1179,6 @@ img.mfp-img {
   }
 }
 
-.fl-node-lru5v2k7htgj {
-  width: 100%;
-}
-
 .fl-node-oxvacq3nkrmt {
   width: 32%;
 }
@@ -1806,23 +1803,6 @@ img.mfp-img {
 }
 
 @media (max-width: 860px) {
-}
-
-.fl-node-gq1zu0tr6e4m .pp-spacer-module {
-  height: 60px;
-  width: 100%;
-}
-
-@media only screen and (max-width: 1115px) {
-  .fl-node-gq1zu0tr6e4m .pp-spacer-module {
-    height: 40px;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .fl-node-gq1zu0tr6e4m .pp-spacer-module {
-    height: 15px;
-  }
 }
 
 .fl-col-group-equal-height .fl-node-7dpf8coyqrj1, .fl-col-group-equal-height .fl-node-7dpf8coyqrj1 .fl-module-content, .fl-col-group-equal-height .fl-node-7dpf8coyqrj1 .fl-module-content .pp-infobox-wrap, .fl-col-group-equal-height .fl-node-7dpf8coyqrj1 .fl-module-content .pp-infobox-wrap .pp-infobox, .fl-col-group-equal-height .fl-node-7dpf8coyqrj1 .fl-module-content .pp-infobox-wrap > .pp-infobox-link, .fl-col-group-equal-height .fl-node-7dpf8coyqrj1 .fl-module-content .pp-infobox-wrap > .pp-more-link {
