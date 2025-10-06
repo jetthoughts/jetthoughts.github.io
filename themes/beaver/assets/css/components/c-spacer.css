@@ -1,0 +1,35 @@
+/* Spacer Component - Vertical spacing utility
+ * BEM Structure: c-spacer with responsive height variants
+ * Variants: --benefits (default spacing between benefits sections)
+ */
+
+/* Base spacer component */
+.c-spacer {
+  width: 100%;
+}
+
+/* Spacer module element - contains pp-spacer-module for FL-Builder compatibility */
+.c-spacer__module .pp-spacer-module {
+  height: var(--spacer-height-desktop, 60px);
+  width: 100%;
+}
+
+/* Responsive breakpoints using CSS variables */
+@media only screen and (max-width: 1115px) {
+  .c-spacer__module .pp-spacer-module {
+    height: var(--spacer-height-tablet, 40px);
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .c-spacer__module .pp-spacer-module {
+    height: var(--spacer-height-mobile, 15px);
+  }
+}
+
+/* Variant: Benefits section spacing (60px → 40px → 15px) */
+.c-spacer--benefits {
+  --spacer-height-desktop: 60px;
+  --spacer-height-tablet: 40px;
+  --spacer-height-mobile: 15px;
+}
