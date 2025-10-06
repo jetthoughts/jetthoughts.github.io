@@ -2905,3 +2905,4 @@ body:not(.single-fl-theme-layout)
 
 /* Include CTA Blocks Component (189+ patterns, 53 lines) */
 @import "components/c-cta-blocks.css";
+@import "components/c-pagination.css";
