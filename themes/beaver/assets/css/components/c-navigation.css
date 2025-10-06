@@ -201,7 +201,7 @@
   margin-top: -6px;
   width: 9px;
   height: 9px;
-  border-color: #121212;
+  border-color: var(--nav-text-color);
   border-style: solid;
   border-width: 0 2px 2px 0;
   transform-origin: 70% 70%;
@@ -219,19 +219,19 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  color: #121212;
+  color: var(--nav-text-color);
   text-decoration: none;
   transition: .3s;
 }
 
 /* Pattern 12: Active navigation link */
 .c-navigation__item--active .c-navigation__link {
-  color: #1a8cff;
+  color: var(--nav-link-hover-bg);
 }
 
 /* Pattern 13: Active navigation arrow */
 .c-navigation__item--active .c-navigation__item-arrow {
-  border-color: #1a8cff;
+  border-color: var(--nav-link-hover-bg);
 }
 
 /* Pattern 14: Mobile navigation open state */
