@@ -428,7 +428,7 @@
     font-weight: 300;
     line-height: 22px;
     font-size: 16px;
-    background-color: #121212 !important;
+    background-color: var(--nav-text-color) !important;
     color: #ffffff !important;
     border-radius: 6px;
     margin-top: 15px;
@@ -447,7 +447,7 @@
 .c-navigation__mobile-link {
   @media (max-width: 1024px) {
     padding: 14px 0;
-    color: #121212;
+    color: var(--nav-text-color);
     font-size: 18px;
     padding-right: 15px;
   }
