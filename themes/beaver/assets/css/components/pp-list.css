@@ -287,3 +287,250 @@
     flex-wrap: wrap;
   }
 }
+
+/* ==========================================================================
+   PP-LIST: FL-Builder Integration Styles (Node-Specific Overrides)
+   Scopes contact-us specific styling via .fl-node-svpm1j6z4e0c wrapper
+   Follows c-pp-advanced-menu pattern (lines 427-485)
+   ========================================================================== */
+
+/* Contact-Us Theme: Transitions & Hover States */
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .pp-list-item-content,
+.fl-node-svpm1j6z4e0c .c-list__container .c-list__item-content {
+  transition: all 0.3s ease-in-out;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .pp-list-item-content:hover,
+.fl-node-svpm1j6z4e0c .c-list__container .c-list__item-content:hover {
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .pp-list-item,
+.fl-node-svpm1j6z4e0c .c-list__container .c-list__item {
+  padding-bottom: 0;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-1 .pp-list-item .pp-list-item-content,
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-2 .pp-list-item .pp-list-item-content,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-1 .c-list__item .c-list__item-content,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-2 .c-list__item .c-list__item-content {
+  align-items: flex-start;
+}
+
+/* Contact-Us Theme: Title Text Styling */
+.fl-node-svpm1j6z4e0c .pp-infolist-title .pp-infolist-title-text,
+.fl-node-svpm1j6z4e0c .c-list__title .pp-infolist-title-text {
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition: color 0.2s ease-in-out;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-title .pp-infolist-title-text:hover,
+.fl-node-svpm1j6z4e0c .c-list__title .pp-infolist-title-text:hover {
+  color: #ffffff;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-description,
+.fl-node-svpm1j6z4e0c .c-list__description {
+}
+
+/* Contact-Us Theme: Icon Base Styling */
+.fl-node-svpm1j6z4e0c .pp-infolist-icon,
+.fl-node-svpm1j6z4e0c .c-list__icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-icon-inner img,
+.fl-node-svpm1j6z4e0c .c-list__icon-inner img {
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-icon:hover,
+.fl-node-svpm1j6z4e0c .c-list__icon:hover {
+}
+
+/* Contact-Us Theme: Connector Positioning per Layout */
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-1 .pp-list-connector,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-1 .c-list__connector {
+  border-left-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-2 .pp-list-connector,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-2 .c-list__connector {
+  border-right-color: #000000;
+  border-right-style: none;
+  border-right-width: 1px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-3 .pp-list-connector,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-3 .c-list__connector {
+  border-top-color: #000000;
+  border-top-style: none;
+  border-top-width: 1px;
+}
+
+/* Contact-Us Theme: Per-Item Icon Colors & Hover */
+.fl-node-svpm1j6z4e0c .pp-list-item .pp-infolist-icon .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item .c-list__icon .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item .pp-infolist-icon:hover .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item .c-list__icon:hover .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-0 .pp-infolist-icon .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-0 .c-list__icon .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-0 .pp-infolist-icon:hover .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-0 .c-list__icon:hover .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-0 .animated,
+.fl-node-svpm1j6z4e0c .c-list__item-0 .animated {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-1 .pp-infolist-icon .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-1 .c-list__icon .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-1 .pp-infolist-icon:hover .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-1 .c-list__icon:hover .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-1 .animated,
+.fl-node-svpm1j6z4e0c .c-list__item-1 .animated {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-2 .pp-infolist-icon .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-2 .c-list__icon .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-2 .pp-infolist-icon:hover .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-2 .c-list__icon:hover .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-2 .animated,
+.fl-node-svpm1j6z4e0c .c-list__item-2 .animated {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-3 .pp-infolist-icon .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-3 .c-list__icon .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-3 .pp-infolist-icon:hover .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-3 .c-list__icon:hover .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-3 .animated,
+.fl-node-svpm1j6z4e0c .c-list__item-3 .animated {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-4 .pp-infolist-icon .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-4 .c-list__icon .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-4 .pp-infolist-icon:hover .pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__item-4 .c-list__icon:hover .pp-icon {
+}
+
+.fl-node-svpm1j6z4e0c .pp-list-item-4 .animated,
+.fl-node-svpm1j6z4e0c .c-list__item-4 .animated {
+  -webkit-animation-duration: 1000ms;
+  -moz-animation-duration: 1000ms;
+  -o-animation-duration: 1000ms;
+  -ms-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+}
+
+/* Contact-Us Theme: Layout 3 Width Override */
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-3 .pp-list-item,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-3 .c-list__item {
+  width: 20%;
+}
+
+/* Contact-Us Theme: List Gap */
+.fl-node-svpm1j6z4e0c .pp-infolist ul,
+.fl-node-svpm1j6z4e0c .c-list ul {
+  gap: 25px;
+}
+
+/* Contact-Us Theme: Typography Settings */
+.fl-node-svpm1j6z4e0c .pp-infolist-title .pp-infolist-title-text,
+.fl-node-svpm1j6z4e0c .c-list__title .pp-infolist-title-text {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* Contact-Us Theme: Icon Sizing & Positioning */
+.fl-node-svpm1j6z4e0c .pp-infolist-icon,
+.fl-node-svpm1j6z4e0c .c-list__icon {
+  padding: 0px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-icon-inner img,
+.fl-node-svpm1j6z4e0c .c-list__icon-inner img {
+  width: 26px;
+  height: 26px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-icon-inner span.pp-icon,
+.fl-node-svpm1j6z4e0c .pp-infolist-icon-inner span.pp-icon:before,
+.fl-node-svpm1j6z4e0c .c-list__icon-inner span.pp-icon,
+.fl-node-svpm1j6z4e0c .c-list__icon-inner span.pp-icon:before {
+  font-size: 26px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-icon-inner,
+.fl-node-svpm1j6z4e0c .c-list__icon-inner {
+  width: 30px;
+  height: 30px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-1 .pp-icon-wrapper,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-1 .c-list__icon-wrapper {
+  margin-right: 10px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-2 .pp-icon-wrapper,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-2 .c-list__icon-wrapper {
+  margin-left: 10px;
+}
+
+.fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-3 .pp-icon-wrapper,
+.fl-node-svpm1j6z4e0c .c-list__container--layout-3 .c-list__icon-wrapper {
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   PP-LIST: FL-Builder Responsive Overrides
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+  .fl-node-svpm1j6z4e0c .pp-infolist-wrap .layout-3 .pp-list-item,
+  .fl-node-svpm1j6z4e0c .c-list__container--layout-3 .c-list__item {
+    width: 100%;
+    float: none;
+  }
+}
