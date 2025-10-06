@@ -666,16 +666,16 @@
 /* Pattern 59: Mobile menu opener color fixes */
 @media (max-width: 1024px) {
   .c-navigation__menu-opener {
-    border-color: #121212;
+    border-color: var(--nav-text-color);
   }
 
   .c-navigation__menu-opener:before {
-    background-color: #121212;
+    background-color: var(--nav-text-color);
   }
 
   .c-navigation__menu-close:before,
   .c-navigation__menu-close:after {
-    background-color: #121212;
+    background-color: var(--nav-text-color);
   }
 }
 
@@ -690,15 +690,15 @@
   }
 
   .c-navigation__link {
-    color: #121212;
+    color: var(--nav-text-color);
   }
 
   .c-navigation__item-arrow {
-    border-color: #121212;
+    border-color: var(--nav-text-color);
   }
 
   .c-navigation__submenu-name {
-    color: #121212;
+    color: var(--nav-text-color);
   }
 }
 
