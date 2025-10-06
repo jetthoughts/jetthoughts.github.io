@@ -336,13 +336,13 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  color: #121212;
+  color: var(--nav-text-color);
   transition: .3s;
 }
 
 /* Pattern 24: Submenu item hover title */
 .c-navigation__submenu-item:hover .c-navigation__submenu-name {
-  color: #1a8cff;
+  color: var(--nav-link-hover-bg);
 }
 
 /* Pattern 25: Submenu item description */
@@ -362,12 +362,12 @@
   }
 
   .c-navigation__item:hover .c-navigation__link {
-    color: #1a8cff;
+    color: var(--nav-link-hover-bg);
   }
 
   .c-navigation__item:hover .c-navigation__item-arrow {
     transform: rotate(225deg);
-    border-color: #1a8cff;
+    border-color: var(--nav-link-hover-bg);
   }
 }
 
