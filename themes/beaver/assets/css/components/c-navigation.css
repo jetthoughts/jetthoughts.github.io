@@ -107,7 +107,7 @@
   display: none;
   width: 30px;
   height: 19px;
-  border: solid #121212;
+  border: solid var(--nav-text-color);
   border-width: 3px 0;
   position: relative;
   cursor: pointer;
