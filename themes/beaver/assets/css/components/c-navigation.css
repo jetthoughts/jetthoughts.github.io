@@ -76,13 +76,13 @@
   /* Navigation link styles */
   display: block;
   padding: 0.5rem 1rem;
-  color: #121212;
+  color: var(--nav-text-color);
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .fl-menu-link:hover {
-  background-color: #1a8cff;
+  background-color: var(--nav-link-hover-bg);
   color: white;
 }
 
