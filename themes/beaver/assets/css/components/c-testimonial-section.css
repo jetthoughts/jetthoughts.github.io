@@ -5,7 +5,7 @@
  */
 
 .c-testimonial-section > .fl-row-content-wrap {
-  background-color: #000;
+  background-color: var(--color-black, #000);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
