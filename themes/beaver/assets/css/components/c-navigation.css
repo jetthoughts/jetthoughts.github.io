@@ -522,7 +522,7 @@
   @media (max-width: 1024px) {
     font-size: 16px;
     line-height: 24px;
-    color: #121212;
+    color: var(--nav-text-color);
   }
 }
 
@@ -538,7 +538,7 @@
   @media (max-width: 1024px) {
     top: 25px;
     right: 15px;
-    border-color: #121212;
+    border-color: var(--nav-text-color);
   }
 }
 
