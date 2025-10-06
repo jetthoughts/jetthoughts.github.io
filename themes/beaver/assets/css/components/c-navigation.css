@@ -7,6 +7,12 @@
  * Progress: Extracting patterns 1-82 using c-navigation prefix
  */
 
+/* CSS Variables - Navigation Color System */
+:root {
+  --nav-text-color: #121212;
+  --nav-link-hover-bg: #1a8cff;
+}
+
 .c-nav {
   display: flex;
   align-items: center;
