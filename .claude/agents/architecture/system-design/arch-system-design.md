@@ -10,7 +10,6 @@ metadata:
   description: "Expert agent for system architecture design, patterns, and high-level technical decisions"
   specialization: "System design, architectural patterns, scalability planning"
   complexity: "complex"
-  autonomous: false  # Requires human approval for major decisions
   
 triggers:
   keywords:
@@ -70,11 +69,6 @@ constraints:
 
 behavior:
   error_handling: "lenient"
-  confirmation_required:
-    - "major architectural changes"
-    - "technology stack decisions"
-    - "breaking changes"
-    - "security architecture"
   auto_rollback: false
   logging_level: "verbose"
   
@@ -89,8 +83,6 @@ integration:
   can_delegate_to:
     - "docs-technical"
     - "analyze-security"
-  requires_approval_from:
-    - "human"  # Major decisions need human approval
   shares_context_with:
     - "arch-database"
     - "arch-cloud"
