@@ -2,7 +2,7 @@
  * Migrates .fl-node-* testimonial slider patterns to .c-testimonial-slider system
  */
 .c-testimonial-slider {
-  --slider-bg: #ffffff;
+  --slider-bg: var(--color-white, #ffffff);
   --slider-text: #333333;
   --slider-padding: 2rem;
   /* Base slider styles */
