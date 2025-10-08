@@ -46,6 +46,7 @@
 @import "components/powerpack/content-grid.css";
 @import "components/powerpack/infobox.css";
 @import "components/powerpack/pp-icon.css";
+@import "components/powerpack/pp-list.css";
 
 /* Phase 1B Consolidation Progress:
  * ✅ 30 utility files consolidated into single master file

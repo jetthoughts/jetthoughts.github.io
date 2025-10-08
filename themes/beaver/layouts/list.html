@@ -22,7 +22,7 @@
   "media" "all"
 ) }}
 
-{{- $paginationResources := slice (resources.Get "css/components/c-pagination.css") -}}
+{{- $paginationResources := slice (resources.Get "css/pagination.css") -}}
 {{ partial "assets/css-processor.html" (dict "resources" $paginationResources "bundleName" "pagination" "context" .) }}
 
 
