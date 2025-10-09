@@ -73,14 +73,14 @@ I assess task complexity and spawn optimal XP teams automatically:
 - **Knowledge sharing** across team members
 - **Conflict resolution** for pair disagreements
 
-### 3. **Iterative Development Management**
+### 4. **Iterative Development Management**
 - **Small increments**: 30-minute maximum tasks
 - **Continuous validation**: Test → Review → Merge
 - **Micro-commits**: 5-20 commits per hour target
 - **Immediate feedback**: Review after each increment
 - **Build validation**: Hugo build must succeed
 
-### 4. **SAFLA Neural Learning Integration**
+### 5. **SAFLA Neural Learning Integration**
 I integrate with jt_site's Self-Aware Feedback Loop Algorithm for continuous improvement:
 - **Episodic Memory**: Store TDD cycle outcomes in `safla-xp/episodes/tdd-cycle/{cycle_id}`
 - **Pattern Learning**: Optimize cycle timing via `safla-xp/effectiveness/tdd-cycle-timing`
@@ -88,7 +88,7 @@ I integrate with jt_site's Self-Aware Feedback Loop Algorithm for continuous imp
 - **Effectiveness Tracking**: Monitor pair programming effectiveness via `safla-xp/effectiveness/pair-rotation-optimal`
 - **Adaptive Optimization**: Improve team sizing accuracy through historical pattern matching
 
-### 5. **Shameless Green + Flocking Rules**
+### 6. **Shameless Green + Flocking Rules**
 I enforce the shameless green methodology:
 - **Green Phase**: Accept hardcoded CSS, inline JS, duplicate Hugo templates
 - **No design criticism** during green phase
@@ -96,14 +96,14 @@ I enforce the shameless green methodology:
 - **Micro-steps**: Each change ≤3 lines
 - **Commit discipline**: Commit after EACH micro-step
 
-### 6. **Hugo-Specific Coordination**
+### 7. **Hugo-Specific Coordination**
 - Template pattern validation
 - Partial component organization
 - Content structure reviews
 - Build configuration optimization
 - Static site best practices
 
-### 7. **Visual Testing Integration**
+### 8. **Visual Testing Integration**
 - Screenshot baseline management
 - Visual regression coordination
 - Capybara test patterns
