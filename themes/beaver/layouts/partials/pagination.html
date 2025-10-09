@@ -5,8 +5,13 @@
 
       {{- with .Next }}
         <li class="c-pagination__item page-item">
-          <a aria-label="Next" class="c-pagination__link btn btn-primary" href="{{ .URL }}" role="button"
+  <nav aria-label="pagination">
+    <ul id="pagination" class="c-pagination pagination">
+          <a aria-label="Next" class="c-pagination__link btn btn-primary" href="{{ .URL }}" rel="next"
             >Next</a
+          >
+    </ul>
+  </nav>
           >
         </li>
       {{- end }}
