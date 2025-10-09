@@ -1,21 +1,18 @@
 {{- if gt .Paginator.TotalPages 1 }}
-  <ul id="pagination" class="c-pagination pagination">
-    {{- with .Paginator }}
-      {{- $currentPageNumber := .PageNumber }}
-
-      {{- with .Next }}
-        <li class="c-pagination__item page-item">
   <nav aria-label="pagination">
     <ul id="pagination" class="c-pagination pagination">
-          <a aria-label="Next" class="c-pagination__link btn btn-primary" href="{{ .URL }}" rel="next"
-            >Next</a
-          >
+      {{- with .Paginator }}
+        {{- $currentPageNumber := .PageNumber }}
+
+        {{- with .Next }}
+          <li class="c-pagination__item page-item">
+            <a aria-label="Next" class="c-pagination__link btn btn-primary" href="{{ .URL }}" rel="next"
+              >Next</a
+            >
+          </li>
+        {{- end }}
+
+      {{- end }}
     </ul>
   </nav>
-          >
-        </li>
-      {{- end }}
-
-    {{- end }}
-  </ul>
 {{- end }}
