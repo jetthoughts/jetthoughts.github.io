@@ -25,4 +25,14 @@ namespace :test do
   end
 end
 
+desc "Build the site (Hugo)"
+task :build do
+  sh "./bin/hugo-build"
+end
+
+desc "Run server (Hugo)"
+task :dev do
+  sh "./bin/hugo-dev"
+end
+
 task default: "test:all"
