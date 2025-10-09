@@ -47,7 +47,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
     scroll_to find("#pagination")
 
-    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post"], tolerance: 0.046
+    assert_stable_screenshot "blog/index/_pagination", skip_area: [".blog-post"], tolerance: 0.03
   end
 
   def test_visit_blog_post
