@@ -49,16 +49,16 @@ class ApplicationSystemTestCase < Minitest::Test
 
   # Ruby hash-based configuration for screenshot sections
   SECTION_CONFIGS = {
-    "cta" => {tolerance: 0.03},
-    "cta-contact_us" => {tolerance: 0.03},
-    "clients" => {tolerance: 0.03},
-    "use-cases" => {tolerance: 0.03},
+    "cta" => {tolerance: 0.02},
+    "cta-contact_us" => {tolerance: 0.02},
+    "clients" => {tolerance: 0.02},
+    "use-cases" => {tolerance: 0.02},
     "technologies" => {tolerance: 0.02},
     "testimonials" => {tolerance: 0.02},
     "why-us" => {tolerance: 0.02}
   }.freeze
 
-  DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.03}.freeze
+  DEFAULT_SCREENSHOT_CONFIG = {tolerance: 0.02}.freeze
 
   private
 
