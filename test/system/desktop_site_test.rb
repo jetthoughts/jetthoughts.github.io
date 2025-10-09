@@ -30,8 +30,6 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_top_image_have_highest_priority
     visit "/"
 
-    preload_all_images
-
     within ".fl-photo-content.fl-photo-img-jpeg" do
       assert_css "img[fetchpriority=high]"
     end
