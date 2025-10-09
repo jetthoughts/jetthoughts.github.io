@@ -64,6 +64,9 @@ class ApplicationSystemTestCase < Minitest::Test
 
   def preload_all_images
     scroll_to :bottom
+
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
     scroll_to :top
   end
 

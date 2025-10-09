@@ -201,7 +201,7 @@ disableKinds = []
 [[menu.main]]
   identifier = "careers"
   name = "Careers"
-  pageRef = "pages/careers"
+  pageRef = "pages/contact-us/"
   weight = 50
 
 [[menu.main]]

@@ -32,7 +32,7 @@
 
     {{ else }}
       <li class="item {{if $active }}-active{{ end }}" role="menuitem">
-        {{ if eq .URL "/contact-us/" }}
+        {{ if eq .Name "Contact Us" }}
           <a href="{{ .URL }}" class="btn btn-primary">{{ .Name | safeHTML }}</a>
         {{ else }}
           <a href="{{ .URL }}" class="link">{{ .Name | safeHTML }}</a>
