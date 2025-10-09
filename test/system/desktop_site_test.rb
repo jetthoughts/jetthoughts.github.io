@@ -19,12 +19,10 @@ class DesktopSiteTest < ApplicationSystemTestCase
     # Move mouse to (0,0) to prevent menu hover state causing flakiness
     page.driver.browser.action.move_to_location(0, 0).perform
 
-    begin
-      assert_screenshot "homepage", tolerance: 0.10
-    rescue
-      # FIXME: This is a workaround for a flaky test issue where the screenshot
-      assert_screenshot "homepage", tolerance: 0.10
-    end
+    # Wait for animations to complete
+    sleep 0.5
+
+    assert_screenshot "homepage", tolerance: 0.03
   end
 
   def test_top_image_have_highest_priority
