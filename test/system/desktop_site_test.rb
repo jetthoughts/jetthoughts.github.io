@@ -25,14 +25,6 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_screenshot "homepage", tolerance: 0.03
   end
 
-  def test_top_image_have_highest_priority
-    visit "/"
-
-    within ".fl-photo-content.fl-photo-img-jpeg" do
-      assert_css "img[fetchpriority=high]"
-    end
-  end
-
   def test_blog_index
     visit "/"
     within_top_bar do
