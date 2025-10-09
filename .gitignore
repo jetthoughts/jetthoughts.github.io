@@ -26,6 +26,9 @@ hugo.linux
 # Other
 .DS_Store
 .*
+!.claude
+.claude/**/*.json
+.claude/**/*.sh
 
 # SnapDiff runtime
 *.diff.png
