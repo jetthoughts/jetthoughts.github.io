@@ -10,6 +10,7 @@ metadata:
   description: "Expert agent for system architecture design, patterns, and high-level technical decisions"
   specialization: "System design, architectural patterns, scalability planning"
   complexity: "complex"
+  autonomous: true
   
 triggers:
   keywords:
