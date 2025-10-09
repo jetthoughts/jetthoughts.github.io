@@ -37,23 +37,6 @@ class DesktopSiteTest < ApplicationSystemTestCase
     end
   end
 
-  # Explicit test methods for each homepage section (Ruby readability over metaprogramming)
-  def test_homepage_section_clients
-    verify_homepage_section("clients")
-  end
-
-  def test_homepage_section_technologies
-    verify_homepage_section("technologies")
-  end
-
-  def test_homepage_section_cta_contact_us
-    verify_homepage_section("cta-contact_us")
-  end
-
-  def test_homepage_section_footer
-    verify_homepage_section("footer")
-  end
-
   def test_blog_index
     visit "/"
     within_top_bar do
@@ -106,23 +89,73 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "clients"
   end
 
-  def test_clients_sections
+  def test_homepage_sections
     visit "/"
-    scroll_to :bottom # preload all images
 
-    verify_clients_section("clients")
-    verify_clients_section("technologies")
-    verify_clients_section("cta-contact_us")
-    verify_clients_section("footer")
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("homepage", "services")
+    verify_section_for("homepage", "technologies")
+    verify_section_for("homepage", "clients")
+    verify_section_for("homepage", "cta-contact_us")
+    verify_section_for("homepage", "footer")
+  end
+
+  def test_clients_sections
+    visit "/clients/"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("clients", "real-clients", css: '[data-node="ywdijlprtzo2"]')
+    verify_section_for("clients", "clients", css: '[data-node="z9jw2gxm5ev0"]')
+    verify_section_for("clients", "technologies")
+    verify_section_for("clients", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
+    verify_section_for("clients", "testimonials")
+    verify_section_for("clients", "cta-contact_us", css: '[data-node="f14gkcmxeo5i"]')
+    verify_section_for("clients", "footer", css: "footer")
+  end
+
+  def test_services_fractional_cto_sections
+    visit "/services/fractional-cto/"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("services/fractional-cto", "overview", css: '[data-node="k8vfnuxaydbe"]')
+    verify_section_for("services/fractional-cto", "clients-case-studies", css: '[data-node="9vozd6r548gk"]')
+    verify_section_for("services/fractional-cto", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
+    verify_section_for("services/fractional-cto", "testimonials")
+    verify_section_for("services/fractional-cto", "cta-contact_us", css: '[data-node="x4hl5foues6i"]')
+    verify_section_for("services/fractional-cto", "footer", css: "footer")
+  end
+
+  def test_use_cases_mvp_sections
+    visit "/use-cases/startup-mvp-prototyping-development/"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("use-cases/startup-mvp-prototyping-development", "overview", css: '[data-node="ybgzh4il31w2"]')
+    verify_section_for("use-cases/startup-mvp-prototyping-development", "solution", css: '[data-node="y9o1fktxjhwd"]')
+    verify_section_for("use-cases/startup-mvp-prototyping-development", "clients-case-studies", css: '[data-node="ipax0h7k16zl"]')
+    verify_section_for("use-cases/startup-mvp-prototyping-development", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
+    verify_section_for("use-cases/startup-mvp-prototyping-development", "cta-contact_us", css: '[data-node="9s3uy48afhtg"]')
+    verify_section_for("use-cases/startup-mvp-prototyping-development", "footer", css: "footer")
   end
 
   def test_careers
-    visit "/"
-    within_top_bar do
-      click_on "Careers"
-    end
+    visit "/careers/"
 
     assert_stable_screenshot "careers"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("careers", "overview", css: '[data-node="w02opu1zjdef"]')
+    verify_section_for("careers", "offers", css: '[data-node="dkc4gbvj193z"]')
+    verify_section_for("careers", "footer", css: "footer")
   end
 
   def test_services_menu
@@ -211,37 +244,25 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "404"
   end
 
-  def test_about_page_section_core_values
+  def test_about_page_sections
     visit "/about-us/"
+
     preload_all_images
 
-    scroll_to(find(".fl-node-os8vrc1dwlji"))
-    assert_stable_screenshot "about_page/values"
-  end
-
-  def test_about_page_section_achievements
-    visit "/about-us/"
-    preload_all_images
-
-    scroll_to(find(".fl-node-nb2thxdw075q"))
-    assert_stable_screenshot "about_page/achievements", tolerance: 0.1
+    verify_section_for("about_page", "missions", css: '[data-node="uiyz63qn8r0f"]')
+    verify_section_for("about_page", "values", css: '[data-node="os8vrc1dwlji"]')
+    verify_section_for("about_page", "achievements", css: '[data-node="nb2thxdw075q"]')
+    verify_section_for("about_page", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
+    verify_section_for("about_page", "cta-contact_us", css: '[data-node="3h8mj6w59d2c"]')
+    verify_section_for("about_page", "footer", css: "footer")
   end
 
   private
 
-  def verify_homepage_section(section_id)
-    visit "/"
-    scroll_to :bottom # preload all images
-    assert_text "JetThoughts. All Rights Reserved", exact: false
-    scroll_to find("##{section_id}")
-    # Ruby hash-based config automatically handles tolerance per section
-    assert_screenshot "homepage/_#{section_id}"
-  end
-
-  def verify_clients_section(section_id)
-    scroll_to find("##{section_id}")
+  def verify_section_for(page_name, section_id, css: nil)
+    scroll_to find(css || "##{section_id}")
     # Ruby hash-based config handles tolerance automatically
-    assert_screenshot "clients/_#{section_id}"
+    assert_screenshot "#{page_name}/_#{section_id}"
   end
 
   def within_top_bar

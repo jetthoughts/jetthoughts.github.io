@@ -36,7 +36,7 @@
     "postcss-extend-rule": "^4.0.0"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001745"
+    "caniuse-lite": "^1.0.30001749"
   },
   "keywords": [
     "hugo",
