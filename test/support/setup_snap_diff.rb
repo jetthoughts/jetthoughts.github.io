@@ -30,7 +30,7 @@ Capybara::Screenshot.stability_time_limit = ENV.fetch("SCREENSHOT_STABILITY_TIME
 Capybara::Screenshot::Diff.tolerance = ENV.fetch("SCREENSHOT_TOLERANCE", "0.005").to_f
 
 Capybara::Screenshot::Diff.driver = :vips
-Capybara::Screenshot::Diff.delayed = false
+Capybara::Screenshot::Diff.delayed = true
 Capybara.default_max_wait_time = 5
 
 # Add global setup hook to disable animations for all screenshot tests
