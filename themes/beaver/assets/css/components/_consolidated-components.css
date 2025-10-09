@@ -14,12 +14,12 @@
 @import "c-cta-blocks.css";
 @import "c-gravity-forms.css";
 @import "c-hero-sections.css";
+@import "c-pagination.css";
 @import "c-modal.css";
 @import "c-navigation.css";
 @import "c-social-share.css";
 @import "c-testimonial-slider.css";
 @import "c-testimonials.css";
-
 /* BEM Blocks */
 @import "blocks/c-card.css";
 @import "blocks/c-content.css";
