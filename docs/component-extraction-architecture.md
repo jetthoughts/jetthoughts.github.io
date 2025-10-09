@@ -11,7 +11,8 @@
 
 This document defines the systematic architecture for extracting FL-Builder components into semantic, testable, and maintainable BEM-compliant Hugo partials. The architecture ensures autonomous execution capability while maintaining zero-tolerance quality standards.
 
-**Core Principles:**
+### Core Principles
+
 - **Simplicity First**: Leverage existing patterns, avoid over-engineering
 - **BEM Strict Compliance**: `c-[component]`, `c-[component]__[element]`, `c-[component]--[modifier]`
 - **Testability**: Every component requires both visual regression and behavioral tests
@@ -24,7 +25,8 @@ This document defines the systematic architecture for extracting FL-Builder comp
 
 ### 1.1 File Naming Conventions
 
-**✅ CORRECT Patterns:**
+#### ✅ CORRECT Patterns
+
 ```yaml
 component_files:
   hugo_partials: "themes/beaver/layouts/partials/components/[component-name].html"
@@ -39,7 +41,8 @@ naming_rules:
     - "job-listing-grid.html"
 ```
 
-**❌ FORBIDDEN Patterns:**
+#### ❌ FORBIDDEN Patterns
+
 ```yaml
 forbidden_suffixes:
   - "*_refactored.html"
@@ -60,7 +63,8 @@ enforcement:
 
 ### 1.2 Hugo Partial Template Structure
 
-**Standard Component Template:**
+#### Standard Component Template
+
 ```html
 {{/*
   Component: [Component Name]
@@ -151,7 +155,8 @@ docs/
 
 ### 2.1 Strict BEM Class Naming
 
-**Component Prefix System:**
+#### Component Prefix System
+
 ```yaml
 prefixes:
   components: "c-"     # Reusable UI components
@@ -160,7 +165,8 @@ prefixes:
   pages: "[page]__"    # Page-specific sections (NOT used for reusable components)
 ```
 
-**BEM Structure Enforcement:**
+#### BEM Structure Enforcement
+
 ```css
 /* ✅ CORRECT: BEM Component Structure */
 
@@ -828,7 +834,8 @@ documentation_quality:
 
 ### 8.1 Priority Component Extraction Order
 
-**Phase 1: High-Value, Low-Complexity Components**
+#### Phase 1: High-Value, Low-Complexity Components
+
 ```yaml
 priority_1_components:
   - name: "Hero Section"
@@ -853,7 +860,8 @@ extraction_order_criteria:
   - "Dependencies (extract dependencies first)"
 ```
 
-**Phase 2: Medium-Complexity Components**
+#### Phase 2: Medium-Complexity Components
+
 ```yaml
 priority_2_components:
   - name: "Content Block with Patterns"
