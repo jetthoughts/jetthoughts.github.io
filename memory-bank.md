@@ -41,7 +41,7 @@
 ## Code Patterns
 
 ### Pattern 1: TDD Cycle for Component Extraction
-```
+```text
 RED: Identify FL-node CSS dependencies
 GREEN: Add BEM classes to HTML, consolidate CSS
 REFACTOR: Remove duplicate FL-node CSS, cleanup
