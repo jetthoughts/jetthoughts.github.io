@@ -190,7 +190,7 @@ prefixes:
 .c-hero-section--with-image { /* With background image */ }
 ```
 
-**❌ FORBIDDEN Patterns:**
+#### ❌ FORBIDDEN Patterns
 ```css
 /* Mixed naming conventions */
 .c-hero-section { }
@@ -207,7 +207,7 @@ prefixes:
 
 ### 2.2 Component CSS Architecture
 
-**Component CSS Template:**
+#### Component CSS Template
 ```css
 /* ==========================================================================
    Component: [Component Name] (c-[component])
@@ -261,7 +261,7 @@ prefixes:
 
 ### 3.1 Visual Regression Testing Pattern
 
-**Component Visual Test Template:**
+#### Component Visual Test Template
 ```ruby
 # frozen_string_literal: true
 
@@ -317,7 +317,7 @@ end
 
 ### 3.2 Behavioral Testing Pattern
 
-**Behavioral Test Requirements:**
+#### Behavioral Test Requirements
 ```ruby
 # ✅ CORRECT: Behavioral validation (tests WHAT users see/do)
 
@@ -375,7 +375,7 @@ end
 
 ### 3.3 Test Isolation Requirements
 
-**Component Test Independence:**
+#### Component Test Independence
 ```ruby
 # ✅ CORRECT: Isolated component testing
 
@@ -432,7 +432,7 @@ end
 
 ### 4.1 Systematic Extraction Workflow
 
-**Phase-Based Extraction:**
+#### Phase-Based Extraction
 ```yaml
 phase_1_analysis:
   tasks:
@@ -517,7 +517,7 @@ phase_6_commit:
 
 ### 4.2 Component Parameter Design
 
-**Parameter Categories:**
+#### Parameter Categories
 ```yaml
 required_parameters:
   definition: "Parameters without defaults that MUST be provided"
@@ -562,7 +562,7 @@ fl_builder_compatibility:
 
 ### 5.1 Green Test Requirement
 
-**Commit Gate Enforcement:**
+#### Commit Gate Enforcement
 ```yaml
 pre_commit_validation:
   command: "bin/rake test:critical"
@@ -601,7 +601,7 @@ rollback_triggers:
 
 ### 5.2 Rollback Execution Protocol
 
-**Step-by-Step Rollback:**
+#### Step-by-Step Rollback
 ```bash
 # 1. Identify failed component extraction
 git log --oneline -n 5
