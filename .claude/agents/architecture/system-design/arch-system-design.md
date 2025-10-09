@@ -70,6 +70,11 @@ constraints:
 
 behavior:
   error_handling: "lenient"
+  confirmation_required:
+    - "major architectural changes"
+    - "technology stack decisions"
+    - "breaking changes"
+    - "security architecture"
   auto_rollback: false
   logging_level: "verbose"
   
