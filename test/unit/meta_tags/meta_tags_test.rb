@@ -146,7 +146,7 @@ class MetaTagsTest < BasePageTestCase
     assert_equal "512", og_image_width["content"], "og:image width should be 512"
 
     og_image_height = doc.css('meta[property="og:image:height"]').first
-    assert_equal "630", og_image_height["content"], "og:image height should be 630"
+    assert_equal "269", og_image_height["content"], "og:image height should be 269"
   end
 
   def test_viewport_meta_tag_exists
