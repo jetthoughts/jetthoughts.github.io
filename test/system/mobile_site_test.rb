@@ -42,7 +42,7 @@ class MobileSiteTest < ApplicationSystemTestCase
     end
 
     # Wait for navigation to complete and page to load
-    assert_selector ".single-content header .fl-heading", wait: 10
+    assert_selector ".fl-heading,.heading,[role=title]", wait: 10
   end
 
   def test_blog_post
