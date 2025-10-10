@@ -27,9 +27,9 @@
   }
 }
 
-/* Variant: Benefits section spacing (60px → 40px → 15px) */
+/* Variant: Benefits section spacing (80px → 60px → 15px) */
 .c-spacer--benefits {
-  --spacer-height-desktop: 60px;
-  --spacer-height-tablet: 40px;
+  --spacer-height-desktop: 80px;
+  --spacer-height-tablet: 60px;
   --spacer-height-mobile: 15px;
 }
