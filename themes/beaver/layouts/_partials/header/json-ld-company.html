@@ -1,0 +1,21 @@
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "url": "{{ .Site.BaseURL }}",
+        "logo": "{{ (resources.Get "img/favicon/android-chrome-512x512.png" | fingerprint).RelPermalink }}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "{{ .Site.Params.Email }}",
+            "url": "{{ .Site.BaseURL }}"
+        },
+        "sameAs": [
+            "https://www.facebook.com/jetthoughts/",
+            "https://twitter.com/jetthoughts",
+            "https://x.com/jetthoughts",
+            "https://www.linkedin.com/company/jetthoughts/",
+            "https://github.com/jetthoughts"
+        ]}
+</script>

@@ -1,27 +1,20 @@
 {{ define "header" }}
 {{ partial "header/critical/contact-us.html" . }}
-{{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $contactUsResources := slice
-(resources.Get "css/fl-contact-layout.css")
-$dynamicCSS586
-(resources.Get "css/services-layout.css")
-(resources.Get "css/homepage.css")
-(resources.Get "css/base-layout.css")
-(resources.Get "css/style.css")
-(resources.Get "css/theme-main.css")
-(resources.Get "css/footer.css")
--}}
-{{ partialCached "assets/css-processor.html" (dict "resources" $contactUsResources "bundleName" "contact-us") "contact-us" }}
+{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+
+{{- $CSS := slice (resources.Get "css/706-layout.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/homepage.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/footer.css") | resources.Concat "css/contact-us.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" role="main">
+<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
     <div class="fl-content-full container">
        <div class="row">
           <div class="fl-content col-md-12">
-             <article class="fl-post post-706 page type-page status-publish hentry" id="fl-post-706">
-                <div class="fl-post-content clearfix">
+             <article class="fl-post post-706 page type-page status-publish hentry" id="fl-post-706" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+                <div class="fl-post-content clearfix" itemprop="text">
                    <div class="fl-builder-content fl-builder-content-706 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="706">
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-dkf0o2an9q4r fl-row-default-height fl-row-align-center" data-node="dkf0o2an9q4r">
                          <div class="fl-row-content-wrap">
@@ -65,7 +58,7 @@ $dynamicCSS586
                                                              </div>
                                                              <div class="pp-heading-wrapper">
                                                                 <div class="pp-infolist-title">
-                                                                   <p class="pp-infolist-title-text">18+ Years of Industry Experience</p>
+                                                                   <p class="pp-infolist-title-text">13+ Years of Industry Experience</p>
                                                                 </div>
                                                                 <div class="pp-infolist-description">
                                                                 </div>
