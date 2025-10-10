@@ -2,6 +2,7 @@
 @import "utilities/foundation/clearfix.css";
 @import "utilities/foundation/screen-reader.css";
 @import "utilities/foundation/container.css";
+@import "components/c-testimonial-section.css";
 
 .fl-visible-large, .fl-visible-medium, .fl-visible-mobile, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-medium, .fl-col-group-equal-height .fl-col.fl-visible-mobile {
   display: none;
