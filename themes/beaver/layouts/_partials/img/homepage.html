@@ -1,0 +1,3 @@
+{{ $image := .image }}
+{{ $title := .title }}
+{{ partial "img/generic.html" (dict "image" $image "title" $title "widths" (slice 360 730) "attributes" "fetchpriority=\"high\"") }}

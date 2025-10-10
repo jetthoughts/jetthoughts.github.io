@@ -1,0 +1,16 @@
+{{- if gt .Paginator.TotalPages 1 }}
+  <ul id="pagination" class="pagination">
+    {{- with .Paginator }}
+      {{- $currentPageNumber := .PageNumber }}
+
+      {{- with .Next }}
+        <li class="page-item">
+          <a aria-label="Next" class="btn btn-primary" href="{{ .URL }}" role="button"
+            >Next</a
+          >
+        </li>
+      {{- end }}
+
+    {{- end }}
+  </ul>
+{{- end }}

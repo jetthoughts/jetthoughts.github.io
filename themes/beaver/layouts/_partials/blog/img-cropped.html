@@ -1,0 +1,15 @@
+{{ $image := .Page.Resources.Get .Page.Params.metatags.image }}
+{{ if $image }}
+{{ $cropped := $image.Fill (printf "%dx%d Center" .width .height) }}
+{{ $webp := $cropped.Resize (printf "%dx%d webp" .width .height) }}
+
+
+<picture>
+  <source srcset='{{ $webp.RelPermalink }}' type="image/webp" width="{{ .width }}" height="{{ .height }}">
+  <source srcset='{{ $cropped.RelPermalink }}' type="{{ $cropped.MediaType }}" width="{{ .width }}" height="{{ .height }}">
+  <img alt='{{ .Page.Title }}' src="{{ $cropped.RelPermalink }}" width="{{ .width }}" height="{{ .height }}">
+</picture>
+
+{{ else }}
+<img src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).RelPermalink }}" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
+{{ end }}

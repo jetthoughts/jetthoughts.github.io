@@ -1,0 +1,46 @@
+<nav class="navigation js-navigation">
+  <div class="menu-close js-mobile-menu-close"></div>
+
+  <ul class="list">
+    {{ $currentPage := .Page }}
+    {{ range .Site.Menus.main }}
+    {{ $active := or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) }}
+    {{ if .HasChildren }}
+
+      <li class="item {{if $active }}-active{{ end }}">
+        <span class="arrow js-sub-menu-opener"></span>
+        <a href="{{ .URL }}" class="link">{{ .Name | safeHTML }}</a>
+
+        <ul class="sub-menu">
+          {{ range .Children }}
+            <li class="sub-item">
+              <a href="{{ .URL }}" class="sub-link">
+                <div class="sub-image">
+                  {{ partial "svgiw" (dict "svg" (printf "theme/%s" .Identifier) "width" "27" "height" "27") }}
+
+                </div>
+                <div class="sub-holder">
+                  <div class="sub-name">{{ .Title | safeHTML }}</div>
+                  <div class="sub-text">{{ .Name | safeHTML }}</div>
+                </div>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+
+      </li>
+
+    {{ else }}
+      <li class="item {{if $active }}-active{{ end }}">
+        {{ if eq .URL "/contact-us/" }}
+          <a href="{{ .URL }}" class="btn btn-primary">{{ .Name | safeHTML }}</a>
+        {{ else }}
+          <a href="{{ .URL }}" class="link">{{ .Name | safeHTML }}</a>
+        {{ end }}
+      </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</nav>
+
+<div class="menu-opener js-mobile-menu-opener"></div>

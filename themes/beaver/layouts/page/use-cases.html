@@ -1,28 +1,34 @@
 {{ define "header" }}
 {{ partial "header/critical/use-cases.html" . }}
-{{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
-{{- $staticUseCasesCSS := slice (resources.Get "css/fl-use-cases-layout.css") (resources.Get "css/component-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
-{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticUseCasesCSS (slice $dynamicCSS586 $dynamicCSSUseCases)) "page" "use-cases") }}
+
+{{- $CSS := slice (resources.Get "css/3021-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") $dynamicCSSUseCases | resources.Concat "css/use-cases.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
+
+<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
 {{ end }}
 
 {{ define "footer" }}
-{{ $tabsResources := slice (resources.Get "js/tabs.js") }}
-{{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}
+{{ $tabs := slice
+(resources.Get "js/tabs.js")
+| resources.Concat "js/_tabs.js"
+| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
+}}
+<script defer src="{{ $tabs.RelPermalink }}"></script>
 {{ end }}
 
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" role="main">
+<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
     <div class="fl-content-full container">
        <div class="row">
           <div class="fl-content col-md-12">
-             <article class="fl-post post-3021 page type-page status-publish hentry" id="fl-post-3021">
-                <div class="fl-post-content clearfix">
+             <article class="fl-post post-3021 page type-page status-publish hentry" id="fl-post-3021" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+                <div class="fl-post-content clearfix" itemprop="text">
                    <div class="fl-builder-content fl-builder-content-3021 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="3021">
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-g2six6yjldnm fl-row-default-height fl-row-align-center" data-node="g2six6yjldnm">
 
                          <div class="fl-row-content-wrap">
-                         <div class="fl-row-content fl-row-fixed-width">
+                         <div class="fl-row-content fl-row-fixed-width fl-node-content">
                          {{ partial "page/use-cases.html" (dict "addHeadline" false) }}
                          </div>
                          </div>
@@ -31,7 +37,7 @@
 
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-r5xy9wufkc2e fl-row-default-height fl-row-align-center">
                          <div class="fl-row-content-wrap">
-                            <div class="fl-row-content fl-row-fixed-width">
+                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
                                {{ partial "technologies.html" (dict "colorVariant" "dark"  "site" .Site) }}
                             </div>
                          </div>
@@ -48,38 +54,38 @@
                                   </g>
                                </svg>
                             </div>
-                            <div class="fl-row-content fl-row-fixed-width">
+                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
                                 {{ partial "page/testimonials.html" . }}
 
                                <div class="fl-col-group fl-node-xfdrceov0hji fl-col-group-custom-width" data-node="xfdrceov0hji">
                                   <div class="fl-col fl-node-7l8hya5ixfdo fl-col-small-custom-width fl-col-has-cols blue-border" data-node="7l8hya5ixfdo">
-                                     <div class="fl-col-content">
+                                     <div class="fl-col-content fl-node-content">
                                         <div class="fl-module fl-module-rich-text fl-node-rujwd9mzxche" data-node="rujwd9mzxche">
-                                           <div class="fl-module-content">
+                                           <div class="fl-module-content fl-node-content">
                                            </div>
                                         </div>
                                         <div class="fl-module fl-module-heading fl-node-fa7hjib92cpv" data-node="fa7hjib92cpv">
-                                           <div class="fl-module-content">
+                                           <div class="fl-module-content fl-node-content">
                                               <h2 class="fl-heading">
                                                  <span class="fl-heading-text">Let’s get started now</span>
                                               </h2>
                                            </div>
                                         </div>
                                         <div class="fl-module fl-module-rich-text fl-node-9hf5wet31z02" data-node="9hf5wet31z02">
-                                           <div class="fl-module-content">
+                                           <div class="fl-module-content fl-node-content">
                                               <div class="fl-rich-text">
                                                  <p>Get in touch with one of our experts to get a technical strategy &amp; planning session for your project at no cost.</p>
                                               </div>
                                            </div>
                                         </div>
                                         <div class="fl-module fl-module-pp-spacer fl-node-toa2hwegbp4q fl-visible-desktop fl-visible-large fl-visible-medium" data-node="toa2hwegbp4q">
-                                           <div class="fl-module-content">
+                                           <div class="fl-module-content fl-node-content">
                                               <div class="pp-spacer-module"></div>
                                            </div>
                                         </div>
                                         <div class="fl-col-group fl-node-d96zqbnxltuj fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="d96zqbnxltuj">
-                                          <div class="fl-col-content">
+                                          <div class="fl-col-content fl-node-content">
                                             <div class="fl-button-wrap-center fl-button-width-auto fl-button-center">
                                               <a href="/contact-us/" target="_self" class="fl-button">
                                                 <span class="fl-button-text">Contact Us</span>
