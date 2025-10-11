@@ -1,54 +1,28 @@
 {{ define "header" }}
-{{ partial "header/critical/homepage.html" . }}
+  {{ partial "header/critical/homepage.html" . }}
 {{ end }}
 
 {{ define "footer" }}
-<script>
-function loadCSS(url) {
-   const link = document.createElement('link');
-   link.href = url;
-   link.rel = 'preload';
-   link.as = "style"
-   link.onload = function() {
-      this.onload=null;
-      this.rel = 'stylesheet';
-   };
+  {{- $nonCriticalResources := slice
+    (resources.Get "css/companies.css")
+    (resources.Get "css/footer.css")
+    (resources.Get "css/homepage.css")
+    (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
+    (resources.Get "css/590-layout.css")
+    (resources.Get "css/skin-65eda28877e04.css")
+    (resources.Get "css/style.css")
+    (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/586.css")
+    (resources.Get "css/technologies.css")
+    (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
+  }}
 
-   document.head.appendChild(link);
-}
-{{- $dynamicCSS := resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" . }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
+  {{ partialCached "assets/css-processor.html" (dict "resources" $nonCriticalResources "bundleName" "homepage") "homepage" }}
 
-{{ $nonCriticalCSS := slice
-   (resources.Get "css/companies.css")
-   (resources.Get "css/footer.css")
-   (resources.Get "css/homepage.css")
-   $dynamicCSS
-   (resources.Get "css/590-layout.css")
-   (resources.Get "css/skin-65eda28877e04.css")
-   (resources.Get "css/style.css")
-   $dynamicCSS586
-   (resources.Get "css/586.css")
-   (resources.Get "css/technologies.css")
-   $dynamicCSSUseCases
-| resources.Concat "css/_non_critical_homepage.css" | postCSS  | minify | fingerprint | resources.PostProcess
-}}
+  {{ $tabsResources := slice (resources.Get "js/tabs.js") }}
+  {{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}
 
-document.addEventListener("DOMContentLoaded", function () {
-   loadCSS("{{ $nonCriticalCSS.RelPermalink }}")
-})
-</script>
-
-{{ $tabs := slice
-(resources.Get "js/tabs.js")
-| resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
-}}
-
-<script defer src="{{ $tabs.RelPermalink }}"></script>
-
-{{ partial "header/json-ld-company.html" . }}
+  {{ partial "header/json-ld-company.html" . }}
 {{ end }}
 
 {{ define "main" }}
