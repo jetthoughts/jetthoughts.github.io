@@ -2,8 +2,14 @@
 {{- $resources := .resources -}}
 {{- $bundleName := .bundleName -}}
 {{- $bundle := $resources | resources.Concat (printf "css/%s.css" $bundleName) | postCSS | fingerprint "md5" -}}
+
 {{- if hugo.IsProduction -}}
   {{- $bundle = $bundle | minify | resources.PostProcess -}}
 {{- end -}}
-<link rel="stylesheet" href="{{ $bundle.RelPermalink }}"
-      {{- if hugo.IsProduction }} integrity="{{ $bundle.Data.Integrity }}"{{- end }}>
+
+<link
+  rel="stylesheet"
+  href="{{ $bundle.RelPermalink }}"
+  {{- if hugo.IsProduction }}
+    integrity="{{ $bundle.Data.Integrity }}"
+  {{- end }} />
