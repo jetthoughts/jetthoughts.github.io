@@ -4,18 +4,25 @@
 ✅ **Documentation Consolidation**: Successfully removed 18 duplicate CSS migration files from root docs/ directory. All CSS migration documentation is now properly consolidated in this project structure.
 
 ## Must Review Before Analysis:
-1. `10-19-analysis/10.01-critical-findings.md` - Critical issues and blockers
+1. **`35-39-project-management/35.04-revised-goal-css-duplication-elimination.md`** - CURRENT GOAL (2025-10-12)
 2. `30-39-documentation/30.01-progress-tracker.md` - Current progress status
-3. `PROJECT-SUMMARY.md` - Complete project overview
+3. `10-19-analysis/10.01-critical-findings.md` - Critical issues and blockers
+4. `_runtime/PHASE-1B-CSS-DUPLICATION-ANALYSIS.md` - FL-Builder duplication analysis
+5. `_runtime/INLINE-CRITICAL-CSS-DUPLICATION-ANALYSIS.md` - Inline CSS analysis
 
-## Key Issues to Consider:
-- 13 duplicate critical CSS files (70-80% overlap)
-- 8,406 FL-node classes remaining (updated count)
-- Foundation and forms components have visual regressions
+## Current Goal (Revised 2025-10-12):
+**Eliminate CSS duplication through extracting common styles**
+- 70-80% CSS duplication reduction (27,094-31,536 lines eliminated)
+- 30-40% inline critical CSS reduction (300-400 lines eliminated)
+- Create 5-7 foundation CSS files
+- Execution: Solo autonomous (NO swarm spawning)
+- **OUT OF SCOPE**: FL-node HTML migration (deferred to separate initiative)
 
 ## Project Status Overview:
-**Current Phase**: Phase 2 - Critical CSS Consolidation
-**Priority**: High - CSS migration affecting site performance
+**Current Phase**: Ready to start Phase 1 - Critical CSS Inline Consolidation
+**Goal Status**: ✅ REVISED AND APPROVED - Clear scope, measurable targets
+**Execution Mode**: Solo autonomous (test-after-each-change, micro-commits)
+**Priority**: High - 73-75% duplication reduction achievable
 **Dependencies**: FL-Builder compatibility must be maintained
 **Documentation Status**: ✅ CONSOLIDATED - All files properly organized in project structure
 
@@ -45,6 +52,9 @@
 - **2025-01-27**: Removed 18 duplicate CSS migration files from root docs/ directory
 - **2025-01-27**: Consolidated all CSS migration documentation in project structure
 - **2025-01-27**: Updated CLAUDE.md with project cleanup status
+- **2025-10-12**: Revised goal to focus on CSS duplication elimination only
+- **2025-10-12**: Created 35.04-revised-goal-css-duplication-elimination.md (comprehensive goal document)
+- **2025-10-12**: Updated ANALYST-CONTEXT.md with new goal references
 
-## Last Updated: January 27, 2025
-## Next Review: When Phase 2 consolidation completes
+## Last Updated: October 12, 2025
+## Next Review: After Phase 1 completion (Critical CSS inline consolidation)
