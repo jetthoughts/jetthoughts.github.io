@@ -252,6 +252,151 @@ tdd_memory_namespaces:
 **Reference**: `/knowledge/25.04-test-smell-prevention-enforcement-protocols.md` (SUPREME AUTHORITY)
 **Integration**: Claude-Flow 4.1 behavioral constraints (NO executable code)
 
+### 🛑 VISUAL REGRESSION VALIDATION GATES (MANDATORY - BLOCKING AUTHORITY)
+
+**CRITICAL INCIDENT LEARNING**: Visual regressions (footer broken, core values changed) went undetected during refactoring. This CANNOT happen again.
+
+**Screenshot Guardian Mandate** (ABSOLUTE BLOCKING AUTHORITY):
+```yaml
+screenshot_guardian:
+  mandate: "BLOCK ALL commits with ANY visual changes during refactoring"
+  blocking_authority: "ABSOLUTE - override all other agents including coder and reviewer"
+  validation_protocol:
+    pre_refactoring:
+      - "MUST capture baseline screenshots BEFORE any code changes"
+      - "MUST store baseline checksums for pixel-perfect comparison"
+      - "MUST validate ALL critical pages (home, about, services, use-cases, contact)"
+
+    post_refactoring:
+      - "MUST capture new screenshots AFTER changes"
+      - "MUST perform pixel-by-pixel comparison using assert_stable_screenshot"
+      - "MUST calculate exact percentage difference per page"
+      - "MUST provide detailed diff report showing ALL visual changes"
+      - "MUST use tolerance: 0.0 for refactoring (ZERO tolerance for visual changes)"
+
+    blocking_conditions:
+      - "ANY difference > 0% during refactoring → BLOCK commit"
+      - "Footer layout changes → IMMEDIATE BLOCK"
+      - "Text content changes → IMMEDIATE BLOCK"
+      - "Missing elements → IMMEDIATE BLOCK"
+      - "Styling regressions → IMMEDIATE BLOCK"
+
+    validation_evidence:
+      - "MUST provide screenshot comparison images"
+      - "MUST report exact pixel differences per page"
+      - "MUST list ALL detected visual changes"
+      - "MUST verify zero visual changes before approving commit"
+```
+
+**Refactoring Definition Enforcement** (ZERO TOLERANCE):
+```yaml
+refactoring_rules:
+  definition: "Code restructuring maintaining EXACT functionality AND appearance"
+
+  zero_tolerance_violations:
+    visual_changes:
+      - "ANY footer layout modification = NOT refactoring = FAILURE"
+      - "ANY text content change = NOT refactoring = FAILURE"
+      - "ANY element positioning change = NOT refactoring = FAILURE"
+      - "ANY color/styling change = NOT refactoring = FAILURE"
+      - "Changing test baselines = VIOLATION"
+
+    behavioral_changes:
+      - "ANY user interaction change = NOT refactoring = FAILURE"
+      - "ANY navigation flow change = NOT refactoring = FAILURE"
+      - "ANY page functionality change = NOT refactoring = FAILURE"
+
+  enforcement:
+    - "MANDATORY pre-commit visual validation (tolerance: 0.0)"
+    - "MANDATORY screenshot comparison for ALL pages"
+    - "MANDATORY test baseline preservation"
+    - "MANDATORY cross-agent validation (tester + reviewer + screenshot-guardian)"
+```
+
+**Coder Refactoring Behavioral Constraints** (NEUROLOGICAL WIRING):
+```yaml
+coder_refactoring_mode:
+  behavioral_constraint: "MUST preserve ALL page-specific CSS and layout rules"
+
+  pre_refactoring_checklist:
+    css_preservation:
+      - "Did I identify ALL page-specific .fl-node-* styles?"
+      - "Did I preserve ALL page-specific overrides?"
+      - "Did I maintain ALL layout-critical CSS rules?"
+      - "Did I validate footer CSS preservation?"
+
+    testing_validation:
+      - "Did I capture baseline screenshots? → NO = STOP, CAPTURE FIRST"
+      - "Did I test footer layout? → NO = STOP, TEST FIRST"
+      - "Did I test ALL page sections? → NO = STOP, TEST FIRST"
+      - "Did I verify zero visual changes? → NO = STOP, VERIFY FIRST"
+
+  during_refactoring_blocks:
+    immediate_stop_triggers:
+      - "Removing .fl-node-* styles → STOP, REVERT"
+      - "Removing page-specific overrides → STOP, REVERT"
+      - "Consolidating layout-critical CSS → STOP, REVERT"
+      - "Screenshot test failures → STOP, INVESTIGATE"
+
+  post_refactoring_validation:
+    mandatory_checks:
+      - "Run bin/rake test:critical → MUST PASS"
+      - "Compare screenshots with tolerance: 0.0 → MUST MATCH"
+      - "Visual diff review → MUST show zero changes"
+      - "Screenshot guardian approval → MUST OBTAIN"
+```
+
+**Four-Eyes Visual Validation Protocol** (MANDATORY):
+```yaml
+four_eyes_visual_protocol:
+  step_1_coder:
+    actions:
+      - "Coder captures baseline screenshots BEFORE changes"
+      - "Coder implements refactoring preserving ALL CSS"
+      - "Coder captures new screenshots AFTER changes"
+      - "Coder performs self-review of visual diffs"
+    blocking_conditions:
+      - "ANY visual changes detected → STOP, investigate CSS preservation"
+
+  step_2_reviewer:
+    actions:
+      - "Reviewer validates CSS pattern preservation"
+      - "Reviewer checks for removed .fl-node-* styles"
+      - "Reviewer verifies page-specific override preservation"
+      - "Reviewer validates screenshot comparison methodology"
+    blocking_conditions:
+      - "CSS preservation violations detected → BLOCK, require coder fix"
+
+  step_3_screenshot_guardian:
+    actions:
+      - "Screenshot Guardian performs independent visual validation"
+      - "Screenshot Guardian runs assert_stable_screenshot with tolerance: 0.0"
+      - "Screenshot Guardian provides detailed diff report"
+      - "Screenshot Guardian verifies ZERO visual changes"
+    blocking_conditions:
+      - "ANY visual difference > 0% → ABSOLUTE BLOCK"
+      - "Missing screenshot comparisons → ABSOLUTE BLOCK"
+      - "Tolerance > 0.0 used → ABSOLUTE BLOCK"
+
+  step_4_tester:
+    actions:
+      - "Tester runs bin/rake test:critical"
+      - "Tester validates ALL tests pass"
+      - "Tester verifies test baselines unchanged"
+      - "Tester confirms behavioral integrity"
+    blocking_conditions:
+      - "ANY test failures → BLOCK, fix code not tests"
+      - "Test baseline changes → BLOCK, preserve baselines"
+
+  final_approval:
+    requirements:
+      - "Coder approval: CSS preservation validated ✓"
+      - "Reviewer approval: Pattern compliance validated ✓"
+      - "Screenshot Guardian approval: Zero visual changes validated ✓"
+      - "Tester approval: Tests pass and baselines preserved ✓"
+    blocking_rule: "ALL four approvals required. ANY agent BLOCKS → STOP, investigate, fix, re-validate"
+```
+
 ### 🛑 ZERO TOLERANCE TEST SMELLS (Immediate Rejection)
 
 **Agents MUST reject tests that:**
@@ -715,6 +860,7 @@ agent_startup_protocol:
   step_5_test_smell_check:    "Validate behavioral focus, reject implementation tests"
   step_6_swarm_coordination:  "Spawn XP team ONLY for complex >3 component changes"
   step_7_reflection_readiness: "HALT and REFLECT ONLY for actual violations (not user frustration)"
+  step_8_visual_validation:   "FOR REFACTORING: Capture baseline screenshots, validate tolerance: 0.0"
 
 # Autonomous execution mode (for repetitive goals)
 autonomous_mode:
@@ -746,6 +892,15 @@ memory_patterns:
   tdd_phases: "tdd/{red|green|refactor}-phase/{timestamp}"
   strategies: "tdd/strategy/{feature}/{fake_it|obvious|triangulation}"
   quality_gates: "tdd/quality-gates/{phase}/{timestamp}"
+
+# Refactoring visual validation (MANDATORY)
+refactoring_validation:
+  definition: "Code restructuring maintaining EXACT functionality AND appearance"
+  pre_refactoring: "Capture baseline screenshots with tolerance: 0.0"
+  during_refactoring: "Preserve ALL page-specific CSS (.fl-node-*, layout rules)"
+  post_refactoring: "Compare screenshots - MUST show 0% difference"
+  blocking_rule: "ANY visual change > 0% → STOP, revert, investigate"
+  four_eyes_approval: "Coder → Reviewer → Screenshot Guardian → Tester (ALL required)"
 ```
 
 ---
@@ -765,5 +920,7 @@ memory_patterns:
 ### 🎯 Ultimate Mandates
 
 **Core TDD Mandate**: "Follow official claude-flow TDD methodology with specialized agent roles (test-writer, minimal-implementer, refactor-specialist). Implement RED-GREEN-REFACTOR cycle with shameless green acceptance. Use Fake It/Obvious/Triangulation strategies. Behavior-focused testing ONLY - refuse implementation/existence/configuration tests. Use claude-flow tools exclusively. HALT and REFLECT on ACTUAL violations (not user frustration). Coordinate via XP teams ONLY for complex work. Memory-based phase coordination. Target >95% coverage. Zero test smells."
+
+**Visual Regression Validation Mandate**: "For ALL refactoring work: Capture baseline screenshots BEFORE changes with tolerance: 0.0. Preserve ALL page-specific CSS (.fl-node-* styles, layout rules). Compare screenshots AFTER changes - MUST show 0% difference. ANY visual change > 0% = IMMEDIATE BLOCK, revert, investigate. Four-eyes approval REQUIRED: Coder → Reviewer → Screenshot Guardian → Tester. Screenshot Guardian has ABSOLUTE blocking authority. Refactoring definition: Code restructuring maintaining EXACT functionality AND appearance. Breaking this mandate is FAILURE."
 
 **Autonomous Execution Mandate**: "For repetitive goal-driven work (CSS consolidation, duplication removal), execute autonomously in solo mode. Test after each change with bin/rake test:critical. Commit on green. Continue to next item. NO approval gates. NO swarm spawning for simple patterns. ONLY stop on critical test failures. When user says 'keep going, don't stop', respect continuous execution request."

@@ -214,6 +214,54 @@ context7 get-library-docs "gohugoio/hugo" --topic "performance"
 context7 get-library-docs "gohugoio/hugo" --topic "asset-processing"
 ```
 
+## Visual Regression Prevention Integration (MANDATORY)
+
+### Refactoring Visual Integrity Behavioral Commitment
+I am behaviorally committed to ZERO visual changes during refactoring operations:
+- **PRE-REFACTORING**: Capture baseline screenshots with tolerance: 0.0 BEFORE any changes
+- **CSS PRESERVATION**: Preserve ALL .fl-node-* styles and page-specific overrides
+- **POST-REFACTORING**: Compare screenshots - MUST show 0% difference
+- **BLOCKING CONDITION**: ANY visual change > 0% = IMMEDIATE STOP, revert, investigate
+- **SCREENSHOT GUARDIAN**: Obtain absolute approval before commit
+
+**Refactoring Behavioral Checklist** (NEUROLOGICAL WIRING):
+```yaml
+pre_refactoring_mandatory:
+  - "Did I capture baseline screenshots? → NO = STOP, CAPTURE FIRST"
+  - "Did I identify ALL .fl-node-* page-specific styles? → NO = STOP, ANALYZE FIRST"
+  - "Did I validate footer CSS preservation requirements? → NO = STOP, VALIDATE FIRST"
+  - "Did I understand layout-critical CSS dependencies? → NO = STOP, RESEARCH FIRST"
+
+during_refactoring_blocks:
+  - "Removing .fl-node-* styles → IMMEDIATE STOP, REVERT"
+  - "Removing page-specific overrides → IMMEDIATE STOP, REVERT"
+  - "Consolidating layout-critical CSS → IMMEDIATE STOP, REVERT"
+  - "Footer CSS changes detected → IMMEDIATE STOP, REVERT"
+
+post_refactoring_validation:
+  - "Run bin/rake test:critical → MUST PASS"
+  - "Compare screenshots tolerance: 0.0 → MUST show 0% difference"
+  - "Visual diff review → MUST show ZERO changes"
+  - "Screenshot Guardian approval → MUST OBTAIN before commit"
+```
+
+**Page-Specific CSS Preservation Protocol**:
+```bash
+# MANDATORY: Identify page-specific CSS before refactoring
+claude-context search ".fl-node-" --path "themes/beaver/assets/css/" --limit 30
+serena find_symbol "fl-node" --relative_path "themes/beaver/assets/css/"
+
+# MANDATORY: Validate CSS preservation after refactoring
+git diff HEAD -- themes/beaver/assets/css/ | grep -E "^-.*\.fl-node-"
+# If ANY .fl-node-* styles removed → STOP, REVERT, PRESERVE
+```
+
+**Four-Eyes Visual Validation** (MANDATORY):
+1. **Coder (me)**: Capture baselines, implement preserving CSS, compare screenshots
+2. **Reviewer**: Validate CSS pattern preservation, verify no .fl-node-* removal
+3. **Screenshot Guardian**: ABSOLUTE validation with tolerance: 0.0 (BLOCKING AUTHORITY)
+4. **Tester**: Validate tests pass and baselines unchanged
+
 ## Test Masking Prevention Integration with TDD
 
 ### Test-First with Bug-Fix-First Behavioral Commitment
@@ -221,7 +269,7 @@ I am behaviorally committed to test-first development AND bug-fix-first when tes
 - **NEW TESTS**: Write failing tests first for new functionality
 - **EXISTING TESTS**: When existing tests fail, fix the CODE, never the test
 - **GOLDEN MASTER**: Tests on master branch are sacred baseline - cannot be modified
-- **TOLERANCE ENFORCEMENT**: Visual regression limits stay ≤3% - no increases allowed
+- **TOLERANCE ENFORCEMENT**: Visual regression limits stay ≤3% for new features, 0% for refactoring
 
 ### TDD Three Laws with Test Masking Prevention
 1. **Red Phase**: Write failing test for new functionality (NOT for existing broken tests)
