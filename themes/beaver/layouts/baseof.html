@@ -8,7 +8,6 @@
 
     {{ partial "seo/enhanced-meta-tags.html" . }}
 
-
     {{ block "header" . }}{{ end }}
 
     {{ partialCached "page/favicons.html" . "favicons" }}
@@ -55,9 +54,10 @@
 
     {{ partialCached "page/site-scripts" . "site-scripts" }}
     {{ if .Store.Get "features.mermaid" }}
-      <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"
-              integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
-              crossorigin="anonymous"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"
+        integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+        crossorigin="anonymous"></script>
       <script>
         mermaid.initialize({ startOnLoad: true });
       </script>
