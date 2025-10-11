@@ -1,6 +1,0 @@
-{{ $svg := . }}
-{{ $svgPath := printf "img/icons/%s.svg" $svg }}
-{{ $svgFile := resources.Get $svgPath }}
-{{ $svgRelPermalink := $svgFile.RelPermalink }}
-
-<img  loading="lazy" fetchpriority="low" src="{{ $svgRelPermalink }}" alt="">

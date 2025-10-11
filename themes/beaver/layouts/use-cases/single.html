@@ -4,7 +4,7 @@
   {{- $useCasesResources := slice
     (resources.Get "css/3027-layout.css")
     (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
-    (resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
     (resources.Get "css/base-4.min.css")
     (resources.Get "css/style.css")
