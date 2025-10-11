@@ -62,6 +62,7 @@
   {{- $title = $title | truncate $maxTitleLength "…" -}}
 {{- end -}}
 
+
 <title>{{ $title }}</title>
 
 {{/* Enhanced Meta Description with CTAs and Benefits */}}
@@ -120,6 +121,7 @@
   {{- $description = $description | truncate $maxDescLength "…" -}}
 {{- end -}}
 
+
 <meta name="description" content="{{ $description }}" />
 
 {{/* Enhanced Robots Meta */}}
@@ -153,7 +155,7 @@
 {{- end -}}
 
 {{- if $keywords -}}
-<meta name="keywords" content="{{ delimit $keywords ", " }}" />
+  <meta name="keywords" content="{{ delimit $keywords ", " }}" />
 {{- end -}}
 
 {{/* Enhanced Open Graph Tags */}}
@@ -164,6 +166,7 @@
   {{- $ogType = "website" -}}
 {{- end -}}
 
+
 <meta property="og:type" content="{{ $ogType }}" />
 <meta property="og:title" content="{{ $title }}" />
 <meta property="og:description" content="{{ $description }}" />
@@ -173,16 +176,20 @@
 
 {{/* Article-specific Open Graph */}}
 {{- if eq $ogType "article" -}}
-<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
-<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
-{{- with .Params.author -}}
-<meta property="article:author" content="{{ . }}" />
-{{- end -}}
-{{- with .Params.tags -}}
-{{- range . -}}
-<meta property="article:tag" content="{{ . }}" />
-{{- end -}}
-{{- end -}}
+  <meta
+    property="article:published_time"
+    content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+  <meta
+    property="article:modified_time"
+    content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+  {{- with .Params.author -}}
+    <meta property="article:author" content="{{ . }}" />
+  {{- end -}}
+  {{- with .Params.tags -}}
+    {{- range . -}}
+      <meta property="article:tag" content="{{ . }}" />
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
 {{/* Enhanced Twitter Cards */}}
@@ -191,7 +198,7 @@
 <meta name="twitter:description" content="{{ $description }}" />
 <meta name="twitter:site" content="@jetthoughts" />
 {{- with .Params.author -}}
-<meta name="twitter:creator" content="@{{ . | lower | replaceRE " " "" }}" />
+  <meta name="twitter:creator" content="@{{ . | lower | replaceRE " " "" }}" />
 {{- end -}}
 
 {{/* Optimized Image Handling */}}
@@ -232,18 +239,20 @@
 
 {{/* Output image meta tags */}}
 {{- if $image -}}
-<meta property="og:image" content="{{ $image }}" />
-<meta property="og:image:width" content="{{ $imageWidth }}" />
-<meta property="og:image:height" content="{{ $imageHeight }}" />
-<meta property="og:image:type" content="image/webp" />
-<meta name="twitter:image" content="{{ $image }}" />
+  <meta property="og:image" content="{{ $image }}" />
+  <meta property="og:image:width" content="{{ $imageWidth }}" />
+  <meta property="og:image:height" content="{{ $imageHeight }}" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta name="twitter:image" content="{{ $image }}" />
 {{- end -}}
 
 {{/* Additional Performance and UX Meta Tags */}}
 <meta name="theme-color" content="#007bff" />
 <meta name="msapplication-TileColor" content="#007bff" />
 <meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 {{- if hugo.IsProduction -}}
   {{/* Preconnect to external resources */}}
