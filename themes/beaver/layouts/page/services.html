@@ -1,54 +1,48 @@
 {{ define "header" }}
+{{ partial "header/critical/base-critical.html" . }}
 {{ partial "header/critical/services.html" . }}
-{{- $dynamicCSS586 := resources.Get "css/586-dynamic.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
+{{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
 {{- $dynamicCSSUseCases := resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" . }}
-
-{{- $CSS := slice (resources.Get "css/737-layout.css") (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css") $dynamicCSS586 (resources.Get "css/586.css") (resources.Get "css/base-4.min.css") (resources.Get "css/style.css") (resources.Get "css/skin-65eda28877e04.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") $dynamicCSSUseCases | resources.Concat "css/services.css" | postCSS  | minify | fingerprint | resources.PostProcess}}
-
-<link rel="stylesheet" href="{{ $CSS.RelPermalink }}" media='all' />
+{{- $staticServicesCSS := slice (resources.Get "css/fl-services-layout.css") (resources.Get "css/component-bundle.css") (resources.Get "css/services-layout.css") (resources.Get "css/base-layout.css") (resources.Get "css/style.css") (resources.Get "css/theme-main.css") (resources.Get "css/technologies.css") (resources.Get "css/footer.css") }}
+{{ partial "assets/bundle.html" (dict "cssFiles" (union $staticServicesCSS (slice $dynamicCSS586 $dynamicCSSUseCases)) "page" "services") }}
 {{ end }}
 
 
 {{ define "footer" }}
-{{ $tabs := slice
-(resources.Get "js/tabs.js")
-| resources.Concat "js/_tabs.js"
-| js.Build (dict "minify" true) | minify | fingerprint | resources.PostProcess
-}}
-<script defer src="{{ $tabs.RelPermalink }}"></script>
+{{ partial "assets/js-processor.html" (dict "resources" (slice (resources.Get "js/tabs.js")) "bundleName" "tabs" "defer" true) }}
 {{ end }}
 
 
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+<div id="fl-main-content" class="fl-page-content" role="main">
     <div class="fl-content-full container">
        <div class="row">
           <div class="fl-content col-md-12">
-             <article class="fl-post post-737 page type-page status-publish hentry" id="fl-post-737" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
-                <div class="fl-post-content clearfix" itemprop="text">
+             <article class="fl-post post-737 page type-page status-publish hentry" id="fl-post-737">
+                <div class="fl-post-content clearfix">
                    <div class="fl-builder-content fl-builder-content-737 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="737">
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-nhf6l2ycmzoe fl-row-default-height fl-row-align-center" data-node="nhf6l2ycmzoe">
                          <div class="fl-row-content-wrap">
-                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                            <div class="fl-row-content fl-row-fixed-width">
                                <div class="fl-col-group fl-node-i8x1zs2grf9h" data-node="i8x1zs2grf9h">
                                   <div class="fl-col fl-node-ub6cphnzm7dy" data-node="ub6cphnzm7dy">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-rich-text fl-node-5auhpfbjkslc" data-node="5auhpfbjkslc">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="fl-rich-text">
                                                  <p>SERVICES</p>
                                               </div>
                                            </div>
                                         </div>
                                         <div class="fl-module fl-module-heading fl-node-geh5kf43xaqi" data-node="geh5kf43xaqi">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <h1 class="fl-heading">
                                                  <span class="fl-heading-text">We optimize technology</span>
                                               </h1>
                                            </div>
                                         </div>
                                         <div class="fl-module fl-module-rich-text fl-node-lc2vf9wtsg7e" data-node="lc2vf9wtsg7e">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="fl-rich-text">
                                                  <p>From technical strategy and innovation to talent acquisition and software development, we help empower products and teams at any stage.</p>
                                               </div>
@@ -59,9 +53,9 @@
                                </div>
                                <div class="fl-col-group fl-node-hpiux561ftv7 fl-col-group-custom-width" data-node="hpiux561ftv7">
                                   <div class="fl-col fl-node-7jz6cas305te fl-col-small fl-col-small-custom-width hover-box" data-node="7jz6cas305te">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-infobox fl-node-0pigeztak1xl jt-service-box" data-node="0pigeztak1xl">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-infobox-wrap">
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
@@ -78,7 +72,7 @@
                                                        </div>
                                                        <div class="pp-infobox-button pp-button-wrap">
                                                           <a title="Fractional CTO" class="pp-more-link pp-button" href="{{ relURL "services/fractional-cto/" }}" role="button" target="_self">
-                                                          Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                          Learn About Fractional CTO Services <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                           </a>
                                                        </div>
                                                     </div>
@@ -89,9 +83,9 @@
                                      </div>
                                   </div>
                                   <div class="fl-col fl-node-rxpuo06w93bn fl-col-small fl-col-small-custom-width hover-box" data-node="rxpuo06w93bn">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-infobox fl-node-ugiypbhnvlfw jt-service-box" data-node="ugiypbhnvlfw">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-infobox-wrap">
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
@@ -108,7 +102,7 @@
                                                        </div>
                                                        <div class="pp-infobox-button pp-button-wrap">
                                                           <a title="App/Web Development" class="pp-more-link pp-button" href="{{ relURL "services/app-web-development/" }}" role="button" target="_self">
-                                                          Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                          Explore App & Web Development <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                           </a>
                                                        </div>
                                                     </div>
@@ -119,9 +113,9 @@
                                      </div>
                                   </div>
                                   <div class="fl-col fl-node-aj2ch9vn5k1w fl-col-small fl-col-small-custom-width hover-box" data-node="aj2ch9vn5k1w">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-infobox fl-node-h2wjp3zb7afk jt-service-box" data-node="h2wjp3zb7afk">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-infobox-wrap">
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
@@ -138,7 +132,7 @@
                                                        </div>
                                                        <div class="pp-infobox-button pp-button-wrap">
                                                           <a title="Software QA & CAT" class="pp-more-link pp-button" href="{{ relURL "services/software-qa-cat/" }}" role="button" target="_self">
-                                                          Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                          Discover Software QA Services <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                           </a>
                                                        </div>
                                                     </div>
@@ -151,9 +145,9 @@
                                </div>
                                <div class="fl-col-group fl-node-g9ub4ojrvt2l" data-node="g9ub4ojrvt2l">
                                   <div class="fl-col fl-node-qvfo6gn7h5jx" data-node="qvfo6gn7h5jx">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-spacer fl-node-tl5fvc086rnw fl-visible-desktop fl-visible-large fl-visible-medium" data-node="tl5fvc086rnw">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-spacer-module"></div>
                                            </div>
                                         </div>
@@ -162,9 +156,9 @@
                                </div>
                                <div class="fl-col-group fl-node-ys6b4evd1tj8 fl-col-group-custom-width" data-node="ys6b4evd1tj8">
                                   <div class="fl-col fl-node-r0jkz1qcfsgp fl-col-small fl-col-small-custom-width hover-box" data-node="r0jkz1qcfsgp">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-infobox fl-node-nwx7eiysakvl jt-service-box" data-node="nwx7eiysakvl">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-infobox-wrap">
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
@@ -181,7 +175,7 @@
                                                        </div>
                                                        <div class="pp-infobox-button pp-button-wrap">
                                                           <a title="Fractional Product Management" class="pp-more-link pp-button" href="{{ relURL "services/fractional-product-management/" }}" role="button" target="_self">
-                                                          Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                          View Product Management Services <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                           </a>
                                                        </div>
                                                     </div>
@@ -192,9 +186,9 @@
                                      </div>
                                   </div>
                                   <div class="fl-col fl-node-w4f3716ghpvs fl-col-small fl-col-small-custom-width hover-box" data-node="w4f3716ghpvs">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-infobox fl-node-a5khmr6nto3z jt-service-box" data-node="a5khmr6nto3z">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-infobox-wrap">
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
@@ -211,7 +205,7 @@
                                                        </div>
                                                        <div class="pp-infobox-button pp-button-wrap">
                                                           <a title="Outsourced Developer Staffing" class="pp-more-link pp-button" href="{{ relURL "services/outsourced-developer-staffing/" }}" role="button" target="_self">
-                                                          Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                          See Developer Staffing Solutions <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                           </a>
                                                        </div>
                                                     </div>
@@ -222,9 +216,9 @@
                                      </div>
                                   </div>
                                   <div class="fl-col fl-node-6ogabjsdei1h fl-col-small fl-col-small-custom-width hover-box" data-node="6ogabjsdei1h">
-                                     <div class="fl-col-content fl-node-content">
+                                     <div class="fl-col-content">
                                         <div class="fl-module fl-module-pp-infobox fl-node-2ufxtslray80 jt-service-box" data-node="2ufxtslray80">
-                                           <div class="fl-module-content fl-node-content">
+                                           <div class="fl-module-content">
                                               <div class="pp-infobox-wrap">
                                                  <div class="pp-infobox layout-5">
                                                     <div class="pp-icon-wrapper animated">
@@ -241,7 +235,7 @@
                                                        </div>
                                                        <div class="pp-infobox-button pp-button-wrap">
                                                           <a title="Talent Recruiting and Training" class="pp-more-link pp-button" href="{{ relURL "services/talent-recruiting-training/" }}" role="button" target="_self">
-                                                          Learn More <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
+                                                          View Talent Recruiting Services <i class="pp-button-icon pp-button-icon-right far fa-long-arrow-right"></i>
                                                           </a>
                                                        </div>
                                                     </div>
@@ -258,8 +252,8 @@
 
                       <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-w8dym2q746pj fl-row-default-height fl-row-align-center">
                       <div class="fl-row-content-wrap">
-                         <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                            {{ partial "technologies.html" (dict "colorVariant" "dark"  "site" .Site) }}
+                         <div class="fl-row-content fl-row-fixed-width">
+                            {{ partialCached "technologies.html" (dict "colorVariant" "dark"  "site" .Site) "technologies-dark" }}
                          </div>
                       </div>
                       </div>
@@ -275,37 +269,37 @@
                                   </g>
                                </svg>
                             </div>
-                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                            <div class="fl-row-content fl-row-fixed-width">
 
 
-                               {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                               {{ partialCached "page/use-cases.html" (dict "addHeadline" true) "use-cases-with-headline" }}
 
-                               {{ partial "page/testimonials.html" . }}
+                               {{ partialCached "page/testimonials.html" . "testimonials" }}
                                <div class="fl-col-group fl-node-ygpn8524mqh7 fl-col-group-custom-width" data-node="ygpn8524mqh7">
                                  <div class="fl-col fl-node-ohd51ixf3842 fl-col-small-custom-width fl-col-has-cols blue-border" data-node="ohd51ixf3842">
-                                   <div class="fl-col-content fl-node-content">
+                                   <div class="fl-col-content">
                                      <div class="fl-module fl-module-heading fl-node-fa7hjib92cpv" data-node="fa7hjib92cpv">
-                                       <div class="fl-module-content fl-node-content">
+                                       <div class="fl-module-content">
                                          <h2 class="fl-heading">
                                            <span class="fl-heading-text">Let’s get started now</span>
                                          </h2>
                                        </div>
                                      </div>
                                      <div class="fl-module fl-module-rich-text fl-node-9hf5wet31z02" data-node="9hf5wet31z02">
-                                       <div class="fl-module-content fl-node-content">
+                                       <div class="fl-module-content">
                                          <div class="fl-rich-text">
                                            <p>Get in touch with one of our experts to get a technical strategy &amp; planning session for your project at no cost.</p>
                                          </div>
                                        </div>
                                      </div>
                                      <div class="fl-module fl-module-pp-spacer fl-node-toa2hwegbp4q fl-visible-desktop fl-visible-large fl-visible-medium" data-node="toa2hwegbp4q">
-                                       <div class="fl-module-content fl-node-content">
+                                       <div class="fl-module-content">
                                          <div class="pp-spacer-module"></div>
                                        </div>
                                      </div>
                                      <div class="fl-col-group fl-node-d96zqbnxltuj fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="d96zqbnxltuj">
                                        <div class="fl-module fl-module-button fl-node-header-nav-contat-us-btn-nested" data-node="vha2g9x6ljec">
-                                         <div class="fl-module-content fl-node-content">
+                                         <div class="fl-module-content">
                                            <div class="fl-button-wrap-center fl-button-width-auto fl-button-center">
                                              <a href="/contact-us/" target="_self" class="fl-button">
                                                <span class="fl-button-text">Contact Us</span>
