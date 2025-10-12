@@ -1,3 +1,2 @@
 {{ partial "header/critical/base-critical.html" . }}
-{{ $privacyPolicyCriticalCSS := resources.Get "css/critical/privacy-policy-critical.css" }}
-<style>{{ $privacyPolicyCriticalCSS.Content | safeCSS }}</style>
+<style>{{ (resources.Get "css/critical/privacy-policy-critical.css").Content }}</style>
