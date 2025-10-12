@@ -1,3 +1,4 @@
+@import "foundations/css-variables.css";
 @import "utilities/clearfix.css";
 @import "utilities/flexbox.css";
 @import "utilities/display.css";
@@ -872,7 +873,7 @@
 }
 
 .fl-node-vo75i29j3fmz .pp-tabs-labels .pp-tabs-label .pp-tab-title, .fl-node-vo75i29j3fmz .pp-tabs-panels .pp-tabs-label .pp-tab-title {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 20px;
   }
@@ -1352,7 +1353,7 @@
 .pp-review-header {
   padding-top: 15px;
   padding-bottom: 6px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 600;
 }
 
@@ -1763,19 +1764,19 @@
 }
 
 .fl-node-08kl1yzxeout .pp-review-name {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   font-size: 18px;
 }
 
 .fl-node-08kl1yzxeout .pp-review-title {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 16px;
 }
 
 .fl-node-08kl1yzxeout .pp-review-text {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 18px;
   }
@@ -2184,7 +2185,7 @@
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 18px;
 }
@@ -2367,7 +2368,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .ginput_container label, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper table.gfield_list thead th, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper span.ginput_product_price, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper span.ginput_product_price_label, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper span.ginput_quantity_label, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield_html {
   color: #121212 !important;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -2543,13 +2544,13 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 14px;
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield select, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield textarea {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 400;
   font-size: 18px;
 }
@@ -2578,7 +2579,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_confirmation_wrapper .gform_confirmation_message {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 20px;
   }
@@ -4476,7 +4477,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-s3wp4tod8vfm .fl-rich-text, .fl-builder-content .fl-node-s3wp4tod8vfm .fl-rich-text *:not(b, strong) {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 75px;
   line-height: 1;
@@ -5061,7 +5062,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-wz23lfh6kojx .fl-rich-text, .fl-builder-content .fl-node-wz23lfh6kojx .fl-rich-text *:not(b, strong) {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 400;
   font-size: 60px;
   line-height: 1;
@@ -5087,7 +5088,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-8zscwe2vx9au .fl-rich-text, .fl-builder-content .fl-node-8zscwe2vx9au .fl-rich-text *:not(b, strong) {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 400;
   font-size: 60px;
   line-height: 1;
@@ -5113,7 +5114,7 @@ img.mfp-img {
 }
 
 .fl-builder-content .fl-node-sd4bi1xt0lnz .fl-rich-text, .fl-builder-content .fl-node-sd4bi1xt0lnz .fl-rich-text *:not(b, strong) {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 400;
   font-size: 60px;
   line-height: 1;
@@ -5624,7 +5625,7 @@ img.mfp-img {
 }
 
 .fl-node-dxali8vntcr0 .pp-more-link {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -5878,7 +5879,7 @@ img.mfp-img {
 }
 
 .fl-node-075ztwhd3cxn .pp-more-link {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -6132,7 +6133,7 @@ img.mfp-img {
 }
 
 .fl-node-lajty926uxf5 .pp-more-link {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -6406,7 +6407,7 @@ img.mfp-img {
 }
 
 .fl-node-do5fjakv8b29 .pp-more-link {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -6660,7 +6661,7 @@ img.mfp-img {
 }
 
 .fl-node-3eq5kcmfz0an .pp-more-link {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -6914,7 +6915,7 @@ img.mfp-img {
 }
 
 .fl-node-v3gpr4klqmob .pp-more-link {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -10476,7 +10477,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-vo75i29j3fmz .pp-tabs-labels .pp-tabs-label .pp-tab-title, .fl-node-vo75i29j3fmz .pp-tabs-panels .pp-tabs-label .pp-tab-title {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 20px;
   }
@@ -10956,7 +10957,7 @@ body .pp-post-feed-meta {
 .pp-review-header {
   padding-top: 15px;
   padding-bottom: 6px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 600;
 }
 
@@ -11367,19 +11368,19 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-08kl1yzxeout .pp-review-name {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 800;
   font-size: 18px;
 }
 
 .fl-node-08kl1yzxeout .pp-review-title {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 16px;
 }
 
 .fl-node-08kl1yzxeout .pp-review-text {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 18px;
   }
@@ -11788,7 +11789,7 @@ body .pp-post-feed-meta {
 }
 
 .fl-node-9bd56tarons2 .pp-infolist-title .pp-infolist-title-text {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 300;
   font-size: 18px;
 }
@@ -11974,7 +11975,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .ginput_container label, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper table.gfield_list thead th, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper span.ginput_product_price, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper span.ginput_product_price_label, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper span.ginput_quantity_label, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield_html {
   color: #121212 !important;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
 }
 
@@ -12150,13 +12151,13 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield .gfield_label {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 14px;
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']), .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield select, .fl-node-btz2rn93xyu8 .pp-gf-content .gform_wrapper .gfield textarea {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 400;
   font-size: 18px;
 }
@@ -12185,7 +12186,7 @@ div.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
 }
 
 .fl-node-btz2rn93xyu8 .pp-gf-content .gform_confirmation_wrapper .gform_confirmation_message {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-system-ui);
   font-weight: 700;
   font-size: 20px;
   }
