@@ -1,4 +1,3 @@
 <!-- generated with https://www.corewebvitals.io/tools/critical-css-generator -->
 {{ partial "header/critical/base-critical.html" . }}
-{{ $homepageCriticalCSS := resources.Get "css/critical/homepage-critical.css" }}
-<style>{{ $homepageCriticalCSS.Content | safeCSS }}</style>
+<style>{{ (resources.Get "css/critical/homepage-critical.css").Content }}</style>
