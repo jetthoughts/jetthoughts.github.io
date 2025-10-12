@@ -1,5 +1,0 @@
-{{- $criticalCSS := resources.Get "css/critical/fl-common-modules.css" | postCSS | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
-{{- end -}}
-<style>{{ $criticalCSS.Content | safeCSS }}</style>

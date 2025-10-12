@@ -1,16 +1,6 @@
-<!-- Critical CSS Base Rules - Consolidated from all critical partials -->
-<!-- Generated as part of CSS migration Phase 2 atomic refactoring -->
-
-<!-- FL-Builder Layout Grid Framework -->
-{{ partial "header/critical/consolidated/fl-layout-grid.html" . }}
-
-<!-- FL-Builder Common Modules (Buttons, Photos, Headings, PowerPack) -->
-{{ partial "header/critical/consolidated/fl-common-modules.html" . }}
-
-<!-- FL-Builder Shape Dividers (Layer System) -->
-{{ partial "header/critical/consolidated/fl-shape-dividers.html" . }}
-
-{{- $criticalCSS := resources.Get "css/critical/base-reset.css" | postCSS | fingerprint "md5" -}}
+<!-- Critical CSS Base Rules - Consolidated via PostCSS @import -->
+<!-- Replaces multiple Hugo partials with single PostCSS-processed base.css -->
+{{- $criticalCSS := resources.Get "css/critical/base.css" | postCSS | fingerprint "md5" -}}
 {{- if hugo.IsProduction -}}
   {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
 {{- end -}}

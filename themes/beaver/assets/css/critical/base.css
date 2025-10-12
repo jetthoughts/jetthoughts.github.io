@@ -1,0 +1,14 @@
+/* Base Critical CSS - Consolidated imports via PostCSS */
+/* Replaces multiple Hugo partials with single PostCSS-processed file */
+
+/* FL-Builder Layout Grid Framework */
+@import "critical/fl-layout-grid.css";
+
+/* FL-Builder Common Modules (Buttons, Photos, Headings, PowerPack) */
+@import "critical/fl-common-modules.css";
+
+/* FL-Builder Shape Dividers (Layer System) */
+@import "critical/fl-shape-dividers.css";
+
+/* Base Reset Rules */
+@import "critical/base-reset.css";
