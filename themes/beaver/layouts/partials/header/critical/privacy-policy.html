@@ -1,2 +1,2 @@
 {{ partial "header/critical/base-critical.html" . }}
-<style>{{ (resources.Get "css/critical/privacy-policy-critical.css").Content }}</style>
+<style>{{ (resources.Get "css/critical/privacy-policy-critical.css").Content | safeCSS }}</style>
