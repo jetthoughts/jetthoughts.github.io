@@ -1,3 +1,7 @@
 <!-- Page-specific FL-Builder node styles and PowerPack modules - inherits base grid from base-critical.html > consolidated/fl-layout-grid.html -->
 {{ partial "header/critical/base-critical.html" . }}
-<style>{{ (resources.Get "css/critical/use-cases-critical.css").Content | safeCSS }}</style>
+{{- $criticalCSS := resources.Get "css/critical/use-cases-critical.css" | postCSS | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
+{{- end -}}
+<style>{{ $criticalCSS.Content | safeCSS }}</style>

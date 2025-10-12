@@ -1,2 +1,6 @@
 <!-- generated with https://www.corewebvitals.io/tools/critical-css-generator -->
-<style>{{ (resources.Get "css/critical/careers-critical.css").Content | safeCSS }}</style>
+{{- $criticalCSS := resources.Get "css/critical/careers-critical.css" | postCSS | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
+{{- end -}}
+<style>{{ $criticalCSS.Content | safeCSS }}</style>

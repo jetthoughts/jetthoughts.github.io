@@ -10,4 +10,8 @@
 <!-- FL-Builder Shape Dividers (Layer System) -->
 {{ partial "header/critical/consolidated/fl-shape-dividers.html" . }}
 
-<style>{{ (resources.Get "css/critical/base-reset.css").Content | safeCSS }}</style>
+{{- $criticalCSS := resources.Get "css/critical/base-reset.css" | postCSS | fingerprint "md5" -}}
+{{- if hugo.IsProduction -}}
+  {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
+{{- end -}}
+<style>{{ $criticalCSS.Content | safeCSS }}</style>
