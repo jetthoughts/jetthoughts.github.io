@@ -10,11 +10,4 @@
 <!-- FL-Builder Shape Dividers (Layer System) -->
 {{ partial "header/critical/consolidated/fl-shape-dividers.html" . }}
 
-<style>
-.fl-row-content-wrap {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-}
-</style>
+<style>{{ (resources.Get "css/critical/base-reset.css").Content | safeCSS }}</style>
