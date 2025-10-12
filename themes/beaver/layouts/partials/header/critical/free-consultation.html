@@ -1,3 +1,2 @@
 {{ partial "header/critical/base-critical.html" . }}
-{{ $freeConsultationCriticalCSS := resources.Get "css/critical/free-consultation-critical.css" }}
-<style>{{ $freeConsultationCriticalCSS.Content | safeCSS }}</style>
+<style>{{ (resources.Get "css/critical/free-consultation-critical.css").Content }}</style>
