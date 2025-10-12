@@ -1,4 +1,3 @@
 <!-- Page-specific FL-Builder node styles and PowerPack modules - inherits base grid from base-critical.html > consolidated/fl-layout-grid.html -->
 {{ partial "header/critical/base-critical.html" . }}
-{{ $clientsCriticalCSS := resources.Get "css/critical/clients-critical.css" }}
-<style>{{ $clientsCriticalCSS.Content | safeCSS }}</style>
+<style>{{ (resources.Get "css/critical/clients-critical.css").Content }}</style>
