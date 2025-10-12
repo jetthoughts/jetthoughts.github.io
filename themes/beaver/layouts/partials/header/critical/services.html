@@ -1,5 +1,4 @@
 <!-- Services page-specific critical CSS -->
 <!-- FL-Builder grid and common modules now loaded via base-critical.html -->
 {{ partial "header/critical/base-critical.html" . }}
-{{ $servicesCriticalCSS := resources.Get "css/critical/services-critical.css" }}
-<style>{{ $servicesCriticalCSS.Content | safeCSS }}</style>
+<style>{{ (resources.Get "css/critical/services-critical.css").Content }}</style>
