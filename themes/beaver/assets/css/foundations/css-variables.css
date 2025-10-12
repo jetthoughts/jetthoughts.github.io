@@ -1,0 +1,8 @@
+/* CSS Variables Foundation - WP1.1 */
+/* Extracted from 330 occurrences across 44 CSS files */
+/* 2025-10-12: CSS Migration Project 2509 */
+
+:root {
+  /* System UI Font Stack - Pattern #4 (330 occurrences) */
+  --font-system-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
