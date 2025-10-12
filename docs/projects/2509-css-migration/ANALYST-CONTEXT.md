@@ -5,17 +5,19 @@
 
 ## Must Review Before Analysis:
 1. **`35-39-project-management/35.04-revised-goal-css-duplication-elimination.md`** - CURRENT GOAL (2025-10-12)
-2. `30-39-documentation/30.01-progress-tracker.md` - Current progress status
-3. `10-19-analysis/10.01-critical-findings.md` - Critical issues and blockers
-4. `_runtime/PHASE-1B-CSS-DUPLICATION-ANALYSIS.md` - FL-Builder duplication analysis
-5. `_runtime/INLINE-CRITICAL-CSS-DUPLICATION-ANALYSIS.md` - Inline CSS analysis
+2. **`30-39-documentation/30.05-hugo-pipeline-enhancement-strategy.md`** - Hugo pipeline strategy (NEW 2025-10-12)
+3. `30-39-documentation/30.01-progress-tracker.md` - Current progress status
+4. `10-19-analysis/10.01-critical-findings.md` - Critical issues and blockers
+5. `_runtime/PHASE-1B-CSS-DUPLICATION-ANALYSIS.md` - FL-Builder duplication analysis
+6. `_runtime/INLINE-CRITICAL-CSS-DUPLICATION-ANALYSIS.md` - Inline CSS analysis
 
 ## Current Goal (Revised 2025-10-12):
-**Eliminate CSS duplication through extracting common styles**
+**Eliminate SOURCE CSS duplication through extracting common styles**
 - 70-80% CSS duplication reduction (27,094-31,536 lines eliminated)
 - 30-40% inline critical CSS reduction (300-400 lines eliminated)
 - Create 5-7 foundation CSS files
 - Execution: Solo autonomous (NO swarm spawning)
+- **IMPORTANT**: Hugo pipeline already optimal (resources.Concat + PostCSS). Goal targets SOURCE CSS, not pipeline.
 - **OUT OF SCOPE**: FL-node HTML migration (deferred to separate initiative)
 
 ## Project Status Overview:
@@ -48,13 +50,28 @@
 - Review incident reports in 60-69-incidents/ for lessons learned
 - Check testing validation in 50-59-testing/ before implementing changes
 
+## Hugo Pipeline Status (2025-10-12):
+**✅ ALREADY IMPLEMENTED**: jt_site has best-in-class Hugo CSS processing
+- `resources.Concat`: Automatic CSS bundling
+- `postCSS`: Plugin-based processing (autoprefixer, delete-duplicates)
+- `fingerprint`: MD5 cache busting
+- `minify`: Production minification
+- Environment-aware builds (dev vs production)
+
+**🎯 CRITICAL DISTINCTION**:
+- Hugo pipeline handles COMPILED CSS duplication ✅ (already optimal)
+- Our goal targets SOURCE CSS duplication ❌ (70-80% duplicated code)
+- Phase 1-2: Consolidate SOURCE CSS (NO Hugo changes)
+- Phase 3: OPTIONAL Hugo enhancements (PurgeCSS, automated critical CSS)
+
 ## Document Cleanup Log:
 - **2025-01-27**: Removed 18 duplicate CSS migration files from root docs/ directory
 - **2025-01-27**: Consolidated all CSS migration documentation in project structure
 - **2025-01-27**: Updated CLAUDE.md with project cleanup status
 - **2025-10-12**: Revised goal to focus on CSS duplication elimination only
 - **2025-10-12**: Created 35.04-revised-goal-css-duplication-elimination.md (comprehensive goal document)
-- **2025-10-12**: Updated ANALYST-CONTEXT.md with new goal references
+- **2025-10-12**: Created 30.05-hugo-pipeline-enhancement-strategy.md (Hugo integration clarification)
+- **2025-10-12**: Updated ANALYST-CONTEXT.md with Hugo pipeline acknowledgment
 
 ## Last Updated: October 12, 2025
 ## Next Review: After Phase 1 completion (Critical CSS inline consolidation)
