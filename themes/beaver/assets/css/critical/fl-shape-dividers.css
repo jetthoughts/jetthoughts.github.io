@@ -1,0 +1,48 @@
+/* FL-Builder Shape Dividers - Layer System for Row Decorative Elements */
+
+/* Base Layer Structure */
+.fl-builder-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Shape Layer Z-Index Management */
+.fl-builder-shape-layer {
+  z-index: 0;
+}
+
+.fl-builder-shape-layer.fl-builder-bottom-edge-layer {
+  z-index: 1;
+}
+
+/* Row Content Above Layers */
+.fl-row-has-layers .fl-row-content {
+  z-index: 1;
+}
+
+/* Layer Content Positioning */
+.fl-builder-layer > * {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Row Content Relative Positioning with Layers */
+.fl-builder-layer + .fl-row-content {
+  position: relative;
+}
+
+/* Shape SVG Default Styling */
+.fl-builder-layer .fl-shape {
+  fill: #aaa;
+  stroke: none;
+  stroke-width: 0;
+  width: 100%;
+}
