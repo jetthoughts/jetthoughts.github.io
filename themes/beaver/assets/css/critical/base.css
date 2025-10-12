@@ -1,6 +1,9 @@
 /* Base Critical CSS - Consolidated imports via PostCSS */
 /* Replaces multiple Hugo partials with single PostCSS-processed file */
 
+/* CSS Variables Foundation (WP1.1) */
+@import "foundations/css-variables.css";
+
 /* FL-Builder Layout Grid Framework */
 @import "critical/fl-layout-grid.css";
 
