@@ -1105,6 +1105,44 @@ refactoring_validation:
 - FOR MICRO REFACTORING IT WILL BE ENOUGH TO USE `bin/rake test:critical`
 - IMPORTANT: After each micro changes (< 10 lines) of the production code run `bin/rake test:critical`. After changes others code review and validate the changes with following four-eyes principle
 
+### 🚨 CRITICAL CSS CONSOLIDATION LEARNINGS (INCIDENT: 404 & Blog Pages)
+
+**Date**: 2025-10-13
+**Incident**: CSS consolidation of 404.css caused 9.5% desktop / 15.4% mobile visual regression
+**Root Cause**: 404 page and blog pages do NOT load critical CSS infrastructure (base-critical.html)
+**Impact**: Removing duplicate FL-Builder CSS broke page layouts
+
+**MANDATORY BLOCK LIST** (ZERO TOLERANCE):
+```yaml
+css_consolidation_blockers:
+  pages_without_critical_css:
+    - "404.css" # No themes/beaver/layouts/partials/header/critical/404.html
+    - "3114-layout.css" # Blog pages - no blog-critical.html infrastructure
+
+  blocking_rule: "NEVER consolidate CSS from these files until critical CSS infrastructure created"
+
+  validation_protocol:
+    pre_consolidation: "Verify page loads themes/beaver/layouts/partials/header/critical/base-critical.html"
+    post_consolidation: "Run bin/rake test:critical with tolerance: 0.03"
+    visual_validation: "Compare screenshots - MUST show 0% difference for refactoring"
+
+  rollback_triggers:
+    - "Visual regression > 3% (tolerance threshold)"
+    - "Test failures on affected pages"
+    - "Layout breakage in manual inspection"
+```
+
+**SAFE CONSOLIDATION CRITERIA**:
+1. ✅ Page loads base-critical.html (most pages)
+2. ✅ Page-specific CSS (.fl-node-*) preserved
+3. ✅ Visual regression tests pass with tolerance: 0.03
+4. ✅ bin/rake test:critical shows 0 failures
+
+**RESOLUTION OPTIONS**:
+- Option A: Create 404-critical.html and blog-critical.html infrastructure
+- Option B: Keep duplicates in 404.css and 3114-layout.css (current approach)
+- Option C: Inline critical CSS directly in 404 and blog templates
+
 ### 🎯 Ultimate Mandates
 
 **Core TDD Mandate**: "Follow official claude-flow TDD methodology with specialized agent roles (test-writer, minimal-implementer, refactor-specialist). Implement RED-GREEN-REFACTOR cycle with shameless green acceptance. Use Fake It/Obvious/Triangulation strategies. Behavior-focused testing ONLY - refuse implementation/existence/configuration tests. Use claude-flow tools exclusively. HALT and REFLECT on ACTUAL violations (not user frustration). Coordinate via XP teams ONLY for complex work. Memory-based phase coordination. Target >95% coverage. Zero test smells."
