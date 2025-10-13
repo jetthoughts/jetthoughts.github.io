@@ -1,6 +1,8 @@
 /* PowerPack Component Imports - handled via Hugo resources concatenation */
 /* See themes/beaver/layouts/page/use-cases.html for PowerPack CSS inclusion */
 
+@import "utilities/fl-builder-grid.css";
+
 /* Removed: box-sizing reset - now in utilities/foundation/reset.css */
 /* .fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
   -webkit-box-sizing: border-box; */
@@ -785,142 +787,7 @@ img.mfp-img {
   }
 }
 
-@media (max-width: 1200px) {
-  .fl-visible-desktop, .fl-visible-medium, .fl-visible-mobile, .fl-col-group-equal-height .fl-col.fl-visible-desktop, .fl-col-group-equal-height .fl-col.fl-visible-medium, .fl-col-group-equal-height .fl-col.fl-visible-mobile {
-    display: none;
-  }
-
-  .fl-visible-large {
-    display: block;
-  }
-
-  .fl-col-group-equal-height .fl-col.fl-visible-large {
-    display: flex;
-  }
-}
-
-@media (max-width: 1115px) {
-  .fl-visible-desktop, .fl-visible-large, .fl-visible-mobile, .fl-col-group-equal-height .fl-col.fl-visible-desktop, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-mobile {
-    display: none;
-  }
-
-  .fl-visible-medium {
-    display: block;
-  }
-
-  .fl-col-group-equal-height .fl-col.fl-visible-medium {
-    display: flex;
-  }
-
-  .fl-col-group.fl-col-group-medium-reversed {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap-reverse;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
-  }
-
-  .fl-row[data-node] > .fl-row-content-wrap {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-  }
-}
-
-@media (max-width: 860px) {
-  .fl-visible-desktop, .fl-visible-large, .fl-visible-medium, .fl-col-group-equal-height .fl-col.fl-visible-desktop, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-medium {
-    display: none;
-  }
-
-  .fl-visible-mobile {
-    display: block;
-  }
-
-  .fl-col-group-equal-height .fl-col.fl-visible-mobile {
-    display: flex;
-  }
-
-  .fl-row-content-wrap {
-    background-attachment: scroll !important;
-  }
-
-  .fl-row-bg-parallax .fl-row-content-wrap {
-    background-attachment: scroll !important;
-    background-position: center center !important;
-  }
-
-  .fl-col-group.fl-col-group-equal-height {
-    display: block;
-  }
-
-  .fl-col-group.fl-col-group-equal-height.fl-col-group-custom-width {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-  }
-
-  .fl-col-group.fl-col-group-responsive-reversed {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap-reverse;
-    flex-wrap: wrap-reverse;
-    flex-direction: row-reverse;
-  }
-
-  .fl-col-group.fl-col-group-responsive-reversed .fl-col:not(.fl-col-small-custom-width) {
-    flex-basis: 100%;
-    width: 100% !important;
-  }
-
-  .fl-col-group.fl-col-group-medium-reversed:not(.fl-col-group-responsive-reversed) {
-    display: unset;
-    display: unset;
-    -webkit-flex-wrap: unset;
-    flex-wrap: unset;
-    flex-direction: unset;
-  }
-
-  .fl-col {
-    clear: both;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto !important;
-  }
-
-  .fl-col-small:not(.fl-col-small-full-width) {
-    max-width: 400px;
-  }
-
-  .fl-block-col-resize {
-    display: none;
-  }
-
-  .fl-row[data-node] .fl-row-content-wrap {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .fl-row[data-node] .fl-bg-video, .fl-row[data-node] .fl-bg-slideshow {
-    left: 0;
-    right: 0;
-  }
-
-  .fl-col[data-node] .fl-col-content {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .fl-row[data-node] > .fl-row-content-wrap {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-  }
-}
+/* Removed: FL-Builder responsive grid visibility rules - now in utilities/fl-builder-grid.css */
 
 .page .fl-post-header, .single-fl-builder-template .fl-post-header {
   display: none;
