@@ -1,5 +1,5 @@
 @import "utilities/foundation/reset.css";
-@import "utilities/foundation/clearfix.css";
+@import "utilities/fl-builder-grid.css";
 @import "utilities/foundation/screen-reader.css";
 
 .fl-visible-large, .fl-visible-medium, .fl-visible-mobile, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-medium, .fl-col-group-equal-height .fl-col.fl-visible-mobile {
@@ -432,21 +432,10 @@
   text-align: right;
 }
 
-.fl-photo-content {
-  display: inline-block;
-  line-height: 0;
-  position: relative;
-  max-width: 100%;
-}
+/* .fl-photo-content and .fl-photo-content img removed - already in critical/fl-common-modules.css */
 
 .fl-photo-img-svg {
   width: 100%;
-}
-
-.fl-photo-content img {
-  display: inline;
-  height: auto;
-  max-width: 100%;
 }
 
 .fl-photo-crop-circle img {
@@ -1633,10 +1622,7 @@ img.mfp-img {
   text-align: center;
 }
 
-.fl-module-heading .fl-heading {
-  padding: 0 !important;
-  margin: 0 !important;
-}
+/* .fl-module-heading .fl-heading removed - already in critical/fl-common-modules.css */
 
 .fl-node-geh5kf43xaqi.fl-module-heading .fl-heading {
   text-align: center;
