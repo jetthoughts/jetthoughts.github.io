@@ -10,19 +10,7 @@
 @import "utilities/foundation/screen-reader.css";
 
 
-/* Responsive visibility utilities */
-.fl-visible-large,
-.fl-visible-medium,
-.fl-visible-mobile,
-.fl-col-group-equal-height .fl-col.fl-visible-large,
-.fl-col-group-equal-height .fl-col.fl-visible-medium,
-.fl-col-group-equal-height .fl-col.fl-visible-mobile {
-  display: none;
-}
-
-.fl-visible-desktop {
-  display: block;
-}
+/* Responsive visibility utilities - moved to utilities/fl-builder-visibility.css */
 
 .fl-col-group-equal-height .fl-col.fl-visible-desktop {
   display: flex;
