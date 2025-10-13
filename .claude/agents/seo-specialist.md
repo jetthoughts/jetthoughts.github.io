@@ -33,10 +33,10 @@ capabilities:
   - professional_seo_management
 hooks:
   pre: |
-    echo "🚀 Starting task: $TASK"
+    echo "🚀 Starting SEO task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Completed task: $TASK"
+    echo "✅ Completed SEO task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 

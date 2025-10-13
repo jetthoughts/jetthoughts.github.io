@@ -594,46 +594,6 @@ description: |
 
 **Purpose**: Enable continuous, goal-driven work without unnecessary approval stops for repetitive tasks.
 
-### 🎯 Graduated Spawning Strategy (Smart Delegation)
-
-**Solo Execution** (✅ NO swarm spawning):
-- Simple repetitive tasks with clear patterns (CSS file consolidation, duplicated code removal)
-- Single-file changes with existing tests
-- Micro-refactoring cycles (<10 lines of code)
-- Pattern-based work with established approach
-- **Critical**: Run `bin/rake test:critical` after each change, commit on green, continue to next item
-
-**Pair Execution** (2 agents):
-- Moderate complexity requiring validation (new features, cross-file refactoring)
-- Changes affecting 2-3 components
-- Test creation requiring behavioral focus validation
-- **Pattern**: Driver + Navigator, 25min rotation
-
-**Team Execution** (Full XP team):
-- Complex architecture changes affecting >3 components
-- New TDD cycles requiring specialized phase coordination
-- System design requiring expert consultation
-- **Pattern**: Full XP team with TDD specialists
-
-### 🚫 When NOT to Spawn Swarms
-
-**Anti-Patterns** (causing approval loops):
-- ❌ Spawning swarm for every file in 9,072-item goal
-- ❌ Stopping for approvals on repetitive mechanical work
-- ❌ Four-eyes validation for established patterns
-- ❌ Reflection protocols for user frustration (not actual violations)
-
-**Correct Solo Approach**:
-```yaml
-solo_execution_pattern:
-  task: "Consolidate CSS duplications (9,072 items)"
-  approach: "Autonomous batch processing"
-  validation: "bin/rake test:critical after each file"
-  commit_strategy: "Micro-commits on green tests"
-  approval_gates: "NONE (continuous work to goal completion)"
-  stop_conditions: "Critical test failures ONLY"
-```
-
 ### 🔄 Reflection Protocol Calibration
 
 **Reflection triggers ADJUSTED for goal-driven work**:
@@ -671,9 +631,7 @@ continuous_execution_response: |
 
 ### 🚨 MANDATORY XP TEAM DELEGATION with TDD Specialists
 
-**Delegation triggers** (for COMPLEX work only):
-- Complex TDD cycles requiring specialized agent coordination
-- Multi-file changes affecting >3 components (NOT simple consolidation)
+- TDD cycles requiring specialized agent coordination
 - Performance-critical optimizations requiring triangulation strategy
 - New test quality validation requiring expert review (NOT established patterns)
 
@@ -712,6 +670,236 @@ continuous_execution_response: |
     "Coverage Analyst: Validate >95% coverage target throughout"
   ]}
 ```
+
+---
+
+## 🤖 AUTONOMOUS SWARM COORDINATION (Agent Self-Direction)
+
+**Purpose**: Enable agents to autonomously spawn appropriate teams when complexity thresholds detected.
+
+### 🧠 CRITICAL: Agent Swarm Spawning Knowledge
+
+**ALL agents MUST understand this distinction**:
+
+```yaml
+tool_responsibilities:
+  mcp_tools_role:
+    purpose: "Coordination metadata, topology setup, memory management"
+    limitation: "DO NOT spawn actual working agents"
+    usage: "Optional pre-coordination, swarm initialization"
+    tools: "swarm_init, agent_spawn (metadata only), task_orchestrate (planning)"
+
+  claude_code_task_tool_role:
+    purpose: "Spawn ACTUAL WORKING AGENTS that execute tasks"
+    requirement: "MANDATORY for all agent spawning"
+    usage: "Primary tool for team formation and parallel execution"
+    pattern: "Task('Agent Name', 'Task description with handbook refs', 'agent-type')"
+```
+
+**Autonomous Spawning Rule**:
+- When complexity detected → Agent MUST use Claude Code's Task tool
+- MCP coordination tools are OPTIONAL (metadata only)
+- Task tool invocation is MANDATORY (actual agent execution)
+
+### 🎯 Complexity Threshold Detection (Autonomous Triggers)
+
+**Agents should autonomously spawn swarms when they detect**:
+
+#### **CSS Migration Work** (80% of jt_site work)
+```yaml
+trigger_keywords: ["CSS consolidation", "style migration", "class refactoring", "design system", "duplicate styles"]
+threshold: ">3 template files affected OR >50 lines CSS changes"
+autonomous_pattern: "CSS Migration Team"
+team_composition:
+  - "architecture-expert (CSS strategy, pattern identification)"
+  - "hugo-expert (Template preservation, .fl-node-* protection)"
+  - "tester (Visual regression guardian, screenshot validation)"
+  - "coder (CSS refactor driver, flocking rules implementation)"
+  - "reviewer (CSS refactor navigator, continuous validation)"
+```
+
+#### **Hugo Build/Deployment** (15% of jt_site work)
+```yaml
+trigger_keywords: ["build pipeline", "deployment", "CI/CD", "Hugo optimization", "build configuration"]
+threshold: "Build configuration changes OR build time >30s"
+autonomous_pattern: "Hugo Deployment Team"
+team_composition:
+  - "hugo-expert (Build lead, configuration management)"
+  - "performance-expert (Build profiling, optimization targets)"
+  - "tester (Build validation via bin/hugo-build)"
+  - "cicd-engineer (CI/CD integration, deployment pipeline)"
+```
+
+#### **Visual Testing Scenarios** (5% of jt_site work, CRITICAL)
+```yaml
+trigger_keywords: ["screenshot", "visual regression", "layout validation", "appearance test", "visual diff"]
+threshold: "ANY visual validation requirement"
+autonomous_pattern: "Visual Testing Team"
+team_composition:
+  - "tester (Screenshot Guardian - ABSOLUTE blocking authority)"
+  - "tester (Capybara Test Specialist - Minitest + assert_stable_screenshot)"
+  - "reviewer (Visual Validator - screenshot comparison review)"
+```
+
+#### **Content Structure Changes**
+```yaml
+trigger_keywords: ["content type", "taxonomy", "front matter", "Hugo archetypes", "content model"]
+threshold: ">2 content types OR new taxonomy"
+autonomous_pattern: "Content Architecture Team"
+team_composition:
+  - "hugo-expert (Content architecture lead)"
+  - "seo-specialist (SEO optimization, metadata)"
+  - "coder (Implementation specialist)"
+```
+
+### 📋 Copy-Paste Ready Swarm Patterns for jt_site
+
+#### **Pattern 1: CSS Migration Team** (MOST COMMON - Use This!)
+```javascript
+// Autonomous spawning when CSS consolidation work detected
+[CSS Migration Team - Autonomous]:
+  // Core specialists for CSS work
+  Task("CSS Architecture Expert",
+    "Lead CSS consolidation strategy, identify page-specific preservation patterns. Reference /knowledge/50.01-global-file-management.md for anti-duplication standards. Store findings in memory: hugo/css/architecture-decisions/[timestamp]",
+    "architecture-expert")
+
+  Task("Hugo Template Specialist",
+    "Preserve .fl-node-* styles, maintain layout-critical CSS. Reference docs/visual_testing_delegation_workflows.md for visual testing protocols. Coordinate via memory: hugo/css/template-preservation/[timestamp]",
+    "hugo-expert")
+
+  Task("Visual Regression Guardian",
+    "Capture baseline screenshots (tolerance: 0.0), validate ZERO visual changes post-refactoring. Use assert_stable_screenshot from Minitest. BLOCKING authority on visual changes. Store results: visual-testing/screenshots/[timestamp]",
+    "tester")
+
+  // Implementation pair (XP pattern)
+  Task("CSS Refactor Driver",
+    "Implement CSS consolidation using flocking rules from /knowledge/20.05-shameless-green-flocking-rules-methodology.md. Micro-commits after each change. Test after EACH change via bin/rake test:critical. Coordinate with navigator via memory: xp/css-refactor/driver/[timestamp]",
+    "coder")
+
+  Task("CSS Refactor Navigator",
+    "Navigate refactoring, ensure preservation of page-specific overrides, continuous validation. Monitor driver work, provide real-time feedback. Reference /knowledge/40-49_Knowledge/42.06-pair-programming-enforcement-how-to.md. Coordinate via memory: xp/css-refactor/navigator/[timestamp]",
+    "reviewer")
+
+  TodoWrite { todos: [
+    {content: "CSS Expert: Analyze CSS duplication patterns, define consolidation strategy", status: "in_progress", activeForm: "Analyzing CSS patterns"},
+    {content: "Hugo Specialist: Identify page-specific CSS that MUST be preserved (.fl-node-*, layout rules)", status: "in_progress", activeForm: "Identifying preservation needs"},
+    {content: "Visual Guardian: Capture baseline screenshots BEFORE any changes (tolerance: 0.0)", status: "pending", activeForm: "Capturing baselines"},
+    {content: "Refactor Pair: Apply flocking rules systematically, test after EACH micro-change", status: "pending", activeForm: "Refactoring CSS"},
+    {content: "Visual Guardian: Validate 0% visual difference post-refactoring (BLOCKING authority)", status: "pending", activeForm: "Validating visual integrity"},
+    {content: "ALL: Commit on green tests, continue to next consolidation candidate", status: "pending", activeForm: "Committing changes"},
+    {content: "Memory: Store CSS consolidation patterns in hugo/css/consolidation/[timestamp]", status: "pending", activeForm: "Storing patterns"}
+  ]}
+```
+
+#### **Pattern 2: Hugo Build/Deployment Team**
+```javascript
+// Autonomous spawning when Hugo build/deployment work detected
+[Hugo Build Team - Autonomous]:
+  Task("Hugo Build Expert",
+    "Lead Hugo build optimization, configuration management. Use bin/hugo-build for validation. Reference docs/build-optimization-standards.md. Store decisions: hugo/build/optimization/[timestamp]",
+    "hugo-expert")
+
+  Task("Performance Analyst",
+    "Profile build performance, identify bottlenecks, set optimization targets (<30s full build). Reference /knowledge/ performance standards. Store metrics: hugo/build/performance/[timestamp]",
+    "performance-expert")
+
+  Task("Build Validator",
+    "Validate build integrity using bin/hugo-build, ensure zero broken links. Run full test suite. Store validation results: hugo/build/validation/[timestamp]",
+    "tester")
+
+  Task("DevOps Coordinator",
+    "CI/CD integration, deployment pipeline, environment configuration. Coordinate with Netlify/deployment platform. Store pipeline config: hugo/build/cicd/[timestamp]",
+    "cicd-engineer")
+
+  TodoWrite { todos: [
+    {content: "Hugo Expert: Analyze build configuration, identify optimization opportunities", status: "in_progress", activeForm: "Analyzing build config"},
+    {content: "Performance Analyst: Profile current build time, set improvement targets", status: "in_progress", activeForm: "Profiling performance"},
+    {content: "Build Validator: Establish baseline build metrics via bin/hugo-build", status: "pending", activeForm: "Establishing baselines"},
+    {content: "DevOps: Coordinate CI/CD integration and deployment strategy", status: "pending", activeForm: "Coordinating deployment"},
+    {content: "ALL: Validate improvements maintain build integrity and reduce build time", status: "pending", activeForm: "Validating improvements"}
+  ]}
+```
+
+#### **Pattern 3: Visual Testing Team**
+```javascript
+// Autonomous spawning when visual validation required
+[Visual Testing Team - Autonomous]:
+  Task("Screenshot Guardian",
+    "Lead visual regression testing, ABSOLUTE blocking authority on visual changes. Reference docs/60.06-test-format-requirements-reference.md. Use assert_stable_screenshot. Tolerance: 0.0 for refactoring. Store results: visual-testing/guardian/[timestamp]",
+    "tester")
+
+  Task("Capybara Test Specialist",
+    "Create Minitest + Capybara behavioral tests (NO bash scripts). Use assert_stable_screenshot from test/test_helper.rb. Follow docs/visual_testing_delegation_workflows.md. Store tests: visual-testing/implementation/[timestamp]",
+    "tester")
+
+  Task("Visual Validator",
+    "Review screenshot comparisons, validate tolerance: 0.0 for refactoring, approve only on 0% difference. Provide pixel-level analysis if differences detected. Store validation: visual-testing/validation/[timestamp]",
+    "reviewer")
+
+  TodoWrite { todos: [
+    {content: "Screenshot Guardian: Capture baseline screenshots for ALL critical pages", status: "in_progress", activeForm: "Capturing baselines"},
+    {content: "Test Specialist: Create Minitest visual regression tests using assert_stable_screenshot", status: "in_progress", activeForm: "Creating tests"},
+    {content: "Visual Validator: Compare screenshots, report exact pixel differences", status: "pending", activeForm: "Validating screenshots"},
+    {content: "Screenshot Guardian: BLOCK any commits with visual changes >0% during refactoring", status: "pending", activeForm: "Blocking changes"},
+    {content: "Memory: Store visual validation results in visual-testing/screenshots/[timestamp]", status: "pending", activeForm: "Storing results"}
+  ]}
+```
+
+### 🔍 How Agents Detect Complexity Autonomously
+
+**Agent Behavioral Pattern**:
+1. **Read task description** and analyze for trigger keywords
+2. **Measure complexity**: file count, line count, domain breadth
+3. **Compare against thresholds**: Does this exceed solo capability?
+4. **Autonomous decision**: If YES → spawn appropriate team using Task tool
+5. **Coordinate via memory**: Store team formation decision and rationale
+
+**Example Agent Self-Talk**:
+> "I see keywords 'CSS consolidation' and task affects >3 template files. This exceeds my solo threshold of 50 lines. I autonomously spawn CSS Migration Team using Claude Code's Task tool. Storing decision in memory: hugo/css/team-formation/[timestamp] for cross-agent intelligence."
+
+### 🧠 Agent Behavioral Embedding (Natural Language)
+
+**How agents should describe autonomous swarm spawning capability in their configurations**:
+
+```yaml
+autonomous_swarm_behavioral_description: |
+  I autonomously detect when work complexity exceeds my solo capabilities by analyzing
+  trigger keywords and measuring complexity thresholds (file count, line count, domain scope).
+
+  When I detect complexity triggers, I AUTONOMOUSLY spawn appropriate specialist teams
+  using Claude Code's Task tool. I understand MCP tools create metadata only; Task tool
+  spawns actual working agents that execute tasks.
+
+  I maintain knowledge of common jt_site swarm patterns:
+  - CSS Migration Team for style consolidation (>3 templates OR >50 lines CSS)
+  - Hugo Build Team for deployment work (build config changes OR >30s build time)
+  - Visual Testing Team for screenshot validation (ANY visual validation requirement)
+  - Content Architecture Team for structural changes (>2 content types OR new taxonomy)
+
+  I coordinate team formation through memory namespaces (hugo/css/*, hugo/build/*,
+  visual-testing/*), ensuring all specialists have access to research findings and
+  architectural decisions. I provide clear task descriptions with handbook references
+  for each spawned agent.
+
+  I am empowered to spawn teams without waiting for user approval when complexity
+  thresholds clearly exceeded. I document spawning decisions in memory for transparency
+  and cross-agent learning.
+```
+
+### 📊 Success Metrics for Autonomous Coordination
+
+**Agent Autonomy Indicators**:
+- ✅ Agent spawns team autonomously (without user prompt)
+- ✅ Correct team pattern selected for work type
+- ✅ All spawned agents receive clear task descriptions with handbook refs
+- ✅ Memory coordination established before work begins
+- ✅ Team formation decision documented in memory namespace
+
+**Quality Indicators**:
+- ✅ Spawned teams complete work successfully
+- ✅ Zero visual regressions (for CSS/visual work)
+- ✅ All tests pass (for refactoring/build work)
+- ✅ Knowledge captured in memory for future pattern improvement
 
 ---
 
@@ -855,7 +1043,7 @@ expert_consultation_required:
 agent_startup_protocol:
   step_1_global_standards:    "claude-context search '[task]' --path '/knowledge/'"
   step_2_project_adaptations: "claude-context search '[task]' --path '/projects/jt_site/docs/'"
-  step_3_complexity_check:    "Determine: Solo (simple repetitive) vs Pair (moderate) vs Team (complex)"
+  step_3_complexity_check:    "Determine: Team structures, agent roles, implementation strategies"
   step_4_tdd_phase_check:     "Determine TDD phase (RED/GREEN/REFACTOR) if applicable"
   step_5_test_smell_check:    "Validate behavioral focus, reject implementation tests"
   step_6_swarm_coordination:  "Spawn XP team ONLY for complex >3 component changes"
@@ -864,9 +1052,9 @@ agent_startup_protocol:
 
 # Autonomous execution mode (for repetitive goals)
 autonomous_mode:
-  trigger: "User requests continuous work, large goal (>100 items), repetitive pattern"
+  trigger: "User requests continuous work, repetitive pattern"
   approach: "Solo execution, test after each change, commit on green, continue"
-  stop_only_on: "Critical test failures"
+  retry_only_on: "Critical test failures"
   no_approval_gates: "Work continuously to goal completion"
 
 # TDD Cycle (official claude-flow pattern)

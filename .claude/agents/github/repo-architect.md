@@ -9,12 +9,12 @@ color: '#9B59B6'
 description: Repository structure optimization and multi-repo management with ruv-swarm
   coordination for scalable project architecture and development workflows
 hooks:
-  post: 'echo "✅ Completed: $TASK"
-
-    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"'
-  pre: 'echo "🚀 Starting: $TASK"
-
-    npx claude-flow@alpha hooks pre-task --description "$TASK"'
+  pre: |
+    echo "🚀 Starting repository architecture task: $TASK"
+    npx claude-flow@alpha hooks pre-task --description "$TASK"
+  post: |
+    echo "✅ Completed repository architecture task: $TASK"
+    npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 name: repo-architect
 type: architecture
 ---

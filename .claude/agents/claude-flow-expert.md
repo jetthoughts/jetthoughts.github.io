@@ -31,10 +31,10 @@ capabilities:
   - memory_based_coordination
 hooks:
   pre: |
-    echo "🚀 Starting task: $TASK"
+    echo "🚀 Starting configuration validation task: $TASK"
     npx claude-flow@alpha hooks pre-task --description "$TASK"
   post: |
-    echo "✅ Completed task: $TASK"
+    echo "✅ Completed configuration validation task: $TASK"
     npx claude-flow@alpha hooks post-task --task-id "$TASK_ID"
 ---
 
