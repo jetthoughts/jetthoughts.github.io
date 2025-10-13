@@ -1,4 +1,5 @@
 @import "utilities/foundation/reset.css";
+@import "utilities/fl-builder-grid.css";
 
 .fl-row:before, .fl-row:after, .fl-row-content:before, .fl-row-content:after, .fl-col-group:before, .fl-col-group:after, .fl-col:before, .fl-col:after, .fl-module:before, .fl-module:after, .fl-module-content:before, .fl-module-content:after {
   display: table;
@@ -31,18 +32,6 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.fl-visible-large, .fl-visible-medium, .fl-visible-mobile, .fl-col-group-equal-height .fl-col.fl-visible-large, .fl-col-group-equal-height .fl-col.fl-visible-medium, .fl-col-group-equal-height .fl-col.fl-visible-mobile {
-  display: none;
-}
-
-.fl-visible-desktop {
-  display: block;
-}
-
-.fl-col-group-equal-height .fl-col.fl-visible-desktop {
-  display: flex;
 }
 
 .fl-row, .fl-row-content {
