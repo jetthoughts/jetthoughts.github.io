@@ -77,7 +77,7 @@ grep -r "fl-module\|fl-node\|fl-row\|fl-col" themes/beaver/layouts/ | wc -l
 {{- $staticHomepageCSS := slice
     (resources.Get "css/fl-homepage-layout.css")
     (resources.Get "css/component-bundle.css")
-    (resources.Get "css/base-layout.css")
+    (resources.Get "css/vendors/base-4.min.css")
     ...
 }}
 ```
@@ -87,7 +87,7 @@ grep -r "fl-module\|fl-node\|fl-row\|fl-col" themes/beaver/layouts/ | wc -l
 {{- $staticHomepageCSS := slice
     (resources.Get "css/component-bundle.css")
     (resources.Get "css/bem-home-page-minimal.css")
-    (resources.Get "css/base-layout.css")
+    (resources.Get "css/vendors/base-4.min.css")
     ...
 }}
 ```

@@ -33,7 +33,7 @@
 {{- $rating_text := .rating_text | default "Based on client reviews" -}}
 {{- $node_id := .node_id | default "testimonials" -}}
 
-{{- $nonCriticalCSS := resources.Get "css/swiper.min.css" | fingerprint "md5" -}}
+{{- $nonCriticalCSS := resources.Get "css/vendors/swiper.min.css" | fingerprint "md5" -}}
 <link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
 

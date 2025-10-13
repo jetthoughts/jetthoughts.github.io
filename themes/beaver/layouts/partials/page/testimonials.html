@@ -1,4 +1,4 @@
-{{ $nonCriticalCSS := resources.Get "css/swiper.min.css" | fingerprint "md5" }}
+{{ $nonCriticalCSS := resources.Get "css/vendors/swiper.min.css" | fingerprint "md5" }}
 <link
   fetchpriority="low"
   rel="preload"

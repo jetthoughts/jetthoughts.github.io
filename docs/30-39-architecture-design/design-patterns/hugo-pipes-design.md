@@ -10,7 +10,7 @@ This document outlines the comprehensive design for implementing Hugo Pipes asse
 
 - **Large Layout Files**: 590-layout.css (13,128 lines), multiple page-specific layouts
 - **Component Files**: component-bundle.css (2,773 lines), navigation.css (439 lines)  
-- **Theme Files**: theme-main.css (3,643 lines), base-layout.css (2,892 lines)
+- **Theme Files**: theme-main.css (3,643 lines), base-4.min.css (2,892 lines)
 - **Page-Specific CSS**: homepage.css (1,969 lines), services-layout.css (1,679 lines)
 - **Small Components**: 35 files under 200 lines each
 

@@ -105,6 +105,21 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("clients", "footer", css: "footer")
   end
 
+  def test_services
+    visit "/services/"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("services", "overview", css: '[data-node="i8x1zs2grf9h"]')
+    verify_section_for("services", "services", css: '[data-node="nhf6l2ycmzoe"]')
+    verify_section_for("services", "technologies")
+    verify_section_for("services", "use-cases")
+    verify_section_for("services", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
+    verify_section_for("services", "cta-contact_us", css: '[data-node="ohd51ixf3842"]')
+    verify_section_for("services", "footer", css: "footer")
+  end
+
   def test_services_fractional_cto_sections
     visit "/services/fractional-cto/"
 
@@ -117,6 +132,19 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("services/fractional-cto", "testimonials")
     verify_section_for("services/fractional-cto", "cta-contact_us", css: '[data-node="x4hl5foues6i"]')
     verify_section_for("services/fractional-cto", "footer", css: "footer")
+  end
+
+  def test_use_cases
+    visit "/use-cases/"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("use-cases", "overview", css: '[data-node="g2six6yjldnm"]')
+    verify_section_for("use-cases", "technologies")
+    verify_section_for("use-cases", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
+    verify_section_for("use-cases", "cta-contact_us", css: '[data-node="7l8hya5ixfdo"]')
+    verify_section_for("use-cases", "footer", css: "footer")
   end
 
   def test_use_cases_mvp_sections

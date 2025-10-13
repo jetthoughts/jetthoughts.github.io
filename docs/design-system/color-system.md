@@ -26,7 +26,7 @@ The JetThoughts Color System provides a unified, accessible, and maintainable ap
 
 ## 🎨 CSS Variables Reference
 
-All color variables are defined in `themes/beaver/assets/css/base-layout.css` within the `:root` selector for global availability.
+All color variables are defined in `themes/beaver/assets/css/vendors/base-4.min.css` within the `:root` selector for global availability.
 
 ### Brand Colors (Primary Palette)
 
@@ -341,7 +341,7 @@ Status indicators include both color and visual symbols:
 ### Remaining Files to Migrate
 High-impact files requiring migration (by number of color instances):
 1. `fl-homepage-layout.css` - 267 instances
-2. `base-layout.css` - 181 instances
+2. `base-4.min.css` - 181 instances
 3. `fl-clients-layout.css` - 137 instances
 4. `fl-service-detail-layout.css` - 127 instances
 5. `fl-component-layout.css` - 119 instances
@@ -590,7 +590,7 @@ highlight_color: "primary"  # primary, error, success
 ## 🔧 Implementation Files
 
 ### Primary Files
-- **Variable Definitions**: `themes/beaver/assets/css/base-layout.css` (lines 44-83)
+- **Variable Definitions**: `themes/beaver/assets/css/vendors/base-4.min.css` (lines 44-83)
 - **Utility Classes**: `themes/beaver/assets/css/utilities/_colors.scss`
 - **Accessibility Validation**: `themes/beaver/assets/css/utilities/_color-accessibility.scss`
 

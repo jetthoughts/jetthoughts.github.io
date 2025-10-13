@@ -2,7 +2,7 @@
 /* ALL layout CSS consolidated via @import for zero-duplication architecture */
 
 /* Base Layouts */
-@import "base-layout.css";
+@import "vendors/base-4.min.css";
 @import "beaver-grid-layout.css";
 @import "homepage-layout.css";
 @import "services-layout.css";

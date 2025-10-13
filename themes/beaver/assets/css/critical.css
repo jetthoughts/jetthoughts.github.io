@@ -7,7 +7,7 @@
 @import "utilities/responsive/breakpoints.css";
 @import "utilities/responsive/visibility.css";
 @import "components/buttons.css";
-@import "base-layout.css";
+@import "vendors/base-4.min.css";
 @import "homepage-layout.css";
 @import "services-layout.css";
 @import "fl-homepage-layout.css";

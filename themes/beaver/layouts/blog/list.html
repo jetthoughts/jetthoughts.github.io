@@ -8,7 +8,7 @@
     (resources.Get "css/pagination.css")
     (resources.Get "css/services-layout.css")
     (resources.Get "css/style.css")
-    (resources.Get "css/base-layout.css")
+    (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/homepage-layout.css")
     (resources.Get "css/component-bundle.css")
     (resources.Get "css/theme-main.css")
@@ -16,8 +16,8 @@
     (resources.Get "css/footer.css")
   }}
 
-  {{ partial "assets/css-processor.html" (dict 
-    "resources" $cssFiles 
+  {{ partial "assets/css-processor.html" (dict
+    "resources" $cssFiles
     "bundleName" "blog-list"
     "context" .
     "media" "all"

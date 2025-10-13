@@ -2,7 +2,7 @@
   {{- $cssResources := slice
     (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
     (resources.Get "css/404.css")
-    (resources.Get "css/base-4.min.css")
+    (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/skin-65eda28877e04.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
     (resources.Get "css/586.css")
