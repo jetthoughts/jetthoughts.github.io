@@ -414,21 +414,10 @@
   text-align: right;
 }
 
-.fl-photo-content {
-  display: inline-block;
-  line-height: 0;
-  position: relative;
-  max-width: 100%;
-}
+/* .fl-photo-content and .fl-photo-content img removed - already in critical/fl-common-modules.css */
 
 .fl-photo-img-svg {
   width: 100%;
-}
-
-.fl-photo-content img {
-  display: inline;
-  height: auto;
-  max-width: 100%;
 }
 
 .fl-photo-crop-circle img {
@@ -2593,10 +2582,7 @@ body:not(.single-fl-theme-layout) .fl-builder-content[data-overlay="1"]:not(.fl-
   }
 }
 
-.fl-module-heading .fl-heading {
-  padding: 0 !important;
-  margin: 0 !important;
-}
+/* .fl-module-heading .fl-heading removed - already in critical/fl-common-modules.css */
 
 .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading a, .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text, .fl-row .fl-col .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text *, .fl-node-vieclstgwdma h5.fl-heading .fl-heading-text {
   color: var(--color-white);
