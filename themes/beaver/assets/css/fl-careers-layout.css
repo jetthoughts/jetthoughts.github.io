@@ -1,5 +1,5 @@
 @import "utilities/foundation/reset.css";
-@import "utilities/foundation/clearfix.css";
+@import "utilities/fl-builder-grid.css";
 @import "components/c-hero-sections.css";
 @import "components/c-infobox.css";
 @import "components/c-spacer.css";

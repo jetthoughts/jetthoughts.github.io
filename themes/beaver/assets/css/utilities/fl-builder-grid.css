@@ -10,6 +10,13 @@
   clear: both;
 }
 
+/* Utility Clearfix Class (from foundation/clearfix.css consolidation) */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
 /* FL-Builder Basic Grid Layout */
 .fl-row, .fl-row-content {
   margin-left: auto;

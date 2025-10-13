@@ -6,7 +6,7 @@
   -webkit-box-sizing: border-box; */
 /* Removed: see utilities/foundation/reset.css */
 
-/* Removed: FL-Builder clearfix before - now in utilities/foundation/clearfix.css */
+/* Removed: FL-Builder clearfix before - now in utilities/fl-builder-grid.css */
 /* .fl-row:before, .fl-row:after, .fl-row-content:before, .fl-row-content:after, .fl-col-group:before, .fl-col-group:after, .fl-col:before, .fl-col:after, .fl-module:before, .fl-module:after, .fl-module-content:before, .fl-module-content:after {
   display: table;
 }
