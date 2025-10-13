@@ -4372,10 +4372,7 @@ img.mfp-img {
   }
 }
 
-.fl-module-heading .fl-heading {
-  padding: 0 !important;
-  margin: 0 !important;
-}
+/* .fl-module-heading .fl-heading removed - already in critical/fl-common-modules.css */
 
 .fl-node-j23qxyn7ofsc.fl-module-heading .fl-heading {
   font-size: 80px;
