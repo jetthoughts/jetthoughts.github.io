@@ -1,143 +1,156 @@
-{{/*
-  Service Page Template using Service Card Components
-
-  This template demonstrates how to use the service-card.html partial
-  for creating dynamic service pages with related services.
-
-  Usage in content front matter:
-  related_services:
-    - icon: "fractional-cto"
-      title: "Fractional CTO"
-      description: "Get on-demand access to a CTO..."
-      link: "services/fractional-cto/"
-      cta_text: "Learn About Fractional CTO Services"
-*/}}
-
 {{ define "header" }}
-{{ partial "header/critical/single/services.html" . }}
-{{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-{{- $servicesResources := slice
-(resources.Get "css/fl-service-detail-layout.css")
-(resources.Get "css/component-bundle.css")
-$dynamicCSS586
-(resources.Get "css/services-layout.css")
-(resources.Get "css/vendors/base-4.min.css")
-(resources.Get "css/style.css")
-(resources.Get "css/theme-main.css")
-(resources.Get "css/footer.css")
--}}
-{{ partial "assets/css-processor.html" (dict "resources" $servicesResources "bundleName" "single-services" "context" .) }}
+  {{ partial "header/critical/single/services.html" . }}
+  {{- $servicesResources := slice
+    (resources.Get "css/critical/base.css")
+    (resources.Get "css/fl-service-detail-layout.css")
+    (resources.Get "css/component-bundle.css")
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/services-layout.css")
+    (resources.Get "css/vendors/base-4.min.css")
+    (resources.Get "css/style.css")
+    (resources.Get "css/theme-main.css")
+    (resources.Get "css/footer.css")
+  -}}
+  {{ partial "assets/css-processor.html" (dict "resources" $servicesResources "bundleName" "single-services" "context" .) }}
 {{ end }}
 
 {{ define "main" }}
-<div id="fl-main-content" class="fl-page-content" role="main">
+  <div id="fl-main-content" class="fl-page-content" role="main">
     <div class="fl-content-full container">
-       <div class="row">
-          <div class="fl-content col-md-12">
-             <article class="fl-post" id="fl-post-{{ .Params.id | default .File.BaseFileName }}">
-                <div class="fl-post-content clearfix">
-                   <div class="fl-builder-content fl-builder-content-primary fl-builder-global-templates-locked">
-
-                      <!-- Hero Section -->
-                      <div class="fl-row fl-row-full-width fl-row-bg-photo fl-row-default-height fl-row-align-center fl-row-has-layers">
-                         <div class="fl-row-content-wrap">
-                            <div class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
-                               <svg class="fl-builder-layer-align-bottom-center" viewBox="0 0 800 450" preserveAspectRatio="none">
-                                  <defs></defs>
-                                  <g class="fl-shape-content">
-                                     <rect class="fl-shape" x="0" y="0" width="800" height="450"></rect>
-                                  </g>
-                               </svg>
+      <div class="row">
+        <div class="fl-content col-md-12">
+          <article
+            class="fl-post"
+            id="fl-post-{{ .Params.id | default .File.BaseFileName }}">
+            <div class="fl-post-content clearfix">
+              <div
+                class="fl-builder-content fl-builder-content-primary fl-builder-global-templates-locked">
+                <!-- Hero Section -->
+                <div
+                  class="fl-row fl-row-full-width fl-row-bg-photo fl-row-default-height fl-row-align-center fl-row-has-layers">
+                  <div class="fl-row-content-wrap">
+                    <div
+                      class="fl-builder-layer fl-builder-shape-layer fl-builder-bottom-edge-layer fl-builder-shape-rect">
+                      <svg
+                        class="fl-builder-layer-align-bottom-center"
+                        viewBox="0 0 800 450"
+                        preserveAspectRatio="none">
+                        <defs></defs>
+                        <g class="fl-shape-content">
+                          <rect
+                            class="fl-shape"
+                            x="0"
+                            y="0"
+                            width="800"
+                            height="450"></rect>
+                        </g>
+                      </svg>
+                    </div>
+                    <div
+                      class="fl-row-content fl-row-fixed-width fl-node-content">
+                      <div class="fl-col-group">
+                        <div class="fl-col">
+                          <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-heading">
+                              <div class="fl-module-content fl-node-content">
+                                <h1 class="fl-heading">
+                                  <span class="fl-heading-text"
+                                    >{{ .Page.Params.headline | default .Title }}</span
+                                  >
+                                </h1>
+                              </div>
                             </div>
-                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                               <div class="fl-col-group">
-                                  <div class="fl-col">
-                                     <div class="fl-col-content fl-node-content">
-                                        <div class="fl-module fl-module-heading">
-                                           <div class="fl-module-content fl-node-content">
-                                              <h1 class="fl-heading">
-                                                 <span class="fl-heading-text">{{ .Page.Params.headline | default .Title }}</span>
-                                              </h1>
-                                           </div>
-                                        </div>
-                                        <div class="fl-module fl-module-rich-text">
-                                           <div class="fl-module-content fl-node-content">
-                                              <div class="fl-rich-text">
-                                                 <p>{{ .Page.Params.excerpt | default .Description }}</p>
-                                              </div>
-                                           </div>
-                                        </div>
-                                        <div class="fl-module fl-module-button">
-                                           <div class="fl-module-content fl-node-content">
-                                              <div class="fl-button-wrap fl-button-width-auto fl-button-left">
-                                                 <a href="{{ relURL "free-consultation/" }}" target="_self" class="fl-button">
-                                                 <span class="fl-button-text">Talk to an Expert</span>
-                                                 </a>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
+                            <div class="fl-module fl-module-rich-text">
+                              <div class="fl-module-content fl-node-content">
+                                <div class="fl-rich-text">
+                                  <p>
+                                    {{ .Page.Params.excerpt | default .Description }}
+                                  </p>
+                                </div>
+                              </div>
                             </div>
-                         </div>
+                            <div class="fl-module fl-module-button">
+                              <div class="fl-module-content fl-node-content">
+                                <div
+                                  class="fl-button-wrap fl-button-width-auto fl-button-left">
+                                  <a
+                                    href="{{ relURL "free-consultation/" }}"
+                                    target="_self"
+                                    class="fl-button">
+                                    <span class="fl-button-text"
+                                      >Talk to an Expert</span
+                                    >
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
-                      <!-- Content Section -->
-                      <div class="fl-row fl-row-full-width fl-row-default-height">
-                         <div class="fl-row-content-wrap">
-                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                               <div class="fl-col-group">
-                                  <div class="fl-col">
-                                     <div class="fl-col-content fl-node-content">
-                                        <div class="fl-module fl-module-rich-text">
-                                           <div class="fl-module-content fl-node-content">
-                                              <div class="fl-rich-text">
-                                                 {{ .Content }}
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-
-                      <!-- Related Services Section (using service-card component) -->
-                      {{ if .Params.related_services }}
-                      <div class="fl-row fl-row-full-width fl-row-default-height">
-                         <div class="fl-row-content-wrap">
-                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
-                               <div class="fl-col-group">
-                                  <div class="fl-col">
-                                     <div class="fl-col-content fl-node-content">
-                                        <div class="fl-module fl-module-rich-text">
-                                           <div class="fl-module-content fl-node-content">
-                                              <div class="fl-rich-text">
-                                                 <h2>Related Services</h2>
-                                                 <p>Explore other services that complement this offering.</p>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                               <div class="fl-col-group fl-col-group-custom-width">
-                                  {{ range .Params.related_services }}
-                                    {{ partial "components/service-card.html" . }}
-                                  {{ end }}
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                      {{ end }}
-
-                   </div>
+                    </div>
+                  </div>
                 </div>
-             </article>
-          </div>
-       </div>
+
+                <!-- Content Section -->
+                <div class="fl-row fl-row-full-width fl-row-default-height">
+                  <div class="fl-row-content-wrap">
+                    <div
+                      class="fl-row-content fl-row-fixed-width fl-node-content">
+                      <div class="fl-col-group">
+                        <div class="fl-col">
+                          <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-rich-text">
+                              <div class="fl-module-content fl-node-content">
+                                <div class="fl-rich-text">
+                                  {{ .Content }}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Related Services Section (using service-card component) -->
+                {{ if .Params.related_services }}
+                  <div class="fl-row fl-row-full-width fl-row-default-height">
+                    <div class="fl-row-content-wrap">
+                      <div
+                        class="fl-row-content fl-row-fixed-width fl-node-content">
+                        <div class="fl-col-group">
+                          <div class="fl-col">
+                            <div class="fl-col-content fl-node-content">
+                              <div class="fl-module fl-module-rich-text">
+                                <div class="fl-module-content fl-node-content">
+                                  <div class="fl-rich-text">
+                                    <h2>Related Services</h2>
+                                    <p>
+                                      Explore other services that complement
+                                      this offering.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fl-col-group fl-col-group-custom-width">
+                          {{ range .Params.related_services }}
+                            {{ partial "components/service-card.html" . }}
+                          {{ end }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {{ end }}
+
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 {{ end }}
