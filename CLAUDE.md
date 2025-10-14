@@ -1120,6 +1120,7 @@ css_consolidation_blockers:
     - "3114-layout.css" # Blog pages - no blog-critical.html infrastructure
     - "3059-layout.css" # Privacy Policy - @import changes CSS cascade order causing 19-95% visual regressions
     - "3082-layout.css" # No themes/beaver/layouts/partials/header/critical/3082-critical.html - contains 20+ .fl-node-* layout-critical styles
+    - "3086-layout2.css" # Careers page - 583 FL-node-* styles (5,157 lines) - exceeds >500 HIGH RISK threshold - largest page-specific CSS file
 
   blocking_rule: "NEVER consolidate CSS from these files using @import method until CSS cascade dependencies resolved"
 
