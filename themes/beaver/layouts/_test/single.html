@@ -1,5 +1,4 @@
 {{ define "header" }}
-{{ partial "header/critical/base-critical.html" . }}
 {{- $testCSS := resources.Get "css/component-bundle.css" }}
 <style>{{ $testCSS.Content | safeCSS }}</style>
 {{ end }}

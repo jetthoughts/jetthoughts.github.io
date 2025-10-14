@@ -1,5 +1,4 @@
 {{ define "header" }}
-  {{ partial "header/critical/single/services.html" . }}
   {{- $servicesResources := slice
     (resources.Get "css/critical/base.css")
     (resources.Get "css/critical/single-services.css")
