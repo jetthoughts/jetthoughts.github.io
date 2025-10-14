@@ -2793,53 +2793,7 @@ fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after 
 /* FL-Builder visibility rules removed - already in utilities/fl-builder-visibility.css */
 
 /* .fl-row-content-wrap { position: relative; } removed - already in critical/fl-layout-grid.css */
-.fl-builder-mobile .fl-row-bg-photo .fl-row-content-wrap {
-  background-attachment: scroll;
-}
-
-.fl-row-bg-video, .fl-row-bg-video .fl-row-content, .fl-row-bg-embed, .fl-row-bg-embed .fl-row-content {
-  position: relative;
-}
-
-.fl-row-bg-video .fl-bg-video, .fl-row-bg-embed .fl-bg-embed-code {
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.fl-row-bg-video .fl-bg-video video, .fl-row-bg-embed .fl-bg-embed-code video {
-  bottom: 0;
-  left: 0px;
-  max-width: none;
-  position: absolute;
-  right: 0;
-  top: 0px;
-}
-
-.fl-row-bg-video .fl-bg-video video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-}
-
-.fl-row-bg-video .fl-bg-video iframe, .fl-row-bg-embed .fl-bg-embed-code iframe {
-  pointer-events: none;
-  width: 100vw;
-  height: 56.25vw;
-  max-width: none;
-  min-height: 100vh;
-  min-width: 177.77vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-}
+/* FL-Builder background video/embed patterns moved to fl-foundation.css */
 
 .fl-bg-video-fallback {
   background-position: 50% 50%;
@@ -2850,10 +2804,6 @@ fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after 
   position: absolute;
   right: 0px;
   top: 0px;
-}
-
-.fl-row-bg-slideshow, .fl-row-bg-slideshow .fl-row-content {
-  position: relative;
 }
 
 .fl-row .fl-bg-slideshow {
