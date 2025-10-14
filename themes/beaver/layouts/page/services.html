@@ -1,8 +1,7 @@
 {{ define "header" }}
-  {{ partial "header/critical/services.html" . }}
-
   {{- $CSS := slice
     (resources.Get "css/critical/base.css")
+    (resources.Get "css/critical/services-critical.css")
     (resources.Get "css/737-layout.css")
     (resources.Get "css/bf72bba397177a0376baed325bffdc75-layout-bundle.css")
     (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
@@ -13,7 +12,7 @@
     (resources.Get "css/technologies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
-    -}}
+  -}}
 
   {{ partialCached "assets/css-processor.html" (dict "resources" $CSS "bundleName" "services") "services" }}
 {{ end }}
