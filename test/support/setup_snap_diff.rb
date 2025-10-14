@@ -22,7 +22,7 @@ Capybara::Screenshot.window_size = nil
 #
 # stability_time_limit: Time to wait for the page to be stable before taking screenshot
 # Increased from 0.25s to 1.0s to reduce flakiness from animations/loading states
-Capybara::Screenshot.stability_time_limit = ENV.fetch("SCREENSHOT_STABILITY_TIME", "1.0").to_f
+Capybara::Screenshot.stability_time_limit = ENV.fetch("SCREENSHOT_STABILITY_TIME", "0.1").to_f
 
 # tolerance: Allowed difference percentage between baseline and current screenshot
 # Increased from 0.005 (0.5%) to 0.01 (1%) to handle cross-platform rendering differences
