@@ -1,9 +1,7 @@
 {{ define "header" }}
-  {{ partial "header/critical/homepage.html" . }}
-{{ end }}
-
-{{ define "footer" }}
   {{- $nonCriticalResources := slice
+    (resources.Get "css/critical/base.css")
+    (resources.Get "css/critical/homepage-critical.css")
     (resources.Get "css/companies.css")
     (resources.Get "css/footer.css")
     (resources.Get "css/homepage.css")
@@ -18,7 +16,9 @@
   }}
 
   {{ partialCached "assets/css-processor.html" (dict "resources" $nonCriticalResources "bundleName" "homepage") "homepage" }}
+{{ end }}
 
+{{ define "footer" }}
   {{ $tabsResources := slice (resources.Get "js/tabs.js") }}
   {{ partial "assets/js-processor.html" (dict "resources" $tabsResources "bundleName" "tabs" "defer" true) }}
 
