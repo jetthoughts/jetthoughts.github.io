@@ -105,6 +105,20 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("clients", "footer", css: "footer")
   end
 
+  def test_client_agent_inbox_sections
+    visit "/clients/agent-inbox/"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("clients/agent-inbox", "overview", css: '[data-node="pljy58ha90t6"]')
+    verify_section_for("clients/agent-inbox", "solution", css: '[data-node="xaj4396uy5vp"]')
+    verify_section_for("clients/agent-inbox", "testimonial", css: '[data-node="9oke63pn1lct"]')
+    verify_section_for("clients/agent-inbox", "more-cases", css: '[data-node="31daogzev674"]')
+    verify_section_for("clients/agent-inbox", "cta-contact_us", css: '[data-node="xwpgvtdncjb2"]')
+    verify_section_for("clients/agent-inbox", "footer", css: "footer")
+  end
+
   def test_services
     visit "/services/"
 
