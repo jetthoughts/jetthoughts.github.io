@@ -55,13 +55,13 @@
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
-│ Phase 2: FL-Builder Foundation Extraction                       │
+│ Phase 2: Shared Component Extraction (REVISED)                  │
 │ Duration: 40-50 hours | Impact: 1,900-2,900 lines | Risk: MED   │
 ├─────────────────────────────────────────────────────────────────┤
-│ ✅ WP2.1: FL-Row Foundation Extraction     [🔲 Not Started]    │
-│ ✅ WP2.2: FL-Col Grid Foundation           [🔲 Not Started]    │
-│ ✅ WP2.3: FL-Visible Responsive Foundation [🔲 Not Started]    │
-│ ✅ WP2.4: Foundation Integration           [🔲 Not Started]    │
+│ ✅ WP2.1: Companies Component Extraction   [🔲 Not Started]    │
+│ ✅ WP2.2: Technologies Component Extract   [🔲 Not Started]    │
+│ ✅ WP2.3: Pagination Component Extract     [🔲 Not Started]    │
+│ ✅ WP2.4: Shared Utilities Consolidation   [🔲 Not Started]    │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -146,6 +146,29 @@ bin/rake test:critical  # MUST pass 100%
 - ✅ **Tolerance**: ≤3% for new features, **0% for refactoring**
 - ✅ **Protocol**: Screenshot comparison before/after each work package
 - ✅ **Pages**: All 7 FL-Builder pages (homepage, services, use-cases, service-detail, clients, about, careers)
+
+### CSS Loading Order Constraints (ABSOLUTE BLOCKS)
+
+**Reference**: `css-loading-order-analysis.md` (Comprehensive CSS cascade analysis)
+
+**NEVER Consolidate** (Vendor Dependencies):
+- 🚨 **Foundation Framework** (`css/vendors/base-4.min.css`) - Grid system used by 5+ pages
+- 🚨 **ALL FL-Builder Layout Files** (`css/*-layout.css`) - Page-specific `.fl-node-{nodeId}` selectors
+- 🚨 **Template-Generated CSS** (`dynamic-icons.css`, `dynamic-404-590.css`) - Require Hugo template execution
+- 🚨 **Critical CSS Files** (`css/critical/*.css`) - Performance-critical, page-specific load order
+
+**CSS Cascade Layers** (Must Preserve Order):
+1. **Base Layer**: Critical CSS (resets, typography) - MUST load FIRST
+2. **Layout Layer**: Foundation grid + FL-builder layouts - MUST load SECOND
+3. **Component Layer**: Icons, modules, component bundles - MUST load THIRD
+4. **Theme Layer**: style.css, skin.css - MUST load FOURTH
+5. **Footer Layer**: footer.css - MUST load LAST
+
+**Validation Protocol**:
+- ✅ Verify CSS load order preserved during extraction
+- ✅ NO modifications to Foundation framework files
+- ✅ NO modifications to FL-builder layout files
+- ✅ Visual regression tolerance: 0.003 (as per bin/test default)
 
 ### Hugo Pipeline Status
 - ✅ **Already Optimal**: resources.Concat, PostCSS, fingerprinting, minification
