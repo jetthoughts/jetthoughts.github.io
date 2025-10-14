@@ -1,21 +1,26 @@
 {{ define "header" }}
-  {{ partial "header/critical/single/careers.html" . }}
-  {{- $dynamicCSS586 := resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" . }}
-  {{- $careersResources := slice
-    (resources.Get "css/homepage-layout.css")
-    (resources.Get "css/beaver-grid-layout.css")
-    $dynamicCSS586
-    (resources.Get "css/services-layout.css")
+  {{- $CSS := slice
+    (resources.Get "css/critical/single-careers.css")
+    (resources.Get "css/3114-layout.css")
+    (resources.Get "css/e966db44b09892b8d7d492247c67e86c-layout-bundle.css")
+    (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+    (resources.Get "css/586.css")
     (resources.Get "css/homepage.css")
     (resources.Get "css/vendors/base-4.min.css")
     (resources.Get "css/style.css")
-    (resources.Get "css/theme-main.css")
+    (resources.Get "css/skin-65eda28877e04.css")
     (resources.Get "css/footer.css")
   -}}
-  {{ partialCached "assets/css-processor.html" (dict "resources" $careersResources "bundleName" "single-careers") "single-careers" }}
+
+  {{ partialCached "assets/css-processor.html" (dict "resources" $CSS "bundleName" "single-career") "single-career" }}
 {{ end }}
+
 {{ define "main" }}
-  <div id="fl-main-content" class="fl-page-content" role="main">
+  <div
+    id="fl-main-content"
+    class="fl-page-content"
+    itemprop="mainContentOfPage"
+    role="main">
     <div
       class="fl-builder-content fl-builder-content-3050 fl-builder-global-templates-locked"
       data-post-id="3050">
@@ -23,18 +28,18 @@
         class="fl-row fl-row-full-width fl-row-bg-photo fl-node-3debxjmt89f4 fl-row-default-height fl-row-align-center"
         data-node="3debxjmt89f4">
         <div class="fl-row-content-wrap">
-          <div class="fl-row-content fl-row-fixed-width">
+          <div class="fl-row-content fl-row-fixed-width fl-node-content">
             <div
               class="fl-col-group fl-node-l6ztmq3h7fv2 fl-col-group-custom-width"
               data-node="l6ztmq3h7fv2">
               <div
                 class="fl-col fl-node-8ws2e9fm0yqn fl-col-small-custom-width"
                 data-node="8ws2e9fm0yqn">
-                <div class="fl-col-content">
+                <div class="fl-col-content fl-node-content">
                   <div
                     class="fl-module fl-module-heading fl-node-rq3ws0n4gdmx"
                     data-node="rq3ws0n4gdmx">
-                    <div class="fl-module-content">
+                    <div class="fl-module-content fl-node-content">
                       <h1 class="fl-heading">
                         <span class="fl-heading-text"
                           >{{ .Params.position }}</span
@@ -48,42 +53,40 @@
             <div
               class="fl-col-group fl-node-0enadgf5wp84 fl-col-group-equal-height fl-col-group-align-top fl-col-group-custom-width"
               data-node="0enadgf5wp84">
-              {{ with .Params.requirements }}
-                {{ range . }}
-                  <div
-                    class="fl-col fl-node-nmsh5axc3k28 fl-col-small fl-col-small-custom-width"
-                    data-node="nmsh5axc3k28">
-                    <div class="fl-col-content">
-                      <div
-                        class="fl-module fl-module-rich-text fl-node-qs2ucemf7j56"
-                        data-node="qs2ucemf7j56">
-                        <div class="fl-module-content">
-                          <div class="fl-rich-text">
-                            <p>{{ .name }}</p>
-                          </div>
+              {{ range .Params.requirements }}
+                <div
+                  class="fl-col fl-node-nmsh5axc3k28 fl-col-small fl-col-small-custom-width"
+                  data-node="nmsh5axc3k28">
+                  <div class="fl-col-content fl-node-content">
+                    <div
+                      class="fl-module fl-module-rich-text fl-node-qs2ucemf7j56"
+                      data-node="qs2ucemf7j56">
+                      <div class="fl-module-content fl-node-content">
+                        <div class="fl-rich-text">
+                          <p>{{ .name }}</p>
                         </div>
                       </div>
-                      <div
-                        class="fl-module fl-module-rich-text fl-node-73cldefikyg5"
-                        data-node="73cldefikyg5">
-                        <div class="fl-module-content">
-                          <div class="fl-rich-text">
-                            <p>{{ .value }}</p>
-                          </div>
+                    </div>
+                    <div
+                      class="fl-module fl-module-rich-text fl-node-73cldefikyg5"
+                      data-node="73cldefikyg5">
+                      <div class="fl-module-content fl-node-content">
+                        <div class="fl-rich-text">
+                          <p>{{ .value }}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                {{ end }}
+                </div>
               {{ end }}
               <div
                 class="fl-col fl-node-5m4it1br29ze fl-col-small fl-col-small-custom-width"
                 data-node="5m4it1br29ze">
-                <div class="fl-col-content">
+                <div class="fl-col-content fl-node-content">
                   <div
                     class="fl-module fl-module-rich-text fl-node-wtch9dloa7yx"
                     data-node="wtch9dloa7yx">
-                    <div class="fl-module-content">
+                    <div class="fl-module-content fl-node-content">
                       <div class="fl-rich-text">
                         <p>Share to</p>
                       </div>
@@ -92,7 +95,7 @@
                   <div
                     class="fl-module fl-module-pp-social-share fl-node-rnjk7gex4iu1 career-share"
                     data-node="rnjk7gex4iu1">
-                    <div class="fl-module-content">
+                    <div class="fl-module-content fl-node-content">
                       <div
                         class="pp-social-share-content pp-share-buttons-view-icon-text pp-share-buttons-skin-minimal pp-share-buttons-shape-square pp-social-share-col-0 pp-share-buttons-align-left pp-share-buttons-color-custom">
                         <div class="pp-social-share-inner">
@@ -170,18 +173,18 @@
         class="fl-row fl-row-full-width fl-row-bg-photo fl-node-ywcmkjq4az6f fl-row-default-height fl-row-align-center"
         data-node="ywcmkjq4az6f">
         <div class="fl-row-content-wrap">
-          <div class="fl-row-content fl-row-fixed-width">
+          <div class="fl-row-content fl-row-fixed-width fl-node-content">
             <div
               class="fl-col-group fl-node-9v74jmuxkpdg fl-col-group-custom-width"
               data-node="9v74jmuxkpdg">
               <div
                 class="fl-col fl-node-1swhjnc7y8ki fl-col-small fl-col-small-custom-width"
                 data-node="1swhjnc7y8ki">
-                <div class="fl-col-content">
+                <div class="fl-col-content fl-node-content">
                   <div
                     class="fl-module fl-module-rich-text fl-node-hm8u5ebytjw1 single-content career-content"
                     data-node="hm8u5ebytjw1">
-                    <div class="fl-module-content">
+                    <div class="fl-module-content fl-node-content">
                       <div class="fl-rich-text">
                         {{ .Content }}
                       </div>
@@ -192,11 +195,11 @@
               <div
                 class="fl-col fl-node-p8famz26ljce fl-col-small-custom-width"
                 data-node="p8famz26ljce">
-                <div class="fl-col-content">
+                <div class="fl-col-content fl-node-content">
                   <div
                     class="fl-module fl-module-pp-gravity-form fl-node-nkrzpgyfwo7s contact-page career-form blue-border"
                     data-node="nkrzpgyfwo7s">
-                    <div class="fl-module-content">
+                    <div class="fl-module-content fl-node-content">
                       <div class="pp-gf-content">
                         <div class="pp-gf-inner">
                           <h3 class="form-title">Apply for this position</h3>
@@ -223,7 +226,6 @@
                             <form
                               method="post"
                               target="_blank"
-                              rel="noopener noreferrer"
                               action="{{ .Site.Params.forms.career.action }}"
                               data-formid="6">
                               <input
