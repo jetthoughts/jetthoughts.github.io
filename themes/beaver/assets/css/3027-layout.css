@@ -1,5 +1,43 @@
-@import "foundations/fl-builder-common-base.css";
-/* FL-Builder base patterns: box-sizing, clearfix, sr-only → foundation file */
+.fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fl-row:before, .fl-row:after, .fl-row-content:before, .fl-row-content:after, .fl-col-group:before, .fl-col-group:after, .fl-col:before, .fl-col:after, .fl-module:before, .fl-module:after, .fl-module-content:before, .fl-module-content:after {
+  display: table;
+  content: " ";
+}
+
+.fl-row:after, .fl-row-content:after, .fl-col-group:after, .fl-col:after, .fl-module:after, .fl-module-content:after {
+  clear: both;
+}
+
+.fl-clear {
+  clear: both;
+}
+
+.fl-clearfix:before, .fl-clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.fl-clearfix:after {
+  clear: both;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* FL-Builder visibility rules removed - already in utilities/fl-builder-visibility.css */
+/* Lines 42-48 removed: duplicate .fl-visible-desktop rules (already in utilities/fl-builder-visibility.css) */
 
 .fl-row, .fl-row-content {
   margin-left: auto;
