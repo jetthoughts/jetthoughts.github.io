@@ -188,6 +188,18 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("careers", "footer", css: "footer")
   end
 
+  def test_careers_ruby
+    visit "/careers/junior-ruby-on-rails-developer/"
+
+    assert_stable_screenshot "careers/junior-ruby-on-rails-developer"
+
+    scroll_to :bottom # preload all images
+    assert_text "JetThoughts. All Rights Reserved", exact: false
+
+    verify_section_for("careers/junior-ruby-on-rails-developer", "apply", css: '[data-node="p8famz26ljce"]')
+    verify_section_for("careers/junior-ruby-on-rails-developer", "footer", css: "footer")
+  end
+
   def test_services_menu
     visit "/"
 
