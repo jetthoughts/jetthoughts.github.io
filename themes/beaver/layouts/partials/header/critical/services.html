@@ -1,8 +1,0 @@
-<!-- Services page-specific critical CSS -->
-<!-- FL-Builder grid and common modules now loaded via base-critical.html -->
-{{ partial "header/critical/base-critical.html" . }}
-{{- $criticalCSS := resources.Get "css/critical/services-critical.css" | postCSS | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
-{{- end -}}
-<style>{{ $criticalCSS.Content | safeCSS }}</style>

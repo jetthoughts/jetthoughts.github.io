@@ -1,7 +1,0 @@
-<!-- generated with https://www.corewebvitals.io/tools/critical-css-generator -->
-{{ partial "header/critical/base-critical.html" . }}
-{{- $criticalCSS := resources.Get "css/critical/about-us-critical.css" | postCSS | fingerprint "md5" -}}
-{{- if hugo.IsProduction -}}
-  {{- $criticalCSS = $criticalCSS | minify | resources.PostProcess -}}
-{{- end -}}
-<style>{{ $criticalCSS.Content | safeCSS }}</style>

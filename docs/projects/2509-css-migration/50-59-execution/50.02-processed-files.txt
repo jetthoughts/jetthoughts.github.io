@@ -1,0 +1,13 @@
+# Processed CSS Files - Sequential Consolidation
+# Format: [filename] | [timestamp] | [duplications_found] | [lines_eliminated]
+# Strategy: Pairwise comparison - each file compared against ALL processed files
+# Goal: Eliminate 70-80% duplication (27,094-31,536 lines from 44,420 total)
+
+themes/beaver/assets/css/_consolidated-layouts.css | 2025-10-14T04:52:11+02:00 | 0 | 0 | BASELINE - Master @import file, no CSS rules
+themes/beaver/assets/css/2949-layout.css | 2025-10-14T04:53:00+02:00 | 0 | 0 | TRUE BASELINE - First CSS file with actual rules (5407 lines)
+themes/beaver/assets/css/3021-layout.css | 2025-10-14T04:55:01+02:00 | 4 | 38 | CONSOLIDATED to foundations/fl-builder-common-base.css
+themes/beaver/assets/css/3023-layout.css | 2025-10-14T04:57:00+02:00 | 4 | 38 | CONSOLIDATED to fl-builder-common-base.css (1st reuse) [earlier campaign]
+themes/beaver/assets/css/3027-layout.css | 2025-10-14T05:03:44+02:00 | 4 | 38 | CONSOLIDATED to fl-builder-common-base.css (2nd reuse)
+themes/beaver/assets/css/3059-layout.css | 2025-10-14T05:15:00+02:00 | 4 | 0 | BLOCKED - Cannot consolidate (visual regressions 19-95%)
+themes/beaver/assets/css/3082-layout.css | 2025-10-14T05:30:00+02:00 | 4 | 0 | BLOCKED - No critical CSS infrastructure, 598 FL-node styles (20+ layout-critical)
+themes/beaver/assets/css/3086-layout2.css | 2025-10-14T05:40:00+02:00 | 4 | 0 | BLOCKED - 583 FL-node styles (exceeds >500 HIGH RISK threshold), largest page-specific CSS file (5,157 lines)
