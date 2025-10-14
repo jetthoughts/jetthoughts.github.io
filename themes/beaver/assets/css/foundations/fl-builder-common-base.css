@@ -1,0 +1,56 @@
+/* FL-Builder Common Base Patterns - Foundation File */
+/* Extracted from sequential consolidation: Files #2, #3, and 19 additional numbered layout files */
+/* Purpose: Eliminate ~840 lines of duplication across 21 FL-Builder layout files */
+
+/* FL-Builder Box-Sizing Reset */
+.fl-builder-content *, 
+.fl-builder-content *:before, 
+.fl-builder-content *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* FL-Row Clearfix Pattern */
+.fl-row:before, .fl-row:after, 
+.fl-row-content:before, .fl-row-content:after, 
+.fl-col-group:before, .fl-col-group:after, 
+.fl-col:before, .fl-col:after, 
+.fl-module:before, .fl-module:after, 
+.fl-module-content:before, .fl-module-content:after {
+  display: table;
+  content: " ";
+}
+
+.fl-row:after, .fl-row-content:after, 
+.fl-col-group:after, .fl-col:after, 
+.fl-module:after, .fl-module-content:after {
+  clear: both;
+}
+
+/* Clear Utility */
+.fl-clear {
+  clear: both;
+}
+
+/* Clearfix Utility */
+.fl-clearfix:before, .fl-clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.fl-clearfix:after {
+  clear: both;
+}
+
+/* Screen Reader Only Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
