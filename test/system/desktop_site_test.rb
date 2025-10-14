@@ -274,6 +274,12 @@ class DesktopSiteTest < ApplicationSystemTestCase
     assert_stable_screenshot "404"
   end
 
+  def test_privacy_policy
+    visit "/privacy-policy/"
+
+    assert_stable_screenshot "privacy-policy"
+  end
+
   def test_about_page_sections
     visit "/about-us/"
 
