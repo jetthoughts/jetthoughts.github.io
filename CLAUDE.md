@@ -1115,11 +1115,13 @@ refactoring_validation:
 **MANDATORY BLOCK LIST** (ZERO TOLERANCE):
 ```yaml
 css_consolidation_blockers:
-  pages_without_critical_css:
+  pages_without_safe_consolidation:
     - "404.css" # No themes/beaver/layouts/partials/header/critical/404.html
     - "3114-layout.css" # Blog pages - no blog-critical.html infrastructure
+    - "3059-layout.css" # Privacy Policy - @import changes CSS cascade order causing 19-95% visual regressions
+    - "3082-layout.css" # No themes/beaver/layouts/partials/header/critical/3082-critical.html - contains 20+ .fl-node-* layout-critical styles
 
-  blocking_rule: "NEVER consolidate CSS from these files until critical CSS infrastructure created"
+  blocking_rule: "NEVER consolidate CSS from these files using @import method until CSS cascade dependencies resolved"
 
   validation_protocol:
     pre_consolidation: "Verify page loads themes/beaver/layouts/partials/header/critical/base-critical.html"
