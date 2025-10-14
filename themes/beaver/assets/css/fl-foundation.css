@@ -59,6 +59,8 @@
 .fl-col {
   flex: 0 0 100%;
   max-width: 100%;
+  float: left;
+  min-height: 1px;
 }
 
 /* Module spacing */
@@ -368,13 +370,7 @@
   min-height: 1px;
 }
 
-/* Column base utilities (consolidated with basic .fl-col from above) */
-.fl-col {
-  float: left;
-  min-height: 1px;
-  /* flex: 0 0 100%; max-width: 100%; defined above in basic column section */
-}
-
+/* Column base utilities */
 .fl-col-bg-overlay .fl-col-content {
   position: relative;
 }
