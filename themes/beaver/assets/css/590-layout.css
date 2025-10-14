@@ -2792,11 +2792,6 @@ fl-builder-content *, .fl-builder-content *:before, .fl-builder-content *:after 
 }
 /* FL-Builder visibility rules removed - already in utilities/fl-builder-visibility.css */
 
-.fl-row, .fl-row-content {
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 0;
-}
 /* .fl-row-content-wrap { position: relative; } removed - already in critical/fl-layout-grid.css */
 .fl-builder-mobile .fl-row-bg-photo .fl-row-content-wrap {
   background-attachment: scroll;

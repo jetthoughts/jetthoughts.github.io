@@ -27,6 +27,12 @@
 }
 
 /* Basic row and column structure */
+.fl-row, .fl-row-content {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+}
+
 .fl-row {
   position: relative;
 }
