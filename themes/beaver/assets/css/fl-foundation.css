@@ -391,3 +391,69 @@
   position: relative;
   z-index: 2;
 }
+
+/* Module utilities */
+.fl-module img {
+  max-width: 100%;
+}
+
+.fl-builder-module-template {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+/* Button base styles */
+.fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.fl-builder-content .fl-button:hover {
+  text-decoration: none;
+}
+
+.fl-builder-content .fl-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.fl-builder-content .fl-button-width-full .fl-button {
+  display: block;
+  text-align: center;
+}
+
+.fl-builder-content .fl-button-width-custom .fl-button {
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+}
+
+.fl-builder-content .fl-button i {
+  font-size: 1.3em;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+  width: auto;
+}
+
+.fl-builder-content .fl-button i.fl-button-icon-after {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.fl-builder-content .fl-button-has-icon .fl-button-text {
+  vertical-align: middle;
+}
+
+.fl-icon-wrap {
+  display: inline-block;
+}
