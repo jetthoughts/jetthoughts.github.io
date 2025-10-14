@@ -85,19 +85,7 @@
   padding: 0 20px;
 }
 
-/* Equal height columns */
-.fl-col-group-equal-height {
-  display: flex;
-}
-
-.fl-col-group-equal-height .fl-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.fl-col-group-equal-height .fl-col .fl-col-content {
-  flex: 1 1 auto;
-}
+/* Note: Detailed column group equal-height utilities moved to end of file (after row alignment) */
 
 /* Responsive adjustments */
 @media (max-width: 968px) {
@@ -329,4 +317,81 @@
 .fl-builder-ie-11 .fl-row-full-height.fl-row-align-bottom .fl-row-content-wrap, .fl-builder-ie-11 .fl-row-custom-height.fl-row-align-bottom .fl-row-content-wrap {
   justify-content: flex-start;
   -webkit-justify-content: flex-start;
+}
+
+/* Column group equal-height utilities (detailed version) */
+.fl-col-group-equal-height {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.fl-col-group-equal-height.fl-col-group-has-child-loading {
+  flex-wrap: nowrap;
+}
+
+.fl-col-group-equal-height .fl-col, .fl-col-group-equal-height .fl-col-content {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.fl-col-group-equal-height .fl-col-content {
+  flex-direction: column;
+  flex-shrink: 1;
+  min-width: 1px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.fl-col-group-equal-height:before, .fl-col-group-equal-height .fl-col:before, .fl-col-group-equal-height .fl-col-content:before, .fl-col-group-equal-height:after, .fl-col-group-equal-height .fl-col:after, .fl-col-group-equal-height .fl-col-content:after {
+  content: none;
+}
+
+.fl-col-group-nested.fl-col-group-equal-height.fl-col-group-align-top .fl-col-content, .fl-col-group-equal-height.fl-col-group-align-top .fl-col-content {
+  justify-content: flex-start;
+}
+
+.fl-col-group-nested.fl-col-group-equal-height.fl-col-group-align-center .fl-col-content, .fl-col-group-equal-height.fl-col-group-align-center .fl-col-content {
+  align-items: center;
+  justify-content: center;
+}
+
+.fl-col-group-nested.fl-col-group-equal-height.fl-col-group-align-bottom .fl-col-content, .fl-col-group-equal-height.fl-col-group-align-bottom .fl-col-content {
+  justify-content: flex-end;
+}
+
+.fl-col-group-equal-height.fl-col-group-align-center .fl-module, .fl-col-group-equal-height.fl-col-group-align-center .fl-col-group {
+  width: 100%;
+}
+
+.fl-builder-ie-11 .fl-col-group-equal-height, .fl-builder-ie-11 .fl-col-group-equal-height .fl-col, .fl-builder-ie-11 .fl-col-group-equal-height .fl-col-content, .fl-builder-ie-11 .fl-col-group-equal-height .fl-module, .fl-col-group-equal-height.fl-col-group-align-center .fl-col-group {
+  min-height: 1px;
+}
+
+/* Column base utilities (consolidated with basic .fl-col from above) */
+.fl-col {
+  float: left;
+  min-height: 1px;
+  /* flex: 0 0 100%; max-width: 100%; defined above in basic column section */
+}
+
+.fl-col-bg-overlay .fl-col-content {
+  position: relative;
+}
+
+.fl-col-bg-overlay .fl-col-content:after {
+  border-radius: inherit;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.fl-col-bg-overlay .fl-module {
+  position: relative;
+  z-index: 2;
 }
