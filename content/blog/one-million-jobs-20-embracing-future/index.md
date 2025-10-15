@@ -6,6 +6,7 @@ dev_to_id: 2321845
 dev_to_url: https://dev.to/jetthoughts/one-million-jobs-20-embracing-the-future-of-work-3he2
 title: 'One Million Jobs 2.0: Embracing the Future of Work'
 description: Explore the initiative to create one million human-centric jobs in a rapidly changing technological landscape. Learn how startups can thrive without relying on AI.
+date: 2025-03-10
 created_at: '2025-03-10T08:47:25Z'
 edited_at: '2025-03-24T12:46:00Z'
 draft: false

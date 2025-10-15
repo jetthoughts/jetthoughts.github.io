@@ -6,6 +6,7 @@ dev_to_id: 2301430
 dev_to_url: https://dev.to/jetthoughts/unlocking-government-efficiency-the-ai-software-opportunity-43lk
 title: 'Unlocking Government Efficiency: The AI Software Opportunity'
 description: Explore the unique opportunity to build AI software for government efficiency. Learn how automation can reduce spending and improve operations in this insightful article.
+date: 2025-02-27
 created_at: '2025-02-27T17:47:24Z'
 draft: false
 tags: []

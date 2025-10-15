@@ -9,6 +9,7 @@ description: In the world of Ruby on Rails, creating URLs efficiently is crucial
 created_at: '2024-12-20T23:08:46Z'
 edited_at: '2025-01-30T03:26:59Z'
 draft: false
+date: 2024-12-20
 tags:
 - startup
 - management

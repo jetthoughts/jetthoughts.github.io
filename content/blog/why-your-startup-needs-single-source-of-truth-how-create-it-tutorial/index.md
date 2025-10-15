@@ -6,6 +6,7 @@ dev_to_id: 2204021
 dev_to_url: https://dev.to/jetthoughts/why-your-startup-needs-a-single-source-of-truth-and-how-to-create-it-2f7i
 title: Why Your Startup Needs a Single Source of Truth (And How to Create It)
 description: 'In my years helping startups as a technical leader, one pattern emerges clearly: most early-stage...'
+date: 2025-01-13
 created_at: '2025-01-13T13:05:34Z'
 edited_at: '2025-01-13T13:09:18Z'
 draft: false

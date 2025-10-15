@@ -4,10 +4,11 @@ source: dev_to
 remote_id: 2187647
 dev_to_id: 2187647
 dev_to_url: https://dev.to/jetthoughts/why-ai-hasnt-blown-our-mindsyet-1f7e
-title: Why AI Hasn’t Blown Our Minds…Yet
+title: Why AI Hasn't Blown Our Minds…Yet
 description: In a world buzzing with talk about artificial intelligence, many are left wondering why it hasn't yet...
 created_at: '2025-01-03T14:47:23Z'
 edited_at: '2025-01-13T00:56:55Z'
+date: "2025-01-03"
 draft: false
 tags:
 - startup

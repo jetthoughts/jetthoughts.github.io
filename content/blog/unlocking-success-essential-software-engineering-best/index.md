@@ -8,6 +8,7 @@ title: 'Unlocking Success: Essential Software Engineering Best Practices for 202
 description: Explore essential software engineering best practices for 2025 to boost your career and stay ahead in tech!
 created_at: '2025-04-23T11:35:24Z'
 edited_at: '2025-04-23T16:27:05Z'
+date: 2025-04-23
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-success-essential-software-engineering-best/

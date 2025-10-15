@@ -6,6 +6,7 @@ dev_to_id: 2222412
 dev_to_url: https://dev.to/jetthoughts/reviving-defense-technology-silicon-valleys-next-chapter-gej
 title: 'Reviving Defense Technology: Silicon Valley''s Next Chapter'
 description: The U.S. has long been a leader in defense technology, but recent trends show that the defense...
+date: 2025-01-18
 created_at: '2025-01-18T12:22:15Z'
 edited_at: '2025-01-30T02:43:07Z'
 draft: false

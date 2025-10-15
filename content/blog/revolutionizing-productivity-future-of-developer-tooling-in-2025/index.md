@@ -8,6 +8,7 @@ title: 'Revolutionizing Productivity: The Future of Developer Tooling in 2025'
 description: Developer tooling is on the brink of a major transformation as we head into 2025. With AI taking...
 created_at: '2025-01-04T22:48:24Z'
 edited_at: '2025-01-30T02:53:10Z'
+date: 2025-01-04
 draft: false
 tags:
 - startup

@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: discover-exciting-ruby-on-rails-jobs
+date: "2025-04-03"
 ---
 If you're looking to jumpstart your career in tech, particularly in Ruby on Rails, you're in luck. There are plenty of opportunities out there, and many of them might be closer than you think. From local job boards to online communities, this guide will help you discover exciting Ruby on Rails jobs near me. Whether you're a seasoned developer or just starting out, there's something here for everyone. Let's explore how you can find the right job and enhance your skills in this dynamic field.
 

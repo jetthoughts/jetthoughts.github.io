@@ -8,6 +8,7 @@ title: 'Understanding the Distinctions: Web Development and Software Development
 description: When it comes to tech careers, web development and software development often get tossed around like...
 created_at: '2025-01-19T06:45:24Z'
 edited_at: '2025-01-30T02:42:37Z'
+date: 2025-01-19
 draft: false
 tags:
 - startup

@@ -5,9 +5,10 @@ remote_id: 1877535
 dev_to_id: 1877535
 dev_to_url: https://dev.to/jetthoughts/how-to-name-variables-and-methods-in-ruby-17md
 title: How To Name Variables And Methods In Ruby
-description: How To Name Variables And Methods In Ruby               What’s in a name? that which we call...
+description: How To Name Variables And Methods In Ruby               What's in a name? that which we call...
 created_at: '2024-06-05T05:33:19Z'
 edited_at: '2024-11-26T16:03:51Z'
+date: 2024-06-05
 draft: false
 tags:
 - programming

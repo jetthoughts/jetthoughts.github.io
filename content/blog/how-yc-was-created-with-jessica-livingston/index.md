@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/how-yc-was-created-with-jessica-livingsto
 title: How YC Was Created With Jessica Livingston
 description: In a recent conversation at the Lightcone podcast, Jessica Livingston, one of the co-founders of Y...
 created_at: '2025-01-16T09:07:24Z'
+date: 2025-01-16
 edited_at: '2025-01-30T02:44:23Z'
 draft: false
 tags:

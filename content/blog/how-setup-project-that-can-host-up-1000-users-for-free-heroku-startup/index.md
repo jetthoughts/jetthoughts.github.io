@@ -9,6 +9,7 @@ description: 'Basic Heroku Setup or Staging Configuration    Hosting service: He
 created_at: '2024-06-05T05:47:43Z'
 edited_at: '2024-11-26T16:03:41Z'
 draft: false
+date: 2024-06-05
 tags:
 - heroku
 - startup

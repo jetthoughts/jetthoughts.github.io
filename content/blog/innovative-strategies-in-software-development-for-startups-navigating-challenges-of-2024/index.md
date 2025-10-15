@@ -8,6 +8,7 @@ title: 'Innovative Strategies in Software Development for Startups: Navigating t
 description: Starting a business in 2024? You're not alone. Many startups are jumping into the world of software...
 created_at: '2024-12-20T09:53:59Z'
 edited_at: '2025-01-30T03:28:23Z'
+date: 2024-12-20
 draft: false
 tags:
 - startup

@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-best-platforms-for-software-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-best-platforms-for-software-development/cover.jpeg
+date: 2025-04-01
 metatags:
   image: cover.jpeg
 slug: exploring-best-platforms-for-software-development

@@ -6,6 +6,7 @@ dev_to_id: 2533979
 dev_to_url: https://dev.to/jetthoughts/essential-tips-to-hire-developers-for-startups-in-2025-40o2
 title: Essential Tips to Hire Developers for Startups in 2025
 description: Discover essential tips to hire developers for startups in 2025 and build your dream tech team!
+date: 2025-05-27
 created_at: '2025-05-27T15:28:14Z'
 edited_at: '2025-05-27T20:40:48Z'
 draft: false

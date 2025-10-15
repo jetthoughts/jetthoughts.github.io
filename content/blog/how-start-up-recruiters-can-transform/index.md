@@ -6,6 +6,7 @@ dev_to_id: 2471029
 dev_to_url: https://dev.to/jetthoughts/how-start-up-recruiters-can-transform-your-business-in-2025-pgc
 title: How Start Up Recruiters Can Transform Your Business in 2025
 description: Discover how start up recruiters can elevate your business in 2025 with innovative hiring strategies and insights.
+date: 2025-05-09
 created_at: '2025-05-09T10:18:14Z'
 edited_at: '2025-05-15T16:25:50Z'
 draft: false

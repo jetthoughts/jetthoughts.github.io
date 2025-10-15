@@ -9,6 +9,7 @@ description: "\"I felt like a circus performer spinning plates. Each new project
 created_at: '2024-12-15T12:34:48Z'
 edited_at: '2024-12-15T13:11:21Z'
 draft: false
+date: 2024-12-15
 tags:
 - webdev
 - startup

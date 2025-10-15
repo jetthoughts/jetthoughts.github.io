@@ -6,6 +6,7 @@ dev_to_id: 2268173
 dev_to_url: https://dev.to/jetthoughts/navigating-the-intersection-of-ai-and-cybersecurity-insights-and-innovations-4c5b
 title: 'Navigating the Intersection of AI and Cybersecurity: Insights and Innovations'
 description: Explore the challenges and opportunities at the intersection of AI and cybersecurity, highlighting the importance of collaboration, ethical considerations, and workforce development.
+date: 2025-02-09
 created_at: '2025-02-09T23:42:44Z'
 edited_at: '2025-02-10T04:06:23Z'
 draft: false

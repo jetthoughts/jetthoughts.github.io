@@ -9,6 +9,7 @@ description: Minitest and RSpec are great testing tools for Ruby on Rails, each 
 created_at: '2024-11-13T08:47:37Z'
 edited_at: '2024-11-25T15:42:16Z'
 draft: false
+date: 2024-11-13
 tags:
 - rspec
 - minitest

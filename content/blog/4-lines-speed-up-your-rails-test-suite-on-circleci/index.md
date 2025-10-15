@@ -9,6 +9,7 @@ description: Most of our projects have a big code base of assets which dramatica
 created_at: '2024-06-07T09:15:36Z'
 edited_at: '2024-11-26T16:02:31Z'
 draft: false
+date: 2024-06-07
 tags: []
 canonical_url: https://jetthoughts.com/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/4-lines-speed-up-your-rails-test-suite-on-circleci/cover.jpeg

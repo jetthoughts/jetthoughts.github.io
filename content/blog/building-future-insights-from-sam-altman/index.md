@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: building-future-insights-from-sam-altman
+date: "2025-02-25"
 ---
 [![Building The Future: Insights From Sam Altman](file_0.jpg)](https://www.youtube.com/watch?v=xXCBz_8hM9w)
 

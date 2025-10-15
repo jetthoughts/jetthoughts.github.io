@@ -6,6 +6,7 @@ dev_to_id: 2174323
 dev_to_url: https://dev.to/jetthoughts/discover-the-top-software-companies-in-california-a-comprehensive-guide-for-2024-4h3l
 title: 'Discover the Top Software Companies in California: A Comprehensive Guide for 2024'
 description: California's tech scene is insane. Everyone knows about Silicon Valley, right? It's home to some of...
+date: 2024-12-25
 created_at: '2024-12-25T13:33:15Z'
 edited_at: '2025-01-30T03:20:59Z'
 draft: false

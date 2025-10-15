@@ -9,6 +9,7 @@ description: Building a top-notch software development team in 2024 isn't just a
 created_at: '2024-12-20T08:32:43Z'
 edited_at: '2025-01-30T03:29:00Z'
 draft: false
+date: 2024-12-20
 tags:
 - startup
 - management

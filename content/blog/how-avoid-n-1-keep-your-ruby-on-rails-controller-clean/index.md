@@ -8,6 +8,7 @@ title: How to avoid N + 1 and keep your Ruby on Rails controller clean
 description: Where to put the logic related to database queries optimization in a Ruby on Rails...
 created_at: '2024-07-01T09:32:21Z'
 edited_at: '2024-11-25T15:33:36Z'
+date: 2024-07-01
 draft: false
 tags:
 - ruby

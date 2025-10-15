@@ -8,6 +8,7 @@ title: Innovative Rails Companies Leading the Tech Revolution in 2025
 description: In 2025, the rail industry is buzzing with innovation, and it's the rails companies at the forefront...
 created_at: '2025-01-27T11:24:35Z'
 edited_at: '2025-01-30T02:36:38Z'
+date: 2025-01-27
 draft: false
 tags:
 - startup

@@ -5,7 +5,8 @@ remote_id: 1853621
 dev_to_id: 1853621
 dev_to_url: https://dev.to/jetthoughts/how-to-have-a-clean-css-structure-with-rscssitcss-57la
 title: How to have a clean CSS structure with RSCSS/ITCSS
-description: Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn’t take...
+description: Writing the CSS code is relatively simple. Learning a language is not a big problem and doesn't take...
+date: 2024-05-15
 created_at: '2024-05-15T07:45:28Z'
 edited_at: '2024-11-26T16:04:08Z'
 draft: false

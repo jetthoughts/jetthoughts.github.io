@@ -2,6 +2,7 @@
 dev_to_id: 2159834
 title: "Ruby 3.4 YJIT Performance Guide: Complete JIT Optimization for Rails Applications"
 description: "Master Ruby 3.4's YJIT compiler for up to 30% performance gains in Rails applications. Complete guide with benchmarks, configuration, and production deployment strategies."
+date: 2025-01-20
 created_at: "2025-01-20T10:00:00Z"
 edited_at: "2025-01-20T10:00:00Z"
 draft: false

@@ -8,6 +8,7 @@ title: Mastering the Art of Hiring .Net Developers in 2024
 description: Explore essential strategies for hiring .Net software developers in 2024, including skills to look for, where to find candidates, and cost considerations.
 created_at: '2025-04-24T11:17:34Z'
 edited_at: '2025-05-04T10:56:29Z'
+date: 2025-04-24
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-art-of-hiring-net-developers/

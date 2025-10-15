@@ -9,6 +9,7 @@ description: Marketplace jobs are really shaking things up in 2025. They're not 
 created_at: '2025-01-13T11:23:24Z'
 edited_at: '2025-01-30T02:46:20Z'
 draft: false
+date: 2025-01-13
 tags:
 - startup
 - management

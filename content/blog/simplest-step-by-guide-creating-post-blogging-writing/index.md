@@ -9,6 +9,7 @@ description: For novice authors who are going to share their thoughts with publi
 created_at: '2024-05-15T07:07:41Z'
 edited_at: '2024-11-26T16:04:28Z'
 draft: false
+date: 2024-05-15
 tags:
 - blogging
 - writing

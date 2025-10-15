@@ -9,6 +9,7 @@ description: Discover how David Lieb and his team turned their struggles with Bu
 created_at: '2025-04-21T10:17:13Z'
 edited_at: '2025-04-23T16:27:35Z'
 draft: false
+date: 2025-04-21
 tags: []
 canonical_url: https://jetthoughts.com/blog/from-bump-google-photos-journey-of-2eff/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/from-bump-google-photos-journey-of-2eff/cover.jpeg

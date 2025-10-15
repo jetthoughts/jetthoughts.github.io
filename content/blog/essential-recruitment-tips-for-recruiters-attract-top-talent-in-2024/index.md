@@ -9,6 +9,7 @@ description: Recruiting top talent in 2024 is no walk in the park. The job marke
 created_at: '2024-12-19T10:10:21Z'
 edited_at: '2024-12-19T11:07:55Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/essential-recruitment-tips-for-recruiters-attract-top-talent-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/essential-recruitment-tips-for-recruiters-attract-top-talent-in-2024/cover.jpeg

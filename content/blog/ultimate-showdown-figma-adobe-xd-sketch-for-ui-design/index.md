@@ -9,6 +9,7 @@ description: Explore the strengths and weaknesses of Figma, Adobe XD, and Sketch
 created_at: '2025-02-03T14:09:24Z'
 edited_at: '2025-02-03T14:18:01Z'
 draft: false
+date: 2025-02-03
 tags: []
 canonical_url: https://jetthoughts.com/blog/ultimate-showdown-figma-adobe-xd-sketch-for-ui-design/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ultimate-showdown-figma-adobe-xd-sketch-for-ui-design/cover.jpeg

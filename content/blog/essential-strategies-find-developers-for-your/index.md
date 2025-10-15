@@ -9,6 +9,7 @@ description: Discover essential strategies to find developers for your startup i
 created_at: '2025-03-20T01:10:25Z'
 edited_at: '2025-03-24T12:45:14Z'
 draft: false
+date: 2025-03-20
 tags: []
 canonical_url: https://dev.to/jetthoughts/essential-strategies-to-find-developers-for-your-startup-in-2025-34je
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/essential-strategies-find-developers-for-your/cover.jpeg

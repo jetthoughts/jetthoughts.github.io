@@ -19,6 +19,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: unlocking-power-of-hexagonal-architecture-in-rails-development
+date: "2025-01-03"
 ---
 Last night, Fito and I watched Alistair Cockburn's Hexagonal Architecture talk from the Tech Excellence Conference. We really enjoyed it, and despite thinking I already understood the pattern, I learned a ton. In fact, before you continue reading, you should go watch it. Go ahead! I'll wait...
 

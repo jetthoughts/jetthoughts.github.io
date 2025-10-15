@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/mastering-the-command-line-to-create-new-
 title: Mastering the Command Line to Create New Rails App Projects
 description: Master the command line to create new Rails app projects! Learn essential tips, tricks, and options for a smooth setup.
 created_at: '2025-06-08T20:44:16Z'
+date: 2025-06-08
 edited_at: '2025-06-12T12:02:19Z'
 draft: false
 tags: []

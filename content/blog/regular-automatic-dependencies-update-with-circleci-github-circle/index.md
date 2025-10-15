@@ -16,6 +16,7 @@ tags:
 - rails
 canonical_url: https://jetthoughts.com/blog/regular-automatic-dependencies-update-with-circleci-github-circle/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/regular-automatic-dependencies-update-with-circleci-github-circle/cover.png
+date: 2024-05-14
 metatags:
   image: cover.png
 slug: regular-automatic-dependencies-update-with-circleci-github-circle

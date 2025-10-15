@@ -8,6 +8,7 @@ title: When Small Method Choices Cascade Into Big Performance Wins
 description: Three months ago, I spent an embarrassing amount of time optimizing a complex Redis caching layer -...
 created_at: '2025-09-03T21:45:05Z'
 draft: false
+date: 2025-09-03
 tags:
 - ruby
 - rails

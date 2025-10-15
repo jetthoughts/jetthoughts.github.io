@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/how-does-the-onboarding-look-like-in-jett
 title: How does the onboarding look like in JetThoughts?
 description: How does the onboarding look like in JetThoughts?   This is an onboarding checklist...
 created_at: '2024-05-15T06:29:43Z'
+date: 2024-05-15
 edited_at: '2024-11-26T16:04:45Z'
 draft: false
 tags:

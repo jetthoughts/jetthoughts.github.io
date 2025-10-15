@@ -16,6 +16,7 @@ tags:
 - devops
 canonical_url: https://jetthoughts.com/blog/solving-kamals-target-failed-become-healthy/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/solving-kamals-target-failed-become-healthy/cover.png
+date: 2025-04-21
 metatags:
   image: cover.png
 slug: solving-kamals-target-failed-become-healthy

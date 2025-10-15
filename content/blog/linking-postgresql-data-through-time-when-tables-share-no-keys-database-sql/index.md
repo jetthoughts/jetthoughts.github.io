@@ -6,6 +6,7 @@ dev_to_id: 2131289
 dev_to_url: https://dev.to/jetthoughts/linking-postgresql-data-through-time-when-tables-share-no-keys-8pf
 title: 'Linking Data in PostgreSQL Without Explicit Keys: A Practical Guide'
 description: Databases often evolve in unpredictable ways. Tables that were initially designed to operate...
+date: 2024-12-02
 created_at: '2024-12-02T13:25:12Z'
 edited_at: '2024-12-12T13:32:30Z'
 draft: false

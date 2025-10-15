@@ -9,6 +9,7 @@ description: 'After 20+ years in tech leadership, I''ve observed a pattern that 
 created_at: '2024-12-15T11:38:39Z'
 edited_at: '2024-12-15T12:10:31Z'
 draft: false
+date: 2024-12-15
 tags:
 - startup
 - productivity

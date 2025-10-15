@@ -8,6 +8,7 @@ title: Is a Startup Consultancy Worth It in 2024?
 description: Explore the benefits of hiring a startup consultancy in 2024. Learn how expert guidance can help navigate the challenges of launching a new business.
 created_at: '2025-03-10T23:17:13Z'
 edited_at: '2025-03-24T12:46:02Z'
+date: "2025-03-10"
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/is-a-startup-consultancy-worth-it-in-2024-1c24

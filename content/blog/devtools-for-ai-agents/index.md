@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/devtools-for-ai-agents/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/devtools-for-ai-agents/cover.jpeg
+date: 2025-06-01
 metatags:
   image: cover.jpeg
 slug: devtools-for-ai-agents

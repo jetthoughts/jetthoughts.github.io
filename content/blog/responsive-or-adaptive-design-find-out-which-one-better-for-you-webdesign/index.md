@@ -15,6 +15,7 @@ tags:
 - layouts
 canonical_url: https://jetthoughts.com/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign/cover.jpeg
+date: 2024-06-05
 metatags:
   image: cover.jpeg
 slug: responsive-or-adaptive-design-find-out-which-one-better-for-you-webdesign

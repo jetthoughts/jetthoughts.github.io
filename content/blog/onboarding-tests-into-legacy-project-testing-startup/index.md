@@ -9,6 +9,7 @@ description: What solution should you apply to get the first results in a short 
 created_at: '2024-06-05T06:37:41Z'
 edited_at: '2024-11-26T16:02:56Z'
 draft: false
+date: 2024-06-05
 tags:
 - testing
 - startup

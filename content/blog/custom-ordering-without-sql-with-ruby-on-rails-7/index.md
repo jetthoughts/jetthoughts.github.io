@@ -9,6 +9,7 @@ description: 'The problem It''s a common case for Rails applications to have enu
 created_at: '2023-11-24T11:37:01Z'
 edited_at: '2024-11-25T15:39:43Z'
 draft: false
+date: 2023-11-24
 tags:
 - ruby
 - rails

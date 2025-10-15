@@ -8,6 +8,7 @@ title: 'Navigating the US Tech Talent Shortage: Strategies for 2022'
 description: Explore the challenges and solutions to the US tech talent shortage in 2022, including recruitment issues and the benefits of outsourcing.
 created_at: '2025-05-08T17:47:14Z'
 edited_at: '2025-05-15T16:25:47Z'
+date: 2025-05-08
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/navigating-us-tech-talent-shortage-strategies/

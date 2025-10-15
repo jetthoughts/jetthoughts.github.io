@@ -8,6 +8,7 @@ title: 'Unlocking Efficiency: How Internal Developer Platforms Transform Softwar
 description: In 2025, software development is getting a major upgrade with internal developer platforms (IDPs)....
 created_at: '2025-01-02T21:55:13Z'
 edited_at: '2025-01-30T02:54:30Z'
+date: 2025-01-02
 draft: false
 tags:
 - startup

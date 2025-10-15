@@ -9,6 +9,7 @@ description: Starting a new business is like setting off on an adventure. You ha
 created_at: '2024-12-19T09:40:02Z'
 edited_at: '2024-12-19T10:08:21Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/what-you-need-know-about-building-startup-org-structure/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-you-need-know-about-building-startup-org-structure/cover.jpeg

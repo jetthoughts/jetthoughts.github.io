@@ -16,6 +16,7 @@ tags:
 - ux
 canonical_url: https://jetthoughts.com/blog/ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-ux/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-ux/cover.png
+date: 2024-11-14
 metatags:
   image: cover.png
 slug: ruby-on-rails-case-study-how-jetthoughts-improved-openapplys-code-ux

@@ -9,6 +9,7 @@ description: Explore the four crucial stages for successful Generative AI integr
 created_at: '2025-05-31T06:35:24Z'
 edited_at: '2025-06-04T03:29:04Z'
 draft: false
+date: 2025-05-31
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-generative-ai-4-stage-blueprint/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-generative-ai-4-stage-blueprint/cover.jpeg

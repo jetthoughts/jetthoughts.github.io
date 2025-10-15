@@ -9,6 +9,7 @@ description: The essential part of Sales Planning is to clearly see which steps 
 created_at: '2024-05-15T06:34:55Z'
 edited_at: '2024-11-26T16:04:43Z'
 draft: false
+date: 2024-05-15
 tags:
 - sales
 - productivity

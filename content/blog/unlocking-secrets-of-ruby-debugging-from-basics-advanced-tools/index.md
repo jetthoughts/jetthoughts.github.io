@@ -8,6 +8,7 @@ title: 'Unlocking the Secrets of Ruby Debugging: From Basics to Advanced Tools'
 description: Debugging is a critical skill for Ruby developers, and a recent blog post from the RubyMine team...
 created_at: '2024-12-24T12:12:38Z'
 edited_at: '2025-01-30T03:22:54Z'
+date: 2024-12-24
 draft: false
 tags:
 - startup

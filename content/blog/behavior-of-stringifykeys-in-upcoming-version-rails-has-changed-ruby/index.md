@@ -6,6 +6,7 @@ dev_to_id: 2157632
 dev_to_url: https://dev.to/jetthoughts/the-behavior-of-stringifykeys-in-the-upcoming-version-of-rails-has-changed-67h
 title: The behavior of stringify_keys in the upcoming version of Rails has changed.
 description: A new Rails update fixes how the stringify_keys handles different types of hash keys. This change...
+date: 2024-12-15
 created_at: '2024-12-15T12:48:42Z'
 edited_at: '2024-12-16T11:37:04Z'
 draft: false

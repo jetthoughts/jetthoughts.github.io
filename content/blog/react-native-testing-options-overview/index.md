@@ -9,6 +9,7 @@ description: After investigating 100 articles about testing React Native applica
 created_at: '2024-05-15T06:05:38Z'
 edited_at: '2024-11-26T16:04:50Z'
 draft: false
+date: 2024-05-15
 tags:
 - testing
 - react

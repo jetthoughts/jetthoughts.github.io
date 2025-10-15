@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/ai-commercial-open-source-software-aicoss/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ai-commercial-open-source-software-aicoss/cover.jpeg
+date: 2025-05-29
 metatags:
   image: cover.jpeg
 slug: ai-commercial-open-source-software-aicoss

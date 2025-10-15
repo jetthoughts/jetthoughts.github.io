@@ -6,6 +6,7 @@ dev_to_id: 1156418
 dev_to_url: https://dev.to/jetthoughts/how-to-make-truncate-text-in-css-4chi
 title: How to make truncate text in CSS
 description: "&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt..."
+date: 2022-08-01
 created_at: '2022-08-01T09:19:46Z'
 edited_at: '2024-11-25T15:40:55Z'
 draft: false

@@ -9,6 +9,7 @@ description: Master Ruby on Rails & React in 2025! Build dynamic apps with ease.
 created_at: '2025-02-21T11:30:46Z'
 edited_at: '2025-02-21T11:34:48Z'
 draft: false
+date: 2025-02-21
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-ruby-on-rails-react-comprehensive-guide-for-developers-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-ruby-on-rails-react-comprehensive-guide-for-developers-in-2025/cover.jpeg

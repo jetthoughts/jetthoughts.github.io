@@ -9,6 +9,7 @@ description: Data migration is a common part of working with databases, and Ruby
 created_at: '2022-09-02T17:01:27Z'
 edited_at: '2024-11-25T15:40:44Z'
 draft: false
+date: 2022-09-02
 tags:
 - ruby
 - rails

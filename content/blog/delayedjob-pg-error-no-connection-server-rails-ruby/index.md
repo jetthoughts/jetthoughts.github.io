@@ -5,9 +5,10 @@ remote_id: 1880232
 dev_to_id: 1880232
 dev_to_url: https://dev.to/jetthoughts/delayedjob-and-pg-error-no-connection-to-server-21e4
 title: DelayedJob and PG Error No Connection to Server
-description: DelayedJob and PG Error No Connection to Server     Recently I’ve got strange errors on the...
+description: DelayedJob and PG Error No Connection to Server     Recently I've got strange errors on the...
 created_at: '2024-06-07T10:21:11Z'
 edited_at: '2024-11-26T16:02:19Z'
+date: 2024-06-07
 draft: false
 tags:
 - rails

@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/how-convert-customers-with-cold-emails-startup-school/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-convert-customers-with-cold-emails-startup-school-2/cover.jpeg
+date: 2025-01-10
 metatags:
   image: cover.jpeg
 slug: how-convert-customers-with-cold-emails-startup-school-2

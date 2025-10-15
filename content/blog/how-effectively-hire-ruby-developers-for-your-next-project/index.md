@@ -9,6 +9,7 @@ description: Learn how to hire Ruby developers effectively for your project. Dis
 created_at: '2025-02-10T17:53:24Z'
 edited_at: '2025-02-10T17:54:37Z'
 draft: false
+date: 2025-02-10
 tags: []
 canonical_url: https://jetthoughts.com/blog/how-effectively-hire-ruby-developers-for-your-next-project/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-effectively-hire-ruby-developers-for-your-next-project/cover.jpeg

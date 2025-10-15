@@ -6,6 +6,7 @@ dev_to_id: 1852621
 dev_to_url: https://dev.to/jetthoughts/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-3ni7
 title: The Ultimate Guide to the Sales Onboarding in IT Companies
 description: Are you new at hiring Sales Reps for your IT company? Most probably you are struggling with what to...
+date: 2024-05-14
 created_at: '2024-05-14T12:33:58Z'
 edited_at: '2024-11-26T16:05:34Z'
 draft: false

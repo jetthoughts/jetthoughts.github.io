@@ -9,6 +9,7 @@ description: Discover innovative software development practices for 2025 to elev
 created_at: '2025-05-03T16:15:14Z'
 edited_at: '2025-05-04T10:55:35Z'
 draft: false
+date: 2025-05-03
 tags: []
 canonical_url: https://jetthoughts.com/blog/innovative-software-development-practices-for-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-software-development-practices-for-2025/cover.jpeg

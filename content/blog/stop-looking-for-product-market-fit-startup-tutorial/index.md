@@ -8,6 +8,7 @@ title: Stop Looking for Product Market Fit
 description: Everyone's obsessed with product-market fit. As if it's some magical moment when confetti falls from...
 created_at: '2024-12-20T15:21:45Z'
 edited_at: '2024-12-20T15:28:06Z'
+date: 2024-12-20
 draft: false
 tags:
 - startup

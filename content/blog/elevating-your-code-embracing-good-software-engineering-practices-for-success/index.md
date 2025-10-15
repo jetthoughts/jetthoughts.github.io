@@ -9,6 +9,7 @@ description: Ever thought about what makes a software engineer successful? It's 
 created_at: '2024-12-19T10:51:54Z'
 edited_at: '2024-12-19T11:07:44Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/elevating-your-code-embracing-good-software-engineering-practices-for-success/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/elevating-your-code-embracing-good-software-engineering-practices-for-success/cover.jpeg

@@ -6,6 +6,7 @@ dev_to_id: 2251513
 dev_to_url: https://dev.to/jetthoughts/design-insights-katie-dill-reviews-startup-websites-492p
 title: 'Design Insights: Katie Dill Reviews Startup Websites'
 description: Join Stripe's Head of Design, Katie Dill, as she reviews startup websites, offering insights on improving user experience, clarity, and trust in design. Discover key takeaways for effective web design.
+date: 2025-01-31
 created_at: '2025-01-31T06:37:24Z'
 edited_at: '2025-01-31T06:46:35Z'
 draft: false

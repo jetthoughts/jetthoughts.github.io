@@ -9,6 +9,7 @@ description: 'Introduction:   Docker is essential for modern software developmen
 created_at: '2024-03-07T13:14:02Z'
 edited_at: '2024-11-25T15:39:29Z'
 draft: false
+date: 2024-03-07
 tags:
 - beginners
 - ruby

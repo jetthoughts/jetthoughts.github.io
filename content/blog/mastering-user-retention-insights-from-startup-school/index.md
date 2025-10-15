@@ -9,6 +9,7 @@ description: In the world of startups, understanding user retention is crucial f
 created_at: '2025-01-01T11:41:43Z'
 edited_at: '2025-01-30T02:56:30Z'
 draft: false
+date: 2025-01-01
 tags:
 - startup
 - management

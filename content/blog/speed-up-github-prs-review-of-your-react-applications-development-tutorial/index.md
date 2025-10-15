@@ -9,6 +9,7 @@ description: Would you like to speed up PR’s review of React application, when
 created_at: '2024-05-15T05:55:46Z'
 edited_at: '2024-11-26T16:04:57Z'
 draft: false
+date: 2024-05-15
 tags:
 - development
 - tutorial

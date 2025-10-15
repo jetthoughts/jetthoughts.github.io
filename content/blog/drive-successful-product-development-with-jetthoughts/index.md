@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/drive-successful-product-development-with
 title: Drive Successful Product Development with JetThoughts
 description: Welcome to the world of product development, where innovation meets strategy! In today's fast-paced...
 created_at: '2024-09-26T15:47:15Z'
+date: 2024-09-26
 edited_at: '2024-12-12T12:11:44Z'
 draft: false
 tags:

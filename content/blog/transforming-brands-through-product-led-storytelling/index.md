@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/transforming-brands-through-product-led-storytelling/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-brands-through-product-led-storytelling/cover.jpeg
+date: 2024-01-01
 metatags:
   image: cover.jpeg
 slug: transforming-brands-through-product-led-storytelling

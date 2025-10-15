@@ -6,6 +6,7 @@ dev_to_id: 2217184
 dev_to_url: https://dev.to/jetthoughts/the-future-of-software-development-and-web-development-trends-to-watch-in-2025-13fb
 title: 'The Future of Software Development and Web Development: Trends to Watch in 2025'
 description: Hey there! So, we're diving into the future of software development and web development, looking...
+date: 2025-01-17
 created_at: '2025-01-17T05:33:24Z'
 edited_at: '2025-01-30T02:43:47Z'
 draft: false

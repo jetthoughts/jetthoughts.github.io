@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-power-of-ruby-on-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-power-of-ruby-on-rails/cover.jpeg
+date: 2025-03-30
 metatags:
   image: cover.jpeg
 slug: unlocking-power-of-ruby-on-rails

@@ -14,6 +14,7 @@ tags:
 - testing
 - tips
 canonical_url: https://jetthoughts.com/blog/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing/
+date: 2024-06-05
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/improving-ruby-on-rails-test-suite-performance-by-disabling-animations-testing/cover.png
 metatags:
   image: cover.png

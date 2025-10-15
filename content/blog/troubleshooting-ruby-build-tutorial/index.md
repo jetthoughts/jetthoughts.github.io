@@ -9,6 +9,7 @@ description: Have you found problems building ruby on a local machine? How to co
 created_at: '2022-10-10T16:14:36Z'
 edited_at: '2024-11-25T15:40:24Z'
 draft: false
+date: 2022-10-10
 tags:
 - ruby
 - tutorial

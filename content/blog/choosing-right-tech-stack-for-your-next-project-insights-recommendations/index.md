@@ -8,6 +8,7 @@ title: 'Choosing the Right Tech Stack for Your Next Project: Insights and Recomm
 description: In the ever-evolving world of technology, selecting the right tech stack for a new project can be a...
 created_at: '2024-12-20T23:09:56Z'
 edited_at: '2025-01-30T03:26:07Z'
+date: "2024-12-20"
 draft: false
 tags:
 - startup

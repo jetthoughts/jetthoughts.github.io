@@ -8,6 +8,7 @@ title: 'Exciting Updates in Ruby on Rails: SQLite3 Extensions and More'
 description: This week in Ruby on Rails, significant updates have been announced, including support for loading...
 created_at: '2024-12-26T13:13:47Z'
 edited_at: '2025-01-30T03:20:00Z'
+date: 2024-12-26
 draft: false
 tags:
 - startup

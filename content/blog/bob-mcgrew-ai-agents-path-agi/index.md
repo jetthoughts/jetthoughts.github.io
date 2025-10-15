@@ -6,6 +6,7 @@ dev_to_id: 2534265
 dev_to_url: https://dev.to/jetthoughts/bob-mcgrew-ai-agents-and-the-path-to-agi-2ggj
 title: 'Bob McGrew: AI Agents And The Path To AGI'
 description: Bob McGrew, former Chief Research Officer at OpenAI, discusses the evolution of AI, the importance of reasoning, and the future of jobs in an AI-driven world in this insightful interview.
+date: 2025-05-27
 created_at: '2025-05-27T17:45:44Z'
 edited_at: '2025-05-27T20:40:39Z'
 draft: false

@@ -15,6 +15,7 @@ tags:
 - programming
 - devops
 canonical_url: https://jetthoughts.com/blog/what-do-when-you-have-big-pr-blocking-other-issues-development-productivity/
+date: 2024-09-11
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-do-when-you-have-big-pr-blocking-other-issues-development-productivity/cover.jpeg
 metatags:
   image: cover.jpeg

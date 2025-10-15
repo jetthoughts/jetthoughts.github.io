@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/discover-the-best-it-companies-hiring-in-2025-your-guide-to-career-opportunities-4lmp
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/discover-best-it-companies-hiring-in/cover.jpeg
+date: 2025-03-17
 metatags:
   image: cover.jpeg
 slug: discover-best-it-companies-hiring-in

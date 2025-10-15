@@ -6,6 +6,7 @@ dev_to_id: 1880245
 dev_to_url: https://dev.to/jetthoughts/speed-up-your-rails-test-suite-by-6-in-1-line-22an
 title: Speed Up Your Rails Test Suite By 6% In 1 Line
 description: At one project we have a set of currently 3k+ tests, running more than 2 minutes. Most of the test...
+date: 2024-06-07
 created_at: '2024-06-07T10:40:25Z'
 edited_at: '2024-11-26T16:02:13Z'
 draft: false

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/revolutionizing-development-the-ultimate-
 title: 'Revolutionizing Development: The Ultimate Guide to Backend Tools in 2025'
 description: Explore 2025's top backend tools, trends, and skills for developers. Master cloud, AI, and DevOps. Stay ahead!
 created_at: '2025-02-08T16:38:24Z'
+date: 2025-02-08
 edited_at: '2025-02-08T16:54:49Z'
 draft: false
 tags: []

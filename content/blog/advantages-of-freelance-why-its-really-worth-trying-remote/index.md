@@ -4,8 +4,9 @@ source: dev_to
 remote_id: 1880404
 dev_to_id: 1880404
 dev_to_url: https://dev.to/jetthoughts/advantages-of-freelance-why-its-really-worth-trying-3ldj
-title: Advantages of freelance — why it’s really worth trying?
-description: Every day freelance is becoming more and more popular among all industries where it’s possible to...
+title: Advantages of freelance — why it's really worth trying?
+description: Every day freelance is becoming more and more popular among all industries where it's possible to...
+date: 2024-06-07
 created_at: '2024-06-07T13:04:07Z'
 edited_at: '2024-11-26T16:02:04Z'
 draft: false

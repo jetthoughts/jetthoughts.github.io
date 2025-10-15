@@ -8,6 +8,7 @@ title: 'Transforming Titans: A Novel Journey of Agile Leadership in Outsourcing'
 description: 'Chapter 1: The New Beginning   Paul Keen stood in his new office, his mind racing with...'
 created_at: '2024-07-04T19:54:09Z'
 edited_at: '2024-11-25T15:33:13Z'
+date: 2024-07-04
 draft: false
 tags:
 - leadership

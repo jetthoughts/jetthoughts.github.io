@@ -9,6 +9,7 @@ description: Projects fail for all kinds of reasons. Customers can change their 
 created_at: '2020-09-22T07:32:43Z'
 edited_at: '2024-11-25T15:41:56Z'
 draft: false
+date: 2020-09-22
 tags:
 - management
 canonical_url: https://jetthoughts.com/blog/what-are-next-steps-when-your-project-failing-management/

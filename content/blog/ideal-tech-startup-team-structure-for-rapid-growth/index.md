@@ -6,6 +6,7 @@ dev_to_id: 2174205
 dev_to_url: https://dev.to/jetthoughts/the-ideal-tech-startup-team-structure-for-rapid-growth-1d82
 title: The ideal tech startup team structure for rapid growth
 description: Putting together a tech startup team is like piecing together a puzzle. There's no one-size-fits-all,...
+date: 2024-12-25
 created_at: '2024-12-25T11:38:14Z'
 edited_at: '2025-01-30T03:21:28Z'
 draft: false

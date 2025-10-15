@@ -11,6 +11,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/top-8-youtube-ad-agencies-to-watch-in-2024-2bgj
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/top-8-youtube-ad-agencies-watch/cover.jpeg
+date: 2024-01-01
 metatags:
   image: cover.jpeg
 slug: top-8-youtube-ad-agencies-watch

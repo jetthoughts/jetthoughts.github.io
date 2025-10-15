@@ -9,6 +9,7 @@ description: This week in the Ruby community was bustling with activity, featuri
 created_at: '2025-01-07T18:42:25Z'
 edited_at: '2025-01-30T02:49:57Z'
 draft: false
+date: 2025-01-07
 tags:
 - startup
 - management

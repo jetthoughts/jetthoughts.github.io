@@ -9,6 +9,7 @@ description: In 2025, the world of software development is buzzing with innovati
 created_at: '2025-01-09T01:13:24Z'
 edited_at: '2025-01-30T02:48:59Z'
 draft: false
+date: 2025-01-09
 tags:
 - startup
 - management

@@ -6,6 +6,7 @@ dev_to_id: 2157631
 dev_to_url: https://dev.to/jetthoughts/a-simpler-way-to-set-content-types-in-rails-n4o
 title: A Simpler Way to Set Content Types in Rails
 description: Rails now lets you set content types with less code. This new feature makes your work easier.       ...
+date: 2024-12-15
 created_at: '2024-12-15T12:43:01Z'
 edited_at: '2024-12-15T13:11:19Z'
 draft: false

@@ -6,6 +6,7 @@ dev_to_id: 2441974
 dev_to_url: https://dev.to/jetthoughts/unlocking-agile-success-the-top-13-scrum-tools-for-project-management-in-2022-41c9
 title: 'Unlocking Agile Success: The Top 13 Scrum Tools for Project Management in 2022'
 description: Explore the top 13 Scrum tools for agile project management in 2022, designed to enhance flexibility, transparency, and team collaboration.
+date: 2025-04-28
 created_at: '2025-04-28T12:53:24Z'
 edited_at: '2025-05-04T10:56:03Z'
 draft: false

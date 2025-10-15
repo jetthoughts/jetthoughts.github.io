@@ -8,6 +8,7 @@ title: How a large transaction can be a source of DB deadlocks and how this can 
 description: Recently in a project, we encountered the fact that sometimes we had a DB Deadlocks error. After...
 created_at: '2023-05-01T17:46:03Z'
 edited_at: '2024-11-25T15:40:08Z'
+date: 2023-05-01
 draft: false
 tags:
 - ruby

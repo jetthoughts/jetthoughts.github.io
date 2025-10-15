@@ -8,6 +8,7 @@ title: "The Simplicity Paradox: Why Your Startup's Technical Strategy Should Be 
 description: Navigating the counterintuitive relationship between technical complexity and business velocity in...
 created_at: '2025-06-12T18:23:47Z'
 draft: false
+date: 2025-06-12
 tags:
 - webdev
 - startup

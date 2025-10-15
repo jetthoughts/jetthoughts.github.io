@@ -6,6 +6,7 @@ dev_to_id: 1880200
 dev_to_url: https://dev.to/jetthoughts/from-what-to-start-to-stop-delivering-bugs-when-there-is-no-time-for-changes-37m5
 title: From what to start to stop delivering bugs when there is no time for changes?
 description: While you are struggling with breaking into the market; small bugs, UX problems, unexpected behaviors...
+date: 2024-06-07
 created_at: '2024-06-07T09:45:25Z'
 edited_at: '2024-11-26T16:02:28Z'
 draft: false

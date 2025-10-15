@@ -6,6 +6,7 @@ dev_to_id: 2388328
 dev_to_url: https://dev.to/jetthoughts/unlocking-creativity-the-ultimate-guide-to-open-source-web-development-tools-in-2025-39i6
 title: 'Unlocking Creativity: The Ultimate Guide to Open Source Web Development Tools in 2025'
 description: Discover top open source web development tools for 2025 and unlock your creativity in web design!
+date: 2025-04-07
 created_at: '2025-04-07T10:46:26Z'
 edited_at: '2025-04-11T15:02:26Z'
 draft: false

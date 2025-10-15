@@ -9,6 +9,7 @@ description: Are you a startup looking to streamline your design process? Look n
 created_at: '2024-06-05T07:12:27Z'
 edited_at: '2024-11-26T16:02:44Z'
 draft: false
+date: 2024-06-05
 tags:
 - design
 - process

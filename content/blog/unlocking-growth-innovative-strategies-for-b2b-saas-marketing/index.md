@@ -8,6 +8,7 @@ title: 'Unlocking Growth: Innovative Strategies for B2B SaaS Marketing'
 description: Explore innovative strategies for growth in B2B SaaS marketing, focusing on community building, empathy, and long-term brand investments.
 created_at: '2025-02-07T20:39:02Z'
 edited_at: '2025-02-07T20:44:44Z'
+date: 2025-02-07
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-growth-innovative-strategies-for-b2b-saas-marketing/

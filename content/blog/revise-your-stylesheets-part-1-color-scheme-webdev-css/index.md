@@ -9,6 +9,7 @@ description: Revise Your Stylesheets. Part 1. Color Scheme   Ever wonder how man
 created_at: '2024-06-07T10:32:47Z'
 edited_at: '2024-11-26T16:02:15Z'
 draft: false
+date: 2024-06-07
 tags:
 - webdev
 - css

@@ -8,6 +8,7 @@ title: Own Heroku Review Apps with GitHub Actions and Kamal 2
 description: Continuous delivery is vital in modern software development. It ensures that code changes are...
 created_at: '2024-10-23T14:23:22Z'
 edited_at: '2024-11-25T15:31:50Z'
+date: 2024-10-23
 draft: false
 tags:
 - devops

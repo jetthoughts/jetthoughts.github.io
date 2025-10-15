@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/fintech-20-the-new-era-of-financial-start
 title: 'Fintech 2.0: The New Era of Financial Startups'
 description: The last two years have been rough for fintech startups. The SVB collapse led to regulators clamping down, and investors fled the space. That was good for incumbents and bad for new fintechs. We hope that's about to change and now is a great time to build a fintech startup.
 created_at: '2025-03-06T02:33:13Z'
+date: 2025-03-06
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/fintech-20-the-new-era-of-financial-startups-e9e

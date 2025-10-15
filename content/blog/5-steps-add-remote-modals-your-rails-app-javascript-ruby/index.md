@@ -5,10 +5,11 @@ remote_id: 1877543
 dev_to_id: 1877543
 dev_to_url: https://dev.to/jetthoughts/5-steps-to-add-remote-modals-to-your-rails-app-2n05
 title: 5 Steps to Add Remote Modals to Your Rails App
-description: Sometimes you don’t want to write big JavaScript application just to have working remote modals in...
+description: Sometimes you don't want to write big JavaScript application just to have working remote modals in...
 created_at: '2024-06-05T05:41:45Z'
 edited_at: '2024-11-26T16:03:46Z'
 draft: false
+date: 2024-06-05
 tags:
 - javascript
 - ruby

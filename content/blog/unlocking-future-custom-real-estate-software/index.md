@@ -9,6 +9,7 @@ description: Explore the importance of custom real estate software development i
 created_at: '2025-03-23T05:23:24Z'
 edited_at: '2025-03-24T12:45:04Z'
 draft: false
+date: 2025-03-23
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-the-future-custom-real-estate-software-development-in-2024-4ooc
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-future-custom-real-estate-software/cover.jpeg

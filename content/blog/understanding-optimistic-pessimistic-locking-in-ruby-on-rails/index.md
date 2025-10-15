@@ -9,6 +9,7 @@ description: When several people touch a database simultaneously, software confl
 created_at: '2025-01-03T10:10:53Z'
 edited_at: '2025-01-04T08:17:35Z'
 draft: false
+date: 2025-01-03
 tags:
 - ruby
 - rails

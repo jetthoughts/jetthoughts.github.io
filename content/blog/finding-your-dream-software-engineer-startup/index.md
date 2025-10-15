@@ -6,6 +6,7 @@ dev_to_id: 2571469
 dev_to_url: https://dev.to/jetthoughts/finding-your-dream-software-engineer-startup-jobs-5cfd
 title: Finding Your Dream Software Engineer Startup Jobs
 description: Find your dream software engineer startup jobs! Learn how to land and thrive in a startup role with our informal guide.
+date: 2025-06-06
 created_at: '2025-06-06T19:53:16Z'
 edited_at: '2025-06-12T12:16:41Z'
 draft: false

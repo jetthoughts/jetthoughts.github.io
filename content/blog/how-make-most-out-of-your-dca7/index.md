@@ -6,6 +6,7 @@ dev_to_id: 2374052
 dev_to_url: https://dev.to/jetthoughts/how-to-make-the-most-out-of-your-20s-2em1
 title: How To Make The Most Out Of Your 20s
 description: 'How should you navigate your 20s - the most important decade in your life? For many people, it’s an age with fewer responsibilities: no kids, no mortgage, no restrictions. And so it’s actually the best possible time to go hardcore: to take risks, invest in yourself, and surround yourself with like-minded people.'
+date: 2025-03-20
 created_at: '2025-04-02T07:57:24Z'
 edited_at: '2025-04-11T15:02:08Z'
 draft: false

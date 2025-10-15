@@ -8,6 +8,7 @@ title: How to get & build full URLs in Rails
 description: There are some cases when you want to get a current request absolute URL. Thankfully, Rails got you...
 created_at: '2022-05-19T08:10:35Z'
 edited_at: '2024-11-25T15:41:43Z'
+date: 2022-05-19
 draft: false
 tags:
 - ruby

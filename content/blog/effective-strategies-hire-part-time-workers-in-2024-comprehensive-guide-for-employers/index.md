@@ -9,6 +9,7 @@ description: Hiring part-time workers can be a game-changer for businesses in 20
 created_at: '2024-12-19T10:11:08Z'
 edited_at: '2024-12-19T11:07:50Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/effective-strategies-hire-part-time-workers-in-2024-comprehensive-guide-for-employers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/effective-strategies-hire-part-time-workers-in-2024-comprehensive-guide-for-employers/cover.jpeg

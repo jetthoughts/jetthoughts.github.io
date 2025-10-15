@@ -16,6 +16,7 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/scipab-tell-better-business-stories-startup-management/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/scipab-tell-better-business-stories-startup-management/cover.png
+date: 2024-12-16
 metatags:
   image: cover.png
 slug: scipab-tell-better-business-stories-startup-management

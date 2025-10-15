@@ -6,6 +6,7 @@ dev_to_id: 1910629
 dev_to_url: https://dev.to/jetthoughts/avoid-candidates-who-hide-details-5f7e
 title: Avoid Candidates Who Hide Details
 description: Understanding how a candidate plans to work is crucial when hiring remote workers. Have you ever...
+date: 2024-07-03
 created_at: '2024-07-03T19:27:05Z'
 edited_at: '2024-11-25T15:33:31Z'
 draft: false

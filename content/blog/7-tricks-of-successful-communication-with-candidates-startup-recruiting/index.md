@@ -14,6 +14,7 @@ tags:
 - recruiting
 canonical_url: https://jetthoughts.com/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/7-tricks-of-successful-communication-with-candidates-startup-recruiting/cover.jpeg
+date: 2024-06-07
 metatags:
   image: cover.jpeg
 slug: 7-tricks-of-successful-communication-with-candidates-startup-recruiting

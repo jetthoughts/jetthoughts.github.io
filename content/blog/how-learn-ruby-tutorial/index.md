@@ -8,6 +8,7 @@ title: How to Learn Ruby
 description: Starting to learn a new programming language or a new framework every person faces a problem — what...
 created_at: '2024-06-05T06:15:06Z'
 edited_at: '2024-11-25T15:35:29Z'
+date: 2024-06-05
 draft: false
 tags:
 - ruby

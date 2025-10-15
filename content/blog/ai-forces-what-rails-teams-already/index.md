@@ -8,6 +8,7 @@ title: 'AI Forces What Rails Teams Already Knew: Small Teams Ship Faster'
 description: I found this discussion last week and it crystallized something that's been percolating in the...
 created_at: '2025-10-02T15:05:46Z'
 draft: false
+date: 2025-10-02
 tags:
 - programming
 - management

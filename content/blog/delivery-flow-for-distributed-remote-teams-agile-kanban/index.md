@@ -9,6 +9,7 @@ description: Process which help the team make effective decisions to better live
 created_at: '2024-05-14T12:11:00Z'
 edited_at: '2024-12-06T11:36:36Z'
 draft: false
+date: 2024-05-14
 tags:
 - agile
 - kanban

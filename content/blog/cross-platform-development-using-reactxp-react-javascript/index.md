@@ -9,6 +9,7 @@ description: Cross-platform development using ReactXP   Startups with limited re
 created_at: '2024-05-15T07:48:27Z'
 edited_at: '2024-11-26T16:04:05Z'
 draft: false
+date: 2024-05-15
 tags:
 - react
 - javascript

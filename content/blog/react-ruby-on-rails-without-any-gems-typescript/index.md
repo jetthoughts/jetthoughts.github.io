@@ -15,6 +15,7 @@ tags:
 - development
 canonical_url: https://jetthoughts.com/blog/react-ruby-on-rails-without-any-gems-typescript/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/react-ruby-on-rails-without-any-gems-typescript/cover.jpeg
+date: 2024-06-05
 metatags:
   image: cover.jpeg
 slug: react-ruby-on-rails-without-any-gems-typescript

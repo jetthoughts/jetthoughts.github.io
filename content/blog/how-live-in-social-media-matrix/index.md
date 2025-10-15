@@ -9,6 +9,7 @@ description: In today’s digital age, we find ourselves entangled in a web of s
 created_at: '2024-12-30T08:32:44Z'
 edited_at: '2025-01-30T03:16:16Z'
 draft: false
+date: 2024-12-30
 tags:
 - startup
 - management

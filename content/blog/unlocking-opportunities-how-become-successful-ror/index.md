@@ -11,6 +11,7 @@ edited_at: '2025-05-04T10:55:59Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-opportunities-how-become-successful-ror/
+date: 2025-05-03
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-opportunities-how-become-successful-ror/cover.jpeg
 metatags:
   image: cover.jpeg

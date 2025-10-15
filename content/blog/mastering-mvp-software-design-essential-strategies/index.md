@@ -6,6 +6,7 @@ dev_to_id: 2317570
 dev_to_url: https://dev.to/jetthoughts/mastering-mvp-software-design-essential-strategies-for-successful-development-1kc7
 title: 'Mastering MVP Software Design: Essential Strategies for Successful Development'
 description: Unlock MVP software design secrets! Discover strategies, user feedback tips, and real-world examples for success.
+date: 2025-03-07
 created_at: '2025-03-07T18:59:14Z'
 edited_at: '2025-03-29T19:56:22Z'
 draft: false

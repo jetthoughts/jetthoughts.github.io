@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/are-we-in-an-ai-hype-cycle-243k
 title: Are We In An AI Hype Cycle?
 description: The recent surge in excitement around artificial intelligence (AI) has sparked discussions about...
 created_at: '2024-12-26T02:26:43Z'
+date: 2024-12-26
 edited_at: '2025-01-30T03:20:25Z'
 draft: false
 tags:

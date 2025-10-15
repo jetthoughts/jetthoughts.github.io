@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: why-vertical-llm-agents-are-new-1-billion-saas-opportunities
+date: "2025-02-02"
 ---
 [![Why Vertical LLM Agents Are The New $1 Billion SaaS Opportunities](file_0.jpg)](https://www.youtube.com/watch?v=eBVi_sLaYsc)
 

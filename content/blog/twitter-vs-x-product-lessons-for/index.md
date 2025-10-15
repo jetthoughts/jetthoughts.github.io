@@ -9,6 +9,7 @@ description: Since Elon Musk took over Twitter and rebranded it as X, the platfo
 created_at: '2025-03-14T15:03:24Z'
 edited_at: '2025-03-24T12:44:27Z'
 draft: false
+date: 2025-03-14
 tags: []
 canonical_url: https://dev.to/jetthoughts/twitter-vs-x-product-lessons-for-startup-founders-5abb
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/twitter-vs-x-product-lessons-for/cover.jpeg

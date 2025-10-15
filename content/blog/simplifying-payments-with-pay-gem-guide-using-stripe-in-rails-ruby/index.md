@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide
 title: 'Simplifying Payments with Pay gem: A Guide to Using Stripe in Rails'
 description: Payment integration can be challenging when building web applications. The Pay gem makes handling...
 created_at: '2024-12-03T09:36:14Z'
+date: 2024-12-03
 edited_at: '2024-12-12T14:07:22Z'
 draft: false
 tags:

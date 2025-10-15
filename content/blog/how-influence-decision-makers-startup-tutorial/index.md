@@ -8,6 +8,7 @@ title: How To Influence Decision Makers
 description: In today's fast-paced world, the ability to influence decision-makers is crucial for success. Whether...
 created_at: '2024-12-20T22:50:56Z'
 edited_at: '2024-12-20T23:47:59Z'
+date: "2024-12-20"
 draft: false
 tags:
 - startup

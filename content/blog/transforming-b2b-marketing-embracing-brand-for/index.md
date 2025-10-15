@@ -9,6 +9,7 @@ description: Explore Peter Weinberg's insights on B2B marketing, emphasizing the
 created_at: '2025-04-26T12:07:13Z'
 edited_at: '2025-05-04T10:56:14Z'
 draft: false
+date: 2025-04-26
 tags: []
 canonical_url: https://jetthoughts.com/blog/transforming-b2b-marketing-embracing-brand-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-b2b-marketing-embracing-brand-for/cover.jpeg

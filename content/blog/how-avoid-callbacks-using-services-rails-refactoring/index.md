@@ -9,6 +9,7 @@ description: Often, programmers abuse callbacks, not fully understanding that th
 created_at: '2022-09-20T13:23:18Z'
 edited_at: '2024-11-25T15:40:39Z'
 draft: false
+date: 2022-09-20
 tags:
 - rails
 - refactoring

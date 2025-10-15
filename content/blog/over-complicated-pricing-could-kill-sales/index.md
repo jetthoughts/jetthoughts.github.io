@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/over-complicated-pricing-could-kill-sales/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/over-complicated-pricing-could-kill-sales/cover.jpeg
+date: 2025-04-07
 metatags:
   image: cover.jpeg
 slug: over-complicated-pricing-could-kill-sales

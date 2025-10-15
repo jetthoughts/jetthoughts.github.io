@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: vertical-ai-agents-next-big-thing
+date: "2025-03-16"
 ---
 [![Vertical AI Agents: The Next Big Thing in Tech](file_0.jpg)](https://www.youtube.com/watch?v=ASABxNenD_U)
 

@@ -9,6 +9,7 @@ description: Discover strategies to enhance dev experience in 2025, from onboard
 created_at: '2025-02-21T11:36:09Z'
 edited_at: '2025-02-21T11:44:29Z'
 draft: false
+date: 2025-02-21
 tags: []
 canonical_url: https://jetthoughts.com/blog/enhancing-dev-experience-strategies-for-better-developer-journey-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/enhancing-dev-experience-strategies-for-better-developer-journey-in-2025/cover.jpeg

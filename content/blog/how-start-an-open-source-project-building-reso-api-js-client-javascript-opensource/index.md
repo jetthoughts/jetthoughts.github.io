@@ -16,6 +16,7 @@ tags:
 - management
 canonical_url: https://jetthoughts.com/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource/cover.jpeg
+date: 2024-05-14
 metatags:
   image: cover.jpeg
 slug: how-start-an-open-source-project-building-reso-api-js-client-javascript-opensource

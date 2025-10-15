@@ -8,6 +8,7 @@ title: How a Fractional CTO Turned a Mess into a Stable Product
 description: Are bugs pushing your customers away?  Maybe your app breaks at the worst times. Maybe its design...
 created_at: '2024-09-24T12:34:01Z'
 edited_at: '2024-11-25T15:32:22Z'
+date: 2024-09-24
 draft: false
 tags:
 - startup

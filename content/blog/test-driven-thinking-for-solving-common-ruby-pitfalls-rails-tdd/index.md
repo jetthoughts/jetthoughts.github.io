@@ -8,6 +8,7 @@ title: Test Driven Thinking for Solving Common Ruby Pitfalls
 description: Comrade! Our Great Leader requests a web-service for his Despotic Duties! He has chosen you for...
 created_at: '2024-06-05T05:53:53Z'
 edited_at: '2024-11-26T16:03:33Z'
+date: 2024-06-05
 draft: false
 tags:
 - rails

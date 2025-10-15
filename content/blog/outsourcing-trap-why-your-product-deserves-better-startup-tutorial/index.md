@@ -15,6 +15,7 @@ tags:
 - management
 - leadership
 canonical_url: https://jetthoughts.com/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/
+date: 2025-01-12
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/cover.jpeg
 metatags:
   image: cover.jpeg

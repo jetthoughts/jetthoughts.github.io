@@ -9,6 +9,7 @@ description: In this guide, we'll explore how to configure Traefik with Kamal to
 created_at: '2024-08-20T09:22:37Z'
 edited_at: '2024-11-25T15:32:37Z'
 draft: false
+date: 2024-08-20
 tags: []
 canonical_url: https://jetthoughts.com/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/automating-ssl-certificate-generation-with-traefik-kamal-step-by-guide/cover.png

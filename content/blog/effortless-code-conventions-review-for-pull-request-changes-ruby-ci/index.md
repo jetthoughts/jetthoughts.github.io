@@ -9,6 +9,7 @@ description: Reliably arranged source code helps hackability. You can filter cod
 created_at: '2024-06-07T10:03:27Z'
 edited_at: '2024-12-06T11:37:28Z'
 draft: false
+date: 2024-06-07
 tags:
 - ruby
 - ci

@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-different-staffing-agencies-finding-right/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-different-staffing-agencies-finding-right/cover.jpeg
+date: 2025-05-27
 metatags:
   image: cover.jpeg
 slug: exploring-different-staffing-agencies-finding-right

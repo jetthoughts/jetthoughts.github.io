@@ -6,6 +6,7 @@ dev_to_id: 2541816
 dev_to_url: https://dev.to/jetthoughts/finding-your-dream-ruby-work-a-comprehensive-guide-4lg5
 title: 'Finding Your Dream Ruby Work: A Comprehensive Guide'
 description: Find your dream ruby work! This guide helps you master Ruby, build a portfolio, and land awesome jobs. Get hired!
+date: 2025-05-29
 created_at: '2025-05-29T16:52:27Z'
 edited_at: '2025-06-04T03:28:57Z'
 draft: false

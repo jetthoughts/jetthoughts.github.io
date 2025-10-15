@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: twitter-vs-x-product-lessons-for-3565
+date: "2025-03-26"
 ---
 [![Twitter vs. X: Product Lessons For Startup Founders](file_0.jpg)](https://www.youtube.com/watch?v=EW9TUqOgjmQ)
 

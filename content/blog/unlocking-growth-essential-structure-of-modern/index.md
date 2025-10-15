@@ -9,6 +9,7 @@ description: Explore the ideal structure for a modern marketing agency, focusing
 created_at: '2025-03-13T00:12:55Z'
 edited_at: '2025-03-24T12:44:17Z'
 draft: false
+date: 2025-03-13
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-growth-the-essential-structure-of-a-modern-marketing-agency-cl3
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-growth-essential-structure-of-modern/cover.jpeg

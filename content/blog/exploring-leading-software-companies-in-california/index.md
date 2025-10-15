@@ -6,6 +6,7 @@ dev_to_id: 2426946
 dev_to_url: https://dev.to/jetthoughts/exploring-the-leading-software-companies-in-california-usa-a-2025-overview-2m3n
 title: 'Exploring the Leading Software Companies in California, USA: A 2025 Overview'
 description: Discover top software companies in California, USA, and their impact on tech trends and innovation in 2025.
+date: 2025-04-23
 created_at: '2025-04-23T11:35:24Z'
 edited_at: '2025-04-23T16:27:09Z'
 draft: false

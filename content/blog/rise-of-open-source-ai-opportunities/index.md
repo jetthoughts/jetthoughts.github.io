@@ -9,6 +9,7 @@ description: Explore the exciting opportunities in open source AI for startups. 
 created_at: '2025-06-10T10:43:52Z'
 edited_at: '2025-06-12T12:02:24Z'
 draft: false
+date: 2025-06-10
 tags: []
 canonical_url: https://jetthoughts.com/blog/rise-of-open-source-ai-opportunities/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rise-of-open-source-ai-opportunities/cover.jpeg

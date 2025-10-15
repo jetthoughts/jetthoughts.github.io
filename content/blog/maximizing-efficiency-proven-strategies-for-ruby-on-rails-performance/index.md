@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/cover.jpeg
+date: 2025-02-06
 metatags:
   image: cover.jpeg
 slug: maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance

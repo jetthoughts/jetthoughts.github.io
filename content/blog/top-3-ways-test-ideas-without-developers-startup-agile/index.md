@@ -9,6 +9,7 @@ description: Intro   Startups move fast, and testing ideas is critical. It helps
 created_at: '2024-07-04T10:36:58Z'
 edited_at: '2024-11-25T15:33:15Z'
 draft: false
+date: 2024-07-04
 tags:
 - startup
 - agile

@@ -9,6 +9,7 @@ description: Explore the vital role of a developer experience engineer in enhanc
 created_at: '2025-05-01T15:07:54Z'
 edited_at: '2025-05-04T10:55:44Z'
 draft: false
+date: 2025-05-01
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-future-role-of-developer-experience/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-future-role-of-developer-experience/cover.jpeg

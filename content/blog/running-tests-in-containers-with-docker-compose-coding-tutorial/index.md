@@ -6,6 +6,7 @@ dev_to_id: 1853635
 dev_to_url: https://dev.to/jetthoughts/running-tests-in-containers-with-docker-compose-c20
 title: Running tests in containers with docker-compose
 description: The main advantages of this way are to have independent environment for the tests running...
+date: 2024-05-15
 created_at: '2024-05-15T07:56:17Z'
 edited_at: '2024-11-26T16:04:03Z'
 draft: false

@@ -14,6 +14,7 @@ tags:
 - changelog
 canonical_url: https://jetthoughts.com/blog/new-in-rails-72-generated-with-devcontainer-changelog/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/new-in-rails-72-generated-with-devcontainer-changelog/cover.png
+date: 2024-07-03
 metatags:
   image: cover.png
 slug: new-in-rails-72-generated-with-devcontainer-changelog

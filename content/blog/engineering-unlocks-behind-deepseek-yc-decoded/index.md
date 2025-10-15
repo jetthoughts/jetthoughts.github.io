@@ -9,6 +9,7 @@ description: Explore the engineering innovations behind DeepSeek's R1 and V3 mod
 created_at: '2025-06-09T11:37:34Z'
 edited_at: '2025-06-12T12:16:32Z'
 draft: false
+date: 2025-06-09
 tags: []
 canonical_url: https://jetthoughts.com/blog/engineering-unlocks-behind-deepseek-yc-decoded/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/engineering-unlocks-behind-deepseek-yc-decoded/cover.jpeg

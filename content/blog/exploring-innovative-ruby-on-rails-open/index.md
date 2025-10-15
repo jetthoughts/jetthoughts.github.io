@@ -9,6 +9,7 @@ description: Discover hidden gems and top Ruby on Rails open source projects to 
 created_at: '2025-02-25T14:08:25Z'
 edited_at: '2025-02-25T14:18:18Z'
 draft: false
+date: 2025-02-25
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-innovative-ruby-on-rails-open-source-projects-for-developers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-innovative-ruby-on-rails-open/cover.jpeg

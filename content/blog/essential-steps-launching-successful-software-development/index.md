@@ -6,6 +6,7 @@ dev_to_id: 2361896
 dev_to_url: https://dev.to/jetthoughts/essential-steps-to-launching-a-successful-software-development-business-in-2025-2od8
 title: Essential Steps to Launching a Successful Software Development Business in 2025
 description: Discover essential steps to launch your software development business successfully in 2025!
+date: 2025-03-28
 created_at: '2025-03-28T05:22:25Z'
 edited_at: '2025-03-29T11:44:36Z'
 draft: false

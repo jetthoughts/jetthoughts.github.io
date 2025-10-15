@@ -6,6 +6,7 @@ dev_to_id: 2165050
 dev_to_url: https://dev.to/jetthoughts/exploring-the-future-of-backend-technology-trends-and-innovations-for-2024-3hg3
 title: 'Exploring the Future of Backend Technology: Trends and Innovations for 2024'
 description: As we look ahead to 2024, backend technology is evolving at a rapid pace. Developers and tech...
+date: 2024-12-19
 created_at: '2024-12-19T11:15:23Z'
 edited_at: '2024-12-19T11:26:06Z'
 draft: false

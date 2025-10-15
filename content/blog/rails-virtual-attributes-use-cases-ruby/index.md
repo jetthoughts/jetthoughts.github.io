@@ -16,6 +16,7 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/rails-virtual-attributes-use-cases-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rails-virtual-attributes-use-cases-ruby/cover.jpeg
+date: 2024-05-14
 metatags:
   image: cover.jpeg
 slug: rails-virtual-attributes-use-cases-ruby

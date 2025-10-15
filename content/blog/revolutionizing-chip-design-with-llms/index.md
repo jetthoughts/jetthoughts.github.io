@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/revolutionizing-chip-design-with-llms-686
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/revolutionizing-chip-design-with-llms/cover.jpeg
+date: 2025-03-08
 metatags:
   image: cover.jpeg
 slug: revolutionizing-chip-design-with-llms

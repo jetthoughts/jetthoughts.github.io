@@ -6,6 +6,7 @@ dev_to_id: 2359876
 dev_to_url: https://dev.to/jetthoughts/how-david-lieb-turned-a-failing-startup-into-google-photos-backstory-4864
 title: How David Lieb Turned a Failing Startup Into Google Photos | Backstory
 description: David Lieb's journey from co-founding Bump to creating Google Photos is a story of resilience and innovation. Discover how he navigated failures, learned from users, and ultimately built a product that transformed photo sharing.
+date: 2025-03-27
 created_at: '2025-03-27T08:52:14Z'
 edited_at: '2025-03-29T11:44:39Z'
 draft: false

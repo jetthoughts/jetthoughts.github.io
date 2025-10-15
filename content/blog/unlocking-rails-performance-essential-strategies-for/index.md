@@ -9,6 +9,7 @@ description: Discover essential strategies to boost your Rails performance and o
 created_at: '2025-05-25T14:20:41Z'
 edited_at: '2025-05-26T06:46:26Z'
 draft: false
+date: 2025-05-25
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-rails-performance-essential-strategies-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-rails-performance-essential-strategies-for/cover.jpeg

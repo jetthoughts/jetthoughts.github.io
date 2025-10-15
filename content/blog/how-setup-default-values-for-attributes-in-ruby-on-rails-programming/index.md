@@ -9,6 +9,7 @@ description: Have you ever thought setting default values for attributes in Ruby
 created_at: '2022-07-19T06:01:04Z'
 edited_at: '2024-11-25T15:41:00Z'
 draft: false
+date: 2022-07-19
 tags:
 - ruby
 - programming

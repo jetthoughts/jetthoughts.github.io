@@ -8,6 +8,7 @@ title: Simple Lead Generation Tactics
 description: How to build the Lead Generation workflow? Which tools should be used?  In JetThoughts, we build...
 created_at: '2024-05-14T12:48:39Z'
 edited_at: '2024-11-26T16:05:25Z'
+date: 2024-05-14
 draft: false
 tags:
 - startup

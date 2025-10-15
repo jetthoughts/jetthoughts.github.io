@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/our-default-ruby-development-stack-72k
 title: Our Default Ruby Development Stack
 description: Our Default Ruby Development Stack     Not that long ago I joined JetThoughts. By this time...
 created_at: '2024-06-07T10:47:23Z'
+date: 2024-06-07
 edited_at: '2024-11-26T16:02:11Z'
 draft: false
 tags:

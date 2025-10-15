@@ -9,6 +9,7 @@ description: Explore how startups can effectively integrate AI into their busine
 created_at: '2025-06-10T09:45:59Z'
 edited_at: '2025-06-12T12:02:27Z'
 draft: false
+date: 2025-06-10
 tags: []
 canonical_url: https://jetthoughts.com/blog/harnessing-ai-guide-for-startups-9e56/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/harnessing-ai-guide-for-startups-9e56/cover.jpeg

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/reviving-the-ruby-community-exciting-meet
 title: 'Reviving the Ruby Community: Exciting Meetups Across Europe'
 description: The Ruby programming community is experiencing a vibrant resurgence in Europe, with numerous meetups...
 created_at: '2024-12-28T14:07:24Z'
+date: 2024-12-28
 edited_at: '2025-01-30T03:18:00Z'
 draft: false
 tags:

@@ -6,6 +6,7 @@ dev_to_id: 1852561
 dev_to_url: https://dev.to/jetthoughts/what-activities-are-expected-from-a-remote-developer-for-effective-collaboration-1ffb
 title: What activities are expected from a remote developer for effective collaboration
 description: In order to build trust relationships with remote non-technical founders, we designed the...
+date: 2024-05-14
 created_at: '2024-05-14T11:22:54Z'
 edited_at: '2024-11-26T16:06:01Z'
 draft: false

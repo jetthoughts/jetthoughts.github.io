@@ -11,6 +11,7 @@ edited_at: '2025-06-04T03:29:08Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-data-labeling-key-effective-machine/
+date: 2025-06-03
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-data-labeling-key-effective-machine/cover.jpeg
 metatags:
   image: cover.jpeg

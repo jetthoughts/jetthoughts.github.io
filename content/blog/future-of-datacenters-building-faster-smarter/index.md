@@ -6,6 +6,7 @@ dev_to_id: 2480998
 dev_to_url: https://dev.to/jetthoughts/the-future-of-datacenters-building-faster-and-smarter-4b8k
 title: 'The Future of Datacenters: Building Faster and Smarter'
 description: Explore the future of datacenters and how startups can innovate to build them faster and smarter, meeting the growing demand for AI and tech infrastructure.
+date: 2025-05-12
 created_at: '2025-05-12T13:04:34Z'
 edited_at: '2025-05-15T16:26:09Z'
 draft: false

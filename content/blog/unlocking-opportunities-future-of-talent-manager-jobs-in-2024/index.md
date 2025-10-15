@@ -8,6 +8,7 @@ title: 'Unlocking Opportunities: The Future of Talent Manager Jobs in 2024'
 description: Hey there! So, looking into the future, 2024 is shaping up to be a wild ride for talent manager jobs....
 created_at: '2024-12-19T10:10:43Z'
 edited_at: '2024-12-19T11:07:52Z'
+date: 2024-12-19
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-opportunities-future-of-talent-manager-jobs-in-2024/

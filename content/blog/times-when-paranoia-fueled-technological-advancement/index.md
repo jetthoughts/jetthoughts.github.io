@@ -6,6 +6,7 @@ dev_to_id: 2193606
 dev_to_url: https://dev.to/jetthoughts/the-times-when-paranoia-fueled-technological-advancement-45le
 title: The Times When Paranoia Fueled Technological Advancement
 description: In a world where fear often drives innovation, the conversation between Dalton and Michael sheds...
+date: 2025-01-07
 created_at: '2025-01-07T20:51:54Z'
 edited_at: '2025-01-30T02:49:28Z'
 draft: false

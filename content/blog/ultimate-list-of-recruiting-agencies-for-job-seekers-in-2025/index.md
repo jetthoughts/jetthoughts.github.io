@@ -6,6 +6,7 @@ dev_to_id: 2269275
 dev_to_url: https://dev.to/jetthoughts/the-ultimate-list-of-recruiting-agencies-for-job-seekers-in-2025-560h
 title: The Ultimate List of Recruiting Agencies for Job Seekers in 2025
 description: Explore the top recruiting agencies in 2025 to boost your career. Find your perfect match with our expert guide.
+date: 2025-02-10
 created_at: '2025-02-10T11:45:23Z'
 edited_at: '2025-02-10T11:54:38Z'
 draft: false

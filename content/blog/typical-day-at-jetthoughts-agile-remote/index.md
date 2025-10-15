@@ -16,6 +16,7 @@ tags:
 - process
 canonical_url: https://jetthoughts.com/blog/typical-day-at-jetthoughts-agile-remote/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/typical-day-at-jetthoughts-agile-remote/cover.jpeg
+date: 2024-05-15
 metatags:
   image: cover.jpeg
 slug: typical-day-at-jetthoughts-agile-remote
