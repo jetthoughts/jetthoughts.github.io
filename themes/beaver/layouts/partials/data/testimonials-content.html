@@ -1,7 +1,0 @@
-{{/* Testimonials data content - returns the testimonials data */}}
-{{ if .Site.Data.testimonials.testimonials }}
-  {{ return .Site.Data.testimonials.testimonials }}
-{{ else }}
-  {{/* Fallback to Site.Params.testimonials for backward compatibility */}}
-  {{ return .Site.Params.testimonials }}
-{{ end }}
