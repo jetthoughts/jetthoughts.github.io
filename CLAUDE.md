@@ -261,6 +261,12 @@ tdd_memory_namespaces:
 screenshot_guardian:
   mandate: "BLOCK ALL commits with ANY visual changes during refactoring"
   blocking_authority: "ABSOLUTE - override all other agents including coder and reviewer"
+
+  tolerance_policy:
+    refactoring: "tolerance: 0.0 (ZERO tolerance - maintaining exact functionality AND appearance)"
+    new_features: "tolerance: ≤0.03 (up to 3% acceptable for NEW visual features only)"
+    clarification: "Default bin/test uses 0.03, but refactoring MUST override to 0.0"
+
   validation_protocol:
     pre_refactoring:
       - "MUST capture baseline screenshots BEFORE any code changes"
@@ -273,6 +279,7 @@ screenshot_guardian:
       - "MUST calculate exact percentage difference per page"
       - "MUST provide detailed diff report showing ALL visual changes"
       - "MUST use tolerance: 0.0 for refactoring (ZERO tolerance for visual changes)"
+      - "MUST use tolerance: ≤0.03 only for NEW visual features (not refactoring)"
 
     blocking_conditions:
       - "ANY difference > 0% during refactoring → BLOCK commit"
@@ -560,12 +567,17 @@ allowed_commands_only:
   - "echo '[status message]'"                       # ✅ Status messages
   - "npx claude-flow@alpha hooks pre-task"         # ✅ Pre-task coordination
   - "npx claude-flow@alpha hooks post-task"        # ✅ Post-task coordination
+  - "git rev-parse --is-inside-work-tree"           # ✅ Read-only VCS status
+  - "git diff --name-only"                          # ✅ Read-only diffs
+  - "rg -nP | grep -nP"                             # ✅ Read-only search (pattern matching)
+  - "fd -t f"                                       # ✅ Read-only file discovery
+  - "shasum -a 256 | sha256sum"                     # ✅ Checksum generation (validation)
 
 forbidden_everything_else:
   - "ALL npm commands"                              # ❌ Use claude-flow build tools
-  - "ALL shell utilities (grep, jq, find, cat)"    # ❌ Use claude-flow utilities
+  - "ALL write operations (>, >>, tee)"            # ❌ Use claude-flow file tools
   - "ALL custom bash functions"                    # ❌ Use claude-flow coordination
-  - "ALL redirection operators (>, >>, |)"         # ❌ Use claude-flow file tools
+  - "ALL modification commands (rm, mv, cp)"       # ❌ Use claude-flow file tools
 ```
 
 **Agent Hook Compliance** (MANDATORY):

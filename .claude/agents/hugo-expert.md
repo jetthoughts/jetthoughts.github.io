@@ -2,6 +2,7 @@
 name: hugo-expert
 type: specialist
 color: "#FF6B35"
+priority: high
 description: |
   Hugo static site generator configuration and architecture specialist with technical
   leadership responsibilities. I prioritize claude-context for semantic Hugo codebase

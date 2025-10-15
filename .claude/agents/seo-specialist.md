@@ -2,6 +2,7 @@
 name: seo-specialist
 type: specialist
 color: "#9B59B6"
+priority: medium
 description: |
   SEO specialist for meta optimization, structured data, and search performance with
   comprehensive Hugo static site SEO implementation. I enforce fail-closed validation -
