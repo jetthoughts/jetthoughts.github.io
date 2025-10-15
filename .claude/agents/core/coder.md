@@ -464,12 +464,81 @@ I research existing patterns before implementation using comprehensive MCP tool 
 4. **Global Standards**: Always validate against global handbook standards for frontend development and performance
 5. **Cross-Reference**: Ensure all research findings align with handbook-driven development principles
 
+### Modernization-First Workflow (ZERO NEW FILES POLICY)
+
+**CRITICAL**: I ALWAYS modernize existing code rather than adding new files. My workflow:
+
+1. **Find Existing Implementation** (claude-context):
+   ```bash
+   # Search for similar functionality FIRST
+   claude-context search "[feature description]" --path "themes/beaver/" --limit 20
+   ```
+
+2. **Analyze Dependencies** (serena):
+   ```bash
+   # Find all code that depends on what I'm changing
+   serena find_referencing_symbols "[symbol_name]" --relative_path "themes/beaver/"
+   serena get_symbol_dependencies "[symbol_name]"
+   ```
+
+3. **Modernize In Place** (Edit tool, NOT Write):
+   - Update existing files using Edit tool
+   - Apply flocking rules to extract common patterns
+   - Consolidate duplications into existing structure
+
+4. **Update All Dependencies** (serena + claude-context):
+   ```bash
+   # Find ALL usages that need updating
+   claude-context search "[old_pattern]" --path "themes/beaver/" --limit 50
+   serena find_referencing_symbols "[updated_symbol]"
+   ```
+
+5. **Validate Dependents Work** (testing):
+   - Test each dependent file/component
+   - Ensure backward compatibility maintained
+   - Run visual regression tests
+
+**FORBIDDEN**: Creating new files when existing files can be modernized
+
 ### Hugo-Specific Research Protocol
 - **Template Research**: Analyze existing layout patterns, partial structures, and shortcode implementations
 - **Asset Pipeline Research**: Study CSS architecture, JavaScript module patterns, and optimization strategies
 - **Performance Research**: Research image processing, bundle optimization, and loading strategies
 - **Content Research**: Analyze front matter structures, taxonomy implementations, and content organization
 - **Integration Research**: Study third-party service integrations and deployment optimization
+
+### Dependency Tracking Protocol (MANDATORY)
+
+Before ANY code modification:
+
+1. **Identify Direct Dependencies**:
+   ```bash
+   serena get_symbol_dependencies "[symbol_to_change]"
+   ```
+
+2. **Identify Reverse Dependencies** (who uses this):
+   ```bash
+   serena find_referencing_symbols "[symbol_to_change]"
+   claude-context search "[symbol_to_change]" --path "themes/beaver/" --limit 30
+   ```
+
+3. **Create Dependency Map**:
+   - Document all files that import/use the code I'm changing
+   - Document all files that this code imports/uses
+   - Store in memory: `dependencies/[task_id]/impact_map`
+
+4. **Update Dependencies in Order**:
+   - Update the core implementation first
+   - Update direct dependencies second
+   - Update reverse dependencies third
+   - Test after EACH update
+
+5. **Validate Full Dependency Chain**:
+   ```bash
+   # After all updates, verify everything works together
+   bin/rake test:critical
+   bin/hugo-build
+   ```
 
 ## Quality Coordination Patterns
 
