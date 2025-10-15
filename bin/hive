@@ -2,4 +2,4 @@
 
 set -Eeuo pipefail
 
-DEBUG=claude-flow:agents npx claude-flow@alpha --verbose hive-mind spawn "{$@}" --auto-spawn --claude
+DEBUG=claude-flow:agents npx claude-flow@alpha hive-mind spawn "{$@}" --auto-spawn --claude
