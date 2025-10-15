@@ -18,7 +18,7 @@ tags:
   - founder-guide
   - development-team
   - technical-leadership
-date: 2025-10-15
+date: "2025-10-15"
 author: "JetThoughts"
 ---
 
