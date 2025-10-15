@@ -1,5 +1,4 @@
 @import "foundations/css-variables.css";
-@import "mixins/responsive-visibility.css";
 
 .el-flex {
   flex-direction: column;

@@ -56,12 +56,14 @@ module.exports = {
   plugins: [
     // Process @import statements first (must be first in order)
     require("postcss-import")({
-      path: ["themes/beaver/assets/css"],
+      path: ["themes/beaver/assets/css", "themes/beaver/assets/css/mixins"],
       skipDuplicates: true
     }),
 
     // Mixins first so they can be expanded before nesting/extend
-    process.env.POSTCSS_ENABLE_MIXINS === 'false' ? null : postcssMixins(),
+    process.env.POSTCSS_ENABLE_MIXINS === 'false' ? null : postcssMixins({
+      mixinsDir: 'themes/beaver/assets/css/mixins'
+    }),
 
     // Enable @extend like SCSS (only light usage expected) - placed early so extended selectors participate in nesting
     process.env.POSTCSS_ENABLE_EXTEND === 'false' ? null : postcssExtend(),
