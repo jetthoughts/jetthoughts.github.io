@@ -5,7 +5,7 @@ slug: "fractional-cto-roi-calculator-startup-decision-framework"
 keywords: ["fractional cto cost", "cto cost calculator", "fractional cto roi", "part-time cto pricing", "fractional cto vs full-time"]
 categories: ["Startups", "Technical Leadership", "Cost Analysis"]
 tags: ["fractional cto", "startup cto", "technical leadership", "roi calculator", "hiring", "cost optimization"]
-date: 2025-10-15
+date: "2025-10-15"
 author: "JetThoughts"
 ---
 

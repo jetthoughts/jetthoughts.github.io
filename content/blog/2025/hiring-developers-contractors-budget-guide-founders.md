@@ -14,7 +14,7 @@ tags:
   - hiring-strategy
   - developer-contractors
   - budget-planning
-date: 2025-10-15
+date: "2025-10-15"
 author: "JetThoughts"
 ---
 
