@@ -1003,7 +1003,7 @@ jt_site_directories:
 - ✅ NO modifications to Foundation framework files
 - ✅ NO modifications to FL-builder layout files
 - ✅ NO modifications to template-generated CSS
-- ✅ Visual regression tolerance: 0.003 (as per bin/test default, NOT 0.0)
+- ✅ Visual regression tolerance: **0.0 for refactoring** (MANDATORY - zero visual changes), ≤0.003 only for NEW visual features (bin/test default for non-refactor changes)
 - ✅ Test after EACH change: `bin/rake test:critical`
 
 #### HIGH RISK - Consolidate with Extreme Caution
