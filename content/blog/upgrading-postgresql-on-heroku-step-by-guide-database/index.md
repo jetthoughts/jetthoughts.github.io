@@ -16,6 +16,7 @@ tags:
 - webdev
 canonical_url: https://jetthoughts.com/blog/upgrading-postgresql-on-heroku-step-by-guide-database/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/upgrading-postgresql-on-heroku-step-by-guide-database/cover.jpeg
+date: 2024-02-14
 metatags:
   image: cover.jpeg
 slug: upgrading-postgresql-on-heroku-step-by-guide-database

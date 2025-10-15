@@ -9,6 +9,7 @@ description: Frontend technology is always on the move, and by 2025, we're expec
 created_at: '2024-12-22T10:07:44Z'
 edited_at: '2025-01-30T03:25:43Z'
 draft: false
+date: 2024-12-22
 tags:
 - startup
 - management

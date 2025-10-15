@@ -6,6 +6,7 @@ dev_to_id: 2352544
 dev_to_url: https://dev.to/jetthoughts/exploring-the-leading-react-companies-transforming-the-tech-landscape-in-2025-2pl9
 title: Exploring the Leading React Companies Transforming the Tech Landscape in 2025
 description: Discover the top react companies shaping tech in 2025, from industry leaders to innovative startups!
+date: 2025-03-24
 created_at: '2025-03-24T03:03:29Z'
 edited_at: '2025-03-24T12:45:00Z'
 draft: false

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/what-to-do-for-the-developer-when-the-wip
 title: What to do for the developer when the WIP limit is reached
 description: Did you reach WIP limits and don’t know what to do? And you don’t want to procrastinate, do you? Keep...
 created_at: '2024-05-14T11:42:29Z'
+date: 2024-05-14
 edited_at: '2024-11-26T16:05:47Z'
 draft: false
 tags:

@@ -11,6 +11,7 @@ edited_at: '2025-03-24T12:45:10Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/transforming-marketing-insights-from-airbnb-salesforce-and-logitech-3c25
+date: 2025-03-21
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/transforming-marketing-insights-from-airbnb-salesforce/cover.jpeg
 metatags:
   image: cover.jpeg

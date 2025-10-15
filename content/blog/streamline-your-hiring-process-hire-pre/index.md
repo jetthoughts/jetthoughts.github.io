@@ -6,6 +6,7 @@ dev_to_id: 2355382
 dev_to_url: https://dev.to/jetthoughts/streamline-your-hiring-process-hire-pre-vetted-developers-in-days-2aj2
 title: 'Streamline Your Hiring Process: Hire Pre-vetted Developers in Days'
 description: Discover how Turing helps companies hire pre-vetted developers quickly and efficiently, streamlining the recruitment process and ensuring access to top talent.
+date: 2025-03-25
 created_at: '2025-03-25T08:43:34Z'
 edited_at: '2025-03-26T06:27:07Z'
 draft: false

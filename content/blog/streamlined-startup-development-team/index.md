@@ -11,6 +11,7 @@ edited_at: '2024-11-25T15:32:51Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/streamlined-startup-development-team/
+date: 2024-08-01
 slug: streamlined-startup-development-team
 ---
 Starting a new venture is hard, especially for non-tech founders. Finding the right remote developers can be a big challenge. Here's a simple guide to build an effective team that can launch your MVP and find market fit fast.

@@ -5,7 +5,8 @@ remote_id: 2034339
 dev_to_id: 2034339
 dev_to_url: https://dev.to/jetthoughts/automate-your-deployments-with-kamal-2-and-github-actions-10mc
 title: Automate Your Deployments with Kamal 2 and GitHub Actions
-description: Deployments shouldn’t be complex. You don’t need a lot of complicated configurations. That’s where...
+description: Deployments shouldn't be complex. You don't need a lot of complicated configurations. That's where...
+date: 2024-10-11
 created_at: '2024-10-11T12:26:52Z'
 edited_at: '2024-11-25T15:31:58Z'
 draft: false

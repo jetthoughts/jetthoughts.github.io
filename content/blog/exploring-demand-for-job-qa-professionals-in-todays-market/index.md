@@ -9,6 +9,7 @@ description: Quality Assurance (QA) jobs are seriously on the rise these days. W
 created_at: '2024-12-19T10:35:40Z'
 edited_at: '2024-12-19T11:07:47Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-demand-for-job-qa-professionals-in-todays-market/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-demand-for-job-qa-professionals-in-todays-market/cover.jpeg

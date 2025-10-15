@@ -16,6 +16,7 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/understanding-fractional-positions-future-of-flexible-employment-in-2025/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/understanding-fractional-positions-future-of-flexible-employment-in-2025/cover.jpeg
+date: 2025-01-27
 metatags:
   image: cover.jpeg
 slug: understanding-fractional-positions-future-of-flexible-employment-in-2025

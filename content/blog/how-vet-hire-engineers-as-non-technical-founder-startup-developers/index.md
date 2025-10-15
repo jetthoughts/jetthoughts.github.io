@@ -16,6 +16,7 @@ tags:
 - productivity
 canonical_url: https://jetthoughts.com/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-vet-hire-engineers-as-non-technical-founder-startup-developers/cover.jpeg
+date: 2024-11-07
 metatags:
   image: cover.jpeg
 slug: how-vet-hire-engineers-as-non-technical-founder-startup-developers

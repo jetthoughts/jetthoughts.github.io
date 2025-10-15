@@ -9,6 +9,7 @@ description: In the ever-evolving world of tech, developers are the backbone of 
 created_at: '2024-12-28T16:47:24Z'
 edited_at: '2025-01-30T03:17:24Z'
 draft: false
+date: 2024-12-28
 tags:
 - startup
 - management

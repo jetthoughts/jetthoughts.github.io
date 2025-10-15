@@ -11,6 +11,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-potential-innovative-open-source-web-development-projects-to-explore-in-2025-mm2
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-potential-innovative-open-source-web/cover.jpeg
+date: 2025-03-01
 metatags:
   image: cover.jpeg
 slug: unlocking-potential-innovative-open-source-web

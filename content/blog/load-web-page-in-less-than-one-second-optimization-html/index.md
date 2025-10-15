@@ -9,6 +9,7 @@ description: How to improve the website load time without much effort? What opti
 created_at: '2024-05-15T07:04:49Z'
 edited_at: '2024-11-26T16:04:31Z'
 draft: false
+date: 2024-05-15
 tags:
 - optimization
 - html

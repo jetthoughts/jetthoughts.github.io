@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/discovering-the-best-recruitment-companies-in-the-usa-for-2025-36k4
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/discovering-best-recruitment-companies-in-usa/cover.jpeg
+date: 2025-03-24
 metatags:
   image: cover.jpeg
 slug: discovering-best-recruitment-companies-in-usa

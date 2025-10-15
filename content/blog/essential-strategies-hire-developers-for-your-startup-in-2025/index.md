@@ -6,6 +6,7 @@ dev_to_id: 2185037
 dev_to_url: https://dev.to/jetthoughts/essential-strategies-to-hire-developers-for-your-startup-in-2025-3n58
 title: Essential Strategies to Hire Developers for Your Startup in 2025
 description: Hiring developers for your startup in 2025 is no small task. With tech evolving at lightning speed...
+date: 2025-01-02
 created_at: '2025-01-02T00:09:16Z'
 edited_at: '2025-01-30T02:55:06Z'
 draft: false

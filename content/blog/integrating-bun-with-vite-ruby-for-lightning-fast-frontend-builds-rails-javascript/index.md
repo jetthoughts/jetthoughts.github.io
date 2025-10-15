@@ -9,6 +9,7 @@ description: With the recent release of Bun and its newfound support for Vite, c
 created_at: '2023-11-15T09:13:40Z'
 edited_at: '2024-11-25T15:39:51Z'
 draft: false
+date: 2023-11-15
 tags:
 - rails
 - javascript

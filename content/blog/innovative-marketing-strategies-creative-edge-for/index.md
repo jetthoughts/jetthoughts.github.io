@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/innovative-marketing-strategies-creative-edge-for/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-marketing-strategies-creative-edge-for/cover.jpeg
+date: 2025-03-31
 metatags:
   image: cover.jpeg
 slug: innovative-marketing-strategies-creative-edge-for

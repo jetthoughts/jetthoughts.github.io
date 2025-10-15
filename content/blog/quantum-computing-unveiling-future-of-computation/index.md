@@ -6,6 +6,7 @@ dev_to_id: 2568477
 dev_to_url: https://dev.to/jetthoughts/quantum-computing-unveiling-the-future-of-computation-37b2
 title: 'Quantum Computing: Unveiling the Future of Computation'
 description: Explore the theory, tools, and business applications of quantum computing, from its fundamental principles to its potential to revolutionize industries like cybersecurity and drug discovery.
+date: 2025-06-06
 created_at: '2025-06-06T05:00:48Z'
 edited_at: '2025-06-12T12:02:43Z'
 draft: false

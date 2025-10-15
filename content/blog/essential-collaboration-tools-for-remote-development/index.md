@@ -6,6 +6,7 @@ dev_to_id: 2475741
 dev_to_url: https://dev.to/jetthoughts/essential-collaboration-tools-for-remote-development-teams-2n8f
 title: Essential Collaboration Tools for Remote Development Teams
 description: Discover the essential collaboration tools for remote development teams to enhance communication, project management, and code quality.
+date: 2025-05-10
 created_at: '2025-05-10T18:42:23Z'
 edited_at: '2025-05-15T16:25:56Z'
 draft: false

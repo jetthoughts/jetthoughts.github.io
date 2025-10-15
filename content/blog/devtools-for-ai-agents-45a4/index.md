@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: devtools-for-ai-agents-45a4
+date: "2025-06-06"
 ---
 [![Devtools for AI Agents](file_0.jpg)](https://www.youtube.com/watch?v=yFcWSvR6c14)
 

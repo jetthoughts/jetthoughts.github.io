@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/2024-year-startups-thrived-against-all/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/2024-year-startups-thrived-against-all/cover.jpeg
+date: 2025-04-02
 metatags:
   image: cover.jpeg
 slug: 2024-year-startups-thrived-against-all

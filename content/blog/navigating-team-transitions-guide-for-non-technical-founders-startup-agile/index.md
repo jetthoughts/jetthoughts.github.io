@@ -8,6 +8,7 @@ title: 'Navigating Team Transitions: A Guide for Non-Technical Founders'
 description: Change can be challenging, especially when it involves individuals. Replacing a team is always a...
 created_at: '2024-07-30T10:47:52Z'
 edited_at: '2024-11-25T15:33:06Z'
+date: 2024-07-30
 draft: false
 tags:
 - startup

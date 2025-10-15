@@ -9,6 +9,7 @@ description: How vertically center with Flex you can view Vertical align with a 
 created_at: '2022-06-03T12:58:50Z'
 edited_at: '2024-11-25T15:41:28Z'
 draft: false
+date: 2022-06-03
 tags:
 - css
 - html

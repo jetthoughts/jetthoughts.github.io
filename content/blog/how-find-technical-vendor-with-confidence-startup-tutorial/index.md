@@ -15,6 +15,7 @@ tags:
 - management
 - career
 canonical_url: https://jetthoughts.com/blog/how-find-technical-vendor-with-confidence-startup-tutorial/
+date: 2024-12-18
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-find-technical-vendor-with-confidence-startup-tutorial/cover.jpeg
 metatags:
   image: cover.jpeg

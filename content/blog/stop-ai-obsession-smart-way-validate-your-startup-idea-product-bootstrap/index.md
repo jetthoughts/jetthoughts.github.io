@@ -8,6 +8,7 @@ title: 'Stop the AI Obsession: The Smart Way to Validate Your Startup Idea'
 description: Many founders today fixate on AI. They think adding AI to their product will draw users in droves,...
 created_at: '2024-10-25T12:04:15Z'
 edited_at: '2024-11-25T15:31:48Z'
+date: 2024-10-25
 draft: false
 tags:
 - product

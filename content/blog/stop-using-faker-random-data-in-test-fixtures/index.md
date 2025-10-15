@@ -9,6 +9,7 @@ description: Faker/FFaker can seem like the perfect solution to generate data fo
 created_at: '2024-06-27T15:47:25Z'
 edited_at: '2025-02-21T15:40:37Z'
 draft: false
+date: 2024-06-27
 tags:
 - ruby
 - programming

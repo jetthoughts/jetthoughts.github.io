@@ -6,6 +6,7 @@ dev_to_id: 1885724
 dev_to_url: https://dev.to/jetthoughts/why-and-when-to-use-waterfall-vs-agile-a-business-perspective-1nk8
 title: 'Why and When to Use Waterfall vs. Agile: A Business Perspective'
 description: 'Waterfall Methodology              Use Cases:      Well-defined requirements: Waterfall is...'
+date: 2024-06-12
 created_at: '2024-06-12T13:00:53Z'
 edited_at: '2024-11-25T15:33:43Z'
 draft: false

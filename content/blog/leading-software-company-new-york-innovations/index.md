@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/leading-software-company-new-york-innovations/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/leading-software-company-new-york-innovations/cover.jpeg
+date: 2025-06-06
 metatags:
   image: cover.jpeg
 slug: leading-software-company-new-york-innovations

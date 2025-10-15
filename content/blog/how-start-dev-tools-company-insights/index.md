@@ -9,6 +9,7 @@ description: Learn how to start a dev tools company with insights from YC's Nico
 created_at: '2025-03-18T20:57:14Z'
 edited_at: '2025-03-24T12:45:21Z'
 draft: false
+date: 2025-03-18
 tags: []
 canonical_url: https://dev.to/jetthoughts/how-to-start-a-dev-tools-company-insights-from-yc-2gdm
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-start-dev-tools-company-insights/cover.jpeg

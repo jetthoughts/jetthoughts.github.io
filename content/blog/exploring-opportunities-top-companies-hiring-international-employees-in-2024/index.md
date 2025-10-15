@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-opportunities-top-companies-hiring-international-employees-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-opportunities-top-companies-hiring-international-employees-in-2024/cover.jpeg
+date: 2024-12-19
 metatags:
   image: cover.jpeg
 slug: exploring-opportunities-top-companies-hiring-international-employees-in-2024

@@ -16,6 +16,7 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/what-are-steps-of-an-automation-test-plan-qualitycontrol-testing/cover.jpeg
+date: 2024-05-14
 metatags:
   image: cover.jpeg
 slug: what-are-steps-of-an-automation-test-plan-qualitycontrol-testing

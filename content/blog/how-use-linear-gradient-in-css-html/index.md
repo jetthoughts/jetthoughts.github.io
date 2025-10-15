@@ -9,6 +9,7 @@ description: The CSS linear-gradient function creates an image that consists of 
 created_at: '2022-06-27T21:31:18Z'
 edited_at: '2024-11-25T15:41:05Z'
 draft: false
+date: 2022-06-27
 tags:
 - html
 - css

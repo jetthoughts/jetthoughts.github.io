@@ -9,6 +9,7 @@ description: The main difference is that when using includes the eager loading i
 created_at: '2022-07-14T11:02:17Z'
 edited_at: '2024-11-25T15:41:03Z'
 draft: false
+date: 2022-07-14
 tags:
 - rails
 - ruby

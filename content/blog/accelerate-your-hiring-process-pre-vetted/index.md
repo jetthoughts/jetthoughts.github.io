@@ -9,6 +9,7 @@ description: Discover how Turing's 21-day trial for pre-vetted developers can st
 created_at: '2025-04-25T08:43:14Z'
 edited_at: '2025-05-04T10:56:26Z'
 draft: false
+date: 2025-04-25
 tags: []
 canonical_url: https://jetthoughts.com/blog/accelerate-your-hiring-process-pre-vetted/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/accelerate-your-hiring-process-pre-vetted/cover.jpeg

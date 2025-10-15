@@ -9,6 +9,7 @@ description: In the latest episode of the Breaking Change podcast, host Justin S
 created_at: '2025-01-01T15:56:43Z'
 edited_at: '2025-01-30T02:55:42Z'
 draft: false
+date: 2025-01-01
 tags:
 - startup
 - management

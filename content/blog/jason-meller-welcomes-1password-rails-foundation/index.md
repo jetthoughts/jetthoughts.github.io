@@ -8,6 +8,7 @@ title: Jason Meller Welcomes 1Password to the Rails Foundation
 description: In a significant move for both the Rails community and 1Password, Jason Meller announced that...
 created_at: '2024-12-30T15:06:54Z'
 edited_at: '2025-01-30T03:15:16Z'
+date: 2024-12-30
 draft: false
 tags:
 - startup

@@ -6,6 +6,7 @@ dev_to_id: 2260843
 dev_to_url: https://dev.to/jetthoughts/navigating-the-future-3-essential-ai-security-practices-for-cyber-defense-4k42
 title: 'Navigating the Future: 3 Essential AI Security Practices for Cyber Defense'
 description: Explore three essential AI security practices that organizations can implement to proactively defend against cyber threats in an era of rapid AI adoption.
+date: 2025-02-05
 created_at: '2025-02-05T17:23:26Z'
 edited_at: '2025-02-05T17:28:00Z'
 draft: false

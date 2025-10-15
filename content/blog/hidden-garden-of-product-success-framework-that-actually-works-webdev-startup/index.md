@@ -16,6 +16,7 @@ tags:
 - design
 canonical_url: https://jetthoughts.com/blog/hidden-garden-of-product-success-framework-that-actually-works-webdev-startup/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/hidden-garden-of-product-success-framework-that-actually-works-webdev-startup/cover.jpg
+date: 2024-12-15
 metatags:
   image: cover.jpg
 slug: hidden-garden-of-product-success-framework-that-actually-works-webdev-startup

@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1880305
 dev_to_id: 1880305
 dev_to_url: https://dev.to/jetthoughts/its-time-for-active-job-eph
-title: It’s Time For Active Job
-description: It’s Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2....
+title: It's Time For Active Job
+description: It's Time For Active Job     Recently we have upgraded one of our own projects to Rails 4.2....
 created_at: '2024-06-07T11:47:31Z'
 edited_at: '2024-11-25T15:34:09Z'
 draft: false
@@ -16,6 +16,7 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/its-time-for-active-job-ruby-rails/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/its-time-for-active-job-ruby-rails/cover.jpeg
+date: 2024-06-07
 metatags:
   image: cover.jpeg
 slug: its-time-for-active-job-ruby-rails

@@ -6,6 +6,7 @@ dev_to_id: 1852739
 dev_to_url: https://dev.to/jetthoughts/rscss-styling-css-without-losing-your-sanity-2c1a
 title: RSCSS. Styling CSS without losing your sanity
 description: Thinking of a beautiful and grammatically correct CSS code over and over again but still wiped out...
+date: 2024-05-14
 created_at: '2024-05-14T14:03:11Z'
 edited_at: '2024-11-25T15:38:09Z'
 draft: false

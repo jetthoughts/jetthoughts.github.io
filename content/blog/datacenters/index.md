@@ -9,6 +9,7 @@ description: Learn why the world needs more data centers and high-tech factories
 created_at: '2025-06-06T17:44:16Z'
 edited_at: '2025-06-12T12:16:50Z'
 draft: false
+date: 2025-06-06
 tags: []
 canonical_url: https://jetthoughts.com/blog/datacenters/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/datacenters/cover.jpeg

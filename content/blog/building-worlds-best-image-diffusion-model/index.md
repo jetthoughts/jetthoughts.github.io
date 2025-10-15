@@ -6,6 +6,7 @@ dev_to_id: 2206146
 dev_to_url: https://dev.to/jetthoughts/building-the-worlds-best-image-diffusion-model-5139
 title: Building The World's Best Image Diffusion Model
 description: In a recent episode of Lightcone, Suhail Doshi, founder of Playground, shared insights into creating...
+date: 2025-01-14
 created_at: '2025-01-14T06:12:16Z'
 edited_at: '2025-01-30T02:45:28Z'
 draft: false

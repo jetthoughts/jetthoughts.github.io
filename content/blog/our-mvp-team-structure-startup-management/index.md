@@ -8,6 +8,7 @@ title: Team Structure for MVP
 description: 'In structuring a team for MVP, we should consider the following: there is a massive number of...'
 created_at: '2022-09-28T14:58:08Z'
 edited_at: '2024-11-25T15:40:29Z'
+date: 2022-09-28
 draft: false
 tags:
 - startup

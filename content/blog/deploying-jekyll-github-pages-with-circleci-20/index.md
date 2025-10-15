@@ -6,6 +6,7 @@ dev_to_id: 1853461
 dev_to_url: https://dev.to/jetthoughts/deploying-jekyll-to-github-pages-with-circleci-20-3gbp
 title: Deploying Jekyll to GitHub Pages with CircleCI 2.0
 description: Have you ever seen this error when you tried to deploy your Jekyll site to GitHub Pages?    One of...
+date: 2024-05-15
 created_at: '2024-05-15T05:49:44Z'
 edited_at: '2024-11-26T16:05:00Z'
 draft: false

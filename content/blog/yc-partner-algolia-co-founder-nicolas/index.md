@@ -9,6 +9,7 @@ description: Nicolas Dessaigne, co-founder of Algolia, shares essential advice f
 created_at: '2025-03-31T15:18:14Z'
 edited_at: '2025-04-11T15:02:13Z'
 draft: false
+date: 2025-03-31
 tags: []
 canonical_url: https://jetthoughts.com/blog/yc-partner-algolia-co-founder-nicolas/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/yc-partner-algolia-co-founder-nicolas/cover.jpeg

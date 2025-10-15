@@ -9,6 +9,7 @@ description: In today's fast-paced business environment, remote distributed team
 created_at: '2023-08-02T11:05:40Z'
 edited_at: '2024-11-25T15:40:04Z'
 draft: false
+date: 2023-08-02
 tags:
 - management
 - devops

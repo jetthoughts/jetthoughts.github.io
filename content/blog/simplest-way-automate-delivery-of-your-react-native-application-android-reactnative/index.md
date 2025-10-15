@@ -8,6 +8,7 @@ title: The simplest way to automate delivery of your React Native Application
 description: Introduction   Delivering mobile application’s updates is not as simple as in the case of a...
 created_at: '2024-06-05T06:08:07Z'
 edited_at: '2025-02-21T11:12:25Z'
+date: 2024-06-05
 draft: false
 tags:
 - android

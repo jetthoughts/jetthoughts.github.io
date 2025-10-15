@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/unlocking-ais-future-insights-from-bob-mc
 title: 'Unlocking AI''s Future: Insights from Bob McGrew on AGI and Beyond'
 description: Bob McGrew, former Chief Research Officer at OpenAI, shares insights on AI's evolution, the importance of scaling laws, and the future of jobs in an AI-driven world. Discover how reasoning and advanced AI agents will shape our future.
 created_at: '2025-05-19T11:36:15Z'
+date: 2025-05-19
 edited_at: '2025-05-23T14:03:55Z'
 draft: false
 tags: []

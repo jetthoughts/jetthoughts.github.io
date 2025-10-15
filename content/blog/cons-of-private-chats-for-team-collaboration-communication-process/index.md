@@ -16,6 +16,7 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/cons-of-private-chats-for-team-collaboration-communication-process/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cons-of-private-chats-for-team-collaboration-communication-process/cover.jpeg
+date: 2024-05-15
 metatags:
   image: cover.jpeg
 slug: cons-of-private-chats-for-team-collaboration-communication-process

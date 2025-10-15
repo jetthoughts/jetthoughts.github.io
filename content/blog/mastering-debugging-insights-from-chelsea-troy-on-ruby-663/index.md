@@ -9,6 +9,7 @@ description: In a recent episode of Ruby Rogues, Chelsea Troy shared her experti
 created_at: '2025-01-05T17:47:13Z'
 edited_at: '2025-01-30T02:52:36Z'
 draft: false
+date: 2025-01-05
 tags:
 - startup
 - management

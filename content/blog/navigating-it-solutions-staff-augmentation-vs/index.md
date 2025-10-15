@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/navigating-it-solutions-staff-augmentation-vs-software-development-outsourcing-in-2024-3hba
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/navigating-it-solutions-staff-augmentation-vs/cover.jpeg
+date: 2025-03-25
 metatags:
   image: cover.jpeg
 slug: navigating-it-solutions-staff-augmentation-vs

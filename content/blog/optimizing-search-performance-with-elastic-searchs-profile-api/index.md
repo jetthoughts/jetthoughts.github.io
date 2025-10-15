@@ -6,6 +6,7 @@ dev_to_id: 2166649
 dev_to_url: https://dev.to/jetthoughts/optimizing-search-performance-with-elastic-searchs-profile-api-5fjl
 title: Optimizing Search Performance with Elastic Search's Profile API
 description: Learn how to optimize search performance using Elastic Search's Profile API, including tips on limiting fields and avoiding wildcard searches.
+date: 2024-12-20
 created_at: '2024-12-20T09:58:00Z'
 edited_at: '2024-12-20T10:30:01Z'
 draft: false

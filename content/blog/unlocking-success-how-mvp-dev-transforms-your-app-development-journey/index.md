@@ -9,6 +9,7 @@ description: So you're thinking about building an app, huh? It's a big journey, 
 created_at: '2024-12-19T11:15:06Z'
 edited_at: '2024-12-19T11:26:11Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-success-how-mvp-dev-transforms-your-app-development-journey/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-success-how-mvp-dev-transforms-your-app-development-journey/cover.jpeg

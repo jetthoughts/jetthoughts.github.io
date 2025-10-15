@@ -16,6 +16,7 @@ tags:
 - bestpractices
 canonical_url: https://jetthoughts.com/blog/how-use-ruby-on-rails-concerns-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-use-ruby-on-rails-concerns-webdev/cover.png
+date: 2022-08-18
 metatags:
   image: cover.png
 slug: how-use-ruby-on-rails-concerns-webdev

@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/what-founder-mode-really-means-1ab8
 title: What Founder Mode Really Means
 description: In a recent talk at a Y Combinator alumni event, Airbnb CEO Brian Chesky shared insights on the...
 created_at: '2025-01-27T00:47:24Z'
+date: 2025-01-27
 edited_at: '2025-01-30T02:37:12Z'
 draft: false
 tags:

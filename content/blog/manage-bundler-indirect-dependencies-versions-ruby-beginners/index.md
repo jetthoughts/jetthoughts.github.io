@@ -9,6 +9,7 @@ description: Have you seen that bundler stuck on finding how to upgrade your gem
 created_at: '2022-05-20T16:20:34Z'
 edited_at: '2024-11-25T15:41:39Z'
 draft: false
+date: 2022-05-20
 tags:
 - ruby
 - beginners

@@ -5,7 +5,7 @@ remote_id: 1879467
 dev_to_id: 1879467
 dev_to_url: https://dev.to/jetthoughts/pay-attention-to-method-names-in-minitestunit-2828
 title: Pay Attention to Method Names in Minitest::Unit
-description: "**TL,DR: *don’t define any methods with names name, message, time, pass in Minitest::Unit test..."
+description: "**TL,DR: *don't define any methods with names name, message, time, pass in Minitest::Unit test..."
 created_at: '2024-06-06T17:07:35Z'
 edited_at: '2024-11-26T16:02:33Z'
 draft: false
@@ -16,6 +16,7 @@ tags:
 - rails
 canonical_url: https://jetthoughts.com/blog/pay-attention-method-names-in-minitestunit-testing-ruby/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/pay-attention-method-names-in-minitestunit-testing-ruby/cover.jpeg
+date: 2024-06-06
 metatags:
   image: cover.jpeg
 slug: pay-attention-method-names-in-minitestunit-testing-ruby

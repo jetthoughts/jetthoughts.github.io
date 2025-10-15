@@ -6,6 +6,7 @@ dev_to_id: 1283284
 dev_to_url: https://dev.to/jetthoughts/when-to-use-microservices-1o5e
 title: When to use Microservices?
 description: Microservices are a software architecture design pattern in which a large application is built as a...
+date: 2022-12-03
 created_at: '2022-12-03T12:26:09Z'
 edited_at: '2024-11-25T15:40:16Z'
 draft: false

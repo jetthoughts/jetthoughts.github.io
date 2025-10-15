@@ -8,6 +8,7 @@ title: 'Mastering Social Media Graphics: Strategies for Engagement and Brand Rec
 description: Discover how strategic graphic design can transform your social media presence, driving engagement and building brand recognition. Learn about consistent branding, clear typography, and compelling visual storytelling.
 created_at: '2025-06-02T06:12:59Z'
 edited_at: '2025-06-04T03:28:21Z'
+date: 2025-06-02
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-social-media-graphics-strategies-for/

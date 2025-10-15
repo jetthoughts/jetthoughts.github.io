@@ -9,6 +9,7 @@ description: Are you struggling with the introduction as it’s absolutely annoy
 created_at: '2024-05-14T14:14:26Z'
 edited_at: '2024-11-26T16:05:10Z'
 draft: false
+date: 2024-05-14
 tags:
 - writing
 - introduction

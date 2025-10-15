@@ -6,6 +6,7 @@ dev_to_id: 2277048
 dev_to_url: https://dev.to/jetthoughts/mastering-data-labeling-strategies-for-fine-tuning-llms-in-your-industry-2l39
 title: 'Mastering Data Labeling: Strategies for Fine-Tuning LLMs in Your Industry'
 description: Explore effective data labeling strategies for fine-tuning large language models (LLMs) in various industries, enhancing their performance and applicability.
+date: 2025-02-14
 created_at: '2025-02-14T05:38:37Z'
 edited_at: '2025-02-14T05:44:50Z'
 draft: false

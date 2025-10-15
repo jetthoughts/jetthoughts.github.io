@@ -15,6 +15,7 @@ tags:
 - beginners
 canonical_url: https://jetthoughts.com/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming/cover.png
+date: 2022-06-15
 metatags:
   image: cover.png
 slug: pitfalls-of-using-metaprogramming-in-ruby-on-rails-application-programming

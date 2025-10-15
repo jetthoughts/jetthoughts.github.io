@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/effective-strategies-when-looking-for-new
 title: Effective Strategies When Looking for New Employees in 2025
 description: Discover effective strategies for looking for new employees in 2025, from tech tools to showcasing culture.
 created_at: '2025-05-20T11:35:15Z'
+date: 2025-05-20
 edited_at: '2025-05-23T14:03:39Z'
 draft: false
 tags: []

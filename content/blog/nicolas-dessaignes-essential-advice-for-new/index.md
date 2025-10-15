@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/nicolas-dessaignes-essential-advice-for-new/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/nicolas-dessaignes-essential-advice-for-new/cover.jpeg
+date: 2025-04-21
 metatags:
   image: cover.jpeg
 slug: nicolas-dessaignes-essential-advice-for-new

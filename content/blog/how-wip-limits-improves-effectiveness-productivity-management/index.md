@@ -9,6 +9,7 @@ description: A work-in-progress (WIP) limit is used in agile project management 
 created_at: '2022-12-15T06:56:46Z'
 edited_at: '2024-11-25T15:40:13Z'
 draft: false
+date: 2022-12-15
 tags:
 - productivity
 - management

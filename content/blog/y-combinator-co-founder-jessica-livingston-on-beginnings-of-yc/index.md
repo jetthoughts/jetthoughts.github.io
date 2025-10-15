@@ -8,6 +8,7 @@ title: Y Combinator Co-Founder Jessica Livingston on the Beginnings of YC
 description: In the early days of startup culture, there was a significant gap in funding options for...
 created_at: '2025-01-22T18:37:25Z'
 edited_at: '2025-01-30T02:40:26Z'
+date: 2025-01-22
 draft: false
 tags:
 - startup

@@ -16,6 +16,7 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024/cover.jpeg
+date: 2024-12-29
 metatags:
   image: cover.jpeg
 slug: innovative-ruby-on-rails-projects-boost-your-development-skills-in-2024

@@ -6,6 +6,7 @@ dev_to_id: 2377790
 dev_to_url: https://dev.to/jetthoughts/discover-the-top-react-development-companies-of-2025-for-your-next-project-13f3
 title: Discover the Top React Development Companies of 2025 for Your Next Project
 description: Explore the top React development companies of 2025 to elevate your next project with expert solutions!
+date: 2025-04-03
 created_at: '2025-04-03T08:45:41Z'
 edited_at: '2025-04-11T15:02:00Z'
 draft: false

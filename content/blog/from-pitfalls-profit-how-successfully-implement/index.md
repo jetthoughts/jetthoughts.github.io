@@ -9,6 +9,7 @@ description: TL;DR    Despite promising $3.2M in annual savings for a 60-person 
 created_at: '2025-05-19T23:55:29Z'
 edited_at: '2025-05-23T14:03:44Z'
 draft: false
+date: 2025-05-19
 tags:
 - productivity
 - devops

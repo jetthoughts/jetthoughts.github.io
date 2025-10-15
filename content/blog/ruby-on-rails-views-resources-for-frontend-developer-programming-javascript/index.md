@@ -9,6 +9,7 @@ description: "\U0001F680 Excited to share some awesome resources to help front-e
 created_at: '2023-08-04T22:31:55Z'
 edited_at: '2024-11-25T15:39:59Z'
 draft: false
+date: 2023-08-04
 tags:
 - programming
 - javascript

@@ -6,6 +6,7 @@ dev_to_id: 2327582
 dev_to_url: https://dev.to/jetthoughts/why-the-next-ai-breakthroughs-will-be-in-reasoning-not-scaling-9li
 title: Why The Next AI Breakthroughs Will Be In Reasoning, Not Scaling
 description: Explore the future of AI breakthroughs focusing on reasoning capabilities rather than just scaling. Discover insights from the recent YC o1 hackathon and how startups are leveraging advanced AI models to unlock new possibilities.
+date: 2025-03-12
 created_at: '2025-03-12T12:02:34Z'
 edited_at: '2025-03-24T12:44:20Z'
 draft: false

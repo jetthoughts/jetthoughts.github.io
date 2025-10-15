@@ -7,5 +7,6 @@ slug: blog
 metatags:
   image: og-blog.jpg
 
+date: 2022-10-10
 created_at: 2022-10-10T06:30:10+00:00
 ---

@@ -9,6 +9,7 @@ description: Explore how experience developers boost productivity and innovation
 created_at: '2025-05-23T13:36:14Z'
 edited_at: '2025-05-23T14:03:14Z'
 draft: false
+date: 2025-05-23
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-success-importance-of-an-experience/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-success-importance-of-an-experience/cover.jpeg

@@ -9,6 +9,7 @@ description: Recently, we encountered a bug in our application. A user reported 
 created_at: '2024-10-03T12:16:04Z'
 edited_at: '2024-11-25T15:32:00Z'
 draft: false
+date: 2024-10-03
 tags:
 - rails
 - hotwire

@@ -8,6 +8,7 @@ title: 'Building Trust at Scale: How ToolTime Runs 76 Microservices through Empo
 description: If you're an engineering leader wrestling with scaling teams while preserving autonomy, this story...
 created_at: '2025-01-21T13:13:11Z'
 edited_at: '2025-03-07T14:43:59Z'
+date: 2025-01-21
 draft: false
 tags:
 - startup

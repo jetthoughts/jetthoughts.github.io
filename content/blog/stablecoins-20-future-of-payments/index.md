@@ -15,6 +15,7 @@ created_at: '2025-03-01T20:42:24Z'
 draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/stablecoins-20-the-future-of-payments-4oi1
+date: 2025-03-01
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stablecoins-20-future-of-payments/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -6,6 +6,7 @@ dev_to_id: 2190249
 dev_to_url: https://dev.to/jetthoughts/over-complicated-pricing-could-kill-a-sales-process-3afg
 title: Over-Complicated Pricing Could Kill A Sales Process
 description: In the world of sales, pricing strategies can make or break a deal. Recently, a discussion...
+date: 2025-01-05
 created_at: '2025-01-05T17:56:02Z'
 edited_at: '2025-01-30T02:52:04Z'
 draft: false

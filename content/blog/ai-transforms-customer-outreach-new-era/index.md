@@ -8,6 +8,7 @@ title: 'AI Transforms Customer Outreach: A New Era for Marketing Funnels'
 description: Discover how AI is transforming customer outreach across the marketing funnel, from awareness to loyalty. Learn about AI-powered tools and strategies for personalized engagement, lead nurturing, and conversion optimization.
 created_at: '2025-06-03T21:23:10Z'
 edited_at: '2025-06-04T03:28:06Z'
+date: 2025-06-03
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/ai-transforms-customer-outreach-new-era/

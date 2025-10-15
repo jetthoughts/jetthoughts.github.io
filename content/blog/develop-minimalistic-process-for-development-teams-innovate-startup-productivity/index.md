@@ -9,6 +9,7 @@ description: 'I just finished reading "Continuous Discovery Habits: Discover Pro
 created_at: '2024-10-16T12:21:53Z'
 edited_at: '2024-11-25T15:31:54Z'
 draft: false
+date: 2024-10-16
 tags:
 - startup
 - productivity

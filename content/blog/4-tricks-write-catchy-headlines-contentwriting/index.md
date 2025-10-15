@@ -6,6 +6,7 @@ dev_to_id: 1852733
 dev_to_url: https://dev.to/jetthoughts/4-tricks-to-write-catchy-headlines-2m96
 title: 4 Tricks to Write Catchy Headlines
 description: How to improve your writing, and create not just a good headline, but a catchy one? No matter what...
+date: 2024-05-14
 created_at: '2024-05-14T13:53:54Z'
 edited_at: '2024-11-26T16:05:17Z'
 draft: false

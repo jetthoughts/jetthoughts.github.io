@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/why-choosing-the-right-mvp-software-devel
 title: Why Choosing the Right MVP Software Development Company is Crucial for Startup Success in 2025
 description: Starting a business is tough, especially if you're trying to break into the tech world. One of the...
 created_at: '2025-01-21T07:47:46Z'
+date: 2025-01-21
 edited_at: '2025-01-30T02:41:06Z'
 draft: false
 tags:

@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-potential-6-compelling-reasons-outsource/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-potential-6-compelling-reasons-outsource/cover.jpeg
+date: 2024-01-01
 metatags:
   image: cover.jpeg
 slug: unlocking-potential-6-compelling-reasons-outsource

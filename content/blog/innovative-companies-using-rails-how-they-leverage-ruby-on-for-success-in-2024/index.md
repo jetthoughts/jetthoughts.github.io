@@ -6,6 +6,7 @@ dev_to_id: 2176165
 dev_to_url: https://dev.to/jetthoughts/innovative-companies-using-rails-how-they-leverage-ruby-on-rails-for-success-in-2024-4ej9
 title: 'Innovative Companies Using Rails: How They Leverage Ruby on Rails for Success in 2024'
 description: In the world of web development, Ruby on Rails is still kicking in 2024. This framework, known for...
+date: 2024-12-26
 created_at: '2024-12-26T14:41:45Z'
 edited_at: '2025-01-30T03:19:30Z'
 draft: false

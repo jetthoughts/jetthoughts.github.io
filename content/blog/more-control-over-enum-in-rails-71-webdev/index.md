@@ -15,6 +15,7 @@ tags:
 - ruby
 canonical_url: https://jetthoughts.com/blog/more-control-over-enum-in-rails-71-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/more-control-over-enum-in-rails-71-webdev/cover.png
+date: 2024-02-28
 metatags:
   image: cover.png
 slug: more-control-over-enum-in-rails-71-webdev

@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://dev.to/jetthoughts/unlocking-marketing-success-a-strategic-guide-for-small-businesses-o1m
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-marketing-success-strategic-guide-for/cover.jpeg
+date: 2024-01-01
 metatags:
   image: cover.jpeg
 slug: unlocking-marketing-success-strategic-guide-for

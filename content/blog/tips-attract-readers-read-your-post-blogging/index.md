@@ -5,7 +5,8 @@ remote_id: 1852562
 dev_to_id: 1852562
 dev_to_url: https://dev.to/jetthoughts/tips-to-attract-readers-to-read-your-post-2n9j
 title: Tips to attract readers to read your post
-description: Do you know how to keep readers’ attention? We had been experimenting with different ways to make...
+description: Do you know how to keep readers' attention? We had been experimenting with different ways to make...
+date: 2024-05-14
 created_at: '2024-05-14T11:25:32Z'
 edited_at: '2024-11-26T16:05:59Z'
 draft: false

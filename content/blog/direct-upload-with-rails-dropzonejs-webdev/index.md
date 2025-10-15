@@ -8,6 +8,7 @@ title: Direct Upload with Rails & Dropzone.js
 description: Configuring direct file uploads in Rails is now easier than ever. In this article, I'll show you how...
 created_at: '2024-09-25T08:37:13Z'
 edited_at: '2024-11-25T15:32:17Z'
+date: 2024-09-25
 draft: false
 tags:
 - rails

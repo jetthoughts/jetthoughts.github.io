@@ -13,6 +13,7 @@ description: |-
   Apply to YC Winter 2025 at https://ycombinator.com/apply.
 created_at: '2025-03-05T07:37:34Z'
 draft: false
+date: 2025-03-05
 tags: []
 canonical_url: https://dev.to/jetthoughts/stablecoins-20-the-future-of-payments-3dag
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/stablecoins-20-future-of-payments-1810/cover.jpeg

@@ -9,6 +9,7 @@ description: The Python Software Foundation has officially released Python 3.12 
 created_at: '2024-12-20T22:58:43Z'
 edited_at: '2025-01-30T03:27:29Z'
 draft: false
+date: 2024-12-20
 tags:
 - python
 - tutorial

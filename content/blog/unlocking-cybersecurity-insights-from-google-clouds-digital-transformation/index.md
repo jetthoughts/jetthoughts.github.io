@@ -6,6 +6,7 @@ dev_to_id: 2265028
 dev_to_url: https://dev.to/jetthoughts/unlocking-cybersecurity-insights-from-google-clouds-digital-transformation-21lk
 title: 'Unlocking Cybersecurity: Insights from Google Cloud''s Digital Transformation'
 description: Explore insights from Google Cloud on cybersecurity in digital transformation, focusing on agile practices, workforce enablement, and the role of MSSPs.
+date: 2025-02-07
 created_at: '2025-02-07T20:38:24Z'
 edited_at: '2025-02-07T20:44:46Z'
 draft: false

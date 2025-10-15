@@ -8,6 +8,7 @@ title: 'The Future of AI: Are We Hitting the Limits of Scaling Laws?'
 description: Explore the debate on scaling laws in AI. Are we reaching the limits of larger models, or is a new paradigm emerging? Discover the future of AI in this insightful article.
 created_at: '2025-05-04T01:27:23Z'
 edited_at: '2025-05-04T10:55:33Z'
+date: 2025-05-04
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/future-of-ai-are-we-hitting/

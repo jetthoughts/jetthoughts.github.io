@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/choosing-the-right-mvp-app-development-co
 title: Choosing the Right MVP App Development Company for Your Startup in 2025
 description: Discover how to choose the best MVP app development company for your startup in 2025 and ensure success!
 created_at: '2025-04-21T10:19:03Z'
+date: 2025-04-21
 edited_at: '2025-04-23T16:26:54Z'
 draft: false
 tags: []

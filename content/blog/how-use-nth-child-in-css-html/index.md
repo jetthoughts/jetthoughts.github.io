@@ -6,6 +6,7 @@ dev_to_id: 1113061
 dev_to_url: https://dev.to/jetthoughts/how-to-use-nth-child-in-css-535
 title: How to use :nth-child in CSS
 description: The :nth-child pseudo-class allows to select one and more elements based on their source...
+date: 2022-06-13
 created_at: '2022-06-13T14:53:23Z'
 edited_at: '2024-11-25T15:41:17Z'
 draft: false

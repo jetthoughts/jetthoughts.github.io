@@ -6,6 +6,7 @@ dev_to_id: 2422049
 dev_to_url: https://dev.to/jetthoughts/turbocharge-your-rails-apps-with-smart-database-indexing-2a26
 title: Turbocharge Your Rails Apps with Smart Database Indexing
 description: Is your Rails application running slow? Are search queries taking forever to complete? The solution...
+date: 2025-04-21
 created_at: '2025-04-21T13:19:24Z'
 edited_at: '2025-05-04T10:56:39Z'
 draft: false

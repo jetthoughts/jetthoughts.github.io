@@ -9,6 +9,7 @@ description: Explore the vital role of front end services in web development, en
 created_at: '2024-12-19T11:23:11Z'
 edited_at: '2024-12-19T12:07:14Z'
 draft: false
+date: 2024-12-19
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-success-essential-role-of-front-end-services-in-modern-web-development/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-success-essential-role-of-front-end-services-in-modern-web-development/cover.jpeg

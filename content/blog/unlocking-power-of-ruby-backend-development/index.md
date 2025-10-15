@@ -6,6 +6,7 @@ dev_to_id: 2301117
 dev_to_url: https://dev.to/jetthoughts/unlocking-the-power-of-ruby-backend-development-a-comprehensive-guide-for-modern-applications-49bc
 title: 'Unlocking the Power of Ruby Backend Development: A Comprehensive Guide for Modern Applications'
 description: Explore Ruby backend development for modern apps with this guide. Unlock efficiency and flexibility today!
+date: 2025-02-27
 created_at: '2025-02-27T14:44:24Z'
 draft: false
 tags: []

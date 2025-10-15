@@ -8,6 +8,7 @@ title: 'Mastering Multiple Returns in Ruby: The Power of Data.define'
 description: In the world of Ruby programming, returning multiple values from a method can often lead to confusion...
 created_at: '2024-12-22T11:17:24Z'
 edited_at: '2025-01-30T03:25:02Z'
+date: 2024-12-22
 draft: false
 tags:
 - startup

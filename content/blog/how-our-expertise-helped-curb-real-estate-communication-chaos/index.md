@@ -11,6 +11,7 @@ edited_at: '2024-11-26T16:03:09Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/
+date: 2024-06-05
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-our-expertise-helped-curb-real-estate-communication-chaos/cover.jpeg
 metatags:
   image: cover.jpeg

@@ -9,6 +9,7 @@ description: In today's fast-paced world, the ability to influence decision-make
 created_at: '2024-12-23T23:16:44Z'
 edited_at: '2025-01-30T03:23:20Z'
 draft: false
+date: 2024-12-23
 tags:
 - startup
 - management

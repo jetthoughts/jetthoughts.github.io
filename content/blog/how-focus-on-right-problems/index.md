@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/how-to-focus-on-the-right-problems-12d6
 title: How To Focus On The Right Problems
 description: When it comes to building a successful startup, focus is critical. But how do you know if you’re spending time on the right things? In this episode, Dalton and Michael share advice for how to break through the noise and zero in on solving the problems that matter most for your business.
 created_at: '2025-04-02T18:23:35Z'
+date: 2025-04-02
 edited_at: '2025-04-11T15:02:03Z'
 draft: false
 tags: []

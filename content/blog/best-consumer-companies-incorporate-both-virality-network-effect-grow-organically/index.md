@@ -11,6 +11,7 @@ edited_at: '2025-02-01T11:44:21Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/best-consumer-companies-incorporate-both-virality-network-effect-grow-organically/
+date: 2025-02-01
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/best-consumer-companies-incorporate-both-virality-network-effect-grow-organically/cover.jpeg
 metatags:
   image: cover.jpeg

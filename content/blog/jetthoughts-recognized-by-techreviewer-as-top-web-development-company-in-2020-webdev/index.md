@@ -16,6 +16,7 @@ tags:
 - ruby
 canonical_url: https://jetthoughts.com/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev/cover.png
+date: 2024-05-14
 metatags:
   image: cover.png
 slug: jetthoughts-recognized-by-techreviewer-as-top-web-development-company-in-2020-webdev

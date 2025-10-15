@@ -9,6 +9,7 @@ description: Discover the benefits of hiring pre-vetted developers for your proj
 created_at: '2025-05-25T08:45:14Z'
 edited_at: '2025-05-26T04:11:21Z'
 draft: false
+date: 2025-05-25
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-talent-hire-pre-vetted-developers/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-talent-hire-pre-vetted-developers/cover.jpeg

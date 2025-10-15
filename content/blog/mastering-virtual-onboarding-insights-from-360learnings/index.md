@@ -11,6 +11,7 @@ edited_at: '2025-05-04T10:55:36Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-virtual-onboarding-insights-from-360learnings/
+date: 2025-05-02
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-virtual-onboarding-insights-from-360learnings/cover.jpeg
 metatags:
   image: cover.jpeg

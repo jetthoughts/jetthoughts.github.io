@@ -5,7 +5,8 @@ remote_id: 1108673
 dev_to_id: 1108673
 dev_to_url: https://dev.to/jetthoughts/preview-ui-changes-with-ruby-on-rails-variants-3k9e
 title: Preview UI changes with Ruby on Rails variants
-description: When implementing new design for a live application we usually don’t want our users to see an...
+description: When implementing new design for a live application we usually don't want our users to see an...
+date: 2022-06-08
 created_at: '2022-06-08T20:15:39Z'
 edited_at: '2024-11-25T15:41:20Z'
 draft: false

@@ -8,6 +8,7 @@ title: 'Mastering Rails with React: A Comprehensive Guide for 2024'
 description: If you're looking to mix the power of Rails with the flexibility of React, this guide is for you....
 created_at: '2024-12-23T11:17:03Z'
 edited_at: '2025-01-30T03:23:52Z'
+date: 2024-12-23
 draft: false
 tags:
 - startup

@@ -9,6 +9,7 @@ description: Explore Parker Conrad's journey from early tech experiences to buil
 created_at: '2025-04-29T19:30:06Z'
 edited_at: '2025-05-04T10:55:50Z'
 draft: false
+date: 2025-04-29
 tags: []
 canonical_url: https://jetthoughts.com/blog/building-future-insights-from-parker-conrad/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/building-future-insights-from-parker-conrad/cover.jpeg

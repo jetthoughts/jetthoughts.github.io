@@ -5,7 +5,8 @@ remote_id: 1852712
 dev_to_id: 1852712
 dev_to_url: https://dev.to/jetthoughts/what-are-the-most-common-misconceptions-about-remote-work-4l15
 title: What are the most common misconceptions about remote work?
-description: A lot of people don’t know the truth about what it’s like to work from home. It seems to me that the...
+description: A lot of people don't know the truth about what it's like to work from home. It seems to me that the...
+date: 2024-05-14
 created_at: '2024-05-14T13:38:49Z'
 edited_at: '2024-11-26T16:05:21Z'
 draft: false

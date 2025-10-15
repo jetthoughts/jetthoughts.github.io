@@ -9,6 +9,7 @@ description: Hey there! So, you're thinking about diving into the world of softw
 created_at: '2025-01-15T04:22:14Z'
 edited_at: '2025-01-30T02:44:57Z'
 draft: false
+date: 2025-01-15
 tags:
 - startup
 - management

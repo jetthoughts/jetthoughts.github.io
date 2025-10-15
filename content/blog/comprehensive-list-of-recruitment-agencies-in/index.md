@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/comprehensive-list-of-recruitment-agencies-in/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/comprehensive-list-of-recruitment-agencies-in/cover.jpeg
+date: 2025-04-25
 metatags:
   image: cover.jpeg
 slug: comprehensive-list-of-recruitment-agencies-in

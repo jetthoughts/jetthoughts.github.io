@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/compliance-and-audit-1h3h
 title: Compliance and Audit
 description: Learn how LLMs are changing compliance and audit. Discover how AI can automate tasks like spotting data anomalies and finding incomplete records, making compliance faster and more accurate.
 created_at: '2025-06-06T17:56:16Z'
+date: 2025-06-06
 edited_at: '2025-06-12T12:01:46Z'
 draft: false
 tags: []

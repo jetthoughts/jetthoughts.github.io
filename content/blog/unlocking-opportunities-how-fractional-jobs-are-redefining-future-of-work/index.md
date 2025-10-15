@@ -8,6 +8,7 @@ title: 'Unlocking Opportunities: How Fractional Jobs Are Redefining the Future o
 description: Fractional jobs are shaking up the way we think about work. Instead of the usual 9-to-5 grind, more...
 created_at: '2024-12-23T11:07:43Z'
 edited_at: '2025-01-30T03:24:34Z'
+date: 2024-12-23
 draft: false
 tags:
 - startup

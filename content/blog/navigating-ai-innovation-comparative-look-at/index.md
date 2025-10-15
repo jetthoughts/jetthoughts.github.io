@@ -11,6 +11,7 @@ edited_at: '2025-02-24T16:47:57Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/navigating-ai-innovation-comparative-look-at-claude-3-on-aws-chatgpt-azure/
+date: 2025-02-24
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/navigating-ai-innovation-comparative-look-at/cover.jpeg
 metatags:
   image: cover.jpeg

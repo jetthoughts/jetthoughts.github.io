@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: unlocking-remote-work-success-lessons-from
+date: "2025-05-06"
 ---
 When Mattermost began its journey, the concept of a traditional office was quickly deemed unnecessary. With a small team working remotely, they discovered the power of flexibility and productivity that comes with a remote-first approach. As the company expanded, they learned valuable lessons that can help others thrive in a remote work environment.
 

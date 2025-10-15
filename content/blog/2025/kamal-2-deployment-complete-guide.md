@@ -2,6 +2,7 @@
 dev_to_id: 1
 title: "Kamal 2.0: Complete Rails Deployment Guide - Deploy Without Heroku in 2025"
 description: "Master Kamal 2.0 deployment with this comprehensive Rails tutorial. Learn step-by-step configuration, troubleshooting, and migration from Heroku with real-world examples."
+date: 2025-01-15
 created_at: "2025-01-15T10:00:00Z"
 edited_at: "2025-01-15T10:00:00Z"
 draft: false

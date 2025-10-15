@@ -8,6 +8,7 @@ title: 'Exploring the Future of Web and Software Development: Trends and Innovat
 description: Discover key trends and innovations shaping web and software development in 2025, from AI to low-code solutions.
 created_at: '2025-05-09T19:34:15Z'
 edited_at: '2025-05-15T16:25:52Z'
+date: 2025-05-09
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-future-of-web-software-development/

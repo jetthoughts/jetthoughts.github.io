@@ -16,6 +16,7 @@ tags:
 - tutorial
 canonical_url: https://jetthoughts.com/blog/art-of-form-objects-elegant-search/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/art-of-form-objects-elegant-search/cover.png
+date: 2025-04-21
 metatags:
   image: cover.png
 slug: art-of-form-objects-elegant-search

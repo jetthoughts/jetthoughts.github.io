@@ -8,6 +8,7 @@ title: 'Unlocking Opportunities: The Rise of Part Time Executive Roles in Today'
 description: Part-time executive roles are becoming a big thing in today's job market. More and more executives...
 created_at: '2025-01-06T11:23:15Z'
 edited_at: '2025-01-30T02:51:28Z'
+date: 2025-01-06
 draft: false
 tags:
 - startup

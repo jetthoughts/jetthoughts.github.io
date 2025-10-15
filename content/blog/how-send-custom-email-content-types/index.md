@@ -15,6 +15,7 @@ tags:
 - webdev
 - beginners
 canonical_url: https://jetthoughts.com/blog/how-send-custom-email-content-types/
+date: 2025-04-20
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/how-send-custom-email-content-types/cover.png
 metatags:
   image: cover.png

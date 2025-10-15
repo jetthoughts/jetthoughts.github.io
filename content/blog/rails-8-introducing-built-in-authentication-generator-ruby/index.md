@@ -8,6 +8,7 @@ title: 'Rails 8: Introducing the Built-in Authentication Generator'
 description: 'Ruby on Rails developers face a common task: building user login systems. Rails 8 brings a built-in...'
 created_at: '2024-11-29T09:11:43Z'
 edited_at: '2024-12-07T14:02:07Z'
+date: 2024-11-29
 draft: false
 tags:
 - rails

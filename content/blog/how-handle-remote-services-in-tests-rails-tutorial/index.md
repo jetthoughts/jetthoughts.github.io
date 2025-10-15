@@ -9,6 +9,7 @@ description: Do you have difficulties in adding the new tests and their readabil
 created_at: '2024-05-15T06:53:38Z'
 edited_at: '2024-11-26T16:04:38Z'
 draft: false
+date: 2024-05-15
 tags:
 - rails
 - tutorial

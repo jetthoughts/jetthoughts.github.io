@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/transforming-documentation-with-nextjs-a-
 title: 'Transforming Documentation with Next.js: A Case Study with JetThoughts'
 description: Well-structured documentation is crucial for all open-source projects, but it becomes even more vital...
 created_at: '2024-11-22T17:51:46Z'
+date: 2024-11-22
 edited_at: '2024-11-25T15:42:24Z'
 draft: false
 tags:

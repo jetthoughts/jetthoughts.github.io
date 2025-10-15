@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/ais-ux-revolution-design-expert-unpacks/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/ais-ux-revolution-design-expert-unpacks/cover.jpeg
+date: 2025-05-31
 metatags:
   image: cover.jpeg
 slug: ais-ux-revolution-design-expert-unpacks

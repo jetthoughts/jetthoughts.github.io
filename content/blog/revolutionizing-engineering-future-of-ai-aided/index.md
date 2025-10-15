@@ -8,6 +8,7 @@ title: 'Revolutionizing Engineering: The Future of AI-Aided Tools'
 description: Engineering tools have barely evolved in decades, relying on complex numerical solvers. The next generation of AI-powered tools promises to change that, making engineering faster and more accessible.
 created_at: '2025-03-03T23:32:27Z'
 draft: false
+date: 2025-03-03
 tags: []
 canonical_url: https://dev.to/jetthoughts/revolutionizing-engineering-the-future-of-ai-aided-tools-4cll
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/revolutionizing-engineering-future-of-ai-aided/cover.jpeg

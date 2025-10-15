@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-ruby-frontend-development-best-practices/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/exploring-ruby-frontend-development-best-practices/cover.jpeg
+date: 2025-04-29
 metatags:
   image: cover.jpeg
 slug: exploring-ruby-frontend-development-best-practices

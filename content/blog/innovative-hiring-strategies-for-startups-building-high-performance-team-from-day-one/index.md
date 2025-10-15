@@ -9,6 +9,7 @@ description: Discover innovative hiring strategies for startups to build a high-
 created_at: '2025-02-03T11:42:55Z'
 edited_at: '2025-02-03T11:44:11Z'
 draft: false
+date: 2025-02-03
 tags: []
 canonical_url: https://jetthoughts.com/blog/innovative-hiring-strategies-for-startups-building-high-performance-team-from-day-one/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/innovative-hiring-strategies-for-startups-building-high-performance-team-from-day-one/cover.jpeg

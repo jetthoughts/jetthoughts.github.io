@@ -6,6 +6,7 @@ dev_to_id: 2571017
 dev_to_url: https://dev.to/jetthoughts/building-the-future-insights-from-parker-conrad-498d
 title: 'Building The Future: Insights From Parker Conrad'
 description: Explore Parker Conrad's journey from early tech experiences to building Rippling, a $13.5 billion company. Discover insights on entrepreneurship, the future of software, and the role of AI in business.
+date: 2025-06-06
 created_at: '2025-06-06T16:08:57Z'
 edited_at: '2025-06-12T12:16:55Z'
 draft: false

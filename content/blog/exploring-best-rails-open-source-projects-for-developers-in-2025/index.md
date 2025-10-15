@@ -8,6 +8,7 @@ title: Exploring the Best Rails Open Source Projects for Developers in 2025
 description: Discover top Rails open source projects in 2025 that boost skills and innovation for developers.
 created_at: '2025-01-31T12:57:54Z'
 edited_at: '2025-01-31T13:08:15Z'
+date: 2025-01-31
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/exploring-best-rails-open-source-projects-for-developers-in-2025/

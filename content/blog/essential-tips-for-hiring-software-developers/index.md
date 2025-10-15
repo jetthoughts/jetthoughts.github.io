@@ -7,6 +7,7 @@ dev_to_url: https://dev.to/jetthoughts/essential-tips-for-hiring-software-develo
 title: Essential Tips for Hiring Software Developers for Startups in 2025
 description: Discover essential tips for hiring software developers for startups in 2025 to build a winning tech team.
 created_at: '2025-05-27T15:28:15Z'
+date: 2025-05-27
 edited_at: '2025-05-27T20:40:43Z'
 draft: false
 tags: []

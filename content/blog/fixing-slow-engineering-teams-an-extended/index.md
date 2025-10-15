@@ -9,6 +9,7 @@ description: 'TL;DR — Series A companies often stall out after product‑mark
 created_at: '2025-06-20T16:16:34Z'
 edited_at: '2025-06-21T16:04:36Z'
 draft: false
+date: 2025-06-20
 tags:
 - management
 - product

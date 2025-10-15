@@ -5,7 +5,7 @@ remote_id: 2164756
 dev_to_id: 2164756
 dev_to_url: https://dev.to/jetthoughts/how-to-organize-a-startup-team-structure-48c3
 title: How to Organize a Startup Team Structure
-description: Starting a business is exciting, but organizing your team is a whole different ball game. You’ve got...
+description: Starting a business is exciting, but organizing your team is a whole different ball game. You've got...
 created_at: '2024-12-19T09:41:02Z'
 edited_at: '2024-12-19T10:08:19Z'
 draft: false
@@ -15,6 +15,7 @@ cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io
 metatags:
   image: cover.jpeg
 slug: how-organize-startup-team-structure
+date: "2024-12-19"
 ---
 Starting a business is exciting, but organizing your team is a whole different ball game. You’ve got to figure out who does what, how they do it, and make sure everyone’s on the same page. A good startup organizational structure can help keep things running smoothly. It’s not just about assigning tasks; it’s about creating a system where everyone knows their role and how they fit into the bigger picture. This guide will walk you through setting up a team structure that works for your startup.
 

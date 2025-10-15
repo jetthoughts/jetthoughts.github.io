@@ -9,6 +9,7 @@ description: Explore how AI and generative AI tools can revolutionize content pe
 created_at: '2025-06-07T19:37:24Z'
 edited_at: '2025-06-12T12:02:02Z'
 draft: false
+date: 2025-06-07
 tags: []
 canonical_url: https://jetthoughts.com/blog/unlocking-content-personalization-with-ai-strategic/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/unlocking-content-personalization-with-ai-strategic/cover.jpeg

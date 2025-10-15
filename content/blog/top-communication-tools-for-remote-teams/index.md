@@ -12,6 +12,7 @@ draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/top-communication-tools-for-remote-teams/
 cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/top-communication-tools-for-remote-teams/cover.jpeg
+date: 2024-01-01
 metatags:
   image: cover.jpeg
 slug: top-communication-tools-for-remote-teams

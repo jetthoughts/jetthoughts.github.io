@@ -8,6 +8,7 @@ title: Implementing Instant Search, Dynamic Forms, and Infinite Scroll with Hotw
 description: Despite Hotwire's growing popularity, many developers struggle with implementing it correctly. Common...
 created_at: '2025-03-26T20:00:54Z'
 edited_at: '2025-03-29T11:44:47Z'
+date: 2025-03-26
 draft: false
 tags:
 - rails

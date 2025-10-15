@@ -4,8 +4,9 @@ source: dev_to
 remote_id: 2270150
 dev_to_id: 2270150
 dev_to_url: https://dev.to/jetthoughts/you-dont-have-to-be-a-billionaire-to-launch-satellites-4a0e
-title: You Don’t Have To Be A Billionaire To Launch Satellites
-description: Astranis shows that you don’t need billions to launch satellites. Learn how they started small, set ambitious goals, and maintained a scrappy mindset to build a successful hard tech company.
+title: You Don't Have To Be A Billionaire To Launch Satellites
+description: Astranis shows that you don't need billions to launch satellites. Learn how they started small, set ambitious goals, and maintained a scrappy mindset to build a successful hard tech company.
+date: 2025-02-10
 created_at: '2025-02-10T22:12:24Z'
 edited_at: '2025-02-11T04:06:30Z'
 draft: false
