@@ -2,6 +2,7 @@
 
 require "sync/logging"
 require "sync/post_storage"
+require "date"
 
 module Sync
   class Post
@@ -141,6 +142,7 @@ module Sync
         "title" => article["title"],
         "description" => article["description"],
         "created_at" => article["created_at"],
+        "date" => Date.parse(article["created_at"]).to_s,
         "edited_at" => article["edited_at"],
         "draft" => false,
         "tags" => article["tags"],
