@@ -45,23 +45,23 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│ Phase 1: Critical CSS Inline Consolidation                      │
-│ Duration: 20-30 hours | Impact: 300-400 lines | Risk: LOW       │
+│ Phase 1: FL-Builder Foundation Extraction (BIGGEST IMPACT)      │
+│ Duration: 40-50 hours | Impact: 1,900-2,900 lines | Risk: MED   │
 ├─────────────────────────────────────────────────────────────────┤
-│ ✅ WP1.1: CSS Variables Foundation         [🔲 Not Started]    │
-│ ✅ WP1.2: Reset Utilities Extraction       [🔲 Not Started]    │
-│ ✅ WP1.3: PowerPack Infobox Pattern        [🔲 Not Started]    │
-│ ✅ WP1.4: Media Query Consolidation        [🔲 Not Started]    │
+│ ✅ WP1.1: FL-Row Foundation Extraction     [🔲 Not Started]    │
+│ ✅ WP1.2: FL-Col Grid Foundation           [🔲 Not Started]    │
+│ ✅ WP1.3: FL-Module Wrapper Foundation     [🔲 Not Started]    │
+│ ✅ WP1.4: FL-Visible Responsive Foundation [🔲 Not Started]    │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
-│ Phase 2: Shared Component Extraction (REVISED)                  │
-│ Duration: 40-50 hours | Impact: 1,900-2,900 lines | Risk: MED   │
+│ Phase 2: Critical CSS Consolidation                             │
+│ Duration: 20-30 hours | Impact: 300-400 lines | Risk: LOW       │
 ├─────────────────────────────────────────────────────────────────┤
-│ ✅ WP2.1: Companies Component Extraction   [🔲 Not Started]    │
-│ ✅ WP2.2: Technologies Component Extract   [🔲 Not Started]    │
-│ ✅ WP2.3: Pagination Component Extract     [🔲 Not Started]    │
-│ ✅ WP2.4: Shared Utilities Consolidation   [🔲 Not Started]    │
+│ ✅ WP2.1: Reset Utilities Extraction       [🔲 Not Started]    │
+│ ✅ WP2.2: Typography Foundation            [🔲 Not Started]    │
+│ ✅ WP2.3: Screen Reader Utilities          [🔲 Not Started]    │
+│ ✅ WP2.4: Critical CSS Integration         [🔲 Not Started]    │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -147,15 +147,17 @@ bin/rake test:critical  # MUST pass 100%
 - ✅ **Protocol**: Screenshot comparison before/after each work package
 - ✅ **Pages**: All 7 FL-Builder pages (homepage, services, use-cases, service-detail, clients, about, careers)
 
-### CSS Loading Order Constraints (ABSOLUTE BLOCKS)
+### CSS Loading Order Constraints
 
 **Reference**: `css-loading-order-analysis.md` (Comprehensive CSS cascade analysis)
 
-**NEVER Consolidate** (Vendor Dependencies):
+**NEVER Consolidate** (Vendor Dependencies ONLY):
 - 🚨 **Foundation Framework** (`css/vendors/base-4.min.css`) - Grid system used by 5+ pages
-- 🚨 **ALL FL-Builder Layout Files** (`css/*-layout.css`) - Page-specific `.fl-node-{nodeId}` selectors
 - 🚨 **Template-Generated CSS** (`dynamic-icons.css`, `dynamic-404-590.css`) - Require Hugo template execution
-- 🚨 **Critical CSS Files** (`css/critical/*.css`) - Performance-critical, page-specific load order
+
+**CAN Consolidate** (Extract Common Patterns):
+- ✅ **FL-Builder Layout Files** (`css/*-layout.css`) - Extract shared .fl-row, .fl-col, .fl-module patterns (70-80% duplication)
+- ✅ **Critical CSS Files** (`css/critical/*.css`) - Extract common resets, typography, utilities (300-400 lines)
 
 **CSS Cascade Layers** (Must Preserve Order):
 1. **Base Layer**: Critical CSS (resets, typography) - MUST load FIRST
@@ -164,10 +166,17 @@ bin/rake test:critical  # MUST pass 100%
 4. **Theme Layer**: style.css, skin.css - MUST load FOURTH
 5. **Footer Layer**: footer.css - MUST load LAST
 
+**Consolidation Approach** (Extract Whole Rule Sets):
+- ✅ Extract ENTIRE `.fl-row { ... }` blocks from layout files to fl-foundation.css
+- ✅ Extract ENTIRE `.fl-col { ... }` blocks to fl-foundation.css
+- ✅ Extract ENTIRE `.fl-module { ... }` blocks to fl-foundation.css
+- ✅ Preserve page-specific `.fl-node-{hash}` selectors in original files
+- ✅ Test after EACH extraction: `bin/rake test:critical`
+
 **Validation Protocol**:
 - ✅ Verify CSS load order preserved during extraction
-- ✅ NO modifications to Foundation framework files
-- ✅ NO modifications to FL-builder layout files
+- ✅ NO modifications to Foundation framework files (`css/vendors/`)
+- ✅ NO modifications to template-generated CSS (`css/dynamic-*.css`)
 - ✅ Visual regression tolerance: 0.003 (as per bin/test default)
 
 ### Hugo Pipeline Status
@@ -205,29 +214,35 @@ claude-context search "[pattern]" \
 
 ## 🎬 IMMEDIATE NEXT STEPS
 
-### To Start Phase 1 (WP1.1: CSS Variables Foundation)
+### To Start Phase 1 (WP1.1: FL-Row Foundation Extraction)
 
 ```bash
 # 1. Create feature branch
 git checkout -b feat/css-duplication-elimination
 
-# 2. Create foundation file
-# File: themes/beaver/assets/css/foundations/_css-variables.scss
-# Content: --font-system-ui, --color-primary, --border-radius-default
+# 2. Identify .fl-row patterns across ALL layout files
+claude-context search ".fl-row" --path "themes/beaver/assets/css"
 
-# 3. Update inline critical CSS files (12 files)
-# Replace font-family declarations with var(--font-system-ui)
+# 3. Extract FIRST .fl-row rule set from ONE layout file
+# Example: Extract from 590-layout.css (homepage)
+# Move entire .fl-row { display: flex; ... } block
 
-# 4. Test after EACH file change
+# 4. Create fl-foundation.css if not exists
+# File: themes/beaver/assets/css/fl-foundation.css
+# Add extracted .fl-row rule set
+
+# 5. Test IMMEDIATELY after extraction
 bin/rake test:critical
 
-# 5. Commit on green (≤3 lines per commit)
-git add [file]
-git commit -m "refactor(css): extract system-ui font to CSS variable (WP1.1)"
+# 6. If GREEN: Commit and continue to next file
+git add themes/beaver/assets/css/590-layout.css themes/beaver/assets/css/fl-foundation.css
+git commit -m "refactor(css): extract .fl-row foundation from 590-layout.css (WP1.1 1/32)"
 
-# 6. Continue until WP1.1 complete (15-20 commits target)
+# 7. If RED: Rollback, investigate, fix
+git checkout HEAD -- themes/beaver/assets/css/
 
-# 7. Update TASK-TRACKER.md with WP1.1 completion status
+# 8. Repeat for ALL 32 layout files (one rule set extraction per commit)
+# Target: 32 micro-commits for .fl-row extraction
 ```
 
 ### Validation Protocol (After Each WP)

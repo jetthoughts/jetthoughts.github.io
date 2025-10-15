@@ -457,3 +457,24 @@
 .fl-icon-wrap {
   display: inline-block;
 }
+
+.fl-icon {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fl-icon a {
+  text-decoration: none;
+}
+
+.fl-icon i {
+  float: right;
+  height: auto;
+  width: auto;
+}
+
+.fl-icon i:before {
+  border: none !important;
+  height: auto;
+  width: auto;
+}

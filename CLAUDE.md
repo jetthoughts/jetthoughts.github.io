@@ -931,6 +931,101 @@ jt_site_directories:
   experimental: "_workspace/" # Manual cleanup required
 ```
 
+### 🚨 CSS CONSOLIDATION BLOCK LIST (CSS Migration Project)
+
+**Reference**: `docs/projects/2509-css-migration/css-loading-order-analysis.md` (Comprehensive CSS cascade analysis)
+**Project**: CSS Duplication Elimination (2509-css-migration)
+
+#### ABSOLUTE BLOCKS - NEVER CONSOLIDATE (Zero Tolerance)
+
+**Vendor Dependencies** (External Libraries):
+- ❌ `css/vendors/base-4.min.css` - Foundation framework providing grid system (.fl-row, .fl-col, .fl-col-group)
+  - **Used by**: 5+ pages (use-cases, blog list/single, contact-us, services)
+  - **Must load**: BEFORE page-specific layout CSS (cascade dependency)
+  - **Impact if removed**: Complete layout breakage across multiple pages
+  - **Future consideration**: Foundation → CSS Grid migration (separate initiative)
+
+- ❌ `css/vendors/swiper.min.css` - Swiper carousel library
+  - **Status**: May be unused, requires audit before removal
+
+**FL-Builder Layout Files** (Can Consolidate - Extract Common Patterns):
+- ✅ `css/*-layout.css` - FL-builder layout files contain MASSIVE duplication
+  - **Contains**: Page-specific `.fl-node-{12-char-hash}` selectors PLUS shared patterns
+  - **Strategy**: Extract common rule sets (.fl-row, .fl-col, .fl-module patterns) to foundation
+  - **Preserve**: Page-specific `.fl-node-{hash}` selectors (keep in original files)
+  - **Consolidate**: Shared .fl-row, .fl-col, .fl-module, .fl-visible patterns (~70-80% duplication)
+  - **Impact**: 1,900-2,900 lines can be extracted to fl-foundation.css
+
+- ✅ `css/bf72bba397177a0376baed325bffdc75-layout-bundle.css` - Shared FL-builder layout bundle
+  - **Used by**: Multiple pages (about, use-cases, blog, services)
+  - **Strategy**: Consolidate shared patterns across pages
+
+**Template-Generated CSS** (Hugo Dynamic Execution):
+- ❌ `css/dynamic-icons.css` - Icon styles using Hugo template variables
+- ❌ `css/dynamic-404-590.css` - Dynamic FL-builder styles
+- ❌ `css/use-cases-dynamic.css` - Use cases section with dynamic content
+  - **Requires**: Hugo template execution (`resources.ExecuteAsTemplate`)
+  - **Cannot extract**: To static components without losing dynamic functionality
+
+**Critical CSS** (Can Consolidate - Extract Common Patterns):
+- ✅ `css/critical/base.css` - Global critical CSS (consolidate common resets, typography)
+- ✅ `css/critical/*-critical.css` - Page-specific critical CSS files
+  - **Contains**: MASSIVE duplication across 12+ critical CSS files
+  - **Strategy**: Extract common patterns (resets, typography, utilities) to shared critical base
+  - **Preserve**: Page-specific above-the-fold styles (keep in original files)
+  - **Consolidate**: Shared resets, font-family, box-sizing, utilities (~300-400 lines)
+  - **Load order**: Consolidated critical MUST still load FIRST
+  - **Impact**: Faster initial render with smaller critical CSS footprint
+
+#### CSS Cascade Layers (MUST Preserve Order)
+
+**5-Layer Cascade Architecture**:
+1. **Base Layer** (FIRST): Critical CSS (resets, typography, normalize)
+2. **Layout Layer** (SECOND): Foundation grid + FL-builder layouts
+3. **Component Layer** (THIRD): Icons, modules, component bundles
+4. **Theme Layer** (FOURTH): style.css, skin.css (theme overrides)
+5. **Footer Layer** (LAST): footer.css (loads last in DOM)
+
+**Validation Protocol for CSS Changes**:
+- ✅ Verify CSS load order preserved during extraction
+- ✅ NO modifications to Foundation framework files
+- ✅ NO modifications to FL-builder layout files
+- ✅ NO modifications to template-generated CSS
+- ✅ Visual regression tolerance: 0.003 (as per bin/test default, NOT 0.0)
+- ✅ Test after EACH change: `bin/rake test:critical`
+
+#### HIGH RISK - Consolidate with Extreme Caution
+
+**Complex Dependencies**:
+- ⚠️ `css/style.css` - General styles with complex cross-page dependencies
+- ⚠️ `css/skin-65eda28877e04.css` - Theme skin affecting ALL pages (global overrides)
+
+#### CONSOLIDATION STRATEGY - Extract Whole Rule Sets
+
+**Phase 1: FL-Builder Foundation Extraction** (BIGGEST IMPACT - ~1,900-2,900 lines):
+1. ✅ Extract `.fl-row` patterns from ALL 32 layout files → `fl-foundation.css`
+2. ✅ Extract `.fl-col` grid patterns → `fl-foundation.css`
+3. ✅ Extract `.fl-module` wrapper patterns → `fl-foundation.css`
+4. ✅ Extract `.fl-visible-*` responsive patterns → `fl-foundation.css`
+5. ✅ Preserve page-specific `.fl-node-{hash}` selectors in original files
+
+**Phase 2: Critical CSS Consolidation** (MEDIUM IMPACT - ~300-400 lines):
+1. ✅ Extract common resets (box-sizing, margin:0, padding:0) → `critical/shared-base.css`
+2. ✅ Extract typography foundation (font-family, line-height) → `critical/shared-base.css`
+3. ✅ Extract screen reader utilities (.sr-only) → `critical/shared-base.css`
+4. ✅ Preserve page-specific above-the-fold styles in original critical files
+
+**Phase 3: Component Extraction** (SMALLER IMPACT - ~1,200-1,700 lines):
+- ✅ `css/companies.css`, `css/technologies.css`, `css/pagination.css`
+- ✅ Shared utilities from `style.css` (buttons, forms, typography)
+
+**Consolidation Approach**: Extract WHOLE rule sets, not individual properties
+- ✅ Move entire `.fl-row { ... }` block to foundation
+- ✅ Move entire `.fl-col { ... }` block to foundation
+- ✅ Keep page-specific selectors in original files
+- ✅ Test after EACH extraction with `bin/rake test:critical`
+- ✅ Visual regression tolerance: 0.003
+
 ---
 
 ## 🎯 JT_SITE SPECIFIC ADAPTATIONS
