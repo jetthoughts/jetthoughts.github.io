@@ -18,8 +18,10 @@ tags:
   - founder-guide
   - development-team
   - technical-leadership
-date: "2025-10-15"
+date: "2025-10-14"
+created_at: '2025-10-14T23:00:00Z'
 author: "JetThoughts"
+draft: false
 ---
 
 # How to Know If Your Development Team's Code Quality Will Bite You Later

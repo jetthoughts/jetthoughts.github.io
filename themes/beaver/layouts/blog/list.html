@@ -74,7 +74,7 @@
 
                 <br />
 
-                {{ range (.Paginate (.Pages.ByParam "created_at").Reverse).Pages }}
+                {{ range (.Paginate .Pages.ByDate.Reverse).Pages }}
                   <a class="link" href="{{ .RelPermalink }}">
                     <div class="blog-post">
                       <div class="post-image">
@@ -92,8 +92,8 @@
                             {{ end }}
                             {{ end }}
                           </div>
-                          {{ if .Params.created_at }}
-                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .Params.created_at }}</span>
+                          {{ if .Date }}
+                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</span>
                           {{ end }}
                         </div>
                         <div>{{ .Params.description }}</div>

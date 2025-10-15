@@ -20,8 +20,10 @@ tags:
   - founder-guide
   - accountability
   - productivity
-date: "2025-10-15"
+date: "2025-10-14"
+created_at: '2025-10-14T23:04:00Z'
 author: "JetThoughts"
+draft: false
 ---
 
 # How to Know If Your Remote Team Is Actually Working (Without Micromanaging)
