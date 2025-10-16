@@ -78,164 +78,72 @@ OPENAI_API_KEY=your_openai_key_here
 
 CrewAI v0.98.0 introduced native support for various LLM providers including OpenAI, Anthropic, and local models via Ollama. For production workloads, we recommend OpenAI's GPT-4 for complex reasoning or GPT-3.5-turbo for cost-effective tasks.
 
-## Production Example 1: Customer Support Automation
+## Hello World: Your First CrewAI Multi-Agent System
 
-Let's build a multi-agent system for customer support that demonstrates CrewAI's coordination capabilities. This example shows how specialized agents handle sentiment analysis, knowledge retrieval, and response generation.
+Start with this 10-line example to understand the core CrewAI pattern:
 
 ```python
 from crewai import Agent, Task, Crew
-from crewai_tools import SerperDevTool, ScrapeWebsiteTool
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-
-# Initialize tools for knowledge search
-search_tool = SerperDevTool(api_key=os.getenv("SERPER_API_KEY"))
-scrape_tool = ScrapeWebsiteTool()
-
-# Agent 1: Sentiment Analyzer
-sentiment_agent = Agent(
-    role="Customer Sentiment Analyst",
-    goal="Analyze customer messages to identify urgency, emotion, and intent",
-    backstory="""You're an expert in customer psychology with 10 years experience
-    analyzing support tickets. You excel at identifying frustrated customers who
-    need immediate attention versus those seeking routine information.""",
-    verbose=True,
-    allow_delegation=False,
-    llm="gpt-4"
+# Create a research agent
+researcher = Agent(
+    role="Research Analyst",
+    goal="Find and summarize information about topics"
 )
 
-# Agent 2: Knowledge Base Specialist
-knowledge_agent = Agent(
-    role="Knowledge Base Specialist",
-    goal="Search internal documentation and external resources for accurate solutions",
-    backstory="""You're a technical documentation expert who knows exactly where
-    to find answers. You prioritize official documentation and verified solutions,
-    and you're skilled at filtering irrelevant information.""",
-    tools=[search_tool, scrape_tool],
-    verbose=True,
-    allow_delegation=False,
-    llm="gpt-3.5-turbo"  # Cost-effective for search tasks
+# Define a task
+task = Task(
+    description="Research LangChain's key features and use cases",
+    agent=researcher
 )
 
-# Agent 3: Response Composer
-response_agent = Agent(
-    role="Customer Response Composer",
-    goal="Draft empathetic, accurate responses that resolve customer issues",
-    backstory="""You're a senior customer success manager known for turning
-    frustrated customers into brand advocates. You write clear, concise responses
-    that show genuine care while providing actionable solutions.""",
-    verbose=True,
-    allow_delegation=False,
-    llm="gpt-4"
-)
-
-# Agent 4: Compliance Reviewer
-compliance_agent = Agent(
-    role="Compliance Reviewer",
-    goal="Ensure responses meet company policies, legal requirements, and tone guidelines",
-    backstory="""You're a legal and compliance officer who protects the company
-    from liability while maintaining excellent customer relationships. You catch
-    promises we can't keep and language that might expose us to risk.""",
-    verbose=True,
-    allow_delegation=False,
-    llm="gpt-4"
-)
-
-def create_support_crew(customer_message: str) -> str:
-    """
-    Orchestrate a multi-agent workflow for customer support.
-
-    Args:
-        customer_message: The customer's support inquiry
-
-    Returns:
-        Final reviewed response ready to send to customer
-    """
-
-    # Task 1: Analyze customer sentiment
-    analyze_task = Task(
-        description=f"""Analyze this customer message for:
-        - Sentiment (positive/neutral/negative)
-        - Urgency level (low/medium/high/critical)
-        - Primary intent (refund/technical help/account issue/feature request)
-
-        Customer message: {customer_message}
-
-        Provide structured analysis with reasoning.""",
-        agent=sentiment_agent,
-        expected_output="JSON-formatted sentiment analysis with urgency score"
-    )
-
-    # Task 2: Research solution
-    research_task = Task(
-        description=f"""Based on the customer sentiment analysis, search for:
-        - Official documentation addressing their issue
-        - Similar resolved cases from knowledge base
-        - Step-by-step troubleshooting guides
-
-        Original message: {customer_message}
-
-        Prioritize recent, verified information.""",
-        agent=knowledge_agent,
-        expected_output="Curated list of relevant resources with summaries",
-        context=[analyze_task]  # Receives sentiment analysis
-    )
-
-    # Task 3: Compose response
-    compose_task = Task(
-        description=f"""Draft a customer response that:
-        - Addresses their emotional state appropriately
-        - Provides clear, actionable solution steps
-        - Uses empathetic, professional tone
-        - Keeps it concise (under 200 words)
-
-        Use the research findings to ensure accuracy.""",
-        agent=response_agent,
-        expected_output="Draft customer response email",
-        context=[analyze_task, research_task]
-    )
-
-    # Task 4: Review for compliance
-    review_task = Task(
-        description="""Review the draft response for:
-        - Policy compliance (no unauthorized promises)
-        - Legal risk (avoid liability language)
-        - Tone appropriateness (professional but warm)
-        - Accuracy of technical information
-
-        Either approve or provide specific revision recommendations.""",
-        agent=compliance_agent,
-        expected_output="Final approved response or revision feedback",
-        context=[compose_task]
-    )
-
-    # Create crew and execute workflow
-    support_crew = Crew(
-        agents=[sentiment_agent, knowledge_agent, response_agent, compliance_agent],
-        tasks=[analyze_task, research_task, compose_task, review_task],
-        verbose=True,
-        process="sequential"  # Tasks execute in order, passing context
-    )
-
-    result = support_crew.kickoff()
-    return result
-
-# Example usage
-if __name__ == "__main__":
-    customer_message = """
-    I've been trying to reset my password for 3 days and your automated
-    system keeps failing. I need access to my account urgently because
-    I have client deliverables due tomorrow. This is completely unacceptable.
-    """
-
-    final_response = create_support_crew(customer_message)
-    print("\n" + "="*50)
-    print("FINAL CUSTOMER RESPONSE:")
-    print("="*50)
-    print(final_response)
+# Create crew and execute
+crew = Crew(agents=[researcher], tasks=[task])
+result = crew.kickoff()  # Returns research summary
 ```
+
+### Adding Agent Collaboration (25 lines)
+
+Now let's add a second agent to demonstrate collaboration:
+
+```python
+from crewai import Agent, Task, Crew
+
+# Agent 1: Research
+researcher = Agent(
+    role="Research Analyst",
+    goal="Gather technical information"
+)
+
+# Agent 2: Content Writer
+writer = Agent(
+    role="Technical Writer",
+    goal="Transform research into clear documentation"
+)
+
+# Task 1: Research (completed first)
+research_task = Task(
+    description="Research CrewAI multi-agent capabilities",
+    agent=researcher
+)
+
+# Task 2: Writing (receives research_task output via context)
+writing_task = Task(
+    description="Write a tutorial based on research findings",
+    agent=writer,
+    context=[research_task]  # Automatically receives researcher's output
+)
+
+crew = Crew(
+    agents=[researcher, writer],
+    tasks=[research_task, writing_task],
+    process="sequential"  # Tasks execute in order
+)
+
+result = crew.kickoff()
+```
+
+> **📚 Complete 4-Agent System**: See [customer support automation example](https://github.com/jetthoughts/crewai-examples/customer-support) demonstrating sentiment analysis → knowledge retrieval → response composition → compliance review in a production workflow (60 lines).
 
 This example demonstrates several key CrewAI patterns:
 
