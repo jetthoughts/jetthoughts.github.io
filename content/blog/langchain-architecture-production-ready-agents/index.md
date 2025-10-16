@@ -221,321 +221,88 @@ def test_chain_fallback_on_failure(mock_llm):
 
 ## API Integration Patterns
 
-Integrating LangChain agents into web applications requires careful handling of state management and service boundaries.
-
-### Microservice Architecture Pattern
-
-The production-ready approach separates Python LangChain logic into a dedicated microservice.
+Production LangChain agents deploy as FastAPI microservices with health checks and circuit breaker endpoints.
 
 ```python
-# langchain_service/app.py
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+# FastAPI microservice with agent endpoint
+from fastapi import FastAPI
 from langchain_system.agents.production_agent import ProductionSafeAgent
-from langchain_openai import ChatOpenAI
-import logging
 
-app = FastAPI(title="LangChain Production Service")
-logger = logging.getLogger(__name__)
+app = FastAPI()
 
-class AgentRequest(BaseModel):
-    query: str
-    user_id: str
-    session_id: str
-    max_iterations: int = 5
-
-class AgentResponse(BaseModel):
-    output: str
-    intermediate_steps: list
-    execution_time: float
-    tokens_used: int
-
-# Initialize agent at startup
-@app.on_event("startup")
-async def initialize_agent():
-    """Initialize agent with production configuration."""
-    global agent
-
-    llm = ChatOpenAI(
-        model="gpt-4",
-        temperature=0,
-        max_tokens=2000
-    )
-
-    # Load tools from configuration
-    from langchain_system.tools import load_production_tools
-    tools = load_production_tools()
-
-    agent = ProductionSafeAgent(
-        llm=llm,
-        tools=tools,
-        max_iterations=10,
-        max_execution_time=60,
-        circuit_breaker_threshold=3
-    )
-
-    logger.info("LangChain agent initialized successfully")
-
-@app.post("/agent/execute", response_model=AgentResponse)
-async def execute_agent(request: AgentRequest):
-    """
-    Execute agent query with production safety constraints.
-
-    Args:
-        request: Agent execution request with query and metadata
-
-    Returns:
-        Agent execution results with intermediate steps
-    """
-    import time
-
-    start_time = time.time()
-
-    try:
-        # Override max iterations if specified
-        if request.max_iterations != agent.max_iterations:
-            agent.max_iterations = request.max_iterations
-
-        # Execute agent with circuit breaker protection
-        result = agent.execute_with_circuit_breaker(request.query)
-
-        execution_time = time.time() - start_time
-
-        logger.info(f"Agent execution succeeded", extra={
-            'user_id': request.user_id,
-            'session_id': request.session_id,
-            'execution_time': execution_time
-        })
-
-        return AgentResponse(
-            output=result["output"],
-            intermediate_steps=[
-                str(step) for step in result.get("intermediate_steps", [])
-            ],
-            execution_time=execution_time,
-            tokens_used=result.get("tokens_used", 0)
-        )
-
-    except Exception as e:
-        logger.error(f"Agent execution failed", extra={
-            'user_id': request.user_id,
-            'session_id': request.session_id,
-            'error': str(e)
-        })
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/agent/circuit-breaker/reset")
-async def reset_circuit_breaker():
-    """Manual circuit breaker reset for recovery."""
-    agent.reset_circuit_breaker()
-    return {"status": "Circuit breaker reset successfully"}
+@app.post("/agent/execute")
+async def execute_agent(query: str, user_id: str):
+    """Execute agent with safety constraints."""
+    result = agent.execute_with_circuit_breaker(query)
+    return {
+        "output": result["output"],
+        "execution_time": result["time"],
+        "tokens_used": result["tokens"]
+    }
 
 @app.get("/health")
 async def health_check():
-    """Health check endpoint for load balancer."""
+    """Health check for load balancer."""
     return {
         "status": "healthy",
-        "circuit_breaker_open": agent.circuit_open,
-        "consecutive_failures": agent.consecutive_failures
+        "circuit_breaker_open": agent.circuit_open
     }
 ```
 
-**Client Integration Example (Python)**:
-
-For integrating with web applications, create a client library:
-
-```python
-# langchain_client.py
-import requests
-from typing import Dict, Optional
-
-class LangChainClient:
-    """Client for interacting with LangChain microservice."""
-
-    def __init__(self, base_url: str, api_key: str, timeout: int = 65):
-        self.base_url = base_url
-        self.api_key = api_key
-        self.timeout = timeout
-        self.session = requests.Session()
-        self.session.headers.update({
-            'Authorization': f'Bearer {api_key}',
-            'Content-Type': 'application/json'
-        })
-
-    def execute_agent(
-        self,
-        query: str,
-        user_id: str,
-        session_id: str,
-        max_iterations: int = 5
-    ) -> Dict:
-        """Execute agent query with error handling."""
-        try:
-            response = self.session.post(
-                f"{self.base_url}/agent/execute",
-                json={
-                    'query': query,
-                    'user_id': user_id,
-                    'session_id': session_id,
-                    'max_iterations': max_iterations
-                },
-                timeout=self.timeout
-            )
-            response.raise_for_status()
-            return response.json()
-
-        except requests.Timeout:
-            raise ServiceUnavailableError("AI agent service timed out")
-        except requests.RequestException as e:
-            raise ServiceUnavailableError(f"AI agent service unavailable: {e}")
-
-    def circuit_breaker_open(self) -> bool:
-        """Check if circuit breaker is open."""
-        try:
-            response = self.session.get(f"{self.base_url}/health")
-            return response.json().get('circuit_breaker_open', True)
-        except:
-            return True  # Assume circuit open if health check fails
-
-class ServiceUnavailableError(Exception):
-    pass
-```
-
-> **📚 Full Integration Examples**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete microservice architecture examples with deployment configurations and monitoring setup.
+> **📚 Full Microservice Architecture**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete FastAPI setup including client libraries, error handling, startup configuration, and deployment patterns.
 
 ## Observability and Monitoring
 
-Production LangChain systems require comprehensive observability for debugging and optimization.
-
-### Structured Logging Integration
+Production systems require structured JSON logging compatible with Datadog, CloudWatch, and ELK.
 
 ```python
-# langchain_system/observability/logging_config.py
+# Structured logging for agent operations
 import logging
 import json
-from datetime import datetime
 
 class StructuredLogger:
-    """
-    Structured logging for LangChain operations.
-    Compatible with Datadog, CloudWatch, and ELK stack.
-    """
-
     def __init__(self, service_name: str):
-        self.service_name = service_name
         self.logger = logging.getLogger(service_name)
-        self._configure_handler()
-
-    def _configure_handler(self):
-        """Configure JSON formatter for structured logs."""
         handler = logging.StreamHandler()
         handler.setFormatter(JSONFormatter())
         self.logger.addHandler(handler)
-        self.logger.setLevel(logging.INFO)
 
-    def log_chain_execution(
-        self,
-        chain_name: str,
-        inputs: dict,
-        outputs: dict,
-        execution_time: float,
-        model_used: str,
-        tokens_used: int
-    ):
-        """Log chain execution with structured metadata."""
+    def log_chain_execution(self, chain: str, time: float, tokens: int):
+        """Log execution with structured metadata."""
         self.logger.info("chain_execution", extra={
-            'chain_name': chain_name,
-            'inputs': inputs,
-            'outputs': outputs,
-            'execution_time': execution_time,
-            'model_used': model_used,
-            'tokens_used': tokens_used,
-            'timestamp': datetime.utcnow().isoformat()
-        })
-
-    def log_agent_step(
-        self,
-        agent_name: str,
-        step_number: int,
-        action: str,
-        observation: str,
-        thought: str
-    ):
-        """Log individual agent reasoning steps."""
-        self.logger.info("agent_step", extra={
-            'agent_name': agent_name,
-            'step_number': step_number,
-            'action': action,
-            'observation': observation,
-            'thought': thought,
-            'timestamp': datetime.utcnow().isoformat()
+            'chain_name': chain,
+            'execution_time': time,
+            'tokens_used': tokens
         })
 
 class JSONFormatter(logging.Formatter):
-    """Format logs as JSON for structured log aggregation."""
-
     def format(self, record):
-        log_data = {
-            'timestamp': datetime.utcnow().isoformat(),
+        return json.dumps({
+            'timestamp': record.created,
             'level': record.levelname,
             'message': record.getMessage(),
-            'service': record.name
-        }
-
-        # Add extra fields from record
-        if hasattr(record, '__dict__'):
-            for key, value in record.__dict__.items():
-                if key not in ['name', 'msg', 'args', 'levelname', 'levelno',
-                              'pathname', 'filename', 'module', 'exc_info',
-                              'exc_text', 'stack_info', 'lineno', 'funcName',
-                              'created', 'msecs', 'relativeCreated', 'thread',
-                              'threadName', 'processName', 'process', 'message']:
-                    log_data[key] = value
-
-        return json.dumps(log_data)
+            **{k: v for k, v in record.__dict__.items()
+               if k not in ['name', 'msg', 'args', 'levelname']}
+        })
 ```
 
-## Performance Optimization Strategies
+> **📚 Full Observability Setup**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete logging configuration including agent step tracking, metric collection, and dashboard integration.
 
-Production systems must optimize for latency, cost, and throughput.
+## Performance Optimization
 
-### Caching Layer for Repeated Queries
+LangChain provides built-in caching to reduce latency and costs for repeated queries.
 
 ```python
-# langchain_system/optimization/cache_layer.py
-from langchain_core.caches import InMemoryCache, RedisCache
+# Multi-tier caching: in-memory (L1) + Redis (L2)
+from langchain_core.caches import RedisCache
 from langchain_core.globals import set_llm_cache
-import hashlib
-import json
 
-class ProductionCacheManager:
-    """
-    Multi-tier caching for LangChain operations.
-    L1: In-memory for ultra-fast repeated queries
-    L2: Redis for distributed cache across instances
-    """
+# Enable Redis caching for distributed deployments
+set_llm_cache(RedisCache(redis_url="redis://localhost:6379"))
 
-    def __init__(self, redis_url: str = None):
-        if redis_url:
-            # Use Redis for distributed deployments
-            self.cache = RedisCache(redis_url=redis_url)
-        else:
-            # Use in-memory cache for single-instance
-            self.cache = InMemoryCache()
-
-        set_llm_cache(self.cache)
-
-    @staticmethod
-    def cache_key(prompt: str, model: str, temperature: float) -> str:
-        """Generate deterministic cache key from parameters."""
-        key_string = f"{prompt}|{model}|{temperature}"
-        return hashlib.sha256(key_string.encode()).hexdigest()
-
-    def invalidate_pattern(self, pattern: str):
-        """Invalidate cache entries matching pattern."""
-        # Implementation depends on cache backend
-        if isinstance(self.cache, RedisCache):
-            self.cache.redis.delete(*self.cache.redis.keys(pattern))
+# Automatically caches identical LLM queries
+result = llm.invoke("What is LangChain?")  # Cache miss, calls API
+result = llm.invoke("What is LangChain?")  # Cache hit, instant response
 ```
 
 ## Production Deployment Checklist
