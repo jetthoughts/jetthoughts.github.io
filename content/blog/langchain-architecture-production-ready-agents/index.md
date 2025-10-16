@@ -184,185 +184,40 @@ Production LangChain systems require testing at multiple levels: unit tests for 
 ### Testing Framework Setup
 
 ```python
-# tests/conftest.py
+# tests/conftest.py - Mock fixtures for fast, deterministic testing
 import pytest
-from unittest.mock import Mock, patch
-from langchain_openai import ChatOpenAI
+from unittest.mock import Mock
 
 @pytest.fixture
 def mock_llm():
-    """Mock LLM for fast, deterministic testing."""
-    llm = Mock(spec=ChatOpenAI)
-    llm.invoke.return_value = Mock(content="Mocked LLM response")
+    llm = Mock()
+    llm.invoke.return_value = Mock(content="Mocked response")
     return llm
 
-@pytest.fixture
-def mock_tool():
-    """Mock tool with predictable behavior."""
-    def mock_func(query: str) -> str:
-        return f"Mock result for: {query}"
-
-    return Tool(
-        name="mock_tool",
-        func=mock_func,
-        description="Mock tool for testing"
-    )
-```
-
-### Unit Tests for Chain Components
-
-```python
-# tests/unit/test_resilient_chain.py
-import pytest
-from langchain_system.chains.resilient_chain import ResilientProductionChain
-from langchain_core.prompts import PromptTemplate
-
-def test_chain_uses_primary_model_on_success(mock_llm):
-    """Verify chain uses primary model when execution succeeds."""
-    fallback_llm = Mock()
-
-    prompt = PromptTemplate(
-        template="Test: {input}",
-        input_variables=["input"]
-    )
-
-    chain = ResilientProductionChain(
-        primary_model=mock_llm,
-        fallback_model=fallback_llm,
-        prompt_template=prompt
-    )
-
-    result = chain.invoke_with_monitoring({"input": "test query"})
-
-    # Primary model should be called
-    assert mock_llm.invoke.call_count == 1
-    # Fallback should not be called
-    assert fallback_llm.invoke.call_count == 0
-    assert result == "Mocked LLM response"
-
-def test_chain_falls_back_on_primary_failure(mock_llm):
-    """Verify chain falls back to secondary model on primary failure."""
-    # Configure primary to fail
+# tests/unit/test_chain.py - Unit test with fallback verification
+def test_chain_fallback_on_failure(mock_llm):
+    """Verify chain falls back when primary model fails."""
     mock_llm.invoke.side_effect = Exception("API rate limit")
-
     fallback_llm = Mock()
     fallback_llm.invoke.return_value = Mock(content="Fallback response")
 
-    prompt = PromptTemplate(
-        template="Test: {input}",
-        input_variables=["input"]
-    )
-
     chain = ResilientProductionChain(
         primary_model=mock_llm,
         fallback_model=fallback_llm,
-        prompt_template=prompt
+        prompt_template=...
     )
 
-    result = chain.invoke_with_monitoring({"input": "test query"})
-
-    # Both models should be attempted
-    assert mock_llm.invoke.call_count == 1
-    assert fallback_llm.invoke.call_count == 1
+    result = chain.invoke_with_monitoring({"input": "test"})
     assert result == "Fallback response"
 ```
 
-### Integration Tests for Agent Behavior
-
-```python
-# tests/integration/test_production_agent.py
-import pytest
-from langchain_system.agents.production_agent import ProductionSafeAgent
-
-def test_agent_respects_max_iterations(mock_llm, mock_tool):
-    """Verify agent stops after max iterations to prevent infinite loops."""
-    # Configure LLM to always request tool usage (would loop infinitely)
-    mock_llm.invoke.return_value = Mock(
-        content="I need to use the tool again",
-        tool_calls=[{"name": "mock_tool", "args": {"query": "test"}}]
-    )
-
-    agent = ProductionSafeAgent(
-        llm=mock_llm,
-        tools=[mock_tool],
-        max_iterations=3  # Force early termination
-    )
-
-    # Should not raise exception, but should stop after 3 iterations
-    with pytest.raises(Exception) as exc_info:
-        agent.execute_with_circuit_breaker("Keep using tools forever")
-
-    assert "max_iterations" in str(exc_info.value).lower()
-
-def test_circuit_breaker_opens_after_threshold(mock_llm, mock_tool):
-    """Verify circuit breaker opens after consecutive failures."""
-    # Configure LLM to always fail
-    mock_llm.invoke.side_effect = Exception("Model unavailable")
-
-    agent = ProductionSafeAgent(
-        llm=mock_llm,
-        tools=[mock_tool],
-        circuit_breaker_threshold=2
-    )
-
-    # First failure
-    with pytest.raises(Exception):
-        agent.execute_with_circuit_breaker("query 1")
-
-    # Second failure
-    with pytest.raises(Exception):
-        agent.execute_with_circuit_breaker("query 2")
-
-    # Circuit should now be open
-    assert agent.circuit_open is True
-
-    # Third attempt should fail immediately without calling LLM
-    with pytest.raises(RuntimeError, match="Circuit breaker open"):
-        agent.execute_with_circuit_breaker("query 3")
 ```
 
-### End-to-End Testing with Real Models (Staging Only)
-
-```python
-# tests/e2e/test_real_agent_behavior.py
-import pytest
-import os
-
-@pytest.mark.skipif(
-    os.getenv("OPENAI_API_KEY") is None,
-    reason="Requires OpenAI API key for E2E testing"
-)
-def test_agent_handles_real_search_query():
-    """
-    E2E test with real OpenAI model and tools.
-    Only run in staging environment with API quota.
-    """
-    from langchain_openai import ChatOpenAI
-    from langchain_community.tools import DuckDuckGoSearchRun
-
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
-    search_tool = Tool(
-        name="search",
-        func=DuckDuckGoSearchRun().run,
-        description="Search for current information"
-    )
-
-    agent = ProductionSafeAgent(
-        llm=llm,
-        tools=[search_tool],
-        max_iterations=5,
-        max_execution_time=30
-    )
-
-    result = agent.execute_with_circuit_breaker(
-        "What is the current Python version?"
-    )
-
-    # Verify agent used search tool and returned coherent answer
-    assert "intermediate_steps" in result
-    assert len(result["intermediate_steps"]) > 0
-    assert "python" in result["output"].lower()
-```
+> **📚 Full Test Suite**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete test examples including:
+> - Mock fixture patterns for deterministic testing
+> - Unit tests for chains and prompt managers
+> - Integration tests for agent iteration limits and circuit breaker behavior
+> - E2E tests with real models (staging environment)
 
 ## API Integration Patterns
 
