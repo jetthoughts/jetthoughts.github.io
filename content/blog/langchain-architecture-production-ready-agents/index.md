@@ -1,21 +1,20 @@
 ---
 title: "LangChain Architecture Deep Dive: Building Production-Ready AI Agent Systems"
-description: "Master LangChain architecture for production with error handling, testing, and Rails integration. Complete guide with working code examples for scalable AI agent systems."
+description: "Master LangChain architecture for production with Python. Complete guide with error handling, testing strategies, and working code examples for scalable AI agent systems."
+date: 2025-10-15
 created_at: '2025-10-15T17:15:00Z'
-edited_at: '2025-10-15T17:15:00Z'
 draft: false
 tags:
   - ai
   - langchain
   - python
-  - rails
   - architecture
+  - production
 canonical_url: https://jetthoughts.com/blog/langchain-architecture-production-ready-agents/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/langchain-architecture-production-ready-agents/cover.jpeg
-date: 2025-10-15
+cover_image: cover.jpeg
 metatags:
   image: cover.jpeg
-  description: "Learn how to build production-ready LangChain AI agent systems with comprehensive error handling, testing strategies, and Rails integration patterns."
+  description: "Learn how to build production-ready LangChain AI agent systems with Python. Comprehensive error handling, testing strategies, and microservice architecture patterns."
 slug: langchain-architecture-production-ready-agents
 ---
 
@@ -44,160 +43,62 @@ LangChain v1.0 introduced significant architectural improvements over v0.x. Unde
 LangChain organizes functionality into four architectural layers:
 
 ```python
-# langchain_system/core/architecture.py
-from langchain_core.language_models import BaseLLM
-from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import BaseOutputParser
-from langchain_core.runnables import Runnable
+from langchain_openai import ChatOpenAI
 
-class ProductionLangChainArchitecture:
-    """
-    Four-layer architecture for production LangChain systems:
-    1. Model Layer: LLM connections with fallback strategies
-    2. Prompt Layer: Versioned templates with validation
-    3. Chain Layer: Orchestration with error recovery
-    4. Agent Layer: Autonomous decision-making with safety constraints
-    """
+# Four-layer architecture for production LangChain:
+# 1. Model Layer (LLM connections)
+# 2. Prompt Layer (templates)
+# 3. Chain Layer (orchestration)
+# 4. Agent Layer (decision-making)
 
-    def __init__(self, model_config: dict, fallback_config: dict):
-        self.primary_model = self._initialize_model(model_config)
-        self.fallback_model = self._initialize_model(fallback_config)
-        self.prompt_manager = PromptVersionManager()
-        self.error_tracker = ErrorRecoveryTracker()
-
-    def _initialize_model(self, config: dict) -> BaseLLM:
-        """Initialize model with retry configuration and timeout controls."""
-        from langchain_openai import ChatOpenAI
-
-        return ChatOpenAI(
-            model=config.get('model', 'gpt-4'),
-            temperature=config.get('temperature', 0.7),
-            max_tokens=config.get('max_tokens', 2000),
-            timeout=config.get('timeout', 30),
-            max_retries=config.get('max_retries', 3),
-            api_key=config.get('api_key')
-        )
+primary_model = ChatOpenAI(model="gpt-4", temperature=0.7, timeout=30)
+fallback_model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
 ```
 
-**Validation**: After initialization, test model connectivity:
-```python
-response = architecture.primary_model.invoke("Test connection")
-assert len(response.content) > 0, "Model connection failed"
-```
+> **📚 Full Implementation**: See [production architecture patterns](https://github.com/jetthoughts/langchain-examples) for complete `ProductionLangChainArchitecture` class with version control and error tracking.
 
 ### Prompt Management with Version Control
 
 Production systems need versioned prompts for A/B testing and rollback capabilities.
 
 ```python
-# langchain_system/prompts/version_manager.py
-from typing import Dict, Optional
-from datetime import datetime
+from langchain_core.prompts import PromptTemplate
 import hashlib
-import json
 
 class PromptVersionManager:
-    """
-    Manage prompt templates with versioning for production deployments.
-    Enables A/B testing, rollback, and audit trails.
-    """
+    """Manage versioned prompts for A/B testing and rollback."""
 
-    def __init__(self, storage_path: str = "./prompt_versions"):
-        self.storage_path = storage_path
-        self.active_versions: Dict[str, str] = {}
-        self._load_active_versions()
+    def __init__(self):
+        self.versions = {}  # {name: {version_hash: PromptTemplate}}
+        self.active = {}    # {name: active_version_hash}
 
-    def register_prompt(
-        self,
-        name: str,
-        template: str,
-        variables: list,
-        version: Optional[str] = None
-    ) -> str:
-        """
-        Register a new prompt version.
+    def register(self, name: str, template: str, variables: list) -> str:
+        """Register new prompt version, returns version hash."""
+        version = hashlib.sha256(template.encode()).hexdigest()[:12]
 
-        Args:
-            name: Unique identifier for prompt family
-            template: Prompt template string
-            variables: List of variable names used in template
-            version: Optional version tag (auto-generated if None)
+        if name not in self.versions:
+            self.versions[name] = {}
 
-        Returns:
-            Version hash for the registered prompt
-        """
-        if version is None:
-            # Generate version hash from template content
-            version = hashlib.sha256(
-                template.encode()
-            ).hexdigest()[:12]
-
-        prompt_data = {
-            'name': name,
-            'template': template,
-            'variables': variables,
-            'version': version,
-            'created_at': datetime.utcnow().isoformat()
-        }
-
-        # Store versioned prompt
-        filepath = f"{self.storage_path}/{name}_{version}.json"
-        with open(filepath, 'w') as f:
-            json.dump(prompt_data, f, indent=2)
-
-        # Update active version for this prompt family
-        self.active_versions[name] = version
-        self._save_active_versions()
-
+        self.versions[name][version] = PromptTemplate(
+            template=template, input_variables=variables
+        )
+        self.active[name] = version
         return version
 
-    def get_active_prompt(self, name: str) -> PromptTemplate:
-        """Retrieve currently active prompt version."""
-        version = self.active_versions.get(name)
-        if not version:
-            raise ValueError(f"No active version for prompt: {name}")
-
-        filepath = f"{self.storage_path}/{name}_{version}.json"
-        with open(filepath, 'r') as f:
-            data = json.load(f)
-
-        return PromptTemplate(
-            template=data['template'],
-            input_variables=data['variables']
-        )
-
-    def rollback_version(self, name: str, target_version: str):
-        """Rollback prompt to previous version."""
-        filepath = f"{self.storage_path}/{name}_{target_version}.json"
-        if not os.path.exists(filepath):
-            raise ValueError(f"Version {target_version} not found")
-
-        self.active_versions[name] = target_version
-        self._save_active_versions()
+    def get(self, name: str) -> PromptTemplate:
+        """Get active prompt version."""
+        return self.versions[name][self.active[name]]
 ```
 
-**Usage in production**:
+**Usage**: Register v1 → test v2 → rollback if needed
 ```python
-prompt_mgr = PromptVersionManager()
-
-# Register v1 prompt
-v1 = prompt_mgr.register_prompt(
-    name="customer_support_agent",
-    template="You are a helpful customer support agent. User query: {query}",
-    variables=["query"]
-)
-
-# Test improved v2 prompt
-v2 = prompt_mgr.register_prompt(
-    name="customer_support_agent",
-    template="You are an expert customer support specialist with deep product knowledge. Provide clear, actionable solutions. User query: {query}",
-    variables=["query"]
-)
-
-# Rollback if v2 underperforms
-if performance_drops:
-    prompt_mgr.rollback_version("customer_support_agent", v1)
+mgr = PromptVersionManager()
+v1 = mgr.register("support", "You are helpful. Query: {query}", ["query"])
+v2 = mgr.register("support", "You are an expert. Query: {query}", ["query"])
+mgr.active["support"] = v1  # Rollback to v1
 ```
+
+> **📚 Production Implementation**: See [prompt version manager](https://github.com/jetthoughts/langchain-examples/prompt-versioning) with file storage, audit trails, and A/B test metrics (full 85-line implementation).
 
 ## Building Resilient Chains with Error Recovery
 
@@ -206,110 +107,30 @@ Production chains must handle API failures, rate limits, and timeout scenarios g
 ### Chain with Fallback Strategy
 
 ```python
-# langchain_system/chains/resilient_chain.py
-from langchain_core.runnables import RunnableWithFallbacks
-from langchain_core.output_parsers import StrOutputParser
-from typing import Any, Dict
-import logging
-
-logger = logging.getLogger(__name__)
-
-class ResilientProductionChain:
-    """
-    Production-ready chain with comprehensive error handling.
-    Implements fallback models, retry logic, and detailed error tracking.
-    """
-
-    def __init__(
-        self,
-        primary_model,
-        fallback_model,
-        prompt_template,
-        max_retries: int = 3
-    ):
-        self.primary_model = primary_model
-        self.fallback_model = fallback_model
-        self.prompt = prompt_template
-        self.max_retries = max_retries
-        self.error_counts = {'primary': 0, 'fallback': 0, 'total': 0}
-
-        # Build chain with automatic fallback
-        self.chain = self._build_chain_with_fallbacks()
-
-    def _build_chain_with_fallbacks(self) -> RunnableWithFallbacks:
-        """
-        Construct chain that automatically falls back to secondary model.
-        LangChain v1.0 feature: RunnableWithFallbacks provides automatic
-        failover without manual exception handling.
-        """
-        primary_chain = (
-            self.prompt
-            | self.primary_model
-            | StrOutputParser()
-        )
-
-        fallback_chain = (
-            self.prompt
-            | self.fallback_model
-            | StrOutputParser()
-        )
-
-        return primary_chain.with_fallbacks([fallback_chain])
-
-    def invoke_with_monitoring(self, inputs: Dict[str, Any]) -> str:
-        """
-        Execute chain with comprehensive error tracking.
-        Monitors which execution path succeeded for observability.
-        """
-        try:
-            result = self.chain.invoke(inputs)
-            logger.info(f"Chain execution succeeded", extra={
-                'inputs': inputs,
-                'error_rate': self._calculate_error_rate()
-            })
-            return result
-
-        except Exception as e:
-            self.error_counts['total'] += 1
-            logger.error(f"Chain execution failed completely", extra={
-                'inputs': inputs,
-                'error': str(e),
-                'error_rate': self._calculate_error_rate()
-            })
-            raise
-
-    def _calculate_error_rate(self) -> float:
-        """Calculate error rate for alerting."""
-        total_attempts = sum(self.error_counts.values())
-        if total_attempts == 0:
-            return 0.0
-        return self.error_counts['total'] / total_attempts
-```
-
-**Production deployment pattern**:
-```python
 from langchain_openai import ChatOpenAI
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
-# Initialize with different models for cost/performance tradeoff
-primary = ChatOpenAI(model="gpt-4", temperature=0.7)
-fallback = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
+# Build chain with automatic fallback (LangChain v1.0 feature)
+primary = ChatOpenAI(model="gpt-4", timeout=30)
+fallback = ChatOpenAI(model="gpt-3.5-turbo", timeout=30)
 
 prompt = PromptTemplate(
     template="Analyze sentiment: {text}",
     input_variables=["text"]
 )
 
-chain = ResilientProductionChain(
-    primary_model=primary,
-    fallback_model=fallback,
-    prompt_template=prompt
-)
+primary_chain = prompt | primary | StrOutputParser()
+fallback_chain = prompt | fallback | StrOutputParser()
 
-# Automatic fallback if GPT-4 fails
-result = chain.invoke_with_monitoring({
-    "text": "Customer feedback about product quality issues"
-})
+# Automatically falls back to fallback_chain if primary fails
+resilient_chain = primary_chain.with_fallbacks([fallback_chain])
+
+# Use it
+result = resilient_chain.invoke({"text": "This product is amazing!"})
 ```
+
+> **📚 Production Patterns**: See [resilient chain implementation](https://github.com/jetthoughts/langchain-examples/error-handling) with error tracking, retry logic, and observability metrics (complete 79-line implementation with monitoring).
 
 ## Production Agent Architecture with Safety Constraints
 
@@ -813,106 +634,68 @@ async def health_check():
     }
 ```
 
-**Rails client integration**:
-```ruby
-# app/services/langchain_client.rb
-class LangchainClient
-  include HTTParty
-  base_uri ENV.fetch('LANGCHAIN_SERVICE_URL', 'http://localhost:8000')
+**Client Integration Example (Python)**:
 
-  # Timeout configuration for production resilience
-  default_timeout 65  # Slightly longer than agent max_execution_time
+For integrating with web applications, create a client library:
 
-  def self.execute_agent(query:, user_id:, session_id:, max_iterations: 5)
-    response = post(
-      '/agent/execute',
-      body: {
-        query: query,
-        user_id: user_id,
-        session_id: session_id,
-        max_iterations: max_iterations
-      }.to_json,
-      headers: {
-        'Content-Type' => 'application/json',
-        'Authorization' => "Bearer #{ENV['LANGCHAIN_API_KEY']}"
-      }
-    )
+```python
+# langchain_client.py
+import requests
+from typing import Dict, Optional
 
-    handle_response(response)
-  rescue HTTParty::Error, Timeout::Error => e
-    Rails.logger.error("LangChain service error: #{e.message}")
-    raise ServiceUnavailableError, "AI agent service unavailable"
-  end
+class LangChainClient:
+    """Client for interacting with LangChain microservice."""
 
-  def self.circuit_breaker_open?
-    response = get('/health')
-    response.parsed_response['circuit_breaker_open']
-  rescue
-    true  # Assume circuit open if health check fails
-  end
+    def __init__(self, base_url: str, api_key: str, timeout: int = 65):
+        self.base_url = base_url
+        self.api_key = api_key
+        self.timeout = timeout
+        self.session = requests.Session()
+        self.session.headers.update({
+            'Authorization': f'Bearer {api_key}',
+            'Content-Type': 'application/json'
+        })
 
-  private
+    def execute_agent(
+        self,
+        query: str,
+        user_id: str,
+        session_id: str,
+        max_iterations: int = 5
+    ) -> Dict:
+        """Execute agent query with error handling."""
+        try:
+            response = self.session.post(
+                f"{self.base_url}/agent/execute",
+                json={
+                    'query': query,
+                    'user_id': user_id,
+                    'session_id': session_id,
+                    'max_iterations': max_iterations
+                },
+                timeout=self.timeout
+            )
+            response.raise_for_status()
+            return response.json()
 
-  def self.handle_response(response)
-    case response.code
-    when 200
-      JSON.parse(response.body)
-    when 500
-      Rails.logger.error("LangChain agent execution failed: #{response.body}")
-      raise AgentExecutionError, response.parsed_response['detail']
-    else
-      raise UnexpectedResponseError, "Status #{response.code}: #{response.body}"
-    end
-  end
-end
+        except requests.Timeout:
+            raise ServiceUnavailableError("AI agent service timed out")
+        except requests.RequestException as e:
+            raise ServiceUnavailableError(f"AI agent service unavailable: {e}")
 
-# Custom error classes
-class ServiceUnavailableError < StandardError; end
-class AgentExecutionError < StandardError; end
-class UnexpectedResponseError < StandardError; end
+    def circuit_breaker_open(self) -> bool:
+        """Check if circuit breaker is open."""
+        try:
+            response = self.session.get(f"{self.base_url}/health")
+            return response.json().get('circuit_breaker_open', True)
+        except:
+            return True  # Assume circuit open if health check fails
+
+class ServiceUnavailableError(Exception):
+    pass
 ```
 
-**Rails controller usage**:
-```ruby
-# app/controllers/ai_assistant_controller.rb
-class AiAssistantController < ApplicationController
-  def ask
-    # Check circuit breaker before attempting execution
-    if LangchainClient.circuit_breaker_open?
-      render json: {
-        error: "AI assistant temporarily unavailable. Please try again shortly."
-      }, status: :service_unavailable
-      return
-    end
-
-    result = LangchainClient.execute_agent(
-      query: params[:query],
-      user_id: current_user.id,
-      session_id: session.id,
-      max_iterations: 5
-    )
-
-    # Store result for user history
-    AiQuery.create!(
-      user: current_user,
-      query: params[:query],
-      response: result['output'],
-      execution_time: result['execution_time'],
-      tokens_used: result['tokens_used']
-    )
-
-    render json: {
-      answer: result['output'],
-      execution_time: result['execution_time']
-    }
-
-  rescue ServiceUnavailableError => e
-    render json: { error: e.message }, status: :service_unavailable
-  rescue AgentExecutionError => e
-    render json: { error: "Failed to process query: #{e.message}" }, status: :unprocessable_entity
-  end
-end
-```
+**For Rails integration patterns**: See our dedicated guide on [Rails + Python AI Integration](https://jetthoughts.com/blog/rails-python-ai-integration/) covering microservice architecture, API design, and production deployment strategies.
 
 ## Observability and Monitoring
 
