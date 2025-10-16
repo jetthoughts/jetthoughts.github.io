@@ -1,0 +1,73 @@
+LANGCHAIN SEO KEYWORD RESEARCH - 2025 SUMMARY
+==============================================
+
+CRITICAL FINDINGS:
+
+1. TIMING OPPORTUNITY (10/10 Priority):
+   - LangChain v1.0 launches October 2025
+   - ZERO migration guides exist currently
+   - First-mover advantage for "langchain v1.0 migration" content
+
+2. LOW-COMPETITION GOLDMINE:
+   - LangGraph keywords: Very low competition, growing search volume
+   - Target: "langgraph tutorial", "langgraph examples", "langgraph agents"
+   - Opportunity to dominate emerging category
+
+3. PRIMARY KEYWORDS (High Volume):
+   - langchain tutorial (high competition, video-dominated)
+   - langchain tutorial 2025 (temporal freshness critical)
+   - langchain guide (moderate competition)
+   - langchain agents tutorial (technical, v0.3 focus)
+   - learn langchain (course platforms dominate)
+
+4. LONG-TAIL OPPORTUNITIES (100+ identified):
+   - "build ai agents with langchain python"
+   - "langchain rag implementation guide"
+   - "langchain ollama tutorial" (local LLM trend)
+   - "langchain vs llamaindex 2025" (comparison intent)
+   - "langchain production deployment" (enterprise gap)
+
+5. SEARCH INTENT DISTRIBUTION:
+   - Educational: 70% (tutorials, guides dominate)
+   - Implementation: 50% (build, create focus)
+   - Comparison: 20% (vs content, alternatives)
+   - Troubleshooting: 15% (growing opportunity)
+
+6. CONTENT GAPS (High-Value):
+   - v1.0 migration guides (CRITICAL TIMING)
+   - Intermediate-level content (beginner-to-advanced bridge)
+   - Production deployment guides (development focus currently)
+   - Security best practices (minimal coverage)
+   - Testing/debugging strategies (underserved)
+   - Real case studies with metrics (lacking quantitative data)
+
+7. FORMAT PREFERENCES:
+   - Video: 60% of top 3 results (YouTube dominance)
+   - Long-form courses: 5-hour comprehensive guides ranking well
+   - Interactive platforms: Udemy/Coursera strong for "learn" queries
+   - Code repositories: GitHub repos essential for credibility
+   - Blog posts: 1500-3000 words optimal for tutorials
+
+8. FEATURED SNIPPET OPPORTUNITIES:
+   - "What is LangChain" (definition snippet)
+   - "What is LangGraph" (new concept, low competition)
+   - "How to install LangChain" (step-by-step)
+   - "LangChain vs LlamaIndex" (comparison table)
+   - "LangChain best practices" (bullet list)
+
+RECOMMENDED CONTENT CALENDAR Q4 2025:
+
+Week 1-2: LangChain v1.0 Migration Guide (CRITICAL TIMING)
+Week 3-4: LangGraph Tutorial Complete Guide (LOW COMPETITION)
+Week 5-6: Complete LangChain Tutorial 2025 (HIGH VOLUME)
+Week 7-8: LangChain Best Practices + Troubleshooting
+Week 9-10: LangChain + Ollama + Portfolio Projects
+
+SUCCESS METRICS:
+- Target: 10,000+ monthly organic visits within 6 months
+- Top 3 rankings for 5+ primary keywords
+- Top 10 rankings for 20+ long-tail keywords
+- Capture 3+ featured snippets
+- 20+ backlinks from DR 40+ domains
+
+FULL REPORT: /Users/pftg/dev/jetthoughts.github.io/content/blog/_runtime/seo-research-langchain-2025.md
