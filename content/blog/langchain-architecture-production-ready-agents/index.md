@@ -32,7 +32,6 @@ This guide assumes you have:
 - Python 3.9+ installed
 - Basic understanding of AI/LLM concepts
 - Familiarity with API development patterns
-- Optional: Ruby on Rails 7.0+ for integration examples
 
 ## LangChain v1.0 Architecture Fundamentals
 
@@ -365,13 +364,13 @@ def test_agent_handles_real_search_query():
     assert "python" in result["output"].lower()
 ```
 
-## Rails Integration Patterns
+## API Integration Patterns
 
-Integrating LangChain agents into Ruby on Rails applications requires careful handling of Python interop and state management.
+Integrating LangChain agents into web applications requires careful handling of state management and service boundaries.
 
 ### Microservice Architecture Pattern
 
-The most production-ready approach separates Python LangChain logic into a microservice.
+The production-ready approach separates Python LangChain logic into a dedicated microservice.
 
 ```python
 # langchain_service/app.py
@@ -547,7 +546,7 @@ class ServiceUnavailableError(Exception):
     pass
 ```
 
-**For Rails integration patterns**: See our dedicated guide on [Rails + Python AI Integration](https://jetthoughts.com/blog/rails-python-ai-integration/) covering microservice architecture, API design, and production deployment strategies.
+> **📚 Full Integration Examples**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete microservice architecture examples with deployment configurations and monitoring setup.
 
 ## Observability and Monitoring
 
@@ -730,14 +729,14 @@ You now have production-ready patterns for:
 - **Resilient Architecture**: Multi-layer chains with automatic fallback
 - **Safety Constraints**: Circuit breakers and execution limits preventing failures
 - **Comprehensive Testing**: Unit, integration, and E2E test strategies
-- **Rails Integration**: Microservice pattern with proper error handling
+- **API Integration**: Microservice pattern with proper error handling
 - **Observability**: Structured logging and monitoring for debugging
 
 ## Next Steps
 
 **Explore Related Guides**:
-- [Building Scalable Rails APIs](/blog/building-scalable-rails-apis-graphql/) - GraphQL patterns complementing AI services
-- [Rails 7 Upgrade Guide](/blog/rails-7-upgrade-guide-performance/) - Infrastructure optimization for AI workloads
+- [LangChain Memory Systems](/blog/langchain-memory-systems-conversational-ai/) - Build conversational AI with persistent context
+- [CrewAI Multi-Agent Systems](/blog/crewai-multi-agent-systems-orchestration/) - Orchestrate specialized agent teams
 
 **Download the Production Readiness Audit Checklist**: A comprehensive 47-point audit covering architecture, testing, deployment, and monitoring. [Request your free copy](mailto:contact@jetthoughts.com?subject=LangChain%20Production%20Audit%20Checklist).
 

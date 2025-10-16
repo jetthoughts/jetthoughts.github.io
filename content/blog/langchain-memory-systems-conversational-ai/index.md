@@ -20,11 +20,11 @@ Without memory, every conversation starts from scratch. Your AI can't remember c
 
 ## Our Approach: LangChain Memory Architecture
 
-Let's build conversational AI that remembers—using LangChain's powerful memory systems combined with Rails persistence. We'll cover everything from in-memory conversation buffers to production-ready PostgreSQL/Redis storage that scales.
+Let's build conversational AI that remembers—using LangChain's powerful memory systems with production-ready persistence. We'll cover everything from in-memory conversation buffers to PostgreSQL/Redis storage that scales.
 
 Have you ever wanted your AI agents to remember important details across conversations, maintain context over extended exchanges, or even build user profiles over time? LangChain's memory systems make this possible with clean abstractions and flexible storage backends.
 
-Here's what makes this powerful: LangChain provides multiple memory types—each optimized for different use cases—from simple conversation buffers to sophisticated entity memory that tracks relationships and facts. And with Rails integration, you can persist these memories to PostgreSQL or Redis for production reliability.
+Here's what makes this powerful: LangChain provides multiple memory types—each optimized for different use cases—from simple conversation buffers to sophisticated entity memory that tracks relationships and facts. With PostgreSQL or Redis integration, you can persist these memories for production reliability.
 
 Let's dive into building stateful conversational AI that users love.
 
@@ -425,7 +425,7 @@ print(entity_memory.entity_store.store)
 
 **Entity Memory Persistence**:
 
-For production entity memory persistence in Python applications, consider using PostgreSQL with SQLAlchemy for structured entity storage, or integrate with Rails via the microservice pattern shown in our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/).
+For production entity memory persistence, use PostgreSQL with SQLAlchemy for structured entity storage, or integrate with web applications via the microservice pattern shown in our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/).
 
 ---
 
@@ -501,7 +501,7 @@ print(f"\nAI Response: {response}")
 
 **PostgreSQL pgvector Integration**:
 
-For production Python applications requiring persistent vector memory, integrate PostgreSQL with pgvector using LangChain's PGVector integration. For Rails integration patterns, see our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/) which covers microservice architecture for AI systems.
+For production applications requiring persistent vector memory, integrate PostgreSQL with pgvector using LangChain's PGVector integration. See our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/) for microservice architecture patterns for AI systems.
 
 ---
 
@@ -575,7 +575,7 @@ class PostgreSQLMemoryManager:
             .all()[::-1]  # Reverse to chronological order
 ```
 
-**For Rails integration**: See our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/) for microservice patterns connecting Rails with Python LangChain systems.
+> **📚 Full Implementation**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete PostgreSQL integration examples with session management and query optimization.
 
 ### Redis Session Memory for Real-Time Performance
 
@@ -654,7 +654,7 @@ class RedisMemoryService:
         return f"conversation:{self.conversation_id}:entities"
 ```
 
-**For Rails integration**: Use the microservice pattern to connect Rails with Python LangChain systems - see our [Architecture guide](/blog/langchain-architecture-production-ready-agents/).
+> **📚 Full Redis Integration**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete Redis memory implementations with session management and automatic expiration.
 
 ---
 
@@ -814,9 +814,9 @@ def test_windowed_memory_limits_context():
 
 ## Ready to Build Stateful Conversational AI?
 
-Building conversational AI with memory transforms disconnected exchanges into natural, context-aware interactions. The patterns we've covered—from simple conversation buffers to sophisticated entity memory with Rails persistence—provide the foundation for production-ready AI assistants.
+Building conversational AI with memory transforms disconnected exchanges into natural, context-aware interactions. The patterns we've covered—from simple conversation buffers to sophisticated entity memory with production persistence—provide the foundation for production-ready AI assistants.
 
-The key is matching memory type to your use case: conversation buffers for short chats, summary memory for extended sessions, entity memory for relationship tracking, and vector stores for semantic search over large knowledge bases. With Rails integration via PostgreSQL and Redis, you can scale these patterns to handle millions of conversations reliably.
+The key is matching memory type to your use case: conversation buffers for short chats, summary memory for extended sessions, entity memory for relationship tracking, and vector stores for semantic search over large knowledge bases. With PostgreSQL and Redis persistence, you can scale these patterns to handle millions of conversations reliably.
 
 ## Next Steps
 
@@ -830,15 +830,15 @@ The key is matching memory type to your use case: conversation buffers for short
 
 **Download Our Memory Architecture Template:**
 
-Get our production-ready Rails + LangChain memory system repository with:
-- Complete Rails models for conversation persistence
+Get our production-ready LangChain memory system repository with:
+- Complete Python models for conversation persistence
 - Redis integration for session memory
 - PostgreSQL pgvector setup for semantic search
-- RSpec test suite for memory operations
-- Background job patterns for summarization
+- Pytest test suite for memory operations
+- Background task patterns for summarization
 - API endpoints for memory management
 
-[**Download Memory Architecture Template →**](https://github.com/jetthoughts/langchain-memory-rails-template)
+[**Download Memory Architecture Template →**](https://github.com/jetthoughts/langchain-production-patterns)
 
 **Need expert help building conversational AI?**
 
@@ -856,16 +856,14 @@ Ready to build AI that remembers? [Contact us for a conversational AI consultati
 
 ---
 
-**Looking for Rails Integration?** This tutorial focuses on Python LangChain implementation. For connecting LangChain systems with Ruby on Rails applications, see our companion guide: [LangChain Architecture: Production-Ready AI Agent Systems](/blog/langchain-architecture-production-ready-agents/) which covers microservice architecture patterns for Rails + Python integration.
-
 ## Related Resources
 
 Want to dive deeper into LangChain and conversational AI? Check out these related guides:
 
-- [LangGraph Workflows: Building State Machines for AI Agents](/blog/langgraph-workflows-state-machines-ai-agents/)
-- [Building Scalable Rails APIs: Architecture and Design Patterns](/blog/building-scalable-rails-apis-architecture-design-patterns/)
-- [Ruby on Rails Performance Optimization: 15 Proven Techniques](/blog/rails-performance-optimization-15-proven-techniques/)
+- [LangChain Architecture: Production-Ready AI Agent Systems](/blog/langchain-architecture-production-ready-agents/) - Microservice architecture patterns for AI systems
+- [LangGraph Workflows: Building State Machines for AI Agents](/blog/langgraph-workflows-state-machines-ai-agents/) - Complex agent workflow orchestration
+- [Cost Optimization for LLM Applications](/blog/cost-optimization-llm-applications-token-management/) - Token management strategies
 
 ---
 
-**The JetThoughts Team** has been building AI-powered applications and sophisticated Rails systems for 18+ years. Our engineers have architected conversational AI systems serving millions of users with advanced memory management and real-time performance. Follow us on [LinkedIn](https://linkedin.com/company/jetthoughts) for more AI and Rails insights.
+**The JetThoughts Team** has been building AI-powered applications for 18+ years. Our engineers have architected conversational AI systems serving millions of users with advanced memory management and real-time performance. Follow us on [LinkedIn](https://linkedin.com/company/jetthoughts) for more AI insights.

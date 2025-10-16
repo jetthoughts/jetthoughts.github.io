@@ -2838,9 +2838,9 @@ We've covered a lot—from architecture patterns to Kubernetes deployments to re
 - [OpenTelemetry Tracing](https://opentelemetry.io/docs/)
 
 **Related JetThoughts Articles:**
-- [Building Scalable Rails APIs: Architecture and Design Patterns](/blog/building-scalable-rails-apis-architecture-design-patterns/)
-- [Why Your Startup Needs a Single Source of Truth](/blog/why-your-startup-needs-single-source-of-truth-how-create-it-tutorial/)
-- [Working with LLMs in Ruby on Rails: Simple Guide](/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/)
+- [LangChain Architecture: Production-Ready AI Agent Systems](/blog/langchain-architecture-production-ready-agents/) - Resilient chains and safety patterns
+- [CrewAI Multi-Agent Systems Orchestration](/blog/crewai-multi-agent-systems-orchestration/) - Agent collaboration frameworks
+- [Cost Optimization for LLM Applications](/blog/cost-optimization-llm-applications-token-management/) - Token management strategies
 - [What Every Non-Technical Founder Must Know When Building a Tech Product](/blog/what-every-non-technical-founder-must-know-when-building-tech-product-startup-management/)
 
 ### Final thoughts
@@ -2914,7 +2914,7 @@ Your AI agent application can deliver similar results—if you build the product
 
 JetThoughts specializes in taking AI prototypes to enterprise-grade production deployments. Our team has:
 
-- **15+ years** of production Rails and Python experience
+- **15+ years** of production Python and AI experience
 - **50+ AI applications** deployed to production
 - **SOC 2, HIPAA, GDPR** compliance expertise
 - **24/7 production support** for mission-critical systems

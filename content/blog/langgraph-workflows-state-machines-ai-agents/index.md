@@ -998,7 +998,7 @@ This guide introduced LangGraph's state machine fundamentals and production patt
 
 **Explore AI Development Tools**: Discover the [essential developer tools for AI agents](/blog/devtools-for-ai-agents/) to enhance your workflow beyond LangGraph.
 
-**Master LLM Integration**: Learn how to [work with LLMs in Ruby on Rails](/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/) for full-stack AI applications.
+**LangChain Architecture**: Learn [production-ready AI agent patterns](/blog/langchain-architecture-production-ready-agents/) including resilient chains and safety constraints.
 
 **Production AI Best Practices**: Review best practices for deploying scalable AI systems in production environments.
 
