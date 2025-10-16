@@ -104,197 +104,52 @@ Before optimizing costs, you need precise visibility into token consumption acro
 
 ### Implementing Real-Time Token Tracking
 
-**Complete Token Budget System**:
+Core token budget system with cost tracking:
 
 ```python
 import tiktoken
-from dataclasses import dataclass
-from typing import Dict, Optional
-import time
-
-@dataclass
-class TokenBudget:
-    """Per-request token budget with enforcement"""
-    max_input_tokens: int
-    max_output_tokens: int
-    max_total_tokens: int
-    reserved_tokens: int = 100  # Buffer for system prompts
-
-@dataclass
-class CostMetrics:
-    """Track costs with full attribution"""
-    input_tokens: int
-    output_tokens: int
-    input_cost: float
-    output_cost: float
-    total_cost: float
-    model: str
-    timestamp: float
-    request_id: str
-    user_id: Optional[str] = None
-    feature: Optional[str] = None
 
 class TokenBudgetManager:
-    """Enforce token budgets and track costs across application"""
-
-    # Model pricing (as of 2024) - update these regularly
     MODEL_PRICING = {
         'gpt-4': {'input': 0.03, 'output': 0.06},
-        'gpt-4-32k': {'input': 0.06, 'output': 0.12},
         'gpt-3.5-turbo': {'input': 0.001, 'output': 0.002},
-        'claude-2': {'input': 0.008, 'output': 0.024},
-        'claude-instant': {'input': 0.0008, 'output': 0.0024},
     }
 
     def __init__(self, model: str = 'gpt-3.5-turbo'):
         self.model = model
         self.encoding = tiktoken.encoding_for_model(model)
-        self.metrics: list[CostMetrics] = []
 
     def count_tokens(self, text: str) -> int:
-        """Accurate token counting using tiktoken"""
         return len(self.encoding.encode(text))
 
-    def estimate_cost(self, input_text: str, output_text: str) -> CostMetrics:
-        """Calculate actual costs for a request"""
+    def estimate_cost(self, input_text: str, output_text: str) -> dict:
         input_tokens = self.count_tokens(input_text)
         output_tokens = self.count_tokens(output_text)
-
         pricing = self.MODEL_PRICING[self.model]
-        input_cost = (input_tokens / 1000) * pricing['input']
-        output_cost = (output_tokens / 1000) * pricing['output']
 
-        return CostMetrics(
-            input_tokens=input_tokens,
-            output_tokens=output_tokens,
-            input_cost=input_cost,
-            output_cost=output_cost,
-            total_cost=input_cost + output_cost,
-            model=self.model,
-            timestamp=time.time(),
-            request_id=self._generate_request_id()
-        )
-
-    def check_budget(self, prompt: str, budget: TokenBudget) -> tuple[bool, int]:
-        """Validate prompt fits within budget"""
-        token_count = self.count_tokens(prompt)
-        available = budget.max_input_tokens - budget.reserved_tokens
-
-        if token_count > available:
-            return False, token_count - available  # Returns overflow amount
-        return True, 0
+        return {
+            'input_tokens': input_tokens,
+            'output_tokens': output_tokens,
+            'total_cost': (input_tokens/1000 * pricing['input']) +
+                          (output_tokens/1000 * pricing['output'])
+        }
 
     def truncate_to_budget(self, text: str, max_tokens: int) -> str:
-        """Intelligently truncate text to fit budget"""
         tokens = self.encoding.encode(text)
         if len(tokens) <= max_tokens:
             return text
+        return self.encoding.decode(tokens[:max_tokens-3]) + "..."
 
-        # Truncate with ellipsis
-        truncated = tokens[:max_tokens-3]
-        return self.encoding.decode(truncated) + "..."
+# Usage
+manager = TokenBudgetManager()
+prompt = "Analyze this text..."
+response = llm.complete(prompt)
 
-    def track_request(self, metrics: CostMetrics, user_id: str = None,
-                     feature: str = None):
-        """Store metrics for analysis"""
-        metrics.user_id = user_id
-        metrics.feature = feature
-        self.metrics.append(metrics)
-
-    def get_cost_summary(self, hours: int = 24) -> Dict:
-        """Analyze costs over time period"""
-        cutoff = time.time() - (hours * 3600)
-        recent = [m for m in self.metrics if m.timestamp > cutoff]
-
-        return {
-            'total_requests': len(recent),
-            'total_cost': sum(m.total_cost for m in recent),
-            'total_tokens': sum(m.input_tokens + m.output_tokens for m in recent),
-            'avg_cost_per_request': sum(m.total_cost for m in recent) / len(recent) if recent else 0,
-            'cost_by_feature': self._group_by_feature(recent),
-            'cost_by_user': self._group_by_user(recent)
-        }
-
-    def _generate_request_id(self) -> str:
-        import uuid
-        return str(uuid.uuid4())
-
-    def _group_by_feature(self, metrics: list[CostMetrics]) -> Dict:
-        groups = {}
-        for m in metrics:
-            feature = m.feature or 'unknown'
-            if feature not in groups:
-                groups[feature] = {'cost': 0, 'requests': 0}
-            groups[feature]['cost'] += m.total_cost
-            groups[feature]['requests'] += 1
-        return groups
-
-    def _group_by_user(self, metrics: list[CostMetrics]) -> Dict:
-        groups = {}
-        for m in metrics:
-            user = m.user_id or 'anonymous'
-            if user not in groups:
-                groups[user] = {'cost': 0, 'requests': 0}
-            groups[user]['cost'] += m.total_cost
-            groups[user]['requests'] += 1
-        return groups
-
-# Usage example with budget enforcement
-def process_user_query(query: str, user_id: str):
-    """Process query with strict budget control"""
-    budget_manager = TokenBudgetManager(model='gpt-3.5-turbo')
-
-    # Define budget constraints
-    budget = TokenBudget(
-        max_input_tokens=1000,
-        max_output_tokens=500,
-        max_total_tokens=1500
-    )
-
-    # Build prompt
-    system_prompt = "You are a helpful assistant. Be concise."
-    full_prompt = f"{system_prompt}\n\nUser: {query}"
-
-    # Check budget before API call
-    within_budget, overflow = budget_manager.check_budget(full_prompt, budget)
-
-    if not within_budget:
-        # Truncate user query to fit budget
-        available_tokens = budget.max_input_tokens - budget_manager.count_tokens(system_prompt)
-        query = budget_manager.truncate_to_budget(query, available_tokens)
-        full_prompt = f"{system_prompt}\n\nUser: {query}"
-
-    # Make API call (simulated)
-    response = call_llm_api(full_prompt, max_tokens=budget.max_output_tokens)
-
-    # Track actual costs
-    metrics = budget_manager.estimate_cost(full_prompt, response)
-    budget_manager.track_request(metrics, user_id=user_id, feature='chat')
-
-    print(f"Request cost: ${metrics.total_cost:.4f}")
-    print(f"Input tokens: {metrics.input_tokens}, Output tokens: {metrics.output_tokens}")
-
-    return response
-
-# Cost monitoring and alerts
-def monitor_costs(budget_manager: TokenBudgetManager):
-    """Alert when costs exceed thresholds"""
-    summary = budget_manager.get_cost_summary(hours=1)
-
-    HOURLY_BUDGET = 5.00  # $5/hour max
-
-    if summary['total_cost'] > HOURLY_BUDGET:
-        alert_message = f"""
-        🚨 COST ALERT: Hourly budget exceeded!
-        Current: ${summary['total_cost']:.2f}
-        Budget: ${HOURLY_BUDGET:.2f}
-        Requests: {summary['total_requests']}
-
-        Top costs by feature:
-        {format_feature_costs(summary['cost_by_feature'])}
-        """
-        send_alert(alert_message)  # Send to Slack/email/etc
+cost = manager.estimate_cost(prompt, response)
+print(f"Cost: ${cost['total_cost']:.4f}, Tokens: {cost['input_tokens']}+{cost['output_tokens']}")
 ```
+
+> **📚 Full Implementation**: See [token budget system with monitoring](https://github.com/jetthoughts/llm-cost-examples/token-tracking) for production version with request tracking, cost alerts, and per-user/feature attribution (188 lines).
 
 **Key Implementation Notes**:
 
