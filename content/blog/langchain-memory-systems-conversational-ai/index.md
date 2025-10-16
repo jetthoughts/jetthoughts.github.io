@@ -1,14 +1,14 @@
 ---
 title: "Building Stateful Conversational AI with LangChain Memory Systems"
-description: "Master LangChain memory systems to build production-ready conversational AI. Learn short-term, long-term, entity memory with Rails integration, PostgreSQL/Redis persistence, and real-world implementation patterns."
+description: "Master LangChain memory systems to build production-ready conversational AI with Python. Learn short-term, long-term, entity memory with PostgreSQL/Redis persistence, and real-world implementation patterns."
 date: 2025-10-15
-tags: ["LangChain", "Conversational AI", "LangChain Memory", "Rails Integration", "AI Agents", "LangGraph", "PostgreSQL", "Redis"]
-categories: ["AI Development", "LangChain", "Rails"]
+tags: ["LangChain", "Conversational AI", "LangChain Memory", "Python", "AI Agents", "LangGraph", "PostgreSQL", "Redis"]
+categories: ["AI Development", "LangChain", "Python"]
 author: "JetThoughts Team"
 slug: "langchain-memory-systems-conversational-ai"
 canonical_url: "https://jetthoughts.com/blog/langchain-memory-systems-conversational-ai/"
-meta_title: "LangChain Memory Systems: Building Stateful Conversational AI | JetThoughts"
-meta_description: "Master LangChain memory systems to build production-ready conversational AI. Learn short-term, long-term, entity memory with Rails integration, PostgreSQL/Redis persistence, and real-world implementation patterns."
+meta_title: "LangChain Memory Systems: Building Stateful Conversational AI with Python | JetThoughts"
+meta_description: "Master LangChain memory systems to build production-ready conversational AI with Python. Learn short-term, long-term, entity memory with PostgreSQL/Redis persistence, and real-world implementation patterns."
 cover_image: "cover.jpeg"
 ---
 
@@ -423,153 +423,9 @@ print(entity_memory.entity_store.store)
 }
 ```
 
-### Custom Entity Memory with Rails Models
+**Entity Memory Persistence**:
 
-Integrate entity memory with Rails for production persistence:
-
-**Rails Entity Memory Integration:**
-
-```ruby
-# app/models/conversation_entity.rb
-class ConversationEntity < ApplicationRecord
-  belongs_to :conversation
-
-  # Store entity attributes as JSONB
-  # Columns: name:string, entity_type:string, attributes:jsonb
-
-  validates :name, presence: true
-  validates :entity_type, presence: true
-
-  # Update entity attributes
-  def update_attribute_value(key, value)
-    self.attributes ||= {}
-    self.attributes[key] = value
-    save!
-  end
-
-  # Query entity knowledge
-  def self.find_by_attribute(key, value)
-    where("attributes ->> ? = ?", key, value)
-  end
-end
-
-# app/services/langchain_entity_memory_service.rb
-class LangchainEntityMemoryService
-  def initialize(conversation_id)
-    @conversation = Conversation.find(conversation_id)
-  end
-
-  def extract_entities(message)
-    # Use LangChain entity extraction
-    response = OpenAI::Client.new.chat(
-      parameters: {
-        model: "gpt-4-turbo-preview",
-        messages: [
-          {
-            role: "system",
-            content: entity_extraction_prompt
-          },
-          {
-            role: "user",
-            content: message
-          }
-        ],
-        temperature: 0
-      }
-    )
-
-    entities = JSON.parse(response.dig("choices", 0, "message", "content"))
-
-    # Persist entities to Rails database
-    entities.each do |entity_data|
-      entity = @conversation.conversation_entities.find_or_initialize_by(
-        name: entity_data["name"],
-        entity_type: entity_data["type"]
-      )
-
-      entity.attributes = entity.attributes.merge(entity_data["attributes"])
-      entity.save!
-    end
-
-    entities
-  end
-
-  def get_entity_context(entity_names)
-    @conversation.conversation_entities
-      .where(name: entity_names)
-      .map { |e| "#{e.name} (#{e.entity_type}): #{e.attributes.to_json}" }
-      .join("\n")
-  end
-
-  private
-
-  def entity_extraction_prompt
-    <<~PROMPT
-      Extract entities from the conversation along with their attributes.
-      Return JSON format:
-      [
-        {
-          "name": "Entity Name",
-          "type": "person|project|technology|location|other",
-          "attributes": {
-            "key1": "value1",
-            "key2": "value2"
-          }
-        }
-      ]
-    PROMPT
-  end
-end
-```
-
-**Using Rails Entity Memory:**
-
-```ruby
-# In your Rails controller
-class ConversationsController < ApplicationController
-  def send_message
-    conversation = Conversation.find(params[:id])
-    entity_service = LangchainEntityMemoryService.new(conversation.id)
-
-    # Extract entities from user message
-    entities = entity_service.extract_entities(params[:message])
-
-    # Get entity context for LLM
-    entity_context = entity_service.get_entity_context(entities.map { |e| e["name"] })
-
-    # Build LLM prompt with entity context
-    prompt = build_prompt_with_entity_context(
-      message: params[:message],
-      entity_context: entity_context,
-      conversation_history: conversation.messages.last(5)
-    )
-
-    # Get LLM response with entity awareness
-    response = call_langchain_with_memory(prompt)
-
-    render json: { response: response, entities: entities }
-  end
-
-  private
-
-  def build_prompt_with_entity_context(message:, entity_context:, conversation_history:)
-    <<~PROMPT
-      You are a helpful AI assistant with memory of entities from previous conversations.
-
-      === Entity Context ===
-      #{entity_context}
-
-      === Recent Conversation ===
-      #{conversation_history.map { |m| "#{m.role}: #{m.content}" }.join("\n")}
-
-      === Current Message ===
-      User: #{message}
-
-      Respond naturally while incorporating entity knowledge when relevant.
-    PROMPT
-  end
-end
-```
+For production entity memory persistence in Python applications, consider using PostgreSQL with SQLAlchemy for structured entity storage, or integrate with Rails via the microservice pattern shown in our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/).
 
 ---
 
@@ -643,180 +499,9 @@ print(f"\nAI Response: {response}")
 # AI will retrieve "Python", "machine learning engineer" memories
 ```
 
-### Rails Integration with PostgreSQL pgvector
+**PostgreSQL pgvector Integration**:
 
-For production Rails applications, use PostgreSQL's pgvector extension:
-
-**Rails Vector Memory Implementation:**
-
-```ruby
-# Gemfile
-gem 'pgvector'
-gem 'ruby-openai'
-
-# db/migrate/20251015_create_conversation_memories.rb
-class CreateConversationMemories < ActiveRecord::Migration[7.1]
-  def change
-    enable_extension 'vector'
-
-    create_table :conversation_memories do |t|
-      t.references :conversation, null: false, foreign_key: true
-      t.text :content, null: false
-      t.vector :embedding, limit: 1536  # OpenAI ada-002 embedding size
-      t.jsonb :metadata, default: {}
-      t.timestamps
-
-      t.index :embedding, using: :ivfflat, opclass: :vector_cosine_ops
-    end
-  end
-end
-
-# app/models/conversation_memory.rb
-class ConversationMemory < ApplicationRecord
-  belongs_to :conversation
-
-  has_neighbors :embedding, dimensions: 1536
-
-  validates :content, presence: true
-  validates :embedding, presence: true
-
-  # Generate embedding for content
-  def self.create_with_embedding(conversation:, content:, metadata: {})
-    embedding = generate_embedding(content)
-
-    create!(
-      conversation: conversation,
-      content: content,
-      embedding: embedding,
-      metadata: metadata
-    )
-  end
-
-  # Semantic search over memories
-  def self.semantic_search(query, limit: 5)
-    query_embedding = generate_embedding(query)
-
-    nearest_neighbors(
-      :embedding,
-      query_embedding,
-      distance: "cosine"
-    ).limit(limit)
-  end
-
-  private
-
-  def self.generate_embedding(text)
-    client = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
-
-    response = client.embeddings(
-      parameters: {
-        model: "text-embedding-ada-002",
-        input: text
-      }
-    )
-
-    response.dig("data", 0, "embedding")
-  end
-end
-
-# app/services/vector_memory_service.rb
-class VectorMemoryService
-  def initialize(conversation_id)
-    @conversation = Conversation.find(conversation_id)
-  end
-
-  def store_message(content, role: "user")
-    ConversationMemory.create_with_embedding(
-      conversation: @conversation,
-      content: content,
-      metadata: {
-        role: role,
-        timestamp: Time.current.iso8601
-      }
-    )
-  end
-
-  def retrieve_relevant_context(query, limit: 5)
-    memories = ConversationMemory
-      .where(conversation: @conversation)
-      .semantic_search(query, limit: limit)
-
-    memories.map do |memory|
-      {
-        content: memory.content,
-        role: memory.metadata["role"],
-        timestamp: memory.metadata["timestamp"],
-        relevance_score: memory.neighbor_distance
-      }
-    end
-  end
-
-  def build_context_prompt(query)
-    relevant_memories = retrieve_relevant_context(query)
-
-    context = relevant_memories.map do |memory|
-      "#{memory[:role].capitalize} (#{memory[:timestamp]}): #{memory[:content]}"
-    end.join("\n\n")
-
-    <<~PROMPT
-      You are a helpful AI assistant with memory of previous conversations.
-
-      === Relevant Context from Past Conversations ===
-      #{context}
-
-      === Current Query ===
-      User: #{query}
-
-      Respond using relevant context when helpful, but always prioritize accuracy.
-    PROMPT
-  end
-end
-```
-
-**Using Vector Memory in Rails Controllers:**
-
-```ruby
-# app/controllers/api/v1/conversations_controller.rb
-class Api::V1::ConversationsController < ApplicationController
-  def send_message
-    conversation = Conversation.find(params[:id])
-    vector_service = VectorMemoryService.new(conversation.id)
-
-    # Store user message with embedding
-    vector_service.store_message(params[:message], role: "user")
-
-    # Build prompt with relevant context
-    prompt = vector_service.build_context_prompt(params[:message])
-
-    # Get LLM response
-    response = call_openai_with_prompt(prompt)
-
-    # Store AI response with embedding
-    vector_service.store_message(response, role: "assistant")
-
-    render json: {
-      response: response,
-      relevant_context_count: vector_service.retrieve_relevant_context(params[:message]).size
-    }
-  end
-
-  private
-
-  def call_openai_with_prompt(prompt)
-    client = OpenAI::Client.new
-
-    response = client.chat(
-      parameters: {
-        model: "gpt-4-turbo-preview",
-        messages: [{ role: "user", content: prompt }],
-        temperature: 0.7
-      }
-    )
-
-    response.dig("choices", 0, "message", "content")
-  end
-end
-```
+For production Python applications requiring persistent vector memory, integrate PostgreSQL with pgvector using LangChain's PGVector integration. For Rails integration patterns, see our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/) which covers microservice architecture for AI systems.
 
 ---
 
@@ -824,361 +509,152 @@ end
 
 Building reliable conversational AI requires robust memory persistence strategies.
 
-### PostgreSQL Memory Persistence
+### PostgreSQL Memory Persistence with Python
 
-Store conversation memory in Rails with PostgreSQL for production reliability:
+For production conversation memory persistence with PostgreSQL:
 
-**Complete Rails Memory System:**
+```python
+# langchain_system/persistence/postgresql_memory.py
+from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime, ForeignKey
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, relationship
+from datetime import datetime
 
-```ruby
-# db/migrate/20251015_create_memory_system.rb
-class CreateMemorySystem < ActiveRecord::Migration[7.1]
-  def change
-    # Conversations table
-    create_table :conversations do |t|
-      t.references :user, null: false, foreign_key: true
-      t.string :conversation_type, default: "general"
-      t.jsonb :metadata, default: {}
-      t.timestamps
-    end
+Base = declarative_base()
 
-    # Messages table - stores all conversation turns
-    create_table :messages do |t|
-      t.references :conversation, null: false, foreign_key: true
-      t.string :role, null: false  # 'user' or 'assistant'
-      t.text :content, null: false
-      t.jsonb :metadata, default: {}
-      t.timestamps
+class Conversation(Base):
+    __tablename__ = 'conversations'
 
-      t.index [:conversation_id, :created_at]
-    end
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, nullable=False)
+    conversation_type = Column(String, default="general")
+    created_at = Column(DateTime, default=datetime.utcnow)
 
-    # Memory summaries - condensed conversation history
-    create_table :memory_summaries do |t|
-      t.references :conversation, null: false, foreign_key: true
-      t.text :summary, null: false
-      t.integer :message_count, default: 0
-      t.datetime :summarized_up_to
-      t.timestamps
-    end
+    messages = relationship("Message", back_populates="conversation")
 
-    # Entity memory - structured knowledge extraction
-    create_table :conversation_entities do |t|
-      t.references :conversation, null: false, foreign_key: true
-      t.string :name, null: false
-      t.string :entity_type, null: false
-      t.jsonb :attributes, default: {}
-      t.timestamps
+class Message(Base):
+    __tablename__ = 'messages'
 
-      t.index [:conversation_id, :name], unique: true
-    end
-  end
-end
+    id = Column(Integer, primary_key=True)
+    conversation_id = Column(Integer, ForeignKey('conversations.id'))
+    role = Column(String, nullable=False)  # 'user' or 'assistant'
+    content = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
 
-# app/models/conversation.rb
-class Conversation < ApplicationRecord
-  belongs_to :user
-  has_many :messages, dependent: :destroy
-  has_many :memory_summaries, dependent: :destroy
-  has_many :conversation_entities, dependent: :destroy
-  has_many :conversation_memories, dependent: :destroy
+    conversation = relationship("Conversation", back_populates="messages")
 
-  # Get recent conversation context
-  def recent_context(limit: 10)
-    messages.order(created_at: :desc).limit(limit).reverse
-  end
+# Initialize database connection
+engine = create_engine('postgresql://user:pass@localhost/langchain_db')
+Base.metadata.create_all(engine)
+Session = sessionmaker(bind=engine)
 
-  # Get or create current summary
-  def current_summary
-    memory_summaries.order(created_at: :desc).first
-  end
+class PostgreSQLMemoryManager:
+    """Manage conversation memory with PostgreSQL persistence."""
 
-  # Check if conversation needs summarization
-  def needs_summarization?(threshold: 20)
-    last_summary = current_summary
-    return true if last_summary.nil? && messages.count > threshold
+    def __init__(self, conversation_id: int):
+        self.conversation_id = conversation_id
+        self.session = Session()
 
-    return false if last_summary.nil?
+    def add_message(self, role: str, content: str):
+        """Store new message in database."""
+        message = Message(
+            conversation_id=self.conversation_id,
+            role=role,
+            content=content
+        )
+        self.session.add(message)
+        self.session.commit()
+        return message
 
-    messages.where("created_at > ?", last_summary.summarized_up_to).count > threshold
-  end
-end
-
-# app/services/conversation_memory_manager.rb
-class ConversationMemoryManager
-  attr_reader :conversation
-
-  def initialize(conversation)
-    @conversation = conversation
-  end
-
-  # Add message and manage memory
-  def add_message(role:, content:)
-    message = conversation.messages.create!(
-      role: role,
-      content: content
-    )
-
-    # Trigger summarization if needed
-    summarize_if_needed
-
-    # Extract entities from message
-    extract_entities(content) if role == "user"
-
-    message
-  end
-
-  # Get conversation context for LLM
-  def build_llm_context(max_messages: 10)
-    summary = conversation.current_summary
-    recent_messages = conversation.recent_context(limit: max_messages)
-    entity_context = get_entity_context
-
-    {
-      summary: summary&.summary,
-      recent_messages: recent_messages.map do |msg|
-        { role: msg.role, content: msg.content }
-      end,
-      entities: entity_context
-    }
-  end
-
-  private
-
-  def summarize_if_needed
-    return unless conversation.needs_summarization?
-
-    ConversationSummarizationJob.perform_later(conversation.id)
-  end
-
-  def extract_entities(content)
-    EntityExtractionJob.perform_later(conversation.id, content)
-  end
-
-  def get_entity_context
-    conversation.conversation_entities.map do |entity|
-      {
-        name: entity.name,
-        type: entity.entity_type,
-        attributes: entity.attributes
-      }
-    end
-  end
-end
-
-# app/jobs/conversation_summarization_job.rb
-class ConversationSummarizationJob < ApplicationJob
-  queue_as :default
-
-  def perform(conversation_id)
-    conversation = Conversation.find(conversation_id)
-    last_summary = conversation.current_summary
-
-    # Get messages since last summary
-    messages_to_summarize = if last_summary
-      conversation.messages.where("created_at > ?", last_summary.summarized_up_to)
-    else
-      conversation.messages
-    end
-
-    return if messages_to_summarize.empty?
-
-    # Build summarization prompt
-    conversation_text = messages_to_summarize.map do |msg|
-      "#{msg.role.capitalize}: #{msg.content}"
-    end.join("\n\n")
-
-    prompt = build_summarization_prompt(
-      previous_summary: last_summary&.summary,
-      new_messages: conversation_text
-    )
-
-    # Call OpenAI for summarization
-    client = OpenAI::Client.new
-    response = client.chat(
-      parameters: {
-        model: "gpt-4-turbo-preview",
-        messages: [{ role: "user", content: prompt }],
-        temperature: 0.3
-      }
-    )
-
-    summary_text = response.dig("choices", 0, "message", "content")
-
-    # Store new summary
-    conversation.memory_summaries.create!(
-      summary: summary_text,
-      message_count: messages_to_summarize.count,
-      summarized_up_to: messages_to_summarize.last.created_at
-    )
-  end
-
-  private
-
-  def build_summarization_prompt(previous_summary:, new_messages:)
-    if previous_summary
-      <<~PROMPT
-        You are summarizing an ongoing conversation. Here's the previous summary:
-
-        === Previous Summary ===
-        #{previous_summary}
-
-        === New Messages ===
-        #{new_messages}
-
-        Create an updated summary that combines the previous context with new information.
-        Focus on: key topics discussed, important decisions, user preferences, and action items.
-      PROMPT
-    else
-      <<~PROMPT
-        Summarize the following conversation. Focus on: key topics discussed,
-        important decisions, user preferences, and action items.
-
-        === Conversation ===
-        #{new_messages}
-      PROMPT
-    end
-  end
-end
+    def get_recent_messages(self, limit: int = 10):
+        """Retrieve recent conversation messages."""
+        return self.session.query(Message)\
+            .filter(Message.conversation_id == self.conversation_id)\
+            .order_by(Message.created_at.desc())\
+            .limit(limit)\
+            .all()[::-1]  # Reverse to chronological order
 ```
+
+**For Rails integration**: See our [LangChain Architecture guide](/blog/langchain-architecture-production-ready-agents/) for microservice patterns connecting Rails with Python LangChain systems.
 
 ### Redis Session Memory for Real-Time Performance
 
-Use Redis for fast, session-based memory with automatic expiration:
+Use Redis with Python for fast, session-based memory with automatic expiration:
 
-**Redis Memory Implementation:**
+**Python Redis Memory Implementation:**
 
-```ruby
-# app/services/redis_memory_service.rb
-class RedisMemoryService
-  EXPIRATION_TIME = 24.hours.to_i
+```python
+# langchain_system/persistence/redis_memory.py
+import redis
+import json
+from typing import Dict, List
+from datetime import datetime, timedelta
 
-  def initialize(conversation_id)
-    @conversation_id = conversation_id
-    @redis = Redis.new(url: ENV['REDIS_URL'])
-  end
+class RedisMemoryService:
+    """Redis-based conversation memory for real-time performance."""
 
-  # Store message in Redis
-  def add_message(role:, content:, ttl: EXPIRATION_TIME)
-    message_data = {
-      role: role,
-      content: content,
-      timestamp: Time.current.to_i
-    }
+    EXPIRATION_TIME = 86400  # 24 hours in seconds
 
-    # Add to sorted set (ordered by timestamp)
-    @redis.zadd(messages_key, message_data[:timestamp], message_data.to_json)
+    def __init__(self, conversation_id: str, redis_url: str = "redis://localhost:6379"):
+        self.conversation_id = conversation_id
+        self.redis_client = redis.from_url(redis_url)
 
-    # Set expiration
-    @redis.expire(messages_key, ttl)
+    def add_message(self, role: str, content: str, ttl: int = EXPIRATION_TIME):
+        """Store message in Redis sorted set."""
+        message_data = {
+            'role': role,
+            'content': content,
+            'timestamp': int(datetime.utcnow().timestamp())
+        }
 
-    message_data
-  end
+        # Add to sorted set (ordered by timestamp)
+        self.redis_client.zadd(
+            self._messages_key(),
+            {json.dumps(message_data): message_data['timestamp']}
+        )
 
-  # Get recent messages
-  def get_recent_messages(limit: 20)
-    # Get last N messages from sorted set
-    messages_json = @redis.zrevrange(messages_key, 0, limit - 1)
+        # Set expiration
+        self.redis_client.expire(self._messages_key(), ttl)
 
-    messages_json.map { |json| JSON.parse(json, symbolize_names: true) }.reverse
-  end
+        return message_data
 
-  # Store conversation summary
-  def store_summary(summary, ttl: EXPIRATION_TIME)
-    @redis.setex(summary_key, ttl, summary)
-  end
+    def get_recent_messages(self, limit: int = 20) -> List[Dict]:
+        """Get recent messages from Redis."""
+        # Get last N messages from sorted set
+        messages_json = self.redis_client.zrevrange(
+            self._messages_key(), 0, limit - 1
+        )
 
-  # Get conversation summary
-  def get_summary
-    @redis.get(summary_key)
-  end
+        return [json.loads(msg) for msg in reversed(messages_json)]
 
-  # Clear conversation memory
-  def clear_memory
-    @redis.del(messages_key, summary_key, entities_key)
-  end
+    def store_summary(self, summary: str, ttl: int = EXPIRATION_TIME):
+        """Store conversation summary in Redis."""
+        self.redis_client.setex(self._summary_key(), ttl, summary)
 
-  # Store entity data
-  def store_entity(name:, entity_type:, attributes:)
-    entity_data = {
-      name: name,
-      type: entity_type,
-      attributes: attributes,
-      updated_at: Time.current.to_i
-    }
+    def get_summary(self) -> str:
+        """Get conversation summary from Redis."""
+        summary = self.redis_client.get(self._summary_key())
+        return summary.decode('utf-8') if summary else None
 
-    @redis.hset(entities_key, name, entity_data.to_json)
-    @redis.expire(entities_key, EXPIRATION_TIME)
-  end
+    def clear_memory(self):
+        """Clear all conversation memory from Redis."""
+        self.redis_client.delete(
+            self._messages_key(),
+            self._summary_key(),
+            self._entities_key()
+        )
 
-  # Get all entities
-  def get_entities
-    entities_hash = @redis.hgetall(entities_key)
+    def _messages_key(self) -> str:
+        return f"conversation:{self.conversation_id}:messages"
 
-    entities_hash.transform_values { |json| JSON.parse(json, symbolize_names: true) }
-  end
+    def _summary_key(self) -> str:
+        return f"conversation:{self.conversation_id}:summary"
 
-  private
-
-  def messages_key
-    "conversation:#{@conversation_id}:messages"
-  end
-
-  def summary_key
-    "conversation:#{@conversation_id}:summary"
-  end
-
-  def entities_key
-    "conversation:#{@conversation_id}:entities"
-  end
-end
-
-# Usage in controller
-class Api::V1::MessagesController < ApplicationController
-  def create
-    redis_memory = RedisMemoryService.new(params[:conversation_id])
-
-    # Store user message in Redis
-    redis_memory.add_message(
-      role: "user",
-      content: params[:message]
-    )
-
-    # Get recent context from Redis (fast!)
-    recent_context = redis_memory.get_recent_messages(limit: 10)
-    summary = redis_memory.get_summary
-    entities = redis_memory.get_entities
-
-    # Build LLM prompt with Redis context
-    prompt = build_prompt_with_context(
-      message: params[:message],
-      summary: summary,
-      recent_messages: recent_context,
-      entities: entities
-    )
-
-    # Get AI response
-    response = call_langchain_llm(prompt)
-
-    # Store AI response in Redis
-    redis_memory.add_message(
-      role: "assistant",
-      content: response
-    )
-
-    # Optionally persist to PostgreSQL for long-term storage
-    persist_to_database(params[:conversation_id], params[:message], response)
-
-    render json: { response: response }
-  end
-
-  private
-
-  def persist_to_database(conversation_id, user_message, ai_response)
-    PersistConversationJob.perform_later(conversation_id, user_message, ai_response)
-  end
-end
+    def _entities_key(self) -> str:
+        return f"conversation:{self.conversation_id}:entities"
 ```
+
+**For Rails integration**: Use the microservice pattern to connect Rails with Python LangChain systems - see our [Architecture guide](/blog/langchain-architecture-production-ready-agents/).
 
 ---
 
@@ -1186,147 +662,66 @@ end
 
 Reliable conversational AI requires comprehensive memory testing strategies.
 
-### Unit Testing Memory Operations
+### Unit Testing Memory Operations with Python
 
-Test memory storage, retrieval, and context building:
+Test memory storage, retrieval, and context building using pytest:
 
-**RSpec Memory Tests:**
+**Pytest Memory Tests:**
 
-```ruby
-# spec/services/conversation_memory_manager_spec.rb
-RSpec.describe ConversationMemoryManager do
-  let(:user) { create(:user) }
-  let(:conversation) { create(:conversation, user: user) }
-  let(:manager) { described_class.new(conversation) }
+```python
+# tests/test_redis_memory_service.py
+import pytest
+from langchain_system.persistence.redis_memory import RedisMemoryService
 
-  describe '#add_message' do
-    it 'stores messages in database' do
-      expect {
-        manager.add_message(role: 'user', content: 'Hello AI')
-      }.to change(conversation.messages, :count).by(1)
-    end
+@pytest.fixture
+def redis_memory(redis_url):
+    """Create Redis memory service for testing."""
+    service = RedisMemoryService(
+        conversation_id="test_123",
+        redis_url=redis_url
+    )
+    yield service
+    # Cleanup after test
+    service.clear_memory()
 
-    it 'triggers summarization when threshold reached' do
-      # Create 19 existing messages (threshold is 20)
-      create_list(:message, 19, conversation: conversation)
+def test_add_and_retrieve_messages(redis_memory):
+    """Test message storage and retrieval in order."""
+    redis_memory.add_message(role='user', content='First')
+    redis_memory.add_message(role='assistant', content='Second')
+    redis_memory.add_message(role='user', content='Third')
 
-      expect(ConversationSummarizationJob).to receive(:perform_later)
-        .with(conversation.id)
+    messages = redis_memory.get_recent_messages(limit=10)
 
-      manager.add_message(role: 'user', content: 'Message 20')
-    end
-  end
+    assert len(messages) == 3
+    assert [m['content'] for m in messages] == ['First', 'Second', 'Third']
 
-  describe '#build_llm_context' do
-    before do
-      # Create conversation history
-      create(:message, conversation: conversation, role: 'user', content: 'First message')
-      create(:message, conversation: conversation, role: 'assistant', content: 'First response')
-      create(:message, conversation: conversation, role: 'user', content: 'Second message')
+def test_message_limit_respected(redis_memory):
+    """Test that message retrieval respects limit."""
+    for i in range(5):
+        redis_memory.add_message(role='user', content=f'Message {i}')
 
-      # Create summary
-      create(:memory_summary,
-        conversation: conversation,
-        summary: 'User discussed topic X',
-        summarized_up_to: 1.hour.ago
-      )
+    messages = redis_memory.get_recent_messages(limit=3)
 
-      # Create entities
-      create(:conversation_entity,
-        conversation: conversation,
-        name: 'Ruby on Rails',
-        entity_type: 'technology',
-        attributes: { 'framework_type' => 'web' }
-      )
-    end
+    assert len(messages) == 3
+    assert messages[-1]['content'] == 'Message 4'
 
-    it 'includes summary in context' do
-      context = manager.build_llm_context
+def test_summary_storage(redis_memory):
+    """Test conversation summary storage and retrieval."""
+    summary_text = 'User discussed LangChain memory patterns'
 
-      expect(context[:summary]).to eq('User discussed topic X')
-    end
+    redis_memory.store_summary(summary_text)
 
-    it 'includes recent messages' do
-      context = manager.build_llm_context(max_messages: 2)
+    assert redis_memory.get_summary() == summary_text
 
-      expect(context[:recent_messages].size).to eq(2)
-      expect(context[:recent_messages].last[:content]).to eq('Second message')
-    end
+def test_clear_memory(redis_memory):
+    """Test clearing all conversation memory."""
+    redis_memory.add_message(role='user', content='Test')
+    redis_memory.store_summary('Test summary')
 
-    it 'includes entity context' do
-      context = manager.build_llm_context
+    redis_memory.clear_memory()
 
-      expect(context[:entities]).to include(
-        hash_including(
-          name: 'Ruby on Rails',
-          type: 'technology',
-          attributes: { 'framework_type' => 'web' }
-        )
-      )
-    end
-  end
-end
-
-# spec/services/redis_memory_service_spec.rb
-RSpec.describe RedisMemoryService do
-  let(:conversation_id) { 123 }
-  let(:service) { described_class.new(conversation_id) }
-
-  before do
-    # Clear Redis before each test
-    service.clear_memory
-  end
-
-  describe '#add_message and #get_recent_messages' do
-    it 'stores and retrieves messages in order' do
-      service.add_message(role: 'user', content: 'First')
-      service.add_message(role: 'assistant', content: 'Second')
-      service.add_message(role: 'user', content: 'Third')
-
-      messages = service.get_recent_messages(limit: 10)
-
-      expect(messages.size).to eq(3)
-      expect(messages.map { |m| m[:content] }).to eq(['First', 'Second', 'Third'])
-    end
-
-    it 'respects message limit' do
-      5.times { |i| service.add_message(role: 'user', content: "Message #{i}") }
-
-      messages = service.get_recent_messages(limit: 3)
-
-      expect(messages.size).to eq(3)
-      expect(messages.last[:content]).to eq('Message 4')
-    end
-  end
-
-  describe '#store_summary and #get_summary' do
-    it 'stores and retrieves conversation summary' do
-      summary_text = 'User discussed Rails and LangChain integration'
-
-      service.store_summary(summary_text)
-
-      expect(service.get_summary).to eq(summary_text)
-    end
-  end
-
-  describe '#store_entity and #get_entities' do
-    it 'stores and retrieves entity data' do
-      service.store_entity(
-        name: 'PostgreSQL',
-        entity_type: 'database',
-        attributes: { version: '15', use_case: 'vector storage' }
-      )
-
-      entities = service.get_entities
-
-      expect(entities['PostgreSQL']).to include(
-        name: 'PostgreSQL',
-        type: 'database',
-        attributes: { version: '15', use_case: 'vector storage' }
-      )
-    end
-  end
-end
+    assert redis_memory.get_recent_messages() == []
+    assert redis_memory.get_summary() is None
 ```
 
 ### Integration Testing with LangChain
@@ -1450,14 +845,18 @@ Get our production-ready Rails + LangChain memory system repository with:
 At JetThoughts, we've built production AI systems that handle millions of conversations with sophisticated memory management. We know the patterns that scale and the pitfalls to avoid.
 
 Our conversational AI services include:
-- LangChain memory architecture design
-- Rails + AI integration and optimization
+- LangChain memory architecture design with Python
+- AI system integration and optimization
 - Vector database implementation (PostgreSQL pgvector, Redis)
 - Testing strategies for AI applications
 - Production deployment and monitoring
 - Performance optimization and scaling
 
 Ready to build AI that remembers? [Contact us for a conversational AI consultation](https://jetthoughts.com/contact/) and let's discuss your project requirements.
+
+---
+
+**Looking for Rails Integration?** This tutorial focuses on Python LangChain implementation. For connecting LangChain systems with Ruby on Rails applications, see our companion guide: [LangChain Architecture: Production-Ready AI Agent Systems](/blog/langchain-architecture-production-ready-agents/) which covers microservice architecture patterns for Rails + Python integration.
 
 ## Related Resources
 

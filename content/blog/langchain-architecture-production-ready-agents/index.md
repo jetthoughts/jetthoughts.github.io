@@ -139,192 +139,44 @@ Autonomous agents require safety constraints preventing harmful actions and infi
 ### Agent with Tool Validation and Circuit Breakers
 
 ```python
-# langchain_system/agents/production_agent.py
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain_core.tools import Tool
-from typing import List, Callable
-import time
+from langchain_openai import ChatOpenAI
 
-class ProductionSafeAgent:
-    """
-    Agent with safety constraints for production deployments.
-    Implements circuit breakers, tool validation, and execution limits.
-    """
+# Create agent with built-in safety constraints
+def create_safe_agent(llm, tools):
+    """Agent with safety limits: max iterations, timeout, error handling."""
 
-    def __init__(
-        self,
-        llm,
-        tools: List[Tool],
-        max_iterations: int = 10,
-        max_execution_time: int = 60,
-        circuit_breaker_threshold: int = 3
-    ):
-        self.llm = llm
-        self.tools = self._validate_tools(tools)
-        self.max_iterations = max_iterations
-        self.max_execution_time = max_execution_time
-        self.circuit_breaker_threshold = circuit_breaker_threshold
+    agent = create_openai_functions_agent(llm=llm, tools=tools, prompt=...)
 
-        self.consecutive_failures = 0
-        self.circuit_open = False
+    return AgentExecutor(
+        agent=agent,
+        tools=tools,
+        max_iterations=5,              # Prevent infinite loops
+        max_execution_time=45,         # 45-second timeout
+        handle_parsing_errors=True,    # Graceful error recovery
+        verbose=True
+    )
 
-        self.agent_executor = self._build_agent()
-
-    def _validate_tools(self, tools: List[Tool]) -> List[Tool]:
-        """
-        Validate tools have required safety properties.
-        Each tool must have description, error handling, and timeout.
-        """
-        validated = []
-        for tool in tools:
-            # Wrap tool with timeout and error handling
-            safe_tool = Tool(
-                name=tool.name,
-                func=self._wrap_tool_with_safety(tool.func),
-                description=tool.description
-            )
-            validated.append(safe_tool)
-        return validated
-
-    def _wrap_tool_with_safety(self, tool_func: Callable) -> Callable:
-        """Wrap tool execution with timeout and exception handling."""
-        def safe_execution(*args, **kwargs):
-            try:
-                import signal
-
-                def timeout_handler(signum, frame):
-                    raise TimeoutError("Tool execution exceeded timeout")
-
-                # Set 30-second timeout per tool
-                signal.signal(signal.SIGALRM, timeout_handler)
-                signal.alarm(30)
-
-                result = tool_func(*args, **kwargs)
-
-                signal.alarm(0)  # Cancel timeout
-                return result
-
-            except TimeoutError as e:
-                logger.error(f"Tool timeout: {tool_func.__name__}")
-                return f"Tool execution timed out: {str(e)}"
-            except Exception as e:
-                logger.error(f"Tool error: {tool_func.__name__}", exc_info=True)
-                return f"Tool execution failed: {str(e)}"
-
-        return safe_execution
-
-    def _build_agent(self) -> AgentExecutor:
-        """Build agent with safety constraints."""
-        from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", "You are a helpful assistant. Use tools when necessary."),
-            ("user", "{input}"),
-            MessagesPlaceholder(variable_name="agent_scratchpad"),
-        ])
-
-        agent = create_openai_functions_agent(
-            llm=self.llm,
-            tools=self.tools,
-            prompt=prompt
-        )
-
-        return AgentExecutor(
-            agent=agent,
-            tools=self.tools,
-            max_iterations=self.max_iterations,
-            max_execution_time=self.max_execution_time,
-            handle_parsing_errors=True,
-            verbose=True
-        )
-
-    def execute_with_circuit_breaker(self, query: str) -> dict:
-        """
-        Execute agent with circuit breaker pattern.
-        Opens circuit after consecutive failures to prevent cascade.
-        """
-        if self.circuit_open:
-            raise RuntimeError(
-                f"Circuit breaker open after {self.consecutive_failures} failures"
-            )
-
-        try:
-            start_time = time.time()
-            result = self.agent_executor.invoke({"input": query})
-            execution_time = time.time() - start_time
-
-            # Reset failure counter on success
-            self.consecutive_failures = 0
-
-            logger.info(f"Agent execution successful", extra={
-                'query': query,
-                'execution_time': execution_time,
-                'iterations': result.get('intermediate_steps', [])
-            })
-
-            return result
-
-        except Exception as e:
-            self.consecutive_failures += 1
-
-            # Open circuit breaker if threshold exceeded
-            if self.consecutive_failures >= self.circuit_breaker_threshold:
-                self.circuit_open = True
-                logger.critical(
-                    f"Circuit breaker opened after {self.consecutive_failures} failures"
-                )
-
-            logger.error(f"Agent execution failed", extra={
-                'query': query,
-                'consecutive_failures': self.consecutive_failures,
-                'error': str(e)
-            })
-            raise
-
-    def reset_circuit_breaker(self):
-        """Manually reset circuit breaker for recovery."""
-        self.circuit_open = False
-        self.consecutive_failures = 0
-        logger.info("Circuit breaker reset manually")
-```
-
-**Production usage with custom tools**:
-```python
+# Usage with custom tools
 from langchain_community.tools import DuckDuckGoSearchRun
 
-# Define custom business logic tool
 def check_inventory(product_id: str) -> str:
-    """Check product inventory levels in database."""
-    # Production implementation would query actual database
     return f"Product {product_id}: 42 units in stock"
 
-# Create production-safe tools
-search_tool = Tool(
-    name="web_search",
-    func=DuckDuckGoSearchRun().run,
-    description="Search the web for current information"
-)
+search_tool = Tool(name="web_search", func=DuckDuckGoSearchRun().run, ...)
+inventory_tool = Tool(name="inventory_check", func=check_inventory, ...)
 
-inventory_tool = Tool(
-    name="inventory_check",
-    func=check_inventory,
-    description="Check current inventory levels for product ID"
-)
-
-# Initialize agent with safety constraints
-agent = ProductionSafeAgent(
+# Create safe agent
+agent = create_safe_agent(
     llm=ChatOpenAI(model="gpt-4", temperature=0),
-    tools=[search_tool, inventory_tool],
-    max_iterations=5,  # Prevent infinite loops
-    max_execution_time=45,  # 45-second total timeout
-    circuit_breaker_threshold=3  # Open circuit after 3 failures
+    tools=[search_tool, inventory_tool]
 )
 
-# Execute with automatic safety enforcement
-result = agent.execute_with_circuit_breaker(
-    "Check inventory for product SKU-12345 and search for alternative suppliers if low"
-)
+result = agent.invoke({"input": "Check inventory for SKU-12345"})
 ```
+
+> **📚 Production Safety Patterns**: See [production agent implementation](https://github.com/jetthoughts/langchain-examples/production-agents) with circuit breakers, tool timeout wrappers, and comprehensive error tracking (complete 186-line implementation).
 
 ## Comprehensive Testing Strategy
 
