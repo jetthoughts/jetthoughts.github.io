@@ -157,188 +157,79 @@ This example demonstrates several key CrewAI patterns:
 
 ## Production Example 2: Automated Content Creation Pipeline
 
-Content creation involves research, writing, editing, and SEO optimization—each requiring different expertise. Here's how to build a content pipeline that produces publication-ready blog posts:
+Content creation involves research, writing, editing, and SEO optimization—each requiring different expertise. Here's a 4-agent content pipeline:
 
 ```python
 from crewai import Agent, Task, Crew
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool
-from datetime import datetime
 
-# Content Research Agent
+# Define specialized agents
 researcher = Agent(
     role="Content Research Specialist",
-    goal="Conduct comprehensive research on topics, gathering data, statistics, and expert insights",
-    backstory="""You're an investigative journalist with expertise in fact-checking
-    and source verification. You dig deep to find compelling stories, recent data,
-    and authoritative sources that make content credible.""",
+    goal="Gather data, statistics, and expert insights",
     tools=[SerperDevTool(), ScrapeWebsiteTool()],
-    verbose=True,
     llm="gpt-4"
 )
 
-# Writer Agent
 writer = Agent(
     role="Senior Content Writer",
-    goal="Craft engaging, SEO-optimized articles that educate and convert readers",
-    backstory="""You're a content strategist who writes for Fortune 500 companies.
-    You understand storytelling, SEO, and conversion optimization. Your articles
-    rank #1 on Google while remaining genuinely helpful.""",
-    verbose=True,
+    goal="Craft engaging, SEO-optimized articles",
     llm="gpt-4"
 )
 
-# Editor Agent
 editor = Agent(
     role="Editorial Director",
-    goal="Ensure content meets quality standards, brand voice, and publishing guidelines",
-    backstory="""You're an editor at a top tech publication with high standards
-    for accuracy, clarity, and style. You catch everything: factual errors, weak
-    arguments, passive voice, and off-brand messaging.""",
-    verbose=True,
+    goal="Ensure quality standards and brand voice",
     llm="gpt-4"
 )
 
-# SEO Specialist Agent
 seo_specialist = Agent(
     role="SEO Optimization Expert",
-    goal="Optimize content for search engines while maintaining readability",
-    backstory="""You've ranked hundreds of articles on Google's first page. You
-    know keyword placement, meta descriptions, internal linking, and semantic SEO.
-    You balance optimization with user experience.""",
-    verbose=True,
-    llm="gpt-3.5-turbo"
+    goal="Optimize content for search engines",
+    llm="gpt-3.5-turbo"  # Cost-effective for routine optimization
 )
 
-def create_content_pipeline(topic: str, target_keywords: list, word_count: int = 2000):
-    """
-    Multi-agent content creation workflow.
-
-    Args:
-        topic: Main topic for the article
-        target_keywords: List of keywords to target
-        word_count: Target word count (default 2000)
-
-    Returns:
-        Final publication-ready article
-    """
-
-    # Research Phase
+# Define sequential workflow
+def create_content_pipeline(topic: str, keywords: list):
     research_task = Task(
-        description=f"""Research '{topic}' comprehensively:
-
-        1. Find 5-7 recent statistics or studies (last 2 years)
-        2. Identify 3-4 expert quotes or case studies
-        3. Analyze top-ranking articles for content gaps
-        4. Gather supporting data for main arguments
-
-        Target keywords: {', '.join(target_keywords)}
-
-        Organize findings with sources for fact-checking.""",
-        agent=researcher,
-        expected_output="Research report with sources, statistics, and expert insights"
+        description=f"Research '{topic}' with recent data and expert quotes",
+        agent=researcher
     )
 
-    # Writing Phase
     writing_task = Task(
-        description=f"""Write a {word_count}-word article on '{topic}':
-
-        Structure:
-        - Compelling introduction (150 words) that hooks readers
-        - 4-5 main sections with subheadings
-        - Real-world examples and case studies
-        - Practical takeaways readers can implement
-        - Strong conclusion with call-to-action
-
-        Requirements:
-        - Naturally integrate keywords: {', '.join(target_keywords)}
-        - Use conversational, authoritative tone
-        - Include transition sentences between sections
-        - Add bullet points for easy scanning
-
-        Base the article on research findings.""",
+        description=f"Write article on '{topic}' using research findings",
         agent=writer,
-        expected_output="Complete article draft with headings and formatting",
-        context=[research_task]
+        context=[research_task]  # Receives research output
     )
 
-    # Editing Phase
     editing_task = Task(
-        description="""Edit the article for:
-
-        1. Clarity: Simplify complex sentences, remove jargon
-        2. Accuracy: Verify claims match research sources
-        3. Flow: Ensure smooth transitions between sections
-        4. Engagement: Strengthen weak paragraphs with examples
-        5. Conciseness: Cut unnecessary words, tighten prose
-
-        Mark changes and explain significant edits.""",
+        description="Edit for clarity, accuracy, and engagement",
         agent=editor,
-        expected_output="Edited article with revision notes",
         context=[writing_task]
     )
 
-    # SEO Optimization Phase
     seo_task = Task(
-        description=f"""Optimize the edited article for SEO:
-
-        1. Meta title (55-60 characters, includes primary keyword)
-        2. Meta description (150-160 characters, compelling)
-        3. URL slug (short, keyword-rich)
-        4. H1/H2 tags optimization (keyword placement)
-        5. Internal linking suggestions (3-5 relevant links)
-        6. Image alt text recommendations
-        7. Featured snippet opportunities
-
-        Target keywords: {', '.join(target_keywords)}
-
-        Maintain readability—no keyword stuffing.""",
+        description=f"Add meta tags, optimize headers for: {', '.join(keywords)}",
         agent=seo_specialist,
-        expected_output="SEO-optimized article with metadata and recommendations",
         context=[editing_task]
     )
 
-    # Create and execute crew
-    content_crew = Crew(
+    crew = Crew(
         agents=[researcher, writer, editor, seo_specialist],
         tasks=[research_task, writing_task, editing_task, seo_task],
-        verbose=True,
-        process="sequential"
+        process="sequential"  # Each task builds on previous output
     )
 
-    result = content_crew.kickoff()
+    return crew.kickoff()
 
-    # Add publishing metadata
-    metadata = {
-        "generated_at": datetime.now().isoformat(),
-        "topic": topic,
-        "target_keywords": target_keywords,
-        "word_count_target": word_count
-    }
-
-    return {"content": result, "metadata": metadata}
-
-# Example usage
-if __name__ == "__main__":
-    article = create_content_pipeline(
-        topic="Building Scalable Microservices with Python FastAPI",
-        target_keywords=[
-            "fastapi microservices",
-            "python microservices architecture",
-            "fastapi tutorial",
-            "scalable api design"
-        ],
-        word_count=2500
-    )
-
-    print("\n" + "="*50)
-    print("CONTENT METADATA:")
-    print("="*50)
-    print(article["metadata"])
-    print("\n" + "="*50)
-    print("FINAL ARTICLE:")
-    print("="*50)
-    print(article["content"])
+# Usage
+article = create_content_pipeline(
+    topic="Building Scalable Microservices with Python FastAPI",
+    keywords=["fastapi microservices", "python microservices"]
+)
 ```
+
+> **📚 Full Implementation**: See [content pipeline with metadata tracking](https://github.com/jetthoughts/crewai-examples/content-pipeline) for production version with publishing metadata, error handling, and word count targets (180 lines).
 
 This content pipeline showcases advanced CrewAI patterns:
 
@@ -352,159 +243,78 @@ This content pipeline showcases advanced CrewAI patterns:
 
 ## Production Example 3: Financial Analysis and Reporting
 
-Financial analysis requires data gathering, calculation verification, trend analysis, and report generation. This example demonstrates parallel task execution for faster processing:
+Financial analysis requires data gathering, calculation, risk assessment, and report generation. Here's a crew with parallel execution capability:
 
 ```python
 from crewai import Agent, Task, Crew
 from crewai_tools import SerperDevTool
-import json
 
-# Data Collector Agent
+# Define specialized financial agents
 data_collector = Agent(
     role="Financial Data Analyst",
-    goal="Gather accurate financial data from reliable sources",
-    backstory="""You're a CFA charterholder specializing in financial data analysis.
-    You know where to find accurate market data, company financials, and economic
-    indicators. You verify data quality before analysis.""",
+    goal="Gather accurate financial data from SEC filings",
     tools=[SerperDevTool()],
-    verbose=True,
     llm="gpt-4"
 )
 
-# Quantitative Analyst Agent
 quant_analyst = Agent(
     role="Quantitative Analyst",
-    goal="Perform statistical analysis and identify financial trends",
-    backstory="""You're a quant with a PhD in statistics who builds financial models.
-    You calculate ratios, identify patterns, and perform regression analysis. You
-    present complex math clearly to non-technical audiences.""",
-    verbose=True,
+    goal="Calculate ratios, identify trends, assess valuation",
     llm="gpt-4"
 )
 
-# Risk Analyst Agent
 risk_analyst = Agent(
     role="Risk Assessment Specialist",
-    goal="Evaluate financial risks and provide mitigation strategies",
-    backstory="""You're a risk management expert who has worked through multiple
-    market cycles. You identify potential downside scenarios, assess probability,
-    and recommend hedging strategies.""",
-    verbose=True,
+    goal="Evaluate financial risks and mitigation strategies",
     llm="gpt-4"
 )
 
-# Report Writer Agent
 report_writer = Agent(
     role="Financial Report Writer",
-    goal="Synthesize analysis into clear, actionable reports for executives",
-    backstory="""You're a financial communications specialist who translates complex
-    analysis into executive summaries. Your reports drive investment decisions at
-    Fortune 500 companies.""",
-    verbose=True,
+    goal="Synthesize analysis into executive summaries",
     llm="gpt-4"
 )
 
-def create_financial_analysis(company_ticker: str, analysis_period: str):
-    """
-    Multi-agent financial analysis workflow with parallel processing.
-
-    Args:
-        company_ticker: Stock ticker symbol (e.g., "AAPL")
-        analysis_period: Time period for analysis (e.g., "Q3 2024")
-
-    Returns:
-        Comprehensive financial analysis report
-    """
-
-    # Data collection task (runs first)
+# Define workflow
+def create_financial_analysis(ticker: str):
     data_task = Task(
-        description=f"""Collect comprehensive financial data for {company_ticker}:
-
-        1. Latest quarterly earnings (revenue, profit, EPS)
-        2. Key financial ratios (P/E, P/B, ROE, debt-to-equity)
-        3. Year-over-year growth rates
-        4. Industry comparison metrics
-        5. Recent news or material events
-
-        Period: {analysis_period}
-
-        Verify all data with primary sources (SEC filings, official reports).""",
-        agent=data_collector,
-        expected_output="Structured financial dataset with source citations"
+        description=f"Collect {ticker} earnings, ratios, and material events",
+        agent=data_collector
     )
 
-    # Parallel analysis tasks (run simultaneously after data collection)
-    quantitative_task = Task(
-        description=f"""Perform quantitative analysis on {company_ticker}:
-
-        1. Calculate and trend 5-year financial ratios
-        2. Compare metrics to industry averages
-        3. Identify statistical outliers or anomalies
-        4. Assess valuation (undervalued/overvalued/fair)
-        5. Calculate growth sustainability scores
-
-        Use the collected financial data.""",
+    # These tasks can run in parallel after data collection
+    quant_task = Task(
+        description=f"Analyze {ticker} ratios and valuation",
         agent=quant_analyst,
-        expected_output="Quantitative analysis with calculations and trends",
         context=[data_task]
     )
 
     risk_task = Task(
-        description=f"""Assess financial risks for {company_ticker}:
-
-        1. Market risk (sector volatility, competition)
-        2. Credit risk (debt levels, interest coverage)
-        3. Operational risk (supply chain, regulatory)
-        4. Liquidity risk (cash position, burn rate)
-        5. Provide risk mitigation recommendations
-
-        Consider current market conditions and company specifics.""",
+        description=f"Assess {ticker} market, credit, and operational risks",
         agent=risk_analyst,
-        expected_output="Risk assessment matrix with mitigation strategies",
         context=[data_task]
     )
 
-    # Report synthesis (runs after parallel analysis)
+    # Final synthesis
     report_task = Task(
-        description=f"""Create executive financial analysis report for {company_ticker}:
-
-        Structure:
-        - Executive Summary (key findings, recommendation)
-        - Financial Performance Overview
-        - Quantitative Analysis Highlights
-        - Risk Assessment Summary
-        - Investment Recommendation (buy/hold/sell with rationale)
-        - Appendix: Detailed Data Tables
-
-        Make it actionable for C-level executives.""",
+        description=f"Create executive report with buy/hold/sell recommendation",
         agent=report_writer,
-        expected_output="Final executive financial analysis report",
-        context=[data_task, quantitative_task, risk_task]
+        context=[data_task, quant_task, risk_task]  # Receives all analysis
     )
 
-    # Create crew with parallel execution
-    financial_crew = Crew(
+    crew = Crew(
         agents=[data_collector, quant_analyst, risk_analyst, report_writer],
-        tasks=[data_task, quantitative_task, risk_task, report_task],
-        verbose=True,
-        process="sequential"  # Note: Use "hierarchical" for true parallel execution
+        tasks=[data_task, quant_task, risk_task, report_task],
+        process="sequential"  # Use "hierarchical" for true parallel execution
     )
 
-    result = financial_crew.kickoff()
-    return result
+    return crew.kickoff()
 
-# Example usage
-if __name__ == "__main__":
-    analysis = create_financial_analysis(
-        company_ticker="MSFT",
-        analysis_period="Q3 2024"
-    )
-
-    print("\n" + "="*50)
-    print("FINANCIAL ANALYSIS REPORT:")
-    print("="*50)
-    print(analysis)
+# Usage
+report = create_financial_analysis("MSFT")
 ```
+
+> **📚 Full Implementation**: See [financial analysis with parallel processing](https://github.com/jetthoughts/crewai-examples/financial-analysis) for production version with hierarchical execution, detailed task descriptions, and risk matrices (151 lines).
 
 This financial analysis example introduces important patterns:
 
@@ -591,91 +401,47 @@ CrewAI v0.98.0 enhanced hierarchical processing with better delegation tracking 
 
 ## Production Deployment: FastAPI Integration Pattern
 
-For production deployment, wrap CrewAI crews in FastAPI endpoints that handle requests asynchronously. Here's a production-ready pattern:
+For production deployment, wrap CrewAI crews in FastAPI endpoints for async processing:
 
 ```python
-from fastapi import FastAPI, BackgroundTasks, HTTPException
+from fastapi import FastAPI, BackgroundTasks
 from pydantic import BaseModel
-from typing import Optional
 import uuid
-from datetime import datetime
 
 app = FastAPI(title="CrewAI Multi-Agent API")
 
-# Request/Response models
 class AnalysisRequest(BaseModel):
     topic: str
     keywords: list[str]
-    priority: Optional[str] = "normal"
 
-class AnalysisResponse(BaseModel):
-    job_id: str
-    status: str
-    created_at: str
-    estimated_completion: Optional[str]
-
-# Job tracking (use Redis in production)
-jobs = {}
+jobs = {}  # Use Redis for production
 
 def run_crew_analysis(job_id: str, request: AnalysisRequest):
-    """Background task that runs CrewAI crew"""
     try:
-        jobs[job_id]["status"] = "processing"
-
-        # Initialize and run crew
         result = create_content_pipeline(
             topic=request.topic,
-            target_keywords=request.keywords
+            keywords=request.keywords
         )
-
         jobs[job_id]["status"] = "completed"
         jobs[job_id]["result"] = result
-        jobs[job_id]["completed_at"] = datetime.now().isoformat()
-
     except Exception as e:
         jobs[job_id]["status"] = "failed"
         jobs[job_id]["error"] = str(e)
 
-@app.post("/analyze", response_model=AnalysisResponse)
-async def create_analysis(
-    request: AnalysisRequest,
-    background_tasks: BackgroundTasks
-):
-    """
-    Submit analysis request for async processing
-    """
+@app.post("/analyze")
+async def create_analysis(request: AnalysisRequest, background_tasks: BackgroundTasks):
     job_id = str(uuid.uuid4())
+    jobs[job_id] = {"status": "queued"}
 
-    jobs[job_id] = {
-        "status": "queued",
-        "request": request.dict(),
-        "created_at": datetime.now().isoformat()
-    }
-
-    # Run crew in background
     background_tasks.add_task(run_crew_analysis, job_id, request)
-
-    return AnalysisResponse(
-        job_id=job_id,
-        status="queued",
-        created_at=jobs[job_id]["created_at"],
-        estimated_completion="2-3 minutes"
-    )
+    return {"job_id": job_id, "status": "queued"}
 
 @app.get("/results/{job_id}")
 async def get_results(job_id: str):
-    """
-    Retrieve analysis results
-    """
-    if job_id not in jobs:
-        raise HTTPException(status_code=404, detail="Job not found")
-
-    return jobs[job_id]
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    return jobs.get(job_id, {"error": "Job not found"})
 ```
+
+> **📚 Full Implementation**: See [FastAPI deployment with Redis](https://github.com/jetthoughts/crewai-examples/fastapi-deployment) for production version with job queues, error tracking, and distributed processing (83 lines).
 
 This pattern provides:
 - **Async processing**: Long-running crews don't block API requests
