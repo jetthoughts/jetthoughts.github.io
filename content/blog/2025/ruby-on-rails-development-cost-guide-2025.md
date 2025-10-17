@@ -348,7 +348,7 @@ The Rails ecosystem offers incredible value when approached strategically. Wheth
 
 **Ready to start your Rails project?** At JetThoughts, we've helped hundreds of companies navigate Rails development costs and build successful applications. Our experienced team provides transparent pricing and delivers quality code that scales with your business.
 
-[Get your free Rails project estimate today →](/contact)
+[Get your free Rails project estimate today →](/contact-us)
 
 *Want more insights on Rails development? Subscribe to our newsletter for weekly tips on building better Rails applications faster and more cost-effectively.*
 

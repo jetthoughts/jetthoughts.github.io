@@ -1298,7 +1298,7 @@ If you've identified wasteful infrastructure spending and want expert guidance o
 - "Identified $96,000/year in unnecessary spending we were about to approve" - E-commerce startup, pre-revenue
 - "Finally understand what we're paying for and why" - Mobile app, $50K MRR
 
-[**Book your infrastructure audit**](/contact) or [**explore our Fractional CTO services**](/services/fractional-cto) for ongoing guidance.
+[**Book your infrastructure audit**](/contact-us) or [**explore our Fractional CTO services**](/services/fractional-cto) for ongoing guidance.
 
 ---
 

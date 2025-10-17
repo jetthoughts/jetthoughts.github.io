@@ -1427,4 +1427,4 @@ For more on building production-ready LLM applications, check out our guides on 
 
 ---
 
-*Have questions about implementing these optimization strategies? [Contact our team](https://jetthoughts.com/contact) for a free cost optimization consultation.*
+*Have questions about implementing these optimization strategies? [Contact our team](https://jetthoughts.com/contact-us) for a free cost optimization consultation.*

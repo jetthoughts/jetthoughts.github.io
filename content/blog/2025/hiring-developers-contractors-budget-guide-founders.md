@@ -2007,7 +2007,7 @@ Your $100K buys:
 
 JetThoughts has helped 50+ non-technical founders navigate the "full-time vs contractor" decision and avoid expensive hiring mistakes.
 
-**[Book a 60-minute Hiring Strategy Consultation](/contact)** to discuss:
+**[Book a 60-minute Hiring Strategy Consultation](/contact-us)** to discuss:
 - Your specific budget and timeline constraints
 - Which hiring model fits your situation best
 - How to evaluate candidates when you're not technical

@@ -433,7 +433,7 @@ The key is taking it step by step, testing thoroughly, and not rushing the proce
 
 **Need help with your Rails upgrade?**
 
-At JetThoughts, we've helped dozens of companies upgrade their Rails applications safely and efficiently. If you'd rather have experts handle the upgrade while you focus on your business, [let's talk about your Rails upgrade project](https://jetthoughts.com/contact/).
+At JetThoughts, we've helped dozens of companies upgrade their Rails applications safely and efficiently. If you'd rather have experts handle the upgrade while you focus on your business, [let's talk about your Rails upgrade project](https://jetthoughts.com/contact-us/).
 
 We offer comprehensive Rails upgrade services including:
 - Pre-upgrade assessment and planning
@@ -441,4 +441,4 @@ We offer comprehensive Rails upgrade services including:
 - Post-upgrade optimization and training
 - Ongoing Rails maintenance and support
 
-Ready to get started? [Contact us today](https://jetthoughts.com/contact/) for a free Rails upgrade consultation.
+Ready to get started? [Contact us today](https://jetthoughts.com/contact-us/) for a free Rails upgrade consultation.

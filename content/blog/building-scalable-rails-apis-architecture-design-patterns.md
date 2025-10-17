@@ -913,7 +913,7 @@ Our API development services include:
 - Testing, monitoring, and deployment
 - Ongoing maintenance and feature development
 
-Ready to build an API that scales? [Contact us for an API development consultation](https://jetthoughts.com/contact/) and let's discuss your project requirements.
+Ready to build an API that scales? [Contact us for an API development consultation](https://jetthoughts.com/contact-us/) and let's discuss your project requirements.
 
 ## Related Resources
 
