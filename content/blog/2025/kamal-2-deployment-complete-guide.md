@@ -912,4 +912,4 @@ The future of **Rails deployment** is here with Kamal 2.0. By following this gui
 
 *Ready to revolutionize your Rails deployment strategy? Start with Kamal 2.0 today and join thousands of developers who have already made the switch from expensive platforms to cost-effective, powerful deployment solutions.*
 
-**Need help with your Kamal 2.0 deployment?** [Contact JetThoughts](https://jetthoughts.com/contact) - we specialize in Rails deployment optimization and have helped dozens of companies successfully migrate to Kamal 2.0 with significant cost savings and improved performance.
+**Need help with your Kamal 2.0 deployment?** [Contact JetThoughts](https://jetthoughts.com/contact-us) - we specialize in Rails deployment optimization and have helped dozens of companies successfully migrate to Kamal 2.0 with significant cost savings and improved performance.

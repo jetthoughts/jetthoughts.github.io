@@ -1094,7 +1094,7 @@ Our LLM development services include:
 - Prompt engineering and regression testing
 - Cost optimization and performance tuning
 
-Ready to ship LLM features with confidence? [Contact us for an LLM development consultation](https://jetthoughts.com/contact/) and let's discuss your AI application requirements.
+Ready to ship LLM features with confidence? [Contact us for an LLM development consultation](https://jetthoughts.com/contact-us/) and let's discuss your AI application requirements.
 
 ## Related Resources
 

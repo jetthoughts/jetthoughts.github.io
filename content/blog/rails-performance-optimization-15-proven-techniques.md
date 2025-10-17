@@ -538,7 +538,7 @@ Our performance optimization services include:
 - Background job architecture and optimization
 - Ongoing performance monitoring and maintenance
 
-Ready to make your Rails app blazing fast? [Contact us for a performance audit](https://jetthoughts.com/contact/) and let's discuss how we can speed up your application.
+Ready to make your Rails app blazing fast? [Contact us for a performance audit](https://jetthoughts.com/contact-us/) and let's discuss how we can speed up your application.
 
 ## Next Steps
 

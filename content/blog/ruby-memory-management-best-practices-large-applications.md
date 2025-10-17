@@ -1314,5 +1314,5 @@ Our memory optimization services include:
 - Production monitoring and alerting setup
 - Team training on Ruby memory best practices
 
-Ready to build memory-efficient Ruby applications? [Contact us for a memory optimization consultation](https://jetthoughts.com/contact/) and let's discuss how we can help your application run leaner and faster.
+Ready to build memory-efficient Ruby applications? [Contact us for a memory optimization consultation](https://jetthoughts.com/contact-us/) and let's discuss how we can help your application run leaner and faster.
 

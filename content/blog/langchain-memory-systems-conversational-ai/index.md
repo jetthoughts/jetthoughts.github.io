@@ -852,7 +852,7 @@ Our conversational AI services include:
 - Production deployment and monitoring
 - Performance optimization and scaling
 
-Ready to build AI that remembers? [Contact us for a conversational AI consultation](https://jetthoughts.com/contact/) and let's discuss your project requirements.
+Ready to build AI that remembers? [Contact us for a conversational AI consultation](https://jetthoughts.com/contact-us/) and let's discuss your project requirements.
 
 ---
 

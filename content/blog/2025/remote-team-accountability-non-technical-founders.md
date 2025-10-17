@@ -1315,4 +1315,4 @@ JetThoughts has helped 50+ founders implement healthy remote accountability with
 - Accountability framework setup (daily updates, demos, metrics)
 - Training for your team (how to work async-first)
 
-[Contact us](https://www.jetthoughts.com/contact) if you want help implementing these patterns with your remote team.
+[Contact us](https://www.jetthoughts.com/contact-us) if you want help implementing these patterns with your remote team.

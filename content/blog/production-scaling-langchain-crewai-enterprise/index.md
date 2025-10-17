@@ -2904,7 +2904,7 @@ Your AI agent application can deliver similar results—if you build the product
 - Root cause analysis templates
 - Post-mortem documentation examples
 
-**[Download Enterprise AI Architecture Blueprint →](https://jetthoughts.com/contact)**
+**[Download Enterprise AI Architecture Blueprint →](https://jetthoughts.com/contact-us)**
 
 ---
 
@@ -2927,7 +2927,7 @@ JetThoughts specializes in taking AI prototypes to enterprise-grade production d
 - 24/7 monitoring and incident response
 - Training and knowledge transfer
 
-**[Schedule a Free Architecture Consultation →](https://jetthoughts.com/contact)**
+**[Schedule a Free Architecture Consultation →](https://jetthoughts.com/contact-us)**
 
 ---
 

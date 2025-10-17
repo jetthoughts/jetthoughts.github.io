@@ -1122,7 +1122,7 @@ JetThoughts has performed code quality assessments for 50+ startups, helping non
 - Quality roadmap aligned with your business stage
 - CTO coaching on sustainable development practices
 
-[**Schedule a code quality assessment**](/contact) to understand your technical risk before it becomes a $260K problem.
+[**Schedule a code quality assessment**](/contact-us) to understand your technical risk before it becomes a $260K problem.
 
 ---
 

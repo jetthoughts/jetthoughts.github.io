@@ -1453,5 +1453,5 @@ Our testing and quality assurance services include:
 - Team training on TDD and testing best practices
 - Code review and quality assessment
 
-Ready to build confidence in your Rails application? [Contact us for a testing strategy consultation](https://jetthoughts.com/contact/) and let's discuss how we can help you ship better software faster.
+Ready to build confidence in your Rails application? [Contact us for a testing strategy consultation](https://jetthoughts.com/contact-us/) and let's discuss how we can help you ship better software faster.
 

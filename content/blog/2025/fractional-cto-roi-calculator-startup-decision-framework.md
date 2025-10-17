@@ -1632,7 +1632,7 @@ Choose engagement model:
 
 JetThoughts has provided fractional CTO services to 50+ startups from pre-seed to Series B, delivering average ROI of 225% within 12 months. Our fractional CTOs have led technical teams at companies you know, and we specialize in pragmatic technical leadership that accelerates your product development without burning runway.
 
-[**Book a free 30-minute ROI consultation**](/contact) to:
+[**Book a free 30-minute ROI consultation**](/contact-us) to:
 - Calculate specific ROI for your startup
 - Review your technical risk profile
 - Discuss engagement options and pricing
