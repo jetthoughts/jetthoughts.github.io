@@ -718,12 +718,6 @@ Key takeaways:
 - Implement query analytics with [Ahoy](https://www.jetthoughts.com/blog/analytics-tracking-rails-ahoy/)
 - Add [Sidekiq Pro](https://www.jetthoughts.com/blog/sidekiq-optimization/) for better job management
 
-### Related Posts
-
-- [Optimizing PostgreSQL for Rails Applications](https://www.jetthoughts.com/blog/postgresql-optimization/)
-- [Background Jobs Best Practices with Sidekiq](https://www.jetthoughts.com/blog/sidekiq-best-practices/)
-- [Building Real-Time Features with ActionCable](https://www.jetthoughts.com/blog/actioncable-real-time-features/)
-
 Have questions about implementing RAG in your Rails app? [Contact JetThoughts](https://www.jetthoughts.com/contact-us/) for consulting and development services.
 
 ---
