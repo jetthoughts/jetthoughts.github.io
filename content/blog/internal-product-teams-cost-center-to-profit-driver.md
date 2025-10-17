@@ -406,7 +406,7 @@ Download our **Internal Product ROI Calculator** to start quantifying your team'
 {{< cta title="Get the ROI Calculator"
      description="Transform your internal team from cost center to profit driver with our proven framework and templates."
      button-text="Download Free Calculator"
-     button-link="/resources/internal-product-roi-calculator" >}}
+     button-url="/resources/internal-product-roi-calculator" >}}
 
 *No email required. Instant download.*
 
