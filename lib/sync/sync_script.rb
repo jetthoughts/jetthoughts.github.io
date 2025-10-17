@@ -23,7 +23,8 @@ class SyncScript
   def perform
     sync_checker.update_sync_status
     article_updater.download_articles
-    article_cleaner.cleanup_renamed_articles
+    # TODO: make this configurable
+    # article_cleaner.cleanup_renamed_articles
   end
 
   private
