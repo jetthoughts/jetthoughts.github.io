@@ -5,7 +5,7 @@ remote_id: 2462244
 dev_to_id: 2462244
 dev_to_url: https://dev.to/jetthoughts/ai-revolution-what-nobody-else-is-seeing-3ejp
 title: 'AI Revolution: What Nobody Else Is Seeing'
-description: Explore the insights from a recent retreat with top AI founders, featuring Paul Buchheit. Discover how AI is reshaping startups, driving unprecedented growth, and creating new opportunities in the tech landscape.
+description: "AI startup insights from Paul Buchheit (Gmail creator): Learn how top founders achieve 10% weekly growth, $12M ARR in 12 months. Build AI products that scale ✓"
 created_at: '2025-05-06T04:21:04Z'
 edited_at: '2025-05-06T10:51:17Z'
 date: 2025-05-06
