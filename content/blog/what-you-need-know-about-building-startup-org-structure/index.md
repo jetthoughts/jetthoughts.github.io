@@ -5,7 +5,7 @@ remote_id: 2164751
 dev_to_id: 2164751
 dev_to_url: https://dev.to/jetthoughts/what-you-need-to-know-about-building-a-startup-org-structure-30ao
 title: What You Need to Know About Building a Startup Org Structure
-description: Starting a new business is like setting off on an adventure. You have a great idea, a small team, and...
+description: "Build startup org structure that scales: Design teams, define roles, establish flows. Create organizational frameworks for sustainable growth and efficiency ✓"
 created_at: '2024-12-19T09:40:02Z'
 edited_at: '2024-12-19T10:08:21Z'
 draft: false
