@@ -5,7 +5,7 @@ remote_id: 2158197
 dev_to_id: 2158197
 dev_to_url: https://dev.to/jetthoughts/scipab-tell-better-business-stories-15im
 title: 'SCIPAB: Tell Better Business Stories'
-description: What is SCIPAB?   SCIPAB helps you make your point fast. Think of it as a recipe for clear...
+description: "SCIPAB framework: Tell compelling business stories for investors, team alignment, and customers. Master startup storytelling that drives action and results ✓"
 created_at: '2024-12-16T00:36:51Z'
 edited_at: '2024-12-16T11:39:16Z'
 draft: false
