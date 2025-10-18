@@ -5,7 +5,7 @@ remote_id: 2201599
 dev_to_id: 2201599
 dev_to_url: https://dev.to/jetthoughts/shape-up-a-founders-guide-to-not-wasting-your-runway-9kk
 title: 'Shape Up: A Founder''s Guide to Not Wasting Your Runway'
-description: Last month, a founder called me in panic mode. "Paul, we've burned through half our seed round, and...
+description: "Shape Up methodology for startups: Avoid wasting runway with Basecamp's proven framework. Manage development cycles, ship faster, preserve capital efficiently ✓"
 date: 2025-01-12
 created_at: '2025-01-12T10:50:52Z'
 edited_at: '2025-01-12T10:53:33Z'
