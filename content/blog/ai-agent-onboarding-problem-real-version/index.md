@@ -5,7 +5,7 @@ remote_id: 2897369
 dev_to_id: 2897369
 dev_to_url: https://dev.to/jetthoughts/the-ai-agent-onboarding-problem-the-real-version-4m5l
 title: The AI Agent Onboarding Problem (The Real Version)
-description: So you asked about AI agents and onboarding, and honestly? We screwed this up for like three months...
+description: "AI agent onboarding solutions: RAG setup cuts token costs 60%, reduces setup from 30 minutes to 1 minute. Learn practical AI agent implementation strategies ✓"
 date: 2025-10-06
 created_at: '2025-10-06T09:34:28Z'
 draft: false
