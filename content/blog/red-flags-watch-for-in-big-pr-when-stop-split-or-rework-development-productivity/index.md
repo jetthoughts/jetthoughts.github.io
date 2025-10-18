@@ -5,7 +5,7 @@ remote_id: 1997095
 dev_to_id: 1997095
 dev_to_url: https://dev.to/jetthoughts/red-flags-to-watch-for-in-a-big-pr-when-to-stop-split-or-rework-1lgb
 title: 'Red Flags to Watch for in a Big PR: When to Stop, Split, or Rework'
-description: Big pull requests (PRs) can cause delays and block progress. As a developer, it's important to spot...
+description: "PR red flags for dev teams: Spot when to split large pull requests, avoid merge conflicts, improve code review efficiency. Boost team productivity, ship faster with smaller PRs ✓"
 created_at: '2024-09-11T16:47:44Z'
 date: '2024-09-11T16:47:44Z'
 edited_at: '2024-11-25T15:32:26Z'
