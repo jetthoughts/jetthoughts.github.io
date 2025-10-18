@@ -1,6 +1,6 @@
 ---
 title: "Building RAG Applications in Rails 7.1+ with pgvector: Complete Guide"
-description: "Learn how to add semantic search and RAG capabilities to your Rails app using pgvector. Step-by-step tutorial with code examples for Ruby developers."
+description: "Build RAG applications in Rails with pgvector: Add semantic search, AI-powered Q&A to your startup. Complete tutorial for Ruby developers building AI features ✓"
 date: 2025-10-16
 tags: ["rails", "ai", "machine-learning", "postgresql", "semantic-search", "rag"]
 author: "JetThoughts Team"
