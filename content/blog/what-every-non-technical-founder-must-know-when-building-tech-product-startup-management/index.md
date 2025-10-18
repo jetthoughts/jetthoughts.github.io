@@ -5,7 +5,7 @@ remote_id: 2158232
 dev_to_id: 2158232
 dev_to_url: https://dev.to/jetthoughts/what-every-non-technical-founder-must-know-when-building-a-tech-product-577j
 title: What Every Non-Technical Founder Must Know When Building a Tech Product
-description: For twenty years, I've helped non-technical founders navigate software development. Many have...
+description: "Non-tech founder guide: What to know before hiring developers. Avoid costly mistakes, build successful MVPs. 20 years of proven insights for startup success ✓"
 created_at: '2024-12-16T01:44:39Z'
 edited_at: '2024-12-16T04:09:08Z'
 draft: false
