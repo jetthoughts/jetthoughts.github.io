@@ -5,7 +5,7 @@ remote_id: 1877716
 dev_to_id: 1877716
 dev_to_url: https://dev.to/jetthoughts/best-practices-for-optimizing-ruby-on-rails-performance-b5b
 title: Best practices for optimizing Ruby on Rails performance
-description: Ruby on Rails is a popular web development backend framework based on the famous Ruby language....
+description: "Optimize Ruby on Rails performance: Master database indexing, caching strategies, load balancing. Learn SQL optimization, server setup, asset delivery for faster apps ✓"
 date: 2024-06-05
 created_at: '2024-06-05T08:09:41Z'
 edited_at: '2024-11-26T16:02:42Z'
