@@ -5,7 +5,7 @@ remote_id: 462581
 dev_to_id: 462581
 dev_to_url: https://dev.to/jetthoughts/communication-agreement-in-a-remote-environment-5b72
 title: Communication Agreement in a remote environment
-description: Communication Agreement in a remote environment   How to manage tasks remotely? How to build...
+description: "Remote communication agreement for startups: Build effective protocols, manage async tasks, set response expectations. Learn Discord workflows, prioritization systems, reduce interruptions, boost remote team productivity ✓"
 date: 2020-09-22
 created_at: '2020-09-22T08:10:11Z'
 edited_at: '2024-11-25T15:41:51Z'
