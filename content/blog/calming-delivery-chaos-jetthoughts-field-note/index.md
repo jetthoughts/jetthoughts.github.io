@@ -5,7 +5,7 @@ remote_id: 2609602
 dev_to_id: 2609602
 dev_to_url: https://dev.to/jetthoughts/calming-the-delivery-chaos-a-jetthoughts-field-note-5d96
 title: Calming the Delivery Chaos (A JetThoughts Field Note)
-description: "“We have four teams, three backlogs, two release channels, and one flaming emergency chat.”  — a..."
+description: "Manage startup delivery chaos with multiple teams: Solve coordination debt, streamline 3 backlogs, unify release channels. Learn cross-team workflows, reduce emergency escalations ✓"
 created_at: '2025-06-20T14:43:51Z'
 edited_at: '2025-06-20T15:06:24Z'
 draft: false
