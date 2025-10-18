@@ -5,7 +5,7 @@ remote_id: 2421658
 dev_to_id: 2421658
 dev_to_url: https://dev.to/jetthoughts/nicolas-dessaignes-essential-advice-for-new-founders-44k8
 title: Nicolas Dessaigne's Essential Advice for New Founders
-description: Nicolas Dessaigne shares essential advice for new founders, emphasizing the importance of starting now, fast iterations, and engaging with users to build successful products.
+description: "Founder advice from Algolia's Nicolas Dessaigne (YC): Start now, iterate fast, learn from users. Build successful products with practical startup guidance ✓"
 created_at: '2025-04-21T10:17:14Z'
 edited_at: '2025-04-23T16:27:31Z'
 draft: false
