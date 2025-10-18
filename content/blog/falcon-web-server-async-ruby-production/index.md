@@ -478,7 +478,7 @@ RUN bundle config set --local deployment 'true' && \
     bundle install
 
 # Copy application
-COPY . .
+COPY ../2025 .
 
 # Compile assets
 RUN RAILS_ENV=production rails assets:precompile

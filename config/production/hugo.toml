@@ -19,7 +19,7 @@ disableKinds = []
 
 # High-quality image processing for production
 [imaging]
-  quality = 80
+  quality = 100
 
 # Enable minification in production
 [minify]
