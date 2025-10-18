@@ -5,7 +5,7 @@ remote_id: 2016117
 dev_to_id: 2016117
 dev_to_url: https://dev.to/jetthoughts/drive-successful-product-development-with-jetthoughts-30mk
 title: Drive Successful Product Development with JetThoughts
-description: Welcome to the world of product development, where innovation meets strategy! In today's fast-paced...
+description: "Product development with JetThoughts: Leverage design thinking, Agile methodologies, customer-centric practices. Transform ideas to market-ready MVPs, reduce time-to-market ✓"
 created_at: '2024-09-26T15:47:15Z'
 date: 2024-09-26
 edited_at: '2024-12-12T12:11:44Z'
