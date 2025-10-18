@@ -5,7 +5,7 @@ remote_id: 1853556
 dev_to_id: 1853556
 dev_to_url: https://dev.to/jetthoughts/simplest-step-by-step-guide-creating-a-post-2nf6
 title: Simplest step by step guide creating a post
-description: For novice authors who are going to share their thoughts with public through the posts, we...
+description: "Content creation guide for startups: Step-by-step process to create engaging blog posts. Master content marketing, build authority, attract customers ✓"
 created_at: '2024-05-15T07:07:41Z'
 edited_at: '2024-11-26T16:04:28Z'
 draft: false
