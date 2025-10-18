@@ -5,7 +5,7 @@ remote_id: 2040573
 dev_to_id: 2040573
 dev_to_url: https://dev.to/jetthoughts/develop-a-minimalistic-process-for-development-teams-to-innovate-3im5
 title: Develop a Minimalistic Process for Development Teams to Innovate
-description: 'I just finished reading "Continuous Discovery Habits: Discover Products That Create Customer Value...'
+description: "Minimalistic process for startup dev teams: Continuous Discovery Habits, Impact Mapping, LDJ framework. Boost innovation, improve productivity, deliver MVPs faster ✓"
 created_at: '2024-10-16T12:21:53Z'
 edited_at: '2024-11-25T15:31:54Z'
 draft: false
