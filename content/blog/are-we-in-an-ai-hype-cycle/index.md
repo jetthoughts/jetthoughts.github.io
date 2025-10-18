@@ -5,7 +5,7 @@ remote_id: 2174810
 dev_to_id: 2174810
 dev_to_url: https://dev.to/jetthoughts/are-we-in-an-ai-hype-cycle-243k
 title: Are We In An AI Hype Cycle?
-description: The recent surge in excitement around artificial intelligence (AI) has sparked discussions about...
+description: "AI hype cycle analysis for startups: Separate hype from reality, understand where AI value comes from. Learn investment strategies, avoid bubble risks, capitalize on opportunities ✓"
 created_at: '2024-12-26T02:26:43Z'
 date: 2024-12-26
 edited_at: '2025-01-30T03:20:25Z'
