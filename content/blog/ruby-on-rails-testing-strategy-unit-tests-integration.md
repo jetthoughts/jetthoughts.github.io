@@ -140,6 +140,9 @@ SimpleCov.start 'rails' do
   add_group 'Controllers', 'app/controllers'
   add_group 'Services', 'app/services'
   add_group 'Jobs', 'app/jobs'
+
+  # For memory-efficient coverage analysis, see:
+  # https://jetthoughts.com/blog/ruby-memory-management-best-practices-large-applications/
 end
 
 RSpec.configure do |config|
@@ -272,6 +275,9 @@ RSpec.describe User, type: :model do
 end
 
 # spec/factories/users.rb
+# When creating large test datasets, consider memory-efficient factory patterns
+# to prevent test suite memory bloat. See our guide on
+# Ruby memory management: /blog/ruby-memory-management-best-practices-large-applications/
 FactoryBot.define do
   factory :user do
     first_name { Faker::Name.first_name }
@@ -505,6 +511,8 @@ end
 ```
 
 > **💡 Tip:** Test edge cases and error conditions as thoroughly as the happy path. Your users will find these edge cases in production!
+>
+> **Performance Tip:** When testing service objects with complex logic, use [memory profiling techniques](/blog/ruby-memory-management-best-practices-large-applications/#profiling-memory-usage) to ensure your tests don't consume excessive resources.
 
 ---
 
@@ -1311,6 +1319,8 @@ jobs:
         DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
         REDIS_URL: redis://localhost:6379/0
       run: |
+        # For production performance optimization of your CI/CD pipeline:
+        # https://jetthoughts.com/blog/rails-performance-optimization-15-proven-techniques/
         bundle exec rspec spec --exclude-pattern="spec/system/**/*_spec.rb"
 
     - name: Run system tests
@@ -1423,6 +1433,10 @@ RSpec.describe 'Model Performance' do
 
     expect(report.total_allocated_memsize).to be < 10.megabytes
   end
+
+  # For comprehensive performance optimization beyond testing, see our guide on
+  # 15 proven Rails performance techniques:
+  # https://jetthoughts.com/blog/rails-performance-optimization-15-proven-techniques/
 end
 ```
 

@@ -70,6 +70,9 @@ end
 
 puts "Memory usage: #{memory_usage}MB"
 
+# For test performance benchmarking with memory profiling:
+# /blog/ruby-on-rails-testing-strategy-unit-tests-integration/#performance-testing
+
 # Create temporary objects
 1000.times { User.new }
 
@@ -400,6 +403,8 @@ The memory_profiler gem gives detailed insights into object allocation:
 
 ### Memory profiling with memory_profiler
 
+Integrate memory profiling into your [comprehensive testing strategy](/blog/ruby-on-rails-testing-strategy-unit-tests-integration/#performance-testing) to catch memory leaks early.
+
 ```ruby
 # Gemfile
 gem 'memory_profiler'
@@ -656,6 +661,8 @@ Ruby's GC behavior can be tuned via environment variables:
 
 ### GC tuning for production
 
+Memory optimization is a critical component of [overall Rails performance](/blog/rails-performance-optimization-15-proven-techniques/#memory-usage-optimization).
+
 ```bash
 # Environment variables for GC tuning
 
@@ -893,6 +900,8 @@ def process_all_users
 end
 
 # BETTER: Use find_each for automatic batching
+# This pattern is also excellent for efficient test data generation:
+# /blog/ruby-on-rails-testing-strategy-unit-tests-integration/
 def process_all_users
   User.find_each(batch_size: 1000) do |user|
     update_user_stats(user)
@@ -1164,6 +1173,8 @@ Set up comprehensive monitoring to catch memory issues before they affect users.
 ### Memory alerting system
 
 ### Production memory monitoring
+
+For comprehensive [performance monitoring best practices](/blog/rails-performance-optimization-15-proven-techniques/#identifying-performance-bottlenecks), combine memory tracking with broader performance metrics.
 
 ```ruby
 # config/initializers/memory_monitoring.rb (production only)

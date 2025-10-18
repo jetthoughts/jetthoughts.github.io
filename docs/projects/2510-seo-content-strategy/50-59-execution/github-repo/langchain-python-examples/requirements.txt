@@ -1,0 +1,44 @@
+# LangChain Python Examples - Dependencies
+# Compatible with Python 3.8+, recommended Python 3.11+
+
+# Core LangChain
+langchain==0.1.0
+langchain-openai==0.0.2
+langchain-anthropic==0.0.2
+langchain-community==0.0.10
+
+# Environment management
+python-dotenv==1.0.0
+
+# Django integration (optional)
+django>=4.2.0,<5.0.0
+celery==5.3.4
+redis==5.0.1
+django-redis==5.4.0
+
+# FastAPI integration (optional)
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+slowapi==0.1.9
+
+# HTTP clients
+requests==2.31.0
+httpx==0.25.2
+
+# Data validation
+pydantic==2.5.2
+
+# Token counting
+tiktoken==0.5.2
+
+# Caching
+redis==5.0.1
+
+# Background jobs
+celery==5.3.4
+
+# Security
+bleach==6.1.0
+
+# Utilities
+colorama==0.4.6  # For colored terminal output

@@ -59,6 +59,9 @@ class ApplicationController < ActionController::Base
     duration = Time.current - start_time
     Rails.logger.info "Action #{action_name} took #{duration.round(3)}s"
   end
+
+  # Combine performance monitoring with comprehensive testing strategies:
+  # /blog/ruby-on-rails-testing-strategy-unit-tests-integration/
 end
 ```
 
@@ -76,7 +79,8 @@ tail -f log/development.log | grep "ms)"
 rails c
 > Benchmark.measure { User.includes(:posts).limit(100).to_a }
 
-# Profile memory usage
+# Profile memory usage - for comprehensive memory profiling techniques:
+# /blog/ruby-memory-management-best-practices-large-applications/
 > require 'memory_profiler'
 > MemoryProfiler.report { expensive_operation }.pretty_print
 ```
@@ -386,7 +390,7 @@ end
 
 ## Memory usage optimization
 
-Ruby's garbage collector works hard, but you can help it out.
+Ruby's garbage collector works hard, but you can help it out. For deep-dive memory optimization techniques, see our [comprehensive Ruby memory management guide](/blog/ruby-memory-management-best-practices-large-applications/).
 
 ### 13. Reduce object allocation
 
@@ -454,6 +458,8 @@ Keep an eye on your app's memory consumption:
 
 ### Memory monitoring
 
+For production-grade [memory profiling techniques](/blog/ruby-memory-management-best-practices-large-applications/#profiling-memory-usage), integrate these patterns with comprehensive monitoring tools.
+
 ```ruby
 # Add to your ApplicationController
 class ApplicationController < ActionController::Base
@@ -519,6 +525,7 @@ Performance optimization is both an art and a science. The techniques we've cove
 
 The key is to approach optimization systematically: measure first, identify bottlenecks, apply targeted fixes, and measure again. Don't try to implement everything at once – pick the 3-4 techniques that address your biggest pain points first.
 
+For systematic performance improvements with [test-driven development](/blog/ruby-on-rails-testing-strategy-unit-tests-integration/), ensure all optimizations are validated through comprehensive testing.
 
 **Start with these high-impact optimizations:**
 
