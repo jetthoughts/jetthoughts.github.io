@@ -5,7 +5,7 @@ remote_id: 2255054
 dev_to_id: 2255054
 dev_to_url: https://dev.to/jetthoughts/why-vertical-llm-agents-are-the-new-1-billion-saas-opportunities-4mb3
 title: Why Vertical LLM Agents Are The New $1 Billion SaaS Opportunities
-description: Explore the rise of vertical AI agents in the SaaS market through the journey of Jake Heller, co-founder of Casetext. Discover how AI is transforming the legal industry and the challenges faced in building successful AI products.
+description: Vertical AI agents are transforming SaaS. Learn from Casetext's $650M exit how domain-specific LLM agents create billion-dollar opportunities. AI startup playbook ✓
 created_at: '2025-02-02T09:57:14Z'
 edited_at: '2025-02-02T10:05:18Z'
 draft: false

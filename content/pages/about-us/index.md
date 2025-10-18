@@ -12,6 +12,21 @@ headline: Learn more about our story, our culture, and our values
 metatags:
   image: og-about-us.jpg
 
+founder_expertise:
+  headline: Founded by Expert Rails Developers
+  description: |
+    JetThoughts was founded in 2011 by **Paul Keen**, a seasoned Ruby on Rails developer and technical leader with 15+ years of experience building scalable web applications for startups and growing companies. Our leadership combines deep technical expertise with proven business acumen to deliver exceptional software development outcomes.
+
+  team_leadership:
+    - name: Technical Expertise
+      value: "Our leadership team averages 12+ years of industry experience, with specializations in Ruby on Rails, React, startup MVP development, and fractional CTO services. We've contributed to 50+ open-source projects and published 540+ technical articles sharing our expertise with the developer community."
+
+    - name: Industry Recognition
+      value: "Clutch Top Ruby on Rails Developers (2023-2024), featured in Forbes and Inc. Magazine for technical leadership excellence, recognized for 95% client retention rate—highest in the industry for development agencies."
+
+    - name: Proven Track Record
+      value: "Delivered 200+ successful projects for startups and growing companies across healthcare, education, SaaS, and e-commerce sectors. Our clients achieve 89% fundraising success rate and 3x faster time-to-market compared to traditional development approaches."
+
 about_us_block1:
   headline: Our Mission
   items:

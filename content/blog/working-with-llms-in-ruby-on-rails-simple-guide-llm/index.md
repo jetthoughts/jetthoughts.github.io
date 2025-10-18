@@ -5,7 +5,7 @@ remote_id: 1978541
 dev_to_id: 1978541
 dev_to_url: https://dev.to/jetthoughts/working-with-llms-in-ruby-on-rails-a-simple-guide-1dm6
 title: 'Working with LLMs in Ruby on Rails: A Simple Guide'
-description: Why You Need to Work with LLMs Today   Large Language Models (LLMs) are reshaping how we...
+description: Build AI features in Rails with LLMs. Step-by-step integration guide for OpenAI, Claude, and local models. Production code examples for Ruby developers ✓
 date: 2024-08-29
 created_at: '2024-08-29T07:34:43Z'
 edited_at: '2024-11-25T15:32:34Z'
