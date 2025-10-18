@@ -5,7 +5,7 @@ remote_id: 2518771
 dev_to_id: 2518771
 dev_to_url: https://dev.to/jetthoughts/the-overcommitment-trap-a-systems-design-problem-57kl
 title: 'The Overcommitment Trap: A Systems Design Problem'
-description: Traditional thinking treats overcommitment as a willpower issue. But what if it's actually a product...
+description: "Overcommitment solutions for startups: Systems design approach to capacity. Prevent burnout, improve decisions, build sustainable team workflows and performance ✓"
 date: 2025-05-23
 created_at: '2025-05-23T12:45:12Z'
 edited_at: '2025-05-26T06:46:31Z'
