@@ -5,7 +5,7 @@ remote_id: 1853643
 dev_to_id: 1853643
 dev_to_url: https://dev.to/jetthoughts/effective-project-onboarding-checklist-42k
 title: Effective project onboarding checklist
-description: To avoid the onboarding slip and remove expectations and misunderstandings, the JetThoughts team...
+description: "Project onboarding checklist for startups: Streamline developer onboarding, reduce misunderstandings, boost team productivity. Start new projects efficiently ✓"
 date: 2024-05-15
 created_at: '2024-05-15T08:00:36Z'
 edited_at: '2024-11-26T16:03:58Z'
