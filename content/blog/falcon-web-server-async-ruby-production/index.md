@@ -1,7 +1,7 @@
 ---
 dev_to_id: 1
 title: "Falcon Web Server: Async Ruby in Production"
-description: "Master Falcon, the modern asynchronous web server that brings fiber-based concurrency to Ruby applications. Learn architecture, benchmarks, and production deployment."
+description: "Falcon async web server for Ruby: Master fiber-based concurrency, benchmark vs Puma/Unicorn, deploy in production. Scale Rails apps, handle concurrent connections, boost performance ✓"
 date: 2025-09-25
 created_at: "2025-09-25T22:27:00Z"
 edited_at: "2025-09-25T22:27:00Z"
