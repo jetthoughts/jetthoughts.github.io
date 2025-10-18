@@ -1,6 +1,6 @@
 ---
 title: "CrewAI Multi-Agent Systems: Orchestrating Specialized AI Teams for Complex Tasks"
-description: "Learn how to build production-ready multi-agent systems with CrewAI v0.98.0. Complete tutorial with real-world examples for customer support, content creation, and financial analysis workflows."
+description: "Build multi-agent AI systems with CrewAI: Orchestrate specialized AI teams for customer support, content creation, financial analysis. Production-ready tutorial ✓"
 date: "2025-10-15"
 created_at: "2025-10-15T17:20:00Z"
 draft: false
