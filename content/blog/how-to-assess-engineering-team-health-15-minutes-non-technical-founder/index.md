@@ -1,6 +1,6 @@
 ---
 title: 'How to Assess Your Engineering Team''s Health in 15 Minutes (Non-Technical Founder''s Guide)'
-description: 'Master the art of engineering team assessment with this comprehensive guide. Learn 5 key health indicators, practical frameworks, and red flags that require immediate action.'
+description: "Engineering team health check for non-tech founders: Assess 5 key indicators in 15 minutes. Spot red flags, prevent costly failures. No coding knowledge needed ✓"
 created_at: '2025-01-14T10:00:00Z'
 draft: false
 tags: ['engineering team assessment', 'dev team performance metrics', 'technical team health check', 'startup management', 'engineering leadership']
