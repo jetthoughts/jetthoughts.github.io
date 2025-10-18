@@ -10,6 +10,8 @@ tags: ["ruby", "performance", "async", "fibers", "falcon", "web-server", "concur
 canonical_url: "https://jetthoughts.com/blog/falcon-web-server-async-ruby-production/"
 cover_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--92P8r_Mn--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://raw.githubusercontent.com/socketry/falcon/master/assets/falcon.png"
 series: "Ruby Web Servers"
+metatags:
+  image: cover.png
 ---
 
 Ruby's web server landscape has been dominated by Puma and Unicorn for years, but a new contender is changing the game. **Falcon**, built by Samuel Williams and the Socketry team, brings true asynchronous, fiber-based concurrency to Ruby applications. This isn't just another web server – it's a fundamental shift toward modern, high-performance Ruby applications.
