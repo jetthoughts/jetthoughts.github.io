@@ -37,7 +37,7 @@ disableKinds = []
   writeStats = true
 
 [imaging]
-  quality = 100
+  quality = 80
   resampleFilter = "box"
   anchor = "smart"
 

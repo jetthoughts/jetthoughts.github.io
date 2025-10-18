@@ -17,10 +17,6 @@ disableKinds = []
   [build.buildStats]
     enable = true
 
-# High-quality image processing for production
-[imaging]
-  quality = 100
-
 # Enable minification in production
 [minify]
   minifyOutput = true
