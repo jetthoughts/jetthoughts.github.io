@@ -5,7 +5,7 @@ remote_id: 2231142
 dev_to_id: 2231142
 dev_to_url: https://dev.to/jetthoughts/building-trust-at-scale-how-tooltime-runs-76-microservices-through-empowerment-3e4d
 title: 'Building Trust at Scale: How ToolTime Runs 76 Microservices through Empowerment'
-description: If you're an engineering leader wrestling with scaling teams while preserving autonomy, this story...
+description: "Scale engineering teams with trust: ToolTime runs 76 microservices with 20 developers, zero managers. Learn autonomous squad structures, microservice architecture, culture building ✓"
 created_at: '2025-01-21T13:13:11Z'
 edited_at: '2025-03-07T14:43:59Z'
 date: 2025-01-21
