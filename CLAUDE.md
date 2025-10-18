@@ -621,17 +621,135 @@ description: |
 - ❌ Simple pattern-based work (CSS consolidation)
 - ❌ Mechanical repetitive tasks with established approach
 
-**Correct Agent Response to "Keep going, don't stop"**:
+### 🎯 Pre-Approval Detection & Continuous Execution
+
+**Agents MUST detect user pre-approval signals and activate Continuous Execution Mode**:
+
+**Explicit Pre-Approval Signals** (HIGH CONFIDENCE):
+- "Do everything needed"
+- "Complete all items"
+- "Keep going, don't stop"
+- "Work through the entire list"
+- "Continue until done"
+- "Make all necessary changes"
+
+**Implicit Pre-Approval Signals** (MEDIUM CONFIDENCE):
+- User provides numbered task list (implies: do all items)
+- User says "same approach for remaining items" (implies: continue pattern)
+- User expresses frustration with stopping (implies: want continuous work)
+- User references "goal completion" (implies: work until goal achieved)
+
+**Correct Agent Response to Pre-Approval**:
 ```yaml
 continuous_execution_response: |
-  "✅ Understood: Entering autonomous execution mode.
-  - Working through goal items continuously
+  "✅ Entering Continuous Execution Mode:
+  - Working through [N] items with test-commit-continue pattern
   - Testing after each change with bin/rake test:critical
-  - Committing on green tests
-  - Continuing to next item
-  - Will ONLY stop on critical test failures
+  - Committing on green tests with descriptive messages
+  - Only stopping for critical test failures
 
-  Proceeding with [next item from goal]..."
+  Proceeding with first item: [specific description]..."
+```
+
+### 🔄 Micro-Commit Enforcement (XP/Agile Compliance)
+
+**Agents are neurologically wired to commit after EVERY successful micro-change**:
+
+**Micro-Commit Triggers** (AUTOMATIC, NO OVERRIDE):
+1. Test suite passes after code change → MUST commit before next change
+2. Visual regression tests pass → MUST commit screenshot baseline
+3. Single refactoring micro-step completes → MUST commit
+4. Single CSS consolidation completes → MUST commit
+5. Time since last commit > 10 minutes → MUST commit work in progress
+
+**Commit Message Format** (MANDATORY):
+- Pattern: `[Action] [What] [Where]`
+- Examples:
+  - "Extract .fl-row padding rules to fl-foundation.css"
+  - "Remove duplicated box-sizing reset from about-critical.css"
+  - "Consolidate button hover states into style.css"
+- Focus: WHAT changed (not WHY - that's in task description)
+- Length: 50-72 characters (one line)
+
+**Commit Workflow** (NEUROLOGICAL ENFORCEMENT):
+```
+1. Code change made (< 10 lines)
+2. Run bin/rake test:critical
+3. Tests pass → IMMEDIATE commit trigger fires
+4. Write descriptive commit message
+5. Execute: git add [files] && git commit -m "[message]"
+6. Verify commit succeeded
+7. Continue to next micro-step (NO APPROVAL GATE)
+```
+
+**Violations to Prevent**:
+- ❌ Proceeding to next change without committing current change
+- ❌ Bundling multiple micro-changes into single commit
+- ❌ Skipping commit step because changes seem "related"
+- ❌ Committing with failing tests
+
+### 🔁 Iterative Workflow Enforcement
+
+**Agents enforce micro-step iterative workflow for ALL repetitive tasks**:
+
+**Workflow Pattern** (MANDATORY SEQUENCE):
+```
+Step 1: IDENTIFY next smallest change candidate
+  - Example: "Next: Extract .fl-row padding from about-layout.css"
+  - Scope: Single CSS rule set, single function, single class
+  - Complexity: Change can be validated in < 30 seconds
+
+Step 2: MAKE micro-change
+  - Edit files (use Edit tool, NOT bulk write)
+  - Change < 10 lines production code
+  - Preserve all functionality and appearance
+
+Step 3: TEST immediately
+  - Run: bin/rake test:critical
+  - Validate: All tests pass, no visual regressions
+  - On failure: Investigate immediately, fix or revert
+
+Step 4: COMMIT on green
+  - Write descriptive commit message
+  - Commit ONLY this micro-change
+  - Verify commit succeeded
+
+Step 5: CONTINUE to next item
+  - NO approval gate
+  - NO stopping for effort assessment
+  - NO asking "should I continue?"
+  - Proceed directly to Step 1 with next candidate
+```
+
+**Stopping Conditions** (ONLY):
+- Critical test failure requiring investigation
+- Visual regression requiring user decision
+- Goal completion (all items processed)
+- Error pattern detected requiring reflection
+
+### 🛑 Stopping Decision Matrix
+
+**MUST STOP** (Critical Failures Only):
+- Critical test failure requiring investigation (not simple fixes)
+- Visual regression requiring user decision (tolerance violations)
+- Security vulnerability detected
+- Build break that can't be quickly resolved
+- Goal completion (all items successfully processed)
+
+**MUST CONTINUE** (NO STOP - When Pre-Approved):
+- Effort assessment (user pre-approved unlimited scope)
+- Scope questions (user defined scope already)
+- Permission requests (user granted blanket permission)
+- Simple test failures with obvious fix
+- Repetitive pattern work with established approach
+
+**Decision Override Rule**:
+```
+IF user_pre_approval_detected:
+  IGNORE all non-critical stopping triggers
+  CONTINUE until goal_completion OR critical_failure
+  COMMIT after EVERY green test
+  PROVIDE periodic progress updates (every 3-5 commits)
 ```
 
 ---
@@ -925,8 +1043,32 @@ autonomous_swarm_behavioral_description: |
 - `*_refactored.*`, `*_new.*`, `*_updated.*`, `*_v2.*`, `*_copy.*`, `*_backup.*`
 - `duplicate_*.*`, `temp_*.*`, `old_*.*`, `modified_*.*`
 
+**FORBIDDEN documentation creation** (CRITICAL INCIDENT LEARNING):
+- ❌ NEVER create new `.md` files proactively
+- ❌ NEVER create `README.md`, `GUIDE.md`, or any documentation files
+- ❌ NEVER create directories for "behavioral configurations" or similar
+- ✅ ALWAYS consolidate into existing CLAUDE.md or docs/ files
+- ✅ ALWAYS prefer editing existing documentation over creating new files
+
+**Agent Pre-File-Creation Validation** (MANDATORY):
+```yaml
+before_creating_any_file:
+  ask: "Does a similar file already exist?"
+  ask: "Can this content be added to existing CLAUDE.md or docs/?"
+  ask: "Am I creating documentation (.md) proactively?"
+
+  if_documentation_file:
+    action: "❌ STOP - Consolidate into existing files instead"
+    reason: "Zero-duplication policy - NEVER create redundant documentation"
+
+  if_duplicate_likely:
+    action: "❌ STOP - Search for existing file, edit instead"
+    reason: "File duplication violates zero-tolerance policy"
+```
+
 **MANDATORY validation**:
 - Pre-Write validation: Check file existence, BLOCK duplicates
+- Pre-Documentation validation: BLOCK all new .md file creation (edit existing instead)
 - Pattern analysis: Detect similar functionality across files
 - Memory coordination: Share duplication intelligence across agents
 
@@ -1159,10 +1301,22 @@ agent_startup_protocol:
 
 # Autonomous execution mode (for repetitive goals)
 autonomous_mode:
-  trigger: "User requests continuous work, repetitive pattern"
-  approach: "Solo execution, test after each change, commit on green, continue"
-  retry_only_on: "Critical test failures"
-  no_approval_gates: "Work continuously to goal completion"
+  pre_approval_signals:
+    explicit: ["do everything needed", "keep going, don't stop", "complete all items"]
+    implicit: ["numbered task list", "same approach for remaining", "frustration with stopping"]
+
+  activation_response: "✅ Entering Continuous Execution Mode: test-commit-continue pattern, only stopping for critical failures"
+
+  micro_commit_protocol:
+    trigger: "After EVERY successful test run"
+    frequency: "Every 5-15 minutes (typically 5-15 commits per task)"
+    message_format: "[Action] [What] [Where]"
+    workflow: "Change (< 10 lines) → Test → Commit → Continue (NO STOP)"
+
+  iterative_workflow:
+    pattern: "Identify → Change → Test → Commit → Continue"
+    stopping_only: "Critical test failures, visual regressions, goal completion"
+    no_stopping_for: "Effort assessment, scope questions, permission requests"
 
 # TDD Cycle (official claude-flow pattern)
 tdd_cycle:
