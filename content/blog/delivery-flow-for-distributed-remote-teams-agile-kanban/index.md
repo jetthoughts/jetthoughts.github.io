@@ -5,7 +5,7 @@ remote_id: 1852603
 dev_to_id: 1852603
 dev_to_url: https://dev.to/jetthoughts/delivery-flow-for-distributed-remote-teams-19k9
 title: Delivery Flow for Distributed Remote Teams
-description: Process which help the team make effective decisions to better live up to expectations while...
+description: "Agile delivery flow for remote teams: Master Kanban workflows, visualize progress, prevent bottlenecks. Optimize distributed team coordination, improve decision-making, meet deadlines consistently ✓"
 created_at: '2024-05-14T12:11:00Z'
 edited_at: '2024-12-06T11:36:36Z'
 draft: false

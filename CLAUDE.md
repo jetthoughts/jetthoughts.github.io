@@ -1182,6 +1182,193 @@ jt_site_directories:
 
 ---
 
+## 📝 CONTENT GENERATION SWARM (7-Phase Blog Production)
+
+**Global Reference**: `/knowledge/00-09_Global_Handbooks/07_Cross_Project_Operations/07.01-content-generation-best-practices.md` (SUPREME AUTHORITY)
+**Integration**: Hugo static site + jt_site technical audience + TDD visual testing
+**Coordination**: Blog-coordinator orchestrates 7 specialized agents through memory coordination
+
+### 🎯 Content Generation Agent Ecosystem
+
+jt_site uses a **hierarchical supervisor-worker pattern** for blog production with **7 specialized agents** coordinated through memory-based handoffs:
+
+```yaml
+content_generation_hierarchy:
+  supervisor_coordinator:
+    agent: "blog-coordinator"
+    type: "coordination-expert"
+    authority: "Orchestrates full 7-phase workflow with quality gate enforcement"
+    memory_coordination: "blog/production/workflow/[trace_id]"
+
+  phase_1_strategy:
+    agent: "content-strategist"
+    type: "analyst"
+    focus: "Technical audience analysis, topic ideation, shareability prediction"
+    quality_gates: ["shareability ≥7/10", "3-5 takeaways", "Hugo outline"]
+    handoff_to: "research-agent via blog/strategy/"
+
+  phase_2_research:
+    agent: "research-agent"
+    type: "researcher"
+    focus: "Technical research, citation gathering, case studies"
+    quality_gates: ["≥8 citations", "≥1 case study", "all stats sourced"]
+    handoff_to: "blog-writer via blog/research/"
+
+  phase_3_content_creation:
+    agent: "blog-writer"
+    type: "coder"
+    focus: "Hugo markdown creation with TDD visual testing"
+    quality_gates: ["Hugo build passes", "visual tests pass", "no AI phrases"]
+    handoff_to: "seo-optimizer via blog/writing/"
+    tdd_integration: "RED (visual test) → GREEN (content) → REFACTOR (polish)"
+
+  phase_4_seo:
+    agent: "seo-optimizer"
+    type: "qa-expert"
+    focus: "Metadata optimization, keyword integration, readability"
+    quality_gates: ["Flesch ≥60", "Hugo frontmatter complete", "no readability compromise"]
+    handoff_to: "content-editor via blog/seo/"
+
+  phase_5_editorial:
+    agent: "content-editor"
+    type: "reviewer"
+    focus: "Voice consistency, citation validation, engagement assessment"
+    quality_gates: ["engagement ≥8/10", "shareability ≥7/10", "all claims cited"]
+    handoff_to: "ideal-reader-representative via blog/editorial/"
+
+  phase_6_reader_validation:
+    agent: "ideal-reader-representative"
+    type: "qa-expert"
+    focus: "Target audience simulation, authentic reader feedback"
+    quality_gates: ["reader score ≥8/10", "would share: Yes/Likely", "actionable value"]
+    handoff_to: "blog-coordinator for publication"
+
+  phase_7_publication:
+    agent: "blog-coordinator"
+    responsibility: "Final Hugo build validation, publication package compilation"
+    success_criteria: "All 7 phases complete + all quality gates passed"
+```
+
+### 🔄 7-Phase Content Workflow with Memory Coordination
+
+**Phase Sequence** (Coordinated by blog-coordinator):
+
+1. **Strategy & Planning** → content-strategist analyzes audience, predicts shareability
+2. **Research & Evidence** → research-agent gathers citations, case studies, expert quotes
+3. **Content Creation** → blog-writer creates Hugo markdown with TDD visual testing
+4. **SEO Optimization** → seo-optimizer enhances discoverability while maintaining credibility
+5. **Editorial Review** → content-editor validates voice, engagement, citations
+6. **Reader Validation** → ideal-reader-representative simulates target audience reaction
+7. **Hugo Publication** → blog-coordinator compiles publication-ready package
+
+**Memory Handoff Pattern**:
+```yaml
+phase_handoffs:
+  strategy_to_research: "blog/strategy/outlines/[topic_id] → blog/research/citations/[topic_id]"
+  research_to_writer: "blog/research/citations/[topic_id] → blog/writing/drafts/[post_id]"
+  writer_to_seo: "blog/writing/drafts/[post_id] → blog/seo/optimization/[post_id]"
+  seo_to_editorial: "blog/seo/optimization/[post_id] → blog/editorial/reviews/[post_id]"
+  editorial_to_reader: "blog/editorial/reviews/[post_id] → blog/validation/reader/[trace_id]"
+  reader_to_publication: "blog/validation/reader/[trace_id] → blog/production/final/[post_id]"
+```
+
+### 🎯 jt_site Technical Audience Specialization
+
+**Target Audience** (All content generation agents use this context):
+- **Demographics**: CTOs, Engineering Managers, Senior Developers, Tech Entrepreneurs
+- **Pain Points**: Team efficiency, technical debt, agile adoption, hiring, remote management
+- **Goals**: Build better products faster, improve teams, adopt best practices
+- **Content Preferences**: Technical depth + practical examples, 5-10 min reading time
+
+**Voice and Quality Standards**:
+- ✅ Professional credibility > engagement tricks
+- ✅ Technical accuracy non-negotiable
+- ✅ Real-world applicability > theoretical perfection
+- ✅ Zero generic AI language
+- ✅ All claims properly cited
+
+### 🧪 TDD Integration for Blog Content
+
+**blog-writer TDD Cycle**:
+```yaml
+red_phase_visual_testing:
+  action: "Create failing Hugo build test + visual regression baseline"
+  validation: "Test fails (post doesn't exist yet)"
+  memory: "blog/writing/tdd/[test_id]/visual_baselines"
+
+green_phase_content_creation:
+  action: "Write minimal Hugo markdown to make tests pass"
+  validation: "`bin/hugo-build` succeeds + `bin/rake test:snap_diff` passes"
+  memory: "blog/writing/drafts/[post_id]/versions"
+
+refactor_phase_engagement:
+  action: "Enhance opening hook, add stories, optimize paragraphs ≤3 sentences"
+  validation: "Visual tests still passing, no regressions"
+  memory: "blog/writing/quality/[check_type]/results"
+```
+
+### 📋 Content Generation Swarm Pattern (Copy-Paste Ready)
+
+```javascript
+// Standard blog production workflow (supervised by blog-coordinator)
+[Blog Production - 7 Phase Workflow]:
+  // Phase 1: Strategy
+  Task("Content Strategist", "Analyze target audience (CTOs/Engineering Managers), identify high-value topic, design Hugo-compatible outline. Store strategy in blog/strategy/. Shareability target ≥7/10.", "analyst")
+
+  // Phase 2: Research
+  Task("Research Agent", "Gather ≥8 credible citations, ≥1 case study, expert quotes. Validate all technical claims. Store research in blog/research/. Reference content-strategist's outline.", "researcher")
+
+  // Phase 3: Content Creation with TDD
+  Task("Blog Writer", "Create Hugo markdown with TDD visual testing. RED: failing visual test. GREEN: minimal content. REFACTOR: enhance engagement. Paragraphs ≤3 sentences. Zero AI phrases. Store in blog/writing/.", "coder")
+
+  // Phase 4: SEO Optimization
+  Task("SEO Optimizer", "Optimize Hugo frontmatter, integrate keywords naturally, ensure Flesch ≥60. Never compromise readability or technical credibility. Store in blog/seo/.", "qa-expert")
+
+  // Phase 5: Editorial Review
+  Task("Content Editor", "Validate voice consistency, verify all citations, assess engagement ≥8/10 and shareability ≥7/10. Provide detailed feedback. Store in blog/editorial/.", "reviewer")
+
+  // Phase 6: Reader Validation
+  Task("Ideal Reader Representative", "Simulate jt_site's technical audience (CTOs/Engineering Managers). Provide authentic feedback, score engagement ≥8/10. Would share: Yes/Likely required. Store in blog/validation/.", "qa-expert")
+
+  // Phase 7: Publication Preparation (Coordinator)
+  Task("Blog Coordinator", "Compile Hugo publication package, validate all quality gates passed, final Hugo build test. Prepare for publication.", "coordination-expert")
+
+  // Memory coordination todos
+  TodoWrite { todos: [
+    "Content Strategist: Analyze jt_site technical audience, predict shareability ≥7/10",
+    "Research Agent: Gather ≥8 citations + ≥1 case study, validate technical claims",
+    "Blog Writer: Hugo markdown with TDD (RED→GREEN→REFACTOR), visual testing",
+    "SEO Optimizer: Hugo frontmatter + keywords, maintain Flesch ≥60",
+    "Content Editor: Voice consistency + citation validation + engagement ≥8/10",
+    "Ideal Reader Representative: Simulate CTOs/Engineering Managers, score ≥8/10",
+    "Blog Coordinator: Validate all phases + quality gates, compile publication package",
+    "Memory Coordination: Track handoffs via blog/* namespaces",
+    "Quality Gates: Enforce zero-tolerance (no AI phrases, all claims cited)",
+    "Hugo Integration: Validate build + visual regression tests at each phase",
+    "Final Validation: All 7 phases complete + reader validation ≥8/10"
+  ] }
+```
+
+### 🚨 Zero-Tolerance Quality Gates (Blog Production)
+
+**Content Generation Enforcement**:
+- ❌ **Generic AI Language**: Immediate rejection, must be rewritten
+- ❌ **Unsupported Claims**: All assertions must have credible citations
+- ❌ **Readability Compromises**: SEO never sacrifices human readability
+- ❌ **Hugo Build Failures**: Content must render correctly with Hugo
+- ❌ **Visual Regression**: Zero pixel differences allowed in visual testing
+
+**Success Criteria for Publication**:
+- ✅ All 7 phases completed successfully
+- ✅ Reader engagement score ≥ 8/10
+- ✅ Shareability prediction ≥ 7/10
+- ✅ Hugo build validation successful
+- ✅ Complete Hugo frontmatter with all metadata
+- ✅ All citations properly formatted
+- ✅ Zero generic AI language detected
+
+---
+
 ## 🎯 JT_SITE SPECIFIC ADAPTATIONS
 
 ### 🌐 Technology Stack & Coder Requirements
