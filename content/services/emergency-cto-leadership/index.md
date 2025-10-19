@@ -125,24 +125,4 @@ crisis_success_stories:
         - "Customer retention rate maintained at 94%"
 
 created_at: 2025-01-12T14:30:00+00:00
-lastmod: 2025-10-18T16:35:00+00:00
----
-
-## Related CTO Services
-
-### **After Crisis Stabilization**
-Once your immediate emergency is resolved, transition to sustainable technical leadership:
-
-- **[Fractional CTO Services](/services/fractional-cto-services/)** - Ongoing part-time strategic CTO partnership for sustainable growth after crisis recovery. Build antifragile systems and prevent future technical disasters through proactive leadership, technology roadmaps, and team development.
-
-- **[Engineering Management Consulting](/services/engineering-management-consulting/)** - Strengthen your engineering organization post-crisis with specialized management support. Improve team processes, development practices, and leadership capabilities to create resilient, high-performing technical teams.
-
-### **For Prevention & Planning**
-Avoid technical crises before they happen:
-
-- **[Startup CTO Consulting](/services/startup-cto-consulting/)** - Build strong technical foundations for early-stage startups. Make correct technology decisions, establish development best practices, and hire your first technical team to avoid common startup technical disasters.
-
-### **Compare All Services**
-- **[CTO Service Comparison](/services/service-comparison/)** - Understand which CTO service model fits your current needs: emergency crisis response, ongoing fractional leadership, or startup consulting for early-stage technical guidance.
-
 ---

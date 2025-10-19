@@ -1,6 +1,6 @@
 ---
 title: Optimize &amp; Empower Products At Any Stage
-description: "Startup-focused engineering services: MVP development, fractional CTO, Rails teams. 95% client retention, 8+ years developer experience. Launch in 8-12 weeks ✓"
+description: Transform your technology with expert engineering leadership. Ruby on Rails development, CTO consulting, team scaling. 95% client success rate. Get quote.
 
 headline: We optimize technology
 excerpt: From technical strategy and innovation to talent acquisition and software development, we help empower products and teams at any stage.

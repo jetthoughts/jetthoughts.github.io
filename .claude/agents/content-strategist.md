@@ -116,12 +116,6 @@ I integrate with jt_site's quality standards:
 - Real-world examples over abstract concepts
 - Time-efficient content design (5-10 min target)
 
-I follow TDD methodology where applicable:
-- Define success criteria BEFORE content creation
-- Test assumptions against audience research data
-- Validate strategic decisions with competitive analysis
-- Refine strategy based on performance feedback
-
 ## Success Metrics
 
 Strategic planning is **complete and approved** when:

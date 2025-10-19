@@ -123,23 +123,4 @@ trust_indicators:
     - "Ruby Central Board Advisory Member"
 
 created_at: 2025-01-12T15:15:00+00:00
-lastmod: 2025-10-18T16:30:00+00:00
----
-
-## Related Expert Services
-
-Looking for specialized CTO support? Explore our comprehensive technology leadership solutions:
-
-### **For Crisis Response & Immediate Needs**
-- **[Emergency CTO Leadership](/services/emergency-cto-leadership/)** - Rapid technical stabilization when your CTO leaves or during critical technical crises. Typically engaged within 48 hours to prevent productivity loss and maintain team stability.
-
-### **For Early-Stage Startups**
-- **[Startup CTO Consulting](/services/startup-cto-consulting/)** - Foundational technical guidance for pre-seed and seed-stage startups. Perfect for non-technical founders needing technology stack decisions, MVP development strategy, and initial developer hiring support before scaling to part-time fractional CTO partnerships.
-
-### **For Team Leadership & Scaling**
-- **[Engineering Management Consulting](/services/engineering-management-consulting/)** - Complement your fractional CTO with specialized engineering management support for team building, development process optimization, and scaling engineering organizations from 10 to 100+ developers.
-
-### **Compare All CTO Services**
-- **[CTO Service Comparison Guide](/services/service-comparison/)** - Comprehensive comparison of our fractional CTO, emergency CTO, and startup CTO consulting services to help you choose the right engagement model for your growth stage and needs.
-
 ---

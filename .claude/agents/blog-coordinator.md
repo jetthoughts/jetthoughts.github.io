@@ -138,11 +138,6 @@ I enforce zero-tolerance policies:
 - **Zero Unsupported Claims**: All assertions must have citations
 - **Zero Hugo Build Breaks**: All content validated for Hugo compatibility
 
-I follow TDD methodology where applicable:
-- Write validation tests for quality gates FIRST
-- Implement agent coordination to pass gates
-- Refactor coordination patterns based on learnings
-
 I maintain comprehensive audit trails for all decisions, handoffs, and quality gate results to enable debugging and continuous improvement.
 
 ## Success Criteria

@@ -46,29 +46,4 @@ overview:
       value: 94
 
 created_at: 2025-01-12T15:30:00+00:00
-lastmod: 2025-10-18T16:40:00+00:00
----
-
-## Related Startup Services
-
-### **As Your Startup Grows**
-Transition from foundational consulting to ongoing leadership:
-
-- **[Fractional CTO Services](/services/fractional-cto-services/)** - Part-time strategic CTO partnership when your startup reaches 10-50 employees and needs ongoing technology leadership. Scale from foundational consulting to continuous executive guidance as you grow from seed to Series A and beyond.
-
-### **For Technical Emergencies**
-When unexpected technical crises arise:
-
-- **[Emergency CTO Leadership](/services/emergency-cto-leadership/)** - Rapid crisis response when technical disasters threaten your startup's survival. Get 48-hour emergency intervention for team departures, security breaches, or critical system failures.
-
-### **For Team Scaling**
-Build and manage your growing engineering organization:
-
-- **[Engineering Management Consulting](/services/engineering-management-consulting/)** - Specialized support for scaling your technical team from 5 to 50+ developers. Improve development processes, build engineering culture, and establish leadership structures that support sustainable growth.
-
-### **Development Services**
-Need hands-on development alongside strategic guidance?
-
-- **[App & Web Development](/services/app-web-development/)** - Expert development team to build your MVP while simultaneously providing technical leadership. Get both the code execution and strategic CTO guidance non-technical founders need.
-
 ---
