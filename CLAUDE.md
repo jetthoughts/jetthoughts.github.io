@@ -738,7 +738,7 @@ Step 5: CONTINUE to next item
 
 **MUST CONTINUE** (NO STOP - When Pre-Approved):
 - Effort assessment (user pre-approved unlimited scope)
-- Scope questions (user defined scope already)
+- Scope questions (user-defined scope already)
 - Permission requests (user granted blanket permission)
 - Simple test failures with obvious fix
 - Repetitive pattern work with established approach
