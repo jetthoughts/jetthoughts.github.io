@@ -1,6 +1,6 @@
 ---
 title: Optimize &amp; Empower Products at Any Stage JetThoughts
-description: We help optimize products and teams at any stage, from technical strategy to talent acquisition and software development.
+description: "Transform your startup with expert services: MVP development, fractional CTO, Rails teams, QA testing. 95% client retention, 540+ projects. Get results ✓"
 author: Paul Keen
 type: page
 slug: services
