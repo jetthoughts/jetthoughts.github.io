@@ -1,6 +1,6 @@
 ---
 title: "Learn More About Us and Our Story JetThoughts"
-description: "We choose to work with a few clients while giving each of them more attention in the spotlight so we can improve and create long-term relationships."
+description: "Meet JetThoughts: 18+ years delivering startup MVPs, 95% client retention. Expert Rails/React team builds products faster. Discover our story & values ✓"
 author: Paul Keen
 type: page
 slug: about-us
