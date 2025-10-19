@@ -1,6 +1,6 @@
 ---
 title: "Join JetThoughts: Elevate Your Software Development Career"
-description: "Join JetThoughts and advance your career in a dynamic, supportive environment. Explore exciting job opportunities in software development and become part of a world-class team dedicated to innovation and growth."
+description: "Join JetThoughts: Work on startup MVPs, Rails/React projects. Remote-first culture, growth opportunities, expert team. Build meaningful products with us ✓"
 author: Paul Keen
 type: page
 slug: careers
