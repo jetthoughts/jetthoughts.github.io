@@ -672,7 +672,7 @@ continuous_execution_response: |
 - Length: 50-72 characters (one line)
 
 **Commit Workflow** (NEUROLOGICAL ENFORCEMENT):
-```
+```yaml
 1. Code change made (< 10 lines)
 2. Run bin/rake test:critical
 3. Tests pass → IMMEDIATE commit trigger fires
@@ -693,7 +693,7 @@ continuous_execution_response: |
 **Agents enforce micro-step iterative workflow for ALL repetitive tasks**:
 
 **Workflow Pattern** (MANDATORY SEQUENCE):
-```
+```yaml
 Step 1: IDENTIFY next smallest change candidate
   - Example: "Next: Extract .fl-row padding from about-layout.css"
   - Scope: Single CSS rule set, single function, single class
@@ -744,7 +744,7 @@ Step 5: CONTINUE to next item
 - Repetitive pattern work with established approach
 
 **Decision Override Rule**:
-```
+```yaml
 IF user_pre_approval_detected:
   IGNORE all non-critical stopping triggers
   CONTINUE until goal_completion OR critical_failure
