@@ -1,6 +1,6 @@
 ---
 title: "Top Software Development Services for Business Success"
-description: "Discover how JetThoughts delivers expert software development services, including fractional CTO, product management, and QA, to help businesses achieve positive outcomes. Contact us for a free consultation!"
+description: "Explore JetThoughts client success stories: 95% retention, 540+ projects delivered. Startup MVPs, Rails teams, fractional CTO. See how we build better ✓"
 author: Paul Keen
 type: page
 slug: clients
