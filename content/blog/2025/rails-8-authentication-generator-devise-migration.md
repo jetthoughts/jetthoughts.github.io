@@ -819,7 +819,8 @@ class SessionsController < ApplicationController
 
     if user && AuthMigration.use_rails8_auth?(user)
       # Redirect to Rails 8 authentication
-      redirect_to rails8_session_path(params: params)
+      # SECURITY: Never forward raw params (contains password)
+      redirect_to rails8_session_path(email: params[:email])
     else
       # Use Devise authentication
       super
@@ -904,15 +905,17 @@ namespace :auth do
       password_compatibility: 0
     }
 
-    # Test password compatibility
+    # Test password compatibility (read-only validation)
     User.limit(100).each do |user|
       next unless user.encrypted_password.present?
 
-      test_password = SecureRandom.hex(16)
-      user.update(password: test_password, password_confirmation: test_password)
-
-      if user.authenticate(test_password) && user.valid_password?(test_password)
-        checks[:password_compatibility] += 1
+      # Validate digest format without mutating user data
+      if user.password_digest.present? && user.encrypted_password.present?
+        # Check that both digests exist and are properly formatted
+        if BCrypt::Password.valid_hash?(user.password_digest) &&
+           user.encrypted_password.start_with?('$2a$')
+          checks[:password_compatibility] += 1
+        end
       end
     end
 

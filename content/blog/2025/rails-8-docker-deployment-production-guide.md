@@ -311,7 +311,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: production # Use production image
+      target: base # Use base image for development hot-reload
     command: bundle exec rails server -b 0.0.0.0
     volumes:
       # Mount code for development hot-reload
@@ -343,7 +343,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: production
+      target: base # Use base image for development consistency
     command: bundle exec rails solid_queue:start
     volumes:
       - .:/rails
@@ -552,7 +552,10 @@ echo "💚 Performing health check..."
 sleep 10
 curl -f http://localhost/up || {
     echo "❌ Health check failed! Rolling back..."
-    docker-compose -f docker-compose.production.yml rollback
+    # Rollback by reverting to previous image tag
+    docker-compose -f docker-compose.production.yml down
+    docker tag myapp/rails:previous myapp/rails:latest
+    docker-compose -f docker-compose.production.yml up -d
     exit 1
 }
 
