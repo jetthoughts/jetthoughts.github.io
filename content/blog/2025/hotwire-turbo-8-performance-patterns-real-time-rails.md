@@ -264,7 +264,7 @@ Morph update: 23ms (update only 50 changed nodes)
 
 ### Optimized Network Layer
 
-**HTTP/2 Push and Preload**
+#### HTTP/2 Push and Preload
 
 ```erb
 <!-- Preload critical frames -->
@@ -280,7 +280,7 @@ Morph update: 23ms (update only 50 changed nodes)
 <!-- Perceived load time: 0ms (content already loaded) -->
 ```
 
-**Connection Multiplexing**
+#### Connection Multiplexing
 
 ```javascript
 // Single WebSocket connection for all Turbo Streams
@@ -301,7 +301,7 @@ const subscriptions = [
 
 ### Advanced Caching Strategies
 
-**Browser Cache Coordination**
+#### Browser Cache Coordination
 
 ```ruby
 # config/environments/production.rb
@@ -320,7 +320,7 @@ Rails.application.configure do
 end
 ```
 
-**Frame-Level Cache Control**
+#### Frame-Level Cache Control
 
 ```erb
 <!-- Cache frame for 5 minutes -->
@@ -336,7 +336,7 @@ end
       data: { turbo_frame: "trending_posts" } %>
 ```
 
-**Server-Side Fragment Caching**
+#### Server-Side Fragment Caching
 
 ```erb
 <!-- Combine Turbo Frames with Rails fragment caching -->
