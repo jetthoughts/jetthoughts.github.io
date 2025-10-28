@@ -1,13 +1,25 @@
 ---
+dev_to_id: null
 title: "Rails 8 Solid Cache Performance: Complete Migration from Redis"
 slug: rails-8-solid-cache-performance-redis-migration
-date: 2025-09-27T00:00:00Z
+date: 2025-10-27
 description: "Complete guide to Rails 8 Solid Cache performance optimization and Redis migration. Database-backed caching advantages, benchmarks, cost savings, and step-by-step migration strategy."
 summary: "Master Rails 8 Solid Cache migration from Redis. Database-backed caching advantages, performance benchmarks, cost analysis, migration guide, and optimization strategies for production deployments."
 author: "JetThoughts Team"
 draft: false
 tags: ["rails", "solid-cache", "redis", "caching", "performance", "rails-8"]
 categories: ["Development", "Rails", "Performance"]
+cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730033400/solid-cache-redis-migration.jpg"
+canonical_url: "https://jetthoughts.com/blog/rails-8-solid-cache-performance-redis-migration/"
+created_at: "2025-10-27T13:00:00Z"
+edited_at: "2025-10-27T13:00:00Z"
+metatags:
+  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730033400/solid-cache-redis-migration.jpg"
+  og_title: "Rails 8 Solid Cache Performance: Complete Redis Migration | JetThoughts"
+  og_description: "Master Solid Cache migration from Redis. Complete guide with benchmarks, cost analysis, migration strategy for production deployments."
+  twitter_card: "summary_large_image"
+  twitter_title: "Rails 8 Solid Cache Performance: Complete Redis Migration"
+  twitter_description: "Master Solid Cache migration from Redis. Benchmarks, cost analysis, production migration guide."
 ---
 
 Rails 8 introduces Solid Cache as the default caching backend, marking a significant shift from Redis-based caching to database-backed storage. This comprehensive guide explores Solid Cache performance characteristics, migration strategies from Redis/Memcached, and optimization techniques for production deployments.

@@ -1,13 +1,25 @@
 ---
+dev_to_id: null
 title: "Rails 8 Deployment with Docker: Production-Ready Configuration Guide"
 slug: rails-8-docker-deployment-production-guide
-date: 2025-09-28T00:00:00Z
+date: 2025-10-28
 description: "Complete Rails 8 Docker deployment guide with production-ready configurations. Multi-stage builds, security hardening, performance optimization, and Kamal alternative strategies."
 summary: "Master Rails 8 Docker deployments for production. Multi-stage Dockerfile, docker-compose orchestration, security best practices, performance tuning, and complete deployment workflow for modern Rails applications."
 author: "JetThoughts Team"
 draft: false
 tags: ["rails", "docker", "deployment", "devops", "production", "rails-8"]
 categories: ["Development", "Rails", "DevOps"]
+cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730120400/rails-8-docker-deployment.jpg"
+canonical_url: "https://jetthoughts.com/blog/rails-8-docker-deployment-production-guide/"
+created_at: "2025-10-28T13:00:00Z"
+edited_at: "2025-10-28T13:00:00Z"
+metatags:
+  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730120400/rails-8-docker-deployment.jpg"
+  og_title: "Rails 8 Docker Deployment: Production-Ready Configuration | JetThoughts"
+  og_description: "Complete Rails 8 Docker deployment guide. Multi-stage builds, security hardening, performance optimization, production workflow."
+  twitter_card: "summary_large_image"
+  twitter_title: "Rails 8 Docker Deployment: Production-Ready Configuration"
+  twitter_description: "Master Rails 8 Docker deployments. Multi-stage builds, security, performance, complete production workflow."
 ---
 
 Rails 8's simplified deployment story makes Docker the natural choice for production deployments. This comprehensive guide provides production-ready Docker configurations, security hardening techniques, performance optimizations, and complete deployment workflows for modern Rails applications.
