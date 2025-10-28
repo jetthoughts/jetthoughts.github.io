@@ -720,7 +720,7 @@ services:
 # 3. Security scanning in CI/CD
 # .github/workflows/security.yml
 - name: Scan Docker image
-  uses: aquasecurity/trivy-action@master
+  uses: aquasecurity/trivy-action@0.33.1
   with:
     image-ref: 'myregistry.com/myapp:latest'
     format: 'sarif'
