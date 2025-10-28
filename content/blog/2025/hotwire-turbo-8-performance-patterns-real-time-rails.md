@@ -29,7 +29,7 @@ This comprehensive guide explores advanced Turbo 8 performance patterns based on
 
 Building real-time web applications with server-rendered HTML creates unique performance challenges that traditional RESTful applications don't face.
 
-**The N+1 Broadcast Problem**
+### The N+1 Broadcast Problem
 
 Consider a typical dashboard application with live updates:
 
@@ -56,7 +56,7 @@ end
 
 Our production monitoring showed this pattern consuming **85% of server capacity** during peak traffic, with average response times degrading from 50ms to 3.2 seconds.
 
-**Stale Frame Content After Navigation**
+### Stale Frame Content After Navigation
 
 ```ruby
 # Turbo Frames don't automatically refresh after navigation
@@ -73,7 +73,7 @@ Our production monitoring showed this pattern consuming **85% of server capacity
 
 This resulted in **40% of support tickets** related to "data not updating" in a production SaaS application we optimized.
 
-**Memory Leaks from Streaming Connections**
+### Memory Leaks from Streaming Connections
 
 ```javascript
 // BAD: Creating ActionCable subscriptions without cleanup
@@ -99,7 +99,7 @@ class PostsController extends Controller {
 
 Production monitoring revealed **memory growth of 8MB per navigation** in applications without proper cleanup, leading to browser crashes after extended usage.
 
-**Flickering UI During Updates**
+### Flickering UI During Updates
 
 ```ruby
 # BAD: Full frame replacement causes visible flicker
@@ -117,7 +117,7 @@ Production monitoring revealed **memory growth of 8MB per navigation** in applic
 
 User testing showed **73% of users rated performance as "poor"** when experiencing visible content flicker during updates, even though actual response times were under 100ms.
 
-**Server Resource Exhaustion**
+### Server Resource Exhaustion
 
 ```ruby
 # BAD: Broadcasting to thousands of users simultaneously
@@ -150,11 +150,11 @@ Turbo 8 introduces fundamental architectural improvements that, when properly le
 
 ### Turbo 8 Core Components
 
-**1. Turbo Drive: Intelligent Page Navigation**
+#### 1. Turbo Drive: Intelligent Page Navigation
 
 Turbo Drive intercepts navigation and replaces page content without full browser refresh:
 
-```javascript
+```text
 // Traditional navigation (Turbo Drive disabled)
 Total page load time: ~1200ms
   - DNS lookup: 50ms
@@ -176,7 +176,7 @@ Total transition time: ~250ms
 
 **80% faster navigation** through connection reuse and selective DOM updates.
 
-**2. Turbo Frames: Lazy Loading and Scoped Updates**
+#### 2. Turbo Frames: Lazy Loading and Scoped Updates
 
 ```erb
 <!-- Lazy-loaded frame with automatic caching -->
@@ -205,7 +205,7 @@ Total transition time: ~250ms
 
 Our benchmarks show **90% reduction in server load** for frequently accessed frames through intelligent caching.
 
-**3. Turbo Streams: Real-Time Partial Updates**
+#### 3. Turbo Streams: Real-Time Partial Updates
 
 ```ruby
 # Efficient targeted updates
@@ -235,11 +235,11 @@ Full page refresh: 450ms
   - 37x slower than targeted update
 ```
 
-**4. Page Refresh: Instant Perceived Updates**
+#### 4. Page Refresh: Instant Perceived Updates
 
 Turbo 8's signature feature - instant page refresh with morphing:
 
-```html
+```text
 <!-- Server sends refresh signal -->
 <turbo-stream action="refresh"></turbo-stream>
 
@@ -360,7 +360,7 @@ Mastering Turbo 8 performance requires applying battle-tested patterns that addr
 
 ### Pattern 1: Debounced Turbo Stream Broadcasts
 
-**Problem**: High-frequency updates overwhelm server and clients
+### Problem: High-frequency updates overwhelm server and clients
 
 ```ruby
 # BAD: Broadcasting every keystroke in collaborative editing
@@ -378,7 +378,7 @@ end
 # Client experience: Janky, flickering updates
 ```
 
-**Solution**: Debounce broadcasts with job coalescing
+### Solution: Debounce broadcasts with job coalescing
 
 ```ruby
 # GOOD: Debounced broadcasting with job coalescing
@@ -413,7 +413,7 @@ end
 # Client experience: Smooth, single update
 ```
 
-**Benchmark Results**:
+### Benchmark Results
 
 ```ruby
 # High-frequency update scenario (100 updates/second)
@@ -432,7 +432,7 @@ With debouncing (1 second):
 
 ### Pattern 2: Batch Turbo Stream Updates
 
-**Problem**: Multiple related updates cause layout thrashing
+### Problem: Multiple related updates cause layout thrashing
 
 ```ruby
 # BAD: Individual stream broadcasts cause multiple DOM updates
@@ -454,7 +454,7 @@ end
 # Total DOM update time: ~1500ms
 ```
 
-**Solution**: Batch updates into single stream
+### Solution: Batch updates into single stream
 
 ```ruby
 # GOOD: Single stream with multiple actions
@@ -484,7 +484,7 @@ end
 # 33x faster
 ```
 
-**Advanced: Chunked Batch Broadcasting**
+### Advanced: Chunked Batch Broadcasting
 
 ```ruby
 # For very large updates, chunk to avoid single large payload
@@ -509,7 +509,7 @@ end
 
 ### Pattern 3: Lazy-Loaded Turbo Frames with Intersection Observer
 
-**Problem**: Eager-loading all frames causes slow initial page load
+### Problem: Eager-loading all frames causes slow initial page load
 
 ```erb
 <!-- BAD: All frames load immediately -->
@@ -529,7 +529,7 @@ end
 <!-- Total load time: ~900ms -->
 ```
 
-**Solution**: Viewport-aware lazy loading
+### Solution: Viewport-aware lazy loading
 
 ```erb
 <!-- GOOD: Frames load only when visible -->
@@ -559,7 +559,7 @@ end
 <!-- Total load time: ~300ms (3x faster) -->
 ```
 
-**Stimulus Controller for Enhanced Lazy Loading**:
+### Stimulus Controller for Enhanced Lazy Loading
 
 ```javascript
 // app/javascript/controllers/visibility_controller.js
@@ -603,7 +603,7 @@ export default class extends Controller {
 }
 ```
 
-**Performance Impact**:
+### Performance Impact
 
 ```ruby
 # Page with 10 lazy frames
@@ -622,7 +622,7 @@ With lazy loading:
 
 ### Pattern 4: Optimistic UI Updates with Morphing
 
-**Problem**: Users wait for server confirmation before seeing changes
+### Problem: Users wait for server confirmation before seeing changes
 
 ```erb
 <!-- BAD: User waits for round-trip to see their comment -->
@@ -641,7 +641,7 @@ With lazy loading:
 -->
 ```
 
-**Solution**: Optimistic updates with morphing validation
+### Solution: Optimistic updates with morphing validation
 
 ```erb
 <!-- GOOD: Instant feedback with server validation -->
@@ -709,9 +709,9 @@ export default class extends Controller {
 }
 ```
 
-**User Experience Impact**:
+### User Experience Impact
 
-```
+```text
 Without optimistic updates:
   - User action → 260ms delay → visual feedback
   - Perceived responsiveness: Slow
@@ -724,7 +724,7 @@ With optimistic updates:
 
 ### Pattern 5: Selective Turbo Drive Acceleration
 
-**Problem**: Not all pages benefit from Turbo Drive acceleration
+### Problem: Not all pages benefit from Turbo Drive acceleration
 
 ```javascript
 // BAD: Turbo Drive enabled globally causes issues
@@ -733,7 +733,7 @@ With optimistic updates:
 // - Complex JavaScript apps conflict with Turbo
 ```
 
-**Solution**: Selective Turbo Drive enablement
+### Solution: Selective Turbo Drive enablement
 
 ```erb
 <!-- Disable Turbo Drive for specific pages -->
@@ -752,7 +752,7 @@ With optimistic updates:
 <% end %>
 ```
 
-**Smart Turbo Drive Configuration**:
+### Smart Turbo Drive Configuration
 
 ```javascript
 // app/javascript/controllers/turbo_config_controller.js
@@ -797,7 +797,7 @@ export default class extends Controller {
 }
 ```
 
-**Performance Trade-offs**:
+### Performance Trade-offs
 
 ```ruby
 # Turbo Drive enabled (most pages)
@@ -825,7 +825,7 @@ Successfully deploying Turbo 8 in production requires comprehensive monitoring, 
 
 ### Performance Monitoring Setup
 
-**Application Performance Monitoring (APM) Integration**
+### Application Performance Monitoring (APM) Integration
 
 ```ruby
 # config/initializers/turbo_monitoring.rb
@@ -854,7 +854,7 @@ Rails.application.configure do
 end
 ```
 
-**Real User Monitoring (RUM)**
+### Real User Monitoring (RUM)
 
 ```javascript
 // app/javascript/monitoring/turbo_rum.js
@@ -906,7 +906,7 @@ document.addEventListener("turbo:frame-missing", (event) => {
 
 ### Load Testing and Benchmarking
 
-**Simulating Real-World Traffic Patterns**
+### Simulating Real-World Traffic Patterns
 
 ```ruby
 # test/performance/turbo_load_test.rb
@@ -939,7 +939,7 @@ class TurboLoadTest < ActionDispatch::IntegrationTest
 end
 ```
 
-**Load Testing with Realistic Scenarios**
+### Load Testing with Realistic Scenarios
 
 ```bash
 # Use k6 for load testing Turbo applications
@@ -977,7 +977,7 @@ export default function() {
 $ k6 run scripts/load_test.js
 ```
 
-**Performance Baseline Establishment**
+### Performance Baseline Establishment
 
 ```ruby
 # Establish performance baselines for critical operations
@@ -1015,7 +1015,7 @@ end
 
 ### Deployment Best Practices
 
-**Zero-Downtime Deployments**
+### Zero-Downtime Deployments
 
 ```ruby
 # config/deploy.rb (Capistrano)
@@ -1039,7 +1039,7 @@ namespace :deploy do
 end
 ```
 
-**Asset Fingerprinting and Cache Invalidation**
+### Asset Fingerprinting and Cache Invalidation
 
 ```ruby
 # config/environments/production.rb
@@ -1059,7 +1059,7 @@ Rails.application.configure do
 end
 ```
 
-**Production Checklist**:
+### Production Checklist
 
 - [ ] Performance baselines established for all Turbo operations
 - [ ] APM integration configured (New Relic, DataDog, Scout)
@@ -1078,13 +1078,13 @@ Real-world Turbo 8 applications encounter predictable performance issues. This s
 
 ### Issue 1: Slow Turbo Frame Loads
 
-**Symptom:**
-```
+### Symptom
+```text
 Turbo Frame "user_activity" takes 3+ seconds to load
 Users see "Loading..." for extended periods
 ```
 
-**Diagnosis:**
+### Diagnosis
 
 ```ruby
 # Add instrumentation to identify bottleneck
@@ -1103,7 +1103,7 @@ ActiveSupport::Notifications.subscribe("process_action.action_controller") do |n
 end
 ```
 
-**Solutions:**
+### Solutions
 
 ```ruby
 # 1. Add database indexes
@@ -1141,13 +1141,13 @@ end
 
 ### Issue 2: Memory Leaks from Stimulus Controllers
 
-**Symptom:**
-```
+### Symptom
+```text
 Browser memory usage grows from 150MB to 800MB after 30 minutes
 Page becomes sluggish, eventually crashes
 ```
 
-**Diagnosis:**
+### Diagnosis
 
 ```javascript
 // Use Chrome DevTools Memory Profiler
@@ -1157,7 +1157,7 @@ Page becomes sluggish, eventually crashes
 // Common cause: Event listeners not cleaned up
 ```
 
-**Solution:**
+### Solution
 
 ```javascript
 // BAD: Creates memory leak
@@ -1211,14 +1211,14 @@ export default class extends Controller {
 
 ### Issue 3: Flickering During Turbo Stream Updates
 
-**Symptom:**
-```
+### Symptom
+```text
 Content flashes white/blank during updates
 Elements jump around during refresh
 Poor perceived performance despite fast server responses
 ```
 
-**Solution:**
+### Solution
 
 ```erb
 <!-- Use morphing instead of replacement -->
@@ -1247,7 +1247,7 @@ def create
 end
 ```
 
-**Advanced: Skeleton Loading States**
+### Advanced: Skeleton Loading States
 
 ```erb
 <!-- Provide visual feedback during load -->

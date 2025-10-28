@@ -1310,14 +1310,18 @@ config.assets.pipeline = :propshaft
 
 ```ruby
 # rails console
-> Rails.application.assets.load_path.each { |path| puts path }
-# Verify image directories are included
-
-> Rails.application.assets.load_path.find("logo.png")
-# Should return asset object if found
+# Note: Propshaft doesn't expose load_path for scanning like Sprockets
+# Use asset_path helpers to verify asset resolution instead
 
 > helper.asset_path("logo.png")
 # Should return digested path: "/assets/logo-abc123.png"
+
+> helper.image_path("logo.png")
+# Alternative helper for image assets
+
+# Verify compiled assets exist in public/assets/
+> Dir.glob(Rails.root.join("public/assets/logo-*.png"))
+# Should return array of digested filenames
 ```
 
 ### Issue 5: Slow Build Times Despite Propshaft
@@ -1365,8 +1369,8 @@ namespace :assets do
 
     threads.each(&:join)
 
-    # Then run Propshaft compilation
-    Rake::Task["propshaft:precompile"].invoke
+    # Then run Propshaft compilation (integrated with assets:precompile)
+    Rake::Task["assets:precompile"].invoke
   end
 end
 ```

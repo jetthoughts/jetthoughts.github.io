@@ -29,7 +29,7 @@ This comprehensive guide walks you through everything you need to know about Rai
 
 Devise has been the de facto authentication solution for Rails applications since 2009. While it remains a powerful and mature solution, it brings challenges that modern Rails development practices seek to avoid.
 
-**Complexity and Cognitive Overhead**
+### Complexity and Cognitive Overhead
 
 Devise provides 10+ authentication modules, each with its own configuration, customization requirements, and edge cases:
 
@@ -54,7 +54,7 @@ end
 
 This 200+ line configuration file requires deep Devise knowledge to maintain safely. Most applications use only 20% of Devise's features yet carry 100% of its complexity.
 
-**Hidden Behaviors and Magic**
+### Hidden Behaviors and Magic
 
 Devise introduces dozens of controller filters and helpers that operate invisibly:
 
@@ -76,7 +76,7 @@ Behind this single line:
 
 Understanding and debugging these invisible operations requires deep Devise internals knowledge.
 
-**Upgrade Challenges**
+### Upgrade Challenges
 
 Devise's complexity makes upgrades risky. Real-world example from a client migration:
 
@@ -99,7 +99,7 @@ Devise's complexity makes upgrades risky. Real-world example from a client migra
 
 This upgrade required **40 hours** of development and testing for what should have been a simple Rails version upgrade.
 
-**Security Through Obscurity**
+### Security Through Obscurity
 
 Devise's complexity can obscure security vulnerabilities:
 
@@ -113,7 +113,7 @@ config.expire_all_remember_me_on_sign_out = false  # Security risk!
 
 These misconfigurations existed for **2 years** before security audit detection because they were buried in a 300-line initializer that no one fully understood.
 
-**Performance Overhead**
+### Performance Overhead
 
 Devise's flexibility comes with runtime costs:
 
