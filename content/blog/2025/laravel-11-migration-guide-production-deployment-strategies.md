@@ -629,11 +629,12 @@ php artisan about > docs/pre-migration-state.txt
 #### Backup Critical Data
 
 ```bash
-# Backup database
-php artisan db:backup
-
-# Or manual backup
+# Backup database (using mysqldump or spatie/laravel-backup)
 mysqldump -u username -p database_name > backup_pre_migration.sql
+
+# Or use spatie/laravel-backup package
+# composer require spatie/laravel-backup
+# php artisan backup:run
 
 # Backup environment configuration
 cp .env .env.backup.$(date +%Y%m%d)
@@ -1186,8 +1187,10 @@ php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
-# Warm up application
-php artisan cache:warm
+# Warm up application cache
+php artisan cache:clear
+php artisan config:cache
+php artisan route:cache
 
 # Health check
 if curl -f http://localhost:8080/up; then

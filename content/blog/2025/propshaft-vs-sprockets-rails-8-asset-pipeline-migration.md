@@ -102,7 +102,7 @@ That's it. No manifest files, no precompile arrays, no complex path configuratio
 
 ### Architecture Comparison
 
-**Sprockets Architecture**:
+### Sprockets Architecture
 ```
 Source Assets
   ↓
@@ -118,7 +118,7 @@ Compiled Bundle (application.js/css)
 Public Assets Directory
 ```
 
-**Propshaft Architecture**:
+### Propshaft Architecture
 ```
 Source Assets
   ↓
