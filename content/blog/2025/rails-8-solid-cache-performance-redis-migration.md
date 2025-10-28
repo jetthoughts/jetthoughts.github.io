@@ -334,8 +334,21 @@ class RedisCacheAudit
   end
 
   def self.uses_redis_specific_features?
-    # Check for sorted sets, pub/sub, etc.
-    Redis.current.keys('*').any? { |k| Redis.current.type(k) != 'string' }
+    # Check for sorted sets, pub/sub, etc. using SCAN (non-blocking)
+    redis = Redis.current
+    cursor = "0"
+
+    loop do
+      cursor, keys = redis.scan(cursor, count: 100)
+
+      keys.each do |key|
+        return true if redis.type(key) != 'string'
+      end
+
+      break if cursor == "0"
+    end
+
+    false
   end
 end
 ```
@@ -478,33 +491,43 @@ class CacheWarmer
     redis = Redis.new(url: ENV['REDIS_URL'])
     solid_cache = Rails.cache
 
-    # Get all cache keys from Redis
-    keys = redis.keys('*')
+    # Use SCAN instead of KEYS to avoid blocking Redis
+    cursor = "0"
+    total_keys = 0
+    batch_count = 0
 
-    puts "Warming #{keys.size} cache entries..."
+    puts "Starting cache warming with SCAN batching..."
 
-    keys.each_slice(1000).with_index do |batch, index|
-      ActiveRecord::Base.transaction do
-        batch.each do |key|
-          # Read from Redis
-          value = redis.get(key)
-          ttl = redis.ttl(key)
+    loop do
+      cursor, keys = redis.scan(cursor, count: 1000)
+      total_keys += keys.size
 
-          next unless value
+      unless keys.empty?
+        ActiveRecord::Base.transaction do
+          keys.each do |key|
+            # Read from Redis
+            value = redis.get(key)
+            ttl = redis.ttl(key)
 
-          # Write to Solid Cache with same TTL
-          solid_cache.write(
-            key,
-            value,
-            expires_in: ttl > 0 ? ttl.seconds : nil
-          )
+            next unless value
+
+            # Write to Solid Cache with same TTL
+            solid_cache.write(
+              key,
+              value,
+              expires_in: ttl > 0 ? ttl.seconds : nil
+            )
+          end
         end
+
+        batch_count += 1
+        puts "Processed batch #{batch_count} (#{total_keys} keys total)"
       end
 
-      puts "Processed batch #{index + 1} of #{keys.size / 1000}"
+      break if cursor == "0"
     end
 
-    puts "Cache warming complete!"
+    puts "Cache warming complete! Warmed #{total_keys} entries."
   end
 
   def self.verify_warmup
