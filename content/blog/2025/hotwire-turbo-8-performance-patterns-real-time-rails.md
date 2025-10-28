@@ -188,7 +188,7 @@ Total transition time: ~250ms
 <!-- Subsequent navigations use cached content -->
 ```
 
-**Turbo Frame caching behavior**:
+### Turbo Frame caching behavior
 
 ```ruby
 # First visit: Server renders sidebar (200ms)
@@ -221,7 +221,7 @@ Our benchmarks show **90% reduction in server load** for frequently accessed fra
 # Minimal DOM manipulation
 ```
 
-**Performance characteristics**:
+### Performance characteristics
 
 ```javascript
 // Append operation benchmark
@@ -252,7 +252,7 @@ Turbo 8's signature feature - instant page refresh with morphing:
 -->
 ```
 
-**Morphing performance**:
+### Morphing performance
 
 ```ruby
 # Morphing benchmark (page with 1000 DOM nodes)

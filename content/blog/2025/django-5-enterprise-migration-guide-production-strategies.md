@@ -18,7 +18,7 @@ This comprehensive guide walks you through everything you need to know about mig
 
 Django 4.2 LTS has served enterprise applications admirably, but organizations are increasingly encountering limitations that impact scalability, developer productivity, and operational efficiency.
 
-**Async Support Limitations**
+### Async Support Limitations
 
 Django 4.2's async views require significant boilerplate and careful orchestration:
 
@@ -52,7 +52,7 @@ class UserDashboardView(View):
 
 This pattern requires **60+ lines** of boilerplate for what should be straightforward view logic, increasing cognitive load and maintenance burden.
 
-**ORM Performance Bottlenecks**
+### ORM Performance Bottlenecks
 
 Django 4.2's ORM, while powerful, introduces performance challenges in complex enterprise queries:
 
@@ -82,7 +82,7 @@ orders = Order.objects.filter(
 
 Our benchmarks show typical complex queries require **400-600ms** with multiple database round-trips, significantly impacting application responsiveness at scale.
 
-**Database Migration Complexity**
+### Database Migration Complexity
 
 Large-scale migrations in Django 4.2 present operational challenges:
 
@@ -129,7 +129,7 @@ def populate_priority_level(apps, schema_editor):
 
 Complex migrations require **manual batching**, **careful transaction management**, and often necessitate **scheduled downtime** in production environments.
 
-**Security Configuration Complexity**
+### Security Configuration Complexity
 
 Django 4.2 requires extensive manual security configuration:
 
@@ -160,7 +160,7 @@ CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")
 
 Security best practices require **50+ configuration directives**, each requiring deep understanding of security implications and proper tuning for specific deployment environments.
 
-**Type Hints Inconsistency**
+### Type Hints Inconsistency
 
 Django 4.2's partial type hints create ambiguity and reduce IDE effectiveness:
 
@@ -200,7 +200,7 @@ Django 5.0 introduces fundamental improvements that directly address enterprise 
 
 Django 5.0 provides native async ORM methods, eliminating the `sync_to_async` wrapper complexity:
 
-**Before (Django 4.2):**
+### Before (Django 4.2):
 ```python
 from asgiref.sync import sync_to_async
 from django.http import JsonResponse
@@ -217,7 +217,7 @@ async def user_dashboard(request):
     return JsonResponse(data)
 ```
 
-**After (Django 5.0):**
+### After (Django 5.0):
 ```python
 from django.http import JsonResponse
 
@@ -229,7 +229,7 @@ async def user_dashboard(request):
     return JsonResponse({'user': user, 'orders': orders})
 ```
 
-**New Async ORM Methods:**
+### New Async ORM Methods:
 ```python
 # Django 5.0 native async ORM API
 from django.contrib.auth import get_user_model
@@ -259,7 +259,7 @@ order = await Order.objects.select_related('customer').aget(pk=456)
 customer_name = await order.customer.full_name  # Async attribute access
 ```
 
-**Performance Impact:**
+### Performance Impact:
 ```python
 # Benchmark: Async view performance (100 concurrent requests)
 # Django 4.2 with sync_to_async wrappers
@@ -298,7 +298,7 @@ async for order in orders:
     await process_order(order)
 ```
 
-**Query Optimization Results:**
+### Query Optimization Results:
 ```python
 # Same complex query benchmarked
 # Django 4.2: 6 database queries, 480ms average
@@ -326,7 +326,7 @@ class Order(models.Model):
         ]
 ```
 
-**Migration Improvements:**
+### Migration Improvements:
 ```python
 # Django 5.0 - Improved migration operations
 from django.db import migrations, models
@@ -378,7 +378,7 @@ class Order(models.Model):
         return cls.objects.filter(created_at__gte=date.today() - timedelta(days=7))
 ```
 
-**IDE Support Improvements:**
+### IDE Support Improvements:
 ```python
 # With Django 5.0 type hints, IDEs provide accurate:
 # - Autocomplete for model fields and methods
@@ -409,7 +409,7 @@ SECURE_HSTS_PRELOAD = True  # Additional HSTS configuration
 CSRF_TRUSTED_ORIGINS = ['https://example.com']
 ```
 
-**Security Enhancements:**
+### Security Enhancements:
 ```python
 # Django 5.0 automatically protects against:
 # - SQL injection (improved ORM parameterization)
@@ -528,7 +528,7 @@ Migrating enterprise Django applications from 4.2 to 5.0 requires systematic pla
 
 ### Phase 1: Pre-Migration Assessment
 
-**Environment Audit**
+### Environment Audit
 
 ```bash
 # 1. Document current Django version and dependencies
@@ -546,7 +546,7 @@ $ python --version
 Python 3.10.12  # Django 5.0 requires Python 3.10+
 ```
 
-**Dependency Compatibility Check**
+### Dependency Compatibility Check
 
 ```python
 # check_dependencies.py
@@ -588,7 +588,7 @@ if __name__ == '__main__':
         print("\n✗ Resolve compatibility issues before migrating")
 ```
 
-**Codebase Analysis**
+### Codebase Analysis
 
 ```bash
 # Find deprecated Django 4.2 patterns
@@ -607,7 +607,7 @@ $ grep -r "def view" apps/ --include="views.py" | wc -l
 
 For teams managing technical debt while planning Django upgrades, our [Django technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/) helps quantify migration ROI and prioritize technical debt elimination alongside the migration effort.
 
-**Database Schema Review**
+### Database Schema Review
 
 ```python
 # analyze_migrations.py - Check migration status
@@ -646,7 +646,7 @@ if __name__ == '__main__':
     analyze_migrations()
 ```
 
-**Test Coverage Assessment**
+### Test Coverage Assessment
 
 ```bash
 # Measure current test coverage before migration
@@ -666,7 +666,7 @@ TOTAL                          2847    247    91%
 
 ### Phase 2: Staging Environment Preparation
 
-**Create Isolated Staging Environment**
+### Create Isolated Staging Environment
 
 ```bash
 # 1. Clone production database to staging
@@ -686,7 +686,7 @@ $ source venv-django50/bin/activate
 # Fix any compatibility issues
 ```
 
-**Update Settings for Django 5.0**
+### Update Settings for Django 5.0
 
 ```python
 # settings.py - Django 5.0 configuration updates
@@ -720,7 +720,7 @@ ASGI_APPLICATION = 'myapp.asgi.application'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ```
 
-**Update ASGI Configuration for Async Support**
+### Update ASGI Configuration for Async Support
 
 ```python
 # asgi.py - Django 5.0 ASGI configuration
@@ -745,7 +745,7 @@ async def application(scope, receive, send):
 
 ### Phase 3: Code Modernization
 
-**Convert Views to Async (High-Traffic Endpoints)**
+### Convert Views to Async (High-Traffic Endpoints)
 
 ```python
 # Before (Django 4.2) - Synchronous view
@@ -778,7 +778,7 @@ class OrderListView(View):
         return JsonResponse({'orders': orders})
 ```
 
-**Optimize Database Queries**
+### Optimize Database Queries
 
 ```python
 # Before (Django 4.2) - N+1 query problem
@@ -810,7 +810,7 @@ async def get_customer_orders(customer_id):
     return orders
 ```
 
-**Add Type Hints Using Django 5.0 Framework Support**
+### Add Type Hints Using Django 5.0 Framework Support
 
 ```python
 # models.py - Django 5.0 with comprehensive type hints
@@ -841,7 +841,7 @@ class Order(models.Model):
             return Decimal('19.99')
 ```
 
-**Update Middleware for Async Support**
+### Update Middleware for Async Support
 
 ```python
 # middleware.py - Django 5.0 async middleware
@@ -871,7 +871,7 @@ class AsyncLoggingMiddleware:
 
 ### Phase 4: Database Migration Execution
 
-**Create Django 5.0 Compatible Migrations**
+### Create Django 5.0 Compatible Migrations
 
 ```python
 # Generate new migrations for Django 5.0
@@ -897,7 +897,7 @@ CREATE INDEX "orders_order_priority_idx"
 COMMIT;
 ```
 
-**Test Migrations on Staging Database**
+### Test Migrations on Staging Database
 
 ```bash
 # 1. Backup staging database before migration
@@ -916,7 +916,7 @@ $ python manage.py check_data_integrity
 $ python manage.py test_query_performance
 ```
 
-**Rollback Strategy**
+### Rollback Strategy
 
 ```bash
 # If migration fails, rollback procedure:
@@ -936,7 +936,7 @@ $ echo "Migration failure: [reason]" >> migration_log.txt
 
 ### Phase 5: Comprehensive Testing
 
-**Run Full Test Suite**
+### Run Full Test Suite
 
 ```bash
 # Execute all tests with Django 5.0
@@ -949,7 +949,7 @@ $ coverage report
 # Target: Maintain 90%+ coverage, all tests passing
 ```
 
-**Performance Benchmarking**
+### Performance Benchmarking
 
 ```python
 # benchmark_migration.py
@@ -983,7 +983,7 @@ class MigrationBenchmark(TestCase):
 $ python manage.py test benchmark_migration.MigrationBenchmark
 ```
 
-**Load Testing**
+### Load Testing
 
 ```python
 # locustfile.py - Load testing with Locust
@@ -1016,7 +1016,7 @@ $ locust -f locustfile.py --host=http://staging.example.com
 
 After migration, establish comprehensive performance baselines using [Laravel APM monitoring patterns](/blog/laravel-performance-monitoring-complete-apm-comparison-guide/)—the same principles apply to Django applications for tracking database query performance, async operation efficiency, and production bottleneck detection.
 
-**Security Audit**
+### Security Audit
 
 ```bash
 # Run Django's security checks
@@ -1035,7 +1035,7 @@ $ python manage.py test_csrf_protection
 
 ### Phase 6: Production Deployment
 
-**Blue-Green Deployment Strategy**
+### Blue-Green Deployment Strategy
 
 ```bash
 # 1. Deploy Django 5.0 to "green" environment (parallel to production)
@@ -1057,7 +1057,7 @@ $ ./promote_to_production.sh --environment=green
 $ ./schedule_decommission.sh --environment=blue --delay=24h
 ```
 
-**Zero-Downtime Migration with Database Compatibility**
+### Zero-Downtime Migration with Database Compatibility
 
 ```python
 # Strategy: Run Django 4.2 and 5.0 simultaneously during transition
@@ -1093,7 +1093,7 @@ Enterprise Django migrations often encounter complex scenarios requiring special
 
 ### Handling Large-Scale Data Migrations
 
-**Batched Data Migration Strategy**
+### Batched Data Migration Strategy
 
 ```python
 # migrations/0044_populate_priority_field.py
@@ -1156,7 +1156,7 @@ class Migration(migrations.Migration):
     ]
 ```
 
-**Monitoring Long-Running Migrations**
+### Monitoring Long-Running Migrations
 
 ```python
 # management/commands/monitor_migration.py
@@ -1196,7 +1196,7 @@ $ python manage.py monitor_migration
 
 ### Third-Party Package Compatibility
 
-**Identifying Incompatible Packages**
+### Identifying Incompatible Packages
 
 ```python
 # check_package_compatibility.py
@@ -1234,7 +1234,7 @@ if __name__ == '__main__':
     check_django_50_compatibility()
 ```
 
-**Temporary Compatibility Shims**
+### Temporary Compatibility Shims
 
 ```python
 # compat.py - Temporary compatibility layer during migration
@@ -1255,7 +1255,7 @@ User = get_user_model()
 
 ### Async View Conversion Patterns
 
-**Converting Complex Synchronous Views to Async**
+### Converting Complex Synchronous Views to Async
 
 ```python
 # Before (Django 4.2) - Complex synchronous view
@@ -1349,7 +1349,7 @@ class DashboardView(View):
 
 ### Database Connection Pool Optimization
 
-**Configuring Connection Pooling for Django 5.0**
+### Configuring Connection Pooling for Django 5.0
 
 ```python
 # settings.py - Optimized database connection pooling
@@ -1378,7 +1378,7 @@ DATABASES = {
 
 ### Common Migration Errors and Solutions
 
-**Error 1: Async ORM Outside Async Context**
+### Error 1: Async ORM Outside Async Context
 
 ```python
 # Error message:
@@ -1393,7 +1393,7 @@ async def my_view(request):
     user = await User.objects.aget(pk=request.user.id)  # ✓ Async method
 ```
 
-**Error 2: Migration Conflicts**
+### Error 2: Migration Conflicts
 
 ```bash
 # Error: Conflicting migrations detected
@@ -1405,7 +1405,7 @@ $ python manage.py makemigrations --merge
 $ python manage.py migrate --plan
 ```
 
-**Error 3: Type Hints Breaking Serialization**
+### Error 3: Type Hints Breaking Serialization
 
 ```python
 # Error: Cannot serialize type-hinted fields
@@ -1421,7 +1421,7 @@ class Order(models.Model):
 
 ### Performance Regression Troubleshooting
 
-**Identifying Performance Bottlenecks**
+### Identifying Performance Bottlenecks
 
 ```python
 # management/commands/profile_queries.py
@@ -1469,7 +1469,7 @@ These advanced topics and troubleshooting strategies address the complex scenari
 
 ## FAQ: Django 5.0 Enterprise Migration
 
-**Q: Can I migrate to Django 5.0 from Django 3.2 directly?**
+### Q: Can I migrate to Django 5.0 from Django 3.2 directly?
 
 A: While technically possible, it's **strongly discouraged**. Django's deprecation policy removes features over multiple versions. Direct migration from 3.2 to 5.0 requires handling two major versions worth of breaking changes simultaneously:
 
@@ -1483,7 +1483,7 @@ Django 3.2 LTS → Django 4.2 LTS → Django 5.0
 # Total: 6-10 weeks for complete migration
 ```
 
-**Q: What's the minimum Python version for Django 5.0?**
+### Q: What's the minimum Python version for Django 5.0?
 
 A: Django 5.0 requires **Python 3.10 or higher**. Check your current version:
 
@@ -1500,7 +1500,7 @@ $ sudo apt-get install python3.11
 $ python3.11 -m venv venv-django50
 ```
 
-**Q: How do I handle third-party packages that don't support Django 5.0 yet?**
+### Q: How do I handle third-party packages that don't support Django 5.0 yet?
 
 A: Options in priority order:
 
@@ -1528,7 +1528,7 @@ A: Options in priority order:
 
 4. **Consider alternatives**: Replace with Django 5.0 compatible packages
 
-**Q: Will my existing migrations break after upgrading to Django 5.0?**
+### Q: Will my existing migrations break after upgrading to Django 5.0?
 
 A: Existing migrations remain compatible. Django 5.0 maintains backward compatibility for migration files created in Django 4.2. However:
 
@@ -1560,7 +1560,7 @@ class Migration(migrations.Migration):
     ]
 ```
 
-**Q: How do I test my application during migration?**
+### Q: How do I test my application during migration?
 
 A: Implement comprehensive testing strategy:
 
@@ -1583,7 +1583,7 @@ $ python manage.py check --deploy
 # - Load capacity: Handle 500+ req/s
 ```
 
-**Q: What's the rollback strategy if Django 5.0 migration fails in production?**
+### Q: What's the rollback strategy if Django 5.0 migration fails in production?
 
 A: Maintain dual-environment capability during migration:
 
@@ -1599,7 +1599,7 @@ A: Maintain dual-environment capability during migration:
 $ pg_restore --clean --if-exists staging_backup_pre_migration.sql
 ```
 
-**Q: How do I handle async/sync code mixing during transition?**
+### Q: How do I handle async/sync code mixing during transition?
 
 A: Django 5.0 provides `sync_to_async` and `async_to_sync` utilities:
 
@@ -1619,7 +1619,7 @@ def my_sync_view(request):
     return JsonResponse({'result': result})
 ```
 
-**Q: What are the performance implications of async views?**
+### Q: What are the performance implications of async views?
 
 A: Performance gains depend on I/O-bound operations:
 
@@ -1638,7 +1638,7 @@ A: Performance gains depend on I/O-bound operations:
 # Keep sync for: CPU-intensive calculations, legacy code
 ```
 
-**Q: How do I migrate Celery tasks to work with Django 5.0?**
+### Q: How do I migrate Celery tasks to work with Django 5.0?
 
 A: Celery 5.3+ fully supports Django 5.0:
 

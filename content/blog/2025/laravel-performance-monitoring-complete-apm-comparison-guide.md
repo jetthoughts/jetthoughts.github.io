@@ -43,16 +43,16 @@ public function index()
 
     return view('dashboard', compact('projects'));
 }
-```
+```text
 
 #### Performance Impact Without Monitoring:
 
-```
+```text
 Initial load (10 users):    800ms response time
 After 6 months (100 users): 2.4s response time
 After 12 months (500 users): 8.7s response time
 Critical failure (1000+ users): Timeout errors, database connection exhaustion
-```
+```text
 
 This gradual degradation went unnoticed for 12 months because:
 - No baseline performance metrics existed
@@ -75,7 +75,7 @@ $monthly_calculations = [
 
 // APM tool cost: $300-800/month
 // ROI: 36x-97x return on investment
-```
+```text
 
 Balance APM investment costs with overall technical debt priorities using our [technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/)—the same framework helps Laravel teams quantify monitoring ROI and prioritize performance optimization investments alongside debt reduction efforts.
 
@@ -140,7 +140,7 @@ public function export(Request $request)
 
     return Excel::download(new UsersExport($users), 'users.xlsx');
 }
-```
+```text
 
 For teams struggling with performance visibility and optimization priorities, our [technical leadership consulting](/services/technical-leadership-consulting/) helps establish comprehensive monitoring strategies, identify critical bottlenecks, and build performance budgets aligned with business objectives.
 
@@ -179,7 +179,7 @@ public function index()
         echo $post->author->name;  // No additional queries
     }
 }
-```
+```text
 
 #### Query Performance Benchmarks:
 
@@ -442,7 +442,7 @@ $memory_profile = [
     'memory_limit' => '2 GB',
     'result' => 'Fatal error: Allowed memory size exhausted'
 ];
-```
+```text
 
 Understanding these core bottleneck patterns helps evaluate whether an APM tool provides the specific visibility needed for Laravel performance optimization.
 
@@ -548,7 +548,7 @@ class CheckoutController extends Controller
         // Your checkout logic
     }
 }
-```
+```text
 
 #### Real-World Performance Data:
 
@@ -582,7 +582,7 @@ $newrelic_insights = [
         'disk_io_wait' => 0.12
     ]
 ];
-```
+```text
 
 #### Strengths:
 - **Machine Learning Anomaly Detection**: Automatically identifies unusual patterns
@@ -679,10 +679,15 @@ public function boot()
         });
 
         // Cache monitoring
-        Event::listen('cache.*', function ($event) use ($statsd) {
-            $statsd->increment('cache.' . $event->type, 1, [
-                'key' => $event->key
-            ]);
+        use Illuminate\Cache\Events\CacheHit;
+        use Illuminate\Cache\Events\CacheMissed;
+
+        Event::listen(CacheHit::class, function (CacheHit $event) use ($statsd) {
+            $statsd->increment('cache.hit', 1, ['key' => $event->key]);
+        });
+
+        Event::listen(CacheMissed::class, function (CacheMissed $event) use ($statsd) {
+            $statsd->increment('cache.miss', 1, ['key' => $event->key]);
         });
 
         app()->instance(DogStatsd::class, $statsd);
@@ -713,7 +718,7 @@ class OrderService
         $this->statsd->histogram('order.total', $order->total);
     }
 }
-```
+```text
 
 #### Real-World Dashboard Metrics:
 
@@ -802,7 +807,7 @@ $datadog_pricing = [
         // = $1260 + $80 + $25 = $1365/month
     ]
 ];
-```
+```text
 
 **Best For:** DevOps teams, microservices architectures, organizations needing unified observability (logs + APM + infrastructure), teams already using Datadog for infrastructure monitoring.
 
@@ -863,7 +868,7 @@ class ReportService
 
 // Track custom metrics
 ScoutApm::recordMetric('CustomMetric', 'OrderPlaced', $order->total);
-```
+```text
 
 #### Real-World Scout APM Data:
 
@@ -976,7 +981,7 @@ $scout_pricing = [
         ]
     ]
 ];
-```
+```text
 
 **Best For:** Laravel-focused development teams, startups prioritizing simplicity, developers needing N+1 query detection, teams wanting predictable pricing.
 
@@ -1044,7 +1049,7 @@ tests:
         assertions:
             - "main.wall_time < 200ms"
             - "metrics.symfony.controller.count < 5"
-```
+```text
 
 #### Real-World Blackfire Profile Data:
 
@@ -1089,7 +1094,7 @@ $blackfire_profile = [
         ]
     ]
 ];
-```
+```text
 
 #### Strengths:
 - **Deep Profiling**: Function-level profiling showing exact performance bottlenecks
@@ -1179,7 +1184,7 @@ function recommendAPM($team_profile)
 
     return $recommendations[$team_profile];
 }
-```
+```text
 
 ## Implementation Strategies and Best Practices
 
@@ -1261,7 +1266,7 @@ class BaselineMetrics
 $baseline = new BaselineMetrics();
 $metrics = $baseline->capture();
 Storage::put('performance/baseline.json', json_encode($metrics));
-```
+```text
 
 ### Step 2: Strategic Instrumentation
 
@@ -1342,7 +1347,7 @@ class CheckoutController extends Controller
         }
     }
 }
-```
+```text
 
 ### Step 3: Intelligent Alerting Configuration
 
@@ -1530,7 +1535,7 @@ class PerformanceWorkflow
         ];
     }
 }
-```
+```text
 
 For teams looking to establish comprehensive performance monitoring workflows and integrate APM tools into development processes, our [expert Ruby on Rails development team](/services/app-web-development/) provides guidance on monitoring strategy, implementation support, and performance optimization consulting tailored to your Laravel application architecture.
 
@@ -1596,7 +1601,7 @@ public function dashboard()
 // - Total queries: 4 (99.92% reduction)
 // - Database time: 12% of response time (87ms)
 // - Response time improvement: 2.8s → 234ms (92% faster)
-```
+```text
 
 #### Impact Measurement:
 
@@ -1623,7 +1628,7 @@ $optimization_impact = [
         'memory_reduction' => '85%'
     ]
 ];
-```
+```text
 
 ### Strategy 2: Query Optimization with Indexes
 
@@ -1680,7 +1685,7 @@ $query_optimization = [
         'cost_reduction' => '$840'
     ]
 ];
-```
+```text
 
 ### Strategy 3: Intelligent Caching
 
@@ -1750,7 +1755,7 @@ $caching_impact = [
     'daily_database_time_saved' => '26.7 hours',
     'monthly_cost_savings' => '$2,100'
 ];
-```
+```text
 
 ### Strategy 4: Chunking Large Datasets
 
@@ -1812,7 +1817,7 @@ $chunking_impact = [
     'success_rate' => 1.0,              // 100% (no more memory errors)
     'monthly_error_reduction' => '100%'
 ];
-```
+```text
 
 ### Strategy 5: Queue Optimization
 
@@ -1914,7 +1919,7 @@ $queue_optimization = [
         'support_tickets_reduced' => '67%'
     ]
 ];
-```
+```text
 
 ## Real-World Performance Optimization Case Studies
 
@@ -1995,7 +2000,7 @@ Schema::table('products', function (Blueprint $table) {
 Schema::table('reviews', function (Blueprint $table) {
     $table->index(['product_id', 'created_at']);
 });
-```
+```text
 
 #### Results:
 
@@ -2035,7 +2040,7 @@ $optimization_results = [
         'total_time_to_fix' => '14 hours'
     ]
 ];
-```
+```text
 
 #### Key Learnings:
 1. **Scout's N+1 detection was critical**: Identified 7 separate N+1 patterns with specific fix recommendations
@@ -2132,7 +2137,7 @@ public function generateReport($tenant_id)
         ]);
     }
 }
-```
+```text
 
 #### Results:
 
@@ -2202,7 +2207,7 @@ $scout_advantages_small_teams = [
 ];
 
 // Scout provides 90% of value at 20% of enterprise APM cost
-```
+```text
 
 Blackfire free tier ($0/month) is also excellent for development profiling, but use Scout for production monitoring.
 
@@ -2226,7 +2231,7 @@ $monitoring_comparison = [
 ];
 
 // Example: CloudWatch shows high CPU, but only APM reveals it's caused by N+1 queries
-```
+```text
 
 #### Q: How much performance overhead do APM tools add?
 
@@ -2257,7 +2262,7 @@ $apm_overhead = [
 ];
 
 // Trade-off: 2-5% overhead vs 90%+ performance improvements discovered
-```
+```text
 
 #### Q: Can I use multiple APM tools together?
 
@@ -2278,7 +2283,7 @@ $complementary_apm_strategy = [
 ];
 
 // Common pattern: Scout/New Relic for production + Blackfire for development
-```
+```text
 
 #### Q: How do I measure APM ROI?
 
@@ -2321,7 +2326,7 @@ $apm_roi_calculation = [
         'payback_period' => '1 month'
     ]
 ];
-```
+```text
 
 #### Q: What should I monitor first with APM?
 
@@ -2363,7 +2368,7 @@ $monitoring_priorities = [
 ];
 
 // Start narrow (critical paths), expand broad (comprehensive coverage)
-```
+```text
 
 #### Q: Should I profile in production or only in staging?
 
@@ -2396,4 +2401,4 @@ $profiling_strategy = [
 ];
 
 // Production APM catches real issues, staging profiling prevents regressions
-```
+```text

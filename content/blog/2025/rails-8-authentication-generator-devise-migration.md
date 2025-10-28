@@ -63,7 +63,7 @@ Devise introduces dozens of controller filters and helpers that operate invisibl
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!  # What does this actually do?
 end
-```
+```text
 
 Behind this single line:
 - Multiple database queries checking session validity
@@ -95,7 +95,7 @@ Devise's complexity makes upgrades risky. Real-world example from a client migra
 # 5. Test all authentication flows
 # 6. Update custom Devise modules
 # 7. Migrate encrypted passwords (algorithm changes)
-```
+```text
 
 This upgrade required **40 hours** of development and testing for what should have been a simple Rails version upgrade.
 
@@ -109,7 +109,7 @@ Devise's complexity can obscure security vulnerabilities:
 config.password_length = 6..128  # Too short!
 config.stretches = 1             # Development setting in production!
 config.expire_all_remember_me_on_sign_out = false  # Security risk!
-```
+```text
 
 These misconfigurations existed for **2 years** before security audit detection because they were buried in a 300-line initializer that no one fully understood.
 
@@ -138,7 +138,7 @@ end
 # Results:
 # Devise authentication:     892.3 i/s
 # Rails 8 authentication:    1847.6 i/s - 2.07x faster
-```
+```text
 
 For high-traffic applications processing millions of requests, this 2x performance difference translates to significant infrastructure savings.
 
@@ -211,9 +211,9 @@ class User < ApplicationRecord
     email
   end
 end
-```
+```text
 
-**What `has_secure_password` provides**:
+### What `has_secure_password` provides
 - BCrypt password hashing with appropriate cost factor
 - `password` and `password_confirmation` virtual attributes
 - `authenticate(password)` method for password verification
@@ -367,7 +367,7 @@ end
 
 # config/application.rb
 config.middleware.use Rack::Attack
-```
+```text
 
 ### Extensibility: Build What You Need
 
@@ -425,7 +425,7 @@ class TwoFactorsController < ApplicationController
     end
   end
 end
-```
+```text
 
 #### OAuth Integration (Google/GitHub/etc.)
 
@@ -531,7 +531,7 @@ class SessionsController < ApplicationController
     end
   end
 end
-```
+```text
 
 ### Performance Characteristics
 
@@ -558,7 +558,7 @@ end
 # Results:
 # Rails 8 auth:    2,847 i/s
 # Devise auth:       892 i/s - 3.19x slower
-```
+```text
 
 #### Memory Usage Comparison
 
@@ -634,7 +634,7 @@ assessment = {
   password_encryption: "bcrypt",  # Check devise.rb
   estimated_hours: 40  # Baseline for medium complexity
 }
-```
+```text
 
 ### Phase 2: Preparing Your Application
 
@@ -651,7 +651,7 @@ $ rails generate authentication
 # - app/controllers/sessions_controller.rb (new)
 # - app/controllers/passwords_controller.rb (new)
 # - app/models/concerns/authenticatable.rb (new)
-```
+```text
 
 #### Rename to avoid conflicts:
 
@@ -672,7 +672,7 @@ class AddRails8AuthToUsers < ActiveRecord::Migration[8.0]
     add_column :users, :confirmation_sent_at, :datetime
   end
 end
-```
+```text
 
 #### Migrate Password Hashes
 
@@ -694,7 +694,7 @@ namespace :auth do
 end
 
 $ bin/rails auth:migrate_passwords
-```
+```text
 
 #### Test Password Authentication Compatibility
 
@@ -828,7 +828,7 @@ class SessionsController < ApplicationController
     end
   end
 end
-```
+```text
 
 ### Phase 4: Data Migration and Validation
 
@@ -950,7 +950,7 @@ class AuthRollout
     Digest::MD5.hexdigest(user_id.to_s).to_i(16) % 100 < current_percentage
   end
 end
-```
+```text
 
 #### Update Routes
 
@@ -995,7 +995,7 @@ class ApplicationController < ActionController::Base
     yield
   end
 end
-```
+```text
 
 #### Remove Devise (Final Step)
 
@@ -1047,7 +1047,7 @@ class RemoveDeviseColumns < ActiveRecord::Migration[8.0]
     remove_column :users, :unconfirmed_email, :string
   end
 end
-```
+```text
 
 ## Production Deployment and Security Considerations
 
@@ -1085,7 +1085,7 @@ class Rack::Attack
     BadActorList.include?(req.ip)
   end
 end
-```
+```text
 
 #### Secure Session Configuration
 
@@ -1348,7 +1348,7 @@ end
 
 # Can be triggered via Rails console or admin interface
 $ rails runner "AuthRollback.execute!"
-```
+```text
 
 ### Production Deployment Checklist
 
