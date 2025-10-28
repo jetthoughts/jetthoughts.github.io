@@ -1,21 +1,11 @@
 ---
-dev_to_id: null
 title: "Laravel 11 Migration Guide: Complete Production Deployment Strategies"
 description: "Master the migration from Laravel 10 to Laravel 11. Complete guide with breaking changes analysis, step-by-step migration, testing strategies, and zero-downtime production deployment."
 date: 2025-10-27
-created_at: "2025-10-27T12:00:00Z"
-edited_at: "2025-10-27T12:00:00Z"
 draft: false
 tags: ["laravel", "php", "migration", "deployment", "laravel11"]
 canonical_url: "https://jetthoughts.com/blog/laravel-11-migration-guide-production-deployment-strategies/"
-cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730032800/laravel-11-migration-guide.jpg"
 slug: "laravel-11-migration-guide-production-deployment-strategies"
-metatags:
-  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730032800/laravel-11-migration-guide.jpg"
-  og_title: "Laravel 11 Migration Guide: Complete Production Deployment | JetThoughts"
-  og_description: "Master Laravel 11 migration with breaking changes analysis, step-by-step upgrade, testing strategies, production deployment best practices."
-  twitter_title: "Laravel 11 Migration Guide: Production Deployment Strategies"
-  twitter_description: "Complete guide: Laravel 11 upgrade, breaking changes, testing strategies, zero-downtime production deployment"
 ---
 
 Laravel 11 introduces the most significant architectural improvements since Laravel 8, marking a pivotal moment for PHP development teams managing production applications. Released in March 2024, Laravel 11 streamlines application structure, enhances performance, and introduces modern PHP 8.2+ features that reduce boilerplate code while improving maintainability and developer productivity.
