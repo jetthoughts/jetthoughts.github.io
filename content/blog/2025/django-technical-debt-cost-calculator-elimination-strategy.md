@@ -253,7 +253,7 @@ case_study = {
     "technical_debt_caused": "6-month delay on mobile API",
     "competitor_advantage": "Captured enterprise customers",
     "lost_revenue": 1200000,  # USD annual recurring revenue
-    "refactoring_would_have_cost": 180000  # USD
+    "refactoring_would_have_cost": 180000,  # USD
     "lost_opportunity_ratio": 6.67  # 6.67x ROI on refactoring
 }
 ```
