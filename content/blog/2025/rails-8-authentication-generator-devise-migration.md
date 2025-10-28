@@ -202,7 +202,7 @@ class User < ApplicationRecord
   normalizes :email, with: -> email { email.strip.downcase }
 
   generates_token_for :password_reset, expires_in: 15.minutes do
-    password_salt&.last(10)
+    password_digest&.last(10)
   end
 
   generates_token_for :email_confirmation, expires_in: 24.hours do
@@ -359,7 +359,7 @@ class Rack::Attack
 
   # Throttle password reset requests
   throttle("password_resets/ip", limit: 3, period: 60.seconds) do |req|
-    req.ip if req.path == "/password" && req.post?
+    req.ip if req.path == "/passwords" && req.post?
   end
 end
 
@@ -665,9 +665,10 @@ $ mv app/controllers/passwords_controller.rb app/controllers/rails8_passwords_co
 class AddRails8AuthToUsers < ActiveRecord::Migration[8.0]
   def change
     # Don't rename encrypted_password yet - keep both during migration
-    add_column :users, :password_digest, :string
-    add_column :users, :confirmed_at, :datetime
-    add_column :users, :confirmation_sent_at, :datetime
+    # Guard against existing columns (for Devise apps)
+    add_column :users, :password_digest, :string unless column_exists?(:users, :password_digest)
+    add_column :users, :confirmed_at, :datetime unless column_exists?(:users, :confirmed_at)
+    add_column :users, :confirmation_sent_at, :datetime unless column_exists?(:users, :confirmation_sent_at)
   end
 end
 ```text

@@ -996,7 +996,10 @@ config.assets.pipeline = :propshaft
 # config/environments/production.rb
 # Serve legacy assets from separate path
 config.assets.prefix = '/assets'
-config.assets.legacy_prefix = '/legacy-assets'
+
+# Mount legacy Sprockets assets via Rack::Static
+config.middleware.insert_before ActionDispatch::Static, Rack::Static,
+  urls: ['/legacy-assets'], root: Rails.root.join('public')
 ```
 
 #### Incremental Migration Plan:
@@ -1136,6 +1139,13 @@ namespace :assets do
   task verify: :environment do
     missing_assets = []
 
+    # Check manifest.json exists
+    manifest_path = Rails.root.join("public/assets/.manifest.json")
+    unless File.exist?(manifest_path)
+      puts "❌ Missing manifest.json - run rails assets:precompile first"
+      exit 1
+    end
+
     # Parse importmap.rb
     importmap_file = Rails.root.join("config/importmap.rb")
     importmap_content = File.read(importmap_file)
@@ -1143,12 +1153,30 @@ namespace :assets do
     # Extract pinned assets
     pins = importmap_content.scan(/pin\s+"([^"]+)"/)
 
+    # Load manifest for digest lookup
+    manifest = JSON.parse(File.read(manifest_path))
+
     pins.each do |pin_name|
-      # Use Propshaft-compatible verification via asset_path helper
       logical = pin_name[0]
-      path = ActionController::Base.helpers.asset_path(logical)
-      # Verify asset exists in compiled assets directory
-      missing_assets << logical if path.blank? || !File.exist?(Rails.root.join("public/assets/#{File.basename(path)}"))
+
+      # Check manifest for digested version
+      digested = manifest[logical] || manifest["#{logical}.js"]
+
+      if digested
+        # Verify digested file exists (handle both filename and full path)
+        digested_basename = File.basename(digested)
+        full_path = Rails.root.join("public/assets", digested_basename)
+
+        # Also check with glob for digest variations
+        glob_pattern = Rails.root.join("public/assets/#{logical.sub('.js', '')}-*.js")
+        glob_matches = Dir.glob(glob_pattern)
+
+        unless File.exist?(full_path) || glob_matches.any?
+          missing_assets << logical
+        end
+      else
+        missing_assets << logical
+      end
     end
 
     if missing_assets.any?
