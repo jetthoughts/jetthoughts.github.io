@@ -11,8 +11,6 @@ tags: ["rails", "docker", "deployment", "devops", "production", "rails-8"]
 categories: ["Development", "Rails", "DevOps"]
 cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730120400/rails-8-docker-deployment.jpg"
 canonical_url: "https://jetthoughts.com/blog/rails-8-docker-deployment-production-guide/"
-created_at: "2025-10-28T13:00:00Z"
-edited_at: "2025-10-28T13:00:00Z"
 metatags:
   image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730120400/rails-8-docker-deployment.jpg"
   og_title: "Rails 8 Docker Deployment: Production-Ready Configuration | JetThoughts"
@@ -476,6 +474,8 @@ services:
       - frontend
     restart: unless-stopped
     deploy:
+      # Note: deploy section is only used by Docker Swarm, ignored by docker-compose
+      # For docker-compose scaling, use: docker-compose up --scale web=2
       replicas: 2 # Run 2 instances for high availability
       resources:
         limits:
@@ -682,7 +682,7 @@ jobs:
           docker push myregistry.com/myapp:latest
 
       - name: Deploy to server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}

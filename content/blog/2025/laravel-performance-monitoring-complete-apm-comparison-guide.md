@@ -18,7 +18,7 @@ This comprehensive guide compares the four leading Laravel APM tools—New Relic
 
 Laravel's elegant developer experience can mask performance problems until they reach production at scale. What works perfectly with 10 concurrent users becomes catastrophic at 1,000, and by then, fixing performance issues requires emergency response instead of proactive optimization.
 
-#### Real-World Performance Crisis
+### Real-World Performance Crisis
 
 Consider a typical SaaS application experiencing gradual performance degradation:
 
@@ -43,9 +43,9 @@ public function index()
 
     return view('dashboard', compact('projects'));
 }
-```text
+```
 
-#### Performance Impact Without Monitoring:
+### Performance Impact Without Monitoring:
 
 ```text
 Initial load (10 users):    800ms response time
@@ -60,7 +60,7 @@ This gradual degradation went unnoticed for 12 months because:
 - No query-level visibility identified N+1 patterns
 - No correlation between user growth and performance decline
 
-#### The Business Cost:
+### The Business Cost:
 
 ```php
 // Cost calculation without APM monitoring
@@ -79,7 +79,7 @@ $monthly_calculations = [
 
 Balance APM investment costs with overall technical debt priorities using our [technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/)—the same framework helps Laravel teams quantify monitoring ROI and prioritize performance optimization investments alongside debt reduction efforts.
 
-#### Symptoms of Performance Blindness:
+### Symptoms of Performance Blindness:
 
 Your Laravel application likely has hidden performance issues if you're experiencing:
 
@@ -97,7 +97,7 @@ $warning_signs = [
 ];
 ```
 
-#### Database Query Explosion:
+### Database Query Explosion:
 
 ```php
 // Without APM: This code looks fine

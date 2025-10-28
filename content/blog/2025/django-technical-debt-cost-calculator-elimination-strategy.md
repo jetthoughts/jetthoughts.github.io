@@ -1921,7 +1921,7 @@ success_factors = {
 
 ### Case Study 2: SaaS Startup - 3x Feature Velocity Improvement
 
-### Background:
+### Context:
 - **Company**: B2B SaaS platform (Django 3.1, 3 years old)
 - **Team Size**: 5 developers
 - **Technical Debt Score**: 3.7 (Medium-High)
