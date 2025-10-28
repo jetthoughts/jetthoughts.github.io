@@ -3,8 +3,6 @@ dev_to_id: null
 title: "Propshaft vs Sprockets: Complete Rails 8 Asset Pipeline Migration Guide"
 description: "Master the migration from Sprockets to Propshaft in Rails 8. Complete guide with performance benchmarks, step-by-step migration, and production deployment strategies."
 date: 2025-10-27
-created_at: "2025-10-27T10:00:00Z"
-edited_at: "2025-10-27T10:00:00Z"
 draft: false
 tags: ["rails", "propshaft", "sprockets", "assets", "performance"]
 canonical_url: "https://jetthoughts.com/blog/propshaft-vs-sprockets-rails-8-asset-pipeline-migration/"
@@ -1146,8 +1144,11 @@ namespace :assets do
     pins = importmap_content.scan(/pin\s+"([^"]+)"/)
 
     pins.each do |pin_name|
-      asset_path = Rails.application.assets.load_path.find(pin_name[0])
-      missing_assets << pin_name[0] unless asset_path
+      # Use Propshaft-compatible verification via asset_path helper
+      logical = pin_name[0]
+      path = ActionController::Base.helpers.asset_path(logical)
+      # Verify asset exists in compiled assets directory
+      missing_assets << logical if path.blank? || !File.exist?(Rails.root.join("public/assets/#{File.basename(path)}"))
     end
 
     if missing_assets.any?

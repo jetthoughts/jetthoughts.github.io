@@ -3,8 +3,6 @@ dev_to_id: null
 title: "Rails 8 Authentication Generator: Complete Migration from Devise"
 description: "Master the migration from Devise to Rails 8's built-in authentication system. Complete guide with step-by-step migration, security best practices, and production deployment strategies."
 date: 2025-10-27
-created_at: "2025-10-27T11:00:00Z"
-edited_at: "2025-10-27T11:00:00Z"
 draft: false
 tags: ["rails", "authentication", "devise", "security", "rails8"]
 canonical_url: "https://jetthoughts.com/blog/rails-8-authentication-generator-devise-migration/"

@@ -11,8 +11,6 @@ tags: ["rails", "solid-cache", "redis", "caching", "performance", "rails-8"]
 categories: ["Development", "Rails", "Performance"]
 cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730033400/solid-cache-redis-migration.jpg"
 canonical_url: "https://jetthoughts.com/blog/rails-8-solid-cache-performance-redis-migration/"
-created_at: "2025-10-27T13:00:00Z"
-edited_at: "2025-10-27T13:00:00Z"
 metatags:
   image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730033400/solid-cache-redis-migration.jpg"
   og_title: "Rails 8 Solid Cache Performance: Complete Redis Migration | JetThoughts"
@@ -263,8 +261,15 @@ class RedisCacheAudit
   end
 
   def self.analyze_access_patterns
-    # Sample cache keys to understand patterns
-    sample_keys = Redis.current.randomkey(100)
+    # Sample cache keys to understand patterns using SCAN (non-blocking)
+    sample_keys = []
+    cursor = "0"
+    loop do
+      cursor, batch = Redis.current.scan(cursor, match: "*", count: 100)
+      sample_keys.concat(batch)
+      break if cursor == "0" || sample_keys.size >= 100
+    end
+
     {
       page_caching: sample_keys.count { |k| k.start_with?('views/') },
       fragment_caching: sample_keys.count { |k| k.start_with?('fragments/') },
@@ -274,7 +279,15 @@ class RedisCacheAudit
   end
 
   def self.analyze_ttl_patterns
-    keys = Redis.current.keys('*').sample(1000)
+    # Use SCAN instead of KEYS to avoid blocking production Redis
+    keys = []
+    cursor = "0"
+    loop do
+      cursor, batch = Redis.current.scan(cursor, match: "*", count: 1000)
+      keys.concat(batch)
+      break if cursor == "0" || keys.size >= 1000
+    end
+
     ttls = keys.map { |k| Redis.current.ttl(k) }
     {
       average_ttl: ttls.sum / ttls.size,
@@ -495,11 +508,19 @@ class CacheWarmer
   end
 
   def self.verify_warmup
-    # Verify cache consistency
+    # Verify cache consistency using SCAN (non-blocking)
     redis = Redis.new(url: ENV['REDIS_URL'])
     solid_cache = Rails.cache
 
-    sample_keys = redis.keys('*').sample(100)
+    # Use SCAN instead of KEYS to avoid blocking production Redis
+    sample_keys = []
+    cursor = "0"
+    loop do
+      cursor, batch = redis.scan(cursor, match: "*", count: 100)
+      sample_keys.concat(batch)
+      break if cursor == "0" || sample_keys.size >= 100
+    end
+
     mismatches = 0
 
     sample_keys.each do |key|
@@ -959,12 +980,25 @@ class SolidCacheMetrics
   end
 
   def self.calculate_hit_rate
-    # Implement hit rate tracking
-    # Requires custom instrumentation
-    cache_hits = Rails.cache.stats[:hits] || 0
-    cache_misses = Rails.cache.stats[:misses] || 0
+    # Implement hit rate tracking with custom instrumentation
+    # Note: Rails.cache.stats is not universally supported (including Solid Cache)
+    # Use ActiveSupport::Notifications for portable hit rate tracking
+    cache_hits = @cache_hits_counter ||= 0
+    cache_misses = @cache_misses_counter ||= 0
     total = cache_hits + cache_misses
     total > 0 ? (cache_hits.to_f / total * 100).round(2) : 0
+  end
+
+  # Track cache hits/misses with ActiveSupport::Notifications
+  ActiveSupport::Notifications.subscribe('cache_read.active_support') do |*args|
+    event = ActiveSupport::Notifications::Event.new(*args)
+    if event.payload[:hit]
+      @cache_hits_counter ||= 0
+      @cache_hits_counter += 1
+    else
+      @cache_misses_counter ||= 0
+      @cache_misses_counter += 1
+    end
   end
 end
 
