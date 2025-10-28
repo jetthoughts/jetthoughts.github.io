@@ -315,29 +315,29 @@ Schema::create('users', function (Blueprint $table) {
 php artisan schema:dump --prune  // Creates single migration file
 ```
 
-**Model Casts Array Removal**
+**Model Casts Array Changes**
 
-Laravel 11 deprecates the `$casts` array's `array` cast in favor of `AsArrayObject`:
+Laravel 11 recommends `AsArrayObject` over the `array` cast for better type safety and functionality:
 
 ```php
 // Laravel 10: Using 'array' cast
 class User extends Model
 {
     protected $casts = [
-        'metadata' => 'array',  // ⚠️ Deprecated in Laravel 11
+        'metadata' => 'array',  // Still works in Laravel 11
     ];
 }
 
-// Laravel 11: Using AsArrayObject cast
+// Laravel 11: Using AsArrayObject cast (recommended for better type safety)
 use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 
 class User extends Model
 {
     protected $casts = [
-        'metadata' => AsArrayObject::class,  // ✅ Recommended approach
+        'metadata' => AsArrayObject::class,  // ✅ Recommended for new code
     ];
 
-    // Access as array
+    // Access as array with AsArrayObject benefits
     public function example()
     {
         $this->metadata['key'] = 'value';  // Works with AsArrayObject
@@ -361,7 +361,7 @@ class Post extends Model
     ];
 }
 
-// Laravel 11: Using casts() method
+// Laravel 11: Using casts() method (Example A - Static casts)
 class Post extends Model
 {
     protected function casts(): array
@@ -372,8 +372,11 @@ class Post extends Model
             'metadata' => AsArrayObject::class,
         ];
     }
+}
 
-    // Benefit: Dynamic casting based on conditions
+// Example B: Dynamic casting based on conditions
+class AdvancedPost extends Model
+{
     protected function casts(): array
     {
         $casts = [
@@ -528,10 +531,9 @@ class MigrationSafetyTest extends TestCase
 
     public function test_baseline_service_providers()
     {
-        $providers = array_map(
-            fn($provider) => get_class($provider),
-            app()->getProviders()
-        );
+        // Note: Using reflection to access registered providers
+        // Laravel 11 may not expose getProviders() directly
+        $providers = collect(config('app.providers'))->toArray();
 
         file_put_contents(
             storage_path('tests/baseline_providers.json'),

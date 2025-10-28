@@ -121,10 +121,10 @@ RUN apt-get update -qq && \
     curl && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Node.js and Yarn (for asset compilation)
+# Install Node.js and enable Corepack (for Yarn management)
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs && \
-    npm install -g yarn && \
+    corepack enable && \
     rm -rf /var/lib/apt/lists/*
 
 # Create app directory
@@ -403,7 +403,6 @@ server {
     # Security headers
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
-    add_header X-XSS-Protection "1; mode=block" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
 
     # Serve static assets directly

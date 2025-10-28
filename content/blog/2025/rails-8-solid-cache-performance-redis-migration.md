@@ -83,6 +83,8 @@ After (Solid Cache):
 
 **Annual savings: $9,960** with negligible performance impact for moderate cache hit rates.
 
+**Note:** These cost estimates are for the specified e-commerce platform scenario. Actual costs depend on hosting provider, data transfer, storage rates, and labor rates in your region. Benchmark with your specific infrastructure and regional pricing.
+
 ## Solid Cache Architecture Deep Dive
 
 ### Database-Backed Caching Fundamentals
@@ -825,6 +827,8 @@ Total Annual Cost: $780
 Annual Savings: $17,720 (95.8% reduction)
 ```
 
+**Note:** These cost estimates are for the specified mid-size SaaS scenario (50K users, 1M cache reads/day). Actual costs depend on hosting provider, data transfer, storage rates, and labor rates in your region. Benchmark with your specific infrastructure and regional pricing.
+
 ### ROI Calculation for Migration
 
 ```ruby
@@ -1086,7 +1090,7 @@ Need expert assistance with your Rails caching strategy or Solid Cache migration
 
 ---
 
-*Performance benchmarks based on Rails 8 beta and PostgreSQL 14+. Actual results vary by application workload, database configuration, and infrastructure. Always benchmark with production-like data before making caching decisions.*
+*Performance benchmarks and cost estimates based on Rails 8 beta and PostgreSQL 14+. Actual results vary by application workload, database configuration, hosting provider, regional pricing, and infrastructure. Cost estimates reflect specific scenarios described in each section. Always benchmark with production-like data and obtain real pricing quotes before making caching decisions.*
 
 ## Resources and Further Reading
 
