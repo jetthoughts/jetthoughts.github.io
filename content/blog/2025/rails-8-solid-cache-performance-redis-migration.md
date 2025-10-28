@@ -28,7 +28,7 @@ Rails 8 introduces Solid Cache as the default caching backend, marking a signifi
 
 **Solid Cache** leverages your existing database for caching, eliminating external dependencies while providing reliable, cost-effective performance. **Redis** offers superior speed for cache-intensive applications but requires dedicated infrastructure.
 
-**Quick Decision Framework:**
+#### Quick Decision Framework:
 - **Choose Solid Cache** for: Simplified operations, cost reduction, moderate cache hit rates (<10,000 reads/sec)
 - **Choose Redis** for: High-frequency caching (>10,000 reads/sec), sub-millisecond latency requirements, established Redis infrastructure
 
@@ -38,7 +38,7 @@ Rails 8 introduces Solid Cache as the default caching backend, marking a signifi
 
 Traditional Rails caching requires Redis or Memcached infrastructure, adding operational complexity:
 
-**Traditional Caching Architecture:**
+#### Traditional Caching Architecture:
 ```yaml
 Infrastructure Requirements:
   - Rails application servers
@@ -54,7 +54,7 @@ Monthly Costs (typical mid-size app):
   - DevOps overhead: 5-10 hours/month
 ```
 
-**Solid Cache Architecture:**
+#### Solid Cache Architecture:
 ```yaml
 Simplified Infrastructure:
   - Rails application servers
@@ -67,7 +67,7 @@ Monthly Costs:
 
 ### Real-World Impact: Cost Savings Analysis
 
-**Case Study: E-commerce Platform Migration**
+#### Case Study: E-commerce Platform Migration
 
 Before (Redis):
 - Redis hosting: $350/month
@@ -114,7 +114,7 @@ config.cache_store = :solid_cache_store, {
 }
 ```
 
-**Key Architecture Benefits:**
+#### Key Architecture Benefits:
 
 1. **Transactional Consistency**
 ```ruby
@@ -165,7 +165,7 @@ end
 
 ### Performance Characteristics
 
-**Solid Cache Performance Profile:**
+#### Solid Cache Performance Profile:
 
 | Operation | Solid Cache (PostgreSQL) | Redis | Difference |
 |-----------|--------------------------|-------|------------|
@@ -176,7 +176,7 @@ end
 | **Cache hit rate** | Same | Same | Equal |
 | **Storage capacity** | Unlimited (disk) | Limited (memory) | Advantage Solid Cache |
 
-**Performance Trade-offs:**
+#### Performance Trade-offs:
 
 ```ruby
 # Scenarios where Solid Cache performs well
@@ -329,7 +329,7 @@ end
 
 ### Step-by-Step Migration Process
 
-**Phase 1: Setup Solid Cache Infrastructure**
+#### Phase 1: Setup Solid Cache Infrastructure
 
 ```ruby
 # 1. Add solid_cache to Gemfile
@@ -358,7 +358,7 @@ Rails.application.configure do
 end
 ```
 
-**Phase 2: Database Optimization for Caching**
+#### Phase 2: Database Optimization for Caching
 
 ```ruby
 # Create optimized indexes for cache performance
@@ -398,7 +398,7 @@ production:
     # Consider using SSD or NVMe storage
 ```
 
-**Phase 3: Parallel Operation (Blue-Green Migration)**
+#### Phase 3: Parallel Operation (Blue-Green Migration)
 
 ```ruby
 # Run both caches simultaneously to validate
@@ -456,7 +456,7 @@ Rails.application.configure do
 end
 ```
 
-**Phase 4: Cache Warming Strategy**
+#### Phase 4: Cache Warming Strategy
 
 ```ruby
 # Warm up Solid Cache from Redis before cutover
@@ -521,7 +521,7 @@ rails runner "CacheWarmer.warm_from_redis"
 rails runner "CacheWarmer.verify_warmup"
 ```
 
-**Phase 5: Cutover and Redis Decommission**
+#### Phase 5: Cutover and Redis Decommission
 
 ```bash
 # 1. Final cache sync
@@ -545,7 +545,7 @@ rails runner "CachePerformanceMonitor.start_monitoring"
 
 ### Migration Gotchas and Solutions
 
-**Common Issues and Resolutions:**
+#### Common Issues and Resolutions:
 
 1. **Database Connection Pool Exhaustion**
 ```ruby
@@ -790,13 +790,13 @@ end
 
 ### Total Cost of Ownership Comparison
 
-**Scenario: Mid-Size SaaS Application**
+#### Scenario: Mid-Size SaaS Application
 - 50,000 active users
 - 1M cache reads/day
 - 100K cache writes/day
 - Cache size: 2GB average
 
-**Redis Total Costs (Annual):**
+#### Redis Total Costs (Annual):
 ```yaml
 Infrastructure:
   Redis Hosting (AWS ElastiCache): $350/month × 12 = $4,200
@@ -811,7 +811,7 @@ Operational:
 Total Annual Cost: $18,500
 ```
 
-**Solid Cache Total Costs (Annual):**
+#### Solid Cache Total Costs (Annual):
 ```yaml
 Infrastructure:
   Additional DB storage (2GB): $10/month × 12 = $120
@@ -1050,7 +1050,7 @@ end
 **Before:** Redis caching with 5GB cache
 **After:** Solid Cache with selective Redis
 
-**Migration Results:**
+#### Migration Results:
 - **Infrastructure costs:** Reduced by 72% ($450/month → $125/month)
 - **Cache hit rate:** Maintained at 85%
 - **Average response time:** Increased by 12ms (acceptable trade-off)
@@ -1065,7 +1065,7 @@ Our [Ruby on Rails development services](/services/app-web-development/) helped 
 **Before:** Memcached cluster with frequent cache invalidation issues
 **After:** Solid Cache with transactional caching
 
-**Migration Benefits:**
+#### Migration Benefits:
 - **Cache consistency:** 100% (transactional caching eliminated race conditions)
 - **Deployment complexity:** Reduced by removing Memcached infrastructure
 - **Cache warming:** Automatic on deploy (database-backed)

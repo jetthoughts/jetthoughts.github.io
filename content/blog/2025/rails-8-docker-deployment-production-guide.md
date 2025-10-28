@@ -28,7 +28,7 @@ Rails 8's simplified deployment story makes Docker the natural choice for produc
 
 **Docker deployment** for Rails 8 offers consistency, reproducibility, and simplified infrastructure management. This guide covers everything from basic Dockerfile creation to advanced multi-stage builds, production orchestration, and deployment strategies.
 
-**Key Benefits:**
+#### Key Benefits:
 - **Environment consistency** across development, staging, and production
 - **Simplified dependencies** with containerized services (PostgreSQL, Redis, etc.)
 - **Horizontal scaling** capabilities with container orchestration
@@ -40,7 +40,7 @@ Rails 8's simplified deployment story makes Docker the natural choice for produc
 
 Traditional Rails deployments involve complex server provisioning, dependency management, and environment configuration. Docker solves these challenges through containerization:
 
-**Traditional Deployment Problems:**
+#### Traditional Deployment Problems:
 ```yaml
 Manual Setup Issues:
   - Ruby version management across servers
@@ -56,7 +56,7 @@ Operational Overhead:
   - Rollback safety: Manual and risky
 ```
 
-**Docker Deployment Advantages:**
+#### Docker Deployment Advantages:
 ```yaml
 Containerized Benefits:
   - Ruby version: Locked in container image
@@ -217,7 +217,7 @@ CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
 
 ### Dockerfile Optimization Techniques
 
-**Image Size Optimization:**
+#### Image Size Optimization:
 
 ```dockerfile
 # Before optimization: ~1.2GB final image
@@ -235,7 +235,7 @@ CMD ["rails", "server"]
 # - Remove build artifacts
 ```
 
-**Layer Caching Optimization:**
+#### Layer Caching Optimization:
 
 ```dockerfile
 # Inefficient: Changes to app code invalidate all layers
@@ -251,7 +251,7 @@ RUN rails assets:precompile
 # Now dependency installation is cached unless Gemfile changes
 ```
 
-**Build Performance Comparison:**
+#### Build Performance Comparison:
 
 | Technique | Initial Build | Rebuild (code change) | Image Size |
 |-----------|---------------|----------------------|------------|
@@ -521,7 +521,7 @@ networks:
   frontend:
 ```
 
-**Deployment Script:**
+#### Deployment Script:
 
 ```bash
 #!/bin/bash
@@ -889,7 +889,7 @@ networks:
   monitoring:
 ```
 
-**Prometheus Configuration:**
+#### Prometheus Configuration:
 
 ```yaml
 # prometheus.yml
@@ -907,7 +907,7 @@ scrape_configs:
       - targets: ['cadvisor:8080']
 ```
 
-**Rails Metrics Endpoint:**
+#### Rails Metrics Endpoint:
 
 ```ruby
 # app/controllers/metrics_controller.rb
@@ -1001,7 +1001,7 @@ services:
 **Before:** Traditional server deployments with Capistrano
 **After:** Docker-based deployment with container orchestration
 
-**Migration Results:**
+#### Migration Results:
 - **Deployment time:** Reduced from 45 minutes to 8 minutes
 - **Environment consistency:** 100% (eliminated "works on my machine" issues)
 - **Infrastructure costs:** Reduced by 35% through better resource utilization

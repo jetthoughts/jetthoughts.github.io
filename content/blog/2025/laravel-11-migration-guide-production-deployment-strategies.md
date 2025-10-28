@@ -18,7 +18,7 @@ This comprehensive guide provides everything PHP development teams need to succe
 
 Laravel 11's improvements come with breaking changes that affect application architecture, configuration management, and framework behavior. Understanding these changes before migration prevents surprises and enables accurate effort estimation. To avoid accumulating new technical debt during migration, review our [Django technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/)—the same patterns apply to Laravel applications for quantifying debt impact and prioritizing elimination efforts alongside framework upgrades.
 
-**PHP Version Requirements**
+#### PHP Version Requirements
 
 Laravel 11 requires PHP 8.2 or higher, representing a significant shift from Laravel 10's PHP 8.1 minimum:
 
@@ -42,14 +42,14 @@ Laravel 11 requires PHP 8.2 or higher, representing a significant shift from Lar
 }
 ```
 
-**Impact Assessment:**
+#### Impact Assessment:
 
 - **Hosting environment updates**: Verify production PHP version and update infrastructure
 - **Development environment alignment**: Ensure all team members use PHP 8.2+
 - **CI/CD pipeline modifications**: Update test runners and deployment scripts
 - **Third-party package compatibility**: Audit dependencies for PHP 8.2 support
 
-**Application Structure Simplification**
+#### Application Structure Simplification
 
 Laravel 11 dramatically simplifies the default application structure, removing several middleware, service providers, and configuration files:
 
@@ -85,7 +85,7 @@ app/
     └── AppServiceProvider.php        // ✅ Single provider for most apps
 ```
 
-**Migration Impact:**
+#### Migration Impact:
 
 ```php
 // Before (Laravel 10): Multiple service providers
@@ -127,7 +127,7 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
-**Route Configuration Changes**
+#### Route Configuration Changes
 
 Laravel 11 introduces route-based configuration, eliminating separate configuration files for many features:
 
@@ -164,7 +164,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->create();
 ```
 
-**Middleware Registration Changes**
+#### Middleware Registration Changes
 
 Laravel 11 moves middleware registration from HTTP Kernel to `bootstrap/app.php`:
 
@@ -222,7 +222,7 @@ protected $routeMiddleware = [
 })
 ```
 
-**Exception Handling Consolidation**
+#### Exception Handling Consolidation
 
 Laravel 11 consolidates exception handling into `bootstrap/app.php`:
 
@@ -288,7 +288,7 @@ class Handler extends ExceptionHandler
 })
 ```
 
-**Database Migration Changes**
+#### Database Migration Changes
 
 Laravel 11 modifies default migration behavior:
 
@@ -315,7 +315,7 @@ Schema::create('users', function (Blueprint $table) {
 php artisan schema:dump --prune  // Creates single migration file
 ```
 
-**Model Casts Array Changes**
+#### Model Casts Array Changes
 
 Laravel 11 recommends `AsArrayObject` over the `array` cast for better type safety and functionality:
 
@@ -346,7 +346,7 @@ class User extends Model
 }
 ```
 
-**Eloquent Model `casts` Method**
+#### Eloquent Model `casts` Method
 
 Laravel 11 introduces the `casts()` method as an alternative to the `$casts` property:
 
@@ -398,7 +398,7 @@ For teams navigating complex Laravel upgrades or requiring strategic guidance on
 
 Successful Laravel 11 migrations begin with comprehensive planning and assessment. Understanding your application's complexity, dependencies, and custom implementations ensures accurate effort estimation and risk mitigation.
 
-**Application Complexity Assessment**
+#### Application Complexity Assessment
 
 ```php
 // Create assessment script
@@ -443,7 +443,7 @@ echo "=== Breaking Changes Impact ===\n";
 echo json_encode($breaking_changes, JSON_PRETTY_PRINT) . "\n";
 ```
 
-**Dependency Audit**
+#### Dependency Audit
 
 ```bash
 # Check Composer dependencies for Laravel 11 compatibility
@@ -460,7 +460,7 @@ composer why-not laravel/framework 11.0
 # - barryvdh/laravel-debugbar: ^3.9
 ```
 
-**Custom Code Audit**
+#### Custom Code Audit
 
 Identify custom implementations that may conflict with Laravel 11 changes:
 
@@ -481,7 +481,7 @@ grep -r "public function render" app/Exceptions/Handler.php
 grep -r "public function report" app/Exceptions/Handler.php
 ```
 
-**Testing Strategy Development**
+#### Testing Strategy Development
 
 ```php
 // tests/Feature/MigrationSafetyTest.php
@@ -545,7 +545,7 @@ class MigrationSafetyTest extends TestCase
 }
 ```
 
-**Migration Effort Estimation**
+#### Migration Effort Estimation
 
 ```php
 // Calculate estimated migration time
@@ -596,7 +596,7 @@ With comprehensive assessment complete, execute the migration through systematic
 
 ### Phase 1: Environment Preparation
 
-**Update Development Environment**
+#### Update Development Environment
 
 ```bash
 # Update PHP version (example for Ubuntu/Debian)
@@ -613,7 +613,7 @@ composer self-update
 composer clear-cache
 ```
 
-**Create Migration Branch**
+#### Create Migration Branch
 
 ```bash
 # Create dedicated migration branch
@@ -626,7 +626,7 @@ git status
 php artisan about > docs/pre-migration-state.txt
 ```
 
-**Backup Critical Data**
+#### Backup Critical Data
 
 ```bash
 # Backup database
@@ -644,7 +644,7 @@ cp composer.lock composer.lock.backup
 
 ### Phase 2: Composer Dependencies Update
 
-**Update Laravel Framework**
+#### Update Laravel Framework
 
 ```json
 // composer.json - Update Laravel version
@@ -667,7 +667,7 @@ cp composer.lock composer.lock.backup
 }
 ```
 
-**Update Dependencies**
+#### Update Dependencies
 
 ```bash
 # Update dependencies (may fail due to conflicts - expected)
@@ -681,7 +681,7 @@ composer require "laravel/sanctum:^4.0" --with-all-dependencies
 composer require "phpunit/phpunit:^11.0" --dev --with-all-dependencies
 ```
 
-**Resolve Package Conflicts**
+#### Resolve Package Conflicts
 
 ```bash
 # Identify incompatible packages
@@ -701,7 +701,7 @@ composer remove package/name
 
 ### Phase 3: Application Structure Migration
 
-**Create New Bootstrap Configuration**
+#### Create New Bootstrap Configuration
 
 ```php
 // bootstrap/app.php - New Laravel 11 style
@@ -789,7 +789,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->create();
 ```
 
-**Consolidate Service Providers**
+#### Consolidate Service Providers
 
 ```php
 // app/Providers/AppServiceProvider.php - Consolidated provider
@@ -874,7 +874,7 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
-**Update Model Casts**
+#### Update Model Casts
 
 ```php
 // app/Models/User.php - Update deprecated casts
@@ -911,7 +911,7 @@ class User extends Authenticatable
 }
 ```
 
-**Remove Deprecated Files**
+#### Remove Deprecated Files
 
 After migrating functionality, remove deprecated files:
 
@@ -939,7 +939,7 @@ cp app/Providers/BroadcastServiceProvider.php storage/migration-backup/
 
 ### Phase 4: Configuration and Testing
 
-**Update Configuration Files**
+#### Update Configuration Files
 
 ```php
 // config/app.php - Review provider registrations
@@ -950,7 +950,7 @@ cp app/Providers/BroadcastServiceProvider.php storage/migration-backup/
 ])->toArray(),
 ```
 
-**Run Migration Tests**
+#### Run Migration Tests
 
 ```bash
 # Clear all caches
@@ -969,7 +969,7 @@ php artisan test
 php artisan test --filter=MigrationSafetyTest
 ```
 
-**Validate Middleware Configuration**
+#### Validate Middleware Configuration
 
 ```php
 // tests/Feature/MiddlewareConfigurationTest.php
@@ -1021,7 +1021,7 @@ class MiddlewareConfigurationTest extends TestCase
 }
 ```
 
-**Compare Route Definitions**
+#### Compare Route Definitions
 
 ```php
 // tests/Feature/RouteConfigurationTest.php
@@ -1064,7 +1064,7 @@ class RouteConfigurationTest extends TestCase
 
 ### Phase 5: Production Readiness Validation
 
-**Performance Benchmarking**
+#### Performance Benchmarking
 
 ```php
 // tests/Performance/MigrationPerformanceTest.php
@@ -1135,7 +1135,7 @@ After migration, establish comprehensive performance monitoring using our [Larav
 
 Deploying Laravel 11 upgrades to production requires careful orchestration to maintain service availability and ensure rapid rollback capability if issues arise.
 
-**Blue-Green Deployment Strategy**
+#### Blue-Green Deployment Strategy
 
 ```bash
 #!/bin/bash
@@ -1212,7 +1212,7 @@ echo "Deployment complete - now serving from $TARGET_NAME environment"
 echo "Old environment preserved at $CURRENT for rollback if needed"
 ```
 
-**Rolling Deployment with Load Balancer**
+#### Rolling Deployment with Load Balancer
 
 ```yaml
 # .github/workflows/deploy-laravel-11.yml
@@ -1289,7 +1289,7 @@ jobs:
             -d '{"text":"Laravel 11 deployment successful ✅"}'
 ```
 
-**Monitoring Post-Deployment**
+#### Monitoring Post-Deployment
 
 For comprehensive post-deployment monitoring and health checks, teams considering framework switches can compare Laravel 11 features with [Django 5.0 enterprise capabilities](/blog/django-5-enterprise-migration-guide-production-strategies/) to evaluate similar async improvements, ORM optimizations, and deployment strategies across frameworks.
 
@@ -1393,7 +1393,7 @@ For complex Laravel applications requiring expert migration execution and produc
 
 Even with careful planning, Laravel 11 migrations can encounter challenges. This section addresses the most common issues and their solutions.
 
-**Issue 1: Middleware Not Registered**
+#### Issue 1: Middleware Not Registered
 
 ```php
 // Symptom: Error "Target class [custom.middleware] does not exist"
@@ -1412,7 +1412,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->create();
 ```
 
-**Issue 2: Service Provider Methods Not Called**
+#### Issue 2: Service Provider Methods Not Called
 
 ```php
 // Symptom: Boot/register methods in custom providers not executing
@@ -1427,7 +1427,7 @@ return Application::configure(basePath: dirname(__DIR__))
 ])->toArray(),
 ```
 
-**Issue 3: Routes Not Found After Migration**
+#### Issue 3: Routes Not Found After Migration
 
 ```bash
 # Symptom: 404 errors on previously working routes
@@ -1447,7 +1447,7 @@ php artisan route:list  # Verify routes are loaded
 )
 ```
 
-**Issue 4: Model Casts Throwing Errors**
+#### Issue 4: Model Casts Throwing Errors
 
 ```php
 // Symptom: Error "Call to undefined method array()"
@@ -1465,7 +1465,7 @@ protected function casts(): array
 }
 ```
 
-**Issue 5: Exception Handling Not Working**
+#### Issue 5: Exception Handling Not Working
 
 ```php
 // Symptom: Custom exception handling not triggering
@@ -1485,7 +1485,7 @@ protected function casts(): array
 
 ## FAQ: Laravel 11 Migration
 
-**Q: Can I migrate to Laravel 11 without upgrading to PHP 8.2?**
+#### Q: Can I migrate to Laravel 11 without upgrading to PHP 8.2?
 
 A: No. Laravel 11 requires PHP 8.2 or higher. You must upgrade your PHP version first:
 
@@ -1497,7 +1497,7 @@ php -v
 sudo apt install php8.2 php8.2-fpm
 ```
 
-**Q: How long does a typical Laravel 10 → 11 migration take?**
+#### Q: How long does a typical Laravel 10 → 11 migration take?
 
 A: Migration time varies by application complexity:
 
@@ -1505,15 +1505,15 @@ A: Migration time varies by application complexity:
 - **Medium apps** (20-50 controllers): 24-40 hours
 - **Large apps** (> 50 controllers): 60-120 hours
 
-**Q: Will Laravel 10 applications continue to receive security updates?**
+#### Q: Will Laravel 10 applications continue to receive security updates?
 
 A: Yes. Laravel 10 receives security fixes until February 2025 and bug fixes until August 2025. However, Laravel 11 receives support until February 2026.
 
-**Q: Can I keep Kernel.php files during migration?**
+#### Q: Can I keep Kernel.php files during migration?
 
 A: Yes, temporarily. Laravel 11 will use them if present. However, for full Laravel 11 benefits, migrate to the new `bootstrap/app.php` structure.
 
-**Q: What if third-party packages aren't Laravel 11 compatible?**
+#### Q: What if third-party packages aren't Laravel 11 compatible?
 
 A: Options include:
 
@@ -1530,7 +1530,7 @@ composer why-not laravel/framework 11.0
 composer require vendor/package:^version
 ```
 
-**Q: How do I test the migration without affecting production?**
+#### Q: How do I test the migration without affecting production?
 
 A: Use staged rollout approach:
 
@@ -1540,7 +1540,7 @@ A: Use staged rollout approach:
 4. Deploy to production with blue-green strategy
 5. Monitor closely and rollback if needed
 
-**Q: Can I roll back to Laravel 10 after deploying Laravel 11?**
+#### Q: Can I roll back to Laravel 10 after deploying Laravel 11?
 
 A: Yes, with proper backup strategy:
 

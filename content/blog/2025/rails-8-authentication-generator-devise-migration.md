@@ -170,7 +170,7 @@ That's it. No complex configuration files, no mysterious modules, no hidden beha
 
 ### Architecture: Simple and Transparent
 
-**Database Schema**
+#### Database Schema
 
 ```ruby
 # db/migrate/[timestamp]_create_users.rb
@@ -190,7 +190,7 @@ end
 
 Clean, minimal, and explicit. No polymorphic associations, no STI, no unnecessary columns.
 
-**User Model**
+#### User Model
 
 ```ruby
 # app/models/user.rb
@@ -220,7 +220,7 @@ end
 - Automatic password digest generation
 - Password validation (presence, length, confirmation)
 
-**Sessions Controller**
+#### Sessions Controller
 
 ```ruby
 # app/controllers/sessions_controller.rb
@@ -249,7 +249,7 @@ end
 
 Transparent, understandable, and easy to customize. No hidden behaviors.
 
-**Current User Pattern**
+#### Current User Pattern
 
 ```ruby
 # app/controllers/application_controller.rb
@@ -276,7 +276,7 @@ Simple, explicit, and fully under your control.
 
 ### Security Features Built-In
 
-**Password Reset with Secure Tokens**
+#### Password Reset with Secure Tokens
 
 ```ruby
 # app/controllers/passwords_controller.rb
@@ -329,7 +329,7 @@ class PasswordsController < ApplicationController
 end
 ```
 
-**Email Confirmation**
+#### Email Confirmation
 
 ```ruby
 # app/controllers/email_confirmations_controller.rb
@@ -347,7 +347,7 @@ class EmailConfirmationsController < ApplicationController
 end
 ```
 
-**Rate Limiting and Brute Force Protection**
+#### Rate Limiting and Brute Force Protection
 
 ```ruby
 # config/initializers/rack_attack.rb
@@ -373,7 +373,7 @@ config.middleware.use Rack::Attack
 
 Rails 8 authentication provides a foundation for adding advanced features:
 
-**Two-Factor Authentication (TOTP)**
+#### Two-Factor Authentication (TOTP)
 
 ```ruby
 # Gemfile
@@ -427,7 +427,7 @@ class TwoFactorsController < ApplicationController
 end
 ```
 
-**OAuth Integration (Google/GitHub/etc.)**
+#### OAuth Integration (Google/GitHub/etc.)
 
 ```ruby
 # Gemfile
@@ -478,7 +478,7 @@ class OauthCallbacksController < ApplicationController
 end
 ```
 
-**Session Management and Device Tracking**
+#### Session Management and Device Tracking
 
 ```ruby
 # db/migrate/[timestamp]_create_sessions.rb
@@ -560,7 +560,7 @@ end
 # Devise auth:       892 i/s - 3.19x slower
 ```
 
-**Memory Usage Comparison**
+#### Memory Usage Comparison
 
 ```ruby
 # Rails 8 authentication memory footprint
@@ -581,7 +581,7 @@ Migrating from Devise to Rails 8's built-in authentication requires careful plan
 
 ### Phase 1: Pre-Migration Assessment
 
-**Inventory Current Devise Configuration**
+#### Inventory Current Devise Configuration
 
 ```bash
 # Audit your Devise setup
@@ -605,7 +605,7 @@ class User < ApplicationRecord
 end
 ```
 
-**Map Devise Features to Rails 8 Equivalents**
+#### Map Devise Features to Rails 8 Equivalents
 
 ```ruby
 devise_to_rails8_mapping = {
@@ -622,7 +622,7 @@ devise_to_rails8_mapping = {
 }
 ```
 
-**Assess Migration Complexity**
+#### Assess Migration Complexity
 
 ```ruby
 # Calculate migration effort
@@ -638,7 +638,7 @@ assessment = {
 
 ### Phase 2: Preparing Your Application
 
-**Create Parallel Authentication System**
+#### Create Parallel Authentication System
 
 Don't remove Devise immediately. Build Rails 8 authentication alongside it:
 
@@ -653,14 +653,14 @@ $ rails generate authentication
 # - app/models/concerns/authenticatable.rb (new)
 ```
 
-**Rename to avoid conflicts:**
+#### Rename to avoid conflicts:
 
 ```bash
 $ mv app/controllers/sessions_controller.rb app/controllers/rails8_sessions_controller.rb
 $ mv app/controllers/passwords_controller.rb app/controllers/rails8_passwords_controller.rb
 ```
 
-**Add Rails 8 Authentication Columns**
+#### Add Rails 8 Authentication Columns
 
 ```ruby
 # db/migrate/[timestamp]_add_rails8_auth_to_users.rb
@@ -674,7 +674,7 @@ class AddRails8AuthToUsers < ActiveRecord::Migration[8.0]
 end
 ```
 
-**Migrate Password Hashes**
+#### Migrate Password Hashes
 
 Devise uses `encrypted_password` with BCrypt. Rails 8's `has_secure_password` uses `password_digest` with BCrypt. They're compatible!
 
@@ -696,7 +696,7 @@ end
 $ bin/rails auth:migrate_passwords
 ```
 
-**Test Password Authentication Compatibility**
+#### Test Password Authentication Compatibility
 
 ```ruby
 # rails console
@@ -711,7 +711,7 @@ user.authenticate("password123")  # => #<User id: 1...>
 
 ### Phase 3: Implementing Rails 8 Authentication
 
-**Update User Model**
+#### Update User Model
 
 ```ruby
 # app/models/user.rb
@@ -741,7 +741,7 @@ class User < ApplicationRecord
 end
 ```
 
-**Create Rails 8 Controllers**
+#### Create Rails 8 Controllers
 
 ```ruby
 # app/controllers/rails8_sessions_controller.rb
@@ -769,7 +769,7 @@ class Rails8SessionsController < ApplicationController
 end
 ```
 
-**Dual Authentication Helper**
+#### Dual Authentication Helper
 
 ```ruby
 # app/controllers/application_controller.rb
@@ -799,7 +799,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-**Add Feature Flag for Gradual Rollout**
+#### Add Feature Flag for Gradual Rollout
 
 ```ruby
 # lib/auth_migration.rb
@@ -832,7 +832,7 @@ end
 
 ### Phase 4: Data Migration and Validation
 
-**Migrate Confirmable Data**
+#### Migrate Confirmable Data
 
 ```ruby
 # lib/tasks/migrate_confirmable.rake
@@ -849,7 +849,7 @@ namespace :auth do
 end
 ```
 
-**Test Authentication Flows**
+#### Test Authentication Flows
 
 ```ruby
 # spec/features/authentication_spec.rb
@@ -892,7 +892,7 @@ RSpec.describe "Authentication migration", type: :feature do
 end
 ```
 
-**Verify Data Integrity**
+#### Verify Data Integrity
 
 ```ruby
 # lib/tasks/verify_migration.rake
@@ -929,7 +929,7 @@ end
 
 ### Phase 5: Switching Over to Rails 8
 
-**Gradual Traffic Migration**
+#### Gradual Traffic Migration
 
 ```ruby
 # config/initializers/auth_rollout.rb
@@ -952,7 +952,7 @@ class AuthRollout
 end
 ```
 
-**Update Routes**
+#### Update Routes
 
 ```ruby
 # config/routes.rb
@@ -969,7 +969,7 @@ Rails.application.routes.draw do
 end
 ```
 
-**Monitor Migration Progress**
+#### Monitor Migration Progress
 
 ```ruby
 # app/controllers/application_controller.rb
@@ -997,7 +997,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-**Remove Devise (Final Step)**
+#### Remove Devise (Final Step)
 
 Once 100% of traffic is on Rails 8 authentication and monitoring confirms stability:
 
@@ -1055,7 +1055,7 @@ Migrating authentication systems in production requires careful attention to sec
 
 ### Security Hardening
 
-**Implement Rate Limiting**
+#### Implement Rate Limiting
 
 ```ruby
 # Gemfile
@@ -1087,7 +1087,7 @@ class Rack::Attack
 end
 ```
 
-**Secure Session Configuration**
+#### Secure Session Configuration
 
 ```ruby
 # config/initializers/session_store.rb
@@ -1099,7 +1099,7 @@ Rails.application.config.session_store :cookie_store,
   expire_after: 2.weeks           # Session expiration
 ```
 
-**Password Strength Enforcement**
+#### Password Strength Enforcement
 
 ```ruby
 # app/models/user.rb
@@ -1121,7 +1121,7 @@ class User < ApplicationRecord
 end
 ```
 
-**Implement Account Lockout**
+#### Implement Account Lockout
 
 ```ruby
 # db/migrate/[timestamp]_add_lockout_to_users.rb
@@ -1180,7 +1180,7 @@ end
 
 ### Monitoring and Alerting
 
-**Authentication Metrics Dashboard**
+#### Authentication Metrics Dashboard
 
 ```ruby
 # app/controllers/application_controller.rb
@@ -1207,7 +1207,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-**Failed Login Monitoring**
+#### Failed Login Monitoring
 
 ```ruby
 # app/controllers/sessions_controller.rb
@@ -1247,7 +1247,7 @@ class SessionsController < ApplicationController
 end
 ```
 
-**Security Audit Logging**
+#### Security Audit Logging
 
 ```ruby
 # app/models/audit_log.rb
@@ -1302,7 +1302,7 @@ end
 
 ### Rollback Strategy
 
-**Maintain Dual Authentication During Rollout**
+#### Maintain Dual Authentication During Rollout
 
 ```ruby
 # app/controllers/application_controller.rb
@@ -1324,7 +1324,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-**Instant Rollback Capability**
+#### Instant Rollback Capability
 
 ```ruby
 # lib/auth_rollback.rb
@@ -1352,7 +1352,7 @@ $ rails runner "AuthRollback.execute!"
 
 ### Production Deployment Checklist
 
-**Pre-Deployment:**
+#### Pre-Deployment:
 - [ ] Complete data migration (passwords, confirmations)
 - [ ] Verify test suite passes (100% of authentication tests)
 - [ ] Security audit completed (penetration testing, code review)
@@ -1360,7 +1360,7 @@ $ rails runner "AuthRollback.execute!"
 - [ ] Rollback procedure documented and tested
 - [ ] Team training completed
 
-**Deployment (Gradual Rollout):**
+#### Deployment (Gradual Rollout):
 - [ ] Week 1: Enable for 10% of users
 - [ ] Monitor error rates, failed logins, support tickets
 - [ ] Week 2: Increase to 25% if metrics healthy
@@ -1368,7 +1368,7 @@ $ rails runner "AuthRollback.execute!"
 - [ ] Week 4: Increase to 75%
 - [ ] Week 5: Complete migration to 100%
 
-**Post-Deployment:**
+#### Post-Deployment:
 - [ ] Monitor authentication metrics for 30 days
 - [ ] Verify no increase in failed logins
 - [ ] Confirm password reset flow working correctly

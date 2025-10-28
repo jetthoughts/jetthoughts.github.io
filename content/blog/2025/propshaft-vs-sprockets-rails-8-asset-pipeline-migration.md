@@ -29,7 +29,7 @@ This comprehensive guide walks you through everything you need to know about mig
 
 Sprockets was designed in an era when HTTP/1.1 connection limits made asset concatenation essential for performance. Bundling all JavaScript and CSS into single files reduced the number of HTTP requests, significantly improving page load times. However, modern web development has evolved beyond these constraints.
 
-**HTTP/2's Paradigm Shift**
+#### HTTP/2's Paradigm Shift
 
 HTTP/2 introduced multiplexing, allowing multiple asset requests over a single connection without performance penalties. The old practice of concatenating all assets into massive `application.js` and `application.css` files now creates problems:
 
@@ -38,7 +38,7 @@ HTTP/2 introduced multiplexing, allowing multiple asset requests over a single c
 - **Longer build times**: Complex compilation pipelines slow down development feedback loops
 - **Increased complexity**: Sprockets directives, manifests, and precompilation steps add cognitive overhead
 
-**Real-World Performance Impact**
+#### Real-World Performance Impact
 
 Consider a typical Rails application with Sprockets:
 
@@ -60,7 +60,7 @@ This manifest triggers a complex compilation process:
 
 Our benchmarks show this process taking **45-60 seconds** on moderate-sized applications with 200+ assets. For larger applications, precompilation can exceed **2 minutes**, significantly impacting deployment pipelines and developer productivity.
 
-**The Maintenance Burden**
+#### The Maintenance Burden
 
 Sprockets requires ongoing maintenance that distracts from business value delivery:
 
@@ -134,7 +134,7 @@ The simplified pipeline eliminates multiple processing stages, reducing build co
 
 ### How Propshaft Handles Common Asset Patterns
 
-**CSS Management with Propshaft**
+#### CSS Management with Propshaft
 
 ```css
 /* app/assets/stylesheets/application.css */
@@ -151,7 +151,7 @@ The simplified pipeline eliminates multiple processing stages, reducing build co
 
 HTTP/2 multiplexing makes multiple stylesheet requests performant, while providing better cache granularity.
 
-**JavaScript Management with Import Maps**
+#### JavaScript Management with Import Maps
 
 ```ruby
 # config/importmap.rb
@@ -174,7 +174,7 @@ import "./components"
 
 Import maps provide native browser module loading without build steps, transpilation, or bundlers.
 
-**Image Asset Processing**
+#### Image Asset Processing
 
 ```ruby
 # app/models/user.rb
@@ -194,7 +194,7 @@ Propshaft focuses on serving static images efficiently, while Active Storage han
 
 ### Performance Characteristics
 
-**Build Time Comparison**
+#### Build Time Comparison
 
 For a medium-sized Rails application (200+ asset files):
 
@@ -216,7 +216,7 @@ sys     0m1.283s
 
 **92% faster build times** dramatically improve deployment speed and developer feedback loops.
 
-**Memory Usage During Compilation**
+#### Memory Usage During Compilation
 
 ```ruby
 # Memory profiling during asset compilation
@@ -233,7 +233,7 @@ ObjectSpace.memsize_of_all
 
 **80% lower memory usage** enables efficient compilation in memory-constrained environments like CI/CD pipelines.
 
-**Runtime Performance**
+#### Runtime Performance
 
 Our benchmarks comparing asset delivery with HTTP/2:
 
@@ -255,7 +255,7 @@ Individual file serving with HTTP/2 multiplexing provides **25% faster initial l
 
 Understanding Propshaft's limitations is crucial for migration planning:
 
-**No Sass/SCSS Compilation**
+#### No Sass/SCSS Compilation
 
 ```scss
 // This won't compile in Propshaft
@@ -277,7 +277,7 @@ gem 'sassc-rails'  # Compile Sass outside Propshaft
 gem 'tailwindcss-rails'  # Use Tailwind for utility-first CSS
 ```
 
-**No CoffeeScript/TypeScript Transpilation**
+#### No CoffeeScript/TypeScript Transpilation
 
 ```coffeescript
 # app/assets/javascripts/example.coffee
@@ -299,7 +299,7 @@ class Example {
 }
 ```
 
-**No Asset Concatenation**
+#### No Asset Concatenation
 
 ```javascript
 //= require jquery
@@ -311,7 +311,7 @@ These Sprockets directives don't work in Propshaft.
 
 **Solution**: Use import maps or external bundlers for dependency management.
 
-**No Automatic Minification**
+#### No Automatic Minification
 
 Propshaft doesn't minify JavaScript or CSS during compilation.
 
@@ -334,7 +334,7 @@ Migrating an existing Rails application from Sprockets to Propshaft requires sys
 
 ### Phase 1: Pre-Migration Assessment
 
-**Inventory Your Current Asset Stack**
+#### Inventory Your Current Asset Stack
 
 ```bash
 # Audit your current Sprockets configuration
@@ -367,7 +367,7 @@ namespace :assets do
 end
 ```
 
-**Identify Dependencies on Sprockets Features**
+#### Identify Dependencies on Sprockets Features
 
 Search for Sprockets-specific syntax across your codebase:
 
@@ -386,7 +386,7 @@ $ find app/assets -name "*.scss" -o -name "*.sass"
 $ find app/assets -name "*.erb"
 ```
 
-**Document Migration Blockers**
+#### Document Migration Blockers
 
 Common blockers to address before migration:
 
@@ -398,7 +398,7 @@ Common blockers to address before migration:
 
 ### Phase 2: Preparing Your Application
 
-**Update to Rails 7.1+ First**
+#### Update to Rails 7.1+ First
 
 Never migrate Sprockets → Propshaft while also upgrading Rails major versions:
 
@@ -408,7 +408,7 @@ $ bundle update rails
 $ rails -v  # Should show 7.1.x or higher
 ```
 
-**Set Up Import Maps**
+#### Set Up Import Maps
 
 Install and configure import maps for JavaScript dependency management:
 
@@ -429,7 +429,7 @@ pin "application", preload: true
 console.log("Hello from application.js")
 ```
 
-**Convert CoffeeScript to JavaScript**
+#### Convert CoffeeScript to JavaScript
 
 If you have CoffeeScript files, convert them to modern JavaScript:
 
@@ -466,7 +466,7 @@ class User {
 }
 ```
 
-**Set Up CSS Preprocessing (If Needed)**
+#### Set Up CSS Preprocessing (If Needed)
 
 If using Sass/SCSS, ensure compilation happens before Propshaft:
 
@@ -496,7 +496,7 @@ config.dartsass.builds = {
 
 ### Phase 3: Switch to Propshaft
 
-**Install Propshaft Gem**
+#### Install Propshaft Gem
 
 ```ruby
 # Gemfile
@@ -511,7 +511,7 @@ gem 'propshaft'
 $ bundle install
 ```
 
-**Update Application Configuration**
+#### Update Application Configuration
 
 ```ruby
 # config/application.rb
@@ -525,7 +525,7 @@ module YourApp
 end
 ```
 
-**Remove Sprockets-Specific Configuration**
+#### Remove Sprockets-Specific Configuration
 
 ```ruby
 # config/initializers/assets.rb
@@ -540,7 +540,7 @@ end
 # (Usually nothing needed here)
 ```
 
-**Restructure Asset Directory**
+#### Restructure Asset Directory
 
 Move JavaScript from `app/assets/javascripts` to `app/javascript`:
 
@@ -569,7 +569,7 @@ Update stylesheet organization:
 /* Global styles */
 ```
 
-**Convert Manifests to Import Maps**
+#### Convert Manifests to Import Maps
 
 ```ruby
 # config/importmap.rb
@@ -593,7 +593,7 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 ```
 
-**Update View Helpers**
+#### Update View Helpers
 
 Update layout files to work with Propshaft:
 
@@ -620,7 +620,7 @@ Update layout files to work with Propshaft:
 
 ### Phase 4: Testing and Validation
 
-**Verify Asset Compilation**
+#### Verify Asset Compilation
 
 ```bash
 # Precompile assets
@@ -638,7 +638,7 @@ $ RAILS_ENV=production bin/rails server
 # Visit http://localhost:3000 and check browser console for asset errors
 ```
 
-**Test Asset Helper Methods**
+#### Test Asset Helper Methods
 
 ```ruby
 # rails console
@@ -652,7 +652,7 @@ $ RAILS_ENV=production bin/rails server
 # Should return import map script tags
 ```
 
-**Run Full Test Suite**
+#### Run Full Test Suite
 
 ```bash
 # Run system tests to verify asset loading
@@ -662,7 +662,7 @@ $ bin/rails test:system
 $ grep "Asset.*not found" log/test.log
 ```
 
-**Performance Benchmarking**
+#### Performance Benchmarking
 
 Compare build times before and after migration:
 
@@ -681,7 +681,7 @@ Our typical results:
 
 ### Phase 5: Production Deployment
 
-**Update Deployment Scripts**
+#### Update Deployment Scripts
 
 ```bash
 # Ensure asset precompilation happens during deployment
@@ -703,7 +703,7 @@ namespace :deploy do
 end
 ```
 
-**Docker Build Optimization**
+#### Docker Build Optimization
 
 ```dockerfile
 FROM ruby:3.4-alpine
@@ -727,7 +727,7 @@ EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
 ```
 
-**CI/CD Pipeline Updates**
+#### CI/CD Pipeline Updates
 
 ```yaml
 # .github/workflows/deploy.yml
@@ -761,7 +761,7 @@ jobs:
           # Your deployment commands
 ```
 
-**Monitoring Post-Migration**
+#### Monitoring Post-Migration
 
 Set up monitoring for asset-related issues:
 
@@ -786,21 +786,21 @@ Understanding how other teams have successfully migrated to Propshaft provides v
 
 ### Case Study 1: E-Commerce Platform Migration
 
-**Background:**
+#### Background:
 - **Application**: Large e-commerce Rails application
 - **Assets**: 450+ JavaScript files, 200+ stylesheets
 - **Previous setup**: Sprockets with heavy CoffeeScript usage
 - **Team size**: 8 developers
 
-**Migration Timeline:**
+#### Migration Timeline:
 
-**Week 1-2: Assessment and Planning**
+#### Week 1-2: Assessment and Planning
 - Audited 450+ asset files
 - Identified 87 CoffeeScript files requiring conversion
 - Documented 23 Sass files with complex mixins
 - Created migration checklist and rollback plan
 
-**Week 3-4: Preparation**
+#### Week 3-4: Preparation
 ```bash
 # Converted CoffeeScript to JavaScript
 $ find app/assets/javascripts -name "*.coffee" | wc -l
@@ -812,7 +812,7 @@ $ decaffeinate app/assets/javascripts/**/*.coffee
 $ bundle add dartsass-rails
 ```
 
-**Week 5-6: Migration Execution**
+#### Week 5-6: Migration Execution
 ```ruby
 # Switched to Propshaft
 gem 'propshaft'
@@ -825,12 +825,12 @@ config.assets.pipeline = :propshaft
 $ mv app/assets/javascripts app/javascript
 ```
 
-**Week 7: Testing and Deployment**
+#### Week 7: Testing and Deployment
 - Comprehensive testing across 50+ pages
 - Staged rollout: 10% → 50% → 100% of traffic
 - Zero downtime deployment using blue-green strategy
 
-**Results:**
+#### Results:
 
 ```ruby
 # Build Time Improvements
@@ -862,7 +862,7 @@ developer_experience = {
 }
 ```
 
-**Key Learnings:**
+#### Key Learnings:
 
 1. **CoffeeScript conversion was the bottleneck**: Automated conversion saved time but required manual review
 2. **Import maps simplified dependency management**: Eliminated npm package conflicts
@@ -883,17 +883,17 @@ end
 
 ### Case Study 2: SaaS Application with Microservices
 
-**Background:**
+#### Background:
 - **Application**: Multi-tenant SaaS platform
 - **Architecture**: 5 Rails services sharing asset pipeline
 - **Assets**: 280+ files across services
 - **Complexity**: Shared component library
 
-**Migration Challenge:**
+#### Migration Challenge:
 
 Coordinating asset pipeline changes across 5 microservices while maintaining shared component compatibility.
 
-**Solution Architecture:**
+#### Solution Architecture:
 
 ```ruby
 # Shared asset gem approach
@@ -912,7 +912,7 @@ gem 'shared_assets', path: '../shared_assets'
 config.assets.paths << SharedAssets.asset_path
 ```
 
-**Phased Rollout Strategy:**
+#### Phased Rollout Strategy:
 
 ```ruby
 # Phase 1: Migrate service with least dependencies (week 1-2)
@@ -927,7 +927,7 @@ services = [
 # Migration order: analytics → auth → admin → reporting → core
 ```
 
-**Results:**
+#### Results:
 
 ```ruby
 aggregate_results = {
@@ -945,7 +945,7 @@ cost_savings_annual = {
 }
 ```
 
-**Implementation Highlights:**
+#### Implementation Highlights:
 
 ```javascript
 // Shared component with import map
@@ -978,13 +978,13 @@ pin "components/modal", to: "shared_assets/components/modal.js"
 
 ### Case Study 3: Legacy Application Gradual Migration
 
-**Background:**
+#### Background:
 - **Application**: 10-year-old Rails monolith
 - **Assets**: 600+ files with heavy jQuery dependencies
 - **Challenge**: Cannot afford complete rewrite
 - **Goal**: Incremental modernization
 
-**Hybrid Approach Strategy:**
+#### Hybrid Approach Strategy:
 
 ```ruby
 # Running Propshaft and Sprockets simultaneously during transition
@@ -1001,7 +1001,7 @@ config.assets.prefix = '/assets'
 config.assets.legacy_prefix = '/legacy-assets'
 ```
 
-**Incremental Migration Plan:**
+#### Incremental Migration Plan:
 
 ```ruby
 migration_phases = {
@@ -1035,7 +1035,7 @@ migration_phases = {
 }
 ```
 
-**Feature Flag Implementation:**
+#### Feature Flag Implementation:
 
 ```ruby
 # lib/asset_pipeline_feature_flag.rb
@@ -1063,7 +1063,7 @@ end
 <% end %>
 ```
 
-**Results After 12-Month Migration:**
+#### Results After 12-Month Migration:
 
 ```ruby
 final_results = {
@@ -1086,7 +1086,7 @@ final_results = {
 }
 ```
 
-**Critical Success Factors:**
+#### Critical Success Factors:
 
 1. **Executive buy-in**: Secured 12-month timeline for incremental migration
 2. **Monitoring infrastructure**: Tracked asset performance throughout migration
@@ -1103,14 +1103,14 @@ Even with careful planning, Propshaft migrations can encounter challenges. This 
 
 ### Issue 1: Missing Asset Errors in Production
 
-**Symptom:**
+#### Symptom:
 ```
 ActionView::Template::Error: The asset "components/modal.js" is not present in the asset pipeline
 ```
 
 **Cause:** Asset path configuration or importmap misconfiguration
 
-**Solution:**
+#### Solution:
 
 ```ruby
 # 1. Verify asset exists in correct location
@@ -1129,7 +1129,7 @@ $ ls public/assets/components/modal-*.js
 config.assets.prefix = '/assets'  # Should match public/assets location
 ```
 
-**Prevention Strategy:**
+#### Prevention Strategy:
 
 ```ruby
 # lib/tasks/verify_assets.rake
@@ -1166,7 +1166,7 @@ $ bin/rails assets:verify
 
 ### Issue 2: Stylesheet Import Order Problems
 
-**Symptom:**
+#### Symptom:
 ```
 CSS specificity issues: styles applying in wrong order
 Components not styling correctly
@@ -1174,7 +1174,7 @@ Components not styling correctly
 
 **Cause:** HTTP/2 multiplexing doesn't guarantee stylesheet load order
 
-**Solution:**
+#### Solution:
 
 ```ruby
 # BAD: Multiple stylesheet_link_tag calls (unpredictable order)
@@ -1196,7 +1196,7 @@ Components not styling correctly
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload", media: "all" %>
 ```
 
-**For Sass/SCSS Projects:**
+#### For Sass/SCSS Projects:
 
 ```ruby
 # Use Dart Sass for preprocessing
@@ -1221,7 +1221,7 @@ Rails.application.config.dartsass.builds = {
 
 ### Issue 3: Third-Party Library Integration
 
-**Symptom:**
+#### Symptom:
 ```javascript
 Uncaught ReferenceError: $ is not defined
 jQuery plugins not working
@@ -1230,7 +1230,7 @@ Bootstrap JavaScript not initializing
 
 **Cause:** Third-party libraries not properly configured in import maps
 
-**Solution:**
+#### Solution:
 
 ```ruby
 # config/importmap.rb
@@ -1252,7 +1252,7 @@ import "jquery-ui"            // Now jQuery plugins work
 import "select2"
 ```
 
-**For Bootstrap Integration:**
+#### For Bootstrap Integration:
 
 ```ruby
 # Pin Bootstrap JavaScript
@@ -1273,7 +1273,7 @@ document.addEventListener("turbo:load", () => {
 
 ### Issue 4: Image Asset Path Resolution
 
-**Symptom:**
+#### Symptom:
 ```erb
 <%= image_tag "logo.png" %>
 <!-- Renders: <img src="/assets/logo.png"> -->
@@ -1283,7 +1283,7 @@ document.addEventListener("turbo:load", () => {
 
 **Cause:** Asset helper not generating digested filenames
 
-**Solution:**
+#### Solution:
 
 ```ruby
 # Verify Propshaft is active
@@ -1306,7 +1306,7 @@ config.assets.pipeline = :propshaft
 <div style="background-image: url(<%= asset_path('logo.png') %>)"></div>
 ```
 
-**Asset Path Debugging:**
+#### Asset Path Debugging:
 
 ```ruby
 # rails console
@@ -1326,7 +1326,7 @@ config.assets.pipeline = :propshaft
 
 ### Issue 5: Slow Build Times Despite Propshaft
 
-**Symptom:**
+#### Symptom:
 ```bash
 $ time RAILS_ENV=production bin/rails assets:precompile
 real    2m14.382s  # Still slow!
@@ -1334,7 +1334,7 @@ real    2m14.382s  # Still slow!
 
 **Cause:** External preprocessors (Sass, TypeScript) running slowly
 
-**Diagnosis and Solution:**
+#### Diagnosis and Solution:
 
 ```ruby
 # Identify bottlenecks
@@ -1375,7 +1375,7 @@ namespace :assets do
 end
 ```
 
-**Optimize Import Map Resolution:**
+#### Optimize Import Map Resolution:
 
 ```ruby
 # config/importmap.rb
@@ -1388,13 +1388,13 @@ $ bin/importmap pin bootstrap --download
 
 ### Issue 6: Development Mode Performance
 
-**Symptom:**
+#### Symptom:
 ```
 Page reload takes 5-10 seconds in development
 Assets not hot-reloading
 ```
 
-**Solution:**
+#### Solution:
 
 ```ruby
 # config/environments/development.rb
@@ -1421,7 +1421,7 @@ gem 'listen'  # File change detection
 config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 ```
 
-**Import Map Development Mode:**
+#### Import Map Development Mode:
 
 ```ruby
 # app/views/layouts/application.html.erb
@@ -1437,7 +1437,7 @@ These troubleshooting solutions address 95% of common Propshaft migration issues
 
 ## FAQ: Propshaft Migration Questions
 
-**Q: Can I migrate to Propshaft without Rails 8?**
+#### Q: Can I migrate to Propshaft without Rails 8?
 
 A: Yes. Propshaft works with Rails 7.0+. You can install it on Rails 7.1 or 7.2:
 
@@ -1451,7 +1451,7 @@ config.assets.pipeline = :propshaft
 
 However, Rails 8 includes Propshaft as the default, providing better integration and official support.
 
-**Q: What happens to my existing Sprockets assets after migration?**
+#### Q: What happens to my existing Sprockets assets after migration?
 
 A: Your compiled Sprockets assets in `public/assets/` remain until you delete them. During migration:
 
@@ -1466,7 +1466,7 @@ $ RAILS_ENV=production bin/rails assets:precompile
 $ ls public/assets/  # Should only show Propshaft digested files
 ```
 
-**Q: How do I handle Sass/SCSS with Propshaft?**
+#### Q: How do I handle Sass/SCSS with Propshaft?
 
 A: Use `dartsass-rails` or `sassc-rails` for preprocessing:
 
@@ -1479,7 +1479,7 @@ gem 'dartsass-rails'
 # app/assets/builds/application.css (which Propshaft serves)
 ```
 
-**Q: Can I use Propshaft with Webpacker or esbuild?**
+#### Q: Can I use Propshaft with Webpacker or esbuild?
 
 A: Yes, Propshaft handles compiled output from any build tool:
 
@@ -1498,7 +1498,7 @@ gem 'jsbundling-rails'
 # Propshaft serves the bundled output from app/assets/builds/
 ```
 
-**Q: Does Propshaft work with Turbo/Stimulus?**
+#### Q: Does Propshaft work with Turbo/Stimulus?
 
 A: Yes, perfectly. Import maps are the recommended approach:
 
@@ -1510,7 +1510,7 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 ```
 
-**Q: What's the performance impact in production?**
+#### Q: What's the performance impact in production?
 
 A: Based on our case studies:
 - **Build time**: 85-95% faster (Propshaft vs Sprockets)
@@ -1518,7 +1518,7 @@ A: Based on our case studies:
 - **Cache efficiency**: 60-80% improvement (granular file invalidation)
 - **Memory usage**: 75-85% lower during compilation
 
-**Q: How do I handle CDN configuration?**
+#### Q: How do I handle CDN configuration?
 
 A: Propshaft works seamlessly with CDNs:
 
@@ -1530,7 +1530,7 @@ config.asset_host = 'https://cdn.example.com'
 # <img src="https://cdn.example.com/assets/logo-abc123.png">
 ```
 
-**Q: Can I roll back to Sprockets if needed?**
+#### Q: Can I roll back to Sprockets if needed?
 
 A: Yes, but plan for it before migration:
 
@@ -1553,7 +1553,7 @@ gem 'propshaft'
 # gem 'sprockets-rails'  # Removed
 ```
 
-**Q: What about Asset Sync (for S3/CloudFront)?**
+#### Q: What about Asset Sync (for S3/CloudFront)?
 
 A: Use `asset_sync` gem with Propshaft:
 

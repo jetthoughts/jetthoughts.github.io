@@ -18,7 +18,7 @@ This comprehensive guide compares the four leading Laravel APM tools—New Relic
 
 Laravel's elegant developer experience can mask performance problems until they reach production at scale. What works perfectly with 10 concurrent users becomes catastrophic at 1,000, and by then, fixing performance issues requires emergency response instead of proactive optimization.
 
-**Real-World Performance Crisis**
+#### Real-World Performance Crisis
 
 Consider a typical SaaS application experiencing gradual performance degradation:
 
@@ -45,7 +45,7 @@ public function index()
 }
 ```
 
-**Performance Impact Without Monitoring:**
+#### Performance Impact Without Monitoring:
 
 ```
 Initial load (10 users):    800ms response time
@@ -60,7 +60,7 @@ This gradual degradation went unnoticed for 12 months because:
 - No query-level visibility identified N+1 patterns
 - No correlation between user growth and performance decline
 
-**The Business Cost:**
+#### The Business Cost:
 
 ```php
 // Cost calculation without APM monitoring
@@ -79,7 +79,7 @@ $monthly_calculations = [
 
 Balance APM investment costs with overall technical debt priorities using our [technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/)—the same framework helps Laravel teams quantify monitoring ROI and prioritize performance optimization investments alongside debt reduction efforts.
 
-**Symptoms of Performance Blindness:**
+#### Symptoms of Performance Blindness:
 
 Your Laravel application likely has hidden performance issues if you're experiencing:
 
@@ -97,7 +97,7 @@ $warning_signs = [
 ];
 ```
 
-**Database Query Explosion:**
+#### Database Query Explosion:
 
 ```php
 // Without APM: This code looks fine
@@ -124,7 +124,7 @@ public function show(Order $order)
 // - 5 slow queries (>200ms each)
 ```
 
-**Memory Leak Detection:**
+#### Memory Leak Detection:
 
 ```php
 // Invisible without APM monitoring
@@ -152,7 +152,7 @@ Before comparing APM tools, understanding which bottlenecks actually impact Lara
 
 APM tools reveal N+1 queries and database bottlenecks during [Laravel 11 migration](/blog/laravel-11-migration-guide-production-deployment-strategies/)—catching performance regressions before they reach production environments and validating Laravel 11's ORM improvements.
 
-**N+1 Query Problems:**
+#### N+1 Query Problems:
 
 ```php
 // Bad: N+1 query generating 5,001 database queries
@@ -181,7 +181,7 @@ public function index()
 }
 ```
 
-**Query Performance Benchmarks:**
+#### Query Performance Benchmarks:
 
 ```php
 // Real APM data from production Laravel application
@@ -209,7 +209,7 @@ $query_performance = [
 ];
 ```
 
-**Database Connection Pool Exhaustion:**
+#### Database Connection Pool Exhaustion:
 
 ```php
 // APM must monitor connection usage
@@ -232,7 +232,7 @@ DB::listen(function ($query) {
 
 ### Cache Performance (15% of Issues)
 
-**Cache Miss Cascades:**
+#### Cache Miss Cascades:
 
 ```php
 // Without APM: No visibility into cache effectiveness
@@ -269,7 +269,7 @@ $cache_metrics = [
 ];
 ```
 
-**Redis Performance Monitoring:**
+#### Redis Performance Monitoring:
 
 ```php
 // APM must track Redis performance separately from application
@@ -303,7 +303,7 @@ class RedisMonitoring
 
 ### External API Calls (10% of Issues)
 
-**Third-Party Service Timeouts:**
+#### Third-Party Service Timeouts:
 
 ```php
 // Without APM: API failures appear as generic errors
@@ -368,7 +368,7 @@ public function processPayment(Request $request)
 
 ### Queue Performance (8% of Issues)
 
-**Job Processing Delays:**
+#### Job Processing Delays:
 
 ```php
 // Without APM: No visibility into queue processing
@@ -407,7 +407,7 @@ $queue_metrics = [
 
 ### Memory Consumption (7% of Issues)
 
-**Memory Leak Detection:**
+#### Memory Leak Detection:
 
 ```php
 // APM must track memory usage throughout request lifecycle
@@ -494,7 +494,7 @@ $apm_comparison = [
 
 ### New Relic: Enterprise-Grade APM
 
-**Implementation:**
+#### Implementation:
 
 ```php
 // composer.json
@@ -550,7 +550,7 @@ class CheckoutController extends Controller
 }
 ```
 
-**Real-World Performance Data:**
+#### Real-World Performance Data:
 
 ```php
 // New Relic dashboard metrics (actual production data)
@@ -584,20 +584,20 @@ $newrelic_insights = [
 ];
 ```
 
-**Strengths:**
+#### Strengths:
 - **Machine Learning Anomaly Detection**: Automatically identifies unusual patterns
 - **Distributed Tracing**: Tracks requests across microservices
 - **Infrastructure Monitoring**: Deep server and database visibility
 - **Custom Dashboards**: Highly customizable visualization
 - **Enterprise Features**: RBAC, SOC 2 compliance, long data retention
 
-**Weaknesses:**
+#### Weaknesses:
 - **Complexity**: Steep learning curve for configuration and interpretation
 - **Cost**: Expensive at scale ($99-$5000+/month depending on data ingestion)
 - **Setup Overhead**: Requires significant configuration for Laravel-specific optimizations
 - **Data Ingestion Pricing**: Unpredictable costs as application scales
 
-**Pricing Example:**
+#### Pricing Example:
 
 ```php
 $newrelic_pricing = [
@@ -627,7 +627,7 @@ $newrelic_pricing = [
 
 ### Datadog: Unified Observability Platform
 
-**Implementation:**
+#### Implementation:
 
 ```php
 // composer.json
@@ -715,7 +715,7 @@ class OrderService
 }
 ```
 
-**Real-World Dashboard Metrics:**
+#### Real-World Dashboard Metrics:
 
 ```php
 // Datadog APM metrics (production Laravel app)
@@ -760,20 +760,20 @@ $datadog_metrics = [
 ];
 ```
 
-**Strengths:**
+#### Strengths:
 - **Unified Platform**: APM, logs, infrastructure, and security in one place
 - **Excellent Visualizations**: Best-in-class dashboards and graphs
 - **Strong Integrations**: 500+ integrations with AWS, databases, third-party services
 - **Real User Monitoring**: Frontend performance tracking included
 - **Custom Metrics**: Easy custom business metrics tracking
 
-**Weaknesses:**
+#### Weaknesses:
 - **Complex Pricing**: Multiple pricing tiers and features add up quickly
 - **Data Ingestion Costs**: Can become expensive with high log/metric volume
 - **Feature Overload**: So many features it can be overwhelming
 - **Learning Curve**: Requires time to master all features
 
-**Pricing Example:**
+#### Pricing Example:
 
 ```php
 $datadog_pricing = [
@@ -810,7 +810,7 @@ $datadog_pricing = [
 
 Scout APM's Laravel-first design complements [Laravel 11's streamlined architecture](/blog/laravel-11-migration-guide-production-deployment-strategies/)—zero configuration auto-instrumentation means performance monitoring without code changes, making it ideal for validating Laravel 11 migrations.
 
-**Implementation:**
+#### Implementation:
 
 ```php
 // composer.json
@@ -865,7 +865,7 @@ class ReportService
 ScoutApm::recordMetric('CustomMetric', 'OrderPlaced', $order->total);
 ```
 
-**Real-World Scout APM Data:**
+#### Real-World Scout APM Data:
 
 ```php
 // Scout APM dashboard (production Laravel SaaS app)
@@ -921,7 +921,7 @@ $scout_insights = [
 ];
 ```
 
-**Strengths:**
+#### Strengths:
 - **Zero Configuration**: Automatic Laravel instrumentation out of the box
 - **Excellent N+1 Detection**: Best-in-class N+1 query identification with fix suggestions
 - **Simple Pricing**: Flat per-host pricing, no surprise costs
@@ -929,13 +929,13 @@ $scout_insights = [
 - **Developer-Friendly**: Clean UI focused on actionable insights, not overwhelming data
 - **Memory Profiling**: Tracks memory allocation per endpoint
 
-**Weaknesses:**
+#### Weaknesses:
 - **Limited Infrastructure Monitoring**: Focuses on application, less on servers/databases
 - **Basic Alerting**: Alert features are simpler compared to New Relic/Datadog
 - **Fewer Integrations**: Smaller ecosystem of third-party integrations
 - **No Real User Monitoring**: No frontend performance tracking
 
-**Pricing:**
+#### Pricing:
 
 ```php
 $scout_pricing = [
@@ -982,7 +982,7 @@ $scout_pricing = [
 
 ### Blackfire: Deep Performance Profiling
 
-**Implementation:**
+#### Implementation:
 
 ```php
 // Install Blackfire PHP extension and CLI
@@ -1046,7 +1046,7 @@ tests:
             - "metrics.symfony.controller.count < 5"
 ```
 
-**Real-World Blackfire Profile Data:**
+#### Real-World Blackfire Profile Data:
 
 ```php
 // Blackfire profile results (actual production optimization)
@@ -1091,7 +1091,7 @@ $blackfire_profile = [
 ];
 ```
 
-**Strengths:**
+#### Strengths:
 - **Deep Profiling**: Function-level profiling showing exact performance bottlenecks
 - **Actionable Recommendations**: Specific code-level suggestions for optimization
 - **CI/CD Integration**: Automated performance regression testing in pipelines
@@ -1099,13 +1099,13 @@ $blackfire_profile = [
 - **No Production Overhead**: Profiling triggered manually, zero performance impact when not profiling
 - **Laravel-Aware**: Understands Laravel framework patterns and provides Laravel-specific recommendations
 
-**Weaknesses:**
+#### Weaknesses:
 - **Not Continuous Monitoring**: Must trigger profiling manually or via automation
 - **No Real-Time Alerting**: Not designed for production monitoring (use alongside APM)
 - **Limited Historical Data**: Focuses on point-in-time profiling, not long-term trends
 - **Requires Triggering**: Not passive monitoring like Scout/New Relic/Datadog
 
-**Pricing:**
+#### Pricing:
 
 ```php
 $blackfire_pricing = [
@@ -1187,7 +1187,7 @@ Implementing APM effectively requires more than installing a package—it requir
 
 ### Step 1: Baseline Performance Measurement
 
-**Before implementing APM, establish baseline metrics:**
+#### Before implementing APM, establish baseline metrics:
 
 ```php
 // Create baseline performance snapshot
@@ -1265,7 +1265,7 @@ Storage::put('performance/baseline.json', json_encode($metrics));
 
 ### Step 2: Strategic Instrumentation
 
-**Don't instrument everything—focus on high-value transactions:**
+#### Don't instrument everything—focus on high-value transactions:
 
 ```php
 // High-value transactions to instrument first
@@ -1346,7 +1346,7 @@ class CheckoutController extends Controller
 
 ### Step 3: Intelligent Alerting Configuration
 
-**Avoid alert fatigue with strategic thresholds:**
+#### Avoid alert fatigue with strategic thresholds:
 
 ```php
 // Alert configuration strategy
@@ -1441,7 +1441,7 @@ if (config('scout_apm.enabled')) {
 
 ### Step 4: Team Adoption and Workflow Integration
 
-**Make APM part of daily development workflow:**
+#### Make APM part of daily development workflow:
 
 ```php
 // Development workflow with APM integration
@@ -1540,7 +1540,7 @@ APM tools reveal performance issues, but fixing them requires systematic optimiz
 
 ### Strategy 1: Eliminating N+1 Queries
 
-**APM Detection:**
+#### APM Detection:
 
 ```php
 // Scout APM detection: Dashboard endpoint
@@ -1570,7 +1570,7 @@ public function dashboard()
 // - Recommendation: "Add eager loading for relationships"
 ```
 
-**Optimization:**
+#### Optimization:
 
 ```php
 // After optimization (eager loading)
@@ -1598,7 +1598,7 @@ public function dashboard()
 // - Response time improvement: 2.8s → 234ms (92% faster)
 ```
 
-**Impact Measurement:**
+#### Impact Measurement:
 
 ```php
 $optimization_impact = [
@@ -1627,7 +1627,7 @@ $optimization_impact = [
 
 ### Strategy 2: Query Optimization with Indexes
 
-**APM Detection:**
+#### APM Detection:
 
 ```php
 // Datadog APM slow query alert
@@ -1646,7 +1646,7 @@ Schema::table('orders', function (Blueprint $table) {
 // - Recommendation: "Add composite index on (status, created_at)"
 ```
 
-**Optimization:**
+#### Optimization:
 
 ```php
 // Add optimized index
@@ -1684,7 +1684,7 @@ $query_optimization = [
 
 ### Strategy 3: Intelligent Caching
 
-**APM Detection:**
+#### APM Detection:
 
 ```php
 // Scout APM reveals expensive calculation repeated frequently
@@ -1712,7 +1712,7 @@ public function dashboardStats()
 // - Daily database time: 100,800 seconds (28 hours!)
 ```
 
-**Optimization:**
+#### Optimization:
 
 ```php
 // After intelligent caching
@@ -1754,7 +1754,7 @@ $caching_impact = [
 
 ### Strategy 4: Chunking Large Datasets
 
-**APM Detection:**
+#### APM Detection:
 
 ```php
 // New Relic memory alert
@@ -1780,7 +1780,7 @@ public function exportUsers()
 // - Result: Fatal error
 ```
 
-**Optimization:**
+#### Optimization:
 
 ```php
 // After chunking (memory-efficient)
@@ -1816,7 +1816,7 @@ $chunking_impact = [
 
 ### Strategy 5: Queue Optimization
 
-**APM Detection:**
+#### APM Detection:
 
 ```php
 // Datadog queue monitoring alert
@@ -1850,7 +1850,7 @@ public function placeOrder(Request $request)
 // - Database operations: 47 (blocking user)
 ```
 
-**Optimization:**
+#### Optimization:
 
 ```php
 // After queue optimization (asynchronous)
@@ -1922,13 +1922,13 @@ Understanding how other teams used APM tools to identify and fix performance bot
 
 ### Case Study 1: E-Commerce Platform Database Optimization
 
-**Background:**
+#### Background:
 - **Application**: High-traffic Laravel e-commerce platform
 - **Issue**: Dashboard loading 8+ seconds, user complaints
 - **APM Tool**: Scout APM
 - **Team Size**: 4 developers
 
-**Problem Discovery:**
+#### Problem Discovery:
 
 ```php
 // Scout APM revealed the issue
@@ -1947,7 +1947,7 @@ $apm_insights = [
 // 3. SELECT * FROM images WHERE product_id = ? (executed 4,123 times)
 ```
 
-**Solution Implementation:**
+#### Solution Implementation:
 
 ```php
 // Before: Multiple N+1 queries
@@ -1997,7 +1997,7 @@ Schema::table('reviews', function (Blueprint $table) {
 });
 ```
 
-**Results:**
+#### Results:
 
 ```php
 $optimization_results = [
@@ -2037,7 +2037,7 @@ $optimization_results = [
 ];
 ```
 
-**Key Learnings:**
+#### Key Learnings:
 1. **Scout's N+1 detection was critical**: Identified 7 separate N+1 patterns with specific fix recommendations
 2. **Caching multiplied benefits**: Combined eager loading with caching for 600-second TTL
 3. **Indexes dramatically improved**: Adding composite indexes reduced query time 98%
@@ -2045,13 +2045,13 @@ $optimization_results = [
 
 ### Case Study 2: SaaS Application Memory Leak Resolution
 
-**Background:**
+#### Background:
 - **Application**: Multi-tenant SaaS platform
 - **Issue**: Memory exhaustion errors, 500 internal server errors
 - **APM Tool**: New Relic + Blackfire
 - **Team Size**: 8 developers
 
-**Problem Discovery:**
+#### Problem Discovery:
 
 ```php
 // New Relic alert: Memory threshold exceeded
@@ -2076,7 +2076,7 @@ $blackfire_profile = [
 ];
 ```
 
-**Solution Implementation:**
+#### Solution Implementation:
 
 ```php
 // Before: Loading everything into memory
@@ -2134,7 +2134,7 @@ public function generateReport($tenant_id)
 }
 ```
 
-**Results:**
+#### Results:
 
 ```php
 $memory_optimization_results = [
@@ -2167,7 +2167,7 @@ $memory_optimization_results = [
 ];
 ```
 
-**Key Learnings:**
+#### Key Learnings:
 1. **New Relic alerts identified pattern**: Memory threshold alerts showed consistent failure pattern
 2. **Blackfire profiling pinpointed root cause**: Function-level profiling revealed exact memory allocation point
 3. **Chunking solved memory issue**: Processing in batches kept memory constant
@@ -2187,7 +2187,7 @@ For teams undertaking performance optimization initiatives or requiring expert g
 
 ## FAQ: Laravel Performance Monitoring
 
-**Q: Which APM tool is best for small Laravel teams with limited budget?**
+#### Q: Which APM tool is best for small Laravel teams with limited budget?
 
 A: **Scout APM** is the best choice for small teams:
 
@@ -2206,7 +2206,7 @@ $scout_advantages_small_teams = [
 
 Blackfire free tier ($0/month) is also excellent for development profiling, but use Scout for production monitoring.
 
-**Q: Do I need APM if I already have server monitoring (AWS CloudWatch, etc.)?**
+#### Q: Do I need APM if I already have server monitoring (AWS CloudWatch, etc.)?
 
 A: **Yes**. Server monitoring shows infrastructure health, but APM shows application-level performance:
 
@@ -2228,7 +2228,7 @@ $monitoring_comparison = [
 // Example: CloudWatch shows high CPU, but only APM reveals it's caused by N+1 queries
 ```
 
-**Q: How much performance overhead do APM tools add?**
+#### Q: How much performance overhead do APM tools add?
 
 A: **Minimal overhead** (typically <5% performance impact):
 
@@ -2259,7 +2259,7 @@ $apm_overhead = [
 // Trade-off: 2-5% overhead vs 90%+ performance improvements discovered
 ```
 
-**Q: Can I use multiple APM tools together?**
+#### Q: Can I use multiple APM tools together?
 
 A: **Yes**, many teams use complementary tools:
 
@@ -2280,7 +2280,7 @@ $complementary_apm_strategy = [
 // Common pattern: Scout/New Relic for production + Blackfire for development
 ```
 
-**Q: How do I measure APM ROI?**
+#### Q: How do I measure APM ROI?
 
 A: **Track these metrics before and after APM implementation**:
 
@@ -2323,7 +2323,7 @@ $apm_roi_calculation = [
 ];
 ```
 
-**Q: What should I monitor first with APM?**
+#### Q: What should I monitor first with APM?
 
 A: **Prioritize high-impact monitoring:**
 
@@ -2365,7 +2365,7 @@ $monitoring_priorities = [
 // Start narrow (critical paths), expand broad (comprehensive coverage)
 ```
 
-**Q: Should I profile in production or only in staging?**
+#### Q: Should I profile in production or only in staging?
 
 A: **Profile in both**, but with different approaches:
 
