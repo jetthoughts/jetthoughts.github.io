@@ -93,14 +93,13 @@ slug: article-slug
 
 **When to use**: Long-form tutorials, comprehensive guides, AI-generated content
 **Required fields**: ALL fields listed below
-**Examples**: Python LangChain tutorial, Laravel AI integration, Elixir AI tutorial
+**Examples**: Python LangChain tutorial, Laravel AI integration, Elixir AI tutorial, Django migration guides
 
 ```yaml
 ---
 title: "Tutorial Title: Complete Guide 2025"
 description: "Learn [topic] with this comprehensive tutorial. Step-by-step guide with [framework] integration, production patterns, and 15+ working code examples. Build your first [thing] today."
-created_at: "2025-10-17T10:00:00Z"
-edited_at: "2025-10-17T10:00:00Z"
+date: 2025-10-27
 draft: false
 tags: ["tag1", "tag2", "tag3", "tag4"]
 canonical_url: "https://jetthoughts.com/blog/tutorial-slug/"
@@ -114,8 +113,7 @@ slug: "tutorial-slug"
 |-------|--------|----------|-------|
 | `title` | String (55-60 chars) | ✅ | Include year: "2025" |
 | `description` | String (155-160 chars) | ✅ | SEO meta description with benefit |
-| `created_at` | ISO 8601 with timezone | ✅ | Double quotes: `"2025-10-17T10:00:00Z"` |
-| `edited_at` | ISO 8601 with timezone | ✅ | Double quotes: `"2025-10-17T10:00:00Z"` |
+| `date` | YYYY-MM-DD | ✅ | No quotes, no timezone: `2025-10-27` |
 | `draft` | Boolean | ✅ | `false` for published posts |
 | `tags` | Array of strings | ✅ | 4-7 relevant tags |
 | `canonical_url` | Full JetThoughts URL | ✅ | Official post URL with trailing slash |
@@ -124,8 +122,8 @@ slug: "tutorial-slug"
 ### Critical Rules
 
 1. **Date formats**:
-   - `created_at`/`edited_at`: MUST use double quotes with timezone (`"2025-10-17T10:00:00Z"`)
-   - NO separate `date` field (uses created_at)
+   - `date`: Simple YYYY-MM-DD format, NO quotes, NO timezone
+   - NO `created_at` or `edited_at` fields
 
 2. **NO metatags**:
    - Do NOT include `metatags.image` unless actual OG image exists
