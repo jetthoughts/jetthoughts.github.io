@@ -1,12 +1,12 @@
 ---
 title: "TDD Workflow Automation Rails Guide 2025"
 description: "Automate TDD workflows for 70% faster Rails development. Anti-test-smell framework, shameless green methodology, Guard automation. 60+ production code examples."
-date: 2025-01-23
+created_at: "2025-01-23T10:00:00Z"
+edited_at: "2025-01-23T10:00:00Z"
 draft: false
 tags: ["tdd", "rails", "testing", "automation", "minitest", "ci-cd", "productivity", "guard", "workflow", "shameless-green", "behavioral-testing"]
 canonical_url: "https://jetthoughts.com/blog/tdd-workflow-automation-rails-teams/"
 slug: "tdd-workflow-automation-rails-teams"
-author: "JetThoughts Team"
 ---
 
 **TL;DR**: Automated TDD workflows reduce test feedback time from 30+ minutes to under 30 seconds, enabling true test-driven development at scale. Here's the complete toolchain and methodology we use with 200+ Rails client engagements—including our proprietary anti-test-smell framework and shameless green refactoring approach.

@@ -205,7 +205,7 @@ npx claude-flow@alpha benchmark embeddings \
 ```
 
 Expected output:
-```
+```text
 Average latency: 7.2ms
 Cached latency: 0.4ms
 Throughput: 138 embeddings/sec
@@ -271,7 +271,7 @@ node -e "console.log(typeof WebAssembly)"
 ## References
 
 - **AgentDB v1.6.0**: Local embedding support
-- **transformers.js**: https://huggingface.co/docs/transformers.js
+- **transformers.js**: [Documentation](https://huggingface.co/docs/transformers.js)
 - **Xenova/all-MiniLM-L6-v2**: Lightweight sentence transformer
 - **Expert Consultation**: `_workspace/claude-flow-expert-consultation-jt_site-20251029.md`
 
