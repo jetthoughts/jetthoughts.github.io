@@ -34,7 +34,7 @@ jt_site can now use **local semantic search** powered by transformers.js, elimin
 
 ```bash
 # AgentDB v1.6.0+ includes transformers.js support
-npx claude-flow@alpha --version  # Should be v2.7.0+
+npx claude-flow@2.7.0 --version  # Pinned version for stability
 ```
 
 ### Local Embedding Configuration

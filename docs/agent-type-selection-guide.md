@@ -76,7 +76,7 @@ Task("Blog Writer", "Draft technical blog post about Hugo performance optimizati
 
 ## 🌳 Decision Tree
 
-```
+```text
 START: What is the primary task?
 
 ├─ Is it a MAJOR architectural change?

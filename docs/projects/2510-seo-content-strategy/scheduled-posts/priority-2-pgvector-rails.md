@@ -377,10 +377,13 @@ end
 class AddHnswIndexToProducts < ActiveRecord::Migration[7.0]
   def change
     # HNSW index for fast approximate nearest neighbor search
-    add_index :products, :embedding, using: :hnsw, opclass: :vector_cosine_ops
+    # NOTE: Use algorithm: :concurrently for production zero-downtime indexing
+    add_index :products, :embedding, using: :hnsw, opclass: :vector_cosine_ops,
+              algorithm: :concurrently
 
     # Alternative: IVFFlat for larger datasets
-    # add_index :products, :embedding, using: :ivfflat, opclass: :vector_cosine_ops
+    # add_index :products, :embedding, using: :ivfflat, opclass: :vector_cosine_ops,
+    #           algorithm: :concurrently
   end
 end
 ```

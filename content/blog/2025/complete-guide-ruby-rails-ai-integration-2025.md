@@ -739,7 +739,7 @@ class BatchAiJob < ApplicationJob
     # Batch embed in single API call
     embeddings = OpenAI::Client.new.embeddings(
       parameters: {
-        model: "text-embedding-ada-002",
+        model: "text-embedding-3-small",
         input: documents.pluck(:content)
       }
     )
@@ -775,7 +775,7 @@ rails generate migration EnablePgvector
 # 2. Migrate knowledge base to vector embeddings
 class Article < ApplicationRecord
   include Langchain::Vectorsearch::Pgvector
-  vectorsearch vectorizer: :openai, model: "text-embedding-ada-002"
+  vectorsearch vectorizer: :openai, model: "text-embedding-3-small"
 
   after_commit :async_embed, on: [:create, :update]
 
