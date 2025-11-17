@@ -540,7 +540,7 @@ This creates a workflow loop:
 #### The Local-CI Divergence Problem
 
 Common scenario causing hours of wasted time:
-```
+```text
 Developer: "All tests pass locally" ✅
 CI Pipeline: "Tests failed" ❌
 Developer: "But it works on my machine!"
@@ -962,12 +962,12 @@ fi
 
 Test quality requires dual validation:
 
-**Phase 1: Test Author Validation**
+### Phase 1: Test Author Validation
 - Author writes behavioral test following anti-smell framework
 - Author self-reviews against forbidden patterns checklist
 - Author runs `rake test:quality` locally
 
-**Phase 2: Code Review Validation**
+### Phase 2: Code Review Validation
 - Reviewer validates test focuses on behavior, not implementation
 - Reviewer checks test would fail if business logic broken
 - Reviewer confirms test survives refactoring scenarios
@@ -1178,17 +1178,17 @@ commit 9: Add default discount for unknown subscription types
 
 Shameless green methodology prevents test smells naturally:
 
-**Prevention #1: Implementation Testing**
+### Prevention #1: Implementation Testing
 - Shameless green focuses on making tests pass (behavior validation)
 - Hardcoding prevents testing internal implementation details
 - Refactoring maintains test focus on outcomes
 
-**Prevention #2: Existence Testing**
+### Prevention #2: Existence Testing
 - Tests validate specific discount calculations (behavior)
 - Not just checking if `calculate` method exists
 - Tests fail if discount logic broken
 
-**Prevention #3: Configuration Testing**
+### Prevention #3: Configuration Testing
 - Tests validate business rules (discount rates)
 - Not testing `DISCOUNT_RATES` constant exists
 - Tests verify correct discount applied for each user type
@@ -1470,17 +1470,17 @@ baseline_metrics:
 
 **Rollout Communication Plan**:
 
-**Monday Week 3: Team Demo**
+#### Monday Week 3: Team Demo
 - Live coding session showing file save → instant test feedback
 - Performance comparison: Manual vs automated (side-by-side terminals)
 - Q&A addressing Guard/Spring reliability concerns
 
-**Wednesday Week 3: Pair Programming Sessions**
+#### Wednesday Week 3: Pair Programming Sessions
 - Each team member pairs with pilot developer
 - Hands-on setup on individual machines
 - Troubleshooting common issues (Spring not starting, Guard mapping errors)
 
-**Friday Week 3: Documentation & Resources**
+#### Friday Week 3: Documentation & Resources
 - Internal wiki: Setup guide with team-specific configurations
 - Slack channel: #tdd-automation for questions/support
 - Video tutorial: Recorded setup walkthrough
@@ -1533,7 +1533,7 @@ metrics_dashboard:
 
 ### Common Adoption Challenges & Solutions
 
-**Challenge #1: "Guard keeps running wrong tests"**
+#### Challenge #1: "Guard keeps running wrong tests"
 
 **Diagnosis**: Guardfile watching patterns too broad or incorrect
 **Solution**: Refine patterns to specific test mapping
@@ -1546,7 +1546,7 @@ watch(%r{^app/models/(.+)\.rb$}) { 'test' }
 watch(%r{^app/models/(.+)\.rb$}) { |m| "test/models/#{m[1]}_test.rb" }
 ```
 
-**Challenge #2: "Spring causes test failures with stale code"**
+#### Challenge #2: "Spring causes test failures with stale code"
 
 **Diagnosis**: Spring not reloading after code changes
 **Solution**: Automated Spring restart hooks + manual `spring stop` when debugging
@@ -1557,7 +1557,7 @@ watch(%r{^app/models/(.+)\.rb$}) { |m| "test/models/#{m[1]}_test.rb" }
 spring stop
 ```
 
-**Challenge #3: "Developers forget to start Guard"**
+#### Challenge #3: "Developers forget to start Guard"
 
 **Diagnosis**: Guard not part of daily startup routine
 **Solution**: Add to team onboarding checklist + terminal profile
@@ -1567,7 +1567,7 @@ spring stop
 alias dev-start='cd ~/projects/myapp && bundle exec guard &'
 ```
 
-**Challenge #4: "Tests are still slow even with automation"**
+#### Challenge #4: "Tests are still slow even with automation"
 
 **Diagnosis**: Individual tests taking too long
 **Solution**: Profile and optimize slow tests
@@ -1610,7 +1610,7 @@ After implementing TDD workflow automation, you need metrics proving value to en
 - Flow state preserved: No context switches
 - Effective coding time: 6-7 hours/day
 
-**Productivity Gain: 30-40% more productive development time**
+### Productivity Gain: 30-40% more productive development time
 ```
 
 **Deployment Frequency**:
@@ -1620,7 +1620,7 @@ After implementing TDD workflow automation, you need metrics proving value to en
 - After: 50-75 deployments/week (confident continuous deployment)
 - Impact: 5-7x deployment frequency increase
 
-**Business Value: Features reach users 5-7x faster**
+### Business Value: Features reach users 5-7x faster
 ```
 
 ### Code Quality Metrics
@@ -1632,7 +1632,7 @@ After implementing TDD workflow automation, you need metrics proving value to en
 - After: <1 minute (instant test feedback on file save)
 - Impact: 120-240x faster bug detection
 
-**Quality Impact: Bugs caught before commit, not after deployment**
+### Quality Impact: Bugs caught before commit, not after deployment
 ```
 
 **Production Bug Reduction**:

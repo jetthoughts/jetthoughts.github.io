@@ -925,22 +925,22 @@ end
 
 **30-Day Implementation Roadmap**:
 
-**Week 1: Foundation Setup**
+### Week 1: Foundation Setup
 - [ ] Day 1-2: Install Guard, Spring, parallel_tests gems
 - [ ] Day 3: Configure Guardfile with intelligent test mapping
 - [ ] Day 4-5: Pilot with 2-3 senior developers
 
-**Week 2: Team Adoption**
+### Week 2: Team Adoption
 - [ ] Day 8: Team demo and live coding session
 - [ ] Day 9-10: Pair programming setup sessions
 - [ ] Day 11-12: Troubleshooting and documentation
 
-**Week 3: Optimization**
+### Week 3: Optimization
 - [ ] Day 15: Profile slow specs and optimize
 - [ ] Day 16-17: Configure parallel execution for CI/CD
 - [ ] Day 18-19: Desktop notifications and workflow polish
 
-**Week 4: Measurement & Iteration**
+### Week 4: Measurement & Iteration
 - [ ] Day 22: Collect baseline metrics (test feedback time, bug rate)
 - [ ] Day 23-24: Team retrospective and feedback gathering
 - [ ] Day 25-30: Iterate based on team feedback
@@ -1059,19 +1059,19 @@ Automated testing workflows require careful architecture and team change managem
 ## 📅 TIMELINE WITH MILESTONES
 
 ### Week 1: Research & Validation (5 days)
-**Monday-Tuesday: Environment Setup**
+#### Monday-Tuesday: Environment Setup
 - [ ] Set up Rails 7.0 and 7.1 test projects
 - [ ] Install Guard, Spring, parallel_tests on macOS + Linux
 - [ ] Configure Guardfile with various watching patterns
 - [ ] Test notification systems (terminal-notifier, libnotify)
 
-**Wednesday-Thursday: Performance Benchmarking**
+#### Wednesday-Thursday: Performance Benchmarking
 - [ ] Benchmark small suite (200 specs): Sequential, Guard, Parallel
 - [ ] Benchmark medium suite (1,000 specs): Full automation stack
 - [ ] Document Spring memory usage and restart triggers
 - [ ] Test focused execution performance (single spec < 5 seconds)
 
-**Friday: Code Example Validation**
+#### Friday: Code Example Validation
 - [ ] Test all Guardfile patterns (model, controller, service, view)
 - [ ] Validate Spring configuration across Rails 7.0/7.1
 - [ ] Test parallel execution database isolation
@@ -1080,31 +1080,31 @@ Automated testing workflows require careful architecture and team change managem
 ---
 
 ### Week 2: Writing & Review (5 days)
-**Monday: Outline Expansion & First Draft**
+#### Monday: Outline Expansion & First Draft
 - [ ] Expand outline to full article structure
 - [ ] Write Sections 1-3 (Opening, Case for Automation, Toolchain)
 - [ ] Add automation stack code examples
 - [ ] Target: 1,200 words completed
 
-**Tuesday: Core Implementation**
+#### Tuesday: Core Implementation
 - [ ] Write Section 4 (Complete Workflow Setup)
 - [ ] Write Section 5 (Team Adoption Strategy)
 - [ ] Add step-by-step configuration guides
 - [ ] Target: 2,200 words total
 
-**Wednesday: Advanced Topics & Measurement**
+#### Wednesday: Advanced Topics & Measurement
 - [ ] Write Section 6 (Measuring Impact)
 - [ ] Write Section 7 (Advanced Optimizations)
 - [ ] Write Section 8 (Conclusion & Roadmap)
 - [ ] Target: 3,000+ words complete
 
-**Thursday: Technical Review**
+#### Thursday: Technical Review
 - [ ] Code review by senior Rails developer
 - [ ] Validate all benchmarks and performance claims
 - [ ] Test code examples in fresh Rails app
 - [ ] Verify team adoption strategies
 
-**Friday: Editorial & SEO**
+#### Friday: Editorial & SEO
 - [ ] Editorial review (clarity, flow, readability)
 - [ ] SEO optimization (keywords, meta, headings)
 - [ ] Add internal links to related content
@@ -1113,31 +1113,31 @@ Automated testing workflows require careful architecture and team change managem
 ---
 
 ### Week 3: Publication & Promotion (5 days)
-**Monday: Final Prep & Publication**
+#### Monday: Final Prep & Publication
 - [ ] Final proofreading pass
 - [ ] Verify all code examples work
 - [ ] Add schema markup (HowTo, Article)
 - [ ] Publish to jetthoughts.com/blog
 
-**Tuesday: Primary Promotion**
+#### Tuesday: Primary Promotion
 - [ ] Submit to Ruby Weekly newsletter
 - [ ] Post to r/ruby and r/rails
 - [ ] Share on Rails Twitter
 - [ ] LinkedIn post (engineering managers audience)
 
-**Wednesday: Developer Community Promotion**
+#### Wednesday: Developer Community Promotion
 - [ ] Cross-post to Dev.to (canonical URL)
 - [ ] Submit to HackerNews (Show HN)
 - [ ] Share in Rails Discord/Slack communities
 - [ ] Email to Rails email list
 
-**Thursday: Engineering Manager Outreach**
+#### Thursday: Engineering Manager Outreach
 - [ ] Post to r/ExperiencedDevs (team adoption angle)
 - [ ] Share in engineering management Slack groups
 - [ ] Tweet thread: TDD adoption challenges + solutions
 - [ ] LinkedIn article: "Why Your Team Isn't Doing TDD (It's Not What You Think)"
 
-**Friday: Monitoring & Engagement**
+#### Friday: Monitoring & Engagement
 - [ ] Respond to comments (Reddit, HackerNews, Dev.to)
 - [ ] Track early metrics (Search Console, Analytics)
 - [ ] Monitor social media engagement

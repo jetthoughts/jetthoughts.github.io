@@ -1082,7 +1082,7 @@ brew services restart postgresql   # macOS
 
 **Symptom**: OpenAI API rate limit errors
 
-```
+```text
 OpenAI::Error: Rate limit exceeded (500 requests/min)
 ```
 
@@ -1170,7 +1170,7 @@ FROM pg_stat_progress_create_index;
 
 **Symptom**: "dimension mismatch" errors during search
 
-```
+```text
 PG::DataException: different vector dimensions 1536 and 768
 ```
 
