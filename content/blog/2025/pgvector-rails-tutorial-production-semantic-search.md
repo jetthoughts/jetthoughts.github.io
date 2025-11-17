@@ -1,12 +1,12 @@
 ---
 title: "pgvector Rails Production Guide: Semantic Search 2025"
 description: "Build production semantic search in Rails with pgvector and PostgreSQL. Save $6,000/year vs Pinecone. Complete tutorial with 45+ code examples and benchmarks."
-date: 2025-01-18
+created_at: "2025-01-18T10:00:00Z"
+edited_at: "2025-01-18T10:00:00Z"
 draft: false
 tags: ["rails", "postgresql", "pgvector", "semantic-search", "vector-database", "embeddings", "ai"]
 canonical_url: "https://jetthoughts.com/blog/pgvector-rails-tutorial-production-semantic-search/"
 slug: "pgvector-rails-tutorial-production-semantic-search"
-author: "JetThoughts Team"
 ---
 
 **TL;DR**: pgvector delivers 40% faster similarity search than Pinecone for typical Rails apps while saving $500+/month in infrastructure costs. Here's how to migrate your Rails app from external vector databases to PostgreSQL in under 1 day.
@@ -919,13 +919,15 @@ namespace :pgvector do
     test_queries.each do |query|
       puts "\nTesting: #{query}"
 
-      # pgvector results
-      pgvector_products = Product.semantic_search(query, limit: 10)
-      pgvector_ids = pgvector_products.map(&:id)
+      # pgvector results (using neighbor gem's nearest_neighbors method)
+      query_embedding = generate_query_embedding(query)
+      pgvector_products = Product.nearest_neighbors(:embedding, query_embedding, distance: "cosine").limit(10)
+      pgvector_ids = pgvector_products.pluck(:id)
 
-      # Pinecone results
-      pinecone_products = Product.semantic_search_pinecone(query, limit: 10)
-      pinecone_ids = pinecone_products.map(&:id)
+      # Pinecone results (example - replace with your Pinecone integration)
+      # Example: pinecone_service = PineconeService.new
+      #          pinecone_ids = pinecone_service.search(query, limit: 10).map { |r| r['metadata']['product_id'] }
+      pinecone_ids = fetch_pinecone_results(query, limit: 10)
 
       # Calculate overlap
       overlap = (pgvector_ids & pinecone_ids).size
@@ -939,6 +941,28 @@ namespace :pgvector do
         puts "  ✗ FAIL (Expected ≥70% overlap)"
       end
     end
+  end
+
+  # Helper: Generate embedding for search query
+  def generate_query_embedding(query)
+    client = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
+    response = client.embeddings(
+      parameters: {
+        model: "text-embedding-3-small",
+        input: query
+      }
+    )
+    response.dig("data", 0, "embedding")
+  end
+
+  # Helper: Fetch Pinecone results (replace with your actual implementation)
+  def fetch_pinecone_results(query, limit:)
+    # Example implementation - replace with your Pinecone client
+    # pinecone = Pinecone::Client.new(api_key: ENV['PINECONE_API_KEY'])
+    # embedding = generate_query_embedding(query)
+    # results = pinecone.query(index: 'products', vector: embedding, top_k: limit)
+    # results['matches'].map { |m| m['metadata']['product_id'] }
+    []  # Placeholder - implement your Pinecone integration
   end
 end
 ```

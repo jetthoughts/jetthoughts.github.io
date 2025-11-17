@@ -1,12 +1,12 @@
 ---
 title: "Complete Guide to Ruby on Rails AI Integration 2025"
 description: "Master Ruby on Rails AI integration with OpenAI, Anthropic, and LangChain in 2025. Production patterns, security best practices, and 50+ working code examples."
-date: 2025-01-16
+created_at: "2025-01-16T10:00:00Z"
+edited_at: "2025-01-16T10:00:00Z"
 draft: false
 tags: ["ruby", "rails", "ai", "openai", "anthropic", "langchain", "machine-learning", "pgvector", "production"]
 canonical_url: "https://jetthoughts.com/blog/complete-guide-ruby-rails-ai-integration-2025/"
 slug: "complete-guide-ruby-rails-ai-integration-2025"
-author: "JetThoughts Team"
 ---
 
 Ruby on Rails developers face a critical decision in 2025: **Which AI SDK should I use for my production Rails application?** With OpenAI's GPT-4, Anthropic's Claude, and emerging tools like LangChain.rb, the Ruby AI ecosystem has exploded. Yet most guides skip the production deployment challenges that CTOs and engineering teams actually face.
@@ -401,6 +401,8 @@ end
 ```ruby
 # app/services/safe_ai_service.rb
 class SafeAiService
+  class InvalidInputError < StandardError; end
+
   INJECTION_PATTERNS = [
     /ignore (all )?previous (instructions|rules)/i,
     /you are now/i,
@@ -414,12 +416,12 @@ class SafeAiService
     INJECTION_PATTERNS.each do |pattern|
       if user_input.match?(pattern)
         Rails.logger.warn "Prompt injection attempt detected: #{user_input[0..100]}"
-        raise SecurityError, "Invalid input detected"
+        raise InvalidInputError, "Invalid input detected"
       end
     end
 
     # 2. Length limits (prevent token exhaustion attacks)
-    raise SecurityError, "Input too long" if user_input.length > 4000
+    raise InvalidInputError, "Input too long" if user_input.length > 4000
 
     # 3. XML-style escaping for Claude (Anthropic recommendation)
     <<~ESCAPED
@@ -442,6 +444,9 @@ class SafeAiService
         temperature: 0.3 # Lower temperature = less creative instruction-following
       }
     )
+  rescue InvalidInputError => e
+    Rails.logger.warn("AI input rejected: #{e.message}")
+    { error: "Invalid input. Please avoid special characters and scripting patterns." }
   end
 end
 ```
