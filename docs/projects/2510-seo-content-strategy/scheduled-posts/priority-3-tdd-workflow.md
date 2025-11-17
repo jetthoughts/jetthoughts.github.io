@@ -132,7 +132,7 @@ Automated TDD workflow:
 In this guide, you'll learn the complete toolchain for automated TDD workflows in Rails: Guard for file watching, Spring for Rails preloading, parallel execution, intelligent test selection, and CI/CD integration. You'll see working configurations, performance optimizations, and team adoption strategies.
 ```
 
-**SEO Optimization**:
+**SEO**:
 - Primary keyword: "TDD workflow automation" in H1 and first paragraph
 - Secondary keywords: "automated testing", "test-driven development workflow", "Rails TDD"
 - Featured snippet target: Productivity equation comparison
@@ -1106,7 +1106,7 @@ Automated testing workflows require careful architecture and team change managem
 
 #### Friday: Editorial & SEO
 - [ ] Editorial review (clarity, flow, readability)
-- [ ] SEO optimization (keywords, meta, headings)
+- [ ] SEO (keywords, meta, headings)
 - [ ] Add internal links to related content
 - [ ] Create workflow diagrams and charts
 
