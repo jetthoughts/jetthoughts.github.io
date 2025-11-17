@@ -1068,12 +1068,12 @@ end
 **Apply Flocking Rules**:
 
 **Step 1**: Select alike things
-```
+```text
 150.0 and 50.0 are alike (both hardcoded discounts)
 ```
 
 **Step 2**: Find smallest difference
-```
+```text
 premium: 150.0 for 1000 amount = 15%
 regular: 50.0 for 500 amount = 10%
 ```
@@ -1148,7 +1148,7 @@ end
 5. After any small improvement
 
 **Extended TDD Loop**:
-```
+```text
 RED → GREEN → COMMIT → REFACTOR (flocking step 1) → COMMIT →
 REFACTOR (flocking step 2) → COMMIT → INTEGRATE
 ```
@@ -1160,7 +1160,7 @@ REFACTOR (flocking step 2) → COMMIT → INTEGRATE
 - Make code review easier (reviewers see small logical steps)
 
 **Example Commit Sequence**:
-```
+```text
 commit 1: Add test for premium user discount
 commit 2: Hardcode premium discount (shameless green)
 commit 3: Add test for regular user discount

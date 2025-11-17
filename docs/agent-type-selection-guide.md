@@ -13,7 +13,7 @@
 |-------------|-----------------|-------------|-------------|
 | **Hugo Templates** | `hugo-expert` | Template development, partials, shortcodes | `coder` for simple fixes |
 | **CSS/PostCSS** | `css-specialist` | Style development, PostCSS mixins, consolidation | `coder` for minor tweaks |
-| **SEO Optimization** | `seo-expert` | Meta tags, structured data, performance | `analyst` for research only |
+| **SEO** | `seo-expert` | Meta tags, structured data, performance | `analyst` for research only |
 | **Content Writing** | `content-writer` | Blog posts, documentation, copy | `knowledge-expert` for structure |
 | **Visual Testing** | `tester` + `qa-expert` | Screenshot comparison, visual regression | Always pair these two |
 | **Performance** | `performance-expert` | Hugo build optimization, asset optimization | `coder` after research |
@@ -209,7 +209,7 @@ START: What is the primary task?
 
 ---
 
-### Pattern 3: SEO Optimization Workflow
+### Pattern 3: SEO Workflow
 
 ```javascript
 // Research phase
