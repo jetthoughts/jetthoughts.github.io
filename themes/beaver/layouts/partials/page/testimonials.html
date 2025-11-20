@@ -69,10 +69,18 @@
   }
 </style>
 
+<div>
+  <div style="text-align: center;">
+    {{ $image := resources.Get "img/badges/tewa-2025.png" }}
+    {{ $title := "Top Enterprise Software Developers 2025" }}
+    {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 200 "class" "logo-image") }}
+  </div>
+</div>
+
 <div
   id="testimonials"
   class="my-flex-container"
-  style="display:flex;justify-content: center !important;column-gap:2rem">
+  style="display:flex;justify-content: center !important;column-gap:2rem; margin-top: 2rem; margin-bottom: 2rem;">
   <div style="display:flex;justify-content: center !important;column-gap:2rem">
     <div style="text-align: center;">
       <a
