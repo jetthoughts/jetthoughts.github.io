@@ -170,6 +170,7 @@ Add to your Gemfile:
 
 ```ruby
 # Gemfile
+gem 'pgvector'              # PostgreSQL vector extension support
 gem 'neighbor', '~> 0.3.2'  # ActiveRecord interface for pgvector
 gem 'ruby-openai', '~> 7.0' # OpenAI API client for embeddings
 ```
