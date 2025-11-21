@@ -429,6 +429,7 @@ Implement search endpoint:
 module Products
   class SearchController < ApplicationController
     def index
+      @request_started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       @query = params[:q]
 
       if @query.present?
@@ -449,11 +450,18 @@ module Products
         generate_query_embedding(query)
       end
 
+      # Guard against nil embedding (API failure)
+      return Product.none if query_embedding.nil?
+
       # Perform semantic search with filtering
-      Product.nearest_neighbors(:embedding, query_embedding, distance: "cosine")
-        .where("price <= ?", max_price) # Example: Filter by price
+      products = Product.nearest_neighbors(:embedding, query_embedding, distance: "cosine")
         .where(in_stock: true)          # Only show available products
-        .first(20)
+
+      # Apply price filter only if finite value provided
+      price_limit = max_price
+      products = products.where("price <= ?", price_limit) if price_limit&.finite?
+
+      products.first(20)
     end
 
     def generate_query_embedding(query)
@@ -468,21 +476,21 @@ module Products
       response.dig("data", 0, "embedding")
     rescue StandardError => e
       Rails.logger.error("Query embedding failed: #{e.message}")
-      # Fallback to keyword search on failure
+      # Return nil to trigger fallback behavior
       nil
     end
 
     def max_price
-      # Example: Parse price filter from params
-      params[:max_price]&.to_f || Float::INFINITY
+      # Example: Parse price filter from params (returns nil or Float)
+      params[:max_price]&.to_f
     end
 
     def track_search_analytics(query, result_count)
-      # Production: Track search performance
+      # Production: Track search performance with monotonic clock
       SearchAnalytic.create(
         query: query,
         result_count: result_count,
-        response_time: Time.current - @request_start
+        response_time: Process.clock_gettime(Process::CLOCK_MONOTONIC) - @request_started_at
       )
     end
   end
@@ -554,7 +562,7 @@ Create user-friendly search interface:
       <% else %>
         <div class="no-results">
           <p>No products found matching "<%= @query %>"</p>
-          <p>Try broadening your search or browse <% link_to "all products", products_path %></p>
+          <p>Try broadening your search or browse <%= link_to "all products", products_path %></p>
         </div>
       <% end %>
     </div>
