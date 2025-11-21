@@ -37,7 +37,7 @@ pgvector is a PostgreSQL extension that enables vector similarity search directl
 **Core Features**:
 - **Vector Storage**: Efficient storage for high-dimensional vectors (1-16,000 dimensions)
 - **Distance Functions**: Cosine similarity, L2 distance, inner product
-- **Index Types**: HNSW (fast approximate search) and IVFFlat (scalable exact search)
+- **Index Types**: HNSW (fast approximate ANN search) and IVFFlat (scalable approximate ANN index)
 - **Rails Integration**: neighbor gem provides ActiveRecord-friendly interface
 
 **Production Readiness**:
