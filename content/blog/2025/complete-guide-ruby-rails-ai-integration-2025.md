@@ -79,7 +79,7 @@ end
 
 ### 2. **anthropic-sdk-ruby** - Official Claude Integration
 
-[anthropic-sdk-ruby](https://github.com/anthropics/anthropic-sdk-ruby) (0.3+) is Anthropic's official Ruby SDK for production use.
+[anthropic-sdk-ruby](https://github.com/anthropics/anthropic-sdk-ruby) (1.15+) is Anthropic's official Ruby SDK for production use.
 
 **When to use**: You prioritize Claude's superior reasoning, longer context windows (200K tokens), or AWS Bedrock integration.
 
@@ -93,7 +93,7 @@ end
 **Installation**:
 ```ruby
 # Gemfile
-gem "anthropic-sdk-ruby", "~> 0.3.0"
+gem "anthropic-sdk-ruby", "~> 1.15.0"
 
 # config/initializers/anthropic.rb
 ANTHROPIC_CLIENT = Anthropic::Client.new(
@@ -196,7 +196,7 @@ class ClaudeAgentService
     }]
 
     response = @client.messages.create(
-      model: "claude-3-5-sonnet-20241022",
+      model: "claude-3-5-sonnet-latest",
       max_tokens: 1024,
       tools: tools,
       messages: [
@@ -849,7 +849,7 @@ class SupportAgentService
     ]
 
     response = ANTHROPIC_CLIENT.messages.create(
-      model: "claude-3-5-sonnet-20241022",
+      model: "claude-3-5-sonnet-latest",
       max_tokens: 1024,
       tools: tools,
       messages: conversation_history(ticket),
