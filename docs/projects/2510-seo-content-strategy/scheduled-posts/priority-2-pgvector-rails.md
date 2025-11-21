@@ -202,6 +202,7 @@ end
 #### Step 3: Install neighbor Gem
 ```ruby
 # Gemfile
+gem 'pgvector'     # PostgreSQL vector extension support
 gem 'neighbor'
 gem 'ruby-openai' # For generating embeddings
 ```

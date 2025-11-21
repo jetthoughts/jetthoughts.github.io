@@ -380,9 +380,14 @@ class ActiveSupport::TestCase
     # Configure ActiveRecord for parallel execution
     parallelize(workers: :number_of_processors) if respond_to?(:parallelize)
 
-    # Ensure clean database state
+    # Clean database state (preserve schema_migrations for Rails migration tracking)
     parallelize_setup do |worker|
-      ActiveRecord::Base.connection.execute("TRUNCATE TABLE schema_migrations RESTART IDENTITY CASCADE")
+      # Rails creates isolated test databases per worker via parallel:create parallel:prepare
+      # Only truncate data tables, exclude schema_migrations to preserve migration state
+      tables_to_truncate = ActiveRecord::Base.connection.tables - ['schema_migrations']
+      tables_to_truncate.each do |table|
+        ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table} RESTART IDENTITY CASCADE")
+      end
     end
 
     parallelize_teardown do |worker|
