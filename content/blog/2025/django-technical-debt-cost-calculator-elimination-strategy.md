@@ -18,7 +18,7 @@ This comprehensive guide provides a complete framework for quantifying Django te
 
 Technical debt isn't just a developer inconvenience—it's a business cost with measurable financial impact. Understanding the true cost requires examining both direct expenses (measurable developer time) and indirect costs (velocity loss, opportunity costs, and quality degradation).
 
-### Direct Costs: Measuring Developer Time Waste
+### Direct Costs - Measuring Developer Time Waste
 
 ### Bug Investigation and Resolution
 
@@ -48,7 +48,7 @@ class OrderService:
         pass
 ```
 
-### Real-World Bug Resolution Metrics:
+### Real-World Bug Resolution Metrics
 
 ```python
 # Benchmarking study across 50 Django projects
@@ -107,7 +107,7 @@ feature_breakdown_with_debt = {
 # Extra cost per feature: $1,600 (32 hours × $50/hour)
 ```
 
-### Real-World Feature Velocity Research:
+### Real-World Feature Velocity Research
 
 ```python
 # Study: 200 Django projects tracked over 12 months
@@ -262,7 +262,7 @@ For teams struggling to quantify the business impact of technical debt and seeki
 
 ### Aggregate Cost Model: The $180K-350K Reality
 
-### Complete Annual Technical Debt Cost Breakdown:
+### Complete Annual Technical Debt Cost Breakdown
 
 ```python
 # Annual technical debt cost model for 8-developer Django team
@@ -333,7 +333,7 @@ def list_orders(request):
 # Database CPU: 87%
 ```
 
-### Cost Impact Analysis:
+### Cost Impact Analysis
 
 ```python
 # Performance degradation from ORM anti-patterns
@@ -365,7 +365,7 @@ orm_debt_costs = {
 }
 ```
 
-### Proper ORM Usage:
+### Proper ORM Usage
 
 ```python
 # LOW DEBT: Optimized queries with select_related and prefetch_related
@@ -440,7 +440,7 @@ class Order(models.Model):
     # Test suite takes 47 minutes to run
 ```
 
-### Cost Impact of Fat Models:
+### Cost Impact of Fat Models
 
 ```python
 # Maintainability cost analysis
@@ -475,7 +475,7 @@ fat_model_costs = {
 }
 ```
 
-### Refactored Architecture:
+### Refactored Architecture
 
 ```python
 # LOW DEBT: Service-oriented architecture
@@ -552,7 +552,7 @@ project_health = {
 }
 ```
 
-### Cost Impact of Missing Tests:
+### Cost Impact of Missing Tests
 
 ```python
 # Testing debt cost analysis
@@ -591,7 +591,7 @@ testing_debt_costs = {
 }
 ```
 
-### Comprehensive Test Strategy:
+### Comprehensive Test Strategy
 
 ```python
 # LOW DEBT: Comprehensive test coverage
@@ -686,7 +686,7 @@ upgrade_attempt = {
 }
 ```
 
-### Cost Impact of Legacy Dependencies:
+### Cost Impact of Legacy Dependencies
 
 ```python
 # Dependency debt cost analysis
@@ -723,7 +723,7 @@ dependency_debt_costs = {
 }
 ```
 
-### Systematic Dependency Management:
+### Systematic Dependency Management
 
 ```python
 # LOW DEBT: Modern dependency management
@@ -794,7 +794,7 @@ symptoms = {
 }
 ```
 
-### Cost Impact:
+### Cost Impact
 
 ```python
 # Migration debt costs
@@ -824,7 +824,7 @@ migration_debt_costs = {
 }
 ```
 
-### Clean Migration Strategy:
+### Clean Migration Strategy
 
 ```python
 # LOW DEBT: Maintained migration hygiene
@@ -884,7 +884,7 @@ Moving from abstract concerns to concrete numbers requires a systematic assessme
 
 ### Step 1: Technical Debt Assessment Audit
 
-### Codebase Analysis Metrics:
+### Codebase Analysis Metrics
 
 ```python
 # Automated technical debt scanning
@@ -944,7 +944,7 @@ technical_debt_score = {
 }
 ```
 
-### Manual Assessment Checklist:
+### Manual Assessment Checklist
 
 ```python
 # Qualitative technical debt indicators
@@ -1001,7 +1001,7 @@ qualitative_assessment = {
 
 ### Step 2: Time Tracking and Cost Calculation
 
-### Developer Time Allocation Analysis:
+### Developer Time Allocation Analysis
 
 ```python
 # Track developer time for 2-week sprint
@@ -1031,7 +1031,7 @@ time_tracking_results = {
 }
 ```
 
-### Feature Velocity Degradation:
+### Feature Velocity Degradation
 
 ```python
 # Measure velocity impact
@@ -1073,7 +1073,7 @@ velocity_analysis = {
 
 ### Step 3: Infrastructure and Operational Costs
 
-### Infrastructure Inefficiency Costs:
+### Infrastructure Inefficiency Costs
 
 ```python
 # Calculate infrastructure overhead from technical debt
@@ -1110,7 +1110,7 @@ infrastructure_costs = {
 }
 ```
 
-### Production Support Costs:
+### Production Support Costs
 
 ```python
 # Calculate operational overhead
@@ -1144,7 +1144,7 @@ operational_costs = {
 
 ### Step 4: Complete ROI Calculator
 
-### Comprehensive Technical Debt Cost Model:
+### Comprehensive Technical Debt Cost Model
 
 ```python
 # Complete annual technical debt cost calculator
@@ -1247,7 +1247,7 @@ Quantifying costs reveals the problem; systematic elimination delivers the solut
 
 ### Prioritization Framework: Maximum ROI Targeting
 
-### Technical Debt Prioritization Matrix:
+### Technical Debt Prioritization Matrix
 
 ```python
 # Prioritize technical debt by impact and effort
@@ -1352,7 +1352,7 @@ for item in prioritized_debt:
 # Refactor Order Model (2000 lines): Priority 1.57, ROI $35,000
 ```
 
-### Prioritization Decision Tree:
+### Prioritization Decision Tree
 
 ```python
 # Decision framework for technical debt prioritization
@@ -1493,7 +1493,7 @@ To establish comprehensive performance monitoring during technical debt eliminat
 
 ### Testing Strategy: Safety Net for Refactoring
 
-### Comprehensive Testing Approach:
+### Comprehensive Testing Approach
 
 ```python
 # Build safety net before refactoring
@@ -1659,7 +1659,7 @@ coverage_targets = {
 
 ### Refactoring Workflow: Safe, Incremental Changes
 
-### Step-by-Step Refactoring Process:
+### Step-by-Step Refactoring Process
 
 ```python
 # Safe refactoring workflow
@@ -1712,7 +1712,7 @@ refactoring_workflow = {
 }
 ```
 
-### Refactoring Anti-Patterns to Avoid:
+### Refactoring Anti-Patterns to Avoid
 
 ```python
 # Common refactoring mistakes
@@ -1754,7 +1754,7 @@ Understanding theoretical frameworks helps; seeing real results inspires action.
 
 ### Case Study 1: E-Commerce Platform - $280K Annual Savings
 
-### Background:
+### Background
 - **Company**: Mid-sized e-commerce platform (Django 2.2, 6 years old)
 - **Team Size**: 8 developers
 - **Technical Debt Score**: 4.2 (High)
@@ -1762,7 +1762,7 @@ Understanding theoretical frameworks helps; seeing real results inspires action.
 
 This team combined technical debt elimination with a [Django to Laravel migration analysis](/blog/laravel-11-migration-guide-production-deployment-strategies/) to evaluate framework options. Similar debt patterns emerge across frameworks, making cross-framework insights valuable for technology decision-making.
 
-### Initial Problems:
+### Initial Problems
 
 ```python
 initial_state = {
@@ -1790,7 +1790,7 @@ initial_state = {
 }
 ```
 
-### Elimination Strategy:
+### Elimination Strategy
 
 ```python
 # 6-month technical debt elimination project
@@ -1863,7 +1863,7 @@ elimination_plan = {
 }
 ```
 
-### Results After 6 Months:
+### Results After 6 Months
 
 ```python
 results = {
@@ -1907,7 +1907,7 @@ results = {
 }
 ```
 
-### Key Success Factors:
+### Key Success Factors
 
 ```python
 success_factors = {
@@ -1921,13 +1921,13 @@ success_factors = {
 
 ### Case Study 2: SaaS Startup - 3x Feature Velocity Improvement
 
-### Context:
+### Context
 - **Company**: B2B SaaS platform (Django 3.1, 3 years old)
 - **Team Size**: 5 developers
 - **Technical Debt Score**: 3.7 (Medium-High)
 - **Growth Stage**: Series A, scaling rapidly
 
-### Challenge:
+### Challenge
 
 ```python
 startup_challenges = {
@@ -1949,7 +1949,7 @@ startup_challenges = {
 }
 ```
 
-### 3-Month Focused Sprint:
+### 3-Month Focused Sprint
 
 ```python
 sprint_plan = {
@@ -1983,7 +1983,7 @@ sprint_plan = {
 }
 ```
 
-### Results:
+### Results
 
 ```python
 results_3_months = {
