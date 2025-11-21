@@ -376,15 +376,22 @@ end
 ```ruby
 # db/migrate/20250127_add_hnsw_index_to_products.rb
 class AddHnswIndexToProducts < ActiveRecord::Migration[7.0]
-  def change
+  # Disable DDL transaction for concurrent index creation
+  disable_ddl_transaction!
+
+  def up
     # HNSW index for fast approximate nearest neighbor search
-    # NOTE: Use algorithm: :concurrently for production zero-downtime indexing
+    # Concurrent indexing prevents table locks during creation
     add_index :products, :embedding, using: :hnsw, opclass: :vector_cosine_ops,
               algorithm: :concurrently
 
     # Alternative: IVFFlat for larger datasets
     # add_index :products, :embedding, using: :ivfflat, opclass: :vector_cosine_ops,
     #           algorithm: :concurrently
+  end
+
+  def down
+    remove_index :products, :embedding, algorithm: :concurrently
   end
 end
 ```
