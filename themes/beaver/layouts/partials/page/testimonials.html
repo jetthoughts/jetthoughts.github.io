@@ -9,7 +9,8 @@
   ><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"
 /></noscript>
 
-<div id="testimonials-header"
+<div
+  id="testimonials-header"
   class="fl-col-group fl-node-1a4igunq3xvj fl-col-group-custom-width"
   data-node="1a4igunq3xvj">
   <div
@@ -71,9 +72,11 @@
 
 <div>
   <div style="text-align: center;">
-    {{ $image := resources.Get "img/badges/tewa-2025.png" }}
-    {{ $title := "Top Enterprise Software Developers 2025" }}
-    {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 200 "class" "logo-image") }}
+    <a href="https://techreviewer.co/companies/jetthoughts" target="_blank">
+      {{ $image := resources.Get "img/badges/tewa-2025.png" }}
+      {{ $title := "Top Enterprise Software Developers 2025" }}
+      {{ partial "img/resize.html" (dict "image" $image "title" $title "width" 200 "class" "logo-image") }}
+    </a>
   </div>
 </div>
 
@@ -189,7 +192,8 @@
                             </div>
                             <span class="pp-review-title"
                               >{{ index . "title" | default "Customer" }}{{ with index . "company" }}
-                                , {{ . }}
+                                ,
+                                {{ . }}
                               {{ end }}</span
                             >
                           </cite>
@@ -223,7 +227,8 @@
                             </div>
                             <span class="pp-review-title"
                               >{{ index . "title" | default "Customer" }}{{ with index . "company" }}
-                                , {{ . }}
+                                ,
+                                {{ . }}
                               {{ end }}</span
                             >
                           </cite>
