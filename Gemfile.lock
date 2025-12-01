@@ -70,7 +70,7 @@ GEM
     matrix (0.4.3)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.26.0)
+    minitest (5.26.2)
     multi_xml (0.7.2)
       bigdecimal (~> 3.1)
     mutex_m (0.3.0)
