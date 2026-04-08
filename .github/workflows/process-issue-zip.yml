@@ -2,12 +2,12 @@ name: Process Issue Attachments
 
 on:
   issue_comment:
-    types: [ created ]
+    types: [created]
 
 jobs:
   handle-upload:
     if: |
-      contains(github.event.comment.body, '.zip)')) &&
+      contains(github.event.comment.body, '.zip)') &&
       contains(fromJSON('["pftg"]'), github.event.comment.user.login)
 
     runs-on: ubuntu-latest
@@ -23,8 +23,8 @@ jobs:
       - name: Parse comment
         id: parse
         run: |
-          ZIP_URL=$(echo "${{ github.event.comment.body }}" | 
-            grep -oP '\[.*?\]\((https?://.*?\.zip)\)' | 
+          ZIP_URL=$(echo "${{ github.event.comment.body }}" |
+            grep -oP '\[.*?\]\((https?://.*?\.zip)\)' |
             grep -oP '(https?://.*?\.zip)')
 
           echo "url=$ZIP_URL" >> $GITHUB_OUTPUT
@@ -47,7 +47,6 @@ jobs:
           # Create a new branch
           BRANCH_NAME="add-files-issue-${{ steps.parse.outputs.issue }}"
           git checkout -b $BRANCH_NAME
-          
           git add .
           git commit -m "Add files from issue #${{ steps.parse.outputs.issue }}"
           git push origin $BRANCH_NAME
