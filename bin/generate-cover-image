@@ -1,0 +1,232 @@
+#!/usr/bin/env bash
+# Generate a blog post cover image (1200x630 JPEG) using the Gemini CLI.
+#
+# Delegates actual image generation to `gemini` in non-interactive mode.
+# Gemini must be installed, authenticated, and have an image-generation
+# tool/skill available at runtime (e.g., imagen, stitch, or a configured
+# image-gen MCP server). This script is a thin, deterministic wrapper
+# around the agent call — it does not itself generate pixels.
+#
+# Usage:
+#   bin/generate-cover-image "a prompt describing the image"
+#   bin/generate-cover-image --slug <post-slug> "a prompt"
+#   bin/generate-cover-image --out /path/to/cover.jpg "a prompt"
+#   echo "a prompt" | bin/generate-cover-image --slug <post-slug>
+#   bin/generate-cover-image --dry-run "a prompt"
+#
+# Flags:
+#   --slug <slug>   Save to content/blog/<slug>/cover.jpg (overrides --out)
+#   --out  <path>   Absolute or relative output path (default: ./cover.jpg)
+#   --model <name>  Gemini model (default: gemini-2.5-flash-image — a.k.a.
+#                   "Nano Banana", the Gemini image generation model)
+#   --dry-run       Print the gemini invocation without running it
+#   -h, --help      Show this help
+
+set -euo pipefail
+
+# -------- defaults --------
+OUT_PATH=""
+SLUG=""
+MODEL="gemini-2.5-flash-image"
+DRY_RUN=0
+USER_PROMPT=""
+
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+
+usage() {
+    # Print the comment block that follows the shebang, auto-stopping at
+    # the first non-comment line. Avoids fragile hard-coded line numbers.
+    awk 'NR==1{next} /^#/{sub(/^# ?/,""); print; next} {exit}' "$0"
+    exit "${1:-0}"
+}
+
+err() {
+    echo "error: $*" >&2
+    exit 1
+}
+
+# -------- arg parsing --------
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --slug)
+            [[ -n ${2:-} ]] || err "--slug requires a value"
+            SLUG="$2"
+            shift 2
+            ;;
+        --out)
+            [[ -n ${2:-} ]] || err "--out requires a value"
+            OUT_PATH="$2"
+            shift 2
+            ;;
+        --model)
+            [[ -n ${2:-} ]] || err "--model requires a value"
+            MODEL="$2"
+            shift 2
+            ;;
+        --dry-run)
+            DRY_RUN=1
+            shift
+            ;;
+        -h|--help)
+            usage 0
+            ;;
+        --)
+            shift
+            USER_PROMPT="${USER_PROMPT}${USER_PROMPT:+ }$*"
+            break
+            ;;
+        -*)
+            err "unknown flag: $1 (try --help)"
+            ;;
+        *)
+            USER_PROMPT="${USER_PROMPT}${USER_PROMPT:+ }$1"
+            shift
+            ;;
+    esac
+done
+
+# -------- read prompt from stdin if none given as arg --------
+if [[ -z $USER_PROMPT && ! -t 0 ]]; then
+    USER_PROMPT="$(cat)"
+fi
+
+[[ -n $USER_PROMPT ]] || err "no prompt provided (pass as arg or via stdin; try --help)"
+
+# -------- resolve output path --------
+if [[ -n $SLUG ]]; then
+    OUT_PATH="${REPO_ROOT}/content/blog/${SLUG}/cover.jpg"
+    # Ensure the post directory exists
+    if [[ ! -d "${REPO_ROOT}/content/blog/${SLUG}" ]]; then
+        err "post directory not found: content/blog/${SLUG} (pass --slug matching an existing post dir, or use --out instead)"
+    fi
+fi
+
+if [[ -z $OUT_PATH ]]; then
+    OUT_PATH="${PWD}/cover.jpg"
+fi
+
+# Normalize to absolute path so gemini's working-dir doesn't matter
+case "$OUT_PATH" in
+    /*) ABS_OUT="$OUT_PATH" ;;
+    *)  ABS_OUT="${PWD}/$OUT_PATH" ;;
+esac
+
+OUT_DIR="$(dirname "$ABS_OUT")"
+[[ -d "$OUT_DIR" ]] || err "output directory does not exist: $OUT_DIR"
+
+# -------- validate gemini CLI --------
+if ! command -v gemini >/dev/null 2>&1; then
+    err "gemini CLI not found in PATH. Install via: npm install -g @google/gemini-cli"
+fi
+
+# -------- construct the enhanced prompt --------
+# We wrap the user's description in a directive that:
+# - Locks the aspect ratio to 1200x630 (Open Graph standard)
+# - Requests a professional, technical-blog-appropriate style
+# - Forbids text overlays (the theme renders the title separately)
+# - Tells gemini the EXACT output path and format
+# - Instructs it to fail loudly if it cannot generate an image
+read -r -d '' ENHANCED_PROMPT <<EOF || true
+You are being asked to generate one cover image for a technical blog post on jetthoughts.com.
+
+Image requirements (non-negotiable):
+- Aspect ratio: 1200x630 pixels (Open Graph standard)
+- Format: JPEG
+- Style: professional, clean, modern, suitable for a senior-engineering audience (CTOs, engineering managers, senior Rails developers)
+- Mood: confident and technical, not cartoonish, not stock-photo cliche
+- Composition: focal element centered or rule-of-thirds; leave breathing room for text overlays the site may add later
+- NO text, letters, words, logos, or watermarks in the image itself — the site renders the title separately
+- Color palette: muted professional tones; no neon or rainbow gradients
+- Content: a visual metaphor for the topic described below (not a literal screenshot of code unless specifically requested)
+
+Topic to illustrate:
+${USER_PROMPT}
+
+Output instruction:
+Save the generated image as a JPEG at exactly this absolute path: ${ABS_OUT}
+
+If you do not have access to an image generation tool (Imagen, Stitch, or an image MCP), stop immediately and print: NO_IMAGE_TOOL_AVAILABLE — do not attempt a text-only workaround.
+EOF
+
+# -------- dry-run short-circuit --------
+if [[ $DRY_RUN -eq 1 ]]; then
+    echo "[dry-run] would invoke:"
+    echo "  gemini -p '<enhanced prompt, ${#ENHANCED_PROMPT} chars>' \\"
+    echo "         --model '$MODEL' \\"
+    echo "         --approval-mode yolo \\"
+    echo "         -o text"
+    echo ""
+    echo "[dry-run] output target: $ABS_OUT"
+    echo ""
+    echo "[dry-run] enhanced prompt preview:"
+    echo "---"
+    echo "$ENHANCED_PROMPT"
+    echo "---"
+    exit 0
+fi
+
+# -------- invoke gemini --------
+echo "→ generating cover image via gemini CLI (model: $MODEL)"
+echo "  target: $ABS_OUT"
+
+# Remove any prior cover.jpg at that path so we can detect success unambiguously
+[[ -f "$ABS_OUT" ]] && rm -f "$ABS_OUT"
+
+# Run gemini in non-interactive YOLO mode. We capture output so we can
+# report it on failure but do not mix it with the normal script stderr.
+GEMINI_LOG="$(mktemp -t gemini-cover-image.XXXXXX.log)"
+trap 'rm -f "$GEMINI_LOG"' EXIT
+
+set +e
+gemini \
+    -p "$ENHANCED_PROMPT" \
+    --model "$MODEL" \
+    --approval-mode yolo \
+    -o text \
+    >"$GEMINI_LOG" 2>&1
+GEMINI_EXIT=$?
+set -e
+
+# -------- validate output --------
+if [[ $GEMINI_EXIT -ne 0 ]]; then
+    echo "✗ gemini CLI exited with code $GEMINI_EXIT" >&2
+    echo "--- gemini output ---" >&2
+    tail -30 "$GEMINI_LOG" >&2
+    echo "---" >&2
+    exit "$GEMINI_EXIT"
+fi
+
+if grep -q "NO_IMAGE_TOOL_AVAILABLE" "$GEMINI_LOG"; then
+    echo "✗ gemini CLI has no image generation tool available" >&2
+    echo "  fix: install an image-gen extension (e.g., Imagen MCP server) or wire up Stitch" >&2
+    exit 2
+fi
+
+if [[ ! -f "$ABS_OUT" ]]; then
+    echo "✗ gemini ran but did not produce $ABS_OUT" >&2
+    echo "--- gemini output (last 40 lines) ---" >&2
+    tail -40 "$GEMINI_LOG" >&2
+    echo "---" >&2
+    exit 3
+fi
+
+# Verify the file is actually an image. macOS ships `file`; Linux too.
+if command -v file >/dev/null 2>&1; then
+    FILE_TYPE="$(file -b "$ABS_OUT")"
+    case "$FILE_TYPE" in
+        *JPEG*|*JPG*|*PNG*|*WebP*)
+            ;;
+        *)
+            echo "✗ output file is not a recognized image: $FILE_TYPE" >&2
+            echo "  path: $ABS_OUT" >&2
+            exit 4
+            ;;
+    esac
+fi
+
+BYTES="$(wc -c <"$ABS_OUT" | tr -d ' ')"
+echo "✓ cover image written: $ABS_OUT ($BYTES bytes)"
+
+if [[ $BYTES -lt 5000 ]]; then
+    echo "⚠ warning: file is only $BYTES bytes — may be a placeholder or error response" >&2
+fi

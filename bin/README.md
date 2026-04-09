@@ -28,6 +28,10 @@ This directory contains utility scripts for the JetThoughts Hugo site.
 - `bunx` - NPM package runner (using bunx)
 - `sync_with_devto` - Sync blog posts with dev.to
 
+## Content
+
+- `generate-cover-image` - Generate a blog post cover image (1200x630 JPEG) via the Gemini CLI. Takes a prompt as argument or stdin; writes to `content/blog/<slug>/cover.jpg` with `--slug`, or to an explicit path with `--out`. Supports `--dry-run` to preview the invocation without burning API quota. Requires `gemini` CLI with an image-generation tool (Imagen, Stitch, or an image-gen MCP). Run `bin/generate-cover-image --help` for full usage.
+
 ## Deprecated
 
 - `surge` - Static site deployment (folder)
