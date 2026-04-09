@@ -1,7 +1,16 @@
 # Priority #2: pgvector Rails Tutorial - Scheduling Document
 
+> **🗄️ STATUS: ARCHIVED — FULFILLED BY PUBLISHED POST**
+>
+> **Fulfilling post**: [`content/blog/building-rag-applications-rails-pgvector/index.md`](../../../../content/blog/building-rag-applications-rails-pgvector/index.md)
+> **Published**: 2025-10-16 as *"Building RAG Applications in Rails 7.1+ with pgvector: Complete Guide"*
+> **Status updated**: 2026-04-09
+> **Notes**: The published post covers the same primary subject (Rails + pgvector + neighbor gem + production RAG) with a slightly different framing (RAG-first vs tutorial-first). The Blue Ocean opportunity this brief targeted is considered captured. Do **not** draft a new post from this brief — doing so would duplicate existing content and violate the zero-duplication policy. This brief is retained only as historical reference for the original strategic reasoning.
+
+---
+
 **Publication Priority**: P0 (Blue Ocean Opportunity)
-**Scheduled Publication Date**: Week 13 (Month 4 of editorial calendar)
+**Scheduled Publication Date**: ~~Week 13 (Month 4 of editorial calendar)~~ → **FULFILLED 2025-10-16**
 **Target Audience**: Ruby/Rails developers implementing AI features
 **Business Goal**: Establish technical authority, drive Rails consulting leads
 **Estimated Lead Generation**: 8-12 consultation requests/quarter

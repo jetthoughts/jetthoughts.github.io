@@ -1,7 +1,17 @@
 # Priority #3: TDD Workflow Automation - Scheduling Document
 
+> **📅 STATUS: SCHEDULED — Queued for Wave 1 of the 2026 Rails Ecosystem content stream**
+>
+> **Scheduled Publication Date**: **2026-05-19** (one week after the Rails 8.1 Ecosystem Wave completes)
+> **Prerequisite (fulfilled)**: The "after pgvector tutorial" condition is satisfied — pgvector content was published 2025-10-16 as [`building-rag-applications-rails-pgvector`](../../../../content/blog/building-rag-applications-rails-pgvector/index.md).
+> **Duplication check performed 2026-04-09**: 6 existing TDD posts cover TDD philosophy, mocking, Sidekiq migration, and general tips. **None cover TDD automation tooling (Guard/CI/CD/RSpec automation) from an engineering-manager perspective**, which is this brief's differentiator. Topic remains viable.
+> **Status updated**: 2026-04-09
+> **Managed by**: [`20.05-editorial-calendar-rails-ecosystem-wave-2026.md`](../20-29-strategy/20.05-editorial-calendar-rails-ecosystem-wave-2026.md)
+
+---
+
 **Publication Priority**: P1 (High-Value Authority Content)
-**Scheduled Publication Date**: TBD (After pgvector tutorial)
+**Scheduled Publication Date**: **2026-05-19** (was: TBD (After pgvector tutorial) — pgvector shipped 2025-10-16)
 **Target Audience**: Engineering managers, tech leads, senior developers
 **Business Goal**: Demonstrate process expertise, drive engineering management consulting
 **Estimated Lead Generation**: 10-15 consultation requests/quarter
