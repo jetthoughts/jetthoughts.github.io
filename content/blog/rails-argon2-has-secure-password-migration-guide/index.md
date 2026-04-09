@@ -6,6 +6,8 @@ draft: false
 tags: ["rails", "ruby", "security", "authentication", "argon2", "has_secure_password"]
 canonical_url: "https://jetthoughts.com/blog/rails-argon2-has-secure-password-migration-guide/"
 slug: "rails-argon2-has-secure-password-migration-guide"
+cover_image: "cover.jpg"
+cover_image_alt: "Dark security-themed cover with Ruby on Rails branding, Argon2 migration badges, and glowing shield/lock icon"
 author: "JetThoughts Team"
 metatags:
   og_title: "Rails has_secure_password + Argon2: Migration Guide"

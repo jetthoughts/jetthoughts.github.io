@@ -69,3 +69,57 @@ A 1200×630 technical blog cover for 'JetThoughts' about [TOPIC].
 
 Mood: [3 descriptive words].
 ```
+
+---
+
+## Cover Image Workflow
+
+### Frontmatter Convention
+Every blog post should use `cover_image` pointing to a file in the **same page bundle**:
+
+```yaml
+---
+title: "Post Title"
+description: "Post description"
+date: 2026-04-09
+cover_image: "cover.jpg"
+cover_image_alt: "Descriptive alt text for the cover image"
+---
+```
+
+### File Structure
+```
+content/blog/post-slug/
+├── index.md          ← Frontmatter with cover_image field
+├── cover.jpg         ← Cover image (1200×630px, JPEG/WebP)
+└── other-assets/     ← Any additional images
+```
+
+### Template Priority
+Templates check image fields in this order:
+1. `cover_image` — **preferred**, looks in page bundle
+2. `cover` — alias for `cover_image`
+3. `featured_image` — legacy, also checks page bundle
+4. `metatags.image` — fallback
+
+### What Each Template Does
+| Template | Uses cover_image for |
+|----------|---------------------|
+| `blog/img-cropped.html` | 180×180 thumbnail on blog index |
+| `seo/enhanced-meta-tags.html` | og:image (1200×630) + twitter:image |
+| `sitemap.xml` | Image sitemap entries |
+
+### Generating Covers with Stitch
+1. Run: `/stitch-design generate cover for [post title]`
+2. Stitch generates in project `3224353017067976684` (JetThoughts Blog Covers)
+3. Download HTML → screenshot at 1200×630 → save as `cover.jpg` in post bundle
+4. Add `cover_image: "cover.jpg"` + `cover_image_alt: "..."` to frontmatter
+5. Run `bin/hugo-build` to verify og:image renders
+
+### Quick Checklist for New Posts
+- [ ] `cover.jpg` exists in `content/blog/post-slug/`
+- [ ] `cover_image: "cover.jpg"` in frontmatter
+- [ ] `cover_image_alt: "..."` in frontmatter
+- [ ] `bin/hugo-build` passes
+- [ ] Blog index shows thumbnail (180×180)
+- [ ] og:image meta tag present (1200×630)
