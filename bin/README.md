@@ -30,7 +30,7 @@ This directory contains utility scripts for the JetThoughts Hugo site.
 
 ## Content
 
-- `generate-cover-image` - Generate a blog post cover image (1200x630 JPEG) via the Gemini CLI. Takes a concept sentence as argument or stdin; writes to `content/blog/<slug>/cover.jpg` with `--slug`, or to `./cover.jpg` in the current directory. Supports `--dry-run` to preview the invocation without burning API quota. Defaults to the `gemini-3.1-flash-image-preview` model (Nano Banana 2); override with `--model`. Full design system rationale in `docs/projects/2510-seo-content-strategy/20-29-strategy/20.06-blog-cover-image-design-system.md`. Run `bin/generate-cover-image --help` for full usage.
+- `generate-cover-image` - Generate a blog post cover image (1200x630 JPEG) via the Gemini CLI. Takes two positional args: `<slug>` and `"concept sentence"`. Writes to `content/blog/<slug>/cover.jpg`. Uses the `gemini-3.1-flash-image-preview` model (Nano Banana 2); requires `GEMINI_API_KEY` from https://aistudio.google.com/app/apikey. Full design system rationale in `docs/projects/2510-seo-content-strategy/20-29-strategy/20.06-blog-cover-image-design-system.md`.
 
 ## Deprecated
 
