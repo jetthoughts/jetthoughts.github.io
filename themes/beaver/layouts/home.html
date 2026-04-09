@@ -1064,9 +1064,13 @@
                         </div>
                       </div>
 
-                      {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                      <div class="jt-home-use-cases">
+                        {{ partial "page/use-cases.html" (dict "addHeadline" true) }}
+                      </div>
 
-                      {{ partial "page/testimonials.html" . }}
+                      <div class="jt-home-testimonials">
+                        {{ partial "page/testimonials.html" . }}
+                      </div>
                       <div
                         id="cta-contact_us"
                         class="fl-col-group fl-node-niok604vy81f fl-col-group-custom-width jt-home-cta-contact"
