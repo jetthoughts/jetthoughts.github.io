@@ -166,18 +166,17 @@ class TemplateCleanupValidationTest < BasePageTestCase
       if json_ld_scripts.any?
         json_ld_scripts.each do |script|
           # Validate JSON is properly formatted
-          begin
-            parsed = JSON.parse(script.text)
-            assert parsed.is_a?(Hash) || parsed.is_a?(Array), "JSON-LD should be valid JSON on #{page_name}"
 
-            # If it's schema.org data, check basic structure
-            if parsed.is_a?(Hash) && parsed["@context"]
-              assert parsed["@context"].include?("schema.org"), "Schema should use schema.org context on #{page_name}"
-              assert parsed["@type"], "Schema should have @type on #{page_name}"
-            end
-          rescue JSON::ParserError => e
-            flunk "Invalid JSON-LD on #{page_name}: #{e.message}"
+          parsed = JSON.parse(script.text)
+          assert parsed.is_a?(Hash) || parsed.is_a?(Array), "JSON-LD should be valid JSON on #{page_name}"
+
+          # If it's schema.org data, check basic structure
+          if parsed.is_a?(Hash) && parsed["@context"]
+            assert parsed["@context"].include?("schema.org"), "Schema should use schema.org context on #{page_name}"
+            assert parsed["@type"], "Schema should have @type on #{page_name}"
           end
+        rescue JSON::ParserError => e
+          flunk "Invalid JSON-LD on #{page_name}: #{e.message}"
         end
       end
     end
@@ -295,7 +294,6 @@ class TemplateCleanupValidationTest < BasePageTestCase
       doc = parse_html_file(file_path)
 
       # Essential FL structural classes should remain (layout-critical)
-      structural_classes = %w[fl-row-content fl-col-content fl-module-content fl-row fl-col fl-module]
 
       # Verify structural FL classes are preserved for layout
       structural_elements = doc.css(".fl-row-content, .fl-col-content, .fl-module-content")
@@ -337,7 +335,7 @@ class TemplateCleanupValidationTest < BasePageTestCase
       images = doc.css("img")
       images.each do |img|
         alt = img["alt"]
-        assert alt != nil, "Images should have alt attribute on #{page_name}"
+        assert !alt.nil?, "Images should have alt attribute on #{page_name}"
         # Alt can be empty string for decorative images, so we just check it exists
       end
 

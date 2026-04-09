@@ -62,7 +62,7 @@ class SeoSchemaTest < BasePageTestCase
 
     doc = parse_html_file(blog_file)
 
-    article_schemas = find_schema_elements_by_type(doc, 'Article')
+    article_schemas = find_schema_elements_by_type(doc, "Article")
 
     assert article_schemas.count > 0, "Article schema should be present on blog posts"
 
@@ -83,7 +83,7 @@ class SeoSchemaTest < BasePageTestCase
   def test_organization_schema_structure
     doc = parse_html_file("about-us/index.html")
 
-    org_schemas = find_schema_elements_by_type(doc, 'Organization', 'LocalBusiness')
+    org_schemas = find_schema_elements_by_type(doc, "Organization", "LocalBusiness")
 
     assert org_schemas.count > 0, "Organization schema should be present"
 

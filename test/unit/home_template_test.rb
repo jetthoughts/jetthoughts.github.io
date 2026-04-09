@@ -114,7 +114,7 @@ class HomeTemplateTest < BasePageTestCase
           "Social media links should use full URLs"
 
         # Should open in new tab/window for external links
-        target = link["target"]
+        link["target"]
         if href.start_with?("http") && !href.include?("jetthoughts.com")
           # External social links should ideally open in new tab
           # This is a recommendation, not a strict requirement
@@ -132,7 +132,7 @@ class HomeTemplateTest < BasePageTestCase
     images = doc.css("img")
     images.each do |img|
       alt = img["alt"]
-      assert alt != nil, "Images should have alt attributes"
+      assert !alt.nil?, "Images should have alt attributes"
     end
 
     # Check for lazy loading on images
@@ -143,7 +143,7 @@ class HomeTemplateTest < BasePageTestCase
 
     # Large images benefit from lazy loading (optional optimization)
     if large_images.any?
-      lazy_loading_present = large_images.any? { |img|
+      large_images.any? { |img|
         img["loading"] == "lazy" || img["data-src"]
       }
       # Note: Lazy loading is an optimization, not a requirement
@@ -157,12 +157,10 @@ class HomeTemplateTest < BasePageTestCase
     json_scripts = extract_json_ld_schemas(doc)
 
     organization_schemas = json_scripts.select do |script|
-      begin
-        data = JSON.parse(script.text)
-        data.is_a?(Hash) && data["@type"] == "Organization"
-      rescue JSON::ParserError
-        false
-      end
+      data = JSON.parse(script.text)
+      data.is_a?(Hash) && data["@type"] == "Organization"
+    rescue JSON::ParserError
+      false
     end
 
     if organization_schemas.any?
@@ -230,7 +228,7 @@ class HomeTemplateTest < BasePageTestCase
       "Viewport should include device-width for mobile responsiveness"
 
     # Check for responsive CSS classes (optional but common)
-    responsive_classes = doc.css(".container, .row, .col, .mobile, .tablet, .desktop")
+    doc.css(".container, .row, .col, .mobile, .tablet, .desktop")
     # Note: Responsive classes are optional as CSS frameworks vary
   end
 
@@ -287,9 +285,9 @@ class HomeTemplateTest < BasePageTestCase
       content = script.text
       src = script["src"]
       content.include?("google-analytics") ||
-      content.include?("gtag") ||
-      content.include?("analytics") ||
-      (src && (src.include?("google-analytics") || src.include?("gtag")))
+        content.include?("gtag") ||
+        content.include?("analytics") ||
+        (src && (src.include?("google-analytics") || src.include?("gtag")))
     end
 
     # Analytics is optional but if present should be properly configured
@@ -328,7 +326,7 @@ class HomeTemplateTest < BasePageTestCase
     end
 
     # Skip to content link
-    skip_links = doc.css("a[href*='#main'], a[href*='#content'], .skip-link")
+    doc.css("a[href*='#main'], a[href*='#content'], .skip-link")
     # Skip links are good practice but not required for testing
   end
 end

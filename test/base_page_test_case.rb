@@ -82,7 +82,7 @@ class BasePageTestCase < Minitest::Test
 
   def find_schema_elements_by_type(doc, *schema_types)
     doc.css('script[type="application/ld+json"]').select do |script|
-      schema_types.include?(JSON.parse(script.text.strip)['@type'])
+      schema_types.include?(JSON.parse(script.text.strip)["@type"])
     end
   end
 
