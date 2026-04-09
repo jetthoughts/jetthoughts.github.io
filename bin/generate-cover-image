@@ -1,25 +1,22 @@
 #!/usr/bin/env bash
-# Generate a blog post cover image (1200x630 JPEG) using the Gemini CLI.
+# Generate a minimalist hand-drawn blog cover (1200x630 JPEG) via gemini CLI.
 #
-# Delegates actual image generation to `gemini` in non-interactive mode.
-# Gemini must be installed, authenticated, and have an image-generation
-# tool/skill available at runtime (e.g., imagen, stitch, or a configured
-# image-gen MCP server). This script is a thin, deterministic wrapper
-# around the agent call — it does not itself generate pixels.
+# Pass the topic CONCEPT (not a literal scene) — the script bakes in the
+# charcoal-on-cream minimalist style so every cover is consistent. Full
+# design system: docs/projects/2510-seo-content-strategy/20-29-strategy/20.06-blog-cover-image-design-system.md
 #
 # Usage:
-#   bin/generate-cover-image "a prompt describing the image"
-#   bin/generate-cover-image --slug <post-slug> "a prompt"
-#   bin/generate-cover-image --out /path/to/cover.jpg "a prompt"
-#   echo "a prompt" | bin/generate-cover-image --slug <post-slug>
-#   bin/generate-cover-image --dry-run "a prompt"
+#   bin/generate-cover-image "pausing and resuming a long computation"
+#   bin/generate-cover-image --slug <post-slug> "some concept"
+#   bin/generate-cover-image --out /path/to/cover.jpg "some concept"
+#   echo "some concept" | bin/generate-cover-image --slug <post-slug>
+#   bin/generate-cover-image --dry-run "some concept"
 #
 # Flags:
 #   --slug <slug>   Save to content/blog/<slug>/cover.jpg (overrides --out)
-#   --out  <path>   Absolute or relative output path (default: ./cover.jpg)
-#   --model <name>  Gemini model (default: gemini-2.5-flash-image — a.k.a.
-#                   "Nano Banana", the Gemini image generation model)
-#   --dry-run       Print the gemini invocation without running it
+#   --out  <path>   Output path (default: ./cover.jpg)
+#   --model <name>  Gemini model (default: gemini-2.5-flash-image aka Nano Banana)
+#   --dry-run       Print the invocation without calling gemini
 #   -h, --help      Show this help
 
 set -euo pipefail
@@ -120,32 +117,26 @@ if ! command -v gemini >/dev/null 2>&1; then
 fi
 
 # -------- construct the enhanced prompt --------
-# We wrap the user's description in a directive that:
-# - Locks the aspect ratio to 1200x630 (Open Graph standard)
-# - Requests a professional, technical-blog-appropriate style
-# - Forbids text overlays (the theme renders the title separately)
-# - Tells gemini the EXACT output path and format
-# - Instructs it to fail loudly if it cannot generate an image
+# Locks the minimalist hand-drawn jt_site style so every cover is
+# consistent regardless of how the user phrases the topic. Full rationale:
+# docs/projects/2510-seo-content-strategy/20-29-strategy/20.06-blog-cover-image-design-system.md
 read -r -d '' ENHANCED_PROMPT <<EOF || true
-You are being asked to generate one cover image for a technical blog post on jetthoughts.com.
+Generate one cover image (1200x630 JPEG) for a jetthoughts.com blog post.
 
-Image requirements (non-negotiable):
-- Aspect ratio: 1200x630 pixels (Open Graph standard)
-- Format: JPEG
-- Style: professional, clean, modern, suitable for a senior-engineering audience (CTOs, engineering managers, senior Rails developers)
-- Mood: confident and technical, not cartoonish, not stock-photo cliche
-- Composition: focal element centered or rule-of-thirds; leave breathing room for text overlays the site may add later
-- NO text, letters, words, logos, or watermarks in the image itself — the site renders the title separately
-- Color palette: muted professional tones; no neon or rainbow gradients
-- Content: a visual metaphor for the topic described below (not a literal screenshot of code unless specifically requested)
+STYLE: Minimalist hand-drawn digital sketch. Consistent 2-3pt charcoal (#333333) line art on cream background (#FFF9F0). Subtle paper grain. Slight hand-drawn imperfections — feels sketched in a notebook, not a CAD diagram.
 
-Topic to illustrate:
+COMPOSITION: Single focal point, rule of thirds or centered, 60-70% negative space, minimum 15% margin on all sides. One hero element only.
+
+CONTENT: Translate the concept below into a physical, natural, or architectural VISUAL METAPHOR — not a literal depiction. Do not draw code, screens, terminals, keyboards, language logos, robots, gears, or lightbulbs (cliches). Think editorial illustration, not stock tech photography.
+
+CONCEPT:
 ${USER_PROMPT}
 
-Output instruction:
-Save the generated image as a JPEG at exactly this absolute path: ${ABS_OUT}
+PROHIBITIONS: No text, letters, numbers, or watermarks (the site overlays the title separately). No logos. No UI chrome. No neon or 3D.
 
-If you do not have access to an image generation tool (Imagen, Stitch, or an image MCP), stop immediately and print: NO_IMAGE_TOOL_AVAILABLE — do not attempt a text-only workaround.
+OUTPUT: Save as JPEG at exactly this absolute path: ${ABS_OUT}
+
+If no image generation tool is available, stop and print exactly: NO_IMAGE_TOOL_AVAILABLE
 EOF
 
 # -------- dry-run short-circuit --------
