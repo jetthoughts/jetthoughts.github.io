@@ -137,6 +137,19 @@
   {{- end -}}
 {{- end -}}
 
+{{/* Try cover (alias for cover_image) */}}
+{{- if not $image -}}
+  {{- with .Params.cover -}}
+    {{- $resource := $page.Resources.Get . -}}
+    {{- if $resource -}}
+      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+      {{- $image = $optimized.Permalink -}}
+      {{- $imageWidth = $optimized.Width -}}
+      {{- $imageHeight = $optimized.Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
 {{/* Site default image fallback */}}
 {{- if not $image -}}
   {{- $image = "https://jetthoughts.com/assets/images/og-default.jpg" -}}
