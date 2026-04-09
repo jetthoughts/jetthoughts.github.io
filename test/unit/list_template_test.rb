@@ -28,7 +28,7 @@ class ListTemplateTest < BasePageTestCase
 
     # Title should indicate it's a list/archive page
     list_indicators = ["blog", "posts", "articles", "archive", "category", "tag"]
-    has_list_indicator = list_indicators.any? { |indicator|
+    list_indicators.any? { |indicator|
       title_text.downcase.include?(indicator)
     }
 
@@ -120,7 +120,7 @@ class ListTemplateTest < BasePageTestCase
 
     # Should describe the list content
     list_keywords = ["blog", "posts", "articles", "archive", "latest", "recent"]
-    has_list_keyword = list_keywords.any? { |keyword|
+    list_keywords.any? { |keyword|
       description_content.downcase.include?(keyword)
     }
 
@@ -216,12 +216,10 @@ class ListTemplateTest < BasePageTestCase
     json_scripts = extract_json_ld_schemas(doc)
 
     blog_schemas = json_scripts.select do |script|
-      begin
-        data = JSON.parse(script.text)
-        data.is_a?(Hash) && (data["@type"] == "Blog" || data["@type"] == "CollectionPage")
-      rescue JSON::ParserError
-        false
-      end
+      data = JSON.parse(script.text)
+      data.is_a?(Hash) && (data["@type"] == "Blog" || data["@type"] == "CollectionPage")
+    rescue JSON::ParserError
+      false
     end
 
     # Blog schema is optional but if present should be valid
@@ -272,7 +270,7 @@ class ListTemplateTest < BasePageTestCase
       # Should show hierarchy (Home > Blog, etc.)
       breadcrumb_text = breadcrumbs.text
       hierarchy_indicators = [">", "/", "»", "→"]
-      has_hierarchy = hierarchy_indicators.any? { |indicator|
+      hierarchy_indicators.any? { |indicator|
         breadcrumb_text.include?(indicator)
       }
 
@@ -310,7 +308,7 @@ class ListTemplateTest < BasePageTestCase
           name = search_input["name"]
           assert name, "Search input should have name attribute"
 
-          placeholder = search_input["placeholder"]
+          search_input["placeholder"]
           # Placeholder is helpful for UX but not required
         end
       end
@@ -445,7 +443,7 @@ class ListTemplateTest < BasePageTestCase
       else
         # Avoid generic link text
         generic_text = ["click here", "read more", "more", "link"]
-        is_generic = generic_text.any? { |generic| text.downcase == generic }
+        generic_text.any? { |generic| text.downcase == generic }
         # Generic text is not ideal but not a hard requirement
       end
     end
@@ -460,10 +458,10 @@ class ListTemplateTest < BasePageTestCase
     images = doc.css("img")
     images.each do |img|
       alt = img["alt"]
-      assert alt != nil, "Images should have alt attributes"
+      assert !alt.nil?, "Images should have alt attributes"
 
       # Check for lazy loading on non-critical images
-      loading = img["loading"]
+      img["loading"]
       # Lazy loading is beneficial but not required
     end
 
@@ -472,7 +470,7 @@ class ListTemplateTest < BasePageTestCase
     external_stylesheets = doc.css("link[rel='stylesheet'][href^='http']")
 
     # Too many external resources can impact performance
-    total_external = external_scripts.length + external_stylesheets.length
+    external_scripts.length + external_stylesheets.length
     # This is informational - some external resources may be necessary
   end
 end

@@ -154,12 +154,10 @@ class SingleTemplateTest < BasePageTestCase
     json_scripts = extract_json_ld_schemas(doc)
 
     article_schemas = json_scripts.select do |script|
-      begin
-        data = JSON.parse(script.text)
-        data.is_a?(Hash) && data["@type"] == "Article"
-      rescue JSON::ParserError
-        false
-      end
+      data = JSON.parse(script.text)
+      data.is_a?(Hash) && data["@type"] == "Article"
+    rescue JSON::ParserError
+      false
     end
 
     # Article schema is optional but if present should be valid
@@ -230,7 +228,7 @@ class SingleTemplateTest < BasePageTestCase
       images = content_area.css("img")
       images.each do |img|
         alt = img["alt"]
-        assert alt != nil, "Content images should have alt attributes"
+        assert !alt.nil?, "Content images should have alt attributes"
       end
     end
   end
@@ -239,7 +237,7 @@ class SingleTemplateTest < BasePageTestCase
     doc = parse_html_file(@test_page)
 
     # Check for related content or navigation aids
-    related_indicators = [
+    [
       doc.css(".related, .related-posts, .related-content").any?,
       doc.css(".next-post, .prev-post, .post-navigation").any?,
       doc.css(".tags, .categories").any?,
@@ -275,7 +273,7 @@ class SingleTemplateTest < BasePageTestCase
     doc = parse_html_file(@test_page)
 
     # Skip to content link
-    skip_links = doc.css("a[href*='#main'], a[href*='#content'], .skip-link")
+    doc.css("a[href*='#main'], a[href*='#content'], .skip-link")
 
     # Proper heading hierarchy
     headings = doc.css("h1, h2, h3, h4, h5, h6")
@@ -322,15 +320,15 @@ class SingleTemplateTest < BasePageTestCase
       src = img["src"]
       if src
         # Check for responsive images
-        srcset = img["srcset"]
-        sizes = img["sizes"]
+        img["srcset"]
+        img["sizes"]
 
         # Modern images benefit from responsive attributes
         # This is a recommendation, not a strict requirement
       end
 
       # Lazy loading for below-the-fold images
-      loading = img["loading"]
+      img["loading"]
       # Lazy loading is an optimization, not a requirement
     end
 
@@ -339,7 +337,7 @@ class SingleTemplateTest < BasePageTestCase
     external_stylesheets = doc.css("link[rel='stylesheet'][href^='http']")
 
     # Count is informational - some external resources may be necessary
-    total_external = external_scripts.length + external_stylesheets.length
+    external_scripts.length + external_stylesheets.length
 
     # This is informational rather than a hard requirement
     # Too many external resources can impact performance
@@ -361,7 +359,7 @@ class SingleTemplateTest < BasePageTestCase
       # This is a recommendation for security best practices
       if rel
         security_keywords = ["noopener", "noreferrer", "nofollow"]
-        has_security_attr = security_keywords.any? { |keyword| rel.include?(keyword) }
+        security_keywords.any? { |keyword| rel.include?(keyword) }
 
         # Security attributes are recommended but not strictly required
       end

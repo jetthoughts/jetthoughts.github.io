@@ -63,7 +63,6 @@ module ScreenshotPreparation
       }
     JS
   end
-
 end
 
 # Environment variable controls for screenshot behavior

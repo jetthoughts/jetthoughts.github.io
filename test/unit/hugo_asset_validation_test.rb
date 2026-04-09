@@ -8,7 +8,6 @@ class HugoAssetValidationTest < BasePageTestCase
   CSS_ASSET_PATTERN = /href="([^"]*\.css[^"]*)"/
   JS_ASSET_PATTERN = /src="([^"]*\.js[^"]*)"/
 
-
   def test_svg_assets_use_relative_urls
     doc = parse_html_file("index.html")
 

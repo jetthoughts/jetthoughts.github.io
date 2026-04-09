@@ -43,10 +43,10 @@ class BaseofTemplateTest < BasePageTestCase
       content = style.text
       # Check for logo styles with main-logo-image or logo-image-main class
       content.match?(/\.(?:main-)?logo-image-main\s*\{[^}]*max-width:\s*100%/) ||
-      # Check for skip-link with exact positioning pattern we removed
-      content.match?(/\.skip-link\s*\{[^}]*position:\s*absolute[^}]*top:\s*-40px/) ||
-      # Check for our specific sr-only pattern (not the plugin versions)
-      content.match?(/^\.sr-only\s*\{[^}]*position:\s*absolute[^}]*clip:\s*rect\(1px,\s*1px,\s*1px,\s*1px\)/)
+        # Check for skip-link with exact positioning pattern we removed
+        content.match?(/\.skip-link\s*\{[^}]*position:\s*absolute[^}]*top:\s*-40px/) ||
+        # Check for our specific sr-only pattern (not the plugin versions)
+        content.match?(/^\.sr-only\s*\{[^}]*position:\s*absolute[^}]*clip:\s*rect\(1px,\s*1px,\s*1px,\s*1px\)/)
     end
 
     assert problematic_styles.empty?,
@@ -334,11 +334,11 @@ class BaseofTemplateTest < BasePageTestCase
     # This tests the Hugo template structure indirectly through rendered output
 
     # Should have header content (from header block or partial)
-    header_element = doc.css("header").first || doc.css(".header").first
+    doc.css("header").first || doc.css(".header").first
     # Header is optional but if present, should have proper structure
 
     # Should have footer content (from footer block or partial)
-    footer_element = doc.css("footer").first || doc.css(".footer").first
+    doc.css("footer").first || doc.css(".footer").first
     # Footer is optional but if present, should have proper structure
 
     # Main content area should exist
@@ -361,8 +361,8 @@ class BaseofTemplateTest < BasePageTestCase
     referrer_policy = doc.css("head meta[name='referrer']").first
     if referrer_policy
       valid_policies = ["no-referrer", "no-referrer-when-downgrade", "origin",
-                       "origin-when-cross-origin", "same-origin", "strict-origin",
-                       "strict-origin-when-cross-origin", "unsafe-url"]
+        "origin-when-cross-origin", "same-origin", "strict-origin",
+        "strict-origin-when-cross-origin", "unsafe-url"]
       assert valid_policies.include?(referrer_policy["content"]),
         "Referrer policy should use valid value"
     end

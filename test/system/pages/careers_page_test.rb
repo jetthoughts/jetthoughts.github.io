@@ -90,7 +90,7 @@ class CareersPageTest < ApplicationSystemTestCase
       "Tight-Knit Team",
       "Flexible Environment",
       "Growth Beyond JetThoughts",
-      "World-Class Training",
+      "World-Class Training"
     ]
 
     feature_cards.each do |card_title|

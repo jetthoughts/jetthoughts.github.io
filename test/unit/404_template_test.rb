@@ -190,7 +190,7 @@ class NotFoundTemplateTest < BasePageTestCase
 
       # Should prevent indexing - however, some SEO strategies allow indexing for link discovery
       indexing_prevented = robots_content.include?("noindex") ||
-                          robots_content.include?("none")
+        robots_content.include?("none")
 
       # This is informational - some sites allow 404 indexing for SEO discovery
       unless indexing_prevented
@@ -261,7 +261,7 @@ class NotFoundTemplateTest < BasePageTestCase
     assert h1_tags.length == 1, "404 page should have exactly one h1"
 
     # Skip to content link
-    skip_links = doc.css("a[href*='#main'], a[href*='#content'], .skip-link")
+    doc.css("a[href*='#main'], a[href*='#content'], .skip-link")
     # Skip links are good practice but not required
 
     # Main landmark
@@ -306,7 +306,7 @@ class NotFoundTemplateTest < BasePageTestCase
 
     # Should avoid technical jargon
     technical_terms = ["server error", "http", "500", "internal"]
-    has_technical_terms = technical_terms.any? { |term|
+    technical_terms.any? { |term|
       page_text.downcase.include?(term)
     }
 
@@ -326,7 +326,7 @@ class NotFoundTemplateTest < BasePageTestCase
       "404 page should provide helpful suggestions to users"
 
     # Error message should be polite and professional
-    apologetic_indicators = [
+    [
       page_text.downcase.include?("sorry"),
       page_text.downcase.include?("apologize"),
       page_text.downcase.include?("oops")
@@ -373,7 +373,8 @@ class NotFoundTemplateTest < BasePageTestCase
     external_scripts = doc.css("script[src^='http']")
     external_stylesheets = doc.css("link[rel='stylesheet'][href^='http']")
 
-    total_external = external_scripts.length + external_stylesheets.length
+    external_scripts.length
+    external_stylesheets.length
 
     # 404 pages benefit from minimal external dependencies
     # This is informational for performance optimization
@@ -382,7 +383,7 @@ class NotFoundTemplateTest < BasePageTestCase
     images = doc.css("img")
     images.each do |img|
       alt = img["alt"]
-      assert alt != nil, "404 page images should have alt attributes"
+      assert !alt.nil?, "404 page images should have alt attributes"
 
       src = img["src"]
       if src
@@ -422,7 +423,7 @@ class NotFoundTemplateTest < BasePageTestCase
 
     # Security attributes are good practice but not strictly required
     external_links.each do |link|
-      rel = link["rel"]
+      link["rel"]
       # External links benefit from rel="noopener noreferrer"
       # This is informational for security enhancement
     end
