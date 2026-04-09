@@ -1,4 +1,4 @@
-# AGENTS.md — JetThoughts Blog
+# AGENTS.md — JetThoughts Blog (Junie)
 
 **Type**: Hugo static site | **Build**: `bin/hugo-build` | **Test**: `bin/rake test:critical`
 
@@ -22,7 +22,6 @@
 
 - **NEVER modify**: vendor files, dynamic templates
 - **Test after each extraction**: `bin/rake test:critical`
-- Full analysis: `docs/projects/2509-css-migration/css-loading-order-analysis.md`
 
 ## 🤖 Autonomous Blog Pipeline
 
