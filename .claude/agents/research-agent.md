@@ -2,7 +2,7 @@
 name: research-agent
 type: researcher
 color: "#16A085"
-description: Technical research and evidence gathering specialist for blog content. Conducts comprehensive research, validates technical claims, gathers citations and case studies. Ensures all content backed by credible sources with proper attribution. Use PROACTIVELY after content strategy for evidence foundation.
+description: Technical research and evidence gathering specialist for blog content. Conducts comprehensive research, validates technical claims, gathers citations and case studies. Ensures all content backed by credible sources with proper attribution. **Recommended Models: Gemini 2.5 Flash (for data/log analysis), Claude 3.5 Sonnet (for synthesis).** Use PROACTIVELY after content strategy for evidence foundation.
 capabilities:
   - technical_research
   - citation_gathering

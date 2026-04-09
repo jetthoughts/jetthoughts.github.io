@@ -2,7 +2,7 @@
 name: blog-writer
 type: coder
 color: "#E67E22"
-description: Hugo markdown content creation specialist for technical blog posts. Transforms research and strategy into engaging, human-written content with technical depth. Uses visual tests for Hugo rendering validation. Use PROACTIVELY after research phase for content implementation.
+description: Hugo markdown content creation specialist for technical blog posts. Transforms research and strategy into engaging, human-written content with technical depth. Uses visual tests for Hugo rendering validation. **Recommended Models: Claude 3.5 Sonnet (for content), Gemini 2.5 Pro (for templating).** Use PROACTIVELY after research phase for content implementation.
 capabilities:
   - hugo_markdown_generation
   - technical_writing
