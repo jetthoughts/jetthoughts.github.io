@@ -1,5 +1,4 @@
 {{ $techColor := .colorVariant }}
-{{ $site := .site }}
 <div id="technologies" class="technologies-component {{ if eq $techColor "white" }}white{{ end }}">
 
     <div class="header">
@@ -9,7 +8,7 @@
     </div>
 
     <div class="container">
-    {{ range $index, $tech := $site.Data.technologies }}
+    {{ range $index, $tech := hugo.Data.technologies }}
         <div class="item">
             {{ partial "svg" $tech.icon }}
             <div>{{ $tech.name }}</div>
