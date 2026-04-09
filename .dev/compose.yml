@@ -4,7 +4,7 @@
 
 services:
   hugo:
-    image: hugomods/hugo:exts-non-root-0.149.1
+    image: hugomods/hugo:debian-reg-dart-sass-node-git-non-root-0.160.1
     working_dir: /app
     volumes:
       - ..:/app:delegated
@@ -16,7 +16,7 @@ services:
       HUGO_CACHEDIR: /tmp/hugo_cache
       HUGO_NUMWORKERMULTIPLIER: 8
     restart: unless-stopped
-    mem_limit: 512m
+    mem_limit: 2g
     cpus: '2.0'
 
   # Interactive shell (optimized)
