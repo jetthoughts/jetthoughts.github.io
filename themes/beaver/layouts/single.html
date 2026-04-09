@@ -61,6 +61,24 @@
           {{ end }}
         </header>
 
+        {{/* Cover image — strictly additive: renders only when a local
+             cover.{jpg,jpeg,png,webp} page resource exists. Aligns to the
+             adjacent .fl-rich-text text column (43rem) so the cover and
+             body visually group as one reading unit. Uses inline style to
+             avoid touching any of the 9 pre-built CSS bundles. */}}
+        {{ with .Resources.GetMatch "cover.*" }}
+          {{ $cover := .Resize "960x webp q85" }}
+          <img
+            class="post-cover"
+            src="{{ $cover.Permalink }}"
+            alt="{{ $.Params.cover_image_alt | default $.Title }}"
+            width="{{ $cover.Width }}"
+            height="{{ $cover.Height }}"
+            loading="eager"
+            fetchpriority="high"
+            style="width: 100%; height: auto; margin: 0 0 1.5rem; max-width: 43rem; border-radius: 8px; display: block;" />
+        {{ end }}
+
         <div
           class="fl-rich-text c-content-block__text"
           style="max-width: 43rem;">
