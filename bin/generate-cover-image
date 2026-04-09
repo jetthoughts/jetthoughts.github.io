@@ -14,7 +14,8 @@
 #
 # Flags:
 #   --slug <slug>   Save to content/blog/<slug>/cover.jpg
-#   --model <name>  Gemini model (default: gemini-3-flash-image)
+#   --model <name>  Gemini model (default: gemini-3.1-flash-image-preview,
+#                   a.k.a. "Nano Banana 2", released 2026-02-26 with 4K output)
 #   --dry-run       Print the invocation without calling gemini
 #   -h, --help      Show this help
 
@@ -22,7 +23,7 @@ set -euo pipefail
 
 # -------- defaults --------
 SLUG=""
-MODEL="gemini-3-flash-image"
+MODEL="gemini-3.1-flash-image-preview"
 DRY_RUN=0
 USER_PROMPT=""
 
@@ -162,9 +163,22 @@ set -e
 # -------- validate output --------
 fail_with_log() {
     echo "✗ $1" >&2
-    echo "--- gemini output (last 30 lines) ---" >&2
-    tail -30 "$GEMINI_LOG" >&2
+    echo "--- gemini output (last 30 lines, startup noise filtered) ---" >&2
+    # Strip gemini's startup noise (skill-conflict and tool-re-registration
+    # warnings) so the real error at the bottom of the log stays visible.
+    grep -v -E "Skill conflict detected|already registered|is overriding" "$GEMINI_LOG" | tail -30 >&2
     echo "---" >&2
+
+    # Remediation hint for the most common failure mode: image models are not
+    # exposed on gemini CLI's default OAuth endpoint (cloudcode-pa); they
+    # require a direct Gemini API key.
+    if grep -qE "404|ModelNotFoundError|Requested entity was not found" "$GEMINI_LOG"; then
+        echo "" >&2
+        echo "hint: 404 usually means the selected image model is not available via" >&2
+        echo "  gemini CLI's default OAuth auth (cloudcode-pa.googleapis.com)." >&2
+        echo "  Fix: export GEMINI_API_KEY=\$(get one from https://aistudio.google.com/app/apikey)" >&2
+        echo "  and re-run. Image models only live on generativelanguage.googleapis.com." >&2
+    fi
     exit 1
 }
 
