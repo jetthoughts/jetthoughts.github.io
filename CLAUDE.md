@@ -5,6 +5,25 @@
 
 ---
 
+## 📌 Critical Files — READ BEFORE CHANGES
+
+Always read these files before making changes. They define the project's architecture and constraints.
+
+| File | When to Read |
+|------|-------------|
+| `@config/_default/hugo.toml` | ANY Hugo/site config change |
+| `@themes/beaver/layouts/blog/list.html` | Blog index/listing changes |
+| `@themes/beaver/layouts/partials/blog/img-cropped.html` | Blog thumbnail/cover image changes |
+| `@themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image/meta tag changes |
+| `@themes/beaver/layouts/partials/page/cover_image.html` | Blog post cover rendering |
+| `@.stitch/design.md` | Cover image generation |
+| `@bin/hugo-build` | Build/deploy workflow |
+| `@Rakefile` | Test workflow |
+| `@test/test_helper.rb` | Writing new tests |
+| `@docs/projects/2509-css-migration/css-loading-order-analysis.md` | ANY CSS changes |
+
+---
+
 ## 🔍 Research Protocol (MANDATORY)
 
 Always use claude-context MCP search **before** making changes:

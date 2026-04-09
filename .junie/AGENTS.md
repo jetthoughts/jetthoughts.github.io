@@ -2,6 +2,17 @@
 
 **Type**: Hugo static site | **Build**: `bin/hugo-build` | **Test**: `bin/rake test:critical`
 
+## 📌 Critical Files — READ BEFORE CHANGES
+
+| File | When to Read |
+|------|-------------|
+| `@config/_default/hugo.toml` | ANY Hugo config change |
+| `@themes/beaver/layouts/partials/blog/img-cropped.html` | Blog cover/thumbnail changes |
+| `@themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` | SEO/meta tag changes |
+| `@.stitch/design.md` | Cover image generation |
+| `@docs/projects/2509-css-migration/css-loading-order-analysis.md` | ANY CSS changes |
+| `@bin/hugo-build` | Build/deploy workflow |
+
 ## 🔍 Research Protocol (MANDATORY)
 
 1. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`
