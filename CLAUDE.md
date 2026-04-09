@@ -1415,7 +1415,7 @@ refactor_phase_engagement:
 
 ```javascript
 // Standard blog production workflow (supervised by blog-coordinator)
-[Blog Production - 7 Phase Workflow]:
+[Blog Production - 9 Phase Workflow with Ralph Loop + UX Cover Pipeline]:
   // Phase 1: Strategy
   Task("Content Strategist", "Analyze target audience (CTOs/Engineering Managers), identify high-value topic, design Hugo-compatible outline. Store strategy in blog/strategy/. Shareability target ≥7/10.", "analyst")
 
@@ -1425,31 +1425,51 @@ refactor_phase_engagement:
   // Phase 3: Content Creation with TDD
   Task("Blog Writer", "Create Hugo markdown with TDD visual testing. RED: failing visual test. GREEN: minimal content. REFACTOR: enhance engagement. Paragraphs ≤3 sentences. Zero AI phrases. Store in blog/writing/.", "coder")
 
-  // Phase 4: SEO Optimization
+  // Phase 4: SEO Optimization (first pass)
   Task("SEO Optimizer", "Optimize Hugo frontmatter, integrate keywords naturally, ensure Flesch ≥60. Never compromise readability or technical credibility. Store in blog/seo/.", "qa-expert")
 
-  // Phase 5: Editorial Review
+  // Phase 5: Editorial Review (initial pass)
   Task("Content Editor", "Validate voice consistency, verify all citations, assess engagement ≥8/10 and shareability ≥7/10. Provide detailed feedback. Store in blog/editorial/.", "reviewer")
 
-  // Phase 6: Reader Validation
+  // Phase 5.7 — NEW: SEO + Editorial Re-Review with Ralph Loop (BEFORE draft complete)
+  Task("SEO Re-Reviewer", "Run seo-aeo-audit + seo against the edited draft. Catch missed keywords, metadata gaps, readability regressions from the drafting pass. Output findings as structured feedback. Store in blog/editorial/re-review/seo.", "seo-specialist")
+  Task("Editorial Re-Reviewer", "Run copy-editing + technical-writing against the edited draft. Catch voice drift, unclear phrasing, unsupported claims, factual concerns, AI-tell phrases the slop-detector missed. Output findings as structured feedback. Store in blog/editorial/re-review/editorial.", "reviewer")
+  Task("Ralph Loop Handler", "Consume feedback from SEO Re-Reviewer and Editorial Re-Reviewer. Iteratively apply fixes using the ralph-loop skill until BOTH re-reviews return clean. Only then mark the draft as complete. Store iteration state in blog/editorial/ralph-loop/.", "coordination-expert")
+
+  // Phase 6: Reader Validation (after ralph loop exits clean)
   Task("Ideal Reader Representative", "Simulate jt_site's technical audience (CTOs/Engineering Managers). Provide authentic feedback, score engagement ≥8/10. Would share: Yes/Likely required. Store in blog/validation/.", "qa-expert")
 
-  // Phase 7: Publication Preparation (Coordinator)
-  Task("Blog Coordinator", "Compile Hugo publication package, validate all quality gates passed, final Hugo build test. Prepare for publication.", "coordination-expert")
+  // Phase 7: Hugo Build Validation
+  Task("Hugo Build Validator", "Run bin/hugo-build, validate all links resolve, all assets present, frontmatter YAML valid. Fail-fast on any Hugo errors. Store in blog/hugo-build/.", "qa-expert")
+
+  // Phase 7.5 — NEW: Cover Image Generation (three-step UX sub-pipeline)
+  Task("UX Researcher", "For this specific post topic and the broader CTO/Engineering Manager audience, identify the specific reader persona, research which visual metaphors drive engagement in technical social feeds, identify the engagement pattern (dark IDE / editorial illustration / data viz / photography). Reference shipped covers to avoid visual repetition. Output brief at blog/ux-research/covers/{slug}/brief.", "ux-researcher")
+  Task("UX/UI Designer", "Translate the UX research brief into a concrete design spec: palette, composition pattern, hero element, tag pills, metric cards. Reference docs/projects/2510-seo-content-strategy/20-29-strategy/20.06-blog-cover-image-design-system.md for brand defaults. Reference Stitch project 3224353017067976684 for visual alignment with shipped covers. Output concept sentence + full design spec at blog/ux-design/covers/{slug}/spec.", "frontend-design")
+  Task("Cover Image Generator", "Using the design spec from UX/UI Designer, generate a 1200x630 JPEG cover image. Preferred path: call mcp__stitch__generate_screen_from_text against project 3224353017067976684 with the design spec as the prompt, download the HTML, render at exact 1200x630 via chrome-devtools MCP, save to content/blog/{slug}/cover.jpg. Fallback path: bin/generate-cover-image {slug} '<concept>'. Verify: rebuild Hugo, confirm og:image resolves to local WebP not og-default.jpg.", "coder")
+
+  // Phase 8: Publication Preparation (Coordinator)
+  Task("Blog Coordinator", "Compile Hugo publication package, validate ALL quality gates passed (including ralph loop exit clean, cover image present, og:image not fallback), final Hugo build test. Prepare for publication.", "coordination-expert")
 
   // Memory coordination todos
   TodoWrite { todos: [
     "Content Strategist: Analyze jt_site technical audience, predict shareability ≥7/10",
     "Research Agent: Gather ≥8 citations + ≥1 case study, validate technical claims",
     "Blog Writer: Hugo markdown with TDD (RED→GREEN→REFACTOR), visual testing",
-    "SEO Optimizer: Hugo frontmatter + keywords, maintain Flesch ≥60",
-    "Content Editor: Voice consistency + citation validation + engagement ≥8/10",
+    "SEO Optimizer: Hugo frontmatter + keywords, maintain Flesch ≥60 (first pass)",
+    "Content Editor: Voice consistency + citation validation + engagement ≥8/10 (initial)",
+    "SEO Re-Reviewer: Run seo-aeo-audit, produce structured feedback (mandatory before draft complete)",
+    "Editorial Re-Reviewer: Run copy-editing + technical-writing, produce structured feedback",
+    "Ralph Loop Handler: Iterate fixes until BOTH re-reviews return clean — draft NOT complete until ralph exits clean",
     "Ideal Reader Representative: Simulate CTOs/Engineering Managers, score ≥8/10",
-    "Blog Coordinator: Validate all phases + quality gates, compile publication package",
+    "Hugo Build Validator: bin/hugo-build passes, all assets present",
+    "UX Researcher: Reader persona + metaphor research + engagement pattern (mandatory for cover)",
+    "UX/UI Designer: Design spec from research (palette, composition, hero element)",
+    "Cover Image Generator: Stitch MCP or bin/generate-cover-image, output cover.jpg, verify og:image resolves locally",
+    "Blog Coordinator: Validate all phases + ralph loop exit + cover present, compile publication package",
     "Memory Coordination: Track handoffs via blog/* namespaces",
-    "Quality Gates: Enforce zero-tolerance (no AI phrases, all claims cited)",
+    "Quality Gates: Enforce zero-tolerance (no AI phrases, all claims cited, cover present, og:image NOT site-default)",
     "Hugo Integration: Validate build + visual regression tests at each phase",
-    "Final Validation: All 7 phases complete + reader validation ≥8/10"
+    "Final Validation: All phases complete + ralph loop clean + cover rendered + reader validation ≥8/10"
   ] }
 ```
 
@@ -1739,17 +1759,32 @@ refactoring_validation:
                                                                 │
                                                                 ▼
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│ Phase 9     │◀───│ Phase 8     │◀───│ Phase 7     │◀───│ Phase 5     │
-│ Continuous  │    │ Publishing  │    │ Hugo Build  │    │ Draft &     │
-│ Improvement │    │ & Deploy    │    │ Validation  │    │ Editing     │
+│ Phase 9     │◀───│ Phase 8     │◀───│ Phase 7.5   │◀───│ Phase 7     │
+│ Continuous  │    │ Publishing  │    │ Cover Image │    │ Hugo Build  │
+│ Improvement │    │ & Deploy    │    │ Generation  │    │ Validation  │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
-                                          ▲
-                                          │
-                                    ┌─────────────┐
-                                    │ Phase 6     │
-                                    │ SEO &       │
-                                    │ Performance │
-                                    └─────────────┘
+                                                              ▲
+                                                              │
+                                                        ┌─────────────┐
+                                                        │ Phase 6     │
+                                                        │ SEO &       │
+                                                        │ Performance │
+                                                        └─────────────┘
+                                                              ▲
+                                                              │
+                                                        ┌─────────────┐
+                                                        │ Phase 5.7   │
+                                                        │ SEO+Editor  │
+                                                        │ Re-Review   │
+                                                        │ (Ralph Loop)│
+                                                        └─────────────┘
+                                                              ▲
+                                                              │
+                                                        ┌─────────────┐
+                                                        │ Phase 5     │
+                                                        │ Draft &     │
+                                                        │ Editing     │
+                                                        └─────────────┘
 ```
 
 #### Phase 1: Trend Discovery (Autonomous)
@@ -1779,13 +1814,33 @@ refactoring_validation:
 #### Phase 5: Draft & Edit (Autonomous)
 **Skills**: `blog-writer` (existing agent) + `content-production` + `copy-editing`
 **Trigger**: Outline approved
-**Output**: Complete Hugo markdown draft with frontmatter
+**Output**: Initial Hugo markdown draft with frontmatter (NOT YET MARKED COMPLETE)
 **Quality Gate**: Zero AI phrases, paragraphs ≤3 sentences, all citations integrated
+
+#### Phase 5.5: AI Quality Check (Autonomous)
+**Skills**: `slop-detector` → `humanizer` (if flagged)
+**Trigger**: Initial draft produced by Phase 5
+**Output**: Draft with any AI-tell phrases humanized
+**Quality Gate**: `slop-detector` returns zero flags
+
+#### Phase 5.7: SEO + Editorial Re-Review with Ralph Loop (Autonomous) — NEW
+**Skills**: `seo-aeo-audit` + `seo` (SEO re-review) + `copy-editing` + `technical-writing` (editorial re-review) + `ralph-loop` (feedback handler)
+**Trigger**: AI quality check (Phase 5.5) passes
+**Output**: Peer-reviewed draft with all SEO audit and editorial findings addressed; draft marked COMPLETE
+**Quality Gate**: Ralph loop exits clean — zero outstanding SEO audit findings AND zero outstanding editorial concerns
+
+**Process** (mandatory before draft is marked complete):
+1. **SEO re-review** runs `seo-aeo-audit` + `seo` against the current draft to catch missed keywords, metadata gaps, readability regressions from the Phase 5 draft-and-edit pass.
+2. **Editorial re-review** runs `copy-editing` + `technical-writing` to catch voice drift, unclear phrasing, unsupported claims, factual concerns, and AI-tell phrases the slop-detector missed.
+3. **Ralph loop feedback handling**: If either review returns any feedback, feed the combined findings into the `ralph-loop` skill. Ralph iteratively applies fixes and re-runs BOTH reviews until both return clean.
+4. Only then is the draft marked as **complete** and the pipeline advances to Phase 6.
+
+**Why this phase exists**: draft-time editing (Phase 5) catches obvious issues, but a separate cold-eye pass consistently finds problems the drafting agent missed. Ralph loop makes the feedback cycle autonomous — no human-in-the-loop needed unless ralph loop itself can't converge.
 
 #### Phase 6: SEO & Performance (Autonomous)
 **Skills**: `seo` + `seo-aeo-audit` + `landing-page-optimization` + `pagespeed-insights`
-**Trigger**: Draft complete
-**Output**: SEO-optimized draft with metadata, structured data, performance report
+**Trigger**: Draft complete (Phase 5.7 ralph loop exited clean)
+**Output**: Final SEO optimizations: metadata, structured data, performance report
 **Quality Gate**: Flesch Reading Ease ≥60, primary keyword integrated, metadata complete
 
 #### Phase 7: Hugo Build Validation (Autonomous)
@@ -1794,11 +1849,50 @@ refactoring_validation:
 **Output**: Hugo-compatible content, validated frontmatter, asset references checked
 **Quality Gate**: `bin/hugo-build` passes, frontmatter YAML valid, all links resolve
 
+#### Phase 7.5: Cover Image Generation (Autonomous) — NEW
+
+This is a **three-step sub-pipeline**, not a single tool call. A cover image is a UX artifact, not a decoration — it needs research, design, and only then generation.
+
+**Skills (in order)**:
+- Step 1: `ux-researcher` + `ux-principles` (research)
+- Step 2: `frontend-design` + `web-design-guidelines` + `web-design-reviewer` (design)
+- Step 3: `stitch-design` MCP OR `bin/generate-cover-image` script (generation)
+
+**Trigger**: Hugo build validation (Phase 7) passes
+**Output**: 1200×630 JPEG cover image at `content/blog/<slug>/cover.jpg` as a Hugo page resource
+**Quality Gate**: File exists AND Hugo's image pipeline processes it to WebP AND `og:image` + `twitter:image` + Article JSON-LD `image` all resolve to the local asset (not the site-default `og-default.jpg` fallback)
+
+**Process** (mandatory after draft complete, before publish):
+
+**Step 1 — UX Research** (`ux-researcher` + `ux-principles`)
+- Identify the *specific* reader for this post within the broader CTO/Engineering Manager audience (a post about background jobs talks to SREs and senior backend devs; a post about hiring talks to EMs and HR partners — different metaphors resonate).
+- Research which visual metaphors drive engagement for the topic in technical social feeds.
+- Identify platform-specific engagement patterns (dark mode IDE aesthetic, editorial illustration, data viz, or photograph?).
+- Check what's already been tried across shipped covers to avoid visual repetition.
+- Output: a short research brief stored in memory at `blog/ux-research/covers/{post_slug}/brief`.
+
+**Step 2 — UX/UI Design** (`frontend-design` + `web-design-guidelines` + `web-design-reviewer`)
+- Translate the research brief into a concrete design spec: palette, composition pattern, hero element, tag pills, metric cards.
+- Reference the canonical design system doc at `docs/projects/2510-seo-content-strategy/20-29-strategy/20.06-blog-cover-image-design-system.md` for brand-aligned defaults.
+- Reference the existing Stitch project `3224353017067976684` ("JetThoughts Blog Covers") to keep new covers visually aligned with already-shipped ones.
+- The design spec MUST include: a concept sentence (metaphor, not literal topic), a palette (charcoal-on-cream OR Obsidian Engine per the canonical design system), composition pattern (e.g. asymmetric left-heavy), and the specific hero element.
+- Output: design spec stored at `blog/ux-design/covers/{post_slug}/spec`.
+
+**Step 3 — Image Generation**
+- **Option A — Stitch MCP**: Call `mcp__stitch__generate_screen_from_text` against project `3224353017067976684`, passing the design spec as the prompt. Download the generated HTML, then render at an exact 1200×630 viewport via `chrome-devtools` MCP (`new_page` → `resize_page` 1200×630 → wait for fonts → `take_screenshot` format=jpeg quality=90) directly into the post directory.
+- **Option B — Script path**: Run `bin/generate-cover-image <slug> "concept sentence from design spec"` which wraps the gemini CLI image model. Requires `GEMINI_API_KEY` in the environment.
+
+**Verify**: Rebuild Hugo. `og:image` meta tag must resolve to the local processed WebP (e.g. `/blog/<slug>/cover_hu_<hash>.webp`), not the site-default `og-default.jpg`. If it still falls back, the page resource isn't resolving — check the filename matches `cover_image`/`metatags.image` in frontmatter.
+
+Only then advance to Phase 8 (Publish).
+
+**Why three steps instead of one**: Prompt-first image generation ("just describe what you want and hit generate") consistently produces tech clichés (code editors, gears, lightbulbs). UX research grounds the visual metaphor in *this specific reader's* engagement patterns; UX/UI design translates that into a brand-aligned spec; generation is just execution. Skipping research-and-design means the generator defaults to whatever is in its training data, which rarely matches a specific audience.
+
 #### Phase 8: Publishing & Deploy (Autonomous)
 **Skills**: `geo-content-publisher` + `workflow-execute` + `agentic-workflow-automation`
-**Trigger**: Hugo build validation passes
+**Trigger**: Cover image generation (Phase 7.5) complete AND verified
 **Output**: Published blog post, deployed site, social sharing assets
-**Quality Gate**: Post live, URL accessible, social meta tags rendering correctly
+**Quality Gate**: Post live, URL accessible, social meta tags rendering correctly with the new cover
 
 #### Phase 9: Continuous Improvement (Autonomous)
 **Skills**: `self-improving-agent` + `project-memory` + `context-fundamentals`
