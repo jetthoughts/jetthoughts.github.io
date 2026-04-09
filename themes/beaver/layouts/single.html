@@ -45,6 +45,48 @@
         style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px">
         <header>
           <h1 class="fl-heading">{{ .Title }}</h1>
+
+          {{/* Cover image — rendered immediately under the <h1>, BEFORE
+               the tag strip and date, per UX research: the cover is a
+               visual confirmation signal for technical readers who have
+               already scanned the title. Placing it right under the H1
+               turns the next fixation into a "should I read this?"
+               confirmation rather than a skipped metadata block.
+
+               Strictly additive: renders only when a local cover.*
+               page resource exists. Aligns to the text column width
+               (43rem) — NOT full-bleed — so the cover and body
+               visually group as one reading unit.
+
+               Responsive srcset bypasses Hugo's resampleFilter = "box"
+               by serving the browser a 1920w variant and letting
+               Chrome's downscale do the high-quality resample. Box
+               shadow softens the edge against the light page background.
+
+               All styling is inline-scoped — zero changes to any of
+               the 9 pre-built CSS bundles. */}}
+          {{ with .Resources.GetMatch "cover.*" }}
+            {{ $w640  := .Resize "640x webp q85" }}
+            {{ $w960  := .Resize "960x webp q85" }}
+            {{ $w1920 := .Resize "1920x webp q82" }}
+            <figure style="margin: 0.75rem 0 1.25rem; max-width: 43rem;">
+              <img
+                class="post-cover"
+                src="{{ $w960.Permalink }}"
+                srcset="{{ $w640.Permalink }} 640w, {{ $w960.Permalink }} 960w, {{ $w1920.Permalink }} 1920w"
+                sizes="(max-width: 688px) 100vw, 688px"
+                alt="{{ $.Params.cover_image_alt | default $.Title }}"
+                width="{{ $w960.Width }}"
+                height="{{ $w960.Height }}"
+                loading="eager"
+                fetchpriority="high"
+                style="width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 1px 6px rgba(0,0,0,0.10);" />
+              {{ with $.Params.cover_image_caption }}
+                <figcaption style="font-size: 0.875rem; color: rgba(33,37,41,0.65); text-align: center; margin-top: 0.75rem; font-style: italic;">{{ . | safeHTML }}</figcaption>
+              {{ end }}
+            </figure>
+          {{ end }}
+
           <div class="post-tags" style="margin-bottom: 1rem;">
             {{ with .Params.tags }}
               {{ range . }}
@@ -63,44 +105,6 @@
             </div>
           {{ end }}
         </header>
-
-        {{/* Cover image — strictly additive: renders only when a local
-             cover.{jpg,jpeg,png,webp} page resource exists. Aligns to the
-             adjacent .fl-rich-text text column (43rem) — NOT full-bleed —
-             so the cover and body visually group as one reading unit
-             (per UX research: text-column alignment is a credibility
-             signal for technical readers; full-bleed breaks it).
-
-             Responsive srcset bypasses Hugo's resampleFilter = "box" by
-             serving the browser a 1920w variant and letting Chrome's
-             downscale do the high-quality resample. Box shadow softens
-             the edge against the light page background so dark covers
-             don't "float" and any future light-bg cover still has a
-             visual container.
-
-             All styling is inline-scoped to this single element — zero
-             changes to any of the 9 pre-built CSS bundles. */}}
-        {{ with .Resources.GetMatch "cover.*" }}
-          {{ $w640  := .Resize "640x webp q85" }}
-          {{ $w960  := .Resize "960x webp q85" }}
-          {{ $w1920 := .Resize "1920x webp q82" }}
-          <figure style="margin: 0 0 1.5rem; max-width: 43rem;">
-            <img
-              class="post-cover"
-              src="{{ $w960.Permalink }}"
-              srcset="{{ $w640.Permalink }} 640w, {{ $w960.Permalink }} 960w, {{ $w1920.Permalink }} 1920w"
-              sizes="(max-width: 688px) 100vw, 688px"
-              alt="{{ $.Params.cover_image_alt | default $.Title }}"
-              width="{{ $w960.Width }}"
-              height="{{ $w960.Height }}"
-              loading="eager"
-              fetchpriority="high"
-              style="width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 1px 6px rgba(0,0,0,0.10);" />
-            {{ with $.Params.cover_image_caption }}
-              <figcaption style="font-size: 0.875rem; color: rgba(33,37,41,0.65); text-align: center; margin-top: 0.75rem; font-style: italic;">{{ . | safeHTML }}</figcaption>
-            {{ end }}
-          </figure>
-        {{ end }}
 
         <div
           class="fl-rich-text c-content-block__text"
