@@ -8,10 +8,10 @@ slug: "rails-8-1-active-job-continuations-background-jobs"
 keywords: "Rails 8.1, Active Job Continuations, ActiveJob Continuable, background jobs, Kamal deploy, Solid Queue, Sidekiq, long-running jobs, Ruby on Rails"
 tags: ["rails", "ruby", "rails-8-1", "active-job", "background-jobs", "kamal", "solid-queue", "sidekiq"]
 categories: ["Engineering"]
-cover_image: cover.jpg
+cover_image: cover.png
 metatags:
-  image: cover.jpg
-cover_image_alt: "Rails 8.1 Active Job Continuations workflow showing a long-running job resuming from its last checkpoint after interruption"
+  image: cover.png
+cover_image_alt: "JetThoughts blog cover for Active Job Continuations in Rails 8.1 — minimalist dark design with Ruby-to-purple gradient headline"
 canonical_url: https://jetthoughts.com/blog/rails-8-1-active-job-continuations-background-jobs/
 ---
 
