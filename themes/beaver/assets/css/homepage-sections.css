@@ -1,0 +1,4 @@
+/* Homepage semantic hooks migration layer.
+ * Intentionally starts empty to keep behavior identical.
+ * Future section-level styles should target .jt-home-* classes here.
+ */
