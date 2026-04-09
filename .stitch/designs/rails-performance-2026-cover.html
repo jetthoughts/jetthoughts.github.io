@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby on Rails Performance Optimization Patterns for 2026 - Cover</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+            position: relative;
+        }
+
+        /* Background pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Code snippet background element */
+        .code-bg {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(148, 163, 184, 0.15);
+            line-height: 1.6;
+            text-align: right;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 80px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .blog-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #94A3B8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 56px;
+            font-weight: 900;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            max-width: 900px;
+        }
+
+        .title .highlight {
+            background: linear-gradient(135deg, #DC143C 0%, #FF6B6B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: #CBD5E1;
+            margin-bottom: 40px;
+            max-width: 800px;
+            line-height: 1.5;
+        }
+
+        .tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #60A5FA;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .tag.ruby {
+            background: rgba(220, 20, 60, 0.2);
+            border-color: rgba(220, 20, 60, 0.4);
+            color: #FF6B6B;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .metric {
+            text-align: left;
+        }
+
+        .metric-value {
+            font-size: 42px;
+            font-weight: 900;
+            color: #10B981;
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: #94A3B8;
+            margin-top: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .date {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            font-size: 18px;
+            color: #64748B;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="code-bg">
+        RubyVM::YJIT.enable<br>
+        config.cache_store = :redis_cache_store<br>
+        Post.includes(:comments)<br>
+        P95 &lt; 200ms<br>
+        Memory: 7MB/req
+    </div>
+
+    <div class="container">
+        <div class="blog-name">JetThoughts</div>
+        <h1 class="title">
+            Ruby on Rails <span class="highlight">Performance Optimization</span> Patterns for 2026
+        </h1>
+        <p class="subtitle">
+            YJIT 94.7% speedup • Rails 8 query optimization • Redis caching • N+1 elimination
+        </p>
+        <div class="tags">
+            <span class="tag ruby">Ruby</span>
+            <span class="tag">Rails 8</span>
+            <span class="tag">Performance</span>
+            <span class="tag">YJIT</span>
+            <span class="tag">Caching</span>
+        </div>
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">94.7%</div>
+                <div class="metric-label">YJIT Speedup</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">1.5x</div>
+                <div class="metric-label">Redis vs Memcached</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">7MB</div>
+                <div class="metric-label">Memory per Request</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="date">April 9, 2026</div>
+</body>
+</html>

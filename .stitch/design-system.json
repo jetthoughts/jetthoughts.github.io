@@ -1,0 +1,44 @@
+{
+  "name": "JetVelocity",
+  "projectId": "3224353017067976684",
+  "creativeNorthStar": "The Obsidian Engine",
+  "dimensions": { "width": 1200, "height": 630, "standard": "Open Graph" },
+  "colors": {
+    "background": "#10141a",
+    "primary": "#cc342d",
+    "secondary": "#a855f7",
+    "tertiary": "#7dd0fe",
+    "surface": "#10141a",
+    "surfaceLow": "#181c22",
+    "surfaceContainer": "#1c2026",
+    "surfaceContainerHigh": "#262a31",
+    "surfaceContainerHighest": "#31353c",
+    "onBackground": "#dfe2eb",
+    "onSurface": "#dfe2eb",
+    "onSurfaceVariant": "#e3beb9",
+    "outline": "#aa8985",
+    "outlineVariant": "#5a403d",
+    "gradientStart": "#cc342d",
+    "gradientEnd": "#6f00be"
+  },
+  "typography": {
+    "headline": { "family": "Space Grotesk", "weight": 800 },
+    "body": { "family": "Inter", "weight": 400 },
+    "label": { "family": "Inter", "weight": 600, "textTransform": "uppercase", "letterSpacing": "+0.05em" }
+  },
+  "layoutPattern": {
+    "topLeft": "JetThoughts brand mark",
+    "topRight": "Topic pill badge (Ruby red #cc342d)",
+    "centerLeft": "Large bold headline (2-3 lines, #dfe2eb, Space Grotesk)",
+    "bottomLeft": "Stat/feature badges in a row (colored tags)",
+    "rightSide": "Abstract visual element (glowing gem/crystal/icon in brand colors)"
+  },
+  "rules": [
+    "No 1px solid borders for sectioning — use tonal shifts",
+    "Never use #FFFFFF — always #dfe2eb for text",
+    "Intentional asymmetry: heavy left typography, negative space right",
+    "Glass & Gradient: CTA gradient from #cc342d to #6f00be at 135°",
+    "Text must be legible at thumbnail size (300×157px)",
+    "Dark gradient background: #10141a → #1a0a2e"
+  ]
+}
