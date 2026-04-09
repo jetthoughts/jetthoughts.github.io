@@ -37,9 +37,45 @@
     {{ partial "seo/faq-schema.html" . }}
   </head>
 
-  <body
-    class="privacy-policy page-template-default page page-id-3059 fl-builder fl-theme-builder-header fl-theme-builder-header-header fl-theme-builder-footer fl-theme-builder-footer-footer fl-framework-base-4 fl-preset-default fl-full-width fl-search-active"
-    lang="en">
+  {{- $bodyClasses := slice -}}
+  {{- if .IsHome -}}
+    {{- $bodyClasses = $bodyClasses | append "home" -}}
+  {{- end -}}
+  {{- if .IsPage -}}
+    {{- $bodyClasses = $bodyClasses | append "page" "page-template-default" -}}
+  {{- end -}}
+  {{- $bodyClasses = $bodyClasses | append (printf "kind-%s" .Kind) -}}
+  {{- with .Type -}}
+    {{- $bodyClasses = $bodyClasses | append (printf "type-%s" (urlize .)) -}}
+  {{- end -}}
+  {{- with .Section -}}
+    {{- $bodyClasses = $bodyClasses | append (printf "section-%s" (urlize .)) -}}
+  {{- end -}}
+  {{- with .Layout -}}
+    {{- $bodyClasses = $bodyClasses | append (printf "layout-%s" (urlize .)) -}}
+  {{- end -}}
+  {{- with .File -}}
+    {{- with .ContentBaseName -}}
+      {{- $bodyClasses = $bodyClasses | append (printf "slug-%s" (urlize .)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $frameworkClasses := slice
+    "fl-builder"
+    "fl-theme-builder-header"
+    "fl-theme-builder-header-header"
+    "fl-theme-builder-footer"
+    "fl-theme-builder-footer-footer"
+    "fl-framework-base-4"
+    "fl-preset-default"
+    "fl-full-width"
+    "fl-search-active"
+  -}}
+  {{- range $frameworkClasses -}}
+    {{- $bodyClasses = $bodyClasses | append . -}}
+  {{- end -}}
+  {{- $bodyClassAttr := delimit (uniq $bodyClasses) " " -}}
+
+  <body class="{{ $bodyClassAttr }}" lang="en">
     <a class="skip-link sr-only" href="#main-content">Skip to main content</a>
     <div class="fl-page">
       {{ partialCached "page/header.html" . "header" }}

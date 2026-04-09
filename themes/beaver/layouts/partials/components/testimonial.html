@@ -32,6 +32,7 @@
 {{- $rating := .rating | default "4.8" -}}
 {{- $rating_text := .rating_text | default "Based on client reviews" -}}
 {{- $node_id := .node_id | default "testimonials" -}}
+{{- $testimonialsData := hugo.Data.testimonials -}}
 
 {{- $nonCriticalCSS := resources.Get "css/vendors/swiper.min.css" | fingerprint "md5" -}}
 <link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -149,8 +150,8 @@
           <div class="pp-reviews-wrapper pp-reviews-default">
             <div class="pp-reviews-swiper swiper-container">
               <div class="swiper-wrapper">
-                {{- if .Site.Data.testimonials.testimonials -}}
-                  {{- range .Site.Data.testimonials.testimonials -}}
+                {{- if $testimonialsData.testimonials -}}
+                  {{- range $testimonialsData.testimonials -}}
                   <div class="pp-review-item pp-review-item-0 swiper-slide">
                     <div class="pp-review">
                       <div class="pp-review-content">

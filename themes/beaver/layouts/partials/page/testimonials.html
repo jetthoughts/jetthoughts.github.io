@@ -70,6 +70,8 @@
   }
 </style>
 
+{{ $testimonialsData := hugo.Data.testimonials }}
+
 <div>
   <div style="text-align: center;">
     <a href="https://techreviewer.co/companies/jetthoughts" target="_blank">
@@ -168,8 +170,8 @@
             <div class="pp-reviews-swiper swiper-container">
               <!-- Slides wrapper -->
               <div class="swiper-wrapper">
-                {{ if .Site.Data.testimonials.testimonials }}
-                  {{ range .Site.Data.testimonials.testimonials }}
+                {{ if $testimonialsData.testimonials }}
+                  {{ range $testimonialsData.testimonials }}
                     <div class="pp-review-item pp-review-item-0 swiper-slide">
                       <div class="pp-review">
                         <div class="pp-review-content">
