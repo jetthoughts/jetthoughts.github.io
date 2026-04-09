@@ -7,6 +7,7 @@ require "date"
 module Sync
   class Post
     include Logging
+
     REPO_URL = "https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master"
 
     attr_accessor :slug, :metadata, :body_markdown

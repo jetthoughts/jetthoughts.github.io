@@ -2,16 +2,13 @@
 
 require "rake/testtask"
 
-
 Rake::TestTask.new(:test) do |t|
   t.libs << "test"
   t.libs << "lib"
   t.pattern = "test/**/*_test.rb"
 end
 
-
 namespace :test do
-
   Rake::TestTask.new(:all) do |t|
     t.libs << "test"
     t.libs << "lib"

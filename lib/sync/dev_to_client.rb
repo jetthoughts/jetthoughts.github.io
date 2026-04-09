@@ -2,6 +2,7 @@ require "faraday"
 
 class DevToClient
   include Logging
+
   BASE_URL = "https://dev.to/api"
 
   def initialize(http_client: Faraday)

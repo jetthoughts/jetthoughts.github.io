@@ -10,6 +10,7 @@ module Sync
   class DevToArticleFetcher
     include Logging
     include Retryable
+
     USERNAME = "jetthoughts".freeze
 
     attr_reader :client
