@@ -1560,3 +1560,334 @@ refactoring_validation:
 **Visual Regression Validation Mandate**: "For ALL refactoring work: Capture baseline screenshots BEFORE changes with tolerance: 0.0. Preserve ALL page-specific CSS (.fl-node-* styles, layout rules). Compare screenshots AFTER changes - MUST show 0% difference. ANY visual change > 0% = IMMEDIATE BLOCK, revert, investigate. Four-eyes approval REQUIRED: Coder → Reviewer → Screenshot Guardian → Tester. Screenshot Guardian has ABSOLUTE blocking authority. Refactoring definition: Code restructuring maintaining EXACT functionality AND appearance. Breaking this mandate is FAILURE."
 
 **Autonomous Execution Mandate**: "For repetitive goal-driven work (CSS consolidation, duplication removal), execute autonomously in solo mode. Test after each change with bin/rake test:critical. Commit on green. Continue to next item. NO approval gates. NO swarm spawning for simple patterns. ONLY stop on critical test failures. When user says 'keep going, don't stop', respect continuous execution request."
+
+---
+
+## 🤖 AUTONOMOUS BLOG MANAGEMENT PIPELINE
+
+**Purpose**: Fully self-organized, self-managed blog workflow with high autonomy and minimal human interaction.
+**Skill Foundation**: Built on installed external skills from the agent skills ecosystem.
+**Authority**: Extends existing TDD/testing mandates — blog pipeline runs parallel to code pipeline.
+
+### 📚 Installed Skills Integration
+
+| Skill | Package@Name | Role in Pipeline |
+|-------|-------------|------------------|
+| Self-Improving Agent | `charon-fan/agent-playbook@self-improving-agent` | Continuous learning & adaptation |
+| Blog Page Generator | `kostja94/marketing-skills@blog-page-generator` | Automated blog page creation |
+| Content Strategy | `guia-matthieu/clawfu-skills@content-strategy` | Strategic content planning |
+| Content Calendar | `eddiebe147/claude-settings@content-calendar-planner` | Editorial calendar automation |
+| Content Production | `borghei/claude-skills@content-production` | End-to-end content creation |
+| Content Publisher | `geoly-ai/geo-skills@geo-content-publisher` | Automated publishing pipeline |
+| Workflow Execute | `catlog22/claude-code-workflow@workflow-execute` | Autonomous workflow runner |
+| Agentic Automation | `samarv/shanon@agentic-workflow-automation` | Multi-step task automation |
+| Social Trends | `drshailesh88/integrated_content_os@social-media-trends-research` | Trend discovery |
+| Content Trends | `alirezarezvani/claude-code-skill-factory@content-trend-researcher` | Content trend analysis |
+| Keyword Research | `kostja94/marketing-skills@keyword-research` | SEO opportunity discovery |
+| Market Research | `manojbajaj95/claude-gtm-plugin@market-research-analysis` | Market context |
+| Competitor Intel | `ognjengt/founder-skills@competitor-intel` | Competitive landscape |
+| Web Research | `yonatangross/orchestkit@web-research-workflow` | Structured research workflow |
+| SEO | `addyosmani/web-quality-skills@seo` | SEO best practices |
+| Landing Page Opt. | `manojbajaj95/claude-gtm-plugin@landing-page-optimization` | Landing page conversion |
+| SEO/AEO Audit | `warpdotdev/oz-skills@seo-aeo-audit` | SEO & AEO audits |
+| Web Performance | `sickn33/antigravity-awesome-skills@web-performance-optimization` | Core Web Vitals |
+| PageSpeed Insights | `enderpuentes/ai-agent-skills@pagespeed-insights` | Performance analysis |
+| Best Practices | `addyosmani/web-quality-skills@best-practices` | HTML/CSS quality |
+| PostCSS Best | `mindrally/skills@postcss-best-practices` | PostCSS patterns |
+| HTML/CSS Best | `hack23/homepage@html-css-best-practices` | HTML/CSS fundamentals |
+| Web Design Guide | `ehmo/platform-design-skills@web-design-guidelines` | Design & accessibility |
+| Blog Post | `langchain-ai/deepagents@blog-post` | Blog post generation |
+| Blog Writing Guide | `getsentry/skills@blog-writing-guide` | Blog writing process |
+| Technical Writing | `mindrally/skills@technical-writing` | Technical content clarity |
+| Copywriting Core | `manojbajaj95/claude-gtm-plugin@copywriting-core` | Persuasive copy |
+| Copy Editing | `borghei/claude-skills@copy-editing` | Proofreading & polish |
+| Obsidian Markdown | `kepano/obsidian-skills@obsidian-markdown` | Markdown file handling |
+| Markdown to HTML | `jimliu/baoyu-skills@baoyu-markdown-to-html` | Markdown conversion |
+| Hugo | `jackspace/claudeskillz@hugo` | Hugo static site guidance |
+| Agent Config | `supercent-io/skills-template@agent-configuration` | Agent setup patterns |
+| Bootstrap | `buiducnhat/agent-skills@bootstrap` | Project initialization |
+| Skill Integrator | `jwynia/agent-skills@skill-integrator` | Skill integration |
+| Project Memory | `vasilyu1983/ai-agents-public@agents-project-memory` | Persistent context |
+| Context Fundamentals | `guanyang/antigravity-skills@context-fundamentals` | Context engineering |
+
+### 🔄 Autonomous Blog Pipeline — 9-Phase Workflow
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ Phase 1     │───▶│ Phase 2     │───▶│ Phase 3     │───▶│ Phase 4     │
+│ Trend       │    │ Strategy &  │    │ Research &  │    │ Ideation &  │
+│ Discovery   │    │ Planning    │    │ Intelligence│    │ Outline     │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+                                                                │
+                                                                ▼
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ Phase 9     │◀───│ Phase 8     │◀───│ Phase 7     │◀───│ Phase 5     │
+│ Continuous  │    │ Publishing  │    │ Hugo Build  │    │ Draft &     │
+│ Improvement │    │ & Deploy    │    │ Validation  │    │ Editing     │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+                                          ▲
+                                          │
+                                    ┌─────────────┐
+                                    │ Phase 6     │
+                                    │ SEO &       │
+                                    │ Performance │
+                                    └─────────────┘
+```
+
+#### Phase 1: Trend Discovery (Autonomous)
+**Skills**: `social-media-trends-research` + `content-trend-researcher` + `keyword-research`
+**Trigger**: Scheduled (weekly) or manual `/blog-research`
+**Output**: Trend report with keyword opportunities and content gaps
+**Quality Gate**: ≥5 viable topic opportunities identified
+
+#### Phase 2: Strategy & Planning (Autonomous)
+**Skills**: `content-strategy` + `content-calendar-planner` + `market-research-analysis`
+**Trigger**: Trend Discovery output available
+**Output**: Content calendar with scheduled topics, target keywords, deadlines
+**Quality Gate**: Each topic has target keyword, audience, shareability score ≥7/10
+
+#### Phase 3: Research & Intelligence (Autonomous)
+**Skills**: `competitor-intel` + `web-research-workflow` + `blog-writing-guide`
+**Trigger**: Topic from content calendar is due
+**Output**: Research dossier with citations, competitor analysis, data points
+**Quality Gate**: ≥8 credible sources, ≥1 expert quote, no research gaps
+
+#### Phase 4: Ideation & Outline (Autonomous)
+**Skills**: `blog-post` + `copywriting-core` + `technical-writing`
+**Trigger**: Research dossier complete
+**Output**: Detailed outline with hooks, sections, code example placeholders
+**Quality Gate**: 3-5 concrete takeaways, compelling hook defined, structure validated
+
+#### Phase 5: Draft & Edit (Autonomous)
+**Skills**: `blog-writer` (existing agent) + `content-production` + `copy-editing`
+**Trigger**: Outline approved
+**Output**: Complete Hugo markdown draft with frontmatter
+**Quality Gate**: Zero AI phrases, paragraphs ≤3 sentences, all citations integrated
+
+#### Phase 6: SEO & Performance (Autonomous)
+**Skills**: `seo` + `seo-aeo-audit` + `landing-page-optimization` + `pagespeed-insights`
+**Trigger**: Draft complete
+**Output**: SEO-optimized draft with metadata, structured data, performance report
+**Quality Gate**: Flesch Reading Ease ≥60, primary keyword integrated, metadata complete
+
+#### Phase 7: Hugo Build Validation (Autonomous)
+**Skills**: `hugo` + `blog-page-generator` + `obsidian-markdown`
+**Trigger**: SEO-optimized draft ready
+**Output**: Hugo-compatible content, validated frontmatter, asset references checked
+**Quality Gate**: `bin/hugo-build` passes, frontmatter YAML valid, all links resolve
+
+#### Phase 8: Publishing & Deploy (Autonomous)
+**Skills**: `geo-content-publisher` + `workflow-execute` + `agentic-workflow-automation`
+**Trigger**: Hugo build validation passes
+**Output**: Published blog post, deployed site, social sharing assets
+**Quality Gate**: Post live, URL accessible, social meta tags rendering correctly
+
+#### Phase 9: Continuous Improvement (Autonomous)
+**Skills**: `self-improving-agent` + `project-memory` + `context-fundamentals`
+**Trigger**: Post-publish (ongoing)
+**Output**: Performance metrics, engagement analysis, workflow refinements
+**Quality Gate**: Lessons stored in memory, agent configurations updated
+
+### 🧠 Memory Coordination for Blog Pipeline
+
+```yaml
+blog_autonomous_pipeline:
+  # Workflow state
+  workflow_state: "blog/pipeline/workflow/{trace_id}"
+  phase_tracking: "blog/pipeline/phase/{phase_number}/{timestamp}"
+  quality_gates: "blog/pipeline/quality/{gate_type}/{result}"
+
+  # Content tracking
+  topic_pipeline: "blog/content/topics/{topic_slug}/status"
+  research_dossier: "blog/research/{topic_slug}/sources"
+  draft_versions: "blog/drafts/{post_slug}/v{version}"
+
+  # SEO & Performance
+  seo_metrics: "blog/seo/{post_slug}/{metric_type}"
+  performance_data: "blog/performance/{post_slug}/{date}"
+
+  # Learning & Improvement
+  pipeline_learnings: "blog/improvement/{lesson_type}/{timestamp}"
+  agent_refinements: "blog/agents/{agent_name}/config_updates"
+
+  # Publishing
+  publish_log: "blog/publish/{post_slug}/{timestamp}"
+  deploy_status: "blog/deploy/{environment}/{status}"
+```
+
+### 🚨 Autonomous Blog Pipeline Behavioral Constraints
+
+```yaml
+blog_pipeline_constraints:
+  # Zero tolerance policies
+  zero_generic_ai_language: "All AI-sounding phrases flagged and rejected"
+  zero_unsupported_claims: "All assertions must have citations"
+  zero_hugo_build_breaks: "All content validated for Hugo compatibility"
+  zero_readability_compromise: "SEO never sacrifices human readability"
+
+  # Visual validation (inherits screenshot-guardian mandate)
+  visual_regression: "Zero tolerance — any visual change blocks publish"
+
+  # Autonomy boundaries
+  human_review_points:
+    - "Phase 4 outline approval (optional, can be fully autonomous)"
+    - "Phase 5 draft approval (optional, can be fully autonomous)"
+  fully_autonomous_from: "Phase 6 onward once human approves outline OR fully autonomous mode enabled"
+
+  # Stopping conditions
+  stop_triggers:
+    - "Hugo build failure"
+    - "Visual regression detected"
+    - "Quality gate failure (unrecoverable)"
+    - "Research gaps cannot be filled"
+    - "Self-improving agent detects systemic failure pattern"
+```
+
+### 📋 Autonomous Blog Pipeline Quick Start
+
+```bash
+# Full autonomous pipeline from trend to publish
+# Trigger via command or natural language request
+
+# Manual trigger: "Create a blog post about [topic]"
+# Autonomous trigger: Content calendar scheduled topic is due
+
+# Pipeline execution (handled by blog-coordinator):
+# 1. Spawn research agents → gather trends, keywords, competitor data
+# 2. Spawn strategy agent → plan content calendar, topics
+# 3. Spawn research agent → gather citations, data, quotes
+# 4. Spawn writing agents → draft content with Hugo markdown
+# 5. Spawn SEO agents → optimize metadata, readability
+# 6. Validate Hugo build → bin/hugo-build
+# 7. Visual regression test → bin/rake test:critical
+# 8. Publish → deploy to production
+# 9. Store learnings → self-improving agent updates configurations
+```
+
+### 🤖 Agent Team for Autonomous Blog Pipeline
+
+| Phase | Primary Agent | Supporting Agents | Skills Used |
+|-------|--------------|-------------------|-------------|
+| 1. Trend | `content-strategist` | `research-agent` | social-trends, content-trends, keyword-research |
+| 2. Strategy | `content-strategist` | `blog-coordinator` | content-strategy, calendar-planner, market-research |
+| 3. Research | `research-agent` | `seo-specialist` | competitor-intel, web-research, blog-writing-guide |
+| 4. Ideation | `blog-coordinator` | `content-creator` | blog-post, copywriting-core, technical-writing |
+| 5. Draft | `blog-writer` | `content-editor` | content-production, copy-editing, blog-writing-guide |
+| 6. SEO | `seo-optimizer` | `hugo-expert` | seo, seo-aeo-audit, landing-page-opt, pagespeed |
+| 7. Hugo | `hugo-expert` | `blog-coordinator` | hugo, blog-page-generator, obsidian-markdown |
+| 8. Publish | `blog-coordinator` | `hugo-expert` | geo-content-publisher, workflow-execute |
+| 9. Improve | `self-improving-agent` | `blog-coordinator` | self-improving, project-memory, context-fundamentals |
+
+---
+
+## 🛠️ HUGO + CSS/HTML/MD BEST PRACTICES INTEGRATION
+
+**Purpose**: Integrate best practice skills for maintaining Hugo site, legacy CSS, HTML, PostCSS, and Markdown content.
+
+### CSS/HTML/PostCSS Skills
+
+| Skill | Package | Use Case |
+|-------|---------|----------|
+| Web Quality Best | `addyosmani/web-quality-skills@best-practices` | Overall web quality audit |
+| PostCSS Best | `mindrally/skills@postcss-best-practices` | PostCSS config & patterns |
+| HTML/CSS Best | `hack23/homepage@html-css-best-practices` | HTML/CSS fundamentals |
+| Web Design Guide | `ehmo/platform-design-skills@web-design-guidelines` | Design & accessibility |
+| Web Performance | `sickn33/antigravity-awesome-skills@web-performance-optimization` | Performance optimization |
+
+**When to apply**:
+- ANY CSS changes → apply `html-css-best-practices` + `postcss-best-practices`
+- ANY HTML changes → apply `html-css-best-practices` + `best-practices`
+- PostCSS config → apply `postcss-best-practices`
+- Performance audit → apply `web-performance-optimization` + `pagespeed-insights`
+- Accessibility review → apply `web-design-guidelines`
+
+### Markdown Skills
+
+| Skill | Package | Use Case |
+|-------|---------|----------|
+| Obsidian Markdown | `kepano/obsidian-skills@obsidian-markdown` | Creating/editing .md files |
+| Markdown to HTML | `jimliu/baoyu-skills@baoyu-markdown-to-html` | MD → HTML conversion |
+| Format Markdown | `jimliu/baoyu-skills@baoyu-format-markdown` | Markdown formatting |
+| URL to Markdown | `jimliu/baoyu-skills@baoyu-url-to-markdown` | Web clipping to MD |
+
+**When to apply**:
+- ANY `.md` file creation/editing → apply `obsidian-markdown`
+- Markdown formatting needed → apply `baoyu-format-markdown`
+- Converting web content → apply `baoyu-url-to-markdown`
+- Preview as HTML → apply `baoyu-markdown-to-html`
+
+### Hugo Skills
+
+| Skill | Package | Use Case |
+|-------|---------|----------|
+| Hugo | `jackspace/claudeskillz@hugo` | Hugo static site guidance |
+
+**When to apply**:
+- ANY Hugo configuration changes → apply `hugo` skill
+- Template architecture → apply `hugo` + existing `hugo-expert` agent
+- Content structure → apply `hugo` + existing `hugo-expert` agent
+
+### Agent Configuration & Setup Skills
+
+| Skill | Package | Use Case |
+|-------|---------|----------|
+| Agent Config | `supercent-io/skills-template@agent-configuration` | Agent setup patterns |
+| Bootstrap | `buiducnhat/agent-skills@bootstrap` | Project initialization |
+| Skill Integrator | `jwynia/agent-skills@skill-integrator` | Skill integration |
+| Project Memory | `vasilyu1983/ai-agents-public@agents-project-memory` | Persistent context |
+| Context Fundamentals | `guanyang/antigravity-skills@context-fundamentals` | Context engineering |
+
+**When to apply**:
+- New agent creation → apply `agent-configuration` + `bootstrap`
+- Skill integration → apply `skill-integrator`
+- Project context setup → apply `project-memory` + `context-fundamentals`
+
+---
+
+## 📊 AUTONOMOUS BLOG METRICS & KPIs
+
+```yaml
+blog_pipeline_metrics:
+  # Content production
+  posts_per_month: "Target: 4-8 posts/month (autonomous)"
+  pipeline_velocity: "Target: ≤3 days from trend to publish"
+  quality_score: "Target: All quality gates ≥ 8/10"
+
+  # SEO & Performance
+  organic_traffic: "Track via analytics, target: +10% month-over-month"
+  keyword_rankings: "Target: 3+ posts ranking on page 1 for target keywords"
+  page_speed: "Target: Lighthouse score ≥ 90, Core Web Vitals pass"
+
+  # Engagement
+  shareability: "Target: ≥7/10 shareability score"
+  reading_time: "Target: 5-10 minutes per post"
+  reader_engagement: "Target: ≥8/10 reader validation score"
+
+  # Autonomous operation
+  human_intervention_rate: "Target: <10% of posts require human review"
+  pipeline_failure_rate: "Target: <5% pipeline failures"
+  self_improvement_rate: "Target: Monthly agent configuration updates"
+```
+
+---
+
+### AI Detection & Humanization
+
+| Skill | Package | Use Case |
+|-------|---------|----------|
+| Humanizer | `brandonwise/humanizer@humanizer` | Humanizing AI-generated text |
+| Slop Detector | `athola/claude-night-market@slop-detector` | Detecting AI-generated content |
+
+**When to apply**:
+- AFTER Phase 5 (Draft & Edit) → run `slop-detector` to scan for AI patterns
+- IF slop detected → run `humanizer` to rewrite flagged sections
+- BEFORE Phase 6 (SEO) → re-scan to confirm human-like quality
+- **MANDATORY**: All blog content MUST pass slop-detector before publishing
+
+**Quality Gate Addition**:
+- Phase 5.5 (AI Quality Check): `slop-detector` scan → zero AI patterns → `humanizer` if needed
+- Blocking: Any text flagged by slop-detector MUST be humanized before proceeding
+
+---
+
+**Remember**: This comprehensive configuration enforces unified handbook system compliance with Hugo/JAMstack specializations AND autonomous blog management pipeline. All agents MUST follow the dual-source handbook system (global standards FIRST, project adaptations SECOND) and maintain zero-tolerance policies for duplication, quality, and security violations. The autonomous blog pipeline runs in parallel to TDD/code pipeline, with both pipelines sharing visual regression validation and quality gate enforcement.
