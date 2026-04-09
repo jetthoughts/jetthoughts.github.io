@@ -6,14 +6,15 @@ draft: false
 tags: ["rails", "ruby", "security", "authentication", "argon2", "has_secure_password"]
 canonical_url: "https://jetthoughts.com/blog/rails-argon2-has-secure-password-migration-guide/"
 slug: "rails-argon2-has-secure-password-migration-guide"
-cover_image: "cover.jpg"
-cover_image_alt: "Dark security-themed cover with Ruby on Rails branding, Argon2 migration badges, and glowing shield/lock icon"
 author: "JetThoughts Team"
 metatags:
+  image: cover.png
   og_title: "Rails has_secure_password + Argon2: Migration Guide"
   og_description: "Production-ready guide: enable Argon2 in Rails, migrate from BCrypt, and keep login flow stable."
   twitter_title: "Rails has_secure_password + Argon2"
   twitter_description: "How to adopt Argon2 in Rails with safe migration from BCrypt."
+cover_image: "cover.png"
+cover_image_alt: "Dark security-themed cover with Ruby on Rails branding, Argon2 migration badges, and glowing shield/lock icon"
 ---
 
 BCrypt has been the default for Rails authentication for over a decade. While it remains secure, modern security standards have shifted toward Argon2id to better resist specialized hardware.

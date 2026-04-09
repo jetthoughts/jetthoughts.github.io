@@ -97,30 +97,19 @@
   {{- end -}}
 {{- end -}}
 
-{{/* Image Handling - Support featured_image, cover_image, and metatags.image */}}
+{{/* Image Handling - metatags.image is primary, then cover_image/cover/featured_image */}}
 {{- $image := "" -}}
 {{- $imageWidth := "1200" -}}
 {{- $imageHeight := "630" -}}
 
-{{/* Try featured_image first (our blog standard) */}}
-{{- with .Params.featured_image -}}
-  {{- $imagePath := . -}}
-  {{- $fullPath := printf "static%s" $imagePath -}}
-  {{- if fileExists $fullPath -}}
-    {{- $image = $imagePath -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* Try metatags.image */}}
-{{- if not $image -}}
-  {{- with .Params.metatags.image -}}
-    {{- $resource := $page.Resources.Get . -}}
-    {{- if $resource -}}
-      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
-      {{- $image = $optimized.Permalink -}}
-      {{- $imageWidth = $optimized.Width -}}
-      {{- $imageHeight = $optimized.Height -}}
-    {{- end -}}
+{{/* Try metatags.image first (primary convention) */}}
+{{- with .Params.metatags.image -}}
+  {{- $resource := $page.Resources.Get . -}}
+  {{- if $resource -}}
+    {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
+    {{- $image = $optimized.Permalink -}}
+    {{- $imageWidth = $optimized.Width -}}
+    {{- $imageHeight = $optimized.Height -}}
   {{- end -}}
 {{- end -}}
 
@@ -129,7 +118,7 @@
   {{- with .Params.cover_image -}}
     {{- $resource := $page.Resources.Get . -}}
     {{- if $resource -}}
-      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+      {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
       {{- $image = $optimized.Permalink -}}
       {{- $imageWidth = $optimized.Width -}}
       {{- $imageHeight = $optimized.Height -}}
@@ -137,12 +126,25 @@
   {{- end -}}
 {{- end -}}
 
-{{/* Try cover (alias for cover_image) */}}
+{{/* Try cover (alias) */}}
 {{- if not $image -}}
   {{- with .Params.cover -}}
     {{- $resource := $page.Resources.Get . -}}
     {{- if $resource -}}
-      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+      {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
+      {{- $image = $optimized.Permalink -}}
+      {{- $imageWidth = $optimized.Width -}}
+      {{- $imageHeight = $optimized.Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Try featured_image (legacy) */}}
+{{- if not $image -}}
+  {{- with .Params.featured_image -}}
+    {{- $resource := $page.Resources.Get . -}}
+    {{- if $resource -}}
+      {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
       {{- $image = $optimized.Permalink -}}
       {{- $imageWidth = $optimized.Width -}}
       {{- $imageHeight = $optimized.Height -}}

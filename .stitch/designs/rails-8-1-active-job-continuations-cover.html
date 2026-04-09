@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rails 8.1 Active Job Continuations - Cover</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+      position: relative;
+    }
+
+    /* radial gradient overlay — rails-performance sibling pattern */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.18) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    /* faint background code — bumped from 0.15 to 0.32 opacity for readability
+       while still staying subtle enough to not fight the foreground */
+    .code-bg {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      color: rgba(148, 163, 184, 0.32);
+      line-height: 1.8;
+      text-align: right;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 80px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .blog-name {
+      font-size: 24px;
+      font-weight: 600;
+      color: #94A3B8;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-size: 58px;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin-bottom: 28px;
+      max-width: 900px;
+      letter-spacing: -0.01em;
+    }
+
+    .title .highlight {
+      background: linear-gradient(135deg, #DC143C 0%, #FF6B6B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* brightened from #CBD5E1 to #E2E8F0 for contrast against dark gradient */
+    .subtitle {
+      font-size: 23px;
+      font-weight: 400;
+      color: #E2E8F0;
+      margin-bottom: 36px;
+      max-width: 820px;
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    /* brighter fills and borders for better readability at small sizes */
+    .tag {
+      background: rgba(59, 130, 246, 0.28);
+      border: 1px solid rgba(59, 130, 246, 0.55);
+      color: #BFDBFE;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .tag.ruby {
+      background: rgba(220, 20, 60, 0.28);
+      border-color: rgba(220, 20, 60, 0.55);
+      color: #FECACA;
+    }
+
+    .metrics {
+      display: flex;
+      gap: 44px;
+      margin-top: 16px;
+    }
+
+    .metric-value {
+      font-size: 44px;
+      font-weight: 900;
+      color: #34D399;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+
+    /* brightened from #94A3B8 to #CBD5E1 so small caps labels are readable */
+    .metric-label {
+      font-size: 13px;
+      color: #CBD5E1;
+      margin-top: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .date {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 18px;
+      color: #94A3B8;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="code-bg">
+    include ActiveJob::Continuable<br>
+    step :fetch_orders do<br>
+    step :process_orders do |step|<br>
+    step.advance! from: index<br>
+    queue_adapter.stopping?
+  </div>
+
+  <div class="container">
+    <div class="blog-name">JetThoughts</div>
+    <h1 class="title">
+      Rails 8.1 <span class="highlight">Active Job Continuations</span>
+    </h1>
+    <p class="subtitle">
+      Resume from last step · Skip the Kamal 30-second trap · ActiveJob::Continuable
+    </p>
+    <div class="tags">
+      <span class="tag ruby">Ruby</span>
+      <span class="tag">Rails 8.1</span>
+      <span class="tag">Active Job</span>
+      <span class="tag">Kamal</span>
+      <span class="tag">Solid Queue</span>
+    </div>
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-value">30s</div>
+        <div class="metric-label">Kamal Shutdown</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">0</div>
+        <div class="metric-label">Lost Work</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">4</div>
+        <div class="metric-label">Step Checkpoints</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="date">April 14, 2026</div>
+</body>
+</html>

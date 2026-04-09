@@ -1,28 +1,27 @@
 {{ $page := .Page }}
 {{ $image := "" }}
 
-{{/* Try cover_image first (page bundle resource) */}}
-{{- if $page.Params.cover_image -}}
+{{/* Try metatags.image first (primary convention) */}}
+{{- if $page.Params.metatags.image -}}
+  {{ $image = $page.Resources.Get $page.Params.metatags.image }}
+{{- else if $page.Params.cover_image -}}
+  {{/* Try cover_image */}}
   {{ $image = $page.Resources.Get $page.Params.cover_image }}
 {{- else if $page.Params.cover -}}
   {{/* Try cover (alias) */}}
   {{ $image = $page.Resources.Get $page.Params.cover }}
 {{- else if $page.Params.featured_image -}}
-  {{/* Try featured_image (page bundle resource) */}}
+  {{/* Try featured_image (legacy) */}}
   {{ $image = $page.Resources.Get $page.Params.featured_image }}
-{{- else if $page.Params.metatags.image -}}
-  {{/* Fallback to metatags.image */}}
-  {{ $image = $page.Resources.Get $page.Params.metatags.image }}
 {{- end -}}
 
 {{ if $image }}
 {{ $cropped := $image.Fill (printf "%dx%d Center" $.width $.height) }}
-{{ $webp := $cropped.Resize (printf "%dx%d webp" $.width $.height) }}
+{{ $jpg := $cropped.Resize (printf "%dx%d jpg q90" $.width $.height) }}
 
 <picture>
-  <source srcset='{{ $webp.RelPermalink }}' type="image/webp" width="{{ $.width }}" height="{{ $.height }}">
-  <source srcset='{{ $cropped.RelPermalink }}' type="{{ $cropped.MediaType }}" width="{{ $.width }}" height="{{ $.height }}">
-  <img alt='{{ $page.Title }}' src="{{ $cropped.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
+  <source srcset='{{ $jpg.RelPermalink }}' type="image/jpeg" width="{{ $.width }}" height="{{ $.height }}">
+  <img alt='{{ $page.Title }}' src="{{ $jpg.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
 </picture>
 
 {{ else }}

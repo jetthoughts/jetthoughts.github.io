@@ -112,14 +112,22 @@ Templates check image fields in this order:
 ### Generating Covers with Stitch
 1. Run: `/stitch-design generate cover for [post title]`
 2. Stitch generates in project `3224353017067976684` (JetThoughts Blog Covers)
-3. Download HTML → screenshot at 1200×630 → save as `cover.jpg` in post bundle
-4. Add `cover_image: "cover.jpg"` + `cover_image_alt: "..."` to frontmatter
-5. Run `bin/hugo-build` to verify og:image renders
+3. Download HTML → screenshot at **2400×1260** (2x for Retina/Apple devices) → save as **`cover.png`** in post bundle (lossless source)
+4. Hugo auto-converts to WebP/JPEG at build time — no manual conversion needed
+5. Add `cover_image: "cover.png"` + `cover_image_alt: "..."` to frontmatter
+6. Run `bin/hugo-build` to verify og:image renders
+
+### Image Resolution Standards
+- **Source**: **PNG at 2400×1260 (2x)** — lossless master, always keep this
+- **Hugo converts to**: **JPG at q90** for all outputs (og:image, thumbnails)
+- **OG Meta Tags**: Auto-resized to 1200×630 JPG (from 2x PNG source = crisp)
+- **Blog Index Thumbnail**: Auto-resized to 180×180 JPG
+- **Never use JPEG as source** — always PNG for quality retention
 
 ### Quick Checklist for New Posts
-- [ ] `cover.jpg` exists in `content/blog/post-slug/`
-- [ ] `cover_image: "cover.jpg"` in frontmatter
+- [ ] `cover.png` exists in `content/blog/post-slug/` (2400×1260, 2x)
+- [ ] `cover_image: "cover.png"` in frontmatter
 - [ ] `cover_image_alt: "..."` in frontmatter
 - [ ] `bin/hugo-build` passes
 - [ ] Blog index shows thumbnail (180×180)
-- [ ] og:image meta tag present (1200×630)
+- [ ] og:image meta tag present (1200×630, crisp from 2x source)
