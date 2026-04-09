@@ -1,0 +1,17 @@
+{{/* Homepage CSS bundle composition.
+     Keep order stable because legacy styles depend on cascade sequence. */}}
+{{- return (slice
+  (resources.Get "css/critical/base.css")
+  (resources.Get "css/critical/homepage-critical.css")
+  (resources.Get "css/companies.css")
+  (resources.Get "css/footer.css")
+  (resources.Get "css/homepage.css")
+  (resources.Get "css/dynamic-404-590.css" | resources.ExecuteAsTemplate "css/dynamic.css" .)
+  (resources.Get "css/590-layout.css")
+  (resources.Get "css/skin-65eda28877e04.css")
+  (resources.Get "css/style.css")
+  (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
+  (resources.Get "css/586.css")
+  (resources.Get "css/technologies.css")
+  (resources.Get "css/use-cases-dynamic.css" | resources.ExecuteAsTemplate "css/use-cases-dynamic.css" .)
+) -}}
