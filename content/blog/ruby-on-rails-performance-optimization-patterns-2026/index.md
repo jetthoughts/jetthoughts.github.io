@@ -6,7 +6,9 @@ draft: false
 author: "JetThoughts"
 tags: ["ruby", "rails", "performance", "optimization", "yjit", "rails-8", "caching"]
 categories: ["Engineering"]
-featured_image: "/images/2026-04-09-ruby-on-rails-performance-optimization-patterns-2026/feature.jpg"
+cover: "cover.jpg"
+cover_alt: "Dark technical cover with Ruby on Rails branding, performance stats, and glowing gem graphic"
+featured_image: "/images/2026-04-09-ruby-on-rails-performance-optimization-patterns-2026/cover.jpg"
 featured_image_alt: "Ruby on Rails performance optimization dashboard showing benchmark improvements"
 ---
 
