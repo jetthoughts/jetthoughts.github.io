@@ -3,131 +3,128 @@
 ## Project Overview
 - **Project**: JetThoughts Blog Covers
 - **Stitch Project ID**: `3224353017067976684`
-- **Platform**: Web, 1200×630 (Open Graph standard)
+- **Platform**: Web, 2400×1260 (2x for Retina, OG standard is 1200×630)
 - **Style**: Dark, technical, authoritative — "The Obsidian Engine"
 
 ## Creative North Star
-**"The Obsidian Engine"** — High-end IDE/technical blueprint aesthetic. Authoritative, precise, sophisticated dark atmosphere. Intentional asymmetry: heavy left-aligned typography, negative space right, punctuated by floating glassmorphic elements.
+**"The Obsidian Engine"** — High-end IDE/technical blueprint aesthetic. Authoritative, precise, sophisticated dark atmosphere. Intentional asymmetry: brand top-left, topic pill top-right, headline centered or left-aligned.
 
 ## Color Palette
 | Token | Hex | Usage |
 |-------|-----|-------|
-| Background | `#10141a` | Primary canvas |
-| Surface Low | `#181c22` | Content blocks |
-| Surface Container | `#1c2026` | Cards, code blocks |
-| Surface Container High | `#262a31` | Elevated elements |
-| Surface Container Highest | `#31353c` | Overlays, tooltips |
+| Background | `#0d1016` → `#141820` | Gradient base (145deg) |
 | On Background | `#dfe2eb` | Body text (NEVER pure white #FFFFFF) |
-| Primary (Ruby Red) | `#cc342d` | Ruby/brand accents, badges, CTAs |
-| Primary Fixed Dim | `#ffb4ab` | Light ruby highlights |
-| Secondary (Neon Purple) | `#a855f7` | Gradient accents, highlights |
-| Secondary Container | `#6f00be` | Deep purple gradients |
-| Secondary Fixed Dim | `#ddb7ff` | Light purple accents |
-| Tertiary (Cyan) | `#7dd0fe` | Tech details, accent lines |
-| Tertiary Container | `#0076a0` | Deep cyan backgrounds |
-| Outline Variant | `#5a403d` | Ghost borders at 15% opacity |
+| Primary (Ruby Red) | `#cc342d` | Badges, accents, CTAs |
+| Primary Light | `#ffb4ab` | Pill text, highlights |
+| Secondary (Neon Purple) | `#a855f7` | Gradient accents |
+| Gradient | `#cc342d` → `#a855f7` | Accent text, rules (135deg) |
+| Grid | `rgba(223,226,235,0.012)` | Barely-there 80px grid |
 
 ## Typography
-- **Headlines**: Space Grotesk — Bold (800), tight letter-spacing (-0.02em)
-- **Body/Metadata**: Inter — Regular (400), line-height 1.6
-- **Labels/Badges**: Inter — SemiBold (600), ALL CAPS, tracked out (+0.05em)
+- **Headlines**: Space Grotesk 800, `letter-spacing: -0.025em`
+- **Brand/Labels**: Inter 600, ALL CAPS, `letter-spacing: 0.16em`
+- **Pills**: Inter 600, `letter-spacing: 0.10em`
+- **Subtitle**: Inter 500, `color: rgba(223,226,235,0.35)`
 
-## Layout Pattern (1200×630 OG Standard)
-1. **Background**: Dark gradient `#10141a` → `#1a0a2e` with subtle topic-specific patterns
-2. **Top-left**: "JetThoughts" brand mark in `#dfe2eb`
-3. **Top-right**: Topic pill badge in Ruby Red `#cc342d`
-4. **Center-left**: Large bold headline (2-3 lines max, `#dfe2eb`, Space Grotesk)
-5. **Bottom-left**: Stat/feature badges in a row (colored tags using brand colors)
-6. **Right side**: Abstract visual element — glowing gem/crystal/icon/network in brand colors
+## Layout Rules (MANDATORY for ALL covers)
 
-## Rules
-- **No-Line Rule**: No 1px solid borders for sectioning — use tonal shifts
-- **Glass & Gradient**: CTA gradient from `#cc342d` to `#6f00be` at 135°
-- **Intentional Asymmetry**: Heavy left-aligned typography, negative space right
-- **Never use #FFFFFF** — always `#dfe2eb` for text
-- **Thumbnail readable**: Text must be legible at 300×157px
-- **Breathing Room**: Generous whitespace — high-end brands need space
-- **Code Blocks**: Use `#0a0e14` background with 2px cyan `#7dd0fe` accent line on left
+### 1. Thumbnail Crop Safety (CRITICAL)
+The blog index uses a 180×180 center-crop from the 2400×1260 source:
+- **Crop zone**: x=1110..1290, y=540..720 (180×180 from center)
+- **Headline MUST fit entirely in crop zone**: Place headline at `top: 540px`, centered, max 2 lines at 80px font (176px tall = fits in 180px crop height)
+- **Brand/pill MUST be outside crop zone**: `top < 540px` or `top > 720px`
+- **Subtitle MUST be outside crop zone**: `top > 720px`
+
+### 2. Asymmetric Layout
+- Brand: top-left, `top: 100px, left: 160px`
+- Topic pill: top-right, `top: 100px, right: 160px`
+- Never center both brand and pill — creates template feel
+
+### 3. Element Count (MAX 5)
+1. Brand mark (small, top-left)
+2. Topic pill (top-right)
+3. Headline (centered, 2 lines max)
+4. Thin rule (below headline, gradient)
+5. Subtitle (below rule, only visible on full cover)
+
+### 4. Visual Metaphor (Optional)
+- If topic benefits from a visual (e.g., checkpoint nodes for "continuations"):
+  - Position RIGHT side, `right: 160px, top: 400px`
+  - Max 200×200px
+  - Use brand colors only (red, purple, cyan)
+  - Must be simple — 2-3 elements max
+
+### 5. Grid & Texture
+- Subtle 80px grid at 1.2% opacity
+- Radial glows: Ruby red 10% (right), Purple 8% (left)
+- Never use solid colors or heavy patterns
 
 ## Prompt Template for Stitch
 ```
 A 1200×630 technical blog cover for 'JetThoughts' about [TOPIC].
 
-**DESIGN SYSTEM (REQUIRED):**
-- Platform: Web, 1200×630 Open Graph standard
-- Palette: Obsidian background (#10141a), Ruby red (#cc342d), Neon purple (#a855f7), Cyan (#7dd0fe)
-- Typography: Space Grotesk for headlines, Inter for body/labels
-- Styles: Dark gradient (#10141a → #1a0a2e), glassmorphic elements, intentional asymmetry
+**DESIGN SYSTEM (JetVelocity — Obsidian Engine):**
+- Background: gradient #0d1016 → #141820 at 145deg, subtle 80px grid at 1.2%
+- Headline font: Space Grotesk 800, white (#dfe2eb), letter-spacing -0.025em
+- Accent: Ruby red (#cc342d) → Neon purple (#a855f7) gradient on key word
+- Brand: top-left, small, uppercase
+- Topic pill: top-right, Ruby red background, light text
+- NEUTRAL: #dfe2eb for text (NEVER #FFFFFF)
 
-**PAGE STRUCTURE:**
-1. **Background:** Dark gradient with subtle [TOPIC-SPECIFIC] patterns
-2. **Top-left:** "JetThoughts" brand mark
-3. **Top-right:** "[TOPIC BADGE]" pill badge in Ruby red (#cc342d)
-4. **Center-left:** Large bold headline "[HEADLINE]" in white (#dfe2eb), 2 lines
-5. **Bottom-left:** Stat badges: "[Badge 1]" · "[Badge 2]" · "[Badge 3]" — colored tags
-6. **Right side:** Abstract visual — [TOPIC-SPECIFIC] glowing element, in brand colors
+**LAYOUT:**
+- Headline: centered, 2 lines max, positioned at top center
+- Thin gradient rule below headline
+- Subtitle below rule: "[One-line description]"
+- [Optional visual metaphor on right side]
 
-Mood: [3 descriptive words].
+**THUMBNAIL CROP SAFETY (CRITICAL):**
+The 180×180 center-crop captures only the center 180×180px. Headline MUST be fully within this zone. Brand and pill MUST be outside this zone.
+
+Mood: [3 descriptive words: minimalist, technical, premium].
 ```
-
----
 
 ## Cover Image Workflow
 
-### Frontmatter Convention
-Every blog post should use `cover_image` pointing to a file in the **same page bundle**:
+### Generating Covers
+1. Run: `/stitch-design generate cover for [post title]`
+2. Stitch generates in project `3224353017067976684` (JetThoughts Blog Covers)
+3. Download HTML → screenshot at **2400×1260** (2x Retina) → save as `cover.png` in post bundle
+4. Add `metatags.image: cover.png` + `cover_image: "cover.png"` + `cover_image_alt: "..."` to frontmatter
+5. Run `bin/hugo-build` to verify og:image renders
 
+### Frontmatter Convention
 ```yaml
 ---
 title: "Post Title"
-description: "Post description"
-date: 2026-04-09
-cover_image: "cover.jpg"
-cover_image_alt: "Descriptive alt text for the cover image"
+categories: ["Engineering"]
+cover_image: cover.png
+cover_image_alt: "Descriptive alt text"
+metatags:
+  image: cover.png
 ---
 ```
 
 ### File Structure
 ```
 content/blog/post-slug/
-├── index.md          ← Frontmatter with cover_image field
-├── cover.jpg         ← Cover image (1200×630px, JPEG/WebP)
-└── other-assets/     ← Any additional images
+├── index.md          # metatags.image: cover.png
+└── cover.png         # 2400×1260 PNG source (Hugo converts to JPG q90)
 ```
 
-### Template Priority
-Templates check image fields in this order:
-1. `cover_image` — **preferred**, looks in page bundle
-2. `cover` — alias for `cover_image`
-3. `featured_image` — legacy, also checks page bundle
-4. `metatags.image` — fallback
-
-### What Each Template Does
-| Template | Uses cover_image for |
-|----------|---------------------|
-| `blog/img-cropped.html` | 180×180 thumbnail on blog index |
-| `seo/enhanced-meta-tags.html` | og:image (1200×630) + twitter:image |
-| `sitemap.xml` | Image sitemap entries |
-
-### Generating Covers with Stitch
-1. Run: `/stitch-design generate cover for [post title]`
-2. Stitch generates in project `3224353017067976684` (JetThoughts Blog Covers)
-3. Download HTML → screenshot at **2400×1260** (2x for Retina/Apple devices) → save as **`cover.png`** in post bundle (lossless source)
-4. Hugo auto-converts to WebP/JPEG at build time — no manual conversion needed
-5. Add `cover_image: "cover.png"` + `cover_image_alt: "..."` to frontmatter
-6. Run `bin/hugo-build` to verify og:image renders
-
 ### Image Resolution Standards
-- **Source**: **PNG at 2400×1260 (2x)** — lossless master, always keep this
-- **Hugo converts to**: **JPG at q90** for all outputs (og:image, thumbnails)
-- **OG Meta Tags**: Auto-resized to 1200×630 JPG (from 2x PNG source = crisp)
-- **Blog Index Thumbnail**: Auto-resized to 180×180 JPG
-- **Never use JPEG as source** — always PNG for quality retention
+| Output | Size | Format |
+|--------|------|--------|
+| Source | 2400×1260 (2x) | PNG (lossless) |
+| og:image | 1200×630 (1x) | JPG q90 (Hugo auto) |
+| Thumbnail | 180×180 | JPG q90 (Hugo auto crop) |
 
-### Quick Checklist for New Posts
-- [ ] `cover.png` exists in `content/blog/post-slug/` (2400×1260, 2x)
-- [ ] `cover_image: "cover.png"` in frontmatter
+### Quick Checklist
+- [ ] `cover.png` exists in `content/blog/post-slug/` (2400×1260)
+- [ ] `metatags.image: cover.png` in frontmatter
+- [ ] `cover_image: cover.png` in frontmatter
 - [ ] `cover_image_alt: "..."` in frontmatter
+- [ ] Headline positioned within crop zone (y=540..720, x=1110..1290)
+- [ ] Brand/pill outside crop zone
 - [ ] `bin/hugo-build` passes
-- [ ] Blog index shows thumbnail (180×180)
-- [ ] og:image meta tag present (1200×630, crisp from 2x source)
+- [ ] og:image renders at 1200×630
+- [ ] Blog index shows thumbnail (180×180) with full headline visible

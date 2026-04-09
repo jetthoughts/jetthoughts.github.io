@@ -17,22 +17,20 @@
     }
 
     html, body {
-      width: 1200px;
-      height: 630px;
+      width: 2400px;
+      height: 1260px;
       overflow: hidden;
     }
 
     body {
-      /* JetVelocity Obsidian Engine — simplified, premium */
       background:
-        radial-gradient(ellipse 900px 500px at 72% 50%, rgba(204, 52, 45, 0.12) 0%, transparent 65%),
-        radial-gradient(ellipse 700px 400px at 28% 55%, rgba(168, 85, 247, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 1600px 900px at 75% 45%, rgba(204, 52, 45, 0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 1200px 700px at 25% 60%, rgba(168, 85, 247, 0.08) 0%, transparent 60%),
         linear-gradient(145deg, #0d1016 0%, #141820 40%, #0f1218 100%);
       position: relative;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    /* Ultra-subtle grid — only visible on close inspection */
     body::after {
       content: '';
       position: absolute;
@@ -40,33 +38,33 @@
       background-image:
         linear-gradient(rgba(223, 226, 235, 0.012) 1px, transparent 1px),
         linear-gradient(90deg, rgba(223, 226, 235, 0.012) 1px, transparent 1px);
-      background-size: 48px 48px;
+      background-size: 80px 80px;
       pointer-events: none;
     }
 
-    /* Brand — small, top-left, lives outside center-crop zone */
+    /* Brand — top-left, outside thumbnail crop zone (y<540) */
     .brand {
       position: absolute;
-      top: 48px;
-      left: 80px;
+      top: 100px;
+      left: 160px;
       font-family: 'Inter', sans-serif;
-      font-size: 15px;
+      font-size: 24px;
       font-weight: 600;
-      color: rgba(223, 226, 235, 0.45);
+      color: rgba(223, 226, 235, 0.40);
       letter-spacing: 0.16em;
       text-transform: uppercase;
       z-index: 2;
     }
 
-    /* Topic pill — top-right for asymmetry balance with brand */
+    /* Topic pill — top-right, outside thumbnail crop zone */
     .topic-pill {
       position: absolute;
-      top: 48px;
-      right: 80px;
+      top: 100px;
+      right: 160px;
       display: inline-block;
-      padding: 8px 18px;
+      padding: 12px 28px;
       font-family: 'Inter', sans-serif;
-      font-size: 13px;
+      font-size: 20px;
       font-weight: 600;
       color: #ffb4ab;
       background: rgba(204, 52, 45, 0.12);
@@ -77,20 +75,23 @@
       z-index: 2;
     }
 
-    /* Headline — centered, compact.
-       The 180×180 center-crop zone is x=510..690, y=225..405.
-       This headline fits entirely within that zone so the thumbnail
-       captures the full text without any clipping. */
+    /* Headline — positioned so BOTH lines fit in the 180×180 center crop.
+       The 2400×1260 source is cropped to 180×180 from center (x=1110..1290, y=540..720).
+       With font-size: 80px and line-height: 1.10, two lines = 176px tall.
+       Placed at top: 540px so:
+         Line 1 "Active Job":    y = 540..620  (fully in crop: 540..720) ✓
+         Line 2 "Continuations": y = 620..700  (fully in crop: 540..720) ✓
+       Width 800px, centered at x=800..1600 — the center x=1200 is well within crop x=1110..1290. */
     .headline {
       position: absolute;
-      top: 180px;
+      top: 540px;
       left: 50%;
       transform: translateX(-50%);
-      width: 560px;
+      width: 800px;
       font-family: 'Space Grotesk', 'Inter', sans-serif;
-      font-size: 68px;
+      font-size: 80px;
       font-weight: 800;
-      line-height: 1.05;
+      line-height: 1.10;
       letter-spacing: -0.025em;
       text-align: center;
       color: #dfe2eb;
@@ -104,28 +105,26 @@
       background-clip: text;
     }
 
-    /* Thin editorial rule — centered, below headline.
-       Also within the center-crop zone. */
+    /* Thin rule — below the crop zone, visible on full cover only */
     .rule {
       position: absolute;
-      top: 420px;
+      top: 760px;
       left: 50%;
       transform: translateX(-50%);
-      width: 56px;
+      width: 64px;
       height: 2px;
       background: linear-gradient(90deg, #cc342d, #a855f7);
       z-index: 2;
     }
 
-    /* Subtitle — below the crop zone, visible only on full cover.
-       Gives context: what this post actually solves. */
+    /* Subtitle — below the crop zone, gives context on full cover */
     .subtitle {
       position: absolute;
-      top: 460px;
+      top: 800px;
       left: 50%;
       transform: translateX(-50%);
       font-family: 'Inter', sans-serif;
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 500;
       color: rgba(223, 226, 235, 0.35);
       letter-spacing: 0.01em;
