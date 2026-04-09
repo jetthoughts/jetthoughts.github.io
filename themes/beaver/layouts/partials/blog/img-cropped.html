@@ -16,13 +16,11 @@
 {{- end -}}
 
 {{ if $image }}
-{{ $cropped := $image.Fill (printf "%dx%d Center" $.width $.height) }}
-{{ $jpg := $cropped.Resize (printf "%dx%d jpg q90" $.width $.height) }}
+{{/* Resize — scales to 180px wide, keeps aspect ratio.
+    The 2400×1260 cover becomes 180×95, no cropping, full design visible. */}}
+{{ $resized := $image.Resize (printf "%dx jpg q90" $.width) }}
 
-<picture>
-  <source srcset='{{ $jpg.RelPermalink }}' type="image/jpeg" width="{{ $.width }}" height="{{ $.height }}">
-  <img alt='{{ $page.Title }}' src="{{ $jpg.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
-</picture>
+<img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
 
 {{ else }}
 <img src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" alt="Placeholder Image">

@@ -28,12 +28,8 @@
 
 ## Layout Rules (MANDATORY for ALL covers)
 
-### 1. Thumbnail Crop Safety (CRITICAL)
-The blog index uses a 180×180 center-crop from the 2400×1260 source:
-- **Crop zone**: x=1110..1290, y=540..720 (180×180 from center)
-- **Headline MUST fit entirely in crop zone**: Place headline at `top: 540px`, centered, max 2 lines at 80px font (176px tall = fits in 180px crop height)
-- **Brand/pill MUST be outside crop zone**: `top < 540px` or `top > 720px`
-- **Subtitle MUST be outside crop zone**: `top > 720px`
+### 1. No Thumbnail Cropping
+The blog index uses `Resize "180x jpg q90"` — the full cover image is visible at 180px wide (95px tall for 2400×1260 source). No cropping, no text clipping. Design the full cover as a complete composition.
 
 ### 2. Asymmetric Layout
 - Brand: top-left, `top: 100px, left: 160px`
@@ -72,13 +68,10 @@ A 1200×630 technical blog cover for 'JetThoughts' about [TOPIC].
 - NEUTRAL: #dfe2eb for text (NEVER #FFFFFF)
 
 **LAYOUT:**
-- Headline: centered, 2 lines max, positioned at top center
+- Headline: large, bold, positioned to dominate the canvas
 - Thin gradient rule below headline
 - Subtitle below rule: "[One-line description]"
 - [Optional visual metaphor on right side]
-
-**THUMBNAIL CROP SAFETY (CRITICAL):**
-The 180×180 center-crop captures only the center 180×180px. Headline MUST be fully within this zone. Brand and pill MUST be outside this zone.
 
 Mood: [3 descriptive words: minimalist, technical, premium].
 ```
@@ -123,8 +116,7 @@ content/blog/post-slug/
 - [ ] `metatags.image: cover.png` in frontmatter
 - [ ] `cover_image: cover.png` in frontmatter
 - [ ] `cover_image_alt: "..."` in frontmatter
-- [ ] Headline positioned within crop zone (y=540..720, x=1110..1290)
-- [ ] Brand/pill outside crop zone
+- [ ] Full cover design visible — no text near edges that could be clipped
 - [ ] `bin/hugo-build` passes
 - [ ] og:image renders at 1200×630
-- [ ] Blog index shows thumbnail (180×180) with full headline visible
+- [ ] Blog index shows full cover thumbnail (180×95, no cropping)
