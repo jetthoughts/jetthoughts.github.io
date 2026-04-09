@@ -14,18 +14,19 @@
 **🌐 Global Standards**: `/knowledge/KNOWLEDGE_INDEX.md` - 99+ company-wide standards (SUPREME AUTHORITY)
 
 ### 🔍 Research Protocol (MANDATORY SEQUENCE)
-```bash
+
+```
 # Step 1: Global standards FIRST (inherited by jt_site)
-claude-context search "[topic]" --path "/knowledge/"
+Search the codebase at "/knowledge/" for: "[topic]"
 
 # Step 2: jt_site adaptations SECOND
-claude-context search "[topic]" --path "/projects/jt_site/docs/"
+Search the codebase at "/projects/jt_site/docs/" for: "[topic]"
 
 # Step 3: Framework validation
-context7 resolve-library-id "[framework]" && context7 get-library-docs "[id]"
+Get library docs for "[framework]" — topic: "[feature]"
 
 # Step 4: Package analysis
-mcp__package-search__package_search_hybrid --registry_name "[registry]" --package_name "[package]"
+Search npm packages for: "[package]" on registry "[registry]"
 ```
 
 ### 📑 Key Reference Paths
@@ -579,6 +580,109 @@ forbidden_everything_else:
   - "ALL custom bash functions"                    # ❌ Use claude-flow coordination
   - "ALL modification commands (rm, mv, cp)"       # ❌ Use claude-flow file tools
 ```
+
+---
+
+## 🌐 CHROME DEVTOOLS RENDERING VALIDATION
+
+**Purpose**: Use Chrome DevTools Protocol (CDP) to validate that pages render correctly — not just visually, but structurally and performance-wise.
+
+### When to Apply Chrome DevTools Validation
+
+Chrome DevTools validation is **MANDATORY** after:
+- ANY HTML/template changes (layout, structure, content)
+- ANY CSS changes (styling, responsiveness)
+- ANY JavaScript changes (interactivity, dynamic content)
+- ANY Hugo build output changes
+- New blog post publishing (verify rendering)
+
+### Chrome DevTools Validation Protocol
+
+```yaml
+chrome_devtools_validation:
+  # Step 1: Start Hugo dev server
+  preconditions:
+    - "Start Hugo dev server (run: bin/hugo server -D)"
+
+  # Step 2: Navigate and validate
+  validation_steps:
+    page_load:
+      - "Navigate to target page URL"
+      - "Wait for network idle (no pending requests)"
+      - "Verify HTTP 200 status"
+
+    rendering:
+      - "Capture full-page screenshot"
+      - "Compare with baseline (pixel diff if refactoring)"
+      - "Verify no layout shift (CLS < 0.1)"
+
+    console_errors:
+      - "Check DevTools Console"
+      - "Check for JavaScript errors (ZERO tolerance)"
+      - "Check for 404 network requests (broken assets)"
+      - "Check for CORS errors"
+
+    performance:
+      - "Record performance metrics"
+      - "LCP (Largest Contentful Paint): < 2.5s"
+      - "FID (First Input Delay): < 100ms"
+      - "CLS (Cumulative Layout Shift): < 0.1"
+
+    accessibility:
+      - "Run Lighthouse accessibility audit"
+      - "Score ≥ 90 required"
+      - "Check ARIA attributes, contrast, focus order"
+
+    mobile_responsive:
+      - "Switch to mobile viewport (375x812)"
+      - "Capture mobile screenshot"
+      - "Verify no horizontal scroll"
+      - "Verify touch targets ≥ 44x44px"
+
+  # Step 3: Validation gates
+  quality_gates:
+    zero_js_errors: "Console must show zero errors"
+    zero_broken_assets: "No 404s for CSS/JS/images"
+    visual_stability: "Screenshot diff ≤ 0% for refactoring, ≤3% for new features"
+    performance_pass: "Core Web Vitals all in 'good' range"
+    accessibility_pass: "Lighthouse a11y score ≥ 90"
+```
+
+### Chrome DevTools Workflow Integration
+
+```
+┌─────────────────────────────────────────────┐
+│ After ANY code change                       │
+├─────────────────────────────────────────────┤
+│ 1. Run: bin/hugo-build (structural check)   │
+│ 2. Run: bin/rake test:critical (tests)      │
+│ 3. Start Hugo dev server, open page in DevTools │
+│ 4. Check DevTools Console (zero errors)     │
+│ 5. Check Network tab (zero 404s)            │
+│ 6. Capture desktop + mobile screenshots     │
+│ 7. Verify Core Web Vitals in "good" range   │
+│ 8. All gates pass → commit                  │
+│    Any gate fails → investigate, fix, repeat│
+└─────────────────────────────────────────────┘
+```
+
+### Chrome DevTools for Blog Posts
+
+After publishing a new blog post:
+1. Start Hugo dev server, open the post URL in Chrome DevTools
+2. Verify markdown renders correctly (headings, code blocks, lists)
+3. Check code block syntax highlighting renders properly
+4. Verify images load (no broken image icons)
+5. Check table rendering (if present)
+6. Verify external links render as clickable
+7. Switch to mobile viewport — verify readability on small screens
+
+### Integration with Existing Visual Tests
+
+Chrome DevTools **complements** existing Minitest/Capybara screenshot tests:
+- **Minitest**: Behavioral validation, page structure
+- **Chrome DevTools**: Rendering quality, performance metrics, console errors
+- **Both required**: Neither alone is sufficient for full validation
 
 **Agent Hook Compliance** (MANDATORY):
 ```yaml
@@ -1477,14 +1581,28 @@ expert_consultation_required:
 ```yaml
 # Startup sequence for all agents (MANDATORY)
 agent_startup_protocol:
-  step_1_global_standards:    "claude-context search '[task]' --path '/knowledge/'"
-  step_2_project_adaptations: "claude-context search '[task]' --path '/projects/jt_site/docs/'"
+  step_1_global_standards:    "Search the codebase at '/knowledge/' for: '[task]'"
+  step_2_project_adaptations: "Search the codebase at '/projects/jt_site/docs/' for: '[task]'"
   step_3_complexity_check:    "Determine: Team structures, agent roles, implementation strategies"
   step_4_tdd_phase_check:     "Determine TDD phase (RED/GREEN/REFACTOR) if applicable"
   step_5_test_smell_check:    "Validate behavioral focus, reject implementation tests"
   step_6_swarm_coordination:  "Spawn XP team ONLY for complex >3 component changes"
   step_7_reflection_readiness: "HALT and REFLECT ONLY for actual violations (not user frustration)"
   step_8_visual_validation:   "FOR REFACTORING: Capture baseline screenshots, validate tolerance: 0.0"
+  step_9_chrome_devtools:     "For HTML/CSS/JS changes: validate rendering via Chrome DevTools"
+  step_10_local_patterns:     "Search the codebase at '/Users/pftg/dev/jetthoughts.github.io' for: '[pattern I need]'"
+
+# Chrome DevTools validation (MANDATORY for rendering)
+chrome_devtools_validation:
+  trigger: "ANY HTML/CSS/JS change or new blog post"
+  steps:
+    - "Start Hugo dev server"
+    - "Open page URL in Chrome DevTools"
+    - "Check DevTools Console — zero errors (ZERO tolerance)"
+    - "Check Network tab — zero 404s (ZERO tolerance)"
+    - "Capture desktop + mobile screenshots"
+    - "Verify Core Web Vitals in 'good' range"
+  blocking: "ANY console error, ANY broken asset → STOP, fix"
 
 # Autonomous execution mode (for repetitive goals)
 autonomous_mode:
