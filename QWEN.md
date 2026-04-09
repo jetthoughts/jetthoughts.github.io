@@ -132,3 +132,20 @@ Phase 9: Continuous Improve → Lessons stored, configs updated
 - Multi-file changes: include `incremental-implementation`
 - Docs affected: include `docs:update-docs`
 - Autonomous pipeline: runs end-to-end with quality gates at each phase
+
+## 🔍 Research Protocol (MANDATORY)
+
+Always use claude-context MCP search **before** making changes:
+
+**Step 1 — Search existing patterns:**
+> Search the codebase at `/Users/pftg/dev/jetthoughts.github.io` for: "[pattern]"
+
+**Step 2 — Check knowledge standards:**
+> Search the codebase at `/Users/pftg/dev/jetthoughts.github.io/knowledge` for: "[topic]"
+
+**Step 3 — Framework docs (when needed):**
+> Get library docs for "[framework]"
+
+**Never** grep/find/grep_search for existing code patterns — use claude-context MCP search as the primary research tool. It understands semantic relationships, is 100x faster, and returns relevant context chunks.
+
+**Coverage**: Full codebase indexed (830+ files, 4,184+ semantic chunks)
