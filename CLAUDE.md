@@ -26,6 +26,10 @@ Always read these files before making changes. They define the project's archite
 
 ## 🔍 Research Protocol (MANDATORY)
 
+**Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.
+
+Prefer **skills** over agents. Use agents only when a task explicitly requires them.
+
 Always use claude-context MCP search **before** making changes:
 
 1. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "[pattern]"`

@@ -19,6 +19,19 @@ Use this as the shared boilerplate for agents and skills. Keep agent/skill files
 
 Never grep/find for code patterns; use claude-context MCP semantic search.
 
+## Flow Router (Mandatory)
+Always follow `@docs/workflows/flow-router.md` to route tasks to the correct workflow.
+
+## Content Work (Mandatory)
+If the task involves creating or editing content, always read `@docs/workflows/blog-pipeline.md`.
+If a cover image is required, also read `@docs/workflows/cover-images.md` and `@.stitch/design.md`.
+
+## Code Support (Mandatory)
+For code changes, follow the router and relevant flow:
+- `@docs/workflows/flow-router.md`
+- `@docs/workflows/css-consolidation.md` for HTML/CSS
+- `@docs/workflows/ruby.md` for Ruby/Rails
+
 ## Testing
 - TDD: RED → GREEN → REFACTOR (see `/knowledge/20.01-*`, `/knowledge/20.11-*`)
 - Test quality: behavior-focused only (see `/knowledge/25.04-*`)

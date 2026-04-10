@@ -11,3 +11,4 @@ Use skills (minimal subset):
 Rules:
 - Follow `docs/workflows/BASE_HANDBOOK.md`
 - For full blog workflow, see `docs/workflows/blog-pipeline.md`
+- For cover images, follow `docs/workflows/cover-images.md` and `.stitch/design.md`

@@ -2,6 +2,9 @@
 
 Canonical instructions live in `CLAUDE.md`. Read that first.
 
+Session start: always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.
+Prefer **skills** over agents. Use agents only when a task explicitly requires them.
+
 Workflow references:
 - `docs/workflows/css-consolidation.md`
 - `docs/workflows/blog-pipeline.md`

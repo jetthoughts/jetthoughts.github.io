@@ -1,6 +1,7 @@
 # AGENTS.md — JetThoughts Blog (Junie)
 
 Canonical instructions live in `CLAUDE.md`. Read that first.
+Session start: always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.
 
 Workflow references:
 - `docs/workflows/css-consolidation.md`
