@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-I know how this feels. You hired a team, wrote them a check, waited three months — and now the demo sort of works, the backend is a mystery, and you're afraid to ask how much the next milestone will cost. You're not crazy. One in four outsourced projects [fails or significantly underperforms](https://www.deloitte.com/global/en/services/consulting/research/global-outsourcing-survey.html). That number is probably low.
+I know how this feels. You hired a team, wrote them a check, waited three months — and now the demo sort of works, the backend is a mystery, and you're afraid to ask how much the next milestone will cost. You're not crazy. According to [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html), 70% of executives have pulled work back from outsourcing partners in the last five years. Seven out of ten. That's not a few bad apples — it's systemic.
 
 If you need to fire your development agency, this is the guide. Not theory — the actual steps, including the ones nobody tells you about (like what to do tonight, before they know you're leaving).
 
@@ -169,7 +169,7 @@ We've been writing about the practices that prevent these disasters for years. H
 
 ## Further Reading
 
-- [Deloitte: Global Outsourcing Survey](https://www.deloitte.com/global/en/services/consulting/research/global-outsourcing-survey.html) — 25% project failure rate, provider management challenges
+- [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) — 70% of executives insourced previously outsourced work; 70% report vendor management not fully mature
 - [CISQ: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) — $2.41 trillion annual cost in the US
 - [Qodo: State of AI Code Quality in 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI code produces 1.7x more issues than human code
 - [Stripe: Developer Coefficient Report](https://litslink.com/blog/cost-of-outsourcing-software-development) — 42% of dev time spent on technical debt
