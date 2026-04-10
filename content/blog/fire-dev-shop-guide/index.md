@@ -23,24 +23,33 @@ If you need to fire your development agency, this guide walks you through every 
 
 Deadlines keep slipping. The demo looks fine but nothing works behind the scenes. You ask for a timeline and get vague answers. You're not crazy — one in four outsourced projects [fails or limps along underperforming](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/). If you're reading this, you're probably in that group.
 
-## 5 Signs It's Time to End the Relationship
+## The Signs — How Many Do You Recognize?
 
-Not every problem means you should fire your agency. But if you recognize three or more of these signs, it's time to act.
+Not every problem means you should fire your agency. But if three or more of these hit close to home, it's time.
 
-**1. They've missed 3+ deadlines without a credible explanation.**
-One missed deadline is a yellow flag. Three is a pattern. If they blame "unexpected complexity" every time but never flagged it early, they're not managing the project — they're reacting to it.
+**1. They've missed 3+ deadlines, and the excuse is always "complexity."**
+One missed deadline — fine, things happen. Three? That's not bad luck. That's no process. If they never flagged the risk early, they're not managing the project. They're watching it happen.
 
 **2. You don't have access to the code repository.**
-If you can't log into GitHub (or GitLab, or wherever the code lives) and see work happening, you don't actually own your product. You own a promise.
+If you can't log into GitHub and see commits happening, you don't own your product. You own a promise. We've taken over projects where the founder didn't even know what Git was — and that's okay. But your code should live in a place you control, not behind a login only the agency has.
 
-**3. They can't explain the architecture in plain English.**
-Ask your lead developer: "If you left tomorrow, could another team pick this up in a week?" If the answer involves hedging, one person holds all the knowledge — and that's a business risk, not just a technical one.
+**3. Every deploy breaks something.**
+This one's subtle. You ask for a small change — a button color, a text fix. It ships, and something else breaks. That's the sound of code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is afraid to touch anything because they don't know what will break. A healthy codebase has 70%+ test coverage. If they say "we test manually," what they mean is "every change is a prayer."
 
-**4. Test coverage is zero or near-zero.**
-This is the fastest way to spot rot if you can't read code. Ask: "What percentage of our code is covered by automated tests?" A healthy codebase sits above 70%. If they say "we test manually," what they mean is "every change we make is a prayer." Qodo's 2025 report found AI-generated code produces [1.7x more issues](https://www.qodo.ai/reports/state-of-ai-code-quality/) than human-written code — and shops that lean on AI generation often skip tests entirely.
+**4. They won't refactor. Ever.**
+Good teams clean up as they go. Bad teams pile features on top of messy code because refactoring is "too risky" — code without tests can't be safely changed, so [technical debt compounds](/blog/fixing-slow-engineering-teams-an-extended/). If your team treats the codebase like a house of cards, it is one.
 
-**5. Budget keeps growing with no clear explanation.**
-Nearly half of every developer's paycheck goes to mopping up the mess the last team left — [42% of dev time](https://litslink.com/blog/cost-of-outsourcing-software-development) is spent on technical debt and bad code, according to Stripe. If your invoices keep climbing but features aren't shipping, you're paying for rework.
+**5. No transparency. You have no idea what's happening.**
+You ask for a status update and get "it's going well" or "we're almost done." No weekly report. No demo of what shipped. No explanation of what's blocked. A good team sends you a [plain-English standup](/blog/how-make-small-valuable-async-standups-productivity-development/) every day and a summary every Friday. If you're guessing whether progress is real, it probably isn't.
+
+**6. Budget keeps growing. Nobody explains why.**
+Nearly half of every developer's paycheck goes to mopping up the mess the last team left — [42% of dev time](https://litslink.com/blog/cost-of-outsourcing-software-development) goes to technical debt. If invoices keep climbing but features aren't shipping, you're paying for rework on code that was written poorly the first time.
+
+**7. They can't explain anything in plain English.**
+Ask: "If you left tomorrow, could another team pick this up in a week?" If the answer involves hedging, one person holds all the knowledge. That's not a team — that's a hostage situation. A [structured onboarding process](/blog/effective-project-onboarding-checklist-management-productivity/) means any new developer can get productive in days, not months.
+
+**8. You feel afraid to ask questions.**
+This one doesn't show up on any checklist, but it matters. If you've stopped asking for updates because the answers make you feel stupid — or because you're afraid of what you'll hear — the relationship is broken. You're paying them. [You have every right to know what's happening](/blog/how-know-what-your-team-doing-remote-startup/).
 
 ---
 
@@ -90,11 +99,9 @@ You can't read code. But you can read these signals.
 
 Hire a senior dev — a freelancer, fractional CTO, or your replacement agency — to audit the code for four hours. Here's what to ask them:
 
-First, test coverage. Below 20% and the code can't be safely changed. Below 5% and it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) — AI-generated with no human review. Second, security vulnerabilities — a basic scan takes 30 minutes and will tell you if your users' data is exposed. The [cost of poor software quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) in the US runs $2.41 trillion annually, and your app doesn't need to contribute to that number.
+First, test coverage — below 20% means the code can't be safely changed; below 5% means it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/). Second, security vulnerabilities — a basic scan takes 30 minutes. Third, deployment — can they ship a change in under 10 minutes, or is it a multi-hour manual process? Finally, code structure — organized into clear pieces, or one massive file doing everything?
 
-Then ask about the deployment process. Can they ship a change in under 10 minutes? If deployment is a manual, multi-hour process, every future update is risky and expensive. Finally, look at code structure. Is it organized, or is it a single massive file that does everything?
-
-This audit costs $500-$2,000 and saves you from inheriting a codebase that costs $50,000 to rebuild.
+This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild.
 
 ## Why This Is Worse in 2026
 
@@ -106,17 +113,19 @@ A team that survives writes [tests before code](/blog/test-driven-development-td
 
 ## Finding the Next Partner
 
-When you're vetting the next shop, these questions will save you months of pain:
+Here's what to actually look for. Not "do they have a nice website." That's irrelevant.
 
-**"Can I see a sample weekly report?"** A partner worth keeping sends you a one-page email every Friday: what shipped, what hit a wall, what's next. No buzzwords.
+**Ask to see a real weekly report.** Not a template — an actual report from a real project (anonymized). A partner worth keeping sends a one-page summary every Friday: what shipped, what hit a wall, what's next. No buzzwords. We wrote about [what good async standups look like](/blog/how-make-small-valuable-async-standups-productivity-development/) — that's the level of visibility you should expect.
 
-**"Who owns the code after each milestone?"** The answer should be "you do" — with a specific contract clause, not a verbal promise.
+**Ask who owns the code after each milestone.** "You do" is the only right answer — backed by a contract clause, not a handshake.
 
-If they can't tell you their test coverage policy by name, they don't have one. Ask for a number (above 70%) and a process. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) is the gold standard.
+**Ask about their test coverage policy.** If they can't name a number and a process, they don't have one. [TDD — writing tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) — is what separates shops that ship safely from shops that ship and pray. This is especially important now that so many teams use AI to generate code. Without tests, nobody knows if the AI output actually works.
 
-**"What happens if you miss a deadline?"** Look for accountability, not excuses. A good answer: "We flag it two days early and offer options." A bad answer: "That rarely happens."
+**Ask how they handle deploys.** A good team [deploys daily with CI/CD](/blog/async-remote-xp-practices/) and nothing breaks. A bad team deploys monthly and everyone holds their breath. If deploys are scary, the codebase is fragile.
 
-**"Can I talk to a founder you've rescued?"** Not just a happy client — one who came from a bad situation like yours.
+**Ask to talk to a founder they've rescued.** Not just a happy client — one who came from a situation like yours. If they can't produce one, they haven't done this before.
+
+**Watch how they communicate in the first week.** Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Did they set up a shared project board? Did they explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)? The first week tells you everything about the next six months.
 
 ## The Real Win
 
@@ -124,7 +133,7 @@ Firing a dev shop is not a failure. Staying with a bad one is.
 
 You're about to pay twice for the same product — once for the bad code, once to rebuild it. That's the reality. The question is how much the second round costs, and that depends entirely on who you hire next.
 
-The pattern that works: exit cleanly, audit what you have, find a partner who [writes tests first](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [explains everything in plain English](/blog/how-make-small-valuable-async-standups-productivity-development/). You've already learned what "bad" looks like. Now you know what to look for.
+The pattern that works: exit cleanly, audit what you have, find a partner who writes tests before code and explains everything in language you understand. You already know what "bad" looks like. Trust that instinct.
 
 ---
 
@@ -132,7 +141,15 @@ The pattern that works: exit cleanly, audit what you have, find a partner who [w
 
 ---
 
-We've written about the practices that prevent these disasters: how [XP practices like pair programming and CI/CD](/blog/async-remote-xp-practices/) catch problems before they ship, and how [structured delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) keeps remote teams aligned without micromanagement.
+We've been writing about the practices that prevent these disasters for years. Here are the ones that matter most for founders evaluating a new partner:
+
+- [Async-first XP practices](/blog/async-remote-xp-practices/) — how we run pair programming and CI/CD across timezones with zero regressions
+- [Delivery flow for remote teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) — structured Kanban that keeps everyone aligned without micromanagement
+- [Shape Up for founders](/blog/shape-up-founders-guide-not-wasting-your-runway-startup-tutorial/) — 6-week cycles that protect your runway
+- [Fixing slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) — from monthly releases to daily deploys in 60 days
+- [How we evaluate code quality](/blog/code-quality-evaluation-non-technical-founders/) — the 5 signals non-technical founders can actually read
+- [What our onboarding looks like](/blog/effective-project-onboarding-checklist-management-productivity/) — day-one checklist, no chaotic handoffs
+- [Red flags in big PRs](/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/) — why we split anything over 500 lines
 
 ## Further Reading
 
