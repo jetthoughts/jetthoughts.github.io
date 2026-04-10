@@ -19,159 +19,163 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-I know how this feels. You hired a team, wrote them a check, waited three months — and now the demo sort of works, the backend is a mystery, and you're afraid to ask how much the next milestone will cost. You're not crazy. According to [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html), 70% of executives have pulled work back from outsourcing partners in the last five years. Seven out of ten. That's not a few bad apples — it's systemic.
+I've watched this play out maybe forty times. You hired a team. Wrote them a check — $30K, $60K, sometimes more. Waited three months. The demo loads. The login screen looks fine. But behind it? Nobody knows. Including them, sometimes. And now you're sitting there at 11pm wondering if you should fire your development agency or give them one more sprint.
 
-If you need to fire your development agency, this is the guide. Not theory — the actual steps, including the ones nobody tells you about (like what to do tonight, before they know you're leaving).
+Here's what I've learned: by the time you're Googling this, you already know the answer.
 
-## The Signs — How Many Do You Recognize?
+[Deloitte surveyed 500+ executives](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) about their outsourcing relationships in 2024. Seventy percent had pulled work back in-house over the last five years. Seven out of ten. That's not a few unlucky founders — that's the industry.
 
-Not every problem means you should fire your agency. But if three or more of these hit close to home, it's time.
+This guide covers the exit. The practical stuff nobody talks about. What to secure tonight, what your contract probably doesn't protect, and how to not make the same mistake twice.
 
-**1. They've missed 3+ deadlines, and the excuse is always "complexity."**
-One missed deadline — fine, things happen. Three? That's not bad luck. That's no process. If they never flagged the risk early, they're not managing the project. They're watching it happen.
+## How Many of These Sound Familiar?
 
-**2. You don't have access to the code repository.**
-If you can't log into GitHub and see commits happening, you don't own your product. You own a promise. We've taken over projects where the founder didn't even know what Git was — and that's okay. But your code should live in a place you control, not behind a login only the agency has.
+I'm not going to tell you "if you see one red flag, that's normal." You know what normal friction looks like. This is about the pattern — three or more of these means you're past friction.
 
-**3. Every deploy breaks something.**
-This one's subtle. You ask for a small change — a button color, a text fix. It ships, and something else breaks. That's the sound of code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is afraid to touch anything because they don't know what will break. A healthy codebase has 70%+ test coverage. If they say "we test manually," what they mean is "every change is a prayer."
+**They've missed three deadlines.** And every time it's "unexpected complexity." Fine — complexity happens. But if they never flagged the risk before the deadline? They're not managing. They're watching. There's a difference.
 
-**4. They won't refactor. Ever.**
-Good teams clean up as they go. Bad teams pile features on top of messy code because refactoring is "too risky" — code without tests can't be safely changed, so [technical debt compounds](/blog/fixing-slow-engineering-teams-an-extended/). If your team treats the codebase like a house of cards, it is one.
+**You can't see the code.** I don't mean you can't read it. I mean you literally don't have a login to wherever it lives. No GitHub access. No way to see if anyone's actually working. We've taken over projects where the founder didn't know what Git was — totally fine. But your code should live in an account you own. If it doesn't, you don't own a product. You own a promise.
 
-**5. No transparency. You have no idea what's happening.**
-You ask for a status update and get "it's going well" or "we're almost done." No weekly report. No demo of what shipped. No explanation of what's blocked. A good team sends you a [plain-English standup](/blog/how-make-small-valuable-async-standups-productivity-development/) every day and a summary every Friday. If you're guessing whether progress is real, it probably isn't.
+**Every small change breaks something else.** You ask them to change a button color. Next day, the checkout page is down. That's the sound of code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is scared to touch anything because they genuinely don't know what will break. Healthy codebases have 70%+ test coverage. If yours has 5%? Every deploy is a coin flip.
 
-**6. Budget keeps growing. Nobody explains why.**
-Nearly half of every developer's paycheck goes to mopping up the mess the last team left — [42% of dev time](https://litslink.com/blog/cost-of-outsourcing-software-development) goes to technical debt. If invoices keep climbing but features aren't shipping, you're paying for rework on code that was written poorly the first time.
+**They refuse to clean up old code.** "We can't refactor that — it's too risky." Translation: the code has no tests, so changing anything might break everything. [Technical debt compounds](/blog/fixing-slow-engineering-teams-an-extended/) like interest on a credit card. Eventually you're paying the whole invoice just to service the debt. No features. Just maintenance.
 
-**7. They can't explain anything in plain English.**
-Ask: "If you left tomorrow, could another team pick this up in a week?" If the answer involves hedging, one person holds all the knowledge. That's not a team — that's a hostage situation. A [structured onboarding process](/blog/effective-project-onboarding-checklist-management-productivity/) means any new developer can get productive in days, not months.
+**You have no idea what's actually happening.** You ask for a status update. "It's going well." Going well how? What shipped this week? What's blocked? What's the plan for next week? A team that cares sends you a [plain-English standup](/blog/how-make-small-valuable-async-standups-productivity-development/) every day and a one-page summary every Friday. If you're guessing whether progress is real — it isn't.
 
-**8. You feel afraid to ask questions.**
-This one doesn't show up on any checklist, but it matters. If you've stopped asking for updates because the answers make you feel stupid — or because you're afraid of what you'll hear — the relationship is broken. You're paying them. [You have every right to know what's happening](/blog/how-know-what-your-team-doing-remote-startup/).
+**The invoices keep growing and nobody explains why.** Here's a number that'll make you sick: [42% of developer time](https://litslink.com/blog/cost-of-outsourcing-software-development) goes to dealing with technical debt and bad code. Nearly half. If your bills are climbing but nothing's launching, you're paying for rework on code that was poorly written the first time.
+
+**They can't explain things without jargon.** Ask: "If your lead developer quit tomorrow, could a new team pick this up in a week?" Watch the face. If the answer involves hedging, one person holds all the knowledge. That's not a team. [That's a hostage situation](/blog/effective-project-onboarding-checklist-management-productivity/).
+
+**You've stopped asking questions.** This is the one nobody talks about. If you've gone quiet because the updates make you feel stupid — or because you're afraid of what you'll hear — the relationship is already dead. You're paying them. [You have the right to know](/blog/how-know-what-your-team-doing-remote-startup/).
 
 ---
 
-**Need immediate clarity on what you're inheriting?** We do a free 45-minute code audit: one senior developer reviews your codebase, runs security scans, and gives you a written one-page assessment. No contract. No follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
+**Want to know where you actually stand?** We'll do a free 45-minute code audit. One senior developer. Your codebase. A written one-page report: test coverage, security risks, architecture assessment. No contract. No follow-up calls unless you ask for one. [Get an honest audit](https://jetthoughts.com/contact-us/).
 
 ---
 
-## But First: Is This Actually Fixable?
+## Wait — Is This Fixable?
 
-Before you send that email tonight — is this fixable? Honestly, sometimes it is. And firing prematurely costs you another 2-3 months of onboarding someone new.
+Before you fire anyone, be honest. I've seen founders torch a relationship that was actually salvageable because they were angry, not wrong.
 
-**Give them two weeks of structured transparency.** Weekly call, clear agenda: what shipped, what didn't, why. Not "how's it going" — specific deliverables. If they suddenly start communicating when you set expectations, maybe the problem was that nobody set expectations. It happens.
+**Try two weeks of real transparency.** Set up a weekly call with a hard agenda. Not "how's it going?" — specific: what shipped, what didn't, what's blocked. If they suddenly start communicating the moment you set clear expectations, maybe the problem was that nobody set expectations. It happens more than you'd think.
 
-**Be honest with yourself too.** Did you change the requirements three times mid-sprint? Any agency would miss deadlines if the target keeps moving. An honest agency will tell you this. A bad one will nod and miss the date.
+**Check your own behavior.** Did you change the requirements mid-sprint? Three times? Any agency would miss deadlines if the target keeps moving. The good ones push back. The bad ones nod and miss quietly.
 
-**Try 30 days with three concrete numbers.** "80% task completion per sprint. Weekly written reports. Git access within 48 hours." If they can't hit those basics — basics that any [competent distributed team](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) handles by default — you have your answer. And you have it documented for the termination letter.
+**Set three concrete numbers for the next 30 days.** 80% task completion per sprint. Weekly written reports. Repository access within 48 hours. These are basics — any [competent remote team](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) does this on autopilot. If they can't hit those for one month, you have your answer. And you have it in writing for the termination letter.
 
-If none of that moved the needle, keep reading.
+Still here? Alright. Let's talk about the exit.
 
-## The Exit Checklist: What to Secure Before You Leave
+## What to Secure Before You Send the Email
 
-Firing a dev shop is a business operation, not a breakup text.
+This is the part most guides skip. Do this tonight — before they know.
 
-**Code and repositories.** Confirm you have admin access to all repositories. If you don't, request it in writing before giving notice. Get a lawyer to review your termination clause — you need exact timing and format for code handoff specified in writing. Your next developer won't wait three months for a ZIP file.
+**Repository access.** Log into GitHub (or wherever the code lives). Can you see the repositories? Do you have admin rights? If not, request access in writing tomorrow morning — casually, not as an ultimatum. "Hey, for our records, can you add me as an admin on the repos?" Get this before you announce anything.
 
-**Infrastructure credentials.** Make a list: hosting provider (AWS, Heroku, DigitalOcean), domain registrar, DNS settings, SSL certificates, email service, payment processor API keys, analytics accounts. Transfer ownership of every account to an email address you control.
+**Make a list of everything they control.** Hosting (AWS, Heroku, DigitalOcean). Domain registrar. DNS settings. SSL certificates. Email provider. Payment processor API keys. Analytics accounts. For each one: do you have the login? Is it under your email or theirs? Transfer anything under their email to yours. Tonight.
 
-**Data exports.** Export your production database, user data, uploaded files, and any third-party integrations. Don't assume you can "get it later."
+**Export your data.** Production database. User records. Uploaded files. Third-party integrations. Don't assume you can get this later. I've seen agencies go silent after a termination notice. Get it while the relationship is still cordial.
 
-**Documentation.** Request architecture diagrams, API docs, environment setup instructions, and deployment procedures. If none exist — and they probably don't — that tells you everything about the quality of the engagement.
+**Ask for documentation.** Architecture diagrams. API docs. Deployment procedures. Setup instructions. If none exist? That tells you everything you need to know. But ask anyway — it's on the record.
 
-**Legal notice.** Most agency contracts require 15-30 days written notice. Send a formal termination letter referencing the specific contract section. Keep emotion out of it.
+**Send a formal termination letter.** Most contracts require 15-30 days written notice. Reference the specific clause. Keep it factual. No blame, no emotion. "Per Section 12.3 of our agreement dated X, this letter serves as 30-day notice of termination, effective Y."
 
-## What Your Contract Should Have Said
+## "But I Signed a Contract!"
 
-"But I signed a contract!" you say. Yes. And it probably doesn't protect you. Every contract we've seen from a failed engagement is missing the same three things:
+Yeah. And it probably doesn't protect you.
 
-**Code ownership after each milestone.** Your contract probably says you own everything "upon project completion." Sounds fine, right? Except "completion" is whatever the agency says it is. You need ownership after each paid milestone — not at the end. If they've been paid for three months of work, you should own three months of code. Period.
+Every contract we've seen from a failed engagement is missing the same three things. Yours probably is too.
 
-**A termination clause with teeth.** Something like: "If the provider misses two consecutive milestones, the client may terminate with 7 days notice." Without this, firing them turns into a negotiation with someone who has no reason to let you leave cleanly. That's not a partnership. That's a trap.
+**Code ownership after each milestone.** Your contract says you own everything "upon project completion." Sounds reasonable. Except "completion" is whatever they say it is. Maybe it's six months from now. Maybe never. You need ownership after each paid milestone. Three months of payments = three months of code. Period.
 
-**Repository access from day one.** Not "upon request." Not a ZIP file emailed next week. Real-time, read-only access to the code repository. If they push back on this — really ask yourself why. What are they protecting?
+**A termination clause that actually works.** "If the provider misses two consecutive milestones, the client may terminate with 7 days notice." Without something like that, firing them becomes a negotiation with someone who has zero incentive to let you leave. That's not a partnership. That's a trap.
 
-If you need contract templates that actually protect you, [Clerky](https://www.clerky.com) ($819 lifetime) has startup-focused IP assignment and consulting agreements. It's cheaper than one hour of a lawyer's time and covers the basics.
+**Real-time code access from day one.** Not "access upon request." Not a ZIP file next month. Read-only access to the repo, always on. If they push back on this — really sit with that. What are they protecting? And from whom?
 
-## How to Evaluate the Code You're Inheriting
+Need templates? [Clerky](https://www.clerky.com) has startup-focused IP assignment and consulting agreements for $819 lifetime. Cheaper than one hour of a lawyer's time. Won't cover everything, but it covers the basics that most agency contracts miss entirely.
 
-You can't read code. But you can read these signals.
+## Evaluating What They Left Behind
 
-Hire a senior dev — a freelancer, fractional CTO, or your replacement agency — to audit the code for four hours. Here's what to ask them:
+You can't read code. That's fine. Here's what to do.
 
-First, test coverage — below 20% means the code can't be safely changed; below 5% means it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/). Second, security vulnerabilities — a basic scan takes 30 minutes. Third, deployment — can they ship a change in under 10 minutes, or is it a multi-hour manual process? Finally, code structure — organized into clear pieces, or one massive file doing everything?
+Hire a senior dev for four hours. Freelancer, fractional CTO, your next agency — anyone competent. Ask them to check four things:
 
-This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild.
+**Test coverage.** Below 20% and the code can't be safely modified. Below 5% and it was probably [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) — AI-generated with no human review. **Security.** A basic vulnerability scan takes 30 minutes. You need to know if your users' data is exposed. **Deployment.** Can they push a change in under 10 minutes? If it's a multi-hour manual process, every future update is expensive and risky. **Structure.** Is the code organized, or is everything crammed into one giant file?
 
-If you can't find a freelancer fast enough, there are tools that can give you a rough picture tonight:
+This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild from scratch.
 
-- **[The Code Registry](https://thecoderegistry.com/code-auditing/)** — connect your GitHub repo and get an AI-powered security scan, complexity score, and "Cost to Replicate" valuation in under 15 minutes. Built for non-developers.
-- **[Codacy](https://www.codacy.com)** — automated code quality scanning with a free tier. More technical, but the dashboard is readable.
-- **[Codekeeper](https://codekeeper.co)** — source code escrow. If you're worried your agency might lock you out, this service makes daily copies of your repo automatically. From $129/month. Set this up *before* you send the termination email.
+Can't find someone today? Start here:
 
-And if you need a fractional CTO to help you navigate the transition, [Toptal](https://www.toptal.com) can match you within 48 hours, or browse the free directory at [FractionalCTOs.org](https://fractionalctos.org).
+- **[The Code Registry](https://thecoderegistry.com/code-auditing/)** — connect your GitHub repo, get an AI security scan and complexity score in 15 minutes. Built for non-developers.
+- **[Codacy](https://www.codacy.com)** — automated code quality scanning. Free tier available. Dashboard is readable.
+- **[Codekeeper](https://codekeeper.co)** — code escrow. Makes daily copies of your repo automatically. From $129/month. Set this up *before* you send the termination email.
 
-One more thing that doesn't cost anything: make sure your code repository lives in a [GitHub Organization that you own](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository), not in your agency's personal account. If you do nothing else from this article, do that. Tonight.
+Need a fractional CTO to navigate the transition? [Toptal](https://www.toptal.com) matches within 48 hours. Or browse the free directory at [FractionalCTOs.org](https://fractionalctos.org).
 
-## Why This Is Worse in 2026
+And one thing that costs nothing: make sure your repository lives in a [GitHub Organization you own](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository), not your agency's personal account. If you do nothing else from this article, do that. Do it now.
 
-Here's a story from last quarter. A founder came to us after six months with a "vibe coding" shop. They'd used AI to generate about 90% of the codebase. The MVP was delivered on time — the founder was thrilled. The app loaded. The demo looked great.
+## The 2026 Problem: Vibe Coding
 
-Then real users showed up. First login with a special character in the email? Crash. Two users booking the same slot? Data corrupted. The founder called the shop. "That's an edge case," they said. It wasn't. It was Tuesday.
+This is the part that's new. And it's ugly.
 
-Test coverage: 2%. Error handling: none. Security scan: 14 critical vulnerabilities. The whole thing had to be rewritten.
+Last quarter a founder came to us after six months with what they later learned was a "vibe coding" shop. The agency had used AI to generate about 90% of the codebase. The MVP shipped on time. The founder was ecstatic. The app loaded. The demo looked polished.
 
-This is happening everywhere right now. AI-generated code *looks* clean — good variable names, consistent formatting, reads well. But it has no tests, no error handling, and [security holes that only surface in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). Qodo's 2025 report found AI-generated code produces [1.7x more issues](https://www.qodo.ai/reports/state-of-ai-code-quality/) than human-written code. And that ratio gets worse when nobody reviews the output.
+Then real users showed up.
+
+First login with a special character in the email? Crash. Two users booking the same time slot? Data corrupted. The founder called the agency. "That's an edge case," they said.
+
+It wasn't an edge case. It was Tuesday.
+
+Test coverage: 2%. Error handling: none. Security scan: 14 critical vulnerabilities. We had to rewrite the entire thing.
+
+This pattern is everywhere now. AI-generated code *looks* professional — good variable names, consistent formatting, reads well. Under the hood: no tests, no error handling, [security holes that only show up when real people use the product](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI code produces 1.7x more issues than human-written code. And that's when someone reviews it. When nobody does? It's a time bomb.
 
 A team that lasts [writes tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [reviews every pull request](/blog/ai-powered-code-reviews-transforming-development-workflows/). A team that burns pastes AI output and ships.
 
-## Finding the Next Partner
+## What to Actually Look For in the Next One
 
-Here's what to actually look for. Not "do they have a nice website." That's irrelevant.
+Not "do they have a nice website." Irrelevant. Not "do they have a Clutch profile." Meaningless.
 
-**Ask to see a real weekly report.** Not a template — an actual report from a real project (anonymized). A partner worth keeping sends a one-page summary every Friday: what shipped, what hit a wall, what's next. No buzzwords. We wrote about [what good async standups look like](/blog/how-make-small-valuable-async-standups-productivity-development/) — that's the level of visibility you should expect.
+**Ask to see a real weekly report.** From an actual project, anonymized. A team worth hiring sends a one-page Friday email: what shipped, what hit a wall, what's next week. No jargon. We wrote about [what that looks like](/blog/how-make-small-valuable-async-standups-productivity-development/) — that's the bar.
 
-**Ask who owns the code after each milestone.** "You do" is the only right answer — backed by a contract clause, not a handshake.
+**Ask who owns the code.** "You do" is the only acceptable answer. Backed by a contract clause.
 
-**Ask about their test coverage policy.** If they can't name a number and a process, they don't have one. [TDD — writing tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) — is what separates shops that ship safely from shops that ship and pray. This is especially important now that so many teams use AI to generate code. Without tests, nobody knows if the AI output actually works.
+**Ask about their testing policy.** If they can't give you a number and a methodology, they don't have one. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) — writing tests before code — is the difference between shops that ship safely and shops that ship and pray. Especially now, when so much code is AI-generated. Without tests, nobody — not even the developers — knows if the code works.
 
-**Ask how they handle deploys.** A good team [deploys daily with CI/CD](/blog/async-remote-xp-practices/) and nothing breaks. A bad team deploys monthly and everyone holds their breath. If deploys are scary, the codebase is fragile.
+**Ask how deploys work.** Good teams [deploy daily](/blog/async-remote-xp-practices/). Nothing breaks. Bad teams deploy monthly and everyone holds their breath. If deploys are scary, the code is fragile.
 
-**Ask to talk to a founder they've rescued.** Not just a happy client — one who came from a situation like yours. If they can't produce one, they haven't done this before.
+**Ask to talk to a founder they've rescued.** Not their happiest client. Someone who came from a situation like yours. If they can't produce one, they haven't done this before.
 
-**Watch how they communicate in the first week.** Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Did they set up a shared project board? Did they explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)? The first week tells you everything about the next six months.
+**Watch the first week.** Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Set up a project board? Explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)? The first week tells you everything about the next six months.
 
-## The Real Win
+## The Uncomfortable Truth
 
-Firing a dev shop is not a failure. Staying with a bad one is.
+Firing a dev shop feels like failure. It isn't. Staying with a bad one is.
 
-You're about to pay twice for the same product — once for the bad code, once to rebuild it. That's the reality. The question is how much the second round costs, and that depends entirely on who you hire next.
+Here's what nobody tells you: you're going to pay twice for the same product. Once for the bad code, once to fix it. That's the tax. The question is just how big the second bill is. And that depends entirely on who you hire next and what they find when they open the hood.
 
-The pattern that works: exit cleanly, audit what you have, find a partner who writes tests before code and explains everything in language you understand. You already know what "bad" looks like. Trust that instinct.
-
----
-
-*In the middle of a dev shop transition? We do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. No contract, no follow-up calls. [Get an honest audit](https://jetthoughts.com/contact-us/).*
+Exit cleanly. Audit what you have. Find a partner who writes tests before code and explains everything in language you actually understand. You already know what bad looks like — you just lived through it. Trust that.
 
 ---
 
-We've been writing about the practices that prevent these disasters for years. Here are the ones that matter most for founders evaluating a new partner:
+*In the middle of a transition right now? We'll audit your codebase for free. 45 minutes. One senior developer. A written one-page assessment. No contract, no follow-up calls. [Get an honest audit](https://jetthoughts.com/contact-us/).*
 
-- [Async-first XP practices](/blog/async-remote-xp-practices/) — how we run pair programming and CI/CD across timezones with zero regressions
-- [Delivery flow for remote teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) — structured Kanban that keeps everyone aligned without micromanagement
+---
+
+We've been writing about the practices that prevent these disasters. The ones that matter most if you're evaluating your next partner:
+
+- [Async-first XP practices](/blog/async-remote-xp-practices/) — pair programming and CI/CD across timezones, zero regressions
+- [Delivery flow for remote teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) — Kanban that keeps everyone aligned without micromanagement
 - [Shape Up for founders](/blog/shape-up-founders-guide-not-wasting-your-runway-startup-tutorial/) — 6-week cycles that protect your runway
-- [Fixing slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) — from monthly releases to daily deploys in 60 days
-- [How we evaluate code quality](/blog/code-quality-evaluation-non-technical-founders/) — the 5 signals non-technical founders can actually read
-- [What our onboarding looks like](/blog/effective-project-onboarding-checklist-management-productivity/) — day-one checklist, no chaotic handoffs
+- [Fixing slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) — monthly releases to daily deploys in 60 days
+- [Code quality signals for non-technical founders](/blog/code-quality-evaluation-non-technical-founders/) — the 5 things you can actually read
+- [Our onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/) — day one, no chaos
 - [Red flags in big PRs](/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/) — why we split anything over 500 lines
 
 ## Further Reading
 
-- [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) — 70% of executives insourced previously outsourced work; 70% report vendor management not fully mature
+- [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) — 70% of executives insourced previously outsourced work
 - [CISQ: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) — $2.41 trillion annual cost in the US
 - [Qodo: State of AI Code Quality in 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI code produces 1.7x more issues than human code
 - [Stripe: Developer Coefficient Report](https://litslink.com/blog/cost-of-outsourcing-software-development) — 42% of dev time spent on technical debt
-- [Aaron Hall: Source Code Access Rights on Termination](https://aaronhall.com/source-code-access-rights-termination-provisions/) — Legal framework for code ownership
-- [Appstronauts: Project Transition Checklist](https://appstronauts.co/blog/a-successful-software-development-project-transition-plan-checklist/) — Practical transition framework
+- [Aaron Hall: Source Code Access on Termination](https://aaronhall.com/source-code-access-rights-termination-provisions/) — legal framework for code ownership
+- [Appstronauts: Project Transition Checklist](https://appstronauts.co/blog/a-successful-software-development-project-transition-plan-checklist/) — practical transition framework
