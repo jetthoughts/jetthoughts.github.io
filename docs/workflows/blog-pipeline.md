@@ -30,7 +30,11 @@ Create content/blog/<slug>/index.md following these rules:
 - Paragraphs ≤3 sentences. Word count 1,200-1,800.
 - BANNED words: unlock, harness, leverage, dive in, game-changer, journey, seamless, robust, supercharge, revolutionize, embark, delve, discover
 
-STEP 5 — REVIEW LOOP (3 parallel critic agents, iterate until pass)
+STEP 5a — AI QUALITY CHECK
+Run /slop-detector on the draft. If flagged, run /humanizer to fix AI patterns. Re-run /slop-detector until clean.
+Then run /seo-aeo-audit for SEO + AEO compliance. Fix any issues before proceeding.
+
+STEP 5b — REVIEW LOOP (3 parallel critic agents, iterate until pass)
 
 Spawn 3 critic agents in parallel:
 
@@ -142,12 +146,64 @@ Draft → spawn 3 critics in parallel → synthesize → fix → re-check
 | Emotional resonance | ✓ | | ✓ |
 | Real story / "been there" energy | ✓ | | ✓ |
 
+## Skills & agents used per step
+
+Skills are invoked via `/skill-name`. Agents are spawned via the Agent tool.
+
+| Step | Skills | Agents / Tools |
+|---|---|---|
+| 1. Pick topic | — | Read content plan file |
+| 2. Read context | — | Read ICP, brief, design spec |
+| 3. Research | `/keyword-research`, `/competitor-intel`, `/social-media-trends-research` | `web-research-workflow` agent, WebSearch |
+| 4. Draft | `/blog-post`, `/copywriting-core`, `/content-production`, `/copy-editing` | Write tool |
+| 5. Review loop | `/slop-detector` → `/humanizer` (if flagged), `/seo-aeo-audit`, `/seo` | 3 parallel critic agents (founder, SEO/slop, editor) |
+| 6. Cover image | `/stitch-design` | chrome-devtools MCP, magick CLI |
+| 7. Validate | `/hugo` | `bin/hugo-build`, chrome-devtools MCP |
+| 8. Update plan | — | Edit tool |
+| 9. Commit | `/git-commit` | git CLI |
+
+### Skill descriptions
+
+| Skill | When to use |
+|---|---|
+| `/slop-detector` | After drafting — detects AI-generated content markers (banned words, parallel structure, filler transitions) |
+| `/humanizer` | If slop-detector flags content — removes AI writing patterns while preserving meaning |
+| `/seo-aeo-audit` | SEO compliance + AI answer engine optimization (structured data, featured snippets) |
+| `/seo` | On-page SEO: title, meta description, keywords, internal links, schema |
+| `/blog-post` | Structures long-form blog posts, creates outlines, applies editorial standards |
+| `/copywriting-core` | Ogilvy-style clarity + persuasion for CTAs and hooks |
+| `/copy-editing` | Systematic editing passes: clarity, voice consistency, grammar |
+| `/content-production` | Full content pipeline from blank page to publish-ready piece |
+| `/keyword-research` | Research target keywords, analyze competition, find content gaps |
+| `/competitor-intel` | Analyze competitor content for the same topic |
+| `/social-media-trends-research` | Research trends across Google Trends, Reddit, Indie Hackers |
+| `/stitch-design` | Generate or iterate on cover image designs via Stitch MCP |
+| `/hugo` | Hugo static site knowledge for build, templates, frontmatter |
+| `/git-commit` | Conventional commit messages with emoji |
+
+## 9-phase autonomous pipeline (full reference)
+
+The quick start prompt above is the practical execution guide. Below is the full autonomous pipeline with all coordinator agents, for reference:
+
+1. **Trend Discovery** — `/social-media-trends-research` + `/keyword-research` → ≥5 viable topics
+2. **Strategy** — `/content-strategy` + content plan → shareability ≥7/10
+3. **Research** — `/competitor-intel` + WebSearch → ≥5 sources, ≥1 expert quote
+4. **Ideation** — `/blog-post` + `/copywriting-core` → 3-5 takeaways, compelling hook
+5. **Draft & Edit** — `/content-production` + `/copy-editing` → Zero AI phrases, paragraphs ≤3 sentences
+6. **Review Loop** — 3 parallel critics (founder persona + SEO/slop + copy editor) → iterate until pass
+7. **Cover Image** — `.stitch/design.md` → 6-slot HTML → chrome-devtools 2× render → Lanczos downsample
+8. **Validate** — `bin/hugo-build` + Chrome DevTools (zero console errors, zero 404s, og:image resolves)
+9. **Publish** — Update content plan → commit → push
+
 ## Key files
 
 | File | Purpose |
 |---|---|
 | `docs/.../20.07-content-plan-icp-e-q2-2026.md` | What to write next + topic briefs |
-| `docs/.../90.10-icp-primary-website-target.md` | Who we write for |
-| `.stitch/design.md` | Cover image spec |
+| `docs/.../90.10-icp-primary-website-target.md` | Who we write for (ICP-E) |
+| `.stitch/design.md` | Cover image spec (6-slot layout) |
 | `.stitch/designs/*-cover.html` | Cover templates to duplicate |
-| `CLAUDE.md` | Behavioral constraints |
+| `CLAUDE.md` | Behavioral constraints + critical files table |
+| `themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image template (title truncation rules) |
+| `themes/beaver/layouts/partials/seo/article-schema.html` | Article JSON-LD schema |
+| `config/_default/hugo.toml` | Hugo config (permalinks, sitemap, baseURL) |
