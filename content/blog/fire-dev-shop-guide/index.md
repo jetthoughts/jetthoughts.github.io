@@ -19,9 +19,9 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-If you need to fire your development agency, this guide walks you through every step — recognizing the signs, securing your code, and hiring the right team next time.
+I know how this feels. You hired a team, wrote them a check, waited three months — and now the demo sort of works, the backend is a mystery, and you're afraid to ask how much the next milestone will cost. You're not crazy. One in four outsourced projects [fails or limps along underperforming](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/). That number is probably low.
 
-Deadlines keep slipping. The demo looks fine but nothing works behind the scenes. You ask for a timeline and get vague answers. You're not crazy — one in four outsourced projects [fails or limps along underperforming](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/). If you're reading this, you're probably in that group.
+If you need to fire your development agency, this is the guide. Not theory — the actual steps, including the ones nobody tells you about (like what to do tonight, before they know you're leaving).
 
 ## The Signs — How Many Do You Recognize?
 
@@ -59,15 +59,15 @@ This one doesn't show up on any checklist, but it matters. If you've stopped ask
 
 ## But First: Is This Actually Fixable?
 
-Before you send the termination email, pause. Some relationships are salvageable — and firing prematurely costs time and money too.
+Before you send that email tonight — is this fixable? Honestly, sometimes it is. And firing prematurely costs you another 2-3 months of onboarding someone new.
 
-**Set up a 2-week test.** Weekly call with a clear agenda: what shipped, what didn't, why. If transparency improves in two weeks, the relationship might be worth saving.
+**Give them two weeks of structured transparency.** Weekly call, clear agenda: what shipped, what didn't, why. Not "how's it going" — specific deliverables. If they suddenly start communicating when you set expectations, maybe the problem was that nobody set expectations. It happens.
 
-**Ask yourself: did I keep moving the goalposts?** If you changed requirements mid-sprint three times, any agency would miss deadlines. An honest agency will tell you this. A bad one will absorb the scope silently and miss the date.
+**Be honest with yourself too.** Did you change the requirements three times mid-sprint? Any agency would miss deadlines if the target keeps moving. An honest agency will tell you this. A bad one will nod and miss the date.
 
-**Try a 30-day probation with concrete KPIs.** "80% task completion per sprint, weekly written reports, repository access within 48 hours." If they can't hit those basics, you have your answer — and you have it documented.
+**Try 30 days with three concrete numbers.** "80% task completion per sprint. Weekly written reports. Git access within 48 hours." If they can't hit those basics — basics that any [competent distributed team](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) handles by default — you have your answer. And you have it documented for the termination letter.
 
-If none of that works, keep reading.
+If none of that moved the needle, keep reading.
 
 ## The Exit Checklist: What to Secure Before You Leave
 
@@ -85,13 +85,13 @@ Firing a dev shop is a business operation, not a breakup text.
 
 ## What Your Contract Should Have Said
 
-Every contract I've reviewed that blew up had the same three missing pieces:
+"But I signed a contract!" you say. Yes. And it probably doesn't protect you. Every contract we've seen from a failed engagement is missing the same three things:
 
-**1. Code ownership after each milestone.** You should own all source code, documentation, and IP after each paid milestone — not at the end of the project. If your contract says "upon project completion," you're hostage to a definition of "complete" that your agency controls.
+**Code ownership after each milestone.** Your contract probably says you own everything "upon project completion." Sounds fine, right? Except "completion" is whatever the agency says it is. You need ownership after each paid milestone — not at the end. If they've been paid for three months of work, you should own three months of code. Period.
 
-**2. Termination for quality issues.** Something like: "If the provider misses two consecutive milestones or delivers code that fails acceptance criteria, the client may terminate with 7 days notice." Without this, you're stuck negotiating an exit with a partner who has no incentive to let you leave cleanly.
+**A termination clause with teeth.** Something like: "If the provider misses two consecutive milestones, the client may terminate with 7 days notice." Without this, firing them turns into a negotiation with someone who has no reason to let you leave cleanly. That's not a partnership. That's a trap.
 
-**3. Continuous code access from day one.** Not "access upon request." Not "we'll send you a ZIP file." Real-time, read-only access to the repository at minimum. If they push back on this, ask yourself why.
+**Repository access from day one.** Not "upon request." Not a ZIP file emailed next week. Real-time, read-only access to the code repository. If they push back on this — really ask yourself why. What are they protecting?
 
 ## How to Evaluate the Code You're Inheriting
 
@@ -105,11 +105,15 @@ This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild.
 
 ## Why This Is Worse in 2026
 
-We rescued a codebase last quarter from a shop that had used AI to generate 90% of the code. The founder was told the MVP would be done in 6 weeks. It was — sort of. The app loaded. The demo worked. But test coverage was 2%. There was no error handling. The first time a real user did something unexpected, the app crashed and corrupted their data.
+Here's a story from last quarter. A founder came to us after six months with a "vibe coding" shop. They'd used AI to generate about 90% of the codebase. The MVP was delivered on time — the founder was thrilled. The app loaded. The demo looked great.
 
-This is the "vibe coding" crisis. Developers use AI to generate entire codebases with minimal oversight. The code *looks* clean on the surface. Under the hood: no tests, no error handling, [security holes that blow up in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). When you fire one of these shops, you inherit code that's not just bad — it's untestable. There's no safety net.
+Then real users showed up. First login with a special character in the email? Crash. Two users booking the same slot? Data corrupted. The founder called the shop. "That's an edge case," they said. It wasn't. It was Tuesday.
 
-A team that survives writes [tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). A team that burns writes AI code and prays.
+Test coverage: 2%. Error handling: none. Security scan: 14 critical vulnerabilities. The whole thing had to be rewritten.
+
+This is happening everywhere right now. AI-generated code *looks* clean — good variable names, consistent formatting, reads well. But it has no tests, no error handling, and [security holes that only surface in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). Qodo's 2025 report found AI-generated code produces [1.7x more issues](https://www.qodo.ai/reports/state-of-ai-code-quality/) than human-written code. And that ratio gets worse when nobody reviews the output.
+
+A team that lasts [writes tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [reviews every pull request](/blog/ai-powered-code-reviews-transforming-development-workflows/). A team that burns pastes AI output and ships.
 
 ## Finding the Next Partner
 
