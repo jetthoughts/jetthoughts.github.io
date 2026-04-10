@@ -40,6 +40,14 @@ Always use claude-context MCP search **before** making changes:
 
 **Never** grep/find for code patterns — use claude-context MCP semantic search (100x faster).
 
+### Finding blog posts to reference (MANDATORY for content work)
+When writing a blog post and looking for internal links, **always use claude-context first**:
+```
+Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "transparency weekly reports"
+```
+For exact slug/tag lookups, see the post index at `content/blog/_index_for_agents.md` (584 posts, 135 tags, process posts table).
+**Never guess slugs** — verify with `ls content/blog/<slug>/index.md` before linking.
+
 ## 🧪 TDD & Testing
 
 Follow official methodology from `/knowledge/`:

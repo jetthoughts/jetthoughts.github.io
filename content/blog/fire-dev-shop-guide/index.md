@@ -44,7 +44,7 @@ Nearly half of every developer's paycheck goes to mopping up the mess the last t
 
 ---
 
-**Need immediate clarity on what you're inheriting?** We do a free 45-minute code audit: one senior developer reviews your codebase, runs security scans, and gives you a written one-page assessment. No contract. No follow-up calls unless you ask. [Get an honest audit](https://www.jetthoughts.com/contact).
+**Need immediate clarity on what you're inheriting?** We do a free 45-minute code audit: one senior developer reviews your codebase, runs security scans, and gives you a written one-page assessment. No contract. No follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
 
 ---
 
@@ -90,7 +90,7 @@ You can't read code. But you can read these signals.
 
 Hire a senior dev — a freelancer, fractional CTO, or your replacement agency — to audit the code for four hours. Here's what to ask them:
 
-First, test coverage. Below 20% and the code can't be safely changed. Below 5% and it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workfl/) — AI-generated with no human review. Second, security vulnerabilities — a basic scan takes 30 minutes and will tell you if your users' data is exposed. The [cost of poor software quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) in the US runs $2.41 trillion annually, and your app doesn't need to contribute to that number.
+First, test coverage. Below 20% and the code can't be safely changed. Below 5% and it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) — AI-generated with no human review. Second, security vulnerabilities — a basic scan takes 30 minutes and will tell you if your users' data is exposed. The [cost of poor software quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) in the US runs $2.41 trillion annually, and your app doesn't need to contribute to that number.
 
 Then ask about the deployment process. Can they ship a change in under 10 minutes? If deployment is a manual, multi-hour process, every future update is risky and expensive. Finally, look at code structure. Is it organized, or is it a single massive file that does everything?
 
@@ -100,9 +100,9 @@ This audit costs $500-$2,000 and saves you from inheriting a codebase that costs
 
 We rescued a codebase last quarter from a shop that had used AI to generate 90% of the code. The founder was told the MVP would be done in 6 weeks. It was — sort of. The app loaded. The demo worked. But test coverage was 2%. There was no error handling. The first time a real user did something unexpected, the app crashed and corrupted their data.
 
-This is the "vibe coding" crisis. Developers use AI to generate entire codebases with minimal oversight. The code *looks* clean on the surface. Under the hood: no tests, no error handling, [security holes that blow up in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time/). When you fire one of these shops, you inherit code that's not just bad — it's untestable. There's no safety net.
+This is the "vibe coding" crisis. Developers use AI to generate entire codebases with minimal oversight. The code *looks* clean on the surface. Under the hood: no tests, no error handling, [security holes that blow up in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). When you fire one of these shops, you inherit code that's not just bad — it's untestable. There's no safety net.
 
-A team that survives writes [tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/). A team that burns writes AI code and prays.
+A team that survives writes [tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). A team that burns writes AI code and prays.
 
 ## Finding the Next Partner
 
@@ -112,7 +112,7 @@ When you're vetting the next shop, these questions will save you months of pain:
 
 **"Who owns the code after each milestone?"** The answer should be "you do" — with a specific contract clause, not a verbal promise.
 
-If they can't tell you their test coverage policy by name, they don't have one. Ask for a number (above 70%) and a process. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/) is the gold standard.
+If they can't tell you their test coverage policy by name, they don't have one. Ask for a number (above 70%) and a process. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) is the gold standard.
 
 **"What happens if you miss a deadline?"** Look for accountability, not excuses. A good answer: "We flag it two days early and offer options." A bad answer: "That rarely happens."
 
@@ -124,11 +124,11 @@ Firing a dev shop is not a failure. Staying with a bad one is.
 
 You're about to pay twice for the same product — once for the bad code, once to rebuild it. That's the reality. The question is how much the second round costs, and that depends entirely on who you hire next.
 
-The pattern that works: exit cleanly, audit what you have, find a partner who [writes tests first](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/) and [explains everything in plain English](/blog/how-make-small-valuable-async-standups-productivity-dev/). You've already learned what "bad" looks like. Now you know what to look for.
+The pattern that works: exit cleanly, audit what you have, find a partner who [writes tests first](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [explains everything in plain English](/blog/how-make-small-valuable-async-standups-productivity-development/). You've already learned what "bad" looks like. Now you know what to look for.
 
 ---
 
-*In the middle of a dev shop transition? We do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. No contract, no follow-up calls. [Get an honest audit](https://www.jetthoughts.com/contact).*
+*In the middle of a dev shop transition? We do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. No contract, no follow-up calls. [Get an honest audit](https://jetthoughts.com/contact-us/).*
 
 ---
 
