@@ -2616,6 +2616,11 @@ span.pp-accordion-button-icon {
   width: 180px;
   height: 180px;
   overflow: hidden;
+  background: #10141a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 860px) {
@@ -2626,8 +2631,10 @@ span.pp-accordion-button-icon {
 
 .post-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .post-content {

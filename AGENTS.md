@@ -41,8 +41,17 @@
 
 ## 🖼️ Cover Images
 
-Source: PNG 2400×1260 (2x) → Hugo converts to JPG q90. Frontmatter: `metatags.image: cover.png`
-Full spec: `.stitch/design.md` | Stitch project: `3224353017067976684`
+**Full spec**: `.stitch/design.md` (canonical) | Stitch project: `3224353017067976684`
+
+**6-slot layout (MANDATORY)**: brand+category (top-L) · year pill (top-R) · 3-line hero (white/**gradient**/white, mid-L) · ruby gem SVG (mid-R) · 3 stat chips (bot-L) · status indicator (bot-R)
+
+**Anti-redundancy**: pill carries YEAR not version · stat chips carry facts NOT in the H1 · no footer meta · no subtitle unless it adds a new benefit phrase
+
+**Reference files**: `.stitch/designs/rails-8-1-active-job-continuations-cover.html` (Active Job) · `.stitch/designs/rails-argon2-has-secure-password-cover.html` (Argon2). Always duplicate, never author from scratch.
+
+**Pipeline**: HTML → chrome-devtools 2× render → Lanczos downsample → `content/blog/<slug>/cover.png` → `bin/hugo-build`. Frontmatter: `metatags.image: cover.png` + `cover_image: "cover.png"`.
+
+**Thumbnail**: aspect-preserving 360×189 (2× retina of 180×95). CSS letterboxes inside 180×180 square — NEVER center-crop (reference layout would fragment hero + gem).
 
 ## 🚨 Behavioral Constraints
 

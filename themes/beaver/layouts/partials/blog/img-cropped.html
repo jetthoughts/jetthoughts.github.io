@@ -16,11 +16,16 @@
 {{- end -}}
 
 {{ if $image }}
-{{/* Resize — scales to 180px wide, keeps aspect ratio.
-    The 2400×1260 cover becomes 180×95, no cropping, full design visible. */}}
-{{ $resized := $image.Resize (printf "%dx jpg q90" $.width) }}
+{{/* Aspect-preserving resize at 2× retina. The cover is designed as a
+    landscape composition (2400×1260 = 1.905:1) following the canonical
+    6-slot layout in .stitch/design.md — we must NOT center-crop it
+    because the left-aligned hero + right visual would be mangled.
+    CSS uses object-fit: contain with a dark background to letterbox
+    cleanly inside the 180×180 thumbnail container. */}}
+{{ $retinaW := mul $.width 2 }}
+{{ $resized := $image.Resize (printf "%dx jpg q90" $retinaW) }}
 
-<img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}">
+<img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
 
 {{ else }}
 <img src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" alt="Placeholder Image">

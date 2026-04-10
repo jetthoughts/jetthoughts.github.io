@@ -81,9 +81,31 @@ Full analysis: `docs/projects/2509-css-migration/css-loading-order-analysis.md`
 9. **Continuous Improvement** (`self-improving-agent`) → lessons stored
 
 ### Cover Image Workflow
-Source: PNG 2400×1260 (2x) → Hugo converts to JPG q90 for og:image (1200×630) + thumbnails (180×180)
-Frontmatter: `metatags.image: cover.png` (primary) or `cover_image: "cover.png"`
-Full spec: `.stitch/design.md` | Stitch project: `3224353017067976684`
+**Full spec**: `.stitch/design.md` (canonical — read before any cover work) | Stitch project: `3224353017067976684`
+
+**Canonical 6-slot layout (MANDATORY)**:
+1. Brand + category (`JetThoughts | ENGINEERING`) — top-left
+2. Year pill (`Ruby on Rails 2026`) — top-right. **YEAR, not version.**
+3. 3-line hero (white / **RUBY→PURPLE GRADIENT** / white) — middle-left
+4. Ruby gem SVG visual — middle-right (same gem across ALL Ruby/Rails posts)
+5. Three stat chips with facts **NOT in the post title** — bottom-left
+6. `● STATUS` indicator — bottom-right
+
+**Anti-redundancy rules**:
+- Pill carries YEAR not version (version is in the H1)
+- Stat chip values must be facts a Google arrival doesn't already know from the SERP snippet
+- NO footer meta chip (tags render below the cover already)
+- Don't repeat what the H1 already says
+
+**Reference files** (duplicate these, never author from scratch):
+- `.stitch/designs/rails-8-1-active-job-continuations-cover.html`
+- `.stitch/designs/rails-argon2-has-secure-password-cover.html`
+
+**Build pipeline**: Author HTML → chrome-devtools 2× retina screenshot → Lanczos downsample to 2400×1260 → PNG → `content/blog/<slug>/cover.png` → `bin/hugo-build`
+
+**Frontmatter**: `metatags.image: cover.png` + `cover_image: "cover.png"` + `cover_image_alt: "..."`
+
+**Thumbnail behavior**: Aspect-preserving at 2× retina (360×189 source for 180×95 display inside a letterboxed 180×180 container). No center-cropping — the reference layout places the hero LEFT and the gem RIGHT, so center-cropping fragments both.
 
 ---
 

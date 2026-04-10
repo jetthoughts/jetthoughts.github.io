@@ -29,6 +29,9 @@ hugo.linux
 !.claude
 .claude/**/*.json
 .claude/**/*.sh
+!.stitch
+!.junie
+!.gitignore
 
 # SnapDiff runtime
 *.diff.png
