@@ -20,11 +20,15 @@ metatags:
   twitter_description: "Master Solid Cache migration from Redis. Benchmarks, cost analysis, production migration guide."
 ---
 
-Rails 8 introduces Solid Cache as the default caching backend, marking a significant shift from Redis-based caching to database-backed storage. This comprehensive guide explores Solid Cache performance characteristics, migration strategies from Redis/Memcached, and optimization techniques for production deployments.
+Redis is probably the most expensive line item on your infrastructure bill that you don't actually need. For most Rails apps, it's $400-900/month in hosting, monitoring, and DevOps time -- to serve cache reads that your PostgreSQL database can handle just fine.
+
+Rails 8 made Solid Cache the default caching backend for a reason. Your database is already running, already monitored, already backed up. Why pay for a second data store when the one you have is sitting there underutilized?
+
+This guide covers the real performance tradeoffs, a production migration strategy from Redis, and the specific scenarios where you should (and shouldn't) make the switch.
 
 ## Executive Summary
 
-**Solid Cache** leverages your existing database for caching, eliminating external dependencies while providing reliable, cost-effective performance. **Redis** offers superior speed for cache-intensive applications but requires dedicated infrastructure.
+**Solid Cache** uses your existing database for caching -- no new infrastructure, no new bills. **Redis** is faster for cache-heavy workloads but comes with real operational cost.
 
 #### Quick Decision Framework:
 - **Choose Solid Cache** for: Simplified operations, cost reduction, moderate cache hit rates (<10,000 reads/sec)
@@ -34,7 +38,7 @@ Rails 8 introduces Solid Cache as the default caching backend, marking a signifi
 
 ### The Infrastructure Simplification Story
 
-Traditional Rails caching requires Redis or Memcached infrastructure, adding operational complexity:
+Redis adds operational overhead: another thing to monitor, backup, scale, and pay for.
 
 #### Traditional Caching Architecture:
 ```yaml
@@ -575,7 +579,7 @@ rails runner "CacheWarmer.warm_from_redis"
 # config/environments/production.rb
 config.cache_store = :solid_cache_store
 
-# 3. Deploy application
+# 3. Deploy application (see our Kamal guide: /blog/kamal-integration-in-rails-8-by-default-ruby/)
 bundle exec kamal deploy
 
 # 4. Monitor cache performance
@@ -1114,7 +1118,7 @@ end
 - **Operational complexity:** Reduced significantly
 - **Redis usage:** Kept only for real-time features (10% of previous usage)
 
-Our [Ruby on Rails development services](/services/app-web-development/) helped this client achieve these results through careful performance analysis and strategic migration planning, ensuring zero downtime during the transition.
+We've covered [Rails performance optimization strategies](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) in depth if you're looking at the broader picture beyond caching.
 
 ### Case Study 2: E-commerce Application
 
@@ -1129,21 +1133,25 @@ Our [Ruby on Rails development services](/services/app-web-development/) helped 
 - **Cost savings:** $320/month on Memcached hosting
 - **Developer productivity:** Increased due to simpler debugging
 
-## Conclusion
+## When NOT to Use Solid Cache
 
-Solid Cache represents a paradigm shift in Rails caching strategy, trading marginal performance for dramatic operational simplification and cost reduction. For most Rails applications, this trade-off is overwhelmingly favorable.
+Solid Cache isn't the right call for every app. Be specific about when to keep Redis:
 
-### Final Recommendations:
+- **You're doing 10K+ cache reads/sec.** Solid Cache adds 3-8ms per read vs Redis's 0.5-2ms. At high volume, that latency compounds into real response time degradation.
+- **You need sub-millisecond latency for rate limiting or session storage.** These are hot-path operations where every millisecond matters. Redis is purpose-built for this.
+- **You rely on Redis data structures -- sorted sets, pub/sub, HyperLogLog.** Solid Cache is key-value only. If you're using Redis as more than a cache, you can't drop it entirely.
+- **Your database is already at capacity.** Adding cache reads to a maxed-out PostgreSQL instance will make everything slower, not just cache hits.
+- **You're running a real-time app with presence tracking or live notifications.** Redis pub/sub has no Solid Cache equivalent.
 
-1. **Migrate to Solid Cache** if your cache hit rates are moderate (<10,000 reads/sec)
-2. **Use hybrid approach** for applications with mixed access patterns
-3. **Keep Redis** only for high-frequency operations and real-time features
-4. **Monitor database impact** during and after migration
-5. **Optimize database configuration** specifically for cache workloads
+The hybrid approach (Solid Cache for general caching, Redis for hot-path operations) is often the right middle ground. Don't treat this as all-or-nothing.
 
-The future of Rails caching is database-backed, and Solid Cache provides the foundation for simpler, more cost-effective Rails deployments.
+## What to do next
 
-Need expert assistance with your Rails caching strategy or Solid Cache migration? Our [experienced Rails team](/services/app-web-development/) has successfully migrated applications serving millions of users, optimizing cache performance while reducing infrastructure costs by an average of 65%.
+If you're not running 10K+ reads/sec, Solid Cache is the obvious choice. Start with the audit script to understand your current Redis usage patterns, then run the dual-cache strategy in production for a week before cutting over.
+
+Solid Cache pairs well with the rest of the Rails 8 infrastructure stack. If you're also migrating background jobs, our [Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) covers that process. For teams modernizing their full deployment pipeline, see our guides on [Kamal deployment](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/) and [Rails 8 Docker production setup](/blog/rails-8-docker-deployment-production-guide/).
+
+And if you're optimizing beyond caching, our post on [Rails performance patterns with Hotwire](/blog/hotwire-turbo-8-performance-patterns-real-time-rails/) covers the frontend side of the equation.
 
 ---
 

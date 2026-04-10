@@ -17,11 +17,11 @@ cover_image: "cover.png"
 cover_image_alt: "Dark security-themed cover with Ruby on Rails branding, Argon2 migration badges, and glowing shield/lock icon"
 ---
 
-BCrypt has been the default for Rails authentication for over a decade. While it remains secure, modern security standards have shifted toward Argon2id to better resist specialized hardware.
+BCrypt dominated Rails authentication for a decade. Then GPUs got cheap. A rig that costs $3,000 today can crack BCrypt hashes at rates that would've been fantasy five years ago. The security community moved on to Argon2id -- a memory-hard algorithm that makes GPU attacks economically pointless. Rails finally caught up.
 
-With Rails now offering built-in support for Argon2 in `has_secure_password`, upgrading your application's security is straightforward. This guide covers a zero-downtime migration strategy for production systems with thousands of active users.
+`has_secure_password` now supports Argon2 natively. But if you flip the switch on a production app with existing BCrypt digests, every login breaks. That's the trap most teams walk into.
 
-**Real-World Impact**: We recently helped a fintech team migrate 50,000+ active users from legacy BCrypt to Argon2. Their biggest concern was a mass password reset causing support friction. By implementing the **Hybrid Verifier** pattern shared in this guide, we achieved a 100% conversion rate for active users without a single support ticket.
+We migrated 50K fintech users to Argon2 with zero support tickets. Here's exactly how. The key is a **Hybrid Verifier** pattern that dual-verifies both algorithms and rehashes on login -- no mass password reset, no downtime, no angry users.
 
 This guide covers:
 
@@ -51,7 +51,7 @@ And Rails will use Argon2 for hashing and verification through the secure passwo
 
 ## Why move to Argon2
 
-BCrypt is still solid and battle-tested, but Argon2 (especially Argon2id variants in modern libraries) is widely preferred in newer systems because of stronger memory-hard design.
+BCrypt isn't broken -- but it's outgunned. Argon2id is memory-hard by design, which means attackers can't just throw more GPUs at it. They need proportionally more RAM, and RAM doesn't scale cheaply.
 
 In practical product terms, Argon2 gives teams:
 
@@ -59,7 +59,7 @@ In practical product terms, Argon2 gives teams:
 - Flexible tuning space (time and memory costs)
 - A modern default for newly created credentials
 
-If you are touching authentication anyway (new login flows, Rails upgrades, security hardening), upgrading password hashing is usually high leverage.
+If you're touching authentication anyway -- new login flows, a [Rails 8 upgrade](/blog/rails-8-authentication-generator-devise-migration/), security hardening -- upgrading the hash algorithm is the highest-leverage change you can make.
 
 ## Minimal setup for new apps
 
@@ -238,7 +238,7 @@ Before deploy:
 
 - Add metrics for login success by digest prefix (`$2*` vs `$argon2*`)
 - Add alert on authentication error spikes
-- Add feature flag for hybrid verifier if your team uses staged releases
+- Add feature flag for hybrid verifier if your team uses staged releases (if you're [deploying with Kamal](/blog/kamal-integration-in-rails-8-by-default-ruby/), feature flags via environment variables work well here)
 
 During deploy:
 
@@ -295,19 +295,23 @@ Week 5+:
 
 For low-activity consumer apps, run longer before removing fallback.
 
-## Final recommendation
+## When NOT to migrate
 
-If you are on modern Rails and already using `has_secure_password`, move to Argon2 with a phased strategy. It gives you stronger defaults with minimal product disruption when done carefully.
+Be honest about when this isn't worth the effort:
 
-Keep it simple:
+- **You're shipping a brand-new app with no existing users.** Skip the hybrid verifier entirely. Just set `algorithm: :argon2` and move on.
+- **Your app uses Devise with custom strategies.** The hybrid verifier pattern assumes `has_secure_password`. Devise has its own password handling pipeline, and you'll need to hook into `Devise::Encryptable` instead. Different migration path.
+- **You have fewer than 100 users and can email them all.** A forced password reset is simpler than maintaining dual-algorithm code. Send the email, reset everyone, delete the BCrypt code.
+- **Your authentication is handled by an external identity provider.** If you're using Auth0, Okta, or similar -- your app doesn't store password digests at all. This guide doesn't apply.
+- **You're on a Rails version older than 7.2.** The `algorithm:` option for `has_secure_password` isn't available. Upgrade Rails first, then come back.
 
-1. Dual-verify
-2. Rehash on successful login
-3. Remove legacy path only after data confirms safety
+## What to do next
 
-That is the lowest-risk path to better password security in production Rails.
+Start with the hybrid verifier and metrics. Ship it behind a feature flag if your team does staged rollouts. Monitor the BCrypt-to-Argon2 conversion rate daily -- most apps see 80%+ conversion within two weeks of active users logging in.
 
-Have you already made the switch to Argon2id? Let's discuss your authentication strategies on [LinkedIn] or [Twitter]—we'd love to hear your experiences.
+If you're also modernizing your auth stack, the [Rails 8 authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/) pairs well with this migration. And if you're hardening more than just passwords, our post on [authentication patterns in Rails 7.1](/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/) covers the broader picture.
+
+For teams handling sensitive data, consider pairing this with [encrypted data compression in Rails 8](/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/) -- defense in depth matters.
 
 ## References
 
