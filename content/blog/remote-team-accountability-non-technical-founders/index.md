@@ -1,4 +1,5 @@
 ---
+cover_image: "cover.png"
 title: "How to Know If Your Remote Team Is Actually Working (Without Micromanaging)"
 description: "Non-technical founders: Validate remote developer productivity without becoming a micromanager. Interview questions, red flags, and accountability frameworks for small budgets."
 slug: "remote-team-accountability-non-technical-founders"
@@ -24,6 +25,8 @@ date: "2025-10-14"
 created_at: '2025-10-14T23:04:00Z'
 author: "JetThoughts"
 draft: false
+metatags:
+  image: cover.png
 ---
 
 # How to Know If Your Remote Team Is Actually Working (Without Micromanaging)

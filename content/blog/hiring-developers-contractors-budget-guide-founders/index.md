@@ -1,4 +1,5 @@
 ---
+cover_image: "cover.png"
 title: "Should You Hire a Full-Time Developer or Use Contractors? (The $100K Budget Reality)"
 description: "Non-technical founders: Full-time vs contractor vs offshore vs agency. Complete hiring guide with interview questions, red flags, and budget planning for small budgets."
 slug: "hiring-developers-contractors-budget-guide-founders"
@@ -18,6 +19,8 @@ date: "2025-10-14"
 created_at: '2025-10-14T23:02:00Z'
 author: "JetThoughts"
 draft: false
+metatags:
+  image: cover.png
 ---
 
 # Should You Hire a Full-Time Developer or Use Contractors? (The $100K Budget Reality)

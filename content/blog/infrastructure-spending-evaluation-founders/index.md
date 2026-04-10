@@ -1,4 +1,5 @@
 ---
+cover_image: "cover.png"
 title: "How to Know If Your Developers Are Wasting Money on Infrastructure"
 description: "Non-technical founders: Evaluate infrastructure spending without technical knowledge. Question framework, cost guidelines, and real founder stories of over-spending."
 slug: "infrastructure-spending-evaluation-founders"
@@ -19,6 +20,8 @@ date: "2025-10-14"
 created_at: '2025-10-14T23:03:00Z'
 author: "JetThoughts"
 draft: false
+metatags:
+  image: cover.png
 ---
 
 # How to Know If Your Developers Are Wasting Money on Infrastructure

@@ -1,4 +1,5 @@
 ---
+cover_image: "cover.png"
 title: "How to Know If Your Development Team's Code Quality Will Bite You Later"
 description: "Non-technical founders: Evaluate development team code quality without being technical. 4 visible indicators, interview questions, and quality investment framework."
 slug: "code-quality-evaluation-non-technical-founders"
@@ -22,6 +23,8 @@ date: "2025-10-14"
 created_at: '2025-10-14T23:00:00Z'
 author: "JetThoughts"
 draft: false
+metatags:
+  image: cover.png
 ---
 
 # How to Know If Your Development Team's Code Quality Will Bite You Later

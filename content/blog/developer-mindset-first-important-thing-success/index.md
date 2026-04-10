@@ -11,9 +11,9 @@ tags:
 - software-engineering
 - career-development
 canonical_url: https://jetthoughts.com/blog/developer-mindset-first-important-thing-success/
-cover_image: developer-mindset-cover.jpg
+cover_image: "cover.png"
 metatags:
-  image: developer-mindset-og.jpg
+  image: cover.png
   title: "The Developer Mindset: Why It's the First and Most Important Thing for Success"
   description: "After analyzing 200+ developer careers, we discovered the #1 predictor of success isn't technical skills—it's mindset. Learn the 5 core mindset shifts that separate high-performing developers."
   keywords: "developer mindset, engineering mindset, developer success, programming mindset, software developer growth, developer career, technical leadership mindset"

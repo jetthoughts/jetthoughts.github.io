@@ -1,4 +1,5 @@
 ---
+cover_image: "cover.png"
 title: "Solid Queue vs Sidekiq: Complete Comparison Guide for Rails Background Jobs"
 slug: solid-queue-vs-sidekiq-complete-comparison
 date: 2025-09-26T00:00:00Z
@@ -8,6 +9,8 @@ author: "JetThoughts Team"
 draft: false
 tags: ["rails", "background-jobs", "solid-queue", "sidekiq", "performance", "ruby"]
 categories: ["Development", "Rails", "Performance"]
+metatags:
+  image: cover.png
 ---
 
 When Rails 8 ships with Solid Queue as the default background job processor, many teams will face a critical decision: stick with battle-tested Sidekiq or embrace the new database-backed approach? This comprehensive comparison examines both solutions across architecture, performance, operational complexity, and real-world use cases.

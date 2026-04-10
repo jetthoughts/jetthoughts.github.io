@@ -1,4 +1,5 @@
 ---
+cover_image: "cover.png"
 title: "Fractional CTO ROI Calculator: When Does Part-Time Technical Leadership Pay Off?"
 description: "Calculate fractional CTO ROI for your startup with data-driven framework. Real client results show positive ROI within 3-6 months by avoiding $180K+ in technical debt and preventing $250K+ hiring mistakes."
 slug: "fractional-cto-roi-calculator-startup-decision-framework"
@@ -9,6 +10,8 @@ date: "2025-10-14"
 created_at: '2025-10-14T23:01:00Z'
 author: "JetThoughts"
 draft: false
+metatags:
+  image: cover.png
 ---
 
 # Fractional CTO ROI Calculator: When Does Part-Time Technical Leadership Pay Off?
