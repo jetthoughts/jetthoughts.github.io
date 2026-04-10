@@ -71,11 +71,11 @@ This is the part most guides skip. Do this tonight — before they know.
 
 **Repository access.** Log into GitHub (or wherever the code lives). Can you see the repositories? Do you have admin rights? If not, request access in writing tomorrow morning — casually, not as an ultimatum. "Hey, for our records, can you add me as an admin on the repos?" Get this before you announce anything.
 
-**Make a list of everything they control.** Hosting (AWS, Heroku, DigitalOcean). Domain registrar. DNS settings. SSL certificates. Email provider. Payment processor API keys. Analytics accounts. For each one: do you have the login? Is it under your email or theirs? Transfer anything under their email to yours. Tonight.
+**Make a list of everything they control.** Hosting (AWS, Heroku, DigitalOcean). Domain registrar. DNS settings. SSL certificates. Email provider. Payment processor API keys. Analytics accounts. You probably don't even know all the services they signed up for on your behalf. [Nudge Security](https://www.nudgesecurity.com/) can find every SaaS account connected to your email — free trial, takes five minutes, no technical setup. For each account: do you have the login? Is it under your email or theirs? Transfer anything under their email to yours. Tonight.
 
-**Export your data.** Production database. User records. Uploaded files. Third-party integrations. Don't assume you can get this later. I've seen agencies go silent after a termination notice. Get it while the relationship is still cordial.
+**Export your data.** Production database. User records. Uploaded files. Third-party integrations. Don't assume you can get this later — I've seen agencies go silent after a termination notice. If your app runs on Heroku, AWS, or DigitalOcean, [SimpleBackups](https://simplebackups.com/) can automate database exports via a point-and-click UI (free tier available, paid from $29/month). Get it while the relationship is still cordial.
 
-**Ask for documentation.** Architecture diagrams. API docs. Deployment procedures. Setup instructions. If none exist? That tells you everything you need to know. But ask anyway — it's on the record.
+**Ask for documentation.** Architecture diagrams. API docs. Deployment procedures. Setup instructions. They probably don't have any. Here's the workaround: if your code is on GitHub, paste the repo URL into [DeepWiki](https://deepwiki.com/) — it generates a navigable wiki from your codebase in minutes. It won't replace real documentation, but it gives your next team a starting point instead of nothing. [Swimm](https://swimm.io/) does something similar and keeps docs in sync as code changes (free tier for small teams).
 
 **Send a formal termination letter.** Most contracts require 15-30 days written notice. Reference the specific clause. Keep it factual. No blame, no emotion. "Per Section 12.3 of our agreement dated X, this letter serves as 30-day notice of termination, effective Y."
 
@@ -109,7 +109,7 @@ Can't find someone today? Start here:
 - **[Codacy](https://www.codacy.com)** — automated code quality scanning. Free tier available. Dashboard is readable.
 - **[Codekeeper](https://codekeeper.co)** — code escrow. Makes daily copies of your repo automatically. From $129/month. Set this up *before* you send the termination email.
 
-Need a fractional CTO to navigate the transition? [Toptal](https://www.toptal.com) matches within 48 hours. Or browse the free directory at [FractionalCTOs.org](https://fractionalctos.org).
+Need someone to navigate the transition — audit the code, talk to both teams, tell you in plain English what you're actually working with? [That's what we do](https://jetthoughts.com/contact-us/). We've handled this exact handoff dozens of times and can start within 48 hours.
 
 And one thing that costs nothing: make sure your repository lives in a [GitHub Organization you own](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository), not your agency's personal account. If you do nothing else from this article, do that. Do it now.
 
