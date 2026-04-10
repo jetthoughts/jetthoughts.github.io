@@ -19,7 +19,7 @@ Your background jobs lie to you.
 
 You tell yourself they're idempotent. You tell yourself retries are safe. Then a [Kamal](/blog/kamal-integration-in-rails-8-by-default-ruby/) deploy kicks off at 2pm, a 40-minute import job gets 30 seconds to shut down, and the whole thing restarts from row one on the next container. Your users wait. Your database works twice. Your server bill grows.
 
-Rails 8.1 Active Job Continuations fix this. Not with a plugin. Not with a pattern. With a first-class API called `ActiveJob::Continuable` that lets a job resume from its last completed step instead of starting over.
+Rails 8.1 fixes this with a first-class API called `ActiveJob::Continuable`. Include it in a job, define steps, and if the process dies mid-run, the retry picks up where it left off instead of starting over.
 
 Here's what changed, why it matters more than it sounds, and exactly how to wire it into jobs you already have.
 
@@ -34,9 +34,9 @@ Before Active Job Continuations, a "safe" long-running job looked like this:
 
 Every mature Rails team has written this code. Every mature Rails team has debugged it at 3am. The Rails core team noticed.
 
-Rails 8.1 shipped October 24, 2025, with a new module: `ActiveJob::Continuable`. Jobs that include it can define discrete steps. If the job is interrupted mid-run, previously completed steps are skipped on retry. In-progress steps resume from the last recorded cursor.
+October 2025: Rails 8.1 shipped `ActiveJob::Continuable`. Jobs that include it can define discrete steps. If the job is interrupted mid-run, previously completed steps are skipped on retry. In-progress steps resume from the last recorded cursor.
 
-No more custom progress tables. No more manual resume logic. Just checkpoints.
+Custom progress tables and manual resume logic go away. You get checkpoints instead.
 
 ## The API in 30 Seconds
 
@@ -65,11 +65,11 @@ end
 
 Three steps. If the process dies between "process_orders" and "notify_finance", the retry skips the first two steps entirely and jumps straight to the mailer. If the process dies halfway through "process_orders", the retry resumes at the exact order index where the cursor stopped.
 
-This is the whole API surface. There's nothing hidden.
+That's the whole API. No surprises.
 
 ## Why This Matters More Than It Sounds
 
-Rails teams tend to underreact to this feature. "We already use Sidekiq retries. We're fine."
+Rails teams tend to underreact to this feature. "We already use [Sidekiq](/blog/solid-queue-vs-sidekiq-complete-comparison/) retries. We're fine."
 
 You're not fine. Here's why.
 
@@ -77,7 +77,7 @@ You're not fine. Here's why.
 
 Kamal — the default Rails 8 deployment tool — gives job-running containers 30 seconds to exit gracefully on deploy. Not 30 minutes. Thirty seconds. If your nightly report job is 20 minutes in when the deploy hits, it's dead. The standard Sidekiq retry starts it from the beginning. You've just done the work twice and delayed the deploy while the second run catches up.
 
-Continuations turn that restart into a resume. The deploy still kills the worker. The retry still fires. But the work already done stays done.
+Continuations turn that restart into a resume. The deploy still kills the worker. The retry still fires. But the work already done stays done. (For automating those deploys, see our guide on [Kamal 2 with GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).)
 
 ### 2. The Server Cost Is Quiet but Real
 
@@ -203,9 +203,9 @@ Don't refactor every job on day one. Do the nightly batch, the nightly reconcili
 
 ## The Real Win
 
-Active Job Continuations aren't a performance feature. They're an honesty feature.
+Continuations aren't really a performance feature. They're a clarity feature.
 
-They force you to be explicit about where your job can be interrupted. They force you to name the phases. They force you to think about what "done" means at each step. That clarity is worth more than the server cost savings — and the server cost savings are already worth the migration.
+The real value isn't the compute savings. It's that adding `step` blocks makes you be explicit about where your job can be interrupted, what each phase actually does, and what "done" means at each checkpoint. That clarity pays for itself even if you never get interrupted.
 
 Rails 8.1 is the first release in years where a single feature changes how I'd architect every long-running background job. Continuations is that feature.
 
