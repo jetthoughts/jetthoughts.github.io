@@ -45,7 +45,7 @@ When writing a blog post and looking for internal links, **always use claude-con
 ```
 Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "transparency weekly reports"
 ```
-For exact slug/tag lookups, see the post index at `content/blog/_index_for_agents.md` (584 posts, 135 tags, process posts table).
+For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (584 posts, 135 tags, process posts table).
 **Never guess slugs** — verify with `ls content/blog/<slug>/index.md` before linking.
 
 ## 🧪 TDD & Testing
