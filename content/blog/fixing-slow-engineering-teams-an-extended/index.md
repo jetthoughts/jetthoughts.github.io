@@ -5,7 +5,7 @@ remote_id: 2609901
 dev_to_id: 2609901
 dev_to_url: https://dev.to/jetthoughts/fixing-slow-engineering-teams-an-extended-field-guide-for-founders-4g6l
 title: Fixing Slow Engineering Teams — An Extended Field Guide for Founders
-description: 'TL;DR — Series A companies often stall out after product‑market fit: deadlines slip, vendor hand‑offs...'
+description: 'A field guide for founders fixing slow engineering teams. Move from monthly releases to daily deploys in 60 days using squads, Shape Up, Kanban, TDD, and CI/CD.'
 created_at: '2025-06-20T16:16:34Z'
 edited_at: '2025-06-21T16:04:36Z'
 draft: false

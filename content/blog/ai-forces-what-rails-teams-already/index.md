@@ -5,7 +5,7 @@ remote_id: 2885479
 dev_to_id: 2885479
 dev_to_url: https://dev.to/jetthoughts/ai-forces-what-rails-teams-already-knew-small-teams-ship-faster-3k3g
 title: 'AI Forces What Rails Teams Already Knew: Small Teams Ship Faster'
-description: I found this discussion last week and it crystallized something that's been percolating in the...
+description: 'AI exposes what Rails teams learned years ago: small teams ship faster than bloated orgs. See why bureaucratic overhead kills velocity more than tech debt.'
 created_at: '2025-10-02T15:05:46Z'
 draft: false
 date: 2025-10-02

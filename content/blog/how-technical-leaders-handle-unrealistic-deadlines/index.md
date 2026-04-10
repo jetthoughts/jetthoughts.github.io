@@ -5,7 +5,7 @@ remote_id: 3036435
 dev_to_id: 3036435
 dev_to_url: https://dev.to/jetthoughts/how-technical-leaders-handle-unrealistic-deadlines-in-saas-without-burning-out-the-team-4pkm
 title: How Technical Leaders Handle Unrealistic Deadlines in SaaS (Without Burning Out the Team)
-description: 'Every SaaS team hits the same moment sooner or later:  Sales is racing. Developers are...'
+description: 'Practical strategies for technical leaders facing unrealistic deadlines in SaaS. Align sales and engineering teams without burning out your developers.'
 created_at: '2025-11-18T23:59:02Z'
 date: '2025-11-18'
 draft: false

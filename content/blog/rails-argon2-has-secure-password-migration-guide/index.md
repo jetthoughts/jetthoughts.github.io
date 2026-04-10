@@ -1,6 +1,6 @@
 ---
 title: "Rails `has_secure_password` with Argon2: Complete Migration Guide"
-description: "Learn how to use built-in Argon2 with `has_secure_password` in modern Rails, migrate safely from BCrypt, and roll out with zero downtime."
+description: "Step-by-step guide to enabling Argon2 with has_secure_password in Rails. Migrate from BCrypt with zero downtime using the Hybrid Verifier pattern in production."
 date: 2026-04-09
 draft: false
 tags: ["rails", "ruby", "security", "authentication", "argon2", "has_secure_password"]

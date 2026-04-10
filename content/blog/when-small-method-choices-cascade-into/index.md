@@ -5,7 +5,7 @@ remote_id: 2818067
 dev_to_id: 2818067
 dev_to_url: https://dev.to/jetthoughts/when-small-method-choices-cascade-into-big-performance-wins-1e87
 title: When Small Method Choices Cascade Into Big Performance Wins
-description: Three months ago, I spent an embarrassing amount of time optimizing a complex Redis caching layer -...
+description: 'How one Ruby method change from gsub to tr cut CPU usage by 40%. Real examples of small method choices that cascade into big performance wins in Rails apps.'
 created_at: '2025-09-03T21:45:05Z'
 draft: false
 date: 2025-09-03
