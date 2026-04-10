@@ -5,7 +5,7 @@ remote_id: 2504047
 dev_to_id: 2504047
 dev_to_url: https://dev.to/jetthoughts/from-pitfalls-to-profit-how-to-successfully-implement-async-3j6l
 title: 'From Pitfalls to Profit: How to Successfully Implement Async'
-description: TL;DR    Despite promising $3.2M in annual savings for a 60-person team, 68% of async...
+description: Why 68% of async transitions fail and how companies like GitLab and Doist avoided the pitfalls to save up to $22,500 per employee annually.
 created_at: '2025-05-19T23:55:29Z'
 edited_at: '2025-05-23T14:03:44Z'
 draft: false

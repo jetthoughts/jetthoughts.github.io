@@ -5,7 +5,7 @@ remote_id: 2518472
 dev_to_id: 2518472
 dev_to_url: https://dev.to/jetthoughts/the-future-of-compliance-and-audit-how-ai-is-changing-the-game-1ok1
 title: 'The Future of Compliance and Audit: How AI is Changing the Game'
-description: Explore how AI and automation are transforming compliance and audit processes, making them more efficient and less time-consuming.
+description: How AI and automation are reshaping compliance and audit for nearly 4 million professionals, cutting manual work across GDPR, AML, and ESG reporting.
 created_at: '2025-05-23T11:37:16Z'
 edited_at: '2025-05-23T14:03:22Z'
 date: 2025-05-23

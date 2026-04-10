@@ -5,7 +5,7 @@ remote_id: 2559457
 dev_to_id: 2559457
 dev_to_url: https://dev.to/jetthoughts/vertical-ai-agents-4lf6
 title: Vertical AI Agents
-description: 'At a recent event, a founder asked Sam Altman "If you were 24 and starting a startup today, what would you build?" His answer: A vertical AI agent.'
+description: Sam Altman says vertical AI agents are the top startup opportunity right now. Learn what they are, why they work, and how to build one for a specific industry.
 created_at: '2025-06-03T16:33:51Z'
 edited_at: '2025-06-04T03:28:17Z'
 date: 2025-06-03
