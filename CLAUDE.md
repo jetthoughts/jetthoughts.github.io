@@ -18,6 +18,7 @@ Always read these files before making changes. They define the project's archite
 | `@themes/beaver/layouts/partials/page/cover_image.html` | Blog post cover rendering |
 | `@.stitch/design.md` | Cover image generation |
 | `@docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` | ANY content, blog post, design, landing page, or marketing work |
+| `@docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md` | Writing the next blog post or planning content |
 | `@bin/hugo-build` | Build/deploy workflow |
 | `@Rakefile` | Test workflow |
 | `@test/test_helper.rb` | Writing new tests |
@@ -66,6 +67,7 @@ Follow official methodology from `/knowledge/`:
 - CSS consolidation rules: `docs/workflows/css-consolidation.md`
 - Blog pipeline: `docs/workflows/blog-pipeline.md`
 - Cover images: `docs/workflows/cover-images.md` (canonical spec remains `.stitch/design.md`)
+- **Content plan (active)**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
 - Commands & hooks overview: `docs/workflows/commands.md`
 - Agent strategy: `docs/workflows/agents.md`
 
