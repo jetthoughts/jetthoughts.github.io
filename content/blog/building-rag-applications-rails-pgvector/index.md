@@ -10,11 +10,11 @@ metatags:
   image: cover.png
 ---
 
-Traditional keyword search struggles to understand user intent. When someone searches "best pizza spots" versus "top-rated pizzerias," your app should know these mean the same thing. That's where Retrieval Augmented Generation (RAG) comes in.
+Your users search "best pizza spots" and get zero results because your database only has "top-rated pizzerias." Keyword search doesn't understand meaning—it matches strings. For most Rails apps, that's been good enough. Until your users start expecting natural language answers.
 
-RAG combines semantic search with AI-generated responses, letting your Rails app understand meaning, not just match keywords. This guide shows you how to build a production-ready RAG system using pgvector—a PostgreSQL extension that brings vector similarity search directly into your database.
+RAG (Retrieval Augmented Generation) combines semantic search with AI-generated responses. Instead of matching keywords, your app matches meaning. The interesting part for Rails developers: you can do this with pgvector inside your existing PostgreSQL database. No Pinecone, no Weaviate, no extra infrastructure.
 
-By the end of this tutorial, you'll have a working document Q&A system that understands natural language queries and generates accurate, context-aware answers using your own data.
+This guide builds a document Q&A system from scratch—pgvector setup, embedding generation, chunking strategy, and the full RAG pipeline. Working code, not hand-waving.
 
 ## Prerequisites
 
@@ -115,7 +115,7 @@ class EmbeddingService
 end
 ```
 
-The `text-embedding-3-small` model is cost-effective and performs well for most use cases. For production apps, consider batch processing multiple texts in a single API call to reduce latency.
+The `text-embedding-3-small` model is cost-effective and performs well for most use cases. For production apps, consider batch processing multiple texts in a single API call to reduce latency. If you're evaluating AI agent frameworks for more complex workflows, see our [comparison of AutoGen, CrewAI, and LangGraph](/blog/autogen-crewai-langgraph-ai-agent-frameworks-2025/).
 
 ### Storing Document Vectors
 
@@ -325,7 +325,7 @@ class RagService
 end
 ```
 
-The low temperature (0.3) makes responses more deterministic and factual. Higher values increase creativity but might introduce hallucinations.
+The low temperature (0.3) makes responses more deterministic and factual. Higher values increase creativity but might introduce hallucinations. For a broader look at integrating LLMs into Rails apps, see our [guide to working with LLMs in Rails](/blog/working-with-llms-in-ruby-on-rails-simple-guide-llm/).
 
 ### Rails Controller Integration
 
@@ -377,7 +377,7 @@ curl -X POST http://localhost:3000/api/rag/query \
 
 ### Caching Embeddings
 
-Generating embeddings costs money and time (50-200ms per request). For frequently queried content, implement caching:
+Generating embeddings costs money and time (50-200ms per request). Managing those API costs is critical—see our [guide to LLM token cost optimization](/blog/cost-optimization-llm-applications-token-management/) for strategies that apply here. For frequently queried content, implement caching:
 
 ```ruby
 # app/services/cached_embedding_service.rb
@@ -574,7 +574,7 @@ class AddVectorIndexes < ActiveRecord::Migration[7.1]
 end
 ```
 
-IVFFlat indexes trade accuracy for speed. They partition vectors into clusters (lists), then search only relevant clusters. More lists = better accuracy but slower search.
+IVFFlat indexes trade accuracy for speed. They partition vectors into clusters (lists), then search only relevant clusters. More lists = better accuracy but slower search. The same performance-vs-accuracy tradeoff applies when [scaling Rails to handle more users](/blog/rails-performance-at-scale-10k-to-1m-users-roadmap/)—measure before optimizing.
 
 Monitor query performance:
 
@@ -643,6 +643,18 @@ Performance metrics for this system:
 - **Total query time**: 1.5-4 seconds
 - **Cost per query**: ~$0.002 (OpenAI API pricing)
 
+## When NOT to Use pgvector for RAG
+
+pgvector is a great fit for Rails apps that already run PostgreSQL and need semantic search over thousands to low millions of vectors. But it's not the right tool for every situation:
+
+- **Large-scale vector search (10M+ vectors).** pgvector's IVFFlat and HNSW indexes work well up to a few million rows. Beyond that, query latency and index build times grow significantly. Dedicated vector databases like Pinecone, Weaviate, or Qdrant are built for this scale.
+- **High-dimensional embeddings (2000+ dimensions).** pgvector handles 1536 dimensions (OpenAI's default) fine. If you're using models that produce 4096+ dimensional vectors, the storage and query overhead in PostgreSQL becomes substantial. Consider dimensionality reduction or a specialized vector store.
+- **Multi-tenant vector isolation.** If you need strict tenant-level isolation for vector data (separate indexes per tenant), pgvector's shared-index model makes this harder. You'd need separate schemas or databases, which adds operational complexity.
+- **Real-time embedding updates at high throughput.** If your app ingests thousands of documents per minute and needs immediately searchable embeddings, pgvector's index rebuild characteristics may cause query latency spikes. Dedicated vector databases handle continuous ingestion more gracefully.
+- **You don't use PostgreSQL.** If your Rails app runs on MySQL or SQLite, adding PostgreSQL just for pgvector introduces unnecessary infrastructure. Consider a standalone vector service instead.
+
+The honest assessment: pgvector covers 80% of RAG use cases for Rails apps. If you're building a startup MVP or adding semantic search to an existing product, start here. Migrate to a dedicated vector database only when you hit pgvector's limits—not before.
+
 ## Troubleshooting Common Issues
 
 ### Embeddings returning null vectors
@@ -696,32 +708,30 @@ end
 
 ## Conclusion
 
-You've built a production-ready RAG system that combines PostgreSQL's vector capabilities with OpenAI's language models. Your Rails app can now understand semantic queries, retrieve relevant context, and generate accurate answers based on your documentation.
+That's a working RAG pipeline: pgvector for storage and search, OpenAI for embeddings and generation, Rails for everything else. No external vector database, no new infrastructure to manage.
 
-Key takeaways:
-- pgvector eliminates the need for external vector databases
-- Chunking documents improves retrieval precision
-- Caching and background jobs optimize performance
-- Proper indexing makes vector search fast enough for production
+What matters most in practice:
+- Chunk size determines retrieval quality—start at 300 tokens and tune based on your content
+- Cache embeddings aggressively, especially for repeated queries
+- Move embedding generation to background jobs before you hit scale
+- Add IVFFlat indexes when query latency matters (it will, eventually)
 
 ### Next Steps
 
 **Enhance retrieval quality**:
-- Implement [hybrid search](https://www.jetthoughts.com/blog/combining-keyword-semantic-search-rails/) (combine keyword + vector search)
+- Combine keyword + vector search (hybrid search) for better coverage
 - Add [cross-encoder reranking](https://www.sbert.net/examples/applications/cross-encoder/README.html) for better relevance
 - Experiment with metadata filtering (date ranges, categories)
 
 **Improve answer generation**:
-- Stream responses with [ActionCable](https://www.jetthoughts.com/blog/actioncable-real-time-features/) for better UX
+- Stream responses with ActionCable for better UX
 - Add citation tracking (which chunks informed the answer)
 - Implement conversation history for multi-turn dialogues
 
 **Scale for production**:
 - Monitor vector index performance with [pganalyze](https://pganalyze.com/)
-- Implement query analytics with [Ahoy](https://www.jetthoughts.com/blog/analytics-tracking-rails-ahoy/)
-- Add [Sidekiq Pro](https://www.jetthoughts.com/blog/sidekiq-optimization/) for better job management
-
-Have questions about implementing RAG in your Rails app? [Contact JetThoughts](https://www.jetthoughts.com/contact-us/) for consulting and development services.
+- Move embedding generation to Sidekiq background jobs
+- Track API costs and token usage to keep spending predictable
 
 ---
 

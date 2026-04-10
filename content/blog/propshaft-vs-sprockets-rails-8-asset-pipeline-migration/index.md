@@ -17,17 +17,17 @@ metatags:
   twitter_description: "Complete guide: Propshaft migration, performance benchmarks, production deployment for Rails 8 applications"
 ---
 
-Rails 8 introduces Propshaft as the default asset pipeline, marking a significant shift from the Sprockets-based approach that has served Rails applications for over a decade. This change reflects modern web development practices where HTTP/2 multiplexing and import maps make asset concatenation less critical, while simplicity and build speed become paramount.
+Your Sprockets precompile takes 60 seconds. You change one CSS variable. Sixty seconds again. Every deploy, every CI run, every developer on the team—waiting.
 
-If you're running a Rails application built before Rails 7.1, you're likely using Sprockets for asset compilation. The migration to Propshaft offers substantial benefits: faster build times, simpler configuration, better HTTP/2 support, and reduced complexity. However, it also requires understanding the fundamental differences between these two asset pipeline approaches and planning a careful migration strategy.
+Propshaft replaces Sprockets as the default asset pipeline in Rails 8, and the difference is dramatic: in our experience, build times drop from 45-60 seconds to under 5 seconds for medium-sized apps. But Propshaft isn't a drop-in replacement. It removes features you might depend on—Sass compilation, CoffeeScript transpilation, asset concatenation. If you migrate without understanding these tradeoffs, you'll break your app.
 
-This comprehensive guide walks you through everything you need to know about migrating from Sprockets to Propshaft in Rails 8, including performance benchmarks, step-by-step migration procedures, and production deployment best practices.
+This guide walks through migrating from Sprockets to Propshaft: what changes, what breaks, how to fix it, and when to stay on Sprockets.
 
 ## The Problem with Sprockets in Modern Rails Applications
 
 Sprockets was designed in an era when HTTP/1.1 connection limits made asset concatenation essential for performance. Bundling all JavaScript and CSS into single files reduced the number of HTTP requests, significantly improving page load times. However, modern web development has evolved beyond these constraints.
 
-#### HTTP/2's Paradigm Shift
+#### How HTTP/2 Changed the Calculus
 
 HTTP/2 introduced multiplexing, allowing multiple asset requests over a single connection without performance penalties. The old practice of concatenating all assets into massive `application.js` and `application.css` files now creates problems:
 
@@ -56,7 +56,7 @@ This manifest triggers a complex compilation process:
 4. **Minification**: Processes the entire bundle through compression
 5. **Digest generation**: Creates fingerprinted filenames
 
-Our benchmarks show this process taking **45-60 seconds** on moderate-sized applications with 200+ assets. For larger applications, precompilation can exceed **2 minutes**, significantly impacting deployment pipelines and developer productivity.
+In our experience, this process takes **45-60 seconds** on moderate-sized applications with 200+ assets. For larger applications, precompilation can exceed **2 minutes**, dragging down every deploy and CI run.
 
 #### The Maintenance Burden
 
@@ -73,9 +73,7 @@ Rails.application.config.assets.css_compressor = :sass
 Rails.application.config.assets.js_compressor = :terser
 ```
 
-This configuration grows increasingly complex as applications scale, requiring specialized knowledge to maintain and debug.
-
-For teams struggling with asset pipeline complexity and long build times, our [technical leadership consulting](/services/technical-leadership-consulting/) helps evaluate whether Propshaft migration makes sense for your specific application architecture and business requirements.
+This configuration grows increasingly complex as applications scale, requiring specialized knowledge to maintain and debug. If you're also managing [Hotwire and Turbo integration](/blog/hotwire-turbo-8-performance-patterns-real-time-rails/), the asset pipeline complexity compounds.
 
 ## Understanding Propshaft's Modern Approach
 
@@ -147,7 +145,7 @@ The simplified pipeline eliminates multiple processing stages, reducing build co
 <%= stylesheet_link_tag "components/footer", "data-turbo-track": "reload" %>
 ```
 
-HTTP/2 multiplexing makes multiple stylesheet requests performant, while providing better cache granularity.
+HTTP/2 multiplexing makes multiple stylesheet requests more efficient than under HTTP/1.1, while providing better cache granularity. That said, HTTP/2 doesn't eliminate all overhead from many small requests—benchmark your own app to confirm the tradeoff works for your asset count and sizes.
 
 #### JavaScript Management with Import Maps
 
@@ -212,7 +210,7 @@ user    0m2.845s
 sys     0m1.283s
 ```
 
-**92% faster build times** dramatically improve deployment speed and developer feedback loops.
+In our testing, that's a 92% reduction in build time. If you're deploying with [Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/), faster asset compilation means faster deploys across the board.
 
 #### Memory Usage During Compilation
 
@@ -247,7 +245,7 @@ Page Load with Propshaft (individual files, HTTP/2 multiplexing):
   - Cache miss (after change): 0.4s (re-download only changed files)
 ```
 
-Individual file serving with HTTP/2 multiplexing provides **25% faster initial loads** and **83% faster cache-miss scenarios** when assets change.
+In our testing, individual file serving with HTTP/2 multiplexing provided roughly 25% faster initial loads and significantly faster cache-miss scenarios when assets change—because only the changed file gets re-downloaded. Your results will vary based on asset count, file sizes, and CDN configuration. Benchmark your own app before and after migration to confirm the gains.
 
 ### What Propshaft Doesn't Do
 
@@ -326,9 +324,21 @@ namespace :assets do
 end
 ```
 
+### When NOT to Migrate to Propshaft
+
+Propshaft isn't the right move for every Rails app. Stay on Sprockets if:
+
+- **Your app relies heavily on Sass/SCSS features** like mixins, functions, and `@extend` across dozens of files. You'll need to add `sassc-rails` or `dartsass-rails` as a separate build step, and if Sass is deeply embedded in your workflow, the migration cost may not justify the build-time savings.
+- **You're on HTTP/1.1 and can't upgrade.** Propshaft's individual-file serving strategy assumes HTTP/2 multiplexing. Without it, you'll make more round trips and likely see worse performance than a concatenated Sprockets bundle.
+- **You depend on Sprockets plugins** (`sprockets-es6`, `sprockets-bumble_d`, custom processors). Propshaft has no plugin system—you'll need to replace each one with an external build tool.
+- **Your team is mid-feature-sprint and the asset pipeline works fine.** Migration is a distraction when Sprockets isn't causing actual pain. Ship the feature first.
+- **You're running Rails 6 or earlier.** Propshaft targets Rails 7+. Upgrade Rails first, stabilize, then consider asset pipeline changes.
+
+The honest test: if `bin/rails assets:precompile` finishes in under 10 seconds and your deploy pipeline isn't bottlenecked on assets, Propshaft migration is a nice-to-have, not a must-have.
+
 ## Step-by-Step Migration from Sprockets to Propshaft
 
-Migrating an existing Rails application from Sprockets to Propshaft requires systematic planning and execution. This step-by-step guide ensures a smooth transition with minimal disruption.
+Migrating from Sprockets to Propshaft requires systematic planning. If you're also upgrading Rails versions, handle that first—see [Rails performance optimization patterns](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) for the broader picture.
 
 ### Phase 1: Pre-Migration Assessment
 
@@ -341,7 +351,7 @@ $ find app/assets -type f | wc -l
 $ cat app/assets/config/manifest.js
 ```
 
-Create a comprehensive inventory:
+Create a full inventory:
 
 ```ruby
 # lib/tasks/asset_audit.rake
@@ -780,7 +790,7 @@ end
 
 ## Production Case Studies and Real-World Results
 
-Understanding how other teams have successfully migrated to Propshaft provides valuable insights and confidence for your own migration journey.
+Here's what we've seen in actual migrations. If you're also containerizing your Rails app, check our [Rails 8 Docker deployment guide](/blog/rails-8-docker-deployment-production-guide/) for how Propshaft interacts with Docker-based builds.
 
 ### Case Study 1: E-Commerce Platform Migration
 
@@ -1096,7 +1106,7 @@ final_results = {
 
 These real-world case studies demonstrate that Propshaft migration, while requiring careful planning, delivers substantial benefits across build performance, runtime efficiency, and developer productivity.
 
-For complex migrations requiring strategic planning and execution expertise, our [expert Ruby on Rails development team](/services/app-web-development/) provides comprehensive migration support, from initial assessment through production deployment, ensuring optimal outcomes while minimizing business disruption and technical risks.
+If you're planning a large-scale migration and want a second pair of eyes, our [Rails development team](/services/app-web-development/) has done this migration dozens of times.
 
 ## Troubleshooting Common Migration Issues
 
@@ -1549,7 +1559,7 @@ A: Based on our case studies:
 
 #### Q: How do I handle CDN configuration?
 
-A: Propshaft works seamlessly with CDNs:
+A: Propshaft works well with CDNs:
 
 ```ruby
 # config/environments/production.rb
@@ -1605,12 +1615,6 @@ $ RAILS_ENV=production bin/rails assets:precompile
 
 ---
 
-Migrating from Sprockets to Propshaft represents a significant modernization of your Rails asset pipeline, aligning your application with current web standards and best practices. The benefits—dramatically faster builds, simpler configuration, better caching, and improved runtime performance—make this migration worthwhile for most Rails applications.
+Propshaft is simpler, faster, and the right default for new Rails 8 apps. For existing apps on Sprockets, the migration is worth it when asset compilation is a real bottleneck—not before.
 
-The key to success lies in systematic planning: thoroughly assess your current asset stack, prepare your application with necessary preprocessors, execute the migration in phases, and validate thoroughly before production deployment. Real-world case studies demonstrate that teams who invest in proper preparation achieve smooth migrations with substantial performance and productivity improvements.
-
-Start with comprehensive assessment, follow the step-by-step migration guide, leverage the troubleshooting solutions for common issues, and monitor carefully post-deployment. The investment in Propshaft migration pays dividends through faster development cycles, reduced infrastructure complexity, and improved user experience.
-
-For teams undertaking complex Rails modernization initiatives or requiring expert guidance through asset pipeline migration, our [expert Ruby on Rails development team](/services/app-web-development/) provides comprehensive migration support, from initial assessment through production deployment and performance optimization, ensuring successful outcomes while maintaining business continuity.
-
-**JetThoughts Team** specializes in Rails application modernization and performance optimization. We help development teams navigate complex migrations while maintaining application stability and business operations.
+Assess your asset stack first. Run `bin/rails assets:precompile` and time it. If it hurts, migrate. If it doesn't, ship features instead and revisit later. When you do migrate, do it in phases: swap the gem, fix broken paths, test in staging, then deploy. The [Kamal 2 deployment guide](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/) covers how to automate the deploy side of this transition.
