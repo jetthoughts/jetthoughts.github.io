@@ -17,6 +17,7 @@ Always read these files before making changes. They define the project's archite
 | `@themes/beaver/layouts/partials/seo/enhanced-meta-tags.html` | SEO/og:image/meta tag changes |
 | `@themes/beaver/layouts/partials/page/cover_image.html` | Blog post cover rendering |
 | `@.stitch/design.md` | Cover image generation |
+| `@docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` | ANY content, blog post, design, landing page, or marketing work |
 | `@bin/hugo-build` | Build/deploy workflow |
 | `@Rakefile` | Test workflow |
 | `@test/test_helper.rb` | Writing new tests |
@@ -94,3 +95,4 @@ Follow official methodology from `/knowledge/`:
 
 **Coverage**: Full codebase indexed (830+ files, 4,184+ semantic chunks)
 **Design System**: JetVelocity — obsidian dark, Ruby red (#cc342d), neon purple (#a855f7). See `.stitch/design.md`
+**ICP**: Non-technical founder burned by a devshop. See `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
