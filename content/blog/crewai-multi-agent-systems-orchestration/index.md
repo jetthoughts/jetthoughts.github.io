@@ -12,6 +12,7 @@ tags:
 - agents
 canonical_url: https://jetthoughts.com/blog/crewai-multi-agent-systems-orchestration/
 slug: crewai-multi-agent-systems-orchestration
+cover_image: "cover.png"
 metatags:
   description: "Build scalable multi-agent AI systems with CrewAI. Step-by-step tutorial covering agent specialization, task orchestration, and production deployment patterns for customer support, content creation, and financial analysis."
   image: cover.png

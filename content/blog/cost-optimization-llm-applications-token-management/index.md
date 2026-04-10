@@ -6,9 +6,9 @@ created_at: '2025-10-15T19:00:00Z'
 draft: false
 tags: ['ai', 'llm', 'cost-optimization', 'langchain', 'machine-learning']
 canonical_url: https://jetthoughts.com/blog/cost-optimization-llm-applications-token-management/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/cost-optimization-llm-applications-token-management/cover.jpeg
+cover_image: "cover.png"
 metatags:
-  image: cover.jpeg
+  image: cover.png
 slug: cost-optimization-llm-applications-token-management
 ---
 

@@ -16,6 +16,9 @@ tags:
 - learning
 canonical_url: https://dev.to/jetthoughts/the-ai-agent-onboarding-problem-the-real-version-4m5l
 slug: ai-agent-onboarding-problem-real-version
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 So you asked about AI agents and onboarding, and honestly? We screwed this up for like three months before we figured it out.
 

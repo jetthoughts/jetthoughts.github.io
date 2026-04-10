@@ -12,9 +12,9 @@ draft: false
 date: 2025-06-10
 tags: []
 canonical_url: https://jetthoughts.com/blog/rise-of-open-source-ai-opportunities/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/rise-of-open-source-ai-opportunities/cover.jpeg
+cover_image: cover.png
 metatags:
-  image: cover.jpeg
+  image: cover.png
 slug: rise-of-open-source-ai-opportunities
 ---
 [![The Rise of Open Source AI: Opportunities for Startups](file_0.jpg)](https://www.youtube.com/watch?v=xkweKRfUb5Y)

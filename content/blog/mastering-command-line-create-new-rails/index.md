@@ -12,9 +12,9 @@ edited_at: '2025-06-12T12:02:19Z'
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/mastering-command-line-create-new-rails/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/mastering-command-line-create-new-rails/cover.jpeg
+cover_image: "cover.png"
 metatags:
-  image: cover.jpeg
+  image: cover.png
 slug: mastering-command-line-create-new-rails
 ---
 So, you want to get good at making new Rails apps from the command line? It might seem a bit much at first, with all the words and options, but honestly, it's not that bad. We'll go through everything you need to know, from getting your computer ready to understanding what all those files do. By the time we're done, you'll be able to create new Rails app projects like it's nothing. No more guessing, just making cool stuff.

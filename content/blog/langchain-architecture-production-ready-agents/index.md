@@ -11,9 +11,9 @@ tags:
   - architecture
   - production
 canonical_url: https://jetthoughts.com/blog/langchain-architecture-production-ready-agents/
-cover_image: cover.jpeg
+cover_image: "cover.png"
 metatags:
-  image: cover.jpeg
+  image: cover.png
   description: "Learn how to build production-ready LangChain AI agent systems with Python. Comprehensive error handling, testing strategies, and microservice architecture patterns."
 slug: langchain-architecture-production-ready-agents
 ---

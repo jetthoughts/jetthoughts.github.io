@@ -12,9 +12,9 @@ draft: false
 date: 2025-06-09
 tags: []
 canonical_url: https://jetthoughts.com/blog/engineering-unlocks-behind-deepseek-yc-decoded/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/engineering-unlocks-behind-deepseek-yc-decoded/cover.jpeg
+cover_image: cover.png
 metatags:
-  image: cover.jpeg
+  image: cover.png
 slug: engineering-unlocks-behind-deepseek-yc-decoded
 ---
 [![The Engineering Unlocks Behind DeepSeek | YC Decoded](file_0.jpg)](https://www.youtube.com/watch?v=4Tmn-XP93m4)

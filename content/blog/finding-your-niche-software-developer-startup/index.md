@@ -12,9 +12,9 @@ date: 2025-06-08
 draft: false
 tags: []
 canonical_url: https://jetthoughts.com/blog/finding-your-niche-software-developer-startup/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/finding-your-niche-software-developer-startup/cover.jpeg
+cover_image: "cover.png"
 metatags:
-  image: cover.jpeg
+  image: cover.png
 slug: finding-your-niche-software-developer-startup
 ---
 So, you're thinking about a job in a startup as a software developer? That's a brave move! It's not like working at a big, old company. Startups are a whole different world. They move super fast, you get to do a lot of different things, and your work really matters. This article will tell you all about finding software developer startup jobs in 2025, what to expect, and how to get ahead.

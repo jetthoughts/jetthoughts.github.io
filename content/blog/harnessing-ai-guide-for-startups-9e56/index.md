@@ -12,9 +12,9 @@ draft: false
 date: 2025-06-10
 tags: []
 canonical_url: https://jetthoughts.com/blog/harnessing-ai-guide-for-startups-9e56/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/harnessing-ai-guide-for-startups-9e56/cover.jpeg
+cover_image: cover.png
 metatags:
-  image: cover.jpeg
+  image: cover.png
 slug: harnessing-ai-guide-for-startups-9e56
 ---
 [![Harnessing AI: A Guide for Startups](file_0.jpg)](https://www.youtube.com/watch?v=7Kt9ugD3bGQ)
