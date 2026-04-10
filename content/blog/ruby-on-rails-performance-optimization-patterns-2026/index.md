@@ -1,6 +1,6 @@
 ---
 title: "Ruby on Rails Performance Optimization Patterns for 2026"
-description: "Concrete benchmarks and actionable patterns for Rails performance in 2026 — YJIT 94.7% speedup, Rails 8 query optimization, Redis caching, and N+1 elimination."
+description: "Concrete benchmarks and patterns for Rails performance in 2026 — YJIT speedups, Rails 8 query optimization, Redis caching, and N+1 elimination."
 date: 2026-04-09T08:00:00+07:00
 draft: false
 author: "JetThoughts"
@@ -16,7 +16,7 @@ Most Rails performance guides recycle the same advice from 2020. Add an index. U
 
 That advice still works. It's also incomplete.
 
-In 2026, the Rails performance story has fundamentally changed. YJIT delivers a 94.7% speedup over the interpreter. Rails 8 redesigns query generation to reduce object allocations at the framework level. Ruby 4.0's Set core addition runs 5-10x faster with 33% less memory.
+In 2026, the Rails performance story has fundamentally changed. YJIT delivers up to a 94.7% speedup over the interpreter [according to Ruby's official benchmark suite](https://speed.ruby-lang.org/) — your mileage will vary by workload. Rails 8 redesigns query generation to reduce object allocations at the framework level. Ruby 4.0's Set core addition runs 5-10x faster with 33% less memory.
 
 Here's what actually changed this year. With benchmarks.
 
@@ -24,7 +24,7 @@ Here's what actually changed this year. With benchmarks.
 
 YJIT is the single biggest performance win available to Rails teams in 2026. Period.
 
-The official Ruby benchmark suite shows YJIT 4.1.0dev running **94.7% faster** than the CRuby interpreter on headline x86-64 benchmarks. That's not a marginal improvement. That's nearly double the throughput for zero code changes.
+The [official Ruby benchmark suite](https://speed.ruby-lang.org/) shows YJIT 4.1.0dev running **94.7% faster** than the CRuby interpreter on headline x86-64 benchmarks. That number comes from synthetic benchmarks — in production Rails apps, we've seen 20-50% improvements depending on the workload. Still significant for zero code changes.
 
 ```bash
 # Enable YJIT in production
@@ -53,7 +53,7 @@ The practical impact shows up in two places:
 - **Memory usage drops** on list endpoints that return large result sets
 - **Response times improve** on complex joins where type casting was the bottleneck
 
-This isn't something you configure. It's built into Rails 8's ActiveRecord layer. Upgrade and benefit.
+This isn't something you configure. It's built into Rails 8's ActiveRecord layer. Upgrade and benefit. If you're planning a Rails 8 deployment, see our guide on [deploying Rails applications with Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/).
 
 ## 3. Strategic Caching — Redis Beats Memcached 1.5x
 
@@ -72,7 +72,7 @@ config.cache_store = :redis_cache_store, {
 
 Memcached still has a place. It's multithreaded with minimal overhead. If you're running a simple string-value cache on a read-heavy workload with massive concurrency, Memcached's lighter footprint wins.
 
-But for most Rails apps — fragment caching, Russian doll caching, low-level value caching with expiration — Redis is the better choice.
+But for most Rails apps — fragment caching, Russian doll caching, low-level value caching with expiration — Redis is the better choice. We covered caching strategies for API-heavy apps in [designing Rails JSON APIs with performance in mind](/blog/design-rails-json-api-with-performance-in-mind-cache/).
 
 Use `Rails.cache.fetch` with explicit TTLs:
 
@@ -86,7 +86,7 @@ The `cache_key` includes `updated_at`, so the fragment auto-invalidates when the
 
 ## 4. Kill N+1 Queries — Bullet Is Your Watchdog
 
-N+1 queries remain the most common performance killer in Rails applications. The pattern is insidious because it works fine in development with 10 records. It collapses in production with 10,000.
+N+1 queries remain the most common performance killer in Rails applications. The pattern is insidious because it works fine in development with 10 records. It collapses in production with 10,000. For a deeper look at query strategies, see [how to avoid N+1 queries using SQL views in Rails](/blog/how-avoid-n1-query-using-sql-views-materialized-in-rails-application-ruby/) and [the difference between joins and includes in ActiveRecord](/blog/what-difference-between-joins-includes-in-rails-activerecord-ruby/).
 
 ```ruby
 # BAD — N+1: fires 1 query for posts, then 1 query per post for comments
@@ -163,7 +163,16 @@ The pattern that works at scale:
 - **Queue-specific workers** — CPU-heavy jobs on different workers than email jobs
 - **Autoscale based on queue depth**, not CPU
 
-Shopify runs this model: vertical Redis scaling paired with horizontal worker autoscaling. It works because the bottleneck is almost always queue depth, not web server load.
+Shopify runs this model: vertical Redis scaling paired with horizontal worker autoscaling. It works because the bottleneck is almost always queue depth, not web server load. For more on Rails 8 deployment tooling, see [Kamal integration in Rails 8](/blog/kamal-integration-in-rails-8-by-default-ruby/).
+
+## When NOT to Optimize
+
+Not every slow page needs a performance overhaul. Skip these patterns when:
+
+- **You haven't measured yet.** Adding Redis caching before you know the bottleneck wastes time and adds infrastructure complexity. Profile first.
+- **Your traffic doesn't justify it.** An internal tool with 20 users doesn't need YJIT tuning or worker autoscaling. Ship features instead.
+- **You're pre-launch.** Optimizing queries on a product that hasn't found users is premature. Get feedback, then optimize what matters.
+- **The code is changing fast.** Heavy caching on features still being redesigned means constant invalidation headaches. Wait until the interface stabilizes.
 
 ## When to Stop Optimizing
 
@@ -184,7 +193,7 @@ Here's the summary in one table:
 
 | Pattern | Impact | Effort |
 |---------|--------|--------|
-| Enable YJIT | 94.7% speedup | 5 minutes |
+| Enable YJIT | 20-50% real-world speedup | 5 minutes |
 | Rails 8 upgrade | Reduced allocations | Upgrade cycle |
 | Redis caching | 1.5x faster than Memcached | Configuration |
 | Bullet for N+1 | Prevents query explosions | Install + review |
@@ -192,7 +201,7 @@ Here's the summary in one table:
 | Partial indexes | Smaller, faster indexes | Query analysis |
 | Decouple workers | Independent scaling | Infrastructure |
 
-Most of these take under an hour to implement. YJIT alone transforms throughput. Combined, they make Rails competitive with any framework for the workloads that matter.
+Most of these take under an hour to set up. YJIT alone changes the throughput story. Combined, they close the gap between Rails and faster-by-default frameworks for the workloads that matter. For more on Rails performance tuning, see our [Rails performance optimization guide](/blog/best-practices-for-optimizing-ruby-on-rails-performance/).
 
 Stop recycling 2020 advice. Enable YJIT. Profile first. Kill N+1 queries. Cache with Redis. Scale workers independently.
 

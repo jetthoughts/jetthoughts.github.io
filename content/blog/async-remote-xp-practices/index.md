@@ -19,7 +19,7 @@ Your engineering team spans San Francisco, Warsaw, and Tokyo. Stand-ups happen i
 
 Traditional Extreme Programming (XP) assumes synchronous colocation. Pair programming requires two developers at the same keyboard. Continuous integration depends on immediate feedback loops. Sustainable pace relies on shared working hours.
 
-**How do you maintain XP velocity when your team operates across 3+ timezones?**
+**How do you maintain XP velocity when your team operates across 3+ timezones?** We've written about the [async communication advantage](/blog/async-advantage-how-switching-communication-styles/) before — this guide goes deeper into the XP adaptations that make it work.
 
 This guide provides battle-tested XP adaptations for async-first remote teams. These patterns emerged from our real-world experience migrating 32 CSS layout files across distributed contributors—maintaining zero visual regressions while coordinating work through memory-based handoffs rather than synchronous meetings.
 
@@ -33,7 +33,7 @@ Before adapting XP for remote work, understand why these practices become MORE c
 
 **Continuous Integration** enables async coordination through automation. When builds break, the feedback loop completes within minutes (not hours). CI becomes the team's asynchronous heartbeat—the shared rhythm replacing office presence.
 
-**Sustainable Pace** protects against remote work burnout. Distributed teams face pressure to overlap with multiple timezones, creating 12+ hour "availability windows." XP's sustainable pace mandate becomes a burnout prevention mechanism.
+**Sustainable Pace** protects against remote work burnout. Distributed teams face pressure to overlap with multiple timezones, creating 12+ hour "availability windows." XP's sustainable pace mandate becomes a burnout prevention mechanism. We cover async standups that actually work in [how to make small valuable async standups](/blog/how-make-small-valuable-async-standups-productivity-development/).
 
 According to McKinsey research, remote teams with strong engineering practices maintain 87% of collocated productivity—but only when practices explicitly account for asynchronicity. Without adaptation, productivity drops to 62%.
 
@@ -132,7 +132,7 @@ timezone_overlap_protection:
   burnout_prevention: "7-day rhythm provides natural breakpoints for cross-timezone work"
 ```
 
-**Why 7 Days vs Traditional 2-Week Sprints**: Shorter cycles reduce async coordination overhead. With 3+ timezones, 2-week sprints create 4-6 day handoff delays. 7-day sprints force faster async integration, preventing work from aging across timezone boundaries.
+**Why 7 Days vs Traditional 2-Week Sprints**: Shorter cycles reduce async coordination overhead. With 3+ timezones, 2-week sprints create 4-6 day handoff delays. 7-day sprints force faster async integration, preventing work from aging across timezone boundaries. For the full delivery flow we use across distributed teams, see [delivery flow for distributed remote teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/).
 
 ## Case Study: jt_site CSS Migration
 
@@ -170,7 +170,7 @@ timezone_overlap_protection:
 - **Mean Time to Recovery (MTTR)**: 12 minutes (granular commits enabled fast rollback)
 - **Change Failure Rate**: 0% (visual regression gates prevented all breaking changes)
 
-**Critical Success Factor**: Memory-based coordination enabled seamless async handoffs. Developer in EST stored CSS consolidation patterns. Developer in CET read patterns from memory, applied to next file batch. Developer in JST validated visual regressions and updated memory with lessons learned. The team operated as a continuous workflow spanning 24 hours—without a single synchronous meeting.
+**Critical Success Factor**: Memory-based coordination enabled smooth async handoffs. Developer in EST stored CSS consolidation patterns. Developer in CET read patterns from memory, applied to next file batch. Developer in JST validated visual regressions and updated memory with lessons learned. The team operated as a continuous workflow spanning 24 hours—without a single synchronous meeting.
 
 ## Implementation Guide: 4-Week Roadmap
 
@@ -326,7 +326,7 @@ Most "false positives" indicate legitimate visual changes that should be investi
 - **Day 4-5**: Reverse roles (new developer navigates, reviews experienced developer's commits)
 - **Week 2**: Independent micro-tasks with Screenshot Guardian oversight
 
-Record common onboarding questions in FAQ memory namespace. Each new developer adds their questions and discovered answers—building institutional knowledge accessible across timezones.
+Record common onboarding questions in FAQ memory namespace. Each new developer adds their questions and discovered answers—building institutional knowledge accessible across timezones. We've written more about this in [the real onboarding problem for AI agents and humans alike](/blog/ai-agent-onboarding-problem-real-version/).
 
 ## Conclusion: The Async-First Advantage
 
@@ -342,6 +342,6 @@ Your distributed team isn't a limitation. With adapted XP practices, it's your c
 
 ---
 
-**Ready to implement async XP practices?** Start with our [comprehensive guide to visual regression testing](/blog/visual-regression-testing-guide) or explore our [CSS migration case study documentation](https://github.com/jetthoughts/jetthoughts.github.io/tree/master/docs/projects/2509-css-migration).
+**Ready to try async XP practices?** Start with our [guide to visual regression testing](/blog/visual-regression-testing-guide) or explore our [CSS migration case study documentation](https://github.com/jetthoughts/jetthoughts.github.io/tree/master/docs/projects/2509-css-migration).
 
 **Questions about adapting XP for your distributed team?** [Contact our engineering leadership](/contact) for consultation on remote team practices and agile transformation.
