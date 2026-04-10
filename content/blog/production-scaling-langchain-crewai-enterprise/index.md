@@ -9,7 +9,9 @@ slug: "production-scaling-langchain-crewai-enterprise"
 canonical_url: "https://jetthoughts.com/blog/production-scaling-langchain-crewai-enterprise/"
 meta_title: "Scaling LangChain & CrewAI to Production: Enterprise Architecture Guide | JetThoughts"
 meta_description: "Enterprise guide: Scale LangChain and CrewAI from prototype to production. Real architecture patterns, security, Kubernetes deployment, monitoring setup. Includes case study with 80% performance improvements."
-cover_image: "/blog/production-scaling-langchain-crewai-enterprise/cover.jpg"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 
 ## The Challenge

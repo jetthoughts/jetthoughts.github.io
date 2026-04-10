@@ -10,9 +10,9 @@ tags:
   - python
   - workflows
 canonical_url: https://jetthoughts.com/blog/langgraph-workflows-state-machines-ai-agents/
-cover_image: cover.jpeg
+cover_image: "cover.png"
 metatags:
-  image: cover.jpeg
+  image: cover.png
   description: "Master LangGraph state machines for building complex AI agent workflows. Complete tutorial with production patterns, human-in-the-loop, map-reduce, and consensus mechanisms. Includes 6+ working code examples."
   keywords: "langgraph tutorial, langgraph state machines, langchain workflows, ai agents, workflow automation, human-in-the-loop, map-reduce patterns"
 slug: langgraph-workflows-state-machines-ai-agents

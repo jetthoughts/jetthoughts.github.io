@@ -5,7 +5,9 @@ slug: async-remote-xp-practices
 tags: ["remote-work", "xp-practices", "agile", "distributed-teams", "team-management"]
 author: JetThoughts Team
 description: "Learn how to adapt Extreme Programming practices for async-first remote teams across 3+ timezones. Practical guide with real case study from our CSS migration project."
+cover_image: "cover.png"
 metatags:
+  image: cover.png
   og_title: "Async XP Practices for Remote Engineering Teams"
   og_description: "Practical XP adaptations for distributed teams: async pair programming, micro-commits, visual regression testing. Real case study included."
   twitter_card: "summary_large_image"

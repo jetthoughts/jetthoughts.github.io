@@ -5,6 +5,9 @@ date: 2025-10-16
 tags: ["rails", "ai", "machine-learning", "postgresql", "semantic-search", "rag"]
 author: "JetThoughts Team"
 slug: "building-rag-applications-rails-pgvector"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 
 Traditional keyword search struggles to understand user intent. When someone searches "best pizza spots" versus "top-rated pizzerias," your app should know these mean the same thing. That's where Retrieval Augmented Generation (RAG) comes in.

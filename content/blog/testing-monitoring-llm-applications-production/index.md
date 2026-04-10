@@ -9,7 +9,9 @@ slug: "testing-monitoring-llm-applications-production"
 canonical_url: "https://jetthoughts.com/blog/testing-monitoring-llm-applications-production/"
 meta_title: "Testing & Monitoring LLM Applications: Production Guide | JetThoughts"
 meta_description: "Master LLM testing strategies: handle non-deterministic behavior, implement LangSmith observability, build regression test suites. Complete guide with RSpec/pytest examples and monitoring patterns."
-cover_image: "cover.jpeg"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 
 ## The Challenge: How Do You Test Something That's Never the Same Twice?

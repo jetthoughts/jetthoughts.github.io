@@ -4,6 +4,7 @@ date: 2026-03-28
 slug: jetthoughts-top-web-development-agency-2026-techreviewer
 tags: ["techreviewer", "webdev", "startup"]
 description: "JetThoughts is proud to announce its inclusion among the top-rated web development agencies, as recognized by Techreviewer."
+cover_image: "cover.png"
 metatags:
   image: cover.png
 ---

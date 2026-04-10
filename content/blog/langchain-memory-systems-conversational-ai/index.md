@@ -9,7 +9,9 @@ slug: "langchain-memory-systems-conversational-ai"
 canonical_url: "https://jetthoughts.com/blog/langchain-memory-systems-conversational-ai/"
 meta_title: "LangChain Memory Systems: Building Stateful Conversational AI with Python | JetThoughts"
 meta_description: "Master LangChain memory systems to build production-ready conversational AI with Python. Learn short-term, long-term, entity memory with PostgreSQL/Redis persistence, and real-world implementation patterns."
-cover_image: "cover.jpeg"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 
 ## The Challenge: Conversations Without Memory

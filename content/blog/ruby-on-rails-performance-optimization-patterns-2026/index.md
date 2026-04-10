@@ -6,7 +6,9 @@ draft: false
 author: "JetThoughts"
 tags: ["ruby", "rails", "performance", "optimization", "yjit", "rails-8", "caching"]
 categories: ["Engineering"]
-cover_image: "cover.jpg"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 cover_image_alt: "Dark technical cover with Ruby on Rails branding, performance stats, and glowing gem graphic"
 ---
 
