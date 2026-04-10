@@ -17,11 +17,11 @@ cover_image_alt: "JetThoughts blog cover showing How to Fire Your Dev Shop with 
 canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 ---
 
-Your agency isn't ghosting you. It's hiding bad code. If you need to fire your development agency, this guide walks you through every step — from recognizing the signs to securing your code to finding a better partner.
+Your agency isn't ghosting you. It's hiding bad code.
 
-If you're reading this, you probably already know something is wrong. Deadlines keep slipping. The demo looks fine but nothing works behind the scenes. You ask for a timeline and get vague answers. You're not crazy — and you're not alone. According to TSH.io, **25% of outsourced software projects fail or significantly underperform**, and 76% of companies report serious issues managing their development providers.
+If you need to fire your development agency, this guide walks you through every step — recognizing the signs, securing your code, and hiring the right team next time.
 
-This is your step-by-step guide to firing your dev shop, securing your assets, and finding a partner who won't repeat the pattern.
+Deadlines keep slipping. The demo looks fine but nothing works behind the scenes. You ask for a timeline and get vague answers. You're not crazy — one in four outsourced projects [fails or limps along underperforming](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/). If you're reading this, you're probably in that group.
 
 ## 5 Signs It's Time to End the Relationship
 
@@ -31,97 +31,114 @@ Not every problem means you should fire your agency. But if you recognize three 
 One missed deadline is a yellow flag. Three is a pattern. If they blame "unexpected complexity" every time but never flagged it early, they're not managing the project — they're reacting to it.
 
 **2. You don't have access to the code repository.**
-If you can't log into GitHub (or GitLab, or wherever the code lives) and see commits happening, you don't actually own your product. You own a promise.
+If you can't log into GitHub (or GitLab, or wherever the code lives) and see work happening, you don't actually own your product. You own a promise.
 
 **3. They can't explain the architecture in plain English.**
-Ask your lead developer: "If you were hit by a bus tomorrow, could another team pick this up in a week?" If the answer involves hedging, you have a bus factor of one — and that's a business risk.
+Ask your lead developer: "If you left tomorrow, could another team pick this up in a week?" If the answer involves hedging, one person holds all the knowledge — and that's a business risk, not just a technical one.
 
 **4. Test coverage is zero or near-zero.**
-This is the single most reliable non-technical signal. Ask: "What percentage of our code is covered by automated tests?" A healthy codebase sits above 70%. If the answer is "we don't track that" or "we test manually," the code is fragile. According to Qodo's 2025 State of AI Code Quality report, AI-generated code produces **1.7x more issues** than human-written code — and shops that rely heavily on AI generation often skip tests entirely.
+This is the fastest way to spot rot if you can't read code. Ask: "What percentage of our code is covered by automated tests?" A healthy codebase sits above 70%. If they say "we test manually," what they mean is "every change we make is a prayer." Qodo's 2025 report found AI-generated code produces [1.7x more issues](https://www.qodo.ai/reports/state-of-ai-code-quality/) than human-written code — and shops that lean on AI generation often skip tests entirely.
 
 **5. Budget keeps growing with no clear explanation.**
-Stripe's Developer Coefficient report estimates developers spend **42% of their time** dealing with technical debt and bad code. If your invoices keep climbing but features aren't shipping, you're paying for rework on code that was written poorly the first time.
+Nearly half of every developer's paycheck goes to mopping up the mess the last team left — [42% of dev time](https://litslink.com/blog/cost-of-outsourcing-software-development) is spent on technical debt and bad code, according to Stripe. If your invoices keep climbing but features aren't shipping, you're paying for rework.
+
+---
+
+**Need immediate clarity on what you're inheriting?** We do a free 45-minute code audit: one senior developer reviews your codebase, runs security scans, and gives you a written one-page assessment. No contract. No follow-up calls unless you ask. [Get an honest audit](https://www.jetthoughts.com/contact).
+
+---
+
+## But First: Is This Actually Fixable?
+
+Before you send the termination email, pause. Some relationships are salvageable — and firing prematurely costs time and money too.
+
+**Set up a 2-week test.** Weekly call with a clear agenda: what shipped, what didn't, why. If transparency improves in two weeks, the relationship might be worth saving.
+
+**Ask yourself: did I keep moving the goalposts?** If you changed requirements mid-sprint three times, any agency would miss deadlines. An honest agency will tell you this. A bad one will absorb the scope silently and miss the date.
+
+**Try a 30-day probation with concrete KPIs.** "80% task completion per sprint, weekly written reports, repository access within 48 hours." If they can't hit those basics, you have your answer — and you have it documented.
+
+If none of that works, keep reading.
 
 ## The Exit Checklist: What to Secure Before You Leave
 
-Firing a dev shop is a business operation, not a breakup text. Treat it like one.
+Firing a dev shop is a business operation, not a breakup text.
 
-**Code and repositories.** Confirm you have admin access to all repositories. If you don't, request it in writing before giving notice. Attorney Aaron Hall notes that contracts should specify exact delivery timing and format for source code upon termination — if yours doesn't, negotiate this before you announce the split.
+**Code and repositories.** Confirm you have admin access to all repositories. If you don't, request it in writing before giving notice. Get a lawyer to review your termination clause — you need exact timing and format for code handoff specified in writing. Your next developer won't wait three months for a ZIP file.
 
 **Infrastructure credentials.** Make a list: hosting provider (AWS, Heroku, DigitalOcean), domain registrar, DNS settings, SSL certificates, email service, payment processor API keys, analytics accounts. Transfer ownership of every account to an email address you control.
 
 **Data exports.** Export your production database, user data, uploaded files, and any third-party integrations. Don't assume you can "get it later."
 
-**Documentation.** Request architecture diagrams, API documentation, environment setup instructions, and deployment procedures. If none exist, that tells you something important about the quality of the engagement.
+**Documentation.** Request architecture diagrams, API docs, environment setup instructions, and deployment procedures. If none exist — and they probably don't — that tells you everything about the quality of the engagement.
 
-**Legal notice.** Review your contract's termination clause. Most agency contracts require 15-30 days written notice. Send a formal termination letter referencing the specific contract section. Keep emotion out of it.
+**Legal notice.** Most agency contracts require 15-30 days written notice. Send a formal termination letter referencing the specific contract section. Keep emotion out of it.
 
 ## What Your Contract Should Have Said
 
-Most founder-agency contracts are missing three critical clauses:
+Every contract I've reviewed that blew up had the same three missing pieces:
 
-**1. Code ownership after each milestone.** The contract should state that you own all source code, documentation, and intellectual property after each paid milestone — not at the end of the project. If your contract says "upon project completion," you're hostage to a definition of "complete" that your agency controls.
+**1. Code ownership after each milestone.** You should own all source code, documentation, and IP after each paid milestone — not at the end of the project. If your contract says "upon project completion," you're hostage to a definition of "complete" that your agency controls.
 
-**2. Termination for quality issues.** A good contract includes: "If the provider misses two consecutive milestones or delivers code that fails acceptance criteria, the client may terminate with 7 days notice." Without this, you're stuck negotiating an exit with a partner who has no incentive to let you leave cleanly.
+**2. Termination for quality issues.** Something like: "If the provider misses two consecutive milestones or delivers code that fails acceptance criteria, the client may terminate with 7 days notice." Without this, you're stuck negotiating an exit with a partner who has no incentive to let you leave cleanly.
 
-**3. Source code escrow or continuous access.** You should have real-time access to the code repository from day one. Not "access upon request." Not "we'll give you a ZIP file." Continuous, read-only access at minimum.
+**3. Continuous code access from day one.** Not "access upon request." Not "we'll send you a ZIP file." Real-time, read-only access to the repository at minimum. If they push back on this, ask yourself why.
 
 ## How to Evaluate the Code You're Inheriting
 
 You can't read code. But you can read these signals.
 
-Ask a senior developer (a freelancer for a day, a fractional CTO, or your next agency) to run a 4-hour code audit. Here's what they should report:
+Hire a senior dev — a freelancer, fractional CTO, or your replacement agency — to audit the code for four hours. Here's what to ask them:
 
-- **Test coverage percentage.** Below 20% means the code can't be safely changed. Below 5% means it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workfl/) — AI-generated with no human review.
-- **Number of critical security vulnerabilities.** Run a basic OWASP scan. The 2024 CISQ report found that poor software quality costs the US economy **$2.41 trillion annually**.
-- **Deployment pipeline.** Does one exist? Can it deploy to production in under 10 minutes? If deployment is a manual, multi-hour process, every future change is risky and expensive.
-- **Code architecture.** Is there a clear separation of concerns? Or is it a single 5,000-line file that does everything?
+First, test coverage. Below 20% and the code can't be safely changed. Below 5% and it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workfl/) — AI-generated with no human review. Second, security vulnerabilities — a basic scan takes 30 minutes and will tell you if your users' data is exposed. The [cost of poor software quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) in the US runs $2.41 trillion annually, and your app doesn't need to contribute to that number.
 
-This audit costs $500-$2,000 and saves you from inheriting a codebase that costs $50,000 to rewrite.
+Then ask about the deployment process. Can they ship a change in under 10 minutes? If deployment is a manual, multi-hour process, every future update is risky and expensive. Finally, look at code structure. Is it organized, or is it a single massive file that does everything?
+
+This audit costs $500-$2,000 and saves you from inheriting a codebase that costs $50,000 to rebuild.
 
 ## Why This Is Worse in 2026
 
-The "vibe coding" trend — where developers use AI to generate entire codebases with minimal human oversight — has created a new class of dev shop disaster. These shops promise fast delivery at low cost. The code looks clean on the surface. But it has no tests, no error handling, and [security vulnerabilities that only show up in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time/).
+We rescued a codebase last quarter from a shop that had used AI to generate 90% of the code. The founder was told the MVP would be done in 6 weeks. It was — sort of. The app loaded. The demo worked. But test coverage was 2%. There was no error handling. The first time a real user did something unexpected, the app crashed and corrupted their data.
 
-When you fire one of these shops, you inherit code that's not just bad — it's untestable. There's no safety net. Every change risks breaking something else. A disciplined team writes tests first and reviews every pull request. An undisciplined team pastes AI output and ships it.
+This is the "vibe coding" crisis. Developers use AI to generate entire codebases with minimal oversight. The code *looks* clean on the surface. Under the hood: no tests, no error handling, [security holes that blow up in production](/blog/from-what-start-stop-delivering-bugs-when-there-no-time/). When you fire one of these shops, you inherit code that's not just bad — it's untestable. There's no safety net.
 
-## Finding the Next Partner Without Repeating the Mistake
+A team that survives writes [tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/). A team that burns writes AI code and prays.
 
-Before you sign with another agency, ask these five questions:
+## Finding the Next Partner
 
-1. **"Can I see a sample weekly report?"** A good partner produces plain-English reports: what was done, what's blocked, what's next. No jargon.
-2. **"Who owns the code after each milestone?"** The answer should be "you do" with a specific contract clause.
-3. **"What's your test coverage policy?"** The answer should be a number (>70%) and a process ([TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/)).
-4. **"What happens if you miss a deadline?"** Look for accountability, not excuses.
-5. **"Can I talk to a founder you've rescued?"** Not just a happy client — one who came from a bad situation.
+When you're vetting the next shop, these questions will save you months of pain:
 
-## When NOT to Fire Your Dev Shop
+**"Can I see a sample weekly report?"** A partner worth keeping sends you a one-page email every Friday: what shipped, what hit a wall, what's next. No buzzwords.
 
-Sometimes the relationship is salvageable. Before you terminate:
+**"Who owns the code after each milestone?"** The answer should be "you do" — with a specific contract clause, not a verbal promise.
 
-- **Try a structured retrospective.** Set up a weekly call with clear agenda: what shipped, what didn't, why. Give it 2-3 weeks. If transparency improves, the relationship may be fixable.
-- **Check if the problem is scope, not skill.** If you keep changing requirements mid-sprint, any agency will miss deadlines. An honest agency will tell you this. A bad one will just absorb the scope and miss the date.
-- **Consider a probation period.** "We'll continue for 30 days with these specific KPIs: 80% task completion per sprint, weekly written reports, git access within 48 hours." If they can't hit those basics, you have your answer.
+If they can't tell you their test coverage policy by name, they don't have one. Ask for a number (above 70%) and a process. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/) is the gold standard.
+
+**"What happens if you miss a deadline?"** Look for accountability, not excuses. A good answer: "We flag it two days early and offer options." A bad answer: "That rarely happens."
+
+**"Can I talk to a founder you've rescued?"** Not just a happy client — one who came from a bad situation like yours.
 
 ## The Real Win
 
-Firing a dev shop is not a failure. Staying with a bad one is. The cost of poor software quality is real: that $2.41 trillion CISQ number isn't theoretical. It's the sum of every startup that paid twice — once for bad code, once to rebuild it.
+Firing a dev shop is not a failure. Staying with a bad one is.
 
-The pattern that works: exit cleanly, audit what you have, find a partner who writes tests first and [explains everything in plain English](/blog/how-make-small-valuable-async-standups-productivity-dev/). You've already learned what "bad" looks like. Now you know what to look for.
+You're about to pay twice for the same product — once for the bad code, once to rebuild it. That's the reality. The question is how much the second round costs, and that depends entirely on who you hire next.
 
----
-
-*If you're in the middle of a dev shop transition, we offer a free 30-minute code audit call. No pitch — just an honest assessment of what you're working with. [Schedule a call](https://www.jetthoughts.com/contact).*
+The pattern that works: exit cleanly, audit what you have, find a partner who [writes tests first](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutor/) and [explains everything in plain English](/blog/how-make-small-valuable-async-standups-productivity-dev/). You've already learned what "bad" looks like. Now you know what to look for.
 
 ---
 
-We've written about the patterns that prevent these disasters: how we use [XP practices like pair programming and CI/CD](/blog/async-remote-xp-practices/) to catch problems before they ship, and how [structured delivery flow for remote teams](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) keeps everyone aligned without micromanagement.
+*In the middle of a dev shop transition? We do a free 45-minute code audit: one senior developer, your codebase, a written one-page assessment. No contract, no follow-up calls. [Get an honest audit](https://www.jetthoughts.com/contact).*
+
+---
+
+We've written about the practices that prevent these disasters: how [XP practices like pair programming and CI/CD](/blog/async-remote-xp-practices/) catch problems before they ship, and how [structured delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) keeps remote teams aligned without micromanagement.
 
 ## Further Reading
 
-- [TSH.io: Why Outsourcing Fails — Problems of Outsourcing Software Development](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/) — 25% project failure rate, 76% provider management issues
-- [CISQ / Cloud Data Insights: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) — $2.41 trillion annual cost in the US
+- [TSH.io: Why Outsourcing Fails](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/) — 25% project failure rate, 76% provider management issues
+- [CISQ: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) — $2.41 trillion annual cost in the US
 - [Qodo: State of AI Code Quality in 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI code produces 1.7x more issues than human code
 - [Stripe: Developer Coefficient Report](https://litslink.com/blog/cost-of-outsourcing-software-development) — 42% of dev time spent on technical debt
-- [Aaron Hall, Attorney: Source Code Access Rights in Termination Provisions](https://aaronhall.com/source-code-access-rights-termination-provisions/) — Legal framework for code ownership on termination
-- [Appstronauts: Software Development Project Transition Checklist](https://appstronauts.co/blog/a-successful-software-development-project-transition-plan-checklist/) — Practical transition framework
+- [Aaron Hall: Source Code Access Rights on Termination](https://aaronhall.com/source-code-access-rights-termination-provisions/) — Legal framework for code ownership
+- [Appstronauts: Project Transition Checklist](https://appstronauts.co/blog/a-successful-software-development-project-transition-plan-checklist/) — Practical transition framework
