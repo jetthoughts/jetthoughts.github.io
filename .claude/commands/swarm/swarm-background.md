@@ -1,8 +1,3 @@
-# swarm-background
+# Command (Stub)
 
-Command documentation for swarm-background in category swarm.
-
-Usage:
-```bash
-npx claude-flow swarm swarm-background [options]
-```
+See `docs/workflows/commands.md`.

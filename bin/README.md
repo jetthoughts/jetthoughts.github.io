@@ -27,6 +27,7 @@ This directory contains utility scripts for the JetThoughts Hugo site.
 - `rake` - Ruby task runner
 - `bunx` - NPM package runner (using bunx)
 - `sync_with_devto` - Sync blog posts with dev.to
+- `skillshare-sync` - Sync skills to all configured AI CLI targets
 
 ## Content
 

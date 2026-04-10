@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if ! command -v skillshare >/dev/null 2>&1; then
+  echo "skillshare not found. Install first (see ~/.config/skillshare)." >&2
+  exit 1
+fi
+
+skillshare sync --all --json

@@ -1,8 +1,3 @@
-# hive-mind-memory
+# Command (Stub)
 
-Command documentation for hive-mind-memory in category hive-mind.
-
-Usage:
-```bash
-npx claude-flow hive-mind hive-mind-memory [options]
-```
+See `docs/workflows/commands.md`.

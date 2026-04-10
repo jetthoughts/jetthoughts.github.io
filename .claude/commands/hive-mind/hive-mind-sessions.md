@@ -1,8 +1,3 @@
-# hive-mind-sessions
+# Command (Stub)
 
-Command documentation for hive-mind-sessions in category hive-mind.
-
-Usage:
-```bash
-npx claude-flow hive-mind hive-mind-sessions [options]
-```
+See `docs/workflows/commands.md`.

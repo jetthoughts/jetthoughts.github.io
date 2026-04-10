@@ -1,8 +1,3 @@
-# swarm-modes
+# Command (Stub)
 
-Command documentation for swarm-modes in category swarm.
-
-Usage:
-```bash
-npx claude-flow swarm swarm-modes [options]
-```
+See `docs/workflows/commands.md`.

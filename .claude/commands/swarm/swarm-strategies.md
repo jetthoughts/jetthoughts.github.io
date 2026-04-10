@@ -1,8 +1,3 @@
-# swarm-strategies
+# Command (Stub)
 
-Command documentation for swarm-strategies in category swarm.
-
-Usage:
-```bash
-npx claude-flow swarm swarm-strategies [options]
-```
+See `docs/workflows/commands.md`.

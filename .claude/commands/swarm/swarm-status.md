@@ -1,8 +1,3 @@
-# swarm-status
+# Command (Stub)
 
-Command documentation for swarm-status in category swarm.
-
-Usage:
-```bash
-npx claude-flow swarm swarm-status [options]
-```
+See `docs/workflows/commands.md`.

@@ -23,3 +23,5 @@ This file pins the preferred skill routing for this repository.
 
 Use only the minimal skill subset needed for the current task, preserving this order:
 `research -> implementation -> validation -> docs/publish`.
+
+Agents are thin wrappers; shared rules live in `docs/workflows/BASE_HANDBOOK.md`.
