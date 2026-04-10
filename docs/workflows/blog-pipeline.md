@@ -22,11 +22,20 @@ STEP 3 — RESEARCH
 - Check existing blog posts for duplication: ls content/blog/ | grep -iE "<key-terms>"
 - Verify every statistic has a citable source — zero fabricated claims
 
+STEP 3b — FIND INTERNAL POSTS TO REFERENCE (MANDATORY)
+Before drafting, find 4+ existing JetThoughts posts to link from the new post.
+Use claude-context MCP search FIRST:
+  Search the codebase at /Users/pftg/dev/jetthoughts.github.io for: "topic keywords relevant to your post"
+For tag/slug lookups, read docs/blog-post-index.md (584 posts, 135 tags, process posts table).
+NEVER guess slugs — verify each with: ls content/blog/<slug>/index.md
+Collect at least 4 verified slugs before starting the draft.
+
 STEP 4 — DRAFT
 Create content/blog/<slug>/index.md following these rules:
 - Frontmatter: title ≤45 chars, description 150-160 chars, date, slug, keywords, tags, cover_image: cover.png, metatags.image: cover.png
 - Voice: plain English, empathy first, founder-to-founder tone, specific data over vague claims
 - Structure: punchy hook → primary keyword in first 100 words → numbered H2 sections → vibe coding angle section → "When NOT to" section → JetThoughts proof point → CTA → related reading (2-3 internal links in prose) → further reading (5+ external citations)
+- Internal links: weave 4+ links to existing JetThoughts posts naturally in the body (not just footer). Use the slugs verified in Step 3b.
 - Paragraphs ≤3 sentences. Word count 1,200-1,800.
 - BANNED words: unlock, harness, leverage, dive in, game-changer, journey, seamless, robust, supercharge, revolutionize, embark, delve, discover
 
@@ -201,6 +210,7 @@ The quick start prompt above is the practical execution guide. Below is the full
 |---|---|
 | `docs/.../20.07-content-plan-icp-e-q2-2026.md` | What to write next + topic briefs |
 | `docs/.../90.10-icp-primary-website-target.md` | Who we write for (ICP-E) |
+| `docs/blog-post-index.md` | **Post discovery** — 584 posts by tag, date, and practice category. Use for finding internal links. |
 | `.stitch/design.md` | Cover image spec (6-slot layout) |
 | `.stitch/designs/*-cover.html` | Cover templates to duplicate |
 | `CLAUDE.md` | Behavioral constraints + critical files table |
