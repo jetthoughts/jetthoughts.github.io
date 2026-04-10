@@ -21,7 +21,7 @@ metatags:
   image: cover.jpeg
 slug: how-know-what-your-team-doing-remote-startup
 ---
-![Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/clients?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
+*Photo by [Thomas Drouault](https://unsplash.com/@thomasdrouaultphotography) on [Unsplash](https://unsplash.com/s/photos/clients)*
 
 What techniques do you use to work with the team in an async, remote environment? How to collaborate effectively within the distributed team located in different timezones and deliver tangible results on top of that?
 
