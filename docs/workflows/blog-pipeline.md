@@ -14,6 +14,7 @@ Find the next 🔲 Planned topic. Confirm the slug, primary keyword, and target 
 STEP 2 — READ CONTEXT (mandatory, do not skip)
 Read these 3 files before writing anything:
 - ICP: docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md
+- Voice guide: docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md (tone, banned words, structural patterns, self-test checklist)
 - Content plan brief: the topic's brief section in the content plan (required sections, vibe coding angle, internal links, CTA)
 - Design spec: .stitch/design.md (for cover image later)
 
@@ -210,6 +211,7 @@ The quick start prompt above is the practical execution guide. Below is the full
 |---|---|
 | `docs/.../20.07-content-plan-icp-e-q2-2026.md` | What to write next + topic briefs |
 | `docs/.../90.10-icp-primary-website-target.md` | Who we write for (ICP-E) |
+| `docs/.../90.11-voice-guide.md` | **HOW we write** — tone, banned words, structural patterns, self-test |
 | `docs/blog-post-index.md` | **Post discovery** — 584 posts by tag, date, and practice category. Use for finding internal links. |
 | `.stitch/design.md` | Cover image spec (6-slot layout) |
 | `.stitch/designs/*-cover.html` | Cover templates to duplicate |
