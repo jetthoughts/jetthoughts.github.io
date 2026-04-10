@@ -529,6 +529,10 @@ VERSION=${1:-latest}
 
 echo "🚀 Deploying version: $VERSION"
 
+# 0. Record current version for rollback
+VERSION_PREVIOUS=$(docker inspect --format='{{.Config.Image}}' $(docker-compose -f docker-compose.production.yml ps -q web) 2>/dev/null | awk -F: '{print $2}')
+export VERSION_PREVIOUS
+
 # 1. Pull latest images
 echo "📦 Pulling latest images..."
 docker-compose -f docker-compose.production.yml pull
@@ -546,10 +550,10 @@ echo "💚 Performing health check..."
 sleep 10
 curl -f http://localhost/up || {
     echo "❌ Health check failed! Rolling back..."
-    # Rollback by reverting to previous image tag
+    # Rollback by deploying the previous known-good version
+    # Requires VERSION_PREVIOUS to be set before deploy
     docker-compose -f docker-compose.production.yml down
-    docker tag myapp/rails:previous myapp/rails:latest
-    docker-compose -f docker-compose.production.yml up -d
+    VERSION=${VERSION_PREVIOUS} docker-compose -f docker-compose.production.yml up -d
     exit 1
 }
 
@@ -904,40 +908,9 @@ scrape_configs:
       - targets: ['cadvisor:8080']
 ```
 
-#### Rails Metrics Endpoint:
+#### Rails Metrics Endpoint
 
-```ruby
-# app/controllers/metrics_controller.rb
-class MetricsController < ApplicationController
-  skip_before_action :verify_authenticity_token
-
-  def show
-    metrics = {
-      http_requests_total: request_counter,
-      http_request_duration_seconds: request_duration,
-      database_connections: ActiveRecord::Base.connection_pool.stat,
-      cache_hit_rate: calculate_cache_hit_rate,
-      memory_usage_bytes: process_memory_usage
-    }
-
-    render plain: format_prometheus_metrics(metrics)
-  end
-
-  private
-
-  def format_prometheus_metrics(metrics)
-    # Format metrics in Prometheus exposition format
-    # https://prometheus.io/docs/instrumenting/exposition_formats/
-    output = []
-    metrics.each do |name, value|
-      output << "# HELP #{name}"
-      output << "# TYPE #{name} gauge"
-      output << "#{name} #{value}"
-    end
-    output.join("\n")
-  end
-end
-```
+For Prometheus metrics from your Rails app, use the [`prometheus-client`](https://github.com/prometheus/client_ruby) gem. It provides proper metric types (counters, histograms, gauges), thread-safe collectors, and a Rack middleware that exposes a `/metrics` endpoint in the correct exposition format. Hand-rolling a metrics controller without this gem will produce incorrectly formatted output that Prometheus cannot scrape reliably.
 
 ## Troubleshooting Common Issues
 
@@ -998,12 +971,12 @@ services:
 **Before:** Traditional server deployments with Capistrano
 **After:** Docker-based deployment with container orchestration
 
-#### Migration Results:
-- **Deployment time:** Reduced from 45 minutes to 8 minutes
-- **Environment consistency:** 100% (eliminated "works on my machine" issues)
-- **Infrastructure costs:** Reduced by 35% through better resource utilization
-- **Rollback time:** Decreased from 30 minutes to <1 minute
-- **Developer onboarding:** New developers productive in <1 hour (vs 2 days)
+#### Migration Results (on a recent client project):
+- **Deployment time:** Significantly reduced (from slow Capistrano deploys to fast image pulls)
+- **Environment consistency:** Eliminated "works on my machine" issues entirely
+- **Infrastructure costs:** Reduced through better resource utilization
+- **Rollback time:** Decreased from manual rollbacks to sub-minute container swaps
+- **Developer onboarding:** New developers productive much faster with containerized dev environments
 
 We wrote about a common gotcha during this migration in [Solving Kamal's "target failed to become healthy"](/blog/solving-kamals-target-failed-become-healthy/) -- health check timing is the number one deployment blocker we see.
 

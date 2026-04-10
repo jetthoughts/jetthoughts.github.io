@@ -61,7 +61,7 @@ Devise introduces dozens of controller filters and helpers that operate invisibl
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!  # What does this actually do?
 end
-```text
+```
 
 Behind this single line:
 - Multiple database queries checking session validity
@@ -93,9 +93,9 @@ Devise's complexity makes upgrades risky. Real-world example from a client migra
 # 5. Test all authentication flows
 # 6. Update custom Devise modules
 # 7. Migrate encrypted passwords (algorithm changes)
-```text
+```
 
-This upgrade required **40 hours** of development and testing for what should have been a simple Rails version upgrade.
+On a client project, this upgrade required significant development and testing time for what should have been a simple Rails version upgrade.
 
 ### Security Through Obscurity
 
@@ -107,38 +107,13 @@ Devise's complexity can obscure security vulnerabilities:
 config.password_length = 6..128  # Too short!
 config.stretches = 1             # Development setting in production!
 config.expire_all_remember_me_on_sign_out = false  # Security risk!
-```text
+```
 
-These misconfigurations existed for **2 years** before security audit detection because they were buried in a 300-line initializer that no one fully understood.
+On a client project, these misconfigurations went undetected until a security audit because they were buried in a 300-line initializer that no one fully understood.
 
 ### Performance Overhead
 
-Devise's flexibility comes with runtime costs:
-
-```ruby
-# Benchmarking authentication request overhead
-require 'benchmark/ips'
-
-Benchmark.ips do |x|
-  x.report("Devise authentication") do
-    # Devise's before_action :authenticate_user!
-    # Executes 4-6 database queries per request
-  end
-
-  x.report("Rails 8 authentication") do
-    # Rails 8's session validation
-    # Executes 1-2 database queries per request
-  end
-
-  x.compare!
-end
-
-# Results:
-# Devise authentication:     892.3 i/s
-# Rails 8 authentication:    1847.6 i/s - 2.07x faster
-```text
-
-For high-traffic applications processing millions of requests, this 2x performance difference translates to significant infrastructure savings.
+Devise's flexibility comes with runtime costs. A typical Devise `authenticate_user!` call executes 4-6 database queries per request (session lookup, token validation, trackable updates, etc.), while Rails 8's built-in authentication executes 1-2 queries. Rails 8 auth is simpler and has fewer database queries per request, but we have not published formal benchmarks comparing throughput.
 
 For teams struggling with Devise complexity and seeking to modernize their authentication stack, our [technical leadership consulting](/services/technical-leadership-consulting/) helps evaluate whether Rails 8's built-in authentication meets your specific security requirements and business needs.
 
@@ -155,13 +130,11 @@ Rails 8 authentication follows "convention over configuration" principles:
 $ rails generate authentication
 
 # This creates:
-# - User model with secure password handling
+# - User model with has_secure_password
+# - Session model for session tracking
 # - Sessions controller for login/logout
-# - Passwords controller for password reset
-# - Registration controller for user signup
-# - Email confirmation system
-# - Account recovery flows
-# - Security-focused views and mailers
+# - Authentication concern for controllers
+# - Migrations for users and sessions tables
 ```
 
 That's it. No complex configuration files, no mysterious modules, no hidden behaviors. The foundation builds on [authentication helpers introduced in Rails 7.1](/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/) -- `generates_token_for`, `authenticate_by`, and `normalizes` -- so the patterns will feel familiar if you've already adopted those.
@@ -209,7 +182,7 @@ class User < ApplicationRecord
     email
   end
 end
-```text
+```
 
 ### What `has_secure_password` provides
 - BCrypt password hashing with appropriate cost factor (and if you want Argon2id instead, see our [Argon2 migration guide](/blog/rails-argon2-has-secure-password-migration-guide/))
@@ -365,7 +338,7 @@ end
 
 # config/application.rb
 config.middleware.use Rack::Attack
-```text
+```
 
 ### Extensibility: Build What You Need
 
@@ -423,7 +396,7 @@ class TwoFactorsController < ApplicationController
     end
   end
 end
-```text
+```
 
 #### OAuth Integration (Google/GitHub/etc.)
 
@@ -529,49 +502,11 @@ class SessionsController < ApplicationController
     end
   end
 end
-```text
+```
 
 ### Performance Characteristics
 
-We benchmarked Rails 8 auth against Devise on a client project. The difference was larger than we expected:
-
-```ruby
-# Benchmark: Authentication request overhead
-require 'benchmark/ips'
-
-Benchmark.ips do |x|
-  x.report("Rails 8 auth") do
-    # Simple session lookup
-    User.find_by(id: session[:user_id])
-  end
-
-  x.report("Devise auth") do
-    # Warden strategy + multiple DB queries
-    env['warden'].authenticate(:scope => :user)
-  end
-
-  x.compare!
-end
-
-# Results:
-# Rails 8 auth:    2,847 i/s
-# Devise auth:       892 i/s - 3.19x slower
-```text
-
-#### Memory Usage Comparison
-
-```ruby
-# Rails 8 authentication memory footprint
-Rails 8: ~12 MB (minimal dependencies)
-
-# Devise memory footprint
-Devise: ~47 MB (Devise + Warden + dependencies)
-
-# Savings: 35 MB per Rails process
-# For 20 Puma workers: 700 MB total savings
-```
-
-That's 700 MB saved across 20 Puma workers -- real money on your infrastructure bill. If you're also moving to [Solid Cache](/blog/rails-8-solid-cache-performance-redis-migration/) and [Solid Queue](/blog/rails-8-solid-queue-migration-guide/), the combined dependency reduction is significant.
+Rails 8's built-in authentication has fewer dependencies and executes fewer database queries per request than Devise. Dropping Devise, Warden, and their transitive dependencies also reduces memory usage per Rails process. If you're also moving to [Solid Cache](/blog/rails-8-solid-cache-performance-redis-migration/) and [Solid Queue](/blog/rails-8-solid-queue-migration-guide/), the combined dependency reduction is significant.
 
 ## Step-by-Step Migration from Devise to Rails 8 Authentication
 
@@ -632,7 +567,7 @@ assessment = {
   password_encryption: "bcrypt",  # Check devise.rb
   estimated_hours: 40  # Baseline for medium complexity
 }
-```text
+```
 
 ### Phase 2: Preparing Your Application
 
@@ -649,7 +584,7 @@ $ rails generate authentication
 # - app/controllers/sessions_controller.rb (new)
 # - app/controllers/passwords_controller.rb (new)
 # - app/models/concerns/authenticatable.rb (new)
-```text
+```
 
 #### Rename to avoid conflicts:
 
@@ -671,7 +606,7 @@ class AddRails8AuthToUsers < ActiveRecord::Migration[8.0]
     add_column :users, :confirmation_sent_at, :datetime unless column_exists?(:users, :confirmation_sent_at)
   end
 end
-```text
+```
 
 #### Migrate Password Hashes
 
@@ -693,7 +628,7 @@ namespace :auth do
 end
 
 $ bin/rails auth:migrate_passwords
-```text
+```
 
 #### Test Password Authentication Compatibility
 
@@ -828,7 +763,7 @@ class SessionsController < ApplicationController
     end
   end
 end
-```text
+```
 
 ### Phase 4: Data Migration and Validation
 
@@ -952,7 +887,7 @@ class AuthRollout
     Digest::MD5.hexdigest(user_id.to_s).to_i(16) % 100 < current_percentage
   end
 end
-```text
+```
 
 #### Update Routes
 
@@ -997,7 +932,7 @@ class ApplicationController < ActionController::Base
     yield
   end
 end
-```text
+```
 
 #### Remove Devise (Final Step)
 
@@ -1049,7 +984,7 @@ class RemoveDeviseColumns < ActiveRecord::Migration[8.0]
     remove_column :users, :unconfirmed_email, :string
   end
 end
-```text
+```
 
 ## Production Deployment and Security Considerations
 
@@ -1087,7 +1022,7 @@ class Rack::Attack
     BadActorList.include?(req.ip)
   end
 end
-```text
+```
 
 #### Secure Session Configuration
 
@@ -1350,7 +1285,7 @@ end
 
 # Can be triggered via Rails console or admin interface
 $ rails runner "AuthRollback.execute!"
-```text
+```
 
 ### Production Deployment Checklist
 

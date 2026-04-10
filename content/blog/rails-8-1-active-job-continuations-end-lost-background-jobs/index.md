@@ -50,7 +50,7 @@ class ProcessOrderBatchJob < ApplicationJob
     end
 
     step :process_orders do |step|
-      @orders.from(step.cursor || 0).each_with_index do |order, index|
+      @orders.drop(step.cursor || 0).each_with_index do |order, index|
         order.process!
         step.advance! from: index
       end
@@ -129,7 +129,7 @@ class SyncShopifyOrdersJob < ApplicationJob
     end
 
     step :upsert_orders do |step|
-      @orders.from(step.cursor || 0).each_with_index do |order, index|
+      @orders.drop(step.cursor || 0).each_with_index do |order, index|
         LocalOrder.upsert_from(order)
         step.advance! from: index
       end

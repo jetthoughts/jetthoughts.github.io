@@ -20,7 +20,7 @@ metatags:
   twitter_description: "Master Solid Cache migration from Redis. Benchmarks, cost analysis, production migration guide."
 ---
 
-Redis is probably the most expensive line item on your infrastructure bill that you don't actually need. For most Rails apps, it's $400-900/month in hosting, monitoring, and DevOps time -- to serve cache reads that your PostgreSQL database can handle just fine.
+For most Rails apps, Redis is an infrastructure bill doing work your database already handles. You're paying for a second data store to run, monitor, and back up when PostgreSQL can serve those cache reads on its own.
 
 Rails 8 made Solid Cache the default caching backend for a reason. Your database is already running, already monitored, already backed up. Why pay for a second data store when the one you have is sitting there underutilized?
 
@@ -69,23 +69,9 @@ Monthly Costs:
 
 ### Real-World Impact: Cost Savings Analysis
 
-#### Case Study: E-commerce Platform Migration
+#### Potential Savings
 
-Before (Redis):
-- Redis hosting: $350/month
-- Redis backups: $75/month
-- Monitoring tools: $50/month
-- DevOps time: 8 hours/month ($400)
-- **Total: $875/month**
-
-After (Solid Cache):
-- Additional database storage: $20/month
-- DevOps time: 0.5 hours/month ($25)
-- **Total: $45/month**
-
-**Annual savings: $9,960** with negligible performance impact for moderate cache hit rates.
-
-**Note:** These cost estimates are for the specified e-commerce platform scenario. Actual costs depend on hosting provider, data transfer, storage rates, and labor rates in your region. Benchmark with your specific infrastructure and regional pricing.
+Dropping Redis removes a hosting bill, a monitoring bill, and several hours of DevOps time each month. The exact savings depend on your provider, traffic, and team size -- run the numbers against your own infrastructure before committing to a migration.
 
 ## Solid Cache Architecture Deep Dive
 
@@ -112,7 +98,7 @@ config.cache_store = :solid_cache_store, {
   database: :cache,              # Use separate cache database
   expires_in: 2.weeks,           # Default expiration
   size_estimate: 100.megabytes,  # Size hint for optimization
-  cleanup_interval: 1.day        # Automatic cleanup frequency
+  max_age: 2.weeks               # Maximum age for cache entries
 }
 ```
 
@@ -167,68 +153,23 @@ end
 
 ### Performance Characteristics
 
-#### Solid Cache Performance Profile:
+#### Performance Overview
 
-| Operation | Solid Cache (PostgreSQL) | Redis | Difference |
-|-----------|--------------------------|-------|------------|
-| **Read (cached)** | 3-8ms | 0.5-2ms | 4-6x slower |
-| **Write** | 5-12ms | 1-3ms | 3-4x slower |
-| **Delete** | 4-10ms | 0.5-2ms | 5-8x slower |
-| **Bulk read (10 keys)** | 15-30ms | 5-10ms | 2-3x slower |
-| **Cache hit rate** | Same | Same | Equal |
-| **Storage capacity** | Unlimited (disk) | Limited (memory) | Advantage Solid Cache |
+Solid Cache is comparable to Redis for most workloads -- page caching, fragment caching, and moderate read rates feel the same to end users. Redis is faster for high-frequency access patterns (rate limiting, real-time presence) where sub-millisecond latency matters. Solid Cache has the advantage in storage capacity since it uses disk rather than memory.
 
-#### Performance Trade-offs:
+Benchmark against your own database and workload before deciding. Latency depends heavily on your PostgreSQL version, connection pooling, and whether the cache database shares hardware with your primary database.
 
-```ruby
-# Scenarios where Solid Cache performs well
-class SolidCacheOptimalScenarios
-  # 1. Moderate cache hit frequency (<1000 reads/sec)
-  def moderate_frequency_caching
-    # Perfect for page caching, fragment caching
-    Rails.cache.fetch("homepage:#{locale}", expires_in: 1.hour) do
-      render_homepage_expensive_operation
-    end
-  end
+#### When to Use Which
 
-  # 2. Large cached data
-  def large_data_caching
-    # Can cache large datasets without memory concerns
-    Rails.cache.fetch("product_catalog:full", expires_in: 6.hours) do
-      Product.includes(:images, :variants).to_json
-    end
-  end
+**Solid Cache works well for:**
+- Page caching and fragment caching at moderate read rates
+- Large cached datasets (disk-backed, no memory pressure)
+- Data that changes infrequently (configuration, product catalogs)
 
-  # 3. Infrequent cache invalidation
-  def stable_cache_patterns
-    # Excellent for data that changes infrequently
-    Rails.cache.fetch("configuration:global", expires_in: 24.hours) do
-      Configuration.global_settings.to_h
-    end
-  end
-end
-
-# Scenarios where Redis outperforms
-class RedisOptimalScenarios
-  # 1. High-frequency caching (>10,000 reads/sec)
-  def high_frequency_caching
-    # API rate limiting, session storage
-    redis.get("rate_limit:user:#{user_id}:#{endpoint}")
-  end
-
-  # 2. Real-time features
-  def realtime_caching
-    # Live notifications, presence tracking
-    redis.smembers("online_users")
-  end
-
-  # 3. Complex data structures
-  def advanced_data_structures
-    # Sorted sets, pub/sub, hyperloglog
-    redis.zadd("leaderboard", score, user_id)
-  end
-end
-```
+**Redis is the better choice for:**
+- High-frequency caching (rate limiting, session storage at >10,000 reads/sec)
+- Real-time features (presence tracking, live notifications)
+- Advanced data structures (sorted sets, pub/sub, HyperLogLog)
 
 ## Migration Guide: Redis to Solid Cache
 
