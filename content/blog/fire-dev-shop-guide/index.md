@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-I know how this feels. You hired a team, wrote them a check, waited three months — and now the demo sort of works, the backend is a mystery, and you're afraid to ask how much the next milestone will cost. You're not crazy. One in four outsourced projects [fails or limps along underperforming](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/). That number is probably low.
+I know how this feels. You hired a team, wrote them a check, waited three months — and now the demo sort of works, the backend is a mystery, and you're afraid to ask how much the next milestone will cost. You're not crazy. One in four outsourced projects [fails or significantly underperforms](https://www.deloitte.com/global/en/services/consulting/research/global-outsourcing-survey.html). That number is probably low.
 
 If you need to fire your development agency, this is the guide. Not theory — the actual steps, including the ones nobody tells you about (like what to do tonight, before they know you're leaving).
 
@@ -93,6 +93,8 @@ Firing a dev shop is a business operation, not a breakup text.
 
 **Repository access from day one.** Not "upon request." Not a ZIP file emailed next week. Real-time, read-only access to the code repository. If they push back on this — really ask yourself why. What are they protecting?
 
+If you need contract templates that actually protect you, [Clerky](https://www.clerky.com) ($819 lifetime) has startup-focused IP assignment and consulting agreements. It's cheaper than one hour of a lawyer's time and covers the basics.
+
 ## How to Evaluate the Code You're Inheriting
 
 You can't read code. But you can read these signals.
@@ -102,6 +104,16 @@ Hire a senior dev — a freelancer, fractional CTO, or your replacement agency �
 First, test coverage — below 20% means the code can't be safely changed; below 5% means it was likely [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/). Second, security vulnerabilities — a basic scan takes 30 minutes. Third, deployment — can they ship a change in under 10 minutes, or is it a multi-hour manual process? Finally, code structure — organized into clear pieces, or one massive file doing everything?
 
 This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild.
+
+If you can't find a freelancer fast enough, there are tools that can give you a rough picture tonight:
+
+- **[The Code Registry](https://thecoderegistry.com/code-auditing/)** — connect your GitHub repo and get an AI-powered security scan, complexity score, and "Cost to Replicate" valuation in under 15 minutes. Built for non-developers.
+- **[Codacy](https://www.codacy.com)** — automated code quality scanning with a free tier. More technical, but the dashboard is readable.
+- **[Codekeeper](https://codekeeper.co)** — source code escrow. If you're worried your agency might lock you out, this service makes daily copies of your repo automatically. From $129/month. Set this up *before* you send the termination email.
+
+And if you need a fractional CTO to help you navigate the transition, [Toptal](https://www.toptal.com) can match you within 48 hours, or browse the free directory at [FractionalCTOs.org](https://fractionalctos.org).
+
+One more thing that doesn't cost anything: make sure your code repository lives in a [GitHub Organization that you own](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository), not in your agency's personal account. If you do nothing else from this article, do that. Tonight.
 
 ## Why This Is Worse in 2026
 
@@ -157,7 +169,7 @@ We've been writing about the practices that prevent these disasters for years. H
 
 ## Further Reading
 
-- [TSH.io: Why Outsourcing Fails](https://tsh.io/blog/why-outsourcing-fails-problems-of-outsourcing-software-development/) — 25% project failure rate, 76% provider management issues
+- [Deloitte: Global Outsourcing Survey](https://www.deloitte.com/global/en/services/consulting/research/global-outsourcing-survey.html) — 25% project failure rate, provider management challenges
 - [CISQ: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) — $2.41 trillion annual cost in the US
 - [Qodo: State of AI Code Quality in 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI code produces 1.7x more issues than human code
 - [Stripe: Developer Coefficient Report](https://litslink.com/blog/cost-of-outsourcing-software-development) — 42% of dev time spent on technical debt
