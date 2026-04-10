@@ -8,11 +8,11 @@ edited_at: "2025-10-27T12:00:00Z"
 draft: false
 tags: ["hotwire", "turbo", "rails", "performance", "realtime"]
 canonical_url: "https://jetthoughts.com/blog/hotwire-turbo-8-performance-patterns-real-time-rails/"
-cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730032800/hotwire-turbo-8-performance.jpg"
+cover_image: "cover.png"
 slug: "hotwire-turbo-8-performance-patterns-real-time-rails"
 author: "JetThoughts Team"
 metatags:
-  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730032800/hotwire-turbo-8-performance.jpg"
+  image: cover.png
   og_title: "Hotwire Turbo 8 Performance Patterns: Real-Time Rails | JetThoughts"
   og_description: "Master Turbo 8 performance optimization. Complete guide with advanced patterns, benchmarks, production deployment."
   twitter_title: "Hotwire Turbo 8 Performance Patterns Guide"

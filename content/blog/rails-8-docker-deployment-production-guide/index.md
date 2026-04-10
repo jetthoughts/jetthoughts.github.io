@@ -9,10 +9,10 @@ author: "JetThoughts Team"
 draft: false
 tags: ["rails", "docker", "deployment", "devops", "production", "rails-8"]
 categories: ["Development", "Rails", "DevOps"]
-cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730120400/rails-8-docker-deployment.jpg"
+cover_image: "cover.png"
 canonical_url: "https://jetthoughts.com/blog/rails-8-docker-deployment-production-guide/"
 metatags:
-  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730120400/rails-8-docker-deployment.jpg"
+  image: cover.png
   og_title: "Rails 8 Docker Deployment: Production-Ready Configuration | JetThoughts"
   og_description: "Complete Rails 8 Docker deployment guide. Multi-stage builds, security hardening, performance optimization, production workflow."
   twitter_card: "summary_large_image"

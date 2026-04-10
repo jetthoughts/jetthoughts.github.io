@@ -6,11 +6,11 @@ date: 2025-10-27
 draft: false
 tags: ["rails", "authentication", "devise", "security", "rails8"]
 canonical_url: "https://jetthoughts.com/blog/rails-8-authentication-generator-devise-migration/"
-cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730029200/rails-8-authentication-migration.jpg"
+cover_image: "cover.png"
 slug: "rails-8-authentication-generator-devise-migration"
 author: "JetThoughts Team"
 metatags:
-  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730029200/rails-8-authentication-migration.jpg"
+  image: cover.png
   og_title: "Rails 8 Authentication Generator: Complete Devise Migration | JetThoughts"
   og_description: "Master Rails 8 built-in authentication. Complete guide with Devise migration, security best practices, production deployment."
   twitter_title: "Rails 8 Authentication Generator: Devise Migration Guide"

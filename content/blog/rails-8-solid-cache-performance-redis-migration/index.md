@@ -9,10 +9,10 @@ author: "JetThoughts Team"
 draft: false
 tags: ["rails", "solid-cache", "redis", "caching", "performance", "rails-8"]
 categories: ["Development", "Rails", "Performance"]
-cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730033400/solid-cache-redis-migration.jpg"
+cover_image: "cover.png"
 canonical_url: "https://jetthoughts.com/blog/rails-8-solid-cache-performance-redis-migration/"
 metatags:
-  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730033400/solid-cache-redis-migration.jpg"
+  image: cover.png
   og_title: "Rails 8 Solid Cache Performance: Complete Redis Migration | JetThoughts"
   og_description: "Master Solid Cache migration from Redis. Complete guide with benchmarks, cost analysis, migration strategy for production deployments."
   twitter_card: "summary_large_image"

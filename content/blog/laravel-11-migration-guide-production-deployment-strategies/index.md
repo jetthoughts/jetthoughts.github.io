@@ -6,6 +6,9 @@ draft: false
 tags: ["laravel", "php", "migration", "deployment", "laravel11"]
 canonical_url: "https://jetthoughts.com/blog/laravel-11-migration-guide-production-deployment-strategies/"
 slug: "laravel-11-migration-guide-production-deployment-strategies"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 
 Laravel 11 introduces the most significant architectural improvements since Laravel 8, marking a pivotal moment for PHP development teams managing production applications. Released in March 2024, Laravel 11 streamlines application structure, enhances performance, and introduces modern PHP 8.2+ features that reduce boilerplate code while improving maintainability and developer productivity.

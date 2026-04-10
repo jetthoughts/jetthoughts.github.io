@@ -6,6 +6,9 @@ draft: false
 tags: ["django", "technical-debt", "cost-analysis", "code-quality", "refactoring"]
 canonical_url: "https://jetthoughts.com/blog/django-technical-debt-cost-calculator-elimination-strategy/"
 slug: "django-technical-debt-cost-calculator-elimination-strategy"
+cover_image: "cover.png"
+metatags:
+  image: cover.png
 ---
 
 Technical debt in Django applications carries a hidden price tag that most CTOs dramatically underestimate. While developers discuss "code smells" and "refactoring opportunities," business leaders need concrete numbers. Research across 200+ Django projects reveals a sobering reality: **technical debt costs organizations $180,000 to $350,000 annually** in lost productivity, increased bug rates, and delayed feature delivery.

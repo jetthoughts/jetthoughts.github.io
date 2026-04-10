@@ -6,11 +6,11 @@ date: 2025-10-27
 draft: false
 tags: ["rails", "propshaft", "sprockets", "assets", "performance"]
 canonical_url: "https://jetthoughts.com/blog/propshaft-vs-sprockets-rails-8-asset-pipeline-migration/"
-cover_image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730025600/propshaft-rails-8-migration.jpg"
+cover_image: "cover.png"
 slug: "propshaft-vs-sprockets-rails-8-asset-pipeline-migration"
 author: "JetThoughts Team"
 metatags:
-  image: "https://res.cloudinary.com/jetthoughts/image/upload/v1730025600/propshaft-rails-8-migration.jpg"
+  image: cover.png
   og_title: "Propshaft vs Sprockets: Complete Rails 8 Asset Pipeline Migration | JetThoughts"
   og_description: "Master Propshaft migration in Rails 8. Complete guide with benchmarks, step-by-step migration, and production deployment strategies."
   twitter_title: "Propshaft vs Sprockets: Rails 8 Asset Pipeline Migration"
