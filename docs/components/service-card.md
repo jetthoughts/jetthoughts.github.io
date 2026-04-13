@@ -56,7 +56,7 @@ The Service Card component displays service offerings with icons, descriptions, 
 ### Data Integration
 ```go
 {{/* Using site data */}}
-{{ range .Site.Data.services.services }}
+{{ range hugo.Data.services.services }}
   {{ partial "components/service-card.html" . }}
 {{ end }}
 ```
@@ -131,7 +131,7 @@ The Service Card component displays service offerings with icons, descriptions, 
 ### Homepage Service Grid
 **File**: `themes/beaver/layouts/partials/homepage/services.html`
 ```go
-{{ range .Site.Data.services.services }}
+{{ range hugo.Data.services.services }}
   {{ if .featured }}
     {{ partial "components/service-card.html" (dict
       "icon" .icon

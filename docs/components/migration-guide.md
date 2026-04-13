@@ -391,12 +391,12 @@ grep -r "text-align.*center" themes/beaver/assets/css/ # Identified alignment pa
 2. **Data Source Integration**
    ```go
    {{/* Service data integration */}}
-   {{ range .Site.Data.services.services }}
+   {{ range hugo.Data.services.services }}
      {{ partial "components/service-card.html" . }}
    {{ end }}
 
    {{/* Use case data integration */}}
-   {{ $use_case_data := .Site.Data.menu.menu_custom.use_cases }}
+   {{ $use_case_data := hugo.Data.menu.menu_custom.use_cases }}
    {{ $page_data := .Page.Params }}
    {{ partial "components/use-case-card.html" (dict
      "icon" $use_case_data.icon
@@ -485,7 +485,7 @@ grep -r "text-align.*center" themes/beaver/assets/css/ # Identified alignment pa
 
 **Solution**: Create data mapping layer
 ```go
-{{ $service_data := index .Site.Data.services.services 0 }}
+{{ $service_data := index hugo.Data.services.services 0 }}
 {{ partial "components/service-card.html" (dict
   "icon" $service_data.icon
   "title" $service_data.name           // Map 'name' to 'title'
