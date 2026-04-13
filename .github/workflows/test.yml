@@ -1,0 +1,67 @@
+---
+name: Tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      update-baselines:
+        description: 'Re-record screenshot baselines and commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: tests-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+
+      - uses: snap-diff/snap_diff-capybara/.github/actions/setup-ruby-and-dependencies@master
+        with:
+          ruby-version: '4.0'
+          cache-apt-packages: true
+
+      - uses: ./.github/actions/setup-hugo
+
+      - name: Run tests
+        if: ${{ !inputs.update-baselines }}
+        run: bundle exec rake test
+        env:
+          SCREENSHOT_DRIVER: vips
+
+      - name: Record baselines
+        if: ${{ inputs.update-baselines }}
+        run: FORCE_SCREENSHOT_UPDATE=true bundle exec rake test
+        env:
+          SCREENSHOT_DRIVER: vips
+
+      - name: Commit updated baselines
+        if: ${{ inputs.update-baselines }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add test/fixtures/screenshots/
+          git diff --staged --quiet || git commit -m "chore: update screenshot baselines [ci skip]"
+          git push
+
+      - name: Upload screenshot report
+        if: failure()
+        uses: snap-diff/snap_diff-capybara/.github/actions/upload-screenshots@master
+        with:
+          name: screenshots
+          report-path: test/fixtures/screenshots
+          pr-comment: 'true'

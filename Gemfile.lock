@@ -1,8 +1,8 @@
 GIT
-  remote: https://github.com/donv/capybara-screenshot-diff.git
-  revision: 62419f7432afa4e0e06cb9e099bc386f92335bb2
+  remote: https://github.com/snap-diff/snap_diff-capybara.git
+  revision: 4070438ec9579be86faf8a5580783889fbc8431f
   specs:
-    capybara-screenshot-diff (1.11.0)
+    capybara-screenshot-diff (1.12.0)
       capybara (>= 2, < 4)
 
 GEM

@@ -1,0 +1,50 @@
+---
+name: 'Setup Hugo with caches'
+description: 'Install Hugo + Bun, cache dependencies and build artifacts'
+inputs:
+  hugo-version:
+    description: 'Hugo version'
+    default: '0.149.1'
+  environment:
+    description: 'Hugo build environment'
+    default: 'development'
+runs:
+  using: 'composite'
+  steps:
+    - uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: ${{ inputs.hugo-version }}
+        extended: true
+
+    - uses: oven-sh/setup-bun@v2
+
+    - name: Cache Bun dependencies
+      uses: actions/cache@v5
+      with:
+        path: |
+          ~/.bun/install/cache
+          node_modules
+        key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb', '**/package.json') }}
+        restore-keys: ${{ runner.os }}-bun-
+
+    - run: bun install --frozen-lockfile
+      shell: bash
+
+    - name: Cache Hugo build
+      uses: actions/cache@v5
+      with:
+        path: |
+          /tmp/hugo_cache
+          resources/_gen
+          _dest
+        key: ${{ runner.os }}-hugo-${{ inputs.environment }}-${{ hashFiles('hugo.toml', 'hugo.dev.toml', 'postcss.config.js', 'package.json', '**/bun.lockb', 'themes/**', 'layouts/**', 'content/**') }}
+        restore-keys: |
+          ${{ runner.os }}-hugo-${{ inputs.environment }}-
+          ${{ runner.os }}-hugo-
+
+    - name: Build Hugo site
+      run: PATH="./node_modules/.bin:$PATH" bin/hugo-build
+      shell: bash
+      env:
+        HUGO_CACHEDIR: /tmp/hugo_cache
+        ENVIRONMENT: ${{ inputs.environment }}
