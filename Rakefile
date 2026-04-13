@@ -15,6 +15,12 @@ namespace :test do
     t.pattern = "test/**/*_test.rb"
   end
 
+  Rake::TestTask.new(:unit) do |t|
+    t.libs << "test"
+    t.libs << "lib"
+    t.pattern = "test/unit/**/*_test.rb"
+  end
+
   Rake::TestTask.new(:critical) do |t|
     t.libs << "test"
     t.libs << "lib"
