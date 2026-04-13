@@ -6,6 +6,10 @@ on:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs:
+      screenshots:
+        description: 'Run screenshot tests (slow, requires Hugo build)'
+        type: boolean
+        default: false
       update-baselines:
         description: 'Re-record screenshot baselines and commit'
         type: boolean
@@ -20,8 +24,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    name: Tests
+  unit:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - uses: ./.github/actions/setup-hugo
+
+      - run: bundle exec rake test:unit
+
+  screenshots:
+    name: Screenshot Tests
+    if: ${{ inputs.screenshots || inputs.update-baselines }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -37,7 +58,7 @@ jobs:
 
       - uses: ./.github/actions/setup-hugo
 
-      - name: Run tests
+      - name: Run screenshot tests
         if: ${{ !inputs.update-baselines }}
         run: bundle exec rake test
         env:
