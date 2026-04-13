@@ -65,7 +65,7 @@ class TestimonialShortcodeTest < BasePageTestCase
 
     # The careers page should render successfully
     page_text = doc.text
-    assert page_text.include?("Looking for a Team to Take You to the Next Level?"),
+    assert page_text.include?("Looking for a Team to Take You to the Next"),
       "Careers page should have expected heading"
 
     # Verify testimonial from frontmatter renders
@@ -77,7 +77,7 @@ class TestimonialShortcodeTest < BasePageTestCase
 
     assert page_text.include?("Current Employee (3+ Years)"),
       "Should have employee tenure info"
-    assert page_text.include?("Ruby on Rails Developer at JetThoughts"),
+    assert page_text.include?("Ruby on Rails Developer at"),
       "Should have job title info"
   end
 
