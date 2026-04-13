@@ -37,6 +37,7 @@ hugo.linux
 *.diff.png
 *.base.png
 *.attempt_*.png
+snap_diff_report.html
 
 # Capybara
 capybara-*.png

@@ -19,8 +19,8 @@ class DesktopSiteTest < ApplicationSystemTestCase
     # Move mouse to (0,0) to prevent menu hover state causing flakiness
     page.driver.browser.action.move_to_location(0, 0).perform
 
-    # Wait for animations to complete
-    sleep 0.5
+    # Anchor on hero content before screenshot
+    assert_selector ".hero, [data-section=hero], main", wait: 2
 
     assert_screenshot "homepage", tolerance: 0.03
   end
@@ -57,7 +57,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
   def test_blog_post
     visit "/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/"
 
-    assert_stable_screenshot "blog/post", tolerance: 0.03, stability_time_limit: 5
+    assert_stable_screenshot "blog/post", tolerance: 0.03, stability_time_limit: 1
   end
 
   def test_about_us
@@ -128,7 +128,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("services", "overview", css: '[data-node="i8x1zs2grf9h"]')
     verify_section_for("services", "services", css: '[data-node="nhf6l2ycmzoe"]')
     verify_section_for("services", "technologies")
-    verify_section_for("services", "use-cases")
+    verify_section_for("services", "use-cases", stability_time_limit: 1)
     verify_section_for("services", "testimonials-header", css: '[data-node="1a4igunq3xvj"]')
     verify_section_for("services", "cta-contact_us", css: '[data-node="ohd51ixf3842"]')
     verify_section_for("services", "footer", css: "footer")
@@ -307,10 +307,9 @@ class DesktopSiteTest < ApplicationSystemTestCase
 
   private
 
-  def verify_section_for(page_name, section_id, css: nil)
+  def verify_section_for(page_name, section_id, css: nil, **options)
     scroll_to find(css || "##{section_id}")
-    # Ruby hash-based config handles tolerance automatically
-    assert_screenshot "#{page_name}/_#{section_id}"
+    assert_screenshot "#{page_name}/_#{section_id}", **options
   end
 
   def within_top_bar
