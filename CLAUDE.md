@@ -107,3 +107,6 @@ Follow official methodology from `/knowledge/`:
 **Coverage**: Full codebase indexed (830+ files, 4,184+ semantic chunks)
 **Design System**: JetVelocity — obsidian dark, Ruby red (#cc342d), neon purple (#a855f7). See `.stitch/design.md`
 **ICP**: Non-technical founder burned by a devshop. See `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
+
+## Tooling Preference
+- Use `bun` for JS dependency installs and scripts; do not use `npm`.
