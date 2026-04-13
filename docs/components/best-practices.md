@@ -297,7 +297,7 @@
 {{ end }}
 
 {{/* From data files */}}
-{{ with .Site.Data.content.blocks }}
+{{ with hugo.Data.content.blocks }}
   {{ $content_data = merge $content_data (index . $.block_id) }}
 {{ end }}
 
@@ -558,7 +558,7 @@ grep -r "c-content-block" themes/beaver/layouts/ | wc -l >> reports/component-us
 #### Site Data Integration
 ```go
 {{/* ✅ Good: Flexible data source handling */}}
-{{ range .Site.Data.services.services }}
+{{ range hugo.Data.services.services }}
   {{ partial "components/service-card.html" (dict
     "icon" .icon
     "title" .name
@@ -582,7 +582,7 @@ grep -r "c-content-block" themes/beaver/layouts/ | wc -l >> reports/component-us
 #### Data Mapping Patterns
 ```go
 {{/* ✅ Good: Clear data transformation */}}
-{{ $service_data := index .Site.Data.services.services 0 }}
+{{ $service_data := index hugo.Data.services.services 0 }}
 {{ partial "components/service-card.html" (dict
   "icon" $service_data.icon
   "title" $service_data.name           // Map 'name' to 'title'
@@ -834,8 +834,8 @@ curl http://localhost:1313/services/ | grep "service-card"
 #### Data Validation
 ```go
 {{/* ✅ Good: Validate required data */}}
-{{- if and .Site.Data.testimonials .Site.Data.testimonials.testimonials -}}
-  {{ range .Site.Data.testimonials.testimonials }}
+{{- if and hugo.Data.testimonials hugo.Data.testimonials.testimonials -}}
+  {{ range hugo.Data.testimonials.testimonials }}
     <!-- Render testimonials -->
   {{ end }}
 {{- else -}}

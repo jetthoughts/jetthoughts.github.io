@@ -236,7 +236,7 @@ node_id       string  // FL-Builder node ID (defaults to "testimonials")
 - **Badge Integration**: Company badges (GoodFirms, Clutch, Glassdoor, etc.)
 - **Star Ratings**: Visual star images with scores
 - **Swiper Carousel**: Dynamic testimonial slider
-- **Data Integration**: Reads from `.Site.Data.testimonials` or `.Site.Params.testimonials`
+- **Data Integration**: Reads from `hugo.Data.testimonials` or `.Site.Params.testimonials`
 - **CSS Loading**: Non-critical CSS with preload optimization
 - **Responsive Layout**: Flex container with mobile column layout
 
@@ -258,7 +258,7 @@ node_id       string  // FL-Builder node ID (defaults to "testimonials")
 {{/* Service grid pattern */}}
 <div class="fl-row">
   <div class="fl-col-group">
-    {{ range .Site.Data.services.services }}
+    {{ range hugo.Data.services.services }}
       {{ partial "components/service-card.html" . }}
     {{ end }}
   </div>
@@ -283,7 +283,7 @@ node_id       string  // FL-Builder node ID (defaults to "testimonials")
 ### 3. Data Integration
 ```go
 {{/* Service data integration */}}
-{{ $service := index .Site.Data.services.services 0 }}
+{{ $service := index hugo.Data.services.services 0 }}
 {{ partial "components/service-card.html" (dict
   "icon" $service.icon
   "title" $service.title
