@@ -44,7 +44,7 @@ class MetaTagsTest < BasePageTestCase
     assert_equal "website", og_type["content"], "og:type should be website"
 
     og_site_name = doc.css('meta[property="og:site_name"]').first
-    assert_equal "jetthoughts.com", og_site_name["content"], "og:site_name should be jetthoughts.com"
+    assert_equal "JetThoughts", og_site_name["content"], "og:site_name should be JetThoughts"
   end
 
   def test_homepage_has_twitter_card_meta_tags
@@ -143,10 +143,10 @@ class MetaTagsTest < BasePageTestCase
 
     # Verify image dimensions
     og_image_width = doc.css('meta[property="og:image:width"]').first
-    assert_equal "512", og_image_width["content"], "og:image width should be 512"
+    assert_equal "1200", og_image_width["content"], "og:image width should be 1200"
 
     og_image_height = doc.css('meta[property="og:image:height"]').first
-    assert_equal "269", og_image_height["content"], "og:image height should be 269"
+    assert_equal "630", og_image_height["content"], "og:image height should be 630"
   end
 
   def test_viewport_meta_tag_exists
