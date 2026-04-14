@@ -13,12 +13,12 @@
     {{ partialCached "page/favicons.html" . "favicons" }}
     {{ partial "page/analytics.html" . }}
     {{ $favicon := resources.Get "/img/favicon/favicon.ico" | fingerprint "md5" }}
-    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}" />
+    <link rel="shortcut icon" href="{{ $favicon.Permalink }}" />
     <meta name="msapplication-TileColor" content="#00aba9" />
     {{ $browserConfig := resources.Get "img/favicon/browserconfig.xml" | resources.ExecuteAsTemplate "browserconfig.xml" . | fingerprint "md5" }}
     <meta
       name="msapplication-config"
-      content="{{ $browserConfig.RelPermalink }}" />
+      content="{{ $browserConfig.Permalink }}" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="manifest" href="/manifest.json" />
 

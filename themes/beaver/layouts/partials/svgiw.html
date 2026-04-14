@@ -1,7 +1,7 @@
 {{ $svg := .svg }}
 {{ $svgPath := printf "img/icons/%s.svg" $svg }}
 {{ $svgFile := resources.Get $svgPath | fingerprint "md5" }}
-{{ $svgRelPermalink := $svgFile.RelPermalink }}
+{{ $svgRelPermalink := $svgFile.Permalink }}
 
 <img
   fetchpriority="low"

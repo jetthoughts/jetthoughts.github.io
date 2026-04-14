@@ -35,8 +35,8 @@
 {{- $testimonialsData := hugo.Data.testimonials -}}
 
 {{- $nonCriticalCSS := resources.Get "css/vendors/swiper.min.css" | fingerprint "md5" -}}
-<link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.RelPermalink }}"></noscript>
+<link fetchpriority="low" rel="preload" href="{{ $nonCriticalCSS.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $nonCriticalCSS.Permalink }}"></noscript>
 
 <div class="fl-col-group testimonial__header fl-col-group-custom-width" data-node="{{ $node_id }}-header">
   <div class="fl-col testimonial__header-col fl-col-small-custom-width" data-node="{{ $node_id }}-header-col">
