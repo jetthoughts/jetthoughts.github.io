@@ -128,3 +128,55 @@ a.fl-button:active,
     padding: 2rem 0;
   }
 }
+
+/* ============================================================
+   4. MOBILE HERO CONTENT ORDER FIX
+   ============================================================ */
+
+/* Fix homepage hero: text should appear before image on mobile
+   Override fl-col-group-responsive-reversed for hero section only */
+@media (max-width: 860px) {
+  .jt-home-hero .fl-col-group-responsive-reversed {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Ensure text column comes first */
+  .jt-home-hero .fl-col-group-responsive-reversed .fl-col:first-child {
+    order: 1;
+  }
+
+  .jt-home-hero .fl-col-group-responsive-reversed .fl-col:last-child {
+    order: 2;
+  }
+}
+
+/* ============================================================
+   5. NAVIGATION DROPDOWN ARROW CONSISTENCY
+   ============================================================ */
+
+/* Standardize arrow spacing and alignment */
+.navigation .item .arrow {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Ensure arrows are visible on hover for all nav items */
+.navigation .item:hover .arrow {
+  border-top-color: #1a8cff;
+  border-right-color: #1a8cff;
+}
+
+/* Mobile nav arrow improvements */
+@media (max-width: 768px) {
+  .navigation .item .arrow {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  /* Smooth dropdown animation */
+  .navigation .sub-menu {
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+  }
+}
+
