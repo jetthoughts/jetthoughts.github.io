@@ -206,39 +206,29 @@
 {{- $imageWidth := "" -}}
 {{- $imageHeight := "" -}}
 
-{{/* Try metatags.image first (current pattern) */}}
-{{- with .Params.metatags.image -}}
-  {{- $resource := $page.Resources.Get . -}}
-  {{- if $resource -}}
-    {{- if site.Params.cdn.enabled -}}
-      {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
-      {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
-      {{- $imageWidth = "1200" -}}
-      {{- $imageHeight = "630" -}}
+{{/* Try image fields in priority order */}}
+{{- $imageFields := slice "metatags.image" "cover_image" -}}
+{{- range $field := $imageFields -}}
+  {{- if not $image -}}
+    {{- $value := "" -}}
+    {{- if eq $field "metatags.image" -}}
+      {{- $value = $page.Params.metatags.image -}}
     {{- else -}}
-      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
-      {{- $image = $optimized.Permalink -}}
-      {{- $imageWidth = $optimized.Width -}}
-      {{- $imageHeight = $optimized.Height -}}
+      {{- $value = index $page.Params $field -}}
     {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* Fallback to cover_image */}}
-{{- if not $image -}}
-  {{- with .Params.cover_image -}}
-    {{- $resource := $page.Resources.Get . -}}
-    {{- if $resource -}}
-      {{- if site.Params.cdn.enabled -}}
-        {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
-        {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
-        {{- $imageWidth = "1200" -}}
-        {{- $imageHeight = "630" -}}
-      {{- else -}}
-        {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
-        {{- $image = $optimized.Permalink -}}
-        {{- $imageWidth = $optimized.Width -}}
-        {{- $imageHeight = $optimized.Height -}}
+    {{- with $value -}}
+      {{- $resource := $page.Resources.Get . -}}
+      {{- if $resource -}}
+        {{- if site.Params.cdn.enabled -}}
+          {{- $image = partial "cdn/url" (dict "page" $page "resource" $resource "params" "w=1200&h=630&fit=cover&output=webp&q=85") -}}
+          {{- $imageWidth = "1200" -}}
+          {{- $imageHeight = "630" -}}
+        {{- else -}}
+          {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+          {{- $image = $optimized.Permalink -}}
+          {{- $imageWidth = $optimized.Width -}}
+          {{- $imageHeight = $optimized.Height -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
@@ -273,4 +263,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  {{- if site.Params.cdn.enabled -}}
+  <link rel="preconnect" href="https://wsrv.nl" crossorigin />
+  {{- end -}}
 {{- end -}}

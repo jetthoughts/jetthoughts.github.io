@@ -4,14 +4,20 @@ description: 'Install Hugo + Bun, cache dependencies and build artifacts'
 inputs:
   hugo-version:
     description: 'Hugo version'
-    default: '0.149.1'
+    default: '0.160.1'
   environment:
     description: 'Hugo build environment'
-    default: 'development'
+    default: 'production'
+  output-dir:
+    description: 'Hugo build output directory'
+    default: '_dest/public-test'
+  base-url:
+    description: 'Hugo base URL (default: /)'
+    default: '/'
 runs:
   using: 'composite'
   steps:
-    - uses: peaceiris/actions-hugo@v3
+    - uses: jetthoughts/actions-hugo@feat/node24
       with:
         hugo-version: ${{ inputs.hugo-version }}
         extended: true
@@ -48,3 +54,5 @@ runs:
       env:
         HUGO_CACHEDIR: /tmp/hugo_cache
         ENVIRONMENT: ${{ inputs.environment }}
+        OUTPUT_DIR: ${{ inputs.output-dir }}
+        BASE_URL: ${{ inputs.base-url }}

@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: jetthoughts/actions-hugo@feat/node24
         with:
-          hugo-version: 0.149.1
+          hugo-version: 0.160.1
           extended: true
 
       - name: Checkout
@@ -28,7 +28,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       # Tier 1: Dependencies cache (changes infrequently)
       - uses: actions/cache@v5
@@ -80,12 +80,12 @@ jobs:
 
       - name: Remove blog media from artifact
         run: |
-          find public/blog/ -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.webp' -o -iname '*.svg' -o -iname '*.mp4' \) -delete
+          find public/blog/ -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.webp' \) -delete
           echo "Cleaned blog media. Artifact size:"
           du -sh public/
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -100,4 +100,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

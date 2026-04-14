@@ -8,7 +8,7 @@
     </div>
 
     <div class="container">
-    {{ range $index, $tech := site.Data.technologies }}
+    {{ range $index, $tech := hugo.Data.technologies }}
         <div class="item">
             {{ partial "svg" $tech.icon }}
             <div>{{ $tech.name }}</div>

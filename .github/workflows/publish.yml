@@ -29,3 +29,22 @@ defaults:
 jobs:
   build_and_deploy:
     uses: ./.github/workflows/_hugo.yml
+
+  unit_tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - uses: ./.github/actions/setup-hugo
+
+      - run: bundle exec rake test:unit
+        env:
+          PRECOMPILED_ASSETS: '1'
+          HUGO_DEFAULT_PATH: _dest/public-test

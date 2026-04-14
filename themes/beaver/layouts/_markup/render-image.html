@@ -8,9 +8,9 @@
 
 {{ if $isGif }}
   {{ if $useCDN }}
-  {{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase .Page.File.Dir $src.Name }}
+  {{ $cdnURL := partial "cdn/url" (dict "page" .Page "resource" $src "params" "") }}
   <img loading="lazy"
-       src="https://wsrv.nl/?url={{ $rawURL }}"
+       src="{{ $cdnURL }}"
        alt="{{ $alt }}"
        height="{{ $src.Height }}"
        width="{{ $src.Width }}">
@@ -22,22 +22,22 @@
        width="{{ $src.Width }}">
   {{ end }}
 {{ else if $useCDN }}
-  {{/* CDN: construct wsrv.nl URLs for responsive images */}}
   {{ $formats := slice "webp" "jpeg" }}
   {{ $sizes := slice 400 800 1200 1600 }}
-  {{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase .Page.File.Dir $src.Name }}
 
   <picture>
       {{ range $format := $formats }}
           {{ $srcset := slice }}
           {{ range $size := $sizes }}
-              {{ $srcset = $srcset | append (printf "https://wsrv.nl/?url=%s&w=%d&output=%s&q=80 %dw" $rawURL $size $format $size) }}
+              {{ $url := partial "cdn/url" (dict "page" $.Page "resource" $src "params" (printf "w=%d&output=%s&q=80" $size $format)) }}
+              {{ $srcset = $srcset | append (printf "%s %dw" $url $size) }}
           {{ end }}
           <source type="image/{{ $format }}" srcset="{{ delimit $srcset ", " }}"
                   sizes="(max-width: 48rem) 100vw, 48rem" height="{{ $src.Height }}" width="{{ $src.Width }}">
       {{ end }}
+      {{ $fallbackURL := partial "cdn/url" (dict "page" .Page "resource" $src "params" "w=400&output=jpeg&q=80") }}
       <img loading="lazy"
-           src="https://wsrv.nl/?url={{ $rawURL }}&w=400&output=jpeg&q=80"
+           src="{{ $fallbackURL }}"
            alt="{{ $alt }}"
            height="{{ $src.Height }}"
            width="{{ $src.Width }}">

@@ -1,15 +1,13 @@
 ---
-name: Tests
+name: Screenshot Tests
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs:
       screenshots:
         description: 'Run screenshot tests (slow, requires Hugo build)'
         type: boolean
-        default: false
+        default: true
       update-baselines:
         description: 'Re-record screenshot baselines and commit'
         type: boolean
@@ -20,26 +18,10 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: tests-${{ github.event.pull_request.number || github.ref }}
+  group: screenshots-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  unit:
-    name: Unit Tests
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v6
-
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '4.0'
-          bundler-cache: true
-
-      - uses: ./.github/actions/setup-hugo
-
-      - run: bundle exec rake test:unit
-
   screenshots:
     name: Screenshot Tests
     if: ${{ inputs.screenshots || inputs.update-baselines }}
@@ -63,12 +45,16 @@ jobs:
         run: bundle exec rake test
         env:
           SCREENSHOT_DRIVER: vips
+          PRECOMPILED_ASSETS: '1'
+          HUGO_DEFAULT_PATH: _dest/public-test
 
       - name: Record baselines
         if: ${{ inputs.update-baselines }}
         run: FORCE_SCREENSHOT_UPDATE=true bundle exec rake test
         env:
           SCREENSHOT_DRIVER: vips
+          PRECOMPILED_ASSETS: '1'
+          HUGO_DEFAULT_PATH: _dest/public-test
 
       - name: Commit updated baselines
         if: ${{ inputs.update-baselines }}

@@ -1,0 +1,6 @@
+{{/* Constructs a CDN proxy URL for a page bundle image resource.
+     Input: dict "page" $page "resource" $resource "params" "w=400&output=webp&q=80"
+     Returns: "https://wsrv.nl/?url=...&w=400&output=webp&q=80" */}}
+{{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase .page.File.Dir .resource.Name -}}
+{{- $suffix := cond (ne .params "") (printf "&%s" .params) "" -}}
+{{- return printf "https://wsrv.nl/?url=%s%s" $rawURL $suffix -}}
