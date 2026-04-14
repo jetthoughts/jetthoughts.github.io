@@ -89,11 +89,27 @@
                on mobile the text comes first because that's what
                keeps founders reading at 11pm. */}}
           {{ with .Resources.GetMatch "cover.*" }}
-            {{ $w640  := .Resize "640x webp q85" }}
-            {{ $w960  := .Resize "960x webp q85" }}
-            {{ $w1920 := .Resize "1920x webp q82" }}
             <style>.post-cover-figure { display: block; } @media (max-width: 688px) { .post-cover-figure { display: none; } }</style>
             <figure class="post-cover-figure" style="margin: 0 0 1.25rem; max-width: 43rem;">
+            {{ if site.Params.cdn.enabled }}
+              {{ $src640  := partial "cdn/url" (dict "page" $ "resource" . "params" "w=640&output=webp&q=85") }}
+              {{ $src960  := partial "cdn/url" (dict "page" $ "resource" . "params" "w=960&output=webp&q=85") }}
+              {{ $src1920 := partial "cdn/url" (dict "page" $ "resource" . "params" "w=1920&output=webp&q=82") }}
+              <img
+                class="post-cover"
+                src="{{ $src960 }}"
+                srcset="{{ $src640 }} 640w, {{ $src960 }} 960w, {{ $src1920 }} 1920w"
+                sizes="(max-width: 688px) 100vw, 688px"
+                alt="{{ $.Params.cover_image_alt | default $.Title }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                loading="eager"
+                fetchpriority="high"
+                style="width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 1px 6px rgba(0,0,0,0.10);" />
+            {{ else }}
+              {{ $w640  := .Resize "640x webp q85" }}
+              {{ $w960  := .Resize "960x webp q85" }}
+              {{ $w1920 := .Resize "1920x webp q82" }}
               <img
                 class="post-cover"
                 src="{{ $w960.Permalink }}"
@@ -105,6 +121,7 @@
                 loading="eager"
                 fetchpriority="high"
                 style="width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 1px 6px rgba(0,0,0,0.10);" />
+            {{ end }}
               {{ with $.Params.cover_image_caption }}
                 <figcaption style="font-size: 0.875rem; color: rgba(33,37,41,0.65); text-align: center; margin-top: 0.75rem; font-style: italic;">{{ . | safeHTML }}</figcaption>
               {{ end }}

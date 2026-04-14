@@ -42,6 +42,7 @@ Gate in templates: `{{ if site.Params.cdn.enabled }}`
 | `partials/blog/img-cropped.html` | Retina thumbnail via wsrv.nl |
 | `partials/seo/enhanced-meta-tags.html` | OG image (1200×630) via wsrv.nl |
 | `_shortcodes/img.html` | Direct image via wsrv.nl |
+| `single.html` | Blog post cover image srcset (640/960/1920w webp) via wsrv.nl |
 
 **Note:** Root `layouts/` overrides `themes/beaver/layouts/`. Both `enhanced-meta-tags.html` copies must stay in sync.
 
@@ -53,10 +54,19 @@ Gate in templates: `{{ if site.Params.cdn.enabled }}`
 - `&q=N` — quality (80 content, 85 OG, 90 thumbnails)
 - `&fit=cover` — crop to exact dimensions (OG images)
 
+## Building with CDN Enabled
+
+To test the production CDN build locally:
+
+```bash
+ENVIRONMENT=production bin/hugo-build
+```
+
+This uses `config/production/hugo.toml` which sets `params.cdn.enabled = true`. Verify CDN URLs appear in the output HTML (look for `wsrv.nl` in image src attributes). The processed image count should drop from ~8000 to ~177.
+
 ## Not Yet Covered
 
 Non-blog image templates (assets from `assets/`/`static/`, unaffected by blog media cleanup):
 
 - `partials/img/generic.html` (hero, homepage, testimonials)
 - `partials/img/resize.html`
-- `partials/page/cover_image.html`

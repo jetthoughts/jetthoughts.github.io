@@ -1,11 +1,19 @@
 {{ if . }}
-  {{ $coverImage := .Fit "512x512 jpeg" }}
-
-  {{ with $coverImage }}
+  {{ if site.Params.cdn.enabled }}
+    {{/* CDN proxy — no Hugo image processing needed */}}
     <meta content="{{ .Permalink }}" property="og:image" />
     <meta content="{{ .Width }}" property="og:image:width" />
     <meta content="{{ .Height }}" property="og:image:height" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="{{ .Permalink }}" name="twitter:image" />
+  {{ else }}
+    {{ $coverImage := .Fit "512x512 jpeg" }}
+    {{ with $coverImage }}
+      <meta content="{{ .Permalink }}" property="og:image" />
+      <meta content="{{ .Width }}" property="og:image:width" />
+      <meta content="{{ .Height }}" property="og:image:height" />
+      <meta content="summary_large_image" name="twitter:card" />
+      <meta content="{{ .Permalink }}" name="twitter:image" />
+    {{ end }}
   {{ end }}
 {{ end }}
