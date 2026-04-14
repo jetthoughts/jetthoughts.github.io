@@ -1,0 +1,11 @@
+<div class="jt-services-faqs">
+  <h2 class="fl-heading">Frequently Asked Questions</h2>
+  <dl class="jt-faq-list">
+    {{ range .Params.faqs }}
+      <div class="jt-faq-item">
+        <dt class="jt-faq-question"><strong>Q: {{ .question }}</strong></dt>
+        <dd class="jt-faq-answer">{{ .answer }}</dd>
+      </div>
+    {{ end }}
+  </dl>
+</div>

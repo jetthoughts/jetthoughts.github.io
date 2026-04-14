@@ -68,6 +68,11 @@
                               <div class="fl-module-content">
                                 <div class="fl-rich-text">
                                   <p>{{ .Page.Params.excerpt }}</p>
+                                  <ul class="jt-business-benefits">
+                                    {{ range .Page.Params.business_benefits }}
+                                      <li><strong>✓</strong> {{ . }}</li>
+                                    {{ end }}
+                                  </ul>
                                 </div>
                               </div>
                             </div>
@@ -379,6 +384,10 @@
                       </div>
 
                       {{ partial "page/testimonials.html" . }}
+
+                      {{ if .Params.faqs }}
+                        {{ partial "services/faqs.html" . }}
+                      {{ end }}
 
 
                       <div
