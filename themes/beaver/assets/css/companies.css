@@ -12,14 +12,30 @@
   display: flex;
   height: 4rem;
   justify-content: center;
-  max-width: var(--p-max-width);
+  align-items: center;
 }
 
 .client-logos > .client-logo > .image {
-  align-self: center;
-  max-height: 50%;
-  max-width: 75%;
+  max-height: 3rem;
+  max-width: 80%;
   width: auto;
-
   height: auto;
+  object-fit: contain;
+}
+
+/* Mobile: 2 columns for better fit */
+@media (max-width: 768px) {
+  .client-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .client-logos > .client-logo {
+    height: 3rem;
+  }
+
+  .client-logos > .client-logo > .image {
+    max-height: 2rem;
+    max-width: 90%;
+  }
 }

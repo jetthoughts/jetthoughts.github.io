@@ -1,4 +1,4 @@
-{{/* Careers page CSS bundle composition.
+{{/* Careers pageCSS bundle composition.
      Order is intentional and must stay stable for legacy cascade behavior. */}}
 {{- return (slice
   (resources.Get "css/critical/careers-critical.css")
@@ -7,6 +7,7 @@
   (resources.Get "css/dynamic-icons.css" | resources.ExecuteAsTemplate "css/dynamic586.css" .)
   (resources.Get "css/586.css")
   (resources.Get "css/homepage.css")
+  (resources.Get "css/ui-polish.css")
   (resources.Get "css/vendors/base-4.min.css")
   (resources.Get "css/style.css")
   (resources.Get "css/skin-65eda28877e04.css")

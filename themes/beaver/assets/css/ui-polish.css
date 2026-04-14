@@ -1,0 +1,130 @@
+/**
+ * UI Polish - Minimal Visual Improvements
+ *
+ * Simple fixes for button hover states, footer responsiveness,
+ * and section spacing consistency.
+ *
+ * Total: ~60 lines across 3 focused areas
+ * Risk: Low - additive styles only
+ */
+
+/* ============================================================
+   1. BUTTON HOVER STATES
+   ============================================================ */
+
+.fl-button,
+a.fl-button,
+.btn,
+.fl-button-wrap a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.fl-button:hover,
+a.fl-button:hover,
+.btn:hover,
+.fl-button-wrap a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 140, 255, 0.3);
+}
+
+.fl-button:active,
+a.fl-button:active,
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(26, 140, 255, 0.2);
+}
+
+/* ============================================================
+   2. FOOTER MOBILE RESPONSIVENESS
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* Stack footer columns vertically */
+  .footer-component .flex-container,
+  .fl-footer .flex-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-component .headline,
+  .fl-footer .headline {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-component .social-icons,
+  .fl-footer .social-icons {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-component .footer-bottom,
+  .fl-footer .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-component .fl-col,
+  .fl-footer .fl-col {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* ============================================================
+   3. SECTION SPACING CONSISTENCY
+   ============================================================ */
+
+/* Consistent spacing between homepage sections */
+.jt-home-hero,
+.jt-home-proof,
+.jt-home-services,
+.fl-row.jt-home-* {
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .jt-home-hero,
+  .jt-home-proof,
+  .jt-home-services,
+  .fl-row.jt-home-* {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Blog index section spacing */
+.blog {
+  padding: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .blog {
+    padding: 2rem 0;
+  }
+
+  .blog h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog > p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Career/Services/Clients page spacing */
+.fl-row.fl-row-bg-photo,
+.fl-row.fl-row-bg-color {
+  padding: 3.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .fl-row.fl-row-bg-photo,
+  .fl-row.fl-row-bg-color {
+    padding: 2rem 0;
+  }
+}
