@@ -10,9 +10,20 @@
   overflow: hidden;
 }
 
+/* CTA button centering — works without .c-builder-content parent */
+.fl-button-center {
+  text-align: center;
+}
+
 /*Blog*/
 .blog {
-  padding: 135px 0 50px;
+  padding: 80px 0 50px;
+}
+
+@media (max-width: 768px) {
+  .blog {
+    padding: 70px 0 30px;
+  }
 }
 
 .blog img {
@@ -103,6 +114,14 @@
 .blog p {
   font-size: 20px;
   line-height: 32px;
+}
+
+@media (max-width: 768px) {
+  .blog p,
+  .blog li {
+    font-size: 17px;
+    line-height: 28px;
+  }
 }
 
 .blog p a {

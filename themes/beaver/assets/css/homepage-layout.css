@@ -2625,7 +2625,10 @@ span.pp-accordion-button-icon {
 
 @media (max-width: 860px) {
   .post-image {
-    display: none;
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
   }
 }
 
