@@ -1,6 +1,12 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Get 0)) }}
 {{ if $image }}
+{{ $useCDN := site.Params.cdn.enabled }}
+{{ if $useCDN }}
+{{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase .Page.File.Dir $image.Name }}
+<img src="https://wsrv.nl/?url={{ $rawURL }}" alt="{{ .Get 1 }}" width="{{ $image.Width }}" height="{{ $image.Height }}" />
+{{ else }}
 <img src="{{ $image.RelPermalink }}" alt="{{ .Get 1 }}" width="{{ $image.Width }}" height="{{ $image.Height }}" />
+{{ end }}
 {{ else }}
 <p>Image not found: {{ .Get 0 }}</p>
 {{ end }}

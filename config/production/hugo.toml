@@ -26,6 +26,9 @@ disableKinds = []
   # Production environment
   environment = "production"
 
+[params.cdn]
+  enabled = true
+
 [outputs]
     home = ["HTML"]  # Only build HTML, skip JSON/RSS in tests
     section = ["HTML"]

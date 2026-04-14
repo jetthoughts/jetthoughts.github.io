@@ -16,16 +16,22 @@
 {{- end -}}
 
 {{ if $image }}
+{{ $useCDN := site.Params.cdn.enabled }}
+{{ $retinaW := mul $.width 2 }}
+
+{{ if $useCDN }}
+{{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $image.Name }}
+<img alt='{{ $page.Title }}' src="https://wsrv.nl/?url={{ $rawURL }}&w={{ $retinaW }}&output=jpg&q=90" width="{{ $.width }}" height="{{ $.height }}">
+{{ else }}
 {{/* Aspect-preserving resize at 2× retina. The cover is designed as a
     landscape composition (2400×1260 = 1.905:1) following the canonical
     6-slot layout in .stitch/design.md — we must NOT center-crop it
     because the left-aligned hero + right visual would be mangled.
     CSS uses object-fit: contain with a dark background to letterbox
     cleanly inside the 180×180 thumbnail container. */}}
-{{ $retinaW := mul $.width 2 }}
 {{ $resized := $image.Resize (printf "%dx jpg q90" $retinaW) }}
-
 <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
+{{ end }}
 
 {{ else }}
 <img src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" alt="Placeholder Image">
