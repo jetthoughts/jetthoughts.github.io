@@ -99,3 +99,9 @@ docs/projects/2509-css-migration/50-59-execution/
 .cache
 _workspace
 .claude/scheduled_tasks.lock
+.stitch/designs/
+.stitch/prototypes/
+.stitch/loop-status.md
+.stitch/next-prompt.md
+.stitch/stitch-mockup.html
+.stitch/SITE.md
