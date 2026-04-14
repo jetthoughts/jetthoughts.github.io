@@ -22,10 +22,10 @@
     <meta name="theme-color" content="#ffffff" />
 
     {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
-    {{ partialCached "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) "navigation" }}
+    {{ partialCached "assets/css-inline.html" (dict "resources" $navigationResources "bundleName" "navigation") "navigation" }}
 
     {{- $componentsResources := slice (resources.Get "css/components.css") -}}
-    {{ partialCached "assets/css-processor.html" (dict "resources" $componentsResources "bundleName" "components" "context" .) "components" }}
+    {{ partialCached "assets/css-inline.html" (dict "resources" $componentsResources "bundleName" "components") "components" }}
 
     {{/* Enhanced SEO Schema Markup */}}
     {{ partial "seo/enhanced-organization-schema.html" . }}

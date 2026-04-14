@@ -1,0 +1,10 @@
+{{/* Inline CSS processor - outputs <style> tag instead of <link> to eliminate render-blocking requests */}}
+{{- $resources := .resources -}}
+{{- $bundleName := .bundleName -}}
+{{- $bundle := $resources | resources.Concat (printf "css/%s.css" $bundleName) | postCSS -}}
+
+{{- if hugo.IsProduction -}}
+  {{- $bundle = $bundle | minify -}}
+{{- end -}}
+
+<style>{{ $bundle.Content | safeCSS }}</style>
