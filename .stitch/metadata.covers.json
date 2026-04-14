@@ -1,0 +1,16 @@
+{
+  "name": "projects/3224353017067976684",
+  "projectId": "3224353017067976684",
+  "title": "JetThoughts Blog Covers",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "DARK",
+    "font": "SPACE_GROTESK",
+    "roundness": "ROUND_FOUR",
+    "customColor": "#cc342d",
+    "saturation": 3
+  },
+  "screens": {}
+}
