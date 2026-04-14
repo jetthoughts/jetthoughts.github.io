@@ -89,7 +89,7 @@
                on mobile the text comes first because that's what
                keeps founders reading at 11pm. */}}
           {{ with .Resources.GetMatch "cover.*" }}
-            <style>.post-cover-figure { display: block; } @media (max-width: 688px) { .post-cover-figure { display: none; } }</style>
+            <style>.post-cover-figure { display: block; }</style>
             <figure class="post-cover-figure" style="margin: 0 0 1.25rem; max-width: 43rem;">
             {{ if site.Params.cdn.enabled }}
               {{ $src640  := partial "cdn/url" (dict "page" $ "resource" . "params" "w=640&output=webp&q=85") }}
