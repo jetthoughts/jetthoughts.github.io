@@ -2661,3 +2661,21 @@ span.pp-accordion-button-icon {
 .post-meta .post-date {
   display: block;
 }
+
+.post-title {
+  font-size: 1.15em;
+  line-height: 1.35;
+}
+
+.post-content > div:last-child {
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #555;
+  margin-top: 6px;
+}
+
+@media (max-width: 860px) {
+  .post-title { font-size: 1em; }
+  .post-content > div:last-child { display: none; }
+  .post-meta .post-tags { display: none; }
+}

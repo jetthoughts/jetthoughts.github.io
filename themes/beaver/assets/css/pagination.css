@@ -46,3 +46,18 @@
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* --bs-pagination-focus-box-shadow */
 }
+
+/* Override Bootstrap defaults to match site brand */
+.page-link {
+  font-size: 1rem;
+  color: #1a8cff;
+  border-radius: 6px;
+  border-color: #e0e0e0;
+}
+
+.page-link:hover,
+.page-link:focus {
+  color: #007af4;
+  border-color: #e0e0e0;
+  box-shadow: 0 0 0 0.25rem rgba(26, 140, 255, 0.25);
+}
