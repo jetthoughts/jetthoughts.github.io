@@ -3,25 +3,53 @@
 {{ $alt := .PlainText | safeHTML }}
 
 {{ if $src }}
-{{/* Check if image is a GIF - if so, render it directly */}}
-{{ if eq (path.Ext $src.RelPermalink | lower) ".gif" }}
+{{ $useCDN := site.Params.cdn.enabled }}
+{{ $isGif := eq (path.Ext $src.Name | lower) ".gif" }}
+
+{{ if $isGif }}
+  {{ if $useCDN }}
+  {{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase .Page.File.Dir $src.Name }}
+  <img loading="lazy"
+       src="https://wsrv.nl/?url={{ $rawURL }}"
+       alt="{{ $alt }}"
+       height="{{ $src.Height }}"
+       width="{{ $src.Width }}">
+  {{ else }}
   <img loading="lazy"
        src="{{ ($src | fingerprint "md5").RelPermalink }}"
        alt="{{ $alt }}"
        height="{{ $src.Height }}"
        width="{{ $src.Width }}">
-{{ else }}
-  {{/* Get formats and sizes from config */}}
-  {{/* From less common to most common. For example avif webp jpeg */}}
+  {{ end }}
+{{ else if $useCDN }}
+  {{/* CDN: construct wsrv.nl URLs for responsive images */}}
   {{ $formats := slice "webp" "jpeg" }}
   {{ $sizes := slice 400 800 1200 1600 }}
-  {{/* default format if browser doesn't support picture element */}}
+  {{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase .Page.File.Dir $src.Name }}
+
+  <picture>
+      {{ range $format := $formats }}
+          {{ $srcset := slice }}
+          {{ range $size := $sizes }}
+              {{ $srcset = $srcset | append (printf "https://wsrv.nl/?url=%s&w=%d&output=%s&q=80 %dw" $rawURL $size $format $size) }}
+          {{ end }}
+          <source type="image/{{ $format }}" srcset="{{ delimit $srcset ", " }}"
+                  sizes="(max-width: 48rem) 100vw, 48rem" height="{{ $src.Height }}" width="{{ $src.Width }}">
+      {{ end }}
+      <img loading="lazy"
+           src="https://wsrv.nl/?url={{ $rawURL }}&w=400&output=jpeg&q=80"
+           alt="{{ $alt }}"
+           height="{{ $src.Height }}"
+           width="{{ $src.Width }}">
+  </picture>
+{{ else }}
+  {{/* Local: Hugo image processing for development */}}
+  {{ $formats := slice "webp" "jpeg" }}
+  {{ $sizes := slice 400 800 1200 1600 }}
   {{ $defaultFormat := "jpeg" }}
 
-  {{/* Create optimized versions of the original image in the specified formats */}}
   {{ $cacheKey := printf "img-%s" ($src.RelPermalink | md5) }}
   {{ $data := partialCached "image-processor" (dict "src" $src "formats" $formats "sizes" $sizes) $cacheKey }}
-
 
   <picture>
       {{ range $format := $formats }}

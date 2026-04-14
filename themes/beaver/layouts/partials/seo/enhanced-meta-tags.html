@@ -210,10 +210,17 @@
 {{- with .Params.metatags.image -}}
   {{- $resource := $page.Resources.Get . -}}
   {{- if $resource -}}
-    {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
-    {{- $image = $optimized.Permalink -}}
-    {{- $imageWidth = $optimized.Width -}}
-    {{- $imageHeight = $optimized.Height -}}
+    {{- if site.Params.cdn.enabled -}}
+      {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
+      {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
+      {{- $imageWidth = "1200" -}}
+      {{- $imageHeight = "630" -}}
+    {{- else -}}
+      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+      {{- $image = $optimized.Permalink -}}
+      {{- $imageWidth = $optimized.Width -}}
+      {{- $imageHeight = $optimized.Height -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
@@ -222,10 +229,17 @@
   {{- with .Params.cover_image -}}
     {{- $resource := $page.Resources.Get . -}}
     {{- if $resource -}}
-      {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
-      {{- $image = $optimized.Permalink -}}
-      {{- $imageWidth = $optimized.Width -}}
-      {{- $imageHeight = $optimized.Height -}}
+      {{- if site.Params.cdn.enabled -}}
+        {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
+        {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
+        {{- $imageWidth = "1200" -}}
+        {{- $imageHeight = "630" -}}
+      {{- else -}}
+        {{- $optimized := $resource.Resize "1200x630 webp q85" -}}
+        {{- $image = $optimized.Permalink -}}
+        {{- $imageWidth = $optimized.Width -}}
+        {{- $imageHeight = $optimized.Height -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

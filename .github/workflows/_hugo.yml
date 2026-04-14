@@ -78,6 +78,12 @@ jobs:
             --baseURL "https://jetthoughts.com/" \
             --environment production
 
+      - name: Remove blog media from artifact
+        run: |
+          find public/blog/ -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.webp' -o -iname '*.svg' -o -iname '*.mp4' \) -delete
+          echo "Cleaned blog media. Artifact size:"
+          du -sh public/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
