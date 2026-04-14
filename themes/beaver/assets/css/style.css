@@ -165,3 +165,89 @@ input[type=submit]:disabled {
   padding-left: 24px;
 }
 
+/* Blog typography fixes */
+
+/* Body text: bump weight from 300 to 400 for legibility */
+.blog p,
+.blog li {
+  font-weight: 400;
+}
+
+/* Links: visible brand blue with hover underline */
+.blog p a,
+.blog li a,
+.blog td a,
+.single-post-content a {
+  color: #1a8cff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.blog p a:hover,
+.blog li a:hover,
+.blog td a:hover,
+.single-post-content a:hover {
+  text-decoration: underline;
+}
+
+/* h2: visually distinct from body (was 24px / 1.2x body) */
+.blog h2 {
+  font-size: 29px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 48px 0 16px !important;
+}
+
+/* h3: visually distinct from body and from h2 */
+.blog h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+  margin: 36px 0 12px !important;
+}
+
+/* Inline code: dark text on neutral grey, not pink */
+.blog code {
+  color: #1a1a2e;
+  background: #f4f4f5;
+  font-weight: 400;
+}
+
+/* Code blocks: rounded corners, padding (colors from Hugo's dracula theme) */
+.blog pre {
+  border-radius: 8px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 28px 0;
+}
+
+.blog pre code {
+  background: none;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Cross-page consistency fixes */
+
+/* CTA section breathing room before footer */
+.cta-block__col .fl-col-content,
+#cta-contact_us .fl-col-content {
+  padding-bottom: 60px;
+}
+
+/* Testimonials section consistent top spacing */
+.testimonial__header {
+  padding-top: 60px;
+}
+
+/* Hero headings consistent sizing across pages */
+.fl-row-bg-photo h1 .fl-heading-text,
+.fl-row-bg-color h1 .fl-heading-text {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.15;
+}
+
