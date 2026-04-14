@@ -55,9 +55,7 @@ disableKinds = []
 
 [params.cdn]
   enabled = false  # enabled per-environment in config/production/hugo.toml
-  provider = "wsrv"  # "wsrv" (free proxy) or "cloudflare" (R2 bucket)
   rawBase = "raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/"
-  # cloudflareBase = "cdn.jetthoughts.com"  # uncomment for Cloudflare R2
 
 [params]
   email="info@jetthoughts.com"

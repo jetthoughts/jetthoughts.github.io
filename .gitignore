@@ -97,3 +97,4 @@ docs/projects/2509-css-migration/50-59-execution/
 *.local.*
 .cache
 _workspace
+.claude/scheduled_tasks.lock

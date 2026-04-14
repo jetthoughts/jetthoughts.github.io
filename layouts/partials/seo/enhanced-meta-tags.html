@@ -97,76 +97,31 @@
   {{- end -}}
 {{- end -}}
 
-{{/* Image Handling - metatags.image is primary, then cover_image/cover/featured_image */}}
+{{/* Image Handling — try frontmatter fields in priority order */}}
 {{- $image := "" -}}
 {{- $imageWidth := "1200" -}}
 {{- $imageHeight := "630" -}}
 
-{{/* Try metatags.image first (primary convention) */}}
-{{- with .Params.metatags.image -}}
-  {{- $resource := $page.Resources.Get . -}}
-  {{- if $resource -}}
-    {{- if site.Params.cdn.enabled -}}
-      {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
-      {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
+{{- $imageFields := slice "metatags.image" "cover_image" "cover" "featured_image" -}}
+{{- range $field := $imageFields -}}
+  {{- if not $image -}}
+    {{- $value := "" -}}
+    {{- if eq $field "metatags.image" -}}
+      {{- $value = $page.Params.metatags.image -}}
     {{- else -}}
-      {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
-      {{- $image = $optimized.Permalink -}}
-      {{- $imageWidth = $optimized.Width -}}
-      {{- $imageHeight = $optimized.Height -}}
+      {{- $value = index $page.Params $field -}}
     {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* Try cover_image */}}
-{{- if not $image -}}
-  {{- with .Params.cover_image -}}
-    {{- $resource := $page.Resources.Get . -}}
-    {{- if $resource -}}
-      {{- if site.Params.cdn.enabled -}}
-        {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
-        {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
-      {{- else -}}
-        {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
-        {{- $image = $optimized.Permalink -}}
-        {{- $imageWidth = $optimized.Width -}}
-        {{- $imageHeight = $optimized.Height -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* Try cover (alias) */}}
-{{- if not $image -}}
-  {{- with .Params.cover -}}
-    {{- $resource := $page.Resources.Get . -}}
-    {{- if $resource -}}
-      {{- if site.Params.cdn.enabled -}}
-        {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
-        {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
-      {{- else -}}
-        {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
-        {{- $image = $optimized.Permalink -}}
-        {{- $imageWidth = $optimized.Width -}}
-        {{- $imageHeight = $optimized.Height -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* Try featured_image (legacy) */}}
-{{- if not $image -}}
-  {{- with .Params.featured_image -}}
-    {{- $resource := $page.Resources.Get . -}}
-    {{- if $resource -}}
-      {{- if site.Params.cdn.enabled -}}
-        {{- $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $resource.Name -}}
-        {{- $image = printf "https://wsrv.nl/?url=%s&w=1200&h=630&fit=inside&output=webp&q=85" $rawURL -}}
-      {{- else -}}
-        {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
-        {{- $image = $optimized.Permalink -}}
-        {{- $imageWidth = $optimized.Width -}}
-        {{- $imageHeight = $optimized.Height -}}
+    {{- with $value -}}
+      {{- $resource := $page.Resources.Get . -}}
+      {{- if $resource -}}
+        {{- if site.Params.cdn.enabled -}}
+          {{- $image = partial "cdn/url" (dict "page" $page "resource" $resource "params" "w=1200&h=630&fit=cover&output=webp&q=85") -}}
+        {{- else -}}
+          {{- $optimized := $resource.Resize "1200x630 jpg q90" -}}
+          {{- $image = $optimized.Permalink -}}
+          {{- $imageWidth = $optimized.Width -}}
+          {{- $imageHeight = $optimized.Height -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
@@ -182,7 +137,6 @@
   <meta property="og:image" content="{{ $image }}" />
   <meta property="og:image:width" content="{{ $imageWidth }}" />
   <meta property="og:image:height" content="{{ $imageHeight }}" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="{{ $image }}" />
 {{- end -}}
 

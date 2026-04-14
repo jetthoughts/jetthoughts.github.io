@@ -4,12 +4,21 @@
 set -euo pipefail
 
 # Default settings
-OUTPUT_DIR="_dest/public-dev"
+OUTPUT_DIR=${OUTPUT_DIR:-_dest/public-dev}
 ENVIRONMENT=${ENVIRONMENT:-development}
+
+BASE_URL=${BASE_URL:-}
 
 echo "Building Hugo site..."
 echo "Environment: $ENVIRONMENT"
 echo "Output: $OUTPUT_DIR"
-hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR"
+
+BUILD_DRAFTS=${BUILD_DRAFTS:-}
+
+HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR")
+[ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")
+[ -n "$BUILD_DRAFTS" ] && HUGO_ARGS+=(--buildDrafts)
+
+"${HUGO_ARGS[@]}"
 
 echo "✓ Build complete"

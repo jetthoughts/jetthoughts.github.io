@@ -5,30 +5,22 @@
 {{- if $page.Params.metatags.image -}}
   {{ $image = $page.Resources.Get $page.Params.metatags.image }}
 {{- else if $page.Params.cover_image -}}
-  {{/* Try cover_image */}}
   {{ $image = $page.Resources.Get $page.Params.cover_image }}
 {{- else if $page.Params.cover -}}
-  {{/* Try cover (alias) */}}
   {{ $image = $page.Resources.Get $page.Params.cover }}
 {{- else if $page.Params.featured_image -}}
-  {{/* Try featured_image (legacy) */}}
   {{ $image = $page.Resources.Get $page.Params.featured_image }}
 {{- end -}}
 
 {{ if $image }}
-{{ $useCDN := site.Params.cdn.enabled }}
 {{ $retinaW := mul $.width 2 }}
 
-{{ if $useCDN }}
-{{ $rawURL := printf "%s%s%s" site.Params.cdn.rawBase $page.File.Dir $image.Name }}
-<img alt='{{ $page.Title }}' src="https://wsrv.nl/?url={{ $rawURL }}&w={{ $retinaW }}&output=jpg&q=90" width="{{ $.width }}" height="{{ $.height }}">
+{{ if site.Params.cdn.enabled }}
+{{ $cdnURL := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=90" $retinaW)) }}
+<img alt='{{ $page.Title }}' src="{{ $cdnURL }}" width="{{ $.width }}" height="{{ $.height }}">
 {{ else }}
-{{/* Aspect-preserving resize at 2× retina. The cover is designed as a
-    landscape composition (2400×1260 = 1.905:1) following the canonical
-    6-slot layout in .stitch/design.md — we must NOT center-crop it
-    because the left-aligned hero + right visual would be mangled.
-    CSS uses object-fit: contain with a dark background to letterbox
-    cleanly inside the 180×180 thumbnail container. */}}
+{{/* Aspect-preserving resize at 2× retina. CSS uses object-fit: contain
+    with a dark background to letterbox inside the thumbnail container. */}}
 {{ $resized := $image.Resize (printf "%dx jpg q90" $retinaW) }}
 <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
 {{ end }}
