@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/snap-diff/snap_diff-capybara.git
-  revision: 4070438ec9579be86faf8a5580783889fbc8431f
+  revision: 64c5aef861fee4f80b49fca3841d53c95280c657
   specs:
     capybara-screenshot-diff (1.12.0)
       capybara (>= 2, < 4)
@@ -99,7 +99,7 @@ GEM
     rackup (2.3.1)
       rack (>= 3)
     rainbow (3.1.1)
-    rake (13.3.1)
+    rake (13.4.1)
     regexp_parser (2.12.0)
     rexml (3.4.4)
     rubocop (1.84.2)
