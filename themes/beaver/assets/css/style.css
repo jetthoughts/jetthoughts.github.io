@@ -255,3 +255,75 @@ input[type=submit]:disabled {
   align-items: center;
   gap: 0.5rem;
 }
+
+/* Blog List Refinement */
+.jt-blog-list-page {
+  padding: 4rem 0;
+}
+.jt-page-header {
+  margin-bottom: 3rem;
+}
+.jt-page-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.jt-page-description {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 600px;
+}
+
+.jt-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+.jt-blog-post-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.jt-blog-post-card:hover {
+  transform: translateY(-5px);
+}
+.jt-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.jt-card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.jt-card-content {
+  padding: 2rem;
+}
+.jt-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #888;
+}
+.jt-card-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+.jt-tag {
+  color: var(--jt-color-primary, #cc342d);
+  font-weight: 600;
+}
+.jt-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.jt-card-excerpt {
+  color: #555;
+  line-height: 1.6;
+}

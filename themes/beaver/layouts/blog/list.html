@@ -46,68 +46,42 @@
 {{ end }}
 
 {{ define "main" }}
-  <div
-    class="fl-page-content"
-    id="fl-main-content"
-    role="main">
-    <div
-      class="fl-builder-content fl-builder-content-741 fl-builder-global-templates-locked"
-      data-post-id="741">
-      <div
-        class="fl-row fl-row-full-width fl-row-bg-photo fl-node-efmcw3bh18k5 fl-row-default-height fl-row-align-center fl-row-has-layers"
-        data-node="efmcw3bh18k5">
-        <div class="fl-row-content-wrap">
-          <div class="blog fl-row-content fl-row-fixed-width fl-node-content">
-            <div
-              style="max-width: 960px; margin:0 auto; padding-left:18px;padding-right:18px">
-              <div style="max-width: 43rem;">
-                <h1
-                  class="fl-heading"
-                  style="margin: 0!important;padding: 0!important">
-                  Blog
-                </h1>
+  <div id="fl-main-content" class="fl-page-content jt-blog-list-page" role="main">
+    <div class="container">
+      <header class="jt-page-header">
+        <h1 class="jt-page-title">Blog</h1>
+        <p class="jt-page-description">
+          Browse through our blog page filled with updated information and the latest tips to help you achieve your goals.
+        </p>
+      </header>
 
-                <p>
-                  Browse through our blog page filled with updated information
-                  and the latest tips to help you achieve your goals.
-                </p>
-
-                <br />
-
-                {{ range (.Paginate .Pages.ByDate.Reverse).Pages }}
-                  <a class="link" href="{{ .RelPermalink }}">
-                    <div class="blog-post">
-                      <div class="post-image">
-                        {{ partial "blog/img-cropped.html" (dict "Page" . "width" 180 "height" 180) }}
-                      </div>
-                      <div class="post-content">
-                        <h2 class="post-title">{{ .Title }}</h2>
-                        <div class="post-meta">
-                          <div class="post-tags">
-                            {{ with .Params.tags }}
-                            {{ range . }}
-                              <a href="/blog/tags/{{ . | urlize }}/"
-                                >#{{ . }}</a
-                              >
-                            {{ end }}
-                            {{ end }}
-                          </div>
-                          {{ if .Date }}
-                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</span>
-                          {{ end }}
-                        </div>
-                        <div>{{ .Params.description }}</div>
-                      </div>
-                    </div>
-                  </a>
-                {{ end }}
-
-                {{ partial "pagination" . }}
+      <div class="jt-blog-grid">
+        {{ range (.Paginate .Pages.ByDate.Reverse).Pages }}
+          <article class="jt-blog-post-card">
+            <a href="{{ .RelPermalink }}" class="jt-card-link">
+              <div class="jt-card-image">
+                {{ partial "blog/img-cropped.html" (dict "Page" . "width" 400 "height" 250) }}
               </div>
-            </div>
-          </div>
-        </div>
+              <div class="jt-card-content">
+                <div class="jt-card-meta">
+                  {{ if .Date }}
+                    <span class="jt-card-date">{{ dateFormat "Jan 2, 2006" .Date }}</span>
+                  {{ end }}
+                  <div class="jt-card-tags">
+                    {{ range first 2 .Params.tags }}
+                      <span class="jt-tag">#{{ . }}</span>
+                    {{ end }}
+                  </div>
+                </div>
+                <h2 class="jt-card-title">{{ .Title }}</h2>
+                <p class="jt-card-excerpt">{{ .Params.description | truncate 150 }}</p>
+              </div>
+            </a>
+          </article>
+        {{ end }}
       </div>
+
+      {{ partial "pagination" . }}
     </div>
   </div>
 {{ end }}
