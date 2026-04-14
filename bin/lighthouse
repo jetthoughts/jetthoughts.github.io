@@ -1,308 +1,74 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
+# frozen_string_literal: true
 
-set -euo pipefail
+# Crawl site links and run Lighthouse on each page.
+# Usage: bin/lighthouse [url] [--limit N]
 
-# Lighthouse Performance Benchmark Script
-# Tests complex pages against 90+ threshold requirements
+require "fileutils"
+require "json"
+require "open-uri"
+require "time"
 
-# Configuration
-BASE_URL="${1:-http://localhost:1313}"
-OUTPUT_DIR="_reports/lighthouse-reports"
-TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-REPORT_DIR="${OUTPUT_DIR}/${TIMESTAMP}"
-MIN_SCORE=90
+BASE_URL  = (ARGV - ["--limit", ARGV[ARGV.index("--limit").to_i + 1].to_s]).find { |a| !a.start_with?("-") } || "https://jetthoughts.com"
+LIMIT     = ARGV[ARGV.index("--limit").to_i + 1]&.to_i || 0
+OUTPUT    = "_reports/lighthouse-reports/#{Time.now.strftime('%Y%m%d_%H%M%S')}"
+SKIP_EXT  = /\.(css|js|jpe?g|png|gif|svg|webp|pdf|map|ico|xml|json)$/i
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+FileUtils.mkdir_p(OUTPUT)
 
-# Complex pages to test (based on JetThoughts site structure)
-declare -a COMPLEX_PAGES=(
-    "/"
-    "/about-us/"
-    "/blog/"
-    "/services/fractional-cto/"
-    "/services/app-web-development/"
-    "/blog/tags/ruby/"
-    "/blog/tags/rails/"
-    "/blog/when-small-method-choices-cascade-into/"
-)
+puts "\n=== Lighthouse Audit ==="
+puts "URL:  #{BASE_URL}"
+puts "Out:  #{OUTPUT}\n"
 
-echo -e "${BLUE}=== JetThoughts Lighthouse Performance Benchmark ===${NC}"
-echo -e "Base URL: ${BASE_URL}"
-echo -e "Minimum Score Threshold: ${MIN_SCORE}"
-echo -e "Report Directory: ${REPORT_DIR}"
-echo -e "Testing ${#COMPLEX_PAGES[@]} complex pages..."
-echo ""
+# Crawl: extract page links from homepage
+html = URI.open(BASE_URL).read
+pages = html.scan(/href=([^ >]+)/).flatten.map { |h| h.gsub(/["']/, "") }
+              .reject { |h| h.start_with?("#", "mailto:", "tel:", "javascript:") || h.match?(SKIP_EXT) }
+              .map { |h| h.start_with?("/") ? URI.join(BASE_URL, h).to_s.chomp("/") : h }
+              .select { |h| h.include?(URI.parse(BASE_URL).host) && !h.match?(SKIP_EXT) }
+              .sort
+              .uniq
 
-# Create report directory
-mkdir -p "${REPORT_DIR}"
+puts "Found #{pages.size} pages"
 
-# Function to run Lighthouse test
-run_lighthouse_test() {
-    local url="$1"
-    local page_name="$2"
-    local report_file="${REPORT_DIR}/${page_name}.report.json"
-    local html_file="${REPORT_DIR}/${page_name}.report.html"
+to_audit = LIMIT.positive? ? pages.first(LIMIT) : pages
+puts "Auditing #{to_audit.size} pages\n"
 
-    echo -e "${BLUE}Testing: ${url}${NC}"
+results = []
+to_audit.each_with_index do |url, i|
+  slug = URI.parse(url).path.gsub("/", "-").gsub(/^-|-$/, "")
+  slug = "homepage" if slug.empty?
+  report = "#{OUTPUT}/#{slug}.json"
 
-    # Run Lighthouse with performance focus
-    bunx lighthouse "${url}" \
-        --output=json,html \
-        --output-path="${REPORT_DIR}/${page_name}" \
-        --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
-        --preset=desktop \
-        --quiet \
-        --disable-storage-reset \
-        --throttling-method=simulate \
-        --form-factor=desktop 2>/dev/null || {
-            echo -e "${RED}FAILED: Could not run Lighthouse for ${url}${NC}"
-            return 1
-        }
+  print "[#{i + 1}/#{to_audit.size}] #{url} "
+  begin
+    `bunx lighthouse "#{url}" --output json --output-path "#{report}" \
+      --preset desktop --quiet --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" 2>/dev/null`
 
-    # Parse scores from JSON report
-    if [[ -f "${report_file}" ]]; then
-        local performance_score=$(jq -r '.categories.performance.score * 100 | floor' "${report_file}")
-        local accessibility_score=$(jq -r '.categories.accessibility.score * 100 | floor' "${report_file}")
-        local best_practices_score=$(jq -r '.categories["best-practices"].score * 100 | floor' "${report_file}")
-        local seo_score=$(jq -r '.categories.seo.score * 100 | floor' "${report_file}")
+    data = JSON.parse(File.read(report))
+    scores = %w[performance accessibility best-practices seo].map do |cat|
+      [cat.to_sym, ((data.dig("categories", cat, "score") || 0) * 100).round]
+    end.to_h
 
-        # Core Web Vitals
-        local fcp=$(jq -r '.audits["first-contentful-paint"].displayValue' "${report_file}")
-        local lcp=$(jq -r '.audits["largest-contentful-paint"].displayValue' "${report_file}")
-        local cls=$(jq -r '.audits["cumulative-layout-shift"].displayValue' "${report_file}")
-        local tti=$(jq -r '.audits["interactive"].displayValue' "${report_file}")
+    results << { path: URI.parse(url).path, scores: scores }
+    icon = scores[:performance] >= 90 ? "✓" : scores[:performance] >= 50 ? "~" : "✗"
+    puts "#{icon} P:#{scores[:performance]} A:#{scores[:accessibility]} S:#{scores[:seo]}"
+  rescue StandardError
+    puts "✗"
+  end
+end
 
-        echo -e "  Performance: ${performance_score}/100"
-        echo -e "  Accessibility: ${accessibility_score}/100"
-        echo -e "  Best Practices: ${best_practices_score}/100"
-        echo -e "  SEO: ${seo_score}/100"
-        echo -e "  FCP: ${fcp}, LCP: ${lcp}, CLS: ${cls}, TTI: ${tti}"
+avg = ->(k) { results.sum { |r| r[:scores][k] } / [results.size, 1].max }
 
-        # Check threshold compliance
-        if [[ ${performance_score} -ge ${MIN_SCORE} ]]; then
-            echo -e "  ${GREEN}✓ PASSED${NC} - Performance score meets ${MIN_SCORE}+ threshold"
-        else
-            echo -e "  ${RED}✗ FAILED${NC} - Performance score ${performance_score} below ${MIN_SCORE} threshold"
-            echo "performance_fail" >> "${REPORT_DIR}/failures.log"
-        fi
+puts "\n#{'─' * 50}"
+puts "Perf:#{avg[:performance]}  A11y:#{avg[:accessibility]}  SEO:#{avg[:seo]}"
+puts "#{results.size} pages · #{OUTPUT}/"
 
-        # Store results for summary
-        echo "${page_name},${performance_score},${accessibility_score},${best_practices_score},${seo_score}" >> "${REPORT_DIR}/results.csv"
+File.write("#{OUTPUT}/summary.json", JSON.pretty_generate({
+  crawled_at: Time.now.iso8601,
+  total: pages.size,
+  audited: to_audit.size,
+  results: results.sort_by { |r| -r[:scores][:performance] }
+}))
 
-        # Extract CSS-specific metrics
-        extract_css_metrics "${report_file}" "${page_name}"
-    else
-        echo -e "  ${RED}ERROR: No report generated${NC}"
-        return 1
-    fi
-    echo ""
-}
-
-# Function to check if server is accessible
-check_server() {
-    echo -e "${BLUE}Checking server accessibility...${NC}"
-    if curl -sf "${BASE_URL}" >/dev/null 2>&1; then
-        echo -e "${GREEN}✓ Server is accessible${NC}"
-        return 0
-    else
-        echo -e "${RED}✗ Server not accessible at ${BASE_URL}${NC}"
-        echo -e "${YELLOW}Tip: Start server with 'bin/dev' or 'hugo server'${NC}"
-        return 1
-    fi
-}
-
-# Function to extract CSS performance metrics
-extract_css_metrics() {
-    local report_file="$1"
-    local page_name="$2"
-    local css_metrics_file="${REPORT_DIR}/css_metrics.csv"
-
-    if [[ -f "${report_file}" ]]; then
-        # Extract CSS-specific metrics
-        local render_blocking_resources=$(jq -r '.audits["render-blocking-resources"].score' "${report_file}")
-        local unused_css=$(jq -r '.audits["unused-css-rules"].score' "${report_file}")
-        local css_bundle_size=$(jq -r '.audits["unused-css-rules"].details.overallSavingsBytes // 0' "${report_file}")
-        local minify_css_score=$(jq -r '.audits["unminified-css"].score // 1' "${report_file}")
-
-        # Core Web Vitals impact from CSS
-        local fcp_score=$(jq -r '.audits["first-contentful-paint"].score' "${report_file}")
-        local lcp_score=$(jq -r '.audits["largest-contentful-paint"].score' "${report_file}")
-        local cls_score=$(jq -r '.audits["cumulative-layout-shift"].score' "${report_file}")
-
-        # CSS-specific opportunities
-        local critical_request_chains=$(jq -r '.audits["critical-request-chains"].score // 1' "${report_file}")
-
-        echo "${page_name},${render_blocking_resources},${unused_css},${css_bundle_size},${minify_css_score},${fcp_score},${lcp_score},${cls_score},${critical_request_chains}" >> "${css_metrics_file}"
-
-        echo -e "  CSS Metrics:"
-        echo -e "    Render Blocking: ${render_blocking_resources} | Unused CSS: ${unused_css}"
-        echo -e "    Bundle Size Impact: ${css_bundle_size} bytes | Minification: ${minify_css_score}"
-        echo -e "    FCP Impact: ${fcp_score} | LCP Impact: ${lcp_score} | CLS Impact: ${cls_score}"
-    fi
-}
-
-# Function to generate CSS migration-specific summary
-generate_css_migration_summary() {
-    local css_metrics_file="${REPORT_DIR}/css_metrics.csv"
-    local css_summary_file="${REPORT_DIR}/css_migration_summary.txt"
-
-    if [[ ! -f "${css_metrics_file}" ]]; then
-        echo "No CSS metrics collected"
-        return 1
-    fi
-
-    echo "=== CSS MIGRATION PERFORMANCE IMPACT ===" > "${css_summary_file}"
-    echo "Timestamp: $(date)" >> "${css_summary_file}"
-    echo "Pages Analyzed: ${#COMPLEX_PAGES[@]}" >> "${css_summary_file}"
-    echo "" >> "${css_summary_file}"
-
-    # Calculate CSS-specific averages
-    local avg_render_blocking=$(awk -F',' 'NR>1 {sum+=$2} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
-    local avg_unused_css=$(awk -F',' 'NR>1 {sum+=$3} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
-    local total_css_waste=$(awk -F',' 'NR>1 {sum+=$4} END {print sum}' "${css_metrics_file}")
-    local avg_fcp_impact=$(awk -F',' 'NR>1 {sum+=$6} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
-    local avg_lcp_impact=$(awk -F',' 'NR>1 {sum+=$7} END {print (sum/(NR-1))*100}' "${css_metrics_file}")
-
-    echo "CSS PERFORMANCE METRICS:" >> "${css_summary_file}"
-    echo "Render Blocking Resources: ${avg_render_blocking}% optimized" >> "${css_summary_file}"
-    echo "Unused CSS Rules: ${avg_unused_css}% optimized" >> "${css_summary_file}"
-    echo "Total CSS Waste: ${total_css_waste} bytes" >> "${css_summary_file}"
-    echo "FCP Impact: ${avg_fcp_impact}% performance" >> "${css_summary_file}"
-    echo "LCP Impact: ${avg_lcp_impact}% performance" >> "${css_summary_file}"
-    echo "" >> "${css_summary_file}"
-
-    # CSS Migration Quality Gates
-    echo "CSS MIGRATION QUALITY GATES:" >> "${css_summary_file}"
-
-    if (( $(echo "${avg_render_blocking} > 80" | bc -l) )); then
-        echo "✓ Render Blocking: PASSED (${avg_render_blocking}%)" >> "${css_summary_file}"
-    else
-        echo "✗ Render Blocking: FAILED (${avg_render_blocking}% < 80%)" >> "${css_summary_file}"
-    fi
-
-    if (( $(echo "${total_css_waste} < 50000" | bc -l) )); then
-        echo "✓ CSS Bundle Size: PASSED (${total_css_waste} bytes waste)" >> "${css_summary_file}"
-    else
-        echo "✗ CSS Bundle Size: FAILED (${total_css_waste} bytes waste > 50KB)" >> "${css_summary_file}"
-    fi
-
-    if (( $(echo "${avg_fcp_impact} > 85" | bc -l) )); then
-        echo "✓ FCP Impact: PASSED (${avg_fcp_impact}%)" >> "${css_summary_file}"
-    else
-        echo "✗ FCP Impact: FAILED (${avg_fcp_impact}% < 85%)" >> "${css_summary_file}"
-    fi
-
-    echo "" >> "${css_summary_file}"
-    echo "CSS migration recommendations available in detailed reports." >> "${css_summary_file}"
-
-    echo -e "${BLUE}=== CSS MIGRATION ANALYSIS ===${NC}"
-    cat "${css_summary_file}"
-}
-
-# Function to generate summary report
-generate_summary() {
-    local results_file="${REPORT_DIR}/results.csv"
-    local summary_file="${REPORT_DIR}/summary.txt"
-
-    if [[ ! -f "${results_file}" ]]; then
-        echo -e "${RED}No results to summarize${NC}"
-        return 1
-    fi
-
-    echo "=== LIGHTHOUSE BENCHMARK SUMMARY ===" > "${summary_file}"
-    echo "Timestamp: $(date)" >> "${summary_file}"
-    echo "Base URL: ${BASE_URL}" >> "${summary_file}"
-    echo "Pages Tested: ${#COMPLEX_PAGES[@]}" >> "${summary_file}"
-    echo "" >> "${summary_file}"
-
-    # Calculate averages
-    local avg_perf=$(awk -F',' '{sum+=$2} END {print int(sum/NR)}' "${results_file}")
-    local avg_a11y=$(awk -F',' '{sum+=$3} END {print int(sum/NR)}' "${results_file}")
-    local avg_bp=$(awk -F',' '{sum+=$4} END {print int(sum/NR)}' "${results_file}")
-    local avg_seo=$(awk -F',' '{sum+=$5} END {print int(sum/NR)}' "${results_file}")
-
-    echo "AVERAGE SCORES:" >> "${summary_file}"
-    echo "Performance: ${avg_perf}/100" >> "${summary_file}"
-    echo "Accessibility: ${avg_a11y}/100" >> "${summary_file}"
-    echo "Best Practices: ${avg_bp}/100" >> "${summary_file}"
-    echo "SEO: ${avg_seo}/100" >> "${summary_file}"
-    echo "" >> "${summary_file}"
-
-    # Count failures
-    local failures=0
-    if [[ -f "${REPORT_DIR}/failures.log" ]]; then
-        failures=$(wc -l < "${REPORT_DIR}/failures.log")
-    fi
-
-    echo "THRESHOLD COMPLIANCE:" >> "${summary_file}"
-    echo "Pages meeting 90+ performance: $((${#COMPLEX_PAGES[@]} - failures))/${#COMPLEX_PAGES[@]}" >> "${summary_file}"
-
-    if [[ $failures -eq 0 ]]; then
-        echo "Status: ✓ ALL PAGES PASSED" >> "${summary_file}"
-        echo -e "\n${GREEN}🎉 ALL PAGES PASSED! Average Performance: ${avg_perf}/100${NC}"
-    else
-        echo "Status: ✗ ${failures} PAGES FAILED" >> "${summary_file}"
-        echo -e "\n${RED}⚠️  ${failures} pages failed to meet 90+ performance threshold${NC}"
-    fi
-
-    echo "" >> "${summary_file}"
-    echo "Detailed reports available in: ${REPORT_DIR}/" >> "${summary_file}"
-
-    # Display summary
-    echo -e "${BLUE}=== BENCHMARK COMPLETE ===${NC}"
-    cat "${summary_file}"
-
-    # Generate CSS migration-specific summary
-    generate_css_migration_summary
-}
-
-# Main execution
-main() {
-    # Check if jq is available for JSON parsing
-    if ! command -v jq &> /dev/null; then
-        echo -e "${RED}Error: jq is required for parsing Lighthouse reports${NC}"
-        echo "Install with: brew install jq"
-        exit 1
-    fi
-
-    # Check server accessibility
-    if ! check_server; then
-        exit 1
-    fi
-
-    # Initialize results files
-    echo "page,performance,accessibility,best_practices,seo" > "${REPORT_DIR}/results.csv"
-    echo "page,render_blocking,unused_css,css_bundle_size,minify_css,fcp_score,lcp_score,cls_score,critical_chains" > "${REPORT_DIR}/css_metrics.csv"
-
-    # Test each complex page
-    local failed_tests=0
-    for page in "${COMPLEX_PAGES[@]}"; do
-        local url="${BASE_URL}${page}"
-        local page_name=$(echo "${page}" | sed 's/[^a-zA-Z0-9]/_/g' | sed 's/__/_/g' | sed 's/^_//' | sed 's/_$//')
-        [[ -z "$page_name" ]] && page_name="homepage"
-
-        if ! run_lighthouse_test "${url}" "${page_name}"; then
-            ((failed_tests++))
-        fi
-    done
-
-    # Generate summary report
-    generate_summary
-
-    # Exit with appropriate code
-    if [[ -f "${REPORT_DIR}/failures.log" ]]; then
-        echo -e "${YELLOW}Some performance issues detected. Check reports in: ${REPORT_DIR}/${NC}"
-        exit 1
-    else
-        echo -e "${GREEN}All tests passed! Reports available in: ${REPORT_DIR}/${NC}"
-        exit 0
-    fi
-}
-
-# Run main function
-main "$@"
+exit 1 if results.any? { |r| r[:scores][:performance] < 90 }

@@ -38,4 +38,11 @@ task :dev do
   sh "./bin/hugo-dev"
 end
 
+desc "Crawl site and run Lighthouse on each page (bin/lighthouse)"
+task :lighthouse, [:limit] do |_t, args|
+  cmd = "./bin/lighthouse"
+  cmd += " --limit #{args[:limit]}" if args[:limit]
+  sh cmd
+end
+
 task default: "test:all"
