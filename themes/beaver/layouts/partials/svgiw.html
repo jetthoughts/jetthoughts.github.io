@@ -1,12 +1,12 @@
 {{ $svg := .svg }}
 {{ $svgPath := printf "img/icons/%s.svg" $svg }}
 {{ $svgFile := resources.Get $svgPath | fingerprint "md5" }}
-{{ $svgRelPermalink := $svgFile.Permalink }}
+{{ $svgPermalink := $svgFile.Permalink }}
 
 <img
   fetchpriority="low"
   loading="lazy"
-  src="{{ $svgRelPermalink }}"
+  src="{{ $svgPermalink }}"
   {{ with .width }}width="{{ . }}"{{ end }}
   {{ with .height }}height="{{ . }}"{{ end }}
   alt="{{ with .alt }}
