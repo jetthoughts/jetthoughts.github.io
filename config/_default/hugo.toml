@@ -20,7 +20,7 @@ disableKinds = []
   lineNos = false
   lineNumbersInTable = true
   noClasses = true
-  style = "github"
+  style = "dracula"
   tabWidth = 4
 
 [permalinks]
