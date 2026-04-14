@@ -17,7 +17,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: jetthoughts/actions-hugo@feat/node24
+    - uses: jetthoughts/actions-hugo@v3
       with:
         hugo-version: ${{ inputs.hugo-version }}
         extended: true

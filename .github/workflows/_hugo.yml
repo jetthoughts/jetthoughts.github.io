@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Hugo
-        uses: jetthoughts/actions-hugo@feat/node24
+        uses: jetthoughts/actions-hugo@v3
         with:
           hugo-version: 0.160.1
           extended: true
