@@ -1,16 +1,45 @@
 {
-  "name": "projects/3224353017067976684",
-  "projectId": "3224353017067976684",
-  "title": "JetThoughts Blog Covers",
+  "name": "projects/11438841921499861157",
+  "projectId": "11438841921499861157",
+  "title": "JetThoughts Blog UI Fixes",
   "visibility": "PRIVATE",
   "projectType": "PROJECT_DESIGN",
   "deviceType": "DESKTOP",
   "designTheme": {
     "colorMode": "DARK",
-    "font": "SPACE_GROTESK",
+    "font": "MANROPE",
     "roundness": "ROUND_FOUR",
     "customColor": "#cc342d",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
     "saturation": 3
   },
-  "screens": {}
+  "screens": {
+    "homepage-redesign": {
+      "id": "ce90e24bb0834c97a7093abe88919101",
+      "sourceScreen": "projects/11438841921499861157/screens/ce90e24bb0834c97a7093abe88919101",
+      "x": 1024,
+      "y": 3028,
+      "width": 1280,
+      "height": 3935
+    },
+    "homepage-redesign-v2": {
+      "id": "48701d1b73284939af9bcaedf4290b34",
+      "sourceScreen": "projects/11438841921499861157/screens/48701d1b73284939af9bcaedf4290b34",
+      "width": 2560,
+      "height": 7334,
+      "title": "JetThoughts Homepage - Strategic Refinement"
+    },
+    "homepage-redesign-v3": {
+      "id": "825e2ad061544ac59c9204a7d411c891",
+      "sourceScreen": "projects/11438841921499861157/screens/825e2ad061544ac59c9204a7d411c891",
+      "width": 2560,
+      "height": 7334,
+      "title": "JetThoughts Homepage - Strategic Refinement"
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
 }

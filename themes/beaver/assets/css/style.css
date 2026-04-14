@@ -17,18 +17,19 @@
 
 /*Blog*/
 .blog {
-  padding: 80px 0 50px;
+  padding: 135px 0 50px;
 }
 
 @media (max-width: 768px) {
   .blog {
-    padding: 70px 0 30px;
+    padding: 100px 0 30px;
   }
 }
 
 .blog img {
   max-width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .blog .container {
@@ -190,8 +191,8 @@ input[type=submit]:disabled {
   text-decoration: underline;
 }
 
-/* h2: visually distinct from body (was 24px / 1.2x body) */
-.blog h2 {
+/* h2: visually distinct from body — scoped to post content, not listing titles */
+.blog h2:not(.post-title) {
   font-size: 29px;
   line-height: 38px;
   font-weight: 700;
@@ -200,7 +201,7 @@ input[type=submit]:disabled {
 }
 
 /* h3: visually distinct from body and from h2 */
-.blog h3 {
+.blog h3:not(.post-title) {
   font-size: 22px;
   line-height: 30px;
   font-weight: 600;
@@ -209,9 +210,12 @@ input[type=submit]:disabled {
 }
 
 /* Inline code: dark text on neutral grey, not pink */
-.blog code {
+.blog :not(pre) > code {
   color: #1a1a2e;
   background: #f4f4f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
   font-weight: 400;
 }
 
@@ -224,6 +228,7 @@ input[type=submit]:disabled {
 }
 
 .blog pre code {
+  color: #f8f8f2;
   background: none;
   padding: 0;
   font-size: 15px;
