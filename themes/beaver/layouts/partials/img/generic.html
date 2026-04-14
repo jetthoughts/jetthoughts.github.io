@@ -11,14 +11,14 @@
 {{ range $widths }}
   {{ if lt . $originalWidth }}
     {{ $resized := $image.Resize (printf "%dx webp q75" .) }}
-    {{ $srcset = printf "%s%s %dw, " $srcset $resized.RelPermalink . }}
+    {{ $srcset = printf "%s%s %dw, " $srcset $resized.Permalink . }}
   {{ end }}
 {{ end }}
 
-{{ $srcset = printf "%s%s %dw" $srcset $imageWebP.RelPermalink $originalWidth }}
+{{ $srcset = printf "%s%s %dw" $srcset $imageWebP.Permalink $originalWidth }}
 
 <img {{ $attributes | safeHTMLAttr }}
-     src="{{ $imageWebP.RelPermalink }}"
+     src="{{ $imageWebP.Permalink }}"
      alt="{{ $title }}"
      width="{{ $image.Width }}"
      height="{{ $image.Height }}"

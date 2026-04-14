@@ -31,7 +31,7 @@
   {{- end -}}
   
   {{/* Output script tag with appropriate attributes */}}
-  <script src="{{ $processed.RelPermalink }}"
+  <script src="{{ $processed.Permalink }}"
           {{- if $defer }} defer{{- end }}
           {{- if $async }} async{{- end }}
           {{- if hugo.IsProduction }} integrity="{{ $processed.Data.Integrity }}" crossorigin="anonymous"{{- end }}>
