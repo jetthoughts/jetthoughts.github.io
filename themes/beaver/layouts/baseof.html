@@ -20,7 +20,6 @@
       name="msapplication-config"
       content="{{ $browserConfig.Permalink }}" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="manifest" href="/manifest.json" />
 
     {{- $navigationResources := slice (resources.Get "css/navigation.css") -}}
     {{ partialCached "assets/css-processor.html" (dict "resources" $navigationResources "bundleName" "navigation" "context" .) "navigation" }}
