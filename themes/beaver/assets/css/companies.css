@@ -10,16 +10,21 @@
 
 .client-logos > .client-logo {
   display: flex;
-  height: 4rem;
+  height: 3rem;
   justify-content: center;
-  max-width: var(--p-max-width);
+  align-items: center;
 }
 
 .client-logos > .client-logo > .image {
-  align-self: center;
-  max-height: 50%;
-  max-width: 75%;
+  max-height: 100%;
+  max-width: 100%;
   width: auto;
-
   height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 860px) {
+  .client-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
