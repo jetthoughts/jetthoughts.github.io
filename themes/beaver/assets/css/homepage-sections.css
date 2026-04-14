@@ -1,4 +1,11 @@
 /* Homepage semantic hooks migration layer.
- * Intentionally starts empty to keep behavior identical.
  * Future section-level styles should target .jt-home-* classes here.
  */
+
+/* Hero: show headline before stats card on mobile */
+@media (max-width: 860px) {
+  .jt-home-hero .fl-col-group.fl-col-group-responsive-reversed {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+}
