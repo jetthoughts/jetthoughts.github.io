@@ -327,3 +327,121 @@ input[type=submit]:disabled {
   color: #555;
   line-height: 1.6;
 }
+
+/* Careers Page Refinement */
+.jt-career-header {
+  background: #000;
+  color: #fff;
+  padding: 5rem 0;
+  margin-bottom: 4rem;
+}
+.jt-career-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+.jt-career-requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.jt-requirement-item {
+  display: flex;
+  flex-direction: column;
+}
+.jt-requirement-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+.jt-requirement-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.jt-share-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.jt-share-links svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: opacity 0.3s;
+}
+.jt-share-links a:hover svg {
+  opacity: 0.7;
+}
+
+.jt-career-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+@media (max-width: 992px) {
+  .jt-career-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jt-career-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.jt-career-content h2, .jt-career-content h3 {
+  margin: 2.5rem 0 1.5rem;
+}
+
+.jt-career-form-card {
+  background: #f9f9f9;
+  padding: 2.5rem;
+  border-radius: 12px;
+  position: sticky;
+  top: 2rem;
+}
+.jt-career-form-card h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.jt-form-group {
+  margin-bottom: 1.5rem;
+}
+.jt-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.jt-form-group input, .jt-form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.jt-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.jt-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+.jt-btn-primary {
+  background: var(--jt-color-primary, #cc342d);
+  color: #fff;
+  width: 100%;
+}
+.jt-btn:hover {
+  opacity: 0.9;
+}
