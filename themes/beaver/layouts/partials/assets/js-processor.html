@@ -23,7 +23,7 @@
   {{- $processed := $bundle | js.Build (dict "minify" hugo.IsProduction) -}}
   
   {{/* Step 3: Fingerprint for cache busting */}}
-  {{- $processed = $processed | fingerprint "md5" -}}
+  {{- $processed = $processed | fingerprint "sha256" -}}
   
   {{/* Step 4: PostProcess for production */}}
   {{- if hugo.IsProduction -}}
