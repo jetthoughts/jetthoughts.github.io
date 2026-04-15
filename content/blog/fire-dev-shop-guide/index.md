@@ -1,7 +1,7 @@
 ---
 title: "How to Fire Your Dev Shop (Safely)"
 description: "A founder's step-by-step guide to terminating a dev shop relationship, securing your code, and finding a better partner without repeating the same mistake."
-date: 2026-04-21T08:00:00+02:00
+date: 2026-04-10T08:00:00+02:00
 draft: false
 author: "JetThoughts"
 slug: "fire-dev-shop-guide"

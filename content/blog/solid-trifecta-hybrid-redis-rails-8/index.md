@@ -1,7 +1,7 @@
 ---
 title: "Solid Trifecta: When to Keep Redis"
 description: "Rails 8 defaults to Solid Cache, Solid Queue, and Solid Cable. Most apps don't need Redis anymore. Some still do. Here's how we decide which workloads stay."
-date: 2026-04-28T08:00:00+02:00
+date: 2026-04-13T08:00:00+02:00
 draft: false
 author: "JetThoughts"
 slug: "solid-trifecta-hybrid-redis-rails-8"

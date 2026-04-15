@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding Crisis: Why AI Code Breaks"
 description: "Your dev shop shipped fast with AI-generated code. It looked clean. Then production happened. Here's why vibe-coded apps fail and how to detect the damage."
-date: 2026-05-05T08:00:00+02:00
+date: 2026-04-21T08:00:00+02:00
 draft: true
 author: "JetThoughts"
 slug: "vibe-coding-crisis-ai-code-debt"
@@ -20,8 +20,6 @@ canonical_url: "https://jetthoughts.com/blog/vibe-coding-crisis-ai-code-debt/"
 Your dev shop shipped in 3 weeks. The code looked clean. Then production happened.
 
 We took over one of these projects last month. A founder had paid $40K for a React + Rails app. Beautiful UI. Naming conventions followed to the letter. The demo sailed through investor review. Test coverage: 0%. Error handling: none. The first 200 real users broke everything — corrupted data, exposed API keys, infinite loops on edge cases. We're seeing this every week now. Vibe coding problems in production are the new normal.
-
-Here's what's going wrong and how to catch it before recovery costs more than the original build.
 
 ## 1. What "Vibe Coding" Actually Means
 
@@ -59,7 +57,7 @@ When something fails — and it will — the app doesn't degrade gracefully. It 
 
 ### Security holes you can't see
 
-A founder came to us after a penetration test flagged 23 critical vulnerabilities. The app had been in production for four months. User passwords were hashed — good. But API endpoints had no authentication. Any user could access any other user's data by changing the ID in the URL. The AI wrote clean-looking auth code for the login page and forgot about everything else.
+A founder came to us after a penetration test flagged 23 critical vulnerabilities. The app had been in production for four months. User passwords were hashed — good. But API endpoints had no authentication. Any user could access any other user's data by changing the ID in the URL. The AI handled login and left every other endpoint wide open.
 
 ### Silent data corruption
 
@@ -91,13 +89,19 @@ Ask your team: "If the app goes down at 3am, how do we find out?" If the answer 
 
 And look for duplication. AI doesn't remember it already solved a problem. It generates fresh code for each prompt. Same validation logic in 8 files, 5 different ways to format a date — that's AI code nobody cleaned up.
 
+---
+
+**Think your codebase might be vibe-coded?** We do a free code audit — one senior developer, your codebase, a written report covering test coverage, security risks, and architecture quality. [Get an honest assessment](https://jetthoughts.com/contact-us/).
+
+---
+
 ## 6. The Antidote: What Actually Works
 
-TDD, code review, pair programming. Boring stuff. The same boring stuff that's prevented these exact failures for twenty years. It's just unfashionable when everyone's excited about shipping in a weekend.
+The fix is nothing new: tests before code, reviews on every PR, two sets of eyes on complex features. The same practices that have prevented these failures for twenty years. They're just unfashionable when everyone's excited about shipping in a weekend.
 
 Write the test first. Then write the code. Then make the test pass. [Test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) is the single most effective protection against code that "looks good but doesn't work." The AI can help write the implementation — but a human writes the test that defines what "working" means.
 
-No code ships without a second pair of human eyes. Not a rubber stamp — a real review where someone asks "what happens when this input is null?" and "where's the test for this?" [Pair programming](/blog/async-remote-xp-practices/) goes further: two developers working together catch errors the moment they're introduced, not three days later.
+No code ships without a second pair of human eyes. A real review. Someone asks "what happens when this input is null?" and "where's the test for this?" [Pair programming](/blog/async-remote-xp-practices/) goes further: two developers working together catch errors the moment they're introduced, not three days later.
 
 A [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) that shows what shipped, what's blocked, and what the test coverage number is this week versus last week. If coverage is going down while features are going up, someone's cutting corners.
 
@@ -105,25 +109,11 @@ And small features shipped frequently. Not a 3-week sprint ending in a big revea
 
 ## 7. Vibe Coding Has a Place
 
-I'm not going to pretend AI code generation is useless. That would be dishonest.
-
-Vibe coding is great for prototypes. If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor. Show it off. Get the check.
+AI code generation is genuinely useful — for prototypes. If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor. Show it off. Get the check.
 
 It works for throwaway scripts too — data migrations that run once, one-off reports, internal tools only three people touch. And it's genuinely useful for exploration: "What would this feature look like?" AI can answer that in 20 minutes instead of 2 days.
 
 But once real users touch it? Once real money flows through it and real data gets stored? You need tests, reviews, and someone who takes responsibility for what ships. Use it for demos. Don't ship it to real users.
-
-## How We Handle This at JetThoughts
-
-We write the test before the code. Every PR. Every day. Every pull request gets reviewed by at least one other developer. We [pair program](/blog/async-remote-xp-practices/) on complex features. We send a plain-English weekly report with test coverage, bug count, and deployment frequency. When a founder comes to us with a vibe-coded codebase, the first thing we do is add tests to understand what the code actually does — before we change a single line.
-
-We've done this for 20 years, across 40+ projects. It's not exciting. It doesn't make for a good demo. But it means the app still works on month six.
-
----
-
-**Think your codebase might be vibe-coded?** We'll do a code audit — one senior developer, your codebase, a written report covering test coverage, security risks, and architecture quality. No contract required. [Get an honest assessment](https://jetthoughts.com/contact-us/).
-
----
 
 If you're evaluating your current dev team right now, start with our guide on [code quality signals non-technical founders can actually check](/blog/code-quality-evaluation-non-technical-founders/). And if you've already decided to make a change, here's [how to fire your dev shop safely](/blog/fire-dev-shop-guide/).
 

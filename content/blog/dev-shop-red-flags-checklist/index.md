@@ -1,7 +1,7 @@
 ---
 title: "Red Flags You Hired the Wrong Dev Shop"
 description: "The worst dev shops don't miss deadlines — they miss them quietly. Seven warning signs your agency is hiding bad code, and what to do about it."
-date: 2026-05-12T08:00:00+02:00
+date: 2026-04-28T08:00:00+02:00
 draft: true
 author: "JetThoughts"
 slug: "dev-shop-red-flags-checklist"
@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/dev-shop-red-flags-checklist/"
 
 The worst dev shops don't miss deadlines. They miss them quietly.
 
-You hired a team. You wrote them a check. Weeks pass, maybe months. The updates sound fine. "Making progress." "Almost there." Then one day you realize you've spent $40K and you can't demo a single working feature to your investors. If you're Googling "bad development agency signs," you already know the answer.
+You hired a team. You wrote them a check. Weeks pass, maybe months. The updates sound fine. "Making progress." "Almost there." Then one day you realize you've spent $40K and you can't demo a single working feature to your investors. If you're searching for confirmation that something's wrong with your dev shop, it is.
 
 The [Standish Group's CHAOS report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) tracks software project outcomes every year. In 2024: 19% of projects failed outright. Another 47% were "challenged" — late, over budget, or missing features. That's two-thirds. For startups with outsourced agencies? Worse.
 
@@ -37,7 +37,7 @@ A founder on [r/startups](https://www.reddit.com/r/startups/) put it bluntly: "I
 
 This is the big one. A healthy team shows you working software every one to two weeks. Not a slide deck. Not a Figma mockup. Working software — you click buttons, things happen.
 
-If your agency only shows you the finished product, you're not a client. You're a hostage. You've lost the ability to course-correct, to catch misunderstandings early, to say "wait, that's not what I meant" before it's too expensive to fix.
+If your agency only shows you the finished product, you've already lost the ability to course-correct, to catch misunderstandings early, to say "wait, that's not what I meant" before it's too expensive to fix.
 
 Good teams send [plain-English async standups](/blog/how-make-small-valuable-async-standups-productivity-development/) daily and a one-page summary every Friday. No jargon. What shipped, what's blocked, what's next. If you're guessing whether progress is real, it isn't.
 
@@ -47,7 +47,7 @@ The project was $30K. Then $45K. Now they're hinting at $60K and the feature lis
 
 Here's what's actually happening: they either quoted too low to win the deal, or they're drowning in [technical debt](/blog/fixing-slow-engineering-teams-an-extended/) — rework caused by code that was badly written the first time. [LitsLink reports](https://litslink.com/blog/cost-of-outsourcing-software-development) that developers spend 42% of their time on technical debt and maintenance. Nearly half their hours go to fixing old mistakes, not building new features.
 
-Budget creep isn't "unexpected complexity." It's a sign that nobody planned, nobody tested, and nobody wants to tell you the real number.
+Budget creep usually means nobody planned, nobody tested, and nobody wants to tell you the real number.
 
 ## 4. No Automated Tests
 
@@ -75,7 +75,7 @@ If your agency can't tell you their test coverage number, they might not have te
 
 What does that mean? If your developer can't explain it in words your mom would understand, one of two things is true: they don't understand it themselves, or they're hiding behind jargon so you stop asking questions.
 
-Every decision has a business reason. "We're splitting the code into smaller pieces so that when one part breaks, the rest keeps working." That's the same thing, in English. A good team [explains decisions plainly](/blog/code-quality-evaluation-non-technical-founders/) because they want you to make informed choices. A bad team explains nothing because they don't want you involved.
+Every technical decision costs you money or saves it. Ask which. "We're splitting the code into smaller pieces so that when one part breaks, the rest keeps working." That's the same thing, in English. A good team [explains decisions plainly](/blog/code-quality-evaluation-non-technical-founders/) because they want you to make informed choices. A bad team explains nothing because they don't want you involved.
 
 ## 6. Single Point of Failure
 
@@ -85,7 +85,7 @@ If the answer involves panic, you have a bus factor (industry term for "what hap
 
 Good teams practice [structured onboarding](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/) and pair programming so knowledge spreads across at least two or three people. Decisions get documented. Code gets [reviewed by someone who didn't write it](/blog/ai-powered-code-reviews-transforming-development-workflows/). If one person leaves, the project slows down. It doesn't stop.
 
-A founder on Indie Hackers shared: "My agency's senior dev left. The other two couldn't explain half the codebase. I was paying three people's salaries for one person's output." That's the cost of a single point of failure — you don't know it's there until it breaks.
+A founder on Indie Hackers shared: "My agency's senior dev left. The other two couldn't explain half the codebase. I was paying three people's salaries for one person's output." That's the cost of a single point of failure.
 
 ## 7. Invoice Surprises
 
@@ -95,7 +95,7 @@ What infrastructure issues? When were they flagged? Why didn't anyone mention th
 
 Good teams track hours per task and share them weekly. You know exactly where money goes. You see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that 70% of executives had pulled outsourced work back in-house — budget unpredictability was a top driver.
 
-Invoice surprises aren't bookkeeping errors. They're a symptom. If you're surprised by a bill, you weren't given the information you needed to manage it.
+Invoice surprises are a symptom. If the bill shocks you, you were kept in the dark.
 
 ---
 
@@ -132,16 +132,6 @@ Don't panic. Don't send an angry email at midnight. Here's the sequence:
 **Within 30 days:** Make a decision. Either set measurable improvement targets (repo access, weekly reports, test coverage number) with a hard deadline, or begin the exit. Read our [step-by-step exit guide](/blog/fire-dev-shop-guide/) and the [5 warning signs you need technical leadership](/blog/5-warning-signs-your-startup-needs-technical-leadership/) to bring in someone who can navigate the transition.
 
 **Don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice.** Before you hire the next team, ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership. Those three things filter out 80% of bad agencies.
-
-## How We Handle This
-
-We send every client a Friday email: what shipped, what blocked, what's next. One page. No jargon. Clients have repo access from day one — read-only, always on. We write tests before code ([TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/)), and our test coverage numbers are in every weekly report. We've done this for 20+ years across 40+ projects. We've made our own mistakes. That's how we know what to prevent.
-
----
-
-*Now you know what to look for. The next move is a 4-hour code audit — one senior dev, your codebase, a written report. [Schedule one here](https://jetthoughts.com/contact-us/).*
-
----
 
 If you're evaluating your current team or vetting the next one:
 
