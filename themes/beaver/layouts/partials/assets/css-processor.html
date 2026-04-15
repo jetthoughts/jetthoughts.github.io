@@ -1,7 +1,7 @@
 {{/* Unified CSS processor - maintains backward compatibility */}}
 {{- $resources := .resources -}}
 {{- $bundleName := .bundleName -}}
-{{- $bundle := $resources | resources.Concat (printf "css/%s.css" $bundleName) | postCSS | fingerprint "md5" -}}
+{{- $bundle := $resources | resources.Concat (printf "css/%s.css" $bundleName) | postCSS | fingerprint "sha256" -}}
 
 {{- if hugo.IsProduction -}}
   {{- $bundle = $bundle | minify | resources.PostProcess -}}
