@@ -119,7 +119,7 @@ For teams struggling with Devise complexity and seeking to modernize their authe
 
 ## Understanding Rails 8's Built-In Authentication
 
-Rails 8's authentication system isn't trying to replace Devise feature-for-feature. It's asking a different question: what if you only shipped the auth features you actually use? For most apps, the answer is surprisingly little. If you haven't read the [overview of Rails 8's authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/), start there for the high-level picture.
+Rails 8 auth asks one question: what do you actually use? For most apps, the answer is surprisingly little. If you haven't read the [overview of Rails 8's authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/), start there for the high-level picture.
 
 ### Core Philosophy: Convention Over Framework
 

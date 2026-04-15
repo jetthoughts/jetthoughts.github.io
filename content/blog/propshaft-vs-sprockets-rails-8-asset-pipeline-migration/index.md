@@ -77,7 +77,7 @@ This configuration grows increasingly complex as applications scale, requiring s
 
 ## Understanding Propshaft's Modern Approach
 
-Propshaft represents a fundamental rethinking of asset management in Rails applications. Rather than attempting to optimize for HTTP/1.1's limitations, Propshaft embraces modern web standards and simplifies the entire asset pipeline.
+Sprockets optimized for a world of HTTP/1.1 connection limits. That world is gone. Propshaft skips the parts you no longer need and simplifies what's left.
 
 ### Core Philosophy: Simplicity Over Complexity
 
@@ -1104,7 +1104,7 @@ final_results = {
 3. **A/B testing capability**: Compared Propshaft vs Sprockets performance in production
 4. **Dedicated migration team**: 2 developers focused full-time on modernization
 
-These real-world case studies demonstrate that Propshaft migration, while requiring careful planning, delivers substantial benefits across build performance, runtime efficiency, and developer productivity.
+The numbers speak for themselves. Build times dropped, runtime overhead disappeared, and the asset pipeline stopped being a topic at standup.
 
 If you're planning a large-scale migration and want a second pair of eyes, our [Rails development team](/services/app-web-development/) has done this migration dozens of times.
 

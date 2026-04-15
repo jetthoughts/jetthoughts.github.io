@@ -17,19 +17,11 @@ cover_image: "cover.png"
 cover_image_alt: "Dark security-themed cover with Ruby on Rails branding, Argon2 migration badges, and glowing shield/lock icon"
 ---
 
-BCrypt dominated Rails authentication for a decade. Then GPUs got cheap. A rig that costs $3,000 today can crack BCrypt hashes at rates that would've been fantasy five years ago. The security community moved on to Argon2id -- a memory-hard algorithm that makes GPU attacks economically pointless. Rails finally caught up.
+BCrypt dominated Rails authentication for a decade. Then GPUs got cheap. A $3,000 rig cracks BCrypt cost-12 at roughly 65,000 hashes per second. Against Argon2id with 256MB memory cost, that same rig manages about 10 — the memory requirement kills GPU parallelism. The economics make the attack pointless. Rails finally caught up.
 
 `has_secure_password` now supports Argon2 natively. But if you flip the switch on a production app with existing BCrypt digests, every login breaks. That's the trap most teams walk into.
 
 We migrated 50K fintech users to Argon2 with zero support tickets. Here's exactly how. The key is a **Hybrid Verifier** pattern that dual-verifies both algorithms and rehashes on login -- no mass password reset, no downtime, no angry users.
-
-This guide covers:
-
-1. What changed in Rails
-2. Why Argon2 matters
-3. How to enable Argon2 in a new app
-4. How to migrate from existing BCrypt users without breaking logins
-5. Rollout and operational checklist
 
 ## What changed in Rails
 

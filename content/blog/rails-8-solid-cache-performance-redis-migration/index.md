@@ -20,11 +20,9 @@ metatags:
   twitter_description: "Master Solid Cache migration from Redis. Benchmarks, cost analysis, production migration guide."
 ---
 
-For most Rails apps, Redis is an infrastructure bill doing work your database already handles. You're paying for a second data store to run, monitor, and back up when PostgreSQL can serve those cache reads on its own.
+Rails 8 made Solid Cache the default caching backend. Your database is already running, already monitored, already backed up. Why pay for a separate Redis instance when PostgreSQL can serve those cache reads on its own?
 
-Rails 8 made Solid Cache the default caching backend for a reason. Your database is already running, already monitored, already backed up. Why pay for a second data store when the one you have is sitting there underutilized?
-
-This guide covers the real performance tradeoffs, a production migration strategy from Redis, and the specific scenarios where you should (and shouldn't) make the switch.
+The tradeoff is real though — database-backed caching is slower per read than Redis. Whether that matters depends on your traffic. Here are the actual numbers and a production migration path.
 
 ## Executive Summary
 
@@ -73,7 +71,7 @@ Monthly Costs:
 
 Dropping Redis removes a hosting bill, a monitoring bill, and several hours of DevOps time each month. The exact savings depend on your provider, traffic, and team size -- run the numbers against your own infrastructure before committing to a migration.
 
-## Solid Cache Architecture Deep Dive
+## How Solid Cache Works
 
 ### Database-Backed Caching Fundamentals
 
@@ -582,51 +580,7 @@ module CacheHelper
 end
 ```
 
-3. **Performance Regression Detection**
-```ruby
-# Implement comprehensive monitoring
-class CachePerformanceMonitor
-  def self.track_operation(operation, key)
-    start_time = Time.current
-
-    result = yield
-
-    duration = (Time.current - start_time) * 1000 # ms
-
-    # Log slow cache operations
-    if duration > 50 # ms threshold
-      Rails.logger.warn(
-        "Slow cache #{operation} for key #{key}: #{duration.round(2)}ms"
-      )
-    end
-
-    # Send metrics to monitoring system
-    StatsD.increment("cache.#{operation}")
-    StatsD.timing("cache.#{operation}.duration", duration)
-
-    result
-  end
-
-  def self.start_monitoring
-    # Override Rails.cache methods to track performance
-    Rails.cache.singleton_class.prepend(CacheInstrumentation)
-  end
-end
-
-module CacheInstrumentation
-  def read(key, options = {})
-    CachePerformanceMonitor.track_operation(:read, key) do
-      super
-    end
-  end
-
-  def write(key, value, options = {})
-    CachePerformanceMonitor.track_operation(:write, key) do
-      super
-    end
-  end
-end
-```
+3. **Performance Regression Detection** — subscribe to `ActiveSupport::Notifications` for `cache_read.active_support` and `cache_write.active_support` events. Log anything over 50ms. The built-in instrumentation is enough for most apps.
 
 ## Performance Optimization Strategies
 
@@ -879,104 +833,19 @@ roi = MigrationROI.calculate(app_profile)
 # }
 ```
 
-## Monitoring and Performance Tracking
+## Monitoring Solid Cache
 
-### Comprehensive Solid Cache Monitoring
+Track cache performance with ActiveSupport::Notifications — it's already built in:
 
 ```ruby
-# Custom monitoring dashboard
-class SolidCacheMetrics
-  def self.collect_metrics
-    {
-      cache_stats: cache_statistics,
-      performance_metrics: performance_analysis,
-      database_impact: database_load_analysis,
-      capacity_metrics: capacity_planning_data
-    }
-  end
-
-  private
-
-  def self.cache_statistics
-    total_entries = SolidCache::Entry.count
-    active_entries = SolidCache::Entry.where('expires_at IS NULL OR expires_at > NOW()').count
-    expired_entries = total_entries - active_entries
-
-    {
-      total_entries: total_entries,
-      active_entries: active_entries,
-      expired_entries: expired_entries,
-      hit_rate: calculate_hit_rate,
-      average_entry_size: calculate_avg_size
-    }
-  end
-
-  def self.performance_analysis
-    # Track cache operation latencies
-    operations = [:read, :write, :delete]
-
-    operations.each_with_object({}) do |op, metrics|
-      metrics[op] = {
-        p50: fetch_percentile(op, 50),
-        p95: fetch_percentile(op, 95),
-        p99: fetch_percentile(op, 99),
-        average: fetch_average(op)
-      }
-    end
-  end
-
-  def self.database_load_analysis
-    # Measure impact on database performance
-    cache_queries = ActiveRecord::QueryRecorder.new do
-      10.times { Rails.cache.read('sample_key') }
-    end
-
-    {
-      queries_per_read: cache_queries.count / 10.0,
-      avg_query_time: cache_queries.log.sum(&:duration) / cache_queries.count,
-      connection_pool_usage: ActiveRecord::Base.connection_pool.stat
-    }
-  end
-
-  def self.capacity_planning_data
-    {
-      current_size: calculate_total_size,
-      growth_rate: calculate_growth_rate,
-      projected_size_30d: project_size(30.days),
-      estimated_cost: estimate_storage_cost
-    }
-  end
-
-  def self.calculate_hit_rate
-    # Implement hit rate tracking with custom instrumentation
-    # Note: Rails.cache.stats is not universally supported (including Solid Cache)
-    # Use ActiveSupport::Notifications for portable hit rate tracking
-    cache_hits = @cache_hits_counter ||= 0
-    cache_misses = @cache_misses_counter ||= 0
-    total = cache_hits + cache_misses
-    total > 0 ? (cache_hits.to_f / total * 100).round(2) : 0
-  end
-
-  # Track cache hits/misses with ActiveSupport::Notifications
-  ActiveSupport::Notifications.subscribe('cache_read.active_support') do |*args|
-    event = ActiveSupport::Notifications::Event.new(*args)
-    if event.payload[:hit]
-      @cache_hits_counter ||= 0
-      @cache_hits_counter += 1
-    else
-      @cache_misses_counter ||= 0
-      @cache_misses_counter += 1
-    end
-  end
-end
-
-# Expose metrics endpoint
-class MetricsController < ApplicationController
-  def cache_metrics
-    render json: SolidCacheMetrics.collect_metrics
-  end
+ActiveSupport::Notifications.subscribe('cache_read.active_support') do |*args|
+  event = ActiveSupport::Notifications::Event.new(*args)
+  StatsD.timing("cache.read", event.duration)
+  StatsD.increment(event.payload[:hit] ? "cache.hit" : "cache.miss")
 end
 ```
+
+Three numbers to watch weekly: hit rate (target 85%+), P95 read latency (should stay under 5ms for PostgreSQL), and `solid_cache_entries` table size. If any drift, investigate before adding more cached views.
 
 ## When to Keep Redis (Hybrid Approach)
 

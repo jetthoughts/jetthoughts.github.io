@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-I've watched this play out maybe forty times. You hired a team. Wrote them a check — $30K, $60K, sometimes more. Waited three months. The demo loads. The login screen looks fine. But behind it? Nobody knows. Including them, sometimes. And now you're sitting there at 11pm wondering if you should fire your development agency or give them one more sprint.
+I've watched this play out forty-some times. You hired a team. Wrote them a check — $30K, $60K, sometimes more. Waited three months. The demo loads. The login screen looks fine. But behind it? Nobody knows. Including them, sometimes. And now you're sitting there at 11pm wondering if you should fire your development agency or give them one more sprint.
 
 Here's what I've learned: by the time you're Googling this, you already know the answer.
 
@@ -153,7 +153,7 @@ Firing a dev shop feels like failure. It isn't. Staying with a bad one is.
 
 Here's what nobody tells you: you're going to pay twice for the same product. Once for the bad code, once to fix it. That's the tax. The question is just how big the second bill is. And that depends entirely on who you hire next and what they find when they open the hood.
 
-Exit cleanly. Audit what you have. Find a partner who writes tests before code and explains everything in language you actually understand. You already know what bad looks like — you just lived through it. Trust that.
+Get the code, get it audited, and hire someone who writes tests first and explains everything in language you actually understand. You already know what bad looks like — you just lived through it. Trust that.
 
 ---
 

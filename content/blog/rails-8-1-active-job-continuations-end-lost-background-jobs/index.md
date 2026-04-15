@@ -69,7 +69,7 @@ That's the whole API. No surprises.
 
 ## Why This Matters More Than It Sounds
 
-Rails teams tend to underreact to this feature. "We already use [Sidekiq](/blog/solid-queue-vs-sidekiq-complete-comparison/) retries. We're fine."
+Most Rails teams will scroll past this feature. "We already use [Sidekiq](/blog/solid-queue-vs-sidekiq-complete-comparison/) retries. We're fine."
 
 You're not fine. Here's why.
 

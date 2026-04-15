@@ -19,7 +19,7 @@ Redis is the most expensive line item on most Rails infrastructure bills. And si
 
 Solid Cache, Solid Queue, and Solid Cable — the "Solid Trifecta" — replace Redis for caching, background jobs, and WebSockets. All three are database-backed and ship as defaults in new Rails 8 apps. 37signals runs Solid Cache in production across Basecamp and HEY, handling what used to require [1.1 terabytes of Redis RAM](https://dev.37signals.com/solid-cache/) with 80 gigabytes of database storage. That's an 80% infrastructure cost reduction.
 
-But *can* drop Redis and *should* drop Redis are different conversations. We've migrated four production apps to the Solid stack in the past six months. Two went fully Redis-free. Two kept Redis for specific workloads. Here's the decision framework we use.
+Whether you *can* drop Redis and whether you *should* are different questions. We've migrated four production apps to the Solid stack in the past six months. Two went fully Redis-free. Two kept Redis for specific workloads. Here's the decision framework we use.
 
 ## What the Solid Trifecta Actually Replaces
 
@@ -119,17 +119,11 @@ Skip the Solid stack when:
 - **You're pre-launch.** Ship the product first. Optimize infrastructure after you have traffic to measure. The Solid defaults in new Rails 8 apps are fine for launch — revisit when you hit scaling questions.
 - **Your database is already under pressure.** Adding cache reads, job polling, and WebSocket queries to an overloaded PostgreSQL instance makes the problem worse. Fix the database first. Consider read replicas or a [dedicated queue database](https://guides.rubyonrails.org/active_record_multiple_databases.html) before migrating.
 
-## The Vibe Coding Problem With "Just Drop Redis"
+## Don't Migrate Everything at Once
 
-Here's what we're seeing in 2026 that concerns us.
+We almost learned this the hard way on migration #2. Moved cache and queue to Solid on the same weekend, didn't set up a dedicated queue database, and Monday morning the connection pool was exhausted. Rolled back queue, added the separate database, migrated again the following week. No drama — because we'd done cache first and knew the rollback path.
 
-Teams using AI to scaffold Rails 8 apps see "Solid Queue is the default" and never think about it again. The app works at demo scale. It works at 10 users. Then a real customer base shows up — 500 concurrent users, payment webhooks firing, background imports running — and the database melts because nobody measured the write pressure of running cache, queue, and cable all through the same PostgreSQL instance.
-
-We almost made this mistake on migration #2. Moved cache and queue to Solid on the same weekend, didn't set up a dedicated queue database, and Monday morning the connection pool was exhausted. Rolled back queue, added the separate database, migrated again the following week. No drama — because we'd done cache first and knew the rollback path.
-
-The Solid Trifecta isn't a "just works" black box. It shifts load from Redis to your database. That's a real architectural tradeoff that requires [monitoring and capacity planning](/blog/ruby-on-rails-performance-optimization-patterns-2026/). The same teams that treat [AI-generated code as "it compiles, ship it"](/blog/fire-dev-shop-guide/) treat infrastructure defaults the same way.
-
-The approach is boring on purpose. Boring doesn't page you at 2 AM.
+The Solid Trifecta shifts load from Redis to your database. That's a real architectural tradeoff that requires [monitoring and capacity planning](/blog/ruby-on-rails-performance-optimization-patterns-2026/). Migrate one component at a time. Measure for a week. Then move the next one.
 
 ## What We Shipped Last Month
 
