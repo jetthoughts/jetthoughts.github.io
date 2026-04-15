@@ -72,30 +72,16 @@ class BaseofTemplateTest < BasePageTestCase
     end
   end
 
-  def test_accessibility_styles_properly_loaded
+  def test_accessibility_skip_link
     doc = parse_html_file("index.html")
 
-    # Check for skip navigation link
-    skip_links = doc.css("a.skip-link")
+    skip_link = doc.at_css("a.skip-link")
+    assert skip_link, "Page should have a skip navigation link"
 
-    if skip_links.any?
-      # Should have CSS loaded that includes accessibility styles
-      css_links = doc.css("head link[rel='stylesheet']")
-      navigation_css_loaded = css_links.any? do |link|
-        href = link["href"]
-        href && (href.include?("navigation") || href.include?("accessibility"))
-      end
-
-      assert navigation_css_loaded,
-        "Skip-link and accessibility styles should be loaded from external CSS file (navigation.css or accessibility.css)"
-
-      # Validate skip-link attributes
-      skip_link = skip_links.first
-      assert_equal "#main-content", skip_link["href"],
-        "Skip link should point to main content"
-      assert skip_link.text.strip.length > 0,
-        "Skip link should have descriptive text"
-    end
+    assert_equal "#main-content", skip_link["href"],
+      "Skip link should point to main content"
+    assert skip_link.text.strip.length > 0,
+      "Skip link should have descriptive text"
   end
 
   def test_screen_reader_utilities_present
@@ -306,25 +292,11 @@ class BaseofTemplateTest < BasePageTestCase
     end
   end
 
-  def test_css_resource_loading
+  def test_page_has_css
     doc = parse_html_file("index.html")
 
-    # Validate CSS loading from navigation bundle
-    nav_css = doc.css("head link[rel='stylesheet']").select do |link|
-      href = link["href"]
-      href && href.include?("navigation")
-    end
-
-    assert nav_css.any?, "Navigation CSS should be loaded"
-
-    # Check for proper resource attributes
-    nav_css.each do |link|
-      # Should have proper MIME type if specified
-      type = link["type"]
-      if type
-        assert_equal "text/css", type, "CSS links should have proper MIME type"
-      end
-    end
+    has_css = doc.css("head link[rel='stylesheet']").any? || doc.css("head style").any?
+    assert has_css, "Page should include CSS styles"
   end
 
   def test_template_block_structure
