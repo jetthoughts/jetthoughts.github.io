@@ -18,7 +18,8 @@ Always read these files before making changes. They define the project's archite
 | `@themes/beaver/layouts/partials/page/cover_image.html` | Blog post cover rendering |
 | `@.stitch/design.md` | Cover image generation |
 | `@docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` | ANY content, blog post, design, landing page, or marketing work |
-| `@docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` | Writing ANY blog post or marketing copy — voice, tone, banned words, structural patterns |
+| `@docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` | Writing ANY blog post or marketing copy — voice, tone, banned words, anti-AI structural patterns |
+| `@docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` | Writing tech/Rails posts — thoughtbot content patterns, code example standards |
 | `@docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md` | Writing the next blog post or planning content |
 | `@bin/hugo-build` | Build/deploy workflow |
 | `@Rakefile` | Test workflow |
@@ -39,7 +40,11 @@ Always use claude-context MCP search **before** making changes:
 2. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io/knowledge for: "[topic]"`
 3. `Get library docs for "[framework]"`
 
-**Never** grep/find for code patterns — use claude-context MCP semantic search (100x faster).
+**Option 2 — DeepWiki** (when claude-context doesn't have enough context or for repo-level questions):
+- `ask_question` about `jetthoughts/jetthoughts.github.io` for AI-powered answers about the repo
+- `read_wiki_structure` / `read_wiki_contents` for browsing repo documentation
+
+**After:** grep/find and other tools for search code patterns — use claude-context MCP semantic search first (100x faster), then deepwiki as fallback.
 
 ### Finding blog posts to reference (MANDATORY for content work)
 When writing a blog post and looking for internal links, **always use claude-context first**:
@@ -92,6 +97,31 @@ Follow official methodology from `/knowledge/`:
 - **Zero tolerance for duplicates**: No `*_refactored.*`, `*_new.*`, `*_backup.*` files
 - **New docs allowed only under** `docs/workflows/` (else edit existing files)
 - **Reflection triggers**: User reports "code is bad" / "over-engineered" → HALT, 5-Why analysis, fix config, THEN proceed
+
+### ✍️ Anti-AI Writing Enforcement (MANDATORY for all content)
+
+**Before writing ANY blog post or marketing content**, read these 3 files:
+1. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice, banned words, structural patterns
+2. `docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` — thoughtbot patterns to follow
+3. The humanizer skill patterns (Wikipedia AI writing signs) — run `/humanizer` after every draft
+
+**Zero tolerance AI patterns** — reject on sight:
+- Rule of three: "X, Y, and Z" parallel triads (break the pattern: combine two, vary the third)
+- Signposting: "This post is about...", "Here's what you need to know", "Let's explore..."
+- Bold inline-header lists: "**Speed:** fast. **Quality:** good." → write prose instead
+- Negative parallelism: "It's not X — it's Y" and "Not just... but also..."
+- Triple rhetorical questions in a row
+- Slogany parallel closings: "X is A. Y is B."
+- Therapist voice: "That's the hardest part", "The next step is smaller than you think"
+- Copula avoidance: "serves as", "stands as", "marks a" → use "is"
+
+**Write like a human** — every sentence must pass the "would a tired founder actually talk like this?" test:
+- Vary sentence length unpredictably (not short-short-long, short-short-long)
+- Use "I" and "we" with specific, concrete memories
+- Interrupt yourself with asides, parentheticals, half-thoughts
+- Admit uncertainty: "I genuinely don't know" beats "the implications remain unclear"
+- Kill your ideas publicly: "We tried X. It didn't work. So we stopped."
+- Reference voice: Rob Walling (directness) + Rand Fishkin (vulnerability) for founder posts; thoughtbot blog for tech posts
 
 ---
 

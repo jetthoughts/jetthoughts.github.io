@@ -40,8 +40,20 @@ Create content/blog/<slug>/index.md following these rules:
 - Paragraphs ≤3 sentences. Word count 1,200-1,800.
 - BANNED words: unlock, harness, leverage, dive in, game-changer, journey, seamless, robust, supercharge, revolutionize, embark, delve, discover
 
-STEP 5a — AI QUALITY CHECK
-Run /slop-detector on the draft. If flagged, run /humanizer to fix AI patterns. Re-run /slop-detector until clean.
+STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
+Run /humanizer on the draft. Scan every paragraph for these AI tells:
+- Rule of three (parallel triads) — break or combine
+- Signposting ("This post is about...", "Here's what you need to know")
+- Bold inline-header lists — rewrite as flowing prose
+- Negative parallelism ("Not X — it's Y")
+- Triple rhetorical questions
+- Slogany parallel closings ("X is A. Y is B.")
+- Therapist voice ("That's the hardest part")
+- Copula avoidance ("serves as" → use "is")
+Voice test: read every sentence aloud. Would a tired founder talk like this at a bar?
+Reference: docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md (banned words, structural patterns)
+Reference: docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md (thoughtbot patterns)
+Then run /slop-detector. If flagged, fix and re-run until clean.
 Then run /seo-aeo-audit for SEO + AEO compliance. Fix any issues before proceeding.
 
 STEP 5b — REVIEW LOOP (3 parallel critic agents, iterate until pass)
