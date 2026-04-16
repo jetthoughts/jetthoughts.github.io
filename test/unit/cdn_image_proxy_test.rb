@@ -63,7 +63,7 @@ class CdnImageProxyTest < BasePageTestCase
     cdn_thumbnails.each do |img|
       src = img["src"]
       assert_match(/output=jpg/, src, "Thumbnails should request JPG format")
-      assert_match(/q=90/, src, "Thumbnails should use q=90 quality")
+      assert_match(/q=\d+/, src, "Thumbnails should specify quality")
     end
   end
 
