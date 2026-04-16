@@ -98,30 +98,41 @@ Follow official methodology from `/knowledge/`:
 - **New docs allowed only under** `docs/workflows/` (else edit existing files)
 - **Reflection triggers**: User reports "code is bad" / "over-engineered" → HALT, 5-Why analysis, fix config, THEN proceed
 
-### ✍️ Anti-AI Writing Enforcement (MANDATORY for all content)
+### ✍️ Blog Post Pipeline (MANDATORY — run ALL steps, never partial)
 
-**Before writing ANY blog post or marketing content**, read these 3 files:
-1. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice, banned words, structural patterns
-2. `docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` — thoughtbot patterns to follow
-3. The humanizer skill patterns (Wikipedia AI writing signs) — run `/humanizer` after every draft
+When asked to write/draft/schedule a blog post, execute the FULL pipeline from
+`docs/workflows/blog-pipeline.md` as a single atomic workflow. Never stop after
+the draft step. The minimum deliverable is:
+
+1. Draft with frontmatter (step 4) — read voice guide + ICP + content plan brief first
+2. `/humanizer` pass — scan every paragraph for AI tells (step 5a)
+3. 3-critic review agents in parallel: founder persona, SEO/slop, editor (step 5b)
+4. Apply critic fixes (synthesize findings, edit post)
+5. Cover image: duplicate HTML template → render → Lanczos downsample (step 6)
+6. `bin/hugo-build` — must pass (step 7)
+7. Update content plan status (step 8)
+
+If any step fails, fix and retry before moving to the next step.
+If the post is a draft (draft: true), still run ALL steps — the post should be
+publish-ready the moment someone flips draft to false.
+
+**Date rule:** Use the actual creation date, not a future date. Hugo hides
+future-dated content by default. If scheduling for a future date is intended,
+set `publishDate` explicitly and add `buildFuture: true` to the environment config.
+
+**Skills to chain:** `/humanizer` → `/slop-detector` → `/seo-aeo-audit`
+**Agents to spawn:** 3 parallel critic agents (see blog-pipeline.md step 5b)
+**Cover template:** Duplicate from `.stitch/designs/` — never start from scratch
+
+**Pre-writing reads (MANDATORY):**
+1. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice, banned words, anti-AI structural patterns
+2. `docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` — thoughtbot patterns
+3. `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md` — ICP-E profile
 
 **Zero tolerance AI patterns** — reject on sight:
-- Rule of three: "X, Y, and Z" parallel triads (break the pattern: combine two, vary the third)
-- Signposting: "This post is about...", "Here's what you need to know", "Let's explore..."
-- Bold inline-header lists: "**Speed:** fast. **Quality:** good." → write prose instead
-- Negative parallelism: "It's not X — it's Y" and "Not just... but also..."
-- Triple rhetorical questions in a row
-- Slogany parallel closings: "X is A. Y is B."
-- Therapist voice: "That's the hardest part", "The next step is smaller than you think"
-- Copula avoidance: "serves as", "stands as", "marks a" → use "is"
-
-**Write like a human** — every sentence must pass the "would a tired founder actually talk like this?" test:
-- Vary sentence length unpredictably (not short-short-long, short-short-long)
-- Use "I" and "we" with specific, concrete memories
-- Interrupt yourself with asides, parentheticals, half-thoughts
-- Admit uncertainty: "I genuinely don't know" beats "the implications remain unclear"
-- Kill your ideas publicly: "We tried X. It didn't work. So we stopped."
-- Reference voice: Rob Walling (directness) + Rand Fishkin (vulnerability) for founder posts; thoughtbot blog for tech posts
+- Rule of three, signposting, bold inline-header lists, negative parallelism
+- Triple rhetorical questions, slogany closings, therapist voice, copula avoidance
+- See voice guide section "Banned structural patterns" for full list + fixes
 
 ---
 
