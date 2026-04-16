@@ -16,13 +16,22 @@
 {{ $retinaW := mul $.width 2 }}
 
 {{ if site.Params.cdn.enabled }}
-{{ $cdnURL := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=90" $retinaW)) }}
-<img alt='{{ $page.Title }}' src="{{ $cdnURL }}" width="{{ $.width }}" height="{{ $.height }}">
+{{ $mobileW := 160 }}{{/* 80px × 2 retina */}}
+{{ $webpDesktop := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=webp&q=80" $retinaW)) }}
+{{ $webpMobile := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=webp&q=80" $mobileW)) }}
+{{ $jpgDesktop := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=80" $retinaW)) }}
+{{ $jpgMobile := partial "cdn/url" (dict "page" $page "resource" $image "params" (printf "w=%d&output=jpg&q=80" $mobileW)) }}
+<picture>
+  <source type="image/webp" srcset="{{ $webpMobile }} {{ $mobileW }}w, {{ $webpDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) 80px, {{ $.width }}px">
+  <img alt='{{ $page.Title }}' src="{{ $jpgDesktop }}" srcset="{{ $jpgMobile }} {{ $mobileW }}w, {{ $jpgDesktop }} {{ $retinaW }}w" sizes="(max-width: 860px) 80px, {{ $.width }}px" width="{{ $.width }}" height="{{ $.height }}" loading="lazy" decoding="async">
+</picture>
 {{ else }}
 {{/* Aspect-preserving resize at 2× retina. CSS uses object-fit: contain
     with a dark background to letterbox inside the thumbnail container. */}}
 {{ $resized := $image.Resize (printf "%dx jpg q90" $retinaW) }}
-<img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}">
+<picture>
+  <img alt='{{ $page.Title }}' src="{{ $resized.RelPermalink }}" width="{{ $.width }}" height="{{ $.height }}" loading="lazy" decoding="async">
+</picture>
 {{ end }}
 
 {{ else }}
