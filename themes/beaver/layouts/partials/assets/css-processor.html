@@ -10,6 +10,14 @@
 {{- end -}}
 
 <link
+  rel="preload"
+  href="{{ $bundle.Permalink }}"
+  as="style"
+  fetchpriority="high"
+  {{- if hugo.IsProduction }}
+    integrity="{{ $bundle.Data.Integrity }}"
+  {{- end }} />
+<link
   rel="stylesheet"
   href="{{ $bundle.Permalink }}"
   {{- if hugo.IsProduction }}
