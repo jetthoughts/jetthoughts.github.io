@@ -59,6 +59,7 @@ For exact slug/tag lookups, see the post index at `docs/blog-post-index.md` (584
 Follow official methodology from `/knowledge/`:
 - **TDD**: RED → GREEN → REFACTOR cycle. See `/knowledge/20.01-tdd-methodology-reference.md` and `/knowledge/20.11-tdd-agent-delegation-how-to.md`
 - **Test Quality**: Behavior-focused ONLY. Reject implementation/existence/config tests. See `/knowledge/25.04-test-smell-prevention-enforcement-protocols.md`
+- **Avoid fragile config assertions**: Don't hardcode tunable values (`q=90`, `w=360`, exact file sizes, specific dimensions, CSS property values). Assert the *shape* (`q=\d+`, has `<picture>`, src contains `wsrv.nl`), not the configuration. If a test breaks when you change a quality/size knob unrelated to behavior, the test is testing config, not behavior — relax the assertion.
 - **Framework**: Minitest (`test/system/`, `test/unit/`). NEVER create `*.sh` test scripts
 - **Test Runner**: `bin/rake test:critical` after every micro-change (< 10 lines)
 
