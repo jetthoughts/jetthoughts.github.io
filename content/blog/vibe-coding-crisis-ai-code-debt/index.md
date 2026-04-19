@@ -23,53 +23,47 @@ Last month a founder showed us the app he'd paid $40K to build. His dev shop had
 
 ## What "vibe coding" actually means
 
-[Andrej Karpathy coined the term](https://x.com/karpathy/status/1886192184808149383) in February 2025. He described a new way of writing software: you describe what you want in plain English, an AI writes the code, and you accept it if it "vibes" — if it looks right, runs without crashing, and passes a quick manual check.
+[Andrej Karpathy coined the term](https://x.com/karpathy/status/1886192184808149383) in February 2025. He described a way of writing software where you tell an AI what you want in plain English, it writes the code, and you accept it if it "vibes." If it looks right and runs without crashing, you ship it.
 
-Karpathy meant it as a personal observation. A fun experiment. He was talking about throwaway scripts and weekend projects.
+Karpathy was talking about throwaway scripts and weekend projects. He meant it as a personal experiment.
 
-The industry turned it into a business model.
+Agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. [A quarter of Y Combinator's W25 batch](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/) submitted codebases that were 95%+ AI-generated. That's not a handful of experimenters. That's the most selective startup accelerator on earth.
 
-By late 2025, agencies were advertising "AI-first development" — meaning one junior developer supervising Claude or Cursor generating thousands of lines per day. [25% of Y Combinator's W25 batch](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/) reported codebases that were 95%+ AI-generated. That's not a fringe experiment. That's a quarter of the most selective startup accelerator on earth.
+## The numbers keep getting worse
 
-## The numbers are ugly
+[Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/blog/qodo-2025-state-of-ai-code-quality-report/) found that AI-generated code produces 1.7x more issues than code humans wrote. Not style nits. Actual defects that break things in production.
 
-The data keeps getting worse. [Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/blog/qodo-2025-state-of-ai-code-quality-report/) found that AI-generated code produces 1.7x more issues than human-written code. Not minor style nits. Actual defects.
+[Security researchers tracking LLM risks](https://owasp.org/www-project-top-10-for-large-language-model-applications/) estimate that up to 45% of AI-generated code contains known security vulnerabilities. Attackers exploit these holes to steal user data, hijack accounts, or access databases through mistakes the AI left behind. The kind of mistakes that put your company on Hacker News.
 
-[Security researchers tracking LLM risks](https://owasp.org/www-project-top-10-for-large-language-model-applications/) estimate that up to 45% of AI-generated code contains known security vulnerabilities. SQL injection, cross-site scripting, hardcoded credentials. The stuff that puts your user data on Hacker News for the wrong reasons.
-
-[GitHub's own data](https://github.blog/news-insights/research/survey-ai-wave-grows/) says 92% of developers now use AI coding tools. That number isn't scary on its own. What's scary is how many of them ship code that nobody tested or reviewed before it hit production.
+[GitHub surveyed developers](https://github.blog/news-insights/research/survey-ai-wave-grows/) and found 92% of them now use AI coding tools. That number alone isn't the problem. The problem is that many of those developers ship code nobody on their team tested or reviewed before users touched it.
 
 ## Why vibe code fools everyone
 
-AI-generated code looks clean. That's exactly why nobody catches it.
+Your founder friend who "knows a bit about code" won't catch it. Your investor's technical advisor might not either if they're doing a quick scan.
 
-Variable names are clear. Functions are reasonably sized. Comments exist, sometimes even helpful ones. Show it to a non-technical founder and they'll see a clean screen of code. Show it to a distracted senior dev doing a quick scan and they might nod too.
+AI-generated code has clear variable names and reasonably sized functions. Sometimes it even has comments. The AI trained on millions of open-source repositories, so it learned exactly how clean code is supposed to look. It writes code the way a student writes an essay with a thesaurus. Every word sounds right, but the argument has no spine.
 
-That's because AI models trained on millions of open-source repositories are excellent at surface-level conventions. They write code the way a student writes an essay using a thesaurus. Every word sounds right, but the argument has no spine.
+What nobody sees in a quick scroll is what's missing. The AI wasn't told to write tests, so it didn't. Every function assumes perfect input. Nobody asked what happens when a user enters an emoji in the phone number field, or a null where a string should be.
 
-What's missing is everything you can't see in a quick scroll.
-
-No tests. Not low coverage. Zero coverage. The AI wasn't told to write tests, so it didn't. Every function assumes perfect input. What happens when a user enters an emoji in the phone number field? A null where a string should be? Nobody asked.
-
-When something fails (and it will), the app doesn't degrade gracefully. It crashes. Or worse: it silently corrupts data and keeps running. And because AI doesn't refactor, it generates fresh code for each prompt. You end up with 14 slightly different implementations of the same function scattered across the codebase.
+When something fails (and it will), the app crashes. Or worse, it silently corrupts data and keeps running. The AI also doesn't refactor. It generates fresh code for each prompt, so you end up with 14 slightly different implementations of the same function scattered across the codebase.
 
 ## How vibe code kills your app
 
-### Security holes you can't see
+### Security holes nobody checked
 
-A founder came to us after a penetration test flagged 23 critical vulnerabilities. The app had been in production for four months. User passwords were hashed, good. But API endpoints had no authentication. Any user could access any other user's data by changing the ID in the URL. The AI handled login and left every other endpoint wide open.
+A founder came to us after a penetration tester flagged 23 critical vulnerabilities in his app. His team had been running it in production for four months. They'd hashed user passwords, which was good. But nobody had added authentication to the API endpoints. The AI had built a login screen and left every other door wide open. A basic penetration test found that any logged-in user could read, edit, or delete another user's account.
 
 ### Silent data corruption
 
-This one's scarier because you don't know it's happening. We audited a fintech app where transaction amounts were occasionally rounding wrong, by fractions of a cent. The AI-generated code handled currency as floating-point numbers instead of integers. Four months of financial data, subtly wrong. The founder didn't discover it until a user filed a complaint with their bank.
+A fintech founder couldn't figure out why some customers were complaining about wrong transaction amounts. His dev team hadn't noticed because the errors were tiny, fractions of a cent. The AI-generated code stored dollar amounts in a format that introduces tiny rounding errors on every calculation. Four months of financial records were subtly wrong. The founder found out when a user filed a complaint with their bank.
 
 ### "Works on my machine" fragility
 
-The code runs perfectly in development. One developer. One browser. One dataset. Then you get 500 concurrent users, or someone's on a slow 3G connection in rural Texas, or a database query that returned 10 rows now returns 10,000. Everything falls apart. No load testing, no monitoring. The AI wrote a demo. Nobody asked it to write a product.
+The app ran fine when one developer tested it on one browser with a small dataset. Then 500 real users showed up. Someone connected from a slow 3G network in rural Texas. A database query that used to return 10 rows started returning 10,000. Everything fell apart because nobody had run a load test, and nobody had set up monitoring. The AI wrote what the developer asked it to write, which was a demo.
 
-## How to detect vibe code in your codebase
+## How to spot vibe code in your codebase
 
-You don't need to read code to spot this. Ask your technical advisor to check these signals, or check them yourself.
+You don't need to read code to catch this. Ask your technical advisor to check these signals, or run the checks yourself.
 
 | Signal | Healthy | Vibe-coded |
 |--------|---------|------------|
@@ -79,39 +73,37 @@ You don't need to read code to spot this. Ask your technical advisor to check th
 | Monitoring | Alerts at 3am | "A user emailed us" |
 | Code duplication | Reused functions | Same logic in 8 files |
 
-Ask for the test coverage number. A healthy production app has 70%+. If yours is in single digits, the code was written by someone (or something) that never verified it works. We wrote a full guide to [why TDD prevents exactly this problem](/blog/why-how-use-tdd-main-tips-testing/).
+Start with the test coverage number. A healthy production app sits at 70% or above. If yours is in single digits, whoever wrote the code never verified it actually works. We put together a full guide on [how TDD prevents exactly this problem](/blog/why-how-use-tdd-main-tips-testing/).
 
-Open the commit log. If you see commits like "Add user module" with 2,000 lines changed, followed by "Add payment module" with another 3,000, that's AI paste. Human developers working with [code review on every PR](/blog/ai-powered-code-reviews-transforming-development-workflows/) make small, incremental commits. 50-200 lines. Dozens per week. Big dumps mean no review happened.
+Then open the commit log and look at the sizes. If you see a commit called "Add user module" that changed 2,000 lines, followed by "Add payment module" with another 3,000, that's AI paste. Developers who [review each other's code on every PR](/blog/ai-powered-code-reviews-transforming-development-workflows/) make small commits, 50 to 200 lines, dozens per week. Big dumps mean nobody reviewed the code before it went in.
 
-Pick any form in your app. Enter garbage. Leave required fields blank. Paste 10,000 characters into a text box. If the app crashes, shows a white screen, or silently swallows bad data, the error handling is decorative or absent.
+Try breaking a form in your app. Enter garbage into fields. Leave required inputs blank. Paste 10,000 characters into a text box. If the app crashes or shows a white screen, the developer only built for the happy path.
 
-Ask your team: "If the app goes down at 3am, how do we find out?" If the answer is "a user emails us," there's no monitoring. AI-generated code doesn't set up alerting because nobody prompted it to.
+Ask your team one question: "If the app goes down at 3am, how do we find out?" If the answer is "a user emails us," nobody set up monitoring. AI-generated code doesn't add alerting because the developer never prompted it to.
 
-And look for duplication. AI doesn't remember it already solved a problem. It generates fresh code for each prompt. Same validation logic in 8 files, 5 different ways to format a date — that's AI code nobody cleaned up.
+## What actually fixes this
 
-## The antidote
+None of this requires new technology. The practices that prevent vibe coding disasters have been around for twenty years. They're just unfashionable when everyone wants to ship in a weekend.
 
-The fix is nothing new: tests before code and reviews on every PR. The same practices that have prevented these failures for twenty years. They're just unfashionable when everyone's excited about shipping in a weekend.
+You write the test before the code, then you make the test pass. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work. The AI can help write the implementation, but a human writes the test that defines what "working" means.
 
-Write the test first. Then write the code. Then make the test pass. [Test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) catches code that "looks good but doesn't work." The AI can help write the implementation, but a human writes the test that defines what "working" means.
+Nobody ships code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" When two developers [work together on the same problem](/blog/async-remote-xp-practices/), they catch errors the moment those errors are introduced, not days later.
 
-No code ships without a second pair of human eyes. A real review. Someone asks "what happens when this input is null?" and "where's the test for this?" [Pair programming](/blog/async-remote-xp-practices/) goes further: two developers working together catch errors the moment they're introduced, not three days later.
+Your team sends you a [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) that shows what shipped and whether the test coverage number went up or down. If features are going up and coverage is going down, someone is cutting corners.
 
-A [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) that shows what shipped, what's blocked, and what the test coverage number is this week versus last week. If coverage is going down while features are going up, someone's cutting corners.
-
-And small features shipped frequently. Not a 3-week sprint ending in a big reveal. The big reveal is where vibe-coded apps look impressive — because nobody's tested them with real data yet. [Tech debt compounds fast](/blog/fixing-slow-engineering-teams-an-extended/) when you ship large batches without feedback.
+And you ship small features often. Not a 3-week sprint that ends in a big reveal. That big reveal is where vibe-coded apps look impressive, because nobody has tested them with real users yet. [Technical debt compounds fast](/blog/fixing-slow-engineering-teams-an-extended/) when teams ship large batches without getting feedback.
 
 ## Vibe coding has a place
 
-AI code generation works for prototypes. If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor. Show it off. Get the check.
+If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor. Show it off. Get the check.
 
-It works for throwaway scripts too: data migrations that run once, one-off reports, internal tools only three people touch. Good for exploration too. "What would this feature look like?" AI can answer that in 20 minutes instead of 2 days.
+AI works for throwaway scripts too. Data migrations that run once. One-off reports. Internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in 20 minutes instead of 2 days.
 
-But once real users touch it, once real money flows through it, you need tests, reviews, and someone who takes responsibility for what ships.
+But once real users touch your product and real money flows through it, you need someone writing tests and someone reviewing the code. You need a human who takes responsibility for what ships.
 
-If you're evaluating your current dev team right now, start with our guide on [code quality signals non-technical founders can actually check](/blog/code-quality-evaluation-non-technical-founders/). And if you've already decided to make a change, here's [how to fire your dev shop safely](/blog/fire-dev-shop-guide/).
+If you're evaluating your current dev team, start with our guide on [code quality signals non-technical founders can actually check](/blog/code-quality-evaluation-non-technical-founders/). If you've already decided to make a change, here's [how to fire your dev shop safely](/blog/fire-dev-shop-guide/).
 
-**Think your codebase might be vibe-coded?** We do a free code audit: one senior developer, your codebase, a written report covering test coverage, security risks, and architecture quality. [Get an honest assessment](https://jetthoughts.com/contact-us/).
+If you suspect your codebase is vibe-coded, we do a free code audit. One senior developer looks at your codebase and writes you a report covering test coverage, security risks, and architecture quality. [Get an honest assessment](https://jetthoughts.com/contact-us/).
 
 ## Further reading
 
