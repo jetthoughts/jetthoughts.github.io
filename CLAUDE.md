@@ -135,7 +135,14 @@ set `publishDate` explicitly and add `buildFuture: true` to the environment conf
 - Triple rhetorical questions, slogany closings, therapist voice, copula avoidance
 - Impersonal fragment stacking ("No tests. Open endpoints. Corrupted data.")
 - Noun stacking without human subject ("React + Rails, clean conventions, the demo sailed")
-- **The "who" test:** every sentence must have a person doing something. If the subject is a thing, rewrite with a human subject. Failures are discovered by someone. Features are built by someone. Symptoms are experienced by someone.
+- Sustained staccato (3+ consecutive short fragments = fake burstiness)
+- Command structure repetition (3+ paragraphs starting with imperatives)
+- Telling instead of showing ("the error handling was bad" → describe the specific failure mechanic)
+- Apologetic caveats ("every project is different", "it depends on the use case")
+- **The "who" test:** every sentence needs a person doing something
+- **The "show" test:** replace adjectives with concrete scenarios the reader can picture
+- **The 90/10 rule:** ≥90% education, ≤10% promotion. Reader learns something useful even if they never contact us
+- **Trade-offs:** always acknowledge what the proposed solution fails to do or what it costs
 - See voice guide section "Banned structural patterns" for full list + fixes
 
 ---

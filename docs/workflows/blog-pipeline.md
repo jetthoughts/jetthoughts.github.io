@@ -50,8 +50,21 @@ Run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Slogany parallel closings ("X is A. Y is B.")
 - Therapist voice ("That's the hardest part")
 - Copula avoidance ("serves as" → use "is")
-Voice test: read every sentence aloud. Would a tired founder talk like this at a bar?
-Reference: docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md (banned words, structural patterns)
+- Impersonal fragment stacking — every sentence needs a human subject doing something
+- Noun stacking without subject — give every clause a person
+- Sustained staccato — 3+ consecutive short fragments is fake burstiness
+- Command structure repetition — don't start 3+ paragraphs with imperatives
+- Apologetic caveats — no "every project is different" hedging
+- Telling instead of showing — replace adjectives with concrete technical mechanics
+
+Quality tests (run on every paragraph):
+- "Who" test: who is doing what? If the subject is a thing, rewrite with a person.
+- "Show" test: did I show the mechanic or just label it? Replace adjectives with scenarios.
+- "Coffee" test: would a tired founder talk like this at a bar?
+- "90/10" test: is ≥90% of the post educational? Is promotion ≤10%?
+- "Trade-off" test: did I acknowledge what the proposed solution fails to do?
+
+Reference: docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md (full rules)
 Reference: docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md (thoughtbot patterns)
 Then run /slop-detector. If flagged, fix and re-run until clean.
 Then run /seo-aeo-audit for SEO + AEO compliance. Fix any issues before proceeding.
@@ -70,10 +83,15 @@ a non-technical founder would stumble on. Would you contact JetThoughts after re
 Agent 2 — SEO + AI SLOP DETECTOR:
 "Review content/blog/<slug>/index.md. Part 1: Go paragraph by paragraph, rate AI probability
 0-100% for each, flag any >30% with rewrite suggestion. Watch for: parallel structure,
-filler transitions, hedging, performative empathy, sentences that say nothing specific.
+filler transitions, hedging, performative empathy, sentences that say nothing specific,
+impersonal fragment stacking (things without a person doing them), sustained staccato
+(3+ consecutive short fragments), command structure repetition (3+ paragraphs starting
+with imperatives), telling instead of showing (adjectives labeling failures instead of
+describing the specific mechanic), apologetic caveats.
 Part 2: SEO checklist — title ≤45, desc 150-160, keyword in first 100 words, 4+ internal
-links, 5+ external citations, no keyword stuffing. Part 3: Humanization score 1-10, list
-TOP 5 sentences needing rewrite."
+links, 5+ external citations, no keyword stuffing. Part 3: Education/promotion ratio —
+is ≥90% educational? Is CTA ≤10%? Part 4: Humanization score 1-10, list TOP 5 sentences
+needing rewrite."
 
 Agent 3 — SENIOR COPY EDITOR:
 "You are a senior copy editor at a YC-backed content studio. Review content/blog/<slug>/index.md.
@@ -156,12 +174,17 @@ Draft → spawn 3 critics in parallel → synthesize → fix → re-check
 | Check | Founder | SEO/Slop | Editor |
 |---|---|---|---|
 | Hook grabs attention | ✓ | | ✓ |
-| No jargon | ✓ | | |
+| No jargon a founder can't understand | ✓ | | |
 | Action items concrete | ✓ | | |
 | No AI-sounding sentences | | ✓ | ✓ |
 | No parallel template structure | | ✓ | |
+| Every sentence has a human subject | | ✓ | ✓ |
+| Show don't tell (mechanics not adjectives) | | ✓ | ✓ |
+| No sustained staccato or command repetition | | ✓ | |
 | Primary keyword in first 100 words | | ✓ | |
 | Internal/external links | | ✓ | |
+| 90/10 education-to-promotion ratio | | ✓ | ✓ |
+| Trade-offs acknowledged | | | ✓ |
 | Voice consistency | | | ✓ |
 | Weakest sentences rewritten | | | ✓ |
 | CTA positioned well | ✓ | | ✓ |
