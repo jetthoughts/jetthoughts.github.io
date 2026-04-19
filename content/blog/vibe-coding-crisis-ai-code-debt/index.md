@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/vibe-coding-crisis-ai-code-debt/"
 
 Your dev shop shipped in 3 weeks. The code looked clean. Then production happened.
 
-We took over one of these projects last month. A founder had paid $40K for a React + Rails app. Beautiful UI. Naming conventions followed to the letter. The demo sailed through investor review. Test coverage: 0%. Error handling: none. The first 200 real users broke everything — corrupted data, exposed API keys, infinite loops on edge cases. We're seeing this every week now.
+Last month a founder showed us the app he'd paid $40K to build. His dev shop had used React and Rails, kept the naming conventions clean, and the demo looked good enough that his investors didn't blink. He called us because the first 200 real users broke it. We opened the codebase and there were no tests at all. Anyone could access another user's data just by changing the ID in the URL. The app had been live for three months like that.
 
 ## What "vibe coding" actually means
 
