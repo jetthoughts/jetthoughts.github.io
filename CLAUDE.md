@@ -133,6 +133,9 @@ set `publishDate` explicitly and add `buildFuture: true` to the environment conf
 **Zero tolerance AI patterns** — reject on sight:
 - Rule of three, signposting, bold inline-header lists, negative parallelism
 - Triple rhetorical questions, slogany closings, therapist voice, copula avoidance
+- Impersonal fragment stacking ("No tests. Open endpoints. Corrupted data.")
+- Noun stacking without human subject ("React + Rails, clean conventions, the demo sailed")
+- **The "who" test:** every sentence must have a person doing something. If the subject is a thing, rewrite with a human subject. Failures are discovered by someone. Features are built by someone. Symptoms are experienced by someone.
 - See voice guide section "Banned structural patterns" for full list + fixes
 
 ---
