@@ -29,44 +29,13 @@ The tradeoff is real though — database-backed caching is slower per read than 
 
 ## Executive Summary
 
-**Solid Cache** uses your existing database for caching -- no new infrastructure, no new bills. **Redis** is faster for cache-heavy workloads but comes with real operational cost.
-
-#### Quick Decision Framework:
-- **Choose Solid Cache** for: Simplified operations, cost reduction, moderate cache hit rates (<10,000 reads/sec)
-- **Choose Redis** for: High-frequency caching (>10,000 reads/sec), sub-millisecond latency requirements, established Redis infrastructure
+Solid Cache stores your cached data in the database you already run. You skip the Redis bill, the Redis monitoring, and the Redis on-call rotation. Redis reads faster -- no question -- but most teams we work with never hit the volume where that gap matters. If your app does fewer than 10,000 cache reads per second, your team will save money and sleep better with Solid Cache. If you're doing more than that, or you need sub-millisecond latency for rate limiting, keep Redis.
 
 ## Why Database-Backed Caching Matters
 
 ### The Infrastructure Simplification Story
 
-Redis adds operational overhead: another thing to monitor, backup, scale, and pay for.
-
-#### Traditional Caching Architecture:
-```yaml
-Infrastructure Requirements:
-  - Rails application servers
-  - PostgreSQL database
-  - Redis cache cluster
-  - Redis monitoring and backup
-  - Network configuration between services
-  - Additional security considerations
-
-Monthly Costs (typical mid-size app):
-  - Redis hosting: $200-500/month
-  - Redis monitoring: $50-100/month
-  - DevOps overhead: 5-10 hours/month
-```
-
-#### Solid Cache Architecture:
-```yaml
-Simplified Infrastructure:
-  - Rails application servers
-  - PostgreSQL database (with cache tables)
-
-Monthly Costs:
-  - Additional database storage: $10-30/month
-  - DevOps overhead: <1 hour/month
-```
+Every Redis instance your team runs is another service to monitor, patch, back up, and page someone about at 2am. A typical mid-size app pays $200-500/month for Redis hosting, plus $50-100/month for monitoring, plus 5-10 hours of DevOps time each month keeping it healthy. With Solid Cache, you add $10-30/month in database storage and almost no extra maintenance -- your DBA is already watching PostgreSQL anyway. You drop the Redis cluster, the Redis backup job, the network config between services, and the security surface that comes with an extra stateful process in production.
 
 ### Real-World Impact: Cost Savings Analysis
 
@@ -78,7 +47,7 @@ Dropping Redis removes a hosting bill, a monitoring bill, and several hours of D
 
 ### Database-Backed Caching Fundamentals
 
-Solid Cache uses advanced database features to provide efficient caching:
+Solid Cache writes cache entries as rows in a PostgreSQL table, indexed for fast key lookups, with built-in expiration columns so the database handles eviction without a background job:
 
 ```ruby
 # Core Solid Cache implementation
@@ -103,52 +72,37 @@ config.cache_store = :solid_cache_store, {
 }
 ```
 
-#### Key Architecture Benefits:
+The biggest architectural win is transactional consistency. Imagine your team upgrades a user to premium and deletes the cached status in the same request. With Redis, if the transaction rolls back, that cache key is already gone -- now every request for that user hits the database until someone notices. With Solid Cache, the cache delete lives inside the same database transaction, so a rollback undoes both:
 
-1. **Transactional Consistency**
 ```ruby
-# Cache updates are transactional with database changes
+# Cache invalidation inside the same transaction -- rollback undoes both
 ActiveRecord::Base.transaction do
   user.update!(premium: true)
-  # Cache invalidation happens in same transaction
   Rails.cache.delete("user:#{user.id}:status")
-  # No risk of stale cache if transaction rolls back
+  # If this transaction rolls back, the cache entry stays intact
 end
 ```
 
-2. **Automatic Cleanup and Eviction**
+Your team also stops worrying about eviction policies. Solid Cache expires entries automatically based on the TTL you set, and the database reclaims that space on its own:
+
 ```ruby
-# Solid Cache handles expiration automatically
-# No manual eviction policies needed like Redis
-class CacheManager
-  def store_with_expiration(key, value, ttl)
-    Rails.cache.write(
-      key,
-      value,
-      expires_in: ttl,
-      race_condition_ttl: 10.seconds
-    )
-    # Database automatically removes expired entries
-  end
-end
+Rails.cache.write(
+  key,
+  value,
+  expires_in: ttl,
+  race_condition_ttl: 10.seconds
+)
 ```
 
-3. **No Memory Pressure**
+And because cache lives on disk rather than in memory, your team can cache large datasets without watching `used_memory` climb toward the Redis `maxmemory` limit:
+
 ```ruby
-# Cache stored in database, not memory
-# No need to monitor memory usage
-# No risk of cache eviction under memory pressure
-class LargeCacheHandler
-  def cache_bulk_data(dataset)
-    # Can cache large datasets without memory concerns
-    dataset.each_slice(1000) do |slice|
-      Rails.cache.write(
-        "dataset:#{slice.first.id}",
-        slice.to_json,
-        expires_in: 1.hour
-      )
-    end
-  end
+dataset.each_slice(1000) do |slice|
+  Rails.cache.write(
+    "dataset:#{slice.first.id}",
+    slice.to_json,
+    expires_in: 1.hour
+  )
 end
 ```
 
@@ -162,15 +116,7 @@ Benchmark against your own database and workload before deciding. Latency depend
 
 #### When to Use Which
 
-**Solid Cache works well for:**
-- Page caching and fragment caching at moderate read rates
-- Large cached datasets (disk-backed, no memory pressure)
-- Data that changes infrequently (configuration, product catalogs)
-
-**Redis is the better choice for:**
-- High-frequency caching (rate limiting, session storage at >10,000 reads/sec)
-- Real-time features (presence tracking, live notifications)
-- Advanced data structures (sorted sets, pub/sub, HyperLogLog)
+Solid Cache handles page caching, fragment caching, and infrequently changing data (product catalogs, feature flags, configuration) without breaking a sweat. Your team reaches for Redis when the access pattern is high-frequency and latency-sensitive -- rate limiting at 10K+ reads/sec, session storage where every millisecond shows up in the UX, or real-time features like presence tracking that depend on pub/sub and sorted sets. If you're not using those Redis-specific data structures, you probably don't need Redis.
 
 ## Migration Guide: Redis to Solid Cache
 
@@ -920,31 +866,13 @@ end
 
 ### Case Study 1: Content Management Platform
 
-**Company:** Medium-sized content platform
-**Before:** Redis caching with 5GB cache
-**After:** Solid Cache with selective Redis
-
-#### Migration Results:
-- **Infrastructure costs:** Reduced by 72% ($450/month → $125/month)
-- **Cache hit rate:** Maintained at 85%
-- **Average response time:** Increased by 12ms (acceptable trade-off)
-- **Operational complexity:** Reduced significantly
-- **Redis usage:** Kept only for real-time features (10% of previous usage)
+A medium-sized content platform was running a 5GB Redis cache that cost $450/month. Their team migrated the bulk of their caching to Solid Cache and kept Redis only for real-time features -- about 10% of the original usage. After the switch, their infrastructure bill dropped to $125/month (a 72% reduction). They maintained an 85% cache hit rate, and average response times went up by 12ms -- a tradeoff they accepted because their users never noticed the difference and their ops team stopped getting paged about Redis memory pressure.
 
 We've covered [Rails performance optimization strategies](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) in depth if you're looking at the broader picture beyond caching.
 
-### Case Study 2: E-commerce Application
+### Case Study 2: E-commerce Application (Memcached, not Redis)
 
-**Company:** Online retail platform
-**Before:** Memcached cluster with frequent cache invalidation issues
-**After:** Solid Cache with transactional caching
-
-#### Migration Benefits:
-- **Cache consistency:** 100% (transactional caching eliminated race conditions)
-- **Deployment complexity:** Reduced by removing Memcached infrastructure
-- **Cache warming:** Automatic on deploy (database-backed)
-- **Cost savings:** $320/month on Memcached hosting
-- **Developer productivity:** Increased due to simpler debugging
+This one wasn't a Redis migration -- it was Memcached -- but the pattern applies to any external cache service. An online retail platform had been fighting cache invalidation race conditions in their Memcached cluster for months. A customer would place an order, the inventory cache wouldn't invalidate in time, and another customer would buy the same item. Their team switched to Solid Cache specifically for the transactional consistency: cache writes and deletes now live inside the same database transaction as the business logic, so race conditions disappeared entirely. They saved $320/month on Memcached hosting, simplified their deploys (no more Memcached cluster to coordinate), and their developers spent less time debugging stale cache issues because they could trace cache state in the same database queries they already knew.
 
 ## When NOT to Use Solid Cache
 

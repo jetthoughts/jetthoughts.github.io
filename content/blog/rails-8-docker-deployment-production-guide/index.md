@@ -33,39 +33,11 @@ One number worth knowing upfront: containerized deploys cut our rollback time fr
 
 ### The Modern Deployment Challenge
 
-If you've ever spent a Friday night debugging why production has a different libvips version than staging, you already know the problem. Here's what Docker actually fixes:
+If you've ever spent a Friday night debugging why production has a different libvips version than staging, you already know the problem.
 
-#### Traditional Deployment Problems:
-```yaml
-Manual Setup Issues:
-  - Ruby version management across servers
-  - System dependency conflicts
-  - Environment-specific configuration drift
-  - Complex rollback procedures
-  - Inconsistent development vs production environments
+Before Docker, our team spent 2-4 hours setting up a new server, and the result was never quite identical to production. Ruby versions drifted between machines. System libraries conflicted in ways nobody caught until a deploy failed at 11pm. When something broke, whoever was on call had to manually roll back -- a process that took 30 minutes on a good day and felt like defusing a bomb on a bad one.
 
-Operational Overhead:
-  - Server provisioning time: 2-4 hours
-  - Environment setup complexity: High
-  - Deployment consistency: Variable
-  - Rollback safety: Manual and risky
-```
-
-#### Docker Deployment Advantages:
-```yaml
-Containerized Benefits:
-  - Ruby version: Locked in container image
-  - Dependencies: Fully isolated and versioned
-  - Configuration: Immutable container images
-  - Rollbacks: Instant container version switch
-  - Environments: Identical development to production
-
-Operational Efficiency:
-  - Server provisioning: <5 minutes
-  - Environment setup: Automated
-  - Deployment consistency: 100%
-  - Rollback safety: Built-in and instant
-```
+After we containerized, a new developer could spin up the full stack in under five minutes. We locked the Ruby version, every system dependency, and the entire runtime config into a single image. Rollbacks became a tag swap -- under 60 seconds, no human judgment required. The tradeoff is real complexity upfront: you need to learn multi-stage builds, health checks, and container networking. But once that's done, deploys stop being stressful and start being boring, which is exactly what you want.
 
 ### Rails 8 Docker-First Philosophy
 
@@ -246,13 +218,17 @@ RUN rails assets:precompile
 # Now dependency installation is cached unless Gemfile changes
 ```
 
-#### Build Performance Comparison:
+#### Build Performance Comparison
+
+Your team picks the approach based on how long they can wait for builds and how much disk they're willing to burn. Here's what we measured across three client projects:
 
 | Technique | Initial Build | Rebuild (code change) | Image Size |
 |-----------|---------------|----------------------|------------|
 | **Single-stage naive** | 8 minutes | 8 minutes | 1.2GB |
 | **Multi-stage basic** | 7 minutes | 6 minutes | 850MB |
 | **Multi-stage optimized** | 6 minutes | 2 minutes | 350MB |
+
+Most teams we work with start with the optimized multi-stage approach from day one -- the rebuild savings pay for themselves within a week of CI runs.
 
 ## Docker Compose: Complete Development Stack
 
@@ -824,7 +800,7 @@ scrape_configs:
 
 #### Rails Metrics Endpoint
 
-For Prometheus metrics from your Rails app, use the [`prometheus-client`](https://github.com/prometheus/client_ruby) gem. It provides proper metric types (counters, histograms, gauges), thread-safe collectors, and a Rack middleware that exposes a `/metrics` endpoint in the correct exposition format. Hand-rolling a metrics controller without this gem will produce incorrectly formatted output that Prometheus cannot scrape reliably.
+For Prometheus metrics from your Rails app, use the [`prometheus-client`](https://github.com/prometheus/client_ruby) gem. It gives you proper metric types (counters, histograms, gauges), thread-safe collectors, and a Rack middleware that exposes a `/metrics` endpoint in the correct exposition format. If you build your own metrics endpoint without the gem, Prometheus will fail to scrape it -- the exposition format is deceptively strict, and we've watched two teams waste a full sprint debugging why their hand-rolled controller returned data that looked right but parsed as garbage.
 
 ## Troubleshooting Common Issues
 
@@ -885,23 +861,21 @@ services:
 **Before:** Traditional server deployments with Capistrano
 **After:** Docker-based deployment with container orchestration
 
-#### Migration Results (on a recent client project):
-- **Deployment time:** Significantly reduced (from slow Capistrano deploys to fast image pulls)
-- **Environment consistency:** Eliminated "works on my machine" issues entirely
-- **Infrastructure costs:** Reduced through better resource utilization
-- **Rollback time:** Decreased from manual rollbacks to sub-minute container swaps
-- **Developer onboarding:** New developers productive much faster with containerized dev environments
+On a recent client project, the migration changed how the whole team worked. Their deploys went from slow Capistrano runs where everyone held their breath to fast image pulls that nobody even noticed. The "works on my machine" conversations disappeared entirely once every environment ran the same container. When something did go wrong, the on-call engineer swapped a container tag instead of manually reverting files -- rollbacks dropped from a tense 30-minute procedure to under a minute. New developers went from two days of setup to running the full stack before lunch on day one. The tradeoff was about three weeks of upfront migration work and a steeper learning curve for the team members who had never touched Docker.
 
 We wrote about a common gotcha during this migration in [Solving Kamal's "target failed to become healthy"](/blog/solving-kamals-target-failed-become-healthy/) -- health check timing is the number one deployment blocker we see.
 
 ## When NOT to Use Docker for Rails Deploys
 
-Docker isn't always the right call. Skip it if:
+Docker isn't always the right call, and we've talked founders out of it more than once.
 
-- **You're a solo founder on Heroku or Render.** Platform-as-a-Service handles containerization for you. Adding your own Docker layer adds complexity without benefit. Ship features instead.
-- **Your team has zero Docker experience and a launch deadline.** Learning Docker and deploying a new app simultaneously is how you miss deadlines. Use [Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/) -- it handles the Docker parts you'd get wrong the first time.
-- **Your app is a simple CRUD with no background jobs.** A basic `rails deploy` with Kamal or a Heroku push is faster to set up and maintain than the full docker-compose stack shown here.
-- **You're running on managed Kubernetes already.** Your platform team likely has container standards. Don't fight them with a custom Docker setup -- adapt to their patterns.
+If you're a solo founder shipping on Heroku or Render, those platforms already containerize your app behind the scenes. Adding your own Docker layer means you're maintaining infrastructure instead of building features.
+
+A team with zero Docker experience facing a launch deadline should use [Kamal](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/) instead. We watched one client try to learn Docker and ship a new product at the same time -- they missed their deadline by three weeks. Kamal handles the container plumbing you'd get wrong the first time.
+
+For a straightforward CRUD app with no background jobs, a `rails deploy` with Kamal or a Heroku push will always be faster to set up and maintain than the full docker-compose stack shown here.
+
+And if your company already runs managed Kubernetes, your platform team has container standards. Work with their patterns instead of fighting them with a custom Docker setup.
 
 The honest test: if you can't explain what multi-stage builds save you, you probably don't need them yet. Start with Kamal, graduate to custom Docker when you hit scaling limits.
 

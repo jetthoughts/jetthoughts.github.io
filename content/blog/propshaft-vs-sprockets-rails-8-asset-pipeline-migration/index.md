@@ -1,7 +1,7 @@
 ---
 dev_to_id: null
 title: "Propshaft vs Sprockets: Complete Rails 8 Asset Pipeline Migration Guide"
-description: "Master the migration from Sprockets to Propshaft in Rails 8. Complete guide with performance benchmarks, step-by-step migration, and production deployment strategies."
+description: "How to migrate from Sprockets to Propshaft in Rails 8. Performance benchmarks, step-by-step migration, and production deployment strategies from teams who have done it."
 date: 2025-10-27
 draft: false
 tags: ["rails", "propshaft", "sprockets", "assets", "performance"]
@@ -12,7 +12,7 @@ author: "JetThoughts Team"
 metatags:
   image: cover.png
   og_title: "Propshaft vs Sprockets: Rails 8 Asset Pipeline Migration"
-  og_description: "Master Propshaft migration in Rails 8. Complete guide with benchmarks, step-by-step migration, and production deployment strategies."
+  og_description: "How to migrate from Sprockets to Propshaft in Rails 8. Benchmarks, step-by-step migration, and production deployment strategies."
   twitter_title: "Propshaft vs Sprockets: Rails 8 Asset Pipeline Migration"
   twitter_description: "Complete guide: Propshaft migration, performance benchmarks, production deployment for Rails 8 applications"
 cover_image_alt: "Propshaft vs Sprockets comparison for Rails 8 asset pipeline migration"
@@ -30,16 +30,13 @@ This guide walks through migrating from Sprockets to Propshaft: what changes, wh
 
 Sprockets was designed in an era when HTTP/1.1 connection limits made asset concatenation essential for performance. Bundling all JavaScript and CSS into single files reduced the number of HTTP requests, significantly improving page load times. However, modern web development has evolved beyond these constraints.
 
-#### How HTTP/2 Changed the Calculus
+### How HTTP/2 Changed the Game
 
 HTTP/2 introduced multiplexing, allowing multiple asset requests over a single connection without performance penalties. The old practice of concatenating all assets into massive `application.js` and `application.css` files now creates problems:
 
-- **Cache invalidation issues**: Changing a single line of code invalidates the entire bundle
-- **Slower initial page loads**: Users download all JavaScript/CSS even if only a fraction is needed
-- **Longer build times**: Complex compilation pipelines slow down development feedback loops
-- **Increased complexity**: Sprockets directives, manifests, and precompilation steps add cognitive overhead
+When you change one line of CSS, your users re-download the entire bundle because the digest changes for everything. New visitors download all your JavaScript and CSS upfront, even if they only visit one page. Your developers wait through compilation pipelines that resolve dependencies across hundreds of files. And everyone on the team carries the cognitive load of Sprockets directives, manifests, and precompilation steps that exist to solve a problem HTTP/2 already solved.
 
-#### Real-World Performance Impact
+### Real-World Performance Impact
 
 Consider a typical Rails application with Sprockets:
 
@@ -51,17 +48,11 @@ Consider a typical Rails application with Sprockets:
 //= link_tree ../../../vendor/javascript .js
 ```
 
-This manifest triggers a complex compilation process:
-
-1. **Directory scanning**: Sprockets scans entire directory trees
-2. **Dependency resolution**: Analyzes `require` directives across hundreds of files
-3. **Concatenation**: Combines all files into massive bundles
-4. **Minification**: Processes the entire bundle through compression
-5. **Digest generation**: Creates fingerprinted filenames
+This manifest triggers a multi-stage compilation process. Sprockets scans your entire directory tree, then walks every `require` directive across hundreds of files to resolve dependencies. It concatenates everything into massive bundles, runs compression over the whole result, and finally generates fingerprinted filenames.
 
 In our experience, this process takes **45-60 seconds** on moderate-sized applications with 200+ assets. For larger applications, precompilation can exceed **2 minutes**, dragging down every deploy and CI run.
 
-#### The Maintenance Burden
+### The Maintenance Burden
 
 Sprockets requires ongoing maintenance that distracts from business value delivery:
 
@@ -84,12 +75,7 @@ Sprockets optimized for a world of HTTP/1.1 connection limits. That world is gon
 
 ### Core Philosophy: Simplicity Over Complexity
 
-Propshaft follows a straightforward approach:
-
-1. **No concatenation**: Files are served individually, leveraging HTTP/2 multiplexing
-2. **No processing**: Assets are served as-is, with external tools handling compilation
-3. **No dependency resolution**: Import maps and ES6 modules manage JavaScript dependencies
-4. **Minimal configuration**: Default conventions eliminate most configuration needs
+Propshaft copies your files to `public/`, adds digest fingerprints, and gets out of the way. It serves each file individually so HTTP/2 multiplexing can do its job. It skips compilation entirely and lets external tools like Dart Sass or esbuild handle that if you need it. Import maps and ES6 modules replace Sprockets' dependency resolution. And because Propshaft follows sensible defaults, most apps need almost zero configuration.
 
 ```ruby
 # The entire Propshaft configuration for most applications
@@ -129,7 +115,7 @@ Source Assets
 Public Assets Directory (individual files)
 ```
 
-The simplified pipeline eliminates multiple processing stages, reducing build complexity and potential failure points.
+Where Sprockets runs five stages that each can fail and each need debugging, Propshaft runs two. We had a client whose Sprockets concatenation step silently dropped a vendor file on every third deploy. That category of bug disappears when you stop concatenating.
 
 ### How Propshaft Handles Common Asset Patterns
 
@@ -843,42 +829,19 @@ $ mv app/assets/javascripts app/javascript
 
 #### Results:
 
-```ruby
-# Build Time Improvements
-before_migration = {
-  asset_precompile_time: 127.3,  # seconds
-  deployment_time: 892,           # seconds
-  ci_pipeline_time: 1240          # seconds
-}
+| Metric | Before (Sprockets) | After (Propshaft) | Change |
+|--------|--------------------|--------------------|--------|
+| Asset precompile | 127.3s | 12.8s | 90% faster |
+| Full deployment | 892s | 445s | 50% faster |
+| CI pipeline | 1240s | 687s | 45% faster |
 
-after_migration = {
-  asset_precompile_time: 12.8,   # seconds (90% faster)
-  deployment_time: 445,           # seconds (50% faster)
-  ci_pipeline_time: 687           # seconds (45% faster)
-}
+The team also measured runtime improvements: first paint dropped by 0.4s, time to interactive improved by 0.7s, and their Lighthouse performance score jumped from 83 to 95. Cache hit ratio improved by 23% because individual file digests meant most assets survived deploys untouched.
 
-# Performance Metrics
-performance_improvements = {
-  first_paint: -0.4,              # seconds (faster)
-  time_to_interactive: -0.7,      # seconds (faster)
-  lighthouse_performance: +12,    # points (from 83 to 95)
-  cache_hit_ratio: +0.23          # 23% improvement
-}
+On the developer experience side, hot reload got 3.2 seconds faster, the team deployed 2.3x more often, and production incidents related to the asset pipeline dropped by 67%.
 
-# Developer Experience
-developer_experience = {
-  hot_reload_time: -3.2,          # seconds faster
-  deploy_frequency: +2.3,         # 2.3x more deployments
-  production_incidents: -67       # percent reduction
-}
-```
+#### What We Learned:
 
-#### Key Learnings:
-
-1. **CoffeeScript conversion was the bottleneck**: Automated conversion saved time but required manual review
-2. **Import maps simplified dependency management**: Eliminated npm package conflicts
-3. **HTTP/2 multiplexing exceeded expectations**: 40+ concurrent asset requests with no performance degradation
-4. **Monitoring proved essential**: Early detection of missing assets prevented user-facing issues
+The CoffeeScript conversion ate most of the migration time. Automated tooling handled the syntax, but the team spent days reviewing edge cases by hand. Import maps turned out to be a net simplifier because they eliminated the npm package conflicts the team had been fighting for years. HTTP/2 multiplexing handled 40+ concurrent asset requests without degradation, which surprised even the optimists on the team. And the monitoring setup they built during migration caught 12 missing-asset issues before any user saw them.
 
 ```ruby
 # Monitoring setup that caught 12 issues before production
@@ -925,36 +888,23 @@ config.assets.paths << SharedAssets.asset_path
 
 #### Phased Rollout Strategy:
 
-```ruby
-# Phase 1: Migrate service with least dependencies (week 1-2)
-services = [
-  {name: "analytics_service", dependencies: 0, assets: 45},
-  {name: "auth_service", dependencies: 1, assets: 32},
-  {name: "core_service", dependencies: 3, assets: 156},
-  {name: "reporting_service", dependencies: 2, assets: 38},
-  {name: "admin_service", dependencies: 1, assets: 9}
-]
+The team migrated services in dependency order, starting with the simplest:
 
-# Migration order: analytics → auth → admin → reporting → core
-```
+| Service | Dependencies | Assets | Migration Week |
+|---------|-------------|--------|----------------|
+| analytics_service | 0 | 45 | 1-2 |
+| auth_service | 1 | 32 | 2-3 |
+| admin_service | 1 | 9 | 3 |
+| reporting_service | 2 | 38 | 4 |
+| core_service | 3 | 156 | 5-6 |
+
+They started with analytics (zero dependencies, low risk) and saved core_service for last because it had the most shared assets and the highest dependency count.
 
 #### Results:
 
-```ruby
-aggregate_results = {
-  total_migration_time: 6,          # weeks
-  zero_downtime_deployments: 5,     # all services
-  asset_compile_time_reduction: 88, # percent
-  shared_asset_cache_hit_rate: 94,  # percent
-  deployment_rollback_count: 0      # incidents
-}
+The team completed the migration across all 5 services in 6 weeks with zero downtime and zero rollbacks. Asset compile times dropped by 88%, and the shared asset cache hit rate reached 94%.
 
-cost_savings_annual = {
-  ci_pipeline_cost: -4800,           # USD (faster builds)
-  cdn_bandwidth_cost: -2100,         # USD (better caching)
-  developer_time_savings: -14200     # USD (faster deploys)
-}
-```
+On the cost side, the faster builds saved roughly $4,800/year in CI pipeline costs, better caching cut CDN bandwidth by $2,100/year, and the team estimated $14,200/year in developer time savings from faster deploys. Those numbers add up when you multiply across 5 services.
 
 #### Implementation Highlights:
 
@@ -1017,37 +967,14 @@ config.middleware.insert_before ActionDispatch::Static, Rack::Static,
 
 #### Incremental Migration Plan:
 
-```ruby
-migration_phases = {
-  phase_1: {
-    duration: "2 months",
-    scope: "New features only",
-    assets_migrated: 45,
-    technique: "Build new features with Propshaft/import maps"
-  },
+| Phase | Duration | Scope | Assets Migrated | Approach |
+|-------|----------|-------|----------------|----------|
+| 1 | 2 months | New features only | 45 | Build new features with Propshaft/import maps |
+| 2 | 3 months | High-traffic pages | 120 | Migrate pages covering 80% of traffic |
+| 3 | 4 months | Admin/internal tools | 200 | Modernize internal tooling with lower risk |
+| 4 | 3 months | Remaining pages | 235 | Complete migration, remove Sprockets |
 
-  phase_2: {
-    duration: "3 months",
-    scope: "High-traffic pages",
-    assets_migrated: 120,
-    technique: "Migrate pages accounting for 80% of traffic"
-  },
-
-  phase_3: {
-    duration: "4 months",
-    scope: "Admin/internal tools",
-    assets_migrated: 200,
-    technique: "Modernize internal tooling with lower risk"
-  },
-
-  phase_4: {
-    duration: "3 months",
-    scope: "Remaining pages",
-    assets_migrated: 235,
-    technique: "Complete migration, remove Sprockets"
-  }
-}
-```
+The key insight was starting with new features. Every new page the team built used Propshaft from day one, so the legacy surface area stopped growing while the team chipped away at existing pages.
 
 #### Feature Flag Implementation:
 
@@ -1079,35 +1006,15 @@ end
 
 #### Results After 12-Month Migration:
 
-```ruby
-final_results = {
-  total_assets_migrated: 600,
-  propshaft_build_time: 14.2,        # seconds
-  previous_sprockets_time: 187.5,    # seconds
-  improvement: 92.4,                 # percent
+The team migrated all 600 assets. Build time dropped from 187.5 seconds to 14.2 seconds, a 92% improvement.
 
-  page_load_improvements: {
-    homepage: -1.2,                   # seconds faster
-    product_pages: -0.8,              # seconds faster
-    checkout: -0.6                    # seconds faster
-  },
+Page loads improved across the board: the homepage loaded 1.2 seconds faster, product pages gained 0.8 seconds, and checkout improved by 0.6 seconds. Cache hit rates jumped from 67% to 91% because individual file digests meant most assets survived code changes. Average cache size per user dropped from 8.7MB to 2.3MB, cutting bandwidth by 73%.
 
-  cache_efficiency: {
-    cache_hit_rate: 0.91,             # 91% (vs 67% with Sprockets)
-    average_cache_size_per_user: 2.3, # MB (vs 8.7MB)
-    bandwidth_reduction: 73           # percent
-  }
-}
-```
+#### What Made This Work:
 
-#### Critical Success Factors:
+The founders gave the team a 12-month runway for incremental migration instead of demanding a big-bang cutover. Two developers worked on it full-time, which sounds expensive until you compare it to the cost of a botched migration on a 10-year-old monolith. The team built monitoring before they migrated a single asset, so they could track performance at every phase. And they ran A/B tests comparing Propshaft and Sprockets in production, which gave them hard data to justify continuing the migration when stakeholders got nervous.
 
-1. **Executive buy-in**: Secured 12-month timeline for incremental migration
-2. **Monitoring infrastructure**: Tracked asset performance throughout migration
-3. **A/B testing capability**: Compared Propshaft vs Sprockets performance in production
-4. **Dedicated migration team**: 2 developers focused full-time on modernization
-
-The numbers speak for themselves. Build times dropped, runtime overhead disappeared, and the asset pipeline stopped being a topic at standup.
+After 12 months, build times dropped from over 3 minutes to under 15 seconds, and the asset pipeline stopped being a topic at standup.
 
 If you're planning a large-scale migration and want a second pair of eyes, our [Rails development team](/services/app-web-development/) has done this migration dozens of times.
 
@@ -1475,7 +1382,7 @@ config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 <% end %>
 ```
 
-These troubleshooting solutions address 95% of common Propshaft migration issues. When encountering persistent problems, systematic debugging using Rails console asset inspection and build process tracing usually reveals the root cause.
+We've seen these same issues on most migrations we've done. When you hit something not covered here, systematic debugging using Rails console asset inspection and build process tracing usually reveals the root cause.
 
 ## FAQ: Propshaft Migration Questions
 
