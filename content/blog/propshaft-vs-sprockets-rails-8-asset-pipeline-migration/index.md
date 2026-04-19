@@ -11,11 +11,14 @@ slug: "propshaft-vs-sprockets-rails-8-asset-pipeline-migration"
 author: "JetThoughts Team"
 metatags:
   image: cover.png
-  og_title: "Propshaft vs Sprockets: Complete Rails 8 Asset Pipeline Migration | JetThoughts"
+  og_title: "Propshaft vs Sprockets: Rails 8 Asset Pipeline Migration"
   og_description: "Master Propshaft migration in Rails 8. Complete guide with benchmarks, step-by-step migration, and production deployment strategies."
   twitter_title: "Propshaft vs Sprockets: Rails 8 Asset Pipeline Migration"
   twitter_description: "Complete guide: Propshaft migration, performance benchmarks, production deployment for Rails 8 applications"
+cover_image_alt: "Propshaft vs Sprockets comparison for Rails 8 asset pipeline migration"
 ---
+
+*Your developers spend time waiting for builds instead of shipping features. This guide helps them fix that — deploys get faster and your team ships more often. If your dev team mentions "the asset pipeline" as a pain point, send them this post.*
 
 Your Sprockets precompile takes 60 seconds. You change one CSS variable. Sixty seconds again. Every deploy, every CI run, every developer on the team—waiting.
 
@@ -949,7 +952,7 @@ aggregate_results = {
 cost_savings_annual = {
   ci_pipeline_cost: -4800,           # USD (faster builds)
   cdn_bandwidth_cost: -2100,         # USD (better caching)
-  developer_time_savings: -18500     # USD (faster deploys)
+  developer_time_savings: -14200     # USD (faster deploys)
 }
 ```
 
@@ -1618,3 +1621,5 @@ $ RAILS_ENV=production bin/rails assets:precompile
 Propshaft is simpler, faster, and the right default for new Rails 8 apps. For existing apps on Sprockets, the migration is worth it when asset compilation is a real bottleneck—not before.
 
 Assess your asset stack first. Run `bin/rails assets:precompile` and time it. If it hurts, migrate. If it doesn't, ship features instead and revisit later. When you do migrate, do it in phases: swap the gem, fix broken paths, test in staging, then deploy. The [Kamal 2 deployment guide](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/) covers how to automate the deploy side of this transition.
+
+If you're modernizing your full Rails 8 stack, our guides on [Solid Cache migration from Redis](/blog/rails-8-solid-cache-performance-redis-migration/) and [upgrading to Argon2 password hashing](/blog/rails-argon2-has-secure-password-migration-guide/) cover the other pieces.

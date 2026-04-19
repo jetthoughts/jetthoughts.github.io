@@ -63,7 +63,7 @@ We screwed this up early in our own history — took over a project once and ass
 
 The rise of ["vibe coding"](/blog/vibe-coding-crisis-ai-code-debt/) — agencies using AI to generate 90%+ of the codebase — has made this red flag catastrophic. AI-generated code looks clean. Good variable names. Consistent formatting. Reads like a textbook.
 
-But it has no tests. No error handling. No edge cases. [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces 1.7x more issues than human-written code. And 45% of AI-generated code has [OWASP security vulnerabilities](https://snyk.io/reports/ai-code-security/).
+But the developers who generated it never wrote tests, never handled errors, and never checked edge cases. [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces 1.7x more issues than human-written code. And when [Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/), 45% of the generated code contained exploitable security flaws.
 
 The vibe coding shops skip tests entirely because the AI output "looks like it works." It does — until real users show up. Then everything breaks at once, and you're paying emergency rates to fix code that should never have shipped.
 
@@ -99,13 +99,13 @@ Invoice surprises are a symptom. If the bill shocks you, you were kept in the da
 
 ---
 
-**Recognizing too many of these?** We do a free 45-minute code audit. One senior developer. Your codebase. A written one-page assessment: test coverage, security risks, architecture quality. No contract. No follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
+If three or more of these sound familiar, we do a free 45-minute code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract. No follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
 
 ---
 
 ## The Green Flags: What Good Looks Like
 
-Not every agency is bad. The good ones give you repo access from day one, show working software every 1-2 weeks, and write tests before code ([TDD](/blog/why-how-use-tdd-main-tips-testing/)) as a default.
+Not every agency is bad. The good ones give you repo access from day one and show working software every week or two. They [write tests before code](/blog/why-how-use-tdd-main-tips-testing/) as a default, and they document decisions where you can find them.
 
 A written update arrives every Friday — what shipped, what's blocked, what's next. Estimates include a range and a risk list: "8-12 weeks, with these three things that could push it to 14." At least two people understand every part of the system. Invoices match expectations because they told you what they'd cost before they cost it.
 
@@ -113,25 +113,24 @@ A written update arrives every Friday — what shipped, what's blocked, what's n
 
 Count your red flags. Be honest.
 
-**0-1 red flags:** Normal friction. Set clearer expectations and revisit in 30 days.
-
-**2 red flags:** Yellow zone. Have a direct conversation. Reference specific examples. Set measurable goals for the next 4 weeks: "I need repo access by Friday. I need a weekly written update starting next Monday. I need a test coverage number by end of month." If they can't hit those — basic asks — you have your answer.
-
-**3-4 red flags:** Orange zone. Start your exit plan. Secure code access, export your data, get a second opinion on the codebase. Don't fire them yet — but be ready. Read our [guide to firing your dev shop safely](/blog/fire-dev-shop-guide/) before you do anything.
-
-**5+ red flags:** Red zone. You're paying for damage, not progress. Begin the transition now. The longer you wait, the more expensive the cleanup.
+| Red flags | What it means | What to do |
+|-----------|--------------|------------|
+| 0-1 | Normal friction | Set clearer expectations and revisit in 30 days |
+| 2 | Yellow zone | Have a direct conversation with specific examples. Set measurable goals: "repo access by Friday, weekly written update by Monday, test coverage number by end of month." If they can't hit those basic asks, you have your answer |
+| 3-4 | Orange zone | Start your exit plan. Secure code access, export your data, get a second opinion. Don't fire them yet — but be ready. Read our [guide to firing your dev shop safely](/blog/fire-dev-shop-guide/) |
+| 5+ | Red zone | You're paying for damage, not progress. Begin the transition now. The longer you wait, the more expensive the cleanup |
 
 ## What to Do If You See 3+ Red Flags
 
-Don't panic. Don't send an angry email at midnight. Here's the sequence:
+Don't panic. Don't send an angry email at midnight. Here's the sequence.
 
-**Tonight:** Verify you have access to your code repository, hosting accounts, domain registrar, and all third-party services. If anything is under their email instead of yours, start transferring it.
+The first thing you do — tonight, not tomorrow — is verify you have access to your code repository, hosting accounts, domain registrar, and all third-party services. If anything is under their email instead of yours, start transferring it.
 
-**This week:** Get a second opinion. Hire a freelance senior developer or fractional CTO for 4 hours. Have them look at the code and tell you — in plain English — what shape it's in. This costs $500-$2,000 and might be the most important money you spend this year.
+This week, get a second opinion. Hire a freelance senior developer or [fractional CTO](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/) for 4 hours. Have them look at the code and tell you — in plain English — what shape it's in. This costs $500-$2,000 and might be the most important money you spend this year.
 
-**Within 30 days:** Make a decision. Either set measurable improvement targets (repo access, weekly reports, test coverage number) with a hard deadline, or begin the exit. Read our [step-by-step exit guide](/blog/fire-dev-shop-guide/) and the [5 warning signs you need technical leadership](/blog/5-warning-signs-your-startup-needs-technical-leadership/) to bring in someone who can navigate the transition.
+Within 30 days, make a decision. Either set measurable improvement targets (repo access, weekly reports, test coverage number) with a hard deadline, or begin the exit. Our [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the mechanics, and if you need someone to manage the transition, the [5 warning signs you need technical leadership](/blog/5-warning-signs-your-startup-needs-technical-leadership/) will help you decide.
 
-**Don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice.** Before you hire the next team, ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership. Those three things filter out 80% of bad agencies.
+Before you hire the next team, don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice. Ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership. Those three things filter out 80% of bad agencies.
 
 If you're evaluating your current team or vetting the next one:
 
@@ -145,5 +144,5 @@ If you're evaluating your current team or vetting the next one:
 - [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) — 70% of executives pulled outsourced work back in-house
 - [Qodo: State of AI Code Quality in 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI-generated code produces 1.7x more issues than human-written code
 - [LitsLink: Cost of Outsourcing Software Development](https://litslink.com/blog/cost-of-outsourcing-software-development) — 42% of developer time goes to technical debt
-- [Clutch: Challenges of Outsourcing Software Development](https://clutch.co/resources/challenges-of-outsourcing-software-development) — survey data on communication failures and budget overruns
-- [Snyk: AI Code Security Report](https://snyk.io/reports/ai-code-security/) — 45% of AI-generated code contains OWASP vulnerabilities
+- [Clutch: State of Software Development](https://clutch.co/resources/state-of-software-development) — survey data on outsourcing challenges and budget overruns
+- [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) — 45% of AI-generated code contains exploitable vulnerabilities

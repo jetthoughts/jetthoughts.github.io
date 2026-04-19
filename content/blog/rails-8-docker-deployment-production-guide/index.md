@@ -13,12 +13,15 @@ cover_image: "cover.png"
 canonical_url: "https://jetthoughts.com/blog/rails-8-docker-deployment-production-guide/"
 metatags:
   image: cover.png
-  og_title: "Rails 8 Docker Deployment: Production-Ready Configuration | JetThoughts"
+  og_title: "Rails 8 Docker Deployment: Production Configuration"
   og_description: "Complete Rails 8 Docker deployment guide. Multi-stage builds, security hardening, performance optimization, production workflow."
   twitter_card: "summary_large_image"
   twitter_title: "Rails 8 Docker Deployment: Production-Ready Configuration"
   twitter_description: "Master Rails 8 Docker deployments. Multi-stage builds, security, performance, complete production workflow."
+cover_image_alt: "Rails 8 Docker deployment production configuration guide"
 ---
+
+*Docker makes deploys predictable and rollbacks instant. If your team's deploys are stressful or your app goes down during updates, this is the fix. We cut rollback time from 30 minutes to under 60 seconds. Send this to your dev lead.*
 
 Stop guessing about Docker configs. This is the exact Dockerfile, docker-compose.yml, and deploy script we run in production for Rails 8 apps.
 
@@ -66,7 +69,7 @@ Operational Efficiency:
 
 ### Rails 8 Docker-First Philosophy
 
-Rails 8 made a bet: fewer external dependencies means simpler containers. [Solid Queue replaces Sidekiq](/blog/rails-8-solid-queue-migration-guide/), [Solid Cache replaces Redis](/blog/rails-8-solid-cache-performance-redis-migration/), and Propshaft replaces the Webpacker/Sprockets mess. The Docker setup gets dramatically simpler:
+Rails 8 made a bet: fewer external dependencies means simpler containers. [Solid Queue replaces Sidekiq](/blog/rails-8-solid-queue-migration-guide/), [Solid Cache replaces Redis](/blog/rails-8-solid-cache-performance-redis-migration/), and [Propshaft replaces the Webpacker/Sprockets mess](/blog/propshaft-vs-sprockets-rails-8-asset-pipeline-migration/). The Docker setup gets dramatically simpler:
 
 ```ruby
 # Rails 8 defaults align perfectly with Docker
@@ -94,7 +97,7 @@ end
 #############################################
 # Stage 1: Base Image with Ruby and System Dependencies
 #############################################
-FROM ruby:3.2.2-slim AS base
+FROM ruby:3.3-slim AS base
 
 # Set production environment
 ENV RAILS_ENV=production \
@@ -164,7 +167,7 @@ RUN rm -rf node_modules tmp/cache app/assets vendor/assets lib/assets spec
 #############################################
 # Stage 4: Final Production Image
 #############################################
-FROM ruby:3.2.2-slim AS production
+FROM ruby:3.3-slim AS production
 
 # Set production environment
 ENV RAILS_ENV=production \
@@ -257,7 +260,7 @@ RUN rails assets:precompile
 
 ```yaml
 # docker-compose.yml
-version: '3.8'
+# version key is deprecated in Docker Compose v2 and can be omitted
 
 services:
   #############################################
@@ -438,7 +441,7 @@ server {
 
 ```yaml
 # docker-compose.production.yml
-version: '3.8'
+# version key is deprecated in Docker Compose v2 and can be omitted
 
 services:
   postgres:
@@ -640,7 +643,7 @@ services:
 
 ```yaml
 # Using Docker secrets (Docker Swarm)
-version: '3.8'
+# version key is deprecated in Docker Compose v2 and can be omitted
 services:
   web:
     image: myapp:latest
@@ -743,7 +746,7 @@ end
 
 ```yaml
 # docker-compose.monitoring.yml
-version: '3.8'
+# version key is deprecated in Docker Compose v2 and can be omitted
 
 services:
   #############################################

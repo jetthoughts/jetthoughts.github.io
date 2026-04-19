@@ -13,12 +13,15 @@ cover_image: "cover.png"
 canonical_url: "https://jetthoughts.com/blog/rails-8-solid-cache-performance-redis-migration/"
 metatags:
   image: cover.png
-  og_title: "Rails 8 Solid Cache Performance: Complete Redis Migration | JetThoughts"
+  og_title: "Rails 8 Solid Cache: Complete Redis Migration Guide"
   og_description: "Master Solid Cache migration from Redis. Complete guide with benchmarks, cost analysis, migration strategy for production deployments."
   twitter_card: "summary_large_image"
   twitter_title: "Rails 8 Solid Cache Performance: Complete Redis Migration"
   twitter_description: "Master Solid Cache migration from Redis. Benchmarks, cost analysis, production migration guide."
+cover_image_alt: "Rails 8 Solid Cache performance and migration from Redis"
 ---
+
+*Your team pays $200-500/month for a Redis caching service you might not need. Rails 8 lets you replace it with your existing database — saving $17K+/year on a typical mid-size app. This guide shows your dev team how to make the switch safely.*
 
 Rails 8 made Solid Cache the default caching backend. Your database is already running, already monitored, already backed up. Why pay for a separate Redis instance when PostgreSQL can serve those cache reads on its own?
 
@@ -193,14 +196,14 @@ class RedisCacheAudit
   private
 
   def self.measure_hit_rate
-    info = Redis.current.info('stats')
+    info = Redis.new(url: ENV["REDIS_URL"]).info('stats')
     hits = info['keyspace_hits'].to_f
     misses = info['keyspace_misses'].to_f
     (hits / (hits + misses) * 100).round(2)
   end
 
   def self.measure_cache_size
-    Redis.current.dbsize
+    Redis.new(url: ENV["REDIS_URL"]).dbsize
   end
 
   def self.analyze_access_patterns
@@ -208,7 +211,7 @@ class RedisCacheAudit
     sample_keys = []
     cursor = "0"
     loop do
-      cursor, batch = Redis.current.scan(cursor, match: "*", count: 100)
+      cursor, batch = Redis.new(url: ENV["REDIS_URL"]).scan(cursor, match: "*", count: 100)
       sample_keys.concat(batch)
       break if cursor == "0" || sample_keys.size >= 100
     end
@@ -226,12 +229,12 @@ class RedisCacheAudit
     keys = []
     cursor = "0"
     loop do
-      cursor, batch = Redis.current.scan(cursor, match: "*", count: 1000)
+      cursor, batch = Redis.new(url: ENV["REDIS_URL"]).scan(cursor, match: "*", count: 1000)
       keys.concat(batch)
       break if cursor == "0" || keys.size >= 1000
     end
 
-    ttls = keys.map { |k| Redis.current.ttl(k) }
+    ttls = keys.map { |k| Redis.new(url: ENV["REDIS_URL"]).ttl(k) }
     {
       average_ttl: ttls.sum / ttls.size,
       max_ttl: ttls.max,
@@ -240,7 +243,7 @@ class RedisCacheAudit
   end
 
   def self.measure_operations
-    info = Redis.current.info('stats')
+    info = Redis.new(url: ENV["REDIS_URL"]).info('stats')
     {
       total_commands: info['total_commands_processed'],
       reads: info['keyspace_hits'] + info['keyspace_misses'],
@@ -250,7 +253,7 @@ class RedisCacheAudit
   end
 
   def self.redis_memory_stats
-    info = Redis.current.info('memory')
+    info = Redis.new(url: ENV["REDIS_URL"]).info('memory')
     {
       used_memory_human: info['used_memory_human'],
       used_memory_peak_human: info['used_memory_peak_human'],
@@ -278,7 +281,7 @@ class RedisCacheAudit
 
   def self.uses_redis_specific_features?
     # Check for sorted sets, pub/sub, etc. using SCAN (non-blocking)
-    redis = Redis.current
+    redis = Redis.new(url: ENV["REDIS_URL"])
     cursor = "0"
 
     loop do
@@ -722,10 +725,10 @@ class CacheWarmer
     end
   end
 
-  def self.schedule_warming
-    # Run during low-traffic periods
-    Whenever.set_cron_task('0 3 * * *', 'CacheWarmer.warm_critical_paths')
-  end
+  # Schedule via cron or Solid Queue recurring job:
+  # every 1.day, at: "3:00 am" do
+  #   runner "CacheWarmer.warm_critical_paths"
+  # end
 end
 ```
 
@@ -959,7 +962,7 @@ The hybrid approach (Solid Cache for general caching, Redis for hot-path operati
 
 If you're not running 10K+ reads/sec, Solid Cache is the obvious choice. Start with the audit script to understand your current Redis usage patterns, then run the dual-cache strategy in production for a week before cutting over.
 
-Solid Cache pairs well with the rest of the Rails 8 infrastructure stack. If you're also migrating background jobs, our [Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) covers that process. For teams modernizing their full deployment pipeline, see our guides on [Kamal deployment](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/) and [Rails 8 Docker production setup](/blog/rails-8-docker-deployment-production-guide/).
+Solid Cache pairs well with the rest of the Rails 8 infrastructure stack. If you're also migrating background jobs, our [Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) covers that process. For the asset pipeline side, see [Propshaft vs Sprockets migration](/blog/propshaft-vs-sprockets-rails-8-asset-pipeline-migration/). For teams modernizing their full deployment pipeline, see our guides on [Kamal deployment](/blog/deploying-ruby-on-rails-applications-with-kamal-devops-docker/) and [Rails 8 Docker production setup](/blog/rails-8-docker-deployment-production-guide/).
 
 And if you're optimizing beyond caching, our post on [Rails performance patterns with Hotwire](/blog/hotwire-turbo-8-performance-patterns-real-time-rails/) covers the frontend side of the equation.
 

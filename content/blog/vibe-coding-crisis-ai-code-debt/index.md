@@ -3,7 +3,7 @@ title: "Vibe Coding Crisis: Why AI Code Breaks"
 description: "Your dev shop shipped fast with AI-generated code. It looked clean. Then production happened. Why vibe-coded apps fail and how to detect the damage before it spreads."
 date: 2026-04-19T08:00:00+02:00
 draft: false
-author: "JetThoughts"
+author: "JetThoughts Team"
 slug: "vibe-coding-crisis-ai-code-debt"
 keywords: "vibe coding problems production, ai generated code quality, ai code technical debt 2026"
 tags: ["startup", "ai", "code-quality", "founder", "testing"]
@@ -31,9 +31,9 @@ Agencies turned it into a business model. By late 2025, shops were advertising "
 
 ## The numbers keep getting worse
 
-[Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/blog/qodo-2025-state-of-ai-code-quality-report/) found that AI-generated code produces 1.7x more issues than code humans wrote. Not style nits. Actual defects that break things in production.
+[Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found that AI-generated code produces 1.7x more issues than code humans wrote. Not style nits. Actual defects that break things in production.
 
-[Security researchers tracking LLM risks](https://owasp.org/www-project-top-10-for-large-language-model-applications/) estimate that up to 45% of AI-generated code contains known security vulnerabilities. Attackers exploit these holes to steal user data, hijack accounts, or access databases through mistakes the AI left behind. The kind of mistakes that put your company on Hacker News.
+[Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/) across four languages and 80 real-world coding tasks. 45% of the generated code contained at least one exploitable security flaw — SQL injection, cryptographic failures, cross-site scripting. Attackers exploit these holes to steal user data, hijack accounts, or access databases through mistakes the AI left behind. The kind of mistakes that put your company on Hacker News.
 
 [GitHub surveyed developers](https://github.blog/news-insights/research/survey-ai-wave-grows/) and found 92% of them now use AI coding tools. That number alone isn't the problem. The problem is that many of those developers ship code nobody on their team tested or reviewed before users touched it.
 
@@ -101,15 +101,15 @@ AI works for throwaway scripts too. Data migrations that run once. One-off repor
 
 But once real users touch your product and real money flows through it, you need someone writing tests and someone reviewing the code. You need a human who takes responsibility for what ships.
 
-If you're evaluating your current dev team, start with our guide on [code quality signals non-technical founders can actually check](/blog/code-quality-evaluation-non-technical-founders/). If you've already decided to make a change, here's [how to fire your dev shop safely](/blog/fire-dev-shop-guide/).
+If you're evaluating your current dev team, start with our [red flags checklist for dev shops](/blog/dev-shop-red-flags-checklist/) or the guide on [code quality signals non-technical founders can actually check](/blog/code-quality-evaluation-non-technical-founders/). If you've already decided to make a change, here's [how to fire your dev shop safely](/blog/fire-dev-shop-guide/).
 
 If you suspect your codebase is vibe-coded, we do a free code audit. One senior developer looks at your codebase and writes you a report covering test coverage, security risks, and architecture quality. [Get an honest assessment](https://jetthoughts.com/contact-us/).
 
 ## Further reading
 
 - [Andrej Karpathy's original "vibe coding" post](https://x.com/karpathy/status/1886192184808149383) — where the term started
-- [Qodo 2025 State of AI Code Quality Report](https://www.qodo.ai/blog/qodo-2025-state-of-ai-code-quality-report/) — AI code produces 1.7x more issues
-- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — security risks in AI-generated code
+- [Qodo 2025 State of AI Code Quality Report](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI code produces 1.7x more issues
+- [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) — 45% of AI-generated code contains exploitable vulnerabilities
 - [TechCrunch: YC startups applying with AI-generated codebases](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/)
 - [GitHub survey: 92% of developers use AI coding tools](https://github.blog/news-insights/research/survey-ai-wave-grows/)
 - [OWASP Code Review Guide](https://owasp.org/www-project-code-review-guide/) — what a real security review looks like
