@@ -1,9 +1,9 @@
 ---
 
-title: "App & Web Development: 3x Faster Delivery | JetThoughts"
-description: "Custom web & app development with Ruby on Rails experts. Fully-managed service, 8+ years experience. Build better products faster. Get free quote."
-headline: Fully-Managed App & Web development
-excerpt: Expert Ruby on Rails development services with custom Rails development expertise. Build better web applications faster while eliminating payroll, training, and management costs with our pre-trained Ruby on Rails development team ready to deploy in weeks.
+title: "MVP Development Services for Startups | Ship in 8 Weeks | JetThoughts"
+description: "MVP development services for startups - from idea to production in 8 weeks. Ruby on Rails experts with 17 years experience. Test-driven, transparent, milestone billing."
+headline: MVP Development Services for Startups
+excerpt: Build your MVP with a team that ships production-ready code in 8 weeks. We use Ruby on Rails, test-driven development, and weekly reporting so you always know what you're paying for. No vibe coding, no AI-generated shortcuts - real engineers who take responsibility for what ships.
 slug: app-web-development
 author: Paul Keen
 cover_image: service-app-web-development.jpg
@@ -29,14 +29,14 @@ faqs:
     answer: "Absolutely. We seamlessly integrate with existing development teams, work with legacy systems, and can augment your in-house capabilities. Our team acts as an extension of your organization, adapting to your processes, tools, and communication preferences. If you need to scale your team quickly, our [outsourced developer staffing](/services/outsourced-developer-staffing/) service can provide additional Ruby on Rails developers. We also ensure quality through our comprehensive [software QA testing services](/services/software-qa-cat/) integrated into the development process."
 
 overview:
-  headline: Simplify website & software development
+  headline: From idea to production MVP in 8 weeks
   list:
-    - name: The Situation
-      value: Today’s businesses are driven by technology. Whether it’s launching a software product, building a website, or managing digital infrastructure, many organizations rely on developers to stay competitive & accelerate growth. Software development can unlock a world of possibilities for companies by creating new revenue streams, optimizing operations, reducing costs, & driving adaptability.
-    - name: The Problems
-      value: Unfortunately, an in-house team can be very costly and experienced software development talent can be hard to find & competitive to hire. Even with access to good developers, it takes technical leadership, operational structure, and dedicated supervision to successfully develop a software product on time.
-    - name: Our Experiences
-      value: JetThoughts provides on-demand access to a team of pre-trained developers to help companies build high-quality technology at a fraction of the costs. As a fully-managed service, we can handle everything from research, scoping, & roadmap planning to product development, testing, & post-launch maintenance.
+    - name: The Problem
+      value: You raised funding and need a working product. Hiring a full-time team takes months. Most dev shops ship fast with AI-generated code and no tests - then your first real users break everything. You end up paying twice - once to build, once to fix.
+    - name: How We’re Different
+      value: We write tests before code, review every pull request with two engineers, and send you a plain-English report every Friday. You own the code from day one. No lock-in, no surprises, milestone billing so you only pay for working software.
+    - name: What You Get
+      value: A production-ready MVP in 8 weeks, built with Ruby on Rails by senior engineers averaging 8 years of experience. Test coverage above 70%, weekly demos, and a codebase your next CTO won’t need to rewrite.
   outcome:
     - name: Years of Industry Experience
       value: 17

@@ -1,9 +1,9 @@
 ---
 
-title: "Expert Fractional CTO: 95% Client Retention | JetThoughts"
-description: "Get expert CTO leadership without full-time costs. Strategic tech vision, team building, 95% client retention. Free consultation ✓"
-headline: On-demand fractional CTOs
-excerpt: Get expert fractional CTO services for startups and growing businesses. Our fractional CTO cost-effective solutions provide strategic technology leadership, team building, and technical excellence at 60% less cost than full-time CTOs.
+title: "Fractional CTO Services for Startups | $5K-$15K/mo | JetThoughts"
+description: "Fractional CTO services for funded startups. Technical leadership at 60% less than a full-time hire. Code audits, team building, architecture review. Start this week."
+headline: Fractional CTO Services for Startups
+excerpt: Your dev shop isn't working. Your investors want a technical update. You need someone who can audit the code, fix the team, and give you a straight answer - without the $400K salary. Our fractional CTOs start in days, not months, at $5K-$15K/month.
 slug: fractional-cto
 author: Paul Keen
 cover_image: on-demand-fractional-ctos.jpeg

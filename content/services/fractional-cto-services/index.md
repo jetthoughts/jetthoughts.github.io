@@ -1,9 +1,9 @@
 ---
 
-title: "Fractional CTO Services: Part-Time Strategic Technology Leadership | JetThoughts"
-description: "Strategic part-time CTO for scaling startups ✓ High growth success rate. Long-term tech leadership, roadmap development, and team scaling partnerships."
-headline: Part-Time CTO Partnership for Strategic Growth & Technology Excellence  
-excerpt: Partner with experienced fractional CTO services for ongoing strategic technology leadership. Long-term part-time CTO relationships focused on sustainable growth, team scaling, technology roadmaps, and architectural excellence. Cost-effective strategic guidance that evolves with your scaling needs.
+title: "Part-Time CTO for Growing Startups | Long-Term Partnership | JetThoughts"
+description: "Part-time CTO partnership for Series A+ startups. Ongoing tech leadership 10-15 hrs/week - roadmaps, team scaling, architecture reviews. Not a one-off consult."
+headline: Part-Time CTO Partnership for Growing Startups
+excerpt: You've raised your Series A and need ongoing technical leadership, but a full-time CTO hire is 6 months away. Our part-time CTOs work 10-15 hours/week as long-term partners - building your roadmap, scaling your team, and reviewing architecture decisions as your company grows.
 slug: fractional-cto-services
 author: Paul Keen
 cover_image: fractional-cto-services.jpg

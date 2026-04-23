@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1853635
 dev_to_id: 1853635
 dev_to_url: https://dev.to/jetthoughts/running-tests-in-containers-with-docker-compose-c20
-title: Running tests in containers with docker-compose
-description: The main advantages of this way are to have independent environment for the tests running...
+title: Docker Compose Test Setup for Isolated CI Runs
+description: Run your test suite inside Docker Compose containers for isolated, reproducible CI builds. Includes a reusable Rails setup you can drop into any project.
 date: 2024-05-15
 created_at: '2024-05-15T07:56:17Z'
 edited_at: '2024-11-26T16:04:03Z'
@@ -191,6 +191,8 @@ Now setting up and running tests inside a docker container is achieved by only r
 ```
 
 Docker is a powerful tool to use in your development process. It can make starting and switching between projects fast and easy, and help to ensure that everyone is staying up to date with the technologies being used.
+
+If your dev shop doesn't run tests in CI at all, Docker config is the least of your problems. Our [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) covers the warning signs that separate reliable teams from ones cutting corners.
 
 **Dmitry Tsvetkov** *is a Software Engineer at JetThoughts. Follow him on [LinkedIn](https://www.linkedin.com/in/dmitry-tsvetkov-a374095a/) or [GitHub](https://github.com/vlaew).*
 > *If you enjoyed this story, we recommend reading our [latest tech stories](https://jtway.co/latest) and [trending tech stories](https://jtway.co/trending).*

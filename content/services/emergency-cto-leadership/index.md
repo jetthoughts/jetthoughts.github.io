@@ -1,9 +1,9 @@
 ---
 
-title: "Emergency CTO Leadership: 48-Hour Crisis Response & Technical Recovery | JetThoughts"
-description: "Immediate CTO crisis intervention ✓ 48-hour rapid response for technical disasters. 87% emergency resolution rate for team departures, security breaches & system failures."
-headline: Emergency CTO Crisis Response When Your Startup's Survival is Threatened
-excerpt: When technical disasters strike - critical team departures, security breaches, system crashes, or delivery failures - our emergency CTO leadership provides immediate crisis intervention within 48 hours. Expert rapid response that stabilizes teams, contains damage, and executes proven recovery strategies to save your startup from technical catastrophe.
+title: "Rescue Your Failed Software Project | 48-Hour Response | JetThoughts"
+description: "Your dev shop failed. Your codebase is broken. We rescue startup projects in 48 hours - code audit, team stabilization, recovery plan. 40+ projects rescued."
+headline: Rescue Your Failed Software Project
+excerpt: Your dev shop missed every deadline, the code has no tests, and your investors are asking questions. We've rescued 40+ projects exactly like yours. Within 48 hours, a senior engineer audits your codebase and gives you a written recovery plan - what to fix, what to rewrite, and what it costs. No jargon, no surprises.
 slug: emergency-cto-leadership
 author: Paul Keen
 cover_image: emergency-cto-leadership.jpg

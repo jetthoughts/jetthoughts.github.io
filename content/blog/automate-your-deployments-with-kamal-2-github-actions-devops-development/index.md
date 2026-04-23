@@ -5,7 +5,7 @@ remote_id: 2034339
 dev_to_id: 2034339
 dev_to_url: https://dev.to/jetthoughts/automate-your-deployments-with-kamal-2-and-github-actions-10mc
 title: Automate Your Deployments with Kamal 2 and GitHub Actions
-description: Deployments shouldn't be complex. You don't need a lot of complicated configurations. That's where...
+description: Set up Kamal 2 with GitHub Actions to auto-deploy on every push. Step-by-step guide covering secrets, Docker builds, and health checks for Rails apps.
 date: 2024-10-11
 created_at: '2024-10-11T12:26:52Z'
 edited_at: '2024-11-25T15:31:58Z'
@@ -259,5 +259,7 @@ builder:
 ```
 
 This configuration helps Kamal manage the build process. It sets the architecture (`amd64`), uses GitHub Actions for caching, and stores secrets like `RAILS_MASTER_KEY` securely.
+
+If your team still deploys manually instead of using CI/CD like this, it’s worth checking what other corners they’re cutting. Our [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) covers the patterns that separate disciplined teams from ones winging it.
 
 That’s it! This setup gives you an easy, repeatable deployment process using Kamal 2 and GitHub Actions.

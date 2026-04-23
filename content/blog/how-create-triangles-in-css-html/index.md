@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1148536
 dev_to_id: 1148536
 dev_to_url: https://dev.to/jetthoughts/how-to-create-triangles-in-css-2a6k
-title: How to create triangles in CSS
-description: In this post, we are going to see a simple method to draw a triangle in CSS using borders.    &lt;div...
+title: Create a Triangle in Pure CSS - No JavaScript
+description: Draw triangles in CSS using only the border trick - no images, no JS. Step-by-step code for up, down, left, and right arrows you can copy today.
 created_at: '2022-07-22T08:32:10Z'
 edited_at: '2024-11-25T15:40:57Z'
 date: 2022-07-22
@@ -93,3 +93,7 @@ Triangle is one of the simplest shapes in geometry. It can be drawn with just th
 ```
 
 ![Image description](file_3.png)
+
+If you took over a project where the CSS is full of manual shape tricks instead of an icon library or SVGs, that complexity adds up fast. Our [code quality evaluation guide](/blog/code-quality-evaluation-non-technical-founders/) helps you ask the right questions about decisions like these.
+
+If you're using Tailwind, see our dedicated guide on [Tailwind CSS triangles](/blog/how-create-triangles-in-tailwindcss-html-css/). For layout help, check [vertical centering with Tailwind](/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/).

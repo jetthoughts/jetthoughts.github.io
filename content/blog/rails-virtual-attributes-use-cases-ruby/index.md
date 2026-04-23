@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1852738
 dev_to_id: 1852738
 dev_to_url: https://dev.to/jetthoughts/rails-virtual-attributes-use-cases-58j1
-title: Rails virtual attributes use cases
-description: You want to keep some data but do not want to create the new column in the database? Your data should...
+title: 5 Rails Virtual Attribute Use Cases - Skip the Column
+description: Use Rails virtual attributes to handle data without adding a database column. Five practical patterns for formatting, confirmation fields, and more.
 created_at: '2024-05-14T13:57:52Z'
 edited_at: '2024-11-26T16:05:14Z'
 draft: false
@@ -198,6 +198,8 @@ Let’s play the scenario when data is rendered for a user. There are two option
 ### Conclusion
 
 The virtual attribute is a good helper when you need a quick and easy solution creating the form fields which are not related to the database. They allow having more flexibility in user interface customizations. The great thing is that the developer is not limited to attributes backed by a database, but he can use virtual attributes as well.
+
+AI-generated Rails code almost never uses virtual attributes - it creates database columns for everything. If your team is leaning on AI tools and you're seeing table bloat, our [guide on vibe coding and AI code debt](/blog/vibe-coding-crisis-ai-code-debt/) explains why that happens and what to watch for.
 
 **Sergey Sviridov** is a Software Engineer at [JetThoughts](https://www.jetthoughts.com/). Follow him on [LinkedIn](https://www.linkedin.com/in/sergey-sviridov-83007199) or [GitHub](https://github.com/SviridovSV).
 

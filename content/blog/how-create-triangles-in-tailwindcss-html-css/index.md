@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1222970
 dev_to_id: 1222970
 dev_to_url: https://dev.to/jetthoughts/how-to-create-triangles-in-tailwindcss-2in
-title: How to create triangles in TailwindCSS
-description: In this post, we are going to see four examples of how to draw a triangle in TailwindCSS using...
+title: 4 Ways to Create a Triangle in Tailwind CSS
+description: Learn 4 methods to create CSS triangles in Tailwind CSS using borders - up, down, left, and right. Copy-paste utility classes with live examples.
 created_at: '2022-10-18T10:46:16Z'
 edited_at: '2024-11-25T15:40:21Z'
 date: 2022-10-18
@@ -78,3 +78,7 @@ Triangle is one of the simplest shapes in geometry. You can draw it with three s
 ![Image description](file_3.png)
 
 In this post, we showed examples of a simple equilateral triangle. If you need a triangle with different sides, you can play with the width of the border `[*px]`.
+
+If you inherited a frontend where developers reach for custom CSS triangles instead of using an icon library, that gap between effort and result is worth investigating. Our [code quality evaluation guide](/blog/code-quality-evaluation-non-technical-founders/) walks you through the questions that surface these kinds of shortcuts.
+
+For more Tailwind techniques, see our guides on [CSS triangles without Tailwind](/blog/how-create-triangles-in-css-html/) and [full-screen vertical centering](/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/).
