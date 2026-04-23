@@ -17,7 +17,7 @@ cover_image_alt: "Timeline showing the 25-month startup codebase decay pattern: 
 canonical_url: "https://jetthoughts.com/blog/47-startups-failed-same-coding-mistake/"
 ---
 
-An auditor analyzed 47 failed startups' codebases. The statistics were brutal: [91% had zero automated tests](https://www.inc.com/maria-jose-gutierrez-chavez/47-startups-failed-most-made-the-same-coding-mistake/91251802). 68% had security vulnerabilities. 89% had no database indexing. But the stats weren't the worst part. The timeline was. Every single codebase followed the same decay curve, answering the question "why startups fail software" with one pattern: technical debt.
+An auditor analyzed 47 failed startups' codebases and the numbers told a consistent story: [91% had zero automated tests](https://www.inc.com/maria-jose-gutierrez-chavez/47-startups-failed-most-made-the-same-coding-mistake/91251802), 68% had security vulnerabilities, and 89% had no database optimization. But the stats weren't the worst part - every single codebase followed the same decay curve, answering the question "why startups fail software" with one pattern: technical debt.
 
 If your dev shop is shipping fast and you haven't thought about technical debt yet, read this before month six disappears.
 
@@ -29,23 +29,23 @@ In the first six months, everything works. Your MVP shipped on time, the demo im
 
 Between months seven and twelve, small bugs appear. A dropdown that doesn't quite work, a confirmation email that's occasionally late. Your dev shop says "we'll circle back when we have a sprint." You believe them because you also have features to ship. The velocity slows a little, but not visibly. You add another developer.
 
-Months thirteen through eighteen is where it gets ugly. Adding a simple button causes a crash three pages deep. Your team doesn't understand why. The codebase has no tests, so they can't predict what breaks. Every new feature requires hours of manual regression testing. Estimates go from "3 days" to "we're not sure." You start hearing about "technical debt." A customer loses data. Not permanently — you recover the backup — but you discover there's no error handling in the payment flow. No one knows when that code was written or why.
+Months thirteen through eighteen is where it gets ugly. Adding a simple button causes a crash three pages deep. Your team doesn't understand why. The codebase has no tests, so they can't predict what breaks. Every new feature requires hours of manual regression testing. Estimates go from "3 days" to "we're not sure." You start hearing about "technical debt." A customer loses data. Not permanently - you recover the backup - but you discover there's no error handling in the payment flow. No one knows when that code was written or why.
 
 By months nineteen through twenty-five, you're hiring to maintain, not to build. You add two more developers. Velocity doesn't increase. The new hires spend their first month learning the "why" behind undocumented decisions. A senior engineer quits because "the code's a mess." You're shipping the same number of features with four developers as you were with two. Your burn rate hasn't changed. Your feature delivery has collapsed.
 
 Month twenty-five: either pay $200K-$400K to rewrite from scratch (and hope the new team doesn't repeat the pattern), or shut down.
 
-This timeline held across 47 different startups — fintech, edtech, SaaS, marketplaces. The founders had nothing in common except the pattern.
+This timeline held across 47 different startups - fintech, edtech, SaaS, marketplaces. The founders had nothing in common except the pattern.
 
 ## The Three Stats That Predict Your Timeline
 
 You don't have a year to wait for your codebase to tell you it's broken. The auditor's data gives you advance warning with three measurements.
 
-Test coverage tells the story first. The auditor found [91% of failed startups had literally zero automated tests](https://news.ycombinator.com/item?id=45561172). Not low coverage — zero. Their code was evaluated by humans clicking buttons, then deployed to production. Ask your dev shop right now: "What's your test coverage?" If they say "we don't have a number," that's 0%. If they say "we're planning to add tests," you're six months from month seven on the timeline. Healthy coverage sits at 70%+. Under 30% and you're already in months 7-12.
+Test coverage tells the story first. The auditor found [91% of failed startups had literally zero automated tests](https://news.ycombinator.com/item?id=45561172). Not low coverage - zero. Their code was evaluated by humans clicking buttons, then deployed to production. Ask your dev shop right now: "What's your test coverage?" If they say "we don't have a number," that's 0%. If they say "we're planning to add tests," you're six months from month seven on the timeline. Healthy coverage sits at 70%+. Under 30% and you're already in months 7-12.
 
-Security was the second pattern. [68% of the failed startups had exploitable security holes](https://news.ycombinator.com/item?id=45561172) — not theoretical vulnerabilities but real ones a basic penetration test would catch. Most were laughably simple: an authenticated user could access another user's data by changing a number in the URL. The developers shipped features without asking "what if someone does this wrong?" If you request a security audit and the report comes back with 10+ critical issues, you're in the danger zone.
+Security was the second pattern. [68% of the failed startups had exploitable security holes](https://news.ycombinator.com/item?id=45561172) - not theoretical vulnerabilities but real ones a basic penetration test would catch. Most were laughably simple: an authenticated user could access another user's data by changing a number in the URL. The developers shipped features without asking "what if someone does this wrong?" If you request a security audit and the report comes back with 10+ critical issues, you're in the danger zone.
 
-The third stat surprised us most. [89% had no database optimization at all](https://news.ycombinator.com/item?id=45561172) — think of it like a library where every book search requires reading every spine instead of checking the catalog. One startup was using only 13% of their server's power while paying full price because the database couldn't find data efficiently. Their app felt slow to users. Their ops person couldn't explain why. They were months away from either a massive hosting bill increase or a painful realization that the database itself was the bottleneck.
+The third stat surprised us most. [89% had no database optimization at all](https://news.ycombinator.com/item?id=45561172) - think of it like a library where every book search requires reading every spine instead of checking the catalog. One startup was using only 13% of their server's power while paying full price because the database couldn't find data efficiently. Their app felt slow to users. Their ops person couldn't explain why. They were months away from either a massive hosting bill increase or a painful realization that the database itself was the bottleneck.
 
 If any of these describe your codebase, you're past month six. Small problems are compounding into existential ones.
 
@@ -53,23 +53,23 @@ If any of these describe your codebase, you're past month six. Small problems ar
 
 The Inc.com autopsy happened before the AI code explosion. Those 47 startups hired human developers who cut corners. In 2026, the corners are cut even faster.
 
-[Vibe coding](/blog/vibe-coding-crisis-ai-code-debt/) — shipping AI-generated code without tests or review — doesn't follow the 25-month timeline. It compresses it.
+[Vibe coding](/blog/vibe-coding-crisis-ai-code-debt/) - shipping AI-generated code without tests or review - doesn't follow the 25-month timeline. It compresses it.
 
-A vibe-coded MVP skips months 1-6 entirely. The code looks clean on day one — syntactically correct, compiles fine, passes a manual demo. But it skips the understanding phase. Your developer's AI tool never learned your problem domain — it pattern-matched against billions of lines of training data. The result feels like a solution and reads like competent code, but nobody wrote tests or handled errors, and there's no documentation explaining why anything works the way it does.
+A vibe-coded MVP skips months 1-6 entirely. The code looks clean on day one - syntactically correct, compiles fine, passes a manual demo. But it skips the understanding phase. Your developer's AI tool never learned your problem domain - it pattern-matched against billions of lines of training data. The result feels like a solution and reads like competent code, but nobody wrote tests or handled errors, and there's no documentation explaining why anything works the way it does.
 
-Month one of a vibe-coded app is actually month seven of a traditionally-built one: bugs appear. They're not small bugs. A user triggers an edge case. The code crashes. Or worse, silently corrupts data because nobody wrote the safeguards that prevent half-finished operations from saving. The dev shop says "oh, we'll add [tests](/blog/why-how-use-tdd-main-tips-testing/) now." Now. After hundreds of lines of code are already written. Now that rewriting is more expensive than writing it right the first time.
+Month one of a vibe-coded app is actually month seven of a traditionally-built one. A user triggers an edge case and the code crashes, or worse, silently corrupts data because nobody wrote the safeguards that prevent half-finished operations from saving. The dev shop says "oh, we'll add [tests](/blog/why-how-use-tdd-main-tips-testing/) now." Now. After hundreds of lines of code are already written. Now that rewriting is more expensive than writing it right the first time.
 
-The accelerated timeline: months 1-3 is month 1-12. Month 4-6 is month 13-18. Month 7 is the "rewrite or die" decision.
+The accelerated timeline compresses 25 months into about seven: a vibe-coded app hits the "new features break old ones" phase by month four, and the "rewrite or die" decision by month seven.
 
-[Veracode's 2025 GenAI Code Security Report tested over 100 LLMs across Java, Python, C#, and JavaScript.](https://www.veracode.com/blog/genai-code-security-report/) 45% of code samples failed security tests. For Java, the failure rate hit 72%. These weren't edge cases — they were the ten most common security flaws that hackers exploit first. This is production-ready according to many vibe coding shops. This is also the reason month four feels like month eighteen.
+[Veracode's 2025 GenAI Code Security Report tested over 100 LLMs across Java, Python, C#, and JavaScript.](https://www.veracode.com/blog/genai-code-security-report/) 45% of code samples failed security tests. For Java, the failure rate hit 72%. These weren't edge cases - they were the ten most common security flaws that hackers exploit first. This is production-ready according to many vibe coding shops. This is also the reason month four feels like month eighteen.
 
 ## Five Signals You're on the Timeline
 
 You don't need to wait 25 months to know. These five things appear in order, every time. [We've documented the full checklist](/blog/dev-shop-red-flags-checklist/) if you want a deeper assessment.
 
-The first thing you'll notice is the phrase "we'll fix it later" showing up in standups. Your dev shop misses a deadline — not by much, maybe a week. They say they'll catch up next sprint. You believe them because the MVP shipped on time. This is month six behavior. If you hear it more than once in a month, you've entered the acceleration phase.
+The first thing you'll notice is the phrase "we'll fix it later" showing up in standups. Your dev shop misses a deadline - not by much, maybe a week. They say they'll catch up next sprint. You believe them because the MVP shipped on time. This is month six behavior. If you hear it more than once in a month, you've entered the acceleration phase.
 
-Then small changes start taking unexpectedly long. Someone asks for a button color change. Normally that's an hour. Now it's three. The developer who built that button has left, or they don't remember why they wrote it that way. The code has no comments. This is month nine — technical debt visible at the task level.
+Then small changes start taking unexpectedly long. Someone asks for a button color change. Normally that's an hour. Now it's three. The developer who built that button has left, or they don't remember why they wrote it that way. The code has no comments. This is month nine - technical debt visible at the task level.
 
 By month twelve, new features break unrelated things. You request a reporting feature. It ships. Then three customer complaints arrive about a bug in the checkout flow. The new code touched a shared function used in 12 places. Nobody had written tests to catch the side effect.
 
@@ -85,13 +85,15 @@ We've taken over projects from failed dev shops. The pattern matches the Inc.com
 
 Test coverage is the first thing we check. It's always 0-5%. We once inherited a project where the founder had spent $400K and the coverage sat at 1%. The code worked because he manually tested every release himself. The moment he wanted to ship weekly, the system broke because there were no guardrails. He's suing the dev shop now.
 
-The architecture — if you can call it that — is always a mess. The last team we inherited from named files after features instead of logical groupings. Their developers ran database updates by hand. When something broke, the code printed the error to a log nobody checked and hoped the user would refresh the page. Every developer on the project coded in a different style, so every code review was a surprise.
+The architecture - if you can call it that - is always a mess. The last team we inherited from named files after features instead of logical groupings. Their developers ran database updates by hand. When something broke, the code printed the error to a log nobody checked and hoped the user would refresh the page. Every developer on the project coded in a different style, so every code review was a surprise.
 
-Commit history tells its own story. Old projects have one commit per week labeled "Final deliverable." AI-generated projects have 47 commits in 30 minutes, all with auto-generated messages. Neither approach tells you anything about why a decision was made. We once found 180 rows in a database with impossible data — a user_id that didn't exist, created by code that shouldn't exist either. The code had been deleted three months earlier. The data remained forever.
+Commit history tells its own story. Old projects have one commit per week labeled "Final deliverable." AI-generated projects have 47 commits in 30 minutes, all with auto-generated messages. Neither approach tells you anything about why a decision was made. We once found 180 rows in a database with impossible data - a user_id that didn't exist, created by code that shouldn't exist either. The code had been deleted three months earlier. The data remained forever.
+
+There's one more pattern we see in almost every rescue: the current dev shop blames the previous one. "The last team wrote terrible code, we need to rewrite everything from scratch." Sometimes that's true. But more often, the team saying it can't maintain someone else's code because they don't understand it, and a rewrite is easier to sell than admitting they're stuck. We've seen founders pay for two full rewrites by two different shops, each one blaming the one before. The codebase didn't improve either time because neither team enforced testing.
 
 And then there's the on-call burden. Production breaks at midnight. There's no monitoring because monitoring wasn't "part of the MVP." When something breaks, the entire dev shop scrambles because only one person understands that section of code. After six months, that person quits.
 
-Every project we've rescued was in the 19-25 month window. The conversation always starts the same way. The founder asks if we can fix it. We say yes. They ask how much — $150K to $400K depending on scope, three to six months of disciplined work. Then the hard question: why did this happen? The answer is always the same. Nobody enforced testing and code review from day one. Architecture decisions were made by whoever happened to be coding that afternoon.
+Every project we've rescued was in the 19-25 month window. The conversation always starts the same way. The founder asks if we can fix it. We say yes. They ask how much - $150K to $400K depending on scope, three to six months of disciplined work. Then the hard question: why did this happen? The answer is always the same. Nobody enforced testing and code review from day one. Architecture decisions were made by whoever happened to be coding that afternoon.
 
 The painful part: the cost to fix a codebase is roughly what it would have cost to build it right in the first place.
 
@@ -111,11 +113,11 @@ At this point, your dev shop knows how to build features but not how to build ma
 
 ### Month 18: the last window before rewrite
 
-If you're here, your options are limited. A rewrite buys you time, but the rewrite needs discipline or you repeat the pattern. This is where it's worth hiring a rescue-focused team — not to develop features, but to [establish the practices that prevent the 25-month timeline from repeating](/blog/fire-dev-shop-guide/).
+If you're here, your options are limited. A rewrite buys you time, but the rewrite needs discipline or you repeat the pattern. This is where it's worth hiring a rescue-focused team - not to develop features, but to [establish the practices that prevent the 25-month timeline from repeating](/blog/fire-dev-shop-guide/).
 
 ## When to Rewrite vs. Rescue
 
-A rewrite makes sense when you have 18+ months of untested, undocumented code and the estimated fix cost exceeds 40% of rewrite cost. You also need runway — 3-6 months before your next funding round or market deadline.
+A rewrite makes sense when you have 18+ months of untested, undocumented code and the estimated fix cost exceeds 40% of rewrite cost. You also need runway - 3-6 months before your next funding round or market deadline.
 
 A rescue makes sense when the code is under 12 months old, the core architecture is sound, and you can't afford the time cost of starting over. Most founders with a hard deadline end up rescuing because they have no choice.
 
@@ -127,13 +129,11 @@ The deciding factor is your team. Can they commit to testing and review going fo
 
 The 47 startups in the Inc.com audit didn't fail because they hired bad developers. They failed because they made the same mistake, over and over: they deferred the infrastructure work. "We'll add tests when we're bigger." "We'll refactor after launch." "Documentation can wait." Every statement was reasonable in isolation. Combined, they created a timeline.
 
-The vibe coding shops are accelerating this timeline because AI makes it easy to believe you can defer forever. You'll iterate so fast you'll never pay the debt. You'll ship on schedule. You'll hire experienced people who'll clean it up. You'll just deal with it later.
-
-Later arrives in month seven.
+The vibe coding shops are accelerating this timeline because AI makes it easy to believe you can defer forever - you'll iterate so fast that the debt will never catch up, and eventually you'll hire experienced people who'll clean it all up. That's the story every founder tells themselves until month seven arrives.
 
 If you're still in months one through six, you have a choice. Enforce discipline now while it's cheap, or pay 10x more in months nineteen through twenty-five.
 
-Run the three checks from the audit — test coverage, a security scan, and a database health check. The numbers will tell you which month you're in.
+Run the three checks from the audit - test coverage, a security scan, and a database health check. The numbers will tell you which month you're in.
 
 ## Where Are You on the Timeline?
 
