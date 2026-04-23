@@ -29,7 +29,7 @@ I've compiled eight dev shop warning signs from twenty years of cleaning up afte
 
 Git is the system developers use to store and track every code change. Think of it like Google Docs version history, but for software. You should have read access to it. Always.
 
-"But I can't read code," you say. Doesn't matter. Your next hire can. Your technical advisor can. Your fractional CTO can. The point is: you own this code. You paid for it. If they won't let you see it, [ask yourself why](/blog/how-know-what-your-team-doing-remote-startup/). What are they protecting? And from whom?
+"But I can't read code," you say. Doesn't matter - your next hire can, and so can a technical advisor or [fractional CTO](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/). You own this code because you paid for it. If they won't let you see it, [ask yourself why](/blog/how-know-what-your-team-doing-remote-startup/). What are they protecting? And from whom?
 
 A founder on [r/startups](https://www.reddit.com/r/startups/) put it bluntly: "I asked for repo access and they said 'we'll transfer everything at the end.' There was no end. They ghosted." Code should live in a GitHub organization you own from day one, not theirs.
 
@@ -53,11 +53,11 @@ Budget creep usually means the team didn't plan or test properly, and now they d
 
 Automated tests are the single thing that separates codebases that survive from ones that don't.
 
-They're tiny programs that check whether your software works. Every time a developer changes something, these tests run automatically and say "yes, everything still works" or "no, you just broke checkout." Without them, nobody knows what's broken until a real user finds it. Maybe your user. Maybe on launch day.
+They're tiny programs that check whether your software works. Every time a developer changes something, these tests run automatically and say "yes, everything still works" or "no, you just broke checkout." Without them, nobody knows what's broken until a real user finds it - maybe your biggest customer, maybe on launch day.
 
 A healthy codebase has 70%+ test coverage. Ask your agency for the number. If they hedge or change the subject, the answer is close to zero.
 
-We screwed this up early in our own history - took over a project once and assumed the existing tests were solid. They weren't. They were decorative. Passed every time because they didn't actually test anything. Now we [write tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), every time. It's slower on day one. It's dramatically faster by month two.
+We screwed this up early in our own history - took over a project once and assumed the existing tests were solid. They weren't - they were decorative, passing every time because they didn't actually test anything. Now we [write tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), every time. It's slower on day one but dramatically faster by month two.
 
 ### Why This Is Worse in 2026
 

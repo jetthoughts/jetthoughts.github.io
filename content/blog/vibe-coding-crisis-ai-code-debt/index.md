@@ -95,7 +95,7 @@ And you ship small features often. Not a 3-week sprint that ends in a big reveal
 
 ## Vibe coding has a place
 
-If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor. Show it off. Get the check.
+If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor, show it off, and get the check.
 
 AI works for throwaway scripts too — data migrations that run once, one-off reports, internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in 20 minutes instead of 2 days.
 

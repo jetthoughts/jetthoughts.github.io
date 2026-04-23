@@ -37,6 +37,7 @@ Create content/blog/<slug>/index.md following these rules:
 - Voice: plain English, empathy first, founder-to-founder tone, specific data over vague claims
 - Structure: punchy hook → primary keyword in first 100 words → numbered H2 sections → vibe coding angle section → "When NOT to" section → JetThoughts proof point → CTA → related reading (2-3 internal links in prose) → further reading (5+ external citations)
 - Internal links: weave 4+ links to existing JetThoughts posts naturally in the body (not just footer). Use the slugs verified in Step 3b.
+- Practitioner insight: Before writing, ask "What would a founder who's rescued 50 projects add that keyword research wouldn't find?" Include at least one real-world pattern not in the content plan brief.
 - Paragraphs ≤3 sentences. Word count 1,200-1,800.
 - BANNED words: unlock, harness, leverage, dive in, game-changer, journey, seamless, robust, supercharge, revolutionize, embark, delve, discover
 
@@ -52,7 +53,8 @@ Run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Copula avoidance ("serves as" → use "is")
 - Impersonal fragment stacking — every sentence needs a human subject doing something
 - Noun stacking without subject — give every clause a person
-- Sustained staccato — 3+ consecutive short fragments is fake burstiness
+- Sustained staccato — covers BOTH fragment stacking ("No tests. Open endpoints. Corrupted data.") AND complete-sentence monotony ("You hired a team. You wrote them a check. Weeks pass."). Read each paragraph aloud. If 3+ consecutive sentences have similar word counts (all under ~10 words), the rhythm is monotonous regardless of grammar.
+- Em dashes — use `-` not `—` throughout
 - Command structure repetition — don't start 3+ paragraphs with imperatives
 - Apologetic caveats — no "every project is different" hedging
 - Telling instead of showing — replace adjectives with concrete technical mechanics

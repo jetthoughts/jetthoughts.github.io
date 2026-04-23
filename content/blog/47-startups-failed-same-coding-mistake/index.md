@@ -69,13 +69,13 @@ You don't need to wait 25 months to know. These five things appear in order, eve
 
 The first thing you'll notice is the phrase "we'll fix it later" showing up in standups. Your dev shop misses a deadline - not by much, maybe a week. They say they'll catch up next sprint. You believe them because the MVP shipped on time. This is month six behavior. If you hear it more than once in a month, you've entered the acceleration phase.
 
-Then small changes start taking unexpectedly long. Someone asks for a button color change. Normally that's an hour. Now it's three. The developer who built that button has left, or they don't remember why they wrote it that way. The code has no comments. This is month nine - technical debt visible at the task level.
+Then small changes start taking unexpectedly long. Someone asks for a button color change that normally takes an hour, and now it takes three. The developer who built that button has left, or they don't remember why they wrote it that way. The code has no comments. This is month nine - technical debt visible at the task level.
 
 By month twelve, new features break unrelated things. You request a reporting feature. It ships. Then three customer complaints arrive about a bug in the checkout flow. The new code touched a shared function used in 12 places. Nobody had written tests to catch the side effect.
 
 Month fourteen brings the documentation question. A new hire needs to understand the authentication flow. The dev shop points them at the code. There's no design doc, no notes on why anything was built the way it was. New hires spend their first two weeks just learning the codebase. Your velocity plateaus because onboarding becomes a full-time job.
 
-The final signal is the one that scares founders most: you hire a third or fourth developer and feature output stays flat. Month eighteen. Everyone's time goes to bug fixes and explaining decisions to each other. You've stopped building. You're maintaining.
+The final signal is the one that scares founders most: you hire a third or fourth developer and feature output stays flat. Month eighteen. Everyone's time goes to bug fixes and explaining decisions to each other, and you realize you've stopped building and started maintaining.
 
 Two of these signals means you're on the timeline. Four means you have at most six months before the rewrite conversation.
 
@@ -121,7 +121,7 @@ A rewrite makes sense when you have 18+ months of untested, undocumented code an
 
 A rescue makes sense when the code is under 12 months old, the core architecture is sound, and you can't afford the time cost of starting over. Most founders with a hard deadline end up rescuing because they have no choice.
 
-The honest answer: both cost the same. Both take 3-6 months. Both run $150K-$400K. A rewrite is a fresh start, but you might repeat the pattern with the new team. A rescue preserves what works, but improvements show up slower.
+The honest answer: both cost roughly the same - 3-6 months of work at $150K-$400K. A rewrite is a fresh start, but you might repeat the pattern with the new team. A rescue preserves what works, but improvements show up slower.
 
 The deciding factor is your team. Can they commit to testing and review going forward? If yes, rescue. If they'll "get back to it later," rewrite with new people.
 
