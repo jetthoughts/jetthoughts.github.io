@@ -1,6 +1,6 @@
 ---
 title: "Vibe Coding Crisis: Why AI Code Breaks"
-description: "Your dev shop shipped fast with AI-generated code. It looked clean. Then production happened. Why vibe-coded apps fail and how to detect the damage before it spreads."
+description: "Your dev shop used AI to ship fast. The first real users broke it. Why vibe-coded apps fail — and how to spot the damage before it spreads."
 date: 2026-04-19T08:00:00+02:00
 draft: false
 author: "JetThoughts Team"
@@ -17,7 +17,7 @@ cover_image_alt: "JetThoughts blog cover for Vibe Coding Crisis with AI code qua
 canonical_url: "https://jetthoughts.com/blog/vibe-coding-crisis-ai-code-debt/"
 ---
 
-Your dev shop shipped in 3 weeks. The code looked clean. Then production happened.
+Your dev shop used AI to ship your app in three weeks, and the code looked clean enough that nobody worried. Then 200 real users showed up and broke everything.
 
 Last month a founder showed us the app he'd paid $40K to build. His dev shop had used React and Rails, kept the naming conventions clean, and the demo looked good enough that his investors didn't blink. He called us because the first 200 real users broke it. We opened the codebase and there were no tests at all. Anyone could access another user's data just by changing the ID in the URL. The app had been live for three months like that.
 
@@ -97,7 +97,7 @@ And you ship small features often. Not a 3-week sprint that ends in a big reveal
 
 If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor. Show it off. Get the check.
 
-AI works for throwaway scripts too. Data migrations that run once. One-off reports. Internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in 20 minutes instead of 2 days.
+AI works for throwaway scripts too — data migrations that run once, one-off reports, internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in 20 minutes instead of 2 days.
 
 But once real users touch your product and real money flows through it, you need someone writing tests and someone reviewing the code. You need a human who takes responsibility for what ships.
 

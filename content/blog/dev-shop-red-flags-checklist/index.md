@@ -1,9 +1,9 @@
 ---
 title: "Red Flags You Hired the Wrong Dev Shop"
 description: "The worst dev shops don't miss deadlines — they miss them quietly. Seven warning signs your agency is hiding bad code, and what to do about it."
-date: 2026-04-28T08:00:00+02:00
-draft: true
-author: "JetThoughts"
+date: 2026-04-23
+draft: false
+author: "JetThoughts Team"
 slug: "dev-shop-red-flags-checklist"
 keywords: "bad development agency signs, dev shop warning signs, how to know if your developer is good"
 tags: ["startup", "hiring", "dev-agency", "founder", "outsourcing"]
