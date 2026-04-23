@@ -2,7 +2,7 @@
 title: "47 Startups Failed the Same Way"
 description: "An Inc.com audit found 91% of failed startups had no tests, 68% had security holes. The 25-month decay timeline that predicts your codebase's fate."
 date: 2026-04-23
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "47-startups-failed-same-coding-mistake"
 keywords: "why startups fail software, startup codebase failure, startup technical debt death, software project failure rate"
