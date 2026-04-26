@@ -105,13 +105,14 @@ When asked to write/draft/schedule a blog post, execute the FULL pipeline from
 `docs/workflows/blog-pipeline.md` as a single atomic workflow. Never stop after
 the draft step. The minimum deliverable is:
 
-1. Draft with frontmatter (step 4) — read voice guide + ICP + content plan brief first
-2. `/humanizer` pass — scan every paragraph for AI tells (step 5a)
-3. 3-critic review agents in parallel: founder persona, SEO/slop, editor (step 5b)
-4. Apply critic fixes (synthesize findings, edit post)
-5. Cover image: duplicate HTML template → render → Lanczos downsample (step 6)
-6. `bin/hugo-build` — must pass (step 7)
-7. Update content plan status (step 8)
+1. Draft with frontmatter (step 4) - read voice guide + ICP + content plan brief first
+2. `/humanizer` pass - scan every paragraph for AI tells (step 5a)
+3. Round 1: 3 critic agents (founder persona, SEO/slop, editor) - apply fixes
+4. Round 2: 3 NEW personas (senior dev for tech accuracy, copywriter for rhythm, AI detector) - apply fixes
+5. Round 3: 3 MORE personas (DevOps/practitioner, conversion optimizer, tired target reader) - apply fixes
+6. Cover image: duplicate HTML template - render - Lanczos downsample (step 6)
+7. `bin/hugo-build` - must pass (step 7)
+8. Update content plan status (step 8)
 
 If any step fails, fix and retry before moving to the next step.
 If the post is a draft (draft: true), still run ALL steps — the post should be
@@ -139,8 +140,13 @@ set `publishDate` explicitly and add `buildFuture: true` to the environment conf
 - Command structure repetition (3+ paragraphs starting with imperatives)
 - Telling instead of showing ("the error handling was bad" → describe the specific failure mechanic)
 - Apologetic caveats ("every project is different", "it depends on the use case")
+- Fluffy AI narration (dramatic present-tense "The alerts fire correctly. Then someone upgrades..." - use specific past-tense practitioner stories instead)
+- Fake authority generalization ("We've seen this on every codebase" - use specific count: "The last three codebases we inherited...")
+- Timeline fabrication ("last year" without checking if the technology existed then)
+- Use `-` not `—` for all dashes in content
 - **The "who" test:** every sentence needs a person doing something
 - **The "show" test:** replace adjectives with concrete scenarios the reader can picture
+- **The "practitioner" test:** replace generalized scenarios with specific incidents (name the client, version, timeline, exact failure)
 - **The 90/10 rule:** ≥90% education, ≤10% promotion. Reader learns something useful even if they never contact us
 - **Trade-offs:** always acknowledge what the proposed solution fails to do or what it costs
 - See voice guide section "Banned structural patterns" for full list + fixes
