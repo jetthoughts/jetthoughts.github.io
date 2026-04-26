@@ -1,0 +1,4 @@
+# Screenshots are for internal analysis only - don't commit to repo
+*.png
+*.jpg
+*.jpeg
