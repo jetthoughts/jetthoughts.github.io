@@ -1,6 +1,6 @@
 ---
 title: "Vibe Coding Crisis: Why AI Code Breaks"
-description: "Your dev shop used AI to ship fast. The first real users broke it. Why vibe-coded apps fail — and how to spot the damage before it spreads."
+description: "Your dev shop used AI to ship fast. The first real users broke it. Why vibe-coded apps fail - and how to spot the damage before it spreads."
 date: 2026-04-19T08:00:00+02:00
 draft: false
 author: "JetThoughts Team"
@@ -33,7 +33,7 @@ Agencies turned it into a business model. By late 2025, shops were advertising "
 
 [Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found that AI-generated code produces 1.7x more issues than code humans wrote. Not style nits. Actual defects that break things in production.
 
-[Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/) across four languages and 80 real-world coding tasks. 45% of the generated code contained at least one exploitable security flaw — SQL injection, cryptographic failures, cross-site scripting. Attackers exploit these holes to steal user data, hijack accounts, or access databases through mistakes the AI left behind. The kind of mistakes that put your company on Hacker News.
+[Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/) across four languages and 80 real-world coding tasks. 45% of the generated code contained at least one exploitable security flaw - SQL injection and cryptographic failures, plus cross-site scripting. Attackers exploit these holes to steal user data, hijack accounts, or access databases through mistakes the AI left behind. The kind of mistakes that put your company on Hacker News.
 
 [GitHub surveyed developers](https://github.blog/news-insights/research/survey-ai-wave-grows/) and found 92% of them now use AI coding tools. That number alone isn't the problem. The problem is that many of those developers ship code nobody on their team tested or reviewed before users touched it.
 
@@ -73,13 +73,13 @@ You don't need to read code to catch this. Ask your technical advisor to check t
 | Monitoring | Alerts at 3am | "A user emailed us" |
 | Code duplication | Reused functions | Same logic in 8 files |
 
-Start with the test coverage number. A healthy production app sits at 70% or above. If yours is in single digits, whoever wrote the code never verified it actually works. We put together a full guide on [how TDD prevents exactly this problem](/blog/why-how-use-tdd-main-tips-testing/).
+The test coverage number is the fastest signal. A healthy production app sits at 70% or above. If yours is in single digits, whoever wrote the code never verified it actually works. We put together a full guide on [how TDD prevents exactly this problem](/blog/why-how-use-tdd-main-tips-testing/).
 
-Then open the commit log and look at the sizes. If you see a commit called "Add user module" that changed 2,000 lines, followed by "Add payment module" with another 3,000, that's AI paste. Developers who [review each other's code on every PR](/blog/ai-powered-code-reviews-transforming-development-workflows/) make small commits, 50 to 200 lines, dozens per week. Big dumps mean nobody reviewed the code before it went in.
+The commit log tells a similar story. If you see a commit called "Add user module" that changed 2,000 lines, followed by "Add payment module" with another 3,000, that's AI paste. Developers who [review each other's code on every PR](/blog/ai-powered-code-reviews-transforming-development-workflows/) make small commits, 50 to 200 lines, dozens per week. Big dumps mean nobody reviewed the code before it went in.
 
-Try breaking a form in your app. Enter garbage into fields. Leave required inputs blank. Paste 10,000 characters into a text box. If the app crashes or shows a white screen, the developer only built for the happy path.
+A quick way to test resilience: break a form in your app. Enter garbage into fields. Leave required inputs blank. Paste 10,000 characters into a text box. If the app crashes or shows a white screen, the developer only built for the happy path.
 
-Ask your team one question: "If the app goes down at 3am, how do we find out?" If the answer is "a user emails us," nobody set up monitoring. AI-generated code doesn't add alerting because the developer never prompted it to.
+One question worth asking your team: "If the app goes down at 3am, how do we find out?" If the answer is "a user emails us," nobody set up monitoring. AI-generated code doesn't add alerting because the developer never prompted it to.
 
 ## What actually fixes this
 
@@ -97,7 +97,7 @@ And you ship small features often. Not a 3-week sprint that ends in a big reveal
 
 If you need a clickable demo for an investor meeting next Tuesday, generate the whole thing with Cursor, show it off, and get the check.
 
-AI works for throwaway scripts too — data migrations that run once, one-off reports, internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in 20 minutes instead of 2 days.
+AI works for throwaway scripts too - data migrations that run once, one-off reports, internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in 20 minutes instead of 2 days.
 
 But once real users touch your product and real money flows through it, you need someone writing tests and someone reviewing the code. You need a human who takes responsibility for what ships.
 
@@ -107,9 +107,9 @@ If you suspect your codebase is vibe-coded, we do a free code audit. One senior 
 
 ## Further reading
 
-- [Andrej Karpathy's original "vibe coding" post](https://x.com/karpathy/status/1886192184808149383) — where the term started
-- [Qodo 2025 State of AI Code Quality Report](https://www.qodo.ai/reports/state-of-ai-code-quality/) — AI code produces 1.7x more issues
-- [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) — 45% of AI-generated code contains exploitable vulnerabilities
+- [Andrej Karpathy's original "vibe coding" post](https://x.com/karpathy/status/1886192184808149383) - where the term started
+- [Qodo 2025 State of AI Code Quality Report](https://www.qodo.ai/reports/state-of-ai-code-quality/) - AI code produces 1.7x more issues
+- [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of AI-generated code contains exploitable vulnerabilities
 - [TechCrunch: YC startups applying with AI-generated codebases](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/)
 - [GitHub survey: 92% of developers use AI coding tools](https://github.blog/news-insights/research/survey-ai-wave-grows/)
-- [OWASP Code Review Guide](https://owasp.org/www-project-code-review-guide/) — what a real security review looks like
+- [OWASP Code Review Guide](https://owasp.org/www-project-code-review-guide/) - what a real security review looks like
