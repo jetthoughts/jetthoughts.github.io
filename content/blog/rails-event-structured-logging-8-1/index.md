@@ -42,7 +42,7 @@ TIMING_PATTERN = /Completed \d+ \w+ in (\d+)ms/
 
 The regex itself is fine. The problem is that Rails log output was never meant for machines to parse - nobody promised the format would stay stable. It changed between Rails 6 and 7. It changed again when Propshaft replaced Sprockets because asset pipeline events emit differently, and it changes whenever you add Lograge. Every one of those formatting-layer shifts silently invalidates every downstream parser that depends on it.
 
-We opened one client's codebase last year and found seven places where strings were being parsed from Rails log output: a Datadog forwarder, a custom latency tracker in ApplicationController, a Sidekiq middleware that counted slow DB queries, and four separate rake tasks that chewed through log files for weekly reports. None of them agreed on what "slow" meant. Two were broken and the team didn't know.
+We opened a client's codebase earlier this year and found seven places where strings were being parsed from Rails log output: a Datadog forwarder, a custom latency tracker in ApplicationController, a Sidekiq middleware that counted slow DB queries, and four separate rake tasks that chewed through log files for weekly reports. None of them agreed on what "slow" meant. Two were broken and the team didn't know.
 
 The root issue is that log strings are a serialization format nobody specified. Rails 8.1's answer is to give you the data before it gets serialized - and the API to do it has been waiting in plain sight.
 
