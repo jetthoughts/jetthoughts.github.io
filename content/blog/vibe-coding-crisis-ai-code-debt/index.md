@@ -1,6 +1,6 @@
 ---
 title: "Vibe Coding Crisis: Why AI Code Breaks"
-description: "Your dev shop used AI to ship fast. The first real users broke it. Why vibe-coded apps fail - and how to spot the damage before it spreads."
+description: "45% of AI-generated code has known security vulnerabilities. How to detect vibe-coded apps and what to do about the damage before it spreads."
 date: 2026-04-19T08:00:00+02:00
 draft: false
 author: "JetThoughts Team"
@@ -25,9 +25,9 @@ Last month a founder showed us the app he'd paid $40K to build. His dev shop had
 
 [Andrej Karpathy coined the term](https://x.com/karpathy/status/1886192184808149383) in February 2025. He described a way of writing software where you tell an AI what you want in plain English, it writes the code, and you accept it if it "vibes." If it looks right and runs without crashing, you ship it.
 
-Karpathy was talking about throwaway scripts and weekend projects. He meant it as a personal experiment.
+Karpathy was talking about throwaway scripts and weekend projects - a personal experiment, not a production strategy.
 
-Agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. [A quarter of Y Combinator's W25 batch](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/) submitted codebases that were 95%+ AI-generated. That's not a handful of experimenters. That's the most selective startup accelerator on earth.
+Then agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. [A quarter of Y Combinator's W25 batch](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/) submitted codebases that were 95%+ AI-generated. That's not a handful of experimenters. That's the most selective startup accelerator on earth.
 
 ## The numbers keep getting worse
 
@@ -43,23 +43,23 @@ Your founder friend who "knows a bit about code" won't catch it. Your investor's
 
 AI-generated code has clear variable names and reasonably sized functions. Sometimes it even has comments. The AI trained on millions of open-source repositories, so it learned exactly how clean code is supposed to look. It writes code the way a student writes an essay with a thesaurus. Every word sounds right, but the argument has no spine.
 
-What nobody sees in a quick scroll is what's missing. The AI wasn't told to write tests, so it didn't. Every function assumes perfect input. Nobody asked what happens when a user enters an emoji in the phone number field, or a null where a string should be.
+What nobody sees in a quick scroll is what's missing. The AI wasn't told to write tests, so it didn't. Every function assumes perfect input - nobody asked what happens when a user enters an emoji in the phone number field, or a null where a string should be.
 
-When something fails (and it will), the app crashes. Or worse, it silently corrupts data and keeps running. The AI also doesn't refactor. It generates fresh code for each prompt, so you end up with 14 slightly different implementations of the same function scattered across the codebase.
+When something fails (and it will), the app crashes. Or worse, it silently corrupts data and keeps running while you have no idea. The AI also doesn't refactor. It generates fresh code for each prompt, which means you end up with 14 slightly different implementations of the same function scattered across the codebase, each with its own quirks.
 
 ## How vibe code kills your app
 
 ### Security holes nobody checked
 
-A founder came to us after a penetration tester flagged 23 critical vulnerabilities in his app. His team had been running it in production for four months. They'd hashed user passwords, which was good. But nobody had added authentication to the API endpoints. The AI had built a login screen and left every other door wide open. A basic penetration test found that any logged-in user could read, edit, or delete another user's account.
+A founder came to us after a penetration tester flagged 23 critical vulnerabilities in his app - an app that had been running in production for four months. The team had hashed user passwords, which was good. But nobody had added authentication to the API endpoints. The AI built a login screen and left every other door wide open, so any logged-in user could read, edit, or delete another user's account by changing a number in the URL.
 
 ### Silent data corruption
 
-A fintech founder couldn't figure out why some customers were complaining about wrong transaction amounts. His dev team hadn't noticed because the errors were tiny, fractions of a cent. The AI-generated code stored dollar amounts in a format that introduces tiny rounding errors on every calculation. Four months of financial records were subtly wrong. The founder found out when a user filed a complaint with their bank.
+A fintech founder couldn't figure out why customers were complaining about wrong transaction amounts. His dev team hadn't noticed because the errors were tiny - fractions of a cent. The AI-generated code stored dollar amounts in a format that introduces rounding errors on every calculation, and after four months those fractions added up across thousands of transactions. The founder found out when a user filed a complaint with their bank.
 
 ### "Works on my machine" fragility
 
-The app ran fine when one developer tested it on one browser with a small dataset. Then 500 real users showed up. Someone connected from a slow 3G network in rural Texas. A database query that used to return 10 rows started returning 10,000. Everything fell apart because nobody had run a load test, and nobody had set up monitoring. The AI wrote what the developer asked it to write, which was a demo.
+The app ran fine when one developer tested it on one browser with a small dataset. Then 500 real users showed up, and someone connected from a slow 3G network in rural Texas. A database query that used to return 10 rows started returning 10,000 - and everything fell apart. Nobody had run a load test. Nobody had set up monitoring. The AI wrote exactly what the developer asked it to write, which was a demo.
 
 ## How to spot vibe code in your codebase
 
@@ -81,17 +81,17 @@ A quick way to test resilience: break a form in your app. Enter garbage into fie
 
 One question worth asking your team: "If the app goes down at 3am, how do we find out?" If the answer is "a user emails us," nobody set up monitoring. AI-generated code doesn't add alerting because the developer never prompted it to.
 
-## What actually fixes this
+## The practices that prevent this
 
-None of this requires new technology. The practices that prevent vibe coding disasters have been around for twenty years. They're just unfashionable when everyone wants to ship in a weekend.
+The practices that prevent vibe coding disasters have been around for twenty years. They're just unfashionable when everyone wants to ship in a weekend - which is exactly why the shops that follow them stand out.
 
 You write the test before the code, then you make the test pass. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work. The AI can help write the implementation, but a human writes the test that defines what "working" means.
 
-Nobody ships code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" When two developers [work together on the same problem](/blog/async-remote-xp-practices/), they catch errors the moment those errors are introduced, not days later.
+Nobody ships code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" Two developers [working together on the same problem](/blog/async-remote-xp-practices/) catch errors the moment they're introduced, not days later when the context is gone.
 
-Your team sends you a [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) that shows what shipped and whether the test coverage number went up or down. If features are going up and coverage is going down, someone is cutting corners.
+Your team sends you a [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) that shows what shipped and whether the test coverage number went up or down. Watch the ratio - if features climb while coverage drops, someone is cutting corners.
 
-And you ship small features often. Not a 3-week sprint that ends in a big reveal. That big reveal is where vibe-coded apps look impressive, because nobody has tested them with real users yet. [Technical debt compounds fast](/blog/fixing-slow-engineering-teams-an-extended/) when teams ship large batches without getting feedback.
+And you ship small features often, not a 3-week sprint that ends in a big reveal. That big reveal is where vibe-coded apps look impressive, because nobody has tested them with real users yet. [Technical debt compounds fast](/blog/fixing-slow-engineering-teams-an-extended/) when teams ship large batches without getting feedback.
 
 ## Vibe coding has a place
 

@@ -23,15 +23,15 @@ If your dev shop is shipping fast and you haven't thought about technical debt y
 
 ## The 25-Month Autopsy
 
-The auditor ([Meir Avimelec Davidov](https://news.ycombinator.com/item?id=45561172) of Gliltech Software) published his findings in a Hacker News thread. He'd rebuilt systems after these failures. Here's the timeline every founder should memorize:
+The auditor ([Meir Avimelec Davidov](https://news.ycombinator.com/item?id=45561172) of Gliltech Software) published his findings in a Hacker News thread. He'd rebuilt systems after these failures. Here's the timeline he found:
 
-In the first six months, everything works. Your MVP shipped on time, the demo impressed your investors, and users started signing up. The code looks clean because your team is only touching what matters. Bug reports are rare and your dev shop looks solid. You're thinking about Series A.
+In the first six months, everything works. Your MVP shipped on time, the demo impressed your investors, and users started signing up. The code looks clean because your team is only touching what matters - bug reports are rare, your dev shop looks solid. You're thinking about Series A.
 
 Between months seven and twelve, small bugs appear. A dropdown that doesn't quite work, a confirmation email that's occasionally late. Your dev shop says "we'll circle back when we have a sprint." You believe them because you also have features to ship. The velocity slows a little, but not visibly. You add another developer.
 
 Months thirteen through eighteen is where it gets ugly. Adding a simple button causes a crash three pages deep. Your team doesn't understand why. The codebase has no tests, so they can't predict what breaks. Every new feature requires hours of manual regression testing. Estimates go from "3 days" to "we're not sure." You start hearing about "technical debt." A customer loses data. Not permanently - you recover the backup - but you discover there's no error handling in the payment flow. No one knows when that code was written or why.
 
-By months nineteen through twenty-five, you're hiring to maintain, not to build. You add two more developers. Velocity doesn't increase. The new hires spend their first month learning the "why" behind undocumented decisions. A senior engineer quits because "the code's a mess." You're shipping the same number of features with four developers as you were with two. Your burn rate hasn't changed. Your feature delivery has collapsed.
+By months nineteen through twenty-five, you're hiring to maintain, not to build. You add two more developers, but velocity doesn't increase - the new hires spend their first month learning the "why" behind undocumented decisions. A senior engineer quits because "the code's a mess." You're shipping the same number of features with four developers as you were with two. Your burn rate hasn't changed. Your feature delivery has collapsed.
 
 Month twenty-five: either pay $200K-$400K to rewrite from scratch (and hope the new team doesn't repeat the pattern), or shut down.
 
@@ -67,9 +67,9 @@ The accelerated timeline compresses 25 months into about seven: a vibe-coded app
 
 You don't need to wait 25 months to know. These five things appear in order, every time. [We've documented the full checklist](/blog/dev-shop-red-flags-checklist/) if you want a deeper assessment.
 
-The first thing you'll notice is the phrase "we'll fix it later" showing up in standups. Your dev shop misses a deadline - not by much, maybe a week. They say they'll catch up next sprint. You believe them because the MVP shipped on time. This is month six behavior. If you hear it more than once in a month, you've entered the acceleration phase.
+It starts with the phrase "we'll fix it later" showing up in standups. Your dev shop misses a deadline - not by much, maybe a week - and they say they'll catch up next sprint. You believe them because the MVP shipped on time. This is month six behavior. Hear it more than once in a month, and you've entered the acceleration phase.
 
-Then small changes start taking unexpectedly long. Someone asks for a button color change that normally takes an hour, and now it takes three. The developer who built that button has left, or they don't remember why they wrote it that way. The code has no comments. This is month nine - technical debt visible at the task level.
+Then small changes start taking unexpectedly long. A button color change that should take an hour now takes three. The developer who built it has left, or they don't remember why they wrote it that way, and the code has no comments. This is month nine - technical debt you can see at the task level.
 
 By month twelve, new features break unrelated things. You request a reporting feature. It ships. Then three customer complaints arrive about a bug in the checkout flow. The new code touched a shared function used in 12 places. Nobody had written tests to catch the side effect.
 
@@ -83,9 +83,9 @@ Two of these signals means you're on the timeline. Four means you have at most s
 
 We've taken over projects from failed dev shops. The pattern matches the Inc.com audit every time.
 
-Test coverage is the first thing we check. It's always 0-5%. We once inherited a project where the founder had spent $400K and the coverage sat at 1%. The code worked because he manually tested every release himself. The moment he wanted to ship weekly, the system broke because there were no guardrails. He's suing the dev shop now.
+Test coverage is the first thing we check, and it's always 0-5%. One project stands out: the founder had spent $400K and coverage sat at 1%. The code worked only because he manually tested every release himself - clicking through every screen, every flow. The moment he wanted to ship weekly, everything broke. He's suing the dev shop now.
 
-The architecture - if you can call it that - is always a mess. The last team we inherited from named files after features instead of logical groupings. Their developers ran database updates by hand. When something broke, the code printed the error to a log nobody checked and hoped the user would refresh the page. Every developer on the project coded in a different style, so every code review was a surprise.
+The architecture - if you can call it that - is always a mess. The last team we inherited from named files after features instead of logical groupings, ran database updates by hand, and when something broke the code printed the error to a log nobody checked. Their hope was that the user would refresh the page. Every developer on the project coded in a different style, so every code review was a surprise.
 
 Commit history tells its own story. Old projects have one commit per week labeled "Final deliverable." AI-generated projects have 47 commits in 30 minutes, all with auto-generated messages. Neither approach tells you anything about why a decision was made. We once found 180 rows in a database with impossible data - a user_id that didn't exist, created by code that shouldn't exist either. The code had been deleted three months earlier. The data remained forever.
 

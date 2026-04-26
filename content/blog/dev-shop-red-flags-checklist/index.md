@@ -1,5 +1,5 @@
 ---
-title: "Red Flags You Hired the Wrong Dev Shop"
+title: "8 Red Flags You Hired the Wrong Dev Shop"
 description: "The worst dev shops don't miss deadlines - they miss them quietly. Eight warning signs your agency is hiding bad code, and what to do about it."
 date: 2026-04-23
 draft: false
@@ -45,13 +45,13 @@ Good teams send [plain-English async standups](/blog/how-make-small-valuable-asy
 
 The project was $30K, then $45K, and now they're hinting at $60K while the feature list got shorter.
 
-Here's what's actually happening: they either quoted too low to win the deal, or they're drowning in [technical debt](/blog/fixing-slow-engineering-teams-an-extended/) - rework caused by code that was badly written the first time. [LitsLink reports](https://litslink.com/blog/cost-of-outsourcing-software-development) that developers spend 42% of their time on technical debt and maintenance. Nearly half their hours go to fixing old mistakes, not building new features.
+Two explanations, and neither is good: they either quoted too low to win the deal, or they're drowning in [technical debt](/blog/fixing-slow-engineering-teams-an-extended/) - rework caused by code that was badly written the first time. [LitsLink reports](https://litslink.com/blog/cost-of-outsourcing-software-development) that developers spend 42% of their time on technical debt and maintenance. Nearly half their hours go to fixing old mistakes, not building new features.
 
-Budget creep usually means the team didn't plan or test properly, and now they don't want to tell you the real number.
+Budget creep usually means the team didn't plan or test properly. And now they don't want to tell you the real number, so they drip it out $15K at a time.
 
 ## 4. No Automated Tests
 
-Automated tests are the single thing that separates codebases that survive from ones that don't.
+If your agency skips one thing, this is the one that kills you.
 
 They're tiny programs that check whether your software works correctly. Every time a developer changes something, these tests run automatically and report back: "yes, everything still works" or "no, you just broke checkout." Without them, nobody knows what's broken until a real user finds it - maybe your biggest customer, maybe on launch day.
 
@@ -81,7 +81,7 @@ Every technical decision costs you money or saves it. Ask which. "We're splittin
 
 Ask: "If your lead developer quit tomorrow, what happens?"
 
-If the answer involves panic, you have a bus factor (industry term for "what happens if someone gets hit by a bus") of one. One person holds the passwords, understands the architecture, and knows why that weird workaround exists, while everyone else guesses.
+If the answer involves panic, you have a bus factor of one. (Industry term for "what happens if someone gets hit by a bus.") One person holds the passwords, understands the architecture, and knows why that weird workaround exists - everyone else guesses.
 
 Good teams practice [structured onboarding](/blog/how-does-onboarding-look-like-in-jetthoughts-productivity-startup/) and pair programming so knowledge spreads across at least two or three people. Their developers document decisions where you can find them, and someone who didn't write the code [reviews every change](/blog/ai-powered-code-reviews-transforming-development-workflows/). If one person leaves, the project slows down but it doesn't stop.
 
@@ -105,7 +105,7 @@ What infrastructure issues? When did someone flag them? Why didn't anyone mentio
 
 Good teams track hours per task and share them weekly so you know exactly where money goes and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that 70% of executives had pulled outsourced work back in-house - budget unpredictability was a top driver.
 
-Invoice surprises are a symptom of poor communication. If the bill shocks you, someone kept you in the dark.
+Invoice surprises are a symptom, not the disease. The disease is that someone decided you didn't need to know.
 
 ---
 
@@ -113,7 +113,7 @@ If three or more of these sound familiar, we do a free 45-minute code audit. One
 
 ---
 
-## The Green Flags: What Good Looks Like
+## Green Flags Worth Checking
 
 Not every agency is bad. The good ones give you repo access from day one and show working software every week or two. Their developers [write tests before code](/blog/why-how-use-tdd-main-tips-testing/) as a default, and they document decisions where you can find them.
 
@@ -134,7 +134,7 @@ Count your red flags. Be honest.
 
 Don't panic, and don't send an angry email at midnight. Here's the sequence.
 
-The first thing you do - tonight, not tomorrow - is verify you have access to your code repository, hosting accounts, domain registrar, and all third-party services. If anything is under their email instead of yours, start transferring it.
+Tonight - not tomorrow - verify you have access to your code repository, hosting accounts, domain registrar, and all third-party services. If anything is under their email instead of yours, start transferring it now.
 
 This week, get a second opinion. Hire a freelance senior developer or [fractional CTO](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/) for 4 hours and have them look at the code. They'll tell you - in plain English - what shape it's in. This costs $500-$2,000 and might be the most important money you spend this year.
 

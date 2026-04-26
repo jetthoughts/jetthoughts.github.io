@@ -25,7 +25,7 @@ Here's what I've learned: by the time you're Googling this, you already know the
 
 [Deloitte surveyed 500+ executives](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) about their outsourcing relationships in 2024. Seventy percent had pulled work back in-house over the last five years. Seven out of ten. That's not a few unlucky founders - that's the industry.
 
-This guide covers the exit - what to secure tonight, what your contract probably doesn't protect, and how to not make the same mistake twice.
+So this guide covers the exit - what to secure tonight, what your contract probably doesn't protect, and how to avoid repeating it with the next team.
 
 ## How Many of These Sound Familiar?
 
@@ -35,7 +35,7 @@ They've missed three deadlines, and every time it's "unexpected complexity." Fin
 
 You can't see the code. Not that you can't read it - you literally don't have a login to wherever it lives. We've taken over projects where the founder didn't know what Git was, and that's totally fine. But your code should live in an account you own. If it doesn't, you don't own a product - you own a promise.
 
-Every small change breaks something else. You ask them to change a button color and the next day the checkout page is down. That's code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is scared to touch anything because they genuinely don't know what will break. Healthy codebases have 70%+ test coverage. If yours has 5%, every deploy is a coin flip.
+Every small change breaks something else. You ask them to change a button color and the next day the checkout page is down. That's code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is scared to touch anything because they genuinely don't know what will break. A codebase with 70%+ test coverage can handle changes safely. If yours has 5%, your team is guessing every time they deploy.
 
 They refuse to clean up old code. "We can't refactor that - it's too risky." Translation: the code has no tests, so changing anything might break everything. [Technical debt compounds](/blog/fixing-slow-engineering-teams-an-extended/) like interest on a credit card, and eventually you're paying the whole invoice just to service the debt instead of building features.
 
@@ -85,11 +85,11 @@ Yeah. And it probably doesn't protect you.
 
 Every contract we've seen from a failed engagement is missing the same three things. Yours probably is too.
 
-The first gap is code ownership after each milestone. Your contract says you own everything "upon project completion," which sounds reasonable until you realize "completion" is whatever they say it is. You need ownership after each paid milestone - three months of payments means three months of code.
+**Code ownership after each milestone.** Your contract says you own everything "upon project completion," which sounds reasonable until you realize "completion" is whatever they say it is. You need ownership after each paid milestone - three months of payments means three months of code.
 
-The second is a termination clause that actually works. Something like "if the provider misses two consecutive milestones, the client may terminate with 7 days notice." Without that, firing them becomes a negotiation with someone who has zero incentive to let you leave.
+**A termination clause that actually works.** Something like "if the provider misses two consecutive milestones, the client may terminate with 7 days notice." Without that, firing them becomes a negotiation with someone who has zero incentive to let you leave.
 
-The third is real-time code access from day one. Not "access upon request," not a ZIP file next month - read-only access to the repo, always on. If they push back on this, really sit with that. What are they protecting?
+**Real-time code access from day one.** Not "access upon request," not a ZIP file next month - read-only access to the repo, always on. If they push back on this, really sit with that for a second. What are they protecting?
 
 Need templates? [Clerky](https://www.clerky.com) has startup-focused IP assignment and consulting agreements for $819 lifetime. Cheaper than one hour of a lawyer's time. Won't cover everything, but it covers the basics that most agency contracts miss entirely.
 
@@ -99,13 +99,13 @@ You can't read code, and that's fine - here's what to do.
 
 Hire a senior dev for four hours. Freelancer, fractional CTO, your next agency - anyone competent. Have them check four things.
 
-Test coverage first. Below 20% and the code can't be safely modified. Below 5% and it was probably [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) with no human review.
+Test coverage first. Below 20% and the code can't be safely modified - below 5% and it was probably [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) with no human review.
 
-Then security - a basic vulnerability scan takes 30 minutes and will tell you if your users' data is exposed.
+Security next - a basic vulnerability scan takes 30 minutes and will tell you if your users' data is exposed right now.
 
-The deployment question matters too: can they push a change in under 10 minutes? If it's a multi-hour manual process, every future update is expensive and risky.
+Ask the deployment question too: can they push a change in under 10 minutes? A multi-hour manual process means every future update is expensive and risky, because someone has to babysit every release.
 
-Finally, look at structure. Is the code organized into logical pieces, or is everything crammed into one giant file?
+Then look at structure. Is the code organized into logical pieces, or is everything crammed into one giant file?
 
 This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild from scratch.
 
@@ -121,7 +121,7 @@ And one thing that costs nothing: make sure your repository lives in a [GitHub O
 
 ## The 2026 Problem: Vibe Coding
 
-This part is new, and it's ugly.
+This part didn't exist two years ago.
 
 Last quarter a founder came to us after six months with what they later learned was a "vibe coding" shop. The agency had used AI to generate about 90% of the codebase, and the MVP shipped on time. The founder was ecstatic - the app loaded, the demo looked polished.
 
@@ -133,19 +133,19 @@ It wasn't an edge case. It was Tuesday.
 
 We opened the codebase and found 2% test coverage, zero error handling, and 14 critical security vulnerabilities. We had to rewrite the entire thing.
 
-This pattern is everywhere now. AI-generated code *looks* professional - good variable names, consistent formatting, reads well. Under the hood: no tests, no error handling, [security holes that only show up when real people use the product](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI code produces 1.7x more issues than human-written code. And that's when someone reviews it. When nobody does? It's a time bomb.
+We're seeing this in about half the rescue projects that come through our door now. AI-generated code *looks* professional - good variable names, consistent formatting, reads well. But under the hood you find no tests, no error handling, and [security holes that only show up when real people use the product](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI code produces 1.7x more issues than human-written code. And that's when someone reviews it. When nobody does? It's a time bomb.
 
-The teams that survive [write tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [review every pull request](/blog/ai-powered-code-reviews-transforming-development-workflows/). The ones that flame out paste AI output and ship without checking.
+We've watched this enough times to see the split. The shops that last [write tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and have a second person [review every change](/blog/ai-powered-code-reviews-transforming-development-workflows/) before it goes live. The shops that burn out paste AI output and ship without anyone checking whether it actually works.
 
 ## What to Actually Look For in the Next One
 
-Ignore the website and the Clutch profile. Here's what actually matters.
+Ignore the website and the Clutch profile. Here's what actually separates the shops that last from the ones that burn you.
 
-Start by requesting a real weekly report from an actual project, anonymized. A team worth hiring sends a one-page Friday email covering what shipped, what hit a wall, and what's next. We wrote about [what that looks like](/blog/how-make-small-valuable-async-standups-productivity-development/) - that's the bar.
+Before you sign anything, request a real weekly report from an actual project, anonymized. A team worth hiring sends a one-page Friday email covering what shipped, what hit a wall, and what's next. We wrote about [what that looks like](/blog/how-make-small-valuable-async-standups-productivity-development/) - that's the bar.
 
-Find out who owns the code. "You do" is the only acceptable answer, and it should be backed by a contract clause.
+Find out who owns the code. "You do" is the only acceptable answer, backed by a contract clause that transfers ownership at each paid milestone.
 
-The testing question matters most. If they can't give you a coverage number and a methodology, they don't have one. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) - writing tests before code - is the difference between shops that ship safely and shops that ship and pray. Especially now that so much code is AI-generated.
+Now the question that matters most. If they can't give you a coverage number and a methodology, they don't have one. [TDD](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) - writing tests before code - is the difference between shops that ship safely and shops that ship and pray. Especially now that so much code is AI-generated.
 
 Then dig into how deploys work. Good teams [deploy daily](/blog/async-remote-xp-practices/) without drama. Bad teams deploy monthly and everyone holds their breath. If deploys are scary, the code is fragile.
 
@@ -153,13 +153,13 @@ Request a reference from a founder they've rescued - not their happiest client, 
 
 The first week tells you everything about the next six months. Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Set up a project board? Explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)?
 
-## The Uncomfortable Truth
+## You're Going to Pay Twice
 
-Firing a dev shop feels like failure, but staying with a bad one is the actual mistake.
+Firing a dev shop feels like failure, but staying with a bad one costs more.
 
-Here's what nobody tells you: you're going to pay twice for the same product. Once for the bad code, once to fix it. That's the tax. The question is just how big the second bill is. And that depends entirely on who you hire next and what they find when they open the hood.
+You're going to pay twice for the same product. Once for the bad code, once to fix it. That's the tax. The size of the second bill depends on who you hire next and what they find when they open the hood.
 
-Get the code, get it audited, and hire someone who writes tests first and explains everything in language you actually understand. You already know what bad looks like - you just lived through it. Trust that.
+Get the code, get it audited, and hire someone who writes tests first and explains things in language you understand. You lived through the bad version - that experience is worth something when you're picking the next team.
 
 ---
 
