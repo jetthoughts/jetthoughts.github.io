@@ -61,7 +61,7 @@ Month one of a vibe-coded app is actually month seven of a traditionally-built o
 
 The accelerated timeline compresses 25 months into about seven: a vibe-coded app hits the "new features break old ones" phase by month four, and the "rewrite or die" decision by month seven.
 
-[Veracode's 2025 GenAI Code Security Report tested over 100 LLMs across Java, Python, C#, and JavaScript.](https://www.veracode.com/blog/genai-code-security-report/) 45% of code samples failed security tests. For Java, the failure rate hit 72%. These weren't edge cases - they were the ten most common security flaws that hackers exploit first. This is production-ready according to many vibe coding shops. This is also the reason month four feels like month eighteen.
+[Veracode's 2025 GenAI Code Security Report tested over 100 LLMs across Java, Python, C#, and JavaScript.](https://www.veracode.com/blog/genai-code-security-report/) 45% of code samples failed security tests. For Java, the failure rate hit 72%. These weren't edge cases - they were the ten most common security flaws that hackers exploit first. Many vibe coding shops call this production-ready. And that's why their month four feels like month eighteen.
 
 ## Five Signals You're on the Timeline
 
@@ -93,7 +93,7 @@ There's one more pattern we see in almost every rescue: the current dev shop bla
 
 And then there's the on-call burden. Production breaks at midnight. There's no monitoring because monitoring wasn't "part of the MVP." When something breaks, the entire dev shop scrambles because only one person understands that section of code. After six months, that person quits.
 
-Every project we've rescued was in the 19-25 month window. The conversation always starts the same way. The founder asks if we can fix it. We say yes. They ask how much - $150K to $400K depending on scope, three to six months of disciplined work. Then the hard question: why did this happen? The answer is always the same. Nobody enforced testing and code review from day one. Architecture decisions were made by whoever happened to be coding that afternoon.
+Every project we've rescued was in the 19-25 month window, and the conversation always starts the same way. The founder asks if we can fix it. We say yes. They ask how much - $150K to $400K depending on scope, three to six months of disciplined work. Then comes the hard question: why did this happen? The answer is always the same. Nobody enforced testing and code review from day one, and architecture decisions were made by whoever happened to be coding that afternoon.
 
 The painful part: the cost to fix a codebase is roughly what it would have cost to build it right in the first place.
 
@@ -101,7 +101,7 @@ The painful part: the cost to fix a codebase is roughly what it would have cost 
 
 The timeline isn't inevitable. We've seen teams stop at month six and rebuild the right way. Month nine is harder but possible. Month eighteen? You're basically rewriting.
 
-The honest trade-off: enforcing tests and code review from day one slows your first three sprints by 20-30%. If you haven't found product-market fit yet, that cost is real. But every founder we've worked with who skipped discipline to ship faster ended up paying 10x more to fix the result. Here's where intervention works:
+The honest trade-off: enforcing tests and code review from day one slows your first three sprints by 20-30%. If you haven't found product-market fit yet, that cost is real - and we won't pretend otherwise. But every founder we've worked with who skipped discipline to ship faster ended up paying 10x more to fix the result. Here's where intervention works:
 
 ### Month 6: the go/no-go decision
 
