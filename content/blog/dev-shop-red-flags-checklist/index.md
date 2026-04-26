@@ -109,6 +109,8 @@ Invoice surprises are a symptom, not the disease. The disease is that someone de
 
 ---
 
+We've cleaned up after 40+ failed dev shop engagements over seventeen years. In 91% of them, test coverage was under 5%. The average founder had already spent $80K-$200K before calling.
+
 If three or more of these sound familiar, we do a free 45-minute code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract, and no follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
 
 ---

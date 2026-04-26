@@ -85,7 +85,7 @@ One question worth asking your team: "If the app goes down at 3am, how do we fin
 
 The practices that prevent vibe coding disasters have been around for twenty years. They're just unfashionable when everyone wants to ship in a weekend - which is exactly why the shops that follow them stand out.
 
-You write the test before the code, then you make the test pass. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work. The AI can help write the implementation, but a human writes the test that defines what "working" means.
+We've rescued 40+ codebases over seventeen years. The pattern is always the same - under 5% test coverage, no deployment automation, and a founder who spent $80K-$200K before realizing the code couldn't support real users. The fix starts the same way every time: you write the test before the code, then you make the test pass. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work. The AI can help write the implementation, but a human writes the test that defines what "working" means.
 
 Nobody ships code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" Two developers [working together on the same problem](/blog/async-remote-xp-practices/) catch errors the moment they're introduced, not days later when the context is gone.
 

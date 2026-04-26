@@ -81,7 +81,7 @@ Two of these signals means you're on the timeline. Four means you have at most s
 
 ## What We See in Rescue Engagements
 
-We've taken over projects from failed dev shops. The pattern matches the Inc.com audit every time.
+We've taken over projects from failed dev shops. The pattern matches the Inc.com audit every time. Across 40+ rescue engagements over seventeen years, 91% had under 5% test coverage, 73% had no deployment automation, and the average founder had spent $80K-$200K before they picked up the phone.
 
 Test coverage is the first thing we check, and it's always 0-5%. One project stands out: the founder had spent $400K and coverage sat at 1%. The code worked only because he manually tested every release himself - clicking through every screen, every flow. The moment he wanted to ship weekly, everything broke. He's suing the dev shop now.
 
