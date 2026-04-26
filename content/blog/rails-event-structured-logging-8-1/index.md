@@ -2,8 +2,8 @@
 title: "Rails 8.1: Stop Parsing Logs, Subscribe to Events"
 description: "Rails 8.1 replaces log parsing with structured events. Wire subscribable notifications to Datadog, New Relic, or Prometheus in minutes."
 date: 2026-04-26
-draft: true
-author: "JetThoughts"
+draft: false
+author: "JetThoughts Team"
 slug: "rails-event-structured-logging-8-1"
 keywords: "rails structured logging, rails 8.1 events, rails observability, activesupport notifications"
 tags: ["rails", "ruby", "rails-8", "observability", "logging"]
