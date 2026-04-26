@@ -256,3 +256,75 @@ input[type=submit]:disabled {
   line-height: 1.15;
 }
 
+/* Typography UX improvements - 2026-04-26 */
+
+/* Author byline */
+.blog .post-meta-byline {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 8px 0 24px;
+}
+
+/* Paragraph breathing room */
+.blog p, .blog li {
+  line-height: 1.75;
+  margin-bottom: 1.5em;
+}
+
+/* Heading spacing */
+.blog h2:not(.post-title) {
+  margin-top: 56px !important;
+  margin-bottom: 20px !important;
+}
+.blog h3:not(.post-title) {
+  margin-top: 44px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Always-visible link underlines */
+.blog p a, .blog li a, .blog td a {
+  text-decoration: underline;
+  text-decoration-color: rgba(26,140,255,0.4);
+  text-underline-offset: 3px;
+}
+.blog p a:hover, .blog li a:hover, .blog td a:hover {
+  text-decoration-color: rgba(26,140,255,1);
+}
+
+/* Brand-colored blockquotes */
+.blog blockquote {
+  border-left: 4px solid #cc342d;
+  box-shadow: none;
+  margin: 48px 0;
+  padding-left: 24px;
+}
+.blog blockquote p {
+  color: #4a4a4a;
+  font-style: italic;
+}
+
+/* Table improvements */
+.blog th, .blog td {
+  padding: 10px 16px;
+  font-size: 17px;
+}
+.blog th {
+  background: #f8f8fa;
+  font-weight: 600;
+  text-align: left;
+}
+.blog table {
+  margin: 32px 0;
+}
+
+/* Code block improvements */
+.blog pre {
+  padding: 24px 28px;
+  margin: 32px 0;
+  border-radius: 10px;
+}
+.blog pre code {
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
