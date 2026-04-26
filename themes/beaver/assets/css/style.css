@@ -258,6 +258,13 @@ input[type=submit]:disabled {
 
 /* Typography UX improvements - 2026-04-26 */
 
+/* Author byline */
+.blog .post-meta-byline {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 8px 0 24px;
+}
+
 /* Paragraph breathing room */
 .blog p, .blog li {
   line-height: 1.75;

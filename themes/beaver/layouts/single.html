@@ -46,42 +46,18 @@
         <header>
           <h1 class="fl-heading">{{ .Title }}</h1>
 
-          {{/* Cover image — rendered immediately under the <h1>, BEFORE
-               the tag strip and date, per UX research: the cover is a
-               visual confirmation signal for technical readers who have
-               already scanned the title. Placing it right under the H1
-               turns the next fixation into a "should I read this?"
-               confirmation rather than a skipped metadata block.
-
-               Strictly additive: renders only when a local cover.*
-               page resource exists. Aligns to the text column width
-               (43rem) — NOT full-bleed — so the cover and body
-               visually group as one reading unit.
-
-               Responsive srcset bypasses Hugo's resampleFilter = "box"
-               by serving the browser a 1920w variant and letting
-               Chrome's downscale do the high-quality resample. Box
-               shadow softens the edge against the light page background.
-
-               All styling is inline-scoped — zero changes to any of
-               the 9 pre-built CSS bundles. */}}
-          <div class="post-tags" style="margin-bottom: 0.5rem;">
-            {{ with .Params.tags }}
-              {{ range . }}
-                <a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a>
-              {{ end }}
+          {{/* Author byline + date - trust signal for non-technical readers */}}
+          <div class="post-meta-byline">
+            {{ with .Params.author }}
+              By {{ if or (eq . "JetThoughts") (eq . "JetThoughts Team") }}JetThoughts Team{{ else }}{{ . }}{{ end }}
+            {{ end }}
+            {{ if .Date }}
+              {{ with .Params.author }} - {{ end }}{{ dateFormat "January 2, 2006" .Date }}
+            {{ end }}
+            {{ with .ReadingTime }}
+              - {{ . }} min read
             {{ end }}
           </div>
-          {{ if .Params.created_at }}
-            <div
-              class="post-date"
-              style="color: rgba(33, 37, 41, 0.75);margin-bottom: 1rem;">
-              {{ dateFormat "Jan 2, 2006" .Params.created_at }}
-              {{ with .ReadingTime }}
-                <span style="margin-left: 0.75rem; padding-left: 0.75rem; border-left: 1px solid rgba(33,37,41,0.25);">{{ . }} min read</span>
-              {{ end }}
-            </div>
-          {{ end }}
 
           {{/* Cover image — placed AFTER tags+date so the opening hook
                paragraph is visible on mobile without scrolling.
@@ -134,6 +110,16 @@
           style="max-width: 43rem;">
           {{ .Content }}
         </div>
+
+        {{/* Tags rendered after content - founders see education first,
+             tags serve as navigation after reading */}}
+        {{ with .Params.tags }}
+          <div class="post-tags" style="margin-top: 2rem; margin-bottom: 1rem;">
+            {{ range . }}
+              <a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a>
+            {{ end }}
+          </div>
+        {{ end }}
       </article>
 
       <div class="single-content single-post-wrapper">
