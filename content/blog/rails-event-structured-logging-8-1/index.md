@@ -23,11 +23,11 @@ canonical_url: "https://jetthoughts.com/blog/rails-event-structured-logging-8-1/
 
 Your monitoring setup lies to you - and it does it quietly enough that nobody catches on for months.
 
-The alerts fire correctly for a full quarter. Then someone upgrades Rails and the log format shifts half a column. That regex your team wrote against `Completed 200 OK in 247ms` quietly breaks, alerts stop firing, and nobody notices until a user calls.
+A client's Datadog alerts worked for three months after we set them up. Their team upgraded to Rails 7.2 and the log output shifted - the regex they'd written against `Completed 200 OK in 247ms` stopped matching. Two months of silence before a customer called about a broken checkout flow.
 
-We've seen this on every codebase we've inherited. The ops team knew it was fragile; they'd added comments saying so. But ripping it out would have meant two days of work touching alerting configs, Datadog dashboards, and a custom Sidekiq middleware someone had bolted on, so they left it.
+The last three codebases we inherited all had this exact pattern. One ops engineer had even left a comment in the regex file: `# this will break if Rails changes log format - TODO fix`. But ripping it out would have meant two days of work touching alerting configs, Datadog dashboards, and a custom Sidekiq middleware a previous contractor had bolted on, so they left it.
 
-Rails 8.1 gives you a real escape hatch. The new [`ActiveSupport::Notifications` broadcast API](https://rubyonrails.org/2025/3/14/rails-8-1-beta1-released) and the `Rails.logger` structured payload changes let you subscribe to events - not parse text. This post shows you what changed, what the migration looks like, and where the tradeoffs land.
+Now Rails 8.1 gives you a real escape hatch. The new [`ActiveSupport::Notifications` broadcast API](https://rubyonrails.org/2025/3/14/rails-8-1-beta1-released) and the `Rails.logger` structured payload changes let you subscribe to events - not parse text. This post shows you what changed, what the migration looks like, and where the tradeoffs land.
 
 ## Why log parsing fails in production
 
@@ -40,7 +40,7 @@ The conventional approach looks reasonable at small scale:
 TIMING_PATTERN = /Completed \d+ \w+ in (\d+)ms/
 ```
 
-The problem is not the regex - it's that the input isn't a contract. Rails log output is formatted for human readers, not machine consumers, and nobody promised you the format would stay stable. It changed between Rails 6 and 7. It changed again when Propshaft replaced Sprockets because asset pipeline events emit differently, and it changes whenever you add Lograge. Every one of those formatting-layer shifts silently invalidates every downstream parser that depends on it.
+The regex itself is fine. The problem is that Rails log output was never meant for machines to parse - nobody promised the format would stay stable. It changed between Rails 6 and 7. It changed again when Propshaft replaced Sprockets because asset pipeline events emit differently, and it changes whenever you add Lograge. Every one of those formatting-layer shifts silently invalidates every downstream parser that depends on it.
 
 We opened one client's codebase last year and found seven places where strings were being parsed from Rails log output: a Datadog forwarder, a custom latency tracker in ApplicationController, a Sidekiq middleware that counted slow DB queries, and four separate rake tasks that chewed through log files for weekly reports. None of them agreed on what "slow" meant. Two were broken and the team didn't know.
 
@@ -211,7 +211,7 @@ We set this up on a client's app last quarter. Their Datadog log *search query* 
 
 Event subscriptions are not the right tool for every observability problem, and we have the scars to prove it.
 
-The subscription API has no built-in backpressure. If you subscribe to `sql.active_record` on an app that runs 10,000 queries per request, your subscriber fires 10,000 times per request, and the overhead adds up fast. In one case we saw a naive subscriber add 40ms to a high-traffic endpoint before we caught it in APM traces - so benchmark first and subscribe selectively.
+The subscription API has no built-in backpressure. If you subscribe to `sql.active_record` on an app that runs 10,000 queries per request, your subscriber fires 10,000 times per request, and the overhead adds up fast. On a client's e-commerce app last fall, a naive `sql.active_record` subscriber added 40ms to their checkout endpoint before we caught it in Datadog APM traces - so benchmark first and subscribe selectively.
 
 The event payload shapes, while much improved in 8.1, are still not guaranteed by a versioned schema - Rails can add keys without notice. Test your subscribers defensively by using `payload.fetch(:status, nil)` over `payload[:status]` when the key's absence would cause a crash.
 
@@ -243,7 +243,7 @@ The best starting point is the `ActiveSupport::Notifications` [Rails guide](http
 
 For Datadog users, the `dogstatsd-ruby` gem has an async client that handles UDP writes outside the request thread, which matters because the synchronous client is fine for scripts but wrong for request subscribers.
 
-One thing we've noticed in every migration: 30-40% of the parsing logic in inherited apps turns out to be dead code - subscriptions to events or patterns that haven't appeared in logs for months. The migration is a good time to clean that up rather than port it.
+One thing we found in three of the four migrations: 30-40% of the parsing logic was dead code - subscriptions to events or log patterns that hadn't appeared in production for months. The migration is a good time to clean that up rather than port it.
 
 If you're running [Rails 8 on Docker in production](/blog/rails-8-docker-deployment-production-guide/), there's a bonus: structured JSON logs route cleanly to container log drivers (Fluentd, Logstash, Datadog agent) without any additional configuration. The log driver picks up STDOUT, parses the JSON automatically, and indexes every field - meaning your entire team stops SSH-ing into containers to tail logs.
 
