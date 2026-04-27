@@ -12,14 +12,14 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5 Questions Before Hiring a Dev Shop"
-  og_description: "Most founders ask 'what's your rate?' last. Here's the 5 questions that predict disaster."
+  og_description: "Most founders ask 'what's your rate?' first - that's the wrong question. Here are the 5 questions that predict whether a dev shop will deliver or disappear."
 cover_image_alt: "Founder reviewing questions before hiring a development agency"
 canonical_url: "https://jetthoughts.com/blog/hiring-dev-shop-questions/"
 ---
 
 Most founders ask "what's your rate?" first. That's the last question you should ask, and the four that come before it predict more than price ever will.
 
-You've been burned before. Maybe the last shop ran over budget, missed deadlines, locked you into their code, or built something that couldn't scale past a hundred users. Now you're about to hire again, and you want to make a different mistake this time, not the same one.
+If you're reading this, the last engagement probably didn't go well. Now you're about to hire again, and you want to make a different mistake this time.
 
 ## Question 1: "Can I see a sample weekly report?"
 
@@ -53,7 +53,7 @@ Get the code ownership clause in writing before you sign anything binding. If yo
 
 Code ownership protects you on the back end, but accountability protects you while the project is still moving - and that's where most contracts go quiet. Most dev shops don't want to answer this question because they already know they'll miss deadlines, and they'd rather not put consequences in writing where you can hold them to it.
 
-A good answer is concrete: "We have milestone-based SLAs in the contract. If we miss a deadline by more than X days, you can terminate the engagement." A specific number, written down, and enforceable if it ever comes to that.
+A good answer is concrete: "We have milestone-based SLAs in the contract. If we miss a deadline by more than X days, you can terminate the engagement." A specific number that's enforceable if it ever comes to that.
 
 A bad answer sounds like "We rarely miss deadlines," or "It depends on scope changes," or "We'll communicate if it looks risky." Each one is a different way of dodging the same commitment.
 
@@ -118,7 +118,7 @@ But if you're committing $50K+ for core functionality the business depends on, e
 
 ## The Pattern That Kills Projects
 
-Across 40+ rescue engagements over seventeen years, the pattern is consistent: 91% of failed projects had under 5% test coverage, 73% had no Git ownership clause, and the average founder had spent $80K-$200K before they called. The founders who asked these five questions before signing avoided most of those problems - not because the questions are magic, but because the shops that can't answer them clearly self-select out before the contract is drawn up.
+Across 40+ rescue engagements over seventeen years, the pattern is consistent: 91% of failed projects had under 5% test coverage, 73% had no Git ownership clause, and the average founder had spent $80K-$200K before they called. The founders who asked these five questions before signing avoided most of those problems. The questions aren't magic. The shops that can't answer them clearly just self-select out before the contract is drawn up.
 
 The founders who asked "what's your rate?" first and skipped the rest? They hired a shop that looked good on the website and fell apart three months in, usually around the first real deadline. If this sounds like your situation, we have a [comprehensive guide for founders who've been burned](/blog/founders-guide-hiring-dev-shop/) by dev shops.
 
