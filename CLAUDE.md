@@ -110,9 +110,10 @@ the draft step. The minimum deliverable is:
 3. Round 1: 3 critic agents (founder persona, SEO/slop, editor) - apply fixes
 4. Round 2: 3 NEW personas (senior dev for tech accuracy, copywriter for rhythm, AI detector) - apply fixes
 5. Round 3: 3 MORE personas (DevOps/practitioner, conversion optimizer, tired target reader) - apply fixes
-6. Cover image: duplicate HTML template - render - Lanczos downsample (step 6)
-7. `bin/hugo-build` - must pass (step 7)
-8. Update content plan status (step 8)
+6. Cold-eyes final pass: read post against original brief with no persona. Check frontmatter consistency (description, og_description, og_title, body H1 must align). Re-scan voice guide banned patterns table. 1 minute, catches what 9 personas miss.
+7. Cover image: duplicate HTML template - render - Lanczos downsample (step 6)
+8. `bin/hugo-build` - must pass (step 7)
+9. Update content plan status (step 8)
 
 If any step fails, fix and retry before moving to the next step.
 If the post is a draft (draft: true), still run ALL steps — the post should be
