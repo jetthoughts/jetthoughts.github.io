@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1910828
 dev_to_id: 1910828
 dev_to_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1
-title: 'New in Rails 7.2: Active Model Got type_for_attribute'
-description: What's New?   Ruby on Rails 7.2 brings a handy change. The type_for_attribute method is now...
+title: 'type_for_attribute in Rails 7.2 Active Model: API Reference'
+description: Rails 7.2 added type_for_attribute to Active Model. See the method signature, return type, and a working example for both Active Record and Active Model.
 created_at: '2024-07-03T20:42:57Z'
 date: 2024-07-03
 edited_at: '2024-11-25T15:33:24Z'

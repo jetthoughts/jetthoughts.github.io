@@ -1,6 +1,6 @@
 ---
-title: "AutoGen vs CrewAI vs LangGraph: AI Framework Comparison 2025"
-description: "Choose the right AI agent framework: AutoGen vs CrewAI vs LangGraph. Compare production capabilities, deployment patterns, and performance. Save 40+ hours of research with our 2025 comparison guide."
+title: "LangGraph vs CrewAI vs AutoGen: Open Source Alternatives 2025"
+description: "Three open source agent frameworks compared: LangGraph state machines, CrewAI role-based crews, AutoGen conversations. License, deployment, and 2025 maturity."
 created_at: "2025-10-18T10:00:00Z"
 edited_at: "2025-10-18T10:00:00Z"
 draft: false

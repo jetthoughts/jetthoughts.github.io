@@ -1,6 +1,6 @@
 ---
-title: "CrewAI Multi-Agent Systems: Orchestrating Specialized AI Teams for Complex Tasks"
-description: "Build multi-agent AI systems with CrewAI: Orchestrate specialized AI teams for customer support, content creation, financial analysis. Production-ready tutorial ✓"
+title: "CrewAI Hierarchical Agents: Manager-Worker Orchestration"
+description: "Build hierarchical CrewAI crews with a manager agent delegating to specialized workers. Code examples for orchestration, task routing, and v0.98+ patterns."
 date: "2025-10-15"
 created_at: "2025-10-15T17:20:00Z"
 draft: false

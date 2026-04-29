@@ -1,6 +1,6 @@
 ---
-title: Optimize &amp; Empower Products At Any Stage
-description: Transform your technology with expert engineering leadership. Ruby on Rails development, CTO consulting, team scaling. 95% client success rate. Get quote.
+title: Ruby on Rails &amp; React Development Services | JetThoughts
+description: Ruby on Rails and React development services for funded startups. 8-12 week MVPs, fractional CTOs, 95% client retention. Test-driven, transparent reporting.
 
 headline: We optimize technology
 excerpt: From technical strategy and innovation to talent acquisition and software development, we help empower products and teams at any stage.

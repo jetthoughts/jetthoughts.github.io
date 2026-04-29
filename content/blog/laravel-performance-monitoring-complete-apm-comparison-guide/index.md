@@ -1,6 +1,6 @@
 ---
-title: "Laravel Performance Monitoring: Complete APM Comparison Guide"
-description: "Laravel APM tools compared: New Relic vs Datadog vs Scout vs Blackfire. Real benchmarks, pricing, and implementation guides. Fix N+1 queries, boost speed 90%+."
+title: "Laravel + Datadog APM: Setup, Cost, and 3 Alternatives"
+description: "Datadog APM for Laravel: instrumentation steps, monthly cost at scale, and how it compares with New Relic, Scout, and Blackfire on real benchmarks."
 date: 2025-10-27
 draft: false
 tags: ["laravel", "performance", "apm", "monitoring", "optimization"]
