@@ -110,7 +110,7 @@ the draft step. The minimum deliverable is:
 3. Round 1: 3 critic agents (founder persona, SEO/slop, editor) - apply fixes
 4. Round 2: 3 NEW personas (senior dev for tech accuracy, copywriter for rhythm, AI detector) - apply fixes
 5. Round 3: 3 MORE personas (DevOps/practitioner, conversion optimizer, tired target reader) - apply fixes
-6. Cold-eyes final pass: read post against original brief with no persona. Check frontmatter consistency (description, og_description, og_title, body H1 must align). Re-scan voice guide banned patterns table. 1 minute, catches what 9 personas miss.
+6. Cold-eyes final gate (Agent 4, MANDATORY — LLM-enforced, not manual): spawn one fresh-context agent with `mode: bypassPermissions` using the 9-check prompt verbatim from `docs/workflows/blog-pipeline.md` STEP 5c. Agent edits in place and must return PUBLISH-READY before step 7. Concrete bad/good rewrite pairs in the prompt force pattern-matching the 3-persona loop systematically misses (frontmatter contradictions, fluffy narration, fake authority stamps, timeline fabrication, "Not X but Y", em dashes, rule-of-three modifiers, cross-section template repetition).
 7. Cover image: duplicate HTML template - render - Lanczos downsample (step 6)
 8. `bin/hugo-build` - must pass (step 7)
 9. Update content plan status (step 8)

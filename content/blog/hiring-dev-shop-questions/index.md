@@ -2,7 +2,7 @@
 title: "5 Questions Before Hiring a Dev Shop"
 description: "Most founders ask 'what's your rate?' first. Here are the 5 questions that predict whether a dev shop will deliver - or disappear with your code."
 date: 2026-04-27
-draft: true
+draft: false
 author: "JetThoughts Team"
 slug: "hiring-dev-shop-questions"
 keywords: "questions before hiring dev agency, what to look for in a dev shop, hiring software development company"
