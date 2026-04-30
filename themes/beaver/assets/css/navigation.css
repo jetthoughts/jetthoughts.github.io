@@ -74,6 +74,56 @@ a.fl-button:hover,
   text-decoration: none !important;
 }
 
+/* Brand .action-button (Use Cases tab CTAs). Sprint #6 Issue 1's site-wide
+   link rule colored these text #0066d6 on top of a blue background, making
+   them illegible (blue-on-blue). Same Ruby red treatment as .btn-primary
+   and .fl-button so all CTAs read as one brand action. */
+a.action-button,
+a.action-button:visited {
+  background-color: #cc342d !important;
+  color: #fff !important;
+  padding: 14px 28px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  text-decoration: none !important;
+  border: none !important;
+  display: inline-block;
+  transition: background 0.15s ease;
+}
+a.action-button:hover {
+  background-color: #a8231e !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Beaver Builder post grid cards (Clients page, Use Cases) — make the
+   ENTIRE card clickable, not just the small logo image. Bootstrap
+   "stretched link" pattern: ::after on the logo's <a> spans the whole
+   card via absolute positioning. Card sets position: relative so the
+   ::after anchors to it; text inside is not given z-index so the
+   stretched click overlay wins. Individual interactive children (real
+   <a> links inside the text) need an explicit z-index to stay clickable. */
+.pp-content-grid-post,
+.pp-content-grid-post-data,
+.pp-grid-style-7 {
+  position: relative;
+}
+.pp-content-grid-post-image a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+/* Real <a> children inside the text region (if any) stay above the
+   stretched ::after via z-index. Text/category labels stay below so
+   the whole card click works. */
+.pp-content-grid-post-text a {
+  position: relative;
+  z-index: 2;
+}
+
 .top-panel {
   padding: 15px 20px 0;
   position: absolute;
