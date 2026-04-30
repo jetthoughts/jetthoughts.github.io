@@ -112,11 +112,15 @@
         </div>
 
         {{/* Tags rendered after content - founders see education first,
-             tags serve as navigation after reading */}}
+             tags serve as navigation after reading. Editorial taxonomy
+             style (ALL-CAPS labels) replaces hashtag style which signals
+             "dev blog" instead of "advisory content". */}}
         {{ with .Params.tags }}
           <div class="post-tags" style="margin-top: 2rem; margin-bottom: 1rem;">
-            {{ range . }}
-              <a href="/blog/tags/{{ . | urlize }}/">#{{ . }}</a>
+            <span class="post-tags-label">Filed under:</span>
+            {{ range $i, $t := . }}
+              {{ if $i }}<span class="post-tags-sep">,</span>{{ end }}
+              <a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>
             {{ end }}
           </div>
         {{ end }}

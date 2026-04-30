@@ -273,6 +273,39 @@ input[type=submit]:disabled {
   margin: 8px 0 28px;
 }
 
+/* Tags as editorial taxonomy - "FILED UNDER: STARTUP, HIRING, DEV-AGENCY"
+   instead of "#startup #hiring #dev-agency". Reads as advisory content,
+   not as a developer hashtag stream. */
+.blog .post-tags {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #5f6470;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+  margin-top: 48px !important;
+}
+
+.blog .post-tags-label {
+  margin-right: 6px;
+}
+
+.blog .post-tags a {
+  color: #5f6470;
+  text-decoration: none;
+  margin-right: 4px;
+}
+
+.blog .post-tags a:hover {
+  color: #cc342d;
+  text-decoration: none;
+}
+
+.blog .post-tags-sep {
+  margin-right: 4px;
+}
+
 /* Paragraph breathing room */
 .blog p, .blog li {
   line-height: 1.75;
