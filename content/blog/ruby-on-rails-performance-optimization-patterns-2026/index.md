@@ -77,11 +77,11 @@ The configuration is one line:
 RubyVM::YJIT.enable
 ```
 
-A caveat worth stating upfront: YJIT increases memory usage by 15-20% because it holds compiled code in memory. For this client, that meant going from 512MB to ~600MB per dyno. On their Performance-L instances with 14GB RAM, that was irrelevant. On a 512MB Basic dyno, it might force an upgrade. Know your memory ceiling before enabling it.
+A caveat worth stating upfront: YJIT increases memory usage by **15-20%** because it holds compiled code in memory. For this client, that meant going from **512MB** to **~600MB** per dyno. On their Performance-L instances with **14GB** RAM, that was irrelevant. On a **512MB** Basic dyno, it might force an upgrade. Know your memory ceiling before enabling it.
 
-ZJIT exists as an experimental alternative, but we've measured latency variance of up to ±27% under load compared to YJIT's ±3%. For production Rails apps, YJIT is the only serious option right now.
+ZJIT exists as an experimental alternative, but we've measured latency variance of up to **±27%** under load compared to YJIT's **±3%**. For production Rails apps, YJIT is the only serious option right now.
 
-After the Ruby upgrade, the dashboard was at 820ms. Progress, but we had more room.
+After the Ruby upgrade, the dashboard was at **820ms**. Progress, but we had more room.
 
 ## Caching the right thing (and only the right thing)
 

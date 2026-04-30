@@ -98,6 +98,7 @@ Follow official methodology from `/knowledge/`:
 - **Zero tolerance for duplicates**: No `*_refactored.*`, `*_new.*`, `*_backup.*` files
 - **New docs allowed only under** `docs/workflows/` (else edit existing files)
 - **Reflection triggers**: User reports "code is bad" / "over-engineered" → HALT, 5-Why analysis, fix config, THEN proceed
+- **Visual regression test gate (BLOCKING for HTML/CSS/template changes)**: After ANY edit to `themes/`, `layouts/`, `content/blog/*/index.md` body HTML, or `*.css`, run `bin/test` BEFORE committing. The 35-failure incident on 2026-04-30 happened because Sprints #2/#3 shipped 15 commits without running it once — and the failing tests caught a real `.fl-button` regression Sprint #3 missed. Visual regression failures are NOT optional warnings; they are commit blockers. Either fix the regression OR confirm the change is intentional AND update baselines in the same commit. "I'll run tests after a few commits" is the path that lets unfixed bugs ship.
 
 ### ✍️ Blog Post Pipeline (MANDATORY — run ALL steps, never partial)
 

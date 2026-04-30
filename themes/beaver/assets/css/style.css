@@ -222,6 +222,19 @@ input[type=submit]:disabled {
   font-weight: 400;
 }
 
+/* Body emphasis - bold data points (percentages, MB/GB, ms, etc.) and
+   key technical terms scan better when <strong> has a darker tint than
+   body color. Keep subtle - over-emphasis kills the rhythm.
+   Authoring rule: use **15-20%** / **512MB** / **±27ms** for data
+   points founders need to extract; use `inline code` for tool/gem
+   names. See voice-guide.md "Data emphasis" section. */
+.blog p strong,
+.blog li strong,
+.blog td strong {
+  font-weight: 700;
+  color: #0d0f1a;
+}
+
 /* Code blocks: rounded corners, padding (colors from Hugo's dracula theme) */
 .blog pre {
   border-radius: 8px;
