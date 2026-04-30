@@ -111,6 +111,8 @@ If you scrolled past the section 5 callout, here is the offer again. A senior Je
 
 We run this async by default: send the repo, get the assessment in 48 hours. If you'd rather walk through it on a call, that's an option. Either way you walk away with a number you can take to your board.
 
-Across 14 rescue engagements in the last six quarters, the cost-of-ownership read has matched the actual remediation invoice within $5K every time. [Send your repo for the read](https://jetthoughts.com/services/).
+Across 14 rescue engagements in the last six quarters, the cost-of-ownership read has matched the actual remediation invoice within $5K every time.
+
+<a class="cta-link" href="https://jetthoughts.com/services/">Send your repo for the read</a>
 
 Agencies quote you the headline price. The four-month invoice shows up after the demo, and the founders who model both before signing keep their seed round intact for the next milestone.

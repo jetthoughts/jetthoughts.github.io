@@ -258,4 +258,6 @@ See also the [Ruby on Rails performance patterns we documented last quarter](/bl
 
 ---
 
-*Every month you wait, your regex parsers silently miss more alerts. [Book the free monitoring audit](https://jetthoughts.com/contact/) before the next deploy breaks another dashboard.*
+Every month you wait, your regex parsers silently miss more alerts.
+
+<a class="cta-link" href="https://jetthoughts.com/contact/">Book the free monitoring audit</a>

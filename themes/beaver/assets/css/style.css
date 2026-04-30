@@ -392,3 +392,46 @@ input[type=submit]:disabled {
   line-height: 1.65;
 }
 
+/* End-of-article CTA button — visible, single-action call-to-action.
+   Use as <a class="cta-link" href="...">Text</a> in the closing paragraph
+   of every post. Overrides the default body-link style. */
+.blog p a.cta-link,
+.blog li a.cta-link,
+.blog .cta-link {
+  display: inline-block;
+  background: #cc342d;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  margin-top: 8px;
+  transition: background 0.15s ease;
+}
+.blog p a.cta-link:hover,
+.blog li a.cta-link:hover,
+.blog .cta-link:hover {
+  background: #a8231e;
+  color: #ffffff;
+  text-decoration: none;
+}
+.blog p a.cta-link:visited,
+.blog li a.cta-link:visited,
+.blog .cta-link:visited {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .blog p a.cta-link,
+  .blog li a.cta-link,
+  .blog .cta-link {
+    display: block;
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 17px;
+  }
+}
+

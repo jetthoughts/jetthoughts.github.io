@@ -139,7 +139,7 @@ Run the three checks from the audit - test coverage, a security scan, and a data
 
 We do a free codebase health check: one senior engineer, two hours with your team, a written assessment covering test coverage, security posture, and architectural debt. You get a one-page report. No follow-up unless you ask.
 
-Book a 45-minute [codebase health check](https://jetthoughts.com/contact-us/).
+<a class="cta-link" href="https://jetthoughts.com/contact-us/">Book a 45-minute codebase health check</a>
 
 Sources:
 

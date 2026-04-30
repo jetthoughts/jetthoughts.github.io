@@ -163,7 +163,9 @@ Get the code, get it audited, and hire someone who writes tests first and explai
 
 ---
 
-*In the middle of a transition right now? We'll audit your codebase for free. 45 minutes. One senior developer. A written one-page assessment. No contract, no follow-up calls. [Get an honest audit](https://jetthoughts.com/contact-us/).*
+In the middle of a transition right now? We'll audit your codebase for free. 45 minutes. One senior developer. A written one-page assessment. No contract, no follow-up calls.
+
+<a class="cta-link" href="https://jetthoughts.com/contact-us/">Get an honest audit</a>
 
 ---
 

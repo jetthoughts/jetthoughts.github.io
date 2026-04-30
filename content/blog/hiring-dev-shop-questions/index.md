@@ -134,4 +134,4 @@ Book a free 45-minute call with a senior JetThoughts engineer (not a sales rep, 
 
 If our answers don't match the standard above, you walk away with the checklist sharper than when you arrived. If they do, you've found a partner who'd rather be vetted hard than hired soft.
 
-[Book the 45-minute checklist call](https://jetthoughts.com/services/) - we hold 6 slots a week and they tend to fill by Wednesday.
+<a class="cta-link" href="https://jetthoughts.com/services/">Book the 45-minute checklist call</a>
