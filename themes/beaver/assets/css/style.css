@@ -259,10 +259,10 @@ input[type=submit]:disabled {
 
 /* Typography UX improvements - 2026-04-26 */
 
-/* Author byline */
+/* Author byline (#5f6470 = ~5.6:1 contrast - WCAG AA with headroom) */
 .blog .post-meta-byline {
   font-size: 15px;
-  color: #6b7280;
+  color: #5f6470;
   margin: 8px 0 24px;
 }
 
@@ -270,6 +270,21 @@ input[type=submit]:disabled {
 .blog p, .blog li {
   line-height: 1.75;
   margin-bottom: 1.5em;
+}
+
+/* List items: tight inter-item spacing so groups read as a unit, not paragraphs.
+   Also override the inherited 12px margin-top from a deeper bundle. */
+.blog li {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+/* List/blockquote/pre containers: match body weight + size so bullets and
+   stray text nodes don't render at body's default font-weight 300. */
+.blog ul, .blog ol, .blog blockquote, .blog pre {
+  font-size: 20px;
+  line-height: 1.75;
+  font-weight: 400;
 }
 
 /* Heading spacing */
@@ -282,27 +297,75 @@ input[type=submit]:disabled {
   margin-bottom: 16px !important;
 }
 
-/* Always-visible link underlines */
+/* Mobile heading scale — preserve hierarchy when H1 drops to 32px on phones */
+@media (max-width: 768px) {
+  .blog h2:not(.post-title) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 40px !important;
+    margin-bottom: 14px !important;
+  }
+  .blog h3:not(.post-title) {
+    font-size: 19px;
+    line-height: 26px;
+    margin-top: 32px !important;
+    margin-bottom: 12px !important;
+  }
+  .blog ul, .blog ol, .blog blockquote, .blog pre {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+}
+
+/* Inline code: inherit paragraph line-height so wrapped code stays on baseline */
+.blog :not(pre) > code {
+  line-height: inherit;
+}
+
+/* H1 + byline + cover align with body column (640px) instead of spilling
+   to the wider .single-post-wrapper (960px). Title stops looking orphaned. */
+.blog h1.post-title,
+.blog .post-meta-byline,
+.blog .single-post-content > .post-cover,
+.blog .single-post-content > picture,
+.blog .single-post-content > img {
+  max-width: 43rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Links: WCAG AA contrast (#0066d6 = 4.78:1 on white) + visible underline */
 .blog p a, .blog li a, .blog td a {
+  color: #0066d6;
   text-decoration: underline;
-  text-decoration-color: rgba(26,140,255,0.4);
+  text-decoration-color: rgba(0,102,214,0.7);
+  text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 .blog p a:hover, .blog li a:hover, .blog td a:hover {
-  text-decoration-color: rgba(26,140,255,1);
+  text-decoration-color: rgba(0,102,214,1);
+}
+.blog p a:visited, .blog li a:visited, .blog td a:visited {
+  color: #0a4f9a;
 }
 
-/* Brand-colored blockquotes */
+/* Brand-colored blockquotes — true callout treatment (background + padding + radius) */
 .blog blockquote {
-  border-left: 4px solid #cc342d;
+  background: rgba(204, 52, 45, 0.05);
+  border-left: 6px solid #cc342d;
   box-shadow: none;
   margin: 48px 0;
-  padding-left: 24px;
+  padding: 24px 28px;
+  border-radius: 0 8px 8px 0;
 }
 .blog blockquote p {
-  color: #4a4a4a;
-  font-style: italic;
+  color: #1a1a2e;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 0.75em;
 }
+.blog blockquote p:last-child { margin-bottom: 0; }
 
 /* Table improvements */
 .blog th, .blog td {
