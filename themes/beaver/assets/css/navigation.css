@@ -104,6 +104,17 @@ a.fl-button:hover,
   display: block;
 }
 
+/* Logo SVG sits flush in the line-box (not on text baseline) so the wrapper
+   height matches SVG height across every page bundle. Without this, bundles
+   that lack the global `svg { vertical-align: middle }` reset (e.g. about-us)
+   render the wrapper ~7px taller, shifting the logo upward via flex centering. */
+.top-panel .logo svg,
+.top-panel .logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .navigation {
   @media (max-width: 1024px) {
     position: fixed;
