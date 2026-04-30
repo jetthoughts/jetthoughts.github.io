@@ -13,13 +13,24 @@
   text-align: center;
 }
 
-.btn-primary {
-  background-color: #1a8cff;
+/* Brand button - Ruby red (#cc342d). Applies site-wide wherever .btn.btn-primary
+   shows up (header Contact Us, pagination Next, page nav). One source of truth. */
+.btn.btn-primary,
+.btn.btn-primary:visited {
+  background-color: #cc342d;
   color: #fff !important;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  transition: background 0.15s ease;
 }
 
-.btn-primary:hover {
-  background-color: #007af4;
+.btn.btn-primary:hover {
+  background-color: #a8231e;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .top-panel {
