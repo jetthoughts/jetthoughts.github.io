@@ -417,9 +417,13 @@ input[type=submit]:disabled {
   line-height: inherit;
 }
 
-/* H1 + byline + cover align with body column (640px) instead of spilling
-   to the wider .single-post-wrapper (960px). Title stops looking orphaned. */
+/* H1 + byline + cover align with body column (43rem ≈ 688px) instead
+   of spilling to the wider .single-post-wrapper (960px). The H1 has
+   class .fl-heading from the FL-builder layout (not .post-title), so
+   the selector covers both forms — also long titles hyphenate to
+   prevent extreme overflow at 48px desktop. */
 .blog h1.post-title,
+.blog h1.fl-heading,
 .blog .post-meta-byline,
 .blog .single-post-content > .post-cover,
 .blog .single-post-content > picture,
@@ -427,6 +431,9 @@ input[type=submit]:disabled {
   max-width: 43rem;
   margin-left: auto;
   margin-right: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Links: WCAG AA contrast (#0066d6 = 4.78:1 on white) + visible underline */

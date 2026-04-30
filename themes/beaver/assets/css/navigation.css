@@ -26,7 +26,9 @@ body {
 }
 
 /* Brand button - Ruby red (#cc342d). Applies site-wide wherever .btn.btn-primary
-   shows up (header Contact Us, pagination Next, page nav). One source of truth. */
+   shows up (header Contact Us, pagination Next, page nav). One source of truth.
+   text-decoration: none !important overrides .blog li a underline rule that
+   leaks onto pagination Next button (which is `<li class="page-item"><a class="btn btn-primary">`). */
 .btn.btn-primary,
 .btn.btn-primary:visited {
   background-color: #cc342d;
@@ -36,13 +38,14 @@ body {
   font-weight: 600;
   font-size: 18px;
   border: none;
+  text-decoration: none !important;
   transition: background 0.15s ease;
 }
 
 .btn.btn-primary:hover {
   background-color: #a8231e;
   color: #fff !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .top-panel {
