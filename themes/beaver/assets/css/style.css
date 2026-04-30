@@ -136,7 +136,7 @@
 }
 
 .blog .link:hover .post-title,
-.blog .link:focus-visible .post-title { color: #1a8cff; }
+.blog .link:focus-visible .post-title { color: #0066d6; }
 
 .blog code {
   background: #f4f4f5;
@@ -175,12 +175,14 @@ input[type=submit]:disabled {
   font-weight: 400;
 }
 
-/* Links: visible brand blue with hover underline */
+/* Links: visible brand blue with hover underline (WCAG AA contrast)
+   #0066d6 = 4.78:1 on white. Sprint #2 promoted this from old #1a8cff
+   which was 3.37:1 (WCAG fail). */
 .blog p a,
 .blog li a,
 .blog td a,
 .single-post-content a {
-  color: #1a8cff;
+  color: #0066d6;
   text-decoration: none;
   font-weight: 400;
 }
@@ -302,18 +304,36 @@ input[type=submit]:disabled {
   .blog h2:not(.post-title) {
     font-size: 24px;
     line-height: 32px;
-    margin-top: 40px !important;
-    margin-bottom: 14px !important;
+    margin-top: 32px !important;
+    margin-bottom: 12px !important;
   }
   .blog h3:not(.post-title) {
-    font-size: 19px;
-    line-height: 26px;
+    font-size: 21px;
+    line-height: 28px;
     margin-top: 32px !important;
     margin-bottom: 12px !important;
   }
   .blog ul, .blog ol, .blog blockquote, .blog pre {
     font-size: 17px;
     line-height: 1.65;
+  }
+  /* Blockquote inner-p needs explicit override (more specific selector
+     than .blog blockquote in the desktop rule, so doesn't inherit shrink) */
+  .blog blockquote {
+    padding: 20px 22px;
+    margin: 36px 0;
+  }
+  .blog blockquote p {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  /* Code blocks: tighter padding + smaller token to reduce horizontal scroll */
+  .blog pre {
+    padding: 18px 20px;
+  }
+  .blog pre code {
+    font-size: 14.5px;
+    line-height: 1.6;
   }
 }
 
