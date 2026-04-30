@@ -4,20 +4,20 @@ Comparison of JetThoughts blog against thoughtbot and Evil Martians, post-Typogr
 
 ## 1. Verified screenshots inventory
 
-`docs/screenshots/competitors/` has integrity issues that need a re-capture pass:
+`docs/screenshots/competitors/` — Sprint #7 (2026-04-29) re-captured the 4 broken/mislabeled files at 1440x900 desktop via chrome-devtools MCP and visually verified each against the source competitor blog:
 
-| File | Status |
-|---|---|
-| `thoughtbot/comp-tb-rate-limits.png` | REAL thoughtbot |
-| `thoughtbot/comp-tb-claude-skill.png` | BROKEN (43KB all-black) |
-| `thoughtbot/comp-tb-js-everything.png` | DUPLICATE of `comp-tb-js-composition.png` (505KB byte-match) |
+| File | Status | Source URL (post-Sprint-#7) |
+|---|---|---|
+| `thoughtbot/comp-tb-rate-limits.png` | REAL thoughtbot | (pre-existing) |
+| `thoughtbot/comp-tb-claude-skill.png` | RE-CAPTURED Sprint #7 | https://thoughtbot.com/blog/reviewing-dependabot-prs-is-boring-let-claude-do-it-for-you |
+| `thoughtbot/comp-tb-js-everything.png` | RE-CAPTURED Sprint #7 | https://thoughtbot.com/blog/retro-driven-development |
 | `thoughtbot/comp-tb-{duck-typer,js-activerecord,js-composition,props-template}.png` | likely real, not visually verified |
-| `evil-martians/comp-em-llm-visible.png` | REAL Evil Martians |
-| `evil-martians/comp-em-oklch.png` | MISLABELED — actually JT post "How to Fire Your Dev Shop" |
-| `evil-martians/comp-em-favicon.png` | DUPLICATE of `comp-em-oklch.png` (498KB byte-match, also JT) |
+| `evil-martians/comp-em-llm-visible.png` | REAL Evil Martians | (pre-existing) |
+| `evil-martians/comp-em-oklch.png` | RE-CAPTURED Sprint #7 | https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl |
+| `evil-martians/comp-em-favicon.png` | RE-CAPTURED Sprint #7 | https://evilmartians.com/chronicles/flaky-tests-be-gone-long-lasting-relief-chronic-ci-retry-irritation |
 | `evil-martians/comp-em-payment-form.png` | likely real, not verified |
 
-**Action**: re-capture next session; 4/11 files are unusable.
+All 8 files now have unique md5 hashes; the broken 43KB file is gone; no JT mislabeled files remain in the competitor folder.
 
 ## 2. Side-by-side dimension table
 
