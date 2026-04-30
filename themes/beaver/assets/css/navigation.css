@@ -500,3 +500,13 @@ a.fl-button:hover,
     padding-right: 15px;
   }
 }
+
+/* Site-wide brand link color. Body content links inherit this everywhere
+   links aren't styled by a more specific class (.btn, .fl-button, .cta-link,
+   menu items). 4.78:1 WCAG AA on white background.
+   :not() chain raises specificity above the per-bundle `a { color: #1a8cff }`
+   rules so this wins regardless of cascade order. */
+a:not(.btn):not(.btn-primary):not(.fl-button):not([class^="cta"]):not(.menu-opener):not(.menu-close):not(.navigation .link):not(.footer-component a) {
+  color: #0066d6;
+  text-decoration-color: rgba(0, 102, 214, 0.7);
+}
