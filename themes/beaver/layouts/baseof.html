@@ -98,8 +98,23 @@
       </script>
     {{ end }}
     <script>
-      if ("serviceWorker" in navigator)
-        navigator.serviceWorker.register("/sw.js");
+      // Skip SW registration on local dev so cache never serves stale content
+      // during iteration. Production hosts (jetthoughts.com / *.github.io) keep
+      // SW for offline + faster repeat visits.
+      if (
+        "serviceWorker" in navigator &&
+        location.hostname !== "localhost" &&
+        !location.hostname.startsWith("127.") &&
+        location.hostname !== "0.0.0.0"
+      ) {
+        navigator.serviceWorker.register("/sw.js?v={{ now.Unix }}");
+      } else if ("serviceWorker" in navigator && navigator.serviceWorker.getRegistrations) {
+        // On localhost, unregister any previously installed SW so devs don't
+        // see stale assets from earlier sessions.
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          regs.forEach(function (reg) { reg.unregister(); });
+        });
+      }
     </script>
   </body>
 </html>
