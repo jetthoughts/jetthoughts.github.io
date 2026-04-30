@@ -48,6 +48,32 @@ body {
   text-decoration: none !important;
 }
 
+/* Brand the FL-builder CTA buttons (homepage hero, about-us footer, etc.).
+   The legacy rule .fl-page a.fl-button (specificity 0,2,1) lives in per-page
+   bundles (about-us.css, homepage.css) and paints these blue (#1a8cff) with
+   25px pill radius. !important here unifies them with .btn.btn-primary brand
+   styling site-wide. */
+a.fl-button,
+a.fl-button:visited,
+.fl-button-wrap a {
+  background-color: #cc342d !important;
+  color: #fff !important;
+  padding: 14px 28px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: background 0.15s ease;
+}
+
+a.fl-button:hover,
+.fl-button-wrap a:hover {
+  background-color: #a8231e !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
 .top-panel {
   padding: 15px 20px 0;
   position: absolute;
