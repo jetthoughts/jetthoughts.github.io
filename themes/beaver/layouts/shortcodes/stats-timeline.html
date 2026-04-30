@@ -1,0 +1,7 @@
+{{ $caption := .Get "caption" | default "" }}
+<div class="stats-timeline">
+  {{ if $caption }}<div class="stats-timeline__caption">{{ $caption }}</div>{{ end }}
+  <div class="stats-timeline__body">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
