@@ -4,6 +4,8 @@ description: "Meet JetThoughts: 18+ years delivering startup MVPs, 95% client re
 author: Paul Keen
 type: page
 slug: about-us
+aliases:
+  - /about/
 layout: about
 cover_image: the-best-products.jpg
 
