@@ -67,17 +67,12 @@ Founders ask what an AI-built MVP "really" costs in 2026. Here is the math from 
 
 A typical AI-first quote for a B2B SaaS MVP lands at **$25K-$35K** for a **3-4 week** build. The post-launch invoices we see add up like this:
 
-{{< stats-timeline caption="What a $30K AI MVP actually costs" >}}
-| Item | Cost |
-|------|------|
-| Original AI-first quote | $25K-$35K |
-| Security remediation (45% of code with flaws) | $8K-$15K |
-| Test suite buildout | $10K-$18K |
-| Refactoring duplicate implementations | $6K-$12K |
-| Performance + concurrency fixes | $5K-$10K |
-| Production debugging (founder eats internally) | 80-200 engineer-hours |
-| **All-in cost (cash + internal)** | **$60K-$90K (2-3x quote)** |
-{{< /stats-timeline >}}
+- Security remediation (the **45%** of code with exploitable flaws): **$8K-$15K**
+- Test suite buildout (the AI shipped scaffolding, not coverage): **$10K-$18K**
+- Refactoring duplicate implementations: **$6K-$12K**
+- Performance and concurrency fixes the demo didn't expose: **$5K-$10K**
+- Production debugging time the founder eats internally: **80-200 engineer-hours**
+- **All-in cost (cash + internal): $60K-$90K, or 2-3x the original quote**
 
 Cash line items add **$29K-$55K** to a **$30K** starting point. Internal engineer hours add **$15K-$35K** at market rates. The all-in cost of making an AI-built MVP production-ready lands at **$60K-$90K**, or **2x to 3x** the original quote.
 

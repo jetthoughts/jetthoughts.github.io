@@ -126,48 +126,6 @@
   }
 }
 
-/* Stats timeline callout - for cost-story paragraphs.
-   Wrap a markdown table in {{< stats-timeline caption="..." >}}...{{< /stats-timeline >}}
-   Renders as a Ruby-bordered, tinted callout matching blockquote treatment. */
-.blog .stats-timeline {
-  background: rgba(204, 52, 45, 0.04);
-  border-left: 4px solid #cc342d;
-  padding: 20px 24px;
-  border-radius: 0 8px 8px 0;
-  margin: 36px 0;
-  font-size: 17px;
-  line-height: 1.6;
-}
-.blog .stats-timeline__caption {
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #cc342d;
-  margin-bottom: 12px;
-}
-.blog .stats-timeline table {
-  margin: 0;
-  border: none;
-  width: 100%;
-}
-.blog .stats-timeline th,
-.blog .stats-timeline td {
-  padding: 8px 12px;
-  border-bottom: 1px solid rgba(204, 52, 45, 0.15);
-  border-left: none;
-  border-right: none;
-  border-top: none;
-}
-.blog .stats-timeline tr:last-child td {
-  border-bottom: none;
-  font-weight: 700;
-}
-@media (max-width: 768px) {
-  .blog .stats-timeline { padding: 16px 18px; font-size: 15px; }
-  .blog .stats-timeline th, .blog .stats-timeline td { padding: 6px 8px; }
-}
-
 .blog p a {
   color: inherit;
 }
