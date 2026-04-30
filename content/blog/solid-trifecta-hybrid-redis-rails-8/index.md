@@ -17,7 +17,7 @@ canonical_url: "https://jetthoughts.com/blog/solid-trifecta-hybrid-redis-rails-8
 
 Redis is the most expensive line item on most Rails infrastructure bills. And since Rails 8, it's optional.
 
-Solid Cache, Solid Queue, and Solid Cable - the "Solid Trifecta" - replace Redis for caching, background jobs, and WebSockets. All three are database-backed and ship as defaults in new Rails 8 apps. 37signals runs Solid Cache in production across Basecamp and HEY, handling what used to require [1.1 terabytes of Redis RAM](https://dev.37signals.com/solid-cache/) with 80 gigabytes of database storage. That's an 80% infrastructure cost reduction.
+Solid Cache, Solid Queue, and Solid Cable - the "Solid Trifecta" - replace Redis for caching, background jobs, and WebSockets. All three are database-backed and ship as defaults in new Rails 8 apps. 37signals runs Solid Cache in production across Basecamp and HEY, handling what used to require [**1.1 terabytes** of Redis RAM](https://dev.37signals.com/solid-cache/) with **80 gigabytes** of database storage. That's an **80% infrastructure cost reduction**.
 
 Whether you *can* drop Redis and whether you *should* are different questions. We've migrated four production apps to the Solid stack in the past six months. Two went fully Redis-free. Two kept Redis for specific workloads. Here's the decision framework we use.
 
@@ -25,11 +25,11 @@ Whether you *can* drop Redis and whether you *should* are different questions. W
 
 Each component targets a specific Redis use case:
 
-Solid Cache replaces `redis_cache_store`. It stores cache entries in a dedicated database table instead of Redis memory. The tradeoff: reads are [roughly 40% slower](https://dev.37signals.com/solid-cache/) than Redis, but the cache can be 6x larger because disk is cheaper than RAM. For most Rails apps - where cached values are HTML fragments, serialized JSON, or computed reports - single-digit millisecond latency is invisible to users.
+Solid Cache replaces `redis_cache_store`. It stores cache entries in a dedicated database table instead of Redis memory. The tradeoff: reads are [roughly **40% slower**](https://dev.37signals.com/solid-cache/) than Redis, but the cache can be **6x larger** because disk is cheaper than RAM. For most Rails apps - where cached values are HTML fragments, serialized JSON, or computed reports - single-digit millisecond latency is invisible to users.
 
-Solid Queue replaces Sidekiq and Resque for background job processing. It uses `FOR UPDATE SKIP LOCKED` for efficient polling - no Redis pub/sub needed. 37signals [introduced it in production](https://dev.37signals.com/introducing-solid-queue/) at HEY, processing millions of jobs daily. For apps under 100 jobs/second, it performs identically to Sidekiq in wall-clock terms. The difference shows up above that threshold.
+Solid Queue replaces Sidekiq and Resque for background job processing. It uses `FOR UPDATE SKIP LOCKED` for efficient polling - no Redis pub/sub needed. 37signals [introduced it in production](https://dev.37signals.com/introducing-solid-queue/) at HEY, processing millions of jobs daily. For apps under **100 jobs/second**, it performs identically to Sidekiq in wall-clock terms. The difference shows up above that threshold.
 
-Solid Cable replaces Redis as the Action Cable adapter. It polls the database for new messages instead of using Redis pub/sub. This works well for live notifications, dashboard updates, and internal tool chat. It does not work well for sub-10ms delivery requirements - multiplayer games, collaborative editing, high-frequency trading dashboards.
+Solid Cable replaces Redis as the Action Cable adapter. It polls the database for new messages instead of using Redis pub/sub. This works well for live notifications, dashboard updates, and internal tool chat. It does not work well for **sub-10ms** delivery requirements - multiplayer games, collaborative editing, high-frequency trading dashboards.
 
 ## Keep Redis or Drop It: Three Questions Per Component
 
@@ -37,29 +37,29 @@ For each component, there's a short list of deal-breakers. Hit any of them and R
 
 ### Solid Cache
 
-The main question is throughput. If your app reads cache more than 10,000 times per second, Solid Cache's 1-2ms PostgreSQL overhead adds up - 10-20 extra seconds of cumulative latency across your request pool. Below that? You won't notice.
+The main question is throughput. If your app reads cache more than **10,000 times per second**, Solid Cache's **1-2ms** PostgreSQL overhead adds up - **10-20 extra seconds** of cumulative latency across your request pool. Below that? You won't notice.
 
 The second question is sneakier. If you use Redis as a *data structure server* - sorted sets for rate limiting, HyperLogLog for cardinality estimates, Lua scripts for atomic operations - Solid Cache can't replace any of that. It's a key-value store. The cache, yes. The data structures, no.
 
-There's also a write pressure concern that bit us on one migration. Very short-lived cache entries (TTL under 60 seconds) generate constant INSERTs and DELETEs. Redis handles this in memory with zero disk I/O. Your PostgreSQL instance will feel every one of those writes.
+There's also a write pressure concern that bit us on one migration. Very short-lived cache entries (TTL under **60 seconds**) generate constant INSERTs and DELETEs. Redis handles this in memory with zero disk I/O. Your PostgreSQL instance will feel every one of those writes.
 
 For everything else - fragment caching, page caching, API response caching, session storage - Solid Cache works. We've [written a full migration guide](/blog/rails-8-solid-cache-performance-redis-migration/) with benchmarks.
 
 ### Solid Queue
 
-Throughput is the obvious question here too. Each enqueue is a database INSERT, each dequeue is a SELECT plus UPDATE. Under 100 jobs/second, you won't notice any difference from [Sidekiq's in-memory operations](/blog/solid-queue-vs-sidekiq-complete-comparison/). Above that, the gap is real and measurable.
+Throughput is the obvious question here too. Each enqueue is a database INSERT, each dequeue is a SELECT plus UPDATE. Under **100 jobs/second**, you won't notice any difference from [Sidekiq's in-memory operations](/blog/solid-queue-vs-sidekiq-complete-comparison/). Above that, the gap is real and measurable.
 
-Latency is the other concern. Solid Queue polls at a configurable interval - default one second. You can push it lower, but polling will never match Redis pub/sub. If your payment webhooks need to fire within 50ms of enqueue, Sidekiq is still faster.
+Latency is the other concern. Solid Queue polls at a configurable interval - default one second. You can push it lower, but polling will never match Redis pub/sub. If your payment webhooks need to fire within **50ms** of enqueue, Sidekiq is still faster.
 
 Then there's the feature question. Solid Queue covers recurring jobs (since 1.0), but Sidekiq Pro's batches, rate limiting, and unique jobs have years of production hardening that Solid Queue hasn't matched yet. If you're paying for Pro and using its features, don't switch just because database-backed sounds purer.
 
-One more thing most people don't think about: spiky traffic. Solid Queue handles steady throughput well. A sudden 50x burst - Black Friday, a concert ticket drop - hits the database hard. Redis absorbs spikes in memory. That's what it was built for.
+One more thing most people don't think about: spiky traffic. Solid Queue handles steady throughput well. A sudden **50x burst** - Black Friday, a concert ticket drop - hits the database hard. Redis absorbs spikes in memory. That's what it was built for.
 
-For apps under 100 jobs/second with tolerance for 1-2 second queue latency? Solid Queue handles it. Our [migration guide](/blog/rails-8-solid-queue-migration-guide/) walks through the move queue by queue.
+For apps under **100 jobs/second** with tolerance for **1-2 second** queue latency? Solid Queue handles it. Our [migration guide](/blog/rails-8-solid-queue-migration-guide/) walks through the move queue by queue.
 
 ### Solid Cable
 
-This one is simpler. Solid Cable polls; Redis pushes. If your chat app shows "user is typing" indicators, or you're building collaborative editing, or anything where 200ms of polling latency feels broken - keep Redis. (Or look at [AnyCable](https://anycable.io/) for even better performance.) At 10,000+ concurrent WebSocket connections, each poll is a database query - that's 50,000 SELECTs per second at a 200ms interval. Redis pub/sub handles the same load with a single publish to all subscribers.
+This one is simpler. Solid Cable polls; Redis pushes. If your chat app shows "user is typing" indicators, or you're building collaborative editing, or anything where **200ms** of polling latency feels broken - keep Redis. (Or look at [AnyCable](https://anycable.io/) for even better performance.) At **10,000+ concurrent** WebSocket connections, each poll is a database query - that's **50,000 SELECTs per second** at a **200ms** interval. Redis pub/sub handles the same load with a single publish to all subscribers.
 
 For internal dashboards, admin panels, and notification feeds? Solid Cable is fine.
 
@@ -82,7 +82,7 @@ config.active_job.queue_adapter = :solid_queue
 # - Action Cable (if >1,000 concurrent connections)
 ```
 
-This cuts the Redis bill by 60-80% while keeping it where it earns its cost. You don't have to choose one or the other. Run Solid Queue for email delivery, report generation, and scheduled tasks. Keep Sidekiq for your payment processing queue where latency matters.
+This cuts the Redis bill by **60-80%** while keeping it where it earns its cost. You don't have to choose one or the other. Run Solid Queue for email delivery, report generation, and scheduled tasks. Keep Sidekiq for your payment processing queue where latency matters.
 
 Here's the configuration for running both:
 
@@ -123,7 +123,7 @@ More Solid components means more database queries. If you're running PostgreSQL,
 
 Skip the Solid stack when:
 
-If your team is happy with Redis and it costs $50/month, migration has a cost too - leave it alone. There's no architectural medal for removing a dependency that works. Pre-launch teams should ship the product first and optimize infrastructure after they have traffic to measure; the Solid defaults in new Rails 8 apps are fine for launch, and you can revisit when scaling questions come up. And if your database is already under pressure, adding cache reads, job polling, and WebSocket queries to an overloaded PostgreSQL instance only makes the problem worse. Fix the database first. Consider read replicas or a [dedicated queue database](https://guides.rubyonrails.org/active_record_multiple_databases.html) before migrating.
+If your team is happy with Redis and it costs **$50/month**, migration has a cost too - leave it alone. There's no architectural medal for removing a dependency that works. Pre-launch teams should ship the product first and optimize infrastructure after they have traffic to measure; the Solid defaults in new Rails 8 apps are fine for launch, and you can revisit when scaling questions come up. And if your database is already under pressure, adding cache reads, job polling, and WebSocket queries to an overloaded PostgreSQL instance only makes the problem worse. Fix the database first. Consider read replicas or a [dedicated queue database](https://guides.rubyonrails.org/active_record_multiple_databases.html) before migrating.
 
 ## Don't Migrate Everything at Once
 
@@ -133,19 +133,19 @@ The Solid Trifecta shifts load from Redis to your database. That's a real archit
 
 ## What We Shipped Last Month
 
-A client came to us running Rails 7.2 with Redis handling cache, Sidekiq, and Action Cable. Monthly Redis bill: $480. Database: PostgreSQL on RDS.
+A client came to us running Rails 7.2 with Redis handling cache, Sidekiq, and Action Cable. Monthly Redis bill: **$480**. Database: PostgreSQL on RDS.
 
 After migration:
 
-We moved fragment and API response caching to Solid Cache. Cache size went from 2GB (limited by Redis memory) to 50GB (limited by disk - effectively unlimited). Average read latency increased from 0.3ms to 1.1ms. Nobody noticed. P95 page load actually improved because cache hit rate went from 68% to 91% with the larger cache.
+We moved fragment and API response caching to Solid Cache. Cache size went from **2GB** (limited by Redis memory) to **50GB** (limited by disk - effectively unlimited). Average read latency increased from **0.3ms to 1.1ms**. Nobody noticed. P95 page load actually improved because cache hit rate went from **68% to 91%** with the larger cache.
 
-Solid Queue took over email delivery, report generation, and scheduled cleanup - 200 jobs/minute, steady, no issues. [Active Job Continuations](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) made the long-running import job deploy-safe for the first time.
+Solid Queue took over email delivery, report generation, and scheduled cleanup - **200 jobs/minute**, steady, no issues. [Active Job Continuations](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) made the long-running import job deploy-safe for the first time.
 
-Sidekiq stayed for the payment webhook queue (needs sub-second latency) and the real-time inventory sync (2,000 jobs/minute bursts during peak hours). Redis also stayed for Action Cable, where 1,200 concurrent WebSocket connections power the admin dashboard.
+Sidekiq stayed for the payment webhook queue (needs sub-second latency) and the real-time inventory sync (**2,000 jobs/minute** bursts during peak hours). Redis also stayed for Action Cable, where **1,200 concurrent** WebSocket connections power the admin dashboard.
 
-New monthly Redis bill: $120. Same reliability. Less infrastructure to monitor.
+New monthly Redis bill: **$120**. Same reliability. Less infrastructure to monitor.
 
-The hybrid approach let us keep Redis only where it earned its cost. We measured each workload, put it where it belonged, and cut the bill by 75%.
+The hybrid approach let us keep Redis only where it earned its cost. We measured each workload, put it where it belonged, and cut the bill by **75%**.
 
 ---
 
