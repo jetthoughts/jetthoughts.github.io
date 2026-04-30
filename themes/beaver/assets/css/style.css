@@ -261,11 +261,16 @@ input[type=submit]:disabled {
 
 /* Typography UX improvements - 2026-04-26 */
 
-/* Author byline (#5f6470 = ~5.6:1 contrast - WCAG AA with headroom) */
+/* Author byline - editorial taxonomy treatment.
+   Smaller + ALL-CAPS + tracked = "magazine masthead" not "wordpress meta".
+   #5f6470 keeps WCAG AA (~5.6:1 contrast on white). */
 .blog .post-meta-byline {
-  font-size: 15px;
+  font-size: 12px;
   color: #5f6470;
-  margin: 8px 0 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin: 8px 0 28px;
 }
 
 /* Paragraph breathing room */
