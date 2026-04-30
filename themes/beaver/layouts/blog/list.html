@@ -68,8 +68,8 @@
                 </h1>
 
                 <p>
-                  Browse through our blog page filled with updated information
-                  and the latest tips to help you achieve your goals.
+                  Founder-tested patterns from 17 years of rescue engagements.
+                  Rails, AI, and the questions burned founders ask before signing again.
                 </p>
 
                 {{ range (.Paginate .Pages.ByDate.Reverse).Pages }}
@@ -81,17 +81,11 @@
                       <div class="post-content">
                         <h2 class="post-title">{{ .Title }}</h2>
                         <div class="post-meta">
-                          <div class="post-tags">
-                            {{ with .Params.tags }}
-                            {{ range . }}
-                              <a href="/blog/tags/{{ . | urlize }}/"
-                                >#{{ . }}</a
-                              >
-                            {{ end }}
-                            {{ end }}
-                          </div>
                           {{ if .Date }}
                             <span class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</span>
+                          {{ end }}
+                          {{ with .Params.tags }}
+                            <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span>{{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
                           {{ end }}
                         </div>
                         <div>{{ .Params.description }}</div>
