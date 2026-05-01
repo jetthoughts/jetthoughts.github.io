@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 1910828
 dev_to_id: 1910828
 dev_to_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1
-title: 'type_for_attribute in Rails 7.2 Active Model: API Reference'
-description: Rails 7.2 added type_for_attribute to Active Model. See the method signature, return type, and a working example for both Active Record and Active Model.
+title: 'type_for_attribute & has_attribute? in Rails 7.2 Active Model'
+description: 'Rails 7.2 type_for_attribute on Active Model: class method signature, return type, has_attribute? sibling method, and a working SignupForm example for both Active Record and Active Model.'
 created_at: '2024-07-03T20:42:57Z'
 date: 2024-07-03
 edited_at: '2024-11-25T15:33:24Z'
@@ -50,6 +50,36 @@ MyModel.type_for_attribute(:my_attribute).cast("42")
 
 The return value is an `ActiveModel::Type::Value` subclass - `Integer`, `String`, `Boolean`, `DateTime`, and so on - with `cast`, `serialize`, and `deserialize` methods.
 
+## Class method vs instance access
+
+`type_for_attribute` is a **class method**. You call it on the class, not an instance:
+
+```ruby
+MyModel.type_for_attribute(:my_attribute)   # ✓ works
+MyModel.new.type_for_attribute(:my_attribute) # NoMethodError
+```
+
+To inspect a value on a specific instance, combine it with the attribute getter:
+
+```ruby
+record = MyModel.new(my_attribute: "42")
+type   = MyModel.type_for_attribute(:my_attribute)
+type.cast(record.my_attribute) # => 42
+```
+
+## Related: `has_attribute?`
+
+`has_attribute?` is the sibling method that returns `true`/`false` for whether an attribute exists, without raising on unknown keys. It's an **instance method** (the inverse of `type_for_attribute`'s class-method shape):
+
+```ruby
+record = MyModel.new(my_attribute: 42)
+
+record.has_attribute?(:my_attribute) # => true
+record.has_attribute?(:unknown)      # => false
+```
+
+Use both together when you want to introspect dynamic input: `has_attribute?` checks whether the key is defined, then `type_for_attribute(key).cast(value)` casts it. That's the pattern in the `SignupForm` example below.
+
 ## Active Record still works the same way
 
 ```ruby
@@ -73,9 +103,9 @@ class SignupForm
 
   def initialize(params)
     params.each do |key, value|
-      type = self.class.type_for_attribute(key.to_sym)
-      raise ArgumentError, "Unknown attribute: #{key}" if type.nil?
+      raise ArgumentError, "Unknown attribute: #{key}" unless has_attribute?(key.to_sym)
 
+      type = self.class.type_for_attribute(key.to_sym)
       public_send("#{key}=", type.cast(value))
     end
   end
