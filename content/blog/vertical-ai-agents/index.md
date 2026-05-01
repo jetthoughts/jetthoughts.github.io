@@ -4,8 +4,8 @@ source: dev_to
 remote_id: 2559457
 dev_to_id: 2559457
 dev_to_url: https://dev.to/jetthoughts/vertical-ai-agents-4lf6
-title: Vertical AI Agents
-description: Sam Altman says vertical AI agents are the top startup opportunity right now. Learn what they are, why they work, and how to build one for a specific industry.
+title: 'Vertical AI Agents: What They Are and How to Build One in 2026'
+description: 'Vertical AI agents are domain-specific autonomous systems for one industry vs. general-purpose tools. Sam Altman calls them the top startup opportunity. What they are, why they work, and how to build one.'
 created_at: '2025-06-03T16:33:51Z'
 edited_at: '2025-06-04T03:28:17Z'
 date: 2025-06-03
