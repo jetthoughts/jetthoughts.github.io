@@ -76,8 +76,9 @@ body { font-family: var(--font-system-ui); font-size: 18px; line-height: 1.6; co
 ```
 Delete the `body { ... }` blocks from `homepage.css`, `services.css`, `blog-list.css`, `blog-single.css`, `not_found.css` so they stop fighting.
 
-### 4. Remove `body { min-width: 992px !important }`
-From blog-list, blog-single, about bundles. Mobile-experience landmine. No reason a content page needs to force desktop width.
+### 4. Remove `body { min-width: 992px !important }` — RESOLVED Sprint #5 (commit 6b08694ff)
+
+Sprint #7 audit (2026-04-29) confirmed: the rule lived in a single source file (`themes/beaver/assets/css/vendors/base-4.min.css`) and propagated into every per-page bundle through Hugo's CSS pipeline. Sprint #5's one-line fix to that source file removed it from blog-list, blog-single, and not_found bundles in a single shot - re-running `bin/hugo-build` produces bundles with `body{min-width:992px !important}` only inside `@media print`, which is correct print behavior. No per-bundle scrub needed.
 
 ### 5. Stop shipping `not_found.css` to `/about/`
 Either route `/about/` to the homepage bundle or give it a branded bundle. **Single biggest visual repair on the site.**
