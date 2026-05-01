@@ -1,6 +1,7 @@
 ---
 remote_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1
 source: dev_to
+seo_override: true
 remote_id: 1910828
 dev_to_id: 1910828
 dev_to_url: https://dev.to/jetthoughts/new-in-rails-72-active-model-got-typeforattribute-1ig1

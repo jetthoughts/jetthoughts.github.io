@@ -1,6 +1,7 @@
 ---
 remote_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024-2mm
 source: dev_to
+seo_override: true
 remote_id: 2182252
 dev_to_id: 2182252
 dev_to_url: https://dev.to/jetthoughts/mastering-ruby-on-rails-best-practices-for-efficient-development-in-2024-2mm

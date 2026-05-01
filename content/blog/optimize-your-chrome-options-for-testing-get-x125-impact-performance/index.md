@@ -1,6 +1,7 @@
 ---
 remote_url: https://dev.to/jetthoughts/optimize-your-chrome-options-for-testing-to-get-x125-impact-p74
 source: dev_to
+seo_override: true
 remote_id: 1560068
 dev_to_id: 1560068
 dev_to_url: https://dev.to/jetthoughts/optimize-your-chrome-options-for-testing-to-get-x125-impact-p74

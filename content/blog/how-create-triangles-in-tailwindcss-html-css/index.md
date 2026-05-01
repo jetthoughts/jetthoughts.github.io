@@ -1,6 +1,7 @@
 ---
 remote_url: https://dev.to/jetthoughts/how-to-create-triangles-in-tailwindcss-2in
 source: dev_to
+seo_override: true
 remote_id: 1222970
 dev_to_id: 1222970
 dev_to_url: https://dev.to/jetthoughts/how-to-create-triangles-in-tailwindcss-2in

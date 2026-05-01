@@ -28,12 +28,36 @@ module Sync
       metadata = generate_metadata(article)
       # Merge with sync status overrides
       metadata["slug"] = status[:slug]
-      metadata["description"] = status[:description] || metadata["description"]
 
-      Post.new(status[:slug], working_dir: (app || App.config).working_dir).tap do |post|
+      working_dir = (app || App.config).working_dir
+
+      # SEO override: posts marked with `seo_override: true` in their
+      # frontmatter preserve their local title + description across dev.to
+      # syncs. Without this flag, the 10-min sync cron clobbers any
+      # locally-edited SEO snippet by re-pulling the dev.to canonical
+      # values. See docs/workflows/blog-pipeline.md "SEO override" section.
+      local = load_local_metadata(status[:slug], working_dir)
+      if local && local["seo_override"]
+        metadata["title"] = local["title"] if local["title"]
+        metadata["description"] = local["description"] if local["description"]
+        metadata["seo_override"] = true
+      else
+        metadata["description"] = status[:description] || metadata["description"]
+      end
+
+      Post.new(status[:slug], working_dir: working_dir).tap do |post|
         post.metadata = metadata
         post.body_markdown = content
       end
+    end
+
+    def self.load_local_metadata(slug, working_dir)
+      post = Post.new(slug, working_dir: working_dir)
+      return nil unless post.content_path.file?
+      post.load
+      post.metadata
+    rescue
+      nil
     end
 
     def save
