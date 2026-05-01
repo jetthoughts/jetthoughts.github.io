@@ -19,85 +19,80 @@ metatags:
   image: cover.png
 slug: new-in-rails-72-active-model-got-typeforattribute-changelog
 ---
-## What's New?
 
-Ruby on Rails 7.2 brings a handy change. The `type_for_attribute` method is now in Active Model.
+## Method signature
+
+```ruby
+ClassName.type_for_attribute(attribute_name) # => ActiveModel::Type::Value subclass
+```
+
+Rails 7.2 moved `type_for_attribute` from Active Record to Active Model. Any class that includes `ActiveModel::Attributes` now exposes the same type lookup that Active Record models have always had. The method returns the type object Rails uses internally to cast values, so you can ask "what is the declared type of `:age`?" without instantiating the model.
+
+The change shipped in [Rails PR #51653](https://github.com/rails/rails/pull/51653) and is documented in the [Rails 7.2 release notes](https://guides.rubyonrails.org/7_2_release_notes.html).
 
 ![Image description](file_0.png)
 
-## What is type_for_attribute?
-
-It's a method that simplifies type checking, relieving you from the burden of manual checks for both Active Record and Active Model.
-
-## How it Works
-
-Here is a simple example:
+## Active Model example
 
 ```ruby
-
 class MyModel
+  include ActiveModel::Attributes
 
-  include ActiveModel::Attributes
-
-  attribute :my_attribute, :integer
-
+  attribute :my_attribute, :integer
 end
 
-MyModel.type_for_attribute(:my_attribute) # => #<ActiveModel::Type::Integer ...>
+MyModel.type_for_attribute(:my_attribute)
+# => #<ActiveModel::Type::Integer ...>
+
+MyModel.type_for_attribute(:my_attribute).cast("42")
+# => 42
 ```
 
-## Real-Life Example
+The return value is an `ActiveModel::Type::Value` subclass - `Integer`, `String`, `Boolean`, `DateTime`, and so on - with `cast`, `serialize`, and `deserialize` methods.
 
-Think of a signup form. You need to check the types of inputs. Here is how you can use it:
+## Active Record still works the same way
+
+```ruby
+class User < ApplicationRecord
+end
+
+User.type_for_attribute(:email)
+# => #<ActiveModel::Type::String ...>
+```
+
+Active Record inherits the method through the same code path now, so the API is identical across both layers.
+
+## Use case: validating form input by declared type
 
 ```ruby
 class SignupForm
+  include ActiveModel::Attributes
 
-  include ActiveModel::Attributes
+  attribute :email, :string
+  attribute :age, :integer
 
-  attribute :email, :string
+  def initialize(params)
+    params.each do |key, value|
+      type = self.class.type_for_attribute(key.to_sym)
+      raise ArgumentError, "Unknown attribute: #{key}" if type.nil?
 
-  attribute :age, :integer
-
-  def initialize(params)
-
-    @params = params
-
-    @params.each do |key, value|
-
-      if self.class.type_for_attribute(key.to_sym)
-
-        send("#{key}=", value)
-
-      else
-
-        raise "Unknown attribute type"
-
-      end
-
-    end
-
-  end
-
+      public_send("#{key}=", type.cast(value))
+    end
+  end
 end
 
-form = SignupForm.new(email: "test@example.com", age: "twenty")
-
-# raises "Unknown attribute type" if age is not an integer
+form = SignupForm.new(email: "test@example.com", age: "42")
+form.age # => 42 (cast from "42")
 ```
 
-## Before the Change
+Before Rails 7.2 you had to maintain a parallel hash of attribute types or duplicate the Active Record helper. The method does one job: hand back the type object so you can cast or inspect it.
 
-Before this update, you had to write custom code. You had to check types manually.
+## Why it matters
 
-## After the Change
+If you build form objects, command objects, or any plain Ruby class that uses `ActiveModel::Attributes`, you get the same introspection Active Record models have. No more `attributes.fetch(:age).type` workarounds. No custom registries.
 
-Now, `type_for_attribute` makes it easy and saves you valuable time. Just include `ActiveModel::Attributes`. It makes your code cleaner and your development process more efficient.
+## Building Rails apps that ship?
 
-## Why It Matters
+We rescue Rails projects that other shops left in a broken state - upgrades, performance work, test coverage. If your team is stuck on an older Rails version or your app is bleeding money on N+1 queries, talk to us.
 
-This change empowers you to catch errors, ensures data integrity, and is a small but powerful tool that puts you in control of your code.
-
-## In Summary
-
-Ruby on Rails 7.2 simplifies type checking. Use `type_for_attribute` with the Active Model. It's quick and efficient. This change is a great addition. Give it a try in your next project!
+<a class="cta-link" href="https://jetthoughts.com/services/">Book a 30-minute Rails review</a>

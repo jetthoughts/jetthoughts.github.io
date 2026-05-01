@@ -21,9 +21,9 @@ metatags:
   image: cover.jpeg
 slug: optimize-your-chrome-options-for-testing-get-x125-impact-performance
 ---
-🚀 Increase Browser Test Speed with Chrome Options Optimization 🚀
+Slow Capybara + Selenium suite? The right Chrome flags trim 20-25% off wall-clock time on a typical Rails system test run. Below is the exact set of flags I use - copy the `CHROME_ARGS` constant straight into your `ApplicationSystemTestCase` and re-run.
 
-Are you looking to supercharge your browser tests and optimize their speed? By fine-tuning your Chrome browser options, you can significantly enhance the performance of your automated tests.
+The full description of every flag is below the snippet, so you can audit which ones are safe for your environment before shipping.
 
 ![Image description](file_0.jpeg)
 
@@ -47,7 +47,7 @@ CHROME_ARGS = {
   'disable-dev-shm-usage' => nil,
   'disable-domain-reliability' => nil,
   'disable-extensions' => nil,
-  'disable-features' => 'TranslateUI,BlinkGenPropertyTrees',
+  'disable-features' => 'Translate,AcceptCHFrame,MediaRouter,OptimizationHints',
   'disable-hang-monitor' => nil,
   'disable-infobars' => nil,
   'disable-ipc-flooding-protection' => nil,
@@ -117,7 +117,7 @@ end
 
 `--disable-extensions`: Disables extensions during testing, eliminating any interference they might cause.
 
-`--disable-features=TranslateUI,BlinkGenPropertyTrees`: Disables specific browser features like TranslateUI and BlinkGenPropertyTrees that may not be necessary for testing.
+`--disable-features=Translate,AcceptCHFrame,MediaRouter,OptimizationHints`: Disables features that aren't relevant in CI - the translate prompt, AcceptCH client hints, the media router, and on-device optimization hints. Older guides reference `BlinkGenPropertyTrees`, but that flag was removed in Chromium - dropping it avoids a noisy warning in headless logs.
 
 `--disable-hang-monitor`: Disables the hang monitor feature, which helps avoid unnecessary interruptions during tests.
 
@@ -171,4 +171,8 @@ end
 
 ## Disclaimer
 
-Remember that not all of these options may be relevant to your specific testing needs, so evaluating their impact on your test environment and application behavior is essential. Happy optimizing! 🚀💨
+Not every flag is safe for every environment. `--disable-web-security` and `--no-sandbox` open holes you do not want in any browser that touches real traffic - keep them inside the test runner only. Run your suite with and without each flag block to confirm impact before adopting it permanently.
+
+If your Rails test suite runs slow on CI and you'd rather not spend a week tuning it yourself, JetThoughts has rescued dozens of Rails apps from flaky, multi-hour CI builds. We profile the suite, fix the worst offenders, and hand back a green pipeline.
+
+<a class="cta-link" href="https://jetthoughts.com/services/app-web-development/">Get help speeding up your Rails test suite</a>

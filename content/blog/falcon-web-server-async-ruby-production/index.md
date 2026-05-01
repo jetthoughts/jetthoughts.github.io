@@ -14,9 +14,21 @@ metatags:
   image: cover.png
 ---
 
-Ruby's web server landscape has been dominated by Puma and Unicorn for years, but a new contender is changing the game. **Falcon**, built by Samuel Williams and the Socketry team, brings true asynchronous, fiber-based concurrency to Ruby applications. This isn't just another web server – it's a fundamental shift toward modern, high-performance Ruby applications.
+Falcon is an async, fiber-based Rack server for Ruby, built by Samuel Williams and the Socketry team. It runs on top of the `async` gem and Ruby's fiber scheduler, which makes a single worker handle thousands of slow I/O requests without threads.
 
-In this comprehensive guide, we'll explore Falcon's architecture, benchmark its performance against traditional servers, and learn how to deploy it in production. Whether you're looking to handle thousands of concurrent connections or simply want to modernize your Ruby stack, Falcon offers compelling advantages.
+Install and run it on a Rack app:
+
+```bash
+# Gemfile
+gem 'falcon', '~> 0.47'
+
+bundle install
+bundle exec falcon serve --bind http://0.0.0.0:3000
+```
+
+For Rails, add `gem 'falcon'` to the production group, then point your process manager at `bundle exec falcon --config config/falcon.rb serve`. A minimal `config/falcon.rb` is in the [Rails Integration](#rails-integration) section below.
+
+The rest of this post covers architecture, benchmarks against Puma and Unicorn, production configuration (systemd, Docker, Kubernetes), migration steps, and monitoring.
 
 ## Table of Contents
 
@@ -32,7 +44,7 @@ In this comprehensive guide, we'll explore Falcon's architecture, benchmark its 
 
 ## Understanding Falcon's Architecture
 
-Falcon represents a paradigm shift in Ruby web server design. Unlike traditional multi-process or multi-threaded servers, Falcon leverages Ruby's fiber scheduler and the `async` gem to create a cooperative, non-blocking architecture.
+Unlike traditional multi-process or multi-threaded servers, Falcon uses Ruby's fiber scheduler and the `async` gem to run a cooperative, non-blocking architecture inside each worker.
 
 ### Core Architecture Components
 
@@ -131,7 +143,7 @@ end
 
 ## Performance Benchmarks
 
-Let's examine how Falcon performs against traditional Ruby web servers. These benchmarks were conducted using consistent hardware and testing methodologies.
+Numbers below come from runs against Puma, Unicorn, and a couple of alternatives on identical hardware. Treat them as a starting point - your workload, gem stack, and database pool sizing will all shift the ratios.
 
 ### Hardware Configuration
 - **CPU**: Intel i7-4770 @ 3.40GHz (4 cores, 8 threads)
@@ -184,7 +196,7 @@ Let's examine how Falcon performs against traditional Ruby web servers. These be
 
 ## Getting Started with Falcon
 
-Let's walk through setting up Falcon for different types of applications.
+Setup for Rack, Rails, and Sinatra is below. Each section is self-contained - skip to the one matching your app.
 
 ### Installation
 
@@ -478,7 +490,7 @@ RUN bundle config set --local deployment 'true' && \
     bundle install
 
 # Copy application
-COPY ../2025 .
+COPY . .
 
 # Compile assets
 RUN RAILS_ENV=production rails assets:precompile
@@ -773,7 +785,7 @@ config.middleware.use PerformanceMonitor if Rails.env.production?
 
 ## Real-World Use Cases
 
-Let's explore specific scenarios where Falcon excels and see practical implementations.
+Three patterns where Falcon's fiber model genuinely changes the architecture, with code you can adapt.
 
 ### High-Concurrency API Server
 
@@ -1333,7 +1345,7 @@ end
 
 ## The Future of Async Ruby
 
-Falcon represents more than just a web server – it's part of a broader movement toward asynchronous Ruby. Let's explore where this is heading.
+Falcon is part of a broader move toward async Ruby. A few changes worth tracking if you're betting on this stack.
 
 ### Ruby Language Evolution
 
@@ -1563,32 +1575,20 @@ end
 - Modern deployment practices (Kubernetes, containers)
 - Performance monitoring and debugging
 
-## Conclusion
+## When Falcon makes sense (and when it doesn't)
 
-Falcon represents a significant evolution in Ruby web server architecture, bringing modern asynchronous patterns to the Ruby ecosystem. Its fiber-based approach offers substantial performance benefits for I/O-heavy applications while maintaining the simplicity and elegance Ruby developers love.
+Falcon pays off when most of your request time is spent waiting on I/O: external APIs, slow databases, WebSocket fan-out, server-sent events. In our benchmarks above, that profile is where the gap against Puma is largest.
 
-Key takeaways from this comprehensive guide:
+It pays off less when your bottleneck is CPU. Fibers are cooperative within a single thread per worker, so a CPU-bound request blocks every other fiber in that worker. If your app is mostly serialization, ERB rendering, or expensive in-process computation, Falcon won't magically make it faster - tune Puma worker counts or move work to background jobs first.
 
-**Performance Benefits**: Falcon can handle 2-6x more concurrent requests than traditional Ruby servers, with lower memory usage and better resource utilization.
+Other trade-offs worth naming:
 
-**Modern Features**: Built-in HTTP/2, WebSocket support, and TLS capabilities make Falcon ready for modern web applications.
+- **Ecosystem maturity:** async-aware database adapters and HTTP clients are improving but still uneven. Plain `Net::HTTP` and ActiveRecord work, but you only get the async win if the I/O actually yields.
+- **Operational unfamiliarity:** most ops teams know how to debug Puma. Fiber-based stack traces and async errors are a new skill set.
+- **Memory ceilings:** fibers are cheap, but each connection still holds Rack env, ActiveRecord objects, and any per-request state. "Thousands of concurrent connections" assumes thin payloads.
 
-**Production Ready**: With proper configuration and monitoring, Falcon scales effectively in production environments.
+For an I/O-heavy Rails or Sinatra app willing to absorb that learning curve, Falcon is a solid choice. For a typical CRUD app with a fast database, Puma is still the boring correct answer.
 
-**Migration Path**: Gradual migration strategies allow teams to adopt Falcon incrementally, reducing risk while gaining benefits.
+If you're weighing a migration on a real codebase, our Rails team has shipped Falcon in production and can help you decide whether the move is worth it for your traffic profile.
 
-**Future Focused**: Falcon is positioned to take advantage of ongoing Ruby language improvements and ecosystem evolution.
-
-Whether you're building high-traffic APIs, real-time applications, or microservices architectures, Falcon offers a compelling alternative to traditional Ruby web servers. The combination of performance, modern features, and Ruby's developer productivity makes it an excellent choice for next-generation Ruby applications.
-
-Implementing production-ready Falcon deployments requires expertise in async programming patterns, WebSocket architecture, and high-concurrency system design. Our [Ruby on Rails development team](/services/app-web-development/) has extensive experience with Falcon implementations, helping clients achieve 3-6x performance improvements while maintaining system reliability and reducing infrastructure costs through optimized async patterns.
-
-Need expert help migrating to Falcon or implementing high-performance async Ruby applications? Our [experienced Ruby development team](/services/app-web-development/) has successfully deployed Falcon in production environments, handling millions of concurrent connections while optimizing for performance, scalability, and reliability.
-
-The async Ruby ecosystem is rapidly maturing, and Falcon is leading the charge. By adopting Falcon today, you're not just improving your application's performance – you're preparing for the future of Ruby web development.
-
----
-
-*Ready to modernize your Ruby applications with Falcon? Start with a development environment, run performance benchmarks against your existing setup, and experience the power of asynchronous Ruby firsthand.*
-
-**What patterns have you discovered while working with async Ruby? Share your experiences and let's discuss the future of high-performance Ruby applications.**
+[Talk to our Rails team about Falcon](/services/app-web-development/){.cta-link}

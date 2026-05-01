@@ -21,15 +21,15 @@ metatags:
   image: cover.jpeg
 slug: how-create-triangles-in-tailwindcss-html-css
 ---
-In this post, we are going to see four examples of how to draw a triangle in TailwindCSS using borders.
+Need a CSS triangle in a Tailwind project without dropping into custom CSS? Use a zero-size box and color one border. Four directions, four snippets - copy, paste, ship.
 
 ## Triangle Down
 
-Triangle is one of the simplest shapes in geometry. You can draw it with three straight lines and a couple of angles.
+Set width and height to `0`, then color one border solid and the two adjacent borders transparent. The browser draws the angled edges between them as a filled triangle.
 
-1. Set a width and height of 0 by: `w-0` and `h-0`
-2. Set the top border to have the full height and color by: `border-t-[75px] border-t-red-500`
-3. Set the side borders to half the width with the color transparent by: `border-l-[50px] border-l-transparent` and `border-r-[50px] border-r-transparent`
+1. `w-0 h-0` collapses the box.
+2. `border-t-[75px] border-t-red-500` paints the top border full height and color.
+3. `border-l-[50px] border-l-transparent` and `border-r-[50px] border-r-transparent` set the side borders to half the width with the color transparent.
 
 ```html
 <div class="w-0 h-0 
@@ -77,8 +77,10 @@ Triangle is one of the simplest shapes in geometry. You can draw it with three s
 
 ![Image description](file_3.png)
 
-In this post, we showed examples of a simple equilateral triangle. If you need a triangle with different sides, you can play with the width of the border `[*px]`.
-
-If you inherited a frontend where developers reach for custom CSS triangles instead of using an icon library, that gap between effort and result is worth investigating. Our [code quality evaluation guide](/blog/code-quality-evaluation-non-technical-founders/) walks you through the questions that surface these kinds of shortcuts.
+All four examples produce a roughly equilateral triangle. To change the proportions, adjust the border widths in the `[*px]` brackets - the colored border controls the height (or width, for left/right variants), and the two transparent borders control the opposite dimension.
 
 For more Tailwind techniques, see our guides on [CSS triangles without Tailwind](/blog/how-create-triangles-in-css-html/) and [full-screen vertical centering](/blog/vertical-align-with-full-screen-across-tailwind-css-jetthoughts/).
+
+If you inherited a frontend where developers hand-roll CSS triangles instead of using an icon library, that gap between effort and result is worth a closer look. Our [code quality evaluation guide](/blog/code-quality-evaluation-non-technical-founders/) walks through the questions that surface these shortcuts.
+
+[Talk to our team about a frontend audit](/contact/){.cta-link}

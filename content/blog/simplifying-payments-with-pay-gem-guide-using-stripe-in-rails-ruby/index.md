@@ -21,7 +21,29 @@ metatags:
   image: cover.jpeg
 slug: simplifying-payments-with-pay-gem-guide-using-stripe-in-rails-ruby
 ---
-Payment integration can be challenging when building web applications. The Pay gem makes handling subscriptions and payments a whole lot easier in Rails applications. It integrates applications with Stripe, Paddle, Braintree, or Lemon Squeezy to manage payments. In this article, we will go through one and, in practice, explain how it works and then set it up using a simple example.
+Payment integration adds a lot of moving parts to a Rails app. The [Pay gem](https://github.com/pay-rails/pay) (current version `11.6.x`, Rails 6.0+) wraps Stripe, Paddle, Braintree, and Lemon Squeezy behind one Rails-friendly interface so you don't write the customer, subscription, and webhook plumbing yourself.
+
+**Quick start (TL;DR):**
+
+```ruby
+# Gemfile
+gem "pay", "~> 11.6"
+```
+
+```bash
+bundle install
+bin/rails generate pay:install
+bin/rails db:migrate
+```
+
+```ruby
+# app/models/user.rb
+class User < ApplicationRecord
+  pay_customer
+end
+```
+
+That's the minimum viable setup. The rest of this post walks through configuring Stripe, wiring webhooks, and creating a subscription.
 
 ## What is Pay?
 
@@ -46,7 +68,7 @@ Here’s how to get started:
 Add Pay to your Gemfile and install it:
 
 ```ruby
-gem 'pay'
+gem "pay", "~> 11.6"
 ```
 
 Run the `bundle install` command to install it:
@@ -54,6 +76,8 @@ Run the `bundle install` command to install it:
 ```bash
 bundle install
 ```
+
+Pay 11.x targets Rails 6.0+ and uses Stripe API version `2022-11-15`. If you're on an older Pay release, read the [UPGRADE guide](https://github.com/pay-rails/pay/blob/main/UPGRADE.md) before bumping - the migrations changed shape between major versions.
 
 #### 2. Configure Pay
 
@@ -165,4 +189,8 @@ Instead of directly interacting with the Stripe API, Pay handles the heavy lifti
 
 The Pay gem simplifies integrating Stripe with Rails. By abstracting common payment tasks, it lets you focus on your app's features instead of payment processing details.
 
-If you’re starting with payments in Rails, consider using Pay—it’s designed to save you time and make your code cleaner.
+If you're starting with payments in Rails, Pay is the path of least resistance - one gem covers Stripe, Paddle, Braintree, and Lemon Squeezy without locking you in.
+
+If you're stuck wiring Stripe into an existing Rails app and your billing logic is starting to leak into half a dozen models, JetThoughts can help you ship a clean Pay-based subscription system in a few weeks.
+
+<a class="cta-link" href="https://jetthoughts.com/services/app-web-development/">Get help integrating Stripe in your Rails app</a>
