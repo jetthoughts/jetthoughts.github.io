@@ -1,8 +1,8 @@
 ---
 title: "The Quality Tax: AI MVPs Cost More to Fix"
 description: "Agencies pitch AI-built MVPs as faster and cheaper. The 2026 data says fixing them costs 2-3x what you saved. Here is the real founder math, with sources."
-date: 2026-05-06
-draft: true
+date: 2026-05-02
+draft: false
 author: "JetThoughts Team"
 slug: "quality-tax-ai-mvp-cost"
 keywords: "ai development cost overrun, ai code quality cost, vibe coding true cost, ai mvp maintenance cost"
