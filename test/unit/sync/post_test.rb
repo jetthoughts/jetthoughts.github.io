@@ -53,5 +53,18 @@ module Sync
       assert_equal "Remote title", post.metadata["title"]
       assert_equal "Remote description", post.metadata["description"]
     end
+
+    def test_create_from_remote_falls_back_to_remote_when_local_frontmatter_malformed
+      storage = PostStorage.new(@app.working_dir)
+      storage.ensure_page_bundle_directory("test-article")
+      storage.save_content("test-article", "---\n: : not: valid yaml :\n---\nbody")
+      remote_article = sample_article("title" => "Remote title", "description" => "Remote description")
+      status = {slug: "test-article"}
+
+      post = Post.create_from_remote_details(remote_article, status, app: @app)
+
+      assert_equal "Remote title", post.metadata["title"]
+      assert_equal "Remote description", post.metadata["description"]
+    end
   end
 end

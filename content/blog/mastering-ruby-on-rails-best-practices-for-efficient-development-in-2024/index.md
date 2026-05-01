@@ -37,7 +37,7 @@ faqs:
   - question: "How do I optimize Rails performance?"
     answer: "Rails performance can be optimized through caching strategies, using background jobs for long-running tasks, optimizing database queries with ActiveRecord scopes, and implementing proper view helpers and partials."
 ---
-Ruby on Rails is still one of the go-to frameworks for web development in 2024. It's known for making developers' lives easier with its conventions and a focus on getting things done fast. But to really get the most out of Rails, you gotta stick to some best practices. They help keep your code clean, your apps fast, and your users happy. In this article, we'll break down some key practices you should follow to master Ruby on Rails in 2024.
+Ruby on Rails is still one of the go-to frameworks for web development in 2026. It's known for making developers' lives easier with its conventions and a focus on getting things done fast. But to really get the most out of Rails, you gotta stick to some best practices. They help keep your code clean, your apps fast, and your users happy. In this article, we'll break down some key practices you should follow to master Ruby on Rails in 2026.
 
 ### Key Takeaways
 
