@@ -105,3 +105,10 @@ _workspace
 .stitch/next-prompt.md
 .stitch/stitch-mockup.html
 .stitch/SITE.md
+
+# Sprint coordinator/verification reports — working notes only, not project docs.
+# User policy 2026-04-30: write to /tmp/ instead, or restore-staged before commit.
+docs/projects/**/sprint-*-coordinator-report.md
+docs/projects/**/sprint-*-verification-report.md
+docs/projects/**/*-coordinator-report.md
+docs/projects/**/*-verification-report.md

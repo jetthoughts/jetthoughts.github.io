@@ -19,9 +19,9 @@ canonical_url: "https://jetthoughts.com/blog/dev-shop-red-flags-checklist/"
 
 The worst dev shops don't miss deadlines - they miss them quietly.
 
-You hired a team and wrote them a check. Weeks pass, maybe months, and the updates sound fine - "making progress," "almost there." Then one day you realize you've spent **$40K** and you can't demo a single working feature to your investors. If you're searching for confirmation that something's wrong with your dev shop, it is.
+You hired a team and wrote them a check. Weeks pass, maybe months, and the updates sound fine - "making progress," "almost there." Then one day you realize **you've spent $40K and you can't demo a single working feature to your investors.** If you're searching for confirmation that something's wrong with your dev shop, it is.
 
-The [Standish Group's CHAOS report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) tracks software project outcomes every year. In 2024: **19%** of projects failed outright, and another **47%** came in late, over budget, or missing features. That's two-thirds. For startups with outsourced agencies, the numbers run worse.
+The [Standish Group's CHAOS report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) tracks software project outcomes every year. In 2024: 19% of projects failed outright, and another 47% came in late, over budget, or missing features. **That's two-thirds.** For startups with outsourced agencies, the numbers run worse.
 
 I've compiled eight dev shop warning signs from twenty years of cleaning up after agencies. If you recognize three or more, you've got a problem - and five means an emergency.
 
@@ -43,11 +43,11 @@ Good teams send [plain-English async standups](/blog/how-make-small-valuable-asy
 
 ## 3. Estimates That Keep Growing
 
-The project was **$30K**, then **$45K**, and now they're hinting at **$60K** while the feature list got shorter.
+The project was $30K, then $45K, and now they're hinting at **$60K while the feature list got shorter**.
 
-Two explanations, and neither is good: they either quoted too low to win the deal, or they're drowning in [technical debt](/blog/fixing-slow-engineering-teams-an-extended/) - rework caused by code that was badly written the first time. [LitsLink reports](https://litslink.com/blog/cost-of-outsourcing-software-development) that developers spend **42%** of their time on technical debt and maintenance. Nearly half their hours go to fixing old mistakes, not building new features.
+Two explanations, and neither is good: they either quoted too low to win the deal, or they're drowning in [technical debt](/blog/fixing-slow-engineering-teams-an-extended/) - rework caused by code that was badly written the first time. [LitsLink reports](https://litslink.com/blog/cost-of-outsourcing-software-development) that **developers spend 42% of their time on technical debt and maintenance**. Nearly half their hours go to fixing old mistakes, not building new features.
 
-Budget creep usually means the team didn't plan or test properly. And now they don't want to tell you the real number, so they drip it out **$15K at a time**.
+Budget creep usually means the team didn't plan or test properly. And now they don't want to tell you the real number, so they drip it out $15K at a time.
 
 ## 4. No Automated Tests
 
@@ -61,9 +61,9 @@ We screwed this up early in our own history - our team took over a project once 
 
 ### Why This Is Worse in 2026
 
-The rise of ["vibe coding"](/blog/vibe-coding-crisis-ai-code-debt/) - agencies using AI to generate **90%+** of the codebase - has made this red flag catastrophic. AI-generated code looks clean, with good variable names and consistent formatting that reads like a textbook.
+The rise of ["vibe coding"](/blog/vibe-coding-crisis-ai-code-debt/) - agencies using AI to generate 90%+ of the codebase - has made this red flag catastrophic. AI-generated code looks clean, with good variable names and consistent formatting that reads like a textbook.
 
-But the developers who generated it never wrote tests, never handled errors, and never checked edge cases. [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces **1.7x more issues** than human-written code. And when [Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/), their researchers discovered that **45%** of the generated code contained exploitable security flaws.
+But the developers who generated it never wrote tests, never handled errors, and never checked edge cases. [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces **1.7x more issues** than human-written code. And when [Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/), their researchers discovered that 45% of the generated code contained exploitable security flaws.
 
 The vibe coding shops skip tests entirely because the AI output "looks like it works." It does - until real users show up and everything breaks at once, leaving you paying emergency rates to fix code that should never have shipped.
 
@@ -99,19 +99,19 @@ When your agency's first move is "throw it all away and let us rebuild," ask the
 
 ## 8. Invoice Surprises
 
-"This month was **$12K** instead of **$8K** because we had to handle some infrastructure issues."
+"This month was **$12K instead of $8K** because we had to handle some infrastructure issues."
 
 What infrastructure issues? When did someone flag them? Why didn't anyone mention this before the bill arrived?
 
-Good teams track hours per task and share them weekly so you know exactly where money goes and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that **70%** of executives had pulled outsourced work back in-house - budget unpredictability was a top driver.
+Good teams track hours per task and share them weekly so you know exactly where money goes and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that **70% of executives had pulled outsourced work back in-house** - budget unpredictability was a top driver.
 
 Invoice surprises are a symptom, not the disease. The disease is that someone decided you didn't need to know.
 
 ---
 
-We've cleaned up after **40+ failed dev shop engagements** over seventeen years. In **91%** of them, test coverage was under **5%**. The average founder had already spent **$80K-$200K** before calling.
+We've cleaned up after 40+ failed dev shop engagements over seventeen years. **In 91% of them, test coverage was under 5%.** The average founder had already spent $80K-$200K before calling.
 
-If three or more of these sound familiar, we do a free **45-minute** code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract, and no follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
+If three or more of these sound familiar, we do a free 45-minute code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract, and no follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
 
 ---
 
@@ -138,11 +138,11 @@ Don't panic, and don't send an angry email at midnight. Here's the sequence.
 
 Tonight - not tomorrow - verify you have access to your code repository, hosting accounts, domain registrar, and all third-party services. If anything is under their email instead of yours, start transferring it now.
 
-This week, get a second opinion. Hire a freelance senior developer or [fractional CTO](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/) for **4 hours** and have them look at the code. They'll tell you - in plain English - what shape it's in. This costs **$500-$2,000** and might be the most important money you spend this year.
+This week, get a second opinion. Hire a freelance senior developer or [fractional CTO](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/) for 4 hours and have them look at the code. They'll tell you - in plain English - what shape it's in. **This costs $500-$2,000 and might be the most important money you spend this year.**
 
-Within **30 days**, make a decision. Either set measurable improvement targets (repo access, weekly reports, test coverage number) with a hard deadline, or begin the exit. Our [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the mechanics, and if you need someone to manage the transition, the [5 warning signs you need technical leadership](/blog/5-warning-signs-your-startup-needs-technical-leadership/) will help you decide.
+Within 30 days, make a decision. Either set measurable improvement targets (repo access, weekly reports, test coverage number) with a hard deadline, or begin the exit. Our [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the mechanics, and if you need someone to manage the transition, the [5 warning signs you need technical leadership](/blog/5-warning-signs-your-startup-needs-technical-leadership/) will help you decide.
 
-Before you hire the next team, don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice. Ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership. Those three requests filter out **80%** of bad agencies.
+Before you hire the next team, don't fall into the [outsourcing trap](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/) twice. Ask for a sample weekly report, a real test coverage number, and a contract with milestone-based code ownership. **Those three requests filter out 80% of bad agencies.**
 
 If you're evaluating your current team or vetting the next one:
 

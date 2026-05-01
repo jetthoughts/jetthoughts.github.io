@@ -17,7 +17,7 @@ canonical_url: https://jetthoughts.com/blog/rails-8-1-active-job-continuations-b
 
 Your background jobs lie to you.
 
-You tell yourself they're idempotent. You tell yourself retries are safe. Then a [Kamal](/blog/kamal-integration-in-rails-8-by-default-ruby/) deploy kicks off at 2pm, a **40-minute** import job gets **30 seconds** to shut down, and the whole thing restarts from row one on the next container. Your users wait. Your database works twice. Your server bill grows.
+You tell yourself they're idempotent. You tell yourself retries are safe. Then a [Kamal](/blog/kamal-integration-in-rails-8-by-default-ruby/) deploy kicks off at 2pm, a 40-minute import job gets 30 seconds to shut down, and **the whole thing restarts from row one on the next container**. Your users wait. Your database works twice. Your server bill grows.
 
 Rails 8.1 fixes this with a first-class API called `ActiveJob::Continuable`. Include it in a job, define steps, and if the process dies mid-run, the retry picks up where it left off instead of starting over.
 
@@ -75,15 +75,15 @@ You're not fine. Here's why.
 
 ### 1. Kamal's 30-Second Shutdown Is Real
 
-Kamal — the default Rails 8 deployment tool — gives job-running containers **30 seconds** to exit gracefully on deploy. Not **30 minutes**. Thirty seconds. If your nightly report job is **20 minutes** in when the deploy hits, it's dead. The standard Sidekiq retry starts it from the beginning. You've just done the work twice and delayed the deploy while the second run catches up.
+Kamal — the default Rails 8 deployment tool — gives job-running containers **30 seconds** to exit gracefully on deploy. Not 30 minutes. Thirty seconds. If your nightly report job is 20 minutes in when the deploy hits, it's dead. The standard Sidekiq retry starts it from the beginning. You've just done the work twice and delayed the deploy while the second run catches up.
 
 Continuations turn that restart into a resume. The deploy still kills the worker. The retry still fires. But the work already done stays done. (For automating those deploys, see our guide on [Kamal 2 with GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).)
 
 ### 2. The Server Cost Is Quiet but Real
 
-Every restarted job does the work twice. If your **18-minute** nightly report gets killed at minute 17 by a deploy, the retry runs all 18 minutes again — you paid for **35 minutes** of compute to get **18 minutes** of output. That cost sits in the bill as "background workers," which most teams never dig into.
+Every restarted job does the work twice. If your 18-minute nightly report gets killed at minute 17 by a deploy, the retry runs all 18 minutes again — **you paid for 35 minutes of compute to get 18 minutes of output**. That cost sits in the bill as "background workers," which most teams never dig into.
 
-The math is blunt: if you deploy daily and you run any job longer than **10 minutes**, you're paying for restarts. The cost scales linearly with deploy frequency and job duration. Continuations stop you from paying.
+The math is blunt: if you deploy daily and you run any job longer than 10 minutes, you're paying for restarts. The cost scales linearly with deploy frequency and job duration. **Continuations stop you from paying.**
 
 ### 3. Your Idempotency Isn't What You Think
 
@@ -178,9 +178,9 @@ class NightlyReportJob < ApplicationJob
 end
 ```
 
-Four expensive steps. Total runtime: **~18 minutes**. Kamal deploy window: **30 seconds**.
+Four expensive steps. Total runtime: ~18 minutes. **Kamal deploy window: 30 seconds.**
 
-Before continuations, a deploy during `render_pdf` meant the retry re-runs both aggregation steps — another **12 minutes** of wasted Postgres time. After continuations, the retry skips straight to `render_pdf`. The deploy cost drops from **18 minutes** of duplicated work to zero.
+Before continuations, a deploy during `render_pdf` meant the retry re-runs both aggregation steps — another 12 minutes of wasted Postgres time. After continuations, the retry skips straight to `render_pdf`. **The deploy cost drops from 18 minutes of duplicated work to zero.**
 
 ## When NOT to Use Continuations
 
@@ -195,7 +195,7 @@ Like every powerful feature, this one has wrong uses.
 
 If you're on Rails 8.0 today, the migration is two steps.
 
-**Step 1: Upgrade to Rails 8.1.3 or later.** The current stable release (as of **March 24, 2026**) is **Rails 8.1.3** and **Rails 8.0.5** for maintenance. Continuations require Rails 8.1.
+**Step 1: Upgrade to Rails 8.1.3 or later.** The current stable release (as of March 24, 2026) is Rails 8.1.3 and Rails 8.0.5 for maintenance. Continuations require Rails 8.1.
 
 **Step 2: Add `include ActiveJob::Continuable` to jobs that run longer than ~1 minute.** Sort by impact: the longest-running jobs first. Add steps around the natural phase boundaries of the job. Run in staging with a simulated SIGTERM to confirm the resume path works.
 

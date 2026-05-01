@@ -17,13 +17,13 @@ cover_image_alt: "Dark technical cover with structured event flow diagram - log 
 canonical_url: "https://jetthoughts.com/blog/rails-event-structured-logging-8-1/"
 ---
 
-*CTO TL;DR: Your dev team's alerts stop breaking every time they deploy. Rails 8.1 replaces log scraping with structured events your monitoring can trust. We migrated **four production apps**. False-positive alert rate dropped by **60%**.*
+*CTO TL;DR: Your dev team's alerts stop breaking every time they deploy. Rails 8.1 replaces log scraping with structured events your monitoring can trust. We migrated four production apps. **False-positive alert rate dropped by 60%.***
 
-*Non-technical founder? Here is what this means for you: your team spends less time chasing phantom alerts and more time shipping features. The migration takes **one to two days** per app. If your monitoring keeps crying wolf, [forward this to your CTO](mailto:?subject=Our%20Rails%20monitoring%20keeps%20breaking&body=Worth%20reading%20-%20https://jetthoughts.com/blog/rails-event-structured-logging-8-1/) and ask them if this applies.*
+*Non-technical founder? Here is what this means for you: your team spends less time chasing phantom alerts and more time shipping features. **The migration takes one to two days per app.** If your monitoring keeps crying wolf, [forward this to your CTO](mailto:?subject=Our%20Rails%20monitoring%20keeps%20breaking&body=Worth%20reading%20-%20https://jetthoughts.com/blog/rails-event-structured-logging-8-1/) and ask them if this applies.*
 
 Your monitoring setup lies to you - and it does it quietly enough that nobody catches on for months.
 
-A client's Datadog alerts worked for **three months** after we set them up. Their team upgraded to Rails 7.2 and the log output shifted - the regex they'd written against `Completed 200 OK in 247ms` stopped matching. **Two months** of silence before a customer called about a broken checkout flow.
+A client's Datadog alerts worked for three months after we set them up. Their team upgraded to Rails 7.2 and the log output shifted - the regex they'd written against `Completed 200 OK in 247ms` stopped matching. **Two months of silence before a customer called about a broken checkout flow.**
 
 The last three codebases we inherited all had this exact pattern. One ops engineer had even left a comment in the regex file: `# this will break if Rails changes log format - TODO fix`. But ripping it out would have meant two days of work touching alerting configs, Datadog dashboards, and a custom Sidekiq middleware a previous contractor had bolted on, so they left it.
 
@@ -205,13 +205,13 @@ Rails.logger.info(
 
 Logstash picks up the JSON, indexes every field, and your Kibana queries become `event:"user_signed_up" AND plan:"pro"` instead of regex against `INFO -- : User 4821 signed up on plan pro in 234ms`.
 
-We set this up on a client's app last quarter. Their Datadog log *search query* response time went from **8-12 seconds** (full-text grep across unindexed text) to under **300ms** (field-indexed JSON). To be clear - the app itself didn't get faster; their team could find answers in logs faster because Datadog indexed JSON fields instead of scanning raw text. The team started using log search - which is exactly the point where you should think about what this approach does poorly.
+We set this up on a client's app last quarter. **Their Datadog log search query response time went from 8-12 seconds to under 300ms** (full-text grep across unindexed text vs field-indexed JSON). To be clear - the app itself didn't get faster; their team could find answers in logs faster because Datadog indexed JSON fields instead of scanning raw text. The team started using log search - which is exactly the point where you should think about what this approach does poorly.
 
 ## When NOT to use this
 
 Event subscriptions are not the right tool for every observability problem, and we have the scars to prove it.
 
-The subscription API has no built-in backpressure. If you subscribe to `sql.active_record` on an app that runs **10,000 queries per request**, your subscriber fires **10,000 times** per request, and the overhead adds up fast. On a client's e-commerce app last fall, a naive `sql.active_record` subscriber added **40ms** to their checkout endpoint before we caught it in Datadog APM traces - so benchmark first and subscribe selectively.
+The subscription API has no built-in backpressure. If you subscribe to `sql.active_record` on an app that runs 10,000 queries per request, your subscriber fires 10,000 times per request, and the overhead adds up fast. On a client's e-commerce app last fall, **a naive `sql.active_record` subscriber added 40ms to their checkout endpoint** before we caught it in Datadog APM traces - so benchmark first and subscribe selectively.
 
 The event payload shapes, while much improved in 8.1, are still not guaranteed by a versioned schema - Rails can add keys without notice. Test your subscribers defensively by using `payload.fetch(:status, nil)` over `payload[:status]` when the key's absence would cause a crash.
 
@@ -221,7 +221,7 @@ For apps still on Rails 7.x, the monotonic subscribe API exists but the payload 
 
 ## What we've observed across migrations
 
-We've moved **four production Rails apps** from regex-based log monitoring to event subscriptions over the last **eight months**. Three were on Datadog, one on New Relic. The pattern was consistent: the setup ran between **half a day and two days** per app depending on how many custom parsers we had to untangle, and false-positive alerts dropped noticeably in the weeks following - we measured roughly **60% fewer** across the four apps, though the improvement varied by how noisy the original regex parsers were. The apps weren't more reliable. The monitoring just stopped misreading log output from normal Rails behavior.
+We've moved four production Rails apps from regex-based log monitoring to event subscriptions over the last eight months. Three were on Datadog, one on New Relic. The pattern was consistent: the setup ran between half a day and two days per app depending on how many custom parsers we had to untangle, and false-positive alerts dropped noticeably in the weeks following - **we measured roughly 60% fewer across the four apps**, though the improvement varied by how noisy the original regex parsers were. The apps weren't more reliable. The monitoring just stopped misreading log output from normal Rails behavior.
 
 The [Active Job Continuations work in Rails 8.1](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) uses the same instrumentation layer for job lifecycle events. If you're already subscribing to `perform.active_job`, the event shape improvements in 8.1 apply there too.
 

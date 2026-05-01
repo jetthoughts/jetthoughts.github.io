@@ -12,9 +12,9 @@ metatags:
 cover_image_alt: "Dark technical cover with Ruby on Rails branding, performance stats, and glowing gem graphic"
 ---
 
-A client came to us last quarter running Rails 7.2 on Ruby 3.2. Their P95 response time was **3.1 seconds**. The dashboard page — the one every user hits after login — took **4.7 seconds** on a cold cache. They'd already tried throwing hardware at it: upgraded from 2 to 4 Heroku Performance-L dynos at **$500/month** each. Response times didn't budge.
+A client came to us last quarter running Rails 7.2 on Ruby 3.2. Their P95 response time was 3.1 seconds. The dashboard page — the one every user hits after login — took **4.7 seconds** on a cold cache. They'd already tried throwing hardware at it: upgraded from 2 to 4 Heroku Performance-L dynos at $500/month each. Response times didn't budge.
 
-We spent three weeks on their codebase. When we finished, P95 was **380ms**. Monthly infrastructure cost dropped from **$2,800 to $1,600**. And we didn't add a single server.
+We spent three weeks on their codebase. When we finished, **P95 was 380ms**. Monthly infrastructure cost dropped from $2,800 to $1,600. And we didn't add a single server.
 
 I want to walk through what we actually changed, in order, because the sequence matters more than any individual technique.
 
@@ -22,7 +22,7 @@ I want to walk through what we actually changed, in order, because the sequence 
 
 This sounds obvious, but the previous team had already "optimized" by adding Redis caching to random endpoints. Some cached data that changed every 30 seconds. Others cached queries that were already fast. Nobody had profiled.
 
-We installed `rack-mini-profiler` on staging and AppSignal in production. Within two hours, we had the answer: **68%** of the dashboard's response time came from a single controller action that fired **247 SQL queries**. Not a typo. Two hundred and forty-seven.
+We installed `rack-mini-profiler` on staging and AppSignal in production. Within two hours, we had the answer: 68% of the dashboard's response time came from a single controller action that fired **247 SQL queries**. Not a typo. Two hundred and forty-seven.
 
 Here's what the AppSignal trace looked like (simplified):
 
@@ -60,15 +60,15 @@ We rewrote the dashboard query as a single scope with nested `includes`:
   .limit(50)
 ```
 
-That `.limit(50)` matters. The original code loaded every activity ever created for every project, then paginated in Ruby. The founder's oldest project had **14,000 activity records**.
+That `.limit(50)` matters. The original code loaded every activity ever created for every project, then paginated in Ruby. The founder's oldest project had 14,000 activity records.
 
-Dashboard response dropped from **4.7 seconds to 1.2 seconds**. A **74% improvement** from changing one query. But we weren't done — 1.2 seconds is still too slow for a page users hit dozens of times per day.
+Dashboard response dropped from 4.7 seconds to 1.2 seconds. **A 74% improvement from changing one query.** But we weren't done — 1.2 seconds is still too slow for a page users hit dozens of times per day.
 
 ## YJIT: the free 30% nobody had turned on
 
 The app was running Ruby 3.2 without YJIT. Upgrading to Ruby 3.3.6 and enabling YJIT was the second change we shipped, and it cost us about 45 minutes including the CI pipeline update.
 
-[Ruby's official benchmark suite](https://speed.ruby-lang.org/) shows YJIT 4.1.0dev at **94.7% faster** than the interpreter on synthetic x86-64 benchmarks. That number is misleading for Rails apps — our production numbers landed at a **28-32% improvement** in mean response time across all endpoints. Still significant for effectively zero code changes.
+[Ruby's official benchmark suite](https://speed.ruby-lang.org/) shows YJIT 4.1.0dev at 94.7% faster than the interpreter on synthetic x86-64 benchmarks. That number is misleading for Rails apps — **our production numbers landed at a 28-32% improvement in mean response time across all endpoints**. Still significant for effectively zero code changes.
 
 The configuration is one line:
 
@@ -77,9 +77,9 @@ The configuration is one line:
 RubyVM::YJIT.enable
 ```
 
-A caveat worth stating upfront: YJIT increases memory usage by **15-20%** because it holds compiled code in memory. For this client, that meant going from **512MB** to **~600MB** per dyno. On their Performance-L instances with **14GB** RAM, that was irrelevant. On a **512MB** Basic dyno, it might force an upgrade. Know your memory ceiling before enabling it.
+A caveat worth stating upfront: **YJIT increases memory usage by 15-20%** because it holds compiled code in memory. For this client, that meant going from 512MB to ~600MB per dyno. On their Performance-L instances with 14GB RAM, that was irrelevant. On a 512MB Basic dyno, it might force an upgrade. Know your memory ceiling before enabling it.
 
-ZJIT exists as an experimental alternative, but we've measured latency variance of up to **±27%** under load compared to YJIT's **±3%**. For production Rails apps, YJIT is the only serious option right now.
+ZJIT exists as an experimental alternative, but we've measured latency variance of up to ±27% under load compared to **YJIT's ±3%**. For production Rails apps, YJIT is the only serious option right now.
 
 After the Ruby upgrade, the dashboard was at **820ms**. Progress, but we had more room.
 
@@ -98,7 +98,7 @@ We took a different approach. Instead of caching at the model layer, we cached t
 <% end %>
 ```
 
-Russian doll caching. The outer fragment busts when any project changes. Individual activity partials are cached independently. Second page load: **140ms**.
+Russian doll caching. The outer fragment busts when any project changes. Individual activity partials are cached independently. **Second page load: 140ms.**
 
 We've been moving clients toward [Solid Cache](/blog/rails-8-solid-cache-performance-redis-migration/) for apps that don't need Redis's pub/sub features. For this client, Redis was already in the stack for Sidekiq, so we kept it. But if you're starting fresh on Rails 8, the [Solid Trifecta](/blog/solid-trifecta-hybrid-redis-rails-8/) — Solid Cache, Solid Queue, Solid Cable — eliminates Redis as a dependency entirely, which simplifies deployment and cuts your infrastructure bill.
 
@@ -120,7 +120,7 @@ If your app serves 50 requests per minute and your P95 is under 500ms, you don't
 
 Caching is a liability when your data model is still changing weekly. We've watched teams spend days building cache invalidation logic for a feature that got redesigned the following sprint. If the interface isn't stable, don't cache it.
 
-YJIT's memory overhead can be a real cost on small instances. We had a different client on **512MB** Heroku Standard-2X dynos where enabling YJIT pushed them into swap, and performance got worse. The fix was upgrading the dyno tier, which added **$25/month** — still worth it, but not free.
+YJIT's memory overhead can be a real cost on small instances. We had a different client on 512MB Heroku Standard-2X dynos where enabling YJIT pushed them into swap, and performance got worse. The fix was upgrading the dyno tier, which added $25/month — still worth it, but not free.
 
 And profiling has diminishing returns. Once your P95 is under 200ms and your slowest queries are under 50ms, you're in a zone where further optimization costs more engineering time than the additional infrastructure you'd avoid. At that point, [deploy on solid infrastructure](/blog/rails-8-docker-deployment-production-guide/) and move on.
 
@@ -128,14 +128,14 @@ And profiling has diminishing returns. Once your P95 is under 200ms and your slo
 
 Here's the full timeline for this client:
 
-1. Installed profiling tools (day 1, **2 hours**)
-2. Fixed the nested N+1 — P95 dropped from **3.1s to 1.4s** (day 2)
-3. Upgraded Ruby and enabled YJIT — P95 to **980ms** (day 3)
-4. Added fragment caching on dashboard — P95 to **380ms** (day 5)
+1. Installed profiling tools (day 1, 2 hours)
+2. Fixed the nested N+1 — P95 dropped from 3.1s to 1.4s (day 2)
+3. Upgraded Ruby and enabled YJIT — P95 to 980ms (day 3)
+4. Added fragment caching on dashboard — **P95 to 380ms** (day 5)
 5. Separated worker dynos, migrated to Solid Queue (days 8-12)
 6. Removed unused indexes, added 3 partial indexes (day 14)
 
-Total engineering time: roughly **60 hours** across two developers. Monthly hosting cost dropped **$1,200**. Average response time went from "users complaining" to "nobody mentions it" — which, for a performance project, is the goal.
+Total engineering time: roughly 60 hours across two developers. **Monthly hosting cost dropped $1,200.** Average response time went from "users complaining" to "nobody mentions it" — which, for a performance project, is the goal.
 
 The order matters. Profiling first, because without data you're guessing. Query fixes next, because they have the highest ratio of impact to effort. YJIT after that, because it's nearly free. Caching last, because it adds complexity and you want to cache the smallest surface area possible.
 

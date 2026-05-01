@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-I've watched this play out forty-some times. You hired a team. Wrote them a check - **$30K**, **$60K**, sometimes more. Waited three months. The demo loads. The login screen looks fine. But behind it? Nobody knows. Including them, sometimes. And now you're sitting there at 11pm wondering if you should fire your development agency or give them one more sprint.
+I've watched this play out forty-some times. You hired a team. Wrote them a check - $30K, $60K, sometimes more. Waited three months. The demo loads. The login screen looks fine. But behind it? Nobody knows. Including them, sometimes. And now you're sitting there at 11pm wondering if you should fire your development agency or give them one more sprint.
 
 Here's what I've learned: by the time you're Googling this, you already know the answer.
 
@@ -35,7 +35,7 @@ They've missed three deadlines, and every time it's "unexpected complexity." Fin
 
 You can't see the code. Not that you can't read it - you literally don't have a login to wherever it lives. We've taken over projects where the founder didn't know what Git was, and that's totally fine. But your code should live in an account you own. If it doesn't, you don't own a product - you own a promise.
 
-Every small change breaks something else. You ask them to change a button color and the next day the checkout page is down. That's code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is scared to touch anything because they genuinely don't know what will break. A codebase with **70%+ test coverage** can handle changes safely. If yours has **5%**, your team is guessing every time they deploy.
+Every small change breaks something else. You ask them to change a button color and the next day the checkout page is down. That's code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is scared to touch anything because they genuinely don't know what will break. A codebase with 70%+ test coverage can handle changes safely. **If yours has 5%, your team is guessing every time they deploy.**
 
 They refuse to clean up old code. "We can't refactor that - it's too risky." Translation: the code has no tests, so changing anything might break everything. [Technical debt compounds](/blog/fixing-slow-engineering-teams-an-extended/) like interest on a credit card, and eventually you're paying the whole invoice just to service the debt instead of building features.
 
@@ -61,7 +61,7 @@ Try two weeks of real transparency first. Set up a weekly call with a hard agend
 
 Then check your own behavior. Did you change the requirements mid-sprint three times? Any agency would miss deadlines if the target keeps moving. The good ones push back. The bad ones nod and miss quietly.
 
-If you're still unsure, set three concrete numbers for the next **30 days**: **80% task completion** per sprint, weekly written reports, and repository access within **48 hours**. Any [competent remote team](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) does this on autopilot. If they can't hit those for one month, you have your answer - and you have it in writing for the termination letter.
+If you're still unsure, set three concrete numbers for the next 30 days: **80% task completion** per sprint, weekly written reports, and repository access within 48 hours. Any [competent remote team](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) does this on autopilot. If they can't hit those for one month, you have your answer - and you have it in writing for the termination letter.
 
 Still here? Alright. Let's talk about the exit.
 
@@ -77,7 +77,7 @@ Then export your data - production database, user records, uploaded files, third
 
 Documentation is the trickiest part because they probably don't have any. Here's the workaround: if your code is on GitHub, paste the repo URL into [DeepWiki](https://deepwiki.com/) and it generates a navigable wiki from your codebase in minutes. It won't replace real documentation, but it gives your next team a starting point. [Swimm](https://swimm.io/) does something similar and keeps docs in sync as code changes (free tier for small teams).
 
-Finally, send a formal termination letter. Most contracts require **15-30 days** written notice. Reference the specific clause, keep it factual, skip the emotion. "Per Section 12.3 of our agreement dated X, this letter serves as **30-day** notice of termination, effective Y."
+Finally, send a formal termination letter. Most contracts require 15-30 days written notice. Reference the specific clause, keep it factual, skip the emotion. "Per Section 12.3 of our agreement dated X, this letter serves as **30-day notice of termination**, effective Y."
 
 ## "But I Signed a Contract!"
 
@@ -99,15 +99,15 @@ You can't read code, and that's fine - here's what to do.
 
 Hire a senior dev for four hours. Freelancer, fractional CTO, your next agency - anyone competent. Have them check four things.
 
-Test coverage first. Below **20%** and the code can't be safely modified - below **5%** and it was probably [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) with no human review.
+Test coverage first. Below 20% and the code can't be safely modified - **below 5% and it was probably [vibe-coded](/blog/ai-powered-code-reviews-transforming-development-workflows/) with no human review**.
 
-Security next - a basic vulnerability scan takes **30 minutes** and will tell you if your users' data is exposed right now.
+Security next - a basic vulnerability scan takes 30 minutes and will tell you if your users' data is exposed right now.
 
-Ask the deployment question too: can they push a change in under **10 minutes**? A multi-hour manual process means every future update is expensive and risky, because someone has to babysit every release.
+Ask the deployment question too: can they push a change in under 10 minutes? A multi-hour manual process means every future update is expensive and risky, because someone has to babysit every release.
 
 Then look at structure. Is the code organized into logical pieces, or is everything crammed into one giant file?
 
-This costs **$500-$2,000**. Skipping it costs **$50,000** when you have to rebuild from scratch. In the last **40+ rescue projects** we've taken on over seventeen years, **91%** had under **5% test coverage** and **73%** had no way to deploy without manual intervention. The average founder had already spent **$80K-$200K** before they called us.
+This costs $500-$2,000. Skipping it costs $50,000 when you have to rebuild from scratch. In the last 40+ rescue projects we've taken on over seventeen years, **91% had under 5% test coverage** and 73% had no way to deploy without manual intervention. The average founder had already spent $80K-$200K before they called us.
 
 Can't find someone today? Start here:
 
@@ -131,7 +131,7 @@ First login with a special character in the email? Crash. Two users booking the 
 
 It wasn't an edge case. It was Tuesday.
 
-We opened the codebase and found **2% test coverage**, zero error handling, and **14 critical security vulnerabilities**. We had to rewrite the entire thing.
+We opened the codebase and found 2% test coverage, zero error handling, and **14 critical security vulnerabilities**. We had to rewrite the entire thing.
 
 We're seeing this in about half the rescue projects that come through our door now. AI-generated code *looks* professional - good variable names, consistent formatting, reads well. But under the hood you find no tests, no error handling, and [security holes that only show up when real people use the product](/blog/from-what-start-stop-delivering-bugs-when-there-no-time-for-changes-management-agile/). [Qodo's 2025 report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI code produces **1.7x more issues** than human-written code. And that's when someone reviews it. When nobody does? It's a time bomb.
 
