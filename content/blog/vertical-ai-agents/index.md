@@ -1,6 +1,7 @@
 ---
 remote_url: https://dev.to/jetthoughts/vertical-ai-agents-4lf6
 source: dev_to
+seo_override: true
 remote_id: 2559457
 dev_to_id: 2559457
 dev_to_url: https://dev.to/jetthoughts/vertical-ai-agents-4lf6

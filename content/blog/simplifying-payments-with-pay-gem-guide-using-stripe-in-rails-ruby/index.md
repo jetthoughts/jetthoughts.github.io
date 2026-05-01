@@ -1,6 +1,7 @@
 ---
 remote_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide-to-using-stripe-in-rails-12ga
 source: dev_to
+seo_override: true
 remote_id: 2133274
 dev_to_id: 2133274
 dev_to_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide-to-using-stripe-in-rails-12ga
