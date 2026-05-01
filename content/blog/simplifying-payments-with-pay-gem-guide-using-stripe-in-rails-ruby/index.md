@@ -6,7 +6,7 @@ remote_id: 2133274
 dev_to_id: 2133274
 dev_to_url: https://dev.to/jetthoughts/simplifying-payments-with-pay-gem-a-guide-to-using-stripe-in-rails-12ga
 title: 'Simplifying Payments with Pay gem: A Guide to Using Stripe in Rails'
-description: Payment integration can be challenging when building web applications. The Pay gem makes handling...
+description: Use the Pay gem (v11.6) with Stripe in Rails 6+ to ship subscriptions, one-time charges, and webhooks behind a single interface - no per-gateway plumbing.
 created_at: '2024-12-03T09:36:14Z'
 date: 2024-12-03
 edited_at: '2024-12-12T14:07:22Z'
