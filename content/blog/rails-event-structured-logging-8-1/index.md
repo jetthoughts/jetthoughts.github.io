@@ -1,6 +1,6 @@
 ---
-title: "Rails 8.1: Stop Parsing Logs, Subscribe to Events"
-description: "Rails 8.1 replaces log parsing with structured events. Wire subscribable notifications to Datadog, New Relic, or Prometheus in minutes."
+title: "Rails 8.1: Subscribe to Events, Skip Logs"
+description: "Rails 8.1 replaces log parsing with structured events. Wire ActiveSupport::Notifications to Datadog, New Relic, or Prometheus - no regex required."
 date: 2026-04-26
 draft: false
 author: "JetThoughts Team"
@@ -11,17 +11,15 @@ categories: ["Engineering"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "Rails 8.1: Stop Parsing Logs, Subscribe to Events"
+  og_title: "Rails 8.1: Subscribe to Events, Skip Logs"
   og_description: "Rails 8.1 gives you structured, subscribable events. Stop writing regex against log output. Wire real events to Datadog in minutes."
 cover_image_alt: "Dark technical cover with structured event flow diagram - log lines transforming into clean JSON payloads with Rails branding"
 canonical_url: "https://jetthoughts.com/blog/rails-event-structured-logging-8-1/"
 ---
 
-*CTO TL;DR: Your dev team's alerts stop breaking every time they deploy. Rails 8.1 replaces log scraping with structured events your monitoring can trust. We migrated four production apps. **False-positive alert rate dropped by 60%.***
+*TL;DR: Rails 8.1 replaces log scraping with structured events your monitoring can trust. We migrated four production apps and the false-positive alert rate dropped by **60%**. Migration runs one to two days per app.*
 
-*Non-technical founder? Here is what this means for you: your team spends less time chasing phantom alerts and more time shipping features. **The migration takes one to two days per app.** If your monitoring keeps crying wolf, [forward this to your CTO](mailto:?subject=Our%20Rails%20monitoring%20keeps%20breaking&body=Worth%20reading%20-%20https://jetthoughts.com/blog/rails-event-structured-logging-8-1/) and ask them if this applies.*
-
-Your monitoring setup lies to you - and it does it quietly enough that nobody catches on for months.
+Your monitoring setup lies to you, and it does it quietly enough that nobody catches on for months.
 
 A client's Datadog alerts worked for three months after we set them up. Their team upgraded to Rails 7.2 and the log output shifted - the regex they'd written against `Completed 200 OK in 247ms` stopped matching. **Two months of silence before a customer called about a broken checkout flow.**
 
@@ -223,7 +221,7 @@ For apps still on Rails 7.x, the monotonic subscribe API exists but the payload 
 
 We've moved four production Rails apps from regex-based log monitoring to event subscriptions over the last eight months. Three were on Datadog, one on New Relic. The pattern was consistent: the setup ran between half a day and two days per app depending on how many custom parsers we had to untangle, and false-positive alerts dropped noticeably in the weeks following - **we measured roughly 60% fewer across the four apps**, though the improvement varied by how noisy the original regex parsers were. The apps weren't more reliable. The monitoring just stopped misreading log output from normal Rails behavior.
 
-The [Active Job Continuations work in Rails 8.1](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) uses the same instrumentation layer for job lifecycle events. If you're already subscribing to `perform.active_job`, the event shape improvements in 8.1 apply there too.
+The [Active Job Continuations work in Rails 8.1](/blog/rails-8-1-active-job-continuations-background-jobs/) uses the same instrumentation layer for job lifecycle events. If you're already subscribing to `perform.active_job`, the event shape improvements in 8.1 apply there too.
 
 For teams using the [Solid Trifecta instead of Redis](/blog/solid-trifecta-hybrid-redis-rails-8/), Solid Queue emits its own `ActiveSupport::Notifications` events for job enqueuing, execution, and failure - subscribable through the same API, no separate polling loop required.
 

@@ -110,7 +110,7 @@ We split them. Dedicated worker dynos for Sidekiq. A separate Redis instance for
 
 The bigger change: we moved from Sidekiq to [Solid Queue](/blog/solid-queue-vs-sidekiq-complete-comparison/). The client's job patterns were simple — email delivery, webhook processing, report generation — and didn't need Sidekiq Pro's batching or rate limiting features. Solid Queue runs on the database. One fewer infrastructure dependency to manage and monitor.
 
-For jobs that can't afford to be lost, Rails 8.1's [Active Job Continuations](/blog/rails-8-1-active-job-continuations-end-lost-background-jobs/) are worth understanding. They solve the problem where a long-running job crashes halfway through and restarts from zero.
+For jobs that can't afford to be lost, Rails 8.1's [Active Job Continuations](/blog/rails-8-1-active-job-continuations-background-jobs/) are worth understanding. They solve the problem where a long-running job crashes halfway through and restarts from zero.
 
 ## When NOT to do any of this
 

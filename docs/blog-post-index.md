@@ -9,16 +9,16 @@ Use `claude-context` MCP search for semantic queries — this index is for exact
 
 | Tag | Count | Example slugs |
 |---|---|---|
-| rails | 13 | `rails-8-1-active-job-continuations-end-lost-background-jobs, rails-argon2-has-secure-password-migration-guide, ruby-on-rails-performance-optimization-patterns-2026` |
+| rails | 13 | `rails-8-1-active-job-continuations-background-jobs, rails-argon2-has-secure-password-migration-guide, ruby-on-rails-performance-optimization-patterns-2026` |
 | performance | 9 | `ruby-on-rails-performance-optimization-patterns-2026, hotwire-turbo-8-performance-patterns-real-time-rails, laravel-performance-monitoring-complete-apm-comparison-guide` |
 | ai | 9 | `building-rag-applications-rails-pgvector, cost-optimization-llm-applications-token-management, ai-powered-code-reviews-transforming-development-workflows` |
-| ruby | 8 | `rails-8-1-active-job-continuations-end-lost-background-jobs, rails-argon2-has-secure-password-migration-guide, ruby-on-rails-performance-optimization-patterns-2026` |
+| ruby | 8 | `rails-8-1-active-job-continuations-background-jobs, rails-argon2-has-secure-password-migration-guide, ruby-on-rails-performance-optimization-patterns-2026` |
 | rails-8 | 4 | `ruby-on-rails-performance-optimization-patterns-2026, rails-8-docker-deployment-production-guide, rails-8-solid-cache-performance-redis-migration` |
 | deployment | 4 | `rails-8-docker-deployment-production-guide, django-5-enterprise-migration-guide-production-strategies, laravel-11-migration-guide-production-deployment-strategies` |
 | langchain | 4 | `cost-optimization-llm-applications-token-management, getting-started-langchain-ruby-complete-guide, langchain-python-tutorial-complete-guide` |
 | tutorial | 4 | `elixir-ai-integration-tutorial-complete-guide, getting-started-langchain-ruby-complete-guide, langchain-python-tutorial-complete-guide` |
-| background-jobs | 3 | `rails-8-1-active-job-continuations-end-lost-background-jobs, solid-queue-vs-sidekiq-complete-comparison, rails-8-solid-queue-migration-guide` |
-| solid-queue | 3 | `rails-8-1-active-job-continuations-end-lost-background-jobs, solid-queue-vs-sidekiq-complete-comparison, rails-8-solid-queue-migration-guide` |
+| background-jobs | 3 | `rails-8-1-active-job-continuations-background-jobs, solid-queue-vs-sidekiq-complete-comparison, rails-8-solid-queue-migration-guide` |
+| solid-queue | 3 | `rails-8-1-active-job-continuations-background-jobs, solid-queue-vs-sidekiq-complete-comparison, rails-8-solid-queue-migration-guide` |
 | optimization | 3 | `ruby-on-rails-performance-optimization-patterns-2026, laravel-performance-monitoring-complete-apm-comparison-guide, rails-performance-at-scale-10k-to-1m-users-roadmap` |
 | django | 3 | `django-technical-debt-cost-calculator-elimination-strategy, django-5-enterprise-migration-guide-production-strategies, langchain-python-tutorial-complete-guide` |
 | python | 3 | `django-5-enterprise-migration-guide-production-strategies, autogen-crewai-langgraph-ai-agent-frameworks-2025, langchain-python-tutorial-complete-guide` |
@@ -27,7 +27,7 @@ Use `claude-context` MCP search for semantic queries — this index is for exact
 | LangChain | 3 | `langchain-memory-systems-conversational-ai, production-scaling-langchain-crewai-enterprise, testing-monitoring-llm-applications-production` |
 | startup | 2 | `fire-dev-shop-guide, jetthoughts-top-web-development-agency-2026-techreviewer` |
 | hiring | 2 | `fire-dev-shop-guide, fractional-cto-roi-calculator-startup-decision-framework` |
-| sidekiq | 2 | `rails-8-1-active-job-continuations-end-lost-background-jobs, solid-queue-vs-sidekiq-complete-comparison` |
+| sidekiq | 2 | `rails-8-1-active-job-continuations-background-jobs, solid-queue-vs-sidekiq-complete-comparison` |
 | security | 2 | `rails-argon2-has-secure-password-migration-guide, rails-8-authentication-generator-devise-migration` |
 | authentication | 2 | `rails-argon2-has-secure-password-migration-guide, rails-8-authentication-generator-devise-migration` |
 | caching | 2 | `ruby-on-rails-performance-optimization-patterns-2026, rails-8-solid-cache-performance-redis-migration` |
@@ -38,14 +38,14 @@ Use `claude-context` MCP search for semantic queries — this index is for exact
 | dev-agency | 1 | `fire-dev-shop-guide` |
 | founder | 1 | `fire-dev-shop-guide` |
 | outsourcing | 1 | `fire-dev-shop-guide` |
-| rails-8-1 | 1 | `rails-8-1-active-job-continuations-end-lost-background-jobs` |
+| rails-8-1 | 1 | `rails-8-1-active-job-continuations-background-jobs` |
 
 ## Recent Posts (last 50)
 
 | Date | Slug | Title |
 |---|---|---|
 | 2026-04-21 | `fire-dev-shop-guide` | How to Fire Your Dev Shop (Safely) |
-| 2026-04-14 | `rails-8-1-active-job-continuations-end-lost-background-jobs` | Active Job Continuations in Rails 8.1 |
+| 2026-04-14 | `rails-8-1-active-job-continuations-background-jobs` | Active Job Continuations in Rails 8.1 |
 | 2026-04-09 | `rails-argon2-has-secure-password-migration-guide` | Rails `has_secure_password` with Argon2: Complete Migration Guide |
 | 2026-04-09 | `ruby-on-rails-performance-optimization-patterns-2026` | Ruby on Rails Performance Optimization Patterns for 2026 |
 | 2026-03-28 | `jetthoughts-top-web-development-agency-2026-techreviewer` | JetThoughts Named Among the Top Web Development Agencies by Techreview |

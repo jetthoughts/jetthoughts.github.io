@@ -23,7 +23,7 @@ If you're reading this, the last engagement probably didn't go well. Now you're 
 
 ## Question 1: "Can I see a sample weekly report?"
 
-This is your transparency test, and it usually fails inside the first two minutes. A dev shop that won't show you a real weekly report is hiding something - whether that's chaos, idle hours, or a project they don't understand. [Research from Clutch](https://clutch.co/agencies/software-developers) shows that **72% of failed development partnerships cite "poor communication"** as the primary issue.
+A dev shop that won't show you a real weekly report is hiding something, and they usually fail this question inside the first two minutes. The hiding might be chaos, idle hours, or a project they don't understand. [Research from Clutch](https://clutch.co/agencies/software-developers) shows that **72% of failed development partnerships cite "poor communication"** as the primary issue.
 
 A good report tells you what shipped this week, what's blocked, what's next, and a code health score covering test coverage, critical bugs, and deployment frequency. It fits on one page, reads in plain English, and lets a non-technical founder know exactly where the project stands without translating jargon.
 
@@ -39,7 +39,7 @@ If a dev shop can't or won't show you a sample report in the first call, they do
 
 ## Question 2: "Who owns the code after each milestone?"
 
-Transparency only matters if you can act on it, which brings us to your lock-in test. Some shops will build your entire app, hand you a folder of files, and leave you unable to do anything with it because they still own the Git repository, the deployment keys, or the API credentials your business runs on.
+Transparency only matters if you can act on it. Some shops will build your entire app, hand you a folder of files, and leave you unable to do anything with it because they still own the Git repository, the deployment keys, or the API credentials your business runs on.
 
 A good answer sounds like this: "You own it completely after every milestone. It's in our contract, and here's the GitHub ownership transfer clause." They can show you a real contract with a real date and a clear handoff process.
 
@@ -65,7 +65,7 @@ Put deadline consequences in the contract before you sign. If they refuse, they'
 
 ## Question 4: "Can I talk to a founder you've rescued?"
 
-Deadlines tell you what they promise; rescued founders tell you what they delivered when someone else couldn't. This is your social proof test, and it has to be a real person on a real call. Skip the polished case study on their website and ask for a founder who hired them after being burned by someone else.
+Deadlines tell you what they promise; rescued founders tell you what they delivered when someone else couldn't. The proof has to be a real person on a real call. Skip the polished case study on their website and ask for a founder who hired them after being burned by someone else.
 
 Most dev shops have "success stories" full of greenfield wins and happy logos. Very few have founders who were broken by a previous shop, came back from the brink, and will say so on a fifteen-minute call. That's the founder who'll tell you the truth, because she's already lived through the version of the truth nobody puts on a website.
 

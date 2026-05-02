@@ -1,6 +1,6 @@
 ---
 title: "Active Job Continuations in Rails 8.1"
-description: "Rails 8.1's ActiveJob::Continuable lets long-running jobs resume from their last completed step instead of restarting. Here's how it works, when to use it, and why your Kamal deploys stop losing work."
+description: "Rails 8.1's ActiveJob::Continuable resumes long jobs from their last completed step. How to wire it in, when not to, why Kamal deploys stop losing work."
 date: 2026-04-14T08:00:00+07:00
 draft: false
 author: "JetThoughts"
@@ -11,7 +11,7 @@ categories: ["Engineering"]
 cover_image: cover.png
 metatags:
   image: cover.png
-cover_image_alt: "JetThoughts blog cover for Active Job Continuations in Rails 8.1 — minimalist dark design with Ruby-to-purple gradient headline"
+cover_image_alt: "JetThoughts blog cover for Active Job Continuations in Rails 8.1 - minimalist dark design with Ruby-to-purple gradient headline"
 canonical_url: https://jetthoughts.com/blog/rails-8-1-active-job-continuations-background-jobs/
 ---
 
@@ -75,19 +75,19 @@ You're not fine. Here's why.
 
 ### 1. Kamal's 30-Second Shutdown Is Real
 
-Kamal — the default Rails 8 deployment tool — gives job-running containers **30 seconds** to exit gracefully on deploy. Not 30 minutes. Thirty seconds. If your nightly report job is 20 minutes in when the deploy hits, it's dead. The standard Sidekiq retry starts it from the beginning. You've just done the work twice and delayed the deploy while the second run catches up.
+Kamal - the default Rails 8 deployment tool - gives job-running containers **30 seconds** to exit gracefully on deploy. Not 30 minutes. Thirty seconds. If your nightly report job is 20 minutes in when the deploy hits, it's dead. The standard Sidekiq retry starts it from the beginning. You've just done the work twice and delayed the deploy while the second run catches up.
 
 Continuations turn that restart into a resume. The deploy still kills the worker. The retry still fires. But the work already done stays done. (For automating those deploys, see our guide on [Kamal 2 with GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).)
 
 ### 2. The Server Cost Is Quiet but Real
 
-Every restarted job does the work twice. If your 18-minute nightly report gets killed at minute 17 by a deploy, the retry runs all 18 minutes again — **you paid for 35 minutes of compute to get 18 minutes of output**. That cost sits in the bill as "background workers," which most teams never dig into.
+Every restarted job does the work twice. If your 18-minute nightly report gets killed at minute 17 by a deploy, the retry runs all 18 minutes again - **you paid for 35 minutes of compute to get 18 minutes of output**. That cost sits in the bill as "background workers," which most teams never dig into.
 
 The math is blunt: if you deploy daily and you run any job longer than 10 minutes, you're paying for restarts. The cost scales linearly with deploy frequency and job duration. **Continuations stop you from paying.**
 
 ### 3. Your Idempotency Isn't What You Think
 
-Ask your team: "Are all our long-running jobs idempotent?" Watch the confidence drop the longer the list gets. Nightly reconciliations, invoice generation, CSV exports, LLM embeddings — most of these have side effects that *are technically* safe on restart but *practically* double-send emails, double-charge cards, or double-call downstream APIs.
+Ask your team: "Are all our long-running jobs idempotent?" Watch the confidence drop the longer the list gets. Nightly reconciliations, invoice generation, CSV exports, LLM embeddings - most of these have side effects that *are technically* safe on restart but *practically* double-send emails, double-charge cards, or double-call downstream APIs.
 
 Continuations let you stop pretending. Mark the risky step as a checkpoint. If it finished, it stays finished.
 
@@ -146,11 +146,11 @@ class SyncShopifyOrdersJob < ApplicationJob
 end
 ```
 
-Same logic. Same outputs. One `include` and four `step` blocks. On interruption, the retry resumes at whichever step was running and — inside `upsert_orders` — at whichever order index had just been processed.
+Same logic. Same outputs. One `include` and four `step` blocks. On interruption, the retry resumes at whichever step was running and - inside `upsert_orders` - at whichever order index had just been processed.
 
-**The gotcha**: the `@orders` ivar isn't persisted across interruptions. If the job dies and resumes in a new process, `@orders` is `nil`. That's why `fetch_orders` exists as its own step — but when the *second* step resumes, it re-runs `fetch_orders` first because ivars don't survive. For most jobs this is fine. For expensive fetches, store the IDs you need in a short-lived cache or a dedicated table and pull them back at the top of each resumable step.
+**The gotcha**: the `@orders` ivar isn't persisted across interruptions. If the job dies and resumes in a new process, `@orders` is `nil`. That's why `fetch_orders` exists as its own step - but when the *second* step resumes, it re-runs `fetch_orders` first because ivars don't survive. For most jobs this is fine. For expensive fetches, store the IDs you need in a short-lived cache or a dedicated table and pull them back at the top of each resumable step.
 
-## The Kamal 30-Second Trap — Fixed Properly
+## The Kamal 30-Second Trap - Fixed Properly
 
 Here's the specific production pattern that makes this feature pay for itself.
 
@@ -180,7 +180,7 @@ end
 
 Four expensive steps. Total runtime: ~18 minutes. **Kamal deploy window: 30 seconds.**
 
-Before continuations, a deploy during `render_pdf` meant the retry re-runs both aggregation steps — another 12 minutes of wasted Postgres time. After continuations, the retry skips straight to `render_pdf`. **The deploy cost drops from 18 minutes of duplicated work to zero.**
+Before continuations, a deploy during `render_pdf` meant the retry re-runs both aggregation steps - another 12 minutes of wasted Postgres time. After continuations, the retry skips straight to `render_pdf`. **The deploy cost drops from 18 minutes of duplicated work to zero.**
 
 ## When NOT to Use Continuations
 
@@ -188,7 +188,7 @@ Like every powerful feature, this one has wrong uses.
 
 - **Short jobs don't need it.** If your job finishes in under **30 seconds**, the Kamal shutdown window is already generous. Adding `step` blocks just adds noise.
 - **Strictly ordered side-effect chains are dangerous.** If step 2 sends an email and step 3 charges a card, a retry that "skips" step 2 is wrong if the email didn't actually reach the user. Steps guarantee *completion*, not *delivery*. Use idempotent side effects inside each step.
-- **Your adapter has to support it.** [Solid Queue](/blog/rails-8-solid-queue-migration-guide/) and recent Sidekiq releases support continuations. Older adapters or custom queues may not — they'll still run the job, but the resume-from-cursor behavior depends on the adapter calling `queue_adapter.stopping?` at checkpoints. Verify before you rely on it.
+- **Your adapter has to support it.** [Solid Queue](/blog/rails-8-solid-queue-migration-guide/) and recent Sidekiq releases support continuations. Older adapters or custom queues may not - they'll still run the job, but the resume-from-cursor behavior depends on the adapter calling `queue_adapter.stopping?` at checkpoints. Verify before you rely on it.
 - **Cursors aren't magic.** If your step iterates over a mutating collection (a query that returns different rows each run), the cursor won't save you. Freeze the collection in its own fetch step and iterate over a stable list.
 
 ## Migration Path for Existing Apps
@@ -211,14 +211,14 @@ Rails 8.1 is the first release in years where a single feature changes how I'd a
 
 Upgrade. Wrap your longest job. Deploy in the middle of it. Watch it resume.
 
-**Related reading on this blog:** our [Rails performance optimization patterns for 2026](/blog/ruby-on-rails-performance-optimization-patterns-for-2026/) covers YJIT, query allocation, and Redis caching — the companion performance moves you want to make while you're upgrading to Rails 8.1. And if you're still on DelayedJob, our [Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) walks through the move.
+**Related reading on this blog:** our [Rails performance optimization patterns for 2026](/blog/ruby-on-rails-performance-optimization-patterns-2026/) covers YJIT, query allocation, and Redis caching - the companion performance moves you want to make while you're upgrading to Rails 8.1. And if you're still on DelayedJob, our [Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) walks through the move.
 
 ---
 
 **Further reading:**
 
-- [Rails 8.1 Release Announcement — rubyonrails.org](https://rubyonrails.org/2025/10/22/rails-8-1)
-- [ActiveJob::Continuation API Reference — api.rubyonrails.org](https://api.rubyonrails.org/classes/ActiveJob/Continuation.html)
-- [Rails 8.1 Release Notes — guides.rubyonrails.org](https://guides.rubyonrails.org/8_1_release_notes.html)
-- [Active Job Continuations: The end of lost jobs — MarsBased](https://marsbased.com/blog/2025/10/15/active-job-continuations-the-end-of-lost-jobs)
-- [Rails 8.1 Job Continuations Could Save You Dollars in Server Costs — DEV](https://dev.to/raisa_kanagaraj/rails-81s-job-continuations-could-save-you-dollars-in-server-costs-122c)
+- [Rails 8.1 Release Announcement - rubyonrails.org](https://rubyonrails.org/2025/10/22/rails-8-1)
+- [ActiveJob::Continuation API Reference - api.rubyonrails.org](https://api.rubyonrails.org/classes/ActiveJob/Continuation.html)
+- [Rails 8.1 Release Notes - guides.rubyonrails.org](https://guides.rubyonrails.org/8_1_release_notes.html)
+- [Active Job Continuations: The end of lost jobs - MarsBased](https://marsbased.com/blog/2025/10/15/active-job-continuations-the-end-of-lost-jobs)
+- [Rails 8.1 Job Continuations Could Save You Dollars in Server Costs - DEV](https://dev.to/raisa_kanagaraj/rails-81s-job-continuations-could-save-you-dollars-in-server-costs-122c)

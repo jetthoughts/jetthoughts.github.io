@@ -90,7 +90,7 @@ Our rescue engagements have not been AI rescues. They have been vibe-coding resc
 
 That process catches bugs cheaper than the alternatives. A bug found during TDD costs 10 engineer-minutes. The same bug in code review costs 30. **The same bug in production costs 8 engineer-hours plus a Slack apology to your biggest customer.** Pure vibe-coding shops don't cut your MVP cost. They move the bug-catching invoice from their billing cycle to yours, and you pay it three months after launch.
 
-A B2B fintech founder, Sarah, post-Series-A in Q4 2025, had been quoted $42K by an AI-first shop for a 4-week MVP. She engaged us at $58K instead - same scope, 6 weeks, TDD and security pass included. Eight months on, her test coverage sits at 78%, she has added two engineers without a rewrite, and her only post-launch fix was a 6-hour rate-limiting issue in the third-party broker integration that no test could have caught at MVP scope. **Sticker price was 38% higher; her 12-month all-in came in 41% lower.**
+A B2B fintech founder, post-Series-A in Q4 2025, had been quoted $42K by an AI-first shop for a 4-week MVP. She engaged us at $58K instead - same scope, 6 weeks, TDD and security pass included. Eight months on, her test coverage sits at 78%, she has added two engineers without a rewrite, and her only post-launch fix was a 6-hour rate-limiting issue in the third-party broker integration that no test could have caught at MVP scope. **Sticker price was 38% higher; her 12-month all-in came in 41% lower.**
 
 ## 7. When AI actually saves money
 

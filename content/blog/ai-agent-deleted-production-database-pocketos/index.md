@@ -8,7 +8,7 @@ slug: "ai-agent-deleted-production-database-pocketos"
 keywords: "ai agent deleted production database, cursor agent disaster, vibe coding incident, pocketos ai outage"
 tags:
 - ai
-- founders
+- founder
 - security
 - incident
 categories:
