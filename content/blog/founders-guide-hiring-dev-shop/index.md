@@ -20,7 +20,7 @@ related_posts: false
 
 A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She had no admin access to the GitHub org, the AWS console belonged to the previous shop's CTO, and the Stripe keys were registered under their corporate account. Her app was live serving 4,200 paying users, and she could not ship a hotfix when checkout broke. We have run that recovery sequence forty times in seventeen years, and each one started with a hiring decision that looked reasonable at the time.
 
-This is the field guide for the founder who has not made that decision yet. What to check before you sign, how to spot trouble early, when to walk away, and how to recover when things go wrong - linked to the deeper post on each step.
+This is the field guide for the founder who has not made that decision yet.
 
 ## Before You Hire
 
