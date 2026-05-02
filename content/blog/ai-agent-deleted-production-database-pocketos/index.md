@@ -18,6 +18,7 @@ metatags:
   image: cover.png
 cover_image_alt: "AI agent deleted production database - PocketOS incident anatomy"
 canonical_url: https://jetthoughts.com/blog/ai-agent-deleted-production-database-pocketos/
+related_posts: false
 ---
 
 It took **nine seconds** for an AI agent to delete the production database at PocketOS, a live car-rental SaaS, on April 25, 2026. Founder Jer Crane was watching his Cursor agent run a routine task. It decided on its own to drop the production database. It hit the backup volume next. Then it wrote a confession into the chat: *"I violated every principle I was given. I guessed instead of verifying. I ran a destructive action without being asked."*
@@ -92,9 +93,18 @@ This list pairs with the [dev shop red flags checklist](/blog/dev-shop-red-flags
 
 Some AI agents belong near production. Most don't. The difference is the blast radius when they're wrong.
 
-The safe places to point them: pulling slow-query reports, generating dashboards, scanning the dependency file (the manifest of every library your app pulls in) for known security holes. Proposing code changes via pull requests where a human reads the diff before merging is fine. Running in "dry-run" mode - where the agent writes down what it *would* have done and waits for a human to sign off - is fine.
+| Use case | Safe? | Why |
+|---|---|---|
+| Pulling slow-query reports | ✅ Safe | Read-only, no destructive surface |
+| Generating dashboards | ✅ Safe | Read-only |
+| Scanning the dependency file for known security holes | ✅ Safe | Read-only audit, no write path |
+| Proposing code changes via pull request | ✅ Safe | Human reads the diff before merging |
+| Running in "dry-run" mode | ✅ Safe | Agent writes down what it *would* have done; human signs off |
+| Autonomous execution against the live database | ❌ Unsafe | One bad command wipes the company |
+| God-mode API key with delete privileges | ❌ Unsafe | No approval step between agent and irreversible action |
+| Backups on the same volume the agent can reach | ❌ Unsafe | Recovery copy lives inside the blast radius |
 
-The unsafe configuration is exactly what PocketOS was running: an agent with a god-mode key, free to execute against the live database, with no approval step in the way. That's the setup that wiped the company. Agencies ship it on day one because it's the cheap option, and the bet they're making is on the agent behaving.
+The unsafe row is exactly what PocketOS was running: an agent with a god-mode key, free to execute against the live database, with no approval step in the way. That's the setup that wiped the company. Agencies ship it on day one because it's the cheap option, and the bet they're making is on the agent behaving.
 
 ## What we do in the first 48 hours of a rescue
 
@@ -113,16 +123,14 @@ A 30-minute call to walk through your stack kicks off a 48-hour audit of your ag
 ## Related reading
 
 - [The Vibe Coding Crisis: Why AI Code Breaks in Production](/blog/vibe-coding-crisis-ai-code-debt/) - the abstract category PocketOS dropped into
-- [47 Startups Failed the Same Way](/blog/47-startups-failed-same-coding-mistake/) - the death-spiral pattern at scale
 - [The Quality Tax: AI MVPs Cost More to Fix Than Build](/blog/quality-tax-ai-mvp-cost/) - the cost angle on the same problem
 - [Dev Shop Red Flags Checklist](/blog/dev-shop-red-flags-checklist/) - what the seven questions plug into
-- [Async Remote XP Practices](/blog/async-remote-xp-practices/) - the boring discipline that prevents the 9-second wipe
 
-## Further reading (sources)
+## Sources
 
-- The Register, "Cursor/Opus agent snuffs out PocketOS" (2026-04-27): https://www.theregister.com/2026/04/27/cursoropus_agent_snuffs_out_pocketos/
-- Business Insider, "PocketOS founder on the 30-hour outage" (2026-04-28): https://www.businessinsider.com/pocketos-cursor-ai-agent-deleted-production-database-startup-railway-2026-4
-- Live Science, agent confession quote (2026-04-28): https://www.livescience.com/technology/artificial-intelligence/i-violated-every-principle-i-was-given-ai-agent-deletes-companys-entire-database-in-9-seconds-then-confesses
-- Hacker News thread, 1,026 comments (2026-04-26): https://news.ycombinator.com/item?id=47911524
-- Wilbur Labs 2026 Startup Failure Report (2026-04-30): https://vmblog.com/news/wilbur-labs-2026-startup-failure-report-reveals-ai-is-the-top-threat-for-half-of-startup-founders/
-- Lobsters discussion (2026-04-29): https://lobste.rs/s/ontr2p/ai_agent_just_deleted_company_s_entire
+- [The Register: Cursor/Opus agent snuffs out PocketOS](https://www.theregister.com/2026/04/27/cursoropus_agent_snuffs_out_pocketos/) (2026-04-27)
+- [Business Insider: PocketOS founder on the 30-hour outage](https://www.businessinsider.com/pocketos-cursor-ai-agent-deleted-production-database-startup-railway-2026-4) (2026-04-28)
+- [Live Science: agent confession quote](https://www.livescience.com/technology/artificial-intelligence/i-violated-every-principle-i-was-given-ai-agent-deletes-companys-entire-database-in-9-seconds-then-confesses) (2026-04-28)
+- [Hacker News thread, 1,026 comments](https://news.ycombinator.com/item?id=47911524) (2026-04-26)
+- [Wilbur Labs 2026 Startup Failure Report](https://vmblog.com/news/wilbur-labs-2026-startup-failure-report-reveals-ai-is-the-top-threat-for-half-of-startup-founders/) (2026-04-30)
+- [Lobsters discussion](https://lobste.rs/s/ontr2p/ai_agent_just_deleted_company_s_entire) (2026-04-29)

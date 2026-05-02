@@ -15,6 +15,7 @@ metatags:
   og_description: "Two-thirds of software projects fail or go over budget. Eight warning signs your agency is hiding bad code - and the exact steps to take tonight."
 cover_image_alt: "JetThoughts blog cover for Dev Shop Red Flags Checklist with warning sign stats"
 canonical_url: "https://jetthoughts.com/blog/dev-shop-red-flags-checklist/"
+related_posts: false
 ---
 
 The worst dev shops don't miss deadlines - they miss them quietly.

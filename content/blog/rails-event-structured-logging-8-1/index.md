@@ -15,9 +15,17 @@ metatags:
   og_description: "Rails 8.1 gives you structured, subscribable events. Stop writing regex against log output. Wire real events to Datadog in minutes."
 cover_image_alt: "Dark technical cover with structured event flow diagram - log lines transforming into clean JSON payloads with Rails branding"
 canonical_url: "https://jetthoughts.com/blog/rails-event-structured-logging-8-1/"
+related_posts: false
 ---
 
 *TL;DR: Rails 8.1 replaces log scraping with structured events your monitoring can trust. We migrated four production apps and the false-positive alert rate dropped by **60%**. Migration runs one to two days per app.*
+
+```ruby
+# Replace regex-against-log-output with this:
+ActiveSupport::Notifications.subscribe("process_action.action_controller") do |event|
+  StatsD.timing("request.duration", event.duration, tags: { path: event.payload[:path] })
+end
+```
 
 Your monitoring setup lies to you, and it does it quietly enough that nobody catches on for months.
 
