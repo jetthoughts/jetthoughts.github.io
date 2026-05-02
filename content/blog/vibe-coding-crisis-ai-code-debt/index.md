@@ -15,6 +15,7 @@ metatags:
   og_description: "45% of AI-generated code has known security vulnerabilities. How to detect vibe-coded apps and what to do about the damage."
 cover_image_alt: "JetThoughts blog cover for Vibe Coding Crisis with AI code quality stats"
 canonical_url: "https://jetthoughts.com/blog/vibe-coding-crisis-ai-code-debt/"
+related_posts: false
 ---
 
 Your dev shop used AI to ship your app in three weeks, and the code looked clean enough that nobody worried. **Then 200 real users showed up and broke everything.**

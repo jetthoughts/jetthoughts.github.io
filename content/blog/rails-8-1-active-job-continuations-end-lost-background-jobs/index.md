@@ -13,6 +13,7 @@ metatags:
   image: cover.png
 cover_image_alt: "JetThoughts blog cover for Active Job Continuations in Rails 8.1 - minimalist dark design with Ruby-to-purple gradient headline"
 canonical_url: https://jetthoughts.com/blog/rails-8-1-active-job-continuations-background-jobs/
+related_posts: false
 ---
 
 Your background jobs lie to you.
@@ -210,6 +211,12 @@ The real value isn't the compute savings. It's that adding `step` blocks makes y
 Rails 8.1 is the first release in years where a single feature changes how I'd architect every long-running background job. Continuations is that feature.
 
 Upgrade. Wrap your longest job. Deploy in the middle of it. Watch it resume.
+
+## Running long jobs on Solid Queue or Sidekiq?
+
+We audit shutdown signal handling, queue isolation, and resume safety on production Rails apps. One senior Rails engineer reads your job code for two hours and writes you a one-page resume-safety plan covering which jobs need `Continuable`, which can stay simple, and where your Kamal deploy is silently restarting work. Free for funded teams under 25 engineers.
+
+<a class="cta-link" href="https://jetthoughts.com/services/">Book the 30-minute call</a>
 
 **Related reading on this blog:** our [Rails performance optimization patterns for 2026](/blog/ruby-on-rails-performance-optimization-patterns-2026/) covers YJIT, query allocation, and Redis caching - the companion performance moves you want to make while you're upgrading to Rails 8.1. And if you're still on DelayedJob, our [Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) walks through the move.
 

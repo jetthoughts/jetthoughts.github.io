@@ -117,13 +117,16 @@ If you're here, your options are limited. A rewrite buys you time, but the rewri
 
 ## When to Rewrite vs. Rescue
 
-A rewrite makes sense when you have 18+ months of untested, undocumented code and the estimated fix cost exceeds 40% of rewrite cost. You also need runway - 3-6 months before your next funding round or market deadline.
+| Factor | Rewrite | Rescue |
+|---|---|---|
+| Codebase age | 18+ months untested/undocumented | Under 12 months, architecture sound |
+| Estimated fix cost | Exceeds 40% of rewrite cost | Less than 40% of rewrite cost |
+| Runway | 3-6 months before next funding/deadline | Same |
+| Total cost | $150K-$400K, 3-6 months | $150K-$400K, 3-6 months |
+| Risk | You repeat the pattern with the new team | Improvements show up slower |
+| Best for | Teams that need a clean slate AND have new people who'll commit to testing | Teams that need to keep shipping AND can commit to testing the existing code |
 
-A rescue makes sense when the code is under 12 months old, the core architecture is sound, and you can't afford the time cost of starting over. Most founders with a hard deadline end up rescuing because they have no choice.
-
-The honest answer: **both cost roughly the same - 3-6 months of work at $150K-$400K**. A rewrite is a fresh start, but you might repeat the pattern with the new team. A rescue preserves what works, but improvements show up slower.
-
-The deciding factor is your team. Can they commit to testing and review going forward? If yes, rescue. If they'll "get back to it later," rewrite with new people.
+Both cost roughly the same - **3-6 months of work at $150K-$400K**. The deciding factor is your team. Can they commit to testing and review going forward? If yes, rescue. If they'll "get back to it later," rewrite with new people.
 
 ## The same mistake, 47 times
 

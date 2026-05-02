@@ -1,6 +1,6 @@
 ---
 title: "Founder's Guide to Hiring a Dev Shop in 2026"
-description: "The complete guide for non-technical founders hiring development agencies. Red flags, evaluation frameworks, contract templates, and what to do when it goes wrong."
+description: "Field guide for non-technical founders hiring development agencies. Red flags, evaluation frameworks, contract templates, and what to do when it goes wrong."
 date: 2026-04-23
 draft: false
 author: "JetThoughts Team"
@@ -12,12 +12,15 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "Founder's Guide to Hiring a Dev Shop in 2026"
-  og_description: "Red flags, evaluation frameworks, and recovery playbooks - the complete guide for non-technical founders hiring development agencies."
+  og_description: "Red flags, evaluation frameworks, and recovery playbooks - the field guide for non-technical founders hiring development agencies."
 cover_image_alt: "JetThoughts pillar page cover for Founders Guide to Hiring a Dev Shop with 40+ rescued projects stat"
 canonical_url: "https://jetthoughts.com/blog/founders-guide-hiring-dev-shop/"
+related_posts: false
 ---
 
-The founder who hires a dev shop in 2026 faces a different landscape than the one who did it in 2022. AI code generators produce working prototypes in hours - and security vulnerabilities just as fast. Agencies that once padded timelines now pad commits with vibe-coded output nobody reviewed. Meanwhile, a wave of burned founders are rebuilding products they already paid for once. This guide walks you through the full cycle: what to check before you sign, how to spot trouble early, when to walk away, and how to recover when things go wrong.
+A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She had no admin access to the GitHub org, the AWS console belonged to the previous shop's CTO, and the Stripe keys were registered under their corporate account. Her app was live serving 4,200 paying users, and she could not ship a hotfix when checkout broke. We have run that recovery sequence forty times in seventeen years, and each one started with a hiring decision that looked reasonable at the time.
+
+This is the field guide for the founder who has not made that decision yet. What to check before you sign, how to spot trouble early, when to walk away, and how to recover when things go wrong - linked to the deeper post on each step.
 
 ## Before You Hire
 
