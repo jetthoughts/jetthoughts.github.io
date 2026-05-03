@@ -293,3 +293,13 @@ email = "entry.939459641"
 
 # Skip expensive processing in development
 ignoreFiles = ["\\.min\\.css$", "\\.min\\.js$"]
+
+# Hugo 0.161+ runs Node tools (PostCSS, Babel, TailwindCSS) with the
+# --permission flag (Node 22+ experimental permission model). Without
+# an explicit allow, postcss-import can't read theme CSS files and
+# postcss plugins like browserslist can't walk the project for stats.
+# allowRead = ['.'] grants the project tree, which is what PostCSS
+# needs to resolve @import paths into themes/beaver/assets/css/.
+# Reference: https://github.com/gohugoio/hugo/releases/tag/v0.161.0
+[security.node.permissions]
+  allowRead = ['*']

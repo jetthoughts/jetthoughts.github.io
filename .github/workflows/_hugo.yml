@@ -18,7 +18,7 @@ jobs:
       - name: Setup Hugo
         uses: jetthoughts/actions-hugo@v3
         with:
-          hugo-version: 0.160.1
+          hugo-version: 0.161.1
           extended: true
 
       - name: Checkout
@@ -43,6 +43,16 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2
       - run: bun install
+
+      # Use Bun as the "node" runtime for Hugo's PostCSS pipeline.
+      # Hugo 0.161+ runs Node tools with --permission flags; Bun ignores
+      # them and runs PostCSS without filesystem-permission grief.
+      # Symlink bun → node so Hugo's hardcoded "node" lookup finds bun.
+      - name: Use Bun as Node runtime for Hugo
+        run: |
+          mkdir -p "$HOME/.bun-as-node"
+          ln -sf "$(which bun)" "$HOME/.bun-as-node/node"
+          echo "$HOME/.bun-as-node" >> "$GITHUB_PATH"
 
       # Tier 2: Hugo build cache (changes with any build-affecting file)
       - uses: actions/cache@v5

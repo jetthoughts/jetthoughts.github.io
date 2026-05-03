@@ -15,6 +15,13 @@ echo "Output: $OUTPUT_DIR"
 
 BUILD_DRAFTS=${BUILD_DRAFTS:-}
 
+# Project uses Bun for JS, never Node. bin/shims/node forwards Hugo's
+# hardcoded "node" lookup to bun. The [security.node.permissions]
+# block in hugo.toml is a defensive fallback for vanilla Node 22+.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
+export PATH
+
 HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR")
 [ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")
 [ -n "$BUILD_DRAFTS" ] && HUGO_ARGS+=(--buildDrafts)

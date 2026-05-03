@@ -4,7 +4,7 @@ description: 'Install Hugo + Bun, cache dependencies and build artifacts'
 inputs:
   hugo-version:
     description: 'Hugo version'
-    default: '0.160.1'
+    default: '0.161.1'
   environment:
     description: 'Hugo build environment'
     default: 'production'
@@ -35,6 +35,16 @@ runs:
 
     - run: bun install --frozen-lockfile
       shell: bash
+
+    # Use Bun as the "node" runtime for Hugo's PostCSS pipeline.
+    # Hugo 0.161+ runs Node tools with --permission flags; Bun ignores
+    # them. Symlink bun → node so Hugo's hardcoded "node" lookup finds bun.
+    - name: Use Bun as Node runtime for Hugo
+      shell: bash
+      run: |
+        mkdir -p "$HOME/.bun-as-node"
+        ln -sf "$(which bun)" "$HOME/.bun-as-node/node"
+        echo "$HOME/.bun-as-node" >> "$GITHUB_PATH"
 
     - name: Cache Hugo build
       uses: actions/cache@v5
