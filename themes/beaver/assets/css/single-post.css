@@ -1,5 +1,5 @@
 .single-post-wrapper {
-  max-width: 960px;
+  max-width: 720px;
   margin: 0 auto;
   padding-left: 18px;
   padding-right: 18px
@@ -16,6 +16,96 @@
   margin-top: 4rem;
   justify-content: center;
 
+}
+
+/* Blog-only reading typography
+   Scoped to .blog article.single-content (NOT .blog .single-content)
+   because the share/related-posts <div class="single-content single-post-wrapper">
+   is also a descendant of .blog — using the article element type narrows
+   correctly to the post body without leaking padding into the share section.
+
+   Service/use-case/career pages share .single-content but live under different
+   parents (no .blog wrapper), so they're unaffected.
+
+   Targets:
+   - Wider, more breathable body copy (~19px) for long-form reading
+   - Generous top space before the H1 so the title doesn't crowd the nav
+   - Tighter measure: 720px article wrapper centers the entire column */
+.blog article.single-content {
+  padding-top: 3rem;
+}
+
+/* The upstream rule .blog h1 { margin: 0 0 32px !important } in style.css
+   uses shorthand !important, which sets every margin sub-property as
+   important. Specificity alone can't override an important shorthand
+   from the same origin, so the explicit !important here is required. */
+.blog article.single-content > header h1.fl-heading {
+  line-height: 1.15;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Body 22.4px / line-height 1.7 — measured against thoughtbot.com which
+   uses 22.5px / 1.7 with an 18px root. We keep the 16px root so this
+   reads as a deliberate per-section bump, not a global font scale. */
+.blog article.single-content .fl-rich-text,
+.blog article.single-content .fl-rich-text p,
+.blog article.single-content .fl-rich-text li {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.blog article.single-content .fl-rich-text h2 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.blog article.single-content .fl-rich-text h3 {
+  font-size: 1.625rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .blog article.single-content {
+    padding-top: 1.5rem;
+  }
+
+  .blog article.single-content .fl-rich-text,
+  .blog article.single-content .fl-rich-text p,
+  .blog article.single-content .fl-rich-text li {
+    font-size: 1.1875rem;
+    line-height: 1.65;
+  }
+
+  .blog article.single-content .fl-rich-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .blog article.single-content .fl-rich-text h3 {
+    font-size: 1.375rem;
+  }
+}
+
+/* Blog index page (/blog/, /blog/page/N/, /blog/tags/X/) — match the
+   centered single-column treatment of the post page so navigation
+   between index and post feels continuous. */
+.blog-index {
+  padding-top: 3rem;
+}
+
+.blog-index > div > p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .blog-index {
+    padding-top: 1.5rem;
+  }
+
+  .blog-index > div > p {
+    font-size: 1.1875rem;
+    line-height: 1.65;
+  }
 }
 
 .social-share a {
