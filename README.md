@@ -68,11 +68,11 @@ JetThoughts website is a sophisticated static site generator project that showca
 
 ### Dependencies
 
-#### Node.js Dependencies
+#### Bun Dependencies
 ```json
 {
-  "build": ["@fullhuman/postcss-purgecss", "autoprefixer", "cssnano", "esbuild"],
-  "formatting": ["prettier", "prettier-plugin-go-template"],
+  "build": ["@fullhuman/postcss-purgecss", "autoprefixer", "cssnano", "postcss"],
+  "audit": ["lighthouse", "markdownlint-cli"],
   "deployment": ["surge"]
 }
 ```
