@@ -22,6 +22,13 @@ echo ""
 # - Applies development config overrides
 # - Optimizes for fast rebuilds
 
+# Hugo 0.161+ invokes node with --allow-fs-read flags that break PostCSS.
+# bin/shims/node forwards to bun, which ignores Node's experimental
+# permission model. See bin/shims/node for details.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
+export PATH
+
 exec hugo server \
   --bind 0.0.0.0 \
   --port 1313 \

@@ -15,6 +15,13 @@ echo "Output: $OUTPUT_DIR"
 
 BUILD_DRAFTS=${BUILD_DRAFTS:-}
 
+# Hugo 0.161+ invokes node with --allow-fs-read flags that break PostCSS.
+# bin/shims/node forwards to bun, which ignores Node's experimental
+# permission model. See bin/shims/node for details.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
+export PATH
+
 HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR")
 [ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")
 [ -n "$BUILD_DRAFTS" ] && HUGO_ARGS+=(--buildDrafts)
