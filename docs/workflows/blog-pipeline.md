@@ -38,7 +38,22 @@ Create content/blog/<slug>/index.md following these rules:
 - Structure: punchy hook → primary keyword in first 100 words → numbered H2 sections → vibe coding angle section → "When NOT to" section → JetThoughts proof point → CTA → related reading (2-3 internal links in prose) → further reading (5+ external citations)
 - Internal links: weave 4+ links to existing JetThoughts posts naturally in the body (not just footer). Use the slugs verified in Step 3b.
 - Practitioner insight: Before writing, ask "What would a founder who's rescued 50 projects add that keyword research wouldn't find?" Include at least one real-world pattern not in the content plan brief.
-- Paragraphs ≤3 sentences. Word count 1,200-1,800.
+- Paragraphs ≤3 sentences.
+- Length: as long as needed to deliver the solution to a real reader, no longer.
+  Word count is a soft signal, NOT a target. Common landing zones (descriptive,
+  not floors):
+  - Technical fix posts (CVE, version upgrade, deploy issue): 500-900 words.
+    Stop when the fix is delivered. The 595-word
+    rails-cve-2026-41316-founder-guide post is the reference.
+  - Decision-aid posts (founder hiring, rescue, vendor selection): 1,000-1,800 words
+  - Pattern/framework posts (deep playbooks): 2,000+ acceptable IF every section
+    delivers a distinct decision the reader needs
+  - The cut test: for each H2 section, ask "what does the reader DO differently
+    after reading this?" If the answer is "nothing they didn't already know" or
+    "skim and move on", DELETE the section. Don't push it to "further reading"
+    - delete it. Real readers benefit; SEO doesn't punish concision.
+  - Anti-pattern: padding to hit a minimum word count. If the post lands at 700
+    words and delivers the solution, ship it at 700 words.
 - BANNED words: unlock, harness, leverage, dive in, game-changer, journey, seamless, robust, supercharge, revolutionize, embark, delve, discover
 
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
