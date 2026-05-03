@@ -277,7 +277,7 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 feat(blog): add author bio section
 fix(nav): correct dropdown menu z-index issue
 docs: update README with new setup instructions
-style(css): format with prettier
+style(css): consolidate spacing in fl-button selectors
 refactor(sync): improve dev.to API error handling
 test(homepage): add mobile viewport tests
 chore(deps): update Hugo to 0.147.9
