@@ -22,6 +22,13 @@ echo ""
 # - Applies development config overrides
 # - Optimizes for fast rebuilds
 
+# Project uses Bun for JS, never Node. bin/shims/node forwards Hugo's
+# hardcoded "node" lookup to bun. The [security.node.permissions]
+# block in hugo.toml is a defensive fallback for vanilla Node 22+.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
+export PATH
+
 exec hugo server \
   --bind 0.0.0.0 \
   --port 1313 \
