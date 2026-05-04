@@ -90,7 +90,7 @@ Code review gets shorter. Separate structural commits (rename, extract) from beh
 # (3) Feat: bulk discount branch      (behaviour change, with new test)
 ```
 
-The bundled commit needs a careful reviewer for an hour. The three separated commits review in twelve minutes total because (1) and (2) only need to confirm the suite stayed green. Tidy First commits are cheap to review precisely because TDD made them safe to make.
+The bundled commit needs a careful reviewer for an hour. The three separated commits review in twelve minutes total because (1) and (2) only need to confirm the suite stayed green. Tidy First commits are cheap to review precisely because TDD made them safe to make. We work through the 3-line micro-refactor mechanics that keep Tidy First sustainable in [Refactor Without Breaking Tests](/blog/refactor-step-tdd-three-line-discipline-ruby/).
 
 Regressions surface during the cycle that introduces them. The red bar interrupts you while the change is still in your head; production logs interrupt you three weeks later, mid-context-switch on something else. Debugging cost drops as a side effect, because each micro-commit is a known-good state. A CI failure two commits later costs you a two-minute `git bisect` and a ninety-second revert, not a four-hour archaeology session.
 

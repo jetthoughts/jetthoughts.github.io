@@ -22,7 +22,7 @@ The refactor step is where most TDD suites go red. On a Rails 7.1 rescue we took
 
 A 200-line cleanup PR titled "refactor: tidy up Order" is the shape this failure usually takes. Reviewers can't bisect it. The author can't remember what they did first. The skip-the-refactor route - the one we covered in [TDD Without the Overkill](/blog/tdd-overkill-myth-lightweight-ruby/) - is the easier choice in the moment. They keep adding features, the file grows to 400 lines of accumulated Shameless Green, and the technical debt that the refactor step was supposed to keep paid down piles up commit by commit.
 
-JT's house rule on refactoring caps each refactor commit at three lines of production code and runs the suite after each one. The cap prevents both failure modes - the cleanup-PR explosion and the skip-it-entirely tech debt - because three lines is small enough that the suite either stays green or fails for an obvious reason. We work the rule on the `Order` class from [TDD in Ruby: A Step-by-Step Guide](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), so paste the cycle-4 version into your editor if you want to type along.
+JT's house standard on refactoring caps each refactor commit at three lines of production code and runs the suite after each one. That keeps both failure modes off the table - the cleanup-PR explosion and the skip-it-entirely tech debt - because three lines is small enough that the suite either stays green or fails for an obvious reason. We work the move on the `Order` class from [TDD in Ruby: A Step-by-Step Guide](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), so paste the cycle-4 version into your editor if you want to type along.
 
 ## Why the refactor step breaks more tests than green ever does
 
@@ -109,7 +109,7 @@ Two lines changed: one added, one modified. Tests stay green. Commit:
 refactor: name the per-line subtotal in Order#add
 ```
 
-The third move is Extract Method, and it's driven by a new requirement rather than aesthetics. Suppose a test arrives that needs the line-total calculation from somewhere else - a `preview_total` method that sums a hypothetical line without storing it. Before writing the new method, extract the calculation so both call sites can share it. The honest move is four lines: delete the local, replace the push, add the method definition and body. Just over the cap, so split it into two commits and the cap holds.
+The third move is Extract Method, and it's driven by a new requirement rather than aesthetics. Suppose a test arrives that needs the line-total calculation from somewhere else - a `preview_total` method that sums a hypothetical line without storing it. Before writing the new method, extract the calculation so both call sites can share it. The honest move is four lines: delete the local, replace the push, add the method definition and body. Just over the limit, so split it into two commits and you stay safe.
 
 First commit, add the private method body next to `add`:
 
@@ -149,7 +149,7 @@ Any one of those commits could be reverted on its own without disturbing the oth
 
 Three lines is the ceiling. Test && Commit || Revert (TCR) is what enforces it without requiring willpower.
 
-Kent Beck and Llewellyn Falco coined [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) in 2018 as a discipline that runs tighter than red-green-refactor. The rule fits on a Post-it. After each edit, run the suite. If green, commit. If red, throw the change away. Beck's exact phrasing: "if all tests pass, the code will be committed; if tests don't pass, your changes will be reverted."
+Kent Beck and Llewellyn Falco coined [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) in 2018 as a workflow that runs tighter than red-green-refactor. It fits on a Post-it. After each edit, run the suite. If green, commit. If red, throw the change away. Beck's exact phrasing: "if all tests pass, the code will be committed; if tests don't pass, your changes will be reverted."
 
 The Ruby version that fits a Minitest project is a small bash script:
 
@@ -205,7 +205,7 @@ Two lines changed, the suite stays green, commit. The duplication is gone and th
 
 Second pass. Both methods now call `calculate_line_total(price, quantity)`. The next-smallest difference is that one pushes the result onto the array and the other adds it to the array's sum. That's not a duplication worth removing yet - the rule of three says wait until you see the same shape three times before abstracting. We stop here.
 
-The Flocking Rules give you a stopping rule too. When the next-smallest difference between any two pieces of code is larger than three lines, or when removing it would require an abstraction the rule of three doesn't justify yet, you're done. Commit what you have. The next refactor cycle starts when the next failing test gives you a third example of the shape.
+The Flocking Rules also tell you when to stop. When the next-smallest difference between any two pieces of code is larger than three lines, or when removing it would require an abstraction the rule of three doesn't justify yet, you're done. Commit what you have. The next refactor cycle starts when the next failing test gives you a third example of the shape.
 
 ## Mikado Method - when 3 lines isn't enough
 
@@ -223,7 +223,7 @@ Mikado is the acknowledgement that the 3-line rule has limits. On a clean codeba
 
 Here's what one of those rescues looked like. The 4,000-commit Rails repo we picked up in Q3 2025 had structural and behavioral changes mixed in roughly half its commits and no separation rule in place. Their lead engineer told us in the kickoff: "we just stopped writing tests for refactors after the first big merge conflict." Skipped refactor steps had piled up for two years; when they did refactor, they bundled the cleanup into a feature commit. `git bisect` on regressions was useless because suspect commits straddled the line between behavior change and rename.
 
-The rebuild pattern from those rescues is consistent. Split the suite to get a 90-second critical path. Turn on TCR for the refactor phase. Cap refactor commits at three lines, and use the [pull-request review standard](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/) to enforce the cap as a merge gate. After the first month at most rescues, 600-line cleanup PRs are gone - the cap produces 5-20 small commits per hour instead. The bisect cost on the next regression drops from four hours to a two-minute `git bisect` and a ninety-second revert.
+The rebuild pattern from those rescues is consistent. Split the suite to get a 90-second critical path. Turn on TCR for the refactor phase. Cap refactor commits at three lines, and use the [pull-request review standard](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/) to enforce that limit as a merge gate. After the first month at most rescues, 600-line cleanup PRs are gone - what TCR enforces produces 5-20 small commits per hour instead. The bisect cost on the next regression drops from four hours to a two-minute `git bisect` and a ninety-second revert.
 
 If you're holding a Rails codebase where every refactor proposal turns into "let's not touch it," we run a free 45-minute audit: one senior developer reads your suite and your last five PRs, you get a one-page written assessment naming the three changes that pay back fastest. No contract, no follow-up sales call. If you're a developer who recognizes this pattern in your codebase but doesn't sign contracts, forward this post to whoever does.
 
