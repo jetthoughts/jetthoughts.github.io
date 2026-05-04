@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" role="img" aria-labelledby="t">
+  <title id="t">Six layers feed into each other in the Claude Code XP-team pipeline; reflection loops back into contracts.</title>
+  <defs>
+    <filter id="w" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.4"/>
+    </filter>
+    <filter id="w2" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="3"/>
+    </filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff8a80"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a855f7"/>
+    </marker>
+    <style>
+      .bg{fill:#0d1117}
+      .box{fill:#1c2026;stroke:#cc342d;stroke-width:2.2}
+      .num{font:700 13px 'Caveat','Architects Daughter',system-ui;fill:#ff8a80}
+      .lbl{font:700 17px 'Caveat','Architects Daughter',system-ui;fill:#ffffff}
+      .sub{font:500 11px 'Caveat','Architects Daughter',system-ui;fill:#dfe2eb;opacity:.78}
+      .ar{stroke:#ff8a80;stroke-width:2.2;fill:none;stroke-linecap:round}
+      .loop{stroke:#a855f7;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-dasharray:6 4}
+      .loopL{font:700 13px 'Caveat','Architects Daughter',system-ui;fill:#ddb7ff}
+    </style>
+  </defs>
+
+  <rect class="bg" width="720" height="320"/>
+
+  <!-- Row 1: boxes 1, 2, 3 (left to right) -->
+  <g filter="url(#w)">
+    <rect class="box" x="20" y="40" width="200" height="78" rx="10" transform="rotate(-0.6 120 79)"/>
+    <rect class="box" x="260" y="40" width="200" height="78" rx="10" transform="rotate(0.5 360 79)"/>
+    <rect class="box" x="500" y="40" width="200" height="78" rx="10" transform="rotate(-0.4 600 79)"/>
+  </g>
+  <g>
+    <text class="num" x="32" y="60">1.</text>
+    <text class="lbl" x="50" y="62">Contracts</text>
+    <text class="sub" x="32" y="84">voice + design + behavior</text>
+    <text class="sub" x="32" y="102">(CLAUDE.md, voice guide)</text>
+
+    <text class="num" x="272" y="60">2.</text>
+    <text class="lbl" x="290" y="62">Rhythms</text>
+    <text class="sub" x="272" y="84">90s loop · 3-line cap</text>
+    <text class="sub" x="272" y="102">micro-commits</text>
+
+    <text class="num" x="512" y="60">3.</text>
+    <text class="lbl" x="530" y="62">Review</text>
+    <text class="sub" x="512" y="84">3 critic personas</text>
+    <text class="sub" x="512" y="102">across 3 rounds = 9</text>
+  </g>
+
+  <!-- Arrows row 1: 1->2, 2->3 -->
+  <g filter="url(#w2)">
+    <path class="ar" d="M222 80 C 235 76, 248 84, 258 80" marker-end="url(#ar)"/>
+    <path class="ar" d="M462 80 C 475 84, 488 76, 498 80" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Down-turn from box 3 to box 4 (right column) -->
+  <g filter="url(#w2)">
+    <path class="ar" d="M600 120 C 604 145, 596 165, 600 188" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Row 2: boxes 6, 5, 4 (right to left) -->
+  <g filter="url(#w)">
+    <rect class="box" x="500" y="200" width="200" height="78" rx="10" transform="rotate(0.6 600 239)"/>
+    <rect class="box" x="260" y="200" width="200" height="78" rx="10" transform="rotate(-0.5 360 239)"/>
+    <rect class="box" x="20" y="200" width="200" height="78" rx="10" transform="rotate(0.7 120 239)"/>
+  </g>
+  <g>
+    <text class="num" x="512" y="220">4.</text>
+    <text class="lbl" x="530" y="222">Gatekeepers</text>
+    <text class="sub" x="512" y="244">cold-eyes Agent J</text>
+    <text class="sub" x="512" y="262">+ visual + build</text>
+
+    <text class="num" x="272" y="220">5.</text>
+    <text class="lbl" x="290" y="222">Reflection</text>
+    <text class="sub" x="272" y="244">memory writes back</text>
+    <text class="sub" x="272" y="262">voice guide updates</text>
+
+    <text class="num" x="32" y="220">6.</text>
+    <text class="lbl" x="50" y="222">Compounds</text>
+    <text class="sub" x="32" y="244">next sprint inherits</text>
+    <text class="sub" x="32" y="262">every lesson learned</text>
+  </g>
+
+  <!-- Arrows row 2: 4->5, 5->6 (right to left) -->
+  <g filter="url(#w2)">
+    <path class="ar" d="M498 240 C 485 244, 472 236, 462 240" marker-end="url(#ar)"/>
+    <path class="ar" d="M258 240 C 245 236, 232 244, 222 240" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Loop-back arc: from box 6 (left-bottom) up around to box 1 (left-top) -->
+  <g filter="url(#w2)">
+    <path class="loop" d="M120 200 C 70 180, 70 130, 120 118" marker-end="url(#arP)"/>
+  </g>
+  <text class="loopL" x="6" y="162" transform="rotate(-90 6 162)">the compounding loop</text>
+</svg>
