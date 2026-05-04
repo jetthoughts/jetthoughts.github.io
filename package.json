@@ -20,10 +20,10 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "autoprefixer": "^10.5.0",
-    "cssnano": "^7.1.8",
+    "cssnano": "^7.1.9",
     "lighthouse": "^13.2.0",
     "markdownlint-cli": "^0.48.0",
-    "postcss": "^8.5.13",
+    "postcss": "^8.5.14",
     "postcss-cli": "^11.0.1",
     "postcss-delete-duplicate-css": "^1.0.0",
     "postcss-extend-rule": "^4.0.0",
