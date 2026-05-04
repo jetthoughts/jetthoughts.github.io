@@ -53,6 +53,84 @@ Create content/blog/<slug>/index.md following these rules:
   - Anti-pattern: any sentence in the draft that exists to lengthen, shorten,
     or balance a section. The reader does not benefit from your symmetry.
 - BANNED words: unlock, harness, leverage, dive in, game-changer, journey, seamless, robust, supercharge, revolutionize, embark, delve, discover
+- BANNED phrases (caught empirically in past drafts, score ≥78 trigger): "blast radius", "suspect list", "the discipline runs itself", "every safe move is one of these", "the version of X that earned its bad reputation", "is the part heavyweight Y throws away", "What X actually gives you is Y", "X is your design's pain receptor", "X with Y stapled on", "a workflow Beck would not recognize"
+
+STEP 4a — REFERENCE VOICE SAMPLES (mandatory before drafting)
+Read docs/workflows/blog-writer-reference-samples.md and pick the closest-match
+sample to your post's structural shape:
+- Incident/case-study post → patio11 sample
+- Tutorial → thoughtbot sample
+- Debugging/exploratory → Julia Evans sample
+
+Match the CADENCE of that sample, not its phrasing. Do not copy sentences.
+The sample is the voice target; your post is the content. Attribute via a
+"Reference cadence: <author>" comment in the writer's deliverable summary
+so reviewers can verify against the right voice.
+
+STEP 4b — CADENCE QUOTAS (per H2 section, mandatory)
+Default cadence rules to prevent the credentialed-lecturer voice (the
+failure mode that lands every first draft at AI-score 78/100):
+
+- Per H2 section: at least one sentence under 9 words AND at least one over 22 words.
+- No three consecutive sentences within 3 words of each other in length.
+- One paragraph per H2 must be a single sentence.
+- One paragraph per H2 should run over 70 words with at least one comma-spliced clause.
+- Cap mannerism nouns (`discipline`, `cycle`, `pattern`, `canonical`, `workflow`,
+  `framework`) at 3 occurrences total per post combined across all of them.
+- Round-number anchors (Q1/Q3 dates, dollar ranges, exact line counts, "40+"
+  rescue counts): max 2 per H2 section. Switch to a story without numbers
+  after two stamps.
+- Replace every "every X / never X / always X" with a specific count or
+  named instance: "the last three rescues", not "every rescue".
+- Force named (anonymized OK) actors or quoted speech: "Marcus on the Acme
+  rescue", not "the developer". Strip sentences that can't pass this test.
+- Ban definitional cadence: `is the (canonical|largest|whole|real|part|version|move|rule|pattern|reason|kind) (of|that)`. Replace with a story.
+
+STEP 4c — BAD/GOOD pairs (verbatim — abstract bans don't intercept)
+Caught in past drafts. Pattern-match these surface features, not abstract rules:
+
+BAD: "The blast radius of a bad migration can be significant."
+GOOD: "Last March we ran a migration on a Rails 6 app at 2am. It locked the orders table for 11 minutes. Stripe webhooks queued, then timed out, then retried. Support tickets the next morning: 84."
+
+BAD: "When the suite goes red on a 3-line commit, the suspect list is three lines long."
+GOOD: "When the suite goes red on a 3-line commit, you only need to read three lines."
+
+BAD: "What lightweight TDD actually gives you is refactor courage."
+GOOD: "Once the cycle drops under two minutes, renaming a class stops feeling expensive."
+
+BAD: "The senior developer at a Rails shop we audited in Q1 2026 had thirty-one of these in his last quarter."
+GOOD: "Marcus on the Acme rescue did this for a Friday afternoon - landed twelve failures, picked them apart for two hours, merged a partial."
+
+BAD: "Refactor stops being a 200-line afternoon and becomes a sequence of 3-line commits, fifteen or twenty of them, every one of which left the suite green."
+GOOD: "Refactor stops being a 200-line afternoon. It becomes fifteen or twenty 3-line commits, each one ending on a green suite."
+
+STEP 4d — TWO-PASS WRITING (mandatory — single-shot lands at AI-score ~78)
+
+Pass 1: write the full draft following all rules above. Match the reference
+sample's cadence. Apply the cut test. This pass produces a structurally
+correct draft but instruction-tuned models gravitate to a "credentialed
+lecturer" voice as an RLHF artifact - definitional cadence, generalized
+actors, mannerism-noun refrain, round-number stamps. That's expected.
+
+Pass 2: re-read the draft AS A DIFFERENT PERSON. Use this verbatim prompt:
+"You are a tired senior dev re-reading this on Friday at 4pm with a beer
+in hand. You don't write textbooks for a living. Rewrite anything that
+sounds like a textbook chapter. Specifically:
+- Delete every sentence whose subject is 'the developer' / 'the team' /
+  'most teams' UNLESS you replace with a named actor or a quoted line
+  of speech.
+- Cut every 'X is the [canonical/largest/right/whole/part/version] of Y'
+  construction. Replace with a story.
+- If the same paragraph has 3+ round-number stamps (dates, dollars,
+  counts), pick the strongest one and aggregate the rest.
+- If 'discipline' / 'cycle' / 'pattern' appear more than 3 times across
+  the post combined, vary the rest to the concrete thing happening.
+- If a sentence reads as 'rule of two clauses balanced with and', split
+  it or break the parallelism."
+
+Pass 2 reliably strips ~15-25 points off the AI-detector's first-read score.
+The cost is ~30% more writer tokens; the value is review rounds spend their
+budget on real issues, not on rewriting textbook prose.
 
 STEP 5a — ANTI-AI WRITING PASS (MANDATORY — run BEFORE review loop)
 Run /humanizer on the draft. Scan every paragraph for these AI tells:
@@ -71,6 +149,11 @@ Run /humanizer on the draft. Scan every paragraph for these AI tells:
 - Command structure repetition — don't start 3+ paragraphs with imperatives
 - Apologetic caveats — no "every project is different" hedging
 - Telling instead of showing — replace adjectives with concrete technical mechanics
+- Mannerism-noun refrain — `discipline`/`cycle`/`pattern`/`canonical`/`workflow` over 3 occurrences total = comfort-blanket noun. Vary to the concrete thing.
+- Round-number anchor density — more than 2 numeric stamps per H2 = stamping. Aggregate the rest.
+- Generalized-actor framing — "the developer" / "the team" / "most teams" without a named actor or quoted speech. Replace or strip.
+- Definitional cadence — "X is the (canonical/largest/whole/part/version) of Y". Replace with a story.
+- "every X / never X" generalizations — replace with specific count: "the last three rescues".
 
 Quality tests (run on every paragraph):
 - "Who" test: who is doing what? If the subject is a thing, rewrite with a person.
