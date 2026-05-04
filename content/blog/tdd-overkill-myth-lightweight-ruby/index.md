@@ -26,9 +26,9 @@ If you want the rhythm worked out on real Ruby code, we walk through four cycles
 
 ## The "TDD is overkill" myth comes from heavyweight habits
 
-The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. One hour of writing code with TDD usually cuts that debug bill to a fraction. Either way you spend six hours. Only the TDD path leaves you with a design you can change.
+The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. The lightweight TDD version of that same feature costs roughly fifteen to thirty-five percent more upfront ([Nagappan et al., Microsoft + IBM, 2008](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf)) and reduces defect density by forty to ninety percent. Net: the same feature ships in roughly one-and-a-half hours total instead of seven, with a design you can change.
 
-![Time-ledger comparison: 1 hour code + 6 hours debug = 7 hours total without TDD; 6 hours TDD + 0 hours debug = 6 hours total with lightweight TDD](time-ledger.svg)
+![Time-ledger comparison: 1 hour code plus 6 hours debug equals 7 hours total without TDD; about 1.5 hours code plus tests with lightweight TDD ships in roughly one-fifth the time and with 40-90% fewer defects](time-ledger.svg)
 
 Thirty-minute red-green cycles are the first culprit. Beck's original cycle measures in seconds and minutes. A team that writes one giant test, builds an entire feature, then fights ten unrelated mock failures has done integration testing after the fact, not TDD. On a billing-platform rescue last quarter the average cycle ran thirty-eight minutes because each spec booted Rails before asserting anything. The team kept TDD and learned to write unit tests that ran in 8ms instead.
 

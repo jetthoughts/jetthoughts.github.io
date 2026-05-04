@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" width="800" height="620" role="img" aria-labelledby="title desc">
   <title id="title">The Core 6 Refactorings</title>
   <desc id="desc">Six refactoring cards: Rename, Inline, Extract Method, Introduce Local Variable, Introduce Parameter, Introduce Field. Every safe refactor is one of these six moves.</desc>
 
