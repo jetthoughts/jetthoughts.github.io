@@ -74,9 +74,32 @@ failure mode that lands every first draft at AI-score 78/100):
 - Per H2 section: at least one sentence under 9 words AND at least one over 22 words.
 - No three consecutive sentences within 3 words of each other in length.
 - One paragraph per H2 must be a single sentence.
-- One paragraph per H2 should run over 70 words with at least one comma-spliced clause.
-- Cap mannerism nouns (`discipline`, `cycle`, `pattern`, `canonical`, `workflow`,
-  `framework`) at 3 occurrences total per post combined across all of them.
+- Cap any paragraph at 3 sentences AND 70 words. If the idea genuinely needs
+  more, the paragraph wants to be two paragraphs. Reading flow drops sharply
+  past 3 sentences for an online reader.
+- Anaphora rule: no two sentences within the same paragraph may start with
+  the same first word. If the writer's natural draft has "The X. The Y." or
+  "We X. We Y.", rewrite the second sentence to start with a verb, a person,
+  a time, or a clause. Vary the actor instead of stamping the noun.
+- Opener variety: keep paragraphs starting with "The..." under 20% of total
+  paragraphs, AND keep paragraphs starting with "We..." (or sentences within a
+  paragraph leading with "We saw / We've seen / We work / We commit") under
+  15% of total paragraphs. Both are AI tells when stamped repeatedly.
+  Lead with verbs, named teammates, times, scenes, quoted lines, or passive
+  observations. "We..." reads as practitioner voice once per H2; at higher
+  density it reads as authority-by-stamping.
+- Hook variety: the "fictional founder + specific stats + 'told her X but
+  not Y' reveal" formula (Priya / Marcus / Sarah opening) has appeared in
+  the last 5 founder-pain posts. It is now the post's own tell. Pick a
+  different opening shape: a Slack message verbatim, a code diff, a number
+  from a CI dashboard, a one-line quote from a kickoff retro, or a
+  time-stamped scene that does not name a fictional founder. Use the
+  fictional-founder formula at most once a quarter.
+- Cap mannerism nouns at 5 total per post combined across this set:
+  `discipline`, `cycle`, `pattern`, `canonical`, `workflow`, `framework`,
+  `cadence`, `rhythm`, `contract`, `gate`, `gatekeeper`, `layer`, `round`,
+  `review`, `pass`. Once introduced, switch to the actual file or action
+  ("the voice file", "Agent J", "the build") instead of stamping the label.
 - Round-number anchors (Q1/Q3 dates, dollar ranges, exact line counts, "40+"
   rescue counts): max 2 per H2 section. Switch to a story without numbers
   after two stamps.
@@ -85,6 +108,10 @@ failure mode that lands every first draft at AI-score 78/100):
 - Force named (anonymized OK) actors or quoted speech: "Marcus on the Acme
   rescue", not "the developer". Strip sentences that can't pass this test.
 - Ban definitional cadence: `is the (canonical|largest|whole|real|part|version|move|rule|pattern|reason|kind) (of|that)`. Replace with a story.
+- Don't enumerate the post's architecture inside the body. The H2 headings
+  already carry the structure; restating it as "X, then Y, then Z" or
+  "five layers feed into each other" reads as table-of-contents prose.
+  If the system needs introducing, use one short paragraph and move on.
 
 STEP 4c — BAD/GOOD pairs (verbatim — abstract bans don't intercept)
 Caught in past drafts. Pattern-match these surface features, not abstract rules:
@@ -103,6 +130,24 @@ GOOD: "Marcus on the Acme rescue did this for a Friday afternoon - landed twelve
 
 BAD: "Refactor stops being a 200-line afternoon and becomes a sequence of 3-line commits, fifteen or twenty of them, every one of which left the suite green."
 GOOD: "Refactor stops being a 200-line afternoon. It becomes fifteen or twenty 3-line commits, each one ending on a green suite."
+
+BAD (anaphora pair): "The build runs cleanly. The og:image resolves. The internal links all work."
+GOOD: "The build runs cleanly - Hugo emits 660 pages, the og:image resolves, and the internal links work."
+
+BAD (architecture enumeration in body): "We move every post through six layers in order: contracts, then rhythms, then review, then gatekeepers, then reflection."
+GOOD: "Six steps run on every post before merge. The first two set the agent's expectations, the next two improve the draft, the last two catch what survived."
+
+BAD (long paragraph, 5 sentences / 110 words): "Last Thursday Marcus had an agent break a feature. The agent was set up with the standard contract and TDD rules. It ran the suite green, then refactored a method, then committed. The next test it generated failed in ways unrelated to the feature it was working on. Marcus bisected and reverted in eleven minutes, but if he had not been pairing the agent would have continued and the failure would have shipped to staging."
+GOOD (split at the rule-to-incident transition): "Last Thursday Marcus had an agent break a feature on commit 47. The agent had refactored a method and the next test it generated failed in ways unrelated to the feature it was working on. Marcus bisected and reverted in eleven minutes. Without pairing he would have shipped the failure to staging."
+
+BAD (mannerism noun saturation): "The contract layer feeds into the rhythms layer, which feeds into the review layer. Each layer has its own gatekeeper. The cycle compounds when the reflection layer feeds back."
+GOOD: "Voice rules feed into TDD's micro-cycles, which feed into the parallel critic agents. Each step has its own check. The loop compounds when we write what we learned back into the voice rules."
+
+BAD (formulaic founder-anecdote hook - this is now the tell): "A founder we'll call Priya forwarded us her Claude Code transcript on a Sunday night. The MVP had been live for the first week. She'd opened it to her first cohort - 217 paying users on a HealthTech waitlist she'd been building for over a year - and the auth flow silently dropped session tokens for anyone whose email had a plus sign in it. 84 of those 217 users hit the bug in the first 36 hours. Her solo agent had built the entire app in a weekend, told her it had 'comprehensive test coverage', and not once mentioned it had skipped writing a single test for the email parser."
+GOOD (vary the opener shape - here's a different one for the same kind of post): "Marcus opened the PR Tuesday morning with one comment in the description: 'agent finished overnight, tests green.' By 11am the staging deploy had failed twice. The auth flow regression was three lines deep in a dependency the agent had upgraded silently. Marcus rolled back, opened the diff, and asked the agent why - it hadn't run the integration suite, only the unit tests it had written itself."
+
+BAD ("We" opener stamping - paragraph after paragraph leading with "We"): "We work the cycle on every cycle. We commit on every green. We saw a few more like Priya's last quarter."
+GOOD: "The cycle runs the same way each time, and the team commits on every green. A few more rescues like Priya's came in last quarter."
 
 STEP 4d — TWO-PASS WRITING (mandatory — single-shot lands at AI-score ~78)
 
