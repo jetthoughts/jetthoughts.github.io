@@ -18,13 +18,17 @@ canonical_url: 'https://jetthoughts.com/blog/tdd-overkill-myth-lightweight-ruby/
 related_posts: false
 ---
 
+![TDD trilogy navigation: Step-by-Step, The Overkill Myth (current), 3-Line Discipline](trilogy-nav.svg)
+
 The senior dev who told you TDD was overkill learned it on a project where the test suite took twenty minutes to run and every PR took two rounds of mock refactoring. So did we. What Kent Beck described in 2003 and what most TDD-skeptical engineers we meet call "TDD" in 2026 are not the same practice. The loudest "TDD is too slow" complaints we hear in rescue kickoffs describe a workflow that has nothing to do with the cycle Beck laid out.
 
 If you want the rhythm worked out on real Ruby code, we walk through four cycles on a small `Order` class in [TDD in Ruby: A Step-by-Step Guide](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/).
 
 ## The "TDD is overkill" myth comes from heavyweight habits
 
-The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. One hour of writing code with TDD usually cuts that debug bill to a fraction. Either way you spend six hours. Only the TDD path leaves you with a design you can change.
+The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. The lightweight TDD version of that same feature costs roughly fifteen to thirty-five percent more upfront ([Nagappan et al., Microsoft + IBM, 2008](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf)) and reduces defect density by forty to ninety percent. Net: the same feature ships in roughly one-and-a-half hours total instead of seven, with a design you can change.
+
+![Time-ledger comparison: 1 hour code plus 6 hours debug equals 7 hours total without TDD; about 1.5 hours code plus tests with lightweight TDD ships in roughly one-fifth the time and with 40-90% fewer defects](time-ledger.svg)
 
 Thirty-minute red-green cycles are the first culprit. Beck's original cycle measures in seconds and minutes. A team that writes one giant test, builds an entire feature, then fights ten unrelated mock failures has done integration testing after the fact, not TDD. On a billing-platform rescue last quarter the average cycle ran thirty-eight minutes because each spec booted Rails before asserting anything. The team kept TDD and learned to write unit tests that ran in 8ms instead.
 

@@ -5,8 +5,14 @@
 {{ if $src }}
 {{ $useCDN := site.Params.cdn.enabled }}
 {{ $isGif := eq (path.Ext $src.Name | lower) ".gif" }}
+{{ $isSvg := eq (path.Ext $src.Name | lower) ".svg" }}
 
-{{ if $isGif }}
+{{ if $isSvg }}
+  {{/* SVG: render as plain img - no responsive variants, no fingerprint pipeline */}}
+  <img loading="lazy"
+       src="{{ $src.RelPermalink }}"
+       alt="{{ $alt }}">
+{{ else if $isGif }}
   {{ if $useCDN }}
   {{ $cdnURL := partial "cdn/url" (dict "page" .Page "resource" $src "params" "") }}
   <img loading="lazy"
