@@ -99,7 +99,7 @@ You don't need every role from day one. Begin with a strategy doc the agent read
 
 Setup eats one sprint of overhead. Rule files need writing, agent definitions need configuring, and the team needs convincing. From sprint two the time disappears.
 
-Cost on a small slice (one AC item, 50-100 lines of diff) runs $4-6 on Sonnet or $20-30 on Opus, plus 30-45 minutes of wall-clock time when critics run in parallel. Larger bets and Ralph-loop retries push the bill higher, but it's still cheaper than the rework on a vibe-coded PR that ships the wrong feature.
+Cost on a small slice (one AC item, 50-100 lines of diff) runs $4-6 on Sonnet or $20-30 on Opus with prompt caching on, plus 30-45 minutes of wall-clock time when the 4-agent critic panel (PM, Designer, Rails, Simplicity) runs in parallel. Larger bets and Ralph-loop retries push the bill higher, but it's still cheaper than the rework on a vibe-coded PR that ships the wrong feature.
 
 ## What to do next
 
