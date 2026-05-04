@@ -26,15 +26,15 @@ If you want the rhythm worked out on real Ruby code, we walk through four cycles
 
 ## The "TDD is overkill" myth comes from heavyweight habits
 
-The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. The lightweight TDD version of that same feature costs roughly fifteen to thirty-five percent more upfront ([Nagappan et al., Microsoft + IBM, 2008](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf)) and reduces defect density by forty to ninety percent. Net: the same feature ships in roughly one-and-a-half hours total instead of seven, with a design you can change.
+The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. The lightweight TDD version of that same feature costs roughly fifteen to thirty-five percent more upfront ([Nagappan et al., Microsoft + IBM, 2008](https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf)) and reduces defect density by forty to ninety percent. The same feature ships in roughly one-and-a-half hours total instead of seven, with a design you can change.
 
 ![Time-ledger comparison: 1 hour code plus 6 hours debug equals 7 hours total without TDD; about 1.5 hours code plus tests with lightweight TDD ships in roughly one-fifth the time and with 40-90% fewer defects](time-ledger.svg)
 
 Thirty-minute red-green cycles are the first culprit. Beck's original cycle measures in seconds and minutes. A team that writes one giant test, builds an entire feature, then fights ten unrelated mock failures has done integration testing after the fact, not TDD. On a billing-platform rescue last quarter the average cycle ran thirty-eight minutes because each spec booted Rails before asserting anything. The team kept TDD and learned to write unit tests that ran in 8ms instead.
 
-Mocks are the second trap. A new developer reads "test in isolation," wraps each collaborator in a stub, and ends up with a test suite that asserts the structure of the code instead of its behavior. Change a method name, twenty tests fail. None of them caught a real bug. We covered the specific shape of this failure mode in [Mock Everything: A Good Way to Sink TDD Testing](/blog/mock-everything-good-way-sink-tdd-testing/).
+Premature mocking compounds the problem. A new developer reads "test in isolation," wraps each collaborator in a stub, and ends up with a test suite that asserts the structure of the code instead of its behavior. Change a method name, twenty tests fail. None of them caught a real bug. We covered the specific shape of this failure mode in [Mock Everything: A Good Way to Sink TDD Testing](/blog/mock-everything-good-way-sink-tdd-testing/).
 
-Then there's scenario sprawl. ATDD, BDD, and Cucumber all promised non-technical stakeholders could write executable specs. In practice, your PM never wrote a single Gherkin scenario, and your engineers maintained a 4,000-line `features/` directory nobody trusted while the unit tests did the actual work.
+Scenario sprawl makes it worse. ATDD, BDD, and Cucumber all promised non-technical stakeholders could write executable specs. In practice, your PM never wrote a single Gherkin scenario, and your engineers maintained a 4,000-line `features/` directory nobody trusted while the unit tests did the actual work.
 
 ## What lightweight TDD actually feels like
 
@@ -56,11 +56,9 @@ That's not a typo. The simplest method body that turns the test green is a hardc
 
 Ninety seconds per cycle, not thirty minutes. Each cycle ends with a green test and a commit, so reverting to the last green state costs ninety seconds of work, not an afternoon. Heavyweight TDD lost this on purpose. Once cycles drift past 30 minutes, the safety net stops paying for itself.
 
-We walk through three more cycles on the same `Order` class in the [step-by-step guide](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), with timestamps showing how each lands in under two minutes.
-
 ## The actual prize is design, not coverage
 
-The biggest mistake new TDD readers make is treating coverage as the goal. It is not. When a test is hard to write, the design is what's wrong. Setup that runs ten lines means your object has too many dependencies. A method that needs Rails booted to run wants to live somewhere else. Behaviour changes that cascade into eight test rewrites tell you the seams are in the wrong place. J.B. Rainsberger calls this [listening to the cries of the test](https://blog.thecodewhisperer.com/permalink/the-myth-of-advanced-tdd). Lightweight TDD turns that pain into a refactoring trigger instead of a reason to abandon the discipline.
+The biggest mistake new TDD readers make is treating coverage as the goal. It is not. When a test is hard to write, the design is what's wrong. Setup that runs ten lines means your object has too many dependencies, and behaviour changes that cascade into eight test rewrites mean the seams are in the wrong place. J.B. Rainsberger calls this [listening to the cries of the test](https://blog.thecodewhisperer.com/permalink/the-myth-of-advanced-tdd). Lightweight TDD turns that pain into a refactoring trigger instead of a reason to abandon the discipline.
 
 The payoff is refactor courage. With a green suite under you, renaming a class is a thirty-second move. Without it, the rename becomes a four-hour archaeology project where you read each caller and pray. The last three Rails rescues we picked up all had tests in the 2-5% range, and refactor proposals turned into "let's not touch it" at every standup.
 
@@ -74,9 +72,9 @@ Teams that chase coverage as the goal end up with suites full of `assert_not_nil
 
 A 40-line Rake task that backfills one column on one production table - the one you will run twice and delete next week - does not need a test. Run it on staging, eyeball the output, run it on production, delete the file. The same logic covers most one-off data migrations: the script is a transaction that runs once, and writing a test against a populated dev database often costs more than running the migration twice.
 
-Prototype spikes and hackathon demos earn the same exemption. The point of the spike is to learn whether an idea is worth building - write the messy code, get the answer, throw it away. With eighteen hours on the clock and judges who will not open the repo, optimise for the demo running. Whoever picks up the project Monday morning can deal with the design - and they usually won't have to, because most hackathon demos never ship. If the spike survives, you will rewrite it with tests on the way to production, and that rewrite is when the discipline starts paying.
+Prototype spikes and hackathon demos earn the same exemption. The point of the spike is to learn whether an idea is worth building - write the messy code, get the answer, throw it away. With eighteen hours on the clock and judges who will not open the repo, optimise for the demo running. If the spike survives, you will rewrite it with tests on the way to production, and that rewrite is when the discipline starts paying.
 
-The rule of thumb that catches all four cases: will this code be touched again? If the answer is no, skip TDD and feel no guilt. If the answer is yes, even "yes, in three months," the ledger flips and you should write the test. The Rails app you are still maintaining six months later is the one where the missing tests cost you four hours per change.
+The rule of thumb that catches each: will this code be touched again? If the answer is no, skip TDD and feel no guilt. If the answer is yes, even "yes, in three months," the ledger flips and you should write the test. The Rails app you are still maintaining six months later is the one where the missing tests cost you four hours per change.
 
 ## What changes when your team adopts the rhythm
 
@@ -96,16 +94,16 @@ Code review gets shorter. Separate structural commits (rename, extract) from beh
 
 The bundled commit needs a careful reviewer for an hour. The three separated commits review in twelve minutes total because (1) and (2) only need to confirm the suite stayed green. Tidy First commits are cheap to review precisely because TDD made them safe to make. We work through the 3-line micro-refactor mechanics that keep Tidy First sustainable in [Refactor Without Breaking Tests](/blog/refactor-step-tdd-three-line-discipline-ruby/).
 
-Regressions surface during the cycle that introduces them. The red bar interrupts you while the change is still in your head; production logs interrupt you three weeks later, mid-context-switch on something else. Debugging cost drops as a side effect, because each micro-commit is a known-good state. A CI failure two commits later costs you a two-minute `git bisect` and a ninety-second revert, not a four-hour archaeology session.
+Regressions surface during the cycle that introduces them. The red bar interrupts you while the change is still in your head; production logs interrupt you three weeks later, mid-context-switch on something else. Debugging cost drops as a side effect, because each micro-commit is a known-good state. A CI failure two commits later costs you a two-minute `git bisect` and a ninety-second revert, instead of an hours-long unwind.
 
-A 200-line setup block is your object asking to be split. When a test needs eight mocks to run, the collaborator graph wants flattening. The Ruby and Rails patterns we see most often when this happens are catalogued in [Test-Driven Thinking for Solving Common Ruby Pitfalls](/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/). That practice is exactly what's missing in the codebases founders hand us when an MVP starts breaking.
+A 200-line setup block is your object asking to be split. When a test needs eight mocks to run, the collaborator graph wants flattening. The Ruby and Rails patterns we see most often when this happens are catalogued in [Test-Driven Thinking for Solving Common Ruby Pitfalls](/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/).
 
 ## What a TDD rescue actually starts with
 
-We have done forty-plus Rails rescues over seventeen years. The pattern that brings founders to our door is consistent: a vibe-coded MVP, no automated tests (the suites we inherit average under 5% line coverage), no CI worth running, and a founder who has spent somewhere between $80K and $200K. The first user found a critical bug in week two of beta.
+Last quarter we picked up a HealthTech rescue. The MVP had been live for nine days when the first 217 paying users hit the auth flow. The founder had spent $140K. The codebase had 2% line coverage and no CI worth running. We've seen forty-plus Rails rescues over seventeen years; that one was the most recent in a pattern we recognize on first read.
 
 The fix never starts with adding test coverage to the existing code. That is the trap. We start by writing a single failing test that captures the bug the founder is currently bleeding from, fixing it inside the 90-second loop, and shipping the patch the same day. Then we write the next failing test for the next bleeding bug. We covered the rationale on this approach in [Why and How to Use TDD: Tips for Testing](/blog/why-how-use-tdd-main-tips-testing/).
 
 If you wrote the MVP yourself and the bugs are showing up faster than you can ship features - or you are the senior dev being asked to rescue someone else's vibe-coded build - that is the situation we audit for free. One senior developer reads your codebase and writes a one-page assessment naming the three changes that pay back fastest. No contract, no follow-up sales call. Send the repo URL and a paragraph on what's breaking to [/contact-us/](/contact-us/) and we respond inside 48 hours.
 
-Writing the test is the cheapest moment in a piece of code's life. The rename three weeks from now will cost more. So will the refactor you keep putting off because the suite is too thin to catch what breaks.
+Writing the test is the cheapest moment in a piece of code's life. The rename three weeks from now and the refactor you keep putting off both cost more, because the suite is too thin to catch what breaks.
