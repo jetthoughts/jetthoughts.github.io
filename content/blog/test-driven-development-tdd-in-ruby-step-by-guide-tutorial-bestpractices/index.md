@@ -142,13 +142,13 @@ Kent Beck's 2023 book [Tidy First?](https://tidyfirst.substack.com/) makes the r
 
 Bad commit:
 
-```
+```text
 feat: add quantity support and rename @items to @line_items
 ```
 
 Good commits, in order:
 
-```
+```text
 refactor: rename @items to @line_items
 feat: add quantity support to Order#add
 ```
