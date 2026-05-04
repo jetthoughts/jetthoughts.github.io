@@ -22,7 +22,7 @@ slug: test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices
 
 You opened this post because you want to try TDD on real Ruby code, and the tutorials you've seen so far either skipped the rhythm entirely or buried it under three pages of theory. This one shows the loop on a small `Order` class you can paste into a Minitest file and follow along with.
 
-We'll write four cycles in under eight minutes. Each cycle ends with a green test and a commit, so at any point you can `git reset --hard` and you've lost at most 90 seconds of work. That bounded cost is what makes the whole discipline tractable - and it's the part most TDD intros leave out.
+We'll work four rounds in under eight minutes. Each one ends with a green test and a commit, so at any point you can `git reset --hard` and you've lost at most 90 seconds of work. That bounded cost is what makes the whole discipline tractable - and it's the part most TDD intros leave out.
 
 ## Why TDD looks slow but isn't
 
@@ -32,7 +32,7 @@ A separate complaint - "TDD is overkill for what I'm doing" - is a different arg
 
 ## The 90-second loop on a small Order class
 
-The cycle is RED, then SHAMELESS GREEN, then COMMIT, then REFACTOR if anything's worth tidying, then COMMIT again. We'll do four cycles, with timestamps so you can feel the pace.
+The loop is RED, then SHAMELESS GREEN, then COMMIT, then REFACTOR if anything's worth tidying, then COMMIT again. We'll work four iterations, with timestamps so you can feel the pace.
 
 Start with one test file. Minitest because it's what ships in stdlib and because the project this post lives in uses it.
 
@@ -100,7 +100,7 @@ def test_total_sums_multiple_items
 end
 ```
 
-Run it. It passes on first try. The cycle 2 implementation already covered the multi-item case - we didn't need new production code, only a test that pinned the behavior down. Commit anyway: the test is part of the safety net now, and the commit log shows what we believed was true at this point.
+Run it. It passes on first try. The cycle 2 code already covered the multi-item case - we didn't need new production code, only a test that pinned the behavior down. Commit anyway: the test is part of the safety net now, and the commit log shows what we believed was true at this point.
 
 ```ruby
 # 06:00 RED - cycle 4
@@ -122,15 +122,15 @@ end
 
 Green. Commit. Seven minutes in, four green tests, four commits, an `Order` that handles items, totals, and quantities. The whole class fits on one screen.
 
-The pace is the point. Each loop ends with green tests and a commit, so the worst possible state of your working tree is 90 seconds away from a known-good one. Compare that to writing 200 lines, running it, getting a stack trace, and spending 40 minutes finding the line that broke it.
+The pace is the point. Each round ends with green tests and a commit, so the worst possible state of your working tree is 90 seconds away from a known-good one. Compare that to writing 200 lines, running it, getting a stack trace, and spending 40 minutes finding the line that broke it.
 
 ## Shameless Green - write the dumbest code that works
 
 Cycle 1's `def total; 0; end` looks embarrassing, and that's exactly the point. Sandi Metz, in [99 Bottles of OOP](https://sandimetz.com/99bottles), calls this Shameless Green: code that's "cheap to write, cheap to understand, cheap to change." It isn't trying to be clever. It's optimizing for the things you can actually verify in the moment (did this take me five minutes and does the next person who reads it understand it), and trading away the things you can't, like whether your abstraction will still feel right six months from now.
 
-The temptation, especially for senior Ruby developers, is to design the right shape now. You can already see the `LineItem` value object, the `OrderCalculator` service, the `PricingPolicy` strategy. Resist. After cycle 1 you have one example. After cycle 2 you have two. The [rule of three for abstraction](https://wiki.c2.com/?ThreeStrikesAndYouRefactor) exists because two examples lie about what they have in common - they always look more similar than they really are.
+The temptation, especially for senior Ruby developers, is to design the right shape now. You can already see the `LineItem` value object, the `OrderCalculator` service, the `PricingPolicy` strategy. Resist. After the first round you have one example. After the second you have two. The [rule of three for abstraction](https://wiki.c2.com/?ThreeStrikesAndYouRefactor) exists because two examples lie about what they have in common - they always look more similar than they really are.
 
-KISS and YAGNI fold in here. KISS picks the simplest path that makes the test pass. YAGNI tells you not to add the configurable `currency:` parameter until a test demands it. The hardcoded `0` in cycle 1 satisfies both. By cycle 4 we have four concrete examples and the right shape - a sum over priced items with optional quantity - emerged on its own. We didn't design it; the tests did.
+KISS and YAGNI fold in here. KISS picks the simplest path that makes the test pass. YAGNI tells you not to add the configurable `currency:` parameter until a test demands it. The hardcoded `0` in cycle 1 satisfies both. Four iterations later we have four concrete examples and the right shape - a sum over priced items with optional quantity - emerged on its own. We didn't design it; the tests did.
 
 JT's internal flocking-rules standard formalizes the move once you do have enough examples: select the things most alike, find the smallest difference between them, make the simplest change that removes the difference. Abstractions show up through convergence, not by guessing. The most common way Ruby developers wreck a TDD suite is by [reaching for mocks the moment a test gets uncomfortable](/blog/mock-everything-good-way-sink-tdd-testing/) - same root cause: trying to design ahead of the evidence the tests are giving you.
 
@@ -153,21 +153,21 @@ refactor: rename @items to @line_items
 feat: add quantity support to Order#add
 ```
 
-The cost of splitting is one extra commit. The benefits compound: `git revert` on the feature commit doesn't undo the rename, [code review reads top to bottom without context-switching](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/), and the next developer can bisect a regression to the actual cause. The last 4,000-commit Rails repo we inherited had structural and behavioral changes mixed in roughly half of its commits, and rebuilding the discipline alone saved us days on the first three debugging sessions.
+The cost of splitting is one extra commit. The benefits compound: `git revert` on the feature commit doesn't undo the rename, [code review reads top to bottom without context-switching](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/), and the next developer can bisect a regression to the actual cause. The last 4,000-commit Rails repo we inherited had structural and behavioral changes mixed in roughly half of its commits, and rebuilding the habit alone saved us days on the first three debugging sessions.
 
 ## Auto-revert when red - `git reset --hard` is your friend
 
 Tests went red and you're not sure why? `git reset --hard HEAD`. You've lost at most 90 seconds of work, because that's how long it's been since the last green commit. Try again, smaller step.
 
-This is the move that makes Shameless Green safe. We commit on every green - cycle 1's `def total; 0; end` was committable code - so revert costs nothing. Junior Ruby developers find the move terrifying for about two weeks, then they find it liberating. You stop being precious about keystrokes you've already typed, because they cost you nothing to retype. The 90-second loop puts a hard ceiling on lost work, and that ceiling is what makes experimenting cheap enough to do twenty times in an afternoon.
+Shameless Green works because revert is cheap. We commit each time the suite goes green - cycle 1's `def total; 0; end` was committable code - so revert costs nothing. Junior Ruby developers find the move terrifying for about two weeks, then they find it liberating. You stop being precious about keystrokes you've already typed, because they cost you nothing to retype. The 90-second loop puts a hard ceiling on lost work, and that ceiling is what makes experimenting cheap enough to do twenty times in an afternoon.
 
-The 5-to-20-commits-per-hour rhythm Beck describes in *Tidy First?* isn't aspirational. It's how you actually work once you trust the safety net. On the last fintech rescue we ran (a Q1 2026 engagement, Rails 7.1, ~11k tests), the previous team committed once a day in 600-line bombs. Their `git bisect` on a regression was useless because every commit straddled the line between behavior change and refactor. We rebuilt the commit cadence first and debugged second.
+The 5-to-20-commits-per-hour rhythm Beck describes in *Tidy First?* isn't aspirational. It's how you actually work once you trust the safety net. On the last fintech rescue we ran (a Q1 2026 engagement, Rails 7.1, ~11k tests), the previous team committed once a day in 600-line bombs. Their `git bisect` on a regression was useless because each commit straddled the line between behavior change and refactor. We rebuilt the commit cadence first and debugged second.
 
 ## Common newbie mistakes
 
-Three failure modes show up over and over when developers first try TDD on Ruby. Each one passes for the discipline at a glance, and each one quietly removes the thing that makes TDD pay off.
+Three failure modes show up over and over when developers first try TDD on Ruby. Each one passes for the practice at a glance, and each one quietly removes the thing that makes TDD pay off.
 
-The first is testing implementation instead of behavior. A junior developer writing the cycle 2 test reaches for the internal `@items` array because it feels concrete:
+The first is testing implementation instead of behavior. A junior developer writing the cycle 2 example reaches for the internal `@items` array because it feels concrete:
 
 ```ruby
 # Mistake: tests internals
@@ -191,13 +191,13 @@ end
 
 The behavior - "adding an item with price 1000 makes the total 1000" - is what the rest of your code actually depends on. That's the contract. The internal storage is implementation detail and should be free to change.
 
-The second mistake is skipping the refactor step entirely. Shameless Green is supposed to be the cheap, embarrassing first version - not the final form. If cycle 4's `@items << price * quantity` is still your storage strategy by cycle 12, when you're adding discounts and tax codes and currency, you'll have crammed seven concerns into one integer. The refactor step is where you take the four examples you now have and let a `LineItem` value object emerge, because by cycle 4 you've earned the right to that abstraction. [Refactoring with the existing tests as a safety net](/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/) is a separate skill from adding behavior, and it's the half of TDD that pays the long-term dividend.
+The second mistake is skipping the refactor step entirely. Shameless Green is supposed to be the cheap, embarrassing first version - not the final form. If cycle 4's `@items << price * quantity` is still your storage strategy eight rounds later, when you're adding discounts and tax codes and currency, you'll have crammed seven concerns into one integer. The refactor step is where you take the four examples you now have and let a `LineItem` value object emerge, because four examples earn the right to that abstraction. [Refactoring with the existing tests as a safety net](/blog/test-driven-thinking-for-solving-common-ruby-pitfalls-rails-tdd/) is a separate skill from adding behavior, and it's the half of TDD that pays the long-term dividend.
 
 The third mistake is bundling tidy and behavior commits. We covered the mechanics in the previous section, and it's worth naming as a TDD failure mode in its own right: a developer who skips Tidy First loses the ability to revert just the behavior change. The git log reads like prose paragraphs - lots of words, no clear claims. Strictly speaking that's a Tidy First problem rather than a TDD problem, but the two are inseparable in practice. The moment your commit log stops working as a reliable rollback target, the 90-second loop loses its safety net and you quietly stop trusting it.
 
 ## How JetThoughts uses TDD on rescues
 
-When we inherit a codebase, the three failure modes above are usually all present at once - tests coupled to internals, refactor steps skipped for months, commits that mix tidy with behavior. We rescue Ruby on Rails projects from devshops that shipped this exact configuration with a CI suite that takes 22 minutes to run. The 90-second loop is the discipline we put back first.
+When we inherit a codebase, the three failure modes above are usually all present at once - tests coupled to internals, refactor steps skipped for months, commits that mix tidy with behavior. We rescue Ruby on Rails projects from devshops that shipped this exact configuration with a CI suite that takes 22 minutes to run. The 90-second loop is the rhythm we put back first.
 
 Forty-plus rescue engagements over seventeen years, and the pattern is consistent. Inherited codebases either have no tests at all (the last three we picked up) or have a test suite written after the fact - exhaustive, brittle, mocked-to-the-teeth, and useless under change pressure. We rebuild the rhythm first. Then we fix the bugs. [Refactoring callbacks back into services](/blog/how-avoid-callbacks-using-services-rails-refactoring/) and tightening the test suite go hand in hand once the cadence is in place.
 
