@@ -1,79 +1,112 @@
 ---
-title: 'How We Run Claude Code Agents Like an XP Team: From Idea to Production'
-description: 'Solo Claude Code agents ship vibe-coded code that crashes on real users. Here is the XP-team setup we use - rules, rhythms, critic agents, gates, reflection.'
+title: 'How We Replicated a Full Product Team With Claude Code Agents'
+description: 'Solo Claude Code agents ship like solo developers - missing PM, designer, QA, customer voice. Here is the team-mode setup running Shape Up plus XP plus reflection-driven Kaizen.'
 date: 2026-05-04
 draft: false
 author: 'JetThoughts Team'
 slug: claude-code-xp-team-workflow
-keywords: 'claude code agents, ai code agents production, multi-agent workflow, xp team ai, claude code workflow, ai agents code review'
+keywords: 'claude code agents, ai code agents production, multi-agent workflow, xp team ai, claude code workflow, ai agents code review, shape up methodology, ralph loop, mikado method'
 tags: ['ai', 'claude-code', 'xp', 'productivity', 'startup', 'engineering']
 categories: ['Engineering']
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: 'How We Run Claude Code Agents Like an XP Team: From Idea to Production'
-  og_description: 'Solo Claude Code agents ship vibe-coded code that crashes on real users. Here is the XP-team setup we use - rules, rhythms, critic agents, gates, reflection.'
-cover_image_alt: 'Diagram of a Claude Code agent pipeline for a Rails app: rules, rhythms, parallel critic agents and gates, reflection - styled as an XP team standup board.'
+  og_title: 'How We Replicated a Full Product Team With Claude Code Agents'
+  og_description: 'Solo Claude Code agents ship like solo developers - missing PM, designer, QA, customer voice. Here is the team-mode setup running Shape Up plus XP plus reflection-driven Kaizen.'
+cover_image_alt: 'Capability map of a Claude Code agent team for a Rails app: business strategist, PM, business analyst, customer voice, UX researcher, UI/UX designer, tech lead, driver/navigator pair, critic panel, QA, DevOps gates, reflection - styled as an XP team standup board.'
 canonical_url: 'https://jetthoughts.com/blog/claude-code-xp-team-workflow/'
 related_posts: false
 ---
 
-[Veracode tested a wide field of LLMs](https://www.veracode.com/blog/genai-code-security-report/) on real coding tasks. **45% of the generated code shipped with at least one exploitable security flaw** - SQL injection, broken crypto, the kind of thing a code review catches. A solo Claude Code agent produces the same artifact. We wrap each agent in an [XP team](https://www.extremeprogramming.org/) before it ships code. We covered the founder pain in [Vibe Coding Crisis](/blog/vibe-coding-crisis-ai-code-debt/).
+A solo Claude Code agent runs the whole product cycle inside one process. The diff compiles, tests stay green, but the feature solves a problem nobody actually has. We covered this founder pain in [Vibe Coding Crisis](/blog/vibe-coding-crisis-ai-code-debt/). After that we wrapped the agent in the rest of a product team and what got shipped changed.
 
-![Five-step Claude Code XP-team pipeline for shipping product code: rules, rhythms, critics, gates, reflection looping back to rules](pipeline.svg)
+![Capability map of a Claude Code agent team running Shape Up plus XP plus reflection-driven Kaizen](pipeline.svg)
 
-## What the agent reads at session start
+## The roles we replicated
 
-A solo agent has no idea which patterns already live in your codebase, which library version is installed, or which abstractions your team rejected last quarter, so it reinvents what already exists.
+Driver-plus-tests is not a team. Each role we added closed a gap that solo agents kept reproducing on every ticket.
 
-A small set of mandatory rules sits in `CLAUDE.md` and additional rule files we keep alongside agent definitions in `.claude/`. They answer the questions a second engineer would catch: search for existing code before implementing, prefer the simplest solution that already works, refactor before adding behavior, test what changes versus what the framework already covers, never extract an abstraction until duplication appears three times.
+| Role | What it does | Where it lives |
+|------|--------------|----------------|
+| Business Strategist | Sets the north star - markets, customers, where we don't compete | Founder plus a strategy doc the agents read |
+| Product Manager | Runs Shape Up pitches, manages the bet portfolio, defines acceptance criteria | PM agent (in our setup, `lead-shaper`) reading the strategy doc |
+| Business Analyst | Confirms the data signal supports each bet, builds the metric tree | Analyst capability bundled into the discovery agent |
+| Customer Representative | Holds the user voice - what they said, meant, and what frustrates them | Interview transcripts and jobs-to-be-done docs the agent quotes back |
+| UX Researcher | Keeps assumptions paired against real signals, runs synthetic-user walkthroughs | Discovery agent (in our setup, `critic-discovery`) plus interview templates |
+| UI/UX Designer | Produces the screen flow before any code lands | Google Stitch as the canvas, design-system rules in CLAUDE.md |
+| Tech Lead | Calls feasibility risk and surfaces the architectural patterns the solution must fit | Tech-lead agent reading the codebase and ADRs |
+| Driver / Navigator pair | Writes the code, reviews each micro-step before commit | Two Claude Code agents on the same diff |
+| Critic Panel | Catches scope creep, design drift, premature abstractions | PM, Designer, Rails, Simplicity critics in parallel |
+| QA / Visual Verifier | Confirms the change works in a browser, not just in tests | chrome-devtools MCP screenshots desktop and mobile |
+| DevOps Gates | Runs the full test suite, type-check, lint, build, then opens the PR | CI plus auto-reviewer reading the diff |
+| Reflection / Kaizen | Captures repeated failures into rule updates and skills | Incident log feeding the rule files and skills.sh |
 
-Without these, the agent ships a fifty-line method when a ten-line helper already exists three folders away.
+Solo agents fill one seat and act like the rest don't exist.
 
-## Three checks before any commit
+## How the team works together
 
-Agents without rhythm produce 200-line afternoons that break tests in unrelated places.
+The seats above link into actual team behavior through a sequence of formations - each one owns a specific artifact and refuses to ship without it.
 
-Research first uses semantic search across the repo plus a library-docs lookup at the installed version - stale training data still produces Rails 7 patterns inside a Rails 8 app. [Tidy first](/blog/refactor-step-tdd-three-line-discipline-ruby/) reads the surrounding code and refactors messy structure as a separate commit, before any behavior change lands.
+### Pitch and bet (Business Strategist + PM + Tech Lead)
 
-4-eyes pairs the change: a Driver agent writes, a Navigator agent reviews, both approve before commit. Same-model agents share blind spots - the Navigator catches typos and missed cases, not architectural drift. Each micro-step ends with a fast targeted [test](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). When the bar goes red, we throw the diff away and start the micro-step over - debugging takes longer than rewriting.
+We use [Shape Up](https://basecamp.com/shapeup) for shaping work. The PM writes a pitch in `docs/pitches/<slug>.md` (Problem, Appetite, Rough solution, Out-of-scope, Risks). The bet decision goes through three lenses - Tech (feasibility), Product (which ICP segment), Design (which patterns to reuse) - each producing SIMPLE / MEDIUM / COMPLEX with one-sentence rationale. The PM consolidates: lowest-complexity path with highest-impact outcome.
 
-## Critic agents, then mechanical checks
+### Slicing and design (PM + Designer + Tech Lead)
 
-Tests passing only proves we didn't break what we already had specs for. Real review catches scope creep, design drift, premature abstractions, and conventions the test suite cannot see.
+The bet gets sliced into vertical AC items, with [Mikado method](https://www.manning.com/books/the-mikado-method) decomposition for blocked dependencies. Designer sketches the solution shape in Google Stitch; Tech Lead writes a file map and boundary notes. Disagreement gets resolved by the artifact, not by whoever talks loudest.
 
-After tests pass, a panel of critic agents reads the diff in parallel: PM confirms the change matches the acceptance criteria, Designer verifies the UI follows the design system, Rails checks code quality and conventions, simplicity blocks any extraction the change did not request.
+### Delivery (Driver/Navigator + Critic Panel)
 
-When critics disagree, the change goes back. When they approve, mechanical gates fire automatically - the full test suite, browser screenshots on desktop and mobile, an auto-reviewer reading the diff against project conventions.
+XP shows up here as pair programming, [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and [refactor-step-tdd](/blog/refactor-step-tdd-three-line-discipline-ruby/) micro-commits. RED test commits before each GREEN feat commit (we verify commit order in CI). Tidy-first refactor commits land before behavior changes. The critic panel runs after every test pass, not at PR time.
 
-Running this pipeline costs roughly $4-6 per ticket on Sonnet, $20-30 on Opus, plus 45 minutes of wall-clock time when the four critics run in parallel. Cheaper than the rework cycle on a vibe-coded PR.
+### QA gates and shipping (QA + DevOps Gates)
 
-The pipeline ends at PR-merge. Staging deploys, canary rollout, and SLO checks live in the CI/CD layer below this and run regardless of whether the PR was authored by an agent or a human - the panel doesn't replace those gates, it just makes sure agent diffs reach them clean.
+Visual verification happens in a real browser via chrome-devtools MCP - screenshots desktop and mobile, console clean, network clean. CI runs the full test suite, type-check, lint, and build. The auto-reviewer reads the diff against project conventions. WIP=1 is enforced: one slice ships before the next slice starts.
 
-## When something breaks, write it down
+### Reflection (every role)
 
-Without reflection, the same failure ships every sprint. The agent has no memory across sessions; the team does, but only if the team writes it down.
+Every repeated failure becomes a rule update or a new skill published to skills.sh. Next sprint inherits the lesson. Roles that don't feed reflection drift; roles that do compound.
 
-Repeated issues become incident records. Each one captures root cause, classifies the gap (test, rule, process, knowledge), and names the rule update or skill that prevents the next occurrence.
+## The cadences we run
 
-Recent examples: on a marketplace rescue last quarter the agent skipped a test before changing a payment calculator, so we added a pre-commit check that blocks any payment-related diff without a new test. Two weeks later, fixture data leaked between tests on the same project, so we extracted a skill that resets the database between scenarios.
+The sprint cycle runs the outermost loop - pitch, betting, slicing, design, delivery, QA, wrap-up. Cadence: one to two weeks per shaped bet.
 
-## What one ticket looks like
+The development cycle runs inside the sprint - Driver/Navigator pair on a slice, micro-commits ship behind tests, the critic panel runs after every test pass. Cadence: minutes to hours per slice.
 
-A checkbox in the candidate list to mark someone shortlisted: that's a recent change. The sprint runner opens with research - semantic search finds an existing `favorites` join table the agent reuses instead of inventing a new model. Driver writes the controller action in 6 lines; Navigator catches that the existing pattern uses a service object and asks for a refactor.
+The [Ralph loop](https://ghuntley.com/ralph/) runs the tightest. A single agent iterates on its own output until a quality bar is met - retrying the same prompt with a stricter rubric until the diff passes the simplicity critic. Geoffrey Huntley named the technique after Ralph Wiggum's persistent iteration, and Anthropic ships it as the [ralph-wiggum plugin](https://github.com/anthropics/claude-code/blob/main/plugins/ralph-wiggum/README.md). Cadence: seconds to minutes per attempt.
 
-Tidy-first runs, the controller drops to 3 lines, tests stay green. Three of the four critics approve quickly. The simplicity critic blocks an unrequested `ShortlistService` extraction the agent suggested - the change didn't ask for it, the existing controller pattern carries the load. Round trip back to the agent, extract removed, panel re-runs and approves.
+Each cadence nests inside the larger one - sprint scope informs development tickets, and Ralph catches small failures inside development without escalating to a human.
 
-Four hours of agent time, thirty-five minutes of human time across the day. The full test suite passes; browser screenshots confirm the toggle works on mobile; the auto-reviewer opens the PR.
+## Tools that make this possible
 
-## Start small
+Claude Code provides the runtime and the rule files in CLAUDE.md and .claude/ that each role pulls from. Google Stitch holds the design-system tokens and screen flows - Designer paints there, coding agents read constraints back from the same canvas. chrome-devtools MCP gives QA actual eyes through screenshots, console logs, and mobile emulation; without it, tests go green on builds that are visibly broken in the browser.
 
-You don't need the full setup from day one. Begin with three rules - research before any change, [test behavior not framework](/blog/tdd-overkill-myth-lightweight-ruby/), refactor before adding. This setup costs the first sprint - rules need writing, agents need configuring, the team needs convincing. From sprint two onward, the time disappears.
+Semantic search through claude-context finds existing patterns before agents reinvent them - stale training data wants to write Rails 7 inside a Rails 8 app. The skill marketplace at [skills.sh](https://skills.sh/) lets us publish a pattern once (database resets, payment-diff test enforcement) and every project pulls it. CI runs the full test suite, type-check, lint, and build, with an auto-reviewer reading the diff against project conventions before a human ever sees the PR.
 
-Add the critic panel after a sprint of pain; you will know which checks you need by what slipped through. Add specialized agents only once the rules are stable enough that you trust the agent to follow them.
+## Team mode beats solo mode
+
+The dysfunction we keep seeing in product teams is one role swallowing another's job. A PM writes acceptance criteria the engineer ignores, a Designer's Figma gets reinterpreted by front-end without anyone flagging the drift, QA finds bugs the team ships anyway. Each handoff loses signal.
+
+Solo agents inherit all of that, compressed into one process. One agent makes the product call, the design call, the code call, and the self-review in a single shot - nobody to disagree, no record of what got skipped.
+
+Team mode splits those decisions across collaborative agents, each holding one job, accountable through a written rule set. A PM agent blocks tickets without acceptance criteria, a simplicity critic stops unrequested abstractions before the diff lands, and a mobile screenshot agent flags any merge that looks broken at 375px (the width of an iPhone). Disagreement gets resolved by the rules, not by whichever agent happened to run last.
+
+## Agile and flexibility are non-negotiable for AI
+
+A rigid rule set ships yesterday's bias. Strategy docs get revised when the market signal changes. Rule files change when reflection surfaces a failure the current rules let through. And sprint goals shift mid-sprint when discovery surfaces new evidence about what users actually need.
+
+Agile becomes the agents' operating environment. Standups happen at the agent level: the discovery agent posts what it learned from this week's interviews, the simplicity critic logs which abstractions it blocked, and the customer voice agent surfaces new pain points from fresh transcripts. Decisions get re-opened when evidence demands it.
+
+## Where to start
+
+You don't need every role from day one. Begin with a strategy doc the agent reads at session start, a critic panel that blocks merges, and a reflection log that turns failures into rules. From there, add a designer when the UI starts drifting, a discovery agent when scope keeps creeping, a customer voice when feature requests stop matching real user pain.
+
+Setup eats one sprint of overhead. Rule files need writing, agent definitions need configuring, and the team needs convincing. From sprint two the time disappears.
+
+Cost on a typical ticket runs $4-6 on Sonnet or $20-30 on Opus, plus 30-45 minutes of wall-clock time when critics run in parallel - cheaper than the rework on a vibe-coded PR that ships the wrong feature.
 
 ## Free audit
 
-If a Claude Code agent is shipping code for you and something is leaking, we run a free 45-minute audit. Send the repo URL plus a paragraph on what is breaking, and within two business days you get back a one-page assessment naming the three changes that pay back fastest. [Book the audit at /contact-us/](/contact-us/).
+If a Claude Code agent is shipping code for you and the team is stuck in solo mode, we run a free 45-minute audit of the missing roles. Send the repo URL plus a paragraph on what is breaking, and within two business days you get back a one-page assessment naming which seats to staff first. [Book the audit at /contact-us/](/contact-us/).
 
-<!-- Reference cadence: direct technical-strategy register, no founder-anecdote hook, no bold-header lists, why/what/how integrated as flowing prose, paragraphs capped at 3 sentences. -->
+<!-- Reference cadence: capability map (not how-to), team-replication framing, Shape Up + XP + Mikado as actual methodologies (not Teresa Torres - we use Shape Up), why team-mode beats solo-mode is load-bearing thesis, paragraphs capped at 3 sentences. -->
