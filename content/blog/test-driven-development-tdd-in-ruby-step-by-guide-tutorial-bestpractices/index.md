@@ -28,7 +28,7 @@ We'll work four rounds in under eight minutes. Each one ends with a green test a
 
 The Agile Institute frames the time ledger plainly: a typical hour of code without tests usually buys you six hours of debugging the following week, while an hour with TDD usually buys close to zero. The total clock time is similar; the difference is what's in your repo at the end. One version ships with bugs you haven't found yet. The other ships with a design you can change.
 
-A separate complaint - "TDD is overkill for what I'm doing" - is a different argument, and we'll dig into the overkill myth in a follow-up post. For now, assume you're willing to give the discipline a fair try; this post focuses on the rhythm itself.
+A separate complaint - "TDD is overkill for what I'm doing" - is a different argument we cover in [TDD Without the Overkill](/blog/tdd-overkill-myth-lightweight-ruby/). For now, assume you're willing to give the discipline a fair try; this post focuses on the rhythm itself.
 
 ## The 90-second loop on a small Order class
 
@@ -153,7 +153,7 @@ refactor: rename @items to @line_items
 feat: add quantity support to Order#add
 ```
 
-The cost of splitting is one extra commit. The benefits compound: `git revert` on the feature commit doesn't undo the rename, [code review reads top to bottom without context-switching](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/), and the next developer can bisect a regression to the actual cause. The last 4,000-commit Rails repo we inherited had structural and behavioral changes mixed in roughly half of its commits, and rebuilding the habit alone saved us days on the first three debugging sessions.
+The cost of splitting is one extra commit. The benefits compound: `git revert` on the feature commit doesn't undo the rename, [code review reads top to bottom without context-switching](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/), and the next developer can bisect a regression to the actual cause. The last 4,000-commit Rails repo we inherited had structural and behavioral changes mixed in roughly half of its commits, and rebuilding the habit alone saved us days on the first three debugging sessions. We covered the 3-line micro-refactor mechanics that make Tidy First easy to sustain in [Refactor Without Breaking Tests](/blog/refactor-step-tdd-three-line-discipline-ruby/).
 
 ## Auto-revert when red - `git reset --hard` is your friend
 
