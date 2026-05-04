@@ -89,7 +89,7 @@
                             <div class="post-tags-card">{{ range $i, $t := . }}{{ if $i }}<span class="post-tags-sep">,</span>{{ end }}<a href="/blog/tags/{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>
                           {{ end }}
                         </div>
-                        <div>{{ .Params.description }}</div>
+                        <div class="post-description">{{ .Params.description }}</div>
                       </div>
                     </div>
                   </a>
