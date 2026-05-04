@@ -20,6 +20,8 @@ metatags:
 slug: test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices
 ---
 
+![TDD trilogy navigation: Step-by-Step (current), The Overkill Myth, 3-Line Discipline](trilogy-nav.svg)
+
 You opened this post because you want to try TDD on real Ruby code, and the tutorials you've seen so far either skipped the rhythm entirely or buried it under three pages of theory. This one shows the loop on a small `Order` class you can paste into a Minitest file and follow along with.
 
 We'll work four rounds in under eight minutes. Each one ends with a green test and a commit, so at any point you can `git reset --hard` and you've lost at most 90 seconds of work. That bounded cost is what makes the whole discipline tractable - and it's the part most TDD intros leave out.

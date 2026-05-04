@@ -18,6 +18,8 @@ canonical_url: 'https://jetthoughts.com/blog/refactor-step-tdd-three-line-discip
 related_posts: false
 ---
 
+![TDD trilogy navigation: Step-by-Step, The Overkill Myth, 3-Line Discipline (current)](trilogy-nav.svg)
+
 The refactor step is where most TDD suites go red. On a Rails 7.1 rescue we took over in Q1 2026, a developer finished a feature on cycle 4, the bar was green, and they decided to "clean up the file" before opening the PR. Forty minutes later they had renamed three things, extracted a class, inlined a constant, and the suite had 11 failures with stack traces that didn't agree on what broke first. They unwound changes until something passed, lost track of which version of which method they were on, and shipped the original mess after burning the afternoon.
 
 A 200-line cleanup PR titled "refactor: tidy up Order" is the shape this failure usually takes. Reviewers can't bisect it. The author can't remember what they did first. The skip-the-refactor route - the one we covered in [TDD Without the Overkill](/blog/tdd-overkill-myth-lightweight-ruby/) - is the easier choice in the moment. They keep adding features, the file grows to 400 lines of accumulated Shameless Green, and the technical debt that the refactor step was supposed to keep paid down piles up commit by commit.
@@ -49,6 +51,8 @@ If your real refactor wants fifty lines moved at once, the work has structural p
 Arlo Belshee's [Core 6 list](https://arlobelshee.com/the-core-6-refactorings/) is the shortest answer to "what counts as a safe move?" Belshee frames safe refactorings as CRUD operations on a name, with six members: Rename, Inline, Extract Method, Introduce Local Variable, Introduce Parameter, and Introduce Field. Anything else - move method, replace conditional with polymorphism, replace inheritance with composition - is a sequence of these six.
 
 This cap isn't dogma. These six moves are what your IDE can do correctly and your test suite can verify. Anything bigger needs the Mikado Method or it needs to wait until you have a better-named version of the code in front of you. We'll cover the three most common moves on the cycle-4 `Order` class.
+
+![The Core 6 refactorings: Rename, Inline, Extract Method, Introduce Local Variable, Introduce Parameter, Introduce Field - every safe refactor is one of these six moves, capped at three lines per commit](core-6-refactorings.svg)
 
 Start with a Rename. The cycle-4 class stores priced-and-quantified subtotals in `@items`, but the name lies - they're not items, they're line totals. The first 3-line move is to rename the variable so the next developer doesn't get confused.
 
@@ -214,6 +218,8 @@ The 3-line ceiling assumes the refactor is safe. On greenfield code with a fast 
 That's the failure mode the [Mikado Method](https://www.manning.com/books/the-mikado-method) was built for. Daniel Brolund and Ola Ellnestam's 2014 book describes it as a way to "make small incremental improvements without breaking the existing codebase." The protocol: write down the goal. Attempt the change. When it breaks (test failure, compile error, anything), write down the prerequisite that made it break. Undo the change. Work on the prerequisite first - which itself may have prerequisites that land on the same graph.
 
 The graph bottoms out at leaf changes that are safe enough to commit on their own. You walk back up the graph from the leaves, and when you finally attempt the original goal, every prerequisite is already done and the change is a 3-line commit. Nicolas Carlo's writeup of [the Mikado Method on legacy codebases](https://understandlegacycode.com/blog/a-process-to-do-safe-changes-in-a-complex-codebase/) makes the practice concrete with worked examples.
+
+![Mikado graph for Extract PriceCalculator: the goal at top has three prerequisites - move tax logic out of Order#total, decouple Order from Discount, inline temporary line_total variable - each prerequisite has a leaf marked safe commit; walk back up from leaves and the goal lands as a 3-line commit](mikado-graph.svg)
 
 Cheap example on the `Order` class. Suppose you decide `@line_totals` should become a list of `LineItem` value objects, not raw integers. You attempt the change: rename the variable, switch the storage to `LineItem.new(price:, quantity:)`, update `total` to sum `line.subtotal`. Three tests fail because two callers in another file did `order.instance_variable_get(:@line_totals).first` (a violation we covered in Post A's "common mistakes" section, but legacy code has it). The Mikado prerequisite: rewrite those callers to use a public method first. Undo the storage change, write the public method (`Order#line_totals` returning a copy), update the callers, commit. Now retry the original storage change. It's a 3-line commit again.
 

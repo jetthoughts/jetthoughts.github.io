@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" role="img" aria-labelledby="title desc">
+  <title id="title">Mikado graph for Extract PriceCalculator</title>
+  <desc id="desc">A goal at the top - Extract PriceCalculator - branches into three prerequisites. Each prerequisite has a leaf that is safe to commit. You walk back up from leaves; the goal lands as a 3-line commit.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .ink { fill: #dfe2eb; font-family: 'Caveat', 'Architects Daughter', cursive, system-ui; }
+      .h1 { font-size: 22px; font-weight: 700; }
+      .sub { font-size: 14px; font-style: italic; fill: #bfc4d1; }
+      .label { font-size: 14px; font-weight: 600; fill: #dfe2eb; }
+      .leaf { font-size: 13px; font-weight: 700; fill: #c4f3c8; }
+      .meta { font-size: 12px; font-style: italic; fill: #a3a8b3; }
+
+      .goal { fill: rgba(204, 52, 45, 0.10); stroke: #cc342d; stroke-width: 2.4; stroke-dasharray: 7,5; }
+      .pre  { fill: #1a0a2e; fill-opacity: 0.85; stroke: #a855f7; stroke-width: 2.2; }
+      .leafBox { fill: rgba(34, 197, 94, 0.10); stroke: #22c55e; stroke-width: 2.2; }
+
+      .edge { fill: none; stroke: #dfe2eb; stroke-width: 2; stroke-linecap: round; opacity: 0.85; }
+      .check { fill: #22c55e; }
+    </style>
+    <filter id="rough" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.5"/>
+    </filter>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dfe2eb"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="720" height="540"/>
+
+  <!-- header -->
+  <text class="ink h1" x="360" y="32" text-anchor="middle">The Mikado Method</text>
+  <text class="sub" x="360" y="52" text-anchor="middle">walk back from leaves; the goal lands as a 3-line commit</text>
+
+  <!-- GOAL (top) -->
+  <g filter="url(#rough)">
+    <rect class="goal" x="240" y="76" width="240" height="56" rx="8"/>
+  </g>
+  <text class="ink label" x="360" y="100" text-anchor="middle" font-weight="700">GOAL</text>
+  <text class="ink label" x="360" y="120" text-anchor="middle" fill="#ffb4ab">Extract PriceCalculator</text>
+  <text class="meta" x="360" y="146" text-anchor="middle" fill="#cc342d">not yet - has prerequisites</text>
+
+  <!-- edges from goal to prerequisites -->
+  <g filter="url(#rough)">
+    <path class="edge" d="M295,134 Q200,180 130,205" marker-end="url(#ah)"/>
+    <path class="edge" d="M360,134 Q360,180 360,205" marker-end="url(#ah)"/>
+    <path class="edge" d="M425,134 Q540,180 600,205" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Prereq 1 -->
+  <g filter="url(#rough)">
+    <rect class="pre" x="20" y="208" width="220" height="60" rx="8"/>
+  </g>
+  <text class="label" x="130" y="232" text-anchor="middle" fill="#d8b4fe">Move tax logic</text>
+  <text class="label" x="130" y="252" text-anchor="middle" fill="#d8b4fe">out of Order#total</text>
+
+  <!-- Prereq 2 -->
+  <g filter="url(#rough)">
+    <rect class="pre" x="252" y="208" width="216" height="60" rx="8"/>
+  </g>
+  <text class="label" x="360" y="232" text-anchor="middle" fill="#d8b4fe">Decouple Order from</text>
+  <text class="label" x="360" y="252" text-anchor="middle" fill="#d8b4fe">Discount</text>
+
+  <!-- Prereq 3 -->
+  <g filter="url(#rough)">
+    <rect class="pre" x="488" y="208" width="222" height="60" rx="8"/>
+  </g>
+  <text class="label" x="599" y="232" text-anchor="middle" fill="#d8b4fe">Inline temporary</text>
+  <text class="label" x="599" y="252" text-anchor="middle" fill="#d8b4fe">line_total variable</text>
+
+  <!-- edges to leaves / sub-prereq -->
+  <g filter="url(#rough)">
+    <path class="edge" d="M130,270 Q130,300 130,328" marker-end="url(#ah)"/>
+    <path class="edge" d="M360,270 Q360,300 360,328" marker-end="url(#ah)"/>
+    <path class="edge" d="M599,270 Q599,300 599,328" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Sub-step under prereq 2 (intermediate) -->
+  <g filter="url(#rough)">
+    <rect class="pre" x="252" y="332" width="216" height="50" rx="8"/>
+  </g>
+  <text class="label" x="360" y="362" text-anchor="middle" fill="#d8b4fe">Pass discount as param</text>
+
+  <!-- arrow from sub-step down to leaf -->
+  <g filter="url(#rough)">
+    <path class="edge" d="M360,384 Q360,408 360,430" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Leaf 1 -->
+  <g filter="url(#rough)">
+    <rect class="leafBox" x="20" y="332" width="220" height="68" rx="8"/>
+  </g>
+  <text class="leaf" x="130" y="356" text-anchor="middle">Add Tax service</text>
+  <g transform="translate(40,372)">
+    <circle class="check" r="9" cx="9" cy="9" filter="url(#rough)"/>
+    <path d="M4,10 L8,14 L14,5" stroke="#0d1117" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text class="meta" x="135" y="386" text-anchor="middle" fill="#22c55e">safe commit</text>
+
+  <!-- Leaf 2 -->
+  <g filter="url(#rough)">
+    <rect class="leafBox" x="252" y="432" width="216" height="68" rx="8"/>
+  </g>
+  <text class="leaf" x="360" y="456" text-anchor="middle">Update 3 callers</text>
+  <g transform="translate(272,472)">
+    <circle class="check" r="9" cx="9" cy="9" filter="url(#rough)"/>
+    <path d="M4,10 L8,14 L14,5" stroke="#0d1117" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text class="meta" x="365" y="486" text-anchor="middle" fill="#22c55e">safe commit</text>
+
+  <!-- Leaf 3 -->
+  <g filter="url(#rough)">
+    <rect class="leafBox" x="488" y="332" width="222" height="68" rx="8"/>
+  </g>
+  <text class="leaf" x="599" y="356" text-anchor="middle">Replace 2 references</text>
+  <g transform="translate(508,372)">
+    <circle class="check" r="9" cx="9" cy="9" filter="url(#rough)"/>
+    <path d="M4,10 L8,14 L14,5" stroke="#0d1117" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text class="meta" x="603" y="386" text-anchor="middle" fill="#22c55e">safe commit</text>
+
+  <!-- footer caption -->
+  <text class="sub" x="360" y="528" text-anchor="middle" font-family="'Caveat', cursive">
+    Each leaf is safe alone. Walk back up; the goal lands green.
+  </text>
+</svg>

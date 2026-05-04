@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-labelledby="title desc">
+  <title id="title">The Core 6 Refactorings</title>
+  <desc id="desc">Six refactoring cards: Rename, Inline, Extract Method, Introduce Local Variable, Introduce Parameter, Introduce Field. Every safe refactor is one of these six moves.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .ink { fill: #dfe2eb; font-family: 'Caveat', 'Architects Daughter', cursive, system-ui; }
+      .h1 { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 17px; font-style: italic; fill: #bfc4d1; }
+      .card-title { font-size: 21px; font-weight: 700; fill: #ffb4ab; }
+      .num { font-size: 20px; font-weight: 700; fill: #a855f7; }
+      .code { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; fill: #dfe2eb; }
+      .codeBefore { fill: #ffb4ab; }
+      .codeAfter { fill: #c4f3c8; }
+      .arrowLbl { font-size: 13px; font-style: italic; fill: #bfc4d1; }
+      .card { fill: #161b22; fill-opacity: 0.85; stroke: #dfe2eb; stroke-width: 2.2; stroke-linejoin: round; }
+      .stroke { fill: none; stroke: #dfe2eb; stroke-width: 2; stroke-linecap: round; }
+      .arrow { fill: none; stroke: #a855f7; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .badge { fill: #cc342d; fill-opacity: 0.85; }
+    </style>
+    <filter id="rough" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.4"/>
+    </filter>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="800" height="620"/>
+
+  <!-- Title -->
+  <text class="ink h1" x="400" y="46" text-anchor="middle">The Core 6 Refactorings</text>
+  <text class="ink sub" x="400" y="72" text-anchor="middle">every safe refactor is one of these</text>
+  <text class="sub" x="400" y="92" text-anchor="middle" font-family="'Caveat', cursive" fill="#a855f7">- Arlo Belshee</text>
+
+  <!-- Row 1 -->
+
+  <!-- Card 1: Rename -->
+  <g transform="translate(30, 120) rotate(-1.6)">
+    <g filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="240" height="180" rx="8"/>
+    </g>
+    <circle class="badge" cx="22" cy="22" r="14" filter="url(#rough)"/>
+    <text class="num" x="22" y="28" text-anchor="middle" fill="#fff">1</text>
+    <text class="card-title" x="120" y="32" text-anchor="middle">Rename</text>
+    <text class="code codeBefore" x="20" y="70">def total_amount</text>
+    <text class="code" x="20" y="86">  @items.sum</text>
+    <text class="code" x="20" y="102">end</text>
+    <g filter="url(#rough)">
+      <path class="arrow" d="M40,116 Q120,124 200,116" marker-end="url(#arrowhead)"/>
+    </g>
+    <text class="arrowLbl" x="120" y="132" text-anchor="middle">rename</text>
+    <text class="code codeAfter" x="20" y="152">def total</text>
+    <text class="code" x="20" y="168">  @items.sum</text>
+  </g>
+
+  <!-- Card 2: Inline -->
+  <g transform="translate(282, 120) rotate(1.2)">
+    <g filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="240" height="180" rx="8"/>
+    </g>
+    <circle class="badge" cx="22" cy="22" r="14" filter="url(#rough)"/>
+    <text class="num" x="22" y="28" text-anchor="middle" fill="#fff">2</text>
+    <text class="card-title" x="120" y="32" text-anchor="middle">Inline</text>
+    <text class="code codeBefore" x="20" y="70">amount = price * qty</text>
+    <text class="code" x="20" y="86">tax = amount * 0.1</text>
+    <g filter="url(#rough)">
+      <path class="arrow" d="M40,108 Q120,118 200,108" marker-end="url(#arrowhead)"/>
+    </g>
+    <text class="arrowLbl" x="120" y="126" text-anchor="middle">inline the local</text>
+    <text class="code codeAfter" x="20" y="152">tax = (price * qty) * 0.1</text>
+  </g>
+
+  <!-- Card 3: Extract Method -->
+  <g transform="translate(534, 120) rotate(-0.8)">
+    <g filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="240" height="180" rx="8"/>
+    </g>
+    <circle class="badge" cx="22" cy="22" r="14" filter="url(#rough)"/>
+    <text class="num" x="22" y="28" text-anchor="middle" fill="#fff">3</text>
+    <text class="card-title" x="120" y="32" text-anchor="middle">Extract Method</text>
+    <text class="code codeBefore" x="20" y="64">def add(price:, qty:)</text>
+    <text class="code codeBefore" x="20" y="78">  @lines &lt;&lt; price * qty</text>
+    <text class="code" x="20" y="92">end</text>
+    <g filter="url(#rough)">
+      <path class="arrow" d="M40,106 Q120,114 200,106" marker-end="url(#arrowhead)"/>
+    </g>
+    <text class="arrowLbl" x="120" y="122" text-anchor="middle">extract calc</text>
+    <text class="code codeAfter" x="20" y="142">def calculate(p, q)</text>
+    <text class="code codeAfter" x="20" y="156">  p * q</text>
+    <text class="code" x="20" y="170">end</text>
+  </g>
+
+  <!-- Row 2 -->
+
+  <!-- Card 4: Introduce Local Variable -->
+  <g transform="translate(30, 330) rotate(1.5)">
+    <g filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="240" height="180" rx="8"/>
+    </g>
+    <circle class="badge" cx="22" cy="22" r="14" filter="url(#rough)"/>
+    <text class="num" x="22" y="28" text-anchor="middle" fill="#fff">4</text>
+    <text class="card-title" x="120" y="32" text-anchor="middle">Introduce Local</text>
+    <text class="code codeBefore" x="20" y="70">def add(price:, qty:)</text>
+    <text class="code codeBefore" x="20" y="86">  @lines &lt;&lt; price * qty</text>
+    <text class="code" x="20" y="102">end</text>
+    <g filter="url(#rough)">
+      <path class="arrow" d="M40,116 Q120,124 200,116" marker-end="url(#arrowhead)"/>
+    </g>
+    <text class="arrowLbl" x="120" y="132" text-anchor="middle">name the expression</text>
+    <text class="code codeAfter" x="20" y="152">  line = price * qty</text>
+    <text class="code" x="20" y="168">  @lines &lt;&lt; line</text>
+  </g>
+
+  <!-- Card 5: Introduce Parameter -->
+  <g transform="translate(282, 330) rotate(-1.4)">
+    <g filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="240" height="180" rx="8"/>
+    </g>
+    <circle class="badge" cx="22" cy="22" r="14" filter="url(#rough)"/>
+    <text class="num" x="22" y="28" text-anchor="middle" fill="#fff">5</text>
+    <text class="card-title" x="120" y="32" text-anchor="middle">Introduce Param</text>
+    <text class="code codeBefore" x="20" y="70">def add(price:)</text>
+    <text class="code codeBefore" x="20" y="86">  @lines &lt;&lt; price</text>
+    <text class="code" x="20" y="102">end</text>
+    <g filter="url(#rough)">
+      <path class="arrow" d="M40,116 Q120,124 200,116" marker-end="url(#arrowhead)"/>
+    </g>
+    <text class="arrowLbl" x="120" y="132" text-anchor="middle">add quantity:</text>
+    <text class="code codeAfter" x="20" y="152">def add(price:, quantity: 1)</text>
+    <text class="code" x="20" y="168">  @lines &lt;&lt; price * quantity</text>
+  </g>
+
+  <!-- Card 6: Introduce Field -->
+  <g transform="translate(534, 330) rotate(0.9)">
+    <g filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="240" height="180" rx="8"/>
+    </g>
+    <circle class="badge" cx="22" cy="22" r="14" filter="url(#rough)"/>
+    <text class="num" x="22" y="28" text-anchor="middle" fill="#fff">6</text>
+    <text class="card-title" x="120" y="32" text-anchor="middle">Introduce Field</text>
+    <text class="code codeBefore" x="20" y="70">def total</text>
+    <text class="code codeBefore" x="20" y="86">  [].sum</text>
+    <text class="code" x="20" y="102">end</text>
+    <g filter="url(#rough)">
+      <path class="arrow" d="M40,116 Q120,124 200,116" marker-end="url(#arrowhead)"/>
+    </g>
+    <text class="arrowLbl" x="120" y="132" text-anchor="middle">add @items ivar</text>
+    <text class="code codeAfter" x="20" y="152">def initialize</text>
+    <text class="code codeAfter" x="20" y="168">  @items = []</text>
+  </g>
+
+  <!-- footer -->
+  <g filter="url(#rough)">
+    <path class="stroke" d="M60,560 Q400,556 740,560" stroke-dasharray="2,6" opacity="0.4"/>
+  </g>
+  <text class="sub" x="400" y="585" text-anchor="middle" font-family="'Caveat', cursive">
+    Anything bigger? It's a sequence of these six moves.
+  </text>
+  <text class="sub" x="400" y="605" text-anchor="middle" font-family="'Caveat', cursive" fill="#a855f7" opacity="0.8">
+    3 lines max per commit. Suite stays green.
+  </text>
+</svg>

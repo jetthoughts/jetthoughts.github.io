@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 160" role="img" aria-labelledby="title desc">
+  <title id="title">TDD trilogy navigation - The Overkill Myth is the current post</title>
+  <desc id="desc">Three TDD posts: Step-by-Step, The Overkill Myth (current), 3-Line Discipline. Click any card to navigate.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .ink { fill: #dfe2eb; font-family: 'Caveat', 'Architects Daughter', cursive, system-ui; }
+      .tag { font-size: 14px; font-style: italic; fill: #bfc4d1; }
+      .badge { font-family: 'Inter', system-ui, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; fill: #ffb4ab; }
+      .title { font-size: 17px; font-weight: 700; fill: #dfe2eb; }
+      .here { font-size: 14px; font-weight: 700; fill: #cc342d; font-style: italic; }
+      .card { fill: #161b22; fill-opacity: 0.85; stroke: #3a3f4a; stroke-width: 1.6; }
+      .card-active { fill: rgba(204, 52, 45, 0.10); stroke: #cc342d; stroke-width: 2.6; }
+    </style>
+    <filter id="rough" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.2"/>
+    </filter>
+    <symbol id="gem" viewBox="0 0 32 28">
+      <path d="M5,9 L11,3 L21,3 L27,9 L16,25 Z" fill="#cc342d" stroke="#ff8a7a" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M5,9 L16,9 L11,3 Z" fill="#ff8a7a" opacity="0.85"/>
+      <path d="M16,9 L27,9 L21,3 Z" fill="#ffb4ab" opacity="0.7"/>
+      <path d="M11,3 L16,9 L21,3 Z" fill="#ffe8e3" opacity="0.5"/>
+    </symbol>
+  </defs>
+
+  <rect class="bg" width="720" height="160"/>
+
+  <!-- tag line -->
+  <text class="tag" x="20" y="22">TDD trilogy -&gt;</text>
+
+  <!-- Card 1: Step-by-Step -->
+  <a xlink:href="/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/">
+    <g transform="translate(20,38) rotate(-1.0)" filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="220" height="92" rx="10"/>
+    </g>
+    <use href="#gem" x="178" y="56" width="32" height="28"/>
+    <text class="badge" x="32" y="62">TUTORIAL</text>
+    <text class="title" x="32" y="86">Step-by-Step</text>
+    <text class="title" x="32" y="106" fill="#bfc4d1" font-size="13">90-second loop</text>
+  </a>
+
+  <!-- Card 2: Overkill Myth (ACTIVE in Post B) -->
+  <a xlink:href="/blog/tdd-overkill-myth-lightweight-ruby/">
+    <g transform="translate(252,38) rotate(0.7)" filter="url(#rough)">
+      <rect class="card-active" x="0" y="0" width="220" height="92" rx="10"/>
+    </g>
+    <use href="#gem" x="410" y="56" width="32" height="28"/>
+    <text class="badge" x="264" y="62">ESSAY</text>
+    <text class="title" x="264" y="86">The Overkill Myth</text>
+    <text class="title" x="264" y="106" fill="#bfc4d1" font-size="13">why lightweight wins</text>
+  </a>
+  <text class="here" x="264" y="148">&lt;- you are here</text>
+
+  <!-- Card 3: 3-Line Discipline -->
+  <a xlink:href="/blog/refactor-step-tdd-three-line-discipline-ruby/">
+    <g transform="translate(484,38) rotate(-0.6)" filter="url(#rough)">
+      <rect class="card" x="0" y="0" width="220" height="92" rx="10"/>
+    </g>
+    <use href="#gem" x="642" y="56" width="32" height="28"/>
+    <text class="badge" x="496" y="62">TUTORIAL</text>
+    <text class="title" x="496" y="86">3-Line Discipline</text>
+    <text class="title" x="496" y="106" fill="#bfc4d1" font-size="13">refactor without breakage</text>
+  </a>
+</svg>

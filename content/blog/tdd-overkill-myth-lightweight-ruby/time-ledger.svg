@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 320" role="img" aria-labelledby="title desc">
+  <title id="title">Time-ledger comparison</title>
+  <desc id="desc">Without TDD: 1 hour code plus 6 hours debug equals 7 hours total. With lightweight TDD: 6 hours TDD equals 6 hours total. Same elapsed time but only one ships with a design you can change.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .ink { fill: #dfe2eb; font-family: 'Caveat', 'Architects Daughter', 'Comic Neue', cursive, system-ui; }
+      .label { font-size: 18px; font-weight: 700; }
+      .seg { font-size: 17px; font-weight: 700; }
+      .total { font-size: 17px; font-weight: 700; fill: #dfe2eb; }
+      .caption { font-size: 16px; font-style: italic; fill: #bfc4d1; }
+      .ruby-fill { fill: #cc342d; fill-opacity: 0.78; }
+      .purple-fill { fill: #a855f7; fill-opacity: 0.78; }
+      .stroke { fill: none; stroke: #dfe2eb; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .stroke-ruby { fill: none; stroke: #cc342d; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .stroke-purple { fill: none; stroke: #a855f7; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .hatch-ruby { stroke: #ffb4ab; stroke-width: 1.1; stroke-opacity: 0.55; fill: none; }
+      .hatch-purple { stroke: #d8b4fe; stroke-width: 1.1; stroke-opacity: 0.55; fill: none; }
+    </style>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.6"/>
+    </filter>
+    <pattern id="hatchRuby" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)">
+      <line x1="0" y1="0" x2="0" y2="8" class="hatch-ruby"/>
+    </pattern>
+    <pattern id="hatchPurple" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(-32)">
+      <line x1="0" y1="0" x2="0" y2="8" class="hatch-purple"/>
+    </pattern>
+  </defs>
+
+  <rect class="bg" width="600" height="320"/>
+
+  <!-- Without TDD label -->
+  <text class="ink label" x="40" y="46">Without TDD</text>
+
+  <!-- Bar 1: 1h coding (purple) + 6h debugging (ruby), total 7h -->
+  <g filter="url(#rough)">
+    <!-- 1h code segment -->
+    <path class="purple-fill" d="M40,62 Q40,58 44,58 L113,57 Q117,58 117,62 L117,98 Q117,102 113,102 L43,103 Q40,102 40,98 Z"/>
+    <rect x="40" y="58" width="78" height="44" fill="url(#hatchPurple)"/>
+    <path class="stroke-purple" d="M40,62 Q40,58 44,58 L113,57 Q117,58 117,62 L117,98 Q117,102 113,102 L43,103 Q40,102 40,98 Z"/>
+
+    <!-- 6h debug segment -->
+    <path class="ruby-fill" d="M118,58 L513,57 Q517,58 517,62 L517,98 Q517,102 513,102 L118,103 Z"/>
+    <rect x="118" y="58" width="399" height="44" fill="url(#hatchRuby)"/>
+    <path class="stroke-ruby" d="M118,58 L513,57 Q517,58 517,62 L517,98 Q517,102 513,102 L118,103 Z"/>
+  </g>
+
+  <!-- Bar 1 labels -->
+  <text class="ink seg" x="49" y="86" fill="#ffb4ab">1h code</text>
+  <text class="ink seg" x="270" y="86" fill="#ffe8e3">6h debugging</text>
+  <text class="total" x="528" y="86">= 7 hrs</text>
+
+  <!-- separator -->
+  <path d="M40,135 Q200,131 320,135 T560,134" stroke="#3a3f4a" stroke-width="1.4" stroke-dasharray="4,5" fill="none" filter="url(#rough)"/>
+
+  <!-- With lightweight TDD label -->
+  <text class="ink label" x="40" y="172">With lightweight TDD</text>
+
+  <!-- Bar 2: 6h TDD (purple), no debug -->
+  <g filter="url(#rough)">
+    <path class="purple-fill" d="M40,188 Q40,184 44,184 L437,184 Q441,185 441,189 L441,225 Q441,229 437,229 L43,229 Q40,228 40,224 Z"/>
+    <rect x="40" y="184" width="401" height="45" fill="url(#hatchPurple)"/>
+    <path class="stroke-purple" d="M40,188 Q40,184 44,184 L437,184 Q441,185 441,189 L441,225 Q441,229 437,229 L43,229 Q40,228 40,224 Z"/>
+  </g>
+
+  <text class="ink seg" x="180" y="213" fill="#ede9fe">6h TDD (loop + design)</text>
+  <text class="total" x="452" y="213">= 6 hrs</text>
+
+  <!-- arrow + caption -->
+  <g filter="url(#rough)">
+    <path class="stroke" d="M64,256 Q300,250 540,256" stroke-dasharray="2,6" opacity="0.5"/>
+  </g>
+  <text class="ink caption" x="40" y="285">Same elapsed time. Only one ships with a design you can change.</text>
+  <text class="ink caption" x="40" y="305" fill="#a855f7" opacity="0.85">- Agile Institute, the time ledger of TDD</text>
+</svg>

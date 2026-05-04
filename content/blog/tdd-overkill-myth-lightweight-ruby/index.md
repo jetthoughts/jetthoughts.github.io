@@ -18,6 +18,8 @@ canonical_url: 'https://jetthoughts.com/blog/tdd-overkill-myth-lightweight-ruby/
 related_posts: false
 ---
 
+![TDD trilogy navigation: Step-by-Step, The Overkill Myth (current), 3-Line Discipline](trilogy-nav.svg)
+
 The senior dev who told you TDD was overkill learned it on a project where the test suite took twenty minutes to run and every PR took two rounds of mock refactoring. So did we. What Kent Beck described in 2003 and what most TDD-skeptical engineers we meet call "TDD" in 2026 are not the same practice. The loudest "TDD is too slow" complaints we hear in rescue kickoffs describe a workflow that has nothing to do with the cycle Beck laid out.
 
 If you want the rhythm worked out on real Ruby code, we walk through four cycles on a small `Order` class in [TDD in Ruby: A Step-by-Step Guide](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/).
@@ -25,6 +27,8 @@ If you want the rhythm worked out on real Ruby code, we walk through four cycles
 ## The "TDD is overkill" myth comes from heavyweight habits
 
 The Agile Institute frames the [time ledger of TDD](https://agileinstitute.com/articles/dispelling-myths-about-tdd) plainly. One hour of writing code without tests usually buys you six hours of debugging the following week. One hour of writing code with TDD usually cuts that debug bill to a fraction. Either way you spend six hours. Only the TDD path leaves you with a design you can change.
+
+![Time-ledger comparison: 1 hour code + 6 hours debug = 7 hours total without TDD; 6 hours TDD + 0 hours debug = 6 hours total with lightweight TDD](time-ledger.svg)
 
 Thirty-minute red-green cycles are the first culprit. Beck's original cycle measures in seconds and minutes. A team that writes one giant test, builds an entire feature, then fights ten unrelated mock failures has done integration testing after the fact, not TDD. On a billing-platform rescue last quarter the average cycle ran thirty-eight minutes because each spec booted Rails before asserting anything. The team kept TDD and learned to write unit tests that ran in 8ms instead.
 
