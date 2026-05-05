@@ -37,7 +37,7 @@ slug: how-setup-project-that-can-host-up-1000-users-for-free-heroku-startup
 
 * Email testing: [Mailtrap](https://mailtrap.io)
 
-* Caching: [Memcached Cloud](https://redislabs.com/memcached-cloud)
+* Caching: Memcached Cloud
 
 * Background Jobs: [Sidekiq](http://sidekiq.org)
 
@@ -107,7 +107,7 @@ It is unacceptable to bring a risk of accidentally sending dummy emails to real 
 
 ### 7. Caching
 
-One of the most effective ways to improve the application’s performance is caching regularly accessed data. There are two leading key-value stores: [Memcached](https://memcached.org) and [Redis](http://redis.io). I prefer using [Memcached Cloud](https://redislabs.com/memcached-cloud) add-on for caching because it was originally intended for it and is easier to set up, and using Redis only for background jobs.
+One of the most effective ways to improve the application’s performance is caching regularly accessed data. There are two leading key-value stores: [Memcached](https://memcached.org) and [Redis](http://redis.io). I prefer using Memcached Cloud add-on for caching because it was originally intended for it and is easier to set up, and using Redis only for background jobs.
 
 ### 8. Background jobs
 

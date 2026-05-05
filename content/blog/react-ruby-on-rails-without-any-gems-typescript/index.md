@@ -101,7 +101,7 @@ Looks like everything is good and our small component should be rendered and wel
     import 'containers/Welcome'
 ```
 
-Let's see on the page and voila — our component is locked and loaded. Actually, if you are using [bin/webpacker-dev-server](https://github.com/rails/webpacker/blob/master/docs/webpack-dev-server.md) you don't need to reload anything, it will do it for yourself.
+Let's see on the page and voila — our component is locked and loaded. Actually, if you are using bin/webpacker-dev-server you don't need to reload anything, it will do it for yourself.
 
 What if we want to have our Welcome component only on the page we are using? Well, you can just add a new pack with only the Welcome component required and add a javascript tag javascript_pack_tag 'welcome' inside a view. What is pack anyway? This is [Webpacker](https://github.com/rails/webpacker/blob/master/docs/folder-structure.md) name for [Webpack entry point concept](https://webpack.js.org/concepts/entry-points).
 

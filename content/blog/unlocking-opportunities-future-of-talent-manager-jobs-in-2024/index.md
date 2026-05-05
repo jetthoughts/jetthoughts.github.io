@@ -83,7 +83,7 @@ Creating a skills inventory helps you match the right people to the right jobs. 
 
 > Skills-based hiring is not just a trend. It's a way to ensure you hire the best talent for the job, focusing on what truly matters: the ability to perform and grow.
 
-A [recent report](https://www.disco.co/blog/skills-based-jobs) shows that 81% of companies have embraced skills-based hiring, with 94% finding it effective in improving recruitment outcomes. This shift highlights the growing importance of skills in the hiring process.
+A recent report shows that 81% of companies have embraced skills-based hiring, with 94% finding it effective in improving recruitment outcomes. This shift highlights the growing importance of skills in the hiring process.
 
 ## Prioritizing Employee Well-Being
 

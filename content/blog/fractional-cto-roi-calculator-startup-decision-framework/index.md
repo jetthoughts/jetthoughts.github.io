@@ -1641,16 +1641,6 @@ JetThoughts has provided fractional CTO services to 50+ startups from pre-seed t
 - Discuss engagement options and pricing
 - Get honest assessment of fractional vs full-time fit
 
-Or [**download our free Fractional CTO Engagement Checklist**](/resources/fractional-cto-checklist) to evaluate potential fractional CTO partners and structure your engagement for maximum value.
-
----
-
-**Free Resources**:
-- [Fractional CTO ROI Worksheet](/resources/roi-worksheet) (Excel calculator)
-- [CTO Hiring Timeline Comparison](/resources/cto-hiring-timeline) (Full-time vs Fractional)
-- [Technical Due Diligence Checklist](/resources/technical-due-diligence) (For fundraising)
-- [First 90 Days: Fractional CTO Playbook](/resources/first-90-days) (Engagement success guide)
-
 ---
 
 *About JetThoughts: We're a Rails consulting agency specializing in fractional CTO services, technical leadership, and startup engineering team development. Our fractional CTOs have led engineering at VC-backed startups and have guided 50+ companies through technical scaling from pre-seed to Series B.*

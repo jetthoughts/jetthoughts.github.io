@@ -28,7 +28,7 @@ Last month a founder showed us the app he'd paid $40K to build. His dev shop had
 
 Karpathy was talking about throwaway scripts and weekend projects - a personal experiment, not a production strategy.
 
-Then agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. [A quarter of Y Combinator's W25 batch](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/) submitted **codebases that were 95%+ AI-generated**. That's not a handful of experimenters. That's the most selective startup accelerator on earth.
+Then agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. A quarter of Y Combinator's W25 batch submitted **codebases that were 95%+ AI-generated**. That's not a handful of experimenters. That's the most selective startup accelerator on earth.
 
 ## The numbers keep getting worse
 
@@ -105,6 +105,6 @@ If you suspect your codebase is vibe-coded, start with the [red flags checklist 
 - [Andrej Karpathy's original "vibe coding" post](https://x.com/karpathy/status/1886192184808149383) - where the term started
 - [Qodo 2025 State of AI Code Quality Report](https://www.qodo.ai/reports/state-of-ai-code-quality/) - AI code produces 1.7x more issues
 - [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of AI-generated code contains exploitable vulnerabilities
-- [TechCrunch: YC startups applying with AI-generated codebases](https://techcrunch.com/2025/02/05/y-combinator-startups-are-applying-with-codebases-almost-entirely-generated-by-ai/)
+- TechCrunch: YC startups applying with AI-generated codebases
 - [GitHub survey: 92% of developers use AI coding tools](https://github.blog/news-insights/research/survey-ai-wave-grows/)
 - [OWASP Code Review Guide](https://owasp.org/www-project-code-review-guide/) - what a real security review looks like

@@ -140,7 +140,7 @@ crew = Crew(
 result = crew.kickoff()
 ```
 
-> **📚 Complete 4-Agent System**: See [customer support automation example](https://github.com/jetthoughts/crewai-examples/customer-support) demonstrating sentiment analysis → knowledge retrieval → response composition → compliance review in a production workflow (60 lines).
+> **📚 Complete 4-Agent System**: See customer support automation example demonstrating sentiment analysis → knowledge retrieval → response composition → compliance review in a production workflow (60 lines).
 
 This example demonstrates several key CrewAI patterns:
 
@@ -223,7 +223,7 @@ article = create_content_pipeline(
 )
 ```
 
-> **📚 Full Implementation**: See [content pipeline with metadata tracking](https://github.com/jetthoughts/crewai-examples/content-pipeline) for production version with publishing metadata, error handling, and word count targets (180 lines).
+> **📚 Full Implementation**: See content pipeline with metadata tracking for production version with publishing metadata, error handling, and word count targets (180 lines).
 
 This content pipeline shows several advanced CrewAI patterns:
 
@@ -305,7 +305,7 @@ def create_financial_analysis(ticker: str):
 report = create_financial_analysis("MSFT")
 ```
 
-> **📚 Full Implementation**: See [financial analysis with parallel processing](https://github.com/jetthoughts/crewai-examples/financial-analysis) for production version with hierarchical execution, detailed task descriptions, and risk matrices (151 lines).
+> **📚 Full Implementation**: See financial analysis with parallel processing for production version with hierarchical execution, detailed task descriptions, and risk matrices (151 lines).
 
 This example introduces three patterns:
 
@@ -406,7 +406,7 @@ async def get_results(job_id: str):
     return jobs.get(job_id, {"error": "Job not found"})
 ```
 
-> **📚 Full Implementation**: See [FastAPI deployment with Redis](https://github.com/jetthoughts/crewai-examples/fastapi-deployment) for production version with job queues, error tracking, and distributed processing (83 lines).
+> **📚 Full Implementation**: See FastAPI deployment with Redis for production version with job queues, error tracking, and distributed processing (83 lines).
 
 This pattern gives you async processing (long-running crews don't block API requests), job tracking (clients can poll for results), error handling with detailed messages, and an easy path to add Redis and Celery for distributed processing.
 

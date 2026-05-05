@@ -188,4 +188,4 @@ Immediate intervention needed. Your development investment is at high risk.
 
 ---
 
-**Ready to improve your scores?** Our engineering management experts have helped 200+ non-technical founders optimize their development teams. [Schedule a consultation](/contact) to discuss your specific situation and improvement plan.
+**Ready to improve your scores?** Our engineering management experts have helped 200+ non-technical founders optimize their development teams. [Schedule a consultation](/contact-us/) to discuss your specific situation and improvement plan.

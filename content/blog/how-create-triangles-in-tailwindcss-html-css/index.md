@@ -84,4 +84,4 @@ For more Tailwind techniques, see our guides on [CSS triangles without Tailwind]
 
 If you inherited a frontend where developers hand-roll CSS triangles instead of using an icon library, that gap between effort and result is worth a closer look. Our [code quality evaluation guide](/blog/code-quality-evaluation-non-technical-founders/) walks through the questions that surface these shortcuts.
 
-[Talk to our team about a frontend audit](/contact/){.cta-link}
+[Talk to our team about a frontend audit](/contact-us/){.cta-link}

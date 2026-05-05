@@ -58,7 +58,7 @@ A well-tested LangChain-Ruby application should have:
 - **CI/CD integration** (GitHub Actions running tests on every PR)
 - **Reproducible tests** (VCR cassettes for consistent API responses)
 
-> This guide builds on our [Getting Started with LangChain-Ruby](/blog/getting-started-langchain-ruby/) tutorial (Week 1). If you haven't read that yet, we recommend starting there to understand LangChain-Ruby basics before diving into testing strategies.
+> This guide builds on our [Getting Started with LangChain-Ruby](/blog/getting-started-langchain-ruby-complete-guide/) tutorial (Week 1). If you haven't read that yet, we recommend starting there to understand LangChain-Ruby basics before diving into testing strategies.
 
 **Also see**: [LangChain Python Tutorial](/blog/langchain-python-tutorial-complete-guide/) for pytest patterns that can be adapted to RSpec.
 
@@ -1854,7 +1854,7 @@ Before deploying LangChain features to production:
 
 **Ready to build reliable AI features?** Start with comprehensive testing, ship with confidence, and iterate based on real production data. Your users will thank you for the reliability.
 
-**Need help implementing LangChain testing for your Ruby project?** [Contact JetThoughts](/contact/) for expert consultation on AI-powered Rails applications.
+**Need help implementing LangChain testing for your Ruby project?** [Contact JetThoughts](/contact-us/) for expert consultation on AI-powered Rails applications.
 
 ---
 

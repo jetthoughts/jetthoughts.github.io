@@ -2021,12 +2021,4 @@ Or **[explore our Fractional CTO services](/services/fractional-cto)** if you ne
 
 ---
 
-**Free Resources**:
-- [Hiring Contract Template](/resources/hiring-contract-template) (Protect yourself with clear contract terms)
-- [2-Week Trial Evaluation Rubric](/resources/developer-trial-rubric) (Structured criteria for evaluating paid trials)
-- [Reference Check Question Bank](/resources/reference-check-questions) (20 questions to ask past clients)
-- [Budget Planning Spreadsheet](/resources/budget-planning-calculator) (Calculate true costs with our templates)
-
----
-
 *About JetThoughts: We're a development agency specializing in helping non-technical founders make smart hiring decisions and build quality products on realistic budgets. Our team has guided 50+ founders through successful hiring processes—from contractors to full-time teams—with honest advice about costs, trade-offs, and realistic timelines.*

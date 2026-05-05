@@ -1172,7 +1172,7 @@ Ruby on Rails AI integration in 2025 is production-ready. With ruby-openai, anth
 
 The Ruby AI ecosystem has reached critical mass. The question isn't "Can I build AI features in Rails?" but "Which AI features should I prioritize?"
 
-At JetThoughts, we've helped 200+ clients integrate AI into production Rails applications. If you need hands-on guidance for your specific use case, [schedule a consultation](https://jetthoughts.com/contact).
+At JetThoughts, we've helped 200+ clients integrate AI into production Rails applications. If you need hands-on guidance for your specific use case, [schedule a consultation](https://jetthoughts.com/contact-us/).
 
 ## Resources
 

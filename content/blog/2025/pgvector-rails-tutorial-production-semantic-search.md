@@ -74,7 +74,7 @@ pgvector is a PostgreSQL extension that enables vector similarity search directl
 - Complex filtering across many dimensions required
 - Team has dedicated infrastructure engineers
 
-**Real-World Context**: Companies successfully using pgvector in production include [Supabase](https://supabase.com/vector) (100M+ vectors), [Neon](https://neon.tech) (serverless Postgres with pgvector), and dozens of Rails startups processing semantic search for e-commerce catalogs, documentation search, and recommendation engines.
+**Real-World Context**: Companies successfully using pgvector in production include Supabase (100M+ vectors), [Neon](https://neon.tech) (serverless Postgres with pgvector), and dozens of Rails startups processing semantic search for e-commerce catalogs, documentation search, and recommendation engines.
 
 ## Prerequisites and Environment Setup
 
@@ -1359,7 +1359,7 @@ For 90% of Rails applications, **pgvector is the right choice**. Start here, upg
 - [Rails Performance Monitoring](/blog/rails-performance-monitoring/) - APM setup for production apps
 
 **Community Examples**:
-- [JetThoughts pgvector Example App](https://github.com/jetthoughts/rails-pgvector-example) - Complete working Rails 7 application
+- JetThoughts pgvector Example App - Complete working Rails 7 application
 - [Supabase Vector Cookbook](https://supabase.com/docs/guides/ai) - pgvector patterns and recipes
 - [Rails AI Forum](https://discuss.rubyonrails.org/c/ai) - Ask questions, share experiences
 

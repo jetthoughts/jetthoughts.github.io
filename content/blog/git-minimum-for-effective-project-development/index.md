@@ -21,7 +21,7 @@ metatags:
   image: cover.png
 slug: git-minimum-for-effective-project-development
 ---
-> For beginners who are not familiar with [Git](https://git-scm.com/) or [GitFlow](https://datasift.github.io/gitflow/), we grabbed the most common commands to be effective from the first day.
+> For beginners who are not familiar with [Git](https://git-scm.com/) or GitFlow, we grabbed the most common commands to be effective from the first day.
 
 ![](file_0.png)
 

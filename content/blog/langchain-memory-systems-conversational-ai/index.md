@@ -577,7 +577,7 @@ class PostgreSQLMemoryManager:
             .all()[::-1]  # Reverse to chronological order
 ```
 
-> **📚 Full Implementation**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete PostgreSQL integration examples with session management and query optimization.
+> **📚 Full Implementation**: See our GitHub repository for complete PostgreSQL integration examples with session management and query optimization.
 
 ### Redis Session Memory for Real-Time Performance
 
@@ -656,7 +656,7 @@ class RedisMemoryService:
         return f"conversation:{self.conversation_id}:entities"
 ```
 
-> **📚 Full Redis Integration**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete Redis memory implementations with session management and automatic expiration.
+> **📚 Full Redis Integration**: See our GitHub repository for complete Redis memory implementations with session management and automatic expiration.
 
 ---
 
@@ -840,7 +840,7 @@ Get our production-ready LangChain memory system repository with:
 - Background task patterns for summarization
 - API endpoints for memory management
 
-[**Download Memory Architecture Template →**](https://github.com/jetthoughts/langchain-production-patterns)
+**Download Memory Architecture Template →**
 
 **Need expert help building conversational AI?**
 

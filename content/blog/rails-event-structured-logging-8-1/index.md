@@ -33,7 +33,7 @@ A client's Datadog alerts worked for three months after we set them up. Their te
 
 The last three codebases we inherited all had this exact pattern. One ops engineer had even left a comment in the regex file: `# this will break if Rails changes log format - TODO fix`. But ripping it out would have meant two days of work touching alerting configs, Datadog dashboards, and a custom Sidekiq middleware a previous contractor had bolted on, so they left it.
 
-Now Rails 8.1 gives you a real escape hatch. The new [`ActiveSupport::Notifications` broadcast API](https://rubyonrails.org/2025/3/14/rails-8-1-beta1-released) and the `Rails.logger` structured payload changes let you subscribe to events - not parse text. This post shows you what changed, what the migration looks like, and where the tradeoffs land.
+Now Rails 8.1 gives you a real escape hatch. The new `ActiveSupport::Notifications` broadcast API and the `Rails.logger` structured payload changes let you subscribe to events - not parse text. This post shows you what changed, what the migration looks like, and where the tradeoffs land.
 
 ## Why log parsing fails in production
 
@@ -237,7 +237,7 @@ This fits a larger shift in Rails: the framework has been moving its internal co
 
 ---
 
-**Still running regex-based alerts on a production Rails app?** We will audit your monitoring setup in a 45-minute call with a senior Rails engineer, identify which parsers are already broken (there is usually at least one), and deliver a written migration plan. No charge for the call. [Book your monitoring audit](https://jetthoughts.com/contact/).
+**Still running regex-based alerts on a production Rails app?** We will audit your monitoring setup in a 45-minute call with a senior Rails engineer, identify which parsers are already broken (there is usually at least one), and deliver a written migration plan. No charge for the call. [Book your monitoring audit](https://jetthoughts.com/contact-us/).
 
 ---
 
@@ -257,7 +257,7 @@ See also the [Ruby on Rails performance patterns we documented last quarter](/bl
 
 ## Further reading
 
-- [Rails 8.1 Beta 1 release announcement](https://rubyonrails.org/2025/3/14/rails-8-1-beta1-released) - official changelog covering notification improvements
+- Rails 8.1 Beta 1 release announcement - official changelog covering notification improvements
 - [ActiveSupport::Notifications API reference](https://edgeapi.rubyonrails.org/classes/ActiveSupport/Notifications.html) - full docs for `subscribe`, `monotonic_subscribe`, and the `Event` object
 - [Datadog Ruby tracing library](https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/ruby/) - setup guide for `ddtrace` and `dogstatsd-ruby` with Rails
 - [Active Support Instrumentation guide](https://guides.rubyonrails.org/active_support_instrumentation.html) - every event Rails emits, with payload key documentation
@@ -266,4 +266,4 @@ See also the [Ruby on Rails performance patterns we documented last quarter](/bl
 
 Every month you wait, your regex parsers silently miss more alerts.
 
-<a class="cta-link" href="https://jetthoughts.com/contact/">Book the free monitoring audit</a>
+<a class="cta-link" href="https://jetthoughts.com/contact-us/">Book the free monitoring audit</a>

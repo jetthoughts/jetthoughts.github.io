@@ -235,7 +235,7 @@ Mindset changes don't happen overnight, but they can be deliberately cultivated.
 
 Sometimes mindset barriers run deeper than individual practice can address. If you're experiencing persistent imposter syndrome, severe perfectionism that prevents shipping code, or anxiety that significantly impacts your work, consider working with a therapist who understands tech industry challenges.
 
-For organizations looking to develop mindset-focused engineering cultures, [our engineering team coaching services](https://jetthoughts.com/services/team-coaching/) help build environments where growth mindsets flourish naturally.
+For organizations looking to develop mindset-focused engineering cultures, [our technical leadership consulting](/services/technical-leadership-consulting/) helps build environments where growth mindsets flourish naturally.
 
 ## The Long-Term View: Mindset as Career Insurance
 
@@ -259,11 +259,7 @@ Don't try to transform everything at once. Pick the mindset shift that resonates
 
 **If you're focused only on your individual contributions**: Think systemically. Before implementing your next feature, consider its impact on users, maintainability, and team productivity.
 
-**Ready for a comprehensive mindset assessment?** I've created a [Developer Mindset Evaluation](https://jetthoughts.com/tools/developer-mindset-assessment/) that takes 15 minutes and provides personalized recommendations for the mindset shifts that will most accelerate your career growth.
-
-**Want to build a growth-minded engineering team?** Our [Engineering Culture Assessment](https://jetthoughts.com/services/engineering-culture-assessment/) helps identify organizational barriers to developer growth and creates action plans for building environments where technical talent thrives.
-
-**Need strategic guidance on developing your engineering career?** I offer 30-minute strategy conversations where we can discuss your specific mindset challenges and map out development approaches. [Schedule your conversation here](https://jetthoughts.com/contact/).
+**Need strategic guidance on developing your engineering career?** I offer 30-minute strategy conversations where we can discuss your specific mindset challenges and map out development approaches. [Schedule your conversation here](https://jetthoughts.com/contact-us/).
 
 ---
 

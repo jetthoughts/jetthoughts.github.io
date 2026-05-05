@@ -342,6 +342,6 @@ Your distributed team isn't a limitation. With adapted XP practices, it's your c
 
 ---
 
-**Ready to try async XP practices?** Start with our [guide to visual regression testing](/blog/visual-regression-testing-guide) or explore our [CSS migration case study documentation](https://github.com/jetthoughts/jetthoughts.github.io/tree/master/docs/projects/2509-css-migration).
+**Ready to try async XP practices?** Explore our [CSS migration case study documentation](https://github.com/jetthoughts/jetthoughts.github.io/tree/master/docs/projects/2509-css-migration) for a worked example.
 
-**Questions about adapting XP for your distributed team?** [Contact our engineering leadership](/contact) for consultation on remote team practices and agile transformation.
+**Questions about adapting XP for your distributed team?** [Contact our engineering leadership](/contact-us/) for consultation on remote team practices and agile transformation.

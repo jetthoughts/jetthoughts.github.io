@@ -42,7 +42,7 @@ If you plan to send messages and emails manually that are too customized, then I
 [Josh Braun](https://www.linkedin.com/in/josh-braun/)
 [Alex Berman](https://youtube.com/playlist?list=PLtkcfOqeArMa9-nmJR8wxAOfSU4kzYpBj)
 
-In case you are sending slightly personalized messages, use automation tools such as [Expandi](https://expandi.io/worlds-safest-software-for-linkedin-automation/)(for Linkedin), [Lemlist](https://www.lemlist.com/)(for e-mails), and many others, I shared more options in my recent article [here](https://jtway.co/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-6e8b4a4a473).
+In case you are sending slightly personalized messages, use automation tools such as Expandi(for Linkedin), [Lemlist](https://www.lemlist.com/)(for e-mails), and many others, I shared more options in my recent article [here](https://jtway.co/the-ultimate-guide-to-the-sales-onboarding-in-it-companies-6e8b4a4a473).
 
 ## Sales Qualification
 

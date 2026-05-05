@@ -1450,7 +1450,7 @@ Effective Rails testing in 2025 combines proven methodologies with modern tools 
 - [RSpec Documentation](https://rspec.info/)
 - [Minitest Documentation](https://github.com/minitest/minitest)
 - [thoughtbot's Testing Best Practices](https://thoughtbot.com/blog/how-we-test-rails-applications)
-- [The RSpec Book](https://pragprog.com/titles/achbd/the-rspec-book/)
+- The RSpec Book
 
 By following these best practices and continuously improving your testing skills, you'll build more reliable, maintainable Rails applications that your team and users can depend on.
 

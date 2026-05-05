@@ -60,7 +60,7 @@ Hiring pre-vetted developers through Turing not only accelerates the recruitment
 
 ### Sources Used in This Article
 
-*   [GraphQL Developer Job Description Template in 2025](https://www.turing.com/job-description/graphql-developers), Turing.
+*   GraphQL Developer Job Description Template in 2025, Turing.
 *   [Hire Generative AI Developers in 4 Days](https://www.turing.com/hire/generative-ai-developers), Turing.
 *   [Hire AI Engineers in 4 Days](https://www.turing.com/hire/ai-engineers), Turing.
 *   [Hire ML Engineers in 4 Days](https://www.turing.com/hire/ml-engineers), Turing.

@@ -601,7 +601,7 @@ Things change. Business needs change. Your development needs to change too. Be f
 
 ### Creating Value Through Development
 
-Ultimately, your job is to create value. Value for the company. Value for the users. Every line of code should contribute to that value. Think about how your work makes a difference. It's not just about writing code. It's about solving problems and making things better. It's about building a [product backlog](https://example.com/product-backlog) that matters.
+Ultimately, your job is to create value. Value for the company. Value for the users. Every line of code should contribute to that value. Think about how your work makes a difference. It's not just about writing code. It's about solving problems and making things better. It's about building a product backlog that matters.
 
 ## Scaling Your Dev Team
 

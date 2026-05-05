@@ -498,4 +498,4 @@ Ready to make the switch? Start with a small, non-critical application to build 
 
 ---
 
-*Have questions about migrating to Solid Queue? The JetThoughts team has helped dozens of companies modernize their Rails infrastructure. [Reach out for a consultation](https://jetthoughts.com/contact) or share your migration experience in the comments below.*
+*Have questions about migrating to Solid Queue? The JetThoughts team has helped dozens of companies modernize their Rails infrastructure. [Reach out for a consultation](https://jetthoughts.com/contact-us/) or share your migration experience in the comments below.*

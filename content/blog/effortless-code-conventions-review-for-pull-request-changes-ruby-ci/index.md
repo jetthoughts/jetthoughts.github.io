@@ -109,7 +109,7 @@ gem 'pronto-brakeman', require: false
 gem 'pronto-rails_best_practices', require: false
 ```
 
-Finally, you need to add *PRONTO_GITHUB_ACCESS_TOKEN*. You could obtain your *PERSONAL GITHUB ACCESS TOKEN* by following [this instruction](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) and check [environment variable on CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app) to add it to the project.
+Finally, you need to add *PRONTO_GITHUB_ACCESS_TOKEN*. You could obtain your *PERSONAL GITHUB ACCESS TOKEN* by following [this instruction](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) and check the environment variable settings on CircleCI to add it to the project.
 
 ## Summary
 

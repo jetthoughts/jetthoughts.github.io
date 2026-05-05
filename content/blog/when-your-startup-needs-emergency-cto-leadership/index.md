@@ -150,7 +150,7 @@ The hardest part about technical crisis management? Recognizing when you're actu
 
 Here are the warning signs that made me pause my Netflix binge and answer emergency calls:
 
-**Your team is sprinting in place.** Everyone's working weekends, ordering dinner to the office, and talking about being "in the weeds," but somehow your velocity is going backwards. When individual heroics are the only thing keeping you afloat, you're not building a business—you're running a very expensive treadmill. If this sounds familiar, consider taking our [engineering health assessment](/tools/engineering-health-assessment/) to identify specific bottlenecks affecting your team's velocity.
+**Your team is sprinting in place.** Everyone's working weekends, ordering dinner to the office, and talking about being "in the weeds," but somehow your velocity is going backwards. When individual heroics are the only thing keeping you afloat, you're not building a business—you're running a very expensive treadmill. If this sounds familiar, [book a 30-minute call](/contact-us/) to identify specific bottlenecks affecting your team's velocity.
 
 **Your single points of failure have names.** If Sarah leaving would break deployments, if Marcus getting hit by a bus would kill customer support, and if Elena taking a vacation would paralyze new feature development, congratulations—you've built a house of cards with really skilled cards.
 

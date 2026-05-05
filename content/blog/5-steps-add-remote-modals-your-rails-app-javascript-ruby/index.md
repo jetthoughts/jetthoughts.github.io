@@ -27,7 +27,7 @@ Sometimes you don’t want to write big JavaScript application just to have work
 
 ***Note: I am using [bootstrap 4](https://getbootstrap.com/) modals here but this solution can be adapted to any JS modals implementations.***
 
-Check out [working demo](https://remote-modals-rails.herokuapp.com/) and [source code](https://github.com/jetthoughts/remote_modals_demo).
+Check out working demo and [source code](https://github.com/jetthoughts/remote_modals_demo).
 
 ## Step 0. Prepare your bundle
 
@@ -223,7 +223,7 @@ And, finally, you should add two attributes to your form:
 
 data-modal is used to tell our script to handle this form as the modal form.
 
-I’ve created a small [demo application](https://remote-modals-rails.herokuapp.com/) which you can find here: [source code on github](https://github.com/jetthoughts/remote_modals_demo).
+I’ve created a small demo application which you can find here: [source code on github](https://github.com/jetthoughts/remote_modals_demo).
 
 UPD: Updated for Rails 5 And Bootstrap 4.
 

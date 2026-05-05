@@ -23,7 +23,7 @@ If you're reading this, the last engagement probably didn't go well. Now you're 
 
 ## Question 1: "Can I see a sample weekly report?"
 
-A dev shop that won't show you a real weekly report is hiding something, and they usually fail this question inside the first two minutes. The hiding might be chaos, idle hours, or a project they don't understand. [Research from Clutch](https://clutch.co/agencies/software-developers) shows that **72% of failed development partnerships cite "poor communication"** as the primary issue.
+A dev shop that won't show you a real weekly report is hiding something, and they usually fail this question inside the first two minutes. The hiding might be chaos, idle hours, or a project they don't understand. Research from Clutch shows that **72% of failed development partnerships cite "poor communication"** as the primary issue.
 
 A good report tells you what shipped this week, what's blocked, what's next, and a code health score covering test coverage, critical bugs, and deployment frequency. It fits on one page, reads in plain English, and lets a non-technical founder know exactly where the project stands without translating jargon.
 

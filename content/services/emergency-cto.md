@@ -60,5 +60,5 @@ Don't let technical challenges slow your business down. Our Emergency CTO servic
   title="Schedule Emergency CTO Consultation"
   description="Get expert technical leadership within 48 hours."
   button-text="Get Emergency Help"
-  button-url="/contact"
+  button-url="/contact-us/"
 >}}

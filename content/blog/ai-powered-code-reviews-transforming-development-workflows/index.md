@@ -151,4 +151,4 @@ Ready to transform your code review process? Start with a pilot project, measure
 
 ---
 
-*JetThoughts helps development teams integrate AI tools effectively into their workflows. [Contact us](https://jetthoughts.com/contact) to learn how we can accelerate your team's productivity with AI-powered development practices.*
+*JetThoughts helps development teams integrate AI tools effectively into their workflows. [Contact us](https://jetthoughts.com/contact-us/) to learn how we can accelerate your team's productivity with AI-powered development practices.*

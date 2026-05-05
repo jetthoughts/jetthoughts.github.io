@@ -128,9 +128,9 @@ In fostering a dynamic and innovative tech team, a Fractional CTO plays a pivota
 
 ## Strategic Team Building
 
- 1. Focus on hiring individuals who not only [fit the technical requirements](https://thestartupfactory.tech/how-to-build-a-tech-team-in-a-startup/) but also align with the company’s culture and values.
+ 1. Focus on hiring individuals who not only fit the technical requirements but also align with the company’s culture and values.
 
- 2. Treat the tech team as an [integral part of the company](https://thestartupfactory.tech/how-to-build-a-tech-team-in-a-startup/), involving them in all aspects from the start.
+ 2. Treat the tech team as an integral part of the company, involving them in all aspects from the start.
 
  3. Regularly provide [constructive feedback](https://fastercapital.com/content/Improve-Your-Startup-s-Efficiency.html) and recognize achievements, making [continuous improvement](https://www.fastcompany.com/1824162/socratic-way-startup-mentoring) a core company value.
 

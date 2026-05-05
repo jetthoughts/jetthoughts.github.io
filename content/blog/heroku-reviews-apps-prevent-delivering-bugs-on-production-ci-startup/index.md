@@ -26,7 +26,7 @@ slug: heroku-reviews-apps-prevent-delivering-bugs-on-production-ci-startup
 
 ![Photo by [Terrah Holly](https://unsplash.com/photos/nJjvUZYuLOA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](file_0.jpeg)
 
-One of the principles of agile is that the master **branch should always be potentially shippable. That means it should always be of production quality. In order to achieve it, there are some practices like [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) and [Code Review](https://github.com/features/code-review/). But still we are not confident!
+One of the principles of agile is that the master **branch should always be potentially shippable. That means it should always be of production quality. In order to achieve it, there are some practices like GitFlow and [Code Review](https://github.com/features/code-review/). But still we are not confident!
 
 There is very effective practice to reduce risks and make master stable: **run [Functional Verification](https://en.wikipedia.org/wiki/Functional_verification) of requested changes on each PR**. You could add this practice as a part of Code Review but it’s also OK to run it as a dedicated step in order to involve QA Team or Product Owner.
 

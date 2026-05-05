@@ -20,7 +20,7 @@ slug: discover-top-react-development-companies-of
 ---
 In the ever-evolving world of web development, React has carved out a significant niche. As we step into 2025, businesses are on the lookout for the top React development companies to help them create dynamic and efficient applications. This article highlights some of the best firms in the industry, known for their expertise in React and their ability to deliver high-quality solutions tailored to various project needs. Whether you're a startup or an established company, finding the right partner is crucial for success.
 
-> **Looking for a React development partner directly?** JetThoughts builds React and Rails MVPs for funded startups - 8-12 week ship cycles, fractional CTOs, transparent weekly reports. [See our React development services](/services/app-web-development/) or [book a 30-min architecture call](/contact/) before scrolling. The list below covers other firms worth considering.
+> **Looking for a React development partner directly?** JetThoughts builds React and Rails MVPs for funded startups - 8-12 week ship cycles, fractional CTOs, transparent weekly reports. [See our React development services](/services/app-web-development/) or [book a 30-min architecture call](/contact-us/) before scrolling. The list below covers other firms worth considering.
 
 ### Key Takeaways
 

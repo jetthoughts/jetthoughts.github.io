@@ -648,7 +648,7 @@ Sometimes, you need to connect to a database that's not managed by your Rails ap
 
 ### Managing Your Data
 
-Rails provides tools to manage your data. You can use the Rails console to query and update data. You can use Active Record models to interact with the database in a more object-oriented way. You can also use gems like `seed_dump` to export and import data. Managing your data is a key part of building a Rails app. You can [create a new MySQL database](https://docs.bitnami.com/aws/apps/redmine/get-started/create-mysql-database/) using the command line client.
+Rails provides tools to manage your data. You can use the Rails console to query and update data. You can use Active Record models to interact with the database in a more object-oriented way. You can also use gems like `seed_dump` to export and import data. Managing your data is a key part of building a Rails app. You can create a new MySQL database using the command line client.
 
 ## Version Control for Your New App
 

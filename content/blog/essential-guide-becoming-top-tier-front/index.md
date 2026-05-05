@@ -511,7 +511,7 @@ Your designs are for people. You need to understand their needs. Think about how
 
 ### Curiosity and Initiative
 
-Always be curious. Ask questions. Look for new ways to do things. Take initiative to improve your skills. This shows you are engaged. It helps you grow as a designer. You can also [enhance your skills](3f5a) by exploring open-source projects.
+Always be curious. Ask questions. Look for new ways to do things. Take initiative to improve your skills. This shows you are engaged. It helps you grow as a designer. You can also enhance your skills by exploring open-source projects.
 
 ## The Future of Front End Design: What's Next?
 

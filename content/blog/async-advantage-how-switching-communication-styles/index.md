@@ -252,9 +252,9 @@ The question isn't whether you can afford to go async-first. It's whether you ca
 [^1]: Savings figures primarily reflect labor costs in developed economies like the US and Europe. In regions with lower average wages, the absolute dollar savings would be proportionally lower, but the percentage savings (15-30% profit increase) remain consistent across markets. Source: <https://assets-global.website-files.com/641b79859965f44161887150/65249014bc0caec760f24010_IDC%20Business%20Value%20Case%20Study%20-%20Remote%20and%20Notion%20mofu.pdf>
 [^2]: Source: <https://www.winsavvy.com/async-communication-usage-in-remote-teams-tool-trend-data/>
 [^3]: <https://assets-global.website-files.com/641b79859965f44161887150/65249014bc0caec760f24010_IDC%20Business%20Value%20Case%20Study%20-%20Remote%20and%20Notion%20mofu.pdf>
-[^4]: <https://www.atlassian.com/blog/teamwork/research-context-switching-costs>
+[^4]: Atlassian Teamwork research on the cost of context-switching.
 [^5]: <https://www.atlassian.com/software/confluence/forrester-total-economic-impact>
-[^6]: <https://nbloom.people.stanford.edu/sites/g/files/sbiybj4746/f/wfh.pdf>
+[^6]: Stanford research on remote work productivity by Nicholas Bloom et al.
 [^7]: <https://www.gallup.com/workplace/283985/working-remotely-effective-gallup-research-says-yes.aspx>
 [^8]: Based on GitLab's employee satisfaction surveys mentioned in Document 3
 [^9]: Calculation based on Document 2's model of 40 developers + 20 middle managers

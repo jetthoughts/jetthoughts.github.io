@@ -282,7 +282,7 @@ Your future self (and your teammates) will thank you for making the investment i
 
 ---
 
-*Want to implement AI-powered code reviews in your development workflow? [Contact JetThoughts](https://jetthoughts.com/contact/) for expert consultation on modern development practices and workflow optimization.*
+*Want to implement AI-powered code reviews in your development workflow? [Contact JetThoughts](https://jetthoughts.com/contact-us/) for expert consultation on modern development practices and workflow optimization.*
 
 ## Frequently Asked Questions
 

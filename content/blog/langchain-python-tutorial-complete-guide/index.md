@@ -15,7 +15,7 @@ Building AI-powered features in your Python applications has never been more acc
 
 This comprehensive tutorial walks you through everything you need to build your first AI agent in Python—from installation to production deployment. By the end, you'll have working code examples and understand how to integrate LangChain into real Python applications.
 
-**All code examples in this tutorial are available in our GitHub repository**: [jetthoughts/langchain-python-examples](https://github.com/jetthoughts/langchain-python-examples)
+**All code examples in this tutorial are available in our GitHub repository**: jetthoughts/langchain-python-examples
 
 Clone and run immediately:
 ```bash

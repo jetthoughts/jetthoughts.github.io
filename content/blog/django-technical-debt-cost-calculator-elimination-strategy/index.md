@@ -126,4 +126,4 @@ Pick your three slowest-moving areas of the codebase. Ask each developer: "How m
 
 If the number is over $100K — and for most Django teams with 5+ developers, it will be — you have a business case for systematic debt reduction.
 
-We do free code audits for Django teams: one senior developer reviews your codebase and delivers a written assessment with specific dollar estimates and a prioritized fix list. No contract, no follow-up sales calls. [Book a code audit here](https://www.jetthoughts.com/contact).
+We do free code audits for Django teams: one senior developer reviews your codebase and delivers a written assessment with specific dollar estimates and a prioritized fix list. No contract, no follow-up sales calls. [Book a code audit here](https://jetthoughts.com/contact-us/).

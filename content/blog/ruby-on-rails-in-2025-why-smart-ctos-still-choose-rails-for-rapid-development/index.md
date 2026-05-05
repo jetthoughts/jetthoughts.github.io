@@ -497,4 +497,4 @@ The smart CTOs choosing Rails aren't living in the past—they're making pragmat
 
 ---
 
-*Ready to explore how Rails can accelerate your development goals? At JetThoughts, we've helped dozens of companies leverage Rails for rapid growth and scalable success. Our team of expert Rails developers can help you evaluate whether Rails is the right choice for your project and implement it successfully. [Contact us for a consultation](https://jetthoughts.com/contact) to discuss your specific needs and timeline.*
+*Ready to explore how Rails can accelerate your development goals? At JetThoughts, we've helped dozens of companies leverage Rails for rapid growth and scalable success. Our team of expert Rails developers can help you evaluate whether Rails is the right choice for your project and implement it successfully. [Contact us for a consultation](https://jetthoughts.com/contact-us/) to discuss your specific needs and timeline.*

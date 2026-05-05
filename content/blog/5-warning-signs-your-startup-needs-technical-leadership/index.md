@@ -222,11 +222,7 @@ Take an honest look at your startup right now:
 
 If you're seeing multiple warning signs, the time to act is now, not when you're in crisis mode.
 
-**Ready for an honest technical assessment?** I've created an [Engineering Health Assessment](/tools/engineering-health-assessment/) that takes 10 minutes and gives you a clear picture of your technical risks and recommended actions.
-
-**Need to talk through your specific situation?** I offer free 30-minute strategy calls where we can discuss your warning signs and map out next steps. [Schedule your call here](/contact/).
-
-**Want to learn more about preventing technical crises?** Download our [Emergency CTO Playbook](/resources/emergency-cto-playbook/) — it's the same framework I use to help startups turn technical challenges into competitive advantages.
+**Need to talk through your specific situation?** I offer free 30-minute strategy calls where we can discuss your warning signs and map out next steps. [Schedule your call here](/contact-us/).
 
 ---
 

@@ -1004,8 +1004,8 @@ This guide introduced LangGraph's state machine fundamentals and production patt
 
 ### Official LangGraph Resources
 
-- **Documentation**: [LangGraph Concepts](https://langchain-ai.github.io/langgraph/concepts/)
-- **How-To Guides**: [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/tutorials/)
+- **Documentation**: LangGraph Concepts
+- **How-To Guides**: LangGraph Tutorials
 - **API Reference**: [Python API](https://langchain-ai.github.io/langgraph/reference/graphs/)
 - **Community**: [LangChain Forum](https://forum.langchain.com/)
 

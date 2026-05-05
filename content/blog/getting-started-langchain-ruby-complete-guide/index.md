@@ -937,7 +937,7 @@ You've built your first AI agent with LangChain-Ruby! Here's where to go next:
 **Get involved**:
 - **GitHub**: [patterns-ai-core/langchainrb](https://github.com/patterns-ai-core/langchainrb) - Official repository
 - **Discord**: Join the LangChain Ruby community
-- **RubyGems**: [langchainrb gem page](https://rubygems.org/gems/langchainrb) - Latest releases
+- **RubyGems**: langchainrb gem page - Latest releases
 - **Stack Overflow**: Tag questions with `langchain-ruby`
 
 ### Official Documentation

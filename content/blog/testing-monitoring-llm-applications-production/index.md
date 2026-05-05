@@ -1065,11 +1065,8 @@ The key is accepting non-determinism while building defensive layers of validati
 
 ## Your LLM Testing Checklist
 
-Download our comprehensive checklist to ensure you're covering all critical testing areas:
+What a comprehensive LLM testing program covers:
 
-**📋 Free Resource: [LLM Testing & Monitoring Checklist](/downloads/llm-testing-checklist.pdf)**
-
-Includes:
 - 25-point pre-deployment testing checklist
 - Monitoring metrics to track (with thresholds)
 - Prompt evaluation dataset template

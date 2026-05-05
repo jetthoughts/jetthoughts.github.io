@@ -2423,7 +2423,7 @@ Building production AI features in Laravel is complex. JetThoughts specializes i
 
 **What to Read Next**:
 - [LangChain Python Tutorial: Complete Guide 2025](/blog/langchain-python-tutorial-complete-guide/)
-- [Getting Started with LangChain-Ruby](/blog/getting-started-langchain-ruby/)
+- [Getting Started with LangChain-Ruby](/blog/getting-started-langchain-ruby-complete-guide/)
 
 **Ready to implement Laravel AI integration?** Contact our team for expert guidance on production deployment, performance optimization, and cost management.
 

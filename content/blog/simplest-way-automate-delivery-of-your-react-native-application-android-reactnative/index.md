@@ -208,7 +208,7 @@ Let’s take a look at the list of our main dependencies that this Dockerfile co
 
 * ruby, bundler — to run fastlane.
 
-To this end, we could take ready android image from CircleCI like this one [*circleci/android:api-25-alpha](https://hub.docker.com/r/circleci/android/)*. And build our Dockerfile on this basis. You can see what’s inside [here](https://github.com/circleci/circleci-images/blob/master/android/Dockerfile.m4). Basically, there is gradle and Android SDK. But we are even lazier. So we borrowed container from this [nice guy](https://hub.docker.com/r/arian/android-react-native/~/dockerfile/). It has gradle, Android SDK, Nodejs, Yarn. Not bad at all, huh? And then we build our Dockerfile on top of that and add a few remaining dependencies.
+To this end, we could take ready android image from CircleCI like this one [*circleci/android:api-25-alpha](https://hub.docker.com/r/circleci/android/)*. And build our Dockerfile on this basis. You can see what’s inside here. Basically, there is gradle and Android SDK. But we are even lazier. So we borrowed container from this [nice guy](https://hub.docker.com/r/arian/android-react-native/~/dockerfile/). It has gradle, Android SDK, Nodejs, Yarn. Not bad at all, huh? And then we build our Dockerfile on top of that and add a few remaining dependencies.
 
 To make it usable by CircleCI you need to build an image and push it to your docker repository. Here is an [instruction](https://docs.docker.com/get-started/part2/) to build and distribute your image. Alternatively, you can use our [image](https://hub.docker.com/r/jetthoughts/android-react-native/).
 

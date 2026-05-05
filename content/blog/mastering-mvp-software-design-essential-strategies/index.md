@@ -57,7 +57,7 @@ Okay, how do you actually get this feedback? Don't just sit around and wait for 
 
 *   **In-app feedback tools:** These are super handy. Users can give you feedback right when they're using the product. Easy peasy.
 *   **Surveys:** Keep them short and sweet. No one wants to spend 30 minutes answering questions. Offer a small incentive if you can.
-*   **User interviews:** Chat with your users. Ask them about their experience. What do they love? What do they hate? What could be better? This is where you can really [understand MVP](https://www.protonshub.com/blogs/the-role-of-user-feedback-in-mvp-development) development.
+*   **User interviews:** Chat with your users. Ask them about their experience. What do they love? What do they hate? What could be better? This is where you can really understand MVP development.
 *   **Focus groups:** Get a group of users together and have a discussion. This can be a great way to get a variety of perspectives.
 
 > Remember, the goal is to understand what your users really think. Don't just listen to what they say, pay attention to what they do.

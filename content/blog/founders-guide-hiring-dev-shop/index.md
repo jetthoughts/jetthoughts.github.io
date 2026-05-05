@@ -56,4 +56,4 @@ One more thing to watch for during recovery: the temptation to outsource again o
 
 ## Get a Free Code Audit
 
-Not sure where your codebase stands? We offer a [free code audit](https://www.jetthoughts.com/contact) for founders who want an honest assessment before making their next hire. No pitch deck, no strings - just a technical review from engineers who have seen what goes wrong and know how to fix it.
+Not sure where your codebase stands? We offer a [free code audit](https://jetthoughts.com/contact-us/) for founders who want an honest assessment before making their next hire. No pitch deck, no strings - just a technical review from engineers who have seen what goes wrong and know how to fix it.

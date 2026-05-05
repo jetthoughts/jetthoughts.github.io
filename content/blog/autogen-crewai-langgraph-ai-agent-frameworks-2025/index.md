@@ -162,7 +162,7 @@ We help teams pick the right agent framework, migrate off AutoGen now that it's 
 [6](https://cloudsummit.eu/blog/microsoft-agent-framework-production-ready-convergence-autogen-semantic-kernel)
 [7](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/)
 [8](https://itnext.io/microsoft-agent-framework-the-unified-open-source-engine-for-production-ready-ai-agents-077413e6d39f)
-[9](https://www.instinctools.com/blog/autogen-vs-langchain-vs-crewai/)
+9
 [10](https://github.com/crewAIInc/crewAI)
 [11](https://www.ibm.com/think/topics/crew-ai)
 [12](https://www.reddit.com/r/crewai/comments/1fntljw/spoke_to_21_crewai_developers_and_heres_what_we/)
@@ -189,7 +189,7 @@ We help teams pick the right agent framework, migrate off AutoGen now that it's 
 [33](https://github.com/al-mz/langgraph-aws-deployment)
 [34](https://kanerika.com/blogs/crewai-vs-autogen/)
 [35](https://www.reddit.com/r/AI_Agents/comments/1kjowzp/whats_the_best_framework_for_productiongrade_ai/)
-[36](https://docs.langchain.com/langsmith/autogen-integration)
+36
 [37](https://www.langflow.org/blog/the-complete-guide-to-choosing-an-ai-agent-framework-in-2025)
 [38](https://www.vellum.ai/blog/top-ai-agent-frameworks-for-developers)
 [39](https://www.youtube.com/watch?v=8HqeY5v0ohM)

@@ -27,7 +27,7 @@ slug: regular-automatic-dependencies-update-with-circleci-github-circle
 
 ## Automatic update idea
 
-CircleCI provides [scheduling](https://support.circleci.com/hc/en-us/articles/115015481128-Scheduling-jobs-cron-for-builds-) jobs and workflows. So you need to configure it to run updating script, which also needs to be prepared. That’s all!
+CircleCI provides scheduling jobs and workflows. So you need to configure it to run updating script, which also needs to be prepared. That’s all!
 
 ## Updating Script
 
@@ -75,7 +75,7 @@ curl -X POST                                                                    
 
 *CIRCLE_PROJECT_USERNAME and CIRCLE_PROJECT_REPONAME* — it is CircleCI [built-in environment variables](https://circleci.com/docs/2.0/env-vars/#built-in-environment-variables).
 
-*GITHUB_TOKEN* — this variable should be stored manually like [CircleCI Environment Variable.](https://circleci.com/docs/2.0/env-vars/)
+*GITHUB_TOKEN* — this variable should be stored manually like CircleCI Environment Variable.
 
 Provide GitHub User name and email (they could have fake values) to have the ability to commit:
 

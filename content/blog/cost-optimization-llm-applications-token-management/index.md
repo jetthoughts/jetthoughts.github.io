@@ -149,7 +149,7 @@ cost = manager.estimate_cost(prompt, response)
 print(f"Cost: ${cost['total_cost']:.4f}, Tokens: {cost['input_tokens']}+{cost['output_tokens']}")
 ```
 
-> **📚 Full Implementation**: See [token budget system with monitoring](https://github.com/jetthoughts/llm-cost-examples/token-tracking) for production version with request tracking, cost alerts, and per-user/feature attribution (188 lines).
+> **📚 Full Implementation**: See token budget system with monitoring for production version with request tracking, cost alerts, and per-user/feature attribution (188 lines).
 
 **Key Implementation Notes**:
 

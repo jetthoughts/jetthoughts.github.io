@@ -54,7 +54,7 @@ primary_model = ChatOpenAI(model="gpt-4", temperature=0.7, timeout=30)
 fallback_model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
 ```
 
-> **📚 Full Implementation**: See [production architecture patterns](https://github.com/jetthoughts/langchain-examples) for complete `ProductionLangChainArchitecture` class with version control and error tracking.
+> **📚 Full Implementation**: See production architecture patterns for complete `ProductionLangChainArchitecture` class with version control and error tracking.
 
 ### Prompt Management with Version Control
 
@@ -97,7 +97,7 @@ v2 = mgr.register("support", "You are an expert. Query: {query}", ["query"])
 mgr.active["support"] = v1  # Rollback to v1
 ```
 
-> **📚 Production Implementation**: See [prompt version manager](https://github.com/jetthoughts/langchain-examples/prompt-versioning) with file storage, audit trails, and A/B test metrics (full 85-line implementation).
+> **📚 Production Implementation**: See prompt version manager with file storage, audit trails, and A/B test metrics (full 85-line implementation).
 
 ## Building Resilient Chains with Error Recovery
 
@@ -129,7 +129,7 @@ resilient_chain = primary_chain.with_fallbacks([fallback_chain])
 result = resilient_chain.invoke({"text": "This product is amazing!"})
 ```
 
-> **📚 Production Patterns**: See [resilient chain implementation](https://github.com/jetthoughts/langchain-examples/error-handling) with error tracking, retry logic, and observability metrics (complete 79-line implementation with monitoring).
+> **📚 Production Patterns**: See resilient chain implementation with error tracking, retry logic, and observability metrics (complete 79-line implementation with monitoring).
 
 ## Production Agent Architecture with Safety Constraints
 
@@ -175,7 +175,7 @@ agent = create_safe_agent(
 result = agent.invoke({"input": "Check inventory for SKU-12345"})
 ```
 
-> **📚 Production Safety Patterns**: See [production agent implementation](https://github.com/jetthoughts/langchain-examples/production-agents) with circuit breakers, tool timeout wrappers, and comprehensive error tracking (complete 186-line implementation).
+> **📚 Production Safety Patterns**: See production agent implementation with circuit breakers, tool timeout wrappers, and comprehensive error tracking (complete 186-line implementation).
 
 ## Comprehensive Testing Strategy
 
@@ -213,7 +213,7 @@ def test_chain_fallback_on_failure(mock_llm):
 
 ```
 
-> **📚 Full Test Suite**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete test examples including:
+> **📚 Full Test Suite**: See our GitHub repository for complete test examples including:
 > - Mock fixture patterns for deterministic testing
 > - Unit tests for chains and prompt managers
 > - Integration tests for agent iteration limits and circuit breaker behavior
@@ -249,7 +249,7 @@ async def health_check():
     }
 ```
 
-> **📚 Full Microservice Architecture**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete FastAPI setup including client libraries, error handling, startup configuration, and deployment patterns.
+> **📚 Full Microservice Architecture**: See our GitHub repository for complete FastAPI setup including client libraries, error handling, startup configuration, and deployment patterns.
 
 ## Observability and Monitoring
 
@@ -286,7 +286,7 @@ class JSONFormatter(logging.Formatter):
         })
 ```
 
-> **📚 Full Observability Setup**: See our [GitHub repository](https://github.com/jetthoughts/langchain-production-patterns) for complete logging configuration including agent step tracking, metric collection, and dashboard integration.
+> **📚 Full Observability Setup**: See our GitHub repository for complete logging configuration including agent step tracking, metric collection, and dashboard integration.
 
 ## Performance Optimization
 

@@ -2032,7 +2032,7 @@ Automated testing workflows require careful architecture, team change management
 **Free 30-Minute Consultation**: Discuss your testing workflow challenges and get actionable recommendations.
 
 📧 **Email**: [hello@jetthoughts.com](mailto:hello@jetthoughts.com)
-🗓️ **Schedule**: [Book consultation](https://calendly.com/jetthoughts/tdd-consultation)
+🗓️ **Schedule**: Book consultation
 
 ---
 

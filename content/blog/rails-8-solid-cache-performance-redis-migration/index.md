@@ -902,5 +902,5 @@ And if you're optimizing beyond caching, our post on [Rails performance patterns
 
 - [Solid Cache Official Repository](https://github.com/rails/solid_cache)
 - [Rails 8 Release Notes - Caching](https://guides.rubyonrails.org/8_0_release_notes.html#solid-cache)
-- [Database-Backed Caching Patterns](https://martinfowler.com/articles/patterns-of-distributed-systems/cache.html)
+- Database-Backed Caching Patterns
 - [PostgreSQL Performance Tuning for Caching](https://wiki.postgresql.org/wiki/Performance_Optimization)

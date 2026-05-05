@@ -412,7 +412,7 @@ Sometimes, a single module or dependency causes your build to fail. This is comm
 
 ### Seeking Community Support
 
-Do not be afraid to ask for help. The front-end development community is huge and helpful. If you are stuck, search online forums, Stack Overflow, or GitHub issues. Chances are, someone else has faced the same problem. When asking for help, provide as much detail as possible. Include your configuration files, error messages, and steps to reproduce the issue. This makes it easier for others to help you. You can also find [open source projects](12ed) that demonstrate solutions to common build tool problems.
+Do not be afraid to ask for help. The front-end development community is huge and helpful. If you are stuck, search online forums, Stack Overflow, or GitHub issues. Chances are, someone else has faced the same problem. When asking for help, provide as much detail as possible. Include your configuration files, error messages, and steps to reproduce the issue. This makes it easier for others to help you. You can also find open source projects that demonstrate solutions to common build tool problems.
 
 ## Testing Your Applications With Front End Build Tools
 
@@ -497,7 +497,7 @@ You can set up your deployment process to trigger when you push code to a specif
 
 ### Collaborating On Front End Build Tools Configurations
 
-Your build tool configurations (like Webpack or Gulp files) are also code. They live in Git too. Everyone on the team needs to use the same configurations. This ensures consistent builds. When someone updates a configuration, everyone gets the change. This keeps the build process stable across the team. [Frontend development](8fc1) relies on these shared configurations.
+Your build tool configurations (like Webpack or Gulp files) are also code. They live in Git too. Everyone on the team needs to use the same configurations. This ensures consistent builds. When someone updates a configuration, everyone gets the change. This keeps the build process stable across the team. Frontend development relies on these shared configurations.
 
 ### Managing Project Dependencies In Teams
 
@@ -655,7 +655,7 @@ Building big web apps is a challenge. You want your code to grow without breakin
 
 ### Modularizing Your Codebase
 
-Think of your app like a Lego set. You want small, self-contained pieces. Each piece does one thing well. This is _modularization_. It means breaking your code into smaller, independent parts. Each part has its own job. This makes it easier to understand. It also makes it easier to change one part without messing up another. When you build a new feature, you just add a new Lego piece. This helps with [front-end architecture](9829) planning.
+Think of your app like a Lego set. You want small, self-contained pieces. Each piece does one thing well. This is _modularization_. It means breaking your code into smaller, independent parts. Each part has its own job. This makes it easier to understand. It also makes it easier to change one part without messing up another. When you build a new feature, you just add a new Lego piece. This helps with front-end architecture planning.
 
 ### Implementing Design Systems
 
@@ -695,7 +695,7 @@ Modern web development often means working with popular frameworks. These tools 
 
 ### Using Front End Build Tools With React
 
-React is a big player in web development. When you use React, you often need a build tool like Webpack. Webpack helps bundle your React components and their dependencies. It also handles JSX, which is like HTML inside JavaScript. You set up Webpack to use Babel. Babel transforms your JSX into regular JavaScript that browsers understand. This setup makes sure your React code runs smoothly. You can also configure Webpack for things like hot module replacement. This lets you see changes in your browser without a full page refresh. It speeds up your development a lot. For [cross-platform development](5a13), ReactXP is another option.
+React is a big player in web development. When you use React, you often need a build tool like Webpack. Webpack helps bundle your React components and their dependencies. It also handles JSX, which is like HTML inside JavaScript. You set up Webpack to use Babel. Babel transforms your JSX into regular JavaScript that browsers understand. This setup makes sure your React code runs smoothly. You can also configure Webpack for things like hot module replacement. This lets you see changes in your browser without a full page refresh. It speeds up your development a lot. For cross-platform development, ReactXP is another option.
 
 ### Optimizing Vue.js Applications
 

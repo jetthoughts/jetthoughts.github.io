@@ -38,7 +38,7 @@ My second favorite Ruby on Rails introductory course. It is an online tutorial t
 
 Ruby is a dynamic programming language, so metaprogramming is widely used in Rails. I think that one definitely should read this book for a deeper understanding of Ruby on Rails. It is not aimed at the beginners, though they can use it as a reference. But the description of the material in the book becomes more sophisticated at some point. So if you feel that things get too complicated, go back to RubyMonk.
 
-### 4. [Ruby on Rails Tutorial: Learn From Scratch](https://blog.udemy.com/ruby-on-rails-tutorial-learn-from-scratch)
+### 4. Ruby on Rails Tutorial: Learn From Scratch
 
 This is a new Udemy reference guide that can also be used as a Ruby on Rails learning resource. As a Rails beginner, you can use this tutorial for searching solutions for the common issues.
 

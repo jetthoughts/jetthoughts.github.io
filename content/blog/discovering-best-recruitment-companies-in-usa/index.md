@@ -132,7 +132,7 @@ Most office, technical, healthcare, finance, industrial, and executive roles. Th
 
 If you're a founder hiring developers and torn between paying a 20% contingency fee and running the search yourself, there's a third option: bring in a development team that can deliver while you hire your own engineers, then transition the work in-house once you've made the right hires.
 
-[Talk to our team about a build-while-you-hire engagement](/contact/){.cta-link}
+[Talk to our team about a build-while-you-hire engagement](/contact-us/){.cta-link}
 
 ## Frequently Asked Questions
 

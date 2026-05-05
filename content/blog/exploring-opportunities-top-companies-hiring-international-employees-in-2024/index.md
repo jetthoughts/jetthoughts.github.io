@@ -344,7 +344,7 @@ Basecamp's approach is not just about getting things done; it's about getting th
 
 ## 15\. Mozilla
 
-Mozilla is one of those companies that's not just about browsers. They’re looking for a [Senior Staff Product Manager](https://www.mozilla.org/en-US/careers/position/gh/6447508/) to join their team. This role focuses on product analysis, prioritization, and growth strategies. If you’re into tech and want to make a global impact, Mozilla might be your place.
+Mozilla is one of those companies that's not just about browsers. They’re looking for a Senior Staff Product Manager to join their team. This role focuses on product analysis, prioritization, and growth strategies. If you’re into tech and want to make a global impact, Mozilla might be your place.
 
 ### Why Work at Mozilla?
 

@@ -30,13 +30,13 @@ Some time ago we needed to make a simple stress-testing of our application to ge
 
 [JMeter](https://jmeter.apache.org/) is an opensource cross-platform load testing tool which is being developed by [Apache Foundation](http://www.apache.org/). It has a rich graphical interface and a big number of features. But it is not novice-friendly at all. So, I think I should share my experience of playing with this tool.
 
-## The [ruby-jmeter](https://github.com/flood-io/ruby-jmeter)
+## The ruby-jmeter
 
 To begin with, I don’t like GUI. I’d like to write the test plan in a text format instead of building it with a mouse. [JMeter](https://jmeter.apache.org/) gives us such an opportunity due to its test plans are XML files. But XML is not cool for handwriting either.
 
 After spending 3 minutes searching with Google I’ve found the satisfying solution.
 
-[ruby-jmeter](https://github.com/flood-io/ruby-jmeter) is a gem that simplifies the generation of [JMeter](https://jmeter.apache.org/) test plans and allows to use Ruby language to describe them. It can generate a jmx file or start headless [JMeter](https://jmeter.apache.org/) and run the test.
+ruby-jmeter is a gem that simplifies the generation of [JMeter](https://jmeter.apache.org/) test plans and allows to use Ruby language to describe them. It can generate a jmx file or start headless [JMeter](https://jmeter.apache.org/) and run the test.
 
 ## Writing a test plan
 
@@ -241,7 +241,7 @@ This article covers only the basic usage of these great tools.
 
 * You can read more about JMeter in the User manual — [http://jmeter.apache.org/usermanual/index.html](http://jmeter.apache.org/usermanual/index.html)
 
-* To read about ruby-jmeter DSL you can refer to the github page — [https://github.com/flood-io/ruby-jmeter](https://github.com/flood-io/ruby-jmeter)
+* To read about ruby-jmeter DSL you can refer to the github page — https://github.com/flood-io/ruby-jmeter
 
 * If you want to know more about stress-testing of web applications you can read this article — [http://msdn.microsoft.com/en-us/library/bb924374.aspx](http://msdn.microsoft.com/en-us/library/bb924374.aspx)
 

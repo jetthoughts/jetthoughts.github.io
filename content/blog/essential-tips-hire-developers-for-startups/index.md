@@ -328,7 +328,7 @@ Starting a new job can be scary. A mentor can be a lifesaver. Pair your new deve
 
 ### Provide Necessary Resources
 
-Make sure your new developer has everything they need to do their job. This includes a computer, software, access to relevant systems, and any other tools they might require. Nothing is more frustrating than starting a job and not being able to do anything because you're missing something. It's like showing up to a baseball game without a glove. Ensure they have access to the company's [knowledge base](https://example.com/knowledge-base) and documentation.
+Make sure your new developer has everything they need to do their job. This includes a computer, software, access to relevant systems, and any other tools they might require. Nothing is more frustrating than starting a job and not being able to do anything because you're missing something. It's like showing up to a baseball game without a glove. Ensure they have access to the company's knowledge base and documentation.
 
 ### Set Clear Initial Goals
 

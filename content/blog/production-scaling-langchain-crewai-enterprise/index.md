@@ -2832,7 +2832,7 @@ We've covered a lot—from architecture patterns to Kubernetes deployments to re
 **Security & Compliance:**
 - [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
 - [Presidio PII Detection](https://github.com/microsoft/presidio)
-- [SOC 2 Compliance Guide](https://www.vanta.com/learn/soc-2-guide)
+- SOC 2 Compliance Guide
 
 **Observability Stack:**
 - [Prometheus Monitoring Guide](https://prometheus.io/docs/introduction/overview/)
