@@ -2642,6 +2642,7 @@ span.pp-accordion-button-icon {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  min-width: 0;
 }
 
 .post-title {
@@ -2674,6 +2675,5 @@ span.pp-accordion-button-icon {
 
 @media (max-width: 860px) {
   .post-title { font-size: 1em; }
-  .post-description { display: none; }
   .post-meta .post-tags { display: none; }
 }
