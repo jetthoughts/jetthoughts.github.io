@@ -17,17 +17,13 @@ cover_image: "cover.png"
 cover_image_alt: "Dark security-themed cover with Ruby on Rails branding, Argon2 migration badges, and glowing shield/lock icon"
 ---
 
-*If your app stores user passwords, the encryption method matters. Older methods can be cracked cheaply with modern hardware. This guide helps your dev team upgrade to a stronger standard without breaking login for existing users. Send it to whoever manages your authentication.*
+BCrypt dominated Rails authentication for a decade. Then GPUs got cheap, and BCrypt's security margin shrank with them. Against Argon2id at a 256MB memory cost, the same hardware that brute-forces BCrypt at thousands of attempts per second drops to single digits because the memory requirement kills GPU parallelism. Rails is catching up: `has_secure_password` will support Argon2 natively in the upcoming Rails 8.2 (currently on edge, not yet released as stable).
 
-BCrypt dominated Rails authentication for a decade. Then GPUs got cheap. A $3,000 rig cracks BCrypt cost-12 at roughly 65,000 hashes per second. Against Argon2id with 256MB memory cost, that same rig manages about 10 — the memory requirement kills GPU parallelism. The economics make the attack pointless. Rails finally caught up.
-
-`has_secure_password` supports Argon2 natively starting in Rails 8.2 (currently on edge, not yet released as stable). But if you flip the switch on a production app with existing BCrypt digests, every login breaks. That's the trap most teams walk into.
-
-We migrated 50K fintech users to Argon2 with zero support tickets. Here's exactly how. The key is a **Hybrid Verifier** pattern that dual-verifies both algorithms and rehashes on login -- no mass password reset, no downtime, no angry users.
+If you flip the algorithm switch on a production app with existing BCrypt digests, every login breaks. That is the trap. The fix is a **Hybrid Verifier** pattern that dual-verifies both algorithms and rehashes on login, without a mass password reset and without downtime.
 
 ## What changed in Rails
 
-Rails 8.2 added native algorithm support to `has_secure_password` ([PR #56041](https://github.com/rails/rails/pull/56041), [PR #56057](https://github.com/rails/rails/pull/56057), merged October 2025). It now supports:
+Rails 8.2 (edge, unreleased at time of writing) is adding native algorithm support to `has_secure_password`. The feature work tracks through [PR #56041](https://github.com/rails/rails/pull/56041) and [PR #56057](https://github.com/rails/rails/pull/56057), and the edge API will support:
 
 - `algorithm:` option
 - Built-in `:argon2` support (with the `argon2` gem)
@@ -45,7 +41,7 @@ And Rails will use Argon2 for hashing and verification through the secure passwo
 
 ## Why move to Argon2
 
-BCrypt isn't broken -- but it's outgunned. Argon2id is memory-hard by design, which means attackers can't just throw more GPUs at it. They need proportionally more RAM, and RAM doesn't scale cheaply.
+BCrypt isn't broken; it's outgunned. Argon2id is memory-hard by design, which means attackers can't just throw more GPUs at it. They need proportionally more RAM, and RAM is the expensive part of a cracking rig.
 
 In practical product terms, Argon2 gives teams:
 
@@ -301,17 +297,17 @@ Be honest about when this isn't worth the effort:
 
 ## What to do next
 
-Start with the hybrid verifier and metrics. Ship it behind a feature flag if your team does staged rollouts. Monitor the BCrypt-to-Argon2 conversion rate daily -- most apps see 80%+ conversion within two weeks of active users logging in.
+Start with the hybrid verifier and metrics. Ship it behind a feature flag if your team does staged rollouts. Monitor the BCrypt-to-Argon2 conversion rate daily; on the apps we have seen, most active users have rotated within a couple of weeks of the change going live.
 
 If you're also modernizing your auth stack, the [Rails 8 authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/) pairs well with this migration. And if you're hardening more than just passwords, our post on [authentication patterns in Rails 7.1](/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/) covers the broader picture.
 
-For teams handling sensitive data, consider pairing this with [encrypted data compression in Rails 8](/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/) -- defense in depth matters. And if you're containerizing your deploys, our [Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers how to handle migrations safely during rollout.
+For teams handling sensitive data, pair this with [encrypted data compression in Rails 8](/blog/ruby-on-rails-8-custom-compression-for-encrypted-data/) so the at-rest layer matches the new password discipline. And if you're containerizing your deploys, our [Rails 8 Docker production guide](/blog/rails-8-docker-deployment-production-guide/) covers how to handle migrations safely during rollout.
 
 ## References
 
-- This Week in Rails — Keep your passwords secure (November 7, 2025): https://rubyonrails.org/2025/11/7/this-week-in-rails
-- PR #56041 — Add `:algorithm` option to `has_secure_password`: https://github.com/rails/rails/pull/56041
-- PR #56057 — Add built-in Argon2 support: https://github.com/rails/rails/pull/56057
+- This Week in Rails - Keep your passwords secure (November 7, 2025): https://rubyonrails.org/2025/11/7/this-week-in-rails
+- PR #56041 - Add `:algorithm` option to `has_secure_password`: https://github.com/rails/rails/pull/56041
+- PR #56057 - Add built-in Argon2 support: https://github.com/rails/rails/pull/56057
 - ActiveModel `has_secure_password` API (edge): https://edgeapi.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html
 - ActiveModel::SecurePassword (algorithm registry): https://edgeapi.rubyonrails.org/classes/ActiveModel/SecurePassword.html
 - Argon2id RFC 9106: https://datatracker.ietf.org/doc/html/rfc9106
