@@ -26,7 +26,7 @@ Last month a founder showed us the app he'd paid $40K to build. The dev shop had
 
 [Andrej Karpathy coined the term](https://x.com/karpathy/status/1886192184808149383) in February 2025. He described a workflow: type a plain-English request, accept whatever the AI generates if it "vibes." If it looks right and runs without crashing, you ship it.
 
-Karpathy was talking about throwaway scripts and weekend projects. A personal experiment, not a production strategy.
+Karpathy was talking about throwaway scripts and weekend projects. He treated it as a personal experiment for the kind of code that gets tossed on Sunday night.
 
 Then agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. Garry Tan reported on YC's spring 2025 demos that an estimated quarter of the W25 batch had submitted codebases more than 95% AI-generated. YC isn't a fringe accelerator.
 
@@ -50,7 +50,7 @@ When something fails (and it will), the app crashes. Or worse, it silently corru
 
 ### Security holes nobody checked
 
-A founder came to us after a penetration tester flagged **23 critical vulnerabilities** in his app - an app that had been running in production for four months. The team had hashed user passwords, which was good. But nobody had added authentication to the API endpoints. The AI built a login screen and left every other door wide open, so any logged-in user could read, edit, or delete another user's account by changing a number in the URL.
+A founder came to us after a penetration tester flagged **23 critical vulnerabilities** in his app, which had been running in production for three months at that point. The team had hashed user passwords, which was good. But nobody had added authentication to the API endpoints. The AI built a login screen and left every other door wide open, so any logged-in user could read or modify another user's account by changing a number in the URL.
 
 ### Silent data corruption
 
@@ -76,7 +76,7 @@ Test coverage is the fastest signal. If yours is in single digits, whoever wrote
 
 The commit log tells the same story. A commit called `Add user module` that changed 2,000 lines, followed by `Add payment module` with another 3,000, is AI paste. Developers who [review each other's code on every PR](/blog/ai-powered-code-reviews-transforming-development-workflows/) ship dozens of small commits per week instead. Big dumps mean nobody read the code before it went in.
 
-A quick way to test resilience: break a form in your app. Enter garbage into fields. Leave required inputs blank. Paste 10,000 characters into a text box. If the app crashes or shows a white screen, the developer only built for the happy path.
+A quick way to test resilience: have a QA tester break a form in your app, pasting 10,000 characters where a name should go, leaving required fields blank, dropping emoji in a phone-number field. If the app crashes or shows a white screen, the developer only built for the happy path.
 
 One question worth asking your team: "If the app goes down at 3am, how do we find out?" If the answer is "a user emails us," nobody set up monitoring. AI-generated code doesn't add alerting because the developer never prompted it to.
 
@@ -84,7 +84,7 @@ One question worth asking your team: "If the app goes down at 3am, how do we fin
 
 We've rescued 40+ codebases over the last decade. The shape repeats most of the time: test coverage under 5%, no deployment automation, and a founder who spent $80K-$200K before realizing the code couldn't survive real users. We've also shipped vibe-coded prototypes ourselves; the first time we used Cursor for a client demo, we forgot to flag it as throwaway and the founder kept building on it. That cost us a week of rewrites and a clearer rule: any AI-assisted code that touches paying users gets the test-first treatment from day one. Write the test before the code, then make the test pass; the AI can help write the implementation, but a human writes the test that defines what "working" means. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work.
 
-Nobody ships code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" Two developers [working together on the same problem](/blog/async-remote-xp-practices/) catch errors the moment they're introduced, not days later when the context is gone.
+Healthy engineering teams don't ship code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" Two developers [working together on the same problem](/blog/async-remote-xp-practices/) catch errors the moment they're introduced, not days later when the context is gone.
 
 Your team sends you a [weekly report](/blog/how-know-what-your-team-doing-remote-startup/) that shows what shipped and whether the test coverage number went up or down. Watch the ratio - if features climb while coverage drops, someone is cutting corners.
 
@@ -96,7 +96,7 @@ If you need a clickable demo for an investor meeting next Tuesday, generate the 
 
 AI works for throwaway scripts too - data migrations that run once, one-off reports, internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in **20 minutes instead of 2 days**.
 
-Once real money flows through it, you need a human reading every PR. The AI can write the code; it can't sign off on it.
+Once real money flows through your product, you need a human reading every PR before merge. AI can draft the code, but a person still owns the decision to ship it.
 
 If you suspect your codebase is vibe-coded, start with the [red flags checklist for dev shops](/blog/dev-shop-red-flags-checklist/) - it gives you the questions to ask your team this week. Or skip the audit-yourself step: we read your codebase and send back a report covering test coverage, security risks, and architecture quality. [Get an honest assessment](https://jetthoughts.com/contact-us/).
 

@@ -183,8 +183,7 @@ That’s the loss you actually need to fear.
 * **Support load increasing**
 * **Reputation damage spreading quietly**
 
-A reputation hit lasts longer than the rework that caused it.
-You can’t refactor a customer’s trust.
+The rework you can schedule and bill for. The reputation hit follows the team into the next sales cycle and the next round of hires.
 
 ---
 
@@ -206,8 +205,7 @@ In that case:
 * freeze distractions
 * protect the team from panic
 
-You are not committing to magic.
-You are committing to a responsible minimum.
+The deliverable becomes a responsible minimum the team can defend on the stand if it ever comes up.
 
 ---
 

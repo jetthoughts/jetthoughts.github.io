@@ -41,9 +41,9 @@ The 47 startups in the audit covered fintech, edtech, SaaS, and marketplaces. Di
 
 You don't have a year to wait for your codebase to tell you it's broken. The auditor's data gives you advance warning with three measurements.
 
-Test coverage tells the story first. The auditor found [**91% of failed startups had literally zero automated tests**](https://news.ycombinator.com/item?id=45561172). Coverage was zero, not just low. Their code was evaluated by humans clicking buttons, then deployed to production. Ask your dev shop right now: "What's your test coverage?" If they say "we don't have a number," that's 0%. If they say "we're planning to add tests," you're six months from month seven on the timeline. Healthy coverage sits at 70%+. Under 30% and you're already in months 7-12.
+Test coverage tells the story first. The auditor found [**91% of failed startups had literally zero automated tests**](https://news.ycombinator.com/item?id=45561172). Coverage was zero. Their code was evaluated by humans clicking buttons, then deployed to production. Ask your dev shop right now: "What's your test coverage?" If they say "we don't have a number," that's 0%. If they say "we're planning to add tests," you're six months from month seven on the timeline. Healthy coverage sits at 70%+. Under 30% and you're already in months 7-12.
 
-Security was the second pattern. [**68% of the failed startups had exploitable security holes**](https://news.ycombinator.com/item?id=45561172) - not theoretical vulnerabilities but real ones a basic penetration test would catch. Most were laughably simple: an authenticated user could access another user's data by changing a number in the URL. The developers shipped features without asking "what if someone does this wrong?" If you request a security audit and the report comes back with 10+ critical issues, you're in the danger zone.
+Security was the second pattern. [**68% of the failed startups had exploitable security holes**](https://news.ycombinator.com/item?id=45561172) that a basic penetration test would catch. Most were laughably simple: an authenticated user could access another user's data by changing a number in the URL. The developers shipped features without asking "what if someone does this wrong?" If you request a security audit and the report comes back with 10+ critical issues, you're in the danger zone.
 
 The third stat surprised us most. [**89% had no database optimization at all**](https://news.ycombinator.com/item?id=45561172) - think of it like a library where every book search requires reading every spine instead of checking the catalog. One startup was using only 13% of their server's power while paying full price because the database couldn't find data efficiently. Their app felt slow to users. Their ops person couldn't explain why. They were months away from either a massive hosting bill increase or a painful realization that the database itself was the bottleneck.
 
@@ -101,7 +101,7 @@ Most rescues we take on land in the 19-25 month window, and the conversation usu
 
 The timeline isn't inevitable. We've seen teams stop at month six and rebuild the right way. Month nine is harder but possible. Month eighteen? You're basically rewriting.
 
-The honest trade-off: enforcing tests and code review from day one slows your first three sprints by 20-30%. If you haven't found product-market fit yet, that cost is real - and we won't pretend otherwise. But every founder we've worked with who skipped discipline to ship faster **ended up paying 10x more to fix the result**. Here's where intervention works:
+The honest trade-off: enforcing tests and code review from day one slows your first three sprints by 20-30%. If you haven't found product-market fit yet, that cost is real, and we won't pretend otherwise. Most of the founders we've worked with who skipped that discipline to ship faster paid several times the original build cost when the cleanup landed. Here's where intervention works:
 
 ### Month 6: the go/no-go decision
 
@@ -113,7 +113,7 @@ At this point, your dev shop knows how to build features but not how to build ma
 
 ### Month 18: the last window before rewrite
 
-If you're here, your options are limited. A rewrite buys you time, but the rewrite needs discipline or you repeat the pattern. This is where it's worth hiring a rescue-focused team - not to develop features, but to [establish the practices that prevent the 25-month timeline from repeating](/blog/fire-dev-shop-guide/).
+If you're here, your options are limited. A rewrite buys you time, but the rewrite needs discipline or you repeat the pattern. This is where it's worth hiring a rescue-focused team to install the practices that prevent the 25-month timeline from repeating, with [our exit guide](/blog/fire-dev-shop-guide/) covering the contract side.
 
 ## When to rewrite vs. rescue
 
@@ -123,7 +123,7 @@ The codebase factors that push toward rescue: architecture is sound, the code is
 
 ## The same mistake, 47 times
 
-The 47 startups in the Inc.com audit didn't fail because they hired bad developers. They failed because they made the same mistake, over and over: they deferred the infrastructure work. "We'll add tests when we're bigger." "We'll refactor after launch." "Documentation can wait." Every statement was reasonable in isolation. Combined, they created a timeline.
+The 47 startups in the Inc.com audit didn't fail because they hired bad developers. They failed because they kept deferring the infrastructure work. "We'll add tests when we're bigger" was the most common version of the line; what happened next depended on who was doing the deferring and for how long. Reasonable in isolation, the deferrals stacked into a timeline.
 
 The vibe coding shops are accelerating this timeline because AI makes it easy to believe you can defer forever - you'll iterate so fast that the debt will never catch up, and eventually you'll hire experienced people who'll clean it all up. That's the story every founder tells themselves until month seven arrives.
 

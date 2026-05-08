@@ -51,7 +51,7 @@ class ProcessOrderBatchJob < ApplicationJob
     step :process_orders do |step|
       @orders.drop(step.cursor || 0).each_with_index do |order, index|
         order.process!
-        step.advance! from: index
+        step.set! cursor: index
       end
     end
 
@@ -130,7 +130,7 @@ class SyncShopifyOrdersJob < ApplicationJob
     step :upsert_orders do |step|
       @orders.drop(step.cursor || 0).each_with_index do |order, index|
         LocalOrder.upsert_from(order)
-        step.advance! from: index
+        step.set! cursor: index
       end
     end
 
@@ -187,7 +187,7 @@ Like every powerful feature, this one has wrong uses.
 
 - **Short jobs don't need it.** If your job finishes in under **30 seconds**, the Kamal shutdown window is already generous. Adding `step` blocks just adds noise.
 - **Strictly ordered side-effect chains are dangerous.** If step 2 sends an email and step 3 charges a card, a retry that "skips" step 2 is wrong if the email didn't actually reach the user. Steps guarantee *completion*, not *delivery*. Use idempotent side effects inside each step.
-- **Your adapter has to support it.** [Solid Queue](/blog/rails-8-solid-queue-migration-guide/) and recent Sidekiq releases support continuations. Older adapters or custom queues may not - they'll still run the job, but the resume-from-cursor behavior depends on the adapter calling `queue_adapter.stopping?` at checkpoints. Verify before you rely on it.
+- **Your adapter has to support it.** [Solid Queue](/blog/rails-8-solid-queue-migration-guide/) is the reference adapter that ships with Rails 8.1 Continuable support. Other adapters (Sidekiq, GoodJob) implement the resume-from-cursor handshake differently or not at all; verify your adapter cooperates with the Continuation API before you rely on it.
 - **Cursors aren't magic.** If your step iterates over a mutating collection (a query that returns different rows each run), the cursor won't save you. Freeze the collection in its own fetch step and iterate over a stable list.
 
 ## Migration path for existing apps

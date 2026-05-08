@@ -21,7 +21,7 @@ Traditional Extreme Programming (XP) assumes synchronous colocation. Pair progra
 
 **How do you maintain XP velocity when your team operates across 3+ timezones?** We've written about the [async communication advantage](/blog/async-advantage-how-switching-communication-styles/) before - this guide goes deeper into the XP adaptations that make it work.
 
-This guide provides battle-tested XP adaptations for async-first remote teams. These patterns emerged from our real-world experience migrating 32 CSS layout files across distributed contributors-maintaining zero visual regressions while coordinating work through memory-based handoffs rather than synchronous meetings.
+This guide provides battle-tested XP adaptations for async-first remote teams. These patterns emerged from our real-world experience migrating 32 CSS layout files across distributed contributors-maintaining zero visual regressions while coordinating work through written handoffs rather than synchronous meetings.
 
 ## Why XP Principles Matter MORE in Remote Contexts
 
@@ -35,7 +35,7 @@ Before adapting XP for remote work, understand why these practices become MORE c
 
 **Sustainable Pace** protects against remote work burnout. Distributed teams face pressure to overlap with multiple timezones, creating 12+ hour "availability windows." XP's sustainable pace mandate becomes a burnout prevention mechanism. We cover async standups that actually work in [how to make small valuable async standups](/blog/how-make-small-valuable-async-standups-productivity-development/).
 
-According to McKinsey research, remote teams with strong engineering practices maintain 87% of collocated productivity-but only when practices explicitly account for asynchronicity. Without adaptation, productivity drops to 62%.
+Distributed teams that adapt their engineering practices for asynchronous work tend to keep most of the productivity collocated teams report. The ones that try to run synchronous practices across time zones lose meaningful ground.
 
 ## Async Adaptations: From Theory to Practice
 
@@ -57,7 +57,7 @@ rotation_cycle:
 continuous_rotation: "Switch primary ownership every 2-3 cycles (2-4 hours)"
 ```
 
-**Key Difference**: Instead of real-time conversation, knowledge transfer happens through commit messages, inline code comments, and memory-coordinated handoffs. Each 25-minute block ends with a micro-commit-creating an auditable trail replacing verbal communication.
+**Key Difference**: Instead of real-time conversation, knowledge transfer happens through commit messages, inline code comments, and written handoffs. Each 25-minute block ends with a micro-commit-creating an auditable trail replacing verbal communication.
 
 **Real Example from jt_site**: During CSS migration, Developer A extracted `.fl-row` patterns (25min), committed with detailed message documenting preserved page-specific styles. Developer B reviewed baseline screenshot diffs (25min), validated zero visual regressions, suggested next consolidation candidate. Developer A continued with validated approach-no synchronous meeting required.
 
@@ -71,7 +71,7 @@ continuous_rotation: "Switch primary ownership every 2-3 cycles (2-4 hours)"
 
 **Async TDD Cycle**:
 1. **RED Phase (Developer in timezone 1)**: Write failing behavior test with clear acceptance criteria
-2. **Memory Handoff**: Store test intent, edge cases, expected behavior in shared memory namespace
+2. **Memory Handoff**: Store test intent, edge cases, expected behavior in shared shared notes channel
 3. **GREEN Phase (Developer in timezone 2)**: Implement minimal solution reading test intent from memory
 4. **Visual Validation**: Capture screenshot baselines with tolerance thresholds (0.0 for refactoring, ≤0.03 for new features)
 5. **REFACTOR Phase (Developer in timezone 3)**: Apply systematic improvements with continuous visual regression checks
@@ -110,7 +110,7 @@ assert_stable_screenshot "homepage/hero", tolerance: 0.03
 
 **Async Coordination Benefit**: Each micro-commit creates a safe integration point. When Developer B starts work 8 hours after Developer A, they can pull the latest micro-commits and understand the complete work progression-rather than encountering a single massive commit with mixed changes.
 
-**Memory Coordination**: Store work context in memory namespaces (`hugo/css/consolidation/[timestamp]`) that persist across timezone boundaries. Developer in timezone 1 stores CSS consolidation strategy. Developer in timezone 2 reads strategy from memory, continues pattern application without synchronous handoff.
+**Memory Coordination**: Store work context in shared notes channels (`hugo/css/consolidation/[timestamp]`) that persist across timezone boundaries. Developer in timezone 1 stores CSS consolidation strategy. Developer in timezone 2 reads strategy from memory, continues pattern application without synchronous handoff.
 
 ### Sustainable Pace → 7-Day Sprint Rhythm
 
@@ -120,7 +120,7 @@ assert_stable_screenshot "homepage/hero", tolerance: 0.03
 
 **7-Day Rhythm Structure**:
 - **Days 1-2**: Sprint planning via async proposals (each timezone contributes during local working hours)
-- **Days 3-5**: Core development with micro-commits and memory-based coordination
+- **Days 3-5**: Core development with micro-commits and written coordination
 - **Day 6**: Async integration and visual regression validation
 - **Day 7**: Retrospective via written reflections (collected asynchronously)
 
@@ -128,7 +128,7 @@ assert_stable_screenshot "homepage/hero", tolerance: 0.03
 ```yaml
 timezone_overlap_protection:
   rule: "No developer required to overlap >2 hours outside local 9am-6pm"
-  async_first: "Default to memory coordination and micro-commits over synchronous meetings"
+  async_first: "Default to written coordination and micro-commits over synchronous meetings"
   burnout_prevention: "7-day rhythm provides natural breakpoints for cross-timezone work"
 ```
 
@@ -170,13 +170,13 @@ timezone_overlap_protection:
 - Granular commits made rollback a sub-15-minute operation when something slipped through.
 - No visual regressions caught in production for the migration window.
 
-**Critical Success Factor**: Memory-based coordination enabled smooth async handoffs. Developer in EST stored CSS consolidation patterns. Developer in CET read patterns from memory, applied to next file batch. Developer in JST validated visual regressions and updated memory with lessons learned. The team operated as a continuous workflow spanning 24 hours-without a single synchronous meeting.
+**Critical Success Factor**: Written coordination enabled smooth async handoffs. Developer in EST stored CSS consolidation patterns. Developer in CET read patterns from memory, applied to next file batch. Developer in JST validated visual regressions and updated memory with lessons learned. The team operated as a continuous workflow spanning 24 hours-without a single synchronous meeting.
 
 ## Implementation Guide: 4-Week Roadmap
 
 ### Week 1: Establish Async Infrastructure
 
-**Day 1-2**: Set up memory coordination namespaces
+**Day 1-2**: Set up written coordination namespaces
 ```yaml
 memory_structure:
   work_coordination: "project/coordination/[task_id]"
@@ -216,7 +216,7 @@ memory_structure:
 - Add visual regression coverage for UI components
 
 **TDD Workshop** (async format):
-- Record 3 example RED-GREEN-REFACTOR cycles with memory coordination
+- Record 3 example RED-GREEN-REFACTOR cycles with written coordination
 - Document test smell detection (existence testing, configuration testing)
 - Share decision protocol: "Does this test validate BEHAVIOR or IMPLEMENTATION?"
 
@@ -229,7 +229,7 @@ memory_structure:
 
 **Sprint Structure**:
 - **Days 1-2**: Async planning (proposals in shared doc, votes via emoji reactions)
-- **Days 3-5**: Development with micro-commits and memory coordination
+- **Days 3-5**: Development with micro-commits and written coordination
 - **Day 6**: Integration testing, visual validation, documentation updates
 - **Day 7**: Written retrospective (each timezone contributes reflections)
 
@@ -239,7 +239,7 @@ memory_structure:
 - MTTR improved (detection to recovery for issues)
 - Change failure rate maintained or reduced
 
-**Adjust Based on Feedback**: Collect timezone-specific pain points. Adjust rotation timing, memory namespace structure, or visual tolerance thresholds based on team observations.
+**Adjust Based on Feedback**: Collect timezone-specific pain points. Adjust rotation timing, shared notes channel structure, or visual tolerance thresholds based on team observations.
 
 ## Metrics & Success Criteria
 
@@ -278,13 +278,13 @@ memory_structure:
 
 **Measurement**: Track commit timestamps and PR review timestamps
 
-**Why This Matters**: Memory-based coordination should enable developers in next timezone to start work within 4 hours of handoff-without waiting for synchronous communication.
+**Why This Matters**: Written coordination should enable developers in next timezone to start work within 4 hours of handoff-without waiting for synchronous communication.
 
 ## FAQ: Common Async XP Challenges
 
 ### Q: How do we handle blocked work when the expert is offline?
 
-**A**: Use memory coordination to document blockers with investigation findings. Instead of "I'm blocked," write "Attempted approaches: [A, B, C]. Findings: [results]. Suggested next steps: [X, Y]. Memory reference: `project/blockers/[task_id]`."
+**A**: Use written coordination to document blockers with investigation findings. Instead of "I'm blocked," write "Attempted approaches: [A, B, C]. Findings: [results]. Suggested next steps: [X, Y]. Memory reference: `project/blockers/[task_id]`."
 
 This enables the next-timezone developer to continue investigation OR pivot to parallel work. Include reproduction steps, error messages, and attempted solutions-treating blockers as research tasks rather than conversation requests.
 
@@ -298,7 +298,7 @@ Use descriptive commit messages following the `[Action] [What] [Where]` pattern.
 
 **A**: Shift knowledge transfer from conversation to artifacts:
 - **Inline code comments**: Explain WHY decisions were made, not just what code does
-- **Commit messages**: Document intent and context (50-72 characters, reference memory namespaces)
+- **Commit messages**: Document intent and context (50-72 characters, reference shared notes channels)
 - **Memory coordination**: Store architectural decisions, consolidation patterns, known limitations
 - **Visual regression tests**: Validate "what users see" without requiring verbal description
 
@@ -326,7 +326,7 @@ Most "false positives" indicate legitimate visual changes that should be investi
 - **Day 4-5**: Reverse roles (new developer navigates, reviews experienced developer's commits)
 - **Week 2**: Independent micro-tasks with Screenshot Guardian oversight
 
-Record common onboarding questions in FAQ memory namespace. Each new developer adds their questions and discovered answers-building institutional knowledge accessible across timezones. We've written more about this in [the real onboarding problem for AI agents and humans alike](/blog/ai-agent-onboarding-problem-real-version/).
+Record common onboarding questions in FAQ shared notes channel. Each new developer adds their questions and discovered answers-building institutional knowledge accessible across timezones. We've written more about this in [the real onboarding problem for AI agents and humans alike](/blog/ai-agent-onboarding-problem-real-version/).
 
 ## Conclusion: The Async-First Advantage
 

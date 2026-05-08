@@ -13,12 +13,12 @@ We were recently included in Techreviewer's [top-rated web development agencies]
 
 ## What we build
 
-We work on Ruby on Rails web applications across the full product lifecycle, from early-stage startup MVPs through scaling established platforms. Our focus is on code that stays readable and changeable as the business changes, not code that ships fast and is expensive to evolve. That bias has shaped our practice for the better part of two decades and is the reason most of our engagements last beyond the original scope.
+We work on Ruby on Rails web applications across the full product lifecycle, from early-stage startup MVPs through scaling established platforms. Our focus is on code that stays readable and changeable as the business changes. That bias has shaped our practice for the better part of two decades, which is why most engagements continue past the original SOW.
 
 ## How we work
 
-Every project starts with a discovery conversation, not a template. Our team mixes modern Rails patterns, test-driven development, and async-first communication, and we keep clients in the loop with weekly written updates. The goal is not to surprise you, ever.
+Every project starts with a discovery conversation, not a template. Our team mixes modern Rails patterns, test-driven development, and async-first communication. Weekly written updates mean clients see scope shifts, blockers, and decisions in writing before they hit a call.
 
 ## About Techreviewer
 
-[Techreviewer](https://techreviewer.co) is a research platform that evaluates and ranks software development and technology companies. Their methodology combines portfolio analysis, client feedback, and market reputation, which is why we trust the inclusion as signal rather than vanity.
+[Techreviewer](https://techreviewer.co) is a research platform that evaluates and ranks software development and technology companies. Their methodology combines portfolio analysis, client feedback, and market reputation, which is the kind of signal we trust.

@@ -37,7 +37,7 @@ For each component, there's a short list of deal-breakers. Hit any of them and R
 
 ### Solid Cache
 
-The main question is throughput. If your app reads cache more than **10,000 times per second**, Solid Cache's 1-2ms PostgreSQL overhead adds up - 10-20 extra seconds of cumulative latency across your request pool. Below that? You won't notice.
+Throughput is the deal-breaker. If your app reads cache more than **10,000 times per second**, Solid Cache's 1-2ms PostgreSQL overhead adds up to 10-20 extra seconds of cumulative latency across your request pool. Below that, you won't notice.
 
 The second question is sneakier. If you use Redis as a *data structure server* (sorted sets for rate limiting, HyperLogLog for cardinality estimates, Lua scripts for atomic operations) Solid Cache can't replace any of it. It's a key-value store, and your data-structure usage stays on Redis even when the cache moves.
 
@@ -47,7 +47,7 @@ For everything else - fragment caching, page caching, API response caching, sess
 
 ### Solid Queue
 
-Throughput is the obvious question here too. Each enqueue is a database INSERT, each dequeue is a SELECT plus UPDATE. Under **100 jobs/second**, you won't notice any difference from [Sidekiq's in-memory operations](/blog/solid-queue-vs-sidekiq-complete-comparison/). Above that, the gap is real and measurable.
+Each enqueue is a database INSERT and each dequeue a SELECT plus UPDATE. Under **100 jobs/second**, the database is fast enough that you won't notice any difference from [Sidekiq's in-memory operations](/blog/solid-queue-vs-sidekiq-complete-comparison/). Above that the gap is measurable, and it widens with traffic spikes.
 
 Latency is the other concern. Solid Queue polls at a configurable interval - default one second. You can push it lower, but polling will never match Redis pub/sub. If your payment webhooks need to fire within **50ms** of enqueue, Sidekiq is still faster.
 
@@ -145,7 +145,7 @@ The new monthly Redis bill landed at $120, a 75% cut. The hybrid approach let us
 
 ---
 
-**Want the same result?** We've worked through this migration on multiple production apps this year. We'll review your Redis usage, identify which workloads can move, and build the migration plan. [Book a technical review](https://jetthoughts.com/contact-us/): 45 minutes, one senior Rails engineer, a written recommendation.
+**Want the same result?** We've shipped four of these migrations on production Rails 7+ apps this year. We'll review your Redis usage, identify which workloads can move, and build the migration plan. [Book a technical review](https://jetthoughts.com/contact-us/): 45 minutes, one senior Rails engineer, a written recommendation.
 
 ---
 

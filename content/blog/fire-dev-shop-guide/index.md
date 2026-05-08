@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 
 Your agency isn't ghosting you. It's hiding bad code.
 
-I've watched this play out forty-some times. You hired a team. Wrote them a check - $30K, $60K, sometimes more. Waited three months. The demo loads. The login screen looks fine. But behind it? Nobody knows. Including them, sometimes. And now you're sitting there at 11pm wondering if you should fire your development agency or give them one more sprint.
+We've watched this scene replay across dozens of rescues. You hired a team. Wrote them a check, somewhere between $30K and $80K. Waited three months. The demo loads cleanly, but nobody can tell you what happens when a user enters a `+` in their email. And now you're sitting there at 11pm wondering whether to fire your development agency or give them one more sprint.
 
 Here's what I've learned: by the time you're Googling this, you already know the answer.
 
@@ -125,11 +125,7 @@ This part didn't exist two years ago.
 
 Last quarter a founder came to us after six months with what they later learned was a "vibe coding" shop. The agency had used AI to generate about 90% of the codebase, and the MVP shipped on time. The founder was ecstatic - the app loaded, the demo looked polished.
 
-Then real users showed up.
-
-First login with a special character in the email? Crash. Two users booking the same time slot? Data corrupted. The founder called the agency. "That's an edge case," they said.
-
-It wasn't an edge case. It was the second week of real users hitting a code path nobody had tested.
+Then real users showed up. A user with a `+` in their email tried to sign up on day nine and the app threw an unhandled `ActionController::BadRequest`. Two customers booked the same time slot and one row in the database overwrote the other. The founder called the agency, the agency said "edge case," and the founder pulled the GitHub history. It wasn't an edge case; it was the second week of real users hitting a code path nobody had tested.
 
 We opened the codebase and found 2% test coverage, zero error handling, and **14 critical security vulnerabilities**. We had to rewrite the entire thing.
 

@@ -119,7 +119,7 @@ class HybridPassword
     else
       Argon2::Password.verify_password(password, digest)
     end
-  rescue StandardError
+  rescue Argon2::Errors::InvalidHash, BCrypt::Errors::InvalidHash
     false
   end
 
@@ -130,7 +130,7 @@ class HybridPassword
 
     # Argon2 stores all params in digest; explicit salt extraction is not required
     nil
-  rescue StandardError
+  rescue BCrypt::Errors::InvalidHash
     nil
   end
 
@@ -297,7 +297,7 @@ Be honest about when this isn't worth the effort:
 
 ## What to do next
 
-Start with the hybrid verifier and metrics. Ship it behind a feature flag if your team does staged rollouts. Monitor the BCrypt-to-Argon2 conversion rate daily; on the apps we have seen, most active users have rotated within a couple of weeks of the change going live.
+Start with the hybrid verifier and metrics. Ship it behind a feature flag if your team does staged rollouts. Monitor the BCrypt-to-Argon2 conversion rate daily; on the two production apps we have shipped this on so far, daily-active users had rotated within fourteen days, and weekly-active users by week six.
 
 If you're also modernizing your auth stack, the [Rails 8 authentication generator](/blog/rails-8-introducing-built-in-authentication-generator-ruby/) pairs well with this migration. And if you're hardening more than just passwords, our post on [authentication patterns in Rails 7.1](/blog/new-methods-that-help-implement-authentication-in-ruby-on-rails-71/) covers the broader picture.
 
