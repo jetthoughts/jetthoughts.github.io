@@ -1963,7 +1963,7 @@ pip install langchain langchain-openai
 pip list | grep langchain
 ```
 
-## Next Steps & Resources {#next-steps}
+## Where to go from here {#next-steps}
 
 You've built your first AI application with LangChain Python! Here's where to go next:
 

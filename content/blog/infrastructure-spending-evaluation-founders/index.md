@@ -1221,9 +1221,9 @@ Action Items:
 
 ---
 
-## Conclusion: You Don't Need Technical Knowledge to Catch Waste
+## You don't need technical knowledge to catch waste
 
-The most important lesson: **You don't need to understand Redis, Kubernetes, or multi-region deployment to evaluate infrastructure spending.** You just need to ask business questions:
+You don't need to understand Redis, Kubernetes, or multi-region deployment to evaluate infrastructure spending. You need to ask business questions:
 
 **The 3 Questions That Catch 90% of Waste**:
 
