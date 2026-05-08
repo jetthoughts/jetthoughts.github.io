@@ -18,29 +18,29 @@ canonical_url: "https://jetthoughts.com/blog/vibe-coding-crisis-ai-code-debt/"
 related_posts: false
 ---
 
-Your dev shop used AI to ship your app in three weeks, and the code looked clean enough that nobody worried. **Then 200 real users showed up and broke everything.**
+Your dev shop used AI to ship your app in three weeks. Three months later a pen tester found 23 holes nobody had checked.
 
-Last month a founder showed us the app he'd paid $40K to build. His dev shop had used React and Rails, kept the naming conventions clean, and the demo looked good enough that his investors didn't blink. He called us because the first 200 real users broke it - **anyone could access another user's data just by changing the ID in the URL.** The app had been live for three months like that.
+Last month a founder showed us the app he'd paid $40K to build. The dev shop had used React and Rails and kept the naming conventions clean. The demo looked good enough that his investors didn't blink. Then his first 200 real users hit it, and any logged-in user could access another user's data by changing the ID in the URL. The app had been live for three months like that.
 
 ## What "vibe coding" actually means
 
-[Andrej Karpathy coined the term](https://x.com/karpathy/status/1886192184808149383) in February 2025. He described a way of writing software where you tell an AI what you want in plain English, it writes the code, and you accept it if it "vibes." If it looks right and runs without crashing, you ship it.
+[Andrej Karpathy coined the term](https://x.com/karpathy/status/1886192184808149383) in February 2025. He described a workflow: type a plain-English request, accept whatever the AI generates if it "vibes." If it looks right and runs without crashing, you ship it.
 
-Karpathy was talking about throwaway scripts and weekend projects - a personal experiment, not a production strategy.
+Karpathy was talking about throwaway scripts and weekend projects. A personal experiment, not a production strategy.
 
-Then agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. A quarter of Y Combinator's W25 batch submitted **codebases that were 95%+ AI-generated**. That's not a handful of experimenters. That's the most selective startup accelerator on earth.
+Then agencies turned it into a business model. By late 2025, shops were advertising "AI-first development," which meant one junior developer watching Claude or Cursor generate thousands of lines per day. Garry Tan reported on YC's spring 2025 demos that an estimated quarter of the W25 batch had submitted codebases more than 95% AI-generated. YC isn't a fringe accelerator.
 
 ## The numbers keep getting worse
 
-[Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found that AI-generated code produces **1.7x more issues** than code humans wrote. Not style nits. Actual defects that break things in production.
+[Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces 1.7x more defects than human-written code. These aren't style nits; they're production bugs.
 
-[Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/) across four languages and 80 real-world coding tasks. **45% of the generated code contained at least one exploitable security flaw** - SQL injection and cryptographic failures, plus cross-site scripting. Attackers exploit these holes to steal user data, hijack accounts, or access databases through mistakes the AI left behind. The kind of mistakes that put your company on Hacker News.
+[Veracode tested over 100 LLMs](https://www.veracode.com/blog/genai-code-security-report/) across four languages and 80 real-world coding tasks. **45% of the generated code contained at least one exploitable security flaw**: SQL injection, broken cryptography, cross-site scripting. The kind of mistake that shows up in your first SOC 2 audit, or in a customer's lawyer's letter.
 
 ## Why vibe code fools everyone
 
 Your founder friend who "knows a bit about code" won't catch it. Your investor's technical advisor might not either if they're doing a quick scan.
 
-AI-generated code has clear variable names and reasonably sized functions. Sometimes it even has comments. The AI trained on millions of open-source repositories, so it learned exactly how clean code is supposed to look. It writes code the way a student writes an essay with a thesaurus. Every word sounds right, but the argument has no spine.
+AI-generated code has clear variable names and reasonably sized functions. Sometimes it even has comments. The AI trained on millions of open-source repositories, so it learned exactly how clean code is supposed to look. It learned what clean code looks like. It didn't learn what clean code does.
 
 What nobody sees in a quick scroll is what's missing. The AI wasn't told to write tests, so it didn't. Every function assumes perfect input - nobody asked what happens when a user enters an emoji in the phone number field, or a `null` where a string should be.
 
@@ -58,7 +58,7 @@ A fintech founder couldn't figure out why customers were complaining about wrong
 
 ### "Works on my machine" fragility
 
-The app ran fine when one developer tested it on one browser with a small dataset. Then 500 real users showed up, and someone connected from a slow 3G network in rural Texas. **A database query that used to return 10 rows started returning 10,000** - and everything fell apart. Nobody had run a load test. Nobody had set up monitoring. The AI wrote exactly what the developer asked it to write, which was a demo.
+The app ran fine when one developer tested it on a fast laptop with five seed users. Then 500 real users showed up, and a customer on T-Mobile rural-coverage hit a paginated dashboard that loaded everything in one query. The query that used to return 10 rows started returning 10,000, the database fell over, and the load tests nobody had written would have caught it weeks earlier. The AI wrote exactly what the developer asked for, which turned out to be a demo.
 
 ## How to spot vibe code in your codebase
 
@@ -82,7 +82,7 @@ One question worth asking your team: "If the app goes down at 3am, how do we fin
 
 ## The practices that prevent this
 
-We've rescued **40+ codebases** over seventeen years. The pattern is always the same - under 5% test coverage, no deployment automation, and a founder who spent $80K-$200K before realizing the code couldn't support real users. The fix starts the same way every time: you write the test before the code, then you make the test pass. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work. The AI can help write the implementation, but a human writes the test that defines what "working" means.
+We've rescued 40+ codebases over the last decade. The shape repeats most of the time: test coverage under 5%, no deployment automation, and a founder who spent $80K-$200K before realizing the code couldn't survive real users. We've also shipped vibe-coded prototypes ourselves; the first time we used Cursor for a client demo, we forgot to flag it as throwaway and the founder kept building on it. That cost us a week of rewrites and a clearer rule: any AI-assisted code that touches paying users gets the test-first treatment from day one. Write the test before the code, then make the test pass; the AI can help write the implementation, but a human writes the test that defines what "working" means. That's [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/), and it catches code that looks good but doesn't work.
 
 Nobody ships code without a second person reading it. A reviewer asks "what happens when this input is null?" and "where's the test for this?" Two developers [working together on the same problem](/blog/async-remote-xp-practices/) catch errors the moment they're introduced, not days later when the context is gone.
 
@@ -96,7 +96,7 @@ If you need a clickable demo for an investor meeting next Tuesday, generate the 
 
 AI works for throwaway scripts too - data migrations that run once, one-off reports, internal tools that only three people touch. And it's good for exploration. "What would this feature look like?" An AI can answer that question in **20 minutes instead of 2 days**.
 
-But once real users touch your product and real money flows through it, you need someone writing tests and someone reviewing the code. You need a human who takes responsibility for what ships.
+Once real money flows through it, you need a human reading every PR. The AI can write the code; it can't sign off on it.
 
 If you suspect your codebase is vibe-coded, start with the [red flags checklist for dev shops](/blog/dev-shop-red-flags-checklist/) - it gives you the questions to ask your team this week. Or skip the audit-yourself step: we read your codebase and send back a report covering test coverage, security risks, and architecture quality. [Get an honest assessment](https://jetthoughts.com/contact-us/).
 
@@ -105,6 +105,5 @@ If you suspect your codebase is vibe-coded, start with the [red flags checklist 
 - [Andrej Karpathy's original "vibe coding" post](https://x.com/karpathy/status/1886192184808149383) - where the term started
 - [Qodo 2025 State of AI Code Quality Report](https://www.qodo.ai/reports/state-of-ai-code-quality/) - AI code produces 1.7x more issues
 - [Veracode GenAI Code Security Report](https://www.veracode.com/blog/genai-code-security-report/) - 45% of AI-generated code contains exploitable vulnerabilities
-- TechCrunch: YC startups applying with AI-generated codebases
 - [GitHub survey: 92% of developers use AI coding tools](https://github.blog/news-insights/research/survey-ai-wave-grows/)
 - [OWASP Code Review Guide](https://owasp.org/www-project-code-review-guide/) - what a real security review looks like
