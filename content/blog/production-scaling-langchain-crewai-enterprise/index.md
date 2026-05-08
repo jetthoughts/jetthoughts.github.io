@@ -1,8 +1,8 @@
 ---
 title: "From Prototype to Production: Scaling LangChain and CrewAI Applications in Enterprise Environments"
 description: "Complete enterprise guide to scaling LangChain and CrewAI from prototype to production. Covers architecture patterns, security, compliance, monitoring, and real-world case study with 80% improvement metrics."
-date: 2025-10-15
-draft: true
+date: 2026-05-08
+draft: false
 tags: ["LangChain", "CrewAI", "Enterprise AI", "Production Scaling", "AI Architecture", "FastAPI", "Docker", "Kubernetes", "Observability", "Security"]
 categories: ["AI Development", "Enterprise Architecture", "DevOps"]
 author: "JetThoughts Team"
@@ -17,13 +17,15 @@ metatags:
 
 ## The Challenge
 
-Your LangChain or CrewAI prototype works beautifully in development. But production? That's where things get complicated—security audits, compliance requirements, monitoring dashboards, and the pressure to handle millions of requests without breaking.
+Your LangChain or CrewAI prototype works beautifully in development. But production? That's where things get complicated-security audits, compliance requirements, monitoring dashboards, and the pressure to handle millions of requests without breaking.
+
+> **Editorial note:** This post focuses on the Python infrastructure side of scaling AI services (FastAPI, Kubernetes, observability) rather than framework-specific code. For LangChain v0.1+ Runnable patterns (`with_retry()`, `with_fallbacks()`, LCEL composition) see the official docs. For CrewAI `Crew(...).kickoff_async()` patterns see crewai.com/docs.
 
 ## Our Approach
 
 Take your AI agent from laptop to enterprise-grade deployment with battle-tested architecture patterns, security frameworks, and operational excellence. We'll walk through real-world production scaling that delivered 80% faster resolution times.
 
-When Klarna deployed their LangChain-powered customer support assistant, they weren't just experimenting—they were putting an AI system in front of **85 million active users**. The result? An **80% reduction in customer resolution time** and millions of dollars saved.
+When Klarna (LangGraph) deployed their LangChain-powered customer support assistant, they weren't just experimenting-they were putting an AI system in front of **85 million active users**. The result? An **80% reduction in customer resolution time** and millions of dollars saved.
 
 That's the gap between prototype and production. Your LangChain or CrewAI application might work perfectly on your laptop, but scaling to handle enterprise workloads requires a completely different mindset.
 
@@ -155,13 +157,13 @@ developer_experience:
     - Onboarding guides for new team members
 ```
 
-If you're missing any of these components, you're not ready for enterprise production. Let's build them systematically.
+If you're missing any of these components, you're not ready for enterprise production. The next sections walk through each one.
 
 ---
 
 ## Production architecture patterns for LangChain and CrewAI
 
-Let's design an architecture that enterprise operations teams can actually deploy, monitor, and maintain at scale.
+Enterprise operations teams need an architecture they can actually deploy, monitor, and maintain at scale. Here's the pattern we land on.
 
 ### Core architecture principles
 
@@ -516,7 +518,7 @@ def setup_observability(app):
     logger.info("observability_configured", exporters=["jaeger", "prometheus"])
 ```
 
-**Why this matters:** When a customer reports "the AI is slow today," you need data—not guesses. Observability tells you exactly which model, which prompt, and which infrastructure component is the bottleneck.
+**Why this matters:** When a customer reports "the AI is slow today," you need data-not guesses. Observability tells you exactly which model, which prompt, and which infrastructure component is the bottleneck.
 
 ### Production-ready FastAPI integration
 
@@ -764,13 +766,13 @@ if __name__ == "__main__":
 - **Reliability:** Health checks, graceful degradation, background tasks
 - **Scalability:** Multi-worker support, compression, efficient routing
 
-This isn't a prototype anymore—it's production infrastructure.
+This isn't a prototype anymore-it's production infrastructure.
 
 ---
 
 ## Security and compliance framework
 
-Let's implement the security patterns that pass enterprise audits.
+Here are the security patterns that pass enterprise audits.
 
 ### API authentication and authorization
 
@@ -1314,13 +1316,13 @@ response = await agent.execute_with_privacy(
 # "Analyze customer record: XXXX XXX, SSN XXXXXXXXXXX, email XXXXXXXXXXXXXXXXXXXXX"
 ```
 
-**Why this matters:** When your AI application processes customer support tickets, employee records, or financial documents, you're handling PII. One data breach could cost millions in fines and destroy customer trust. Automated PII protection isn't optional—it's mandatory.
+**Why this matters:** When your AI application processes customer support tickets, employee records, or financial documents, you're handling PII. One data breach could cost millions in fines and destroy customer trust. Automated PII protection isn't optional-it's mandatory.
 
 ---
 
 ## Docker and Kubernetes deployment
 
-Let's containerize and orchestrate your AI application for production scalability.
+Containerize and orchestrate the AI application so it scales predictably under production load.
 
 ### Production-grade Dockerfile
 
@@ -1683,7 +1685,7 @@ This is production-grade infrastructure that passes enterprise scrutiny.
 
 ## Observability and monitoring setup
 
-Let's implement the monitoring stack that tells you *exactly* what's happening in production.
+This is the monitoring stack that tells you *exactly* what's happening in production.
 
 ### Prometheus and Grafana configuration
 
@@ -2084,7 +2086,7 @@ When something breaks at 3 AM, you'll know exactly what, where, and why.
 
 ## Real-world production case study
 
-Let me walk you through a real enterprise deployment—what worked, what didn't, and what we learned.
+Let me walk you through a real enterprise deployment-what worked, what didn't, and what we learned.
 
 ### Project overview: Document intelligence platform
 
@@ -2107,15 +2109,17 @@ Let me walk you through a real enterprise deployment—what worked, what didn't,
 **Week 1-4: Prototype (Local Development)**
 ```python
 # Initial prototype (worked on laptop, failed in production)
-from langchain import OpenAI, PromptTemplate
-from langchain.chains import LLMChain
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
-llm = OpenAI(api_key="sk-...")  # Hardcoded API key (security issue!)
-prompt = PromptTemplate(template="Analyze this document: {text}")
-chain = LLMChain(llm=llm, prompt=prompt)
+model = ChatOpenAI(api_key="sk-...", model="gpt-4o")  # Hardcoded API key (security issue!)
+prompt = ChatPromptTemplate.from_template("Analyze this document: {text}")
+parser = StrOutputParser()
+chain = prompt | model | parser  # LCEL composition
 
 def process_document(document_text):
-    return chain.run(text=document_text)  # No error handling, no retries, no logging
+    return chain.invoke({"text": document_text})  # No error handling, no retries, no logging
 
 # This worked for 10 test documents. It failed for 50,000 production documents.
 ```
@@ -2296,12 +2300,10 @@ class CostOptimizedLLMRouter:
     Estimated savings: 70-80% compared to using GPT-4 for everything
     """
 
-    COST_PER_1K_TOKENS = {
-        "gpt-4": 0.03,
-        "gpt-3.5-turbo": 0.002,
-        "claude-3-haiku": 0.00025,
-        "claude-3-sonnet": 0.003,
-        "claude-3-opus": 0.015,
+    MODEL_COSTS = {
+        "gpt-4o":         {"input_per_1m": 2.50, "output_per_1m": 10.00},
+        "gpt-4o-mini":    {"input_per_1m": 0.15, "output_per_1m": 0.60},
+        "claude-haiku":   {"input_per_1m": 0.25, "output_per_1m": 1.25},
     }
 
     @staticmethod
@@ -2348,10 +2350,12 @@ class CostOptimizedLLMRouter:
         max_completion_tokens: int
     ) -> float:
         """Estimate total cost for request before execution."""
-        cost_per_1k = CostOptimizedLLMRouter.COST_PER_1K_TOKENS.get(model, 0.03)
-        total_tokens = prompt_tokens + max_completion_tokens
-        estimated_cost = (total_tokens / 1000) * cost_per_1k
-        return estimated_cost
+        pricing = CostOptimizedLLMRouter.MODEL_COSTS.get(
+            model, {"input_per_1m": 2.50, "output_per_1m": 10.00}
+        )
+        input_cost = (prompt_tokens / 1_000_000) * pricing["input_per_1m"]
+        output_cost = (max_completion_tokens / 1_000_000) * pricing["output_per_1m"]
+        return input_cost + output_cost
 
     @staticmethod
     async def execute_with_budget_control(
@@ -2436,7 +2440,7 @@ await router.execute_with_budget_control(
 
 **Result:** Reduced monthly LLM costs from $24K to $6K (75% reduction).
 
-**Lesson 2: Caching is not optional—it's mandatory**
+**Lesson 2: Caching is not optional-it's mandatory**
 
 **Problem:** Processing same documents multiple times wasted 73% of LLM calls.
 
@@ -2787,13 +2791,13 @@ Before we deploy to production, we validate every item on this checklist:
 - [ ] Training sessions completed for support team
 - [ ] Post-mortem process documented
 
-This checklist represents 6 months of hard-learned lessons. Don't skip items—each one exists because we learned the hard way.
+This checklist represents 6 months of hard-learned lessons. Don't skip items-each one exists because we learned the hard way.
 
 ---
 
 ## Conclusion: Your production-ready action plan
 
-We've covered a lot—from architecture patterns to Kubernetes deployments to real-world lessons learned. Let's bring it all together into an actionable plan.
+We've covered a lot-from architecture patterns to Kubernetes deployments to real-world lessons learned. Here's how it comes together as an actionable plan.
 
 ### 90-day production roadiness roadmap
 
@@ -2859,17 +2863,17 @@ Scaling LangChain and CrewAI from prototype to production isn't just about addin
 The gap between prototype and production is real. But with the right architecture patterns, security frameworks, and operational practices, you can bridge it successfully.
 
 We've seen LangChain and CrewAI applications deliver remarkable results in production:
-- **Klarna:** 80% reduction in customer resolution time
+- **Klarna (LangGraph):** 80% reduction in customer resolution time
 - **Financial services client:** 82% faster document processing
-- **AppFolio:** 10+ hours saved per week per property manager
+- **AppFolio (LangGraph):** 10+ hours saved per week per property manager
 
-Your AI agent application can deliver similar results—if you build the production infrastructure correctly from the start.
+Your AI agent application can deliver similar results-if you build the production infrastructure correctly from the start.
 
 ---
 
 ## 📥 Lead Magnet: Enterprise AI Architecture Blueprint
 
-**Download our comprehensive Enterprise AI Architecture Blueprint** — a complete multi-page technical blueprint covering:
+**Download our comprehensive Enterprise AI Architecture Blueprint** - a complete multi-page technical blueprint covering:
 
 ✅ **Reference Architecture Diagrams**
 - Complete system architecture with all components

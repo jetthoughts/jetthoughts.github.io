@@ -1,8 +1,8 @@
 ---
 title: "Building Stateful Conversational AI with LangChain Memory Systems"
 description: "Master LangChain memory systems to build production-ready conversational AI with Python. Learn short-term, long-term, entity memory with PostgreSQL/Redis persistence, and real-world implementation patterns."
-date: 2025-10-15
-draft: true
+date: 2026-05-08
+draft: false
 tags: ["LangChain", "Conversational AI", "LangChain Memory", "Python", "AI Agents", "LangGraph", "PostgreSQL", "Redis"]
 categories: ["AI Development", "LangChain", "Python"]
 author: "JetThoughts Team"
@@ -15,6 +15,32 @@ metatags:
   image: cover.png
 ---
 
+> ## ⚠️ Important: API Deprecation Notice
+>
+> Every memory class shown below (`ConversationBufferMemory`, `ConversationSummaryMemory`, `ConversationBufferWindowMemory`, `ConversationSummaryBufferMemory`, `ConversationEntityMemory`, `VectorStoreRetrieverMemory`, `ConversationChain`) was deprecated in LangChain 0.3.1 (Sept 2024) and is scheduled for removal in 1.0.0.
+>
+> **Canonical replacement** is `RunnableWithMessageHistory` from `langchain_core.runnables.history`:
+>
+> ```python
+> from langchain_core.runnables.history import RunnableWithMessageHistory
+> from langchain_core.chat_history import InMemoryChatMessageHistory
+>
+> store = {}
+> def get_session_history(session_id: str):
+>     if session_id not in store:
+>         store[session_id] = InMemoryChatMessageHistory()
+>     return store[session_id]
+>
+> chain_with_history = RunnableWithMessageHistory(
+>     runnable=prompt | llm,
+>     get_session_history=get_session_history,
+>     input_messages_key="input",
+>     history_messages_key="history",
+> )
+> ```
+>
+> See the official [migration guide](https://python.langchain.com/docs/versions/migrating_memory/). The patterns below remain instructive for understanding what each memory class _did_, but use `RunnableWithMessageHistory` + LangGraph for new code.
+
 ## The Challenge: Conversations Without Memory
 
 You've built a sophisticated LLM-powered chatbot using LangChain. It works brilliantly for single-turn questions. But when users ask follow-up questions like "Can you elaborate on that?" or "What did I ask you 5 minutes ago?", your bot draws a blank.
@@ -23,11 +49,11 @@ Without memory, every conversation starts from scratch. Your AI can't remember c
 
 ## Our Approach: LangChain Memory Architecture
 
-Let's build conversational AI that remembers—using LangChain's powerful memory systems with production-ready persistence. We'll cover everything from in-memory conversation buffers to PostgreSQL/Redis storage that scales.
+Let's build conversational AI that remembers-using LangChain's powerful memory systems with production-ready persistence. We'll cover everything from in-memory conversation buffers to PostgreSQL/Redis storage that scales.
 
 Have you ever wanted your AI agents to remember important details across conversations, maintain context over extended exchanges, or even build user profiles over time? LangChain's memory systems make this possible with clean abstractions and flexible storage backends.
 
-Here's what makes this powerful: LangChain provides multiple memory types—each optimized for different use cases—from simple conversation buffers to sophisticated entity memory that tracks relationships and facts. With PostgreSQL or Redis integration, you can persist these memories for production reliability.
+Here's what makes this powerful: LangChain provides multiple memory types-each optimized for different use cases-from simple conversation buffers to sophisticated entity memory that tracks relationships and facts. With PostgreSQL or Redis integration, you can persist these memories for production reliability.
 
 Let's dive into building stateful conversational AI that users love.
 
@@ -39,7 +65,7 @@ Before jumping into code, let's understand the memory architecture that powers s
 
 ### Why Memory Matters for Conversational AI
 
-Traditional LLM interactions are stateless—each API call is independent. This creates jarring user experiences:
+Traditional LLM interactions are stateless-each API call is independent. This creates jarring user experiences:
 
 **Without Memory:**
 ```
@@ -104,7 +130,7 @@ graph TD
 
 ## Short-Term Memory: Conversation Buffers
 
-The foundation of conversational AI—maintaining context across message exchanges.
+The foundation of conversational AI-maintaining context across message exchanges.
 
 ### Basic Conversation Buffer Memory
 
@@ -126,7 +152,7 @@ memory = ConversationBufferMemory(
 
 # Create conversation chain with memory
 llm = ChatOpenAI(
-    model="gpt-4-turbo-preview",
+    model="gpt-4o",
     temperature=0.7,
     api_key=os.getenv("OPENAI_API_KEY")
 )
@@ -242,7 +268,7 @@ Automatically condenses conversation history using LLM summarization:
 from langchain.memory import ConversationSummaryMemory
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(temperature=0, model="gpt-4-turbo-preview")
+llm = ChatOpenAI(temperature=0, model="gpt-4o")
 
 # Create summary memory
 summary_memory = ConversationSummaryMemory(
@@ -362,7 +388,7 @@ from langchain.memory import ConversationEntityMemory
 from langchain.chains import ConversationChain
 from langchain_openai import ChatOpenAI
 
-llm = ChatOpenAI(temperature=0, model="gpt-4-turbo-preview")
+llm = ChatOpenAI(temperature=0, model="gpt-4o")
 
 # Create entity memory
 entity_memory = ConversationEntityMemory(
@@ -473,7 +499,7 @@ vector_memory = VectorStoreRetrieverMemory(
 )
 
 # Create conversation with vector memory
-llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
 conversation = ConversationChain(
     llm=llm,
     memory=vector_memory
@@ -749,7 +775,7 @@ def memory():
 def conversation(memory):
     """Create conversation chain with memory"""
     llm = ChatOpenAI(
-        model="gpt-4-turbo-preview",
+        model="gpt-4o",
         temperature=0,
         api_key=os.getenv("OPENAI_API_KEY")
     )
@@ -791,7 +817,7 @@ def test_windowed_memory_limits_context():
         return_messages=True
     )
 
-    llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+    llm = ChatOpenAI(model="gpt-4o", temperature=0)
     conversation = ConversationChain(llm=llm, memory=windowed_memory)
 
     # Generate 4 exchanges
@@ -817,7 +843,7 @@ def test_windowed_memory_limits_context():
 
 ## Ready to Build Stateful Conversational AI?
 
-Building conversational AI with memory transforms disconnected exchanges into natural, context-aware interactions. The patterns we've covered—from simple conversation buffers to sophisticated entity memory with production persistence—provide the foundation for production-ready AI assistants.
+Building conversational AI with memory transforms disconnected exchanges into natural, context-aware interactions. The patterns we've covered-from simple conversation buffers to sophisticated entity memory with production persistence-provide the foundation for production-ready AI assistants.
 
 The key is matching memory type to your use case: conversation buffers for short chats, summary memory for extended sessions, entity memory for relationship tracking, and vector stores for semantic search over large knowledge bases. With PostgreSQL and Redis persistence, you can scale these patterns to handle millions of conversations reliably.
 
@@ -869,4 +895,4 @@ Want to dive deeper into LangChain and conversational AI? Check out these relate
 
 ---
 
-**The JetThoughts Team** has been building AI-powered applications for 18+ years. Our engineers have architected conversational AI systems serving millions of users with advanced memory management and real-time performance. Follow us on [LinkedIn](https://linkedin.com/company/jetthoughts) for more AI insights.
+**The JetThoughts Team** has been building AI-powered applications since 2023. Our engineers have architected conversational AI systems serving millions of users with advanced memory management and real-time performance. Follow us on [LinkedIn](https://linkedin.com/company/jetthoughts) for more AI insights.
