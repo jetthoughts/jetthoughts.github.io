@@ -269,7 +269,7 @@ async def demo_async_orm():
     exists = await User.objects.filter(username='john').aexists()
 
     # Async aggregations
-    stats = await Order.objects.aggregate(
+    stats = await Order.objects.aaggregate(
         total_orders=Count('id'),
         total_revenue=Sum('total')
     )

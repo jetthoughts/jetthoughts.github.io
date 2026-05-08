@@ -59,7 +59,7 @@ public function index()
 
 ### Performance Impact Without Monitoring:
 
-```
+```text
 Initial load (10 users):    800ms response time
 After 6 months (100 users): 2.4s response time
 After 12 months (500 users): 8.7s response time
@@ -233,7 +233,7 @@ DB::listen(function ($query) {
 
     // APM alert threshold: 80% connection usage
     if ($usage_percentage > 80) {
-        \\App\\Services\\APM::alert('Database connection pool nearing exhaustion', [
+        \App\Services\APM::alert('Database connection pool nearing exhaustion', [
             'active' => $active_connections,
             'max' => $max_connections,
             'percentage' => $usage_percentage
@@ -365,10 +365,10 @@ public function processPayment(Request $request)
             'timeout' => 10  // Configure explicit timeout
         ]);
 
-        \\App\\Services\\APM::recordExternalCall('stripe.charge.create', microtime(true) - $start, 'success');
+        \App\Services\APM::recordExternalCall('stripe.charge.create', microtime(true) - $start, 'success');
 
     } catch (\Exception $e) {
-        \\App\\Services\\APM::recordExternalCall('stripe.charge.create', microtime(true) - $start, 'failure', [
+        \App\Services\APM::recordExternalCall('stripe.charge.create', microtime(true) - $start, 'failure', [
             'error' => $e->getMessage(),
             'error_type' => get_class($e)
         ]);
@@ -432,7 +432,7 @@ public function export()
 
     $peak_memory = memory_get_peak_usage(true);
 
-    \\App\\Services\\APM::recordMemoryUsage([
+    \App\Services\APM::recordMemoryUsage([
         'initial' => $initial_memory,
         'peak' => $peak_memory,
         'difference' => $peak_memory - $initial_memory,
@@ -1321,8 +1321,8 @@ class CheckoutController extends Controller
     public function process(Request $request)
     {
         // APM transaction naming
-        \\App\\Services\\APM::startTransaction('Checkout/Process');
-        \\App\\Services\\APM::addContext([
+        \App\Services\APM::startTransaction('Checkout/Process');
+        \App\Services\APM::addContext([
             'cart_items' => $request->cart_items_count,
             'payment_method' => $request->payment_method,
             'user_tier' => auth()->user()->tier
@@ -1330,32 +1330,32 @@ class CheckoutController extends Controller
 
         try {
             // Step 1: Validate cart
-            \\App\\Services\\APM::startSpan('Checkout/ValidateCart');
+            \App\Services\APM::startSpan('Checkout/ValidateCart');
             $cart = $this->validateCart($request);
-            \\App\\Services\\APM::endSpan();
+            \App\Services\APM::endSpan();
 
             // Step 2: Process payment
-            \\App\\Services\\APM::startSpan('Checkout/ProcessPayment');
+            \App\Services\APM::startSpan('Checkout/ProcessPayment');
             $payment = $this->processPayment($cart);
-            \\App\\Services\\APM::endSpan();
+            \App\Services\APM::endSpan();
 
             // Step 3: Create order
-            \\App\\Services\\APM::startSpan('Checkout/CreateOrder');
+            \App\Services\APM::startSpan('Checkout/CreateOrder');
             $order = $this->createOrder($cart, $payment);
-            \\App\\Services\\APM::endSpan();
+            \App\Services\APM::endSpan();
 
             // Step 4: Send confirmation
-            \\App\\Services\\APM::startSpan('Checkout/SendConfirmation');
+            \App\Services\APM::startSpan('Checkout/SendConfirmation');
             $this->sendConfirmation($order);
-            \\App\\Services\\APM::endSpan();
+            \App\Services\APM::endSpan();
 
-            \\App\\Services\\APM::endTransaction('success');
+            \App\Services\APM::endTransaction('success');
 
             return response()->json(['order_id' => $order->id]);
 
         } catch (\Exception $e) {
-            \\App\\Services\\APM::endTransaction('error');
-            \\App\\Services\\APM::recordError($e);
+            \App\Services\APM::endTransaction('error');
+            \App\Services\APM::recordError($e);
 
             throw $e;
         }
@@ -1538,7 +1538,7 @@ class PerformanceWorkflow
     // 4. Weekly performance review
     public function weeklyPerformanceReview()
     {
-        $week_metrics = \\App\\Services\\APM::getMetrics('last 7 days');
+        $week_metrics = \App\Services\APM::getMetrics('last 7 days');
 
         return [
             'slowest_endpoints' => $week_metrics->slowestEndpoints(10),
@@ -1905,7 +1905,7 @@ class ProcessOrderJob implements ShouldQueue
     public function failed(Throwable $exception)
     {
         // APM error tracking
-        \\App\\Services\\APM::recordError($exception, [
+        \App\Services\APM::recordError($exception, [
             'job' => 'ProcessOrderJob',
             'order_id' => $this->order->id
         ]);

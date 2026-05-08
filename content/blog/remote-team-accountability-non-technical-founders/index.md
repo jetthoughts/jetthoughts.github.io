@@ -808,7 +808,7 @@ Going forward, I'll add 50% buffer for third-party integrations."
 **What You're Testing:** Are they growing skills or stagnating?
 
 **Good Answer:**
-"Learned OAuth token refresh patterns, specifically how to handle edge cases like expired refresh tokens. Also learned our staging environment architecture-will help me debug faster in future."
+"Learned OAuth token refresh patterns, specifically how to handle edge cases like expired refresh tokens. I also learned our staging environment architecture, which will help me debug faster in the future."
 
 **Bad Answer:**
 "Nothing really." (If you learn nothing after 40 hours of work, you're not growing)
@@ -866,11 +866,11 @@ For a pre-seed startup with $200K runway:
 - 7.5% runway = 4-5 weeks of burn
 - **Cost: Potentially the difference between reaching product-market fit or running out of money**
 
-### **Real Founder Story**
+### **Composite Scenario**
 
-**"How I Wasted $40K on a Remote Contractor"**
+**"How Weekly Demos Catch Four Months of Drift"**
 
-Consider a non-technical founder we worked with who hired a senior developer at $10K/month:
+Consider a composite scenario based on recurring remote-team failures: a non-technical founder hires a senior developer and waits for the work to become "ready to demo."
 
 **Month 1:**
 Developer: "Setting up architecture, making good progress"
@@ -887,11 +887,11 @@ Founder: "Show me what you have, even if it's rough"
 Developer: "It's not ready to demo yet"
 
 **Month 4:**
-The founder finally insisted on seeing code. Found:
+The founder finally insisted on seeing code. The review found:
 - Minimal working features
-- Code quality was terrible (next developer said "90% needs rewrite")
-- Developer had been working 15-20 hours/week, not 40
-- **Estimate: $40K paid, ~$15K of value delivered**
+- Large unfinished branches instead of small merged pull requests
+- No weekly demos or visible staging environment
+- Enough rework risk that the founder paused the contract
 
 **What the founder learned:**
 
@@ -904,9 +904,9 @@ Now I implement demo-driven development from day 1. If you can't show me working
 The founder hired a new developer with healthy accountability:
 - Daily written updates (specific accomplishments)
 - Weekly demos (working features, not promises)
-- Sprint velocity tracking (10 stories/sprint consistently)
+- Sprint velocity tracking (same unit of work each sprint)
 
-New developer delivered 3x output for same $10K/month cost.
+The new developer delivered visible weekly progress for the same monthly budget.
 
 **Lesson:** Healthy accountability isn't micromanaging-it's protecting your business.
 
@@ -958,11 +958,11 @@ Let's calculate the value of implementing the 5 patterns from this guide:
 
 ---
 
-## Real Founder Story: "How I Discovered My $10K/Month Team Was Only Working 20 Hours/Week"
+## Composite Scenario: "How I Discovered My Remote Team Wasn't Shipping"
 
-**Another scenario: a non-technical SaaS founder we worked with**
+**Another scenario: a non-technical SaaS founder**
 
-She raised seed capital to build project management software and hired 2 remote developers at $5K/month each.
+She raised seed capital to build project management software and hired two remote developers. The story below is anonymized and composite; the lesson is verified, but the names and numbers are not client records.
 
 ### **Month 1-3: Everything Seemed Fine**
 
@@ -974,7 +974,7 @@ She raised seed capital to build project management software and hired 2 remote 
 **Red flags she missed:**
 - Updates were vague ("worked on database," "fixing bugs")
 - No demos of working features
-- Pull requests were huge (2,000+ line changes) instead of small incremental work
+- Pull requests were huge instead of small incremental work
 - Velocity data didn't exist (she didn't track it)
 
 **Her feeling:**
@@ -995,22 +995,16 @@ She insisted. The "demo" was:
 - Half-finished login page
 - No actual features working
 - Buttons that didn't do anything
-- **3 months of work = essentially nothing**
+- **The work produced no usable product flow**
 
 ### **The Confrontation**
 
-She reviewed GitHub activity with a technical advisor friend. Discovered:
-- 3 months of commits = ~100 hours of work total (not 480 hours)
-- Code quality was terrible ("This looks like junior developer work, not $5K/month senior developers")
+She reviewed GitHub activity with a technical advisor friend. They found:
+- A few large pull requests instead of steady, reviewable changes
+- No working end-to-end feature flow on staging
 - Features were half-started and abandoned
 
-**Her calculation:**
-
-Paid: $30K (3 months × $10K/month)
-Delivered: ~$5K worth of work (based on advisor's estimate)
-**Wasted: $25K**
-
-**On a $300K seed round, that's 8.3% of runway burned with nothing to show.**
+The exact loss depends on the contract, but the operational failure was clear: she had paid for activity without requiring working software.
 
 ### **What she did next**
 
@@ -1035,33 +1029,21 @@ Her new hiring process:
 - Evaluated: Can they deliver working feature in 1 week?
 - Hired: Only if demo showed real progress
 
-### **6 Months Later: The Outcome**
+### **Later: The Outcome**
 
 **New developers with accountability framework:**
-- Delivered 3x features in 6 months vs 0 features in first 3 months
+- Delivered visible features every sprint instead of promises
 - Weekly demos kept her informed without micromanaging
-- Velocity stable at 8-10 stories/sprint (predictable)
-- Bug rate low (quality code from day 1)
-
-**Her ROI:**
-
-Old approach (3 months):
-- Cost: $30K
-- Value: ~$5K
-- Features delivered: 0
-
-New approach (6 months):
-- Cost: $60K
-- Value: ~$75K (based on advisor estimate)
-- Features delivered: MVP launched, 50 beta users
+- Velocity became predictable enough for planning
+- Bug reports stopped surprising her at the end of the month
 
 **Her reflection:**
 
-"I wasted $25K and 3 months because I was afraid of seeming 'non-technical' or 'micromanaging.'
+"I wasted time because I was afraid of seeming 'non-technical' or 'micromanaging.'
 
 Now I realize: Asking for weekly demos isn't micromanaging-it's basic project management. Tracking velocity isn't being untrusting-it's making data-driven decisions.
 
-The accountability framework I use now takes me 30 minutes/week to review updates and demos. That 30 minutes saves me thousands in wasted spending and months of timeline delays.
+The accountability framework I use now takes one short review each week. That review catches drift before it turns into wasted spending and timeline delays.
 
 If you're a non-technical founder hiring remote developers: Trust, but verify. From day 1."
 

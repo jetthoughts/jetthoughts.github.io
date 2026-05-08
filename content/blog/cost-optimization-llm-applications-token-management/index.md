@@ -986,6 +986,7 @@ print(f"Savings: ${summary['cost_saved']:.2f} ({summary['savings_percent']:.0f}%
 - Often better results (simpler models less prone to overthinking simple tasks)
 
 **Model Selection Guidelines** (pricing as of 2026-05; verify before committing budgets):
+
 | Task Type | Recommended Model | Input $/1M | Output $/1M | Use Cases |
 |-----------|------------------|------------|-------------|-----------|
 | Classification | gpt-4o-mini | $0.15 | $0.60 | Sentiment, categorization, yes/no |
@@ -993,6 +994,7 @@ print(f"Savings: ${summary['cost_saved']:.2f} ({summary['savings_percent']:.0f}%
 | Moderate reasoning | gpt-4o-mini | $0.15 | $0.60 | Q&A, moderate summaries, simple code |
 | Complex reasoning | gpt-4o | $2.50 | $10.00 | Multi-step analysis, complex code |
 | Creative writing | claude-3-5-sonnet | $3.00 | $15.00 | Long-form content, nuanced writing |
+
 
 ## Monitoring and Continuous Optimization
 

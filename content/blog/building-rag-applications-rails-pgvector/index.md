@@ -422,9 +422,9 @@ class CachedEmbeddingService
     embedding
   end
 
-  # Invalidate by document_id rather than text content. The cache key
-  # is SHA256(text), so when a document changes the *new* text hashes
-  # to a *new* key - the old key just expires via TTL.
+  # invalidate(text) deletes the entry for this exact text value.
+  # cache_key_for(text) uses SHA256(text), so changed content gets a
+  # different key and the old key expires via TTL unless you pass the old text.
   def invalidate(text)
     @redis.del(cache_key_for(text))
   end
