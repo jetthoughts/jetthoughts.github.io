@@ -53,9 +53,7 @@ Get the code ownership clause in writing before you sign anything binding. If yo
 
 Code ownership protects you on the back end, but accountability protects you while the project is still moving - and that's where most contracts go quiet. Most dev shops don't want to answer this question because they already know they'll miss deadlines, and they'd rather not put consequences in writing where you can hold them to it.
 
-A good answer is concrete: "We have milestone-based SLAs in the contract. If we miss a deadline by more than X days, you can terminate the engagement." A specific number that's enforceable if it ever comes to that.
-
-A bad answer sounds like "We rarely miss deadlines," or "It depends on scope changes," or "We'll communicate if it looks risky." Each one is a different way of dodging the same commitment.
+Watch for a specific number. "Milestone-based SLAs in the contract; if we miss by more than X days, you can terminate the engagement" is a commitment a lawyer can hold them to. "We rarely miss deadlines," "it depends on scope changes," and "we'll communicate if it looks risky" all leave the deadline soft and the consequence undefined. They sound reasonable until the deadline slips and you realize there is no contractual lever to pull.
 
 "Rarely miss deadlines" means they've already sorted your deadlines into ones they'll hit and ones they'll let slip, and you don't get to know which is which until you're three weeks late. "It depends on scope changes" means they'll renegotiate the deadline the week it's due, after they've already missed it and you have no leverage left.
 
@@ -86,7 +84,7 @@ The shop's rate is meaningless without the other four answers. **A $50/hour shop
 
 When a shop asks for your budget first, they're fishing to see how much they can charge before they price the work. Answer with a question of your own: "What's the range for a project like this, based on the scope we discussed?"
 
-A good shop will give you a range: "**$45K-$55K, fixed price per milestone**." A bad shop will say "it depends" and wait for your number, hoping you'll anchor higher than they would have quoted.
+Shops that have done this work before have a range ready: "**$45K-$55K, fixed price per milestone**." Shops that answer "it depends" and wait for your number are fishing - hoping you'll anchor higher than they would have quoted.
 
 > **Save this as your vetting checklist.** Copy the 5 questions above into your notes app before your next dev shop call. Score each answer 1-3 (1 = vague, 3 = specific + in writing). Any shop scoring below 12/15 is a coin flip - and you've already lost that flip once. Want the printable one-page PDF with scoring rubric? [Grab it free here](https://jetthoughts.com/services/) and bring it to every call.
 
@@ -118,7 +116,7 @@ But if you're committing $50K+ for core functionality the business depends on, e
 
 ## The Pattern That Kills Projects
 
-Across 40+ rescue engagements over seventeen years, the pattern is consistent: **91% of failed projects had under 5% test coverage**, 73% had no Git ownership clause, and the average founder had spent $80K-$200K before they called. The founders who asked these five questions before signing avoided most of those problems. The questions aren't magic. The shops that can't answer them clearly just self-select out before the contract is drawn up.
+The pattern across the rescues we've taken is consistent. Most arrive with test coverage in single digits, no clause in the contract that names the founder as code owner, and a spend that's already crossed six figures. The five questions don't catch every bad shop. They do catch most of the ones that can't answer them - those shops self-select out before the contract is drawn up.
 
 The founders who asked "what's your rate?" first and skipped the rest? They hired a shop that looked good on the website and fell apart three months in, usually around the first real deadline. If this sounds like your situation, we have a [comprehensive guide for founders who've been burned](/blog/founders-guide-hiring-dev-shop/) by dev shops.
 
@@ -132,6 +130,6 @@ You've read the playbook, so the fair next step is to pressure-test it on the pe
 
 Book a free 45-minute call with a senior JetThoughts engineer (not a sales rep, not an account manager) and bring the 5 questions with you. We'll answer every one on the call - sample weekly report, code ownership clause, deadline SLA, rescue-founder reference, rate range - in writing, with no follow-up needed.
 
-If our answers don't match the standard above, you walk away with the checklist sharper than when you arrived. If they do, you've found a partner who'd rather be vetted hard than hired soft.
+If our answers don't match the standard above, you walk away with the checklist sharper than when you arrived. If they do, your next conversation is about scope and timeline instead of trust.
 
 <a class="cta-link" href="https://jetthoughts.com/services/">Book the 45-minute checklist call</a>

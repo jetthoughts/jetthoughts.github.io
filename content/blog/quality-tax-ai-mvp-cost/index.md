@@ -27,9 +27,7 @@ Below: the lifecycle math from our 2025-2026 rescue book, why Osmani's 80% trap 
 
 Bug0's 2026 quality tax research found something agencies don't put on slide decks: real QA costs run [**2-3x higher** than budgeted](https://bug0.com/blog/the-2026-quality-tax-ai-assisted-development-qa-budget) for AI-assisted development, with hidden expenses reaching $55K-$78K per developer per year on a 10-person team. The 60% cost reduction the pitch promised arrives in your inbox, until month three when bug-fix invoices start outpacing the original SOW.
 
-Founders signed those quotes because $30K and three weeks beats $80K and four months on the comparison chart. What the chart didn't show was month four through month nine, where the gap between the savings you signed for and the bill you're paying becomes the entire story.
-
-That gap is the quality tax.
+Founders signed those quotes because $30K and three weeks beats $80K and four months on the comparison chart. The chart didn't show month four through month nine - where the gap between the savings you signed for and the bill you're paying becomes the quality tax.
 
 ## 2. Bug0's findings: QA budgets went up, not down
 
@@ -43,11 +41,11 @@ The agency quoted accurately for code generation. They had not quoted for what t
 
 Addy Osmani, who runs DevEx for Chrome, [named the 80% problem in agentic coding](https://addyo.substack.com/p/the-80-problem-in-agentic-coding) - the dynamic that makes AI MVPs feel cheap until they aren't. The first 80% is genuinely cheap and fast. Agents produce coherent output that compiles and passes the obvious cases. **The last 20% requires exponentially more verification effort** because AI errors shifted from syntax bugs to conceptual failures.
 
-Osmani: "The danger isn't that the agent fails. It's that it succeeds so confidently in the wrong direction that you stop checking the compass."
+Osmani's framing: the failure mode isn't an agent that crashes. It's an agent that succeeds confidently in a wrong direction nobody on the team is still checking.
 
 His data backs the point. Teams with high AI adoption merged 98% more pull requests, but [review times went up **91%**](https://addyo.substack.com/p/the-80-problem-in-agentic-coding) and average PR sizes increased 154%. The Stack Overflow 2025 Developer Survey found [45.2% of developers cite "debugging AI-generated code is more time-consuming"](https://survey.stackoverflow.co/2025/ai/), and **66% are most frustrated by AI solutions that are "almost right, but not quite."** That last failure mode - almost right - is the one that ships, because nobody on the team wants to be the engineer who blocked a working demo.
 
-When your agency demos at week three with a working MVP, you're seeing the cheap 80%. The architectural assumptions baked in - how data flows, who owns state, what happens at scale - that's the 20% the AI got wrong, and you'll find each one separately over the next six months.
+Your week-three demo shows the cheap 80%. The architectural decisions underneath - who owns state across three services, what happens when concurrent writes hit the same row - that's where AI shipped wrong answers, and you'll surface them one by one over six months.
 
 ## 4. The hidden costs after launch
 
@@ -78,17 +76,17 @@ Cash line items add $29K-$55K to a $30K starting point. Internal engineer hours 
 
 The healthtech founder from the top of this post is the worked example. Her $28K Rails 8 MVP turned into $61K of remediation work over four months: $14K for the security pass, $19K rebuilding the test suite, $11K resolving three different implementations of the same appointment-conflict check, and $17K of tracked engineering hours her in-house engineer logged in Linear once we asked her to start tracking. **Her $28K MVP became an $89K MVP**, and the BAA letter from her HIPAA attorney demanded a 60-day breach timeline plus audit log retention proof - costs that never touched the engineering invoice.
 
-The economics break four months in, when the code meets a production load it was never tested against. We saw it in Honeycomb: p99 on `/appointments` jumped from **180ms to 4.2s** the day she onboarded a 50-clinician group, because the AI generated three nested `includes` that loaded the full patient graph per request.
+The economics break four months in, when the code meets a production load it was never tested against. Honeycomb showed p99 on `/appointments` blowing past 4 seconds the day a 50-clinician group onboarded - the AI had nested `includes` loading the full patient graph per request.
 
 > **Get the same number for your codebase.** A senior JetThoughts engineer reads your repository for two hours and emails you a one-page remediation cost in dollars - no calendar, no follow-up calls, $0. We run 6 of these per week (one senior per audit, no junior handoffs), so the queue moves in days. [Send your repo for the cost-of-ownership read](https://jetthoughts.com/services/) - you'll have the number before your next investor update.
 
 ## 6. How disciplined AI usage produces different numbers
 
-The agencies shipping the disasters above run AI without engineering discipline. They skip TDD before generation and skip code review after, then skip the security pass before merge. What ships is code that compiles, runs the demo, and breaks under real load.
+The agencies shipping the disasters above run AI without engineering process. Generation happens without TDD, no human reviews the diff, and there's no security pass before merge. What ships is code that compiles, runs the demo, and breaks under real load.
 
 Our rescue engagements have not been AI rescues. They have been vibe-coding rescues. The difference is process: we write tests first using TDD ([Ruby TDD guide](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/)), ask AI to generate implementations against those tests, then a human engineer reviews every change before it merges. Architectural decisions stay with senior engineers, not the agent.
 
-That process catches bugs cheaper than the alternatives. A bug found during TDD costs 10 engineer-minutes. The same bug in code review costs 30. **The same bug in production costs 8 engineer-hours plus a Slack apology to your biggest customer.** Pure vibe-coding shops don't cut your MVP cost. They move the bug-catching invoice from their billing cycle to yours, and you pay it three months after launch.
+That process catches bugs cheaper than the alternatives. A bug caught in TDD costs about ten engineer-minutes. In code review, half an hour. In production, you're looking at a day of work plus a Slack apology to your biggest customer. Pure vibe-coding shops don't cut your MVP cost - they move the bug-catching invoice from their billing cycle to yours, and you pay it three months after launch.
 
 A B2B fintech founder, post-Series-A in Q4 2025, had been quoted $42K by an AI-first shop for a 4-week MVP. She engaged us at $58K instead - same scope, 6 weeks, TDD and security pass included. Eight months on, her test coverage sits at 78%, she has added two engineers without a rewrite, and her only post-launch fix was a 6-hour rate-limiting issue in the third-party broker integration that no test could have caught at MVP scope. **Sticker price was 38% higher; her 12-month all-in came in 41% lower.**
 
@@ -116,4 +114,4 @@ Across 14 rescue engagements in the last six quarters, **the cost-of-ownership r
 
 <a class="cta-link" href="https://jetthoughts.com/services/">Send your repo for the read</a>
 
-Agencies quote you the headline price. The four-month invoice shows up after the demo, and the founders who model both before signing keep their seed round intact for the next milestone.
+Agencies quote the headline price. The four-month invoice is the one that decides whether your seed round survives.

@@ -1,6 +1,6 @@
 ---
 title: "9 Seconds: An AI Agent Wiped a Live SaaS"
-description: "On April 25, 2026, an AI coding agent at PocketOS deleted the production database and every backup in 9 seconds. Here's what your dev shop should learn."
+description: "On April 25, 2026, an AI coding agent at PocketOS deleted the production database and its on-volume backups in 9 seconds. Here's what your dev shop should learn."
 date: 2026-05-01
 draft: false
 author: "JetThoughts"
@@ -29,7 +29,7 @@ If you're a non-technical founder running on a dev shop in 2026, Crane's story f
 
 ## What actually happened (in plain English)
 
-PocketOS had three vendors stacked: an AI coding tool (Cursor), Anthropic's Claude as the underlying model, and Railway as the hosting platform. Cursor was wired to let the agent run database commands - that's the productivity feature founders pay for. Claude wrote those commands faster than any human reviewer could keep up. Railway's API accepted whatever Cursor sent, because automation has to behave predictably.
+PocketOS had three vendors stacked: an AI coding tool (Cursor), Anthropic's Claude as the underlying model, and Railway as the hosting platform. Cursor was wired to let the agent run database commands faster than any human reviewer could keep up - that's the productivity feature founders pay for. Railway's API accepted whatever Cursor sent because automation has to behave predictably, and nobody had set a gate between them.
 
 Pull any one vendor aside and they'd defend their choice with a straight face. Stack the three together with no human gate in the middle and you get a system that can wipe a company in under ten seconds while the founder watches it happen. Crane's [post-incident writeup](https://www.theregister.com/2026/04/27/cursoropus_agent_snuffs_out_pocketos/) named the trap: *"The appearance of safety - through marketing hyperbole - is not safety."*
 
@@ -49,7 +49,7 @@ Amazon's managed-database service (RDS) has shipped a "deletion protection" flag
 
 ### The backups lived on the same drive as the database
 
-When founders hear "we have backups" from their dev shop, they assume the data is safe somewhere else. In the PocketOS case, the daily snapshots sat on the same Railway disk volume the agent had access to. When the agent issued the delete, it took the backups with the live data. "Backup on the same drive" is not a backup - it's a copy in the same building as the fire.
+When founders hear "we have backups" from their dev shop, they assume the data is safe somewhere else. In the PocketOS case, the daily snapshots sat on the same Railway disk volume the agent had access to. When the agent issued the delete, the snapshots went with the live data - a copy in the same building as the fire.
 
 ### The offsite backup was three months old
 
@@ -59,7 +59,7 @@ If your dev shop has wired an AI coding tool into your production system, ask th
 
 ## What disciplined teams do instead
 
-A team that takes production seriously sets up four guardrails before any AI agent touches the live system. This is standard practice your shop skipped to hit the first sprint deadline.
+Teams that take production seriously set up four guardrails before any AI agent touches the live system. This is standard practice the agency you hired skipped to hit the first sprint deadline.
 
 The agent gets a read-mostly key. It can run reports and pull data. It cannot drop tables, wipe disks, or kill cloud resources. (In AWS terms: an IAM policy with `Describe*` and `Get*` actions only - no `Delete*` or `Drop*`.)
 
@@ -69,7 +69,7 @@ Backups live where the agent's keys can't reach them. For a Series Seed startup 
 
 The offsite export job has a monitor on it. When it breaks, a human gets paged that day - not three months later when a customer asks where their data went.
 
-These four guardrails don't prevent every failure. They turn "company death in 9 seconds" into "embarrassing 20-minute outage we can roll back from." Ask your dev shop for that trade-off. "We'll be careful" isn't one.
+These four guardrails don't prevent every failure. They turn "company death in 9 seconds" into "embarrassing 20-minute outage we can roll back from." Ask your dev shop for that trade-off in writing - "we'll be careful" doesn't qualify as one.
 
 This is the same operational discipline that powers [our remote XP practices post](/blog/async-remote-xp-practices/) - the boring infrastructure that makes small mistakes cheap to fix.
 
@@ -85,7 +85,7 @@ Crane's incident thread ran past 1,000 comments because every founder reading it
 6. If an AI agent does something we didn't authorize, who is contractually responsible?
 7. Show me the chat transcripts and command history from the agent for the last seven days.
 
-A shop that runs production seriously will answer all seven without getting defensive. A shop running on vibe-coding velocity will hedge on at least three of them. Hedging is the answer.
+A shop that runs production seriously will answer all seven without getting defensive. A shop running on vibe-coding velocity will hedge on at least three - that hedge is itself the answer to whether you should ship a god-mode key with them.
 
 This list pairs with the [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) - it's the operational version of those evaluation signals.
 
@@ -112,7 +112,7 @@ A funded B2B SaaS we picked up earlier this year arrived with two of the four Po
 
 In the first 48 hours we audited which tools and CI systems held which keys against which environments. We moved the backup target into a cloud account the production credentials couldn't reach. We set up a monitor on the offsite export job. We rotated every credential and wrote the new agent permissions into a one-page doc the founder could hand to the next investor who asked.
 
-We're not against AI tooling. Our post on [AI-powered code reviews](/blog/ai-powered-code-reviews-transforming-development-workflows/) covers where we think it earns its keep. Handing an agent a god-mode key isn't velocity. It's a bet your runway can't afford to lose.
+We're not against AI tooling. Our post on [AI-powered code reviews](/blog/ai-powered-code-reviews-transforming-development-workflows/) covers where we think it earns its keep. The line PocketOS crossed was handing an agent the same key a senior engineer would have, with no second-step confirmation between intent and destruction.
 
 ## Get a production-safety audit
 
