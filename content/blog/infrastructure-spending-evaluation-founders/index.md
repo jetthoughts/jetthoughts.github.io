@@ -899,12 +899,12 @@ Maximum during traffic spike: $2,000/month (2.5x normal)
 **Example**:
 - 2 developers: $20K/month
 - Infrastructure: $15K/month
-- **Infrastructure is 75% of team cost** 🚨
+- **Infrastructure is 75% of team cost** (red flag)
 
 **Better allocation**:
 - 3 developers: $30K/month
 - Infrastructure: $3K/month
-- **Infrastructure is 10% of team cost** ✅
+- **Infrastructure is 10% of team cost** (healthy)
 
 **ROI**: Extra developer adds features/revenue. Infrastructure just keeps lights on.
 
@@ -992,9 +992,9 @@ Percentage Calculation:
 (Total Infrastructure ÷ Monthly Revenue) × 100 = __________%
 
 Your Score:
-⚠️ If >20% → RED FLAG: Massive over-spending
-⚠️ If 10-20% → ORANGE FLAG: Audit closely
-✅ If <10% → GREEN FLAG: Reasonable (monitor quarterly)
+If >20% → RED FLAG: Massive over-spending
+If 10-20% → ORANGE FLAG: Audit closely
+If <10% → GREEN FLAG: Reasonable (monitor quarterly)
 ```
 
 **If you're RED FLAG or ORANGE FLAG**, proceed immediately to Steps 2-4.
@@ -1205,7 +1205,7 @@ Cost Trend (last 3 months):
 - Month 1: $____
 - Month 2: $____
 - Month 3: $____ (current)
-- Trend: ↗️ increasing / ↘️ decreasing / → flat
+- Trend: increasing / decreasing / flat
 
 Action Items:
 - [ ] Services to cut: __________
@@ -1241,9 +1241,9 @@ The most important lesson: **You don't need to understand Redis, Kubernetes, or 
 Your developers have technical knowledge. You have business judgment. Use it.
 
 **Business judgment tells you**:
-- ✅ Spending $100/user to make $5/user = unsustainable (no tech knowledge needed)
-- ✅ Building for 1 million users when you have 50 = wasteful (obvious business logic)
-- ✅ Copying Netflix when you're not Netflix = misguided (wrong comparison set)
+- Spending $100/user to make $5/user = unsustainable (no tech knowledge needed)
+- Building for 1 million users when you have 50 = wasteful (obvious business logic)
+- Copying Netflix when you're not Netflix = misguided (wrong comparison set)
 
 **Trust your instincts when**:
 - Something feels too expensive (it probably is)
