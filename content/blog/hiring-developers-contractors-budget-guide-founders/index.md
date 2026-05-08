@@ -115,23 +115,11 @@ Your $100K covers: 3 months with full team (senior + junior + PM)
 
 ### The Hidden Costs Nobody Mentions
 
-**Your Time Management Cost**:
-- **Full-time employee**: 5-8 hrs/week (1:1s, feedback, coordination)
-- **Contractor**: 3-5 hrs/week (weekly check-ins, scope clarification)
-- **Offshore team**: 15-20 hrs/week (daily standups, async coordination, quality review)
-- **Agency**: 2-3 hrs/week (weekly demos, feedback on deliverables)
+**Your time management cost** varies sharply by model. A full-time employee runs 5-8 hrs/week (1:1s, feedback, coordination). A contractor needs 3-5 hrs/week of weekly check-ins and scope clarification. An offshore team eats 15-20 hrs/week (daily standups, async coordination, quality review). An agency runs 2-3 hrs/week of weekly demos and feedback on deliverables.
 
-**Replacement Cost** (when first hire doesn't work out):
-- **Full-time**: $30K-50K recruiting + 3-6 months lost productivity
-- **Contractor**: 2-4 weeks to find replacement + handoff time
-- **Offshore**: 4-6 weeks to find replacement + rebuild trust with new team
-- **Agency**: Immediate replacement (built into agency model)
+**Replacement cost** when the first hire doesn't work out: full-time replacement runs $30K-50K in recruiting plus 3-6 months of lost productivity. A contractor takes 2-4 weeks to replace plus handoff time. Offshore takes 4-6 weeks plus rebuilding trust. An agency replaces resources immediately - it's built into the model.
 
-**Knowledge Loss Cost** (when they leave):
-- **Full-time**: High (took 6-12 months to ramp, all knowledge walks away)
-- **Contractor**: Medium-high (project-specific knowledge, but defined scope helps)
-- **Offshore**: Very high (handoff is difficult across time zones and language barriers)
-- **Agency**: Low (team shares knowledge, documentation is standard)
+**Knowledge loss cost** when they leave: full-time is high (6-12 months to ramp, all knowledge walks away), contractor is medium-high (project-specific knowledge, but defined scope helps), offshore is very high (handoff is difficult across time zones and language barriers), agency is low (team shares knowledge and documentation is standard).
 
 ## Four Hiring Models: Honest Deep Dive
 
@@ -344,20 +332,9 @@ Let's examine each model with brutal honesty about costs, trade-offs, and when e
 
 **Your $100K buys**: 12-24 months of offshore developer time (3-5x more hours than US)
 
-**Honest Pros** (Why offshore can work):
-- **3-5x more development hours**: Your budget stretches dramatically further
-- **Global talent pool**: Access skilled developers unavailable locally
-- **Time zone advantages**: Work continues while you sleep (if managed well)
-- **Specialized skills**: Find niche expertise (blockchain, machine learning) at reasonable rates
-- **Scalability**: Easier to scale team up/down in offshore markets
+**Honest Pros** (Why offshore can work): Your budget stretches 3-5x further in development hours, with access to a global talent pool and specialized expertise (blockchain, ML) at reasonable rates. Time zones can work for you - work continues while you sleep, if it's managed well - and offshore markets are easier to scale up or down.
 
-**Honest Cons** (Why offshore fails for many founders):
-- **Communication delays**: 6-12 hour time zone difference = daily 24-hour feedback loops
-- **Language barriers**: "Fluent English" often means written is good, verbal is challenging
-- **Quality variance**: Huge range from excellent to terrible-difficult to vet remotely
-- **Cultural differences**: Work style, feedback expectations, autonomy levels vary significantly
-- **Management overhead**: YOU must manage daily (10-20 hours/week)-not passive delegation
-- **Trust building takes longer**: Hard to build rapport without face-to-face interaction
+**Honest Cons** (Why offshore fails for many founders): The 6-12 hour time zone difference means daily 24-hour feedback loops. "Fluent English" usually means written is good but verbal is challenging. Quality varies wildly - from excellent to terrible - and is hard to vet remotely. Work style, feedback expectations, and autonomy norms differ across cultures. You must manage daily (10-20 hours/week) - this is active partnership, not passive delegation. Building trust takes longer without face-to-face interaction.
 
 **Best For**:
 - ✅ Well-defined features with clear specifications (not discovery or ambiguous projects)
@@ -477,15 +454,9 @@ Let's examine each model with brutal honesty about costs, trade-offs, and when e
 
 **The Winning Formula**: 1 onshore senior developer + 2-3 offshore developers
 
-**Why This Works**:
-- **Onshore developer**: Provides technical leadership, code reviews, architecture decisions, real-time communication with you
-- **Offshore team**: Implements features under senior developer's guidance, extends capacity 3-4x
-- **Time zone advantage**: Onshore developer reviews offshore work each morning, provides feedback, unblocks them
-- **Cost structure**:
-  - 1 US senior contractor: $125/hr × 20 hrs/week × 48 weeks = $120K
-  - 2 offshore developers: $35/hr × 40 hrs/week × 48 weeks = $67K
-  - **Total**: $187K for 100 hrs/week of development (1 senior + 2 offshore)
-  - **vs US-only**: $125/hr × 100 hrs/week × 48 weeks = $600K
+**Why This Works**: The onshore developer provides technical leadership, code reviews, architecture decisions, and real-time communication with you. The offshore team implements features under their guidance, which extends capacity 3-4x. Time zones become an advantage instead of a problem - the onshore developer reviews offshore work each morning, gives feedback, and unblocks the team for the next day's work.
+
+The cost structure: 1 US senior contractor at $125/hr × 20 hrs/week × 48 weeks runs $120K, plus 2 offshore developers at $35/hr × 40 hrs/week × 48 weeks for $67K - totaling $187K for 100 hrs/week of development (1 senior + 2 offshore). The US-only equivalent is $125/hr × 100 hrs/week × 48 weeks = $600K.
 
 **Budget Allocation Example ($100K total)**:
 - Onshore senior (20 hrs/week): $60K/year
@@ -504,21 +475,9 @@ Let's examine each model with brutal honesty about costs, trade-offs, and when e
 
 **Your $100K buys**: 3-4 months of full agency team (senior dev + junior dev + PM)
 
-**Pros** (Why agencies deliver fast):
-- **Full team immediately**: Don't need to hire designers, developers, PMs separately
-- **Established process**: Proven workflows for discovery, development, testing, launch
-- **Replaceable resources**: Developer quits? Agency replaces them instantly (you don't notice)
-- **Faster ramp time**: Agencies onboard new projects constantly, know how to start quickly
-- **Reduced risk**: Agency reputation depends on delivery, more motivated to succeed
-- **Knowledge stays with agency**: Even if team members change, agency retains project context
+**Pros** (Why agencies deliver fast): You get a full team immediately - no separate hiring for designers, developers, and PMs. The established process (discovery, development, testing, launch) is already proven, and resources are replaceable: when a developer quits, the agency swaps them in without you noticing. Agencies onboard new projects constantly, so ramp time is short, their reputation depends on delivery, and project context stays with the agency even when team members change.
 
-**Cons** (Why agencies can be frustrating):
-- **Most expensive option**: 1.5-2x contractor rates, 3-4x full-time equivalent
-- **Junior developers at senior rates**: You're billed $200/hr but get mix of $150/hr senior + $100/hr junior
-- **Less flexible**: 3-6 month minimums, hard to scale down or pause mid-project
-- **Cookie-cutter approach**: May apply standardized solutions instead of custom fit
-- **Communication overhead**: More people = more meetings, more coordination
-- **Less ownership**: Team rotates, no single person invested in long-term success
+**Cons** (Why agencies can be frustrating): It's the most expensive option (1.5-2x contractor rates, 3-4x full-time equivalent), and you'll often pay senior rates for junior work - billed at $200/hr but getting a mix of $150/hr senior plus $100/hr junior. The 3-6 month minimums make it hard to scale down or pause. Cookie-cutter approaches replace custom solutions, more people means more meetings and coordination overhead, and the rotating team means no single person is invested in your long-term success.
 
 **Best For**:
 - ✅ Short timeline and need full team immediately (3-6 months to MVP)

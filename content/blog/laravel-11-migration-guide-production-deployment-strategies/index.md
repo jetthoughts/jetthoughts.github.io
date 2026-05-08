@@ -17,7 +17,7 @@ Laravel 11 rips out the boilerplate. New projects ship with roughly half the sca
 
 This guide walks through the breaking changes, step-by-step migration, testing strategies, and zero-downtime deployment for moving from Laravel 10 to Laravel 11. If you're weighing PHP vs. Python migration complexity, compare with our [Django 5.0 enterprise migration strategies](/blog/django-5-enterprise-migration-guide-production-strategies/). For teams already on Laravel and adding AI capabilities, see our [Laravel AI integration tutorial](/blog/laravel-ai-integration-tutorial-complete-guide/). And if your deployment pipeline needs attention before the upgrade, check out [automating deployments with Kamal 2 and GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).
 
-> **Heads up on the upgrade target.** Laravel 11 is on Laravel's security-fix track only as of mid-2026. Plan to land on Laravel 12 if you're starting the migration today - the 10 -> 11 -> 12 path is the supported route. Most of this guide applies to both jumps; the bootstrap/app.php and casts() patterns are unchanged in 12.
+> **Heads up on the upgrade target.** Laravel 11's security support ended on March 12, 2026; Laravel 12 receives security fixes through February 24, 2027. Plan to land on Laravel 12 if you're starting the migration today - the 10 -> 11 -> 12 path is the supported route. Most of this guide applies to both jumps; the bootstrap/app.php and casts() patterns are unchanged in 12.
 
 ## Breaking Changes Analysis: What Laravel 11 Changes
 

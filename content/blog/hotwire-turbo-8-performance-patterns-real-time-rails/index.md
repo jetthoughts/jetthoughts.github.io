@@ -350,9 +350,12 @@ cache but skip rendering it as a preview).
 #### Frame-Level Cache Control
 
 ```erb
-<!-- There is no per-frame TTL attribute. To force a fresh fetch
-     every time the frame loads, use data-turbo-action and skip
-     the cache, or refresh on a schedule via Turbo Streams. -->
+<!-- There is no per-frame TTL attribute. To prevent stale frame content,
+     use one of: page-level cache control via meta tag
+     (`<meta name="turbo-cache-control" content="no-cache">` or `no-preview`),
+     call `frame.reload()` (FrameElement) to refresh a specific frame, or
+     update frames via Turbo Streams. Note: data-turbo-action only affects
+     visit history behavior (replace vs. advance), not cache invalidation. -->
 <turbo-frame id="trending_posts"
              src="/posts/trending"
              loading="lazy">
