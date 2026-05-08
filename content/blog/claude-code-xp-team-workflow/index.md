@@ -18,7 +18,7 @@ canonical_url: 'https://jetthoughts.com/blog/claude-code-xp-team-workflow/'
 related_posts: false
 ---
 
-A solo Claude Code agent runs the whole product cycle inside one process. The diff compiles, tests stay green, but the feature solves a problem nobody actually has. We covered this founder pain in [Vibe Coding Crisis](/blog/vibe-coding-crisis-ai-code-debt/). After that we wrapped the agent in the rest of a product team and what got shipped changed.
+A solo Claude Code agent compresses product, design, engineering, and QA into one process. The diff compiles, tests stay green, but the feature solves a problem nobody actually has. We covered this founder pain in [Vibe Coding Crisis](/blog/vibe-coding-crisis-ai-code-debt/). After that we wrapped the agent in the rest of a product team and what got shipped changed.
 
 ![Capability map of a Claude Code agent team running Shape Up plus XP plus reflection-driven Kaizen](pipeline.svg)
 
@@ -41,11 +41,11 @@ Solo agents fill one seat and act like the rest don't exist.
 
 ## How the team works together
 
-These seats link into actual team behavior through a sequence of formations - each one owns a specific artifact and refuses to ship without it.
+These seats link into actual team behavior through a sequence of formations. Each one produces a specific artifact (pitch doc, file map, screen flow) before delivery starts.
 
 ### Pitch and bet (Business Strategist + PM + Tech Lead)
 
-We use [Shape Up](https://basecamp.com/shapeup) pitches as the input format - the PM writes a pitch in `docs/pitches/<slug>.md` covering Shape Up's canonical sections (Problem, Appetite, Solution, Rabbit Holes, No-Gos). Then we run our own variant of betting: the bet goes through three lenses (Tech feasibility, Product fit, Design patterns) each producing SIMPLE / MEDIUM / COMPLEX with one-sentence rationale. The PM consolidates: lowest-complexity path with highest-impact outcome. We run on a 1-2 week cadence rather than Basecamp's 6-week cycle, so this is Shape-Up-inspired, not canonical Shape Up.
+We use [Shape Up](https://basecamp.com/shapeup) pitches as the input format. The PM writes a pitch in `docs/pitches/<slug>.md` covering the Shape Up sections (Problem, Appetite, Solution, Rabbit Holes, No-Gos). Then we run our own betting variant: the bet goes through three lenses (Tech feasibility, Product fit, Design patterns) each producing SIMPLE / MEDIUM / COMPLEX with one-sentence rationale. The PM consolidates - lowest-complexity path with highest-impact outcome. We work in 1-2 week sprints rather than Basecamp's 6-week appetite, so we call this Shape-Up-inspired, not Shape Up itself.
 
 ### Slicing and design (PM + Designer + Tech Lead)
 
@@ -53,7 +53,7 @@ The bet gets sliced into vertical AC items, each one shippable end-to-end. Desig
 
 ### Delivery (Tech Lead pair + Critic Panel)
 
-The Tech Lead splits into a Driver/Navigator pair: one agent writes, the other reviews each micro-step before commit. XP shows up as [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [refactor-step-tdd](/blog/refactor-step-tdd-three-line-discipline-ruby/) micro-commits. RED test commits before each GREEN feat commit (we verify commit order in CI). Kent Beck's *Tidy First?* discipline applies: structural refactor commits land before behavior changes. The critic panel runs after every test pass, not at PR time.
+The Tech Lead splits into a Driver/Navigator pair: one agent writes, the other reviews each micro-step before commit. XP shows up as [test-driven development](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and [refactor-step-tdd](/blog/refactor-step-tdd-three-line-discipline-ruby/) micro-commits. RED test commits before each GREEN feat commit (we verify commit order in CI). Kent Beck's *Tidy First?* rule applies - structural refactor commits land before behavior changes. The critics run after each green test, not at PR time.
 
 ### QA gates and shipping (QA + DevOps Gates)
 
@@ -77,15 +77,15 @@ Each cadence nests inside the larger one - sprint scope informs development tick
 
 Claude Code provides the runtime and the rule files in CLAUDE.md and .claude/ that each role pulls from. Google Stitch holds the design-system tokens and screen flows - Designer paints there, coding agents read constraints back from the same canvas. chrome-devtools MCP gives QA actual eyes through screenshots, console logs, and mobile emulation; without it, tests go green on builds that are visibly broken in the browser.
 
-Semantic search through claude-context finds existing patterns before agents reinvent them - stale training data wants to write Rails 7 inside a Rails 8 app. The skill marketplace at [skills.sh](https://skills.sh/) lets us publish a pattern once (database resets, payment-diff test enforcement) and every project pulls it. CI runs the full test suite, type-check, lint, and build, with an auto-reviewer reading the diff against project conventions before a human ever sees the PR.
+Semantic search through claude-context finds existing patterns before agents reinvent them - Sonnet 4.5 still autocompletes Rails 7 syntax inside our Rails 8 apps until claude-context forces it to read the actual Gemfile first. The skill marketplace at [skills.sh](https://skills.sh/) lets us publish a pattern once (database resets, payment-diff test enforcement) and every project pulls it. CI runs the full test suite, type-check, lint, and build, with an auto-reviewer reading the diff against project conventions before a human ever sees the PR.
 
 ## Team mode beats solo mode
 
-Product teams keep failing the same way: one role swallows another's job. A PM writes acceptance criteria the engineer ignores, a Designer's Figma gets reinterpreted by front-end without anyone flagging the drift, QA finds bugs the team ships anyway. Each handoff loses signal.
+Product teams keep failing the same way: one role swallows another's job. On the last fintech rescue we picked up, the PM had written ACs the Rails team had silently dropped two sprints earlier - the Designer's Figma had been reinterpreted by the front-end engineer with nobody flagging the drift, and QA was finding the bugs the team had already shipped. Each handoff lost signal.
 
 Solo agents inherit all of that, compressed into one process. One agent makes the product call, the design call, the code call, and the self-review in a single shot - nobody to disagree, no record of what got skipped.
 
-Team mode splits those decisions across collaborative agents, each holding one job, accountable through a written rule set. A PM agent blocks tickets without acceptance criteria, a simplicity critic stops unrequested abstractions before the diff lands, and a mobile screenshot agent flags any merge that looks broken at 375px (the width of an iPhone). Disagreement gets resolved by the rules, not by whichever agent happened to run last.
+Team mode splits those decisions across collaborative agents, each holding one job, accountable through a written rule set. A PM agent blocks tickets without acceptance criteria. A simplicity critic stops unrequested abstractions before the diff lands. When two agents disagree, the rule file decides - we don't let the last-run agent win by default.
 
 ## Why the rules need to change every sprint
 
@@ -97,7 +97,7 @@ Standups happen at the agent level: the discovery agent posts what it learned fr
 
 You don't need every role from day one. Begin with a strategy doc the agent reads at session start, a critic panel that blocks merges, and a reflection log that turns failures into rules. From there, add a designer when the UI starts drifting, a customer-voice capability into the PM agent when feature requests stop matching user pain, and a QA/visual verifier when builds keep going green on broken screens.
 
-Setup eats one sprint of overhead. Rule files need writing, agent definitions need configuring, and the team needs convincing. From sprint two the time disappears.
+Setup eats one sprint of overhead. Rule files need writing, agent definitions need configuring, and the team needs convincing. By sprint two, the rule files write themselves from reflection logs and the overhead drops to about 30 minutes per week.
 
 Cost on a small slice (one AC item, 50-100 lines of diff) runs $4-6 on Sonnet or $20-30 on Opus with prompt caching on, plus 30-45 minutes of wall-clock time when the 4-agent critic panel (PM, Designer, Rails, Simplicity) runs in parallel. Larger bets and Ralph-loop retries push the bill higher, but it's still cheaper than the rework on a vibe-coded PR that ships the wrong feature.
 

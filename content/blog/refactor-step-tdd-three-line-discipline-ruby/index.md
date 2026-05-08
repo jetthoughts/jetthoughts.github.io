@@ -20,7 +20,7 @@ related_posts: false
 
 ![TDD trilogy navigation: Step-by-Step, The Overkill Myth, 3-Line Discipline (current)](trilogy-nav.svg)
 
-The refactor step is where most TDD suites go red. On a Rails 7.1 rescue we took over in Q1 2026, a developer finished a feature on cycle 4, the bar was green, and they decided to "clean up the file" before opening the PR. Forty minutes later they had renamed three things, extracted a class, inlined a constant, and the suite had 11 failures with stack traces that didn't agree on what broke first. They unwound changes until something passed, lost track of which version of which method they were on, and shipped the original mess after burning the afternoon.
+The refactor step is where most TDD suites go red. On a Rails 7.1 rescue we picked up in Q1 2026, the engineer who'd inherited the model from the prior team finished a feature on cycle 4, saw the bar green, and started "cleaning up" before opening the PR. Forty minutes later the file had a renamed validator, an extracted `OrderTotals` class, and a collapsed `TAX_RATE` constant - and 11 red tests with stack traces that pointed at three different files. He unwound changes until something passed, lost track of which version of which method he was on, and shipped the original mess after burning the afternoon.
 
 A 200-line cleanup PR titled "refactor: tidy up Order" is the shape this failure usually takes. Reviewers can't bisect it. The author can't remember what they did first. The skip-the-refactor route - the one we covered in [TDD Without the Overkill](/blog/tdd-overkill-myth-lightweight-ruby/) - is the easier choice in the moment. They keep adding features, the file grows to 400 lines of accumulated Shameless Green, and the technical debt that the refactor step was supposed to keep paid down piles up commit by commit.
 
@@ -38,11 +38,11 @@ The 200-line cleanup PR is what dissatisfaction without a stopping rule produces
 
 Each refactor commit changes at most three lines of production code. The cap makes the refactor step cheap enough to run after each green test, not once a quarter as a "cleanup PR."
 
-Why three? You can hold three lines in your head while you answer "did this change behavior?" without re-running the suite mentally. A reviewer can do the same on your PR. A rename touches the method definition plus its call sites; if the rename you're attempting touches more than three lines, you split it by call-site across commits. An Extract Method touches three lines if you extract one expression: the new method definition, and the two callers replaced. An Introduce Local Variable is one line of addition.
+Why three? You can hold three lines in your head while you answer "did this change behavior?" without re-running the suite mentally. A reviewer can do the same on your PR. A rename usually touches the method definition plus its call sites; if you're touching more than three lines, split by call-site. Extract Method costs three lines when you extract one expression. Introduce Local Variable is a single added line.
 
-If the commit touches three lines, only three lines can be wrong. When the suite goes red on a 3-line commit, you only need to read three lines. The fix is `git reset --hard HEAD`, then a smaller step. That usually means the original step wasn't safe and you need a setup move first. Three lines is also a 30-second pair review. The navigator reads the diff, says "yes, that's a rename" or "wait, you also moved the conditional," and the driver commits or undoes within a turn.
+Only three lines can be wrong on a 3-line commit. When the suite goes red, you read three lines, then `git reset --hard HEAD` and try a smaller step. That usually means the original step wasn't safe and you need a setup move first. Three lines is also a 30-second pair review: the navigator reads the diff, says "yes, that's a rename" or "wait, you also moved the conditional," and the driver commits or undoes within a turn.
 
-A ceiling this tight changes how you choose your next move. Refactors that might break the suite stop being worth the gamble - the cost of guessing wrong is total revert. The Core 6 list becomes the menu: pick a certain move, ship it, pick the next one. Strung together, those certain moves get the file to where you wanted it. Refactor stops being a 200-line afternoon. It becomes fifteen or twenty 3-line commits, each one ending on a green suite.
+A ceiling this tight changes how you choose your next move. Refactors that might break the suite stop being worth the gamble; the cost of guessing wrong is a total revert. The Core 6 list becomes the menu - pick a certain move, ship it, pick the next one. Twenty 3-line commits beat one 200-line afternoon, and you've got twenty bisect points instead of one.
 
 If your real refactor wants fifty lines moved at once, the work has structural prerequisites - skip ahead to the Mikado section for that case.
 
@@ -153,7 +153,7 @@ Any one of those commits could be reverted on its own without disturbing the oth
 
 Three lines is the ceiling. Test && Commit || Revert (TCR) is what enforces it without requiring willpower.
 
-Kent Beck and Llewellyn Falco coined [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) in 2018 as a workflow that runs tighter than red-green-refactor. It fits on a Post-it. After each edit, run the suite. If green, commit. If red, throw the change away. Beck's exact phrasing: "if all tests pass, the code will be committed; if tests don't pass, your changes will be reverted."
+Kent Beck and Llewellyn Falco coined [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) in 2018 as a workflow tighter than red-green-refactor. After each edit you run the suite; green commits, red throws the change away. Beck's framing in that post: tests passing means the code commits, tests failing means your changes get reverted.
 
 The Ruby version that fits a Minitest project is a small bash script:
 
@@ -231,7 +231,7 @@ Here's what one of those rescues looked like. The 4,000-commit Rails repo we pic
 
 The rebuild pattern from those rescues is consistent. Split the suite to get a 90-second critical path. Turn on TCR for the refactor phase. Cap refactor commits at three lines, and use the [pull-request review standard](/blog/effortless-code-conventions-review-for-pull-request-changes-ruby-ci/) to enforce that limit as a merge gate. After the first month at most rescues, 600-line cleanup PRs are gone - what TCR enforces produces 5-20 small commits per hour instead. The bisect cost on the next regression drops from four hours to a two-minute `git bisect` and a ninety-second revert.
 
-If you're holding a Rails codebase where every refactor proposal turns into "let's not touch it," we run a free 45-minute audit: one senior developer reads your suite and your last five PRs, you get a one-page written assessment naming the three changes that pay back fastest. No contract, no follow-up sales call. If you're a developer who recognizes this pattern in your codebase but doesn't sign contracts, forward this post to whoever does.
+If your suite is too slow for TCR or your inherited code keeps blocking the Core 6, [talk to us about your codebase](/contact-us/). We do a 45-minute audit, no follow-up call.
 
 [Talk to us about your codebase](/contact-us/).
 
