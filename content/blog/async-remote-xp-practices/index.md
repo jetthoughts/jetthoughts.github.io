@@ -27,7 +27,7 @@ This guide provides battle-tested XP adaptations for async-first remote teams. T
 
 Before adapting XP for remote work, understand why these practices become MORE critical (not less) when your team is distributed:
 
-**Pair Programming** prevents knowledge silos that compound in async environments. When Alice commits code at 11pm EST and Bob reviews it at 9am CET, undocumented context becomes permanently lost. Structured pairing patterns preserve knowledge transfer across timezone boundaries.
+**Pair Programming** prevents knowledge silos that compound in async environments. When the EST developer commits code at 11pm and the CET reviewer opens the PR at 9am, undocumented context becomes permanently lost. Structured pairing patterns preserve knowledge transfer across timezone boundaries.
 
 **Test-Driven Development (TDD)** provides asynchronous quality gates. Tests become the team's shared contract-validating behavior without requiring synchronous communication. A failing test at 2am Tokyo time triggers investigation at 9am New York time without coordination overhead.
 
@@ -279,6 +279,10 @@ memory_structure:
 **Measurement**: Track commit timestamps and PR review timestamps
 
 **Why This Matters**: Written coordination should enable developers in next timezone to start work within 4 hours of handoff-without waiting for synchronous communication.
+
+## When this fails
+
+Micro-commits break when CI is slow (>5 min): the developer batches commits to wait out the queue, defeating the purpose. Async pair rotation breaks when the next-timezone reviewer treats handoff notes as optional; silent commits accumulate, regressions slip in. The 7-day sprint rhythm breaks when leadership injects mid-sprint scope, because the rhythm is the artifact, not the calendar. And the whole approach is overkill for a two-person team in a single timezone, where overlapping working hours give you the synchronous channel for free.
 
 ## FAQ: Common Async XP Challenges
 

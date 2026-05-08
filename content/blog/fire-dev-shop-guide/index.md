@@ -17,11 +17,11 @@ cover_image_alt: "JetThoughts blog cover showing How to Fire Your Dev Shop with 
 canonical_url: "https://jetthoughts.com/blog/fire-dev-shop-guide/"
 ---
 
-Your agency isn't ghosting you. It's hiding bad code.
+When your agency goes quiet for three days running, the silence usually isn't avoidance. It's them stalling because the code can't survive a real review, and the review is what your investor's diligence call is going to ask for.
 
-We've watched this scene replay across dozens of rescues. You hired a team. Wrote them a check, somewhere between $30K and $80K. Waited three months. The demo loads cleanly, but nobody can tell you what happens when a user enters a `+` in their email. And now you're sitting there at 11pm wondering whether to fire your development agency or give them one more sprint.
+We've watched this scene replay across dozens of rescues. You hired a team. Wrote them a check somewhere between $30K and $80K. Waited three months. The demo loads cleanly, but nobody can tell you what happens when a user enters a `+` in their email. Now you're sitting there at 11pm wondering whether to fire your development agency or give them one more sprint.
 
-Here's what I've learned: by the time you're Googling this, you already know the answer.
+Founders who land on a guide like this have usually already decided. They're looking for permission and a checklist.
 
 [Deloitte surveyed 500+ executives](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) about their outsourcing relationships in 2024. **Seventy percent** had pulled work back in-house over the last five years. Seven out of ten. That's not a few unlucky founders - that's the industry.
 
@@ -47,23 +47,15 @@ They can't explain things without jargon. Ask "if your lead developer quit tomor
 
 And the one nobody talks about: you've stopped asking questions. If you've gone quiet because the updates make you feel stupid, or because you're afraid of what you'll hear, the relationship is already dead. You're paying them, and [you have the right to know](/blog/how-know-what-your-team-doing-remote-startup/).
 
----
-
-**Want to know where you actually stand?** We'll do a free 45-minute code audit. One senior developer. Your codebase. A written one-page report: test coverage, security risks, architecture assessment. No contract. No follow-up calls unless you ask for one. [Get an honest audit](https://jetthoughts.com/contact-us/).
-
----
-
 ## Wait - is this fixable?
 
-Before you fire anyone, be honest. A few of the relationships we've seen torched in the last two years were actually salvageable, ended because the founder was angry, not because they were wrong about the code.
+Before you fire anyone, be honest. A few of the relationships we've seen torched in the last two years were actually salvageable, ended because the founder was angry, not because they were wrong about the code. We've also been the second agency that came in, charged a founder $90K to "rescue" a codebase, and three months later realized the original team's code was 80% sound and the real problem was the founder kept changing the spec. The rescue didn't help. It just gave the founder a more expensive version of the same product. If you can't articulate, in writing, what your current team is failing to deliver against a fixed spec, firing them won't fix it.
 
 Try two weeks of real transparency first. Set up a weekly call with a hard agenda - not "how's it going?" but specifics: what shipped, what didn't, what's blocked. If they suddenly start communicating the moment you set clear expectations, maybe the problem was that nobody set expectations. It happens more than you'd think.
 
 Then check your own behavior. Did you change the requirements mid-sprint three times? Any agency would miss deadlines if the target keeps moving. The good ones push back. The bad ones nod and miss quietly.
 
 If you're still unsure, set three concrete numbers for the next 30 days: **80% task completion** per sprint, weekly written reports, and repository access within 48 hours. Any [competent remote team](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/) does this on autopilot. If they can't hit those for one month, you have your answer - and you have it in writing for the termination letter.
-
-Still here? Alright. Let's talk about the exit.
 
 ## What to secure before you send the email
 
@@ -148,6 +140,10 @@ Then dig into how deploys work. Good teams [deploy daily](/blog/async-remote-xp-
 Request a reference from a founder they've rescued - not their happiest client, but someone who came from a situation like yours. If they can't produce one, they haven't done this before.
 
 The first week tells you everything about the next six months. Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Set up a project board? Explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)?
+
+## When NOT to fire
+
+A new team takes 4-8 weeks of ramp-up before they ship anything, during which your burn continues with zero output. Firing also stacks $5K-$15K of overhead before the next feature ships: code escrow, audit, transition oversight, contract negotiation. If your runway is under four months, your MVP launch is inside thirty days, or the only complaint you can articulate is founder frustration without a missed deliverable, the exit is usually the wrong move. Fix the spec or the communication first; if the next sprint with clear written goals still slips, then you have your answer in writing.
 
 ## You're going to pay twice
 

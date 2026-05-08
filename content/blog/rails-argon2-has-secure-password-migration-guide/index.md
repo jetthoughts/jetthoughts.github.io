@@ -99,18 +99,17 @@ Create a hybrid algorithm adapter:
 
 ```ruby
 # config/initializers/secure_password_algorithms.rb
-class HybridPassword
-  def initialize
-    require "bcrypt"
-    require "argon2"
-  end
+# Requires Rails 8.2+ (currently edge - API may change before GA).
+require "bcrypt"
+require "argon2"
 
-  # Always create new hashes with Argon2
+class HybridPassword
+  # Always create new hashes with Argon2.
   def hash_password(unencrypted_password)
     Argon2::Password.create(unencrypted_password)
   end
 
-  # Verify both old BCrypt and new Argon2 digests
+  # Verify both old BCrypt and new Argon2 digests.
   def verify_password(password, digest)
     return false if digest.blank?
 
@@ -123,7 +122,7 @@ class HybridPassword
     false
   end
 
-  # Needed by has_secure_password API
+  # Needed by has_secure_password API.
   def password_salt(digest)
     return nil if digest.blank?
     return BCrypt::Password.new(digest).salt if bcrypt_digest?(digest)
@@ -134,19 +133,9 @@ class HybridPassword
     nil
   end
 
-  # BCrypt has a practical input limit, keep validation conservative
-  def validate(record, attribute)
-    password = record.public_send(attribute)
-    return if password.blank?
-
-    if password.bytesize > 72 && record.public_send("#{attribute}_digest").to_s.start_with?("$2")
-      record.errors.add(attribute, :password_too_long)
-    end
-  end
-
-  def algorithm_name
-    :hybrid
-  end
+  # validate(record, attribute) intentionally omitted: the write path is always
+  # Argon2, which has no 72-byte input cap. The previous BCrypt-style guard
+  # blocked legitimate password changes for users still on BCrypt digests.
 
   private
 

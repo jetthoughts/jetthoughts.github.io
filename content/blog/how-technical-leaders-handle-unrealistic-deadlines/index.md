@@ -20,14 +20,9 @@ metatags:
   image: cover.png
 slug: how-technical-leaders-handle-unrealistic-deadlines
 ---
-Every SaaS team hits the same moment sooner or later:
+Last March, a JetThoughts client's head of sales walked into standup with a 3-week ask the engineering team had quoted at 9 weeks. The deal was a $480K ARR enterprise pilot with a hard contract date. Here is the move that closed it without burning the engineers.
 
-Sales is racing.
-Developers are worried.
-Leadership wants progress.
-And suddenly there’s a deadline that makes no sense.
-
-If you’re a **CTO, Head of Engineering, Director of Engineering, or Engineering Manager**, you know this moment well. It’s not a technical problem - it’s an *alignment* problem. And you’re the one who has to help everyone breathe.
+If you’re a **CTO, Head of Engineering, Director of Engineering, or Engineering Manager**, you have lived through this moment. The deadline conversation usually masks an alignment problem: nobody has put the actual customer constraint, the actual technical scope, and the actual trade-offs in the same document.
 
 Let’s walk through how experienced tech leaders navigate these situations with clarity, honesty, and minimal chaos.
 
