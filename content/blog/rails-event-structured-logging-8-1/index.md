@@ -50,13 +50,13 @@ The regex itself is fine. The problem is that Rails log output was never meant f
 
 We opened a client's codebase earlier this year and found **seven places** where strings were being parsed from Rails log output: a Datadog forwarder, a custom latency tracker in ApplicationController, a Sidekiq middleware that counted slow DB queries, and four separate rake tasks that chewed through log files for weekly reports. None of them agreed on what "slow" meant. Two were broken and the team didn't know.
 
-The root issue is that log strings are a serialization format nobody specified. Rails 8.1's answer is to give you the data before it gets serialized - and the API to do it has been waiting in plain sight.
+Log strings became a de facto schema and Rails never promised to keep them stable. Rails 8.1 hands you the data before it gets serialized, and the API to do it has been waiting in plain sight.
 
 ## What Rails 8.1 changed
 
 [`ActiveSupport::Notifications`](https://edgeapi.rubyonrails.org/classes/ActiveSupport/Notifications.html) has existed since Rails 3. Rails apps already emit events like `sql.active_record`, `process_action.action_controller`, and `render_template.action_view`. You could subscribe to them. The problem was ergonomics: subscribing was verbose, error handling was your problem, and the payload shapes were undocumented enough that you'd often subscribe to events and discover the keys by printing the payload in a console.
 
-Rails 8.1 tightens this in three ways.
+Rails 8.1 closes the gap on multiple fronts.
 
 First, the log subscribers that ship with Rails now attach structured payloads to their events rather than formatting data purely for text output. The `process_action.action_controller` event payload includes `format`, `method`, `path`, `status`, `view_runtime`, `db_runtime`, and `allocations` as typed values - not strings you parse out of a log line.
 
@@ -211,11 +211,11 @@ Rails.logger.info(
 
 Logstash picks up the JSON, indexes every field, and your Kibana queries become `event:"user_signed_up" AND plan:"pro"` instead of regex against `INFO -- : User 4821 signed up on plan pro in 234ms`.
 
-We set this up on a client's app last quarter. **Their Datadog log search query response time went from 8-12 seconds to under 300ms** (full-text grep across unindexed text vs field-indexed JSON). To be clear - the app itself didn't get faster; their team could find answers in logs faster because Datadog indexed JSON fields instead of scanning raw text. The team started using log search - which is exactly the point where you should think about what this approach does poorly.
+We set this up on a client's app last quarter. **Their Datadog log search query response time went from 8-12 seconds to under 300ms** (full-text grep across unindexed text vs field-indexed JSON). The app itself didn't get faster; their team could find answers in logs faster because Datadog indexed JSON fields instead of scanning raw text. The team started using log search again - and that's the moment where the trade-offs of the approach matter.
 
 ## When NOT to use this
 
-Event subscriptions are not the right tool for every observability problem, and we have the scars to prove it.
+Event subscriptions aren't the right tool for every observability problem.
 
 The subscription API has no built-in backpressure. If you subscribe to `sql.active_record` on an app that runs 10,000 queries per request, your subscriber fires 10,000 times per request, and the overhead adds up fast. On a client's e-commerce app last fall, **a naive `sql.active_record` subscriber added 40ms to their checkout endpoint** before we caught it in Datadog APM traces - so benchmark first and subscribe selectively.
 
@@ -233,7 +233,7 @@ The [Active Job Continuations work in Rails 8.1](/blog/rails-8-1-active-job-cont
 
 For teams using the [Solid Trifecta instead of Redis](/blog/solid-trifecta-hybrid-redis-rails-8/), Solid Queue emits its own `ActiveSupport::Notifications` events for job enqueuing, execution, and failure - subscribable through the same API, no separate polling loop required.
 
-This fits a larger shift in Rails: the framework has been moving its internal communication toward notifications for years, and controllers, mailers, Action Cable, Active Job, and Active Storage all emit events now. An app wired to consume those events owns its observability in a fundamentally different way than an app parsing log text. Log text is a side effect; events are the source.
+This fits a larger shift in Rails: the framework has been moving its internal communication toward notifications for years, and controllers, mailers, Action Cable, Active Job, and Active Storage all emit events now. An app wired to consume those events owns its observability in a different way than an app parsing log text - the events carry the data the logs flatten away.
 
 ---
 
@@ -264,6 +264,6 @@ See also the [Ruby on Rails performance patterns we documented last quarter](/bl
 
 ---
 
-Every month you wait, your regex parsers silently miss more alerts.
+The longer you wait, the more drift accumulates in the regex parsers - and the next Rails upgrade is when the misses become visible.
 
 <a class="cta-link" href="https://jetthoughts.com/contact-us/">Book the free monitoring audit</a>

@@ -18,13 +18,13 @@ canonical_url: "https://jetthoughts.com/blog/founders-guide-hiring-dev-shop/"
 related_posts: false
 ---
 
-A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She had no admin access to the GitHub org, the AWS console belonged to the previous shop's CTO, and the Stripe keys were registered under their corporate account. Her app was live serving 4,200 paying users, and she could not ship a hotfix when checkout broke. We have run that recovery sequence forty times in seventeen years, and each one started with a hiring decision that looked reasonable at the time.
+A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She had no admin access to the GitHub org, the AWS console belonged to the previous shop's CTO, and the Stripe keys were registered under their corporate account. Her app was live serving 4,200 paying users, and she couldn't ship a hotfix when checkout broke. The recovery sequence has come up dozens of times in our rescue book, always starting from a hiring decision that looked reasonable at the time.
 
-This is the field guide for the founder who has not made that decision yet.
+This is the field guide for the founder who hasn't made that decision yet.
 
 ## Before You Hire
 
-Most founders who get burned by a dev shop made a decision that felt reasonable at the time. The agency had a portfolio, a timeline, and a price that fit the budget. What the founder did not have was context for how many startups fail the same way.
+The agency had a portfolio, a timeline, and a price that fit the budget. What the founder didn't have was context for how often startups fail the same way.
 
 We tracked the patterns in [47 Startups Failed the Same Way](/blog/47-startups-failed-same-coding-mistake/) and found that **91%** of the failed codebases had zero automated tests. The founders did not know to ask about testing because nobody told them it mattered. And the problem is getting worse: AI-generated code has accelerated the pace at which bad code ships. Our analysis of the [Vibe Coding Crisis](/blog/vibe-coding-crisis-ai-code-debt/) showed that **45%** of AI-generated code contains known security vulnerabilities. If your agency uses AI tools without review processes, you are paying them to create debt you will have to pay off later.
 
@@ -36,7 +36,7 @@ Once you start working with an agency, most problems reveal themselves within th
 
 You do not need to be technical to evaluate code quality. Our framework for [code quality evaluation for non-technical founders](/blog/code-quality-evaluation-non-technical-founders/) gives you four visible indicators you can check without reading a single line of code. Pair that with a weekly check-in rhythm - we outlined our approach in [How to Know What Your Team Is Doing](/blog/how-know-what-your-team-doing-remote-startup/) - and you will catch problems before they compound into expensive rewrites.
 
-The goal is not to micromanage. The goal is to have enough visibility that you never find yourself six months in, wondering where the money went.
+Visibility, not micromanagement. Enough that six months in, you know where the money went and why.
 
 ## When to Fire
 
@@ -52,8 +52,8 @@ Firing the agency is the easy part. Rebuilding is harder, and founders who rush 
 
 Start with an honest assessment of what you have. Our field guide for [fixing slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) covers how to diagnose whether the problem is the code, the team, the process, or all three. For founders who need technical leadership but cannot afford a full-time CTO, a [fractional CTO engagement](/blog/fractional-cto-comprehensive-review-of-first-two-weeks-in-startup-consulting-management/) can bridge the gap - we documented what the first two weeks actually look like so you know what to expect.
 
-One more thing to watch for during recovery: the temptation to outsource again on the same terms. We broke down exactly how that trap works in [The Outsourcing Trap: Why Your Product Deserves Better](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/). The pattern is predictable - lower cost, less control, same outcome. The founders who break the cycle are the ones who invest in visibility and technical oversight from day one.
+One more thing to watch for during recovery: the temptation to outsource again on the same terms. We broke down exactly how that trap works in [The Outsourcing Trap: Why Your Product Deserves Better](/blog/outsourcing-trap-why-your-product-deserves-better-startup-tutorial/). The pattern is predictable: a lower cost gets you less control, and the same outcome lands in month four. The founders who break the cycle invest in visibility and technical oversight from day one.
 
 ## Get a Free Code Audit
 
-Not sure where your codebase stands? We offer a [free code audit](https://jetthoughts.com/contact-us/) for founders who want an honest assessment before making their next hire. No pitch deck, no strings - just a technical review from engineers who have seen what goes wrong and know how to fix it.
+Not sure where your codebase stands? We offer a [free code audit](https://jetthoughts.com/contact-us/) for founders who want an honest assessment before making their next hire. A senior engineer reads your repo and emails back a one-page assessment - no pitch deck, no follow-up call to book.

@@ -18,13 +18,13 @@ canonical_url: "https://jetthoughts.com/blog/dev-shop-red-flags-checklist/"
 related_posts: false
 ---
 
-The worst dev shops don't miss deadlines - they miss them quietly.
+Most dev-shop disasters don't start with a missed deadline. They start with a Friday update that says "making progress" three weeks in a row while your launch slips.
 
-You hired a team and wrote them a check. Weeks pass, maybe months, and the updates sound fine - "making progress," "almost there." Then one day you realize **you've spent $40K and you can't demo a single working feature to your investors.** If you're searching for confirmation that something's wrong with your dev shop, it is.
+You hired a team and wrote them a check. Weeks pass, maybe months, and the updates sound fine. Then one day you realize **you've spent $40K and you can't demo a single working feature to your investors.** If you're looking for confirmation that something's wrong with your dev shop, this is it.
 
 The [Standish Group's CHAOS report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) tracks software project outcomes every year. In 2024: 19% of projects failed outright, and another 47% came in late, over budget, or missing features. **That's two-thirds.** For startups with outsourced agencies, the numbers run worse.
 
-I've compiled eight dev shop warning signs from twenty years of cleaning up after agencies. If you recognize three or more, you've got a problem - and five means an emergency.
+We've spent seventeen years cleaning up after agencies. Eight warning signs surface again and again - if you recognize three or more, you've got a problem, and five means an emergency.
 
 ## 1. No Git Access for You
 
@@ -38,7 +38,7 @@ A founder on [r/startups](https://www.reddit.com/r/startups/) put it bluntly: "I
 
 This is the big one. A healthy team shows you working software every one to two weeks - not a slide deck or a Figma mockup, but something you can click and watch things happen.
 
-When your agency only shows you the finished product, you've already lost the ability to course-correct, catch misunderstandings early, and say "wait, that's not what I meant" before it's too expensive to fix.
+When your agency only shows you the finished product, you've lost the chance to catch misunderstandings before they get expensive to fix.
 
 Good teams send [plain-English async standups](/blog/how-make-small-valuable-async-standups-productivity-development/) daily and a one-page summary every Friday covering what shipped, what's blocked, and what's next - all in plain English. If you're guessing whether progress is real, it isn't.
 
@@ -68,13 +68,13 @@ But the developers who generated it never wrote tests, never handled errors, and
 
 The vibe coding shops skip tests entirely because the AI output "looks like it works." It does - until real users show up and everything breaks at once, leaving you paying emergency rates to fix code that should never have shipped.
 
-If your agency can't tell you their test coverage number, they might not have tests at all. And if they don't have tests but they're shipping fast, they're probably vibe coding. Run.
+If your agency can't tell you their test coverage number, they might not have tests at all. And if they don't have tests but they're shipping fast, they're probably vibe coding - and you should be looking for an exit.
 
 ## 5. Can't Explain Technical Decisions in Plain English
 
-"We're refactoring the microservices architecture to improve the API gateway throughput."
+A founder forwarded us a status email last quarter that said "we're refactoring the microservices architecture to improve the API gateway throughput." She had no idea what to ask back.
 
-What does that mean? If your developer can't explain it in words your mom would understand, one of two things is true: they don't understand it themselves, or they're hiding behind jargon so you stop asking questions.
+That sentence usually means one of two things: the developer doesn't understand it themselves, or they're hiding behind jargon so you stop asking questions. Either way, the founder ends up paying for words.
 
 Every technical decision costs you money or saves it. Ask which. "We're splitting the code into smaller pieces so that when one part breaks, the rest keeps working." That's the same thing, in English. A good team [explains decisions plainly](/blog/code-quality-evaluation-non-technical-founders/) because they want you to make informed choices. A bad team explains nothing because they don't want you involved.
 
@@ -100,17 +100,15 @@ When your agency's first move is "throw it all away and let us rebuild," ask the
 
 ## 8. Invoice Surprises
 
-"This month was **$12K instead of $8K** because we had to handle some infrastructure issues."
+The invoice arrives **$4K over the monthly retainer** with a one-line explanation about "infrastructure issues." Nobody flagged anything in the weekly update. Nobody asked you to approve overage spend before they incurred it.
 
-What infrastructure issues? When did someone flag them? Why didn't anyone mention this before the bill arrived?
+Good teams track hours per task and share them weekly so you know exactly where money goes, and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that **70% of executives had pulled outsourced work back in-house** - budget unpredictability was a top driver.
 
-Good teams track hours per task and share them weekly so you know exactly where money goes and you see overages coming before they arrive. [Deloitte's 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) found that **70% of executives had pulled outsourced work back in-house** - budget unpredictability was a top driver.
-
-Invoice surprises are a symptom, not the disease. The disease is that someone decided you didn't need to know.
+The bigger problem is what the invoice tells you about the relationship: someone on their team made a decision to keep you in the dark until the bill landed.
 
 ---
 
-We've cleaned up after 40+ failed dev shop engagements over seventeen years. **In 91% of them, test coverage was under 5%.** The average founder had already spent $80K-$200K before calling.
+We've cleaned up after 40+ failed dev shop engagements. The pattern is consistent: test coverage in the single digits, no clear code-ownership clause in the contract, and a spend that has already crossed six figures by the time the founder calls.
 
 If three or more of these sound familiar, we do a free 45-minute code audit. One senior developer looks at your codebase and writes a one-page assessment: test coverage, security risks, architecture quality. No contract, and no follow-up calls unless you ask. [Get an honest audit](https://jetthoughts.com/contact-us/).
 
