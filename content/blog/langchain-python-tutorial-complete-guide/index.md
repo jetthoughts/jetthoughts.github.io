@@ -1151,7 +1151,7 @@ Running LangChain in production requires careful planning around costs, performa
 
 LLM calls are your biggest expense. Optimize aggressively:
 
-> **Performance Optimization**: For broader Python/Django performance strategies including database optimization and caching patterns, read our guide on [optimizing Rails performance](/blog/best-practices-for-optimizing-ruby-on-rails-performance/)—many principles translate directly to Django applications.
+> **Performance Optimization**: For broader Python/Django performance strategies including database optimization and caching patterns, read our guide on [optimizing Rails performance](/blog/ruby-on-rails-performance-optimization-patterns-2026/)—many principles translate directly to Django applications.
 
 #### 1. Use Cheaper Models When Possible
 

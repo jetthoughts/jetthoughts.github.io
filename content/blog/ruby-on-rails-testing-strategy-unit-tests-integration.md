@@ -1320,7 +1320,7 @@ jobs:
         REDIS_URL: redis://localhost:6379/0
       run: |
         # For production performance optimization of your CI/CD pipeline:
-        # https://jetthoughts.com/blog/rails-performance-optimization-15-proven-techniques/
+        # https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/
         bundle exec rspec spec --exclude-pattern="spec/system/**/*_spec.rb"
 
     - name: Run system tests
@@ -1436,7 +1436,7 @@ RSpec.describe 'Model Performance' do
 
   # For comprehensive performance optimization beyond testing, see our guide on
   # 15 proven Rails performance techniques:
-  # https://jetthoughts.com/blog/rails-performance-optimization-15-proven-techniques/
+  # https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/
 end
 ```
 

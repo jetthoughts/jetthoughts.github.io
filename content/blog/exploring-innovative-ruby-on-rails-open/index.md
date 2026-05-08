@@ -166,7 +166,7 @@ Some of the best Rails apps started small and scaled up. GitLab, for example, ha
 
 > Scaling isn’t just about handling traffic. It’s about keeping your app efficient and manageable as it grows.
 
-By focusing on these strategies, you’ll make your Rails app ready for whatever comes next. Check out [Enhance Ruby on Rails performance](https://jetthoughts.com/blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/) to dive deeper into optimization techniques.
+By focusing on these strategies, you’ll make your Rails app ready for whatever comes next. Check out [Enhance Ruby on Rails performance](https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/) to dive deeper into optimization techniques.
 
 ## Wrapping It Up
 

@@ -87,7 +87,7 @@ You can't do it all alone. Working with designers is a big part of the job. They
 
 ### Working with Relational Databases
 
-When you're building [business software development](https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance/), understanding relational databases is key. You need to know how to store, retrieve, and manipulate data efficiently. Get comfy with SQL. It's the language that talks to your database. MySQL and PostgreSQL are your go-tos. Learn how they work and how to set them up.
+When you're building [business software development](https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/), understanding relational databases is key. You need to know how to store, retrieve, and manipulate data efficiently. Get comfy with SQL. It's the language that talks to your database. MySQL and PostgreSQL are your go-tos. Learn how they work and how to set them up.
 
 ### SQL Proficiency and Query Optimization
 

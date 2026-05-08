@@ -2,6 +2,13 @@
 title: "Ruby on Rails Performance Optimization Patterns for 2026"
 description: "Concrete benchmarks and patterns for Rails performance in 2026 - YJIT speedups, Rails 8 query optimization, Redis caching, and N+1 elimination."
 date: 2026-04-09T08:00:00+07:00
+slug: "ruby-on-rails-performance-optimization-patterns-2026"
+aliases:
+  - /blog/ruby-on-rails-performance-optimization-patterns-for-2026/
+  - /blog/best-practices-for-optimizing-ruby-on-rails-performance/
+  - /blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/
+  - /blog/unlocking-rails-performance-essential-strategies-for/
+  - /blog/rails-performance-optimization-15-proven-techniques/
 draft: false
 author: "JetThoughts"
 tags: ["ruby", "rails", "performance", "optimization", "yjit", "rails-8", "caching"]

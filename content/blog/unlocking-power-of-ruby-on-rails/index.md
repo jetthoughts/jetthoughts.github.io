@@ -71,7 +71,7 @@ One of the coolest things about microservices is that you're not stuck with one 
 
 ### Managing Resource Utilization
 
-With a monolithic app, you often end up wasting resources. Some parts of the app might be idle while others are overloaded. Microservices let you allocate resources more efficiently. You can give more power to the services that need it and scale down the ones that don't. It's like only watering the plants that are thirsty, instead of flooding the whole garden. This efficient [resource allocation](https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance/) saves money and improves performance.
+With a monolithic app, you often end up wasting resources. Some parts of the app might be idle while others are overloaded. Microservices let you allocate resources more efficiently. You can give more power to the services that need it and scale down the ones that don't. It's like only watering the plants that are thirsty, instead of flooding the whole garden. This efficient [resource allocation](https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/) saves money and improves performance.
 
 Here's a simple example of how resource allocation might look:
 
@@ -99,7 +99,7 @@ _Load balancing_ is key to handling traffic. It spreads requests across multiple
 *   Weighted Round Robin: Gives more weight to servers with more capacity.
 *   Least Connections: Sends requests to the server with the fewest active connections.
 
-These techniques ensure optimal performance, even during peak times. [Rails API](https://jetthoughts.com/blog/maximizing-efficiency-proven-strategies-for-ruby-on-rails-performance/) can help with this.
+These techniques ensure optimal performance, even during peak times. [Rails API](https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/) can help with this.
 
 ### Improving Response Times
 
