@@ -27,13 +27,13 @@ Here's what I've learned: by the time you're Googling this, you already know the
 
 So this guide covers the exit - what to secure tonight, what your contract probably doesn't protect, and how to avoid repeating it with the next team.
 
-## How Many of These Sound Familiar?
+## How many of these sound familiar?
 
 I'm not going to tell you "if you see one red flag, that's normal." You know what normal friction looks like. This is about the pattern - three or more of these means you're past friction.
 
-They've missed three deadlines, and every time it's "unexpected complexity." Fine - complexity happens. But if they never flagged the risk before the deadline, they're not managing. They're watching. There's a difference.
+They've missed three deadlines, and every time it's "unexpected complexity." Fine, complexity happens. But if they never flag risk before the deadline hits, that's not project management. That's spectating with a Jira ticket.
 
-You can't see the code. Not that you can't read it - you literally don't have a login to wherever it lives. We've taken over projects where the founder didn't know what Git was, and that's totally fine. But your code should live in an account you own. If it doesn't, you don't own a product - you own a promise.
+You can't see the code. Not that you can't read it; you literally don't have a login to wherever it lives. We've taken over projects where the founder didn't know what Git was, and that's totally fine. But your code should live in an account you own. If it lives on their GitHub account under their billing email, what you actually have is an invoice receipt and a verbal commitment.
 
 Every small change breaks something else. You ask them to change a button color and the next day the checkout page is down. That's code with no [automated tests](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/). The team is scared to touch anything because they genuinely don't know what will break. A codebase with 70%+ test coverage can handle changes safely. **If yours has 5%, your team is guessing every time they deploy.**
 
@@ -53,9 +53,9 @@ And the one nobody talks about: you've stopped asking questions. If you've gone 
 
 ---
 
-## Wait - Is This Fixable?
+## Wait - is this fixable?
 
-Before you fire anyone, be honest. I've seen founders torch a relationship that was actually salvageable because they were angry, not wrong.
+Before you fire anyone, be honest. A few of the relationships we've seen torched in the last two years were actually salvageable, ended because the founder was angry, not because they were wrong about the code.
 
 Try two weeks of real transparency first. Set up a weekly call with a hard agenda - not "how's it going?" but specifics: what shipped, what didn't, what's blocked. If they suddenly start communicating the moment you set clear expectations, maybe the problem was that nobody set expectations. It happens more than you'd think.
 
@@ -65,7 +65,7 @@ If you're still unsure, set three concrete numbers for the next 30 days: **80% t
 
 Still here? Alright. Let's talk about the exit.
 
-## What to Secure Before You Send the Email
+## What to secure before you send the email
 
 This is the part most guides skip. Do this tonight - before they know.
 
@@ -73,13 +73,13 @@ Start with repository access. Log into GitHub (or wherever the code lives) and c
 
 Next, make a list of everything they control: hosting (AWS, Heroku, DigitalOcean), domain registrar, DNS settings, SSL certificates, email provider, payment processor API keys, analytics accounts. You probably don't even know all the services they signed up for on your behalf. [Nudge Security](https://www.nudgesecurity.com/) can find every SaaS account connected to your email - free trial, takes five minutes. For each account: do you have the login? Is it under your email or theirs? Transfer anything under their email to yours tonight.
 
-Then export your data - production database, user records, uploaded files, third-party integrations. Don't assume you can get this later. I've seen agencies go silent after a termination notice. If your app runs on Heroku, AWS, or DigitalOcean, [SimpleBackups](https://simplebackups.com/) can automate database exports through a point-and-click UI (free tier available, paid from **$29/month**). Get it while the relationship is still cordial.
+Then export your data, including production database, user records, uploaded files, and third-party integrations. Don't assume you can get this later. We've watched agencies go silent within hours of receiving a termination notice. If your app runs on Heroku, AWS, or DigitalOcean, [SimpleBackups](https://simplebackups.com/) can automate database exports through a point-and-click UI (free tier available, paid from $29/month). Get it while the relationship is still cordial.
 
 Documentation is the trickiest part because they probably don't have any. Here's the workaround: if your code is on GitHub, paste the repo URL into [DeepWiki](https://deepwiki.com/) and it generates a navigable wiki from your codebase in minutes. It won't replace real documentation, but it gives your next team a starting point. [Swimm](https://swimm.io/) does something similar and keeps docs in sync as code changes (free tier for small teams).
 
 Finally, send a formal termination letter. Most contracts require 15-30 days written notice. Reference the specific clause, keep it factual, skip the emotion. "Per Section 12.3 of our agreement dated X, this letter serves as **30-day notice of termination**, effective Y."
 
-## "But I Signed a Contract!"
+## "But I signed a contract!"
 
 Yeah. And it probably doesn't protect you.
 
@@ -93,7 +93,7 @@ Every contract we've seen from a failed engagement is missing the same three thi
 
 Need templates? [Clerky](https://www.clerky.com) has startup-focused IP assignment and consulting agreements for **$819** lifetime. Cheaper than one hour of a lawyer's time. Won't cover everything, but it covers the basics that most agency contracts miss entirely.
 
-## Evaluating What They Left Behind
+## Evaluating what they left behind
 
 You can't read code, and that's fine - here's what to do.
 
@@ -119,7 +119,7 @@ Need someone to handle the transition - audit the code, talk to both teams, tell
 
 And one thing that costs nothing: make sure your repository lives in a [GitHub Organization you own](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository), not your agency's personal account. If you do nothing else from this article, do that. Do it now.
 
-## The 2026 Problem: Vibe Coding
+## The 2026 problem: vibe coding
 
 This part didn't exist two years ago.
 
@@ -129,7 +129,7 @@ Then real users showed up.
 
 First login with a special character in the email? Crash. Two users booking the same time slot? Data corrupted. The founder called the agency. "That's an edge case," they said.
 
-It wasn't an edge case. It was Tuesday.
+It wasn't an edge case. It was the second week of real users hitting a code path nobody had tested.
 
 We opened the codebase and found 2% test coverage, zero error handling, and **14 critical security vulnerabilities**. We had to rewrite the entire thing.
 
@@ -137,7 +137,7 @@ We're seeing this in about half the rescue projects that come through our door n
 
 We've watched this enough times to see the split. The shops that last [write tests before code](/blog/test-driven-development-tdd-in-ruby-step-by-guide-tutorial-bestpractices/) and have a second person [review every change](/blog/ai-powered-code-reviews-transforming-development-workflows/) before it goes live. The shops that burn out paste AI output and ship without anyone checking whether it actually works.
 
-## What to Actually Look For in the Next One
+## What to actually look for in the next one
 
 Ignore the website and the Clutch profile. Here's what actually separates the shops that last from the ones that burn you.
 
@@ -153,13 +153,13 @@ Request a reference from a founder they've rescued - not their happiest client, 
 
 The first week tells you everything about the next six months. Did they send an [onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/)? Set up a project board? Explain their [delivery flow](/blog/delivery-flow-for-distributed-remote-teams-agile-kanban/)?
 
-## You're Going to Pay Twice
+## You're going to pay twice
 
 Firing a dev shop feels like failure, but staying with a bad one costs more.
 
 You're going to pay twice for the same product. Once for the bad code, once to fix it. That's the tax. The size of the second bill depends on who you hire next and what they find when they open the hood.
 
-Get the code, get it audited, and hire someone who writes tests first and explains things in language you understand. You lived through the bad version - that experience is worth something when you're picking the next team.
+Get the code, get it audited, and hire someone who writes tests first and explains things in language you understand. You lived through the bad version. The next interview, you'll know exactly which answer is the lie - that's the only upside of paying tuition like this.
 
 ---
 
@@ -179,7 +179,7 @@ We've been writing about the practices that prevent these disasters. The ones th
 - [Our onboarding checklist](/blog/effective-project-onboarding-checklist-management-productivity/) - day one, no chaos
 - [Red flags in big PRs](/blog/red-flags-watch-for-in-big-pr-when-stop-split-or-rework-development-productivity/) - why we split anything over 500 lines
 
-## Further Reading
+## Further reading
 
 - [Deloitte 2024 Global Outsourcing Survey](https://www.deloitte.com/ca/en/services/consulting/perspectives/global-outsourcing-survey-2024.html) - 70% of executives insourced previously outsourced work
 - [CISQ: The Cost of Poor Software Quality](https://www.clouddatainsights.com/the-cost-of-poor-software-quality-is-higher-than-ever/) - $2.41 trillion annual cost in the US
