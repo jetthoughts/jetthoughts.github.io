@@ -2,7 +2,7 @@
 title: "Django 5.0 Enterprise Migration Guide: Production Deployment Strategies"
 description: "Master the migration from Django 4.2 to Django 5.0 in enterprise environments. Complete guide with step-by-step migration, database strategies, security enhancements, and production deployment best practices."
 date: 2025-10-27
-draft: false
+draft: true
 tags: ["django", "python", "migration", "enterprise", "deployment"]
 canonical_url: "https://jetthoughts.com/blog/django-5-enterprise-migration-guide-production-strategies/"
 slug: "django-5-enterprise-migration-guide-production-strategies"

@@ -2,6 +2,7 @@
 title: "From Prototype to Production: Scaling LangChain and CrewAI Applications in Enterprise Environments"
 description: "Complete enterprise guide to scaling LangChain and CrewAI from prototype to production. Covers architecture patterns, security, compliance, monitoring, and real-world case study with 80% improvement metrics."
 date: 2025-10-15
+draft: true
 tags: ["LangChain", "CrewAI", "Enterprise AI", "Production Scaling", "AI Architecture", "FastAPI", "Docker", "Kubernetes", "Observability", "Security"]
 categories: ["AI Development", "Enterprise Architecture", "DevOps"]
 author: "JetThoughts Team"

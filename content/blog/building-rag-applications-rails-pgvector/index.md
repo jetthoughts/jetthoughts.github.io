@@ -10,11 +10,11 @@ metatags:
   image: cover.png
 ---
 
-Your users search "best pizza spots" and get zero results because your database only has "top-rated pizzerias." Keyword search doesn't understand meaning—it matches strings. For most Rails apps, that's been good enough. Until your users start expecting natural language answers.
+Your users search "best pizza spots" and get zero results because your database only has "top-rated pizzerias." Keyword search doesn't understand meaning-it matches strings. For most Rails apps, that's been good enough. Until your users start expecting natural language answers.
 
 RAG (Retrieval Augmented Generation) combines semantic search with AI-generated responses. Instead of matching keywords, your app matches meaning. The interesting part for Rails developers: you can do this with pgvector inside your existing PostgreSQL database. No Pinecone, no Weaviate, no extra infrastructure.
 
-This guide builds a document Q&A system from scratch—pgvector setup, embedding generation, chunking strategy, and the full RAG pipeline. Working code, not hand-waving.
+This guide builds a document Q&A system from scratch-pgvector setup, embedding generation, chunking strategy, and the full RAG pipeline. Working code, not hand-waving.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ The complete code examples are available on [GitHub](https://github.com/jetthoug
 
 ### Installing the pgvector Extension
 
-pgvector is a PostgreSQL extension that adds vector similarity search capabilities. Unlike external vector databases (Pinecone, Weaviate), pgvector runs inside your existing PostgreSQL database—no additional infrastructure needed.
+pgvector is a PostgreSQL extension that adds vector similarity search capabilities. Unlike external vector databases (Pinecone, Weaviate), pgvector runs inside your existing PostgreSQL database-no additional infrastructure needed.
 
 First, install the pgvector extension on your PostgreSQL server. On macOS with Homebrew:
 
@@ -158,13 +158,17 @@ pgvector provides several distance operators for measuring similarity. We'll use
 class Document < ApplicationRecord
   # Previous code...
 
+  has_neighbors :embedding
+
   def self.search_similar(query, limit: 5)
     query_embedding = EmbeddingService.new.generate(query)
 
-    # Find documents with closest vector distance
+    # neighbor gem handles vector parameterization safely.
+    # Avoid `Arel.sql("... '#{query_embedding}'")` - that string-interpolates
+    # an array literal into SQL and is brittle.
     where.not(embedding: nil)
-      .order(Arel.sql("embedding <=> '#{query_embedding}'"))
-      .limit(limit)
+      .nearest_neighbors(:embedding, query_embedding, distance: "cosine")
+      .first(limit)
   end
 end
 ```
@@ -193,17 +197,19 @@ class ChunkService
   CHUNK_SIZE = 300 # tokens
   CHUNK_OVERLAP = 50 # tokens for context continuity
 
-  def initialize(tokenizer: Tokenizers.from_pretrained('gpt2'))
-    @tokenizer = tokenizer
+  # OpenAI's text-embedding-3-* models tokenize with cl100k_base /
+  # o200k_base, NOT gpt-2 BPE. Use tiktoken_ruby for accurate counts.
+  def initialize(encoding: Tiktoken.encoding_for_model("text-embedding-3-small"))
+    @encoding = encoding
   end
 
   def chunk_text(text)
-    tokens = @tokenizer.encode(text).ids
+    tokens = @encoding.encode(text)
     chunks = []
 
     (0...tokens.length).step(CHUNK_SIZE - CHUNK_OVERLAP) do |i|
       chunk_tokens = tokens[i, CHUNK_SIZE]
-      chunk_text = @tokenizer.decode(chunk_tokens)
+      chunk_text = @encoding.decode(chunk_tokens)
       chunks << chunk_text
     end
 
@@ -258,7 +264,7 @@ class VectorSearchService
 end
 ```
 
-The similarity threshold (0.7) filters out low-quality matches. Tune this value based on your data—too high and you might miss relevant results, too low and you'll include irrelevant content.
+The similarity threshold (0.7) filters out low-quality matches. Tune this value based on your data-too high and you might miss relevant results, too low and you'll include irrelevant content.
 
 Test your semantic search:
 
@@ -295,7 +301,7 @@ class RagService
     # Step 3: Generate answer using OpenAI
     response = @openai.chat(
       parameters: {
-        model: 'gpt-4-turbo-preview',
+        model: 'gpt-4o-mini', # cheap path; use 'gpt-4o' for higher quality
         messages: build_messages(context, question),
         temperature: 0.3 # Lower = more factual
       }
@@ -377,7 +383,7 @@ curl -X POST http://localhost:3000/api/rag/query \
 
 ### Caching Embeddings
 
-Generating embeddings costs money and time (50-200ms per request). Managing those API costs is critical—see our [guide to LLM token cost optimization](/blog/cost-optimization-llm-applications-token-management/) for strategies that apply here. For frequently queried content, implement caching:
+Generating embeddings costs money and time (50-200ms per request). Managing those API costs is critical-see our [guide to LLM token cost optimization](/blog/cost-optimization-llm-applications-token-management/) for strategies that apply here. For frequently queried content, implement caching:
 
 ```ruby
 # app/services/cached_embedding_service.rb
@@ -416,6 +422,9 @@ class CachedEmbeddingService
     embedding
   end
 
+  # Invalidate by document_id rather than text content. The cache key
+  # is SHA256(text), so when a document changes the *new* text hashes
+  # to a *new* key - the old key just expires via TTL.
   def invalidate(text)
     @redis.del(cache_key_for(text))
   end
@@ -445,7 +454,10 @@ class RagService
 end
 ```
 
-Cache invalidation happens automatically after 24 hours, or manually when content changes:
+Cache invalidation happens via the 24-hour TTL. Active invalidation by
+content does not work - the SHA256 key is derived from the text itself,
+so when content changes the new text hashes to a new key. The previous
+entry just expires:
 
 ```ruby
 class Document < ApplicationRecord
@@ -453,8 +465,9 @@ class Document < ApplicationRecord
 
   private
 
+  # Invalidates the OLD content's cache entry using the pre-update value.
   def invalidate_cache
-    CachedEmbeddingService.new.invalidate(content)
+    CachedEmbeddingService.new.invalidate(content_before_last_save)
   end
 end
 ```
@@ -490,7 +503,9 @@ class EmbeddingJob < ApplicationJob
       progress = ((batch_index + 1) * 20 / chunks.size.to_f * 100).round
       update_progress(document, progress)
 
-      # Rate limiting: OpenAI allows 3,000 RPM
+      # Rate limiting: OpenAI embedding RPM is tier-dependent
+      # (Tier 1 = 500 RPM, Tier 5 = 10,000+). Check the dashboard
+      # for your account and tune sleep accordingly.
       sleep(0.02) if batch_index < chunks.size / 20 - 1
     end
 
@@ -560,21 +575,24 @@ Add indexes to speed up vector similarity queries:
 # db/migrate/20251016000004_add_vector_indexes.rb
 class AddVectorIndexes < ActiveRecord::Migration[7.1]
   def change
-    # IVFFlat index for approximate nearest neighbor search
-    # Lists: sqrt(total_rows) is a good starting point
+    # HNSW index - pgvector 0.5.0+ default for RAG workloads.
+    # Better recall/latency tradeoff than IVFFlat at typical scales.
+    # m = max connections per layer (default 16, higher = better recall, more memory)
+    # ef_construction = build-time accuracy (default 64, higher = slower build, better recall)
     execute <<-SQL
       CREATE INDEX idx_document_chunks_embedding ON document_chunks
-      USING ivfflat (embedding vector_cosine_ops)
-      WITH (lists = 100);
+      USING hnsw (embedding vector_cosine_ops)
+      WITH (m = 16, ef_construction = 64);
     SQL
 
-    # Analyze the table to populate index statistics
     execute 'ANALYZE document_chunks;'
   end
 end
 ```
 
-IVFFlat indexes trade accuracy for speed. They partition vectors into clusters (lists), then search only relevant clusters. More lists = better accuracy but slower search. The same performance-vs-accuracy tradeoff applies when [scaling Rails to handle more users](/blog/rails-performance-at-scale-10k-to-1m-users-roadmap/)—measure before optimizing.
+Tune query-time recall with `SET hnsw.ef_search = 100` (default 40, higher = better recall, slower).
+
+If you must use IVFFlat (older pgvector or memory-constrained), the `lists` rule per the pgvector README is `rows / 1000` for up to 1M rows, `sqrt(rows)` only above 1M. The same performance-vs-accuracy tradeoff applies when [scaling Rails to handle more users](/blog/rails-performance-at-scale-10k-to-1m-users-roadmap/) - measure before optimizing.
 
 Monitor query performance:
 
@@ -636,24 +654,24 @@ puts answer
 # These techniques are mentioned in the Rails Performance Best Practices documentation."
 ```
 
-Performance metrics for this system:
-- **Embedding generation**: ~100ms per chunk
-- **Vector search**: 10-50ms (with IVFFlat index)
-- **LLM generation**: 1-3 seconds
-- **Total query time**: 1.5-4 seconds
-- **Cost per query**: ~$0.002 (OpenAI API pricing)
+Rough latency and cost envelope (varies wildly by corpus size, hardware, and model choice - measure your own):
+
+- **Embedding generation**: 50-200ms per request (single chunk via OpenAI API)
+- **Vector search**: tens of milliseconds with HNSW on tens of thousands of chunks
+- **LLM generation**: 1-3 seconds for `gpt-4o-mini`, longer for `gpt-4o`
+- **Cost per query**: with `text-embedding-3-small` ($0.02/1M tokens) for the question and `gpt-4o-mini` ($0.15/$0.60 per 1M input/output) for the answer, a typical 3-chunk retrieval lands near $0.001-0.005 depending on context size. Run the math against your own SKU.
 
 ## When NOT to Use pgvector for RAG
 
 pgvector is a great fit for Rails apps that already run PostgreSQL and need semantic search over thousands to low millions of vectors. But it's not the right tool for every situation:
 
 - **Large-scale vector search (10M+ vectors).** pgvector's IVFFlat and HNSW indexes work well up to a few million rows. Beyond that, query latency and index build times grow significantly. Dedicated vector databases like Pinecone, Weaviate, or Qdrant are built for this scale.
-- **High-dimensional embeddings (2000+ dimensions).** pgvector handles 1536 dimensions (OpenAI's default) fine. If you're using models that produce 4096+ dimensional vectors, the storage and query overhead in PostgreSQL becomes substantial. Consider dimensionality reduction or a specialized vector store.
+- **High-dimensional embeddings (above 2000 dimensions).** The pgvector `vector` type is hard-capped at 2000 dimensions for HNSW/IVFFlat indexing. Up to 4000 dims you can store and index as `halfvec`; higher dimensionality means storing without an index (linear scan) or using dimensionality reduction. `text-embedding-3-small` (1536) and `text-embedding-3-large` configured to 1536 fit comfortably; the unreduced `text-embedding-3-large` at 3072 needs `halfvec`.
 - **Multi-tenant vector isolation.** If you need strict tenant-level isolation for vector data (separate indexes per tenant), pgvector's shared-index model makes this harder. You'd need separate schemas or databases, which adds operational complexity.
 - **Real-time embedding updates at high throughput.** If your app ingests thousands of documents per minute and needs immediately searchable embeddings, pgvector's index rebuild characteristics may cause query latency spikes. Dedicated vector databases handle continuous ingestion more gracefully.
 - **You don't use PostgreSQL.** If your Rails app runs on MySQL or SQLite, adding PostgreSQL just for pgvector introduces unnecessary infrastructure. Consider a standalone vector service instead.
 
-The honest assessment: pgvector covers 80% of RAG use cases for Rails apps. If you're building a startup MVP or adding semantic search to an existing product, start here. Migrate to a dedicated vector database only when you hit pgvector's limits—not before.
+The honest assessment: pgvector covers 80% of RAG use cases for Rails apps. If you're building a startup MVP or adding semantic search to an existing product, start here. Migrate to a dedicated vector database only when you hit pgvector's limits-not before.
 
 ## Troubleshooting Common Issues
 
@@ -711,7 +729,7 @@ end
 That's a working RAG pipeline: pgvector for storage and search, OpenAI for embeddings and generation, Rails for everything else. No external vector database, no new infrastructure to manage.
 
 What matters most in practice:
-- Chunk size determines retrieval quality—start at 300 tokens and tune based on your content
+- Chunk size determines retrieval quality-start at 300 tokens and tune based on your content
 - Cache embeddings aggressively, especially for repeated queries
 - Move embedding generation to background jobs before you hit scale
 - Add IVFFlat indexes when query latency matters (it will, eventually)
