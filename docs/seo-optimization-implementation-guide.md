@@ -59,7 +59,7 @@ description: "Emergency CTO services for startups facing technical crisis. Get i
 
 ### 1. Fractional CTO Cost Optimization
 
-**Target Page:** `/content/services/fractional-cto-services/index.md`
+**Target Page:** `/content/services/fractional-cto/index.md`
 
 **Meta Tags Update:**
 
