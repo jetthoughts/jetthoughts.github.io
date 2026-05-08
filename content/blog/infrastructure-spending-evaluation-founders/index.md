@@ -19,7 +19,7 @@ tags:
 date: "2025-10-14"
 created_at: '2025-10-14T23:03:00Z'
 author: "JetThoughts"
-draft: false
+draft: true
 metatags:
   image: cover.png
 ---
