@@ -267,7 +267,7 @@ For comprehensive Rails development with proven expertise, consider partnering w
 - Budget > $200,000 annually
 - Want full control
 
-If you're considering building an in-house team but need interim leadership during the hiring process, [fractional CTO services](/services/fractional-cto-services/) can provide strategic guidance while you scale your technical organization.
+If you're considering building an in-house team but need interim leadership during the hiring process, [fractional CTO services](/services/fractional-cto/) can provide strategic guidance while you scale your technical organization.
 
 ## Red Flags: When Rails Development Gets Expensive
 

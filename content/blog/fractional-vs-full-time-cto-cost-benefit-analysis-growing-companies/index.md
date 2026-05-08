@@ -733,6 +733,6 @@ Ready to explore cost-effective fractional CTO services? [Contact JetThoughts](h
 - [Fractional CTO Cost Calculator Tool](https://jetthoughts.com/services/fractional-cto-cost/)
 - [Complete CTO Investment Decision Guide](https://jetthoughts.com/blog/fractional-cto-vs-full-time-cto-complete-comparison-2025/)
 - [Technical Leadership ROI Benchmarking](https://jetthoughts.com/services/fractional-cto/)
-- [Growing Company CTO Engagement Models](https://jetthoughts.com/services/fractional-cto-services/)
+- [Growing Company CTO Engagement Models](https://jetthoughts.com/services/fractional-cto/)
 
 *Last updated: January 2025*
