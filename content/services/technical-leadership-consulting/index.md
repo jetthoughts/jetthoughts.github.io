@@ -26,7 +26,7 @@ faqs:
   - question: "How do you help technical leaders communicate effectively with business stakeholders?"
     answer: "We train technical leaders to translate complex technical concepts into business impact, present technology roadmaps that align with business objectives, communicate risks and trade-offs in business terms, and participate effectively in strategic planning. This includes presentation skills, stakeholder management, and frameworks for making technical recommendations that support business goals."
   - question: "What does technical leadership development look like for growing companies?"
-    answer: "Our development programs are tailored to company size and growth stage. For startups, we focus on foundational leadership skills and building initial team culture. For scaling companies, we address management layer development, cross-team communication, and maintaining culture during rapid growth. We often coordinate with [startup CTO consulting](/services/startup-cto-consulting/) to ensure leadership development supports overall business objectives."
+    answer: "Our development programs are tailored to company size and growth stage. For startups, we focus on foundational leadership skills and building initial team culture. For scaling companies, we address management layer development, cross-team communication, and maintaining culture during rapid growth. We often coordinate with [startup CTO consulting](/services/fractional-cto/) to ensure leadership development supports overall business objectives."
 
 overview:
   headline: Transform Technical Professionals Into Inspiring Leaders

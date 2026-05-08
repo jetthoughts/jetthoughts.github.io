@@ -7,6 +7,7 @@ excerpt: Your dev shop isn't working. Your investors want a technical update. Yo
 slug: fractional-cto
 aliases:
   - /services/fractional-cto-services/
+  - /services/startup-cto-consulting/
 author: Paul Keen
 cover_image: on-demand-fractional-ctos.jpeg
 

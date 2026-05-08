@@ -160,7 +160,7 @@ If you're recognizing these warning signs in your startup, here's your immediate
 
 ### 1. Get an Objective Technical Assessment
 
-Bring in an experienced technical leader who can evaluate your situation without the emotional attachment of your internal team. This could be a [fractional CTO](/services/fractional-cto/), technical advisor, or experienced consultant.
+Bring in an experienced technical leader who can evaluate your situation without the emotional attachment of your internal team. This could be [fractional CTO services](/services/fractional-cto/), a technical advisor, or an experienced consultant.
 
 **What to look for**: Someone who's been through multiple startup scaling challenges and can distinguish between "normal technical debt" and "impending technical crisis."
 
