@@ -18,13 +18,13 @@ related_posts: false
 
 Your background jobs lie to you.
 
-You tell yourself they're idempotent. You tell yourself retries are safe. Then a [Kamal](/blog/kamal-integration-in-rails-8-by-default-ruby/) deploy kicks off at 2pm, a 40-minute import job gets 30 seconds to shut down, and **the whole thing restarts from row one on the next container**. Your users wait. Your database works twice. Your server bill grows.
+You tell yourself they're idempotent. You tell yourself retries are safe. Then a [Kamal](/blog/kamal-integration-in-rails-8-by-default-ruby/) deploy kicks off at 2pm, a 40-minute import job gets 30 seconds to shut down, and the whole thing restarts from row one on the next container. Users sit there refreshing. Postgres re-runs the same 40-minute query. The bill at the end of the month doesn't ask why.
 
 Rails 8.1 fixes this with a first-class API called `ActiveJob::Continuable`. Include it in a job, define steps, and if the process dies mid-run, the retry picks up where it left off instead of starting over.
 
-Here's what changed, why it matters more than it sounds, and exactly how to wire it into jobs you already have.
+The wiring is straightforward. The trade-offs aren't. Both below.
 
-## The Problem Rails 8.1 Just Solved
+## The problem Rails 8.1 just solved
 
 Before Active Job Continuations, a "safe" long-running job looked like this:
 
@@ -33,13 +33,11 @@ Before Active Job Continuations, a "safe" long-running job looked like this:
 3. Hope your resumption logic handles the step where the interrupt happened.
 4. Get paged anyway, because you forgot one edge case.
 
-Every mature Rails team has written this code. Every mature Rails team has debugged it at 3am. The Rails core team noticed.
+We rewrote that progress-tracking pattern on three rescue projects in 2024 alone - same Postgres `job_progress` table, same 3am page after a deploy interrupted a payroll batch, same edge case where the resumption logic missed the step that was in flight when the SIGTERM landed.
 
-**October 2025**: Rails 8.1 shipped `ActiveJob::Continuable`. Jobs that include it can define discrete steps. If the job is interrupted mid-run, previously completed steps are skipped on retry. In-progress steps resume from the last recorded cursor.
+In October 2025 Rails 8.1 shipped `ActiveJob::Continuable`. Jobs that include it can define discrete steps. If the job is interrupted mid-run, previously completed steps are skipped on retry. In-progress steps resume from the last recorded cursor. Custom progress tables and manual resume logic go away.
 
-Custom progress tables and manual resume logic go away. You get checkpoints instead.
-
-## The API in 30 Seconds
+## The API in 30 seconds
 
 ```ruby
 class ProcessOrderBatchJob < ApplicationJob
@@ -68,7 +66,7 @@ Three steps. If the process dies between "process_orders" and "notify_finance", 
 
 That's the whole API. No surprises.
 
-## Why This Matters More Than It Sounds
+## Why this matters more than it sounds
 
 Most Rails teams will scroll past this feature. "We already use [Sidekiq](/blog/solid-queue-vs-sidekiq-complete-comparison/) retries. We're fine."
 
@@ -88,11 +86,11 @@ The math is blunt: if you deploy daily and you run any job longer than 10 minute
 
 ### 3. Your Idempotency Isn't What You Think
 
-Ask your team: "Are all our long-running jobs idempotent?" Watch the confidence drop the longer the list gets. Nightly reconciliations, invoice generation, CSV exports, LLM embeddings - most of these have side effects that *are technically* safe on restart but *practically* double-send emails, double-charge cards, or double-call downstream APIs.
+Ask your team: "Are all our long-running jobs idempotent?" Watch the confidence drop the longer the list gets. On a fintech rescue last quarter the nightly reconciliation re-sent 1,400 ACH confirmation emails after a Kamal deploy hit minute 22 of a 25-minute job. Idempotent on the database side, painful on the inbox side.
 
 Continuations let you stop pretending. Mark the risky step as a checkpoint. If it finished, it stays finished.
 
-## Adding Continuations to an Existing Job
+## Adding continuations to an existing job
 
 Here's a job you might already have, before and after.
 
@@ -151,7 +149,7 @@ Same logic. Same outputs. One `include` and four `step` blocks. On interruption,
 
 **The gotcha**: the `@orders` ivar isn't persisted across interruptions. If the job dies and resumes in a new process, `@orders` is `nil`. That's why `fetch_orders` exists as its own step - but when the *second* step resumes, it re-runs `fetch_orders` first because ivars don't survive. For most jobs this is fine. For expensive fetches, store the IDs you need in a short-lived cache or a dedicated table and pull them back at the top of each resumable step.
 
-## The Kamal 30-Second Trap - Fixed Properly
+## The Kamal 30-second trap, fixed properly
 
 Here's the specific production pattern that makes this feature pay for itself.
 
@@ -183,7 +181,7 @@ Four expensive steps. Total runtime: ~18 minutes. **Kamal deploy window: 30 seco
 
 Before continuations, a deploy during `render_pdf` meant the retry re-runs both aggregation steps - another 12 minutes of wasted Postgres time. After continuations, the retry skips straight to `render_pdf`. **The deploy cost drops from 18 minutes of duplicated work to zero.**
 
-## When NOT to Use Continuations
+## When NOT to use continuations
 
 Like every powerful feature, this one has wrong uses.
 
@@ -192,7 +190,7 @@ Like every powerful feature, this one has wrong uses.
 - **Your adapter has to support it.** [Solid Queue](/blog/rails-8-solid-queue-migration-guide/) and recent Sidekiq releases support continuations. Older adapters or custom queues may not - they'll still run the job, but the resume-from-cursor behavior depends on the adapter calling `queue_adapter.stopping?` at checkpoints. Verify before you rely on it.
 - **Cursors aren't magic.** If your step iterates over a mutating collection (a query that returns different rows each run), the cursor won't save you. Freeze the collection in its own fetch step and iterate over a stable list.
 
-## Migration Path for Existing Apps
+## Migration path for existing apps
 
 If you're on Rails 8.0 today, the migration is two steps.
 
@@ -202,15 +200,11 @@ If you're on Rails 8.0 today, the migration is two steps.
 
 Don't refactor every job on day one. Do the nightly batch, the nightly reconciliation, the bulk import, the LLM embedding pipeline. Those four cover **80%** of the pain for most teams.
 
-## The Real Win
+## What you actually buy with this
 
-Continuations aren't really a performance feature. They're a clarity feature.
+The compute savings get the headline, but the clarity is what we'll keep using `Continuable` for. Splitting a job into named steps forces you to write down where it can resume, and that documentation outlives any single deploy. The first time we paired a junior engineer on a Continuable refactor, the documentation it produced was worth more than the resume safety it added.
 
-The real value isn't the compute savings. It's that adding `step` blocks makes you be explicit about where your job can be interrupted, what each phase actually does, and what "done" means at each checkpoint. That clarity pays for itself even if you never get interrupted.
-
-Rails 8.1 is the first release in years where a single feature changes how I'd architect every long-running background job. Continuations is that feature.
-
-Upgrade. Wrap your longest job. Deploy in the middle of it. Watch it resume.
+On rescue audits this quarter, we're flagging long-running jobs without `Continuable` the same way we currently flag missing N+1 includes. If you want to test it before you trust it, run a `kill -TERM` against a Solid Queue worker mid-job in staging and watch the cursor pick up where it stopped.
 
 ## Running long jobs on Solid Queue or Sidekiq?
 
