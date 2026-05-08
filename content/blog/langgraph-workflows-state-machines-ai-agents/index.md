@@ -335,12 +335,14 @@ result2 = app.invoke({"query": "test"})
 **Solution**: Deferred nodes delay execution until all upstream paths complete.
 
 ```python
-from langgraph.graph import StateGraph
+from typing import Annotated, TypedDict
+import operator
+from langgraph.graph import StateGraph, START, END
 
 class MapReduceState(TypedDict):
     """State for parallel agent coordination."""
     query: str
-    agent_responses: list[str]
+    agent_responses: Annotated[list[str], operator.add]
     consensus: str
 
 def research_agent_1(state: MapReduceState) -> MapReduceState:

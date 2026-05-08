@@ -231,42 +231,59 @@ async def user_dashboard(request):
     user = await User.objects.select_related('profile').aget(pk=request.user.id)
     orders = [order async for order in user.orders.prefetch_related('items__product')[:10].aiterator()]
 
-    return JsonResponse({'user': user, 'orders': orders})
+    return JsonResponse({
+        'user': {
+            'id': user.id,
+            'email': user.email,
+            'name': user.get_full_name(),
+        },
+        'orders': [
+            {
+                'id': order.id,
+                'total': str(order.total),
+                'created_at': order.created_at.isoformat(),
+            }
+            for order in orders
+        ],
+    })
 ```
 
 ### New Async ORM Methods:
 ```python
 # Django 5.0 native async ORM API
 from django.contrib.auth import get_user_model
+from django.db.models import Count, Sum
 
 User = get_user_model()
 
-# Async CRUD operations
-user = await User.objects.acreate(username='john', email='john@example.com')
-user = await User.objects.aget(pk=123)
-await user.asave()
-await user.adelete()
+async def demo_async_orm():
+    # Async CRUD operations
+    user = await User.objects.acreate(username='john', email='john@example.com')
+    user = await User.objects.aget(pk=user.pk)
+    await user.asave()
+    await user.adelete()
 
-# Async queries
-users = [u async for u in User.objects.filter(is_active=True)]
-count = await User.objects.acount()
-exists = await User.objects.filter(username='john').aexists()
+    # Async queries
+    users = [u async for u in User.objects.filter(is_active=True)]
+    count = await User.objects.acount()
+    exists = await User.objects.filter(username='john').aexists()
 
-# Async aggregations
-from django.db.models import Count, Sum
-stats = await Order.objects.aggregate(
-    total_orders=Count('id'),
-    total_revenue=Sum('total')
-)
+    # Async aggregations
+    stats = await Order.objects.aggregate(
+        total_orders=Count('id'),
+        total_revenue=Sum('total')
+    )
 
-# Async related object access -- pre-load the FK with select_related,
-# then access the related attribute synchronously (no await on a string).
-order = await Order.objects.select_related('customer').aget(pk=456)
-customer_name = order.customer.full_name  # Already fetched via JOIN
+    # Async related object access -- pre-load the FK with select_related,
+    # then access the related attribute synchronously (no await on a string).
+    order = await Order.objects.select_related('customer').aget(pk=456)
+    customer_name = order.customer.full_name  # Already fetched via JOIN
+
+    return users, count, exists, stats, customer_name
 ```
 
 ### Performance Impact:
-```python
+```text
 # Benchmark: Async view performance (100 concurrent requests)
 # Django 4.2 with sync_to_async wrappers
 Requests per second: 142.3
@@ -289,19 +306,20 @@ Django 5.0 introduces query optimization that reduces database round-trips:
 # Django 5.0 - Optimized query compilation
 from django.db.models import Prefetch, Q, F
 
-# Automatically optimizes complex prefetch queries
-orders = Order.objects.filter(
-    created_at__gte=date.today() - timedelta(days=30)
-).select_related(
-    'customer', 'shipping_address'
-).prefetch_related(
-    Prefetch('items', queryset=OrderItem.objects.select_related('product')),
-    'customer__payment_methods'
-).aiterator()  # Memory-efficient async iteration (returns async iterator, no await)
+async def process_recent_orders():
+    # Automatically optimizes complex prefetch queries
+    orders = Order.objects.filter(
+        created_at__gte=date.today() - timedelta(days=30)
+    ).select_related(
+        'customer', 'shipping_address'
+    ).prefetch_related(
+        Prefetch('items', queryset=OrderItem.objects.select_related('product')),
+        'customer__payment_methods'
+    ).aiterator()  # Memory-efficient async iteration (returns async iterator, no await)
 
-async for order in orders:
-    # Process orders with minimal memory footprint
-    await process_order(order)
+    async for order in orders:
+        # Process orders with minimal memory footprint
+        await process_order(order)
 ```
 
 ### Query Optimization Results:
@@ -862,7 +880,7 @@ class AsyncLoggingMiddleware:
 
 ### Create Django 5.0 Compatible Migrations
 
-```python
+```bash
 # Generate new migrations for Django 5.0
 $ python manage.py makemigrations
 
@@ -968,6 +986,9 @@ class MigrationBenchmark(TestCase):
         # Assert performance target
         self.assertLess(duration, 0.05, f"Async query took {duration}s, target <0.05s")
 
+```
+
+```bash
 # Run benchmarks
 $ python manage.py test benchmark_migration.MigrationBenchmark
 ```
@@ -998,6 +1019,9 @@ class DjangoUser(HttpUser):
             "items": [{"product_id": 1, "quantity": 2}]
         })
 
+```
+
+```bash
 # Run load test
 $ locust -f locustfile.py --host=http://staging.example.com
 # Target: 500 req/s with <200ms avg response time
@@ -1179,6 +1203,9 @@ class Command(BaseCommand):
 
                 time.sleep(30)  # Check every 30 seconds
 
+```
+
+```bash
 # Run monitoring
 $ python manage.py monitor_migration
 ```
@@ -1448,6 +1475,9 @@ class Command(BaseCommand):
                 for q in slow_queries[:5]:  # Show top 5
                     self.stdout.write(f"  {q['time']}s: {q['sql'][:100]}")
 
+```
+
+```bash
 # Run profiling
 $ python manage.py profile_queries
 ```
@@ -1473,7 +1503,7 @@ For teams handling data schema changes alongside framework upgrades, review patt
 
 A: While technically possible, it's **strongly discouraged**. Django's deprecation policy removes features over multiple versions. Direct migration from 3.2 to 5.0 requires handling two major versions worth of breaking changes simultaneously:
 
-```python
+```text
 # Recommended migration path
 Django 3.2 LTS → Django 4.2 LTS → Django 5.0
 
@@ -1564,7 +1594,7 @@ class Migration(migrations.Migration):
 
 A: Implement comprehensive testing strategy:
 
-```python
+```bash
 # Run full test suite
 $ python manage.py test --settings=myapp.settings_test
 
@@ -1642,10 +1672,12 @@ A: Performance gains depend on I/O-bound operations:
 
 A: Celery 5.3+ fully supports Django 5.0:
 
-```python
+```bash
 # Update Celery and ensure compatibility
 $ pip install celery==5.3.4 django-celery-results==2.5.1
+```
 
+```python
 # tasks.py remains largely unchanged
 from celery import shared_task
 

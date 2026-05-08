@@ -211,12 +211,13 @@ In production, everything fails. Plan for it:
 
 ```python
 # app/core/resilience.py
-from typing import Callable, TypeVar, Optional
+from typing import Optional
+import asyncio
 from tenacity import retry, stop_after_attempt, wait_exponential
 from circuitbreaker import circuit
+from circuitbreaker import CircuitBreakerError
 import logging
 
-T = TypeVar('T')
 logger = logging.getLogger(__name__)
 
 
@@ -240,7 +241,7 @@ class ResilientAIService:
     async def call_llm_with_resilience(
         self,
         prompt: str,
-        model: str = "gpt-4",
+        model: str = "gpt-4o",
         timeout: int = 30,
         fallback_response: Optional[str] = None
     ) -> str:
@@ -254,7 +255,7 @@ class ResilientAIService:
 
         Args:
             prompt: Input prompt for LLM
-            model: Model identifier (e.g., "gpt-4", "claude-3")
+            model: Model identifier (e.g., "gpt-4o", "claude-haiku")
             timeout: Maximum seconds to wait for response
             fallback_response: Response to return if all retries fail
 
@@ -288,20 +289,20 @@ class ResilientAIService:
             raise
 
 
-# Usage in production:
-resilient_service = ResilientAIService()
+async def handle_customer_query(prompt: str) -> str:
+    resilient_service = ResilientAIService()
 
-try:
-    response = await resilient_service.call_llm_with_resilience(
-        prompt="Analyze this customer query...",
-        model="gpt-4",
-        timeout=30,
-        fallback_response="I'm experiencing high load. Please try again in a moment."
-    )
-except CircuitBreakerError:
-    # Circuit is open - too many consecutive failures
-    # Serve cached response or gracefully degrade
-    response = get_cached_response() or DEFAULT_RESPONSE
+    try:
+        return await resilient_service.call_llm_with_resilience(
+            prompt=prompt,
+            model="gpt-4o",
+            timeout=30,
+            fallback_response="I'm experiencing high load. Please try again in a moment."
+        )
+    except CircuitBreakerError:
+        # Circuit is open - too many consecutive failures
+        # Serve cached response or gracefully degrade
+        return get_cached_response() or DEFAULT_RESPONSE
 ```
 
 **Why this matters:** When OpenAI has a 30-second outage, your entire application shouldn't go down with it. Circuit breakers prevent cascade failures.
@@ -1047,12 +1048,11 @@ async def get_current_user(
 
 def require_role(required_role: str):
     """
-    Decorator factory for role-based access control (RBAC).
+    Dependency factory for role-based access control (RBAC).
 
     Usage:
         @app.get("/admin/users")
-        @require_role("admin")
-        async def list_users(current_user = Depends(get_current_user)):
+        async def list_users(current_user = require_role("admin")):
             # Only users with "admin" role can access
             pass
     """
@@ -1286,7 +1286,7 @@ class PrivacyAwareLangChainAgent:
                 "pii_detected_and_protected",
                 user_id=user_id,
                 entities_found=protection_result.get("entities_found", []),
-                original_hash=protection_result["original_hash"],
+                original_hash=protection_result.get("original_hash"),
                 redaction_mode=redaction_mode
             )
 
@@ -1306,11 +1306,13 @@ class PrivacyAwareLangChainAgent:
 # Usage example
 agent = PrivacyAwareLangChainAgent(langchain_agent, enable_pii_protection=True)
 
-response = await agent.execute_with_privacy(
-    prompt="Analyze customer record: John Doe, SSN 123-45-6789, email john@example.com",
-    user_id="user_12345",
-    redaction_mode="redact"
-)
+async def analyze_customer_record():
+    response = await agent.execute_with_privacy(
+        prompt="Analyze customer record: John Doe, SSN 123-45-6789, email john@example.com",
+        user_id="user_12345",
+        redaction_mode="redact"
+    )
+    return response
 
 # Prompt sent to external API:
 # "Analyze customer record: XXXX XXX, SSN XXXXXXXXXXX, email XXXXXXXXXXXXXXXXXXXXX"
@@ -1628,21 +1630,38 @@ spec:
 ### Secrets and ConfigMaps
 
 ```yaml
-# kubernetes/secrets.yaml
-# NEVER commit this file to git. Use sealed-secrets or vault.
+# kubernetes/externalsecret.yaml
+# Store real values in AWS Secrets Manager, HashiCorp Vault, or another backend.
 ---
-apiVersion: v1
-kind: Secret
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
 metadata:
   name: ai-agent-secrets
   namespace: production
-type: Opaque
-stringData:
-  database-url: "postgresql://user:password@postgres-service:5432/ai_agents"
-  redis-url: "redis://:password@redis-service:6379/0"
-  openai-api-key: "sk-..." # Your actual API key
-  anthropic-api-key: "..." # Claude API key
-  jwt-secret-key: "your-secret-jwt-key-change-this"
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    name: production-secrets
+    kind: ClusterSecretStore
+  target:
+    name: ai-agent-secrets
+    creationPolicy: Owner
+  data:
+    - secretKey: database-url
+      remoteRef:
+        key: ai-agent/database-url
+    - secretKey: redis-url
+      remoteRef:
+        key: ai-agent/redis-url
+    - secretKey: openai-api-key
+      remoteRef:
+        key: ai-agent/openai-api-key
+    - secretKey: anthropic-api-key
+      remoteRef:
+        key: ai-agent/anthropic-api-key
+    - secretKey: jwt-secret-key
+      remoteRef:
+        key: ai-agent/jwt-secret-key
 
 ---
 # kubernetes/configmap.yaml
@@ -1667,7 +1686,7 @@ data:
   RATE_LIMIT_PERIOD: "60"
 
   # Model configuration
-  DEFAULT_LLM_MODEL: "gpt-4"
+  DEFAULT_LLM_MODEL: "gpt-4o"
   DEFAULT_LLM_TEMPERATURE: "0.7"
   DEFAULT_MAX_TOKENS: "2000"
 ```
@@ -2138,8 +2157,10 @@ from app.core.resilience import ResilientAIService
 from app.core.observability import ObservableAIAgent
 from app.core.security import PIIProtectionService
 from app.core.caching import SmartCacheService
+from asgiref.sync import async_to_sync
 from celery import Celery
 import structlog
+import os
 
 logger = structlog.get_logger()
 
@@ -2197,7 +2218,7 @@ def process_document_production(self, document_id: str, user_id: str):
             )
 
         # Execute agent with observability
-        result = await observable_agent.execute_with_observability(
+        result = async_to_sync(observable_agent.execute_with_observability)(
             task=f"Analyze financial document: {pii_result['redacted_text'][:500]}...",
             user_id=user_id,
             department=document.department,
@@ -2293,11 +2314,11 @@ class CostOptimizedLLMRouter:
     Route requests to most cost-effective model based on complexity.
 
     Model selection logic:
-    - Simple tasks (classification, extraction): GPT-3.5 Turbo ($0.002/1K tokens)
-    - Medium tasks (summarization, analysis): Claude 3 Haiku ($0.00025/1K tokens)
-    - Complex tasks (reasoning, multi-step): GPT-4 ($0.03/1K tokens)
+    - Simple tasks (classification, extraction): GPT-4o mini
+    - Medium tasks (summarization, analysis): Claude 3 Haiku
+    - Complex tasks (reasoning, multi-step): GPT-4o
 
-    Estimated savings: 70-80% compared to using GPT-4 for everything
+    Estimated savings depend on workload mix and current provider pricing.
     """
 
     MODEL_COSTS = {
@@ -2323,25 +2344,25 @@ class CostOptimizedLLMRouter:
         """
         if task_complexity == "simple":
             # Use cheapest model for simple tasks
-            return "claude-3-haiku"  # $0.00025/1K tokens
+            return "gpt-4o-mini"
 
         elif task_complexity == "medium":
-            # Use GPT-3.5 for medium complexity
-            return "gpt-3.5-turbo"  # $0.002/1K tokens
+            # Use a low-cost model for medium complexity
+            return "claude-haiku"
 
         else:  # complex
-            # Use GPT-4 only when necessary
+            # Use GPT-4o only when necessary
             if max_cost_per_request >= 0.15:
-                return "gpt-4"
+                return "gpt-4o"
             else:
                 # Fallback to cheaper model if budget constrained
                 logger.warning(
                     "cost_budget_constraint",
-                    requested_model="gpt-4",
-                    fallback_model="gpt-3.5-turbo",
+                    requested_model="gpt-4o",
+                    fallback_model="gpt-4o-mini",
                     max_cost=max_cost_per_request
                 )
-                return "gpt-3.5-turbo"
+                return "gpt-4o-mini"
 
     @staticmethod
     def estimate_cost(
@@ -2382,7 +2403,7 @@ class CostOptimizedLLMRouter:
 
         # Estimate cost for this request
         estimated_cost = CostOptimizedLLMRouter.estimate_cost(
-            model="gpt-4",
+            model="gpt-4o",
             prompt_tokens=len(task.split()) * 1.3,  # Rough estimate
             max_completion_tokens=1000
         )
@@ -2398,7 +2419,7 @@ class CostOptimizedLLMRouter:
             )
 
             # Offer cheaper alternative
-            cheaper_model = "gpt-3.5-turbo"
+            cheaper_model = "gpt-4o-mini"
             cheaper_cost = CostOptimizedLLMRouter.estimate_cost(
                 model=cheaper_model,
                 prompt_tokens=len(task.split()) * 1.3,
@@ -2408,7 +2429,7 @@ class CostOptimizedLLMRouter:
             if (current_spend + cheaper_cost) <= monthly_budget:
                 logger.info(
                     "using_cheaper_model_alternative",
-                    original_model="gpt-4",
+                    original_model="gpt-4o",
                     alternative_model=cheaper_model,
                     cost_savings=estimated_cost - cheaper_cost
                 )
@@ -2428,14 +2449,15 @@ model = router.select_model(
     task_complexity="simple",  # Classification task
     max_cost_per_request=0.05
 )
-# Returns: "claude-3-haiku" (cheapest option)
+# Returns: "gpt-4o-mini" (cheapest option)
 
 # Budget-controlled execution
-await router.execute_with_budget_control(
-    task="Analyze document...",
-    user_department="finance",
-    monthly_budget=5000.00  # $5K monthly cap
-)
+async def analyze_with_budget_control():
+    await router.execute_with_budget_control(
+        task="Analyze document...",
+        user_department="finance",
+        monthly_budget=5000.00  # $5K monthly cap
+    )
 ```
 
 **Result:** Reduced monthly LLM costs from $24K to $6K (75% reduction).
@@ -2568,7 +2590,10 @@ async def analyze_document_with_caching(document_text: str):
 
 
 # Production usage
-result = await analyze_document_with_caching(document.text)
+async def analyze_uploaded_document(document):
+    result = await analyze_document_with_caching(document.text)
+    return result
+
 # First call: Cache miss → LLM API call → Store result
 # Second call (same document): Cache hit → Instant response
 ```
@@ -2713,11 +2738,11 @@ class IncidentResponseToolkit:
 # Usage during production incident
 incident_toolkit = IncidentResponseToolkit()
 
-# Customer complains: "Request abc123 was very slow"
-debug_info = await incident_toolkit.debug_slow_request("abc123")
+async def inspect_slow_request(request_id: str):
+    debug_info = await incident_toolkit.debug_slow_request(request_id)
 
-print(f"Total duration: {debug_info['total_duration_ms']}ms")
-print(f"Top bottleneck: {debug_info['bottlenecks'][0]['operation']} ({debug_info['bottlenecks'][0]['duration_ms']}ms)")
+    print(f"Total duration: {debug_info['total_duration_ms']}ms")
+    print(f"Top bottleneck: {debug_info['bottlenecks'][0]['operation']} ({debug_info['bottlenecks'][0]['duration_ms']}ms)")
 
 # Output:
 # Total duration: 12,450ms
