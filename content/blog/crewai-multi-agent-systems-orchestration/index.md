@@ -3,7 +3,7 @@ title: "CrewAI Hierarchical Agents: Manager-Worker Orchestration"
 description: "Build hierarchical CrewAI crews with a manager agent delegating to specialized workers. Code examples for orchestration, task routing, and v0.98+ patterns."
 date: "2025-10-15"
 created_at: "2025-10-15T17:20:00Z"
-draft: false
+draft: true
 tags:
 - ai
 - crewai
