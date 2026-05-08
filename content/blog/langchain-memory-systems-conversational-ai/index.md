@@ -841,13 +841,13 @@ def test_windowed_memory_limits_context():
 
 ---
 
-## Ready to Build Stateful Conversational AI?
+## Where this fits in production
 
 Building conversational AI with memory transforms disconnected exchanges into natural, context-aware interactions. The patterns we've covered-from simple conversation buffers to sophisticated entity memory with production persistence-provide the foundation for production-ready AI assistants.
 
 The key is matching memory type to your use case: conversation buffers for short chats, summary memory for extended sessions, entity memory for relationship tracking, and vector stores for semantic search over large knowledge bases. With PostgreSQL and Redis persistence, you can scale these patterns to handle millions of conversations reliably.
 
-## Next Steps
+## What to build next
 
 **Start building stateful AI today:**
 

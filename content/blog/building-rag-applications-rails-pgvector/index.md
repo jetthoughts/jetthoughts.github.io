@@ -724,7 +724,7 @@ class EmbeddingJob < ApplicationJob
 end
 ```
 
-## Conclusion
+## Where to go from here
 
 That's a working RAG pipeline: pgvector for storage and search, OpenAI for embeddings and generation, Rails for everything else. No external vector database, no new infrastructure to manage.
 
