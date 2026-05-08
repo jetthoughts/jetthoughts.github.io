@@ -327,7 +327,7 @@ The honest test: if `bin/rails assets:precompile` finishes in under 10 seconds a
 
 ## Step-by-Step Migration from Sprockets to Propshaft
 
-Migrating from Sprockets to Propshaft requires systematic planning. If you're also upgrading Rails versions, handle that first—see [Rails performance optimization patterns](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) for the broader picture.
+Migrating from Sprockets to Propshaft requires systematic planning. If you're also upgrading Rails versions, handle that first—see [Rails performance optimization patterns](/blog/ruby-on-rails-performance-optimization-patterns-2026/) for the broader picture.
 
 ### Phase 1: Pre-Migration Assessment
 

@@ -870,7 +870,7 @@ end
 
 A medium-sized content platform was running a 5GB Redis cache that cost $450/month. Their team migrated the bulk of their caching to Solid Cache and kept Redis only for real-time features -- about 10% of the original usage. After the switch, their infrastructure bill dropped to $125/month (a 72% reduction). They maintained an 85% cache hit rate, and average response times went up by 12ms -- a tradeoff they accepted because their users never noticed the difference and their ops team stopped getting paged about Redis memory pressure.
 
-We've covered [Rails performance optimization strategies](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) in depth if you're looking at the broader picture beyond caching.
+We've covered [Rails performance optimization strategies](/blog/ruby-on-rails-performance-optimization-patterns-2026/) in depth if you're looking at the broader picture beyond caching.
 
 ### Case Study 2: E-commerce Application (Memcached, not Redis)
 

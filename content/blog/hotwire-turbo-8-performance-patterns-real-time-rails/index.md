@@ -1289,7 +1289,7 @@ Turbo 8 is a sharp knife. Here are the situations where it cuts you:
 - **Static content sites.** If your pages rarely change and don't need real-time updates, Turbo Drive adds 15KB of JavaScript overhead for minimal benefit. Traditional server rendering with aggressive HTTP caching is simpler and faster.
 - **Apps where you haven't solved N+1 queries yet.** Turbo Streams amplify existing performance problems. If your partials trigger N+1 queries, broadcasting those partials to 100 users multiplies the damage. Fix your [N+1 query patterns](/blog/how-avoid-n-1-keep-your-ruby-on-rails-controller-clean/) before adding real-time updates.
 
-For teams evaluating broader Rails performance optimization beyond Turbo, our guide on [optimizing Ruby on Rails performance](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) covers database, caching, and application-level patterns. If you're considering [Turbo-powered smart loading patterns](/blog/turbocharge-your-rails-apps-with-smart/), start there for the fundamentals.
+For teams evaluating broader Rails performance optimization beyond Turbo, our guide on [optimizing Ruby on Rails performance](/blog/ruby-on-rails-performance-optimization-patterns-2026/) covers database, caching, and application-level patterns. If you're considering [Turbo-powered smart loading patterns](/blog/turbocharge-your-rails-apps-with-smart/), start there for the fundamentals.
 
 ---
 

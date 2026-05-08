@@ -1112,4 +1112,4 @@ Your Rails application can absolutely scale to serve millions of users. With the
 
 **Need help scaling your Rails application?** Our team has guided dozens of companies through this exact journey. [Schedule a free consultation](/free-consultation/) to discuss your specific scaling challenges and get a customized roadmap for your growth.
 
-For more Rails optimization insights, check out our guides on [Ruby on Rails performance best practices](/blog/best-practices-for-optimizing-ruby-on-rails-performance/) and [speeding up your Rails test suite](/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/).
+For more Rails optimization insights, check out our guides on [Ruby on Rails performance best practices](/blog/ruby-on-rails-performance-optimization-patterns-2026/) and [speeding up your Rails test suite](/blog/speed-up-your-rails-test-suite-by-6-in-1-line-testing-ruby/).

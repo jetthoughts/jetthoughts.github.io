@@ -919,7 +919,7 @@ Ready to build an API that scales? [Contact us for an API development consultati
 
 Want to dive deeper into Rails API development? Check out these related guides:
 
-- [Ruby on Rails Performance Optimization: 15 Proven Techniques for Faster Applications](/blog/rails-performance-optimization-15-proven-techniques/)
+- [Ruby on Rails Performance Optimization: 15 Proven Techniques for Faster Applications](/blog/ruby-on-rails-performance-optimization-patterns-2026/)
 - [Rails 7 Upgrade Guide: Step-by-Step Migration from Rails 6](/blog/rails-7-upgrade-guide-step-by-step-migration/)
 - [Ruby on Rails Testing Strategy: Complete Guide to Unit Tests & Integration](/blog/ruby-on-rails-testing-strategy-unit-tests-integration/)
 

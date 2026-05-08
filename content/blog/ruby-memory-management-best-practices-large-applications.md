@@ -661,7 +661,7 @@ Ruby's GC behavior can be tuned via environment variables:
 
 ### GC tuning for production
 
-Memory optimization is a critical component of [overall Rails performance](/blog/rails-performance-optimization-15-proven-techniques/#memory-usage-optimization).
+Memory optimization is a critical component of [overall Rails performance](/blog/ruby-on-rails-performance-optimization-patterns-2026/#memory-usage-optimization).
 
 ```bash
 # Environment variables for GC tuning
@@ -1174,7 +1174,7 @@ Set up comprehensive monitoring to catch memory issues before they affect users.
 
 ### Production memory monitoring
 
-For comprehensive [performance monitoring best practices](/blog/rails-performance-optimization-15-proven-techniques/#identifying-performance-bottlenecks), combine memory tracking with broader performance metrics.
+For comprehensive [performance monitoring best practices](/blog/ruby-on-rails-performance-optimization-patterns-2026/#identifying-performance-bottlenecks), combine memory tracking with broader performance metrics.
 
 ```ruby
 # config/initializers/memory_monitoring.rb (production only)

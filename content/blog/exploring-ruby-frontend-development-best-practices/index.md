@@ -126,7 +126,7 @@ Don't forget about security! Protect your APIs and validate data on both the fro
 
 ### Optimizing Performance Metrics
 
-Let's talk speed. No one likes a slow website. With Ruby, you can make things _zippy_. A well-tuned Rails app can respond super fast, which makes users happy. It's all about keeping people engaged and not clicking away in frustration. Think of it like this: a fast site is a friendly site. You can use Ruby to handle data efficiently and streamline operations. This helps improve [performance in Ruby on Rails](https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance/).
+Let's talk speed. No one likes a slow website. With Ruby, you can make things _zippy_. A well-tuned Rails app can respond super fast, which makes users happy. It's all about keeping people engaged and not clicking away in frustration. Think of it like this: a fast site is a friendly site. You can use Ruby to handle data efficiently and streamline operations. This helps improve [performance in Ruby on Rails](https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/).
 
 *   Optimize database queries.
 *   Use caching strategies.
@@ -140,7 +140,7 @@ Ruby plays well with JavaScript. This is a big deal because JavaScript is what m
 
 ### Leveraging GraphQL for Efficiency
 
-GraphQL can change how you get data from the server. It lets you ask for exactly what you need, which means less data gets sent. This makes things faster. Some apps using GraphQL have seen response times improve by up to 30%. It's like ordering exactly what you want from a menu instead of getting the whole buffet. This is a great way to improve [restaurant feedback software](https://jetthoughts.com/blog/best-practices-for-optimizing-ruby-on-rails-performance/) and other applications.
+GraphQL can change how you get data from the server. It lets you ask for exactly what you need, which means less data gets sent. This makes things faster. Some apps using GraphQL have seen response times improve by up to 30%. It's like ordering exactly what you want from a menu instead of getting the whole buffet. This is a great way to improve [restaurant feedback software](https://jetthoughts.com/blog/ruby-on-rails-performance-optimization-patterns-2026/) and other applications.
 
 Here's a quick look at how GraphQL compares:
 
