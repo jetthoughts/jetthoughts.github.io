@@ -1,7 +1,7 @@
 ---
 title: "Testing and Monitoring LLM Applications: From Non-Deterministic Chaos to Production Confidence"
 description: "Building production LLM apps? Learn proven testing strategies for non-deterministic AI, LangSmith observability patterns, and monitoring frameworks that work. Complete guide with RSpec/pytest examples."
-date: 2026-05-08
+date: 2025-10-15
 draft: false
 tags: ["LLM testing", "LangChain", "AI monitoring", "LangSmith", "Testing", "Ruby on Rails", "Python"]
 categories: ["Development", "AI/ML", "Testing"]

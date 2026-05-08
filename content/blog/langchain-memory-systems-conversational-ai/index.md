@@ -1,7 +1,7 @@
 ---
 title: "Building Stateful Conversational AI with LangChain Memory Systems"
 description: "Master LangChain memory systems to build production-ready conversational AI with Python. Learn short-term, long-term, entity memory with PostgreSQL/Redis persistence, and real-world implementation patterns."
-date: 2026-05-08
+date: 2025-10-15
 draft: false
 tags: ["LangChain", "Conversational AI", "LangChain Memory", "Python", "AI Agents", "LangGraph", "PostgreSQL", "Redis"]
 categories: ["AI Development", "LangChain", "Python"]

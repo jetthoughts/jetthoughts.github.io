@@ -1,7 +1,7 @@
 ---
 title: 'Cost Optimization for LLM Applications: Managing Token Budgets and Scaling Efficiently'
 description: Learn proven strategies to reduce LLM costs by 30-60% in our experience through token management, caching optimization, prompt engineering, and smart model selection. Practical examples with cost tracking included.
-date: 2026-05-08
+date: 2025-10-15
 created_at: '2025-10-15T19:00:00Z'
 draft: false
 tags: ['ai', 'llm', 'cost-optimization', 'langchain', 'machine-learning']

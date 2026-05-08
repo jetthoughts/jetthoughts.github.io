@@ -16,7 +16,7 @@ tags:
   - infrastructure-costs
   - budget-management
   - founder-guide
-date: "2026-05-08"
+date: "2025-10-14"
 created_at: '2025-10-14T23:03:00Z'
 author: "JetThoughts"
 draft: false

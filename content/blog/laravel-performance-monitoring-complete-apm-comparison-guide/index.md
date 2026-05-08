@@ -1,7 +1,7 @@
 ---
 title: "Laravel + Datadog APM: Setup, Cost, and 3 Alternatives"
 description: "Datadog APM for Laravel: instrumentation steps, monthly cost at scale, and how it compares with New Relic, Scout, and Blackfire on real benchmarks."
-date: 2026-05-08
+date: 2025-10-27
 draft: false
 tags: ["laravel", "performance", "apm", "monitoring", "optimization"]
 canonical_url: "https://jetthoughts.com/blog/laravel-performance-monitoring-complete-apm-comparison-guide/"

@@ -1,7 +1,7 @@
 ---
 title: "LangChain Architecture Deep Dive: Building Production-Ready AI Agent Systems"
 description: "Master LangChain architecture for production with Python. Complete guide with error handling, testing strategies, and working code examples for scalable AI agent systems."
-date: 2026-05-08
+date: 2025-10-15
 created_at: '2025-10-15T17:15:00Z'
 draft: false
 tags:

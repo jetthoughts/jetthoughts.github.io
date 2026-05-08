@@ -1,7 +1,7 @@
 ---
 title: "Mastering LangGraph: Building Complex AI Agent Workflows with State Machines"
 description: "Learn to build production-ready AI agent workflows with LangGraph's state machines. Master node caching, deferred nodes, human-in-the-loop patterns, and map-reduce workflows with complete code examples."
-date: 2026-05-08
+date: 2025-10-15
 draft: false
 tags:
   - ai
