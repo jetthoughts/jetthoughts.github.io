@@ -27,7 +27,7 @@ Developers are worried.
 Leadership wants progress.
 And suddenly there’s a deadline that makes no sense.
 
-If you’re a **CTO, Head of Engineering, Director of Engineering, or Engineering Manager**, you know this moment well. It’s not a technical problem — it’s an *alignment* problem. And you’re the one who has to help everyone breathe.
+If you’re a **CTO, Head of Engineering, Director of Engineering, or Engineering Manager**, you know this moment well. It’s not a technical problem - it’s an *alignment* problem. And you’re the one who has to help everyone breathe.
 
 Let’s walk through how experienced tech leaders navigate these situations with clarity, honesty, and minimal chaos.
 
@@ -49,7 +49,7 @@ When they say,
 > “We need this to close the deal,”
 > they often mean it literally.
 
-### **Developers aren’t resisting — they’re protecting**
+### **Developers aren’t resisting - they’re protecting**
 
 Engineering sees the things others don’t:
 
@@ -73,7 +73,7 @@ Before arguing about the date, ask:
 * **What outcome makes this a win?**
 
 You’ll be surprised how often the true need is smaller, clearer, or easier than the original request.
-Clarity kills panic.
+Once everyone is naming the same constraints, the panic-room dynamic usually fades.
 
 ---
 
@@ -102,10 +102,7 @@ Here’s what really burns teams out:
 When developers say “this is risky,” they’re not complaining.
 They’re protecting the product the business depends on.
 
-A single rushed week creates months of future pain.
-This is not exaggeration — it’s physics.
-
-> “Shortcuts today become slowdown tomorrow.”
+A single rushed week creates months of follow-on rework. That ratio is what teams remember when the next deadline conversation starts.
 
 ---
 
@@ -138,22 +135,22 @@ Everyone understands this instantly.
 
 ## **7. Offer 3 Paths: Full, Phased, or “Good Enough”**
 
-Good leaders don’t say no — they create choices.
+Good leaders don’t say no - they create choices.
 
-**Option A — Full feature, with realistic time**
+**Option A - Full feature, with realistic time**
 Best quality, least risk.
 
-**Option B — Phase 1 now, Phase 2 later**
+**Option B - Phase 1 now, Phase 2 later**
 Fastest responsible outcome.
 
-**Option C — Temporary workaround**
+**Option C - Temporary workaround**
 Buys time without damaging the product.
 
 This turns “yes/no” into “which version?”
 
 ---
 
-## **8. Rushed Work Isn’t Just an Engineering Problem — It’s a Business Problem**
+## **8. Rushed Work Isn’t Just an Engineering Problem - It’s a Business Problem**
 
 A rushed feature doesn’t stay inside the codebase. It leaks.
 
@@ -186,7 +183,7 @@ That’s the loss you actually need to fear.
 * **Support load increasing**
 * **Reputation damage spreading quietly**
 
-Reputation is harder to fix than code.
+A reputation hit lasts longer than the rework that caused it.
 You can’t refactor a customer’s trust.
 
 ---
@@ -216,7 +213,7 @@ You are committing to a responsible minimum.
 
 ## **10. If This Happens Every Month, The System Is Broken**
 
-Repeated emergencies aren’t a team problem — they’re a **process** problem.
+Repeated emergencies aren’t a team problem - they’re a **process** problem.
 
 The usual root causes:
 
@@ -247,7 +244,7 @@ Great technical leaders:
 * offer realistic options
 * remind everyone that speed without quality isn’t speed
 
-Because the fastest way to kill trust — with customers or with your own team — is to ship sloppy features in the name of “moving fast.”
+Because the fastest way to kill trust - with customers or with your own team - is to ship sloppy features in the name of “moving fast.”
 
 And the fastest way to earn trust is simple:
 
