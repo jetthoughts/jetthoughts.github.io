@@ -173,5 +173,5 @@ Contact us for a **free consultation** where we'll assess your specific needs an
 **Ready to get started?**
 
 - [Emergency CTO Crisis Response](/services/emergency-cto-leadership/) for immediate technical disasters
-- [Fractional CTO Partnership](/services/fractional-cto-services/) for strategic growth planning
+- [Fractional CTO Partnership](/services/fractional-cto/) for strategic growth planning
 - [Engineering Health Assessment](/tools/engineering-health-assessment/) to identify current risks and opportunities

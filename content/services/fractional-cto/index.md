@@ -5,6 +5,9 @@ description: "Fractional CTO services for funded startups. Technical leadership 
 headline: Fractional CTO Services for Startups
 excerpt: Your dev shop isn't working. Your investors want a technical update. You need someone who can audit the code, fix the team, and give you a straight answer - without the $400K salary. Our fractional CTOs start in days, not months, at $5K-$15K/month.
 slug: fractional-cto
+aliases:
+  - /services/fractional-cto-services/
+  - /services/startup-cto-consulting/
 author: Paul Keen
 cover_image: on-demand-fractional-ctos.jpeg
 

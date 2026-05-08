@@ -17,6 +17,8 @@ Laravel 11 rips out the boilerplate. New projects ship with roughly half the sca
 
 This guide walks through the breaking changes, step-by-step migration, testing strategies, and zero-downtime deployment for moving from Laravel 10 to Laravel 11. If you're weighing PHP vs. Python migration complexity, compare with our [Django 5.0 enterprise migration strategies](/blog/django-5-enterprise-migration-guide-production-strategies/). For teams already on Laravel and adding AI capabilities, see our [Laravel AI integration tutorial](/blog/laravel-ai-integration-tutorial-complete-guide/). And if your deployment pipeline needs attention before the upgrade, check out [automating deployments with Kamal 2 and GitHub Actions](/blog/automate-your-deployments-with-kamal-2-github-actions-devops-development/).
 
+> **Heads up on the upgrade target.** Laravel 11's security support ended on March 12, 2026; Laravel 12 receives security fixes through February 24, 2027. Plan to land on Laravel 12 if you're starting the migration today - the 10 -> 11 -> 12 path is the supported route. Most of this guide applies to both jumps; the bootstrap/app.php and casts() patterns are unchanged in 12.
+
 ## Breaking Changes Analysis: What Laravel 11 Changes
 
 Laravel 11's improvements come with breaking changes that affect application architecture, configuration management, and framework behavior. Understanding these changes before migration prevents surprises and enables accurate effort estimation. To avoid accumulating new technical debt during migration, review our [Django technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/)—the same patterns apply to Laravel applications for quantifying debt impact and prioritizing elimination efforts alongside framework upgrades.
@@ -143,10 +145,14 @@ Laravel 11 introduces route-based configuration, eliminating separate configurat
 
 // Laravel 11: Route-based configuration
 // bootstrap/app.php
+//
+// IMPORTANT: routes/api.php is opt-in in Laravel 11. New apps don't get
+// it by default - run `php artisan install:api` to add it (and the
+// Sanctum dependency). Don't reference it here unless that file exists.
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
-        api: __DIR__.'/../routes/api.php',
+        // api: __DIR__.'/../routes/api.php',     // only after `install:api`
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
@@ -349,9 +355,11 @@ class User extends Model
 }
 ```
 
-#### Eloquent Model `casts` Method
+#### Eloquent Model `casts()` Method
 
-Laravel 11 introduces the `casts()` method as an alternative to the `$casts` property:
+The `casts()` method shipped in Laravel 10.10 (not 11) as an alternative to
+the `$casts` property. It's still the right place to centralize cast logic
+when you migrate to 11:
 
 ```php
 // Laravel 10: Using $casts property
@@ -718,7 +726,9 @@ use Illuminate\Foundation\Configuration\Middleware;
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
-        api: __DIR__.'/../routes/api.php',
+        // Add the api: line only after running `php artisan install:api`,
+        // which scaffolds routes/api.php and installs Sanctum.
+        // api: __DIR__.'/../routes/api.php',
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )

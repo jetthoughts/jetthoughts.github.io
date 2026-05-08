@@ -2,6 +2,7 @@
 title: "Testing and Monitoring LLM Applications: From Non-Deterministic Chaos to Production Confidence"
 description: "Building production LLM apps? Learn proven testing strategies for non-deterministic AI, LangSmith observability patterns, and monitoring frameworks that work. Complete guide with RSpec/pytest examples."
 date: 2025-10-15
+draft: false
 tags: ["LLM testing", "LangChain", "AI monitoring", "LangSmith", "Testing", "Ruby on Rails", "Python"]
 categories: ["Development", "AI/ML", "Testing"]
 author: "JetThoughts Team"
@@ -16,7 +17,7 @@ metatags:
 
 ## The Challenge: How Do You Test Something That's Never the Same Twice?
 
-You've built your first LLM-powered feature. It works beautifully in development. But how do you know it won't generate embarrassing responses in production? How do you catch regressions when your AI model updates? And most importantly—how do you sleep at night knowing your tests can't guarantee consistent behavior?
+You've built your first LLM-powered feature. It works beautifully in development. But how do you know it won't generate embarrassing responses in production? How do you catch regressions when your AI model updates? And most importantly - how do you sleep at night knowing your tests can't guarantee consistent behavior?
 
 ## Our Approach: From Prevention to Production Monitoring
 
@@ -257,7 +258,7 @@ RSpec.describe PromptBuilder do
 end
 ```
 
-> **💡 Testing Philosophy**: Unit tests should validate *your code*, not the LLM. Mock responses and test error handling, retries, and data transformation logic.
+Unit tests should validate your code, not the LLM. Mock responses and test error handling, retries, and data transformation logic.
 
 ---
 
@@ -408,7 +409,7 @@ RSpec.describe 'LLM Output Properties' do
 end
 ```
 
-> **💡 Key Insight**: Don't test exact strings. Test properties (format, length, safety) and semantic meaning (intent, sentiment, information preservation).
+Don't test exact strings. Test properties (format, length, safety) and semantic meaning (intent, sentiment, information preservation).
 
 ---
 
@@ -433,15 +434,16 @@ langsmith_client = Client(
 # Wrap OpenAI client for automatic tracing
 openai_client = wrap_openai(OpenAI())
 
-def track_llm_call(prompt, response, metadata=None):
-    """Track LLM calls in LangSmith for observability"""
-    langsmith_client.create_run(
-        name="llm_generation",
-        run_type="llm",
-        inputs={"prompt": prompt},
-        outputs={"response": response},
-        extra=metadata or {}
-    )
+# Use the @traceable decorator for any function you want to track.
+# LangSmith captures inputs, outputs, latency, and token usage automatically.
+from langsmith import traceable
+
+@traceable(run_type="llm")
+def my_llm_call(prompt: str) -> str:
+    return openai_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}]
+    ).choices[0].message.content
 ```
 
 ### Creating LangSmith Evaluation Datasets
@@ -581,22 +583,30 @@ def test_customer_support_prompt_regression():
 
         return {"response": response}
 
-    # Run evaluation
+    # Run evaluation - pass dataset.name (string), not the Dataset object
     results = evaluate(
         generate_support_response,
-        data=dataset,
+        data=dataset.name,
         evaluators=[evaluate_customer_support_response],
         experiment_prefix="customer_support_v2"
     )
 
-    # Assert minimum quality threshold
-    assert results["results"][0]["evaluation_results"]["score"] >= 0.75, \
-        "Customer support prompt regression detected! Scores below threshold."
+    # ExperimentResults exposes .to_pandas() and is iterable.
+    # Pull scores from the resulting DataFrame.
+    df = results.to_pandas()
+    score_columns = [c for c in df.columns if c.startswith("feedback.")]
+    assert score_columns, "No evaluator feedback found in results"
 
-    print(f"✓ Prompt regression tests passed. Average score: {results['results'][0]['evaluation_results']['score']:.2f}")
+    average_score = df[score_columns].mean().mean()
+
+    # Assert minimum quality threshold
+    assert average_score >= 0.75, \
+        f"Customer support prompt regression detected! Average score: {average_score:.2f}"
+
+    print(f"Prompt regression tests passed. Average score: {average_score:.2f}")
 ```
 
-> **💡 Best Practice**: Run LangSmith evaluations in CI/CD pipeline before deploying prompt changes. Catch regressions before users do.
+Run LangSmith evaluations in your CI/CD pipeline before deploying prompt changes. Catch regressions before users do.
 
 ---
 
@@ -725,7 +735,7 @@ class LLMMonitoringMiddleware
       response = @llm_client.call(prompt, options)
 
       @monitor.track_llm_call(
-        model: options[:model] || 'gpt-4',
+        model: options[:model] || 'gpt-4o',
         endpoint: options[:endpoint],
         duration_ms: ((Time.current - start_time) * 1000).to_i,
         prompt_tokens: response.usage.prompt_tokens,
@@ -740,7 +750,7 @@ class LLMMonitoringMiddleware
 
     rescue => error
       @monitor.track_llm_call(
-        model: options[:model] || 'gpt-4',
+        model: options[:model] || 'gpt-4o',
         endpoint: options[:endpoint],
         duration_ms: ((Time.current - start_time) * 1000).to_i,
         status: 'error',
@@ -756,15 +766,16 @@ class LLMMonitoringMiddleware
   private
 
   def calculate_cost(usage, model)
+    # Rates are USD per 1M tokens (current OpenAI pricing).
     rates = {
-      'gpt-4' => { input: 0.03, output: 0.06 },
-      'gpt-3.5-turbo' => { input: 0.0015, output: 0.002 }
+      'gpt-4o' => { input: 2.50, output: 10.00 },
+      'gpt-4o-mini' => { input: 0.15, output: 0.60 }
     }
 
-    rate = rates[model] || rates['gpt-4']
+    rate = rates[model] || rates['gpt-4o']
 
-    input_cost = (usage.prompt_tokens / 1000.0) * rate[:input]
-    output_cost = (usage.completion_tokens / 1000.0) * rate[:output]
+    input_cost = (usage.prompt_tokens / 1_000_000.0) * rate[:input]
+    output_cost = (usage.completion_tokens / 1_000_000.0) * rate[:output]
 
     input_cost + output_cost
   end
@@ -887,7 +898,7 @@ def monitor_llm_call(response_data):
         )
 ```
 
-> **💡 Critical Metrics to Track**: Latency, token usage, costs, error rates, user feedback scores, safety violations, and output quality drift.
+The critical metrics to track: latency, token usage, costs, error rates, user feedback scores, safety violations, and output quality drift.
 
 ---
 
@@ -1059,7 +1070,7 @@ LLM Application Monitoring:
 
 ## Ready to Ship LLM Applications with Confidence?
 
-Testing and monitoring LLM applications requires a fundamentally different approach than traditional software. But with the right layers—mocked unit tests, semantic integration tests, prompt regression testing, production monitoring, and quality metrics—you can build reliable AI-powered features.
+Testing and monitoring LLM applications requires a fundamentally different approach than traditional software. But with the right layers - mocked unit tests, semantic integration tests, prompt regression testing, production monitoring, and quality metrics - you can build reliable AI-powered features.
 
 The key is accepting non-determinism while building defensive layers of validation. Start with fast unit tests using mocks, add semantic assertions for integration tests, implement LangSmith evaluations for prompt changes, and monitor everything in production.
 
@@ -1105,4 +1116,4 @@ Want to dive deeper into LLM development? Check out these related guides:
 
 ---
 
-**The JetThoughts Team** has been building production AI/ML systems and scalable Rails applications for 18+ years. Our engineers have architected LLM-powered platforms processing millions of AI interactions daily while maintaining reliability and cost efficiency. Follow us on [LinkedIn](https://linkedin.com/company/jetthoughts) for more AI/ML development insights.
+**The JetThoughts Team** has shipped LLM features for clients since 2023, layered on top of nearly two decades of Rails consulting work. Follow us on [LinkedIn](https://linkedin.com/company/jetthoughts) for more AI/ML development insights.

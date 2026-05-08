@@ -198,9 +198,9 @@ Total transition time: ~250ms
 # Cache remains valid until navigation away from page
 
 # Cache invalidation strategies:
-# 1. Time-based: data-turbo-frame-cache="false"
-# 2. Event-based: Manual cache clearing
-# 3. Automatic: Turbo detects stale content
+# 1. Per-page disable: <meta name="turbo-cache-control" content="no-cache">
+# 2. Per-element preserve: data-turbo-permanent (skip on cached snapshots)
+# 3. Default: Turbo replaces cache on navigation away
 ```
 
 Our benchmarks show **90% reduction in server load** for frequently accessed frames through intelligent caching.
@@ -237,20 +237,40 @@ Full page refresh: 450ms
 
 #### 4. Page Refresh: Instant Perceived Updates
 
-Turbo 8's signature feature - instant page refresh with morphing:
+Turbo 8's signature feature is page morphing, but it is opt-in. The page must
+declare `<meta name="turbo-refresh-method" content="morph">` (and usually
+`<meta name="turbo-refresh-scroll" content="preserve">`) for the `refresh`
+stream action to morph instead of full-reload. The clean Rails-side API is
+`broadcasts_refreshes` on the model:
+
+```ruby
+# app/models/post.rb
+class Post < ApplicationRecord
+  broadcasts_refreshes
+end
+```
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<%= turbo_refresh_method_tag "morph" %>
+<%= turbo_refresh_scroll_tag "preserve" %>
+```
 
 ```text
-<!-- Server sends refresh signal -->
-<turbo-stream action="refresh"></turbo-stream>
+<!-- Server emits this when the model touches: -->
+<turbo-stream action="refresh" request-id="..."></turbo-stream>
 
-<!-- Turbo automatically:
+<!-- With the meta tags above, Turbo:
   1. Fetches current page HTML
-  2. Diffs new vs current DOM
-  3. Morphs only changed elements
-  4. Preserves scroll position
-  5. Maintains form state
+  2. Morphs the DOM (Idiomorph) instead of replacing
+  3. Preserves scroll position
+  4. Preserves elements marked data-turbo-permanent
 -->
 ```
+
+Trade-off: morphing is destructive to client-side state in non-permanent
+nodes. Mark inputs, dropdowns, and stateful Stimulus targets with
+`data-turbo-permanent` if they need to survive the morph.
 
 ### Morphing performance
 
@@ -267,18 +287,20 @@ Morph update: 23ms (update only 50 changed nodes)
 #### HTTP/2 Push and Preload
 
 ```erb
-<!-- Preload critical frames -->
+<!-- Preload links Turbo will follow on click -->
+<%= link_to "Profile", user_path(@user), data: { turbo_preload: true } %>
+
+<!-- For lazy-loaded frames, use loading="lazy" -->
 <%= turbo_frame_tag "user_profile",
       src: user_path(@user),
-      loading: "eager",
-      data: {
-        turbo_preload: true,
-        turbo_priority: "high"
-      } %>
+      loading: "lazy" %>
 
-<!-- Turbo initiates fetch before frame becomes visible -->
-<!-- Perceived load time: 0ms (content already loaded) -->
+<!-- Tune the prefetch cache lifetime if needed -->
+<meta name="turbo-prefetch-cache-time" content="600000">
 ```
+
+Note: `data-turbo-priority` is not a Turbo attribute. The cache TTL knob is
+the meta tag above (milliseconds), not a per-frame value.
 
 #### Connection Multiplexing
 
@@ -306,27 +328,37 @@ const subscriptions = [
 ```ruby
 # config/environments/production.rb
 Rails.application.configure do
-  # Aggressive caching for Turbo-enabled apps
+  # Aggressive caching for static assets
   config.public_file_server.headers = {
-    'Cache-Control' => 'public, s-maxage=31536000, immutable',
-    'Expires' => 1.year.from_now.to_formatted_s(:rfc822)
+    'Cache-Control' => 'public, s-maxage=31536000, immutable'
   }
-
-  # Turbo-specific cache headers
-  config.action_controller.default_static_extension = ".html"
-  config.action_dispatch.default_headers.merge!({
-    'Turbo-Cache-Control' => 'no-preview'  # Disable preview cache for stale data
-  })
 end
 ```
+
+```erb
+<!-- Disable Turbo's preview cache on a per-page basis -->
+<!-- app/views/admin/dashboard.html.erb -->
+<% content_for :head do %>
+  <meta name="turbo-cache-control" content="no-preview">
+<% end %>
+```
+
+Turbo cache control is page-level, not a Rails response header. The values
+are `no-cache` (skip the snapshot cache entirely) or `no-preview` (use the
+cache but skip rendering it as a preview).
 
 #### Frame-Level Cache Control
 
 ```erb
-<!-- Cache frame for 5 minutes -->
+<!-- There is no per-frame TTL attribute. To prevent stale frame content,
+     use one of: page-level cache control via meta tag
+     (`<meta name="turbo-cache-control" content="no-cache">` or `no-preview`),
+     call `frame.reload()` (FrameElement) to refresh a specific frame, or
+     update frames via Turbo Streams. Note: data-turbo-action only affects
+     visit history behavior (replace vs. advance), not cache invalidation. -->
 <turbo-frame id="trending_posts"
              src="/posts/trending"
-             data-turbo-cache="300">
+             loading="lazy">
   Loading...
 </turbo-frame>
 
@@ -1044,19 +1076,19 @@ end
 ```ruby
 # config/environments/production.rb
 Rails.application.configure do
-  # Ensure Turbo assets are fingerprinted
-  config.assets.digest = true
-
-  # Set appropriate cache headers
+  # Set appropriate cache headers for fingerprinted assets
   config.public_file_server.headers = {
     'Cache-Control' => 'public, s-maxage=31536000, immutable'
   }
-
-  # Turbo preview cache control
-  config.action_controller.default_headers.merge!({
-    'Turbo-Cache-Control' => 'no-preview'
-  })
 end
+```
+
+Per-page Turbo cache control belongs in the layout, not in Rails config:
+
+```erb
+<!-- app/views/layouts/application.html.erb -->
+<%= turbo_refresh_method_tag "morph" %>
+<meta name="turbo-cache-control" content="no-preview">
 ```
 
 ### Production Checklist

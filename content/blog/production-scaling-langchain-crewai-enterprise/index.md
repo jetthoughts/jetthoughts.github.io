@@ -2,6 +2,7 @@
 title: "From Prototype to Production: Scaling LangChain and CrewAI Applications in Enterprise Environments"
 description: "Complete enterprise guide to scaling LangChain and CrewAI from prototype to production. Covers architecture patterns, security, compliance, monitoring, and real-world case study with 80% improvement metrics."
 date: 2025-10-15
+draft: false
 tags: ["LangChain", "CrewAI", "Enterprise AI", "Production Scaling", "AI Architecture", "FastAPI", "Docker", "Kubernetes", "Observability", "Security"]
 categories: ["AI Development", "Enterprise Architecture", "DevOps"]
 author: "JetThoughts Team"
@@ -16,13 +17,15 @@ metatags:
 
 ## The Challenge
 
-Your LangChain or CrewAI prototype works beautifully in development. But production? That's where things get complicated—security audits, compliance requirements, monitoring dashboards, and the pressure to handle millions of requests without breaking.
+Your LangChain or CrewAI prototype works beautifully in development. But production? That's where things get complicated-security audits, compliance requirements, monitoring dashboards, and the pressure to handle millions of requests without breaking.
+
+> **Editorial note:** This post focuses on the Python infrastructure side of scaling AI services (FastAPI, Kubernetes, observability) rather than framework-specific code. For LangChain v0.1+ Runnable patterns (`with_retry()`, `with_fallbacks()`, LCEL composition) see the official docs. For CrewAI `Crew(...).kickoff_async()` patterns see crewai.com/docs.
 
 ## Our Approach
 
 Take your AI agent from laptop to enterprise-grade deployment with battle-tested architecture patterns, security frameworks, and operational excellence. We'll walk through real-world production scaling that delivered 80% faster resolution times.
 
-When Klarna deployed their LangChain-powered customer support assistant, they weren't just experimenting—they were putting an AI system in front of **85 million active users**. The result? An **80% reduction in customer resolution time** and millions of dollars saved.
+When Klarna (LangGraph) deployed their LangChain-powered customer support assistant, they weren't just experimenting-they were putting an AI system in front of **85 million active users**. The result? An **80% reduction in customer resolution time** and millions of dollars saved.
 
 That's the gap between prototype and production. Your LangChain or CrewAI application might work perfectly on your laptop, but scaling to handle enterprise workloads requires a completely different mindset.
 
@@ -154,13 +157,13 @@ developer_experience:
     - Onboarding guides for new team members
 ```
 
-If you're missing any of these components, you're not ready for enterprise production. Let's build them systematically.
+If you're missing any of these components, you're not ready for enterprise production. The next sections walk through each one.
 
 ---
 
 ## Production architecture patterns for LangChain and CrewAI
 
-Let's design an architecture that enterprise operations teams can actually deploy, monitor, and maintain at scale.
+Enterprise operations teams need an architecture they can actually deploy, monitor, and maintain at scale. Here's the pattern we land on.
 
 ### Core architecture principles
 
@@ -208,12 +211,13 @@ In production, everything fails. Plan for it:
 
 ```python
 # app/core/resilience.py
-from typing import Callable, TypeVar, Optional
+from typing import Optional
+import asyncio
 from tenacity import retry, stop_after_attempt, wait_exponential
 from circuitbreaker import circuit
+from circuitbreaker import CircuitBreakerError
 import logging
 
-T = TypeVar('T')
 logger = logging.getLogger(__name__)
 
 
@@ -237,7 +241,7 @@ class ResilientAIService:
     async def call_llm_with_resilience(
         self,
         prompt: str,
-        model: str = "gpt-4",
+        model: str = "gpt-4o",
         timeout: int = 30,
         fallback_response: Optional[str] = None
     ) -> str:
@@ -251,7 +255,7 @@ class ResilientAIService:
 
         Args:
             prompt: Input prompt for LLM
-            model: Model identifier (e.g., "gpt-4", "claude-3")
+            model: Model identifier (e.g., "gpt-4o", "claude-haiku")
             timeout: Maximum seconds to wait for response
             fallback_response: Response to return if all retries fail
 
@@ -285,20 +289,20 @@ class ResilientAIService:
             raise
 
 
-# Usage in production:
-resilient_service = ResilientAIService()
+async def handle_customer_query(prompt: str) -> str:
+    resilient_service = ResilientAIService()
 
-try:
-    response = await resilient_service.call_llm_with_resilience(
-        prompt="Analyze this customer query...",
-        model="gpt-4",
-        timeout=30,
-        fallback_response="I'm experiencing high load. Please try again in a moment."
-    )
-except CircuitBreakerError:
-    # Circuit is open - too many consecutive failures
-    # Serve cached response or gracefully degrade
-    response = get_cached_response() or DEFAULT_RESPONSE
+    try:
+        return await resilient_service.call_llm_with_resilience(
+            prompt=prompt,
+            model="gpt-4o",
+            timeout=30,
+            fallback_response="I'm experiencing high load. Please try again in a moment."
+        )
+    except CircuitBreakerError:
+        # Circuit is open - too many consecutive failures
+        # Serve cached response or gracefully degrade
+        return get_cached_response() or DEFAULT_RESPONSE
 ```
 
 **Why this matters:** When OpenAI has a 30-second outage, your entire application shouldn't go down with it. Circuit breakers prevent cascade failures.
@@ -515,7 +519,7 @@ def setup_observability(app):
     logger.info("observability_configured", exporters=["jaeger", "prometheus"])
 ```
 
-**Why this matters:** When a customer reports "the AI is slow today," you need data—not guesses. Observability tells you exactly which model, which prompt, and which infrastructure component is the bottleneck.
+**Why this matters:** When a customer reports "the AI is slow today," you need data-not guesses. Observability tells you exactly which model, which prompt, and which infrastructure component is the bottleneck.
 
 ### Production-ready FastAPI integration
 
@@ -763,13 +767,13 @@ if __name__ == "__main__":
 - **Reliability:** Health checks, graceful degradation, background tasks
 - **Scalability:** Multi-worker support, compression, efficient routing
 
-This isn't a prototype anymore—it's production infrastructure.
+This isn't a prototype anymore-it's production infrastructure.
 
 ---
 
 ## Security and compliance framework
 
-Let's implement the security patterns that pass enterprise audits.
+Here are the security patterns that pass enterprise audits.
 
 ### API authentication and authorization
 
@@ -1044,12 +1048,11 @@ async def get_current_user(
 
 def require_role(required_role: str):
     """
-    Decorator factory for role-based access control (RBAC).
+    Dependency factory for role-based access control (RBAC).
 
     Usage:
         @app.get("/admin/users")
-        @require_role("admin")
-        async def list_users(current_user = Depends(get_current_user)):
+        async def list_users(current_user = require_role("admin")):
             # Only users with "admin" role can access
             pass
     """
@@ -1283,7 +1286,7 @@ class PrivacyAwareLangChainAgent:
                 "pii_detected_and_protected",
                 user_id=user_id,
                 entities_found=protection_result.get("entities_found", []),
-                original_hash=protection_result["original_hash"],
+                original_hash=protection_result.get("original_hash"),
                 redaction_mode=redaction_mode
             )
 
@@ -1303,23 +1306,25 @@ class PrivacyAwareLangChainAgent:
 # Usage example
 agent = PrivacyAwareLangChainAgent(langchain_agent, enable_pii_protection=True)
 
-response = await agent.execute_with_privacy(
-    prompt="Analyze customer record: John Doe, SSN 123-45-6789, email john@example.com",
-    user_id="user_12345",
-    redaction_mode="redact"
-)
+async def analyze_customer_record():
+    response = await agent.execute_with_privacy(
+        prompt="Analyze customer record: John Doe, SSN 123-45-6789, email john@example.com",
+        user_id="user_12345",
+        redaction_mode="redact"
+    )
+    return response
 
 # Prompt sent to external API:
 # "Analyze customer record: XXXX XXX, SSN XXXXXXXXXXX, email XXXXXXXXXXXXXXXXXXXXX"
 ```
 
-**Why this matters:** When your AI application processes customer support tickets, employee records, or financial documents, you're handling PII. One data breach could cost millions in fines and destroy customer trust. Automated PII protection isn't optional—it's mandatory.
+**Why this matters:** When your AI application processes customer support tickets, employee records, or financial documents, you're handling PII. One data breach could cost millions in fines and destroy customer trust. Automated PII protection isn't optional-it's mandatory.
 
 ---
 
 ## Docker and Kubernetes deployment
 
-Let's containerize and orchestrate your AI application for production scalability.
+Containerize and orchestrate the AI application so it scales predictably under production load.
 
 ### Production-grade Dockerfile
 
@@ -1625,21 +1630,38 @@ spec:
 ### Secrets and ConfigMaps
 
 ```yaml
-# kubernetes/secrets.yaml
-# NEVER commit this file to git. Use sealed-secrets or vault.
+# kubernetes/externalsecret.yaml
+# Store real values in AWS Secrets Manager, HashiCorp Vault, or another backend.
 ---
-apiVersion: v1
-kind: Secret
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
 metadata:
   name: ai-agent-secrets
   namespace: production
-type: Opaque
-stringData:
-  database-url: "postgresql://user:password@postgres-service:5432/ai_agents"
-  redis-url: "redis://:password@redis-service:6379/0"
-  openai-api-key: "sk-..." # Your actual API key
-  anthropic-api-key: "..." # Claude API key
-  jwt-secret-key: "your-secret-jwt-key-change-this"
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    name: production-secrets
+    kind: ClusterSecretStore
+  target:
+    name: ai-agent-secrets
+    creationPolicy: Owner
+  data:
+    - secretKey: database-url
+      remoteRef:
+        key: ai-agent/database-url
+    - secretKey: redis-url
+      remoteRef:
+        key: ai-agent/redis-url
+    - secretKey: openai-api-key
+      remoteRef:
+        key: ai-agent/openai-api-key
+    - secretKey: anthropic-api-key
+      remoteRef:
+        key: ai-agent/anthropic-api-key
+    - secretKey: jwt-secret-key
+      remoteRef:
+        key: ai-agent/jwt-secret-key
 
 ---
 # kubernetes/configmap.yaml
@@ -1664,7 +1686,7 @@ data:
   RATE_LIMIT_PERIOD: "60"
 
   # Model configuration
-  DEFAULT_LLM_MODEL: "gpt-4"
+  DEFAULT_LLM_MODEL: "gpt-4o"
   DEFAULT_LLM_TEMPERATURE: "0.7"
   DEFAULT_MAX_TOKENS: "2000"
 ```
@@ -1682,7 +1704,7 @@ This is production-grade infrastructure that passes enterprise scrutiny.
 
 ## Observability and monitoring setup
 
-Let's implement the monitoring stack that tells you *exactly* what's happening in production.
+This is the monitoring stack that tells you *exactly* what's happening in production.
 
 ### Prometheus and Grafana configuration
 
@@ -2083,7 +2105,7 @@ When something breaks at 3 AM, you'll know exactly what, where, and why.
 
 ## Real-world production case study
 
-Let me walk you through a real enterprise deployment—what worked, what didn't, and what we learned.
+Let me walk you through a real enterprise deployment-what worked, what didn't, and what we learned.
 
 ### Project overview: Document intelligence platform
 
@@ -2106,15 +2128,17 @@ Let me walk you through a real enterprise deployment—what worked, what didn't,
 **Week 1-4: Prototype (Local Development)**
 ```python
 # Initial prototype (worked on laptop, failed in production)
-from langchain import OpenAI, PromptTemplate
-from langchain.chains import LLMChain
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
-llm = OpenAI(api_key="sk-...")  # Hardcoded API key (security issue!)
-prompt = PromptTemplate(template="Analyze this document: {text}")
-chain = LLMChain(llm=llm, prompt=prompt)
+model = ChatOpenAI(api_key="sk-...", model="gpt-4o")  # Hardcoded API key (security issue!)
+prompt = ChatPromptTemplate.from_template("Analyze this document: {text}")
+parser = StrOutputParser()
+chain = prompt | model | parser  # LCEL composition
 
 def process_document(document_text):
-    return chain.run(text=document_text)  # No error handling, no retries, no logging
+    return chain.invoke({"text": document_text})  # No error handling, no retries, no logging
 
 # This worked for 10 test documents. It failed for 50,000 production documents.
 ```
@@ -2133,8 +2157,10 @@ from app.core.resilience import ResilientAIService
 from app.core.observability import ObservableAIAgent
 from app.core.security import PIIProtectionService
 from app.core.caching import SmartCacheService
+from asgiref.sync import async_to_sync
 from celery import Celery
 import structlog
+import os
 
 logger = structlog.get_logger()
 
@@ -2192,7 +2218,7 @@ def process_document_production(self, document_id: str, user_id: str):
             )
 
         # Execute agent with observability
-        result = await observable_agent.execute_with_observability(
+        result = async_to_sync(observable_agent.execute_with_observability)(
             task=f"Analyze financial document: {pii_result['redacted_text'][:500]}...",
             user_id=user_id,
             department=document.department,
@@ -2288,19 +2314,17 @@ class CostOptimizedLLMRouter:
     Route requests to most cost-effective model based on complexity.
 
     Model selection logic:
-    - Simple tasks (classification, extraction): GPT-3.5 Turbo ($0.002/1K tokens)
-    - Medium tasks (summarization, analysis): Claude 3 Haiku ($0.00025/1K tokens)
-    - Complex tasks (reasoning, multi-step): GPT-4 ($0.03/1K tokens)
+    - Simple tasks (classification, extraction): GPT-4o mini
+    - Medium tasks (summarization, analysis): Claude 3 Haiku
+    - Complex tasks (reasoning, multi-step): GPT-4o
 
-    Estimated savings: 70-80% compared to using GPT-4 for everything
+    Estimated savings depend on workload mix and current provider pricing.
     """
 
-    COST_PER_1K_TOKENS = {
-        "gpt-4": 0.03,
-        "gpt-3.5-turbo": 0.002,
-        "claude-3-haiku": 0.00025,
-        "claude-3-sonnet": 0.003,
-        "claude-3-opus": 0.015,
+    MODEL_COSTS = {
+        "gpt-4o":         {"input_per_1m": 2.50, "output_per_1m": 10.00},
+        "gpt-4o-mini":    {"input_per_1m": 0.15, "output_per_1m": 0.60},
+        "claude-haiku":   {"input_per_1m": 0.25, "output_per_1m": 1.25},
     }
 
     @staticmethod
@@ -2320,25 +2344,25 @@ class CostOptimizedLLMRouter:
         """
         if task_complexity == "simple":
             # Use cheapest model for simple tasks
-            return "claude-3-haiku"  # $0.00025/1K tokens
+            return "gpt-4o-mini"
 
         elif task_complexity == "medium":
-            # Use GPT-3.5 for medium complexity
-            return "gpt-3.5-turbo"  # $0.002/1K tokens
+            # Use a low-cost model for medium complexity
+            return "claude-haiku"
 
         else:  # complex
-            # Use GPT-4 only when necessary
+            # Use GPT-4o only when necessary
             if max_cost_per_request >= 0.15:
-                return "gpt-4"
+                return "gpt-4o"
             else:
                 # Fallback to cheaper model if budget constrained
                 logger.warning(
                     "cost_budget_constraint",
-                    requested_model="gpt-4",
-                    fallback_model="gpt-3.5-turbo",
+                    requested_model="gpt-4o",
+                    fallback_model="gpt-4o-mini",
                     max_cost=max_cost_per_request
                 )
-                return "gpt-3.5-turbo"
+                return "gpt-4o-mini"
 
     @staticmethod
     def estimate_cost(
@@ -2347,10 +2371,12 @@ class CostOptimizedLLMRouter:
         max_completion_tokens: int
     ) -> float:
         """Estimate total cost for request before execution."""
-        cost_per_1k = CostOptimizedLLMRouter.COST_PER_1K_TOKENS.get(model, 0.03)
-        total_tokens = prompt_tokens + max_completion_tokens
-        estimated_cost = (total_tokens / 1000) * cost_per_1k
-        return estimated_cost
+        pricing = CostOptimizedLLMRouter.MODEL_COSTS.get(
+            model, {"input_per_1m": 2.50, "output_per_1m": 10.00}
+        )
+        input_cost = (prompt_tokens / 1_000_000) * pricing["input_per_1m"]
+        output_cost = (max_completion_tokens / 1_000_000) * pricing["output_per_1m"]
+        return input_cost + output_cost
 
     @staticmethod
     async def execute_with_budget_control(
@@ -2377,7 +2403,7 @@ class CostOptimizedLLMRouter:
 
         # Estimate cost for this request
         estimated_cost = CostOptimizedLLMRouter.estimate_cost(
-            model="gpt-4",
+            model="gpt-4o",
             prompt_tokens=len(task.split()) * 1.3,  # Rough estimate
             max_completion_tokens=1000
         )
@@ -2393,7 +2419,7 @@ class CostOptimizedLLMRouter:
             )
 
             # Offer cheaper alternative
-            cheaper_model = "gpt-3.5-turbo"
+            cheaper_model = "gpt-4o-mini"
             cheaper_cost = CostOptimizedLLMRouter.estimate_cost(
                 model=cheaper_model,
                 prompt_tokens=len(task.split()) * 1.3,
@@ -2403,7 +2429,7 @@ class CostOptimizedLLMRouter:
             if (current_spend + cheaper_cost) <= monthly_budget:
                 logger.info(
                     "using_cheaper_model_alternative",
-                    original_model="gpt-4",
+                    original_model="gpt-4o",
                     alternative_model=cheaper_model,
                     cost_savings=estimated_cost - cheaper_cost
                 )
@@ -2423,19 +2449,20 @@ model = router.select_model(
     task_complexity="simple",  # Classification task
     max_cost_per_request=0.05
 )
-# Returns: "claude-3-haiku" (cheapest option)
+# Returns: "gpt-4o-mini" (cheapest option)
 
 # Budget-controlled execution
-await router.execute_with_budget_control(
-    task="Analyze document...",
-    user_department="finance",
-    monthly_budget=5000.00  # $5K monthly cap
-)
+async def analyze_with_budget_control():
+    await router.execute_with_budget_control(
+        task="Analyze document...",
+        user_department="finance",
+        monthly_budget=5000.00  # $5K monthly cap
+    )
 ```
 
 **Result:** Reduced monthly LLM costs from $24K to $6K (75% reduction).
 
-**Lesson 2: Caching is not optional—it's mandatory**
+**Lesson 2: Caching is not optional-it's mandatory**
 
 **Problem:** Processing same documents multiple times wasted 73% of LLM calls.
 
@@ -2563,7 +2590,10 @@ async def analyze_document_with_caching(document_text: str):
 
 
 # Production usage
-result = await analyze_document_with_caching(document.text)
+async def analyze_uploaded_document(document):
+    result = await analyze_document_with_caching(document.text)
+    return result
+
 # First call: Cache miss → LLM API call → Store result
 # Second call (same document): Cache hit → Instant response
 ```
@@ -2708,11 +2738,11 @@ class IncidentResponseToolkit:
 # Usage during production incident
 incident_toolkit = IncidentResponseToolkit()
 
-# Customer complains: "Request abc123 was very slow"
-debug_info = await incident_toolkit.debug_slow_request("abc123")
+async def inspect_slow_request(request_id: str):
+    debug_info = await incident_toolkit.debug_slow_request(request_id)
 
-print(f"Total duration: {debug_info['total_duration_ms']}ms")
-print(f"Top bottleneck: {debug_info['bottlenecks'][0]['operation']} ({debug_info['bottlenecks'][0]['duration_ms']}ms)")
+    print(f"Total duration: {debug_info['total_duration_ms']}ms")
+    print(f"Top bottleneck: {debug_info['bottlenecks'][0]['operation']} ({debug_info['bottlenecks'][0]['duration_ms']}ms)")
 
 # Output:
 # Total duration: 12,450ms
@@ -2786,13 +2816,13 @@ Before we deploy to production, we validate every item on this checklist:
 - [ ] Training sessions completed for support team
 - [ ] Post-mortem process documented
 
-This checklist represents 6 months of hard-learned lessons. Don't skip items—each one exists because we learned the hard way.
+This checklist represents 6 months of hard-learned lessons. Don't skip items-each one exists because we learned the hard way.
 
 ---
 
 ## Conclusion: Your production-ready action plan
 
-We've covered a lot—from architecture patterns to Kubernetes deployments to real-world lessons learned. Let's bring it all together into an actionable plan.
+We've covered a lot-from architecture patterns to Kubernetes deployments to real-world lessons learned. Here's how it comes together as an actionable plan.
 
 ### 90-day production roadiness roadmap
 
@@ -2858,17 +2888,17 @@ Scaling LangChain and CrewAI from prototype to production isn't just about addin
 The gap between prototype and production is real. But with the right architecture patterns, security frameworks, and operational practices, you can bridge it successfully.
 
 We've seen LangChain and CrewAI applications deliver remarkable results in production:
-- **Klarna:** 80% reduction in customer resolution time
+- **Klarna (LangGraph):** 80% reduction in customer resolution time
 - **Financial services client:** 82% faster document processing
-- **AppFolio:** 10+ hours saved per week per property manager
+- **AppFolio (LangGraph):** 10+ hours saved per week per property manager
 
-Your AI agent application can deliver similar results—if you build the production infrastructure correctly from the start.
+Your AI agent application can deliver similar results-if you build the production infrastructure correctly from the start.
 
 ---
 
 ## 📥 Lead Magnet: Enterprise AI Architecture Blueprint
 
-**Download our comprehensive Enterprise AI Architecture Blueprint** — a complete multi-page technical blueprint covering:
+**Download our comprehensive Enterprise AI Architecture Blueprint** - a complete multi-page technical blueprint covering:
 
 ✅ **Reference Architecture Diagrams**
 - Complete system architecture with all components

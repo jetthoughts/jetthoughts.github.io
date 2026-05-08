@@ -24,7 +24,7 @@ Building AI agents with LangChain? The framework makes prototyping easy, but pro
 
 LangChain tutorials demonstrate impressive capabilities in 50 lines of code. Deploy that to production, and you face immediate problems: API rate limits crash your agents, inconsistent responses confuse users, and debugging becomes impossible without proper observability.
 
-We've deployed LangChain systems handling millions of requests. The difference between prototype and production isn't complexity—it's systematic architecture addressing error recovery, state management, and operational visibility.
+We've deployed LangChain systems handling millions of requests. The difference between prototype and production isn't complexity - it's systematic architecture addressing error recovery, state management, and operational visibility.
 
 ## Prerequisites
 
@@ -50,8 +50,8 @@ from langchain_openai import ChatOpenAI
 # 3. Chain Layer (orchestration)
 # 4. Agent Layer (decision-making)
 
-primary_model = ChatOpenAI(model="gpt-4", temperature=0.7, timeout=30)
-fallback_model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
+primary_model = ChatOpenAI(model="gpt-4o", temperature=0.7, timeout=30)
+fallback_model = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
 ```
 
 > **📚 Full Implementation**: See production architecture patterns for complete `ProductionLangChainArchitecture` class with version control and error tracking.
@@ -111,8 +111,8 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 # Build chain with automatic fallback (LangChain v1.0 feature)
-primary = ChatOpenAI(model="gpt-4", timeout=30)
-fallback = ChatOpenAI(model="gpt-3.5-turbo", timeout=30)
+primary = ChatOpenAI(model="gpt-4o", timeout=30)
+fallback = ChatOpenAI(model="gpt-4o-mini", timeout=30)
 
 prompt = PromptTemplate(
     template="Analyze sentiment: {text}",
@@ -135,18 +135,27 @@ result = resilient_chain.invoke({"text": "This product is amazing!"})
 
 Autonomous agents require safety constraints preventing harmful actions and infinite loops.
 
+> **API note:** `AgentExecutor` and `create_openai_functions_agent` are still functional but the LangChain v1.0 canonical pattern is `from langchain.agents import create_agent` (LangGraph-backed) with middleware (`PIIMiddleware`, `SummarizationMiddleware`, `HumanInTheLoopMiddleware`). The patterns below remain instructive; consider `create_agent` for new code.
+
 ### Agent with Tool Validation and Circuit Breakers
 
 ```python
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain_core.tools import Tool
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_openai import ChatOpenAI
 
 # Create agent with built-in safety constraints
 def create_safe_agent(llm, tools):
     """Agent with safety limits: max iterations, timeout, error handling."""
 
-    agent = create_openai_functions_agent(llm=llm, tools=tools, prompt=...)
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", "You are a helpful assistant."),
+        ("user", "{input}"),
+        MessagesPlaceholder(variable_name="agent_scratchpad"),
+    ])
+
+    agent = create_openai_functions_agent(llm=llm, tools=tools, prompt=prompt)
 
     return AgentExecutor(
         agent=agent,
@@ -163,12 +172,20 @@ from langchain_community.tools import DuckDuckGoSearchRun
 def check_inventory(product_id: str) -> str:
     return f"Product {product_id}: 42 units in stock"
 
-search_tool = Tool(name="web_search", func=DuckDuckGoSearchRun().run, ...)
-inventory_tool = Tool(name="inventory_check", func=check_inventory, ...)
+search_tool = Tool(
+    name="web_search",
+    func=DuckDuckGoSearchRun().run,
+    description="Search the web for current information",
+)
+inventory_tool = Tool(
+    name="inventory_check",
+    func=check_inventory,
+    description="Check stock level for a given product SKU",
+)
 
 # Create safe agent
 agent = create_safe_agent(
-    llm=ChatOpenAI(model="gpt-4", temperature=0),
+    llm=ChatOpenAI(model="gpt-4o", temperature=0),
     tools=[search_tool, inventory_tool]
 )
 
@@ -294,7 +311,7 @@ LangChain provides built-in caching to reduce latency and costs for repeated que
 
 ```python
 # Multi-tier caching: in-memory (L1) + Redis (L2)
-from langchain_core.caches import RedisCache
+from langchain_community.cache import RedisCache
 from langchain_core.globals import set_llm_cache
 
 # Enable Redis caching for distributed deployments
@@ -360,12 +377,10 @@ You now have production-ready patterns for:
 - [LangChain Memory Systems](/blog/langchain-memory-systems-conversational-ai/) - Build conversational AI with persistent context
 - [CrewAI Multi-Agent Systems](/blog/crewai-multi-agent-systems-orchestration/) - Orchestrate specialized agent teams
 
-**Download the Production Readiness Audit Checklist**: A comprehensive 47-point audit covering architecture, testing, deployment, and monitoring. [Request your free copy](mailto:contact@jetthoughts.com?subject=LangChain%20Production%20Audit%20Checklist).
-
 **Advanced Topics to Explore**:
 - Distributed agent teams with LangGraph
 - Custom tool development for domain-specific logic
 - Fine-tuning models for specialized tasks
 - Cost optimization strategies for high-volume deployments
 
-**Paul McMahon** is a Senior AI Engineer at JetThoughts specializing in production LangChain deployments. He has architected AI agent systems processing 10M+ queries monthly. [Connect on LinkedIn](https://linkedin.com/company/jetthoughts) or [follow JetThoughts on Twitter](https://twitter.com/jetthoughts).
+**Paul McMahon** is a co-founder of JetThoughts. [Connect on LinkedIn](https://linkedin.com/company/jetthoughts) or [follow JetThoughts on Twitter](https://twitter.com/jetthoughts).

@@ -1,6 +1,6 @@
 ---
 title: "CrewAI Hierarchical Agents: Manager-Worker Orchestration"
-description: "Build hierarchical CrewAI crews with a manager agent delegating to specialized workers. Code examples for orchestration, task routing, and v0.98+ patterns."
+description: "Build hierarchical CrewAI crews with a manager agent delegating to specialized workers. Code examples for orchestration, task routing, and current patterns."
 date: "2025-10-15"
 created_at: "2025-10-15T17:20:00Z"
 draft: false
@@ -18,7 +18,7 @@ metatags:
   image: cover.png
 ---
 
-CrewAI is a Python framework for building manager-worker agent systems. You define agents by role, goal, and backstory, then assemble them into "crews" that run sequential, parallel, or hierarchical workflows. This post walks through v0.98+ patterns for building production-grade crews, with code for three real workflows (customer support, content pipelines, financial analysis) and a FastAPI deployment example.
+CrewAI is a Python framework for building manager-worker agent systems. You define agents by role, goal, and backstory, then assemble them into "crews" that run sequential or hierarchical workflows. This post walks through current CrewAI patterns for building production-grade crews, with code for three real workflows (customer support, content pipelines, financial analysis) and a FastAPI deployment example.
 
 ## The multi-agent problem
 
@@ -44,7 +44,7 @@ CrewAI introduces three fundamental building blocks:
 
 **Crews** are teams of agents working together on a workflow. A crew coordinates:
 - Multiple agents with complementary skills
-- Sequential or parallel task execution
+- Sequential or hierarchical task execution
 - Information flow between tasks
 - Final output aggregation
 
@@ -73,7 +73,7 @@ OPENAI_API_KEY=your_openai_key_here
 # OLLAMA_BASE_URL=http://localhost:11434
 ```
 
-CrewAI v0.98.0 added native support for OpenAI, Anthropic, and local models via Ollama. For production, GPT-4-class models handle complex reasoning; faster, cheaper models handle routine tasks like formatting or simple lookups.
+Current CrewAI supports OpenAI, Anthropic, and local models via Ollama. For production, GPT-4-class models handle complex reasoning; faster, cheaper models handle routine tasks like formatting or simple lookups.
 
 ## Hello World: Your First CrewAI Multi-Agent System
 
@@ -85,13 +85,15 @@ from crewai import Agent, Task, Crew
 # Create a research agent
 researcher = Agent(
     role="Research Analyst",
-    goal="Find and summarize information about topics"
+    goal="Find and summarize information about topics",
+    backstory="You are a meticulous analyst who turns unfamiliar topics into clear briefs."
 )
 
 # Define a task
 task = Task(
     description="Research LangChain's key features and use cases",
-    agent=researcher
+    agent=researcher,
+    expected_output="A markdown summary with bullet-point findings"
 )
 
 # Create crew and execute
@@ -104,37 +106,41 @@ result = crew.kickoff()  # Returns research summary
 Now let's add a second agent to demonstrate collaboration:
 
 ```python
-from crewai import Agent, Task, Crew
+from crewai import Agent, Task, Crew, Process
 
 # Agent 1: Research
 researcher = Agent(
     role="Research Analyst",
-    goal="Gather technical information"
+    goal="Gather technical information",
+    backstory="You collect primary-source notes and cite where each fact came from."
 )
 
 # Agent 2: Content Writer
 writer = Agent(
     role="Technical Writer",
-    goal="Transform research into clear documentation"
+    goal="Transform research into clear documentation",
+    backstory="You translate dense research into tutorials a junior dev can follow."
 )
 
 # Task 1: Research (completed first)
 research_task = Task(
     description="Research CrewAI multi-agent capabilities",
-    agent=researcher
+    agent=researcher,
+    expected_output="A markdown summary with bullet-point findings"
 )
 
 # Task 2: Writing (receives research_task output via context)
 writing_task = Task(
     description="Write a tutorial based on research findings",
     agent=writer,
-    context=[research_task]  # Automatically receives researcher's output
+    context=[research_task],  # Automatically receives researcher's output
+    expected_output="A 600-word markdown tutorial with code examples"
 )
 
 crew = Crew(
     agents=[researcher, writer],
     tasks=[research_task, writing_task],
-    process="sequential"  # Tasks execute in order
+    process=Process.sequential  # Tasks execute in order
 )
 
 result = crew.kickoff()
@@ -146,7 +152,7 @@ This example demonstrates several key CrewAI patterns:
 
 - **Agent specialization**: each agent has a focused role with an appropriate LLM. The sentiment analyzer uses GPT-4 for nuanced emotion detection; the knowledge agent uses a smaller model for routine lookups.
 - Task context flow: the `context` parameter passes outputs between tasks. The response composer receives both the sentiment analysis and the research findings.
-- Sequential processing: `process="sequential"` runs tasks in order, so each agent builds on previous work.
+- Sequential processing: `process=Process.sequential` runs tasks in order, so each agent builds on previous work.
 - Tool integration: the knowledge agent uses `SerperDevTool` for web search and `ScrapeWebsiteTool` for extracting docs.
 
 ## Production example 2: Automated content pipeline
@@ -154,64 +160,72 @@ This example demonstrates several key CrewAI patterns:
 Content creation involves research, writing, editing, and SEO optimization - each needing different expertise. Here's a 4-agent content pipeline:
 
 ```python
-from crewai import Agent, Task, Crew
+from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
 # Define specialized agents
 researcher = Agent(
     role="Content Research Specialist",
     goal="Gather data, statistics, and expert insights",
+    backstory="You dig through primary sources and cite every statistic you surface.",
     tools=[SerperDevTool(), ScrapeWebsiteTool()],
-    llm="gpt-4"
+    llm="openai/gpt-4o"
 )
 
 writer = Agent(
     role="Senior Content Writer",
     goal="Craft engaging, SEO-optimized articles",
-    llm="gpt-4"
+    backstory="You turn research into reader-friendly drafts with a clear point of view.",
+    llm="openai/gpt-4o"
 )
 
 editor = Agent(
     role="Editorial Director",
     goal="Ensure quality standards and brand voice",
-    llm="gpt-4"
+    backstory="You enforce house style and cut anything that does not earn its place.",
+    llm="openai/gpt-4o-mini"
 )
 
 seo_specialist = Agent(
     role="SEO Optimization Expert",
     goal="Optimize content for search engines",
-    llm="gpt-3.5-turbo"  # Cost-effective for routine optimization
+    backstory="You add metadata and headings without breaking the prose.",
+    llm="openai/gpt-4o-mini"  # Cost-effective for routine optimization
 )
 
 # Define sequential workflow
 def create_content_pipeline(topic: str, keywords: list):
     research_task = Task(
         description=f"Research '{topic}' with recent data and expert quotes",
-        agent=researcher
+        agent=researcher,
+        expected_output="A markdown research brief with cited sources and key statistics"
     )
 
     writing_task = Task(
         description=f"Write article on '{topic}' using research findings",
         agent=writer,
-        context=[research_task]  # Receives research output
+        context=[research_task],  # Receives research output
+        expected_output="A 1200-word markdown article with intro, body, and conclusion"
     )
 
     editing_task = Task(
         description="Edit for clarity, accuracy, and engagement",
         agent=editor,
-        context=[writing_task]
+        context=[writing_task],
+        expected_output="The same article, edited and ready for publishing"
     )
 
     seo_task = Task(
         description=f"Add meta tags, optimize headers for: {', '.join(keywords)}",
         agent=seo_specialist,
-        context=[editing_task]
+        context=[editing_task],
+        expected_output="The article with meta description, title tag, and optimized headings"
     )
 
     crew = Crew(
         agents=[researcher, writer, editor, seo_specialist],
         tasks=[research_task, writing_task, editing_task, seo_task],
-        process="sequential"  # Each task builds on previous output
+        process=Process.sequential  # Each task builds on previous output
     )
 
     return crew.kickoff()
@@ -234,69 +248,78 @@ This content pipeline shows several advanced CrewAI patterns:
 
 ## Production example 3: Financial analysis and reporting
 
-Financial analysis needs data gathering, calculation, risk assessment, and report generation. Here's a crew with parallel execution:
+Financial analysis needs data gathering, calculation, risk assessment, and report generation. Here's a crew that shares the same data dependency across two analysts before final synthesis:
 
 ```python
-from crewai import Agent, Task, Crew
+from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool
 
 # Define specialized financial agents
 data_collector = Agent(
     role="Financial Data Analyst",
     goal="Gather accurate financial data from SEC filings",
+    backstory="You pull primary-source numbers from filings and never trust a secondary aggregator.",
     tools=[SerperDevTool()],
-    llm="gpt-4"
+    llm="openai/gpt-4o"
 )
 
 quant_analyst = Agent(
     role="Quantitative Analyst",
     goal="Calculate ratios, identify trends, assess valuation",
-    llm="gpt-4"
+    backstory="You translate financial statements into ratios and valuation models.",
+    llm="openai/gpt-4o"
 )
 
 risk_analyst = Agent(
     role="Risk Assessment Specialist",
     goal="Evaluate financial risks and mitigation strategies",
-    llm="gpt-4"
+    backstory="You stress-test assumptions and surface what would break the thesis.",
+    llm="openai/gpt-4o"
 )
 
 report_writer = Agent(
     role="Financial Report Writer",
     goal="Synthesize analysis into executive summaries",
-    llm="gpt-4"
+    backstory="You write for executives who want the punchline first and the math on request.",
+    llm="openai/gpt-4o"
 )
 
 # Define workflow
 def create_financial_analysis(ticker: str):
     data_task = Task(
         description=f"Collect {ticker} earnings, ratios, and material events",
-        agent=data_collector
+        agent=data_collector,
+        expected_output="A markdown table of key financials and a list of material events"
     )
 
-    # These tasks can run in parallel after data collection
+    # These tasks run after data collection; in hierarchical mode the manager
+    # can dispatch them concurrently via tool calls.
     quant_task = Task(
         description=f"Analyze {ticker} ratios and valuation",
         agent=quant_analyst,
-        context=[data_task]
+        context=[data_task],
+        expected_output="A short memo with valuation multiples and trend commentary"
     )
 
     risk_task = Task(
         description=f"Assess {ticker} market, credit, and operational risks",
         agent=risk_analyst,
-        context=[data_task]
+        context=[data_task],
+        expected_output="A bullet-point risk register with severity ratings"
     )
 
     # Final synthesis
     report_task = Task(
         description=f"Create executive report with buy/hold/sell recommendation",
         agent=report_writer,
-        context=[data_task, quant_task, risk_task]  # Receives all analysis
+        context=[data_task, quant_task, risk_task],  # Receives all analysis
+        expected_output="A one-page executive memo with a buy/hold/sell call and rationale"
     )
 
     crew = Crew(
         agents=[data_collector, quant_analyst, risk_analyst, report_writer],
         tasks=[data_task, quant_task, risk_task, report_task],
-        process="sequential"  # Use "hierarchical" for true parallel execution
+        process=Process.sequential  # Use Process.hierarchical to let a manager dispatch concurrent tool calls
     )
 
     return crew.kickoff()
@@ -305,11 +328,11 @@ def create_financial_analysis(ticker: str):
 report = create_financial_analysis("MSFT")
 ```
 
-> **📚 Full Implementation**: See financial analysis with parallel processing for production version with hierarchical execution, detailed task descriptions, and risk matrices (151 lines).
+> **📚 Full Implementation**: See financial analysis with concurrent tool dispatch for production version with hierarchical execution, detailed task descriptions, and risk matrices (151 lines).
 
 This example introduces three patterns:
 
-- Parallel task execution: the quant and risk analysts run after data collection, cutting total runtime.
+- Concurrent tool dispatch in hierarchical mode: the quant and risk analysts share the same data dependency, and a manager agent can fan out their tool calls concurrently to cut wall-clock time.
 - Data quality first: the data collector verifies sources before downstream agents touch the numbers.
 - Executive communication: the report writer translates technical analysis into buy/hold/sell language for non-technical stakeholders.
 
@@ -350,19 +373,19 @@ Five patterns that consistently produce better results:
 2. Complementary skills: design teams where skills cover each other's gaps. A content crew needs researchers, writers, and editors.
 3. Tool alignment: only give tools to agents that need them. Research agents get search tools; analysts get calculation tools.
 4. Backstory matters: "You're a cautious compliance officer" produces very different output than "You're an innovative growth hacker." Encode domain expertise and risk tolerance in the backstory.
-5. Model selection by role: not every agent needs GPT-4. Use big models for hard reasoning (financial, legal); use smaller models for routine work (formatting, simple search). This often cuts API cost 60-70% with no quality drop.
+5. Model selection by role: not every agent needs the largest model. Use big models for hard reasoning (financial, legal); use smaller models for routine work (formatting, simple search). In our experience, swapping editor and SEO from gpt-4o to gpt-4o-mini cut per-task cost by roughly half on benchmark crews.
 
-## Sequential, parallel, hierarchical
+## Sequential and hierarchical
 
-CrewAI supports three execution modes:
+CrewAI supports two execution modes:
 
-Sequential. Tasks run in order, each receiving context from earlier ones. Use when each step depends on the previous output and you need predictable flow with quality control between stages. Example: Research → Write → Edit → Publish.
-
-Parallel. Independent tasks run simultaneously, then results merge. Use when tasks don't depend on each other and you need faster total processing - for example, collecting market data, news sentiment, and technical indicators before analysis.
+Sequential. Tasks run in order, each receiving context from earlier ones. Use when each step depends on the previous output and you need predictable flow with quality control between stages. Example: Research -> Write -> Edit -> Publish.
 
 Hierarchical. A manager agent delegates to workers and makes dynamic execution decisions. Use when the workflow adapts based on intermediate results, task complexity needs intelligent prioritization, or coordination logic is non-trivial. Example: a project-manager agent that assigns research tasks to specialists by topic, then coordinates report assembly.
 
-CrewAI v0.98.0 improved delegation tracking and context passing between managers and workers in hierarchical mode.
+> CrewAI supports `Process.sequential` and `Process.hierarchical` only. There is no parallel process. `Process.consensual` was on the roadmap but is not yet released. For task-level concurrency inside hierarchical mode, the manager agent dispatches concurrent tool calls.
+
+Current CrewAI improved delegation tracking and context passing between managers and workers in hierarchical mode.
 
 ## Production Deployment: FastAPI Integration Pattern
 
@@ -414,7 +437,7 @@ This pattern gives you async processing (long-running crews don't block API requ
 
 Multi-agent systems can become expensive if not optimized. Here are production techniques for managing costs:
 
-1. **Model selection by role.** Use GPT-4 for complex reasoning and a smaller model for routine ops. A content crew might use GPT-4 for the researcher and writer, and a smaller model for the editor and SEO specialist. This typically cuts API cost 60-70%.
+1. **Model selection by role.** Use a large model for complex reasoning and a smaller model for routine ops. A content crew might use gpt-4o for the researcher and writer, and gpt-4o-mini for the editor and SEO specialist. In our experience, swapping editor and SEO from gpt-4o to gpt-4o-mini cut per-task cost by roughly half on benchmark crews.
 
 2. Context window management. Don't pass entire previous outputs to every agent. The SEO specialist doesn't need the full research report - just the final article. CrewAI's `context` parameter lets you scope this precisely.
 
@@ -462,7 +485,7 @@ Multi-agent debugging differs from regular debugging because failures can happen
 agent = Agent(
     role="Content Agent",
     goal="Handle content tasks",
-    # ...
+    backstory="You handle content."
 )
 
 # Good - clear boundaries
@@ -478,11 +501,17 @@ agent = Agent(
 ```python
 # Bad - passing entire chain
 task = Task(
+    description="Summarize the project status",
+    agent=writer,
+    expected_output="A short status update",
     context=[task1, task2, task3, task4]  # Too much information
 )
 
 # Good - only relevant context
 task = Task(
+    description="Summarize the project status",
+    agent=writer,
+    expected_output="A short status update",
     context=[task3]  # Only immediate dependency
 )
 ```
@@ -492,6 +521,7 @@ task = Task(
 ```python
 agent = Agent(
     role="Researcher",
+    goal="Gather public information from the web",
     backstory="You have access to web search and web scraping tools. You do NOT have access to internal databases or proprietary data sources.",
     tools=[SerperDevTool(), ScrapeWebsiteTool()]
 )

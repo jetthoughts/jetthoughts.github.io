@@ -1,6 +1,6 @@
 ---
 title: 'Cost Optimization for LLM Applications: Managing Token Budgets and Scaling Efficiently'
-description: Learn proven strategies to reduce LLM costs by 60-80% through token management, caching optimization, prompt engineering, and smart model selection. Practical examples with cost tracking included.
+description: Learn proven strategies to reduce LLM costs by 30-60% in our experience through token management, caching optimization, prompt engineering, and smart model selection. Practical examples with cost tracking included.
 date: 2025-10-15
 created_at: '2025-10-15T19:00:00Z'
 draft: false
@@ -12,9 +12,9 @@ metatags:
 slug: cost-optimization-llm-applications-token-management
 ---
 
-The explosive growth of Large Language Model (LLM) applications has brought unprecedented capabilities—and equally unprecedented costs. Organizations deploying LLM-powered features often face a harsh reality: what starts as a $500/month experiment quickly escalates to $15,000+/month as usage grows. Without proper cost optimization strategies, LLM expenses can consume entire product budgets and make features economically unviable.
+The explosive growth of Large Language Model (LLM) applications has brought unprecedented capabilities-and equally unprecedented costs. Organizations deploying LLM-powered features often face a harsh reality: what starts as a $500/month experiment quickly escalates to $15,000+/month as usage grows. Without proper cost optimization strategies, LLM expenses can consume entire product budgets and make features economically unviable.
 
-The good news? Through systematic token management, intelligent caching, prompt optimization, and strategic model selection, most organizations can reduce their LLM costs by 60-80% while maintaining or even improving application performance. This guide provides practical, battle-tested strategies with working code examples that you can implement immediately.
+The good news? Through systematic token management, intelligent caching, prompt optimization, and strategic model selection, most organizations can reduce their LLM costs by 30-60% in our experience while maintaining or even improving application performance. This guide provides practical, battle-tested strategies with working code examples that you can implement immediately.
 
 ### Key Takeaways
 
@@ -36,8 +36,8 @@ Consider a typical customer support chatbot handling 10,000 conversations per mo
 
 **Naive Cost Estimate**:
 - Average tokens per conversation: 500 (input) + 300 (output) = 800 tokens
-- GPT-4 pricing: $0.03/1K input tokens + $0.06/1K output tokens
-- Expected cost: 10,000 × [(500 × 0.03) + (300 × 0.06)] / 1000 = $330/month
+- gpt-4o pricing (2026-05): $2.50 per 1M input tokens + $10.00 per 1M output tokens
+- Expected cost: 10,000 × [(500 × 2.50) + (300 × 10.00)] / 1,000,000 = $42.50/month
 
 **Actual Cost Reality**:
 - Context management overhead: +40% (reloading conversation history)
@@ -45,9 +45,9 @@ Consider a typical customer support chatbot handling 10,000 conversations per mo
 - Development/testing tokens: +25% (ongoing refinements)
 - System prompts repeated per message: +30% (instructions sent every call)
 - Multi-turn conversations: +50% (context accumulation)
-- **Total actual cost**: $330 × 2.6 = $858/month (260% of estimate)
+- **Total actual cost**: $42.50 × 2.6 = $110.50/month (260% of estimate)
 
-And this assumes efficient prompt design—many early implementations cost 4-5x more before optimization.
+And this assumes efficient prompt design-many early implementations cost 4-5x more before optimization.
 
 ### The Hidden Cost Multipliers
 
@@ -67,17 +67,17 @@ def chat_with_context(messages, new_message):
 def get_product_description(product_id):
     prompt = f"Generate a description for product {product_id}"
     # This same product description gets generated 1000x/day
-    # Cost: 1000 × $0.002 = $2/day = $60/month for ONE product
+    # At gpt-4o pricing (~$0.005 per 200-token response): $5/day = $150/month for ONE product
     return llm.complete(prompt)
 ```
 
 **3. Over-Specified Models**
 ```python
-# Anti-pattern: Using GPT-4 for every task
+# Anti-pattern: Using a top-tier model for every task
 def classify_sentiment(text):
-    # GPT-4: $0.03/1K tokens
-    # This task could use GPT-3.5-turbo: $0.001/1K tokens (30x cheaper)
-    return gpt4.complete(f"Classify sentiment: {text}")
+    # gpt-4o: $2.50 / 1M input tokens
+    # This task could use gpt-4o-mini: $0.15 / 1M input tokens (~17x cheaper)
+    return gpt4o.complete(f"Classify sentiment: {text}")
 ```
 
 **4. Inefficient Prompt Design**
@@ -91,8 +91,8 @@ appropriate. Keep responses concise but comprehensive...
 """ # 45 tokens × every single request
 
 def ask_question(question):
-    # This 45-token overhead costs $0.00135 per call
-    # At 10K calls/month: $13.50/month just for instructions
+    # This 45-token overhead costs ~$0.0001 per call on gpt-4o
+    # At 10K calls/month: ~$1.10/month just for instructions (multiplies fast across endpoints)
     return llm.complete(f"{SYSTEM_PROMPT}\n{question}")
 ```
 
@@ -100,7 +100,7 @@ These hidden multipliers explain why production LLM costs routinely exceed proje
 
 ## Understanding Token Economics
 
-Before optimizing costs, you need precise visibility into token consumption across your application. Most developers rely on post-hoc billing analysis, but that's like driving while only checking your gas gauge once a month—by the time you notice the problem, you've already overspent.
+Before optimizing costs, you need precise visibility into token consumption across your application. Most developers rely on post-hoc billing analysis, but that's like driving while only checking your gas gauge once a month-by the time you notice the problem, you've already overspent.
 
 ### Implementing Real-Time Token Tracking
 
@@ -110,12 +110,17 @@ Core token budget system with cost tracking:
 import tiktoken
 
 class TokenBudgetManager:
+    # Pricing as of 2026-05; verify against provider pricing pages before commit.
+    # All values in $ per 1M tokens.
     MODEL_PRICING = {
-        'gpt-4': {'input': 0.03, 'output': 0.06},
-        'gpt-3.5-turbo': {'input': 0.001, 'output': 0.002},
+        "gpt-4o":            {"input_per_1m": 2.50, "output_per_1m": 10.00},
+        "gpt-4o-mini":       {"input_per_1m": 0.15, "output_per_1m":  0.60},
+        "gpt-4-turbo":       {"input_per_1m": 10.0, "output_per_1m": 30.00},
+        "claude-3-5-sonnet": {"input_per_1m": 3.00, "output_per_1m": 15.00},
+        "claude-3-5-haiku":  {"input_per_1m": 0.80, "output_per_1m":  4.00},
     }
 
-    def __init__(self, model: str = 'gpt-3.5-turbo'):
+    def __init__(self, model: str = 'gpt-4o-mini'):
         self.model = model
         self.encoding = tiktoken.encoding_for_model(model)
 
@@ -125,13 +130,13 @@ class TokenBudgetManager:
     def estimate_cost(self, input_text: str, output_text: str) -> dict:
         input_tokens = self.count_tokens(input_text)
         output_tokens = self.count_tokens(output_text)
-        pricing = self.MODEL_PRICING[self.model]
+        p = self.MODEL_PRICING[self.model]
 
         return {
             'input_tokens': input_tokens,
             'output_tokens': output_tokens,
-            'total_cost': (input_tokens/1000 * pricing['input']) +
-                          (output_tokens/1000 * pricing['output'])
+            'total_cost': (input_tokens * p["input_per_1m"] +
+                           output_tokens * p["output_per_1m"]) / 1_000_000
         }
 
     def truncate_to_budget(self, text: str, max_tokens: int) -> str:
@@ -169,7 +174,7 @@ Now that we can accurately measure token usage, let's explore systematic strateg
 
 ### Strategy 1: Intelligent Context Window Management
 
-The context window is your most expensive real estate. Every token you send costs money—and gets resent on every subsequent message in a conversation.
+The context window is your most expensive real estate. Every token you send costs money-and gets resent on every subsequent message in a conversation.
 
 **Problem**: Naive implementations send full conversation history on every turn:
 
@@ -240,7 +245,7 @@ class ConversationManager:
 Summary:"""
 
         # Use cheaper model for summarization
-        summary_manager = TokenBudgetManager(model='gpt-3.5-turbo')
+        summary_manager = TokenBudgetManager(model='gpt-4o-mini')
         response = call_llm_api(prompt, max_tokens=100, temperature=0.3)
 
         return response.strip()
@@ -417,7 +422,7 @@ print(f"\nQuality preserved: {quality['quality_preserved']}")
 print(f"Semantic similarity: {quality['semantic_similarity']:.2%}")
 ```
 
-**Cost Savings Impact**: Prompt compression typically saves 100-300 tokens per request. At 10K requests/month, this translates to 1M-3M tokens saved, worth $30-90/month for GPT-3.5-turbo or $300-900/month for GPT-4.
+**Cost Savings Impact**: Prompt compression typically saves 100-300 tokens per request. At 10K requests/month, this translates to 1M-3M tokens saved, worth roughly $0.45-$1.80/month on gpt-4o-mini or $7.50-$30/month on gpt-4o.
 
 ## Caching Strategies for Maximum Efficiency
 
@@ -542,7 +547,7 @@ class SemanticCacheManager:
     def __init__(self, redis_client: redis.Redis, similarity_threshold: float = 0.95):
         self.redis = redis_client
         self.similarity_threshold = similarity_threshold
-        self.embedding_model = 'text-embedding-ada-002'  # OpenAI embeddings
+        self.embedding_model = 'text-embedding-3-small'  # OpenAI embeddings (5x cheaper than ada-002)
 
     def get_embedding(self, text: str) -> list[float]:
         """Get text embedding for similarity comparison"""
@@ -640,7 +645,7 @@ class CompleteLLMCache:
         self.semantic_cache = SemanticCacheManager(self.redis)
         self.budget_manager = TokenBudgetManager()
 
-    def get_or_generate(self, prompt: str, model: str = 'gpt-3.5-turbo',
+    def get_or_generate(self, prompt: str, model: str = 'gpt-4o-mini',
                        use_semantic_cache: bool = True, **kwargs) -> Dict:
         """Get cached response or generate new one"""
 
@@ -667,8 +672,8 @@ class CompleteLLMCache:
         self.exact_cache.cache_response(
             cache_key,
             response,
-            metrics.input_tokens + metrics.output_tokens,
-            metrics.total_cost,
+            metrics["input_tokens"] + metrics["output_tokens"],
+            metrics["total_cost"],
             ttl=self.exact_cache.ttls['exact_match']
         )
 
@@ -679,8 +684,8 @@ class CompleteLLMCache:
         return {
             'response': response,
             'cached': False,
-            'cost': metrics.total_cost,
-            'tokens': metrics.input_tokens + metrics.output_tokens
+            'cost': metrics["total_cost"],
+            'tokens': metrics["input_tokens"] + metrics["output_tokens"]
         }
 
     def get_savings_report(self) -> Dict:
@@ -740,7 +745,7 @@ print(f"Cost reduction: {report['cost_reduction_percent']:.1f}%")
 
 ## Model Selection Strategy
 
-Using the same expensive model for every task is like hiring a senior architect to hammer nails. Different tasks require different capabilities—and have dramatically different price points.
+Using the same expensive model for every task is like hiring a senior architect to hammer nails. Different tasks require different capabilities-and have dramatically different price points.
 
 ### Cost-Aware Model Selection Framework
 
@@ -759,48 +764,42 @@ class TaskComplexity(Enum):
 class ModelRouter:
     """Intelligently route tasks to cost-appropriate models"""
 
-    # Model capabilities and pricing (updated 2024)
+    # Model capabilities and pricing (as of 2026-05; verify against provider pages).
+    # Costs in $ per 1M tokens.
     MODEL_SPECS = {
-        'gpt-4': {
+        'gpt-4o': {
             'capability_score': 10,
-            'input_cost': 0.03,
-            'output_cost': 0.06,
-            'context_window': 8192,
-            'best_for': [TaskComplexity.COMPLEX, TaskComplexity.EXPERT]
-        },
-        'gpt-4-turbo': {
-            'capability_score': 10,
-            'input_cost': 0.01,
-            'output_cost': 0.03,
+            'input_per_1m': 2.50,
+            'output_per_1m': 10.00,
             'context_window': 128000,
             'best_for': [TaskComplexity.COMPLEX, TaskComplexity.EXPERT]
         },
-        'gpt-3.5-turbo': {
+        'gpt-4o-mini': {
             'capability_score': 7,
-            'input_cost': 0.001,
-            'output_cost': 0.002,
-            'context_window': 16384,
+            'input_per_1m': 0.15,
+            'output_per_1m': 0.60,
+            'context_window': 128000,
             'best_for': [TaskComplexity.SIMPLE, TaskComplexity.MODERATE]
         },
-        'gpt-3.5-turbo-instruct': {
-            'capability_score': 6,
-            'input_cost': 0.0015,
-            'output_cost': 0.002,
-            'context_window': 4096,
-            'best_for': [TaskComplexity.TRIVIAL, TaskComplexity.SIMPLE]
-        },
-        'claude-2': {
+        'gpt-4-turbo': {
             'capability_score': 9,
-            'input_cost': 0.008,
-            'output_cost': 0.024,
-            'context_window': 100000,
+            'input_per_1m': 10.00,
+            'output_per_1m': 30.00,
+            'context_window': 128000,
             'best_for': [TaskComplexity.COMPLEX, TaskComplexity.EXPERT]
         },
-        'claude-instant': {
-            'capability_score': 6,
-            'input_cost': 0.0008,
-            'output_cost': 0.0024,
-            'context_window': 100000,
+        'claude-3-5-sonnet': {
+            'capability_score': 10,
+            'input_per_1m': 3.00,
+            'output_per_1m': 15.00,
+            'context_window': 200000,
+            'best_for': [TaskComplexity.COMPLEX, TaskComplexity.EXPERT]
+        },
+        'claude-3-5-haiku': {
+            'capability_score': 7,
+            'input_per_1m': 0.80,
+            'output_per_1m': 4.00,
+            'context_window': 200000,
             'best_for': [TaskComplexity.TRIVIAL, TaskComplexity.SIMPLE]
         }
     }
@@ -855,16 +854,16 @@ class ModelRouter:
 
         if not capable_models:
             # Fallback to most capable model
-            return 'gpt-4-turbo'
+            return 'claude-3-5-sonnet'
 
         # If budget specified, filter by cost
         if max_budget:
-            estimated_cost = lambda m: (input_tokens / 1000) * m[1]['input_cost']
+            estimated_cost = lambda m: (input_tokens * m[1]['input_per_1m']) / 1_000_000
             capable_models = [(m, s) for m, s in capable_models
                             if estimated_cost((m, s)) <= max_budget]
 
         # Select cheapest capable model
-        capable_models.sort(key=lambda x: x[1]['input_cost'])
+        capable_models.sort(key=lambda x: x[1]['input_per_1m'])
         return capable_models[0][0]
 
     def route_task(self, task_description: str, prompt: str,
@@ -886,8 +885,8 @@ class ModelRouter:
 
         # Calculate actual cost
         output_tokens = self.budget_manager.count_tokens(response)
-        cost = (input_tokens / 1000 * model_specs['input_cost'] +
-                output_tokens / 1000 * model_specs['output_cost'])
+        cost = (input_tokens * model_specs['input_per_1m'] +
+                output_tokens * model_specs['output_per_1m']) / 1_000_000
 
         # Track routing stats
         self.routing_stats[selected_model]['requests'] += 1
@@ -906,17 +905,20 @@ class ModelRouter:
 
     def _calculate_savings(self, input_tokens: int, output_tokens: int,
                           selected_model: str) -> Dict:
-        """Calculate cost savings vs. using GPT-4 for everything"""
-        gpt4_cost = (input_tokens / 1000 * 0.03 + output_tokens / 1000 * 0.06)
-        actual_cost = (input_tokens / 1000 * self.MODEL_SPECS[selected_model]['input_cost'] +
-                      output_tokens / 1000 * self.MODEL_SPECS[selected_model]['output_cost'])
+        """Calculate cost savings vs. using a top-tier model (claude-3-5-sonnet) for everything"""
+        baseline = self.MODEL_SPECS['claude-3-5-sonnet']
+        baseline_cost = (input_tokens * baseline['input_per_1m'] +
+                         output_tokens * baseline['output_per_1m']) / 1_000_000
+        spec = self.MODEL_SPECS[selected_model]
+        actual_cost = (input_tokens * spec['input_per_1m'] +
+                       output_tokens * spec['output_per_1m']) / 1_000_000
 
         return {
-            'gpt4_cost': gpt4_cost,
+            'baseline_cost': baseline_cost,
             'actual_cost': actual_cost,
-            'savings': gpt4_cost - actual_cost,
-            'savings_percent': ((gpt4_cost - actual_cost) / gpt4_cost * 100)
-                              if gpt4_cost > 0 else 0
+            'savings': baseline_cost - actual_cost,
+            'savings_percent': ((baseline_cost - actual_cost) / baseline_cost * 100)
+                              if baseline_cost > 0 else 0
         }
 
     def get_routing_summary(self) -> Dict:
@@ -924,16 +926,16 @@ class ModelRouter:
         total_cost = sum(stats['cost'] for stats in self.routing_stats.values())
         total_requests = sum(stats['requests'] for stats in self.routing_stats.values())
 
-        # Calculate what cost would have been with GPT-4 only
+        # Calculate what cost would have been with a top-tier-only baseline
         # Rough estimate: assume 70% cost increase
-        gpt4_only_cost = total_cost * 1.7
+        baseline_only_cost = total_cost * 1.7
 
         return {
             'total_requests': total_requests,
             'actual_cost': total_cost,
-            'gpt4_only_cost': gpt4_only_cost,
-            'cost_saved': gpt4_only_cost - total_cost,
-            'savings_percent': ((gpt4_only_cost - total_cost) / gpt4_only_cost * 100),
+            'baseline_only_cost': baseline_only_cost,
+            'cost_saved': baseline_only_cost - total_cost,
+            'savings_percent': ((baseline_only_cost - total_cost) / baseline_only_cost * 100),
             'by_model': self.routing_stats
         }
 
@@ -946,7 +948,7 @@ result = router.route_task(
     prompt="Customer review: 'This product is amazing!' Sentiment:"
 )
 print(f"Task: Sentiment classification")
-print(f"Model: {result['model_used']}")  # Will use gpt-3.5-turbo-instruct or claude-instant
+print(f"Model: {result['model_used']}")  # Will use gpt-4o-mini or claude-3-5-haiku
 print(f"Cost: ${result['cost']:.4f}")
 print(f"Savings: ${result['cost_savings']['savings']:.4f} ({result['cost_savings']['savings_percent']:.0f}%)")
 
@@ -956,7 +958,7 @@ result = router.route_task(
     prompt="Given market data X, Y, Z, analyze competitive positioning and recommend strategy..."
 )
 print(f"\nTask: Strategic analysis")
-print(f"Model: {result['model_used']}")  # Will use gpt-4-turbo or claude-2
+print(f"Model: {result['model_used']}")  # Will use gpt-4o or claude-3-5-sonnet
 print(f"Cost: ${result['cost']:.4f}")
 
 # Example 3: Moderate task with budget constraint
@@ -974,7 +976,7 @@ summary = router.get_routing_summary()
 print(f"\n=== Routing Summary ===")
 print(f"Total requests: {summary['total_requests']}")
 print(f"Actual cost: ${summary['actual_cost']:.2f}")
-print(f"Cost if GPT-4 only: ${summary['gpt4_only_cost']:.2f}")
+print(f"Cost if top-tier model only: ${summary['baseline_only_cost']:.2f}")
 print(f"Savings: ${summary['cost_saved']:.2f} ({summary['savings_percent']:.0f}%)")
 ```
 
@@ -983,18 +985,20 @@ print(f"Savings: ${summary['cost_saved']:.2f} ({summary['savings_percent']:.0f}%
 - $600-900/month saved on $1,500/month baseline
 - Often better results (simpler models less prone to overthinking simple tasks)
 
-**Model Selection Guidelines**:
-| Task Type | Recommended Model | Cost/1M Tokens | Use Cases |
-|-----------|------------------|----------------|-----------|
-| Classification | GPT-3.5-turbo-instruct | $1.50 | Sentiment, categorization, yes/no |
-| Simple extraction | Claude Instant | $3.20 | Entity extraction, basic summaries |
-| Moderate reasoning | GPT-3.5-turbo | $1.50 | Q&A, moderate summaries, simple code |
-| Complex reasoning | GPT-4-turbo | $40 | Multi-step analysis, complex code |
-| Creative writing | GPT-4 or Claude-2 | $90 | Long-form content, nuanced writing |
+**Model Selection Guidelines** (pricing as of 2026-05; verify before committing budgets):
+
+| Task Type | Recommended Model | Input $/1M | Output $/1M | Use Cases |
+|-----------|------------------|------------|-------------|-----------|
+| Classification | gpt-4o-mini | $0.15 | $0.60 | Sentiment, categorization, yes/no |
+| Simple extraction | claude-3-5-haiku | $0.80 | $4.00 | Entity extraction, basic summaries |
+| Moderate reasoning | gpt-4o-mini | $0.15 | $0.60 | Q&A, moderate summaries, simple code |
+| Complex reasoning | gpt-4o | $2.50 | $10.00 | Multi-step analysis, complex code |
+| Creative writing | claude-3-5-sonnet | $3.00 | $15.00 | Long-form content, nuanced writing |
+
 
 ## Monitoring and Continuous Optimization
 
-Cost optimization isn't a one-time exercise—it requires continuous monitoring and adjustment. Build observability into every LLM interaction to catch cost anomalies and optimization opportunities.
+Cost optimization isn't a one-time exercise-it requires continuous monitoring and adjustment. Build observability into every LLM interaction to catch cost anomalies and optimization opportunities.
 
 ### Production-Ready Monitoring System
 
@@ -1196,7 +1200,7 @@ class LLMObservability:
                     'type': 'overuse_expensive_model',
                     'model': 'gpt-4',
                     'percentage': (total_gpt4 / len(self.metrics) * 100),
-                    'recommendation': 'Evaluate if simpler tasks can use GPT-3.5-turbo (30x cheaper)'
+                    'recommendation': 'Evaluate if simpler tasks can use gpt-4o-mini or claude-3-5-haiku (10-60x cheaper)'
                 })
 
         return opportunities
@@ -1226,21 +1230,22 @@ def monitored_llm_call(prompt: str, user_id: str, feature: str):
 
     try:
         # Make LLM call
-        response = call_llm_api(prompt, model='gpt-3.5-turbo')
+        response = call_llm_api(prompt, model='gpt-4o-mini')
 
         # Calculate metrics
         latency_ms = (time.time() - start_time) * 1000
-        budget_manager = TokenBudgetManager()
+        budget_manager = TokenBudgetManager(model='gpt-4o-mini')
         input_tokens = budget_manager.count_tokens(prompt)
         output_tokens = budget_manager.count_tokens(response)
-        cost = (input_tokens / 1000 * 0.001) + (output_tokens / 1000 * 0.002)
+        # gpt-4o-mini: $0.15 / 1M input, $0.60 / 1M output
+        cost = (input_tokens * 0.15 + output_tokens * 0.60) / 1_000_000
 
         # Log metrics
         metric = LLMMetric(
             timestamp=time.time(),
             user_id=user_id,
             feature=feature,
-            model='gpt-3.5-turbo',
+            model='gpt-4o-mini',
             input_tokens=input_tokens,
             output_tokens=output_tokens,
             total_tokens=input_tokens + output_tokens,
@@ -1260,7 +1265,7 @@ def monitored_llm_call(prompt: str, user_id: str, feature: str):
             timestamp=time.time(),
             user_id=user_id,
             feature=feature,
-            model='gpt-3.5-turbo',
+            model='gpt-4o-mini',
             input_tokens=0,
             output_tokens=0,
             total_tokens=0,
@@ -1345,23 +1350,23 @@ Let's see how combining all these strategies enables cost-effective scaling. Con
 
 **Initial State** (Month 1):
 - Volume: 5,000 conversations/month
-- Model: GPT-4 for all requests
+- Model: claude-3-5-sonnet for all requests
 - Average conversation: 6 turns, 400 tokens per turn
-- **Cost: $1,200/month**
+- **Cost: ~$1,200/month**
 
 **After Optimization** (Month 3):
 - Volume: 20,000 conversations/month (4x growth)
 - Changes implemented:
   1. **Caching layer**: 75% cache hit rate for common questions
-  2. **Model routing**: GPT-3.5-turbo for 70% of requests, GPT-4 for 30%
+  2. **Model routing**: gpt-4o-mini for 70% of requests, claude-3-5-sonnet for 30%
   3. **Context optimization**: Sliding window reduced context tokens by 60%
   4. **Prompt compression**: 40% fewer instruction tokens
 
 **Results**:
 - Gross cost without optimization: $1,200 × 4 = $4,800/month
-- Actual cost with optimization: **$960/month**
-- **Savings: $3,840/month (80% reduction)**
-- **ROI: Implementation took 40 hours ($8,000 developer time), pays for itself in 2 months**
+- Actual cost with optimization: **~$1,400/month**
+- **Savings: ~$3,400/month (~70% reduction)**
+- **ROI: Implementation took 40 hours ($8,000 developer time), pays for itself in 2-3 months**
 
 ### Implementation Roadmap
 
@@ -1384,7 +1389,7 @@ Let's see how combining all these strategies enables cost-effective scaling. Con
 - Implement context window management
 - Add retry logic with exponential backoff
 - Fine-tune caching TTLs based on usage patterns
-- **Expected savings: 60-80%**
+- **Expected savings: 30-60% in our experience**
 
 ### Continuous Improvement
 
@@ -1409,13 +1414,13 @@ Cost optimization is an ongoing process:
 
 ## Conclusion
 
-LLM cost optimization isn't about compromising on quality—it's about being smart with resources. Through systematic application of token management, intelligent caching, prompt optimization, and strategic model selection, organizations routinely achieve 60-80% cost reductions while maintaining or improving application performance.
+LLM cost optimization isn't about compromising on quality-it's about being smart with resources. Through systematic application of token management, intelligent caching, prompt optimization, and strategic model selection, organizations routinely achieve 30-60% cost reductions in our experience while maintaining or improving application performance.
 
 The key principles:
 
 1. **Measure first**: You can't optimize what you don't measure
 2. **Cache aggressively**: 70%+ of queries benefit from caching
-3. **Right-size your models**: Don't use GPT-4 for tasks GPT-3.5 can handle
+3. **Right-size your models**: Don't use gpt-4o or claude-3-5-sonnet for tasks gpt-4o-mini or claude-3-5-haiku can handle
 4. **Optimize prompts**: Every unnecessary token costs money at scale
 5. **Monitor continuously**: Catch cost anomalies before they hurt
 

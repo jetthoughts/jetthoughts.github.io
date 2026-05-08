@@ -17,6 +17,8 @@ Django 5.0 eliminates that boilerplate with native async ORM methods. In our ben
 
 This guide covers the full migration from Django 4.2 to 5.0 -- breaking changes, database strategies, security enhancements, and zero-downtime deployment. For PHP teams facing similar decisions, compare with our [Laravel 11 migration guide](/blog/laravel-11-migration-guide-production-deployment-strategies/). If you're managing technical debt alongside the upgrade, our [Django technical debt cost calculator](/blog/django-technical-debt-cost-calculator-elimination-strategy/) helps quantify what to tackle first. Teams running Rails applications can also compare migration patterns with our [Rails 8 Solid Queue migration guide](/blog/rails-8-solid-queue-migration-guide/) and [Rails 8 Solid Cache migration guide](/blog/rails-8-solid-cache-performance-redis-migration/).
 
+> **Version note:** async ORM methods (`acreate`, `aget`, `asave`) shipped in Django 4.1 and were already available in 4.2 LTS. The 5.0 additions are `aupdate_or_create`, `abulk_create`, `aget_object_or_404`, plus `Field.db_default` and `GeneratedField`. `STORAGES` and `db_table_comment` actually shipped in 4.2.
+
 ## The Challenge of Django 4.2 in Modern Enterprise Environments
 
 Django 4.2 LTS has served enterprise applications admirably, but organizations are increasingly encountering limitations that impact scalability, developer productivity, and operational efficiency.
@@ -227,43 +229,61 @@ from django.http import JsonResponse
 async def user_dashboard(request):
     # Direct async ORM operations - no wrappers needed
     user = await User.objects.select_related('profile').aget(pk=request.user.id)
-    orders = [order async for order in user.orders.prefetch_related('items__product')[:10]]
+    orders = [order async for order in user.orders.prefetch_related('items__product')[:10].aiterator()]
 
-    return JsonResponse({'user': user, 'orders': orders})
+    return JsonResponse({
+        'user': {
+            'id': user.id,
+            'email': user.email,
+            'name': user.get_full_name(),
+        },
+        'orders': [
+            {
+                'id': order.id,
+                'total': str(order.total),
+                'created_at': order.created_at.isoformat(),
+            }
+            for order in orders
+        ],
+    })
 ```
 
 ### New Async ORM Methods:
 ```python
 # Django 5.0 native async ORM API
 from django.contrib.auth import get_user_model
+from django.db.models import Count, Sum
 
 User = get_user_model()
 
-# Async CRUD operations
-user = await User.objects.acreate(username='john', email='john@example.com')
-user = await User.objects.aget(pk=123)
-await user.asave()
-await user.adelete()
+async def demo_async_orm():
+    # Async CRUD operations
+    user = await User.objects.acreate(username='john', email='john@example.com')
+    user = await User.objects.aget(pk=user.pk)
+    await user.asave()
+    await user.adelete()
 
-# Async queries
-users = [u async for u in User.objects.filter(is_active=True)]
-count = await User.objects.acount()
-exists = await User.objects.filter(username='john').aexists()
+    # Async queries
+    users = [u async for u in User.objects.filter(is_active=True)]
+    count = await User.objects.acount()
+    exists = await User.objects.filter(username='john').aexists()
 
-# Async aggregations
-from django.db.models import Count, Sum
-stats = await Order.objects.aggregate(
-    total_orders=Count('id'),
-    total_revenue=Sum('total')
-)
+    # Async aggregations
+    stats = await Order.objects.aaggregate(
+        total_orders=Count('id'),
+        total_revenue=Sum('total')
+    )
 
-# Async related object access
-order = await Order.objects.select_related('customer').aget(pk=456)
-customer_name = await order.customer.full_name  # Async attribute access
+    # Async related object access -- pre-load the FK with select_related,
+    # then access the related attribute synchronously (no await on a string).
+    order = await Order.objects.select_related('customer').aget(pk=456)
+    customer_name = order.customer.full_name  # Already fetched via JOIN
+
+    return users, count, exists, stats, customer_name
 ```
 
 ### Performance Impact:
-```python
+```text
 # Benchmark: Async view performance (100 concurrent requests)
 # Django 4.2 with sync_to_async wrappers
 Requests per second: 142.3
@@ -286,19 +306,20 @@ Django 5.0 introduces query optimization that reduces database round-trips:
 # Django 5.0 - Optimized query compilation
 from django.db.models import Prefetch, Q, F
 
-# Automatically optimizes complex prefetch queries
-orders = await Order.objects.filter(
-    created_at__gte=date.today() - timedelta(days=30)
-).select_related(
-    'customer', 'shipping_address'
-).prefetch_related(
-    Prefetch('items', queryset=OrderItem.objects.select_related('product')),
-    'customer__payment_methods'
-).aiterator()  # Memory-efficient async iteration
+async def process_recent_orders():
+    # Automatically optimizes complex prefetch queries
+    orders = Order.objects.filter(
+        created_at__gte=date.today() - timedelta(days=30)
+    ).select_related(
+        'customer', 'shipping_address'
+    ).prefetch_related(
+        Prefetch('items', queryset=OrderItem.objects.select_related('product')),
+        'customer__payment_methods'
+    ).aiterator()  # Memory-efficient async iteration (returns async iterator, no await)
 
-async for order in orders:
-    # Process orders with minimal memory footprint
-    await process_order(order)
+    async for order in orders:
+        # Process orders with minimal memory footprint
+        await process_order(order)
 ```
 
 ### Query Optimization Results:
@@ -390,27 +411,9 @@ class Order(models.Model):
 # - Refactoring support across the codebase
 ```
 
-### Enhanced Security Defaults
+### Hardening Production Settings
 
-Django 5.0 introduces improved security defaults and simplified configuration:
-
-```python
-# Django 5.0 - Simplified security configuration
-# settings.py
-SECURE_DEFAULTS = True  # Enables secure defaults
-
-# This single setting activates:
-# - SECURE_SSL_REDIRECT = True
-# - SECURE_HSTS_SECONDS = 31536000
-# - SECURE_CONTENT_TYPE_NOSNIFF = True
-# - SESSION_COOKIE_SECURE = True
-# - CSRF_COOKIE_SECURE = True
-# - X_FRAME_OPTIONS = 'DENY'
-
-# Override only specific settings as needed
-SECURE_HSTS_PRELOAD = True  # Additional HSTS configuration
-CSRF_TRUSTED_ORIGINS = ['https://example.com']
-```
+Django doesn't ship a single "secure mode" toggle. Run `python manage.py check --deploy` to audit your settings against Django's hardening recommendations. Manually set the relevant flags: `SECURE_SSL_REDIRECT`, `SECURE_HSTS_SECONDS`, `SESSION_COOKIE_SECURE`, `CSRF_COOKIE_SECURE`, `SECURE_CONTENT_TYPE_NOSNIFF`.
 
 ### Security Enhancements:
 ```python
@@ -698,8 +701,9 @@ $ source venv-django50/bin/activate
 # USE_L10N = True  # Removed in Django 5.0 (always enabled)
 # USE_DEPRECATED_PYTZ = False  # No longer needed
 
-# Add Django 5.0 enhancements
-SECURE_DEFAULTS = True  # Enable secure defaults
+# Audit hardening with `python manage.py check --deploy` and set the
+# relevant flags explicitly: SECURE_SSL_REDIRECT, SECURE_HSTS_SECONDS,
+# SESSION_COOKIE_SECURE, CSRF_COOKIE_SECURE, SECURE_CONTENT_TYPE_NOSNIFF.
 
 # Database configuration for PostgreSQL 16
 DATABASES = {
@@ -775,7 +779,7 @@ class OrderListView(View):
         orders = []
         async for order in Order.objects.filter(
             customer=request.user
-        ).select_related('shipping_address')[:20]:
+        ).select_related('shipping_address')[:20].aiterator():
             orders.append(await order.to_dict_async())
 
         return JsonResponse({'orders': orders})
@@ -804,7 +808,7 @@ async def get_customer_orders(customer_id):
     orders = []
     async for order in Order.objects.filter(
         customer_id=customer_id
-    ).select_related('customer'):
+    ).select_related('customer').aiterator():
         orders.append({
             'id': order.id,
             'customer_name': order.customer.full_name,  # No extra query
@@ -876,7 +880,7 @@ class AsyncLoggingMiddleware:
 
 ### Create Django 5.0 Compatible Migrations
 
-```python
+```bash
 # Generate new migrations for Django 5.0
 $ python manage.py makemigrations
 
@@ -974,7 +978,7 @@ class MigrationBenchmark(TestCase):
         orders = []
         async for order in Order.objects.filter(
             customer=self.customer
-        ).select_related('customer')[:20]:
+        ).select_related('customer')[:20].aiterator():
             orders.append(order)
 
         duration = time.time() - start
@@ -982,6 +986,9 @@ class MigrationBenchmark(TestCase):
         # Assert performance target
         self.assertLess(duration, 0.05, f"Async query took {duration}s, target <0.05s")
 
+```
+
+```bash
 # Run benchmarks
 $ python manage.py test benchmark_migration.MigrationBenchmark
 ```
@@ -1012,6 +1019,9 @@ class DjangoUser(HttpUser):
             "items": [{"product_id": 1, "quantity": 2}]
         })
 
+```
+
+```bash
 # Run load test
 $ locust -f locustfile.py --host=http://staging.example.com
 # Target: 500 req/s with <200ms avg response time
@@ -1193,6 +1203,9 @@ class Command(BaseCommand):
 
                 time.sleep(30)  # Check every 30 seconds
 
+```
+
+```bash
 # Run monitoring
 $ python manage.py monitor_migration
 ```
@@ -1324,7 +1337,7 @@ class DashboardView(View):
     async def fetch_orders(self, user):
         """Fetch user orders asynchronously"""
         orders = []
-        async for order in user.orders.all()[:10]:
+        async for order in user.orders.all()[:10].aiterator():
             orders.append(await order.to_dict_async())
         return orders
 
@@ -1370,11 +1383,9 @@ DATABASES = {
             'connect_timeout': 10,
             'options': '-c statement_timeout=30000',  # 30-second query timeout
         },
-        'POOL': {  # Django 5.0 connection pooling
-            'max_overflow': 10,
-            'pool_size': 20,
-            'pool_recycle': 3600,  # Recycle connections hourly
-        }
+        # Django connection pooling shipped in 5.1 (not 5.0). Use:
+        #   "OPTIONS": {"pool": True}
+        # For Django 5.0, use pgbouncer in front of Postgres instead.
     }
 }
 ```
@@ -1464,6 +1475,9 @@ class Command(BaseCommand):
                 for q in slow_queries[:5]:  # Show top 5
                     self.stdout.write(f"  {q['time']}s: {q['sql'][:100]}")
 
+```
+
+```bash
 # Run profiling
 $ python manage.py profile_queries
 ```
@@ -1489,7 +1503,7 @@ For teams handling data schema changes alongside framework upgrades, review patt
 
 A: While technically possible, it's **strongly discouraged**. Django's deprecation policy removes features over multiple versions. Direct migration from 3.2 to 5.0 requires handling two major versions worth of breaking changes simultaneously:
 
-```python
+```text
 # Recommended migration path
 Django 3.2 LTS → Django 4.2 LTS → Django 5.0
 
@@ -1580,7 +1594,7 @@ class Migration(migrations.Migration):
 
 A: Implement comprehensive testing strategy:
 
-```python
+```bash
 # Run full test suite
 $ python manage.py test --settings=myapp.settings_test
 
@@ -1658,10 +1672,12 @@ A: Performance gains depend on I/O-bound operations:
 
 A: Celery 5.3+ fully supports Django 5.0:
 
-```python
+```bash
 # Update Celery and ensure compatibility
 $ pip install celery==5.3.4 django-celery-results==2.5.1
+```
 
+```python
 # tasks.py remains largely unchanged
 from celery import shared_task
 
