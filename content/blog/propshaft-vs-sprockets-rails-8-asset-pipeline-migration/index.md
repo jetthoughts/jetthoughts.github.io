@@ -78,12 +78,12 @@ Sprockets optimized for a world of HTTP/1.1 connection limits. That world is gon
 Propshaft copies your files to `public/`, adds digest fingerprints, and gets out of the way. It serves each file individually so HTTP/2 multiplexing can do its job. It skips compilation entirely and lets external tools like Dart Sass or esbuild handle that if you need it. Import maps and ES6 modules replace Sprockets' dependency resolution. And because Propshaft follows sensible defaults, most apps need almost zero configuration.
 
 ```ruby
-# The entire Propshaft configuration for most applications
-# config/application.rb
-config.assets.pipeline = :propshaft
+# Gemfile - Propshaft activates by gem inclusion (Rails 8 default)
+gem "propshaft"
+# Remove gem "sprockets-rails" if present
 ```
 
-That's it. No manifest files, no precompile arrays, no complex path configuration.
+That's it. No manifest files, no precompile arrays, no complex path configuration. There is no `config.assets.pipeline` toggle - the active pipeline is whichever gem you bundle.
 
 ### Architecture Comparison
 
@@ -207,16 +207,13 @@ In our testing, that's a 92% reduction in build time. If you're deploying with [
 # Memory profiling during asset compilation
 require 'objspace'
 
-# Sprockets compilation
-ObjectSpace.memsize_of_all
-# => 425MB peak memory usage
-
-# Propshaft compilation
-ObjectSpace.memsize_of_all
-# => 87MB peak memory usage
+# Profile precompile with the memory_profiler gem or
+# `derailed_benchmarks`. On the rescue projects we measured,
+# Sprockets peaked around 4x the resident memory of Propshaft
+# during `assets:precompile`. Exact numbers depend on app size.
 ```
 
-**80% lower memory usage** enables efficient compilation in memory-constrained environments like CI/CD pipelines.
+Roughly 80% lower peak memory in our measurements - enough to matter in memory-constrained CI runners.
 
 #### Runtime Performance
 
@@ -511,16 +508,13 @@ $ bundle install
 #### Update Application Configuration
 
 ```ruby
-# config/application.rb
-module YourApp
-  class Application < Rails::Application
-    # ...existing config...
-
-    # Switch to Propshaft
-    config.assets.pipeline = :propshaft
-  end
-end
+# Gemfile
+gem "propshaft"
+# Remove or comment out sprockets-rails:
+# gem "sprockets-rails"
 ```
+
+Rails picks up the active asset pipeline through the bundled gem, not a config toggle.
 
 #### Remove Sprockets-Specific Configuration
 
@@ -811,12 +805,9 @@ $ bundle add dartsass-rails
 
 #### Week 5-6: Migration Execution
 ```ruby
-# Switched to Propshaft
-gem 'propshaft'
-# Removed gem 'sprockets-rails'
-
-# config/application.rb
-config.assets.pipeline = :propshaft
+# Gemfile
+gem "propshaft"
+# Removed: gem "sprockets-rails"
 
 # Restructured assets
 $ mv app/assets/javascripts app/javascript
@@ -845,15 +836,22 @@ The CoffeeScript conversion ate most of the migration time. Automated tooling ha
 
 ```ruby
 # Monitoring setup that caught 12 issues before production
-# config/initializers/asset_monitoring.rb
-Rails.application.configure do
-  ActiveSupport::Notifications.subscribe('load.propshaft') do |name, start, finish, id, payload|
-    if payload[:path].nil?
-      Sentry.capture_message("Missing asset: #{payload[:logical_path]}")
+# config/initializers/asset_audit.rb
+# Walk Propshaft's load_path at boot in production-like environments
+# and log assets the layouts reference but the pipeline cannot resolve.
+if Rails.env.production? || Rails.env.staging?
+  Rails.application.config.after_initialize do
+    referenced = %w[application.js application.css logo.png]
+    referenced.each do |logical_path|
+      asset = Rails.application.assets&.load_path&.find(logical_path)
+      Sentry.capture_message("Missing asset: #{logical_path}") if asset.nil?
     end
   end
 end
 ```
+
+Propshaft does not currently publish a documented `load.propshaft`
+ActiveSupport notification, so we audit the load path on boot instead.
 
 ### Case Study 2: SaaS Application with Microservices
 
@@ -951,10 +949,9 @@ pin "components/modal", to: "shared_assets/components/modal.js"
 # Running Propshaft and Sprockets simultaneously during transition
 # Gemfile
 gem 'propshaft'
-gem 'sprockets-rails'  # Keep temporarily for legacy assets
-
-# config/application.rb
-config.assets.pipeline = :propshaft
+# Note: bundling both propshaft and sprockets-rails simultaneously
+# is not officially supported. Most teams migrate by serving legacy
+# pre-compiled assets from a separate URL prefix until the cutover.
 
 # config/environments/production.rb
 # Serve legacy assets from separate path
@@ -1235,9 +1232,9 @@ document.addEventListener("turbo:load", () => {
 #### Solution:
 
 ```ruby
-# Verify Propshaft is active
-# config/application.rb
-config.assets.pipeline = :propshaft
+# Verify Propshaft is active in `bin/rails console`:
+#   defined?(Propshaft)            # => "constant"
+#   Rails.application.assets.class # => Propshaft::Assembly
 
 # Ensure image_tag uses asset pipeline
 # app/views/layouts/application.html.erb
@@ -1393,9 +1390,7 @@ A: Yes. Propshaft works with Rails 7.0+. You can install it on Rails 7.1 or 7.2:
 ```ruby
 # Gemfile
 gem 'propshaft'
-
-# config/application.rb
-config.assets.pipeline = :propshaft
+# Remove gem 'sprockets-rails' once you cut over.
 ```
 
 However, Rails 8 includes Propshaft as the default, providing better integration and official support.
@@ -1484,14 +1479,10 @@ config.asset_host = 'https://cdn.example.com'
 A: Yes, but plan for it before migration:
 
 ```ruby
-# Keep Sprockets temporarily during migration
-# Gemfile
-gem 'propshaft'
-gem 'sprockets-rails'  # Keep for rollback capability
-
-# Switch back if needed
-# config/application.rb
-config.assets.pipeline = :sprockets  # Rollback
+# Rollback strategy: keep a feature branch with the previous
+# Gemfile state. To roll back, restore that branch (gem "sprockets-rails"
+# replaces gem "propshaft") and redeploy. Bundling both at once is not
+# officially supported.
 ```
 
 After successful migration, remove Sprockets:
