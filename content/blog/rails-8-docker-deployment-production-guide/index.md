@@ -113,7 +113,7 @@ RUN bundle config set --local deployment 'true' && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
 
 # Install JavaScript dependencies
-RUN yarn install --frozen-lockfile --production && \
+RUN yarn install --immutable && \
     yarn cache clean
 
 #############################################
@@ -131,7 +131,8 @@ COPY . .
 # Precompile assets and bootsnap cache
 RUN SECRET_KEY_BASE_DUMMY=1 \
     bundle exec rails assets:precompile && \
-    bundle exec bootsnap precompile --gemfile app/ lib/
+    bundle exec bootsnap precompile app/ lib/ && \
+    bundle exec bootsnap precompile --gemfile
 
 # Clean up unnecessary files to reduce image size
 RUN rm -rf node_modules tmp/cache app/assets vendor/assets lib/assets spec
@@ -317,7 +318,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base # Use base image for development consistency
-    command: bundle exec rails solid_queue:start
+    command: bin/jobs
     volumes:
       - .:/rails
       - bundle_cache:/usr/local/bundle
@@ -460,7 +461,7 @@ services:
 
   worker:
     image: myregistry.com/myapp:${VERSION}
-    command: bundle exec rails solid_queue:start
+    command: bin/jobs
     environment:
       DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       RAILS_ENV: production

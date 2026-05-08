@@ -21,11 +21,11 @@ metatags:
 cover_image_alt: "Rails 8 Solid Cache performance and migration from Redis"
 ---
 
-*Your team pays $200-500/month for a Redis caching service you might not need. Rails 8 lets you replace it with your existing database — saving $17K+/year on a typical mid-size app. This guide shows your dev team how to make the switch safely.*
+*Your team pays $200-500/month for a Redis caching service you might not need. Rails 8 lets you replace it with your existing database - saving $17K+/year on a typical mid-size app. This guide shows your dev team how to make the switch safely.*
 
 Rails 8 made Solid Cache the default caching backend. Your database is already running, already monitored, already backed up. Why pay for a separate Redis instance when PostgreSQL can serve those cache reads on its own?
 
-The tradeoff is real though — database-backed caching is slower per read than Redis. Whether that matters depends on your traffic. Here are the actual numbers and a production migration path.
+The tradeoff is real though - database-backed caching is slower per read than Redis. Whether that matters depends on your traffic. Here are the actual numbers and a production migration path.
 
 ## Executive Summary
 
@@ -63,16 +63,18 @@ end
 # config/environments/production.rb
 config.cache_store = :solid_cache_store
 
-# Advanced configuration options
+# Advanced configuration options (verify against rails/solid_cache for current option names)
 config.cache_store = :solid_cache_store, {
   database: :cache,              # Use separate cache database
   expires_in: 2.weeks,           # Default expiration
-  size_estimate: 100.megabytes,  # Size hint for optimization
-  max_age: 2.weeks               # Maximum age for cache entries
+  store_options: {
+    max_age: 2.weeks,            # Maximum age for cache entries
+    max_size: 256.megabytes.to_i # Cap on table size
+  }
 }
 ```
 
-The biggest architectural win is transactional consistency. Imagine your team upgrades a user to premium and deletes the cached status in the same request. With Redis, if the transaction rolls back, that cache key is already gone -- now every request for that user hits the database until someone notices. With Solid Cache, the cache delete lives inside the same database transaction, so a rollback undoes both:
+A note on transactional consistency: cache deletes commit with the parent transaction *only* when Solid Cache shares the primary connection. If you put Solid Cache on a separate `:cache` database (recommended below for write-heavy apps), the cache delete commits independently, same as Redis. The example below works in the shared-connection case:
 
 ```ruby
 # Cache invalidation inside the same transaction -- rollback undoes both
@@ -270,7 +272,7 @@ Rails.application.configure do
     database: :cache,                    # Use separate cache database
     connects_to: { writing: :cache },    # Database connection
     expires_in: 2.weeks,                 # Default TTL
-    size_estimate: 500.megabytes,        # Size hint for optimization
+    max_size: 500.megabytes.to_i,        # Cap on cache table size
     namespace: "myapp_cache"             # Namespace for multi-tenancy
   }
 end
@@ -280,7 +282,7 @@ end
 
 ```ruby
 # Create optimized indexes for cache performance
-class OptimizeSolidCachePerformance < ActiveRecord::Migration[7.1]
+class OptimizeSolidCachePerformance < ActiveRecord::Migration[8.0]
   def change
     # 1. Composite index for key lookups with expiration
     add_index :solid_cache_entries,
@@ -529,7 +531,7 @@ module CacheHelper
 end
 ```
 
-3. **Performance Regression Detection** — subscribe to `ActiveSupport::Notifications` for `cache_read.active_support` and `cache_write.active_support` events. Log anything over 50ms. The built-in instrumentation is enough for most apps.
+3. **Performance Regression Detection** - subscribe to `ActiveSupport::Notifications` for `cache_read.active_support` and `cache_write.active_support` events. Log anything over 50ms. The built-in instrumentation is enough for most apps.
 
 ## Performance Optimization Strategies
 
@@ -537,7 +539,7 @@ end
 
 ```ruby
 # 1. Table Partitioning for Large Caches
-class PartitionSolidCacheTable < ActiveRecord::Migration[7.1]
+class PartitionSolidCacheTable < ActiveRecord::Migration[8.0]
   def up
     # Partition by month for automatic cleanup
     execute <<-SQL
@@ -784,7 +786,7 @@ roi = MigrationROI.calculate(app_profile)
 
 ## Monitoring Solid Cache
 
-Track cache performance with ActiveSupport::Notifications — it's already built in:
+Track cache performance with ActiveSupport::Notifications - it's already built in:
 
 ```ruby
 ActiveSupport::Notifications.subscribe('cache_read.active_support') do |*args|
@@ -878,7 +880,7 @@ This one wasn't a Redis migration -- it was Memcached -- but the pattern applies
 
 Solid Cache isn't the right call for every app. Be specific about when to keep Redis:
 
-- **You're doing 10K+ cache reads/sec.** Solid Cache adds 3-8ms per read vs Redis's 0.5-2ms. At high volume, that latency compounds into real response time degradation.
+- **You're doing 10K+ cache reads/sec.** Solid Cache adds a few milliseconds of database round-trip per read; Redis on local network stays sub-millisecond. At high volume that gap compounds. Measure your own numbers before flipping the switch on a hot read path.
 - **You need sub-millisecond latency for rate limiting or session storage.** These are hot-path operations where every millisecond matters. Redis is purpose-built for this.
 - **You rely on Redis data structures -- sorted sets, pub/sub, HyperLogLog.** Solid Cache is key-value only. If you're using Redis as more than a cache, you can't drop it entirely.
 - **Your database is already at capacity.** Adding cache reads to a maxed-out PostgreSQL instance will make everything slower, not just cache hits.

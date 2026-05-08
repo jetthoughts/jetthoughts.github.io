@@ -113,7 +113,7 @@ On a client project, these misconfigurations went undetected until a security au
 
 ### Performance Overhead
 
-Devise's flexibility comes with runtime costs. A typical Devise `authenticate_user!` call executes 4-6 database queries per request (session lookup, token validation, trackable updates, etc.), while Rails 8's built-in authentication executes 1-2 queries. Rails 8 auth is simpler and has fewer database queries per request, but we have not published formal benchmarks comparing throughput.
+Devise's modules add database round-trips per request: trackable runs an UPDATE on every authenticated request, timeoutable touches the session record, lockable checks the failed-attempts counter. The Rails 8 built-in generator skips those modules by default and stays close to a single `User.find` per authenticated request. We have not published formal throughput benchmarks; the gain is real but workload-dependent.
 
 For teams struggling with Devise complexity and seeking to modernize their authentication stack, our [technical leadership consulting](/services/technical-leadership-consulting/) helps evaluate whether Rails 8's built-in authentication meets your specific security requirements and business needs.
 
@@ -543,11 +543,11 @@ end
 ```ruby
 devise_to_rails8_mapping = {
   database_authenticatable: "Built-in (has_secure_password)",
-  registerable: "Built-in (registration controller)",
+  registerable: "Custom controller required (the generator does not create a sign-up flow)",
   recoverable: "Built-in (passwords controller)",
   rememberable: "Custom implementation needed",
   validatable: "Built-in (model validations)",
-  confirmable: "Built-in (email confirmations controller)",
+  confirmable: "Custom controller required (the generator does not create email confirmations)",
   lockable: "Custom implementation needed",
   timeoutable: "Custom implementation needed",
   trackable: "Custom implementation needed",
