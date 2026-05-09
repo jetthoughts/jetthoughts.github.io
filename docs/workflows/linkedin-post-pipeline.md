@@ -15,6 +15,8 @@
 3. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice formula, banned words, anti-AI structural patterns
 4. **This file** — LinkedIn-specific rules that override or extend the blog voice guide
 
+If this file conflicts with a generic writing, SEO, or humanizer skill, this file wins for LinkedIn drafts.
+
 ---
 
 ## Voice rules (LinkedIn-specific)
@@ -140,6 +142,25 @@ The skeleton names 5 beats. The first-draft trap is to render each beat as its o
 **Fix at the writing stage:** drop in connectors at the seams as you draft. "So we hopped on a quick call." "And the thing is..." "Anyway, we agreed she'd try..." Real spoken stories don't pause for breath at every clean beat. Two paragraphs of flowing prose almost always beat 5 paragraphs of separated beats.
 
 **The Tuesday post lesson:** an initial 6-paragraph draft (one paragraph per beat, no connectors) was rewritten to 3 paragraphs by adding `so we hopped on a quick call`, `So we agreed she'd try a different one`, and `Beats three more sprints of...` — connectors that carry the listener forward. This is a writing-stage rule, not just an editing-stage fix.
+
+### Hook archetype rotation (Beat 1)
+
+Beat 1 ("specific recent encounter") most naturally produces a **dialogue-led** opener — "A founder pinged me last week..." Repeating this archetype across consecutive posts is itself an AI/LinkedIn tell, regardless of how spoken each individual post sounds. Three consecutive posts opening "A founder pinged me / Got a Slack from a founder / Talked to a founder" trains both readers and AI detectors to recognize the formula.
+
+**Before drafting, scan the last 2-3 posts in `linkedin-posts/icp-validation/` for opener archetype.** Pick a different one:
+
+| Archetype | Example opener |
+|---|---|
+| Dialogue-led | `A founder pinged me last week. She couldn't say what was off.` |
+| Question-led | `For founders working with an external dev team: which signal do you actually rely on?` |
+| Observation-led | `I keep noticing how different the answer is depending on who you ask.` |
+| Stat-led | `12 closed tickets in a sprint can still mean zero product progress.` |
+| Conflict-led | `Closing a ticket and shipping a feature aren't the same thing.` |
+| History-led | `Three sprints ago, the same conversation: is it on track? yes.` |
+
+**Format-specific defaults:** polls → question-led; checklists → conflict-led or stat-led; narrative posts → rotate among the others. Don't pick dialogue-led twice in a row.
+
+See `~/.claude/projects/-Users-pftg-dev-jetthoughts-github-io/memory/feedback_hook_bank_diversity.md` for fuller rule and origin (flagged by user 2026-05-05).
 
 ---
 
@@ -332,6 +353,7 @@ When asked to write a LinkedIn post for Paul:
 - [ ] Read the 4 mandatory pre-writing files
 - [ ] Identify which week/day in the validation plan
 - [ ] Identify which hypothesis the post tests
+- [ ] Scan last 2-3 posts for opener archetype; pick a different one
 - [ ] Draft against the 5-beat skeleton
 - [ ] Run the 5 sentence-level tests on each line
 - [ ] Apply the AI score rubric — must be ≤ 2/10

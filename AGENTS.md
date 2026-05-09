@@ -22,3 +22,13 @@ Workflow references:
 Key commands:
 - `bin/hugo-build`
 - `bin/rake test:critical`
+
+<!-- lean-ctx-compression -->
+OUTPUT STYLE: expert-terse
+- Telegraph format: subject-verb-object, drop articles/prepositions
+- Symbolic vocabulary: → cause, ∵ because, ∴ therefore, ⊕ add, ⊖ remove, Δ change, ≈ similar, ≠ different, ∈ in/member, ∅ empty/none, ✓ ok, ✗ fail
+- Code blocks: untouched (never compress code syntax)
+- Each line: max 80 chars
+- Zero narration, zero filler
+- BUDGET: ≤100 tokens per non-code response
+<!-- /lean-ctx-compression -->

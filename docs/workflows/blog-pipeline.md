@@ -256,8 +256,9 @@ patterns the 3-persona loop systematically misses (verified across 5+ posts:
 frontmatter contradictions, fluffy narration, fake authority stamps, timeline
 fabrication, "Not X but Y" closers, em dashes, rule-of-three modifiers).
 
-Spawn with `mode: bypassPermissions` so it can edit files. Use this prompt
-verbatim — concrete bad/good pairs are required; abstract rules don't work:
+Spawn a fresh-context reviewer with edit permissions appropriate to the current
+agent tool. Use this prompt verbatim — concrete bad/good pairs are required;
+abstract rules don't work:
 
 "You are a cold-eyes copy editor. Read content/blog/<slug>/index.md with
 ZERO prior context. Your job is to catch patterns that 3 rounds of persona
@@ -460,7 +461,7 @@ Skills are invoked via `/skill-name`. Agents are spawned via the Agent tool.
 | 3. Research | `/keyword-research`, `/competitor-intel`, `/social-media-trends-research` | `web-research-workflow` agent, WebSearch |
 | 4. Draft | `/blog-post`, `/copywriting-core`, `/content-production`, `/copy-editing` | Write tool |
 | 5. Review loop | `/slop-detector` → `/humanizer` (if flagged), `/seo-aeo-audit`, `/seo` | 3 parallel critic agents (founder, SEO/slop, editor) |
-| 5c. Cold-eyes gate | — | 1 cold-eyes agent (Agent 4) with `mode: bypassPermissions` and the 9-check prompt verbatim |
+| 5c. Cold-eyes gate | — | 1 cold-eyes agent (Agent 4) with edit permissions and the 9-check prompt verbatim |
 | 6. Cover image | `/stitch-design` | chrome-devtools MCP, magick CLI |
 | 7. Validate | `/hugo` | `bin/hugo-build`, chrome-devtools MCP |
 | 8. Update plan | — | Edit tool |

@@ -3,6 +3,8 @@
 Read this at session start to route tasks to the right workflow without explicit user notice.
 
 ## Routing Rules
+- LinkedIn post creation or edits, especially `linkedin-posts/**` → `@docs/workflows/linkedin-post-pipeline.md`
+- LinkedIn ICP validation campaign posts → `@docs/workflows/linkedin-post-pipeline.md` and `@docs/workflows/linkedin-icp-validation-plan.md`
 - Content creation or edits → `@docs/workflows/blog-pipeline.md` (mandatory)
 - Cover image work → `docs/workflows/cover-images.md` and `.stitch/design.md`
 - Image/cover requests (even without content) → `@docs/workflows/cover-images.md` and `@.stitch/design.md`
@@ -10,4 +12,4 @@ Read this at session start to route tasks to the right workflow without explicit
 - Ruby/Rails changes → `@docs/workflows/ruby.md`
 - AI configuration, agents, skills → `@docs/workflows/ai-config.md`
 
-Rule: Prefer skills for execution; use agents only when explicitly required.
+Rule: Prefer skills for execution; use agents only when explicitly required by the user or by the selected workflow.

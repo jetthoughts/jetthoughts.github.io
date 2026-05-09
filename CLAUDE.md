@@ -34,7 +34,7 @@ Always read these files before making changes. They define the project's archite
 
 **Session start**: Always read `@docs/workflows/BASE_HANDBOOK.md` and `@docs/workflows/flow-router.md`.
 
-Prefer **skills** over agents. Use agents only when a task explicitly requires them.
+Prefer **skills** over agents. Use agents only when the user or the selected workflow explicitly requires them.
 
 Always use claude-context MCP search **before** making changes:
 
@@ -46,7 +46,7 @@ Always use claude-context MCP search **before** making changes:
 - `ask_question` about `jetthoughts/jetthoughts.github.io` for AI-powered answers about the repo
 - `read_wiki_structure` / `read_wiki_contents` for browsing repo documentation
 
-**After:** grep/find and other tools for search code patterns — use claude-context MCP semantic search first (100x faster), then deepwiki as fallback.
+**After:** use `rg`/`ls` for exact filenames, slugs, and fallback searches. For code/content patterns, use claude-context MCP semantic search first, then DeepWiki as fallback.
 
 ### Finding blog posts to reference (MANDATORY for content work)
 When writing a blog post and looking for internal links, **always use claude-context first**:
@@ -62,7 +62,7 @@ Follow official methodology from `/knowledge/`:
 - **TDD**: RED → GREEN → REFACTOR cycle. See `/knowledge/20.01-tdd-methodology-reference.md` and `/knowledge/20.11-tdd-agent-delegation-how-to.md`
 - **Test Quality**: Behavior-focused ONLY. Reject implementation/existence/config tests. See `/knowledge/25.04-test-smell-prevention-enforcement-protocols.md`
 - **Avoid fragile config assertions**: Don't hardcode tunable values (`q=90`, `w=360`, exact file sizes, specific dimensions, CSS property values). Assert the *shape* (`q=\d+`, has `<picture>`, src contains `wsrv.nl`), not the configuration. If a test breaks when you change a quality/size knob unrelated to behavior, the test is testing config, not behavior — relax the assertion.
-- **Framework**: Minitest (`test/system/`, `test/unit/`). NEVER create `*.sh` test scripts
+- **Framework**: Minitest (`test/system/`, `test/unit/`). NEVER create ad hoc `*.sh` test scripts
 - **Test Runner**: `bin/rake test:critical` after every micro-change (< 10 lines)
 
 ### Visual Regression (MANDATORY for CSS/HTML changes)
@@ -97,7 +97,7 @@ Follow official methodology from `/knowledge/`:
 - **Zero generic AI language**: All AI-sounding phrases flagged and rejected
 - **Zero unsupported claims**: All assertions must have citations
 - **Zero Hugo build breaks**: All content validated via `bin/hugo-build`
-- **Zero custom test scripts**: Use `bin/rake test:critical` only
+- **Zero ad hoc test scripts**: Use repo-provided test commands: `bin/rake test:critical`, plus `bin/test` and `bin/dtest` for visual changes
 - **No Python scripts for analysis**: Prefer `rg`, `sed`, `awk`, and shell tools
 - **Zero tolerance for duplicates**: No `*_refactored.*`, `*_new.*`, `*_backup.*` files
 - **New docs allowed only under** `docs/workflows/` (else edit existing files)
@@ -106,33 +106,13 @@ Follow official methodology from `/knowledge/`:
 - **Feature-branch + ONE bundled PR per sprint (BLOCKING for HTML/CSS/template changes)**: Don't push HTML/CSS/template/layout changes directly to `master`. The pattern is: (1) `git checkout -b <sprint-name>`, (2) ship multiple related commits on the branch (one per fix is fine — easy to revert/cherry-pick), (3) run BOTH test gates green on each commit, (4) `git push -u origin <branch>`, (5) open ONE PR via `gh pr create` covering the full sprint with summary + per-commit description + visual evidence. **Bundle related work into one PR — don't split into many small PRs.** User flagged 2026-04-30: "let's have one big PR instead of small PR." A 5-commit sprint = 1 PR, not 5. Direct-to-master is only acceptable for content-only blog edits (markdown body without template changes), commit-message-only fixes, docs under `docs/`, and `CLAUDE.md` policy updates.
 - **Never commit coordinator/agent report files**: User flagged 2026-04-30: "do not commit report files like docs/projects/2604-typography-ux/sprint-7-coordinator-report.md." Sprint coordinators and verification agents often write a `*-coordinator-report.md` or `*-verification-report.md` summarizing what they shipped. These are working notes, not project documentation — keep them OUT of the repo. Write to `/tmp/` instead, OR write to `docs/` but `git restore --staged <report>.md` before committing the rest of the work. The findings/audit reports under `docs/projects/2604-typography-ux/findings-*.md` ARE legitimate project artifacts (cross-page consistency audit, mobile UX audit, etc.) — those stay. Coordinator reports about WHICH commits ran on WHICH date are session-internal and should not pollute the repo.
 
-### ✍️ Blog Post Pipeline (MANDATORY — run ALL steps, never partial)
+### ✍️ Blog Post Pipeline (MANDATORY)
 
-When asked to write/draft/schedule a blog post, execute the FULL pipeline from
-`docs/workflows/blog-pipeline.md` as a single atomic workflow. Never stop after
-the draft step. The minimum deliverable is:
+When asked to write, draft, schedule, or publish a blog post, execute `docs/workflows/blog-pipeline.md` end-to-end as the canonical workflow. Do not stop after the draft step. If any step fails, fix and retry before moving to the next step.
 
-1. Draft with frontmatter (step 4) - read voice guide + ICP + content plan brief first
-2. `/humanizer` pass - scan every paragraph for AI tells (step 5a)
-3. Round 1: 3 critic agents (founder persona, SEO/slop, editor) - apply fixes
-4. Round 2: 3 NEW personas (senior dev for tech accuracy, copywriter for rhythm, AI detector) - apply fixes
-5. Round 3: 3 MORE personas (DevOps/practitioner, conversion optimizer, tired target reader) - apply fixes
-6. Cold-eyes final gate (Agent 4, MANDATORY — LLM-enforced, not manual): spawn one fresh-context agent with `mode: bypassPermissions` using the 9-check prompt verbatim from `docs/workflows/blog-pipeline.md` STEP 5c. Agent edits in place and must return PUBLISH-READY before step 7. Concrete bad/good rewrite pairs in the prompt force pattern-matching the 3-persona loop systematically misses (frontmatter contradictions, fluffy narration, fake authority stamps, timeline fabrication, "Not X but Y", em dashes, rule-of-three modifiers, cross-section template repetition).
-7. Cover image: duplicate HTML template - render - Lanczos downsample (step 6)
-8. `bin/hugo-build` - must pass (step 7)
-9. Update content plan status (step 8)
+For drafts (`draft: true`), still run the full pipeline so the post is publish-ready when someone flips it to `false`.
 
-If any step fails, fix and retry before moving to the next step.
-If the post is a draft (draft: true), still run ALL steps — the post should be
-publish-ready the moment someone flips draft to false.
-
-**Date rule:** Use the actual creation date, not a future date. Hugo hides
-future-dated content by default. If scheduling for a future date is intended,
-set `publishDate` explicitly and add `buildFuture: true` to the environment config.
-
-**Skills to chain:** `/humanizer` → `/slop-detector` → `/seo-aeo-audit`
-**Agents to spawn:** 3 parallel critic agents (see blog-pipeline.md step 5b)
-**Cover template:** Duplicate from `.stitch/designs/` — never start from scratch
+Repo voice guides and workflow docs override generic writing, SEO, or humanizer skill advice when they conflict.
 
 **Pre-writing reads (MANDATORY):**
 1. `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` — voice, banned words, anti-AI structural patterns

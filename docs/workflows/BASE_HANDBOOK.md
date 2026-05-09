@@ -17,13 +17,14 @@ Use this as the shared boilerplate for agents and skills. Keep agent/skill files
 2. `Search the codebase at /Users/pftg/dev/jetthoughts.github.io/knowledge for: "[topic]"`
 3. `Get library docs for "[framework]"`
 
-Never grep/find for code patterns; use claude-context MCP semantic search.
+Use claude-context MCP semantic search first for code and content patterns. Use `rg`/`ls` for exact filenames, slugs, and fallback searches after semantic search.
 
 ## Flow Router (Mandatory)
 Always follow `@docs/workflows/flow-router.md` to route tasks to the correct workflow.
 
 ## Content Work (Mandatory)
-If the task involves creating or editing content, always read `@docs/workflows/blog-pipeline.md`.
+If the task involves creating or editing LinkedIn content, read `@docs/workflows/linkedin-post-pipeline.md` first.
+If the task involves creating or editing blog content, read `@docs/workflows/blog-pipeline.md`.
 If a cover image is required, also read `@docs/workflows/cover-images.md` and `@.stitch/design.md`.
 
 ## Code Support (Mandatory)
@@ -35,7 +36,7 @@ For code changes, follow the router and relevant flow:
 ## Testing
 - TDD: RED → GREEN → REFACTOR (see `/knowledge/20.01-*`, `/knowledge/20.11-*`)
 - Test quality: behavior-focused only (see `/knowledge/25.04-*`)
-- Minitest only; never `*.sh` test scripts
+- Minitest only; never create ad hoc `*.sh` test scripts
 - Run `bin/rake test:critical` after every micro-change (<10 lines)
 
 ## Visual Validation (CSS/HTML/JS changes)
