@@ -133,6 +133,14 @@ Close (1 line):     Peer question - "anyone else been in this version of it?"
 
 Length target: **120-180 words**. Story shape needs less transition scaffolding than the marketing arc, so posts run shorter.
 
+### First-draft warning: don't separate the beats into paragraphs
+
+The skeleton names 5 beats. The first-draft trap is to render each beat as its own paragraph with no connector to the prior beat. That produces a list-of-points shape that reads as outline, not story — the post will fail the read-aloud fluency test even if every individual sentence is clean.
+
+**Fix at the writing stage:** drop in connectors at the seams as you draft. "So we hopped on a quick call." "And the thing is..." "Anyway, we agreed she'd try..." Real spoken stories don't pause for breath at every clean beat. Two paragraphs of flowing prose almost always beat 5 paragraphs of separated beats.
+
+**The Tuesday post lesson:** an initial 6-paragraph draft (one paragraph per beat, no connectors) was rewritten to 3 paragraphs by adding `so we hopped on a quick call`, `So we agreed she'd try a different one`, and `Beats three more sprints of...` — connectors that carry the listener forward. This is a writing-stage rule, not just an editing-stage fix.
+
 ---
 
 ## ICP-validation context
@@ -258,6 +266,65 @@ Why it works:
 
 ---
 
+## Editing methodology
+
+Once a draft exists, three techniques produced the highest-quality posts in this campaign. Apply when an initial draft scores above the 2/10 AI-feel threshold.
+
+### 1. Sentence-by-sentence pass (preferred granularity)
+
+Walking each sentence one at a time — analyze, present 2-3 rewrite options, pick, apply, move on — catches problems batch rewrites miss. Monday's post went from 5.5/10 to 1/10 through this method after batch rewrites had stalled at 2-3/10.
+
+For each sentence, audit:
+- Does it have a human subject?
+- Does it use a banned pattern (rule of three, parallel sentence-stem, slogany flip)?
+- Does it carry concrete imagery or float in abstraction?
+- Does it match the conversational register of the prior sentence?
+- Is its rhythm distinct from the sentences immediately before and after?
+
+Use this method when the AI score rubric returns >2/10 and the post still needs to drop.
+
+### 2. Story-flow fluency test (read-aloud)
+
+After individual sentences are clean, read the post aloud and ask: *does this sound like a person sharing a story, or a list of points?*
+
+Symptoms of list-of-points shape:
+- Each beat in its own paragraph with no connector to the prior beat
+- Paragraph breaks fall at clean structural joints (setup / stakes / reveal / solution / outcome)
+- No "so", "and", "anyway", "honestly" anywhere in the post
+- Sentence lengths within a paragraph cluster around the same word count
+
+Fix: collapse paragraphs by adding connectors at the seams. Spoken stories don't pause for breath at every clean beat. Tuesday's rewrite collapsed 6 paragraphs to 3 by adding "so we hopped on a quick call", "So we agreed she'd try a different one", and "Beats three more sprints of..." — connectors that carry the listener forward.
+
+### 3. Multi-critic agent review (campaign drafts + first posts)
+
+For high-stakes posts, spawn 3-4 critics in parallel with persona-specific briefings:
+
+| Persona | Mandate |
+|---|---|
+| ICP target persona | Does the right reader recognize themselves and want to engage? |
+| AI slop scanner | Any banned voice-guide patterns slip through? |
+| Senior copy editor | Sentence-level craft, rhythm, fluency |
+| Cold-eyes critic | First-impression reader with NO session context |
+
+**Convergent flags rule:** when 2+ critics independently flag the same sentence, treat as high-confidence fix. Single-critic flags require judgment based on which lens dominates the post's purpose.
+
+**Cold-eyes mandate:** the cold-eyes critic is briefed to read the post once, fast, with no context. They catch what session-anchored review can't — antecedent fuzziness, lecture-tone pivots, opener-pitch-bracing. Skipping this critic loses ~30% of the high-confidence flags.
+
+See `~/.claude/projects/.../memory/feedback_multi_critic_convergence.md` for fuller methodology.
+
+### 4. Frontmatter-to-body consistency check
+
+Before marking `status: scheduled`, verify:
+
+- [ ] `cta:` field text matches the actual closing line of the post body verbatim
+- [ ] `icp_test:` describes what the post actually tests
+- [ ] `notes:` reflect any voice trade-offs made during editing
+- [ ] No em dashes (`—`) anywhere in the post body — `-` only
+
+This caught a real bug in Monday's draft where the `cta:` field went out of sync with the actual close after a sentence-level rewrite.
+
+---
+
 ## Workflow checklist
 
 When asked to write a LinkedIn post for Paul:
@@ -268,7 +335,11 @@ When asked to write a LinkedIn post for Paul:
 - [ ] Draft against the 5-beat skeleton
 - [ ] Run the 5 sentence-level tests on each line
 - [ ] Apply the AI score rubric — must be ≤ 2/10
+- [ ] If score >2/10: run sentence-by-sentence pass (Editing methodology §1)
+- [ ] Run story-flow fluency test (read aloud, listen for connectors at seams)
+- [ ] If campaign post or first in sequence: spawn multi-critic review (Editing methodology §3)
+- [ ] Run frontmatter-to-body consistency check (Editing methodology §4)
 - [ ] No marketing CTA, no JT mention, no website link
-- [ ] No "learned the hard way" framing
+- [ ] No "learned the hard way" framing, no credential stamps
 - [ ] Save under `linkedin-posts/icp-validation/<filename>.md` with frontmatter
 - [ ] Update plan status if the post is the next in sequence
