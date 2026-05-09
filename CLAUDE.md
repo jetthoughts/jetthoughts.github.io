@@ -21,6 +21,8 @@ Always read these files before making changes. They define the project's archite
 | `@docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` | Writing ANY blog post or marketing copy — voice, tone, banned words, anti-AI structural patterns |
 | `@docs/90-99-content-strategy/thoughtbot-style-analysis-2025-10-15.md` | Writing tech/Rails posts — thoughtbot content patterns, code example standards |
 | `@docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md` | Writing the next blog post or planning content |
+| `@docs/workflows/linkedin-post-pipeline.md` | Writing ANY LinkedIn post for Paul Keen / JT — voice rules, anti-AI patterns, AI score rubric, frontmatter |
+| `@docs/workflows/linkedin-icp-validation-plan.md` | Writing LinkedIn posts under the ICP-E validation campaign |
 | `@bin/hugo-build` | Build/deploy workflow |
 | `@Rakefile` | Test workflow |
 | `@test/test_helper.rb` | Writing new tests |
@@ -81,6 +83,8 @@ Follow official methodology from `/knowledge/`:
 
 - CSS consolidation rules: `docs/workflows/css-consolidation.md`
 - Blog pipeline: `docs/workflows/blog-pipeline.md`
+- LinkedIn pipeline: `docs/workflows/linkedin-post-pipeline.md` (Paul Keen voice rules, AI score rubric, save-location convention)
+- LinkedIn campaign: `docs/workflows/linkedin-icp-validation-plan.md`
 - Cover images: `docs/workflows/cover-images.md` (canonical spec remains `.stitch/design.md`)
 - **Content plan (active)**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
 - Commands & hooks overview: `docs/workflows/commands.md`
