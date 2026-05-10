@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Inline critical CSS using Beasties
+
+set -euo pipefail
+
+PUBLIC_DIR="${1:-_dest/public-dev}"
+
+if [ ! -d "$PUBLIC_DIR" ]; then
+  echo "Error: $PUBLIC_DIR does not exist" >&2
+  exit 1
+fi
+
+echo "Inlining critical CSS in $PUBLIC_DIR..."
+bun run "$(dirname "$0")/inline-critical.mjs" "$PUBLIC_DIR"
+echo "✓ Critical CSS inlining complete"

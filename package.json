@@ -20,6 +20,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
     "autoprefixer": "^10.5.0",
+    "beasties": "^0.4.2",
     "cssnano": "^8.0.1",
     "lighthouse": "^13.3.0",
     "markdownlint-cli": "^0.48.0",
