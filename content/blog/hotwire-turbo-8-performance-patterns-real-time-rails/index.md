@@ -178,7 +178,7 @@ Total transition time: ~250ms
 
 #### 2. Turbo Frames: Lazy Loading and Scoped Updates
 
-```erb
+```html
 <!-- Lazy-loaded frame with automatic caching -->
 <turbo-frame id="user_sidebar" src="/users/123/sidebar" loading="lazy">
   <p>Loading sidebar...</p>
@@ -250,7 +250,7 @@ class Post < ApplicationRecord
 end
 ```
 
-```erb
+```html
 <!-- app/views/layouts/application.html.erb -->
 <%= turbo_refresh_method_tag "morph" %>
 <%= turbo_refresh_scroll_tag "preserve" %>
@@ -286,7 +286,7 @@ Morph update: 23ms (update only 50 changed nodes)
 
 #### HTTP/2 Push and Preload
 
-```erb
+```html
 <!-- Preload links Turbo will follow on click -->
 <%= link_to "Profile", user_path(@user), data: { turbo_preload: true } %>
 
@@ -335,7 +335,7 @@ Rails.application.configure do
 end
 ```
 
-```erb
+```html
 <!-- Disable Turbo's preview cache on a per-page basis -->
 <!-- app/views/admin/dashboard.html.erb -->
 <% content_for :head do %>
@@ -349,7 +349,7 @@ cache but skip rendering it as a preview).
 
 #### Frame-Level Cache Control
 
-```erb
+```html
 <!-- There is no per-frame TTL attribute. To prevent stale frame content,
      use one of: page-level cache control via meta tag
      (`<meta name="turbo-cache-control" content="no-cache">` or `no-preview`),
@@ -370,7 +370,7 @@ cache but skip rendering it as a preview).
 
 #### Server-Side Fragment Caching
 
-```erb
+```html
 <!-- Combine Turbo Frames with Rails fragment caching -->
 <turbo-frame id="product_<%= product.id %>">
   <% cache product do %>
@@ -543,7 +543,7 @@ end
 
 ### Problem: Eager-loading all frames causes slow initial page load
 
-```erb
+```html
 <!-- BAD: All frames load immediately -->
 <turbo-frame id="user_activity" src="/users/123/activity">
   Loading...
@@ -563,7 +563,7 @@ end
 
 ### Solution: Viewport-aware lazy loading
 
-```erb
+```html
 <!-- GOOD: Frames load only when visible -->
 <turbo-frame id="user_activity"
              src="/users/123/activity"
@@ -656,7 +656,7 @@ With lazy loading:
 
 ### Problem: Users wait for server confirmation before seeing changes
 
-```erb
+```html
 <!-- BAD: User waits for round-trip to see their comment -->
 <%= form_with model: @comment, data: { turbo_frame: "comments" } do |f| %>
   <%= f.text_area :body %>
@@ -675,7 +675,7 @@ With lazy loading:
 
 ### Solution: Optimistic updates with morphing validation
 
-```erb
+```html
 <!-- GOOD: Instant feedback with server validation -->
 <%= form_with model: @comment,
       data: {
@@ -767,7 +767,7 @@ With optimistic updates:
 
 ### Solution: Selective Turbo Drive enablement
 
-```erb
+```html
 <!-- Disable Turbo Drive for specific pages -->
 <body data-turbo="false">
   <!-- Traditional full page reload for admin panel -->
@@ -1085,7 +1085,7 @@ end
 
 Per-page Turbo cache control belongs in the layout, not in Rails config:
 
-```erb
+```html
 <!-- app/views/layouts/application.html.erb -->
 <%= turbo_refresh_method_tag "morph" %>
 <meta name="turbo-cache-control" content="no-preview">
@@ -1252,7 +1252,7 @@ Poor perceived performance despite fast server responses
 
 ### Solution
 
-```erb
+```html
 <!-- Use morphing instead of replacement -->
 
 <!-- BAD: Replace causes flicker -->
@@ -1281,7 +1281,7 @@ end
 
 ### Advanced: Skeleton Loading States
 
-```erb
+```html
 <!-- Provide visual feedback during load -->
 <turbo-frame id="user_posts" src="/users/123/posts" loading="lazy">
   <!-- Skeleton loader prevents layout shift -->

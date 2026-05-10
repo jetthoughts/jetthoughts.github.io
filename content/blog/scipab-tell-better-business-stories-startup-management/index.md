@@ -4,351 +4,76 @@ source: dev_to
 remote_id: 2158197
 dev_to_id: 2158197
 dev_to_url: https://dev.to/jetthoughts/scipab-tell-better-business-stories-15im
-title: 'SCIPAB: Tell Better Business Stories'
-description: "SCIPAB framework: Tell compelling business stories for investors, team alignment, and customers. Master startup storytelling that drives action and results ✓"
+title: 'SCIPAB Your Dev Shop: 6 Founder Questions'
+description: 'Most founders use SCIPAB to brief their board. Use it to interrogate your dev shop instead. Six questions that turn fuzzy weekly updates into transparency.'
 created_at: '2024-12-16T00:36:51Z'
-edited_at: '2024-12-16T11:39:16Z'
+edited_at: '2026-05-10T00:00:00Z'
 draft: false
+keywords: 'manage dev shop, questions to ask dev shop, non-technical founder dev shop, scipab framework, devshop transparency'
 tags:
+- founder
+- dev-shop
+- communication
+- transparency
 - startup
-- management
-- tutorial
-- productivity
 canonical_url: https://jetthoughts.com/blog/scipab-tell-better-business-stories-startup-management/
-cover_image: https://raw.githubusercontent.com/jetthoughts/jetthoughts.github.io/master/content/blog/scipab-tell-better-business-stories-startup-management/cover.png
+cover_image: cover.png
 date: 2024-12-16
 metatags:
   image: cover.png
+  og_title: 'SCIPAB Your Dev Shop: 6 Founder Questions'
+  og_description: 'Most founders use SCIPAB to brief their board. Use it to interrogate your dev shop instead. Six questions that turn fuzzy weekly updates into transparency.'
 slug: scipab-tell-better-business-stories-startup-management
 ---
-## What is SCIPAB?
 
-SCIPAB helps you make your point fast. Think of it as a recipe for clear business communication. Each letter stands for a step in your message. Business moves fast. Your communication must keep up. SCIPAB cuts through noise and gets to the point.
+You're on a weekly status call with your dev shop. The PM walks you through fourteen closed Jira tickets. You nod. You don't actually know what shipped, and the budget side of that question never gets answered. The meeting is designed to leave you feeling informed, and you walk out flying blind anyway.
 
-Many leaders struggle with clear communication. Messages get lost. Meetings run long. Decisions stall. SCIPAB fixes these problems.
+SCIPAB is a six-step communication framework that consultants use to brief executives. Most posts about it teach founders how to talk to their board. This post does the opposite. Use SCIPAB to make your dev shop talk to you.
 
-## Why SCIPAB Works
+## Why turn SCIPAB around
 
-Your brain loves stories. SCIPAB turns business messages into mini-stories. Each part builds on the last. This makes your message stick. Your audience follows along. They remember what matters.
+In the room with your dev shop, you're the executive. They're the operator. You don't need a clear narrative for your investors right now - they need a clear narrative for you. The same six-step compression that takes a 30-minute board update down to 60 seconds also takes a fuzzy weekly status down to six concrete artifacts you can verify. You can't read code, but you can read whether the answers move when you press on them.
 
-Good stories move people to act. SCIPAB builds these stories step by step. No guessing. No confusion. Just clear paths to decisions.
+## The six questions
 
-## The Six Steps in Detail
+**S - Which users touched what shipped this week?**
 
-### S = Situation
+A real production team can show you which users hit the new feature this week, with timestamps and usage counts. For paying products that means real customers; for pre-launch products it means beta testers or your design partner. "We deployed it" isn't the answer. If nobody can show you a single user interacting with this week's release, what shipped didn't actually reach anyone yet. The [Friday demo rule](/blog/how-know-what-your-team-doing-remote-startup/) covers the deployment-side artifact; this question covers the people-side.
 
-Start with what's happening now. Paint the picture. Use facts. Keep it short.
+**C - What slipped this week, and why?**
 
-Strong Examples:
+Every team hits problems. The question is whether your team explains them in plain English or in jargon. "We hit unexpected complexity" tells you nothing. "The email parser broke when users sent attachments larger than 5MB; we caught it Tuesday and patched it Thursday" tells you the team understood what happened and did something about it. A vendor who hands you "unexpected complexity" without ever getting more specific is testing whether you'll let it slide.
 
-- "Our app has 10,000 users."
-- "Sales hit $1M last quarter."
-- "Customer support handles 100 tickets daily."
+**I - What does that delay cost me?**
 
-Weak Examples:
+A vague "we'll catch up in the next sprint" hides a number. The honest version translates a slip into runway: "this pushes launch by 8 working days, costs $4K in cloud overage, and we'll miss Tuesday's investor demo." Sprints don't pay your AWS bill. Every slip should land somewhere on your cap-table math - a number you can put in front of a board.
 
-- "Things are going well." (too vague)
-- "We have lots of users." (no numbers)
-- "The situation is complex." (says nothing)
+**P - What do you recommend we do about it?**
 
-Tips for Situation:
+A competent vendor brings options with trade-offs. A struggling vendor brings the question back to you. If the recommendation is "we'll look at options," your team is asking you to decide for them. The right answer sounds like: "we recommend cutting the Stripe retry feature from this release. It saves four days. The two customers using webhook retries today will see slower retries until next sprint - that's the trade-off."
 
-1. Use real numbers
-2. State facts, not opinions
-3. Focus on what matters now
-4. Keep to one or two sentences
-5. Start with your strongest fact
+**A - What's the next concrete step?**
 
-![tips for situtaion](file_0.png)
+"We'll keep working on it" isn't a step. A real action has a person and a date attached: "Marcus will deploy the fix to staging Thursday at 2pm. You'll get a demo Loom on Friday morning." If your team can't name the person and the day, the work hasn't actually been planned yet.
 
-### C = Complication
+**B - What does success look like in numbers?**
 
-Share what's changed. Show the problem. Make it real.
+You should be able to tell whether the work succeeded by looking at one number a month later. "Things will improve" isn't a number. "We go from 12 paying users last month to 30 by July with the new flow live" is. If success isn't measurable at the call, you'll measure activity at every call after.
 
-Strong Examples:
+## How to actually run this
 
-- "A new competitor cut their prices by 50%."
-- "Server costs doubled this month."
-- "Three key developers quit."
+Use SCIPAB on the call you're already having. Don't add a meeting. Walk the six questions in order, write the answers down, and compare them across three weeks. If the answers match the "good" patterns above, your shop is operating transparently. If most sit on the "bad" side, the problem stopped being communication a while ago. Your vendor doesn't want to be held accountable, and that's a different conversation.
 
-Weak Examples:
+Founders deeper into the rescue zone can pair this with our [red flags checklist for dev shops](/blog/dev-shop-red-flags-checklist/), which covers the contract clauses to demand and the signals that say SCIPAB has run out of room.
 
-- "Things got harder." (too vague)
-- "We face challenges." (what challenges?)
-- "The market changed." (how?)
+## When SCIPAB won't help
 
-Tips for Complication:
+A vendor who refuses to answer the Situation question - who can never produce a staging URL - has a different problem than communication. They don't have a working build to show you. The framework is a magnifier for transparent vendors; an opaque vendor stays opaque no matter how good your questions are.
 
-1. Show the change clearly
-2. Use specific examples
-3. Compare before and after
-4. Keep emotion out
-5. Stick to facts
+A founder we worked with last year ran SCIPAB on her shop for three weeks. Question 1 came back with promises every time, never with a URL she could click. Velocity looked fine on paper - eighteen tickets closed per sprint - but nothing she could log into. We rebuilt her project from scratch a month later. The questions caught the problem before her budget did.
 
-![tips for complication](file_1.png)
+If you suspect the codebase under your shop's work is itself the issue - AI-generated, untested, hard to change - our [diagnostic on detecting vibe-coded apps](/blog/vibe-coding-crisis-ai-code-debt/) walks through the signals separately from the communication audit.
 
-### I = Implication
+## What this changes
 
-Show what happens if nothing changes. Paint the future. Make it matter.
-
-Strong Examples:
-
-- "We'll lose 30% of our customers."
-- "Costs will eat all our profit."
-- "Product launch will delay six months."
-
-Weak Examples:
-
-- "Things will get worse." (how?)
-- "We'll have problems." (what kind?)
-- "It won't be good." (why not?)
-
-Tips for Implication:
-
-1. Use numbers when possible
-2. Show clear outcomes
-3. Make it relevant
-4. Keep it realistic
-5. Connect to business goals
-
-![Tips for Implication](file_2.png)
-
-### P = Position
-
-Tell them your fix. Be clear. Show confidence.
-
-Strong Examples:
-
-- "Let's launch the mobile app now."
-- "We need to hire three developers."
-- "We should change our pricing."
-
-Weak Examples:
-
-- "We should do something." (what?)
-- "Let's make changes." (which ones?)
-- "We need to improve." (how?)
-
-Tips for Position:
-
-1. One clear solution
-2. Keep it simple
-3. Make it actionable
-4. Show why it works
-5. Link to the problem
-
-### A = Action
-
-Tell them what to do next. Be specific. Make it clear.
-
-Strong Examples:
-
-- "Sign the contract today."
-- "Approve the $50K budget."
-- "Join the planning meeting Tuesday."
-
-Weak Examples:
-
-- "Think about it." (too vague)
-- "Let me know." (no timeline)
-- "We should move forward." (how?)
-
-Tips for Action:
-
-1. One clear ask
-2. Set deadlines
-3. Name owners
-4. Show next steps
-5. Make it easy to say yes
-
-### B = Benefit
-
-Show them the payoff. Make it count. End strong.
-
-Strong Examples:
-
-- "Sales will grow 40%."
-- "Save $100K per month."
-- "Launch two months faster."
-
-Weak Examples:
-
-- "Things will improve." (how much?)
-- "We'll do better." (at what?)
-- "It will help." (how?)
-
-Tips for Benefit:
-
-1. Use numbers
-2. Show clear wins
-3. Link to goals
-4. Make it matter
-5. End with impact
-
-## Real Examples in Different Settings
-
-### Board Meeting Example
-
-Situation:
-"We have 100,000 active users. Growth is 10% monthly."
-
-Complication:
-"Amazon just launched a competing product at half our price."
-
-Implication:
-"We could lose 40% of our users in six months."
-
-Position:
-"We need to launch our mobile app now, not next year."
-
-Action:
-"Approve $200K for three mobile developers today."
-
-Benefit:
-"We'll keep our users and grow 20% faster than planned."
-
-### Sales Team Update
-
-Situation:
-"Our sales team hits quota 80% of the time."
-
-Complication:
-"Deal cycles stretched from 30 to 45 days this quarter."
-
-Implication:
-"We'll miss our yearly target by $2M at this pace."
-
-Position:
-"We need to update our sales process."
-
-Action:
-"Roll out new training next week."
-
-Benefit:
-"Close deals 30% faster by Q4."
-
-### Customer Email
-
-Situation:
-"You've been our customer for two years."
-
-Complication:
-"Our costs rose 30% this year."
-
-Implication:
-"We can't maintain current service levels at this price."
-
-Position:
-"We're updating our pricing structure."
-
-Action:
-"Choose your new plan by June 1."
-
-Benefit:
-"Get more features and faster support."
-
-## Tips for Different Formats
-
-### Meetings
-
-1. Write key points first
-2. Time yourself
-3. Bring visuals
-4. Leave time for questions
-5. Send follow-up notes
-
-### Emails
-
-1. Clear subject lines
-2. Short paragraphs
-3. Bold key points
-4. Use bullet lists
-5. End with actions
-
-### Presentations
-
-1. One idea per slide
-2. Big, clear text
-3. Simple charts
-4. Real examples
-5. Strong close
-
-## Common Mistakes to Avoid
-
-### Don't Hide Bad News
-
-- Share problems early
-- Show real numbers
-- Offer solutions
-- Stay professional
-- Follow up fast
-
-### Don't Skip Steps
-
-- Use all six parts
-- Keep them in order
-- Give each part time
-- Make each part clear
-- Check your work
-
-### Don't Overcomplicate
-
-- Skip the jargon
-- Use simple words
-- Keep sentences short
-- Make points clear
-- End with action
-
-## Success Metrics
-
-Know if your SCIPAB works by checking:
-
-1. Time to decision
-2. Questions asked
-3. Action taken
-4. Results achieved
-5. Feedback received
-
-## Getting Started
-
-### Week One
-
-1. Write one SCIPAB
-2. Time yourself
-3. Get feedback
-4. Make changes
-5. Try again
-
-### Month One
-
-1. Use in three meetings
-2. Write five emails
-3. Make one presentation
-4. Check results
-5. Adjust your style
-
-### Quarter One
-
-1. Make it natural
-2. Train your team
-3. Track results
-4. Share wins
-5. Keep improving
-
-## Key Takeaways
-
-1. SCIPAB makes messages clear
-2. Practice makes perfect
-3. Keep it simple
-4. Use real numbers
-5. End with action
-
-## Next Steps
-
-1. Pick one meeting this week
-2. Write your SCIPAB
-3. Time yourself
-4. Give it a try
-5. Get feedback
-
-SCIPAB turns good ideas into clear messages. Start small. Use it once. See what works. Build from there.
+Don't expect the framework to fix anything on its own. Run the six questions three weeks in a row and write down the answers. By week three, the gaps and patterns will tell you whether your team is operating with the kind of transparency you're paying for. The structural compression itself comes from Barbara Minto's [Pyramid Principle](https://www.barbaraminto.com/), the consulting playbook that taught McKinsey associates how to brief partners in sixty seconds. SCIPAB just points the same compression at the side of the table that needs to be more accountable.

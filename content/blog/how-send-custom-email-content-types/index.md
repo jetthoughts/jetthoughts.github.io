@@ -87,7 +87,7 @@ app/views/layouts/
 
 Example layout for AMP emails:
 
-```erb
+```html
 <!DOCTYPE html>
 <html ⚡4email>
 <head>
@@ -106,7 +106,7 @@ Example layout for AMP emails:
 
 Example of a view template with custom content type:
 
-```erb
+```html
 <%# app/views/example_mailer/multi_format_email.html+amp.erb %>
 <% content_for :head do %>
   <%# Add any format-specific resources %>

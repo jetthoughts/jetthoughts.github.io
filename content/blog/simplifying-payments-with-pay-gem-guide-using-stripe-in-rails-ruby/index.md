@@ -142,7 +142,7 @@ Here’s a simple example of how to create a subscription:
 
 In your view, include a form to collect a payment method:
 
-```erb
+```html
 <%= form_with url: stripe_payment_method_path, method: :post do %>
   <div id="card-element"></div>
   <button type="submit">Submit Payment</button>

@@ -197,7 +197,7 @@ This pattern has prevented numerous outages. Instead of having 100 concurrent re
 **Fragment caching that actually works:**
 Rails' Russian Doll caching is underused, probably because it requires thinking about cache dependencies upfront:
 
-```erb
+```html
 <% cache ['v1', @product, @current_user&.cache_key] do %>
   <div class="product">
     <h2><%= @product.name %></h2>

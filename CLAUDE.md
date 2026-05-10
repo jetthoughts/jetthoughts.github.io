@@ -139,6 +139,23 @@ Repo voice guides and workflow docs override generic writing, SEO, or humanizer 
 - **Trade-offs:** always acknowledge what the proposed solution fails to do or what it costs
 - See voice guide section "Banned structural patterns" for full list + fixes
 
+**Cross-post repetition gates (BLOCKING for cluster posts):**
+- Before finalizing any post in a topic cluster, run two scans:
+  1. **Anecdote scan** — search the cluster for any specific story this draft uses (named client, dollar amount, technical mechanic, exact incident). If the same story already anchors a sibling post, pick a different one. Caught 2026-05-09: the URL-ID/BOLA story appeared in both `vibe-coding-crisis-ai-code-debt` opener AND `47-startups-failed-same-coding-mistake` body. Caught 2026-05-10: the $40K + React+Rails dollar-anchor was repeated across the same cluster.
+  2. **Proof-signal scan** — verify the post's primary diagnostic signal (staging URL / test coverage / commit size / secrets storage / rollback drill / user-impact verification / contract clauses) isn't already the LEAD signal in another sibling. Distribute distinct signals across posts so each post owns one anchor. Caught 2026-05-10: scipab Path B initially used "staging URL" for the Situation question, exactly the LinkedIn Mon/Tue lead signal. Fixed to "Which users touched what shipped this week?" — user-impact verification, unused elsewhere in the cluster.
+- See `~/.claude/projects/-Users-pftg-dev-jetthoughts-github-io/memory/feedback_cross_post_signal_repetition.md` for the signal portfolio map. See `feedback_hook_bank_diversity.md` for opening-shape rotation (separate concern).
+
+**Slop detector + shape-tell critic both required:**
+- Sentence-level slop ≤25/100 is necessary but not sufficient. User has flagged "still feels AI" twice in 2026-05-09/10 sessions when slop detector passed.
+- After slop passes, spawn a shape-tell critic with this explicit pattern list: essay arc (hook → pivot → thesis → evidence → caveat → close), dual-source statistical opener, pivot sentences ("That's the experience of...", "Here's what's underneath...", "The bigger problem is..."), listicle scaffolding cloned 3+ times (Strong/Weak/Tips, 5-item lists repeated), "The..." paragraph-opener density >20%, slogany flips ("X works. Y doesn't.", "It looks Y. It isn't Z.", "The framework is a diagnostic, not a cure."), definitional cadence ("X is hypothesis-validation tooling."), "You're not throwing away X" reassurance tic.
+- See `feedback_slop_detector_misses_shape_tells.md` for the full pattern list. Run alongside the slop detector, not after.
+
+**dev.to import ICP gate:**
+- Posts synced from dev.to (`source: dev_to` in frontmatter) are auto-imported without an ICP filter. Before any dev.to-imported post is shipped or referenced, audit it against the JT ICP-E voice guide. If 80+/100 AI-feel or off-thesis (generic management/productivity content with no JT-rescue angle), either rewrite for the ICP or flip to `draft: true`. Caught 2026-05-10: scipab post (Dec 2024 dev.to import) was 92/100 AI-feel, orphan content. Rewrote as "SCIPAB for non-technical founders to interrogate their dev shop."
+
+**Markdown code fence: use `html` not `erb`:**
+- Hugo's Chroma syntax highlighter doesn't recognize `erb` as a lexer alias. Fences using ```erb render as plain `<pre><code>` without the Dracula wrapper — the theme's light foreground (`#f8f8f2`) on missing-background renders as invisible text. The `html` fence highlights HTML tags correctly while ERB `<%= %>` renders as plain text inside the dark block. 10 posts hit this bug before the 2026-05-10 fix; verified by HTML diff comparing the wrapper `<div class="highlight"><pre style="...">` (present for `html`/`ruby`) vs missing for `erb`.
+
 ---
 
 ## 📋 Quick Reference

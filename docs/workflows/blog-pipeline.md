@@ -366,6 +366,39 @@ Change ONLY: title, category, pill, 3 headline lines, 3 chip labels+values, stat
 Render: chrome-devtools new_page → emulate viewport=2400x1260x2 → wait 2s → take_screenshot
 Downsample: magick {screenshot} -filter Lanczos -resize 2400x1260 -sampling-factor 4:4:4 -strip -quality 95 content/blog/<slug>/cover.png
 
+STEP 6b — PRE-PUBLISH CHECKLIST (MANDATORY — added 2026-05-10)
+Before flipping draft: false or before any LinkedIn/external promotion drives traffic to the post:
+
+1. Cover image present:
+   - [ ] `content/blog/<slug>/cover.png` exists locally
+   - [ ] Frontmatter `cover_image:` matches the local filename (not an external GitHub raw URL)
+   - [ ] `metatags.image:` matches the local filename
+   - [ ] `cover_image_alt:` describes the cover content (not the brand or generic JT text)
+
+2. Frontmatter cleanliness — scan for template-copy artifacts:
+   - [ ] No `remote_url:` field unless the post was actually synced from dev.to (`source: dev_to` is true). Caught 2026-05-10: a fake dev.to CDN URL was copy-pasted from a template into a post that was never on dev.to.
+   - [ ] `dev_to_id:` and `dev_to_url:` only present if `source: dev_to`
+   - [ ] `created_at` and `edited_at` reflect actual timestamps, not pasted-from-template
+   - [ ] `canonical_url:` matches the slug
+
+3. Cross-post anecdote scan (BLOCKING):
+   - [ ] Run grep on the cluster for any specific story this draft uses (named client, dollar amount, technical mechanic, exact incident). If the same story already anchors a sibling post, pick a different one.
+   - [ ] Caught 2026-05-09: `vibe-coding-crisis-ai-code-debt` and `47-startups-failed-same-coding-mistake` both used the BOLA "any logged-in user could access another user's data by changing the ID in the URL" anecdote. Fixed in the rewrite.
+
+4. Cross-post proof-signal scan (BLOCKING):
+   - [ ] Open `docs/workflows/proof-signal-portfolio.md`. Verify the post's primary diagnostic signal isn't already the lead signal in another sibling.
+   - [ ] If repetition found, swap to an unused signal from the portfolio map.
+   - [ ] Update the portfolio map with the new ownership row.
+   - [ ] Caught 2026-05-10: scipab Path B initially used "staging URL" for Situation, exactly the LinkedIn Mon/Tue lead signal. Retargeted to "user-impact verification."
+
+5. Markdown code fence check:
+   - [ ] No ```erb fences anywhere — Hugo's Chroma doesn't recognize the alias and renders them as invisible plain text. Use ```html instead. Caught 2026-05-10: 32 fences across 10 posts had this bug.
+
+6. dev.to import ICP gate (only if `source: dev_to`):
+   - [ ] Audit the post against `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`. If 80+/100 AI-feel or off-thesis, rewrite for the ICP-E or flip to `draft: true`.
+
+If any of the above checks fail, fix before proceeding to STEP 7.
+
 STEP 7 — VALIDATE
 - bin/hugo-build must pass (zero errors)
 - Chrome DevTools: open the post page, verify:

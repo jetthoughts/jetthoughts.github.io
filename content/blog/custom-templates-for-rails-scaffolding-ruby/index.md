@@ -77,7 +77,7 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
 
 **_form.html.erb.tt:**
 
-```erb
+```html
 <%%= form_with(model: <%= model_resource_name %>) do |form| %>
   <%% if <%= singular_table_name %>.errors.any? %>
     <div id="error_explanation">
@@ -121,7 +121,7 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
 
 **edit.html.erb.tt:**
 
-```erb
+```html
 <div class="container-fluid">
   <h1>Editing <%= singular_table_name.titleize %></h1>
   <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
@@ -132,7 +132,7 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
 
 **index.html.erb.tt:**
 
-```erb
+```html
 <div class="container-fluid">
   <p id="notice"><%%= notice %></p>
   <h1><%= plural_table_name.titleize %></h1>
@@ -165,7 +165,7 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
 
 **new.html.erb:**
 
-```erb
+```html
 <div class="container-fluid">
   <h1>New <%= singular_table_name.titleize %></h1>
   <%%= render 'form', <%= singular_table_name %>: @<%= singular_table_name %> %>
@@ -175,7 +175,7 @@ It’s time to update the templates to use custom styles. I suggest using Bootst
 
 **show.html.erb:**
 
-```erb
+```html
 <div class="container-fluid">
   <p id="notice"><%%= notice %></p>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>

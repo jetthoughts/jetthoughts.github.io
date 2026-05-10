@@ -71,7 +71,7 @@ This class encapsulates all logic for the product card, including calculating th
 
 Add the corresponding view template:
 
-```erb
+```html
 <!-- app/components/product_card_component.html.erb -->
 <div class="<%= css_classes %>">
   <h3><%= product.name %></h3>
@@ -86,7 +86,7 @@ This template uses methods from the component class to render HTML dynamically b
 
 Render the component in any Rails view using the render helper:
 
-```erb
+```html
 <!-- app/views/products/index.html.erb -->
 <div class="products-grid">
   <% @products.each do |product| %>

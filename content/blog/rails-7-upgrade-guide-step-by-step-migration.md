@@ -340,7 +340,7 @@ Once you're running Rails 7, you can take advantage of new features to make your
 Hotwire Turbo comes with Rails 7 and can make your app feel much faster:
 
 **Adding Turbo to your layouts**
-```erb
+```html
 <!-- app/views/layouts/application.html.erb -->
 <%= javascript_importmap_tags %>
 

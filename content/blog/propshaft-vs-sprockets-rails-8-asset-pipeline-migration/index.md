@@ -127,7 +127,7 @@ Where Sprockets runs five stages that each can fail and each need debugging, Pro
 /* Instead, use link tags in your layout: */
 ```
 
-```erb
+```html
 <!-- app/views/layouts/application.html.erb -->
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 <%= stylesheet_link_tag "components/nav", "data-turbo-track": "reload" %>
@@ -170,7 +170,7 @@ class User < ApplicationRecord
 end
 ```
 
-```erb
+```html
 <!-- app/views/users/show.html.erb -->
 <%= image_tag user.avatar.variant(:thumb) %>
 ```
@@ -588,7 +588,7 @@ import "./controllers"
 
 Update layout files to work with Propshaft:
 
-```erb
+```html
 <!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
@@ -1220,7 +1220,7 @@ document.addEventListener("turbo:load", () => {
 ### Issue 4: Image Asset Path Resolution
 
 #### Symptom:
-```erb
+```html
 <%= image_tag "logo.png" %>
 <!-- Renders: <img src="/assets/logo.png"> -->
 <!-- But actual path is: /assets/logo-abc123.png -->

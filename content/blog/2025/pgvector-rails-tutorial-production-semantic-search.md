@@ -509,7 +509,7 @@ end
 
 Create user-friendly search interface:
 
-```erb
+```html
 <%# app/views/products/search/index.html.erb %>
 <div class="semantic-search-container">
   <%= form_with url: products_search_path, method: :get, class: "search-form" do |f| %>

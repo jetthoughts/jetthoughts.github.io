@@ -276,7 +276,7 @@ config.cache_store = :redis_cache_store, {
 
 **2. Fragment caching for expensive views**
 
-```erb
+```html
 <!-- app/views/posts/show.html.erb -->
 <% cache [@post, 'v2'] do %>
   <div class="post-header">
@@ -328,7 +328,7 @@ class Post < ApplicationRecord
 end
 ```
 
-```erb
+```html
 <% cache @post do %>
   <h1><%= @post.title %></h1>
 
