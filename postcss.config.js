@@ -34,7 +34,7 @@ const purgecss = createPurgeCss({
     ],
 
     greedy: [
-      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/
+      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^technologies-component/, /^footer-component/, /^use-cases/
     ]
   },
   // Enhanced PurgeCSS options for better optimization
