@@ -18,11 +18,11 @@ cover_image_alt: "Two-stage model diagram: vibe-coded prototype validating a hyp
 canonical_url: "https://jetthoughts.com/blog/vibe-coding-disposable-by-design/"
 ---
 
-You're looking at the same support ticket for the third time this month. The duplicate-charge bug your team fixed two Mondays ago, then again last Thursday, just got reported again - by the same customer who reported it the first two times. When you forward the ticket to your engineer, the reply comes back: "I thought we fixed that."
+A SaaS founder pinged us in March about a Stripe webhook bug their dev shop had patched twice already. Their largest enterprise customer was on the third double-charge cycle. The dev's last commit message read "fixed retry logic." The bug fired again four days later from a different file.
 
-The fix didn't stick because the AI doesn't refactor your codebase. It writes a fresh patch in one place and leaves five other copies of the same broken logic untouched. You watch the bug come back. Your team can't tell you why.
+We read the codebase that week. The same retry-and-charge sequence lived in seven files. The dev had patched file three. Files four through seven kept double-charging the same customer until we deleted them.
 
-Andrej Karpathy invented vibe coding for weekend prototypes - the kind you build on a Sunday afternoon and never look at again. Founders started shipping the same approach to customers who pay them, and the rebuild bills are showing up now.
+Karpathy proposed vibe coding for weekend prototypes - code you ship without reading and forget about by Monday. Founders started running the same workflow against paying customers. The rebuild invoices are landing now.
 
 ## TL;DR
 
