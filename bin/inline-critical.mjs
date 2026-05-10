@@ -66,35 +66,39 @@ function makeUrlsAbsolute(html) {
 }
 
 /**
- * Recursively walk directory tree and process all .html files
+ * Process homepage only (root index.html) for critical CSS inlining.
+ * Other pages use plain <link rel="stylesheet"> to avoid inline CSS overhead.
+ * Homepage gets the 23% LCP improvement; other pages skip Beasties processing.
  */
-async function walk(dir) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      await walk(fullPath);
-    } else if (entry.name.endsWith('.html')) {
-      try {
-        let html = fs.readFileSync(fullPath, 'utf8');
-        // Convert absolute URLs to relative for Beasties
-        html = makeUrlsRelative(html);
-        // Process with Beasties
-        const processed = await beasties.process(html);
-        // Restore absolute URLs
-        const final = makeUrlsAbsolute(processed);
-        if (final !== fs.readFileSync(fullPath, 'utf8')) {
-          fs.writeFileSync(fullPath, final, 'utf8');
-        }
-      } catch (err) {
-        console.error(`Error processing ${fullPath}:`, err.message);
-        process.exit(1);
-      }
+async function processHomepageOnly(targetDir) {
+  const homepagePath = path.join(targetDir, 'index.html');
+  if (!fs.existsSync(homepagePath)) {
+    console.error(`No homepage found at ${homepagePath}`);
+    process.exit(1);
+  }
+
+  try {
+    let html = fs.readFileSync(homepagePath, 'utf8');
+    // Convert absolute URLs to relative for Beasties
+    html = makeUrlsRelative(html);
+    // Process with Beasties
+    const processed = await beasties.process(html);
+    // Restore absolute URLs
+    const final = makeUrlsAbsolute(processed);
+
+    if (final !== fs.readFileSync(homepagePath, 'utf8')) {
+      fs.writeFileSync(homepagePath, final, 'utf8');
+      console.log(`Critical CSS inlined: ${homepagePath}`);
+    } else {
+      console.log(`No changes for: ${homepagePath}`);
     }
+  } catch (err) {
+    console.error(`Error processing homepage:`, err.message);
+    process.exit(1);
   }
 }
 
-await walk(target).catch(err => {
+await processHomepageOnly(target).catch(err => {
   console.error('Fatal error:', err.message);
   process.exit(1);
 });
