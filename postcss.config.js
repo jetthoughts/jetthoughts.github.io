@@ -27,6 +27,14 @@ const purgecss = createPurgeCss({
       "jt-active",
 
       "comment-link",
+
+      // Brand CTA buttons — MUST NEVER be purged. These rules live in
+      // navigation.css and define the JT Ruby red (#cc342d) override
+      // for .btn-primary and a.fl-button (homepage hero, Contact Us nav,
+      // free-consultation CTAs). PurgeCSS in CI has been observed
+      // removing them despite hugo_stats.json containing the class —
+      // explicit safelist guards against that drift.
+      "btn", "btn-primary", "fl-button", "fl-button-wrap", "action-button",
     ],
 
     deep: [
