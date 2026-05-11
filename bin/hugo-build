@@ -28,9 +28,4 @@ HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "
 
 "${HUGO_ARGS[@]}"
 
-# Inline critical CSS in production builds
-if [ "$ENVIRONMENT" = "production" ]; then
-  "$SCRIPT_DIR/inline-critical" "$OUTPUT_DIR"
-fi
-
 echo "✓ Build complete"
