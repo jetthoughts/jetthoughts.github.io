@@ -42,7 +42,12 @@ const purgecss = createPurgeCss({
     ],
 
     greedy: [
-      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/
+      /^swiper-/, /^is-/, /^has-/, /^js-/, /^fl-builder-content/, /^fl-col/, /^fl-node/, /^technologies-component/, /^footer-component/, /^use-cases/,
+      // Brand CTA buttons — preserve any selector mentioning these classes.
+      // Standard safelist didn't catch tag+class compound selectors like
+      // `a.fl-button` on CI (produced blue pills instead of Ruby red).
+      // Greedy preserves rules where ANY class in the selector matches.
+      /^fl-button/, /^btn/, /^action-button/
     ]
   },
   // Enhanced PurgeCSS options for better optimization
