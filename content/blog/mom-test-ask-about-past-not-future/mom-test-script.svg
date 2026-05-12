@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 880" role="img" aria-label="Five Mom Test question cards stacked top to bottom: last-time, cost, workaround, priority, buying committee. Each card shows the question wording, a pass signal, and a fail signal.">
+  <title>The Mom Test 5-question script - past-behavior interview questions</title>
+  <desc>Card 1 last-time question. Card 2 cost in time money sanity. Card 3 what have you tried already. Card 4 1-10 priority. Card 5 who else on your team.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .card { fill: #fff; stroke: #cc342d; stroke-width: 2.5; }
+      .qnum { font-size: 22px; font-weight: bold; fill: #cc342d; }
+      .qlabel { font-size: 19px; font-weight: bold; fill: #1a1a1a; }
+      .qbody { font-size: 16px; fill: #1a1a1a; }
+      .pass { font-size: 14px; fill: #2e7d32; }
+      .fail { font-size: 14px; fill: #c62828; }
+      .meta { font-size: 13px; fill: #555; }
+      .legend { font-size: 14px; fill: #333; }
+      .arrow { stroke: #888; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="880" fill="#fafafa"/>
+
+  <text x="480" y="38" text-anchor="middle" class="h" font-size="26" fill="#1a1a1a">The Mom Test interview script - 5 questions, read as written.</text>
+  <text x="480" y="62" text-anchor="middle" class="h legend">Anchors in past behavior. Listens for emotional language. Scores 1-10.</text>
+
+  <!-- Q1 -->
+  <rect x="80" y="90" width="800" height="140" rx="8" class="card"/>
+  <text x="105" y="125" class="h qnum">Q1</text>
+  <text x="155" y="125" class="h qlabel">The last-time question</text>
+  <text x="105" y="155" class="h qbody">"Tell me about the last time [problem] happened. Walk me through what you did."</text>
+  <text x="105" y="185" class="h pass">PASS: A date, a time, a tool, a person. "Last Tuesday 9pm I called my CFO..."</text>
+  <text x="105" y="205" class="h fail">FAIL: "Yeah I usually struggle with this." No date, no story.</text>
+
+  <line x1="480" y1="230" x2="480" y2="250" class="arrow" marker-end="url(#arrowGray)"/>
+
+  <!-- Q2 -->
+  <rect x="80" y="255" width="800" height="140" rx="8" class="card"/>
+  <text x="105" y="290" class="h qnum">Q2</text>
+  <text x="155" y="290" class="h qlabel">The cost question</text>
+  <text x="105" y="320" class="h qbody">"What did that cost you - in time, money, or sanity?"</text>
+  <text x="105" y="350" class="h pass">PASS: A number with a unit. "2 hours every Tuesday for 6 months." "$800 in CFO time."</text>
+  <text x="105" y="370" class="h fail">FAIL: "It costs us time." Unquantified. Polite about an unfelt problem.</text>
+
+  <line x1="480" y1="395" x2="480" y2="415" class="arrow" marker-end="url(#arrowGray)"/>
+
+  <!-- Q3 -->
+  <rect x="80" y="420" width="800" height="140" rx="8" class="card"/>
+  <text x="105" y="455" class="h qnum">Q3</text>
+  <text x="155" y="455" class="h qlabel">The workaround question</text>
+  <text x="105" y="485" class="h qbody">"What have you tried already to fix this?"</text>
+  <text x="105" y="515" class="h pass">PASS: A named tool or hired person. "I pay Zapier $79/mo. My VA fixes it weekly."</text>
+  <text x="105" y="535" class="h fail">FAIL: "Nothing yet." "We just deal with it." No workaround = no urgency.</text>
+
+  <line x1="480" y1="560" x2="480" y2="580" class="arrow" marker-end="url(#arrowGray)"/>
+
+  <!-- Q4 -->
+  <rect x="80" y="585" width="800" height="140" rx="8" class="card"/>
+  <text x="105" y="620" class="h qnum">Q4</text>
+  <text x="155" y="620" class="h qlabel">The priority question</text>
+  <text x="105" y="650" class="h qbody">"On a 1-10 scale, how big is this compared to everything else on your plate?"</text>
+  <text x="105" y="680" class="h pass">PASS: 7+ with a comparison. "This is 8. Only hiring is higher."</text>
+  <text x="105" y="700" class="h fail">FAIL: A polite 7 with no comparison. "Probably a 7." Default kindness, not urgency.</text>
+
+  <line x1="480" y1="725" x2="480" y2="745" class="arrow" marker-end="url(#arrowGray)"/>
+
+  <!-- Q5 -->
+  <rect x="80" y="750" width="800" height="140" rx="8" class="card"/>
+  <text x="105" y="785" class="h qnum">Q5</text>
+  <text x="155" y="785" class="h qlabel">The buying-committee question</text>
+  <text x="105" y="815" class="h qbody">"Who else on your team feels this? How do they handle it?"</text>
+  <text x="105" y="845" class="h pass">PASS: Names a colleague + their workaround. "Jess keeps a parallel sheet she trusts more."</text>
+  <text x="105" y="865" class="h fail">FAIL: "Just me." Either small/local or they don't know how the team works.</text>
+</svg>

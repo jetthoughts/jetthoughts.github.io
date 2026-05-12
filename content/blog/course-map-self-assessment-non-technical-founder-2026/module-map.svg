@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="Module map: the 10 self-assessment questions on the left feed routing arrows into the 8 course modules on the right">
+  <title>Module map - 10 questions routing into 8 modules</title>
+  <desc>Q1 routes a No answer to Module 1. Q2 routes to Module 2. Q3 to Module 3. Q4 to Module 4A or 4B. Q5 to Module 5. Q7 to Module 6. Q8 to Module 7. Q10 yes routes to graduate.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .box { fill: #fff; stroke-width: 2.5; }
+      .label { font-size: 17px; fill: #1a1a1a; }
+      .qlabel { font-size: 15px; fill: #1a1a1a; }
+      .arrow-no { stroke: #cc342d; stroke-width: 2; fill: none; }
+      .arrow-branch { stroke: #a855f7; stroke-width: 2; fill: none; }
+      .arrow-grad { stroke: #2e7d32; stroke-width: 2; fill: none; }
+      .legend { font-size: 14px; fill: #333; }
+    </style>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cc342d"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="640" fill="#fafafa"/>
+
+  <text x="480" y="34" text-anchor="middle" class="h" font-size="24" fill="#1a1a1a">10 questions on the left. 8 modules on the right.</text>
+  <text x="480" y="58" text-anchor="middle" class="h legend">5 minutes alone with a checklist tells you where to start.</text>
+
+  <!-- Question column -->
+  <g transform="translate(40,90)">
+    <text x="0" y="-6" class="h" font-size="18" fill="#cc342d">Self-assessment</text>
+    <g class="h qlabel">
+      <g transform="rotate(-0.4)"><rect x="0" y="6"  width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="30">Q1 - Talked to 10+ customers?</text></g>
+      <g transform="rotate(0.3)"><rect x="0" y="58" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="82">Q2 - One-page Product Brief?</text></g>
+      <g transform="rotate(-0.5)"><rect x="0" y="110" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="134">Q3 - Self-serve or hire decided?</text></g>
+      <g transform="rotate(0.2)"><rect x="0" y="162" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="186">Q4 - Shipping (staging or SOW)?</text></g>
+      <g transform="rotate(-0.3)"><rect x="0" y="214" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="238">Q5 - GitHub/AWS/domain yours?</text></g>
+      <g transform="rotate(0.4)"><rect x="0" y="266" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="290">Q6 - Weekly demo + standup?</text></g>
+      <g transform="rotate(-0.2)"><rect x="0" y="318" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="342">Q7 - Slip / invoice / quality bug?</text></g>
+      <g transform="rotate(0.5)"><rect x="0" y="370" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="394">Q8 - Anything touching AI?</text></g>
+      <g transform="rotate(-0.3)"><rect x="0" y="422" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="446">Q9 - You know your token costs?</text></g>
+      <g transform="rotate(0.3)"><rect x="0" y="474" width="240" height="36" class="box" stroke="#cc342d" rx="3"/><text x="14" y="498">Q10 - Ever walked through a PR?</text></g>
+    </g>
+  </g>
+
+  <!-- Module column -->
+  <g transform="translate(660,90)">
+    <text x="0" y="-6" class="h" font-size="18" fill="#cc342d">Starting module</text>
+    <g class="h label">
+      <g transform="rotate(0.4)"><rect x="0" y="6"   width="260" height="40" class="box" stroke="#cc342d" rx="3"/><text x="14" y="32">Module 1 - Validate the problem</text></g>
+      <g transform="rotate(-0.3)"><rect x="0" y="56"  width="260" height="40" class="box" stroke="#cc342d" rx="3"/><text x="14" y="82">Module 2 - Product Brief</text></g>
+      <g transform="rotate(0.5)"><rect x="0" y="106" width="260" height="40" class="box" stroke="#cc342d" rx="3"/><text x="14" y="132">Module 3 - Build path decision</text></g>
+      <g transform="rotate(-0.4)"><rect x="0" y="156" width="260" height="40" class="box" stroke="#a855f7" rx="3"/><text x="14" y="182">Module 4A - Ship self-serve</text></g>
+      <g transform="rotate(0.3)"><rect x="0" y="206" width="260" height="40" class="box" stroke="#a855f7" rx="3"/><text x="14" y="232">Module 4B - Hire and ship</text></g>
+      <g transform="rotate(-0.2)"><rect x="0" y="256" width="260" height="40" class="box" stroke="#cc342d" rx="3"/><text x="14" y="282">Module 5 - Oversight rhythm</text></g>
+      <g transform="rotate(0.4)"><rect x="0" y="306" width="260" height="40" class="box" stroke="#cc342d" rx="3"/><text x="14" y="332">Module 6 - When things break</text></g>
+      <g transform="rotate(-0.5)"><rect x="0" y="356" width="260" height="40" class="box" stroke="#cc342d" rx="3"/><text x="14" y="382">Module 7 - AI-era risks</text></g>
+      <g transform="rotate(0.2)"><rect x="0" y="406" width="260" height="40" class="box" stroke="#2e7d32" rx="3"/><text x="14" y="432">Graduate - reference library</text></g>
+    </g>
+  </g>
+
+  <!-- Routing arrows (No-answers = Ruby red, branches = purple, graduate = green) -->
+  <g>
+    <!-- Q1 -> M1 -->
+    <path d="M285,116 C460,116 480,116 660,116" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q2 -> M2 -->
+    <path d="M285,168 C470,168 490,166 660,166" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q3 -> M3 -->
+    <path d="M285,220 C470,220 490,216 660,216" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q4 branches to 4A/4B -->
+    <path d="M285,272 C440,272 500,266 660,266" class="arrow-branch" marker-end="url(#arrowPurple)"/>
+    <path d="M285,272 C440,272 500,316 660,316" class="arrow-branch" marker-end="url(#arrowPurple)"/>
+    <!-- Q5 -> M5 -->
+    <path d="M285,324 C460,324 490,366 660,366" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q6 -> M5 -->
+    <path d="M285,376 C460,376 490,372 660,372" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q7 -> M6 -->
+    <path d="M285,428 C460,428 490,416 660,416" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q8 -> M7 -->
+    <path d="M285,480 C460,480 490,466 660,466" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q9 -> M7 (deeper) -->
+    <path d="M285,532 C500,532 540,470 660,470" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <!-- Q10 yes -> Graduate -->
+    <path d="M285,584 C500,584 540,516 660,516" class="arrow-grad" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(40,605)" class="h legend">
+    <line x1="0" y1="6" x2="36" y2="6" class="arrow-no" marker-end="url(#arrowRed)"/>
+    <text x="44" y="11">No answer routes here</text>
+    <line x1="220" y1="6" x2="256" y2="6" class="arrow-branch" marker-end="url(#arrowPurple)"/>
+    <text x="264" y="11">Branch (Q4 splits 4A/4B)</text>
+    <line x1="490" y1="6" x2="526" y2="6" class="arrow-grad" marker-end="url(#arrowGreen)"/>
+    <text x="534" y="11">Yes-all-ten = graduate</text>
+  </g>
+</svg>

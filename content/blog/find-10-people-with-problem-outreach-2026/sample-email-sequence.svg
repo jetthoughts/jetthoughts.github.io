@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-label="Three email cards stacked: Day 0 intro, Day 3 bump, Day 7 close. Subject lines and body text visible on each.">
+  <title>3-email outreach sequence: Day 0, Day 3, Day 7</title>
+  <desc>Day 0 subject line quick question about their exact workaround. Day 3 subject re bump. Day 7 subject last try 20 min.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .card { fill: #fff; stroke-width: 2.5; }
+      .card-d0 { stroke: #cc342d; }
+      .card-d3 { stroke: #a855f7; }
+      .card-d7 { stroke: #2e7d32; }
+      .daylabel { font-size: 22px; font-weight: bold; fill: #1a1a1a; }
+      .subject { font-size: 18px; fill: #1a1a1a; font-weight: bold; }
+      .body { font-size: 15px; fill: #333; }
+      .meta { font-size: 14px; fill: #888; }
+      .legend { font-size: 14px; fill: #333; }
+      .arrow { stroke: #888; stroke-width: 2; fill: none; stroke-dasharray: 4,4; }
+    </style>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="760" fill="#fafafa"/>
+
+  <text x="480" y="38" text-anchor="middle" class="h" font-size="26" fill="#1a1a1a">The 3-email sequence the Lindy agent runs for you.</text>
+  <text x="480" y="62" text-anchor="middle" class="h legend">Day 0 references something they actually posted. Days 3 and 7 stay short.</text>
+
+  <!-- Card 1: Day 0 -->
+  <rect x="120" y="90" width="720" height="170" rx="8" class="card card-d0"/>
+  <text x="150" y="125" class="h daylabel">Day 0 - intro</text>
+  <text x="720" y="125" text-anchor="end" class="h meta">reply rate target: 20-30%</text>
+  <text x="150" y="160" class="h subject">Subject: quick question about [their exact workaround]</text>
+  <text x="150" y="190" class="h body">"Saw your post on r/SaaS last week about [the thread]. I'm a [role] looking</text>
+  <text x="150" y="210" class="h body">into the same problem. Not selling - 20 min so I can ask 5 questions about</text>
+  <text x="150" y="230" class="h body">how you handle [task] today? Calendar: [Calendly link]."</text>
+
+  <line x1="480" y1="260" x2="480" y2="290" class="arrow" marker-end="url(#arrowGray)"/>
+  <text x="490" y="280" class="h meta">+3 days</text>
+
+  <!-- Card 2: Day 3 -->
+  <rect x="120" y="300" width="720" height="160" rx="8" class="card card-d3"/>
+  <text x="150" y="335" class="h daylabel">Day 3 - bump</text>
+  <text x="720" y="335" text-anchor="end" class="h meta">recovers 8-12% of non-responders</text>
+  <text x="150" y="370" class="h subject">Subject: re: [their workaround]</text>
+  <text x="150" y="400" class="h body">"Bumping. 20 minutes, your time. Not pitching - asking how you do [task]</text>
+  <text x="150" y="420" class="h body">today and what breaks. 30 founders already - genuinely useful on your end</text>
+  <text x="150" y="440" class="h body">too. [Calendly]."</text>
+
+  <line x1="480" y1="460" x2="480" y2="490" class="arrow" marker-end="url(#arrowGray)"/>
+  <text x="490" y="480" class="h meta">+4 days</text>
+
+  <!-- Card 3: Day 7 -->
+  <rect x="120" y="500" width="720" height="160" rx="8" class="card card-d7"/>
+  <text x="150" y="535" class="h daylabel">Day 7 - close</text>
+  <text x="720" y="535" text-anchor="end" class="h meta">recovers 3-5% more</text>
+  <text x="150" y="570" class="h subject">Subject: last try - 20 min on [topic]</text>
+  <text x="150" y="600" class="h body">"Last note. If this isn't your problem, no worries - I'll stop. If it is</text>
+  <text x="150" y="620" class="h body">and you haven't had a chance: [Calendly]. Running interviews through next</text>
+  <text x="150" y="640" class="h body">Friday."</text>
+
+  <!-- Footer -->
+  <text x="480" y="710" text-anchor="middle" class="h legend">Whole sequence runs in Smartlead or Instantly. Lindy classifies replies and books calls.</text>
+  <text x="480" y="732" text-anchor="middle" class="h legend">Combined 30-45% reply rate when Day 0 references their actual public language.</text>
+</svg>

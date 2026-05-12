@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 640" role="img" aria-label="Founder OS stack - eight artifacts stack from the bottom Validated Problem Statement up to the top AI Interrogation Kit, with Module 4A and 4B as parallel build-phase branches that merge into the Oversight Toolkit">
+  <title>Founder OS - the stack you walk away with by Module 7</title>
+  <desc>Eight artifacts stacked from bottom to top: Validated Problem Statement (Module 1), Product Brief / Vibe PRD (Module 2), Build Path Decision (Module 3), then two parallel branches at the build phase - Live MVP at Staging URL (Module 4A, self-serve) and Signed SOW + Hiring Kit (Module 4B, hire) - which merge into Oversight Toolkit (Module 5), then Salvage / Rebuild Decision Tree (Module 6), and AI Interrogation Kit (Module 7) at the top.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .layer { fill: #fff; stroke-width: 2.5; }
+      .title { font-size: 19px; fill: #1a1a1a; }
+      .sub   { font-size: 13px; fill: #555; }
+      .module { font-size: 14px; fill: #cc342d; }
+      .arrow { stroke: #333; stroke-width: 1.5; fill: none; }
+      .branchArrow { stroke: #a855f7; stroke-width: 1.8; fill: none; }
+    </style>
+    <marker id="upArrow" viewBox="0 0 10 10" refX="5" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,10 L5,0 L10,10 z" fill="#333"/>
+    </marker>
+    <marker id="branchHead" viewBox="0 0 10 10" refX="5" refY="0" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,10 L5,0 L10,10 z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <rect width="780" height="640" fill="#fafafa"/>
+
+  <text x="390" y="38" text-anchor="middle" class="h" font-size="26" fill="#1a1a1a">The Founder OS</text>
+  <text x="390" y="62" text-anchor="middle" class="h sub">What you hold by Module 7. Each artifact feeds the next.</text>
+
+  <!-- Layer 8 (top) - Module 7 -->
+  <g transform="translate(180,90) rotate(-0.3)">
+    <rect width="420" height="52" class="layer" stroke="#cc342d" rx="4"/>
+    <text x="20" y="22" class="h title">AI Interrogation Kit</text>
+    <text x="20" y="42" class="h sub">5 questions + cost worksheet + supply-chain check</text>
+    <text x="420" y="22" text-anchor="end" class="h module" transform="translate(-12,0)">Module 7</text>
+  </g>
+
+  <!-- Layer 7 - Module 6 -->
+  <g transform="translate(180,152) rotate(0.4)">
+    <rect width="420" height="52" class="layer" stroke="#cc342d" rx="4"/>
+    <text x="20" y="22" class="h title">Salvage / Rebuild Decision Tree</text>
+    <text x="20" y="42" class="h sub">Contingency plan + 30/60/90 day recovery</text>
+    <text x="420" y="22" text-anchor="end" class="h module" transform="translate(-12,0)">Module 6</text>
+  </g>
+
+  <!-- Layer 6 - Module 5 -->
+  <g transform="translate(180,214) rotate(-0.4)">
+    <rect width="420" height="52" class="layer" stroke="#cc342d" rx="4"/>
+    <text x="20" y="22" class="h title">Founder Oversight Toolkit</text>
+    <text x="20" y="42" class="h sub">Friday demo + ownership audit + weekly report</text>
+    <text x="420" y="22" text-anchor="end" class="h module" transform="translate(-12,0)">Module 5</text>
+  </g>
+
+  <!-- Branches: Layer 4 + 5 side by side - Module 4A (left) and 4B (right) -->
+  <g transform="translate(180,294) rotate(0.3)">
+    <rect width="200" height="52" class="layer" stroke="#a855f7" rx="4"/>
+    <text x="14" y="22" class="h title" font-size="17">Live MVP (self-serve)</text>
+    <text x="14" y="42" class="h sub">Staging URL real users click</text>
+    <text x="200" y="22" text-anchor="end" class="h module" transform="translate(-8,0)" font-size="12">4A</text>
+  </g>
+  <g transform="translate(400,294) rotate(-0.3)">
+    <rect width="200" height="52" class="layer" stroke="#a855f7" rx="4"/>
+    <text x="14" y="22" class="h title" font-size="17">Signed SOW + Hiring Kit</text>
+    <text x="14" y="42" class="h sub">Team in place, kickoff scheduled</text>
+    <text x="200" y="22" text-anchor="end" class="h module" transform="translate(-8,0)" font-size="12">4B</text>
+  </g>
+
+  <!-- Merge label between the two branches -->
+  <text x="390" y="284" text-anchor="middle" class="h sub" font-size="12" fill="#a855f7">branches, then merge into Module 5</text>
+
+  <!-- Branch merge arrows: 4A and 4B both feed into Module 5 above -->
+  <path d="M280,294 C280,275 320,265 390,265 C460,265 500,275 500,294" class="branchArrow" fill="none"/>
+  <path d="M390,265 L390,250" class="branchArrow" marker-end="url(#branchHead)"/>
+
+  <!-- Layer 3 - Module 3 -->
+  <g transform="translate(180,356) rotate(-0.5)">
+    <rect width="420" height="52" class="layer" stroke="#cc342d" rx="4"/>
+    <text x="20" y="22" class="h title">Build Path Decision Worksheet</text>
+    <text x="20" y="42" class="h sub">Self-serve or hire, with a budget either way</text>
+    <text x="420" y="22" text-anchor="end" class="h module" transform="translate(-12,0)">Module 3</text>
+  </g>
+
+  <!-- Path splits from Module 3 up into 4A and 4B -->
+  <path d="M390,356 C390,340 300,335 280,346" class="branchArrow" fill="none" marker-end="url(#branchHead)"/>
+  <path d="M390,356 C390,340 480,335 500,346" class="branchArrow" fill="none" marker-end="url(#branchHead)"/>
+
+  <!-- Layer 2 - Module 2 -->
+  <g transform="translate(180,440) rotate(0.4)">
+    <rect width="420" height="52" class="layer" stroke="#cc342d" rx="4"/>
+    <text x="20" y="22" class="h title">Product Brief (Vibe PRD)</text>
+    <text x="20" y="42" class="h sub">Who / what problem / what you'll build / what you won't</text>
+    <text x="420" y="22" text-anchor="end" class="h module" transform="translate(-12,0)">Module 2</text>
+  </g>
+
+  <!-- Layer 1 (foundation) - Module 1 -->
+  <g transform="translate(180,506) rotate(-0.3)">
+    <rect width="420" height="52" class="layer" stroke="#cc342d" rx="4"/>
+    <text x="20" y="22" class="h title">Validated Problem Statement</text>
+    <text x="20" y="42" class="h sub">Backed by 10+ real conversations, signed by 2 peers</text>
+    <text x="420" y="22" text-anchor="end" class="h module" transform="translate(-12,0)">Module 1</text>
+  </g>
+
+  <!-- Foundation label -->
+  <text x="390" y="596" text-anchor="middle" class="h sub" font-size="15">Eight slots. Each layer rests on the one beneath. Skip layer 1 and the whole stack wobbles.</text>
+
+  <!-- Up arrows on the side -->
+  <g>
+    <path d="M120,560 L120,110" class="arrow" marker-end="url(#upArrow)"/>
+    <path d="M660,560 L660,110" class="arrow" marker-end="url(#upArrow)"/>
+  </g>
+  <text x="120" y="100" text-anchor="middle" class="h sub" font-size="13" fill="#2e7d32">compounds</text>
+  <text x="660" y="100" text-anchor="middle" class="h sub" font-size="13" fill="#2e7d32">compounds</text>
+</svg>
