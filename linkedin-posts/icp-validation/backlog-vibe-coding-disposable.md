@@ -40,3 +40,5 @@ AI doesn't refactor when you ask for a fix. It generates fresh code. After a few
 I vibe-code on weekends too. Once the hypothesis lands, I throw the code out. Not because I'm pure about it. Because the alternative is paying for the same fix every couple of weeks for the rest of the product's life.
 
 If you've been through one of these rebuilds, what did you keep, what did you throw away?
+
+#ai #founders #vibecoding
