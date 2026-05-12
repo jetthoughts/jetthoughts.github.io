@@ -246,11 +246,12 @@ Per the "small chunks + notice ICP in progress" directive (2026-05-12), every ap
 
 1. **Hugo build** + commit to master → post goes live.
 2. **Update the landing page** at `content/blog/tech-for-non-technical-founders-2026/index.md`:
-   - Move the post's row from 🔲 → 🟢 in the modules table.
-   - Update the "Status: X of 26 posts live" line.
-   - Update the "What's live right now" section with the new post link.
-   - Update the "What's coming next" section to reflect what's queued.
-   - Bump the "Last updated" date at top and bottom.
+   - Module table status column: `🔲 Coming` → `🟡 Partial (N of M chapters)` → `🟢 Complete` as the module fills in.
+   - **Do NOT publish a post count** ("X of 26 posts") to readers - they care about modules + reading time, not chapter-by-chapter granularity (memory directive 2026-07-22).
+   - Update the "Status: which modules complete" line at the top of the modules table.
+   - Update "What's live right now" with the new chapter link.
+   - Update "Coming next" to reflect queued chapters.
+   - Bump the "Last updated" date.
 3. **Post the announcement** per `distribution-prep.md` schedule:
    - Day 0: blog post + landing page update
    - Day 1: LinkedIn (Paul Keen voice, per `linkedin-post-pipeline.md`) + Twitter thread (JT brand + Paul Keen accounts)

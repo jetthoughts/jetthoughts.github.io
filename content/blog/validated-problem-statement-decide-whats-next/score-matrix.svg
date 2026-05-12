@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-label="Interview score-to-decision matrix. Ten interview slots plotted as dots scored 1-10, divided into three zones: build for seven or more strong signals, pivot for four to six, kill for fewer than four.">
+  <title>Interview score-to-decision matrix - 10 interviews, 3 zones</title>
+  <desc>Three horizontal bands. Top green band labeled BUILD covers scores 7 to 10. Middle yellow band labeled PIVOT covers scores 4 to 6. Bottom red band labeled KILL covers scores 1 to 3. Ten dots plotted at interview slots 1 through 10 across the bands.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .axis { stroke: #333; stroke-width: 2; fill: none; }
+      .grid { stroke: #cfcfcf; stroke-width: 1; fill: none; stroke-dasharray: 4 3; }
+      .label { font-size: 16px; fill: #1a1a1a; }
+      .zlabel { font-size: 22px; font-weight: bold; }
+      .zsub { font-size: 14px; fill: #333; }
+      .dot { stroke: #1a1a1a; stroke-width: 1.5; }
+      .legend { font-size: 14px; fill: #333; }
+    </style>
+  </defs>
+
+  <rect width="960" height="620" fill="#fafafa"/>
+
+  <text x="480" y="38" text-anchor="middle" class="h" font-size="26" fill="#1a1a1a">Score 10 interviews. Read the pattern. Decide.</text>
+  <text x="480" y="62" text-anchor="middle" class="h legend">Each dot is one interview. Each band is one decision.</text>
+
+  <!-- Build band -->
+  <rect x="120" y="100" width="780" height="140" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2"/>
+  <text x="140" y="135" class="h zlabel" fill="#2e7d32">BUILD</text>
+  <text x="140" y="158" class="h zsub">Score 7-10. Real problem, felt urgency, named workaround.</text>
+  <text x="140" y="180" class="h zsub">7+ dots in this band across 10 calls = green light. Move to Module 2.</text>
+
+  <!-- Pivot band -->
+  <rect x="120" y="240" width="780" height="120" fill="#fffbe6" stroke="#bf8a00" stroke-width="2"/>
+  <text x="140" y="275" class="h zlabel" fill="#bf8a00">PIVOT</text>
+  <text x="140" y="298" class="h zsub">Score 4-6. Some signal, polite hedging, weak workaround.</text>
+  <text x="140" y="320" class="h zsub">4-6 dots in this band = rerun 5 interviews with a sharper hypothesis.</text>
+
+  <!-- Kill band -->
+  <rect x="120" y="360" width="780" height="120" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="140" y="395" class="h zlabel" fill="#c62828">KILL</text>
+  <text x="140" y="418" class="h zsub">Score 1-3. No felt problem, no workaround, polite-yes calls only.</text>
+  <text x="140" y="440" class="h zsub">7+ dots in this band = find a different problem. Don't build.</text>
+
+  <!-- X axis: 10 interview slots -->
+  <line x1="120" y1="500" x2="900" y2="500" class="axis"/>
+  <text x="510" y="540" text-anchor="middle" class="h label">10 interview slots (1 through 10)</text>
+
+  <!-- Plotted dots (illustrative pattern, BUILD example: 7+ in BUILD band) -->
+  <!-- Interview slot positions: x = 165 + (n-1) * 78 -->
+  <!-- Slot 1: score 8 (BUILD) -->
+  <circle cx="165" cy="155" r="14" fill="#2e7d32" class="dot"/>
+  <text x="165" y="160" text-anchor="middle" class="h" font-size="14" fill="#fff">8</text>
+  <text x="165" y="495" text-anchor="middle" class="h label">1</text>
+
+  <!-- Slot 2: score 9 (BUILD) -->
+  <circle cx="243" cy="135" r="14" fill="#2e7d32" class="dot"/>
+  <text x="243" y="140" text-anchor="middle" class="h" font-size="14" fill="#fff">9</text>
+  <text x="243" y="495" text-anchor="middle" class="h label">2</text>
+
+  <!-- Slot 3: score 5 (PIVOT) -->
+  <circle cx="321" cy="295" r="14" fill="#bf8a00" class="dot"/>
+  <text x="321" y="300" text-anchor="middle" class="h" font-size="14" fill="#fff">5</text>
+  <text x="321" y="495" text-anchor="middle" class="h label">3</text>
+
+  <!-- Slot 4: score 7 (BUILD) -->
+  <circle cx="399" cy="180" r="14" fill="#2e7d32" class="dot"/>
+  <text x="399" y="185" text-anchor="middle" class="h" font-size="14" fill="#fff">7</text>
+  <text x="399" y="495" text-anchor="middle" class="h label">4</text>
+
+  <!-- Slot 5: score 8 (BUILD) -->
+  <circle cx="477" cy="155" r="14" fill="#2e7d32" class="dot"/>
+  <text x="477" y="160" text-anchor="middle" class="h" font-size="14" fill="#fff">8</text>
+  <text x="477" y="495" text-anchor="middle" class="h label">5</text>
+
+  <!-- Slot 6: score 3 (KILL) -->
+  <circle cx="555" cy="415" r="14" fill="#c62828" class="dot"/>
+  <text x="555" y="420" text-anchor="middle" class="h" font-size="14" fill="#fff">3</text>
+  <text x="555" y="495" text-anchor="middle" class="h label">6</text>
+
+  <!-- Slot 7: score 9 (BUILD) -->
+  <circle cx="633" cy="135" r="14" fill="#2e7d32" class="dot"/>
+  <text x="633" y="140" text-anchor="middle" class="h" font-size="14" fill="#fff">9</text>
+  <text x="633" y="495" text-anchor="middle" class="h label">7</text>
+
+  <!-- Slot 8: score 7 (BUILD) -->
+  <circle cx="711" cy="180" r="14" fill="#2e7d32" class="dot"/>
+  <text x="711" y="185" text-anchor="middle" class="h" font-size="14" fill="#fff">7</text>
+  <text x="711" y="495" text-anchor="middle" class="h label">8</text>
+
+  <!-- Slot 9: score 6 (PIVOT) -->
+  <circle cx="789" cy="275" r="14" fill="#bf8a00" class="dot"/>
+  <text x="789" y="280" text-anchor="middle" class="h" font-size="14" fill="#fff">6</text>
+  <text x="789" y="495" text-anchor="middle" class="h label">9</text>
+
+  <!-- Slot 10: score 8 (BUILD) -->
+  <circle cx="867" cy="155" r="14" fill="#2e7d32" class="dot"/>
+  <text x="867" y="160" text-anchor="middle" class="h" font-size="14" fill="#fff">8</text>
+  <text x="867" y="495" text-anchor="middle" class="h label">10</text>
+
+  <text x="480" y="585" text-anchor="middle" class="h" font-size="16" fill="#1a1a1a">Sample reading: 7 of 10 calls in the BUILD band. Green light. Move to Module 2.</text>
+</svg>

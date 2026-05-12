@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 880" role="img" aria-label="One-page validated problem statement template. A notebook page with five labeled sections: who has the problem, what it costs them, what they tried, why now, how big is the pain.">
+  <title>One-page validated problem statement - 5 sections on a notebook page</title>
+  <desc>A handwritten-style notebook page divided into five fillable blocks. Section 1 names the persona and count of interviewees who confirmed. Section 2 quantifies cost in time, money, sanity. Section 3 lists workarounds tried and why they failed. Section 4 names the trigger event making the problem solvable now. Section 5 records the 1-10 pain score average and count of strong signals.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .page { fill: #fffdf7; stroke: #cc342d; stroke-width: 2.5; }
+      .holes { fill: #888; }
+      .line { stroke: #d4d4d4; stroke-width: 1; }
+      .stitle { font-size: 20px; font-weight: bold; fill: #cc342d; }
+      .snum { font-size: 22px; font-weight: bold; fill: #cc342d; }
+      .body { font-size: 15px; fill: #1a1a1a; }
+      .hint { font-size: 13px; fill: #888; font-style: italic; }
+      .header { font-size: 26px; fill: #1a1a1a; font-weight: bold; }
+      .footer { font-size: 14px; fill: #2e7d32; }
+    </style>
+  </defs>
+
+  <rect width="960" height="880" fill="#fafafa"/>
+
+  <!-- Notebook page -->
+  <rect x="80" y="40" width="800" height="800" rx="6" class="page"/>
+
+  <!-- Hole punches -->
+  <circle cx="110" cy="100" r="8" class="holes"/>
+  <circle cx="110" cy="440" r="8" class="holes"/>
+  <circle cx="110" cy="780" r="8" class="holes"/>
+
+  <!-- Header -->
+  <text x="480" y="80" text-anchor="middle" class="h header">Validated Problem Statement</text>
+  <text x="480" y="105" text-anchor="middle" class="h hint">Fill in 30 minutes after 10 Mom Test interviews. Show to 2 advisors before building.</text>
+
+  <line x1="150" y1="125" x2="850" y2="125" class="line"/>
+
+  <!-- Section 1: Who has the problem -->
+  <text x="160" y="160" class="h snum">1.</text>
+  <text x="195" y="160" class="h stitle">Who has the problem</text>
+  <text x="160" y="186" class="h body">Persona: ________________________________________________</text>
+  <text x="160" y="210" class="h body">Industry / vertical: ____________________________________</text>
+  <text x="160" y="234" class="h body">Of 10 interviewees, this many confirmed the problem: ___ /10</text>
+  <text x="160" y="258" class="h hint">e.g., "Pre-seed B2B SaaS founders. 9 of 10 confirmed."</text>
+
+  <line x1="150" y1="282" x2="850" y2="282" class="line"/>
+
+  <!-- Section 2: What it costs them -->
+  <text x="160" y="318" class="h snum">2.</text>
+  <text x="195" y="318" class="h stitle">What it costs them</text>
+  <text x="160" y="344" class="h body">Time per week: ____ hrs   Money per month: $______</text>
+  <text x="160" y="368" class="h body">Sanity cost (concrete moment): __________________________</text>
+  <text x="160" y="392" class="h body">Specific quote from an interview: _______________________</text>
+  <text x="160" y="416" class="h hint">e.g., "6 hrs/week. $800/month CFO time. Missed daughter's bedtime 3 Mondays."</text>
+
+  <line x1="150" y1="440" x2="850" y2="440" class="line"/>
+
+  <!-- Section 3: What they've tried -->
+  <text x="160" y="476" class="h snum">3.</text>
+  <text x="195" y="476" class="h stitle">What they've tried</text>
+  <text x="160" y="502" class="h body">Workaround 1: _____________________ Why it failed: ________</text>
+  <text x="160" y="526" class="h body">Workaround 2: _____________________ Why it failed: ________</text>
+  <text x="160" y="550" class="h body">Current spend on workarounds: $______ /month</text>
+  <text x="160" y="574" class="h hint">e.g., "Zapier $79/mo (breaks every 2 weeks). VA on Upwork $300/mo (manual fix)."</text>
+
+  <line x1="150" y1="598" x2="850" y2="598" class="line"/>
+
+  <!-- Section 4: Why now -->
+  <text x="160" y="634" class="h snum">4.</text>
+  <text x="195" y="634" class="h stitle">Why now</text>
+  <text x="160" y="660" class="h body">Trigger event or shift: _________________________________</text>
+  <text x="160" y="684" class="h body">What changed in the last 12 months: _____________________</text>
+  <text x="160" y="708" class="h hint">e.g., "AI made it possible to auto-classify expense receipts at $0.001 per call."</text>
+
+  <line x1="150" y1="732" x2="850" y2="732" class="line"/>
+
+  <!-- Section 5: How big is the pain -->
+  <text x="160" y="768" class="h snum">5.</text>
+  <text x="195" y="768" class="h stitle">How big is the pain</text>
+  <text x="160" y="794" class="h body">Average pain score across 10 interviews: ___ /10</text>
+  <text x="160" y="818" class="h body">Strong signals (score 7+ with 3+ emotional flags): ___ /10</text>
+  <text x="595" y="818" class="h footer">7+ strong = BUILD</text>
+</svg>

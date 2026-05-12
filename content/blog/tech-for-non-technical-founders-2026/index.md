@@ -27,13 +27,13 @@ canonical_url: "https://jetthoughts.com/blog/tech-for-non-technical-founders-202
 related_posts: false
 ---
 
-> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-07-15.
+> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-07-22.
 
 # Tech for Non-Technical Founders 2026
 
-A free 26-post course that takes a non-technical founder from **idea to first paying users** in the most effective way for 2026 — without hiring engineers you don't need.
+A free course that takes a non-technical founder from **idea to first paying users** in the most effective way for 2026 — without hiring engineers you don't need.
 
-The course is being **built in public**. Each post + downloadable artifact ships as soon as it passes review. You can start reading today; the course will be complete by the end of Q3 2026.
+**8 modules · ~10 hours of reading · self-paced.** The course is being **built in public** — each module ships as soon as it passes review. You can start today; the full course will be complete by the end of Q3 2026.
 
 ## What you walk away with
 
@@ -62,21 +62,21 @@ This is a free course. We don't sell anything inside it.
 
 ## The 8 modules
 
-🟢 = live now · 🟡 = drafted, in review · 🔲 = planned
+🟢 = live now · 🟡 = drafted, polishing · 🔲 = coming soon
 
-| # | Module | Output you walk away with | Posts (live / total) |
-|---|---|---|---|
-| 0 | **Where Are You?** | Self-assessment + your starting module | 🟢 1 / 1 |
-| 1 | **Validate the Problem** | One-page validated problem statement | 🟢 2 / 3 |
-| 2 | **Design the Solution** | One-page Product Brief (Vibe PRD) | 🟢 1 / 3 |
-| 3 | **Choose Your Build Path** | Build decision: self-serve or hire | 🔲 0 / 2 |
-| 4A | **Ship Self-Serve** (branch) | Live MVP at a staging URL | 🔲 0 / 2 |
-| 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 🟢 1 / 4 |
-| 5 | **Manage Your Build** | Weekly oversight rhythm (Friday demo + standup + weekly report) | 🟢 2 / 6 |
-| 6 | **When Things Break** | Salvage / rebuild decision | 🔲 0 / 2 |
-| 7 | **Manage AI-Era Risks** | AI interrogation system | 🔲 0 / 3 |
+| # | Module | Output you walk away with | Approx. read | Status |
+|---|---|---|---|---|
+| 0 | **Where Are You?** | Self-assessment + your starting module | 15 min | 🟢 Complete |
+| 1 | **Validate the Problem** | One-page validated problem statement | 1.5 hr | 🟢 Complete |
+| 2 | **Design the Solution** | One-page Product Brief (Vibe PRD) | 1 hr | 🟡 Partial (1 of 3 chapters) |
+| 3 | **Choose Your Build Path** | Build decision: self-serve or hire | 45 min | 🔲 Coming next |
+| 4A | **Ship Self-Serve** (branch) | Live MVP at a staging URL | 1 hr | 🔲 Coming |
+| 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 1.5 hr | 🟡 Partial (1 of 4 chapters) |
+| 5 | **Manage Your Build** | Weekly oversight rhythm (Friday demo + standup + weekly report) | 2 hr | 🟡 Partial (2 of 6 chapters) |
+| 6 | **When Things Break** | Salvage / rebuild decision | 45 min | 🔲 Coming |
+| 7 | **Manage AI-Era Risks** | AI interrogation system | 1 hr | 🔲 Coming |
 
-**Status (2026-07-15)**: 6 of 26 posts live - Sprint 1 closed. Sprint 2 (Module 1.3 + Module 2 net-new posts) starts next week.
+**Status (2026-07-22)**: Modules 0 and 1 complete. Module 2, 4B, 5 partial. Modules 3, 4A, 6, 7 coming over the next 4-6 weeks. New chapters ship weekly.
 
 ## What's live right now
 
@@ -85,7 +85,8 @@ This is a free course. We don't sell anything inside it.
 
 ### 📍 Module 1 — Validate the Problem
 - [Find 10 People With the Problem in 2026](/blog/find-10-people-with-problem-outreach-2026/)
-- [The Mom Test: Ask About the Past, Not the Future](/blog/mom-test-ask-about-past-not-future/) — **just shipped**
+- [The Mom Test: Ask About the Past, Not the Future](/blog/mom-test-ask-about-past-not-future/)
+- [Write Down What You Heard, Decide What's Next](/blog/validated-problem-statement-decide-whats-next/) — **just shipped, closes Module 1**
 
 ### 📍 Module 2 — Design the Solution
 - [Five Tech Words to Stop Nodding At](/blog/five-tech-words-stop-nodding-at/)
@@ -99,11 +100,12 @@ This is a free course. We don't sell anything inside it.
 
 ## What's coming next
 
-The next 3 posts open Sprint 2:
+Next 2 chapters fill out Module 2:
 
-- Module 1.3 — **Write Down What You Heard, Decide What's Next** — closes Module 1
-- Module 2.2 — **The One-Page Product Brief (Vibe PRD)** — opens Module 2 net-new content
-- Module 2.3 — **Stop Specifying Features. Start Specifying Outcomes.**
+- **The One-Page Product Brief (Vibe PRD)** — coming this week
+- **Stop Specifying Features. Start Specifying Outcomes.** — coming next week
+
+After Module 2 closes, Module 3 opens (the self-serve vs hire decision).
 
 Then Sprint 2 fills in the rest of Module 1, Module 2's remaining posts, and Module 3 (choose your build path).
 
@@ -125,6 +127,7 @@ Each module ships with at least one downloadable artifact. We capture an email t
 | 10-question Self-Assessment Worksheet | 0 | 🟢 [/blog/self-assessment-worksheet/](/blog/self-assessment-worksheet/) |
 | Outreach Sequence Template | 1.1 | 🟢 [/blog/outreach-sequence-template/](/blog/outreach-sequence-template/) |
 | Mom Test Interview Script | 1.2 | 🟢 [/blog/mom-test-interview-script/](/blog/mom-test-interview-script/) |
+| Validated Problem Statement Template | 1.3 | 🟢 [/blog/validated-problem-statement-template/](/blog/validated-problem-statement-template/) |
 | Vibe PRD Template (Product Brief) | 2.2 | 🔲 Sprint 2 |
 | Self-Serve Stack Walkthrough PDF | 4A.1 | 🔲 Sprint 3 |
 | SOW Reading Guide | 4B | 🟢 [/blog/sow-reading-guide/](/blog/sow-reading-guide/) |
@@ -148,4 +151,4 @@ The course doesn't sell JT services. We sign the work (so you know who wrote it)
 
 ---
 
-Last updated: 2026-07-15.
+Last updated: 2026-07-22.
