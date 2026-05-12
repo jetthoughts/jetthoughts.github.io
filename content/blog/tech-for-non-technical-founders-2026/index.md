@@ -76,7 +76,7 @@ This is a free course. We don't sell anything inside it.
 | 6 | **When Things Break** | Salvage / rebuild decision | 45 min | 🔲 Coming |
 | 7 | **Manage AI-Era Risks** | AI interrogation system | 1 hr | 🔲 Coming |
 
-**Status (2026-08-05)**: Modules 0 and 1 complete. Module 2, 4B, 5 partial. Modules 3, 4A, 6, 7 coming over the next 4-6 weeks. New chapters ship weekly.
+**Status (2026-08-05)**: Modules 0, 1, and 2 complete - the entire "decide what to build" arc is shippable. Modules 4B, 5 partial. Modules 3, 4A, 6, 7 coming over the next 4-6 weeks. New chapters ship weekly.
 
 ## What's live right now
 
