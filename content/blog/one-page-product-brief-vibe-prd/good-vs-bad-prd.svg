@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" role="img" aria-labelledby="prd-compare-title">
+  <title id="prd-compare-title">Bad Vibe PRD vs Good Vibe PRD - side-by-side comparison of a vague brief and a specific one.</title>
+  <desc>A side-by-side comparison. Left card is the bad Vibe PRD: a single line saying "Build a CRM" with no persona, no context, no metric, no no-go list. Right card is the good Vibe PRD with the five sections filled in - named persona, 60-second user context, one paragraph of build scope, one success metric, a no-go list of five items.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .header { font-size: 26px; font-weight: bold; fill: #1a1a1a; }
+      .badtitle { font-size: 22px; font-weight: bold; fill: #cc342d; }
+      .goodtitle { font-size: 22px; font-weight: bold; fill: #2e7d32; }
+      .label { font-size: 15px; font-weight: bold; fill: #1a1a1a; }
+      .body { font-size: 13px; fill: #1a1a1a; }
+      .hint { font-size: 12px; fill: #888; font-style: italic; }
+      .card-bad  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .card-good { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .stamp-bad { fill: #cc342d; }
+      .stamp-good { fill: #2e7d32; }
+      .stamptext { font-size: 16px; font-weight: bold; fill: #fff; }
+    </style>
+  </defs>
+
+  <rect width="980" height="720" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="490" y="40" text-anchor="middle" class="h header">Vibe PRD - Bad vs Good</text>
+
+  <!-- BAD CARD -->
+  <rect x="40" y="70" width="440" height="600" rx="8" class="card-bad" transform="rotate(-0.5 260 370)"/>
+
+  <rect x="60" y="90" width="80" height="28" rx="14" class="stamp-bad"/>
+  <text x="100" y="110" text-anchor="middle" class="h stamptext">BAD</text>
+
+  <text x="260" y="155" text-anchor="middle" class="h badtitle">"Build a CRM"</text>
+
+  <text x="60" y="200" class="h label">1. The problem</text>
+  <text x="60" y="222" class="h body">(blank)</text>
+
+  <text x="60" y="265" class="h label">2. The user + context</text>
+  <text x="60" y="287" class="h body">"Founders need a better way to</text>
+  <text x="60" y="307" class="h body">manage customer relationships."</text>
+
+  <text x="60" y="350" class="h label">3. What you're building</text>
+  <text x="60" y="372" class="h body">"A modern CRM with great UX,</text>
+  <text x="60" y="392" class="h body">integrations, and AI features."</text>
+
+  <text x="60" y="435" class="h label">4. Success metric</text>
+  <text x="60" y="457" class="h body">"Lots of happy users."</text>
+
+  <text x="60" y="500" class="h label">5. What you're NOT building</text>
+  <text x="60" y="522" class="h body">(blank)</text>
+
+  <text x="60" y="585" class="h hint">Result: Lovable builds a settings</text>
+  <text x="60" y="605" class="h hint">page, 17 toggles, and a dashboard.</text>
+  <text x="60" y="625" class="h hint">Nothing the persona actually does.</text>
+  <text x="60" y="645" class="h hint">Quarter wasted on the wrong demo.</text>
+
+  <!-- GOOD CARD -->
+  <rect x="500" y="70" width="440" height="600" rx="8" class="card-good" transform="rotate(0.4 720 370)"/>
+
+  <rect x="520" y="90" width="80" height="28" rx="14" class="stamp-good"/>
+  <text x="560" y="110" text-anchor="middle" class="h stamptext">GOOD</text>
+
+  <text x="720" y="155" text-anchor="middle" class="h goodtitle">Stripe → QuickBooks reconciler</text>
+
+  <text x="520" y="200" class="h label">1. The problem</text>
+  <text x="520" y="220" class="h body">Pre-seed SaaS founders, 6 hrs/week</text>
+  <text x="520" y="238" class="h body">on Stripe → QB reconciliation.</text>
+  <text x="520" y="256" class="h body">8/10 confirmed, May 2026 sample.</text>
+
+  <text x="520" y="290" class="h label">2. The user + context</text>
+  <text x="520" y="310" class="h body">Founder, 9pm Tuesday, browser,</text>
+  <text x="520" y="328" class="h body">Stripe + QB tabs open. Wants to</text>
+  <text x="520" y="346" class="h body">be done in 10 min, not 40.</text>
+
+  <text x="520" y="380" class="h label">3. What you're building</text>
+  <text x="520" y="400" class="h body">Paste Stripe payout CSV. Get</text>
+  <text x="520" y="418" class="h body">QB journal CSV back. USD only.</text>
+  <text x="520" y="436" class="h body">Magic-link auth. No CSV stored.</text>
+
+  <text x="520" y="470" class="h label">4. Success metric</text>
+  <text x="520" y="490" class="h body">10 of first 20 signups convert</text>
+  <text x="520" y="508" class="h body">≥1 file in 30 days. Event:</text>
+  <text x="520" y="526" class="h body">conversion_completed.</text>
+
+  <text x="520" y="560" class="h label">5. What you're NOT building</text>
+  <text x="520" y="580" class="h body">Multi-currency · multi-Stripe ·</text>
+  <text x="520" y="598" class="h body">auto-sync · settings page · roles</text>
+  <text x="520" y="616" class="h body">· mobile beyond 1024px · marketing</text>
+  <text x="520" y="634" class="h body">site beyond signup.</text>
+  <text x="520" y="660" class="h hint">Result: 4-day ship. Real test in 30 days.</text>
+</svg>

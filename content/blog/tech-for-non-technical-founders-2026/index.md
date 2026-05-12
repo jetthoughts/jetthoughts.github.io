@@ -27,7 +27,7 @@ canonical_url: "https://jetthoughts.com/blog/tech-for-non-technical-founders-202
 related_posts: false
 ---
 
-> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-07-22.
+> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-08-05.
 
 # Tech for Non-Technical Founders 2026
 
@@ -68,7 +68,7 @@ This is a free course. We don't sell anything inside it.
 |---|---|---|---|---|
 | 0 | **Where Are You?** | Self-assessment + your starting module | 15 min | 🟢 Complete |
 | 1 | **Validate the Problem** | One-page validated problem statement | 1.5 hr | 🟢 Complete |
-| 2 | **Design the Solution** | One-page Product Brief (Vibe PRD) | 1 hr | 🟡 Partial (1 of 3 chapters) |
+| 2 | **Design the Solution** | One-page Product Brief (Vibe PRD) | 1 hr | 🟢 Complete |
 | 3 | **Choose Your Build Path** | Build decision: self-serve or hire | 45 min | 🔲 Coming next |
 | 4A | **Ship Self-Serve** (branch) | Live MVP at a staging URL | 1 hr | 🔲 Coming |
 | 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 1.5 hr | 🟡 Partial (1 of 4 chapters) |
@@ -76,7 +76,7 @@ This is a free course. We don't sell anything inside it.
 | 6 | **When Things Break** | Salvage / rebuild decision | 45 min | 🔲 Coming |
 | 7 | **Manage AI-Era Risks** | AI interrogation system | 1 hr | 🔲 Coming |
 
-**Status (2026-07-22)**: Modules 0 and 1 complete. Module 2, 4B, 5 partial. Modules 3, 4A, 6, 7 coming over the next 4-6 weeks. New chapters ship weekly.
+**Status (2026-08-05)**: Modules 0 and 1 complete. Module 2, 4B, 5 partial. Modules 3, 4A, 6, 7 coming over the next 4-6 weeks. New chapters ship weekly.
 
 ## What's live right now
 
@@ -88,8 +88,10 @@ This is a free course. We don't sell anything inside it.
 - [The Mom Test: Ask About the Past, Not the Future](/blog/mom-test-ask-about-past-not-future/)
 - [Write Down What You Heard, Decide What's Next](/blog/validated-problem-statement-decide-whats-next/) — **just shipped, closes Module 1**
 
-### 📍 Module 2 — Design the Solution
+### 📍 Module 2 — Design the Solution (complete)
 - [Five Tech Words to Stop Nodding At](/blog/five-tech-words-stop-nodding-at/)
+- [The One-Page Product Brief (Vibe PRD)](/blog/one-page-product-brief-vibe-prd/)
+- [Stop Specifying Features. Start Specifying Outcomes.](/blog/stop-specifying-features-start-outcomes/) — **just shipped, closes Module 2**
 
 ### 📍 Module 4B — Hire & Ship
 - [Reading the SOW Clause by Clause](/blog/reading-sow-clause-by-clause/)
@@ -100,12 +102,12 @@ This is a free course. We don't sell anything inside it.
 
 ## What's coming next
 
-Next 2 chapters fill out Module 2:
+Next: **Module 3** opens (the self-serve vs hire decision):
 
-- **The One-Page Product Brief (Vibe PRD)** — coming this week
-- **Stop Specifying Features. Start Specifying Outcomes.** — coming next week
+- **Should You Hire? The 2026 Decision Tree** — coming this week
+- **The Fractional CTO Bridge — 5 Hours a Week Beats a Co-founder** — coming next week
 
-After Module 2 closes, Module 3 opens (the self-serve vs hire decision).
+Then Module 4A (self-serve build) and Module 4B (hire) follow.
 
 Then Sprint 2 fills in the rest of Module 1, Module 2's remaining posts, and Module 3 (choose your build path).
 
@@ -128,7 +130,7 @@ Each module ships with at least one downloadable artifact. We capture an email t
 | Outreach Sequence Template | 1.1 | 🟢 [/blog/outreach-sequence-template/](/blog/outreach-sequence-template/) |
 | Mom Test Interview Script | 1.2 | 🟢 [/blog/mom-test-interview-script/](/blog/mom-test-interview-script/) |
 | Validated Problem Statement Template | 1.3 | 🟢 [/blog/validated-problem-statement-template/](/blog/validated-problem-statement-template/) |
-| Vibe PRD Template (Product Brief) | 2.2 | 🔲 Sprint 2 |
+| Vibe PRD Template (Product Brief) | 2.2 | 🟢 [/blog/vibe-prd-template/](/blog/vibe-prd-template/) |
 | Self-Serve Stack Walkthrough PDF | 4A.1 | 🔲 Sprint 3 |
 | SOW Reading Guide | 4B | 🟢 [/blog/sow-reading-guide/](/blog/sow-reading-guide/) |
 | Friday Demo Template | 5 | 🟢 [/blog/friday-demo-template/](/blog/friday-demo-template/) |
@@ -151,4 +153,4 @@ The course doesn't sell JT services. We sign the work (so you know who wrote it)
 
 ---
 
-Last updated: 2026-07-22.
+Last updated: 2026-08-05.
