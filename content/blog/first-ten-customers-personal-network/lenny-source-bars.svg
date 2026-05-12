@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="lenny-title">
+  <title id="lenny-title">Where the first 10 B2B customers actually came from - Lenny's 21-company study</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .axis-label    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
+      .bar-label     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #1a1a1a; font-weight: 700; }
+      .bar-stat      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 32px; fill: #fff; font-weight: 700; }
+      .bar-note      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .source        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #666; }
+      .bar-personal  { fill: #cc342d; stroke: #1a1a1a; stroke-width: 2; }
+      .bar-cold      { fill: #a855f7; stroke: #1a1a1a; stroke-width: 2; }
+      .bar-other     { fill: #b8860b; stroke: #1a1a1a; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <text x="500" y="40" class="heading" text-anchor="middle">"Where did your first 10 B2B customers come from?"</text>
+  <text x="500" y="68" class="bar-note" text-anchor="middle">N=21 companies including Figma, Stripe, Slack, Airtable, Shopify, Notion, Front, Loom</text>
+
+  <!-- Personal network bar (60%) -->
+  <rect x="120" y="120" width="540" height="80" rx="10" class="bar-personal" transform="rotate(-0.2 390 160)"/>
+  <text x="390" y="170" class="bar-stat" text-anchor="middle">~60%</text>
+  <text x="700" y="155" class="bar-label">Personal network</text>
+  <text x="700" y="180" class="bar-note">friends, colleagues, former managers, prior employers</text>
+
+  <!-- Cold outbound bar (35%) -->
+  <rect x="120" y="230" width="315" height="80" rx="10" class="bar-cold" transform="rotate(0.3 277 270)"/>
+  <text x="277" y="280" class="bar-stat" text-anchor="middle">~35%</text>
+  <text x="700" y="265" class="bar-label">Filtered cold outbound</text>
+  <text x="700" y="290" class="bar-note">LinkedIn DMs, targeted emails, conference handshakes</text>
+
+  <!-- Other bar (5%) -->
+  <rect x="120" y="340" width="45" height="80" rx="10" class="bar-other" transform="rotate(-0.4 142 380)"/>
+  <text x="180" y="390" class="bar-stat" fill="#1a1a1a">~5%</text>
+  <text x="700" y="375" class="bar-label">Inbound / press / Product Hunt</text>
+  <text x="700" y="400" class="bar-note">the channel founders default to, against 1-in-20 odds</text>
+
+  <!-- Insight callout -->
+  <rect x="80" y="450" width="840" height="115" rx="14" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5"/>
+  <text x="500" y="480" class="axis-label" text-anchor="middle">The non-technical-founder reflex is to skip the 60%.</text>
+  <text x="500" y="505" class="axis-label" text-anchor="middle">"Friends are biased. Real customers come from real marketing."</text>
+  <text x="500" y="535" class="bar-note" text-anchor="middle">Both halves of that sentence are wrong. The first 10 are a trust transfer.</text>
+  <text x="500" y="557" class="bar-note" text-anchor="middle">You are not asking them to buy. You are asking them to be first.</text>
+
+  <!-- Source -->
+  <text x="500" y="590" class="source" text-anchor="middle">Source: Lenny Rachitsky, "How today's fastest growing B2B businesses found their first ten customers" (2021)</text>
+</svg>

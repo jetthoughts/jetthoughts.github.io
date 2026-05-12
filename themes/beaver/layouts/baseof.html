@@ -90,10 +90,16 @@
     {{ partialCached "page/site-scripts" . "site-scripts" }}
     {{ if .Store.Get "features.mermaid" }}
       <script
-        src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"
-        integrity="sha384-o+g/BxPwhi0C3RK7oQBxQuNimeafQ3GE/ST4iT2BxVI4Wzt60SH4pq9iXVYujjaS"
+        src="https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js"
+        integrity="sha384-yQ4mmBBT+vhTAwjFH0toJXNYJ6O4usWnt6EPIdWwrRvx2V/n5lXuDZQwQFeSFydF"
         crossorigin="anonymous"></script>
       <script>
+        // useMaxWidth: true is Mermaid's default. SVGs scale to fit the
+        // content column on desktop (no big empty space when diagrams
+        // are tall) and shrink on mobile. For diagrams with too many
+        // nodes to fit legibly on mobile, the fix is to simplify the
+        // Mermaid source (fewer nodes, shorter labels, or split into
+        // sub-diagrams), not CSS gymnastics.
         mermaid.initialize({ startOnLoad: true });
       </script>
     {{ end }}

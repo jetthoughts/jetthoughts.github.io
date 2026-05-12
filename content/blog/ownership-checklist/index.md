@@ -1,0 +1,131 @@
+---
+title: "GitHub, AWS, Database Ownership Checklist"
+description: "A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop. 12 items, run alone."
+date: 2026-05-17
+draft: false
+author: "JetThoughts Team"
+slug: ownership-checklist
+keywords:
+  - github ownership audit
+  - aws root account founder
+  - non technical founder ownership
+  - dev shop hostage situation
+  - code ownership checklist
+tags:
+  - founders
+  - non-technical-founder
+  - template
+  - course-companion
+  - oversight
+categories: ["Templates"]
+canonical_url: "https://jetthoughts.com/blog/ownership-checklist/"
+related_posts: false
+---
+
+📋 Template companion to Module 6 of the [Tech for Non-Technical Founders 2026 course](/blog/tech-for-non-technical-founders-2026/). Run on Day 1 of any build (self-serve or hired), alone, with your credit card and a Notion doc.
+
+# The GitHub / AWS / Database Ownership Checklist
+
+A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop.
+
+By the end of one Friday you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
+
+## Why this exists
+
+A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She thought she owned the company - the Delaware C-corp, the bank account, the trademark. What she did not own was the GitHub org (registered to the agency's CTO), the AWS root account (email was `dev@theiragency.com`), the Stripe production keys, or the domain (in the lead developer's personal Namecheap). Her app was live serving 4,200 paying users when checkout broke at 9pm on a Tuesday and she could not push a fix. Recovery took **three weeks and $11K in legal fees**. The audit below would have caught all four problems on Day 1 in 45 minutes.
+
+Most agencies are not malicious. They set the accounts up under their own emails on Day 1 because it was the fastest way to start, and nobody ever moved them. The damage is the same either way.
+
+## How to use it
+
+Run the audit on a **Friday afternoon, alone**. 45 minutes if your accounts are tidy, 90 if they are not. Bring your company credit card, your password manager, and a fresh Notion doc.
+
+Do not tell the team you are running it. If anything is wrong, you want to fix the access first and have the conversation second. A founder who asks "can you transfer the GitHub org to me?" on Monday gets a different answer than a founder who already owns the org and is asking why she did not on Day 1.
+
+For each item, write the answer in your doc - pass or fail. If fail, copy the exact email or account name. You will need it for the recovery step.
+
+## The 12-item checklist
+
+### Code ownership
+
+| # | Check | What PASS looks like |
+|---|---|---|
+| 1 | **GitHub org owner.** Open the org. Settings - People. Who is listed as Owner? | Your name and email. Not the agency's, not a shared `dev@` mailbox. |
+| 2 | **Repo settings.** Settings - Collaborators. Can you remove every contractor right now without asking permission? | You can. Org-owner permission means you can remove any user. |
+| 3 | **Branch protection on `main`.** Settings - Branches. Is `main` protected, and can you override the protection in an emergency? | `main` is protected, and your account has admin override rights. |
+
+### Cloud ownership
+
+| # | Check | What PASS looks like |
+|---|---|---|
+| 4 | **AWS root account email.** AWS console - top-right - Account. What is the root user email? | Email on a domain you control: `you@yourcompany.com`. |
+| 5 | **Billing access.** AWS Billing dashboard. Whose card pays the bill? Can you see invoices for the last 12 months? | Your card or your company AmEx, and you can download every invoice. |
+| 6 | **IAM admin user.** IAM - Users. Is there an admin user that is yours, separate from root? | Yes, with MFA on, and the password in your password manager. |
+
+### Database and secrets
+
+| # | Check | What PASS looks like |
+|---|---|---|
+| 7 | **Production DB credentials.** Where is the prod DB password stored? Can you read it tonight without paging the lead engineer? | You open AWS Secrets Manager (or 1Password / Vault) and see it yourself. |
+| 8 | **Secrets store ownership.** Secrets Manager, Vault, Doppler, or `.env` files in a private repo - who is the admin? | You are. If a developer rage-quits tonight, you can rotate every secret tomorrow. |
+| 9 | **Database backups.** When was the last successful backup? Can you restore one to a staging DB by yourself? | Backups run nightly, the last 7 days are listed in RDS, and you have a one-page restore runbook. |
+
+### Domain and external services
+
+| # | Check | What PASS looks like |
+|---|---|---|
+| 10 | **Domain registrar.** Log in to Namecheap, GoDaddy, or Cloudflare Registrar. Whose name is on the WHOIS? Whose email gets the renewal notice? | Yours, on your company email. The account is paid by your card. |
+| 11 | **DNS provider.** If DNS lives elsewhere (Cloudflare, Route 53), can you log in and add an A record right now? | Yes, on an account in your name, with MFA. |
+| 12 | **Third-party API keys.** Stripe, SendGrid, OpenAI, Twilio, Plaid - whoever you pay every month. For each, is the account in your name and the billing on your card? | No agency owns an account that touches your customers' money or data. |
+
+If you do not know what an item means, that is part of the result. "I have never heard of Secrets Manager" is a failed answer for #7 - it tells you nobody has briefed you on where production passwords live.
+
+## What good looks like vs. what bad looks like
+
+**#1 - GitHub org owner**
+> Bad: Owner is `agency-admin@bigdevshop.com`. You are listed as a Member.
+> Good: Owner is `founder@mycompany.com` (you). Agency engineers are added as Outside Collaborators.
+
+If the agency's email is on the Owner row, they can delete the org tomorrow morning and GitHub support will not help you.
+
+**#4 - AWS root account email**
+> Bad: Root email is `aws@bigdevshop.com`. You have IAM access but have never logged into root.
+> Good: Root email is `aws@mycompany.com`. The password is in your 1Password. MFA is on your phone, with a backup code in your safe.
+
+The root account owns everything underneath it. If the agency controls the root email, they can lock you out of every AWS service in 10 minutes.
+
+**#7 - Production database password rotation**
+> Bad: "Marcus knows it. I would have to ask him."
+> Good: "I opened AWS Secrets Manager just now and read it. I rotated it once before, in March, when we offboarded the previous DBA."
+
+If only one person can rotate the prod DB password, you do not have a database. You have a hostage.
+
+**#10 - Domain registrar**
+> Bad: Renewals come to `dev@theiragency.com`. You have never logged into the registrar.
+> Good: Logged into Namecheap with your account. WHOIS shows your name. Auto-renew is on, charged to your card.
+
+A domain transfer takes a minimum of **14 days** under ICANN rules and requires the losing registrar to release the auth code. If the agency will not release it, your customers cannot reach your site for two weeks.
+
+## What to do if the audit fails
+
+**Step 1. Do not panic. Do not tell the team yet.** Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help me move this over, doing some housekeeping" - you will get a faster transfer than "why is my company under your name?"
+
+**Step 2. Recovery, in this order.**
+
+- **Code (#1-3):** GitHub org transfer takes five minutes. Slack the lead engineer with your target account email.
+- **Cloud (#4-6):** AWS root email change is self-service if you have the root password. If you do not, AWS support recovers it with your incorporation documents (3-5 business days).
+- **Database and secrets (#7-9):** Set up your own AWS Secrets Manager (or 1Password vault) tonight. Migrate secrets next sprint. Schedule a backup-restore test.
+- **Domain (#10-11):** Initiate the registrar transfer to an account in your name. Get the auth code. Budget 14 days. Do not change DNS during the window.
+- **Third-party services (#12):** Most SaaS tools let you change account email and billing card from the settings page. One at a time, so receipts stay readable.
+
+**Step 3. When to escalate.** If the agency does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Founders who negotiate for a month usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
+
+If you are in this spot, the [JetThoughts dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) is the next read - a failed audit usually correlates with three or four other red flags - and the [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the 30-day transition.
+
+## What to do after
+
+- **Run this audit every quarter.** Twenty minutes once you have done it the first time. Recurring calendar block, last Friday of every quarter.
+- **Add it to your due diligence checklist for the next dev shop.** Before you sign a contract, get it in writing that all GitHub orgs, AWS accounts, domain registrar accounts, secrets stores, and third-party API accounts will be created under your company email from Day 1. Put it in the SOW. The [JetThoughts founder's guide to hiring a dev shop](/blog/founders-guide-hiring-dev-shop/) walks through the clauses worth requesting.
+- **Forward the audit answers to your investor or board the same day.** Three quarterly audits in a row in their inbox is the cheapest investor-trust signal you will ever ship.
+
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) curriculum.*

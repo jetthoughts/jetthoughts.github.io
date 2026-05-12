@@ -1,0 +1,86 @@
+# Tech for Non-Technical Founders 2026 - chapter sequence (Phase 1 spine)
+# Each entry: slug, title (short for nav), module label
+# Order = reading sequence on the landing page (Module 1 -> end of Module 6).
+# Used by the prev/next partial on chapter pages.
+#
+# Note: floating glossary - "Five Tech Words to Stop Nodding At" (slug five-tech-words-stop-nodding-at)
+# is reference content, accessible from every chapter, not in the linear reading order.
+#
+# Continuation chapters (customers-leaving-churn-triage-not-acquisition,
+# pivot-or-persevere-decision-framework) and supplementary references
+# (hire-track-supplementary-reference, demoted management chapters,
+# demoted AI-era chapters) are linked from Module 6 "Going further" callout
+# but NOT in the linear sequence.
+
+sequence:
+  - slug: form-your-founding-hypothesis-90-minute-sprint
+    title: "1.1 · Form Your Founding Hypothesis"
+    module: "Module 1.1"
+
+  - slug: smoke-test-landing-page-300-dollar-validation
+    title: "2.1 · Smoke-Test the Hypothesis"
+    module: "Module 2.1"
+
+  - slug: price-hypothesis-on-smoke-test-page
+    title: "2.2 · Price Your Hypothesis on the Smoke-Test Page"
+    module: "Module 2.2"
+
+  - slug: ai-persona-pre-validation-mom-test-prep
+    title: "3.1 · AI Persona Pre-Validation"
+    module: "Module 3.1"
+
+  - slug: find-10-people-with-problem-outreach-2026
+    title: "3.2 · Find 10 People With the Problem"
+    module: "Module 3.2"
+
+  - slug: mom-test-ask-about-past-not-future
+    title: "3.3 · The Mom Test (with Synthesis)"
+    module: "Module 3.3"
+
+  - slug: clickable-prototype-validation-2-hour-lovable
+    title: "3.4 · Build a Clickable Prototype in an Afternoon"
+    module: "Module 3.4"
+
+  - slug: one-page-product-brief-vibe-prd
+    title: "4.1 · The One-Page Product Brief"
+    module: "Module 4.1"
+
+  - slug: stop-specifying-features-start-outcomes
+    title: "4.2 · Stop Specifying Features, Start Outcomes"
+    module: "Module 4.2"
+
+  - slug: should-you-hire-2026-decision-tree
+    title: "5.1 · Build It Yourself or Hire (the Default)"
+    module: "Module 5.1"
+
+  - slug: github-aws-database-ownership-checklist
+    title: "5.2 · Day-1 Ownership Audit"
+    module: "Module 5.2"
+
+  - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
+    title: "5.3 · Build It Yourself: Lovable + Supabase + Stripe"
+    module: "Module 5.3"
+
+  - slug: vibe-coding-ceiling-signals
+    title: "5.4 · Proactive Ceiling Signals (Monthly Check)"
+    module: "Module 5.4"
+
+  - slug: must-have-segment-pmf-test
+    title: "6.0 · The Must-Have Segment Test"
+    module: "Module 6.0"
+
+  - slug: channel-selection-before-outbound
+    title: "6.1 · Choose Your Channel Before You Send One Message"
+    module: "Module 6.1"
+
+  - slug: first-ten-customers-personal-network
+    title: "6.2 · The First Ten From Your Network"
+    module: "Module 6.2"
+
+  - slug: paid-pilot-charge-before-ship
+    title: "6.3 · Charge Before You Ship"
+    module: "Module 6.3"
+
+  - slug: outbound-without-sales-team
+    title: "6.4 · Going Outbound Without a Sales Team"
+    module: "Module 6.4"

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Patrick Hand', 'Caveat', 'Comic Sans MS', cursive" font-size="16">
+  <defs>
+    <filter id="rough2" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.5"/>
+    </filter>
+  </defs>
+  <rect width="900" height="560" fill="#fdfdf8"/>
+  <text x="450" y="40" font-size="26" font-weight="bold" fill="#1a1a1a" text-anchor="middle">AI Theatre vs. AI Direction - what the answers sound like</text>
+  <text x="450" y="64" font-size="15" fill="#555" text-anchor="middle">Same five questions. Two completely different conversations.</text>
+
+  <g filter="url(#rough2)">
+    <rect x="40" y="90" width="395" height="440" fill="#fff5f5" stroke="#cc342d" stroke-width="2"/>
+  </g>
+  <text x="237" y="120" font-size="22" font-weight="bold" fill="#cc342d" text-anchor="middle">AI THEATRE (walk away)</text>
+  <text x="237" y="142" font-size="14" fill="#666" text-anchor="middle">Salesperson takes every question. No artifacts.</text>
+
+  <text x="60" y="178" font-weight="bold" fill="#cc342d">Q1.</text>
+  <text x="95" y="178" fill="#1a1a1a">"Our developers use AI where</text>
+  <text x="95" y="198" fill="#1a1a1a">it makes sense. We are AI-native."</text>
+
+  <text x="60" y="232" font-weight="bold" fill="#cc342d">Q2.</text>
+  <text x="95" y="232" fill="#1a1a1a">"It's all included in the rate.</text>
+  <text x="95" y="252" fill="#1a1a1a">Don't worry about token costs."</text>
+
+  <text x="60" y="286" font-weight="bold" fill="#cc342d">Q3.</text>
+  <text x="95" y="286" fill="#1a1a1a">"We trust the model. Cursor</text>
+  <text x="95" y="306" fill="#1a1a1a">catches the obvious stuff."</text>
+
+  <text x="60" y="340" font-weight="bold" fill="#cc342d">Q4.</text>
+  <text x="95" y="340" fill="#1a1a1a">"Our developers know what</text>
+  <text x="95" y="360" fill="#1a1a1a">packages to use."  [confused look]</text>
+
+  <text x="60" y="394" font-weight="bold" fill="#cc342d">Q5.</text>
+  <text x="95" y="394" fill="#1a1a1a">"We've never had an AI-related</text>
+  <text x="95" y="414" fill="#1a1a1a">incident. Our standards are high."</text>
+
+  <text x="237" y="465" font-size="18" font-weight="bold" fill="#cc342d" text-anchor="middle">Score: 0 / 5</text>
+  <text x="237" y="490" font-size="14" fill="#cc342d" text-anchor="middle">Polite no the same evening.</text>
+  <text x="237" y="510" font-size="13" font-style="italic" fill="#666" text-anchor="middle">"Pausing to refine our requirements."</text>
+
+  <g filter="url(#rough2)">
+    <rect x="465" y="90" width="395" height="440" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2"/>
+  </g>
+  <text x="662" y="120" font-size="22" font-weight="bold" fill="#2e7d32" text-anchor="middle">AI DIRECTION (sign with confidence)</text>
+  <text x="662" y="142" font-size="14" fill="#666" text-anchor="middle">Senior engineer pulls up real artifacts on screenshare.</text>
+
+  <text x="485" y="178" font-weight="bold" fill="#2e7d32">Q1.</text>
+  <text x="520" y="178" fill="#1a1a1a">"Cursor + Claude 4.5 Sonnet.</text>
+  <text x="520" y="198" fill="#1a1a1a">Here is PR #1247 from Tuesday."</text>
+
+  <text x="485" y="232" font-weight="bold" fill="#2e7d32">Q2.</text>
+  <text x="520" y="232" fill="#1a1a1a">"$140-$220 per dev per month.</text>
+  <text x="520" y="252" fill="#1a1a1a">SOW pass-through. Sample line below."</text>
+
+  <text x="485" y="286" font-weight="bold" fill="#2e7d32">Q3.</text>
+  <text x="520" y="286" fill="#1a1a1a">"Marcus reviewed PR #1247 -</text>
+  <text x="520" y="306" fill="#1a1a1a">flagged a hardcoded API key."</text>
+
+  <text x="485" y="340" font-weight="bold" fill="#2e7d32">Q4.</text>
+  <text x="520" y="340" fill="#1a1a1a">"Socket on every PR. Allowlist</text>
+  <text x="520" y="360" fill="#1a1a1a">in `Gemfile.policy`. Yes, slopsquatting."</text>
+
+  <text x="485" y="394" font-weight="bold" fill="#2e7d32">Q5.</text>
+  <text x="520" y="394" fill="#1a1a1a">"March 14: AI-generated webhook</text>
+  <text x="520" y="414" fill="#1a1a1a">retried 8x. Added idempotency key."</text>
+
+  <text x="662" y="465" font-size="18" font-weight="bold" fill="#2e7d32" text-anchor="middle">Score: 5 / 5</text>
+  <text x="662" y="490" font-size="14" fill="#2e7d32" text-anchor="middle">Ask for AI-project references next.</text>
+  <text x="662" y="510" font-size="13" font-style="italic" fill="#666" text-anchor="middle">Internal AI policy in your inbox same day.</text>
+</svg>

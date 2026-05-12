@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough2" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+  </defs>
+  <rect width="920" height="540" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="460" y="40" font-size="30" text-anchor="middle" fill="#1a1a1a" font-weight="bold">What the Self-Serve Stack Actually Costs</text>
+  <text x="460" y="68" font-size="18" text-anchor="middle" fill="#555">Three months of pre-seed reality, no theatre. Real receipts.</text>
+
+  <!-- Y axis -->
+  <line x1="100" y1="120" x2="100" y2="440" stroke="#333" stroke-width="2"/>
+  <text x="92" y="125" font-size="14" text-anchor="end" fill="#555">$300/mo</text>
+  <text x="92" y="195" font-size="14" text-anchor="end" fill="#555">$200/mo</text>
+  <text x="92" y="265" font-size="14" text-anchor="end" fill="#555">$100/mo</text>
+  <text x="92" y="335" font-size="14" text-anchor="end" fill="#555">$50/mo</text>
+  <text x="92" y="445" font-size="14" text-anchor="end" fill="#555">$0/mo</text>
+
+  <!-- X axis -->
+  <line x1="100" y1="440" x2="860" y2="440" stroke="#333" stroke-width="2"/>
+
+  <!-- Bar 1: Week 1 (free tier, $0) -->
+  <rect x="180" y="430" width="120" height="10" fill="#fffbe6" stroke="#bf8a00" stroke-width="2" filter="url(#rough2)"/>
+  <text x="240" y="468" font-size="18" text-anchor="middle" fill="#bf8a00" font-weight="bold">Week 1</text>
+  <text x="240" y="488" font-size="14" text-anchor="middle" fill="#555">free tiers</text>
+  <text x="240" y="425" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">$0</text>
+
+  <!-- Bar 2: Month 1 ship ($87) -->
+  <rect x="380" y="380" width="120" height="60" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="440" y="468" font-size="18" text-anchor="middle" fill="#2e7d32" font-weight="bold">Month 1</text>
+  <text x="440" y="488" font-size="14" text-anchor="middle" fill="#555">first ship</text>
+  <text x="440" y="372" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">$87</text>
+  <text x="440" y="510" font-size="13" text-anchor="middle" fill="#555">Lovable Pro $25 + Supabase $25 + domain $14 + Resend $20 + Vercel $0 + Stripe fees ~$3</text>
+
+  <!-- Bar 3: Month 6 post-launch ($200) -->
+  <rect x="580" y="265" width="120" height="175" fill="#e8f4f8" stroke="#0277bd" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="640" y="468" font-size="18" text-anchor="middle" fill="#0277bd" font-weight="bold">Month 6</text>
+  <text x="640" y="488" font-size="14" text-anchor="middle" fill="#555">post-launch</text>
+  <text x="640" y="257" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">~$200</text>
+  <text x="640" y="510" font-size="13" text-anchor="middle" fill="#555">Lovable Scale $100 + Supabase $25 + Resend $35 + Sentry $26 + monitoring $14</text>
+
+  <!-- Annotation arrow + ceiling note -->
+  <path d="M 760 200 Q 800 240 760 280" fill="none" stroke="#cc342d" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="780" y="180" font-size="16" fill="#cc342d" font-weight="bold">↓ ceiling around here</text>
+  <text x="780" y="200" font-size="14" fill="#555">at ~10K users you</text>
+  <text x="780" y="218" font-size="14" fill="#555">graduate to Module 4B</text>
+  <text x="780" y="236" font-size="14" fill="#555">or hire a Fractional CTO</text>
+
+  <!-- Footer -->
+  <text x="460" y="525" font-size="15" text-anchor="middle" fill="#666" font-style="italic">A typical hire-a-team build runs $30K-$80K/month. The stack ships the same first 10 paying customers for under 1% of that.</text>
+</svg>

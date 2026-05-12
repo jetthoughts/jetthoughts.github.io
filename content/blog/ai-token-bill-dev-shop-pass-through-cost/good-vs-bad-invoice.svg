@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Good invoice itemizes AI tooling per developer per tool. Bad invoice rolls everything into a single AI Services line.">
+  <title>Good invoice vs bad invoice for AI pass-through costs</title>
+  <desc>Left side: bad invoice with single AI Services line item, no breakdown, $2,340. Right side: good invoice with per-developer per-tool itemization adding to the same total.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .title { font-size: 24px; fill: #1a1a1a; }
+      .label { font-size: 18px; fill: #1a1a1a; }
+      .sub { font-size: 14px; fill: #555; }
+      .num { font-size: 17px; fill: #1a1a1a; font-weight: bold; }
+      .badpaper { fill: #fff; stroke: #c62828; stroke-width: 3; }
+      .goodpaper { fill: #fff; stroke: #2e7d32; stroke-width: 3; }
+      .badbanner { fill: #c62828; }
+      .goodbanner { fill: #2e7d32; }
+      .row { stroke: #ddd; stroke-width: 1; }
+      .totalrow { stroke: #333; stroke-width: 2; }
+      .legend { font-size: 14px; fill: #333; }
+    </style>
+  </defs>
+
+  <rect width="960" height="720" fill="#fafafa"/>
+
+  <text x="480" y="40" text-anchor="middle" class="h title">One AI bill, two invoices. Only one lets you push back.</text>
+  <text x="480" y="64" text-anchor="middle" class="h legend">A 4-developer team in month 2. Read the right one. Reject the left one.</text>
+
+  <!-- BAD INVOICE (LEFT) -->
+  <rect x="40" y="100" width="430" height="560" rx="8" class="badpaper"/>
+  <rect x="40" y="100" width="430" height="50" rx="8" class="badbanner"/>
+  <text x="255" y="133" text-anchor="middle" class="h" font-size="22" fill="#fff">BAD - Reject this</text>
+
+  <text x="60" y="180" class="h label">Acme Dev Shop - Invoice #1042</text>
+  <text x="60" y="202" class="h sub">For services rendered, October 2026</text>
+
+  <line x1="60" y1="220" x2="450" y2="220" class="row"/>
+  <text x="60" y="248" class="h label">Engineering hours (340 hrs)</text>
+  <text x="430" y="248" text-anchor="end" class="h num">$51,000</text>
+
+  <line x1="60" y1="265" x2="450" y2="265" class="row"/>
+  <text x="60" y="293" class="h label">Project management (40 hrs)</text>
+  <text x="430" y="293" text-anchor="end" class="h num">$6,000</text>
+
+  <line x1="60" y1="310" x2="450" y2="310" class="row"/>
+  <text x="60" y="338" class="h label" fill="#c62828">AI services (passthrough)</text>
+  <text x="430" y="338" text-anchor="end" class="h num" fill="#c62828">$2,340</text>
+  <text x="60" y="358" class="h sub" fill="#c62828">No breakdown. No tools named. No per-dev split.</text>
+
+  <line x1="60" y1="380" x2="450" y2="380" class="row"/>
+  <text x="60" y="408" class="h label">Hosting and infra</text>
+  <text x="430" y="408" text-anchor="end" class="h num">$420</text>
+
+  <line x1="60" y1="430" x2="450" y2="430" class="totalrow"/>
+  <text x="60" y="460" class="h label" font-size="20">Total due</text>
+  <text x="430" y="460" text-anchor="end" class="h num" font-size="20">$59,760</text>
+
+  <text x="60" y="510" class="h sub" fill="#c62828">Question you cannot answer:</text>
+  <text x="60" y="535" class="h sub" fill="#c62828">"Who used what AI tool to do what work?"</text>
+
+  <text x="60" y="580" class="h sub" fill="#c62828">When the AI line doubles in month 3,</text>
+  <text x="60" y="600" class="h sub" fill="#c62828">you have nothing to push back on.</text>
+
+  <text x="60" y="640" class="h sub" fill="#c62828">Reject before you sign anything.</text>
+
+  <!-- GOOD INVOICE (RIGHT) -->
+  <rect x="490" y="100" width="430" height="560" rx="8" class="goodpaper"/>
+  <rect x="490" y="100" width="430" height="50" rx="8" class="goodbanner"/>
+  <text x="705" y="133" text-anchor="middle" class="h" font-size="22" fill="#fff">GOOD - Accept this</text>
+
+  <text x="510" y="180" class="h label">Acme Dev Shop - Invoice #1042</text>
+  <text x="510" y="202" class="h sub">AI tooling pass-through, October 2026</text>
+
+  <line x1="510" y1="220" x2="900" y2="220" class="row"/>
+  <text x="510" y="244" class="h sub">Maria Cursor seat</text>
+  <text x="880" y="244" text-anchor="end" class="h num">$40</text>
+  <text x="510" y="262" class="h sub">Maria Anthropic API (340K tokens)</text>
+  <text x="880" y="262" text-anchor="end" class="h num">$95</text>
+
+  <line x1="510" y1="280" x2="900" y2="280" class="row"/>
+  <text x="510" y="304" class="h sub">Devon Cursor seat</text>
+  <text x="880" y="304" text-anchor="end" class="h num">$40</text>
+  <text x="510" y="322" class="h sub">Devon Anthropic API (3.1M tokens)</text>
+  <text x="880" y="322" text-anchor="end" class="h num">$870</text>
+  <text x="510" y="340" class="h sub">Devon OpenAI API (gpt-4o, 280K tok)</text>
+  <text x="880" y="340" text-anchor="end" class="h num">$185</text>
+
+  <line x1="510" y1="358" x2="900" y2="358" class="row"/>
+  <text x="510" y="382" class="h sub">Priya Cursor seat</text>
+  <text x="880" y="382" text-anchor="end" class="h num">$40</text>
+  <text x="510" y="400" class="h sub">Priya Anthropic API (480K tokens)</text>
+  <text x="880" y="400" text-anchor="end" class="h num">$135</text>
+
+  <line x1="510" y1="418" x2="900" y2="418" class="row"/>
+  <text x="510" y="442" class="h sub">Alex Cursor seat</text>
+  <text x="880" y="442" text-anchor="end" class="h num">$40</text>
+  <text x="510" y="460" class="h sub">Alex Anthropic API (390K tokens)</text>
+  <text x="880" y="460" text-anchor="end" class="h num">$110</text>
+
+  <line x1="510" y1="478" x2="900" y2="478" class="row"/>
+  <text x="510" y="502" class="h sub">Budget alert threshold (per dev)</text>
+  <text x="880" y="502" text-anchor="end" class="h num">$300</text>
+  <text x="510" y="520" class="h sub">Pass-through margin</text>
+  <text x="880" y="520" text-anchor="end" class="h num">0%</text>
+
+  <line x1="510" y1="540" x2="900" y2="540" class="totalrow"/>
+  <text x="510" y="568" class="h label" font-size="20">AI total</text>
+  <text x="880" y="568" text-anchor="end" class="h num" font-size="20">$1,985</text>
+
+  <text x="510" y="605" class="h sub" fill="#c62828">Devon blew past $300 alert (Anthropic = $870).</text>
+  <text x="510" y="625" class="h sub" fill="#2e7d32">You can ask: stuck ticket, agent loop left running,</text>
+  <text x="510" y="645" class="h sub" fill="#2e7d32">or unsupervised experimentation? Conversation possible.</text>
+</svg>

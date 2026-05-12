@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="gauge-title">
+  <title id="gauge-title">The Sean Ellis 40% threshold: where founder paid-ads instinct fails and where it does not</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .axis          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
+      .note          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #444; font-style: italic; }
+      .threshold     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #cc342d; font-weight: 700; }
+      .gauge-bg      { fill: #fff5f5; stroke: #1a1a1a; stroke-width: 2.5; stroke-linejoin: round; }
+      .gauge-fill    { fill: #cc342d; opacity: 0.75; }
+      .gauge-pass    { fill: #a855f7; opacity: 0.7; }
+      .arrow         { stroke: #1a1a1a; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .threshold-line{ stroke: #cc342d; stroke-width: 3; stroke-dasharray: 8 4; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,10 L10,5 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="40" class="heading" text-anchor="middle">"Very disappointed if this disappeared tomorrow"</text>
+  <text x="450" y="68" class="note" text-anchor="middle">Sean Ellis 40% test - survey your first 10-30 users before spending a dollar on ads</text>
+
+  <!-- Axis -->
+  <line x1="120" y1="380" x2="780" y2="380" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="120" y="405" class="axis" text-anchor="middle">0%</text>
+  <text x="350" y="405" class="axis" text-anchor="middle">25%</text>
+  <text x="450" y="405" class="threshold" text-anchor="middle">40%</text>
+  <text x="600" y="405" class="axis" text-anchor="middle">60%</text>
+  <text x="780" y="405" class="axis" text-anchor="middle">100%</text>
+
+  <!-- Threshold line -->
+  <line x1="450" y1="120" x2="450" y2="380" class="threshold-line"/>
+  <text x="450" y="105" class="threshold" text-anchor="middle">40% line</text>
+
+  <!-- Failing zone -->
+  <rect x="120" y="270" width="330" height="110" class="gauge-bg" transform="rotate(-0.3 285 325)"/>
+  <text x="285" y="298" class="axis" text-anchor="middle">UNDER 40%</text>
+  <text x="285" y="322" class="note" text-anchor="middle">Product problem.</text>
+  <text x="285" y="343" class="note" text-anchor="middle">More ads will not fix this.</text>
+  <text x="285" y="364" class="note" text-anchor="middle">Talk to your "very disappointed" users.</text>
+
+  <!-- Passing zone -->
+  <rect x="450" y="200" width="330" height="110" class="gauge-bg" transform="rotate(0.4 615 255)"/>
+  <text x="615" y="228" class="axis" text-anchor="middle">40% OR HIGHER</text>
+  <text x="615" y="252" class="note" text-anchor="middle">You have a must-have user.</text>
+  <text x="615" y="273" class="note" text-anchor="middle">Now find more of them.</text>
+  <text x="615" y="294" class="note" text-anchor="middle">Outreach beats paid ads at this stage.</text>
+
+  <!-- Decision arrow -->
+  <text x="100" y="160" class="axis">If you ran ads first:</text>
+  <path d="M 100 175 Q 200 230 285 270" class="arrow"/>
+  <text x="100" y="195" class="note">you would burn $3K-$5K</text>
+  <text x="100" y="215" class="note">finding out the same thing.</text>
+
+  <!-- Bottom callout -->
+  <rect x="120" y="455" width="660" height="65" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="450" y="481" class="axis" text-anchor="middle">5 questions. 24-48 hour run. Free Typeform or Tally.</text>
+  <text x="450" y="504" class="note" text-anchor="middle">Re-run every 6 weeks until the must-have % stops climbing or holds steady above 40%.</text>
+</svg>

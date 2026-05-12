@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-labelledby="phih-title">
+  <title id="phih-title">Product Hunt 3.1% vs Indie Hackers 23.1% - the OpenHunts 2024 conversion data</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .bar-stat      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 44px; fill: #fff; font-weight: 700; }
+      .bar-label     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #1a1a1a; font-weight: 700; }
+      .bar-note      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .axis          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #666; }
+      .insight       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 600; }
+      .bar-ph        { fill: #cc342d; stroke: #1a1a1a; stroke-width: 2; }
+      .bar-ih        { fill: #a855f7; stroke: #1a1a1a; stroke-width: 2; }
+      .source        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #666; }
+    </style>
+  </defs>
+
+  <text x="500" y="40" class="heading" text-anchor="middle">Launch-day platforms - what actually converts in 2024</text>
+  <text x="500" y="68" class="bar-note" text-anchor="middle">OpenHunts study of 387 product launches and 156 founders surveyed</text>
+
+  <!-- Axis -->
+  <line x1="180" y1="430" x2="900" y2="430" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="180" y="450" class="axis" text-anchor="start">0%</text>
+  <text x="362" y="450" class="axis" text-anchor="middle">10%</text>
+  <text x="544" y="450" class="axis" text-anchor="middle">20%</text>
+  <text x="726" y="450" class="axis" text-anchor="middle">30%</text>
+  <text x="900" y="450" class="axis" text-anchor="end">40%</text>
+
+  <!-- Product Hunt bar (3.1%) -->
+  <rect x="180" y="180" width="56" height="60" rx="6" class="bar-ph" transform="rotate(-0.3 208 210)"/>
+  <text x="260" y="220" class="bar-stat" fill="#cc342d">3.1%</text>
+  <text x="180" y="160" class="bar-label">Product Hunt</text>
+  <text x="180" y="265" class="bar-note">per launch event</text>
+  <text x="180" y="285" class="bar-note">89% of PH founders surveyed</text>
+  <text x="180" y="305" class="bar-note">said they would not launch again</text>
+
+  <!-- Indie Hackers bar (23.1%) -->
+  <rect x="180" y="320" width="420" height="60" rx="6" class="bar-ih" transform="rotate(0.4 390 350)"/>
+  <text x="625" y="360" class="bar-stat" fill="#a855f7">23.1%</text>
+  <text x="180" y="395" class="bar-label">Indie Hackers</text>
+  <text x="180" y="412" class="bar-note">per engaged post</text>
+
+  <!-- Insight box -->
+  <rect x="100" y="465" width="800" height="60" rx="10" fill="#fff8e0" stroke="#b8860b" stroke-width="2"/>
+  <text x="500" y="492" class="insight" text-anchor="middle">7.4x conversion advantage for IH per engaged post vs PH per launch.</text>
+  <text x="500" y="513" class="source" text-anchor="middle">Different metrics, same lesson: showing up where founders complain converts; one-day launches do not.</text>
+</svg>

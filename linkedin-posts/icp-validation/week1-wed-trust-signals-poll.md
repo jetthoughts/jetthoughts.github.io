@@ -25,7 +25,7 @@ notes: |
 
 For founders working with an external dev team or agency: which signal do you actually rely on to know they're shipping?
 
-Vote below, and if you've got 30 seconds - tell me what yours sends and whether it's been useful.
+Vote below, and if you've got 30 seconds - tell me what your team currently sends and whether it actually helps.
 
 ## Poll question
 
@@ -41,3 +41,7 @@ What makes you trust your dev team is actually shipping?
 ## Poll duration
 
 1 week (closes Wednesday next week - results in hand before Friday review)
+
+## Hashtags (append to post body, after the peer-comment prompt)
+
+#founders #startups #buildinpublic

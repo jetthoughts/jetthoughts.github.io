@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="sprint-title">
+  <title id="sprint-title">The 90-minute compressed Foundation Sprint - six micro-steps from sticky notes to a written hypothesis</title>
+  <defs>
+    <style>
+      .heading  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .step     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #1a1a1a; font-weight: 700; }
+      .time     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #cc342d; font-weight: 700; }
+      .desc     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #1a1a1a; }
+      .note     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #444; font-style: italic; }
+      .step-box { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; }
+      .final    { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; stroke-linejoin: round; }
+      .arrow    { stroke: #1a1a1a; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L0,10 L10,5 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="38" class="heading" text-anchor="middle">90-minute compressed Foundation Sprint</text>
+  <text x="500" y="62" class="note" text-anchor="middle">Solo founder, kitchen timer, notebook. No whiteboard wall needed.</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="90" width="290" height="120" class="step-box" rx="10" transform="rotate(-0.3 185 150)"/>
+  <text x="60" y="115" class="step">1. The Basics</text>
+  <text x="270" y="115" class="time">15 min</text>
+  <text x="60" y="140" class="desc">5 sticky notes each for</text>
+  <text x="60" y="160" class="desc">Customer / Problem /</text>
+  <text x="60" y="180" class="desc">Advantages / Competition.</text>
+  <text x="60" y="200" class="note">Output: one circled entry per column.</text>
+
+  <!-- Step 2 -->
+  <rect x="355" y="90" width="290" height="120" class="step-box" rx="10" transform="rotate(0.2 500 150)"/>
+  <text x="375" y="115" class="step">2. Classic Differentiator</text>
+  <text x="585" y="115" class="time">15 min</text>
+  <text x="375" y="140" class="desc">Score yourself more / less /</text>
+  <text x="375" y="160" class="desc">same vs competitors on</text>
+  <text x="375" y="180" class="desc">fast / easy / free.</text>
+  <text x="375" y="200" class="note">Output: pick ONE column to own.</text>
+
+  <!-- Step 3 -->
+  <rect x="670" y="90" width="290" height="120" class="step-box" rx="10" transform="rotate(-0.2 815 150)"/>
+  <text x="690" y="115" class="step">3. Three Approaches</text>
+  <text x="900" y="115" class="time">15 min</text>
+  <text x="690" y="140" class="desc">Write three different</text>
+  <text x="690" y="160" class="desc">one-sentence approaches</text>
+  <text x="690" y="180" class="desc">to solve the same problem.</text>
+  <text x="690" y="200" class="note">Output: three real, different shapes.</text>
+
+  <!-- Arrows row 1 -->
+  <path d="M 330 150 L 355 150" class="arrow"/>
+  <path d="M 645 150 L 670 150" class="arrow"/>
+
+  <!-- Down arrow -->
+  <path d="M 815 215 L 815 250" class="arrow"/>
+
+  <!-- Step 4 -->
+  <rect x="670" y="255" width="290" height="120" class="step-box" rx="10" transform="rotate(0.3 815 315)"/>
+  <text x="690" y="280" class="step">4. Magic Lenses</text>
+  <text x="900" y="280" class="time">20 min</text>
+  <text x="690" y="305" class="desc">Score each approach 1-5 on</text>
+  <text x="690" y="325" class="desc">Customer / Pragmatic /</text>
+  <text x="690" y="345" class="desc">Growth / Money.</text>
+  <text x="690" y="365" class="note">Output: winner + lowest lens = biggest risk.</text>
+
+  <!-- Left arrow -->
+  <path d="M 670 315 L 645 315" class="arrow"/>
+
+  <!-- Step 5 -->
+  <rect x="355" y="255" width="290" height="120" class="step-box" rx="10" transform="rotate(-0.2 500 315)"/>
+  <text x="375" y="280" class="step">5. Write Hypothesis</text>
+  <text x="585" y="280" class="time">15 min</text>
+  <text x="375" y="305" class="desc">Fill the Mad Libs sentence</text>
+  <text x="375" y="325" class="desc">with the winning approach.</text>
+  <text x="375" y="345" class="desc">Read aloud three times.</text>
+  <text x="375" y="365" class="note">Output: one testable sentence.</text>
+
+  <!-- Left arrow -->
+  <path d="M 355 315 L 330 315" class="arrow"/>
+
+  <!-- Step 6 -->
+  <rect x="40" y="255" width="290" height="120" class="step-box" rx="10" transform="rotate(0.2 185 315)"/>
+  <text x="60" y="280" class="step">6. Test Design</text>
+  <text x="270" y="280" class="time">10 min</text>
+  <text x="60" y="305" class="desc">Smallest signal that would</text>
+  <text x="60" y="325" class="desc">prove or kill the sentence</text>
+  <text x="60" y="345" class="desc">in 2 weeks.</text>
+  <text x="60" y="365" class="note">Output: LP smoke test + 10 interviews.</text>
+
+  <!-- Down to final -->
+  <path d="M 185 380 L 185 415" class="arrow"/>
+
+  <!-- Final -->
+  <rect x="40" y="420" width="920" height="80" class="final" rx="12"/>
+  <text x="500" y="450" class="step" text-anchor="middle">Deliverable: one written Founding Hypothesis sentence + a two-part test plan</text>
+  <text x="500" y="478" class="desc" text-anchor="middle">Module 2 tests the demand side (landing page).</text>
+  <text x="500" y="496" class="desc" text-anchor="middle">Module 3 tests the problem side (10 Mom Test interviews).</text>
+</svg>

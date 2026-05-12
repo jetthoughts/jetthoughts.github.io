@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="dpa-title">
+  <title id="dpa-title">The one-page Design Partner Agreement, section by section</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .sect-label    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
+      .sect-text     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #444; }
+      .num-circle    { fill: #cc342d; }
+      .num-text      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 19px; fill: #fff; font-weight: 700; }
+      .sect-box      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; }
+      .signature-box { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .deposit-box   { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .annot         { font-family: "Caveat", "Patrick Hand", cursive; font-size: 13px; fill: #777; font-style: italic; }
+    </style>
+  </defs>
+
+  <text x="450" y="40" class="heading" text-anchor="middle">Design Partner Agreement - 1 page, 6 sections</text>
+  <text x="450" y="65" class="annot" text-anchor="middle">Plain English. Mutual-edit document. No lawyer required for v1.</text>
+
+  <!-- Section 1: Scope -->
+  <circle cx="80" cy="115" r="20" class="num-circle"/>
+  <text x="80" y="121" class="num-text" text-anchor="middle">1</text>
+  <rect x="120" y="90" width="730" height="55" rx="8" class="sect-box"/>
+  <text x="135" y="113" class="sect-label">Scope of pilot</text>
+  <text x="135" y="135" class="sect-text">3 outcomes the customer wants. 2 specific use cases. Anything outside is out of scope.</text>
+
+  <!-- Section 2: Duration -->
+  <circle cx="80" cy="180" r="20" class="num-circle"/>
+  <text x="80" y="186" class="num-text" text-anchor="middle">2</text>
+  <rect x="120" y="155" width="730" height="55" rx="8" class="sect-box"/>
+  <text x="135" y="178" class="sect-label">Duration + dates</text>
+  <text x="135" y="200" class="sect-text">6-8 weeks. Start date. End date. Weekly Friday demo at a named time.</text>
+
+  <!-- Section 3: Pilot fee + deposit -->
+  <circle cx="80" cy="245" r="20" class="num-circle"/>
+  <text x="80" y="251" class="num-text" text-anchor="middle">3</text>
+  <rect x="120" y="220" width="730" height="55" rx="8" class="deposit-box"/>
+  <text x="135" y="243" class="sect-label">Pilot fee + deposit (the load-bearing clause)</text>
+  <text x="135" y="265" class="sect-text">10-30% of year-one ACV. Paid via Stripe before kickoff. Credited toward year-one on conversion.</text>
+
+  <!-- Section 4: Success criteria -->
+  <circle cx="80" cy="310" r="20" class="num-circle"/>
+  <text x="80" y="316" class="num-text" text-anchor="middle">4</text>
+  <rect x="120" y="285" width="730" height="55" rx="8" class="sect-box"/>
+  <text x="135" y="308" class="sect-label">Success criteria</text>
+  <text x="135" y="330" class="sect-text">Three measurable outcomes - hours saved, errors avoided, revenue produced. Friday-demo verified.</text>
+
+  <!-- Section 5: Conversion terms -->
+  <circle cx="80" cy="375" r="20" class="num-circle"/>
+  <text x="80" y="381" class="num-text" text-anchor="middle">5</text>
+  <rect x="120" y="350" width="730" height="55" rx="8" class="sect-box"/>
+  <text x="135" y="373" class="sect-label">Conversion terms</text>
+  <text x="135" y="395" class="sect-text">Year-one price. Annual or monthly. Auto-conversion or opt-in conversion. Notice period.</text>
+
+  <!-- Section 6: IP + data ownership -->
+  <circle cx="80" cy="440" r="20" class="num-circle"/>
+  <text x="80" y="446" class="num-text" text-anchor="middle">6</text>
+  <rect x="120" y="415" width="730" height="55" rx="8" class="sect-box"/>
+  <text x="135" y="438" class="sect-label">Data, IP, and termination</text>
+  <text x="135" y="460" class="sect-text">Customer keeps their data. You keep the product IP. Either party can exit at 30 days written notice.</text>
+
+  <!-- Signature -->
+  <rect x="120" y="495" width="730" height="85" rx="10" class="signature-box"/>
+  <text x="485" y="525" class="sect-label" text-anchor="middle">Signature block - founder + customer signatory</text>
+  <text x="485" y="550" class="sect-text" text-anchor="middle">DocuSign, HelloSign, or PDF + email confirmation. Whichever your customer prefers.</text>
+  <text x="485" y="572" class="annot" text-anchor="middle">Total document length: 1 page, ~400 words. v1 needs no lawyer review.</text>
+</svg>

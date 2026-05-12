@@ -1,0 +1,62 @@
+{{/*
+  Course prev/next chapter widget.
+
+  Renders ONLY on chapter pages of the "Tech for Non-Technical Founders
+  2026" course. Looks up the current page's slug in
+  data/course_sequence.yaml and emits a small flex strip with
+  "← Prev" / "Course home" / "Next →" links.
+
+  Insertion point: bottom of the chapter body, ABOVE the
+  "## Continue the course" footer table. The intra-page "Next →"
+  blockquote that some chapters already have is complementary - this
+  partial is the cross-page navigation strip.
+*/}}
+{{ if eq (default true .Page.Params.course_nav) false }}{{ return }}{{ end }}
+{{- $slug := .Params.slug | default .File.BaseFileName -}}
+{{- $sequence := site.Data.course_sequence.sequence -}}
+{{- $idx := -1 -}}
+{{- range $i, $entry := $sequence -}}
+  {{- if eq $entry.slug $slug -}}
+    {{- $idx = $i -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if ge $idx 0 -}}
+  {{- $prev := "" -}}
+  {{- $next := "" -}}
+  {{- if gt $idx 0 -}}
+    {{- $prev = index $sequence (sub $idx 1) -}}
+  {{- end -}}
+  {{- if lt $idx (sub (len $sequence) 1) -}}
+    {{- $next = index $sequence (add $idx 1) -}}
+  {{- end -}}
+
+<nav class="course-prev-next" aria-label="Course navigation">
+  <div class="course-prev-next__inner">
+    {{- if $prev }}
+    <a class="course-prev-next__link course-prev-next__link--prev" href="/blog/{{ $prev.slug }}/">
+      <span class="course-prev-next__direction">← Previous</span>
+      <span class="course-prev-next__module">{{ $prev.module }}</span>
+      <span class="course-prev-next__title">{{ $prev.title }}</span>
+    </a>
+    {{- else }}
+    <span class="course-prev-next__link course-prev-next__link--placeholder" aria-hidden="true"></span>
+    {{- end }}
+
+    <a class="course-prev-next__link course-prev-next__link--home" href="/blog/tech-for-non-technical-founders-2026/">
+      <span class="course-prev-next__direction">Course home</span>
+      <span class="course-prev-next__title">All 10 modules</span>
+    </a>
+
+    {{- if $next }}
+    <a class="course-prev-next__link course-prev-next__link--next" href="/blog/{{ $next.slug }}/">
+      <span class="course-prev-next__direction">Next →</span>
+      <span class="course-prev-next__module">{{ $next.module }}</span>
+      <span class="course-prev-next__title">{{ $next.title }}</span>
+    </a>
+    {{- else }}
+    <span class="course-prev-next__link course-prev-next__link--placeholder" aria-hidden="true"></span>
+    {{- end }}
+  </div>
+</nav>
+{{- end -}}
