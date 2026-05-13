@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+  </defs>
+  <rect width="960" height="520" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="480" y="42" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 30-Day Dev Shop Transition</text>
+  <text x="480" y="72" font-size="20" text-anchor="middle" fill="#555">From verdict-to-replace on Day 1, to first pull request shipped on Day 31.</text>
+
+  <!-- Timeline base line -->
+  <line x1="60" y1="270" x2="900" y2="270" stroke="#333" stroke-width="2.5"/>
+
+  <!-- Phase 1: Days 1-7 -->
+  <rect x="60" y="120" width="220" height="240" rx="8" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="170" y="150" font-size="22" text-anchor="middle" fill="#cc342d" font-weight="bold">Phase 1</text>
+  <text x="170" y="176" font-size="20" text-anchor="middle" fill="#1a1a1a">Days 1-7</text>
+  <text x="170" y="206" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Secure IP</text>
+  <text x="76" y="240" font-size="17" fill="#1a1a1a">- Investor-legend email</text>
+  <text x="76" y="262" font-size="17" fill="#1a1a1a">- GitHub org transfer</text>
+  <text x="76" y="284" font-size="17" fill="#1a1a1a">- AWS root reset</text>
+  <text x="76" y="306" font-size="17" fill="#1a1a1a">- Stripe / SendGrid</text>
+  <text x="76" y="328" font-size="17" fill="#1a1a1a">- Domain auth code</text>
+  <text x="76" y="350" font-size="17" fill="#1a1a1a">- Ownership checklist</text>
+
+  <!-- Phase 2: Days 8-14 -->
+  <rect x="300" y="120" width="220" height="240" rx="8" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="410" y="150" font-size="22" text-anchor="middle" fill="#bf8a00" font-weight="bold">Phase 2</text>
+  <text x="410" y="176" font-size="20" text-anchor="middle" fill="#1a1a1a">Days 8-14</text>
+  <text x="410" y="206" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Audit + document</text>
+  <text x="316" y="240" font-size="17" fill="#1a1a1a">- Termination letter sent</text>
+  <text x="316" y="262" font-size="17" fill="#1a1a1a">- Independent reviewer</text>
+  <text x="316" y="284" font-size="17" fill="#1a1a1a">- 1-page handoff doc</text>
+  <text x="316" y="306" font-size="17" fill="#1a1a1a">- Architecture diagram</text>
+  <text x="316" y="328" font-size="17" fill="#1a1a1a">- Top 3 risks</text>
+  <text x="316" y="350" font-size="17" fill="#1a1a1a">- 30-day priority list</text>
+
+  <!-- Phase 3: Days 15-30 -->
+  <rect x="540" y="120" width="360" height="240" rx="8" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="720" y="150" font-size="22" text-anchor="middle" fill="#2e7d32" font-weight="bold">Phase 3</text>
+  <text x="720" y="176" font-size="20" text-anchor="middle" fill="#1a1a1a">Days 15-30</text>
+  <text x="720" y="206" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Onboard new team</text>
+  <text x="556" y="240" font-size="17" fill="#1a1a1a">- Day 15: handoff doc + repo access</text>
+  <text x="556" y="262" font-size="17" fill="#1a1a1a">- Day 19: green CI on feature branch</text>
+  <text x="556" y="284" font-size="17" fill="#1a1a1a">- Day 22: first bug fix ticket picked</text>
+  <text x="556" y="306" font-size="17" fill="#1a1a1a">- Day 26: bug fix in production</text>
+  <text x="556" y="328" font-size="17" fill="#1a1a1a">- Day 29: second ticket on staging</text>
+  <text x="556" y="350" font-size="17" fill="#1a1a1a">- Day 31: first feature ships end-to-end</text>
+
+  <!-- Day markers on timeline -->
+  <circle cx="60" cy="270" r="9" fill="#cc342d"/>
+  <text x="60" y="298" font-size="16" text-anchor="middle" fill="#1a1a1a">Day 1</text>
+  <circle cx="280" cy="270" r="7" fill="#cc342d"/>
+  <text x="280" y="298" font-size="16" text-anchor="middle" fill="#1a1a1a">Day 7</text>
+  <circle cx="520" cy="270" r="7" fill="#bf8a00"/>
+  <text x="520" y="298" font-size="16" text-anchor="middle" fill="#1a1a1a">Day 14</text>
+  <circle cx="900" cy="270" r="11" fill="#2e7d32"/>
+  <text x="900" y="298" font-size="16" text-anchor="middle" fill="#1a1a1a">Day 31</text>
+
+  <!-- Day 31 callout -->
+  <text x="900" y="408" font-size="22" text-anchor="middle" fill="#2e7d32" font-weight="bold">✓ First PR shipped</text>
+
+  <!-- Bottom rail: what happens to the previous team -->
+  <text x="60" y="430" font-size="18" fill="#1a1a1a" font-weight="bold">Previous team learns you are leaving on Day 8.</text>
+  <text x="60" y="454" font-size="17" fill="#555">By then every credential, repo, and key sits in an account you control.</text>
+
+  <!-- Footer -->
+  <text x="480" y="498" font-size="16" text-anchor="middle" fill="#666" font-style="italic">Module 6.2 - Tech for Non-Technical Founders 2026 - jetthoughts.com</text>
+</svg>

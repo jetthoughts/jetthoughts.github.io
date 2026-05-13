@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough2" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="9"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+  </defs>
+  <rect width="920" height="620" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="460" y="42" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Good vs Bad Transition Outcomes</text>
+  <text x="460" y="72" font-size="20" text-anchor="middle" fill="#555">Same verdict from Module 6.1. Two playbooks. Three months apart.</text>
+
+  <!-- LEFT CARD: BAD -->
+  <rect x="50" y="100" width="400" height="480" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="70" y="140" font-size="26" fill="#cc342d" font-weight="bold">BAD: announce-then-extract</text>
+
+  <text x="70" y="180" font-size="20" fill="#1a1a1a" font-weight="bold">Day 1:</text>
+  <text x="70" y="206" font-size="18" fill="#1a1a1a">Termination email lands.</text>
+  <text x="70" y="228" font-size="18" fill="#1a1a1a">Lead engineer rotates AWS root.</text>
+  <text x="70" y="250" font-size="18" fill="#1a1a1a">GitHub org locked.</text>
+
+  <text x="70" y="290" font-size="20" fill="#1a1a1a" font-weight="bold">Days 2-30:</text>
+  <text x="70" y="316" font-size="18" fill="#1a1a1a">Lawyer fees on the asset transfer.</text>
+  <text x="70" y="338" font-size="18" fill="#1a1a1a">No one to fix the 11pm Stripe bug.</text>
+  <text x="70" y="360" font-size="18" fill="#1a1a1a">New team cannot start (no repo).</text>
+
+  <text x="70" y="400" font-size="20" fill="#1a1a1a" font-weight="bold">Day 60-90:</text>
+  <text x="70" y="426" font-size="18" fill="#1a1a1a">Domain transfer finally clears.</text>
+  <text x="70" y="448" font-size="18" fill="#1a1a1a">New team's first PR ships.</text>
+  <text x="70" y="470" font-size="18" fill="#1a1a1a">Investor update is awkward.</text>
+
+  <text x="70" y="514" font-size="20" fill="#a3621e" font-weight="bold">Cost of the gap:</text>
+  <text x="70" y="540" font-size="20" fill="#a3621e">- 60-90 days lost</text>
+  <text x="70" y="562" font-size="20" fill="#a3621e">- Lawyer + audit + onboarding burn</text>
+
+  <!-- RIGHT CARD: GOOD -->
+  <rect x="470" y="100" width="400" height="480" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="490" y="140" font-size="26" fill="#2e7d32" font-weight="bold">GOOD: extract-then-announce</text>
+
+  <text x="490" y="180" font-size="20" fill="#1a1a1a" font-weight="bold">Days 1-7 (silent):</text>
+  <text x="490" y="206" font-size="18" fill="#1a1a1a">Investor-legend email goes out.</text>
+  <text x="490" y="228" font-size="18" fill="#1a1a1a">All 5 asset moves complete.</text>
+  <text x="490" y="250" font-size="18" fill="#1a1a1a">Ownership checklist: 12 of 12 PASS.</text>
+
+  <text x="490" y="290" font-size="20" fill="#1a1a1a" font-weight="bold">Days 8-14:</text>
+  <text x="490" y="316" font-size="18" fill="#1a1a1a">Termination letter sent.</text>
+  <text x="490" y="338" font-size="18" fill="#1a1a1a">Independent reviewer audits in 3 days.</text>
+  <text x="490" y="360" font-size="18" fill="#1a1a1a">1-page handoff doc finished.</text>
+
+  <text x="490" y="400" font-size="20" fill="#1a1a1a" font-weight="bold">Days 15-31:</text>
+  <text x="490" y="426" font-size="18" fill="#1a1a1a">New team onboards.</text>
+  <text x="490" y="448" font-size="18" fill="#1a1a1a">Bug fix ships Day 26.</text>
+  <text x="490" y="470" font-size="18" fill="#1a1a1a">Day 31: first feature merged.</text>
+
+  <text x="490" y="514" font-size="20" fill="#1a4d1f" font-weight="bold">Cost of the gap:</text>
+  <text x="490" y="540" font-size="20" fill="#1a4d1f">- 30 days, on the calendar plan</text>
+  <text x="490" y="562" font-size="20" fill="#1a4d1f">- $2K audit, no legal fees, no downtime</text>
+
+  <!-- Footer -->
+  <text x="460" y="608" font-size="16" text-anchor="middle" fill="#666" font-style="italic">The single variable: when does the agency learn you are leaving?</text>
+</svg>

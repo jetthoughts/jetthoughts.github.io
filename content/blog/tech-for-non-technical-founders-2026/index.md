@@ -27,7 +27,7 @@ canonical_url: "https://jetthoughts.com/blog/tech-for-non-technical-founders-202
 related_posts: false
 ---
 
-> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-09-16.
+> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-11-25.
 
 # Tech for Non-Technical Founders 2026
 
@@ -71,12 +71,12 @@ This is a free course. We don't sell anything inside it.
 | 2 | **Design the Solution** | One-page Product Brief (Vibe PRD) | 1 hr | 🟢 Complete |
 | 3 | **Choose Your Build Path** | Build decision: self-serve or hire | 45 min | 🟢 Complete |
 | 4A | **Ship Self-Serve** (branch) | Live MVP at a staging URL | 1 hr | 🟢 Complete |
-| 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 1.5 hr | 🟡 Partial (3 of 4 chapters; final wrap gated on 2510) |
-| 5 | **Manage Your Build** | Weekly oversight rhythm (Friday demo + standup + weekly report) | 2 hr | 🟡 Partial (2 of 6 chapters) |
-| 6 | **When Things Break** | Salvage / rebuild decision | 45 min | 🔲 Coming |
-| 7 | **Manage AI-Era Risks** | AI interrogation system | 1 hr | 🔲 Coming |
+| 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 1.5 hr | 🟢 Complete |
+| 5 | **Manage Your Build** | Weekly oversight rhythm (Friday demo + standup + weekly report) | 2 hr | 🟢 Complete |
+| 6 | **When Things Break** | Salvage / rebuild decision | 45 min | 🟢 Complete |
+| 7 | **Manage AI-Era Risks** | AI interrogation system | 1 hr | 🟢 Complete |
 
-**Status (2026-09-16)**: Modules 0, 1, 2, 3, and 4A complete. Module 4B is 3 of 4 chapters live — both branches of the build path (self-serve AND hire) are now usable end-to-end. Module 5 partial (2 of 6 chapters live). Module 4B.3 + Module 5 remaining + Module 6 + Module 7 ship as the parallel 2510 LinkedIn validation sprint completes (next 3-4 weeks).
+**Status (2026-11-25)**: 🎉 **All 8 modules complete.** The full course is shippable end-to-end. A non-technical founder can go from idea → validated problem → Vibe PRD → build decision → live MVP (self-serve OR hired) → weekly oversight rhythm → contingency plan if things break → AI-era risk system. 26 chapters · 11 artifacts · all free.
 
 ## What's live right now
 
@@ -101,10 +101,28 @@ This is a free course. We don't sell anything inside it.
 - [The Self-Serve MVP Stack: Lovable + Supabase + Stripe](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
 - [Vibe Coding Done Right: 5 Ceiling Signals](/blog/vibe-coding-ceiling-signals/) — **just shipped, closes Module 4A**
 
-### 📍 Module 4B — Hire & Ship (3 of 4 chapters live)
-- [Who You're Hiring in 2026 and Where to Find Them](/blog/who-where-hire-developer-2026-ai-augmented-offshore/) — **just shipped**
-- [The Hiring Interview That Catches AI Theater](/blog/hiring-interview-catches-ai-theater/) — **just shipped**
+### 📍 Module 4B — Hire & Ship (complete)
+- [Who You're Hiring in 2026 and Where to Find Them](/blog/who-where-hire-developer-2026-ai-augmented-offshore/)
+- [The Hiring Interview That Catches AI Theater](/blog/hiring-interview-catches-ai-theater/)
+- [When Cheap Developers Get Expensive](/blog/cheap-developers-expensive-without-cto-review/)
 - [Reading the SOW Clause by Clause](/blog/reading-sow-clause-by-clause/)
+
+### 📍 Module 5 — Manage Your Build (complete)
+- [The Org Chart Your Dev Shop Won't Draw For You](/blog/engineering-org-chart-non-technical-founder/)
+- [The Friday Demo Rule: 15 Minutes That Catches Fake Progress](/blog/friday-demo-rule-founder-progress/)
+- [Three Questions That Turn a Standup Into Proof](/blog/three-questions-turn-standup-into-proof/)
+- [The Plain-English Weekly Dev Report](/blog/weekly-dev-report-template-founders/)
+- [Who Owns Your GitHub, AWS, and Database?](/blog/github-aws-database-ownership-checklist/)
+- [You Asked for a Simple Admin Panel; You Got a Spaceship](/blog/asked-simple-admin-panel-built-spaceship/)
+
+### 📍 Module 6 — When Things Break (complete)
+- [Salvage or Rebuild? A 6-Question Decision Tree](/blog/salvage-vs-rebuild-software-project/)
+- [How to Switch Dev Shops Without Losing the Codebase](/blog/switch-dev-shops-safely-transition-guide/)
+
+### 📍 Module 7 — Manage AI-Era Risks (complete)
+- ["We Use AI" — 5 Follow-Up Questions for Your Agency](/blog/agency-uses-ai-follow-up-questions/)
+- [The AI Token Bill Your Agency Forgot to Mention](/blog/ai-token-bill-dev-shop-pass-through-cost/)
+- [Slopsquatting: The 2025 Supply Chain Attack Vibe Coding Created](/blog/slopsquatting-ai-supply-chain-attack/) — **closes the course**
 
 ### 📍 Module 5 — Manage Your Build
 - [The Org Chart Your Dev Shop Won't Draw For You](/blog/engineering-org-chart-non-technical-founder/)
@@ -112,7 +130,7 @@ This is a free course. We don't sell anything inside it.
 
 ## What's coming next
 
-**All 12 net-new chapters of the curriculum are now drafted.** The remaining 10 chapters wrap LinkedIn validation posts shipping over the next 3-4 weeks via a parallel sprint. Each new chapter publishes weekly; bookmark this page to see them as they land.
+**The course is complete.** All 26 chapters across 8 modules + 11 downloadable artifacts. Bookmark this page; if you finish the full sequence, [drop us a note](mailto:hello@jetthoughts.com) — we'd love to hear what you shipped.
 
 Then Sprint 2 fills in the rest of Module 1, Module 2's remaining posts, and Module 3 (choose your build path).
 
@@ -161,4 +179,4 @@ The course doesn't sell JT services. We sign the work (so you know who wrote it)
 
 ---
 
-Last updated: 2026-09-16.
+Last updated: 2026-11-25.

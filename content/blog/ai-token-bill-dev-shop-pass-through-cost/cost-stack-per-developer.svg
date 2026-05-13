@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Per-developer AI cost stack: Cursor seat, Anthropic API, OpenAI API, plus disciplined and undisciplined totals">
+  <title>Per-developer monthly AI cost stack - 2026 ranges</title>
+  <desc>Cursor seat $20 to $60. Anthropic API $30 to $200. OpenAI API $50 to $300. Disciplined team total around $80 to $120. Undisciplined team total $300 to $500.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .label { font-size: 20px; fill: #1a1a1a; }
+      .sub { font-size: 16px; fill: #555; }
+      .num { font-size: 22px; fill: #cc342d; font-weight: bold; }
+      .stack { fill: #fff; stroke: #cc342d; stroke-width: 2.5; }
+      .stack-p { fill: #faf5ff; stroke: #a855f7; stroke-width: 2.5; }
+      .totalgood { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 3; }
+      .totalbad { fill: #fdecea; stroke: #c62828; stroke-width: 3; }
+      .legend { font-size: 14px; fill: #333; }
+    </style>
+  </defs>
+
+  <rect width="960" height="720" fill="#fafafa"/>
+
+  <text x="480" y="40" text-anchor="middle" class="h" font-size="26" fill="#1a1a1a">What one developer costs you in AI tokens. Per month.</text>
+  <text x="480" y="66" text-anchor="middle" class="h legend">2026 pass-through ranges. Above and beyond the hourly rate.</text>
+
+  <!-- Layer 1: Cursor seat -->
+  <rect x="120" y="110" width="720" height="80" rx="6" class="stack"/>
+  <text x="150" y="158" class="h num">$20-60</text>
+  <text x="305" y="148" class="h label">Cursor / Copilot Enterprise seat</text>
+  <text x="305" y="172" class="h sub">Per developer, fixed monthly. Easy to predict.</text>
+
+  <!-- Layer 2: Anthropic API -->
+  <rect x="120" y="200" width="720" height="80" rx="6" class="stack"/>
+  <text x="150" y="248" class="h num">$30-200</text>
+  <text x="305" y="238" class="h label">Anthropic API (Claude Code)</text>
+  <text x="305" y="262" class="h sub">Varies by usage discipline. Same dev = 7x range.</text>
+
+  <!-- Layer 3: OpenAI API -->
+  <rect x="120" y="290" width="720" height="80" rx="6" class="stack-p"/>
+  <text x="150" y="338" class="h num">$50-300</text>
+  <text x="305" y="328" class="h label">OpenAI API (gpt-4o, o3)</text>
+  <text x="305" y="352" class="h sub">Less common in 2026 if Claude Code dominates the team.</text>
+
+  <!-- Divider -->
+  <line x1="120" y1="400" x2="840" y2="400" stroke="#999" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="480" y="420" text-anchor="middle" class="h legend">= what hits your invoice each month per developer</text>
+
+  <!-- Disciplined total -->
+  <rect x="80" y="450" width="380" height="170" rx="10" class="totalgood"/>
+  <text x="270" y="490" text-anchor="middle" class="h" font-size="22" fill="#1a1a1a">Disciplined team</text>
+  <text x="270" y="540" text-anchor="middle" class="h num" font-size="36">$80 - $120</text>
+  <text x="270" y="565" text-anchor="middle" class="h sub">per dev / month</text>
+  <text x="270" y="595" text-anchor="middle" class="h legend">Cursor + Claude Code + budget alerts at $150</text>
+
+  <!-- Undisciplined total -->
+  <rect x="500" y="450" width="380" height="170" rx="10" class="totalbad"/>
+  <text x="690" y="490" text-anchor="middle" class="h" font-size="22" fill="#1a1a1a">Undisciplined team</text>
+  <text x="690" y="540" text-anchor="middle" class="h num" font-size="36" fill="#c62828">$300 - $500</text>
+  <text x="690" y="565" text-anchor="middle" class="h sub">per dev / month</text>
+  <text x="690" y="595" text-anchor="middle" class="h legend">5 AI tools, no budget alerts, agent loops left running</text>
+
+  <!-- Footer -->
+  <text x="480" y="670" text-anchor="middle" class="h legend">Multiply by your team size. A 4-dev team at the right is $1,200-$2,000 / month before margin.</text>
+  <text x="480" y="694" text-anchor="middle" class="h legend">Red = base layer. Purple = optional second model. Green = predictable. Pink = surprise invoice.</text>
+</svg>

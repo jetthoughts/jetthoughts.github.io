@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="'Patrick Hand', 'Caveat', 'Comic Sans MS', cursive" font-size="17">
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.3"/>
+    </filter>
+  </defs>
+  <rect width="900" height="540" fill="#fdfdf8"/>
+  <text x="450" y="40" font-size="26" font-weight="bold" fill="#1a1a1a" text-anchor="middle">"We Use AI" - 5-Question Agency Scorecard</text>
+  <text x="450" y="64" font-size="15" fill="#555" text-anchor="middle">Score 0 or 1 in real time during the discovery call. Below 3 means walk.</text>
+
+  <g font-size="13" font-weight="bold">
+    <text x="660" y="100" fill="#2e7d32" text-anchor="middle">PASS (1)</text>
+    <text x="780" y="100" fill="#cc342d" text-anchor="middle">FAIL (0)</text>
+  </g>
+
+  <g filter="url(#rough)">
+    <rect x="40" y="115" width="820" height="58" fill="#fffaf3" stroke="#999" stroke-width="1.5"/>
+  </g>
+  <text x="56" y="138" font-weight="bold">Q1. Workflow: walk one Jira ticket to merged PR with AI</text>
+  <text x="56" y="160" font-size="14" fill="#666">named tools, written gates, real PR number from last week</text>
+  <circle cx="660" cy="146" r="11" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="780" cy="146" r="11" fill="none" stroke="#cc342d" stroke-width="2"/>
+
+  <g filter="url(#rough)">
+    <rect x="40" y="173" width="820" height="58" fill="#fffaf3" stroke="#999" stroke-width="1.5"/>
+  </g>
+  <text x="56" y="196" font-weight="bold">Q2. Cost: per-developer monthly AI token spend, who pays</text>
+  <text x="56" y="218" font-size="14" fill="#666">dollar range, pass-through written into SOW, sample invoice line</text>
+  <circle cx="660" cy="204" r="11" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="780" cy="204" r="11" fill="none" stroke="#cc342d" stroke-width="2"/>
+
+  <g filter="url(#rough)">
+    <rect x="40" y="231" width="820" height="58" fill="#fffaf3" stroke="#999" stroke-width="1.5"/>
+  </g>
+  <text x="56" y="254" font-weight="bold">Q3. Verification: what senior checks on a 200-line AI PR</text>
+  <text x="56" y="276" font-size="14" fill="#666">opens real PR on screenshare, names checks line by line</text>
+  <circle cx="660" cy="262" r="11" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="780" cy="262" r="11" fill="none" stroke="#cc342d" stroke-width="2"/>
+
+  <g filter="url(#rough)">
+    <rect x="40" y="289" width="820" height="58" fill="#fffaf3" stroke="#999" stroke-width="1.5"/>
+  </g>
+  <text x="56" y="312" font-weight="bold">Q4. Slopsquatting: how do you stop a hallucinated package install</text>
+  <text x="56" y="334" font-size="14" fill="#666">named defense (allowlist, Socket/Snyk, gated CI), uses the term unprompted</text>
+  <circle cx="660" cy="320" r="11" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="780" cy="320" r="11" fill="none" stroke="#cc342d" stroke-width="2"/>
+
+  <g filter="url(#rough)">
+    <rect x="40" y="347" width="820" height="58" fill="#fffaf3" stroke="#999" stroke-width="1.5"/>
+  </g>
+  <text x="56" y="370" font-weight="bold">Q5. Accountability: who is on the hook for an AI-caused incident</text>
+  <text x="56" y="392" font-size="14" fill="#666">specific incident with date, root cause, named reviewer, workflow change</text>
+  <circle cx="660" cy="378" r="11" fill="none" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="780" cy="378" r="11" fill="none" stroke="#cc342d" stroke-width="2"/>
+
+  <g filter="url(#rough)">
+    <rect x="40" y="420" width="820" height="80" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2"/>
+  </g>
+  <text x="450" y="448" font-weight="bold" font-size="19" fill="#2e7d32" text-anchor="middle">Total: ___ / 5</text>
+  <text x="450" y="472" font-size="15" fill="#1a1a1a" text-anchor="middle">5 = sign with confidence  ·  3-4 = ask for senior follow-up call</text>
+  <text x="450" y="491" font-size="15" fill="#cc342d" text-anchor="middle">Below 3 = walk. No matter how good the rest of the pitch sounded.</text>
+</svg>

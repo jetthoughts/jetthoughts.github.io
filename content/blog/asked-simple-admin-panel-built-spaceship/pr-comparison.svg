@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Caveat','Patrick Hand',cursive" role="img" aria-labelledby="title desc">
+  <title id="title">Two GitHub PR diffs side by side</title>
+  <desc id="desc">Left: a clean week-1 PR with 4 files changed. Right: a sprawling week-2 PR with 47 files changed. A red AUDIT STOP icon between them with an arrow pointing back to the clean side.</desc>
+  <style>
+    .h{font-size:24px;fill:#1a1a1a;font-weight:700}
+    .lbl{font-size:18px;fill:#1a1a1a}
+    .num{font-size:42px;fill:#1a1a1a;font-weight:700}
+    .add{fill:#2e7d32;font-size:16px}
+    .del{fill:#cc342d;font-size:16px}
+    .file{fill:#1a1a1a;font-size:13px}
+    .stop{font-size:14px;fill:#fff;font-weight:700;text-anchor:middle}
+    .panel{fill:#fafafa;stroke:#666;stroke-width:2.5}
+    .panel-bad{fill:#fff5f5;stroke:#cc342d;stroke-width:2.5}
+    .panel-good{fill:#f0f9f0;stroke:#2e7d32;stroke-width:2.5}
+  </style>
+
+  <!-- Left: clean PR -->
+  <rect x="20" y="40" width="380" height="410" rx="8" class="panel-good"/>
+  <text x="40" y="75" class="h">Week 1: clean</text>
+  <text x="40" y="100" class="lbl">PR #12 - Add hide button to posts</text>
+  <text x="40" y="155" class="num">4</text>
+  <text x="100" y="148" class="lbl">files changed</text>
+  <text x="100" y="170" class="add">+120</text>
+  <text x="160" y="170" class="del">-8</text>
+
+  <line x1="40" y1="195" x2="380" y2="195" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="40" y="220" class="file">app/models/post.rb</text>
+  <text x="340" y="220" class="add" text-anchor="end">+1</text>
+  <text x="40" y="245" class="file">app/controllers/posts_controller.rb</text>
+  <text x="340" y="245" class="add" text-anchor="end">+6</text>
+  <text x="40" y="270" class="file">app/views/posts/show.html.erb</text>
+  <text x="340" y="270" class="add" text-anchor="end">+3</text>
+  <text x="40" y="295" class="file">db/migrate/..add_hidden_to_posts.rb</text>
+  <text x="340" y="295" class="add" text-anchor="end">+5</text>
+
+  <text x="40" y="355" class="lbl" font-style="italic">Reads in 30 seconds.</text>
+  <text x="40" y="380" class="lbl" font-style="italic">Reverts in 1 click.</text>
+  <text x="40" y="425" class="lbl" fill="#2e7d32" font-weight="700">On the brief.</text>
+
+  <!-- Center: AUDIT STOP -->
+  <g transform="translate(450,220)">
+    <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="#cc342d" stroke="#1a1a1a" stroke-width="2.5"/>
+    <text x="0" y="-8" class="stop">AUDIT</text>
+    <text x="0" y="14" class="stop">STOP</text>
+  </g>
+  <path d="M 510 220 Q 600 110 600 75" fill="none" stroke="#cc342d" stroke-width="3" stroke-dasharray="6 4"/>
+  <path d="M 595 80 L 600 70 L 610 78" fill="none" stroke="#cc342d" stroke-width="3"/>
+  <path d="M 390 220 Q 300 110 300 75" fill="none" stroke="#2e7d32" stroke-width="3"/>
+  <path d="M 295 80 L 300 70 L 310 78" fill="none" stroke="#2e7d32" stroke-width="3"/>
+  <text x="450" y="320" class="lbl" text-anchor="middle">Friday audit</text>
+  <text x="450" y="343" class="lbl" text-anchor="middle">fires here</text>
+
+  <!-- Right: spaceship PR -->
+  <rect x="500" y="40" width="380" height="410" rx="8" class="panel-bad"/>
+  <text x="520" y="75" class="h">Week 2: spaceship</text>
+  <text x="520" y="100" class="lbl">PR #29 - Add hide button to posts</text>
+  <text x="520" y="155" class="num">47</text>
+  <text x="600" y="148" class="lbl">files changed</text>
+  <text x="600" y="170" class="add">+3,200</text>
+  <text x="690" y="170" class="del">-180</text>
+
+  <line x1="520" y1="195" x2="860" y2="195" stroke="#cc342d" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="520" y="220" class="file">Gemfile  (+sidekiq, devise, pundit)</text>
+  <text x="855" y="220" class="add" text-anchor="end">+12</text>
+  <text x="520" y="243" class="file">docker-compose.yml  (+redis, +es)</text>
+  <text x="855" y="243" class="add" text-anchor="end">+38</text>
+  <text x="520" y="266" class="file">app/services/  (8 new files)</text>
+  <text x="855" y="266" class="add" text-anchor="end">+612</text>
+  <text x="520" y="289" class="file">app/policies/  (5 new files)</text>
+  <text x="855" y="289" class="add" text-anchor="end">+340</text>
+  <text x="520" y="312" class="file">config/initializers/  (4 new)</text>
+  <text x="855" y="312" class="add" text-anchor="end">+96</text>
+  <text x="520" y="335" class="file">+ 28 more files...</text>
+
+  <text x="520" y="380" class="lbl" font-style="italic">Reads in 2 hours.</text>
+  <text x="520" y="403" class="lbl" font-style="italic">Reverts in 4 days.</text>
+  <text x="520" y="438" class="lbl" fill="#cc342d" font-weight="700">Off the brief.</text>
+</svg>

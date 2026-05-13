@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 620" font-family="Caveat, 'Patrick Hand', cursive" role="img" aria-labelledby="title desc">
+  <title id="title">The five sections of the weekly dev report on one page</title>
+  <desc id="desc">Five labelled boxes stacked vertically representing the one-page weekly report. Box 1 (green) Shipped: staging URL plus test login. Box 2 (yellow) In review: PR number plus reviewer name. Box 3 (red) Blocked: named person plus deadline. Box 4 (blue) Cut: what got descoped and why. Box 5 (purple) Concern: one sentence on next week's risk.</desc>
+
+  <rect width="700" height="620" fill="#fafaf7"/>
+
+  <!-- Page outline -->
+  <rect x="60" y="40" width="580" height="540" fill="#ffffff" stroke="#999" stroke-width="1.5" stroke-dasharray="4 4" rx="4"/>
+  <text x="350" y="28" text-anchor="middle" font-size="18" fill="#555">One page. Five sections. Plain text.</text>
+
+  <!-- Section 1 - Shipped -->
+  <g transform="translate(80, 60)">
+    <rect width="540" height="92" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" rx="6"/>
+    <text x="20" y="32" font-size="22" fill="#2e7d32" font-weight="bold">1. Shipped</text>
+    <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">staging URL + test login + one sentence per feature</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"staging.acme.app/co/v2 - login: founder@test.com / demo1234"</text>
+    <text x="510" y="32" text-anchor="end" font-size="14" fill="#2e7d32">PROOF</text>
+  </g>
+
+  <!-- Section 2 - In review -->
+  <g transform="translate(80, 162)">
+    <rect width="540" height="92" fill="#fffaf0" stroke="#b8860b" stroke-width="2.5" rx="6"/>
+    <text x="20" y="32" font-size="22" fill="#b8860b" font-weight="bold">2. In review</text>
+    <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">PR number + author + named reviewer + what is holding it up</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"PR #847 - Marcos opened Tue, Priya reviewing, two changes requested"</text>
+    <text x="510" y="32" text-anchor="end" font-size="14" fill="#b8860b">PIPELINE</text>
+  </g>
+
+  <!-- Section 3 - Blocked -->
+  <g transform="translate(80, 264)">
+    <rect width="540" height="92" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" rx="6"/>
+    <text x="20" y="32" font-size="22" fill="#cc342d" font-weight="bold">3. Blocked, on whom</text>
+    <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">name the person + the answer they need + the deadline</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"Stripe live keys - waiting on you - need them by Wed end-of-day"</text>
+    <text x="510" y="32" text-anchor="end" font-size="14" fill="#cc342d">YOUR INPUT</text>
+  </g>
+
+  <!-- Section 4 - Cut -->
+  <g transform="translate(80, 366)">
+    <rect width="540" height="92" fill="#f0f7fc" stroke="#0277bd" stroke-width="2.5" rx="6"/>
+    <text x="20" y="32" font-size="22" fill="#0277bd" font-weight="bold">4. Cut to ship that</text>
+    <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">what we descoped, postponed, or simplified + the reason</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"Admin override - users do not need it for v1; Postgres console for now"</text>
+    <text x="510" y="32" text-anchor="end" font-size="14" fill="#0277bd">TRADE-OFFS</text>
+  </g>
+
+  <!-- Section 5 - Concern -->
+  <g transform="translate(80, 468)">
+    <rect width="540" height="92" fill="#f8f0fc" stroke="#6a1b9a" stroke-width="2.5" rx="6"/>
+    <text x="20" y="32" font-size="22" fill="#6a1b9a" font-weight="bold">5. One concern next week</text>
+    <text x="20" y="58" font-size="16" fill="#1a1a1a" font-family="Helvetica, Arial, sans-serif">one sentence; the actual thing keeping the team awake</text>
+    <text x="20" y="80" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-style="italic">"Migration locks orders table ~30s; want a 6am UK window"</text>
+    <text x="510" y="32" text-anchor="end" font-size="14" fill="#6a1b9a">PREDICT</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="350" y="600" text-anchor="middle" font-size="14" fill="#777">
+    No screenshots. No burndown chart. No executive summary. The five sections are the report.
+  </text>
+</svg>

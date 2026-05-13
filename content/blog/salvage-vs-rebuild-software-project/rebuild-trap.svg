@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" font-family="'Caveat','Patrick Hand',cursive" role="img" aria-labelledby="title desc">
+  <title id="title">The full-rewrite trap vs core-paths rebuild</title>
+  <desc id="desc">Two timelines stacked. Top timeline: Full rewrite, 12-18 months feature freeze, no shippable revenue, then a v2 with new bugs. Bottom timeline: Core-paths rebuild, two parallel codebases on a feature flag, legacy keeps running, the 2-3 critical flows ship in 90 days while the rest of the app continues serving users.</desc>
+  <style>
+    .h{font-size:24px;fill:#1a1a1a;font-weight:700}
+    .lbl{font-size:16px;fill:#1a1a1a}
+    .small{font-size:14px;fill:#1a1a1a}
+    .bad-fill{fill:#fff5f5;stroke:#cc342d;stroke-width:2.5}
+    .good-fill{fill:#f0f9f0;stroke:#2e7d32;stroke-width:2.5}
+    .neutral{fill:#fafafa;stroke:#666;stroke-width:2}
+    .freeze{fill:#fff5f5;stroke:#cc342d;stroke-width:2;stroke-dasharray:5 4}
+    .ship{fill:#f0f9f0;stroke:#2e7d32;stroke-width:2}
+    .legacy{fill:#fafafa;stroke:#666;stroke-width:2;stroke-dasharray:4 3}
+    .arrow{stroke:#1a1a1a;stroke-width:2;fill:none}
+    .red-tag{fill:#cc342d;font-size:18px;font-weight:700}
+    .green-tag{fill:#2e7d32;font-size:18px;font-weight:700}
+  </style>
+
+  <!-- TOP: Full rewrite trap -->
+  <text x="20" y="40" class="h">Full rewrite (the trap)</text>
+  <text x="20" y="62" class="lbl">"Throw it all out and start fresh in [new framework]."</text>
+
+  <!-- Full rewrite bar -->
+  <rect x="20" y="80" width="780" height="60" rx="6" class="bad-fill"/>
+  <text x="410" y="118" class="lbl" text-anchor="middle">12 to 18 months: feature freeze, paying users see nothing new</text>
+
+  <!-- v2 with new bugs -->
+  <rect x="800" y="80" width="100" height="60" rx="6" class="freeze"/>
+  <text x="850" y="106" class="small" text-anchor="middle">v2 ships</text>
+  <text x="850" y="126" class="small" text-anchor="middle">new bugs</text>
+
+  <!-- Annotation under -->
+  <text x="20" y="170" class="red-tag">Joel Spolsky, 2000: "the single worst strategic mistake."</text>
+
+  <!-- Months ruler -->
+  <line x1="20" y1="200" x2="900" y2="200" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="20" y="220" class="small">M0</text>
+  <text x="240" y="220" class="small">M3</text>
+  <text x="460" y="220" class="small">M6</text>
+  <text x="680" y="220" class="small">M12</text>
+  <text x="880" y="220" class="small">M18</text>
+
+  <!-- BOTTOM: Core-paths rebuild -->
+  <text x="20" y="270" class="h">Core-paths rebuild (what REBUILD actually means)</text>
+  <text x="20" y="292" class="lbl">Two codebases. Feature flag. Legacy keeps running.</text>
+
+  <!-- Legacy bar (keeps running) -->
+  <rect x="20" y="310" width="700" height="40" rx="6" class="legacy"/>
+  <text x="370" y="335" class="small" text-anchor="middle">Legacy app: keeps serving every flow that is not in the rebuild list</text>
+
+  <!-- Parallel rebuild bar (new) -->
+  <rect x="20" y="360" width="220" height="40" rx="6" class="ship"/>
+  <text x="130" y="385" class="small" text-anchor="middle">Rebuild flow #1 (signup)</text>
+
+  <rect x="245" y="360" width="220" height="40" rx="6" class="ship"/>
+  <text x="355" y="385" class="small" text-anchor="middle">Rebuild flow #2 (checkout)</text>
+
+  <rect x="470" y="360" width="220" height="40" rx="6" class="ship"/>
+  <text x="580" y="385" class="small" text-anchor="middle">Rebuild flow #3 (the one core action)</text>
+
+  <!-- Sunset legacy -->
+  <rect x="700" y="310" width="200" height="40" rx="6" class="freeze"/>
+  <text x="800" y="335" class="small" text-anchor="middle">Sunset legacy one flow at a time</text>
+
+  <!-- Annotation -->
+  <text x="20" y="430" class="green-tag">Revenue keeps flowing. New bugs land in one flow at a time, behind a flag.</text>
+  <text x="20" y="455" class="small">Total elapsed: ~90 days for the three critical flows. Legacy quiet-sunsets through M6.</text>
+</svg>

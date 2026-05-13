@@ -1,0 +1,177 @@
+---
+title: "The Friday Demo Rule: 15 Min Truth Test"
+description: "The 15-minute Friday ritual that surfaces fake progress in 4 weeks flat. Loom or live, working software only, no Jira screenshots, no slides, hard stop."
+date: 2026-09-30
+author: "JetThoughts Team"
+slug: friday-demo-rule-founder-progress
+keywords:
+  - friday demo rule
+  - catch fake progress dev team
+  - non technical founder weekly demo
+  - working software demo founder
+  - dev team status call replacement
+tags:
+  - founders
+  - non-technical-founder
+  - course-companion
+  - oversight
+categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "The Friday Demo Rule: 15 Min Truth Test"
+  og_description: "The 15-minute Friday ritual that surfaces fake progress in 4 weeks flat. Loom or live, working software only, no Jira screenshots, no slides, hard stop."
+cover_image_alt: "JetThoughts blog cover for The Friday Demo Rule showing a kitchen-timer set to 15 minutes next to a laptop screen with a clickable staging URL and a struck-through Jira screenshot"
+canonical_url: "https://jetthoughts.com/blog/friday-demo-rule-founder-progress/"
+related_posts: false
+---
+
+> **Module 5 · Step 2 of 6** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) free course.
+> Input: a team in place + a signed SOW. Output: a weekly Friday ritual that surfaces fake progress within 4 weeks.
+
+What were you actually shown on your last status call? A B2B founder we picked up in Q3 2026 sat with that question for ten minutes after a Tuesday call. Her notes from the call said: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame her designer had updated overnight, and a verbal summary that started with "good progress this week." Nothing in her notes was a thing she could click. She had paid **$31K that month** for the team that ran the call, and the call had shown her zero working software.
+
+She wrote one Slack message that night: *"From now on we run a 15-minute Friday demo. Loom or live, your choice. Working software only. I want to click everything you show me."* By Friday of week 3, two of her four developers had quietly left the project; the lead admitted the checkout flow she had been tracking for six weeks was three Postman requests in a Notion doc and a Stripe sandbox key in someone's `.env`. She found that out in 15 minutes, on a recorded call, with no fight.
+
+## Why most weekly status calls fail
+
+The standard weekly call is a slide deck and a Jira tour. The agency lead picks the artifacts, controls the screen, and narrates the week. You leave the call oriented but not informed. Whether anything shipped is a separate question, and the format does not force it. [Atlassian's own writeup on demo meetings](https://www.atlassian.com/agile/scrum/sprint-reviews) flags exactly this drift: status reviews collapse into status theatre when the agenda is "report progress" instead of "show working software." Make the format about clicking, not slides, and the failure modes get loud fast.
+
+## The Friday Demo Rule
+
+One meeting per week. 15 minutes. Friday at 4pm in your timezone. Loom (a recorded video) or live screenshare. Recorded if it is Loom. The rules are not negotiable, which is the whole point.
+
+**Working software only.** Figma frames, Jira screenshots, burndown charts, and "here is what we are about to start" all stay out of the meeting. If the team cannot show you a thing you can click, the answer to "did anything ship this week?" is no, and the demo just told you. That is the demo doing its job.
+
+**You attend with one question in your head.** Can I click everything they show me? You open your laptop, paste each staging URL into your browser as the developer mentions it, and try to reach the screen they just described. If the URL throws a 500, asks for a login you do not have, or returns "this page can't be reached", interrupt and ask why. Do not save the question for Monday. The point of the recording is so you have proof; the point of the live attendance is so you catch the lie in real time.
+
+**Hard stop at 15 minutes.** Founders we have rescued who let the demo drift to 45 minutes lose the discipline within a month. The cap is what forces the team to pre-stage clickable URLs instead of debugging on the call. If the team needs longer than 15 minutes to show one week of work, something is wrong - and it is usually that nothing is on staging.
+
+![Kitchen-timer set to 15:00 next to a laptop displaying a clickable staging URL with admin login credentials and a passing $1 Stripe test transaction; struck-through icons of a Jira board, a Figma frame, and a slide deck stacked on the right with the caption "not allowed in the room"](demo-rule.svg)
+
+## The 7 questions the team answers
+
+The full Monday-morning Slack template lives in the [Friday Demo Template](/blog/friday-demo-template/) - copy and paste it into Slack on Monday so the team knows the questions before Friday. The seven questions, in the order you ask them on the call:
+
+1. **What shipped this week?** Show the staging URL of one thing the founder can click.
+2. **What did the user do?** Walk the feature as the user touches it - click the buttons, submit the form, show the success and failure screens.
+3. **Where is it live for me?** Send the URL and the test login in one message; the founder repeats the demo on her own laptop within five minutes.
+4. **What did we cut to ship that?** Name what was simplified, removed, or postponed. If nothing was cut, the scope was wrong or the work is not done.
+5. **What is in review but not shipped?** Open pull request, named reviewer. If nobody reviewed it, say so.
+6. **What is blocked, and on whom?** Named person, the answer the team needs from you, the deadline.
+7. **What is the one thing I should worry about for next week?** Not a status update - the actual thing keeping the lead up at night.
+
+The order matters. Question 1 sets the frame: working software, not process. Question 4 catches over-engineering and quiet descopes. Question 7 surfaces real risk before it shows up as a missed sprint. The full template page has the copy-paste Slack message, the hard rules, and the "what to do during the call" section - bookmark it.
+
+## What good looks like vs what bad looks like
+
+The texture of the answers is the signal. Every question has a pass shape and a fail shape, and after four Fridays you will know your team's pattern by sound.
+
+**Q1 - what shipped this week?**
+
+> **Bad:** "We finished the Stripe integration this week."
+> **Good:** "Live at staging.acme.app/checkout. Here is a $1 test charge I just ran. The webhook fired, the order moved to paid, the receipt landed in your inbox."
+
+Bad answers describe completion as a feeling. Good answers point at evidence and walk you to it. If your team gives you Q1 as a verb without a URL, write it down - three weeks of verb-only Q1 answers is a stalled project wearing busy clothes.
+
+**Q3 - where is it live for me?**
+
+> **Bad:** "I can send you a Loom of it tomorrow."
+> **Good:** "staging.acme.app/dashboard. Login: founder@test.com / demo1234. Try the export button - it generates a CSV."
+
+You should be able to click the thing yourself within five minutes of the call ending. If you cannot, one of three things is true: you do not have admin access, the staging environment does not exist, or the feature is not actually deployed. All three are emergencies. A founder we worked with sat through six weeks of "I will send the URL after the call" before her fractional CTO clicked the link the team finally sent and got a 404. The CTO's first audit found the staging environment had been broken for two months and nobody had escalated it.
+
+**Q4 - what did we cut to ship that?**
+
+> **Bad:** "Nothing - we built everything in the spec."
+> **Good:** "We cut the admin override screen. You will not be able to edit a user's plan from the dashboard until next sprint. Manual fix is to email me, takes me three minutes."
+
+This is the over-engineering check. A team that never cuts anything is either building twice as much as needed or is afraid to admit anything was descoped. [Eric Ries' MVP definition](https://leanstartup.co/resources/articles/what-is-an-mvp/) puts the same point in the validated-learning frame: the smallest version that produces validated learning, not the full spec. JT's [post on over-built admin panels](/blog/checklist-for-non-tech-founder-agile/) traces what happens when nobody asks Q4 for ten weeks straight - you ship a custom admin dashboard for an MVP that needed a Postgres console.
+
+**Q5 - what is in review but not shipped?**
+
+> **Bad:** "A few things are in PR, I can send you the list later."
+> **Good:** "PR #847 - signup rate limiting. Marcus reviewed it Tuesday, three changes requested, will merge Monday. PR #851 - admin search. Nobody has reviewed it because Marcus is on vacation."
+
+If the same name keeps appearing as the only reviewer, you have a bus factor of one. [Will Larson on engineering anti-patterns](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) treats the pull request funnel as the load-bearing signal for engineering health. The Friday demo is where you watch that funnel from outside the system. JT's [eight red flags checklist](/blog/dev-shop-red-flags-checklist/) describes the bus-factor failure mode in plain English.
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart LR
+    Mon([Monday 9am<br/>Founder posts the<br/>7-question template<br/>in #dev Slack]) --> Tue([Tuesday-Thursday<br/>Team builds + reviews<br/>against the questions])
+
+    Tue --> Wed{Wednesday EOD<br/>Anything not<br/>going to be ready?}
+    Wed -->|Yes| Replan([Team replans<br/>before Friday])
+    Wed -->|No| Fri([Friday 4pm<br/>15-min Loom or live<br/>working software only])
+
+    Replan --> Fri
+
+    Fri --> Click([Founder clicks<br/>every staging URL<br/>during the call])
+    Click --> Forward([Forward Loom URL<br/>to your inbox<br/>same evening])
+
+    Forward --> Score{After 4 weeks<br/>review the pattern}
+    Score -->|4 of 4 demos clickable| Healthy([Cadence works<br/>continue weekly])
+    Score -->|2 of 4 or fewer| Investigate([Run the<br/>oversight audit<br/>Module 5.4-5.6])
+
+    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef bad  fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:2px,color:#1a1a1a
+
+    class Mon,Tue,Fri,Click,Forward neutral
+    class Wed,Score neutral
+    class Replan,Healthy good
+    class Investigate bad
+```
+
+## The Rails / Django / Laravel angle
+
+A small full-stack Rails, Django, or Laravel team can demo end-to-end in one Loom because the same person who wrote the code owns the staging URL and can click through it from sign-up to receipt without switching browser tabs. DHH's [one-person framework writeup](https://world.hey.com/dhh/the-one-person-framework-711e6318) describes the shape: Hotwire, Stimulus, Turbo, and import maps in the default box mean one developer ships a complete feature, and one developer narrates it in 90 seconds.
+
+Compare to the microservice-detached-team failure mode. The team has to send you five Looms for the week because the checkout feature touches the order service, the billing service, the notifications service, and the front-end deploys to a different domain than the API. The Friday demo turns into "watch these five videos and we can sync about them next week." That is a tell. We have walked into projects where every feature demo required three engineers on the call to switch screens between services. JT's [field note on calming delivery chaos](/blog/calming-delivery-chaos-jetthoughts-field-note/) describes what happens when you compress that shape back to a small full-stack team. If your Friday demo needs more than two browser tabs to walk one feature, the architecture is the problem, not the demo format.
+
+![Two stacked panels: top panel labeled "small full-stack team" shows one Loom thumbnail with a continuous arrow tracing sign-up to checkout to receipt across one staging URL; bottom panel labeled "microservice-detached team" shows five Loom thumbnails arranged across separate subdomains with confused arrows criss-crossing between them and the caption "this is what you are paying for"](catching-the-lie.svg)
+
+## What to do tomorrow
+
+Three actions, in order:
+
+1. **Block 15 minutes on your calendar this Friday at 4pm.** Title it "Friday Demo - Working Software Only." Add your team. No agenda doc - the agenda is the seven questions, and they are the same every week.
+
+2. **Check your last four weekly status calls in your notes app.** Out of those four calls, how many produced a staging URL you actually clicked from your own laptop within 24 hours of the call? If the answer is zero or one, the problem is not your team's effort - it is that the format never asked them for working software. The Friday demo asks for it every week.
+
+3. **Download the [Friday Demo Template](/blog/friday-demo-template/) and send to your team Monday morning.** The template page has the copy-paste Slack message, the seven questions in order, the hard rules, and the "what good vs bad looks like" examples for each question. Do not paraphrase the rules - paste them. Teams respect the hard structure more than a polite request they can ignore.
+
+By Friday of week 4, you will know whether your dev team is shipping or stalling, and you will not have read a line of code. That is the entire system.
+
+## Continue the course
+
+This is **Module 5 · Step 2 of 6** in the free [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course - 8 modules from idea to first paying users.
+
+| # | Module | Output you walk away with |
+|---|---|---|
+| 0 | Where Are You? | Self-assessment + your starting module |
+| 1 | Validate the Problem | One-page validated problem statement |
+| 2 | Design the Solution | One-page Product Brief (Vibe PRD) |
+| 3 | Choose Your Build Path | Build decision: self-serve or hire |
+| 4A | Ship Self-Serve (branch) | Live MVP at a staging URL |
+| 4B | Hire & Ship (branch) | Signed SOW, kickoff scheduled |
+| **5** | **Manage Your Build** ← you are here | **Weekly oversight rhythm** |
+| 6 | When Things Break | Salvage / rebuild decision |
+| 7 | Manage AI-Era Risks | AI interrogation system |
+
+**In Module 5 · Manage Your Build**: 5.1 [The Org Chart Your Dev Shop Won't Draw](/blog/engineering-org-chart-non-technical-founder/) · 5.2 **The Friday Demo Rule** ← you are here · 5.3 [Three Questions That Turn a Standup Into Proof](/blog/three-questions-turn-standup-into-proof/) · 5.4 The Plain-English Weekly Dev Report · 5.5 Who Owns Your GitHub, AWS, and Database? · 5.6 You Asked for a Simple Admin Panel; You Got a Spaceship.
+
+The full course landing page (with all 11 artifacts) publishes after Module 5 ships. Until then, bookmark this post and the [Friday Demo Template](/blog/friday-demo-template/).
+
+## Further reading
+
+- Atlassian, [Sprint Reviews and Demos](https://www.atlassian.com/agile/scrum/sprint-reviews) - the canonical reference on demo meetings and how they drift into status theatre when nobody asks for working software.
+- Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question.
+- Will Larson (via First Round Review), [Engineering leadership anti-patterns from Stripe, Uber, Carta](https://review.firstround.com/unexpected-anti-patterns-for-engineering-leaders-lessons-from-stripe-uber-carta/) - on the pull request funnel as the load-bearing signal a Friday demo surfaces from outside the system.
+- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for full-stack developers shipping end-to-end and demoing in one Loom.
+- Martin Fowler, [It's Not Just Standing Up: Patterns for Daily Standup Meetings](https://martinfowler.com/articles/itsNotJustStandingUp.html) - a deep practitioner reference on the pattern of meetings that produce visible working software vs the ones that produce status updates.
+- Atlassian, [Definition of Done](https://www.atlassian.com/agile/project-management/definition-of-done) - the "is it actually done" reference that aligns with the Friday demo's working-software-only rule.
+
+---
+
+Built by JetThoughts as part of the free [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) curriculum. Authored by the JetThoughts team.
