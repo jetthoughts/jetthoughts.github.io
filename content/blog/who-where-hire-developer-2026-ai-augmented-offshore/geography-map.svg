@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+  </defs>
+  <rect width="960" height="620" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="480" y="38" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 2026 Geography Arbitrage Map</text>
+  <text x="480" y="64" font-size="18" text-anchor="middle" fill="#555">Hourly rate band by region. Pick the lowest band your scope can tolerate.</text>
+
+  <!-- US / EU REGION (top left, red band) -->
+  <rect x="40" y="100" width="280" height="200" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="60" y="130" font-size="22" fill="#cc342d" font-weight="bold">Onshore (US / EU)</text>
+  <text x="60" y="158" font-size="18" fill="#1a1a1a">$130K - $210K+ / year</text>
+  <text x="60" y="180" font-size="18" fill="#1a1a1a">Hire: 30 - 60 days</text>
+  <text x="60" y="202" font-size="18" fill="#1a1a1a">Offer accept: ~51%</text>
+  <text x="60" y="236" font-size="17" fill="#444">When: regulated industry,</text>
+  <text x="60" y="256" font-size="17" fill="#444">security clearance, board-</text>
+  <text x="60" y="276" font-size="17" fill="#444">mandated US team.</text>
+
+  <!-- LATAM (top right of map, green band) -->
+  <rect x="340" y="100" width="280" height="200" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="360" y="130" font-size="22" fill="#2e7d32" font-weight="bold">Nearshore (LATAM)</text>
+  <text x="360" y="158" font-size="18" fill="#1a1a1a">$45 - $100 / hour</text>
+  <text x="360" y="180" font-size="18" fill="#1a1a1a">(~$90K-$200K equiv)</text>
+  <text x="360" y="202" font-size="18" fill="#1a1a1a">Hire: 2 - 5 days</text>
+  <text x="360" y="236" font-size="17" fill="#444">When: US founder default</text>
+  <text x="360" y="256" font-size="17" fill="#444">in 2026. Timezone overlap,</text>
+  <text x="360" y="276" font-size="17" fill="#444">English fluency, async OK.</text>
+
+  <!-- INDIA TIER-2 (right side, purple band) -->
+  <rect x="640" y="100" width="280" height="200" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="660" y="130" font-size="22" fill="#7c3aed" font-weight="bold">Tier-2 India (2026)</text>
+  <text x="660" y="158" font-size="18" fill="#1a1a1a">$15 - $70 / hour</text>
+  <text x="660" y="180" font-size="18" fill="#1a1a1a">(~$30K-$140K equiv)</text>
+  <text x="660" y="202" font-size="18" fill="#1a1a1a">Hire: 1 - 5 days</text>
+  <text x="660" y="236" font-size="17" fill="#444">Cities: Jaipur, Kochi,</text>
+  <text x="660" y="256" font-size="17" fill="#444">Indore, Coimbatore.</text>
+  <text x="660" y="276" font-size="17" fill="#444">NOT Bangalore (overpriced).</text>
+
+  <!-- UPWORK (bottom row, yellow band) -->
+  <rect x="40" y="330" width="880" height="160" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="60" y="360" font-size="22" fill="#bf8a00" font-weight="bold">Mass market (Upwork)</text>
+  <text x="60" y="388" font-size="18" fill="#1a1a1a">$35 - $120 / hour - self-vetting required - point tasks only</text>
+  <text x="60" y="420" font-size="17" fill="#444">When: single landing page, copywriting, logo design, one-off scraper.</text>
+  <text x="60" y="442" font-size="17" fill="#444">NOT for: backend, payment integrations, multi-week features, anything load-bearing.</text>
+  <text x="60" y="464" font-size="17" fill="#a3621e" font-style="italic">Failure mode: you become the technical reviewer for a contractor who shipped to staging once.</text>
+
+  <!-- Decision strip -->
+  <rect x="40" y="510" width="880" height="80" fill="#fafaf7" stroke="#333" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="480" y="540" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Decision shortcut</text>
+  <text x="480" y="566" font-size="17" text-anchor="middle" fill="#444">Regulated -&gt; Onshore.  US timezone hard -&gt; LATAM.  Backend-heavy + async OK -&gt; Tier-2 India.  One-off task -&gt; Upwork.</text>
+</svg>

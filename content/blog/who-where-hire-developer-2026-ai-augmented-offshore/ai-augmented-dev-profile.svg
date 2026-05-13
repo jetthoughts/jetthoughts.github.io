@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+  </defs>
+  <rect width="920" height="640" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="460" y="40" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 2026 AI-Augmented Developer Profile</text>
+  <text x="460" y="68" font-size="20" text-anchor="middle" fill="#555">Hire this profile. Skip the algorithm-test specialist. Skip the Stanford CS grad.</text>
+
+  <!-- LEFT CARD: 2018 model (rejected) -->
+  <rect x="60" y="100" width="380" height="490" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="80" y="135" font-size="24" fill="#cc342d" font-weight="bold">The 2018 model (skip this)</text>
+
+  <text x="80" y="170" font-size="18" fill="#1a1a1a" font-weight="bold">Profile:</text>
+  <text x="80" y="194" font-size="18" fill="#1a1a1a">- Stanford CS grad, 0-3 years</text>
+  <text x="80" y="216" font-size="18" fill="#1a1a1a">- Algorithm-interview specialist</text>
+  <text x="80" y="238" font-size="18" fill="#1a1a1a">- Has not shipped to production</text>
+  <text x="80" y="260" font-size="18" fill="#1a1a1a">- Resume-driven stack picks</text>
+
+  <text x="80" y="296" font-size="18" fill="#1a1a1a" font-weight="bold">Salary:</text>
+  <text x="80" y="320" font-size="18" fill="#1a1a1a">- $180K-$235K Senior US</text>
+  <text x="80" y="342" font-size="18" fill="#1a1a1a">- 30-60 day hire cycle</text>
+  <text x="80" y="364" font-size="18" fill="#1a1a1a">- 51% offer-acceptance rate</text>
+
+  <text x="80" y="400" font-size="18" fill="#1a1a1a" font-weight="bold">Interview asks:</text>
+  <text x="80" y="424" font-size="18" fill="#1a1a1a">- Reverse a binary tree</text>
+  <text x="80" y="446" font-size="18" fill="#1a1a1a">- Big-O of merge sort</text>
+  <text x="80" y="468" font-size="18" fill="#1a1a1a">- LeetCode hard, on whiteboard</text>
+
+  <text x="80" y="510" font-size="20" fill="#a3621e" font-style="italic">The AI passes all of these tests.</text>
+  <text x="80" y="534" font-size="20" fill="#a3621e" font-style="italic">You are paying senior rates</text>
+  <text x="80" y="558" font-size="20" fill="#a3621e" font-style="italic">for a skill the model does for free.</text>
+
+  <!-- ARROW from left to right -->
+  <text x="460" y="345" font-size="44" text-anchor="middle" fill="#cc342d" font-weight="bold">→</text>
+
+  <!-- RIGHT CARD: 2026 AI-Augmented (chosen) -->
+  <rect x="480" y="100" width="380" height="490" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="500" y="135" font-size="24" fill="#2e7d32" font-weight="bold">The 2026 hire (this one)</text>
+
+  <text x="500" y="170" font-size="18" fill="#1a1a1a" font-weight="bold">Profile:</text>
+  <text x="500" y="194" font-size="18" fill="#1a1a1a">- 5-10 years engineering</text>
+  <text x="500" y="216" font-size="18" fill="#1a1a1a">- Daily Cursor / Claude Code user</text>
+  <text x="500" y="238" font-size="18" fill="#1a1a1a">- Has shipped AI-gen code AND</text>
+  <text x="500" y="260" font-size="18" fill="#1a1a1a">  reviewed it line by line</text>
+
+  <text x="500" y="296" font-size="18" fill="#1a1a1a" font-weight="bold">Salary:</text>
+  <text x="500" y="320" font-size="18" fill="#1a1a1a">- $85K-$120K Junior with</text>
+  <text x="500" y="342" font-size="18" fill="#1a1a1a">  Senior productivity</text>
+  <text x="500" y="364" font-size="18" fill="#1a1a1a">- 1-5 day hire (offshore/nearshore)</text>
+
+  <text x="500" y="400" font-size="18" fill="#1a1a1a" font-weight="bold">Interview asks:</text>
+  <text x="500" y="424" font-size="18" fill="#1a1a1a">- Walk me through a system</text>
+  <text x="500" y="446" font-size="18" fill="#1a1a1a">  you shipped that AI helped on</text>
+  <text x="500" y="468" font-size="18" fill="#1a1a1a">- How do you catch hallucinated</text>
+  <text x="500" y="490" font-size="18" fill="#1a1a1a">  packages in pull requests?</text>
+
+  <text x="500" y="528" font-size="20" fill="#1a4d1f" font-style="italic">The judgment costs you cash.</text>
+  <text x="500" y="552" font-size="20" fill="#1a4d1f" font-style="italic">The typing the model does free.</text>
+  <text x="500" y="576" font-size="20" fill="#1a4d1f" font-style="italic">You are paying for the right thing.</text>
+
+  <!-- Footer -->
+  <text x="460" y="624" font-size="16" text-anchor="middle" fill="#666" font-style="italic">Sources: 2026 dev recruitment data + Russian-source ecosystem research (10.03)</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="'Patrick Hand', 'Caveat', cursive" role="img" aria-label="Side-by-side comparison of AI Theater answers versus AI Direction answers">
+  <defs>
+    <filter id="rough2" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.5"/>
+    </filter>
+  </defs>
+  <rect width="900" height="540" fill="#fffaf3"/>
+  <text x="450" y="44" font-size="30" text-anchor="middle" fill="#1a1a1a" font-weight="bold">AI Theater vs AI Direction</text>
+  <text x="450" y="70" font-size="16" text-anchor="middle" fill="#555">Same resume language. Different population. Q7 splits them.</text>
+
+  <!-- LEFT: Theater -->
+  <g filter="url(#rough2)">
+    <rect x="40" y="100" width="390" height="400" fill="#fff5f5" stroke="#cc342d" stroke-width="3"/>
+  </g>
+  <text x="235" y="135" font-size="22" text-anchor="middle" fill="#cc342d" font-weight="bold">AI Theater (80%)</text>
+  <text x="235" y="158" font-size="14" text-anchor="middle" fill="#666" font-style="italic">accepts the model's first suggestion</text>
+
+  <g font-size="15" fill="#1a1a1a">
+    <text x="60" y="195" font-weight="bold">Q1.</text>
+    <text x="95" y="195">"AI helps me ship faster."</text>
+    <text x="60" y="230" font-weight="bold">Q2.</text>
+    <text x="95" y="230">"My company pays for it."</text>
+    <text x="60" y="265" font-weight="bold">Q3.</text>
+    <text x="95" y="265">"I trust the model most of the time."</text>
+    <text x="60" y="300" font-weight="bold">Q4.</text>
+    <text x="95" y="300">"Cursor only suggests real packages."</text>
+    <text x="60" y="335" font-weight="bold">Q5.</text>
+    <text x="95" y="335">"Never had an AI-related incident."</text>
+    <text x="60" y="370" font-weight="bold">Q6.</text>
+    <text x="95" y="370">"I refactor as I go."</text>
+    <text x="60" y="405" font-weight="bold">Q7.</text>
+    <text x="95" y="405">"Cannot think of one off the top..."</text>
+    <text x="95" y="425" font-size="13" fill="#666">(40 sec silence. Promise to email.</text>
+    <text x="95" y="442" font-size="13" fill="#666">Email never arrives.)</text>
+  </g>
+  <text x="235" y="478" font-size="16" text-anchor="middle" fill="#cc342d" font-weight="bold">Score: 2/30. Polite no.</text>
+
+  <!-- RIGHT: Direction -->
+  <g filter="url(#rough2)">
+    <rect x="470" y="100" width="390" height="400" fill="#f0f9f0" stroke="#2e7d32" stroke-width="3"/>
+  </g>
+  <text x="665" y="135" font-size="22" text-anchor="middle" fill="#2e7d32" font-weight="bold">AI Direction (20%)</text>
+  <text x="665" y="158" font-size="14" text-anchor="middle" fill="#666" font-style="italic">reads diff, rejects most, ships intent</text>
+
+  <g font-size="14" fill="#1a1a1a">
+    <text x="490" y="195" font-weight="bold">Q1.</text>
+    <text x="525" y="195">"Cursor + Claude 4.5. Ticket #842,</text>
+    <text x="525" y="213">failing test first, PR with Assisted-by."</text>
+    <text x="490" y="240" font-weight="bold">Q2.</text>
+    <text x="525" y="240">"$180/mo Cursor + API. Last receipt:</text>
+    <text x="525" y="258">$214 in March."</text>
+    <text x="490" y="285" font-weight="bold">Q3.</text>
+    <text x="525" y="285">[opens GitHub, reads PR #1247]</text>
+    <text x="490" y="312" font-weight="bold">Q4.</text>
+    <text x="525" y="312">"Allowlist + Socket on every PR.</text>
+    <text x="525" y="330">Slopsquat caught last sprint."</text>
+    <text x="490" y="357" font-weight="bold">Q5.</text>
+    <text x="525" y="357">"Aug 14: webhook timeout. Root cause:</text>
+    <text x="525" y="375">retry loop. Added idempotency key."</text>
+    <text x="490" y="402" font-weight="bold">Q6.</text>
+    <text x="525" y="402">"Match service: kept API, swapped index,</text>
+    <text x="525" y="420">flag-flipped behind canary."</text>
+    <text x="490" y="447" font-weight="bold">Q7.</text>
+    <text x="525" y="447">"Cursor wanted gem 'jwt-decoder-v2'</text>
+    <text x="525" y="465" fill="#cc342d">- gem does not exist. Used stdlib."</text>
+  </g>
+  <text x="665" y="498" font-size="16" text-anchor="middle" fill="#2e7d32" font-weight="bold">Score: 27/30. Book reference.</text>
+
+  <!-- Arrow pointing to Q7 right side -->
+  <g stroke="#cc342d" stroke-width="2.5" fill="none">
+    <path d="M 875 455 Q 890 460 880 470"/>
+  </g>
+  <text x="877" y="445" font-size="13" fill="#cc342d" font-style="italic" text-anchor="end">← the split</text>
+</svg>

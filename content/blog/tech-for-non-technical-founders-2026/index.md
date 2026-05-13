@@ -27,7 +27,7 @@ canonical_url: "https://jetthoughts.com/blog/tech-for-non-technical-founders-202
 related_posts: false
 ---
 
-> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-09-02.
+> 🚧 **Course in progress.** We are publishing this course in public, one post at a time. New posts ship every week. The page below updates as each post goes live. Last updated: 2026-09-16.
 
 # Tech for Non-Technical Founders 2026
 
@@ -71,12 +71,12 @@ This is a free course. We don't sell anything inside it.
 | 2 | **Design the Solution** | One-page Product Brief (Vibe PRD) | 1 hr | 🟢 Complete |
 | 3 | **Choose Your Build Path** | Build decision: self-serve or hire | 45 min | 🟢 Complete |
 | 4A | **Ship Self-Serve** (branch) | Live MVP at a staging URL | 1 hr | 🟢 Complete |
-| 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 1.5 hr | 🟡 Partial (1 of 4 chapters) |
+| 4B | **Hire & Ship** (branch) | Signed SOW + hiring kit + code in YOUR GitHub org | 1.5 hr | 🟡 Partial (3 of 4 chapters; final wrap gated on 2510) |
 | 5 | **Manage Your Build** | Weekly oversight rhythm (Friday demo + standup + weekly report) | 2 hr | 🟡 Partial (2 of 6 chapters) |
 | 6 | **When Things Break** | Salvage / rebuild decision | 45 min | 🔲 Coming |
 | 7 | **Manage AI-Era Risks** | AI interrogation system | 1 hr | 🔲 Coming |
 
-**Status (2026-09-02)**: Modules 0, 1, 2, 3, and 4A complete - the entire self-serve path is shippable end-to-end (idea → live MVP). Modules 4B, 5 partial. Modules 6 and 7 coming over the next 3-4 weeks (gated on the 2510 LinkedIn validation sprint).
+**Status (2026-09-16)**: Modules 0, 1, 2, 3, and 4A complete. Module 4B is 3 of 4 chapters live — both branches of the build path (self-serve AND hire) are now usable end-to-end. Module 5 partial (2 of 6 chapters live). Module 4B.3 + Module 5 remaining + Module 6 + Module 7 ship as the parallel 2510 LinkedIn validation sprint completes (next 3-4 weeks).
 
 ## What's live right now
 
@@ -101,7 +101,9 @@ This is a free course. We don't sell anything inside it.
 - [The Self-Serve MVP Stack: Lovable + Supabase + Stripe](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
 - [Vibe Coding Done Right: 5 Ceiling Signals](/blog/vibe-coding-ceiling-signals/) — **just shipped, closes Module 4A**
 
-### 📍 Module 4B — Hire & Ship
+### 📍 Module 4B — Hire & Ship (3 of 4 chapters live)
+- [Who You're Hiring in 2026 and Where to Find Them](/blog/who-where-hire-developer-2026-ai-augmented-offshore/) — **just shipped**
+- [The Hiring Interview That Catches AI Theater](/blog/hiring-interview-catches-ai-theater/) — **just shipped**
 - [Reading the SOW Clause by Clause](/blog/reading-sow-clause-by-clause/)
 
 ### 📍 Module 5 — Manage Your Build
@@ -110,12 +112,7 @@ This is a free course. We don't sell anything inside it.
 
 ## What's coming next
 
-Next: **Module 4B** closes (the hire-and-ship branch):
-
-- **Who You're Hiring in 2026 and Where to Find Them** — coming this week
-- **The Hiring Interview That Catches AI Theater** — coming next week
-
-After Module 4B closes, the remaining wraps (Modules 5, 6, 7) ship as the LinkedIn validation sprint completes.
+**All 12 net-new chapters of the curriculum are now drafted.** The remaining 10 chapters wrap LinkedIn validation posts shipping over the next 3-4 weeks via a parallel sprint. Each new chapter publishes weekly; bookmark this page to see them as they land.
 
 Then Sprint 2 fills in the rest of Module 1, Module 2's remaining posts, and Module 3 (choose your build path).
 
@@ -141,6 +138,8 @@ Each module ships with at least one downloadable artifact. We capture an email t
 | Vibe PRD Template (Product Brief) | 2.2 | 🟢 [/blog/vibe-prd-template/](/blog/vibe-prd-template/) |
 | Build Path Decision Worksheet | 3.1 | 🟢 [/blog/build-path-decision-worksheet/](/blog/build-path-decision-worksheet/) |
 | Self-Serve Stack Walkthrough | 4A.1 | 🟢 [/blog/self-serve-stack-walkthrough/](/blog/self-serve-stack-walkthrough/) |
+| Where-to-Hire Map (2026) | 4B.1 | 🟢 [/blog/where-to-hire-developer-2026-map/](/blog/where-to-hire-developer-2026-map/) |
+| Hiring Interview Script | 4B.2 | 🟢 [/blog/hiring-interview-script/](/blog/hiring-interview-script/) |
 | SOW Reading Guide | 4B | 🟢 [/blog/sow-reading-guide/](/blog/sow-reading-guide/) |
 | Friday Demo Template | 5 | 🟢 [/blog/friday-demo-template/](/blog/friday-demo-template/) |
 | GitHub/AWS/DB Ownership Checklist | 5 | 🟢 [/blog/ownership-checklist/](/blog/ownership-checklist/) |
@@ -162,4 +161,4 @@ The course doesn't sell JT services. We sign the work (so you know who wrote it)
 
 ---
 
-Last updated: 2026-09-02.
+Last updated: 2026-09-16.
