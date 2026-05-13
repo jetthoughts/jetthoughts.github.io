@@ -69,7 +69,7 @@ The fix: for each new dependency, ask the senior dev to name the one outcome fro
 
 ### Question 3 - Is the staging URL still 1-click reachable for me?
 
-Open the staging URL the team gave you in [Module 4](/blog/the-friday-demo-rule/). Time how long it takes from "click the link" to "I am logged in and looking at the new feature."
+Open the staging URL the team gave you in [Module 4](/blog/friday-demo-rule-founder-progress/). Time how long it takes from "click the link" to "I am logged in and looking at the new feature."
 
 If staging used to load in two seconds and now takes twelve, or if you now need a VPN, or if the team says "you need to ssh-tunnel through bastion to reach it," or if there is a new login screen with a TOTP step that did not exist last week, your team has added a complexity layer between you and the build. Sometimes there is a real reason - a real customer is on staging now, or a security audit demanded it. Most of the time it is the new infrastructure (the Kubernetes cluster, the service mesh, the Cloudflare Zero Trust setup) that someone added because the brief said "we'll need this to scale" and they took it as a green light.
 
@@ -119,7 +119,7 @@ The fix is not to ban the architecture forever. The fix is to ask which user-fac
 
 ## Run the 5.5 ownership audit and the 5.6 build audit on different Fridays
 
-[Module 5.5](/blog/who-owns-your-github-aws-database/) gave you the ownership audit: GitHub admin, AWS root, Stripe owner, domain registrar, all in your name. That audit catches the political risk - the day the agency leaves and you cannot log in. This 5.6 audit catches the technical risk - the day the build is too heavy to land safely.
+[Module 5.5](/blog/github-aws-database-ownership-checklist/) gave you the ownership audit: GitHub admin, AWS root, Stripe owner, domain registrar, all in your name. That audit catches the political risk - the day the agency leaves and you cannot log in. This 5.6 audit catches the technical risk - the day the build is too heavy to land safely.
 
 Run them on alternating Fridays. Week one: ownership audit. Week three: build audit. Week five: ownership again. Week seven: build again. By month three you have walked through both audits twice, which is enough to catch most of the failure modes Modules 5.1 through 5.6 have warned about. Both audits live in the same place: a repeating calendar event called *Build oversight Friday*, with the two checklists pinned in the description.
 
@@ -153,7 +153,7 @@ This is **Module 5 · Step 6 of 6** in the free [Tech for Non-Technical Founders
 | 6 | When Things Break | Salvage / rebuild decision |
 | 7 | Manage AI-Era Risks | AI interrogation system |
 
-**In Module 5 · Manage Your Build**: 5.1 [The Org Chart Your Dev Shop Won't Draw](/blog/engineering-org-chart-non-technical-founder/) · 5.2 The Friday Demo Rule · 5.3 [Three Questions That Turn a Standup Into Proof](/blog/three-questions-turn-standup-into-proof/) · 5.4 The Plain-English Weekly Dev Report · 5.5 [Who Owns Your GitHub, AWS, and Database?](/blog/who-owns-your-github-aws-database/) · 5.6 **The Spaceship Audit: Catch Overbuild Early** ← you are here. **Module 5 is now closed.** Graduate to Module 6 when your *Build oversight Friday* calendar event has run twice.
+**In Module 5 · Manage Your Build**: 5.1 [The Org Chart Your Dev Shop Won't Draw](/blog/engineering-org-chart-non-technical-founder/) · 5.2 The Friday Demo Rule · 5.3 [Three Questions That Turn a Standup Into Proof](/blog/three-questions-turn-standup-into-proof/) · 5.4 The Plain-English Weekly Dev Report · 5.5 [Who Owns Your GitHub, AWS, and Database?](/blog/github-aws-database-ownership-checklist/) · 5.6 **The Spaceship Audit: Catch Overbuild Early** ← you are here. **Module 5 is now closed.** Graduate to Module 6 when your *Build oversight Friday* calendar event has run twice.
 
 The full course landing page (with all 11 artifacts) publishes after Module 5 ships. Until then, bookmark this post.
 

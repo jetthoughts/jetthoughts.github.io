@@ -66,6 +66,7 @@ Send this to your tech lead Sunday night or first-thing Monday. Frame it as the 
 
 Do not soften the wording when you send it. "Would be nice to have" gets you the old format with two new bullets. "This is the format I need each week" gets you the format.
 
+```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart LR
     Mon([Monday 9am<br/>Report lands<br/>in your inbox]) --> Read[Read in 90 sec<br/>Click 1 staging URL<br/>Note 1 blocker on you]
@@ -78,6 +79,7 @@ flowchart LR
     classDef action fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
     class Mon,Demo event
     class Read,Call,Mid,Wknd action
+```
 
 The cadence is closed-loop on purpose. Monday's report tells you what happened last week and what to unblock this week. Friday's demo (covered in [the Friday Demo Template](/blog/friday-demo-template/)) shows you the working software. Without Monday's report you walk into the demo blind. Without the demo, Monday's report is a prose exercise. The two pieces fit together.
 

@@ -162,7 +162,7 @@ Three actions.
 - **Send the script to your shortlist 24 hours before each interview.** One sentence: "We will work through these together on Tuesday; please come prepared." Do not soften it. The candidates who decline to prepare are telling you the answer to the interview before it starts.
 - **Score each call within 5 minutes of hanging up.** Open a Notion doc. Write the candidate's name, the three sub-scores (specificity, system judgment, communication), and the one-line decision: book reference / sit on it / polite no. Five minutes after the call, while the answers are still fresh. Not Friday. Not next week.
 
-> Most engineers in 2026 type prompts and merge output. The 20% who direct AI read the diff, reject most of it, and catch the hallucinated package before it merges. Q7 is the only question that actually splits the two. (276 chars)
+> Most engineers in 2026 type prompts and merge output. The 20% who direct AI read the diff, reject most of it, and catch the hallucinated package before it merges. Q7 is the only question that actually splits the two.
 
 The companion artifact for this post is the [Hiring Interview Script](/blog/hiring-interview-script/). Print it Sunday night, send it Monday morning, run the calls Tuesday and Wednesday, and have a hire decision in your hand by Friday.
 

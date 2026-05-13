@@ -124,24 +124,14 @@ This is a free course. We don't sell anything inside it.
 - [The AI Token Bill Your Agency Forgot to Mention](/blog/ai-token-bill-dev-shop-pass-through-cost/)
 - [Slopsquatting: The 2025 Supply Chain Attack Vibe Coding Created](/blog/slopsquatting-ai-supply-chain-attack/) — **closes the course**
 
-### 📍 Module 5 — Manage Your Build
-- [The Org Chart Your Dev Shop Won't Draw For You](/blog/engineering-org-chart-non-technical-founder/)
-- [Three Questions That Turn a Standup Into Proof](/blog/three-questions-turn-standup-into-proof/)
-
-## What's coming next
-
-**The course is complete.** All 26 chapters across 8 modules + 11 downloadable artifacts. Bookmark this page; if you finish the full sequence, [drop us a note](mailto:hello@jetthoughts.com) — we'd love to hear what you shipped.
-
-Then Sprint 2 fills in the rest of Module 1, Module 2's remaining posts, and Module 3 (choose your build path).
-
 ## Where to start
 
 Don't read top to bottom. **Take the 10-question self-assessment first** — it routes you to your starting module. If you already know your situation:
 
-- "I have an idea, never validated it" → start at **Module 1** (once it ships) or read [Module 0's self-assessment](/blog/course-map-self-assessment-non-technical-founder-2026/) for context
-- "I'm thinking about hiring a dev shop" → read [SOW Reading Clause by Clause](/blog/reading-sow-clause-by-clause/) before signing anything
+- "I have an idea, never validated it" → start at [Module 0 self-assessment](/blog/course-map-self-assessment-non-technical-founder-2026/), then Module 1
+- "I'm thinking about hiring a dev shop" → read [SOW Reading Clause by Clause](/blog/reading-sow-clause-by-clause/) tonight, before signing anything
 - "My team is shipping but I can't tell if it's real" → start at [Three Questions for Standup](/blog/three-questions-turn-standup-into-proof/) tonight, then [Org Chart](/blog/engineering-org-chart-non-technical-founder/) tomorrow
-- "I've been burned" → wait for Module 6 (Sprint 4); for now read [Five Tech Words](/blog/five-tech-words-stop-nodding-at/) to start a vocabulary you can use in the post-mortem
+- "I've been burned" → start at [Salvage or Rebuild](/blog/salvage-vs-rebuild-software-project/), then [Switch Dev Shops Safely](/blog/switch-dev-shops-safely-transition-guide/), then [Ownership Audit](/blog/ownership-checklist/)
 
 ## Free downloadable artifacts
 
