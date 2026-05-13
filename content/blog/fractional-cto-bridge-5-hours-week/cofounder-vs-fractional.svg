@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 580" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+    <marker id="bigArrow" markerWidth="14" markerHeight="14" refX="10" refY="5" orient="auto">
+      <path d="M0,0 L0,10 L12,5 z" fill="#cc342d"/>
+    </marker>
+  </defs>
+  <rect width="920" height="580" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="460" y="40" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">50% co-founder vs Fractional CTO at 5 hrs/wk</text>
+  <text x="460" y="68" font-size="18" text-anchor="middle" fill="#555">Same problem solved. Two completely different commitments.</text>
+
+  <!-- Left: 50% co-founder -->
+  <rect x="40" y="100" width="400" height="420" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="240" y="138" font-size="26" text-anchor="middle" fill="#cc342d" font-weight="bold">Technical co-founder (50%)</text>
+  <text x="240" y="166" font-size="16" text-anchor="middle" fill="#555" font-style="italic">"the dying paradigm"</text>
+
+  <line x1="60" y1="186" x2="420" y2="186" stroke="#cc342d" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <text x="60" y="216" font-size="20" fill="#1a1a1a">- 50% equity. Forever.</text>
+  <text x="60" y="246" font-size="20" fill="#1a1a1a">- 5+ year marriage. No exit clause.</text>
+  <text x="60" y="276" font-size="20" fill="#1a1a1a">- Search takes 6-18 months.</text>
+  <text x="60" y="306" font-size="20" fill="#1a1a1a">- Cannot fire without buy-back drama.</text>
+  <text x="60" y="336" font-size="20" fill="#1a1a1a">- One person, one opinion, no reset.</text>
+  <text x="60" y="366" font-size="20" fill="#1a1a1a">- Vesting, cliff, IP assignment, comms.</text>
+
+  <text x="60" y="412" font-size="18" fill="#444">If equity is worth $10M at exit:</text>
+  <text x="60" y="436" font-size="22" fill="#cc342d" font-weight="bold">cost = $5,000,000</text>
+
+  <text x="240" y="488" font-size="18" text-anchor="middle" fill="#a3621e" font-style="italic">"You did not need a marriage.</text>
+  <text x="240" y="510" font-size="18" text-anchor="middle" fill="#a3621e" font-style="italic">You needed a code reviewer."</text>
+
+  <!-- Right: Fractional CTO -->
+  <rect x="480" y="100" width="400" height="420" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="680" y="138" font-size="26" text-anchor="middle" fill="#7c3aed" font-weight="bold">Fractional CTO (5 hrs/wk)</text>
+  <text x="680" y="166" font-size="16" text-anchor="middle" fill="#555" font-style="italic">"the 2026 default"</text>
+
+  <line x1="500" y1="186" x2="860" y2="186" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <text x="500" y="216" font-size="20" fill="#1a1a1a">- $0 equity. Cash only.</text>
+  <text x="500" y="246" font-size="20" fill="#1a1a1a">- Month-to-month. 30-day notice.</text>
+  <text x="500" y="276" font-size="20" fill="#1a1a1a">- First call this week. Hire by Friday.</text>
+  <text x="500" y="306" font-size="20" fill="#1a1a1a">- Replaceable in 14 days if it stalls.</text>
+  <text x="500" y="336" font-size="20" fill="#1a1a1a">- Has shipped this same call 20+ times.</text>
+  <text x="500" y="366" font-size="20" fill="#1a1a1a">- Standard MSA. No vesting drama.</text>
+
+  <text x="500" y="412" font-size="18" fill="#444">$400-$600/wk × 12 months:</text>
+  <text x="500" y="436" font-size="22" fill="#7c3aed" font-weight="bold">cost = $20,800-$31,200/yr</text>
+
+  <text x="680" y="488" font-size="18" text-anchor="middle" fill="#a3621e" font-style="italic">"5 hours a week is enough</text>
+  <text x="680" y="510" font-size="18" text-anchor="middle" fill="#a3621e" font-style="italic">to keep you out of the rebuild."</text>
+
+  <!-- Bottom red arrow / verdict -->
+  <line x1="240" y1="546" x2="640" y2="546" stroke="#cc342d" stroke-width="3" marker-end="url(#bigArrow)"/>
+  <text x="460" y="572" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold">Same architecture review. Same PR safety. 240× cheaper. Reversible in 30 days.</text>
+</svg>
