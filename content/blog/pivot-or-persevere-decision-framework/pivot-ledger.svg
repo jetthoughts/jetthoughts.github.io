@@ -32,42 +32,42 @@
 
   <!-- Row 1 -->
   <text x="60" y="170" class="row">Customer relationships</text>
-  <text x="280" y="170" class="row">Module 7.2 outreach</text>
+  <text x="280" y="170" class="row">Chapter 7.2 outreach</text>
   <text x="565" y="170" class="keep" text-anchor="middle">YES</text>
   <text x="650" y="170" class="row">Re-pitch new hypothesis</text>
   <line x1="50" y1="185" x2="850" y2="185" class="row-line"/>
 
   <!-- Row 2 -->
   <text x="60" y="215" class="row">Validated problem (survived)</text>
-  <text x="280" y="215" class="row">Module 3.3</text>
+  <text x="280" y="215" class="row">Chapter 3.3</text>
   <text x="565" y="215" class="keep" text-anchor="middle">YES</text>
   <text x="650" y="215" class="row">Carry forward as anchor</text>
   <line x1="50" y1="230" x2="850" y2="230" class="row-line"/>
 
   <!-- Row 3 -->
   <text x="60" y="260" class="row">Disconfirmed problem</text>
-  <text x="280" y="260" class="row">Module 3.2 / 7.5</text>
+  <text x="280" y="260" class="row">Chapter 3.2 / 7.5</text>
   <text x="565" y="260" class="keep" text-anchor="middle">YES (negative)</text>
   <text x="650" y="260" class="row">Add to "do not chase" list</text>
   <line x1="50" y1="275" x2="850" y2="275" class="row-line"/>
 
   <!-- Row 4 -->
   <text x="60" y="305" class="row">Cohort retention numbers</text>
-  <text x="280" y="305" class="row">Module 7.5 floor</text>
+  <text x="280" y="305" class="row">Chapter 7.5 floor</text>
   <text x="565" y="305" class="keep" text-anchor="middle">YES</text>
   <text x="650" y="305" class="row">Baseline for next cohort</text>
   <line x1="50" y1="320" x2="850" y2="320" class="row-line"/>
 
   <!-- Row 5 -->
   <text x="60" y="350" class="row">Hypothesis sentence</text>
-  <text x="280" y="350" class="row">Module 1.1</text>
+  <text x="280" y="350" class="row">Chapter 1.1</text>
   <text x="565" y="350" class="drop" text-anchor="middle">REWRITE</text>
   <text x="650" y="350" class="row">New blanks, same template</text>
   <line x1="50" y1="365" x2="850" y2="365" class="row-line"/>
 
   <!-- Row 6 -->
   <text x="60" y="395" class="row">Landing page copy</text>
-  <text x="280" y="395" class="row">Module 2.1</text>
+  <text x="280" y="395" class="row">Chapter 2.1</text>
   <text x="565" y="395" class="drop" text-anchor="middle">REWRITE</text>
   <text x="650" y="395" class="row">New headline + CTA</text>
   <line x1="50" y1="410" x2="850" y2="410" class="row-line"/>

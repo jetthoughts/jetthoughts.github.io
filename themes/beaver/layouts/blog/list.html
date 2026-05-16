@@ -73,7 +73,7 @@
                   Rails, AI, and the questions burned founders ask before signing again.
                 </p>
 
-                {{ range (.Paginate .Pages.ByDate.Reverse).Pages }}
+                {{ range (.Paginate (where .Pages "Params.course_chapter" "!=" true).ByDate.Reverse).Pages }}
                   <a class="link" href="{{ .RelPermalink }}">
                     <div class="blog-post">
                       <div class="post-image">

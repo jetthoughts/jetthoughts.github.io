@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" font-family="'Caveat','Patrick Hand',cursive">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" font-family='"Segoe UI", system-ui, -apple-system, sans-serif'>
   <defs>
     <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
       <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/>
@@ -9,58 +9,58 @@
   <rect width="920" height="620" fill="#fafaf7"/>
 
   <!-- Title -->
-  <text x="460" y="40" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 4-Way Build-Path Decision Matrix</text>
-  <text x="460" y="68" font-size="20" text-anchor="middle" fill="#555">Pick the smallest path that answers the next question your investors will ask.</text>
+  <text x="460" y="40" font-size="34" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 4-Way Build-Path Decision Matrix</text>
+  <text x="460" y="66" font-size="20" text-anchor="middle" fill="#555">Pick the smallest path that answers the next question your investors will ask.</text>
 
   <!-- Axis labels -->
-  <text x="460" y="100" font-size="20" text-anchor="middle" fill="#333">↑ more validated · less validated ↓</text>
-  <text x="20" y="345" font-size="20" text-anchor="middle" fill="#333" transform="rotate(-90 20 345)">← simpler build · backend-heavier build →</text>
+  <text x="460" y="96" font-size="20" text-anchor="middle" fill="#333">more validated above - less validated below</text>
+  <text x="18" y="345" font-size="20" text-anchor="middle" fill="#333" transform="rotate(-90 18 345)">simpler build - backend-heavier build</text>
 
   <!-- Quadrant frames -->
   <!-- Top left: Validate without code -->
-  <rect x="60" y="120" width="400" height="220" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough)"/>
-  <text x="80" y="150" font-size="24" fill="#bf8a00" font-weight="bold">1. Validate without code</text>
-  <text x="80" y="178" font-size="18" fill="#1a1a1a">When: no MVP. Single hypothesis untested.</text>
-  <text x="80" y="200" font-size="18" fill="#1a1a1a">First action: post a Carrd page + Stripe link.</text>
-  <text x="80" y="222" font-size="18" fill="#1a1a1a">Cost: $0 - $300. Timeline: 1 week.</text>
-  <text x="80" y="244" font-size="18" fill="#1a1a1a">Failure mode: 0 buyers. Pivot before you build.</text>
-  <text x="80" y="282" font-size="18" fill="#444">Tools: Carrd, Stripe, Notion, Lovable demo,</text>
-  <text x="80" y="304" font-size="18" fill="#444">Calendly, 1 paid LinkedIn ad ($100-200).</text>
-  <text x="80" y="326" font-size="18" fill="#a3621e" font-style="italic">"Sell the solution before you build it."</text>
+  <rect x="60" y="116" width="400" height="220" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="80" y="146" font-size="24" fill="#bf8a00" font-weight="bold">1. Validate without code</text>
+  <text x="80" y="172" font-size="20" fill="#1a1a1a">When: no MVP. Single hypothesis untested.</text>
+  <text x="80" y="194" font-size="20" fill="#1a1a1a">First action: post a Carrd page + Stripe link.</text>
+  <text x="80" y="216" font-size="20" fill="#1a1a1a">Cost: $0-$300. Timeline: 1 week.</text>
+  <text x="80" y="238" font-size="20" fill="#1a1a1a">Failure mode: 0 buyers. Pivot before you build.</text>
+  <text x="80" y="272" font-size="20" fill="#444">Tools: Carrd, Stripe, Notion, Lovable demo,</text>
+  <text x="80" y="292" font-size="20" fill="#444">Calendly, 1 paid LinkedIn ad ($100-200).</text>
+  <text x="80" y="316" font-size="18" fill="#a3621e" font-style="italic">"Sell the solution before you build it."</text>
 
   <!-- Top right: Self-serve build -->
-  <rect x="480" y="120" width="400" height="220" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough)"/>
-  <text x="500" y="150" font-size="24" fill="#2e7d32" font-weight="bold">2. Self-serve build (Module 4A)</text>
-  <text x="500" y="178" font-size="18" fill="#1a1a1a">When: validated. Simple MVP. 4-8 weeks free.</text>
-  <text x="500" y="200" font-size="18" fill="#1a1a1a">First action: paste Vibe PRD into Lovable.</text>
-  <text x="500" y="222" font-size="18" fill="#1a1a1a">Cost: $200-$1,200/mo. Timeline: 6-12 weeks.</text>
-  <text x="500" y="244" font-size="18" fill="#1a1a1a">Failure mode: hits ceiling at 5K users.</text>
-  <text x="500" y="282" font-size="18" fill="#444">Tools: Lovable + Supabase + Stripe.</text>
-  <text x="500" y="304" font-size="18" fill="#444">Architecture review: 1 hour/month with</text>
-  <text x="500" y="326" font-size="18" fill="#a3621e" font-style="italic">a senior engineer in your network.</text>
+  <rect x="480" y="116" width="400" height="220" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="500" y="146" font-size="24" fill="#2e7d32" font-weight="bold">2. Self-serve build (Module 4A)</text>
+  <text x="500" y="172" font-size="20" fill="#1a1a1a">When: validated. Simple MVP. 4-8 weeks free.</text>
+  <text x="500" y="194" font-size="20" fill="#1a1a1a">First action: paste Vibe PRD into Lovable.</text>
+  <text x="500" y="216" font-size="20" fill="#1a1a1a">Cost: $200-$1,200/mo. Timeline: 6-12 weeks.</text>
+  <text x="500" y="238" font-size="20" fill="#1a1a1a">Failure mode: hits ceiling at 5K users.</text>
+  <text x="500" y="272" font-size="20" fill="#444">Tools: Lovable + Supabase + Stripe.</text>
+  <text x="500" y="292" font-size="20" fill="#444">Architecture review: 1 hour/month with</text>
+  <text x="500" y="316" font-size="18" fill="#a3621e" font-style="italic">a senior engineer in your network.</text>
 
   <!-- Bottom left: Fractional CTO bridge -->
-  <rect x="60" y="360" width="400" height="220" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#rough)"/>
-  <text x="80" y="390" font-size="24" fill="#7c3aed" font-weight="bold">3. Fractional CTO bridge (Module 3.2)</text>
-  <text x="80" y="418" font-size="18" fill="#1a1a1a">When: validated. Mid complexity. No $200K+.</text>
-  <text x="80" y="440" font-size="18" fill="#1a1a1a">First action: hire 5 hrs/wk Fractional CTO.</text>
-  <text x="80" y="462" font-size="18" fill="#1a1a1a">Cost: $1,600 - $4,000/mo. Timeline: 8-16 wks.</text>
-  <text x="80" y="484" font-size="18" fill="#1a1a1a">Failure mode: CTO becomes a coder, not a guard.</text>
-  <text x="80" y="522" font-size="18" fill="#444">Use them for: architecture review, PR review,</text>
-  <text x="80" y="544" font-size="18" fill="#444">interviewing your first hire, watching costs.</text>
-  <text x="80" y="566" font-size="18" fill="#a3621e" font-style="italic">$0 equity. Beats a 50%-equity cofounder.</text>
+  <rect x="60" y="356" width="400" height="220" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="80" y="386" font-size="24" fill="#7c3aed" font-weight="bold">3. Fractional CTO bridge</text>
+  <text x="80" y="412" font-size="20" fill="#1a1a1a">When: validated. Mid complexity. No $200K+.</text>
+  <text x="80" y="434" font-size="20" fill="#1a1a1a">First action: hire 5 hrs/wk Fractional CTO.</text>
+  <text x="80" y="456" font-size="20" fill="#1a1a1a">Cost: $1,600-$4,000/mo. Timeline: 8-16 wks.</text>
+  <text x="80" y="478" font-size="20" fill="#1a1a1a">Failure mode: CTO becomes a coder, not a guard.</text>
+  <text x="80" y="510" font-size="20" fill="#444">Use them for: architecture review, PR review,</text>
+  <text x="80" y="530" font-size="20" fill="#444">interviewing your first hire, watching costs.</text>
+  <text x="80" y="558" font-size="18" fill="#a3621e" font-style="italic">$0 equity. Beats a 50%-equity cofounder.</text>
 
   <!-- Bottom right: Hire a team -->
-  <rect x="480" y="360" width="400" height="220" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
-  <text x="500" y="390" font-size="24" fill="#cc342d" font-weight="bold">4. Hire a team (Module 4B)</text>
-  <text x="500" y="418" font-size="18" fill="#1a1a1a">When: backend-heavy. Integrations. Compliance.</text>
-  <text x="500" y="440" font-size="18" fill="#1a1a1a">First action: read SOW clause-by-clause.</text>
-  <text x="500" y="462" font-size="18" fill="#1a1a1a">Cost: $30K - $80K/mo. Timeline: 12-26 weeks.</text>
-  <text x="500" y="484" font-size="18" fill="#1a1a1a">Failure mode: spaceship for the wrong moon.</text>
-  <text x="500" y="522" font-size="18" fill="#444">Stack: Rails / Django / Laravel.</text>
-  <text x="500" y="544" font-size="18" fill="#444">Own: GitHub org, AWS root, domain registrar.</text>
-  <text x="500" y="566" font-size="18" fill="#a3621e" font-style="italic">Friday demos start day one.</text>
+  <rect x="480" y="356" width="400" height="220" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="500" y="386" font-size="24" fill="#cc342d" font-weight="bold">4. Hire a team (Module 4B)</text>
+  <text x="500" y="412" font-size="20" fill="#1a1a1a">When: backend-heavy. Integrations. Compliance.</text>
+  <text x="500" y="434" font-size="20" fill="#1a1a1a">First action: read SOW clause-by-clause.</text>
+  <text x="500" y="456" font-size="20" fill="#1a1a1a">Cost: $30K-$80K/mo. Timeline: 12-26 weeks.</text>
+  <text x="500" y="478" font-size="20" fill="#1a1a1a">Failure mode: spaceship for the wrong moon.</text>
+  <text x="500" y="510" font-size="20" fill="#444">Stack: Rails / Django / Laravel.</text>
+  <text x="500" y="530" font-size="20" fill="#444">Own: GitHub org, AWS root, domain registrar.</text>
+  <text x="500" y="558" font-size="18" fill="#a3621e" font-style="italic">Friday demos start day one.</text>
 
   <!-- Footer note -->
-  <text x="460" y="610" font-size="16" text-anchor="middle" fill="#666" font-style="italic">Most pre-seed founders belong in box 1 or 2. Most who hire belonged in box 3.</text>
+  <text x="460" y="604" font-size="18" text-anchor="middle" fill="#666" font-style="italic">Most pre-seed founders belong in box 1 or 2. Most who hire belonged in box 3.</text>
 </svg>

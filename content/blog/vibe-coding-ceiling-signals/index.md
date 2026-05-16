@@ -1,8 +1,9 @@
 ---
-title: "6A.2 · Vibe Coding Done Right: 5 Ceiling Signals"
-description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Module 6A.2 of the course."
-date: 2026-09-02
+title: "5.4 · Vibe Coding Done Right: 5 Ceiling Signals"
+description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 5.4 of the course."
+date: 2026-05-13
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: vibe-coding-ceiling-signals
 keywords:
@@ -21,19 +22,21 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "6A.2 · Vibe Coding Done Right: 5 Ceiling Signals"
-  og_description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Module 6A.2 of the course."
+  og_title: "5.4 · Vibe Coding Done Right: 5 Ceiling Signals"
+  og_description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 5.4 of the course."
 cover_image_alt: "JetThoughts cover with three hand-drawn buildings - a small shed, a two-story house, and a tall skyscraper - and a sticky note reading Two ceiling signals = graduate."
 canonical_url: "https://jetthoughts.com/blog/vibe-coding-ceiling-signals/"
 related_posts: false
 ---
 
-> **Module 6A · Step 2 of 2** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
-> Input: a live MVP on the self-serve stack (from Module 6A.1). Output: a yes/no decision on whether to graduate to Module 6B (hire) or stay self-serve.
+> **Module 5 · Step 4 of 4** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> Input: a live MVP on the self-serve stack (from Chapter 5.3). Output: a yes/no decision on whether to graduate to Module 6 (First Paying Customer) or hire or stay self-serve.
 
 Starting at Week 2 of your build, run this 5-signal check monthly. Each signal that fires earlier saves weeks later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
 
-Tuesday morning. Your Lovable app is live. 47 paying users. The dashboard takes 11 seconds to load on a coach with 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates. Two of your users keep landing on each other's data because the Supabase row-level security drifted last week when a contractor patched the check-in form. The ceiling is visible - but it was visible two months earlier too, which is when this check should have caught it.
+Tuesday morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $20/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
+
+Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month). The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
 
 ![A hand-drawn scoreboard showing the 5 architectural ceiling signals: data model, real-time, auth complexity, AI cost, compliance. Each row has the visible symptom and the recommended action.](signals-scoreboard.svg)
 
@@ -67,17 +70,17 @@ Each signal has the same shape: a visible symptom you can see in your dashboard 
 
 ### Signal 3: Real-time features becoming non-negotiable (detectable: Week 4-8)
 
-**What you see**: two team members open the same client record on the dashboard. One adds a note. The other adds a different note. Whoever clicks save second wins. The first note is gone. Or: a coach's client list shows 8 active clients, the coach refreshes, now it shows 6 because two trainers were viewing in parallel and the cache went stale. Your Slack fills with "the app is acting weird again."
+**What you see**: two coaches open the same client record. One adds a note. The other adds a note. Whoever saves second wins - the first note is gone. Your Slack fills with "the app is acting weird again." A wellness platform we talked to in late 2025 was getting 4-5 of these support tickets per week. The founder had patched the same save-collision bug three times. Each patch changed the behavior without fixing the architecture underneath.
 
-**What is happening underneath**: the Lovable + Supabase REST loop is request-response. Every screen reads on load and writes on submit. Real-time presence (live cursors, typing indicators), collaborative editing, websockets-driven dashboards, and live-updating client feeds are not what auto-generated REST endpoints serve well. Supabase has a Realtime product, but wiring it into a Lovable-generated frontend that was never designed around subscriptions is a rebuild of every screen the feature touches.
+**What is happening underneath**: the Lovable + Supabase REST loop is request-response: every screen reads on load and writes on submit. Real-time presence, collaborative editing, and live-updating feeds are not what auto-generated REST endpoints serve. Supabase does have a Realtime product, but wiring it into a Lovable-generated frontend that was never designed around subscriptions means rebuilding every screen the feature touches.
 
-**Cost of leaving it alone**: the support ticket volume becomes the product. Customers churn because the app feels unreliable even when no individual bug is consistently reproducible.
+**Cost of leaving it alone**: the save-collision bug becomes a churn driver inside three months. Customers who collaborate (coaches sharing clients, teams sharing accounts) lose work weekly. Each ticket costs you an hour of founder time and erodes the trust that brought the user in. By the time real-time becomes a deal-breaker for a $30K customer, the rebuild estimate is the same - you just spent six months patching first.
 
-**Cost of addressing now**: this is a hire-a-team graduation, not a Fractional CTO bridge. Real-time done right needs an engineer who has shipped Action Cable on Rails or Channels on Django and knows the queue, broadcast, and reconnection edge cases. The [SOW reading guide](/blog/hire-track-supplementary-reference/#reading-the-sow) walks the contract. Estimated rebuild on Rails: 6 to 10 weeks for one senior + one mid engineer.
+**Cost of addressing now**: this signal routes directly to a hire-a-team decision, not a Fractional CTO bridge. Real-time done right needs an engineer who has shipped Action Cable on Rails or Channels on Django and knows the queue, broadcast, and reconnection edge cases. The [SOW reading guide](/blog/hire-track-supplementary-reference/#reading-the-sow) walks the contract. Estimated rebuild on Rails: 6 to 10 weeks for one senior + one mid engineer.
 
 ### Signal 4: Auth complexity passing the email + OAuth ceiling (detectable: Week 6-10)
 
-**What you see**: an enterprise prospect asks: "do you support SAML SSO with our Okta tenant, with role-based access where managers see their direct reports' data but not the whole organization, and an audit log of every read?" You answer yes because the deal is $50K ARR. You then realize Supabase RLS does not model that role hierarchy without writing your own policy DSL on top.
+**What you see**: an enterprise prospect asks: "do you support SAML SSO with our Okta tenant, with role-based access where managers see their direct reports' data but not the whole organization, and an audit log of every read?" You answer yes because the deal is $50K ARR. You then realize Supabase RLS does not model that role hierarchy without writing your own policy DSL on top. A B2B HR tools founder we spoke with in February 2026 answered yes to exactly this question, spent 6 weeks building a workaround in Supabase, shipped it to the customer, and watched their security team find a read-through gap in the policy on week 2. The contract had a data-handling clause. The workaround had not been reviewed by anyone with security experience.
 
 **What is happening underneath**: Supabase's row-level security is excellent for "user X can only read rows where user_id = X." It strains under role matrices (manager-reads-team, admin-reads-org, super-admin-reads-everything), multi-tenant isolation across an organization, SAML federation, and audit trails. Each of those needs first-class engineering, not a configurable policy.
 
@@ -91,15 +94,15 @@ Each signal has the same shape: a visible symptom you can see in your dashboard 
 
 **What is happening underneath**: compliance is mostly process plus a small amount of code. The process is documented data flow, access logs, encryption at rest and in transit, vulnerability disclosure, vendor reviews. The code is the implementation underneath. A Lovable + Supabase stack passes some checks (Supabase encrypts at rest, Stripe handles PCI-sensitive paths) and misses others (no audit log, no documented data lifecycle, no senior engineer to sign the security policy). The auditor needs a person to ask "show me how you decommission a leaver's access" and a non-technical founder cannot answer that question alone.
 
-**Cost of leaving it alone**: you pass on the deal. Or worse, you sign the deal and ship a workaround, which becomes the breach narrative when the customer's auditor finds it 11 months later.
+**Cost of leaving it alone**: you either pass on the deal or sign it with a workaround, which becomes the breach narrative when the customer's auditor finds it 11 months in.
 
-**Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal. Vanta, Drata, and Secureframe automate the SOC2 paperwork; the engineering work underneath them is real and needs an architect from day one. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
+**Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal. Vanta, Drata, and Secureframe automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
 
 ## Shed → House → Skyscraper
 
 ![A hand-drawn progression of three buildings: a small shed labeled Lovable + Supabase + Stripe, a two-story house labeled Fractional CTO + 1-2 engineers on Rails / Django / Laravel, and a tall skyscraper labeled Hired team with SOC2 and HIPAA. Arrows between them mark the ceiling-signal moments.](shed-house-skyscraper.svg)
 
-[Rob Walling's shed analogy](https://podcast.creatorscience.com/rob-walling/) from [Should You Hire?](/blog/should-you-hire-2026-decision-tree/) is the right map. The shed holds one workflow, one persona, one happy path. The house adds a second story (a second workflow, a second persona, a real data model) and needs a structural engineer to plan the load. The skyscraper (compliance-bound, multi-tenant, real-time, AI-heavy) needs a hired engineering team and an architect from day one. The shed never converts to a skyscraper. The skyscraper is a different building.
+[Rob Walling's shed analogy](https://podcast.creatorscience.com/rob-walling/) from [Should You Hire?](/blog/should-you-hire-2026-decision-tree/) is the right map. A shed holds one workflow with one persona moving down a single happy path. Add a second story (a second workflow, a second persona, a real data model) and you have a house that needs a structural engineer to plan the load. A skyscraper - compliance-bound, multi-tenant, real-time, AI-heavy - needs a hired engineering team and an architect from day one. You can't add ten more floors to a shed. When the load requires a skyscraper, you start a new building.
 
 ## The decision: stay self-serve or graduate
 
@@ -112,8 +115,8 @@ flowchart TD
     Q1{"Q1: Has any signal been<br/>firing for 4+ weeks?"}
     Q2{"Q2: Is your runway<br/>&gt; 6 months from today?"}
     Stay["STAY SELF-SERVE<br/>Keep shipping on the shed.<br/>Re-score every 2 weeks."]
-    Bridge["GRADUATE TO MODULE 6B.2<br/>Fractional CTO bridge<br/>(5 hours / week, ~$8-15K / mo)"]
-    Hire["GRADUATE TO MODULE 6B<br/>Hire 1-2 engineers on Rails /<br/>Django / Laravel. SOW signed<br/>before kickoff."]
+    Bridge["GRADUATE: BRIDGE<br/>Fractional CTO<br/>(5 hours / week, ~$8-15K / mo)"]
+    Hire["GRADUATE: HIRE A TEAM<br/>1-2 engineers on Rails /<br/>Django / Laravel. SOW signed<br/>before kickoff."]
 
     Start --> Q1
     Q1 -- "No" --> Stay
@@ -139,7 +142,7 @@ Q1 Yes + Q2 Yes: graduate to the hire-a-team path. You have the runway to scope,
 
 Q1 Yes + Q2 No: graduate to the [Fractional CTO bridge](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge). Five hours a week of senior eyes for the next two to three months while you raise or grow into the runway needed for a hire. The [Salvage vs Rebuild decision tree](/blog/salvage-vs-rebuild-decision-tree/) tells you which signal-firing pieces salvage and which the Fractional CTO triages first.
 
-> Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Either hire (6B) if you have runway, or bridge with a Fractional CTO (6B.2) until you do. Both beat watching the codebase get worse.
+> Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Either hire a team if you have runway, or bridge with a Fractional CTO until you do. Both beat watching the codebase get worse.
 
 ## What to do tomorrow
 
@@ -149,17 +152,13 @@ Three actions. The first is tonight.
 - **Score each of the 5 signals: green / yellow / red.** Use the scoreboard above. Green = no symptom yet. Yellow = symptom showing in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Be honest. Founders who score themselves green when the symptoms are firing are the founders who post in the [salvage-or-rebuild thread](/blog/salvage-vs-rebuild-decision-tree/) at month nine.
 - **If 2 or more signals are red, start the [Fractional CTO bridge](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The Fractional CTO conversation is one Calendly invite away and the first call is usually free. The bridge holds until you have the runway clarity for a full hire.
 
-## When 2+ signals fire
-
-If 2+ signals fire in one monthly check, the self-serve path is ending. Switch to the [hire-track supplementary reference](/blog/hire-track-supplementary-reference/) for where to find developers, the Fractional CTO bridge, and SOW reading. The default ends here; the hired team takes over.
-
 ## Further reading
 
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed-vs-skyscraper analogy that frames every architectural ceiling decision. 35-minute listen.
 - DHH, [The One-Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the production rebuild small enough that one engineer can operate end-to-end.
-- Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. The data behind why ceiling signal 5 fires.
-- Supabase, [Realtime documentation](https://supabase.com/docs/guides/realtime) and [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security) - the official boundary between what Supabase serves well and where ceiling signals 2 and 3 begin.
-- OpenAI, [Rate limits documentation](https://platform.openai.com/docs/guides/rate-limits) - the per-tier request and token caps that drive ceiling signal 4 once your traffic crosses a threshold.
+- Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. The data behind why the compliance signal fires.
+- Supabase, [Realtime documentation](https://supabase.com/docs/guides/realtime) and [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security) - the official boundary between what Supabase serves well and where the data-model and real-time signals begin.
+- OpenAI, [Rate limits documentation](https://platform.openai.com/docs/guides/rate-limits) - the per-tier request and token caps that drive the AI-inference signal once your traffic crosses a threshold.
 - Vanta, [SOC2 readiness for early-stage SaaS](https://www.vanta.com/resources/soc-2-compliance-checklist) - the audit-surface checklist most founders see for the first time when their first enterprise customer asks for a SOC2 letter.
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder. Read before any framework decision.
 

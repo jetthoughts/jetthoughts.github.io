@@ -2,68 +2,68 @@
   <title id="email-title">Bad vs Good: contractor email on the AWS root account compared with the founder's company email on the same account</title>
   <defs>
     <style>
-      .panel-title  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
-      .label        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #444; font-weight: 600; }
-      .value-mono   { font-family: "JetBrains Mono", "Menlo", monospace; font-size: 17px; fill: #1a1a1a; }
-      .badge-bad    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #fff; font-weight: 700; }
-      .badge-good   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #fff; font-weight: 700; }
-      .caption      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #666; font-style: italic; }
-      .header       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
-      .bad-box      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.8; stroke-linejoin: round; }
-      .good-box     { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.8; stroke-linejoin: round; }
+      .panel-title  { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 24px; fill: #1a1a1a; font-weight: 700; }
+      .label        { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 15px; fill: #444; font-weight: 600; }
+      .value-mono   { font-family: "JetBrains Mono", "Menlo", monospace; font-size: 16px; fill: #1a1a1a; }
+      .badge-bad    { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 17px; fill: #fff; font-weight: 700; }
+      .badge-good   { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 17px; fill: #fff; font-weight: 700; }
+      .caption      { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 15px; fill: #666; font-style: italic; }
+      .header       { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .bad-box      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; }
+      .good-box     { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
       .pill-bad     { fill: #cc342d; }
       .pill-good    { fill: #2e7d32; }
       .row-line     { stroke: #ccc; stroke-width: 1.2; stroke-dasharray: 3 3; }
     </style>
   </defs>
 
-  <text x="500" y="42" class="header" text-anchor="middle">AWS root account · who owns the email?</text>
+  <text x="500" y="40" class="header" text-anchor="middle">AWS root account - who owns the email?</text>
 
   <!-- BAD panel -->
-  <rect x="50" y="80" width="430" height="380" rx="14" class="bad-box" transform="rotate(-0.3 265 270)"/>
-  <rect x="70" y="95" width="100" height="28" rx="8" class="pill-bad"/>
-  <text x="120" y="115" class="badge-bad" text-anchor="middle">BAD</text>
-  <text x="190" y="118" class="panel-title">Hostage situation</text>
+  <rect x="50" y="72" width="430" height="390" rx="12" class="bad-box" transform="rotate(-0.3 265 267)"/>
+  <rect x="70" y="88" width="100" height="28" rx="8" class="pill-bad"/>
+  <text x="120" y="108" class="badge-bad" text-anchor="middle">BAD</text>
+  <text x="190" y="112" class="panel-title">Hostage situation</text>
 
-  <text x="70" y="160" class="label">Account email</text>
-  <text x="70" y="185" class="value-mono">aws@bigdevshop.com</text>
-  <line x1="70" y1="205" x2="450" y2="205" class="row-line"/>
+  <text x="70" y="154" class="label">Account email</text>
+  <text x="70" y="178" class="value-mono">aws@bigdevshop.com</text>
+  <line x1="70" y1="196" x2="450" y2="196" class="row-line"/>
 
-  <text x="70" y="232" class="label">Billing card</text>
-  <text x="70" y="257" class="value-mono">**** 4421 (agency AmEx)</text>
-  <line x1="70" y1="277" x2="450" y2="277" class="row-line"/>
+  <text x="70" y="222" class="label">Billing card</text>
+  <text x="70" y="246" class="value-mono">**** 4421 (agency AmEx)</text>
+  <line x1="70" y1="264" x2="450" y2="264" class="row-line"/>
 
-  <text x="70" y="304" class="label">Your access</text>
-  <text x="70" y="329" class="value-mono">IAM user, never logged into root</text>
-  <line x1="70" y1="349" x2="450" y2="349" class="row-line"/>
+  <text x="70" y="290" class="label">Your access</text>
+  <text x="70" y="314" class="value-mono">IAM user, never logged into root</text>
+  <line x1="70" y1="332" x2="450" y2="332" class="row-line"/>
 
-  <text x="70" y="376" class="label">Recovery if they ghost</text>
-  <text x="70" y="401" class="caption">10 minutes for them to lock you out.</text>
-  <text x="70" y="423" class="caption">3-5 business days for AWS support to</text>
-  <text x="70" y="445" class="caption">recover with incorporation papers.</text>
+  <text x="70" y="358" class="label">Recovery if they ghost</text>
+  <text x="70" y="382" class="caption">10 minutes for them to lock you out.</text>
+  <text x="70" y="402" class="caption">3-5 business days for AWS support to</text>
+  <text x="70" y="422" class="caption">recover with incorporation papers.</text>
 
   <!-- GOOD panel -->
-  <rect x="520" y="80" width="430" height="380" rx="14" class="good-box" transform="rotate(0.4 735 270)"/>
-  <rect x="540" y="95" width="100" height="28" rx="8" class="pill-good"/>
-  <text x="590" y="115" class="badge-good" text-anchor="middle">GOOD</text>
-  <text x="660" y="118" class="panel-title">You hold the keys</text>
+  <rect x="520" y="72" width="430" height="390" rx="12" class="good-box" transform="rotate(0.4 735 267)"/>
+  <rect x="540" y="88" width="100" height="28" rx="8" class="pill-good"/>
+  <text x="590" y="108" class="badge-good" text-anchor="middle">GOOD</text>
+  <text x="660" y="112" class="panel-title">You hold the keys</text>
 
-  <text x="540" y="160" class="label">Account email</text>
-  <text x="540" y="185" class="value-mono">aws@yourcompany.com</text>
-  <line x1="540" y1="205" x2="920" y2="205" class="row-line"/>
+  <text x="540" y="154" class="label">Account email</text>
+  <text x="540" y="178" class="value-mono">aws@yourcompany.com</text>
+  <line x1="540" y1="196" x2="920" y2="196" class="row-line"/>
 
-  <text x="540" y="232" class="label">Billing card</text>
-  <text x="540" y="257" class="value-mono">**** 0987 (your company AmEx)</text>
-  <line x1="540" y1="277" x2="920" y2="277" class="row-line"/>
+  <text x="540" y="222" class="label">Billing card</text>
+  <text x="540" y="246" class="value-mono">**** 0987 (your company AmEx)</text>
+  <line x1="540" y1="264" x2="920" y2="264" class="row-line"/>
 
-  <text x="540" y="304" class="label">Your access</text>
-  <text x="540" y="329" class="value-mono">Root password in 1Password + MFA</text>
-  <line x1="540" y1="349" x2="920" y2="349" class="row-line"/>
+  <text x="540" y="290" class="label">Your access</text>
+  <text x="540" y="314" class="value-mono">Root password in 1Password + MFA</text>
+  <line x1="540" y1="332" x2="920" y2="332" class="row-line"/>
 
-  <text x="540" y="376" class="label">Recovery if they ghost</text>
-  <text x="540" y="401" class="caption">Revoke their IAM user. Rotate the</text>
-  <text x="540" y="423" class="caption">root password. Ship a hotfix the same</text>
-  <text x="540" y="445" class="caption">afternoon. They never had the key.</text>
+  <text x="540" y="358" class="label">Recovery if they ghost</text>
+  <text x="540" y="382" class="caption">Revoke their IAM user. Rotate the</text>
+  <text x="540" y="402" class="caption">root password. Ship a hotfix the same</text>
+  <text x="540" y="422" class="caption">afternoon. They never had the key.</text>
 
   <text x="500" y="500" class="caption" text-anchor="middle">Same account. Same software. One field changes. Everything downstream changes with it.</text>
 </svg>

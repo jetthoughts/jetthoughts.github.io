@@ -1,8 +1,9 @@
 ---
 title: "Build Path Decision Worksheet"
 description: "5 questions that route a non-technical founder to one of 4 build paths. 30-minute decision, defensible to investors."
-date: 2026-08-12
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: build-path-decision-worksheet
 keywords:
@@ -30,11 +31,13 @@ related_posts: false
 
 ## Why this exists
 
-A wellness-coaching founder we picked up in Q1 2026 had spent four months building a Lovable MVP, then panicked and signed a $24K-per-month agency contract because three advisors told her "you need a real team now." Two of the advisors had never seen her validation data. The third had not asked. She showed us the contract on a Tuesday. By Friday we had walked her through the same 5 questions on this worksheet and the matrix said Path 3 (Fractional CTO at $2,400/mo, 8 hours/week), not Path 4 (the agency at $24K/mo). She paid the agency a kill fee and saved 14 months of runway. The decision was already in the data she had. The advisors had not run the worksheet. Cheaper to spend 30 minutes with this page than to spend a quarter undoing a contract somebody else's instinct signed for you.
+A wellness-coaching founder we picked up in Q1 2026 had spent four months building a Lovable MVP, then panicked and signed a $24K-per-month agency contract because three advisors told her "you need a real team now." Two of the advisors had never seen her validation data. The third had not asked.
+
+She showed us the contract on a Tuesday. By Friday we had walked her through the same 5 questions on this worksheet and the matrix said Path 3 (Fractional CTO at $2,400/mo, 8 hours/week), not Path 4 (the agency at $24K/mo). She paid the agency a kill fee and saved 14 months of runway. The decision was already in the data she had. The advisors had not run the worksheet. Cheaper to spend 30 minutes with this page than to spend a quarter undoing a contract somebody else's instinct signed for you.
 
 ## How to use this
 
-Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/blog/validated-problem-statement-template/) from Module 3.3, your filled-in [Vibe PRD](/blog/vibe-prd-template/) from Module 4.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
+Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/blog/validated-problem-statement-template/) from Chapter 3.3, your filled-in [Vibe PRD](/blog/vibe-prd-template/) from Chapter 4.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
 
 Answer the five questions in order. Each one is factual, not aspirational. "Number of paying pre-orders" is a count from your Stripe dashboard, not a vibe. "Months of runway" is cash on hand divided by monthly burn, not a guess. The matrix at the bottom routes you to Path 1, 2, 3, or 4 based on the five answers.
 
@@ -52,7 +55,11 @@ Founder: _________________  Date: ____________________
 Vibe PRD signed by 2 advisors on: ____________________
 
 Months of runway in the bank: ________________________
+```
 
+### Q1: Is the problem validated?
+
+```
 ------------------------------------------------------
 Q1. Is the problem validated?
 ------------------------------------------------------
@@ -73,7 +80,11 @@ If NO -> stop here. Path 1 (Validate without code).
         Run the Airbnb test this week.
 
 If YES -> go to Q2.
+```
 
+### Q2: How backend-heavy is the build?
+
+```
 ------------------------------------------------------
 Q2. How backend-heavy is the build?
 ------------------------------------------------------
@@ -92,11 +103,15 @@ VERDICT:
  [ ] 2-3 boxes checked   = MID backend
  [ ] 4 or more checked   = HEAVY backend
 
-If HEAVY -> Path 4 (Hire a team / Module 6B).
+If HEAVY -> Path 4 (Hire a team - see [hire-track reference](/blog/hire-track-supplementary-reference/)).
             Read the SOW guide before kickoff.
 
 If LIGHT or MID -> go to Q3.
+```
 
+### Q3: What is your runway?
+
+```
 ------------------------------------------------------
 Q3. What is your runway?
 ------------------------------------------------------
@@ -115,7 +130,11 @@ If LESS THAN 4 -> Path 1 (Validate without code),
 If 4 TO 12 -> Paths 2, 3 are on the table. Go to Q4.
 
 If 12+ -> Paths 2, 3, 4 are on the table. Go to Q4.
+```
 
+### Q4: What is your monthly engineering budget?
+
+```
 ------------------------------------------------------
 Q4. What is your monthly engineering budget?
 ------------------------------------------------------
@@ -127,7 +146,7 @@ Money you can commit for at least 6 months:
  [ ] $5,000 to $30,000/mo (small team band)
  [ ] $30,000+ /mo (multi-person team band)
 
-If $0-$400 -> Path 2 (Self-serve / Module 6A).
+If $0-$400 -> Path 2 (Self-serve / Module 5).
               Paste Vibe PRD into Lovable.
 
 If $1.6K-$4K -> go to Q5.
@@ -135,8 +154,12 @@ If $1.6K-$4K -> go to Q5.
 If $5K-$30K -> Path 3 (Fractional CTO) until problem
                complexity demands more.
 
-If $30K+ -> Path 4 (Hire a team / Module 6B).
+If $30K+ -> Path 4 (Hire a team - see [hire-track reference](/blog/hire-track-supplementary-reference/)).
+```
 
+### Q5: Senior engineer in your network for 1 hour of architecture review per month?
+
+```
 ------------------------------------------------------
 Q5. Senior engineer in your network for 1 hour
     of architecture review per month?
@@ -148,11 +171,11 @@ Has shipped a backend at scale in the last 5 years.
  [ ] Yes, named: ___________________________________
  [ ] No
 
-If YES -> Path 2 (Self-serve / Module 6A).
+If YES -> Path 2 (Self-serve / Module 5).
           Use them for the monthly architecture call
           + worst-route code review.
 
-If NO -> Path 3 (Fractional CTO bridge / Module 6B.2).
+If NO -> Path 3 (Fractional CTO bridge).
          Buy the same insurance commercially.
 
 ======================================================
@@ -163,12 +186,18 @@ your Notion doc)
 
 ## The 4-path verdict table
 
-| Path | Choose when | First action this week | Cost | Failure mode |
-|---|---|---|---|---|
-| **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to 35 ICP prospects. | $0 - $300 in tools + optional $100-200 in paid ads | 0 of 35 click. Pivot the pitch or the problem. |
-| **2. Self-serve build (6A)** | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste Vibe PRD into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month | Hits architectural ceiling at ~5K users. Route to 6B for next layer. |
-| **3. Fractional CTO bridge (5.2)** | Q1 yes, Q2 mid, Q4 = $1.6K-$4K/mo OR Q5 = no senior eng | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month | CTO drifts into coder. 90-day review on hour allocation. |
-| **4. Hire a team (6B)** | Q1 yes, Q2 heavy, Q4 = $5K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month | Spaceship for the wrong moon. Friday demo + Org Chart audit catch it in week 3. |
+| Path | Choose when | First action this week | Cost |
+|---|---|---|---|
+| **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to 35 ICP prospects. | $0 - $300 in tools + optional $100-200 in paid ads |
+| **2. Self-serve build (6A)** | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste Vibe PRD into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
+| **3. Fractional CTO bridge (5.2)** | Q1 yes, Q2 mid, Q4 = $1.6K-$4K/mo OR Q5 = no senior eng | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
+| **4. Hire a team (6B)** | Q1 yes, Q2 heavy, Q4 = $5K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
+
+**Failure mode to watch for each path** ->
+- Path 1 -> 0 of 35 click. Pivot the pitch or the problem.
+- Path 2 -> Hits architectural ceiling at ~5K users. Route to 6B for next layer.
+- Path 3 -> CTO drifts into coder. 90-day review on hour allocation.
+- Path 4 -> Spaceship for the wrong moon. Friday demo + Org Chart audit catch it in week 3.
 
 ## What good looks like vs what bad looks like
 

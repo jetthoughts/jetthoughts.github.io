@@ -87,14 +87,14 @@ You can hand any of these to an investor or a co-founder and answer their questi
 *Output: Smoke-test landing page WITH Stripe price button live. (1 hr)*
 *Start here if you have a hypothesis but never tested demand with a landing page + 300+ cold visits.*
 - [Smoke-Test the Hypothesis: the $300-$500 Landing Page Validation](/blog/smoke-test-landing-page-300-dollar-validation/)
-- [Price Your Hypothesis on the Smoke-Test Page](/blog/price-hypothesis-on-smoke-test-page/) - new in 2026, addresses Gap 1 (price as hypothesis)
+- [Price Your Hypothesis on the Smoke-Test Page](/blog/price-hypothesis-on-smoke-test-page/)
 
 ### Module 3 - Validate the Problem
 *Output: 10 Mom Test interviews + 2-hr Lovable prototype shown to 5 of them. (3 hr)*
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 - [AI Persona Pre-Validation: Sharpen the Mom Test Before You Book Real Interviews](/blog/ai-persona-pre-validation-mom-test-prep/)
 - [Find 10 People With the Problem in 2026](/blog/find-10-people-with-problem-outreach-2026/)
-- [The Mom Test: Ask About the Past, Not the Future](/blog/mom-test-ask-about-past-not-future/) - includes synthesis section
+- [The Mom Test: Ask About the Past, Not the Future](/blog/mom-test-ask-about-past-not-future/)
 - [Build a Clickable Prototype in an Afternoon](/blog/clickable-prototype-validation-2-hour-lovable/)
 
 ### Module 4 - Design from Evidence

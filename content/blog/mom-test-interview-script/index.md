@@ -1,8 +1,9 @@
 ---
 title: "Mom Test Interview Script: 5 Questions for Past Behavior"
 description: "Rob Fitzpatrick's Mom Test technique as a copy-pasteable 5-question script. Read on a second screen during the call. Score each interview 1-10."
-date: 2026-07-15
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: mom-test-interview-script
 keywords:
@@ -22,13 +23,20 @@ canonical_url: "https://jetthoughts.com/blog/mom-test-interview-script/"
 related_posts: false
 ---
 
-📋 Template companion to the [Module 3.2 post](/blog/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
+📋 Template companion to the [Chapter 3.2 post](/blog/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
 
 # The Mom Test Interview Script - Ask About the Past, Not the Future
 
 *Five questions that get the interviewee to tell you what they actually did, not what sounds polite.*
 
-An ed-tech founder we picked up last quarter ran 11 customer interviews before launch. Nine of the interviewees said some version of "this is great, I would absolutely use this." She charged $49/month at launch, opened the doors on a Monday, and finished the week with one signup who churned in 14 days. The interview transcripts read fine on paper. The hidden problem: every question she asked was hypothetical ("would you pay for this?", "would this be useful?"), and every interviewee gave her a polite hypothetical answer. She had spent six weeks building to validate, six weeks building to ship, and her sample of 11 had taught her nothing about whether anyone actually had the problem. The five questions below would have caught the gap in the first interview.
+> **The 5 Mom Test questions, in order:**
+> Q1. Tell me about the last time [problem] happened. Walk me through what you did.
+> Q2. What did that cost you - in time, money, or sanity?
+> Q3. What have you tried already to fix this?
+> Q4. On a scale of 1-10, how big a problem is this compared to everything else on your plate?
+> Q5. Who else on your team feels this? How do they handle it?
+
+For the ed-tech founder story that motivated this script, see the [lesson chapter](/blog/mom-test-ask-about-past-not-future/).
 
 Rob Fitzpatrick's book *The Mom Test* (2013) named the technique: ask about past behavior, not future intent. The questions on this page are the script. You keep them open on a second screen during the call, read them as written, and listen for emotional language while you take notes by hand.
 
@@ -44,9 +52,9 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 ### Q1 - The last-time question
 
-> "Tell me about the last time [problem context] happened. Walk me through what you did."
+*Anchors in a real episode - story over preference.*
 
-**Why this works:** It anchors in a real episode the interviewee can recall. They tell a story, not a preference. You learn whether the problem actually happens, how often, and what they did about it.
+> "Tell me about the last time [problem context] happened. Walk me through what you did."
 
 **Pass signal:** A specific story with a date, a time of day, a tool they opened, a person they messaged. "Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board. I called my CFO and she pulled the numbers from QuickBooks for me."
 
@@ -56,9 +64,9 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 ### Q2 - The cost question
 
-> "What did that cost you - in time, money, or sanity?"
+*Quantifies the pain - an unquantified problem won't get paid for.*
 
-**Why this works:** It quantifies the pain. A problem nobody can quantify is rarely a problem worth paying to solve. If they can't tell you what it cost them, they probably won't pay anything to fix it.
+> "What did that cost you - in time, money, or sanity?"
 
 **Pass signal:** A specific number with a unit. "Two hours every Tuesday night for the last six months." "My CFO bills $200/hour and she spent four hours on it last week." "I missed my daughter's bedtime three Mondays in a row."
 
@@ -68,9 +76,9 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 ### Q3 - The workaround question
 
-> "What have you tried already to fix this?"
+*Surfaces existing workarounds - a non-tried problem is a non-felt problem.*
 
-**Why this works:** Surfaces existing workarounds. If they have built a hack, paid for a tool, hired a person, or duct-taped two spreadsheets together, the problem is real. If they have tried nothing, the problem is theoretical.
+> "What have you tried already to fix this?"
 
 **Pass signal:** A named tool, a hired person, a custom script, a workaround that took setup time. "I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. I have a VA on Upwork who fixes it."
 
@@ -80,9 +88,9 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 ### Q4 - The priority question
 
-> "On a scale of 1-10, how big a problem is this for you compared to everything else on your plate?"
+*Calibrates urgency against the interviewee's whole problem stack - most "would be great if" problems land at 4.*
 
-**Why this works:** Calibrates urgency against the interviewee's whole problem stack. A 9/10 problem is worth a sales conversation. A 4/10 problem is worth a pat on the head and zero dollars. Most "wouldn't it be great if" problems land at 4.
+> "On a scale of 1-10, how big a problem is this for you compared to everything else on your plate?"
 
 **Pass signal:** A 7 or higher with a comparison. "This is an 8. The only thing higher is hiring my next engineer." A 9 or 10 is rare and a strong signal.
 
@@ -92,9 +100,9 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 ### Q5 - The buying-committee question
 
-> "Who else on your team feels this? How do they handle it?"
+*Surfaces the buying committee and workarounds other people on the team already own.*
 
-**Why this works:** Surfaces the buying committee and the alternative solutions other people on the team have built. In any B2B sale, the person you're talking to isn't the only one who needs to nod when the invoice arrives. You also learn who already owns a workaround inside the company.
+> "Who else on your team feels this? How do they handle it?"
 
 **Pass signal:** Names a specific colleague and their workaround. "My ops manager Jess feels this worse than I do - she keeps a separate Google Sheet that mirrors the one finance uses, because she doesn't trust the finance numbers."
 
@@ -137,7 +145,7 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 ## What to do after the call
 
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in your notes file. If you score later you will round up.
-- **If you have 7+ scores on 7 out of 10 interviews:** the problem is validated. Move to the Validated Problem Statement template (Module 3.3).
+- **If you have 7+ scores on 7 out of 10 interviews:** the problem is validated. Move to the Validated Problem Statement template (Chapter 3.3).
 - **If you have fewer than 5 scores of 7+:** the problem is too weak. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
 - **Forward the transcripts to your fractional CTO or independent advisor** before you make the build/no-build call. Two readers catch what one misses.
 

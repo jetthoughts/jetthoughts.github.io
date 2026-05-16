@@ -1,8 +1,9 @@
 ---
 title: "SOW Reading Guide: The 8 Clauses Agencies Hope You Skim"
 description: "An annotated sample SOW that catches the 8 clauses agencies hope you skim. Read the night before you sign, alone, with a yellow highlighter."
-date: 2026-07-15
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: sow-reading-guide
 keywords:
@@ -38,6 +39,17 @@ A SaaS founder we picked up in late Q1 2026 had signed a **47-page SOW** her gen
 
 Read this **the night before you sign, alone**, with a printed SOW, a yellow highlighter, and 90 minutes blocked. Bring the SOW, your original RFP or feature wishlist, and this guide. Walk every clause against the 8 flags below; when a flag fires, write the question for the agency in the margin. Type all the questions into one email and send it before you sign anything. A working agency answers in writing and signs the redline. If your general counsel cleared the SOW already, run this anyway - generalist attorneys catch the IP and liability paragraphs and skim the operational ones, and the 8 clauses below are where the operational money lives.
 
+> **The 8-clause SOW scoreboard** - use this as a pre-flight checklist; details below:
+>
+> - [ ] **Clause 1 - Scope:** feature list at concrete shipping level + per-feature day estimate
+> - [ ] **Clause 2 - Milestone acceptance:** acceptance criteria in CI + click-through on staging + written sign-off (not "deployed = delivered")
+> - [ ] **Clause 3 - Change requests:** capped at 10-20% of SOW, written estimate, 48-hour approval window, no verbal approval
+> - [ ] **Clause 4 - IP / code ownership:** transfers per-milestone (not "upon final payment")
+> - [ ] **Clause 5 - Third-party dependencies:** every account under your email + card from Day 1, no 15% admin fee
+> - [ ] **Clause 6 - Termination triggers:** quality + missed-milestone triggers + termination-for-convenience with handover
+> - [ ] **Clause 7 - Post-launch warranty:** anchored to production launch (not "delivery"), ≥60 days, "warranted bug" defined
+> - [ ] **Clause 8 - Dispute resolution:** mediation step + neutral venue + prevailing-party fee-shift
+
 ## The 8 clauses
 
 ### Clause 1 - Scope definition
@@ -58,7 +70,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Flag**: "Delivered" defined as "deployed to staging" or "made available for review." Five-day silent-acceptance windows. No acceptance criteria the milestone has to pass.
 
-**Fix**: "A milestone is delivered when (a) the acceptance criteria in Exhibit B pass in CI (`bundle exec rspec` for Rails, `pytest` for Django, `php artisan test` for Laravel), (b) Client has clicked the feature end-to-end on the staging URL, and (c) Client has signed off in writing." Acceptance criteria belong in the SOW, not in a Slack message. The [Friday demo template](./friday-demo-template.md) covers what the click-through looks like.
+**Fix**: "A milestone is delivered when (a) the acceptance criteria in Exhibit B pass in CI (`bundle exec rspec` for Rails, `pytest` for Django, `php artisan test` for Laravel), (b) Client has clicked the feature end-to-end on the staging URL, and (c) Client has signed off in writing." Acceptance criteria belong in the SOW, not in a Slack message. The [Friday demo template](/blog/friday-demo-template/) covers what the click-through looks like.
 
 ### Clause 3 - Change-request process
 
@@ -72,13 +84,16 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 ### Clause 4 - IP / code ownership
 
-> **Sample**: "Upon Vendor's receipt of all amounts due under this Agreement, Vendor hereby assigns to Client all right, title, and interest in and to the Deliverables."
+The single highest-stakes clause in the SOW: who owns the code while you're paying for it. The bad version turns any future invoice dispute into a repo hostage situation. The good version transfers ownership invoice by invoice, so a dispute on milestone 4 cannot block milestones 1-3.
 
-**Plain English**: We own the code until you have paid every invoice. If we have a dispute, we still own the code.
+|  | Sample language | What it means |
+|---|----------------|---------------|
+| **Bad** | "Upon Vendor's receipt of **all amounts due** under this Agreement, Vendor hereby assigns to Client all right, title, and interest in and to the Deliverables." | The agency owns the code until you have paid every invoice. If a milestone is disputed, the agency still owns everything. |
+| **Good** | "Upon Client's payment of **each milestone invoice**, Vendor irrevocably assigns to Client all right, title, and interest in the corresponding portion of the Deliverables, including all source code committed to the Client-owned GitHub repository as of that milestone's completion date." | Ownership moves milestone by milestone. A dispute on milestone 4 cannot hold milestones 1-3 hostage. |
 
-**Flag**: Ownership transfers only "upon final payment", "upon receipt of all amounts due", or "upon completion of the Project." This turns a payment dispute into a hostage situation - the agency owns the GitHub repo and decides what "all amounts due" means.
+**Flag**: Ownership transfers only "upon final payment", "upon receipt of all amounts due", or "upon completion of the Project."
 
-**Fix**: Make ownership milestone-based: "Upon payment of each milestone invoice, Vendor irrevocably assigns to Client all right, title, and interest in the corresponding portion of the Deliverables, including source code, documentation, and configuration." Pair it with the [GitHub / AWS / database ownership checklist](./ownership-checklist.md) so the assignment also moves the actual GitHub org owner row.
+**Fix**: Insert the good-version language above. Pair it with the [GitHub / AWS / database ownership checklist](/blog/ownership-checklist/) so the assignment also moves the actual GitHub org owner row - the contract assignment is paper; the GitHub owner row is the actual control.
 
 ### Clause 5 - Third-party dependencies
 
@@ -86,7 +101,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Plain English**: We will rent AWS, Stripe, and the AI tools under our own accounts and bill you whatever they cost, plus 15%. When this engagement ends, the accounts stay with us.
 
-**Flag**: Pass-through costs with no cap, no monthly attribution, and no language about who owns the third-party accounts. Watch AI token costs (Cursor seats, Anthropic API, OpenAI API) - the [5-question AI script](./agency-ai-five-questions.md) caught a $4,800 OpenAI line that surprised one founder we worked with.
+**Flag**: Pass-through costs with no cap, no monthly attribution, and no language about who owns the third-party accounts. Watch AI token costs (Cursor seats, Anthropic API, OpenAI API) - the [5-question AI script](/blog/agency-ai-five-questions/) caught a $4,800 OpenAI line that surprised one founder we worked with.
 
 **Fix**: (1) Every third-party account (AWS, GitHub, Stripe, Anthropic, OpenAI) is created under your company email from Day 1, paid by your company card; the agency gets IAM sub-access. (2) Pass-through costs capped per month with a Founder-approval gate above the ceiling. (3) AI token usage itemized monthly per developer and per project. Strike the 15% admin fee on infrastructure.
 
@@ -96,9 +111,14 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Plain English**: You cannot walk away because we are slow, sloppy, or shipping bugs. Only paper breach counts, and even then we get 30 days to fix it.
 
-**Flag**: "Termination only for material breach" with no quality trigger and no missed-milestone trigger. No "termination for convenience" with a defined exit fee. No clause requiring handover assistance.
+**What to redline** (four numbered insertions):
 
-**Fix**: (1) **Quality trigger**: terminate if the agency misses acceptance criteria for two consecutive milestones, or if test coverage on Vendor-written code stays below an agreed floor. (2) **Missed-milestone trigger**: terminate if a milestone slips more than 21 days without a Client-approved revised plan. (3) **Termination-for-convenience** with a defined exit fee (typically the next milestone payment) and a written **30-day handover obligation**: code, credentials, runbooks, and a call with the incoming team. The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean termination looks like.
+1. **Quality trigger** - "Client may terminate immediately if Vendor misses the acceptance criteria for two consecutive milestones, or if test coverage on Vendor-written code falls below [agreed floor, e.g. 70%] for 30 consecutive days."
+2. **Missed-milestone trigger** - "Client may terminate immediately if any milestone slips more than 21 days past the SOW-stated delivery date without a Client-approved revised plan in writing."
+3. **Termination for convenience** - "Client may terminate at any time upon 30 days' written notice and payment of the next milestone fee as an exit fee."
+4. **Handover obligation** - "Upon termination for any reason, Vendor shall, within 30 days, deliver: (a) all source code in the Client-owned repository, (b) all credentials and secrets, (c) deployment and operations runbooks, and (d) a 60-minute call with the incoming engineering team."
+
+The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean termination looks like in practice once these triggers are in place.
 
 ### Clause 7 - Post-launch warranty
 
@@ -119,22 +139,6 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 **Flag**: Binding arbitration in the agency's home state. No mediation step before arbitration. "Each party bears its own costs" favors whichever party has more cash to wait you out.
 
 **Fix**: (1) Add a **mediation step**: "The parties shall attempt in good faith to resolve any dispute through non-binding mediation in [Client's home city] before initiating arbitration." Mediation resolves about 80% of commercial disputes. (2) Set the arbitration venue at a **neutral location** or split it by who initiates the claim. (3) Add a **prevailing-party fee-shift**: the loser pays the winner's reasonable attorney fees.
-
-## What good looks like vs what bad looks like
-
-**Clause 2 - Milestone acceptance**
-
-> Bad: "A milestone shall be deemed delivered upon Vendor's deployment of the code to the Client-accessible staging environment."
-> Good: "A milestone is delivered when all acceptance criteria in Exhibit B pass in CI (green `bundle exec rspec` on main), Client has executed the feature end-to-end on the staging URL, and Client has confirmed delivery in writing within 7 business days."
-
-The bad clause makes the staging push the trigger; the good one makes working software the trigger.
-
-**Clause 4 - IP / code ownership**
-
-> Bad: "Upon Vendor's receipt of all amounts due under this Agreement, Vendor hereby assigns to Client all right, title, and interest in and to the Deliverables."
-> Good: "Upon Client's payment of each milestone invoice, Vendor irrevocably assigns to Client all right, title, and interest in the corresponding portion of the Deliverables, including all source code committed to the Client-owned GitHub repository as of that milestone's completion date."
-
-The bad version is the line that turned the [B2B fintech rescue](/blog/founders-guide-hiring-dev-shop/) into a three-week recovery: the agency owned the GitHub org until "all amounts due" had been paid, and "all amounts due" was their reading of every disputed invoice. The good version moves ownership milestone by milestone, so a dispute on milestone 4 cannot hold milestones 1-3 hostage.
 
 ## What to do before signing
 

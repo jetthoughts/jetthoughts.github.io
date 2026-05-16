@@ -1,8 +1,9 @@
 ---
 title: "Validated Problem Statement Template"
 description: "The one-page template that synthesizes 10 Mom Test interviews into a build/pivot/kill decision. Print, fill in 30 minutes, show to 2 advisors."
-date: 2026-07-22
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: validated-problem-statement-template
 keywords:
@@ -28,6 +29,16 @@ related_posts: false
 
 *The synthesis sheet that turns 10 Mom Test transcripts into a build, pivot, or kill decision.*
 
+> **The Validated Problem Statement (one-page, 5 sections)**
+>
+> 1. **Who has the problem** - persona, vertical, strong-signal count
+> 2. **What it costs them** - hours per week, dollars per month, one sanity quote
+> 3. **What they've tried** - 3 workarounds + why each failed
+> 4. **Why now** - trigger event in last 12 months + market shift
+> 5. **How big is the pain** - average + strong-signal score → BUILD / PIVOT / KILL
+>
+> Fill in order Mon morning. Send to one founder friend by Mon EOD.
+
 ## Why this exists
 
 A solo founder I spoke with last month sent 47 cold DMs to Twitter strangers complaining about their CRM. Twelve answered. Of the twelve, two said yes and ten said honest, paragraph-long no's. She had spent six weekends collecting transcripts in a folder labeled `notes`. When she opened the folder to write the problem statement, she realized she had never named the persona, never tallied the strong signals, and never written the why-now. The ten no's looked alike in her memory and contradicted each other on the page. Half of them were not even the persona she was building for. The synthesis took 90 minutes the first time she sat down to do it - and the decision the page produced was *pivot to a different ICP* rather than *build*. She kept the calendar she would have spent prompting Lovable and ran 5 sharper interviews instead. This template is the page she filled in.
@@ -51,7 +62,7 @@ Use the markdown block below directly in Notion, or print the PDF version (the S
 
 Founder name: ________________________  Date: ____________
 
-Interview sample: 10 calls, run between ____/____ and ____/____.
+Interview sample: 10 calls, between ___/___ and ___/___.
 
 -------------------------------------------------------------
 1. WHO HAS THE PROBLEM
@@ -118,7 +129,7 @@ Strong signals (score 7+ with 3+ emotional flags): ___ /10
 
 Decision based on strong-signal count:
  [ ] 7 or more  → BUILD. Move to Module 4.
- [ ] 4 to 6    → PIVOT. Run 5 more interviews with sharper ICP.
+ [ ] 4 to 6     → PIVOT. Run 5 sharper interviews.
  [ ] Fewer than 4 → KILL. Find a different problem.
 
 -------------------------------------------------------------
@@ -163,6 +174,14 @@ The good version uses real numbers from transcripts. The £1,500 panel anecdote 
 The good version names the specific cost number, the specific competitor's specific product, and the specific gap. It cites a competitor signal that *supports* the timing rather than refuting it. The bad version is filler that means nothing and helps no one.
 
 ## What to do after
+
+The decision the filled page makes for you:
+
+- **BUILD** if: 7+ strong-signal calls (score 7+ with 3+ emotional flags), a named workaround the customer is already paying for, and a named why-now from the last 12 months. Move to [Module 4 Product Brief](/blog/tech-for-non-technical-founders-2026/).
+- **PIVOT** if: 4-6 strong signals, OR the pain is real but belongs to a different persona than you targeted (e.g., you interviewed founders but the pain lives with their CFOs). Run 5 sharper interviews with the corrected ICP, then refill this page.
+- **KILL** if: fewer than 4 strong signals OR no workaround surfaced in the 10 interviews. Find a different problem and write the 200-word post-mortem below.
+
+Then walk the page through these four moves:
 
 - **Get 2 advisor signatures within 48 hours.** Email the page as a PDF. Ask: "Would you argue with this problem statement?" One sentence response is enough. If both say no, you've passed Module 3's checkpoint and you move to the [Module 4 Product Brief](/blog/tech-for-non-technical-founders-2026/) next.
 - **If you landed in the BUILD lane (7+ strong signals), run the 3 pre-orders test before writing code.** Email your 5 strongest-signal interviewees. Ask each for a £500 deposit, a signed letter of intent, or a paid waitlist slot. Three yes-and-paid out of five = build. Zero yes = the 7+ scores were politer than you thought, slide back to pivot.

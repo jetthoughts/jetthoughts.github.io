@@ -1,8 +1,9 @@
 ---
 title: "Salvage vs Rebuild: 6-Question Decision Tree"
 description: "A 30-minute structured decision that ends two weeks of analysis paralysis. KEEP / FREEZE / REBUILD with a 30/60/90 day plan."
-date: 2026-05-27
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: salvage-vs-rebuild-decision-tree
 keywords:
@@ -46,23 +47,16 @@ For each question, write the answer + the score (0 or 1) + one sentence of evide
 
 ## The six questions
 
-**Q1 - Bus factor.** Is more than one person able to deploy the production app and restart it without help today?
-> 1 if two or more humans can deploy independently. 0 if it is one person, or if that person left in the last six months.
+Score each question 1 or 0 and write one sentence of evidence next to it. The whole grid takes 30 minutes.
 
-**Q2 - Test coverage signal.** Does the team have any automated tests at all that run before a deploy? Even 10% coverage with a green CI pipeline counts.
-> 1 if `bundle exec rspec` (or the equivalent) runs in CI and the build is green more days than red. 0 if testing is manual, if there is no CI, or if the build has been red for more than two weeks.
-
-**Q3 - Database health.** Can you restore last night's production database to a fresh staging environment in under four hours, with someone you can call tonight?
-> 1 if backups run nightly, the last seven are visible in your provider's console, and someone has a one-page restore runbook. 0 if "we have backups but I have never tested a restore" - that is the same as no backups.
-
-**Q4 - Architecture sanity.** Can you list the top three external services your app depends on (e.g. Postgres, Redis, Stripe) and explain in one sentence what breaks if each goes down?
-> 1 if you can write three sentences without help. 0 if the answer is "I don't know, the team handles that." A founder who cannot list the top three dependencies cannot triage an outage.
-
-**Q5 - Onboarding time.** If you hired a senior engineer Monday morning, would they ship one real pull request to staging by Friday?
-> 1 if there is a written README that gets a developer from `git clone` to a running local app in under two hours. 0 if onboarding needs "let me get on a call and walk you through it" - that is a knowledge silo, not a codebase.
-
-**Q6 - Customer signal.** Are real users (not your team, not your investors, not friends doing favors) using the app every week, in volume that materially affects your business?
-> 1 if you can name 10+ paying or actively engaged weekly users by handle or company. 0 if usage is mostly the team and a few pilot accounts who have not logged in this month.
+| # | Question | Score 1 if | Score 0 if |
+|---|---|---|---|
+| Q1 | **Bus factor** - is more than one person able to deploy the production app and restart it without help today? | Two or more humans can deploy independently. | One person, or that person left in the last six months. |
+| Q2 | **Test coverage signal** - does the team have any automated tests that run before a deploy? Even 10% with a green CI counts. | `bundle exec rspec` (or the equivalent) runs in CI and the build is green more days than red. | Testing is manual, there is no CI, or the build has been red for more than two weeks. |
+| Q3 | **Database health** - can you restore last night's production database to a fresh staging environment in under four hours, with someone you can call tonight? | Backups run nightly, the last seven are visible in your provider's console, and someone has a one-page restore runbook. | "We have backups but I have never tested a restore" - same as no backups. |
+| Q4 | **Architecture sanity** - can you list the top three external services your app depends on (e.g. Postgres, Redis, Stripe) and explain in one sentence what breaks if each goes down? | You can write three sentences without help. | The answer is "I don't know, the team handles that." A founder who cannot list the top three cannot triage an outage. |
+| Q5 | **Onboarding time** - if you hired a senior engineer Monday morning, would they ship one real pull request to staging by Friday? | There is a written README that gets a developer from `git clone` to a running local app in under two hours. | Onboarding needs "let me get on a call and walk you through it" - that is a knowledge silo, not a codebase. |
+| Q6 | **Customer signal** - are real users (not your team, not your investors, not friends doing favors) using the app every week, in volume that materially affects your business? | You can name 10+ paying or actively engaged weekly users by handle or company. | Usage is mostly the team and a few pilot accounts who have not logged in this month. |
 
 ## The verdict
 
@@ -71,28 +65,28 @@ Add up the scores.
 | Score | Verdict | What you do next |
 |---|---|---|
 | **5-6** | **KEEP and harden.** | The codebase is salvageable. Spend the rebuild budget you were about to write a check for on test coverage, monitoring, and one senior hire. Do not rewrite. |
-| **3-4** | **FREEZE and stabilize.** | No new features for 30 to 60 days. One sprint on access ownership (run the [GitHub / AWS / database checklist](./ownership-checklist.md)), one sprint on adding tests around the top three flows, one sprint on monitoring and backups. Re-score in 60 days. If you climb to 5+, you keep. If you stay at 3-4, you rebuild the core paths. |
+| **3-4** | **FREEZE and stabilize.** | No new features for 30 to 60 days. One sprint on access ownership (run the [GitHub / AWS / database checklist](/blog/github-aws-database-ownership-checklist/)), one sprint on adding tests around the top three flows, one sprint on monitoring and backups. Re-score in 60 days. If you climb to 5+, you keep. If you stay at 3-4, you rebuild the core paths. |
 | **0-2** | **REBUILD core paths.** | Not a full rewrite. Identify the two or three highest-traffic flows (signup, checkout, the one core action your users repeat) and rebuild THOSE on a parallel codebase. Migrate users behind a feature flag. Keep the legacy system running for everything else for 90 days, then sunset it one flow at a time. |
 
 A score of 0 is not a "burn it down" verdict. The legacy code keeps running while you carve out the parts that matter and rebuild them with tests, monitoring, and one engineer who owns them.
 
 ## What good looks like vs what bad looks like
 
-**Treating the score as a verdict on you, not the codebase.**
+### Treating the score as a verdict on you, not the codebase
 
 > Bad: "I scored a 1. I picked the wrong team. This is my fault."
 > Good: "I scored a 1. The previous shop shipped without tests, monitoring, or backups. That is triage data."
 
 Most founders we rescue scored a 2 or 3 the first time they ran something like this. The score points at the next sprint, not at the mirror.
 
-**Conflating REBUILD with FULL REWRITE.**
+### Conflating REBUILD with FULL REWRITE
 
 > Bad: "We scored a 1, so we are throwing everything away and starting fresh in Next.js."
 > Good: "We scored a 1. Signup, checkout, and the contractor-match screen carry 80% of our revenue. We rebuild those three flows on a parallel codebase, ship behind a feature flag, and keep the legacy admin panel running for nine more months."
 
 Joel Spolsky called the full-rewrite trap "[the single worst strategic mistake](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/) any software company can make" in 2000, and the math has not changed. A full rewrite buys you a 12 to 18 month feature freeze in exchange for a new codebase with its own undiscovered bugs. REBUILD in the verdict above means the two or three flows that carry the business, not the whole repo.
 
-**Skipping the independent reviewer because "we cannot afford a consultant."**
+### Skipping the independent reviewer because "we cannot afford a consultant"
 
 > Bad: "I will run this myself. A 30-minute review costs $400 and I am already over budget."
 > Good: "I scored a 2. I am sending the doc to one fractional CTO for a $400 review on Monday, before I sign anything else."
@@ -105,7 +99,7 @@ The founder in the opening story spent $7,500 on three consultants over nine wee
 - **Draft the 30/60/90 day plan in plain English.** KEEP looks like "hire one senior engineer, raise test coverage to 40% by day 90, set up monitoring." FREEZE looks like "no new features for 60 days, three sprints on stabilization, re-score on day 60." REBUILD looks like "two parallel codebases, feature flag, sunset the old one flow at a time."
 - **Forward the verdict to your investor or board the same week.** Three lines: the score, the verdict, the plan. Founders who do this keep the trust they have spent 18 months building.
 
-If the verdict is FREEZE or REBUILD and the previous team is still around, the next two reads are the [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [step-by-step exit guide](/blog/fire-dev-shop-guide/). If the verdict is KEEP, run the [ownership checklist](./ownership-checklist.md) the same Friday to confirm you actually own what you just decided to harden.
+If the verdict is FREEZE or REBUILD and the previous team is still around, the next two reads are the [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [step-by-step exit guide](/blog/fire-dev-shop-guide/). If the verdict is KEEP, run the [ownership checklist](/blog/github-aws-database-ownership-checklist/) the same Friday to confirm you actually own what you just decided to harden.
 
 ---
 

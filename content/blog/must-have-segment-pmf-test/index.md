@@ -1,8 +1,9 @@
 ---
-title: "7.1 · Your First Customer Is Not a Marketing Problem"
+title: "6.1 · Your First Customer Is Not a Marketing Problem"
 description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your first 10-30 users. The non-technical founder's pre-paid-traffic gut check."
 date: 2026-05-13
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: must-have-segment-pmf-test
 keywords:
@@ -20,17 +21,19 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "7.1 · Your First Customer Is Not a Marketing Problem"
-  og_description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your first 10-30 users. The pre-paid-traffic gut check that catches a product problem disguised as a marketing problem."
+  og_title: "6.1 · Your First Customer Is Not a Marketing Problem"
+  og_description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your first 10-30 users. The non-technical founder's pre-paid-traffic gut check."
 cover_image_alt: "JetThoughts blog cover showing a Sean Ellis 40% gauge with a red threshold line separating product problem from must-have user"
 canonical_url: "https://jetthoughts.com/blog/must-have-segment-pmf-test/"
 related_posts: false
 ---
 
-> **Module 7 · Step 1 of 4** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> **Module 6 · Step 1 of 5** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
 > Input: a live MVP and 10-30 users who touched it. Output: a written must-have-user persona with 3 verbatim quotes and one named segment to target.
 
-Tuesday morning, 9:14 AM. A SaaS founder I spoke with last quarter opened her Meta Ads dashboard, saw a 0.4% conversion rate on $4,200 of spend, and refreshed it three times. Six weeks earlier she had taken her live MVP to forty users from a beta list, watched them poke around for two days, and decided the next move was "scale the top of funnel." She wrote the ad copy on a Friday, launched Monday, and by Wednesday the dashboard told her the same thing it would have told her if she had simply called five of those forty users: nobody opened the app twice. The $4,200 bought her a number she could have gotten for free.
+Tuesday morning, 9:14 AM. A SaaS founder I spoke with last quarter opened her Meta Ads dashboard, saw a 0.4% conversion rate on $4,200 of spend, and refreshed it three times. Six weeks earlier she had taken her live MVP to forty users from a beta list, watched them poke around for two days, and decided the next move was "scale the top of funnel."
+
+She wrote the ad copy on a Friday, launched Monday, and by Wednesday the dashboard told her the same thing it would have told her if she had simply called five of those forty users: nobody opened the app twice. The $4,200 bought her a number she could have gotten for free.
 
 Her instinct was the one every non-technical founder has after the MVP ships: build the audience. The real question is whether the people who already touched the MVP would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic will not fix a product problem; it just routes more users into something they will not return to.
 
@@ -38,7 +41,7 @@ Her instinct was the one every non-technical founder has after the MVP ships: bu
 
 Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite. While he was building the playbook for those three, he kept noticing the same dividing line between products that ignited and products that needed life support. He surveyed every product's existing users with a single load-bearing question: "How would you feel if you could no longer use [product]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% of users said "very disappointed," the product was almost always able to grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and the survey wording on Lenny Rachitsky's podcast in 2023 ([transcript and replay here](https://www.lennysnewsletter.com/p/the-sean-ellis-test-for-product-market)).
 
-The test is not a market-research instrument. It is a stop sign. Under 40% means the next thing on your calendar is not a Meta Ads brief. It is five user calls.
+Treat the answer as a stop sign rather than a market-research instrument. Under 40% means the next thing on your calendar should be five user calls, not a Meta Ads brief.
 
 ![Sean Ellis 40% gauge - the threshold that decides whether paid ads will work or burn](sean-ellis-gauge.svg)
 
@@ -130,7 +133,7 @@ flowchart TD
     A[Run the 5-question survey] --> B{Overall must-have %}
     B -->|Under 25%| C[Stop. Product problem.<br/>Talk to 5 'very disappointed' users.<br/>Find what you missed.]
     B -->|25-40%| D{Any segment over 40%?}
-    B -->|Over 40%| E[You have a must-have user.<br/>Module 7.2 outreach starts here.]
+    B -->|Over 40%| E[You have a must-have user.<br/>Chapter 6.2 outreach starts here.]
     D -->|Yes| F[Target that segment.<br/>Rebuild the persona on those quotes.]
     D -->|No| G[Refine the product first.<br/>Re-run in 6 weeks.]
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
@@ -139,31 +142,33 @@ flowchart TD
     class E,F purplebox;
 ```
 
-### Step 6 - The re-run schedule
-
-The 40% number is not a one-time pass. Every product evolves, every segment matures, and the number drifts. Re-run the survey every 6 weeks while the must-have rate is climbing. Once it holds steady above 40% for two consecutive runs, you can stop running it monthly and shift to running it after every major release.
-
-Under 40% on a re-run after you shipped changes means the changes did not move the line. Read the verbatim Q2-Q4 answers for the "somewhat disappointed" bucket - that is where the diagnostic is.
+> *Re-run cadence: every 6 weeks while the must-have rate is climbing; after every major release once it holds above 40% for two consecutive runs. If a re-run drops, read the "somewhat disappointed" Q2-Q4 verbatims first - the diagnostic is in there.*
 
 ## What "under 40%" actually means
 
-You do not have a marketing problem. You have one of three product problems, in order of frequency:
+Under 40% means you have a product problem, not a marketing problem, and the Q2-Q4 verbatims tell you which one. Four patterns show up across the 2026 rescues, in rough order of frequency:
 
-1. **You built for the wrong segment.** The product works, but the people you onboarded do not have the pain. Your Q5 slice will show this: one segment is at 55%, the rest are at 5%. You shipped a B2B-marketer tool to a solo-founder audience. The fix is to stop selling to the audience and start selling to the segment. Module 7.2 walks the personal-network outreach to the new segment.
+1. **You built for the wrong segment.** The product works, but the people you onboarded do not have the pain. Your Q5 slice will show this: one segment is at 55%, the rest are at 5%. You shipped a B2B-marketer tool to a solo-founder audience. The fix is to stop selling to the audience and start selling to the segment. Chapter 6.2 walks the personal-network outreach to the new segment.
 
 2. **You built the right thing for the right people, but the product does not actually do the thing yet.** This is the most painful version. The Q3 verbatims will tell you - the "main benefit" answers will be hedged ("it is nice to have," "I would use it if it had X"). The fix is to go back into the build and finish the thing. Schedule a [Friday demo](/blog/friday-demo-rule-founder-progress/) with the next release.
 
-3. **The pain is real, but your product is not the relief.** The Q4 verbatims will tell you - the "what did you switch from" answers will name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). The fix is harder: either niche into the 20% of the job the workaround does not cover, or pivot. The validated-problem statement from [Module 3.2](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next) is the right re-entry point.
+3. **The pain is real, but your product is not the relief.** The Q4 verbatims will tell you - the "what did you switch from" answers will name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). The fix is harder: either niche into the 20% of the job the workaround does not cover, or pivot. The validated-problem statement from [Chapter 3.3](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next) is the right re-entry point.
+
+4. **The product solves the pain, but the workflow to reach the solve is too long.** Users say they would be very disappointed but their session logs show they bailed before they hit the payoff. The Q3 answers are positive in tone, but you watch the analytics and the funnel collapses between signup and the moment the product earns its keep. The fix is a UX cut, not a strategy pivot - shorten the path to the first "ah, this saved me 30 minutes" moment.
 
 ## When founders should skip the test
 
 Two cases.
 
-**Under 10 users.** The sample is too small. The fix is not to run the test on 8 people. It is to go run [Module 3.1 outreach](/blog/find-10-people-with-problem-outreach-2026/) and book 10 more user calls this week. Once you have 10-30 users who actually touched the MVP, the test works.
+**Under 10 users.** The sample is too small. The fix is not to run the test on 8 people. It is to go run [Chapter 3.2 outreach](/blog/find-10-people-with-problem-outreach-2026/) and book 10 more user calls this week. Once you have 10-30 users who actually touched the MVP, the test works.
 
 **Pre-launch.** The test asks "if you could no longer use the product." If the user has never used it, the answer is meaningless. Pre-launch validation is the [Mom Test interview script](/blog/mom-test-interview-script/), not the 40% test.
 
-## What to do this week
+## Advanced (optional sidebar)
+
+Founders who have run the 40% test once and want to layer on more rigor can read Sean Ellis's original write-up in [*Hacking Growth*](https://hackinggrowth.org/) and the [Superhuman PMF Engine framework](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/), which combines the 40% test with a structured segment-isolation workflow Rahul Vohra built to rescue Superhuman's launch. The main path above is enough to make the Module 6 decision. The advanced version is a project for after your first paid pilot ships.
+
+## What to do tomorrow
 
 Monday morning, 9 AM:
 
@@ -175,13 +180,9 @@ Friday morning, 9 AM:
 
 4. Export the responses CSV. Compute overall must-have % and per-segment must-have %.
 5. Paste three Q2-Q3 verbatims from your top segment into a Google Doc.
-6. If you are above 40% in any segment, move to [Module 7.2 - personal-network outreach](/blog/first-ten-customers-personal-network/). If you are below 40% across all segments, re-read [Module 3.2 Mom Test](/blog/mom-test-ask-about-past-not-future/) and book five "very disappointed" user calls for next week.
+6. If you are above 40% in any segment, move to [Chapter 6.2 - personal-network outreach](/blog/first-ten-customers-personal-network/). If you are below 40% across all segments, re-read [Chapter 3.3 Mom Test](/blog/mom-test-ask-about-past-not-future/) and book five "very disappointed" user calls for next week.
 
 The full survey template (the 5 questions in a Typeform-import-ready format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/blog/first-paying-customer-operating-kit/).
-
-## Advanced (optional sidebar)
-
-Founders who have run the 40% test once and want to layer on more rigor can read Sean Ellis's original write-up in [*Hacking Growth*](https://hackinggrowth.org/) and the [Superhuman PMF Engine framework](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/), which combines the 40% test with a structured segment-isolation workflow Rahul Vohra built to rescue Superhuman's launch. The main path above is enough to make the Module 7 decision. The advanced version is a project for after your first paid pilot ships.
 
 ## Further reading
 
@@ -191,3 +192,7 @@ Founders who have run the 40% test once and want to layer on more rigor can read
 - Steve Blank, [The Customer Development Manifesto](https://steveblank.com/2010/01/25/the-customer-development-manifesto-reasons-for-the-revolution-part-1/) - the foundational framing for "get out of the building and validate before building." The Sean Ellis test is the post-build analog.
 - Rahul Vohra, [How Superhuman built an engine to find product-market fit](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/) - the segment-isolation playbook layered on top of the 40% test.
 - Rob Fitzpatrick, [*The Mom Test*](https://www.momtestbook.com/) - the pre-launch validation companion. Once your 40% test is above the line, the Mom Test questions are the ones you ask the 10 must-have users on their next call.
+
+---
+
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) curriculum.*

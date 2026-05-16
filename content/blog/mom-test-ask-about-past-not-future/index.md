@@ -1,8 +1,9 @@
 ---
-title: "3.2 · The Mom Test: Ask About the Past, Not the Future"
+title: "3.3 · The Mom Test: Ask About the Past, Not the Future"
 description: "The 5-question script that prevents your interviewees from being polite - past-behavior validation for non-technical founders in 2026."
-date: 2026-07-15
+date: 2026-05-13
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: mom-test-ask-about-past-not-future
 keywords:
@@ -20,25 +21,25 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "3.2 · The Mom Test: Ask About the Past, Not the Future"
+  og_title: "3.3 · The Mom Test: Ask About the Past, Not the Future"
   og_description: "The 5-question script that prevents your interviewees from being polite - past-behavior validation for non-technical founders in 2026."
 cover_image_alt: "JetThoughts cover showing five Mom Test question cards stacked vertically with pass and fail signals on each card"
 canonical_url: "https://jetthoughts.com/blog/mom-test-ask-about-past-not-future/"
 related_posts: false
 ---
 
-> **Module 3 · Step 2 of 3** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
-> Input: 10 interview slots booked (from Module 3.1). Output: 10 scored transcripts + a one-page validated problem statement signed by 2 advisors.
+> **Module 3 · Step 3 of 4** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> Input: 10 interview slots booked (from Chapter 3.2). Output: 10 scored transcripts + a one-page validated problem statement signed by 2 advisors.
 
-An ed-tech founder we picked up last quarter ran 11 customer interviews before launch. Nine interviewees said some version of "this is great, I would absolutely use this." She charged $49/month at launch, opened on a Monday, finished the week with **one signup who churned in 14 days**. The transcripts read clean on paper. The hidden problem: every question was hypothetical ("would you pay for this?"), and every interviewee gave her a polite hypothetical answer. Eleven friendly conversations, zero useful data.
+An ed-tech founder we picked up last quarter ran 11 customer interviews before launch. Nine said some version of "this is great, I would absolutely use this." She charged $49/month, opened on a Monday, finished the week with three signups - two of whom churned in 14 days. Every question was hypothetical ("would you pay for this?"); every answer was polite. Eleven friendly conversations, zero useful data.
 
-Before you book real interviews, sharpen your question list with [AI personas](/blog/ai-persona-pre-validation-mom-test-prep/). Real interviews are irreplaceable for listening - but Claude personas catch weak questions before you waste a real interview slot.
+For the verbatim script + reference card, see [Mom Test Interview Script](/blog/mom-test-interview-script/). This chapter explains *why* those five questions work and how to score each call. Before you book real interviews, sharpen your question list with [AI personas](/blog/ai-persona-pre-validation-mom-test-prep/) - Claude personas catch weak questions before you waste a real interview slot.
 
 ![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
 
 ## Why this matters in 2026
 
-A SaaS founder ran 11 interviews before launch, got 9 "this is great" answers, and shipped on a Monday. Three signups by Friday. Two churned in 14 days. She asked her network what they thought of the idea. The network, being nice people, said it sounded great. The market didn't lie - the questions did.
+The ed-tech founder above asked her network what they thought of the idea. The network, being nice people, said it sounded great. The market didn't lie - the questions did.
 
 Rob Fitzpatrick's book [The Mom Test](https://www.momtestbook.com/) (2013) named the technique that prevents this failure: ask about past behavior, not future preference. "Tell me about the last time" is the lock-pick. "Would you pay for this?" is the kind smile that costs you a year. The five-question script below is what the interview becomes when you stop asking your mom whether your idea is a good one.
 
@@ -46,65 +47,40 @@ Rob Fitzpatrick's book [The Mom Test](https://www.momtestbook.com/) (2013) named
 
 The script runs in order. Each question funnels the interviewee deeper into a real memory of the problem. Read the questions as written - small wording changes ("would you" instead of "did you") flip the answer back into hypothetical polite, which is exactly the failure mode you are paying 30 minutes to avoid.
 
-### Q1 - The last-time question
+#### Q1: "Tell me about the **last time** [problem] happened. Walk me through what you did."
 
-> "Tell me about the last time [problem context] happened. Walk me through what you did."
+- **What it catches**: whether the problem actually happens, how often, what mechanic the interviewee uses. A real story has a date and a tool.
+- **Pass**: specific recent story. *"Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board."* Date, time, tool, duration, feeling.
+- **Fail**: vague generality. *"Yeah I usually struggle with reporting."* No date, no mechanic - autopilot polite mode.
+- **Follow-up**: *"Walk me through that specific Tuesday again. What did you do first?"*
 
-**What it catches:** Whether the problem actually happens, how often, what mechanic the interviewee uses when it does. A real story has a date and a tool. A fake one has neither.
+#### Q2: "What did that **cost** you - in time, money, or sanity?"
 
-**Pass signal:** Specific story, recent. A 25-person SaaS founder we spoke with last spring described a board-report workflow in tactile detail: "Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board. I called my CFO. She pulled the numbers from QuickBooks in 90 seconds. I felt stupid." That answer has a date, a time, a tool, a person, a duration, and feeling. It is one real Tuesday, not "I usually."
+- **What it catches**: whether the pain is quantifiable. Separates "this is annoying" from "I'd pay $200/month to make this stop."
+- **Pass**: a number with a unit. *"Two hours every Tuesday for six months."* / *"My CFO bills $200/hour and spent four hours on it last week."*
+- **Fail**: *"It costs us time."* / *"It's frustrating."* Unquantified. Polite about a problem they don't actually feel.
+- **Follow-up**: *"If you had to put a dollar figure on it - or hours, or 'I'd quit my job over this' - what's the number?"*
 
-**Fail signal:** Vague generality. "Yeah I usually struggle with reporting." "It happens all the time." No date. No mechanic. The interviewee has gone into autopilot polite mode and is not opening a real memory.
+#### Q3: "What have you **tried already** to fix this?"
 
-**Follow-up:** "Walk me through that specific Tuesday again. What did you do first?" Forces them back into the actual incident if they retreated into generality.
+- **What it catches**: existing workarounds. A hack, a paid tool, a hired VA, two spreadsheets duct-taped = real. Nothing tried = theoretical.
+- **Pass**: a named tool, a hired person, a custom script. *"I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. My VA on Upwork fixes it."*
+- **Fail**: *"Nothing yet."* / *"We just deal with it."* / *"I've been meaning to look into something."*
+- **Follow-up**: *"What broke about the workaround? Why are you still talking to me about this?"* The crack is the gap your product would fill.
 
-### Q2 - The cost question
+#### Q4: "On a scale of **1-10**, how big a problem is this compared to everything else on your plate?"
 
-> "What did that cost you - in time, money, or sanity?"
+- **What it catches**: urgency against the interviewee's whole problem stack. A 9 is a sales conversation. A 4 is a pat on the head and zero dollars.
+- **Pass**: a 7 or higher **with a comparison**. *"This is an 8. The only thing higher is hiring my next engineer."*
+- **Fail**: a 5-6 with soft justification, or a bare "probably a 7" with no comparison (the polite-default 7 - treat as a 5 until Q5 proves otherwise).
+- **Follow-up**: *"What's at 10 for you right now? What would have to happen for this to climb to that 10 spot?"*
 
-**What it catches:** Whether the pain is quantifiable. A problem nobody can put a number on is rarely a problem worth paying to solve. The cost question separates "this is annoying" from "I'd pay $200/month to make this stop."
+#### Q5: "**Who else** on your team feels this? How do they handle it?"
 
-**Pass signal:** A number with a unit. "Two hours every Tuesday for six months." "My CFO bills $200/hour and she spent four hours on it last week." "I missed my daughter's bedtime three Mondays in a row." The cost can be money, time, or emotional weight - all three are valid, as long as the interviewee can put a magnitude on it.
-
-**Fail signal:** "It costs us time." "It's frustrating." Unquantified. The interviewee is being polite about a problem they don't actually feel.
-
-**Follow-up:** "If you had to put a dollar figure on it - or hours, or 'I'd quit my job over this' - what's the number?"
-
-### Q3 - The workaround question
-
-> "What have you tried already to fix this?"
-
-**What it catches:** Existing workarounds. If the interviewee has built a hack, paid for a tool, hired a person, or duct-taped two spreadsheets together, the problem is real. If they have done nothing, the problem is theoretical.
-
-**Pass signal:** A named tool, a hired person, a custom script. "I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. I have a VA on Upwork who fixes it." The workaround is the budget you can pitch into. It also tells you who your real competitor is - usually not what you assumed.
-
-**Fail signal:** "Nothing yet." "We just deal with it." "I've been meaning to look into something." A non-tried problem is a non-felt problem. Some exceptions apply (regulated industries, security), but the default reading is: no workaround means no urgency.
-
-**Follow-up:** "What broke about the workaround? Why are you still talking to me about this?" The crack in the workaround is the gap your product would fill.
-
-### Q4 - The priority question
-
-> "On a scale of 1-10, how big a problem is this for you compared to everything else on your plate?"
-
-**What it catches:** Urgency, against the interviewee's whole problem stack. A 9 is worth a sales conversation. A 4 is worth a pat on the head and zero dollars. Most "wouldn't it be great if" problems land at 4.
-
-**Pass signal:** A 7 or higher with a comparison. "This is an 8. The only thing higher right now is hiring my next engineer." A 9 or 10 is rare and the strongest signal in the set - that interviewee is your first 5 customers.
-
-**Fail signal:** A 5 or 6 with a soft justification ("it's annoying but we cope"). A 7 with no comparison - just "probably a 7" - is the polite default score, not real urgency. Treat unranked 7s the same as 5s until proven otherwise by Q5.
-
-**Follow-up:** "What's at 10 for you right now? What would have to happen for this problem to climb to that 10 spot?"
-
-### Q5 - The buying-committee question
-
-> "Who else on your team feels this? How do they handle it?"
-
-**What it catches:** The buying committee and the alternative solutions other people in the company already built. In any B2B sale, the person you are talking to is not the only one who needs to nod when the invoice arrives. You also learn who already owns a workaround inside the company - usually a more interesting interview than the one you just ran.
-
-**Pass signal:** A specific colleague named, plus their workaround. "My ops manager Jess feels this worse than I do - she keeps a parallel Google Sheet because she doesn't trust the finance numbers from accounting." That's a second interviewee, a second workaround, and a hint that the problem you are validating extends into operations.
-
-**Fail signal:** "I'm the only one who deals with this." "Everyone else is fine." Either the problem is local and small, or the interviewee does not know how their team operates. Both are weak signals - and both should drop your overall score for this call.
-
-**Follow-up:** "Could you introduce me to Jess?" Convert the call into the next call before you hang up. The introduction-ask also functions as a commitment test: an interviewee who refuses to make a 30-second intro probably won't pay you $49/month either.
+- **What it catches**: the buying committee + workarounds other people in the company already built. In B2B, your interviewee is not the only nodder when the invoice arrives.
+- **Pass**: a specific colleague named + their workaround. *"My ops manager Jess feels this worse than I do - she keeps a parallel Google Sheet because she doesn't trust the finance numbers from accounting."*
+- **Fail**: *"I'm the only one who deals with this."* / *"Everyone else is fine."*
+- **Follow-up**: *"Could you introduce me to Jess?"* An interviewee who won't make a 30-second intro probably won't pay you $49/month either.
 
 ![Side-by-side comparison of a bad polite hypothetical answer and a good specific past-behavior answer, with what each tells you in the margin.](good-vs-bad-answers.svg)
 
@@ -158,7 +134,7 @@ flowchart TD
     class Fail fail
 ```
 
-The flow is rigid by design. Founders who improvise mid-call ("oh that reminds me of my product idea") usually contaminate the rest of the transcript - the interviewee starts answering the founder's pitch instead of describing their own life. Read the questions as written, take notes by hand, score after.
+Stick to the order. Founders who improvise mid-call ("oh that reminds me of my product idea") usually contaminate the rest of the transcript - the interviewee starts answering the pitch instead of describing their own life. Read the questions as written, take notes by hand, score after.
 
 ## What to do tomorrow
 
@@ -168,19 +144,19 @@ Three actions. In order.
 - **Take notes by hand, not by typing.** Hand-writing slows you down enough that you stop transcribing and start listening for the three emotional flags. Typing during a call turns you into a court reporter; pen-and-paper turns you into a listener. The Q4 score and the flag count are what you write down, not the full transcript.
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in the same notes file. If you score later, you will round up. By interview 10 you have a validation total, not 10 unsorted transcripts.
 
-If 7 of your 10 calls score 7+ with at least 3 emotional flags, the problem is validated and you move to Module 3.3 (Validated Problem Statement). If fewer than 5 calls score 7+, the problem is too weak - re-evaluate the ICP, the framing, or sometimes the question wording before booking another 10. Sometimes Q1 is wrong - the problem context is too narrow - and a broader framing wakes the interviewee up. The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-market-fit-startup-tutorial/) covers what the validation signal does and doesn't tell you about whether you have product-market fit (spoiler: a validated problem is necessary, not sufficient).
+If 7 of your 10 calls score 7+ with at least 3 emotional flags, the problem is validated and you move to the [Validated Problem Statement Template](/blog/validated-problem-statement-template/). If fewer than 5 calls score 7+, the problem is too weak - re-evaluate the ICP, the framing, or sometimes the question wording before booking another 10. Sometimes Q1 is wrong - the problem context is too narrow - and a broader framing wakes the interviewee up. The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-market-fit-startup-tutorial/) covers what the validation signal does and doesn't tell you about whether you have product-market fit (spoiler: a validated problem is necessary, not sufficient).
 
 ## The Mom Test interview script artifact
 
 The artifact at **[/blog/mom-test-interview-script/](/blog/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric. Print it, keep it open on your second monitor, run all 10 interviews against it. The artifact is the screen-side reference - this post is the explanation of why it works.
 
-After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to Module 3.3) or 10 transcripts that don't (re-frame and run another 10). Founders who fake the convergence to start building anyway are the same founders who later post about wasted MVP spend - the [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against an unvalidated problem.
+After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to Chapter 3.4, the clickable prototype) or 10 transcripts that don't (re-frame and run another 10). Founders who fake the convergence to start building anyway are the same founders who later post about wasted MVP spend - the [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against an unvalidated problem.
 
-> Most customer interviews fail because the interviewees are polite. The fix is not better people - it is questions that anchor in last Tuesday at 9pm, not in some imagined future where the product already exists.
+> Most customer interviews fail because the interviewees are polite. Better questions outperform better people. Anchor every question in a specific past moment - last Tuesday at 9pm, the last invoice, the last time the spreadsheet broke - and the polite-mode answers run out fast.
 
 ## Synthesis: Write Down What You Heard, Decide What's Next
 
-After your 10 interviews you have scored transcripts in a folder and a number. Synthesis is the 90-minute step that turns those transcripts into the one-page validated problem statement that anchors Module 4. Founders who skip this step and go straight to Lovable have not validated anything - they have a folder and a hypothesis.
+After all 10 interviews are done, you have scored transcripts in a folder and a number. Synthesis is the 90-minute step that turns those transcripts into the one-page validated problem statement that anchors Chapter 4.1. Founders who skip this step and go straight to Lovable have not validated anything - they have a folder and a hypothesis.
 
 ### The 3-step synthesis
 
@@ -204,9 +180,9 @@ flowchart TD
     S1 --> S2[Step 2<br/>Count strong signals 7+]
     S2 --> S3[Step 3<br/>Write the one page]
     S3 --> S4{Strong signals<br/>in 10 calls?}
-    S4 -->|7 or more| Build[BUILD<br/>Move to Module 4.<br/>Write the Product Brief.]
-    S4 -->|4 to 6| Pivot[PIVOT<br/>Run 5 more interviews.<br/>Refine the ICP first.]
-    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem.<br/>Restart Module 3.]
+    S4 -->|7 or more| Build[BUILD<br/>Move to Chapter 4.1<br/>Write the Product Brief]
+    S4 -->|4 to 6| Pivot[PIVOT<br/>Run 5 more interviews<br/>Refine the ICP first]
+    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart Chapter 3.2]
     Build --> Sign[Show to 2 advisors.<br/>Get 2 signatures before building.]
     Pivot --> Sign
     Kill --> Sign
@@ -240,11 +216,11 @@ flowchart TD
 > Founders need a better way to validate their startup ideas. Many of them waste time and money.
 
 **Good problem statement (specific, named, signed):**
-> Pre-seed B2B SaaS founders running their own discovery do customer interviews, but 9 of 10 (per our 10-call sample, Apr-May 2026) use hypothetical-future questions and get polite-yes answers. The average interviewee currently spends 6-12 hours running interviews and learns the problem wasn't real only after their first launch flops - typical sunk cost is 6 weeks of build time plus £15-30K of contractor spend. Workarounds tried: YC Library essays (too high-level), $1,500 SurveyMonkey panel (taught one founder I spoke with nothing in the survey style), free templates downloaded but not used. Why now: AI-built MVPs accelerated this failure mode - the prototype lands in 4 days instead of 12 weeks, so the validation gap surfaces faster. Pain average 7.6/10 across 10 calls, 8 strong signals.
+> Pre-seed B2B SaaS founders running their own discovery do customer interviews, but 9 of 10 (per our 10-call sample, Apr-May 2026) use hypothetical-future questions and get polite-yes answers. The average interviewee currently spends 6-12 hours running interviews and learns the problem wasn't real only after their first launch flops - typical sunk cost is 6 weeks of build time plus $15K-$30K of contractor spend. Workarounds tried: YC Library essays (too high-level), $1,500 SurveyMonkey panel (taught one founder I spoke with nothing in the survey style), free templates downloaded but not used. Why now: AI-built MVPs accelerated this failure mode - the prototype lands in 4 days instead of 12 weeks, so the validation gap surfaces faster. Pain average 7.6/10 across 10 calls, 8 strong signals.
 
 The good answer has named industry, dated sample, named workarounds with named failure modes, a quantified cost, a why-now, and a strong-signal count. A peer can argue with it. If your statement has the word "many" or "a lot," cross it out.
 
-> The synthesis is the validation. The 10 interviews are the raw material. A founder with 10 unwritten transcripts and an open Lovable prompt has not validated anything yet - she has a folder and a hypothesis.
+> Writing the one-page statement is the validation step. Ten transcripts in a folder don't count - until you've scored them, counted the strong signals, and written down what the pattern says, you have raw material and a hypothesis, not a validated problem.
 
 The [Validated Problem Statement Template](/blog/validated-problem-statement-template/) is the artifact for this section. Print it, fill it in 30 minutes, get 2 signatures, and the problem validation checkpoint is closed.
 

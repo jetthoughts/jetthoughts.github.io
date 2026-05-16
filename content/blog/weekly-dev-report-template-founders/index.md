@@ -1,7 +1,8 @@
 ---
 title: "6.5 · The Plain-English Weekly Dev Report"
 description: "A one-page weekly dev report you demand from your team every Monday. Five sections, copy-paste, with pass/fail examples for each. No jargon."
-date: 2026-10-07
+date: 2026-05-18
+course_chapter: true
 author: "JetThoughts Team"
 slug: weekly-dev-report-template-founders
 keywords:
@@ -27,7 +28,7 @@ cover_image_alt: "JetThoughts blog cover for The Plain-English Weekly Dev Report
 canonical_url: "https://jetthoughts.com/blog/weekly-dev-report-template-founders/"
 ---
 
-> **Module 6.5 · Step 4 of 5** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> **Chapter 6.5 · Step 4 of 5** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
 > Input: a team in place + Friday demos running. Output: a one-page weekly report template you demand from your team every Monday.
 
 > **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
@@ -38,7 +39,7 @@ The first is 1,840 words long. It opens with "We made significant progress on th
 
 The second is one page. The first line is a staging URL. The second line says "co flow is live; here is a $1 test charge that hit your Stripe dashboard at 14:02 UTC." The third line names two things the team cut to ship that. The fourth line names one person blocking one decision and the answer she needs from you by Wednesday. The fifth line says "next week we are worried about the migration; it locks the orders table and we want a 6am window."
 
-Both teams worked the same five days. One report orients you in ninety seconds. The other steals your Monday.
+Both teams worked the same five days, and the second report gave you everything you needed to run your Monday while the first burned half an hour of it.
 
 ## Why weekly reports usually fail
 
@@ -70,20 +71,16 @@ Send this to your tech lead Sunday night or first-thing Monday. Frame it as the 
 
 Do not soften the wording when you send it. "Would be nice to have" gets you the old format with two new bullets. "This is the format I need each week" gets you the format.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart LR
-    Mon([Monday 9am<br/>Report lands<br/>in your inbox]) --> Read[Read in 90 sec<br/>Click 1 staging URL<br/>Note 1 blocker on you]
-    Read --> Call[Monday 11am call<br/>Discuss the cuts<br/>Unblock yourself fast]
-    Call --> Mid[Tue-Thu<br/>Team ships<br/>You stay out]
-    Mid --> Demo([Friday 4pm<br/>15-min demo<br/>Click what shipped])
-    Demo --> Wknd[Weekend<br/>Team writes<br/>next report]
-    Wknd --> Mon
-    classDef event fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
-    classDef action fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    class Mon,Demo event
-    class Read,Call,Mid,Wknd action
-```
+### The weekly oversight loop
+
+The weekly oversight loop in one glance:
+
+1. **Mon 9am** - Report lands in your inbox. Read in 90 sec, click one staging URL, note one blocker on you.
+2. **Mon 11am** - Call with the team. Discuss the cuts, unblock yourself fast.
+3. **Tue-Thu** - Team ships. You stay out.
+4. **Fri 4pm** - 15-min demo. Click what shipped (see the [Friday Demo Template](/blog/friday-demo-template/)).
+5. **Weekend** - Team writes next week's report.
+6. **Mon 9am (next week)** - Loop closes; the next report lands.
 
 The cadence is closed-loop on purpose. Monday's report tells you what happened last week and what to unblock this week. Friday's demo (covered in [the Friday Demo Template](/blog/friday-demo-template/)) shows you the working software. Without Monday's report you walk into the demo blind. Without the demo, Monday's report is a prose exercise. The two pieces fit together.
 
@@ -93,7 +90,7 @@ The cadence is closed-loop on purpose. Monday's report tells you what happened l
 
 Two reports on the same week of work. Same team. Same backlog. Different formats.
 
-**Bad report (1,840 words, no clickable URL):**
+### Bad report (1,840 words, no clickable URL)
 
 > *Subject: Weekly Status Report - Sprint 12*
 >
@@ -103,7 +100,7 @@ Two reports on the same week of work. Same team. Same backlog. Different formats
 
 You finish reading at 9:18am. You cannot tell what shipped, who reviewed what, or what you need to decide before Wednesday. The report orients nobody.
 
-**Good report (one page, five sections):**
+### Good report (one page, five sections)
 
 > *Subject: Weekly report - week of 5 Oct*
 >
@@ -128,7 +125,7 @@ You finish reading at 9:18am. You cannot tell what shipped, who reviewed what, o
 
 Same five days of work. You finish reading at 9:02am. You know what shipped, what is in review, what you owe the team by Wednesday, what was traded off, and what to flag on Wednesday's call. You can spend the rest of Monday on the work that needs you - not on parsing a status doc.
 
-The shape of the bad report is the giveaway. Soft verbs ("exploring," "iterating," "aligning"), passive voice ("changes were merged"), no named humans, no URLs, no specific cuts. Plain English does not need any of those things. If the report would not survive being read out loud at a Series A board meeting, it is too soft for your inbox too.
+The bad report leans on soft verbs, passive voice, and unnamed actors because it has no clickable URL to anchor anything specific. If yours would not survive being read out loud at a board meeting, the team is sending you the wrong format.
 
 ## What to do tomorrow
 

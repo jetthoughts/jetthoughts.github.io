@@ -15,72 +15,72 @@
 sequence:
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"
-    module: "Module 1.1"
+    module: "Chapter 1.1"
 
   - slug: smoke-test-landing-page-300-dollar-validation
     title: "2.1 · Smoke-Test the Hypothesis"
-    module: "Module 2.1"
+    module: "Chapter 2.1"
 
   - slug: price-hypothesis-on-smoke-test-page
     title: "2.2 · Price Your Hypothesis on the Smoke-Test Page"
-    module: "Module 2.2"
+    module: "Chapter 2.2"
 
   - slug: ai-persona-pre-validation-mom-test-prep
     title: "3.1 · AI Persona Pre-Validation"
-    module: "Module 3.1"
+    module: "Chapter 3.1"
 
   - slug: find-10-people-with-problem-outreach-2026
     title: "3.2 · Find 10 People With the Problem"
-    module: "Module 3.2"
+    module: "Chapter 3.2"
 
   - slug: mom-test-ask-about-past-not-future
     title: "3.3 · The Mom Test (with Synthesis)"
-    module: "Module 3.3"
+    module: "Chapter 3.3"
 
   - slug: clickable-prototype-validation-2-hour-lovable
     title: "3.4 · Build a Clickable Prototype in an Afternoon"
-    module: "Module 3.4"
+    module: "Chapter 3.4"
 
   - slug: one-page-product-brief-vibe-prd
     title: "4.1 · The One-Page Product Brief"
-    module: "Module 4.1"
+    module: "Chapter 4.1"
 
   - slug: stop-specifying-features-start-outcomes
     title: "4.2 · Stop Specifying Features, Start Outcomes"
-    module: "Module 4.2"
+    module: "Chapter 4.2"
 
   - slug: should-you-hire-2026-decision-tree
     title: "5.1 · Build It Yourself or Hire (the Default)"
-    module: "Module 5.1"
+    module: "Chapter 5.1"
 
   - slug: github-aws-database-ownership-checklist
     title: "5.2 · Day-1 Ownership Audit"
-    module: "Module 5.2"
+    module: "Chapter 5.2"
 
   - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
     title: "5.3 · Build It Yourself: Lovable + Supabase + Stripe"
-    module: "Module 5.3"
+    module: "Chapter 5.3"
 
   - slug: vibe-coding-ceiling-signals
-    title: "5.4 · Proactive Ceiling Signals (Monthly Check)"
-    module: "Module 5.4"
+    title: "5.4 · Vibe Coding Done Right: 5 Ceiling Signals"
+    module: "Chapter 5.4"
 
   - slug: must-have-segment-pmf-test
-    title: "6.0 · The Must-Have Segment Test"
-    module: "Module 6.0"
+    title: "6.1 · The Must-Have Segment Test"
+    module: "Chapter 6.1"
 
   - slug: channel-selection-before-outbound
-    title: "6.1 · Choose Your Channel Before You Send One Message"
-    module: "Module 6.1"
+    title: "6.2 · Choose Your Channel Before You Send One Message"
+    module: "Chapter 6.2"
 
   - slug: first-ten-customers-personal-network
-    title: "6.2 · The First Ten From Your Network"
-    module: "Module 6.2"
+    title: "6.3 · The First Ten From Your Network"
+    module: "Chapter 6.3"
 
   - slug: paid-pilot-charge-before-ship
-    title: "6.3 · Charge Before You Ship"
-    module: "Module 6.3"
+    title: "6.4 · Charge Before You Ship"
+    module: "Chapter 6.4"
 
   - slug: outbound-without-sales-team
-    title: "6.4 · Going Outbound Without a Sales Team"
-    module: "Module 6.4"
+    title: "6.5 · Going Outbound Without a Sales Team"
+    module: "Chapter 6.5"

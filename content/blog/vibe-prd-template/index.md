@@ -1,8 +1,9 @@
 ---
 title: "Vibe PRD Template - One-Page Product Brief"
 description: "One-page Product Brief template. Hand to Lovable, Cursor, or a hired junior. Free."
-date: 2026-07-29
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: vibe-prd-template
 keywords:
@@ -22,11 +23,18 @@ canonical_url: "https://jetthoughts.com/blog/vibe-prd-template/"
 related_posts: false
 ---
 
-📋 Template companion to the [Module 4.1 post](/blog/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Module 3.2](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
+📋 Template companion to the [Chapter 4.1 post](/blog/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 3.2](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
 
 # Vibe PRD Template - One Page, Five Sections
 
 *The brief that turns a validated problem into something Lovable, Cursor, or a hired junior can ship from on Tuesday morning.*
+
+> **The Vibe PRD, 5 sections:**
+> 1. The problem (copied from your validated problem statement)
+> 2. The user and their context
+> 3. What you're building (one paragraph, plain English)
+> 4. Success metric (one number)
+> 5. What you're not building (the no-go list)
 
 ## Why this exists
 
@@ -44,7 +52,7 @@ Total time budget: 90 minutes to write, 1 hour to read aloud + revise, 0 minutes
 
 ## The template - copy and paste
 
-Use the markdown block below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/blog/one-page-product-brief-vibe-prd/) is embedded in the Module 4.1 post for printing.
+Use the markdown block below directly in Notion, Lovable's prompt window, or a Word doc. The [SVG of the page](/blog/one-page-product-brief-vibe-prd/) is embedded in the Chapter 4.1 post for printing.
 
 ```
 ======================= VIBE PRD =======================
@@ -183,6 +191,18 @@ Metric check-in: 30 days from build start: __________
 ========================================================
 ```
 
+### Audience decision: who is this brief going to?
+
+The same one page works for the first three audiences below. Senior engineers and product committees expect a longer document - the Vibe PRD is too thin for either.
+
+| Audience | Spec depth | Style | Length |
+|---|---|---|---|
+| Lovable / Bolt / v0 | Vibe PRD as-is | Paste as prompt; agent fills defaults | 1 page |
+| Cursor / Claude Code | Vibe PRD + a `context.md` with stack | Paste as context file at repo root | 1 page + stack note |
+| Hired junior contractor | Vibe PRD + 30-min kickoff call | Page + verbal walkthrough | 1 page + recording |
+| Hired senior engineer | Traditional PRD | User stories, acceptance criteria, edge cases | 5-10 pages |
+| Product committee | Traditional PRD | Goals, KPIs, risks, dependencies, milestones | 10+ pages |
+
 ## What good looks like vs what bad looks like
 
 **Section 1 - The problem**
@@ -217,7 +237,7 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 
 Founders who skip the no-go list ship working demos of products nobody asked for. The same founders, six weeks later, post a [salvage or rebuild question](/blog/salvage-vs-rebuild-decision-tree/) about an MVP they can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
 
-If you want the doctrine in long form, the [Module 4.1 post](/blog/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between Vibe PRD and traditional PRD, and the case for paying $1,000 vs writing the page yourself for free.
+If you want the doctrine in long form, the [Chapter 4.1 post](/blog/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between Vibe PRD and traditional PRD, and the case for paying $1,000 vs writing the page yourself for free.
 
 ---
 

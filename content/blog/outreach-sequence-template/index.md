@@ -1,8 +1,9 @@
 ---
 title: "Outreach Sequence Template: 10 Customer Interviews by Friday"
 description: "Reddit + LinkedIn + Clay + Lindy + paid panels = 10 ICP interviewees booked in one morning. The 2026 stack with copy-pasteable email + DM templates."
-date: 2026-07-08
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: outreach-sequence-template
 keywords:
@@ -22,7 +23,7 @@ canonical_url: "https://jetthoughts.com/blog/outreach-sequence-template/"
 related_posts: false
 ---
 
-📋 Template companion to the [Module 3.1 post](/blog/find-10-people-with-problem-outreach-2026/). Run Monday morning. 10 calls in your calendar by Friday.
+📋 Template companion to the [Chapter 3.1 post](/blog/find-10-people-with-problem-outreach-2026/). Run Monday morning. 10 calls in your calendar by Friday.
 
 # Find 10 People With the Problem - The 2026 Outreach Sequence Template
 
@@ -193,7 +194,7 @@ The signups become the warmest opener for Step 3 follow-up: "You signed up for t
 >
 > Good: "Hi Marcus, saw your r/sysadmin post Tuesday about spending 2 hours every Monday reconciling Datadog alerts across 4 accounts. I'm 20 minutes from launching something for that and want to make sure I'm not building the wrong thing. 20 min so I can ask 5 questions about what you do today? Calendar: [link]"
 
-The bad email could go to anyone in any role at any company. The good email could only go to Marcus. References his specific public post, names the exact painful task, sets a tight ask, drops the calendar link. Reply rate goes from 1-3% to 25-35%.
+The bad email could go to anyone in any role at any company. The good email could only go to Marcus. References his specific public post, names the exact painful task, sets a tight ask, drops the calendar link. Reply rate goes from 1-3% on the bad version to 25-35% on the good one.
 
 **The Reddit research comment**
 
@@ -205,9 +206,17 @@ The bad comment gets auto-removed by mods and reads as recruiting traffic. The g
 
 ## What to do after
 
-- **Score responses Wednesday afternoon.** Aim **30%+ reply rate** by mid-week. If you're under 10%, the Day-0 subject line is generic - rewrite it referencing a specific public post and resend Thursday morning.
+- **Score responses Wednesday afternoon.** Aim for **25-35% reply rate** by mid-week (same benchmark the well-crafted Day-0 example produces). If you're under 10%, the Day-0 subject line is generic - rewrite it referencing a specific public post and resend Thursday morning.
 - **By Friday, hold 10 booked calls across the next 2 weeks.** Cold outreach should give you 5-7 of them. Paid panel fills the other 3-5. The smoke-test landing page is a signal track, not a booking track.
-- **Move to the Mom Test interview script (Module 3.2).** The script tells you what to ask once they're on the call. The wrong questions waste the conversations you just booked. The [Mom Test reference at momtestbook.com](https://www.momtestbook.com/) is the anchor; Module 3.2 ships the JT-curated 5-question script.
+- **Move to the Mom Test interview script (Chapter 3.2).** The script tells you what to ask once they're on the call. The wrong questions waste the conversations you just booked. The [Mom Test reference at momtestbook.com](https://www.momtestbook.com/) is the anchor; Chapter 3.2 ships the JT-curated 5-question script.
+
+## What to do tomorrow
+
+Three actions. Block the morning before email.
+
+1. **Write your one-sentence problem hypothesis** in a Notion doc: *"I think [persona] currently does [task] in [painful way] and would pay $X to do it [better way]."* If you can't fill the blanks, the rest of the sequence is premature.
+2. **Open four tabs and read for two hours.** Reddit (Top - Past Month in your two niche subs), LinkedIn (problem-phrase + Past Week), one Discord, and 10 G2/Capterra 2-3 star reviews. Capture 30 verbatim complaint sentences in your doc.
+3. **Open Clay or Apollo and pull 80 to 120 rows** filtered on the six dimensions in Step 2. By tomorrow night you have the list. Tuesday morning the 3-email sequence ships.
 
 ---
 

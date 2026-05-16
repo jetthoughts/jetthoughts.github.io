@@ -3,6 +3,7 @@ title: "GitHub, AWS, Database Ownership Checklist"
 description: "A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop. 12 items, run alone."
 date: 2026-05-17
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: ownership-checklist
 keywords:
@@ -89,14 +90,17 @@ If you do not know what an item means, that is part of the result. "I have never
 If the agency's email is on the Owner row, they can delete the org tomorrow morning and GitHub support will not help you.
 
 **#4 - AWS root account email**
-> Bad: Root email is `aws@bigdevshop.com`. You have IAM access but have never logged into root.
-> Good: Root email is `aws@mycompany.com`. The password is in your 1Password. MFA is on your phone, with a backup code in your safe.
+
+| Signal | Root email | Recovery if you lose access |
+|---|---|---|
+| Fail | `aws@bigdevshop.com`, you have IAM only, never logged into root | None - the agency controls it |
+| Pass | `aws@mycompany.com`, password in your 1Password, MFA on your phone with a backup code in your safe | You reset it yourself in five minutes |
 
 The root account owns everything underneath it. If the agency controls the root email, they can lock you out of every AWS service in 10 minutes.
 
 **#7 - Production database password rotation**
-> Bad: "Marcus knows it. I would have to ask him."
-> Good: "I opened AWS Secrets Manager just now and read it. I rotated it once before, in March, when we offboarded the previous DBA."
+
+The fail looks like one sentence: *"Marcus knows it. I would have to ask him."* The pass looks like one action: you open AWS Secrets Manager right now, read the password, and remember the last time you rotated it (e.g. March, when the previous DBA left).
 
 If only one person can rotate the prod DB password, you do not have a database. You have a hostage.
 
@@ -108,9 +112,11 @@ A domain transfer takes a minimum of **14 days** under ICANN rules and requires 
 
 ## What to do if the audit fails
 
-**Step 1. Do not panic. Do not tell the team yet.** Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help me move this over, doing some housekeeping" - you will get a faster transfer than "why is my company under your name?"
+### Do not panic. Do not tell the team yet.
 
-**Step 2. Recovery, in this order.**
+Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help me move this over, doing some housekeeping" - you will get a faster transfer than "why is my company under your name?"
+
+### Recovery order
 
 - **Code (#1-3):** GitHub org transfer takes five minutes. Slack the lead engineer with your target account email.
 - **Cloud (#4-6):** AWS root email change is self-service if you have the root password. If you do not, AWS support recovers it with your incorporation documents (3-5 business days).
@@ -118,7 +124,9 @@ A domain transfer takes a minimum of **14 days** under ICANN rules and requires 
 - **Domain (#10-11):** Initiate the registrar transfer to an account in your name. Get the auth code. Budget 14 days. Do not change DNS during the window.
 - **Third-party services (#12):** Most SaaS tools let you change account email and billing card from the settings page. One at a time, so receipts stay readable.
 
-**Step 3. When to escalate.** If the agency does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Founders who negotiate for a month usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
+### When to escalate
+
+If the agency does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Founders who negotiate for a month usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
 
 If you are in this spot, the [JetThoughts dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) is the next read - a failed audit usually correlates with three or four other red flags - and the [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the 30-day transition.
 

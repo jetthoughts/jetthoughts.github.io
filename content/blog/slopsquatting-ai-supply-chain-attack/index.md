@@ -1,8 +1,9 @@
 ---
-title: "9.3 · Slopsquatting: The 2025 Supply-Chain Attack"
+title: "Slopsquatting: The 2025 Supply-Chain Attack"
 description: "AI assistants suggested 200+ package names that did not exist. Attackers registered them. Your $34K MVP pulled malware. The CI gate that stops it cold."
-date: 2026-11-25
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: slopsquatting-ai-supply-chain-attack
 keywords:
@@ -21,7 +22,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "9.3 · Slopsquatting: The 2025 Supply-Chain Attack Vibe Coding Created"
+  og_title: "Slopsquatting: The 2025 Supply-Chain Attack Vibe Coding Created"
   og_description: "AI assistants suggested 200+ package names that did not exist. Attackers registered them. Your $34K MVP pulled malware. The CI gate that stops it cold."
 cover_image_alt: "JetThoughts cover with a hand-drawn package box labeled 'gem active_record_extras_helper' with a skull sticker, next to a real-looking package labeled 'gem active_record_extra'."
 canonical_url: "https://jetthoughts.com/blog/slopsquatting-ai-supply-chain-attack/"
@@ -29,7 +30,7 @@ related_posts: false
 course_nav: false
 ---
 
-> **Module 9 · Step 3 of 3** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> **Going further (AI in production) · Step 3 of 3** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
 > Input: any product touching AI in build (which is most products in 2026). Output: a one-paragraph contract clause + a CI gate that blocks hallucinated dependencies before merge.
 
 > **Supplementary content.** This chapter is relevant after you've shipped (Module 5+) and your product touches AI in production. Bookmark and return when needed.
@@ -45,6 +46,8 @@ LLMs invent package names that sound plausible but do not exist. The original [L
 ## The 3-line CI gate (the simplest defense)
 
 A CI gate that fails the build on any new dependency until a human signs off. Every Rails, Django, and Laravel founder can install this in 15 minutes.
+
+*What this 30-line CI gate actually does: blocks any pull request that adds a new package until you've eyeballed it - cheap protection against the slopsquatting attack pattern above.*
 
 ```yaml
 # .github/workflows/dependency-gate.yml
@@ -72,12 +75,12 @@ That is the entire defense. The PR cannot merge until a human looks at the new g
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     PR(["PR opened"])
-    Gate{"CI gate:<br/>does the lockfile have<br/>a new dependency?"}
-    Pass["No new dep:<br/>merge as normal"]
-    Block["Build fails.<br/>PR blocked.<br/>Comment posted: 'New gem/pip/npm. Reviewer needed.'"]
-    Review{"Founder + reviewer<br/>check the package:<br/>real? maintained?<br/>typo of a real name?"}
-    Allowlist["Reviewer adds 'dep-approved' label.<br/>Package name + version pinned<br/>in allowlist file."]
-    Walk["Reviewer pushes a commit<br/>removing the package.<br/>Reverts to a real one."]
+    Gate{"New dependency in lockfile?"}
+    Pass["Merge as normal"]
+    Block["Build fails - PR blocked"]
+    Review{"Reviewer checks package"}
+    Allowlist["Add dep-approved label"]
+    Walk["Revert to real package"]
 
     PR --> Gate
     Gate -- "No" --> Pass
@@ -132,25 +135,9 @@ Three actions. None require an engineer to start.
 - **This week: drop the 30-line CI gate above into `.github/workflows/dependency-gate.yml`.** Open the PR yourself if your dev shop is slow. The merge protection takes 10 minutes to wire in GitHub repository settings. Reference the [GitHub/AWS/DB ownership checklist](/blog/ownership-checklist/) for repository admin access if your name is not on the org owners list.
 - **Before any new SOW: paste the contract clause from this post into the addendum section.** If the agency strikes the clause, that is the audit finding. The [SOW reading guide](/blog/hire-track-supplementary-reference/#reading-the-sow) covers the rest of the clauses you should be checking on the same pass.
 
-## You finished the course
+## Wrapping the course
 
-If you read all 26 posts of [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/), you walk away holding ten artifacts: the [outreach sequence template](/blog/outreach-sequence-template/), the [Mom Test interview script](/blog/mom-test-interview-script/), the [validated problem statement template](/blog/validated-problem-statement-template/), the [Vibe PRD template](/blog/vibe-prd-template/), the [build-path decision worksheet](/blog/build-path-decision-worksheet/), the [self-serve stack walkthrough](/blog/self-serve-stack-walkthrough/), the [SOW reading guide](/blog/hire-track-supplementary-reference/#reading-the-sow), the [Friday demo template](/blog/friday-demo-rule-founder-progress/), the [GitHub/AWS/DB ownership checklist](/blog/ownership-checklist/), the [salvage vs rebuild decision tree](/blog/salvage-vs-rebuild-decision-tree/), the ["We Use AI" 5-question script](/blog/agency-ai-five-questions/), and the dependency CI gate + slopsquatting clause from this post. That is the entire Founder OS. Open a Notion page. Paste each artifact. Title it "My Founder OS, version 1." Date it. You can hand any one of those to an investor, a co-founder, an attorney, or your next dev shop and answer their questions from the artifact alone.
-
-The ten modules you walked through:
-
-- **Module 0** routed you to your starting point.
-- **Module 1** formed the one-sentence Founding Hypothesis.
-- **Module 2** smoke-tested the hypothesis with a $300 landing page.
-- **Module 3** validated the problem with 10 past-behavior interviews.
-- **Module 4** wrote it into a one-page Product Brief.
-- **Module 5** picked the build path: self-serve or hire.
-- **Module 6** locked down ownership of GitHub, AWS, and the database before the build started, then split into 6A (self-serve MVP at a staging URL) or 6B (hire path with a Fractional CTO bridge and a real SOW).
-- **Module 7** booked the first paying customer with a signed pilot.
-- The **oversight rhythm** put weekly Friday demos and standups in place.
-- **When Things Break** prepared the salvage / rebuild decision for when something fails.
-- **Manage AI-Era Risks** closed with the AI interrogation system: the 5-question script, the contract for AI-generated code accountability, and the supply-chain CI gate you just installed.
-
-If your situation has changed since you started (new role, new product, second startup, post-exit operator now mentoring others), revisit the [course landing page](/blog/tech-for-non-technical-founders-2026/). The "start here if..." note on each module routes you to the right entry point. The course is non-linear; the landing page is the navigation.
+This is the last supplementary chapter. The full artifact list (Founder OS) and the module map live on the [course landing page](/blog/tech-for-non-technical-founders-2026/) - the "start here if..." note on each module routes you back to the right entry point.
 
 ## Further reading
 

@@ -1,8 +1,9 @@
 ---
-title: "7.5 · When Your Customers Are Leaving: Churn Triage Before Acquisition"
-description: "30 paying users churning at 60% / month. Module 7 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage: fix product, change segment, or kill the SKU."
+title: "When Your Customers Are Leaving: Churn Triage Before Acquisition"
+description: "30 paying users churning at 60% / month. Module 6 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage: fix product, change segment, or kill the SKU."
 date: 2026-05-14
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: customers-leaving-churn-triage-not-acquisition
 keywords:
@@ -21,7 +22,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "7.5 · When Your Customers Are Leaving: Churn Triage Before Acquisition"
-  og_description: "30 paying users churning at 60% / month. Module 7 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage."
+  og_description: "30 paying users churning at 60% / month. Module 6 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage."
 cover_image_alt: "JetThoughts course cover for the churn triage chapter showing a leaky bucket with users dropping out faster than they enter"
 canonical_url: "https://jetthoughts.com/blog/customers-leaving-churn-triage-not-acquisition/"
 related_posts: false
@@ -40,19 +41,33 @@ Her instinct, the same one every founder has when they see a 0.4% net-growth num
 
 The fix was not a better Meta Ads brief. The fix was to stop the ads, run a 90-minute cohort analysis, and make one of three triage decisions before she spent another dollar.
 
-![The leaky bucket - $4,800 in ads buys 3 net new because 21 of 24 leave again](leaky-bucket.svg)
+### The leaky bucket - what the spend actually buys
 
-This chapter is the one Module 7 does not cover. Modules 7.1 through 7.4 teach you how to land your first paying customers. This chapter teaches you what to do when the customers you already have are leaving faster than the funnel can replace them. It is the chapter for the messy middle - the founder who hit Module 7 once, got customers, and watched them slip away faster than the spreadsheet predicted.
+| In | Out | Net |
+|---|---|---|
+| **+24 new signups / month** | **-21 churning / month** | **+3 net new** |
+| Driven by $4,800 Meta Ads + $1,400 dev support | 65% will churn within 30 days | $2,066 spend per net new user |
+| Top of funnel is healthy (~11% trial-to-paid) | Wrong segment, no 7-day return | The fix is not the ads |
+
+Bucket holds **32 paying users at $29 / month**. Stop the ads. Run the 90-minute cohort triage. Decide: fix the product, change the segment, or kill the SKU.
+
+This chapter is the one Module 6 does not cover. Modules 6.1 through 6.5 teach you how to land your first paying customers. This chapter teaches you what to do when the customers you already have are leaving faster than the funnel can replace them. It is the chapter for the messy middle - the founder who hit Module 6 once, got customers, and watched them slip away faster than the spreadsheet predicted.
 
 The KISS rule for this chapter: if your churn is above 30% in a 30-day window, every dollar you spend on acquisition is wasted until you triage. Read on.
 
 ## The 90-Minute Cohort Floor
 
+### Step 1 - pick a free analytics tool
+
 You do not need a data analyst, a Snowflake instance, or a custom dashboard. You need 90 minutes, a free analytics tool, and four numbers. Mixpanel, Amplitude, and Heap all ship a free tier in 2026 that handles up to 20K monthly events - enough for any product under 10,000 users. Pick one. PostHog is the open-source option if you prefer self-host.
 
-Set up the basics in 30 minutes. Three events: `signup_completed`, `core_action_completed` (define the one thing your product is for - send first invoice, schedule first job, run first import), `returned_after_signup` (any session 7+ days after signup). Pipe them in via the snippet your team or your no-code tool already has. If you are on Lovable, Bubble, or Webflow, the integration is a copy-paste API key.
+### Step 2 - wire three events (30 minutes)
 
-Now answer four questions. The cohort tool already groups users by signup week, so this is a matter of reading the table.
+Three events: `signup_completed`, `core_action_completed` (define the one thing your product is for - send first invoice, schedule first job, run first import), `returned_after_signup` (any session 7+ days after signup). Pipe them in via the snippet your team or your no-code tool already has. If you are on Lovable, Bubble, or Webflow, the integration is a copy-paste API key.
+
+### Step 3 - answer the four questions
+
+The cohort tool already groups users by signup week, so this is a matter of reading the table.
 
 1. **Of users who signed up in the last 90 days, what percent completed `core_action_completed` within 7 days?** This is your activation rate. Industry floor for SaaS is 40%; under 25% means your onboarding fails before the user gets to the value moment.
 2. **Of those activated users, what percent triggered `returned_after_signup` within 14 days?** This is your week-2 return rate. Anything under 30% is a 7-day novelty product, not a habitual one.
@@ -61,7 +76,18 @@ Now answer four questions. The cohort tool already groups users by signup week, 
 
 A B2B founder with a $29/month tool I worked with last quarter ran this in 70 minutes flat. Her overall 30-day retention was 19%. Solid not-a-business numbers. Sliced by segment: 3-person teams 71%, freelancers 12%, solo founders 8%. The average hid the only real customer she had.
 
-![Cohort retention curves showing 4 cohorts, with the must-have inflection at the 3-person team segment](cohort-curves.svg)
+### Cohort retention by segment - one product, four shapes
+
+The 40% line is Sean Ellis's must-have threshold; cohorts that finish day 30 above it are habitual, below it are novelty.
+
+| Cohort | Day 7 → Day 30 retention | Verdict |
+|---|---|---|
+| 3-person teams | 88% → **70%** | Above must-have line - your real customer |
+| Small agencies | 75% → 32% | Borderline - could lift with workflow fix |
+| Freelancers | 58% → 12% | Wrong audience - below must-have |
+| Solo founders | 40% → **8%** | Wrong audience - refund and redirect |
+
+Same product, two answers. The 3-person team segment is the customer; the other three were the wrong audience the ads were buying.
 
 Print the [Churn Triage Worksheet](/blog/first-paying-customer-operating-kit/) (in the operating kit) before you start. One A4 page: the four numbers, the segment slice, and the triage decision box. If you are filling it in on a screen, you are stalling.
 
@@ -80,7 +106,7 @@ flowchart TD
     B -->|One segment over 50%<br/>others under 20%| E[Decision 2 - CHANGE THE SEGMENT<br/>Refund the wrong half]
     C --> CK[Go to chapter 7.6<br/>Pivot or Persevere]
     D --> DK[Go to chapter 8 / 9<br/>When things break]
-    E --> EK[Re-run Module 7 outreach<br/>aimed at the right segment]
+    E --> EK[Re-run Module 6 outreach<br/>aimed at the right segment]
 
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
     classDef yellowbox fill:#fff8e0,stroke:#b8860b,stroke-width:2px;
@@ -92,11 +118,25 @@ flowchart TD
     class CK,DK,EK greenbox
 ```
 
-**Decision 1 - FIX THE PRODUCT.** Cohort retention is uniform across segments but stuck around 20-35%. Nobody is having a great time. The product genuinely does not deliver the must-have job for anyone yet. The Q3 verbatims from your [must-have segment test](/blog/must-have-segment-pmf-test/) will read hedged ("it is OK", "I would use it more if it had X"). The fix is to stop adding features and rebuild one workflow until it actually works. Pick the workflow that the highest-retaining cohort describes as the reason they came back. Ship that workflow rebuilt in 4-6 weeks. Re-run the cohort. If retention bumps to 40%+ in the must-have segment, you have a product. If it does not, you are in Decision 3 territory.
+### Decision 1 - FIX THE PRODUCT
 
-**Decision 2 - CHANGE THE SEGMENT.** One segment retains at 50%+ while others languish under 20%. The product works; the audience is wrong. R.'s case from the opening was Decision 2. The product retained at 71% for 3-person teams and 8% for solo founders. Two-thirds of her customers were the wrong customers, paying for a product that did not fit their job. The fix has two parts. First, fire the wrong segment - refund their last 30 days, recommend an alternative tool, and remove them from the customer list. Second, double down on the right segment - rewrite the landing page headline for 3-person teams, redirect ad spend to that audience, and re-run [Module 7.2 personal-network outreach](/blog/first-ten-customers-personal-network/) within the segment that retains. R. did this on a Friday afternoon. By the following Friday she had 11 paying customers (the right ones) and a refund tab of $5,800 (the wrong ones). Her net month-end customer count went from 35 to 11, and her churn rate dropped from 65% to 14% the next 30 days. The math worked out the way KISS triage usually does - fewer customers, less revenue, but a real business instead of a leaking one.
+Cohort retention is uniform across segments but stuck around 20-35%. Nobody is having a great time. The product genuinely does not deliver the must-have job for anyone yet. The Q3 verbatims from your [must-have segment test](/blog/must-have-segment-pmf-test/) will read hedged ("it is OK", "I would use it more if it had X").
 
-**Decision 3 - KILL THE SKU.** No segment retains above 25%. You have a feature, not a product. The pain is real but your build does not relieve it - users try it once, do not see the value, and never come back regardless of who they are. This is the hardest decision because it feels like quitting. It is not quitting; it is recovering the runway you would otherwise burn proving the same thing for another two months. Sunset the SKU. Refund the active subscribers (Stripe handles this in two API calls; your support inbox handles the rest). Move the operating decision to [chapter 7.6 Pivot or Persevere](/blog/pivot-or-persevere-decision-framework/), which walks the six pivot types and the trigger conditions. The cohort data you collected in the 90-minute floor is the strongest single piece of evidence you will hand into the pivot decision.
+The fix is to stop adding features and rebuild one workflow until it actually works. Pick the workflow that the highest-retaining cohort describes as the reason they came back. Ship that workflow rebuilt in 4-6 weeks. Re-run the cohort. If retention bumps to 40%+ in the must-have segment, you have a product. If it does not, you are in Decision 3 territory.
+
+### Decision 2 - CHANGE THE SEGMENT
+
+One segment retains at 50%+ while others languish under 20%. The product works; the audience is wrong. R.'s case from the opening was Decision 2 - 71% retention for 3-person teams, 8% for solo founders, two-thirds of her customers paying for a product that did not fit their job.
+
+The fix has two parts. First, fire the wrong segment - refund their last 30 days, recommend an alternative tool, and remove them from the customer list. Second, double down on the right segment - rewrite the landing page headline for 3-person teams, redirect ad spend to that audience, and re-run [Chapter 7.2 personal-network outreach](/blog/first-ten-customers-personal-network/) within the segment that retains.
+
+R. did this on a Friday afternoon. By the following Friday she had 11 paying customers (the right ones) and a refund tab of $5,800 (the wrong ones). Her net month-end customer count went from 35 to 11, and her churn rate dropped from 65% to 14% the next 30 days. Fewer customers, less revenue, but a real business instead of a leaking one.
+
+### Decision 3 - KILL THE SKU
+
+No segment retains above 25%. You have a feature, not a product. The pain is real but your build does not relieve it - users try it once, do not see the value, and never come back regardless of who they are.
+
+This is the hardest decision because it feels like quitting. It is not quitting; it is recovering the runway you would otherwise burn proving the same thing for another two months. Sunset the SKU. Refund the active subscribers (Stripe handles this in two API calls; your support inbox handles the rest). Move the operating decision to [chapter 7.6 Pivot or Persevere](/blog/pivot-or-persevere-decision-framework/), which walks the six pivot types and the trigger conditions. The cohort data you collected in the 90-minute floor is the strongest single piece of evidence you will hand into the pivot decision.
 
 The most common founder failure mode at this triage step is to refuse to pick. The cohort data says Decision 2; the founder spends six more weeks "trying to lift the solo segment retention" because saying goodbye to two-thirds of paying customers feels worse than burning $4,800/month. Six weeks later the metrics are unchanged and the runway is shorter. The triage works only if you commit to the decision in the same week you ran the cohort.
 
@@ -128,17 +168,11 @@ The honest trade-off: a refund-the-wrong-segment campaign cuts your customer cou
 
 ## Hand This to the Next Chapter
 
-You walk out of this chapter holding one of three artifacts: a fix-the-product plan with a 4-6 week ship date, a change-the-segment plan with a refund script and a redirected outreach motion, or a kill-the-SKU verdict pointing toward a pivot decision. The triage IS the bridge between Module 7 and what comes next.
+You walk out of this chapter holding one of three artifacts: a fix-the-product plan with a 4-6 week ship date, a change-the-segment plan with a refund script and a redirected outreach motion, or a kill-the-SKU verdict pointing toward a pivot decision. Pick the next move from your verdict and re-run the cohort floor every 6 weeks until the bucket stops leaking.
 
-If your verdict is Decision 1 (FIX THE PRODUCT), the next chapter for you is the [salvage-vs-rebuild decision framework](/blog/hire-track-supplementary-reference/). The cohort data you collected becomes the input to the salvage-vs-rebuild decision tree. You will use the same data when you brief whoever rebuilds the workflow - your dev shop, your fractional CTO, or your AI tooling - because the cohort numbers tell them which workflow to rebuild and which to leave alone.
-
-If your verdict is Decision 2 (CHANGE THE SEGMENT), you cycle back to [Module 7.2 - personal-network outreach](/blog/first-ten-customers-personal-network/), this time aimed at the high-retention segment. The 11 customers R. kept were the seed for her next outreach run; she asked each of them for two intros to similar 3-person teams and landed 7 paid pilots in 3 weeks. The cohort data is your warmest possible referral - "we have 11 customers who look like you and they retain at 70%."
-
-If your verdict is Decision 3 (KILL THE SKU), the next chapter for you is [chapter 7.6 - Pivot or Persevere](/blog/pivot-or-persevere-decision-framework/). The cohort floor numbers are the evidence the pivot framework asks for. You are not pivoting on a hunch; you are pivoting because four cohorts told you the same thing.
-
-One more thing worth saying. The triage decision is not a one-time event. Re-run the 90-minute cohort floor every 6 weeks for as long as you have a leaky bucket. Decisions 1 and 2 may need to be re-issued if the segment shifts; Decision 3 needs to be re-confirmed before you pull the trigger. The discipline that gets founders out of the messy middle is the discipline of running the cohort first and the ads second.
-
-Last time R. and I spoke (mid-April 2026), her churn was 9%, her MRR was $1,460, and she was running zero paid ads. The bucket finally stopped leaking. The fix was a 90-minute spreadsheet exercise plus the courage to send 18 refund emails. The fix was never the ads.
+1. **If Decision 1 (FIX THE PRODUCT):** open the [salvage-vs-rebuild decision framework](/blog/hire-track-supplementary-reference/) and feed it the cohort data. Use the same numbers in the brief to whoever rebuilds the workflow - dev shop, fractional CTO, or AI tooling - so they know which workflow to rebuild and which to leave alone.
+2. **If Decision 2 (CHANGE THE SEGMENT):** re-run [Chapter 7.2 - personal-network outreach](/blog/first-ten-customers-personal-network/) aimed at the high-retention segment. R.'s 11 kept customers seeded her next outreach run - she asked each for two intros to similar 3-person teams and landed 7 paid pilots in 3 weeks. Your cohort data ("we have 11 customers who look like you and they retain at 70%") is the warmest possible referral.
+3. **If Decision 3 (KILL THE SKU):** open [chapter 7.6 - Pivot or Persevere](/blog/pivot-or-persevere-decision-framework/). The cohort floor numbers are the evidence the pivot framework asks for - four cohorts saying the same thing, not a hunch.
 
 ## Further reading
 

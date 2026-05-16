@@ -157,6 +157,28 @@ Repo voice guides and workflow docs override generic writing, SEO, or humanizer 
 **Markdown code fence: use `html` not `erb`:**
 - Hugo's Chroma syntax highlighter doesn't recognize `erb` as a lexer alias. Fences using ```erb render as plain `<pre><code>` without the Dracula wrapper — the theme's light foreground (`#f8f8f2`) on missing-background renders as invisible text. The `html` fence highlights HTML tags correctly while ERB `<%= %>` renders as plain text inside the dark block. 10 posts hit this bug before the 2026-05-10 fix; verified by HTML diff comparing the wrapper `<div class="highlight"><pre style="...">` (present for `html`/`ruby`) vs missing for `erb`.
 
+**Visual verification gate (BLOCKING for any new media element):**
+- After adding ANY new visual (Mermaid diagram, SVG infographic, image, table, chart, callout block, hero image), MUST verify via chrome-devtools MCP before declaring done. The "Screenshot taken" gate is necessary but not sufficient.
+- Take screenshots at BOTH desktop (1280×800) and mobile (390×844) viewports. The first-fold experience is what determines whether the visual wins the 3-second hook.
+- Score honestly from a user perspective against these 4 criteria — and write the scores in the commit message OR the user-facing report:
+  1. **Is it a great look?** — visual harmony, font legibility, color contrast, alignment, fits the brand
+  2. **Is it functional?** — info is readable without effort, doesn't require zooming, mobile renders, no overflow
+  3. **Would it make a person want to read more?** — earns the next scroll OR pushes the reader away with visual fatigue
+  4. **Is it helpful overall?** — orients vs overwhelms; teaches vs decorates; saves parse time vs costs it
+- Any "NO" or "MIXED" on criteria 3 or 4 = ROLLBACK or REDESIGN before commit. Don't ship visuals that fail user-perspective scoring just because they're technically rendering.
+- Verify the visual's POSITION on first-fold: at the typical laptop viewport (1280×800), does the new visual appear ABOVE the fold? If it doesn't, it cannot win the 3-second hook — relocate or accept it as a mid-page visual break (different acceptance criteria).
+- For Mermaid diagrams specifically: measure rendered height. If > 2× viewport height, the diagram is too tall — reader perceives it as a wall, not a hook. Caught 2026-05-19: my Hero Roadmap rendered at 1551px on mobile (2× viewport) and the cursive font's dash-strikethrough effect on phase labels degraded legibility further.
+
+**Cognitive load + F-pattern rules (mandatory for long-form posts > 800 words):**
+- Research-grounded rules from `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.05-content-organization-patterns-2026.md` Part 2 (Gloria Mark / Pew 2026 / NN/g F-pattern / Sweller CLT). Pew 2026: 71% of readers scroll past within 3 seconds without a visual hook; Gloria Mark 2026: per-screen attention = 43s.
+- **First 3 seconds visual hook (hero rule):** every long-form post needs a visual within the first viewport - hero diagram, infographic, hero illustration, or a strong styled callout. Pure-text hero = guaranteed dropout for 71% of readers per Pew 2026. Decorative photography does NOT count.
+- **Repetitive parallel sections must NOT be 6+ identical bullets or 6+ identical table rows.** Module indexes, template lists, mistake lists, decision lists — break into a card grid OR add per-item icons. Single-column tables with 6+ rows and identical-format bullet lists with 6+ items both trigger the F-pattern "give up + vertical scan only" failure mode (NN/g eye-tracking).
+- **Decision-oriented sections use decision-aid format.** Anywhere the post asks "if X then Y" (rescue triage, decision trees, scoring tables, "should you...") render as flowchart/decision-table, not as a numbered list. Founder readers are in high cognitive load already; a flowchart cuts parse time vs. prose.
+- **Labels INSIDE diagrams, not beside them** (Sweller's split-attention effect). A labeled flowchart works. A flowchart followed by a 200-word "what this shows" paragraph increases cognitive load. If the diagram needs a separate explanation paragraph, fix the diagram - integrate the labels.
+- **No decorative visuals.** Stock photography of "happy founders at laptops," abstract gradients, generic icon arrays without informational content all violate the CLT integration rule. If removing the visual wouldn't lose information, the visual is decorative - delete it.
+- **One visual break per H2.** Plain prose blocks ≥3 H2s in a row = density problem; readers drop off. Acceptable visual breaks: diagram, table, code block, pull-quote callout, icon row. Mermaid diagrams count; bold paragraph leaders do NOT.
+- **Hand-drawn / Excalidraw-style sketches**: allowed when the sketch IS the diagram (informational); rejected when the sketch is decorative ornament beside a separate diagram. Per voice guide, prefer Mermaid + sketchy SVG over polished corporate infographics for the JT brand.
+
 ---
 
 ## 📋 Quick Reference

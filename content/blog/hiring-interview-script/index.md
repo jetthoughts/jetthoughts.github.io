@@ -1,8 +1,9 @@
 ---
 title: "Hiring Interview Script: 7 Questions in 30 Minutes"
 description: "Send to engineering candidates 24 hours before the call. 7 questions that catch AI theater in 30 minutes. Pass / Fail score in real time."
-date: 2026-09-16
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: hiring-interview-script
 keywords:
@@ -24,9 +25,23 @@ related_posts: false
 
 📋 Template companion to the [Hire Track Supplementary Reference](/blog/hire-track-supplementary-reference/#interviews-that-catch-ai-theater). Send to candidate 24 hours before the call. Score each answer Pass / Fail in real time.
 
+> This template is the canonical source for the 7 hiring interview questions. The [Hire Track Supplementary Reference](/blog/hire-track-supplementary-reference/) post links here for the full Q&A.
+
 # The Hiring Interview Script - 7 Questions in 30 Minutes
 
 *Send Sunday night. Run Tuesday and Wednesday. Hire decision in your hand by Friday.*
+
+## The 7 questions at a glance
+
+| # | Question (compressed) | What it tests |
+|---|---|---|
+| 1 | Workflow: Jira ticket to merged code, with AI in the loop | Tools named by version, real PR from last week |
+| 2 | Cost: $/dev/month on AI tokens, who pays it | Specific dollar range, pulled before the call |
+| 3 | Verification: what the senior reviewer checks on AI PRs | Opens a real PR on screen, names line-level checks |
+| 4 | Slopsquatting: how do you stop a hallucinated package | Named defense, uses the word, cites the source |
+| 5 | Accountability: last AI-generated-code incident you owned | Date in last 6 months, root cause, workflow change after |
+| 6 | Refactor: last one you led, what stayed/changed/broke | Named system, kept-changed-broke-safety-net structure |
+| 7 | Disagreement: PR review where you said no to the AI | Real PR on screen, specific technical reason, one of many |
 
 ## Why this exists
 
@@ -122,11 +137,7 @@ Then add the three axis scores (each 0-10):
 - **System judgment (0-10):** Q6 and Q7 test this directly. Real refactor + real PR-review disagreement = 8+. Deflects either = below 5.
 - **Communication (0-10):** would they answer your founder questions in plain English? Would the [three-questions standup](/blog/three-questions-turn-standup-into-proof/) format work with this person?
 
-Total = sum of three. Convert to a 1-10 by dividing by three.
-
-- **Above 7:** book the reference call before you close the laptop
-- **5 to 7:** sit on it overnight, re-read your notes in the morning
-- **Below 5:** polite-no email by tomorrow morning
+Total = sum of three. Convert to a 1-10 by dividing by three. See the [What to do after](#what-to-do-after) section below for the action per band.
 
 ## After the call: write the 3-sentence summary
 

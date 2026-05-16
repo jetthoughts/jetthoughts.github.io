@@ -1,8 +1,9 @@
 ---
-title: "6A.1 · The Self-Serve MVP Stack: Lovable + Stripe"
-description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Module 6A.1 of this course."
-date: 2026-08-26
+title: "5.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
+description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Chapter 5.3 of this course."
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
 keywords:
@@ -21,25 +22,35 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "6A.1 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
-  og_description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Module 6A.1 of this course."
+  og_title: "5.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
+  og_description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Chapter 5.3 of this course."
 cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Ship by Friday week 4."
 canonical_url: "https://jetthoughts.com/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/"
 related_posts: false
 ---
 
-> **Module 6A · Step 1 of 2** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> **Module 5 · Step 3 of 4** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
 > Input: a Module 5 decision pointing to "self-serve" + a Vibe PRD. Output: a live MVP at a staging URL real users can click, by Friday week 4.
 
 If you completed Modules 1-4, your default Module 5 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/blog/hire-track-supplementary-reference/), not a parallel choice.
 
 "I shipped my MVP in four weeks for $87. Three customers paid before I built the second feature." That was a B2B SaaS founder I spoke with last month. She had never written a line of code. She had spent two months running [Mom Test calls](/blog/mom-test-ask-about-past-not-future/) before she touched a single tool. The four weeks she counts started after the [Vibe PRD](/blog/vibe-prd-template/) was signed by two advisors and the [build-path decision tree](/blog/should-you-hire-2026-decision-tree/) routed her to Path 2. The stack she used is the one this post is about.
 
-![Three hand-drawn stacked boxes labeled Lovable (UI), Supabase (data layer), and Stripe (money layer), with arrows showing data flowing from a buyer at the top down through the stack and a Stripe webhook returning to Supabase.](stack-diagram.svg)
+The three layers, top to bottom:
+
+| Layer | Tool | Job | Cost |
+|-------|------|-----|------|
+| UI | Lovable | Render the screens. Send form data down. | $0 free / $25 Pro / $100 Scale |
+| Data | Supabase | Store the user, the row, the file. Listen for Stripe events. | $0 free / $25 Pro |
+| Money | Stripe | Charge the card. Tell Supabase the customer is paid. | 2.9% + $0.30 per transaction |
+
+The buyer opens the staging URL → Lovable shows the screens → Supabase stores the data → Stripe charges the card → a Stripe webhook tells Supabase the row is now paid.
 
 ## Why this matters in 2026
 
-[Y Combinator's 2026 stance](https://www.ycombinator.com/library/) is direct: validate without code, then ship the simplest version with AI tools. The Lovable + Supabase + Stripe stack is the dominant 2026 path for self-serve founders because all three tools were built AI-first, the documentation is exhaustive, and the integrations between them are templated to the point of being boring. Boring is what you want for an MVP. The boring path also lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal. The cost to disprove your hypothesis is one weekend and $87. The cost to prove it is the same.
+[Y Combinator's 2026 stance](https://www.ycombinator.com/library/) is direct: validate without code, then ship the simplest version with AI tools. Lovable + Supabase + Stripe became the dominant 2026 self-serve path because all three tools were built AI-first, their documentation is exhaustive, and the integrations between them are templated to the point of being boring.
+
+Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal. The cost to disprove your hypothesis is one weekend and $87. The cost to prove it is the same.
 
 ## M3 prototype vs M5 MVP - different artifacts, different rigor
 
@@ -48,6 +59,8 @@ If you completed Modules 1-4, your default Module 5 path is to build it yourself
 The Module 3 clickable prototype (Lovable in 2 hours) tested whether 5 interview subjects could navigate the SHAPE of the solution. It had no real auth, no payment integration, no production domain. Discard it.
 
 The Module 5 MVP is built from the [validated Product Brief](/blog/one-page-product-brief-vibe-prd/) with production rigor: real Lovable build with real Supabase auth + real Stripe + real custom domain + real user data. Different stack composition, different polish bar, different decision criteria.
+
+Side-by-side: the Module 3 throwaway prototype vs the Module 5 production MVP.
 
 | | M3 prototype | M5 MVP |
 |---|---|---|
@@ -69,7 +82,9 @@ Lovable is an AI-powered builder for the screens. You describe an app in English
 
 ### Supabase - the data layer
 
-Supabase is managed Postgres + auth + file storage + row-level security in one console. Lovable's built-in storage is fine for a prototype; Supabase is what you connect when you have real users whose data has to survive a redeploy. The free tier handles up to 50,000 monthly active users and 500MB of database before you have to upgrade. Pro is $25/month and most pre-seed founders never outgrow it before they hit the architectural ceiling. Supabase auto-generates a REST API and a JavaScript client on top of any table you create, which is what Lovable calls when it needs to read or write a row. [Supabase's 2026 pricing](https://supabase.com/pricing) lists the bands clearly. The auth product replaces 80% of what founders used to pay Auth0 or Clerk for; the row-level security policies replace what a contractor would have hand-coded over two weeks.
+Supabase is managed Postgres + auth + file storage + row-level security in one console. Lovable's built-in storage is fine for a prototype; Supabase is what you connect when you have real users whose data has to survive a redeploy. The free tier handles up to 50,000 monthly active users and 500MB of database before you have to upgrade. Pro is $25/month and most pre-seed founders never outgrow it before they hit the architectural ceiling.
+
+Supabase auto-generates a REST API and a JavaScript client on top of any table you create, which is what Lovable calls when it needs to read or write a row. [Supabase's 2026 pricing](https://supabase.com/pricing) lists the bands clearly. The auth product replaces 80% of what founders used to pay Auth0 or Clerk for; the row-level security policies replace what a contractor would have hand-coded over two weeks.
 
 ### Stripe - the money layer
 
@@ -77,32 +92,16 @@ Stripe processes the payment. The 2026 default integration for a Lovable app is 
 
 ### GitHub for version control
 
-Free for solo founders on the Free plan. You will not write much code yourself, but Lovable can sync to a GitHub repo on every save, which means: (a) you have a backup if Lovable goes down or you cancel the subscription, (b) when you eventually hire a contractor or a Fractional CTO, the code is already in a place they can read. Set this up in Lovable's Settings on day one. Skipping this is the most common reason founders we pick up six months later cannot retrieve the source.
+Free for solo founders on the Free plan. You will not write much code yourself, but Lovable can sync to a GitHub repo on every save. Two reasons this matters: (a) you have a backup if Lovable goes down or you cancel the subscription, (b) when you eventually hire a contractor or a Fractional CTO, the code is already in a place they can read. Set this up in Lovable's Settings on day one. Skipping this is the most common reason founders we pick up six months later cannot retrieve the source.
 
 ## The 4-week ship plan
 
 Four weeks, one founder, the Vibe PRD already signed. Each week ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). Friday week 4 ends with five real ICP users on the staging URL.
 
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
-flowchart LR
-    W1["Week 1<br/>Lovable + the UI<br/>(no backend yet)"]
-    W2["Week 2<br/>Supabase + auth<br/>(real signup works)"]
-    W3["Week 3<br/>Stripe + checkout<br/>($1 test transactions)"]
-    W4["Week 4<br/>Staging URL<br/>+ 5 ICP users click"]
-
-    W1 --> W2 --> W3 --> W4
-
-    W1 -.-> D1["Friday demo:<br/>screens click,<br/>no data persists"]
-    W2 -.-> D2["Friday demo:<br/>your spouse signs up,<br/>row appears in Supabase"]
-    W3 -.-> D3["Friday demo:<br/>$1 charge clears,<br/>webhook flips user to paid"]
-    W4 -.-> D4["Monday after:<br/>5 click sessions logged,<br/>iterate from real signal"]
-
-    classDef week fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
-    classDef demo fill:#fffbe6,stroke:#bf8a00,stroke-width:2px,color:#1a1a1a
-    class W1,W2,W3,W4 week
-    class D1,D2,D3,D4 demo
-```
+1. **Week 1 - Lovable, the UI.** No backend yet. *Friday demo:* screens click, no data persists.
+2. **Week 2 - Supabase + auth.** Real signup works. *Friday demo:* your spouse signs up, a row appears in Supabase in real time.
+3. **Week 3 - Stripe + checkout.** $1 test transactions. *Friday demo:* you sign up as a fake coach, pay $1, the webhook flips your row to paid.
+4. **Week 4 - staging URL + 5 ICP users.** Custom domain, Stripe live. *Monday after:* 5 click sessions logged - iterate from real signal.
 
 ### Week 1 - write your prompts, set up Lovable, ship the UI
 
@@ -140,9 +139,11 @@ Watch what happens. If 0 of 5 click, the cold message is wrong, not the product 
 
 ## What "ship the shed" means in practice
 
-The [Module 5 post](/blog/should-you-hire-2026-decision-tree/) walked through Rob Walling's [shed-vs-skyscraper warning](https://podcast.creatorscience.com/rob-walling/). The Lovable + Supabase + Stripe stack is the shed. It is the right shape for: a single workflow, a single persona, a single happy path, no real-time, no compliance scope, no AI inference cost above pennies per request, no third-party integrations beyond the three already in the stack. Inside that envelope, the shed holds. Outside it, the shed is the wrong building and you are about to put load on it the engineering was never meant to carry.
+The [Module 5 post](/blog/should-you-hire-2026-decision-tree/) walked through Rob Walling's [shed-vs-skyscraper warning](https://podcast.creatorscience.com/rob-walling/): you build the smallest structure that does the job, and you do not pour skyscraper foundations for it. Lovable + Supabase + Stripe is the shed.
 
-The trade-off is honest. The shed cannot host every business. It can host yours through the first 10 paying customers, which is the only data point that earns you the right to argue about the next building.
+It fits one workflow, one persona, one happy path. No real-time, no compliance scope, no AI inference cost above pennies per request, no third-party integrations beyond the three already in the stack. Inside that envelope, the architecture holds. Outside it, you are about to put load on engineering that was never meant to carry it.
+
+Be honest about the trade-off. This stack cannot host every business. It can host yours through the first 10 paying customers, which is the only data point that earns you the right to argue about the next architecture.
 
 ## Communities that replace a co-founder
 
@@ -156,11 +157,21 @@ You are about to hit a wall: a Lovable prompt that produces the wrong component,
 
 None of these is JetThoughts. None of them sells you a service. They are the founder peer pool the YC stance on co-founders [now points at](https://www.ycombinator.com/library/) instead of the 50%-equity hire.
 
-## The architectural ceiling - what's coming in Module 6A.2
+## The architectural ceiling - what's coming in Chapter 5.4
 
-The shed holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Module 6A.2 - Vibe Coding Done Right](/blog/tech-for-non-technical-founders-2026/)) walks through each one with the threshold to watch. Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to Module 6B (hire a team) or to a [Fractional CTO](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. The shed does not collapse overnight; the warning shows up in the metrics three weeks before the customer sees it. Module 6A.2 names the metrics.
+The stack holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Chapter 5.4 - Proactive Ceiling Signals](/blog/vibe-coding-ceiling-signals/)) walks through each one with the threshold to watch.
 
-![A hand-drawn stacked-bar chart showing $0 in week 1 (free tiers), $87 in month 1 (Lovable Pro + Supabase Pro + domain + Resend + Stripe fees), and roughly $200/month in month 6 (post-launch tier upgrades), with a red dashed annotation marking where the architectural ceiling typically arrives.](cost-breakdown.svg)
+Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/blog/hire-track-supplementary-reference/) or to a [Fractional CTO](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics three weeks before the customer sees it. Chapter 5.4 names the metrics.
+
+What the stack actually costs over three months:
+
+| When | Spend | Line items |
+|------|-------|-----------|
+| Week 1 | $0 | Free tiers across Lovable, Supabase, Stripe, GitHub |
+| Month 1 (first ship) | $87 | Lovable Pro $25 + Supabase Pro $25 + domain $14 + Resend $20 + Stripe fees ~$3 |
+| Month 6 (post-launch) | ~$200/mo | Lovable Scale $100 + Supabase Pro $25 + Resend $35 + Sentry $26 + monitoring $14 |
+
+Most founders hit the architectural ceiling around the Month-6 tier - at ~10K users, route to Chapter 5.4 or a [Fractional CTO](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge). A typical hire-a-team build runs $30K-$80K/month; the stack ships the same first 10 paying customers for under 1% of that.
 
 ## What to do tomorrow
 
@@ -168,17 +179,17 @@ Three actions, in order. The first two cost $0.
 
 - **Sign up for Lovable + Supabase free tiers.** [lovable.dev](https://lovable.dev) and [supabase.com](https://supabase.com), both with a Google sign-in. Connect the GitHub sync inside Lovable so your code lives somewhere that survives the cancellation of the subscription.
 - **Pick ONE feature from your Vibe PRD's "what you're building" section.** Not three. One. The smallest workflow that, on its own, solves the validated problem for one persona. Write a single prompt for Lovable in the shape of "build a [screen] for [persona] to [outcome from the PRD]." Paste it.
-- **Generate the UI in Lovable using your outcome-shaped spec from [Module 4.2](/blog/stop-specifying-features-start-outcomes/).** Iterate by chatting with the model: rename, resize, reposition. The first Friday demo is the screens clicking, with nothing persisted. Show it to one human who has not read the PRD and watch them try to use it without a tour.
+- **Generate the UI in Lovable using your outcome-shaped spec from [Chapter 4.2](/blog/stop-specifying-features-start-outcomes/).** Iterate by chatting with the model: rename, resize, reposition. The first Friday demo is the screens clicking, with nothing persisted. Show it to one human who has not read the PRD and watch them try to use it without a tour.
 
-> Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL in four weeks for under $90. The skyscraper is a different building, and you have not earned the right to argue about it yet.
+> Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL in four weeks for under $90. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
 
 The [Self-Serve Stack Walkthrough](/blog/self-serve-stack-walkthrough/) artifact is the day-by-day version of this post. Print it Monday morning of week 1. Each day has one small task; each Friday has one demo. Founders who ship the four weeks tend to do it because the artifact removes the "what do I do next" question.
 
-Founders who skip the four weeks and try to design the perfect first version are the founders who, six months later, post in the [salvage-or-rebuild](/blog/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold. The four-week shed never grows that large because by the time it would, you have either reached the architectural ceiling on real users (good problem) or you have learned the demand is not there (cheap problem). Both outcomes beat the half-built thing.
+Founders who skip the four weeks and try to design the perfect first version end up six months later posting in the [salvage-or-rebuild](/blog/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold. The four-week build never grows that large. Either you reach the architectural ceiling on real users (good problem), or you learn the demand is not there (cheap problem). Both outcomes beat the half-built thing.
 
 ## When this path ends
 
-Self-serve has a ceiling. The [proactive ceiling-signal monitoring chapter](/blog/vibe-coding-ceiling-signals/) covers the 5 signals that mean it's time to bring in help. When 2+ signals fire in one monthly check, switch to the [hire-track supplementary reference](/blog/hire-track-supplementary-reference/).
+Self-serve has a ceiling. The [ceiling-signal monitoring chapter](/blog/vibe-coding-ceiling-signals/) covers the 5 signals that mean it's time to bring in help. When 2+ signals fire in one monthly check, switch to the [hire-track supplementary reference](/blog/hire-track-supplementary-reference/).
 
 ## Further reading
 

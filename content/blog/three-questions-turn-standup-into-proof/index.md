@@ -1,7 +1,8 @@
 ---
 title: "6.4 · Three Questions That Turn Standup Into Proof"
 description: "Three questions a non-technical founder can ask in any daily standup to tell shipping from stalling. Pass/fail signals, follow-ups, the Friday demo pairing."
-date: 2026-07-22
+date: 2026-05-18
+course_chapter: true
 author: "JetThoughts Team"
 slug: three-questions-turn-standup-into-proof
 keywords:
@@ -27,22 +28,36 @@ cover_image_alt: "JetThoughts blog cover for Three Questions That Turn a Standup
 canonical_url: "https://jetthoughts.com/blog/three-questions-turn-standup-into-proof/"
 ---
 
-> **Module 6.4 · Step 3 of 5** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> **Chapter 6.4 · Step 3 of 5** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
 > Input: a team in place + a signed SOW. Output: a weekly oversight rhythm where the daily standup answers "did anything ship?"
 
 > **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
 *"Yesterday I worked on the order flow. Today I am continuing the order flow."* A SaaS founder we picked up in Q2 2026 had heard that sentence on her **$25K/month project for nine weeks** before she clocked that two of her three developers were reading out the same Jira ticket name every day. **47 standups in.** Nobody had flagged that the ticket had not moved columns in seven weeks. She had been on every call, taken notes, and nodded.
 
+> **The 3 questions - printable index-card format:**
+>
+> **Q1.** Show me the staging URL of what shipped yesterday.
+> **Q2.** Walk me through one PR you reviewed yesterday - what you looked for, what you flagged.
+> **Q3.** What did we cut, descope, or postpone yesterday to ship that?
+
 ## Why standups stopped working in 2026
 
 Most non-technical founders inherit the daily standup ritual without ever being told what good looks like. Their PM or agency lead schedules a fifteen-minute call, the team answers three questions in order, and the founder leaves the call feeling oriented. Whether anything shipped is a separate question, and the standup format does not force it. [Atlassian's own guide to daily standups](https://www.atlassian.com/agile/scrum/standups) flags exactly this risk: standups drift into status theatre unless someone is asking the questions that surface working software.
 
-The vibe-coding wave made it worse. An AI-augmented developer can land five pull requests a day with no observable feature progress - refactors, dependency bumps, prompt tweaks, generated tests that pass because they test nothing. The founder watching the call sees motion. The product does not move. [Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces 1.7x more issues than human-written code at the same line count, and most of those issues hide inside the kind of work that sounds productive in a standup answer.
+AI-augmented developers compound the problem. A single developer can land five pull requests a day with no observable feature progress - refactors, dependency bumps, prompt tweaks, generated tests that pass because they test nothing. The founder watching the call sees motion. The product does not move. [Qodo's 2025 State of AI Code Quality report](https://www.qodo.ai/reports/state-of-ai-code-quality/) found AI-generated code produces 1.7x more issues than human-written code at the same line count, and most of those issues hide inside the kind of work that sounds productive in a standup answer.
 
 The three questions below replace the standard format. You do not have to drop the standard format - just bolt these on at the end and watch what happens.
 
 ## The three questions
+
+| Question | Pass looks like | Fail looks like | Follow-up when it fails |
+|----------|----------------|-----------------|------------------------|
+| **Q1.** Show me the staging URL of what shipped yesterday. | A clickable URL + route + test credentials. You click during the call and reach the screen. | "It's in PR review." / "On staging by Friday." / "I'll Loom it after standup." | "What was the blocker?" Listen for a named person + specific tactic, not "still working on it." |
+| **Q2.** Walk me through one PR you reviewed yesterday - what you flagged. | Named PR # + named reviewer + 2-3 specific things checked (missing test, unauthorized gem, hardcoded key). | "We trust each other's work." / "CI caught the issues." / "Everyone reviews their own when busy." | "How many distinct reviewers approved code on my repo last week, and what is the average PR-open-to-merge time?" Want ≥2 reviewers and <2 days. |
+| **Q3.** What did we cut, descope, or postpone yesterday to ship that? | A specific cut + the reason (e.g., "dropped the date-range picker because v1 only needs last-30-days, saved 3 days of front-end work"). | "Nothing was cut." / Silence. / "We built everything in the spec." | "Name one backlog item that, if cut today, would have zero impact on this month's user feedback." Good answer in <30 seconds. |
+
+The per-question detail below explains the failure modes each question catches, why the answers look the way they do, and how to handle the awkward silence when a developer hears one of these for the first time.
 
 ### Q1: "Show me the staging URL of what shipped yesterday."
 

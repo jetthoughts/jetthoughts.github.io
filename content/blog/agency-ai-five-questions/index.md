@@ -1,8 +1,9 @@
 ---
 title: '"We Use AI": 5 Follow-Up Questions for Your Agency'
 description: "Five questions that catch AI theatre in 30 minutes. Hand them to your next agency call before you sign anything. Score 0-5; below 3 means walk."
-date: 2026-05-27
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: agency-ai-five-questions
 keywords:
@@ -30,7 +31,9 @@ Five questions that catch AI theatre in 30 minutes - hand them to your next agen
 
 By the end of one Tuesday discovery call you will know whether the agency claiming "we use AI to ship 3x faster" can describe what their developers do with Cursor on a Wednesday morning, or whether the AI talk is a slide. Five questions, sent in writing 24 hours before the call, scored 0 or 1 in real time. Two failed questions is a walkaway.
 
-A founder we picked up in Q1 2026 had been three weeks deep with an "AI-native" agency that promised a four-week MVP for $34K. She asked for a walkthrough of one PR the team had merged that week. The lead developer screenshared a staging branch; her independent advisor paused the screen-share and pointed at line 14 of `config/database.yml`: an OpenAI API key, a Stripe live key, and a database password committed in plaintext, on a public-by-default GitHub repo. Then he opened the agency's OpenAI billing dashboard the developer had also screenshared by accident: **$4,800 in API charges in the last 30 days**, no project tags, no per-developer attribution, and the agency owner could not explain which client the spend belonged to. She walked. The five questions below would have caught both in the first 20 minutes.
+A founder we picked up in Q1 2026 had been three weeks deep with an "AI-native" agency that promised a four-week MVP for $34K. She asked for a walkthrough of one PR the team had merged that week. The lead developer screenshared a staging branch; her independent advisor paused the screen-share and pointed at line 14 of `config/database.yml`: an OpenAI API key, a Stripe live key, and a database password committed in plaintext, on a public-by-default GitHub repo.
+
+Then he opened the agency's OpenAI billing dashboard the developer had also screenshared by accident: **$4,800 in API charges in the last 30 days**, no project tags, no per-developer attribution, and the agency owner could not explain which client the spend belonged to. She walked. The five questions below would have caught both in the first 20 minutes.
 
 Most agencies in 2026 are not malicious about AI. They adopted Cursor in a hurry, never wrote down a workflow, and never priced the token bill. The damage is the same either way.
 
@@ -76,6 +79,8 @@ If the agency declines to answer in advance, that is a 0 on every question. Exer
 
 ### Q4 - The slopsquatting question
 
+*slopsquatting: when AI suggests a package name that doesn't exist, an attacker registers it, and your build pulls the malicious version. See the [dedicated chapter](/blog/slopsquatting-ai-supply-chain-attack/).*
+
 > "In April 2025 a security researcher published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist; attackers register those names and wait for developers to install the typo. How does your team prevent installing a hallucinated gem or pip package?"
 
 **Pass:** A pre-vetted allowlist with a written process for adding new packages. A scanner like Socket or Snyk on every PR that blocks the build on new dependencies until a human approves. They use the term "slopsquatting" without prompting and cite the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) or the [SecurityWeek piece on AI coding agents and supply-chain risk](https://www.securityweek.com/ai-coding-agents-could-fuel-next-supply-chain-crisis/).
@@ -113,5 +118,11 @@ One concrete contrast on Q3:
 - **Score 5:** do reference checks on AI-augmented projects specifically. Ask their last three clients about AI-related incidents, the OpenAI line on monthly invoices, and whether they have ever received an `Assisted-by:` commit log on request.
 
 Every agency uses AI in 2026. The five questions test whether they can describe what they are doing with it, what it costs, who reviews it, and whose name is on the line when it breaks. If they cannot, they are selling you the [quality tax](/blog/quality-tax-ai-mvp-cost/) - the four-month invoice that arrives after the demo, when AI-generated code meets a production load nobody tested against.
+
+## What to do tomorrow
+
+1. Schedule your next agency discovery call - block 30 minutes.
+2. Print the 5-question script (or pull up this page on your phone) and bring it to the call.
+3. After the call, score each answer 0 or 1 in real time (per the scoring rule above) - a total of 2 or below out of 5 means do not sign the SOW.
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) curriculum.*

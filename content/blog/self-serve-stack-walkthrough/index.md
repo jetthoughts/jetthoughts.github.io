@@ -1,8 +1,9 @@
 ---
 title: "Self-Serve Stack Walkthrough: Lovable + Supabase + Stripe in 4 Weeks"
 description: "Step-by-step walkthrough of shipping a B2B SaaS MVP on Lovable + Supabase + Stripe in 4 weeks. Free."
-date: 2026-08-26
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: self-serve-stack-walkthrough
 keywords:
@@ -23,11 +24,18 @@ canonical_url: "https://jetthoughts.com/blog/self-serve-stack-walkthrough/"
 related_posts: false
 ---
 
-📋 Template companion to the [Module 6A.1 post](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Print Monday morning. Ship by Friday week 4.
+📋 Template companion to the [Chapter 5.3 post](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Print Monday morning. Ship by Friday week 4.
 
 # Self-Serve Stack Walkthrough - 4 Weeks, 3 Tools, 1 Staging URL
 
 *Day-by-day tasks for shipping the Lovable + Supabase + Stripe MVP. Cross off as you go.*
+
+**The 4-week roadmap:**
+
+1. **Week 1 - Lovable + the UI** (no backend yet). Friday demo: clickable staging URL.
+2. **Week 2 - Supabase + auth** (real signup works). Friday demo: first real signup persists.
+3. **Week 3 - Stripe + checkout** ($1 test transactions). Friday demo: end-to-end paid flow.
+4. **Week 4 - staging URL + 5 ICP users click**. Friday demo: live data review from 5 prospects.
 
 ## Why this exists
 
@@ -103,6 +111,8 @@ Read every screen aloud. Anything that needs more than 5 seconds to understand: 
 Send the staging URL to someone who has not read the Vibe PRD. Watch them try to use it (over screen-share or in-person). Do not narrate. Note every place they pause for more than 3 seconds. Those are your week-1 bugs in design, not in code.
 
 **Result line (fill in)**: ____________________________________________
+
+> **Week 1 outcome**: a clickable UI on a public staging URL, GitHub-synced, that a non-PRD reader can navigate without a tour.
 
 ## Week 2 - Supabase + auth (real signup works)
 
@@ -180,6 +190,8 @@ Send the staging URL to your spouse (or one ICP peer). Ask them to sign up with 
 
 **Result line (fill in)**: ____________________________________________
 
+> **Week 2 outcome**: a real signup persists across refresh, RLS is on, and the first row appears in the Supabase console live during the Friday demo.
+
 ## Week 3 - Stripe + checkout ($1 test transactions)
 
 Goal: a user signs up, hits the paywall after the trial, pays $1 in Stripe test mode, lands on the paid dashboard. Friday demo: you walk through your own flow, end to end, with a $1 charge that clears.
@@ -225,6 +237,8 @@ Walk through the full flow in test mode: signup -> dashboard -> add a client -> 
 
 **Result line (fill in)**: ____________________________________________
 
+> **Week 3 outcome**: a paid signup flow end-to-end in test mode, webhook verified, `subscription_status` flips from `trial` to `active` within 10 seconds of a $1 charge.
+
 ## Week 4 - staging URL + 5 ICP users click
 
 Goal: a public domain pointing at the staging URL, 5 ICP prospects sent the link, real signup data logged. Friday is the data review.
@@ -266,6 +280,8 @@ The data picks the next week. Do not iterate on what you imagine; iterate on wha
 
 **Result line (fill in)**: ____________________________________________
 
+> **Week 4 outcome**: a live domain pointing at the staging URL, 5 ICP prospects sent the link, and real signup/click/pay metrics on the table for Friday's data review.
+
 ## Sample Lovable prompts (verbatim, copy-paste)
 
 Five prompts that ship 80% of a typical pre-seed B2B SaaS MVP. Adapt the persona/object names to your domain.
@@ -303,7 +319,56 @@ supabase.functions.invoke('create-checkout', { priceId,
 coachId }) and redirect to the returned URL.
 ```
 
-## Sample Supabase schema (verbatim, copy-paste)
+*See the [Appendix](#appendix-reference-code) for the full SQL schema and the Stripe integration checklist.*
+
+## What good looks like vs what bad looks like
+
+**Schema design**
+
+> Bad: *15 tables, three of which are `users`, `accounts`, and `organizations` because the founder read a SaaS architecture blog post once.*
+
+> Good: *3 tables (`coaches`, `clients`, `check_ins`) - one for the user, one for the thing the user manages, one for the action the user takes. The PRD lists exactly one user persona and one core workflow. The schema reflects that.*
+
+The bad answer is over-modeled for an imagined future scale. The good answer fits the validated problem from the PRD. You add the fourth table when a real customer needs it, not when you imagine they might.
+
+**Lovable prompt style**
+
+> Bad: *"Build me a SaaS dashboard."*
+
+> Good: *"Build a dashboard for a fitness coach. Top bar: coach name + log out. Left sidebar: list of clients with green/red status badges based on last check-in date. Main pane shows the selected client's detail and a check-in form. Save button shows a toast on success."*
+
+The bad prompt forces Lovable to guess at a hundred details, half of which will be wrong, and you spend two days undoing them. The good prompt is the screenshot-in-words from your PRD. Lovable does the right thing on the first try about 80% of the time when the prompt is this specific.
+
+**Stripe webhook handling**
+
+> Bad: *Trust the redirect from Stripe Checkout (`?session_id=...`) to flip the user to paid. Skip the webhook because "the redirect already handles it."*
+
+> Good: *Wire the `checkout.session.completed` webhook from Stripe to Supabase. Verify the signature with the webhook secret. Only flip `subscription_status = 'active'` when the webhook fires. Treat the redirect as UX only, not as truth.*
+
+The bad pattern ships an MVP where any user with the right URL pattern can fake their own paid status. The good pattern uses Stripe as the source of truth. Skipping webhook signature verification is the second most common Stripe security bug. Lovable will not catch this for you. Wire it correctly on day 1 of week 3.
+
+## Common mistakes (and how to avoid them)
+
+- **Skipping Row-Level Security in Supabase.** Every coach sees every coach's data the first time you forget. Enable RLS on every table the day you create it. Write the policies before you write the first row of seed data.
+- **Letting Lovable hold your domain.** Buy the domain on a registrar you control (Porkbun, Cloudflare, Namecheap). Point it at Lovable via DNS. If you cancel Lovable, your domain still points at whatever you put behind it next.
+- **Skipping the GitHub sync.** Lovable can sync to GitHub on every save. Set this up on day 1 of week 1. The day you cancel the subscription is not the day to discover your code only lives inside Lovable's UI.
+- **Building 5 features instead of 1.** The four-week plan ships ONE workflow end-to-end. The second feature comes after the first 5 ICP users have clicked through the first one. Founders who skip this rule are the founders who spend 11 weeks on Lovable with 4 half-built features and no paid signups.
+- **Trusting the Stripe redirect instead of the webhook.** The webhook is the truth. The redirect is UX. Verify the webhook signature.
+- **Demoing only to friends.** Friends will be polite. The Friday week 4 demo must include at least 3 ICP prospects (not friends, not advisors, not your spouse). Their reaction is the data; everyone else is a warm-up.
+- **Iterating on imagined feedback.** When you finish week 4 and only 1 of 5 clicked, the temptation is to "improve the dashboard." Do not. Iterate on the metric that failed: the click rate (rewrite the cold message), the signup rate (rewrite the landing screen), or the paid rate (rethink the paywall position). Imagined improvements ship the same MVP forever.
+
+## What to do after week 4
+
+- **If 1+ paid signups**: continue. The hypothesis is alive. Build the second feature in weeks 5-8 using the same one-feature-per-month rhythm. Re-read the [three-questions standup chapter](/blog/three-questions-turn-standup-into-proof/) for the weekly oversight rhythm once you bring in a contractor.
+- **If 0 paid signups but 3+ signups**: the product clicks but the price or the paywall is wrong. Run two A/B tests in week 5: lower price ($19 vs $29), and earlier paywall (paid from day 1 vs 14-day trial). Pick the winner. Re-send to 5 new ICP prospects.
+- **If 0 signups**: the cold message and the landing screen are both wrong, OR the [Module 3](/blog/mom-test-ask-about-past-not-future/) validation was a false positive. Re-read your Mom Test transcripts. Are the buyers who said "yes I'd pay" the same buyers ignoring your cold message? If yes, the validation was polite, not real. Loop back to Module 3 for ten more interviews before you build feature two.
+- **Watch for the architectural ceiling**: when any of the [5 ceiling signals](/blog/should-you-hire-2026-decision-tree/) appears (covered in detail in Chapter 5.4), pause feature work and route to the [Fractional CTO bridge](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge). The shed does not collapse overnight, but you stop adding load once you see the signal.
+
+If you want the doctrine in long form, the [Chapter 5.3 post](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks through what each tool does, the role boundaries, the cost reality, and the architectural ceiling preview.
+
+## Appendix - reference code
+
+### Sample Supabase schema (verbatim, copy-paste)
 
 ```sql
 -- Run in Supabase SQL editor in order
@@ -365,7 +430,7 @@ create policy "coaches see own check-ins"
   );
 ```
 
-## Stripe integration checklist
+### Stripe integration checklist
 
 - [ ] Stripe account verified (email confirmed)
 - [ ] One product created (your monthly plan), one price (the price your PRD locked in)
@@ -379,51 +444,6 @@ create policy "coaches see own check-ins"
 - [ ] Failed card `4000 0000 0000 0002` shows a friendly error and lands user back on /upgrade
 - [ ] One real $1 charge runs end-to-end in live mode against your own card, then refunded
 - [ ] `subscription_status` column flips to `active` within 10 seconds of a successful charge
-
-## What good looks like vs what bad looks like
-
-**Schema design**
-
-> Bad: *15 tables, three of which are `users`, `accounts`, and `organizations` because the founder read a SaaS architecture blog post once.*
-
-> Good: *3 tables (`coaches`, `clients`, `check_ins`) - one for the user, one for the thing the user manages, one for the action the user takes. The PRD lists exactly one user persona and one core workflow. The schema reflects that.*
-
-The bad answer is over-modeled for an imagined future scale. The good answer fits the validated problem from the PRD. You add the fourth table when a real customer needs it, not when you imagine they might.
-
-**Lovable prompt style**
-
-> Bad: *"Build me a SaaS dashboard."*
-
-> Good: *"Build a dashboard for a fitness coach. Top bar: coach name + log out. Left sidebar: list of clients with green/red status badges based on last check-in date. Main pane shows the selected client's detail and a check-in form. Save button shows a toast on success."*
-
-The bad prompt forces Lovable to guess at a hundred details, half of which will be wrong, and you spend two days undoing them. The good prompt is the screenshot-in-words from your PRD. Lovable does the right thing on the first try about 80% of the time when the prompt is this specific.
-
-**Stripe webhook handling**
-
-> Bad: *Trust the redirect from Stripe Checkout (`?session_id=...`) to flip the user to paid. Skip the webhook because "the redirect already handles it."*
-
-> Good: *Wire the `checkout.session.completed` webhook from Stripe to Supabase. Verify the signature with the webhook secret. Only flip `subscription_status = 'active'` when the webhook fires. Treat the redirect as UX only, not as truth.*
-
-The bad pattern ships an MVP where any user with the right URL pattern can fake their own paid status. The good pattern uses Stripe as the source of truth. Skipping webhook signature verification is the second most common Stripe security bug. Lovable will not catch this for you. Wire it correctly on day 1 of week 3.
-
-## Common mistakes (and how to avoid them)
-
-- **Skipping Row-Level Security in Supabase.** Every coach sees every coach's data the first time you forget. Enable RLS on every table the day you create it. Write the policies before you write the first row of seed data.
-- **Letting Lovable hold your domain.** Buy the domain on a registrar you control (Porkbun, Cloudflare, Namecheap). Point it at Lovable via DNS. If you cancel Lovable, your domain still points at whatever you put behind it next.
-- **Skipping the GitHub sync.** Lovable can sync to GitHub on every save. Set this up on day 1 of week 1. The day you cancel the subscription is not the day to discover your code only lives inside Lovable's UI.
-- **Building 5 features instead of 1.** The four-week plan ships ONE workflow end-to-end. The second feature comes after the first 5 ICP users have clicked through the first one. Founders who skip this rule are the founders who spend 11 weeks on Lovable with 4 half-built features and no paid signups.
-- **Trusting the Stripe redirect instead of the webhook.** The webhook is the truth. The redirect is UX. Verify the webhook signature.
-- **Demoing only to friends.** Friends will be polite. The Friday week 4 demo must include at least 3 ICP prospects (not friends, not advisors, not your spouse). Their reaction is the data; everyone else is a warm-up.
-- **Iterating on imagined feedback.** When you finish week 4 and only 1 of 5 clicked, the temptation is to "improve the dashboard." Do not. Iterate on the metric that failed: the click rate (rewrite the cold message), the signup rate (rewrite the landing screen), or the paid rate (rethink the paywall position). Imagined improvements ship the same MVP forever.
-
-## What to do after week 4
-
-- **If 1+ paid signups**: continue. The hypothesis is alive. Build the second feature in weeks 5-8 using the same one-feature-per-month rhythm. Re-read the [three-questions standup chapter](/blog/three-questions-turn-standup-into-proof/) for the weekly oversight rhythm once you bring in a contractor.
-- **If 0 paid signups but 3+ signups**: the product clicks but the price or the paywall is wrong. Run two A/B tests in week 5: lower price ($19 vs $29), and earlier paywall (paid from day 1 vs 14-day trial). Pick the winner. Re-send to 5 new ICP prospects.
-- **If 0 signups**: the cold message and the landing screen are both wrong, OR the [Module 3](/blog/mom-test-ask-about-past-not-future/) validation was a false positive. Re-read your Mom Test transcripts. Are the buyers who said "yes I'd pay" the same buyers ignoring your cold message? If yes, the validation was polite, not real. Loop back to Module 3 for ten more interviews before you build feature two.
-- **Watch for the architectural ceiling**: when any of the [5 ceiling signals](/blog/should-you-hire-2026-decision-tree/) appears (covered in detail in Module 6A.2), pause feature work and route to the [Fractional CTO bridge](/blog/hire-track-supplementary-reference/#the-fractional-cto-bridge). The shed does not collapse overnight, but you stop adding load once you see the signal.
-
-If you want the doctrine in long form, the [Module 6A.1 post](/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks through what each tool does, the role boundaries, the cost reality, and the architectural ceiling preview.
 
 ---
 

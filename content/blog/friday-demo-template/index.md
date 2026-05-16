@@ -3,6 +3,7 @@ title: "Friday Demo Template: Catch Fake Progress in 15 Minutes"
 description: "The 15-minute Friday script that catches fake progress before it costs you a sprint. Copy/paste into Slack on Monday. Run Friday at 4pm."
 date: 2026-05-13
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: friday-demo-template
 keywords:
@@ -22,13 +23,15 @@ canonical_url: "https://jetthoughts.com/blog/friday-demo-template/"
 related_posts: false
 ---
 
-📋 Template companion to the Oversight Rhythm sub-section (Module 6.2) of the [Tech for Non-Technical Founders 2026 course](/blog/tech-for-non-technical-founders-2026/). Send to your team Monday. Run Friday at 4pm.
+📋 Template companion to the Oversight Rhythm sub-section (Chapter 6.2) of the [Tech for Non-Technical Founders 2026 course](/blog/tech-for-non-technical-founders-2026/). Send to your team Monday. Run Friday at 4pm.
 
 # The Friday Demo Template
 
 A 15-minute Friday script that catches fake progress before it costs you a sprint.
 
 By Friday of week 4 you will know whether your dev team is shipping or stalling. You will not have read a line of code. You will have watched four short demos and clicked four staging URLs. That is the entire system.
+
+> **7 questions, asked in order:** (1) What shipped? (2) What did the user do? (3) Where is it live for me? (4) What did we cut? (5) What's in review? (6) What's blocked? (7) What should I worry about next week?
 
 ## Why this exists
 
@@ -99,11 +102,9 @@ If the same name keeps appearing as the only reviewer, you have a single point o
 
 ## Three things to do during the call
 
-**Click the staging URL while they are talking.** Open it on your laptop the moment they share it. If you get a 500, a login error, or "this page can't be reached", interrupt and ask. Do not wait until Monday to find out the URL was a screenshot.
-
-**Ask one follow-up per question.** Not three. If your follow-up gets a paragraph of jargon back, that is information. Save it for next time.
-
-**Write down one number per demo.** "PR #847", "$1 transaction", "47 paying users on the new flow". Three months of one-number receipts beat any retrospective the agency will run on themselves.
+1. **Click the staging URL while they are talking.** Open it on your laptop the moment they share it. If you get a 500, a login error, or "this page can't be reached", interrupt and ask. Do not wait until Monday to find out the URL was a screenshot.
+2. **Ask one follow-up per question.** Not three. If your follow-up gets a paragraph of jargon back, that is information. Save it for next time.
+3. **Write down one number per demo.** "PR #847", "$1 transaction", "47 paying users on the new flow". Three months of one-number receipts beat any retrospective the agency will run on themselves.
 
 ## What to do after the call
 

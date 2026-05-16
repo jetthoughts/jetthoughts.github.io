@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" font-family="'Caveat','Patrick Hand',cursive">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" font-family='"Segoe UI", system-ui, -apple-system, sans-serif'>
   <defs>
     <filter id="rough2" x="-2%" y="-2%" width="104%" height="104%">
       <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="7"/>
@@ -12,48 +12,48 @@
   <rect width="920" height="480" fill="#fafaf7"/>
 
   <!-- Title -->
-  <text x="460" y="40" font-size="30" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The Airbnb test, applied to your idea</text>
-  <text x="460" y="68" font-size="18" text-anchor="middle" fill="#555">Sell the solution. Read the answers. THEN decide whether to build it.</text>
+  <text x="460" y="38" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The Airbnb test, applied to your idea</text>
+  <text x="460" y="62" font-size="20" text-anchor="middle" fill="#555">Sell the solution. Read the answers. THEN decide whether to build it.</text>
 
   <!-- Step 1 box -->
-  <rect x="40" y="120" width="220" height="220" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough2)"/>
-  <text x="150" y="150" font-size="22" text-anchor="middle" fill="#bf8a00" font-weight="bold">Step 1</text>
-  <text x="150" y="180" font-size="18" text-anchor="middle" fill="#1a1a1a">A Carrd page.</text>
-  <text x="150" y="206" font-size="18" text-anchor="middle" fill="#1a1a1a">A Stripe checkout.</text>
-  <text x="150" y="232" font-size="18" text-anchor="middle" fill="#1a1a1a">A Notion FAQ.</text>
-  <text x="150" y="266" font-size="16" text-anchor="middle" fill="#444" font-style="italic">"Annual plan, $1,800/yr"</text>
-  <text x="150" y="288" font-size="16" text-anchor="middle" fill="#444">Total time: 4 hours.</text>
-  <text x="150" y="310" font-size="16" text-anchor="middle" fill="#444">Total cost: $200.</text>
+  <rect x="40" y="110" width="220" height="225" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="150" y="140" font-size="24" text-anchor="middle" fill="#bf8a00" font-weight="bold">Step 1</text>
+  <text x="150" y="168" font-size="20" text-anchor="middle" fill="#1a1a1a">A Carrd page.</text>
+  <text x="150" y="192" font-size="20" text-anchor="middle" fill="#1a1a1a">A Stripe checkout.</text>
+  <text x="150" y="216" font-size="20" text-anchor="middle" fill="#1a1a1a">A Notion FAQ.</text>
+  <text x="150" y="248" font-size="18" text-anchor="middle" fill="#444" font-style="italic">"Annual plan, $1,800/yr"</text>
+  <text x="150" y="272" font-size="18" text-anchor="middle" fill="#444">Total time: 4 hours.</text>
+  <text x="150" y="294" font-size="18" text-anchor="middle" fill="#444">Total cost: $200.</text>
 
   <!-- Arrow 1 -->
-  <line x1="270" y1="230" x2="320" y2="230" stroke="#cc342d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="268" y1="223" x2="318" y2="223" stroke="#cc342d" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Step 2 box -->
-  <rect x="330" y="120" width="220" height="220" fill="#e8f4f8" stroke="#0277bd" stroke-width="2.5" filter="url(#rough2)"/>
-  <text x="440" y="150" font-size="22" text-anchor="middle" fill="#0277bd" font-weight="bold">Step 2</text>
-  <text x="440" y="180" font-size="18" text-anchor="middle" fill="#1a1a1a">Send the link to</text>
-  <text x="440" y="202" font-size="18" text-anchor="middle" fill="#1a1a1a">35 ICP prospects.</text>
-  <text x="440" y="232" font-size="18" text-anchor="middle" fill="#1a1a1a">Watch what happens.</text>
-  <text x="440" y="266" font-size="16" text-anchor="middle" fill="#444" font-style="italic">7 reply. 5 ask questions.</text>
-  <text x="440" y="288" font-size="16" text-anchor="middle" fill="#444" font-style="italic">3 click checkout.</text>
-  <text x="440" y="310" font-size="16" text-anchor="middle" fill="#444" font-style="italic">2 pay an annual deposit.</text>
+  <rect x="330" y="110" width="220" height="225" fill="#e8f4f8" stroke="#0277bd" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="440" y="140" font-size="24" text-anchor="middle" fill="#0277bd" font-weight="bold">Step 2</text>
+  <text x="440" y="168" font-size="20" text-anchor="middle" fill="#1a1a1a">Send the link to</text>
+  <text x="440" y="190" font-size="20" text-anchor="middle" fill="#1a1a1a">35 ICP prospects.</text>
+  <text x="440" y="216" font-size="20" text-anchor="middle" fill="#1a1a1a">Watch what happens.</text>
+  <text x="440" y="248" font-size="18" text-anchor="middle" fill="#444" font-style="italic">7 reply. 5 ask questions.</text>
+  <text x="440" y="268" font-size="18" text-anchor="middle" fill="#444" font-style="italic">3 click checkout.</text>
+  <text x="440" y="288" font-size="18" text-anchor="middle" fill="#444" font-style="italic">2 pay an annual deposit.</text>
 
   <!-- Arrow 2 -->
-  <line x1="560" y1="230" x2="610" y2="230" stroke="#cc342d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="558" y1="223" x2="608" y2="223" stroke="#cc342d" stroke-width="3" marker-end="url(#arrow)"/>
 
   <!-- Step 3 box -->
-  <rect x="620" y="120" width="260" height="220" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough2)"/>
-  <text x="750" y="150" font-size="22" text-anchor="middle" fill="#2e7d32" font-weight="bold">Step 3</text>
-  <text x="750" y="180" font-size="18" text-anchor="middle" fill="#1a1a1a">Now you know:</text>
-  <text x="750" y="208" font-size="18" text-anchor="middle" fill="#1a1a1a">demand is real.</text>
-  <text x="750" y="240" font-size="18" text-anchor="middle" fill="#1a1a1a">2 paying buyers waiting.</text>
-  <text x="750" y="270" font-size="16" text-anchor="middle" fill="#444">Refund any who want out.</text>
-  <text x="750" y="294" font-size="16" text-anchor="middle" fill="#444" font-weight="bold">Build the smallest version</text>
-  <text x="750" y="316" font-size="16" text-anchor="middle" fill="#444" font-weight="bold">that delivers what you sold.</text>
+  <rect x="620" y="110" width="260" height="225" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2.5" filter="url(#rough2)"/>
+  <text x="750" y="140" font-size="24" text-anchor="middle" fill="#2e7d32" font-weight="bold">Step 3</text>
+  <text x="750" y="168" font-size="20" text-anchor="middle" fill="#1a1a1a">Now you know:</text>
+  <text x="750" y="192" font-size="20" text-anchor="middle" fill="#1a1a1a">demand is real.</text>
+  <text x="750" y="220" font-size="20" text-anchor="middle" fill="#1a1a1a">2 paying buyers waiting.</text>
+  <text x="750" y="252" font-size="18" text-anchor="middle" fill="#444">Refund any who want out.</text>
+  <text x="750" y="272" font-size="18" text-anchor="middle" fill="#444" font-weight="bold">Build the smallest version</text>
+  <text x="750" y="292" font-size="18" text-anchor="middle" fill="#444" font-weight="bold">that delivers what you sold.</text>
 
   <!-- Sticky note -->
-  <rect x="280" y="380" width="360" height="80" fill="#fffacc" stroke="#cc342d" stroke-width="2" filter="url(#rough2)" transform="rotate(-1 460 420)"/>
-  <text x="460" y="408" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 460 420)">If 0 of 35 click: the problem is real,</text>
-  <text x="460" y="432" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 460 420)">your pitch is wrong. Re-write the page.</text>
-  <text x="460" y="452" font-size="14" text-anchor="middle" fill="#666" font-style="italic" transform="rotate(-1 460 420)">$0 spent on engineering. 0% sunk cost. 100% information.</text>
+  <rect x="278" y="372" width="360" height="100" fill="#fffacc" stroke="#cc342d" stroke-width="2" filter="url(#rough2)" transform="rotate(-1 458 416)"/>
+  <text x="458" y="400" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">If 0 of 35 click: the problem is real,</text>
+  <text x="458" y="422" font-size="20" text-anchor="middle" fill="#1a1a1a" font-weight="bold" transform="rotate(-1 458 416)">your pitch is wrong. Re-write the page.</text>
+  <text x="458" y="446" font-size="18" text-anchor="middle" fill="#666" font-style="italic" transform="rotate(-1 458 416)">$0 spent on engineering. 0% sunk cost. 100% information.</text>
 </svg>

@@ -1,8 +1,9 @@
 ---
 title: "Glossary · Five Tech Words to Stop Nodding At"
 description: "Refactoring, Docker, tech debt, MVP, architecture - what each one actually means in plain English, plus one BS-detection question your dev shop will hate."
-date: 2026-07-01
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: five-tech-words-stop-nodding-at
 keywords:
@@ -42,7 +43,9 @@ Below is the cheat sheet for the five words that hide the most invoices: refacto
 
 The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The founders we rescue in 2026 did not lose money on vocabulary - they lost it because they nodded at words the agency was using to mean something else. Veracode's 2025 study found [45% of LLM-generated code shipped at least one exploitable security flaw](https://www.veracode.com/blog/genai-code-security-report/), and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
 
-## 1. Refactoring
+## The Five Words
+
+### 🔧 1. Refactoring
 
 Changing the structure of code without changing what it does for the user. Martin Fowler, who wrote the book on it, [defines refactoring as a behavior-preserving transformation](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) - same behavior before and after, just in cleaner lines. Inside an agency status call, the word usually means "we are rewriting something we shipped earlier instead of admitting we got it wrong the first time."
 
@@ -81,15 +84,22 @@ flowchart TB
     class F1,F2,Lose bad
 ```
 
-## 2. Docker
+### 🐳 2. Docker
 
-A way to package an app together with the operating-system pieces it needs, so it behaves the same on a developer's laptop, your staging server, and production. The official Docker docs call a container image [a lightweight, standalone, executable package](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) of code, runtime, tools, and settings. Docker is plumbing - useful and invisible when it works, expensive when "Docker work" becomes the headline two weeks running. That phrasing usually means "something on the server broke, we cannot reproduce it locally, and we are fighting our own setup."
+A way to package an app together with the operating-system pieces it needs, so it behaves the same on a developer's laptop, your staging server, and production. The official Docker docs call a container image [a lightweight, standalone, executable package](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/) of code, runtime, tools, and settings. Docker is plumbing - useful and invisible when it works, expensive when "Docker work" becomes the headline two weeks running.
 
-**Ask in standup**: *"What did this Docker work let us ship that we could not ship last week?"* A clickable feature in the demo is the right answer. "It makes future deployments easier" with no date attached is a private cleanup project on your invoice.
+Docker shows up in standup the same way every week, but the phrasing tells you whether it is real plumbing or a private cleanup project on your invoice. Listen for which side of this table your team lands on:
 
-In Rails terms, a healthy project lets a new developer clone the repo, run `docker compose up`, and have the app, Postgres, and Redis running locally inside ten minutes. An EdTech founder we picked up paid $7K for "a Docker upgrade" across six weeks; the git history showed one commit changing a single line in `Dockerfile`. The real work was a Postgres migration that had broken staging the day the upgrade ticket opened. They labelled the sprint "Docker work" because it sounded more like infrastructure than "we shipped a bug."
+| Phrase you hear | What it usually means |
+|---|---|
+| "New developer ran `docker compose up` and shipped a feature day one" | Healthy plumbing - the container is doing its job invisibly |
+| "Bumping the Postgres image so the staging migration unblocks" | A named, dated, founder-clickable outcome |
+| "Doing Docker work" (week 2 in a row, no clickable thing) | Something on the server broke, they cannot reproduce locally, they are fighting their own setup |
+| "We are containerizing the architecture" | Resume-driven plumbing - ask which feature ships sooner because of it |
 
-## 3. Tech debt
+An EdTech founder we picked up paid $7K for "a Docker upgrade" across six weeks; the git history showed one commit changing a single line in `Dockerfile`. The real work was a Postgres migration that had broken staging the day the upgrade ticket opened. They labelled the sprint "Docker work" because it sounded more like infrastructure than "we shipped a bug."
+
+### 💸 3. Tech debt
 
 Code you shipped fast knowing you would have to come back and fix it. Ward Cunningham, who [coined the metaphor in 1992](https://martinfowler.com/bliki/TechnicalDebt.html), called it "shipping first time code is like going into debt" - useful as long as you pay it back promptly, expensive in compounding interest if you ignore it. From an agency, the term usually means "we wrote the original code badly and now we want you to pay us to fix what you already paid us to write."
 
@@ -97,15 +107,28 @@ Code you shipped fast knowing you would have to come back and fix it. Ward Cunni
 
 In Rails terms, healthy tech debt sounds specific: "extracting a `Billing::PlanCalculator` class out of `User` unblocks metered billing in Q3." Unhealthy tech debt sounds like "there is a lot of legacy in this codebase" - a feeling the team is asking you to fund. [LitsLink reports developers spend 42% of their time on technical debt and maintenance](https://litslink.com/blog/cost-of-outsourcing-software-development); the founders we rescue rarely see that line on an invoice. They see features taking twice as long as last quarter for no reason anyone can name. JT's [60-day playbook for slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) starts by making that line visible.
 
-## 4. MVP
+### 🚀 4. MVP
 
 Eric Ries, who popularised the term in The Lean Startup, defines MVP as [the version of a new product that lets a team collect the maximum amount of validated learning about customers with the least effort](https://leanstartup.co/resources/articles/what-is-an-mvp/). Validated learning is the point - an MVP that nobody uses taught you nothing. Coming from an agency, the term usually means "the cheapest scope we can finish inside the budget you have left, even if it does not test the business question you actually need answered."
 
-**Ask in standup**: *"What single business question will this MVP answer in the first 30 days after we ship, and how will we know we got an answer?"* If the team cannot name the question (do paying customers click upgrade? do enterprise prospects book a demo after seeing the price?), they are building a small product on faith.
+The cleanest way to feel the difference is to look at two specs for the same MVP - the one a real product team writes and the one an agency writes when nobody asks Q4. A B2B HealthTech founder we shipped for in Q2 2025 had both on her desk:
 
-A real MVP we shipped for a B2B HealthTech founder in Q2 2025 was one Rails controller, one Postgres table, and a Stripe checkout - one developer, six working days, no Docker, no microservices. She put it in front of fifteen design partners and three of them paid. The over-built version stacks a custom admin panel, a "white-labellable" theme system, and a six-week sprint to "set the foundations right" - the failure mode JT covers in [our Quality Tax post](/blog/quality-tax-ai-mvp-cost/) on AI-built MVPs costing 2-3x the promised savings.
+**Real MVP spec (one engineer, six working days, $14K):**
+- One Rails controller (`OnboardingsController`)
+- One Postgres table (`onboardings`)
+- One Stripe checkout link
+- The business question: do paid design partners come back the second week? (Yes - three of fifteen did.)
 
-## 5. Architecture
+**The agency version of the same MVP (six weeks, $58K quoted):**
+- Custom admin panel with role-based permissions
+- "White-labellable" theme system for future enterprise tenants
+- Microservices split: signup service + billing service + notification service
+- Two-week "foundations sprint" before any user-facing code
+- The business question: never specified - JT covers this exact failure mode in [our Quality Tax post](/blog/quality-tax-ai-mvp-cost/) on AI-built MVPs costing 2-3x the promised savings
+
+If the spec your team handed you reads like the second one, the missing question is: *what business question will this MVP answer in the first 30 days after we ship, and how will we know we got an answer?* That question cannot survive a "white-labellable theme system" on day one.
+
+### 🏗️ 5. Architecture
 
 The big-picture decisions about how the pieces of your app fit together: one big codebase or many small services, what database, what hosting, how the parts talk. Architecture is expensive to change later, which is why agencies love it and founders should be skeptical when it shows up early. From an agency, this often means "we want to use the resume-building tech we have not tried yet, and we will call it a foundational decision so you do not push back" - microservices, Kubernetes, custom event buses, and rewrites in a trendier framework all hide here.
 

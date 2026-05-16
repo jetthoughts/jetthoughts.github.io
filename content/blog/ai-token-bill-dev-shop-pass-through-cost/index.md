@@ -1,8 +1,9 @@
 ---
-title: "9.2 · The AI Token Bill Your Agency Forgot"
+title: "The AI Token Bill Your Agency Forgot"
 description: "The pass-through OpenAI, Anthropic, and Cursor costs that creep into month-2 invoices. Predictable per-developer ranges plus 3 SOW clauses to redline now."
-date: 2026-11-18
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: ai-token-bill-dev-shop-pass-through-cost
 keywords:
@@ -21,7 +22,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "9.2 · The AI Token Bill Your Agency Forgot to Mention"
+  og_title: "The AI Token Bill Your Agency Forgot to Mention"
   og_description: "Pass-through Cursor, Anthropic, and OpenAI costs creep into month-2 invoices. Get predictable per-developer ranges plus 3 SOW clauses to redline now."
 cover_image_alt: "JetThoughts course cover showing a stacked AI cost layer cake: Cursor seat, Anthropic API, OpenAI API, totaling per developer per month"
 canonical_url: "https://jetthoughts.com/blog/ai-token-bill-dev-shop-pass-through-cost/"
@@ -29,7 +30,7 @@ related_posts: false
 course_nav: false
 ---
 
-> **Module 9 · Step 2 of 3** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
+> **Going further (AI in production) · Step 2 of 3** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
 > Input: a signed agency contract OR a hire who claims "AI-augmented." Output: monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW.
 
 > **Supplementary content.** This chapter is relevant after you've shipped (Module 5+) and your product touches AI in production. Bookmark and return when needed.
@@ -38,7 +39,19 @@ A founder posted in r/SaaS last month: **"Our dev shop just sent the month-2 inv
 
 That is the gap this post closes. By the end of one coffee you will know the per-developer AI cost ranges that should be in your invoice, the formula that predicts your bill within ±20%, and the 3 clauses you paste into your next SOW so the surprise never happens again.
 
-![Per-developer AI cost stack: Cursor seat $20-60, Anthropic API $30-200, OpenAI API $50-300, with disciplined team total $80-120 and undisciplined $300-500 per dev per month](cost-stack-per-developer.svg)
+**What one developer costs you in AI tokens per month (2026 pass-through ranges, above the hourly rate):**
+
+| Line item | Per dev / month | What you control |
+|-----------|-----------------|------------------|
+| Cursor or Copilot Enterprise seat | $20-60 | Fixed monthly. Easy to predict. Pick a tier and stay |
+| Anthropic API (Claude Code) | $30-200 | Usage discipline. Same dev = 7x range depending on agent-loop habits |
+| OpenAI API (gpt-4o, o3) | $50-300 | Whether the team uses it at all. Less common in 2026 if Claude Code dominates |
+| **Disciplined team total** | **$80-$120** | Cursor + Claude Code + budget alerts at $150 |
+| **Undisciplined team total** | **$300-$500** | 5 AI tools, no budget alerts, agent loops left running |
+
+Multiply by your team size. A 4-dev team at the undisciplined end is $1,200-$2,000/month before margin.
+
+> **Read this if**: you've hired an agency in 2026 OR your dev shop is starting to mention "AI tooling" line items in invoices.
 
 ## Why this hits in month 2-3
 
@@ -74,9 +87,21 @@ Take your invoice in three numbers.
 
 > Monthly AI bill = (number of developers on your project) × (avg per-dev AI cost) × (1 + agency margin %)
 
-**Worked example:** 4 developers, disciplined team avg of $100/dev/month, 0% agency margin (per the SOW clause below), expected monthly AI line: **$400 ± 20% = $320 to $480**. If your month-2 invoice shows $1,800 on a 4-dev team, you have either an undisciplined developer (Devon in the invoice graphic below), an agency hiding 30% margin in the AI line, or both. Either is a conversation worth 15 minutes.
+**Worked example - 4-dev disciplined team:**
 
-**Same formula, different team:** 2 developers, mid-range avg of $200/dev/month (one of them runs heavy agent loops on hard tickets), expected monthly AI line: **$400 ± 20% = $320 to $480**. Same number, very different reasoning - which is why the per-dev breakdown matters more than the total.
+- Developers on project: 4
+- Avg per-dev AI cost: $100/month (disciplined: Cursor seat + Claude Code with budget alerts)
+- Agency margin: 0% (per Clause 1 in the SOW)
+- Expected monthly AI line: **$400 ± 20% = $320 to $480**
+- If invoice shows $1,800: undisciplined developer (Devon in the table above), 30% hidden margin, or both - 15-minute conversation either way
+
+**Worked example - 2-dev team with one heavy agent-loop user:**
+
+- Developers on project: 2
+- Avg per-dev AI cost: $200/month (mid-range: one runs heavy agent loops on hard tickets)
+- Agency margin: 0%
+- Expected monthly AI line: **$400 ± 20% = $320 to $480**
+- Same total as the 4-dev team, very different reasoning - which is why per-dev breakdown matters more than the total
 
 The trade-off you are accepting: ±20% is a wide band. AI usage is genuinely variable - a sprint full of refactoring tickets burns 2-3x more tokens than a sprint full of UI work. The point of the formula is not pinpoint accuracy; it is catching the 200%-over-estimate invoices that show up when nobody is watching.
 
@@ -111,7 +136,14 @@ What it does: blocks the agency from quietly marking up your AI bill 20-30% (yes
 
 What it does: makes the "AI Services - $1,860" line illegal. Instead you get the right-hand invoice in the graphic below. With per-dev itemization, when month-3 spikes, you know whether it is one developer on one hard ticket (workflow conversation) or a margin slipped in (contract conversation).
 
-![Two side-by-side invoices: bad invoice with single AI Services lump line ($2,340 hidden in $59,760 total). Good invoice with per-developer per-tool itemization showing Devon at $1,055 with a $300 budget alert breach.](good-vs-bad-invoice.svg)
+**Bad invoice vs good invoice for a 4-developer team in month 2:**
+
+| Line item | Bad invoice (reject) | Good invoice (accept) | Why it matters |
+|-----------|----------------------|------------------------|----------------|
+| AI tooling line | "AI services (passthrough) - $2,340" with no breakdown | Per developer, per tool, tokens shown (Maria $135, Devon $1,095, Priya $175, Alex $150) | When the AI line doubles in month 3, you have something to push back on |
+| Pass-through margin | Not stated (hidden 20-30% markup possible) | "Pass-through margin: 0%" stated on the invoice | Blocks the agency from quietly marking up the AI bill |
+| Budget alert | None | "Budget alert threshold (per dev): $300" | Devon blew past $300 - conversation possible, not surprise invoice |
+| Question you can answer | "Who used what AI tool to do what work?" - no | Yes, per-line | Without it, every month-3 spike is an argument; with it, every spike is a 5-minute conversation |
 
 ### Clause 3 - Visibility
 

@@ -1,8 +1,9 @@
 ---
-title: "The First-Paying-Customer Operating Kit (Free Template Bundle)"
-description: "Six fill-in-the-blank templates that take a non-technical founder from must-have segment to a signed paid pilot. Companion to Module 7 of this course."
+title: "The First-Paying-Customer Operating Kit (Preview - Templates Shipping)"
+description: "The six-template kit for Module 7. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
 date: 2026-05-13
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: first-paying-customer-operating-kit
 keywords:
@@ -21,22 +22,24 @@ categories: ["Templates"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "The First-Paying-Customer Operating Kit (Free Template Bundle)"
-  og_description: "Six fill-in-the-blank templates that take a non-technical founder from must-have segment to a signed paid pilot. Companion to Module 7 of this course."
+  og_title: "The First-Paying-Customer Operating Kit (Preview)"
+  og_description: "The six-template kit for Module 7. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
 cover_image_alt: "JetThoughts blog cover for the First-Paying-Customer Operating Kit showing 6 component cards arranged as a single bundle"
 canonical_url: "https://jetthoughts.com/blog/first-paying-customer-operating-kit/"
 related_posts: false
 ---
 
-📋 Template companion to [Module 7 of the Tech for Non-Technical Founders 2026 course](/blog/tech-for-non-technical-founders-2026/). Six fill-in-the-blank artifacts you run from Monday to Friday to land your first paid pilot.
+📋 Template companion to [Module 7 of the Tech for Non-Technical Founders 2026 course](/blog/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks.
+
+> **Status: preview.** This page is the spec for the kit. We are assembling and shipping each template as it is ready - bookmark and check back. There is no email signup; when a template is downloadable, the link appears inline below. We will not promise files we cannot ship today.
 
 # The First-Paying-Customer Operating Kit
 
-*From live MVP to signed paid pilot in 4 weeks - the templates Module 7 runs on.*
+*From live MVP to signed paid pilot in 4 weeks - the templates Module 6 runs on.*
 
-## What this bundles
+## What this kit covers
 
-Module 7 of this course walks four chapters: the Sean Ellis 40% test, the personal-network outreach, the paid-pilot contract, and the cold-outbound pipeline. Each chapter references a template. This page bundles all six in one place.
+Module 6 of this course walks five chapters: the Sean Ellis 40% test, the personal-network outreach, the paid-pilot contract, and the cold-outbound pipeline. Each chapter references a template. This page describes all six and will host them as each one ships.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -60,7 +63,7 @@ flowchart TB
 
 The fill-in spreadsheet from [Chapter 7.2](/blog/first-ten-customers-personal-network/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
 
-What it does: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
+In practice: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
 
 ### 2. Cold-email scripts (3 variants)
 
@@ -72,7 +75,7 @@ The verbatim 4-line scripts from [Chapter 7.4](/blog/outbound-without-sales-team
 
 Each script comes with three sample subject lines that have cleared 25%+ open rates in 2026 founder cold-outbound runs, plus a 3-message follow-up cadence (day 0, day 4, day 11).
 
-What it does: removes the "what do I say in the email" friction so you spend 60-90 seconds per name on personalization, not 20 minutes.
+Why it matters: removes the "what do I say in the email" friction so you spend 60-90 seconds per name on personalization, not 20 minutes.
 
 ### 3. Design Partner Agreement template (one-page LOI + paid pilot)
 
@@ -80,7 +83,7 @@ The one-page DPA from [Chapter 7.3](/blog/paid-pilot-charge-before-ship/). Six s
 
 Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pilot DPA, both based on real (anonymized) 2026 founder deals.
 
-What it does: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
+The outcome: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
 
 ### 4. Stripe Checkout setup checklist (Rails / Django / Laravel)
 
@@ -100,7 +103,7 @@ The exact 5 questions from [Chapter 7.1](/blog/must-have-segment-pmf-test/), in 
 
 Plus a one-tab Google Sheet that computes per-segment must-have % from your CSV export. Pivot the Q1 column by the Q5 segment column and the per-segment number appears in cell B2.
 
-What it does: 24 hours from "I should run the test" to a scored result you can act on.
+Result: 24 hours from "I should run the test" to a scored result you can act on.
 
 ### 6. The "First 10 Customers" Airtable tracker
 
@@ -108,7 +111,7 @@ The Airtable base from [Chapter 7.4](/blog/outbound-without-sales-team/). Pre-fi
 
 ![Sample row from the First 10 Customers Airtable tracker](kit-sample-row.svg)
 
-What it does: turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.
+The payoff: turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.
 
 ## How to use the kit
 
@@ -130,9 +133,7 @@ The kit is not a substitute for a sales course or a CRM. It will not teach the c
 
 ## How to get the kit
 
-📬 *Bookmark this page. The 6 templates are being assembled for direct download - new templates land here as the course evolves. We are not collecting emails until each template is actually downloadable; we will not promise something we cannot ship today.*
-
-When the templates go live they appear inline above with a direct link. No mailing list, no funnel - just the file.
+See the top callout for status. When a template is live, the download link appears inline in the matching component above - no mailing list, no funnel, just the file.
 
 ## Where this fits in the course
 
@@ -143,7 +144,7 @@ This is the lead magnet for Module 7 of the [Tech for Non-Technical Founders 202
 - 7.3 [Charge Before You Ship](/blog/paid-pilot-charge-before-ship/) - one-page Design Partner Agreement plus Stripe Checkout setup.
 - 7.4 [Going Outbound Without a Sales Team](/blog/outbound-without-sales-team/) - filtered cold outbound for customers 11-20.
 
-The course closes at 7.4. The kit closes the course.
+Module 6 ends here. The kit ships alongside Module 6 as each artifact is ready.
 
 ## Built by
 

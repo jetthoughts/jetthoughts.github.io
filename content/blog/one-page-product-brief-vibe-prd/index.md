@@ -1,8 +1,9 @@
 ---
 title: "4.1 · The One-Page Product Brief (Vibe PRD)"
-description: "The five sections your Lovable prompt or hired junior actually needs. Free Module 4.1 of the Tech for Non-Technical Founders 2026 course."
-date: 2026-07-29
+description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 4.1 of the Tech for Non-Technical Founders 2026 course."
+date: 2026-05-18
 draft: false
+course_chapter: true
 author: "JetThoughts Team"
 slug: one-page-product-brief-vibe-prd
 keywords:
@@ -21,14 +22,16 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "4.1 · The One-Page Product Brief (Vibe PRD)"
-  og_description: "The five sections your Lovable prompt or hired junior actually needs. Free Module 4.1 of the Tech for Non-Technical Founders 2026 course."
+  og_description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 4.1 of the Tech for Non-Technical Founders 2026 course."
 cover_image_alt: "JetThoughts cover showing a one-page product brief on a notebook with five labeled sections and a side-by-side bad vs good example"
 canonical_url: "https://jetthoughts.com/blog/one-page-product-brief-vibe-prd/"
 related_posts: false
 ---
 
 > **Module 4 · Step 1 of 2** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) course.
-> Input: a one-page validated problem statement (from [Module 3.2](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)). Output: a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team.
+> Input: a one-page validated problem statement (from [Chapter 3.3](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)). Output: a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team.
+
+*Founder anecdotes in this chapter use anonymized names; dollar amounts, timeframes, and technical specifics are exact.*
 
 Drew Falkman charges $1,000 for a 4-week Maven cohort that teaches non-technical founders one core artifact - a "Vibe PRD" you hand to Lovable, Cursor, or a hired junior so the build matches the problem. The cohort is excellent. The single most useful thing inside it is a one-page template you could fill in tonight. The reason most founders pay $1,000 is they have never seen the page. Here it is, for free, with the same five sections.
 
@@ -46,7 +49,7 @@ The Vibe PRD is one side of paper. Five sections, in this order. Each section is
 
 The simplest reliable order is *problem → user → build → metric → no-go*. Every section has a job. Skip one and your prompt or your contractor fills it in for you, usually wrong.
 
-### Section 1 - The problem (lifted from Module 3.2)
+### Section 1 - The problem (lifted from Chapter 3.3)
 
 What goes in it: one paragraph copied directly from your [validated problem statement](/blog/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost.
 
@@ -84,7 +87,7 @@ What goes in it: 5 to 8 lines naming the things a competent agent or contractor 
 
 Example: *Not in v1: multi-currency support, multi-Stripe-account support, automatic recurring sync, a settings page, a billing dashboard, user roles and permissions, a marketing site beyond the signup page, mobile responsive design beyond "works on a 1024px screen." We will revisit each of these after metric in Section 4 is hit.*
 
-Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, Cursor, and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. We rescued an EdTech founder in Q2 2026 whose AI-generated MVP shipped 17 settings toggles in version one. Twelve had no backend code behind them. Two crashed the app when toggled. The team had read her brief as a wish list and added everything she didn't forbid.
+Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, Cursor, and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI; in a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed.
 
 ![Side by side bad vs good Vibe PRD. Left: bad brief reads 'Build a CRM.' Right: good brief names the persona, the 60-second context, the one workflow, the one metric, and the no-go list.](good-vs-bad-prd.svg)
 
@@ -125,13 +128,13 @@ flowchart TD
 
 The trap most founders fall into is writing a traditional PRD for a junior or an AI agent. The 5-page document buries the one paragraph the builder needed. By page 3, the agent has skimmed past the no-go list and started building a settings page.
 
-## Drew Falkman's $1,000 vs this
+## When the $1,000 Maven course is worth it
 
-Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.com/), a 4-week cohort priced at $1,000. The course teaches the same five-section template at the centre of this post, plus the Lovable + Supabase + Stripe + GitHub stack, plus a live community, plus 1:1 instructor feedback. The Maven [course reviews](https://maven.com/p/about) hover around 4.8/5. If you have $1,000 and four weeks, it's a fair trade.
+Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.com/), a 4-week cohort priced at $1,000. The course teaches the same five-section Vibe PRD template, plus the Lovable + Supabase + Stripe + GitHub stack, plus live community and 1:1 instructor feedback. The Maven [course reviews](https://maven.com/p/about) hover around 4.8/5.
 
-This post is not a substitute for that cohort. The cohort adds three things free reading can't: live accountability across 4 weeks, a synchronous community of other solo founders building on the same stack, and 1:1 feedback on your specific Vibe PRD before you hand it to Lovable. Those are worth paying for if accountability is your blocker.
+Graduate from this post to that cohort if any of these are true: you wrote the page tonight and cannot tell whether it is good, accountability is your real blocker (three abandoned briefs in a drawer says it is), or you want to go deeper on the Lovable + Supabase + Stripe wiring than this post covers. The cohort spends two of its four weeks on stack mechanics, which is the part you cannot get from a template alone.
 
-What this post gives you for free is the artifact. The five-section structure, the worked example, the no-go list, the decision between Vibe PRD and traditional PRD, and the [downloadable template](/blog/vibe-prd-template/) at the bottom. The doctrine without the cohort. The cohort is the support system; the artifact is the work. If you can sit alone in a room for two hours and write the page without external accountability, the artifact is enough. If you can't, $1,000 buys you the structure to do it.
+If you can sit alone for two hours and finish the brief from the page above, that is enough to start; the cohort buys you a peer review, a deadline, and three more weeks of deeper stack work. If you can't sit alone for two hours, $1,000 buys the structure that gets the brief out of you.
 
 ## What to do tomorrow
 
@@ -141,7 +144,7 @@ Three actions, in order.
 - **Read the brief aloud to one peer over coffee or a 20-minute call.** Ask: "If you had to build this in a week using Lovable, what would you build that isn't in my no-go list?" Their first answer is your missing no-go item. Add it.
 - **Paste the brief into Lovable, Cursor, or your contractor's first kickoff doc.** Do not edit it for the audience. The same one page goes to both. If the agent or the contractor asks a question whose answer is in the brief, your brief failed; rewrite the section that confused them before you take a second pass at the build.
 
-> A Vibe PRD is what's left when you remove everything an AI agent or a hired junior cannot act on by tomorrow morning. The five sections are the floor, not the ceiling.
+> A Vibe PRD is what's left when you remove everything an AI agent or a hired junior cannot act on by tomorrow morning. Write the five sections tonight and the build starts Tuesday.
 
 The [Vibe PRD Template](/blog/vibe-prd-template/) is the artifact for this post. Print it, fill it in 45 minutes, hand it to your AI agent or contractor the next day, and Module 4's checkpoint moves one step closer.
 

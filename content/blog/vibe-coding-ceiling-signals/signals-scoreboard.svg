@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" font-family="'Caveat','Patrick Hand',cursive">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" font-family='"Segoe UI", system-ui, -apple-system, sans-serif'>
   <defs>
     <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
       <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="7"/>
@@ -9,72 +9,72 @@
   <rect width="960" height="700" fill="#fafaf7"/>
 
   <!-- Title -->
-  <text x="480" y="44" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 5 Architectural Ceiling Signals</text>
-  <text x="480" y="72" font-size="20" text-anchor="middle" fill="#555">Score each signal: green / yellow / red. Two reds = graduate from self-serve.</text>
+  <text x="480" y="42" font-size="34" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The 5 Architectural Ceiling Signals</text>
+  <text x="480" y="68" font-size="20" text-anchor="middle" fill="#555">Score each signal: green / yellow / red. Two reds = graduate from self-serve.</text>
 
   <!-- Header row -->
-  <rect x="40" y="100" width="880" height="44" fill="#1a1a1a" filter="url(#rough)"/>
-  <text x="60" y="130" font-size="18" fill="#fafaf7" font-weight="bold">Signal</text>
-  <text x="320" y="130" font-size="18" fill="#fafaf7" font-weight="bold">What you see</text>
-  <text x="660" y="130" font-size="18" fill="#fafaf7" font-weight="bold">What to do</text>
+  <rect x="40" y="92" width="880" height="44" fill="#1a1a1a" filter="url(#rough)"/>
+  <text x="60" y="120" font-size="20" fill="#fafaf7" font-weight="bold">Signal</text>
+  <text x="320" y="120" font-size="20" fill="#fafaf7" font-weight="bold">What you see</text>
+  <text x="660" y="120" font-size="20" fill="#fafaf7" font-weight="bold">What to do</text>
 
-  <!-- Signal 1: Data model -->
-  <rect x="40" y="150" width="880" height="100" fill="#fff5f5" stroke="#cc342d" stroke-width="2" filter="url(#rough)"/>
-  <text x="60" y="180" font-size="20" fill="#cc342d" font-weight="bold">1. Data model</text>
-  <text x="60" y="204" font-size="16" fill="#444">&gt; 5 entities, deep</text>
-  <text x="60" y="224" font-size="16" fill="#444">relations, joins</text>
-  <text x="320" y="180" font-size="16" fill="#1a1a1a">Lovable rewrites a screen and</text>
-  <text x="320" y="200" font-size="16" fill="#1a1a1a">three other screens break.</text>
-  <text x="320" y="220" font-size="16" fill="#1a1a1a">Same fix three times a week.</text>
-  <text x="660" y="180" font-size="16" fill="#1a1a1a">Hire a Fractional CTO for a</text>
-  <text x="660" y="200" font-size="16" fill="#1a1a1a">schema review (2 hours, $400).</text>
-  <text x="660" y="220" font-size="16" fill="#1a1a1a">Then route to Module 4B.</text>
+  <!-- Signal 1: AI inference -->
+  <rect x="40" y="142" width="880" height="100" fill="#fffbe6" stroke="#bf8a00" stroke-width="2" filter="url(#rough)"/>
+  <text x="60" y="170" font-size="22" fill="#bf8a00" font-weight="bold">1. AI inference</text>
+  <text x="60" y="192" font-size="20" fill="#444">rate limits, cost</text>
+  <text x="60" y="212" font-size="20" fill="#444">per request &gt;$0.05</text>
+  <text x="320" y="170" font-size="20" fill="#1a1a1a">OpenAI bill hit $1,400 last</text>
+  <text x="320" y="190" font-size="20" fill="#1a1a1a">month. Margin per user is</text>
+  <text x="320" y="210" font-size="20" fill="#1a1a1a">now negative on the Pro plan.</text>
+  <text x="660" y="170" font-size="20" fill="#1a1a1a">Fractional CTO models the</text>
+  <text x="660" y="190" font-size="20" fill="#1a1a1a">unit economics. Caching, model</text>
+  <text x="660" y="210" font-size="20" fill="#1a1a1a">routing, queue back-pressure.</text>
 
-  <!-- Signal 2: Real-time -->
-  <rect x="40" y="256" width="880" height="100" fill="#e8f4f8" stroke="#0277bd" stroke-width="2" filter="url(#rough)"/>
-  <text x="60" y="286" font-size="20" fill="#0277bd" font-weight="bold">2. Real-time</text>
-  <text x="60" y="310" font-size="16" fill="#444">live presence,</text>
-  <text x="60" y="330" font-size="16" fill="#444">collab, websockets</text>
-  <text x="320" y="286" font-size="16" fill="#1a1a1a">Two users edit the same row.</text>
-  <text x="320" y="306" font-size="16" fill="#1a1a1a">One overwrites the other.</text>
-  <text x="320" y="326" font-size="16" fill="#1a1a1a">Refresh = different state.</text>
-  <text x="660" y="286" font-size="16" fill="#1a1a1a">Module 4B (hire). Real-time</text>
-  <text x="660" y="306" font-size="16" fill="#1a1a1a">needs an engineer who has</text>
-  <text x="660" y="326" font-size="16" fill="#1a1a1a">shipped Action Cable / Channels.</text>
+  <!-- Signal 2: Data model -->
+  <rect x="40" y="248" width="880" height="100" fill="#fff5f5" stroke="#cc342d" stroke-width="2" filter="url(#rough)"/>
+  <text x="60" y="276" font-size="22" fill="#cc342d" font-weight="bold">2. Data model</text>
+  <text x="60" y="298" font-size="20" fill="#444">&gt;5 entities, deep</text>
+  <text x="60" y="318" font-size="20" fill="#444">relations, joins</text>
+  <text x="320" y="276" font-size="20" fill="#1a1a1a">Lovable rewrites a screen and</text>
+  <text x="320" y="296" font-size="20" fill="#1a1a1a">three other screens break.</text>
+  <text x="320" y="316" font-size="20" fill="#1a1a1a">Same fix three times a week.</text>
+  <text x="660" y="276" font-size="20" fill="#1a1a1a">Fractional CTO for a schema</text>
+  <text x="660" y="296" font-size="20" fill="#1a1a1a">review (2 hours, $400). Then</text>
+  <text x="660" y="316" font-size="20" fill="#1a1a1a">route to the hire-a-team path.</text>
 
-  <!-- Signal 3: Auth -->
-  <rect x="40" y="362" width="880" height="100" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2" filter="url(#rough)"/>
-  <text x="60" y="392" font-size="20" fill="#2e7d32" font-weight="bold">3. Auth complexity</text>
-  <text x="60" y="416" font-size="16" fill="#444">RBAC matrix,</text>
-  <text x="60" y="436" font-size="16" fill="#444">multi-tenant, SAML</text>
-  <text x="320" y="392" font-size="16" fill="#1a1a1a">Enterprise prospect asks</text>
-  <text x="320" y="412" font-size="16" fill="#1a1a1a">for SSO and a role matrix.</text>
-  <text x="320" y="432" font-size="16" fill="#1a1a1a">Supabase RLS no longer fits.</text>
-  <text x="660" y="392" font-size="16" fill="#1a1a1a">Fractional CTO scopes the</text>
-  <text x="660" y="412" font-size="16" fill="#1a1a1a">RBAC model. Then Module 4B</text>
-  <text x="660" y="432" font-size="16" fill="#1a1a1a">to ship it on Rails / Devise.</text>
+  <!-- Signal 3: Real-time -->
+  <rect x="40" y="354" width="880" height="100" fill="#e8f4f8" stroke="#0277bd" stroke-width="2" filter="url(#rough)"/>
+  <text x="60" y="382" font-size="22" fill="#0277bd" font-weight="bold">3. Real-time</text>
+  <text x="60" y="404" font-size="20" fill="#444">live presence,</text>
+  <text x="60" y="424" font-size="20" fill="#444">collab, websockets</text>
+  <text x="320" y="382" font-size="20" fill="#1a1a1a">Two users edit the same row.</text>
+  <text x="320" y="402" font-size="20" fill="#1a1a1a">One overwrites the other.</text>
+  <text x="320" y="422" font-size="20" fill="#1a1a1a">Refresh = different state.</text>
+  <text x="660" y="382" font-size="20" fill="#1a1a1a">Hire a team. Real-time needs</text>
+  <text x="660" y="402" font-size="20" fill="#1a1a1a">an engineer who has shipped</text>
+  <text x="660" y="422" font-size="20" fill="#1a1a1a">Action Cable / Channels.</text>
 
-  <!-- Signal 4: AI cost -->
-  <rect x="40" y="468" width="880" height="100" fill="#fffbe6" stroke="#bf8a00" stroke-width="2" filter="url(#rough)"/>
-  <text x="60" y="498" font-size="20" fill="#bf8a00" font-weight="bold">4. AI inference</text>
-  <text x="60" y="522" font-size="16" fill="#444">rate limits, cost</text>
-  <text x="60" y="542" font-size="16" fill="#444">per request &gt; $0.05</text>
-  <text x="320" y="498" font-size="16" fill="#1a1a1a">OpenAI bill hit $1,400 last</text>
-  <text x="320" y="518" font-size="16" fill="#1a1a1a">month. Margin per user is</text>
-  <text x="320" y="538" font-size="16" fill="#1a1a1a">now negative on the Pro plan.</text>
-  <text x="660" y="498" font-size="16" fill="#1a1a1a">Fractional CTO models the</text>
-  <text x="660" y="518" font-size="16" fill="#1a1a1a">unit economics. Caching, model</text>
-  <text x="660" y="538" font-size="16" fill="#1a1a1a">routing, queue back-pressure.</text>
+  <!-- Signal 4: Auth complexity -->
+  <rect x="40" y="460" width="880" height="100" fill="#f0f9f0" stroke="#2e7d32" stroke-width="2" filter="url(#rough)"/>
+  <text x="60" y="488" font-size="22" fill="#2e7d32" font-weight="bold">4. Auth complexity</text>
+  <text x="60" y="510" font-size="20" fill="#444">RBAC matrix,</text>
+  <text x="60" y="530" font-size="20" fill="#444">multi-tenant, SAML</text>
+  <text x="320" y="488" font-size="20" fill="#1a1a1a">Enterprise prospect asks</text>
+  <text x="320" y="508" font-size="20" fill="#1a1a1a">for SSO and a role matrix.</text>
+  <text x="320" y="528" font-size="20" fill="#1a1a1a">Supabase RLS no longer fits.</text>
+  <text x="660" y="488" font-size="20" fill="#1a1a1a">Fractional CTO scopes the</text>
+  <text x="660" y="508" font-size="20" fill="#1a1a1a">RBAC model. Then hire a team</text>
+  <text x="660" y="528" font-size="20" fill="#1a1a1a">to ship it on Rails / Devise.</text>
 
   <!-- Signal 5: Compliance -->
-  <rect x="40" y="574" width="880" height="100" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2" filter="url(#rough)"/>
-  <text x="60" y="604" font-size="20" fill="#7c3aed" font-weight="bold">5. Compliance</text>
-  <text x="60" y="628" font-size="16" fill="#444">SOC2, HIPAA, PCI</text>
-  <text x="60" y="648" font-size="16" fill="#444">audit on calendar</text>
-  <text x="320" y="604" font-size="16" fill="#1a1a1a">Customer's procurement asks</text>
-  <text x="320" y="624" font-size="16" fill="#1a1a1a">for a SOC2 letter or HIPAA BAA.</text>
-  <text x="320" y="644" font-size="16" fill="#1a1a1a">Vibe-coded stack cannot pass.</text>
-  <text x="660" y="604" font-size="16" fill="#1a1a1a">Module 4B day one. Senior</text>
-  <text x="660" y="624" font-size="16" fill="#1a1a1a">engineer architects the audit</text>
-  <text x="660" y="644" font-size="16" fill="#1a1a1a">surface before you take the deal.</text>
+  <rect x="40" y="566" width="880" height="100" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2" filter="url(#rough)"/>
+  <text x="60" y="594" font-size="22" fill="#7c3aed" font-weight="bold">5. Compliance</text>
+  <text x="60" y="616" font-size="20" fill="#444">SOC2, HIPAA, PCI</text>
+  <text x="60" y="636" font-size="20" fill="#444">audit on calendar</text>
+  <text x="320" y="594" font-size="20" fill="#1a1a1a">Customer's procurement asks</text>
+  <text x="320" y="614" font-size="20" fill="#1a1a1a">for a SOC2 letter or HIPAA BAA.</text>
+  <text x="320" y="634" font-size="20" fill="#1a1a1a">Vibe-coded stack cannot pass.</text>
+  <text x="660" y="594" font-size="20" fill="#1a1a1a">Hire a team day one. Senior</text>
+  <text x="660" y="614" font-size="20" fill="#1a1a1a">engineer architects the audit</text>
+  <text x="660" y="634" font-size="20" fill="#1a1a1a">surface before you take the deal.</text>
 </svg>

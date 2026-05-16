@@ -2,16 +2,16 @@
   <title id="zones-title">The four ownership zones a non-technical founder must control: code, cloud, secrets, and domain</title>
   <defs>
     <style>
-      .zone-title  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
-      .zone-sub    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #444; font-weight: 600; }
-      .zone-note   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #555; font-style: italic; }
-      .header      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 32px; fill: #1a1a1a; font-weight: 700; }
-      .caption     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 17px; fill: #666; font-style: italic; }
-      .badge       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #fff; font-weight: 700; }
-      .zone-code   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.8; stroke-linejoin: round; }
-      .zone-cloud  { fill: #e8f4f8; stroke: #0277bd; stroke-width: 2.8; stroke-linejoin: round; }
-      .zone-sec    { fill: #fff8e1; stroke: #b8860b; stroke-width: 2.8; stroke-linejoin: round; }
-      .zone-dom    { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.8; stroke-linejoin: round; }
+      .zone-title  { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 26px; fill: #1a1a1a; font-weight: 700; }
+      .zone-sub    { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 17px; fill: #444; font-weight: 600; }
+      .zone-note   { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 15px; fill: #555; font-style: italic; }
+      .header      { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .caption     { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 16px; fill: #666; font-style: italic; }
+      .badge       { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 13px; fill: #fff; font-weight: 700; }
+      .zone-code   { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; stroke-linejoin: round; }
+      .zone-cloud  { fill: #e8f4f8; stroke: #0277bd; stroke-width: 2.5; stroke-linejoin: round; }
+      .zone-sec    { fill: #fff8e1; stroke: #b8860b; stroke-width: 2.5; stroke-linejoin: round; }
+      .zone-dom    { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; stroke-linejoin: round; }
       .pill-code   { fill: #2e7d32; }
       .pill-cloud  { fill: #0277bd; }
       .pill-sec    { fill: #b8860b; }
@@ -20,57 +20,56 @@
     </style>
   </defs>
 
-  <text x="500" y="42" class="header" text-anchor="middle">The four zones you must own by Friday</text>
-  <text x="500" y="68" class="caption" text-anchor="middle">If a contractor's email is on any one of these, you do not own the company</text>
+  <text x="500" y="40" class="header" text-anchor="middle">The four zones you must own by Friday</text>
+  <text x="500" y="64" class="caption" text-anchor="middle">If a contractor's email is on any one of these, you do not own the company</text>
 
   <!-- Zone 1: Code -->
-  <rect x="50" y="100" width="430" height="220" rx="14" class="zone-code" transform="rotate(-0.3 265 210)"/>
-  <rect x="70" y="115" width="80" height="22" rx="6" class="pill-code"/>
-  <text x="110" y="131" class="badge" text-anchor="middle">ZONE 1</text>
-  <text x="160" y="135" class="zone-title">CODE</text>
-  <text x="70" y="170" class="zone-sub">GitHub org · repos · branch protection</text>
-  <text x="70" y="200" class="zone-note">If the agency owns the org, they can</text>
-  <text x="70" y="222" class="zone-note">delete every repo on Tuesday morning.</text>
-  <text x="70" y="252" class="zone-note">Owner email = founder@yourcompany.com</text>
-  <text x="70" y="274" class="zone-note">Members = engineers (any company)</text>
-  <text x="70" y="302" class="zone-sub">Item #1-3 of the audit</text>
+  <rect x="50" y="90" width="430" height="225" rx="12" class="zone-code" transform="rotate(-0.3 265 203)"/>
+  <rect x="70" y="106" width="80" height="22" rx="6" class="pill-code"/>
+  <text x="110" y="122" class="badge" text-anchor="middle">ZONE 1</text>
+  <text x="162" y="126" class="zone-title">CODE</text>
+  <text x="70" y="160" class="zone-sub">GitHub org - repos - branch protection</text>
+  <text x="70" y="188" class="zone-note">If the agency owns the org, they can</text>
+  <text x="70" y="208" class="zone-note">delete every repo on Tuesday morning.</text>
+  <text x="70" y="236" class="zone-note">Owner email = founder@yourcompany.com</text>
+  <text x="70" y="258" class="zone-note">Members = engineers (any company)</text>
+  <text x="70" y="288" class="zone-sub">Item #1-3 of the audit</text>
 
   <!-- Zone 2: Cloud -->
-  <rect x="520" y="100" width="430" height="220" rx="14" class="zone-cloud" transform="rotate(0.4 735 210)"/>
-  <rect x="540" y="115" width="80" height="22" rx="6" class="pill-cloud"/>
-  <text x="580" y="131" class="badge" text-anchor="middle">ZONE 2</text>
-  <text x="630" y="135" class="zone-title">CLOUD</text>
-  <text x="540" y="170" class="zone-sub">AWS root · IAM · billing card</text>
-  <text x="540" y="200" class="zone-note">Root account email is the master key.</text>
-  <text x="540" y="222" class="zone-note">Whoever owns it owns the whole stack.</text>
-  <text x="540" y="252" class="zone-note">Root = aws@yourcompany.com</text>
-  <text x="540" y="274" class="zone-note">Bill paid by your company AmEx</text>
-  <text x="540" y="302" class="zone-sub">Item #4-6 of the audit</text>
+  <rect x="520" y="90" width="430" height="225" rx="12" class="zone-cloud" transform="rotate(0.4 735 203)"/>
+  <rect x="540" y="106" width="80" height="22" rx="6" class="pill-cloud"/>
+  <text x="580" y="122" class="badge" text-anchor="middle">ZONE 2</text>
+  <text x="632" y="126" class="zone-title">CLOUD</text>
+  <text x="540" y="160" class="zone-sub">AWS root - IAM - billing card</text>
+  <text x="540" y="188" class="zone-note">Root account email is the master key.</text>
+  <text x="540" y="208" class="zone-note">Whoever owns it owns the whole stack.</text>
+  <text x="540" y="236" class="zone-note">Root = aws@yourcompany.com</text>
+  <text x="540" y="258" class="zone-note">Bill paid by your company AmEx</text>
+  <text x="540" y="288" class="zone-sub">Item #4-6 of the audit</text>
 
   <!-- Zone 3: Secrets -->
-  <rect x="50" y="350" width="430" height="220" rx="14" class="zone-sec" transform="rotate(0.3 265 460)"/>
-  <rect x="70" y="365" width="80" height="22" rx="6" class="pill-sec"/>
-  <text x="110" y="381" class="badge" text-anchor="middle">ZONE 3</text>
-  <text x="160" y="385" class="zone-title">SECRETS</text>
-  <text x="70" y="420" class="zone-sub">Database creds · API keys · .env</text>
-  <text x="70" y="450" class="zone-note">If only Marcus knows the prod DB</text>
-  <text x="70" y="472" class="zone-note">password, you do not have a database.</text>
-  <text x="70" y="502" class="zone-note">You have a hostage situation.</text>
-  <text x="70" y="524" class="zone-note">Stored in Secrets Manager / 1Password</text>
-  <text x="70" y="552" class="zone-sub">Item #7-9 of the audit</text>
+  <rect x="50" y="335" width="430" height="225" rx="12" class="zone-sec" transform="rotate(0.3 265 448)"/>
+  <rect x="70" y="351" width="80" height="22" rx="6" class="pill-sec"/>
+  <text x="110" y="367" class="badge" text-anchor="middle">ZONE 3</text>
+  <text x="162" y="371" class="zone-title">SECRETS</text>
+  <text x="70" y="405" class="zone-sub">Database creds - API keys - .env</text>
+  <text x="70" y="433" class="zone-note">If only Marcus knows the prod DB</text>
+  <text x="70" y="453" class="zone-note">password, you do not have a database.</text>
+  <text x="70" y="481" class="zone-note">You have a hostage situation.</text>
+  <text x="70" y="507" class="zone-note">Stored in Secrets Manager / 1Password</text>
+  <text x="70" y="537" class="zone-sub">Item #7-9 of the audit</text>
 
   <!-- Zone 4: Domain -->
-  <rect x="520" y="350" width="430" height="220" rx="14" class="zone-dom" transform="rotate(-0.4 735 460)"/>
-  <rect x="540" y="365" width="80" height="22" rx="6" class="pill-dom"/>
-  <text x="580" y="381" class="badge" text-anchor="middle">ZONE 4</text>
-  <text x="630" y="385" class="zone-title">DOMAIN</text>
-  <text x="540" y="420" class="zone-sub">Registrar · DNS · 3rd-party SaaS</text>
-  <text x="540" y="450" class="zone-note">A registrar transfer takes 14 days minimum.</text>
-  <text x="540" y="472" class="zone-note">If the agency holds your domain hostage,</text>
-  <text x="540" y="494" class="zone-note">your customers cannot reach you for 2 weeks.</text>
-  <text x="540" y="524" class="zone-note">WHOIS = your name and your email</text>
-  <text x="540" y="552" class="zone-sub">Item #10-12 of the audit</text>
+  <rect x="520" y="335" width="430" height="225" rx="12" class="zone-dom" transform="rotate(-0.4 735 448)"/>
+  <rect x="540" y="351" width="80" height="22" rx="6" class="pill-dom"/>
+  <text x="580" y="367" class="badge" text-anchor="middle">ZONE 4</text>
+  <text x="632" y="371" class="zone-title">DOMAIN</text>
+  <text x="540" y="405" class="zone-sub">Registrar - DNS - 3rd-party SaaS</text>
+  <text x="540" y="433" class="zone-note">A registrar transfer takes 14 days minimum.</text>
+  <text x="540" y="453" class="zone-note">If the agency holds your domain hostage,</text>
+  <text x="540" y="473" class="zone-note">your customers cannot reach you for 2 weeks.</text>
+  <text x="540" y="501" class="zone-note">WHOIS = your name and your email</text>
+  <text x="540" y="537" class="zone-sub">Item #10-12 of the audit</text>
 
-  <!-- Center connector -->
-  <text x="500" y="600" class="caption" text-anchor="middle">12 items. 45 minutes. One Friday afternoon. Your credit card and a Notion doc.</text>
+  <text x="500" y="594" class="caption" text-anchor="middle">12 items. 45 minutes. One Friday afternoon. Your credit card and a Notion doc.</text>
 </svg>
