@@ -1,6 +1,6 @@
 ---
 title: "6.5 · The Plain-English Weekly Dev Report"
-aliases: ["/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/"]
+aliases: ["/blog/weekly-dev-report-template-founders/"]
 description: "A one-page weekly dev report you demand from your team every Monday. Five sections, copy-paste, with pass/fail examples for each. No jargon."
 date: 2026-05-18
 course_chapter: true

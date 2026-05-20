@@ -1,6 +1,6 @@
 ---
 title: "5.5 · Going Outbound Without a Sales Team"
-aliases: ["/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/"]
+aliases: ["/blog/outbound-without-sales-team/"]
 description: "Once the network is exhausted, customers 11-20 come from filtered cold outbound. The Filter -> Loom -> Calendly -> Stripe pipeline, 4-line scripts."
 date: 2026-05-13
 draft: false

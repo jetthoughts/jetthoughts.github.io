@@ -1,10 +1,7 @@
 ---
 title: "Tech for Non-Technical Founders 2026"
-aliases:
-  - /course/tech-for-non-technical-founders-2026/
-  - /blog/course-map-self-assessment-non-technical-founder-2026/
-description: "A free 34-chapter course for non-technical founders. From idea to first paying users in 2026, with or without engineers. 10 modules, 15 free templates, no signup."
-date: 2026-07-01
+description: "From idea to first paying users in 2026, with or without engineers. A free course for non-technical founders learning to hire smart, manage well, and fix what the first team broke."
+date: 2026-05-13
 draft: false
 author: "JetThoughts Team"
 slug: tech-for-non-technical-founders-2026
@@ -23,16 +20,14 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "Tech for Non-Technical Founders 2026 (free 34-chapter course)"
-  og_description: "A free 34-chapter course for non-technical founders. From idea to first paying users in 2026, with or without engineers. 10 modules, 15 free templates, no signup."
-cover_image_alt: "JetThoughts course landing cover showing 10 modules stacked with the route from idea to first paying users"
+  og_title: "Tech for Non-Technical Founders 2026 — Free Course"
+  og_description: "From idea to first paying users in 2026, with or without engineers. A free course for non-technical founders learning to hire smart, manage well, and fix what the first team broke."
+cover_image_alt: "JetThoughts course landing cover showing 5 modules (Hypothesis, Validate, Design, Build, First Customer) on the route from idea to first paying users"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/"
 related_posts: false
 ---
 
 Getting from idea to a product someone pays for is harder when you can't read the code. This course gives you the tools to do it anyway - hiring, managing, and if needed, fixing what the first team broke.
-
-Free. No signup.
 
 ## Why this course exists
 
@@ -128,25 +123,6 @@ These continuation chapters apply once you've passed the Module 5 gate (one payi
 - **If you've hit the self-serve ceiling and need to hire:** [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)
 - **Management chapters (return when you have a hired team):** [Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) | [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) | [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) | [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
 - **If your product touches AI in production:** [Agency AI Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) | [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/) | [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/)
-
-## Free downloadable templates
-
-| Template |
-|---|
-| [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/) |
-| [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) |
-| [Validated Problem Statement Template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) |
-| [Vibe PRD Template (Product Brief)](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) |
-| [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) |
-| [GitHub/AWS/DB Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) |
-| [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) |
-| [Where-to-Hire Map (2026)](/course/tech-for-non-technical-founders-2026/where-to-hire-developer-2026-map/) |
-| [Hiring Interview Script](/course/tech-for-non-technical-founders-2026/hiring-interview-script/) |
-| [SOW Reading Guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) |
-| [First-Paying-Customer Operating Kit (6-piece bundle)](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) |
-| [Friday Demo Template](/course/tech-for-non-technical-founders-2026/friday-demo-template/) |
-| [Salvage vs Rebuild Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) |
-| ["We Use AI" 5-Question Script](/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/) |
 
 ## If Your Team Is Already Failing
 

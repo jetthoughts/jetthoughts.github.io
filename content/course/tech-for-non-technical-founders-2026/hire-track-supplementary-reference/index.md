@@ -1,6 +1,6 @@
 ---
 title: "Hire Track Supplementary Reference"
-aliases: ["/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/"]
+aliases: ["/blog/hire-track-supplementary-reference/"]
 description: "When you've reached the ceiling of self-serve and need to hire: where to find developers, the Fractional CTO bridge, interviews that catch AI theater, and how to read an SOW."
 date: 2026-05-18
 draft: false

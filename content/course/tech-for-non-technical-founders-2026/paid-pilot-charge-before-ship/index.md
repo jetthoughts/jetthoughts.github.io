@@ -1,6 +1,6 @@
 ---
 title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
-aliases: ["/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/"]
+aliases: ["/blog/paid-pilot-charge-before-ship/"]
 description: "A verbal yes is not a paid pilot. A $500 Stripe deposit in week 0 is. The one-page Design Partner Agreement and 15-minute Stripe Checkout setup."
 date: 2026-05-13
 draft: false

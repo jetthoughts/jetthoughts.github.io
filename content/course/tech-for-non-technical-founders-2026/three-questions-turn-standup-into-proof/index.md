@@ -1,6 +1,6 @@
 ---
 title: "6.4 · Three Questions That Turn Standup Into Proof"
-aliases: ["/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/"]
+aliases: ["/blog/three-questions-turn-standup-into-proof/"]
 description: "Three questions a non-technical founder can ask in any daily standup to tell shipping from stalling. Pass/fail signals, follow-ups, the Friday demo pairing."
 date: 2026-05-18
 course_chapter: true

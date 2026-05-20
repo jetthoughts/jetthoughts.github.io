@@ -1,6 +1,6 @@
 ---
 title: "Pivot or Persevere: The Decision Framework"
-aliases: ["/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/"]
+aliases: ["/blog/pivot-or-persevere-decision-framework/"]
 description: "Six pivot types, trigger conditions for each, and what to keep when you pivot. The chapter that turns the course from a one-way escalator into a discovery loop."
 date: 2026-05-14
 draft: false

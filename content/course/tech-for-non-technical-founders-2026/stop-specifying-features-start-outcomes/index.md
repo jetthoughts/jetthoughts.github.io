@@ -1,6 +1,6 @@
 ---
 title: "3.2 · Stop Specifying Features, Start Outcomes"
-aliases: ["/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/"]
+aliases: ["/blog/stop-specifying-features-start-outcomes/"]
 description: "Feature-shaped briefs invite engineers and AI agents to build spaceships. Outcome-shaped briefs ship the one button you needed. Chapter 3.2 of this course."
 date: 2026-05-18
 draft: false

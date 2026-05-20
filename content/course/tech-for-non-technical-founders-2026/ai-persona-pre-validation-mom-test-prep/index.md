@@ -1,6 +1,6 @@
 ---
 title: "2.1 · AI Persona Pre-Validation - Sharpen Mom Test Questions"
-aliases: ["/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/"]
+aliases: ["/blog/ai-persona-pre-validation-mom-test-prep/"]
 description: "Use Claude personas to rehearse Mom Test questions before booking real interviews. AI catches weak questions; real customers catch weak hypotheses."
 date: 2026-05-18
 draft: false

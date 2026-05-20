@@ -1,6 +1,6 @@
 ---
 title: "Vibe PRD Template - One-Page Product Brief"
-aliases: ["/course/tech-for-non-technical-founders-2026/vibe-prd-template/"]
+aliases: ["/blog/vibe-prd-template/"]
 description: "One-page Product Brief template. Hand to Lovable, Cursor, or a hired junior. Free."
 date: 2026-05-18
 draft: false

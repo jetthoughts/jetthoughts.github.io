@@ -1,6 +1,6 @@
 ---
 title: "GitHub, AWS, Database Ownership Checklist"
-aliases: ["/course/tech-for-non-technical-founders-2026/ownership-checklist/"]
+aliases: ["/blog/ownership-checklist/"]
 description: "A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop. 12 items, run alone."
 date: 2026-05-17
 draft: false

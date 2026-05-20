@@ -1,6 +1,6 @@
 ---
 title: "5.2 · Choose Your Channel Before You Send One Message"
-aliases: ["/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/"]
+aliases: ["/blog/channel-selection-before-outbound/"]
 description: "Channel-hopping in week 2 is the most common newbie mistake. The 4-week commitment rule + how to pick from interview evidence + AI-augmented channel research."
 date: 2026-05-13
 draft: false

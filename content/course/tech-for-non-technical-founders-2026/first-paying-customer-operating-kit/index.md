@@ -1,6 +1,6 @@
 ---
 title: "The First-Paying-Customer Operating Kit (Preview - Templates Shipping)"
-aliases: ["/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/"]
+aliases: ["/blog/first-paying-customer-operating-kit/"]
 description: "The six-template kit for Module 5. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
 date: 2026-05-13
 draft: false

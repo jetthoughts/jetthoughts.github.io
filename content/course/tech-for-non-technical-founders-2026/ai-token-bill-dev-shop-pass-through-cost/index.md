@@ -1,6 +1,6 @@
 ---
 title: "The AI Token Bill Your Agency Forgot"
-aliases: ["/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/"]
+aliases: ["/blog/ai-token-bill-dev-shop-pass-through-cost/"]
 description: "The pass-through OpenAI, Anthropic, and Cursor costs that creep into month-2 invoices. Predictable per-developer ranges plus 3 SOW clauses to redline now."
 date: 2026-05-18
 draft: false

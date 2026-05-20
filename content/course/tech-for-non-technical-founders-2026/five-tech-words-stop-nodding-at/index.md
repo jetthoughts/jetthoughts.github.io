@@ -1,6 +1,6 @@
 ---
 title: "Glossary · Five Tech Words to Stop Nodding At"
-aliases: ["/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/"]
+aliases: ["/blog/five-tech-words-stop-nodding-at/"]
 description: "Refactoring, Docker, tech debt, MVP, architecture - what each one actually means in plain English, plus one BS-detection question your dev shop will hate."
 date: 2026-05-18
 draft: false

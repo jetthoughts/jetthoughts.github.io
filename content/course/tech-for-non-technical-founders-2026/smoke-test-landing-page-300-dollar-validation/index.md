@@ -1,7 +1,7 @@
 ---
 title: "1.2 · Smoke-Test the Hypothesis - $300 Landing Page"
-aliases: ["/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-300-dollar-validation/"]
-description: "Build a Carrd or Framer landing page in one day, drive $300-$500 of cold paid traffic, decide go/iterate/kill in 5-7 days. The pre-interview demand filter."
+aliases: ["/blog/smoke-test-landing-page-300-dollar-validation/"]
+description: "Build a NeetoSite, Carrd, or Framer landing page in one day, drive $300-$500 of cold paid traffic (or run organic on $0), decide go/iterate/kill in 5-7 days. The pre-interview demand filter."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -24,7 +24,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "1.2 · Smoke-Test the Hypothesis - $300 Landing Page"
-  og_description: "Build a Carrd or Framer landing page in one day, drive $300-$500 of cold paid traffic, decide go/iterate/kill in 5-7 days. The pre-interview demand filter."
+  og_description: "Build a NeetoSite, Carrd, or Framer landing page in one day, drive $300-$500 of cold paid traffic (or run organic on $0), decide go/iterate/kill in 5-7 days. The pre-interview demand filter."
 cover_image_alt: "JetThoughts course cover for the smoke test chapter showing a landing page with a CTA button and a $300 ad-spend gauge"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-300-dollar-validation/"
 related_posts: false
@@ -60,14 +60,14 @@ Three of the last four FinTech / B2B SaaS rescues we ran in 2026 had the same pr
 The five-step shape of the test, before we dig into each step:
 
 1. **Define what you'll measure** - email signup OR Stripe price-button click ($1 pre-sale, optional)
-2. **Build the page** - Carrd or Framer, one working day
+2. **Build the page** - NeetoSite, Carrd, or Framer, one working day
 3. **Set up tracking** - GA4 (Google Analytics 4, free) + Microsoft Clarity (free) + ad-platform pixel, all installed BEFORE ads run
 4. **Buy cold traffic** - $300-$500 on the right channel for your ICP (Ideal Customer Profile - the customer you're targeting), 5-7 day run
 5. **Read the numbers** - go / iterate / kill against the conversion-rate decision table
 
 **Before Monday, open these tabs** (15 min setup, all free or under $50 to start):
 
-- [ ] Carrd account (carrd.co, free trial; Pro is $9-49/yr)
+- [ ] Landing-page builder account - NeetoSite (free), Carrd (free trial; Pro $9-49/yr), or Framer (free tier)
 - [ ] Email tool account - Mailchimp, ConvertKit, or Buttondown (all have free tiers ≤500 contacts)
 - [ ] Meta Ads / LinkedIn Ads / Reddit Ads account on the channel you'll pick - payment method attached
 - [ ] Your Founding Hypothesis sentence written down (from Module 1)
@@ -80,35 +80,36 @@ If you don't have a Founding Hypothesis sentence yet, stop and run the [90-minut
 
 Ship the ugly version. Beautiful pages take three weeks and the founder has lost the thread of what they are testing by week two - so cap design effort at one day even if you have a designer friend offering help.
 
-### Pick your builder: Carrd or Framer
+### Pick your builder: NeetoSite, Carrd, or Framer
 
-Two tools work for a non-technical founder in 2026.
+Three tools work for a non-technical founder in 2026.
 
-**Carrd** (carrd.co, $9-49/yr for the Pro plan) is the cheapest path. One-page sites, drag-and-drop blocks, real responsive behavior on mobile. The Pro plan adds form integration with Mailchimp, ConvertKit, or whatever email tool you already use. Carrd does one thing well: it gets a working page live by lunch.
+**NeetoSite** ([neetosite.com](https://neetosite.com/), free tier for the smoke test) is the $0 path. Block-based editor, ships a working page in an afternoon, and the free tier covers everything you need for the test - a public URL, mobile responsive, embeds for video and forms. Built for solo founders who want to ship the test without choosing a pricing plan first. Upgrade only if the smoke test passes and you want a custom domain.
+
+**Carrd** (carrd.co, $9-49/yr for the Pro plan) is the cheapest paid path. One-page sites, drag-and-drop blocks, real responsive behavior on mobile. The Pro plan adds form integration with Mailchimp, ConvertKit, or whatever email tool you already use. Carrd does one thing well: it gets a working page live by lunch.
 
 **Framer** (framer.com, free tier for the smoke test, $5-15/mo for custom domain) is the upgrade path for founders who care about typography or want a slightly more sophisticated look. Framer's templates feel like they were designed in 2025, not 2014. Free tier ships a `[yourpage].framer.website` URL that works fine for cold ad traffic; founders only need the paid tier if they want their own domain.
 
-Pick Carrd if you want it done by 11 AM, Framer if you have an afternoon. Skip Webflow, Hugo themes, and Next.js boilerplates - you are running a Tuesday-to-Saturday test, not a website.
+Pick NeetoSite if you want $0 today, Carrd if you want it done by 11 AM, Framer if you have an afternoon. Skip Webflow, Hugo themes, and Next.js boilerplates - you are running a Tuesday-to-Saturday test, not a website.
 
-### Required vs Banned sections
+### What goes on the page (and what kills it)
 
-| **REQUIRED** (in order) | **What makes it work** |
-|---|---|
-| **Headline** | Names audience + outcome in one sentence. Pull from your [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Bad: "Smart financial tools." Good: "Reconcile Stripe and QuickBooks in 90 seconds, not 4 hours." |
-| **Sub-headline** | Names the mechanism in one sentence. Example: "An AI agent that watches your Stripe webhooks and writes QuickBooks entries daily." |
-| **Hero visual** | 15-second Loom screen recording (imagined flow + your voice) OR annotated screenshot. Not a Figma mockup. Do not hire a designer. |
-| **Value props** | Three or four sentences. Each is a benefit, not a feature. "Daily reconciliation by 6 AM" ✓. "Webhook integration" ✗. |
-| **One CTA** | Default: "Get on the waitlist" + email field. Upgraded: "Reserve your spot ($1 today, refunded if we don't ship)" + Stripe button. |
-| **Footer disclaimer** | 11px gray text: "Coming soon. Email signup reserves your spot at launch." (Protects against FTC; signals follow-up to interviewees.) |
+The page is short by design. Six elements ship; everything else is a temptation that kills conversion. Scan the status column - ✅ is required, 🚫 is banned.
 
-| **BANNED** (temptations) | **Why it kills conversion** |
-|---|---|
-| Pricing pages | You don't know your price yet. |
-| FAQ sections | Waters down the CTA conversion. |
-| Customer testimonials | You have no customers. Fake ones are fraud. |
-| Blog | The page lives for 7 days; no blog needed. |
-| "About" pages | Visitor came from ad, not your founder story yet. |
-| Long "How it works" section | Longer than value props = you distrust the CTA. |
+| Status | Element | Why |
+|---|---|---|
+| ✅ | **Headline** | Names audience + outcome in one sentence. Pull from your [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Bad: "Smart financial tools." Good: "Reconcile Stripe and QuickBooks in 90 seconds, not 4 hours." |
+| ✅ | **Sub-headline** | Names the mechanism in one sentence. Example: "An AI agent that watches your Stripe webhooks and writes QuickBooks entries daily." |
+| ✅ | **Hero visual** | 15-second Loom screen recording (imagined flow + your voice) OR annotated screenshot. Not a Figma mockup. Do not hire a designer. |
+| ✅ | **Value props** | Three or four sentences. Each is a benefit, not a feature. "Daily reconciliation by 6 AM" ✓. "Webhook integration" ✗. |
+| ✅ | **One CTA** | Default: "Get on the waitlist" + email field. Upgraded: "Reserve your spot ($1 today, refunded if we don't ship)" + Stripe button. |
+| ✅ | **Footer disclaimer** | 11px gray text: "Coming soon. Email signup reserves your spot at launch." (Protects against FTC; signals follow-up to interviewees.) |
+| 🚫 | **Multi-tier pricing tables** ($9 Basic / $19 Pro / $49 Team) | You don't know your price yet. A single $1 pre-sale button (Variant A below) is NOT a pricing table - it captures wallet intent without naming a tier. |
+| 🚫 | **FAQ sections** | Waters down the CTA conversion. |
+| 🚫 | **Customer testimonials** | You have no customers. Fake ones are fraud. |
+| 🚫 | **Blog** | The page lives for 7 days; no blog needed. |
+| 🚫 | **"About" pages** | Visitor came from ad, not your founder story yet. |
+| 🚫 | **Long "How it works" section** | Longer than value props = you distrust the CTA. |
 
 ### The one-day rule (and why)
 
@@ -330,7 +331,8 @@ Both variants require Stripe + refund discipline + FTC compliance copy. Skip the
 - Foundry CRO, [Landing Page Conversion Rate Benchmarks 2026](https://foundrycro.com/blog/landing-page-conversion-rate-benchmarks-2026/) - the conversion-rate medians by industry and traffic source (citing Unbounce Q4 2024).
 - Pieter Levels, [the 70-product startups portfolio](https://levels.io/startups/) - the fake-Stripe pre-sale playbook in operation across a decade of indie launches.
 - Kromatic, [Real Startup Book - Landing Page Smoke Test](https://kromatic.com/real-startup-book/4-evaluative-market-experiment/landing-page-smoke-test) - the canonical Lean Startup version of the smoke-test experiment with the original Evaluative Market Experiment framing.
-- [Carrd](https://carrd.co/) - the cheapest one-page builder for a smoke-test landing page.
+- [NeetoSite](https://neetosite.com/) - $0 block-based landing-page builder; the default for a non-technical founder running the test on no budget.
+- [Carrd](https://carrd.co/) - the cheapest paid one-page builder for a smoke-test landing page.
 - [Framer](https://framer.com/) - the upgrade for founders who want better typography and templates.
 - [Microsoft Clarity](https://clarity.microsoft.com/) - free heatmaps and session recordings, no spending cap, the underrated half of the tracking stack.
 - [PostHog](https://posthog.com/) - open-source product analytics alternative to GA4 + Clarity, useful once the smoke test passes and you start build.

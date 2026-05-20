@@ -1,6 +1,6 @@
 ---
 title: "4.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
-aliases: ["/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/"]
+aliases: ["/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/"]
 description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Chapter 4.3 of this course."
 date: 2026-05-18
 draft: false
@@ -39,6 +39,10 @@ related_posts: false
 > - **Stripe** - no monthly fee. Only the 2.9% + $0.30 per transaction when a customer actually pays.
 >
 > A solo founder can ship Module 4 on $0 in week 1, upgrade Lovable to $25 in week 3 only if the build velocity demands it. Total cost to first paying customer: under $50.
+
+> **This chapter starts FRESH from your Vibe PRD. You do NOT iterate the throwaway prototype from Chapter 2.4.**
+>
+> The Chapter 2.4 prototype was a 2-hour research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is a 4-week production build: real Supabase auth, real Stripe payments, real domain, real users. The two Lovable activities are separate by design. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code adds 3-5x build time and ships every 2-hour research compromise into production.
 
 If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 

@@ -1,6 +1,6 @@
 ---
 title: "Hiring Interview Script: 7 Questions in 30 Minutes"
-aliases: ["/course/tech-for-non-technical-founders-2026/hiring-interview-script/"]
+aliases: ["/blog/hiring-interview-script/"]
 description: "Send to engineering candidates 24 hours before the call. 7 questions that catch AI theater in 30 minutes. Pass / Fail score in real time."
 date: 2026-05-18
 draft: false

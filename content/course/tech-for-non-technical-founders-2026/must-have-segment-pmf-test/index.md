@@ -1,6 +1,6 @@
 ---
 title: "5.1 · Your First Customer Is Not a Marketing Problem"
-aliases: ["/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/"]
+aliases: ["/blog/must-have-segment-pmf-test/"]
 description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your first 10-30 users. The non-technical founder's pre-paid-traffic gut check."
 date: 2026-05-13
 draft: false

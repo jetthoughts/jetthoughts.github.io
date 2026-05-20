@@ -1,6 +1,6 @@
 ---
 title: "2.2 · Find 10 People With the Problem in 2026"
-aliases: ["/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/"]
+aliases: ["/blog/find-10-people-with-problem-outreach-2026/"]
 description: "The 2026 outreach stack that books 10 ICP customer interviews in one morning - Reddit mining, Clay or Apollo lists, Lindy sequences, paid panels."
 date: 2026-05-18
 draft: false

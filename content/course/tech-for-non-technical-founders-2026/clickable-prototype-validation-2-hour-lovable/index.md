@@ -1,6 +1,6 @@
 ---
 title: "2.4 · Build a Clickable Prototype in an Afternoon"
-aliases: ["/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/"]
+aliases: ["/blog/clickable-prototype-validation-2-hour-lovable/"]
 description: "A 2-hour throwaway Lovable prototype lets 5 interview subjects experience the SHAPE of your solution. The third validation pillar after the landing page."
 date: 2026-05-18
 draft: false
@@ -30,13 +30,19 @@ related_posts: false
 ---
 
 > **Module 2 · Step 4 of 4** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: 10 Mom Test interview subjects from Module 3. Output: 5 of them watched navigating a 2-hour clickable prototype, with pass/fail per session.
+> Input: 5 of the 10 Mom Test interview subjects from Chapter 2.3 (pick the strongest-signal interviewees). Output: 5 of them watched navigating a 2-hour clickable prototype, with pass/fail per session.
 
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution.
 
 Those are different signals. A founder we joined in January 2026 ran 8 strong Mom Test interviews. Problem validated. She had workaround evidence, cost numbers, frustration language. She moved to Lovable and spent 3 weeks building an MVP. When the first 5 users logged in, none of them got past the second screen without asking "wait, what am I supposed to do here?" The problem was real. The shape of the solution was invisible.
 
 A 2-hour throwaway prototype run in front of 5 of your interview subjects would have surfaced that on day 2, not week 3. The rest of this chapter walks you through running one.
+
+> **This is a 2-hour research tool, not the start of your MVP.**
+>
+> You will build 3 throwaway screens, show them to 5 of your Mom Test interviewees, watch what they do without coaching, then archive everything. The only outputs that carry forward into Module 3 are (a) the pass/fail signal and (b) the exact words your users used when describing what they saw. The prototype CODE is discarded.
+>
+> If you try to polish this prototype into your MVP later, you'll spend 3-5x longer on it, carry every 2-hour compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Chapter 4.3, started from the Vibe PRD (Chapter 3.1) with real auth, real Stripe, real domain.
 
 ## Why a Clickable Prototype Catches What Interviews Miss
 

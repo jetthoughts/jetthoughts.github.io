@@ -1,6 +1,6 @@
 ---
 title: "2.3 · The Mom Test: Ask About the Past, Not the Future"
-aliases: ["/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/"]
+aliases: ["/blog/mom-test-ask-about-past-not-future/"]
 description: "The 5-question script that prevents your interviewees from being polite - past-behavior validation for non-technical founders in 2026."
 date: 2026-05-13
 draft: false
@@ -155,7 +155,7 @@ If 7 of your 10 calls score 7+ with at least 3 emotional flags, the problem is v
 
 The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-interview-script/](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric.
 
-**How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works. After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.4: Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)) or 10 transcripts that don't (re-frame the ICP and run another 10).
+**How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works. After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.4: Clickable Prototype Validation](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test whether users can navigate a proposed solution) or 10 transcripts that don't (re-frame the ICP and run another 10).
 
 Founders who fake the convergence to start building anyway are the same founders who later post about wasted MVP spend - the [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against an unvalidated problem.
 

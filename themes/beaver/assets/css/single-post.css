@@ -218,3 +218,16 @@
   display: block;
   margin: 0 auto;
 }
+
+/* GFM task lists: Goldmark emits <li><input type=checkbox>...</li> without
+   a class. Hide the default bullet on items that contain a checkbox so the
+   checkbox itself acts as the list marker (matches GitHub rendering). */
+.post-content li:has(> input[type="checkbox"]),
+.single-content li:has(> input[type="checkbox"]) {
+  list-style: none;
+  margin-left: -1.25rem;
+}
+.post-content li > input[type="checkbox"],
+.single-content li > input[type="checkbox"] {
+  margin-right: 0.5rem;
+}

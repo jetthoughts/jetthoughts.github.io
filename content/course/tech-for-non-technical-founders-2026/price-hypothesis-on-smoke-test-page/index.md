@@ -1,6 +1,6 @@
 ---
 title: "1.3 · Price Your Hypothesis on the Smoke-Test Page"
-aliases: ["/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/"]
+aliases: ["/blog/price-hypothesis-on-smoke-test-page/"]
 description: "A waitlist signup is a worse signal than a Stripe payment-intent click. The 5-minute Payment Link setup that price-tests your smoke-test page."
 date: 2026-05-18
 draft: false

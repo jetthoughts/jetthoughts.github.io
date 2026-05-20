@@ -1,6 +1,6 @@
 ---
 title: "4.1 · Should You Hire? The 2026 Decision Tree"
-aliases: ["/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/"]
+aliases: ["/blog/should-you-hire-2026-decision-tree/"]
 description: "5 questions route you to one of 4 build paths: validate without code, self-serve, fractional CTO, or hire a team. Module 4 of this course."
 date: 2026-05-13
 draft: false
@@ -44,6 +44,8 @@ We have watched dozens of pre-seed B2B SaaS founders hire engineering before the
 > Y Combinator's 2026 position: tools and business models now let founders turn ideas into production products in weeks without giving 50% equity to a technical co-founder. The argument is *prove the concept without code first*, not "hire later." Most founders skip this and burn 6-9 months learning their problem was never real.
 > 
 > Cannot answer with a list of buyers who have already paid you? Then the answer is: not yet. Stay one box left of where you were about to start.
+
+By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.3) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching. All three are research signals, not builds. The Vibe PRD (Chapter 3.1) documents what to build. This chapter decides HOW to build it - self-serve, fractional CTO, or hired team.
 
 ## The Airbnb test
 

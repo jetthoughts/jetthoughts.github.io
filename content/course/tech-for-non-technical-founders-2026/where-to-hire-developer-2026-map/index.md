@@ -1,6 +1,6 @@
 ---
 title: "Where to Hire Developer 2026 Map"
-aliases: ["/course/tech-for-non-technical-founders-2026/where-to-hire-developer-2026-map/"]
+aliases: ["/blog/where-to-hire-developer-2026-map/"]
 description: "Side-by-side comparison of onshore / nearshore / Tier-2 offshore hiring options for 2026. Pricing, time-to-hire, when to use each."
 date: 2026-05-18
 draft: false

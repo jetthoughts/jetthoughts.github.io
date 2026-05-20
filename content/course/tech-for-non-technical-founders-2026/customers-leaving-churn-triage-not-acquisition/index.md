@@ -1,6 +1,6 @@
 ---
 title: "When Your Customers Are Leaving: Churn Triage Before Acquisition"
-aliases: ["/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/"]
+aliases: ["/blog/customers-leaving-churn-triage-not-acquisition/"]
 description: "30 paying users churning at 60% / month. Module 5 is about getting customers; this chapter is about keeping the ones you have. The 3-decision triage: fix product, change segment, or kill the SKU."
 date: 2026-05-14
 draft: false

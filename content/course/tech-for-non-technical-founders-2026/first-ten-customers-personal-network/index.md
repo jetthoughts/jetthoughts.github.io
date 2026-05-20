@@ -1,6 +1,6 @@
 ---
 title: "5.3 · The First Ten Come From People Who Already Know You"
-aliases: ["/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/"]
+aliases: ["/blog/first-ten-customers-personal-network/"]
 description: "~60% of fast-growing B2B startups got their first 10 customers from personal network. The 50-name list, 4 buckets, and the Monday outreach sequence."
 date: 2026-05-13
 draft: false

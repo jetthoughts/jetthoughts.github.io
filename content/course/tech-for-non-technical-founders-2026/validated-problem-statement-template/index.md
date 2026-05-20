@@ -1,6 +1,6 @@
 ---
 title: "Validated Problem Statement Template"
-aliases: ["/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/"]
+aliases: ["/blog/validated-problem-statement-template/"]
 description: "The one-page template that synthesizes 10 Mom Test interviews into a build/pivot/kill decision. Print, fill in 30 minutes, show to 2 advisors."
 date: 2026-05-18
 draft: false

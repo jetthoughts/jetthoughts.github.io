@@ -1,6 +1,6 @@
 ---
 title: '"We Use AI": 5 Follow-Up Questions for Your Agency'
-aliases: ["/course/tech-for-non-technical-founders-2026/agency-ai-five-questions/"]
+aliases: ["/blog/agency-ai-five-questions/"]
 description: "Five questions that catch AI theatre in 30 minutes. Hand them to your next agency call before you sign anything. Score 0-5; below 3 means walk."
 date: 2026-05-18
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "4.2 · Who Owns Your GitHub, AWS, and Database?"
-aliases: ["/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/"]
+aliases: ["/blog/github-aws-database-ownership-checklist/"]
 description: "If a contractor's email sits on your AWS root account, you do not actually own your company. A 45-minute Friday audit surfaces every hostage credential."
 date: 2026-05-13
 draft: false

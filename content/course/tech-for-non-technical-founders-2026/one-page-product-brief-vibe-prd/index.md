@@ -1,6 +1,6 @@
 ---
 title: "3.1 · The One-Page Product Brief (Vibe PRD)"
-aliases: ["/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/"]
+aliases: ["/blog/one-page-product-brief-vibe-prd/"]
 description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the Tech for Non-Technical Founders 2026 course."
 date: 2026-05-18
 draft: false
@@ -158,6 +158,10 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 The [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is the artifact for this post. Print it, fill it in 45 minutes, hand it to your AI agent or contractor the next day, and Module 3's checkpoint moves one step closer.
 
 Founders who skip this page and start prompting are the founders who, six weeks later, post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about a working MVP nobody wants. The brief is cheaper than the build it prevents.
+
+## What comes next (Chapter 4.1)
+
+You now have two validated artifacts: a one-page problem statement (from Chapter 2.3 synthesis) and a one-page Vibe PRD (from this chapter). The next step is NOT to hand the brief to Lovable yet - it's Chapter 4.1, a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve (Chapter 4.3), but only after the decision gate confirms it's right for YOUR runway and YOUR problem.
 
 ## Further reading
 

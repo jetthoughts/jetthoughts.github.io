@@ -1,6 +1,6 @@
 ---
 title: "SOW Reading Guide: The 8 Clauses Agencies Hope You Skim"
-aliases: ["/course/tech-for-non-technical-founders-2026/sow-reading-guide/"]
+aliases: ["/blog/sow-reading-guide/"]
 description: "An annotated sample SOW that catches the 8 clauses agencies hope you skim. Read the night before you sign, alone, with a yellow highlighter."
 date: 2026-05-18
 draft: false

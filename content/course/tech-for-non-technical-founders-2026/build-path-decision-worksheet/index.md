@@ -1,6 +1,6 @@
 ---
 title: "Build Path Decision Worksheet"
-aliases: ["/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/"]
+aliases: ["/blog/build-path-decision-worksheet/"]
 description: "5 questions that route a non-technical founder to one of 4 build paths. 30-minute decision, defensible to investors."
 date: 2026-05-18
 draft: false

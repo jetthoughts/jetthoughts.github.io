@@ -1,6 +1,6 @@
 ---
 title: "Self-Serve Stack Walkthrough: Lovable + Supabase + Stripe in 4 Weeks"
-aliases: ["/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/"]
+aliases: ["/blog/self-serve-stack-walkthrough/"]
 description: "Step-by-step walkthrough of shipping a B2B SaaS MVP on Lovable + Supabase + Stripe in 4 weeks. Free."
 date: 2026-05-18
 draft: false

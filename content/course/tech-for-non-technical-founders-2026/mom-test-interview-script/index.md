@@ -1,6 +1,6 @@
 ---
 title: "Mom Test Interview Script: 5 Questions for Past Behavior"
-aliases: ["/course/tech-for-non-technical-founders-2026/mom-test-interview-script/"]
+aliases: ["/blog/mom-test-interview-script/"]
 description: "Rob Fitzpatrick's Mom Test technique as a copy-pasteable 5-question script. Read on a second screen during the call. Score each interview 1-10."
 date: 2026-05-18
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "Friday Demo Template: Catch Fake Progress in 15 Minutes"
-aliases: ["/course/tech-for-non-technical-founders-2026/friday-demo-template/"]
+aliases: ["/blog/friday-demo-template/"]
 description: "The 15-minute Friday script that catches fake progress before it costs you a sprint. Copy/paste into Slack on Monday. Run Friday at 4pm."
 date: 2026-05-13
 draft: false

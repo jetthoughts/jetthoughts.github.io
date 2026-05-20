@@ -1,6 +1,6 @@
 ---
 title: "Outreach Sequence Template: 10 Customer Interviews by Friday"
-aliases: ["/course/tech-for-non-technical-founders-2026/outreach-sequence-template/"]
+aliases: ["/blog/outreach-sequence-template/"]
 description: "Reddit + LinkedIn + Clay + Lindy + paid panels = 10 ICP interviewees booked in one morning. The 2026 stack with copy-pasteable email + DM templates."
 date: 2026-05-18
 draft: false

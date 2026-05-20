@@ -1,6 +1,6 @@
 ---
 title: "Slopsquatting: The 2025 Supply-Chain Attack"
-aliases: ["/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/"]
+aliases: ["/blog/slopsquatting-ai-supply-chain-attack/"]
 description: "AI assistants suggested 200+ package names that did not exist. Attackers registered them. Your $34K MVP pulled malware. The CI gate that stops it cold."
 date: 2026-05-18
 draft: false
@@ -31,6 +31,7 @@ related_posts: false
 course_nav: false
 ---
 
+
 > **Going further (AI in production) · Step 3 of 3** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
 > Input: any product touching AI in build (which is most products in 2026). Output: a one-paragraph contract clause + a CI gate that blocks hallucinated dependencies before merge.
 
@@ -51,10 +52,15 @@ A CI gate that fails the build on any new dependency until a human signs off. Ev
 *What this 30-line CI gate actually does: blocks any pull request that adds a new package until you've eyeballed it - cheap protection against the slopsquatting attack pattern above.*
 
 ```yaml
+
 # .github/workflows/dependency-gate.yml
+
 name: Dependency Gate
+
 on: [pull_request]
+
 jobs:
+
   check-new-deps:
     runs-on: ubuntu-latest
     steps:
@@ -68,13 +74,17 @@ jobs:
             | grep -E '(^\+    [a-z]|^\+"[a-z])' && \
             { echo "::error::New dependency added. Tag @founder + sec reviewer for allowlist sign-off."; exit 1; } || \
             echo "No new dependencies. Safe to merge."
+
 ```
 
 That is the entire defense. The PR cannot merge until a human looks at the new gem, the new pip package, or the new npm module and confirms it exists, is maintained, has the download count it should, and matches the name a developer would actually write. The gate runs on every PR. It blocks every new dependency by default. The reviewer overrides with a `dep-approved` label or a `[skip-dep-gate]` commit message that the founder must co-sign.
 
 ```mermaid
+
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#1a1a1a', 'primaryTextColor':'#1a1a1a'}}}%%
+
 flowchart TD
+
     PR(["PR opened"])
     Gate{"New dependency in lockfile?"}
     Pass["Merge as normal"]
@@ -104,6 +114,7 @@ flowchart TD
     class Review review
     class Allowlist allow
     class Walk walk
+
 ```
 
 That is it. No Snyk subscription, no Socket.dev license, no signing key infrastructure. A 30-line YAML file and one founder who reads the PR comment when it fires.

@@ -1,6 +1,6 @@
 ---
 title: "Salvage vs Rebuild: 6-Question Decision Tree"
-aliases: ["/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/"]
+aliases: ["/blog/salvage-vs-rebuild-decision-tree/"]
 description: "A 30-minute structured decision that ends two weeks of analysis paralysis. KEEP / FREEZE / REBUILD with a 30/60/90 day plan."
 date: 2026-05-18
 draft: false
