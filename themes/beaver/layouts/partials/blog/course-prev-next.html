@@ -34,7 +34,7 @@
 <nav class="course-prev-next" aria-label="Course navigation">
   <div class="course-prev-next__inner">
     {{- if $prev }}
-    <a class="course-prev-next__link course-prev-next__link--prev" href="/blog/{{ $prev.slug }}/">
+    <a class="course-prev-next__link course-prev-next__link--prev" href="/course/tech-for-non-technical-founders-2026/{{ $prev.slug }}/">
       <span class="course-prev-next__direction">← Previous</span>
       <span class="course-prev-next__module">{{ $prev.module }}</span>
       <span class="course-prev-next__title">{{ $prev.title }}</span>
@@ -43,13 +43,13 @@
     <span class="course-prev-next__link course-prev-next__link--placeholder" aria-hidden="true"></span>
     {{- end }}
 
-    <a class="course-prev-next__link course-prev-next__link--home" href="/blog/tech-for-non-technical-founders-2026/">
+    <a class="course-prev-next__link course-prev-next__link--home" href="/course/tech-for-non-technical-founders-2026/">
       <span class="course-prev-next__direction">Course home</span>
-      <span class="course-prev-next__title">All 6 modules</span>
+      <span class="course-prev-next__title">All 5 modules</span>
     </a>
 
     {{- if $next }}
-    <a class="course-prev-next__link course-prev-next__link--next" href="/blog/{{ $next.slug }}/">
+    <a class="course-prev-next__link course-prev-next__link--next" href="/course/tech-for-non-technical-founders-2026/{{ $next.slug }}/">
       <span class="course-prev-next__direction">Next →</span>
       <span class="course-prev-next__module">{{ $next.module }}</span>
       <span class="course-prev-next__title">{{ $next.title }}</span>

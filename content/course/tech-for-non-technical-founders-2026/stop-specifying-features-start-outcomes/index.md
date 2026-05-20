@@ -1,0 +1,137 @@
+---
+title: "3.2 · Stop Specifying Features, Start Outcomes"
+aliases: ["/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/"]
+description: "Feature-shaped briefs invite engineers and AI agents to build spaceships. Outcome-shaped briefs ship the one button you needed. Chapter 3.2 of this course."
+date: 2026-05-18
+draft: false
+course_chapter: true
+author: "JetThoughts Team"
+slug: stop-specifying-features-start-outcomes
+keywords:
+  - specify outcomes not features
+  - prevent over engineering founder
+  - founder feature spec template
+  - job stories non technical founder
+  - prevent admin panel spaceship
+tags:
+  - founders
+  - non-technical-founder
+  - course-companion
+  - product
+categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "3.2 · Stop Specifying Features, Start Outcomes"
+  og_description: "Feature-shaped briefs invite engineers and AI agents to build spaceships. Outcome-shaped briefs ship the one button you needed. Chapter 3.2 of this course."
+cover_image_alt: "JetThoughts cover showing a simple three-button admin panel on the left and a 47-button spaceship control deck on the right, connected by a wavy red arrow labeled '10-week build, $15K'"
+canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/"
+related_posts: false
+---
+
+> **Module 3 · Step 2 of 2** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
+> Input: a one-page Product Brief (from [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)). Output: a one-page Product Brief rewritten so engineers and AI agents stop overengineering.
+
+You asked for a simple admin panel. You got a spaceship. The reason is not that your engineers are show-offs. The reason is sitting on page one of the brief you sent them. You wrote *"a simple admin panel"* and moved on. They read those four words, filled in everything you did not say, and came back ten weeks later with 47 buttons, a role-permissions matrix, an audit log, and a co-pilot AI assistant nobody asked for.
+
+![A hand-drawn comparison: the simple three-button admin panel you asked for on the left, the absurdly complex 47-button control deck that got built on the right, connected by a red arrow labeled 10-week build, $15K](admin-panel-spaceship.svg)
+
+## Why this matters in 2026
+
+> **Feature briefs invite overbuilding. Outcome briefs collapse to the smallest path.**
+> 
+> Engineers and AI agents fill vague requests from training data: big-company SaaS panels, GitHub-scraped baselines. A feature word in isolation ("CSV export," "user roles") has no anchor to your actual job. An outcome-shaped request ("when I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds before the 4pm call") has nowhere to drift. The moment, action, result, and deadline are all named.
+> 
+> Add the security tax: Veracode's 2025 GenAI study found 45% of AI-generated code ships with at least one exploitable flaw, climbing with how much the agent had to imagine. Tight outcome briefs are the cheapest defense.
+
+## Two briefs, two shapes each
+
+Same job, two ways to write it. Read each pair out loud. Notice how much the engineer or the agent has to invent under the feature shape, and how little they have to invent under the outcome shape.
+
+![Feature-shaped brief on the left leading to a sketched BI suite with nine modules; outcome-shaped brief on the right leading to a single 'Copy top 5 metrics' button with a five-row data table](feature-vs-outcome.svg)
+
+### Pair 1 - The CSV button
+
+**Feature shape**: *"Build a CSV export button on the dashboard."*
+
+**Outcome shape**: *"When I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds, so I can paste them into the deck before the 4pm call."*
+
+What the engineer builds from the feature shape: a reporting module with three dashboards, scheduled email exports, role-based access on who can export, a date-range picker, custom column selectors, and an audit log of every download. Six weeks of work. You used the CSV button once a week for the investor email and ignored the other eight features.
+
+What the engineer builds from the outcome shape: one button at the bottom of the existing dashboard that says *"Copy top 5 metrics to clipboard,"* hard-coded to MRR, net new MRR, active accounts, trial-to-paid conversion, and runway. Ninety minutes of work in a Rails controller, one line per metric. The next investor email goes out before the deck even opens.
+
+### Pair 2 - The CRM module
+
+**Feature shape**: *"Build a CRM module."*
+
+**Outcome shape**: *"When a new customer signs up, the founder needs to see which 3 of our existing customers most resemble them, so we can pattern-match the onboarding playbook that worked for those three."*
+
+What the engineer builds from the feature shape: companies, contacts, deals, pipelines, activities, tasks, notes, custom fields, email integration, calendar integration, and a Kanban board nobody opens. Three months. You used the contacts list and the notes field.
+
+What the engineer builds from the outcome shape: a 30-line script that runs nightly, scores existing customers against the new signup on three attributes (industry, employee count, plan tier), and posts a Slack message every morning: *"New customer Acme Co looks most like Beta Inc, Gamma Ltd, and Delta GmbH - here are their onboarding notes."* Two days. The script is throwaway. When Salesforce is finally worth the bill, you import the script's three matches into the proper CRM record.
+
+## The three-part shape that constrains every spec
+
+Both outcome-shaped briefs in the section above use the same three parts. The shape works because each part forecloses a category of overbuild.
+
+**When [trigger context]** - the specific situation that activates the need. Names the moment, the day, the deadline, the surrounding tools. *"When I prepare the weekly investor report"* tells the engineer this happens once a week, that there is a deck involved, that there is a 4pm call. The engineer will not build a real-time streaming dashboard for something that happens on a Tuesday afternoon.
+
+**I want [internal motivation]** - what you are trying to do, expressed as a verb on a concrete object. *"I want to grab the top 5 metrics in 30 seconds"* is a verb (grab) and an object (the 5 metrics) and a budget (30 seconds). The engineer will not build a 12-metric dashboard because you said 5, and will not build an asynchronous export queue because you said 30 seconds.
+
+**So I can [outcome]** - the business or personal result that proves the build worked. *"So I can paste them into the deck before the 4pm call"* gives a finish line the engineer can hold up against any feature suggestion. The engineer can now say: *"Does the build let you paste into the deck before 4pm? Then we are done. Does the audit log help with that? No? Cut it."*
+
+Put the three parts together and the engineer or the AI agent has nowhere left to fill in scope. Drop any one part and they will. Without the *when*, the build comes back timeless and over-engineered. Without the *I want*, it comes back as a feature list. Without the *so I can*, it hits the spec but misses the job. (The same shape has a name in product-management literature - see *Further reading* below if you want to chase the lineage. The shape works without the name.)
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    Feature["FEATURE brief: Build a CRM module"]
+    Feature --> F1["Companies + contacts"]
+    Feature --> F2["Deals + pipelines"]
+    Feature --> F3["Email + calendar integration"]
+    Feature --> F4["Custom fields + Kanban"]
+    F1 --> FOut["3 months. $40K. You used contacts + notes."]
+    F2 --> FOut
+    F3 --> FOut
+    F4 --> FOut
+
+    Outcome["OUTCOME brief: Match new signups to 3 similar customers"]
+    Outcome --> O1["Nightly scoring script"]
+    Outcome --> O2["Slack message each morning"]
+    O1 --> OOut["2 days. $600. Onboarding playbook ready Monday."]
+    O2 --> OOut
+
+    classDef bad fill:#fff5f5,stroke:#cc342d,stroke-width:2.5px,color:#1a1a1a
+    classDef good fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+
+    class Feature,F1,F2,F3,F4,FOut bad
+    class Outcome,O1,O2,OOut good
+```
+
+## What to do tomorrow
+
+Three actions, in order.
+
+- **Open your filled-in [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any line begins with a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
+- **Rewrite each marked line in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Hard cap at 25 minutes for the whole section. If you spill, the section is too big - your one-page brief is trying to be three.
+- **Share the rewritten section with your engineer or your AI agent and ask exactly one question**: *"What would you build differently from this brief than you would have built from the feature list?"* Their first answer is the scope you were about to lose. Their second answer is the scope you are about to keep.
+
+> **When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.**
+> 
+> The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read six months from now, after the spaceship lands and investors ask why the demo is so heavy. Twenty-five minutes with a marker now saves ten weeks of build-and-throwaway later.
+
+Module 3 closes here. Chapter 4.1 (Choose Your Build Path) is where you decide whether your rewritten brief goes to a self-serve stack or a hired team.
+
+## Further reading
+
+- Alan Klement, [*When Coffee and Kale Compete*](https://www.whencoffeeandkalecompete.com/) - the book that introduced the *When / I want / So I can* shape under the name "Job Stories" in 2013. The framework is worth chasing once your team is bigger than two; the shape is worth using tomorrow.
+- Marty Cagan, [Product vs Feature Teams](https://www.svpg.com/product-vs-feature-teams/) - the canonical essay on why product teams (chartered with outcomes) ship better than feature teams (chartered with feature lists).
+- Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. Vague briefs amplify the rate.
+- DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small enough that one developer can ship outcomes end-to-end.
+- Basecamp / Ryan Singer, [Shape Up - Appetite vs Estimate](https://basecamp.com/shapeup/1.2-chapter-03) - the chapter on writing pitches that fix the appetite first, so the build collapses to fit.
+- Tom Kerwin, [JTBD Job Stories vs User Stories](https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27) - the 2013 Klement piece on Medium that popularised the shape, for readers who want the original 1,500 words.
+- Y Combinator, [Startup School: How to Write a Product Spec](https://www.ycombinator.com/library/) - YC's distilled take on specs that ship versus specs that sit.
+
+---
+
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*

@@ -1,6 +1,6 @@
-# Tech for Non-Technical Founders 2026 - chapter sequence (Phase 1 spine)
-# Each entry: slug, title (short for nav), module label
-# Order = reading sequence on the landing page (Module 1 -> end of Module 6).
+# Tech for Non-Technical Founders 2026 - chapter sequence (5-module spine)
+# Each entry: slug, title (short for nav), module label, goal (one-sentence outcome)
+# Order = reading sequence on the landing page (Module 1 -> end of Module 5).
 # Used by the prev/next partial on chapter pages.
 #
 # Note: floating glossary - "Five Tech Words to Stop Nodding At" (slug five-tech-words-stop-nodding-at)
@@ -9,78 +9,96 @@
 # Continuation chapters (customers-leaving-churn-triage-not-acquisition,
 # pivot-or-persevere-decision-framework) and supplementary references
 # (hire-track-supplementary-reference, demoted management chapters,
-# demoted AI-era chapters) are linked from Module 6 "Going further" callout
+# demoted AI-era chapters) are linked from Module 5 "Going further" callout
 # but NOT in the linear sequence.
 
 sequence:
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"
     module: "Chapter 1.1"
+    goal: "Write a one-sentence Founding Hypothesis you can falsify in 2 weeks."
 
   - slug: smoke-test-landing-page-300-dollar-validation
-    title: "2.1 · Smoke-Test the Hypothesis"
-    module: "Chapter 2.1"
+    title: "1.2 · Smoke-Test the Hypothesis"
+    module: "Chapter 1.2"
+    goal: "Ship a landing page that proves cold strangers click on your hypothesis sentence."
 
   - slug: price-hypothesis-on-smoke-test-page
-    title: "2.2 · Price Your Hypothesis on the Smoke-Test Page"
-    module: "Chapter 2.2"
+    title: "1.3 · Price Your Hypothesis on the Smoke-Test Page"
+    module: "Chapter 1.3"
+    goal: "Add a Stripe price button to your page and measure click-to-payment intent."
 
   - slug: ai-persona-pre-validation-mom-test-prep
-    title: "3.1 · AI Persona Pre-Validation"
-    module: "Chapter 3.1"
+    title: "2.1 · AI Persona Pre-Validation"
+    module: "Chapter 2.1"
+    goal: "Sharpen Mom Test interview questions with a Claude persona before booking real calls."
 
   - slug: find-10-people-with-problem-outreach-2026
-    title: "3.2 · Find 10 People With the Problem"
-    module: "Chapter 3.2"
+    title: "2.2 · Find 10 People With the Problem"
+    module: "Chapter 2.2"
+    goal: "Book 10 ICP interviews in one week using free DMs or a paid outreach stack."
 
   - slug: mom-test-ask-about-past-not-future
-    title: "3.3 · The Mom Test (with Synthesis)"
-    module: "Chapter 3.3"
+    title: "2.3 · The Mom Test: Ask About the Past, Not the Future"
+    module: "Chapter 2.3"
+    goal: "Run 10 past-anchored interviews that produce a signed validated problem statement."
 
   - slug: clickable-prototype-validation-2-hour-lovable
-    title: "3.4 · Build a Clickable Prototype in an Afternoon"
-    module: "Chapter 3.4"
+    title: "2.4 · Build a Clickable Prototype in an Afternoon"
+    module: "Chapter 2.4"
+    goal: "Test the SHAPE of your solution with 5 interview subjects in a 2-hour Lovable build."
 
   - slug: one-page-product-brief-vibe-prd
-    title: "4.1 · The One-Page Product Brief"
-    module: "Chapter 4.1"
+    title: "3.1 · The One-Page Product Brief"
+    module: "Chapter 3.1"
+    goal: "Hand a single page to Lovable or a hired team that prevents over-engineering."
 
   - slug: stop-specifying-features-start-outcomes
-    title: "4.2 · Stop Specifying Features, Start Outcomes"
-    module: "Chapter 4.2"
+    title: "3.2 · Stop Specifying Features, Start Outcomes"
+    module: "Chapter 3.2"
+    goal: "Rewrite the brief in outcome shape so engineers stop building spaceships."
 
   - slug: should-you-hire-2026-decision-tree
-    title: "5.1 · Build It Yourself or Hire (the Default)"
-    module: "Chapter 5.1"
+    title: "4.1 · Should You Hire? The 2026 Decision Tree"
+    module: "Chapter 4.1"
+    goal: "Decide between self-serve, fractional CTO, or hired team via a 5-question matrix."
 
   - slug: github-aws-database-ownership-checklist
-    title: "5.2 · Day-1 Ownership Audit"
-    module: "Chapter 5.2"
+    title: "4.2 · Who Owns Your GitHub, AWS, and Database?"
+    module: "Chapter 4.2"
+    goal: "Confirm you own your code, cloud, domain, and database before any build starts."
 
   - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
-    title: "5.3 · Build It Yourself: Lovable + Supabase + Stripe"
-    module: "Chapter 5.3"
+    title: "4.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
+    module: "Chapter 4.3"
+    goal: "Ship a working MVP in 4 weeks on Lovable + Supabase + Stripe for under $50/mo."
 
   - slug: vibe-coding-ceiling-signals
-    title: "5.4 · Vibe Coding Done Right: 5 Ceiling Signals"
-    module: "Chapter 5.4"
+    title: "4.4 · Vibe Coding Done Right: 5 Ceiling Signals"
+    module: "Chapter 4.4"
+    goal: "Spot the 5 architectural signals that mean it's time to graduate beyond no-code."
 
   - slug: must-have-segment-pmf-test
-    title: "6.1 · The Must-Have Segment Test"
-    module: "Chapter 6.1"
+    title: "5.1 · Your First Customer Is Not a Marketing Problem"
+    module: "Chapter 5.1"
+    goal: "Pass the Sean Ellis 40% test against your first 10-30 users before any paid ads."
 
   - slug: channel-selection-before-outbound
-    title: "6.2 · Choose Your Channel Before You Send One Message"
-    module: "Chapter 6.2"
+    title: "5.2 · Choose Your Channel Before You Send One Message"
+    module: "Chapter 5.2"
+    goal: "Pick one outreach channel you'll commit to for 4 weeks before scaling."
 
   - slug: first-ten-customers-personal-network
-    title: "6.3 · The First Ten From Your Network"
-    module: "Chapter 6.3"
+    title: "5.3 · The First Ten Come From People Who Already Know You"
+    module: "Chapter 5.3"
+    goal: "Convert 50 personalized warm DMs into your first 10 paid pilots."
 
   - slug: paid-pilot-charge-before-ship
-    title: "6.4 · Charge Before You Ship"
-    module: "Chapter 6.4"
+    title: "5.4 · Charge Before You Ship"
+    module: "Chapter 5.4"
+    goal: "Sign a Design Partner Agreement with a $500 Stripe deposit before writing new code."
 
   - slug: outbound-without-sales-team
-    title: "6.5 · Going Outbound Without a Sales Team"
-    module: "Chapter 6.5"
+    title: "5.5 · Going Outbound Without a Sales Team"
+    module: "Chapter 5.5"
+    goal: "Send 30 filtered cold messages and book 1-2 paid pilots in weeks 3-4."

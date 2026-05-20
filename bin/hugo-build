@@ -22,6 +22,18 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
+# Run course source-of-truth validators before building
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$SCRIPT_DIR/validate-course" ]; then
+  echo "Running course validators..."
+  if ! "$SCRIPT_DIR/validate-course"; then
+    echo ""
+    echo "❌ Course validators failed. Fix violations before building."
+    echo "   Run bin/validate-course --verbose for full details."
+    exit 1
+  fi
+fi
+
 HUGO_ARGS=(hugo build --noBuildLock --environment "$ENVIRONMENT" --destination "$OUTPUT_DIR")
 [ -n "$BASE_URL" ] && HUGO_ARGS+=(--baseURL "$BASE_URL")
 [ -n "$BUILD_DRAFTS" ] && HUGO_ARGS+=(--buildDrafts)

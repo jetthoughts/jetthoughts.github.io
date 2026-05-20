@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Source-of-truth validator runner for the course project.
+# Exits with non-zero status if any validator fails.
+#
+# Usage:
+#   bin/validate-course              # Run all validators
+#   bin/validate-course --json      # Output as JSON
+#   bin/validate-course --verbose   # Detailed output per chapter
+
+require "json"
+require_relative "../lib/course_validators"
+
+verbose = ARGV.delete("--verbose")
+json_output = ARGV.delete("--json")
+
+results = CourseValidators.run_all
+
+failed = results.reject(&:passed)
+passed = results.select(&:passed)
+
+if json_output
+  output = results.map do |r|
+    {
+      validator: r.name,
+      passed: r.passed,
+      violations: r.violations
+    }
+  end
+  puts JSON.pretty_generate(output)
+  exit(failed.any? ? 1 : 0)
+end
+
+separator = "─" * 60
+
+puts ""
+puts separator
+puts "  Course Source-of-Truth Validators"
+puts separator
+puts ""
+
+results.each do |r|
+  if verbose || !r.passed
+    puts r.to_s
+    puts ""
+  end
+end
+
+puts separator
+if failed.empty?
+  puts "  ✅  ALL #{results.length} VALIDATORS PASSED"
+else
+  puts "  ❌  #{failed.length} of #{results.length} validators FAILED"
+  failed.each do |r|
+    puts "     • #{r.name}: #{r.violations.length} violation(s)"
+  end
+end
+puts separator
+puts ""
+
+exit(failed.any? ? 1 : 0)

@@ -193,7 +193,7 @@ disableKinds = []
 [[menu.main]]
   identifier = "course"
   name = "Course"
-  pageRef= "blog/tech-for-non-technical-founders-2026/"
+  pageRef= "course/tech-for-non-technical-founders-2026/"
   weight = 28
 
 [[menu.main]]

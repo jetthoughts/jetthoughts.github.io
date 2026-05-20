@@ -27,20 +27,21 @@ Target: 8.5/10 before launch.
 
 | Priority | Task | Status | Notes |
 |---|---|---|---|
-| P0 | Module 2 ↔ Module 3 sequence swap decision | **Decision needed** | ICP-E review argues smoke-test (spend $) before validation (talk) is backwards for burned founder. Counter: current order matches Rob Walling Stairstep (smoke-test first for conviction). Needs strategic call before implementation - cascade-destructive across YAML + 18 chapter cross-refs. |
-| P0 | Fix course landing module map | Planned | `tech-for-non-technical-founders-2026` still says oversight = Module 8, salvage = Module 9, AI = Module 10. Current sequence is oversight = 6.2, salvage = 8, AI = 9. |
-| P0 | Fix stale module/chapter numbering | Partial | 2026-05-20: global `Module N.X` → `Chapter N.X` rename across 28 .md + 2 SVGs + YAML. Still pending: standalone `Module 7/8/9/10` strings in landing/template tables. |
-| P0 | Repair missing artifact link | Planned | `form-your-founding-hypothesis-90-minute-sprint` links to `/blog/founding-hypothesis-worksheet/`, which does not exist. Create page or redirect to an existing worksheet artifact. |
-| P0 | Remove unfulfilled download/email promises | Planned | Template pages must be usable on-page or backed by a real file/form. `first-paying-customer-operating-kit` currently says "Send your email below; we ship the zip the same day." |
+| ✅ Done 2026-05-20 | Fix course landing module map | Done | Landing page module list merged to 5 modules (commit 32e064dd). Stale "Proactive Ceiling Signals" title fixed. |
+| ✅ Done 2026-05-20 | Fix stale module/chapter numbering in companion pages | Done | Global `Module N.X` → `Chapter N.X` rename across 28 .md + 2 SVGs + YAML; 6-module → 5-module spine renumber; 3 companion pages (operating-kit, pivot-or-persevere, churn-triage) Module 7 references resolved. GOAL-AT-A-GLANCE rewritten to 5-module spine. 20.07 content plan marked superseded. |
+| ✅ Done 2026-05-20 | Repair missing artifact link | Done (no-op) | Audit confirmed `/blog/founding-hypothesis-worksheet/` is not linked from any chapter. The tracker entry was stale from a prior cleanup pass. |
+| ✅ Done 2026-05-20 | Remove unfulfilled download/email promises | Done (already correct) | Audit confirmed `first-paying-customer-operating-kit` already says "There is no email signup; when a template is downloadable, the link appears inline below. We will not promise files we cannot ship today." Matches course philosophy. |
+| ✅ Done 2026-05-20 | Build 4 source-of-truth validators (Kaizen Muda outcome) | Done | All 4 validators implemented as `bin/validate-course` + `lib/course_validators.rb` (with test/unit/course_validators_test.rb): (1) chapter-number-consistency, (2) title-yaml-match, (3) internal-link-existence, (4) table-width. Hooked into `bin/hugo-build` as pre-flight check. Globs updated to handle nested `content/course/<namespace>/<slug>/` structure. 3 of 4 pass after course-namespace migration; 1 (internal-link-existence) has 24 pre-existing broken-citation violations to non-existent research articles - separate follow-up. |
 | P1 | Add "Burned founder fast path" to landing | Planned | Emergency route: Ownership audit -> Friday demo -> weekly report -> salvage/rebuild -> switch dev shops -> AI risk. Put before the full course table. (Per-chapter routing added to Ch 1.1 on 2026-05-20.) |
 | P1 | Add Founder Control Dashboard artifact | Planned | One-page control system for access, demos, reports, SOW, budget, AI risk, and salvage score. Tie the strongest ICP-E chapters together. |
 | P1 | Make every artifact copy-pasteable | Planned | Each template page needs on-page scripts/checklists, not only descriptions of future assets. Prioritize SOW, DPA, outreach, hiring interview, ownership, Friday demo. |
-| P1 | Separate early-founder path from rescue path | Partial | Ch 1.1 now has top-of-page routing block ("Already burned?" / "Already hired?") on 2026-05-20. Roll same pattern out to other module-start chapters (2.1, 4.1, 5.1, 6.1). |
-| P1 | Add AI critic/simulator blocks per module | Planned | Standardize where AI helps: critique artifact, simulate customer/vendor/advisor, find contradictions. State what AI cannot prove. One block per module = 6 blocks. |
-| P1 | Roll manual-minimum sidebar to other tool-heavy chapters | Planned | Ch 3.2 got the "$0 manual version" sidebar on 2026-05-20 (the 8+ tool stack was a cognitive cliff). Audit Ch 6.3, 6.4, 6.5 for similar tool density and apply same sidebar pattern where appropriate. |
+| P1 | Separate early-founder path from rescue path | Partial | Ch 1.1 now has top-of-page routing block ("Already burned?" / "Already hired?") on 2026-05-20. Roll same pattern out to other module-start chapters (1.2, 2.1, 3.1, 4.1, 5.1) in new 5-module spine. |
+| P1 | Add AI critic/simulator blocks per module | Planned | Standardize where AI helps: critique artifact, simulate customer/vendor/advisor, find contradictions. State what AI cannot prove. One block per module = 5 blocks (new 5-module spine). |
+| P1 | Roll manual-minimum sidebar to other tool-heavy chapters | Partial | 2026-05-20: 3 chapters got $0-budget callouts (Ch 1.2 smoke-test, Ch 4.3 self-serve-mvp-stack, Ch 5.5 outbound). Ch 2.2 already had manual-minimum sidebar. Audit remaining chapters (Ch 5.3, 5.4) for any unaddressed paid-tool friction. |
 | P2 | Add completion criteria to every chapter | Planned | Each chapter should end with "Done when / Next click / If blocked" so the founder knows when to move on. Template: `## Done when` + checklist + `## Next click` + conditional routing. 18 chapters. |
 | P2 | Tighten practical proof in weaker modules | Planned | Early validation and market-type chapters need more concrete founder examples, exact time boxes, and decision thresholds. |
 | P3 | Cover image regen audit for non-spine posts | Planned | 2026-05-20: 14 spine covers regenerated to clean "Curriculum 2026" badge. ~30 companion-post covers still have "Curriculum NN/30" stale counter. Regen via chrome-devtools at 2400×1260 if posts stay in active rotation. |
+| P3 | Update decision doc 20.10 with Click correction | Planned | 20.10-sequence-decision-validate-vs-smoke-test.md recommended "Option A - Swap" before re-reading Click's Experiment phase. Conclusion now superseded: KEPT current order + applied $0-budget reframe instead. Doc body still accurate as a research log but the Recommendation section is stale. |
 
 ---
 
@@ -56,8 +57,12 @@ Target: 8.5/10 before launch.
 | Ch 1.1 shame recovery paragraphs | 3 paragraphs after intro callout addressing burned-founder shame |
 | Ch 1.1 non-linear routing | Top-of-page block: "Already burned?" / "Already hired?" route to 5.2 / 5.1 |
 | Ch 1.1 Magic Lenses Money skip guidance | Pre-revenue founders can leave Money lens blank until smoke test data lands |
-| Ch 3.2 manual-minimum sidebar | $0 alternative to the $300-500/mo tool stack before the 5-step sequence |
-| Verified: "We..." opener density already at 0% in Ch 3.2 + Ch 6.3 (Group B polish caught this) |
+| Ch 2.2 manual-minimum sidebar | $0 alternative to the $300-500/mo tool stack before the 5-step sequence (was Ch 3.2 pre-merge) |
+| Verified: "We..." opener density already at 0% in Ch 2.2 + Ch 5.3 (Group B polish caught this) |
+| **5-module spine merge** | Module 1 (1 chapter) + Module 2 (2 chapters) merged into 3-chapter Module 1 (Hypothesis & Smoke-Test). All downstream modules shifted down by 1. Slug-stable. |
+| YAML `goal:` field | Added one-sentence outcome per chapter to `data/course_sequence.yaml` (18 entries) |
+| $0-budget reframe | Top-of-chapter callouts in Ch 1.2 (smoke-test: Neeto/Carrd free + organic), Ch 4.3 (self-serve-mvp-stack: Lovable+Supabase+Stripe free tiers, under $50 to first customer), Ch 5.5 (outbound: Apollo free + Gmail mail-merge + Loom free + Calendly free) |
+| Module 2↔3 sequence swap DECIDED | Kept current order. Re-read Click's "Experiment" chapter: it's the lightweight landing-page-class test, NOT the heavier Design Sprint prototype + 5-user test. Our spine matches Click: Foundation (1.x) → Validate deeper (2.x) → Build. The reviewer's swap argument was anchored on "$300-500 ad spend before talking to anyone" — fixed by the $0-budget reframe instead of restructure. Decision doc: 20.10-sequence-decision-validate-vs-smoke-test.md |
 
 ---
 
