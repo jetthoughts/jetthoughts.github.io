@@ -1,5 +1,5 @@
 ---
-title: "Vibe PRD Template - One-Page Product Brief"
+title: "one-page brief Template - One-Page Product Brief"
 aliases: ["/blog/vibe-prd-template/"]
 description: "One-page Product Brief template. Hand to Lovable, Cursor, or a hired junior. Free."
 date: 2026-05-18
@@ -24,13 +24,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 2.2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
+📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
 
-# Vibe PRD Template - One Page, Five Sections
+# one-page brief Template - One Page, Five Sections
 
 *The brief that turns a validated problem into something Lovable, Cursor, or a hired junior can ship from on Tuesday morning.*
 
-> **The Vibe PRD, 5 sections:**
+> **The one-page brief, 5 sections:**
 > 1. The problem (copied from your validated problem statement)
 > 2. The user and their context
 > 3. What you're building (one paragraph, plain English)
@@ -39,7 +39,7 @@ related_posts: false
 
 ## Why this exists
 
-A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and 17 toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page Vibe PRD - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
+A solo founder I spoke with last quarter had a validated problem statement and a Lovable subscription. She typed her problem statement into the Lovable prompt and asked it to "build the simplest version of this." Twelve hours later she had a working web app with a settings page, a billing dashboard, three integrations, and 17 toggles she didn't ask for. She spent the next three weeks deciding which parts to delete. When she opened a second project with a one-page one-page brief - the same problem, but now with a no-go list - Lovable shipped the smallest end-to-end thing in 90 minutes. The page she filled in between the two attempts was the difference. The agent fills blanks with reasonable defaults; the brief is your only way to forbid the defaults.
 
 ## How to use this
 
@@ -194,13 +194,13 @@ Metric check-in: 30 days from build start: __________
 
 ### Audience decision: who is this brief going to?
 
-The same one page works for the first three audiences below. Senior engineers and product committees expect a longer document - the Vibe PRD is too thin for either.
+The same one page works for the first three audiences below. Senior engineers and product committees expect a longer document - the one-page brief is too thin for either.
 
 | Audience | Spec depth | Style | Length |
 |---|---|---|---|
-| Lovable / Bolt / v0 | Vibe PRD as-is | Paste as prompt; agent fills defaults | 1 page |
-| Cursor / Claude Code | Vibe PRD + a `context.md` with stack | Paste as context file at repo root | 1 page + stack note |
-| Hired junior contractor | Vibe PRD + 30-min kickoff call | Page + verbal walkthrough | 1 page + recording |
+| Lovable / Bolt / v0 | one-page brief as-is | Paste as prompt; agent fills defaults | 1 page |
+| Cursor / Claude Code | one-page brief + a `context.md` with stack | Paste as context file at repo root | 1 page + stack note |
+| Hired junior contractor | one-page brief + 30-min kickoff call | Page + verbal walkthrough | 1 page + recording |
 | Hired senior engineer | Traditional PRD | User stories, acceptance criteria, edge cases | 5-10 pages |
 | Product committee | Traditional PRD | Goals, KPIs, risks, dependencies, milestones | 10+ pages |
 
@@ -238,8 +238,8 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 
 Founders who skip the no-go list ship working demos of products nobody asked for. The same founders, six weeks later, post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP they can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
 
-If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between Vibe PRD and traditional PRD, and the case for paying $1,000 vs writing the page yourself for free.
+If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying $1,000 vs writing the page yourself for free.
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

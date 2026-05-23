@@ -1,8 +1,8 @@
 # Project 2605 - Master Index
 
 **Project**: Tech for Non-Technical Founders 2026
-**Status**: 🟢 Strategy locked (8-module course structure adopted 2026-05-12) - ready for Module 0-4B writing phase
-**Last Updated**: 2026-05-12
+**Status**: 🟢 Shipped — 5 modules, 18 chapters, end-to-end live at `/course/tech-for-non-technical-founders-2026/`
+**Last Updated**: 2026-05-29
 **Parent**: `../2510-seo-content-strategy/`
 
 This is the **single navigation hub** for the 2605 project. Read top-to-bottom on first visit.
@@ -11,36 +11,43 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 
 ## 🚀 IMMEDIATE ACTION - START HERE
 
-### For an executing writer agent (single-session shortcut)
+Course is **shipped** (5 modules, 18 chapters, live at `/course/tech-for-non-technical-founders-2026/`).
+Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/`.
+
+### For an executing writer / task agent (single-session shortcut)
 
 ```
-1. Open 50-59-execution/SPRINT-RUNBOOK.md.
-2. Identify the next un-spawned task in the active sprint (Sprint 1: tasks S1.1, S1.2, S1.3).
-3. Copy the matching dispatch brief from §"Sprint 1 task briefs" into an Agent call (subagent_type: general-purpose).
-4. Wait for return. Run the gates in 50-59-execution/mechanical-audit-checklist.md.
-5. Pass → mark task complete in TASK-TRACKER.md. Queue next sprint task.
-6. Fail → surface specific failures to user. Halt sprint.
+1. Read TASK-TRACKER.md — identify the highest-priority un-spawned task (P1 items first).
+2. If task references a new chapter or revision: open the target file at content/course/...
+3. Run the gates in 50-59-execution/mechanical-audit-checklist.md after writing/editing.
+4. Pass → mark task complete in TASK-TRACKER.md.
+5. Fail → surface specific failures to user. Stop.
+6. Before shipping any revision, run voice-regression sweep: grep -rn "## Why this matters\|Founders who\|Most founders\|Founders we worked with" across edited files.
 ```
 
-### Files a fresh session reads to execute Sprint 1
+### Files a fresh session reads for post-ship tasks
 
 | File | Purpose |
 |---|---|
-| `50-59-execution/SPRINT-RUNBOOK.md` | Dispatch briefs + review checklist + sprint progression |
-| `50-59-execution/sprint-1/artifact-specs.md` | Format specs for Self-Assessment Worksheet, Outreach Sequence Template, Mom Test Interview Script |
-| `50-59-execution/sprint-1/cover-image-specs.md` | Stitch HTML cover-image slot fills for the 3 Sprint 1 posts |
-| `50-59-execution/distribution-prep.md` | Reddit/Twitter/Facebook/LinkedIn channels + share-copy templates + posting schedule |
+| `TASK-TRACKER.md` | Live queue of pending post-ship improvements (P1-P3) |
+| `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings from M1-M3 audit → gates to apply |
+| `40-49-review/40.02-post-ship-retrospective.md` | Post-ship retrospective (stub — populate after first iteration) |
+| `10-19-research/10.06-icp-persona-course-walkthrough.md` | ICP-E simulation with per-module verdicts and gap recommendations |
+| `10-19-research/10.07-icp-sam-persona-course-walkthrough.md` | ICP-Sam simulation — idea-stage first-timer evaluation with progressive-disclosure and jargon-glossing audits |
 | `50-59-execution/mechanical-audit-checklist.md` | Greppable + structural + voice gates every post must pass |
+| `50-59-execution/distribution-prep.md` | Reddit/Twitter/Facebook/LinkedIn channels + share-copy templates + posting schedule |
 
 ### For a strategy / review agent
 
 ```
 1. Read GOAL-AT-A-GLANCE.md.
-2. Read 10-19-research/10.01-course-program-landscape.md (full landscape, 19 programs).
-3. Read 10-19-research/10.02-curriculum-sequence-synthesis.md (why pillars rejected, modules adopted).
-4. Read 20-29-strategy/20.01-course-modules.md (the 8 modules).
-5. Read 20-29-strategy/20.02-positioning-vs-courses.md.
-6. Cross-reference against ../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md.
+2. Read 40-49-review/40.01-m1-m3-audit-2026-05-28.md — understand what was caught and fixed.
+3. Read 10-19-research/10.06-icp-persona-course-walkthrough.md — ICP-E gaps and recommendations.
+4. Read 10-19-research/10.07-icp-sam-persona-course-walkthrough.md — ICP-Sam gaps and recommendations (idea-stage first-timer perspective).
+5. Read TASK-TRACKER.md — verify P1 items reflect the audit + both ICP findings.
+6. Read 20-29-strategy/20.02-positioning-vs-courses.md.
+7. Cross-reference against ../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md.
+8. If retrospective is due: populate 40-49-review/40.02-post-ship-retrospective.md.
 ```
 
 ---
@@ -62,6 +69,10 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 | `10-19-research/10.01-course-program-landscape.md` | 19-program inventory, coverage matrix, gap analysis, voice intelligence |
 | `10-19-research/10.02-curriculum-sequence-synthesis.md` | Synthesis of 3 research inputs; why module structure beats pillar structure |
 | `10-19-research/10.03-2026-ecosystem-research-ru-source.md` | Russian-language source research on 2026 ecosystem (Sophia Matveeva, Drew Falkman, FI Vibecode, AI-Augmented Developer profile). English wrapper header explains contents. Originally at `docs/Курс для нетехнических основателей 2026.md`, moved 2026-05-12. |
+| `10-19-research/10.04-competitor-courses-2026-forum-validated.md` | Competitor course reviews from founder forums (Indie Hackers, Reddit, Hacker News) |
+| `10-19-research/10.05-content-organization-patterns-2026.md` | Gloria Mark / Pew 2026 / NN/g attention-span research; cognitive-load patterns for content structure |
+| `10-19-research/10.06-icp-persona-course-walkthrough.md` | ICP-E persona simulation — Alex (burned founder) walks the full 5-module course with per-module verdicts on practicality, engagement, achievability, and modernity |
+| `10-19-research/10.07-icp-sam-persona-course-walkthrough.md` | ICP-Sam persona simulation — Sam (idea-stage first-timer) walks the full 5-module course with per-module verdicts, jargon-disclosure audit, and Sam-vs-Alex scoring comparison |
 
 ### 🧭 Strategy (20-29)
 
@@ -69,7 +80,7 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 |---|---|
 | `20-29-strategy/20.01-course-modules.md` | The 8 modules with input/output/checkpoint/artifact (REPLACES old pillars doc) |
 | `20-29-strategy/20.02-positioning-vs-courses.md` | Why this beats YC Startup School, Sophia Matveeva, Drew Falkman, Kukoyi book |
-| `20-29-strategy/20.07-content-plan-tnt-founders-2026.md` | The 26-post map, 11 artifacts, course-frame templates, advanced sidebar wording |
+| `20-29-strategy/20.07-content-plan-tnt-founders-2026.md` | ~~The 26-post map, 11 artifacts...~~ **SUPERSEDED** — shipped course uses 5-module spine. Historical reference only. |
 
 ### 🛠️ Execution (50-59)
 

@@ -29,10 +29,13 @@ cover_image_alt: "JetThoughts blog cover for Three Questions That Turn a Standup
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/"
 ---
 
-> **Chapter 5.4 · Step 3 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a team in place + a signed SOW. Output: a weekly oversight rhythm where the daily standup answers "did anything ship?"
+> **Chapter 5.4 · Step 3 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a team in place + a signed SOW
+>
+> **Output:** a weekly oversight rhythm where the daily standup answers "did anything ship?"
 
-> **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
 *"Yesterday I worked on the order flow. Today I am continuing the order flow."* A SaaS founder we picked up in Q2 2026 had heard that sentence on her **$25K/month project for nine weeks** before she clocked that two of her three developers were reading out the same Jira ticket name every day. **47 standups in.** Nobody had flagged that the ticket had not moved columns in seven weeks. She had been on every call, taken notes, and nodded.
 

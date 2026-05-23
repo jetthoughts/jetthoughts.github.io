@@ -30,8 +30,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Step 2 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 5. Output: one channel hypothesis committed for 4 weeks of focused outreach.
+> **Module 5 · Step 2 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 5
+>
+> **Output:** one channel hypothesis committed for 4 weeks of focused outreach
 
 Most founders spend the first week of outreach on LinkedIn, the second week on cold email, and the third week wondering why their Indie Hackers post got 12 upvotes from other founders and zero customer replies. Four channels, one week each - the math is 0 signal anywhere.
 
@@ -52,7 +55,7 @@ Four weeks gives you enough data to make a real decision.
 | **3** | Follow-ups + 20 fresh messages | 1-2 paid conversations start, reply rate stabilizes | Rate becomes predictable |
 | **4** | Evaluate all signals | Reply rate >5%? Demos → paid? Right buyer? | If all 3 = no, diagnose script/filter before switching |
 
-A B2B HealthTech founder we worked with in early 2026 spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only for 4 weeks. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
+A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only for 4 weeks. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
 
 The 4-week rule is not a ritual. It is the minimum data window that separates "this channel does not work" from "I ran this channel for 6 days and panicked."
 
@@ -207,7 +210,7 @@ The first place to apply this is your personal network in [Chapter 5.3 (First Te
 
 > **Module 5, Step 2 of 5** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
 > Next: [6.3 · The First Ten From Your Network](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
-> Course: [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/)
+> Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 
 ## Further reading
 
@@ -218,4 +221,4 @@ The first place to apply this is your personal network in [Chapter 5.3 (First Te
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

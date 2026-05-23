@@ -29,8 +29,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Going further · Continuation chapter 5 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a live product with paying customers AND a churn rate above 30%/month. Output: a 3-decision triage (fix the product, change the segment, or kill the SKU) backed by cohort data you can read in 60 minutes.
+> **Going further · Continuation chapter 5 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a live product with paying customers AND a churn rate above 30%/month
+>
+> **Output:** a 3-decision triage (fix the product, change the segment, or kill the SKU) backed by cohort data you can read in 60 minutes
 
 ## Acquisition Is Not Your Problem
 
@@ -186,4 +189,4 @@ You walk out of this chapter holding one of three artifacts: a fix-the-product p
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

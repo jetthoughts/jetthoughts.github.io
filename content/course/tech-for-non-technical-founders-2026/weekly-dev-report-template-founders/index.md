@@ -29,10 +29,13 @@ cover_image_alt: "JetThoughts blog cover for The Plain-English Weekly Dev Report
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/"
 ---
 
-> **Chapter 5.5 · Step 4 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a team in place + Friday demos running. Output: a one-page weekly report template you demand from your team every Monday.
+> **Chapter 5.5 · Step 4 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a team in place + Friday demos running
+>
+> **Output:** a one-page weekly report template you demand from your team every Monday
 
-> **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
 Open your inbox on a Monday morning. Two reports landed over the weekend from two different teams.
 
@@ -57,17 +60,17 @@ The fix is not a new tool. The fix is a one-page format with five non-negotiable
 Send this to your tech lead Sunday night or first-thing Monday. Frame it as the format you need - not a request for "more detail."
 
 > Starting next Monday, please send your weekly report in this format. One page, five sections, in this order. Send by 9am UK time on Monday so I can read it before our 11am call.
-
+>
 > **1. What shipped this week.** One line per shipped feature. Each line must include the staging or production URL I can click, the test login if it is gated, and one sentence on what the user can now do. Example: `staging.acme.app/co/v2 - login: founder@test.com / demo1234 - users can now apply a discount code at checkout.` If nothing shipped, write "Nothing shipped this week" and skip to section 2. Do not pad.
-
+>
 > **2. What is in review but not shipped.** One line per open pull request. Include the PR number, the author, the named reviewer, the date the review was requested, and what is holding it up. Example: `PR #847 - Marcos opened Tue, Priya reviewing, two changes requested Wed evening - waiting on author.` If nobody reviewed it, name that.
-
+>
 > **3. What is blocked, and on whom.** One line per blocked item. Name the person, the answer they need, and the deadline they need it by. If I am the blocker, list me first. Example: `Stripe live keys - waiting on you - need them by Wed end-of-day or the launch slips to next week.`
-
+>
 > **4. What we cut to ship that.** One line per item we descoped, postponed, or simplified. Include the reason. Example: `Cut the admin override screen - users do not need it for v1; will handle plan changes via Postgres console for the first month.` If nothing was cut, write "Nothing was cut" and we will talk about that on the call.
-
+>
 > **5. One concern for next week.** One sentence. Not a status update; the actual thing keeping you awake. Example: `Next week we deploy the migration that locks the orders table - we want a 6am window so no live customer hits a 30-second timeout.`
-
+>
 > Hard rules: one page, no Jira screenshots, no burndown charts, no executive summary paragraph at the top. The five sections are the report. Plain text in the email body, not a PDF attachment.
 
 Do not soften the wording when you send it. "Would be nice to have" gets you the old format with two new bullets. "This is the format I need each week" gets you the format.
@@ -145,4 +148,4 @@ The bad report leans on soft verbs, passive voice, and unnamed actors because it
 - Wes Kao, [How to Write a Great Status Update](https://newsletter.weskao.com/p/great-status-update) - a practitioner reference on the discipline of writing one short, useful update a week.
 - Eric Ries via Lean Startup Co., [What Is an MVP?](https://leanstartup.co/resources/articles/what-is-an-mvp/) - the validated-learning framing that makes "what did we cut?" a real product question, not a comfort question.
 
-Built by JetThoughts as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum. Authorship credit only - no service pitch.
+Built by JetThoughts as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum. Authorship credit only - no service pitch.

@@ -28,30 +28,33 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 4 · Step 1 of 4** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a Vibe PRD + outcome-shaped feature spec (from Module 3). Output: a 4-way build-path decision (validate / self-serve / fractional-CTO / hire) + the [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/).
+> **Module 4 · Step 1 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a one-page brief + outcome-shaped feature spec (from Module 3)
+>
+> **Output:** a 4-way build-path decision (validate / self-serve / fractional-CTO / hire) + the [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/)
 
 Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring is what you do when you hit a specific ceiling signal - not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
 
-We have watched dozens of pre-seed B2B SaaS founders hire engineering before they had a single paying customer. Most of them ran out of money before the third feature shipped. The pattern is so common it should have a name. The brief was right (we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and rewrote it as outcomes in [Stop Specifying Features](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)). The hire was the thing that broke the founder. They skipped the cheaper experiment that would have told them whether they needed to build at all.
+The pre-seed B2B SaaS founder who hires engineering before a single paying customer is the rescue call we take most often. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and rewrote it as outcomes in [Stop Specifying Features](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
 
 ![A hand-drawn 2-by-2 decision matrix with four quadrants labeled Validate without code, Self-serve build, Fractional CTO bridge, and Hire a team. Each quadrant lists a first action, cost band, and timeline.](decision-matrix.svg)
 
-## Why this matters in 2026
+## Your real question: do you need to build at all
 
-> **Your real question is not "code or no-code." It is "what evidence do I have that I need to build at all?"**
-> 
-> Y Combinator's 2026 position: tools and business models now let founders turn ideas into production products in weeks without giving 50% equity to a technical co-founder. The argument is *prove the concept without code first*, not "hire later." Most founders skip this and burn 6-9 months learning their problem was never real.
-> 
-> Cannot answer with a list of buyers who have already paid you? Then the answer is: not yet. Stay one box left of where you were about to start.
+> **The decision is not "code or no-code." It is "what evidence do I have that I need to build at all?"**
+>
+> Y Combinator's current position: tools and business models now let solo founders turn ideas into production products in weeks without giving 50% equity to a technical co-founder. The argument is *prove the concept without code first*, not "hire later." Skip this and you burn 6-9 months learning the problem was never real.
+>
+> If you cannot answer with a list of buyers who have already paid you, the answer is: not yet. Stay one box left of where you were about to start.
 
-By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.3) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching. All three are research signals, not builds. The Vibe PRD (Chapter 3.1) documents what to build. This chapter decides HOW to build it - self-serve, fractional CTO, or hired team.
+By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.1 technique applied in Ch 2.3 recruitment + interview round) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching. All three are research signals, not builds. The one-page brief (Chapter 3.1) documents what to build. This chapter decides HOW to build it - self-serve, fractional CTO, or hired team.
 
 ## The Airbnb test
 
 Brian Chesky and Joe Gebbia did not write code first. They blew up an air mattress in their living room, took photos with a digital camera, posted three nights at $80 on a hand-rolled WordPress page, and waited. Three guests showed up. They made $240. The product was a website with a payment link. The validation was three strangers paying real money. Paul Graham later wrote about the same instinct in [*Do things that don't scale*](https://paulgraham.com/ds.html): the founders who win are the ones who do the unscalable, manual experiment that proves demand before they industrialize it.
 
-The 2026 version of the Airbnb test takes one afternoon. You build a Carrd page. You add a Stripe checkout for an annual plan. You write a Notion FAQ that explains exactly what the buyer gets. You send the link to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. You watch what happens.
+The 2026 version of the Airbnb test takes one afternoon: a Carrd page with a Stripe checkout for an annual plan, a Notion FAQ that explains exactly what the buyer gets, and the link sent to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. The result you are watching for is in the next paragraph.
 
 ![A 3-step illustration of the Airbnb test: Carrd page with Stripe checkout (Step 1), send link to 35 ICP prospects (Step 2), refund non-buyers and build only what you sold (Step 3). A sticky note at the bottom warns: if 0 of 35 click, the problem is real but your pitch is wrong, rewrite the page.](airbnb-test.svg)
 
@@ -84,7 +87,7 @@ Use this path when you have no MVP yet, a single untested hypothesis, and no con
 
 Pick this path when the problem is validated (10+ Mom Test interviews showing past-behavior signal, 2-5 pre-orders or paid pilots), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
 
-This week: paste your [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $20/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Monthly tooling runs $200-$1,200. Expect 6-12 weeks to first 5 paying users. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
+This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $20/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Monthly tooling runs $200-$1,200. Expect 6-12 weeks to first 5 paying users. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
 
 ### 3. Fractional CTO bridge ([The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge))
 
@@ -109,7 +112,7 @@ flowchart TD
     Q2 -->|Yes| Hire["Hire a team.<br/>$30K+/mo. Read the SOW first."]
     Q3 -->|No| Q4{"Q4: Senior engineer available<br/>for 1 hr/month architecture review?"}
     Q3 -->|Yes| Validate
-    Q4 -->|Yes| SelfServe["Default confirmed: Self-serve.<br/>Paste Vibe PRD into Lovable."]
+    Q4 -->|Yes| SelfServe["Default confirmed: Self-serve.<br/>Paste one-page brief into Lovable."]
     Q4 -->|No| Q5{"Q5: Monthly engineering budget?"}
     Q5 -->|"$1.6K-$4K/mo"| Fractional["Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)).<br/>Buys the architecture review commercially. $0 equity."]
     Q5 -->|"$5K-$30K/mo"| Hire
@@ -132,6 +135,8 @@ flowchart TD
 The five questions, verbatim, in the order you answer them on the worksheet:
 
 - **Q1. Is the problem validated?** Counts as yes only if you have 10 or more [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) interviews showing strong past-behavior signal AND 2 to 5 pre-orders, paid pilots, or annual deposits. LinkedIn likes do not count. "They said they would buy" does not count. Money on the table or a calendar invite for a procurement call counts.
+
+  > **Already completed Modules 1-3?** Answer Q1 **Yes**. The Ch 1.3 smoke test + the Ch 2.3 interview round are the pre-order equivalent at this stage; you will convert the signal into actual pre-orders during Module 5. Do not loop back to Path 1 just because your card has not been charged yet.
 - **Q2. How backend-heavy is the build?** Counts as heavy if any one of these is true: real-time updates (WebSockets, server-sent events), background queues with retry logic, AI inference inside the request path with cost above $0.01 per call, multi-tenant data with row-level security, 5+ third-party API integrations, regulated data (HIPAA, SOC 2, PCI scope).
 - **Q3. What is your runway?** Months of cash until you must show paying customers. Less than 4 months: route to Path 1 regardless of how validated you think you are. The Airbnb test is the only one that fits in the runway window. 4-12 months: Paths 1, 2, 3 are all on the table. 12+ months: Path 4 becomes safe to consider.
 - **Q4. Do you have a senior engineer in your network for 1 hour of architecture review per month?** This is the cheap insurance. Even on Path 2 (self-serve with Lovable), one hour a month with a senior backend engineer who will read your data model and your worst route catches the architectural ceiling 3 months before you hit it. Yes: stay on Path 2. No: move to Q5 to buy the same insurance commercially.
@@ -141,9 +146,9 @@ A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-
 
 ### The Series-A off-ramp: when the model itself changes
 
-> All four paths above (validate without code / self-serve / fractional CTO / hire a team) assume the same operating model: you hand a Vibe PRD to engineers (whether AI or human) and they build it. That is the feature-factory pattern Marty Cagan has spent 20 years criticizing. It is the right model for a non-technical founder running a half-built MVP with $4K-$80K of monthly burn. It is the wrong model the moment you can afford a real product team.
+> All four paths above (validate without code / self-serve / fractional CTO / hire a team) assume the same operating model: you hand a one-page brief to engineers (whether AI or human) and they build it. That is the feature-factory pattern Marty Cagan has spent 20 years criticizing. It is the right model for a non-technical founder running a half-built MVP with $4K-$80K of monthly burn. It is the wrong model the moment you can afford a real product team.
 >
-> Around Series A (~$2-5M raised, 6-15 person team), the off-ramp activates. Stop handing specs, start handing problems. The product team owns discovery and delivery. You own outcomes and strategy. If you crossed that line and you are still writing Vibe PRDs week to week, you are paying senior engineering rates for junior product-manager work.
+> Around Series A (~$2-5M raised, 6-15 person team), the off-ramp activates. Stop handing specs, start handing problems. The product team owns discovery and delivery. You own outcomes and strategy. If you crossed that line and you are still writing one-page briefs week to week, you are paying senior engineering rates for junior product-manager work.
 >
 > When you reach the off-ramp, read Cagan's [Inspired](https://www.svpg.com/inspired-how-to-create-products-customers-love/) for the model, [Empowered](https://www.svpg.com/empowered/) for the team-charter shift, and Teresa Torres's [Continuous Discovery Habits](https://www.producttalk.org/continuous-discovery-habits/) for the weekly customer cadence the empowered team needs to keep running. None of this is in scope for the rest of this course; you have graduated past it.
 
@@ -151,7 +156,7 @@ A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-
 
 | Action | By when | Output |
 |---|---|---|
-| **Print the worksheet** — [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) (one side of paper). Bring it with your [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) + [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/). | Tonight | Worksheet ready for morning |
+| **Print the worksheet** - [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) (one side of paper). Bring it with your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) + [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/). | Tonight | Worksheet ready for morning |
 | **Answer the 5 questions.** Number of interviews, pre-orders, runway months, monthly budget, senior engineer available. 30 minutes alone, pen on paper. No negotiating past the time box. | Tomorrow morning | Verdict written at top |
 | **Pick your next chapter by path.** Path 1 (Validate): [Airbnb test](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/#the-airbnb-test), ship Carrd + Stripe + Notion by Friday. Path 2 (Self-serve): [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Path 3 (Fractional CTO): [The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge), hire by month end. Path 4 (Hire): [Hiring Interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater) + [SOW guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow). | Tomorrow afternoon | Next chapter decided |
 
@@ -169,4 +174,4 @@ A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

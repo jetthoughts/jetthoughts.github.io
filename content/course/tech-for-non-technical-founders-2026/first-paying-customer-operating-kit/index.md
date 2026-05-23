@@ -30,7 +30,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [Module 5 of the Tech for Non-Technical Founders 2026 course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks.
+📋 Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks.
 
 > **Status: preview.** This page is the spec for the kit. We are assembling and shipping each template as it is ready - bookmark and check back. There is no email signup; when a template is downloadable, the link appears inline below. We will not promise files we cannot ship today.
 
@@ -114,6 +114,23 @@ The Airtable base from [Chapter 5.4](/course/tech-for-non-technical-founders-202
 
 The payoff: turns Friday afternoon into a 10-minute "what shipped this week" review instead of a 90-minute scroll through Gmail.
 
+### 7. Pilot kickoff call agenda (60-minute template)
+
+The Stripe deposit cleared on Friday. The pilot starts Monday. Your customer is asking "so what happens next?" - and the course's [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) chapter taught you how to get to the deposit, not what to run after it. This is the 60-minute kickoff call that turns a deposit into an operating pilot:
+
+| Minute | Section | What to cover | Output |
+|--------|---------|---------------|--------|
+| **0-5** | Introductions | Founder + 1-2 customer stakeholders by name; one-line each on what each person wants from the pilot (champion's measurable win + power-user's daily-job-to-be-done) | Each name + job-to-be-done in your Notion doc |
+| **5-15** | Success criteria recap from the DPA | Read aloud the 1-3 success criteria you wrote into the Design Partner Agreement. Confirm the customer still agrees with them this week. Ask: "If we hit these by Friday week 4, do you renew at the standard price?" | One-line yes/no answer recorded |
+| **15-30** | Friday demo cadence | Lock the recurring Friday 15-min demo slot for 4 weeks. You demo what shipped that week against the success criteria. Customer brings one piece of feedback or one new question. Calendar invites sent during the call. | 4 calendar invites on both sides |
+| **30-40** | Shared Slack / Discord / WhatsApp channel | Create the channel during the call. Add 2 customer-side stakeholders + you. Standing rule: bug reports go in the channel, not email. Channel name: `pilot-[customer-name]`. | Channel live + invite link shared |
+| **40-50** | Single point of contact + escalation | Identify the one person on each side who owns "is this pilot on track?" Customer side is usually the champion who signed the DPA, not their CTO. Your side is you. Escalation path: if the champion is unreachable for 7 days, you escalate to who? Document. | Escalation tree in Notion |
+| **50-60** | Week 1 commitment + go/no-go gate naming | What ships this week (1-3 specific things, not a roadmap). When the go/no-go gate runs (end of week 4, by default - the [DPA template](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) covers this). What "go" means (renew at standard price) and what "no-go" means (refund or graceful exit, no hard feelings, written reference from the customer). | Week 1 commitment + go/no-go date on both calendars |
+
+The trap to avoid: skipping the kickoff and treating the deposit as the end-state. The deposit clears, both sides assume the other knows what happens Monday, and 14 days later the champion is asking "have you started yet?" while you are asking "have they used the tool yet?" - 14 days lost. The 60-minute kickoff is the cheapest insurance against that gap.
+
+For your second pilot onwards, re-use this agenda as a Notion template - 90% of the call is identical across customers; only the success criteria + stakeholders change. The Friday demo cadence is the single biggest churn-prevention move you can make in the first 4 weeks: if your customer sees something new every Friday they are in for the long run, even if you ship small.
+
 ## How to use the kit
 
 The kit runs Monday-to-Friday for the four weeks of Module 5. The sequence:
@@ -138,7 +155,7 @@ See the top callout for status. When a template is live, the download link appea
 
 ## Where this fits in the course
 
-This is the lead magnet for Module 5 of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course - the chapter that lands the first paying customer right after the MVP ships. Module 5 runs in four chapters:
+This is the lead magnet for Module 5 of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course - the chapter that lands the first paying customer right after the MVP ships. Module 5 runs in four chapters:
 
 - 7.1 [Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - run the Sean Ellis 40% test against your 10-30 MVP users.
 - 7.2 [The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) - 50-name list, 4 buckets, Monday outreach sequence.

@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/). Run after your [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is signed. Print, fill in 30 minutes, write your chosen path at the top of your Notion doc.
+📋 Template companion to the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/). Run after your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is signed. Print, fill in 30 minutes, write your chosen path at the top of your Notion doc.
 
 # Build Path Decision Worksheet - 5 Questions, 4 Paths
 
@@ -38,7 +38,7 @@ She showed us the contract on a Tuesday. By Friday we had walked her through the
 
 ## How to use this
 
-Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.3, your filled-in [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
+Friday afternoon, alone, 30 minutes, before coffee runs out. Bring three documents: your filled-in [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) from Chapter 2.1, your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1, and a current bank statement showing months of runway. Pen on paper. Phone in another room.
 
 Answer the five questions in order. Each one is factual, not aspirational. "Number of paying pre-orders" is a count from your Stripe dashboard, not a vibe. "Months of runway" is cash on hand divided by monthly burn, not a guess. The matrix at the bottom routes you to Path 1, 2, 3, or 4 based on the five answers.
 
@@ -53,7 +53,7 @@ Total time budget: 30 minutes alone, 20 minutes with one peer, 0 minutes second-
 
 Founder: _________________  Date: ____________________
 
-Vibe PRD signed by 2 advisors on: ____________________
+one-page brief finalized on: ____________________
 
 Months of runway in the bank: ________________________
 ```
@@ -148,7 +148,7 @@ Money you can commit for at least 6 months:
  [ ] $30,000+ /mo (multi-person team band)
 
 If $0-$400 -> Path 2 (Self-serve / Module 4).
-              Paste Vibe PRD into Lovable.
+              Paste one-page brief into Lovable.
 
 If $1.6K-$4K -> go to Q5.
 
@@ -190,7 +190,7 @@ your Notion doc)
 | Path | Choose when | First action this week | Cost |
 |---|---|---|---|
 | **1. Validate without code** | Q1 = No, OR Q3 = less than 4 months | Ship Carrd page + Stripe checkout + Notion FAQ. Send to 35 ICP prospects. | $0 - $300 in tools + optional $100-200 in paid ads |
-| **2. Self-serve build (6A)** | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste Vibe PRD into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
+| **2. Self-serve build (6A)** | Q1 yes, Q2 light, Q4 = $0-$400/wk, Q5 = senior eng in network | Paste one-page brief into Lovable. Hook Supabase + Stripe + Resend. | $200 - $1,200 / month |
 | **3. Fractional CTO bridge (5.2)** | Q1 yes, Q2 mid, Q4 = $1.6K-$4K/mo OR Q5 = no senior eng | Hire 5-10 hrs/wk Fractional CTO. Use for architecture, PR review, hiring, cost watch. | $1,600 - $4,000 / month |
 | **4. Hire a team (6B)** | Q1 yes, Q2 heavy, Q4 = $5K+/mo | Read draft SOW clause-by-clause. Confirm GitHub/AWS/domain ownership before kickoff. | $30K - $80K / month |
 
@@ -230,7 +230,7 @@ The good answer names the person, the relevant experience (Stripe payments backe
 
 - **Write your verdict at the top of a fresh Notion doc.** One line: *"Path X (name). Started: [date]. Next module: [6A / 6B / 5.2 / Module 2 retake]."* Pin the doc. Re-read the line every Monday for 4 weeks.
 - **Share the worksheet result with one peer or advisor in a 20-minute call.** Not three. One. Ask them: *"If the matrix said Path X, what would change your mind?"* Their first answer is the assumption you should pressure-test next. If they cannot name one, the matrix verdict holds.
-- **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste Vibe PRD into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
+- **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste one-page brief into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
 
 Founders who skip this worksheet and route on advisor instinct are the founders who, six weeks later, sign a contract their data did not support and post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) when the build runs over budget. The matrix is cheaper than the contract it prevents.
 
@@ -238,4 +238,4 @@ If you want the doctrine in long form, the [Module 4 post](/course/tech-for-non-
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

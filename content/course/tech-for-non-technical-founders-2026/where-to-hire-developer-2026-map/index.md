@@ -42,7 +42,7 @@ A B2B SaaS founder we picked up in Q2 2026 had been paying $185K base for a San 
 
 ## How to use this
 
-Monday morning, alone, 30 minutes. Bring your filled-in [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) so you know the backend complexity. Bring your bank statement so you know the budget. Walk the four-row region table, circle the row your scope and budget land in, write the verdict at the top. Then pick two platforms from the seven-row list, one primary and one backup. Then copy the job description template, fill in the four fields in square brackets, and post both before lunch.
+Monday morning, alone, 30 minutes. Bring your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) so you know the backend complexity. Bring your bank statement so you know the budget. Walk the four-row region table, circle the row your scope and budget land in, write the verdict at the top. Then pick two platforms from the seven-row list, one primary and one backup. Then copy the job description template, fill in the four fields in square brackets, and post both before lunch.
 
 If you find yourself comparing all four regions for an hour, you are negotiating with yourself. The decision is in your scope (regulated yes/no, async-acceptable yes/no) and your hourly budget. Both are factual.
 
@@ -93,7 +93,7 @@ ROLE: Senior Engineer (AI-Augmented) - [your framework]
 
 We are hiring a Senior Engineer to ship the [your product
 type, e.g. multi-tenant Rails SaaS for [your industry]]
-backend that our Vibe PRD calls for. The role is
+backend that our one-page brief calls for. The role is
 fractional or full-time, [your geography preference: LATAM
 nearshore / Tier-2 India / US onshore].
 
@@ -190,4 +190,4 @@ If you find yourself ten days in with no shortlist, the bottleneck is the job de
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

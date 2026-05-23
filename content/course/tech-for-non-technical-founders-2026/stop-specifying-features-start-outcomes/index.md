@@ -29,20 +29,19 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 3 · Step 2 of 2** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a one-page Product Brief (from [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)). Output: a one-page Product Brief rewritten so engineers and AI agents stop overengineering.
+> **Module 3 · Step 2 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a one-page Product Brief (from [Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/))
+>
+> **Output:** a one-page Product Brief rewritten so engineers and AI agents stop overengineering
 
-You asked for a simple admin panel. You got a spaceship. The reason is not that your engineers are show-offs. The reason is sitting on page one of the brief you sent them. You wrote *"a simple admin panel"* and moved on. They read those four words, filled in everything you did not say, and came back ten weeks later with 47 buttons, a role-permissions matrix, an audit log, and a co-pilot AI assistant nobody asked for.
+You sent your engineer (or your AI agent) a one-line spec: *"build a simple admin panel."* Ten weeks later you have an admin panel with 47 buttons, role-based permissions, an audit log, and a co-pilot AI assistant. Your engineer isn't a show-off - those four words "a simple admin panel" don't tell anyone what "simple" means, who's using the panel, or what the panel needs to do. The engineer (or the training data) filled in those blanks from every big-company SaaS panel they had ever seen.
 
 ![A hand-drawn comparison: the simple three-button admin panel you asked for on the left, the absurdly complex 47-button control deck that got built on the right, connected by a red arrow labeled 10-week build, $15K](admin-panel-spaceship.svg)
 
-## Why this matters in 2026
+## Why feature briefs overbuild
 
-> **Feature briefs invite overbuilding. Outcome briefs collapse to the smallest path.**
-> 
-> Engineers and AI agents fill vague requests from training data: big-company SaaS panels, GitHub-scraped baselines. A feature word in isolation ("CSV export," "user roles") has no anchor to your actual job. An outcome-shaped request ("when I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds before the 4pm call") has nowhere to drift. The moment, action, result, and deadline are all named.
-> 
-> Add the security tax: Veracode's 2025 GenAI study found 45% of AI-generated code ships with at least one exploitable flaw, climbing with how much the agent had to imagine. Tight outcome briefs are the cheapest defense.
+Engineers and AI agents fill vague requests from training data - big-company SaaS panels, GitHub-scraped baselines, the busiest version of whatever they last saw. A feature word in isolation ("CSV export," "user roles") has no anchor to your actual job, so the engineer or agent invents the missing context. An outcome-shaped request ("when I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds before the 4pm call") leaves nothing for them to invent - the moment, the action, the deadline, and the result are already on the page.
 
 ## Two briefs, two shapes each
 
@@ -80,7 +79,7 @@ Both outcome-shaped briefs in the section above use the same three parts. The sh
 
 **So I can [outcome]** - the business or personal result that proves the build worked. *"So I can paste them into the deck before the 4pm call"* gives a finish line the engineer can hold up against any feature suggestion. The engineer can now say: *"Does the build let you paste into the deck before 4pm? Then we are done. Does the audit log help with that? No? Cut it."*
 
-Put the three parts together and the engineer or the AI agent has nowhere left to fill in scope. Drop any one part and they will. Without the *when*, the build comes back timeless and over-engineered. Without the *I want*, it comes back as a feature list. Without the *so I can*, it hits the spec but misses the job. (The same shape has a name in product-management literature - see *Further reading* below if you want to chase the lineage. The shape works without the name.)
+Put the three parts together and the engineer (or the AI agent) has nowhere left to invent. Drop any one part - the timeframe, the action, or the outcome - and the gap gets filled in from training data instead of your intent. The same shape has a name in product-management literature; see *Further reading* below if you want to chase the lineage.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -112,7 +111,7 @@ flowchart TD
 
 Three actions, in order.
 
-- **Open your filled-in [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any line begins with a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
+- **Open your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any line begins with a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
 - **Rewrite each marked line in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Hard cap at 25 minutes for the whole section. If you spill, the section is too big - your one-page brief is trying to be three.
 - **Share the rewritten section with your engineer or your AI agent and ask exactly one question**: *"What would you build differently from this brief than you would have built from the feature list?"* Their first answer is the scope you were about to lose. Their second answer is the scope you are about to keep.
 
@@ -134,4 +133,4 @@ Module 3 closes here. Chapter 4.1 (Choose Your Build Path) is where you decide w
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

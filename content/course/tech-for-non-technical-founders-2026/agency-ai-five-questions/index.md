@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the "Manage AI-Era Risks" path of the [Tech for Non-Technical Founders 2026 course](/course/tech-for-non-technical-founders-2026/). Send 24 hours before the discovery call. Score in real time during the call.
+📋 Template companion to the "Manage AI-Era Risks" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Send 24 hours before the discovery call. Score in real time during the call.
 
 # The "We Use AI" 5-Question Script
 
@@ -126,4 +126,4 @@ Every agency uses AI in 2026. The five questions test whether they can describe 
 2. Print the 5-question script (or pull up this page on your phone) and bring it to the call.
 3. After the call, score each answer 0 or 1 in real time (per the scoring rule above) - a total of 2 or below out of 5 means do not sign the SOW.
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

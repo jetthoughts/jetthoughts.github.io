@@ -29,8 +29,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Step 4 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: 3-5 warm leads from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). Output: 1 signed paid pilot before any new code ships.
+> **Module 5 · Step 4 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** 3-5 warm leads from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+>
+> **Output:** 1 signed paid pilot before any new code ships
 
 In late 2025 a HealthTech founder ran a six-week free pilot with a 40-bed clinic she had met at a conference. The clinic loved it, the shared Slack channel had 47 messages of enthusiasm before week 4, and the day the pilot ended she sent the year-one contract. The reply came back three weeks later: "We're going to revisit at the next budget cycle." There was no next budget cycle - the clinic moved on. In March 2026 she shipped the same product to a different customer who paid a $1,200 deposit at the start of the pilot, and that customer closed the year-one contract on day one. Same product, same buyer profile, different deposit timing.
 
@@ -40,9 +43,9 @@ Below is the playbook the second founder followed: a one-page Design Partner Agr
 
 Free pilots feel collaborative because the customer says yes, you build for six weeks, and the team shows up to the Friday demo each week and says "this is great." Week 8 lands and you send the proposal for the year-one contract. The customer says "this is great, let me circle back to my CFO" - and that CFO has never heard of you, did not approve the pilot, and has no internal justification for the line item. The conversation dies in a forwarded email thread.
 
-That is the recurring mechanic. Four 2026 B2B founders ran pilots through the JetThoughts rescue queue in the last six months. The three who ran free pilots all hit the same wall - "this is great" emails on Friday, ghost on conversion in week 8. The one who insisted on a 20% deposit before kickoff cleared the conversion in week 7 without negotiation. Her customer's CFO had already approved the spend in week 0; the conversion was paperwork, not a new decision.
+That's the recurring mechanic. A 20% deposit at kickoff puts the CFO question on Week 0, when there's no project yet for the customer to defend. Conversion in Week 7 becomes paperwork, not negotiation. Skip the deposit and you're back at the Week 8 wall: "this is great" emails Friday, ghost on conversion Monday.
 
-The non-technical founder out of a dev-shop burn has a specific reason to find this hard. After six months of paying an agency, the muscle memory is "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable. Reframe: you are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
+After months of paying an agency, the muscle memory becomes "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable. Reframe: you are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
 
 ![Free pilot vs paid pilot - what skin in the game does](free-vs-paid-pilot.svg)
 
@@ -183,4 +186,4 @@ Founders who have closed 2-3 paid pilots and want to layer on contract rigor can
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

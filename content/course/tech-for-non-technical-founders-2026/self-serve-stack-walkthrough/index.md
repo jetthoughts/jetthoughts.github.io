@@ -54,7 +54,7 @@ If a week takes you 7 days instead of 5, you are normal. If a week takes 14 days
 
 ## Pre-flight checklist (the Sunday before week 1)
 
-- [ ] **Vibe PRD signed by 2 advisors** ([template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/))
+- [ ] **one-page brief finalized** ([template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/))
 - [ ] **Validated Problem Statement filled in** ([template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/))
 - [ ] **[Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) verdict = Path 2 (Self-serve)**
 - [ ] **One Lovable account created** (Free tier OK to start; upgrade to Pro $25 in week 2)
@@ -72,7 +72,7 @@ Goal: a clickable UI on a public staging URL. No data persists. Friday demo: a n
 
 ### Monday - write the first prompt
 
-Open the Vibe PRD's "what you're building" section. Paraphrase the smallest workflow into a single Lovable prompt. Sample (fitness coaching SaaS):
+Open the one-page brief's "what you're building" section. Paraphrase the smallest workflow into a single Lovable prompt. Sample (fitness coaching SaaS):
 
 ```text
 Build a dashboard for a fitness coach.
@@ -109,7 +109,7 @@ Read every screen aloud. Anything that needs more than 5 seconds to understand: 
 
 ### Friday - demo to a non-PRD reader
 
-Send the staging URL to someone who has not read the Vibe PRD. Watch them try to use it (over screen-share or in-person). Do not narrate. Note every place they pause for more than 3 seconds. Those are your week-1 bugs in design, not in code.
+Send the staging URL to someone who has not read the one-page brief. Watch them try to use it (over screen-share or in-person). Do not narrate. Note every place they pause for more than 3 seconds. Those are your week-1 bugs in design, not in code.
 
 **Result line (fill in)**: ____________________________________________
 
@@ -239,6 +239,22 @@ Walk through the full flow in test mode: signup -> dashboard -> add a client -> 
 **Result line (fill in)**: ____________________________________________
 
 > **Week 3 outcome**: a paid signup flow end-to-end in test mode, webhook verified, `subscription_status` flips from `trial` to `active` within 10 seconds of a $1 charge.
+
+## When the webhook doesn't fire (troubleshooting in 5 minutes)
+
+The single most common Week-3 stall: you trigger a Stripe test charge, the dashboard says the charge succeeded, but the row in Supabase never flips to `active`. Walk this table in order; stop at the first row that matches your symptom:
+
+| # | Symptom | Likely cause | 60-second fix |
+|---|---------|--------------|---------------|
+| 1 | Stripe dashboard shows the event, but nothing fired in your Supabase logs | Stripe CLI not running OR webhook endpoint URL has a typo | Re-run `stripe listen --forward-to https://<your-project>.supabase.co/functions/v1/stripe-webhook` in a terminal. Copy the URL EXACTLY into the Stripe webhook dashboard - one trailing slash or missing `https://` kills it |
+| 2 | Logs show `Webhook signature verification failed` | Signing secret in your Supabase Edge Function environment variable does NOT match the secret Stripe is using | Open Stripe dashboard → Developers → Webhooks → click your endpoint → click "Signing secret" → "Reveal." Copy the value (starts with `whsec_`). In Supabase: Edge Functions → your function → Settings → Environment variables. Replace the `STRIPE_WEBHOOK_SECRET` value with this exact string. Redeploy the function. Test mode and live mode have DIFFERENT secrets - if you went live without updating, this is why |
+| 3 | Logs show the event arrived but no row updated | The `checkout.session.completed` payload's `client_reference_id` field is empty OR doesn't match any `coaches.id` | In your Stripe Checkout creation code, confirm you are passing `client_reference_id: coach.id` when generating the session. The CLI's default trigger sends a synthetic event with no `client_reference_id` - test with a real signup flow, not `stripe trigger`, to validate this path |
+| 4 | The right event subscription isn't selected in Stripe | You created the webhook endpoint but only subscribed to `payment_intent.*` events, not `checkout.session.completed` | Stripe dashboard → Webhooks → your endpoint → "Listen to" → ensure `checkout.session.completed` is checked. Stripe defaults to a curated subset; this event is sometimes off by default |
+| 5 | Logs show the function returned 200, row updated, but the UI still shows "trial" | Your frontend is caching the old subscription status | Hard-refresh the page (Cmd+Shift+R). If status is correct after refresh, the issue is Lovable's data-fetch caching - add a 30-second refetch interval on the dashboard query, or refetch on focus |
+
+If none of the 5 rows match: paste the full Stripe event payload + your Edge Function code into Claude / ChatGPT with the prompt "this Stripe webhook handler isn't updating my Supabase row - what am I missing?" - the AI will spot the gap 80% of the time. For the remaining 20%, the [Stripe webhook debugging guide](https://docs.stripe.com/webhooks/debugging) covers the long-tail signature, replay, and idempotency cases.
+
+> **Idempotency reminder**: every webhook handler must be safe to fire twice on the same event. Stripe retries on any non-2xx response (network blip, timeout, deploy mid-call) and the second hit must not double-charge or double-update. Check `WHERE event_id = $1 AND processed = true` at the top of the handler; if the row exists, return 200 immediately without re-running the update logic. This is one extra query; it prevents the support ticket that says "I got charged twice."
 
 ## Week 4 - staging URL + 5 ICP users click
 
@@ -448,4 +464,4 @@ create policy "coaches see own check-ins"
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

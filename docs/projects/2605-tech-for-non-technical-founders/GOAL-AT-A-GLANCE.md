@@ -17,9 +17,9 @@ Publish a **free 5-module course that takes a non-technical founder from idea to
 
 **Course promise**: From idea to first paying customer in the most effective way for 2026. You walk away with: validated hypothesis, live smoke-test landing page, signed validated problem statement, Product Brief, build decision, live MVP (self-serve or hired), **and one signed paid pilot**.
 
-**Course philosophy**: Don't hire engineers if you don't have to. If you must hire, hire surgically. Don't ship more product before someone pays. The course teaches the SIMPLEST method that works for solo non-tech founders on **$0 budget by default**; paid tools (Lovable Pro, Apollo Pro, $300-500 ads) are optional accelerators, not gates. Structured frameworks (Foundation Sprint, JTBD Canvas, Shape Up, Impact Mapping) are demoted to optional "Advanced" sidebars.
+**Course philosophy**: Don't hire engineers if you don't have to. If you must hire, hire surgically. Don't ship more product before someone pays. The course teaches the SIMPLEST method that works for solo non-tech founders and presents free and paid tool options as equal choices the reader picks based on situation (see Delivery Principles below). Tool spend is bounded and channel-dependent (the smoke-test ad budget, for example, ranges from $300-$600 on Meta to $1,800-$6,600 on LinkedIn for the same 300-visit floor) - not a single global anchor. Structured frameworks (Foundation Sprint, JTBD Canvas, Shape Up, Impact Mapping) are demoted to optional "Advanced" sidebars.
 
-**Positioning sentence**: A free competing curriculum to YC Startup School, Sophia Matveeva's Tech for Non-Technical Founders ($530/mo), Drew Falkman's Vibe Coding ($1,000), and the Kukoyi 2017 book — the only one that maps the full 5-module journey (form hypothesis + smoke-test → validate problem → write product brief → choose and run the build → close first paid pilot) without selling itself. Sequence matches Click's Foundation Sprint (lightweight Experiment before heavier Design Sprint prototype), Steve Blank Customer Development (Discovery before Validation), and the Mom Test (interviews-first for deep validation).
+**Positioning sentence**: A free competing curriculum to YC Startup School (free), Sophia Matveeva's Tech for Non-Technical Founders ($2,500-$3,500 one-time, verified 2026-05-22), Drew Falkman's Vibe Coding (~$1,000 Maven cohort, price gated/unverified), and the Kukoyi 2017 book — the only one that maps the full 5-module journey (form hypothesis + smoke-test → validate problem → write product brief → choose and run the build → close first paid pilot) without selling itself. Sequence matches Click's Foundation Sprint (lightweight Experiment before heavier Design Sprint prototype), Steve Blank Customer Development (Discovery before Validation), and the Mom Test (interviews-first for deep validation).
 
 **JT positioning** (Option C: Pure Lead Magnet, no selling): the course does NOT pitch JT services. Zero "book a Control Audit" CTAs, zero "schedule a consultation," zero service offers. Authorship credit stays at the footer ("Built by JetThoughts as part of the free curriculum"). Lead capture works via email-gated artifact downloads only. See `feedback_curriculum_is_pure_lead_magnet.md`.
 
@@ -66,7 +66,7 @@ Each module has an **input** (what the reader brings from the previous module), 
 
 ## 💡 DELIVERY PRINCIPLES
 
-- **$0-budget default, paid as optional accelerator.** Every paid solution has a free alternative leading the chapter. Burned founders should never feel they have to spend more before they've talked to anyone.
+- **Effectiveness first; free and paid presented as equal options.** For each step, show both a free path and a paid path and let the reader choose what fits their situation - never prioritize free over paid (cheap) or push paid over free (greedy). Most readers have some budget; the goal is the most effective route to the outcome, not the cheapest one. Don't over-weight the money dimension - it's one input the reader decides on, not the theme of the chapter.
 - **Simplest method on main path.** Foundation Sprint, JTBD Canvas, Shape Up, Continuous Discovery, Impact Mapping, Empathy Mapping, Design Sprint all relegated to optional "Advanced" sidebars.
 - **Course is a journey, not a topic list.** Every module's chapters share input/output/checkpoint/artifact framing. The artifacts compile into the reader's Founder OS.
 - **Engagement-first delivery.** No word-count caps; cut test per section determines what stays.
@@ -108,14 +108,14 @@ Each module has an **input** (what the reader brings from the previous module), 
 | Spine drift after future restructures | P1: build 4 source-of-truth validators (chapter-number consistency, title-YAML byte match, internal-link existence, mobile-table width) per Kaizen Muda analysis |
 | 2510 LinkedIn validation sprint already in flight - schedule conflicts | The wrap posts ship per 2510 calendar; the 2605 curriculum framing is added retroactively. Zero schedule conflicts. |
 | AI-era posts (Going further) decay fast | Date-stamp every AI-era post + Q1 2027 refresh trigger |
-| ICP-E (burned founder) bouncing on validation curriculum when they need rescue | Per-chapter routing block on Ch 1.1 routes burned readers to Ch 4.2 (Ownership Audit) or Ch 4.1 (Should You Hire) before validation work. Pattern to roll out to other module-start chapters. |
+| ICP-E (burned founder) bouncing on validation curriculum when they need rescue | Routed at the entry point: the landing page "If Your Team Is Already Failing" fast path sends burned readers to Ownership Audit / Friday Demo / Weekly Report / Salvage-Rebuild before any validation work. Chapter bodies are written to the primary idea-stage ICP; the per-chapter routing block on Ch 1.1 was removed 2026-05-22 (it taxed the primary reader and duplicated the landing-page router). |
 
 ---
 
 ## 🔗 NAVIGATION
 
 - **Source of truth (chapter order + goals)**: `../../data/course_sequence.yaml`
-- **Research**: `10-19-research/10.01-course-program-landscape.md` + `10.02-curriculum-sequence-synthesis.md` + `10.05-content-organization-patterns-2026.md`
+- **Research**: `10-19-research/10.01-course-program-landscape.md` + `10.02-curriculum-sequence-synthesis.md` + `10.05-content-organization-patterns-2026.md` + `10.06-icp-persona-course-walkthrough.md`
 - **Strategy**: `20-29-strategy/20.01-course-modules.md` + `20.02-positioning-vs-courses.md` + `20.07-content-plan-tnt-founders-2026.md` (historical, superseded by current YAML) + `20.10-sequence-decision-validate-vs-smoke-test.md`
 - **Execution / lead magnets**: `50-59-execution/lead-magnets/`
 - **Open work**: `TASK-TRACKER.md`

@@ -31,10 +31,13 @@ related_posts: false
 course_nav: false
 ---
 
-> **Going further (AI in production) · Step 2 of 3** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a signed agency contract OR a hire who claims "AI-augmented." Output: monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW.
+> **Going further (AI in production) · Step 2 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a signed agency contract OR a hire who claims "AI-augmented."
+>
+> **Output:** monthly AI cost predicted within ±20% + 3 contract clauses you add to the next SOW
 
-> **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
 A founder posted in r/SaaS last month: **"Our dev shop just sent the month-2 invoice. There's a $1,860 line called 'AI Services - passthrough.' We never agreed to this. The contract is for $14K/month flat. What is going on?"** The replies told her what the line was. None of them told her how to predict it for month 3.
 
@@ -182,4 +185,4 @@ Related course posts:
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

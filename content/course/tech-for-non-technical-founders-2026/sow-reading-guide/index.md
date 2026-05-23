@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to Module 5B of the [Tech for Non-Technical Founders 2026 course](/course/tech-for-non-technical-founders-2026/). Read the night before you sign. Print, highlighter, 90 minutes alone.
+📋 Template companion to Module 5B of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Read the night before you sign. Print, highlighter, 90 minutes alone.
 
 # The SOW Reading Guide
 
@@ -153,4 +153,4 @@ If the agency walks away from this exercise, the engagement was going to fail an
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

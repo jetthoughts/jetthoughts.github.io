@@ -29,12 +29,15 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 4 of 4** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: 5 of the 10 Mom Test interview subjects from Chapter 2.3 (pick the strongest-signal interviewees). Output: 5 of them watched navigating a 2-hour clickable prototype, with pass/fail per session.
+> **Module 2 · Step 4 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (pick the strongest-signal ones - scored per the Ch 2.1 rubric)
+>
+> **Output:** 5 of them watched navigating a 2-hour clickable prototype, with pass/fail per session
 
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution.
 
-Those are different signals. A founder we joined in January 2026 ran 8 strong Mom Test interviews. Problem validated. She had workaround evidence, cost numbers, frustration language. She moved to Lovable and spent 3 weeks building an MVP. When the first 5 users logged in, none of them got past the second screen without asking "wait, what am I supposed to do here?" The problem was real. The shape of the solution was invisible.
+Those signals do not measure the same thing. One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built for 3 weeks. When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate.
 
 A 2-hour throwaway prototype run in front of 5 of your interview subjects would have surfaced that on day 2, not week 3. The rest of this chapter walks you through running one.
 
@@ -42,25 +45,25 @@ A 2-hour throwaway prototype run in front of 5 of your interview subjects would 
 >
 > You will build 3 throwaway screens, show them to 5 of your Mom Test interviewees, watch what they do without coaching, then archive everything. The only outputs that carry forward into Module 3 are (a) the pass/fail signal and (b) the exact words your users used when describing what they saw. The prototype CODE is discarded.
 >
-> If you try to polish this prototype into your MVP later, you'll spend 3-5x longer on it, carry every 2-hour compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Chapter 4.3, started from the Vibe PRD (Chapter 3.1) with real auth, real Stripe, real domain.
+> If you try to polish this prototype into your MVP later, you'll spend 3-5x longer on it, carry every 2-hour compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Chapter 4.3, started from the one-page brief (Chapter 3.1) with real auth, real Stripe, real domain.
 
 ## Why a Clickable Prototype Catches What Interviews Miss
 
-Mom Test interviews are backward-looking. You are asking the interviewee to relive their past. The question is: "Tell me about the last time this happened." The signal is: "Did the problem actually occur, and how badly did it hurt?"
+A Mom Test interview pulls the interviewee into the past. You ask "tell me about the last time this happened" because you are trying to find out whether the problem actually occurred and how badly it hurt when it did.
 
-A prototype session is forward-looking. You are watching the interviewee work through a possible future. The question is: "Does the user know what to do next?" The signal is: "Can they figure out the SHAPE of the solution without you explaining it?"
+A prototype session does the opposite: it puts the interviewee into a possible future and watches what they do. You hand them three screens and watch whether they can figure out which button to click next without you coaching them. That is the signal interviews cannot give you.
 
-Three things break at the prototype stage that looked clean in interviews.
+Three things break at the prototype stage that looked clean in interviews:
 
-First, the workflow is backward. The founder designed the three screens in the order she thought about the problem. The user thinks about the problem in the opposite order. The first screen asks for the wrong piece of information. The user stalls.
+| Failure | What happens | Why interviews miss it |
+|---|---|---|
+| **Workflow backward** | The founder designed the three screens in the order she thought about the problem. The user thinks about it in the opposite order. Screen 1 asks for the wrong piece of information; the user stalls. | An interview asks "how do you do X" - it never asks "what would you click first on a screen." |
+| **Vocabulary wrong** | Founder calls it "reconciliation." User's accountant calls it "matching." Button says "Reconcile"; user clicks everything else on the screen first. | Verbal language in an interview doesn't expose what label a user expects on a button. |
+| **Scope wrong** | User opens the prototype, sees three screens, asks "where do I upload the CSV?" That feature was in Module 5 of the founder's plan; she considered it obvious context. It isn't. | Interview answers paint the system the founder describes, not the surface the user touches. |
 
-Second, the vocabulary is wrong. The founder calls it "reconciliation." The user's accountant calls it "matching." When the button says "Reconcile" the user clicks everything else on the screen first.
+None of these show up in a Mom Test interview - they only appear the moment a real person touches the interface, which is why both validation methods matter.
 
-Third, the scope is wrong. The user opens the prototype, sees three screens, and immediately asks "where do I upload the CSV?" That feature is in Module 5. The founder had not thought to include it in the prototype because she considered it obvious context. It is not obvious to the user.
-
-None of those three failures show up in a Mom Test interview. They only appear the moment a real person touches the interface, which is why both validation methods matter.
-
-The prototype session is the third validation pillar. The [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-300-dollar-validation/) proves demand (strangers click). The Mom Test proves the problem is felt (specific past stories). The prototype session proves solution legibility (a user can work through it without coaching).
+The prototype session is the third validation pillar. The other two tests cover different ground: the [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) shows whether strangers will click your headline, and the Mom Test shows whether the problem you found is one your interviewees actually feel. Neither answers the question this chapter is built around - whether a real user can find their way through your interface without someone over their shoulder telling them what to do.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -76,9 +79,9 @@ flowchart LR
 
 ## This Is Throwaway
 
-> Three screens, fake data hard-coded in, CTAs that navigate but do not save. You are building a question—"Does the user know what to do?"—not a product. Then you archive it.
+> Three screens, fake data hard-coded in, CTAs that navigate but do not save. You are building a question-"Does the user know what to do?"-not a product. Then you archive it.
 
-Founders who try to "polish the prototype into the MVP later" spend 3-5x longer on it, add features that invalidate the shape test, and carry every 2-hour compromise into production. The [Module 4 Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) starts fresh with a proper Vibe PRD, real auth, and a real database. This prototype has one goal: three screens, two hours, five sessions, then archive.
+Try to "polish the prototype into the MVP later" and you spend 3-5x longer on it, add features that invalidate the shape test, and carry every 2-hour compromise into production. The [Module 4 Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) starts fresh with a proper one-page brief, real auth, and a real database. This prototype has one goal: three screens, two hours, five sessions, then archive.
 
 ## Build 3 Screens in 2 Hours with Lovable
 
@@ -104,7 +107,7 @@ Open [Lovable](https://lovable.dev), create a new project, and paste the followi
 
 ---
 
-**Prompt to paste into Lovable:**
+**Prompt template to paste into Lovable** (placeholders in `[brackets]`):
 
 ```text
 Build a 3-screen clickable prototype for a [PRODUCT CATEGORY] tool targeting [TARGET USER].
@@ -113,21 +116,48 @@ This is a throwaway validation prototype. Use hard-coded fake data only. No back
 
 SCREEN 1 - [ENTRY POINT NAME]:
 - [PRIMARY ACTION the user takes on this screen]
-- Show [FAKE DATA EXAMPLE - e.g. "3 uploaded files listed: Q1-report.csv, march-invoices.csv, stripe-export.csv"]
+- Show [FAKE DATA EXAMPLE]
 - One prominent CTA button: "[BUTTON LABEL]"
 
 SCREEN 2 - [CORE ACTION NAME]:
 - [WHAT THE USER SEES after taking the Screen 1 action]
-- Show [FAKE DATA EXAMPLE - e.g. "12 matched transactions, 3 flagged for review"]
-- [KEY VOCABULARY the user must understand - e.g. "use the word 'match' not 'reconcile'"]
+- Show [FAKE DATA EXAMPLE]
+- [KEY VOCABULARY the user must understand]
 - One action: "[BUTTON LABEL]"
 
 SCREEN 3 - [RESULT/CONFIRMATION NAME]:
-- [WHAT SUCCESS LOOKS LIKE - e.g. "A summary card showing '12 transactions matched, $4,320 reconciled'"]
-- Next step prompt: "[WHAT YOU WANT THE USER TO DO NEXT - e.g. 'Download report' or 'Go to dashboard']"
+- [WHAT SUCCESS LOOKS LIKE]
+- Next step prompt: "[WHAT YOU WANT THE USER TO DO NEXT]"
 
 Design: Clean, minimal. Dark sidebar, white content area. [YOUR COLOR] accent. No login screen. No settings. No navigation beyond these 3 screens. Make it look functional, not finished.
 ```
+
+**Filled-in worked example.** Below is the same prompt with every blank replaced for one made-up product - a transaction-reconciliation tool for freelance bookkeepers. The category isn't the point; the *level of specificity* is. Read it before you fill yours in, so you can see what kind of answer each blank expects:
+
+```text
+Build a 3-screen clickable prototype for a transaction-reconciliation tool targeting freelance bookkeepers who reconcile Stripe + QuickBooks for client accounts.
+
+This is a throwaway validation prototype. Use hard-coded fake data only. No backend, no auth, no database. All buttons should navigate between screens or show a static success state.
+
+SCREEN 1 - Upload Statements:
+- The user uploads 3 CSVs (one Stripe export, one QuickBooks export, one bank export)
+- Show 3 uploaded files listed: Q1-report.csv, march-invoices.csv, stripe-export.csv
+- One prominent CTA button: "Match transactions"
+
+SCREEN 2 - Match Review:
+- A side-by-side table of Stripe rows next to QuickBooks rows, with a "match" indicator
+- Show 12 matched transactions, 3 flagged for review (use the word "match" not "reconcile" - the bookkeeper vocabulary is "match")
+- Use the word "match" not "reconcile" - the bookkeeper vocabulary in the field is "match"
+- One action: "Approve all matches"
+
+SCREEN 3 - Summary:
+- A summary card showing "12 transactions matched, $4,320 reconciled. 3 flagged need your review."
+- Next step prompt: "Download client-ready report (PDF)"
+
+Design: Clean, minimal. Dark sidebar, white content area. Teal accent. No login screen. No settings. No navigation beyond these 3 screens. Make it look functional, not finished.
+```
+
+If you can't fill in even the worked example's level of specificity (real product category, real user, real vocabulary, real fake-data examples), the prototype isn't your blocker - the hypothesis is. Go back to [Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and sharpen it first.
 
 ---
 
@@ -168,7 +198,22 @@ Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. You alre
 
 Book the sessions as 30-minute video calls. Send the Lovable prototype link 10 minutes before - not earlier. You do not want them exploring it solo before you can observe.
 
+> **Slow-path variant for 2-hr/week founders**: scheduling 5 live 30-min observation calls on top of your only weekly window is unrealistic. Async alternative: send each interviewee the Lovable prototype link + a 5-question Loom prompt ("record yourself trying these 3 tasks - 5 min total"). Use [Maze](https://maze.co) (free tier covers 3 testers) or [UserTesting](https://www.usertesting.com) (paid) if you want screen recording with click heatmaps. You lose the real-time follow-up question ability, but you gain async scheduling - the testers record on their own time, you watch the 5 recordings in one 90-min Tuesday block. Catch rate is about 70% of what live sessions surface (you miss the "what were you about to click" follow-ups) but 200% better than skipping the validation step because you couldn't schedule it.
+
 ### Script - the prototype session
+
+**What most founders say first (and why it ruins the session):**
+
+> "Hi! Thanks so much for testing my prototype. I'm really excited to show you what I've been working on - I've been building this for the last few weeks. Just click around and tell me what you think! Don't worry, it's still early. Let me know if anything's confusing and I can walk you through it."
+
+Every sentence above quietly biases the test:
+
+- **"my prototype"** + **"I've been building"** - the interviewee now knows it's YOUR baby. They're going to be kind, not honest.
+- **"really excited"** - sets the emotional contract: please don't disappoint me.
+- **"click around and tell me what you think"** - asks for opinion, not behavior. Opinions are cheap and polite.
+- **"I can walk you through it"** - signals you will rescue them if they get stuck. The whole point of the test is to find where they get stuck WITHOUT rescue.
+
+You now run a session where the interviewee performs satisfaction for you instead of doing the thing. You learn nothing about whether the screens make sense.
 
 **Opening (read verbatim, do not paraphrase):**
 
@@ -221,7 +266,7 @@ The prototype gate:
 
 - **4 or 5 passes out of 5 sessions:** Shape is legible. Advance to [Module 3 - One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 - **2 or 3 passes:** Revise one element (vocabulary, Screen 1 layout, or CTA label) and run 2 replacement sessions. One iteration only.
-- **0 or 1 pass:** The shape is wrong. The problem statement may be right but the solution concept needs a different starting point. Return to Chapter 2.3 before writing any brief. Shape mismatch usually means the problem signal you got from interviews was off - re-running the Mom Test with sharper questions catches what a prototype rebuild would miss.
+- **0 or 1 pass:** The shape is wrong. The problem statement may be right but the solution concept needs a different starting point. Return to Chapter 2.1 before writing any brief. Shape mismatch usually means the problem signal you got from interviews was off - re-running the Mom Test with sharper questions catches what a prototype rebuild would miss.
 
 The common fixable failures:
 
@@ -239,7 +284,7 @@ The throwaway nature of the prototype matters here too. When you find a vocabula
 |---|---|---|
 | **4-5 passes** | Shape is legible. Users navigate without coaching. | Write the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) using the exact "describe in one sentence" words from closing questions. This vocabulary is worth more than marketing copy. |
 | **2-3 passes** | Shape is mostly legible but something broke. | Revise one element (vocabulary, Screen 1 layout, or CTA label) and run 2 replacement sessions. One iteration only. |
-| **0-1 pass** | Shape is wrong. Solution concept needs a different starting point. | Read the "what did you expect to see" answers—that is the user's mental model. Return to Chapter 2.3 before restarting. Do not write the brief yet. |
+| **0-1 pass** | Shape is wrong. Solution concept needs a different starting point. | Read the "what did you expect to see" answers-that is the user's mental model. Return to Chapter 2.1 before restarting. Do not write the brief yet. |
 
 Catching a shape mismatch here costs you two hours. Catching it in Module 4, after you have started the real build, costs three weeks. The throwaway prototype buys you the cheaper version of that lesson.
 
@@ -253,7 +298,7 @@ The artifacts from this chapter carry into Module 3 as two inputs: the pass/fail
 |---|---|---|
 | **Monday morning** | Open Lovable and run the persona-setup prompt with your 3 ICP variants. Aim for a navigable 3-screen prototype before lunch. | ~2 hours |
 | **Monday–Thursday** | Book 5 silent-observation sessions with interviewees who scored 7+ on the Mom Test. Send the prototype link 10 minutes before each call. | Async recruiting |
-| **Friday afternoon** | Tally the pass count from 5 sessions. Copy the exact "describe in one sentence" answers into a doc—those words go into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) verbatim. | ~1 hour |
+| **Friday afternoon** | Tally the pass count from 5 sessions. Copy the exact "describe in one sentence" answers into a doc-those words go into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) verbatim. | ~1 hour |
 
 ## Further Reading
 
@@ -265,4 +310,4 @@ The artifacts from this chapter carry into Module 3 as two inputs: the pass/fail
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

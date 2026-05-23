@@ -1,6 +1,6 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-05-20 (triage from 3 review reports + Module->Chapter rename + Ch 1.1 enhancements)
+**Last Updated**: 2026-05-29 (ICP walkthrough recommendations + 20.10 decision doc cleanup)
 **Status legend**: Planned | Drafting | In review | Done | Paused | Dropped
 
 ---
@@ -20,7 +20,7 @@ Current source of truth:
 
 ## ICP Practicality Improvement Backlog
 
-Review lens: ICP-E, burned non-technical founder hiring or escaping a dev shop.
+Review lens: the course ICP - a non-technical founder going from idea (or half-built MVP) to first paying customer, who mostly has NOT hired yet. Burned/already-hired founders are a secondary audience routed to the rescue chapters (4.1/4.2) and the landing "If Your Team Is Already Failing" fast path - do not write validation/build chapter bodies to the burned founder. (Distinct from the website lead-gen ICP in `90.10-icp-primary-website-target.md`.)
 
 Current practicality score: 7.5/10.
 Target: 8.5/10 before launch.
@@ -36,13 +36,18 @@ Target: 8.5/10 before launch.
 | P1 | Create downloadable PDF templates + restore "Free templates" section on landing | Planned | 2026-05-21: removed "Free downloadable templates" H2 + 14-row table from `_index.md` because the links pointed to in-browser chapter pages, not actual PDF downloads. The chapter pages still exist (Outreach Sequence Template, Mom Test Interview Script, Validated Problem Statement Template, Vibe PRD Template, Build Path Decision Worksheet, GitHub/AWS/DB Ownership Checklist, Self-Serve Stack Walkthrough, Where-to-Hire Map 2026, Hiring Interview Script, SOW Reading Guide, First-Paying-Customer Operating Kit, Friday Demo Template, Salvage vs Rebuild Decision Tree, "We Use AI" 5-Question Script). When the 14 PDFs are precreated, restore the landing section with the correct framing (PDF + browser-page link side by side). Cover image chip "TEMPLATES 14 free" stays unchanged - it remains accurate because the template chapter pages still exist as free in-browser resources. |
 | P1 | Add Founder Control Dashboard artifact | Planned | One-page control system for access, demos, reports, SOW, budget, AI risk, and salvage score. Tie the strongest ICP-E chapters together. |
 | P1 | Make every artifact copy-pasteable | Planned | Each template page needs on-page scripts/checklists, not only descriptions of future assets. Prioritize SOW, DPA, outreach, hiring interview, ownership, Friday demo. |
-| P1 | Separate early-founder path from rescue path | Partial | Ch 1.1 now has top-of-page routing block ("Already burned?" / "Already hired?") on 2026-05-20. Roll same pattern out to other module-start chapters (1.2, 2.1, 3.1, 4.1, 5.1) in new 5-module spine. |
+| ✅ Done 2026-05-22 | Separate early-founder path from rescue path | Done | Decision reversed: chapter-level routing blocks removed, not rolled out. The Ch 1.1 "Already burned? / Already hired?" block was deleted 2026-05-22 - it interrupted the primary idea-stage ICP reader with two "leave this page" callouts before the hook, and duplicated the landing-page "If Your Team Is Already Failing" fast path (the real entry-point router for burned founders). Do NOT add per-chapter routing blocks to other module-start chapters; route burned founders at the landing page only. |
 | P1 | Add AI critic/simulator blocks per module | Planned | Standardize where AI helps: critique artifact, simulate customer/vendor/advisor, find contradictions. State what AI cannot prove. One block per module = 5 blocks (new 5-module spine). |
 | P1 | Roll manual-minimum sidebar to other tool-heavy chapters | Partial | 2026-05-20: 3 chapters got $0-budget callouts (Ch 1.2 smoke-test, Ch 4.3 self-serve-mvp-stack, Ch 5.5 outbound). Ch 2.2 already had manual-minimum sidebar. Audit remaining chapters (Ch 5.3, 5.4) for any unaddressed paid-tool friction. |
 | P2 | Add completion criteria to every chapter | Planned | Each chapter should end with "Done when / Next click / If blocked" so the founder knows when to move on. Template: `## Done when` + checklist + `## Next click` + conditional routing. 18 chapters. |
 | P2 | Tighten practical proof in weaker modules | Planned | Early validation and market-type chapters need more concrete founder examples, exact time boxes, and decision thresholds. |
+| P2 | Collapse outreach-sequence-template variant runs | Planned | 2026-05-23 audit found 3 variant groups rendered as 3 separate blockquote boxes each (LinkedIn DM openers ×3, cold-email subject lines ×3, possibly Day 1/3/7 email sequence ×3). Merge each group into ONE blockquote (use `>` blank-line separators) per the no-stacked-quotes rule. Lower priority because it's an artifact/template page, not a numbered linear chapter. |
+| P2 | De-stack + rebalance "$0 path" callouts (outbound, self-serve-mvp) | Planned | 2026-05-23: two chapters still have a "$0 path / $0 outbound stack" blockquote callout immediately under the Module banner (top-stack). Bundle with the deferred Module 4/5 budget-rebalance pass - de-stack to plain prose AND rebalance the framing per `feedback_budget_stance_free_and_paid_equal` (free and paid as equal options, reader chooses; don't lead with "$0 first"). |
+| P1 | Add time-badge to each chapter header | New (ICP walkthrough 10.06) | Each chapter needs a "**Time**: ~45 min" badge at the top so the reader can plan their session. 18 chapters. |
+| P1 | Build companion-post FAQ collection | New (ICP walkthrough 10.06) | Create a curated FAQ linking 8 companion posts as "read next" sidebars in relevant chapters. Currently only linked via course-frame nav. |
+| P1 | Rescue-path routing audit | New (ICP walkthrough 10.06) | Audit all 5 module-start chapters for consistent burned-founder rescue-path routing. Chapter 1.1 had routing blocks added then removed; ensure uniform approach across spine. |
 | P3 | Cover image regen audit for non-spine posts | Planned | 2026-05-20: 14 spine covers regenerated to clean "Curriculum 2026" badge. ~30 companion-post covers still have "Curriculum NN/30" stale counter. Regen via chrome-devtools at 2400×1260 if posts stay in active rotation. |
-| P3 | Update decision doc 20.10 with Click correction | Planned | 20.10-sequence-decision-validate-vs-smoke-test.md recommended "Option A - Swap" before re-reading Click's Experiment phase. Conclusion now superseded: KEPT current order + applied $0-budget reframe instead. Doc body still accurate as a research log but the Recommendation section is stale. |
+| ✅ Done | Update decision doc 20.10 with Click correction | Done | Decision block added at top of 20.10.md (2026-05-20) marking Recommendation section as superseded. TASK-TRACKER entry updated 2026-05-29. |
 
 ---
 

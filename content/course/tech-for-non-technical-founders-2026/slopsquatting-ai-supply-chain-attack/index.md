@@ -32,10 +32,13 @@ course_nav: false
 ---
 
 
-> **Going further (AI in production) · Step 3 of 3** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: any product touching AI in build (which is most products in 2026). Output: a one-paragraph contract clause + a CI gate that blocks hallucinated dependencies before merge.
+> **Going further (AI in production) · Step 3 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** any product touching AI in build (which is most products in 2026)
+>
+> **Output:** a one-paragraph contract clause + a CI gate that blocks hallucinated dependencies before merge
 
-> **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
 In April 2025, Lasso Security published findings that AI assistants suggested over 200 package names across Rubygems, PyPI, and npm that did not exist. Attackers registered those names and waited. By the time the [Infosecurity Magazine writeup](https://www.infosecurity-magazine.com/news/ai-hallucinations-slopsquatting/) named the technique "slopsquatting" in April 2025, security teams had already logged the first installs of the proof-of-concept packages on real production systems. Your founder paid $34K for an MVP. The most expensive line in the codebase was free. It was the one a model invented and a developer typed into a `Gemfile` without checking that the gem existed.
 
@@ -164,6 +167,6 @@ This is the last supplementary chapter. The full artifact list (Founder OS) and 
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
 
 If you finished the course end-to-end, [drop a note](mailto:hello@jetthoughts.com?subject=I%20finished%20the%20course) or ping [@jetthoughts on X](https://x.com/jetthoughts) - we would love to hear what you shipped.

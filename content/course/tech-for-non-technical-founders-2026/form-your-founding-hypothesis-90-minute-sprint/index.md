@@ -31,17 +31,13 @@ related_posts: false
 ---
 
 
-> **Module 1 · Step 1 of 3** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a rough idea, instinct, or half-built MVP. Output: a one-sentence Founding Hypothesis you can test in the next two modules.
+> **Module 1 · Step 1 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a rough idea, instinct, or half-built MVP
+>
+> **Output:** a one-sentence Founding Hypothesis you can test in the next two modules
 
-> **Already burned by a dev shop?** Jump to [Chapter 4.2 (Ownership Audit)](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) first - the highest-leverage 45 minutes you can spend this week if your team is shipping but you can't verify what.
-> **Already hired and runway is burning?** Skip to [Chapter 4.1 (Should You Hire?)](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) to decide whether to keep, restructure, or rebuild before any new validation work.
-
-If you're reading this because you already got burned - you're not stupid. You had information asymmetry working against you. The dev shop knew things you didn't know they knew, and they used that gap to sell you what they wanted to build instead of what you needed.
-
-This course closes that gap. You won't become a developer, but you'll learn the five or six questions that separate a team that's shipping from a team that's hiding. The first one is the cheapest: what's the smallest bet you can make this week to find out if your problem is real before any code gets written?
-
-If you haven't hired yet - good. The next 90 minutes are designed to prevent the bet you'd otherwise have to write a check for.
+You have an idea, or a half-built MVP, and you're about to start talking to people about it. Do one thing first: write the single sentence everything else gets tested against. The next 90 minutes build that sentence - your Founding Hypothesis - so you spend this week finding out whether the problem is real, before you write a line of code or a check.
 
 ## Don't Talk to Anyone Without a Hypothesis
 
@@ -82,7 +78,7 @@ Compare with what Gmail's founding hypothesis would have read like in 2003: "If 
 
 *Vague blanks = no test. Specific blanks = a sentence you can falsify in 2 weeks.*
 
-### What the strong examples share
+### What makes a blank specific
 
 The customer is a specific role with a specific friction. The problem is a verb-noun pair, not a category. The approach is one mechanism, not a feature list.
 
@@ -94,7 +90,7 @@ Read the sentence aloud to someone who is not your co-founder.
 
 If they say "wait, can you say that again" or "what does X mean," your sentence has a vague blank in it. Rewrite the blank. Read aloud again. Repeat until the listener nods on the first pass.
 
-Most founders need three or four reads to get there. That is the work.
+Three or four reads is normal. That is the work.
 
 ## The 90-Minute Compressed Sprint
 
@@ -155,12 +151,16 @@ Read it aloud three times. Adjust any blank that sounds vague. Stop when the sen
 
 ### Step 6: Test Design (10 min)
 
-Open a fresh page. Write one sentence: "The smallest signal that would prove or kill this hypothesis in two weeks is _____." Most founders default to "ten interviews," which is right but incomplete.
+Open a fresh page. Write one sentence:
+
+> *The smallest signal that would prove or kill this hypothesis in two weeks is _____.*
+
+The default answer is "ten interviews," which is right but incomplete.
 
 The full test is two parts:
 
-1. **A smoke-test landing page for demand signal** - Carrd or Framer page + $300-$500 of cold traffic + a Stripe price button. Step-by-step in [Chapter 1.2: Smoke-Test the Hypothesis](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-300-dollar-validation/) and [Chapter 1.3: Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/).
-2. **Ten Mom Test interviews for problem signal** - how to find ICP people, recruit them for unpaid 30-40 min calls, and run the interview without selling. Recruitment channels (Reddit, Twitter/X, LinkedIn, UserInterviews.com paid panels, personal network) are in [Chapter 2.2: Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/); the interview technique is in [Chapter 2.3: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).
+1. **A smoke-test landing page for demand signal** - a no-code page builder + cold traffic + a Stripe price button. Step-by-step, including which builder to use, in [Chapter 1.2: Smoke-Test the Hypothesis](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) and [Chapter 1.3: Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/).
+2. **Ten Mom Test interviews for problem signal** - how to find the right people (your "ICP", or Ideal Customer Profile: the specific kind of customer your hypothesis names in the [customer] blank), recruit them for unpaid 30-40 minute calls, and run the interview without selling. The interview technique is in [Chapter 2.1: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/); recruitment channels (Reddit, Twitter/X, LinkedIn, UserInterviews.com paid panels, personal network) are in [Chapter 2.3: Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 Write both as your test plan now (just the plan, not the execution). The hypothesis sentence + the two-part test design are the deliverables of this sprint. Modules 2 and 3 run the tests; this sprint produces the plan they run.
 
@@ -209,7 +209,7 @@ The Money lens is the one most non-technical founders score generously on becaus
 
 ### Applied: a procurement-tool example
 
-A 2026 example from the JT rescue queue. A B2B SaaS founder building a vendor-management tool for procurement teams scored her chosen approach:
+Here is the matrix filled in for a vendor-management tool aimed at procurement teams - the founder's chosen approach scored as follows:
 
 | Lens | Score | Why she scored it that way |
 |---|---|---|
@@ -251,17 +251,17 @@ The Mom Test rule is "ask about the past, not the future." You do not ask people
 
 The hypothesis is what you are confirming or killing; the interview is the instrument. Without a written hypothesis, you cannot run a Mom Test interview - there is nothing to falsify.
 
-### Why most founders we rescue skipped this step
+### Why writing the sentence first saves you weeks
 
-Most non-technical founders we joined in 2026 had gone straight to "talk to customers" without writing the sentence first. Their interview notes read like a kaleidoscope of pains and ideas.
+Skip the sentence and go straight to "talk to customers," and your interview notes come back a kaleidoscope of different pains and ideas - you can't tell which version of the product people were reacting to.
 
-Our first move in the rescue is always the same:
+Writing the sentence first prevents that. Do it in this order:
 
-1. Stop the interviews.
-2. Run this 90-minute sprint and write the sentence.
-3. Resume interviews with the sentence as the script anchor.
+1. Write the sentence (this 90-minute sprint).
+2. Book your interviews with the sentence as the script anchor.
+3. Each conversation confirms or kills one specific claim, instead of producing a pile of contradictory notes.
 
-The founders who do this on day one of their startup save the six weeks the HealthTech founder lost.
+Do this on day one and you walk into Module 2 with a sentence you can read aloud to your first ten interviewees, and a test plan that tells you in two weeks whether to build.
 
 ### The trade-off worth naming
 
@@ -269,11 +269,11 @@ A written hypothesis can feel premature when you have only an instinct. You will
 
 That is the point. A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
 
-Founders who refuse to write the sentence because "we don't know enough yet" usually spend ten times longer learning the same thing through anecdote.
+Refuse to write the sentence because "we don't know enough yet" and you'll spend ten times longer learning the same thing through anecdote.
 
 ## Advanced (optional sidebar)
 
-The 90-minute compressed sprint above is the simplest version that works. Founders who have run it once and want to layer on more structure can read these in order of complexity:
+The 90-minute compressed sprint above is the simplest version that works. Once you've run it once and want to layer on more structure, read these in order of complexity:
 
 | Framework | When to use | What it adds |
 |---|---|---|
@@ -303,6 +303,8 @@ WorthBuild's free side also has a Market Size Calculator, CAC, LTV, and Runway c
 
 You get a written four-lens debate in 30 seconds at zero cost. Less probing than Val's voice call, but enough for the first pass.
 
+> **Also worth a 30-second follow-up:** ask the same model `Name 3-5 named competitors or adjacent tools serving the same customer. Give me a URL for each.` You'll reuse those URLs in [Chapter 2.3's AI ICP map prompt](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - one less thing to scramble for later.
+
 None of these are required. The Mad Libs sentence and the 90-minute timer is the main path.
 
 ## Further reading
@@ -319,4 +321,4 @@ None of these are required. The Mad Libs sentence and the 90-minute timer is the
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

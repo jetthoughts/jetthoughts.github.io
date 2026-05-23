@@ -29,8 +29,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Going further · Continuation chapter 6 of 6** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a churn-triage decision (chapter 7.5) OR a Sean Ellis 40% test result (chapter 7.1). Output: a pivot decision with the 6-type framework + a written list of what you keep vs what you change.
+> **Going further · Continuation chapter 6 of 6** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a churn-triage decision (chapter 7.5) OR a Sean Ellis 40% test result (chapter 7.1)
+>
+> **Output:** a pivot decision with the 6-type framework + a written list of what you keep vs what you change
 
 ## The Course Is a Loop, Not an Escalator
 
@@ -170,4 +173,4 @@ D. is on his third pivot now. He ran the original hypothesis once (audit prep), 
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

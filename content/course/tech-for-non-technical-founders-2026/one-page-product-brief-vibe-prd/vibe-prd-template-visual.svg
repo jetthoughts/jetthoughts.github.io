@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 880" role="img" aria-label="One-page Vibe PRD template. A notebook page with five labeled sections: the problem (from Chapter 2.3), the user and their context, what you're building, success metric, what you're NOT building.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 880" role="img" aria-label="One-page Vibe PRD template. A notebook page with five labeled sections: the problem (from Chapter 2.1 synthesis), the user and their context, what you're building, success metric, what you're NOT building.">
   <title>One-page Vibe PRD - 5 sections on a notebook page</title>
   <desc>A clean notebook page divided into five fillable blocks. Section 1 copies the validated problem statement verbatim. Section 2 names the user, where they are, and the 60 seconds around using the product. Section 3 describes what is being built in one paragraph of plain English. Section 4 names one success metric with a number and a timeframe. Section 5 lists what is NOT being built in v1.</desc>
   <defs>
@@ -34,7 +34,7 @@
 
   <!-- Section 1: The problem -->
   <text x="160" y="156" class="sans snum">1.</text>
-  <text x="194" y="156" class="sans stitle">The problem (copy from Chapter 2.3)</text>
+  <text x="194" y="156" class="sans stitle">The problem (copy from Chapter 2.1)</text>
   <text x="160" y="180" class="sans body">Persona + industry + dated sample + verbatim quote + cost.</text>
   <text x="160" y="204" class="sans body">_______________________________________________________</text>
   <text x="160" y="228" class="sans body">_______________________________________________________</text>

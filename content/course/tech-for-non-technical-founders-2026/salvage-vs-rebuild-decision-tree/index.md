@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the "When Things Break" path of the [Tech for Non-Technical Founders 2026 course](/course/tech-for-non-technical-founders-2026/). Run alone Friday afternoon. Send the score to one independent reviewer for a paid 30-minute call.
+📋 Template companion to the "When Things Break" path of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run alone Friday afternoon. Send the score to one independent reviewer for a paid 30-minute call.
 
 # The Salvage vs Rebuild Decision Tree
 
@@ -104,4 +104,4 @@ If the verdict is FREEZE or REBUILD and the previous team is still around, the n
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

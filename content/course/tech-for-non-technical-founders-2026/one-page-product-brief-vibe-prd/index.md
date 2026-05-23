@@ -1,7 +1,7 @@
 ---
 title: "3.1 · The One-Page Product Brief (Vibe PRD)"
 aliases: ["/blog/one-page-product-brief-vibe-prd/"]
-description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the Tech for Non-Technical Founders 2026 course."
+description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the From Idea to First Paying Customer course."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -23,29 +23,30 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "3.1 · The One-Page Product Brief (Vibe PRD)"
-  og_description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the Tech for Non-Technical Founders 2026 course."
+  og_description: "The five sections your Lovable prompt or hired junior actually needs. Free Chapter 3.1 of the From Idea to First Paying Customer course."
 cover_image_alt: "JetThoughts cover showing a one-page product brief on a notebook with five labeled sections and a side-by-side bad vs good example"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/"
 related_posts: false
 ---
 
-> **Module 3 · Step 1 of 2** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a one-page validated problem statement (from [Chapter 2.3](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)). Output: a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team.
+> **Module 3 · Step 1 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a one-page validated problem statement (from the [Chapter 2.1 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next), after running interviews in Ch 2.3)
+>
+> **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
 
-*Founder anecdotes in this chapter use anonymized names; dollar amounts, timeframes, and technical specifics are exact.*
-
-Drew Falkman charges $1,000 for a 4-week Maven cohort that teaches non-technical founders one core artifact - a "Vibe PRD" you hand to Lovable, Cursor, or a hired junior so the build matches the problem. The cohort is excellent. The single most useful thing inside it is a one-page template you could fill in tonight. The reason most founders pay $1,000 is they have never seen the page. Here it is, for free, with the same five sections.
+This chapter walks you through the **Product Brief** - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document). It is a single page that names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building. The five sections below are the same ones Drew Falkman teaches in a 4-week Maven cohort for $1,000; this chapter walks you through the template so you can fill yours in tonight.
 
 ![One-page Vibe PRD template with five labeled sections: the problem, the user and their context, what you're building, success metric, what you're NOT building.](vibe-prd-template-visual.svg)
 
-## Why this matters in 2026
+## Who reads it: an AI agent or a hired junior, not a 6-person team
 
 | Audience | Read count | Timeline | Cost of a bad brief |
 |---|---|---|---|
 | **Traditional PRD** (6-person team) | 6 people read it + 1 kickoff call + 2 weeks refinement | 6-12 weeks to ship | Team builds the wrong thing slowly; you learn in sprints |
 | **Vibe PRD** (AI agent or junior) | 1 read, then building starts | 4-14 days to ship | Lovable ships you a wrong thing on Wednesday, and you spend the quarter discovering why it's hard to evolve |
 
-[Veracode's 2025 GenAI report](https://www.veracode.com/blog/genai-code-security-report/) found **45% of AI-generated code ships with at least one exploitable security flaw.** The brief is your only chance to constrain what the agent or the junior decides to build for you, and what they decide to skip. The audience changed in 2026; the document has to change with it.
+[Veracode's 2025 GenAI report](https://www.veracode.com/blog/genai-code-security-report/) found 45% of AI-generated code ships with at least one exploitable security flaw. The brief is your only chance to constrain what the agent or the junior builds for you, and what they skip.
 
 ## The 5-section template
 
@@ -53,7 +54,7 @@ The Vibe PRD is one side of paper. Five sections, in this order. Each section is
 
 The simplest reliable order is *problem → user → build → metric → no-go*. Every section has a job. Skip one and your prompt or your contractor fills it in for you, usually wrong.
 
-### Section 1 - The problem (lifted from Chapter 2.3)
+### Section 1 - The problem (lifted from Chapter 2.1 synthesis)
 
 What goes in it: one paragraph copied directly from your [validated problem statement](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost.
 
@@ -138,7 +139,7 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 
 | Scenario | Maven cohort is worth it | This template is enough to start |
 |---|---|---|
-| You wrote the page tonight and can't tell whether it is good. | Yes. Go for peer review + feedback. | Actually, post the draft in a founder Slack — free feedback in 2 hours. |
+| You wrote the page tonight and can't tell whether it is good. | Yes. Go for peer review + feedback. | Actually, post the draft in a founder Slack - free feedback in 2 hours. |
 | Accountability is your blocker. (3 abandoned briefs in a drawer.) | Yes. The cohort structure + deadline forces you through. | No. You need external structure. The template alone won't help. |
 | You want to go deeper on Lovable + Supabase + Stripe stack mechanics. | Yes. The cohort spends 2 of 4 weeks on this. | No. You'll need the stack tutorials anyway; the template is concept-only. |
 | You can sit alone for 2 hours and finish the brief from the page above. | No. | Yes. The cohort buys peer review + deadline + deeper stack work, but you'll ship either way. |
@@ -157,11 +158,11 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 
 The [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is the artifact for this post. Print it, fill it in 45 minutes, hand it to your AI agent or contractor the next day, and Module 3's checkpoint moves one step closer.
 
-Founders who skip this page and start prompting are the founders who, six weeks later, post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about a working MVP nobody wants. The brief is cheaper than the build it prevents.
+Skipping the brief and going straight into prompting is the most common way a non-technical founder ends up six weeks into a working MVP they realise they did not actually want - and into the [salvage-or-rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) that follows. Thirty minutes on this page tonight is what spares you those six weeks.
 
 ## What comes next (Chapter 4.1)
 
-You now have two validated artifacts: a one-page problem statement (from Chapter 2.3 synthesis) and a one-page Vibe PRD (from this chapter). The next step is NOT to hand the brief to Lovable yet - it's Chapter 4.1, a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve (Chapter 4.3), but only after the decision gate confirms it's right for YOUR runway and YOUR problem.
+You now have two validated artifacts: a one-page problem statement (from Chapter 2.1 synthesis) and a one-page Vibe PRD (from this chapter). The next step is NOT to hand the brief to Lovable yet - it's Chapter 4.1, a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve (Chapter 4.3), but only after the decision gate confirms it's right for YOUR runway and YOUR problem.
 
 ## Further reading
 
@@ -175,4 +176,4 @@ You now have two validated artifacts: a one-page problem statement (from Chapter
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

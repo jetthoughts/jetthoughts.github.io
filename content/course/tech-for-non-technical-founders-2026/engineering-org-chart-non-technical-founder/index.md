@@ -30,10 +30,13 @@ related_posts: false
 course_nav: false
 ---
 
-> **Chapter 5.2 · Step 1 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a team in place + a signed SOW. Output: a weekly oversight rhythm running by month 3.
+> **Chapter 5.2 · Step 1 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+> **Input:** a team in place + a signed SOW
+>
+> **Output:** a weekly oversight rhythm running by month 3
+>
+**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 >
 > **Read this if**: you've signed an SOW with a dev shop OR you're paying for "a team of N" without seeing the GitHub handles of who reviews your PRs each week.
 

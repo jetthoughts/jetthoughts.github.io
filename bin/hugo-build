@@ -7,6 +7,11 @@ set -euo pipefail
 OUTPUT_DIR=${OUTPUT_DIR:-_dest/public-dev}
 ENVIRONMENT=${ENVIRONMENT:-development}
 
+# Set HUGO_ENVIRONMENT for PostCSS (postcss.config.js checks this to
+# skip PurgeCSS, cssnano, and other expensive plugins in dev mode).
+# Hugo does not automatically export this env var to Node child processes.
+export HUGO_ENVIRONMENT="$ENVIRONMENT"
+
 BASE_URL=${BASE_URL:-}
 
 echo "Building Hugo site..."
@@ -15,11 +20,13 @@ echo "Output: $OUTPUT_DIR"
 
 BUILD_DRAFTS=${BUILD_DRAFTS:-}
 
-# Project uses Bun for JS, never Node. bin/shims/node forwards Hugo's
-# hardcoded "node" lookup to bun. The [security.node.permissions]
-# block in hugo.toml is a defensive fallback for vanilla Node 22+.
+# Add node_modules/.bin to PATH for npm CLI tools.
+# NOTE: We intentionally do NOT include bin/shims (the node→bun shim)
+# because Hugo's postCSS pipe fails with bun when production plugins
+# (PurgeCSS, cssnano, etc.) are enabled. The CI workflow creates its
+# own bun→node symlink separately — that's a CI-level concern.
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PATH="$SCRIPT_DIR/shims:$SCRIPT_DIR/../node_modules/.bin:$PATH"
+PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH
 
 # Run course source-of-truth validators before building

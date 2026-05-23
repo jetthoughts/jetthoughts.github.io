@@ -29,10 +29,17 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 4 · Step 2 of 4** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a build-path decision from Chapter 4.1 (self-serve or hire). Output: a 45-minute Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't).
+> **Module 4 · Step 2 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a build-path decision from Chapter 4.1 (self-serve or hire)
+>
+> **Output:** a 45-minute Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
 
-A health-tech founder we picked up in Q4 2025 had been billing **$23K a month** with the same agency for fourteen months. She had a Delaware C-corp, a Stripe account in her name, and 1,800 paying clinics on her platform. She did not have the AWS root password. The email on the root was the agency owner's personal Gmail. When that founder asked us to do an emergency rescue after a botched migration, our first hour was not technical. It was three back-and-forth emails to the agency owner asking him to please change the root account email and send the new password to a Notion doc he could not see. He took six days.
+This audit applies BEFORE you hand over a credit card to your first contractor, agency, or Fractional CTO. It also works as a post-hire rescue, but the cheaper time to run it is on Day 1 - not month 14, when the story below kicks off.
+
+> **On Path 2 (self-serve from Ch 4.1)?** Most of this audit takes 5 minutes - your Lovable, Supabase, Stripe, GitHub, and domain accounts will be in your own email if you signed up yourself. Skim the 12-item table below to confirm, save the chapter, and return in full the day you hire your first contractor or Fractional CTO. The chapter applies in full only when someone else's email could end up on your root accounts.
+
+Fourteen months of **$23K monthly invoices**, a Delaware C-corp, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the agency owner's personal Gmail. The first hour of that health-tech rescue last Q4 was not technical. It was three back-and-forth emails to the agency owner asking him to please change the root account email and send the new password to a Notion doc he could not see. He took six days.
 
 *Ownership*: who controls the GitHub org, the AWS root account, the domain registrar, and the prod database. A Day-1 audit means you can fire your team Tuesday without losing the codebase Wednesday.
 
@@ -51,6 +58,8 @@ The financial damage is rarely the headline number on the agency invoice. It is 
 ## The 12 items, in four zones
 
 The full audit lives at the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) - 12 items, the exact pass criterion for each, the recovery steps when one fails. Here is the one-line summary, grouped by the zone you check.
+
+> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules (the source of the 14-day wait if your registrar lock isn't released).
 
 | Zone | Item | Pass Criterion |
 |---|---|---|
@@ -174,4 +183,4 @@ The artifact at [/course/tech-for-non-technical-founders-2026/ownership-checklis
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

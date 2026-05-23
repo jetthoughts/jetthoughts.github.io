@@ -1,4 +1,4 @@
-# Tech for Non-Technical Founders 2026 - chapter sequence (5-module spine)
+# From Idea to First Paying Customer - chapter sequence (5-module spine)
 # Each entry: slug, title (short for nav), module label, goal (one-sentence outcome)
 # Order = reading sequence on the landing page (Module 1 -> end of Module 5).
 # Used by the prev/next partial on chapter pages.
@@ -18,7 +18,7 @@ sequence:
     module: "Chapter 1.1"
     goal: "Write a one-sentence Founding Hypothesis you can falsify in 2 weeks."
 
-  - slug: smoke-test-landing-page-300-dollar-validation
+  - slug: smoke-test-landing-page-7-day-demand-test
     title: "1.2 · Smoke-Test the Hypothesis"
     module: "Chapter 1.2"
     goal: "Ship a landing page that proves cold strangers click on your hypothesis sentence."
@@ -28,20 +28,20 @@ sequence:
     module: "Chapter 1.3"
     goal: "Add a Stripe price button to your page and measure click-to-payment intent."
 
-  - slug: ai-persona-pre-validation-mom-test-prep
-    title: "2.1 · AI Persona Pre-Validation"
+  - slug: mom-test-ask-about-past-not-future
+    title: "2.1 · The Mom Test: Ask About the Past, Not the Future"
     module: "Chapter 2.1"
-    goal: "Sharpen Mom Test interview questions with a Claude persona before booking real calls."
+    goal: "Learn the 5-question Mom Test technique and build your draft interview question list."
+
+  - slug: ai-persona-pre-validation-mom-test-prep
+    title: "2.2 · Sharpen Your Question List with AI Personas"
+    module: "Chapter 2.2"
+    goal: "Polish the Ch 2.1 question list with a Claude persona companion pass before booking real slots."
 
   - slug: find-10-people-with-problem-outreach-2026
-    title: "2.2 · Find 10 People With the Problem"
-    module: "Chapter 2.2"
-    goal: "Book 10 ICP interviews in one week using free DMs or a paid outreach stack."
-
-  - slug: mom-test-ask-about-past-not-future
-    title: "2.3 · The Mom Test: Ask About the Past, Not the Future"
+    title: "2.3 · Find 10 People With the Problem"
     module: "Chapter 2.3"
-    goal: "Run 10 past-anchored interviews that produce a signed validated problem statement."
+    goal: "Book 10 ICP interviews + run them with the sharpened question list, producing a validated problem statement."
 
   - slug: clickable-prototype-validation-2-hour-lovable
     title: "2.4 · Build a Clickable Prototype in an Afternoon"

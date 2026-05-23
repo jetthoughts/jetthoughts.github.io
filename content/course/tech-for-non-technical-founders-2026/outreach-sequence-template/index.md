@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 2.1 post](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Run Monday morning. 10 calls in your calendar by Friday.
+📋 Template companion to the [Chapter 2.3 post](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Run Monday morning. 10 calls in your calendar by Friday.
 
 # Find 10 People With the Problem - The 2026 Outreach Sequence Template
 
@@ -209,7 +209,7 @@ The bad comment gets auto-removed by mods and reads as recruiting traffic. The g
 
 - **Score responses Wednesday afternoon.** Aim for **25-35% reply rate** by mid-week (same benchmark the well-crafted Day-0 example produces). If you're under 10%, the Day-0 subject line is generic - rewrite it referencing a specific public post and resend Thursday morning.
 - **By Friday, hold 10 booked calls across the next 2 weeks.** Cold outreach should give you 5-7 of them. Paid panel fills the other 3-5. The smoke-test landing page is a signal track, not a booking track.
-- **Move to the Mom Test interview script (Chapter 2.2).** The script tells you what to ask once they're on the call. The wrong questions waste the conversations you just booked. The [Mom Test reference at momtestbook.com](https://www.momtestbook.com/) is the anchor; Chapter 2.2 ships the JT-curated 5-question script.
+- **Move to the Mom Test interview script (Chapter 2.1).** The script tells you what to ask once they're on the call. The wrong questions waste the conversations you just booked. The [Mom Test reference at momtestbook.com](https://www.momtestbook.com/) is the anchor; Chapter 2.1 ships the JT-curated 5-question script.
 
 ## What to do tomorrow
 
@@ -221,4 +221,4 @@ Three actions. Block the morning before email.
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

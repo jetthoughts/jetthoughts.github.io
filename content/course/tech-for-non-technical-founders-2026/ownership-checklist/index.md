@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to Module 5 of the [Tech for Non-Technical Founders 2026 course](/course/tech-for-non-technical-founders-2026/). Run on Day 1 of any build (self-serve or hired), alone, with your credit card and a Notion doc.
+📋 Template companion to Module 5 of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run on Day 1 of any build (self-serve or hired), alone, with your credit card and a Notion doc.
 
 # The GitHub / AWS / Database Ownership Checklist
 
@@ -137,4 +137,4 @@ If you are in this spot, the [JetThoughts dev shop red flags checklist](/blog/de
 - **Add it to your due diligence checklist for the next dev shop.** Before you sign a contract, get it in writing that all GitHub orgs, AWS accounts, domain registrar accounts, secrets stores, and third-party API accounts will be created under your company email from Day 1. Put it in the SOW. The [JetThoughts founder's guide to hiring a dev shop](/blog/founders-guide-hiring-dev-shop/) walks through the clauses worth requesting.
 - **Forward the audit answers to your investor or board the same day.** Three quarterly audits in a row in their inbox is the cheapest investor-trust signal you will ever ship.
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

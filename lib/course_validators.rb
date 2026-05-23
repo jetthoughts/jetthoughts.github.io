@@ -32,7 +32,10 @@ class CourseValidators
       check_chapter_number_consistency,
       check_title_yaml_match,
       check_internal_links,
-      check_table_width
+      check_table_width,
+      check_disclaimer_consistency,
+      check_em_dash_in_content,
+      check_year_stamp_fabrication
     ]
   end
 
@@ -233,7 +236,66 @@ class CourseValidators
     Result.new(name: "table-width", passed: violations.empty?, violations: violations)
   end
 
+  # ── Validator 5: Disclaimer consistency (all-or-none) ────────────────────
+  # A per-chapter boilerplate disclaimer must appear in EVERY course chapter or
+  # NONE. Present in only some = inconsistent artifact (the user flagged a
+  # disclaimer living in 2 of 18 chapters on 2026-05-22).
+
+  DISCLAIMER_MARKER = "anonymized names"
+
+  def check_disclaimer_consistency
+    chapters = course_chapters
+    with = chapters.select { |p| File.read(p).include?(DISCLAIMER_MARKER) }
+    violations = []
+    if with.any? && with.length < chapters.length
+      slugs = with.map { |p| File.basename(File.dirname(p)) }
+      violations << "disclaimer ('#{DISCLAIMER_MARKER}') present in #{with.length}/#{chapters.length} chapters (must be all or none): #{slugs.join(", ")}"
+    end
+    Result.new(name: "disclaimer-consistency", passed: violations.empty?, violations: violations)
+  end
+
+  # ── Validator 6: No em-dashes in content ─────────────────────────────────
+  # Project rule: use "-" not "—" in all content. Code fences excluded so
+  # legitimate code samples don't false-positive.
+
+  def check_em_dash_in_content
+    violations = []
+    course_chapters.each do |path|
+      slug = File.basename(File.dirname(path))
+      count = strip_code_fences(File.read(path)).count("—")
+      violations << "#{slug}: #{count} em-dash(es) (—) in content - use '-' instead" if count.positive?
+    end
+    Result.new(name: "no-em-dash", passed: violations.empty?, violations: violations)
+  end
+
+  # ── Validator 7: Year-stamp client-cohort fabrication ────────────────────
+  # Flags fabricated client-cohort timelines ("founders we joined in 2026",
+  # "A 2026 example"). Real dated references (a book's pub date, a CVE year)
+  # are NOT matched - only the "clients we X in YEAR" cohort shapes.
+
+  COHORT_YEAR_PATTERNS = [
+    /\b(?:founders?|clients?|teams?|rescues?)\s+we\s+(?:joined|ran|rescued|worked with)\s+(?:in\s+)?(?:early |mid |late |January |February |March |April |May |June |July |August |September |October |November |December )?20\d{2}/i,
+    /\bA\s+20\d{2}\s+example\b/i,
+    /\bwe\s+(?:joined|rescued|ran)\b[^.\n]*\bin\s+(?:early |mid |late |January |February |March |April |May |June |July |August |September |October |November |December )?20\d{2}/i
+  ].freeze
+
+  def check_year_stamp_fabrication
+    violations = []
+    course_chapters.each do |path|
+      slug = File.basename(File.dirname(path))
+      body = File.read(path)
+      COHORT_YEAR_PATTERNS.each do |re|
+        body.scan(re) { |_| violations << "#{slug}: fabricated client-cohort year-stamp (matched /#{re.source}/)" }
+      end
+    end
+    Result.new(name: "year-stamp-fabrication", passed: violations.empty?, violations: violations)
+  end
+
   # ── Helpers ──────────────────────────────────────────────────────────────
+
+  def strip_code_fences(text)
+    text.gsub(/```.*?```/m, "")
+  end
 
   def course_chapters
     # Recursive glob to handle nested course namespaces

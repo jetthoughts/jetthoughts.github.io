@@ -29,26 +29,29 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Step 5 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: network exhausted, ~10 customers in from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) and [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Output: 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared in weeks 3-4.
+> **Module 5 · Step 5 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** network exhausted, ~10 customers in from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) and [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+>
+> **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared in weeks 3-4
 
 > **$0 outbound stack.** Apollo's free tier (50 credits/mo) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($37) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
-This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time. The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script. The one difference is that those Module 2 interviewees are warm targets - they already spoke with you about their pain, so your first line can reference that conversation directly instead of finding an external hook.
+This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time. The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script. The one difference is that those Module 2 interviewees are warm targets - they already spoke with you about their pain, so your first line can reference that conversation directly instead of finding an external hook.
 
 Product Hunt converted at 3.1% per launch event across 387 launches OpenHunts studied in 2024. Indie Hackers - posts written as engagement rather than launch announcements - converted at 23.1% per engaged post over the same period. 89% of the Product Hunt founders OpenHunts surveyed said they would not launch on the platform again ([source](https://awesome-directories.com/blog/indie-hackers-launch-strategy-guide-2025/)). The data has been public since the OpenHunts study released in mid-2024, yet every "first 10 customers" article still leads with Product Hunt. Product Hunt is not bad; it is a one-day event in a job that needs sustained motion over a quarter.
 
-A B2B SaaS rescue we joined in April 2026 had cleared four paid pilots from the founder's personal network and LinkedIn audience over six weeks, then ran out of warm names at customer five. She had already booked a launch coach and signed an ad-agency contract, then cancelled both after seeing the OpenHunts numbers. Customer five signed a $4,200 pilot in week 3 from the four-line cold-email sequence below.
+A B2B SaaS founder we worked with had cleared four paid pilots from her personal network and LinkedIn audience over six weeks, then ran out of warm names at customer five. She had already booked a launch coach and signed an ad-agency contract, then cancelled both after seeing the OpenHunts numbers. Customer five signed a $4,200 pilot in week 3 from the four-line cold-email sequence below.
 
 ![Product Hunt 3.1% vs Indie Hackers 23.1% - per OpenHunts 2024](ph-vs-ih.svg)
 
 This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events. Figma's first customer 11-20 cohort came from cold DMs to influential designers identified via Twitter data. Retool filtered Crunchbase by funding recency. Your rescue-Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
 
-## Why Product Hunt is the wrong lever for an ICP-E product
+## Why Product Hunt is the wrong lever for a B2B SaaS product
 
 > **Product Hunt is one day. Cold outbound is sustained. Sustained motions are what put paying customers on the calendar.**
 > 
-> Product Hunt converts at 3.1% (387 launches, OpenHunts 2024). Indie Hackers converts at 23.1% per engaged post. 89% of Product Hunt founders said they'd never launch again. Product Hunt suits developer tools / AI productivity / indie SaaS where buyers read it daily. Your ICP-E customer at a 50-500 person company in a vertical doesn't. The 5,000 upvotes are from the wrong people.
+> Product Hunt converts at 3.1% (387 launches, OpenHunts 2024). Indie Hackers converts at 23.1% per engaged post. 89% of Product Hunt founders said they'd never launch again. Product Hunt suits developer tools / AI productivity / indie SaaS where buyers read it daily. Your B2B buyer at a 50-500 person company in a specific vertical doesn't. The 5,000 upvotes are from the wrong people.
 > 
 > The calendar shapes the outcome: Product Hunt is one day, Indie Hackers is six months, filtered cold outbound is 30 messages every two weeks for a quarter. Founders shortcutting to one-day launches keep being surprised leads don't show up the next morning. The question is not "which big launch." It is "which 50 named buyers should hear from me first."
 
@@ -235,4 +238,4 @@ The course graduates here. Return to the [course landing page](/course/tech-for-
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

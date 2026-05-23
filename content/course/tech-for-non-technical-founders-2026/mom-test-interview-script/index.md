@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 2.2 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
+📋 Template companion to the [Chapter 2.1 post](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Open on a second screen during the call. Read questions verbatim.
 
 # The Mom Test Interview Script - Ask About the Past, Not the Future
 
@@ -146,7 +146,7 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 ## What to do after the call
 
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in your notes file. If you score later you will round up.
-- **If you have 7+ scores on 7 out of 10 interviews:** the problem is validated. Move to the Validated Problem Statement template (Chapter 2.3).
+- **If you have 7+ scores on 7 out of 10 interviews:** the problem is validated. Move to the Validated Problem Statement template (synthesis section of Chapter 2.1).
 - **If you have fewer than 5 scores of 7+:** the problem is too weak. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
 - **Forward the transcripts to your fractional CTO or independent advisor** before you make the build/no-build call. Two readers catch what one misses.
 
@@ -154,4 +154,4 @@ Founders who skip this script and run "feature interest" interviews ("would you 
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

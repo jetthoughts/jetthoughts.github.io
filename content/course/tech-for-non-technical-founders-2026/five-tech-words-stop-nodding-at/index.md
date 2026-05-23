@@ -29,7 +29,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Course glossary** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
+> **Course glossary** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course.
 > Vocabulary the rest of the course assumes you have. Skim once; come back when you hit a word you nodded at.
 
 A founder we picked up in Q1 2026 had nodded at the same word for fourteen months. Every Friday her contractor's PM said "we're refactoring the order flow" and she wrote it down. When her new fractional CTO finally read the repo, he came back with one line: nothing new had shipped to production since month three. **"Refactoring" had cost her $51K and a year of runway.** She had nodded because she did not know what else to do.

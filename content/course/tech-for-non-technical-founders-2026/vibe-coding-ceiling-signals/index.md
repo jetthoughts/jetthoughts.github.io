@@ -30,10 +30,17 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 4 · Step 4 of 4** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a live MVP on the self-serve stack (from Chapter 4.3). Output: a yes/no decision on whether to graduate to Module 5 (First Paying Customer) or hire or stay self-serve.
+> **Module 4 · Step 4 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a live MVP on the self-serve stack (from Chapter 4.3)
+>
+> **Output:** a yes/no decision on whether to graduate to Module 5 (First Paying Customer) or hire or stay self-serve
+
+**Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term comes from indie founder Pieter Levels and describes the 2026 default for solo non-technical founders. It works astonishingly well until it doesn't, and "until it doesn't" is the moment this chapter is about.
 
 Starting at Week 2 of your build, run this 5-signal check monthly. Each signal that fires earlier saves weeks later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
+
+> **This chapter is a monthly review reference, not a Monday task.** Your only action today: open your calendar and add a recurring 15-minute block on the first Monday of each month titled "Vibe-coding 5-signal check." The first time you actually run the scorecard is Week 2 of your live build (Ch 4.3); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The scenario below is what the ceiling looks like when it actually arrives:
 
 Tuesday morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $20/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
 
@@ -41,9 +48,9 @@ Two of your users keep landing on each other's data because the [Supabase](https
 
 ![A hand-drawn scoreboard showing the 5 architectural ceiling signals: data model, real-time, auth complexity, AI cost, compliance. Each row has the visible symptom and the recommended action.](signals-scoreboard.svg)
 
-## Why this matters in 2026
+## Who this 5-signal check is for
 
-The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about. Founders who run this check monthly from Week 2 catch the ceiling before it becomes an emergency. Founders who skip it until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - find it costs more to fix late than it would have to address early. The 5 signals below are the early-warning system. Run them before you need them.
+The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about. Run this check monthly from Week 2 of your build and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem. The 5 signals below are the early-warning system. Run them before you need them.
 
 ## The 5 architectural ceiling signals
 
@@ -109,6 +116,12 @@ Skim this table to spot which signals might fire for you now; deep-read the ones
 
 **Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal. Vanta, Drata, and Secureframe automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
 
+**What to say to the customer this week** (when they ask for SOC2 / HIPAA BAA / PCI before you can deliver it): respond within 48 hours with a 3-sentence email - do not ghost. Use this template:
+
+> *"Thank you for the SOC2 / [BAA / PCI] questionnaire. We are pre-SOC2 [or pre-BAA] today and are starting the readiness work in Q3. In the meantime, I can share our security one-pager (encryption at rest via Supabase, payments via Stripe Checkout, data deletion on request) and offer a 90-day pilot with the data-handling restrictions of your choice - including hosting in a sandboxed instance if that helps your security team approve. Would that bridge work while we complete the formal certification?"*
+
+This buys you 60-90 days to start the engineering work. About 30-40% of enterprise security teams will accept a documented bridge for a small pilot; the rest will say "come back when SOC2 is done" - which is the same answer you would get from ghosting them, plus you have preserved the relationship for the rebid 6 months later. Keep the security one-pager as a shared Google Doc with: data flow diagram, encryption-at-rest summary, vendor list (Supabase, Stripe, Lovable, Loom, etc.), and a one-line incident-response contact. 30 minutes to draft; reusable across every enterprise sales conversation.
+
 ## Shed → House → Skyscraper
 
 ![A hand-drawn progression of three buildings: a small shed labeled Lovable + Supabase + Stripe, a two-story house labeled Fractional CTO + 1-2 engineers on Rails / Django / Laravel, and a tall skyscraper labeled Hired team with SOC2 and HIPAA. Arrows between them mark the ceiling-signal moments.](shed-house-skyscraper.svg)
@@ -160,7 +173,7 @@ Q1 Yes + Q2 No: graduate to the [Fractional CTO bridge](/course/tech-for-non-tec
 Three actions. The first is tonight.
 
 - **Open your Lovable + Supabase admin dashboard tonight.** Pull up: the 30-day request error rate, the 30-day Stripe webhook retry log, the active user count, and last month's OpenAI / Anthropic invoice if you use one. Five minutes of dashboard time is the input to the scoreboard.
-- **Score each of the 5 signals: green / yellow / red.** Use the scoreboard above. Green = no symptom yet. Yellow = symptom showing in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Be honest. Founders who score themselves green when the symptoms are firing are the founders who post in the [salvage-or-rebuild thread](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) at month nine.
+- **Score each of the 5 signals: green / yellow / red.** Use the scoreboard above. Green = no symptom yet. Yellow = symptom showing in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Score green when the symptoms are firing and you arrive at the [salvage-or-rebuild thread](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) at month nine - by then the rebuild estimate is months of work you could have caught in days.
 - **If 2 or more signals are red, start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The Fractional CTO conversation is one Calendly invite away and the first call is usually free. The bridge holds until you have the runway clarity for a full hire.
 
 ## Further reading
@@ -175,4 +188,4 @@ Three actions. The first is tonight.
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

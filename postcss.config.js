@@ -73,6 +73,12 @@ module.exports = {
       skipDuplicates: true
     }),
 
+    // NOTE: POSTCSS_ENABLE_MIXINS and POSTCSS_ENABLE_EXTEND are inherited naturally
+    // from the parent shell through standard OS process inheritance. Hugo does NOT
+    // filter child-process env vars — only HUGO_ENVIRONMENT fails to auto-export.
+    // These two toggles work without any explicit export in bin/dev, bin/hugo-build,
+    // or CI. They're only needed if you want to DISABLE a plugin (export either as 'false').
+
     // Mixins first so they can be expanded before nesting/extend
     process.env.POSTCSS_ENABLE_MIXINS === 'false' ? null : postcssMixins({
       mixinsDir: 'themes/beaver/assets/css/mixins'

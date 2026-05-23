@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+# bin/check-node-runtime — Checks and fixes Node runtime for Hugo's PostCSS
+#
+# Hugo's PostCSS pipe fails when `node` resolves to bun (via symlink or shim)
+# and production plugins (PurgeCSS, cssnano, autoprefixer) are enabled. This
+# can corrupt the Hugo asset cache (resources/_gen/assets) with broken output
+# that persists across CI runs.
+#
+# Checks:
+#   1. Symlink check — "node → bun" (catches CI's $HOME/.bun-as-node symlink)
+#   2. Runtime check — detects Bun global in Node context (catches shims, PATH)
+#
+# If bun is detected: clears asset cache + adjusts PATH to use real Node.
+#
+# Usage: ./bin/check-node-runtime
+# Exit codes:
+#   0 — system Node in use, no action needed
+#   1 — bun detected and fixed (cache cleared, PATH adjusted)
+#   2 — bun detected but couldn't find real Node.js (build will likely fail)
+
+set -euo pipefail
+
+NODE_PATH=$(which node 2>/dev/null || true)
+
+if [ -z "$NODE_PATH" ]; then
+  echo "❌ [check-node-runtime] No 'node' found in PATH"
+  exit 2
+fi
+
+# --- Detection: two-method approach ---
+
+IS_BUN=false
+
+# Method 1: symlink check (catches CI's explicit bun→node symlink)
+if [ -L "$NODE_PATH" ]; then
+  TARGET=$(readlink "$NODE_PATH")
+  BUN_PATH=$(which bun 2>/dev/null || true)
+  if [ -n "$BUN_PATH" ] && [ "$TARGET" = "$BUN_PATH" ]; then
+    IS_BUN=true
+  fi
+fi
+
+# Method 2: runtime check (catches any bun-as-node scenario)
+if [ "$IS_BUN" = false ]; then
+  if ! node -e "process.exit(typeof Bun === 'undefined' ? 0 : 1)" 2>/dev/null; then
+    IS_BUN=true
+  fi
+fi
+
+if [ "$IS_BUN" = false ]; then
+  echo "✓ [check-node-runtime] 'node' is real Node.js ($(node --version))"
+  exit 0
+fi
+
+# --- Bun detected ---
+
+echo "⚠️  [check-node-runtime] 'node' resolves to bun"
+echo "   Path: $NODE_PATH"
+echo "   Hugo's PostCSS fails with bun when production plugins are enabled."
+echo ""
+
+# Step 1: Clear Hugo asset cache (may contain stale bun-produced output)
+if [ -d "resources/_gen/assets" ]; then
+  echo "   Clearing resources/_gen/assets to force clean PostCSS..."
+  rm -rf resources/_gen/assets
+  echo "   ✓ Asset cache cleared"
+  echo ""
+fi
+
+# Step 2: Find real Node.js
+# Search order: PATH (excluding bun dirs), known locations
+REAL_NODE=""
+
+# Remove bun-as-node directories and search PATH first
+REAL_NODE_CANDIDATE=$(echo "$PATH" | tr ':' '\n' | while IFS= read -r d; do
+  if [ -f "$d/node" ] && [ -L "$d/node" ]; then
+    TGT=$(readlink "$d/node" 2>/dev/null || echo "")
+    BUN=$(which bun 2>/dev/null || true)
+    [ "$TGT" != "$BUN" ] && echo "$d/node"
+  elif [ -x "$d/node" ] && [ ! -L "$d/node" ]; then
+    echo "$d/node"
+  fi
+done | head -1)
+
+if [ -n "$REAL_NODE_CANDIDATE" ]; then
+  REAL_NODE="$REAL_NODE_CANDIDATE"
+elif [ -x "/usr/local/bin/node" ]; then
+  REAL_NODE="/usr/local/bin/node"
+elif [ -x "/usr/bin/node" ]; then
+  REAL_NODE="/usr/bin/node"
+elif [ -x "/opt/homebrew/bin/node" ]; then
+  REAL_NODE="/opt/homebrew/bin/node"
+fi
+
+if [ -n "$REAL_NODE" ] && [ "$REAL_NODE" != "$NODE_PATH" ]; then
+  echo "   Found real Node.js at: $REAL_NODE ($($REAL_NODE --version))"
+
+  # Remove bun-as-node directories from PATH
+  DIR_TO_REMOVE=$(dirname "$NODE_PATH")
+  NEW_PATH=$(echo "$PATH" | tr ':' '\n' | grep -v "$DIR_TO_REMOVE" | tr '\n' ':')
+  # Ensure real node's parent dir is in PATH (prepend if not)
+  REAL_DIR=$(dirname "$REAL_NODE")
+  if ! echo "$NEW_PATH" | tr ':' '\n' | grep -qxF "$REAL_DIR" 2>/dev/null; then
+    NEW_PATH="$REAL_DIR:$NEW_PATH"
+  fi
+  export PATH="$NEW_PATH"
+
+  echo "   ✓ PATH adjusted. 'node' is now: $(which node) ($(node --version))"
+  echo ""
+  echo "✓ [check-node-runtime] Runtime fixed — ready for PostCSS build"
+  exit 1
+else
+  echo "   ❌ Could not find real Node.js. PostCSS build will likely fail."
+  exit 2
+fi

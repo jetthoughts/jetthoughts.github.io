@@ -29,8 +29,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Step 3 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). Output: 50 personalized outreach messages sent in week 1, with replies tracked in a spreadsheet.
+> **Module 5 · Step 3 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+>
+> **Output:** 50 personalized outreach messages sent in week 1, with replies tracked in a spreadsheet
 
 In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies a simple question: where did your first 10 customers come from? The list was not modest - Figma, Stripe, Slack, Airtable, Shopify, Notion, Front, Loom, and thirteen others at similar scale. He published the answers in [a piece](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses) every non-technical founder should read before the first ad runs. The headline number: roughly 60% of those first customers came from the founder's personal network, around 35% from filtered cold outbound, and only 5% from inbound, press, or launch events.
 
@@ -46,7 +49,7 @@ The objection comes up in every founder call: "I do not want to ask friends. It 
 
 Reframe. You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro. The trade is "ten weeks of your time and $500 against a tool that will save you ten hours a week from week one." Founders who have the problem take the trade; founders who do not have it were never your customer, so you cut bait fast and move to the next name.
 
-Four 2026 B2B founders who shipped paid pilots in our rescue queue all closed the first three customers from this exact motion. One recruitment-SaaS founder had eight names in her phone she had not messaged in a year, and three of those names converted in the first two weeks. A B2B services founder watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn in March 2026 and did not respond, because she was waiting on her landing-page redesign. Both had a 6-12 month head start on revenue if they had picked up the phone the day the lead surfaced.
+Two founders we worked with through the rescue queue both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks. The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
 
 ## The 50-name list: 4 buckets
 
@@ -111,6 +114,8 @@ The week-1 sequence in one glance:
 
 You will hear back from 15-25 of the 50 messages by Friday EOD. That is a 30-50% response rate on a properly built personal-network list, and it is the highest response rate you will ever see again as a founder. Use it well.
 
+> **Slow-path variant for 2-hr/week founders** (day job + family time, evenings only): the Monday-Tuesday-Thursday staggered cadence assumes daytime availability you do not have. One-evening alternative: Tuesday 8-10 PM, spend the first 30 minutes sorting 50 names into the 4 buckets and recording the Loom (you can re-use the same Loom for all 50). Spend the next 90 minutes personalizing each message's first line (their name + the specific connection or shared interest) and sending all 50 in one batch using LinkedIn DM or Gmail with a templated body. You lose the response-rate uplift the staggered send produces (~30-50% becomes ~20-35%) but you complete the whole sequence in one evening instead of needing 4 separate workday windows. Book demos for the next Tuesday evening or weekend morning - your respondents will work with your calendar if your first message was specific enough.
+
 **Track replies in the same Sheet.** Add four columns to the right: Reply received (date), Reply sentiment (yes/maybe/no/silent), Demo booked (date), Pilot proposed (yes/no). When the demo books, paste the Calendly confirmation date. When the pilot conversation happens, advance the row to [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
 
 ## What the "no" replies actually tell you
@@ -141,7 +146,7 @@ Some founders read the bucket structure and panic because their LinkedIn is at 2
 | Adjacent source | How it works | Conversion note |
 |---|---|---|
 | **Your accelerator or YC batchmates** | A YC batchmate list is twice the size of your network and pre-warmed by the shared experience. Slack the batch about your launch. | Higher conversion than cold outbound. Shared experience = faster buy-in. |
-| **The community you live in** | Indie Hackers, [r/SaaS](https://www.reddit.com/r/SaaS/), no-code-founders Slack, AI-founders Discord. These are not cold outbound—they are spaces where you have been showing up and building in public for months. | A B2B services founder closed her first paid pilot in 9 days from a single Indie Hackers post about her MVP. |
+| **The community you live in** | Indie Hackers, [r/SaaS](https://www.reddit.com/r/SaaS/), no-code-founders Slack, AI-founders Discord. These are not cold outbound-they are spaces where you have been showing up and building in public for months. | A B2B services founder closed her first paid pilot in 9 days from a single Indie Hackers post about her MVP. |
 
 If neither source applies, skip ahead - your first ten will come from [Chapter 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) and the network outreach in this chapter is a smaller share of the work. The default sequence (network first, cold second) holds when the network is big enough to feed 30+ names. Below that, the order is the same but cold outbound starts in week 2 instead of week 3.
 
@@ -164,7 +169,7 @@ The 50-name list template, the Loom outline, and the 4-message template variants
 > After you close your first 10 paid pilots from the personal network above,
 > layer on the [Y Combinator advice on early sales](https://www.ycombinator.com/library/6g-tactical-advice-for-the-first-sales-hire)
 > and [Paul Graham's "Do Things That Don't Scale"](http://paulgraham.com/ds.html).
-> The Stripe example in Graham's essay — where the Collison brothers installed the product in person for every early customer —
+> The Stripe example in Graham's essay - where the Collison brothers installed the product in person for every early customer -
 > matches the relationship logic of this chapter exactly.
 > The main path gets you to 10 customers; the advanced version extends that relational rigor to 100.
 
@@ -179,4 +184,4 @@ The 50-name list template, the Loom outline, and the 4-message template variants
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

@@ -26,6 +26,12 @@ namespace :test do
     t.libs << "lib"
     t.pattern = "test/system/*_test.rb"
   end
+
+  Rake::TestTask.new(:integration) do |t|
+    t.libs << "test"
+    t.libs << "lib"
+    t.pattern = "test/integration/**/*_test.rb"
+  end
 end
 
 desc "Build the site (Hugo)"

@@ -30,10 +30,13 @@ related_posts: false
 course_nav: false
 ---
 
-> **Going further (AI in production) · Step 1 of 3** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: an agency claiming "we use AI to ship 3x faster." Output: a 30-minute interrogation that catches AI theatre before you sign.
+> **Going further (AI in production) · Step 1 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** an agency claiming "we use AI to ship 3x faster."
+>
+> **Output:** a 30-minute interrogation that catches AI theatre before you sign
 
-> **Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
+**Supplementary content.** This chapter is relevant after you've shipped (Module 4+) and your product touches AI in production. Bookmark and return when needed.
 
 The agency's pitch deck said the weekly retainer was $14,200. The pitch deck also said "every PR ships with an `Assisted-by:` footer naming the human reviewer; AI direction is a first-class part of our delivery."
 
@@ -187,4 +190,4 @@ Three concrete moves for the next 24 hours, in order.
 
 ---
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

@@ -343,7 +343,7 @@ class CourseValidatorsTest < Minitest::Test
 
   # ── Integration: all validators run together ────────────────────────────
 
-  def test_run_all_returns_four_results
+  def test_run_all_returns_seven_results
     write_yaml([
       { "slug" => "ch1", "title" => "1.1 · Test", "module" => "Chapter 1.1", "goal" => "Test" }
     ])
@@ -352,19 +352,22 @@ class CourseValidatorsTest < Minitest::Test
 
     results = CourseValidators.run_all
 
-    assert_equal 4, results.length
+    assert_equal 7, results.length
     names = results.map(&:name)
     assert_includes names, "chapter-number-consistency"
     assert_includes names, "title-yaml-match"
     assert_includes names, "internal-link-existence"
     assert_includes names, "table-width"
+    assert_includes names, "disclaimer-consistency"
+    assert_includes names, "no-em-dash"
+    assert_includes names, "year-stamp-fabrication"
   end
 
   def test_run_all_with_no_course_chapters
     write_yaml([])
     results = CourseValidators.run_all
 
-    assert_equal 4, results.length
+    assert_equal 7, results.length
     results.each do |r|
       assert r.passed, "All validators should pass when no course chapters exist: #{r.name} failed"
     end
@@ -379,7 +382,7 @@ class CourseValidatorsTest < Minitest::Test
 
     results = CourseValidators.run_all
 
-    assert_equal 4, results.length
+    assert_equal 7, results.length
     # Should not crash - just produce empty violations
   end
 
@@ -400,5 +403,89 @@ class CourseValidatorsTest < Minitest::Test
     assert result.violations.any? { |v| v.include?("missing-post") }
     refute result.violations.any? { |v| v.include?("real-post") }
     refute result.violations.any? { |v| v.include?("example.com") }
+  end
+
+  # ── Validator 5: disclaimer consistency ──────────────────────────────────
+
+  def test_disclaimer_consistency_all_chapters_have_it_passes
+    write_course_chapter(slug: "ch-a", title: "A", body: "Founder anecdotes use anonymized names.\n")
+    write_course_chapter(slug: "ch-b", title: "B", body: "Also uses anonymized names here.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "disclaimer-consistency" }
+    assert result.passed, "All-have should pass, got: #{result.violations.inspect}"
+  end
+
+  def test_disclaimer_consistency_none_have_it_passes
+    write_course_chapter(slug: "ch-a", title: "A", body: "Plain body.\n")
+    write_course_chapter(slug: "ch-b", title: "B", body: "Another plain body.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "disclaimer-consistency" }
+    assert result.passed, "None-have should pass, got: #{result.violations.inspect}"
+  end
+
+  def test_disclaimer_consistency_some_have_it_fails
+    write_course_chapter(slug: "ch-a", title: "A", body: "Uses anonymized names here.\n")
+    write_course_chapter(slug: "ch-b", title: "B", body: "Plain body, no disclaimer.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "disclaimer-consistency" }
+    refute result.passed, "Some-have should fail (inconsistent)"
+    assert result.violations.any? { |v| v.include?("ch-a") }
+  end
+
+  # ── Validator 6: no em-dash in content ───────────────────────────────────
+
+  def test_em_dash_flagged_in_body
+    write_course_chapter(slug: "ch-a", title: "A", body: "A sentence — with an em-dash.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "no-em-dash" }
+    refute result.passed, "Em-dash in body should fail"
+    assert result.violations.any? { |v| v.include?("ch-a") }
+  end
+
+  def test_em_dash_ignored_inside_code_fence
+    body = "Use a hyphen - like this.\n\n```\nlet x = a — b\n```\n"
+    write_course_chapter(slug: "ch-a", title: "A", body: body)
+
+    result = CourseValidators.run_all.find { |r| r.name == "no-em-dash" }
+    assert result.passed, "Em-dash inside a code fence should be ignored, got: #{result.violations.inspect}"
+  end
+
+  # ── Validator 7: year-stamp client-cohort fabrication ────────────────────
+
+  def test_year_stamp_cohort_phrase_flagged
+    write_course_chapter(slug: "ch-a", title: "A", body: "Most founders we joined in 2026 skipped this.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "year-stamp-fabrication" }
+    refute result.passed, "'founders we joined in 2026' should fail"
+    assert result.violations.any? { |v| v.include?("ch-a") }
+  end
+
+  def test_year_stamp_a_year_example_flagged
+    write_course_chapter(slug: "ch-a", title: "A", body: "A 2026 example from a founder.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "year-stamp-fabrication" }
+    refute result.passed, "'A 2026 example' should fail"
+  end
+
+  def test_year_stamp_legitimate_date_not_flagged
+    write_course_chapter(slug: "ch-a", title: "A", body: "Jake Knapp published Click in April 2025 after twenty years.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "year-stamp-fabrication" }
+    assert result.passed, "Legitimate publication date should NOT be flagged, got: #{result.violations.inspect}"
+  end
+
+  def test_year_stamp_month_year_cohort_flagged
+    write_course_chapter(slug: "ch-a", title: "A", body: "A founder we worked with in February 2026 ran five interviews.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "year-stamp-fabrication" }
+    refute result.passed, "'A founder we worked with in February 2026' should fail"
+    assert result.violations.any? { |v| v.include?("ch-a") }
+  end
+
+  def test_year_stamp_rescue_we_joined_month_year_flagged
+    write_course_chapter(slug: "ch-a", title: "A", body: "A B2B SaaS rescue we joined in April 2026 had cleared four paid pilots.\n")
+
+    result = CourseValidators.run_all.find { |r| r.name == "year-stamp-fabrication" }
+    refute result.passed, "'rescue we joined in April 2026' should fail"
   end
 end

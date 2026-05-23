@@ -36,7 +36,7 @@ related_posts: false
 > - [Interviews that catch AI theater](#interviews-that-catch-ai-theater)
 > - [Reading the SOW](#reading-the-sow)
 
-This page consolidates the hire-track material from the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course into one reference. Read the section you need, skip the rest.
+This page consolidates the hire-track material from the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course into one reference. Read the section you need, skip the rest.
 
 ---
 
@@ -73,7 +73,7 @@ The 2026 hire decision is not "remote vs in office." It is which of four regions
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-  Start(["You decided to hire.<br/>Vibe PRD says backend-heavy."])
+  Start(["You decided to hire.<br/>one-page brief says backend-heavy."])
   Start --> Q1{"Regulated industry?<br/>HIPAA / SOC 2 / fintech?"}
   Q1 -->|Yes| Onshore["Onshore (US / EU).<br/>$130K-$210K/yr. 30-60d hire."]
   Q1 -->|No| Q2{"Backend-heavy and async OK?"}
@@ -151,7 +151,47 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 - **Indie Hackers Fractional channel**: free, slower, founder-to-founder. Best for SaaS micro-startups.
 - **Your investor network**: one email to your lead angel often produces 2 to 4 warm intros within 48 hours.
 
-**Week 1 onboarding:** Sign the MSA on Day 0. Day 1: share the Validated Problem Statement and Vibe PRD. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. Day 3: first 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." Day 7: first PR review. Their comments should be in plain English so you understand the trade-off. End of Week 4: ask them the Friday-coaching question. "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace.
+**Week 1 onboarding:** Sign the MSA on Day 0. Day 1: share the Validated Problem Statement and one-page brief. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. Day 3: first 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." Day 7: first PR review. Their comments should be in plain English so you understand the trade-off. End of Week 4: ask them the Friday-coaching question. "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace.
+
+### The Fractional CTO's first 4 weeks (parallel to your Module 5 first-paying-customer push)
+
+**Read this before you decide whether to hire** - it shows what the FCTO's first 4 weeks look like alongside your Module 5 work, so you can evaluate whether the timing makes sense and what you should expect from the engagement. The FCTO arrives the week one or two Ch 4.4 ceiling signals flip red (Ch 4.4 has a 5-signal scoreboard; "red" means a signal has been firing for 4+ weeks). They are NOT building features alongside you - they are reading what already shipped, naming what is about to break, and deciding salvage vs rebuild. The four-week onboarding runs in parallel to your Module 5 outreach so neither stream blocks the other:
+
+| Week | Fractional CTO ships | You ship | Why parallel |
+|------|----------------------|----------|--------------|
+| **Week 1** | One-page architecture assessment in a shared Notion doc: "the shed is holding" OR "we need a house in 8 weeks." Names the highest-risk ceiling signal and the patch cost. | Send the 50-name personal-network outreach from Ch 5.3. | The architecture verdict is the input to your runway math; your outreach is the input to your revenue math. Both need to happen before week 5. |
+| **Week 2** | Watch Supabase logs for RLS violations, slow queries, error rates as your first 10 invited interviewees create accounts. Patches one critical bug ONLY if data-corruption risk. | Book the first 2-3 demo calls from Ch 5.3 replies. Run them. | The Fractional CTO reads the signal of your first 10 real users; you read the signal of your first 2-3 demo prospects. |
+| **Week 3** | Ships ONE small hardening change to staging: faster dashboard query, fixed RLS policy, or webhook idempotency check. Not a feature - a stabilizer. | Send the first Ch 5.4 Design Partner Agreement to a hot lead. | One stabilization stream + one revenue stream = the founder gets paid pilots without the contractor getting tempted into feature work. |
+| **Week 4** | Friday-coaching call: "based on the first 4 weeks, here is the 90-day plan." Either (a) keep self-serve + Fractional CTO bridge for 3 more months, (b) hire a full engineer this month, or (c) rebuild from scratch on Rails/Django/Laravel in 8-12 weeks. | Close the first paid pilot from Ch 5.4. Stripe deposit clears. | Both streams converge: the Fractional CTO's 90-day plan and your first revenue are the two inputs to the next hire decision. |
+
+The trap to avoid: the Fractional CTO who arrives in Week 1 and immediately recommends "rewrite the whole thing in Rails." That candidate sees vibe-coded MVPs as broken not salvageable; the recommendation usually means they want the bigger billable engagement. Push back: "what is the ONE ceiling signal we can patch in Supabase this week to give us 90 more days to decide?" A real Fractional CTO has the patch ready by Friday.
+
+### The monthly architecture review habit (the one thing the Fractional CTO does every month)
+
+First Monday of every month, 60 minutes, the Fractional CTO and you read the Ch 4.4 5-signal scoreboard together. The standing agenda:
+
+1. Re-score the 5 signals against last 30 days of usage data, OpenAI invoice, support tickets, schema changes, and customer security/compliance asks. 20 minutes.
+2. Compare to last month's score. Did any signal flip from green to yellow, or yellow to red? Did any flip back? 10 minutes.
+3. Pick ONE thing to harden this month. Not three. One. Examples: add caching to the dashboard, write the RLS policy test, set up an audit log. 15 minutes.
+4. Decide: bridge for another month, hire a full engineer, or start the rebuild conversation. Document the decision in the same Notion doc. 15 minutes.
+
+The scoreboard becomes the standing artifact. By month 3 you can see whether you are stabilizing (signals flipping back to green), holding (no change), or sliding (signals progressing red). Three consecutive months of one signal at red without patching = it is time to hire. Two consecutive months of all signals at green = the Fractional CTO bridge worked and you can scale back to monthly check-ins only.
+
+### Production hardening checklist: what your Fractional CTO will look for
+
+Five hardening checks a competent Fractional CTO will run in the first 30 days. **Read this BEFORE the hiring conversation so you know the names**, not so you execute the engineering yourself - the steps below need hands-on database + production access most non-technical founders don't have. When the FCTO's week-1 report mentions any of these, you'll know what they mean and the conversation about which one to patch first takes 10 minutes instead of 45.
+
+**1. Row-Level Security (RLS) policy testing.** RLS is the database rule that says "Coach A can read only Coach A's rows." Every RLS policy you (or the FCTO) wrote in Supabase needs a test query proving it works - the FCTO opens the Supabase SQL editor, signs in as Coach A, and tries to read Coach B's data. If the query returns rows, the policy has a hole. This 5-minute check prevents the cross-tenant data leak that ends pilots. The FCTO's first ship is usually patching any failing policy.
+
+**2. Webhook idempotency.** A webhook is an automatic message from one service (Stripe, Resend, etc.) to your app. "Idempotent" means it's safe to fire the same message twice - the second hit doesn't double-charge or double-update. Stripe retries on any non-2xx response (network blip, timeout, deploy mid-call) so the handler must be defensive. The FCTO's check: every webhook handler starts with "have I already processed this event ID?" - if yes, return success immediately without re-running the update.
+
+**3. Database backup restore runbook.** Your Supabase project auto-backs up to S3 nightly. The month you need the backup is not the month to discover the restore doesn't work. The FCTO runs a full restore to a staging Supabase project once a month, signs in as a customer, confirms the data is there, and documents the step-by-step in a shared Google Doc. You inherit the runbook so you can re-run the drill if the FCTO leaves.
+
+**4. Secret rotation recovery flow.** When a contractor leaves on Thursday with your Supabase password in their personal 1Password vault, the FCTO runs the recovery sequence: (a) revoke all API keys in the Supabase / Stripe / OpenAI dashboards immediately, (b) backup the whole database to S3, (c) open a Supabase support ticket for the old password reset, (d) check the audit log for what got read during the unrevoked window. Rotating secrets is easy; recovering the logs of who accessed what is the part most founders miss when they try this themselves.
+
+**5. AI inference rate-limit handling.** If your Lovable form calls OpenAI or Anthropic on submit, you need a request queue. The FCTO's pattern: your Lovable form does NOT call the API directly; it writes a job to a Supabase queue table; a background worker pulls from the queue, hits the API, stores the result. When the API rate-limits you (every API does eventually), the queue backs up gracefully instead of timing out in the user's face. This is one of the FCTO's standard first-week ships.
+
+These five are the gap between "works in test mode for one founder clicking around" and "works in production for 47 paying customers on a Tuesday morning." Knowing the names is the founder's job; running the checks is the FCTO's.
 
 ---
 
@@ -224,4 +264,4 @@ If you are reading this because you are ready to hire, the sequence is:
 3. Run every candidate through the seven-question interview. Score within five minutes of the call. Do not let good conversation scores override a failed Q7.
 4. Before you sign any SOW, read the milestone-acceptance clause word by word. If it says "upon deployment to staging," strike it and replace it with the paragraph above.
 
-The [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course covers the full sequence from problem validation through your first paying customer.
+The [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course covers the full sequence from problem validation through your first paying customer.

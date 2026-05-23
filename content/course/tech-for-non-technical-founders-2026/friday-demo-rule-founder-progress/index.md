@@ -29,10 +29,13 @@ related_posts: false
 course_nav: false
 ---
 
-> **Chapter 5.3 · Step 2 of 5** · [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) course.
-> Input: a team in place + a signed SOW. Output: a weekly Friday ritual that surfaces fake progress within 4 weeks.
+> **Chapter 5.3 · Step 2 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
+> **Input:** a team in place + a signed SOW
+>
+> **Output:** a weekly Friday ritual that surfaces fake progress within 4 weeks
+>
+**Supplementary content.** This chapter assumes you have a hired team. If you're still on the [self-serve path](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/), bookmark this and return when you graduate to a hired team.
 
 What were you actually shown on your last status call? A B2B founder we picked up in Q3 2026 sat with that question for ten minutes after a Tuesday call. Her notes from the call said: a burndown chart, a screenshot of a Jira board with eleven cards in "Done", a Figma frame her designer had updated overnight, and a verbal summary that started with "good progress this week." Nothing in her notes was a thing she could click. She had paid **$31K that month** for the team that ran the call, and the call had shown her zero working software.
 
@@ -127,4 +130,4 @@ By Friday of week 4, you will know whether your dev team is shipping or stalling
 
 ---
 
-Built by JetThoughts as part of the [Tech for Non-Technical Founders 2026](/course/tech-for-non-technical-founders-2026/) curriculum. Authored by the JetThoughts team.
+Built by JetThoughts as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum. Authored by the JetThoughts team.
