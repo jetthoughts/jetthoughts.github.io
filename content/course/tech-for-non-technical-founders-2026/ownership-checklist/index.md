@@ -24,13 +24,20 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to Module 5 of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Run on Day 1 of any build (self-serve or hired), alone, with your credit card and a Notion doc.
+📋 Template companion to [Chapter 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) of the [From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Where this fits: run after [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to a path that involves anyone else touching your infrastructure.
+
+> **Routing by M4.1 decision (read this first):**
+>
+> - **Path 1 (Validate without code)**: skip this entirely - no infrastructure to audit yet.
+> - **Path 2 (Self-serve - Lovable + Supabase + Stripe)**: 5-minute confirmation, not a 45-minute audit. Your accounts will be in your own email automatically because you sign up yourself. Skim the 12 items below to confirm, save the checklist, and return in full the day you hire your first contractor or Fractional CTO.
+> - **Path 3 (Fractional CTO bridge)**: run the full 45-minute audit BEFORE you give the FCTO any credential.
+> - **Path 4 (Hire a team)**: run the full audit BEFORE the contractor's first commit. This is the safety net that prevents the hostage situation in the next section.
 
 # The GitHub / AWS / Database Ownership Checklist
 
-A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop.
+A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop. For Path 2 self-serve founders, this is a 5-minute confirmation; for Path 3 and Path 4 founders, the full 45-minute version.
 
-By the end of one Friday you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
+By the end of one Friday (or the 5 minutes if you're self-serve) you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
 
 ## Why this exists
 

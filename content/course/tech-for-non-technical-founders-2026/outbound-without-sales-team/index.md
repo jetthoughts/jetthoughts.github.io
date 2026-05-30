@@ -33,7 +33,7 @@ related_posts: false
 >
 > **Input:** network exhausted, ~10 customers in from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) and [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
-> **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared in weeks 3-4
+> **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
 
 > **$0 outbound stack.** Apollo's free tier (50 credits/mo) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($37) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
@@ -53,7 +53,7 @@ This is the closing chapter of Module 5 (First Paying Customer). Once your perso
 > 
 > Product Hunt converts at 3.1% (387 launches, OpenHunts 2024). Indie Hackers converts at 23.1% per engaged post. 89% of Product Hunt founders said they'd never launch again. Product Hunt suits developer tools / AI productivity / indie SaaS where buyers read it daily. Your B2B buyer at a 50-500 person company in a specific vertical doesn't. The 5,000 upvotes are from the wrong people.
 > 
-> The calendar shapes the outcome: Product Hunt is one day, Indie Hackers is six months, filtered cold outbound is 30 messages every two weeks for a quarter. Founders shortcutting to one-day launches keep being surprised leads don't show up the next morning. The question is not "which big launch." It is "which 50 named buyers should hear from me first."
+> The calendar shapes the outcome: Product Hunt is one day, Indie Hackers is sustained engagement, filtered cold outbound is recurring 30-message batches until you have a funnel. Founders shortcutting to one-day launches keep being surprised leads don't show up the next morning. The question is not "which big launch." It is "which 50 named buyers should hear from me first."
 
 ## The pipeline: Filter -> Personalize -> Loom -> Calendly -> Stripe
 
@@ -82,17 +82,17 @@ You can ship the entire pipeline for under $100/month if you use Apollo's free t
 
 ### Volume targets and what to expect
 
-Over a full quarter of cold outbound, 100-200 outreach contacts produces 5-10 paying customers. The funnel at each stage:
+Running outbound long enough to read the funnel, 100-200 outreach contacts produces 5-10 paying customers. The funnel at each stage:
 
 | Stage | Target |
 |---|---|
-| Raw list pulled | 100-200 names per quarter |
-| Sent (after filter) | 30 per batch, 3-4 batches per quarter |
+| Raw list pulled | 100-200 names |
+| Sent (after filter) | 30-message minimum per batch, several batches |
 | Reply rate | ≥5% (below 5% = stop and diagnose) |
 | Demo-to-paid | ≥20% of demos taken |
 | Paid pilots landed | 5-10 from 100-200 outreach |
 
-A 10% reply rate on 30 messages is 3 replies. At 20% demo-to-paid, 3 demos lands 0-1 pilots per batch - consistent with the 4-batch-per-quarter model above. The numbers are not impressive individually; they compound over 12 weeks.
+A 10% reply rate on 30 messages is 3 replies. At 20% demo-to-paid, 3 demos lands 0-1 pilots per batch - consistent with the multi-batch model above. The numbers are not impressive individually; they compound across batches.
 
 ### Filter: getting to 30 high-fit names
 
@@ -104,25 +104,25 @@ Pull 100-150 raw rows. Strip three categories before sending:
 - Anyone whose LinkedIn shows no posting activity in the last 12 months. They will not see your DM.
 - Anyone whose company you have a competing product alignment with (you sell to their competitor). A B2B services founder who came to us in March 2026 lost a great lead this way and had to wait two quarters for the lead's company to pivot before reaching out again.
 
-You should be left with 30-50 clean names. Hold the bottom 20 for week 4 and send the top 30 in week 1.
+You should be left with 30-50 clean names. Hold the bottom 20 for a later batch and send the top 30 in the first batch.
 
 ### Personalize: 60-90 seconds per name, not 10 minutes
 
-The mistake founders make in week 1 is over-personalizing. Twenty minutes of LinkedIn research per prospect turns into a 400-word email with five quoted lines from their feed, and response rates fall off a cliff above the four-line threshold.
+The mistake founders make on the first batch is over-personalizing. Twenty minutes of LinkedIn research per prospect turns into a 400-word email with five quoted lines from their feed, and response rates fall off a cliff above the four-line threshold.
 
 The right level of personalization is one specific reference per message. Open the prospect's LinkedIn, scan the last three posts and the recent role. Find one specific thing - a recent post they wrote, a comment they left, the company hit a hiring milestone, they joined a year ago and just got promoted. One sentence. Then the same four-line script for everyone.
 
-The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 45 minutes of personalization per send. A founder can do that in one Monday morning.
+The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 45 minutes of personalization per send. A founder can do that in one focused sitting.
 
 ## The 4-line cold-email script (3 variants)
 
-### Variant 1: B2B SaaS rescued-Rails context
+### Variant 1: B2B SaaS, shipped-MVP context
 
-> Subject: rescued from agency in [month] - your post on [topic]
+> Subject: shipped MVP last month - your post on [topic]
 >
 > Hi [first name],
 >
-> Saw your post on [topic, paraphrased in their words] last [Tuesday]. I just rescued my own Rails MVP from an agency burn and the same issue you flagged was at the top of my list. I built [a tool that does X for Y].
+> Saw your post on [topic, paraphrased in their words] last [Tuesday]. I shipped my MVP for [the same problem] last month using [Lovable + Supabase + Stripe] after 12 interviews with people who flagged the exact issue you described. I built [a tool that does X for Y].
 >
 > Worth 15 minutes to walk through? Paid design partner spots, [$ deposit] credited toward year one. Calendly: [link]
 >
@@ -154,17 +154,17 @@ The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 4
 
 All three variants follow the same shape: a specific reference earns the open, one sentence on what you built, one specific ask with friction removed (Calendly or Loom + claim link), one currency anchor (deposit, beta price). Total length: 4-6 lines including subject. Anything longer reduces response rate.
 
-## Week-by-week cadence
+## Stage-by-stage cadence
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TB
-    W1[Week 1<br/>Send 30 messages<br/>3-5 replies expected]
-    W2[Week 2<br/>Run 3-5 demos<br/>2-3 DPAs sent]
-    W3[Week 3<br/>1-2 deposits cleared<br/>Pilot kickoffs scheduled]
-    W4[Week 4<br/>Send next 20<br/>Hold for week-5 reply tail]
-    W5[Week 5-6<br/>First Friday demos<br/>+ week-3 prospects mature]
-    W7[Week 7-8<br/>Year-one conversions<br/>+ next 20 cold names]
+    W1[Stage 1<br/>Send 30 messages<br/>3-5 replies expected]
+    W2[Stage 2<br/>Run 3-5 demos<br/>2-3 DPAs sent]
+    W3[Stage 3<br/>1-2 deposits cleared<br/>Pilot kickoffs scheduled]
+    W4[Stage 4<br/>Send next 20<br/>Hold for reply tail]
+    W5[Stage 5<br/>First Friday demos<br/>+ earlier prospects mature]
+    W7[Stage 6<br/>Year-one conversions<br/>+ next 20 cold names]
     W1 --> W2 --> W3 --> W4 --> W5 --> W7
     classDef coldweek fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
     classDef warmweek fill:#fbe9ff,stroke:#a855f7,stroke-width:2px;
@@ -176,37 +176,42 @@ flowchart TB
 
 Expect a 10-20% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds - around 60% of paid pilots convert to year-one customers.
 
-The 30-message batch is not a one-time event. Run a fresh 30-message batch every other Monday until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
+The 30-message batch is not a one-time event. Run fresh 30-message batches until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
 
 ### What "no reply" actually means
 
 A 30-message batch with zero replies is rare and almost always indicates a filter problem, not a script problem. Check three things:
 
-1. **Did the messages deliver?** If you are using cold email (vs LinkedIn DM), check your sending tool's bounce rate. Above 10% bounce means your list is dirty and your domain reputation is suffering. Pause sending for two weeks and re-warm the inbox.
+1. **Did the messages deliver?** If you are using cold email (vs LinkedIn DM), check your sending tool's bounce rate. Above 10% bounce means your list is dirty and your domain reputation is suffering. Pause sending and re-warm the inbox before continuing.
 
 2. **Is the filter right?** Re-read three random LinkedIn profiles from your sent list. If you cannot imagine the person reading the message and finding it relevant, your ICP filter is off. The fix is upstream of the script.
 
 3. **Is the reference real?** Look at the first paragraph of your last 10 sent messages. If the "specific reference" sentence sounds generic ("noticed you work at [Company] in [role]"), it was not specific enough. Real specificity means the prospect can verify the claim - a date, a post title, a name, an event.
 
-10-15% reply rate is the baseline for a well-filtered, well-personalized batch in 2026. Below 5% means stop sending and diagnose.
+10-15% reply rate is the baseline for a well-filtered, well-personalized batch in 2026.
+
+> **Stop / continue / accelerate, by reply rate band.**
+> - **<5% reply rate** → STOP after batch 1. Diagnose before batch 2: filter is wrong, domain reputation is dead, or script reads generic. Sending batch 2 over a broken upstream stage wastes the next 30 best-fit names on the same broken funnel.
+> - **5-10% reply rate** → CONTINUE but rotate one element of the script for batch 2 (subject line, opening reference, or CTA). One variable per batch so you can read which change moved the rate.
+> - **>10% reply rate** → ACCELERATE. You have a hot channel. Run batch 2 same-shape and same-cadence. Resist the temptation to "scale" the batch size past 30 - the personalization budget per message is the load-bearing input, and 30 is the practical ceiling for one founder doing it by hand.
 
 ## Compounding past customer 20
 
-> **Ask your first 20 for one introduction each. That is 5 warm leads per quarter, enough to stop scaling cold outbound past 30 messages/month.**
+> **Ask your first 20 for one introduction each. That feeds enough warm leads to stop scaling cold outbound past the current batch size.**
 >
 > Customers 11-20 come from filtered cold outbound. Customers 21-50 come from referrals out of customers 1-20. If your first 20 were chosen carefully (must-have segment, personal network + filtered outbound), each knows two more in the same segment. The motion is asking for one introduction each.
 >
-> Script at the end of every Friday demo from week 4 onward: *"If this is useful for you, do you know one or two others I should be talking to?"* Half say yes. Half of those actually send the intro. Five warm leads per quarter from a 20-customer base is enough to keep cold outbound at 20-30 messages/month rather than scaling to 60.
+> Script at the end of every Friday demo once the cadence is established: *"If this is useful for you, do you know one or two others I should be talking to?"* Half say yes. Half of those actually send the intro. A steady drip of warm leads from a 20-customer base is enough to keep cold outbound steady rather than scaling the batch size.
 
-## What to do this week
+## What to do next
 
-| Day | Action | Output |
+| Step | Action | Output |
 |---|---|---|
-| **Monday morning** | Set up Apollo free tier or Sales Navigator. Build the filter for your must-have segment. Export 30-50 high-fit names. Drop bottom 20 into "week 4" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
-| **Tuesday morning** | Spend 60-90 minutes personalizing first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool (Smartlead, Instantly). | 30 messages sent. 3-6 replies expected. |
-| **Friday afternoon** | Tally replies. Book demos for week 2. Follow up with non-responders once only on Friday. | 2-4 demo calls booked. Week 2 ready. |
+| **1** | Set up Apollo free tier or Sales Navigator. Build the filter for your must-have segment. Export 30-50 high-fit names. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
+| **2** | Spend 60-90 minutes personalizing the first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool ([Smartlead](https://smartlead.ai), [Instantly](https://instantly.ai)). | 30 messages sent. 3-6 replies expected. |
+| **3** | Tally replies once they settle. Book demos. Follow up with non-responders once only. | 2-4 demo calls booked. Next batch ready. |
 
-The full cold-email scripts (3 variants: B2B SaaS rescued-Rails, B2B services, B2C app), the filter checklist, and the Apollo + Sales Navigator setup guide all ship in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
+The full cold-email scripts (3 variants: B2B SaaS shipped-MVP, B2B services, B2C app), the filter checklist, and the Apollo + Sales Navigator setup guide all ship in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
 
 ## Advanced (optional sidebar)
 

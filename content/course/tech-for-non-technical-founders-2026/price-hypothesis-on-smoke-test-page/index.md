@@ -38,7 +38,7 @@ related_posts: false
 
 If you landed here directly, start at [Chapter 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) to build your smoke-test page first - this chapter adds a price signal on top of the demand signal you already measured.
 
-**Three variants exist; here's which one you're doing.** Ch 1.2 sets up the **email-only** version (free, demand signal, simplest first run). This chapter adds the **Stripe price-button** version on top of the same page (still a $1 minimum charge, but you collect a card not just an email). If you want the strongest pre-product signal possible - a $1 refundable pre-order in the Pieter Levels style - that's a separate companion: [Fake-Stripe Pre-Sale: The Pieter Levels Pre-Order Smoke Test](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/) (read it after this chapter; it carries the FTC + refund discipline). First-time founders: do the email-only test (Ch 1.2) on Sunday, then add the Stripe button (this chapter) the following weekend.
+**Three variants exist; here's which one you're doing.** Ch 1.2 sets up the **email-only** version (free, demand signal, simplest first run). This chapter adds the **Stripe price-button** version on top of the same page (still a $1 minimum charge, but you collect a card not just an email). If you want the strongest pre-product signal possible - a $1 refundable pre-order in the Pieter Levels style - that's a separate companion: [Fake-Stripe Pre-Sale: The Pieter Levels Pre-Order Smoke Test](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/) (read it after this chapter; it carries the FTC + refund discipline). First-time founders: do the email-only test (Ch 1.2) first, then add the Stripe button (this chapter) once that page is live.
 
 ## The 48-email lie (why "I'd pay for that" isn't a price test)
 
@@ -46,11 +46,13 @@ Maya, a founder we worked with, ran her smoke-test page with a waitlist CTA. She
 
 > She moved into building. By month nine she had shipped a working product and spent $62K on developer time - and had zero paying customers. On her first sales call the prospect asked whether the tool was really $49/month: she had assumed her landing page price was obvious, but most of the people who had given her an email had read the page as a free signup. The 48 emails proved curiosity, not commitment - the page had only asked them to leave an email.
 
-You don't need a $62K invoice to learn this. Spend $2,000 on a designer and a few weeks of nights, ship a pretty waitlist page, and that pile of free email signups still won't tell you whether anyone will pay.
+You don't need a $62K invoice to learn this. Spend any amount on a pretty waitlist page and you'll still have free email signups that don't tell you whether anyone will pay.
 
 An email signup costs the visitor nothing; a Stripe click costs them the moment of entering a card number, even with a refund clause attached - those two signals are not measuring the same thing.
 
 ## What your price hypothesis needs (3 parts)
+
+> **Starting point if you haven't done the price research yet.** For a SaaS hypothesis the most common tier sits in **$49-$99/month** for tools that replace manual work, and the broader "SaaS sweet spot" runs **$49-$299/month**. Pick the midpoint of your category's most common tier as your hypothesis. You'll refine after Ch 2 interviews and again after Ch 5.4 paid-pilot calls. The AI deep-research prompt below sharpens this; if you can't run it today, the midpoint-of-band rule is a defensible default.
 
 Testing price before you build has one advantage: there are no switching costs yet. Strangers either click the price or they don't. The test only works if you put a *real* price in front of them - not a category. Three parts:
 
@@ -62,7 +64,9 @@ Testing price before you build has one advantage: there are no switching costs y
 
 All three on the button and in the confirmation copy. Anything less measures curiosity, not price intent.
 
-## Set up a Stripe Payment Link in 5 minutes (no account integration, no code)
+> **Optional: AI deep-research for the price anchor.** Before you set the price, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"What do [your ICP] currently pay for [your category]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages."* The output gives you a real price distribution (e.g., "$19-$79/month is the band, with one outlier at $299"). Pick your hypothesis price ABOVE the cheapest 30%; the smoke test's job is to validate willingness-to-pay, not to be cheaper than the cheapest. **What this is NOT**: a prediction that your price will convert. That's what the Stripe-click rate in the next section measures.
+
+## Set up a Stripe Payment Link (no account integration, no code)
 
 A Stripe Payment Link is a hosted checkout URL you generate from your Stripe dashboard - no code required. Stripe takes ~2.9% + $0.30 per transaction. This is a separate product from Stripe's developer API: no webhooks, no integration. You create a link in the Stripe dashboard, and Stripe hosts the checkout page for you. When someone clicks through and enters their card details, you have a payment intent - the strongest demand signal a pre-product page can generate.
 
@@ -111,7 +115,7 @@ The **≥5% visit-to-Stripe-click** rate is the decision threshold for the price
 |------|----------------------|------------|
 | Iterate before you kill | Below 4% | Lower price by 50%, add "founding member" framing, change button copy. Below 2% after that = audience or hypothesis is wrong, not the price. In the 2-4% band, also try shortening the Stripe product description. |
 | Advance | 5-9% | Price-validated hypothesis. Move to Module 2 customer interviews. Email everyone who clicked but didn't complete - the most valuable interview group. |
-| Verify before celebrating | 10%+ | Either exceptional fit or ad targeting hit a hot audience. Run a second cold channel for 72 hours. If both channels stay near the rate, the signal is real. If one is 12% and the other 2%, your targeting is unusually good, not your pricing. |
+| Verify before celebrating | 10%+ | Either exceptional fit or ad targeting hit a hot audience. Run a second cold channel briefly to verify. If both channels stay near the rate, the signal is real. If one is 12% and the other 2%, your targeting is unusually good, not your pricing. |
 
 The thresholds above assume a $49-$299 price band - the SaaS sweet spot where ad economics and unit economics line up. Below $49, you need more than 5% to cover acquisition cost; above $299 (or any $500+ one-time), 2-3% can be enough if the completion rate is high. Pick the band you're testing and read the table accordingly.
 

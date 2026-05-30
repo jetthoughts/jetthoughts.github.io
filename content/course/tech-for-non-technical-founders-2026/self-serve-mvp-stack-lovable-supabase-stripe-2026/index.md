@@ -1,7 +1,7 @@
 ---
 title: "4.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
 aliases: ["/blog/self-serve-mvp-stack-lovable-supabase-stripe-2026/"]
-description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Chapter 4.3 of this course."
+description: "The ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, vendor pricing, the architectural ceiling. Chapter 4.3 of this course."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -24,7 +24,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "4.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
-  og_description: "The 4-week ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, real costs, the architectural ceiling. Chapter 4.3 of this course."
+  og_description: "The ship plan for a Lovable + Supabase + Stripe MVP. Plain-English roles, vendor pricing, the architectural ceiling. Chapter 4.3 of this course."
 cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Ship by Friday week 4."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/"
 related_posts: false
@@ -37,19 +37,19 @@ related_posts: false
 > **Output:** a live MVP at a staging URL real users can click, by Friday week 4
 
 > **$0 path for the whole MVP.** Lovable, Supabase, and Stripe all have free tiers that ship a working product before any paid charge hits your card.
-> - **Lovable free** - 5 daily messages, enough to build 3-5 screens in a week. Upgrade to $25 Pro only if you're iterating multiple times a day.
+> - **Lovable free** - 5 daily messages, enough to build 3-5 screens. Upgrade to $25 Pro only if you're iterating multiple times a day.
 > - **Supabase free** - 500 MB database + 1 GB file storage + 50K monthly active users. Stays free until you have product-market fit.
 > - **Stripe** - no monthly fee. Only the 2.9% + $0.30 per transaction when a customer actually pays.
 >
-> A solo founder can ship Module 4 on $0 in week 1, upgrade Lovable to $25 in week 3 only if the build velocity demands it. Total cost to first paying customer: under $50.
+> A solo founder can start Module 4 on $0, upgrade Lovable to $25 only if the build velocity demands it.
 
 > **This chapter starts FRESH from your one-page brief. You do NOT iterate the throwaway prototype from Chapter 2.4.**
 >
-> The Chapter 2.4 prototype was a 2-hour research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is a 4-week production build: real Supabase auth, real Stripe payments, real domain, real users. The two Lovable activities are separate by design. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code adds 3-5x build time and ships every 2-hour research compromise into production.
+> The Chapter 2.4 prototype was a short research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is the production build: real Supabase auth, real Stripe payments, real domain, real users. The two Lovable activities are separate by design. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code multiplies the build effort and ships every research compromise into production.
 
 If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 
-"I shipped my MVP in four weeks for $87. Three customers paid before I built the second feature." That was a B2B SaaS founder I spoke with last month. She had never written a line of code. She had spent two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before she touched a single tool. The four weeks she counts started after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) was nailed down and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routed her to Path 2. The stack she used is the one this post is about.
+"I shipped my MVP on the self-serve stack. Three customers paid before I built the second feature." That was a B2B SaaS founder I spoke with recently. She had never written a line of code. She had spent two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before she touched a single tool. Her build started after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) was nailed down and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routed her to Path 2. The stack she used is the one this post is about.
 
 The three layers, top to bottom:
 
@@ -61,11 +61,30 @@ The three layers, top to bottom:
 
 The buyer opens the staging URL → Lovable shows the screens → Supabase stores the data → Stripe charges the card → a Stripe webhook tells Supabase the row is now paid.
 
+## 12 rules for a self-built PoC done right
+
+Synthesis of every rule scattered across Module 4 and the supplementary references. Print this page, tape it next to the laptop, re-read before every weekly demo.
+
+1. **Start from a one-page brief that passed the Ch 3.2 quality-gate.** If Section 3 is feature-shaped, fix it before you open Lovable. Feature-shaped briefs produce 47-button admin panels.
+2. **One workflow, one persona, one happy path.** No multi-tenancy, no admin dashboard, no settings page on day one. Build the shed (Rob Walling's analogy), not the house.
+3. **Strict layer boundaries**: Lovable renders screens, Supabase stores data, Stripe collects payment. Do not let Lovable hand-roll auth; do not let Supabase render a UI; do not let Stripe become the source of truth for user state.
+4. **Weekly demo to one non-PRD-reader human.** Spouse, advisor, dog if necessary. Keep a ship-something-visible cadence every week. The demo IS the data; the screens are not.
+5. **Do NOT iterate the Ch 2.4 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
+6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason rescued founders cannot retrieve their source.
+7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.4 Signal 4).
+8. **Stripe webhook handler must be idempotent.** Check `WHERE event_id = $1 AND processed = true` before re-running update logic. Stripe retries; the second hit must not double-charge. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
+9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to $25/mo Pro only when build velocity demands it.
+10. **Ship before scope creep, then a short stabilization phase.** Build the smallest end-to-end thing, then a stabilization phase before paid-pilot conversations. Sits inside the multi-month journey to first paying customer.
+11. **Monthly Ch 4.4 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
+12. **Do not scale a Lovable stack past ~5K users or 2 ceiling signals at red.** When you hit either limit, graduate to a Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)). The shed is not the house; pouring skyscraper foundations into a shed slab does not build a skyscraper.
+
+Each of the 12 rules is taught in depth somewhere across this chapter, the [self-serve stack walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/), [Ch 4.4 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/), or the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The list above is the index; the surrounding chapters are the depth.
+
 ## Why these three tools, and why they slot together
 
 [Y Combinator's current stance](https://www.ycombinator.com/library/) is direct: validate without code, then ship the simplest version with AI tools. Lovable + Supabase + Stripe became the dominant self-serve path because all three tools were built AI-first, their documentation is exhaustive, and the integrations between them are templated to the point of being boring.
 
-Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal. The cost to disprove your hypothesis is one weekend and $87. The cost to prove it is the same.
+Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal. The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
 
 ## M3 prototype vs M5 MVP - different artifacts, different rigor
 
@@ -109,21 +128,21 @@ Stripe processes the payment. The 2026 default integration for a Lovable app is 
 
 Free for solo founders on the Free plan. You will not write much code yourself, but Lovable can sync to a GitHub repo on every save. Two reasons this matters: (a) you have a backup if Lovable goes down or you cancel the subscription, (b) when you eventually hire a contractor or a Fractional CTO, the code is already in a place they can read. Set this up in Lovable's Settings on day one. Skipping this is the most common reason founders we pick up six months later cannot retrieve the source.
 
-## The 4-week ship plan (+ Week 5 onramp)
+## The ship plan (build phases + onramp)
 
-> **Cumulative time from idea to first paying customer (Modules 1-5):** 12-22 weeks elapsed (evenings and weekends), during which roughly 40-60 hours of focused work happens. The "4-week ship plan" below is the BUILD portion only. It assumes you already ran Modules 1-3 (hypothesis → smoke test → 10 interviews → one-page brief - typically 6-10 weeks elapsed if you have 2-4 hours per week). If you skip straight here without validation, the build often ships into the silence Modules 1-3 were designed to prevent.
+> **The ship plan below is the BUILD portion only.** It assumes you already ran Modules 1-3 (hypothesis → smoke test → 10 interviews → one-page brief). If you skip straight here without validation, the build often ships into the silence Modules 1-3 were designed to prevent.
 
-Four weeks of build, plus a Week-5 onramp that hands you off to Module 5. Each week ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). Friday week 4 ends with five real ICP users on the staging URL; Week 5 brings the rest of your Ch 2.3 interview pool onto the product.
+Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). The build phase ends with five real ICP users on the staging URL; the onramp phase brings the rest of your Ch 2.3 interview pool onto the product.
 
-1. **Week 1 - Lovable, the UI.** No backend yet. *Friday demo:* screens click, no data persists.
-2. **Week 2 - Supabase + auth.** Real signup works. *Friday demo:* your spouse signs up, a row appears in Supabase in real time.
-3. **Week 3 - Stripe + checkout.** $1 test transactions. *Friday demo:* you sign up as a fake coach, pay $1, the webhook flips your row to paid.
-4. **Week 4 - staging URL + 5 ICP users.** Custom domain, Stripe live. *Monday after:* 5 click sessions logged - iterate from real signal.
-5. **Week 5 - Module 5 onramp.** Invite the 10 Ch 2.3 interviewees by name (covered in detail below). Hand off to Module 5 with a populated users table, not an empty one.
+1. **Phase 1 - Lovable, the UI.** No backend yet. *Demo:* screens click, no data persists.
+2. **Phase 2 - Supabase + auth.** Real signup works. *Demo:* your spouse signs up, a row appears in Supabase in real time.
+3. **Phase 3 - Stripe + checkout.** $1 test transactions. *Demo:* you sign up as a fake coach, pay $1, the webhook flips your row to paid.
+4. **Phase 4 - staging URL + 5 ICP users.** Custom domain, Stripe live. *Right after:* 5 click sessions logged - iterate from real signal.
+5. **Onramp phase - Module 5 handoff.** Invite the 10 Ch 2.3 interviewees by name (covered in detail below). Hand off to Module 5 with a populated users table, not an empty one.
 
-### Week 1 - write your prompts, set up Lovable, ship the UI
+### Phase 1 - write your prompts, set up Lovable, ship the UI
 
-Monday morning, open the one-page brief. The "what you're building" section becomes your first three Lovable prompts. Lovable's prompt style is conversational; you describe the screen, the components, the rough behavior. Examples:
+Start by opening the one-page brief. The "what you're building" section becomes your first three Lovable prompts. Lovable's prompt style is conversational; you describe the screen, the components, the rough behavior. Examples:
 
 ```text
 Build a dashboard for a fitness coach. Top-level view shows
@@ -133,35 +152,45 @@ their detail page with a check-in form (date, weight, notes,
 3-photo upload).
 ```
 
-Lovable generates the screens. You iterate by chatting with it: "make the status badges bigger, move the check-in form to the right side." By Friday you have a clickable UI on a public staging URL. No data persists yet. That is fine. The Friday demo is to your spouse: do the screens make sense without any explanation? If the screens need a tour to understand, the design is wrong, not the build. Rewrite the prompts.
+Lovable generates the screens. You iterate by chatting with it: "make the status badges bigger, move the check-in form to the right side." By the end of the phase you have a clickable UI on a public staging URL. No data persists yet. That is fine. The phase demo is to your spouse: do the screens make sense without any explanation? If the screens need a tour to understand, the design is wrong, not the build. Rewrite the prompts.
 
-### Week 2 - set up Supabase, connect, real signup works
+### Phase 2 - set up Supabase, connect, real signup works
 
-Monday morning, create a Supabase project on the free tier. Define your three or four core tables in the SQL editor (or in the Table Editor UI; both work for an MVP). For the fitness coach example: `coaches`, `clients`, `check_ins`. Enable [Row-Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security) from the start. RLS is the difference between a coach seeing their own clients and a coach seeing every coach's clients in a single bug. Skipping it is the most common security mistake we see in vibe-coded MVPs.
+Create a Supabase project on the free tier. Define your three or four core tables in the SQL editor (or in the Table Editor UI; both work for an MVP). For the fitness coach example: `coaches`, `clients`, `check_ins`. Enable [Row-Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security) from the start. RLS is the difference between a coach seeing their own clients and a coach seeing every coach's clients in a single bug. Skipping it is the most common security mistake we see in vibe-coded MVPs.
 
-In Lovable, install the Supabase integration. Lovable will add the Supabase JS client and store the keys for you. Wire your signup screen to `supabase.auth.signUp()` and your data screens to `supabase.from('clients').select()`. By Friday: your spouse signs up via the staging URL, you watch a row appear in the Supabase console in real time. That is the demo.
+In Lovable, install the Supabase integration. Lovable will add the Supabase JS client and store the keys for you. Wire your signup screen to `supabase.auth.signUp()` and your data screens to `supabase.from('clients').select()`. The phase demo: your spouse signs up via the staging URL, you watch a row appear in the Supabase console in real time.
 
-> **End-of-Week-2 micro-fail signal.** Before you build Stripe in Week 3, hand the staging URL to your spouse OR one of your Ch 2.3 Mom Test interviewees. Give zero coaching. Watch them try to sign up and reach the core action button (logging a check-in, exporting the CSV, whatever your one-page brief named as the workflow). If 2+ test users stall on screens 1-2, the workflow shape is wrong - pivot back to [Ch 3.2 outcome rewrite](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe. Building a payment wall on top of a workflow nobody can navigate just adds friction to a broken loop.
+> **End-of-Phase-2 micro-fail signal.** Before you build Stripe in Phase 3, hand the staging URL to your spouse OR one of your Ch 2.3 Mom Test interviewees. Give zero coaching. Watch them try to sign up and reach the core action button (logging a check-in, exporting the CSV, whatever your one-page brief named as the workflow). If 2+ test users stall on screens 1-2, the workflow shape is wrong - pivot back to [Ch 3.2 outcome rewrite](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe. Building a payment wall on top of a workflow nobody can navigate just adds friction to a broken loop.
 
-### Week 3 - add Stripe, wire checkout, $1 test transactions
+### Phase 3 - add Stripe, wire checkout, $1 test transactions
 
-Monday morning, create a Stripe account in test mode. Build one product (your monthly plan) at one price (the price your one-page brief locked in). Use [Stripe Checkout](https://docs.stripe.com/payments/checkout/quickstart) for the simplest possible integration: one URL Lovable links to, one webhook (a webhook is an automatic message Stripe sends your app the moment a payment succeeds - you don't write code to call Stripe; Stripe calls you) back to Supabase that flips the `coaches.subscription_status` column to `active` when the charge clears.
+Create a Stripe account in test mode. Build one product (your monthly plan) at one price (the price your one-page brief locked in). Use [Stripe Checkout](https://docs.stripe.com/payments/checkout/quickstart) for the simplest possible integration: one URL Lovable links to, one webhook (a webhook is an automatic message Stripe sends your app the moment a payment succeeds - you don't write code to call Stripe; Stripe calls you) back to Supabase that flips the `coaches.subscription_status` column to `active` when the charge clears.
 
-Spend the rest of the week running $1 test transactions through the flow: signup, hit the paywall, pay $1 in test mode, land in the paid view. Use Stripe's [test card numbers](https://docs.stripe.com/testing) to simulate failures (declined card, 3D Secure challenge, dispute). The Friday demo is to yourself: you sign up as a fake coach, you pay $1, you land on the paid dashboard, you check Supabase, the row says paid. Webhook works.
+Spend the rest of the phase running $1 test transactions through the flow: signup, hit the paywall, pay $1 in test mode, land in the paid view. Use Stripe's [test card numbers](https://docs.stripe.com/testing) to simulate failures (declined card, 3D Secure challenge, dispute). The phase demo is to yourself: you sign up as a fake coach, you pay $1, you land on the paid dashboard, you check Supabase, the row says paid. Webhook works.
 
-### Week 4 - deploy, send to 5 ICP users, iterate Friday
+### Phase 4 - deploy, send to 5 ICP users, iterate from the data
 
-Monday morning, switch Stripe out of test mode. Buy a domain ($14/year on [Porkbun](https://porkbun.com/) or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
+Switch Stripe out of test mode. Buy a domain ($14/year on [Porkbun](https://porkbun.com/) or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
 
-> "Hey [name] - the workflow you described last month (logging client check-ins by hand on a spreadsheet) is now a tool. 5-minute first-use, $29/month after a 14-day trial. URL: [staging URL]. Honest reactions only."
+> "Hey [name] - the workflow you described recently (logging client check-ins by hand on a spreadsheet) is now a tool. Quick first-use, $29/month after a trial window. URL: [staging URL]. Honest reactions only."
 
-Watch what happens. If 0 of 5 click, the cold message is wrong, not the product (yet). If 5 click and 0 sign up, the landing screen is wrong, not the product. If 5 sign up and 0 pay, the paywall position or the price is wrong. Each failure shape tells you what to fix in the next week. The Friday demo is the data, not the screens.
+Watch what happens. If 0 of 5 click, the cold message is wrong, not the product (yet). If 5 click and 0 sign up, the landing screen is wrong, not the product. If 5 sign up and 0 pay, the paywall position or the price is wrong. Each failure shape tells you what to fix next. The demo is the data, not the screens.
 
-### Week 5 - Module 5 onramp: invite your Module 2 interviewees onto the live MVP
+> **Phase 4 exit criteria: the MVP is "done" only when ALL 5 lights are green.** Without these, you either polish indefinitely in Lovable or hand Module 5 an MVP that real users cannot touch.
+>
+> 1. **Stripe in LIVE mode** (not test mode) and a real card successfully clears the paywall at least once.
+> 2. **Custom domain wired** (not a `.lovable.app` subdomain) - the URL you DM to a user must be yours.
+> 3. **At least 1 ICP user who was NOT in your Ch 2.3 interviews** has clicked through to the paywall on the live URL.
+> 4. **Zero JS errors in the browser Console** on the sign-up + checkout flow (open DevTools, walk the happy path, console must stay clean).
+> 5. **Friday-style weekly demo recording exists** for the last week of build (a Loom or screen-record proving the demo cadence held to the end).
+>
+> Advance to Module 5 only when all 5 are green. If any are red, the MVP is NOT ready for the 10-30 users Module 5 needs as input. Fix the red light first, then re-check.
 
-The four weeks above are the BUILD container. Week 5 is the Module-5 onramp - the step that turns a live staging URL into a live users table. The five cold prospects from Week 4 are the demand-signal check. The 10 interviewees you ran through Ch 2.3 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words, weeks ago. They are not on your MVP yet. They will not show up unless you invite them by name.
+### Onramp phase - Module 5 handoff: invite your Module 2 interviewees onto the live MVP
 
-Monday of Week 5, open your Ch 2.3 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to. Send it as a [Loom](https://www.loom.com) (Loom is a free 1-minute screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast. Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and click around within a week; 1-2 to become candidates for the [Ch 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. "Create an account" is not "pay" - paid conversion happens in Module 5.
+The build phases above are the BUILD container. The onramp phase is the Module-5 handoff - the step that turns a live staging URL into a live users table. The five cold prospects from Phase 4 are the demand-signal check. The 10 interviewees you ran through Ch 2.3 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words, recently. They are not on your MVP yet. They will not show up unless you invite them by name.
+
+Open your Ch 2.3 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to. Send it as a [Loom](https://www.loom.com) (Loom is a free short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast. Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and click around; 1-2 to become candidates for the [Ch 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. "Create an account" is not "pay" - paid conversion happens in Module 5.
 
 This is the step that closes the gap between Module 4 (MVP shipped) and Module 5 (first paying customer). Without it, you ship a working URL into the silence of a Supabase users table with zero rows. The Module 2 interviewees are the closest 10 people in the world to your ICP - they spent 30 minutes telling you their version of the problem. Inviting them by name is the cheapest first-10-users acquisition the course will name.
 
@@ -200,17 +229,17 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 
 The stack holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Chapter 4.4 - Proactive Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)) walks through each one with the threshold to watch.
 
-Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics three weeks before the customer sees it. Chapter 4.4 names the metrics.
+Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.4 names the metrics.
 
-What the stack actually costs over three months:
+What the stack actually costs, per published vendor pricing:
 
-| When | Spend | Line items |
+| Phase | Cost shape | Line items |
 |------|-------|-----------|
-| Week 1 | $0 | Free tiers across Lovable, Supabase, Stripe, GitHub |
-| Month 1 (first ship) | $87 | Lovable Pro $25 + Supabase Pro $25 + domain $14 + Resend $20 + Stripe fees ~$3 |
-| Month 6 (post-launch) | ~$200/mo | Lovable Scale $100 + Supabase Pro $25 + Resend $35 + Sentry $26 + monitoring $14 |
+| Start | Free tiers | Free tiers across Lovable, Supabase, Stripe, GitHub |
+| First ship | Per-tool monthly fees | Lovable Pro $25 + Supabase Pro $25 + domain $14 + Resend $20 + Stripe 2.9% + $0.30 per transaction |
+| Post-launch | Scale-tier monthly fees | Lovable Scale $100 + Supabase Pro $25 + Resend $35 + Sentry $26 + monitoring $14 |
 
-Most founders hit the architectural ceiling around the Month-6 tier - at ~10K users, route to Chapter 4.4 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A typical hire-a-team build runs $30K-$80K/month; the stack ships the same first 10 paying customers for under 1% of that.
+Most founders hit the architectural ceiling at the post-launch tier - at ~10K users, route to Chapter 4.4 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
 
 ## What to do tomorrow
 
@@ -220,13 +249,13 @@ Three actions, in order. The first two cost $0.
 > 
 > **Pick ONE feature from your one-page brief's "what you're building" section.** Not three. One. The smallest workflow that solves the validated problem for one persona. Write: "build a [screen] for [persona] to [outcome]."
 > 
-> **Generate the UI in Lovable.** Iterate by chatting: rename, resize, reposition. Friday demo: screens click with nothing persisted. Show one human who hasn't read the PRD - watch them try it without a tour.
+> **Generate the UI in Lovable.** Iterate by chatting: rename, resize, reposition. End-of-phase demo: screens click with nothing persisted. Show one human who hasn't read the PRD - watch them try it without a tour.
 
-> Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL in four weeks for under $90. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
+> Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL on per-vendor pricing. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
 
-The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) artifact is the day-by-day version of this post. Print it Monday morning of week 1. Each day has one small task; each Friday has one demo. The artifact removes the "what do I do next" question, which is the reason most four-week ships actually finish on time.
+The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) artifact is the day-by-day version of this post. Print it before Phase 1. Each day has one small task; each phase has one demo. The artifact removes the "what do I do next" question, which is the reason most small ships actually finish.
 
-Skip the four weeks and try to design the perfect first version, and six months later you are the one posting in the [salvage-or-rebuild](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold. The four-week build never grows that large. Either you reach the architectural ceiling on real users (good problem), or you learn the demand is not there (cheap problem). Both outcomes beat the half-built thing.
+Skip the build phases and try to design the perfect first version, and months later you are the one posting in the [salvage-or-rebuild](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold. The shed build never grows that large. Either you reach the architectural ceiling on real users (good problem), or you learn the demand is not there (cheap problem). Both outcomes beat the half-built thing.
 
 ## When this path ends
 

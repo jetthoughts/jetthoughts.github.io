@@ -32,6 +32,9 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 | `TASK-TRACKER.md` | Live queue of pending post-ship improvements (P1-P3) |
 | `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings from M1-M3 audit → gates to apply |
 | `40-49-review/40.02-post-ship-retrospective.md` | Post-ship retrospective (stub — populate after first iteration) |
+| `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — supplier-input-process-output-customer map, continuity validation, quality gates, 5 issues found |
+| `40-49-review/40.04-execution-readiness-sweep-2026-06.md` | June 2026 retrospective — time/money sweep + 13 critic-flagged gap closures across 18 chapters (commits c0718981 + c9adbaee) |
+| `30-39-architecture-design/30.02-adr-content-execution-readiness.md` | **CANONICAL** — content policy (no speculative time/money), binary anchor thresholds per chapter, Module 2 two-pass framing rationale, 4-persona critic gate, Tier 1/2/3 punch list shape |
 | `10-19-research/10.06-icp-persona-course-walkthrough.md` | ICP-E simulation with per-module verdicts and gap recommendations |
 | `10-19-research/10.07-icp-sam-persona-course-walkthrough.md` | ICP-Sam simulation — idea-stage first-timer evaluation with progressive-disclosure and jargon-glossing audits |
 | `50-59-execution/mechanical-audit-checklist.md` | Greppable + structural + voice gates every post must pass |
@@ -41,13 +44,16 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 
 ```
 1. Read GOAL-AT-A-GLANCE.md.
-2. Read 40-49-review/40.01-m1-m3-audit-2026-05-28.md — understand what was caught and fixed.
+2. Read 30-39-architecture-design/30.02-adr-content-execution-readiness.md — the canonical threshold-anchor table + content policy. ALL chapter edits must respect the anchors in section 2.
+2a. Read 40-49-review/40.04-execution-readiness-sweep-2026-06.md — what landed in the June 2026 sweep and the open follow-ups.
+2b. Read 40-49-review/40.01-m1-m3-audit-2026-05-28.md — understand what was caught and fixed.
 3. Read 10-19-research/10.06-icp-persona-course-walkthrough.md — ICP-E gaps and recommendations.
 4. Read 10-19-research/10.07-icp-sam-persona-course-walkthrough.md — ICP-Sam gaps and recommendations (idea-stage first-timer perspective).
 5. Read TASK-TRACKER.md — verify P1 items reflect the audit + both ICP findings.
-6. Read 20-29-strategy/20.02-positioning-vs-courses.md.
-7. Cross-reference against ../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md.
-8. If retrospective is due: populate 40-49-review/40.02-post-ship-retrospective.md.
+6. Read 40-49-review/40.03-sipoc-course-logic.md — understand module continuity and structural constraints before proposing sequence edits.
+7. Read 20-29-strategy/20.02-positioning-vs-courses.md.
+8. Cross-reference against ../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md.
+9. If retrospective is due: populate 40-49-review/40.02-post-ship-retrospective.md.
 ```
 
 ---

@@ -1,7 +1,7 @@
 ---
-title: "3.2 · Stop Specifying Features, Start Outcomes"
+title: "3.2 · Quality-check your brief: features to outcomes"
 aliases: ["/blog/stop-specifying-features-start-outcomes/"]
-description: "Feature-shaped briefs invite engineers and AI agents to build spaceships. Outcome-shaped briefs ship the one button you needed. Chapter 3.2 of this course."
+description: "Chapter 3.2 of the From Idea to First Paying Customer course. The quality-gate on your Chapter 3.1 brief: rewrite Section 3 feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -22,8 +22,8 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "3.2 · Stop Specifying Features, Start Outcomes"
-  og_description: "Feature-shaped briefs invite engineers and AI agents to build spaceships. Outcome-shaped briefs ship the one button you needed. Chapter 3.2 of this course."
+  og_title: "3.2 · Quality-check your brief: features to outcomes"
+  og_description: "Chapter 3.2 of the From Idea to First Paying Customer course. The quality-gate on your Chapter 3.1 brief: rewrite Section 3 feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
 cover_image_alt: "JetThoughts cover showing a simple three-button admin panel on the left and a 47-button spaceship control deck on the right, connected by a wavy red arrow labeled '10-week build, $15K'"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/"
 related_posts: false
@@ -112,12 +112,32 @@ flowchart TD
 Three actions, in order.
 
 - **Open your filled-in [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) from Chapter 3.1.** Find Section 3 ("What you're building"). Read the section out loud. If any line begins with a noun-shaped feature ("a CSV button," "a CRM," "user roles," "a settings page"), it is feature-shaped. Mark it.
-- **Rewrite each marked line in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Hard cap at 25 minutes for the whole section. If you spill, the section is too big - your one-page brief is trying to be three.
+- **Rewrite each marked line in the *When / I want / So I can* shape.** The *when* has to name a specific moment with a deadline, the *I want* has to name a verb and a budget, and the *so I can* has to name a result you can measure that week. Keep the whole section to a single focused pass. If you spill, the section is too big - your one-page brief is trying to be three.
 - **Share the rewritten section with your engineer or your AI agent and ask exactly one question**: *"What would you build differently from this brief than you would have built from the feature list?"* Their first answer is the scope you were about to lose. Their second answer is the scope you are about to keep.
+
+> **The pass/fail rubric.** Read the peer's answer. The brief PASSES quality-check only if their answer stays inside your scope - the features in your Section 3 and the items NOT in your no-go list. The brief FAILS if their answer:
+>
+> - names any feature you didn't list in Section 3, OR
+> - mentions anything you explicitly cut in your no-go list, OR
+> - includes 2+ items outside the no-go list (your scope is too vague).
+>
+> FAIL = revise Section 3 outcome-shape and ask a fresh peer. Do NOT advance to Module 4 with a failed brief; the Lovable build will inherit the fuzziness.
 
 > **When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.**
 > 
-> The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read six months from now, after the spaceship lands and investors ask why the demo is so heavy. Twenty-five minutes with a marker now saves ten weeks of build-and-throwaway later.
+> The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
+
+## Artifacts you carry out of Module 3
+
+After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+
+| Artifact | Where it goes next |
+|---|---|
+| **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3 Lovable kickoff prompt. The single source of truth Module 4 builds from. |
+| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (if you route to hire) + Ch 4.3 Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
+| **No-Go list** (5-10 items you explicitly cut from Ch 3.1 Section 4) | Ch 4.3 self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
+| **Audience-of-one fork** (Ch 3.1 Section 6 - who the brief is written for: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
+| **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 
 Module 3 closes here. Chapter 4.1 (Choose Your Build Path) is where you decide whether your rewritten brief goes to a self-serve stack or a hired team.
 

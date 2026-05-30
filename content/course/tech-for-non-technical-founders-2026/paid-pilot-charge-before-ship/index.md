@@ -1,7 +1,7 @@
 ---
 title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
 aliases: ["/blog/paid-pilot-charge-before-ship/"]
-description: "A verbal yes is not a paid pilot. A $500 Stripe deposit in week 0 is. The one-page Design Partner Agreement and 15-minute Stripe Checkout setup."
+description: "A verbal yes is not a paid pilot. A refundable Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
-  og_description: "A verbal yes is not a paid pilot. A $500 Stripe deposit in week 0 is. The one-page Design Partner Agreement and 15-minute Stripe Checkout setup."
+  og_description: "A verbal yes is not a paid pilot. A refundable Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
 cover_image_alt: "JetThoughts blog cover showing a one-page Design Partner Agreement with the deposit clause highlighted"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/"
 related_posts: false
@@ -51,7 +51,7 @@ After months of paying an agency, the muscle memory becomes "everyone keeps aski
 
 ## The Design Partner Agreement, in one page
 
-The Design Partner Agreement (DPA) is a one-page LOI that names the customer as a design partner, defines the pilot scope, sets the deposit, and converts to year-one on success. It is mutual-edit, in plain English, and v1 does not need a lawyer. The reason it stays short: every line in the document is a load-bearing clause, and every line that would not load-bear is removed.
+The Design Partner Agreement (DPA) is a one-page LOI (letter of intent - a short agreement that comes before a full contract) that names the customer as a design partner, defines the pilot scope, sets the deposit, and converts to year-one on success. It is mutual-edit, in plain English, and v1 does not need a lawyer. The reason it stays short: every line in the document is a load-bearing clause, and every line that would not load-bear is removed.
 
 The structure has six sections plus signatures.
 
@@ -59,7 +59,7 @@ The structure has six sections plus signatures.
 |---|---------|-----------------|
 | 1 | Scope of pilot | 3 outcomes the customer wants. 2 specific use cases. Anything outside is out of scope. |
 | 2 | Duration + dates | 6-8 weeks. Start date. End date. Weekly Friday demo at a named time. |
-| 3 | **Pilot fee + deposit** (load-bearing) | 10-30% of year-one ACV. Paid via Stripe before kickoff. Credited toward year-one on conversion. |
+| 3 | **Pilot fee + deposit** (load-bearing) | 10-30% of year-one ACV (annual contract value - what one customer pays in a year). Paid via Stripe before kickoff. Credited toward year-one on conversion. |
 | 4 | Success criteria | 3 measurable outcomes - hours saved, errors avoided, revenue produced. Friday-demo verified. |
 | 5 | Conversion terms | Year-one price. Annual or monthly. Auto-conversion or opt-in. Notice period. |
 | 6 | Data, IP, termination | Customer keeps their data. You keep the product IP. 30-day written notice to exit. |
@@ -82,6 +82,8 @@ The **conversion terms** clause is what the CFO actually approves in week 0. Sta
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
 ## The pricing math
+
+> **From Ch 1.3 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.3](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement, which lengthens the timeline.
 
 The deposit number is not arbitrary. It is anchored to projected year-one ACV and to what a typical CFO will sign without a procurement review. The bands by sector:
 
@@ -146,7 +148,7 @@ You have a warm lead from [Chapter 5.3](/course/tech-for-non-technical-founders-
 |---|---|---|
 | **"Send the one-pager"** | Close to a paid pilot. Window is open today. | Send inside the hour. DPA + payment link. |
 | **"Can we start free and convert later?"** | Still hedging. Deposit scares them but they're interested. | Reframe: deposit is *year-one ACV prepaid*, not added cost. Clarify: $500 sits in this month's accounting, gains CFO approval. Free pilots lose approval in week 8. |
-| **"Let me think about it"** | Not ready this week. Warm lead turning cold. | Check back in 7 days. If no callback, move to next prospect. Hedge → delay → ghost is the pattern. |
+| **"Let me think about it"** | Not ready this week. Warm lead turning cold. | Check back once. If no callback, move to next prospect. Hedge → delay → ghost is the pattern. |
 | **"We do not do paid pilots"** | Not in your must-have segment. Wrong buyer profile. | Thank them. Move on. They're not disqualified; they're not your customer yet. |
 
 ## When founders should not insist on a paid pilot
@@ -159,15 +161,15 @@ The paid pilot is the default, but it has three honest exceptions.
 | **True early-MVP (30% built)** | Your MVP is genuinely unfinished. Paid pilot misrepresents what you can deliver in 6-8 weeks. | Run free pilot honestly, ship to the agreed scope, turn second customer into the paid pilot. The honesty signal is commitment of a different kind. |
 | **Pre-investment-grade product** | Your product is 12 months from differentiability. Customer is buying relationship, not product. | Follow the Paul Graham ["Do Things That Don't Scale"](http://paulgraham.com/ds.html) Stripe Collison playbook. Paid pilot returns once product is actually doing the job. |
 
-## What to do this week
+## What to do next
 
-| Day | Action | Output |
+| Step | Action | Output |
 |---|---|---|
-| **Monday morning** | Write your one-page DPA in Google Doc. Use the template in [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/). Set up Stripe product + payment link (15 min). Pick deposit number from the sector table above. | Stripe link ready. DPA drafted. Deposit amount locked. |
-| **By Wednesday** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.3 who booked demos last week. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
-| **By Friday** | Bank your first deposit. Schedule pilot kickoff for Monday. Schedule first Friday demo for the Friday after. | Deposit cleared. Both demos scheduled. Pilot officially started. |
+| **1** | Write your one-page DPA in Google Doc. Use the template in [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/). Set up Stripe product + payment link. Pick deposit number from the sector table above. | Stripe link ready. DPA drafted. Deposit amount locked. |
+| **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.3 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
+| **3** | Bank your first deposit. Schedule pilot kickoff and the first Friday demo cadence. | Deposit cleared. Kickoff scheduled. Pilot officially started. |
 
-**If you do not have warm demos this week**, your work is still in [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). The DPA is the wrong sprint for an empty pipeline.
+**If you do not have warm demos yet**, your work is still in [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). The DPA is the wrong sprint for an empty pipeline.
 
 ## Advanced (optional sidebar)
 

@@ -195,6 +195,46 @@ These five are the gap between "works in test mode for one founder clicking arou
 
 ---
 
+## What stack to ask your hired team to use
+
+You are not picking the stack alone - your Fractional CTO or hired engineer makes the technical call. But you need the vocabulary to (a) have an informed conversation, (b) recognize when a contractor proposes the hipster-of-the-month stack that nobody can hire for in 6 months, and (c) push back without escalating to a holy war. The frame below is what we recommend out of 20 years of rescue calls.
+
+### Default: Rails (Ruby on Rails)
+
+Rails is the JetThoughts default and the Indie Hackers / DHH / Pieter Levels community standard. The reasoning is empirical, not religious: Rails ships fast, one engineer can operate the full stack end-to-end, the conventions are tight enough that the next engineer you hire reads the codebase in a day, and the deployment story (Heroku, Fly.io, Render) costs $7-$50/month at pre-seed scale. Basecamp ([DHH's *One-Person Framework* essay](https://world.hey.com/dhh/the-one-person-framework-711e6318)) is the case study: 50M+ users on a Rails monolith run by ~20 engineers. At your scale (47-5,000 paying users) one Rails engineer can ship + operate the whole thing.
+
+**Why Rails wins for the non-technical founder's hired team:** the hire pool is deep (15+ years of Rails engineers), the framework opinions are tight (less time arguing about conventions, more time shipping), background jobs / email / file uploads / authentication / payment / admin / search are all batteries-included rather than 12 separate npm packages, and the Rails community produced the rescue patterns we see work in production (Pundit for authorization, Devise for auth, Sidekiq for jobs, ActiveAdmin for staff tools).
+
+### Acceptable alternatives, with caveats
+
+| Stack | When it's right | Caveat |
+|-------|----------------|--------|
+| **Laravel** (PHP) | Your hired team is PHP-comfortable; you need WordPress integration; you're in a market with deeper Laravel hiring than Rails (Europe, Indonesia, Brazil) | Same conventional-monolith strengths as Rails. PHP hosting is cheaper. Hiring outside Rails-strong markets is often easier in Laravel. |
+| **Django** (Python) | Your product has serious ML / data / scientific workloads; the team will use Python for the model pipeline anyway and consolidation reduces cognitive load | Slightly less batteries-included than Rails; admin panel + auth + ORM are strong; the migration story is bumpier. Ship Django when ML is the moat, not "we like Python." |
+| **Next.js + Postgres** (frontend monolith with API routes) | Your product is content-heavy, SEO-critical, and the build is mostly screens with light backend | Next.js is excellent for static-heavy products. It becomes a footgun when the backend grows: API-route monoliths trap you in serverless cold starts and React-only data-fetch idioms. Cap Next.js at the marketing site + light dashboard. |
+
+### Explicit "do NOT accept" patterns
+
+If your contractor or FCTO proposes any of these in week 1, push back hard. They are real architectural choices, but not for your scale and not for the non-technical founder context:
+
+- **Microservices for 200 users.** Microservices solve a coordination problem teams of 50+ have. At 1 contractor + 1 non-technical founder, microservices add 5x the operational complexity for zero scaling benefit. Counter-proposal: one monolith, period.
+- **Separate React frontend + separate Node API + separate Python ML service for a single workflow.** Three deployments, three CI pipelines, three on-call rotations, three places auth has to be enforced. At pre-seed, this is the rebuild-in-9-months pattern we see most often. Counter-proposal: one Rails or Django app that does everything; add the second service only when a real bottleneck appears.
+- **GraphQL because "REST is old."** GraphQL solves a frontend-team coordination problem you don't have. It also makes caching, monitoring, and rate-limiting harder. REST is fine for 0 to 50K users. Counter-proposal: REST with sensible JSON; add GraphQL the day a frontend team asks for it.
+- **Kubernetes / Docker Swarm for an MVP.** Container orchestration is correct for 20+ services across 3 environments. It is wrong for "1 web process + 1 database + 1 cron job." Counter-proposal: Heroku, Fly.io, Render, or a single Hetzner VPS with a deploy script.
+- **Hand-rolled auth ("we'll just build login").** Auth is where rescue calls start. Counter-proposal: Devise (Rails), django-allauth (Django), or Auth.js (Next.js). Buy the proven implementation; never build your own.
+
+### The 3-question script for the contractor stack conversation
+
+When you interview a contractor or FCTO, ask these three questions before signing anything. The right answers map to the recommendations above; the wrong answers are the red flags.
+
+1. **"What stack would you build this in, and why?"** Good answer: "Rails (or Laravel/Django depending on team) - I can ship a working signup + paywall + one workflow end-to-end in 4-6 weeks solo, and the hire pool for the next engineer is deep." Bad answer: a 3-stack architecture diagram, or "whatever you prefer." The first signals over-engineering; the second signals they have no opinion (which means they'll default to what's trendy).
+2. **"If we hit 5,000 paying users, what breaks first?"** Good answer: a specific component (database read replicas, background job queue, image processing). Bad answer: "we'll rewrite in [new stack] then." Rewrite-driven engineers are expensive.
+3. **"How many other engineers can I hire who would be productive in this stack within 30 days?"** Good answer: a real number for your market (Rails: thousands worldwide; Laravel: similar; Django: similar; Elixir or Clojure: dozens; Rust web framework: a handful). Bad answer: vagueness, or "we don't need to think about that yet."
+
+The Indie Hackers community spent the last decade learning what one-person and two-person engineering teams can sustain. The answer almost always rhymes with Rails / Laravel / Django + Postgres + a single hosted deployment + boring open-source libraries. Trust the empirical evidence; resist the JavaScript fashion cycle.
+
+---
+
 ## Interviews that catch AI theater
 
 Every engineer claims AI fluency on a 2026 resume. Most are typing prompts, accepting suggestions, and pushing the diff to PR. Veracode measured what that produces: 45% of LLM-generated code shipped at least one exploitable security flaw. The market split into two populations behind the same resume language. The 80% run AI theater - they accept the model's first suggestion, never disagree, and never check the dependency. The 20% direct the model - they read the diff, reject most of it, and catch the hallucinated package before it merges.

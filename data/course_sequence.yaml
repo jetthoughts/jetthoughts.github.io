@@ -16,10 +16,10 @@ sequence:
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"
     module: "Chapter 1.1"
-    goal: "Write a one-sentence Founding Hypothesis you can falsify in 2 weeks."
+    goal: "Write a one-sentence Founding Hypothesis you can falsify with strangers."
 
   - slug: smoke-test-landing-page-7-day-demand-test
-    title: "1.2 · Smoke-Test the Hypothesis"
+    title: "1.2 · Smoke-Test the Hypothesis: The Demand Test"
     module: "Chapter 1.2"
     goal: "Ship a landing page that proves cold strangers click on your hypothesis sentence."
 
@@ -39,24 +39,24 @@ sequence:
     goal: "Polish the Ch 2.1 question list with a Claude persona companion pass before booking real slots."
 
   - slug: find-10-people-with-problem-outreach-2026
-    title: "2.3 · Find 10 People With the Problem"
+    title: "2.3 · Find 10 People With the Problem in 2026"
     module: "Chapter 2.3"
     goal: "Book 10 ICP interviews + run them with the sharpened question list, producing a validated problem statement."
 
   - slug: clickable-prototype-validation-2-hour-lovable
-    title: "2.4 · Build a Clickable Prototype in an Afternoon"
+    title: "2.4 · Build a Clickable Prototype"
     module: "Chapter 2.4"
-    goal: "Test the SHAPE of your solution with 5 interview subjects in a 2-hour Lovable build."
+    goal: "Test the SHAPE of your solution with 5 interview subjects via a focused Lovable build."
 
   - slug: one-page-product-brief-vibe-prd
-    title: "3.1 · The One-Page Product Brief"
+    title: "3.1 · The One-Page Product Brief (Vibe PRD)"
     module: "Chapter 3.1"
     goal: "Hand a single page to Lovable or a hired team that prevents over-engineering."
 
   - slug: stop-specifying-features-start-outcomes
-    title: "3.2 · Stop Specifying Features, Start Outcomes"
+    title: "3.2 · Quality-check your brief: features to outcomes"
     module: "Chapter 3.2"
-    goal: "Rewrite the brief in outcome shape so engineers stop building spaceships."
+    goal: "Stress-test Section 3 of your one-page brief by rewriting feature nouns as outcome-shaped job stories before handing off to Lovable or a contractor."
 
   - slug: should-you-hire-2026-decision-tree
     title: "4.1 · Should You Hire? The 2026 Decision Tree"
@@ -71,7 +71,7 @@ sequence:
   - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
     title: "4.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
     module: "Chapter 4.3"
-    goal: "Ship a working MVP in 4 weeks on Lovable + Supabase + Stripe for under $50/mo."
+    goal: "Ship a working MVP on Lovable + Supabase + Stripe."
 
   - slug: vibe-coding-ceiling-signals
     title: "4.4 · Vibe Coding Done Right: 5 Ceiling Signals"
@@ -81,12 +81,12 @@ sequence:
   - slug: must-have-segment-pmf-test
     title: "5.1 · Your First Customer Is Not a Marketing Problem"
     module: "Chapter 5.1"
-    goal: "Pass the Sean Ellis 40% test against your first 10-30 users before any paid ads."
+    goal: "Pass the Sean Ellis 40% test against your earliest users before any paid ads."
 
   - slug: channel-selection-before-outbound
     title: "5.2 · Choose Your Channel Before You Send One Message"
     module: "Chapter 5.2"
-    goal: "Pick one outreach channel you'll commit to for 4 weeks before scaling."
+    goal: "Pick one outreach channel you'll commit to before scaling."
 
   - slug: first-ten-customers-personal-network
     title: "5.3 · The First Ten Come From People Who Already Know You"
@@ -94,11 +94,11 @@ sequence:
     goal: "Convert 50 personalized warm DMs into your first 10 paid pilots."
 
   - slug: paid-pilot-charge-before-ship
-    title: "5.4 · Charge Before You Ship"
+    title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
     module: "Chapter 5.4"
-    goal: "Sign a Design Partner Agreement with a $500 Stripe deposit before writing new code."
+    goal: "Sign a Design Partner Agreement with a refundable Stripe deposit before writing new code."
 
   - slug: outbound-without-sales-team
     title: "5.5 · Going Outbound Without a Sales Team"
     module: "Chapter 5.5"
-    goal: "Send 30 filtered cold messages and book 1-2 paid pilots in weeks 3-4."
+    goal: "Send 30 filtered cold messages and book 1-2 paid pilots after the warm-network pass."

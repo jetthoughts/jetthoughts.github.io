@@ -1,7 +1,7 @@
 ---
 title: "5.3 · The First Ten Come From People Who Already Know You"
 aliases: ["/blog/first-ten-customers-personal-network/"]
-description: "~60% of fast-growing B2B startups got their first 10 customers from personal network. The 50-name list, 4 buckets, and the Monday outreach sequence."
+description: "~60% of fast-growing B2B startups got their first 10 customers from personal network. The 50-name list, 4 buckets, and the outreach sequence."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5.3 · The First Ten Come From People Who Already Know You"
-  og_description: "~60% of fast-growing B2B startups got their first 10 customers from personal network. The 50-name list, 4 buckets, and the Monday outreach sequence."
+  og_description: "~60% of fast-growing B2B startups got their first 10 customers from personal network. The 50-name list, 4 buckets, and the outreach sequence."
 cover_image_alt: "JetThoughts blog cover showing a 50-name network list sorted into four outreach buckets, champions on top"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/"
 related_posts: false
@@ -33,13 +33,13 @@ related_posts: false
 >
 > **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 >
-> **Output:** 50 personalized outreach messages sent in week 1, with replies tracked in a spreadsheet
+> **Output:** 50 personalized outreach messages sent, with replies tracked in a spreadsheet
 
 In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies a simple question: where did your first 10 customers come from? The list was not modest - Figma, Stripe, Slack, Airtable, Shopify, Notion, Front, Loom, and thirteen others at similar scale. He published the answers in [a piece](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses) every non-technical founder should read before the first ad runs. The headline number: roughly 60% of those first customers came from the founder's personal network, around 35% from filtered cold outbound, and only 5% from inbound, press, or launch events.
 
 The instinct of the founder out of a dev-shop burn is to skip the 60%. Asking friends to buy feels biased and asking former colleagues feels like cheating, so the voice in your head says real customers come from paid traffic to a clean landing page. That voice is the same one that told you the MVP would convert at 0.4%. The first 10 customers come from existing trust, and the people most willing to act on that trust are the people who already know you well enough to take a call this week.
 
-This chapter is how you build the list and send the messages by Friday.
+This chapter is how you build the list and send the messages.
 
 ![Lenny's 60/35/5 breakdown - where the first 10 B2B customers actually came from](lenny-source-bars.svg)
 
@@ -47,13 +47,13 @@ This chapter is how you build the list and send the messages by Friday.
 
 The objection comes up in every founder call: "I do not want to ask friends. It feels like begging."
 
-Reframe. You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro. The trade is "ten weeks of your time and $500 against a tool that will save you ten hours a week from week one." Founders who have the problem take the trade; founders who do not have it were never your customer, so you cut bait fast and move to the next name.
+Reframe. You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro. The trade is your time and a refundable deposit against a tool that will save them hours from the first week. Founders who have the problem take the trade; founders who do not have it were never your customer, so you cut bait fast and move to the next name.
 
 Two founders we worked with through the rescue queue both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks. The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
 
 ## The 50-name list: 4 buckets
 
-Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship strength, Last contact date. You will fill 50 rows in two hours on Monday.
+Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship strength, Last contact date. Fill 50 rows in one sitting before you send anything.
 
 | Bucket | How many | Definition |
 |---|---|---|
@@ -91,30 +91,30 @@ Use the verbatim Q3 answers from your [Chapter 5.1 survey](/course/tech-for-non-
 
 **Part 3: A Loom video, not a paragraph.**
 
-Record a 90-second Loom on Monday morning. A free Loom account gives you 25 free videos. The Loom shows your product in 60 seconds and you on camera in the other 30. Founders who skip the Loom and write a paragraph instead get half the response rate, because the recipient needs to see both your face and the product working in the same 90 seconds.
+Record one 90-second Loom before you send. A free Loom account gives you 25 free videos. The Loom shows your product in 60 seconds and you on camera in the other 30. Founders who skip the Loom and write a paragraph instead get half the response rate, because the recipient needs to see both your face and the product working in the same 90 seconds.
 
 **Part 4: A specific ask - 15 minutes, paid pilot teaser.**
 
-"15 minutes this week to walk you through it and see if it solves the [problem]? Open to a paid pilot if it does. Calendly: [link]."
+"15 minutes to walk you through it and see if it solves the [problem]? Open to a paid pilot if it does. Calendly: [link]."
 
 The "paid pilot" hint is load-bearing. You are flagging that this is not a free favor and not a free trial. The full mechanic of the paid pilot is the subject of [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - keep the teaser short here.
 
 **Total length:** 5-7 sentences. Anything longer and the recipient skims and forgets.
 
-## The week-1 sequence
+## The send sequence
 
-The week-1 sequence in one glance:
+The sequence in one glance:
 
-1. **Mon 9 AM** - List 50 names, sort into the 4 buckets.
-2. **Mon 11 AM** - Record the 90-second Loom.
-3. **Mon 2 PM** - Send the 5 champion messages and the 10 hot messages.
-4. **Tue AM** - Send the 15 warm messages.
-5. **Thu AM** - Send the 20 cold messages.
-6. **Fri 4 PM** - Review replies, book demos for week 2.
+1. **Step 1** - List 50 names, sort into the 4 buckets.
+2. **Step 2** - Record the 90-second Loom.
+3. **Step 3** - Send the 5 champion messages and the 10 hot messages.
+4. **Step 4** - Send the 15 warm messages a day or two later.
+5. **Step 5** - Send the 20 cold messages once the first replies are in.
+6. **Step 6** - Review replies, book demos for the following stretch.
 
-You will hear back from 15-25 of the 50 messages by Friday EOD. That is a 30-50% response rate on a properly built personal-network list, and it is the highest response rate you will ever see again as a founder. Use it well.
+You will hear back from 15-25 of the 50 messages once replies settle. That is a 30-50% response rate on a properly built personal-network list, and it is the highest response rate you will ever see again as a founder. Use it well.
 
-> **Slow-path variant for 2-hr/week founders** (day job + family time, evenings only): the Monday-Tuesday-Thursday staggered cadence assumes daytime availability you do not have. One-evening alternative: Tuesday 8-10 PM, spend the first 30 minutes sorting 50 names into the 4 buckets and recording the Loom (you can re-use the same Loom for all 50). Spend the next 90 minutes personalizing each message's first line (their name + the specific connection or shared interest) and sending all 50 in one batch using LinkedIn DM or Gmail with a templated body. You lose the response-rate uplift the staggered send produces (~30-50% becomes ~20-35%) but you complete the whole sequence in one evening instead of needing 4 separate workday windows. Book demos for the next Tuesday evening or weekend morning - your respondents will work with your calendar if your first message was specific enough.
+> **Slow-path variant for evenings-only founders** (day job + family time): the staggered cadence assumes daytime availability you do not have. One-evening alternative: in a single 2-hour block, spend the first 30 minutes sorting 50 names into the 4 buckets and recording the Loom (you can re-use the same Loom for all 50). Spend the next 90 minutes personalizing each message's first line (their name + the specific connection or shared interest) and sending all 50 in one batch using LinkedIn DM or Gmail with a templated body. You lose the response-rate uplift the staggered send produces (~30-50% becomes ~20-35%) but you complete the whole sequence in one evening instead of needing several separate workday windows. Book demos for evenings or weekend mornings - your respondents will work with your calendar if your first message was specific enough.
 
 **Track replies in the same Sheet.** Add four columns to the right: Reply received (date), Reply sentiment (yes/maybe/no/silent), Demo booked (date), Pilot proposed (yes/no). When the demo books, paste the Calendly confirmation date. When the pilot conversation happens, advance the row to [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
 
@@ -148,20 +148,27 @@ Some founders read the bucket structure and panic because their LinkedIn is at 2
 | **Your accelerator or YC batchmates** | A YC batchmate list is twice the size of your network and pre-warmed by the shared experience. Slack the batch about your launch. | Higher conversion than cold outbound. Shared experience = faster buy-in. |
 | **The community you live in** | Indie Hackers, [r/SaaS](https://www.reddit.com/r/SaaS/), no-code-founders Slack, AI-founders Discord. These are not cold outbound-they are spaces where you have been showing up and building in public for months. | A B2B services founder closed her first paid pilot in 9 days from a single Indie Hackers post about her MVP. |
 
-If neither source applies, skip ahead - your first ten will come from [Chapter 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) and the network outreach in this chapter is a smaller share of the work. The default sequence (network first, cold second) holds when the network is big enough to feed 30+ names. Below that, the order is the same but cold outbound starts in week 2 instead of week 3.
+If neither source applies, skip ahead - your first ten will come from [Chapter 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) and the network outreach in this chapter is a smaller share of the work. The default sequence (network first, cold second) holds when the network is big enough to feed 30+ names. Below that, the order is the same but cold outbound starts sooner.
 
-## What to do this week
+## What to do next
 
-| Day & Time | Action | Output |
+| Step | Action | Output |
 |---|---|---|
-| **Monday 9 AM** | Open Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship strength, Last contact date. Fill 50 names across the four buckets. | Complete 50-name list sorted by bucket |
-| **Monday 11 AM** | Record one 90-second Loom showing the product and you on camera. | Single Loom link for all outreach messages |
-| **Monday 2 PM** | Send the 5 champion messages and the 10 hot messages. Personalized opening for each. Same Loom link for all 15. | 15 outreach messages sent |
-| **Tuesday 9 AM** | Send the 15 warm messages. Name-personalized opener, template-personalized body. | 15 additional messages sent |
-| **Thursday 9 AM** | Send the 20 cold messages. Hold the bottom 5 for week 2 to soften the volume. | 20 cold messages sent (15 this week, 5 held) |
-| **Friday 4 PM** | Tally the responses. Book 3-5 demos for week 2. Annotate each row with response sentiment and date. | Demo calendar booked; ready for [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) |
+| **1** | Open Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship strength, Last contact date. Fill 50 names across the four buckets. | Complete 50-name list sorted by bucket |
+| **2** | Record one 90-second Loom showing the product and you on camera. | Single Loom link for all outreach messages |
+| **3** | Send the 5 champion messages and the 10 hot messages. Personalized opening for each. Same Loom link for all 15. | 15 outreach messages sent |
+| **4** | Send the 15 warm messages. Name-personalized opener, template-personalized body. | 15 additional messages sent |
+| **5** | Send the 20 cold messages once early replies are in. Hold the bottom 5 for a later batch to soften the volume. | 20 cold messages sent (15 in this batch, 5 held) |
+| **6** | Tally the responses. Book 3-5 demos. Annotate each row with response sentiment and date. | Demo calendar booked; ready for [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) |
 
 The 50-name list template, the Loom outline, and the 4-message template variants (champion / hot / warm / cold) all ship in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
+
+> **When the warm list is "exhausted" and it's time to switch to cold outbound.** Move to [Chapter 5.5](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) when ALL three of these are true:
+> - All 50 names have been contacted (no "I'll get to the cold bucket later")
+> - At least 10 replies received (so you've sampled the warm motion's signal)
+> - Fewer than 3 demos booked AFTER at least half the responses are in, OR your reply rate on the last 10 messages has dropped below 10%
+>
+> Either of the last two triggers means the warm list is mined. If you only meet 2 of 3, hold; the warm motion is still working. If all 3 fire, the network has given what it can - switch.
 
 ## Advanced (optional)
 

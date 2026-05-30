@@ -35,9 +35,15 @@ related_posts: false
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 recruitment. The scoring rubric and synthesis template in this chapter become your reference card once you have transcripts in hand.
 
+> **This chapter is read in two passes.**
+> - **Pass 1 (now):** the 5-question technique, the emotional-language flags, the interview flow, and a draft question list. Stops at "What to do tomorrow."
+> - **Pass 2 (later, after Ch 2.3 interviews):** the Synthesis section near the bottom. Bookmark the anchor [#synthesis-write-down-what-you-heard-decide-whats-next](#synthesis-write-down-what-you-heard-decide-whats-next) now; you will return here with 10 transcripts to score and write the one-page validated problem statement that Module 3 consumes.
+>
+> Reading the Synthesis section now is fine for a preview, but you cannot complete it without transcripts in hand. The loop-back is intentional, not a discontinuity.
+
 Eleven interviews, nine "yes, I would absolutely use this," and a $49/month launch the following Monday that closed its first week with three signups and two churns by day 14. The ed-tech founder who walked us through that timeline in her rescue call had asked every question in the hypothetical - "would you pay for this?" - and every answer was the polite shape the hypothetical produces. Eleven friendly conversations, zero useful data.
 
-For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done. Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). This chapter sits roughly week 4-6 in the 12-22 week path from idea to first paying customer.
+For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done. Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 ![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
 
@@ -175,6 +181,8 @@ Fake the convergence to start building anyway, and you join the long line of pos
 > Most customer interviews fail because the interviewees are polite. Better questions outperform better people. Anchor every question in a specific past moment - last Tuesday at 9pm, the last invoice, the last time the spreadsheet broke - and the polite-mode answers run out fast.
 
 ## Synthesis: Write Down What You Heard, Decide What's Next
+
+> **You are now on Pass 2 of this chapter.** This section runs AFTER your Ch 2.3 interviews are done. If you are reading this in Pass 1 (technique pass), preview it and continue; you cannot complete the steps below without 10 scored transcripts in hand. Return here once Ch 2.3 sends you back.
 
 After all 10 interviews are done, you have scored transcripts in a folder and a number. Synthesis is the 90-minute step that turns those transcripts into the one-page validated problem statement you'll carry into Module 3. Skip this step and go straight to Lovable, and you have not validated anything - you have a folder and a hypothesis.
 

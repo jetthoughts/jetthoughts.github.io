@@ -37,6 +37,8 @@ related_posts: false
 
 > **Before you start:** your Ch 1.2 smoke test should have cleared roughly 3%+ email conversion rate (or the equivalent paid-click signal in your channel). If it didn't, you have a demand-side problem, not an interview-recruitment problem. Go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank in your hypothesis before booking interviews. Ten calls on a failed hypothesis just produce ten polite conversations about the wrong problem.
 
+> **How this chapter relates to Ch 2.4:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3 first to validate THE PROBLEM, then Ch 2.4 to validate THE SOLUTION SHAPE with the 5 strongest of your 10.
+
 This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Chapter 5.5 cold-email script here; it scares interview subjects who don't yet know you have a product.
 
 A consumer-app founder we spoke with started where most non-technical founders start: "I'll just message my LinkedIn network." Sixty polite DMs over a week, 3 calls booked - two old colleagues showing up to be nice, one real lead who ghosted on reschedule. So she dropped the network, spent a morning reading Reddit threads where her exact problem showed up, and wrote to the people complaining by name about the post she'd just read. By Thursday afternoon she had **12 interview calls on the calendar**.
@@ -45,11 +47,11 @@ Her hypothesis was the same and her work hours were the same. What she changed w
 
 The journey, top to bottom:
 
-1. **Translate the hypothesis into an ICP map** - paste your three sentences and two competitor URLs into Claude or ChatGPT. Ask for the ICP profile and the exact subreddits, Slack/Discord channels, and LinkedIn search strings where these people post. 10 minutes.
+1. **Translate the hypothesis into an ICP map** - paste your three sentences and two competitor URLs into Claude or ChatGPT. Ask for the ICP profile and the exact subreddits, Slack/Discord channels, and LinkedIn search strings where these people post.
 2. **Read where they're already complaining** - work through the channels the AI proposed. Note 30 sentences in their real words.
 3. **Build a list of 30 specific people** from those threads. You're picking individuals you can name because you read what they wrote.
 4. **Write to each one about the post you read.** One person, one message, one reply at a time. 5-10% will say yes.
-5. **10 interview calls on the calendar within 2-3 weeks.**
+5. **10 interview calls on the calendar.**
 
 ## Before you start: write three sentences
 
@@ -61,11 +63,11 @@ Write three sentences in your own words before you open Reddit. Without them, ev
 | **Business (one sentence)** | What kind of business are *you* building? B2B SaaS, B2B services, B2C app, marketplace. Free or paid. Self-serve or sales-led. This decides which Reddit, which Apollo filter, which interview question you lead with. | Bad: "a SaaS tool"<br/>Good: "B2B SaaS, self-serve, $29-49/month annual billing" |
 | **Solution (one sentence)** | Not a feature list-a sentence about the change. You won't pitch this in calls (the Mom Test forbids it), but you need it written down to know which conversations confirm or kill it. | Bad: "a tool that automates invoicing"<br/>Good: "I think a one-click invoice export to Stripe and Wave saves the office manager 90 minutes every Friday" |
 
-If you can't write all three in 10 minutes, do that first. The deeper version of these three lines is the [one-page Product Brief in Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) - that's the structured workshop. For Chapter 2.3 outreach, a napkin draft of the three sentences is enough; you'll refine them in Chapter 3.1 after the 10 interviews land.
+If you can't write all three on a single napkin, do that first. The deeper version of these three lines is the [one-page Product Brief in Chapter 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) - that's the structured workshop. For Chapter 2.3 outreach, a napkin draft of the three sentences is enough; you'll refine them in Chapter 3.1 after the 10 interviews land.
 
 ## How to find 10 people who actually have this problem
 
-You can do every part of this with a Reddit account, a Gmail address, and 30 minutes a day. AI does the heavy lifting that used to need a researcher; the rest is reading and writing.
+You can do every part of this with a Reddit account, a Gmail address, and short daily blocks. AI does the heavy lifting that used to need a researcher; the rest is reading and writing.
 
 ### Translate the hypothesis into an ICP map
 
@@ -98,9 +100,11 @@ What you get back: the channels you'll read next and the search strings you'll u
 
 If your hypothesis is consumer-facing, swap "Slack/Discord" for "TikTok hashtags, Instagram comments, YouTube comment threads, and product subreddits."
 
+> **Optional: upgrade the prompt with a deep-research tool.** The Claude/ChatGPT version above is fast and free; the trade-off is the AI synthesizes text without source links. For a verifiable evidence trail, swap in Perplexity Pro ($20/mo) or Gemini Deep Research ($20/mo Advanced) with the same prompt - both return real-source citations (specific subreddit threads, G2 reviews, podcast transcripts) for every claim. Two payoffs: (1) spot-check that each proposed community is alive and on-topic before you invest reading time; (2) grab verbatim quote snippets you can reuse as cold-message subject lines later in this chapter. **What this is NOT**: a substitute for the manual reading below. The AI cites where the language exists; you still read the threads to internalize how the problem feels in your ICP's words.
+
 ### Read where they're already complaining
 
-Spend two hours reading before you write a single message. You're looking for the exact words people use when their problem flares up - those words become your subject lines when you write the cold messages.
+Read before you write a single message. You're looking for the exact words people use when their problem flares up - those words become your subject lines when you write the cold messages.
 
 **The simplest way:**
 
@@ -110,7 +114,7 @@ Spend two hours reading before you write a single message. You're looking for th
 4. Open a Google Doc. Each time a complaint matches your hypothesis, copy the sentence verbatim - with the username and URL.
 5. Repeat for two more channels.
 
-After two hours you should have 30 real sentences and 30 named people. Don't paraphrase. The exact wording is the point.
+When you're done you should have 30 real sentences and 30 named people. Don't paraphrase. The exact wording is the point.
 
 **Where to search (the AI gave you specifics; here are the common starting points):**
 
@@ -125,6 +129,8 @@ After two hours you should have 30 real sentences and 30 named people. Don't par
 
 One Reddit rule: don't blast a launch post on day one. Read the sub for a week, leave three real comments, then post a research question. The [self-promotion on Reddit guide](/blog/self-promote-on-reddit-without-getting-banned-promotion/) covers the karma floor and the unwritten rules.
 
+> **Optional: monitoring tools that cut the manual reading load.** [GummySearch](https://gummysearch.com) ($29/mo, 14-day free trial) sets keyword alerts across multiple subreddits - configure once, then return to a pre-filtered hit list instead of scrolling. [Common Room](https://www.commonroom.io/) (free tier exists) surfaces where your ICP hangs out across Reddit + Slack + Discord + GitHub - useful when your Step 1 AI proposed communities you've never heard of. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs - best for catching new threads later, when your hypothesis evolves and you need fresh evidence. **What this is NOT**: a substitute for reading the threads yourself. The 30 verbatim sentences in their own language is the artifact you carry into your Mom Test questions (Ch 2.1); tools surface the threads faster, you still read them.
+
 Write down 30 specific sentences in their language with the username next to each. That bank is your raw material when you write the cold messages. Don't paraphrase.
 
 ### Build a list of 30 specific people
@@ -136,11 +142,13 @@ Turn the 30 sentences into 30 names. Open each thread you saved while reading, c
 - **The post you'll reference** (paste the URL)
 - **One specific line they wrote** (the phrase you'll quote back when you write to them)
 
-Aim for 30 hand-picked people in 90 minutes.
+Aim for 30 hand-picked people in one focused sitting.
 
 **This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies at **3-5× the rate** of a list of 30 strangers a tool exported for you. Get this step right and the rest of the chapter shrinks.
 
 If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (50 contacts/month, no credit card) lets you filter on role + industry + company size and export the rest. Treat it as backfill, not the source - the hand-picked names always perform better.
+
+> **Optional: the full AI-assisted Step 3 workflow.** If you ran the Step-1 AI prompt and the Step-2 monitoring tools above, you can compress this whole section: (1) paste your Step-1 ICP filter (role + company size + industry) into Apollo's free tier - exports 50 named contacts in one click; (2) cross-reference 10-15 of those Apollo contacts against the Reddit usernames you saved in Step 2 - these warm-cold targets fit the ICP filter AND have already complained publicly about the problem (highest reply rate of any cold list you can build); (3) scrub the final list for deliverability with [NeverBounce](https://neverbounce.com) ($8 for 1K verifications) before sending. Apollo's free tier (50 contacts/month, no credit card) + NeverBounce verification keeps the cost of this assisted path inside the same single-digit-dollar band as the manual one.
 
 Filter the final list on six dimensions:
 
@@ -157,7 +165,7 @@ Drop anyone outside the band. You want signal, not volume.
 
 ## What to write so they don't ignore you
 
-Send 30 messages spread over a week. 6 a day, 30 minutes a day, by hand. Reply rate runs 5-10% when each message names a specific post you read - 2-3 booked calls per batch, which is enough to hit 10 interviews when stacked with replies still trickling in.
+Send 30 messages staggered, not in one burst. A handful a day, by hand, beats a single bulk-send. Reply rate runs 5-10% when each message names a specific post you read - 2-3 booked calls per batch, which is enough to hit 10 interviews when stacked with replies still trickling in.
 
 You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) booking link. If 6 a day by hand is too slow, [Gmail's multi-send](https://support.google.com/mail/answer/12018150) (up to 1,500/day on Workspace, ~500/day on personal) or [Streak](https://www.streak.com/) does the mail merge for you. Reply by hand either way - the back-and-forth is where the interview actually gets booked.
 
@@ -246,11 +254,11 @@ Reply rates on that opener run 60%+ - the highest in this whole chapter. The cha
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-    A(["Monday morning. Coffee. Pen.<br/>Hypothesis from Chapter 1.1."])
+    A(["Start a focused block.<br/>Hypothesis from Chapter 1.1."])
     A --> B[Cold outreach track<br/>AI ICP map + Reddit / LinkedIn /<br/>Discord reading + 30 messages by hand]
     A --> C[Research-panel track<br/>User Interviews or Respondent<br/>only if cold can't reach the ICP]
     A --> D[Smoke-test track<br/>Landing page from Chapter 1.2<br/>email capture in parallel]
-    B --> E[10 interviews booked<br/>in 2-3 weeks]
+    B --> E[10 interviews booked]
     C --> E
     D --> E
     E --> F[Apply Mom Test script<br/>from Chapter 2.1]
@@ -268,21 +276,39 @@ flowchart TD
 
 Run the cold-outreach track first - that's where the 10 calls usually come from. Run the smoke-test in parallel because it costs nothing extra (it's already built in Chapter 1.2). Add the research panel only if your ICP can't be reached cold; the two tracks fail differently, and having both gives you a more honest read.
 
-## What to do tomorrow
+## What to do next
 
-| Day | Action | Target |
+| Step | Action | Target |
 |---|---|---|
-| **Monday AM** | Pick the highest-conviction problem hypothesis from Chapter 1.1. Write it as one sentence: `I think [persona] currently does [task] in [painful way] and would pay $X to do it [better way].` | One hypothesis. Not three. |
-| **Monday AM–noon** | Run the AI ICP map prompt with your hypothesis + 2 competitor URLs. Read the channels it returns for 2 hours; note 30 sentences in their words. | List of 30 named people + 30 verbatim sentences |
-| **Monday 3pm** | Write the 3-message sequence using their words, not yours. | Sequence ready for Tuesday morning |
-| **Tuesday AM** | Send 6 messages by hand. Reply by hand to anyone who answers. | First replies by Wednesday afternoon |
-| **Wednesday check** | If under 10%, rewrite Day-0 subject line referencing a specific post and resend. If 10-30%, let sequence run 7 days. If 30%+, move to [Mom Test script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). | Calibrate by reply rate band |
+| **1** | Pick the highest-conviction problem hypothesis from Chapter 1.1. Write it as one sentence: `I think [persona] currently does [task] in [painful way] and would pay $X to do it [better way].` | One hypothesis. Not three. |
+| **2** | Run the AI ICP map prompt with your hypothesis + 2 competitor URLs. Read the channels it returns; note 30 sentences in their words. | List of 30 named people + 30 verbatim sentences |
+| **3** | Write the 3-message sequence using their words, not yours. | Sequence ready to send |
+| **4** | Send a handful of messages by hand. Reply by hand to anyone who answers. | First replies trickle in over the next couple of days |
+| **5** | Check the reply rate. If under 10%, rewrite Day-0 subject line referencing a specific post and resend. If 10-30%, let the sequence run its course. If 30%+, move to [Mom Test script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). | Calibrate by reply rate band |
 
-> **Slow-path variant for 2-hr/week founders** (working evenings only, day-job constraints): the Monday-through-Friday staggered cadence above assumes daytime availability. If your only window is one 2-hour evening block per week, batch-send instead: spend the first hour sorting 30 names into priority buckets, the second hour personalizing and sending all 30 in one go using Gmail multi-send (a Gmail Workspace feature that personalizes the first line per recipient and sends in batches) or LinkedIn Sales Navigator's bulk-DM feature. Expect a lower reply rate (~8-12% vs 20-30%) because the messages land in a burst instead of a stagger - compensate by booking the first 2-3 interviews from your fastest responders within 48 hours, before the cold batch goes silent. The batch-send variant costs you 1-2 fewer interviews per round but saves you 3-4 weeks of calendar time vs trying to spread the 30 sends across 5 workdays you don't have. The same slow-path pattern applies in [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) (async prototype observation) and [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) (one-evening batch outreach to your personal network) - look for the same callout style.
+> **Slow-path variant for the part-time founder** (working evenings only, day-job constraints): the staggered cadence above assumes daytime availability. If your only window is one evening block a week, batch-send instead: sort 30 names into priority buckets first, then personalize and send all 30 in one go using Gmail multi-send (a Gmail Workspace feature that personalizes the first line per recipient and sends in batches) or LinkedIn Sales Navigator's bulk-DM feature. Expect a lower reply rate (~8-12% vs 20-30%) because the messages land in a burst instead of a stagger - compensate by booking the first 2-3 interviews from your fastest responders quickly, before the cold batch goes silent. The batch-send variant costs you 1-2 fewer interviews per round but lets you fit the round inside a single evening rather than across workdays you don't have. The same slow-path pattern applies in [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) (async prototype observation) and [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) (single-evening batch outreach to your personal network) - look for the same callout style.
 
-The [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/) carries the verbatim sequence plus the LinkedIn DM openers, cold-email subject lines, Reddit research-comment template, and NeetoCal page copy. Print it, paste it into Gmail Tuesday morning, ship.
+The [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/) carries the verbatim sequence plus the LinkedIn DM openers, cold-email subject lines, Reddit research-comment template, and NeetoCal page copy. Print it, paste it into Gmail at the start of your next outreach block, ship.
 
-Skip this module and start building, and you usually burn 4 to 8 months and a five-figure budget before you discover the problem you assumed was real wasn't. The [pre-PMF founder sales rule](/blog/sales-pre-pmf-should-be-done-by-founders/) - you do this yourself, you don't hire it out - is the same logic. Validation is founder work because the signal disappears when an intermediary handles the conversation.
+## What happens after the 10 calls are booked
+
+This chapter's output is 10 booked interviewees - the inputs. Running them, scoring them, and turning them into the validated problem statement that Module 3 needs is the linear sequence below.
+
+> **You are now on Pass 2 of Ch 2.1.** Open Ch 2.1 on a second tab and scroll to the [Synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). That section holds the scoring rubric, the strong-signal count, the validated problem statement template, and the build / pivot / kill decision tree. The chain below tells you which Ch 2.1 sub-step lands where.
+
+Nothing in this chapter teaches the interview technique itself; that's Ch 2.1 (which you already read). What this section names is the chain of artifacts the booked calls produce:
+
+1. **Run each interview using the Ch 2.1 5-question Mom Test technique.** Open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact on a second monitor; read the 5 questions verbatim; do NOT improvise. 30-40 minutes per call.
+2. **Score each call 1-10 within 5 minutes of hanging up** per the Ch 2.1 scoring rubric. If you score later you will round up. Write the score in your notes file before opening the next browser tab.
+3. **After all 10 calls are done, fill the [Validated Problem Statement template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)** using the Ch 2.1 synthesis section. One page. Named persona, named industry, dated 10-call sample, one verbatim quote, one quantified cost.
+4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.4 prototype sessions. These are the same people, asked for a different kind of time - 30 minutes to watch them use a clickable prototype, not answer questions.
+5. **Two artifacts now flow into Module 3 + later modules:**
+   - The Validated Problem Statement (Section 1 of the Ch 3.1 one-page brief, lifted verbatim)
+   - The 5 strongest-signal interviewees (Ch 2.4 input - and later, your Week-5 Module-5 onramp invitees in Ch 4.3, plus your warm-list seed in Ch 5.3)
+
+If fewer than 7 of 10 calls score ≥ 7, the problem is too weak for this ICP. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow); retry with broader phrasing first. The full kill / iterate / proceed decision lives in [Ch 2.1's scoring section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).
+
+Skip this module and start building, and the typical failure mode is burning months of build time and a five-figure contractor budget before discovering the problem you assumed was real wasn't. The [pre-PMF founder sales rule](/blog/sales-pre-pmf-should-be-done-by-founders/) - you do this yourself, you don't hire it out - is the same logic. Validation is founder work because the signal disappears when an intermediary handles the conversation.
 
 ## Further reading
 

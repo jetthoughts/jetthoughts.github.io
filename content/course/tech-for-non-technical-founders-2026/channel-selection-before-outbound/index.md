@@ -1,7 +1,7 @@
 ---
 title: "5.2 · Choose Your Channel Before You Send One Message"
 aliases: ["/blog/channel-selection-before-outbound/"]
-description: "Channel-hopping in week 2 is the most common newbie mistake. The 4-week commitment rule + how to pick from interview evidence + AI-augmented channel research."
+description: "Channel-hopping after the first batch is the most common newbie mistake. The commitment rule + how to pick from interview evidence + AI-augmented channel research."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -24,7 +24,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5.2 · Choose Your Channel Before You Send One Message"
-  og_description: "Channel-hopping in week 2 is the most common newbie mistake. The 4-week commitment rule + how to pick from interview evidence + AI-augmented channel research."
+  og_description: "Channel-hopping after the first batch is the most common newbie mistake. The commitment rule + how to pick from interview evidence + AI-augmented channel research."
 cover_image_alt: "JetThoughts blog cover for Chapter 5.2 - choose one outbound channel and commit for four weeks before switching"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/"
 related_posts: false
@@ -34,30 +34,28 @@ related_posts: false
 >
 > **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 5
 >
-> **Output:** one channel hypothesis committed for 4 weeks of focused outreach
+> **Output:** one channel hypothesis committed long enough to read the signal
 
-Most founders spend the first week of outreach on LinkedIn, the second week on cold email, and the third week wondering why their Indie Hackers post got 12 upvotes from other founders and zero customer replies. Four channels, one week each - the math is 0 signal anywhere.
+Most founders open LinkedIn, get a few crickets, jump to cold email, get more crickets, jump to an Indie Hackers post, collect 12 upvotes from other founders and zero customer replies. Four channels, no commitment - the math is 0 signal anywhere.
 
 You ran 10 interviews in [Module 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Your interviewees told you exactly how they find tools like yours. They just did not use the word "channel" when they said it.
 
-This chapter is about listening to what they actually said and committing to one channel for 4 weeks before you try anything else.
+This chapter is about listening to what they actually said and committing to one channel before you try anything else.
 
-## The 4-week commitment rule
+## The commitment rule
 
-One week is not enough time to learn from a channel. A cold-email sequence takes 3-4 days to deliver, 2-3 more days for replies to accumulate, and another 3-5 days before the "not now" replies reveal whether the non-replies are disinterest or bad timing. Run 30 messages on Monday and call the channel dead by Friday because you got 2 replies - you just threw away the signal.
+Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing. Run a batch, call the channel dead because you got 2 replies right away - you just threw away the signal.
 
-Four weeks gives you enough data to make a real decision.
-
-| Week | Activity | Expected signal | Decision checkpoint |
+| Phase | Activity | Expected signal | Decision checkpoint |
 |------|----------|-----------------|-------------------|
-| **1** | Build list, send 30 messages | 1 reply = normal; panic is common | Do not switch channels |
-| **2** | Replies arrive, book demos | 2-4 demos booked = channel reaches buyer | First real signal the channel works |
-| **3** | Follow-ups + 20 fresh messages | 1-2 paid conversations start, reply rate stabilizes | Rate becomes predictable |
-| **4** | Evaluate all signals | Reply rate >5%? Demos → paid? Right buyer? | If all 3 = no, diagnose script/filter before switching |
+| **Send phase** | Build list, send the first batch | 1 reply = normal; panic is common | Do not switch channels |
+| **Reply phase** | Replies arrive, book demos | A handful of demos booked = channel reaches buyer | First real signal the channel works |
+| **Follow-up phase** | Follow-ups + a fresh batch | A paid conversation or two start, reply rate stabilizes | Rate becomes predictable |
+| **Decision phase** | Evaluate all signals | Reply rate >5%? Demos → paid? Right buyer? | If all 3 = no, diagnose script/filter before switching |
 
-A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only for 4 weeks. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
+A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
 
-The 4-week rule is not a ritual. It is the minimum data window that separates "this channel does not work" from "I ran this channel for 6 days and panicked."
+The rule is not a ritual. It is the minimum data window that separates "this channel does not work" from "I ran this channel for a few days and panicked."
 
 ## How to pick from interview evidence
 
@@ -77,12 +75,14 @@ Not every channel fits every product. Four dimensions narrow the field before yo
 
 | Dimension | Question | Scoring rule |
 |-----------|----------|--------------|
-| **Price point** | Can you afford the channel's acquisition cost model? | <$50/mo = free/organic only; $200-$500/mo = LinkedIn; >$500/mo = outbound calls viable |
+| **Price point** | Can you afford the channel's acquisition cost model? Use the price you tested in [Chapter 1.3](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) as the input here. | <$50/mo tested = free/organic only; $200-$500/mo = LinkedIn; >$500/mo = outbound calls viable |
 | **Buyer type** | Where do your must-have buyers actually live online? | Individuals = social + Reddit; B2B = LinkedIn + email + professional communities |
-| **Your time budget** | What can you honestly sustain for 4 weeks? | LinkedIn 20-30 min/10 msgs; cold email 5-8 min/10 msgs; community 45 min/post + no daily mgmt |
+| **Your time budget** | What can you honestly sustain through a full send/reply/follow-up arc? | LinkedIn 20-30 min/10 msgs; cold email 5-8 min/10 msgs; community 45 min/post + no daily mgmt |
 | **Interview signal** | What did your 10 transcripts actually say? | Count mentions per channel; 7-of-10 = louder than gut feeling |
 
-Score each candidate channel 1-3 on all four dimensions (1 = poor fit, 2 = moderate, 3 = strong). Add to get 12-point total. The highest-scoring channel is your 4-week bet.
+Score each candidate channel 1-3 on all four dimensions (1 = poor fit, 2 = moderate, 3 = strong). Add to get 12-point total.
+
+> **Threshold rule.** ≥9/12 = clear pick, commit to that channel. 7-8/12 = run a 1-week pilot on your top 2 channels first to break the tie; the higher reply rate wins. ≤6/12 = no channel is a strong fit; revisit your 10 interview transcripts for missing signal (channel-mention, daily-workflow, where-they-already-buy) before scaling outbound at all. Picking a 6/12 channel and committing is the failure mode the scoring exists to prevent.
 
 ## The 4 channels for newbie B2B and B2C
 
@@ -91,15 +91,15 @@ Most founders at this stage are choosing from four options. Here is what each on
 | Channel | Best for | Requires | Red flag |
 |---------|----------|----------|----------|
 | **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (50 emails/mo); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
-| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool (Instantly/Smartlead); 30-50 emails from Apollo/Hunter (25 searches/mo free tier) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
+| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (25 searches/mo free tier) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
 | **Community outreach** | B2B and prosumer where buyers already gather in Slack/Discord/forum | Must be a genuine participant first; one signal-quality post per sprint (not per week); spend 2 weeks commenting before posting product or get banned permanently | Joining this week then immediately selling = permanent ban from the community |
-| **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | 3+ posts/week minimum for 4 weeks; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to weeks 1-2 of low-visibility posts |
+| **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | A sustained posting cadence; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to the early low-visibility stretch |
 
 Pick the one that matches your buyer type, your price point, and your honest time budget - then commit.
 
 ## AI-augmented channel research
 
-After you pull the signal from your transcripts, run one Claude prompt to pressure-test your hypothesis before you commit 4 weeks to it:
+After you pull the signal from your transcripts, run one Claude prompt to pressure-test your hypothesis before you commit to it:
 
 ```text
 I am a founder building [product description in one sentence].
@@ -111,7 +111,7 @@ From 10 customer interviews, I heard these channel signals:
 - [Quote or paraphrase from interview 2]
 - [... up to 5 signals]
 
-I am considering [channel A] vs [channel B] for my first 4 weeks of outbound.
+I am considering [channel A] vs [channel B] for my first stretch of outbound.
 
 Based on the buyer persona and interview signals, which channel is more likely to reach them in the mode where they are open to discovering new tools? What would I need to believe for [channel A] to be right vs [channel B]?
 ```
@@ -122,7 +122,7 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 
 ## Channel Selection Worksheet
 
-Fill this out before you send message one. It takes 20 minutes and prevents 4 weeks of wasted effort.
+Fill this out before you send message one. It prevents the wasted-effort cycle of channel-hopping.
 
 ### Part 1: Interview Evidence
 
@@ -164,52 +164,52 @@ Score each candidate channel 1-3 on the four dimensions (1 = poor fit, 2 = moder
 **Community outreach → B2B and prosumer where buyers already gather.** Pick when: a specific Slack/Discord/forum exists, you are already a participant, you can post one signal-quality post per sprint. Skip when: you joined this week (spend two weeks commenting before posting product, or get banned permanently).
 - Price fit: ___ / Buyer type fit: ___ / Time budget fit: ___ / Interview signal fit: ___ / **Total: ___**
 
-**Social organic → B2C and prosumer with a visible product.** Pick when: 3+ posts/week sustainable for 4 weeks, format shows the product working (screen recordings, before/after, results). Skip when: you have never posted content before and cannot commit to weeks 1-2 of posting into a void.
+**Social organic → B2C and prosumer with a visible product.** Pick when: a sustained posting cadence is realistic, format shows the product working (screen recordings, before/after, results). Skip when: you have never posted content before and cannot commit to the early stretch of posting into a void.
 - Price fit: ___ / Buyer type fit: ___ / Time budget fit: ___ / Interview signal fit: ___ / **Total: ___**
 
 **Highest-scoring channel**: _______________
 
-### Part 3: The 4-Week Commitment
+### Part 3: The Commitment
 
-Write this down. Literally write it. Founders who skip this step are the ones who switch channels in week 2.
+Write this down. Literally write it. Founders who skip this step are the ones who hop channels at the first cricket.
 
 ```text
-My chosen channel for the next 4 weeks: [channel name]
+My chosen channel: [channel name]
 
 Why this channel:
 1. Interview evidence: [which interviewees, what they said]
 2. Buyer type match: [why this channel reaches my buyer]
 3. Price point math: [estimated cost per lead vs my price point]
-4. Time budget: [hours per week I will actually spend]
+4. Time budget: [time per batch I will actually spend]
 
-I will not switch channels before: [date = today + 28 days]
+I will not switch channels until I have run a full send/reply/follow-up arc.
 
-At day 28, I will evaluate:
+At the evaluation point, I will check:
 - Reply rate (target: >5%)
 - Demo-to-conversation rate (target: >20%)
 - Any paid conversations started (target: ≥1)
 
-If all three targets missed by day 28: diagnose the filter and script first, then consider a channel switch.
+If all three targets missed: diagnose the filter and script first, then consider a channel switch.
 ```
 
-Keep this in the same Google Sheet as your interview transcripts. Look at it every Monday before you send the week's batch.
+Keep this in the same Google Sheet as your interview transcripts. Look at it before you send each batch.
 
 ---
 
 The decision matters more than the channel itself. Committing to one channel and iterating on the script beats splitting your time across three by a wide margin, because the learning loop is tighter. With 30 focused messages you get a reply rate you can diagnose; with 10 messages spread across three channels you get nothing you can act on.
 
-Pick the channel your interviews point to, write it down, and give it 4 weeks before you question it.
+Pick the channel your interviews point to, write it down, and give it a real run before you question it.
 
-The first place to apply this is your personal network in [Chapter 5.3 (First Ten From Your Network)](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
+The first place to apply this is your personal network in [Chapter 5.3 (The First Ten Come From People Who Already Know You)](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
 
 ## What to do tomorrow
 
 1. Open the worksheet above and score each of the 4 channels against your customer interview answers. Pick the one that maps to the most evidence.
-2. Write the channel name + your commitment date in a Notion doc. The 4-week clock starts the day you send your first outbound message.
-3. Read [Chapter 5.3 - First Ten From Your Network](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) before Monday - that's the playbook for getting the first conversations on the channel you just picked.
+2. Write the channel name + your commitment statement in a Notion doc. The clock starts the day you send your first outbound message.
+3. Read [Chapter 5.3 - The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
 
 > **Module 5, Step 2 of 5** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
-> Next: [6.3 · The First Ten From Your Network](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+> Next: [5.3 · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
 > Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 
 ## Further reading

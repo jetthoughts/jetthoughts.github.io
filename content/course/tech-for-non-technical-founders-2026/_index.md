@@ -43,7 +43,7 @@ These are the five mistakes that put founders in our rescue queue. You're at the
 
 Reading this course should lower your odds of being our next rescue client. That is the point.
 
-> **How this is different from Y Combinator / Lenny / Reforge.** Y Combinator Startup School teaches the "talk to users, prioritize them over features" principle through weekly updates and library lectures. Lenny Rachitsky publishes the deep essays on each phase (validation, PMF, growth, hiring) as a newsletter and reference library. Reforge sells $5.5K-$7.5K cohort-based courses designed for product managers and growth leaders with 6+ years of experience at scale-stage companies. This course walks a non-technical founder with neither a team nor a built product from a one-sentence hypothesis to a signed paid pilot in 12-22 weeks of evenings and weekends. Three chapters we have not found systematized in those competitors' catalogues as of May 2026: [Ch 1.3 - Stripe Payment Link as price-hypothesis test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), [Ch 4.1 - four-way build-path decision matrix](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/), and [Ch 5.4 - Design Partner Agreement with deposit math](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) that turns verbal yes-es into paid pilots.
+> **How this is different from Y Combinator / Lenny / Reforge.** Y Combinator Startup School teaches the "talk to users, prioritize them over features" principle through weekly updates and library lectures. Lenny Rachitsky publishes the deep essays on each phase (validation, PMF, growth, hiring) as a newsletter and reference library. Reforge sells cohort-based courses designed for product managers and growth leaders with 6+ years of experience at scale-stage companies. This course walks a non-technical founder with neither a team nor a built product from a one-sentence hypothesis to a signed paid pilot, on evenings and weekends. Three chapters we have not found systematized in those competitors' catalogues as of May 2026: [Ch 1.3 - Stripe Payment Link as price-hypothesis test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), [Ch 4.1 - four-way build-path decision matrix](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/), and [Ch 5.4 - Design Partner Agreement with deposit math](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) that turns verbal yes-es into paid pilots.
 
 ## Take this course if
 
@@ -78,51 +78,51 @@ You can hand any of these to an investor or a co-founder and answer their questi
 
 ## Module index
 
-> **Time estimates below are focused reading time per module** (~9 hours total). Realistic execution — including the 7-day smoke-test wait, 10 interviews, 4-week MVP build, and first paid pilot — is **12-22 weeks elapsed (40-60 focused hours)** at 2-4 hours/week. See Chapter 4.3's cumulative time banner for the full breakdown.
+> Length is a byproduct of effective delivery, not a constraint. The course is paced for an idea-stage non-technical founder on evenings and weekends. Read the modules in order; each module's output is the next module's input.
 
 ### Module 1 - Hypothesis & Smoke Test
-*Output: One-sentence Founding Hypothesis + a live landing page with Stripe price button. (2 hr)*
+*Output: One-sentence Founding Hypothesis + a live landing page with Stripe price button.*
 *Start here if you don't have a one-sentence Founding Hypothesis yet (customer + problem + approach + competition + differentiation), or you have a hypothesis but never tested demand with a landing page.*
-- [**1.1** · Form Your Founding Hypothesis - 90-Minute Sprint](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
-- [**1.2** · Smoke-Test the Hypothesis - The 7-Day Demand Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+- [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
+- [**1.2** · Smoke-Test the Hypothesis: The Demand Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
 ### Module 2 - Validate the Problem
-*Output: 10 Mom Test interviews + 2-hr Lovable prototype shown to 5 of them. (3 hr)*
+*Output: 10 Mom Test interviews + a Lovable prototype shown to 5 of them.*
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 - [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
   - Templates: [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) · [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)
 - [**2.2** · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
 - [**2.3** · Find 10 People With the Problem in 2026](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
   - Template: [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/)
-- [**2.4** · Build a Clickable Prototype in an Afternoon](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
+- [**2.4** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 
 ### Module 3 - Design from Evidence
-*Output: One-page Product Brief drafted from interview transcripts. (1 hr)*
+*Output: One-page Product Brief drafted from interview transcripts.*
 *Start here if you've validated the problem but don't have a one-page Product Brief.*
-- [**3.1** · The One-Page Product Brief (one-page brief)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
+- [**3.1** · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
   - Template: [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/)
-- [**3.2** · Stop Specifying Features. Start Specifying Outcomes.](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
+- [**3.2** · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
 
 *Course glossary (reference, not in the linear path):* [Five Tech Words to Stop Nodding At](/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/) - skim once, come back when you hit a word you nodded at.
 
 ### Module 4 - Build It Yourself
-*Output: Live Lovable + Supabase + Stripe MVP at a real URL, ownership locked Day 1. (2 hr)*
+*Output: Live Lovable + Supabase + Stripe MVP at a real URL, ownership locked Day 1.*
 *Start here if you have a Product Brief and need to build the MVP.*
-- [**4.1** · Build It Yourself or Hire (the Default)](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
+- [**4.1** · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
   - Template: [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/)
-- [**4.2** · Day-1 Ownership Audit: Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
+- [**4.2** · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
   - Template: [Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/)
-- [**4.3** · Build It Yourself: The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
+- [**4.3** · The Self-Serve MVP Stack: Lovable + Supabase + Stripe](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
   - Template: [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/)
 - [**4.4** · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
 
 ### Module 5 - First Paying Customer
-*Output: One paying customer through a deliberately chosen channel. (1 hr)*
+*Output: One paying customer through a deliberately chosen channel.*
 *Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
-- [**5.1** · Your First Customer Is Not Marketing: The Sean Ellis 40% Test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 - [**5.2** · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)
-- [**5.3** · The First Ten From Your Network](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+- [**5.3** · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
 - [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
   - Template: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/)
 - [**5.5** · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)

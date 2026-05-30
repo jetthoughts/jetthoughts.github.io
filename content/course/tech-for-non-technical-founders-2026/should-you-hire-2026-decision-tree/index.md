@@ -36,7 +36,7 @@ related_posts: false
 
 Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring is what you do when you hit a specific ceiling signal - not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
 
-The pre-seed B2B SaaS founder who hires engineering before a single paying customer is the rescue call we take most often. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and rewrote it as outcomes in [Stop Specifying Features](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
+The pre-seed B2B SaaS founder who hires engineering before a single paying customer is the rescue call we take most often. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
 
 ![A hand-drawn 2-by-2 decision matrix with four quadrants labeled Validate without code, Self-serve build, Fractional CTO bridge, and Hire a team. Each quadrant lists a first action, cost band, and timeline.](decision-matrix.svg)
 
@@ -72,34 +72,34 @@ The decision matrix in this post is the structural-engineer step. Before you com
 
 Most build-vs-hire posts give you one answer. The honest answer is four answers, and the right one depends on five inputs the post cannot know about you. Pick the smallest box that answers the next question your investors will ask.
 
-| Path | Cost & timeline | When to pick / Failure mode |
+| Path | Cost shape | When to pick / Failure mode |
 |---|---|---|
-| **1. Validate without code** | $0-$300 + optional $100-$200 ads · 1 week | **Pick when** no MVP, untested hypothesis, no paying buyers. **Fails when** zero clicks from 35 prospects - pitch/price/timing is wrong. |
-| **2. Self-serve build** | $200-$1,200/mo · 6-12 weeks | **Pick when** validated problem, one workflow, one persona, simple backend. **Fails when** architectural ceiling hits at ~5K users or second integration. |
-| **3. Fractional CTO bridge** | $1,600-$4,000/mo ($0 equity) · 8-16 weeks | **Pick when** validated, real data model, no $200K+ runway for full hire. **Fails when** fractional CTO drifts from oversight into coding features. |
-| **4. Hire a team** | $30K-$80K/mo + $1K-$3K tooling · 12-26 weeks | **Pick when** backend-heavy, integration-rich, compliance scope, 6+ mo runway. **Fails when** team builds a spaceship for the wrong moon. |
+| **1. Validate without code** | Per-vendor pricing (Carrd, Stripe, Notion). Optional ad spend. | **Pick when** no MVP, untested hypothesis, no paying buyers. **Fails when** zero clicks from 35 prospects - pitch/price/timing is wrong. |
+| **2. Self-serve build** | Per-tool monthly pricing (Lovable + Supabase + Stripe + Resend). | **Pick when** validated problem, one workflow, one persona, simple backend. **Fails when** architectural ceiling hits at ~5K users or second integration. |
+| **3. Fractional CTO bridge** | Fractional hourly rate, $0 equity. | **Pick when** validated, real data model, no runway for a full hire. **Fails when** fractional CTO drifts from oversight into coding features. |
+| **4. Hire a team** | Material monthly burn before revenue (team salaries + tooling). | **Pick when** backend-heavy, integration-rich, compliance scope, multi-month runway secured. **Fails when** team builds a spaceship for the wrong moon. |
 
 ### 1. Validate without code
 
-Use this path when you have no MVP yet, a single untested hypothesis, and no confirmation that anyone will pay. This week: ship a Carrd page + Stripe checkout + Notion FAQ, add a Lovable demo screen recording if you have one, and send the link to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. Tools cost $0 to $300 (Carrd $19/year, Stripe free until transactions, Notion free, Lovable trial) plus an optional $100-$200 in LinkedIn or Google ads. A week's runway. If zero buyers click, you found that out in a week instead of a quarter - rewrite the pitch or pivot the problem before you spend real runway.
+Use this path when you have no MVP yet, a single untested hypothesis, and no confirmation that anyone will pay. This week: ship a Carrd page + Stripe checkout + Notion FAQ, add a Lovable demo screen recording if you have one, and send the link to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. Tooling is per-vendor (Carrd annual domain + page, Stripe free until transactions, Notion free, Lovable trial), with optional LinkedIn or Google ad spend on top. If zero buyers click, you found that out before you spent real runway - rewrite the pitch or pivot the problem.
 
 ### 2. Self-serve build ([The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/))
 
 Pick this path when the problem is validated (10+ Mom Test interviews showing past-behavior signal, 2-5 pre-orders or paid pilots), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
 
-This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $20/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Monthly tooling runs $200-$1,200. Expect 6-12 weeks to first 5 paying users. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
+This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $20/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
 
 ### 3. Fractional CTO bridge ([The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge))
 
-Use this when the problem is validated, the build has a queue, an integration, or a data model that needs real thinking, and you don't have $200K+ in runway for a full engineering hire. This week: hire a Fractional CTO for 5 hours per week and point them at architecture review on the Lovable build, PR review on contractor commits, and watching the AWS and OpenAI bills. Cost is $1,600-$4,000/month ($80-$200/hour, 5-10 hrs/week) with $0 equity. Expect 8-16 weeks for the bridge to hold. Watch for the Fractional CTO drifting from structural engineer into coder. Set a 90-day review. If their hours go to shipping features instead of oversight, architecture, and hiring, you hired the wrong profile.
+Use this when the problem is validated, the build has a queue, an integration, or a data model that needs real thinking, and you don't have the runway to sustain a full engineering hire. This week: hire a Fractional CTO for 5 hours per week and point them at architecture review on the Lovable build, PR review on contractor commits, and watching the AWS and OpenAI bills. You pay their fractional hourly rate with $0 equity. Watch for the Fractional CTO drifting from structural engineer into coder. Set a quarterly review. If their hours go to shipping features instead of oversight, architecture, and hiring, you hired the wrong profile.
 
 ### 4. Hire a team ([Who You're Hiring in 2026](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#where-to-find-developers-in-2026))
 
-Choose this when the build is backend-heavy (real-time, queues, AI inference at scale, multi-tenant data), integration-rich (5+ third-party APIs), or compliance-scoped (HIPAA, SOC 2, PCI), and you have $30K+/month to sustain engineering for at least 6 months. This week: read your draft SOW [clause by clause](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) and confirm that GitHub org, AWS root, domain registrar, and database all sit under your company email before kickoff. A team of 3-5 runs $30K-$80K/month plus $1K-$3K in tooling. Expect 12-26 weeks to first paying users. Biggest risk: the team builds you a [spaceship for the wrong moon](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The Friday demo rule and the [Org Chart audit](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) are how you catch this in week three instead of month three.
+Choose this when the build is backend-heavy (real-time, queues, AI inference at scale, multi-tenant data), integration-rich (5+ third-party APIs), or compliance-scoped (HIPAA, SOC 2, PCI), and you have the runway to sustain engineering salaries before revenue lands. This week: read your draft SOW [clause by clause](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow) and confirm that GitHub org, AWS root, domain registrar, and database all sit under your company email before kickoff. A team of 3-5 is material monthly burn before revenue, on top of tooling. Biggest risk: the team builds you a [spaceship for the wrong moon](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The weekly demo discipline and the [Org Chart audit](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) are how you catch this early instead of late.
 
 ## The 5 questions that route you
 
-Five questions feed the matrix. They take 30 minutes alone with a printed worksheet. Answer them honestly, write the result at the top of your Notion doc, and the matrix picks for you.
+Five questions feed the matrix. Answer them alone with a printed worksheet, write the result at the top of your Notion doc, and the matrix picks for you.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -109,13 +109,13 @@ flowchart TD
     Q1 -->|No| Validate["Step back: Validate without code first.<br/>Run the Airbnb test this week."]
     Q1 -->|Yes| Q2{"Q2: Backend-heavy?<br/>Real-time / queues / compliance / 5+ integrations?"}
     Q2 -->|No| Q3{"Q3: Runway tight?<br/>Less than 4 months to show paying users?"}
-    Q2 -->|Yes| Hire["Hire a team.<br/>$30K+/mo. Read the SOW first."]
+    Q2 -->|Yes| Hire["Hire a team.<br/>Material monthly burn. Read the SOW first."]
     Q3 -->|No| Q4{"Q4: Senior engineer available<br/>for 1 hr/month architecture review?"}
     Q3 -->|Yes| Validate
     Q4 -->|Yes| SelfServe["Default confirmed: Self-serve.<br/>Paste one-page brief into Lovable."]
     Q4 -->|No| Q5{"Q5: Monthly engineering budget?"}
-    Q5 -->|"$1.6K-$4K/mo"| Fractional["Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)).<br/>Buys the architecture review commercially. $0 equity."]
-    Q5 -->|"$5K-$30K/mo"| Hire
+    Q5 -->|"Fractional rate"| Fractional["Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)).<br/>Buys the architecture review commercially. $0 equity."]
+    Q5 -->|"Full team burn"| Hire
 
     classDef start fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
     classDef question fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
@@ -134,19 +134,26 @@ flowchart TD
 
 The five questions, verbatim, in the order you answer them on the worksheet:
 
+> **Quick gloss before you answer Q2.** Q2 names the architecture words that route the decision. Read these once so you can answer "yes/no" without guessing:
+>
+> - **WebSockets / server-sent events / real-time multi-user:** the tech that powers two-people-typing-in-the-same-doc behavior (Google Docs, Slack DM, live chat). NOT needed for single-user apps, dashboards, forms, or anything that refreshes on a button click.
+> - **Row-Level Security (RLS):** a database rule that says "Coach A sees only Coach A's rows" - needed any time Customer A and Customer B share the same database (typical B2B SaaS).
+> - **Multi-tenant data:** one app serves many separate customers in the same database. Standard B2B SaaS shape. Single-user-per-account consumer apps are NOT multi-tenant.
+> - **SOC 2 / HIPAA / PCI:** external audits. HIPAA = you store healthcare data on your servers. PCI = you store card numbers on your servers (Stripe-hosted checkout does NOT trigger this). SOC 2 = enterprise buyers demand the audit before they sign. Standard B2C apps and B2B SaaS without health data do not trigger any of the three.
+
 - **Q1. Is the problem validated?** Counts as yes only if you have 10 or more [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) interviews showing strong past-behavior signal AND 2 to 5 pre-orders, paid pilots, or annual deposits. LinkedIn likes do not count. "They said they would buy" does not count. Money on the table or a calendar invite for a procurement call counts.
 
   > **Already completed Modules 1-3?** Answer Q1 **Yes**. The Ch 1.3 smoke test + the Ch 2.3 interview round are the pre-order equivalent at this stage; you will convert the signal into actual pre-orders during Module 5. Do not loop back to Path 1 just because your card has not been charged yet.
 - **Q2. How backend-heavy is the build?** Counts as heavy if any one of these is true: real-time updates (WebSockets, server-sent events), background queues with retry logic, AI inference inside the request path with cost above $0.01 per call, multi-tenant data with row-level security, 5+ third-party API integrations, regulated data (HIPAA, SOC 2, PCI scope).
 - **Q3. What is your runway?** Months of cash until you must show paying customers. Less than 4 months: route to Path 1 regardless of how validated you think you are. The Airbnb test is the only one that fits in the runway window. 4-12 months: Paths 1, 2, 3 are all on the table. 12+ months: Path 4 becomes safe to consider.
-- **Q4. Do you have a senior engineer in your network for 1 hour of architecture review per month?** This is the cheap insurance. Even on Path 2 (self-serve with Lovable), one hour a month with a senior backend engineer who will read your data model and your worst route catches the architectural ceiling 3 months before you hit it. Yes: stay on Path 2. No: move to Q5 to buy the same insurance commercially.
-- **Q5. What is your monthly engineering budget?** $1,600-$4,000/mo = Path 3 (Fractional CTO). $5,000-$30,000/mo = Path 4 (hire a team). Skip the path you cannot fund for 6 months.
+- **Q4. Do you have a senior engineer in your network for 1 hour of architecture review per month?** This is the cheap insurance. Even on Path 2 (self-serve with Lovable), one hour a month with a senior backend engineer who will read your data model and your worst route catches the architectural ceiling well before you hit it. Yes: stay on Path 2. No: move to Q5 to buy the same insurance commercially.
+- **Q5. What is your monthly engineering budget?** A fractional rate fits Path 3 (Fractional CTO). Full team salaries fit Path 4 (hire a team). Skip the path you cannot fund through the runway window. (For concrete fractional and team-burn ranges see [Chapter 4.4's graduation thresholds](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) - the fractional CTO band runs roughly $200/hr or $8-15K/mo at the time of writing.)
 
-A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) lays out these five questions in checkbox form and writes your verdict at the top of the page. Print it. Fill it in 30 minutes. Take the result to one peer or advisor for a 20-minute sanity check.
+A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) lays out these five questions in checkbox form and writes your verdict at the top of the page. Print it. Fill it in alone. Take the result to one peer or advisor for a sanity check.
 
 ### The Series-A off-ramp: when the model itself changes
 
-> All four paths above (validate without code / self-serve / fractional CTO / hire a team) assume the same operating model: you hand a one-page brief to engineers (whether AI or human) and they build it. That is the feature-factory pattern Marty Cagan has spent 20 years criticizing. It is the right model for a non-technical founder running a half-built MVP with $4K-$80K of monthly burn. It is the wrong model the moment you can afford a real product team.
+> All four paths above (validate without code / self-serve / fractional CTO / hire a team) assume the same operating model: you hand a one-page brief to engineers (whether AI or human) and they build it. That is the feature-factory pattern Marty Cagan has spent 20 years criticizing. It is the right model for a non-technical founder running a half-built MVP on the burn shapes above. It is the wrong model the moment you can afford a real product team.
 >
 > Around Series A (~$2-5M raised, 6-15 person team), the off-ramp activates. Stop handing specs, start handing problems. The product team owns discovery and delivery. You own outcomes and strategy. If you crossed that line and you are still writing one-page briefs week to week, you are paying senior engineering rates for junior product-manager work.
 >
@@ -157,8 +164,8 @@ A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-
 | Action | By when | Output |
 |---|---|---|
 | **Print the worksheet** - [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) (one side of paper). Bring it with your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) + [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/). | Tonight | Worksheet ready for morning |
-| **Answer the 5 questions.** Number of interviews, pre-orders, runway months, monthly budget, senior engineer available. 30 minutes alone, pen on paper. No negotiating past the time box. | Tomorrow morning | Verdict written at top |
-| **Pick your next chapter by path.** Path 1 (Validate): [Airbnb test](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/#the-airbnb-test), ship Carrd + Stripe + Notion by Friday. Path 2 (Self-serve): [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Path 3 (Fractional CTO): [The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge), hire by month end. Path 4 (Hire): [Hiring Interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater) + [SOW guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow). | Tomorrow afternoon | Next chapter decided |
+| **Answer the 5 questions.** Number of interviews, pre-orders, runway months, monthly budget, senior engineer available. Alone, pen on paper. No negotiating with yourself. | Tomorrow morning | Verdict written at top |
+| **Pick your next chapter by path.** Path 1 (Validate): [Airbnb test](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/#the-airbnb-test), ship Carrd + Stripe + Notion this week. Path 2 (Self-serve): [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Path 3 (Fractional CTO): [The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). Path 4 (Hire): [Hiring Interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater) + [SOW guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow). | Tomorrow afternoon | Next chapter decided |
 
 **Default verdict: self-serve.** Continue to [Module 4: Build It Yourself](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). The [ceiling-signal monitoring chapter](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to revisit the hire decision. If a ceiling signal has already fired before you start building, the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) covers where to find developers, the Fractional CTO bridge, interviews, and SOW reading.
 

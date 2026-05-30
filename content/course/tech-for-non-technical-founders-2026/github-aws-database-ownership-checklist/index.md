@@ -33,11 +33,11 @@ related_posts: false
 >
 > **Input:** a build-path decision from Chapter 4.1 (self-serve or hire)
 >
-> **Output:** a 45-minute Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
+> **Output:** a Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
 
 This audit applies BEFORE you hand over a credit card to your first contractor, agency, or Fractional CTO. It also works as a post-hire rescue, but the cheaper time to run it is on Day 1 - not month 14, when the story below kicks off.
 
-> **On Path 2 (self-serve from Ch 4.1)?** Most of this audit takes 5 minutes - your Lovable, Supabase, Stripe, GitHub, and domain accounts will be in your own email if you signed up yourself. Skim the 12-item table below to confirm, save the chapter, and return in full the day you hire your first contractor or Fractional CTO. The chapter applies in full only when someone else's email could end up on your root accounts.
+> **On Path 2 (self-serve from Ch 4.1)?** Most of this audit is a quick skim - your Lovable, Supabase, Stripe, GitHub, and domain accounts will be in your own email if you signed up yourself. Skim the 12-item table below to confirm, save the chapter, and return in full the day you hire your first contractor or Fractional CTO. The chapter applies in full only when someone else's email could end up on your root accounts.
 
 Fourteen months of **$23K monthly invoices**, a Delaware C-corp, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the agency owner's personal Gmail. The first hour of that health-tech rescue last Q4 was not technical. It was three back-and-forth emails to the agency owner asking him to please change the root account email and send the new password to a Notion doc he could not see. He took six days.
 
@@ -113,7 +113,7 @@ flowchart TD
     Start(["Friday afternoon. Alone.<br/>Credit card + Notion doc."])
     Start --> Code{Code: Are you<br/>GitHub org Owner?}
     Code -->|Yes| Cloud{Cloud: Is the AWS<br/>root email yours?}
-    Code -->|No| FixCode[Slack the lead engineer.<br/>5-min org transfer]
+    Code -->|No| FixCode[Slack the lead engineer.<br/>Self-serve org transfer]
 
     Cloud -->|Yes, with MFA| Sec{Secrets: Can you read<br/>the prod DB password<br/>tonight without asking?}
     Cloud -->|No| FixCloud[Self-serve email change<br/>or 3-5 day AWS support<br/>recovery with corp docs]
@@ -148,22 +148,22 @@ flowchart TD
 
 Most audit failures are sloppy Day-1 setup, not malice. The agency was moving fast in the kickoff sprint, used whatever email was logged in, and nobody went back to clean it up. The fix follows three steps in this order, and the order matters.
 
-| Step | What to do | Timeline |
+| Step | What to do | Cadence |
 |---|---|---|
-| 1: Stop the bleeding | Get yourself an admin path into every system the agency controls. AWS root password reset to your email. Your name added as GitHub org owner alongside theirs. Your card added as the primary on Stripe, SendGrid, and OpenAI. Do this on a Friday so you have the weekend before anyone notices. | This Friday |
-| 2: Extract the IP | Pull a fresh clone of every repo to a private GitHub org under your account. Export the database to an S3 bucket on an AWS account in your name. Document where every secret currently lives and where it will live after the migration. Two weeks of work on the existing setup is fine. | Two weeks |
+| 1: Stop the bleeding | Get yourself an admin path into every system the agency controls. AWS root password reset to your email. Your name added as GitHub org owner alongside theirs. Your card added as the primary on Stripe, SendGrid, and OpenAI. Do this before the next sprint so you have a quiet window before anyone notices. | This sprint |
+| 2: Extract the IP | Pull a fresh clone of every repo to a private GitHub org under your account. Export the database to an S3 bucket on an AWS account in your name. Document where every secret currently lives and where it will live after the migration. Work patiently on the existing setup. | Next sprint |
 | 3: Legal escalation, only if needed | A reasonable cooperation window looks like 7 days for GitHub org transfer, 14 days for AWS root, and the auth code released at all for the domain. If they stall, retain a lawyer for a one-time $2K-$5K letter referencing your contract's IP-assignment clause. | 7-14 days (or legal engagement) |
 
 The artifact at [/course/tech-for-non-technical-founders-2026/ownership-checklist/](/course/tech-for-non-technical-founders-2026/ownership-checklist/) walks the exact recovery sequence per item, including the AWS support phone script and the registrar auth-code request template.
 
 ## What to do tomorrow
 
-| Time | Action |
+| Step | Action |
 |---|---|
-| **Friday 2 PM** | Block 45 minutes. Calendar invite to yourself titled "Ownership audit." Treat it like an investor meeting. No interruptions. Coffee on, phone on Do Not Disturb. |
-| **Friday 2:00-2:05 PM** | Open the AWS console first. Top-right, click the account name, click Account. Read the root user email. If it is not on a domain you control, that one item is your audit's first failure. |
-| **Friday 2:05-3:00 PM** | Download the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) and run through the 45-minute audit. Record pass/fail for each of the 12 items. Create a one-page summary to forward to your investor or board. |
-| **Friday 5 PM** | If three or more items fail, cross-reference [the eight dev-shop red flags](/blog/dev-shop-red-flags-checklist/) and consider [the 30-day exit guide](/blog/fire-dev-shop-guide/) next. |
+| **Block the calendar** | Calendar invite to yourself titled "Ownership audit." Treat it like an investor meeting. No interruptions. Coffee on, phone on Do Not Disturb. |
+| **Start with AWS** | Open the AWS console first. Top-right, click the account name, click Account. Read the root user email. If it is not on a domain you control, that one item is your audit's first failure. |
+| **Run the 12-item audit** | Download the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) and run through it. Record pass/fail for each of the 12 items. Create a one-page summary to forward to your investor or board. |
+| **Triage the failures** | If three or more items fail, cross-reference [the eight dev-shop red flags](/blog/dev-shop-red-flags-checklist/) and consider [the 30-day exit guide](/blog/fire-dev-shop-guide/) next. |
 
 ## Advanced (optional)
 

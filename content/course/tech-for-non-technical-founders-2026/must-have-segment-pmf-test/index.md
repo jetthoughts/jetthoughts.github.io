@@ -1,7 +1,7 @@
 ---
 title: "5.1 · Your First Customer Is Not a Marketing Problem"
 aliases: ["/blog/must-have-segment-pmf-test/"]
-description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your first 10-30 users. The non-technical founder's pre-paid-traffic gut check."
+description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your earliest users. The non-technical founder's pre-paid-traffic gut check."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5.1 · Your First Customer Is Not a Marketing Problem"
-  og_description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your first 10-30 users. The non-technical founder's pre-paid-traffic gut check."
+  og_description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your earliest users. The non-technical founder's pre-paid-traffic gut check."
 cover_image_alt: "JetThoughts blog cover showing a Sean Ellis 40% gauge with a red threshold line separating product problem from must-have user"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/"
 related_posts: false
@@ -51,19 +51,19 @@ Treat the answer as a stop sign rather than a market-research instrument. Under 
 
 ## Why you, the non-technical founder, get this wrong
 
-The founder out of a dev-shop burn arrives at the MVP late, having spent $40K-$120K and six months getting there. The natural urge is to start collecting revenue numbers immediately - surveys feel like a delay, ads feel like progress. And because she cannot read the codebase, "the conversion rate is 0.4%" sounds like a UX problem (a thing a non-technical buyer can act on) instead of a product problem (a thing she cannot diagnose). Ad spend feels safer than going back into the build.
+You just shipped your first Lovable MVP and 40 people from your beta list poked at it. The natural urge is to start collecting traction numbers immediately - surveys feel like a delay, ads feel like progress. And because you cannot read the codebase, "the conversion rate is 0.4%" sounds like a UX problem (a thing you can act on) instead of a product problem (a thing you cannot diagnose). Ad spend feels safer than going back into the build.
 
-The Twitter threads make it worse. On day 90 of the MVP, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one and got 56% on a sample of 22.
+The Twitter threads make it worse. On day 90 after launch, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one and got 56% on a sample of 22.
 
-Across the 2026 dev-shop rescues we joined, the pattern repeats: founders who burned thousands on paid ads had a must-have rate they had never measured. Some were under 25% overall - genuine "no must-have user" territory. Others had a high rate in one segment and a low rate in another, but their ad spend targeted the wrong half because the high-need segment was harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
+In our rescue queue this same pattern repeats often enough that we now ask the must-have rate before we ask anything else: founders who burned thousands on paid ads almost always had a must-have rate they had never measured. Some were under 25% overall - genuine "no must-have user" territory. Others had a high rate in one segment and a low rate in another, but their ad spend targeted the wrong half because the high-need segment was harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
 
 ## How to run the test, end to end
 
-The whole process takes three hours of your time and 24-48 hours of waiting. The KISS path is a free Typeform or Tally form and a CSV export. No Rails webhook, no Postgres table, no engineer.
+The KISS path is a free Typeform or Tally form and a CSV export. No Rails webhook, no Postgres table, no engineer.
 
-### Step 1 - Who you survey (1 hour of list work)
+### Step 1 - Who you survey
 
-You need 30-100 responses from people who have used your product in the last two weeks. Pull the list from whatever you have:
+You need enough responses from people who have used your product recently to spot a segment pattern; a few dozen is the floor. Pull the list from whatever you have:
 
 - The MVP database (sign-up table). For a Lovable, Bubble, or Supabase build, export `users` as CSV.
 - Your beta waitlist if it converted to active users.
@@ -79,6 +79,7 @@ Strip out two groups before you send:
 What is left is your sample. Annotate each row with the user's job title and company size before you send, so the CSV export later can be sliced by segment in one filter.
 
 ### Step 2 - The 5 questions, verbatim
+
 
 Open Typeform or Tally. Five questions, in this order. Wording matters - changing a word changes the answer.
 
@@ -99,7 +100,7 @@ Open Typeform or Tally. Five questions, in this order. Wording matters - changin
 
 That is the survey. Do not add a sixth question. Do not change Q1 to "How disappointed would you be" - the original wording forces the user to pick a side. Founders who tinker with the question consistently report softer numbers because they introduced a hedge.
 
-### Step 3 - Send it (5 minutes)
+### Step 3 - Send it
 
 Email subject line that works in 2026: *"Quick 90-second question about [product]"*. Body, three lines:
 
@@ -109,9 +110,9 @@ Email subject line that works in 2026: *"Quick 90-second question about [product
 >
 > Thanks, [your name]
 
-Send Tuesday morning, 9 AM local time to your largest user cluster. Re-send Thursday morning to anyone who has not opened. You will hit a 30-50% response rate on a list under 100, which is enough.
+Send the first batch to your largest user cluster. Re-send a few days later to anyone who has not opened. You will hit a 30-50% response rate on a list under 100, which is enough.
 
-### Step 4 - Score it (30 minutes)
+### Step 4 - Score it
 
 Export the CSV. Pivot on Q1 by segment from Q5. You are computing one number per segment:
 
@@ -139,14 +140,14 @@ flowchart TD
     B -->|25-40%| D{Any segment over 40%?}
     B -->|Over 40%| E[You have a must-have user.<br/>Chapter 5.2 outreach starts here.]
     D -->|Yes| F[Target that segment.<br/>Rebuild the persona on those quotes.]
-    D -->|No| G[Refine the product first.<br/>Re-run in 6 weeks.]
+    D -->|No| G[Refine the product first.<br/>Re-run after the next release.]
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
     classDef purplebox fill:#fbe9ff,stroke:#a855f7,stroke-width:2px;
     class C,G redbox;
     class E,F purplebox;
 ```
 
-> *Re-run cadence: every 6 weeks while the must-have rate is climbing; after every major release once it holds above 40% for two consecutive runs. If a re-run drops, read the "somewhat disappointed" Q2-Q4 verbatims first - the diagnostic is in there.*
+> *Re-run cadence: re-run while the must-have rate is climbing and after every major release once it holds above 40% for two consecutive runs. If a re-run drops, read the "somewhat disappointed" Q2-Q4 verbatims first - the diagnostic is in there.*
 
 ## What "under 40%" actually means
 
@@ -157,13 +158,13 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 | **You built for the wrong segment** | The product works, but the people you onboarded do not have the pain. Your Q5 slice shows: one segment is at 55%, the rest are at 5%. | Stop selling to the audience and start selling to the segment. | [Chapter 5.2](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) personal-network outreach to the right segment. |
 | **You built the right thing, but it is not finished** | The Q3 verbatims are hedged ("it is nice to have," "I would use it if it had X"). The main benefit answers lack conviction. | Go back into the build and finish the thing. | Schedule a [Friday demo](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) with the next release. |
 | **The pain is real, but your product is not the relief** | The Q4 verbatims name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). | Either niche into the 20% the workaround does not cover, or pivot. | [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next) validated-problem statement. |
-| **The product solves the pain, but the workflow is too long** | Users say "very disappointed" but session logs show they bailed before the payoff. Funnel collapses between signup and the "30-minute save" moment. | UX cut, not a strategy pivot. Shorten the path to the first win. | Retest after shortening the funnel; re-run 40% test in 2 weeks. |
+| **The product solves the pain, but the workflow is too long** | Users say "very disappointed" but session logs show they bailed before the payoff. Funnel collapses between signup and the "30-minute save" moment. | UX cut, not a strategy pivot. Shorten the path to the first win. | Retest after shortening the funnel; re-run the 40% test after the next UX release. |
 
 ## When founders should skip the test
 
 | Condition | What to do instead |
 |---|---|
-| **Under 10 users** | Run [Chapter 2.3 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) and book 10 more user calls this week. The test requires 10-30 users who actually touched the MVP to be meaningful. |
+| **Under 10 users** | Run [Chapter 2.3 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
 | **Pre-launch** | Use the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) instead. The 40% test asks "if you could no longer use the product" - if the user never used it, the answer is meaningless. |
 
 ## Advanced (optional)
@@ -176,15 +177,15 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 > The main path above is enough for the Module 5 decision;
 > the advanced version becomes relevant after your first 10 customers ship.
 
-## What to do tomorrow
+## What to do next
 
-| Day & Time | Action | Output |
+| Step | Action | Output |
 |---|---|---|
-| **Monday 9 AM** | Export your users CSV. Strip the friends-and-family and the never-returned users. Open Typeform or Tally. Type the five questions verbatim. | Typeform/Tally survey ready to send |
-| **Monday 9:15 AM** | Send the email to the list. Subject: *"Quick 90-second question about [product]"*. Re-send Thursday morning to non-openers. | 30-50% response rate expected by Friday EOD |
-| **Friday 9 AM** | Export the responses CSV. Compute overall must-have % and per-segment must-have % (by job title and company size). | One-page scorekeeping: headline %, top segment %, three verbatim quotes |
-| **Friday 10 AM** | Paste three Q2-Q3 verbatims from your top segment into a Google Doc. Review which segment hit 40%+ (or if none did). | Persona writeup ready for Chapter 5.2 or decision on pivot |
-| **Friday 11 AM** | If above 40% in any segment, move to [Chapter 5.2 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). If below 40% across all segments, book five "very disappointed" user calls for next week and re-read [Chapter 2.1 Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). | Decision made; next chapter unlocked OR product refinement scheduled |
+| **1** | Export your users CSV. Strip the friends-and-family and the never-returned users. Open Typeform or Tally. Type the five questions verbatim. | Typeform/Tally survey ready to send |
+| **2** | Send the email to the list. Subject: *"Quick 90-second question about [product]"*. Re-send a few days later to non-openers. | 30-50% response rate expected |
+| **3** | Export the responses CSV. Compute overall must-have % and per-segment must-have % (by job title and company size). | One-page scorekeeping: headline %, top segment %, three verbatim quotes |
+| **4** | Paste three Q2-Q3 verbatims from your top segment into a Google Doc. Review which segment hit 40%+ (or if none did). | Persona writeup ready for Chapter 5.2 or decision on pivot |
+| **5** | If above 40% in any segment, move to [Chapter 5.2 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). If below 40% across all segments, book five "very disappointed" user calls and re-read [Chapter 2.1 Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). | Decision made; next chapter unlocked OR product refinement scheduled |
 
 The full survey template (the 5 questions in a Typeform-import-ready format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
 

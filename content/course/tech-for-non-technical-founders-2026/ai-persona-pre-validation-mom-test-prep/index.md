@@ -35,21 +35,23 @@ related_posts: false
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 recruitment and real interviews
 >
-> **Time:** 60-90 min · **Cost:** $0 (free tier on Claude or ChatGPT)
+> **Cost:** $0 (free tier on Claude or ChatGPT)
+
+> **Already using Perplexity Pro / Claude / ChatGPT Deep Research for Module 1?** The same tools work here for objection rehearsal - swap the deep-research prompts for the in-character persona prompts below; the cost line is already paid.
 
 A founder we worked with ran five Mom Test interviews with a question list she'd written herself. Three said "sounds great!" She called it weak validation and almost pivoted.
 
-Before she booked the next five slots, she ran a 20-minute rehearsal with [Claude](https://claude.ai) (an AI chat assistant from Anthropic - free tier covers a handful of rehearsal sessions per day; ChatGPT works the same way) using a persona matching her ICP. The out-of-character diagnosis flagged her second question immediately: "Would you use a tool like this?" - hypothetical, pitch-shaped, generates polite yes from anyone. She rewrote her questions to anchor in past events.
+Before she booked the next five slots, she ran a focused rehearsal with [Claude](https://claude.ai) (an AI chat assistant from Anthropic - free tier covers a handful of rehearsal sessions per day; ChatGPT works the same way) using a persona matching her ICP. The out-of-character diagnosis flagged her second question immediately: "Would you use a tool like this?" - hypothetical, pitch-shaped, generates polite yes from anyone. She rewrote her questions to anchor in past events.
 
-On the next round, the real interviewees pushed back: "no, that's not actually my problem" - and then they volunteered the actual problem. The 20-minute rehearsal had told her the hypothesis was probably right and the questions were probably broken. The real interviews confirmed both.
+On the next round, the real interviewees pushed back: "no, that's not actually my problem" - and then they volunteered the actual problem. The rehearsal had told her the hypothesis was probably right and the questions were probably broken. The real interviews confirmed both.
 
 Real interview slots are scarce. You only get about 10 a round, every one took outreach to book, and a hypothetical question burns the slot - the interviewee says "sure, I'd use it" to be kind, you hang up thinking you got a signal, and you got nothing usable.
 
-An AI rehearsal costs nothing. Five minutes in Claude before you pick up the phone, and you find out which questions collapse the moment a real human deflects them.
+An AI rehearsal costs nothing. A short pass through Claude before you pick up the phone, and you find out which questions collapse the moment a real human deflects them.
 
 Real interviews stay irreplaceable for the things rehearsal cannot simulate: the noncommittal shrug on question three, the mention of a workaround you never imagined, the silence after Q4 that tells you more than ten polite yeses. The rehearsal sharpens your questions before you spend a real customer's hour on them.
 
-This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human. It sits at roughly week 5-6 in the 12-22 week path to first paying customer; 90 minutes well spent saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
+This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -77,7 +79,7 @@ flowchart TD
 
 Think of it as a trial attorney prepping cross-examination with a paralegal standing in as the witness. The paralegal can't give testimony, but the rehearsal finds the question that falls apart under any pressure at all.
 
-## Build 3 ICP personas in Claude in 5 minutes
+## Build 3 ICP personas in Claude
 
 You don't need a sophisticated prompt setup. You need to describe the person you're trying to interview in terms Claude can work with, and then ask Claude to stay in character while you practice questions.
 
@@ -142,7 +144,7 @@ Use this on every question that produced a vague answer in Prompt 2. Concrete pa
 
 ---
 
-The session takes 20-30 minutes per persona. Run all three personas against the same question list before you judge any single question. A question that holds up across all three is probably solid. A question that collapses on persona 2 but not persona 3 tells you something about the ICP segment, not just the question.
+Run all three personas against the same question list before you judge any single question. A question that holds up across all three is probably solid. A question that collapses on persona 2 but not persona 3 tells you something about the ICP segment, not just the question.
 
 ## What to keep, what to throw out
 
@@ -175,19 +177,19 @@ After the rehearsal, you have two deliverables.
 
 Print it. Put it next to the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) on your second monitor. After each real interview, tick the column. By interview 5, you'll know which objections are real and which were just AI pattern-matching.
 
-## What to do tomorrow
+## What to do next
 
-**Cost: $0** (the free tier on Claude or ChatGPT covers a 90-minute rehearsal session; no paid plan required).
+**Cost: $0** (the free tier on Claude or ChatGPT covers a focused rehearsal session; no paid plan required).
 
-| Day | Action | Outcome |
+| Step | Action | Outcome |
 |---|---|---|
-| **Day 1** | Open Claude or ChatGPT and paste the 5 rehearsal prompts in order. Run through one persona session in 30-45 minutes. | 5-7 sharpened questions, top 3 objections identified |
-| **Day 2** | Run the same prompts against personas 2 and 3. Note every question that got vague or off-topic answers - those are the weak ones. | Question list with all weak questions flagged for rewrite |
-| **Day 3** | Rewrite the weak questions using Prompt 5 (past-anchored, under 20 words). Book the first real interview. | Ready to start real customer interviews with a sharp question list |
+| **1** | Open Claude or ChatGPT and paste the 5 rehearsal prompts in order. Run through one persona session. | 5-7 sharpened questions, top 3 objections identified |
+| **2** | Run the same prompts against personas 2 and 3. Note every question that got vague or off-topic answers - those are the weak ones. | Question list with all weak questions flagged for rewrite |
+| **3** | Rewrite the weak questions using Prompt 5 (past-anchored, under 20 words). Book the first real interview. | Ready to start real customer interviews with a sharp question list |
 
 **Failure signal:** if all 3 personas produce nearly-identical answers to your questions, your persona descriptions are too generic - rewrite them with sharper role / company-size / urgency differences before continuing. The rehearsal only works when the 3 personas are genuinely different people with different objections.
 
-The two deliverables after tomorrow: a sharpened question list (5-7 solid questions) and an Objection Tracker (top 3 objections to listen for in real interviews).
+The two deliverables: a sharpened question list (5-7 solid questions) and an Objection Tracker (top 3 objections to listen for in real interviews).
 
 ## Going further
 

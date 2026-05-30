@@ -41,10 +41,10 @@ This chapter walks you through the **Product Brief** - some founders call it a *
 
 ## Who reads it: an AI agent or a hired junior, not a 6-person team
 
-| Audience | Read count | Timeline | Cost of a bad brief |
+| Audience | Read count | Iteration shape | Cost of a bad brief |
 |---|---|---|---|
-| **Traditional PRD** (6-person team) | 6 people read it + 1 kickoff call + 2 weeks refinement | 6-12 weeks to ship | Team builds the wrong thing slowly; you learn in sprints |
-| **Vibe PRD** (AI agent or junior) | 1 read, then building starts | 4-14 days to ship | Lovable ships you a wrong thing on Wednesday, and you spend the quarter discovering why it's hard to evolve |
+| **Traditional PRD** (6-person team) | 6 people read it + 1 kickoff call + refinement rounds | Long iteration loop, multiple reviewers | Team builds the wrong thing slowly; you learn in sprints |
+| **Vibe PRD** (AI agent or junior) | 1 read, then building starts | Short iteration loop, one builder | Lovable ships you a wrong thing on Wednesday, and you spend the quarter discovering why it's hard to evolve |
 
 [Veracode's 2025 GenAI report](https://www.veracode.com/blog/genai-code-security-report/) found 45% of AI-generated code ships with at least one exploitable security flaw. The brief is your only chance to constrain what the agent or the junior builds for you, and what they skip.
 
@@ -53,6 +53,8 @@ This chapter walks you through the **Product Brief** - some founders call it a *
 The Vibe PRD is one side of paper. Five sections, in this order. Each section is written so an AI agent or a junior contractor can act on it without a follow-up Slack thread.
 
 The simplest reliable order is *problem → user → build → metric → no-go*. Every section has a job. Skip one and your prompt or your contractor fills it in for you, usually wrong.
+
+> **How long is each section?** Each of the 5 sections is 2-4 sentences in plain English. Section 5 (no-go list) is 5-8 bullet lines. Total brief ≤ 250 words on one side of A4 at 11pt. If you spill past 250 words, the persona is too broad or the pain is too vague - revise the section that ran longest first.
 
 ### Section 1 - The problem (lifted from Chapter 2.1 synthesis)
 
@@ -68,7 +70,7 @@ What goes in it: who the user is *while* they're using your product. Not the per
 
 Example: *A pre-seed founder, alone in their browser at 9pm on a Tuesday, finishing the week's bookkeeping. They have a Stripe dashboard open in one tab and a QuickBooks ledger in another. They are tired, mildly annoyed, looking for a way to finish in 10 minutes instead of 40. They will open our app from a bookmark, paste one Stripe export, and close the tab when the numbers line up.*
 
-Common mistake: writing the persona's company size, ARR, and tech stack as if pitching to investors. The agent or contractor doesn't need their TAM. They need to know the user is tired, has two tabs open, and wants to be done. Specific context produces a usable interface; abstract persona data produces a dashboard with seventeen filters nobody uses.
+Common mistake: writing the persona's company size, ARR (annual recurring revenue), and tech stack as if pitching to investors. The agent or contractor doesn't need their TAM. They need to know the user is tired, has two tabs open, and wants to be done. Specific context produces a usable interface; abstract persona data produces a dashboard with seventeen filters nobody uses.
 
 ### Section 3 - What you're building (one paragraph, plain English)
 
@@ -92,7 +94,7 @@ What goes in it: 5 to 8 lines naming the things a competent agent or contractor 
 
 Example: *Not in v1: multi-currency support, multi-Stripe-account support, automatic recurring sync, a settings page, a billing dashboard, user roles and permissions, a marketing site beyond the signup page, mobile responsive design beyond "works on a 1024px screen." We will revisit each of these after metric in Section 4 is hit.*
 
-Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, Cursor, and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI; in a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed.
+Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, [Cursor](https://cursor.com), and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI; in a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed.
 
 ![Side by side bad vs good Vibe PRD. Left: bad brief reads 'Build a CRM.' Right: good brief names the persona, the 60-second context, the one workflow, the one metric, and the no-go list.](good-vs-bad-prd.svg)
 
@@ -106,12 +108,12 @@ flowchart TD
     Start(["One-page Product Brief written.<br/>Where does it go next?"])
     Start --> Q1{Who reads it<br/>and builds from it?}
     Q1 -->|Lovable / Cursor / AI agent| Vibe1[Vibe PRD<br/>Hand the page as-is.<br/>Paste into prompt.]
-    Q1 -->|Hired junior contractor| Vibe2[Vibe PRD<br/>Hand the page +<br/>30-min kickoff call.]
+    Q1 -->|Hired junior contractor| Vibe2[Vibe PRD<br/>Hand the page +<br/>short kickoff call.]
     Q1 -->|Hired senior engineer| Trad1[Traditional PRD<br/>Expand to 3-5 pages.<br/>Add API + data model.]
     Q1 -->|Product committee / board| Trad2[Traditional PRD<br/>Expand to 5-10 pages.<br/>Add roadmap + budget.]
-    Vibe1 --> Ship1[Ship in 4-14 days.<br/>Measure Section 4.]
+    Vibe1 --> Ship1[Short build loop.<br/>Measure Section 4.]
     Vibe2 --> Ship1
-    Trad1 --> Ship2[Ship in 6-12 weeks.<br/>Kickoff, sprints, demos.]
+    Trad1 --> Ship2[Long build loop.<br/>Kickoff, sprints, demos.]
     Trad2 --> Ship2
 
     classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
@@ -148,21 +150,24 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 
 ## What to do tomorrow
 
-| Step | Action | Output | Timeline |
-|---|---|---|---|
-| **1** | Block 90 minutes tomorrow morning. Open your [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) + [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) side by side. | Rough draft of all 5 sections. Copy Section 1 verbatim; fill Sections 2-5 from scratch. | 90 minutes (hard cap) |
-| **2** | Read the brief aloud to one peer over coffee or a 20-min call. Ask: "If you had to build this in a week using Lovable, what would you build that isn't in my no-go list?" | First answer = your missing no-go item. Add it to Section 5. | 30 minutes |
-| **3** | Paste the brief into Lovable, Cursor, or your contractor's kickoff doc. Do NOT edit it for the audience. Same one page goes to everyone. | The agent or contractor starts building Tuesday morning. | Immediate |
+| Step | Action | Output |
+|---|---|---|
+| **1** | Block a focused session tomorrow morning. Open your [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) + [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) side by side. | Rough draft of all 5 sections. Copy Section 1 verbatim; fill Sections 2-5 from scratch. |
+| **2** | Read the brief aloud to one peer over coffee or a short call. Ask: "If you had to build this in a week using Lovable, what would you build that isn't in my no-go list?" | First answer = your missing no-go item. Add it to Section 5. |
+| **3** | Paste the brief into Lovable, Cursor, or your contractor's kickoff doc. Do NOT edit it for the audience. Same one page goes to everyone. | The agent or contractor starts building Tuesday morning. |
 
 > A Vibe PRD is what's left when you remove everything an AI agent or a hired junior cannot act on by tomorrow morning. Write the five sections tonight and the build starts Tuesday. If the agent asks a question whose answer is in the brief, your brief failed - rewrite that section before the next pass.
 
-The [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is the artifact for this post. Print it, fill it in 45 minutes, hand it to your AI agent or contractor the next day, and Module 3's checkpoint moves one step closer.
+The [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is the artifact for this post. Print it, fill it in one focused sitting, hand it to your AI agent or contractor the next day, and Module 3's checkpoint moves one step closer.
 
-Skipping the brief and going straight into prompting is the most common way a non-technical founder ends up six weeks into a working MVP they realise they did not actually want - and into the [salvage-or-rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) that follows. Thirty minutes on this page tonight is what spares you those six weeks.
+Skipping the brief and going straight into prompting is the most common way a non-technical founder ends up deep into a working MVP they realise they did not actually want - and into the [salvage-or-rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) that follows. One focused sitting on this page tonight is what spares you that detour.
 
-## What comes next (Chapter 4.1)
+## What comes next (Chapter 3.2, then Chapter 4.1)
 
-You now have two validated artifacts: a one-page problem statement (from Chapter 2.1 synthesis) and a one-page Vibe PRD (from this chapter). The next step is NOT to hand the brief to Lovable yet - it's Chapter 4.1, a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve (Chapter 4.3), but only after the decision gate confirms it's right for YOUR runway and YOUR problem.
+You now have two validated artifacts: a one-page problem statement (from Chapter 2.1 synthesis) and a one-page Vibe PRD (from this chapter). Two more steps before Lovable touches your brief:
+
+1. **[Chapter 3.2 - Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - stress-test Section 3 ("what you're building") by rewriting feature nouns as outcome-shaped job stories. This is the quality gate on the brief you just wrote, not a separate writing exercise.
+2. **[Chapter 4.1 - Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve (Chapter 4.3), but only after the decision gate confirms it's right for YOUR runway and YOUR problem. Chapter 4.1 explicitly requires the outcome-shaped brief from Chapter 3.2 as its input.
 
 ## Further reading
 

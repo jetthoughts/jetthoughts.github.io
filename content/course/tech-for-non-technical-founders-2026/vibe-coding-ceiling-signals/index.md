@@ -38,11 +38,11 @@ related_posts: false
 
 **Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term comes from indie founder Pieter Levels and describes the 2026 default for solo non-technical founders. It works astonishingly well until it doesn't, and "until it doesn't" is the moment this chapter is about.
 
-Starting at Week 2 of your build, run this 5-signal check monthly. Each signal that fires earlier saves weeks later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
+Once your build goes live, run this 5-signal check monthly. Each signal that fires earlier saves rebuilds later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
 
-> **This chapter is a monthly review reference, not a Monday task.** Your only action today: open your calendar and add a recurring 15-minute block on the first Monday of each month titled "Vibe-coding 5-signal check." The first time you actually run the scorecard is Week 2 of your live build (Ch 4.3); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The scenario below is what the ceiling looks like when it actually arrives:
+> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The scenario below is what the ceiling looks like when it actually arrives:
 
-Tuesday morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $20/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
+A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $20/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
 
 Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month). The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
 
@@ -50,7 +50,7 @@ Two of your users keep landing on each other's data because the [Supabase](https
 
 ## Who this 5-signal check is for
 
-The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about. Run this check monthly from Week 2 of your build and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem. The 5 signals below are the early-warning system. Run them before you need them.
+The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about. Run this check monthly once your MVP is live and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem. The 5 signals below are the early-warning system. Run them before you need them.
 
 ## The 5 architectural ceiling signals
 
@@ -102,7 +102,7 @@ Skim this table to spot which signals might fire for you now; deep-read the ones
 
 **What is happening underneath**: Supabase's row-level security is excellent for "user X can only read rows where user_id = X." It strains under role matrices (manager-reads-team, admin-reads-org, super-admin-reads-everything), multi-tenant isolation across an organization, SAML federation, and audit trails. Each of those needs first-class engineering, not a configurable policy.
 
-**Cost of leaving it alone**: you write the SOC2 letter and the SAML promise into the contract and ship a workaround. Six months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - 47 startups with public URL-based access controls, BOLA-class vulnerabilities, no audit log to diagnose what got read - is what deferred auth complexity produces.
+**Cost of leaving it alone**: you write the SOC2 letter and the SAML promise into the contract and ship a workaround. Six months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - 47 startups with public URL-based access controls, BOLA-class vulnerabilities (BOLA = broken-object-level-authorization, the bug where User A can read User B's data by changing a number in the URL), no audit log to diagnose what got read - is what deferred auth complexity produces.
 
 **Cost of addressing now**: a Fractional CTO scopes the role matrix on paper (1-2 weeks of part-time work, ~$8-15K), then hands the spec to a hired engineering team for the production build on Devise + Pundit (Rails) or django-allauth + django-guardian. Total auth-shaped rebuild: 4 to 8 weeks.
 
@@ -114,7 +114,7 @@ Skim this table to spot which signals might fire for you now; deep-read the ones
 
 **Cost of leaving it alone**: you either pass on the deal or sign it with a workaround, which becomes the breach narrative when the customer's auditor finds it 11 months in.
 
-**Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal. Vanta, Drata, and Secureframe automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
+**Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal. Vanta, [Drata](https://drata.com), and [Secureframe](https://secureframe.com) automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
 
 **What to say to the customer this week** (when they ask for SOC2 / HIPAA BAA / PCI before you can deliver it): respond within 48 hours with a 3-sentence email - do not ghost. Use this template:
 
@@ -173,8 +173,20 @@ Q1 Yes + Q2 No: graduate to the [Fractional CTO bridge](/course/tech-for-non-tec
 Three actions. The first is tonight.
 
 - **Open your Lovable + Supabase admin dashboard tonight.** Pull up: the 30-day request error rate, the 30-day Stripe webhook retry log, the active user count, and last month's OpenAI / Anthropic invoice if you use one. Five minutes of dashboard time is the input to the scoreboard.
-- **Score each of the 5 signals: green / yellow / red.** Use the scoreboard above. Green = no symptom yet. Yellow = symptom showing in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Score green when the symptoms are firing and you arrive at the [salvage-or-rebuild thread](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) at month nine - by then the rebuild estimate is months of work you could have caught in days.
+- **Score each of the 5 signals: green / yellow / red, AND log Date first observed + Date last observed per signal.** Use the scoreboard above. Green = no symptom yet. Yellow = symptom showing in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Without dated observation windows you cannot tell the "fired once this week" from the "fired every week for two months" signal, and the 4-week graduation rule below collapses. Keep the scoreboard as a Notion table or a sheet with columns: Signal | Status | Date first observed | Date last observed | Notes. Score green when the symptoms are firing and you arrive at the [salvage-or-rebuild thread](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) at month nine - by then the rebuild estimate is months of work you could have caught in days.
 - **If 2 or more signals are red, start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The Fractional CTO conversation is one Calendly invite away and the first call is usually free. The bridge holds until you have the runway clarity for a full hire.
+
+## Artifacts you carry out of Module 4
+
+After finishing Ch 4.1-4.4, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+
+| Artifact | Where it goes next |
+|---|---|
+| **Build-path decision** (validate / self-serve / fractional CTO / hire - chosen and dated, from Ch 4.1) | Module 5 outbound posture. The build path determines whether you sell a live MVP (self-serve, hire) or a Carrd + Stripe pre-sale (validate path), which decides the Ch 5.2-5.5 scripts you use. |
+| **Ownership audit results** (12-item checklist - GitHub, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys, monitoring, status page - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.4 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
+| **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
+| **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.4, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
+| **Output for Module 5: 4-6 active users you can survey** (from Ch 4.3 onboarding) | Ch 5.1 Sean Ellis 40% test input. These are the users who get the 5-question survey first; their Q2-Q3 verbatims become the persona language for Ch 5.2-5.5 outbound. |
 
 ## Further reading
 

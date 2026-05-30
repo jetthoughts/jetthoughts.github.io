@@ -1,7 +1,7 @@
 ---
-title: "1.1 · Form Your Founding Hypothesis - 90-Minute Sprint"
+title: "1.1 · Form Your Founding Hypothesis"
 aliases: ["/blog/form-your-founding-hypothesis-90-minute-sprint/"]
-description: "Write your one-sentence Founding Hypothesis (Click / Jake Knapp) before you interview anyone. The 90-minute Foundation Sprint for solo non-technical founders."
+description: "Write your one-sentence Founding Hypothesis (Click / Jake Knapp) before you interview anyone. The Foundation Sprint for solo non-technical founders."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,8 +23,8 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "1.1 · Form Your Founding Hypothesis - 90-Minute Sprint"
-  og_description: "Write your one-sentence Founding Hypothesis (Click / Jake Knapp) before you interview anyone. The 90-minute Foundation Sprint for solo non-technical founders."
+  og_title: "1.1 · Form Your Founding Hypothesis"
+  og_description: "Write your one-sentence Founding Hypothesis (Click / Jake Knapp) before you interview anyone. The Foundation Sprint for solo non-technical founders."
 cover_image_alt: "JetThoughts course cover for the Founding Hypothesis chapter showing the Mad Libs sentence template with five blanks highlighted"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
 related_posts: false
@@ -37,19 +37,19 @@ related_posts: false
 >
 > **Output:** a one-sentence Founding Hypothesis you can test in the next two modules
 
-You have an idea, or a half-built MVP, and you're about to start talking to people about it. Do one thing first: write the single sentence everything else gets tested against. The next 90 minutes build that sentence - your Founding Hypothesis - so you spend this week finding out whether the problem is real, before you write a line of code or a check.
+You have an idea, or a half-built MVP, and you're about to start talking to people about it. Do one thing first: write the single sentence everything else gets tested against. The six steps below build that sentence - your Founding Hypothesis - so you find out whether the problem is real before you write a line of code or a check.
 
 ## Don't Talk to Anyone Without a Hypothesis
 
 | No Hypothesis | Written Hypothesis |
 |---|---|
 | Ten interviews produce notes for four different products. You cannot tell which version people were responding to. | One sentence. Five people. Same question. Convergent answers tell you the problem is real. |
-| Six weeks in loops: "wait, did they want X or Y?" | Six days: one hypothesis killed, or one problem validated. |
+| Looping interviews: "wait, did they want X or Y?" | One hypothesis killed, or one problem validated. |
 | "This sounds great!" from everyone, because they're being polite to a vague idea. | "That's not actually my problem" from half the people, because the sentence is specific. |
 
 Jake Knapp and John Zeratsky published *Click* in April 2025 after twenty years of running design sprints with 300+ startups. The book's central artifact is the Founding Hypothesis: one Mad Libs sentence that names your customer, problem, approach, competition, and differentiation. Their thesis on why founders write it down: *"Products click with customers when they make a compelling promise - and that promise must be simple, or customers won't pay attention."*
 
-The HealthTech founder later in this chapter spent six weeks interviewing without a written hypothesis before coming back to write the sentence. This chapter is the 2-day Foundation Sprint compressed to 90 minutes - one notebook, one kitchen timer, run it Monday morning before you book the first interview.
+The HealthTech founder later in this chapter spent weeks interviewing without a written hypothesis before coming back to write the sentence. This chapter compresses the Foundation Sprint into six focused steps - one notebook, one kitchen timer, run it before you book the first interview.
 
 ## The Founding Hypothesis (the one sentence everything tests against)
 ### The template
@@ -76,7 +76,7 @@ Compare with what Gmail's founding hypothesis would have read like in 2003: "If 
 >
 > **B2C - parents of teens with allergies:** If we help parents solve weekend menu safety with a 3-second phone-camera scan, they pick it over reading menus aloud because the teen does not have to feel different.
 
-*Vague blanks = no test. Specific blanks = a sentence you can falsify in 2 weeks.*
+*Vague blanks = no test. Specific blanks = a sentence you can actually falsify.*
 
 ### What makes a blank specific
 
@@ -92,20 +92,22 @@ If they say "wait, can you say that again" or "what does X mean," your sentence 
 
 Three or four reads is normal. That is the work.
 
-## The 90-Minute Compressed Sprint
+> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find the 5 most-named pain points among [your candidate ICP - ideal customer profile, the specific person you're building for] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase."* The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
 
-Knapp and Zeratsky designed the original Foundation Sprint as a 2-day workshop for a founding team. A solo non-technical founder does not have a founding team, a whiteboard wall, or sixteen uninterrupted hours. The version below compresses the same six moves into 90 minutes you can run alone with a notebook and a kitchen timer.
+## The Six-Step Sprint
 
-| Step | Time | Outcome |
-|---|---|---|
-| 1. The Basics | 15 min | Pick the customer + problem |
-| 2. Classic Differentiator | 15 min | Pick fast / easy / free |
-| 3. Three Approaches | 15 min | 3 different shapes |
-| 4. Magic Lenses | 20 min | Score each on 4 lenses |
-| 5. Write Hypothesis | 15 min | One sentence |
-| 6. Test Design | 10 min | Two-part test plan written (executed in Modules 2 + 3) |
+Knapp and Zeratsky designed the original Foundation Sprint as a multi-day workshop for a founding team. A solo non-technical founder does not have a founding team or a whiteboard wall. The version below compresses the same six moves into a focused session you can run alone with a notebook and a kitchen timer.
 
-### Step 1: The Basics (15 min)
+| Step | Outcome |
+|---|---|
+| 1. The Basics | Pick the customer + problem |
+| 2. Classic Differentiator | Pick fast / easy / free |
+| 3. Three Approaches | 3 different shapes |
+| 4. Magic Lenses | Score each on 4 lenses |
+| 5. Write Hypothesis | One sentence |
+| 6. Test Design | Two-part test plan written (executed in Modules 2 + 3) |
+
+### Step 1: The Basics
 
 Open four columns in a notebook: Customer, Problem, Advantages, Competition. Write five entries in each column.
 
@@ -116,7 +118,7 @@ Open four columns in a notebook: Customer, Problem, Advantages, Competition. Wri
 
 Read the column. Circle the one entry you would bet on.
 
-### Step 2: Classic Differentiator (15 min)
+### Step 2: Classic Differentiator
 
 Draw three columns: *fast*, *easy*, *free*. For each, write "more," "less," or "same" against the strongest competition entry from Step 1. Pick the one column you can credibly own.
 
@@ -124,18 +126,18 @@ You cannot own all three. A product that is faster AND easier AND cheaper than t
 
 Write one sentence: "Our product will be the [faster / easier / cheaper] one." That sentence is your differentiator candidate.
 
-### Step 3: Generate 3 Candidate Approaches (15 min)
+### Step 3: Generate 3 Candidate Approaches
 
 Write three different one-sentence approaches you could take to solve the circled problem for the circled customer. Three is the right number: two collapse into the safer option and four is procrastination.
 
 The HealthTech founder wrote: (a) a one-click resubmit workflow, (b) a Slack bot that nags the billing service weekly, (c) an outsourced claim-resubmission service done by a virtual assistant. Three real, different shapes.
 
-### Step 4: Magic Lenses lite (20 min)
+### Step 4: Magic Lenses lite
 
 Score each of the three approaches on a 1-5 scale across four lenses:
 
 - **Customer** - would the customer actually want this?
-- **Pragmatic** - could you ship something in 4-6 weeks?
+- **Pragmatic** - could you ship something usable with what you have today?
 - **Growth** - is the audience big and reachable?
 - **Money** - do the unit economics work?
 
@@ -143,28 +145,28 @@ The lens scores are deliberately rough; the goal is to surface comparison, not t
 
 After you score, sum each approach. Pick the highest sum. The lens that scored lowest across the winning approach is your biggest risk - the part of the hypothesis most likely to break.
 
-### Step 5: Write the Founding Hypothesis (15 min)
+### Step 5: Write the Founding Hypothesis
 
 Open the Mad Libs sentence. Fill in the five blanks using the winning approach from Step 4, the customer and problem you circled in Step 1, the competition you scored against in Step 2, and the differentiator from Step 2.
 
 Read it aloud three times. Adjust any blank that sounds vague. Stop when the sentence reads like a thing a friend could repeat back to you.
 
-### Step 6: Test Design (10 min)
+### Step 6: Test Design
 
 Open a fresh page. Write one sentence:
 
-> *The smallest signal that would prove or kill this hypothesis in two weeks is _____.*
+> *The smallest signal that would prove or kill this hypothesis is _____.*
 
 The default answer is "ten interviews," which is right but incomplete.
 
 The full test is two parts:
 
 1. **A smoke-test landing page for demand signal** - a no-code page builder + cold traffic + a Stripe price button. Step-by-step, including which builder to use, in [Chapter 1.2: Smoke-Test the Hypothesis](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) and [Chapter 1.3: Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/).
-2. **Ten Mom Test interviews for problem signal** - how to find the right people (your "ICP", or Ideal Customer Profile: the specific kind of customer your hypothesis names in the [customer] blank), recruit them for unpaid 30-40 minute calls, and run the interview without selling. The interview technique is in [Chapter 2.1: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/); recruitment channels (Reddit, Twitter/X, LinkedIn, UserInterviews.com paid panels, personal network) are in [Chapter 2.3: Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+2. **Ten Mom Test interviews for problem signal** - how to find the right people (your "ICP", or Ideal Customer Profile: the specific kind of customer your hypothesis names in the [customer] blank), recruit them for unpaid short calls, and run the interview without selling. The interview technique is in [Chapter 2.1: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/); recruitment channels (Reddit, Twitter/X, LinkedIn, UserInterviews.com paid panels, personal network) are in [Chapter 2.3: Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 Write both as your test plan now (just the plan, not the execution). The hypothesis sentence + the two-part test design are the deliverables of this sprint. Modules 2 and 3 run the tests; this sprint produces the plan they run.
 
-The four-column sheet, lens scorecard, Mad Libs blanks, and test-design grid are all embedded in this page. Print it, run the timer, fill in by hand. Software gets in the way of a 90-minute sprint.
+The four-column sheet, lens scorecard, Mad Libs blanks, and test-design grid are all embedded in this page. Print it, run the timer, fill in by hand. Software gets in the way of this sprint.
 
 ## Stress-Test With Magic Lenses
 
@@ -180,9 +182,9 @@ If the answer is "they would have to be convinced," the score is 1-2. If the ans
 
 ### Pragmatic lens
 
-Can you ship something usable in **4-6 weeks** given what you actually have? A non-technical founder shipping with Lovable, Bubble, or a developer they hire has different pragmatic ceilings.
+Can you ship something usable given what you actually have? A non-technical founder shipping with Lovable, Bubble, or a developer they hire has different pragmatic ceilings.
 
-Drop the score one point if the approach requires integrating with an API you have never used. Drop it another point if it requires a license, a partnership, or compliance work. A 5/5 here means you could ship Tuesday.
+Drop the score one point if the approach requires integrating with an API you have never used. Drop it another point if it requires a license, a partnership, or compliance work. A 5/5 here means you could ship it right away.
 
 ### Growth lens
 
@@ -192,7 +194,7 @@ An approach that needs a sales call to explain itself is 1-2. An approach that f
 
 ### Money lens
 
-Do the unit economics work at the scale you can plausibly reach? A consumer app at $4/mo that needs 10,000 users to clear $40K MRR is a different unit-economics shape than a B2B SaaS at $400/mo that needs 100.
+Do the unit economics work at the scale you can plausibly reach? A consumer app at $4/mo that needs 10,000 users to clear $40K MRR (monthly recurring revenue) is a different unit-economics shape than a B2B SaaS at $400/mo that needs 100.
 
 The Money lens is the one most non-technical founders score generously on because pricing feels theoretical at this stage. Score conservatively here.
 
@@ -201,11 +203,13 @@ The Money lens is the one most non-technical founders score generously on becaus
 | Lens | The question (1 = low / 5 = high) | Score |
 |---|---|---|
 | **Customer** | Would the customer pick this on a Friday afternoon between meetings? (1 = needs convincing · 5 = bookmarked on first read) | ___ / 5 |
-| **Pragmatic** | Can you ship something usable in 4-6 weeks with what you have today? (1 = needs partnerships or compliance · 5 = could ship Tuesday) | ___ / 5 |
+| **Pragmatic** | Can you ship something usable with what you have today? (1 = needs partnerships or compliance · 5 = could ship right away) | ___ / 5 |
 | **Growth** | How does the customer hear about you, and how many of them are there? (1 = needs a sales call to explain · 5 = fits a Reddit headline) | ___ / 5 |
 | **Money** | Do the unit economics work at the scale you can plausibly reach? (1 = price ceiling under your cost · 5 = market pays your sticker) | ___ / 5 |
 
 *Lowest score = first thing the next test must attack. Not "build to fix the weakest score" - "test whether the weakest score is the real number."*
+
+> **The PASS bar (use this instead of "feels right").** A hypothesis is ready to test when it scores **≥14 of 20** across the four lenses with **no individual lens below 2**. If any lens scores 1, the hypothesis has a structural blank you cannot test your way around - fix that blank (rewrite the [problem], [customer], or [approach]) before booking interviews. Pre-revenue founders leaving the Money lens blank: the bar drops to ≥11 of 15 across the other three, same "no lens below 2" rule.
 
 ### Applied: a procurement-tool example
 
@@ -214,13 +218,13 @@ Here is the matrix filled in for a vendor-management tool aimed at procurement t
 | Lens | Score | Why she scored it that way |
 |---|---|---|
 | Customer | **4 / 5** | Procurement teams she'd interviewed wanted the workflow |
-| Pragmatic | **4 / 5** | Could ship in 4 weeks on Lovable + Supabase |
+| Pragmatic | **4 / 5** | Could ship on Lovable + Supabase without partnerships or compliance work |
 | Growth | **4 / 5** | Procurement people cluster in the same 3 newsletters |
 | Money | **1 / 5** | Buyers expected under $150/mo; unit economics needed $600/mo |
 
 The Money lens scored 1 because the procurement teams she had talked to expected a price under $150/mo and her unit economics needed at least $600/mo to clear hosting and customer-support cost. The score told her the test to run in Module 1 was not "will procurement teams click the ad" - they will. The test was "will procurement teams pay $600/mo."
 
-She designed her **landing-page CTA around the price point**, not the feature set, and learned in 11 days that procurement at that price was a no. She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonable, re-scored Money to 4, and ran the smoke test again. Two weeks saved versus building first.
+She designed her **landing-page CTA around the price point**, not the feature set, and learned quickly that procurement at that price was a no. She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonable, re-scored Money to 4, and ran the smoke test again. The pivot happened before she wrote a line of product code.
 
 ### The routing rule
 
@@ -257,15 +261,15 @@ Skip the sentence and go straight to "talk to customers," and your interview not
 
 Writing the sentence first prevents that. Do it in this order:
 
-1. Write the sentence (this 90-minute sprint).
+1. Write the sentence (this sprint).
 2. Book your interviews with the sentence as the script anchor.
 3. Each conversation confirms or kills one specific claim, instead of producing a pile of contradictory notes.
 
-Do this on day one and you walk into Module 2 with a sentence you can read aloud to your first ten interviewees, and a test plan that tells you in two weeks whether to build.
+Do this first and you walk into Module 2 with a sentence you can read aloud to your first ten interviewees, and a test plan that tells you whether to build.
 
 ### The trade-off worth naming
 
-A written hypothesis can feel premature when you have only an instinct. You will write a sentence on Monday that is wrong by Friday after five interviews.
+A written hypothesis can feel premature when you have only an instinct. You will write a sentence at the start of a round that is wrong after five interviews.
 
 That is the point. A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
 
@@ -273,7 +277,7 @@ Refuse to write the sentence because "we don't know enough yet" and you'll spend
 
 ## Advanced (optional sidebar)
 
-The 90-minute compressed sprint above is the simplest version that works. Once you've run it once and want to layer on more structure, read these in order of complexity:
+The six-step compressed sprint above is the simplest version that works. Once you've run it once and want to layer on more structure, read these in order of complexity:
 
 | Framework | When to use | What it adds |
 |---|---|---|
@@ -305,12 +309,12 @@ You get a written four-lens debate in 30 seconds at zero cost. Less probing than
 
 > **Also worth a 30-second follow-up:** ask the same model `Name 3-5 named competitors or adjacent tools serving the same customer. Give me a URL for each.` You'll reuse those URLs in [Chapter 2.3's AI ICP map prompt](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - one less thing to scramble for later.
 
-None of these are required. The Mad Libs sentence and the 90-minute timer is the main path.
+None of these are required. The Mad Libs sentence and a kitchen timer is the main path.
 
 ## Further reading
 
 - Jake Knapp and John Zeratsky, [*Click*](https://www.theclickbook.com/) - the book that introduced the Founding Hypothesis Mad Libs and the Foundation Sprint workshop.
-- [The Foundation Sprint official site](https://www.thefoundationsprint.com/) - the full 2-day workshop format the 90-minute version compresses.
+- [The Foundation Sprint official site](https://www.thefoundationsprint.com/) - the full 2-day workshop format the compressed version above is based on.
 - [Innovation Training's Foundation Sprint guide](https://www.innovationtraining.org/foundation-sprint-workshop-training-guide/) - facilitator-grade walkthrough of every move in the sprint, useful if you want to run the long version with a team.
 - Lenny Rachitsky, [Introducing the Foundation Sprint](https://www.lennysnewsletter.com/p/introducing-the-foundation-sprint) - Lenny's writeup of how Knapp and Zeratsky landed on the Foundation Sprint format and what early teams found useful.
 - Geoffrey Moore via Martin Fowler, [Write the Product Vision](https://martinfowler.com/articles/lean-inception/write-product-vision.html) - the older Lean Inception product-vision template that informs the Mad Libs blanks.
