@@ -93,6 +93,8 @@ Use the verbatim Q3 answers from your [Chapter 5.1 survey](/course/tech-for-non-
 
 Record one 90-second Loom before you send. A free Loom account gives you 25 free videos. The Loom shows your product in 60 seconds and you on camera in the other 30. Founders who skip the Loom and write a paragraph instead get half the response rate, because the recipient needs to see both your face and the product working in the same 90 seconds.
 
+> **Loom script source: your Ch 5.1 verbatims.** Lines 2-3 of your Loom should NOT be your own marketing voice - they should be the three Q2-Q3 verbatim quotes you exported from the [Ch 5.1 must-have segment test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) Google Doc. Read those quotes aloud, then point at the product feature that addresses the pain they describe. Recording in the founder's voice is the failure mode Ch 5.1 was designed to prevent; the Loom is the highest-leverage place to use the verbatims you already have.
+
 **Part 4: A specific ask - 15 minutes, paid pilot teaser.**
 
 "15 minutes to walk you through it and see if it solves the [problem]? Open to a paid pilot if it does. Calendly: [link]."

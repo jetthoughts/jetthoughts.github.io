@@ -123,6 +123,8 @@ Three actions, in order.
 >
 > FAIL = revise Section 3 outcome-shape and ask a fresh peer. Do NOT advance to Module 4 with a failed brief; the Lovable build will inherit the fuzziness.
 
+> **No peer available? Use Claude or ChatGPT as the peer.** Paste your full Section 3 + Section 5 (no-go list) into Claude. Prompt: *"Imagine you are a contractor reading this brief to build the product. Based ONLY on Section 3, name 5 things you would build that are NOT in Section 5's no-go list. Be specific - feature names, not categories."* If Claude names 2+ items outside your no-go list, the brief failed quality-check the same as a peer flagging them. Revise Section 3 and re-run. This is the same failure signal a peer would surface, with no calendar coordination needed.
+
 > **When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.**
 > 
 > The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.

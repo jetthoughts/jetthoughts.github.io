@@ -66,6 +66,8 @@ The five-step shape of the test, before we dig into each step:
 4. **Buy cold traffic** - on the right channel for your ICP (Ideal Customer Profile - the customer you're targeting); run it long enough for the daily numbers to stabilize (see Budget by channel table below)
 5. **Read the numbers** - go / iterate / kill against the conversion-rate decision table
 
+> **Budget anchor before you start.** Smallest viable smoke-test budget is **$300-$600** (Meta or Reddit cold traffic to 300 visits). LinkedIn is **$1,800+**. The full per-channel table is in the "Buy Cold Traffic on the Right Channel" section below. If $300 is out of reach, skip paid ads and stick to organic - the chapter's $0 path (NeetoSite + Clarity + organic) still produces a real signal, slower.
+
 **Before you ship, open these tabs** (most free or low-cost to start):
 
 - [ ] Landing-page builder account (pick one in "Pick your builder" below)
@@ -152,6 +154,8 @@ Spend on cold traffic without tracking and you end the week with one number (how
 ### Minimum viable tracking: Microsoft Clarity
 
 [Microsoft Clarity](https://clarity.microsoft.com/) is free forever and the single most useful tool on this list. Install one snippet - paste it into your builder's "custom code" or "head tag" field - and you get heatmaps plus session recordings of every visitor. After 300 visits you will have 300 session replays; watch ten random ones and the pattern usually shows up within three. Most first-time founders never bother installing Clarity and lose the cheapest qualitative signal a smoke test produces.
+
+> **What to do with the Clarity findings.** When you spot a repeated drop-off (e.g., "every 3rd visitor scrolled past the CTA without clicking"), write the pattern in one sentence and add it to your Ch 1.1 Test Design notes as a hypothesis-weakness flag. If the same flag appears in your Ch 2.1 Mom Test interviews, you have converging evidence that the hypothesis needs the named blank tightened. Without recording it in the Test Design doc, the qualitative signal evaporates between this chapter and the interviews.
 
 *In Carrd the field is Settings > Embed > Header. In Framer it's Site Settings > General > Custom Code > End of head tag. AI builders (Mixo, Manus AI, Durable) have a dedicated "tracking" or "scripts" field.*
 

@@ -83,8 +83,16 @@ Think of it as a trial attorney prepping cross-examination with a paralegal stan
 
 You don't need a sophisticated prompt setup. You need to describe the person you're trying to interview in terms Claude can work with, and then ask Claude to stay in character while you practice questions.
 
-Here's the persona setup prompt:
+Here's the persona setup prompt.
 
+> **What to paste for each placeholder (from your existing artifacts):**
+> - [ROLE] = your Founding Hypothesis [customer] blank from [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (e.g., "solo chiropractor managing insurance claims")
+> - [INDUSTRY] + [COMPANY SIZE] = the ICP characteristics you wrote alongside Step 1 of Ch 1.1
+> - [PROBLEM DESCRIPTION] = your Founding Hypothesis [problem] blank
+> - [CURRENT WORKAROUND] = your Founding Hypothesis [competition] blank (what they do today)
+> - [PERSONA NAME], [FREQUENCY], [DURATION], [BUDGET RANGE], [REASON] = your judgment, anchored to the deep-research findings if you ran the Ch 1.1 sidebar.
+>
+> If any blank above is empty, the Ch 1.1 hypothesis is not specific enough. Go back and tighten before rehearsing - rehearsing against a vague persona produces vague answers.
 
 ### Prompt 1 - Persona Setup
 

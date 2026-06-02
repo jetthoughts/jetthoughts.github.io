@@ -120,6 +120,8 @@ Claude cannot guarantee the right answer - it does not know your specific market
 
 The prompt is a forcing function, not a crystal ball. The real data comes from running the channel.
 
+> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment at the bottom of the worksheet. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. It's a diagnostic, not a gate.
+
 ## Channel Selection Worksheet
 
 Fill this out before you send message one. It prevents the wasted-effort cycle of channel-hopping.

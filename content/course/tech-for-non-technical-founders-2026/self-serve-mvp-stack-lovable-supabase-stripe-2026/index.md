@@ -63,7 +63,11 @@ The buyer opens the staging URL → Lovable shows the screens → Supabase store
 
 ## 12 rules for a self-built PoC done right
 
+> **How to read this list.** 3 rules need to be true BEFORE you open Lovable. The rest fire inline during the Phase 1-4 build below. If you internalize ONLY the 3 pre-Lovable rules + the Phase 4 exit criteria, you ship a working MVP. The other rules are inline reminders, not a homework checklist.
+
 Synthesis of every rule scattered across Module 4 and the supplementary references. Print this page, tape it next to the laptop, re-read before every weekly demo.
+
+**Before you open Lovable - the 3 load-bearing pre-flight rules.** Rules **1, 2, and 6** in the list below are the ones that must be true on day zero. Rule 1 (one-page brief passed the Ch 3.2 quality-gate) keeps Phase 1 prompts from generating a 47-button admin panel. Rule 2 (one workflow, one persona, one happy path) keeps the build inside the shed. Rule 6 (GitHub sync turned on in Lovable Settings on day 1) keeps your source recoverable if Lovable drops it. Get those 3 right and the rest read as inline checks while you build. Get them wrong and the other 9 cannot save the project.
 
 1. **Start from a one-page brief that passed the Ch 3.2 quality-gate.** If Section 3 is feature-shaped, fix it before you open Lovable. Feature-shaped briefs produce 47-button admin panels.
 2. **One workflow, one persona, one happy path.** No multi-tenancy, no admin dashboard, no settings page on day one. Build the shed (Rob Walling's analogy), not the house.
@@ -142,7 +146,11 @@ Four build phases, plus an onramp phase that hands you off to Module 5. Each pha
 
 ### Phase 1 - write your prompts, set up Lovable, ship the UI
 
-Start by opening the one-page brief. The "what you're building" section becomes your first three Lovable prompts. Lovable's prompt style is conversational; you describe the screen, the components, the rough behavior. Examples:
+Start by opening the one-page brief. The "what you're building" section becomes your first three Lovable prompts.
+
+> **Bridge from Ch 2.4 vocabulary (the highest-leverage paste in the course).** Before you describe a button label, a column header, or a screen title, open your Ch 2.4 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." If 3 of 5 said "client" and 2 said "patient," **use the most-repeated term**. The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
+
+Lovable's prompt style is conversational; you describe the screen, the components, the rough behavior. Examples:
 
 ```text
 Build a dashboard for a fitness coach. Top-level view shows

@@ -107,6 +107,8 @@ What the user sees after the core action succeeds. A confirmation message, a sum
 
 ### The Lovable Prompt Template
 
+> **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans start at $25/month (Pro)** and are only worth it later if you decide to upgrade for higher message volume - not required for this chapter.
+
 Open [Lovable](https://lovable.dev), create a new project, and paste the following. Replace all `[PLACEHOLDERS]` with your specific problem and solution.
 
 ---

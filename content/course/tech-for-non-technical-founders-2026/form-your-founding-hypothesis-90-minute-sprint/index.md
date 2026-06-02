@@ -92,7 +92,11 @@ If they say "wait, can you say that again" or "what does X mean," your sentence 
 
 Three or four reads is normal. That is the work.
 
-> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find the 5 most-named pain points among [your candidate ICP - ideal customer profile, the specific person you're building for] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase."* The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
+> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find the 5 most-named pain points among [your candidate ICP - ideal customer profile, the specific person you're building for] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase."*
+>
+> **What to paste for [your candidate ICP]:** the customer role you circled in Step 1 of this sprint (e.g., "solo chiropractors managing insurance claims" not "small businesses"). If you have not yet finished Step 1, do it first - this sidebar runs AFTER Step 1.
+>
+> The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **Save the competitor URLs Claude/Perplexity names; you will reuse them as the two competitor inputs in the Ch 2.3 ICP-map prompt.** **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
 
 ## The Six-Step Sprint
 

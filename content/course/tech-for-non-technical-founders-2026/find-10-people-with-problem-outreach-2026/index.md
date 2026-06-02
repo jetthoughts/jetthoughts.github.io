@@ -135,6 +135,8 @@ Write down 30 specific sentences in their language with the username next to eac
 
 ### Build a list of 30 specific people
 
+> **Skim instinct: if you want the message template first, scroll to "What to write so they don't ignore you" below.** The list-building methods here are the recommended path; the message template will make more sense after, but if you're a reader who needs to see the destination before the journey, jump and come back.
+
 Turn the 30 sentences into 30 names. Open each thread you saved while reading, click each useful username, and copy four things into a spreadsheet:
 
 - **Name** (theirs, not their company)
@@ -147,6 +149,8 @@ Aim for 30 hand-picked people in one focused sitting.
 **This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies at **3-5× the rate** of a list of 30 strangers a tool exported for you. Get this step right and the rest of the chapter shrinks.
 
 If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (50 contacts/month, no credit card) lets you filter on role + industry + company size and export the rest. Treat it as backfill, not the source - the hand-picked names always perform better.
+
+> **Save the Apollo filter and the 50 exported contacts to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) (where the same six dimensions are listed). Rebuilding the filter from scratch in Module 5 costs you an hour and risks drift; the saved tab is the one carry-forward artifact this Apollo step produces beyond the 10 interviews.
 
 > **Optional: the full AI-assisted Step 3 workflow.** If you ran the Step-1 AI prompt and the Step-2 monitoring tools above, you can compress this whole section: (1) paste your Step-1 ICP filter (role + company size + industry) into Apollo's free tier - exports 50 named contacts in one click; (2) cross-reference 10-15 of those Apollo contacts against the Reddit usernames you saved in Step 2 - these warm-cold targets fit the ICP filter AND have already complained publicly about the problem (highest reply rate of any cold list you can build); (3) scrub the final list for deliverability with [NeverBounce](https://neverbounce.com) ($8 for 1K verifications) before sending. Apollo's free tier (50 contacts/month, no credit card) + NeverBounce verification keeps the cost of this assisted path inside the same single-digit-dollar band as the manual one.
 

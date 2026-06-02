@@ -35,9 +35,17 @@ related_posts: false
 >
 > **Output:** a Day-1 audit confirming you own your code, cloud, and domain before the build starts (or a recovery plan if you don't)
 
-This audit applies BEFORE you hand over a credit card to your first contractor, agency, or Fractional CTO. It also works as a post-hire rescue, but the cheaper time to run it is on Day 1 - not month 14, when the story below kicks off.
+> **If you signed up for Lovable + Supabase + Stripe yourself (the default Path 2 from Ch 4.1), here is your 5-minute self-check** - the rest of this chapter applies the day you hire a contractor:
+>
+> 1. **GitHub**: account in your name, your email, your password manager. (If you used Lovable's "sign in with Google," your Google account IS the GitHub owner. Confirm.)
+> 2. **Lovable + Supabase + Stripe**: signed up with your personal email, billed to your card. (Not a co-founder's, not a friend's.)
+> 3. **Domain (if purchased)**: registered to your name in your registrar account.
+> 4. **No shared admin passwords**: only you have the master password to each.
+> 5. **2FA on all four** (GitHub, Supabase, Stripe, domain registrar): turned on.
+>
+> Pass all 5? You can skim the rest of the chapter as a future reference. Fail any? Fix that one before continuing - the 12-item audit below is the deeper version.
 
-> **On Path 2 (self-serve from Ch 4.1)?** Most of this audit is a quick skim - your Lovable, Supabase, Stripe, GitHub, and domain accounts will be in your own email if you signed up yourself. Skim the 12-item table below to confirm, save the chapter, and return in full the day you hire your first contractor or Fractional CTO. The chapter applies in full only when someone else's email could end up on your root accounts.
+This audit applies BEFORE you hand over a credit card to your first contractor, agency, or Fractional CTO. It also works as a post-hire rescue, but the cheaper time to run it is on Day 1 - not month 14, when the story below kicks off.
 
 Fourteen months of **$23K monthly invoices**, a Delaware C-corp, 1,800 paying clinics, a Stripe account in the founder's name - and the AWS root password sitting in the agency owner's personal Gmail. The first hour of that health-tech rescue last Q4 was not technical. It was three back-and-forth emails to the agency owner asking him to please change the root account email and send the new password to a Notion doc he could not see. He took six days.
 
