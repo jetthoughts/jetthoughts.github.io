@@ -123,7 +123,15 @@ Three actions, in order.
 >
 > FAIL = revise Section 3 outcome-shape and ask a fresh peer. Do NOT advance to Module 4 with a failed brief; the Lovable build will inherit the fuzziness.
 
+> **Module 3 AI critic/simulator block**
+>
 > **No peer available? Use Claude or ChatGPT as the peer.** Paste your full Section 3 + Section 5 (no-go list) into Claude. Prompt: *"Imagine you are a contractor reading this brief to build the product. Based ONLY on Section 3, name 5 things you would build that are NOT in Section 5's no-go list. Be specific - feature names, not categories."* If Claude names 2+ items outside your no-go list, the brief failed quality-check the same as a peer flagging them. Revise Section 3 and re-run. This is the same failure signal a peer would surface, with no calendar coordination needed.
+>
+> **What AI cannot prove or substitute:**
+> - Whether your scope solves the validated problem (only the Module 4 build + real users can)
+> - Whether a real contractor would interpret the brief the same way (AI is a proxy, not a substitute)
+>
+> **The real gate:** a clean peer QA (human or AI) where the answer stays inside your scope AND no-go list.
 
 > **When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.**
 > 

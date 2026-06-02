@@ -111,7 +111,21 @@ If the same name keeps appearing as the only reviewer, you have a single point o
 
 Forward the Loom URL to your own inbox with the date in the subject line. After three months you have a video record nobody on the team controls.
 
-If a demo gets skipped or rescheduled twice, write a one-line message: "Friday demo is the one meeting we do not move. Next Friday at 4pm, what will I see?" Hold the slot.
+> **📧 Copy-pasteable follow-up email - forward after each demo:**
+>
+> Subject: `Friday demo - [date] - [one-line summary]`
+>
+> Forwarding the Loom from today's demo. [One sentence on what shipped.] [One sentence on what's blocked.] [One sentence on what's next.]
+>
+> Archive for the Friday demo folder.
+
+If a demo gets skipped or rescheduled twice, write a one-line message:
+
+> **📧 Copy-pasteable 'skipped twice' message:**
+>
+> "Friday demo is the one meeting we do not move. Next Friday at 4pm, what will I see?"
+
+Hold the slot.
 
 If you have watched four Fridays and you still cannot click anything from your own laptop, the problem is not the demo format. Read [our 8 red flags checklist](/blog/dev-shop-red-flags-checklist/) and start the conversation about access, ownership, and code review.
 

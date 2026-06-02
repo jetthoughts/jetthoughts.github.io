@@ -39,6 +39,25 @@ A 45-minute audit that tells you whether you own your company's code, cloud, and
 
 By the end of one Friday (or the 5 minutes if you're self-serve) you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
 
+> **📋 Copy-pasteable audit spreadsheet - copy these 12 rows into Notion or Google Sheets before you start:**
+>
+> | # | Check | Pass? | Actual email/name on file | Recovery needed? |
+> |---|-------|-------|---------------------------|------------------|
+> | 1 | GitHub org owner is you | ☐ | | |
+> | 2 | You can remove every contractor right now | ☐ | | |
+> | 3 | Branch protection: you have admin override on `main` | ☐ | | |
+> | 4 | AWS root account email is on your domain | ☐ | | |
+> | 5 | Your card pays the AWS bill; you can see 12 months of invoices | ☐ | | |
+> | 6 | IAM admin user is yours, MFA on, password in your vault | ☐ | | |
+> | 7 | Production DB password: you can read it tonight without paging anyone | ☐ | | |
+> | 8 | Secrets store admin is you; you can rotate every secret tomorrow | ☐ | | |
+> | 9 | DB backups run nightly; you can restore one to staging by yourself | ☐ | | |
+> | 10 | Domain registrar: WHOIS in your name, your email, your card | ☐ | | |
+> | 11 | DNS provider: you can log in and add an A record right now | ☐ | | |
+> | 12 | Third-party API keys (Stripe, SendGrid, OpenAI, etc.): accounts in your name | ☐ | | |
+>
+> **Scoring:** All 12 ✓ = you own your company. Any ✗ = fix that row before contractor kickoff.
+
 ## Why this exists
 
 A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She thought she owned the company - the Delaware C-corp, the bank account, the trademark. What she did not own was the GitHub org (registered to the agency's CTO), the AWS root account (email was `dev@theiragency.com`), the Stripe production keys, or the domain (in the lead developer's personal Namecheap). Her app was live serving 4,200 paying users when checkout broke at 9pm on a Tuesday and she could not push a fix. Recovery took **three weeks and $11K in legal fees**. The audit below would have caught all four problems on Day 1 in 45 minutes.
@@ -125,6 +144,21 @@ A domain transfer takes a minimum of **14 days** under ICANN rules and requires 
 Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help me move this over, doing some housekeeping" - you will get a faster transfer than "why is my company under your name?"
 
 ### Recovery order
+
+> **📧 Copy-pasteable recovery email - send to the team if the audit fails (do NOT panic, frame as housekeeping):**
+>
+> Subject: `Quick housekeeping - moving a few accounts to my email`
+>
+> Hi [lead engineer / agency contact],
+>
+> Doing some account housekeeping this week. Can you help me move these over?
+>
+> - [List only the failed items, one per line. Example: "GitHub org owner → founder@mycompany.com"]
+>
+> Should take 5-10 minutes each. Happy to jump on a call if easier.
+>
+> Thanks,
+> [Your name]
 
 - **Code (#1-3):** GitHub org transfer takes five minutes. Slack the lead engineer with your target account email.
 - **Cloud (#4-6):** AWS root email change is self-service if you have the root password. If you do not, AWS support recovers it with your incorporation documents (3-5 business days).

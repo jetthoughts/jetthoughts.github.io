@@ -30,6 +30,15 @@ related_posts: false
 
 *Reddit + LinkedIn + Clay + Lindy + paid panels = 10 interviewees by Friday.*
 
+> **📋 Quick-ref checklist - copy this into Notion before you start:**
+>
+> - [ ] **Written problem hypothesis** - *"I think [persona] does [task] in [painful way] and would pay $X for [better way]"*
+> - [ ] **4 tabs open, 2 hours mined** - Reddit, LinkedIn, one Discord/Slack, G2/Capterra. 30 verbatim pain sentences captured.
+> - [ ] **ICP list built** - 80-120 rows from Clay or Apollo. Six-filter dimensions applied. 50 names queued for send.
+> - [ ] **3-email sequence live** - Smartlead or Instantly + Lindy + Calendly. Day 0/3/7 messages pasted below.
+> - [ ] **Paid panel backup running** - User Interviews or Respondent screener live. Running in parallel with cold outreach.
+> - [ ] **Smoke-test page live** - Carrd or Framer waitlist. $100-200 ad spend. Target: 5%+ email signup rate.
+
 ## Why this exists
 
 A consumer-app founder we spoke with last month spent a full week messaging her LinkedIn network. She sent 60 polite DMs, booked 3 calls, and two of the three were old colleagues showing up to be nice. She had one real conversation, and that founder ghosted on the reschedule. Same week, same hypothesis: she pivoted to the stack below on a Monday morning - two hours on Reddit, an Apollo list of 80 contacts, a 3-email Smartlead sequence with a Lindy agent reading replies, and $400 on a User Interviews panel as a backup track. By Thursday afternoon she had **12 calls booked**. The point isn't that her network was wrong. It's that her network was 3 contacts deep when she needed 10, and the next 7 were strangers she had to find on purpose. The template below is what she ran.

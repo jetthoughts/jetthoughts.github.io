@@ -1,5 +1,5 @@
 ---
-title: "The First-Paying-Customer Operating Kit (Preview - Templates Shipping)"
+title: "The First-Paying-Customer Operating Kit (DPA Template Live)"
 aliases: ["/blog/first-paying-customer-operating-kit/"]
 description: "The six-template kit for Module 5. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
 date: 2026-05-13
@@ -23,7 +23,7 @@ categories: ["Templates"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "The First-Paying-Customer Operating Kit (Preview)"
+  og_title: "The First-Paying-Customer Operating Kit (DPA Template Live)"
   og_description: "The six-template kit for Module 5. We are assembling and shipping templates here as each one is ready - bookmark and check back. No email signup."
 cover_image_alt: "JetThoughts blog cover for the First-Paying-Customer Operating Kit showing 6 component cards arranged as a single bundle"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/"
@@ -32,7 +32,7 @@ related_posts: false
 
 📋 Template companion to [Module 5 of the From Idea to First Paying Customer course](/course/tech-for-non-technical-founders-2026/). Six artifacts that take you from live MVP to signed paid pilot in 4 weeks.
 
-> **Status: preview.** This page is the spec for the kit. We are assembling and shipping each template as it is ready - bookmark and check back. There is no email signup; when a template is downloadable, the link appears inline below. We will not promise files we cannot ship today.
+> **Status: shipping.** The DPA template (component 3) is live below - copy and paste into Google Docs. The other 5 components are described here and shipping as each is ready. There is no email signup; when a template is downloadable, the link appears inline below. Bookmark and check back.
 
 # The First-Paying-Customer Operating Kit
 
@@ -40,7 +40,7 @@ related_posts: false
 
 ## What this kit covers
 
-Module 5 of this course walks five chapters: the Sean Ellis 40% test, the personal-network outreach, the paid-pilot contract, and the cold-outbound pipeline. Each chapter references a template. This page describes all six and will host them as each one ships.
+Module 5 of this course walks five chapters: the Sean Ellis 40% test, the personal-network outreach, the paid-pilot contract, and the cold-outbound pipeline. Each chapter references a template. This page hosts them as each one ships. The DPA template is live below (component 3); the remaining 5 are described and shipping next.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -85,6 +85,67 @@ The one-page DPA from [Chapter 5.3](/course/tech-for-non-technical-founders-2026
 Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pilot DPA, both based on real (anonymized) 2026 founder deals.
 
 The outcome: makes the "we run paid pilots" conversation a 15-second handoff instead of a three-week back-and-forth.
+
+> **📋 Copy-pasteable DPA template - copy into Google Docs, fill the [BLANKS], send:**
+>
+> # Design Partner Agreement
+>
+> **Between:** [Your Company Name] ("Company") and [Customer Company Name] ("Design Partner")
+> **Date:** [YYYY-MM-DD]
+>
+> ## 1. Scope of Pilot
+>
+> The Company will deliver the following outcomes during the pilot period:
+> 1. [Outcome 1 - measurable, e.g. "Reduce weekly report prep from 3 hours to 30 minutes"]
+> 2. [Outcome 2]
+> 3. [Outcome 3]
+>
+> Specific use cases covered: [Use case 1], [Use case 2].
+> Anything outside this list is out of scope until year-one conversion.
+>
+> ## 2. Duration + Dates
+>
+> Start date: [YYYY-MM-DD]
+> End date: [YYYY-MM-DD] (6-8 weeks)
+> Weekly Friday demo at [time] [timezone]. 15 minutes. Loom or live screenshare.
+>
+> ## 3. Pilot Fee + Deposit
+>
+> One-time deposit: $[500-6,000] (10-30% of year-one ACV).
+> Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
+> If Design Partner cancels before week 4: deposit forfeited.
+> If Company cancels for any reason: 100% refund within 14 days.
+>
+> ## 4. Success Criteria
+>
+> The pilot is successful if **2 of 3** criteria are met by [end date]:
+> 1. [Measurable criterion 1 - e.g. "Report prep time reduced to ≤30 min/week, verified in Friday demo"]
+> 2. [Measurable criterion 2]
+> 3. [Measurable criterion 3]
+>
+> If 2+ criteria met: year-one contract auto-converts unless Design Partner opts out in writing within 7 days.
+> If <2 criteria met: both parties walk. Company retains deposit as paid consideration for pilot work.
+>
+> ## 5. Conversion Terms
+>
+> Year-one price: $[amount] / [month or year]
+> Billing: [monthly / annual]
+> Conversion: auto-convert at pilot end unless Design Partner opts out in writing.
+> Post year-one: 30-day written notice to cancel.
+>
+> ## 6. Data, IP, Termination
+>
+> Design Partner keeps their data. Company keeps the product IP.
+> Either party may exit at 30 days written notice during pilot.
+> Design Partner's data remains exportable for 90 days after termination.
+>
+> **Signed:**
+>
+> _________________________  Date: __________
+> [Your Name], [Your Company]
+>
+> _________________________  Date: __________
+> [Champion Name], [Customer Company]
 
 ### 4. Stripe Checkout setup checklist (Rails / Django / Laravel)
 
@@ -151,7 +212,7 @@ The kit is not a substitute for a sales course or a CRM. It will not teach the c
 
 ## How to get the kit
 
-See the top callout for status. When a template is live, the download link appears inline in the matching component above - no mailing list, no funnel, just the file.
+The DPA template (component 3) is copy-pasteable inline above. When the remaining templates ship, they will appear in their matching component sections - no mailing list, no funnel, just the file.
 
 ## Where this fits in the course
 

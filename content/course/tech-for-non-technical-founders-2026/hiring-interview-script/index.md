@@ -28,6 +28,20 @@ related_posts: false
 
 > This template is the canonical source for the 7 hiring interview questions. The [Hire Track Supplementary Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) post links here for the full Q&A.
 
+> **📋 Copy-pasteable pre-interview email - send to candidate 24 hours before the call:**
+>
+> Subject: `[Date] interview prep - 7 questions`
+>
+> Hi [first name],
+>
+> Looking forward to our call [tomorrow / Tuesday]. Here are the 7 questions we will work through together. Please come prepared to share your screen for Q3 and Q7.
+>
+> [Paste Q1-Q7 from below - the bold headers only, not the scoring criteria.]
+>
+> The call runs 30 minutes: 5 min intro, 20 min on the questions, 5 min for your questions. Talk soon.
+>
+> [Your name]
+
 # The Hiring Interview Script - 7 Questions in 30 Minutes
 
 *Send Sunday night. Run Tuesday and Wednesday. Hire decision in your hand by Friday.*
@@ -168,7 +182,20 @@ If you booked a reference call, the next step is the [SOW reading guide](/course
 
 - **Above 7:** book the 30-minute reference call with two of the candidate's prior clients or managers. Ask three questions: what AI-related incidents did they own, what was the OpenAI line on their monthly invoice, did they ever ship a PR with `Assisted-by:` in the commit log on request.
 - **5 to 7:** schedule one 45-minute follow-up technical session, working through one of your real product flows on screenshare. If they cannot attend within seven days, that tells you their actual availability. Drop or proceed.
-- **Below 5:** send the polite-no the same evening. One paragraph: "Thank you for the time. We are pausing the search to refine our requirements. We will keep your details on file." Do not negotiate.
+- **Below 5:** send the polite-no the same evening. One paragraph:
+
+> **📧 Copy-pasteable polite-no email:**
+>
+> Subject: `[Date] interview - follow-up`
+>
+> Hi [first name],
+>
+> Thank you for the time today. We are pausing the search to refine our requirements. We will keep your details on file.
+>
+> Best,
+> [Your name]
+
+Do not negotiate.
 
 The 30-minute interview is cheaper than the wrong hire it prevents. A bad three-month hire on a $90/hour LATAM contract costs $43K plus the onboarding hours and the rollback. The seven questions cost 30 minutes.
 

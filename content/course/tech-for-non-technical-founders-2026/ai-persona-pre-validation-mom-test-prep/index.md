@@ -212,6 +212,21 @@ Reuse the rehearsal stack when a round of real interviews ends in partial signal
 
 One constraint worth naming: the rehearsal only surfaces signal that's already in your mental model of the customer. Claude constructs the persona from what you tell it. If your ICP description is wrong - the wrong role, the wrong company size, the wrong industry detail - the persona will be wrong in the same direction, and the rehearsal will give you false confidence. This is the other reason real interviews stay irreplaceable: a real customer can tell you your ICP description is wrong, while Claude can only simulate the ICP you described.
 
+> **Module 2 AI critic/simulator block** - This chapter IS the block.
+>
+> **What AI can help with at this stage:**
+> - Simulate 3 ICP personas answering your draft Mom Test questions in-character
+> - Flag hypothetical questions that generate polite-yes responses from anyone
+> - Surface the top 3 objections to listen for in real interviews
+> - Sharpen vague questions into past-anchored versions under 20 words
+>
+> **What AI cannot prove or substitute:**
+> - Whether your ICP description is accurate (only a real interviewee can correct you)
+> - What a real customer will actually say (Claude simulates the persona YOU describe)
+> - Whether the problem is real (only 10 Mom Test interviews can falsify the hypothesis)
+>
+> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 recruitment).
+
 ## Further reading
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the canonical reference for past-anchored interview questions.

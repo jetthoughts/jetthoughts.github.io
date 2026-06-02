@@ -143,6 +143,26 @@ The [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers what a clean te
 
 ## What to do before signing
 
+> **📋 Copy-pasteable pre-sign checklist - do this the night before you sign:**
+>
+> - [ ] Printed SOW in hand, yellow highlighter ready
+> - [ ] All 8 clauses walked (scorecard above). Every fired flag has a question written in the margin.
+> - [ ] Contract lawyer booked (1 call, $300-600, dev-shop SOW experience only)
+> - [ ] Redlined SOW saved + questions email + answers email in one dated folder
+
+> **📧 Copy-pasteable agency email - send before you sign anything:**
+>
+> Subject: `SOW review - [N] questions before we sign`
+>
+> Hi [agency contact],
+>
+> I walked the SOW last night with the [8-clause scoring guide](https://jetthoughts.com/course/tech-for-non-technical-founders-2026/sow-reading-guide/). A few questions below - happy to jump on a call, but please reply in writing so we both have the answers on file.
+>
+> [Numbered list of your fired-flag questions, one per clause. Example: "Clause 2 - Can we define milestone acceptance as: (a) acceptance criteria pass in CI, (b) I click the feature end-to-end on staging, (c) written sign-off - instead of 'deployed to staging = delivered'?"]
+>
+> Thanks,
+> [Your name]
+
 - **Send the agency one email with all your fired-flag questions, in writing.** Numbered list, every question tied to a clause. If they want to discuss it on a call, fine - the answers come back in writing afterwards.
 
 - **Get a one-call review from a contract lawyer who has reviewed at least 3 dev-shop SOWs**, typically $300-$600 for 60 minutes plus a one-page redline. Generalist business attorneys catch the IP and liability paragraphs and miss the operational ones. Ask specifically: "Do clauses 2, 3, 5, 6, and 7 favor the vendor?" The founder in the opening story would have saved $78K for $400.

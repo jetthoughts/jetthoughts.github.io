@@ -84,6 +84,20 @@ Synthesis of every rule scattered across Module 4 and the supplementary referenc
 
 Each of the 12 rules is taught in depth somewhere across this chapter, the [self-serve stack walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/), [Ch 4.4 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/), or the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The list above is the index; the surrounding chapters are the depth.
 
+> **Module 4 AI critic/simulator block**
+>
+> **What AI can help with at this stage:**
+> - Review your Lovable build against your one-page brief: paste your brief's Section 3 and your staging URL into Claude. *"Name 3 things this build includes that are NOT in the brief."*
+> - Audit your Supabase RLS policies: paste your table definitions. *"Which tables lack row-level security?"*
+> - Check for overengineering: *"Walk the signup-to-paywall happy path on [URL]. Name any screen, button, or field a first-time user does not need."*
+>
+> **What AI cannot prove or substitute:**
+> - Whether real users can navigate the workflow (only uncoached ICP users can)
+> - Whether the Stripe webhook idempotency is correct (only test-mode charges can)
+> - Whether the architecture will hold at scale (only real traffic + Ch 4.4 ceiling signals can)
+>
+> **The real gate:** 5 green lights (Phase 4 exit criteria) + weekly demo to one non-PRD-reader human.
+
 ## Why these three tools, and why they slot together
 
 [Y Combinator's current stance](https://www.ycombinator.com/library/) is direct: validate without code, then ship the simplest version with AI tools. Lovable + Supabase + Stripe became the dominant self-serve path because all three tools were built AI-first, their documentation is exhaustive, and the integrations between them are templated to the point of being boring.

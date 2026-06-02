@@ -279,7 +279,7 @@ That is the point. A wrong hypothesis killed in five interviews is the cheapest 
 
 Refuse to write the sentence because "we don't know enough yet" and you'll spend ten times longer learning the same thing through anecdote.
 
-## Advanced (optional sidebar)
+## Advanced: AI tools for the sprint
 
 The six-step compressed sprint above is the simplest version that works. Once you've run it once and want to layer on more structure, read these in order of complexity:
 
@@ -314,6 +314,21 @@ You get a written four-lens debate in 30 seconds at zero cost. Less probing than
 > **Also worth a 30-second follow-up:** ask the same model `Name 3-5 named competitors or adjacent tools serving the same customer. Give me a URL for each.` You'll reuse those URLs in [Chapter 2.3's AI ICP map prompt](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - one less thing to scramble for later.
 
 None of these are required. The Mad Libs sentence and a kitchen timer is the main path.
+
+> **Module 1 AI critic/simulator block**
+>
+> **What AI can help with at this stage:**
+> - Deep-research the [customer] and [problem] blanks (Perplexity/Gemini verbatim quotes → hypothesis blanks)
+> - Score your hypothesis on the 4 Magic Lenses (the Claude/GPT prompt in the sidebar above)
+> - Name 3-5 competitors or adjacent tools serving the same customer
+> - Pressure-test assumptions with WorthBuild's Reddit/HN evidence aggregator
+>
+> **What AI cannot prove or substitute:**
+> - Whether a real customer will pay (only Ch 1.2's smoke-test landing page with 300+ visits can)
+> - Whether the problem is real (only Ch 2.1's 10 Mom Test interviews can)
+> - Whether the approach is feasible given your actual constraints (only Step 4's Pragmatic lens + a real build can)
+>
+> **The real gates:** Ch 1.2 smoke-test conversion rate + Ch 2.1 Mom Test interview scores.
 
 ## Further reading
 
