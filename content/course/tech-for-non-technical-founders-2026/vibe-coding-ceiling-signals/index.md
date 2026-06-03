@@ -36,15 +36,15 @@ related_posts: false
 >
 > **Output:** a yes/no decision on whether to graduate to Module 5 (First Paying Customer) or hire or stay self-serve
 
-**Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term comes from indie founder Pieter Levels and describes the 2026 default for solo non-technical founders. It works astonishingly well until it doesn't, and "until it doesn't" is the moment this chapter is about.
+A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $25/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
+
+Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month). The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
+
+**Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term comes from indie founder Pieter Levels and describes the 2026 default for solo non-technical founders. This chapter is about the moment the shed stops holding.
 
 Once your build goes live, run this 5-signal check monthly. Each signal that fires earlier saves rebuilds later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
 
-> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The scenario below is what the ceiling looks like when it actually arrives:
-
-A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $20/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
-
-Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month). The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
+> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The morning scene above is what the ceiling looks like when it actually arrives.
 
 ![A hand-drawn scoreboard showing the 5 architectural ceiling signals: data model, real-time, auth complexity, AI cost, compliance. Each row has the visible symptom and the recommended action.](signals-scoreboard.svg)
 
@@ -176,7 +176,7 @@ Three actions. The first is tonight.
 
 - **Open your Lovable + Supabase admin dashboard tonight.** Pull up: the 30-day request error rate, the 30-day Stripe webhook retry log, the active user count, and last month's OpenAI / Anthropic invoice if you use one. Five minutes of dashboard time is the input to the scoreboard.
 - **Score each of the 5 signals: green / yellow / red, AND log Date first observed + Date last observed per signal.** Use the scoreboard above. Green = no symptom yet. Yellow = symptom showing in the last 30 days but recoverable. Red = symptom firing 4+ weeks AND you've patched it more than once. Without dated observation windows you cannot tell the "fired once this week" from the "fired every week for two months" signal, and the 4-week graduation rule below collapses. Keep the scoreboard as a Notion table or a sheet with columns: Signal | Status | Date first observed | Date last observed | Notes. Score green when the symptoms are firing and you arrive at the [salvage-or-rebuild thread](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) at month nine - by then the rebuild estimate is months of work you could have caught in days.
-- **If 2 or more signals are red, start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) THIS WEEK.** Not next month, not after the next sprint. The Fractional CTO conversation is one Calendly invite away and the first call is usually free. The bridge holds until you have the runway clarity for a full hire.
+- **If 2 or more signals are red AND have been red for ≥4 consecutive weeks (per the flowchart Q1 above), start the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) THIS WEEK.** The 4-week window is the load-bearing qualifier; two reds in one week is a tuning problem, not a graduation signal. Not next month, not after the next sprint - once the 4-week mark hits, the Fractional CTO conversation is one Calendly invite away and the first call is usually free. The bridge holds until you have the runway clarity for a full hire.
 
 ## Artifacts you carry out of Module 4
 
@@ -189,6 +189,8 @@ After finishing Ch 4.1-4.4, Sam has five artifacts. Each one feeds a specific do
 | **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
 | **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.4, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
 | **Output for Module 5: 4-6 active users you can survey** (from Ch 4.3 onboarding) | Ch 5.1 Sean Ellis 40% test input. These are the users who get the 5-question survey first; their Q2-Q3 verbatims become the persona language for Ch 5.2-5.5 outbound. |
+
+Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Both beat watching the codebase get worse.
 
 ## Further reading
 

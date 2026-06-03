@@ -93,7 +93,7 @@ Three tools, one workflow.
 
 | Tool | Price (2026) | Role |
 |---|---|---|
-| Smartlead (smartlead.ai) or Instantly (instantly.ai) | $37-$94/mo | Sending layer. Handles deliverability, rotates 5-10 inboxes, keeps you out of spam. |
+| Smartlead (smartlead.ai) or Instantly (instantly.ai) | $39-$94/mo (Smartlead Base $39) | Sending layer. Handles deliverability, rotates 5-10 inboxes, keeps you out of spam. |
 | Lindy (lindy.ai) | from $49/mo | AI agent. Reads replies, classifies them, sends follow-ups, books calls. |
 | Calendly (calendly.com) | free-$10/mo | Calendar booking. Lindy drops your link when a reply says yes. |
 

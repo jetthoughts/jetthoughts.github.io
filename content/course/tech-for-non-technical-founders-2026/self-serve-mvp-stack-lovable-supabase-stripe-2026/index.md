@@ -36,6 +36,8 @@ related_posts: false
 >
 > **Output:** a live MVP at a staging URL real users can click, by Friday week 4
 
+> **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS) and Phase 3 (Stripe webhook + idempotency) are where part-time founders lose the most calendar - both require learning concepts (database schemas, webhooks) the chapter does not teach in depth. Plan a 10-week version of the build, not a 4-week version. The Friday-week-4 framing in the Output line above applies to full-time founders only.
+
 > **$0 path for the whole MVP.** Lovable, Supabase, and Stripe all have free tiers that ship a working product before any paid charge hits your card.
 > - **Lovable free** - 5 daily messages, enough to build 3-5 screens. Upgrade to $25 Pro only if you're iterating multiple times a day.
 > - **Supabase free** - 500 MB database + 1 GB file storage + 50K monthly active users. Stays free until you have product-market fit.
@@ -87,9 +89,28 @@ Each of the 12 rules is taught in depth somewhere across this chapter, the [self
 > **Module 4 AI critic/simulator block**
 >
 > **What AI can help with at this stage:**
-> - Review your Lovable build against your one-page brief: paste your brief's Section 3 and your staging URL into Claude. *"Name 3 things this build includes that are NOT in the brief."*
-> - Audit your Supabase RLS policies: paste your table definitions. *"Which tables lack row-level security?"*
-> - Check for overengineering: *"Walk the signup-to-paywall happy path on [URL]. Name any screen, button, or field a first-time user does not need."*
+>
+> **Review your Lovable build against your one-page brief.** Paste your brief's Section 3 into Claude, then paste this prompt:
+>
+> ```text
+> Here is Section 3 of my one-page brief (the outcome-shaped feature list). Based ONLY on this list, name 3 things a Lovable build of this brief would likely include that are NOT in the list. Be specific - feature names, not categories.
+> ```
+>
+> **Audit your Supabase RLS policies.** Paste your table definitions into Claude with this prompt:
+>
+> ```text
+> Here are my Supabase table definitions. Which tables lack row-level security (RLS) enabled, and for each one, name the cross-tenant data leak that would result if a logged-in user from Tenant A queried that table.
+> ```
+>
+> **Walk the happy path from static input.** Open Lovable in your browser, take 3 screenshots (sign-up screen, the one core-action screen, and the paywall / payment screen) and paste them into Claude one by one along with Section 3 of your brief. Prompt:
+>
+> ```text
+> Here is the signup-to-paywall happy path from my MVP plus the outcome-shaped feature list it was meant to ship. For each screenshot, name any screen, button, or field that is NOT in the outcome list - these are scope leakage you can cut before launch. If a screen looks aligned to the outcome, say so explicitly.
+>
+> If you cannot identify any scope leakage in a screenshot, respond with "NO SCOPE LEAK FOUND" - that is a valid finding, not a failure.
+> ```
+>
+> Claude cannot audit a URL it cannot browse; it CAN audit screenshots you provide.
 >
 > **What AI cannot prove or substitute:**
 > - Whether real users can navigate the workflow (only uncoached ICP users can)
@@ -104,7 +125,7 @@ Each of the 12 rules is taught in depth somewhere across this chapter, the [self
 
 Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal. The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
 
-## M3 prototype vs M5 MVP - different artifacts, different rigor
+## M2 prototype vs M4 MVP - different artifacts, different rigor
 
 **You do NOT polish your Module 2 prototype into the MVP. The prototype was throwaway by design. The MVP is built fresh with production rigor - real auth, real Stripe, real domain, real user data.**
 
@@ -114,7 +135,7 @@ The Module 4 MVP is built from the [validated Product Brief](/course/tech-for-no
 
 Side-by-side: the Module 2 throwaway prototype vs the Module 4 production MVP.
 
-| | M3 prototype | M5 MVP |
+| | M2 prototype | M4 MVP |
 |---|---|---|
 | Time | 2 hours | Days to weeks |
 | Auth | None | Supabase auth |
@@ -180,7 +201,20 @@ Lovable generates the screens. You iterate by chatting with it: "make the status
 
 Create a Supabase project on the free tier. Define your three or four core tables in the SQL editor (or in the Table Editor UI; both work for an MVP). For the fitness coach example: `coaches`, `clients`, `check_ins`. Enable [Row-Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security) from the start. RLS is the difference between a coach seeing their own clients and a coach seeing every coach's clients in a single bug. Skipping it is the most common security mistake we see in vibe-coded MVPs.
 
+> **First-table walkthrough (for the fitness-coach example - adapt to your domain):** in Supabase Dashboard, click **Table Editor** in the left sidebar, then **New table**. Name it `coaches`. Check the "Enable Row Level Security (RLS)" box BEFORE adding columns. Add columns: `id` (uuid, primary key, default `gen_random_uuid()`), `email` (text), `user_id` (uuid, foreign key to `auth.users.id`), `created_at` (timestamp, default `now()`). Click **Save**. Repeat for your second and third tables. The RLS checkbox is the load-bearing click - if you forget it on table creation, you'll have to manually enable it later AND backfill policies on existing rows.
+
 In Lovable, install the Supabase integration. Lovable will add the Supabase JS client and store the keys for you. Wire your signup screen to `supabase.auth.signUp()` and your data screens to `supabase.from('clients').select()`. The phase demo: your spouse signs up via the staging URL, you watch a row appear in the Supabase console in real time.
+
+> **Self-test your RLS policy before going live.** Enabling RLS (Rule 7) is necessary but not sufficient - a wrong-permissive policy still ships the cross-tenant leak. In Supabase's SQL Editor (Dashboard -> SQL Editor), paste this query, replacing `<table>` with your main user-data table (e.g., `coaches`, `clients`, `check_ins`):
+>
+> ```sql
+> SET ROLE authenticated;
+> SET request.jwt.claims = '{"sub": "00000000-0000-0000-0000-000000000999"}';
+> SELECT * FROM <table>;
+> RESET ROLE;
+> ```
+>
+> If this returns ANY rows, your RLS policy has a hole - the `authenticated` role can read rows it should not own (the fake user-id `999` has no real rows in your table). The query should return ZERO rows. If you get rows back, your policy is missing a `USING (auth.uid() = user_id)` clause or equivalent. Fix the policy before any real user touches the URL.
 
 > **End-of-Phase-2 micro-fail signal.** Before you build Stripe in Phase 3, hand the staging URL to your spouse OR one of your Ch 2.3 Mom Test interviewees. Give zero coaching. Watch them try to sign up and reach the core action button (logging a check-in, exporting the CSV, whatever your one-page brief named as the workflow). If 2+ test users stall on screens 1-2, the workflow shape is wrong - pivot back to [Ch 3.2 outcome rewrite](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe. Building a payment wall on top of a workflow nobody can navigate just adds friction to a broken loop.
 
@@ -192,7 +226,7 @@ Spend the rest of the phase running $1 test transactions through the flow: signu
 
 ### Phase 4 - deploy, send to 5 ICP users, iterate from the data
 
-Switch Stripe out of test mode. Buy a domain ($14/year on [Porkbun](https://porkbun.com/) or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
+Switch Stripe out of test mode. Buy a domain (~$10/year on [Porkbun](https://porkbun.com/) - .com registration is $9.73 first year, $10.91 renewal as of 2026 - or your registrar of choice; never let a tool hold your domain). Point the domain at the Lovable staging URL. Take final screenshots, write a 3-line cold email or LinkedIn DM, and send to 5 ICP prospects from your [Module 2 outreach list](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/).
 
 > "Hey [name] - the workflow you described recently (logging client check-ins by hand on a spreadsheet) is now a tool. Quick first-use, $29/month after a trial window. URL: [staging URL]. Honest reactions only."
 
@@ -207,6 +241,8 @@ Watch what happens. If 0 of 5 click, the cold message is wrong, not the product 
 > 5. **Friday-style weekly demo recording exists** for the last week of build (a Loom or screen-record proving the demo cadence held to the end).
 >
 > Advance to Module 5 only when all 5 are green. If any are red, the MVP is NOT ready for the 10-30 users Module 5 needs as input. Fix the red light first, then re-check.
+
+> **Pre-flight before M5.1: book up to 10 user sessions.** Phase 4's 4-6 onramp accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Ch 2.3 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-15 active users total by the time M5.1's survey ships. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
 
 ### Onramp phase - Module 5 handoff: invite your Module 2 interviewees onto the live MVP
 
@@ -258,10 +294,10 @@ What the stack actually costs, per published vendor pricing:
 | Phase | Cost shape | Line items |
 |------|-------|-----------|
 | Start | Free tiers | Free tiers across Lovable, Supabase, Stripe, GitHub |
-| First ship | Per-tool monthly fees | Lovable Pro $25 + Supabase Pro $25 + domain $14 + Resend $20 + Stripe 2.9% + $0.30 per transaction |
+| First ship | Per-tool monthly fees | Lovable Pro $25 + Supabase Pro $25 + Porkbun .com ~$10/yr + Resend $20 + Stripe 2.9% + $0.30 per transaction |
 | Post-launch | Scale-tier monthly fees | Lovable Scale $100 + Supabase Pro $25 + Resend $35 + Sentry $26 + monitoring $14 |
 
-Most founders hit the architectural ceiling at the post-launch tier - at ~10K users, route to Chapter 4.4 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
+The architectural ceiling tends to land at the post-launch tier - at ~10K users, route to Chapter 4.4 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
 
 ## What to do tomorrow
 
@@ -273,8 +309,6 @@ Three actions, in order. The first two cost $0.
 > 
 > **Generate the UI in Lovable.** Iterate by chatting: rename, resize, reposition. End-of-phase demo: screens click with nothing persisted. Show one human who hasn't read the PRD - watch them try it without a tour.
 
-> Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL on per-vendor pricing. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
-
 The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) artifact is the day-by-day version of this post. Print it before Phase 1. Each day has one small task; each phase has one demo. The artifact removes the "what do I do next" question, which is the reason most small ships actually finish.
 
 Skip the build phases and try to design the perfect first version, and months later you are the one posting in the [salvage-or-rebuild](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold. The shed build never grows that large. Either you reach the architectural ceiling on real users (good problem), or you learn the demand is not there (cheap problem). Both outcomes beat the half-built thing.
@@ -282,6 +316,8 @@ Skip the build phases and try to design the perfect first version, and months la
 ## When this path ends
 
 Self-serve has a ceiling. The [ceiling-signal monitoring chapter](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) covers the 5 signals that mean it's time to bring in help. When 2+ signals fire in one monthly check, switch to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
+
+Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your validated problem to a staging URL on per-vendor pricing. The bigger architecture is a different conversation, and you have not earned the right to have it yet.
 
 ## Further reading
 

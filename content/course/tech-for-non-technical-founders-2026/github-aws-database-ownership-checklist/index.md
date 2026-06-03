@@ -63,29 +63,6 @@ The financial damage is rarely the headline number on the agency invoice. It is 
 
 ![Four labeled zones a non-technical founder must own: Code (GitHub org and repos), Cloud (AWS root and billing), Secrets (database credentials and API keys), and Domain (registrar and DNS). Each zone shows the failure mode if a contractor email is on it instead of the founder.](ownership-zones.svg)
 
-## The 12 items, in four zones
-
-The full audit lives at the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) - 12 items, the exact pass criterion for each, the recovery steps when one fails. Here is the one-line summary, grouped by the zone you check.
-
-> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules (the source of the 14-day wait if your registrar lock isn't released).
-
-| Zone | Item | Pass Criterion |
-|---|---|---|
-| **Code** | GitHub org owner | Your company email, not the agency's |
-| | Repo collaborators | Can be removed by you alone, without permission |
-| | Branch protection on main | Enabled and you can override in an emergency |
-| **Cloud** | AWS root account email | Sits on a domain you control |
-| | Billing card | Yours and you can download every invoice yourself |
-| | IAM admin user | In your name with MFA on, separate from root |
-| **Secrets and database** | Production DB credentials | Readable by you tonight without paging an engineer |
-| | Secrets store | (Secrets Manager, Vault, Doppler) administered by you |
-| | Database backups | Running nightly with a restore runbook you can execute |
-| **Domain and external services** | Domain registrar | WHOIS shows your name and your renewal email |
-| | DNS provider | Logged in under your account with MFA, ready to add an A record now |
-| | Third-party API keys | (Stripe, SendGrid, Twilio, OpenAI, Plaid) on your account, your card |
-
-Two of those twelve are existential. AWS root email controls whether the agency can lock you out in ten minutes. Domain registrar turns into a 14-day ICANN-mandated wait if the agency will not release the auth code. The other ten matter; these two end the company if they go wrong.
-
 ## What good looks like vs what bad looks like
 
 Every item rhymes the same way when it passes: an email on a domain you control, billing on a card you own, MFA on a phone in your pocket, and a password in a vault you can read. Failure rhymes too: somebody else's email, somebody else's card, and "let me ask Marcus" as the answer to "who can rotate this?"
@@ -114,6 +91,29 @@ The Marcus answer is the hostage answer. It does not matter whether Marcus is ho
 > Good: Logged into the registrar with your account. WHOIS shows your name. Auto-renew is on, charged to your card, and you have your phone scanned for MFA.
 
 A domain transfer is the slowest recovery on the list. [ICANN's transfer policy](https://www.icann.org/resources/pages/transfers-2024-en) requires a five-day approval window after the auth code is released, and many registrars add a 60-day post-registration lockout window during which transfers cannot start at all. If the agency holds your domain and refuses to cooperate, your customers are looking at a static placeholder for two weeks while you escalate to ICANN's transfer dispute resolution.
+
+## The 12 items, in four zones (fill-in-the-blank reference)
+
+Those three pairs anchor the pattern; the table below is the fill-in-the-blank version - 12 items, the exact pass criterion for each, the recovery steps when one fails. The full audit lives at the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/).
+
+> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules (the source of the 14-day wait if your registrar lock isn't released).
+
+| Zone | Item | Pass Criterion |
+|---|---|---|
+| **Code** | GitHub org owner | Your company email, not the agency's |
+| | Repo collaborators | Can be removed by you alone, without permission |
+| | Branch protection on main | Enabled and you can override in an emergency |
+| **Cloud** | AWS root account email | Sits on a domain you control |
+| | Billing card | Yours and you can download every invoice yourself |
+| | IAM admin user | In your name with MFA on, separate from root |
+| **Secrets and database** | Production DB credentials | Readable by you tonight without paging an engineer |
+| | Secrets store | (Secrets Manager, Vault, Doppler) administered by you |
+| | Database backups | Running nightly with a restore runbook you can execute |
+| **Domain and external services** | Domain registrar | WHOIS shows your name and your renewal email |
+| | DNS provider | Logged in under your account with MFA, ready to add an A record now |
+| | Third-party API keys | (Stripe, SendGrid, Twilio, OpenAI, Plaid) on your account, your card |
+
+Two of those twelve are existential. AWS root email controls whether the agency can lock you out in ten minutes. Domain registrar turns into a 14-day ICANN-mandated wait if the agency will not release the auth code. The other ten matter; these two end the company if they go wrong.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -179,6 +179,8 @@ The artifact at [/course/tech-for-non-technical-founders-2026/ownership-checklis
 |---|---|---|
 | **Signed key infrastructure** | You have 50+ users AND you handle regulated data. Rotating to asymmetric signing keys (AWS KMS, HashiCorp Vault Transit engine) means revocation actually removes access. | You have <50 users. Defer to month three, not month eighteen. |
 | **Security audit reference** | Before an enterprise prospect sends a SOC2 questionnaire. Run [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) (free for Business/Enterprise) or [Prowler](https://github.com/prowler-cloud/prowler) (open-source). Both produce reports answering 80% of infra questions. | You have no enterprise prospects yet. No need for SOC2 or formal audit. |
+
+Ownership audit done right means no Marcus stands between you and a 9pm Tuesday production fix.
 
 ## Further reading
 

@@ -47,11 +47,25 @@ This chapter is how you build the list and send the messages.
 
 The objection comes up in every founder call: "I do not want to ask friends. It feels like begging."
 
-Reframe. You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro. The trade is your time and a refundable deposit against a tool that will save them hours from the first week. Founders who have the problem take the trade; founders who do not have it were never your customer, so you cut bait fast and move to the next name.
+You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro. The trade is your time and a refundable deposit against a tool that will save them hours from the first week. The people who have the problem take the trade; the people who do not have it were never your customer, so you cut bait fast and move to the next name.
 
-Two founders we worked with through the rescue queue both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks. The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
+Two founders we spoke with after stalled builds both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks. The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
+
+> **First: count your actually-applicable names. Then pick a path.**
+>
+> Open LinkedIn. Filter your 1st-degree connections by your must-have segment from Ch 5.1 (title + company size + industry). Count what comes back.
+>
+> | Count | What this means | Your path |
+> |---|---|---|
+> | **30+** | Standard warm motion works. Build the 50-name list as described below. | Continue with the 4-bucket structure. |
+> | **15-29** | Reduced warm motion. Build buckets at smaller sizes: 2 champions + 5 hot + 8 warm + 5 cold. Expected yield: 4-7 replies, 1-2 demos, 0-1 paid pilot. Warm motion alone will not close your first customer; you will need cold outbound (Ch 5.5) in parallel, not sequential. | Build the reduced list AND start the M5.5 cold prep on the same week. |
+> | **Under 15** | Your professional network does not yet contain the ICP segment. Warm motion will not produce your first customer. | Skip the warm-bucket structure entirely. Go directly to Ch 5.5 cold outbound. Use the small-list community fallbacks below (YC batch, Indie Hackers, sector Slack) to seed initial warm-cold messages. |
+>
+> The 50-name structure below is the **best-case path**, not the universal path. An idea-stage founder with a generalist network typically lands in the 15-29 band; budget two months of cold outbound on top of the warm motion to land your first customer in that scenario.
 
 ## The 50-name list: 4 buckets
+
+> **Honest calendar for the full send sequence.** The 50-name LIST is one sitting (60-90 min once your LinkedIn export arrives, which itself takes 24 hours). The full SEND sequence (Loom recording + champion + hot + warm + cold messages staggered across days) is 8-12 hours of active effort spread across 7-10 calendar days. Plan two evenings for the list-build and four-to-five evenings for the staggered sends. The chapter framing of "one sitting" applies to the list-building step, not the entire outreach round.
 
 Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship strength, Last contact date. Fill 50 rows in one sitting before you send anything.
 
@@ -91,7 +105,7 @@ Use the verbatim Q3 answers from your [Chapter 5.1 survey](/course/tech-for-non-
 
 **Part 3: A Loom video, not a paragraph.**
 
-Record one 90-second Loom before you send. A free Loom account gives you 25 free videos. The Loom shows your product in 60 seconds and you on camera in the other 30. Founders who skip the Loom and write a paragraph instead get half the response rate, because the recipient needs to see both your face and the product working in the same 90 seconds.
+Record one 90-second Loom before you send. A free Loom account gives you 25 free videos. The Loom shows your product in 60 seconds and you on camera in the other 30. Skip the Loom and write a paragraph instead and you get half the response rate, because the recipient needs to see both your face and the product working in the same 90 seconds.
 
 > **Loom script source: your Ch 5.1 verbatims.** Lines 2-3 of your Loom should NOT be your own marketing voice - they should be the three Q2-Q3 verbatim quotes you exported from the [Ch 5.1 must-have segment test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) Google Doc. Read those quotes aloud, then point at the product feature that addresses the pain they describe. Recording in the founder's voice is the failure mode Ch 5.1 was designed to prevent; the Loom is the highest-leverage place to use the verbatims you already have.
 
@@ -181,6 +195,8 @@ The 50-name list template, the Loom outline, and the 4-message template variants
 > The Stripe example in Graham's essay - where the Collison brothers installed the product in person for every early customer -
 > matches the relationship logic of this chapter exactly.
 > The main path gets you to 10 customers; the advanced version extends that relational rigor to 100.
+
+Your network is not begging-territory. It is the cheapest customer-acquisition motion you will ever run, and the people in it have already told you they have the problem.
 
 ## Further reading
 

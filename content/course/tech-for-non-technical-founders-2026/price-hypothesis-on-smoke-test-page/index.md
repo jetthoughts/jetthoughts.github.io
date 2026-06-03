@@ -64,9 +64,11 @@ Testing price before you build has one advantage: there are no switching costs y
 
 All three on the button and in the confirmation copy. Anything less measures curiosity, not price intent.
 
-> **Optional: AI deep-research for the price anchor.** Before you set the price, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"What do [your ICP] currently pay for [your category]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages."*
+> **Optional: AI deep-research for the price anchor.** Before you set the price, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"What do [your ICP] currently pay for [your category]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with 'NOT FOUND - [item]' rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention."*
 >
 > **What to paste for the placeholders:** [your ICP] = your Founding Hypothesis [customer] blank from [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (e.g., "solo chiropractors managing insurance claims"). [your category] = your Founding Hypothesis [problem] blank phrased as a software category (e.g., "insurance-claim resubmission tools"). If your hypothesis sentence is not yet written, run Ch 1.1 first.
+>
+> **Free-tier fallback (no paid subscription).** If you can't pay $20/mo for deep-research mode, paste the same prompt into Claude free (claude.ai) or ChatGPT free (chat.openai.com). The output is less exhaustive (these tools cannot browse the web in real time) but the NOT-FOUND escape valve above will tell you which items it could not verify. Treat free-tier output as a starting list to spot-check on Google, not as the final answer.
 >
 > The output gives you a real price distribution (e.g., "$19-$79/month is the band, with one outlier at $299"). Pick your hypothesis price ABOVE the cheapest 30%; the smoke test's job is to validate willingness-to-pay, not to be cheaper than the cheapest. **What this is NOT**: a prediction that your price will convert. That's what the Stripe-click rate in the next section measures.
 
@@ -166,7 +168,9 @@ The smoke-test price is a hypothesis price, not your launch price. You're testin
 | **After 10 customer interviews** | Comments about budget, alternatives they pay for now, what the problem costs them. | If 5+ mention $250/month for a workaround, your $97 is anchored too low. If 3+ say "under $30 only," audience or value prop needs fixing. Carry interview data into [One-Page Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). |
 | **Before first paid pilot** | What reference customers will sign for given the research weight. | Paid pilots usually settle at 30-50% of eventual list price plus a case-study clause. If the smoke test was $97, a $49-$67 pilot is reasonable - the smoke-test number is the ceiling you tested at, not the floor a real customer will commit to. |
 
-One thing the smoke-test price does NOT tell you: whether the price point is sustainable at scale. A $97 founding-member rate that 20 people pay doesn't prove a $97/month subscription works once you're paying for support, infrastructure, and development out of recurring revenue. That's a post-launch question, not a pre-build one. For now, the smoke test proves one thing: at $97, strangers will click. That's enough to advance to interviews.
+One thing the smoke-test price does NOT tell you: whether the price point is sustainable at scale. A $97 founding-member rate that 20 people pay doesn't prove a $97/month subscription works once you're paying for support, infrastructure, and development out of recurring revenue. That's a post-launch question, not a pre-build one.
+
+An email signup costs the visitor nothing; a Stripe click costs them the moment of typing a card number. That is the only honest demand signal a pre-product page can produce.
 
 ---
 

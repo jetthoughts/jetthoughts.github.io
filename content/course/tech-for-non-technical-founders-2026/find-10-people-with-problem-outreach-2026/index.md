@@ -45,6 +45,8 @@ A consumer-app founder we spoke with started where most non-technical founders s
 
 Her hypothesis was the same and her work hours were the same. What she changed was where she went looking. The DM-the-network move - 60 messages to people who knew her but not necessarily the problem - is the default first-time-founder move, and it usually books 2-3 polite calls with old colleagues. The Reddit move - reading where strangers were already complaining about the exact thing she had hypothesised, then writing back to those specific complainers about the post she had just read - took her half a day and produced a calendar.
 
+> **Calendar reality for the 10-interview round.** A full-time founder with daytime availability typically books 10 interviews across 2-4 calendar weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically takes 6-8 calendar weeks for the full round: send messages over 1-2 weeks, wait for replies to mature across a 2nd week, schedule and run the calls in the 3rd-6th week, score within 5 minutes of each call. Plan your calendar around the 6-8 week version, not the optimistic 2-3 week version. Module 3 cannot start until 10 transcripts are scored.
+
 The journey, top to bottom:
 
 1. **Translate the hypothesis into an ICP map** - paste your three sentences and two competitor URLs into Claude or ChatGPT. Ask for the ICP profile and the exact subreddits, Slack/Discord channels, and LinkedIn search strings where these people post.
@@ -89,9 +91,11 @@ Two competitors or adjacent products serving a similar customer:
 
 Return:
 1. A sharper ICP profile (role, industry, company size, the moment in their week when the pain happens, one quote in their language).
-2. 8 subreddits, Slack/Discord communities, and forums where this person posts. For each, give one specific recent thread URL so I can verify the community is alive and on-topic.
+2. 8 subreddits, Slack/Discord communities, and forums where this person posts. For each, give the community's topic focus, typical post frequency (e.g., "20 new posts/day" or "2-3 per week"), and 2-3 short keyword phrases that come up most often. Do NOT generate URLs - you cannot browse the web. Sam will verify the community herself with these inputs.
 3. 5 Google + LinkedIn search strings I can paste in today to find named people complaining about this problem (use `site:`, quotes, and `intext:` where helpful).
 4. 5 second-degree adjacent search terms I might miss (workarounds they use, related complaints, tool names they'd mention while frustrated).
+
+If you cannot describe a real community for any item, respond with "NOT FOUND - [item]" rather than guessing. A NOT FOUND response is more useful than a fabricated community.
 ```
 
 > No competitor URLs yet? If you ran the [naive Claude/ChatGPT prompt in Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with the follow-up "name 3-5 competitors," you already have them. Otherwise: Google your problem in plain words plus `tool` or `software`, grab the top 2 results that aren't blog posts. The AI cares about positioning, not perfect picks.
@@ -118,7 +122,7 @@ When you're done you should have 30 real sentences and 30 named people. Don't pa
 
 **Where to search (the AI gave you specifics; here are the common starting points):**
 
-- **Reddit** - subreddits in your vertical. Sort by Top → Past Month. The 1% willing to complain in public are usually willing to take a 20-minute call. Free tool [gummysearch.com](https://gummysearch.com) lets you watch multiple subreddits for keyword matches if you'd rather not click around.
+- **Reddit** - subreddits in your vertical. Sort by Top → Past Month. The 1% willing to complain in public are usually willing to take a 20-minute call. Free tool [Keyworddit](https://keyworddit.com) surfaces the keywords a given subreddit is currently using, so you can search those phrases back into Reddit and find the named complainers. If Keyworddit is down or off-topic for your vertical, use Reddit's own search at `reddit.com/search/?q=` directly - less compact, same data.
 - **LinkedIn** - paste the problem in quotes into search, filter to Posts → Past Week.
 - **Industry Slack and Discord** - Indie Hackers, Lovable, No Code Founders, and the vertical-specific communities your AI map named. Public channels where the daily question is "has anyone else hit X."
 - **G2 and Capterra reviews** - pull every 2-star and 3-star review of the closest competitor. Pain a stranger typed for free, organized by feature.
@@ -129,7 +133,7 @@ When you're done you should have 30 real sentences and 30 named people. Don't pa
 
 One Reddit rule: don't blast a launch post on day one. Read the sub for a week, leave three real comments, then post a research question. The [self-promotion on Reddit guide](/blog/self-promote-on-reddit-without-getting-banned-promotion/) covers the karma floor and the unwritten rules.
 
-> **Optional: monitoring tools that cut the manual reading load.** [GummySearch](https://gummysearch.com) ($29/mo, 14-day free trial) sets keyword alerts across multiple subreddits - configure once, then return to a pre-filtered hit list instead of scrolling. [Common Room](https://www.commonroom.io/) (free tier exists) surfaces where your ICP hangs out across Reddit + Slack + Discord + GitHub - useful when your Step 1 AI proposed communities you've never heard of. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs - best for catching new threads later, when your hypothesis evolves and you need fresh evidence. **What this is NOT**: a substitute for reading the threads yourself. The 30 verbatim sentences in their own language is the artifact you carry into your Mom Test questions (Ch 2.1); tools surface the threads faster, you still read them.
+> **Optional: monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (free, no signup) surfaces the high-frequency keywords inside any subreddit - paste the subreddit name, get back the language people are actually using so you can search those phrases back to find named complainers. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs - best for catching new threads later, when your hypothesis evolves and you need fresh evidence. [Common Room](https://www.commonroom.io/) (free tier exists) surfaces where your ICP hangs out across Reddit + Slack + Discord + GitHub - useful when your Step 1 AI proposed communities you've never heard of. **What this is NOT**: a substitute for reading the threads yourself. The 30 verbatim sentences in their own language is the artifact you carry into your Mom Test questions (Ch 2.1); tools surface the threads faster, you still read them.
 
 Write down 30 specific sentences in their language with the username next to each. That bank is your raw material when you write the cold messages. Don't paraphrase.
 
@@ -148,11 +152,11 @@ Aim for 30 hand-picked people in one focused sitting.
 
 **This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies at **3-5× the rate** of a list of 30 strangers a tool exported for you. Get this step right and the rest of the chapter shrinks.
 
-If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (50 contacts/month, no credit card) lets you filter on role + industry + company size and export the rest. Treat it as backfill, not the source - the hand-picked names always perform better.
+If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based: roughly 100 email credits + 10 export credits per month, no credit card) lets you filter on role + industry + company size and export the rest. Treat it as backfill, not the source - the hand-picked names always perform better.
 
-> **Save the Apollo filter and the 50 exported contacts to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) (where the same six dimensions are listed). Rebuilding the filter from scratch in Module 5 costs you an hour and risks drift; the saved tab is the one carry-forward artifact this Apollo step produces beyond the 10 interviews.
+> **Save the Apollo filter and whatever contacts your monthly export credits cover (roughly 10 per month on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) (where the same six dimensions are listed). Rebuilding the filter from scratch in Module 5 costs you an hour and risks drift; the saved tab is the one carry-forward artifact this Apollo step produces beyond the 10 interviews.
 
-> **Optional: the full AI-assisted Step 3 workflow.** If you ran the Step-1 AI prompt and the Step-2 monitoring tools above, you can compress this whole section: (1) paste your Step-1 ICP filter (role + company size + industry) into Apollo's free tier - exports 50 named contacts in one click; (2) cross-reference 10-15 of those Apollo contacts against the Reddit usernames you saved in Step 2 - these warm-cold targets fit the ICP filter AND have already complained publicly about the problem (highest reply rate of any cold list you can build); (3) scrub the final list for deliverability with [NeverBounce](https://neverbounce.com) ($8 for 1K verifications) before sending. Apollo's free tier (50 contacts/month, no credit card) + NeverBounce verification keeps the cost of this assisted path inside the same single-digit-dollar band as the manual one.
+> **Optional: the full AI-assisted Step 3 workflow.** If you ran the Step-1 AI prompt and the Step-2 monitoring tools above, you can compress this whole section: (1) paste your Step-1 ICP filter (role + company size + industry) into Apollo's free tier - the free monthly export credits (roughly 10) get you a small named-contacts batch in one click; (2) cross-reference those Apollo contacts against the Reddit usernames you saved in Step 2 - these warm-cold targets fit the ICP filter AND have already complained publicly about the problem (highest reply rate of any cold list you can build); (3) scrub the final list for deliverability with [NeverBounce](https://neverbounce.com) ($8 for 1K verifications) before sending. Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month, no credit card) + NeverBounce verification keeps the cost of this assisted path inside the same single-digit-dollar band as the manual one.
 
 Filter the final list on six dimensions:
 
@@ -213,13 +217,12 @@ looking into the same problem. Not selling - 20 min so I can ask 5
 questions about how you handle [task] today? Calendar: [NeetoCal link]."
 ```
 
-```text
-Day 3 - bump (recovers 8-12% of non-responders)
-Subject: re: [their workaround]
-"Bumping. 20 minutes, your time. Not pitching - asking how you do [task]
-today and what breaks. 30 founders already - genuinely useful on your end
-too. [NeetoCal]."
-```
+**Day-3 bump message - pick the version that fits your stage:**
+
+- **First-round variant (you have 0-9 interviews done):** "Hi [name] - circling back on the [topic] piece. Running my first 10 conversations on this problem - still learning, would value 25 minutes if you have it."
+- **Experienced variant (you have 10+ interviews done):** "Hi [name] - circling back on the [topic] piece. Already 30+ founders in - the conversations are sharper than I expected; happy to share the pattern if you have 25 min."
+
+Day-3 bump recovers 8-12% of non-responders. Subject line: `re: [their workaround]`.
 
 ```text
 Day 7 - close (recovers 3-5% more)
@@ -312,7 +315,9 @@ Nothing in this chapter teaches the interview technique itself; that's Ch 2.1 (w
 
 If fewer than 7 of 10 calls score ≥ 7, the problem is too weak for this ICP. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow); retry with broader phrasing first. The full kill / iterate / proceed decision lives in [Ch 2.1's scoring section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).
 
-Skip this module and start building, and the typical failure mode is burning months of build time and a five-figure contractor budget before discovering the problem you assumed was real wasn't. The [pre-PMF founder sales rule](/blog/sales-pre-pmf-should-be-done-by-founders/) - you do this yourself, you don't hire it out - is the same logic. Validation is founder work because the signal disappears when an intermediary handles the conversation.
+Skip this module and start building, and the typical failure mode is burning months of build time and a five-figure contractor budget before discovering the problem you assumed was real wasn't. The [pre-PMF founder sales rule](/blog/sales-pre-pmf-should-be-done-by-founders/) - you do this yourself, you don't hire it out - is the same logic.
+
+Validation is founder work because the signal disappears when an intermediary handles the conversation.
 
 ## Further reading
 

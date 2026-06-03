@@ -36,7 +36,7 @@ related_posts: false
 
 Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring is what you do when you hit a specific ceiling signal - not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
 
-The pre-seed B2B SaaS founder who hires engineering before a single paying customer is the rescue call we take most often. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
+Pre-seed founders hiring engineering before a single paying customer is confirmed is the most common build-decision mistake at the idea stage. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
 
 ![A hand-drawn 2-by-2 decision matrix with four quadrants labeled Validate without code, Self-serve build, Fractional CTO bridge, and Hire a team. Each quadrant lists a first action, cost band, and timeline.](decision-matrix.svg)
 
@@ -58,7 +58,7 @@ The 2026 version of the Airbnb test takes one afternoon: a Carrd page with a Str
 
 ![A 3-step illustration of the Airbnb test: Carrd page with Stripe checkout (Step 1), send link to 35 ICP prospects (Step 2), refund non-buyers and build only what you sold (Step 3). A sticky note at the bottom warns: if 0 of 35 click, the problem is real but your pitch is wrong, rewrite the page.](airbnb-test.svg)
 
-The signal you are looking for is small. Two paying buyers from 35 cold outreach hits is enough to flip the build switch. Two refundable deposits beat 200 LinkedIn likes. We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
+The signal you are looking for is small. Two paying buyers from 35 cold outreach hits is enough to flip the build switch. We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
 
 Zero clicks from 35 prospects is brutal in the other direction. The problem might be real (you validated it in [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
 
@@ -87,7 +87,7 @@ Use this path when you have no MVP yet, a single untested hypothesis, and no con
 
 Pick this path when the problem is validated (10+ Mom Test interviews showing past-behavior signal, 2-5 pre-orders or paid pilots), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
 
-This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $20/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
+This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $25/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
 
 ### 3. Fractional CTO bridge ([The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge))
 
@@ -168,6 +168,8 @@ A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-
 | **Pick your next chapter by path.** Path 1 (Validate): [Airbnb test](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/#the-airbnb-test), ship Carrd + Stripe + Notion this week. Path 2 (Self-serve): [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Path 3 (Fractional CTO): [The Fractional CTO Bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). Path 4 (Hire): [Hiring Interview](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#interviews-that-catch-ai-theater) + [SOW guide](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow). | Tomorrow afternoon | Next chapter decided |
 
 **Default verdict: self-serve.** Continue to [Module 4: Build It Yourself](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). The [ceiling-signal monitoring chapter](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to revisit the hire decision. If a ceiling signal has already fired before you start building, the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) covers where to find developers, the Fractional CTO bridge, interviews, and SOW reading.
+
+Two refundable deposits beat 200 LinkedIn likes.
 
 ## Further reading
 

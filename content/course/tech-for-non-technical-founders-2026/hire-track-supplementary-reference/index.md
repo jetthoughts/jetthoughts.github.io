@@ -151,6 +151,8 @@ Most "Fractional CTO" listings on LinkedIn are either career CTOs in transition 
 - **Indie Hackers Fractional channel**: free, slower, founder-to-founder. Best for SaaS micro-startups.
 - **Your investor network**: one email to your lead angel often produces 2 to 4 warm intros within 48 hours.
 
+> **JetThoughts is not a Fractional CTO provider.** We are an engineering services shop (full-team rescues, rebuilds, technical coaching). The platforms above host specialized fractional executives screened on the criteria in this section. This chapter teaches you how to hire one well; we do not sell the role.
+
 **Week 1 onboarding:** Sign the MSA on Day 0. Day 1: share the Validated Problem Statement and one-page brief. Add them to the private GitHub org with `Triage` repo permissions (can review pull requests but cannot merge code) - not `Admin`, not `Write`. Day 3: first 30-minute architecture review. They write one paragraph in a shared Notion doc: "what I would change, what I would leave alone." Day 7: first PR review. Their comments should be in plain English so you understand the trade-off. End of Week 4: ask them the Friday-coaching question. "Should I hire any contractors yet?" If the answer is hand-wavy, you have hired wrong; replace.
 
 ### The Fractional CTO's first 4 weeks (parallel to your Module 5 first-paying-customer push)

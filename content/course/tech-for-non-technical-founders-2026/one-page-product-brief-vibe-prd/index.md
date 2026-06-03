@@ -35,6 +35,8 @@ related_posts: false
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
 
+Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI. In a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed. Everything else came out. That is what a one-page brief does to a build that has drifted - it forces every line to earn its place tomorrow morning.
+
 This chapter walks you through the **Product Brief** - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document). It is a single page that names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building. The five sections below are the same ones Drew Falkman teaches in a 4-week Maven cohort for $1,000; this chapter walks you through the template so you can fill yours in tonight.
 
 ![One-page Vibe PRD template with five labeled sections: the problem, the user and their context, what you're building, success metric, what you're NOT building.](vibe-prd-template-visual.svg)
@@ -94,7 +96,7 @@ What goes in it: 5 to 8 lines naming the things a competent agent or contractor 
 
 Example: *Not in v1: multi-currency support, multi-Stripe-account support, automatic recurring sync, a settings page, a billing dashboard, user roles and permissions, a marketing site beyond the signup page, mobile responsive design beyond "works on a 1024px screen." We will revisit each of these after metric in Section 4 is hit.*
 
-Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, [Cursor](https://cursor.com), and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI; in a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed.
+Common mistake: leaving this section blank because "we'll just say what we want and skip what we don't." Lovable, [Cursor](https://cursor.com), and a hired junior all fill blanks with reasonable defaults, and reasonable defaults stack into a settings page nobody asked for. The same shape produced Sarah's 17 toggles (12 wired to nothing) at the top of this chapter.
 
 ![Side by side bad vs good Vibe PRD. Left: bad brief reads 'Build a CRM.' Right: good brief names the persona, the 60-second context, the one workflow, the one metric, and the no-go list.](good-vs-bad-prd.svg)
 
@@ -156,8 +158,6 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 | **2** | Read the brief aloud to one peer over coffee or a short call. Ask: "If you had to build this in a week using Lovable, what would you build that isn't in my no-go list?" | First answer = your missing no-go item. Add it to Section 5. |
 | **3** | Paste the brief into Lovable, Cursor, or your contractor's kickoff doc. Do NOT edit it for the audience. Same one page goes to everyone. | The agent or contractor starts building Tuesday morning. |
 
-> A Vibe PRD is what's left when you remove everything an AI agent or a hired junior cannot act on by tomorrow morning. Write the five sections tonight and the build starts Tuesday. If the agent asks a question whose answer is in the brief, your brief failed - rewrite that section before the next pass.
-
 The [Vibe PRD Template](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is the artifact for this post. Print it, fill it in one focused sitting, hand it to your AI agent or contractor the next day, and Module 3's checkpoint moves one step closer.
 
 Skipping the brief and going straight into prompting is the most common way a non-technical founder ends up deep into a working MVP they realise they did not actually want - and into the [salvage-or-rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) that follows. One focused sitting on this page tonight is what spares you that detour.
@@ -168,6 +168,8 @@ You now have two validated artifacts: a one-page problem statement (from Chapter
 
 1. **[Chapter 3.2 - Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)** - stress-test Section 3 ("what you're building") by rewriting feature nouns as outcome-shaped job stories. This is the quality gate on the brief you just wrote, not a separate writing exercise.
 2. **[Chapter 4.1 - Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)** - a 5-question decision tree that routes you to one of 4 build paths (validate without code / self-serve / fractional CTO / hire). The default for a non-technical founder is self-serve (Chapter 4.3), but only after the decision gate confirms it's right for YOUR runway and YOUR problem. Chapter 4.1 explicitly requires the outcome-shaped brief from Chapter 3.2 as its input.
+
+A Vibe PRD is what's left when you remove everything an AI agent or a hired junior cannot act on by tomorrow morning.
 
 ## Further reading
 

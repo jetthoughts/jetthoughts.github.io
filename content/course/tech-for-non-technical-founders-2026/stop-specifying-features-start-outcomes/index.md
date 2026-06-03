@@ -125,7 +125,13 @@ Three actions, in order.
 
 > **Module 3 AI critic/simulator block**
 >
-> **No peer available? Use Claude or ChatGPT as the peer.** Paste your full Section 3 + Section 5 (no-go list) into Claude. Prompt: *"Imagine you are a contractor reading this brief to build the product. Based ONLY on Section 3, name 5 things you would build that are NOT in Section 5's no-go list. Be specific - feature names, not categories."* If Claude names 2+ items outside your no-go list, the brief failed quality-check the same as a peer flagging them. Revise Section 3 and re-run. This is the same failure signal a peer would surface, with no calendar coordination needed.
+> **No peer available? Use Claude or ChatGPT as the peer.** Paste your full Section 3 + Section 5 (no-go list) into Claude, then paste this prompt:
+>
+> ```text
+> Imagine you are a contractor reading this brief to build the product. Based ONLY on Section 3, name 5 things you would build that are NOT in Section 5's no-go list. Be specific - feature names, not categories.
+> ```
+>
+> If Claude names 2+ items outside your no-go list, the brief failed quality-check the same as a peer flagging them. Revise Section 3 and re-run. This is the same failure signal a peer would surface, with no calendar coordination needed.
 >
 > **What AI cannot prove or substitute:**
 > - Whether your scope solves the validated problem (only the Module 4 build + real users can)
@@ -133,8 +139,6 @@ Three actions, in order.
 >
 > **The real gate:** a clean peer QA (human or AI) where the answer stays inside your scope AND no-go list.
 
-> **When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.**
-> 
 > The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
 
 ## Artifacts you carry out of Module 3
@@ -145,11 +149,13 @@ After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific do
 |---|---|
 | **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3 Lovable kickoff prompt. The single source of truth Module 4 builds from. |
 | **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (if you route to hire) + Ch 4.3 Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
-| **No-Go list** (5-10 items you explicitly cut from Ch 3.1 Section 4) | Ch 4.3 self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
-| **Audience-of-one fork** (Ch 3.1 Section 6 - who the brief is written for: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
+| **No-Go list** (5-10 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3 self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
+| **Audience-of-one fork** (the audience choice from Ch 3.1: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
 | **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 
 Module 3 closes here. Chapter 4.1 (Choose Your Build Path) is where you decide whether your rewritten brief goes to a self-serve stack or a hired team.
+
+When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.
 
 ## Further reading
 

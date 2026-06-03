@@ -92,7 +92,7 @@ If they say "wait, can you say that again" or "what does X mean," your sentence 
 
 Three or four reads is normal. That is the work.
 
-> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find the 5 most-named pain points among [your candidate ICP - ideal customer profile, the specific person you're building for] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase."*
+> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find the 5 most-named pain points among [your candidate ICP - ideal customer profile, the specific person you're building for] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with 'NOT FOUND - [item]' rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention."*
 >
 > **What to paste for [your candidate ICP]:** the customer role you circled in Step 1 of this sprint (e.g., "solo chiropractors managing insurance claims" not "small businesses"). If you have not yet finished Step 1, do it first - this sidebar runs AFTER Step 1.
 >
@@ -329,6 +329,8 @@ None of these are required. The Mad Libs sentence and a kitchen timer is the mai
 > - Whether the approach is feasible given your actual constraints (only Step 4's Pragmatic lens + a real build can)
 >
 > **The real gates:** Ch 1.2 smoke-test conversion rate + Ch 2.1 Mom Test interview scores.
+
+A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
 
 ## Further reading
 

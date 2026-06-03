@@ -68,6 +68,8 @@ The five-step shape of the test, before we dig into each step:
 
 > **Budget anchor before you start.** Smallest viable smoke-test budget is **$300-$600** (Meta or Reddit cold traffic to 300 visits). LinkedIn is **$1,800+**. The full per-channel table is in the "Buy Cold Traffic on the Right Channel" section below. If $300 is out of reach, skip paid ads and stick to organic - the chapter's $0 path (NeetoSite + Clarity + organic) still produces a real signal, slower.
 
+> **Ad-account setup reality (start Sunday evening, not Monday morning).** Meta Business account verification + ad account creation + payment method review + policy acceptance is a 60-120 minute process for a first-time user, frequently including a 24-48 hour review delay before the account can run ads. If you have never used Meta Ads Manager before, do the account setup Sunday evening so the verification clears by Tuesday. The same applies to Reddit Ads (faster, usually same-day) and LinkedIn Ads (slower, can take 48-72 hours for first-time advertiser verification).
+
 **Before you ship, open these tabs** (most free or low-cost to start):
 
 - [ ] Landing-page builder account (pick one in "Pick your builder" below)
@@ -122,7 +124,11 @@ A 2026+ builder earns a slot here if it meets all five:
 - Mobile-responsive by default (check on your phone before shipping)
 - No platform ads or vendor watermark on the published page
 
-> **Optional: AI deep-research for the competitive headline.** Before you write the headline, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find 5 closest competitors to [my hypothesis]. For each: pricing tier, headline value prop, top 3 customer complaints from G2/Capterra/Trustpilot reviews, and the segment they explicitly do NOT serve."* The "do NOT serve" gap is where your headline wins; most landing pages compete on the same axis as the incumbent (simpler/faster/cheaper) and lose. **What this is NOT**: a conversion-rate predictor. The AI will quote benchmarks ("3-5% is good for SaaS"); those are useless for your specific hypothesis until you have your own cold-traffic number from this chapter.
+> **Optional: AI deep-research for the competitive headline.** Before you write the headline, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find 5 closest competitors to [my hypothesis]. For each: pricing tier, headline value prop, top 3 customer complaints from G2/Capterra/Trustpilot reviews, and the segment they explicitly do NOT serve. If you cannot find a real source for any item, respond with 'NOT FOUND - [item]' rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention."* The "do NOT serve" gap is where your headline wins; most landing pages compete on the same axis as the incumbent (simpler/faster/cheaper) and lose.
+>
+> **Free-tier fallback (no paid subscription).** If you can't pay $20/mo for deep-research mode, paste the same prompt into Claude free (claude.ai) or ChatGPT free (chat.openai.com). The output is less exhaustive (these tools cannot browse the web in real time) but the NOT-FOUND escape valve above will tell you which items it could not verify. Treat free-tier output as a starting list to spot-check on Google, not as the final answer.
+>
+> **What this is NOT**: a conversion-rate predictor. The AI will quote benchmarks ("3-5% is good for SaaS"); those are useless for your specific hypothesis until you have your own cold-traffic number from this chapter.
 
 ### What goes on the page (and what kills it)
 
@@ -317,6 +323,8 @@ If you want to test price intent (not just demand intent), swap the email signup
 If you want a stronger signal than email curiosity, replace the signup with a $1 refundable Stripe charge. The full walkthrough - CTA copy, refund discipline, FTC compliance, the Levels 0 / 1-10 / 50+ tiers - lives in the dedicated companion: **[Fake-Stripe Pre-Sale: The Pieter Levels Pre-Order Smoke Test](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/)**.
 
 Skip both variants on your first run; the email-only smoke test above is the cleanest place to start.
+
+Three hundred cold visitors with a tracked CTA tells you more about your hypothesis than 14 interviews with people who want to be polite to you.
 
 ## Further reading
 

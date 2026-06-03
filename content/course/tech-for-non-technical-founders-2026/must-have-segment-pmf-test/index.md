@@ -41,11 +41,16 @@ She wrote the ad copy on a Friday, launched Monday, and by Wednesday the dashboa
 
 Her instinct was the one every non-technical founder has after the MVP ships: build the audience. The real question is whether the people who already touched the MVP would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic will not fix a product problem; it just routes more users into something they will not return to.
 
+> **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users typically sees one of three patterns on the first survey run:
+> - All "somewhat disappointed" or "not disappointed" → directional KILL. Run more interviews before re-attempting.
+> - 2-3 "very disappointed" out of 6 → directional MAYBE. Almost certainly a sample-size problem, not a product problem; book 5-10 more users.
+> - 4+ "very disappointed" out of 6 → directional YES. Advance to M5.2 with the caveat above.
+>
+> A 25-40% reading at small sample size is not a failure. It is the normal state of a brand-new product with a brand-new founder. The Sean Ellis test is calibrated for ≥ 20 respondents with months of usage; your first-pass run is a forecast, not a verdict. Treat looping back to M2.3 outreach for more user sessions as the default first-pass move, not a setback.
+
 ## The 40% test, in one paragraph
 
 Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite. While he was building the playbook for those three, he kept noticing the same dividing line between products that ignited and products that needed life support. He surveyed every product's existing users with a single load-bearing question: "How would you feel if you could no longer use [product]?" The answer is one of four: very disappointed, somewhat disappointed, not disappointed, no longer use it. If at least 40% of users said "very disappointed," the product was almost always able to grow on outbound and word of mouth alone. Under 40%, growth stalled until the product changed. Ellis explained the cutoff and the survey wording on Lenny Rachitsky's podcast in 2023 ([transcript and replay here](https://www.lennysnewsletter.com/p/the-sean-ellis-test-for-product-market)).
-
-Treat the answer as a stop sign rather than a market-research instrument. Under 40% means the next thing on your calendar should be five user calls, not a Meta Ads brief.
 
 ![Sean Ellis 40% gauge - the threshold that decides whether paid ads will work or burn](sean-ellis-gauge.svg)
 
@@ -55,7 +60,7 @@ You just shipped your first Lovable MVP and 40 people from your beta list poked 
 
 The Twitter threads make it worse. On day 90 after launch, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one and got 56% on a sample of 22.
 
-In our rescue queue this same pattern repeats often enough that we now ask the must-have rate before we ask anything else: founders who burned thousands on paid ads almost always had a must-have rate they had never measured. Some were under 25% overall - genuine "no must-have user" territory. Others had a high rate in one segment and a low rate in another, but their ad spend targeted the wrong half because the high-need segment was harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
+This pattern repeats often enough across early-stage founders we have spoken with that we now ask the must-have rate before we ask anything else: founders who burned thousands on paid ads almost always had a must-have rate they had never measured. Some were under 25% overall - genuine "no must-have user" territory. Others had a high rate in one segment and a low rate in another, but their ad spend targeted the wrong half because the high-need segment was harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
 
 ## How to run the test, end to end
 
@@ -98,7 +103,7 @@ Open Typeform or Tally. Five questions, in this order. Wording matters - changin
 > **Q5.** What is your job title and company size?
 > *(Two short text fields. Drives the segment slice in step 4.)*
 
-That is the survey. Do not add a sixth question. Do not change Q1 to "How disappointed would you be" - the original wording forces the user to pick a side. Founders who tinker with the question consistently report softer numbers because they introduced a hedge.
+That is the survey. Do not add a sixth question. Do not change Q1 to "How disappointed would you be" - the original wording forces the user to pick a side. Tinker with the question and you consistently report softer numbers because you introduced a hedge.
 
 ### Step 3 - Send it
 
@@ -149,6 +154,13 @@ flowchart TD
 
 > *Re-run cadence: re-run while the must-have rate is climbing and after every major release once it holds above 40% for two consecutive runs. If a re-run drops, read the "somewhat disappointed" Q2-Q4 verbatims first - the diagnostic is in there.*
 
+> **Sample-size honesty.** The Sean Ellis 40% threshold is statistically directional at **≥ 10 respondents**, useful at **20+**, and segment-sliceable at **30+**. Under 10 respondents your result is a hypothesis, not a verdict. If you have 6 users say "very disappointed" and 4 say "somewhat disappointed", the 40% threshold says PASS - but with a ±40 percentage-point confidence band around that number, you do not know whether real demand is 20% or 80%. Treat any reading under 10 respondents as **directional only**: use it to prioritize the next outreach batch, not to advance into Module 5.3 with confidence.
+
+> **Sample under 10 respondents (special case):** segment-slice math does not work. Do NOT classify by 25-40% bands. Instead:
+> - **0-2 "very disappointed"**: treat as directional NO. Book more user sessions before re-running.
+> - **3-4 "very disappointed"**: directional MAYBE. Book 5-10 more users, re-run.
+> - **5+ "very disappointed" out of 6**: directional STRONG YES. Advance to M5.2 but caveat your channel decisions - the segment language is hypothesis, not verified.
+
 ## What "under 40%" actually means
 
 Under 40% means you have a product problem, not a marketing problem, and the Q2-Q4 verbatims tell you which one.
@@ -188,6 +200,8 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 | **5** | If above 40% in any segment, move to [Chapter 5.2 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). If below 40% across all segments, book five "very disappointed" user calls and re-read [Chapter 2.1 Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). | Decision made; next chapter unlocked OR product refinement scheduled |
 
 The full survey template (the 5 questions in a Typeform-import-ready format, the per-segment scoring spreadsheet, and the persona-writeup template) ships in [the First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).
+
+Treat the answer as a stop sign rather than a market-research instrument. Under 40% means the next thing on your calendar should be five user calls, not a Meta Ads brief.
 
 ## Further reading
 

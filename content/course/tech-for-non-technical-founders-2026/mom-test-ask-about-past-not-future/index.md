@@ -254,9 +254,9 @@ Before you start writing code, run the 3 pre-orders test: ask 3 of your stronges
 
 The good answer has named industry, dated sample, named workarounds with named failure modes, a quantified cost, a why-now, and a strong-signal count. A peer can argue with it. If your statement has the word "many" or "a lot," cross it out.
 
-> Writing the one-page statement is the validation step. Ten transcripts in a folder don't count - until you've scored them, counted the strong signals, and written down what the pattern says, you have raw material and a hypothesis, not a validated problem.
-
 The [Validated Problem Statement Template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) is the artifact for this section. Print it, fill it in 30 minutes, get 2 signatures, and the problem validation checkpoint is closed.
+
+Writing the one-page statement is the validation step. Ten transcripts in a folder don't count - until you've scored them, counted the strong signals, and written down what the pattern says, you have raw material and a hypothesis, not a validated problem.
 
 ## Further reading
 

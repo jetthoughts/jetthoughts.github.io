@@ -41,7 +41,7 @@ These are the five mistakes that put founders in our rescue queue. You're at the
 4. Rebuilding from scratch when salvage would have closed the gap in eight weeks - the salvage-vs-rebuild scorer keeps you out of unnecessary rewrites.
 5. Shipping an AI feature only to discover the agency was passing $4,800 of OpenAI tokens through the invoice - the AI agency questions chapter catches this on the first discovery call.
 
-Reading this course should lower your odds of being our next rescue client. That is the point.
+Reading this course should keep you out of those five failure modes. That is the point.
 
 > **How this is different from Y Combinator / Lenny / Reforge.** Y Combinator Startup School teaches the "talk to users, prioritize them over features" principle through weekly updates and library lectures. Lenny Rachitsky publishes the deep essays on each phase (validation, PMF, growth, hiring) as a newsletter and reference library. Reforge sells cohort-based courses designed for product managers and growth leaders with 6+ years of experience at scale-stage companies. This course walks a non-technical founder with neither a team nor a built product from a one-sentence hypothesis to a signed paid pilot, on evenings and weekends. Three chapters we have not found systematized in those competitors' catalogues as of May 2026: [Ch 1.3 - Stripe Payment Link as price-hypothesis test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), [Ch 4.1 - four-way build-path decision matrix](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/), and [Ch 5.4 - Design Partner Agreement with deposit math](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) that turns verbal yes-es into paid pilots.
 
@@ -151,4 +151,4 @@ If you're reading this in the middle of a stalled build or a runaway invoice, th
 
 ## Who built this
 
-Built by [JetThoughts](https://jetthoughts.com). Rails-first dev shop, in business since 2005. The course is what we wish every founder had read before the build they later asked us to rescue.
+Built by [JetThoughts](https://jetthoughts.com). Rails-first dev shop, in business since 2005. The course is what we wish every founder had on their desk before the first build decision.

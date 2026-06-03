@@ -36,7 +36,9 @@ related_posts: false
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
 
-Most founders open LinkedIn, get a few crickets, jump to cold email, get more crickets, jump to an Indie Hackers post, collect 12 upvotes from other founders and zero customer replies. Four channels, no commitment - the math is 0 signal anywhere.
+A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
+
+The pattern: four channels, no commitment, and no way to tell which channel had worked because none of them had been run long enough to read.
 
 You ran 10 interviews in [Module 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Your interviewees told you exactly how they find tools like yours. They just did not use the word "channel" when they said it.
 
@@ -44,7 +46,7 @@ This chapter is about listening to what they actually said and committing to one
 
 ## The commitment rule
 
-Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing. Run a batch, call the channel dead because you got 2 replies right away - you just threw away the signal.
+Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing. Run a batch, call the channel dead because you got 2 replies right away, and you just threw away the signal.
 
 | Phase | Activity | Expected signal | Decision checkpoint |
 |------|----------|-----------------|-------------------|
@@ -52,8 +54,6 @@ Stick with one channel long enough to read the signal, not chase the algorithm. 
 | **Reply phase** | Replies arrive, book demos | A handful of demos booked = channel reaches buyer | First real signal the channel works |
 | **Follow-up phase** | Follow-ups + a fresh batch | A paid conversation or two start, reply rate stabilizes | Rate becomes predictable |
 | **Decision phase** | Evaluate all signals | Reply rate >5%? Demos → paid? Right buyer? | If all 3 = no, diagnose script/filter before switching |
-
-A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
 
 The rule is not a ritual. It is the minimum data window that separates "this channel does not work" from "I ran this channel for a few days and panicked."
 
@@ -86,11 +86,11 @@ Score each candidate channel 1-3 on all four dimensions (1 = poor fit, 2 = moder
 
 ## The 4 channels for newbie B2B and B2C
 
-Most founders at this stage are choosing from four options. Here is what each one actually requires:
+At this stage you are choosing from four options. Here is what each one actually requires:
 
 | Channel | Best for | Requires | Red flag |
 |---------|----------|----------|----------|
-| **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (50 emails/mo); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
+| **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (credit-based: ~100 email credits + ~10 export credits/mo); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
 | **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (25 searches/mo free tier) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
 | **Community outreach** | B2B and prosumer where buyers already gather in Slack/Discord/forum | Must be a genuine participant first; one signal-quality post per sprint (not per week); spend 2 weeks commenting before posting product or get banned permanently | Joining this week then immediately selling = permanent ban from the community |
 | **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | A sustained posting cadence; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to the early low-visibility stretch |
@@ -184,7 +184,7 @@ Score each candidate channel 1-3 on the four dimensions (1 = poor fit, 2 = moder
 
 ### Part 3: The Commitment
 
-Write this down. Literally write it. Founders who skip this step are the ones who hop channels at the first cricket.
+Write this down. Literally write it. Skip this step and you are the founder who hops channels at the first cricket.
 
 ```text
 My chosen channel: [channel name]
@@ -224,6 +224,8 @@ The first place to apply this is your personal network in [Chapter 5.3 (The Firs
 > **Module 5, Step 2 of 5** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
 > Next: [5.3 · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
 > Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+
+Pick the channel your interviews already named, commit to it long enough to read the signal, and stop running pilots against your own attention.
 
 ## Further reading
 

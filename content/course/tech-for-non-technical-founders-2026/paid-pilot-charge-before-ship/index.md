@@ -45,9 +45,11 @@ Free pilots feel collaborative because the customer says yes, you build for six 
 
 That's the recurring mechanic. A 20% deposit at kickoff puts the CFO question on Week 0, when there's no project yet for the customer to defend. Conversion in Week 7 becomes paperwork, not negotiation. Skip the deposit and you're back at the Week 8 wall: "this is great" emails Friday, ghost on conversion Monday.
 
-After months of paying an agency, the muscle memory becomes "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable. Reframe: you are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
+After months of paying an agency, the muscle memory becomes "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable. You are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
 
 ![Free pilot vs paid pilot - what skin in the game does](free-vs-paid-pilot.svg)
+
+> **Course terminology: "first paying customer" = signed DPA + cleared deposit.** Year-one contract conversion is a downstream milestone covered in the "Going further" callouts after Module 5 closes. When the course says "first paying customer," it means the customer has signed the one-page DPA AND the Stripe deposit has cleared - real money in your account. A year-one-converted customer is a separate event that happens 6-10 weeks later, after the pilot success criteria are met or missed.
 
 ## The Design Partner Agreement, in one page
 
@@ -81,6 +83,10 @@ The **conversion terms** clause is what the CFO actually approves in week 0. Sta
 
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
+> **What happens AFTER the deposit clears (the pilot is not the contract).** The signed DPA + cleared deposit kicks off a 6-8 week working relationship. Three things happen each Friday: (1) **Demo the one workflow** from the DPA Section 1 scope - the customer watches you click through it, no slides; (2) **Read the success criteria aloud** (DPA Section 4) and ask "are we on track for X by week 6?" - the customer either says yes, says no, or names a blocker; (3) **Write down what is NOT working** in shared Slack or email by Friday 5pm - if you skip this, week-3 frustrations turn into week-6 surprises.
+>
+> Two failure modes to watch: the customer goes quiet by week 4 (re-engage with a written status email naming all 3 success criteria), or the success criteria turn out to be wrong (rewrite them with the customer in week 3, do not wait for week 6). The full Friday-demo discipline is in [The Friday Demo Rule chapter](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) - read that BEFORE the first Friday call.
+
 ## The pricing math
 
 > **From Ch 1.3 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.3](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement, which lengthens the timeline.
@@ -92,11 +98,13 @@ The deposit number is not arbitrary. It is anchored to projected year-one ACV an
 | B2B SaaS (per-seat, 5-10 seats) | $5K-$12K | $500-$3K | The CFO approves the deposit on email. No procurement involved. |
 | B2B SaaS (mid-market, 50-200 seats) | $20K-$80K | $2K-$24K | Above $10K, expect a 1-week procurement review. Plan for it. |
 | B2B Services / consultancy | $10K-$40K | $1K-$6K | Service deposit is normal in the sector. Customer expects to pay. |
-| Rails MVP-as-a-service | $15K-$60K | $1.5K-$6K | This is the JT-rescue band. Founder is buying back control. |
+| Rescue-rebuild engagement (founder inherited a broken codebase from a prior agency) | $15K-$60K | $1.5K-$6K | Founders in this band are rebuilding rather than greenfield - the deposit anchors what they are buying back, not what they are exploring. |
 
 ### The minimum: $500
 
 Below $500, the deposit does not work as a commitment device - the customer can write it off as a Friday-impulse purchase and ghost the same way they would on a free pilot. The point of the deposit is that it lives in next month's accounting cycle, which means it gets justified.
+
+> **When 10% of year-one ACV is below $300:** the $500 floor stops working as a commitment device for low-ACV B2B SaaS. In that case, charge the **first month's revenue upfront as the deposit** instead. Example: a $97/mo hypothesis → $97 month-1 upfront, credited toward the year-one contract on conversion. For a $29/mo hypothesis the upfront is the first quarter ($87) for the same reason. The structural rule (deposit must be enough to require a CFO check, not a personal credit card) only works when the absolute number triggers internal-approval friction; for low-ACV B2B that threshold is the first month or quarter, not a multiple of monthly price.
 
 ### The maximum without procurement review: typically $10K
 
@@ -140,7 +148,7 @@ If you do want to wire the payment into a Rails app for record-keeping later, th
 
 ## The conversation script
 
-You have a warm lead from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." Most founders soften here. The 15-second script that does not soften:
+You have a warm lead from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
 
 > "Glad it resonates. Quick word on how I am setting up pilots - I am running them as paid design partnerships, so the customer has skin in the game and I have a real signal. The deposit is [$500-$6K], credited toward year one on conversion. Refunded in full if I cannot deliver on the success criteria. Want me to send the one-pager?"
 
@@ -150,6 +158,11 @@ You have a warm lead from [Chapter 5.3](/course/tech-for-non-technical-founders-
 | **"Can we start free and convert later?"** | Still hedging. Deposit scares them but they're interested. | Reframe: deposit is *year-one ACV prepaid*, not added cost. Clarify: $500 sits in this month's accounting, gains CFO approval. Free pilots lose approval in week 8. |
 | **"Let me think about it"** | Not ready this week. Warm lead turning cold. | Check back once. If no callback, move to next prospect. Hedge → delay → ghost is the pattern. |
 | **"We do not do paid pilots"** | Not in your must-have segment. Wrong buyer profile. | Thank them. Move on. They're not disqualified; they're not your customer yet. |
+| **"Can we do it at $300 instead of $1,200?"** | They are interested but anchoring price down. The deposit IS the commitment device; lowering it kills the function. | "The $1,200 number is what makes this a year-one commitment, not a trial. If we drop to $300 I am back to charging you a one-time consult fee, which is not what either of us wants. Same price, but I can move the kickoff later or split into two tranches if that helps internal approval." Hold the price. Offer flexibility on timing, not amount. |
+| **"Can you do net-30 instead of upfront?"** | Common ask from enterprise buyers; the deposit-before-kickoff rule loses its commitment function on net-30. | "The deposit is structured upfront on purpose - it is the signal that this is a real pilot, not a sales call. I can offer net-15 from invoice date, but the kickoff timer starts when the deposit clears. If net-30 is a hard requirement on your end, the alternative is a paid PoC with a smaller scope I can deliver before invoicing for the full pilot." |
+| **"My legal team needs to review any contract."** | Standard B2B response; the one-page DPA is usually under their threshold. | "The DPA is a one-page mutual document, not a long contract. Send it to your legal contact today; if they want changes I will turn them within 48 hours. Most legal teams approve a one-page DPA in 2-3 business days. While we wait I can send you the kickoff prep doc so we can start immediately when legal clears." |
+| **"What if you cannot deliver by week 6?"** | They are testing your refund promise without saying so directly. | "If I do not hit two of the three success criteria you and I write into the DPA, you get a 100% refund within 14 days and we walk - no negotiation. The DPA names this in section 5. Want me to walk you through how the success criteria get written so you are comfortable they are measurable?" |
+| **"Can I get exclusivity in my vertical?"** | Their commitment is real but they want defensible value. | "I cannot offer category exclusivity at the pilot stage - I do not have enough signal yet to know what the right exclusivity term looks like. What I can do: write into the DPA that you are my first paying customer in [vertical], and that we will revisit category exclusivity at year-one renewal once we both know whether this is working. That gives you the chronology advantage without locking me in before I have learned what to lock to." |
 
 ## When founders should not insist on a paid pilot
 
@@ -174,6 +187,8 @@ The paid pilot is the default, but it has three honest exceptions.
 ## Advanced (optional sidebar)
 
 Founders who have closed 2-3 paid pilots and want to layer on contract rigor can read the [Common Paper Design Partner Agreement template](https://commonpaper.com/standards/design-partner-agreement/) (a vetted v2 LOI used by hundreds of YC companies), [SaaStr's "Should we charge for pilots"](https://www.saastr.com/should-you-charge-for-a-pilot/) (Jason Lemkin's thirty-second answer is yes, always), and Ash Rust's ["Startup Sales: How to Get Pilot Customers to Pay"](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) for the conversation tactics. The one-page DPA in this chapter is enough through your first 10 pilots. The advanced versions matter once you start hearing the words "procurement" and "MSA" in pilot conversations.
+
+A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 becomes paperwork, not negotiation.
 
 ---
 

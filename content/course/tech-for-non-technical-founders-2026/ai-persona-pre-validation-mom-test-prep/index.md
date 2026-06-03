@@ -94,6 +94,8 @@ Here's the persona setup prompt.
 >
 > If any blank above is empty, the Ch 1.1 hypothesis is not specific enough. Go back and tighten before rehearsing - rehearsing against a vague persona produces vague answers.
 
+> **For the 3 fields that aren't in your hypothesis ([FREQUENCY], [DURATION], [REASON]):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3 interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise those 3 fields BETWEEN interview 1 and interview 2 and re-run any Prompt 2-5 you want to recalibrate. The guess is the entry ticket; the revision is the discipline.
+
 ### Prompt 1 - Persona Setup
 
 ```text
@@ -226,6 +228,8 @@ One constraint worth naming: the rehearsal only surfaces signal that's already i
 > - Whether the problem is real (only 10 Mom Test interviews can falsify the hypothesis)
 >
 > **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 recruitment).
+
+The rehearsal does not validate the hypothesis. It validates that your questions are ready to validate the hypothesis. Skip it and you burn real interview slots on questions that fail in minute one.
 
 ## Further reading
 

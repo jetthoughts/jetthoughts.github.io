@@ -109,6 +109,8 @@ What the user sees after the core action succeeds. A confirmation message, a sum
 
 > **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans start at $25/month (Pro)** and are only worth it later if you decide to upgrade for higher message volume - not required for this chapter.
 
+> **If you hit Lovable's free-tier daily cap (5 messages):** save your work-in-progress (Lovable auto-saves to your account, but copy the prompt + the current screen output to a note), come back tomorrow when the cap resets, OR upgrade to $25/mo Pro if you want to ship in one focused session. The 3-screen prototype rarely needs more than 10 total messages once your prompt is well-formed - the cap usually bites only on poorly-scoped first attempts.
+
 Open [Lovable](https://lovable.dev), create a new project, and paste the following. Replace all `[PLACEHOLDERS]` with your specific problem and solution.
 
 ---
@@ -329,7 +331,7 @@ The trap to avoid: doing 2-3 iteration rounds when the matrix says STOP. Module 
 
 ---
 
-The artifacts from this chapter (pass/fail log + vocabulary) plus the validated problem statement from Ch 2.1 synthesis are everything Module 3 needs. The brief goes into [Module 4's fresh Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Nothing from the throwaway prototype carries forward except what you learned.
+The artifacts from this chapter (pass/fail log + vocabulary) plus the validated problem statement from Ch 2.1 synthesis are everything Module 3 needs. The brief goes into [Module 4's fresh Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/).
 
 ## What to do next
 
@@ -338,6 +340,8 @@ The artifacts from this chapter (pass/fail log + vocabulary) plus the validated 
 | **1** | Open Lovable and run the persona-setup prompt with your 3 ICP variants. Aim for a navigable 3-screen prototype within your first ~10 Lovable exchanges; stop at 3 screens (a 4th is the prototype turning into the MVP). | Throwaway 3-screen prototype with link |
 | **2** | Book 5 silent-observation sessions with interviewees who scored 7+ on the Mom Test. Send the prototype link 10 minutes before each call. | 5 sessions on the calendar |
 | **3** | Tally the pass count from 5 sessions. Copy the exact "describe in one sentence" answers into a doc - those words go into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) verbatim. | Pass/fail count + verbatim vocabulary |
+
+Nothing from the throwaway prototype carries forward except what you learned.
 
 ## Further Reading
 

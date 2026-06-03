@@ -35,7 +35,7 @@ related_posts: false
 >
 > **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
 
-> **$0 outbound stack.** Apollo's free tier (50 credits/mo) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($37) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
+> **$0 outbound stack.** Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($39 Base plan) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time. The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script. The one difference is that those Module 2 interviewees are warm targets - they already spoke with you about their pain, so your first line can reference that conversation directly instead of finding an external hook.
 
@@ -80,6 +80,13 @@ The five tools and their 2026 pricing:
 
 You can ship the entire pipeline for under $100/month if you use Apollo's free tier and skip Sales Navigator. The trade-off: Sales Navigator's filters are richer for enterprise buyer profiles (especially for filtering on "joined company in last 90 days" or "recent leadership change"), and Apollo's free tier has limited credits. If your buyer is a 50-200 person company contact in a specific industry, Apollo free tier is enough. If your buyer is a recent VP hire at a 500-2,000 person company, Sales Navigator pays for itself in week 1.
 
+> **Pre-flight: warm your sending domain BEFORE batch 1.** A brand-new sending domain (e.g., `yourcompany.com` registered last week, no email history) will land in spam on batch 1 even with a perfect ICP list and a sharp script. The fix is either:
+>
+> 1. **Use LinkedIn DM for batch 1.** No domain warmup required. Sales Navigator + 30 personalized DMs gets the same reach as cold email for a B2B founder, and the messages reliably deliver.
+> 2. **OR warm the domain for 2-3 weeks first.** Use a tool like [Mailwarm](https://mailwarm.com) or [Smartlead's warmup](https://smartlead.ai) (the same tools mentioned in this chapter's $0 stack section) to send 5-10 low-volume reply-conversation emails per day to seed positive sender reputation. After 2-3 weeks of warmup, send batch 1 from the same domain.
+>
+> Skip this step and the &lt;5% reply-rate diagnostic below tells you "domain rep is dead" - because the domain never had reputation in the first place. The mechanical cause of your 0 replies is the domain, not the ICP filter or the script.
+
 ### Volume targets and what to expect
 
 Running outbound long enough to read the funnel, 100-200 outreach contacts produces 5-10 paying customers. The funnel at each stage:
@@ -105,6 +112,8 @@ Pull 100-150 raw rows. Strip three categories before sending:
 - Anyone whose company you have a competing product alignment with (you sell to their competitor). A B2B services founder who came to us in March 2026 lost a great lead this way and had to wait two quarters for the lead's company to pivot before reaching out again.
 
 You should be left with 30-50 clean names. Hold the bottom 20 for a later batch and send the top 30 in the first batch.
+
+> **Apollo free-tier reality.** Apollo's free tier is credit-based (~100 email credits + ~10 EXPORT credits per month). The "pull 100-150 raw rows" instruction is achievable on the free tier only if you spread it across 10+ months OR use LinkedIn DM for batch 1 and reserve Apollo exports for batch 2+. Recommended sequence for free-tier founders: (1) build batch 1 from your existing LinkedIn 1st-degree connections + Sales Navigator trial (free for 1 month, no Apollo needed); (2) start Apollo on month 2 with the credits dripping in over time; (3) upgrade to Apollo Pro ($49/mo) only when you have a working reply-rate signal that justifies the spend.
 
 ### Personalize: 60-90 seconds per name, not 10 minutes
 
@@ -180,6 +189,8 @@ The 30-message batch is not a one-time event. Run fresh 30-message batches until
 
 ### What "no reply" actually means
 
+> **First-batch reality before the diagnostic.** If your first 30-message batch returns 0-1 replies, your first reaction will be "the product is bad" or "my message is generic." Both of those CAN be true, but the more common cause for a brand-new founder with a new sending domain is mechanical: the messages did not deliver, or the domain has no warmup history yet, or the personalization felt fake despite being real. **A 0-1 reply rate on batch 1 is the median outcome for first-time cold senders, not a failure signal.** Walk the 3-item diagnostic below before you change the message, the price, or the product.
+
 A 30-message batch with zero replies is rare and almost always indicates a filter problem, not a script problem. Check three things:
 
 1. **Did the messages deliver?** If you are using cold email (vs LinkedIn DM), check your sending tool's bounce rate. Above 10% bounce means your list is dirty and your domain reputation is suffering. Pause sending and re-warm the inbox before continuing.
@@ -231,6 +242,8 @@ You've completed the core 6-module course. Continuation chapters apply once you'
 | **Product touches AI in production** | [Agency AI Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/), [AI Token Bill](/course/tech-for-non-technical-founders-2026/ai-token-bill-dev-shop-pass-through-cost/), [Slopsquatting](/course/tech-for-non-technical-founders-2026/slopsquatting-ai-supply-chain-attack/) - AI-era hygiene |
 
 The course graduates here. Return to the [course landing page](/course/tech-for-non-technical-founders-2026/) when you're ready to retake it for a new project.
+
+Module 5 closes with a deposit in your Stripe account. Everything from here is keeping the build honest while you ship to customer 11.
 
 ## Further reading
 
