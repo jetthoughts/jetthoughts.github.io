@@ -35,11 +35,7 @@ related_posts: false
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 recruitment. The scoring rubric and synthesis template in this chapter become your reference card once you have transcripts in hand.
 
-> **This chapter is read in two passes.**
-> - **Pass 1 (now):** the 5-question technique, the emotional-language flags, the interview flow, and a draft question list. Stops at "What to do tomorrow."
-> - **Pass 2 (later, after Ch 2.3 interviews):** the Synthesis section near the bottom. Bookmark the anchor [#synthesis-write-down-what-you-heard-decide-whats-next](#synthesis-write-down-what-you-heard-decide-whats-next) now; you will return here with 10 transcripts to score and write the one-page validated problem statement that Module 3 consumes.
->
-> Reading the Synthesis section now is fine for a preview, but you cannot complete it without transcripts in hand. The loop-back is intentional, not a discontinuity.
+> If you do not have interview transcripts yet, read straight through and skip the Synthesis section at the bottom - you will return for it after Ch 2.3.
 
 Eleven interviews, nine "yes, I would absolutely use this," and a $49/month launch the following Monday that closed its first week with three signups and two churns by day 14. The ed-tech founder who walked us through that timeline in her rescue call had asked every question in the hypothetical - "would you pay for this?" - and every answer was the polite shape the hypothetical produces. Eleven friendly conversations, zero useful data.
 

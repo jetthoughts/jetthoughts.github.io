@@ -78,7 +78,7 @@ Synthesis of every rule scattered across Module 4 and the supplementary referenc
 5. **Do NOT iterate the Ch 2.4 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
 6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason rescued founders cannot retrieve their source.
 7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.4 Signal 4).
-8. **Stripe webhook handler must be idempotent.** Check `WHERE event_id = $1 AND processed = true` before re-running update logic. Stripe retries; the second hit must not double-charge. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
+8. **Stripe webhook handler must be idempotent.** Idempotent means "safe to run twice without breaking anything" - Stripe sometimes sends the same payment event more than once, and your handler must not double-charge or double-activate. Check `WHERE event_id = $1 AND processed = true` before re-running the update. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
 9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to $25/mo Pro only when build velocity demands it.
 10. **Ship before scope creep, then a short stabilization phase.** Build the smallest end-to-end thing, then a stabilization phase before paid-pilot conversations. Sits inside the multi-month journey to first paying customer.
 11. **Monthly Ch 4.4 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
@@ -205,7 +205,11 @@ Create a Supabase project on the free tier. Define your three or four core table
 
 In Lovable, install the Supabase integration. Lovable will add the Supabase JS client and store the keys for you. Wire your signup screen to `supabase.auth.signUp()` and your data screens to `supabase.from('clients').select()`. The phase demo: your spouse signs up via the staging URL, you watch a row appear in the Supabase console in real time.
 
-> **Self-test your RLS policy before going live.** Enabling RLS (Rule 7) is necessary but not sufficient - a wrong-permissive policy still ships the cross-tenant leak. In Supabase's SQL Editor (Dashboard -> SQL Editor), paste this query, replacing `<table>` with your main user-data table (e.g., `coaches`, `clients`, `check_ins`):
+> **Self-test your RLS policy before going live (two paths).**
+>
+> *No-code path (default for Sam).* In Claude or ChatGPT, paste: *"Audit my Supabase RLS policy. Here is my schema: [paste your table definitions from Supabase Table Editor]. Here is my current RLS policy: [paste from Authentication -> Policies]. Tell me whether a logged-in user with a fake user-id can read rows that belong to other users. If yes, give me the exact policy SQL to fix it."* Paste the AI's suggested policy into Supabase Authentication -> Policies.
+>
+> *SQL path (only if you are comfortable writing SQL).* In Supabase Dashboard -> SQL Editor, paste the test below, replacing `<table>` with your main user-data table. The pretend user-id `999` has no real rows; if the query returns any, your policy has a hole.
 >
 > ```sql
 > SET ROLE authenticated;
@@ -214,7 +218,7 @@ In Lovable, install the Supabase integration. Lovable will add the Supabase JS c
 > RESET ROLE;
 > ```
 >
-> If this returns ANY rows, your RLS policy has a hole - the `authenticated` role can read rows it should not own (the fake user-id `999` has no real rows in your table). The query should return ZERO rows. If you get rows back, your policy is missing a `USING (auth.uid() = user_id)` clause or equivalent. Fix the policy before any real user touches the URL.
+> Zero rows back = policy works. Any rows back = the policy is missing a `USING (auth.uid() = user_id)` clause or equivalent. Fix before any real user touches the URL.
 
 > **End-of-Phase-2 micro-fail signal.** Before you build Stripe in Phase 3, hand the staging URL to your spouse OR one of your Ch 2.3 Mom Test interviewees. Give zero coaching. Watch them try to sign up and reach the core action button (logging a check-in, exporting the CSV, whatever your one-page brief named as the workflow). If 2+ test users stall on screens 1-2, the workflow shape is wrong - pivot back to [Ch 3.2 outcome rewrite](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe. Building a payment wall on top of a workflow nobody can navigate just adds friction to a broken loop.
 

@@ -93,6 +93,8 @@ Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmati
 
 The deposit number is not arbitrary. It is anchored to projected year-one ACV and to what a typical CFO will sign without a procurement review. The bands by sector:
 
+> For Sam's first pilot, the per-seat / 5-10 seats row applies. Skip the mid-market row until you have 5+ customers.
+
 | Sector | Year-1 ACV | Pilot fee (10-30%) | Pilot fee notes |
 |---|---|---|---|
 | B2B SaaS (per-seat, 5-10 seats) | $5K-$12K | $500-$3K | The CFO approves the deposit on email. No procurement involved. |
@@ -158,6 +160,13 @@ You have a warm lead from [Chapter 5.3](/course/tech-for-non-technical-founders-
 | **"Can we start free and convert later?"** | Still hedging. Deposit scares them but they're interested. | Reframe: deposit is *year-one ACV prepaid*, not added cost. Clarify: $500 sits in this month's accounting, gains CFO approval. Free pilots lose approval in week 8. |
 | **"Let me think about it"** | Not ready this week. Warm lead turning cold. | Check back once. If no callback, move to next prospect. Hedge → delay → ghost is the pattern. |
 | **"We do not do paid pilots"** | Not in your must-have segment. Wrong buyer profile. | Thank them. Move on. They're not disqualified; they're not your customer yet. |
+
+### Advanced objections (after customer #5)
+
+The five responses below show up once you start talking to enterprise buyers or repeat prospects. For the first 4-5 pilots, the table above covers what you will hear.
+
+| Customer response | What it means | Next action |
+|---|---|---|
 | **"Can we do it at $300 instead of $1,200?"** | They are interested but anchoring price down. The deposit IS the commitment device; lowering it kills the function. | "The $1,200 number is what makes this a year-one commitment, not a trial. If we drop to $300 I am back to charging you a one-time consult fee, which is not what either of us wants. Same price, but I can move the kickoff later or split into two tranches if that helps internal approval." Hold the price. Offer flexibility on timing, not amount. |
 | **"Can you do net-30 instead of upfront?"** | Common ask from enterprise buyers; the deposit-before-kickoff rule loses its commitment function on net-30. | "The deposit is structured upfront on purpose - it is the signal that this is a real pilot, not a sales call. I can offer net-15 from invoice date, but the kickoff timer starts when the deposit clears. If net-30 is a hard requirement on your end, the alternative is a paid PoC with a smaller scope I can deliver before invoicing for the full pilot." |
 | **"My legal team needs to review any contract."** | Standard B2B response; the one-page DPA is usually under their threshold. | "The DPA is a one-page mutual document, not a long contract. Send it to your legal contact today; if they want changes I will turn them within 48 hours. Most legal teams approve a one-page DPA in 2-3 business days. While we wait I can send you the kickoff prep doc so we can start immediately when legal clears." |

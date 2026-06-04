@@ -213,6 +213,8 @@ Below 300 the sample is too small to distinguish 2% from 5%. With 300 visits a 5
 
 ### Budget by channel (your real number depends on CPC)
 
+> **Default for a $20K-savings, no-cofounder founder: the $0 organic path.** Use Reddit comment outreach + LinkedIn DMs + a free landing page (NeetoSite + Clarity), and run the smoke test slower. The table below is a menu of paid options if you have budget to spare; it is NOT a floor.
+
 The dollar cost of 300 visits depends entirely on channel CPC, with a wide spread - a single anchor like "just spend $X" mis-leads founders running B2B campaigns. Plan from this table, then add ~20% slack for creative-iteration spend:
 
 | Channel | When to use | 2026 CPC | Budget for 300 visits |

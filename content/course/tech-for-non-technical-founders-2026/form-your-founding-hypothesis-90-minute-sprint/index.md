@@ -279,70 +279,17 @@ That is the point. A wrong hypothesis killed in five interviews is the cheapest 
 
 Refuse to write the sentence because "we don't know enough yet" and you'll spend ten times longer learning the same thing through anecdote.
 
-## Advanced: AI tools for the sprint
-
-The six-step compressed sprint above is the simplest version that works. Once you've run it once and want to layer on more structure, read these in order of complexity:
-
-| Framework | When to use | What it adds |
-|---|---|---|
-| **Lean Inception Product Vision** (Geoffrey Moore) | Co-founder + want a shared written artifact | One-paragraph template that is the spiritual ancestor of the Mad Libs sentence |
-| **JTBD Hypothesis Canvas** (Jim Kalbach) | Already have a working MVP, picking which segment to focus on | Breaks the customer/problem/approach blanks into five sub-questions each |
-| **Value Proposition Canvas** (Strategyzer) | Product-marketing stage, after the hypothesis is validated | Two-circle diagram pairing customer pains/gains against your product's pain relievers/gain creators |
-| **Lean Canvas** (Ash Maurya) | Have product-market fit signal, planning the path to first revenue | One-page business-model canvas covering nine boxes (business model template) |
-
-### AI tools that slot into specific sprint steps
-
-Three tools you can pay for (or use free) in 2026 add research and structure to specific steps in the sprint. Use them with or without a co-founder.
-
-**[WorthBuild](https://worthbuild.io) - use at Step 3 and Step 6.** You paste your hypothesis sentence (or just the customer + problem pair from Step 1) and it returns a validation report in about two minutes: Google Trends data, Reddit and Hacker News discussion volume, competitor traffic estimates, and matches against funding databases. Pricing is pay-per-report rather than a subscription.
-
-Two specific uses in this sprint:
-
-1. **End of Step 3 (Candidate Approaches).** Run one report per candidate approach. The candidate with the highest Discovery Hub signal - the most active public discussion on Reddit and HN - is the one with the cheapest interview-recruit pool for Module 3. Use that as a tiebreaker if the four-lens scoring in Step 4 is too close to call.
-2. **End of Step 6 (Test Design).** The Discovery Hub lists real Reddit and HN threads where people are already discussing your problem. Save 5 of those threads as interview-recruit leads before you start Module 2 - it cuts your outreach time roughly in half.
-
-WorthBuild's free side also has a Market Size Calculator, CAC, LTV, and Runway calculator. Use those during Step 4 (Money lens) without paying for the full report.
-
-**[Validator AI](https://validatorai.com) - use at Step 4 (Magic Lenses).** You have a 10-15 minute voice chat with "Val," its conversational advisor. Val asks the Customer, Pragmatic, Growth, and Money questions in turn, scores your answers 1-5, pushes back on weak ones, and emails you a follow-up summary. Free tier available; over 300,000 founders have run it. Useful even when you have a co-founder doing the sprint with you - the 1-5 scores give the human debate something to anchor against.
-
-**The naive alternative: a single Claude or ChatGPT prompt.** If you do not want a new tool, paste this at Step 4:
-
-> Here is my Founding Hypothesis: [sentence]. Score it 1-5 on each of the Customer, Pragmatic, Growth, and Money lenses. For each lens, name the single biggest risk and the one piece of evidence that would change my score.
-
-You get a written four-lens debate in 30 seconds at zero cost. Less probing than Val's voice call, but enough for the first pass.
-
-> **Also worth a 30-second follow-up:** ask the same model `Name 3-5 named competitors or adjacent tools serving the same customer. Give me a URL for each.` You'll reuse those URLs in [Chapter 2.3's AI ICP map prompt](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - one less thing to scramble for later.
-
-None of these are required. The Mad Libs sentence and a kitchen timer is the main path.
-
-> **Module 1 AI critic/simulator block**
->
-> **What AI can help with at this stage:**
-> - Deep-research the [customer] and [problem] blanks (Perplexity/Gemini verbatim quotes → hypothesis blanks)
-> - Score your hypothesis on the 4 Magic Lenses (the Claude/GPT prompt in the sidebar above)
-> - Name 3-5 competitors or adjacent tools serving the same customer
-> - Pressure-test assumptions with WorthBuild's Reddit/HN evidence aggregator
->
-> **What AI cannot prove or substitute:**
-> - Whether a real customer will pay (only Ch 1.2's smoke-test landing page with 300+ visits can)
-> - Whether the problem is real (only Ch 2.1's 10 Mom Test interviews can)
-> - Whether the approach is feasible given your actual constraints (only Step 4's Pragmatic lens + a real build can)
->
-> **The real gates:** Ch 1.2 smoke-test conversion rate + Ch 2.1 Mom Test interview scores.
+> **Optional - AI shortcut for Step 4.** If you do not want to run the four-lens score yourself, paste this into Claude or ChatGPT: *"Here is my Founding Hypothesis: [sentence]. Score it 1-5 on each of the Customer, Pragmatic, Growth, and Money lenses. For each lens, name the single biggest risk and the one piece of evidence that would change my score."* You get a written four-lens debate in 30 seconds. The Mad Libs sentence and a kitchen timer is still the main path.
 
 A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
+
+> **What AI can and cannot do here.** AI helps draft the customer/problem blanks (Perplexity or Gemini deep-research), score the hypothesis on the four lenses, and name competitors. AI cannot prove a real customer will pay (that is Ch 1.2's smoke test), cannot tell you whether the problem is real (that is Ch 2.1's interviews), and cannot substitute for the Pragmatic-lens gut-check.
 
 ## Further reading
 
 - Jake Knapp and John Zeratsky, [*Click*](https://www.theclickbook.com/) - the book that introduced the Founding Hypothesis Mad Libs and the Foundation Sprint workshop.
-- [The Foundation Sprint official site](https://www.thefoundationsprint.com/) - the full 2-day workshop format the compressed version above is based on.
-- [Innovation Training's Foundation Sprint guide](https://www.innovationtraining.org/foundation-sprint-workshop-training-guide/) - facilitator-grade walkthrough of every move in the sprint, useful if you want to run the long version with a team.
-- Lenny Rachitsky, [Introducing the Foundation Sprint](https://www.lennysnewsletter.com/p/introducing-the-foundation-sprint) - Lenny's writeup of how Knapp and Zeratsky landed on the Foundation Sprint format and what early teams found useful.
-- Geoffrey Moore via Martin Fowler, [Write the Product Vision](https://martinfowler.com/articles/lean-inception/write-product-vision.html) - the older Lean Inception product-vision template that informs the Mad Libs blanks.
-- Jim Kalbach, [JTBD Canvas 2.0](https://jtbdtoolkit.medium.com/jtbd-canvas-2-0-75cdbb5c4c68) - the structured JTBD worksheet for founders who want to deepen the customer/problem blanks after the sprint.
-- Strategyzer, [The Value Proposition Canvas](https://www.strategyzer.com/library/the-value-proposition-canvas) - the pains-and-gains pairing diagram for product-marketing after validation.
-- [WorthBuild AI](https://worthbuild.io) - Reddit and HN evidence aggregator for hypothesis stress-testing.
-- [Validator AI](https://validatorai.com) - voice-chat advisor that runs the four-lens score with you.
+- Lenny Rachitsky, [Introducing the Foundation Sprint](https://www.lennysnewsletter.com/p/introducing-the-foundation-sprint) - short writeup of how the format works.
+- Once you have run the sprint at least once, layered frameworks like Lean Inception, JTBD Canvas, Value Proposition Canvas, and Lean Canvas add useful structure. Skip them on the first pass.
 
 ---
 
