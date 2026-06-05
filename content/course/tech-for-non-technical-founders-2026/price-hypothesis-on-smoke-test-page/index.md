@@ -66,9 +66,13 @@ Testing price before you build has one advantage: there are no switching costs y
 
 All three on the button and in the confirmation copy. Anything less measures curiosity, not price intent.
 
-> **Optional: AI deep-research for the price anchor.** Before you set the price, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"What do [your ICP] currently pay for [your category]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with 'NOT FOUND - [item]' rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention."*
+> **Optional: AI deep-research for the price anchor.** Before you set the price, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier). Triple-click the fenced block to copy:
 >
-> **What to paste for the placeholders:** [your ICP] = your Founding Hypothesis [customer] blank from [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (e.g., "solo chiropractors managing insurance claims"). [your category] = your Founding Hypothesis [problem] blank phrased as a software category (e.g., "insurance-claim resubmission tools"). If your hypothesis sentence is not yet written, run Ch 1.1 first.
+> ```text
+> What do [YOUR ICP] currently pay for [YOUR CATEGORY]? Pull from G2 review price snippets, Reddit pricing threads, Capterra category averages, and competitor pricing pages. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention.
+> ```
+>
+> **What to paste for the placeholders:** [YOUR ICP] = your Founding Hypothesis [customer] blank from your Ch 1.1 `Founding Hypothesis - [date]` Google Doc (e.g., "solo chiropractors managing insurance claims"). [YOUR CATEGORY] = your Founding Hypothesis [problem] blank phrased as a software category (e.g., "insurance-claim resubmission tools"). If your hypothesis sentence is not yet written, run [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) first.
 >
 > **Free-tier fallback (no paid subscription).** If you can't pay $20/mo for deep-research mode, paste the same prompt into Claude free (claude.ai) or ChatGPT free (chat.openai.com). The output is less exhaustive (these tools cannot browse the web in real time) but the NOT-FOUND escape valve above will tell you which items it could not verify. Treat free-tier output as a starting list to spot-check on Google, not as the final answer.
 >

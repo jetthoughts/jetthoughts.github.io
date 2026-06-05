@@ -174,6 +174,8 @@ Sometimes Q1 is wrong - the problem context is too narrow - and a broader framin
 
 The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-interview-script/](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric.
 
+**Save your draft list before moving on.** Open a new Google Doc titled `Mom Test draft - [date]` in the same `Sprint Artifacts` folder as your Founding Hypothesis. Copy the 5 verbatim questions from the artifact, then add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?"). That 5-8 question list is the input Ch 2.2 expects you to sharpen against AI personas.
+
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works. After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.4: Clickable Prototype Validation](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test whether users can navigate a proposed solution) or 10 transcripts that don't (re-frame the ICP and run another 10).
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend - the [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) (the rework and refactor cost of shipping code against an unvalidated problem) is what happens when you ship against a hypothesis nobody actually confirmed.

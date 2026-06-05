@@ -96,9 +96,13 @@ If they say "wait, can you say that again" or "what does X mean," your sentence 
 
 Three or four reads is normal. That is the work.
 
-> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find the 5 most-named pain points among [your candidate ICP - ideal customer profile, the specific person you're building for] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with 'NOT FOUND - [item]' rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention."*
+> **Optional: AI deep-research for the [customer] and [problem] blanks.** Before you fill the template, paste this prompt into Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier). The prompt sits in a fenced block so triple-click selects clean text:
 >
-> **What to paste for [your candidate ICP]:** the customer role you circled in Step 1 of this sprint (e.g., "solo chiropractors managing insurance claims" not "small businesses"). If you have not yet finished Step 1, do it first - this sidebar runs AFTER Step 1.
+> ```text
+> Find the 5 most-named pain points among [YOUR CANDIDATE ICP] in 2024-2026, from Reddit, LinkedIn posts, G2 reviews, and industry podcasts. Cite the exact source for each pain point and quote one verbatim phrase. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention.
+> ```
+>
+> **What to paste for [YOUR CANDIDATE ICP]:** the customer role you circled in Step 1, written as the specific person you're building for (e.g., "solo chiropractors managing insurance claims" not "small businesses"). Do NOT paste the parenthetical gloss - replace the whole placeholder. If you have not yet finished Step 1, do it first - this sidebar runs AFTER Step 1.
 >
 > The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **Save the competitor URLs Claude/Perplexity names; you will reuse them as the two competitor inputs in the Ch 2.3 ICP-map prompt.** **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
 >
@@ -136,6 +140,8 @@ Open four columns in a notebook: Customer, Problem, Advantages, Competition. Wri
 
 Read the column. Circle the one entry you would bet on.
 
+Beside the customer you circled, write three ICP characteristics in plain words: the industry vertical (e.g., "solo chiropractic clinics"), the company size band (e.g., "1-3 staff"), and the specific moment the pain happens (e.g., "Monday morning insurance-claim resubmission"). These three become inputs for Ch 2.1 and Ch 2.2.
+
 ### Step 2: Classic Differentiator
 
 Draw three columns: *fast*, *easy*, *free*. For each, write "more," "less," or "same" against the strongest competition entry from Step 1. Pick the one column you can credibly own.
@@ -168,6 +174,8 @@ After you score, sum each approach. Pick the highest sum. The lens that scored l
 Open the Mad Libs sentence. Fill in the five blanks using the winning approach from Step 4, the customer and problem you circled in Step 1, the competition you scored against in Step 2, and the differentiator from Step 2.
 
 Read it aloud three times. Adjust any blank that sounds vague. Stop when the sentence reads like a thing a friend could repeat back to you.
+
+Now type the final sentence into a Google Doc titled `Founding Hypothesis - [date]` and save it to a folder you will keep open through Modules 2 and 3 (suggest: a `Sprint Artifacts` folder). You will paste this sentence verbatim into Ch 1.2 (landing-page H1), Ch 1.3 (Stripe button price prompt), Ch 2.1 (interview script anchor), Ch 2.2 (persona blanks), and Ch 2.3 (ICP-map prompt). This doc is the single source - if you change the hypothesis later, change it here first.
 
 ### Step 6: Test Design
 
@@ -293,7 +301,13 @@ That is the point. A wrong hypothesis killed in five interviews is the cheapest 
 
 Refuse to write the sentence because "we don't know enough yet" and you'll spend ten times longer learning the same thing through anecdote.
 
-> **Optional - AI shortcut for Step 4.** If you do not want to run the four-lens score yourself, paste this into Claude or ChatGPT: *"Here is my Founding Hypothesis: [sentence]. Score it 1-5 on each of the Customer, Pragmatic, Growth, and Money lenses. For each lens, name the single biggest risk and the one piece of evidence that would change my score."* You get a written four-lens debate in 30 seconds. The Mad Libs sentence and a kitchen timer is still the main path.
+> **Optional - AI shortcut for Step 4.** If you do not want to run the four-lens score yourself, paste this into Claude or ChatGPT:
+>
+> ```text
+> Here is my Founding Hypothesis: [SENTENCE]. Score it 1-5 on each of the Customer, Pragmatic, Growth, and Money lenses. For each lens, name the single biggest risk and the one piece of evidence that would change my score. If any lens lacks enough specifics to score honestly, respond with "INSUFFICIENT DETAIL: [lens]" rather than guessing.
+> ```
+>
+> **What to paste for [SENTENCE]:** the one-sentence hypothesis from your Ch 1.1 `Founding Hypothesis - [date]` doc. You get a written four-lens debate in 30 seconds. The Mad Libs sentence and a kitchen timer is still the main path.
 
 A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
 

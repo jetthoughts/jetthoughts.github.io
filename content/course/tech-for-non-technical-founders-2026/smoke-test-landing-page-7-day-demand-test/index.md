@@ -130,7 +130,13 @@ A 2026+ builder earns a slot here if it meets all five:
 - Mobile-responsive by default (check on your phone before shipping)
 - No platform ads or vendor watermark on the published page
 
-> **Optional: AI deep-research for the competitive headline.** Before you write the headline, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier): *"Find 5 closest competitors to [my hypothesis]. For each: pricing tier, headline value prop, top 3 customer complaints from G2/Capterra/Trustpilot reviews, and the segment they explicitly do NOT serve. If you cannot find a real source for any item, respond with 'NOT FOUND - [item]' rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention."* The "do NOT serve" gap is where your headline wins; most landing pages compete on the same axis as the incumbent (simpler/faster/cheaper) and lose.
+> **Optional: AI deep-research for the competitive headline.** Before you write the headline, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier). Triple-click the fenced block to copy:
+>
+> ```text
+> Find 5 closest competitors to [MY HYPOTHESIS]. For each: pricing tier, headline value prop, top 3 customer complaints from G2/Capterra/Trustpilot reviews, and the segment they explicitly do NOT serve. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention.
+> ```
+>
+> **What to paste for [MY HYPOTHESIS]:** the one-sentence Founding Hypothesis from your Ch 1.1 `Founding Hypothesis - [date]` Google Doc (just the single sentence, not the full brief). The "do NOT serve" gap is where your headline wins; most landing pages compete on the same axis as the incumbent (simpler/faster/cheaper) and lose.
 >
 > **Free-tier fallback (no paid subscription).** If you can't pay $20/mo for deep-research mode, paste the same prompt into Claude free (claude.ai) or ChatGPT free (chat.openai.com). The output is less exhaustive (these tools cannot browse the web in real time) but the NOT-FOUND escape valve above will tell you which items it could not verify. Treat free-tier output as a starting list to spot-check on Google, not as the final answer.
 >
@@ -310,7 +316,7 @@ If go, [customer interviews](/course/tech-for-non-technical-founders-2026/find-1
 2. Paste your Founding Hypothesis sentence as the prompt (or as the H1 if manual); one edit pass, no endless polishing
 3. Cap the rest of the page (sub-headline, hero visual, 3-4 value props, CTA, footer disclaimer) at a tight, finite block of time
 4. Setup phase: install Microsoft Clarity + the ad pixel (your channel of choice). Add GA4 only if you want richer reporting later.
-5. Run phase: launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: ≥300 visits and ≥5% conversion.**
+5. Run phase: launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: ≥300 visits and ≥6% email conversion to advance** (or ≥5% Stripe-click if you ran the Ch 1.3 variant). 3-5% lands in the "iterate the message" band - not a green light for Ch 2.3 interviews.
 
 ### When the smoke test isn't the right filter
 

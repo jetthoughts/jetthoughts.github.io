@@ -88,10 +88,13 @@ You don't need a sophisticated prompt setup. You need to describe the person you
 Here's the persona setup prompt.
 
 > **What to paste for each placeholder (from your existing artifacts):**
-> - [ROLE] = your Founding Hypothesis [customer] blank from [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (e.g., "solo chiropractor managing insurance claims")
-> - [INDUSTRY] + [COMPANY SIZE] = the ICP characteristics you wrote alongside Step 1 of Ch 1.1
+> - [ROLE] = your Founding Hypothesis [customer] blank from your Ch 1.1 `Founding Hypothesis - [date]` doc (e.g., "solo chiropractor managing insurance claims")
+> - [INDUSTRY] + [COMPANY SIZE] = the three ICP characteristics you wrote beside Step 1 of Ch 1.1 (industry vertical + company size band)
 > - [PROBLEM DESCRIPTION] = your Founding Hypothesis [problem] blank
+> - [PROBLEM AREA] = the [problem] blank summarized in 2-3 words (e.g., "claim resubmission backlog")
 > - [CURRENT WORKAROUND] = your Founding Hypothesis [competition] blank (what they do today)
+> - [YOUR DRAFT QUESTION 1] (and 2, 3, ...) = pick one question at a time from the 5-8 question list in your Ch 2.1 `Mom Test draft - [date]` doc
+> - [QUESTION X] (in Prompt 5) = whichever question from your draft list you want to sharpen
 > - [PERSONA NAME], [FREQUENCY], [DURATION], [BUDGET RANGE], [REASON] = your judgment, anchored to the deep-research findings if you ran the Ch 1.1 sidebar.
 >
 > If any blank above is empty, the Ch 1.1 hypothesis is not specific enough. Go back and tighten before rehearsing - rehearsing against a vague persona produces vague answers.
@@ -133,7 +136,7 @@ After each answer, ask this diagnostic.
 ### Prompt 3 - Question diagnosis
 
 ```text
-Now break character for 30 seconds. As an AI assessing that question: Was that a question that would produce useful data in a real customer interview? What would a real busy ops manager do with that question that I wouldn't predict from your answer? What's the version of that question that would make you open a real memory instead of giving a general response?
+Now break character for 30 seconds. As an AI assessing that question: Was that a question that would produce useful data in a real customer interview? What would a real busy [ROLE] do with that question that I wouldn't predict from your answer? What's the version of that question that would make you open a real memory instead of giving a general response?
 ```
 
 Repeat for each question. The in-character answer is plausible by default; the out-of-character diagnosis is where you learn whether the question would actually produce useful data on a real call.

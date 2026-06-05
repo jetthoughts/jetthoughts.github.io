@@ -155,10 +155,10 @@ Each of the 12 rules is taught in depth somewhere across this chapter, the [self
 > Here is Section 3 of my one-page brief (the outcome-shaped feature list). Based ONLY on this list, name 3 things a Lovable build of this brief would likely include that are NOT in the list. Be specific - feature names, not categories.
 > ```
 >
-> **Audit your Supabase RLS policies.** Paste your table definitions into Claude with this prompt:
+> **Audit your Supabase RLS policies.** First, in the Supabase Dashboard, open Table Editor, click each table, click the Definition tab, and copy the SQL shown. Paste all your table definitions into Claude with this prompt:
 >
 > ```text
-> Here are my Supabase table definitions. Which tables lack row-level security (RLS) enabled, and for each one, name the cross-tenant data leak that would result if a logged-in user from Tenant A queried that table.
+> Here are my Supabase table definitions. Which tables lack row-level security (RLS) enabled, and for each one, name the cross-tenant data leak that would result if a logged-in user from Tenant A queried that table. If you cannot determine the leak without seeing the application code, respond with "NEED CODE: [which file]" rather than guessing.
 > ```
 >
 > **Walk the happy path from static input.** Open Lovable in your browser, take 3 screenshots (sign-up screen, the one core-action screen, and the paywall / payment screen) and paste them into Claude one by one along with Section 3 of your brief. Prompt:
