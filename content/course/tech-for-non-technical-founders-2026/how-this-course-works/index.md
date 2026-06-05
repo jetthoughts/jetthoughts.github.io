@@ -18,7 +18,9 @@ tags:
   - non-technical-founder
   - course-overview
 categories: ["Founders"]
+cover_image: cover.png
 metatags:
+  image: cover.png
   og_title: "How This Course Works - From Idea to First Paying Customer"
   og_description: "The complete journey at a glance: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage."
 cover_image_alt: "Course overview diagram showing the 5-module journey from idea to first paying customer"

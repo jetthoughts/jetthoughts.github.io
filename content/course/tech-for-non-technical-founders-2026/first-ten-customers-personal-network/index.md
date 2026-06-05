@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 5 · Step 3 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+> **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) + the channel commitment from [Chapter 5.2](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/) (if you skipped 5.2, the chapter defaults to LinkedIn DMs for B2B, Reddit DMs for B2C - return to 5.2 to pick deliberately)
 >
 > **Output:** 50 personalized outreach messages sent, with replies tracked in a spreadsheet
 

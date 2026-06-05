@@ -34,7 +34,7 @@ related_posts: false
 >
 > **Part 1 of 2** · [Part 2: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) covers the ship plan (Phase 1-4 + Onramp), exit criteria, shed-vs-skyscraper, and the architectural ceiling.
 >
-> **Input:** a Module 4 decision pointing to "self-serve" + a one-page brief
+> **Input:** a Module 4 decision pointing to "self-serve" (from [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)) + a one-page brief (from [Ch 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)) + a Day-1 ownership audit passed (from [Ch 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - GitHub org + AWS root + domain in YOUR name)
 >
 > **Output:** the 3 pre-flight rules locked in, tool boundaries clear, ready to start the build in Part 2.
 
