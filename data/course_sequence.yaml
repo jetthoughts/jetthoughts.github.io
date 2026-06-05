@@ -22,7 +22,7 @@ sequence:
   - slug: how-this-course-works
     title: "How This Course Works"
     module: "Chapter 0"
-    goal: "The map: 5 modules, 18 chapters, 6 artifacts, and the AI tools that accelerate each stage. Read once before starting."
+    goal: "The map: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage. Read once before starting."
 
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"

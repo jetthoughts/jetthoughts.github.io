@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 2.3 post](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Run Monday morning. 10 calls in your calendar by Friday.
+📋 Template companion to [Chapter 2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Build the 30-name list first in [2.3a · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), then run this template Monday morning. 10 calls in your calendar by Friday.
 
 # Find 10 People With the Problem - The 2026 Outreach Sequence Template
 

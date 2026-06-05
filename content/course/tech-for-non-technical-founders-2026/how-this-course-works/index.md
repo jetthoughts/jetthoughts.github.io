@@ -72,7 +72,7 @@ Five modules. Twenty chapters. Six artifacts you can hand to an investor or a co
 |---|---|---|
 | 2.1 | Learn the 5 Mom Test rules (ask about past, not future) | Mom Test Interview Script |
 | 2.2 | Rehearse your questions with an AI persona | Claude or ChatGPT (free) |
-| 2.3 | Find and book 10 ICP interviews | Reddit, LinkedIn, X, UserInterviews.com |
+| 2.3 | Find and book 10 ICP interviews (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names) | Reddit, LinkedIn, X, UserInterviews.com |
 | 2.4 | Build a throwaway 3-screen clickable prototype | Lovable (free tier) |
 
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
@@ -88,7 +88,7 @@ Five modules. Twenty chapters. Six artifacts you can hand to an investor or a co
 
 | Step | What You Do | Key Tool |
 |---|---|---|
-| 3.1 | Write a one-page Product Brief (Vibe PRD) | Vibe PRD Template |
+| 3.1 | Write a one-page Product Brief - "Vibe PRD" (PRD = Product Requirements Document; the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec for a 6-person team) | Vibe PRD Template |
 | 3.2 | Quality-check: rewrite features as outcome-shaped job stories | Claude or ChatGPT (free) |
 
 The brief is the handoff document. It goes to Lovable, a hired developer, or a fractional CTO. It prevents over-engineering because it describes what the customer needs to accomplish, not what features to build. Every feature in the brief must trace back to a verbatim quote from a Module 2 interview.
@@ -102,7 +102,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 | Step | What You Do | Key Tool |
 |---|---|---|
-| 4.1 | Decide: self-serve, fractional CTO, or hired team | Build Path Decision Worksheet |
+| 4.1 | Decide: self-serve, fractional CTO (a part-time senior engineer who owns architecture but doesn't write all the code), or hired team | Build Path Decision Worksheet |
 | 4.2 | Lock ownership: GitHub, AWS, domain, database in your name | Ownership Checklist |
 | 4.3 | Ship the MVP: Lovable + Supabase + Stripe | Lovable + Supabase + Stripe (free tiers) |
 | 4.4 | Spot the 5 ceiling signals that mean it's time to graduate beyond no-code | - |
@@ -118,10 +118,10 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 | Step | What You Do | Key Tool |
 |---|---|---|
-| 5.1 | Run the Sean Ellis PMF test on your earliest users | PMF survey template |
+| 5.1 | Run the Sean Ellis PMF test (PMF = Product-Market Fit; one survey question: "how would you feel if you could no longer use this product?" 40%+ "very disappointed" = signal) on your earliest users | PMF survey template |
 | 5.2 | Pick one outreach channel and commit before scaling | Channel selection framework |
 | 5.3 | Convert warm personal network into first paid pilots | Personalized DMs |
-| 5.4 | Sign a Design Partner Agreement with a refundable deposit | DPA template + Stripe |
+| 5.4 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
 | 5.5 | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
 
 **Important distinction:** Your warm network is for your first PAID PILOT (a sales motion - valid). Your warm network is NOT for problem validation (an echo chamber - invalid). Friends and other founders will tell you your idea is great because they're being polite. Only cold strangers who describe the problem in their own words and pay money produce a real signal.
@@ -165,7 +165,7 @@ These are the tools the course references - AI research tools, no-code builders,
 | **Stripe Payment Links** | Hosted checkout without writing code | Price hypothesis test (Module 1), paid pilot deposit (Module 5) | Pay-as-you-go (2.9% + $0.30) |
 | **Lovable / Bolt.new** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
-| **Tally + Zapier + Airtable** | "Wizard of Oz" no-code backend stack | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
+| **Tally + Zapier + Airtable** | "Wizard of Oz" no-code stack (a fake-it-till-you-make-it pattern: the customer thinks software is running, but you do the work by hand behind the scenes to test demand before you build the real thing) | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
 | **WorthBuild** | Auto-parses social media for leads, generates personalized outreach messages | After validation, setting up first-customer pipeline (Module 5) | 1 free check/mo |
 
 </details>

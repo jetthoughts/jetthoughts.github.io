@@ -25,7 +25,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 4.3 post](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). Print Monday morning. Ship by Friday week 4.
+📋 Template companion to [Chapter 4.3a · The Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) and [4.3b · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). Print Monday morning. Ship by Friday week 4.
 
 # Self-Serve Stack Walkthrough - 4 Weeks, 3 Tools, 1 Staging URL
 
@@ -381,7 +381,7 @@ The bad pattern ships an MVP where any user with the right URL pattern can fake 
 - **If 0 signups**: the cold message and the landing screen are both wrong, OR the [Module 2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) validation was a false positive. Re-read your Mom Test transcripts. Are the buyers who said "yes I'd pay" the same buyers ignoring your cold message? If yes, the validation was polite, not real. Loop back to Module 2 for ten more interviews before you build feature two.
 - **Watch for the architectural ceiling**: when any of the [5 ceiling signals](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) appears (covered in detail in Chapter 4.4), pause feature work and route to the [Fractional CTO bridge](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). The shed does not collapse overnight, but you stop adding load once you see the signal.
 
-If you want the doctrine in long form, the [Chapter 4.3 post](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks through what each tool does, the role boundaries, the cost reality, and the architectural ceiling preview.
+If you want the doctrine in long form, [Chapter 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks through what each tool does, the role boundaries, the cost reality, and the architectural ceiling preview.
 
 ## Appendix - reference code
 

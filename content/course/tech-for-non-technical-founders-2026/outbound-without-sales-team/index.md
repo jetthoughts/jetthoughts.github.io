@@ -45,7 +45,7 @@ related_posts: false
 
 > **$0 outbound stack.** Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($39 Base plan) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
-This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
+This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
 The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script.
 
@@ -125,7 +125,7 @@ A 10% reply rate on 30 messages is 3 replies. At 20% demo-to-paid, 3 demos lands
 
 ### Filter: getting to 30 high-fit names
 
-Apollo or Sales Navigator. Filter on the six dimensions you defined in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (the same filter you saved as the `Module 5 cold seed` tab in your outreach spreadsheet): job title (the buyer or the user, pick one), company size (start one tight band), industry (one vertical first), geography (one timezone for callable demos), technology used (filter for tools your product replaces or integrates with), recent funding or hiring signal (companies with momentum reply faster).
+Apollo or Sales Navigator. Filter on the six dimensions you defined in [Chapter 2.3a · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (the same filter you saved as the `Module 5 cold seed` tab in your outreach spreadsheet): job title (the buyer or the user, pick one), company size (start one tight band), industry (one vertical first), geography (one timezone for callable demos), technology used (filter for tools your product replaces or integrates with), recent funding or hiring signal (companies with momentum reply faster).
 
 Pull 100-150 raw rows. Strip three categories before sending:
 

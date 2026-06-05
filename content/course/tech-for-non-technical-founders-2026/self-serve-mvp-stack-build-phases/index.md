@@ -203,6 +203,8 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 
 > **Done when:** All 5 green lights are lit: Stripe in live mode, custom domain wired, 1 ICP user tested the paywall, zero JS errors on the signup+checkout flow, and a weekly demo recording exists.
 >
+> **Founder OS · Artifact #5 of 6:** A live MVP at a real URL, with ownership of every account in your name (per Ch 4.2's Day-1 ownership audit). Save the URL + admin login + the latest weekly demo recording in a `Live MVP` doc in your `Sprint Artifacts` folder. Module 5 invites your Module 2 interviewees + smoke-test email list to this URL as the warm seed for the first 10-30 users.
+>
 > **Next click:** [4.4 · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
 >
 > **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in Stripe test mode first. The communities section in Part 1 lists free help channels.

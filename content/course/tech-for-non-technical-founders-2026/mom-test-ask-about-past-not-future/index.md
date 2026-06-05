@@ -39,11 +39,7 @@ related_posts: false
 
 **Skip to:** [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow)
 
-> **If you have been burned by a dev shop before** - if you paid five figures for an MVP that launched to silence, or spent months building against a problem nobody validated - this module will feel like it's asking you to slow down when you want to move faster.
->
-> That instinct is the scar tissue talking. The speed you are looking for is in Module 4 (the build). The protection you need is here in Module 2.
->
-> Every hour spent validating the problem now prevents the same thing that happened last time. The technique is next; come back for the why afterward.
+> **Feeling impatient to start building?** That instinct is normal at the idea stage - the build is what you can picture, so the build is where your mind wants to go. The 90 minutes you spend in this chapter is what saves the 90 days of building the wrong thing. The technique is next; come back for the why afterward.
 
 > If you do not have interview transcripts yet, read straight through.
 >

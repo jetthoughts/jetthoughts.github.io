@@ -152,7 +152,7 @@ A sensible three-phase shape for the smoke test:
 | Run | Launch the ad campaign on your chosen channel, then do nothing - no headline rewrites, no bid adjustments, no hourly dashboard refreshes |
 | Read results | Once the numbers have stabilized, read them and make the go / iterate / kill decision |
 
-If go, [customer interviews](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) start next with your signup list as the warmest cold list you have ever had. If iterate, you have one more test ahead of you. If kill, you have a test receipt and a stack of build time saved versus building the product.
+If go, run the [Ch 1.3 price test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) next on the same page, then move to [customer interviews](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) with your signup list as the warmest cold list you have ever had. If iterate, you have one more test ahead of you. If kill, you have a test receipt and a stack of build time saved versus building the product.
 
 ### How to actually run it
 

@@ -66,7 +66,7 @@ flowchart TD
     S3 --> S4{Strong signals<br/>in 10 calls?}
     S4 -->|7 or more| Build[BUILD<br/>Move to Chapter 3.1<br/>Write the Product Brief]
     S4 -->|4 to 6| Pivot[PIVOT<br/>Run 5 more interviews<br/>Refine the ICP first]
-    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart Chapter 2.3]
+    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart at Ch 2.3a]
     Build --> Sign[Show to 2 advisors.<br/>Get 2 signatures before building.]
     Pivot --> Sign
     Kill --> Sign
@@ -113,7 +113,7 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 ---
 
 > **Done when:** You have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
-> **Next click:** If build - [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot or kill - [2.3 · Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+> **Next click:** If build - [2.4 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot or kill - return to [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis.
 > **If blocked:** If the numbers aren't adding up, re-read [Ch 2.1's scoring rubric](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the Q4 score and flag-count combination is what separates a 7 from a 5.
 
 ---

@@ -47,7 +47,7 @@ He published the answers in [a piece](https://www.lennysnewsletter.com/p/how-tod
 >
 > This chapter is NOT a substitute for the Mom Test interviews in [Module 2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Friends, family, and other founders will tell you your idea is great because they are being polite - that is the founder-to-founder echo chamber, and it produces false confidence, not real signal. A true demand signal only arrives when a cold stranger describes the problem in their own words and pays money.
 >
-> If you have not yet run your 10 Mom Test interviews with people who do NOT know you, do that first ([Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)). Come back to this chapter when you are ready to SELL, not to validate.
+> If you have not yet run your 10 Mom Test interviews with people who do NOT know you, do that first ([Chapter 2.3a · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) builds the list, [2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) sends the messages). Come back to this chapter when you are ready to SELL, not to validate.
 
 The instinct of the founder out of a dev-shop burn is to skip the 60%. Asking friends to buy feels biased and asking former colleagues feels like cheating, so the voice in your head says real customers come from paid traffic to a clean landing page.
 

@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Step 4 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (pick the strongest-signal ones - scored per the Ch 2.1 rubric)
+> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (parts a + b - recruited in [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
 
@@ -43,7 +43,7 @@ The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-p
 
 Those signals do not measure the same thing.
 
-One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
+One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
 
 When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate.
 
@@ -53,7 +53,7 @@ A throwaway prototype run in front of 5 of your interview subjects would have su
 >
 > You will build 3 throwaway screens, show them to 5 of your Mom Test interviewees, watch what they do without coaching, then archive everything. The only outputs that carry forward into Module 3 are (a) the pass/fail signal and (b) the exact words your users used when describing what they saw. The prototype CODE is discarded.
 >
-> If you try to polish this prototype into your MVP later, you'll spend much longer on it, carry every throwaway compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Chapter 4.3, started from the one-page brief (Chapter 3.1) with real auth, real Stripe, real domain.
+> If you try to polish this prototype into your MVP later, you'll spend much longer on it, carry every throwaway compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Module 4 ([Ch 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) defines the stack, [Ch 4.3b](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) walks the phases), started from the one-page brief (Chapter 3.1) with real auth, real Stripe, real domain.
 
 ## Why a Clickable Prototype Catches What Interviews Miss
 
@@ -372,6 +372,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
 > **Done when:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
+> **Founder OS · Artifact #3 of 6:** 10 scored Mom Test transcripts (from Ch 2.3a + 2.3b) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Sprint Artifacts` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
 >
 > **Next click:** [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 >

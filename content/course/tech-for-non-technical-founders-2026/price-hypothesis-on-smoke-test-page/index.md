@@ -30,7 +30,7 @@ related_posts: false
 
 > **Module 1 · Step 3 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live smoke-test landing page from Chapter 1.2
+> **Input:** a live smoke-test landing page from [Chapter 1.2a · Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) (you can run [1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) in parallel with the Stripe button below; same page, two signals)
 >
 > **Output:** a price hypothesis with a measured click-to-payment signal
 
@@ -38,9 +38,9 @@ related_posts: false
 
 > **Heads-up: Stripe verification takes 1-3 business days.** If you've never had a Stripe account, start the signup TONIGHT - not the morning you plan to add the price button. You can build the page without Stripe (use a placeholder button), but you cannot accept live payments until Stripe approves your bank account + tax ID (SSN for US sole proprietors). Approval is usually same-day but can take 24-72 hours if Stripe requests an ID upload. Plan for the 3-day worst case so launch day isn't blocked.
 
-If you landed here directly, start at [Chapter 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) to build your smoke-test page first - this chapter adds a price signal on top of the demand signal you already measured.
+If you landed here directly, start at [Chapter 1.2a · Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) to build your smoke-test page first - this chapter adds a price signal on top of the demand signal you already measured.
 
-**Three variants exist; here's which one you're doing.** Ch 1.2 sets up the **email-only** version (free, demand signal, simplest first run). This chapter adds the **Stripe price-button** version on top of the same page (still a $1 minimum charge, but you collect a card not just an email). If you want the strongest pre-product signal possible - a $1 refundable pre-order in the Pieter Levels style - that's a separate companion: [Fake-Stripe Pre-Sale: The Pieter Levels Pre-Order Smoke Test](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/) (read it after this chapter; it carries the FTC + refund discipline). First-time founders: do the email-only test (Ch 1.2) first, then add the Stripe button (this chapter) once that page is live.
+**Three variants exist; here's which one you're doing.** Ch 1.2 (parts a + b) sets up the **email-only** version (free, demand signal, simplest first run). This chapter adds the **Stripe price-button** version on top of the same page (still a $1 minimum charge, but you collect a card not just an email). If you want the strongest pre-product signal possible - a $1 refundable pre-order in the Pieter Levels style - that's a separate companion: [Fake-Stripe Pre-Sale: The Pieter Levels Pre-Order Smoke Test](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/) (read it after this chapter; it carries the FTC + refund discipline). First-time founders: do the email-only test (Ch 1.2a + 1.2b) first, then add the Stripe button (this chapter) once that page is live.
 
 ## The 48-email lie (why "I'd pay for that" isn't a price test)
 
@@ -179,8 +179,9 @@ One thing the smoke-test price does NOT tell you: whether the price point is sus
 An email signup costs the visitor nothing; a Stripe click costs them the moment of typing a card number. That is the only honest demand signal a pre-product page can produce.
 
 > **Done when:** You have a Stripe price button on your smoke-test page and a measured click-to-payment rate.
+> **Founder OS · Artifact #2 of 6:** Smoke-test decision (go/iterate/kill from 1.2b) + measured price-button click rate. Save the numbers + the channel + the date in a `Price Signal` tab of your `Sprint Artifacts` folder; Ch 5.4 reuses this for the ACV math.
 > **Next click:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
-> **If blocked:** If your Stripe account verification is delayed, build the rest of the page without the button. The email-only smoke test in Ch 1.2 still produces a demand signal while Stripe processes your account.
+> **If blocked:** If your Stripe account verification is delayed, build the rest of the page without the button. The email-only smoke test in [Ch 1.2a](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) + [1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) still produces a demand signal while Stripe processes your account.
 
 > **Case Study: Tomas & Mia**
 >

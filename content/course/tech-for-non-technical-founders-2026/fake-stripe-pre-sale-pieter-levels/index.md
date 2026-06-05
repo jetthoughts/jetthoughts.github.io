@@ -87,7 +87,7 @@ The pre-sale is the strongest pre-build demand signal you can buy. It is not val
 ## Further reading
 
 - Pieter Levels, [the 70-product startups portfolio](https://levels.io/startups/) - this technique in operation across a decade of indie launches.
-- [Chapter 1.2 (the standard smoke test)](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - the email-only version this page upgrades.
+- [Chapter 1.2b (the standard smoke test - run-it phase)](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) and [Chapter 1.2a (build the page)](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) - the email-only version this page upgrades.
 - [Chapter 1.3 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - the full Stripe Payment Link setup walkthrough.
 
 ---

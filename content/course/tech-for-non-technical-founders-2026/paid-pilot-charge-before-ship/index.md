@@ -53,7 +53,7 @@ Week 8 lands and you send the proposal for the year-one contract. The customer s
 
 That's the recurring mechanic. A 20% deposit at kickoff puts the CFO question on Week 0, when there's no project yet for the customer to defend. Conversion in Week 7 becomes paperwork, not negotiation. Skip the deposit and you're back at the Week 8 wall: "this is great" emails Friday, ghost on conversion Monday.
 
-After months of paying an agency, the muscle memory becomes "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable.
+First-time founders often default to "let the customer try it free and they'll pay once they see the value" - that instinct produces six months of free pilots and zero signed contracts. Charging first is what flips a curious user into a customer with skin in the game.
 
 You are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
 
@@ -225,6 +225,7 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook including the design-partner pricing model from B2B founders.
 
 > **Done when:** One DPA is signed and the Stripe deposit has cleared in your account.
+> **Founder OS · Artifact #6 of 6:** A signed Design Partner Agreement + cleared deposit. Save the executed PDF + Stripe receipt in your `Sprint Artifacts` folder. This is the artifact investors fund; you can now point to it and say "someone who doesn't know me paid real money for this."
 >
 > **Next click:** [5.5 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
 >

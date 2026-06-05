@@ -140,7 +140,7 @@ Open four columns in a notebook: Customer, Problem, Advantages, Competition. Wri
 
 Read the column. Circle the one entry you would bet on.
 
-Beside the customer you circled, write three ICP characteristics in plain words: the industry vertical (e.g., "solo chiropractic clinics"), the company size band (e.g., "1-3 staff"), and the specific moment the pain happens (e.g., "Monday morning insurance-claim resubmission"). These three become inputs for Ch 2.1 and Ch 2.2.
+Beside the customer you circled, write three ICP characteristics in plain words. (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names in the [customer] blank, written tightly enough you can find them on Reddit or LinkedIn.) The three characteristics: industry vertical (e.g., "solo chiropractic clinics"), company size band (e.g., "1-3 staff"), and the specific moment the pain happens (e.g., "Monday morning insurance-claim resubmission"). These three become inputs for Ch 2.1 and Ch 2.2.
 
 ### Step 2: Classic Differentiator
 
@@ -187,8 +187,8 @@ The default answer is "ten interviews," which is right but incomplete.
 
 The full test is two parts:
 
-1. **A smoke-test landing page for demand signal** - a no-code page builder + cold traffic + a Stripe price button. Step-by-step, including which builder to use, in [Chapter 1.2: Smoke-Test the Hypothesis](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) and [Chapter 1.3: Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/).
-2. **Ten Mom Test interviews for problem signal** - how to find the right people (your "ICP", or Ideal Customer Profile: the specific kind of customer your hypothesis names in the [customer] blank), recruit them for unpaid short calls, and run the interview without selling. The interview technique is in [Chapter 2.1: The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/); recruitment channels (Reddit, Twitter/X, LinkedIn, UserInterviews.com paid panels, personal network) are in [Chapter 2.3: Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+1. **A smoke-test landing page for demand signal** - a no-code page builder + cold traffic + a Stripe price button. Step-by-step in [Chapter 1.2a · Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/), [1.2b · Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/), and [Chapter 1.3 · Price Your Hypothesis](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/).
+2. **Ten Mom Test interviews for problem signal** - how to find the right people (your "ICP", or Ideal Customer Profile: the specific kind of customer your hypothesis names in the [customer] blank), recruit them for unpaid short calls, and run the interview without selling. The interview technique is in [Chapter 2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/); recruitment channels are in [Chapter 2.3a · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (build the 30-name list) + [2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (the 3-message sequence).
 
 Write both as your test plan now (just the plan, not the execution). The hypothesis sentence + the two-part test design are the deliverables of this sprint. Modules 2 and 3 run the tests; this sprint produces the plan they run.
 
@@ -224,7 +224,7 @@ Do the unit economics work at the scale you can plausibly reach? A consumer app 
 
 The Money lens is the one most non-technical founders score generously on because pricing feels theoretical at this stage. Score conservatively here.
 
-*Pre-revenue founders with no built product: leave the Money lens blank for now. Come back after Chapter 1.2's smoke test gives you real conversion data. Your job in this sprint is to find out whether anyone will pay at any price, not to nail the exact number.*
+*Pre-revenue founders with no built product: leave the Money lens blank for now. Come back after the [Chapter 1.2a + 1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) smoke test gives you real conversion data. Your job in this sprint is to find out whether anyone will pay at any price, not to nail the exact number.*
 
 | Lens | The question (1 = low / 5 = high) | Score |
 |---|---|---|
@@ -309,8 +309,6 @@ Refuse to write the sentence because "we don't know enough yet" and you'll spend
 >
 > **What to paste for [SENTENCE]:** the one-sentence hypothesis from your Ch 1.1 `Founding Hypothesis - [date]` doc. You get a written four-lens debate in 30 seconds. The Mad Libs sentence and a kitchen timer is still the main path.
 
-A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
-
 > Before you write the hypothesis: [stress-test the blanks with AI](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/). The sidebar names the tools and what they cost; the field guide shows you how to use them productively.
 
 ## Further reading
@@ -320,6 +318,7 @@ A wrong hypothesis killed in five interviews is the cheapest research output you
 - Once you have run the sprint at least once, layered frameworks like Lean Inception, JTBD Canvas, Value Proposition Canvas, and Lean Canvas add useful structure. Skip them on the first pass.
 
 > **Done when:** You have a one-sentence Founding Hypothesis written down, scored ≥14/20 on the four lenses, with no individual lens below 2.
+> **Founder OS · Artifact #1 of 6:** The Founding Hypothesis sentence. Save the Google Doc in your `Sprint Artifacts` folder; Module 1.2 and Module 2 read it as input.
 > **Next click:** [1.2a · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)
 > **If blocked:** If you can't fill the five blanks with specifics, your idea is still too vague. Run the Perplexity deep-research sidebar in this chapter to find real customer complaints to anchor your blanks.
 

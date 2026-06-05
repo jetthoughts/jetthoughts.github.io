@@ -33,21 +33,21 @@ Investors fund evidence, not ideas. A pitch deck gets you the meeting. A signed 
 
 The 2026 version of this work uses tools that didn't exist five years ago - AI app builders like Lovable and Bolt, hosted backend services like Supabase, hosted payments like Stripe Checkout, AI persona rehearsal in Claude or ChatGPT. One non-technical founder can now ship the full validate-build-pilot loop on evenings and weekends, without hiring an engineer. The course names which tool does which job at each step, and what each one costs (most have a free tier).
 
-> **🚀 Start here: [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/)** - 5-minute read. The full route at a glance: 5 modules, 20 chapters, 6 artifacts you can hand to an investor. Free. No sign-up. Start tonight.
+> **Start here: [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/)** - 5-minute read. The full route at a glance: 5 modules, 20 chapters, 6 artifacts (your "Founder OS" - a single Google Drive folder where each module drops one fill-in-the-blank document you can hand to an investor). Free. No sign-up. Start tonight.
 
 *Returning? [Skip to the syllabus ↓](#module-index)*
 
 ## Why this course exists
 
-These are the five mistakes that put founders in our rescue queue. You're at the start of the same road they were, and this course is the route around each one:
+At the idea stage, the cheapest mistake is the one you skip making by reading the course before you start building. The five failure modes below are what we see most often when founders ask us to rescue a stalled MVP. You are at the start of the same road; this course is the route around each one:
 
-1. Hiring a dev shop before validating the problem - Modules 1 and 2 show you what a $0 validation looks like.
-2. Paying for six months of "building" with no way to see what shipped - Module 4.2 (Day-1 ownership) and the Friday-demo rule in the management chapters cover this.
-3. Signing an SOW that defines "delivered" as "deployed to staging" - then watching $78K clear before the staging URL works - the SOW reading guide flags this exact clause.
-4. Rebuilding from scratch when salvage would have closed the gap in eight weeks - the salvage-vs-rebuild scorer keeps you out of unnecessary rewrites.
-5. Shipping an AI feature only to discover the agency was passing $4,800 of OpenAI tokens through the invoice - the AI agency questions chapter catches this on the first discovery call.
+- Hiring a dev shop before validating the problem - Modules 1 and 2 show what a $0 validation looks like.
+- Paying for six months of "building" with no way to see what shipped - Module 4.2 (Day-1 ownership) plus the Friday-demo rule in the management chapters cover this.
+- Signing a contract (an "SOW", Statement of Work - the doc that defines what the agency is paid to deliver) where "delivered" means "deployed to staging" - the SOW reading guide flags the bad clauses.
+- Rebuilding from scratch when salvage would have closed the gap in eight weeks - the salvage-vs-rebuild scorer keeps you out of unnecessary rewrites.
+- Shipping an AI feature only to discover the agency was passing per-question AI costs ("OpenAI tokens" - the pay-per-word AI invoicing model) through the invoice without telling you - the AI agency questions chapter catches this on the first discovery call.
 
-Reading this course should keep you out of those five failure modes. That is the point.
+Already mid-build and it's failing? Jump to the [rescue chapters](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) at the end. Everyone else: start at Module 1.
 
 > **How this is different from Y Combinator / Lenny / Reforge.** Y Combinator Startup School teaches the "talk to users, prioritize them over features" principle through weekly updates and library lectures. Lenny Rachitsky publishes deep essays on each phase (validation, PMF, growth, hiring) as a newsletter and reference library. Reforge sells cohort-based courses designed for product managers and growth leaders with 6+ years of experience at scale-stage companies.
 >

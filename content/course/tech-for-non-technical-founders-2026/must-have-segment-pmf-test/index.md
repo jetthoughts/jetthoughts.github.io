@@ -178,7 +178,7 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 
 | Condition | What to do instead |
 |---|---|
-| **Under 10 users** | Run [Chapter 2.3 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
+| **Under 10 users** | Run [Chapter 2.3b outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (with the list-building method from [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) if you don't already have a 30-name list) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
 | **Pre-launch** | Use the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) instead. The 40% test asks "if you could no longer use the product" - if the user never used it, the answer is meaningless. |
 
 ## Advanced (optional)
