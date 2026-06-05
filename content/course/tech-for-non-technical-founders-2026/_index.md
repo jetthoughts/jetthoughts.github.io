@@ -21,7 +21,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "From Idea to First Paying Customer - A Non-Technical Founder's Course"
-  og_description: "From idea to first paying users in 2026, with or without engineers. A free five-module course for non-technical founders: hypothesis, validation, design, build, first paying customer."
+  og_description: "From idea to first paying users in 2026, with or without engineers. Five modules that produce the evidence investors actually fund - smoke test data, interview transcripts, live MVP, signed paid pilot."
 cover_image_alt: "JetThoughts course landing cover showing 5 modules (Hypothesis, Validate, Design, Build, First Customer) on the route from idea to first paying users"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/"
 related_posts: false
@@ -29,7 +29,13 @@ related_posts: false
 
 Getting from idea to a product someone pays for is harder when you can't read the code. This course is the linear route - five modules from a one-sentence hypothesis to a first paid pilot. The hiring, managing, and rescue chapters wait at the end for the day you actually need them.
 
+Investors fund evidence, not ideas. A pitch deck gets you the meeting. A signed paid pilot, 10 scored interview transcripts, and a live MVP with real users gets you the check. This course produces the evidence.
+
 The 2026 version of this work uses tools that didn't exist five years ago - AI app builders like Lovable and Bolt, hosted backend services like Supabase, hosted payments like Stripe Checkout, AI persona rehearsal in Claude or ChatGPT. One non-technical founder can now ship the full validate-build-pilot loop on evenings and weekends, without hiring an engineer. The course names which tool does which job at each step, and what each one costs (most have a free tier).
+
+> **🚀 Start here: [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/)** - 5-minute read. The full route at a glance: 5 modules, 20 chapters, 6 artifacts you can hand to an investor. Free. No sign-up. Start tonight.
+
+*Returning? [Skip to the syllabus ↓](#module-index)*
 
 ## Why this course exists
 
@@ -43,7 +49,11 @@ These are the five mistakes that put founders in our rescue queue. You're at the
 
 Reading this course should keep you out of those five failure modes. That is the point.
 
-> **How this is different from Y Combinator / Lenny / Reforge.** Y Combinator Startup School teaches the "talk to users, prioritize them over features" principle through weekly updates and library lectures. Lenny Rachitsky publishes the deep essays on each phase (validation, PMF, growth, hiring) as a newsletter and reference library. Reforge sells cohort-based courses designed for product managers and growth leaders with 6+ years of experience at scale-stage companies. This course walks a non-technical founder with neither a team nor a built product from a one-sentence hypothesis to a signed paid pilot, on evenings and weekends. Three chapters we have not found systematized in those competitors' catalogues as of May 2026: [Ch 1.3 - Stripe Payment Link as price-hypothesis test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), [Ch 4.1 - four-way build-path decision matrix](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/), and [Ch 5.4 - Design Partner Agreement with deposit math](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) that turns verbal yes-es into paid pilots.
+> **How this is different from Y Combinator / Lenny / Reforge.** Y Combinator Startup School teaches the "talk to users, prioritize them over features" principle through weekly updates and library lectures. Lenny Rachitsky publishes deep essays on each phase (validation, PMF, growth, hiring) as a newsletter and reference library. Reforge sells cohort-based courses designed for product managers and growth leaders with 6+ years of experience at scale-stage companies.
+>
+> This course walks a non-technical founder with neither a team nor a built product from a one-sentence hypothesis to a signed paid pilot, on evenings and weekends.
+>
+> Three chapters we have not found systematized in those competitors' catalogues as of May 2026: [Ch 1.3 - Stripe Payment Link as price-hypothesis test](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), [Ch 4.1 - four-way build-path decision matrix](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/), and [Ch 5.4 - Design Partner Agreement with deposit math](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) that turns verbal yes-es into paid pilots.
 
 ## Take this course if
 
@@ -65,20 +75,20 @@ An idea, or a half-built MVP. The course shows you how to validate it cheaply, f
 
 ## What you walk away with
 
-A personal **Founder OS** - six filled-in artifacts that document your route from idea to first paying users:
+A personal **Founder OS** - six filled-in artifacts that prove demand before you ask for a dollar of outside capital:
 
-1. A one-sentence **Founding Hypothesis** (Module 1)
-2. A landing-page **smoke test decision** + price point (Module 1)
-3. Ten **Mom Test interview notes** + prototype feedback (Module 2)
-4. A one-page **Product Brief / one-page brief** (Module 3)
-5. A **live MVP** at a real URL, ownership locked Day 1 (Module 4)
-6. A **first signed paid pilot** + channel sequence running (Module 5)
+1. A one-sentence **Founding Hypothesis** - shows an investor you didn't start with a build, you started with a falsifiable bet (Module 1)
+2. A landing-page **smoke test decision** + price point - proves strangers clicked and some reached for their wallet (Module 1)
+3. Ten **Mom Test interview notes** + prototype feedback - proves you didn't build in a vacuum, you built from evidence (Module 2)
+4. A one-page **Product Brief** - shows an investor the scope is constrained by customer language, not feature fantasies (Module 3)
+5. A **live MVP** at a real URL, ownership locked Day 1 - proves you can ship without an engineer and nobody holds the keys but you (Module 4)
+6. A **first signed paid pilot** + channel sequence running - proves someone who doesn't know you paid real money (Module 5)
 
-You can hand any of these to an investor or a co-founder and answer their questions from the artifacts alone.
+Investors don't fund ideas. They fund evidence. Each artifact answers a question they will ask. Walk into the meeting with the folder and you answer six of them before the first slide.
 
 ## Module index
 
-> Before you start: read [**How This Course Works**](/course/tech-for-non-technical-founders-2026/how-this-course-works/) — the full route at a glance: 5 modules, 18 chapters, the AI tools that accelerate each stage, and the SIPOC system map.
+> Before you start: read [**How This Course Works**](/course/tech-for-non-technical-founders-2026/how-this-course-works/) - the full route at a glance: 5 modules, 20 chapters, the AI tools that accelerate each stage, and the tool stack reference.
 >
 > Length is a byproduct of effective delivery, not a constraint. The course is paced for an idea-stage non-technical founder on evenings and weekends. Read the modules in order; each module's output is the next module's input.
 
@@ -86,7 +96,9 @@ You can hand any of these to an investor or a co-founder and answer their questi
 *Output: One-sentence Founding Hypothesis + a live landing page with Stripe price button.*
 *Start here if you don't have a one-sentence Founding Hypothesis yet (customer + problem + approach + competition + differentiation), or you have a hypothesis but never tested demand with a landing page.*
 - [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
-- [**1.2** · Smoke-Test the Hypothesis: The Demand Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+  - Before you write the hypothesis: [stress-test the blanks with AI](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).
+- [**1.2a** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)
+- [**1.2b** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
 ### Module 2 - Validate the Problem
@@ -95,8 +107,10 @@ You can hand any of these to an investor or a co-founder and answer their questi
 - [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
   - Templates: [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) · [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)
 - [**2.2** · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
-- [**2.3** · Find 10 People With the Problem in 2026](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+- [**2.3a** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
+- [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
   - Template: [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/)
+  - After interviews: [Mom Test Synthesis - Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)
 - [**2.4** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 
 ### Module 3 - Design from Evidence

@@ -38,7 +38,9 @@ related_posts: false
 
 > **TL;DR:** Pick one channel from your interview evidence and commit for a full send/reply/follow-up arc. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
 
-A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
+A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked.
+
+She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
 
 The pattern: four channels, no commitment, and no way to tell which channel had worked because none of them had been run long enough to read.
 
@@ -48,7 +50,9 @@ This chapter is about listening to what they actually said and committing to one
 
 ## The commitment rule
 
-Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing. Run a batch, call the channel dead because you got 2 replies right away, and you just threw away the signal.
+Stick with one channel long enough to read the signal, not chase the algorithm. A cold-email sequence needs time to deliver, more time for replies to accumulate, and more time still before the "not now" replies reveal whether the non-replies are disinterest or bad timing.
+
+Run a batch, call the channel dead because you got 2 replies right away, and you just threw away the signal.
 
 | Phase | Activity | Expected signal | Decision checkpoint |
 |------|----------|-----------------|-------------------|
@@ -121,7 +125,9 @@ I am considering [channel A] vs [channel B] for my first stretch of outbound.
 Based on the buyer persona and interview signals, which channel is more likely to reach them in the mode where they are open to discovering new tools? What would I need to believe for [channel A] to be right vs [channel B]?
 ```
 
-Claude cannot guarantee the right answer - it does not know your specific market. But it will surface the assumptions behind each choice and flag contradictions you missed. A B2B services founder I spoke with in March 2026 ran this prompt, realized her interview evidence was pointing to LinkedIn while her gut was pointing to cold email, and asked herself "why am I ignoring what 8 of 10 people said?" She picked LinkedIn. 3 conversations in week 1.
+Claude cannot guarantee the right answer - it does not know your specific market. But it will surface the assumptions behind each choice and flag contradictions you missed.
+
+A B2B services founder I spoke with in March 2026 ran this prompt, realized her interview evidence was pointing to LinkedIn while her gut was pointing to cold email, and asked herself "why am I ignoring what 8 of 10 people said?" She picked LinkedIn. 3 conversations in week 1.
 
 The prompt is a forcing function, not a crystal ball. The real data comes from running the channel.
 
@@ -216,7 +222,9 @@ Keep this in the same Google Sheet as your interview transcripts. Look at it bef
 
 ---
 
-The decision matters more than the channel itself. Committing to one channel and iterating on the script beats splitting your time across three by a wide margin, because the learning loop is tighter. With 30 focused messages you get a reply rate you can diagnose; with 10 messages spread across three channels you get nothing you can act on.
+The decision matters more than the channel itself. Committing to one channel and iterating on the script beats splitting your time across three by a wide margin, because the learning loop is tighter.
+
+With 30 focused messages you get a reply rate you can diagnose; with 10 messages spread across three channels you get nothing you can act on.
 
 Pick the channel your interviews point to, write it down, and give it a real run before you question it.
 
@@ -242,8 +250,16 @@ Pick the channel your interviews already named, commit to it long enough to read
 - First Round Capital, [From 1 to 1,000 Users](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - channel selection stories from Airbnb, Tinder, Etsy, Reddit, including how each picked their first acquisition channel based on where their early customers actually lived online.
 
 > **Done when:** Your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
+>
 > **Next click:** [5.3 · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+>
 > **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Channel scoring: LinkedIn (9/12 - controllers are there), cold email (8/12), Reddit (5/12). Commits to LinkedIn + cold email. Scoring: 8.0/10.
+>
+> **Mia**: Channel scoring: Facebook groups (9/12 - parents are there daily), school referrals (7/12), Instagram (5/12). Commits to Facebook groups + school district referrals.
 
 ---
 

@@ -37,19 +37,35 @@ related_posts: false
 
 > **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name will book 1-2 paid pilots. Customers 11-20 come from cold outbound, not from launch events.
 
-> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). If you still have warm names in your network who fit your ICP, close them first. Cold outbound is harder, slower, and lower-converting than warm outreach. Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
+> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/).
+>
+> If you still have warm names in your network who fit your ICP, close them first. Cold outbound is harder, slower, and lower-converting than warm outreach.
+>
+> Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
 > **$0 outbound stack.** Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($39 Base plan) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
-This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time. The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script. The one difference is that those Module 2 interviewees are warm targets - they already spoke with you about their pain, so your first line can reference that conversation directly instead of finding an external hook.
+This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
-Product Hunt converted at 3.1% per launch event across 387 launches OpenHunts studied in 2024. Indie Hackers - posts written as engagement rather than launch announcements - converted at 23.1% per engaged post over the same period. 89% of the Product Hunt founders OpenHunts surveyed said they would not launch on the platform again ([source](https://awesome-directories.com/blog/indie-hackers-launch-strategy-guide-2025/)). The data has been public since the OpenHunts study released in mid-2024, yet every "first 10 customers" article still leads with Product Hunt. Product Hunt is not bad; it is a one-day event in a job that needs sustained motion over a quarter.
+The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script.
 
-A B2B SaaS founder we worked with had cleared four paid pilots from her personal network and LinkedIn audience over six weeks, then ran out of warm names at customer five. She had already booked a launch coach and signed an ad-agency contract, then cancelled both after seeing the OpenHunts numbers. Customer five signed a $4,200 pilot in week 3 from the four-line cold-email sequence below.
+The one difference is that those Module 2 interviewees are warm targets - they already spoke with you about their pain, so your first line can reference that conversation directly instead of finding an external hook.
+
+Product Hunt converted at 3.1% per launch event across 387 launches OpenHunts studied in 2024. Indie Hackers - posts written as engagement rather than launch announcements - converted at 23.1% per engaged post over the same period.
+
+89% of the Product Hunt founders OpenHunts surveyed said they would not launch on the platform again ([source](https://awesome-directories.com/blog/indie-hackers-launch-strategy-guide-2025/)). The data has been public since the OpenHunts study released in mid-2024, yet every "first 10 customers" article still leads with Product Hunt.
+
+Product Hunt is not bad; it is a one-day event in a job that needs sustained motion over a quarter.
+
+A B2B SaaS founder we worked with had cleared four paid pilots from her personal network and LinkedIn audience over six weeks, then ran out of warm names at customer five. She had already booked a launch coach and signed an ad-agency contract, then cancelled both after seeing the OpenHunts numbers.
+
+Customer five signed a $4,200 pilot in week 3 from the four-line cold-email sequence below.
 
 ![Product Hunt 3.1% vs Indie Hackers 23.1% - per OpenHunts 2024](ph-vs-ih.svg)
 
-This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events. Figma's first customer 11-20 cohort came from cold DMs to influential designers identified via Twitter data. Retool filtered Crunchbase by funding recency. Your rescue-Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
+This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events.
+
+Figma's first customer 11-20 cohort came from cold DMs to influential designers identified via Twitter data. Retool filtered Crunchbase by funding recency. Your rescue-Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
 
 ## Why Product Hunt is the wrong lever for a B2B SaaS product
 
@@ -59,9 +75,7 @@ This is the closing chapter of Module 5 (First Paying Customer). Once your perso
 > 
 > The calendar shapes the outcome: Product Hunt is one day, Indie Hackers is sustained engagement, filtered cold outbound is recurring 30-message batches until you have a funnel. Founders shortcutting to one-day launches keep being surprised leads don't show up the next morning. The question is not "which big launch." It is "which 50 named buyers should hear from me first."
 
-## The pipeline: Filter -> Personalize -> Loom -> Calendly -> Stripe
-
-A solo founder runs the whole pipeline in six stages with off-the-shelf tools, with no engineer, no $1,200/month sales stack, and no Salesforce required.
+## The pipeline: Filter -> Personalize -> Loom -> Calendly -> StripeA solo founder runs the whole pipeline in six stages with off-the-shelf tools, with no engineer, no $1,200/month sales stack, and no Salesforce required.
 
 The cold-outbound pipeline in one glance:
 
@@ -82,7 +96,11 @@ The five tools and their 2026 pricing:
 | Calendly | 15-min demo booking, auto-confirm | Free tier supports one event type |
 | Stripe Invoice | Pilot deposit, no monthly fee | 2.9% + 30c per transaction |
 
-You can ship the entire pipeline for under $100/month if you use Apollo's free tier and skip Sales Navigator. The trade-off: Sales Navigator's filters are richer for enterprise buyer profiles (especially for filtering on "joined company in last 90 days" or "recent leadership change"), and Apollo's free tier has limited credits. If your buyer is a 50-200 person company contact in a specific industry, Apollo free tier is enough. If your buyer is a recent VP hire at a 500-2,000 person company, Sales Navigator pays for itself in week 1.
+You can ship the entire pipeline for under $100/month if you use Apollo's free tier and skip Sales Navigator.
+
+The trade-off: Sales Navigator's filters are richer for enterprise buyer profiles (especially for filtering on "joined company in last 90 days" or "recent leadership change"), and Apollo's free tier has limited credits.
+
+If your buyer is a 50-200 person company contact in a specific industry, Apollo free tier is enough. If your buyer is a recent VP hire at a 500-2,000 person company, Sales Navigator pays for itself in week 1.
 
 > **Pre-flight: warm your sending domain BEFORE batch 1.** A brand-new sending domain (e.g., `yourcompany.com` registered last week, no email history) will land in spam on batch 1 even with a perfect ICP list and a sharp script. The fix is either:
 >
@@ -123,7 +141,7 @@ You should be left with 30-50 clean names. Hold the bottom 20 for a later batch 
 
 The mistake founders make on the first batch is over-personalizing. Twenty minutes of LinkedIn research per prospect turns into a 400-word email with five quoted lines from their feed, and response rates fall off a cliff above the four-line threshold.
 
-The right level of personalization is one specific reference per message. Open the prospect's LinkedIn, scan the last three posts and the recent role. Find one specific thing - a recent post they wrote, a comment they left, the company hit a hiring milestone, they joined a year ago and just got promoted. One sentence. Then the same four-line script for everyone.
+The right level of personalization is one specific reference per message: scan the last three posts and the recent role, find one specific thing (a post, a comment, a hiring milestone, a recent promotion). One sentence. Then the same four-line script for everyone.
 
 The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 45 minutes of personalization per send. A founder can do that in one focused sitting.
 
@@ -195,7 +213,9 @@ The 30-message batch is not a one-time event. Run fresh 30-message batches until
 
 ### What "no reply" actually means
 
-> **First-batch reality before the diagnostic.** If your first 30-message batch returns 0-1 replies, your first reaction will be "the product is bad" or "my message is generic." Both of those CAN be true, but the more common cause for a brand-new founder with a new sending domain is mechanical: the messages did not deliver, or the domain has no warmup history yet, or the personalization felt fake despite being real. **A 0-1 reply rate on batch 1 is the median outcome for first-time cold senders, not a failure signal.** Walk the 3-item diagnostic below before you change the message, the price, or the product.
+> **First-batch reality before the diagnostic.** If your first 30-message batch returns 0-1 replies, your first reaction will be "the product is bad" or "my message is generic." Both of those CAN be true, but the more common cause for a brand-new founder with a new sending domain is mechanical: the messages did not deliver, or the domain has no warmup history yet, or the personalization felt fake despite being real.
+>
+> **A 0-1 reply rate on batch 1 is the median outcome for first-time cold senders, not a failure signal.** Walk the 3-item diagnostic below before you change the message, the price, or the product.
 
 A 30-message batch with zero replies is rare and almost always indicates a filter problem, not a script problem. Check three things:
 
@@ -216,9 +236,11 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 > **Ask your first 20 for one introduction each. That feeds enough warm leads to stop scaling cold outbound past the current batch size.**
 >
-> Customers 11-20 come from filtered cold outbound. Customers 21-50 come from referrals out of customers 1-20. If your first 20 were chosen carefully (must-have segment, personal network + filtered outbound), each knows two more in the same segment. The motion is asking for one introduction each.
+> Customers 11-20 come from filtered cold outbound. Customers 21-50 come from referrals out of customers 1-20. If your first 20 were chosen carefully (must-have segment, personal network + filtered outbound), each knows two more in the same segment.
 >
-> Script at the end of every Friday demo once the cadence is established: *"If this is useful for you, do you know one or two others I should be talking to?"* Half say yes. Half of those actually send the intro. A steady drip of warm leads from a 20-customer base is enough to keep cold outbound steady rather than scaling the batch size.
+> The motion is asking for one introduction each. Script at the end of every Friday demo once the cadence is established: *"If this is useful for you, do you know one or two others I should be talking to?"*
+>
+> Half say yes. Half of those actually send the intro. A steady drip of warm leads from a 20-customer base is enough to keep cold outbound steady rather than scaling the batch size.
 
 ## What to do next
 
@@ -261,8 +283,16 @@ Module 5 closes with a deposit in your Stripe account. Everything from here is k
 - Sahil Bloom, [The First 10 Customers](https://www.sahilbloom.com/newsletter/the-first-10-customers) - playbook framing the relationship-to-cold transition that closes the personal-network gap.
 
 > **Done when:** 30 cold messages are sent, replies are tracked in your spreadsheet, and 1-2 paid pilots are booked from the replies.
+>
 > **Next click:** [Course landing page](/course/tech-for-non-technical-founders-2026/) - course complete. See continuation chapters for [churn triage](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/), [pivot decisions](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/), and [hiring](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
+>
 > **If blocked:** If reply rate is under 5% after batch 1, diagnose before batch 2: is the filter wrong (wrong ICP), is your domain reputation dead (cold email deliverability), or is the personalization too generic? Fix the root cause before sending the next batch.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Runs LinkedIn cold outreach to 30 controllers NOT in his network. 12% reply rate (4 replies). Books 2 pilot conversations. 1 signs at $2,500. Total: 3 paid pilots (2 from network, 1 from cold). Annualized: $30,000 in committed pilot revenue.
+>
+> **Mia**: Runs Facebook group cold outreach to 30 parents NOT in her network. 28% reply rate (8 replies), 5 pilot conversations, 2 sign at $50 - total: 6 paid pilots at $300/mo recurring.
 
 ---
 

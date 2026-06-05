@@ -37,17 +37,25 @@ related_posts: false
 
 > **TL;DR:** A verbal yes is not a paid pilot. A signed DPA with a refundable Stripe deposit is. Charge 10-30% of year-one ACV before kickoff - it puts the CFO question on Week 0 instead of Week 8.
 
-In late 2025 a HealthTech founder ran a six-week free pilot with a 40-bed clinic she had met at a conference. The clinic loved it, the shared Slack channel had 47 messages of enthusiasm before week 4, and the day the pilot ended she sent the year-one contract. The reply came back three weeks later: "We're going to revisit at the next budget cycle." There was no next budget cycle - the clinic moved on. In March 2026 she shipped the same product to a different customer who paid a $1,200 deposit at the start of the pilot, and that customer closed the year-one contract on day one. Same product, same buyer profile, different deposit timing.
+In late 2025 a HealthTech founder ran a six-week free pilot with a 40-bed clinic she had met at a conference. The clinic loved it, the shared Slack channel had 47 messages of enthusiasm before week 4, and the day the pilot ended she sent the year-one contract.
+
+The reply came back three weeks later: "We're going to revisit at the next budget cycle." There was no next budget cycle - the clinic moved on.
+
+In March 2026 she shipped the same product to a different customer who paid a $1,200 deposit at the start of the pilot, and that customer closed the year-one contract on day one. Same product, same buyer profile, different deposit timing.
 
 Below is the playbook the second founder followed: a one-page Design Partner Agreement, a 15-minute Stripe Checkout setup, and the pricing math that puts the founder in the conversation instead of the agency.
 
 ## Why free pilots almost never convert
 
-Free pilots feel collaborative because the customer says yes, you build for six weeks, and the team shows up to the Friday demo each week and says "this is great." Week 8 lands and you send the proposal for the year-one contract. The customer says "this is great, let me circle back to my CFO" - and that CFO has never heard of you, did not approve the pilot, and has no internal justification for the line item. The conversation dies in a forwarded email thread.
+Free pilots feel collaborative because the customer says yes, you build for six weeks, and the team shows up to the Friday demo each week and says "this is great."
+
+Week 8 lands and you send the proposal for the year-one contract. The customer says "this is great, let me circle back to my CFO" - and that CFO has never heard of you, did not approve the pilot, and has no internal justification for the line item. The conversation dies in a forwarded email thread.
 
 That's the recurring mechanic. A 20% deposit at kickoff puts the CFO question on Week 0, when there's no project yet for the customer to defend. Conversion in Week 7 becomes paperwork, not negotiation. Skip the deposit and you're back at the Week 8 wall: "this is great" emails Friday, ghost on conversion Monday.
 
-After months of paying an agency, the muscle memory becomes "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable. You are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
+After months of paying an agency, the muscle memory becomes "everyone keeps asking me for money." Asking your customer for money first feels like joining the side that hurt you. The instinct is wrong but understandable.
+
+You are not asking for money. You are asking the customer to defend the spend internally. The defense is the test of whether the pilot is real.
 
 ![Free pilot vs paid pilot - what skin in the game does](free-vs-paid-pilot.svg)
 
@@ -69,15 +77,15 @@ The structure has six sections plus signatures.
 | 6 | Data, IP, termination | Customer keeps their data. You keep the product IP. 30-day written notice to exit. |
 |  | Signature block | DocuSign, HelloSign, or PDF + email confirmation - whichever the customer prefers. |
 
-Total document: one page, around 400 words. v1 needs no lawyer review.
-
-A few clauses deserve more detail than the table can hold.
+Total document: one page, around 400 words. v1 needs no lawyer review.A few clauses deserve more detail than the table can hold.
 
 The **scope of pilot** section is where new founders over-spec. Keep it to three outcomes the customer wants and two specific use cases; anything outside that list stays out of scope until conversion. The list also anchors the Friday demos - if a demo does not advance one of the three outcomes, the demo is off-scope and you say so. Friday cadence comes from the [Friday demo chapter](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/).
 
 The **pilot fee and deposit** clause is what makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
 
-The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Chapter 5.3 outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). If two of three are hit by week 6, the year-one contract auto-converts unless the customer opts out in writing. If fewer than two are hit, both parties walk and the founder retains the deposit as paid consideration for the pilot work.
+The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Chapter 5.3 outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/).
+
+If two of three are hit by week 6, the year-one contract auto-converts unless the customer opts out in writing. If fewer than two are hit, both parties walk and the founder retains the deposit as paid consideration for the pilot work.
 
 The **conversion terms** clause is what the CFO actually approves in week 0. State the year-one price in dollars (never "TBD"), billing cadence (annual or monthly), auto-conversion versus opt-in (auto-conversion recommended), and a 30-day notice period after year one. These numbers are why the deposit can be defended internally before kickoff.
 
@@ -85,7 +93,11 @@ The **conversion terms** clause is what the CFO actually approves in week 0. Sta
 
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
-> **What happens AFTER the deposit clears (the pilot is not the contract).** The signed DPA + cleared deposit kicks off a 6-8 week working relationship. Three things happen each Friday: (1) **Demo the one workflow** from the DPA Section 1 scope - the customer watches you click through it, no slides; (2) **Read the success criteria aloud** (DPA Section 4) and ask "are we on track for X by week 6?" - the customer either says yes, says no, or names a blocker; (3) **Write down what is NOT working** in shared Slack or email by Friday 5pm - if you skip this, week-3 frustrations turn into week-6 surprises.
+> **What happens AFTER the deposit clears (the pilot is not the contract).** The signed DPA + cleared deposit kicks off a 6-8 week working relationship. Three things happen each Friday:
+>
+> 1. **Demo the one workflow** from the DPA Section 1 scope - the customer watches you click through it, no slides.
+> 2. **Read the success criteria aloud** (DPA Section 4) and ask "are we on track for X by week 6?" - the customer either says yes, says no, or names a blocker.
+> 3. **Write down what is NOT working** in shared Slack or email by Friday 5pm - if you skip this, week-3 frustrations turn into week-6 surprises.
 >
 > Two failure modes to watch: the customer goes quiet by week 4 (re-engage with a written status email naming all 3 success criteria), or the success criteria turn out to be wrong (rewrite them with the customer in week 3, do not wait for week 6). The full Friday-demo discipline is in [The Friday Demo Rule chapter](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) - read that BEFORE the first Friday call.
 
@@ -213,8 +225,16 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook including the design-partner pricing model from B2B founders.
 
 > **Done when:** One DPA is signed and the Stripe deposit has cleared in your account.
+>
 > **Next click:** [5.5 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
+>
 > **If blocked:** If the customer says "can we start free and convert later," reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, they are not in your must-have segment - move to the next lead.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Signs a Design Partner Agreement with 3 accounting firms. Deposit: $2,500 each (refundable if product doesn't ship within 90 days). 2 of 3 sign and pay within 48 hours. Revenue: $5,000 in committed deposits.
+>
+> **Mia**: Signs a Design Partner Agreement with 4 parents. Deposit: $50 each (refundable). Writes a simplified DPA. 4 of 4 sign and pay. Revenue: $200. Lower deposit, higher volume - consumer math.
 
 ---
 

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/snap-diff/snap_diff-capybara.git
-  revision: 64c5aef861fee4f80b49fca3841d53c95280c657
+  revision: 5ee298fbc3c1e070c78e3d83862ffd3228204214
   specs:
     capybara-screenshot-diff (1.12.0)
       capybara (>= 2, < 4)
@@ -44,11 +44,11 @@ GEM
     csv (3.3.5)
     docile (1.4.1)
     drb (2.2.3)
-    faraday (2.14.1)
+    faraday (2.14.2)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
-    faraday-net_http (3.4.2)
+    faraday-net_http (3.4.4)
       net-http (~> 0.5)
     ffi (1.17.4)
     ffi (1.17.4-arm64-darwin)
@@ -58,7 +58,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
-    json (2.19.5)
+    json (2.19.8)
     language_server-protocol (3.17.0.5)
     launchy (3.1.1)
       addressable (~> 2.8)
@@ -90,7 +90,7 @@ GEM
       racc
     prism (1.9.0)
     public_suffix (7.0.5)
-    puma (8.0.1)
+    puma (8.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.6)
@@ -121,11 +121,11 @@ GEM
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.47.1, < 2.0)
     ruby-progressbar (1.13.0)
-    rubyzip (3.3.0)
+    rubyzip (3.3.1)
     sanity-ruby (0.8.0)
       activemodel
     securerandom (0.4.1)
-    selenium-webdriver (4.43.0)
+    selenium-webdriver (4.44.0)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)

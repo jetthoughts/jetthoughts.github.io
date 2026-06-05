@@ -37,7 +37,9 @@ related_posts: false
 
 > **TL;DR:** Sixty percent of the fastest-growing B2B startups got their first 10 customers from their personal network. Build a 50-name list, sort into four buckets, send personalized messages with a 90-second Loom.
 
-In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies a simple question: where did your first 10 customers come from? The list was not modest - Figma, Stripe, Slack, Airtable, Shopify, Notion, Front, Loom, and thirteen others at similar scale. He published the answers in [a piece](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses) every non-technical founder should read before the first ad runs. The headline number: roughly 60% of those first customers came from the founder's personal network, around 35% from filtered cold outbound, and only 5% from inbound, press, or launch events.
+In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies a simple question: where did your first 10 customers come from? The list was not modest - Figma, Stripe, Slack, Airtable, Shopify, Notion, Front, Loom, and thirteen others at similar scale.
+
+He published the answers in [a piece](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses) every non-technical founder should read before the first ad runs. The headline number: roughly 60% of those first customers came from the founder's personal network, around 35% from filtered cold outbound, and only 5% from inbound, press, or launch events.
 
 > **Important: Your warm network is for SALES, not for VALIDATION.**
 >
@@ -47,7 +49,9 @@ In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies a simple 
 >
 > If you have not yet run your 10 Mom Test interviews with people who do NOT know you, do that first ([Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)). Come back to this chapter when you are ready to SELL, not to validate.
 
-The instinct of the founder out of a dev-shop burn is to skip the 60%. Asking friends to buy feels biased and asking former colleagues feels like cheating, so the voice in your head says real customers come from paid traffic to a clean landing page. That voice is the same one that told you the MVP would convert at 0.4%. The first 10 customers come from existing trust, and the people most willing to act on that trust are the people who already know you well enough to take a call this week.
+The instinct of the founder out of a dev-shop burn is to skip the 60%. Asking friends to buy feels biased and asking former colleagues feels like cheating, so the voice in your head says real customers come from paid traffic to a clean landing page.
+
+That voice is the same one that told you the MVP would convert at 0.4%. The first 10 customers come from existing trust, and the people most willing to act on that trust are the people who already know you well enough to take a call this week.
 
 This chapter is how you build the list and send the messages.
 
@@ -57,9 +61,13 @@ This chapter is how you build the list and send the messages.
 
 The objection comes up in every founder call: "I do not want to ask friends. It feels like begging."
 
-You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro. The trade is your time and a refundable deposit against a tool that will save them hours from the first week. The people who have the problem take the trade; the people who do not have it were never your customer, so you cut bait fast and move to the next name.
+You are not asking them to buy. You are asking them to be first to try something that solves a problem they already have, at a steep discount, while you fix the rough edges they catch. That is a favor your network owes you about as much as you owe them when they ask for an intro.
 
-Two founders we spoke with after stalled builds both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks. The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
+The trade is your time and a refundable deposit against a tool that will save them hours from the first week. The people who have the problem take the trade; the people who do not have it were never your customer, so you cut bait fast and move to the next name.
+
+Two founders we spoke with after stalled builds both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks.
+
+The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
 
 > **First: count your actually-applicable names. Then pick a path.**
 >
@@ -88,7 +96,11 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 ![The 4-bucket grid - how 50 names get sorted before the first message goes out](network-buckets.svg)
 
-**Where to find the names.** Open LinkedIn. Filter your 1st-degree connections by the criteria that define your must-have segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). For a B2B-marketer must-have segment, filter on title (Marketing, Growth, Demand Gen, RevOps), company size (50-500 employees), and industry (one vertical first, expand later). Export the filtered list with [LinkedIn's data export](https://www.linkedin.com/help/linkedin/answer/a566336) - free for everyone, takes 24 hours but you can use yesterday's. Cross-reference your phone contacts, your email inbox, your last three jobs' Slack workspaces if you still have access, and your YC or accelerator batchmate list if you have one. The 50 names will assemble faster than you expect once the segment filter is set.
+**Where to find the names.** Open LinkedIn. Filter your 1st-degree connections by the criteria that define your must-have segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). For a B2B-marketer must-have segment, filter on title (Marketing, Growth, Demand Gen, RevOps), company size (50-500 employees), and industry (one vertical first, expand later).
+
+Export the filtered list with [LinkedIn's data export](https://www.linkedin.com/help/linkedin/answer/a566336) - free for everyone, takes 24 hours but you can use yesterday's. Cross-reference your phone contacts, your email inbox, your last three jobs' Slack workspaces if you still have access, and your YC or accelerator batchmate list if you have one.
+
+The 50 names will assemble faster than you expect once the segment filter is set.
 
 **Champions deserve extra thought.** Five champions is a high bar. If you cannot name five people who have complained to you about this exact problem in the last twelve months, you may not have a must-have segment at all - go back and re-read your verbatim Q2-Q3 quotes from the [Chapter 5.1 survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/). The champions are the people who said those words to you in real life before the survey existed.
 
@@ -119,9 +131,7 @@ Record one 90-second Loom before you send. A free Loom account gives you 25 free
 
 > **Loom script source: your Ch 5.1 verbatims.** Lines 2-3 of your Loom should NOT be your own marketing voice - they should be the three Q2-Q3 verbatim quotes you exported from the [Ch 5.1 must-have segment test](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) Google Doc. Read those quotes aloud, then point at the product feature that addresses the pain they describe. Recording in the founder's voice is the failure mode Ch 5.1 was designed to prevent; the Loom is the highest-leverage place to use the verbatims you already have.
 
-**Part 4: A specific ask - 15 minutes, paid pilot teaser.**
-
-"15 minutes to walk you through it and see if it solves the [problem]? Open to a paid pilot if it does. Calendly: [link]."
+**Part 4: A specific ask - 15 minutes, paid pilot teaser.**"15 minutes to walk you through it and see if it solves the [problem]? Open to a paid pilot if it does. Calendly: [link]."
 
 The "paid pilot" hint is load-bearing. You are flagging that this is not a free favor and not a free trial. The full mechanic of the paid pilot is the subject of [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - keep the teaser short here.
 
@@ -138,7 +148,9 @@ The sequence in one glance:
 5. **Step 5** - Send the 20 cold messages once the first replies are in.
 6. **Step 6** - Review replies, book demos for the following stretch.
 
-You will hear back from 15-25 of the 50 messages once replies settle. That is a 30-50% response rate on a properly built personal-network list, and it is the highest response rate you will ever see again as a founder. Use it well.
+You will hear back from 15-25 of the 50 messages once replies settle. That is a 30-50% response rate on a properly built personal-network list, and it is the highest response rate you will ever see again as a founder.
+
+Use it well.
 
 > **Slow-path variant for evenings-only founders** (day job + family time): the staggered cadence assumes daytime availability you do not have. One-evening alternative: in a single 2-hour block, spend the first 30 minutes sorting 50 names into the 4 buckets and recording the Loom (you can re-use the same Loom for all 50). Spend the next 90 minutes personalizing each message's first line (their name + the specific connection or shared interest) and sending all 50 in one batch using LinkedIn DM or Gmail with a templated body. You lose the response-rate uplift the staggered send produces (~30-50% becomes ~20-35%) but you complete the whole sequence in one evening instead of needing several separate workday windows. Book demos for evenings or weekend mornings - your respondents will work with your calendar if your first message was specific enough.
 
@@ -218,8 +230,16 @@ Your network is not begging-territory. It is the cheapest customer-acquisition m
 - Y Combinator Library, [Tactical advice for the first sales hire](https://www.ycombinator.com/library/6g-tactical-advice-for-the-first-sales-hire) - YC's collection on founder-led sales, including when the relationship motion has to give way to a structured pipeline.
 
 > **Done when:** 50 names are sorted into 4 buckets, your 90-second Loom is recorded, and the first 15 messages (champions + hot) are sent.
+>
 > **Next click:** [5.4 · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+>
 > **If blocked:** If your warm network is under 15 names after filtering by your must-have segment, skip to Ch 5.5 cold outbound - your personal network won't produce your first customer. Use community fallbacks (YC batch, Indie Hackers, sector Slack) as warm-cold hybrid messages.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: 50-name network list: 5 champions (ex-colleagues who complained about reconciliation for years), 10 hot (controllers from AICPA conferences), 15 warm, 20 cold. Sends Monday. Gets 8 pilot conversations. 5 say yes.
+>
+> **Mia**: 50-name network list: 5 champions (teacher friends with dyslexic kids), 10 hot (parents from Facebook groups who posted about tutoring), 15 warm, 20 cold. Sends Monday. Gets 12 pilot conversations. 7 say yes.
 
 ---
 

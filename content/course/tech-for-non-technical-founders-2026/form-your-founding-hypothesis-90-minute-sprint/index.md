@@ -311,7 +311,7 @@ Refuse to write the sentence because "we don't know enough yet" and you'll spend
 
 A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
 
-> **What AI can and cannot do here.** AI helps draft the customer/problem blanks (Perplexity or Gemini deep-research, or the specialized tools in the sidebar above - VenturusAI, DimeADozen, Preuve AI), score the hypothesis on the four lenses, and name competitors. AI cannot prove a real customer will pay (that is Ch 1.2's smoke test), cannot tell you whether the problem is real (that is Ch 2.1's interviews), and cannot substitute for the Pragmatic-lens gut-check.
+> Before you write the hypothesis: [stress-test the blanks with AI](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/). The sidebar names the tools and what they cost; the field guide shows you how to use them productively.
 
 ## Further reading
 
@@ -320,8 +320,16 @@ A wrong hypothesis killed in five interviews is the cheapest research output you
 - Once you have run the sprint at least once, layered frameworks like Lean Inception, JTBD Canvas, Value Proposition Canvas, and Lean Canvas add useful structure. Skip them on the first pass.
 
 > **Done when:** You have a one-sentence Founding Hypothesis written down, scored ≥14/20 on the four lenses, with no individual lens below 2.
-> **Next click:** [1.2 · Smoke-Test the Hypothesis](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+> **Next click:** [1.2a · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)
 > **If blocked:** If you can't fill the five blanks with specifics, your idea is still too vague. Run the Perplexity deep-research sidebar in this chapter to find real customer complaints to anchor your blanks.
+
+> **Case Study: Tomas & Mia** - two founders you will follow through every chapter.
+>
+> **Tomas** (ReconcileBot, B2B SaaS) filled his hypothesis: "If we help mid-size accounting firm controllers solve manual Stripe-to-QuickBooks reconciliation with an auto-matching engine, they will choose it over exporting to Excel because it cuts 2 hours of Monday work to 90 seconds." He scored 4/5 on customer, 4/5 on problem, 3/5 on approach, 3/5 on money. Weakest blank: money - he doesn't know if firms will pay $200/mo or $2,000/mo. The money test goes into his Module 1 smoke-test design.
+>
+> **Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on problem, 3/5 on approach, 3/5 on money. Weakest blank: approach - she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke-test headline will test both.
+>
+> Follow them into Module 2, where they run their first Mom Test interviews.
 
 ---
 

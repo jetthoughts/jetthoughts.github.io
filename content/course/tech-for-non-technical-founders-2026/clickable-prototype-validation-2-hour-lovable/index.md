@@ -41,7 +41,11 @@ related_posts: false
 
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution.
 
-Those signals do not measure the same thing. One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks. When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate.
+Those signals do not measure the same thing.
+
+One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
+
+When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate.
 
 A throwaway prototype run in front of 5 of your interview subjects would have surfaced that early, not after the real build had landed. The rest of this chapter walks you through running one.
 
@@ -55,7 +59,9 @@ A throwaway prototype run in front of 5 of your interview subjects would have su
 
 A Mom Test interview pulls the interviewee into the past. You ask "tell me about the last time this happened" because you are trying to find out whether the problem actually occurred and how badly it hurt when it did.
 
-A prototype session does the opposite: it puts the interviewee into a possible future and watches what they do. You hand them three screens and watch whether they can figure out which button to click next without you coaching them. That is the signal interviews cannot give you.
+A prototype session does the opposite: it puts the interviewee into a possible future and watches what they do.
+
+You hand them three screens and watch whether they can figure out which button to click next without you coaching them. That is the signal interviews cannot give you.
 
 Three things break at the prototype stage that looked clean in interviews:
 
@@ -67,7 +73,11 @@ Three things break at the prototype stage that looked clean in interviews:
 
 None of these show up in a Mom Test interview - they only appear the moment a real person touches the interface, which is why both validation methods matter.
 
-The prototype session is the third validation pillar. The other two tests cover different ground: the [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) shows whether strangers will click your headline, and the Mom Test shows whether the problem you found is one your interviewees actually feel. Neither answers the question this chapter is built around - whether a real user can find their way through your interface without someone over their shoulder telling them what to do.
+The prototype session is the third validation pillar. The other two tests cover different ground.
+
+The [smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) shows whether strangers will click your headline. The Mom Test shows whether the problem you found is one your interviewees actually feel.
+
+Neither answers the question this chapter is built around - whether a real user can find their way through your interface without someone over their shoulder telling them what to do.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -108,6 +118,8 @@ The step where the value is delivered. For the reconciliation tool: the screen w
 What the user sees after the core action succeeds. A confirmation message, a summary, a next-step prompt. This is what the user walks away holding in their memory. If they cannot describe it 10 minutes after the session, the outcome of the product is not clear.
 
 ### The Lovable Prompt Template
+
+> **📋 Save this template.** Copy the prompt below into your notes. You'll reuse the same structure in [Module 4's real MVP build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - same Lovable tool, same 3-screen skeleton, but with real auth, real database, and real Stripe.
 
 > **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans start at $25/month (Pro)** and are only worth it later if you decide to upgrade for higher message volume - not required for this chapter.
 
@@ -292,7 +304,11 @@ The common fixable failures:
 
 **The "what am I supposed to do?" question.** The user asks you what the product does before touching it. Fix: add one line of microcopy above the primary CTA on Screen 1 that names the action in the user's vocabulary. Not a headline about the product. One instruction sentence.
 
-The throwaway nature of the prototype matters here too. When you find a vocabulary fail on Screen 2 of session 3, you fix the Lovable prompt, run 2 more sessions, and discard the whole project once you've banked the insight. You do not carry the prototype forward. You carry the insight forward - into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/), where it becomes a vocabulary constraint that shapes the real build.
+The throwaway nature of the prototype matters here too.
+
+When you find a vocabulary fail on Screen 2 of session 3, you fix the Lovable prompt, run 2 more sessions, and discard the whole project once you've banked the insight. You do not carry the prototype forward.
+
+You carry the insight forward - into the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/), where it becomes a vocabulary constraint that shapes the real build.
 
 ## What to Do With Results
 
@@ -302,7 +318,9 @@ The throwaway nature of the prototype matters here too. When you find a vocabula
 | **2-3 passes** | Shape is mostly legible but something broke. | Revise one element (vocabulary, Screen 1 layout, or CTA label) and run 2 replacement sessions. One iteration only. |
 | **0-1 pass** | Shape is wrong. Solution concept needs a different starting point. | Read the "what did you expect to see" answers-that is the user's mental model. Return to Chapter 2.1 before restarting. Do not write the brief yet. |
 
-Catching a shape mismatch here costs you a single throwaway prototype. Catching it in Module 4, after you have started the real build, costs the real build. The throwaway prototype buys you the cheaper version of that lesson.
+Catching a shape mismatch here costs you a single throwaway prototype.
+
+Catching it in Module 4, after you have started the real build, costs the real build. The throwaway prototype buys you the cheaper version of that lesson.
 
 ## Artifacts you carry out of Module 2
 
@@ -354,8 +372,16 @@ Nothing from the throwaway prototype carries forward except what you learned.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
 > **Done when:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
+>
 > **Next click:** [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
+>
 > **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Builds a 2-hour Lovable prototype: a dashboard showing mock reconciliation - Stripe transactions on the left, QuickBooks invoices on the right, a "match" button in the middle. 4 of 5 controllers say "when can I use this?" 1 objects: "what happens when the match is wrong?"
+>
+> **Mia**: Builds a 2-hour Lovable prototype: a tutor search page with filters (specialty, location, availability) and mock profiles with reviews. 4 of 5 parents say "I'd use this tomorrow." 1 asks for reviews before booking - she adds them.
 
 ---
 

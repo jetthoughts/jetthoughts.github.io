@@ -1,7 +1,7 @@
 ---
 title: "How This Course Works"
 aliases: ["/blog/how-this-course-works/"]
-description: "The complete journey from idea to first paying customer at a glance: 5 modules, 18 chapters, 6 artifacts, and the AI tools that accelerate each stage."
+description: "The complete journey from idea to first paying customer at a glance: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage."
 date: 2026-06-04
 draft: false
 course_chapter: true
@@ -20,7 +20,7 @@ tags:
 categories: ["Founders"]
 metatags:
   og_title: "How This Course Works - From Idea to First Paying Customer"
-  og_description: "The complete journey at a glance: 5 modules, 18 chapters, 6 artifacts, and the AI tools that accelerate each stage."
+  og_description: "The complete journey at a glance: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage."
 cover_image_alt: "Course overview diagram showing the 5-module journey from idea to first paying customer"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/how-this-course-works/"
 related_posts: false
@@ -38,18 +38,9 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ## The Big Picture
 
-```
-IDEA → HYPOTHESIS → LANDING PAGE → 10 INTERVIEWS → PROTOTYPE → PRODUCT BRIEF → BUILD DECISION → MVP → FIRST PAYING CUSTOMER
-│                │                  │               │              │                │              │         │
-│ Module 1       │ Module 2         │ Module 3      │ Module 4     │ Module 5       │
-│ (3 chapters)   │ (4 chapters)     │ (2 chapters)  │ (4 chapters) │ (5 chapters)   │
-│                │                  │               │              │               │
-│ Artifact:      │ Artifact:        │ Artifact:     │ Artifact:    │ Artifact:      │
-│ Hypothesis     │ Problem          │ Product       │ Live MVP     │ Signed         │
-│ + Smoke Test   │ Statement        │ Brief         │ at real URL  │ Paid Pilot     │
-```
+![5-module pipeline: Module 1 Hypothesis & Smoke Test → Module 2 Validate the Problem → Module 3 Design from Evidence → Module 4 Build It Yourself → Module 5 First Paying Customer](module-pipeline.svg)
 
-Five modules. Eighteen chapters. Six artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
+Five modules. Twenty chapters. Six artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
 
 ---
 
@@ -143,7 +134,8 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 These are the tools the course references - AI research tools, no-code builders, and infrastructure. Most have free tiers sufficient for the validation stage.
 
-### Pre-Hypothesis Research (before Module 1)
+<details>
+<summary>Pre-Hypothesis Research (before Module 1) - 3 tools</summary>
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
@@ -151,7 +143,10 @@ These are the tools the course references - AI research tools, no-code builders,
 | **Trend Seeker** | Semantic search across Reddit/forums for demand signals | Confirm people are actually searching for solutions to your problem | Free daily limit |
 | **Reddinbox** | Automated Reddit/Quora search for high-commercial-intent phrases | Find posts where people explicitly ask "how to automate X" or "sick of doing Y" | Setup required |
 
-### Hypothesis Stress-Testing (during Module 2)
+</details>
+
+<details>
+<summary>Hypothesis Stress-Testing (during Module 2) - 3 tools</summary>
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
@@ -159,7 +154,10 @@ These are the tools the course references - AI research tools, no-code builders,
 | **IdeaProof** | 4-model ensemble (Claude, GPT, Gemini, Grok) cross-validates business logic | After Mom Test interviews, before writing the Product Brief | 70 free credits |
 | **Preuve AI** | Evidence-based scoring from 40+ live data sources with citations | Before building, when you need a data-backed viability check | Free basic score |
 
-### Build & Launch (Modules 1, 4, 5)
+</details>
+
+<details>
+<summary>Build & Launch (Modules 1, 4, 5) - 6 tools</summary>
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
@@ -170,21 +168,9 @@ These are the tools the course references - AI research tools, no-code builders,
 | **Tally + Zapier + Airtable** | "Wizard of Oz" no-code backend stack | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
 | **WorthBuild** | Auto-parses social media for leads, generates personalized outreach messages | After validation, setting up first-customer pipeline (Module 5) | 1 free check/mo |
 
----
+</details>
 
-## The SIPOC View: Your Startup Launch System
-
-The framework below maps the entire pipeline - the Suppliers, Inputs, Process, Outputs, and Customers of your launch. It's a reference. Come back to it when you're deep in a module and want to see how the piece you're working on connects to the whole.
-
-| Element | What It Contains |
-|---|---|
-| **S - Suppliers** (where data comes from) | Reddit, Quora, Hacker News, G2, Capterra · AI providers (Perplexity, IdeaProof, Trend Seeker, ValidatorAI) · Infrastructure (Carrd, Framer, Tally, Notion, Zapier, Lovable, Supabase, Stripe) |
-| **I - Inputs** (what you bring) | One rough idea · 2-4 hours/day · Zero budget (or whatever you're willing to spend) · Mom Test script · 20-30 ICP profiles for first contact |
-| **P - Process** (the 5-module journey) | **Module 1:** Hypothesis + landing page · **Module 2:** 10 interviews + prototype · **Module 3:** Product Brief · **Module 4:** Build decision + MVP · **Module 5:** First paid pilot + outbound channel |
-| **O - Outputs** (deliverables) | Founding Hypothesis · Live landing page · 10 interview transcripts · One-page Product Brief · Live MVP at real URL · Signed paid pilot ($500+ deposit) |
-| **C - Customers** (who benefits) | **External:** Early adopters with acute, unsolved pain who will tolerate an imperfect MVP · **Internal:** You, getting mathematical proof your idea is viable (or isn't) before investing capital in a full build |
-
----
+<div class="gate-callout">
 
 ## The Course's Rule: Kill Bad Ideas Fast
 
@@ -199,6 +185,8 @@ Every module has a gate. If the data doesn't support your hypothesis, you stop a
 | 5 | First paid pilot | Signed DPA + $500+ Stripe deposit received |
 
 If you fail a gate, the system requires you to go back, not forward. Six weeks and zero budget lost is the cheapest failure you'll ever buy. The alternative is years and tens of thousands of dollars building something nobody wants.
+
+</div>
 
 ---
 

@@ -127,7 +127,11 @@ Watch what happens. If 0 of 5 click, the cold message is wrong, not the product 
 
 The build phases above are the BUILD container. The onramp phase is the Module-5 handoff - the step that turns a live staging URL into a live users table. The five cold prospects from Phase 4 are the demand-signal check. The 10 interviewees you ran through Ch 2.3 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words, recently. They are not on your MVP yet. They will not show up unless you invite them by name.
 
-Open your Ch 2.3 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to. Send it as a [Loom](https://www.loom.com) (Loom is a free short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast. Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and click around; 1-2 to become candidates for the [Ch 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. "Create an account" is not "pay" - paid conversion happens in Module 5.
+Open your Ch 2.3 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to.
+
+Send it as a [Loom](https://www.loom.com) (Loom is a free short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast.
+
+Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and click around; 1-2 to become candidates for the [Ch 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. "Create an account" is not "pay" - paid conversion happens in Module 5.
 
 This is the step that closes the gap between Module 4 (MVP shipped) and Module 5 (first paying customer). Without it, you ship a working URL into the silence of a Supabase users table with zero rows. The Module 2 interviewees are the closest 10 people in the world to your ICP - they spent 30 minutes telling you their version of the problem. Inviting them by name is the cheapest first-10-users acquisition the course will name.
 
@@ -176,7 +180,9 @@ Three actions, in order. The first two cost $0.
 
 The [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) artifact is the day-by-day version of this post. Print it before Phase 1. Each day has one small task; each phase has one demo. The artifact removes the "what do I do next" question, which is the reason most small ships actually finish.
 
-Skip the build phases and try to design the perfect first version, and months later you are the one posting in the [salvage-or-rebuild](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold. The shed build never grows that large. Either you reach the architectural ceiling on real users (good problem), or you learn the demand is not there (cheap problem). Both outcomes beat the half-built thing.
+Skip the build phases and try to design the perfect first version, and months later you are the one posting in the [salvage-or-rebuild](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) thread about a 12,000-line vibe-coded codebase that grew faster than the architecture could hold.
+
+The shed build never grows that large. Either you reach the architectural ceiling on real users (good problem), or you learn the demand is not there (cheap problem). Both outcomes beat the half-built thing.
 
 ## When this path ends
 
@@ -196,8 +202,16 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 - Drew Falkman, [Vibe Coding Data-Enabled AI Apps on Maven](https://maven.com/)
 
 > **Done when:** All 5 green lights are lit: Stripe in live mode, custom domain wired, 1 ICP user tested the paywall, zero JS errors on the signup+checkout flow, and a weekly demo recording exists.
+>
 > **Next click:** [4.4 · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
+>
 > **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in Stripe test mode first. The communities section in Part 1 lists free help channels.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Phase 1-3 (6 weeks total with CTO): builds reconciliation dashboard, CTO sets up RLS + Stripe subscriptions + QuickBooks API via n8n. Phase 4: ships to custom domain. 5 green lights passed.
+>
+> **Mia**: Phase 1-3 (4 weeks total): builds tutor search + profiles, sets up parent/tutor login, integrates Stripe booking payments. Phase 4: ships to custom domain. 5 green lights passed.
 
 ---
 

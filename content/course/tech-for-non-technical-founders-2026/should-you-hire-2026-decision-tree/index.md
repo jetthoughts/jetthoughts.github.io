@@ -38,7 +38,9 @@ related_posts: false
 
 Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring is what you do when you hit a specific ceiling signal - not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
 
-Pre-seed founders hiring engineering before a single paying customer is confirmed is the most common build-decision mistake at the idea stage. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
+Pre-seed founders hiring engineering before a single paying customer is confirmed is the most common build-decision mistake at the idea stage. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/).
+
+The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
 
 ![A hand-drawn 2-by-2 decision matrix with four quadrants labeled Validate without code, Self-serve build, Fractional CTO bridge, and Hire a team. Each quadrant lists a first action, cost band, and timeline.](decision-matrix.svg)
 
@@ -50,17 +52,23 @@ Pre-seed founders hiring engineering before a single paying customer is confirme
 >
 > If you cannot answer with a list of buyers who have already paid you, the answer is: not yet. Stay one box left of where you were about to start.
 
-By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.1 technique applied in Ch 2.3 recruitment + interview round) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching. All three are research signals, not builds. The one-page brief (Chapter 3.1) documents what to build. This chapter decides HOW to build it - self-serve, fractional CTO, or hired team.
+By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.1 technique applied in Ch 2.3 recruitment + interview round) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching.
+
+All three are research signals, not builds. The one-page brief (Chapter 3.1) documents what to build. This chapter decides HOW to build it - self-serve, fractional CTO, or hired team.
 
 ## The Airbnb test
 
-Brian Chesky and Joe Gebbia did not write code first. They blew up an air mattress in their living room, took photos with a digital camera, posted three nights at $80 on a hand-rolled WordPress page, and waited. Three guests showed up. They made $240. The product was a website with a payment link. The validation was three strangers paying real money. Paul Graham later wrote about the same instinct in [*Do things that don't scale*](https://paulgraham.com/ds.html): the founders who win are the ones who do the unscalable, manual experiment that proves demand before they industrialize it.
+Brian Chesky and Joe Gebbia did not write code first. They blew up an air mattress in their living room, took photos with a digital camera, posted three nights at $80 on a hand-rolled WordPress page, and waited. Three guests showed up. They made $240.
+
+The product was a website with a payment link. The validation was three strangers paying real money. Paul Graham later wrote about the same instinct in [*Do things that don't scale*](https://paulgraham.com/ds.html): the founders who win are the ones who do the unscalable, manual experiment that proves demand before they industrialize it.
 
 The 2026 version of the Airbnb test takes one afternoon: a Carrd page with a Stripe checkout for an annual plan, a Notion FAQ that explains exactly what the buyer gets, and the link sent to 35 ICP prospects from your [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) outreach list. The result you are watching for is in the next paragraph.
 
 ![A 3-step illustration of the Airbnb test: Carrd page with Stripe checkout (Step 1), send link to 35 ICP prospects (Step 2), refund non-buyers and build only what you sold (Step 3). A sticky note at the bottom warns: if 0 of 35 click, the problem is real but your pitch is wrong, rewrite the page.](airbnb-test.svg)
 
-The signal you are looking for is small. Two paying buyers from 35 cold outreach hits is enough to flip the build switch. We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
+The signal you are looking for is small. Two paying buyers from 35 cold outreach hits is enough to flip the build switch.
+
+We know a B2B SaaS founder who sold five annual contracts at $1,800 each via a Stripe link and a Notion doc before she wrote a line of code. By the time her contractor delivered the v1 web app eight weeks later, she had $9,000 in pre-revenue and a customer-feedback loop already running. The build was constrained by what she had already promised the five buyers, which is the cheapest scope-control mechanism that exists.
 
 Zero clicks from 35 prospects is brutal in the other direction. The problem might be real (you validated it in [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)) but your pitch is wrong, your price is wrong, or the timing is wrong. Find out for $200 instead of $30,000.
 
@@ -175,8 +183,16 @@ Two refundable deposits beat 200 LinkedIn likes.
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. Context for why Path 2 needs the 1-hour-a-month architecture review.
 
 > **Done when:** You have answered the 5 questions on the worksheet and your build path is written at the top.
+>
 > **Next click:** [4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
+>
 > **If blocked:** If your answer routes you to "hire a team" but your runway is under 4 months, you are reading the wrong path. Default to self-serve (Ch 4.3) and revisit hiring when a ceiling signal fires in Ch 4.4.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Runs the decision tree. Validated? Yes. Mid-complexity? Yes - needs Stripe + QuickBooks API. Has $200K+ runway? No - $80K savings. Routes to Fractional CTO bridge (Path 3). Builds core himself in Lovable with 5 hrs/week CTO oversight.
+>
+> **Mia**: Runs the decision tree. Validated? Yes. Simple MVP? Yes - search + profiles + booking. 4-8 weeks free? Yes. Routes to self-serve build (Path 2). Builds everything herself in Lovable + Supabase + Stripe.
 
 ---
 

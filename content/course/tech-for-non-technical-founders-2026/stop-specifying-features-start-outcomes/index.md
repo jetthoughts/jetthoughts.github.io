@@ -177,6 +177,12 @@ When your brief skips the moment, the action, and the result, the engineer or th
 > **Next click:** [4.1 · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
 > **If blocked:** If Claude names 2+ items outside your no-go list when you run the quality-check prompt, your Section 3 is still too vague. Tighten the "When / I want / So I can" shape until Claude's answer stays inside your scope.
 
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Rewrites 3 feature-nouns as job stories. Example: "When a Stripe transaction has no matching QuickBooks invoice, I want to see the top 3 candidate matches so I can confirm in one click - not scan 200 line items." Passes the outcome filter: 4 of 5 sections are now outcomes, not features.
+>
+> **Mia**: Rewrites 3 feature-nouns as job stories. Example: "When I search for a math tutor for my 10-year-old with dyslexia, I want to filter by 'dyslexia-trained' and see reviews from other parents - not scroll 50 generic math tutors." Passes: 5 of 5 sections are outcomes.
+
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

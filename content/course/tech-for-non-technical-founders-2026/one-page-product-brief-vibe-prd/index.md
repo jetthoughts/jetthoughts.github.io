@@ -187,6 +187,12 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 > **Next click:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
 > **If blocked:** If you can't fill Section 3 (what you're building) in one paragraph, your scope is too big. Pick the single smallest workflow one persona can complete end-to-end and cut everything else to the no-go list.
 
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Drafts a 1-page brief that passes the quality gate. Core 3 jobs: (1) auto-match Stripe to QuickBooks, (2) flag the 5% exceptions needing a human, (3) generate a reconciliation report. Out of scope: no ERP integrations, no multi-currency - just matching.
+>
+> **Mia**: Drafts a 1-page brief that passes the quality gate. Core 3 jobs: (1) search tutors by specialty + location, (2) read parent reviews before booking, (3) book + pay in one flow. Out of scope: no in-person coordination, no school district partnerships.
+
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

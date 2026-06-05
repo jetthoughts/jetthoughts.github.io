@@ -63,7 +63,11 @@ related_posts: false
 
 If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 
-"I shipped my MVP on the self-serve stack. Three customers paid before I built the second feature." That was a B2B SaaS founder I spoke with recently. She had never written a line of code. She had spent two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before she touched a single tool. Her build started after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) was nailed down and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routed her to Path 2. The stack she used is the one this post is about.
+"I shipped my MVP on the self-serve stack. Three customers paid before I built the second feature." That was a B2B SaaS founder I spoke with recently. She had never written a line of code.
+
+She had spent two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before she touched a single tool. Her build started after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) was nailed down and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routed her to Path 2.
+
+The stack she used is the one this post is about.
 
 The three layers, top to bottom:
 
@@ -79,7 +83,9 @@ The buyer opens the staging URL → Lovable shows the screens → Supabase store
 
 [Y Combinator's current stance](https://www.ycombinator.com/library/) is direct: validate without code, then ship the simplest version with AI tools. Lovable + Supabase + Stripe became the dominant self-serve path because all three tools were built AI-first, their documentation is exhaustive, and the integrations between them are templated to the point of being boring.
 
-Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal. The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
+Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal.
+
+The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
 
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
 
@@ -106,17 +112,25 @@ Pre-seed founders ask "which framework" before they ask "which job." Three tools
 
 ### Lovable - the UI layer
 
-Lovable is an AI-powered builder for the screens. You describe an app in English: *"a dashboard for fitness coaches to log client check-ins, with a weekly export to CSV"*, and Lovable generates a working web frontend with proper component structure, routing, and form validation. Every save deploys to a public staging URL you can paste into a Slack message. [Lovable's pricing tiers in 2026](https://lovable.dev/pricing) run $0 (Free, capped messages), $25/mo (Pro), $50/mo (Business), and $100/mo (Scale, the tier most paying-MVP founders settle on after the first month). The key thing it does not do well: heavy backend logic, complex auth flows, anything custom on the database side. That is what Supabase is for.
+Lovable is an AI-powered builder for the screens. You describe an app in English: *"a dashboard for fitness coaches to log client check-ins, with a weekly export to CSV"*, and Lovable generates a working web frontend with proper component structure, routing, and form validation. Every save deploys to a public staging URL you can paste into a Slack message.
+
+[Lovable's pricing tiers in 2026](https://lovable.dev/pricing) run $0 (Free, capped messages), $25/mo (Pro), $50/mo (Business), and $100/mo (Scale, the tier most paying-MVP founders settle on after the first month).
+
+The key thing it does not do well: heavy backend logic, complex auth flows, anything custom on the database side. That is what Supabase is for.
 
 ### Supabase - the data layer
 
-Supabase is managed Postgres + auth + file storage + row-level security in one console. Lovable's built-in storage is fine for a prototype; Supabase is what you connect when you have real users whose data has to survive a redeploy. The free tier handles up to 50,000 monthly active users and 500MB of database before you have to upgrade. Pro is $25/month and most pre-seed founders never outgrow it before they hit the architectural ceiling.
+Supabase is managed Postgres + auth + file storage + row-level security in one console. Lovable's built-in storage is fine for a prototype; Supabase is what you connect when you have real users whose data has to survive a redeploy.
+
+The free tier handles up to 50,000 monthly active users and 500MB of database before you have to upgrade. Pro is $25/month and most pre-seed founders never outgrow it before they hit the architectural ceiling.
 
 Supabase auto-generates a REST API and a JavaScript client on top of any table you create, which is what Lovable calls when it needs to read or write a row. [Supabase's 2026 pricing](https://supabase.com/pricing) lists the bands clearly. The auth product replaces 80% of what founders used to pay Auth0 or Clerk for; the row-level security policies replace what a contractor would have hand-coded over two weeks.
 
 ### Stripe - the money layer
 
-Stripe processes the payment. The 2026 default integration for a Lovable app is [Stripe Checkout](https://docs.stripe.com/payments/checkout) (a hosted page Lovable can link to with one line) plus a webhook into Supabase that updates the user's subscription status when the charge succeeds. The fee is the standard [2.9% + $0.30 per transaction](https://stripe.com/pricing) for cards in the US; international, Klarna, ACH, and other rails have their own bands. There is nothing custom about this in 2026. Every founder hits the same Checkout integration; the documentation has been refined over a decade of pre-seed founders running the exact same setup.
+Stripe processes the payment. The 2026 default integration for a Lovable app is [Stripe Checkout](https://docs.stripe.com/payments/checkout) (a hosted page Lovable can link to with one line) plus a webhook into Supabase that updates the user's subscription status when the charge succeeds.
+
+The fee is the standard [2.9% + $0.30 per transaction](https://stripe.com/pricing) for cards in the US; international, Klarna, ACH, and other rails have their own bands. There is nothing custom about this in 2026. Every founder hits the same Checkout integration; the documentation has been refined over a decade of pre-seed founders running the exact same setup.
 
 ### GitHub for version control
 
@@ -204,8 +218,16 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/)
 
 > **Done when:** You understand what each of the three tools does, why the boundaries between them matter, and the 3 pre-flight rules are locked in (brief quality-gate passed, one workflow scoped, GitHub sync on). Ready to open [Part 2: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/).
+>
 > **Next click:** [4.3b · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
+>
 > **If blocked:** If the tools don't click yet, skim the Lovable Discord or Indie Hackers to see real founders shipping with this exact stack. The communities section above lists free help channels.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Fractional CTO greenlights the self-serve stack: Lovable (UI), Supabase (auth + DB), Stripe (payments), n8n (QuickBooks API connector). CTO writes the RLS policies and API patterns. Tomas builds the UI.
+>
+> **Mia**: Picks the full self-serve stack: Lovable (UI), Supabase (auth + DB), Stripe (booking payments). Reads the 12 rules checklist. Passes all 12 rules. Starts building.
 
 ---
 

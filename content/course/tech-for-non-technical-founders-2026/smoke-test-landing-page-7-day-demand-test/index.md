@@ -1,7 +1,7 @@
 ---
-title: "1.2 · Smoke-Test the Hypothesis: The Demand Test"
+title: "1.2b · Smoke Test: Run It and Read the Signal"
 aliases: ["/blog/smoke-test-landing-page-300-dollar-validation/"]
-description: "Put your hypothesis in front of cold strangers as a landing page and watch whether they click - the cheapest demand signal before you build. Build it free with a no-code site builder; decide go / iterate / kill from the data."
+description: "Put your landing page in front of 300 cold strangers, read the conversion rate against the go/iterate/kill decision table, and get the cheapest demand signal before you build."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -10,193 +10,37 @@ slug: smoke-test-landing-page-7-day-demand-test
 keywords:
   - landing page smoke test
   - validate startup idea before building
-  - carrd framer landing page founder
   - cold traffic conversion rate startup
   - pre-MVP validation 2026
 tags:
   - founders
   - non-technical-founder
   - smoke-test
-  - landing-page
   - course-companion
 categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "1.2 · Smoke-Test the Hypothesis: The Demand Test"
-  og_description: "Put your hypothesis in front of cold strangers as a landing page and watch whether they click - the cheapest demand signal before you build. Build it free with a no-code site builder; decide go / iterate / kill from the data."
+  og_title: "1.2b · Smoke Test: Run It and Read the Signal"
+  og_description: "Put your landing page in front of 300 cold strangers, read the conversion rate, and make the go/iterate/kill decision."
 cover_image_alt: "JetThoughts course cover for the smoke test chapter showing a landing page with a CTA button and an ad-spend gauge"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/"
 related_posts: false
 ---
 
-> **Module 1 · Step 2 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Step 2b of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a one-sentence Founding Hypothesis (from Chapter 1.1)
+> **Input:** a live landing page with tracking installed (from [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/))
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 
-> **TL;DR:** Put your hypothesis in front of 300 cold strangers as a landing page. If fewer than 3% click, the hypothesis is wrong - fix it before you build.
+> **TL;DR:** Put your page in front of 300 cold strangers, pick the right ad channel for your ICP, don't touch it mid-flight, read the conversion rate against the decision table. If fewer than 3% click, the hypothesis is wrong - fix it before you build.
 
-A **smoke test** is a landing page that proves demand before you build. You put your hypothesis in front of cold strangers as a real page and watch whether they click - that click, or its absence, is the cheapest **demand signal** you can get.
+> **This is Part 2 of 2.** [Part 1: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) covers picking a no-code builder, the 6 elements that ship, and installing tracking BEFORE ads run. This page assumes your page is live with Clarity and your ad pixel wired. If you haven't done that yet, go back to Part 1.
 
-Build the page on a no-code page builder. Run it with a small ad budget for a faster read, or organic if you'd rather not spend yet - both give you a real signal; pick what fits your situation.
-
-## What a Smoke Test Actually Proves
-
-> **The 14-interview trap: a $38,400 lesson**
-> 
-> Priya, a FinTech founder, ran 14 interviews before the build; 12 said "I would pay for that." She hired a developer, built for four months, shipped in late February, and ran a $420 Meta ad campaign. Landing page conversion: 0.6%. Three signups, all churned. Total cost: $38,400 plus four months.
-> 
-> The 12 "I would pay" votes did not translate to clicks. When the same 12 people had to type an email address into a box on her live landing page, almost none of them did.
-
-Cold ad traffic filters demand the way customer interviews cannot. The smoke test runs between [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) to catch ideas that read well on paper but produce no clicks from a real audience. The click-through rate from cold traffic is the cleanest signal of real demand you can buy.
-
-### What the test proves (and what it doesn't)
-
-What the smoke test does NOT answer: whether the product works (you have not built it), whether people will pay long-term (they are giving up an email, not a credit card unless you upgrade to the fake-Stripe variant in the sidebar), whether they will retain, or whether your price holds. The smoke test answers one question: when a cold stranger sees your hypothesis sentence as a headline, do enough click the CTA (call-to-action button) to suggest a real audience exists.
-
-Run the test before building, or at least ship with a baseline conversion rate to compare against in [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) interviews, and you walk into Module 2 with a real demand number - not the rebuild-it-all decision Priya faced four months and a developer hire later.
-
-### The five-step shape + pre-flight checklist
-
-The five-step shape of the test, before we dig into each step:
-
-1. **Define what you'll measure** - email signup OR Stripe price-button click ($1 pre-sale, optional)
-2. **Build the page** - paste your hypothesis into an AI builder (or a manual builder if you prefer)
-3. **Set up tracking** - GA4 (Google Analytics 4 - free traffic + conversion analytics) + Microsoft Clarity (free heatmap + session-replay tool that shows where visitors click) + ad-platform pixel (a small JavaScript snippet from Meta or Google that lets the ad network measure conversions back to your page), all installed BEFORE ads run
-4. **Buy cold traffic** - on the right channel for your ICP (Ideal Customer Profile - the customer you're targeting); run it long enough for the daily numbers to stabilize (see Budget by channel table below)
-5. **Read the numbers** - go / iterate / kill against the conversion-rate decision table
-
-> **Skip to the action:** [Build the Page Fast](#build-the-page-fast) if you want the builder picks and the what-goes-on-the-page checklist. [Read the Numbers, Decide](#read-the-numbers-decide) if your 300 visits are in and you need the conversion-rate decision table.
-
-> **Budget anchor before you start.** Smallest viable smoke-test budget is **$300-$600** (Meta or Reddit cold traffic to 300 visits). LinkedIn is **$1,800+**. The full per-channel table is in the "Buy Cold Traffic on the Right Channel" section below. If $300 is out of reach, skip paid ads and stick to organic - the chapter's $0 path (NeetoSite + Clarity + organic) still produces a real signal, slower.
+> **Budget anchor before you start.** Smallest viable smoke-test budget is **$300-$600** (Meta or Reddit cold traffic to 300 visits). LinkedIn is **$1,800+**. The full per-channel table is below. If $300 is out of reach, skip paid ads and stick to organic - the chapter's $0 path (Reddit comments + LinkedIn DMs + NeetoSite + Clarity) still produces a real signal, slower.
 
 > **Ad-account setup reality (start Sunday evening, not Monday morning).** Meta Business account verification + ad account creation + payment method review + policy acceptance is a 60-120 minute process for a first-time user, frequently including a 24-48 hour review delay before the account can run ads. If you have never used Meta Ads Manager before, do the account setup Sunday evening so the verification clears by Tuesday. The same applies to Reddit Ads (faster, usually same-day) and LinkedIn Ads (slower, can take 48-72 hours for first-time advertiser verification).
-
-**Before you ship, open these tabs** (most free or low-cost to start):
-
-- [ ] Landing-page builder account (pick one in "Pick your builder" below)
-- [ ] Email tool account on a free tier (most have ≤500 contacts free)
-- [ ] Ad account on the channel you'll pick (covered in the channel-fit table below) - payment method attached
-- [ ] Your Founding Hypothesis sentence written down (from Module 1)
-- [ ] Ad budget approved (size depends on channel - see Budget by channel table; this is the test, not the build)
-- [ ] A calendar window where you will NOT touch the campaign mid-flight (long enough for the daily numbers to stabilize)
-
-If you don't have a Founding Hypothesis sentence yet, stop and run [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) first. Everything below assumes you have one.
-
-## Build the Page Fast
-
-Ship the ugly version. Beautiful pages eat the calendar and the founder loses the thread of what they are testing - so cap design effort at the bare minimum even if you have a designer friend offering help.
-
-### Pick your builder
-
-> The AI landing-page space changes monthly. The **job** is what matters: prompt in your hypothesis, get a publishable page in under an hour, have email capture working before you spend a dollar on ads. If a newer tool clears that bar in 2027 and beyond, swap it in.
-
-**Default: AI-generated from your hypothesis** (recommended for the smoke test)
-
-You already have your Founding Hypothesis sentence and validated problem statement. Paste them as the prompt. Three to try, in order:
-
-1. **Mixo** ([mixo.io](https://www.mixo.io/), $7/mo) - purpose-built for this exact job: idea → site in ~30 seconds, email capture included, honest pricing tiers.
-2. **Manus AI** ([manus.im](https://manus.im/), free tier with 300 daily credits, no card) - independently rated highest output quality in 2026; generates a full polished page with UX writing, animations, testimonials, and a footer from one prompt.
-3. **Durable** ([durable.com](https://durable.com/), free for 3 pages) - fastest "I have nothing → I have a live site" path; AI assistant + CRM + invoicing bundled.
-
-Pick one and ship the page. Don't comparison-shop for a week - you're testing demand, not builders.
-
-*Also exists: **Webflow AI** ([webflow.com](https://webflow.com/ai)) - the AI copy generation is gated behind a paid Workspace plan, so skip unless you're already a Webflow customer.*
-
-**Fallback: manual builder if you want hands-on control**
-
-- **NeetoSite** ([neetosite.com](https://neetosite.com/), free tier) - block-based editor, ships a working page in an afternoon; public URL + mobile responsive on the free tier.
-- **Carrd** ([carrd.co](https://carrd.co), free for 3 sites; Pro $9-49/yr) - the simplest manual builder; pick blocks and ship.
-
-Pick the manual fallback only if you've used a no-code builder before and prefer placing blocks yourself over prompting.
-
-> **The free-subdomain fear (and why it does not matter).** First-time founders often freeze at the idea of shipping a landing page on a free subdomain (e.g., `youridea.neetosite.com`). They think it looks unprofessional and that nobody will take it seriously. The data says otherwise: a landing page on a free subdomain that solves a hot problem converts better than a beautiful custom-domain page that solves nothing. The smoke test is a demand signal, not a brand launch. If your hypothesis is right, the free subdomain won't stop people from clicking. If your hypothesis is wrong, a $15 custom domain won't save it. Ship the ugly version first; buy the domain after the conversion rate proves the idea earns it.
-
-**Skip for now**
-
-- WordPress, Hugo themes, Next.js boilerplates - too much setup for a smoke test
-- Hire a designer or freelancer for this - costs more than the test should validate
-- Wix free (puts platform ads on the page) and Squarespace (no permanent free tier) - kills smoke-test credibility
-
-**How to evaluate a new entrant** (the space evolves fast)
-
-A 2026+ builder earns a slot here if it meets all five:
-
-- Prompt-in → page-out in under 5 minutes, no template picking
-- Free tier or trial with no credit card
-- Built-in email capture (or one-click integration)
-- Mobile-responsive by default (check on your phone before shipping)
-- No platform ads or vendor watermark on the published page
-
-> **Optional: AI deep-research for the competitive headline.** Before you write the headline, run this against Perplexity Pro ($20/mo), ChatGPT Deep Research (Pro tier), or Gemini Deep Research ($20/mo Advanced tier). Triple-click the fenced block to copy:
->
-> ```text
-> Find 5 closest competitors to [MY HYPOTHESIS]. For each: pricing tier, headline value prop, top 3 customer complaints from G2/Capterra/Trustpilot reviews, and the segment they explicitly do NOT serve. If you cannot find a real source for any item, respond with "NOT FOUND - [item]" rather than estimating or paraphrasing. A NOT FOUND response is more useful than a plausible-sounding invention.
-> ```
->
-> **What to paste for [MY HYPOTHESIS]:** the one-sentence Founding Hypothesis from your Ch 1.1 `Founding Hypothesis - [date]` Google Doc (just the single sentence, not the full brief). The "do NOT serve" gap is where your headline wins; most landing pages compete on the same axis as the incumbent (simpler/faster/cheaper) and lose.
->
-> **Free-tier fallback (no paid subscription).** If you can't pay $20/mo for deep-research mode, paste the same prompt into Claude free (claude.ai) or ChatGPT free (chat.openai.com). The output is less exhaustive (these tools cannot browse the web in real time) but the NOT-FOUND escape valve above will tell you which items it could not verify. Treat free-tier output as a starting list to spot-check on Google, not as the final answer.
->
-> **What this is NOT**: a conversion-rate predictor. The AI will quote benchmarks ("3-5% is good for SaaS"); those are useless for your specific hypothesis until you have your own cold-traffic number from this chapter.
-
-### What goes on the page (and what kills it)
-
-The page is short by design. Six elements ship; everything else is a temptation that kills conversion. Scan the status column - ✅ is required, 🚫 is banned.
-
-| Status | Element | Why |
-|---|---|---|
-| ✅ | **Headline** | Names audience + outcome in one sentence. Pull from your [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Bad: "Smart financial tools." Good: "Reconcile Stripe and QuickBooks in 90 seconds, not 4 hours." |
-| ✅ | **Sub-headline** | Names the mechanism in one sentence. Example: "An AI agent that watches your Stripe webhooks and writes QuickBooks entries daily." |
-| ✅ | **Hero visual** | 15-second Loom screen recording (imagined flow + your voice) OR annotated screenshot. Not a Figma mockup. Do not hire a designer. |
-| ✅ | **Value props** | Three or four sentences. Each is a benefit, not a feature. "Daily reconciliation by 6 AM" ✓. "Webhook integration" ✗. |
-| ✅ | **One CTA** | Default: "Get on the waitlist" + email field. Upgraded: "Reserve your spot ($1 today, refunded if we don't ship)" + Stripe button. |
-| ✅ | **Footer disclaimer** | 11px gray text: "Coming soon. Email signup reserves your spot at launch." (Protects against FTC; signals follow-up to interviewees.) |
-| 🚫 | **Multi-tier pricing tables** ($9 Basic / $19 Pro / $49 Team) | You don't know your price yet. A single $1 pre-sale button (Variant A below) is NOT a pricing table - it captures wallet intent without naming a tier. |
-| 🚫 | **FAQ sections** | Waters down the CTA conversion. |
-| 🚫 | **Customer testimonials** | You have no customers. Fake ones are fraud. |
-| 🚫 | **Blog** | A smoke-test page has a short life; no blog needed. |
-| 🚫 | **"About" pages** | Visitor came from ad, not your founder story yet. |
-| 🚫 | **Long "How it works" section** | Longer than value props = you distrust the CTA. |
-
-### Cap design effort hard (and why)
-
-Give yourself a long runway and most of it disappears into visual polish. Cap the build tight and you fix headlines instead - which is what actually moves conversion on a cold-traffic page.
-
-## Set Up Tracking Before You Spend a Dollar on Ads
-
-Spend on cold traffic without tracking and you end the week with one number (how much you spent) and zero answers. Install one free tool before launch and the picture sharpens immediately.
-
-### Minimum viable tracking: Microsoft Clarity
-
-[Microsoft Clarity](https://clarity.microsoft.com/) is free forever and the single most useful tool on this list. Install one snippet - paste it into your builder's "custom code" or "head tag" field - and you get heatmaps plus session recordings of every visitor. After 300 visits you will have 300 session replays; watch ten random ones and the pattern usually shows up within three. Most first-time founders never bother installing Clarity and lose the cheapest qualitative signal a smoke test produces.
-
-> **What to do with the Clarity findings.** When you spot a repeated drop-off (e.g., "every 3rd visitor scrolled past the CTA without clicking"), write the pattern in one sentence and add it to your Ch 1.1 Test Design notes as a hypothesis-weakness flag. If the same flag appears in your Ch 2.1 Mom Test interviews, you have converging evidence that the hypothesis needs the named blank tightened. Without recording it in the Test Design doc, the qualitative signal evaporates between this chapter and the interviews.
-
-*In Carrd the field is Settings > Embed > Header. In Framer it's Site Settings > General > Custom Code > End of head tag. AI builders (Mixo, Manus AI, Durable) have a dedicated "tracking" or "scripts" field.*
-
-### Add these too if your channel needs it
-
-- **Ad-platform pixel** (Meta Pixel, LinkedIn Insight Tag, Reddit Pixel). A "pixel" is a tracking code - despite the name, it's JavaScript, not an image. The ad platform gives you a snippet identical in shape to Clarity's; paste it the same way. Without it, the platform optimizes for cheap clicks instead of actual signups.
-- **Google Analytics 4** - a 5-line snippet, same paste pattern. Overkill for the smoke test but the industry standard you'll want later. Add it if you want richer reporting; skip if you don't.
-
-### The numbers you'll read
-
-| Event | When it fires | What it measures |
-|-------|---------------|------------------|
-| **Page view** | Automatically on landing | Total visitors who reached the page |
-| **CTA click** | Visitor clicks the email-form button | Headline + value-prop strength |
-| **Form submit** | Email address actually submitted | Friction signal (real audience clicks but bounces if the form is annoying) |
-
-**Conversion rate = form submits ÷ page views.** That's the number your Founding Hypothesis is judged against.
-
-### What breaks silently (Marcus's $480 lesson)
-
-Marcus, a B2B SaaS founder, launched $480 of Meta ads before the pixel was wired. His dashboard showed 312 clicks; his Mailchimp account showed 4 emails - the signup form had a broken redirect that Clarity session replay would have caught on the first visitor. He wired the tracking stack, re-ran the same ad set for $260, and finally got real numbers.
-
-The first $480 bought nothing but a lesson: install tracking before you spend a dollar on traffic.
 
 ## Buy Cold Traffic on the Right Channel
 
@@ -219,7 +63,7 @@ CPC = cost-per-click, what one ad click costs you on each platform.
 
 Do not judge a campaign on its first few hours. The opening burst of any paid run attracts the platform's most reactive clickers - the people who click everything - so early conversion almost always over- or under-shoots whatever the steady-state number turns out to be. Let the daily numbers normalize and then stabilize before reading the rate.
 
-### Volume: ≥300 paid visits
+### Volume: >=300 paid visits
 
 Below 300 the sample is too small to distinguish 2% from 5%. With 300 visits a 5% conversion is 15 signups, a 2% conversion is 6 signups, and the difference between 15 and 6 is meaningful. With 100 visits a 5% conversion is 5 signups, a 2% is 2, and you cannot tell whether you have a hot audience or a noisy one. Get to 300 visits before you read the rate.
 
@@ -234,7 +78,7 @@ The dollar cost of 300 visits depends entirely on channel CPC, with a wide sprea
 | Meta / Instagram | B2C consumer | $0.70-$1.90 | $300-$600 |
 | Reddit Ads | Developer tools, niche communities | $1.25-$3.00 | $400-$900 |
 | Google Search | B2B with named search intent | $3-$8 | $1,200-$2,400 |
-| LinkedIn | B2B sold by job title (broad → saturated SaaS like FinTech / Cybersecurity) | $5.50-$22 | $1,800-$6,600 |
+| LinkedIn | B2B sold by job title (broad -> saturated SaaS like FinTech / Cybersecurity) | $5.50-$22 | $1,800-$6,600 |
 
 *Sources: [WordStream Meta benchmarks 2026](https://www.wordstream.com/blog/facebook-ads-benchmarks-2025); [WordStream Google Ads benchmarks 2026](https://www.wordstream.com/blog/2026-google-ads-benchmarks); [The B2B House LinkedIn benchmarks 2026](https://www.theb2bhouse.com/linkedin-ad-benchmarks/); [Stackmatix Reddit Ads 2026](https://www.stackmatix.com/blog/reddit-ads-cost-per-click).*
 
@@ -246,7 +90,7 @@ The dollar cost of 300 visits depends entirely on channel CPC, with a wide sprea
 >
 > Use one of these, run it the same way until the numbers stabilize, read the result against the same table. The smoke test is the test - the channel is the delivery vehicle.
 
-The Presta Startup Validation Framework 2026 frames the rule of thumb: *if you can't validate with the bounded test budget above, you likely can't validate with 100× more.* Refuse to run this test because "I want to save the money for the build" and you save the test budget to spend a much bigger one on a build nobody wanted.
+The Presta Startup Validation Framework 2026 frames the rule of thumb: *if you can't validate with the bounded test budget above, you likely can't validate with 100x more.* Refuse to run this test because "I want to save the money for the build" and you save the test budget to spend a much bigger one on a build nobody wanted.
 
 ## Read the Numbers, Decide
 
@@ -266,8 +110,8 @@ These are aggregate medians across mature products with optimized funnels. Your 
 |---|---|---|
 | <3% | Kill or pivot | Hypothesis is wrong. Rewrite (different audience, mechanism, or outcome). Rewrite your [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). |
 | 3-5% | Iterate the message | Second test with new headline OR new audience. Same product hypothesis, different framing. |
-| 6-10% | Promising | Move to [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Talk to the people who signed up. |
-| 10-20% | Strong signal | Run [customer interviews](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) + [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) in parallel. You have a hot audience. |
+| 6-10% | Promising | Move to [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). Talk to the people who signed up. |
+| 10-20% | Strong signal | Run [customer interviews](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) + [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) in parallel. You have a hot audience. |
 | >20% | Suspicious | Either hot market OR broken ad targeting. Verify with a second cold channel. |
 
 ### Three rules for reading the table honestly
@@ -304,19 +148,18 @@ A sensible three-phase shape for the smoke test:
 
 | Phase | What you do |
 |---|---|
-| Setup | Write the page using your [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Install GA4, Clarity, and the ad-platform pixel; verify all three fire |
+| Setup | Page is live with tracking wired (from [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)). Ad account on your chosen channel, payment method attached |
 | Run | Launch the ad campaign on your chosen channel, then do nothing - no headline rewrites, no bid adjustments, no hourly dashboard refreshes |
 | Read results | Once the numbers have stabilized, read them and make the go / iterate / kill decision |
 
-If go, [customer interviews](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) start next with your signup list as the warmest cold list you have ever had. If iterate, you have one more test ahead of you. If kill, you have a test receipt and a stack of build time saved versus building the product.
+If go, [customer interviews](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) start next with your signup list as the warmest cold list you have ever had. If iterate, you have one more test ahead of you. If kill, you have a test receipt and a stack of build time saved versus building the product.
 
 ### How to actually run it
 
-1. Open your AI builder (Mixo / Manus AI / Durable) or manual builder
-2. Paste your Founding Hypothesis sentence as the prompt (or as the H1 if manual); one edit pass, no endless polishing
-3. Cap the rest of the page (sub-headline, hero visual, 3-4 value props, CTA, footer disclaimer) at a tight, finite block of time
-4. Setup phase: install Microsoft Clarity + the ad pixel (your channel of choice). Add GA4 only if you want richer reporting later.
-5. Run phase: launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: ≥300 visits and ≥6% email conversion to advance** (or ≥5% Stripe-click if you ran the Ch 1.3 variant). 3-5% lands in the "iterate the message" band - not a green light for Ch 2.3 interviews.
+You already built the page in [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/). Now:
+
+1. Ad account ready on your chosen channel? Payment method attached? If not, set it up Sunday evening.
+2. Launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: >=300 visits and >=6% email conversion to advance** (or >=5% Stripe-click if you ran the Ch 1.3 variant). 3-5% lands in the "iterate the message" band - not a green light for Ch 2.3 interviews.
 
 ### When the smoke test isn't the right filter
 
@@ -355,6 +198,12 @@ Three hundred cold visitors with a tracked CTA tells you more about your hypothe
 > **Done when:** 300 cold visitors have seen your landing page and you have a conversion rate you can read against the go/iterate/kill decision table.
 > **Next click:** [1.3 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 > **If blocked:** If $300 for ads is out of reach, use the $0 organic path (Reddit comments + LinkedIn DMs + a free NeetoSite landing page). The signal is slower but real.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Runs LinkedIn ads at $6 CPC. Spends $1,800 for 300 visits targeting "Controller" and "CFO" at mid-size firms. Conversion rate: 8% (24 signups). Strong signal - moves to Module 2.
+>
+> **Mia**: Runs Meta ads at $0.90 CPC. Spends $400 for 300 visits. First conversion rate: 3.5% - lands in the "iterate the message" band. Rewrites headline from "Find a tutor" to "Your kid's dyslexia tutor - 48 hours, parent-reviewed." Re-tests: 6.5%. Strong signal - moves to Module 2.
 
 ---
 

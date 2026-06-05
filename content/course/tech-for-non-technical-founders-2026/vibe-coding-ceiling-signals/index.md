@@ -38,9 +38,13 @@ related_posts: false
 
 > **TL;DR:** Five architectural signals that mean the self-serve stack is maxed out. Two firing for 4+ weeks = graduate to a fractional CTO or hire. Run this check monthly once your MVP is live.
 
-A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $25/month, no coding required). 47 paying coaches on the platform. The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
+A working morning. Your [Lovable](https://lovable.dev) app is live (Lovable is an AI app builder that generates a working web app from a prompt - free trial, paid plans from $25/month, no coding required). 47 paying coaches on the platform.
 
-Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month). The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
+The dashboard takes 11 seconds to load for your largest account, a coach managing 80 clients. The Stripe webhook fired twice on three of yesterday's payments and you spent the morning refunding duplicates.
+
+Two of your users keep landing on each other's data because the [Supabase](https://supabase.com) row-level security drifted last week when a contractor patched the check-in form (Supabase is a database + auth service that Lovable connects to automatically - free tier covers early-stage usage, paid plans from $25/month).
+
+The ceiling is visible now, but it was visible two months earlier too. That's when this check should have caught it.
 
 **Vibe Coding** is shipping a real product with AI-generated code from tools like Lovable, Cursor, or Bolt - no engineer, no dev shop, no months of build. The term comes from indie founder Pieter Levels and describes the 2026 default for solo non-technical founders. This chapter is about the moment the shed stops holding.
 
@@ -52,7 +56,11 @@ Once your build goes live, run this 5-signal check monthly. Each signal that fir
 
 ## Who this 5-signal check is for
 
-The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about. Run this check monthly once your MVP is live and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem. The 5 signals below are the early-warning system. Run them before you need them.
+The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds 80% of pre-seed B2B SaaS workloads. The other 20% is what this post is about.
+
+Run this check monthly once your MVP is live and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem.
+
+The 5 signals below are the early-warning system. Run them before you need them.
 
 ## The 5 architectural ceiling signals
 
@@ -70,21 +78,33 @@ Skim this table to spot which signals might fire for you now; deep-read the ones
 
 ### Signal 1: AI inference cost or rate limits eating your margin (detectable: Week 2-4)
 
-**What you see**: your OpenAI bill for last month was $1,400. You have 200 paying users at $29/month. Your gross margin per user just went negative on the Pro plan. Or: the OpenAI rate limit on your tier hits at 11am on weekdays and your "AI summary" feature returns errors for 90 minutes until usage drops.
+**What you see**: your OpenAI bill for last month was $1,400. You have 200 paying users at $29/month. Your gross margin per user just went negative on the Pro plan.
+
+Or: the OpenAI rate limit on your tier hits at 11am on weekdays and your "AI summary" feature returns errors for 90 minutes until usage drops.
 
 **What is happening underneath**: a Lovable app that calls an LLM on every screen load (or every form submit) racks up per-request cost no founder modeled. The naive integration sends the full context every call, no caching, no model routing, no queue back-pressure when rate limits hit. Anthropic and OpenAI both publish per-token pricing; founders rarely run the per-user math until the credit-card statement arrives.
 
-**Cost of leaving it alone**: a coach-facing AI features startup we spoke with in Q4 2025 was burning $2,200/month on OpenAI for 180 paying users at $19/month. They were $2,000 underwater before they paid for hosting, before the founder paid herself. Eight months of runway went to AI cost they never modeled early enough to change course.
+**Cost of leaving it alone**: a coach-facing AI features startup we spoke with in Q4 2025 was burning $2,200/month on OpenAI for 180 paying users at $19/month. They were $2,000 underwater before they paid for hosting, before the founder paid herself.
 
-**Cost of addressing now**: a Fractional CTO models the unit economics in a spreadsheet (~$800 of work). The conversation that follows is about caching, model routing (cheap-model for the first pass, expensive-model only when needed), token budgets per plan tier, and queue back-pressure that fails gracefully when the rate limit hits. If the math says the unit economics are unfixable at the current price, the conversation is about pricing, not engineering. Better to have it at week four of noticing the problem than at month six.
+Eight months of runway went to AI cost they never modeled early enough to change course.
+
+**Cost of addressing now**: a Fractional CTO models the unit economics in a spreadsheet (~$800 of work). The conversation that follows is about caching, model routing (cheap-model for the first pass, expensive-model only when needed), token budgets per plan tier, and queue back-pressure that fails gracefully when the rate limit hits.
+
+If the math says the unit economics are unfixable at the current price, the conversation is about pricing, not engineering. Better to have it at week four of noticing the problem than at month six.
 
 ### Signal 2: Data model complexity passing 5 entities with deep relations (detectable: Week 4-6)
 
-**What you see**: you ask Lovable to add a "tags" feature to your client list. Lovable rewrites the client detail screen and now the check-in form, the export-to-CSV, and the weekly email digest are all subtly off. You fix the same join error three times in one week. New features take twice as long as they did in month two.
+**What you see**: you ask Lovable to add a "tags" feature to your client list. Lovable rewrites the client detail screen and now the check-in form, the export-to-CSV, and the weekly email digest are all subtly off. You fix the same join error three times in one week.
 
-**What is happening underneath**: Lovable's generated schema treats every prompt as a fresh design. When your data model crosses roughly 5 core entities (`coaches`, `clients`, `check_ins`, `programs`, `tags`, plus their joins), the implicit foreign-key reasoning the LLM holds in its head per-prompt no longer covers the full graph. It writes a query that ignores a join, or it adds a column to one screen but not the migration. The schema decays from edits.
+New features take twice as long as they did in month two.
 
-**Cost of leaving it alone**: a fitness-coaching SaaS we picked up in Q1 2026 had 11,000 lines of Lovable-generated code, no foreign keys, every model named in the singular, and three customer accounts with corrupted data because a webhook had retried a Stripe charge update four times. The founder shipped six features in month four and zero in months five and six because every change surfaced something else.
+**What is happening underneath**: Lovable's generated schema treats every prompt as a fresh design. When your data model crosses roughly 5 core entities (`coaches`, `clients`, `check_ins`, `programs`, `tags`, plus their joins), the implicit foreign-key reasoning the LLM holds in its head per-prompt no longer covers the full graph.
+
+It writes a query that ignores a join, or it adds a column to one screen but not the migration. The schema decays from edits.
+
+**Cost of leaving it alone**: a fitness-coaching SaaS we picked up in Q1 2026 had 11,000 lines of Lovable-generated code, no foreign keys, every model named in the singular, and three customer accounts with corrupted data because a webhook had retried a Stripe charge update four times.
+
+The founder shipped six features in month four and zero in months five and six because every change surfaced something else.
 
 **Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) schema review (~$400 at $200/hour). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow).
 
@@ -100,23 +120,35 @@ Skim this table to spot which signals might fire for you now; deep-read the ones
 
 ### Signal 4: Auth complexity passing the email + OAuth ceiling (detectable: Week 6-10)
 
-**What you see**: an enterprise prospect asks: "do you support SAML SSO with our Okta tenant, with role-based access where managers see their direct reports' data but not the whole organization, and an audit log of every read?" You answer yes because the deal is $50K ARR. You then realize Supabase RLS does not model that role hierarchy without writing your own policy DSL on top. A B2B HR tools founder we spoke with in February 2026 answered yes to exactly this question, spent 6 weeks building a workaround in Supabase, shipped it to the customer, and watched their security team find a read-through gap in the policy on week 2. The contract had a data-handling clause. The workaround had not been reviewed by anyone with security experience.
+**What you see**: an enterprise prospect asks: "do you support SAML SSO with our Okta tenant, with role-based access where managers see their direct reports' data but not the whole organization, and an audit log of every read?" You answer yes because the deal is $50K ARR.
+
+You then realize Supabase RLS does not model that role hierarchy without writing your own policy DSL on top. A B2B HR tools founder we spoke with in February 2026 answered yes to exactly this question, spent 6 weeks building a workaround in Supabase, shipped it to the customer, and watched their security team find a read-through gap in the policy on week 2.
+
+The contract had a data-handling clause. The workaround had not been reviewed by anyone with security experience.
 
 **What is happening underneath**: Supabase's row-level security is excellent for "user X can only read rows where user_id = X." It strains under role matrices (manager-reads-team, admin-reads-org, super-admin-reads-everything), multi-tenant isolation across an organization, SAML federation, and audit trails. Each of those needs first-class engineering, not a configurable policy.
 
-**Cost of leaving it alone**: you write the SOC2 letter and the SAML promise into the contract and ship a workaround. Six months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - 47 startups with public URL-based access controls, BOLA-class vulnerabilities (BOLA = broken-object-level-authorization, the bug where User A can read User B's data by changing a number in the URL), no audit log to diagnose what got read - is what deferred auth complexity produces.
+**Cost of leaving it alone**: you write the SOC2 letter and the SAML promise into the contract and ship a workaround. Six months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - 47 startups with public URL-based access controls, BOLA-class vulnerabilities, no audit log to diagnose what got read - is what deferred auth complexity produces.
 
 **Cost of addressing now**: a Fractional CTO scopes the role matrix on paper (1-2 weeks of part-time work, ~$8-15K), then hands the spec to a hired engineering team for the production build on Devise + Pundit (Rails) or django-allauth + django-guardian. Total auth-shaped rebuild: 4 to 8 weeks.
 
 ### Signal 5: Compliance or security audit landing on the calendar (detectable: Week 8-12+)
 
-**What you see**: a customer's procurement team emails you the SOC2 questionnaire. Or HIPAA: they need a Business Associate Agreement before they can send a single PHI record. Or PCI: you wanted to handle card data directly instead of using Stripe Checkout and now you need to pass a quarterly scan. The self-serve stack cannot pass any of these, not because it is insecure in every way, but because it has no audit log, no documented data handling, no formally reviewed access control.
+**What you see**: a customer's procurement team emails you the SOC2 questionnaire. Or HIPAA: they need a Business Associate Agreement before they can send a single PHI record. Or PCI: you wanted to handle card data directly instead of using Stripe Checkout and now you need to pass a quarterly scan.
 
-**What is happening underneath**: compliance is mostly process plus a small amount of code. The process is documented data flow, access logs, encryption at rest and in transit, vulnerability disclosure, vendor reviews. The code is the implementation underneath. A Lovable + Supabase stack passes some checks (Supabase encrypts at rest, Stripe handles PCI-sensitive paths) and misses others (no audit log, no documented data lifecycle, no senior engineer to sign the security policy). The auditor needs a person to ask "show me how you decommission a leaver's access" and a non-technical founder cannot answer that question alone.
+The self-serve stack cannot pass any of these, not because it is insecure in every way, but because it has no audit log, no documented data handling, no formally reviewed access control.
+
+**What is happening underneath**: compliance is mostly process plus a small amount of code. The process is documented data flow, access logs, encryption at rest and in transit, vulnerability disclosure, vendor reviews. The code is the implementation underneath.
+
+A Lovable + Supabase stack passes some checks (Supabase encrypts at rest, Stripe handles PCI-sensitive paths) and misses others (no audit log, no documented data lifecycle, no senior engineer to sign the security policy).
+
+The auditor needs a person to ask "show me how you decommission a leaver's access" and a non-technical founder cannot answer that question alone.
 
 **Cost of leaving it alone**: you either pass on the deal or sign it with a workaround, which becomes the breach narrative when the customer's auditor finds it 11 months in.
 
-**Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal. Vanta, [Drata](https://drata.com), and [Secureframe](https://secureframe.com) automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
+**Cost of addressing now**: this is a hire-a-team decision from day one, not a bridge. A senior engineer architects the audit surface (audit logs, access controls, vendor inventory, data flow diagrams) before you take the deal.
+
+Vanta, [Drata](https://drata.com), and [Secureframe](https://secureframe.com) automate the SOC2 paperwork; the engineering work underneath them needs a real architect, not a Lovable rebuild. Budget: 8 to 16 weeks to first-time SOC2 readiness, plus ongoing process work.
 
 > **What to bring to Vanta / Drata / Secureframe onboarding from your existing artifacts.** Your [Ch 4.2 ownership audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) third-party-API-keys section is your starting vendor inventory (Lovable, Supabase, Stripe, Resend, OpenAI, etc.). Your one-page brief Section 1 (problem, named persona, data flow) feeds the data-flow diagram. Without these two inputs ready, the first onboarding call burns on collecting basics the audit could have surfaced in 15 minutes.
 
@@ -124,13 +156,19 @@ Skim this table to spot which signals might fire for you now; deep-read the ones
 
 > *"Thank you for the SOC2 / [BAA / PCI] questionnaire. We are pre-SOC2 [or pre-BAA] today and are starting the readiness work in Q3. In the meantime, I can share our security one-pager (encryption at rest via Supabase, payments via Stripe Checkout, data deletion on request) and offer a 90-day pilot with the data-handling restrictions of your choice - including hosting in a sandboxed instance if that helps your security team approve. Would that bridge work while we complete the formal certification?"*
 
-This buys you 60-90 days to start the engineering work. About 30-40% of enterprise security teams will accept a documented bridge for a small pilot; the rest will say "come back when SOC2 is done" - which is the same answer you would get from ghosting them, plus you have preserved the relationship for the rebid 6 months later. Keep the security one-pager as a shared Google Doc with: data flow diagram, encryption-at-rest summary, vendor list (Supabase, Stripe, Lovable, Loom, etc.), and a one-line incident-response contact. 30 minutes to draft; reusable across every enterprise sales conversation.
+This buys you 60-90 days to start the engineering work. About 30-40% of enterprise security teams will accept a documented bridge for a small pilot; the rest will say "come back when SOC2 is done" - which is the same answer you would get from ghosting them, plus you have preserved the relationship for the rebid 6 months later.
+
+Keep the security one-pager as a shared Google Doc with: data flow diagram, encryption-at-rest summary, vendor list (Supabase, Stripe, Lovable, Loom, etc.), and a one-line incident-response contact. 30 minutes to draft; reusable across every enterprise sales conversation.
 
 ## Shed → House → Skyscraper
 
 ![A hand-drawn progression of three buildings: a small shed labeled Lovable + Supabase + Stripe, a two-story house labeled Fractional CTO + 1-2 engineers on Rails / Django / Laravel, and a tall skyscraper labeled Hired team with SOC2 and HIPAA. Arrows between them mark the ceiling-signal moments.](shed-house-skyscraper.svg)
 
-[Rob Walling's shed analogy](https://podcast.creatorscience.com/rob-walling/) from [Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) is the right map. A shed holds one workflow with one persona moving down a single happy path. Add a second story (a second workflow, a second persona, a real data model) and you have a house that needs a structural engineer to plan the load. A skyscraper - compliance-bound, multi-tenant, real-time, AI-heavy - needs a hired engineering team and an architect from day one. You can't add ten more floors to a shed. When the load requires a skyscraper, you start a new building.
+[Rob Walling's shed analogy](https://podcast.creatorscience.com/rob-walling/) from [Should You Hire?](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) is the right map.
+
+A shed holds one workflow with one persona moving down a single happy path. Add a second story (a second workflow, a second persona, a real data model) and you have a house that needs a structural engineer to plan the load.
+
+A skyscraper - compliance-bound, multi-tenant, real-time, AI-heavy - needs a hired engineering team and an architect from day one. You can't add ten more floors to a shed. When the load requires a skyscraper, you start a new building.
 
 ## The decision: stay self-serve or graduate
 
@@ -205,8 +243,16 @@ Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Bot
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder. Read before any framework decision.
 
 > **Done when:** You have scored all 5 signals (green/yellow/red) with dated observation windows and set a recurring monthly calendar block titled "Vibe-coding 5-signal check."
+>
 > **Next click:** [5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+>
 > **If blocked:** If 2+ signals are red but you are not sure whether to hire, book one free Fractional CTO call. The first call is usually free and the diagnosis alone is worth the hour.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: At ~50 firms, 2 ceiling signals fire: reconciliation matching has race conditions, n8n QuickBooks connector breaks on API changes. Graduates from self-serve → fractional CTO → hired team. CTO already in place, transition is smooth.
+>
+> **Mia**: At ~200 parents, 2 ceiling signals fire: search takes 4 seconds, booking confirmation emails show wrong timezone. Graduates to fractional CTO at 5 hrs/week to fix the search query and timezone logic.
 
 ---
 

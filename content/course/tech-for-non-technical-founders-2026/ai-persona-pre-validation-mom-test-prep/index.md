@@ -43,7 +43,9 @@ related_posts: false
 
 A founder we worked with ran five Mom Test interviews with a question list she'd written herself. Three said "sounds great!" She called it weak validation and almost pivoted.
 
-Before she booked the next five slots, she ran a focused rehearsal with [Claude](https://claude.ai) (an AI chat assistant from Anthropic - free tier covers a handful of rehearsal sessions per day; ChatGPT works the same way) using a persona matching her ICP. The out-of-character diagnosis flagged her second question immediately: "Would you use a tool like this?" - hypothetical, pitch-shaped, generates polite yes from anyone. She rewrote her questions to anchor in past events.
+Before she booked the next five slots, she ran a focused rehearsal with [Claude](https://claude.ai) (an AI chat assistant from Anthropic - free tier covers a handful of rehearsal sessions per day; ChatGPT works the same way) using a persona matching her ICP.
+
+The out-of-character diagnosis flagged her second question immediately: "Would you use a tool like this?" - hypothetical, pitch-shaped, generates polite yes from anyone. She rewrote her questions to anchor in past events.
 
 On the next round, the real interviewees pushed back: "no, that's not actually my problem" - and then they volunteered the actual problem. The rehearsal had told her the hypothesis was probably right and the questions were probably broken. The real interviews confirmed both.
 
@@ -119,7 +121,9 @@ Stay in character for this entire conversation. Do not break character to explai
 
 > **Heads up:** Claude is trained to be helpful, which means it tends to give reasonable answers even to broken questions. Don't read a coherent persona answer as proof the question works. Read Claude's out-of-character diagnosis instead - the in-character answer reflects what Claude thinks a polite persona would say; the out-of-character note reflects what the question is actually asking.
 
-Build 3 distinct personas before you start - not 3 variations of the same person. If your ICP is "ops managers at B2B SaaS companies," your three personas might be: one at a 10-person seed startup (different budget, different urgency), one at a 60-person Series A (different process maturity), and one at a 200-person growth-stage company (different buying committee). Each persona has different objections, different workarounds, and different reasons to care. A question that works cleanly on one persona will collapse on another - and that collapse tells you something before you spend real calendar slots finding out.
+Build 3 distinct personas before you start - not 3 variations of the same person. If your ICP is "ops managers at B2B SaaS companies," your three personas might be: one at a 10-person seed startup (different budget, different urgency), one at a 60-person Series A (different process maturity), and one at a 200-person growth-stage company (different buying committee).
+
+Each persona has different objections, different workarounds, and different reasons to care. A question that works cleanly on one persona will collapse on another - and that collapse tells you something before you spend real calendar slots finding out.
 
 ## Run the rehearsal session
 
@@ -217,7 +221,11 @@ Reuse the rehearsal stack when a round of real interviews ends in partial signal
 | **Product-direction pivot emerges** (round 1 surfaces a different problem) | Build a persona around the new problem before rebuilding the question list from scratch | Spinning up a persona costs 5 minutes; spinning up another 10 interview slots costs a week |
 | **Considering a customer pivot between validation rounds** | Compare question performance across both the old ICP persona and the new one before committing | Reveals which questions survive the ICP shift and which ones were persona-specific |
 
-One constraint worth naming: the rehearsal only surfaces signal that's already in your mental model of the customer. Claude constructs the persona from what you tell it. If your ICP description is wrong - the wrong role, the wrong company size, the wrong industry detail - the persona will be wrong in the same direction, and the rehearsal will give you false confidence. This is the other reason real interviews stay irreplaceable: a real customer can tell you your ICP description is wrong, while Claude can only simulate the ICP you described.
+One constraint worth naming: the rehearsal only surfaces signal that's already in your mental model of the customer. Claude constructs the persona from what you tell it.
+
+If your ICP description is wrong - the wrong role, the wrong company size, the wrong industry detail - the persona will be wrong in the same direction, and the rehearsal will give you false confidence.
+
+This is the other reason real interviews stay irreplaceable: a real customer can tell you your ICP description is wrong, while Claude can only simulate the ICP you described.
 
 > **Module 2 AI critic/simulator block** - This chapter IS the block.
 >
@@ -245,8 +253,16 @@ The rehearsal does not validate the hypothesis. It validates that your questions
 - Anthropic, [Claude prompting guide](https://docs.anthropic.com/claude/docs/intro-to-prompting) - persona setup, role-play, and breaking character cleanly.
 
 > **Done when:** You have a sharpened question list (5-7 solid questions) and an Objection Tracker with the top 3 objections to listen for.
+>
 > **Next click:** [2.3 · Find 10 People With the Problem in 2026](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+>
 > **If blocked:** If all 3 personas produced identical answers, your persona descriptions are too generic. Rewrite them with sharper role, company-size, and urgency differences before continuing.
+
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Runs his draft questions through a Claude persona - a skeptical controller who's been pitched 3 automation tools and rejected all of them. Persona flags 2 leading questions. Sharpens them to anchor in specific past reconciliation events.
+>
+> **Mia**: Runs her draft questions through a Claude persona - a parent of a 10-year-old with ADHD burned by a tutoring app before. Persona flags 1 question that assumes the parent has time to search. Adds: "What happened the last time you tried to book a tutor during a workday?"
 
 ---
 

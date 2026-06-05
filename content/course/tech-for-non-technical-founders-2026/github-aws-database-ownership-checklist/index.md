@@ -197,6 +197,12 @@ Ownership audit done right means no Marcus stands between you and a 9pm Tuesday 
 > **Next click:** [4.3a · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
 > **If blocked:** If the AWS root email belongs to someone else and they won't cooperate, start the AWS support recovery process immediately (3-5 business days). Do not build on an account you don't own.
 
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Audits all 12 items. Finds GitHub under his personal email (good), but no AWS account (creates one). Domain auto-renewing on a registrar he forgot the password to. Spends a Friday fixing all three. Now owns everything.
+>
+> **Mia**: Audits all 12 items. Owns her domain (good), has personal GitHub but no org (creates one). No secrets manager - creates a 1Password vault. Spends a Friday afternoon. Now owns everything.
+
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

@@ -218,6 +218,12 @@ Treat the answer as a stop sign rather than a market-research instrument. Under 
 > **Next click:** [5.2 · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)
 > **If blocked:** If under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3 outreach playbook and re-run the survey.
 
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Runs the Sean Ellis survey on his 24 smoke-test signups. Segments by firm size: 50-150 employee firms score 45% "very disappointed" without it. 150-200 employee firms score 28% - they have in-house tools. Narrows to 50-150 employee firms.
+>
+> **Mia**: Runs the Sean Ellis survey on her 21 smoke-test signups. Segments by child age: parents of kids 8-14 with dyslexia score 52% "very disappointed." Parents of kids 14+ score 31% - they've found workarounds. Narrows to parents of kids 8-14 with dyslexia/ADHD.
+
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

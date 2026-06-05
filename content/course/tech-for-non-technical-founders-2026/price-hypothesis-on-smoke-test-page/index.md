@@ -182,6 +182,12 @@ An email signup costs the visitor nothing; a Stripe click costs them the moment 
 > **Next click:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
 > **If blocked:** If your Stripe account verification is delayed, build the rest of the page without the button. The email-only smoke test in Ch 1.2 still produces a demand signal while Stripe processes your account.
 
+> **Case Study: Tomas & Mia**
+>
+> **Tomas**: Adds a Stripe price button at "$200/mo - early access." 5% of visitors click (15 of 300). Of those, 3 complete the $1 pre-sale. Weak price signal - won't sustain $200/mo without the product in hand.
+>
+> **Mia**: Adds a Stripe price button at "$25/mo - early access." 6% of visitors click (18 of 300). Of those, 6 complete the $1 pre-sale. Stronger signal than Tomas - parents are used to paying for tutoring.
+
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
