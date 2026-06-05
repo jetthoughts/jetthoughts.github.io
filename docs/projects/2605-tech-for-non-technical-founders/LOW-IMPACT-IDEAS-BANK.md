@@ -1,7 +1,7 @@
 # Low-Impact Ideas Bank — 2605 Tech for Non-Technical Founders
 
 **Created**: 2026-06-04 (post-consolidation)
-**Last Updated**: 2026-06-04 (post-Ch-4.3 split - 14 items applied, 11 deferred/skipped)
+**Last Updated**: 2026-06-05 (post-validation-tools re-research — 17 items applied, 8 deferred/skipped)
 **Purpose**: Collect all dropped, deferred, P3, and low-priority ideas that have been mentioned across reviews, research, and feedback but aren't actively tracked in TASK-TRACKER.md. This prevents ideas from being lost and gives future agents a single place to find them.
 
 **How to use**: When starting a new work cycle, scan this bank for ideas that have become relevant due to new context, user direction, or data.
@@ -27,6 +27,9 @@
 | Ch 5.5 premature reading gate (40.06) | Ch 5.5 — Stronger gate language after module header | 2026-06-04 |
 
 | Ch 4.3 split into two sub-pages (40.05) | Ch 4.3a (Tools & Setup) + Ch 4.3b (Build Phases) | 2026-06-04 |
+| VenturusAI strategic frameworks (10.08) | Ch 1.1 — Specialized alternatives sidebar (free, SWOT/PESTEL/Porter's Five Forces) | 2026-06-05 |
+| DimeADozen validation reports (10.08) | Ch 1.1 — Specialized alternatives sidebar ($9 Starter, 7-section brief) | 2026-06-05 |
+| Preuve AI data-backed validation (10.08) | Ch 1.1 — Specialized alternatives sidebar (free, 50+ live data sources) | 2026-06-05 |
 
 ---
 
@@ -52,11 +55,11 @@
 ## From Research (10-19) — Remaining
 
 ### 10.08 AI Validation Tools Analysis
-- **Preuve AI evidence-based reports**: For pitch decks, post-PMF stage. Deferred — no natural chapter home yet.
+- **VenturusAI**: ✅ Applied — Ch 1.1 specialized alternatives sidebar (free tier, SWOT/PESTEL/Porter's Five Forces).
+- **DimeADozen**: ✅ Applied — Ch 1.1 specialized alternatives sidebar ($9 Starter report).
+- **Preuve AI**: ✅ Applied — Ch 1.1 specialized alternatives sidebar (free tier, 50+ live data sources with source linking).
 
 ### From Russian-Language Research (`docs/_research/`)
-- **VenturusAI**: PESTEL + Porter's Five Forces. Skip — academic-level, not practical for MVP-stage founders.
-- **DimeADozen**: 40-page VC reports at $129. Skip — not relevant for $0-budget path.
 - **Build in Public**: Distribution channel via X/LinkedIn. Skip — requires founder personality fit, too niche.
 
 ---
@@ -86,4 +89,4 @@
 - **Canonical architecture**: `30-39-architecture-design/30.02-adr-content-execution-readiness.md`
 - **All reviews**: `40-49-review/`
 - **All research**: `10-19-research/`
-- **Applied items**: See table above — 14 items moved from bank to course chapters
+- **Applied items**: See table above — 17 items moved from bank to course chapters

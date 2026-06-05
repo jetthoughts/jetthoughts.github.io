@@ -101,6 +101,16 @@ Three or four reads is normal. That is the work.
 > **What to paste for [your candidate ICP]:** the customer role you circled in Step 1 of this sprint (e.g., "solo chiropractors managing insurance claims" not "small businesses"). If you have not yet finished Step 1, do it first - this sidebar runs AFTER Step 1.
 >
 > The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **Save the competitor URLs Claude/Perplexity names; you will reuse them as the two competitor inputs in the Ch 2.3 ICP-map prompt.** **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
+>
+> **Specialized alternatives (free or cheaper than a Perplexity sub).**
+>
+> **[VenturusAI](https://venturusai.com)** (free tier, no credit card) runs your idea through SWOT, PESTEL, and Porter's Five Forces frameworks. It spots structural blind spots in your business model before you invest time in interviews. Use it when you want a formal strategy lens on your hypothesis - it is the closest thing to a free MBA-level business-plan review in 30 seconds.
+>
+> **[DimeADozen](https://dimeadozen.ai)** ($9 one-time for the Starter report) produces a 7-section validation brief covering market viability, kill-risks, monetization, timing, and execution strategy. The $9 Starter is cheaper than one month of any AI subscription and gives you a structured second opinion on whether the idea has legs. Skip the $129 Entrepreneur tier - at pre-interview stage, the Starter report is enough.
+>
+> **[Preuve AI](https://preuve.ai)** (free tier available) scans 50+ live data sources (Crunchbase, Google Trends, Reddit, Product Hunt, G2) and links its findings to the original data. Unlike general-purpose LLMs that hallucinate market facts, Preuve shows you the source. Run it when you want data-backed evidence that real people are discussing the problem you plan to solve.
+>
+> All three tools are pre-interview research aids. They sharpen your hypothesis before you book the first call. None of them replaces talking to real humans in Ch 2.1.
 
 ## The Six-Step Sprint
 
