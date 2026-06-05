@@ -1,13 +1,10 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-04 (40.06 Sam journey report complete)
-**Status legend**: Planned | Drafting | In review | Done | Paused | Dropped
-
----
+**Last Updated**: 2026-06-04 (Post-consolidation: merged recommendations from 40.04/40.05/40.06/10.08)
 
 ## Current Active Scope
 
-This tracker only covers post-course cleanup required before launch.
+This tracker is the **single source of truth** for all post-ship improvements. Recommendations from review files (40.04, 40.05, 40.06) and research (10.08) have been consolidated here.
 
 Current source of truth:
 
@@ -15,6 +12,9 @@ Current source of truth:
 - Project context and integration rules: `PROJECT-INDEX.md`
 - ICP lens: `docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
 - Voice lens: `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
+- Research: `10-19-research/10.08-validation-tools-analysis-2026.md`
+- Course overview: Chapter 0 (`how-this-course-works`) + landing page (`_index.md`)
+- Low-impact ideas: `LOW-IMPACT-IDEAS-BANK.md` (this directory)
 
 ---
 
@@ -46,6 +46,10 @@ Target: 8.5/10 before launch.
 | P2 | Tighten practical proof in weaker modules | Planned | Early validation and market-type chapters need more concrete founder examples, exact time boxes, and decision thresholds. |
 | P2 | Collapse outreach-sequence-template variant runs | Planned | 2026-05-23 audit found 3 variant groups rendered as 3 separate blockquote boxes each (LinkedIn DM openers ×3, cold-email subject lines ×3, possibly Day 1/3/7 email sequence ×3). Merge each group into ONE blockquote (use `>` blank-line separators) per the no-stacked-quotes rule. Lower priority because it's an artifact/template page, not a numbered linear chapter. |
 | P2 | De-stack + rebalance "$0 path" callouts (outbound, self-serve-mvp) | Planned | 2026-05-23: two chapters still have a "$0 path / $0 outbound stack" blockquote callout immediately under the Module banner (top-stack). Bundle with the deferred Module 4/5 budget-rebalance pass - de-stack to plain prose AND rebalance the framing per `feedback_budget_stance_free_and_paid_equal` (free and paid as equal options, reader chooses; don't lead with "$0 first"). |
+| P3 | Add Wizard of Oz Concierge MVP path to Ch 4.3 (10.08 Gap #2) | Planned | Add Tally + Zapier + Airtable as $0 no-code backend alternative to Lovable build for founders who should validate deeper before coding. Documented in 10.08-validation-tools-analysis-2026.md §Gap 2. |
+| P3 | Add echo chamber warning to Ch 5.3 and Ch 2.3 (10.08 Gap #3) | Planned | Warn that warm network is for SALES (valid) not VALIDATION (invalid echo chamber). Add cross-reference from Ch 2.3 warning against interviewing only other founders. Documented in 10.08 §Gap 3. |
+| P3 | Add Loom video outreach tactic to Ch 5.2 or 5.5 (10.08 Gap #4) | Planned | 10-minute personalized B2B video audits with higher conversion than cold email. Low effort, high differentiation. Documented in 10.08 §Gap 4. |
+| P3 | Add Engineering as Marketing to Ch 5.2 (10.08 Gap #5) | Planned | Free No-Code micro-tools (calculators/checklists) for $0 CAC organic SEO. Distinct from content marketing. Documented in 10.08 §Gap 5. |
 | Dropped | Add time-badge to each chapter header | Dropped (2026-06-02) | Each chapter needs a "**Time**: ~45 min" badge at the top so the reader can plan their session. 18 chapters. Dropped per user direction — time anchoring contradicts the ADR §1 policy of avoiding speculative effort estimates. |
 | P1 | Build companion-post FAQ collection | New (ICP walkthrough 10.06) | Create a curated FAQ linking 8 companion posts as "read next" sidebars in relevant chapters. Currently only linked via course-frame nav. |
 | P1 | Rescue-path routing audit | New (ICP walkthrough 10.06) | Audit all 5 module-start chapters for consistent burned-founder rescue-path routing. Chapter 1.1 had routing blocks added then removed; ensure uniform approach across spine. |

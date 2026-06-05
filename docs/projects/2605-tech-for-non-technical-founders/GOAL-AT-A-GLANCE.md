@@ -4,8 +4,8 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last restructured**: 2026-05-20 (Module 1+2 merged into single Hypothesis & Smoke-Test module; 6 modules → 5 modules; $0-budget reframe applied; YAML `goal` field added per chapter; Module → Chapter nomenclature unified)
-**Status**: 🎉 Course shipped end-to-end (5 modules · 18 linear chapters + 1 glossary · 15 artifacts as of 2026-05-20). Live at `/blog/tech-for-non-technical-founders-2026/`.
+**Last restructured**: 2026-06-04 (Doc consolidation: archived 20.07 + 40.02, cross-referenced reviews, created LOW-IMPACT-IDEAS-BANK, added Chapter 0)
+**Status**: 🎉 Course shipped end-to-end (5 modules · 18 linear chapters + 1 overview chapter + 1 glossary · 15 artifacts as of 2026-06-04). Live at `/course/tech-for-non-technical-founders-2026/`.
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
 
@@ -56,7 +56,7 @@ Each module has an **input** (what the reader brings from the previous module), 
 | 4 | **Choose Your Build** | Build decision (self-serve or hire) + Day-1 ownership audit + live MVP at staging URL (Lovable + Supabase + Stripe under $50/mo). | 4 |
 | 5 | **First Paying Customer** | First signed paid pilot ($500 Stripe deposit) + repeatable outbound machine. Free-tier tool stack. | 5 |
 
-**Total: 18 linear chapters + 1 glossary** ("Five Tech Words to Stop Nodding At").
+**Total: 1 overview (Chapter 0) + 18 linear chapters + 1 glossary** ("Five Tech Words to Stop Nodding At"). Start at [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) for the full route at a glance: 5-module flow, AI tool stack, SIPOC system map, and module gates.
 
 **Going further (after Module 5 gate)**: continuation chapters for churn triage, pivot or persevere, hire-track supplementary reference, management chapters (Friday Demo Rule, Weekly Dev Report, etc.), and AI-era chapters (Agency AI Questions, Token Bill, Slopsquatting). These are NOT in the linear sequence.
 
@@ -88,10 +88,9 @@ Each module has an **input** (what the reader brings from the previous module), 
 - Course-chapter visibility filter excludes spine from `/blog/` index
 
 ### 🔲 Open work (see TASK-TRACKER.md)
-- **P0**: Repair missing artifact link (`/blog/founding-hypothesis-worksheet/` 404 — actually no chapter currently links to it, low scope), remove unfulfilled download promises (already done)
-- **P1**: Burned-founder fast path on landing page, Founder Control Dashboard artifact, inline-templates audit, AI critic blocks per module (5 blocks), build 4 source-of-truth validators (Kaizen Muda outcome)
-- **P2**: "Done when / Next click / If blocked" endings on every chapter (18 chapters), tighten practical proof in weaker modules
-- **P3**: Cover regen for ~30 companion posts, decision-doc cleanup
+- **P1**: Burned-founder fast path on landing page, Founder Control Dashboard artifact, downloadable PDF templates, companion-post FAQ collection, rescue-path routing audit
+- **P2**: Skip-to-action anchor links, burned-founder Module 2 callouts, TL;DR summaries, completion criteria per chapter, tighten practical proof
+- **P3**: Cover regen for ~30 companion posts, Wizard of Oz Concierge MVP, echo chamber warning (done in Ch 5.3), Loom outreach, Engineering as Marketing
 
 ### Phase pipeline
 - LinkedIn promotion per post (Paul Keen voice) — ongoing
@@ -115,10 +114,13 @@ Each module has an **input** (what the reader brings from the previous module), 
 ## 🔗 NAVIGATION
 
 - **Source of truth (chapter order + goals)**: `../../data/course_sequence.yaml`
-- **Research**: `10-19-research/10.01-course-program-landscape.md` + `10.02-curriculum-sequence-synthesis.md` + `10.05-content-organization-patterns-2026.md` + `10.06-icp-persona-course-walkthrough.md`
-- **Strategy**: `20-29-strategy/20.01-course-modules.md` + `20.02-positioning-vs-courses.md` + `20.07-content-plan-tnt-founders-2026.md` (historical, superseded by current YAML) + `20.10-sequence-decision-validate-vs-smoke-test.md`
-- **Execution / lead magnets**: `50-59-execution/lead-magnets/`
-- **Open work**: `TASK-TRACKER.md`
-- **Master content plan (parent)**: `../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
+- **Research**: `10-19-research/10.01-course-program-landscape.md` + `10.02-curriculum-sequence-synthesis.md` + `10.08-validation-tools-analysis-2026.md`
+- **Reviews**: `40-49-review/40.03-sipoc-course-logic.md` (canonical SIPOC) + `40-49-review/40.04-execution-readiness-sweep-2026-06.md` + `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` + `40-49-review/40.06-sam-customer-journey-report-2026-06.md`
+- **Strategy**: `20-29-strategy/20.01-course-modules.md` + `20.02-positioning-vs-courses.md` + `20.10-sequence-decision-validate-vs-smoke-test.md`
+- **Open work**: `TASK-TRACKER.md` (single source of truth for all active tasks)
+- **Low-impact ideas**: `LOW-IMPACT-IDEAS-BANK.md` (deferred, dropped, and P3 ideas)
+- **External research**: `../../docs/_research/` (Russian-language market research)
 - **Voice**: `../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
 - **ICP**: `../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
+
+> **Note**: The parent content plan (`2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`) is the site-level SEO calendar. The course shipped independently on its own timeline and does not depend on that plan. The archived `_ARCHIVED_20.07-content-plan-tnt-founders-2026.md` was a 26-post site-level content draft, not a course plan.
