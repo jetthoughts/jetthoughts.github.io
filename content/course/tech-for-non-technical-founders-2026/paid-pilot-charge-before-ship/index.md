@@ -35,6 +35,8 @@ related_posts: false
 >
 > **Output:** 1 signed paid pilot before any new code ships
 
+> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA with a refundable Stripe deposit is. Charge 10-30% of year-one ACV before kickoff - it puts the CFO question on Week 0 instead of Week 8.
+
 In late 2025 a HealthTech founder ran a six-week free pilot with a 40-bed clinic she had met at a conference. The clinic loved it, the shared Slack channel had 47 messages of enthusiasm before week 4, and the day the pilot ended she sent the year-one contract. The reply came back three weeks later: "We're going to revisit at the next budget cycle." There was no next budget cycle - the clinic moved on. In March 2026 she shipped the same product to a different customer who paid a $1,200 deposit at the start of the pilot, and that customer closed the year-one contract on day one. Same product, same buyer profile, different deposit timing.
 
 Below is the playbook the second founder followed: a one-page Design Partner Agreement, a 15-minute Stripe Checkout setup, and the pricing math that puts the founder in the conversation instead of the agency.
@@ -209,6 +211,10 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 - Steve Blank, [The Four Steps to the Epiphany](https://steveblank.com/2010/01/06/the-four-steps-to-the-epiphany/) - the foundational text on Customer Validation; Blank argues paid pilots are how you separate real demand from polite enthusiasm.
 - Stripe, [Payment Links documentation](https://stripe.com/docs/payment-links) - the official Stripe Checkout setup. 15-minute integration with no engineering work required.
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook including the design-partner pricing model from B2B founders.
+
+> **Done when:** One DPA is signed and the Stripe deposit has cleared in your account.
+> **Next click:** [5.5 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
+> **If blocked:** If the customer says "can we start free and convert later," reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, they are not in your must-have segment - move to the next lead.
 
 ---
 

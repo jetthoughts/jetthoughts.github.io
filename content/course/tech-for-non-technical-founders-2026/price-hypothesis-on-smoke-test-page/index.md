@@ -34,6 +34,8 @@ related_posts: false
 >
 > **Output:** a price hypothesis with a measured click-to-payment signal
 
+> **TL;DR:** An email signup costs nothing; a Stripe click costs the moment of typing a card number. Add a price button to your smoke-test page and measure whether anyone will pay, not just whether anyone is curious.
+
 > **Heads-up: Stripe verification takes 1-3 business days.** If you've never had a Stripe account, start the signup TONIGHT - not the morning you plan to add the price button. You can build the page without Stripe (use a placeholder button), but you cannot accept live payments until Stripe approves your bank account + tax ID (SSN for US sole proprietors). Approval is usually same-day but can take 24-72 hours if Stripe requests an ID upload. Plan for the 3-day worst case so launch day isn't blocked.
 
 If you landed here directly, start at [Chapter 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) to build your smoke-test page first - this chapter adds a price signal on top of the demand signal you already measured.
@@ -171,6 +173,10 @@ The smoke-test price is a hypothesis price, not your launch price. You're testin
 One thing the smoke-test price does NOT tell you: whether the price point is sustainable at scale. A $97 founding-member rate that 20 people pay doesn't prove a $97/month subscription works once you're paying for support, infrastructure, and development out of recurring revenue. That's a post-launch question, not a pre-build one.
 
 An email signup costs the visitor nothing; a Stripe click costs them the moment of typing a card number. That is the only honest demand signal a pre-product page can produce.
+
+> **Done when:** You have a Stripe price button on your smoke-test page and a measured click-to-payment rate.
+> **Next click:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
+> **If blocked:** If your Stripe account verification is delayed, build the rest of the page without the button. The email-only smoke test in Ch 1.2 still produces a demand signal while Stripe processes your account.
 
 ---
 

@@ -35,6 +35,8 @@ related_posts: false
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
 
+> **TL;DR:** One page, five sections. The problem (verbatim from interviews), the user's 60-second context, the one workflow, the one metric, and what you're NOT building. Hand it to Lovable or a contractor tomorrow morning.
+
 Sarah, an EdTech founder we audited in Q2 2026, had 17 settings toggles in her admin UI. In a one-day spec review we found 12 had no backend code and 2 crashed on toggle. The Vibe PRD she wrote next listed 5 settings she actually needed. Everything else came out. That is what a one-page brief does to a build that has drifted - it forces every line to earn its place tomorrow morning.
 
 This chapter walks you through the **Product Brief** - some founders call it a **Vibe PRD** (PRD stands for Product Requirements Document). It is a single page that names the user, the problem, the one workflow you are building, the one metric you will measure, and what you are explicitly NOT building. The five sections below are the same ones Drew Falkman teaches in a 4-week Maven cohort for $1,000; this chapter walks you through the template so you can fill yours in tonight.
@@ -180,6 +182,10 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 - Ben Horowitz, [Good Product Manager / Bad Product Manager (1996 memo)](https://a16z.com/2012/06/15/good-product-managerbad-product-manager/) - the original Horowitz memo on the "good vs bad PM" frame; pairs with Cagan.
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - the 45% LLM-generated-code-flaw stat. Context for why the no-go list matters.
 - Y Combinator, [How to Write a PRD (Startup Library)](https://www.ycombinator.com/library/) - YC's distilled version of the same compression.
+
+> **Done when:** All 5 sections of your one-page brief are filled in, Section 1 is copied verbatim from your validated problem statement, and you have read the brief aloud to one peer.
+> **Next click:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
+> **If blocked:** If you can't fill Section 3 (what you're building) in one paragraph, your scope is too big. Pick the single smallest workflow one persona can complete end-to-end and cut everything else to the no-go list.
 
 ---
 

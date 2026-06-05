@@ -35,6 +35,10 @@ related_posts: false
 >
 > **Output:** a one-page Product Brief rewritten so engineers and AI agents stop overengineering
 
+> **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
+
+> **Skip to the action:** [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now. The examples and the theory will still be here.
+
 You sent your engineer (or your AI agent) a one-line spec: *"build a simple admin panel."* Ten weeks later you have an admin panel with 47 buttons, role-based permissions, an audit log, and a co-pilot AI assistant. Your engineer isn't a show-off - those four words "a simple admin panel" don't tell anyone what "simple" means, who's using the panel, or what the panel needs to do. The engineer (or the training data) filled in those blanks from every big-company SaaS panel they had ever seen.
 
 ![A hand-drawn comparison: the simple three-button admin panel you asked for on the left, the absurdly complex 47-button control deck that got built on the right, connected by a red arrow labeled 10-week build, $15K](admin-panel-spaceship.svg)
@@ -141,6 +145,8 @@ Three actions, in order.
 
 > The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
 
+> **Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+
 ## Artifacts you carry out of Module 3
 
 After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
@@ -166,6 +172,10 @@ When your brief skips the moment, the action, and the result, the engineer or th
 - Basecamp / Ryan Singer, [Shape Up - Appetite vs Estimate](https://basecamp.com/shapeup/1.2-chapter-03) - the chapter on writing pitches that fix the appetite first, so the build collapses to fit.
 - Tom Kerwin, [JTBD Job Stories vs User Stories](https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27) - the 2013 Klement piece on Medium that popularised the shape, for readers who want the original 1,500 words.
 - Y Combinator, [Startup School: How to Write a Product Spec](https://www.ycombinator.com/library/) - YC's distilled take on specs that ship versus specs that sit.
+
+> **Done when:** Every feature in Section 3 of your brief is rewritten as an outcome-shaped job story, and a peer (or Claude) confirms the brief stays inside your scope and no-go list.
+> **Next click:** [4.1 · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
+> **If blocked:** If Claude names 2+ items outside your no-go list when you run the quality-check prompt, your Section 3 is still too vague. Tighten the "When / I want / So I can" shape until Claude's answer stays inside your scope.
 
 ---
 

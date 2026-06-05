@@ -3,6 +3,10 @@
 # Order = reading sequence on the landing page (Module 1 -> end of Module 5).
 # Used by the prev/next partial on chapter pages.
 #
+# Note: Chapter 0 (how-this-course-works) is the overview/map chapter — read once before Module 1,
+# not in the linear prev/next reading order. Like the glossary, it's reference content
+# accessible from the landing page.
+#
 # Note: floating glossary - "Five Tech Words to Stop Nodding At" (slug five-tech-words-stop-nodding-at)
 # is reference content, accessible from every chapter, not in the linear reading order.
 #
@@ -13,6 +17,11 @@
 # but NOT in the linear sequence.
 
 sequence:
+  - slug: how-this-course-works
+    title: "How This Course Works"
+    module: "Chapter 0"
+    goal: "The map: 5 modules, 18 chapters, 6 artifacts, and the AI tools that accelerate each stage. Read once before starting."
+
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"
     module: "Chapter 1.1"
@@ -69,9 +78,14 @@ sequence:
     goal: "Confirm you own your code, cloud, domain, and database before any build starts."
 
   - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
-    title: "4.3 · The Self-Serve MVP Stack: Lovable + Supabase + Stripe"
-    module: "Chapter 4.3"
-    goal: "Ship a working MVP on Lovable + Supabase + Stripe."
+    title: "4.3a · The Self-Serve MVP Stack: Tools & Setup"
+    module: "Chapter 4.3a"
+    goal: "Understand why Lovable + Supabase + Stripe is the dominant self-serve path and lock in the 3 pre-flight rules."
+
+  - slug: self-serve-mvp-stack-build-phases
+    title: "4.3b · The Self-Serve MVP Stack: Build Phases"
+    module: "Chapter 4.3b"
+    goal: "Execute the 4 build phases (Lovable UI → Supabase auth → Stripe checkout → live deploy) and pass the 5 green lights."
 
   - slug: vibe-coding-ceiling-signals
     title: "4.4 · Vibe Coding Done Right: 5 Ceiling Signals"

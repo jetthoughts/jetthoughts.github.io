@@ -35,6 +35,10 @@ related_posts: false
 >
 > **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
 
+> **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name will book 1-2 paid pilots. Customers 11-20 come from cold outbound, not from launch events.
+
+> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). If you still have warm names in your network who fit your ICP, close them first. Cold outbound is harder, slower, and lower-converting than warm outreach. Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
+
 > **$0 outbound stack.** Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($39 Base plan) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time. The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script. The one difference is that those Module 2 interviewees are warm targets - they already spoke with you about their pain, so your first line can reference that conversation directly instead of finding an external hook.
@@ -122,6 +126,8 @@ The mistake founders make on the first batch is over-personalizing. Twenty minut
 The right level of personalization is one specific reference per message. Open the prospect's LinkedIn, scan the last three posts and the recent role. Find one specific thing - a recent post they wrote, a comment they left, the company hit a hiring milestone, they joined a year ago and just got promoted. One sentence. Then the same four-line script for everyone.
 
 The 60-90 second rule keeps the volume tractable. 30 prospects × 90 seconds = 45 minutes of personalization per send. A founder can do that in one focused sitting.
+
+> **Advanced: Loom video audit (higher conversion, higher effort).** Instead of a text-based cold message, record a 10-minute Loom video showing the prospect's specific pain point on THEIR website or in THEIR public product, then demonstrate how your MVP solves it. Send directly to the decision-maker via LinkedIn DM or email. Conversion is significantly higher than cold text because the video proves you did the work rather than claiming you did. The trade-off: each video takes 10-15 minutes to record and upload vs 60-90 seconds for a text personalization. Use this for your 5 highest-value prospects per batch, not all 30. The same product Loom from stage 3 of the pipeline works for the demo portion; only the first 2-3 minutes (showing their specific pain point) is custom per prospect.
 
 ## The 4-line cold-email script (3 variants)
 
@@ -253,6 +259,10 @@ Module 5 closes with a deposit in your Stripe account. Everything from here is k
 - Paul Graham, [Do Things That Don't Scale](http://paulgraham.com/ds.html) - the foundational text on manual customer recruitment, including the Stripe Collison-brothers cold-DM-and-install motion.
 - Y Combinator Library, [Startup Sales: The Fastest Way to Find Your First Customers](https://www.ycombinator.com/library/4f-startup-sales-the-fastest-way-to-find-your-first-customers) - YC's collection on founder-led sales including the filter-and-personalize cold-outreach motion.
 - Sahil Bloom, [The First 10 Customers](https://www.sahilbloom.com/newsletter/the-first-10-customers) - playbook framing the relationship-to-cold transition that closes the personal-network gap.
+
+> **Done when:** 30 cold messages are sent, replies are tracked in your spreadsheet, and 1-2 paid pilots are booked from the replies.
+> **Next click:** [Course landing page](/course/tech-for-non-technical-founders-2026/) - course complete. See continuation chapters for [churn triage](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/), [pivot decisions](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/), and [hiring](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
+> **If blocked:** If reply rate is under 5% after batch 1, diagnose before batch 2: is the filter wrong (wrong ICP), is your domain reputation dead (cold email deliverability), or is the personalization too generic? Fix the root cause before sending the next batch.
 
 ---
 

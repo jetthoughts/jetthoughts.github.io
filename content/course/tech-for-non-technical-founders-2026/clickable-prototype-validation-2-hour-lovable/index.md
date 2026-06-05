@@ -35,6 +35,8 @@ related_posts: false
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
 
+> **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
+
 > **How this chapter relates to Ch 2.3:** [Ch 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) already booked and ran your 10 past-behavior Mom Test interviews. This chapter takes 5 of those 10 (the ones who scored 7+ on the Mom Test) and re-engages them for a 30-min silent-observation session with a throwaway Lovable prototype. You are NOT recruiting fresh people; you are re-asking warm contacts for a different kind of time. Ch 2.3 validated THE PROBLEM; Ch 2.4 validates THE SOLUTION SHAPE.
 
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution.
@@ -350,6 +352,10 @@ Nothing from the throwaway prototype carries forward except what you learned.
 - IDEO, [The Field Guide to Human-Centered Design](https://www.designkit.org/resources/1) - prototyping-for-learning methodology at the source.
 - Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - how the prototype observation fits into the broader customer-discovery arc.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
+
+> **Done when:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
+> **Next click:** [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
+> **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
 
 ---
 

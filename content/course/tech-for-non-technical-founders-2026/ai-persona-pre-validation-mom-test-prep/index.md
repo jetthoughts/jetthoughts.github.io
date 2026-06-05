@@ -37,6 +37,8 @@ related_posts: false
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
 
+> **TL;DR:** A 90-minute AI rehearsal catches broken questions before you spend real interview slots on them. Claude personas expose hypothetical phrasing that generates polite yeses from anyone.
+
 > **Already using Perplexity Pro / Claude / ChatGPT Deep Research for Module 1?** The same tools work here for objection rehearsal - swap the deep-research prompts for the in-character persona prompts below; the cost line is already paid.
 
 A founder we worked with ran five Mom Test interviews with a question list she'd written herself. Three said "sounds great!" She called it weak validation and almost pivoted.
@@ -229,6 +231,8 @@ One constraint worth naming: the rehearsal only surfaces signal that's already i
 >
 > **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 recruitment).
 
+> **Advanced: AI ensemble stress-test (after your interviews).** Once your 10 Mom Test interviews are done and you have a refined hypothesis, you can cross-validate the business logic using multiple AI models simultaneously. Paste your validated problem statement into [IdeaProof](https://ideaproof.io) (70 free credits, no credit card) - it runs your hypothesis through 4 different models (Claude 4, GPT-4.1, Gemini 3, Grok 4.1) and flags contradictions between them. A claim that passes one model but fails another is a blind spot worth investigating before you build. The ensemble approach catches what a single-model rehearsal misses: each model has different training biases, and consensus across four is stronger signal than one model saying "sounds good." This is not a substitute for the Mom Test interviews - it validates the logic AFTER the interviews validated the problem. Think of it as the final sanity check before you commit to building.
+
 The rehearsal does not validate the hypothesis. It validates that your questions are ready to validate the hypothesis. Skip it and you burn real interview slots on questions that fail in minute one.
 
 ## Further reading
@@ -236,6 +240,10 @@ The rehearsal does not validate the hypothesis. It validates that your questions
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the canonical reference for past-anchored interview questions.
 - Y Combinator, [How to Talk to Users](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - YC's short essay on why this conversation has to happen.
 - Anthropic, [Claude prompting guide](https://docs.anthropic.com/claude/docs/intro-to-prompting) - persona setup, role-play, and breaking character cleanly.
+
+> **Done when:** You have a sharpened question list (5-7 solid questions) and an Objection Tracker with the top 3 objections to listen for.
+> **Next click:** [2.3 · Find 10 People With the Problem in 2026](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+> **If blocked:** If all 3 personas produced identical answers, your persona descriptions are too generic. Rewrite them with sharper role, company-size, and urgency differences before continuing.
 
 ---
 

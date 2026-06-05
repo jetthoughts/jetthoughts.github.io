@@ -322,7 +322,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
     visit "/course/tech-for-non-technical-founders-2026/"
 
     within ".fl-heading" do
-      assert_text "Tech for Non-Technical Founders 2026"
+      assert_text "From Idea to First Paying Customer"
     end
     assert_text "Why this course exists"
     assert_text "Module index"

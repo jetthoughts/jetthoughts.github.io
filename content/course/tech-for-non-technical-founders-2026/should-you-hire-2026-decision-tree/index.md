@@ -34,6 +34,8 @@ related_posts: false
 >
 > **Output:** a 4-way build-path decision (validate / self-serve / fractional-CTO / hire) + the [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/)
 
+> **TL;DR:** Default: self-serve with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger, not the first decision. Five questions route you to one of four build paths.
+
 Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring is what you do when you hit a specific ceiling signal - not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
 
 Pre-seed founders hiring engineering before a single paying customer is confirmed is the most common build-decision mistake at the idea stage. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/). The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
@@ -173,6 +175,10 @@ Two refundable deposits beat 200 LinkedIn likes.
 - Y Combinator, [Startup School: Customer Discovery](https://www.ycombinator.com/library/) - YC's distilled take on validating before building. The path-1 reading list.
 - DHH, [The One Person Framework](https://world.hey.com/dhh/the-one-person-framework-711e6318) - the Rails case for keeping the architecture small enough that one developer can ship outcomes end-to-end. Reading for Path 2 and Path 3 founders.
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. Context for why Path 2 needs the 1-hour-a-month architecture review.
+
+> **Done when:** You have answered the 5 questions on the worksheet and your build path is written at the top.
+> **Next click:** [4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
+> **If blocked:** If your answer routes you to "hire a team" but your runway is under 4 months, you are reading the wrong path. Default to self-serve (Ch 4.3) and revisit hiring when a ceiling signal fires in Ch 4.4.
 
 ---
 

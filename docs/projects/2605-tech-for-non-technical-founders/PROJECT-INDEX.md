@@ -30,10 +30,11 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 | File | Purpose |
 |---|---|
 | `TASK-TRACKER.md` | Live queue of pending post-ship improvements (P1-P3) |
-| `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings from M1-M3 audit → gates to apply |
-| `40-49-review/40.02-post-ship-retrospective.md` | Post-ship retrospective (stub — populate after first iteration) |
-| `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — supplier-input-process-output-customer map, continuity validation, quality gates, 5 issues found |
-| `40-49-review/40.04-execution-readiness-sweep-2026-06.md` | June 2026 retrospective — time/money sweep + 13 critic-flagged gap closures across 18 chapters (commits c0718981 + c9adbaee) |
+| `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings — permanent gates now in CLAUDE.md + 90.11 voice guide |
+| `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — supplier-input-process-output-customer map, continuity validation, quality gates, 10/10 score |
+| `40-49-review/40.04-execution-readiness-sweep-2026-06.md` | June 2026 retrospective — time/money sweep + 13 critic-flagged gap closures + 9 tool-input fixes across 18 chapters |
+| `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` | 4-lens ICP-aligned review (Burned/First-Time/Skim-First/Crisis) — 3 recommendations tracked in TASK-TRACKER |
+| `40-49-review/40.06-sam-customer-journey-report-2026-06.md` | Single-ICP Sam narrative — 18-chapter emotional arc, trust scores, recalibrated scoring methodology |
 | `30-39-architecture-design/30.02-adr-content-execution-readiness.md` | **CANONICAL** — content policy (no speculative time/money), binary anchor thresholds per chapter, Module 2 two-pass framing rationale, 4-persona critic gate, Tier 1/2/3 punch list shape |
 | `10-19-research/10.06-icp-persona-course-walkthrough.md` | ICP-E simulation with per-module verdicts and gap recommendations |
 | `10-19-research/10.07-icp-sam-persona-course-walkthrough.md` | ICP-Sam simulation — idea-stage first-timer evaluation with progressive-disclosure and jargon-glossing audits |
@@ -79,6 +80,24 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 | `10-19-research/10.05-content-organization-patterns-2026.md` | Gloria Mark / Pew 2026 / NN/g attention-span research; cognitive-load patterns for content structure |
 | `10-19-research/10.06-icp-persona-course-walkthrough.md` | ICP-E persona simulation — Alex (burned founder) walks the full 5-module course with per-module verdicts on practicality, engagement, achievability, and modernity |
 | `10-19-research/10.07-icp-sam-persona-course-walkthrough.md` | ICP-Sam persona simulation — Sam (idea-stage first-timer) walks the full 5-module course with per-module verdicts, jargon-disclosure audit, and Sam-vs-Alex scoring comparison |
+| `10-19-research/10.08-validation-tools-analysis-2026.md` | AI validation tools gap analysis & recommendations (June 2026). Sources: Russian-language market research (`docs/_research/`) + web research. Maps 6 gaps to course modules, ranks by ROI. |
+
+### 💡 Ideas Bank
+
+| File | Purpose |
+|---|---|
+| `LOW-IMPACT-IDEAS-BANK.md` | Aggregated dropped, deferred, and P3 ideas from all reviews and research. Scan when starting a new work cycle. |
+
+### 🔍 Reviews (40-49)
+
+| File | Purpose |
+|---|---|
+| `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings — permanent gates now in CLAUDE.md + 90.11 voice guide |
+| `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — 10/10 score, mermaid diagrams, artifact chain, quality gates |
+| `40-49-review/40.04-execution-readiness-sweep-2026-06.md` | Sweep retrospective — 13 gap closures + 9 tool-input fixes + open follow-ups |
+| `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` | 4-lens ICP review (Burned/First-Time/Skim-First/Crisis) — 3 recommendations in TASK-TRACKER |
+| `40-49-review/40.06-sam-customer-journey-report-2026-06.md` | Single-ICP Sam narrative — 18-chapter emotional arc, trust scores, recalibrated scoring |
+| `40-49-review/_DEFERRED_40.02-post-ship-retrospective.md` | Post-ship retrospective — DEFERRED until 2+ weeks of live data |
 
 ### 🧭 Strategy (20-29)
 
@@ -86,7 +105,8 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 |---|---|
 | `20-29-strategy/20.01-course-modules.md` | The 8 modules with input/output/checkpoint/artifact (REPLACES old pillars doc) |
 | `20-29-strategy/20.02-positioning-vs-courses.md` | Why this beats YC Startup School, Sophia Matveeva, Drew Falkman, Kukoyi book |
-| `20-29-strategy/20.07-content-plan-tnt-founders-2026.md` | ~~The 26-post map, 11 artifacts...~~ **SUPERSEDED** — shipped course uses 5-module spine. Historical reference only. |
+| `20-29-strategy/20.10-sequence-decision-validate-vs-smoke-test.md` | Sequence debate; SIPOC confirms kept order |
+| `20-29-strategy/_ARCHIVED_20.07-content-plan-tnt-founders-2026.md` | ~~The 26-post map, 11 artifacts...~~ **ARCHIVED** — shipped course uses 5-module spine. Historical reference only. |
 
 ### 🛠️ Execution (50-59)
 
@@ -127,9 +147,9 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 2. **No duplicate artifacts.** The lead magnets shipped under 2605 (Friday Demo Template, Ownership Checklist, Salvage Decision Tree, AI 5-Question Script, SOW Reading Guide) are the SAME artifacts the 2510 plan references. One canonical version, multiple link entry points.
 
 3. **Every course post carries the course frame.**
-   - Top callout: `> **Module X · Step N of M** · [Tech for Non-Technical Founders 2026](/blog/tech-for-non-technical-founders-2026/) free course. Input: [what reader brings]. Output: [deliverable].`
-   - Bottom section: `## Continue the course` with the 9-row module nav table + an `In Module X:` mini-list showing current-module posts with `← you are here` marker.
-   - See `20.07-content-plan-tnt-founders-2026.md` for exact wording. Memory: `feedback_curriculum_posts_as_course.md`.
+   - Top callout: `> **Module X · Step N of M** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free course. Input: [what reader brings]. Output: [deliverable].`
+   - Bottom section: `## Continue the course` with the module nav table + an `In Module X:` mini-list showing current-module posts with `← you are here` marker.
+   - Canonical wording examples in existing chapter callouts (e.g., Ch 1.1, 5.3). Memory: `feedback_curriculum_posts_as_course.md`.
 
 4. **Simplest method on main path.** Foundation Sprint, JTBD Canvas 2, Shape Up, Continuous Discovery, Impact Mapping, User Story Mapping, Lean Inception, Empathy Mapping, Design Sprint - all relegated to optional "Advanced" sidebars at the bottom of Modules 1, 2, and 5. They never appear on the main reading path. Memory: `feedback_kiss_simplest_solutions_only.md`.
 

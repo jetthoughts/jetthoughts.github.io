@@ -35,6 +35,10 @@ related_posts: false
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 recruitment. The scoring rubric and synthesis template in this chapter become your reference card once you have transcripts in hand.
 
+> **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. The Mom Test is irreplaceable - AI can summarize the internet, but only a real human can tell you whether they'd open their wallet.
+
+> **If you have been burned by a dev shop before** - if you paid five figures for an MVP that launched to silence, or spent months building against a problem nobody validated - this module will feel like it's asking you to slow down when you want to move faster. That instinct is the scar tissue talking. The speed you are looking for is in Module 4 (the build). The protection you need is here in Module 2. Every hour spent validating the problem now prevents the same thing that happened last time. Skip to [the 5 questions](#the-5-questions) if you want the technique now; come back for the why afterward. The questions work either way.
+
 > If you do not have interview transcripts yet, read straight through and skip the Synthesis section at the bottom - you will return for it after Ch 2.3.
 
 Eleven interviews, nine "yes, I would absolutely use this," and a $49/month launch the following Monday that closed its first week with three signups and two churns by day 14. The ed-tech founder who walked us through that timeline in her rescue call had asked every question in the hypothetical - "would you pay for this?" - and every answer was the polite shape the hypothetical produces. Eleven friendly conversations, zero useful data.
@@ -176,6 +180,8 @@ Fake the convergence to start building anyway, and you join the long line of pos
 
 > Most customer interviews fail because the interviewees are polite. Better questions outperform better people. Anchor every question in a specific past moment - last Tuesday at 9pm, the last invoice, the last time the spreadsheet broke - and the polite-mode answers run out fast.
 
+> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free, unlimited use, no credit card) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would. It flags hypothetical questions, leading phrasing, and assumptions buried in your wording. Unlike the Ch 2.2 persona rehearsal (which tests questions against simulated ICPs), ValidatorAI tests the questions themselves - are they built to surface real past behavior or polite agreement? Run it once before your first interview. It takes 5 minutes and catches the most common failure mode: a question list that produces coherent answers from anyone, regardless of whether they actually have the problem.
+
 ## Synthesis: Write Down What You Heard, Decide What's Next
 
 > **You are now on Pass 2 of this chapter.** This section runs AFTER your Ch 2.3 interviews are done. If you are reading this in Pass 1 (technique pass), preview it and continue; you cannot complete the steps below without 10 scored transcripts in hand. Return here once Ch 2.3 sends you back.
@@ -262,6 +268,10 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 - Teresa Torres, [Continuous Discovery Habits](https://www.producttalk.org/continuous-discovery-habits/) - what these interviews become after the validation phase, when you run them weekly forever.
 - Mom Test summary by Yann Klis, [The Mom Test - 1-page summary](https://yannklis.com/posts/the-mom-test/) - a compressed cheat sheet for anyone who can't read the full book this week.
 - Lenny Rachitsky, [Customer interviewing 101](https://www.lennysnewsletter.com/p/the-ultimate-guide-to-conducting) - the operational version of the Mom Test rules with sample scripts.
+
+> **Done when:** You understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
+> **Next click:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
+> **If blocked:** If the technique isn't clicking, open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact - it has the 5 questions verbatim. Print it, practice on a friend, then return.
 
 ---
 

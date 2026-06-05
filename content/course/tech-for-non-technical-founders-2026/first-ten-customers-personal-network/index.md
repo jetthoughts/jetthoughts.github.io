@@ -35,7 +35,17 @@ related_posts: false
 >
 > **Output:** 50 personalized outreach messages sent, with replies tracked in a spreadsheet
 
+> **TL;DR:** Sixty percent of the fastest-growing B2B startups got their first 10 customers from their personal network. Build a 50-name list, sort into four buckets, send personalized messages with a 90-second Loom.
+
 In 2021, Lenny Rachitsky asked 21 of the fastest-growing B2B companies a simple question: where did your first 10 customers come from? The list was not modest - Figma, Stripe, Slack, Airtable, Shopify, Notion, Front, Loom, and thirteen others at similar scale. He published the answers in [a piece](https://www.lennysnewsletter.com/p/how-todays-fastest-growing-b2b-businesses) every non-technical founder should read before the first ad runs. The headline number: roughly 60% of those first customers came from the founder's personal network, around 35% from filtered cold outbound, and only 5% from inbound, press, or launch events.
+
+> **Important: Your warm network is for SALES, not for VALIDATION.**
+>
+> This chapter is about converting people who already know you into your first PAID PILOT. That is a sales motion, and the warm-network approach is the right move for it.
+>
+> This chapter is NOT a substitute for the Mom Test interviews in [Module 2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/). Friends, family, and other founders will tell you your idea is great because they are being polite - that is the founder-to-founder echo chamber, and it produces false confidence, not real signal. A true demand signal only arrives when a cold stranger describes the problem in their own words and pays money.
+>
+> If you have not yet run your 10 Mom Test interviews with people who do NOT know you, do that first ([Chapter 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)). Come back to this chapter when you are ready to SELL, not to validate.
 
 The instinct of the founder out of a dev-shop burn is to skip the 60%. Asking friends to buy feels biased and asking former colleagues feels like cheating, so the voice in your head says real customers come from paid traffic to a clean landing page. That voice is the same one that told you the MVP would convert at 0.4%. The first 10 customers come from existing trust, and the people most willing to act on that trust are the people who already know you well enough to take a call this week.
 
@@ -206,6 +216,10 @@ Your network is not begging-territory. It is the cheapest customer-acquisition m
 - Steve Blank, [Customer Validation](https://steveblank.com/2010/04/12/why-startups-need-a-less-stupid-process/) - the academic frame underneath the practical playbook. Validation precedes scale.
 - First Round Capital, [The First-Round Sales Library](https://review.firstround.com/from-the-first-edition-of-the-founders-handbook-finding-your-first-customers/) - essays from founders on the first-10 motion, useful for sector-specific context.
 - Y Combinator Library, [Tactical advice for the first sales hire](https://www.ycombinator.com/library/6g-tactical-advice-for-the-first-sales-hire) - YC's collection on founder-led sales, including when the relationship motion has to give way to a structured pipeline.
+
+> **Done when:** 50 names are sorted into 4 buckets, your 90-second Loom is recorded, and the first 15 messages (champions + hot) are sent.
+> **Next click:** [5.4 · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+> **If blocked:** If your warm network is under 15 names after filtering by your must-have segment, skip to Ch 5.5 cold outbound - your personal network won't produce your first customer. Use community fallbacks (YC batch, Indie Hackers, sector Slack) as warm-cold hybrid messages.
 
 ---
 

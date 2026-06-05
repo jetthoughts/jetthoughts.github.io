@@ -78,6 +78,8 @@ You can hand any of these to an investor or a co-founder and answer their questi
 
 ## Module index
 
+> Before you start: read [**How This Course Works**](/course/tech-for-non-technical-founders-2026/how-this-course-works/) — the full route at a glance: 5 modules, 18 chapters, the AI tools that accelerate each stage, and the SIPOC system map.
+>
 > Length is a byproduct of effective delivery, not a constraint. The course is paced for an idea-stage non-technical founder on evenings and weekends. Read the modules in order; each module's output is the next module's input.
 
 ### Module 1 - Hypothesis & Smoke Test
@@ -113,7 +115,8 @@ You can hand any of these to an investor or a co-founder and answer their questi
   - Template: [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/)
 - [**4.2** · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
   - Template: [Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/)
-- [**4.3** · The Self-Serve MVP Stack: Lovable + Supabase + Stripe](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
+- [**4.3a** · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
+- [**4.3b** · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
   - Template: [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/)
 - [**4.4** · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
 

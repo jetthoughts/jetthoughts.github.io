@@ -36,6 +36,8 @@ related_posts: false
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
 
+> **TL;DR:** Pick one channel from your interview evidence and commit for a full send/reply/follow-up arc. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
+
 A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked. She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
 
 The pattern: four channels, no commitment, and no way to tell which channel had worked because none of them had been run long enough to read.
@@ -94,8 +96,11 @@ At this stage you are choosing from four options. Here is what each one actually
 | **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (25 searches/mo free tier) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
 | **Community outreach** | B2B and prosumer where buyers already gather in Slack/Discord/forum | Must be a genuine participant first; one signal-quality post per sprint (not per week); spend 2 weeks commenting before posting product or get banned permanently | Joining this week then immediately selling = permanent ban from the community |
 | **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | A sustained posting cadence; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to the early low-visibility stretch |
+| **Engineering as Marketing** | Any B2B or prosumer where your ICP searches for tactical solutions; zero-CAC organic SEO | One free no-code micro-tool (calculator, checklist, grader, template) that solves one micro-problem for your ICP; build it on Carrd/Tally/Notion in an afternoon | Your ICP doesn't search for tactical tooling (they buy via referral or sales call); the micro-tool solves a toy problem nobody actually has |
 
 Pick the one that matches your buyer type, your price point, and your honest time budget - then commit.
+
+> **Engineering as Marketing: the zero-CAC channel.** Building a free micro-tool (a pricing calculator, a checklist generator, a "which plan is right for you" grader) on a free no-code stack (Carrd + Tally + Notion) attracts targeted organic search traffic. Users who find the tool useful are pre-warmed leads for your main product. The tool ranks for long-tail SEO keywords your competitors ignore. One afternoon to build, zero monthly cost, and the traffic compounds over months. Unlike content marketing (blog posts), a functional tool has a different backlink profile and ranks for different intent - someone searching "SaaS pricing calculator for [vertical]" is closer to buying than someone searching "how to price SaaS." The tool is not your product - it's a free side door that feeds your product's waitlist.
 
 ## AI-augmented channel research
 
@@ -132,6 +137,8 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 > - Whether the channel degrades over time (only sustained use reveals this)
 >
 > **The real gate:** ≥9/12 channel-fit score + a full send/reply/follow-up arc with reply rate >5%.
+>
+> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (1 free report/month) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3 didn't produce enough names. The free tier gives you one batch per month - save it until you have exhausted your hand-picked list and need fresh contacts.
 
 ## Channel Selection Worksheet
 
@@ -233,6 +240,10 @@ Pick the channel your interviews already named, commit to it long enough to read
 - Brian Balfour, [Why Product Market Fit Isn't Enough](https://brianbalfour.com/essays/product-market-fit-isnt-enough) - the case for channel-model fit as a distinct requirement from product-market fit. Strong reading for any founder who has a working product but no acquisition motion.
 - Andrew Chen, [The Law of Shitty Clickthroughs](https://andrewchen.com/the-law-of-shitty-clickthroughs/) - why every channel degrades over time and why early-stage founders need to pick the channel that works now, not the channel that worked for a more established company 3 years ago.
 - First Round Capital, [From 1 to 1,000 Users](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - channel selection stories from Airbnb, Tinder, Etsy, Reddit, including how each picked their first acquisition channel based on where their early customers actually lived online.
+
+> **Done when:** Your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
+> **Next click:** [5.3 · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+> **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
 
 ---
 

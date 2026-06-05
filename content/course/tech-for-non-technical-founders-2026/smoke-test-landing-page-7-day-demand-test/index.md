@@ -36,6 +36,8 @@ related_posts: false
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 
+> **TL;DR:** Put your hypothesis in front of 300 cold strangers as a landing page. If fewer than 3% click, the hypothesis is wrong - fix it before you build.
+
 A **smoke test** is a landing page that proves demand before you build. You put your hypothesis in front of cold strangers as a real page and watch whether they click - that click, or its absence, is the cheapest **demand signal** you can get.
 
 Build the page on a no-code page builder. Run it with a small ad budget for a faster read, or organic if you'd rather not spend yet - both give you a real signal; pick what fits your situation.
@@ -65,6 +67,8 @@ The five-step shape of the test, before we dig into each step:
 3. **Set up tracking** - GA4 (Google Analytics 4 - free traffic + conversion analytics) + Microsoft Clarity (free heatmap + session-replay tool that shows where visitors click) + ad-platform pixel (a small JavaScript snippet from Meta or Google that lets the ad network measure conversions back to your page), all installed BEFORE ads run
 4. **Buy cold traffic** - on the right channel for your ICP (Ideal Customer Profile - the customer you're targeting); run it long enough for the daily numbers to stabilize (see Budget by channel table below)
 5. **Read the numbers** - go / iterate / kill against the conversion-rate decision table
+
+> **Skip to the action:** [Build the Page Fast](#build-the-page-fast) if you want the builder picks and the what-goes-on-the-page checklist. [Read the Numbers, Decide](#read-the-numbers-decide) if your 300 visits are in and you need the conversion-rate decision table.
 
 > **Budget anchor before you start.** Smallest viable smoke-test budget is **$300-$600** (Meta or Reddit cold traffic to 300 visits). LinkedIn is **$1,800+**. The full per-channel table is in the "Buy Cold Traffic on the Right Channel" section below. If $300 is out of reach, skip paid ads and stick to organic - the chapter's $0 path (NeetoSite + Clarity + organic) still produces a real signal, slower.
 
@@ -107,6 +111,8 @@ Pick one and ship the page. Don't comparison-shop for a week - you're testing de
 - **Carrd** ([carrd.co](https://carrd.co), free for 3 sites; Pro $9-49/yr) - the simplest manual builder; pick blocks and ship.
 
 Pick the manual fallback only if you've used a no-code builder before and prefer placing blocks yourself over prompting.
+
+> **The free-subdomain fear (and why it does not matter).** First-time founders often freeze at the idea of shipping a landing page on a free subdomain (e.g., `youridea.neetosite.com`). They think it looks unprofessional and that nobody will take it seriously. The data says otherwise: a landing page on a free subdomain that solves a hot problem converts better than a beautiful custom-domain page that solves nothing. The smoke test is a demand signal, not a brand launch. If your hypothesis is right, the free subdomain won't stop people from clicking. If your hypothesis is wrong, a $15 custom domain won't save it. Ship the ugly version first; buy the domain after the conversion rate proves the idea earns it.
 
 **Skip for now**
 
@@ -339,6 +345,10 @@ Three hundred cold visitors with a tracked CTA tells you more about your hypothe
 - [Framer](https://framer.com/) - the upgrade for founders who want better typography and templates.
 - [Microsoft Clarity](https://clarity.microsoft.com/) - free heatmaps and session recordings, no spending cap, the underrated half of the tracking stack.
 - [PostHog](https://posthog.com/) - open-source product analytics alternative to GA4 + Clarity, useful once the smoke test passes and you start build.
+
+> **Done when:** 300 cold visitors have seen your landing page and you have a conversion rate you can read against the go/iterate/kill decision table.
+> **Next click:** [1.3 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
+> **If blocked:** If $300 for ads is out of reach, use the $0 organic path (Reddit comments + LinkedIn DMs + a free NeetoSite landing page). The signal is slower but real.
 
 ---
 

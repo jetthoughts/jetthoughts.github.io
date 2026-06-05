@@ -37,6 +37,10 @@ related_posts: false
 >
 > **Output:** a one-sentence Founding Hypothesis you can test in the next two modules
 
+> **TL;DR:** Write a one-sentence hypothesis you can falsify. A wrong hypothesis killed in five interviews costs nothing. A vague idea carried through six months of build costs everything.
+
+> **Skip to the action:** [The Six-Step Sprint](#the-six-step-sprint) if you want the template now and the theory afterward. The sprint works either way.
+
 You have an idea, or a half-built MVP, and you're about to start talking to people about it. Do one thing first: write the single sentence everything else gets tested against. The six steps below build that sentence - your Founding Hypothesis - so you find out whether the problem is real before you write a line of code or a check.
 
 ## Don't Talk to Anyone Without a Hypothesis
@@ -290,6 +294,10 @@ A wrong hypothesis killed in five interviews is the cheapest research output you
 - Jake Knapp and John Zeratsky, [*Click*](https://www.theclickbook.com/) - the book that introduced the Founding Hypothesis Mad Libs and the Foundation Sprint workshop.
 - Lenny Rachitsky, [Introducing the Foundation Sprint](https://www.lennysnewsletter.com/p/introducing-the-foundation-sprint) - short writeup of how the format works.
 - Once you have run the sprint at least once, layered frameworks like Lean Inception, JTBD Canvas, Value Proposition Canvas, and Lean Canvas add useful structure. Skip them on the first pass.
+
+> **Done when:** You have a one-sentence Founding Hypothesis written down, scored ≥14/20 on the four lenses, with no individual lens below 2.
+> **Next click:** [1.2 · Smoke-Test the Hypothesis](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+> **If blocked:** If you can't fill the five blanks with specifics, your idea is still too vague. Run the Perplexity deep-research sidebar in this chapter to find real customer complaints to anchor your blanks.
 
 ---
 
