@@ -311,7 +311,7 @@ Refuse to write the sentence because "we don't know enough yet" and you'll spend
 
 A wrong hypothesis killed in five interviews is the cheapest research output you will buy this year.
 
-> **What AI can and cannot do here.** AI helps draft the customer/problem blanks (Perplexity or Gemini deep-research), score the hypothesis on the four lenses, and name competitors. AI cannot prove a real customer will pay (that is Ch 1.2's smoke test), cannot tell you whether the problem is real (that is Ch 2.1's interviews), and cannot substitute for the Pragmatic-lens gut-check.
+> **What AI can and cannot do here.** AI helps draft the customer/problem blanks (Perplexity or Gemini deep-research, or the specialized tools in the sidebar above - VenturusAI, DimeADozen, Preuve AI), score the hypothesis on the four lenses, and name competitors. AI cannot prove a real customer will pay (that is Ch 1.2's smoke test), cannot tell you whether the problem is real (that is Ch 2.1's interviews), and cannot substitute for the Pragmatic-lens gut-check.
 
 ## Further reading
 
