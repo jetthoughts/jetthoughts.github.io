@@ -94,6 +94,65 @@ The **conversion terms** clause is what the CFO actually approves in week 0. Sta
 
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
+### Copy-paste DPA template (verbatim - fill the brackets, send)
+
+Open a Google Doc. Paste the block below. Replace every `[BRACKETED]` value with your numbers. Total document: one page, ~400 words. No lawyer review needed for v1.
+
+```text
+DESIGN PARTNER AGREEMENT
+
+Between: [Your Company Name] ("Company") and [Customer Company Name] ("Design Partner")
+Date: [YYYY-MM-DD]
+
+1. SCOPE OF PILOT
+The Company will deliver the following outcomes during the pilot period:
+  1. [Outcome 1 - measurable, e.g. "Reduce weekly report prep from 3 hours to 30 minutes"]
+  2. [Outcome 2]
+  3. [Outcome 3]
+Specific use cases covered: [Use case 1], [Use case 2].
+Anything outside this list is out of scope until year-one conversion.
+
+2. DURATION + DATES
+Start date: [YYYY-MM-DD]
+End date: [YYYY-MM-DD] (6-8 weeks)
+Weekly Friday demo at [time] [timezone]. 15 minutes. Loom or live screenshare.
+
+3. PILOT FEE + DEPOSIT
+One-time deposit: $[500-6,000] (10-30% of year-one ACV).
+Paid via Stripe before pilot kickoff. Credited dollar-for-dollar toward year-one invoice on conversion.
+If Design Partner cancels before week 4: deposit forfeited.
+If Company cancels for any reason: 100% refund within 14 days.
+
+4. SUCCESS CRITERIA
+The pilot is successful if 2 of 3 criteria are met by [end date]:
+  1. [Measurable criterion 1 - e.g. "Report prep time reduced to <=30 min/week, verified in Friday demo"]
+  2. [Measurable criterion 2]
+  3. [Measurable criterion 3]
+If 2+ criteria met: year-one contract auto-converts unless Design Partner opts out in writing within 7 days.
+If <2 criteria met: both parties walk. Company retains deposit as paid consideration for pilot work.
+
+5. CONVERSION TERMS
+Year-one price: $[amount] / [month or year]
+Billing: [monthly / annual]
+Conversion: auto-convert at pilot end unless Design Partner opts out in writing.
+Post year-one: 30-day written notice to cancel.
+
+6. DATA, IP, TERMINATION
+Design Partner keeps their data. Company keeps the product IP.
+Either party may exit at 30 days written notice during pilot.
+Design Partner's data remains exportable for 90 days after termination.
+
+SIGNED:
+
+_________________________  Date: __________
+[Your Name], [Your Company]
+
+_________________________  Date: __________
+[Champion Name], [Customer Company]
+```
+
+Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services pilot) plus DocuSign-importable + PDF formats are in [The First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) - email-gated reference for the same template with sector-specific fills.
+
 > **What happens AFTER the deposit clears (the pilot is not the contract).** The signed DPA + cleared deposit kicks off a 6-8 week working relationship. Three things happen each Friday:
 >
 > 1. **Demo the one workflow** from the DPA Section 1 scope - the customer watches you click through it, no slides.
@@ -178,15 +237,37 @@ You have a warm lead from [Chapter 5.3](/course/tech-for-non-technical-founders-
 
 ### Advanced objections (after customer #5)
 
-The five responses below show up once you start talking to enterprise buyers or repeat prospects. For the first 4-5 pilots, the table above covers what you will hear.
+The five responses below show up once you start talking to enterprise buyers or repeat prospects. For the first 4-5 pilots, the basic-objection table above covers what you will hear. These render as expandable rows so each long answer doesn't overflow on mobile.
 
-| Customer response | What it means | Next action |
-|---|---|---|
-| **"Can we do it at $300 instead of $1,200?"** | They are interested but anchoring price down. The deposit IS the commitment device; lowering it kills the function. | "The $1,200 number is what makes this a year-one commitment, not a trial. If we drop to $300 I am back to charging you a one-time consult fee, which is not what either of us wants. Same price, but I can move the kickoff later or split into two tranches if that helps internal approval." Hold the price. Offer flexibility on timing, not amount. |
-| **"Can you do net-30 instead of upfront?"** | Common ask from enterprise buyers; the deposit-before-kickoff rule loses its commitment function on net-30. | "The deposit is structured upfront on purpose - it is the signal that this is a real pilot, not a sales call. I can offer net-15 from invoice date, but the kickoff timer starts when the deposit clears. If net-30 is a hard requirement on your end, the alternative is a paid PoC with a smaller scope I can deliver before invoicing for the full pilot." |
-| **"My legal team needs to review any contract."** | Standard B2B response; the one-page DPA is usually under their threshold. | "The DPA is a one-page mutual document, not a long contract. Send it to your legal contact today; if they want changes I will turn them within 48 hours. Most legal teams approve a one-page DPA in 2-3 business days. While we wait I can send you the kickoff prep doc so we can start immediately when legal clears." |
-| **"What if you cannot deliver by week 6?"** | They are testing your refund promise without saying so directly. | "If I do not hit two of the three success criteria you and I write into the DPA, you get a 100% refund within 14 days and we walk - no negotiation. The DPA names this in section 5. Want me to walk you through how the success criteria get written so you are comfortable they are measurable?" |
-| **"Can I get exclusivity in my vertical?"** | Their commitment is real but they want defensible value. | "I cannot offer category exclusivity at the pilot stage - I do not have enough signal yet to know what the right exclusivity term looks like. What I can do: write into the DPA that you are my first paying customer in [vertical], and that we will revisit category exclusivity at year-one renewal once we both know whether this is working. That gives you the chronology advantage without locking me in before I have learned what to lock to." |
+**"Can we do it at $300 instead of $1,200?"**
+
+*Means:* Interested but anchoring price down. The deposit IS the commitment device; lowering it kills the function.
+
+*Say back:* "The $1,200 number is what makes this a year-one commitment, not a trial. If we drop to $300 I am back to charging you a one-time consult fee, which is not what either of us wants. Same price, but I can move the kickoff later or split into two tranches if that helps internal approval." Hold the price. Offer flexibility on timing, not amount.
+
+**"Can you do net-30 instead of upfront?"**
+
+*Means:* Common ask from enterprise buyers; the deposit-before-kickoff rule loses its commitment function on net-30.
+
+*Say back:* "The deposit is structured upfront on purpose - it is the signal that this is a real pilot, not a sales call. I can offer net-15 from invoice date, but the kickoff timer starts when the deposit clears. If net-30 is a hard requirement on your end, the alternative is a paid PoC with a smaller scope I can deliver before invoicing for the full pilot."
+
+**"My legal team needs to review any contract."**
+
+*Means:* Standard B2B response; the one-page DPA is usually under their threshold.
+
+*Say back:* "The DPA is a one-page mutual document, not a long contract. Send it to your legal contact today; if they want changes I will turn them within 48 hours. Most legal teams approve a one-page DPA in 2-3 business days. While we wait I can send you the kickoff prep doc so we can start immediately when legal clears."
+
+**"What if you cannot deliver by week 6?"**
+
+*Means:* Testing your refund promise without saying so directly.
+
+*Say back:* "If I do not hit two of the three success criteria you and I write into the DPA, you get a 100% refund within 14 days and we walk - no negotiation. The DPA names this in section 5. Want me to walk you through how the success criteria get written so you are comfortable they are measurable?"
+
+**"Can I get exclusivity in my vertical?"**
+
+*Means:* Their commitment is real but they want defensible value.
+
+*Say back:* "I cannot offer category exclusivity at the pilot stage - I do not have enough signal yet to know what the right exclusivity term looks like. What I can do: write into the DPA that you are my first paying customer in [vertical], and that we will revisit category exclusivity at year-one renewal once we both know whether this is working. That gives you the chronology advantage without locking me in before I have learned what to lock to."
 
 ## When founders should not insist on a paid pilot
 

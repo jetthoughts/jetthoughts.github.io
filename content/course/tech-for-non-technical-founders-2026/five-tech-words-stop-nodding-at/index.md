@@ -147,6 +147,30 @@ A healthy architecture for a pre-Series-A Rails SaaS is one Rails monolith on He
 
 ![Healthy Rails monolith on the left (one repo, Hotwire, Postgres, Sidekiq, Kamal deploy) versus over-engineered microservice mess on the right (React frontend, Node gateway, Auth microservice, Elasticsearch, Kafka, service mesh, two-FTE platform team)](architecture-comparison.svg)
 
+## Idea-stage acronyms cheat sheet
+
+The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 (build and ship). Modules 1-3 (hypothesis, validate, design) have their own acronym soup. Skim the list below once; come back when an unfamiliar acronym shows up in a chapter:
+
+| Acronym | Plain English | Where it shows up |
+|---|---|---|
+| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3a |
+| **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
+| **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Ch 3.1, 3.2 |
+| **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Ch 1.1, 5.4 |
+| **ACV** | Annual Contract Value - what one customer pays in year one (deposit math is 10-30% of ACV) | Ch 5.4 |
+| **CAC** / **LTV** | Customer Acquisition Cost / Lifetime Value - what you spend to land one customer vs what they pay you over their lifetime | Ch 5.2, 5.4 |
+| **DPA** | Design Partner Agreement - a one-page contract where a customer pays a deposit to test your product as a co-design partner | Ch 5.4 |
+| **SOW** | Statement of Work - the contract that defines what an agency is paid to deliver | _index, rescue chapters |
+| **PRD** / **Vibe PRD** | Product Requirements Document - the "Vibe" version is a one-pager an AI builder can act on, not a 30-page spec | Ch 3.1 |
+| **TAM** / **SAM** / **SOM** | Total / Serviceable / Serviceable-Obtainable Market - investor-pitch math, not builder math | _index pitch sections only |
+| **Pixel** | A small JavaScript tracking snippet from an ad platform (Meta/LinkedIn/Reddit) - paste it on your page and the platform learns who converted | Ch 1.2a |
+| **NPS** | Net Promoter Score - "how likely are you to recommend us?" 0-10 scale; less useful at idea stage than PMF | Ch 5.1 sidebar |
+| **Retention** | What % of users come back next week / next month - the only metric that proves the product solves a real problem | Ch 5.1 |
+| **Unit economics** | Revenue per customer minus cost to serve per customer - whether the math works at scale | Ch 1.1 Money lens |
+| **Runway** | Months of cash until you must show paying customers or close the company | Ch 4.1 Q3 |
+| **SWOT / PESTEL / Porter's Five Forces** | Three classic strategy-school checklists - VenturusAI runs all three on your hypothesis | Ch 1.1 sidebar |
+| **Wizard of Oz** | A no-code pattern - customer thinks software is running, but you do the work by hand behind the scenes to test demand before building | Ch 4.3a Concierge MVP |
+
 ## What to do tomorrow
 
 Print the five BS-detection questions and bring one to your next standup - whichever word your team uses most. The texture of the answer (specific or evasive) tells you what you need to know in under thirty seconds. Forward this post to your fractional CTO or a developer-friend and ask: "Are these the right five words for me to be skeptical of, given my project?" Their list might swap one - either way, the conversation is the win.

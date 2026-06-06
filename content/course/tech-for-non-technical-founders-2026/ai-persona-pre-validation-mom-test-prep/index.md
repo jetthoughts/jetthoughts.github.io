@@ -87,21 +87,7 @@ Think of it as a trial attorney prepping cross-examination with a paralegal stan
 
 You don't need a sophisticated prompt setup. You need to describe the person you're trying to interview in terms Claude can work with, and then ask Claude to stay in character while you practice questions.
 
-Here's the persona setup prompt.
-
-> **What to paste for each placeholder (from your existing artifacts):**
-> - [ROLE] = your Founding Hypothesis [customer] blank from your Ch 1.1 `Founding Hypothesis - [date]` doc (e.g., "solo chiropractor managing insurance claims")
-> - [INDUSTRY] + [COMPANY SIZE] = the three ICP characteristics you wrote beside Step 1 of Ch 1.1 (industry vertical + company size band)
-> - [PROBLEM DESCRIPTION] = your Founding Hypothesis [problem] blank
-> - [PROBLEM AREA] = the [problem] blank summarized in 2-3 words (e.g., "claim resubmission backlog")
-> - [CURRENT WORKAROUND] = your Founding Hypothesis [competition] blank (what they do today)
-> - [YOUR DRAFT QUESTION 1] (and 2, 3, ...) = pick one question at a time from the 5-8 question list in your Ch 2.1 `Mom Test draft - [date]` doc
-> - [QUESTION X] (in Prompt 5) = whichever question from your draft list you want to sharpen
-> - [PERSONA NAME], [FREQUENCY], [DURATION], [BUDGET RANGE], [REASON] = your judgment, anchored to the deep-research findings if you ran the Ch 1.1 sidebar.
->
-> If any blank above is empty, the Ch 1.1 hypothesis is not specific enough. Go back and tighten before rehearsing - rehearsing against a vague persona produces vague answers.
-
-> **For the 3 fields that aren't in your hypothesis ([FREQUENCY], [DURATION], [REASON]):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3 (a + b) interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise those 3 fields BETWEEN interview 1 and interview 2 and re-run any Prompt 2-5 you want to recalibrate. The guess is the entry ticket; the revision is the discipline.
+Here's the persona setup prompt. The placeholder mapping table below tells you where each `[BRACKETED]` value comes from in your existing artifacts - read it AFTER you scan the prompt, not before.
 
 ### Prompt 1 - Persona Setup
 
@@ -118,6 +104,21 @@ Your situation:
 Stay in character for this entire conversation. Do not break character to explain your reasoning. Answer as [PERSONA NAME] would, not as an AI. If a question is vague, give the kind of vague polite answer a busy professional gives when they're not sure what you're asking.
 ```
 
+
+**Placeholder mapping - where each value comes from:**
+
+| Placeholder | Where it lives in your artifacts |
+|---|---|
+| `[ROLE]` | Founding Hypothesis `[customer]` blank (Ch 1.1) - e.g. "solo chiropractor managing insurance claims" |
+| `[INDUSTRY]` + `[COMPANY SIZE]` | The three ICP characteristics you wrote in Ch 1.1 Step 1 |
+| `[PROBLEM DESCRIPTION]` | Founding Hypothesis `[problem]` blank (Ch 1.1) |
+| `[PROBLEM AREA]` | The `[problem]` blank summarized in 2-3 words (e.g. "claim resubmission backlog") |
+| `[CURRENT WORKAROUND]` | Founding Hypothesis `[competition]` blank (what they do today) |
+| `[YOUR DRAFT QUESTION 1]`, `2`, `3`, ... | Pick one question at a time from your Ch 2.1 `Mom Test draft - [date]` doc (5-8 question list) |
+| `[QUESTION X]` (in Prompt 5) | Whichever question you want to sharpen from your draft list |
+| `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the Ch 1.1 sidebar - see fallback below |
+
+> **Fallback for the 3 fields not in your hypothesis (`[FREQUENCY]`, `[DURATION]`, `[REASON]`):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3 (a + b) interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise BETWEEN interview 1 and interview 2. If any placeholder above is empty, the Ch 1.1 hypothesis is not specific enough - tighten it before rehearsing.
 
 > **Heads up:** Claude is trained to be helpful, which means it tends to give reasonable answers even to broken questions. Don't read a coherent persona answer as proof the question works. Read Claude's out-of-character diagnosis instead - the in-character answer reflects what Claude thinks a polite persona would say; the out-of-character note reflects what the question is actually asking.
 

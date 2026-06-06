@@ -248,6 +248,8 @@ Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Bot
 >
 > **If blocked:** If 2+ signals are red but you are not sure whether to hire, book one free Fractional CTO call. The first call is usually free and the diagnosis alone is worth the hour.
 
+> **Module 4 closes here.** Before opening Module 5, you should have: (1) a build-path decision from the Ch 4.1 tree (self-serve / fractional CTO / hire), (2) a Day-1 ownership audit passed (Ch 4.2 - GitHub + AWS + domain all in your name), (3) a live MVP at a real URL with 5 ICP users tested + 5 green lights lit (Ch 4.3b), and (4) a monthly 5-signal ceiling check on the calendar (this chapter). All four in your `Founder OS` folder. Missing one? Go back - Module 5 invites your Module 2 interviewees + smoke-test email list to your URL; if there's no URL, there's no Module 5.
+
 > **Case Study: Tomas & Mia**
 >
 > **Tomas**: At ~50 firms, 2 ceiling signals fire: reconciliation matching has race conditions, n8n QuickBooks connector breaks on API changes. Graduates from self-serve → fractional CTO → hired team. CTO already in place, transition is smooth.

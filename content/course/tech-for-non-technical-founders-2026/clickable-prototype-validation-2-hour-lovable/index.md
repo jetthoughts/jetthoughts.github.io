@@ -378,6 +378,8 @@ Nothing from the throwaway prototype carries forward except what you learned.
 >
 > **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
 
+> **Module 2 closes here.** Before opening Module 3, you should have: (1) a sharpened question list after the AI persona rehearsal (Ch 2.2), (2) a 30-name ICP list built from real complaints (Ch 2.3a), (3) 10 interview transcripts scored 7+/10 strong signal (Ch 2.3b), (4) a one-page validated problem statement with build/pivot/kill verdict (Ch 2.1b synthesis), and (5) 5 prototype sessions with verbatim "describe in one sentence" vocabulary (this chapter). All five in your `Founder OS` folder. Missing one? Go back - Module 3 cannot start without the validated problem statement + prototype vocabulary.
+
 > **Case Study: Tomas & Mia**
 >
 > **Tomas**: Builds a 2-hour Lovable prototype: a dashboard showing mock reconciliation - Stripe transactions on the left, QuickBooks invoices on the right, a "match" button in the middle. 4 of 5 controllers say "when can I use this?" 1 objects: "what happens when the match is wrong?"

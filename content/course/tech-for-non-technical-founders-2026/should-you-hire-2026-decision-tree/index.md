@@ -142,13 +142,24 @@ flowchart TD
     class Hire hire
 ```
 
-The five questions, verbatim, in the order you answer them on the worksheet:
+The Mermaid above is the worksheet. The five questions live in the diagram. The table below adds what each routed-to outcome means in practice and which chapter Sam reads next:
 
-- **Q1. Is the problem validated?** Counts as yes if you have completed the Module 1-3 evidence chain: 10 or more [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) interviews showing strong past-behavior signal, a Ch 1.2 (a + b) smoke test that cleared the 6%+ "Promising" band (or a Ch 1.3 Stripe-click variant at 5%+), and a Ch 2.4 clickable-prototype run with 4 of 5 testers reaching the right screen. Pre-orders and paid pilots are produced in Module 5 - do NOT loop back to Path 1 just because no card has been charged yet. LinkedIn likes do not count. "They said they would buy" does not count.
-- **Q2. How backend-heavy is the build?** Plain-English version: *does your app need users to see each other typing in real time (Google Docs / Slack-DM behavior), OR does it touch healthcare data, payment-card numbers stored on your servers, or enterprise SOC 2 audits?* If yes to either, count Q2 heavy. If you're not sure what those terms mean, the answer is almost certainly **no** - simple apps, dashboards, forms, and single-user tools are not heavy. (Technical version for the curious: real-time updates via WebSockets or server-sent events, background queues with retry logic, AI inference inside the request path with cost above $0.01 per call, multi-tenant data with row-level security, 5+ third-party API integrations, regulated data with HIPAA / SOC 2 / PCI scope.)
-- **Q3. What is your runway?** Months of cash until you must show paying customers. Less than 4 months: route to Path 1 regardless of how validated you think you are. The Airbnb test is the only one that fits in the runway window. 4-12 months: Paths 1, 2, 3 are all on the table. 12+ months: Path 4 becomes safe to consider.
-- **Q4. Do you have a senior engineer in your network for 1 hour of architecture review per month?** This is the cheap insurance. Even on Path 2 (self-serve with Lovable), one hour a month with a senior backend engineer who will read your data model and your worst route catches the architectural ceiling well before you hit it. Yes: stay on Path 2. No: move to Q5 to buy the same insurance commercially.
-- **Q5. What is your monthly engineering budget?** A fractional rate fits Path 3 (Fractional CTO). Full team salaries fit Path 4 (hire a team). Skip the path you cannot fund through the runway window. (For concrete fractional and team-burn ranges see [Chapter 4.4's graduation thresholds](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) - the fractional CTO band runs roughly $200/hr or $8-15K/mo at the time of writing.)
+| Route | What it means | Next chapter to read |
+|---|---|---|
+| **Validate (Q1=No or Q3 tight)** | The Module 1-3 evidence chain isn't done. Pre-orders and paid pilots come in Module 5 - do NOT skip ahead. LinkedIn likes don't count; "they said they would buy" doesn't count. | Back to [Ch 1.2a + 1.2b smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) or [Ch 2.3a recruitment](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) |
+| **Self-serve (Q2=No, Q4=Yes)** | Default for non-technical founders. Lovable renders the screens, Supabase stores the data, Stripe charges the card. The senior engineer in your network is the cheap monthly insurance. | [Ch 4.3a · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.3b · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) |
+| **Fractional CTO (Q4=No, Q5=fractional)** | Same self-serve build, but the architecture review is bought commercially instead of borrowed from your network. 0% equity. | [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
+| **Hire a team (Q2=Yes OR Q5=full team)** | Backend-heavy OR runway gives you 12+ months. Material monthly burn. Read the SOW first. | [SOW reading guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) before signing anything |
+
+**Q1 ("problem validated?")** counts as yes only if you have 10+ Mom Test interviews showing strong past-behavior signal, a smoke test that cleared the 6%+ "Promising" band (or a 5%+ Stripe-click), and a 2.4 prototype run with 4 of 5 testers reaching the right screen.
+
+**Q2 ("backend-heavy?")** translates to plain English: does your app need users to see each other typing in real time (Google Docs / Slack behavior), OR does it touch healthcare data, payment-card numbers stored on your servers, or enterprise SOC 2 audits? If neither, the answer is almost certainly **no** - simple apps, dashboards, forms, and single-user tools are not heavy.
+
+**Q3 ("runway?")** is months of cash until you must show paying customers. Under 4 months: route to Validate regardless of Q1. 4-12 months: self-serve or fractional are both viable. 12+ months: hire a team becomes safe to consider.
+
+**Q5 ("engineering budget?")**: fractional rate fits the Fractional CTO route (typically $200/hr or $8-15K/mo at time of writing); full team salaries fit the Hire route. Skip the path you cannot fund through the runway window.
+
+A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) lays out these five questions in checkbox form and writes your verdict at the top of the page. Print it. Fill it in alone. Take the result to one peer or advisor for a sanity check.
 
 A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) lays out these five questions in checkbox form and writes your verdict at the top of the page. Print it. Fill it in alone. Take the result to one peer or advisor for a sanity check.
 

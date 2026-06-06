@@ -183,6 +183,8 @@ An email signup costs the visitor nothing; a Stripe click costs them the moment 
 > **Next click:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
 > **If blocked:** If your Stripe account verification is delayed, build the rest of the page without the button. The email-only smoke test in [Ch 1.2a](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) + [1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) still produces a demand signal while Stripe processes your account.
 
+> **Module 1 closes here.** Before opening Module 2, you should have: (1) a one-sentence Founding Hypothesis scored ≥14/20 (Ch 1.1), (2) a live landing page with tracking installed (Ch 1.2a), (3) a 7-day go/iterate/kill decision backed by ≥300 visits (Ch 1.2b), and (4) a measured Stripe price-button click-rate or an email-only baseline (this chapter). All four in your `Founder OS` folder. Missing one? Go back to that chapter before you start interviews - Module 2 reads these as input.
+
 > **Case Study: Tomas & Mia**
 >
 > **Tomas**: Adds a Stripe price button at "$200/mo - early access." 5% of visitors click (15 of 300). Of those, 3 complete the $1 pre-sale. Weak price signal - won't sustain $200/mo without the product in hand.
