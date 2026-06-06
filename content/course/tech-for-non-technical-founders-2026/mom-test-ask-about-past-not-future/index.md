@@ -33,7 +33,7 @@ related_posts: false
 >
 > **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics
 >
-> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
+> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 (a + b) recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 
 > **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. The Mom Test is irreplaceable - AI can summarize the internet, but only a real human can tell you whether they'd open their wallet.
 
@@ -43,7 +43,7 @@ related_posts: false
 
 > If you do not have interview transcripts yet, read straight through.
 >
-> After your Ch 2.3 interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and make the decision.
+> After your Ch 2.3 (a + b) interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and make the decision.
 
 Eleven interviews, nine "yes, I would absolutely use this," and a $49/month launch the following Monday that closed its first week with three signups and two churns by day 14.
 
@@ -51,7 +51,7 @@ The ed-tech founder who walked us through that timeline in her rescue call had a
 
 For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done.
 
-Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 ![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
 
@@ -184,7 +184,7 @@ The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-m
 
 The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-interview-script/](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/)** carries the same 5 questions verbatim, the follow-ups, the pass/fail signals, the 3 emotional-language flags, and the scoring rubric.
 
-**Save your draft list before moving on.** Open a new Google Doc titled `Mom Test draft - [date]` in the same `Sprint Artifacts` folder as your Founding Hypothesis. Copy the 5 verbatim questions from the artifact, then add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?"). That 5-8 question list is the input Ch 2.2 expects you to sharpen against AI personas.
+**Save your draft list before moving on.** Open a new Google Doc titled `Mom Test draft - [date]` in the same `Founder OS` folder as your Founding Hypothesis. Copy the 5 verbatim questions from the artifact, then add 2-3 ICP-specific probes of your own (e.g., for a chiropractor ICP: "Walk me through your last insurance-claim resubmission. When did it happen?"). That 5-8 question list is the input Ch 2.2 expects you to sharpen against AI personas.
 
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works.
 

@@ -216,7 +216,7 @@ Treat the answer as a stop sign rather than a market-research instrument. Under 
 
 > **Done when:** You have run the 5-question Sean Ellis survey, computed the overall and per-segment must-have %, and have 3 verbatim Q2-Q3 quotes from your top segment.
 > **Next click:** [5.2 · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)
-> **If blocked:** If under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3 outreach playbook and re-run the survey.
+> **If blocked:** If under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3 (a + b) outreach playbook and re-run the survey.
 
 > **Case Study: Tomas & Mia**
 >

@@ -131,7 +131,7 @@ A B2B services founder I spoke with in March 2026 ran this prompt, realized her 
 
 The prompt is a forcing function, not a crystal ball. The real data comes from running the channel.
 
-> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3 interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment at the bottom of the worksheet. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. It's a diagnostic, not a gate.
+> **Fast-path exit: skip the worksheet if your interviews already named a channel.** If your Ch 2.3 (a + b) interview transcripts pointed to a clear channel (e.g., 7+ of 10 interviewees found tools through LinkedIn, or 5+ named a specific Slack community), jump to Part 3: The Commitment at the bottom of the worksheet. Write your commitment statement and move to Ch 5.3. The full worksheet is for founders still deciding between channels. It's a diagnostic, not a gate.
 
 > **Module 5 AI critic/simulator block**
 >
@@ -144,7 +144,7 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 >
 > **The real gate:** ≥9/12 channel-fit score + a full send/reply/follow-up arc with reply rate >5%.
 >
-> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (1 free report/month) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3 didn't produce enough names. The free tier gives you one batch per month - save it until you have exhausted your hand-picked list and need fresh contacts.
+> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (1 free report/month) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3 (a + b) didn't produce enough names. The free tier gives you one batch per month - save it until you have exhausted your hand-picked list and need fresh contacts.
 
 ## Channel Selection Worksheet
 

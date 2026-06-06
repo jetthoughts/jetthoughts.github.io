@@ -52,7 +52,7 @@ The hire is the move that broke the runway. The skipped step was the cheaper exp
 >
 > If you cannot answer with a list of buyers who have already paid you, the answer is: not yet. Stay one box left of where you were about to start.
 
-By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.1 technique applied in Ch 2.3 recruitment + interview round) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching.
+By the time you reach this chapter, you have already run three validation signals: the smoke test (Module 1) proved that strangers click. The Mom Test interviews (Chapter 2.1 technique applied in Ch 2.3 (a + b) recruitment + interview round) proved the problem is real and felt. The clickable prototype shape test (Chapter 2.4) proved that users can navigate the proposed solution without coaching.
 
 All three are research signals, not builds. The one-page brief (Chapter 3.1) documents what to build. This chapter decides HOW to build it - self-serve, fractional CTO, or hired team.
 
@@ -144,7 +144,7 @@ flowchart TD
 
 The five questions, verbatim, in the order you answer them on the worksheet:
 
-- **Q1. Is the problem validated?** Counts as yes if you have completed the Module 1-3 evidence chain: 10 or more [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) interviews showing strong past-behavior signal, a Ch 1.2 smoke test that cleared the 6%+ "Promising" band (or a Ch 1.3 Stripe-click variant at 5%+), and a Ch 2.4 clickable-prototype run with 4 of 5 testers reaching the right screen. Pre-orders and paid pilots are produced in Module 5 - do NOT loop back to Path 1 just because no card has been charged yet. LinkedIn likes do not count. "They said they would buy" does not count.
+- **Q1. Is the problem validated?** Counts as yes if you have completed the Module 1-3 evidence chain: 10 or more [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) interviews showing strong past-behavior signal, a Ch 1.2 (a + b) smoke test that cleared the 6%+ "Promising" band (or a Ch 1.3 Stripe-click variant at 5%+), and a Ch 2.4 clickable-prototype run with 4 of 5 testers reaching the right screen. Pre-orders and paid pilots are produced in Module 5 - do NOT loop back to Path 1 just because no card has been charged yet. LinkedIn likes do not count. "They said they would buy" does not count.
 - **Q2. How backend-heavy is the build?** Plain-English version: *does your app need users to see each other typing in real time (Google Docs / Slack-DM behavior), OR does it touch healthcare data, payment-card numbers stored on your servers, or enterprise SOC 2 audits?* If yes to either, count Q2 heavy. If you're not sure what those terms mean, the answer is almost certainly **no** - simple apps, dashboards, forms, and single-user tools are not heavy. (Technical version for the curious: real-time updates via WebSockets or server-sent events, background queues with retry logic, AI inference inside the request path with cost above $0.01 per call, multi-tenant data with row-level security, 5+ third-party API integrations, regulated data with HIPAA / SOC 2 / PCI scope.)
 - **Q3. What is your runway?** Months of cash until you must show paying customers. Less than 4 months: route to Path 1 regardless of how validated you think you are. The Airbnb test is the only one that fits in the runway window. 4-12 months: Paths 1, 2, 3 are all on the table. 12+ months: Path 4 becomes safe to consider.
 - **Q4. Do you have a senior engineer in your network for 1 hour of architecture review per month?** This is the cheap insurance. Even on Path 2 (self-serve with Lovable), one hour a month with a senior backend engineer who will read your data model and your worst route catches the architectural ceiling well before you hit it. Yes: stay on Path 2. No: move to Q5 to buy the same insurance commercially.
@@ -186,7 +186,7 @@ Two refundable deposits beat 200 LinkedIn likes.
 >
 > **Next click:** [4.2 · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
 >
-> **If blocked:** If your answer routes you to "hire a team" but your runway is under 4 months, you are reading the wrong path. Default to self-serve (Ch 4.3) and revisit hiring when a ceiling signal fires in Ch 4.4.
+> **If blocked:** If your answer routes you to "hire a team" but your runway is under 4 months, you are reading the wrong path. Default to self-serve (Ch 4.3 (a + b)) and revisit hiring when a ceiling signal fires in Ch 4.4.
 
 > **Case Study: Tomas & Mia**
 >

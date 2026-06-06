@@ -19,7 +19,9 @@ tags:
   - validation
   - course-reference
 categories: ["Founders"]
+cover_image: cover.png
 metatags:
+  image: cover.png
   og_title: "Validation Tools Field Guide - JetThoughts Course"
   og_description: "How to use VenturusAI, DimeADozen, and Preuve AI to stress-test your hypothesis before you book the first interview."
 cover_image_alt: "Validation tools field guide cover showing three AI validation tools"
@@ -154,7 +156,7 @@ At the pre-interview stage, the $9 Starter is enough. You are looking for red fl
 ### Common mistakes
 
 - **Paying $129 before you know what a $9 report looks like.** Run the Starter first. If it flags something specific that needs deeper investigation, upgrade.
-- **Treating it as a go/no-go decision.** The tool validates the *logic* of a business model, not the *demand*. A clean report means your idea is not obviously broken. It does not mean customers will pay. That requires Ch 1.2's smoke test and Ch 2.1's interviews.
+- **Treating it as a go/no-go decision.** The tool validates the *logic* of a business model, not the *demand*. A clean report means your idea is not obviously broken. It does not mean customers will pay. That requires Ch 1.2 (a + b)'s smoke test and Ch 2.1's interviews.
 - **Ignoring the competitors it names.** The tool often surfaces competitors you did not know existed. Use these as starting points for your own manual research.
 
 ### Pro tips
@@ -258,7 +260,7 @@ No tool validates your hypothesis. Only ten strangers describing the problem in 
 
 These tools sharpen your hypothesis. They do not validate it. Specifically:
 
-**They cannot prove a real customer will pay.** A clean DimeADozen report and a Preuve score of 80 do not equal a signed Stripe checkout. That signal comes from Ch 1.2's smoke-test landing page and Ch 5.4's Design Partner Agreement with a real deposit.
+**They cannot prove a real customer will pay.** A clean DimeADozen report and a Preuve score of 80 do not equal a signed Stripe checkout. That signal comes from Ch 1.2 (a + b)'s smoke-test landing page and Ch 5.4's Design Partner Agreement with a real deposit.
 
 **They cannot tell you whether the problem is real.** AI tools summarize what people have already said online. They cannot surface a problem that nobody has articulated publicly. The Mom Test interviews in Ch 2.1 surface what specific named humans actually did last Friday - a signal no AI tool can produce.
 
@@ -272,7 +274,7 @@ These tools sharpen your hypothesis. They do not validate it. Specifically:
 
 - [Ch 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) - write the Mad Libs sentence these tools stress-test.
 - [Ch 2.1: The Mom Test - Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - validate the sharpened hypothesis with ten real interviews.
-- [Ch 1.2: Smoke-Test the Hypothesis: The Demand Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - the next step after these tools confirm your sentence is well-constructed.
+- [Ch 1.2 (a + b): Smoke-Test the Hypothesis: The Demand Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - the next step after these tools confirm your sentence is well-constructed.
 
 ---
 

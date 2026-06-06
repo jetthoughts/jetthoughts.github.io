@@ -37,7 +37,7 @@ related_posts: false
 >
 > **Output:** a one-sentence Founding Hypothesis you can test in the next two modules
 
-> **TL;DR:** Write a one-sentence hypothesis you can falsify. A wrong hypothesis killed in five interviews costs nothing. A vague idea carried through six months of build costs everything.
+> **TL;DR:** Write a one-sentence hypothesis you can falsify in five interviews. Five interviews is the cheapest test in the course.
 
 > **Skip to the action:** [The Six-Step Sprint](#the-six-step-sprint) if you want the template now and the theory afterward. The sprint works either way.
 
@@ -104,7 +104,7 @@ Three or four reads is normal. That is the work.
 >
 > **What to paste for [YOUR CANDIDATE ICP]:** the customer role you circled in Step 1, written as the specific person you're building for (e.g., "solo chiropractors managing insurance claims" not "small businesses"). Do NOT paste the parenthetical gloss - replace the whole placeholder. If you have not yet finished Step 1, do it first - this sidebar runs AFTER Step 1.
 >
-> The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **Save the competitor URLs Claude/Perplexity names; you will reuse them as the two competitor inputs in the Ch 2.3 ICP-map prompt.** **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
+> The verbatim quotes feed directly into the [problem] blank above and the smoke-test headline in Ch 1.2. **Save the competitor URLs Claude/Perplexity names; you will reuse them as the two competitor inputs in the Ch 2.3 (a + b) ICP-map prompt.** **What this is NOT**: a substitute for Ch 2.1 Mom Test interviews. AI summarizes aggregated public text; the Mom Test surfaces what specific named humans actually did last Friday. Use deep research to gather evidence; use real interviews to validate.
 >
 > **Specialized alternatives (free or cheaper than a Perplexity sub).**
 >
@@ -175,7 +175,7 @@ Open the Mad Libs sentence. Fill in the five blanks using the winning approach f
 
 Read it aloud three times. Adjust any blank that sounds vague. Stop when the sentence reads like a thing a friend could repeat back to you.
 
-Now type the final sentence into a Google Doc titled `Founding Hypothesis - [date]` and save it to a folder you will keep open through Modules 2 and 3 (suggest: a `Sprint Artifacts` folder). You will paste this sentence verbatim into Ch 1.2 (landing-page H1), Ch 1.3 (Stripe button price prompt), Ch 2.1 (interview script anchor), Ch 2.2 (persona blanks), and Ch 2.3 (ICP-map prompt). This doc is the single source - if you change the hypothesis later, change it here first.
+Now type the final sentence into a Google Doc titled `Founding Hypothesis - [date]` and save it to a folder you will keep open through Modules 2 and 3 (suggest: a `Founder OS` folder). You will paste this sentence verbatim into Ch 1.2 (a + b) (landing-page H1), Ch 1.3 (Stripe button price prompt), Ch 2.1 (interview script anchor), Ch 2.2 (persona blanks), and Ch 2.3 (a + b) (ICP-map prompt). This doc is the single source - if you change the hypothesis later, change it here first.
 
 ### Step 6: Test Design
 
@@ -318,7 +318,7 @@ Refuse to write the sentence because "we don't know enough yet" and you'll spend
 - Once you have run the sprint at least once, layered frameworks like Lean Inception, JTBD Canvas, Value Proposition Canvas, and Lean Canvas add useful structure. Skip them on the first pass.
 
 > **Done when:** You have a one-sentence Founding Hypothesis written down, scored ≥14/20 on the four lenses, with no individual lens below 2.
-> **Founder OS · Artifact #1 of 6:** The Founding Hypothesis sentence. Save the Google Doc in your `Sprint Artifacts` folder; Module 1.2 and Module 2 read it as input.
+> **Founder OS · Artifact #1 of 6:** The Founding Hypothesis sentence. Save the Google Doc in your `Founder OS` folder; Module 1.2 and Module 2 read it as input.
 > **Next click:** [1.2a · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)
 > **If blocked:** If you can't fill the five blanks with specifics, your idea is still too vague. Run the Perplexity deep-research sidebar in this chapter to find real customer complaints to anchor your blanks.
 

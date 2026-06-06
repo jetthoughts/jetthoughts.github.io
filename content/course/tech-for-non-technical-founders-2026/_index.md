@@ -39,7 +39,7 @@ The 2026 version of this work uses tools that didn't exist five years ago - AI a
 
 ## Why this course exists
 
-At the idea stage, the cheapest mistake is the one you skip making by reading the course before you start building. The five failure modes below are what we see most often when founders ask us to rescue a stalled MVP. You are at the start of the same road; this course is the route around each one:
+At the idea stage, the cheapest mistake is the one you skip making by reading the course before you start building. Five mistakes new founders make most often, and where in the course we avoid each one:
 
 - Hiring a dev shop before validating the problem - Modules 1 and 2 show what a $0 validation looks like.
 - Paying for six months of "building" with no way to see what shipped - Module 4.2 (Day-1 ownership) plus the Friday-demo rule in the management chapters cover this.

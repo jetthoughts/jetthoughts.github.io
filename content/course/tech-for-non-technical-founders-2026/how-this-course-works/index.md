@@ -34,7 +34,9 @@ related_posts: false
 
 > **TL;DR:** Five modules, twenty chapters, six artifacts. Each module's output is the next module's input - from rough idea to signed paid pilot. The map: read once, come back when lost.
 
-This course takes a non-technical founder from a rough idea to a signed paid pilot - on evenings and weekends, with or without engineers, and on a budget that starts at $0. Before you start Module 1, here is the full route at a glance: the flow, the tools, the artifacts you'll compile, and how the stages connect.
+This course takes a non-technical founder from a rough idea to a signed paid pilot - on evenings and weekends, with or without engineers, on a budget that starts at $0 and runs roughly $300-700 cumulative through Module 5 (mostly Meta/Reddit ads in Ch 1.2b, plus optional Lovable Pro at $25/mo if the free tier's 5-daily-message cap bites during the build). Most of the course is free; the paid items are the smoke-test ads and the Pro tier upgrades you choose to take. Below: the flow, the tools, the artifacts you'll compile, and how the stages connect.
+
+> **Calendar reality - full-time vs evening-only.** The per-module wall times below assume a founder with daytime availability. An evening-only founder (2-4 hr/week, the pattern this course is built for) typically needs 1.5-3x the calendar at each module - so the headline ~9-14 week plan stretches to ~20-30 weeks of evenings. Build your plan against the evening-only band; finishing early is a bonus.
 
 ---
 
@@ -176,7 +178,7 @@ These are the tools the course references - AI research tools, no-code builders,
 
 ## The Course's Rule: Kill Bad Ideas Fast
 
-Every module has a gate. If the data doesn't support your hypothesis, you stop and either pivot or kill the idea. A wrong hypothesis killed in five interviews costs you nothing. A wrong hypothesis carried through six months of development costs you your runway.
+Every module has a gate. If the data doesn't support your hypothesis, you stop and either pivot or kill the idea. The gate sends you back if the data doesn't support the hypothesis.
 
 | Module | The Gate | Signal to Proceed |
 |---|---|---|

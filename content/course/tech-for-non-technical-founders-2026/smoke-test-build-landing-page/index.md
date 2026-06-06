@@ -36,7 +36,7 @@ related_posts: false
 >
 > **Output:** a live landing page with tracking installed, ready for cold traffic in [Part 2](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 
-> **TL;DR:** Paste your hypothesis into an AI builder, ship a 6-element landing page in under an hour, install Microsoft Clarity before you spend a dollar on ads. The page proves demand before you build - the cheapest signal you can buy.
+> **TL;DR:** Paste your hypothesis into an AI builder, ship a 6-element landing page in one evening (2-3 hours your first time, under an hour once you've shipped one before), install Microsoft Clarity before you spend a dollar on ads. The page proves demand before you build - the cheapest signal you can buy.
 
 > **This is Part 1 of 2.** This page covers building the page and setting up tracking. [Part 2: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) covers buying cold traffic, reading the conversion rate, and making the go/iterate/kill decision.
 
@@ -69,6 +69,7 @@ This page covers steps 1-3. Part 2 covers steps 4-5.
 > - [ ] Email tool account on a free tier
 > - [ ] Your Founding Hypothesis sentence written down (from Module 1)
 > - [ ] A calendar window where you will NOT touch the campaign mid-flight
+> - [ ] **Stripe account signup started TONIGHT** (even if you skip the price button now). Verification takes 1-3 business days; if you wait until Ch 1.3 to start, launch day blocks on a wait you could have run in parallel.
 
 If you don't have a Founding Hypothesis sentence yet, stop and run [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) first. Everything below assumes you have one.
 

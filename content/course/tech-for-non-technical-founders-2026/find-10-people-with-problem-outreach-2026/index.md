@@ -39,7 +39,7 @@ related_posts: false
 
 > **This is Part 2 of 2.** [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) covers the ICP mapping, reading threads, and building the 30-name list. You need the list from Part 1 before the templates below will work - generic openers collapse to 1-5% reply rates.
 
-> **How this chapter relates to Ch 2.4:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3 first to validate THE PROBLEM, then Ch 2.4 to validate THE SOLUTION SHAPE.
+> **How this chapter relates to Ch 2.4:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3 (a + b) first to validate THE PROBLEM, then Ch 2.4 to validate THE SOLUTION SHAPE.
 
 This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Chapter 5.5 cold-email script here; it scares interview subjects who don't yet know you have a product.
 
@@ -182,7 +182,7 @@ The chain of artifacts the booked calls produce:
 4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.4 prototype sessions.
 5. **Two artifacts now flow into Module 3 + later modules:**
    - The Validated Problem Statement (Section 1 of the Ch 3.1 one-page brief, lifted verbatim)
-   - The 5 strongest-signal interviewees (Ch 2.4 input - and later, your Module 5 onramp invitees in Ch 4.3, plus your warm-list seed in Ch 5.3)
+   - The 5 strongest-signal interviewees (Ch 2.4 input - and later, your Module 5 onramp invitees in Ch 4.3 (a + b), plus your warm-list seed in Ch 5.3)
 
 If fewer than 7 of 10 calls score ≥ 7, the problem is too weak for this ICP. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. The full kill / iterate / proceed decision lives in the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
 

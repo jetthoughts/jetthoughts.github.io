@@ -246,7 +246,7 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 | Step | Action | Output |
 |---|---|---|
-| **1** | Open your `Module 5 cold seed` tab from Ch 2.3 - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
+| **1** | Open your `Module 5 cold seed` tab from Ch 2.3 (a + b) - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
 | **2** | Spend 60-90 minutes personalizing the first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool ([Smartlead](https://smartlead.ai), [Instantly](https://instantly.ai)). | 30 messages sent. 3-6 replies expected. |
 | **3** | Tally replies once they settle. Book demos. Follow up with non-responders once only. | 2-4 demo calls booked. Next batch ready. |
 
@@ -260,7 +260,7 @@ Founders who have closed 5-10 paid pilots from cold outbound and want to layer o
 
 ## Going further (after your first paying customer)
 
-You've completed the core 6-module course. Continuation chapters apply once you've signed your first paid pilot:
+You've completed the core 5-module course - hypothesis, smoke test + price, problem validation + prototype, brief + build, first paid pilot. Continuation chapters apply once you've signed your first paid pilot:
 
 | Symptom | Continuation chapter |
 |---|---|

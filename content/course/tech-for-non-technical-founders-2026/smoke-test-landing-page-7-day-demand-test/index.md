@@ -159,7 +159,7 @@ If go, run the [Ch 1.3 price test](/course/tech-for-non-technical-founders-2026/
 You already built the page in [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/). Now:
 
 1. Ad account ready on your chosen channel? Payment method attached? If not, set it up Sunday evening.
-2. Launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: >=300 visits and >=6% email conversion to advance** (or >=5% Stripe-click if you ran the Ch 1.3 variant). 3-5% lands in the "iterate the message" band - not a green light for Ch 2.3 interviews.
+2. Launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: >=300 visits and >=6% email conversion to advance** (or >=5% Stripe-click if you ran the Ch 1.3 variant). 3-5% lands in the "iterate the message" band - not a green light for Ch 2.3 (a + b) interviews.
 
 ### When the smoke test isn't the right filter
 

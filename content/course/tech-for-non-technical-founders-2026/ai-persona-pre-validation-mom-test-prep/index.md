@@ -33,7 +33,7 @@ related_posts: false
 >
 > **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + 3 ICP characteristics
 >
-> **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 recruitment and real interviews
+> **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 (a + b) recruitment and real interviews
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
 
@@ -55,7 +55,7 @@ An AI rehearsal costs nothing. A short pass through Claude before you pick up th
 
 Real interviews stay irreplaceable for the things rehearsal cannot simulate: the noncommittal shrug on question three, the mention of a workaround you never imagined, the silence after Q4 that tells you more than ten polite yeses. The rehearsal sharpens your questions before you spend a real customer's hour on them.
 
-This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
+This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3 (a + b) (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -101,7 +101,7 @@ Here's the persona setup prompt.
 >
 > If any blank above is empty, the Ch 1.1 hypothesis is not specific enough. Go back and tighten before rehearsing - rehearsing against a vague persona produces vague answers.
 
-> **For the 3 fields that aren't in your hypothesis ([FREQUENCY], [DURATION], [REASON]):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3 interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise those 3 fields BETWEEN interview 1 and interview 2 and re-run any Prompt 2-5 you want to recalibrate. The guess is the entry ticket; the revision is the discipline.
+> **For the 3 fields that aren't in your hypothesis ([FREQUENCY], [DURATION], [REASON]):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3 (a + b) interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise those 3 fields BETWEEN interview 1 and interview 2 and re-run any Prompt 2-5 you want to recalibrate. The guess is the entry ticket; the revision is the discipline.
 
 ### Prompt 1 - Persona Setup
 
@@ -240,7 +240,7 @@ This is the other reason real interviews stay irreplaceable: a real customer can
 > - What a real customer will actually say (Claude simulates the persona YOU describe)
 > - Whether the problem is real (only 10 Mom Test interviews can falsify the hypothesis)
 >
-> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 recruitment).
+> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 (a + b) recruitment).
 
 > **Advanced: AI ensemble stress-test (after your interviews).** Once your 10 Mom Test interviews are done and you have a refined hypothesis, you can cross-validate the business logic using multiple AI models simultaneously. Paste your validated problem statement into [IdeaProof](https://ideaproof.io) (70 free credits, no credit card) - it runs your hypothesis through 4 different models (Claude 4, GPT-4.1, Gemini 3, Grok 4.1) and flags contradictions between them. A claim that passes one model but fails another is a blind spot worth investigating before you build. The ensemble approach catches what a single-model rehearsal misses: each model has different training biases, and consensus across four is stronger signal than one model saying "sounds good." This is not a substitute for the Mom Test interviews - it validates the logic AFTER the interviews validated the problem. Think of it as the final sanity check before you commit to building.
 

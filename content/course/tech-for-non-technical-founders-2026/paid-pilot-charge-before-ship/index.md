@@ -225,7 +225,7 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook including the design-partner pricing model from B2B founders.
 
 > **Done when:** One DPA is signed and the Stripe deposit has cleared in your account.
-> **Founder OS · Artifact #6 of 6:** A signed Design Partner Agreement + cleared deposit. Save the executed PDF + Stripe receipt in your `Sprint Artifacts` folder. This is the artifact investors fund; you can now point to it and say "someone who doesn't know me paid real money for this."
+> **Founder OS · Artifact #6 of 6:** A signed Design Partner Agreement + cleared deposit. Save the executed PDF + Stripe receipt in your `Founder OS` folder. This is the artifact investors fund; you can now point to it and say "someone who doesn't know me paid real money for this."
 >
 > **Next click:** [5.5 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
 >

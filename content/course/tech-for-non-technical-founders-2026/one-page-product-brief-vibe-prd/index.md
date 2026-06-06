@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 3 · Step 1 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a one-page validated problem statement (from the [Chapter 2.1 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next), after running interviews in Ch 2.3)
+> **Input:** a one-page validated problem statement (from [Ch 2.1b · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3a + 2.3b) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.4 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - Section 3 of the brief uses these exact words)
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
 
@@ -74,7 +74,7 @@ What goes in it: who the user is *while* they're using your product. Not the per
 
 Example: *A pre-seed founder, alone in their browser at 9pm on a Tuesday, finishing the week's bookkeeping. They have a Stripe dashboard open in one tab and a QuickBooks ledger in another. They are tired, mildly annoyed, looking for a way to finish in 10 minutes instead of 40. They will open our app from a bookmark, paste one Stripe export, and close the tab when the numbers line up.*
 
-Common mistake: writing the persona's company size, ARR (annual recurring revenue), and tech stack as if pitching to investors. The agent or contractor doesn't need their TAM. They need to know the user is tired, has two tabs open, and wants to be done. Specific context produces a usable interface; abstract persona data produces a dashboard with seventeen filters nobody uses.
+Common mistake: writing the persona's company size, ARR (annual recurring revenue), and tech stack as if pitching to investors. The agent or contractor doesn't need their TAM (Total Addressable Market - how big the whole market is in dollars; investor-pitch math, not builder math). They need to know the user is tired, has two tabs open, and wants to be done. Specific context produces a usable interface; abstract persona data produces a dashboard with seventeen filters nobody uses.
 
 ### Section 3 - What you're building (one paragraph, plain English)
 
@@ -184,7 +184,7 @@ A Vibe PRD is what's left when you remove everything an AI agent or a hired juni
 - Y Combinator, [How to Write a PRD (Startup Library)](https://www.ycombinator.com/library/) - YC's distilled version of the same compression.
 
 > **Done when:** All 5 sections of your one-page brief are filled in, Section 1 is copied verbatim from your validated problem statement, and you have read the brief aloud to one peer.
-> **Founder OS · Artifact #4 of 6:** The one-page Product Brief (Vibe PRD). Save as `Product Brief - [date]` in your `Sprint Artifacts` folder. Module 4.1 reads the brief to decide your build path; Module 4.3 reads it to prompt Lovable.
+> **Founder OS · Artifact #4 of 6:** The one-page Product Brief (Vibe PRD). Save as `Product Brief - [date]` in your `Founder OS` folder. Module 4.1 reads the brief to decide your build path; Module 4.3 reads it to prompt Lovable.
 > **Next click:** [3.2 · Quality-check your brief: features to outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
 > **If blocked:** If you can't fill Section 3 (what you're building) in one paragraph, your scope is too big. Pick the single smallest workflow one persona can complete end-to-end and cut everything else to the no-go list.
 

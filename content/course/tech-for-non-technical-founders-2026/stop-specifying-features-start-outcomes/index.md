@@ -145,7 +145,7 @@ Three actions, in order.
 
 > The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
 
-> **Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+> **Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3 (a + b) interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
 
 ## Artifacts you carry out of Module 3
 
@@ -153,9 +153,9 @@ After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific do
 
 | Artifact | Where it goes next |
 |---|---|
-| **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3 Lovable kickoff prompt. The single source of truth Module 4 builds from. |
-| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (if you route to hire) + Ch 4.3 Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
-| **No-Go list** (5-10 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3 self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
+| **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3 (a + b) Lovable kickoff prompt. The single source of truth Module 4 builds from. |
+| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (if you route to hire) + Ch 4.3 (a + b) Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
+| **No-Go list** (5-10 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3 (a + b) self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
 | **Audience-of-one fork** (the audience choice from Ch 3.1: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
 | **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 

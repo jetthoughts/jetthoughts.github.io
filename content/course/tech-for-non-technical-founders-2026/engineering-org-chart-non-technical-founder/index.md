@@ -44,7 +44,7 @@ Marina, a FinTech founder we picked up in Q1 2026, had been billing **$44K a mon
 
 The agency had not lied, exactly. The kickoff deck just did not say which names touched the repo on which weeks, who reviewed whose pull requests, or who picked up the phone at 2am when production was down.
 
-## Why this matters more in 2026
+## What an org chart hides
 
 The vibe-coding wave made the org chart even fuzzier. Agencies that pitch "AI-augmented teams" route work through three layers: a senior who runs the demo, a mid-level who prompts Cursor or Claude Code, and a junior who reviews whatever falls out. The labor cost dropped; the bill rate did not. [TechTIQ Solutions' 2026 staff augmentation report](https://techtiqsolutions.com/it-staff-augmentation-cost-breakdown-and-pricing-models/) flags that hidden costs add 15-30% on top of base rates, with 10-18% already going to vendor margin. The shops we rescue in 2026 are charging the same and paying less, with the gap going to subcontracted juniors and AI tooling the founder never approved as a line item.
 
