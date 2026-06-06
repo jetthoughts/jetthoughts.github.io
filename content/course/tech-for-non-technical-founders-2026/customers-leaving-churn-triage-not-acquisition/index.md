@@ -146,7 +146,7 @@ The most common founder failure mode at this triage step is to refuse to pick. T
 
 ## The Refund-the-Wrong-Segment Script
 
-Decision 2 is the hardest to execute because it requires telling 18 of your 30 paying customers, in writing, that you built the wrong product for their situation. Most founders flinch at this step. They run an "improvement campaign" instead, hoping the wrong segment will start retaining if the product gets a few more features. It will not. The wrong segment never converts to the right segment.
+Decision 2 is the hardest to execute because it requires telling 18 of your 30 paying customers, in writing, that you built the wrong product for their situation. The default response is to flinch at this step. They run an "improvement campaign" instead, hoping the wrong segment will start retaining if the product gets a few more features. It will not. The wrong segment never converts to the right segment.
 
 Refunds are cheaper than churn. If a wrong-segment user churns at month 2, you have collected $58 and lost $200 in CAC and ~$25 in support time - net negative. If you proactively refund their last 30 days at month 2, you have lost $58 plus the same $200 CAC, but you have gained a goodwill quote, a clean Stripe ledger, and 20 minutes of support time you would otherwise spend explaining why the product feels off. The math on a wrong-segment refund campaign is positive against the alternative of waiting for churn.
 
@@ -168,7 +168,7 @@ Here is the email template that worked for R.'s 18 wrong-segment customers. Send
 
 The script does three things at once. It admits the misfit in the founder's voice (not a support template). It hands the user a concrete alternative (so they do not have to start the search over). It removes the future-pitch hook (which is the part wrong-segment users actually appreciate). R.'s response rate to this email was 14 of 18 sent - 11 thank-yous, 2 questions about the alternative tool, 1 angry user, 0 chargebacks. The 1 angry user wanted to keep using the product anyway; she comped them a year and removed their seat from the team metrics.
 
-The honest trade-off: a refund-the-wrong-segment campaign cuts your customer count and your MRR in the short term. R.'s MRR went from $928 to $319 the week she sent the emails. By month 3 she was back above $928 with the right segment, with churn at 11% instead of 65%. Most founders will not have the stomach to let the MRR number drop in week 1; the ones who do are the ones who get out of the leaky-bucket cycle.
+The honest trade-off: a refund-the-wrong-segment campaign cuts your customer count and your MRR in the short term. R.'s MRR went from $928 to $319 the week she sent the emails. By month 3 she was back above $928 with the right segment, with churn at 11% instead of 65%. The instinct is to flinch and not let the MRR number drop in week 1; the founders who hold the line are the ones who get out of the leaky-bucket cycle.
 
 ## Hand This to the Next Chapter
 

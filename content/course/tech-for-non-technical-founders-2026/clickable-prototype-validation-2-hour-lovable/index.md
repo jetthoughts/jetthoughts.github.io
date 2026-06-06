@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Step 4 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (parts a + b) (parts a + b - recruited in [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
+> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (recruited in [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
 

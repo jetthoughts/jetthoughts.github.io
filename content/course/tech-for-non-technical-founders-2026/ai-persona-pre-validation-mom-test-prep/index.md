@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Step 2 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + 3 ICP characteristics
+> **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names, introduced in Ch 1.1)
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 (a + b) recruitment and real interviews
 >
@@ -41,13 +41,11 @@ related_posts: false
 
 > **Already using Perplexity Pro / Claude / ChatGPT Deep Research for Module 1?** The same tools work here for objection rehearsal - swap the deep-research prompts for the in-character persona prompts below; the cost line is already paid.
 
-A founder we worked with ran five Mom Test interviews with a question list she'd written herself. Three said "sounds great!" She called it weak validation and almost pivoted.
+You drafted 5-8 Mom Test questions in Ch 2.1. Before you spend a real interview slot on a question that turns out to be pitch-shaped, run the question list past a Claude persona that matches your ICP. The persona answers in character; you ask Claude (out of character) which question generated which kind of answer and why.
 
-Before she booked the next five slots, she ran a focused rehearsal with [Claude](https://claude.ai) (an AI chat assistant from Anthropic - free tier covers a handful of rehearsal sessions per day; ChatGPT works the same way) using a persona matching her ICP.
+The failure shape the rehearsal catches: a question like "Would you use a tool like this?" reads fine on paper, generates a polite "sounds great" from any persona, and absorbs five real interview slots before you notice the pattern. The rehearsal flags the question shape before you spend the slot. Same applies to questions that smuggle in your solution, ask for a hypothetical purchase, or bury the past-tense ask under three clauses.
 
-The out-of-character diagnosis flagged her second question immediately: "Would you use a tool like this?" - hypothetical, pitch-shaped, generates polite yes from anyone. She rewrote her questions to anchor in past events.
-
-On the next round, the real interviewees pushed back: "no, that's not actually my problem" - and then they volunteered the actual problem. The rehearsal had told her the hypothesis was probably right and the questions were probably broken. The real interviews confirmed both.
+The pattern: rehearsal tells you whether the question is broken; real interviews tell you whether the hypothesis is right. Catching a broken question with a free Claude session is cheaper than catching it on call 5 of 10.
 
 Real interview slots are scarce. You only get about 10 a round, every one took outreach to book, and a hypothetical question burns the slot - the interviewee says "sure, I'd use it" to be kind, you hang up thinking you got a signal, and you got nothing usable.
 

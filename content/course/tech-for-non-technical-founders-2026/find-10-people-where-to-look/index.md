@@ -35,17 +35,11 @@ related_posts: false
 >
 > **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Ch 2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
 
-> **TL;DR:** Paste your three-sentence hypothesis into Claude, get back the ICP profile + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list from individuals you can name because you read what they posted.
-
-> **Before you start:** your Ch 1.2 (a + b) smoke test should have cleared roughly 6%+ email conversion (the "Promising" band on the Ch 1.2 (a + b) decision table) or 5%+ Stripe-click on the Ch 1.3 price-button variant. A reading of 3-5% is the "iterate the message" zone, not a green light for interviews. If you're below 3%, you have a demand-side problem, not an interview-recruitment problem. Go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank in your hypothesis before booking interviews.
-
-> **This is Part 1 of 2.** This page covers WHERE to find the people - ICP mapping, reading threads, building the 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence. Read both before you send your first message.
+> **TL;DR (Part 1 of 2):** Paste your three-sentence hypothesis into Claude, get back the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) profile + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
 Most non-technical founders start with the same move: "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
 
 The technique below replaces that move with a different one: read where strangers are already complaining about your exact hypothesised problem, then write back to those specific complainers. Same hypothesis, same work hours, different place to look. The DM-the-network move books 2-3 polite calls. The read-where-they-already-complain move - half a day of reading threads, then 30 named outreach messages - produces a calendar of 10+ booked interviews.
-
-> **Calendar reality for the full interview round.** A full-time founder with daytime availability typically books 10 interviews across 2-4 calendar weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically takes 6-8 calendar weeks for the full round. Plan around the 6-8 week version. Module 3 cannot start until 10 transcripts are scored.
 
 The full journey, top to bottom:
 
@@ -73,6 +67,8 @@ flowchart TD
 3. **Build a list of 30 specific people** from those threads.
 4. **Write to each one** using the templates in [Part 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 5. **10 interview calls on the calendar.**
+
+> **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Ch 1.2 (a + b) smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Ch 1.3 price-button variant. 3-5% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
 
 This page covers steps 1-3. Part 2 covers steps 4-5.
 

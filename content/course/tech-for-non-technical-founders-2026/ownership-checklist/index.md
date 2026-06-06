@@ -168,7 +168,7 @@ Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help
 
 ### When to escalate
 
-If the agency does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Founders who negotiate for a month usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
+If the agency does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Negotiate for a month yourself and you usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
 
 If you are in this spot, the [JetThoughts dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) is the next read - a failed audit usually correlates with three or four other red flags - and the [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the 30-day transition.
 

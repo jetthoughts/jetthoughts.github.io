@@ -35,7 +35,7 @@ related_posts: false
 >
 > **Output:** 1 signed paid pilot before any new code ships
 
-> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA with a refundable Stripe deposit is. Charge 10-30% of year-one ACV before kickoff - it puts the CFO question on Week 0 instead of Week 8.
+> **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a refundable Stripe deposit is. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
 
 Two pilots, same product, same buyer profile, different deposit timing:
 
@@ -283,7 +283,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 | Step | Action | Output |
 |---|---|---|
-| **1** | Write your one-page DPA in Google Doc. Use the template in [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/). Set up Stripe product + payment link. Pick deposit number from the sector table above. | Stripe link ready. DPA drafted. Deposit amount locked. |
+| **1** | Copy the [DPA template above](#copy-paste-dpa-template-verbatim---fill-the-brackets-send) into a Google Doc, fill the 6 bracketed sections, pick deposit number from the sector table above, set up Stripe product + payment link. Optional: the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) has annotated worked examples + DocuSign-importable format. | Stripe link ready. DPA drafted. Deposit amount locked. |
 | **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.3 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
 | **3** | Bank your first deposit. Schedule pilot kickoff and the first Friday demo cadence. | Deposit cleared. Kickoff scheduled. Pilot officially started. |
 
@@ -291,7 +291,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 ## Advanced (optional sidebar)
 
-Founders who have closed 2-3 paid pilots and want to layer on contract rigor can read the [Common Paper Design Partner Agreement template](https://commonpaper.com/standards/design-partner-agreement/) (a vetted v2 LOI used by hundreds of YC companies), [SaaStr's "Should we charge for pilots"](https://www.saastr.com/should-you-charge-for-a-pilot/) (Jason Lemkin's thirty-second answer is yes, always), and Ash Rust's ["Startup Sales: How to Get Pilot Customers to Pay"](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) for the conversation tactics. The one-page DPA in this chapter is enough through your first 10 pilots. The advanced versions matter once you start hearing the words "procurement" and "MSA" in pilot conversations.
+Once you have closed 2-3 paid pilots and want to layer on contract rigor, read the [Common Paper Design Partner Agreement template](https://commonpaper.com/standards/design-partner-agreement/) (a vetted v2 LOI used by hundreds of YC companies), [SaaStr's "Should we charge for pilots"](https://www.saastr.com/should-you-charge-for-a-pilot/) (Jason Lemkin's thirty-second answer is yes, always), and Ash Rust's ["Startup Sales: How to Get Pilot Customers to Pay"](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) for the conversation tactics. The one-page DPA in this chapter is enough through your first 10 pilots. The advanced versions matter once you start hearing the words "procurement" and "MSA" in pilot conversations.
 
 A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 becomes paperwork, not negotiation.
 

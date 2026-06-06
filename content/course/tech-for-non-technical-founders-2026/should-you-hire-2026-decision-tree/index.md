@@ -36,11 +36,11 @@ related_posts: false
 
 > **TL;DR:** Default: self-serve with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger, not the first decision. Five questions route you to one of four build paths.
 
-Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring is what you do when you hit a specific ceiling signal - not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
+Self-serve with Lovable + Supabase + Stripe is the default for a non-technical founder in 2026. Hiring (whether a full team or a Fractional CTO - a part-time senior engineer who owns architecture but doesn't write the code) is what you do when you hit a specific ceiling signal, not the first decision after the Brief. This chapter is the decision tree: when does the default end, and what triggers the switch?
 
 Pre-seed founders hiring engineering before a single paying customer is confirmed is the most common build-decision mistake at the idea stage. The brief was right - we taught the brief in [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) and quality-checked it as outcomes in [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/).
 
-The hire is the move that broke the runway. The skipped step was the cheaper experiment that would have told her whether she needed to build at all.
+The hire is the move that breaks the runway. The skipped step is the cheaper experiment - a smoke test, a clickable prototype, a Concierge MVP - that would have told you whether you need to build at all.
 
 ![A hand-drawn 2-by-2 decision matrix with four quadrants labeled Validate without code, Self-serve build, Fractional CTO bridge, and Hire a team. Each quadrant lists a first action, cost band, and timeline.](decision-matrix.svg)
 
@@ -158,8 +158,6 @@ The Mermaid above is the worksheet. The five questions live in the diagram. The 
 **Q3 ("runway?")** is months of cash until you must show paying customers. Under 4 months: route to Validate regardless of Q1. 4-12 months: self-serve or fractional are both viable. 12+ months: hire a team becomes safe to consider.
 
 **Q5 ("engineering budget?")**: fractional rate fits the Fractional CTO route (typically $200/hr or $8-15K/mo at time of writing); full team salaries fit the Hire route. Skip the path you cannot fund through the runway window.
-
-A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) lays out these five questions in checkbox form and writes your verdict at the top of the page. Print it. Fill it in alone. Take the result to one peer or advisor for a sanity check.
 
 A printable [worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) lays out these five questions in checkbox form and writes your verdict at the top of the page. Print it. Fill it in alone. Take the result to one peer or advisor for a sanity check.
 

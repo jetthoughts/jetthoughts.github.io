@@ -47,7 +47,7 @@ Open this page on a second screen during the call. Read the questions as written
 
 Take notes by hand, not by typing. Hand-writing slows you down enough that you stop transcribing and start listening for the three emotional flags below. Score each call 1-10 at the end, using Q4 and the flag count together. By interview 10, you have a validation score, not 10 unsorted transcripts.
 
-Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30 minutes booked, 20 minutes of real talking. Do not go over. Founders who run 60-minute interviews start pitching their idea in minute 35 and contaminate the sample.
+Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30 minutes booked, 20 minutes of real talking. Do not go over. Run 60 minutes and you start pitching your idea in minute 35 and contaminate the sample.
 
 ## The 5 questions - copy and paste
 
@@ -150,7 +150,7 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 - **If you have fewer than 5 scores of 7+:** the problem is too weak. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
 - **Forward the transcripts to your fractional CTO or independent advisor** before you make the build/no-build call. Two readers catch what one misses.
 
-Founders who skip this script and run "feature interest" interviews ("would you pay for X?") almost always launch into silence. The Mom Test isn't a productivity trick. It is the only way to keep your interviewees from being polite while you are gambling six months of your life on what they said.
+Skip this script and run "feature interest" interviews ("would you pay for X?") and you almost always launch into silence. The Mom Test isn't a productivity trick. It is the only way to keep your interviewees from being polite while you are gambling six months of your life on what they said.
 
 ---
 

@@ -34,7 +34,7 @@ related_posts: false
 >
 > **Input:** a Module 4 decision pointing to "self-serve" + a one-page brief + the tool knowledge from Part 1
 >
-> **Output:** a live MVP at a staging URL real users can click, by Friday week 4
+> **Output:** a live MVP at a staging URL real users can click - by week 10-12 for evening-only founders (the 2-4 hr/week pattern this course is built for), or by Friday week 4 for full-time founders
 
 > **TL;DR:** Four build phases with one demo each. Phase 1 ships clickable UI. Phase 2 wires Supabase auth. Phase 3 connects Stripe checkout. Phase 4 deploys to 5 ICP users. Five green lights to exit. Ship the shed, not the skyscraper.
 

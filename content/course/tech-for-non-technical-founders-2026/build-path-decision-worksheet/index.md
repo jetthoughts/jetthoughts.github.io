@@ -232,7 +232,7 @@ The good answer names the person, the relevant experience (Stripe payments backe
 - **Share the worksheet result with one peer or advisor in a 20-minute call.** Not three. One. Ask them: *"If the matrix said Path X, what would change your mind?"* Their first answer is the assumption you should pressure-test next. If they cannot name one, the matrix verdict holds.
 - **Schedule the first action for tomorrow morning.** Path 1: ship the Carrd page. Path 2: paste one-page brief into Lovable. Path 3: 3 LinkedIn outreach messages to Fractional CTOs in your industry. Path 4: read the SOW clause-by-clause with a printed pen, not in Google Docs. Calendar the action with a hard start time. The worksheet routes the decision; the calendar invite routes the work.
 
-Founders who skip this worksheet and route on advisor instinct are the founders who, six weeks later, sign a contract their data did not support and post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) when the build runs over budget. The matrix is cheaper than the contract it prevents.
+Skip this worksheet and route on advisor instinct and you're the founder who, six weeks later, signs a contract the data did not support and posts a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) when the build runs over budget. The matrix is cheaper than the contract it prevents.
 
 If you want the doctrine in long form, the [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) walks through the Airbnb test, the Rob Walling shed-vs-skyscraper warning, and the worked example for each of the four paths.
 

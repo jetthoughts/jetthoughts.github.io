@@ -28,8 +28,6 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 1 · Step 2b of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
->
 > **Module 1 · Step 2b of 3 · Part 2 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a live landing page with tracking installed (from [Part 1: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/))

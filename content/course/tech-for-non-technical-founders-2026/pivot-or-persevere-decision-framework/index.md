@@ -79,7 +79,7 @@ The skill is not memorizing the six types. The skill is asking which of the five
 
 ## Trigger Conditions: What Tells You to Pivot
 
-Most founders do not pivot too early. They pivot too late. They watch the cohort numbers, the conversion rates, the ad spend, and the CAC numbers all degrade for two quarters before admitting the signal is real. The trigger conditions below are the numerical thresholds that should override the "let me try one more thing" instinct.
+The common pattern is not pivoting too early. It's pivoting too late - watching the cohort numbers, the conversion rates, the ad spend, and the CAC numbers all degrade for two quarters before admitting the signal is real. The trigger conditions below are the numerical thresholds that should override the "let me try one more thing" instinct.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -114,7 +114,7 @@ flowchart TD
 
 **Tech-stack cost or performance ceiling** triggers a Technology pivot. Founders typically react by ignoring the ceiling for too long because rebuilding feels expensive. The cost of a 6-week rebuild is almost always less than the cost of running on a stack that triples every quarter at scale.
 
-The right rule is simple: when two consecutive months show the same trigger condition, the next decision is a pivot type, not a "try harder." Founders who flail try harder for two more quarters; founders who pivot ship a new hypothesis test in two weeks.
+The right rule is simple: when two consecutive months show the same trigger condition, the next decision is a pivot type, not a "try harder." The flail response is to try harder for two more quarters; the pivot response is to ship a new hypothesis test in two weeks.
 
 ## What You Keep When You Pivot
 

@@ -64,7 +64,7 @@ If the agency declines to answer in advance, that is a 0 on every question. Exer
 
 **Pass:** A per-developer dollar range ($80 to $300 per month for Cursor seats plus Anthropic and OpenAI API usage), a pass-through model written into the SOW, and a sample invoice line-item they will email after the call. They have a budget alert on the API account.
 
-**Fail:** "It is included in the rate." "We don't track it that closely." "We absorb the AI costs." Founders who sign without this number get a surprise five-figure OpenAI charge in month two - the $4,800 line in the opening story was that number two weeks before the founder caught it.
+**Fail:** "It is included in the rate." "We don't track it that closely." "We absorb the AI costs." Sign without this number and you get a surprise five-figure OpenAI charge in month two - the $4,800 line in the opening story was that number two weeks before the founder caught it.
 
 **Score:** 1 if they give a per-developer dollar range and a written pass-through policy. 0 otherwise.
 

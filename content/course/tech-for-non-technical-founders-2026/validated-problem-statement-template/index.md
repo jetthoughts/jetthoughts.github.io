@@ -48,7 +48,7 @@ A solo founder I spoke with last month sent 47 cold DMs to Twitter strangers com
 
 Block 90 minutes on a single morning. Print the template (or copy the markdown version below into a Notion doc). Bring all 10 interview transcripts, your handwritten Q4 scores, your emotional-flag counts.
 
-The order matters. Score first, count second, write the page third. Founders who write the page before they score will write the page they wished the calls had returned, not the page the transcripts actually support. The friction of writing the score before the prose is what stops you from talking yourself into the build.
+The order matters. Score first, count second, write the page third. Write the page before scoring and you write the page you wished the calls had returned, not the page the transcripts actually support. The friction of writing the score before the prose is what stops you from talking yourself into the build.
 
 Take the filled page to 2 readers within 48 hours. One advisor (a founder one step ahead, a fractional CTO, a board member). One peer (another founder still pre-launch). Ask each: "Would you argue with this?" If both nod, you're done with Module 3. If either picks a fight on the persona, the cost, or the why-now, you have your next 5 interviews to run.
 
@@ -189,7 +189,7 @@ Then walk the page through these four moves:
 - **If you landed in the PIVOT lane (4-6), pick the cleanest segment and run 5 sharper interviews using [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) again.** Don't rerun the same 10 - they've already given you their honest answer. New segment, new interviews, one week.
 - **If you landed in the KILL lane (fewer than 4), write a 200-word post-mortem to your future self.** What ICP did you pick wrong? What why-now did you assume that wasn't true? What workaround did you not learn about until interview 7? The post-mortem is the most valuable artifact from a kill round - it stops you from picking the same wrong target again next quarter. The [stop-AI-obsession validation post](/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/) has the long version of the discipline.
 
-Founders who skip the synthesis page and start prompting are the same founders who, six weeks later, post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about a working MVP nobody wants. The page is cheap. The build round you skip because of the page is the expensive thing you avoid.
+Skip the synthesis page and start prompting straight away and you're the founder who, six weeks later, posts a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about a working MVP nobody wants. The page is cheap. The build round you skip because of the page is the expensive thing you avoid.
 
 ---
 

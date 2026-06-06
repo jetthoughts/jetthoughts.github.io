@@ -35,15 +35,9 @@ related_posts: false
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 (a + b) recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 
-> **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. The Mom Test is irreplaceable - AI can summarize the internet, but only a real human can tell you whether they'd open their wallet.
+> **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. Skip to: [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow).
 
-**Skip to:** [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow)
-
-> **Feeling impatient to start building?** That instinct is normal at the idea stage - the build is what you can picture, so the build is where your mind wants to go. The 90 minutes you spend in this chapter is what saves the 90 days of building the wrong thing. The technique is next; come back for the why afterward.
-
-> If you do not have interview transcripts yet, read straight through.
->
-> After your Ch 2.3 (a + b) interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and make the decision.
+> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3 (a + b) interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
 
 Run eleven interviews where the only question is "would you pay for this?" and you'll close the week with nine yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
@@ -59,7 +53,7 @@ Rob Fitzpatrick's book [The Mom Test](https://www.momtestbook.com/) (2013) named
 
 The core idea: ask interviewees to recount what they actually did the last time the problem happened, not what they think they'd do about a product you describe to them.
 
-## The 5 questions most founders ask instead (and why each one fails)
+## The 5 questions you'll be tempted to ask (and why each one fails)
 
 Before the working script, look at the questions a non-technical founder almost always writes on the first attempt. Each one feels like it's getting to the truth; each one is engineered to surface a polite lie.
 

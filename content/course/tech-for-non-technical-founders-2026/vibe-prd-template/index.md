@@ -1,5 +1,5 @@
 ---
-title: "one-page brief Template - One-Page Product Brief"
+title: "Vibe PRD Template - One-Page Product Brief"
 aliases: ["/blog/vibe-prd-template/"]
 description: "One-page Product Brief template. Hand to Lovable, Cursor, or a hired junior. Free."
 date: 2026-05-18
@@ -26,7 +26,7 @@ related_posts: false
 
 📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
 
-# one-page brief Template - One Page, Five Sections
+# Vibe PRD Template - One Page, Five Sections
 
 *The brief that turns a validated problem into something Lovable, Cursor, or a hired junior can ship from on Tuesday morning.*
 
@@ -236,7 +236,7 @@ The good no-go list names eight things a competent agent or junior might add. Ea
 - **Paste the brief into Lovable, Cursor, or your contractor's first kickoff doc - unchanged.** Do not edit it for the audience. The same one page goes to all three. If the agent or the contractor asks a question whose answer is in the brief, your brief failed; rewrite the section that confused them before you take a second pass at the build.
 - **Set a 30-day calendar reminder for the Section 4 metric.** The reminder fires whether or not you remember it. On day 30, open your analytics tool and read the conversion-completed count. Above the pass threshold = the brief was right and you build the next layer. Below = the brief was wrong somewhere, and you reread the page before adding anything.
 
-Founders who skip the no-go list ship working demos of products nobody asked for. The same founders, six weeks later, post a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP they can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
+Skip the no-go list and you ship a working demo of a product nobody asked for. Six weeks later you're posting a [salvage or rebuild question](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) about an MVP you can't extend. The page is cheap. The build round you save by writing it is the expensive thing you avoid.
 
 If you want the doctrine in long form, the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) walks through the five sections with the worked example, the decision between one-page brief and traditional PRD, and the case for paying $1,000 vs writing the page yourself for free.
 

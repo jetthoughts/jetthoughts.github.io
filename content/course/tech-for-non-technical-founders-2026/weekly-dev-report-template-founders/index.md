@@ -47,7 +47,7 @@ Both teams worked the same five days, and the second report gave you everything 
 
 ## Why weekly reports usually fail
 
-Most founders inherit the weekly report habit from whichever PM their agency assigned in week one. The PM was trained to write status reports for an enterprise customer who wanted comfort: lots of words, a velocity chart, a RAG indicator that has been amber for six months. The format survived because nobody on the agency side had to read it. You did.
+The weekly report habit gets inherited from whichever PM the agency assigned in week one. The PM was trained to write status reports for an enterprise customer who wanted comfort: lots of words, a velocity chart, a RAG indicator that has been amber for six months. The format survived because nobody on the agency side had to read it. You did.
 
 The vibe-coding wave made the prose worse, not better. The same PM now pastes the standup transcripts into a long-context model and asks for "an executive summary suitable for the founder." What you get back is a wall of soft language - "exploring," "optimising," "iterating on" - assembled out of whatever the team said in standup, with no signal about whether anything reached a place you can click. [Atlassian's writeup of weekly status reporting](https://www.atlassian.com/work-management/project-management/status-reports) makes the point flat: a status report that does not link to working software is theatre, regardless of how cleanly it is formatted.
 

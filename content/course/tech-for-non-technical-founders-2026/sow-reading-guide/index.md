@@ -81,7 +81,7 @@ Read this **the night before you sign, alone**, with a printed SOW, a yellow hig
 
 **Flag**: Hourly-rate change-orders with no cap, no estimate review window, and especially "Vendor may proceed upon Client's verbal approval."
 
-**Fix**: (1) Cap change orders at a percentage of the original SOW (10% standard, 20% generous). (2) Require a written estimate naming the developer, hours, and deliverable, with a 48-hour Founder-approval window. (3) Strike "verbal approval." Founders who skip this end up with the [hidden-cost vendor management problem](/blog/hidden-cost-poor-development-vendor-management-fix/) on their AmEx statement.
+**Fix**: (1) Cap change orders at a percentage of the original SOW (10% standard, 20% generous). (2) Require a written estimate naming the developer, hours, and deliverable, with a 48-hour Founder-approval window. (3) Strike "verbal approval." Skip this and you end up with the [hidden-cost vendor management problem](/blog/hidden-cost-poor-development-vendor-management-fix/) on the AmEx statement.
 
 ### Clause 4 - IP / code ownership
 

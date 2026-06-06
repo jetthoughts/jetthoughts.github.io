@@ -43,6 +43,27 @@ related_posts: false
 
 You have an idea, or a half-built MVP, and you're about to start talking to people about it. Do one thing first: write the single sentence everything else gets tested against. The six steps below build that sentence - your Founding Hypothesis - so you find out whether the problem is real before you write a line of code or a check.
 
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    Start(["Idea or half-built MVP<br/>+ notebook + 90 min"])
+    Start --> S1[Step 1<br/>Fill 5 Mad Libs blanks<br/>Customer · Problem · Approach · Competition · Differentiation]
+    S1 --> S2[Step 2<br/>Stress-test with 4 lenses<br/>Customer · Pragmatic · Growth · Money]
+    S2 --> S3[Step 3<br/>Score 1-5 per lens<br/>Total ≥14/20 to pass]
+    S3 --> S4[Step 4<br/>Find weakest blank<br/>Rewrite specifically]
+    S4 --> S5[Step 5<br/>Save to Founder OS<br/>One Google Doc, one sentence]
+    S5 --> S6[Step 6<br/>Design the 2-part test<br/>Smoke test + 10 interviews]
+    S6 --> Out(["One falsifiable sentence<br/>ready for Ch 1.2a + 2.1"])
+
+    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
+    classDef step fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
+    classDef out fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+
+    class Start start
+    class S1,S2,S3,S4,S5,S6 step
+    class Out out
+```
+
 ## Don't Talk to Anyone Without a Hypothesis
 
 | No Hypothesis | Written Hypothesis |

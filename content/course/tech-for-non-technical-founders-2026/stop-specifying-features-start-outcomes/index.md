@@ -159,7 +159,7 @@ After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific do
 | **Audience-of-one fork** (the audience choice from Ch 3.1: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
 | **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 
-Module 3 closes here. Chapter 4.1 (Choose Your Build Path) is where you decide whether your rewritten brief goes to a self-serve stack or a hired team.
+> **Module 3 closes here.** Before opening Module 4, you should have: (1) a one-page Product Brief (Vibe PRD) with 5 sections filled in (Ch 3.1), (2) Section 3 rewritten as outcome-shaped job stories that pass the peer "what would you build differently?" test (this chapter), and (3) a no-go list of 5-10 items you explicitly cut. Both in your `Founder OS` folder. Missing one? Go back - Module 4 reads the brief into Lovable prompts; a half-written brief produces a half-working MVP.
 
 When your brief skips the moment, the action, and the result, the engineer or the AI agent fills them in from training data. Name those three and there is nothing left for them to invent.
 

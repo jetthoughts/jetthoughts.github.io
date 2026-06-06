@@ -78,7 +78,7 @@ A score of 0 is not a "burn it down" verdict. The legacy code keeps running whil
 > Bad: "I scored a 1. I picked the wrong team. This is my fault."
 > Good: "I scored a 1. The previous shop shipped without tests, monitoring, or backups. That is triage data."
 
-Most founders we rescue scored a 2 or 3 the first time they ran something like this. The score points at the next sprint, not at the mirror.
+A 2 or 3 on the first run is typical for the rescue-stage builds we see. The score points at the next sprint, not at the mirror.
 
 ### Conflating REBUILD with FULL REWRITE
 
@@ -98,7 +98,7 @@ The founder in the opening story spent $7,500 on three consultants over nine wee
 
 - **Send the verdict + the six scores to your independent reviewer** for a 30-minute paid call. Ask one question: "Is there anything in this score I am misreading?"
 - **Draft the 30/60/90 day plan in plain English.** KEEP looks like "hire one senior engineer, raise test coverage to 40% by day 90, set up monitoring." FREEZE looks like "no new features for 60 days, three sprints on stabilization, re-score on day 60." REBUILD looks like "two parallel codebases, feature flag, sunset the old one flow at a time."
-- **Forward the verdict to your investor or board the same week.** Three lines: the score, the verdict, the plan. Founders who do this keep the trust they have spent 18 months building.
+- **Forward the verdict to your investor or board the same week.** Three lines: the score, the verdict, the plan. Forward it and you keep the trust you have spent 18 months building.
 
 If the verdict is FREEZE or REBUILD and the previous team is still around, the next two reads are the [dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) and the [step-by-step exit guide](/blog/fire-dev-shop-guide/). If the verdict is KEEP, run the [ownership checklist](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) the same Friday to confirm you actually own what you just decided to harden.
 
