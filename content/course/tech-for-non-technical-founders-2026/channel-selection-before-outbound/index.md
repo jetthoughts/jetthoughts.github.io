@@ -38,9 +38,9 @@ related_posts: false
 
 > **TL;DR:** Pick one channel from your interview evidence and commit for a full send/reply/follow-up arc. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
 
-A B2B HealthTech founder we worked with spent 6 weeks switching channels every 10 days - LinkedIn, then cold email, then a Slack community, then back to LinkedIn. She had conversations with 8 people total, zero paid pilots, and no idea which of the channels had actually worked.
+The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, cold email for two weeks, a Slack community for two weeks, back to LinkedIn. Six weeks in, 8 conversations, zero paid pilots, and no idea which channel actually worked.
 
-She restarted with LinkedIn only and stuck with it through a full send/reply/follow-up arc. 11 conversations, 2 paid pilots, a clear hypothesis about what to test next.
+The fix is rarely "find a smarter channel." It's pick one channel from your interview evidence and stick with it through a full send/reply/follow-up arc. Same six weeks on LinkedIn alone produces 11 conversations, 2 paid pilots, and a clear hypothesis about what to test next.
 
 The pattern: four channels, no commitment, and no way to tell which channel had worked because none of them had been run long enough to read.
 

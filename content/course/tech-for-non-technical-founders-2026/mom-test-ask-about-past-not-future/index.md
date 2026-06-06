@@ -45,9 +45,9 @@ related_posts: false
 >
 > After your Ch 2.3 (a + b) interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and make the decision.
 
-Eleven interviews, nine "yes, I would absolutely use this," and a $49/month launch the following Monday that closed its first week with three signups and two churns by day 14.
+Run eleven interviews where the only question is "would you pay for this?" and you'll close the week with nine yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
-The ed-tech founder who walked us through that timeline in her rescue call had asked every question in the hypothetical - "would you pay for this?" - and every answer was the polite shape the hypothetical produces. Eleven friendly conversations, zero useful data.
+The technique below switches every question to the past tense. What did you do last time? What did it cost? Show me the spreadsheet. Past-tense questions force the answer back into reality; whoever pays in the past keeps paying in the future, and whoever did nothing in the past will do nothing in the future no matter what they tell you over coffee.
 
 For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done.
 

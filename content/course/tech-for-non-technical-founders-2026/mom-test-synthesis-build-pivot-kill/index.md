@@ -121,4 +121,12 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 
 ---
 
+> **Case Study: Tomas & Mia**
+>
+> **Tomas** (ReconcileBot, B2B SaaS): scored 7 of 10 controllers at 8/10 or higher. Strong-signal count = 7. Verdict: BUILD. Writes the validated problem statement using a verbatim quote ("CFO billed $800 last week on a 4-hour reconciliation") and moves to 2.4 prototype.
+>
+> **Mia** (TutorMatch, B2C marketplace): scored 8 of 10 parents at 9/10 or higher. Strong-signal count = 8. Verdict: BUILD. Validated problem statement anchors on a verbatim quote ("missed a $2,000 project deadline on hold with a tutoring center") and moves to 2.4 prototype.
+
+---
+
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

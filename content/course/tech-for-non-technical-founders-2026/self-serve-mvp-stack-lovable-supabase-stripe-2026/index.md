@@ -30,36 +30,17 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 4 · Step 3a of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 4 · Step 3a of 4** · Part 1 of 2 · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Part 1 of 2** · [Part 2: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) covers the ship plan (Phase 1-4 + Onramp), exit criteria, shed-vs-skyscraper, and the architectural ceiling.
+> **Input:** a Module 4 decision pointing to "self-serve" (from [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)) + a one-page brief (from [Ch 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)) + a Day-1 ownership audit passed (from [Ch 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/))
 >
-> **Input:** a Module 4 decision pointing to "self-serve" (from [Ch 4.1](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)) + a one-page brief (from [Ch 3.1](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)) + a Day-1 ownership audit passed (from [Ch 4.2](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) - GitHub org + AWS root + domain in YOUR name)
->
-> **Output:** the 3 pre-flight rules locked in, tool boundaries clear, ready to start the build in Part 2.
+> **Output:** the 3 pre-flight rules locked in, tool boundaries clear, ready to start the build in [Part 2 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 
-> **TL;DR:** Lovable renders the screens, Supabase stores the data, Stripe charges the card. Three tools, three jobs. Know the boundaries between them before you open Lovable. Twelve rules keep the build inside the shed.
+> **TL;DR:** Lovable renders the screens, Supabase stores the data, Stripe charges the card. Three tools, three jobs. Know the boundaries before you open Lovable. Twelve rules keep the build inside the shed. All three tools have free tiers; the chapter's specific cost callouts live where each tool is introduced. Skip to [the ship plan](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-ship-plan) if you already know the stack.
 
-> **$0 path for the whole MVP.** Lovable, Supabase, and Stripe all have free tiers that ship a working product before any paid charge hits your card.
-> - **Lovable free** - 5 daily messages, enough to build 3-5 screens. Upgrade to $25 Pro only if you're iterating multiple times a day.
-> - **Supabase free** - 500 MB database + 1 GB file storage + 50K monthly active users. Stays free until you have product-market fit.
-> - **Stripe** - no monthly fee. Only the 2.9% + $0.30 per transaction when a customer actually pays.
+> **This chapter starts FRESH from your one-page brief - do NOT iterate the Chapter 2.4 prototype.**
 >
-> A solo founder can start Module 4 on $0, upgrade Lovable to $25 only if the build velocity demands it.
-
-> **Skip to the action:** [The ship plan in Part 2](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-ship-plan) if you already know the stack and want the full build sequence. [What to do tomorrow in Part 2](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#what-to-do-tomorrow) if you want the three starter steps.
-
-> **This chapter starts FRESH from your one-page brief. You do NOT iterate the throwaway prototype from Chapter 2.4.**
->
-> The Chapter 2.4 prototype was a short research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is the production build: real Supabase auth, real Stripe payments, real domain, real users. The two Lovable activities are separate by design. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code multiplies the build effort and ships every research compromise into production.
-
-> **Before you write code: the $0 Concierge MVP (no-code alternative).**
->
-> If you are not ready to commit to a full Lovable build, you can validate demand with zero code first. The "Wizard of Oz" pattern: your customer uses what looks like a working SaaS product, while you process their requests manually behind the scenes.
->
-> The stack: **Tally** (free form builder) → **Zapier or Make.com** (free tier routes form submissions) → **Airtable or Notion** (free tier stores the data). A customer fills in the Tally form, Zapier drops the row into Airtable, and you process it by hand. To the customer, it looks automated. You validate whether people will pay before you spend weeks building the real thing.
->
-> All three tools have free tiers. This is not a replacement for the Lovable build - it's a stepping stone. Use it when you need more demand evidence before committing to code. The Lovable + Supabase + Stripe stack is waiting when you're ready.
+> The Chapter 2.4 prototype was a short research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is the production build: real Supabase auth, real Stripe payments, real domain, real users. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code multiplies the build effort and ships every research compromise into production.
 
 If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 
@@ -86,6 +67,8 @@ The buyer opens the staging URL → Lovable shows the screens → Supabase store
 Boring is what you want for an MVP. The boring path lets one non-technical founder ship the full loop (signup, paid onboarding, the one feature that solves the validated problem) without ever opening a terminal.
 
 The cost to disprove your hypothesis is vendor free tiers and the small per-tool monthly fees in the cost table above. The cost to prove it is the same.
+
+> **Alternative: $0 Concierge MVP (no-code Wizard of Oz).** If you want more demand evidence before committing to Lovable code, run a Concierge MVP first: **Tally** (free form) → **Zapier or Make.com** (free routing) → **Airtable or Notion** (free storage). The customer fills the Tally form, Zapier drops the row in Airtable, you process by hand. To the customer it looks automated. Validate willingness-to-pay before committing to the build. All three tools have free tiers. This is a stepping stone, not a replacement; the Lovable + Supabase + Stripe stack is what ships in Part 2.
 
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
 

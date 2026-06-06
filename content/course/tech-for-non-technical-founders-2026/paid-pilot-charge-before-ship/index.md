@@ -37,13 +37,14 @@ related_posts: false
 
 > **TL;DR:** A verbal yes is not a paid pilot. A signed DPA with a refundable Stripe deposit is. Charge 10-30% of year-one ACV before kickoff - it puts the CFO question on Week 0 instead of Week 8.
 
-In late 2025 a HealthTech founder ran a six-week free pilot with a 40-bed clinic she had met at a conference. The clinic loved it, the shared Slack channel had 47 messages of enthusiasm before week 4, and the day the pilot ended she sent the year-one contract.
+Two pilots, same product, same buyer profile, different deposit timing:
 
-The reply came back three weeks later: "We're going to revisit at the next budget cycle." There was no next budget cycle - the clinic moved on.
+| Variant | Setup | Result at Week 8 |
+|---|---|---|
+| **Free pilot** | Six weeks of free build, customer "loves it," 47 enthusiastic Slack messages, year-one contract sent on day pilot ended | "We're going to revisit at the next budget cycle." There is no next budget cycle. |
+| **Paid pilot** | One-page Design Partner Agreement, $1,200 refundable deposit collected before any code ships | Year-one contract closes day one. |
 
-In March 2026 she shipped the same product to a different customer who paid a $1,200 deposit at the start of the pilot, and that customer closed the year-one contract on day one. Same product, same buyer profile, different deposit timing.
-
-Below is the playbook the second founder followed: a one-page Design Partner Agreement, a 15-minute Stripe Checkout setup, and the pricing math that puts the founder in the conversation instead of the agency.
+The playbook below is the second variant: a one-page Design Partner Agreement, a 15-minute Stripe Checkout setup, and the pricing math that puts you in the conversation instead of stuck waiting for a CFO who never approved the pilot.
 
 ## Why free pilots almost never convert
 

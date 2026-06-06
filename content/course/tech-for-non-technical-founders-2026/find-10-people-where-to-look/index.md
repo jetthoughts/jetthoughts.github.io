@@ -41,13 +41,32 @@ related_posts: false
 
 > **This is Part 1 of 2.** This page covers WHERE to find the people - ICP mapping, reading threads, building the 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence. Read both before you send your first message.
 
-A consumer-app founder we spoke with started where most non-technical founders start: "I'll just message my LinkedIn network." Sixty polite DMs over a week, 3 calls booked - two old colleagues showing up to be nice, one real lead who ghosted on reschedule. So she dropped the network, spent a morning reading Reddit threads where her exact problem showed up, and wrote to the people complaining by name about the post she'd just read. By Thursday afternoon she had 12 interview calls on the calendar.
+Most non-technical founders start with the same move: "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
 
-Her hypothesis was the same and her work hours were the same. What she changed was where she went looking. The DM-the-network move books 2-3 polite calls with old colleagues. The Reddit move - reading where strangers are already complaining about the exact thing you hypothesised, then writing back to those specific complainers - takes half a day and produces a calendar.
+The technique below replaces that move with a different one: read where strangers are already complaining about your exact hypothesised problem, then write back to those specific complainers. Same hypothesis, same work hours, different place to look. The DM-the-network move books 2-3 polite calls. The read-where-they-already-complain move - half a day of reading threads, then 30 named outreach messages - produces a calendar of 10+ booked interviews.
 
 > **Calendar reality for the full interview round.** A full-time founder with daytime availability typically books 10 interviews across 2-4 calendar weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically takes 6-8 calendar weeks for the full round. Plan around the 6-8 week version. Module 3 cannot start until 10 transcripts are scored.
 
 The full journey, top to bottom:
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    H(["Your 1-sentence hypothesis<br/>(from Ch 1.1)"])
+    H --> S1[Step 1<br/>Translate hypothesis → ICP map<br/>Paste into Claude/ChatGPT]
+    S1 --> S2[Step 2<br/>Read where they complain<br/>Reddit/LinkedIn/forums]
+    S2 --> S3[Step 3<br/>Build 30-name list<br/>One name per real complaint]
+    S3 --> S4[Step 4<br/>Write each one personally<br/>Templates in Part 2]
+    S4 --> S5(["Step 5<br/>10 interviews on calendar"])
+
+    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
+    classDef step fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
+    classDef end1 fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+
+    class H start
+    class S1,S2,S3,S4 step
+    class S5 end1
+```
 
 1. **Translate the hypothesis into an ICP map** - paste your three sentences and two competitor URLs into Claude or ChatGPT.
 2. **Read where they're already complaining** - work through the channels the AI proposed. Note 30 sentences in their real words.

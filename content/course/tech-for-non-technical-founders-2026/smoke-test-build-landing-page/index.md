@@ -44,11 +44,11 @@ A **smoke test** is a landing page that proves demand before you build. You put 
 
 ## What a Smoke Test Actually Proves
 
-> **The 14-interview trap: a $38,400 lesson**
+> **The 14-interview trap: why "I would pay" voices don't translate to clicks**
 >
-> Priya, a FinTech founder, ran 14 interviews before the build; 12 said "I would pay for that." She hired a developer, built for four months, shipped in late February, and ran a $420 Meta ad campaign. Landing page conversion: 0.6%. Three signups, all churned. Total cost: $38,400 plus four months.
+> Fourteen interviews where 12 people say "I would pay for that" feels like demand. Build the product on that signal, ship a landing page, and the same 12 people are usually the ones who never type an email address into the box. A typical landing page conversion from a "validated" 14-interview cohort runs 0.5-1%; three signups, all churning by week two, on top of four months of build time is the recurring shape.
 >
-> The 12 "I would pay" votes did not translate to clicks. When the same 12 people had to type an email address into a box on her live landing page, almost none of them did.
+> The smoke test runs BEFORE the build to surface that gap. Cold strangers either type an email or they don't; the test costs $300 and a Tuesday evening instead of $38K and four months.
 
 Cold ad traffic filters demand the way customer interviews cannot. The smoke test runs between [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to catch ideas that read well on paper but produce no clicks from a real audience.
 
@@ -56,13 +56,29 @@ What the smoke test does NOT answer: whether the product works (you have not bui
 
 The five-step shape of the test:
 
-1. **Define what you'll measure** - email signup OR Stripe price-button click ($1 pre-sale, optional)
-2. **Build the page** - paste your hypothesis into an AI builder
-3. **Set up tracking** - GA4 + Microsoft Clarity + ad-platform pixel, all installed BEFORE ads run
-4. **Buy cold traffic** - on the right channel for your ICP (covered in [Part 2](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/))
-5. **Read the numbers** - go / iterate / kill against the conversion-rate decision table (covered in Part 2)
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    H(["Founding Hypothesis<br/>(from Ch 1.1)"])
+    H --> S1[Step 1<br/>Define the signal<br/>Email or Stripe click]
+    S1 --> S2[Step 2<br/>Build the page<br/>AI builder + 6 elements]
+    S2 --> S3[Step 3<br/>Wire tracking<br/>GA4 + Clarity + pixel]
+    S3 --> P1(["Part 1 done<br/>(this chapter)"])
+    P1 --> S4[Step 4<br/>Buy cold traffic<br/>~300 visits, right channel]
+    S4 --> S5[Step 5<br/>Read the numbers<br/>go / iterate / kill]
 
-This page covers steps 1-3. Part 2 covers steps 4-5.
+    classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
+    classDef step1 fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
+    classDef gate fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef step2 fill:#fffbe6,stroke:#bf8a00,stroke-width:2px,color:#1a1a1a
+
+    class H start
+    class S1,S2,S3 step1
+    class P1 gate
+    class S4,S5 step2
+```
+
+**Part 1 (this chapter)** covers steps 1-3 - the build. **Part 2 ([Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/))** covers steps 4-5 - the run.
 
 > **Pre-flight checklist before you ship:**
 > - [ ] Landing-page builder account (pick one below)
@@ -153,11 +169,11 @@ Spend on cold traffic without tracking and you end the week with one number (how
 
 **Conversion rate = form submits ÷ page views.** That's the number your Founding Hypothesis is judged against.
 
-### What breaks silently (Marcus's $480 lesson)
+### What breaks silently when you skip the tracking stack
 
-Marcus, a B2B SaaS founder, launched $480 of Meta ads before the pixel was wired. His dashboard showed 312 clicks; his Mailchimp account showed 4 emails - the signup form had a broken redirect that Clarity session replay would have caught on the first visitor. He wired the tracking stack, re-ran the same ad set for $260, and finally got real numbers.
+The shape of the silent failure: launch ads with no Clarity, no pixel, no GA4. The ad dashboard shows clicks (say, 312 of them). Your email tool shows almost no signups (4 of them). You assume the offer is wrong. The real failure is a broken redirect, a misnamed form field, or a Cloudflare rule that's blocking your form submission - any one of which Clarity session replay would have caught on the first visitor. Same ad spend, second run, suddenly real numbers because you can SEE what visitors did.
 
-The first $480 bought nothing but a lesson: install tracking before you spend a dollar on traffic.
+The first $300-500 of ads on an untracked page buys nothing but a lesson. Install Clarity + the ad-platform pixel + GA4 before the first dollar of traffic runs.
 
 ## What to do next
 

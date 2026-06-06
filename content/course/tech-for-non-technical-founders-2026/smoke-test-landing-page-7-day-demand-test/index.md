@@ -30,17 +30,13 @@ related_posts: false
 
 > **Module 1 · Step 2b of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live landing page with tracking installed (from [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/))
+> **Module 1 · Step 2b of 3 · Part 2 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** a live landing page with tracking installed (from [Part 1: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/))
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 
-> **TL;DR:** Put your page in front of 300 cold strangers, pick the right ad channel for your ICP, don't touch it mid-flight, read the conversion rate against the decision table. If fewer than 3% click, the hypothesis is wrong - fix it before you build.
-
-> **This is Part 2 of 2.** [Part 1: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) covers picking a no-code builder, the 6 elements that ship, and installing tracking BEFORE ads run. This page assumes your page is live with Clarity and your ad pixel wired. If you haven't done that yet, go back to Part 1.
-
-> **Budget anchor before you start.** Smallest viable smoke-test budget is **$300-$600** (Meta or Reddit cold traffic to 300 visits). LinkedIn is **$1,800+**. The full per-channel table is below. If $300 is out of reach, skip paid ads and stick to organic - the chapter's $0 path (Reddit comments + LinkedIn DMs + NeetoSite + Clarity) still produces a real signal, slower.
-
-> **Ad-account setup reality (start Sunday evening, not Monday morning).** Meta Business account verification + ad account creation + payment method review + policy acceptance is a 60-120 minute process for a first-time user, frequently including a 24-48 hour review delay before the account can run ads. If you have never used Meta Ads Manager before, do the account setup Sunday evening so the verification clears by Tuesday. The same applies to Reddit Ads (faster, usually same-day) and LinkedIn Ads (slower, can take 48-72 hours for first-time advertiser verification).
+> **TL;DR:** Put your page in front of 300 cold strangers, pick the right ad channel for your ICP, don't touch it mid-flight, read the conversion rate against the decision table. If fewer than 3% click, the hypothesis is wrong - fix it before you build. Per-channel budgets + ad-account setup timing are below.
 
 ## Buy Cold Traffic on the Right Channel
 
@@ -58,6 +54,12 @@ CPC = cost-per-click, what one ad click costs you on each platform.
 | **Niche vertical** | Google Search ($1-$5 long-tail intent) | Real estate, dentists, contractors Google on pain | N/A |
 
 **Twitter / X:** Skip for first-time validation in 2026 - targeting signal too noisy after 2024-2025 platform changes.
+
+### Ad-account setup: start the weekend BEFORE launch
+
+Picking the channel is fast. Getting the ad account ready to run is not. First-time ad-account setup runs 60-120 minutes (Meta is the slowest because of verification delays), and many platforms hold the first ad in review for 24-48 hours before approving the account. Plan for the worst case: Meta Business verification + ad account creation + payment method review on Sunday evening so the verification clears by Tuesday. Reddit Ads usually clear same-day; LinkedIn first-time advertiser verification can take 48-72 hours. If you wait until Monday morning to start the account, your "launch this week" plan slips to next week.
+
+If $300 is out of reach, skip paid ads and stick to organic - the $0 path (Reddit comments + LinkedIn DMs + NeetoSite + Clarity) still produces a real signal, slower.
 
 ### Run length: long enough to stabilize
 

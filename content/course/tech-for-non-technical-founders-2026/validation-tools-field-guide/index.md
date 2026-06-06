@@ -42,6 +42,34 @@ This guide covers three tools - VenturusAI, DimeADozen, and Preuve AI - with eno
 
 A founder with a rough idea writes the Mad Libs sentence in five minutes and falls in love with it. A founder who runs the sentence through a validation tool finds the blank they were vague about before it costs them ten interviews.
 
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
+flowchart TD
+    Draft(["Draft hypothesis<br/>(rough Mad Libs sentence)"])
+    Draft --> V[VenturusAI<br/>SWOT + PESTEL + Porter<br/>~30s · Free tier]
+    Draft --> D[DimeADozen<br/>7-section validation brief<br/>~2min · $9 Starter]
+    Draft --> P[Preuve AI<br/>50+ data sources<br/>~60s · Free scan]
+    V --> Catch(["Catches: weak differentiation<br/>+ missed competitors"])
+    D --> Sizing(["Catches: wrong unit economics<br/>+ market too small"])
+    P --> Niche(["Catches: customer too broad<br/>+ market signal"])
+    Catch --> Refine[Rewrite the blanks the tools flagged]
+    Sizing --> Refine
+    Niche --> Refine
+    Refine --> Out(["Sharpened hypothesis<br/>ready for Ch 2.1 interviews"])
+
+    classDef draft fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
+    classDef tool fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
+    classDef catch fill:#faf5ff,stroke:#a855f7,stroke-width:2px,color:#1a1a1a
+    classDef refine fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
+    classDef out fill:#fffbe6,stroke:#bf8a00,stroke-width:2.5px,color:#1a1a1a
+
+    class Draft draft
+    class V,D,P tool
+    class Catch,Sizing,Niche catch
+    class Refine refine
+    class Out out
+```
+
 The tools catch different things:
 
 | Blind spot | Which tool catches it |
