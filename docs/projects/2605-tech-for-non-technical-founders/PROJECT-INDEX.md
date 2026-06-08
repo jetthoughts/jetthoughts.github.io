@@ -12,29 +12,25 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 ## 🚀 IMMEDIATE ACTION - START HERE
 
 **v1 (long-form) is shipped**: 5 modules, 18 chapters, live at `/course/tech-for-non-technical-founders-2026/`.
-**Strategic pivot (2026-06-07)**: v2 (micro-learning format) is the next iteration based on `30.03-course-format-requirements-for-creators.md`. All 21 v1 chapters score 1.0-1.5/8 against the 8-part template (per 40.08 gap report). 7 v2 draft pages exist (Quickstart, FAQ, 5 micro-lessons) and the Mom Test 3-lesson sequence is QA-validated per 40.09.
+**Strategic pivot (2026-06-07)**: v2 (micro-learning format) is the next iteration based on `30.03-course-format-requirements-for-creators.md`. All 21 v1 chapters score 1.0-1.5/8 against the 8-part template (per 40.08 gap report). The 5 micro-lesson exploration drafts (Mom Test 3-lesson sequence + paid-pilot + mom-test-5-questions) were removed 2026-06-08 to start the migration from a clean slate; the **Quickstart and FAQ pages remain in `content/course/...`** as the v2 entry points already wired into the landing.
 
-**Currently in flight**: Phase 3 pilot — publish micro-lessons as canonical Module 2 path, measure completion rate, then migrate Modules 1/3/4/5.
+**Currently in flight**: Phase 1 pilot — pick the first v1 chapter to rewrite to the 8-part template, measure real time-per-lesson, then fan out module-by-module.
 
 Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" section for the 4-phase rollout). Review docs in `40-49-review/`.
 
 ### For a micro-lesson migration agent (Phase 1-2 of TASK-TRACKER "Course Migration Schedule")
 
 ```
-1. Read 30-39-architecture-design/30.03-course-format-requirements-for-creators.md — CANONICAL spec for the v2 format. The 8-part lesson template is non-negotiable.
-2. Read 40-49-review/40.08-chapter-template-gap-report.md — every v1 chapter scored against the spec. Use as the "starting state" map.
-3. Read 40-49-review/40.09-mom-test-micro-lesson-qa-report.md — QA pass on the 3 Mom Test sample lessons + paid-pilot lesson. These are the canonical examples of the v2 format done right.
-4. Open the 7 v2 draft pages already in repo:
+1. Read AGENT-PROMPTS.md — pick §1 KICKOFF (cold session) or §2 NEXT-ITERATION (returning). The prompt files include the full read-list and quality gates.
+2. Read 30-39-architecture-design/30.03-course-format-requirements-for-creators.md — CANONICAL spec for the v2 format. The 8-part lesson template is non-negotiable. The Appendix A worked example (Lesson 1.1 rewrite) is the canonical implementation pattern.
+3. Read 40-49-review/40.08-chapter-template-gap-report.md — every v1 chapter scored against the spec. Use as the "starting state" map.
+4. Reference 40-49-review/_ARCHIVED_40.09-mom-test-micro-lesson-qa-report.md ONLY for the QA methodology pattern (criterion-by-criterion binary scoring). The lessons it audited were removed; the methodology is preserved.
+5. Open the v2 production pages already wired into the landing:
    - content/course/tech-for-non-technical-founders-2026/quickstart/
    - content/course/tech-for-non-technical-founders-2026/faq/
-   - content/course/tech-for-non-technical-founders-2026/mom-test-lesson-1-5-questions/
-   - content/course/tech-for-non-technical-founders-2026/mom-test-lesson-2-emotional-flags/
-   - content/course/tech-for-non-technical-founders-2026/mom-test-lesson-3-run-score-interview/
-   - content/course/tech-for-non-technical-founders-2026/paid-pilot-micro-lesson/
-   - content/course/tech-for-non-technical-founders-2026/mom-test-5-questions-micro-lesson/
-5. Read TASK-TRACKER.md "Course Migration Schedule" → pick the next phase (Phase 0 mechanical edits, Phase 1 pilot, or Phase 2 module-by-module).
-6. After every micro-lesson rewrite: run bin/validate-course + verify mobile viewport at 375px + verify Hugo build passes.
-7. Apply voice guide 90.11 (no em-dashes, no "Founders who"/"Most founders"/"## Why this matters" banned phrases).
+6. Read TASK-TRACKER.md "Course Migration Schedule" → pick the next phase (Phase 0 mechanical edits, Phase 1 pilot, or Phase 2 module-by-module).
+7. After every micro-lesson rewrite: run bin/validate-course + verify mobile viewport at 375px + verify Hugo build passes.
+8. Apply voice guide 90.11 (no em-dashes, no "Founders who"/"Most founders"/"## Why this matters" banned phrases).
 ```
 
 ### For an executing writer / task agent (single-session shortcut on v1 long-form)
@@ -54,7 +50,7 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 |---|---|
 | `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` | **CANONICAL v2 spec** — micro-learning course format requirements, 8-part lesson template, core/optional tagging, gap analysis, migration guide. The authoritative answer to "how should I structure this lesson?" |
 | `40-49-review/40.08-chapter-template-gap-report.md` | **DIAGNOSTIC** — every v1 chapter scored 1.0-1.5/8 against the 30.03 template. The "starting state" map for migration. |
-| `40-49-review/40.09-mom-test-micro-lesson-qa-report.md` | **EXAMPLES** — QA pass on the 3 Mom Test micro-lessons + paid-pilot lesson. Reference these as the canonical implementation of the 8-part template. |
+| `40-49-review/_ARCHIVED_40.09-mom-test-micro-lesson-qa-report.md` | **QA METHODOLOGY PATTERN** — the audited lessons were removed 2026-06-08 (start v2 from clean slate). The criterion-by-criterion binary scoring structure is preserved as the canonical QA template for any new phase. |
 | `TASK-TRACKER.md` | Live queue of pending post-ship improvements (P1-P3) + Course Migration Schedule (Phase 0-3 rollout) |
 | `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings — permanent gates now in CLAUDE.md + 90.11 voice guide |
 | `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — supplier-input-process-output-customer map, continuity validation, quality gates, 10/10 score |

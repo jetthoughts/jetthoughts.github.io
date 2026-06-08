@@ -1,8 +1,10 @@
-# QA Validation Report — Mom Test 3-Lesson Micro-Sequence
+# QA Validation Report — Mom Test 3-Lesson Micro-Sequence (ARCHIVED)
+
+> **ARCHIVED 2026-06-08**: the 3 Mom Test lessons + paid-pilot micro-lesson sample were removed from `content/course/` per user direction (start the v2 migration from a clean slate, do not carry over exploration drafts). This document is preserved as the **canonical QA methodology pattern** — agents running revision passes per `AGENT-PROMPTS.md §3` should copy the binary-scoring + criterion-by-criterion structure from this report. The specific lesson scores below are historical and reference content that no longer exists in the repository.
 
 **Checklist:** 30.03 §7 Per-Lesson QA
-**Date:** 2026-06-07
-**Files audited:**
+**Date:** 2026-06-07 (audit performed) · 2026-06-08 (archived)
+**Files audited (now removed):**
 - `mom-test-lesson-1-5-questions/index.md` — The 5 Questions with Pass/Fail Signals
 - `mom-test-lesson-2-emotional-flags/index.md` — The 3 Emotional Language Flags
 - `mom-test-lesson-3-run-score-interview/index.md` — How to Run and Score a Real Interview

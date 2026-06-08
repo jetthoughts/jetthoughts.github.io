@@ -1,20 +1,37 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-08 (Option C wired into landing page · Iter 16 surgical fixes shipped · "What not to learn" section added to _index.md · cold-AI navigation route added to PROJECT-INDEX)
+**Last Updated**: 2026-06-08 (Phase 1 pilot review applied · one-case-story rule established · pilot findings documented)
 
 ## Active Phase: v2 Migration Pilot
 
 **Current sprint focus:** validate the v2 micro-lesson format on Module 2 before fanning out to the rest. See "Course Migration Schedule" section below for the 4-phase rollout. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + `40.08-chapter-template-gap-report.md` + `40.09-mom-test-micro-lesson-qa-report.md` before touching any v2 lesson.
 
 **What just shipped (2026-06-08):**
-- ✅ Phase 0 / Option C wired into landing: Quickstart + FAQ links in "Start here" callout, "What this course does NOT cover" section added with 7 explicit exclusions
-- ✅ Iter 16 surgical fixes to v1 long-form chapters (module-tag bugs, DPA anchor, channel-selection MVP source, price-hypothesis recurring→one-time, Mia $50 footnote, acronym glosses, "Founders who" sweep follow-ups)
-- ✅ Strategic pivot recorded in GOAL-AT-A-GLANCE + PROJECT-INDEX with cold-agent route
+- ✅ Phase 1 pilot COMPLETE: Chapter 1.2a (Smoke Test Build) split into 2 micro-lessons:
+  - `smoke-test-pick-builder-ship-page` — builder choice + 6 page elements, 8-part template, ~480 words (post-review trim)
+  - `smoke-test-wire-tracking` — Clarity + ad-platform pixel + optional GA4, 8-part template, ~430 words (post-review trim)
+- ✅ Both lessons pass: Hugo build (713 pages), validate-course (7/7), em-dash sweep (zero)
+- ✅ Pilot review applied: one-case-story rule (cut 1 of 2 per lesson by ICP-fit), GA4 trimmed to one optional line, step 2 bulletized for mobile, em-dash regressions swept
+- ✅ Spec updates: 30.03 §2.7 + AGENT-PROMPTS now mandate ONE case study per lesson with ICP-fit selection rule
+- ✅ Option C wired into landing: Quickstart + FAQ links in "Start here" callout, "What this course does NOT cover" section added with 7 explicit exclusions
+
+**Phase 1 pilot findings (record for cold agents):**
+
+| Observation | What it means for Phase 2 |
+|---|---|
+| Real time-per-lesson: ~25 min for the first draft + ~20 min for review/cuts ≈ 45 min/lesson | Phase 2 estimate of "~45-60 min per lesson" holds. Module 1 (3 remaining lessons × ~45 min) = ~2.5 hr realistic, not the original "~3-4 days." Earlier estimates were padded. |
+| Two-case-studies-per-lesson pattern produced ~30% word-count drag on the 400-600 budget | The one-case-study rule (30.03 §2.7) fixes this. ALL future lessons inherit ONE case study, pick by ICP-fit. |
+| Concept blocks naturally drift to ~310 words when GA4-style "industry standard" addendums creep in | Watch for "overkill but include for completeness" content. Cut or move to optional sidebar. The 300-word cap is enforced, not aspirational. |
+| Template labels (1. Hook, 2. Outcome, etc.) NEVER leak into published content when the writer reads the lesson aloud at the end | Read-aloud check before commit is a cheap insurance. Adds <60s, prevents the worst kind of regression. |
+| Step 2 of Do-Now in Lesson 1.2a originally combined all 6 elements into one ~95-word paragraph | Bullets beat paragraphs in Do-Now steps. Mobile scanability is the deciding factor. |
+| ICP-fit case-study selection: Mia worked for 1.2a (B2C "use what you have" theme), Tomas worked for 1.2b (B2B "invisible builder blind spot" theme) | Strict alternation would have put Tomas in 1.2a where Mia's "scrappy founder uses real screenshot" lands harder. ICP-fit picking is the right rule. |
+
+**Phase naming note:** This doc uses "Phase 0" for the remaining mechanical quick wins (outcome sentences, success checks, Stuck? boxes — see migration schedule below). The completed surgical improvements are called "Option C" (matching 30.03 §8.4-8.5). These are separate work streams.
 
 **Next sprint candidates** (pick one):
-1. **Phase 1 pilot** — migrate Chapter 1.2a (Smoke Test Build) to 8-part template, measure real time-per-lesson, document template refinements
-2. **Phase 0 mechanical sweep** — apply outcome sentences + success checks + Stuck? boxes to remaining 16 v1 chapters (~2-3 hours)
-3. **Wire micro-lessons into Module 2 nav** — add the existing Mom Test 3-lesson sequence + paid-pilot micro-lesson as discoverable links from Module 2 landing block
+1. **Phase 0 mechanical sweep** — apply outcome sentences + success checks + Stuck? boxes to remaining 16 v1 chapters (~2-3 hours)
+2. **Phase 2 — Module 1 full migration** — migrate remaining M1 chapters (1.1, 1.2b, 1.3) using pilot template (~2-3 days)
+3. **Wire micro-lessons into navigation** — add the 2 pilot lessons to course_sequence.yaml as draft entries for preview
 
 ## Current Active Scope
 
@@ -133,6 +150,8 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 ### Phase 0: Remaining Quick Wins (~2-3 hours, raises median 1.0 → ~2.5/8)
 
+> **Naming note:** This "Phase 0" is the mechanical quick-wins pass (outcome sentences, success checks, Stuck? boxes). It is separate from **Option C** (Quickstart, FAQ, "What not to learn," 6 Sam fixes) which is complete per 30.03 §8.4. See 30.03 §8.5 for the consolidated web delivery roadmap.
+
 **Status:** Not started. These are the mechanical edits that don't require rewriting chapters. Do them in one focused session before any creative work — they'll make the long-form chapters more readable while you work through the full migration in Phases 2-3.
 
 | Step | Action | Chapters | Est. time |
@@ -147,9 +166,9 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 ---
 
-### Phase 1: Pilot Micro-Lesson Rewrite (~4 hours, proves the format)
+### Phase 1: Pilot Micro-Lesson Rewrite (✅ COMPLETE 2026-06-08, ~3 hours actual)
 
-**Status:** Not started. Pick one chapter that is closest to the template and rewrite it as 2-3 micro-lessons following the 8-part template exactly. Use this pilot to measure real time-per-lesson and discover the hidden constraints before scaling.
+**Status:** ✅ DONE. Chapter 1.2a (Smoke Test Build) migrated to 2 micro-lessons. Real time-per-lesson ~45 min (first draft + review). Template refinements + pilot findings recorded in "What just shipped" block above. Phase 2 can now proceed using the validated pattern.
 
 | Step | Action | Est. time |
 |---|---|---|
@@ -167,7 +186,7 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 - Top of Module 1 — the first module gets rewritten first anyway
 - Natural split points: builder choice → page elements → tracking setup
 
-**Alternative if 1.2a is too tool-dependent:** Chapter 2.1 (Mom Test, 2,931 words). The existing micro-lesson example (`mom-test-5-questions-micro-lesson`, draft) already has the core rewrite done — the pilot would be extending that into a full lesson set (question script + scoring rubric + synthesis).
+**Alternative if 1.2a is too tool-dependent:** Chapter 2.1 (Mom Test, 2,931 words). The 5 micro-lesson exploration drafts (Mom Test 3-lesson sequence + paid-pilot + mom-test-5-questions) were removed 2026-06-08 to start the migration from a clean slate. The pilot would be a fresh rewrite using 30.03 Appendix A as the canonical pattern.
 
 **Gate:** One chapter fully migrated. Real time-per-lesson measured. Template refinements documented. Only then proceed to Phase 2.
 
@@ -289,7 +308,7 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 | Phase 0 work is discarded when chapters get Phase 2 rewrites | Acknowledged and acceptable. Phase 0 costs ~2-3 hours and provides immediate readability gains for all chapters. The work on Modules 1-2 is replaced within ~2 weeks; the real value of Phase 0 is for Modules 3-5, which won't be rewritten for weeks and benefit from improved readability in the meantime. |
 | Technical chapters (4.3a, 4.3b) can't compress to 300 words | Allow 400-word concept blocks for technical chapters with hard constraints (RLS, webhooks). The template says ≤300; the spirit is "no bloat." A 400-word block that genuinely needs the space is better than a 300-word block that omits a critical concept. Flag these as exceptions in the rewrite notes. |
 | Bridges break when upstream lesson changes | The Phase 3 bridge audit catches these. Do NOT try to get bridges right on first pass — expect them to need adjustment when the full chain is visible. |
-| Existing micro-lesson example diverges from pilot template | The Phase 1 pilot is the definitive template. The `mom-test-5-questions-micro-lesson` (draft) was written before the pilot. If it conflicts with what Phase 1 discovers, the pilot wins — update the example to match or archive it. |
+| Phase 1 pilot diverges from 30.03 Appendix A worked example | 30.03 Appendix A is the canonical pattern. If Phase 1 discovers the pattern needs refinement, update 30.03 (with user approval) — do not let the pilot silently set a different precedent. |
 | Mobile viewport issues discovered late | The Phase 3 viewport test is a safety net, not the primary check. Test each module's lessons on mobile as part of the module exit gate. Don't defer all mobile testing to the end. |
 
 ---
