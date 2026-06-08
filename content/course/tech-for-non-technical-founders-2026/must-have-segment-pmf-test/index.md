@@ -37,11 +37,11 @@ related_posts: false
 
 > **TL;DR:** Before spending a dollar on ads, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
 
-Tuesday morning, 9:14 AM. A SaaS founder I spoke with last quarter opened her Meta Ads dashboard, saw a 0.4% conversion rate on $4,200 of spend, and refreshed it three times. Six weeks earlier she had taken her live MVP to forty users from a beta list, watched them poke around for two days, and decided the next move was "scale the top of funnel."
+Your Lovable MVP went live last month. Forty people from your beta list poked at it. The dashboard says 0.4% conversion on $4,200 of Meta ads, and the instinct says "scale the top of funnel."
 
-She wrote the ad copy on a Friday, launched Monday, and by Wednesday the dashboard told her the same thing it would have told her if she had simply called five of those forty users: nobody opened the app twice. The $4,200 bought her a number she could have gotten for free.
+The dashboard will tell you the same thing it would have told you if you had called five of those forty users first: most never opened the app twice. The $4,200 bought you a number you could have gotten for free.
 
-Her instinct was the one every non-technical founder has after the MVP ships: build the audience. The real question is whether the people who already touched the MVP would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic will not fix a product problem; it just routes more users into something they will not return to.
+The real question after the MVP ships is whether the people who already touched it would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic does not fix a product problem; it routes more users into something they will not return to.
 
 > **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users typically sees one of three patterns on the first survey run:
 > - All "somewhat disappointed" or "not disappointed" → directional KILL. Run more interviews before re-attempting.
@@ -62,7 +62,7 @@ You just shipped your first Lovable MVP and 40 people from your beta list poked 
 
 The Twitter threads make it worse. On day 90 after launch, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one and got 56% on a sample of 22.
 
-This pattern repeats often enough across early-stage founders we have spoken with that we now ask the must-have rate before we ask anything else: founders who burned thousands on paid ads almost always had a must-have rate they had never measured. Some were under 25% overall - genuine "no must-have user" territory. Others had a high rate in one segment and a low rate in another, but their ad spend targeted the wrong half because the high-need segment was harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
+Ask yourself the must-have rate before you ask anything else. The pattern across the burned-thousands-on-paid-ads stories is the same: a number that was never measured. Sometimes the rate is under 25% overall - genuine "no must-have user" territory. Sometimes one segment scores high and another scores low, but the ad targets the wrong half because the high-need segment is harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
 
 ## How to run the test, end to end
 

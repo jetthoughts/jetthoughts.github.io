@@ -57,9 +57,9 @@ Product Hunt converted at 3.1% per launch event across 387 launches OpenHunts st
 
 Product Hunt is not bad; it is a one-day event in a job that needs sustained motion over a quarter.
 
-A B2B SaaS founder we worked with had cleared four paid pilots from her personal network and LinkedIn audience over six weeks, then ran out of warm names at customer five. She had already booked a launch coach and signed an ad-agency contract, then cancelled both after seeing the OpenHunts numbers.
+Picture the situation. Four paid pilots have closed from your personal network and LinkedIn audience over six weeks. The warm names are gone at customer five. The default move is to book a launch coach or sign an ad-agency contract. Either decision costs the same six weeks and a few thousand dollars - and neither one was designed for your B2B vertical.
 
-Customer five signed a $4,200 pilot in week 3 from the four-line cold-email sequence below.
+The four-line cold-email sequence below is what customer five answers in week three for under $40 of tooling.
 
 ![Product Hunt 3.1% vs Indie Hackers 23.1% - per OpenHunts 2024](ph-vs-ih.svg)
 
@@ -75,7 +75,9 @@ Figma's first customer 11-20 cohort came from cold DMs to influential designers 
 > 
 > The calendar shapes the outcome: Product Hunt is one day, Indie Hackers is sustained engagement, filtered cold outbound is recurring 30-message batches until you have a funnel. Founders shortcutting to one-day launches keep being surprised leads don't show up the next morning. The question is not "which big launch." It is "which 50 named buyers should hear from me first."
 
-## The pipeline: Filter -> Personalize -> Loom -> Calendly -> StripeA solo founder runs the whole pipeline in six stages with off-the-shelf tools, with no engineer, no $1,200/month sales stack, and no Salesforce required.
+## The pipeline: Filter -> Personalize -> Loom -> Calendly -> Stripe
+
+You run the whole pipeline in six stages with off-the-shelf tools - no engineer, no $1,200/month sales stack, no Salesforce.
 
 The cold-outbound pipeline in one glance:
 

@@ -95,7 +95,7 @@ Use this path when you have no MVP yet, a single untested hypothesis, and no con
 
 ### 2. Self-serve build ([The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/))
 
-Pick this path when the problem is validated (10+ Mom Test interviews showing past-behavior signal, 2-5 pre-orders or paid pilots), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
+Pick this path when the problem is validated (10+ Mom Test interviews with ≥7 strong-signal scores per the Ch 2.1b synthesis rubric + a Ch 1.2b smoke test that cleared the 6%+ "Promising" band - pre-orders and paid pilots are produced LATER in Module 5, do not require them as the gate), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
 
 This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $25/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
 
@@ -115,7 +115,7 @@ Five questions feed the matrix. Answer them alone with a printed worksheet, writ
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Start(["Default: self-serve with Lovable + Supabase + Stripe.<br/>Work through the ceiling-signal questions to see if that holds."])
-    Start --> Q1{"Q1: Problem validated?<br/>10+ Mom Test calls + 2-5 pre-orders?"}
+    Start --> Q1{"Q1: Problem validated?<br/>10+ Mom Test calls + ≥7 strong signals + Ch 1.2b smoke test ≥6%?"}
     Q1 -->|No| Validate["Step back: Validate without code first.<br/>Run the Airbnb test this week."]
     Q1 -->|Yes| Q2{"Q2: Backend-heavy?<br/>Real-time / queues / compliance / 5+ integrations?"}
     Q2 -->|No| Q3{"Q3: Runway tight?<br/>Less than 4 months to show paying users?"}

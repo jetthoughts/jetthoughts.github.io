@@ -33,9 +33,28 @@ Investors fund evidence, not ideas. A pitch deck gets you the meeting. A signed 
 
 The 2026 version of this work uses tools that didn't exist five years ago - AI app builders like Lovable and Bolt, hosted backend services like Supabase, hosted payments like Stripe Checkout, AI persona rehearsal in Claude or ChatGPT. One non-technical founder can now ship the full validate-build-pilot loop on evenings and weekends, without hiring an engineer. The course names which tool does which job at each step, and what each one costs (most have a free tier).
 
-> **Start here: [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/)** - 5-minute read. The full route at a glance: 5 modules, 20 chapters, 6 artifacts (your "Founder OS" - a single Google Drive folder where each module drops one fill-in-the-blank document you can hand to an investor). Free. No sign-up. Start tonight.
+> **Start here:**
+> - [**Quickstart**](/course/tech-for-non-technical-founders-2026/quickstart/) - 1 page, 3-minute read: the minimal path for time-starved founders (core lessons only, gate thresholds, "start here" button).
+> - [**How This Course Works**](/course/tech-for-non-technical-founders-2026/how-this-course-works/) - 5-minute read: the full route at a glance - 5 modules, 20 chapters, 6 artifacts (your "Founder OS" - a single Google Drive folder where each module drops one fill-in-the-blank document you can hand to an investor).
+> - [**FAQ**](/course/tech-for-non-technical-founders-2026/faq/) - 15 Q&A for typical blockers: Stripe verification, Mom Test scores below 7, finding 10 people, builder paralysis, asking for money.
+>
+> Free. No sign-up. Start tonight.
+
+> **New founder, no team, no trauma?** Skip the diagnostic. Start at [Chapter 1.1 - Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/).
 
 *Returning? [Skip to the syllabus ↓](#module-index)*
+
+## What this course does NOT cover
+
+To save your time, here is what we intentionally exclude. None of these are needed for the promised result (idea → first paying customer):
+
+- **How to code.** The course assumes zero coding ability. Lovable + Supabase + Stripe handle the technical side.
+- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Chapter 4.1), not as an org-design course. If you need a team, you've outgrown this course.
+- **How to raise venture capital.** The course produces evidence investors fund (signed paid pilot, validated problem statement, live MVP). It does not teach pitch decks, term sheets, or fundraising mechanics.
+- **How to manage a 20-person engineering team.** Friday Demo Rule + Weekly Dev Report (in Going Further chapters) cover early-stage management; full org management is out of scope.
+- **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.
+- **Legal incorporation, taxes, IP filings.** Use a lawyer or a service (Stripe Atlas, Clerky, Firstbase). The course assumes you can sign contracts under your existing business entity.
+- **SEO, content marketing, paid acquisition at scale.** Module 5 covers first-10-customers outbound. Scaling acquisition is a separate discipline; come back after you have product-market fit.
 
 ## Why this course exists
 
@@ -68,6 +87,20 @@ If you're at the rescue stage instead - inherited a half-built codebase, told "t
 
 - You want to learn to code
 - You want to outsource founder judgment
+
+## What this course does NOT cover (and why)
+
+We cut these topics intentionally - you don't need them to get from idea to first paying customer:
+
+- **How to code** - the entire course uses no-code tools (Lovable, Carrd, Stripe Payment Links). You prompt, click, and configure. Zero lines of code.
+- **How to hire a CTO** - the course route is self-serve by default. Ch 4.1 covers when to hire, not how to interview.
+- **How to raise venture capital** - the artifacts this course produces (live MVP, signed paid pilot) are what investors want to see, but pitching is outside scope.
+- **How to manage an engineering team** - the management chapters are post-pilot reference material, not in the linear path.
+- **How to build a marketplace, a mobile app, or an AI model** - the stack is B2B SaaS web apps (Lovable + Supabase). Different product shapes need different tools.
+- **Legal advice, incorporation, or tax structure** - the DPA template is a starting point, not a legal document. Consult a lawyer.
+- **SEO, content marketing, paid ads at scale** - Module 1 runs a $300 smoke test. Post-pilot growth marketing is a different discipline.
+
+If you need something on this list, the course won't help with it. If you don't, you're in the right place.
 
 ## What you need to start
 
@@ -106,7 +139,8 @@ Investors don't fund ideas. They fund evidence. Each artifact answers a question
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 - [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
   - Templates: [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) · [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)
-- [**2.2** · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
+- [**2.2** · OPTIONAL - Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)  
+  *Skip this if you've interviewed before or don't have 90 minutes. The Mom Test technique in 2.1 is the core; this chapter rehearses your questions with AI personas before real interviews.*
 - [**2.3a** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
 - [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
   - Template: [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/)
@@ -138,7 +172,8 @@ Investors don't fund ideas. They fund evidence. Each artifact answers a question
 *Output: One paying customer through a deliberately chosen channel.*
 *Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
 - [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
-- [**5.2** · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)
+- [**5.2** · OPTIONAL - Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)  
+  *Skip this if you already have a channel in mind (LinkedIn, cold email, or personal network). The core path is 5.3 (personal network) → 5.4 (paid pilot).*
 - [**5.3** · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
 - [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
   - Template: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/)

@@ -25,6 +25,7 @@ metatags:
   image: cover.png
   og_title: "2.2 · Sharpen Your Question List with AI Personas"
   og_description: "Chapter 2.2 of the From Idea to First Paying Customer course. A 90-minute companion pass: use Claude personas to sharpen the Mom Test question list you drafted in Ch 2.1 before booking real interviews."
+cover_image_alt: "JetThoughts cover for Chapter 2.2 - Claude persona rehearsing Mom Test questions to flag hypothetical-shaped traps before real interviews"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/"
 related_posts: false
 ---
@@ -36,6 +37,8 @@ related_posts: false
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 (a + b) recruitment and real interviews
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
+
+> **Skip this if you've interviewed before.** If you've run customer interviews in the past and your questions produced concrete past-tense answers, go straight to [Ch 2.3a: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). This chapter catches broken question shapes before they waste real interview slots - useful for first-timers, unnecessary if you've already calibrated your question technique.
 
 > **TL;DR:** A 90-minute AI rehearsal catches broken questions before you spend real interview slots on them. Claude personas expose hypothetical phrasing that generates polite yeses from anyone.
 

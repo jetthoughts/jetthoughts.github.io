@@ -78,7 +78,9 @@ The structure has six sections plus signatures.
 | 6 | Data, IP, termination | Customer keeps their data. You keep the product IP. 30-day written notice to exit. |
 |  | Signature block | DocuSign, HelloSign, or PDF + email confirmation - whichever the customer prefers. |
 
-Total document: one page, around 400 words. v1 needs no lawyer review.A few clauses deserve more detail than the table can hold.
+Total document: one page, around 400 words. v1 needs no lawyer review.
+
+A few clauses deserve more detail than the table can hold.
 
 The **scope of pilot** section is where new founders over-spec. Keep it to three outcomes the customer wants and two specific use cases; anything outside that list stays out of scope until conversion. The list also anchors the Friday demos - if a demo does not advance one of the three outcomes, the demo is off-scope and you say so. Friday cadence comes from the [Friday demo chapter](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/).
 
@@ -94,7 +96,9 @@ The **conversion terms** clause is what the CFO actually approves in week 0. Sta
 
 Signature block at the bottom - DocuSign, HelloSign, or PDF-and-email-confirmation, whichever the customer prefers.
 
-### Copy-paste DPA template (verbatim - fill the brackets, send)
+### Copy-paste DPA template {#dpa-template}
+
+Verbatim - fill the brackets, send.
 
 Open a Google Doc. Paste the block below. Replace every `[BRACKETED]` value with your numbers. Total document: one page, ~400 words. No lawyer review needed for v1.
 
@@ -283,7 +287,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 | Step | Action | Output |
 |---|---|---|
-| **1** | Copy the [DPA template above](#copy-paste-dpa-template-verbatim---fill-the-brackets-send) into a Google Doc, fill the 6 bracketed sections, pick deposit number from the sector table above, set up Stripe product + payment link. Optional: the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) has annotated worked examples + DocuSign-importable format. | Stripe link ready. DPA drafted. Deposit amount locked. |
+| **1** | Copy the [DPA template above](#dpa-template) into a Google Doc, fill the 6 bracketed sections, pick deposit number from the sector table above, set up Stripe product + payment link. Optional: the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) has annotated worked examples + DocuSign-importable format. | Stripe link ready. DPA drafted. Deposit amount locked. |
 | **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.3 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
 | **3** | Bank your first deposit. Schedule pilot kickoff and the first Friday demo cadence. | Deposit cleared. Kickoff scheduled. Pilot officially started. |
 
@@ -313,11 +317,13 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 >
 > **If blocked:** If the customer says "can we start free and convert later," reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, they are not in your must-have segment - move to the next lead.
 
+> **Stuck? Most first-timers stall here:** asking for money from someone you know, even as a refundable deposit. **Fix:** the deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. If they value the solved problem less than the deposit, their problem isn't acute enough. Send the DPA to your warmest lead first. The second one is easier.
+
 > **Case Study: Tomas & Mia**
 >
 > **Tomas**: Signs a Design Partner Agreement with 3 accounting firms. Deposit: $2,500 each (refundable if product doesn't ship within 90 days). 2 of 3 sign and pay within 48 hours. Revenue: $5,000 in committed deposits.
 >
-> **Mia**: Signs a Design Partner Agreement with 4 parents. Deposit: $50 each (refundable). Writes a simplified DPA. 4 of 4 sign and pay. Revenue: $200. Lower deposit, higher volume - consumer math.
+> **Mia**: Signs a Design Partner Agreement with 4 parents. Deposit: $50 each (refundable) - B2C marketplace convention: deposit equals roughly 2× the monthly fee ($25/mo tutoring × 2). The $500 floor in the body above is the B2B SaaS convention; consumer marketplaces work to smaller absolute numbers because the buyer signs without a CFO. 4 of 4 sign and pay. Revenue: $200. Lower deposit, higher volume - consumer math.
 
 ---
 

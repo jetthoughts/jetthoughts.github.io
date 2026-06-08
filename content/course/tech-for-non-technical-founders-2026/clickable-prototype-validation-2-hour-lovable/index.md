@@ -16,7 +16,7 @@ keywords:
 tags:
   - founders
   - non-technical-founder
-  - module-3
+  - module-2
   - validation
   - ai-augmented
 categories: ["Founders"]
@@ -25,6 +25,7 @@ metatags:
   image: cover.png
   og_title: "2.4 · Build a Clickable Prototype"
   og_description: "A throwaway Lovable prototype lets 5 interview subjects experience the SHAPE of your solution. The third validation pillar after the landing page."
+cover_image_alt: "JetThoughts cover for Chapter 2.4 - hand-drawn three-screen clickable prototype with five user-test sessions and pass/fail signal markers"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/"
 related_posts: false
 ---

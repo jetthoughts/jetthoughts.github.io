@@ -172,7 +172,7 @@ The [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/ou
 
 This chapter's output is 10 booked interviewees. Running them, scoring them, and turning them into the validated problem statement that Module 3 needs is the linear sequence below.
 
-> **You are now on Pass 2 of Ch 2.1.** Open Ch 2.1 on a second tab and scroll to the scoring rubric. Then move to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) once all 10 transcripts are scored.
+> **You are now ready to run the interviews using Ch 2.1's 5-question script.** Open Ch 2.1 on a second tab and scroll to the scoring rubric. Then move to [Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) once all 10 transcripts are scored.
 
 The chain of artifacts the booked calls produce:
 

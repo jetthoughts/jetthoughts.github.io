@@ -108,7 +108,7 @@ Two competitors or adjacent products serving a similar customer:
 
 Return:
 1. A sharper ICP profile (role, industry, company size, the moment in their week when the pain happens, one quote in their language).
-2. 8 subreddits, Slack/Discord communities, and forums where this person posts. For each, give the community's topic focus, typical post frequency (e.g., "20 new posts/day" or "2-3 per week"), and 2-3 short keyword phrases that come up most often. Do NOT generate URLs - you cannot browse the web. Sam will verify the community herself with these inputs.
+2. 8 subreddits, Slack/Discord communities, and forums where this person posts. For each, give the community's topic focus, typical post frequency (e.g., "20 new posts/day" or "2-3 per week"), and 2-3 short keyword phrases that come up most often. Do NOT generate URLs - you cannot browse the web. I will verify the community myself with these inputs.
 3. 5 Google + LinkedIn search strings I can paste in today to find named people complaining about this problem (use `site:`, quotes, and `intext:` where helpful).
 4. 5 second-degree adjacent search terms I might miss (workarounds they use, related complaints, tool names they'd mention while frustrated).
 
@@ -209,6 +209,8 @@ These are skip-by-default. The main chapter works without any of them.
 > **Done when:** 30-name list is built in your spreadsheet with name, role+company, post URL, and one quoted line per row.
 > **Next click:** [2.3b · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
 > **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Ch 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
+
+> **Stuck? Most first-timers stall here:** your name list stops at 3 people. **Fix:** search a related keyword - "boarding costs" instead of "pet sitter," "claim denial appeal" instead of "medical billing." The second-degree search surfaces people with the same problem but different vocabulary. 30 minutes of keyword variation turns 3 names into 12. Not "License Apollo Pro."
 
 > **Case Study: Tomas & Mia**
 >

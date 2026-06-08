@@ -16,7 +16,7 @@ keywords:
 tags:
   - founders
   - non-technical-founder
-  - module-6
+  - module-5
   - sales
   - ai-augmented
 categories: ["Founders"]
@@ -32,7 +32,7 @@ related_posts: false
 
 > **Module 5 · Step 2 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 5
+> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.3b) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
 
@@ -104,7 +104,7 @@ At this stage you are choosing from four options. Here is what each one actually
 
 Pick the one that matches your buyer type, your price point, and your honest time budget - then commit.
 
-> **Engineering as Marketing: the zero-CAC channel.** Building a free micro-tool (a pricing calculator, a checklist generator, a "which plan is right for you" grader) on a free no-code stack (Carrd + Tally + Notion) attracts targeted organic search traffic. Users who find the tool useful are pre-warmed leads for your main product. The tool ranks for long-tail SEO keywords your competitors ignore. One afternoon to build, zero monthly cost, and the traffic compounds over months. Unlike content marketing (blog posts), a functional tool has a different backlink profile and ranks for different intent - someone searching "SaaS pricing calculator for [vertical]" is closer to buying than someone searching "how to price SaaS." The tool is not your product - it's a free side door that feeds your product's waitlist.
+> **Engineering as Marketing: the zero-CAC (Customer Acquisition Cost - what you spend to land one customer) channel.** Building a free micro-tool (a pricing calculator, a checklist generator, a "which plan is right for you" grader) on a free no-code stack (Carrd + Tally + Notion) attracts targeted organic search traffic. Users who find the tool useful are pre-warmed leads for your main product. The tool ranks for long-tail SEO keywords your competitors ignore. One afternoon to build, zero monthly cost, and the traffic compounds over months. Unlike content marketing (blog posts), a functional tool has a different backlink profile and ranks for different intent - someone searching "SaaS pricing calculator for [vertical]" is closer to buying than someone searching "how to price SaaS." The tool is not your product - it's a free side door that feeds your product's waitlist.
 
 ## AI-augmented channel research
 
@@ -127,7 +127,7 @@ Based on the buyer persona and interview signals, which channel is more likely t
 
 Claude cannot guarantee the right answer - it does not know your specific market. But it will surface the assumptions behind each choice and flag contradictions you missed.
 
-A B2B services founder I spoke with in March 2026 ran this prompt, realized her interview evidence was pointing to LinkedIn while her gut was pointing to cold email, and asked herself "why am I ignoring what 8 of 10 people said?" She picked LinkedIn. 3 conversations in week 1.
+Run the prompt against your own transcripts. If your interview evidence points to one channel (8 of 10 saying "I found it on LinkedIn") while your gut points to another (cold email feels safer), name the gap to yourself: which signal are you ignoring, and why?
 
 The prompt is a forcing function, not a crystal ball. The real data comes from running the channel.
 

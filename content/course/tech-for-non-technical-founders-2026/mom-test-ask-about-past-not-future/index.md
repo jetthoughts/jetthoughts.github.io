@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 2 · Step 1 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics
+> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1)
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 (a + b) recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 

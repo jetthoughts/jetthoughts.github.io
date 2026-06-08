@@ -65,9 +65,9 @@ You are not asking them to buy. You are asking them to be first to try something
 
 The trade is your time and a refundable deposit against a tool that will save them hours from the first week. The people who have the problem take the trade; the people who do not have it were never your customer, so you cut bait fast and move to the next name.
 
-Two founders we spoke with after stalled builds both closed their first three customers from this exact motion. The first - a recruitment-SaaS founder - had eight names in her phone she had not messaged in a year. Three of those names converted in the first two weeks.
+Open your phone. Eight names there that you have not messaged in a year are eight first-paid-pilot candidates - if three of them have the problem your hypothesis names, three pilots can close in your first two weeks of asking.
 
-The second - a B2B services founder - watched a former Y Combinator batchmate post about her tool's exact problem on LinkedIn and did not respond, because she was waiting on her landing-page redesign to be perfect. Both lost months of revenue they could have had if they had picked up the phone the day the lead surfaced.
+The other failure mode: a former colleague posts about your tool's exact problem on LinkedIn and you do not respond because you are waiting on your landing-page redesign to be perfect. The redesign is two weeks; the lead is gone today.
 
 > **First: count your actually-applicable names. Then pick a path.**
 >

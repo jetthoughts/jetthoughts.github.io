@@ -120,21 +120,21 @@ The founder shipped six features in month four and zero in months five and six b
 
 ### Signal 4: Auth complexity passing the email + OAuth ceiling (detectable: Week 6-10)
 
-**What you see**: an enterprise prospect asks: "do you support SAML SSO with our Okta tenant, with role-based access where managers see their direct reports' data but not the whole organization, and an audit log of every read?" You answer yes because the deal is $50K ARR.
+**What you see**: an enterprise prospect asks: "do you support SAML SSO (Security Assertion Markup Language Single Sign-On - corporate login standards) with our Okta (the enterprise login vendor) tenant, with role-based access where managers see their direct reports' data but not the whole organization, and an audit log of every read?" You answer yes because the deal is $50K ARR (Annual Recurring Revenue - what one customer pays per year).
 
-You then realize Supabase RLS does not model that role hierarchy without writing your own policy DSL on top. A B2B HR tools founder we spoke with in February 2026 answered yes to exactly this question, spent 6 weeks building a workaround in Supabase, shipped it to the customer, and watched their security team find a read-through gap in the policy on week 2.
+You then realize Supabase RLS does not model that role hierarchy without writing your own policy DSL on top. The recurring shape: a founder says yes, spends 6 weeks building a workaround in Supabase, ships it, and the customer's security team finds a read-through gap in the policy by week 2.
 
-The contract had a data-handling clause. The workaround had not been reviewed by anyone with security experience.
+The contract has a data-handling clause. The workaround was not reviewed by anyone with security experience. That is a breach disclosure conversation, not a feature fix.
 
 **What is happening underneath**: Supabase's row-level security is excellent for "user X can only read rows where user_id = X." It strains under role matrices (manager-reads-team, admin-reads-org, super-admin-reads-everything), multi-tenant isolation across an organization, SAML federation, and audit trails. Each of those needs first-class engineering, not a configurable policy.
 
-**Cost of leaving it alone**: you write the SOC2 letter and the SAML promise into the contract and ship a workaround. Six months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - 47 startups with public URL-based access controls, BOLA-class vulnerabilities, no audit log to diagnose what got read - is what deferred auth complexity produces.
+**Cost of leaving it alone**: you write the SOC2 (a security-audit standard B2B buyers ask for) letter and the SAML promise into the contract and ship a workaround. Six months later, the workaround becomes the breach incident. The [vibe-coded auth shape](/blog/vibe-coding-disposable-by-design/) - 47 startups with public URL-based access controls, BOLA-class vulnerabilities (Broken Object Level Authorization - a URL where changing the ID in the address bar lets you read someone else's data), no audit log to diagnose what got read - is what deferred auth complexity produces.
 
 **Cost of addressing now**: a Fractional CTO scopes the role matrix on paper (1-2 weeks of part-time work, ~$8-15K), then hands the spec to a hired engineering team for the production build on Devise + Pundit (Rails) or django-allauth + django-guardian. Total auth-shaped rebuild: 4 to 8 weeks.
 
 ### Signal 5: Compliance or security audit landing on the calendar (detectable: Week 8-12+)
 
-**What you see**: a customer's procurement team emails you the SOC2 questionnaire. Or HIPAA: they need a Business Associate Agreement before they can send a single PHI record. Or PCI: you wanted to handle card data directly instead of using Stripe Checkout and now you need to pass a quarterly scan.
+**What you see**: a customer's procurement team emails you the SOC2 (security-audit standard) questionnaire. Or HIPAA: they need a Business Associate Agreement (BAA - the contract US health-data law requires between you and any vendor that touches Protected Health Information / PHI) before they can send a single PHI record. Or PCI (Payment Card Industry rules): you wanted to handle card data directly instead of using Stripe Checkout and now you need to pass a quarterly scan.
 
 The self-serve stack cannot pass any of these, not because it is insecure in every way, but because it has no audit log, no documented data handling, no formally reviewed access control.
 

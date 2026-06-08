@@ -36,6 +36,8 @@ related_posts: false
 >
 > **Output:** the 3 pre-flight rules locked in, tool boundaries clear, ready to start the build in [Part 2 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 
+> **Jump to:** [What each tool does](#what-each-tool-does-in-plain-english) · [12 rules checklist](#12-rules-for-a-self-built-poc-done-right) · [Communities](#communities-that-replace-a-co-founder) · [The ship plan](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-ship-plan)
+
 > **TL;DR:** Lovable renders the screens, Supabase stores the data, Stripe charges the card. Three tools, three jobs. Know the boundaries before you open Lovable. Twelve rules keep the build inside the shed. All three tools have free tiers; the chapter's specific cost callouts live where each tool is introduced. Skip to [the ship plan](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-ship-plan) if you already know the stack.
 
 > **This chapter starts FRESH from your one-page brief - do NOT iterate the Chapter 2.4 prototype.**
@@ -44,13 +46,9 @@ related_posts: false
 
 If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 
-"I shipped my MVP on the self-serve stack. Three customers paid before I built the second feature." That was a B2B SaaS founder I spoke with recently. She had never written a line of code.
+You will not write code. You will spend two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before you touch a single tool, then start the build after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) is locked and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routes you to Path 2.
 
-She had spent two months running [Mom Test calls](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) before she touched a single tool. Her build started after the [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) was nailed down and the [build-path decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) routed her to Path 2.
-
-The stack she used is the one this post is about.
-
-The three layers, top to bottom:
+The stack, top to bottom:
 
 | Layer | Tool | Job | Cost |
 |-------|------|-----|------|
@@ -73,6 +71,7 @@ The cost to disprove your hypothesis is vendor free tiers and the small per-tool
 ## M2 prototype vs M4 MVP - different artifacts, different rigor
 
 **You do NOT polish your Module 2 prototype into the MVP. The prototype was throwaway by design. The MVP is built fresh with production rigor - real auth, real Stripe, real domain, real user data.**
+
 The Module 2 clickable prototype (Lovable in 2 hours) tested whether 5 interview subjects could navigate the SHAPE of the solution. It had no real auth, no payment integration, no production domain. Discard it.
 
 The Module 4 MVP is built from the [validated Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) with production rigor: real Lovable build with real Supabase auth + real Stripe + real custom domain + real user data. Different stack composition, different polish bar, different decision criteria.
@@ -119,29 +118,6 @@ The fee is the standard [2.9% + $0.30 per transaction](https://stripe.com/pricin
 
 Free for solo founders on the Free plan. You will not write much code yourself, but Lovable can sync to a GitHub repo on every save. Two reasons this matters: (a) you have a backup if Lovable goes down or you cancel the subscription, (b) when you eventually hire a contractor or a Fractional CTO, the code is already in a place they can read. Set this up in Lovable's Settings on day one. Skipping this is the most common reason founders we pick up six months later cannot retrieve the source.
 
-## 12 rules for a self-built PoC done right
-
-> **How to read this list.** 3 rules need to be true BEFORE you open Lovable. The rest fire inline during the Phase 1-4 build in [Part 2](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). If you internalize ONLY the 3 pre-Lovable rules + the Phase 4 exit criteria, you ship a working MVP. The other rules are inline reminders, not a homework checklist.
-
-Synthesis of every rule scattered across Module 4 and the supplementary references. Print this page, tape it next to the laptop, re-read before every weekly demo.
-
-**Before you open Lovable - the 3 load-bearing pre-flight rules.** Rules **1, 2, and 6** in the list below are the ones that must be true on day zero. Rule 1 (one-page brief passed the Ch 3.2 quality-gate) keeps Phase 1 prompts from generating a 47-button admin panel. Rule 2 (one workflow, one persona, one happy path) keeps the build inside the shed. Rule 6 (GitHub sync turned on in Lovable Settings on day 1) keeps your source recoverable if Lovable drops it. Get those 3 right and the rest read as inline checks while you build. Get them wrong and the other 9 cannot save the project.
-
-1. **Start from a one-page brief that passed the Ch 3.2 quality-gate.** If Section 3 is feature-shaped, fix it before you open Lovable. Feature-shaped briefs produce 47-button admin panels.
-2. **One workflow, one persona, one happy path.** No multi-tenancy, no admin dashboard, no settings page on day one. Build the shed (Rob Walling's analogy), not the house.
-3. **Strict layer boundaries**: Lovable renders screens, Supabase stores data, Stripe collects payment. Do not let Lovable hand-roll auth; do not let Supabase render a UI; do not let Stripe become the source of truth for user state.
-4. **Weekly demo to one non-PRD-reader human.** Spouse, advisor, dog if necessary. Keep a ship-something-visible cadence every week. The demo IS the data; the screens are not.
-5. **Do NOT iterate the Ch 2.4 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
-6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason rescued founders cannot retrieve their source.
-7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.4 Signal 4).
-8. **Stripe webhook handler must be idempotent.** Idempotent means "safe to run twice without breaking anything" - Stripe sometimes sends the same payment event more than once, and your handler must not double-charge or double-activate. Check `WHERE event_id = $1 AND processed = true` before re-running the update. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
-9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to $25/mo Pro only when build velocity demands it.
-10. **Ship before scope creep, then a short stabilization phase.** Build the smallest end-to-end thing, then a stabilization phase before paid-pilot conversations. Sits inside the multi-month journey to first paying customer.
-11. **Monthly Ch 4.4 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
-12. **Do not scale a Lovable stack past ~5K users or 2 ceiling signals at red.** When you hit either limit, graduate to a Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)). The shed is not the house; pouring skyscraper foundations into a shed slab does not build a skyscraper.
-
-Each of the 12 rules is taught in depth somewhere across this chapter, the [self-serve stack walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/), [Ch 4.4 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/), or the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The list above is the index; the surrounding chapters are the depth.
-
 > **Module 4 AI critic/simulator block**
 >
 > **What AI can help with at this stage:**
@@ -175,6 +151,29 @@ Each of the 12 rules is taught in depth somewhere across this chapter, the [self
 >
 > **The real gate:** 5 green lights (Phase 4 exit criteria in [Part 2](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)) + weekly demo to one non-PRD-reader human.
 
+## 12 rules for a self-built PoC done right
+
+> **How to read this list.** 3 rules need to be true BEFORE you open Lovable. The rest fire inline during the Phase 1-4 build in [Part 2](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/). If you internalize ONLY the 3 pre-Lovable rules + the Phase 4 exit criteria, you ship a working MVP. The other rules are inline reminders, not a homework checklist.
+
+Synthesis of every rule scattered across Module 4 and the supplementary references. Print this page, tape it next to the laptop, re-read before every weekly demo.
+
+**Before you open Lovable - the 3 load-bearing pre-flight rules.** Rules **1, 2, and 6** in the list below are the ones that must be true on day zero. Rule 1 (one-page brief passed the Ch 3.2 quality-gate) keeps Phase 1 prompts from generating a 47-button admin panel. Rule 2 (one workflow, one persona, one happy path) keeps the build inside the shed. Rule 6 (GitHub sync turned on in Lovable Settings on day 1) keeps your source recoverable if Lovable drops it. Get those 3 right and the rest read as inline checks while you build. Get them wrong and the other 9 cannot save the project.
+
+1. **Start from a one-page brief that passed the Ch 3.2 quality-gate.** If Section 3 is feature-shaped, fix it before you open Lovable. Feature-shaped briefs produce 47-button admin panels.
+2. **One workflow, one persona, one happy path.** No multi-tenancy, no admin dashboard, no settings page on day one. Build the shed (Rob Walling's analogy), not the house.
+3. **Strict layer boundaries**: Lovable renders screens, Supabase stores data, Stripe collects payment. Do not let Lovable hand-roll auth; do not let Supabase render a UI; do not let Stripe become the source of truth for user state.
+4. **Weekly demo to one non-PRD-reader human.** Spouse, advisor, dog if necessary. Keep a ship-something-visible cadence every week. The demo IS the data; the screens are not.
+5. **Do NOT iterate the Ch 2.4 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
+6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason rescued founders cannot retrieve their source.
+7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.4 Signal 4).
+8. **Stripe webhook handler must be idempotent.** Idempotent means "safe to run twice without breaking anything" - Stripe sometimes sends the same payment event more than once, and your handler must not double-charge or double-activate. Check `WHERE event_id = $1 AND processed = true` before re-running the update. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)
+9. **Budget envelope: vendor free tiers + per-tool monthly fees.** Lovable free, Supabase free, Stripe transaction fees, domain registration. Upgrade Lovable to $25/mo Pro only when build velocity demands it.
+10. **Ship before scope creep, then a short stabilization phase.** Build the smallest end-to-end thing, then a stabilization phase before paid-pilot conversations. Sits inside the multi-month journey to first paying customer.
+11. **Monthly Ch 4.4 ceiling-signal check once the live MVP is up.** Even if everything is green, the habit catches the 5 architectural break-points before they become rebuilds.
+12. **Do not scale a Lovable stack past ~5K users or 2 ceiling signals at red.** When you hit either limit, graduate to a Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge)). The shed is not the house; pouring skyscraper foundations into a shed slab does not build a skyscraper.
+
+Each of the 12 rules is taught in depth somewhere across this chapter, the [self-serve stack walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/), [Ch 4.4 ceiling signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/), or the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/). The list above is the index; the surrounding chapters are the depth.
+
 ## Communities that replace a co-founder
 
 You are about to hit a wall: a Lovable prompt that produces the wrong component, a Supabase RLS policy that locks out your own admin user, a Stripe webhook that fires twice for one charge. Five communities answer most of these in under an hour, free.
@@ -205,6 +204,8 @@ None of these is JetThoughts. None of them sells you a service. They are the fou
 > **Next click:** [4.3b · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 >
 > **If blocked:** If the tools don't click yet, skim the Lovable Discord or Indie Hackers to see real founders shipping with this exact stack. The communities section above lists free help channels.
+
+> **Stuck? Most first-timers stall here:** the 12 rules list feels like a homework checklist and you haven't opened Lovable yet. **Fix:** read ONLY the 3 pre-Lovable rules at the top of the list. The other 9 fire inline during the build - they're reminders, not prerequisites. Open Lovable and paste your brief's Section 3. Ship one screen tonight.
 
 > **Case Study: Tomas & Mia**
 >

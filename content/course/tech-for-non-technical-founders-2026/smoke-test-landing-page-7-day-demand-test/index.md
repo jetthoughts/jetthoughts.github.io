@@ -34,7 +34,7 @@ related_posts: false
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 
-> **TL;DR:** Put your page in front of 300 cold strangers, pick the right ad channel for your ICP, don't touch it mid-flight, read the conversion rate against the decision table. If fewer than 3% click, the hypothesis is wrong - fix it before you build. Per-channel budgets + ad-account setup timing are below.
+> **TL;DR:** Put your page in front of 300 cold strangers, pick the right ad channel for your ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1), don't touch it mid-flight, read the conversion rate against the decision table. If fewer than 3% click, the hypothesis is wrong - fix it before you build. Per-channel budgets + ad-account setup timing are below.
 
 ## Buy Cold Traffic on the Right Channel
 

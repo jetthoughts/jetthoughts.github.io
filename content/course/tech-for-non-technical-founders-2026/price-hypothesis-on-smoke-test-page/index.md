@@ -16,7 +16,7 @@ keywords:
 tags:
   - founders
   - non-technical-founder
-  - module-2
+  - module-1
   - validation
 categories: ["Founders"]
 cover_image: cover.png
@@ -24,6 +24,7 @@ metatags:
   image: cover.png
   og_title: "1.3 · Price Your Hypothesis on the Smoke-Test Page"
   og_description: "A waitlist signup is a worse signal than a Stripe payment-intent click. The 5-minute Payment Link setup that price-tests your smoke-test page."
+cover_image_alt: "JetThoughts cover for Chapter 1.3 - Stripe Payment Link price button on a smoke-test landing page with click-to-payment rate measured"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/"
 related_posts: false
 ---
@@ -187,9 +188,9 @@ An email signup costs the visitor nothing; a Stripe click costs them the moment 
 
 > **Case Study: Tomas & Mia**
 >
-> **Tomas**: Adds a Stripe price button at "$200/mo - early access." 5% of visitors click (15 of 300). Of those, 3 complete the $1 pre-sale. Weak price signal - won't sustain $200/mo without the product in hand.
+> **Tomas**: Adds a Stripe price button at "$1,200 founding member - 6 months access at $200/mo equivalent" (one-time, per the body advice above). 5% of visitors click (15 of 300). Of those, 3 complete the $1 pre-sale. Weak price signal - won't sustain $200/mo equivalent without the product in hand.
 >
-> **Mia**: Adds a Stripe price button at "$25/mo - early access." 6% of visitors click (18 of 300). Of those, 6 complete the $1 pre-sale. Stronger signal than Tomas - parents are used to paying for tutoring.
+> **Mia**: Adds a Stripe price button at "$99 founding member - 4 months access at $25/mo equivalent" (one-time). 6% of visitors click (18 of 300). Of those, 6 complete the $1 pre-sale. Stronger signal than Tomas - parents are used to paying for tutoring.
 
 ---
 

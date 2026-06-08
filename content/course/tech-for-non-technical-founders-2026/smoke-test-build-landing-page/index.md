@@ -36,6 +36,8 @@ related_posts: false
 >
 > **Output:** a live landing page with tracking installed, ready for cold traffic in [Part 2](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 
+> **Jump to:** [Pick your builder](#pick-your-builder) · [What goes on the page](#what-goes-on-the-page-and-what-kills-it) · [Set up tracking](#set-up-tracking-before-you-spend-a-dollar-on-ads) · [What to do next](#what-to-do-next)
+
 > **TL;DR:** Paste your hypothesis into an AI builder, ship a 6-element landing page in one evening (2-3 hours your first time, under an hour once you've shipped one before), install Microsoft Clarity before you spend a dollar on ads. The page proves demand before you build - the cheapest signal you can buy.
 
 > **This is Part 1 of 2.** This page covers building the page and setting up tracking. [Part 2: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) covers buying cold traffic, reading the conversion rate, and making the go/iterate/kill decision.
@@ -99,20 +101,11 @@ Ship the ugly version. Beautiful pages eat the calendar and the founder loses th
 
 **Default: AI-generated from your hypothesis** (recommended)
 
-You already have your Founding Hypothesis sentence. Paste it as the prompt. Three to try, in order:
-
-1. **Mixo** ([mixo.io](https://www.mixo.io/), $7/mo) - purpose-built for this exact job: idea → site in ~30 seconds, email capture included.
-2. **Manus AI** ([manus.im](https://manus.im/), free tier with 300 daily credits, no card) - independently rated highest output quality in 2026; generates a full polished page from one prompt.
-3. **Durable** ([durable.com](https://durable.com/), free for 3 pages) - fastest "I have nothing → I have a live site" path.
+1. **Start here: Mixo** ([mixo.io](https://www.mixo.io/), $7/mo) - purpose-built for this exact job: idea → site in ~30 seconds, email capture included. This is the shortest path to a live page.
+2. **Fallback: Manus AI** ([manus.im](https://manus.im/), free tier with 300 daily credits, no card) - independently rated highest output quality in 2026; generates a full polished page from one prompt. Use this if Mixo's templates don't fit your hypothesis.
+3. **Only if you've used a no-code builder before:** Durable ([durable.com](https://durable.com/), free for 3 pages) - fastest "I have nothing → I have a live site" path but expects some builder familiarity. Or use NeetoSite ([neetosite.com](https://neetosite.com/), free tier) or Carrd ([carrd.co](https://carrd.co), free for 3 sites; Pro $9-49/yr) if you prefer placing blocks yourself over prompting.
 
 Pick one and ship the page. Don't comparison-shop for a week - you're testing demand, not builders.
-
-**Fallback: manual builder if you want hands-on control**
-
-- **NeetoSite** ([neetosite.com](https://neetosite.com/), free tier) - block-based editor, ships a working page in an afternoon.
-- **Carrd** ([carrd.co](https://carrd.co), free for 3 sites; Pro $9-49/yr) - the simplest manual builder; pick blocks and ship.
-
-Pick the manual fallback only if you've used a no-code builder before and prefer placing blocks yourself over prompting.
 
 > **The free-subdomain fear (and why it does not matter).** A landing page on a free subdomain that solves a hot problem converts better than a beautiful custom-domain page that solves nothing. The smoke test is a demand signal, not a brand launch. If your hypothesis is right, the free subdomain won't stop people from clicking. If your hypothesis is wrong, a $15 custom domain won't save it. Ship the ugly version first.
 
@@ -196,9 +189,11 @@ The first $300-500 of ads on an untracked page buys nothing but a lesson. Instal
 > **Next click:** [1.2b · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - buy cold traffic and read the numbers.
 > **If blocked:** If you can't get a builder to produce a coherent page from your hypothesis, your hypothesis sentence is too vague. Go back to Ch 1.1 and rewrite it with a specific audience, mechanism, and outcome.
 
+> **Stuck? Most first-timers stall here:** the builder comparison turns into a research project instead of a 30-second pick. **Fix:** open Mixo, paste your hypothesis, ship the first page it gives you. You're testing demand, not builders. The ugly page that ships tonight beats the polished page that ships next week.
+
 > **Case Study: Tomas & Mia**
 >
-> **Tomas**: Builds a Carrd page with Mixo. Headline: "Reconcile Stripe & QuickBooks in 90 seconds." Hero visual: a 15-second Loom of him pretending to reconcile manually. Installs Clarity + LinkedIn pixel.
+> **Tomas**: Builds a page on Mixo. Headline: "Reconcile Stripe & QuickBooks in 90 seconds." Hero visual: a 15-second Loom of him pretending to reconcile manually. Installs Clarity + LinkedIn pixel.
 >
 > **Mia**: Builds a NeetoSite page. Headline: "Find a tutor who actually understands dyslexia - 48 hours." Hero visual: a screenshot of her broken WordPress booking system with a red X over it. Installs Clarity + Meta pixel.
 

@@ -35,6 +35,8 @@ related_posts: false
 >
 > **Output:** a one-page Product Brief rewritten so engineers and AI agents stop overengineering
 
+> **Jump to:** [What to do tomorrow](#what-to-do-tomorrow) · [Artifacts you carry out](#artifacts-you-carry-out-of-module-3)
+
 > **TL;DR:** Rewrite every feature noun as an outcome-shaped job story. "Build a CSV export" becomes "When I prepare the weekly report, I want to grab the top 5 metrics in 30 seconds." The engineer has nothing left to invent.
 
 > **Skip to the action:** [What to do tomorrow](#what-to-do-tomorrow) if you have your Ch 3.1 brief open and want the rewrite steps now. The examples and the theory will still be here.
@@ -176,6 +178,8 @@ When your brief skips the moment, the action, and the result, the engineer or th
 > **Done when:** Every feature in Section 3 of your brief is rewritten as an outcome-shaped job story, and a peer (or Claude) confirms the brief stays inside your scope and no-go list.
 > **Next click:** [4.1 · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
 > **If blocked:** If Claude names 2+ items outside your no-go list when you run the quality-check prompt, your Section 3 is still too vague. Tighten the "When / I want / So I can" shape until Claude's answer stays inside your scope.
+
+> **Stuck? Most first-timers stall here:** every feature in Section 3 looks equally important, so the list keeps growing. **Fix:** pick the ONE outcome that would make a real customer pay or stay. Build that. Cut the rest to the no-go list. You can add them back after the first pilot in Module 5.
 
 > **Case Study: Tomas & Mia**
 >
