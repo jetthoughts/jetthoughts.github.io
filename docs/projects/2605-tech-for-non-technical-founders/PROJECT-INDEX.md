@@ -1,8 +1,8 @@
 # Project 2605 - Master Index
 
 **Project**: Tech for Non-Technical Founders 2026
-**Status**: 🟢 Shipped — 5 modules, 18 chapters, end-to-end live at `/course/tech-for-non-technical-founders-2026/`
-**Last Updated**: 2026-05-29
+**Status**: 🟢 v1 (long-form) shipped + 🟡 v2 (micro-lesson) pilot in flight
+**Last Updated**: 2026-06-08
 **Parent**: `../2510-seo-content-strategy/`
 
 This is the **single navigation hub** for the 2605 project. Read top-to-bottom on first visit.
@@ -11,10 +11,33 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 
 ## 🚀 IMMEDIATE ACTION - START HERE
 
-Course is **shipped** (5 modules, 18 chapters, live at `/course/tech-for-non-technical-founders-2026/`).
-Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/`.
+**v1 (long-form) is shipped**: 5 modules, 18 chapters, live at `/course/tech-for-non-technical-founders-2026/`.
+**Strategic pivot (2026-06-07)**: v2 (micro-learning format) is the next iteration based on `30.03-course-format-requirements-for-creators.md`. All 21 v1 chapters score 1.0-1.5/8 against the 8-part template (per 40.08 gap report). 7 v2 draft pages exist (Quickstart, FAQ, 5 micro-lessons) and the Mom Test 3-lesson sequence is QA-validated per 40.09.
 
-### For an executing writer / task agent (single-session shortcut)
+**Currently in flight**: Phase 3 pilot — publish micro-lessons as canonical Module 2 path, measure completion rate, then migrate Modules 1/3/4/5.
+
+Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" section for the 4-phase rollout). Review docs in `40-49-review/`.
+
+### For a micro-lesson migration agent (Phase 1-2 of TASK-TRACKER "Course Migration Schedule")
+
+```
+1. Read 30-39-architecture-design/30.03-course-format-requirements-for-creators.md — CANONICAL spec for the v2 format. The 8-part lesson template is non-negotiable.
+2. Read 40-49-review/40.08-chapter-template-gap-report.md — every v1 chapter scored against the spec. Use as the "starting state" map.
+3. Read 40-49-review/40.09-mom-test-micro-lesson-qa-report.md — QA pass on the 3 Mom Test sample lessons + paid-pilot lesson. These are the canonical examples of the v2 format done right.
+4. Open the 7 v2 draft pages already in repo:
+   - content/course/tech-for-non-technical-founders-2026/quickstart/
+   - content/course/tech-for-non-technical-founders-2026/faq/
+   - content/course/tech-for-non-technical-founders-2026/mom-test-lesson-1-5-questions/
+   - content/course/tech-for-non-technical-founders-2026/mom-test-lesson-2-emotional-flags/
+   - content/course/tech-for-non-technical-founders-2026/mom-test-lesson-3-run-score-interview/
+   - content/course/tech-for-non-technical-founders-2026/paid-pilot-micro-lesson/
+   - content/course/tech-for-non-technical-founders-2026/mom-test-5-questions-micro-lesson/
+5. Read TASK-TRACKER.md "Course Migration Schedule" → pick the next phase (Phase 0 mechanical edits, Phase 1 pilot, or Phase 2 module-by-module).
+6. After every micro-lesson rewrite: run bin/validate-course + verify mobile viewport at 375px + verify Hugo build passes.
+7. Apply voice guide 90.11 (no em-dashes, no "Founders who"/"Most founders"/"## Why this matters" banned phrases).
+```
+
+### For an executing writer / task agent (single-session shortcut on v1 long-form)
 
 ```
 1. Read TASK-TRACKER.md — identify the highest-priority un-spawned task (P1 items first).
@@ -29,15 +52,19 @@ Post-ship work is tracked in `TASK-TRACKER.md` and review docs in `40-49-review/
 
 | File | Purpose |
 |---|---|
-| `TASK-TRACKER.md` | Live queue of pending post-ship improvements (P1-P3) |
+| `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` | **CANONICAL v2 spec** — micro-learning course format requirements, 8-part lesson template, core/optional tagging, gap analysis, migration guide. The authoritative answer to "how should I structure this lesson?" |
+| `40-49-review/40.08-chapter-template-gap-report.md` | **DIAGNOSTIC** — every v1 chapter scored 1.0-1.5/8 against the 30.03 template. The "starting state" map for migration. |
+| `40-49-review/40.09-mom-test-micro-lesson-qa-report.md` | **EXAMPLES** — QA pass on the 3 Mom Test micro-lessons + paid-pilot lesson. Reference these as the canonical implementation of the 8-part template. |
+| `TASK-TRACKER.md` | Live queue of pending post-ship improvements (P1-P3) + Course Migration Schedule (Phase 0-3 rollout) |
 | `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings — permanent gates now in CLAUDE.md + 90.11 voice guide |
 | `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — supplier-input-process-output-customer map, continuity validation, quality gates, 10/10 score |
 | `40-49-review/40.04-execution-readiness-sweep-2026-06.md` | June 2026 retrospective — time/money sweep + 13 critic-flagged gap closures + 9 tool-input fixes across 18 chapters |
 | `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` | 4-lens ICP-aligned review (Burned/First-Time/Skim-First/Crisis) — 3 recommendations tracked in TASK-TRACKER |
 | `40-49-review/40.06-sam-customer-journey-report-2026-06.md` | Single-ICP Sam narrative — 18-chapter emotional arc, trust scores, recalibrated scoring methodology |
+| `40-49-review/40.07-sam-experience-improvement-report-2026-06.md` | Sam-first improvement recommendations (6 items, all marked Done in TASK-TRACKER 2026-06-07) |
 | `30-39-architecture-design/30.02-adr-content-execution-readiness.md` | **CANONICAL** — content policy (no speculative time/money), binary anchor thresholds per chapter, Module 2 two-pass framing rationale, 4-persona critic gate, Tier 1/2/3 punch list shape |
 | `10-19-research/10.06-icp-persona-course-walkthrough.md` | ICP-E simulation with per-module verdicts and gap recommendations |
-| `10-19-research/10.07-icp-sam-persona-course-walkthrough.md` | ICP-Sam simulation — idea-stage first-timer evaluation with progressive-disclosure and jargon-glossing audits |
+| `10-19-research/_ARCHIVED_10.07-icp-sam-persona-course-walkthrough.md` | (ARCHIVED) — Superseded by 40.06 (Sam journey) + 40.07 (recommendations). |
 | `50-59-execution/mechanical-audit-checklist.md` | Greppable + structural + voice gates every post must pass |
 | `50-59-execution/distribution-prep.md` | Reddit/Twitter/Facebook/LinkedIn channels + share-copy templates + posting schedule |
 

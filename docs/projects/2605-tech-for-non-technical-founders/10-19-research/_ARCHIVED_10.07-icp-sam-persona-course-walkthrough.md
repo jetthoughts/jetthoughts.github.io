@@ -1,4 +1,15 @@
-# ICP-Sam Persona Course Walkthrough — Sam, the Idea-Stage First-Timer
+# _ARCHIVED_ — ICP-Sam Persona Course Walkthrough — Sam, the Idea-Stage First-Timer
+
+> **ARCHIVED 2026-06-07.** This walkthrough is superseded by two newer, more comprehensive documents:
+> - **40.06** (`docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.06-sam-customer-journey-report-2026-06.md`) — definitive Sam reference: per-chapter trust scores, emotional arcs, mobile analysis, artifact chains, 3 entry-point doors, overall journey score.
+> - **40.07** (`docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.07-sam-experience-improvement-report-2026-06.md`) — canonical actionable recommendations: 6 Sam-first improvements logged in TASK-TRACKER for triage.
+>
+> The 8 recommendations from this walkthrough have been triaged:
+> - 2 captured in 40.07 (landing fast path, stuck boxes)
+> - 5 tabled as aspirational/structural (split M2.3, alt ch1.1 opener, jargon audit, idea discovery worksheet, Sam/Alex comparison)
+> - 1 superseded by broader work (M2.2 repositioning discussion)
+>
+> **Kept for historical record only** — the illustrative Sam persona (BFA Industrial Design, $40K runway, dog-walking marketplace) was a useful exploration vector but is not canonical.
 
 **Created**: 2026-05-29
 **Last updated**: 2026-05-29

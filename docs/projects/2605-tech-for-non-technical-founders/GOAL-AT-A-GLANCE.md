@@ -4,10 +4,30 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last restructured**: 2026-06-04 (Doc consolidation: archived 20.07 + 40.02, cross-referenced reviews, created LOW-IMPACT-IDEAS-BANK, added Chapter 0)
-**Status**: 🎉 Course shipped end-to-end (5 modules · 18 linear chapters + 1 overview chapter + 1 glossary · 15 artifacts as of 2026-06-04). Live at `/course/tech-for-non-technical-founders-2026/`.
+**Last restructured**: 2026-06-07 (Strategic pivot: long-form v1 → micro-learning v2 per 30.03 spec)
+**Status**: 🟢 v1 (long-form course) shipped · 🟡 v2 (micro-lesson format) pilot in flight
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
+
+---
+
+## 🔀 STRATEGIC PIVOT (2026-06-07) — READ FIRST
+
+**v1 status**: Long-form course shipped end-to-end (5 modules · 18 chapters · 15 artifacts · 22+ iterations of Sam-loop polish). Live and functional.
+
+**The problem with v1**: 40.08 gap report scored all 21 chapters against the canonical 8-part micro-lesson template (30.03 spec). **0 of 21 chapters score above 2/8.** The format is wrong for Sam — long-form chapters (2,000-4,500 words each) violate the micro-learning research (Cathy Moore's Action Mapping, Carroll's Minimalist Instruction, Fogg's B=MAP, NN/g F-pattern). The 16 iterations of surgical polish caught real defects but cannot fix the structural format gap.
+
+**v2 direction**: 20-25 micro-lessons (400-600 words each, 5-10 min read + 5-15 min do). Per-lesson 8-part template (Hook → Outcome → Concept → Visual → Do-Now → Error Recovery → Reflection → Bridge). Same 6 artifacts, same emotional arc — radical compression, not scope reduction. See `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` for the canonical spec.
+
+**Migration plan (see `TASK-TRACKER.md` "Course Migration Schedule")**:
+- ✅ **Phase 0 / Option C** (shipped 2026-06-07): Quickstart + FAQ + "What not to learn" + 6 Sam recommendations from 40.07 + 4 micro-lesson samples + Mom Test 3-lesson QA-validated sequence
+- 🟡 **Phase 1** (in flight): Pilot one chapter migrated to 8-part template, measure time-per-lesson + completion data
+- 📋 **Phase 2** (2-4 weeks): Module-by-module full migration (M1 → M2 → M3 → M4 → M5)
+- 📋 **Phase 3** (cross-cutting polish): bridges + reflection + visual discipline + viral loop
+
+**What we stopped**: Iter 17+ surgical loop on v1 long-form chapters. Each Iter-N round was catching diminishing-return defects. The structural format gap is solved by migration, not by line edits.
+
+**For cold AI agents picking up the work**: Start at PROJECT-INDEX.md → "For a micro-lesson migration agent" route. The 30.03 spec is the canonical authority on lesson structure. The 40.09 QA report shows the 8-part template applied correctly to the Mom Test 3-lesson sample.
 
 ---
 
@@ -115,7 +135,8 @@ Each module has an **input** (what the reader brings from the previous module), 
 
 - **Source of truth (chapter order + goals)**: `../../data/course_sequence.yaml`
 - **Research**: `10-19-research/10.01-course-program-landscape.md` + `10.02-curriculum-sequence-synthesis.md` + `10.08-validation-tools-analysis-2026.md`
-- **Reviews**: `40-49-review/40.03-sipoc-course-logic.md` (canonical SIPOC) + `40-49-review/40.04-execution-readiness-sweep-2026-06.md` + `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` + `40-49-review/40.06-sam-customer-journey-report-2026-06.md`
+- **Reviews**: `40-49-review/40.03-sipoc-course-logic.md` (canonical SIPOC) + `40-49-review/40.04-execution-readiness-sweep-2026-06.md` + `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` + `40-49-review/40.06-sam-customer-journey-report-2026-06.md` + `40-49-review/40.07-sam-experience-improvement-report-2026-06.md`
+- **Course format spec (creators)**: `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` — canonical micro-learning requirements, lesson template, gap analysis, migration guide
 - **Strategy**: `20-29-strategy/20.01-course-modules.md` + `20.02-positioning-vs-courses.md` + `20.10-sequence-decision-validate-vs-smoke-test.md`
 - **Open work**: `TASK-TRACKER.md` (single source of truth for all active tasks)
 - **Low-impact ideas**: `LOW-IMPACT-IDEAS-BANK.md` (deferred, dropped, and P3 ideas)
