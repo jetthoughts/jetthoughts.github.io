@@ -8,7 +8,7 @@
 
 **What just shipped (2026-06-08):**
 - ✅ Phase 1 pilot RESTRUCTURED into ONE Mixo-only golden-path lesson:
-  - `smoke-test-build-with-mixo` — single workflow: paste hypothesis → polish 4 copy blocks → swap hero → add disclaimer → publish → stranger test. ~790 words. Carrd manual path collapsed to 1-line `If this fails` fallback.
+  - `smoke-test-build-page` — agnostic AI-builder workflow (Mixo as worked example, Manus AI and Durable named as equivalents, Carrd as manual-mode fallback): paste hypothesis → polish 4 copy blocks → swap hero → add disclaimer → publish → stranger test. Title and slug deliberately tool-agnostic so the lesson outlives any one tool.
   - `smoke-test-wire-tracking` — Clarity + ad-platform pixel + optional GA4, ~430 words (unchanged from earlier pilot)
 - ✅ Deleted prior two-lesson split (`smoke-test-pick-builder-ship-page` + `smoke-test-ship-page`) - ICP review found audit framing + manual-path/AI-path conflation confused Sam; 6-element table positioned as audit gate but Mixo doesn't output labeled elements
 - ✅ Both lessons pass: Hugo build, validate-course (7/7), em-dash sweep (zero), word count in 500-800 band

@@ -26,8 +26,8 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 3. Read 40-49-review/40.08-chapter-template-gap-report.md — every v1 chapter scored against the spec. Use as the "starting state" map.
 4. Reference 40-49-review/_ARCHIVED_40.09-mom-test-micro-lesson-qa-report.md ONLY for the QA methodology pattern (criterion-by-criterion binary scoring).
 5. Read the pilot lessons as the canonical implementation pattern:
-   - content/course/tech-for-non-technical-founders-2026/smoke-test-build-with-mixo/ (Lesson 1.2a - merged: Mixo-only golden path, ~790w)
-   - content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/ (Lesson 1.2b)
+   - content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/ (Lesson 1.2a - agnostic AI-builder workflow, Mixo as worked example, ~870w; Sam-glossing pushed over the 800w pilot ceiling deliberately - jargon decode beats word count)
+   - content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/ (Lesson 1.2b - heavy gloss pass for snippet/head tag/heatmap/session recording/pixel/GA4/incognito, ~640w)
 6. Open the v2 production pages already wired into the landing: content/course/tech-for-non-technical-founders-2026/quickstart/ + .../faq/
 7. Voice gates: no em-dashes (use `-` not `—`); no "Founders who"/"Most founders"/"## Why this matters"/"ICP-E"; no template labels visible in published content; ZERO case studies inside lesson body (they live at module-end walkthrough page). The `See it in action` footer link is added in the SAME commit that publishes the module's walkthrough page - never before; otherwise the lesson promises a page that does not exist.
 8. After every micro-lesson rewrite: run bin/validate-course + em-dash sweep + Hugo build + mobile viewport check at 375px.
