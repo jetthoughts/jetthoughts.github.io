@@ -21,16 +21,18 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 ### For a micro-lesson migration agent (Phase 1-2 of TASK-TRACKER "Course Migration Schedule")
 
 ```
-1. Read AGENT-PROMPTS.md — pick §1 KICKOFF (cold session) or §2 NEXT-ITERATION (returning). The prompt files include the full read-list and quality gates.
-2. Read 30-39-architecture-design/30.03-course-format-requirements-for-creators.md — CANONICAL spec for the v2 format. The 8-part lesson template is non-negotiable. The Appendix A worked example (Lesson 1.1 rewrite) is the canonical implementation pattern.
+1. Read TASK-TRACKER.md — "Active Phase" + "Next sprint candidates". Pick ONE task.
+2. Read 30-39-architecture-design/30.03-course-format-requirements-for-creators.md — CANONICAL spec for the v2 format. §2 = 8-part template (non-negotiable). §2.7 = case-study-at-module-end rule. Appendix A = worked example.
 3. Read 40-49-review/40.08-chapter-template-gap-report.md — every v1 chapter scored against the spec. Use as the "starting state" map.
-4. Reference 40-49-review/_ARCHIVED_40.09-mom-test-micro-lesson-qa-report.md ONLY for the QA methodology pattern (criterion-by-criterion binary scoring). The lessons it audited were removed; the methodology is preserved.
-5. Open the v2 production pages already wired into the landing:
-   - content/course/tech-for-non-technical-founders-2026/quickstart/
-   - content/course/tech-for-non-technical-founders-2026/faq/
-6. Read TASK-TRACKER.md "Course Migration Schedule" → pick the next phase (Phase 0 mechanical edits, Phase 1 pilot, or Phase 2 module-by-module).
-7. After every micro-lesson rewrite: run bin/validate-course + verify mobile viewport at 375px + verify Hugo build passes.
-8. Apply voice guide 90.11 (no em-dashes, no "Founders who"/"Most founders"/"## Why this matters" banned phrases).
+4. Reference 40-49-review/_ARCHIVED_40.09-mom-test-micro-lesson-qa-report.md ONLY for the QA methodology pattern (criterion-by-criterion binary scoring).
+5. Read the pilot lessons as the canonical implementation pattern:
+   - content/course/tech-for-non-technical-founders-2026/smoke-test-build-with-mixo/ (Lesson 1.2a - merged: Mixo-only golden path, ~790w)
+   - content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/ (Lesson 1.2b)
+6. Open the v2 production pages already wired into the landing: content/course/tech-for-non-technical-founders-2026/quickstart/ + .../faq/
+7. Voice gates: no em-dashes (use `-` not `—`); no "Founders who"/"Most founders"/"## Why this matters"/"ICP-E"; no template labels visible in published content; ZERO case studies inside lesson body (they live at module-end walkthrough page). The `See it in action` footer link is added in the SAME commit that publishes the module's walkthrough page - never before; otherwise the lesson promises a page that does not exist.
+8. After every micro-lesson rewrite: run bin/validate-course + em-dash sweep + Hugo build + mobile viewport check at 375px.
+9. Atomic unit = 1 lesson. Write, validate, commit. THEN move to next. Never batch.
+10. After each commit: update TASK-TRACKER.md "What just shipped." Before stopping: commit + push TASK-TRACKER.
 ```
 
 ### For an executing writer / task agent (single-session shortcut on v1 long-form)

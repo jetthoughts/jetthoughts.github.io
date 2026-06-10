@@ -80,6 +80,7 @@
 | Post-ship retrospective (40.02) | Deferred — requires 2+ weeks of live data | Moved to `_DEFERRED_40.02-post-ship-retrospective.md` |
 | Cover image regen for ~30 non-spine companion posts | P3 — regen via chrome-devtools at 2400×1260 if posts stay in active rotation | TASK-TRACKER P3 |
 | Quarterly refresh sweep for AI-era posts | Q1 2027 trigger | GOAL-AT-A-GLANCE |
+| **v2 Lesson 1.2a Plan B: split by builder path** | Deferred — Plan A is single Mixo-only lesson (`smoke-test-build-with-mixo`); if reader data shows ≥30% Sam-readers fall back to Carrd, split into two parallel lessons (AI path + manual path) so each reader follows one coherent workflow without the other crowding the page. Trigger: reader survey / analytics showing Carrd-fallback rate. | Pivot decision 2026-06-08 (this session). Originally pilot was split as Generate-Elements + Hero-Ship; user rejected as ICP-confusing; merged into single Mixo workflow with Carrd as one-line `If this fails` fallback. |
 
 ---
 

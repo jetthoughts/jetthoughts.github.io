@@ -1,6 +1,6 @@
 # QA Validation Report — Mom Test 3-Lesson Micro-Sequence (ARCHIVED)
 
-> **ARCHIVED 2026-06-08**: the 3 Mom Test lessons + paid-pilot micro-lesson sample were removed from `content/course/` per user direction (start the v2 migration from a clean slate, do not carry over exploration drafts). This document is preserved as the **canonical QA methodology pattern** — agents running revision passes per `AGENT-PROMPTS.md §3` should copy the binary-scoring + criterion-by-criterion structure from this report. The specific lesson scores below are historical and reference content that no longer exists in the repository.
+> **ARCHIVED 2026-06-08**: the 3 Mom Test lessons + paid-pilot micro-lesson sample were removed from `content/course/` per user direction (start the v2 migration from a clean slate, do not carry over exploration drafts). This document is preserved as the **canonical QA methodology pattern** - agents running revision passes should copy the binary-scoring + criterion-by-criterion structure from this report. The specific lesson scores below are historical and reference content that no longer exists in the repository.
 
 **Checklist:** 30.03 §7 Per-Lesson QA
 **Date:** 2026-06-07 (audit performed) · 2026-06-08 (archived)

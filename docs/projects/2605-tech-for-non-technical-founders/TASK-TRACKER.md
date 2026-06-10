@@ -1,18 +1,19 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-08 (Phase 1 pilot review applied · one-case-story rule established · pilot findings documented)
+**Last Updated**: 2026-06-08 (Phase 1 pilot RESTRUCTURED · two-lesson split merged into one Mixo-only golden-path lesson · case-study moved to module-end · Plan B path-split parked in LOW-IMPACT-IDEAS-BANK)
 
 ## Active Phase: v2 Migration Pilot
 
 **Current sprint focus:** validate the v2 micro-lesson format on Module 2 before fanning out to the rest. See "Course Migration Schedule" section below for the 4-phase rollout. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + `40.08-chapter-template-gap-report.md` + `40.09-mom-test-micro-lesson-qa-report.md` before touching any v2 lesson.
 
 **What just shipped (2026-06-08):**
-- ✅ Phase 1 pilot COMPLETE: Chapter 1.2a (Smoke Test Build) split into 2 micro-lessons:
-  - `smoke-test-pick-builder-ship-page` — builder choice + 6 page elements, 8-part template, ~480 words (post-review trim)
-  - `smoke-test-wire-tracking` — Clarity + ad-platform pixel + optional GA4, 8-part template, ~430 words (post-review trim)
-- ✅ Both lessons pass: Hugo build (713 pages), validate-course (7/7), em-dash sweep (zero)
-- ✅ Pilot review applied: one-case-story rule (cut 1 of 2 per lesson by ICP-fit), GA4 trimmed to one optional line, step 2 bulletized for mobile, em-dash regressions swept
-- ✅ Spec updates: 30.03 §2.7 + AGENT-PROMPTS now mandate ONE case study per lesson with ICP-fit selection rule
+- ✅ Phase 1 pilot RESTRUCTURED into ONE Mixo-only golden-path lesson:
+  - `smoke-test-build-with-mixo` — single workflow: paste hypothesis → polish 4 copy blocks → swap hero → add disclaimer → publish → stranger test. ~790 words. Carrd manual path collapsed to 1-line `If this fails` fallback.
+  - `smoke-test-wire-tracking` — Clarity + ad-platform pixel + optional GA4, ~430 words (unchanged from earlier pilot)
+- ✅ Deleted prior two-lesson split (`smoke-test-pick-builder-ship-page` + `smoke-test-ship-page`) - ICP review found audit framing + manual-path/AI-path conflation confused Sam; 6-element table positioned as audit gate but Mixo doesn't output labeled elements
+- ✅ Both lessons pass: Hugo build, validate-course (7/7), em-dash sweep (zero), word count in 500-800 band
+- ✅ Spec updates: 30.03 §2.7 mandates ONE case study per MODULE at module-end (slug `module-N-walkthrough-<founder>`); lesson bodies stay case-study-free; `See it in action` footer link added in SAME commit that publishes the walkthrough page (never before - placeholder URL reads as broken promise). AGENT-PROMPTS scaffolding file deleted - cold-agent workflow now lives inline in TASK-TRACKER + 30.03 + PROJECT-INDEX route.
+- ✅ Plan B (split-by-path: separate AI lesson + manual lesson) parked in LOW-IMPACT-IDEAS-BANK with trigger condition (reader data showing ≥30% Carrd-fallback rate)
 - ✅ Option C wired into landing: Quickstart + FAQ links in "Start here" callout, "What this course does NOT cover" section added with 7 explicit exclusions
 
 **Phase 1 pilot findings (record for cold agents):**
@@ -20,7 +21,8 @@
 | Observation | What it means for Phase 2 |
 |---|---|
 | Real time-per-lesson: ~25 min for the first draft + ~20 min for review/cuts ≈ 45 min/lesson | Phase 2 estimate of "~45-60 min per lesson" holds. Module 1 (3 remaining lessons × ~45 min) = ~2.5 hr realistic, not the original "~3-4 days." Earlier estimates were padded. |
-| Two-case-studies-per-lesson pattern produced ~30% word-count drag on the 400-600 budget | The one-case-study rule (30.03 §2.7) fixes this. ALL future lessons inherit ONE case study, pick by ICP-fit. |
+| Two-case-studies-per-lesson pattern produced ~30% word-count drag on the 400-600 budget | Superseded 2026-06-08: case studies now live at module-end walkthrough page only (30.03 §2.7); lesson bodies are case-study-free. |
+| Split-by-step pattern (audit lesson + ship lesson) confused Sam: audit framing assumed Mixo outputs labeled 6-element list, but Mixo outputs a complete page Sam can't easily map to the 6 elements | Workflow-shaped lessons (one Mixo session = one lesson) beat framework-shaped lessons (audit then ship). Match the cognitive split to the reader's actual session boundaries, not to teacher-imposed pedagogical phases. |
 | Concept blocks naturally drift to ~310 words when GA4-style "industry standard" addendums creep in | Watch for "overkill but include for completeness" content. Cut or move to optional sidebar. The 300-word cap is enforced, not aspirational. |
 | Template labels (1. Hook, 2. Outcome, etc.) NEVER leak into published content when the writer reads the lesson aloud at the end | Read-aloud check before commit is a cheap insurance. Adds <60s, prevents the worst kind of regression. |
 | Step 2 of Do-Now in Lesson 1.2a originally combined all 6 elements into one ~95-word paragraph | Bullets beat paragraphs in Do-Now steps. Mobile scanability is the deciding factor. |
