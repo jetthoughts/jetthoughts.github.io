@@ -24,10 +24,12 @@ related_posts: false
 > **Input:** your Founding Hypothesis sentence from [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (the one-sentence `if [customer] solves [problem] with [approach]...` you wrote)
 >
 > **Output:** a live landing page URL that names your customer and their outcome
+>
+> **Progress:** M1 · 2 of 5 · Results so far: hypothesis sentence
 
 ---
 
-Lesson 1.1 ended with your one-sentence hypothesis. To find out if anyone wants it, get it live as a URL where strangers can sign up.
+You are busy and probably tired of hearing "just validate it" without being shown how. This lesson gives you the how — one URL, one stranger, three seconds. Lesson 1.1 ended with your one-sentence hypothesis. To find out if anyone wants it, get it live as a URL where strangers can sign up.
 
 After this lesson you will be able to: **publish a smoke-test page that names your customer and their outcome in 3 seconds, then run a one-stranger clarity test on it.**
 

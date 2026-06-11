@@ -1,5 +1,5 @@
 ---
-title: "1.2b · Smoke Test: Run It and Read the Signal"
+title: "1.2c · Smoke Test: Run It and Read the Signal"
 aliases: ["/blog/smoke-test-landing-page-300-dollar-validation/"]
 description: "Put your landing page in front of 300 cold strangers, read the conversion rate against the go/iterate/kill decision table, and get the cheapest demand signal before you build."
 date: 2026-05-13
@@ -21,16 +21,16 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "1.2b · Smoke Test: Run It and Read the Signal"
+  og_title: "1.2c · Smoke Test: Run It and Read the Signal"
   og_description: "Put your landing page in front of 300 cold strangers, read the conversion rate, and make the go/iterate/kill decision."
 cover_image_alt: "JetThoughts course cover for the smoke test chapter showing a landing page with a CTA button and an ad-spend gauge"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/"
 related_posts: false
 ---
 
-> **Module 1 · Step 2b of 3 · Part 2 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Step 2c of 4 · Part 3 of 3** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live landing page with tracking installed (from [Part 1: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/))
+> **Input:** a live landing page with tracking installed (from [Part 1: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/))
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 
@@ -148,7 +148,7 @@ A sensible three-phase shape for the smoke test:
 
 | Phase | What you do |
 |---|---|
-| Setup | Page is live with tracking wired (from [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)). Ad account on your chosen channel, payment method attached |
+| Setup | Page is live with tracking wired (from [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)). Ad account on your chosen channel, payment method attached |
 | Run | Launch the ad campaign on your chosen channel, then do nothing - no headline rewrites, no bid adjustments, no hourly dashboard refreshes |
 | Read results | Once the numbers have stabilized, read them and make the go / iterate / kill decision |
 
@@ -156,7 +156,7 @@ If go, run the [Ch 1.3 price test](/course/tech-for-non-technical-founders-2026/
 
 ### How to actually run it
 
-You already built the page in [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/). Now:
+You already built the page in [Part 1](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/). Now:
 
 1. Ad account ready on your chosen channel? Payment method attached? If not, set it up Sunday evening.
 2. Launch the campaign and walk away until the numbers stabilize. **Two numbers carry the result: >=300 visits and >=6% email conversion to advance** (or >=5% Stripe-click if you ran the Ch 1.3 variant). 3-5% lands in the "iterate the message" band - not a green light for Ch 2.3 (a + b) interviews.

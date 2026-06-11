@@ -35,7 +35,7 @@ The 2026 version of this work uses tools that didn't exist five years ago - AI a
 
 > **Start here:**
 > - [**Quickstart**](/course/tech-for-non-technical-founders-2026/quickstart/) - 1 page, 3-minute read: the minimal path for time-starved founders (core lessons only, gate thresholds, "start here" button).
-> - [**How This Course Works**](/course/tech-for-non-technical-founders-2026/how-this-course-works/) - 5-minute read: the full route at a glance - 5 modules, 20 chapters, 6 artifacts (your "Founder OS" - a single Google Drive folder where each module drops one fill-in-the-blank document you can hand to an investor).
+> - [**How This Course Works**](/course/tech-for-non-technical-founders-2026/how-this-course-works/) - 5-minute read: the full route at a glance - 5 modules, 21 chapters, 6 artifacts (your "Founder OS" - a single Google Drive folder where each module drops one fill-in-the-blank document you can hand to an investor).
 > - [**FAQ**](/course/tech-for-non-technical-founders-2026/faq/) - 15 Q&A for typical blockers: Stripe verification, Mom Test scores below 7, finding 10 people, builder paralysis, asking for money.
 >
 > Free. No sign-up. Start tonight.
@@ -130,8 +130,9 @@ Investors don't fund ideas. They fund evidence. Each artifact answers a question
 *Start here if you don't have a one-sentence Founding Hypothesis yet (customer + problem + approach + competition + differentiation), or you have a hypothesis but never tested demand with a landing page.*
 - [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
   - Before you write the hypothesis: [stress-test the blanks with AI](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).
-- [**1.2a** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)
-- [**1.2b** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+- [**1.2a** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
+- [**1.2b** · Wire Tracking Before You Spend a Dollar](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
+- [**1.2c** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
 ### Module 2 - Validate the Problem

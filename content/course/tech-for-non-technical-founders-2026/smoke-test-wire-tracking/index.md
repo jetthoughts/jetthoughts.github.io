@@ -1,6 +1,6 @@
 ---
 title: "Wire Tracking Before You Spend a Dollar"
-description: "Install Microsoft Clarity and your ad-platform pixel on your landing page before you run a cent of traffic. Free heatmaps, session recordings, and the 3 numbers you will actually read."
+description: "Install tracking on your landing page before you run a cent of traffic. GA4 or ad-platform pixel (depends on channel), plus Clarity for session recordings — all free, 10 minutes."
 date: 2026-06-08
 draft: true
 course_chapter: false
@@ -24,28 +24,35 @@ related_posts: false
 >
 > **Input:** the live landing page URL you published in [Lesson 1.2a](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 >
-> **Output:** tracking installed - Microsoft Clarity + your ad-platform pixel - ready for cold traffic in Lesson 1.3
+> **Output:** tracking installed for your ad channel — ready for cold traffic in Lesson 1.2c
+>
+> **Progress:** M1 · 3 of 5 · Results so far: hypothesis sentence + live landing page
 
 ---
 
 Without tracking, the typical smoke-test result is unreadable: hundreds of ad clicks, only a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A two-minute session replay would have caught the broken form on visitor one. The fix is 15 minutes of free tracking installed before you spend a cent on ads.
 
-After this lesson you will be able to: **install Microsoft Clarity and your ad-platform pixel on your landing page, and name the 3 conversion numbers you will read in Lesson 1.3.**
+After this lesson you will be able to: **install the right tracking for your ad channel — GA4 + Google Ads tag, or your platform's pixel, plus Clarity — and name the 3 conversion numbers you will read in Lesson 1.2c.**
 
 ---
 
 A **tracking snippet** is a small block of code (HTML or JavaScript) that you copy from one site and paste into a field on your page builder. You do not write or edit it. Once installed, each snippet records visitor activity to a dashboard you read later.
 
-You will install two snippets, both free:
+What you install depends on where you will run ads:
 
-- **[Microsoft Clarity](https://clarity.microsoft.com/)** (free forever) gives you a **heatmap** (a color overlay showing where visitors clicked and scrolled most) and **session recordings** (silent video replays of one anonymous visitor's mouse and scroll). After 300 visits, watch ten random replays - the pattern showing why visitors leave usually appears within the first three.
-- Your **ad-platform pixel** - a snippet from the ad platform you plan to run traffic on. For **consumer products (B2C)**, use **Meta Pixel** (Facebook + Instagram) or **Reddit Pixel**. For **business products (B2B)**, use **LinkedIn Insight Tag**. Same install steps as Clarity. Without it, the platform optimizes for cheap clicks instead of actual signups, and you get traffic that converts nothing.
+**If you are running Google Search Ads:**
+- **[Google Analytics 4](https://analytics.google.com/)** (free) — your analytics foundation. Tracks page views, clicks, and form submits. Already integrated with [Google Ads](https://ads.google.com/) — no separate pixel needed. Create a GA4 property, copy the Measurement ID, paste it into your builder's head-tag field.
 
-(**Google Analytics 4** is a free Google dashboard that tracks visits over months or years. Optional for the smoke test; skip it now and install it later if the hypothesis passes.)
+**If you are running Meta, LinkedIn, or Reddit Ads:**
+- Your **ad-platform pixel** — **[Meta Pixel](https://business.facebook.com/)** for B2C, **[LinkedIn Insight Tag](https://www.linkedin.com/campaignmanager/)** for B2B, **[Reddit Pixel](https://ads.reddit.com/)** for developer tools (see Lesson 1.2c for channel selection). Without it, the platform optimizes for cheap clicks instead of signups — you get traffic that converts nothing.
+- **[GA4](https://analytics.google.com/)** (free) — your analytics dashboard. Tracks the same 3 numbers regardless of which ad platform you pick.
 
-Both snippets paste into the same place on your page builder: the **head-tag field**, the hidden block at the top of every webpage where tracking scripts live. Page builders label this field "head," "custom code," or "tracking scripts" - they all point at the same place (in Mixo: Settings → Custom Code → Header field; in Manus AI or Durable: look for "head" or "tracking scripts").
+**Always install (both paths, free):**
+- **[Microsoft Clarity](https://clarity.microsoft.com/)** — session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
 
-The 3 numbers you will read in Lesson 1.3:
+All snippets paste into the **head-tag field** — the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
+
+The 3 numbers you will read in Lesson 1.2c:
 
 | Event | What it measures |
 |---|---|
@@ -59,27 +66,29 @@ Conversion rate = form submits ÷ page views. That is the number your Founding H
 
 ---
 
-1. Create a free Microsoft Clarity account at [clarity.microsoft.com](https://clarity.microsoft.com/). Add your site URL, then copy the tracking snippet shown on the next screen.
-
-2. Paste the snippet into your page builder's head-tag (or "custom code") field. Save the page.
-
-3. Sign up for an account on your chosen ad platform (Meta, LinkedIn, or Reddit - see concept block above for B2B vs B2C). You will not run ads yet; the pixel just collects data so the platform is ready when you do in Lesson 1.3. Copy the pixel snippet, paste it into the same head-tag field. Save.
-
-4. Open your landing page in an **incognito window** (a private browser tab that ignores your login and cache, so the visit looks fresh to Clarity). Wait 60 seconds, then open Clarity's dashboard and click "Recordings." **✅ Success check:** your visit appears as a session recording. If you see yourself, the tracking is live. (If you used the builder's preview URL instead of the published URL, scripts may be blocked - publish first, then check Clarity.)
+> **Install (10 minutes):**
+>
+> 1. **Pick your path:** Google Ads → install [GA4](https://analytics.google.com/) (free, Measurement ID in head-tag) → link GA4 in Google Ads Settings → Linked accounts. Meta/LinkedIn/Reddit → install that platform's pixel snippet in head-tag.
+> 2. Install [Microsoft Clarity](https://clarity.microsoft.com/) (free, 60 seconds — copy snippet, paste in head-tag). Both paths.
+> 3. Open your page in an incognito window. Wait 60s. **✅ GA4/pixel:** test visit registers in your dashboard. **✅ Clarity:** your visit appears as a session recording.
+>
+> (One "custom code" field? That field IS the head-tag — paste all snippets there.)
 
 ---
 
 **If Clarity shows "No data yet" after 5 minutes.** **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts. **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
 
----
-
-Open Clarity, find your own session recording, and watch it. Write down one thing you did not notice while building the page that you noticed watching yourself as a visitor. That gap between what you intended and what a visitor experiences is what tracking exists to surface.
+**If your pixel shows "Unverified" or "No activity" after install.** **Why:** same cause as Clarity — pasted in the body field, or the builder's preview mode is blocking it. **Fix:** move the snippet to the head-tag field, publish the page, then refresh the pixel dashboard. Most platforms need a real page load (not preview) to fire the pixel once.
 
 ---
 
-> **Done when:** Microsoft Clarity and your ad-platform pixel are installed, and your own visit shows up as a session recording in Clarity within 60 seconds.
+Open Clarity, find your own session recording, and watch it. Then open your ad platform's pixel dashboard and confirm your test visit registered. Write down one thing you did not notice while building the page that you noticed watching yourself as a visitor. That gap between what you intended and what a visitor experiences is what tracking exists to surface.
+
+---
+
+> **Done when:** tracking shows your test visit — GA4 Real-Time report OR pixel status "Active" OR Clarity recording (any one confirms the snippet landed).
 >
-> **Next click:** [1.3 · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+> **Next click:** [1.2c · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 >
 > **If blocked:** see "If this fails" above.
 

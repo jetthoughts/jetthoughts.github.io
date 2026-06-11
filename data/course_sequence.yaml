@@ -7,7 +7,7 @@
 # not in the linear prev/next reading order. Like the glossary, it's reference content
 # accessible from the landing page.
 #
-# Current count: 22 entries (1 overview + 20 chapters + 1 glossary)
+# Current count: 23 entries (1 overview + 21 chapters + 1 glossary)
 #
 # Note: floating glossary - "Five Tech Words to Stop Nodding At" (slug five-tech-words-stop-nodding-at)
 # is reference content, accessible from every chapter, not in the linear reading order.
@@ -29,14 +29,19 @@ sequence:
     module: "Chapter 1.1"
     goal: "Write a one-sentence Founding Hypothesis you can falsify with strangers."
 
-  - slug: smoke-test-build-landing-page
+  - slug: smoke-test-build-page
     title: "1.2a · Smoke Test: Build the Page"
     module: "Chapter 1.2a"
-    goal: "Pick a no-code builder, ship a 6-element landing page in under an hour, wire tracking before ads run."
+    goal: "Publish a smoke-test page from your hypothesis in under an hour, then run a one-stranger clarity test."
+
+  - slug: smoke-test-wire-tracking
+    title: "1.2b · Wire Tracking Before You Spend a Dollar"
+    module: "Chapter 1.2b"
+    goal: "Install Microsoft Clarity and your ad-platform pixel before you spend a cent on traffic."
 
   - slug: smoke-test-landing-page-7-day-demand-test
-    title: "1.2b · Smoke Test: Run It and Read the Signal"
-    module: "Chapter 1.2b"
+    title: "1.2c · Smoke Test: Run It and Read the Signal"
+    module: "Chapter 1.2c"
     goal: "Buy cold traffic on the right channel, read the conversion rate against go/iterate/kill, decide."
 
   - slug: price-hypothesis-on-smoke-test-page
