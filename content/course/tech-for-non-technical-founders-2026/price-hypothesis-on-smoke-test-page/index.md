@@ -85,6 +85,8 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 >
 > **If blocked:** see "If this fails" above. Module 1 closes here. Before Module 2, you should have: hypothesis (1.1), landing page (1.2a), tracking (1.2b), conversion data (1.2c), and a price signal (1.3). Missing one? Go back to that lesson.
 >
+> **What M1 cost you:** ~$325-625 total ($300-600 for Meta/Reddit ads + optional Perplexity Pro $20/mo; all other tools used free tiers). If you're B2B on LinkedIn, budget $1,800-6,600. If you used the $0 organic path from the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/), your cost was $0. No hidden fees beyond ad spend.
+>
 > **Deeper reference:** [Full Stripe setup walkthrough + pricing revisit moments + threshold bands](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/)
 
 ---

@@ -46,7 +46,9 @@ Now she needs to know who visits.
 
 **Challenge:** Mia is B2C. The concept block said B2C → Meta Pixel. She had never created a Meta Business account and was intimidated by "pixel" and "head-tag."
 
-**Action:** She followed the compact install box: signed up at clarity.microsoft.com, copied the snippet, pasted it into Mixo's Custom Code → Header field. Then business.facebook.com → Events Manager → create pixel → copy snippet → paste in the same head-tag field. She picked Meta Pixel because her hypothesis named a B2C customer. She also installed GA4 for the analytics dashboard. Ten minutes total.
+**Action:** She followed the compact install box: signed up at clarity.microsoft.com, copied the snippet, pasted it into Mixo's Custom Code → Header field. Then business.facebook.com → Events Manager → create pixel → copy snippet → paste in the same head-tag field. She picked Meta Pixel because her hypothesis named a B2C customer. She also installed GA4 for the analytics dashboard.
+
+When she checked Clarity five minutes later, it still showed "No data yet." She had pasted the Clarity snippet in the body field instead of the head-tag field. One field higher in Mixo's settings, refresh, and the recording appeared. Twenty-five minutes total, including the fix.
 
 **Result:** She opened her page in an incognito window. Within 60 seconds, Clarity showed her own session recording. Her Meta Pixel dashboard showed "Active." GA4 Real-Time showed one active user. Done.
 
