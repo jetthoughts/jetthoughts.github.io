@@ -62,7 +62,7 @@ Pick one pattern. Do not A/B test  --  150 visits each on a $300 budget can't di
 
 1. **Start Stripe verification tonight.** Sign up at [stripe.com](https://stripe.com) (free). Stripe needs your bank account + tax ID before accepting live payments  --  usually 1-3 business days. Start the weekend before launch.
 2. Create a Payment Link. Dashboard → Payments → Payment Links → New link. Add a one-time product at your hypothesis price. Use one-time (not subscription)  --  "founding member" converts better on a pre-product page.
-3. Set the after-payment redirect to a thank-you page. On [Carrd](https://carrd.co/): create a hidden section and use its anchor URL (`yourpage.carrd.co/#thanks`).
+3. Set the after-payment redirect. **Skip it** if you're in a hurry (Stripe shows its own confirmation). **Set it** if you want GA4 to count payment completions as page views: **Mixo** — redirect to your main page URL (GA4 counts the revisit; rougher but works). **Carrd** — create a hidden section at the bottom, redirect to its anchor URL (`yourpage.carrd.co/#thanks`). **Durable** — create a new page called Thanks, redirect to `/thanks`.
 4. Add a refund line in your page footer (not the Stripe checkout footer): "Full refund within 30 days if we don't ship." Legal, honest, lowers click friction.
 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the free waitlist instead."
 6. **✅ Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
