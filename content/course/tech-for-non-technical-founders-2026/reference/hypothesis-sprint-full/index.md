@@ -3,7 +3,6 @@ title: "Full Reference: The 6-Step Founding Hypothesis Sprint"
 description: "The complete Click/Jake Knapp Foundation Sprint methodology for writing a falsifiable one-sentence hypothesis. Includes the Mad Libs template, 4-lens scoring deep-dive, AI deep-research prompts, and a worked procurement-tool example."
 date: 2026-05-13
 draft: true
-type: reference
 slug: hypothesis-sprint-full
 ---
 

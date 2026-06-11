@@ -3,7 +3,6 @@ title: "Full Reference: Smoke Test Channel Guide"
 description: "Complete ad channel budgets, account setup timing, B2B budget alternatives, and conversion benchmark sources for running a cold-traffic smoke test."
 date: 2026-05-13
 draft: true
-type: reference
 slug: smoke-test-channel-guide
 ---
 
