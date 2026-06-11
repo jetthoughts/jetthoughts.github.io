@@ -1,5 +1,5 @@
 ---
-title: "Build Your Smoke-Test Page with an AI Page Builder (45 minutes)"
+title: "Build Your Smoke-Test Page with an AI Page Builder"
 description: "Turn your Founding Hypothesis into a live landing page URL in under an hour. Any AI page builder (Mixo, Manus AI, Durable) drafts the page; you tighten 4 copy blocks, swap one image, publish, test on one real stranger."
 date: 2026-06-08
 draft: true
@@ -50,7 +50,7 @@ The page has four copy blocks that decide whether it converts:
 
 ---
 
-> **Build (45 minutes):**
+> **Build:**
 >
 > 1. Sign up at [mixo.io](https://www.mixo.io/) (free, email only). Paste your hypothesis, click **Generate**. ~60 seconds.
 > 2. Tighten the 4 copy blocks above: headline names customer + outcome, value props rewrite as outcomes ("Stop calling 8 centers" not "Calendar integration"), CTA → "Get on the waitlist." Add "Coming soon. Email reserves your spot at launch." to the footer (AI builders don't add this). Strip the extras the builder added (Pricing, FAQ, Testimonials).

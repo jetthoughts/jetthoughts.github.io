@@ -1,6 +1,6 @@
 ---
 title: "Wire Tracking Before You Spend a Dollar"
-description: "Install tracking on your landing page before you run a cent of traffic. GA4 or ad-platform pixel (depends on channel), plus Clarity for session recordings  --  all free, 25-35 minutes."
+description: "Install tracking on your landing page before you run a cent of traffic. GA4 or ad-platform pixel (depends on channel), plus Clarity for session recordings  --  all free."
 date: 2026-06-08
 draft: true
 course_chapter: false
@@ -30,7 +30,7 @@ related_posts: false
 
 ---
 
-Without tracking, the typical smoke-test result is unreadable: hundreds of ad clicks, only a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A two-minute session replay would have caught the broken form on visitor one. The fix is 15 minutes of free tracking installed before you spend a cent on ads. Most of that time is creating accounts (Microsoft, Google, Meta)  --  the actual snippet install takes 2 minutes.
+Without tracking, the typical smoke-test result is unreadable: hundreds of ad clicks, only a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A session replay would have caught the broken form on visitor one. The fix is free tracking installed before you spend a cent on ads -- most of the work is creating accounts (Microsoft, Google, Meta).
 
 After this lesson you will be able to: **install tracking on your landing page so you can see who visits and what they click  --  before you spend a dollar on ads.**
 
@@ -66,7 +66,7 @@ Conversion rate = form submits ÷ page views. That is the number your Founding H
 
 ---
 
-> **Install (25-35 minutes):**
+> **Install:**
 >
 > **Not sure which channel?** Quick rule: B2C consumer → Meta Pixel. B2B with search intent → Google Ads. Developer tool → Reddit. Full channel guide in [Lesson 1.2c](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/).
 >
