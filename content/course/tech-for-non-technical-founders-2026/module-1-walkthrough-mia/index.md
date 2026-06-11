@@ -14,7 +14,7 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 ---
 
-## Lesson 1.1: Form Your Founding Hypothesis
+## [Lesson 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 
 **Input:** A rough idea and three years of watching parents struggle.
 
@@ -26,7 +26,7 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 ---
 
-## Lesson 1.2a: Build the Page
+## [Lesson 1.2a: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 
 **Input:** A one-sentence Founding Hypothesis with Growth as the weakest blank.
 
@@ -38,7 +38,7 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 ---
 
-## Lesson 1.2b: Wire Tracking
+## [Lesson 1.2b: Wire Tracking](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 
 **Input:** A live landing page at `tutormatch.mixo.io`.
 
@@ -50,7 +50,7 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 ---
 
-## Lesson 1.2c: Run the Smoke Test
+## [Lesson 1.2c: Run the Smoke Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 
 **Input:** A live page with Meta Pixel + GA4 + Clarity installed.
 
@@ -67,7 +67,7 @@ Her weakest Growth blank was partially answered: parents search by specialty, no
 
 ---
 
-## Lesson 1.3: Price Hypothesis
+## [Lesson 1.3: Price Hypothesis](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
 **Input:** A live page with 300 cold visits and a 4.8% combined conversion rate (6.5% on the winning variant).
 
