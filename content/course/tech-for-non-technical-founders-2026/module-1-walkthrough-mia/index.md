@@ -36,6 +36,8 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 **Result:** She sent the URL to her neighbor, who has a son with ADHD. "In three seconds, who is this for and what does it do?" The neighbor said: "Parents of dyslexic kids  --  you find them tutors fast." Three seconds. Clarity test passed.
 
+Now she needs to know who visits.
+
 ---
 
 ## [Lesson 1.2b: Wire Tracking](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
@@ -56,14 +58,14 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 **Challenge:** Her Growth lens scored 3/5. She doesn't know whether parents search by "dyslexia tutor" (specialty) or "tutor near me" (location). Her Meta ad creative would test both  --  but which to lead with? She also had $400 total to spend and was nervous about burning it with no signal.
 
-**Action:** She picked Meta Ads (B2C consumer, $0.90 CPC target). She ran two ad variants with the same budget split: one targeting "dyslexia tutor" search interest, one targeting "ADHD tutor + [city]" geography. She launched on a Monday and did not touch the page for seven days. No headline rewrites. No bid adjustments.
+**Action:** She picked Meta Ads (B2C consumer, $0.90 CPC target). She ran two ad variants, $200 each: one targeting "dyslexia tutor" search interest, one targeting "ADHD tutor + [city]" geography. She launched on a Monday and did not touch the page for seven days. No headline rewrites. No bid adjustments.
 
 **Result:**
 - Ad 1 (specialty search): 6.5% conversion. **Strong.**
 - Ad 2 (location search): 3.5% conversion. **Iterate band.**
 - Combined: 4.8% across all 300 visits. Specialty outperformed location by nearly 2x.
 
-Her weakest Growth blank was partially answered: parents search by specialty, not by location. She decided to advance  --  4.8% is below the 6% threshold but the specialty variant alone cleared it. Her decision: advance to Module 2 interviews, but keep the location variant as a test for later.
+Her weakest Growth blank was partially answered: parents search by specialty, not by location. The specialty variant alone cleared at 6.5%  --  even though combined was only 4.8%. Her decision: advance to the price test (Lesson 1.3), and keep the location variant as a test for later.
 
 ---
 
