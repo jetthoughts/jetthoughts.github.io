@@ -32,7 +32,7 @@ related_posts: false
 
 Without tracking, the typical smoke-test result is unreadable: hundreds of ad clicks, only a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A two-minute session replay would have caught the broken form on visitor one. The fix is 15 minutes of free tracking installed before you spend a cent on ads.
 
-After this lesson you will be able to: **install tracking on your landing page so you can see who visits and what they click — before you spend a dollar on ads.**
+After this lesson you will be able to: **install tracking on your landing page so you can see who visits and what they click  --  before you spend a dollar on ads.**
 
 ---
 
