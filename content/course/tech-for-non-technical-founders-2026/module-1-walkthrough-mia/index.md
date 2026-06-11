@@ -50,7 +50,7 @@ Now she needs to know who visits.
 
 When she checked Clarity five minutes later, it still showed "No data yet." She had pasted the Clarity snippet in the body field instead of the head-tag field. One field higher in Mixo's settings, refresh, and the recording appeared. Twenty-five minutes total, including the fix.
 
-**Result:** She opened her page in an incognito window. Within 60 seconds, Clarity showed her own session recording. GA4's Realtime report showed one active user. Both verified. Pixel deferred to 1.2c. Done.
+**Result:** She opened her page in an incognito window. Within 60 seconds, Clarity showed her own session recording. GA4's Realtime report showed one active user. Both verified. She made a note: install Meta Pixel in 1.2c. Done.
 
 ---
 
@@ -87,7 +87,7 @@ Her weakest Growth blank was partially answered: parents search by specialty, no
 
 - **Founding Hypothesis:** One sentence, five specific blanks, scored 15/20. Weakest blank: Growth (specialty vs. location).
 - **Live landing page:** `tutormatch.mixo.io` with a headline that passed the 3-second clarity test.
-- **Tracking:** Meta Pixel + GA4 + Clarity installed, all verified.
+- **Tracking:** Clarity + GA4 installed (1.2b), Meta Pixel installed (1.2c), all verified.
 - **Conversion data:** 4.8% combined (6.5% on specialty variant). Growth blank partially answered: parents search by specialty.
 - **Price signal:** 6 completed Stripe payments at $99. Parents will pay more than $25.
 - **Founder OS folder:** All five lesson outputs saved in one Google Drive folder.
