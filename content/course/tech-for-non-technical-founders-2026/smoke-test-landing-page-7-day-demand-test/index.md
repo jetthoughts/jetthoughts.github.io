@@ -31,7 +31,7 @@ related_posts: false
 
 ---
 
-You have a live page and tracking installed. Now you need strangers to see it  --  not friends, not your LinkedIn network, not people who want to be polite to you. Three hundred cold visitors with a tracked CTA (call-to-action  --  the button you want visitors to click) tells you more about your hypothesis than 14 interviews with people who want to be nice.
+You have a live page and tracking installed. Now you need strangers to see it  --  not friends, not your LinkedIn network, not people who want to be polite to you. Three hundred cold visitors tell you more about your hypothesis than 14 polite interviews. Cold strangers don't lie to spare your feelings.
 
 After this lesson you will be able to: **run a cold-traffic smoke test on your landing page, read the conversion rate against the go/iterate/kill threshold, and decide whether to advance, rewrite, or kill your hypothesis.**
 
@@ -44,7 +44,7 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 - **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1-$3 CPC) in r/programming, r/webdev, r/SaaS.
 - **Niche vertical** → Google Search long-tail ($1-$5 CPC)  --  real estate, dentists, contractors Googling pain.
 
-**Budget:** depends on your channel's CPC (cost-per-click  --  what one ad click costs). 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600. If budget is tight, see the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/).
+**Budget:** depends on your channel's CPC (cost-per-click  --  what one ad click costs). Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)  --  slower but real. If you have budget: 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600.
 
 **Start ad-account setup the weekend BEFORE launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 

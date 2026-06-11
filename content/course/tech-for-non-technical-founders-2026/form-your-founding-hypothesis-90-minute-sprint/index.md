@@ -60,7 +60,7 @@ Five blanks. One sentence. The discipline is filling all five with specifics, no
 
 ---
 
-### How to Score Your Hypothesis
+## How to Score Your Hypothesis
 
 Score each lens 1-5. Be honest -- this is for you, not an investor deck.
 
@@ -69,9 +69,7 @@ Score each lens 1-5. Be honest -- this is for you, not an investor deck.
 | **Customer** | Would they pick this on a Friday afternoon between meetings? |
 | **Pragmatic** | Can you ship something with what you have today? |
 | **Growth** | How does the customer hear about you, and how many are there? |
-| **Money** | Do the unit economics work? (Leave blank if pre-revenue.) |
-
-**PASS bar:** ≥14/20 total (or ≥11/15 if Money is blank). No single lens below 2.
+| **Money** | Do the unit economics work? (Would one customer bring in more than they cost to serve? Leave blank if pre-revenue.) |
 
 ---
 

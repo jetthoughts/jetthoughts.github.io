@@ -1,6 +1,6 @@
 ---
 title: "Build Your Smoke-Test Page with an AI Page Builder"
-description: "Turn your Founding Hypothesis into a live landing page URL in under an hour. Any AI page builder (Mixo, Manus AI, Durable) drafts the page; you tighten 4 copy blocks, swap one image, publish, test on one real stranger."
+description: "Turn your Founding Hypothesis into a live landing page URL. AI page builder drafts the page; tighten 4 copy blocks, swap one image, publish, test on one stranger."
 date: 2026-06-08
 draft: true
 course_chapter: false
@@ -54,8 +54,8 @@ The page has four copy blocks that decide whether it converts:
 >
 > 1. Sign up at [mixo.io](https://www.mixo.io/) (free, email only). Paste your hypothesis, click **Generate**. ~60 seconds.
 > 2. Tighten the 4 copy blocks above: headline names customer + outcome, value props rewrite as outcomes ("Stop calling 8 centers" not "Calendar integration"), CTA → "Get on the waitlist." Add "Coming soon. Email reserves your spot at launch." to the footer (AI builders don't add this). Strip the extras the builder added (Pricing, FAQ, Testimonials).
-> 3. If the draft reads generic, prompt [ChatGPT](https://chatgpt.com/) or [Claude](https://claude.ai/): *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output.
-> 4. Swap the hero image. Prompt [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/), or [Gemini](https://gemini.google.com/): *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* Save and upload. Or delete it  --  the headline carries the page. **Never** use a product mockup of something you have not built.
+> 3. Tighten generic drafts. Prompt [ChatGPT](https://chatgpt.com/) or [Claude](https://claude.ai/): *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output into your page builder's value-props section.
+> 4. Swap the hero image (the main image at the top of your page). Prompt [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/), or [Gemini](https://gemini.google.com/): *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* Save and upload. If the image doesn't help, delete it  --  the headline carries the page. **Never** use a product mockup of something you have not built.
 > 5. Click **Publish**. Mixo gives a free URL like `yourname.mixo.io`. Open it in an incognito window (`Cmd/Ctrl+Shift+N` in Chrome/Safari/Edge, `Cmd/Ctrl+Shift+P` in Firefox). Confirm the page loads.
 
 Send the URL to **ONE real person** who has not seen your work. Any stranger works (they don't need to be your target customer  --  this tests headline clarity, not buying interest). Ask: "In 3 seconds, who is this page for and what does it do?"

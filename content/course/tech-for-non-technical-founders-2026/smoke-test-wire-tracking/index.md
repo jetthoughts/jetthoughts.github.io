@@ -30,7 +30,7 @@ related_posts: false
 
 ---
 
-Without tracking, the typical smoke-test result is unreadable: hundreds of ad clicks, only a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A session replay would have caught the broken form on visitor one. The fix is free tracking installed before you spend a cent on ads -- most of the work is creating accounts (Microsoft, Google, Meta).
+Without tracking, the typical smoke-test result is unreadable. Hundreds of ad clicks, a handful of signups  --  and no way to tell whether the offer is wrong or the form is broken. A session replay would have caught the broken form on visitor one. The fix is free tracking installed before you spend a cent on ads -- most of the work is creating accounts (Microsoft, Google, Meta).
 
 After this lesson you will be able to: **install tracking on your landing page so you can see who visits and what they click  --  before you spend a dollar on ads.**
 
@@ -68,11 +68,14 @@ Conversion rate = form submits ÷ page views. That is the number your Founding H
 
 > **Install:**
 >
+> **Before you start:** you'll need a Microsoft account (Clarity), a Google account (GA4), and if using Meta/LinkedIn/Reddit, that platform's business account. Create the first two now; create the ad-platform account when you pick your channel in [Lesson 1.2c](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/).
+>
 > **Not sure which channel?** Quick rule: B2C consumer → Meta Pixel. B2B with search intent → Google Ads. Developer tool → Reddit. Full channel guide in [Lesson 1.2c](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/).
 >
-> 1. **Pick your path:** Google Ads → install [GA4](https://analytics.google.com/) (free, Measurement ID in head-tag) → link GA4 in Google Ads Settings → Linked accounts. Meta/LinkedIn/Reddit → install that platform's pixel snippet in head-tag.
-> 2. Install [Microsoft Clarity](https://clarity.microsoft.com/) (free, 60 seconds  --  copy snippet, paste in head-tag). Both paths.
-> 3. Open your page in an incognito window. Wait 60s. **✅ GA4/pixel:** test visit registers in your dashboard. **✅ Clarity:** your visit appears as a session recording.
+> 1. **Start with Clarity (fastest).** Install [Microsoft Clarity](https://clarity.microsoft.com/) (free, 60 seconds  --  copy snippet, paste in head-tag). Both paths.
+> 2. Install [GA4](https://analytics.google.com/) next (free, Measurement ID in head-tag). If Google Ads: link GA4 in Google Ads Settings → Linked accounts.
+> 3. If Meta/LinkedIn/Reddit: install that platform's pixel snippet in head-tag last. You'll verify it in Lesson 1.2c.
+> 4. Open your page in an incognito window. Wait 60s. **✅ Clarity:** your visit appears as a session recording. **✅ GA4/pixel:** test visit registers in your dashboard.
 >
 > (One "custom code" field? That field IS the head-tag  --  paste all snippets there.)
 
