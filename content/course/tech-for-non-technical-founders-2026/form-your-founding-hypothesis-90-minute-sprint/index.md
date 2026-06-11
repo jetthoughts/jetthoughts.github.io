@@ -33,7 +33,7 @@ related_posts: false
 
 You have an idea. You've told five people about it. They all said "that sounds great"  --  which told you nothing. This lesson replaces polite nods with a single sentence you can actually test.
 
-After this lesson you will be able to: **write a one-sentence Founding Hypothesis with five specific blanks filled in, scored ≥14/20 across four lenses, with no blank scoring below 2.**
+After this lesson you will be able to: **write a single sentence about your idea that a stranger reads and either says "that's my problem" or "not me" — instead of "sounds great."**
 
 ---
 
