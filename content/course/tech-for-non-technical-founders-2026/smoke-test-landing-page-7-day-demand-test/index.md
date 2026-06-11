@@ -53,7 +53,7 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 ---
 
 1. Verify your ad account is approved and payment method attached. If not, set it up tonight.
-2. Launch the campaign on your chosen channel. Set a daily budget that gets you to 300 visits within 5-7 days.
+2. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
 3. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
 4. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
 
@@ -85,7 +85,7 @@ Open your tracking dashboard. Write down the number that surprised you most  -- 
 >
 > **If blocked:** see "If this fails" above. If the ad budget is out of reach, use the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)  --  slower but real.
 >
-> **Deeper reference:** [Full channel budgets + ad account setup timing + B2B budget alternatives](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)
+> **Deeper reference:** [Full channel budgets + campaign creation recipes + ad account setup timing + B2B budget alternatives](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)
 
 ---
 
