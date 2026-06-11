@@ -19,26 +19,28 @@ Workflow references:
 - `docs/workflows/commands.md`
 - `docs/workflows/agents.md`
 
-Course skills (loaded automatically):
-- `.skills/course-lesson-write/` — `/course-lesson-write` — draft 8-part micro-lesson
-- `.skills/course-lesson-review-sam/` — `/course-lesson-review-sam` — Sam-perspective review
-- `.skills/course-lesson-validate/` — `/course-lesson-validate` — mechanical pre-commit QA
-- `.skills/course-svg-draft/` — `/course-svg-draft` — JT-brand hand-drawn SVG
-- `.skills/course-skills-map.md` — full phase-by-phase skills map (7 phases, 30+ global skills)
+## Projects
 
-Critical global skills for this course (Phase 1-2, invoke now):
-- `course-designer` — learning objectives, Bloom's taxonomy, module-level outcomes
-- `customer-research` — mine Reddit/G2 for Sam's pain language
-- `customer-journey-map` — map Sam's emotional arc through all 5 modules
-- `problem-statement` — sharpen course promise, Quickstart framing
-- `copy-editing` — voice consistency across migrated v1 chapters
-- `humanizer` + `slop-detector` — final AI-tell polish pass
+Projects live in `docs/projects/<project-id>/`. Each project follows a standard
+onboarding path:
 
-Phase 3+ skills (SEO, landing page, distribution, growth): see `.skills/course-skills-map.md`.
+**First visit — read in this order:**
+1. `PROJECT-INDEX.md` — navigation hub, agent routes, integration rules
+2. `GOAL-AT-A-GLANCE.md` — one-page exec summary, strategy, metrics
+3. `.agent/prd/PRD.md` — formal spec (if PRD-driven project)
+4. `.agent/tasks.json` — machine-readable task graph (if PRD-driven)
+5. `TASK-TRACKER.md` — live task queue, migration schedule, active phase
 
-Key commands:
+**Project health:** `.agent/STATUS.md` — cross-project RAG dashboard.
+Per-project PM health reports in `40-49-review/40.10-*.md`.
+
+**Skills:** Project-specific skills in `.skills/`. Global skills loaded via
+`skill` tool.
+
+**Key commands:**
 - `bin/hugo-build`
 - `bin/rake test:critical`
+- `bin/validate-course` (course projects only)
 
 <!-- lean-ctx-compression -->
 OUTPUT STYLE: concise-default
