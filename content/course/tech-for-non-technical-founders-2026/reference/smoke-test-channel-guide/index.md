@@ -6,7 +6,7 @@ draft: true
 slug: smoke-test-channel-guide
 ---
 
-> **Reference companion to [Lesson 1.2c · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)** — this page contains the full channel budget table, ad-account setup timing, B2B budget alternatives, and conversion benchmark sources. Read the micro-lesson first; return here for detailed channel planning.
+> **Reference companion to [Lesson 1.2c · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)**  --  this page contains the full channel budget table, ad-account setup timing, B2B budget alternatives, and conversion benchmark sources. Read the micro-lesson first; return here for detailed channel planning.
 
 ---
 
@@ -50,7 +50,7 @@ If your ICP says LinkedIn but $1,800+ is out of reach, three viable substitutes 
 | Reddit Ads in a B2B subreddit | r/SaaS, r/startups, r/Entrepreneur, r/Sysadmin, or your vertical's sub | $400-$900 for 300 visits |
 | Cold email to 50 hand-built leads | Apollo free tier + Gmail | Free (reply rate replaces click rate) |
 
-Use one of these, run it the same way until the numbers stabilize, read the result against the same go/iterate/kill table. The smoke test is the test — the channel is the delivery vehicle.
+Use one of these, run it the same way until the numbers stabilize, read the result against the same go/iterate/kill table. The smoke test is the test  --  the channel is the delivery vehicle.
 
 ---
 
@@ -74,17 +74,17 @@ Use one of these, run it the same way until the numbers stabilize, read the resu
 ### Niche Vertical
 **Channel:** Google Search ($1-$5 long-tail intent).
 **When to pick:** Real estate, dentists, contractors Googling pain.
-**Skip when:** N/A — Google Search works for most verticals.
+**Skip when:** N/A  --  Google Search works for most verticals.
 
-**Twitter / X:** Skip for first-time validation in 2026 — targeting signal too noisy after 2024-2025 platform changes.
+**Twitter / X:** Skip for first-time validation in 2026  --  targeting signal too noisy after 2024-2025 platform changes.
 
 ---
 
 ## Run Length and Volume
 
-**Run length:** Do not judge a campaign on its first few hours. The opening burst of any paid run attracts the platform's most reactive clickers — the people who click everything — so early conversion almost always over- or under-shoots the steady-state number. Let daily numbers normalize and stabilize before reading the rate.
+**Run length:** Do not judge a campaign on its first few hours. The opening burst of any paid run attracts the platform's most reactive clickers  --  the people who click everything  --  so early conversion almost always over- or under-shoots the steady-state number. Let daily numbers normalize and stabilize before reading the rate.
 
-**Volume:** ≥300 paid visits. Below 300 the sample is too small to distinguish 2% from 5%. With 300 visits a 5% conversion is 15 signups, a 2% is 6 signups — the difference between 15 and 6 is meaningful. With 100 visits a 5% is 5 signups, a 2% is 2 — you cannot tell whether you have a hot audience or a noisy one.
+**Volume:** ≥300 paid visits. Below 300 the sample is too small to distinguish 2% from 5%. With 300 visits a 5% conversion is 15 signups, a 2% is 6 signups  --  the difference between 15 and 6 is meaningful. With 100 visits a 5% is 5 signups, a 2% is 2  --  you cannot tell whether you have a hot audience or a noisy one.
 
 ---
 
@@ -100,7 +100,7 @@ The Foundry CRO 2026 industry benchmark report (citing Unbounce Q4 2024 data):
 | Paid search traffic | 3.2% |
 | Paid social traffic | 1.5% |
 
-These are aggregate medians across mature products with optimized funnels. Your unoptimized smoke test against cold traffic at week one is comparing against a different baseline. Use the go/iterate/kill table from the micro-lesson — not the industry medians — as your decision threshold.
+These are aggregate medians across mature products with optimized funnels. Your unoptimized smoke test against cold traffic at week one is comparing against a different baseline. Use the go/iterate/kill table from the micro-lesson  --  not the industry medians  --  as your decision threshold.
 
 ---
 
@@ -108,7 +108,7 @@ These are aggregate medians across mature products with optimized funnels. Your 
 
 The smoke test misses founders whose product genuinely needs a longer education arc to make sense (a category-creation product, a complex B2B integration, a regulated-industry tool). What this looks like in the numbers: a 2-3% conversion rate that the founder reads as "kill the hypothesis" when the real signal is "this product needs a sales motion, not a Meta ad."
 
-If your hypothesis sentence is hard to fit in a headline, the smoke test is not the right filter — run a paid-pilot conversation instead. See [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
+If your hypothesis sentence is hard to fit in a headline, the smoke test is not the right filter  --  run a paid-pilot conversation instead. See [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
 
 ---
 

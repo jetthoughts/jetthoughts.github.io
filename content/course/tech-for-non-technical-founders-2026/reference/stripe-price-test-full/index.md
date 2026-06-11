@@ -6,15 +6,15 @@ draft: true
 slug: stripe-price-test-full
 ---
 
-> **Reference companion to [Lesson 1.3 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)** — this page contains the full Stripe setup walkthrough with gotchas, click-vs-completion tracking table, detailed threshold bands, button copy patterns, and the Claude copy-generation prompt. Read the micro-lesson first; return here for deep pricing methodology.
+> **Reference companion to [Lesson 1.3 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)**  --  this page contains the full Stripe setup walkthrough with gotchas, click-vs-completion tracking table, detailed threshold bands, button copy patterns, and the Claude copy-generation prompt. Read the micro-lesson first; return here for deep pricing methodology.
 
 ---
 
 ## The Maya Story (Full Version)
 
-A founder came to us after nine months of building. She'd run her smoke-test page with a waitlist CTA, spent $380 on Meta ads, drove 490 visits, and collected 48 emails — a 9.8% conversion rate that looked respectable by every benchmark she'd found.
+A founder came to us after nine months of building. She'd run her smoke-test page with a waitlist CTA, spent $380 on Meta ads, drove 490 visits, and collected 48 emails  --  a 9.8% conversion rate that looked respectable by every benchmark she'd found.
 
-She moved into building. By month nine she had shipped a working product and spent $62K on developer time — and had zero paying customers. On her first sales call the prospect asked whether the tool was really $49/month: she had assumed her landing page price was obvious, but most of the people who had given her an email had read the page as a free signup. The 48 emails proved curiosity, not commitment.
+She moved into building. By month nine she had shipped a working product and spent $62K on developer time  --  and had zero paying customers. On her first sales call the prospect asked whether the tool was really $49/month: she had assumed her landing page price was obvious, but most of the people who had given her an email had read the page as a free signup. The 48 emails proved curiosity, not commitment.
 
 You don't need a $62K invoice to learn this. An email signup costs the visitor nothing; a Stripe click costs them the moment of entering a card number. Those two signals are not measuring the same thing.
 
@@ -22,7 +22,7 @@ You don't need a $62K invoice to learn this. An email signup costs the visitor n
 
 ## Full Stripe Payment Link Setup
 
-A Stripe Payment Link is a hosted checkout URL generated from your Stripe dashboard — no code, no integration, no webhooks. Stripe takes ~2.9% + $0.30 per transaction.
+A Stripe Payment Link is a hosted checkout URL generated from your Stripe dashboard  --  no code, no integration, no webhooks. Stripe takes ~2.9% + $0.30 per transaction.
 
 | Step | Action | Where in Stripe |
 |---|---|---|
@@ -34,11 +34,11 @@ A Stripe Payment Link is a hosted checkout URL generated from your Stripe dashbo
 
 **Gotchas the table doesn't say:**
 
-- **Stripe signup.** You need an email and a business name; the business name can be your own name or a project name (Stripe doesn't verify incorporation at signup). Pick "I'm building a SaaS or software product" when it asks. Stripe will ask for your bank account + tax ID (SSN for US sole proprietors) before you can accept *live* payments — usually approved within a day, sometimes 24-72 hours if Stripe requests an ID upload. **Sign up at least 3 days before launch.**
+- **Stripe signup.** You need an email and a business name; the business name can be your own name or a project name (Stripe doesn't verify incorporation at signup). Pick "I'm building a SaaS or software product" when it asks. Stripe will ask for your bank account + tax ID (SSN for US sole proprietors) before you can accept *live* payments  --  usually approved within a day, sometimes 24-72 hours if Stripe requests an ID upload. **Sign up at least 3 days before launch.**
 
 - **Can't find Payment Links?** Dashboard sidebar → Payments → Payment Links. If hidden, search "Payment Links" in the Stripe search bar (it sometimes tucks under "More").
 
-- **One-time vs subscription.** Use one-time for the smoke test — a "founding member" lifetime or 12-month block. It converts better than a recurring sub on a pre-product page because the commitment is bounded.
+- **One-time vs subscription.** Use one-time for the smoke test  --  a "founding member" lifetime or 12-month block. It converts better than a recurring sub on a pre-product page because the commitment is bounded.
 
 - **Thank-you URL on Carrd.** Carrd has no separate "thank-you page" route. Make a hidden second section on the same Carrd page (Settings → Sections → add → set as Hidden) and use its anchor URL (e.g. `yourpage.carrd.co/#thanks`) as the Stripe redirect. Framer and Webflow have real second pages; Carrd cheats with anchors.
 
@@ -53,7 +53,7 @@ A Stripe Payment Link is a hosted checkout URL generated from your Stripe dashbo
 | Band | Visit-to-Stripe-click | What to do |
 |---|---|---|
 | Iterate before you kill | Below 4% | Lower price by 50%, add "founding member" framing, change button copy. Below 2% after that = audience or hypothesis is wrong, not the price. In the 2-4% band, also try shortening the Stripe product description. |
-| Advance | 5-9% | Price-validated hypothesis. Move to Module 2 customer interviews. Email everyone who clicked but didn't complete — the most valuable interview group. |
+| Advance | 5-9% | Price-validated hypothesis. Move to Module 2 customer interviews. Email everyone who clicked but didn't complete  --  the most valuable interview group. |
 | Verify before celebrating | 10%+ | Either exceptional fit or ad targeting hit a hot audience. Run a second cold channel briefly to verify. If both channels stay near the rate, the signal is real. If one is 12% and the other 2%, your targeting is unusually good, not your pricing. |
 
 Thresholds assume a $49-$299 price band. Below $49, you need more than 5% to cover acquisition cost; above $299 (or any $500+ one-time), 2-3% can be enough if the completion rate is high.
@@ -66,8 +66,8 @@ Both signals matter. Track click (page → Stripe) AND completion (Stripe → th
 
 | Scenario | Diagnosis |
 |---|---|
-| 60 clicks, 3 completions | Checkout page is killing intent — price felt different in context, or card-entry surfaced second thoughts |
-| 6 clicks, 3 completions | 50% of clickers bought — strong price signal, even if the base click rate was low |
+| 60 clicks, 3 completions | Checkout page is killing intent  --  price felt different in context, or card-entry surfaced second thoughts |
+| 6 clicks, 3 completions | 50% of clickers bought  --  strong price signal, even if the base click rate was low |
 | 8% email signups, 6% Stripe clicks | What price-hypothesis validation looks like in the clear |
 
 Same page, both CTAs: primary CTA is the Stripe button with price visible. Below it, smaller text: "Not ready? Join the free waitlist instead." This weights the Stripe signal as primary without eliminating the email signal.
@@ -82,8 +82,8 @@ Two patterns consistently beat plain "Get access - $97" on pre-product pages:
 
 | Pattern | Example | When it wins |
 |---|---|---|
-| Outcome framing (anchor price to the problem it replaces) | "Stop spending 4 hours on reconciliation — $97" | Buyer can name what the alternative costs them |
-| Risk-reduction framing (lead with refundable/refund window) | "Reserve your spot — $97 refundable for 30 days" | First-touch audience, no brand trust yet |
+| Outcome framing (anchor price to the problem it replaces) | "Stop spending 4 hours on reconciliation  --  $97" | Buyer can name what the alternative costs them |
+| Risk-reduction framing (lead with refundable/refund window) | "Reserve your spot  --  $97 refundable for 30 days" | First-touch audience, no brand trust yet |
 
 **Do not A/B test on the smoke test.** Two-variant testing on a $300 ad budget produces 150 visits each, not enough to distinguish 4% from 5%. Pick the pattern that fits your audience best, ship one button copy, read the single result. A/B testing is a post-launch tool.
 
@@ -137,9 +137,9 @@ The smoke-test price is a hypothesis price, not your launch price. Revisit prici
 
 ## Case Study: Tomas & Mia
 
-**Tomas:** Adds a Stripe price button at "$1,200 founding member — 6 months access at $200/mo equivalent" (one-time). 5% of visitors click (15 of 300). Of those, 3 complete the payment. Weak price signal — won't sustain $200/mo equivalent without the product in hand.
+**Tomas:** Adds a Stripe price button at "$1,200 founding member  --  6 months access at $200/mo equivalent" (one-time). 5% of visitors click (15 of 300). Of those, 3 complete the payment. Weak price signal  --  won't sustain $200/mo equivalent without the product in hand.
 
-**Mia:** Adds a Stripe price button at "$99 founding member — 4 months access at $25/mo equivalent" (one-time). 6% of visitors click (18 of 300). Of those, 6 complete. Stronger signal than Tomas — parents are used to paying for tutoring.
+**Mia:** Adds a Stripe price button at "$99 founding member  --  4 months access at $25/mo equivalent" (one-time). 6% of visitors click (18 of 300). Of those, 6 complete. Stronger signal than Tomas  --  parents are used to paying for tutoring.
 
 ---
 

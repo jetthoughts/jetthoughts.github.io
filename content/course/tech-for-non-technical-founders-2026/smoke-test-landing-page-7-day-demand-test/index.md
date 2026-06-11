@@ -31,7 +31,7 @@ related_posts: false
 
 ---
 
-You have a live page and tracking installed. Now you need strangers to see it — not friends, not your LinkedIn network, not people who want to be polite to you. Three hundred cold visitors with a tracked CTA (call-to-action — the button you want visitors to click) tells you more about your hypothesis than 14 interviews with people who want to be nice.
+You have a live page and tracking installed. Now you need strangers to see it  --  not friends, not your LinkedIn network, not people who want to be polite to you. Three hundred cold visitors with a tracked CTA (call-to-action  --  the button you want visitors to click) tells you more about your hypothesis than 14 interviews with people who want to be nice.
 
 After this lesson you will be able to: **run a cold-traffic smoke test on your landing page, read the conversion rate against the go/iterate/kill threshold, and decide whether to advance, rewrite, or kill your hypothesis.**
 
@@ -42,9 +42,9 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 - **B2C consumer** → [Meta Ads](https://business.facebook.com/) ($0.50-$2 CPC). Best when the product is visual and the audience is broad.
 - **B2B / job-title-sold** → [Google Search](https://ads.google.com/) ($3-$8 CPC) if your customer Googles the problem; [LinkedIn](https://www.linkedin.com/campaignmanager/) ($5.50-$22 CPC) if they don't.
 - **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1-$3 CPC) in r/programming, r/webdev, r/SaaS.
-- **Niche vertical** → Google Search long-tail ($1-$5 CPC) — real estate, dentists, contractors Googling pain.
+- **Niche vertical** → Google Search long-tail ($1-$5 CPC)  --  real estate, dentists, contractors Googling pain.
 
-**Budget:** depends on your channel's CPC (cost-per-click — what one ad click costs). 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600. If budget is tight, see the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/).
+**Budget:** depends on your channel's CPC (cost-per-click  --  what one ad click costs). 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600. If budget is tight, see the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/).
 
 **Start ad-account setup the weekend BEFORE launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 
@@ -54,7 +54,7 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 
 1. Verify your ad account is approved and payment method attached. If not, set it up tonight.
 2. Launch the campaign on your chosen channel. Set a daily budget that gets you to 300 visits within 5-7 days.
-3. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis — not an optimized funnel.
+3. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
 4. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
 
 | Conversion rate from cold traffic | Decision | What to do |
@@ -69,13 +69,13 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 
 ---
 
-**If conversion is below 3%.** **Why:** your [customer] or [differentiation] blank is too vague — strangers don't recognize themselves in the headline. **Fix:** go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the blank that scored lowest on your 4-lens test.
+**If conversion is below 3%.** **Why:** your [customer] or [differentiation] blank is too vague  --  strangers don't recognize themselves in the headline. **Fix:** go back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and tighten the blank that scored lowest on your 4-lens test.
 
 **If conversion is above 20%.** **Why:** either you have a hot market (rare) or your ad targeting is too narrow (common). **Fix:** run a second channel briefly. LinkedIn 22% + Reddit 3% = your LinkedIn targeting is the variable, not the hypothesis. Both channels near the rate = the signal is real.
 
 ---
 
-Open your tracking dashboard. Write down the number that surprised you most — the gap between what you expected and what the data says. That gap is the hypothesis blank worth testing first in Module 2.
+Open your tracking dashboard. Write down the number that surprised you most  --  the gap between what you expected and what the data says. That gap is the hypothesis blank worth testing first in Module 2.
 
 ---
 
@@ -83,7 +83,7 @@ Open your tracking dashboard. Write down the number that surprised you most — 
 >
 > **Next click:** [1.3 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 >
-> **If blocked:** see "If this fails" above. If the ad budget is out of reach, use the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) — slower but real.
+> **If blocked:** see "If this fails" above. If the ad budget is out of reach, use the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)  --  slower but real.
 >
 > **Deeper reference:** [Full channel budgets + ad account setup timing + B2B budget alternatives](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)
 

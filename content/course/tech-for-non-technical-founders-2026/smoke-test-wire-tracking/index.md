@@ -1,6 +1,6 @@
 ---
 title: "Wire Tracking Before You Spend a Dollar"
-description: "Install tracking on your landing page before you run a cent of traffic. GA4 or ad-platform pixel (depends on channel), plus Clarity for session recordings — all free, 10 minutes."
+description: "Install tracking on your landing page before you run a cent of traffic. GA4 or ad-platform pixel (depends on channel), plus Clarity for session recordings  --  all free, 10 minutes."
 date: 2026-06-08
 draft: true
 course_chapter: false
@@ -24,7 +24,7 @@ related_posts: false
 >
 > **Input:** the live landing page URL you published in [Lesson 1.2a](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 >
-> **Output:** tracking installed for your ad channel — ready for cold traffic in Lesson 1.2c
+> **Output:** tracking installed for your ad channel  --  ready for cold traffic in Lesson 1.2c
 >
 > **Progress:** M1 · 3 of 5 · Results so far: hypothesis sentence + live landing page
 
@@ -32,7 +32,7 @@ related_posts: false
 
 Without tracking, the typical smoke-test result is unreadable: hundreds of ad clicks, only a handful of signups, and no way to tell whether the offer is wrong or the form is broken. A two-minute session replay would have caught the broken form on visitor one. The fix is 15 minutes of free tracking installed before you spend a cent on ads.
 
-After this lesson you will be able to: **install the right tracking for your ad channel — GA4 + Google Ads tag, or your platform's pixel, plus Clarity — and name the 3 conversion numbers you will read in Lesson 1.2c.**
+After this lesson you will be able to: **install the right tracking for your ad channel  --  GA4 + Google Ads tag, or your platform's pixel, plus Clarity  --  and name the 3 conversion numbers you will read in Lesson 1.2c.**
 
 ---
 
@@ -41,16 +41,16 @@ A **tracking snippet** is a small block of code (HTML or JavaScript) that you co
 What you install depends on where you will run ads:
 
 **If you are running Google Search Ads:**
-- **[Google Analytics 4](https://analytics.google.com/)** (free) — your analytics foundation. Tracks page views, clicks, and form submits. Already integrated with [Google Ads](https://ads.google.com/) — no separate pixel needed. Create a GA4 property, copy the Measurement ID, paste it into your builder's head-tag field.
+- **[Google Analytics 4](https://analytics.google.com/)** (free)  --  your analytics foundation. Tracks page views, clicks, and form submits. Already integrated with [Google Ads](https://ads.google.com/)  --  no separate pixel needed. Create a GA4 property, copy the Measurement ID, paste it into your builder's head-tag field.
 
 **If you are running Meta, LinkedIn, or Reddit Ads:**
-- Your **ad-platform pixel** — **[Meta Pixel](https://business.facebook.com/)** for B2C, **[LinkedIn Insight Tag](https://www.linkedin.com/campaignmanager/)** for B2B, **[Reddit Pixel](https://ads.reddit.com/)** for developer tools (see Lesson 1.2c for channel selection). Without it, the platform optimizes for cheap clicks instead of signups — you get traffic that converts nothing.
-- **[GA4](https://analytics.google.com/)** (free) — your analytics dashboard. Tracks the same 3 numbers regardless of which ad platform you pick.
+- Your **ad-platform pixel**  --  **[Meta Pixel](https://business.facebook.com/)** for B2C, **[LinkedIn Insight Tag](https://www.linkedin.com/campaignmanager/)** for B2B, **[Reddit Pixel](https://ads.reddit.com/)** for developer tools (see Lesson 1.2c for channel selection). Without it, the platform optimizes for cheap clicks instead of signups  --  you get traffic that converts nothing.
+- **[GA4](https://analytics.google.com/)** (free)  --  your analytics dashboard. Tracks the same 3 numbers regardless of which ad platform you pick.
 
 **Always install (both paths, free):**
-- **[Microsoft Clarity](https://clarity.microsoft.com/)** — session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
+- **[Microsoft Clarity](https://clarity.microsoft.com/)**  --  session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
 
-All snippets paste into the **head-tag field** — the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
+All snippets paste into the **head-tag field**  --  the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
 
 The 3 numbers you will read in Lesson 1.2c:
 
@@ -69,16 +69,16 @@ Conversion rate = form submits ÷ page views. That is the number your Founding H
 > **Install (10 minutes):**
 >
 > 1. **Pick your path:** Google Ads → install [GA4](https://analytics.google.com/) (free, Measurement ID in head-tag) → link GA4 in Google Ads Settings → Linked accounts. Meta/LinkedIn/Reddit → install that platform's pixel snippet in head-tag.
-> 2. Install [Microsoft Clarity](https://clarity.microsoft.com/) (free, 60 seconds — copy snippet, paste in head-tag). Both paths.
+> 2. Install [Microsoft Clarity](https://clarity.microsoft.com/) (free, 60 seconds  --  copy snippet, paste in head-tag). Both paths.
 > 3. Open your page in an incognito window. Wait 60s. **✅ GA4/pixel:** test visit registers in your dashboard. **✅ Clarity:** your visit appears as a session recording.
 >
-> (One "custom code" field? That field IS the head-tag — paste all snippets there.)
+> (One "custom code" field? That field IS the head-tag  --  paste all snippets there.)
 
 ---
 
 **If Clarity shows "No data yet" after 5 minutes.** **Why:** the snippet is in the wrong field - usually pasted in the page body instead of the head tag, or your builder's preview mode is blocking scripts. **Fix:** double-check the field name; most builders separate "head code" from "body code," and the snippet must go in head. If your builder only has one "custom code" field, that field is usually the right one. Still nothing after the fix? Wait one hour and re-check. Clarity sometimes lags on the first install.
 
-**If your pixel shows "Unverified" or "No activity" after install.** **Why:** same cause as Clarity — pasted in the body field, or the builder's preview mode is blocking it. **Fix:** move the snippet to the head-tag field, publish the page, then refresh the pixel dashboard. Most platforms need a real page load (not preview) to fire the pixel once.
+**If your pixel shows "Unverified" or "No activity" after install.** **Why:** same cause as Clarity  --  pasted in the body field, or the builder's preview mode is blocking it. **Fix:** move the snippet to the head-tag field, publish the page, then refresh the pixel dashboard. Most platforms need a real page load (not preview) to fire the pixel once.
 
 ---
 
@@ -86,7 +86,7 @@ Open Clarity, find your own session recording, and watch it. Then open your ad p
 
 ---
 
-> **Done when:** tracking shows your test visit — GA4 Real-Time report OR pixel status "Active" OR Clarity recording (any one confirms the snippet landed).
+> **Done when:** tracking shows your test visit  --  GA4 Real-Time report OR pixel status "Active" OR Clarity recording (any one confirms the snippet landed).
 >
 > **Next click:** [1.2c · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 >
