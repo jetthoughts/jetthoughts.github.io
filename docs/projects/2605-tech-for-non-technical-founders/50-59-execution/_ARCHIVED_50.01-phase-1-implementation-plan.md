@@ -1,4 +1,13 @@
-# JT Course Spine Phase 1 Implementation Plan
+# ⚠️ ARCHIVED — DO NOT EXECUTE
+
+**Archived:** 2026-06-10
+**Why:** This Phase 1 plan restructures a 9-module course to 6 modules at `content/blog/`. The course now lives at `content/course/tech-for-non-technical-founders-2026/` with a 5-module spine and is mid-migration to v2 micro-lessons (30.03 spec).
+**Replaced by:** `TASK-TRACKER.md` "Course Migration Schedule" and the cold-agent route in `PROJECT-INDEX.md`. Tasks 1-23 in this plan would delete, rename, and restructure files using wrong paths — DO NOT execute.
+**Historical reference only.** Read `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` for the current lesson format spec.
+
+---
+
+# JT Course Spine Phase 1 Implementation Plan (ARCHIVED)
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 

@@ -53,7 +53,7 @@ Six actions, ~45 minutes total. The walkthrough uses Mixo's UI labels; the equiv
 1. Generate the draft. Sign up at [mixo.io](https://www.mixo.io/) (free, email only). Paste your Founding Hypothesis sentence into the "Describe your idea" box, click **Generate**, wait ~60 seconds. The builder produces a page with all four copy blocks plus a placeholder **hero image** (the big graphic at the top of the page).
 
 2. Tighten the 4 copy blocks the builder drafted. Click each block in the editor:
-    - **Headline:** name a specific person plus a specific outcome. If the draft is generic, paste your hypothesis back into the idea box with 5-10 more concrete words and regenerate.
+    - **Headline:** name a specific person plus a specific outcome. If the draft is generic, paste your hypothesis back into the idea box with 5-10 more concrete words and regenerate (in Mixo: re-edit the idea box at the top, then click Generate again).
     - **Sub-headline:** explain how, in one line. The mechanism.
     - **Value props:** rewrite each as an outcome the customer wants, not a feature name.
     - **CTA:** change the button label to "Get on the waitlist." Add a "Coming soon. Email reserves your spot at launch." line in the footer (AI builders do not add this by default).
@@ -62,7 +62,7 @@ Six actions, ~45 minutes total. The walkthrough uses Mixo's UI labels; the equiv
 
 4. Strip the extras the builder added. Delete any Pricing table, FAQ, Testimonials, or "How it works" section that was not in your hypothesis. Every extra block pulls the visitor's eye off the email field.
 
-5. Publish. Click the builder's **Publish** button (top right in Mixo, similar position in Manus AI and Durable). Open the URL in an **incognito window** (Chrome: `Cmd/Ctrl+Shift+N` - this opens a private browser tab that ignores your login and cache, so you see what a fresh visitor sees). Confirm the page loads.
+5. Publish. Click the builder's **Publish** button (top right in Mixo, similar position in Manus AI and Durable). Mixo gives you a free URL like `yourname.mixo.io` - no domain purchase needed for the smoke test. Open the URL in an **incognito window** (Chrome: `Cmd/Ctrl+Shift+N`; Safari: same shortcut; Edge: `Ctrl+Shift+N`; Firefox: `Cmd/Ctrl+Shift+P` - a private browser tab that ignores your login and cache, so you see what a fresh visitor sees). Confirm the page loads.
 
 6. Send the URL to ONE real person who has not seen your work. Any stranger works; they do not need to be your target customer. (This tests headline clarity, not buying interest.) Ask: "In 3 seconds, who is this page for and what does it do?" **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
 

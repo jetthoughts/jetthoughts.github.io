@@ -9,6 +9,15 @@ Draft a hand-drawn-style JT-brand SVG for a lesson. Mobile-readable at 375px, vi
 
 ## Pre-loaded context
 
+- **PRD**: `.agent/prd/PRD.md` — 5-module architecture, 15 quality gates. SVGs must serve the lesson's single concept per 30.03 §2.4 (dual coding + cognitive load).
+- **30.03 §2.4**: `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.03-course-format-requirements-for-creators.md` §2.4 — visual discipline rules: 1 visual per lesson, no decorative graphics, mobile-legible at 375px.
+
+### Canonical v2 SVG examples (study these first)
+- `content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/page-anatomy.svg` — the ONLY v2 pilot SVG. Block layout, label/desc pattern, hand-drawn rotation.
+- `content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/tracking-snippets.svg` — multi-column with arrows, event markers.
+
+**DO NOT reference v1 lesson SVGs as style guides.** v1 SVGs (admin-panel-spaceship, shed-house-skyscraper, signals-scoreboard, etc.) were designed for long-form chapters and may have multi-concept infographics that violate the 1-visual-per-lesson rule. Use the pilot lesson SVGs as the canonical v2 pattern.
+
 ### JT brand palette
 - **Ruby red** `#cc342d` — primary accent, borders, emphasis
 - **Dark obsidian** `#1a1a1a` — text, headings
@@ -32,13 +41,14 @@ Draft a hand-drawn-style JT-brand SVG for a lesson. Mobile-readable at 375px, vi
 ### Rotational "hand-drawn" effect
 Apply subtle rotation to blocks (`transform="rotate(-0.3 X Y)"` or `rotate(0.2 X Y)`) to give a hand-drawn feel. Rotation should be subtle — between -0.5 and 0.5 degrees per block. Use slightly different rotation values on adjacent blocks.
 
-### Existing SVG style references
+### Existing SVG style references (pilot SVGs first — canonical v2 patterns)
 Study these existing SVGs for style patterns:
-- `content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/page-anatomy.svg` — block layout, label/desc pattern
-- `content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/tracking-snippets.svg` — multi-column with arrows
-- `content/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/admin-panel-spaceship.svg` — comparison pair
-- `content/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/shed-house-skyscraper.svg` — progression diagram
-- `content/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/signals-scoreboard.svg` — scoreboard/table
+- `content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/page-anatomy.svg` — ✅ CANONICAL v2: block layout, label/desc pattern, hand-drawn rotation. Study this FIRST.
+- `content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/tracking-snippets.svg` — ✅ CANONICAL v2: multi-column with arrows, event markers.
+- Legacy reference (v1 — study for technique only, NOT as micro-lesson patterns):
+  - `content/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/admin-panel-spaceship.svg` — comparison pair
+  - `content/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/shed-house-skyscraper.svg` — progression diagram
+  - `content/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/signals-scoreboard.svg` — scoreboard/table
 
 ## SVG template
 

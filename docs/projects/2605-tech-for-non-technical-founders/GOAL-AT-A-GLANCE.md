@@ -4,8 +4,8 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last restructured**: 2026-06-07 (Strategic pivot: long-form v1 → micro-learning v2 per 30.03 spec)
-**Status**: 🟢 v1 (long-form course) shipped · 🟡 v2 (micro-lesson format) pilot in flight
+**Last restructured**: 2026-06-10 (Stale-doc cleanup: /blog/ → /course/ path fix, ICP clarified to Sam, chapter count updated, v2 inventory added)
+**Status**: 🟢 v1 (long-form course) shipped · 🔄 v2 pilot lessons iterating to ideal · 🔲 Phase 2 gated behind pilot perfection
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
 
@@ -20,10 +20,10 @@
 **v2 direction**: 20-25 micro-lessons (400-600 words each, 5-10 min read + 5-15 min do). Per-lesson 8-part template (Hook → Outcome → Concept → Visual → Do-Now → Error Recovery → Reflection → Bridge). Same 6 artifacts, same emotional arc — radical compression, not scope reduction. See `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` for the canonical spec.
 
 **Migration plan (see `TASK-TRACKER.md` "Course Migration Schedule")**:
-- ✅ **Phase 0 / Option C** (shipped 2026-06-07): Quickstart + FAQ + "What not to learn" + 6 Sam recommendations from 40.07 + 4 micro-lesson samples + Mom Test 3-lesson QA-validated sequence
-- 🟡 **Phase 1** (in flight): Pilot one chapter migrated to 8-part template, measure time-per-lesson + completion data
-- 📋 **Phase 2** (2-4 weeks): Module-by-module full migration (M1 → M2 → M3 → M4 → M5)
-- 📋 **Phase 3** (cross-cutting polish): bridges + reflection + visual discipline + viral loop
+- ✅ **Phase 0 / Option C** (shipped 2026-06-07): Quickstart + FAQ + "What not to learn" + 6 Sam recommendations from 40.07
+- 🔄 **Phase 1** (iterating 2026-06-08+): 2 pilot lessons (1.2a, 1.2b) being iterated to ideal quality. Strategy: pilot-first, then scale. Phase 2 gated behind: (1) both pilots pass all 6 Sam-review tests, (2) 5-Sam real-founder validation confirms template, (3) 30.03 §7 QA passes, (4) iteration refinements documented.
+- 🔲 **Phase 2** (2-4 weeks, gated): Module-by-module full migration (M1 → M2 → M3 → M4 → M5)
+- 🔲 **Phase 3** (cross-cutting polish, gated): bridges + reflection + visual discipline + viral loop
 
 **What we stopped**: Iter 17+ surgical loop on v1 long-form chapters. Each Iter-N round was catching diminishing-return defects. The structural format gap is solved by migration, not by line edits.
 
@@ -43,7 +43,7 @@ Publish a **free 5-module course that takes a non-technical founder from idea to
 
 **JT positioning** (Option C: Pure Lead Magnet, no selling): the course does NOT pitch JT services. Zero "book a Control Audit" CTAs, zero "schedule a consultation," zero service offers. Authorship credit stays at the footer ("Built by JetThoughts as part of the free curriculum"). Lead capture works via email-gated artifact downloads only. See `feedback_curriculum_is_pure_lead_magnet.md`.
 
-**Engineered for viral sharing**: every post needs a contrarian hook, a quote-tweetable insight (140-280 chars), a specific tactic the reader can use this week, and a free downloadable artifact. See `feedback_curriculum_viral_shareability.md`.
+**Engineered for viral sharing (v1 long-form posts):** every post needs a contrarian hook, a quote-tweetable insight (140-280 chars), a specific tactic the reader can use this week, and a free downloadable artifact. See `feedback_curriculum_viral_shareability.md`. **v2 micro-lessons** follow 30.03 §2 template (1 visual max, 400-600w bands).
 
 ---
 
@@ -53,8 +53,8 @@ Success metric: **share velocity + email captures + page-1 SEO** — NOT consult
 
 | Metric | Baseline | 6-Month Target | Source of Truth |
 |---|---|---|---|
-| Course chapters published | 18 live | 18 live + Founder Control Dashboard | `data/course_sequence.yaml` |
-| Course landing page | live | optimized for burned-founder fast path | hugo build |
+| Course chapters published | 18 v1 + 2 v2 pilot live | 20-25 v2 micro-lessons + companion pages | `data/course_sequence.yaml` |
+| Course landing page | live | optimized for Sam-first fast path | hugo build |
 | Page-1 rankings on course keywords | 0 | 8+ across founder-focused keywords | GSC |
 | Email captures from artifact downloads | 0 | 500+ across 7 honest artifacts | site analytics |
 | Reddit / Twitter / Facebook shares per post | 0 | ≥25 shares per post within 30 days of publish | manual + Buffer/social tracking |
@@ -76,7 +76,25 @@ Each module has an **input** (what the reader brings from the previous module), 
 | 4 | **Choose Your Build** | Build decision (self-serve or hire) + Day-1 ownership audit + live MVP at staging URL (Lovable + Supabase + Stripe under $50/mo). | 4 |
 | 5 | **First Paying Customer** | First signed paid pilot ($500 Stripe deposit) + repeatable outbound machine. Free-tier tool stack. | 5 |
 
-**Total: 1 overview (Chapter 0) + 18 linear chapters + 1 glossary** ("Five Tech Words to Stop Nodding At"). Start at [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) for the full route at a glance: 5-module flow, AI tool stack, SIPOC system map, and module gates.
+**Total: 1 overview (Chapter 0) + 18 v1 long-form chapters + 2 v2 pilot micro-lessons + 1 glossary** ("Five Tech Words to Stop Nodding At"). Start at [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) for the full route at a glance: 5-module flow, AI tool stack, SIPOC system map, and module gates.
+
+### 📦 Current Inventory (canonical count)
+
+| Category | Count | Source of truth |
+|---|---|---|
+| Linear course chapters (v1) | 18 | `data/course_sequence.yaml` (excl. Ch 0 + glossary) |
+| Chapter 0 (overview) | 1 | `content/course/.../how-this-course-works/` |
+| Glossary | 1 | `content/course/.../five-tech-words-stop-nodding-at/` |
+| v2 pilot micro-lessons live | 2 | `smoke-test-build-page/` + `smoke-test-wire-tracking/` |
+| Companion/supplementary pages | ~30 | Not in linear sequence; linked from Module 5 gate |
+| Content directory entries (total) | 56 | `ls content/course/tech-for-non-technical-founders-2026/` |
+| Artifacts/templates | 15 | Vibe PRD, Friday Demo, Ownership Checklist, SOW Guide, etc. |
+| SVG illustrations | ~15+ | Per-lesson visual micro-aids |
+| Cover images (spine, "Curriculum 2026" badge) | 14 | 2400×1260 Stitch-generated |
+| Cover images (companion, "Curriculum NN/30" stale) | ~30 | P3 regen tracked in TASK-TRACKER |
+| Validation gates | 4 | `bin/validate-course` (chapter-number, title-yaml, internal-links, table-width). 3/4 pass. |
+| Project docs (active) | 31 | `docs/projects/2605-tech-for-non-technical-founders/` (excl. 11 archived) |
+| PM health report | 1 | `40-49-review/40.10-senior-pm-health-report-2026-06.md` |
 
 **Going further (after Module 5 gate)**: continuation chapters for churn triage, pivot or persevere, hire-track supplementary reference, management chapters (Friday Demo Rule, Weekly Dev Report, etc.), and AI-era chapters (Agency AI Questions, Token Bill, Slopsquatting). These are NOT in the linear sequence.
 
@@ -89,8 +107,8 @@ Each module has an **input** (what the reader brings from the previous module), 
 - **Effectiveness first; free and paid presented as equal options.** For each step, show both a free path and a paid path and let the reader choose what fits their situation - never prioritize free over paid (cheap) or push paid over free (greedy). Most readers have some budget; the goal is the most effective route to the outcome, not the cheapest one. Don't over-weight the money dimension - it's one input the reader decides on, not the theme of the chapter.
 - **Simplest method on main path.** Foundation Sprint, JTBD Canvas, Shape Up, Continuous Discovery, Impact Mapping, Empathy Mapping, Design Sprint all relegated to optional "Advanced" sidebars.
 - **Course is a journey, not a topic list.** Every module's chapters share input/output/checkpoint/artifact framing. The artifacts compile into the reader's Founder OS.
-- **Engagement-first delivery.** No word-count caps; cut test per section determines what stays.
-- **≥3 handmade-style infographics per post** (Excalidraw aesthetic, Mermaid + SVG mix).
+- **Engagement-first delivery (v1 long-form).** No word-count caps; cut test per section determines what stays. **v2 micro-lessons** follow 30.03 §1.6 word count bands (400-600w standard, 500-900w tool).
+- **≥3 handmade-style infographics per v1 post** (Excalidraw aesthetic, Mermaid + SVG mix). **v2 micro-lessons cap at 1 visual per lesson** (30.03 §2.4, cognitive load theory).
 - **Tech stack defaults to Rails / Django / Laravel + full-stack-developer-ships-end-to-end pattern** in examples. No React/Node/Java as the lead example stack.
 - **Course frame in every post**: top callout (Module X · Step N of M) + bottom course-nav table.
 - **Zero parallel slugs to 2510 plan.** Curriculum framing added via callout, not by creating duplicates.
@@ -100,8 +118,8 @@ Each module has an **input** (what the reader brings from the previous module), 
 ## 🚀 EXECUTION STATUS
 
 ### ✅ Shipped (as of 2026-05-20)
-- 18 linear chapters across 5 modules (see `data/course_sequence.yaml`)
-- Course landing page at `/blog/tech-for-non-technical-founders-2026/`
+- 18 v1 long-form chapters across 5 modules (see `data/course_sequence.yaml`) + 2 v2 pilot micro-lessons (1.2a, 1.2b) + 14+ companion/supplementary pages + Quickstart + FAQ + 'What not to learn'
+- Course landing page at `/course/tech-for-non-technical-founders-2026/`
 - 14 spine-chapter covers (Stitch-generated, "Curriculum 2026" badge, 2400×1260)
 - 15 artifacts / lead magnets (Vibe PRD Template, Friday Demo Template, Ownership Checklist, SOW Reading Guide, etc.)
 - Theme partial `course-prev-next.html` auto-renders nav from YAML
@@ -127,12 +145,13 @@ Each module has an **input** (what the reader brings from the previous module), 
 | Spine drift after future restructures | P1: build 4 source-of-truth validators (chapter-number consistency, title-YAML byte match, internal-link existence, mobile-table width) per Kaizen Muda analysis |
 | 2510 LinkedIn validation sprint already in flight - schedule conflicts | The wrap posts ship per 2510 calendar; the 2605 curriculum framing is added retroactively. Zero schedule conflicts. |
 | AI-era posts (Going further) decay fast | Date-stamp every AI-era post + Q1 2027 refresh trigger |
-| ICP-E (burned founder) bouncing on validation curriculum when they need rescue | Routed at the entry point: the landing page "If Your Team Is Already Failing" fast path sends burned readers to Ownership Audit / Friday Demo / Weekly Report / Salvage-Rebuild before any validation work. Chapter bodies are written to the primary idea-stage ICP; the per-chapter routing block on Ch 1.1 was removed 2026-05-22 (it taxed the primary reader and duplicated the landing-page router). |
+| ICP-E (burned founder) bouncing on validation curriculum when they need rescue | Routed at the entry point: the landing page "If Your Team Is Already Failing" fast path sends burned readers to Ownership Audit / Friday Demo / Weekly Report / Salvage-Rebuild before any validation work. Chapter bodies are written to the primary course ICP (Sam, first-timer); the per-chapter routing block on Ch 1.1 was removed 2026-05-22 (it taxed the primary reader and duplicated the landing-page router). **Alex (burned founder) is the website lead-gen ICP (90.10), NOT the course design target (40.06 Sam).** |
 
 ---
 
 ## 🔗 NAVIGATION
 
+- **PM health report (canonical inventory + RAG dashboard)**: `40-49-review/40.10-senior-pm-health-report-2026-06.md`
 - **Source of truth (chapter order + goals)**: `../../data/course_sequence.yaml`
 - **Research**: `10-19-research/10.01-course-program-landscape.md` + `10.02-curriculum-sequence-synthesis.md` + `10.08-validation-tools-analysis-2026.md`
 - **Reviews**: `40-49-review/40.03-sipoc-course-logic.md` (canonical SIPOC) + `40-49-review/40.04-execution-readiness-sweep-2026-06.md` + `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` + `40-49-review/40.06-sam-customer-journey-report-2026-06.md` + `40-49-review/40.07-sam-experience-improvement-report-2026-06.md`
@@ -142,6 +161,7 @@ Each module has an **input** (what the reader brings from the previous module), 
 - **Low-impact ideas**: `LOW-IMPACT-IDEAS-BANK.md` (deferred, dropped, and P3 ideas)
 - **External research**: `../../docs/_research/` (Russian-language market research)
 - **Voice**: `../../90-99-content-strategy/strategy-analysis/90.11-voice-guide.md`
-- **ICP**: `../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`
+- **ICP (course design target):** Sam (first-timer non-technical founder, no burn history, no PM background). Definitive doc: `40-49-review/40.06-sam-customer-journey-report-2026-06.md`.
+- **ICP (website lead-gen):** Alex (burned founder). Defined in `../../90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md`. NOT the course design target.
 
 > **Note**: The parent content plan (`2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`) is the site-level SEO calendar. The course shipped independently on its own timeline and does not depend on that plan. The archived `_ARCHIVED_20.07-content-plan-tnt-founders-2026.md` was a 26-post site-level content draft, not a course plan.

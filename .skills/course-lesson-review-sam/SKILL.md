@@ -9,7 +9,32 @@ Run a Sam-perspective customer-research review on a draft lesson. Channels Sam b
 
 ## Pre-loaded context
 
-Sam profile (from `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.06-sam-customer-journey-report-2026-06.md`). The corrected newbie one:
+### Project docs (what we're reviewing against)
+
+1. **PRD** — `.agent/prd/PRD.md` — formal product requirements: 5-module architecture, 15 quality gates, artifact chain, Sam ICP. Every lesson must advance Sam toward the course promise.
+2. **5-Sam Validation Pilot** — Planned but NOT YET EXECUTED. The current simulation learnings (40.11) are imputed, not field-validated. Real Sams may stall where the simulation didn't predict. Be aware that all simulation findings are provisional — do not treat them as proven.
+
+### Canonical spec (what the lesson SHOULD match)
+
+1. **30.03 §2 — 8-part template** — `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.03-course-format-requirements-for-creators.md` §2 (the non-negotiable 8-part template: Hook → Outcome → Concept → Visual → Do-Now → Error → Reflection → Bridge)
+2. **30.03 §1 — design principles** — §1.1-1.6 (single outcome, time cap, microlearning structure, self-paced, mobile-friendly, word count bands)
+3. **30.03 §5 — content spec** — §5.1-5.3 (course-level elements, per-lesson elements, micro-copy constraints, NN/g F-pattern rules)
+4. **30.03 §4 — engagement** — §4.1-4.8 (immediate win, attention cycle, B=MAP, Zeigarnik, progress visibility, language, navigation)
+
+### Sam profile (who we're reviewing FOR)
+
+5. **Sam profile (course ICP)** — `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.06-sam-customer-journey-report-2026-06.md` (first-time non-technical founder, no PM background, no burn history, 2-4 hr/week, ~$20K savings, reads on phone, intimidation + first-timer enthusiasm)
+6. **Sam simulation learnings** — `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.11-sam-simulation-pilot-lessons-2026-06.md` (5 themes from beat-by-beat simulation: "I don't have to write code" trust gate, catalogue-my-mistake pattern, measurable success criterion, UI-cue gap, decision-aid-in-one-sentence)
+7. **Voice guide** — `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` (banned words, anti-AI structural patterns, the "who"/"show"/"coffee" tests)
+
+### Canonical v2 examples (what a passing lesson looks like)
+
+8. **Pilot Lesson 1.2a** — `content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/index.md` (~870w, agnostic-tool framing, Mixo as worked example)
+9. **Pilot Lesson 1.2b** — `content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/index.md` (~640w, heavy gloss pass)
+
+**DO NOT reference v1 long-form chapters as style examples.** v1 chapters are 2,000-4,500 words and do NOT follow the 8-part template. Only the 2 pilot lessons are canonical v2 examples.
+
+### Sam's profile card (quick reference)
 
 | Attribute | Detail |
 |---|---|

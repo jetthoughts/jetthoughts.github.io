@@ -43,7 +43,7 @@ You will install two snippets, both free:
 
 (**Google Analytics 4** is a free Google dashboard that tracks visits over months or years. Optional for the smoke test; skip it now and install it later if the hypothesis passes.)
 
-Both snippets paste into the same place on your page builder: the **head-tag field**, the hidden block at the top of every webpage where tracking scripts live. Page builders label this field "head," "custom code," or "tracking scripts" - they all point at the same place.
+Both snippets paste into the same place on your page builder: the **head-tag field**, the hidden block at the top of every webpage where tracking scripts live. Page builders label this field "head," "custom code," or "tracking scripts" - they all point at the same place (in Mixo: Settings → Custom Code → Header field; in Manus AI or Durable: look for "head" or "tracking scripts").
 
 The 3 numbers you will read in Lesson 1.3:
 
@@ -65,7 +65,7 @@ Conversion rate = form submits ÷ page views. That is the number your Founding H
 
 3. Sign up for an ad-platform account on the platform your customer uses most (B2B → LinkedIn or Meta; B2C → Meta or Reddit). Copy that platform's pixel snippet, paste it into the same head-tag field. Save.
 
-4. Open your landing page in an **incognito window** (a private browser tab that ignores your login and cache, so the visit looks fresh to Clarity). Wait 60 seconds, then open Clarity's dashboard and click "Recordings." **✅ Success check:** your visit appears as a session recording. If you see yourself, the tracking is live.
+4. Open your landing page in an **incognito window** (a private browser tab that ignores your login and cache, so the visit looks fresh to Clarity). Wait 60 seconds, then open Clarity's dashboard and click "Recordings." **✅ Success check:** your visit appears as a session recording. If you see yourself, the tracking is live. (If you used the builder's preview URL instead of the published URL, scripts may be blocked - publish first, then check Clarity.)
 
 ---
 

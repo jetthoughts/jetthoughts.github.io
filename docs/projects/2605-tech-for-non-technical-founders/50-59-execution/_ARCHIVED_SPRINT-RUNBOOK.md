@@ -1,4 +1,13 @@
-# Sprint Runbook - 2605 Course Execution
+# ⚠️ ARCHIVED — DO NOT EXECUTE
+
+**Archived:** 2026-06-10
+**Why:** This Sprint 1 runbook was written 2026-05-12 for an 8-module blog-post course structure at `content/blog/`. The course has since moved to `content/course/tech-for-non-technical-founders-2026/` with a 5-module spine and is mid-migration to v2 micro-lessons (30.03 spec).
+**Replaced by:** `TASK-TRACKER.md` "Course Migration Schedule" and the cold-agent route in `PROJECT-INDEX.md`. The canonical writer brief template in this file references `content/blog/` paths, archived strategy files, and a completely different course structure. Executing these runbooks would damage the current course.
+**Historical reference only.** Read `30-39-architecture-design/30.03-course-format-requirements-for-creators.md` for the current lesson format spec.
+
+---
+
+# Sprint Runbook - 2605 Course Execution (ARCHIVED)
 
 **Purpose**: Self-contained orchestrator runbook. A separate Claude Code session opens this file, picks the next task, copies the dispatch brief into an Agent call, runs the review checklist on return.
 

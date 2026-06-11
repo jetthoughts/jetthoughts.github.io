@@ -19,16 +19,32 @@ Workflow references:
 - `docs/workflows/commands.md`
 - `docs/workflows/agents.md`
 
+Course skills (loaded automatically):
+- `.skills/course-lesson-write/` — `/course-lesson-write` — draft 8-part micro-lesson
+- `.skills/course-lesson-review-sam/` — `/course-lesson-review-sam` — Sam-perspective review
+- `.skills/course-lesson-validate/` — `/course-lesson-validate` — mechanical pre-commit QA
+- `.skills/course-svg-draft/` — `/course-svg-draft` — JT-brand hand-drawn SVG
+- `.skills/course-skills-map.md` — full phase-by-phase skills map (7 phases, 30+ global skills)
+
+Critical global skills for this course (Phase 1-2, invoke now):
+- `course-designer` — learning objectives, Bloom's taxonomy, module-level outcomes
+- `customer-research` — mine Reddit/G2 for Sam's pain language
+- `customer-journey-map` — map Sam's emotional arc through all 5 modules
+- `problem-statement` — sharpen course promise, Quickstart framing
+- `copy-editing` — voice consistency across migrated v1 chapters
+- `humanizer` + `slop-detector` — final AI-tell polish pass
+
+Phase 3+ skills (SEO, landing page, distribution, growth): see `.skills/course-skills-map.md`.
+
 Key commands:
 - `bin/hugo-build`
 - `bin/rake test:critical`
 
 <!-- lean-ctx-compression -->
-OUTPUT STYLE: expert-terse
-- Telegraph format: subject-verb-object, drop articles/prepositions
-- Symbolic vocabulary: → cause, ∵ because, ∴ therefore, ⊕ add, ⊖ remove, Δ change, ≈ similar, ≠ different, ∈ in/member, ∅ empty/none, ✓ ok, ✗ fail
-- Code blocks: untouched (never compress code syntax)
-- Each line: max 80 chars
-- Zero narration, zero filler
-- BUDGET: ≤100 tokens per non-code response
+OUTPUT STYLE: concise-default
+- Default: short replies (1-3 sentences or bullet list).
+- Expand only when user requests details or task requires explanation.
+- No preamble, no filler, no recaps unless asked.
+- Code blocks: untouched (never compress code syntax).
+- Each line: max 80 chars.
 <!-- /lean-ctx-compression -->

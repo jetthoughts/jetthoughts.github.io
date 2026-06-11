@@ -1,6 +1,6 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-08 (Phase 1 pilot RESTRUCTURED · two-lesson split merged into one Mixo-only golden-path lesson · case-study moved to module-end · Plan B path-split parked in LOW-IMPACT-IDEAS-BANK)
+**Last Updated**: 2026-06-10 (Stale-doc cleanup: Phase 0 deferred, Phase 1 completion notes, 10.06 archived, path fixes)
 
 ## Active Phase: v2 Migration Pilot
 
@@ -31,9 +31,9 @@
 **Phase naming note:** This doc uses "Phase 0" for the remaining mechanical quick wins (outcome sentences, success checks, Stuck? boxes — see migration schedule below). The completed surgical improvements are called "Option C" (matching 30.03 §8.4-8.5). These are separate work streams.
 
 **Next sprint candidates** (pick one):
-1. **Phase 0 mechanical sweep** — apply outcome sentences + success checks + Stuck? boxes to remaining 16 v1 chapters (~2-3 hours)
-2. **Phase 2 — Module 1 full migration** — migrate remaining M1 chapters (1.1, 1.2b, 1.3) using pilot template (~2-3 days)
-3. **Wire micro-lessons into navigation** — add the 2 pilot lessons to course_sequence.yaml as draft entries for preview
+1. **Phase 2 — Module 1 full migration** — migrate remaining M1 chapters (1.1, 1.2b, 1.3) using pilot template (~2-3 days)
+2. **Wire micro-lessons into navigation** — add the 2 pilot lessons to course_sequence.yaml as draft entries for preview
+3. **Phase 0 mechanical sweep** — deferred until pilot lessons complete (~2-3 hours).
 
 ## Current Active Scope
 
@@ -85,14 +85,30 @@ Target: 8.5/10 before launch.
 | P3 | Add Loom video outreach tactic to Ch 5.2 or 5.5 (10.08 Gap #4) | Planned | 10-minute personalized B2B video audits with higher conversion than cold email. Low effort, high differentiation. Documented in 10.08 §Gap 4. |
 | P3 | Add Engineering as Marketing to Ch 5.2 (10.08 Gap #5) | Planned | Free No-Code micro-tools (calculators/checklists) for $0 CAC organic SEO. Distinct from content marketing. Documented in 10.08 §Gap 5. |
 | Dropped | Add time-badge to each chapter header | Dropped (2026-06-02) | Each chapter needs a "**Time**: ~45 min" badge at the top so the reader can plan their session. 18 chapters. Dropped per user direction — time anchoring contradicts the ADR §1 policy of avoiding speculative effort estimates. |
-| P1 | Build companion-post FAQ collection | New (ICP walkthrough 10.06) | Create a curated FAQ linking 8 companion posts as "read next" sidebars in relevant chapters. Currently only linked via course-frame nav. |
-| P1 | Rescue-path routing audit | New (ICP walkthrough 10.06) | Audit all 5 module-start chapters for consistent burned-founder rescue-path routing. Chapter 1.1 had routing blocks added then removed; ensure uniform approach across spine. |
+| P1 | Build companion-post FAQ collection | New (ICP walkthrough _ARCHIVED_10.06) | Create a curated FAQ linking 8 companion posts as "read next" sidebars in relevant chapters. Currently only linked via course-frame nav. |
+| P1 | Rescue-path routing audit | New (ICP walkthrough _ARCHIVED_10.06) | Audit all 5 module-start chapters for consistent burned-founder rescue-path routing. Chapter 1.1 had routing blocks added then removed; ensure uniform approach across spine. |
 | P3 | Cover image regen audit for non-spine posts | Planned | 2026-05-20: 14 spine covers regenerated to clean "Curriculum 2026" badge. ~30 companion-post covers still have "Curriculum NN/30" stale counter. Regen via chrome-devtools at 2400×1260 if posts stay in active rotation. |
 | ✅ Done | Update decision doc 20.10 with Click correction | Done | Decision block added at top of 20.10.md (2026-05-20) marking Recommendation section as superseded. TASK-TRACKER entry updated 2026-05-29. |
 | ✅ Done 2026-06-04 | Add Sam customer journey report (40.06) with trust score methodology | Done | Single-ICP narrative spanning all 18 chapters + landing page. 3 entry-point doors. Per-chapter trust scores with emotional arc. Double-dip U-curve visualization. Appendix D: 19-row recalibrated trust score table with calibration constraints. Commit 63fb7d73. |
 | ✅ Done 2026-06-07 | Add Sam experience improvement report (40.07) | Done | 6 actionable Sam-first recommendations across 18 chapters. Burned-founder ICP framing removed per user direction. Recommendations logged here for triage. See `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.07-sam-experience-improvement-report-2026-06.md`. |
 | ✅ Done 2026-06-07 | Archived 10.07 Sam walkthrough | Done | Superseded by 40.06 (definitive Sam reference) and 40.07 (canonical recommendations). Renamed to `_ARCHIVED_10.07-icp-sam-persona-course-walkthrough.md` with cross-reference note to 40.06 + 40.07. |
 | ✅ Done 2026-06-07 | Published 30.03 course format requirements for creators | Done | Consolidated micro-learning spec + gap analysis + migration guide. Canonical requirements for course format design. See `30-39-architecture-design/30.03-course-format-requirements-for-creators.md`. |
+| ✅ Done 2026-06-10 | Applied 5 Sam-simulation surgical fixes to pilot lessons | Done | Added Mixo re-prompt hint (1.2a Step 2), Mixo head-tag path (1.2b), domain question (1.2a Step 5), non-Chrome incognito shortcuts (1.2a Step 5), preview-mode script-blocking note (1.2b Step 4). ~80 words total. Sam simulation report: 40.11. |
+| 🔲 P1 | 5-Sam Validation Pilot — recruit 3-5 real founders, watch Clarity recordings | Planned | Before Phase 2 fan-out. Research questions: (1) Do real Sams complete in one sitting? (2) Where do they stall? (3) Do they trust tool-agnostic framing? (4) Does stranger test produce signal? (5) Where do they abandon? See 40.11 for full research gap analysis. |
+
+**5-Sam Pilot steps:**
+
+| Step | Action | Est. time |
+|---|---|---|
+| 0.1 | Recruit 3-5 idea-stage founders (indie-hackers, Reddit r/startups, personal network). Screening: no tech background, has an idea they haven't validated, reads on phone. | ~2 hours |
+| 0.2 | Post pilot lesson URLs (1.2a + 1.2b). Install Clarity on these pages. Instruct Sam to read both lessons and follow the Do-Now steps. | ~30 min |
+| 0.3 | Wait 3-5 days for Sams to complete. Watch Clarity session recordings + heatmaps. Record: completion rate, time-on-page, scroll depth, stall points, rage-clicks. | ~2 hours |
+| 0.4 | Synthesize findings: compare simulation predictions vs real behavior. Update Phase 2 template with any blind spots found. | ~1 hour |
+| 0.5 | Decision gate: if ≥3 Sams complete with no systemic stall point, fan out to Phase 2. If same stall point appears in ≥2 Sams, fix template first. | ~30 min |
+
+**Gate:** All 5 research questions have answers from real data. Template updated with findings. Only then proceed to Phase 2 M1 migration. |
+
+**Phase naming note:** This pilot uses "0.1-0.5" step numbering to distinguish it from the deferred Phase 0 mechanical quick wins.
 | ✅ Done 2026-06-07 | Add "Skip to the action" anchor links to longest chapters (40.07 Rec #1) | Done | Anchor-link callout added to M4.3a (6 links), M1.2a (4 links), M3.2 (4 links). Serves skim-first Sam. |
 | ✅ Done 2026-06-07 | Reduce builder comparison fatigue in M1.2a (40.07 Rec #2) | Done | Builder list restructured as decision tree: Mixo (start here) → Manus AI (fallback) → Durable/NeetoSite/Carrd (only if experienced). Eliminated the "Default vs Fallback" two-tier framing. |
 | ✅ Done 2026-06-07 | Add "First-timer fast path" to landing page (40.07 Rec #3) | Done | Callout added after hero section on `_index.md`: "New founder, no team, no trauma? Skip the diagnostic. Start at Chapter 1.1." |
@@ -150,11 +166,11 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 ---
 
-### Phase 0: Remaining Quick Wins (~2-3 hours, raises median 1.0 → ~2.5/8)
+### Phase 0: Remaining Quick Wins (DEFERRED — postponed until pilot lessons complete)
 
 > **Naming note:** This "Phase 0" is the mechanical quick-wins pass (outcome sentences, success checks, Stuck? boxes). It is separate from **Option C** (Quickstart, FAQ, "What not to learn," 6 Sam fixes) which is complete per 30.03 §8.4. See 30.03 §8.5 for the consolidated web delivery roadmap.
 
-**Status:** Not started. These are the mechanical edits that don't require rewriting chapters. Do them in one focused session before any creative work — they'll make the long-form chapters more readable while you work through the full migration in Phases 2-3.
+**Status:** Deferred. Postponed until pilot lessons complete per user direction (2026-06-10). These are mechanical edits that don't require rewriting chapters — do them in one focused session when ready.
 
 | Step | Action | Chapters | Est. time |
 |---|---|---|---|
@@ -298,7 +314,7 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 > **Day estimates in Phase 2 include:** writing + Hugo build verification + mobile viewport check + bridge chain verification per module. Not pure writing time — the overhead of splitting chapters, designing bridge dependencies, and compressing concept blocks is baked in.
 
-> **Why the range:** Phase 2 is `2-4 weeks` because the pilot (Phase 1) hasn't been run yet. The real time-per-lesson is unknown. The 30.03 Appendix A example took ~30 min for one lesson; at 20-25 lessons, that's 10-12 hours of pure writing. But splitting chapters, designing bridges, compressing concept blocks, and fixing mobile issues adds overhead. The 2-week estimate assumes 4 lessons/day (sustainable pace after pilot); the 4-week estimate allows for Module 4's technical complexity and Module 5's emotional-stakes rewrites.
+> **Why the range:** Phase 2 is `2-4 weeks` based on pilot data from Phase 1 (~45 min per lesson real time). The 30.03 Appendix A example took ~30 min for one lesson; at 20-25 lessons, that's 15-19 hours of pure writing. But splitting chapters, designing bridges, compressing concept blocks, and fixing mobile issues adds overhead. The 2-week estimate assumes 4 lessons/day (sustainable pace after pilot); the 4-week estimate allows for Module 4's technical complexity and Module 5's emotional-stakes rewrites.
 
 ---
 
@@ -307,7 +323,7 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 | Risk | Mitigation |
 |---|---|
 | Phase 2 stretches past 4 weeks | Ship module-by-module. Each module is independently shippable — Module 1 can go live while Module 2 is still being written. Never block the whole release on the last module. |
-| Phase 0 work is discarded when chapters get Phase 2 rewrites | Acknowledged and acceptable. Phase 0 costs ~2-3 hours and provides immediate readability gains for all chapters. The work on Modules 1-2 is replaced within ~2 weeks; the real value of Phase 0 is for Modules 3-5, which won't be rewritten for weeks and benefit from improved readability in the meantime. |
+| Phase 0 work is deferred until after pilot lessons complete | Phase 0 costs ~2-3 hours. Deferred per user direction (2026-06-10) so pilot momentum is not interrupted. Execute when pilot lessons are stable and Phase 2 begins. |
 | Technical chapters (4.3a, 4.3b) can't compress to 300 words | Allow 400-word concept blocks for technical chapters with hard constraints (RLS, webhooks). The template says ≤300; the spirit is "no bloat." A 400-word block that genuinely needs the space is better than a 300-word block that omits a critical concept. Flag these as exceptions in the rewrite notes. |
 | Bridges break when upstream lesson changes | The Phase 3 bridge audit catches these. Do NOT try to get bridges right on first pass — expect them to need adjustment when the full chain is visible. |
 | Phase 1 pilot diverges from 30.03 Appendix A worked example | 30.03 Appendix A is the canonical pattern. If Phase 1 discovers the pattern needs refinement, update 30.03 (with user approval) — do not let the pilot silently set a different precedent. |

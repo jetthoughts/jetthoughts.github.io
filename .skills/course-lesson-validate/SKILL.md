@@ -7,6 +7,12 @@ description: Run pre-commit mechanical QA on a course lesson. Use this skill whe
 
 Pre-commit mechanical QA. Fast, scriptable, deterministic. Run this before every lesson commit.
 
+## Pre-loaded context
+
+- **PRD**: `.agent/prd/PRD.md` — 5-module architecture, 15 quality gates, artifact chain. Validator enforces the mechanical gates; the PRD defines what we're building.
+- **30.03 §7 QA Checklist**: `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.03-course-format-requirements-for-creators.md` §7 — the canonical QA spec this validator is derived from.
+- **Tasks**: `.agent/tasks.json` — 34 trackable tasks. Validator is the mechanical gate for every TASK-2 through TASK-26.
+
 ## Checks (run all 7)
 
 Each check produces a PASS/FAIL verdict + an actionable fix for failures.
@@ -30,6 +36,8 @@ Command: bin/validate-course
 FAIL if: any of the 7 checks fail
 Fix: read the failure output, fix the specified issue, re-run
 ```
+
+Note: These 7 scripted checks cover mechanical gates (chapter-number, title-yaml, internal-links, table-width, etc.). The full 30.03 §7 QA checklist (21 items across Per Lesson, Per Module, Per Course) is for human QA review — see `30.03-course-format-requirements-for-creators.md` §7.
 
 ### Check 3: Em-dash grep
 

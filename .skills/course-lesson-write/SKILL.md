@@ -9,10 +9,41 @@ Draft a complete 8-part micro-lesson from a topic brief. Enforces every spec gat
 
 ## Pre-loaded context (read these before writing)
 
-1. **8-part template structure** — `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.03-course-format-requirements-for-creators.md` §2
-2. **Sam profile** — `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.06-sam-customer-journey-report-2026-06.md` (the corrected newbie Sam: first-time, no tech expertise, no PM background, no burn history, intimidation + first-timer enthusiasm)
-3. **Voice guide** — `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` (banned words, anti-AI structural patterns, banned structural patterns, the "who"/"show"/"coffee" tests)
-4. **Iter 19 pilot pattern** — agnostic tool framing as worked example (single golden path tool, no tool-pinning in title/slug)
+### Project docs (what we're building)
+
+1. **PRD** — `.agent/prd/PRD.md` — formal product requirements: 5-module architecture, 15 canonical quality gates, artifact carry-forward chain, v1→v2 pivot, Sam ICP, risks, metrics
+2. **Tasks** — `.agent/tasks.json` — 34 trackable tasks. Know which TASK-ID you're fulfilling before writing. Each task maps to a specific module + chapter.
+3. **Roadmap** — `docs/projects/2605-tech-for-non-technical-founders/20-29-strategy/20.11-course-migration-roadmap.md` — Now/Next/Later schedule with dependency graph
+
+**Current progress (2026-06-10):**
+- ✅ Phase 1: 2 pilot lessons shipped (1.2a smoke-test-build-page, 1.2b smoke-test-wire-tracking)
+- 🔲 Phase 2: M1-M5 migration pending (TASK-2 through TASK-26)
+- 🔲 5-Sam Validation Pilot: planned before Phase 2 fan-out
+- Do NOT rewrite pilot lessons (1.2a, 1.2b) — they're already v2 micro-lessons
+
+### Canonical spec (MANDATORY first reads)
+
+1. **30.03 §2 — 8-part template** — `docs/projects/2605-tech-for-non-technical-founders/30-39-architecture-design/30.03-course-format-requirements-for-creators.md` §2 (the non-negotiable 8-part template: Hook → Outcome → Concept → Visual → Do-Now → Error → Reflection → Bridge)
+2. **30.03 Appendix A — worked example** — same doc, Appendix A. The canonical micro-lesson (Lesson 1.1 hypothesis Mad Libs). Study the structure, tone, and compression technique.
+3. **30.03 §1 — design principles** — §1.1-1.6 (single outcome, time cap, microlearning structure, self-paced, mobile-friendly, word count bands)
+4. **30.03 §3 — module-level requirements** — §3.1-3.4 (structure, entry/exit, module map, core/optional tagging, minimum viable path)
+5. **30.03 §4 — engagement for low-motivation learners** — §4.1-4.8 (immediate win, attention cycle, B=MAP, Zeigarnik, progress visibility, language, frictionless navigation, no heavy assessments)
+6. **30.03 §5 — content spec** — §5.1-5.3 (course-level elements, per-lesson elements, micro-copy constraints, NN/g F-pattern rules)
+7. **30.03 §6 — motivation, stickiness, shareability** — §6.1-6.6 (emotional acknowledgment, story of progress, built-in celebrations, viral loop, social proof, completion reward)
+
+### ICP and voice
+
+8. **Sam profile (course ICP)** — `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.06-sam-customer-journey-report-2026-06.md` (first-time non-technical founder, no PM background, no burn history, 2-4 hr/week, ~$20K savings, reads on phone, intimidation + first-timer enthusiasm)
+9. **Sam simulation learnings** — `docs/projects/2605-tech-for-non-technical-founders/40-49-review/40.11-sam-simulation-pilot-lessons-2026-06.md` (5 themes from beat-by-beat simulation: "I don't have to write code" trust gate, catalogue-my-mistake pattern, measurable success criterion, UI-cue gap, decision-aid-in-one-sentence)
+10. **Voice guide** — `docs/90-99-content-strategy/strategy-analysis/90.11-voice-guide.md` (banned words, anti-AI structural patterns, the "who"/"show"/"coffee" tests)
+
+### Canonical v2 examples (ONLY these are micro-lessons)
+
+11. **Pilot Lesson 1.2a** — `content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/index.md` (~870w, agnostic-tool framing, Mixo as worked example, deliberate Sam-glossing over 800w ceiling)
+12. **Pilot Lesson 1.2b** — `content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/index.md` (~640w, heavy gloss pass, tracking snippet/head tag/heatmap/session recording/pixel/GA4/incognito)
+13. **30.03 Appendix A** — same doc as #2 above, but study it as an actual lesson example (not just spec). This is the canonical pattern for pure-concept lessons (no tool worked example).
+
+**DO NOT reference v1 long-form chapters as style examples.** The v1 chapters (form-your-founding-hypothesis, stop-specifying-features, vibe-coding-ceiling-signals, smoke-test-build-landing-page, etc.) are 2,000-4,500 words and do NOT follow the 8-part template. They are anti-patterns for micro-lesson writing. Only the 2 pilot lessons + 30.03 Appendix A are canonical v2 examples.
 
 ## Inputs expected
 
@@ -157,6 +188,28 @@ A single reflective question the student answers for themselves. Not a quiz — 
 4. **Punctuation** — Use regular dashes (`-`) not em dashes (`—`). NEVER use em dashes anywhere.
 5. **Word count** — 500-900 words for agnostic-tool lessons (tool featured as worked example). 400-600 words for pure-concept lessons (no specific tool featured, no action section).
 
+### Design principles (from 30.03 — these drive every writing decision)
+
+6. **Action Mapping** (30.03 §1.3) — Design from measurable behaviors, not information. If a piece of content does not directly dictate how Sam executes the required behavior, REMOVE IT. No theory without immediate application. No "nice to know."
+7. **Minimalist Instruction** (30.03 §1.3) — Every lesson must be self-contained. Never require Sam to recall a concept from 5 lessons ago. Error recovery is mandatory (Part 6), not optional.
+8. **B=MAP** (30.03 §4.3) — When motivation is low, increase Ability. Make the lesson completable on Sam's worst, most unmotivated day. The first action must be completable in under 1 minute.
+9. **Zeigarnik Effect** (30.03 §4.4) — End every lesson with a curiosity loop in the bridge. Unfinished cognitive tension drives completion. Pattern: Immediate Initiation → Strategic Delay → Continuous Chaining → Final Satisfaction.
+10. **Dual Coding + Cognitive Load** (30.03 §2.4) — 1 visual per lesson maximum. No decorative graphics, stock photos, or multi-layered infographics. Each visual illustrates ONE concept. Mobile-legible at 375px.
+11. **NN/g F-pattern** (30.03 §5.3) — 79% scan, 16% read. Inverted pyramid: conclusion + critical action at the top. Meaningful subheadings (not clever/cryptic). Bold important concepts (≤20-30% of text). One idea per paragraph. Sentences under 20 words.
+12. **Micro-copy constraints** (30.03 §5.3) — Active voice. Short paragraphs (2-3 sentences). 40-60 characters per line target. No multi-step instructions in one sentence — always split into separate numbered steps.
+
+### Module-level requirements (from 30.03 §3 + §6)
+
+13. **Module first lesson — emotional acknowledgment** (30.03 §6.1) — Every module's first lesson must include an emotional acknowledgment in the hook or concept block: "You're busy and probably tired of this problem. This module focuses only on what moves the needle now."
+14. **Module last lesson — win recap + share prompt** (30.03 §6.3) — End the module's final lesson with: "You now have [artifact]. If this module saved you at least an hour, you probably know someone else wrestling with this — send them this free course page."
+15. **Progress visibility** (30.03 §4.5) — At the top of each lesson, include: "You are on Lesson X of Y in Module N. Results so far: [list artifacts completed]."
+16. **Core/optional tagging** (30.03 §3.4) — Every lesson must be tagged [CORE] or [OPTIONAL] in the module map. Core path alone must produce the module's milestone outcome. Optional lessons must not be prerequisites for core lessons in later modules.
+
+### Glossing discipline (from 30.03 §2.3)
+
+17. **Max 3 new terms per lesson** — cap at 3 newly introduced technical terms. Each defined in one sentence at first mention. Excess terms move to a per-module "Terms you'll need" sidebar referenced from the lesson.
+18. **Gloss format** — "CTA (Call to Action — the button you want the visitor to click)" or "RLS (Row-Level Security — the rule that says Coach A can only read Coach A's rows)." Gloss at first mention only.
+
 ### Sam-first rules (from 40.06 and 40.07)
 
 1. **Every term glossed at first mention** — if Sam doesn't know it, define it inline
@@ -187,17 +240,60 @@ Do NOT add this line before the walkthrough page is published.
 
 > **See it in action:** [optional, only if walkthrough page exists]
 
+> **Share:** Know someone wrestling with this? [Send them this free lesson.](/course/tech-for-non-technical-founders-2026/lesson-slug/)
+
 ---
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
 ```
 
+## 30.03 §7 QA Self-Checklist (run before outputting)
+
+### Per Lesson
+
+- [ ] Does the lesson have exactly one clearly stated outcome? (Part 2)
+- [ ] Does it end with an observable success check? (Part 5, final step)
+- [ ] Total reading: ≤10 minutes (~400-600 words for concept, 500-900 for tool)?
+- [ ] Total implementation: ≤15 minutes for Sam?
+- [ ] Is there any theory/content that does not directly support a concrete action? If yes → REMOVE.
+- [ ] Can Sam see a tangible benefit within the first 10 minutes?
+- [ ] Can Sam progress without asking anyone for help?
+- [ ] Is the 8-part template followed exactly and in order? (Hook → Outcome → Concept → Visual → Do-Now → Error → Reflection → Bridge)
+- [ ] Max 3 new terms introduced? Each glossed at first mention?
+
+**Additional writer-only checks:**
+
+- [ ] Em dashes: ZERO.
+- [ ] Template-label H2s: ZERO.
+
+### Per Module (when writing module-start or module-end lessons)
+
+- [ ] Does the module have exactly one milestone outcome? (30.03 §3.1)
+- [ ] Are entry conditions and success definitions clear? (30.03 §3.2)
+- [ ] Module first lesson: emotional acknowledgment present?
+- [ ] Module last lesson: win recap + share prompt present?
+- [ ] Progress visibility: "Lesson X of Y in Module N" tag present?
+- [ ] Core/optional tag present in module map?
+- [ ] Core path alone produces the milestone outcome?
+
+### Per Course (when writing lessons that affect course-level structure)
+
+- [ ] Quickstart page still accurate?
+- [ ] FAQ page covers common blockers from this lesson?
+- [ ] "What not to learn" section still accurate?
+- [ ] Skim-reading check: does a scanner instantly know "What do I get?", "What exactly do I do?", "How do I know it's done?" in under 3 seconds? (30.03 §7)
+- [ ] Is the navigation and structure identical across all lessons? (30.03 §4.7)
+- [ ] Tables ≤3 columns and mobile-friendly?
+- [ ] Does the page pass the 375px viewport test (no horizontal scroll, SVG legible)?
+
 ## Workflow
 
-1. Read `30.03-course-format-requirements-for-creators.md` §2 (the 8-part template)
+1. Read `30.03-course-format-requirements-for-creators.md` §2 (the 8-part template) + Appendix A (worked example)
 2. Read `90.11-voice-guide.md` (banned words, structural patterns)
 3. Read `40.06-sam-customer-journey-report-2026-06.md` (Sam's perspective)
-4. Read at least 2-3 existing micro-lessons for style reference. Canonical v2 examples: `form-your-founding-hypothesis-90-minute-sprint/`, `stop-specifying-features-start-outcomes/`, `vibe-coding-ceiling-signals/`, `smoke-test-build-landing-page/`, `smoke-test-wire-tracking/` (from `content/course/tech-for-non-technical-founders-2026/<slug>/index.md`)
-5. Draft the lesson frontmatter + 8-part body
-6. Self-check against all hard gates above
-7. Output the complete `index.md`
+4. Read `40.11-sam-simulation-pilot-lessons-2026-06.md` (Sam simulation learnings — 5 themes)
+5. Read BOTH pilot lessons as canonical v2 examples: `smoke-test-build-page/index.md` (tool-agnostic) + `smoke-test-wire-tracking/index.md` (gloss-heavy). Also study 30.03 Appendix A.
+6. Draft the lesson frontmatter + 8-part body
+7. Self-check against all hard gates above
+8. Self-check against the 30.03 §7 QA checklist (below)
+9. Output the complete `index.md`

@@ -5,9 +5,24 @@
 **Global skills live at:** `~/.agents/skills/<skill-name>/`
 **Local skills live at:** `.skills/<skill-name>/`
 
+**Foundational docs (read first):**
+- **PRD**: `.agent/prd/PRD.md` — formal product requirements, 5-module architecture, 15 canonical quality gates, migration phases
+- **Tasks**: `.agent/tasks.json` — 34 trackable tasks (TASK-1 through TASK-34) for the v2 migration
+- **Roadmap**: `docs/projects/2605-tech-for-non-technical-founders/20-29-strategy/20.11-course-migration-roadmap.md` — Now/Next/Later dependency-aware schedule
+- **Task Tracker**: `docs/projects/2605-tech-for-non-technical-founders/TASK-TRACKER.md` — single source of truth for all post-ship improvements
+
+**Current progress (2026-06-10):**
+- ✅ Phase 1 (Pilot): Complete — 2 v2 micro-lessons shipped (1.2a, 1.2b)
+- 🔲 Phase 0 (Mechanical quick wins): Deferred
+- 🔲 Phase 2 (Module-by-module migration): Not started — M1-M5 pending
+- 🔲 Phase 3 (Cross-cutting polish): Not started
+- 🔲 5-Sam Validation Pilot: Planned — before Phase 2 fan-out
+
 ---
 
-## Phase 1: Course Design & Architecture (NOW)
+## Phase 1: Course Design & Architecture (NOW — migration prep)
+
+**Status:** ✅ Pilot complete. Phase 2 pending 5-Sam validation gate.
 
 | Skill | Why | When to use |
 |---|---|---|
@@ -15,17 +30,17 @@
 | **customer-research** (global) | Validate what Sam actually needs, mine Reddit/G2/reviews for pain language | Before creating new lessons, when unsure if a topic belongs in the course |
 | **customer-journey-map** (global) | Map Sam's emotional arc through all 5 modules, identify friction points | Auditing the full course flow, finding gaps in the trust curve (see 40.06) |
 | **problem-statement** (global) | Frame "who is blocked, what they're trying to do, why it matters" | Sharpening the course promise, Quickstart page, module intros |
-| **course-lesson-write** (local) | Draft 8-part micro-lessons from topic briefs | Every new lesson — core workflow |
-| **course-lesson-review-sam** (local) | Sam-perspective review with 6 tests | Before every lesson commit |
-| **course-lesson-validate** (local) | Mechanical QA: build, validate, em-dash, word count, links, SVGs | Before every lesson commit |
-| **course-svg-draft** (local) | JT-brand hand-drawn SVG illustrations | When a lesson needs a visual micro-aid |
+| **course-lesson-write** (local) | Draft 8-part micro-lessons from topic briefs. References PRD, tasks.json, 30.03 spec. | Every new Phase 2 lesson — core workflow. Maps to TASK-2 through TASK-26. |
+| **course-lesson-review-sam** (local) | Sam-perspective review with 6 tests. References PRD, 30.03 spec, 40.11 simulation. | Before every lesson commit |
+| **course-lesson-validate** (local) | Mechanical QA: build, validate, em-dash, word count, links, SVGs. References PRD, 30.03 §7. | Before every lesson commit |
+| **course-svg-draft** (local) | JT-brand hand-drawn SVG illustrations. References PRD, pilot SVGs. | When a lesson needs a visual micro-aid |
 | **task-breakdown** (global) | Break overwhelming tasks into manageable steps | Migrating modules one-by-one, planning the Phase 2 schedule |
 | **product-marketing-context** (global) | Creates reusable context doc — course product, ICP (Sam), positioning — that every marketing skill references | BEFORE any copywriting, SEO, or landing page work. Foundational. Creates `.agents/product-marketing-context.md`. |
-| **senior-pm** (global) | Portfolio mgmt, quantitative risk analysis, resource optimization, stakeholder alignment, executive reporting | Organizing project artifacts, auditing doc health, tracking milestones across phases |
-| **prd-creator** (global) | Creates structured PRDs + generates implementation task lists in JSON | Formalizing course modules as structured requirement docs with trackable task lists |
-| **roadmap-planning** (global) | Strategic roadmap, prioritization, epic definition, sequencing | Turning the TASK-TRACKER migration schedule into a visual roadmap with dependencies |
+| **senior-pm** (global) | Portfolio mgmt, quantitative risk analysis, resource optimization, stakeholder alignment, executive reporting | Organizing project artifacts, auditing doc health, tracking milestones across phases. See 40.10 health report. |
+| **prd-creator** (global) | Creates structured PRDs + generates implementation task lists in JSON | Already invoked — PRD at `.agent/prd/PRD.md`, tasks at `.agent/tasks.json`. Re-invoke if scope changes. |
+| **roadmap-planning** (global) | Strategic roadmap, prioritization, epic definition, sequencing | Already invoked — roadmap at `20.11-course-migration-roadmap.md`. Re-invoke if schedule changes. |
 
-## Phase 2: Content Creation & Voice (NOW — parallel with Phase 1)
+## Phase 2: Content Creation & Voice (NOW — gated behind 5-Sam pilot)
 
 | Skill | Why | When to use |
 |---|---|---|
@@ -99,10 +114,24 @@
 
 These skills should be invoked NOW during the micro-lesson migration:
 
-1. **course-designer** — validate that the 5-module structure with 20-25 micro-lessons achieves the right learning objectives by Bloom's taxonomy
-2. **customer-research** — mine Reddit/G2/forums for Sam's exact pain language to sharpen lesson hooks
-3. **problem-statement** — sharpen the course promise on the landing page and Quickstart
-4. **copy-editing** — run on existing v1 chapters being migrated to ensure voice consistency
+1. **course-lesson-write** — Draft M1 lessons per TASK-2 through TASK-5 (after 5-Sam pilot gate clears)
+2. **5-Sam Validation Pilot** — Recruit 3-5 real founders, watch Clarity recordings, validate simulation predictions before Phase 2 fan-out
+3. **customer-research** — mine Reddit/G2/forums for Sam's exact pain language to sharpen lesson hooks
+4. **course-designer** — validate that the 5-module structure with 24-28 micro-lessons achieves the right learning objectives by Bloom's taxonomy
+
+## Task-Awareness Quick Reference
+
+| Task ID | Action | Skill to invoke |
+|---|---|---|
+| TASK-1 | Verify prerequisites (Hugo, validators, spec access) | (manual) |
+| TASK-2 | M1.1 Founding Hypothesis → 2 micro-lessons | course-lesson-write → course-lesson-review-sam → course-lesson-validate |
+| TASK-3 | M1.2b Smoke Test Run → 1 micro-lesson | course-lesson-write → course-lesson-review-sam → course-lesson-validate |
+| TASK-4 | M1.3 Price Hypothesis → 1 micro-lesson | course-lesson-write → course-lesson-review-sam → course-lesson-validate |
+| TASK-5 | M1 bridge chain + exit gate | (manual verification) |
+| TASK-6..26 | M2-M5 migration (21 tasks) | course-lesson-write → course-lesson-review-sam → course-lesson-validate |
+| TASK-27..34 | Phase 3 polish (8 tasks) | (cross-cutting audits) |
+
+See `.agent/tasks.json` for full task index with spec file paths.
 
 ## Skill Import Status
 
