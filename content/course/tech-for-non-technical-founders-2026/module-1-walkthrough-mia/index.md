@@ -75,12 +75,7 @@ Her weakest Growth blank was partially answered: parents search by specialty, no
 
 **Action:** She set up a Stripe account on Friday night, uploaded her ID, and was approved by Tuesday. She created a Payment Link at "$99 founding member  --  4 months access at $25/mo equivalent" (one-time, per the lesson's one-time advice). Button copy: "Find your kid's specialist  --  $99 founding member rate." She added a "Full refund within 30 days if we don't ship" line in the footer. Below the button: "Not ready? Join the free waitlist instead."
 
-**Results:**
-- Visit-to-Stripe-click: 6% (18 of 300 visitors clicked the price)
-- Stripe-click-to-completion: 33% (6 of 18 completed the $99 payment)
-- Email waitlist signups: 7% (21 emails, many from visitors who saw the price and clicked "not ready" instead)
-
-**Result:** 6 completed payments at $99 each is a strong price signal for a pre-product page. Her Money lens was wrong  --  parents pay more than $25. She notes this for Module 2 interviews: ask parents what they currently spend on tutoring, not what they'd pay for a marketplace.
+**Result:** 6% of visitors clicked the Stripe link, 6 completed payments at $99 each  --  a strong price signal for a pre-product page. Her Money lens was wrong  --  parents pay more than $25. She notes this for Module 2 interviews: ask parents what they currently spend on tutoring, not what they'd pay for a marketplace.
 
 ---
 
