@@ -1,7 +1,7 @@
 ---
 title: "1.2c · Smoke Test: Run It and Read the Signal"
 aliases: ["/blog/smoke-test-landing-page-300-dollar-validation/"]
-description: "Put your landing page in front of 300 cold strangers, read the conversion rate against the go/iterate/kill table, and get the cheapest demand signal before you build."
+description: "Put your landing page in front of 300 cold strangers and read the conversion rate against the go/iterate/kill table."
 date: 2026-05-13
 draft: true
 course_chapter: false
@@ -54,11 +54,13 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 
 ---
 
-1. Install your channel's pixel if you haven't already. Open your ad platform's Events Manager (or equivalent), copy the pixel snippet, paste in your page builder's head-tag field -- same process as Clarity and GA4 in Lesson 1.2b. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
-2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
-3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
-4. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
-5. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
+> **Launch:**
+>
+> 1. Install your channel's pixel if you haven't already. Open your ad platform's Events Manager (or equivalent), copy the pixel snippet, paste in your page builder's head-tag field -- same process as Clarity and GA4 in Lesson 1.2b. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
+> 2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
+> 3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
+> 4. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
+> 5. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
 
 | Conversion rate from cold traffic | Decision | What to do |
 |---|---|---|

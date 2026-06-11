@@ -73,11 +73,13 @@ Score each lens 1-5. Be honest -- this is for you, not an investor deck.
 
 ---
 
-1. Open a blank note. Write the Mad Libs frame at the top.
-2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
-3. Score your sentence using the four lenses above.
-4. **✅ Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
-5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2a, 1.2c, 1.3, and every Module 2 interview.
+> **Write:**
+>
+> 1. Open a blank note. Write the Mad Libs frame at the top.
+> 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
+> 3. Score your sentence using the four lenses above.
+> 4. **✅ Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
+> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2a, 1.2c, 1.3, and every Module 2 interview.
 
 ---
 

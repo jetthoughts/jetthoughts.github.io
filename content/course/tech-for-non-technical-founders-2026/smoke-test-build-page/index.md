@@ -1,6 +1,6 @@
 ---
 title: "Build Your Smoke-Test Page with an AI Page Builder"
-description: "Turn your Founding Hypothesis into a live landing page URL. AI page builder drafts the page; tighten 4 copy blocks, swap one image, publish, test on one stranger."
+description: "Turn your Founding Hypothesis into a live landing page URL using an AI page builder. Tighten 4 copy blocks, swap one image, publish, test on one stranger."
 date: 2026-06-08
 draft: true
 course_chapter: false

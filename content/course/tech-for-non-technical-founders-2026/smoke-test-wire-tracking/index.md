@@ -55,7 +55,7 @@ The 3 numbers you will read in Lesson 1.2c:
 | CTA (call-to-action) click | Visitor clicked the email-form button - measures headline + value-prop strength |
 | Form submit | Email address actually submitted - measures friction |
 
-Conversion rate = form submits ÷ page views. That is the number your Founding Hypothesis is judged against.
+Conversion rate = form submits ÷ page views. That is the number your hypothesis is judged against.
 
 ![Three tracking snippets stacked vertically: Microsoft Clarity (heatmap icon), ad-platform pixel (target icon), GA4 (chart icon), with arrows pointing to a landing page wireframe showing where each snippet fires (page view, CTA click, form submit)](tracking-snippets.svg)
 
