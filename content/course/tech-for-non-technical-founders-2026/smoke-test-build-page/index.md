@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 1 · Lesson 1.2a** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Lesson 1.2a · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** your Founding Hypothesis sentence from [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (the one-sentence `if [customer] solves [problem] with [approach]...` you wrote)
 >
@@ -27,7 +27,7 @@ related_posts: false
 
 ---
 
-You finished [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with a one-sentence hypothesis. To find out if anyone wants it, you need it live as a URL where strangers can sign up.
+Lesson 1.1 ended with your one-sentence hypothesis. To find out if anyone wants it, get it live as a URL where strangers can sign up.
 
 After this lesson you will be able to: **publish a smoke-test page that names your customer and their outcome in 3 seconds, then run a one-stranger clarity test on it.**
 
@@ -35,14 +35,14 @@ After this lesson you will be able to: **publish a smoke-test page that names yo
 
 A **smoke-test page** is one URL that describes your unbuilt product and asks visitors for an email if they want it. You are testing demand, not feasibility - "would strangers sign up?" not "would my friends use it?"
 
-Any **AI page builder** will draft a working page from your hypothesis sentence in ~60 seconds. The popular free options: **[Mixo](https://www.mixo.io/)** (no credit card, fastest setup), **[Manus AI](https://manus.im/)** (free tier, more layout control), **[Durable](https://durable.co/)** (free trial, polished templates). This lesson uses Mixo as the worked example because it has the fewest steps; the workflow is identical on the others - generate, tighten, publish. Pick whichever loads in your country.
+Any **AI page builder** drafts a working page from your hypothesis in ~60 seconds. Popular free options: **[Mixo](https://www.mixo.io/)** (fastest setup), **[Manus AI](https://manus.im/)** (more layout control), **[Durable](https://durable.co/)** (polished templates). This lesson walks through Mixo; the workflow is identical on the others.
 
-The page itself has four copy blocks that decide whether it converts:
+The page has four copy blocks that decide whether it converts:
 
 - The **headline** names the customer and the outcome in one line. "Solo chiropractors: resubmit denied claims in 30 seconds" works because a visitor knows in 3 seconds whether the page is for them. "Smart Solutions for Modern Businesses" tells them nothing.
 - The **sub-headline** explains how, in one line. The mechanism. "One click submits to your insurance portal" beats "AI-powered automation."
 - The **3-4 value props** describe what the visitor gets, in their words. "Stop calling 8 tutoring centers" is an outcome a parent wants; "Calendar integration" is a feature they read as noise.
-- The **CTA + footer** is "Get on the waitlist" plus a "Coming soon" line in the footer. (**CTA** = call to action, the button you want the visitor to click.) Never "Buy now" - you cannot legally sell something that does not exist, and the wrong button discredits the rest of the page.
+- The **CTA + footer** is "Get on the waitlist" plus a "Coming soon" line in the footer. (**CTA** = call to action, the button you want the visitor to click.) Never use "Buy now." You cannot legally sell something that does not exist yet.
 
 ![Smoke-test page anatomy showing 4 labeled blocks - headline names customer plus outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA button with coming-soon footer line](page-anatomy.svg)
 
@@ -55,14 +55,14 @@ Six actions, ~45 minutes total. The walkthrough uses Mixo's UI labels; the equiv
 2. Tighten the 4 copy blocks the builder drafted. Click each block in the editor:
     - **Headline:** name a specific person plus a specific outcome. If the draft is generic, paste your hypothesis back into the idea box with 5-10 more concrete words and regenerate (in Mixo: re-edit the idea box at the top, then click Generate again).
     - **Sub-headline:** explain how, in one line. The mechanism.
-    - **Value props:** rewrite each as an outcome the customer wants, not a feature name.
+    - **Value props:** Mixo drafts 3-4 of these as a row below the sub-headline (often labeled "Features" or "Why us"). Click each and rewrite as a customer outcome ("Stop calling 8 tutoring centers"), not a feature ("Calendar integration"). If the drafts read generic, prompt **ChatGPT** or **Claude**: *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output into Mixo.
     - **CTA:** change the button label to "Get on the waitlist." Add a "Coming soon. Email reserves your spot at launch." line in the footer (AI builders do not add this by default).
 
-3. Swap the hero image. The builder will drop in a generic stock graphic. Replace it with an image of the customer's current pain (a parent on the phone at 9pm, a stack of denied insurance claims). Do not use a product mockup of something you have not built - a glossy screenshot of an app that does not exist reads as a lie. Short on time? Delete the image. The headline carries the page.
+3. Swap the hero image. The builder drops in a generic stock graphic. Replace it with the customer's current pain (a parent on the phone at 9pm; a stack of denied insurance claims). Easiest path: prompt **ChatGPT**, **Claude**, or **Gemini** (any free account works) with *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* Save the result and upload to Mixo. Don't want to bother? Delete the image - the headline carries the page. Never use a product mockup of something you have not built; a glossy screenshot of an app that does not exist reads as a lie.
 
-4. Strip the extras the builder added. Delete any Pricing table, FAQ, Testimonials, or "How it works" section that was not in your hypothesis. Every extra block pulls the visitor's eye off the email field.
+4. Strip the extras the builder added (Pricing, FAQ, Testimonials, "How it works") that were not in your hypothesis. Every extra block pulls the visitor's eye off the email field.
 
-5. Publish. Click the builder's **Publish** button (top right in Mixo, similar position in Manus AI and Durable). Mixo gives you a free URL like `yourname.mixo.io` - no domain purchase needed for the smoke test. Open the URL in an **incognito window** (Chrome: `Cmd/Ctrl+Shift+N`; Safari: same shortcut; Edge: `Ctrl+Shift+N`; Firefox: `Cmd/Ctrl+Shift+P` - a private browser tab that ignores your login and cache, so you see what a fresh visitor sees). Confirm the page loads.
+5. Publish. Click the builder's **Publish** button (top right in Mixo, similar position in Manus AI and Durable). Mixo gives you a free URL like `yourname.mixo.io` - no domain purchase needed for the smoke test. Open the URL in an **incognito window** (`Cmd/Ctrl+Shift+N` in Chrome/Safari/Edge; `Cmd/Ctrl+Shift+P` in Firefox - a private tab that ignores your login and cache, so you see what a fresh visitor sees). Confirm the page loads.
 
 6. Send the URL to ONE real person who has not seen your work. Any stranger works; they do not need to be your target customer. (This tests headline clarity, not buying interest.) Ask: "In 3 seconds, who is this page for and what does it do?" **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
 
@@ -72,7 +72,7 @@ Six actions, ~45 minutes total. The walkthrough uses Mixo's UI labels; the equiv
 
 **If the builder's draft reads generic after 2 regenerations.** Your hypothesis `[problem]` blank is too vague. Same fix - back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/).
 
-**If no AI builder fits your idea, or you want template control over AI generation.** Drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop, free for 3 sites; the fourth site costs $19/year). Use the same 6-step workflow but write each copy block yourself first. Prompt Claude or ChatGPT with this and paste the output into Carrd:
+**If no AI builder fits your idea, or you want template control over AI generation.** Drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop, free for 3 sites). Use the same 6-step workflow but write each copy block yourself first. Prompt Claude or ChatGPT and paste the output into Carrd:
 
 ```text
 Translate this hypothesis into 6 landing-page elements
