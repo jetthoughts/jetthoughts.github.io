@@ -50,23 +50,17 @@ The page has four copy blocks that decide whether it converts:
 
 ---
 
-Six actions, ~45 minutes total. The walkthrough uses Mixo's UI labels; the equivalent button in Manus AI or Durable is in roughly the same place.
+> **Build (45 minutes):**
+>
+> 1. Sign up at [mixo.io](https://www.mixo.io/) (free, email only). Paste your hypothesis, click **Generate**. ~60 seconds.
+> 2. Tighten the 4 copy blocks above: headline names customer + outcome, value props rewrite as outcomes ("Stop calling 8 centers" not "Calendar integration"), CTA → "Get on the waitlist." Add "Coming soon. Email reserves your spot at launch." to the footer (AI builders don't add this). Strip the extras the builder added (Pricing, FAQ, Testimonials).
+> 3. If the draft reads generic, prompt ChatGPT or Claude: *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output.
+> 4. Swap the hero image. Prompt ChatGPT, Claude, or Gemini: *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* Save and upload. Or delete it — the headline carries the page. **Never** use a product mockup of something you have not built.
+> 5. Click **Publish**. Mixo gives a free URL like `yourname.mixo.io`. Open it in an incognito window (`Cmd/Ctrl+Shift+N` in Chrome/Safari/Edge, `Cmd/Ctrl+Shift+P` in Firefox). Confirm the page loads.
 
-1. Generate the draft. Sign up at [mixo.io](https://www.mixo.io/) (free, email only). Paste your Founding Hypothesis sentence into the "Describe your idea" box, click **Generate**, wait ~60 seconds. The builder produces a page with all four copy blocks plus a placeholder **hero image** (the big graphic at the top of the page).
+Send the URL to **ONE real person** who has not seen your work. Any stranger works (they don't need to be your target customer — this tests headline clarity, not buying interest). Ask: "In 3 seconds, who is this page for and what does it do?"
 
-2. Tighten the 4 copy blocks the builder drafted. Click each block in the editor:
-    - **Headline:** name a specific person plus a specific outcome. If the draft is generic, paste your hypothesis back into the idea box with 5-10 more concrete words and regenerate (in Mixo: re-edit the idea box at the top, then click Generate again).
-    - **Sub-headline:** explain how, in one line. The mechanism.
-    - **Value props:** Mixo drafts 3-4 of these as a row below the sub-headline (often labeled "Features" or "Why us"). Click each and rewrite as a customer outcome ("Stop calling 8 tutoring centers"), not a feature ("Calendar integration"). If the drafts read generic, prompt **ChatGPT** or **Claude**: *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each: [PASTE HYPOTHESIS]"* and paste the output into Mixo.
-    - **CTA:** change the button label to "Get on the waitlist." Add a "Coming soon. Email reserves your spot at launch." line in the footer (AI builders do not add this by default).
-
-3. Swap the hero image. The builder drops in a generic stock graphic. Replace it with the customer's current pain (a parent on the phone at 9pm; a stack of denied insurance claims). Easiest path: prompt **ChatGPT**, **Claude**, or **Gemini** (any free account works) with *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* Save the result and upload to Mixo. Don't want to bother? Delete the image - the headline carries the page. Never use a product mockup of something you have not built; a glossy screenshot of an app that does not exist reads as a lie.
-
-4. Strip the extras the builder added (Pricing, FAQ, Testimonials, "How it works") that were not in your hypothesis. Every extra block pulls the visitor's eye off the email field.
-
-5. Publish. Click the builder's **Publish** button (top right in Mixo, similar position in Manus AI and Durable). Mixo gives you a free URL like `yourname.mixo.io` - no domain purchase needed for the smoke test. Open the URL in an **incognito window** (`Cmd/Ctrl+Shift+N` in Chrome/Safari/Edge; `Cmd/Ctrl+Shift+P` in Firefox - a private tab that ignores your login and cache, so you see what a fresh visitor sees). Confirm the page loads.
-
-6. Send the URL to ONE real person who has not seen your work. Any stranger works; they do not need to be your target customer. (This tests headline clarity, not buying interest.) Ask: "In 3 seconds, who is this page for and what does it do?" **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
+> **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix — rewrite it and retest.
 
 ---
 
@@ -74,7 +68,7 @@ Six actions, ~45 minutes total. The walkthrough uses Mixo's UI labels; the equiv
 
 **If the builder's draft reads generic after 2 regenerations.** Your hypothesis `[problem]` blank is too vague. Same fix - back to [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/).
 
-**If no AI builder fits your idea, or you want template control over AI generation.** Drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop, free for 3 sites). Use the same 6-step workflow but write each copy block yourself first. Prompt Claude or ChatGPT and paste the output into Carrd:
+**If no AI builder fits your idea, or you want template control over AI generation.** Drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop, free for 3 sites). Use the same workflow but write each copy block yourself first. Prompt Claude or ChatGPT and paste the output into Carrd:
 
 ```text
 Translate this hypothesis into 6 landing-page elements
