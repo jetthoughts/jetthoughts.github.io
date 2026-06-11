@@ -6,7 +6,7 @@ draft: true
 slug: hypothesis-sprint-full
 ---
 
-> **Reference companion to [Lesson 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)**  --  this page contains the full 6-step sprint, 4-lens scoring deep-dive, AI research prompts, and worked examples. Read the micro-lesson first for the minimum effective path; return here when you want the full methodology.
+> **Reference companion to [Lesson 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)**  --  the full 6-step sprint, 4-lens scoring methodology, AI research prompts, and worked examples. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
 
 ---
 
@@ -55,7 +55,7 @@ Sum each approach. Pick the highest sum. The lens that scored lowest across the 
 
 **The PASS bar:** ≥14/20 across the four lenses with no individual lens below 2. Pre-revenue founders leaving Money blank: the bar drops to ≥11/15 across the other three, same "no lens below 2" rule.
 
-**The routing rule:** The lowest-scoring lens is the part of your hypothesis the next test must attack. Money lowest → smoke test is about price. Customer lowest → interviews are about real pain. Pragmatic lowest → feasibility check first. Growth lowest → ad-test the channel before the build.
+**The routing rule:** The lowest-scoring lens is the part of your hypothesis the next test must attack. Money and Customer are the two that matter first  --  if Money is lowest, your smoke test is about price; if Customer is lowest, your interviews need to find real pain. Pragmatic lowest? Feasibility check. Growth lowest? Ad-test the channel before the build.
 
 ### Step 5: Write the Founding Hypothesis
 
@@ -104,7 +104,9 @@ A founder building a vendor-management tool for procurement teams scored her app
 | Growth | 4/5 | Procurement people cluster in the same 3 newsletters |
 | Money | 1/5 | Buyers expected under $150/mo; unit economics needed $600/mo |
 
-The Money lens scored 1 because procurement teams expected under $150/mo and her unit economics needed $600/mo. She designed her landing-page CTA around the price point  --  not the feature set  --  and learned quickly that procurement at that price was a no. She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonable, re-scored Money to 4, and ran the test again. The pivot happened before she wrote a line of product code.
+The Money lens scored 1 because procurement teams expected under $150/mo and her unit economics needed $600/mo. She designed her landing-page CTA around the price point  --  not the feature set  --  and learned quickly that procurement at that price was a no.
+
+She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonable, re-scored Money to 4, and ran the test again. The pivot happened before she wrote a line of product code.
 
 ---
 
