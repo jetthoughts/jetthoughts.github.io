@@ -60,19 +60,30 @@ Five blanks. One sentence. The discipline is filling all five with specifics, no
 
 ---
 
+### How to Score Your Hypothesis
+
+Score each lens 1-5. Be honest -- this is for you, not an investor deck.
+
+| Lens | Question (score 1-5) |
+|---|---|
+| **Customer** | Would they pick this on a Friday afternoon between meetings? |
+| **Pragmatic** | Can you ship something with what you have today? |
+| **Growth** | How does the customer hear about you, and how many are there? |
+| **Money** | Do the unit economics work? (Leave blank if pre-revenue.) |
+
+**PASS bar:** ≥14/20 total (or ≥11/15 if Money is blank). No single lens below 2.
+
+---
+
 1. Open a blank note. Write the Mad Libs frame at the top.
 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
-3. Score your sentence 1-5 across four lenses:
-   - **Customer**  --  would they pick this on a Friday afternoon between meetings?
-   - **Pragmatic**  --  can you ship something with what you have today?
-   - **Growth**  --  how does the customer hear about you, and how many are there?
-   - **Money**  --  do the unit economics work? (Leave blank if pre-revenue.)
-4. **✅ Success check:** your total is ≥14/20 (or ≥11/15 if Money is blank) AND no lens scores below 2.
+3. Score your sentence using the four lenses above.
+4. **✅ Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2a, 1.2c, 1.3, and every Module 2 interview.
 
 ---
 
-**If your sentence scores below 14 or has a lens at 1.** **Why:** a blank is still a category, not a specific noun. **Fix:** find a verbatim quote from a real person complaining about this problem (Reddit, G2 reviews, or a conversation you had). Replace your [problem] blank with their exact words. If you don't have a quote yet, leave the [problem] blank as a placeholder and complete 1.2a  --  you'll fill it after Module 2 interviews.
+**If your sentence scores below 14 or has a lens at 1.** **Why:** a blank is still a category, not a specific noun. **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). Replace your [problem] blank with their exact words. If you don't have a quote yet, leave the [problem] blank as a placeholder and complete 1.2a  --  you'll fill it after Module 2 interviews.
 
 **If every blank is specific but the sentence still sounds generic.** **Why:** you're writing in market-research language instead of customer language. **Fix:** read the sentence aloud to one stranger. If they say "wait, can you say that again," rewrite the blank they tripped on. Three reads is normal.
 

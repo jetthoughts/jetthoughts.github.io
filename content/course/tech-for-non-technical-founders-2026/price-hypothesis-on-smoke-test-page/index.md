@@ -62,7 +62,7 @@ Pick one pattern. Do not A/B test  --  150 visits each on a $300 budget can't di
 
 1. **Start Stripe verification tonight.** Sign up at [stripe.com](https://stripe.com) (free). Stripe needs your bank account + tax ID before accepting live payments  --  usually 1-3 business days. Start the weekend before launch.
 2. Create a Payment Link. Dashboard → Payments → Payment Links → New link. Add a one-time product at your hypothesis price. Use one-time (not subscription)  --  "founding member" converts better on a pre-product page.
-3. Set the after-payment redirect to a thank-you page. On Carrd: create a hidden section and use its anchor URL (`yourpage.carrd.co/#thanks`).
+3. Set the after-payment redirect to a thank-you page. On [Carrd](https://carrd.co/): create a hidden section and use its anchor URL (`yourpage.carrd.co/#thanks`).
 4. Add a refund line in your footer: "Full refund within 30 days if we don't ship." Legal, honest, lowers click friction.
 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the free waitlist instead."
 6. **✅ Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
@@ -85,7 +85,7 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 >
 > **If blocked:** see "If this fails" above. Module 1 closes here. Before Module 2, you should have: hypothesis (1.1), landing page (1.2a), tracking (1.2b), conversion data (1.2c), and a price signal (1.3). Missing one? Go back to that lesson.
 >
-> **What M1 cost you:** ~$325-625 total ($300-600 for Meta/Reddit ads + optional Perplexity Pro $20/mo; all other tools used free tiers). If you're B2B on LinkedIn, budget $1,800-6,600. If you used the $0 organic path from the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/), your cost was $0. No hidden fees beyond ad spend.
+> **What M1 cost you:** ~$325-625 total ($300-600 for Meta/Reddit ads + optional [Perplexity Pro](https://www.perplexity.ai/) $20/mo; all other tools used free tiers). If you're B2B on LinkedIn, budget $1,800-6,600. If you used the $0 organic path from the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/), your cost was $0. No hidden fees beyond ad spend.
 >
 > **Deeper reference:** [Full Stripe setup walkthrough + pricing revisit moments + threshold bands](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/)
 
