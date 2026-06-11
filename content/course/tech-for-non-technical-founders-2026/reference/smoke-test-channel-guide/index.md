@@ -80,9 +80,22 @@ Use one of these, run it the same way until the numbers stabilize, read the resu
 
 ---
 
+## Before Your First Campaign: Create the Ad Account
+
+You need an ad account before you can create a campaign. Each platform has a one-time setup flow  --  plan 60-90 minutes for your first one. (Approval times: see [Ad-Account Setup Timing](#ad-account-setup-timing) above.)
+
+- **Meta:** Go to [business.facebook.com](https://business.facebook.com/) → Create account → verify your business (email or domain) → create ad account → add payment method.
+- **Google Ads:** Go to [ads.google.com](https://ads.google.com/) → Sign up → enter billing info → create a dummy campaign to complete account setup (pause it immediately  --  this is NOT your real smoke-test campaign; that comes in Lesson 1.2c).
+- **LinkedIn:** Go to [linkedin.com/campaignmanager](https://www.linkedin.com/campaignmanager/) → create account → add company page → add payment method.
+- **Reddit Ads:** Go to [ads.reddit.com](https://ads.reddit.com/) → sign up → add payment method.
+
+Do this the weekend before you plan to launch. If approval takes longer, you'll still hit your Monday start.
+
+---
+
 ## Campaign Creation Recipes
 
-You picked your channel above. Here are the settings to use when you create your first campaign. Each ad platform changes its button labels regularly, so these recipes name the *what* and *why*  --  find the matching fields in your platform's campaign creation flow.
+You picked your channel above and created your ad account. Here are the settings to use when you create your first campaign. Each ad platform changes its button labels regularly, so these recipes name the *what* and *why*  --  find the matching fields in your platform's campaign creation flow.
 
 **Budget note:** These recipes use conservative starter budgets for your first campaign. To hit 300 visits, scale the daily budget up using the CPC rates in the channel table above. Example: at Meta's $0.70-$1.90 CPC, 300 visits costs $210-$570 total  --  aim for $40-80/day over 5-7 days.
 

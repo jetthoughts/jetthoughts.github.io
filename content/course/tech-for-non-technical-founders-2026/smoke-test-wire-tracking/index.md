@@ -41,7 +41,7 @@ A **tracking snippet** is a small block of code (HTML or JavaScript) that you co
 You need two things regardless of which ad channel you pick in [Lesson 1.2c](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/):
 
 - **[Microsoft Clarity](https://clarity.microsoft.com/)** (free)  --  session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
-- **[Google Analytics 4](https://analytics.google.com/)** (free)  --  your analytics foundation. Tracks page views, clicks, and form submits. If you later pick Google Ads in 1.2c, GA4 links directly to it  --  no separate pixel needed.
+- **[Google Analytics 4](https://analytics.google.com/)** (free)  --  your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the Measurement ID, paste it into your builder's head-tag field. If you later pick Google Ads in 1.2c, GA4 links directly to it  --  no separate pixel needed.
 
 **Your channel-specific pixel** (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel) gets installed in Lesson 1.2c after you pick your channel  --  same process (copy snippet, paste in head-tag), under one minute.
 

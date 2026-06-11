@@ -56,7 +56,7 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 
 > **Launch:**
 >
-> 1. Install your channel's pixel if you haven't already. Open your ad platform's Events Manager (or equivalent), copy the pixel snippet, paste in your page builder's head-tag field -- same process as Clarity and GA4 in Lesson 1.2b. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
+> 1. Install your channel's pixel if you haven't already. Open your ad platform's pixel manager: **Meta** → Events Manager, **LinkedIn** → Campaign Manager, **Reddit** → Ads Manager. Copy the pixel snippet, paste in your page builder's head-tag field -- same process as Clarity and GA4 in Lesson 1.2b. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
 > 2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
 > 3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
 > 4. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
