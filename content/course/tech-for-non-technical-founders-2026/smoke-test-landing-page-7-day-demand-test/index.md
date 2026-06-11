@@ -23,11 +23,11 @@ related_posts: false
 
 > **Module 1 · Lesson 1.2c · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live landing page with tracking installed (from [Lesson 1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/))
+> **Input:** a live landing page with Clarity + GA4 installed (from [Lesson 1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/))
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 >
-> **Progress:** M1 · 4 of 5 · Results so far: hypothesis sentence + live landing page + tracking installed
+> **Progress:** M1 · 4 of 5 · Results so far: hypothesis sentence + live landing page + Clarity + GA4 installed
 
 ---
 
@@ -50,12 +50,15 @@ After this lesson you will be able to: **run a cold-traffic smoke test on your l
 
 ![A landing page with ad traffic arrows pointing to it, a tracking dashboard showing conversion numbers, and a decision arrow leading to go/iterate/kill](smoke-test-signal.svg)
 
+> **Pixel first:** Install your channel's pixel before launching (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel -- same copy-paste as Clarity/GA4 in [1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)). Google Ads users: GA4 is already your pixel, skip this step.
+
 ---
 
-1. Verify your ad account is approved and payment method attached. If not, set it up tonight.
-2. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
-3. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
-4. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
+1. Install your channel's pixel if you haven't already. Open your ad platform's Events Manager (or equivalent), copy the pixel snippet, paste in your page builder's head-tag field -- same process as Clarity and GA4 in Lesson 1.2b. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
+2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
+3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
+4. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis  --  not an optimized funnel.
+5. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
 
 | Conversion rate from cold traffic | Decision | What to do |
 |---|---|---|
@@ -85,7 +88,7 @@ Open your tracking dashboard. Write down the number that surprised you most  -- 
 >
 > **If blocked:** see "If this fails" above. If the ad budget is out of reach, use the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)  --  slower but real.
 >
-> **Deeper reference:** [Full channel budgets + campaign creation recipes + ad account setup timing + B2B budget alternatives](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)
+> **Deeper reference:** [Full channel budgets + campaign creation recipes + pixel install + ad account setup timing + B2B budget alternatives](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/)
 
 ---
 
