@@ -23,19 +23,19 @@ related_posts: false
 >
 > **Input:** your Founding Hypothesis sentence from [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (the one-sentence `if [customer] solves [problem] with [approach]...` you wrote)
 >
-> **Output:** a clear landing page that strangers understand at a glance
+> **Output:** a live landing page that explains your offer to potential customers
 >
 > **Progress:** M1 · 2 of 5 · Results so far: hypothesis sentence
 
 ---
 
-"Just validate it" is the advice everyone gives without showing the how. The Founding Hypothesis from Lesson 1.1 becomes a URL where strangers either sign up or scroll past - and you learn which in 3 seconds.
+"Just validate it" is the advice everyone gives without showing the how. This lesson turns your hypothesis into a landing page that does the explaining - so strangers get your idea without you in the room.
 
-After this lesson you will be able to: **publish a smoke-test page that a stranger reads once and can tell you who it's for and what it does - instead of "um, what is this?"**
+After this lesson you will be able to: **publish a landing page so clear that strangers grasp your idea in 3 seconds.**
 
 ---
 
-A **smoke-test page** is one URL that describes your unbuilt product and asks visitors for an email if they want it. You are testing demand, not feasibility - "would strangers sign up?" not "would my friends use it?"
+A **smoke-test page** is one URL that describes your unbuilt product and asks visitors for an email if they want it. This lesson builds the page so strangers can understand it. Tracking goes in 1.2b; the demand test runs in 1.2c (would strangers actually sign up?).
 
 An **AI page builder** drafts a working page from your hypothesis in ~60 seconds. This lesson uses **[Mixo](https://www.mixo.io/)** (fastest setup); most AI page builders are interchangeable for this workflow.
 
