@@ -35,7 +35,7 @@ sequence:
     goal: "Publish a smoke-test page from your hypothesis in under an hour, then run a one-stranger clarity test."
 
   - slug: smoke-test-wire-tracking
-    title: "1.2b · Wire Tracking Before You Spend a Dollar"
+    title: "1.2b · Wire Tracking Before Traffic Starts"
     module: "Chapter 1.2b"
     goal: "Install Microsoft Clarity and your ad-platform pixel before you spend a cent on traffic."
 

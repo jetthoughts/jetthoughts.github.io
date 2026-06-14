@@ -1,5 +1,5 @@
 ---
-title: "Build Your Smoke-Test Page with an AI Page Builder"
+title: "1.2a · Build Your Smoke-Test Page with an AI Page Builder"
 description: "Turn your Founding Hypothesis into a live landing page URL using an AI page builder. Tighten 4 copy blocks, swap one image, publish, test on one stranger."
 date: 2026-06-08
 draft: true
@@ -85,7 +85,7 @@ Read your published page out loud as if you were the visitor. The sentence where
 >
 > **You have now:** Founding Hypothesis (1.1) + a clear landing page (1.2a). Demand is the next test.
 >
-> **Next:** [1.2b · Wire Tracking Before You Spend a Dollar](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/) - installs tracking on the URL you just built, so you can see what visitors do once traffic starts.
+> **Next:** [1.2b · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/) - installs tracking on the URL you just built, so you can see what visitors do once traffic starts.
 >
 > **If blocked:** see "If this fails" above.
 

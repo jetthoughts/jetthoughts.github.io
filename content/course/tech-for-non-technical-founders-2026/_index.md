@@ -131,7 +131,7 @@ Investors don't fund ideas. They fund evidence. Each artifact answers a question
 - [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
   - Before you write the hypothesis: [stress-test the blanks with AI](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).
 - [**1.2a** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
-- [**1.2b** · Wire Tracking Before You Spend a Dollar](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
+- [**1.2b** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 - [**1.2c** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
