@@ -106,6 +106,9 @@ Investors ask the same six questions every time. The folder answers all six.
 - [**1.2b** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 - [**1.2c** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
+- 📖 **See it in action:** [Mia builds TutorMatch - a full Module 1 walkthrough](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+
+> **Walk away with:** a Founding Hypothesis, demand data on 300 real strangers, and a price test. Most idea-stage founders skip the demand test and build first.
 
 ### Module 2 - Validate the Problem
 *Output: 10 Mom Test interviews + a Lovable prototype shown to 5 of them.*
@@ -118,12 +121,16 @@ Investors ask the same six questions every time. The folder answers all six.
 - [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (template: [Outreach Sequence](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/); after interviews: [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/))
 - [**2.4** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 
+> **Walk away with:** 10 customer interviews scored against a rubric and a prototype shown to 5 of them. Most founders rely on "I asked some friends"; you'll have something that holds up in an investor meeting.
+
 ### Module 3 - Design from Evidence
 *Output: One-page Product Brief drafted from interview transcripts.*
 *Start here if you've validated the problem but don't have a one-page Product Brief.*
 
 - [**3.1** · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) (template: [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/))
 - [**3.2** · Quality-check Your Brief: Features to Outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
+
+> **Walk away with:** a one-page Product Brief constrained by customer language. Most founders write feature-wishlists; you'll write what users actually told you.
 
 *Course glossary (reference, not in the linear path):* [Five Tech Words to Stop Nodding At](/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/).
 
@@ -138,6 +145,8 @@ Investors ask the same six questions every time. The folder answers all six.
 - [**4.4** · OPTIONAL - Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)  
   *Skip on first pass. Come back when your no-code build hits a wall - a feature you can't add, a query you can't tune, an auth flow Lovable can't handle.*
 
+> **Walk away with:** a live MVP at a real URL, ownership locked Day 1, no engineer on payroll. Most non-technical founders are told they can't ship solo.
+
 ### Module 5 - First Paying Customer
 *Output: One paying customer through a deliberately chosen channel.*
 *Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
@@ -148,6 +157,8 @@ Investors ask the same six questions every time. The folder answers all six.
 - [**5.3** · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
 - [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) (template: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/))
 - [**5.5** · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
+
+> **Walk away with:** a signed paid pilot and your first dollar from someone who doesn't know you. This is the proof an investor will write a check against.
 
 ## Going further (after first paying customer)
 
