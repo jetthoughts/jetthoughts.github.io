@@ -10,89 +10,114 @@ slug: module-1-walkthrough-mia
 >
 > *Illustrative composite based on patterns from real founder builds, not a single client story.*
 
-Mia is a former special-ed teacher who watched parents of kids with dyslexia and ADHD burn evenings Googling "tutor near me," calling dead numbers, and settling for whoever answered the phone. Her idea: a marketplace where parents search by specialty and get matched with a vetted tutor in 48 hours.
+For twelve years, Mia taught reading to kids who couldn't sound out words the way other kids did. Dyslexia, ADHD, processing differences - she knew the diagnoses by name and the parents by their tired faces at pickup. She also knew what those parents did when they needed help outside school hours: they Googled "tutor near me," called the first six numbers they found, and prayed someone would call back. Most never did. The ones who did rarely specialized in what their kid actually needed.
+
+She'd been turning the same idea over for months. A marketplace where parents could search by specialty - dyslexia, ADHD, executive function - and get matched with a vetted tutor in 48 hours. No more phone tag. No more "learning differences" labels slapped on generic curricula.
+
+Tonight she was going to find out if anyone else cared.
 
 ---
 
 ## [Lesson 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 
-**Input:** A rough idea and three years of watching parents struggle.
+The lesson asked for one sentence with five specific blanks. Mia opened a blank doc and typed: *"If we help parents find tutors, they will choose us over Google."*
 
-**Challenge:** Mia's first draft of her hypothesis was: "If we help parents find tutors, they will choose us over Google." Every blank held a category like "parents" or "tutors" - too broad for a stranger to either agree or disagree with. She knew it was useless before she finished writing it.
+She stared at the sentence for a minute. "Parents" - which parents? "Tutors" - any tutor? "Google" - the search engine, the verb, the cultural shorthand? Every blank was a placeholder for a category, broad enough that anyone reading it could nod along without ever taking a position. The lesson was right about that: you can't test a category.
 
-**Action:** She went to r/Dyslexia and r/ADHD and searched "tutor." She found a parent who wrote: *"I've called 11 tutoring centers this month. Five never called back. Three said they don't specialize in dyslexia. Two had waitlists. One told me their 'learning differences' program was a generic curriculum with a different label."* Mia copied that verbatim into her [problem] blank. The [customer] blank became "parents of kids 8-14 with dyslexia/ADHD." The [competition] became "Googling and calling dead numbers."
+She closed the doc and opened Reddit. r/Dyslexia. She searched "tutor." The third thread she opened was from a mother in Vermont who'd posted three weeks earlier:
 
-**Result:** Her final hypothesis read: *"If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews."* She scored it: Customer 5/5, Pragmatic 4/5, Growth 3/5, Money 3/5. Total: 15/20. Weakest blank: Growth - she doesn't know if parents search by specialty or by location.
+> *"I've called 11 tutoring centers this month. Five never called back. Three said they don't specialize in dyslexia. Two had waitlists. One told me their 'learning differences' program was a generic curriculum with a different label."*
+
+Mia copied the post into her notes. The blanks she'd left empty an hour earlier suddenly had specific names. The [customer] wasn't "parents" - it was parents of kids 8-14 with dyslexia or ADHD. The [problem] wasn't "finding tutors" - it was *finding a vetted specialist tutor*. The [competition] wasn't Google the company - it was the exact behavior the Vermont mother had described: Googling and calling dead numbers. By midnight her hypothesis read:
+
+> *"If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews."*
+
+She scored it against the four lenses. Customer: 5/5. Pragmatic: 4/5. Growth: 3/5. Money: 3/5. Total: fifteen out of twenty - over the passing bar of fourteen, but with a clear soft spot. She didn't actually know whether parents searched by specialty ("dyslexia tutor") or by location ("tutor near me"). The smoke test would have to tell her.
 
 ---
 
 ## [Lesson 1.2a: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 
-**Input:** A one-sentence Founding Hypothesis with Growth as the weakest blank.
+Wednesday morning, she opened Mixo on her phone and pasted her hypothesis into the prompt box. By 7:15 she had a landing page. By 7:17 she hated it.
 
-**Challenge:** Mixo's first draft gave her a headline that read "Smart Tutoring Solutions for Modern Families." A parent scrolling Instagram at 10pm would not recognize themselves in that sentence. She regenerated twice.
+The headline read *Smart Tutoring Solutions for Modern Families*. She tried to picture the Vermont mother seeing that at 10pm while scrolling Instagram. The Vermont mother wouldn't recognize herself in a single word of it.
 
-**Action:** She pasted her hypothesis into ChatGPT: *"Turn this hypothesis into 3 outcome-focused value props, max 6 words each."* The output: "Specialist tutor in 48 hours," "No more dead phone numbers," "Parent-reviewed, not algorithm-matched." She replaced the hero image with a photo of a parent on the phone at 9pm - the exact pain her hypothesis named. She stripped Pricing, FAQ, and Testimonials blocks that Mixo added. CTA: "Get matched with a specialist."
+Two regenerations later, the headlines were still glossy nonsense. So she gave up on Mixo's copy generator and asked ChatGPT instead, in plain English: "Turn this hypothesis into parent-voice headlines." What ChatGPT came back with sounded like things the Vermont mother might actually say out loud - *Specialist tutor in 48 hours. No more dead phone numbers. Parent-reviewed, not algorithm-matched.* Those she pasted in.
 
-**Result:** She sent the URL to her neighbor, who has a son with ADHD. "In three seconds, who is this for and what does it do?" The neighbor said: "Parents of dyslexic kids - you find them tutors fast." Three seconds. Clarity test passed.
+The stock hero image showed three smiling teenagers grouped around a laptop. She swapped it for a photo of a parent on the phone at 9pm, lit by a single desk lamp - the moment her landing page needed to land in, not the moment after. She stripped the Pricing, FAQ, and Testimonials blocks Mixo had added automatically. None of them belonged on a smoke test. The CTA button became *Get matched with a specialist*.
 
-Now she needs to know who visits.
+She sent the URL to her neighbor across the hall, whose son had been diagnosed with ADHD that spring. "Three seconds," she said. "Tell me who it's for and what it does."
+
+The neighbor read. "Parents of kids with dyslexia or ADHD. You find them specialist tutors fast."
+
+Three seconds. The page passed.
+
+Now she needed to know who would actually visit it.
 
 ---
 
 ## [Lesson 1.2b: Wire Tracking](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 
-**Input:** A live landing page at `tutormatch.mixo.io`.
+Mia had never pasted code into anything. The word "snippet" sounded like something that would break if she held it wrong. But the lesson promised Clarity and GA4 would tell her exactly who was visiting the page she'd just built - before she spent a single dollar on traffic. Both free. Both five-minute installs, if you knew which field to use.
 
-**Challenge:** Mia had never touched a tracking tool. She didn't know what a "snippet" or "head-tag" was, and the idea of pasting code into her page builder made her nervous.
+She didn't.
 
-**Action:** She set up Clarity at clarity.microsoft.com and pasted the snippet into Mixo's Custom Code → Header field. Then she created a GA4 property at analytics.google.com and pasted that snippet into the same head-tag field. Meta Pixel would wait until 1.2c, after she picked her channel.
+The Clarity snippet went in. Refresh, incognito check. Dashboard: *No data yet*. Five minutes. Still nothing. She went back to the lesson and re-read the part she'd skimmed: the snippet has to go in the head-tag field, not the body field. Mixo had both. She'd picked the wrong one.
 
-When she checked Clarity five minutes later, it still showed "No data yet." She had pasted the snippet in the body field instead of the head-tag field. She moved it one field higher in Mixo's settings, refreshed, and the recording appeared. Twenty-five minutes total, including the fix.
+She moved the snippet up one slot. Refreshed Clarity. There it was - a fresh session recording, twelve seconds long, of herself.
 
-**Result:** She opened her page in an incognito window. Within 60 seconds, Clarity showed her own session recording and GA4's Realtime report showed one active user. Both verified. She noted Meta Pixel for 1.2c and moved on.
+GA4 was the same dance, faster the second time. Real-time report showed one active user. Both tools verified.
+
+Meta Pixel could wait. She'd install that in 1.2c, after she picked her ad channel.
+
+Twenty-five minutes total. Twenty of those on the wrong-field detour.
 
 ---
 
 ## [Lesson 1.2c: Run the Smoke Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 
-**Input:** A live page with Clarity + GA4 installed. Meta Pixel still needed.
+She had $400 to spend, a Growth lens that scored only 3/5, and a quiet knot in her stomach about it. The lens was weak because she didn't know which way parents searched: by specialty (*dyslexia tutor*) or by location (*ADHD tutor near me*). The smoke test was her chance to find out.
 
-**Challenge:** Her Growth lens scored 3/5. She doesn't know whether parents search by "dyslexia tutor" (specialty) or "tutor near me" (location). Her Meta ad creative would test both - but which to lead with? She also had $400 total to spend, needed to install her Meta Pixel (deferred from 1.2b), and was nervous about burning budget with no signal.
+She installed the Meta Pixel she'd deferred from 1.2b. Same dance as Clarity and GA4, two minutes this time - the wrong-field detour had taught her where to click.
 
-**Action:** First, she installed her Meta Pixel - business.facebook.com → Events Manager → create pixel → copy snippet → paste in Mixo's head-tag field. Same process as Clarity in 1.2b, under two minutes. Incognito check: pixel fired. Then she picked Meta Ads (B2C consumer, $0.90 CPC target) and followed the campaign creation recipe from the channel guide. She ran two ad variants, $200 each: one targeting "dyslexia tutor" search interest, one targeting "ADHD tutor + [city]" geography. She launched on a Monday and then resisted the urge to tweak headlines or adjust bids for seven days straight.
+Then the ads. Two variants, $200 each. Variant A targeted the search interest "dyslexia tutor," nationwide. Variant B targeted parents searching "ADHD tutor + [her city]," geographic. Same landing page, two different angles into it. She queued the ads up and hit Launch on a Monday morning.
 
-**Result:**
-- Ad 1 (specialty search): 6.5% conversion. **Strong.**
-- Ad 2 (location search): 3.5% conversion. **Iterate band.**
-- Combined: 4.8% across all 300 visits. Specialty outperformed location by nearly 2x.
+Then she made a rule for herself: don't touch the page for seven days. No headline tweaks. No bid adjustments. No anxious dashboard refreshes. The point of a smoke test was a clean signal, and a clean signal needed clean traffic.
 
-Her weakest Growth blank was partially answered: parents search by specialty, not by location. The specialty variant alone cleared at 6.5% - even though combined was only 4.8%. Her decision: advance to the price test (Lesson 1.3), and keep the location variant as a test for later.
+On Day 8 she opened the results.
+
+- Variant A (specialty search): 6.5% conversion. **Strong.**
+- Variant B (location search): 3.5% conversion. **Iterate band.**
+- Combined across 300 cold visitors: 4.8%. Specialty beat location by nearly two-to-one.
+
+Her weakest blank had just answered itself. Parents searched by specialty, not by location. The specialty variant alone cleared the strong bar even though the combined number didn't. She decided to advance to the price test and park the location variant for a later round.
 
 ---
 
 ## [Lesson 1.3: Price Hypothesis](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
-**Input:** A live page with 300 cold visits and a 4.8% combined conversion rate (6.5% on the winning variant).
+Mia had no idea what parents actually paid for tutoring. Her Money lens scored 3/5 because her gut number ($25 a session) came from what her old school had charged for after-school programs - which she now suspected was nowhere near what parents paid private tutors out of their own pockets.
 
-**Challenge:** Mia had no idea what parents pay for tutoring. Her Money lens scored 3/5 because she guessed $25/session based on what her old school charged for after-school programs - not what parents actually paid private tutors.
+She set up a Stripe account on Friday night and uploaded her ID. By Tuesday morning she was approved. Wednesday she built her Payment Link: a one-time *$99 founding member rate, four months of access at $25/mo equivalent*. The button on her landing page changed to *Find your kid's specialist - $99 founding member rate*. Underneath in smaller type: *Full refund within 30 days if we don't ship.* And below that, an escape hatch for the curious-but-not-ready: *Not ready? Join the waitlist instead.*
 
-**Action:** She set up a Stripe account on Friday night, uploaded her ID, and was approved by Tuesday. She created a Payment Link at "$99 founding member - 4 months access at $25/mo equivalent" (one-time, per the lesson's one-time advice). Button copy: "Find your kid's specialist - $99 founding member rate." She added a "Full refund within 30 days if we don't ship" line in the footer. Below the button: "Not ready? Join the waitlist instead." For the redirect, she used the Mixo path: redirect to her main page URL (GA4 counts the revisit; rougher but works for a first test).
+She let the same ads keep running and went back to her Day Job.
 
-**Result:** 6% of visitors clicked the Stripe link, 6 completed payments at $99 each - a strong price signal for a pre-product page. Her Money lens had been too low: parents will pay well above $25. She noted this for Module 2 interviews - ask parents what they currently spend on tutoring, not what they'd pay for a marketplace.
+Over the next week, 6% of visitors clicked the Stripe link. Six of them completed the $99 payment. Six paying customers before her product existed - a price signal stronger than she'd dared hope for a pre-product page. Her Money lens had been low. Parents would pay well above $25.
+
+She added a note to her Module 2 prep: when she interviewed parents, she'd ask what they currently spent on tutoring. Real numbers from real receipts, not projections.
 
 ---
 
 ## What Mia Walked Away With at the End of Module 1
 
-- **Founding Hypothesis:** One sentence, five specific blanks, scored 15/20. Weakest blank: Growth (specialty vs. location).
-- **Live landing page:** `tutormatch.mixo.io` with a headline that passed the 3-second clarity test.
-- **Tracking:** Clarity + GA4 installed (1.2b), Meta Pixel installed (1.2c), all verified.
-- **Conversion data:** 4.8% combined (6.5% on specialty variant). Growth blank partially answered: parents search by specialty.
-- **Price signal:** 6 completed Stripe payments at $99. Parents will pay more than $25.
-- **Founder OS folder:** All five lesson outputs saved in one Google Drive folder.
+- **A Founding Hypothesis** scoring 15/20, with one soft blank (Growth) flagged and tested.
+- **A live landing page** at `tutormatch.mixo.io` that passed the 3-second clarity test on a neighbor who actually fit the ICP.
+- **Tracking installed and verified** - Clarity for behavior, GA4 for traffic source, Meta Pixel for ad attribution.
+- **Conversion data on 300 cold visitors:** 4.8% combined, 6.5% on the specialty-search variant. The Growth blank now had a real answer.
+- **Six paying customers at $99 each.** $594 in revenue, before the product existed.
+- **A Google Drive folder** holding all five Module 1 outputs. Her Founder OS, started.
 
-**Next: Module 2, where Mia interviews 10 parents using the Mom Test.** Her interview script will test whether parents have ever spent real money on a specialist tutor search (the [problem] blank), and what they currently pay - so she can tighten her Money lens with actual numbers, not guesses.
+**Next: Module 2, where Mia interviews ten parents using the Mom Test.** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
 
 ---
 
