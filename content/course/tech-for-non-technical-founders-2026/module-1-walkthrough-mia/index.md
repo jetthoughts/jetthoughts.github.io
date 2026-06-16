@@ -18,7 +18,7 @@ Mia is a former special-ed teacher who watched parents of kids with dyslexia and
 
 **Input:** A rough idea and three years of watching parents struggle.
 
-**Challenge:** Mia's first draft of her hypothesis was: "If we help parents find tutors, they will choose us over Google." Every blank was a category, not a noun. She knew it was useless before she finished writing it.
+**Challenge:** Mia's first draft of her hypothesis was: "If we help parents find tutors, they will choose us over Google." Every blank held a category like "parents" or "tutors" - too broad for a stranger to either agree or disagree with. She knew it was useless before she finished writing it.
 
 **Action:** She went to r/Dyslexia and r/ADHD and searched "tutor." She found a parent who wrote: *"I've called 11 tutoring centers this month. Five never called back. Three said they don't specialize in dyslexia. Two had waitlists. One told me their 'learning differences' program was a generic curriculum with a different label."* Mia copied that verbatim into her [problem] blank. The [customer] blank became "parents of kids 8-14 with dyslexia/ADHD." The [competition] became "Googling and calling dead numbers."
 
@@ -46,11 +46,11 @@ Now she needs to know who visits.
 
 **Challenge:** Mia had never touched a tracking tool. She didn't know what a "snippet" or "head-tag" was, and the idea of pasting code into her page builder made her nervous.
 
-**Action:** She signed up at clarity.microsoft.com, copied the snippet, pasted it into Mixo's Custom Code → Header field. Then she created a GA4 property at analytics.google.com, copied the snippet, and pasted it in the same head-tag field. The lesson said her channel-specific pixel (Meta Pixel) gets installed in 1.2c after she picks her channel - she'd return to business.facebook.com then.
+**Action:** She set up Clarity at clarity.microsoft.com and pasted the snippet into Mixo's Custom Code → Header field. Then she created a GA4 property at analytics.google.com and pasted that snippet into the same head-tag field. Meta Pixel would wait until 1.2c, after she picked her channel.
 
-When she checked Clarity five minutes later, it still showed "No data yet." She had pasted the Clarity snippet in the body field instead of the head-tag field. One field higher in Mixo's settings, refresh, and the recording appeared. Twenty-five minutes total, including the fix.
+When she checked Clarity five minutes later, it still showed "No data yet." She had pasted the snippet in the body field instead of the head-tag field. She moved it one field higher in Mixo's settings, refreshed, and the recording appeared. Twenty-five minutes total, including the fix.
 
-**Result:** She opened her page in an incognito window. Within 60 seconds, Clarity showed her own session recording. GA4's Realtime report showed one active user. Both verified. She made a note: install Meta Pixel in 1.2c. Done.
+**Result:** She opened her page in an incognito window. Within 60 seconds, Clarity showed her own session recording and GA4's Realtime report showed one active user. Both verified. She noted Meta Pixel for 1.2c and moved on.
 
 ---
 
@@ -60,7 +60,7 @@ When she checked Clarity five minutes later, it still showed "No data yet." She 
 
 **Challenge:** Her Growth lens scored 3/5. She doesn't know whether parents search by "dyslexia tutor" (specialty) or "tutor near me" (location). Her Meta ad creative would test both - but which to lead with? She also had $400 total to spend, needed to install her Meta Pixel (deferred from 1.2b), and was nervous about burning budget with no signal.
 
-**Action:** First, she installed her Meta Pixel - business.facebook.com → Events Manager → create pixel → copy snippet → paste in Mixo's head-tag field. Same process as Clarity in 1.2b, under two minutes. Incognito check: pixel fired. Then she picked Meta Ads (B2C consumer, $0.90 CPC target) and followed the campaign creation recipe from the channel guide. She ran two ad variants, $200 each: one targeting "dyslexia tutor" search interest, one targeting "ADHD tutor + [city]" geography. She launched on a Monday and did not touch the page for seven days. No headline rewrites. No bid adjustments.
+**Action:** First, she installed her Meta Pixel - business.facebook.com → Events Manager → create pixel → copy snippet → paste in Mixo's head-tag field. Same process as Clarity in 1.2b, under two minutes. Incognito check: pixel fired. Then she picked Meta Ads (B2C consumer, $0.90 CPC target) and followed the campaign creation recipe from the channel guide. She ran two ad variants, $200 each: one targeting "dyslexia tutor" search interest, one targeting "ADHD tutor + [city]" geography. She launched on a Monday and then resisted the urge to tweak headlines or adjust bids for seven days straight.
 
 **Result:**
 - Ad 1 (specialty search): 6.5% conversion. **Strong.**
@@ -79,7 +79,7 @@ Her weakest Growth blank was partially answered: parents search by specialty, no
 
 **Action:** She set up a Stripe account on Friday night, uploaded her ID, and was approved by Tuesday. She created a Payment Link at "$99 founding member - 4 months access at $25/mo equivalent" (one-time, per the lesson's one-time advice). Button copy: "Find your kid's specialist - $99 founding member rate." She added a "Full refund within 30 days if we don't ship" line in the footer. Below the button: "Not ready? Join the waitlist instead." For the redirect, she used the Mixo path: redirect to her main page URL (GA4 counts the revisit; rougher but works for a first test).
 
-**Result:** 6% of visitors clicked the Stripe link, 6 completed payments at $99 each - a strong price signal for a pre-product page. Her Money lens was wrong - parents pay more than $25. She notes this for Module 2 interviews: ask parents what they currently spend on tutoring, not what they'd pay for a marketplace.
+**Result:** 6% of visitors clicked the Stripe link, 6 completed payments at $99 each - a strong price signal for a pre-product page. Her Money lens had been too low: parents will pay well above $25. She noted this for Module 2 interviews - ask parents what they currently spend on tutoring, not what they'd pay for a marketplace.
 
 ---
 
@@ -92,7 +92,7 @@ Her weakest Growth blank was partially answered: parents search by specialty, no
 - **Price signal:** 6 completed Stripe payments at $99. Parents will pay more than $25.
 - **Founder OS folder:** All five lesson outputs saved in one Google Drive folder.
 
-**Next: Module 2, where Mia interviews 10 parents using the Mom Test.** Her interview script will test whether parents have ever spent real money on a specialist tutor search - the [problem] blank - and what they currently pay, to tighten her Money lens.
+**Next: Module 2, where Mia interviews 10 parents using the Mom Test.** Her interview script will test whether parents have ever spent real money on a specialist tutor search (the [problem] blank), and what they currently pay - so she can tighten her Money lens with actual numbers, not guesses.
 
 ---
 
