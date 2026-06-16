@@ -1,12 +1,27 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-10 (Stale-doc cleanup: Phase 0 deferred, Phase 1 completion notes, 10.06 archived, path fixes)
+**Last Updated**: 2026-06-16 (M1 v2 complete: all 5 lessons + Mia walkthrough + voice sweep. Active phase pivoted to M2 migration.)
 
-## Active Phase: v2 Migration Pilot
+## Active Phase: M2 Migration
 
-**Current sprint focus:** validate the v2 micro-lesson format on Module 2 before fanning out to the rest. See "Course Migration Schedule" section below for the 4-phase rollout. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + `40.08-chapter-template-gap-report.md` + `40.09-mom-test-micro-lesson-qa-report.md` before touching any v2 lesson.
+**Current sprint focus:** migrate Module 2 (Validate the Problem) to v2 micro-lesson format — 5 v1 chapters → ~6 micro-lessons following the 30.03 8-part template. M1 v2 is complete and serves as the canonical pattern. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + the M1 v2 lessons (1.1, 1.2a, 1.2b, 1.2c, 1.3) + the Mia walkthrough as the implementation reference before touching any M2 lesson.
 
-**What just shipped (2026-06-08):**
+**What just shipped (2026-06-16): M1 v2 conversion COMPLETE**
+- ✅ All 5 Module 1 lessons converted to v2 micro-lesson format with full 8-part template:
+  - `form-your-founding-hypothesis-90-minute-sprint` (1.1) — Mad Libs frame → 4-lens scoring
+  - `smoke-test-build-page` (1.2a) — agnostic AI-builder workflow, Mixo as worked example
+  - `smoke-test-wire-tracking` (1.2b) — Clarity + GA4 (channel-independent), pixel deferred to 1.2c
+  - `smoke-test-landing-page-7-day-demand-test` (1.2c) — channel selection + pixel install + go/iterate/kill
+  - `price-hypothesis-on-smoke-test-page` (1.3) — Stripe Payment Link + price signal interpretation
+- ✅ Mia walkthrough page (`module-1-walkthrough-mia`) published with full narrative arc across all 5 lessons
+- ✅ Voice cleanup sweep applied to all M1 lessons + walkthrough (Hook ≤3 sentences, em-dash → hyphen, error blocks normalized, 4-slot closure pattern)
+- ✅ 1.2b title renamed: "Wire Tracking Before You Spend a Dollar" → "Wire Tracking Before Traffic Starts" across 7 files
+- ✅ Frontmatter title prefix consistency: all M1 lessons use `1.2X · ` prefix
+- ✅ Pixel install sequencing fixed: channel-independent tracking (Clarity + GA4) in 1.2b, channel-specific pixel in 1.2c
+- ✅ 1.3 Mixo redirect wording aligned: "GA4 counts the revisit"
+- ✅ Bridge chain verified: 1.1 → 1.2a → 1.2b → 1.2c → 1.3 → M2 intro intact
+
+**What shipped earlier (2026-06-08): Phase 1 pilot COMPLETE**
 - ✅ Phase 1 pilot RESTRUCTURED into ONE Mixo-only golden-path lesson:
   - `smoke-test-build-page` — agnostic AI-builder workflow (Mixo as worked example, Manus AI and Durable named as equivalents, Carrd as manual-mode fallback): paste hypothesis → polish 4 copy blocks → swap hero → add disclaimer → publish → stranger test. Title and slug deliberately tool-agnostic so the lesson outlives any one tool.
   - `smoke-test-wire-tracking` — Clarity + ad-platform pixel + optional GA4, ~430 words (unchanged from earlier pilot)
@@ -20,7 +35,7 @@
 
 | Observation | What it means for Phase 2 |
 |---|---|
-| Real time-per-lesson: ~25 min for the first draft + ~20 min for review/cuts ≈ 45 min/lesson | Phase 2 estimate of "~45-60 min per lesson" holds. Module 1 (3 remaining lessons × ~45 min) = ~2.5 hr realistic, not the original "~3-4 days." Earlier estimates were padded. |
+| Real time-per-lesson: ~25 min for the first draft + ~20 min for review/cuts ≈ 45 min/lesson | Phase 2 estimate of "~45-60 min per lesson" holds. M1 v2 conversion (5 lessons) took ~4 hours actual including walkthrough + voice sweep — validates the ~45 min/lesson estimate. M2 (5 chapters → ~6 micro-lessons) ≈ 4.5 hours realistic. Earlier estimates were padded. |
 | Two-case-studies-per-lesson pattern produced ~30% word-count drag on the 400-600 budget | Superseded 2026-06-08: case studies now live at module-end walkthrough page only (30.03 §2.7); lesson bodies are case-study-free. |
 | Split-by-step pattern (audit lesson + ship lesson) confused Sam: audit framing assumed Mixo outputs labeled 6-element list, but Mixo outputs a complete page Sam can't easily map to the 6 elements | Workflow-shaped lessons (one Mixo session = one lesson) beat framework-shaped lessons (audit then ship). Match the cognitive split to the reader's actual session boundaries, not to teacher-imposed pedagogical phases. |
 | Concept blocks naturally drift to ~310 words when GA4-style "industry standard" addendums creep in | Watch for "overkill but include for completeness" content. Cut or move to optional sidebar. The 300-word cap is enforced, not aspirational. |
@@ -28,11 +43,11 @@
 | Step 2 of Do-Now in Lesson 1.2a originally combined all 6 elements into one ~95-word paragraph | Bullets beat paragraphs in Do-Now steps. Mobile scanability is the deciding factor. |
 | ICP-fit case-study selection: Mia worked for 1.2a (B2C "use what you have" theme), Tomas worked for 1.2b (B2B "invisible builder blind spot" theme) | Strict alternation would have put Tomas in 1.2a where Mia's "scrappy founder uses real screenshot" lands harder. ICP-fit picking is the right rule. |
 
-**Phase naming note:** This doc uses "Phase 0" for the remaining mechanical quick wins (outcome sentences, success checks, Stuck? boxes — see migration schedule below). The completed surgical improvements are called "Option C" (matching 30.03 §8.4-8.5). These are separate work streams.
+**Phase naming note:** This doc uses "Phase 0" for the remaining mechanical quick wins (outcome sentences, success checks, Stuck? boxes — see migration schedule below). The completed surgical improvements are called "Option C" (matching 30.03 §8.4-8.5). These are separate work streams. M1 v2 is complete; Phase 2 Module 2 migration is the active work stream.
 
-**Next sprint candidates** (pick one):
-1. **Phase 2 — Module 1 full migration** — migrate remaining M1 chapters (1.1, 1.2b, 1.3) using pilot template (~2-3 days)
-2. **Wire micro-lessons into navigation** — add the 2 pilot lessons to course_sequence.yaml as draft entries for preview
+**Active sprint: M2 migration** (other candidates listed for visibility):
+1. **Phase 2 — Module 2 full migration** — apply v2 template to M2 (5 chapters → ~6 micro-lessons), start at 2.1 Mom Test (~4-5 days)
+2. **Landing page review against 30.03 + research** — audit `_index.md` against canonical spec + Sam journey reports (~2-3 hours, scope below)
 3. **Phase 0 mechanical sweep** — deferred until pilot lessons complete (~2-3 hours).
 
 ## Current Active Scope
@@ -87,6 +102,7 @@ Target: 8.5/10 before launch.
 | Dropped | Add time-badge to each chapter header | Dropped (2026-06-02) | Each chapter needs a "**Time**: ~45 min" badge at the top so the reader can plan their session. 18 chapters. Dropped per user direction — time anchoring contradicts the ADR §1 policy of avoiding speculative effort estimates. |
 | P1 | Build companion-post FAQ collection | New (ICP walkthrough _ARCHIVED_10.06) | Create a curated FAQ linking 8 companion posts as "read next" sidebars in relevant chapters. Currently only linked via course-frame nav. |
 | P1 | Rescue-path routing audit | New (ICP walkthrough _ARCHIVED_10.06) | Audit all 5 module-start chapters for consistent burned-founder rescue-path routing. Chapter 1.1 had routing blocks added then removed; ensure uniform approach across spine. |
+| 🔲 P1 | Course landing page (`_index.md`) review against 30.03 + research + 40.06/40.07 | Planned (2026-06-16) | Audit `content/course/tech-for-non-technical-founders-2026/_index.md` against canonical spec + Sam journey research. Hasn't had systematic review since v2 template locked. NOT a content rewrite — produces a prioritized punch-list as **40.12 landing-page audit report**, fixes applied in a separate approved pass (per scope-discipline rule). Scope detail in "Landing Page Review Scope" subsection below. Estimated: ~2-3 hours audit + report. Gate: 0 high-priority Sam-journey friction + Per-Course QA checklist (30.03 §7) all pass. Parallel-safe with Phase 2 M2 sweep — structural work doesn't block content work. **Apply fixes AFTER M2 lessons titles stabilize** so module map updates pick up new micro-lesson titles in one pass. |
 | P3 | Cover image regen audit for non-spine posts | Planned | 2026-05-20: 14 spine covers regenerated to clean "Curriculum 2026" badge. ~30 companion-post covers still have "Curriculum NN/30" stale counter. Regen via chrome-devtools at 2400×1260 if posts stay in active rotation. |
 | ✅ Done | Update decision doc 20.10 with Click correction | Done | Decision block added at top of 20.10.md (2026-05-20) marking Recommendation section as superseded. TASK-TRACKER entry updated 2026-05-29. |
 | ✅ Done 2026-06-04 | Add Sam customer journey report (40.06) with trust score methodology | Done | Single-ICP narrative spanning all 18 chapters + landing page. 3 entry-point doors. Per-chapter trust scores with emotional arc. Double-dip U-curve visualization. Appendix D: 19-row recalibrated trust score table with calibration constraints. Commit 63fb7d73. |
@@ -95,7 +111,7 @@ Target: 8.5/10 before launch.
 | ✅ Done 2026-06-07 | Published 30.03 course format requirements for creators | Done | Consolidated micro-learning spec + gap analysis + migration guide. Canonical requirements for course format design. See `30-39-architecture-design/30.03-course-format-requirements-for-creators.md`. |
 | ✅ Done 2026-06-10 | Applied 5 Sam-simulation surgical fixes to pilot lessons | Done | Added Mixo re-prompt hint (1.2a Step 2), Mixo head-tag path (1.2b), domain question (1.2a Step 5), non-Chrome incognito shortcuts (1.2a Step 5), preview-mode script-blocking note (1.2b Step 4). ~80 words total. Sam simulation report: 40.11. |
 | 🔲 P1 | 5-Sam Validation Pilot — recruit 3-5 real founders, watch Clarity recordings | Planned (DEFERRED until course complete) | Pivoted 2026-06-11: "pilot" in 2605 work = INTERNAL editorial template review (Paul-as-reviewer), NOT external recruitment. External kit deferred to post-course-completion at `40-49-review/_DEFERRED_external-validation-pilot-kit.md`. Original research questions preserved there for revival. |
-| 🔄 P1 | Course-wide voice cleanup sweep | M1 fully done 2026-06-14 (all 5 lessons + Mia walkthrough + 1.2b title rename + frontmatter prefix consistency); M2-M5 pending | M1 sweep applied uniformly: Hook ≤3 sentences, em-dash → hyphen, error blocks normalized to `If this fails: / Why: / Fix:` triple, closure migrated to 4-slot pattern (`Done` / `You have now` / `Next` / `If blocked`), Outputs/Outcomes re-cast to Sam-voice result-state, budget/tool callouts comparison-context-only. 1.2b title renamed from "Wire Tracking Before You Spend a Dollar" → "Wire Tracking Before Traffic Starts" across 7 files (1.2b frontmatter, 1.2a Bridge, _index.md, data/course_sequence.yaml, 30.03 spec example, this entry; 1.2b SLUG kept stable for URL/SEO stability). 1.2a + 1.2b frontmatter titles gained `1.2X · ` prefix for consistency with 1.1/1.2c/1.3. Mia walkthrough em-dash sweep + vocab sync with locked 1.2b ("GA4 snippet" not "Measurement ID") + 1.3 ("waitlist" not "free waitlist"). **Still queued for M2-M5:** apply same sweep to all M2-M5 lessons + each module walkthrough (Tomas for M2/M4, Mia for M1 done). Gate: Phase 2 M2-M5 lesson creation starts AFTER this sweep completes. |
+| 🔄 P1 | Course-wide voice cleanup sweep | M1 fully done 2026-06-14 (all 5 lessons + Mia walkthrough + 1.2b title rename + frontmatter prefix consistency); M2 active — apply sweep to M2 chapters BEFORE v2 conversion (so v2 lessons inherit clean voice from the start); M3-M5 queued | M1 sweep applied uniformly: Hook ≤3 sentences, em-dash → hyphen, error blocks normalized to `If this fails: / Why: / Fix:` triple, closure migrated to 4-slot pattern (`Done` / `You have now` / `Next` / `If blocked`), Outputs/Outcomes re-cast to Sam-voice result-state, budget/tool callouts comparison-context-only. 1.2b title renamed from "Wire Tracking Before You Spend a Dollar" → "Wire Tracking Before Traffic Starts" across 7 files (1.2b frontmatter, 1.2a Bridge, _index.md, data/course_sequence.yaml, 30.03 spec example, this entry; 1.2b SLUG kept stable for URL/SEO stability). 1.2a + 1.2b frontmatter titles gained `1.2X · ` prefix for consistency with 1.1/1.2c/1.3. Mia walkthrough em-dash sweep + vocab sync with locked 1.2b ("GA4 snippet" not "Measurement ID") + 1.3 ("waitlist" not "free waitlist"). **M2 active:** apply same sweep to all 5 M2 v1 chapters BEFORE converting to v2 (so v2 lessons inherit clean voice from the start). Tomas walkthrough drafted after M2 lessons stabilize. M3-M5 queued for later phases. |
 
 **5-Sam Pilot steps:**
 
@@ -107,9 +123,9 @@ Target: 8.5/10 before launch.
 | 0.4 | Synthesize findings: compare simulation predictions vs real behavior. Update Phase 2 template with any blind spots found. | ~1 hour |
 | 0.5 | Decision gate: if ≥3 Sams complete with no systemic stall point, fan out to Phase 2. If same stall point appears in ≥2 Sams, fix template first. | ~30 min |
 
-**Gate:** All 5 research questions have answers from real data. Template updated with findings. Only then proceed to Phase 2 M1 migration. |
+**Gate:** All 5 research questions have answers from real data. Template updated with findings.
 
-**Phase naming note:** This pilot uses "0.1-0.5" step numbering to distinguish it from the deferred Phase 0 mechanical quick wins.
+**Phase naming note:** This pilot uses "0.1-0.5" step numbering to distinguish it from the deferred Phase 0 mechanical quick wins. M1 v2 is now complete — the pilot validated the format; M2 is the first full-scale module migration.
 | ✅ Done 2026-06-07 | Add "Skip to the action" anchor links to longest chapters (40.07 Rec #1) | Done | Anchor-link callout added to M4.3a (6 links), M1.2a (4 links), M3.2 (4 links). Serves skim-first Sam. |
 | ✅ Done 2026-06-07 | Reduce builder comparison fatigue in M1.2a (40.07 Rec #2) | Done | Builder list restructured as decision tree: Mixo (start here) → Manus AI (fallback) → Durable/NeetoSite/Carrd (only if experienced). Eliminated the "Default vs Fallback" two-tier framing. |
 | ✅ Done 2026-06-07 | Add "First-timer fast path" to landing page (40.07 Rec #3) | Done | Callout added after hero section on `_index.md`: "New founder, no team, no trauma? Skip the diagnostic. Start at Chapter 1.1." |
@@ -171,7 +187,7 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 > **Naming note:** This "Phase 0" is the mechanical quick-wins pass (outcome sentences, success checks, Stuck? boxes). It is separate from **Option C** (Quickstart, FAQ, "What not to learn," 6 Sam fixes) which is complete per 30.03 §8.4. See 30.03 §8.5 for the consolidated web delivery roadmap.
 
-**Status:** Deferred. Postponed until pilot lessons complete per user direction (2026-06-10). These are mechanical edits that don't require rewriting chapters — do them in one focused session when ready.
+**Status:** Deferred per user direction (2026-06-10). These are mechanical edits that don't require rewriting chapters — execute in one focused session when M2 migration momentum allows (~2-3 hours).
 
 | Step | Action | Chapters | Est. time |
 |---|---|---|---|
@@ -213,20 +229,22 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 ### Phase 2: Module-by-Module Full Migration (~2-4 weeks, raises median to 6.5+/8)
 
-**Status:** Not started. Rewrite all remaining chapters module by module, completing each module fully before moving to the next.
+**Status:** In progress. M1 complete (2026-06-16). M2 is the active sprint.
 
-#### Module 1 — Hypothesis & Smoke Test (~3-4 days)
+#### Module 1 — Hypothesis & Smoke Test (✅ COMPLETE 2026-06-16, ~4 hours actual)
 
-4 chapters → ~5 micro-lessons. Simplest content, highest leverage.
+5 chapters → 5 micro-lessons + 1 walkthrough. Simplest content, highest leverage. **SHIPPED.**
 
-| Chapter | → Micro-lessons | Key split |
+| Chapter | → Micro-lessons | Status |
 |---|---|---|
-| 1.1 Founding Hypothesis | ~2 lessons | Mad Libs frame → 4-lens scoring |
-| 1.2a Smoke Test Build | ~2 lessons | Builder choice + page elements → tracking setup |
-| 1.2b Smoke Test Run | ~1 lesson | Ad setup + reading conversion rate + go/iterate/kill (can fit 300-word concept block) |
-| 1.3 Price Hypothesis | ~1 lesson | Stripe Payment Link setup + price interpretation |
+| 1.1 Founding Hypothesis | 1 lesson | ✅ v2 live |
+| 1.2a Smoke Test Build | 1 lesson | ✅ v2 live (pilot) |
+| 1.2b Wire Tracking | 1 lesson | ✅ v2 live (pilot) |
+| 1.2c Smoke Test Run | 1 lesson | ✅ v2 live |
+| 1.3 Price Hypothesis | 1 lesson | ✅ v2 live |
+| Walkthrough | Mia builds TutorMatch | ✅ published |
 
-**Module 1 exit gate:** All 5 micro-lessons follow 8-part template. Hugo build ✓. Mobile viewport ✓. Bridge chain integrity verified (1.1 → 1.2a → 1.2b → 1.3 → M2 intro).
+**Module 1 exit gate:** ✅ PASSED. All 5 micro-lessons follow 8-part template. Hugo build ✓. Mobile viewport ✓. Bridge chain verified (1.1 → 1.2a → 1.2b → 1.2c → 1.3 → M2 intro). Voice cleanup sweep ✓. Walkthrough published ✓.
 
 #### Module 2 — Validate the Problem (~4-5 days)
 
@@ -308,10 +326,10 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 | Phase | Description | Est. time | Cumulative median score |
 |---|---|---|---|
 | Phase 0 | Quick wins (mechanical) | ~2 hours | 1.0 → ~2.5/8 |
-| Phase 1 | Pilot micro-lesson rewrite | ~4 hours | Proof of concept |
-| Phase 2 | Module-by-module full migration | ~2-4 weeks | 2.5 → ~6.5+/8 |
+| Phase 1 | Pilot micro-lesson rewrite | ~~~4 hours~~ ✅ COMPLETE 2026-06-08 | Proof of concept |
+| Phase 2 | Module-by-module full migration | 🔄 In progress (M1 done, M2 active) | M1: 6.5+/8; M2-M5: pending |
 | Phase 3 | Cross-cutting polish pass | ~2-3 days | 6.5 → 7.0+/8 |
-| **Total** | | **~3-5 weeks** | **1.0 → 7.0+/8** |
+| **Total** | | **~2-4 weeks remaining (M2-M5 + polish)** | **1.0 → 7.0+/8** |
 
 > **Day estimates in Phase 2 include:** writing + Hugo build verification + mobile viewport check + bridge chain verification per module. Not pure writing time — the overhead of splitting chapters, designing bridge dependencies, and compressing concept blocks is baked in.
 
