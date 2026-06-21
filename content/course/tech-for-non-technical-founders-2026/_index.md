@@ -27,71 +27,47 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-Getting from idea to a product someone pays for is harder when you can't read the code - especially on evenings and weekends, with no team and no engineering buddy to vet your decisions. This course walks you through five modules: from a one-sentence hypothesis to a first paid pilot. Plan on 6-10 weeks at a steady evenings-and-weekends pace.
+Getting from idea to a paying customer is harder when you can't read code. This course is the route - five modules, six to ten weeks of evenings and weekends.
 
-You finish with the artifacts investors actually look at - a signed paid pilot, 10 scored interview transcripts, and a live MVP with real users - built using AI app builders, hosted backends, and hosted payments. All on free tiers until you choose to pay.
+By the end you have a live MVP at a real URL, a signed paid pilot, and the validation artifacts (hypothesis, interview notes, Product Brief) that prove the business. Every tool the course uses has a free tier. Plan on $0 to launch and roughly $25-50/month after, if you keep it running.
 
-> **Start here:**
-> - **First time, just getting started:** open [Chapter 1.1 - Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/).
-> - **Want the minimum-viable path:** read the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) - 3 minutes, core lessons only.
-> - **Stuck on something specific:** check the [FAQ](/course/tech-for-non-technical-founders-2026/faq/) - 15 answers for typical blockers (Stripe verification, builder paralysis, asking for money).
-> - **Want the full route at a glance:** read [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) - 5-minute overview of modules, artifacts, and tools.
+> **Start here:** [**Chapter 1.1 - Form Your Founding Hypothesis →**](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 >
-> The course is free, with no sign-up required.
+> Need orientation first? See the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min), [FAQ](/course/tech-for-non-technical-founders-2026/faq/) (15 common blockers), or [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (full route overview). The course is free, no sign-up required.
 
 *Returning? [Skip to the syllabus ↓](#module-map)*
 
-## What this course does NOT cover
-
-To save your time, here is what we intentionally exclude. None of these are needed for the promised result (idea → first paying customer):
-
-- **How to code.** The course assumes zero coding ability. Lovable + Supabase + Stripe handle the technical side.
-- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Chapter 4.1), not as an org-design course.
-- **How to raise venture capital.** The course produces the artifacts investors fund. It does not teach pitch decks or fundraising mechanics.
-- **How to manage a 20-person engineering team.** Friday Demo Rule + Weekly Dev Report (in Going Further) cover early-stage management; full org management is out of scope.
-- **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.
-- **Legal incorporation, taxes, IP filings.** Use a lawyer or a service (Stripe Atlas, Clerky, Firstbase).
-- **SEO, content marketing, paid acquisition at scale.** Module 5 covers first-10-customers outbound. Scaling acquisition is a separate discipline.
-
-If you need something on this list, the course won't help with it.
-
 ## Why this course exists
 
-Five mistakes new founders make most often - and where in the course we head each one off:
+Five mistakes new founders make most often - and where the course heads each one off:
 
 - Hiring a dev shop before validating the problem - Modules 1 and 2 show what a $0 validation looks like.
-- Paying for six months of "building" with no way to see what shipped - Module 4.2 (Day-1 ownership) + the Friday-demo rule cover this.
-- Signing an SOW (Statement of Work - the agency contract that defines what "delivered" means) where "delivered" means "deployed to staging" - the SOW reading guide flags the bad clauses.
+- Paying for six months of "building" with no way to see what shipped - Module 4.2 (Day-1 ownership) and the Friday-demo rule cover this.
+- Signing an SOW (the agency contract that defines "delivered") where "delivered" means "deployed to staging" - the SOW reading guide flags the bad clauses.
 - Rebuilding from scratch when salvage would have closed the gap in eight weeks - the salvage-vs-rebuild scorer keeps you out of unnecessary rewrites.
-- Shipping an AI feature only to discover the agency was passing per-question AI costs through the invoice without telling you - the AI agency questions chapter catches this on the first discovery call.
+- Shipping an AI feature only to discover the agency was passing per-question AI costs through the invoice without telling you. The AI agency questions chapter catches this on the first discovery call.
 
 Already mid-build and it's failing? Jump to the [rescue chapters](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/). Everyone else: start at Module 1.
-
-> **How this is different from Y Combinator / Lenny / Reforge.** Those teach principles through essays, lectures, or cohort programs aimed at product managers at scale-stage companies. This course walks a non-technical founder with neither a team nor a built product from a one-sentence hypothesis to a signed paid pilot, on evenings and weekends. Three chapters not in their catalogues as of May 2026: [Stripe Payment Link price test (Ch 1.3)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/), [four-way build-path decision matrix (Ch 4.1)](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/), and [Design Partner Agreement with deposit math (Ch 5.4)](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/).
 
 ## Take this course if
 
 - You have an idea, or a half-built MVP, and want a route from there to a paying customer
-- You can read a Stripe invoice but not a GitHub commit
+- You can read a [Stripe](https://stripe.com) invoice but not a GitHub commit
 - You want to know what to ask, not what to build
 - You write code yourself but want a structured pass on the validation stage before you start typing
 
 Skip this course if you want to learn to code or hand off founder judgment to someone else.
 
-If you're at the rescue stage - inherited a half-built codebase, told "the architecture is fine" with no way to verify, considering firing your current team - skip the linear path and start with [If Your Team Is Already Failing](#if-your-team-is-already-failing) below.
+## The Founder OS: six artifacts you keep
 
-## What you walk away with: the Founder OS
-
-Six filled-in artifacts that prove demand before you ask for a dollar of outside capital. All six bundle into one Google Drive folder - your **Founder OS** - that you can hand an investor:
+Each module produces one fill-in-the-blank artifact. The six bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund:
 
 1. A one-sentence **Founding Hypothesis** - shows you didn't start with a build, you started with a falsifiable bet (Module 1)
 2. A **smoke-test decision** + price point - proves strangers clicked and some reached for their wallet (Module 1)
-3. Ten **Mom Test interview notes** + prototype feedback - proves you didn't build in a vacuum (Module 2)
+3. Ten **[Mom Test](https://www.momtestbook.com/) interview notes** + prototype feedback - proves you didn't build in a vacuum (Module 2)
 4. A one-page **Product Brief** - shows scope is constrained by customer language, not feature fantasies (Module 3)
 5. A **live MVP** at a real URL, ownership locked Day 1 - proves you can ship without an engineer and nobody else holds the keys (Module 4)
 6. A **first signed paid pilot** + channel sequence running - proves someone who doesn't know you paid real money (Module 5)
-
-Investors ask the same six questions every time. The folder answers all six.
 
 ## Module map
 
@@ -101,51 +77,58 @@ Investors ask the same six questions every time. The folder answers all six.
 *Output: One-sentence Founding Hypothesis + a live landing page with a Stripe price button.*
 *Start here if you don't have a one-sentence Founding Hypothesis yet, or you have one but never tested demand with a landing page.*
 
-- [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (optional: [AI stress-test for the blanks](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/))
+- [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 - [**1.2a** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 - [**1.2b** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 - [**1.2c** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
-- 📖 **See it in action:** [Mia builds TutorMatch - a full Module 1 walkthrough](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
 
-> **Walk away with:** a Founding Hypothesis, demand data on 300 real strangers, and a price test. Most idea-stage founders skip the demand test and build first.
+*Optional reference: [AI stress-test for the blanks](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).*  
+*See it in action: [Mia builds TutorMatch - a full Module 1 walkthrough](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/).*
+
+> **You leave Module 1 with** a Founding Hypothesis, demand data from 300 cold strangers, and a price test - the demand evidence most founders skip and build without.
 
 ### Module 2 - Validate the Problem
-*Output: 10 Mom Test interviews + a Lovable prototype shown to 5 of them.*
+*Output: 10 Mom Test interviews + a [Lovable](https://lovable.dev) prototype shown to 5 of them.*
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 
-- [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) (templates: [Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) · [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/))
+- [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
 - [**2.2** · OPTIONAL - Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)  
   *Skip if you've interviewed before. The Mom Test in 2.1 is the core; this chapter rehearses your questions with AI personas first.*
 - [**2.3a** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
-- [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (template: [Outreach Sequence](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/); after interviews: [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/))
+- [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
 - [**2.4** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 
-> **Walk away with:** 10 customer interviews scored against a rubric and a prototype shown to 5 of them. Most founders rely on "I asked some friends"; you'll have something that holds up in an investor meeting.
+*Templates in this module: [Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) · [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) · [Outreach Sequence](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/) · [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/).*
+
+> **You leave Module 2 with** 10 scored interview transcripts and a prototype tested by 5 of them - real signal, not "I asked some friends."
 
 ### Module 3 - Design from Evidence
 *Output: One-page Product Brief drafted from interview transcripts.*
 *Start here if you've validated the problem but don't have a one-page Product Brief.*
 
-- [**3.1** · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) (template: [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/))
+- [**3.1** · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 - [**3.2** · Quality-check Your Brief: Features to Outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
 
-> **Walk away with:** a one-page Product Brief constrained by customer language. Most founders write feature-wishlists; you'll write what users actually told you.
+*Template in this module: [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/).*  
+*Course glossary (reference, not in the linear path): [Five Tech Words to Stop Nodding At](/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/).*
 
-*Course glossary (reference, not in the linear path):* [Five Tech Words to Stop Nodding At](/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/).
+> **You leave Module 3 with** a one-page Product Brief written from interview transcripts, not feature wishlists.
 
 ### Module 4 - Build It Yourself
-*Output: Live Lovable + Supabase + Stripe MVP at a real URL, ownership locked Day 1.*
+*Output: Live Lovable + [Supabase](https://supabase.com) + Stripe MVP at a real URL, ownership locked Day 1.*
 *Start here if you have a Product Brief and need to build the MVP.*
 
-- [**4.1** · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/) (template: [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/))
-- [**4.2** · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) (template: [Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/))
+- [**4.1** · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
+- [**4.2** · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
 - [**4.3a** · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
-- [**4.3b** · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) (template: [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/))
+- [**4.3b** · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 - [**4.4** · OPTIONAL - Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)  
   *Skip on first pass. Come back when your no-code build hits a wall - a feature you can't add, a query you can't tune, an auth flow Lovable can't handle.*
 
-> **Walk away with:** a live MVP at a real URL, ownership locked Day 1, no engineer on payroll. Most non-technical founders are told they can't ship solo.
+*Templates in this module: [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) · [Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) · [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/).*
+
+> **You leave Module 4 with** a live MVP at a real URL, ownership locked Day 1, no engineer hired.
 
 ### Module 5 - First Paying Customer
 *Output: One paying customer through a deliberately chosen channel.*
@@ -155,10 +138,27 @@ Investors ask the same six questions every time. The folder answers all six.
 - [**5.2** · OPTIONAL - Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)  
   *Skip if you already have a channel in mind (LinkedIn, cold email, or personal network). The core path is 5.3 (personal network) → 5.4 (paid pilot).*
 - [**5.3** · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
-- [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) (template: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/))
-- [**5.5** · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
+- [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+- [**5.5** · OPTIONAL - Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)  
+  *Skip if your personal network in 5.3 produced your first 10 customers. This is the systematic path for when warm intros run out.*
 
-> **Walk away with:** a signed paid pilot and your first dollar from someone who doesn't know you. This is the proof an investor will write a check against.
+*Template in this module: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).*
+
+> **You leave Module 5 with** a signed paid pilot and your first dollar from someone you didn't know yesterday.
+
+## What this course does NOT cover
+
+To save your time, here is what we intentionally exclude. None of these are needed for the promised result (idea → first paying customer):
+
+- **How to code.** The course assumes zero coding ability. [Lovable](https://lovable.dev) + [Supabase](https://supabase.com) + [Stripe](https://stripe.com) handle the technical side.
+- **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Chapter 4.1), not as an org-design course.
+- **How to raise venture capital.** The course produces the artifacts investors fund. It does not teach pitch decks or fundraising mechanics.
+- **How to manage a 20-person engineering team.** Friday Demo Rule + Weekly Dev Report (in Going Further) cover early-stage management; full org management is out of scope.
+- **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.
+- **Legal incorporation, taxes, IP filings.** Use a lawyer or a service like [Stripe Atlas](https://stripe.com/atlas), [Clerky](https://www.clerky.com/), or [Firstbase](https://www.firstbase.io/).
+- **SEO, content marketing, paid acquisition at scale.** Module 5 covers first-10-customers outbound. Scaling acquisition is a separate discipline.
+
+If you need something on this list, the course won't help with it.
 
 ## Going further (after first paying customer)
 
@@ -178,7 +178,10 @@ These conditional chapters kick in once you've passed the Module 5 gate. Read ea
 
 **Manage a hired team without writing code**
 
-[Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) · [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) · [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/) · [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
+- Need a structure for who reports to whom → [Engineering Org Chart](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/)
+- Want a weekly heartbeat to confirm something shipped → [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
+- Want a 3-question standup that catches problems early → [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/)
+- Need a plain-English weekly report from the team → [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
 
 ## If Your Team Is Already Failing
 
