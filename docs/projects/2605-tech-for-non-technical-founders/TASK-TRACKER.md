@@ -1,10 +1,26 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-16 (M1 v2 complete: all 5 lessons + Mia walkthrough + voice sweep. Active phase pivoted to M2 migration.)
+**Last Updated**: 2026-06-22 (Module 1 RELEASED. Landing/Quickstart/FAQ reframed as "M1 released, M2-5 roll out 2026". M2 migration is the active work stream.)
 
-## Active Phase: M2 Migration
+## Active Phase: M2 Migration · (M1 Released today)
 
 **Current sprint focus:** migrate Module 2 (Validate the Problem) to v2 micro-lesson format — 5 v1 chapters → ~6 micro-lessons following the 30.03 8-part template. M1 v2 is complete and serves as the canonical pattern. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + the M1 v2 lessons (1.1, 1.2a, 1.2b, 1.2c, 1.3) + the Mia walkthrough as the implementation reference before touching any M2 lesson.
+
+**🚀 What shipped 2026-06-22: Module 1 release (Option C reframe)**
+- ✅ Landing `_index.md` opener reframed: "Module 1 - Validate Demand - is released today. Modules 2-5 roll out through 2026." Drops the "live MVP, signed paid pilot" promise from the opener (those are M4/M5 outputs, not released yet).
+- ✅ Module map status badges added: M1 = `✅ Released today · v2 micro-lessons`; M2-M5 = `🗓️ Rolling out 2026 · v1 long-form chapters readable now`.
+- ✅ Founder OS section footnote: "Today: Module 1 produces artifacts 1 and 2. Artifacts 3 through 6 unlock as Modules 2-5 release through 2026."
+- ✅ `og_description` updated to be M1-honest (no fundraising/MVP promise).
+- ✅ Quickstart reframed: "What's released, what's coming" replaces the old "Promise" section; M1 chapter list fixed to current 5-lesson v2 structure (1.1, 1.2a, 1.2b, 1.2c, 1.3); status badges on M2-M5 sections.
+- ✅ FAQ: added 4 new release-status Q&As under "General"; existing "How long" Q split into M1-specific + full-course-when-released.
+- ✅ Stale slug `smoke-test-build-landing-page` → `smoke-test-build-page` corrected in Quickstart + FAQ (3 occurrences).
+- ✅ Build clean: 0 em-dashes across all 3 pages; all 7 course validators pass.
+
+**Deferred to follow-up sweeps (NOT in this release):**
+- 🔲 **M2-M5 chapter-top callouts** (per user direction 2026-06-22 "separate sweep, later"): ~21 chapter pages need a 1-line opening callout: *"This chapter is part of v1 of the course. A polished v2 lands in 2026."* Estimated ~10 min mechanical edit. Gate: do this before/alongside M2 v2 conversion so v1 readers see the status note as they browse.
+- 🔲 **Cover image regen**: current `cover.png` visually shows "5 modules". After Option C reframe, the cover ideally shows Module 1 as released and M2-5 as roadmap. Separate task: regenerate via chrome-devtools at 2400×1260 with updated badge per `.stitch/design.md`.
+
+**What shipped earlier (2026-06-16): M1 v2 conversion COMPLETE**
 
 **What just shipped (2026-06-16): M1 v2 conversion COMPLETE**
 - ✅ All 5 Module 1 lessons converted to v2 micro-lesson format with full 8-part template:

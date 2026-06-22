@@ -39,7 +39,7 @@ Write it at the specificity level of "solo chiropractors in Pennsylvania who spe
 
 **Q: My landing page got zero signups from 300 visitors. Is the idea dead?**
 
-Maybe. Below 1% conversion on cold traffic is a strong negative signal. But first: check your tracking. Did you install Microsoft Clarity? Watch 10 session replays. Common failure modes: the form is broken, the page takes 5+ seconds to load on mobile, or your headline is too vague. Fix those and re-run before you kill the idea. The [smoke test chapter](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) has the 6-element checklist.
+Maybe. Below 1% conversion on cold traffic is a strong negative signal. But first: check your tracking. Did you install Microsoft Clarity? Watch 10 session replays. Common failure modes: the form is broken, the page takes 5+ seconds to load on mobile, or your headline is too vague. Fix those and re-run before you kill the idea. The [smoke test chapter](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) has the 6-element checklist.
 
 **Q: My Stripe account verification is taking 3+ days. Can I skip the price button?**
 
@@ -47,7 +47,7 @@ Don't skip - sign up for Stripe tonight and let it verify in the background whil
 
 **Q: Which landing page builder should I use?**
 
-Mixo ($7/mo, 30 seconds from idea to page). If the templates don't fit, Manus AI (free tier, no card). Don't comparison-shop for a week - you're testing demand, not builders. The [Ch 1.2a builder section](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/#pick-your-builder) has the full list.
+Mixo ($7/mo, 30 seconds from idea to page). If the templates don't fit, Manus AI (free tier, no card). Don't comparison-shop for a week - you're testing demand, not builders. The [Ch 1.2a builder section](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/#pick-your-builder) has the full list.
 
 ---
 
@@ -117,9 +117,21 @@ No. A verbal yes is not a paid pilot. Reframe: the deposit is year-one ACV prepa
 
 ## General
 
-**Q: How long does the full course take?**
+**Q: Which modules of the course are released today?**
 
-A full-time founder with daytime availability can complete all 5 modules in 6-10 weeks. An evening-only founder (2-4 hrs/week, the pattern this course is built for) typically needs 10-16 weeks. The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) is the shortest possible path - core lessons only.
+Module 1 (Validate Demand) is the released module. It's a complete, standalone deliverable: you finish with a price-tested Founding Hypothesis, a smoke-test landing page, and demand data on 300 cold strangers. Modules 2-5 are scheduled to roll out through 2026 in the v2 micro-lesson format; the v1 long-form chapters for those modules are readable today.
+
+**Q: When does Module 2 release?**
+
+No fixed date. Each module ships when the v2 conversion meets the same quality bar as Module 1. The Module 1 conversion took roughly six weeks of polish across five lessons plus the Mia walkthrough. The v1 long-form M2 chapters are readable in the meantime.
+
+**Q: How long does the released Module 1 take?**
+
+Six to eight weeks at an evenings-and-weekends pace (the pattern this course is built for). A full-time founder can finish Module 1 in about two weeks. The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) is the shortest path - core lessons only.
+
+**Q: How long will the full 5-module course take once everything is released?**
+
+A full-time founder: 6-10 weeks. An evenings-and-weekends founder (2-4 hrs/week): 10-16 weeks. These estimates apply once Modules 2-5 ship in v2; reading the v1 long-form chapters today is faster but the polish bar is different.
 
 **Q: Do I need to do the modules in order?**
 

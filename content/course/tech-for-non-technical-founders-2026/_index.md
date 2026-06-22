@@ -21,15 +21,17 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "From Idea to First Paying Customer - A Non-Technical Founder's Course"
-  og_description: "From idea to first paying users in 2026, with or without engineers. Five modules that produce the evidence investors actually fund - smoke test data, interview transcripts, live MVP, signed paid pilot."
+  og_description: "Module 1 released today: validate demand for your idea with a Founding Hypothesis, smoke-test landing page, 300 cold visitors, and Stripe price test. Modules 2-5 roll out through 2026."
 cover_image_alt: "JetThoughts course landing cover showing 5 modules (Hypothesis, Validate, Design, Build, First Customer) on the route from idea to first paying users"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/"
 related_posts: false
 ---
 
-Getting from idea to a paying customer is harder when you can't read code. This course is the route - five modules, six to ten weeks of evenings and weekends.
+Getting from idea to a paying customer is harder when you can't read code. This course is the full route. **Module 1 - Validate Demand - is released today. Modules 2-5 roll out through 2026.**
 
-By the end you have a live MVP at a real URL, a signed paid pilot, and the validation artifacts (hypothesis, interview notes, Product Brief) that prove the business. Every tool the course uses has a free tier. Plan on $0 to launch and roughly $25-50/month after, if you keep it running.
+In Module 1 you write a Founding Hypothesis, ship a smoke-test landing page, run 300 cold strangers against it, and price-test with real Stripe payments. Six to eight weeks at an evenings-and-weekends pace. You walk away with a go/iterate/kill decision based on real demand data.
+
+Every tool has a free tier. Plan on $0 in fixed costs plus an optional $300-400 ad spend for the smoke test in 1.2c.
 
 > **Start here:** [**Chapter 1.1 - Form Your Founding Hypothesis →**](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 >
@@ -69,12 +71,15 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 5. A **live MVP** at a real URL, ownership locked Day 1 - proves you can ship without an engineer and nobody else holds the keys (Module 4)
 6. A **first signed paid pilot** + channel sequence running - proves someone who doesn't know you paid real money (Module 5)
 
+*Today: Module 1 produces artifacts 1 and 2. Artifacts 3 through 6 unlock as Modules 2-5 release through 2026.*
+
 ## Module map
 
 > Read the modules in order. Each module's output is the next module's input.
 
 ### Module 1 - Hypothesis & Smoke Test
-*Output: One-sentence Founding Hypothesis + a live landing page with a Stripe price button.*
+*✅ **Released today** · v2 micro-lessons*  
+*Output: One-sentence Founding Hypothesis + a live landing page with a Stripe price button.*  
 *Start here if you don't have a one-sentence Founding Hypothesis yet, or you have one but never tested demand with a landing page.*
 
 - [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
@@ -89,7 +94,8 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 1 with** a Founding Hypothesis, demand data from 300 cold strangers, and a price test - the demand evidence most founders skip and build without.
 
 ### Module 2 - Validate the Problem
-*Output: 10 Mom Test interviews + a [Lovable](https://lovable.dev) prototype shown to 5 of them.*
+*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*Output: 10 Mom Test interviews + a [Lovable](https://lovable.dev) prototype shown to 5 of them.*  
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 
 - [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
@@ -104,7 +110,8 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 2 with** 10 scored interview transcripts and a prototype tested by 5 of them - real signal, not "I asked some friends."
 
 ### Module 3 - Design from Evidence
-*Output: One-page Product Brief drafted from interview transcripts.*
+*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*Output: One-page Product Brief drafted from interview transcripts.*  
 *Start here if you've validated the problem but don't have a one-page Product Brief.*
 
 - [**3.1** · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
@@ -116,7 +123,8 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 3 with** a one-page Product Brief written from interview transcripts, not feature wishlists.
 
 ### Module 4 - Build It Yourself
-*Output: Live Lovable + [Supabase](https://supabase.com) + Stripe MVP at a real URL, ownership locked Day 1.*
+*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*Output: Live Lovable + [Supabase](https://supabase.com) + Stripe MVP at a real URL, ownership locked Day 1.*  
 *Start here if you have a Product Brief and need to build the MVP.*
 
 - [**4.1** · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
@@ -131,7 +139,8 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 4 with** a live MVP at a real URL, ownership locked Day 1, no engineer hired.
 
 ### Module 5 - First Paying Customer
-*Output: One paying customer through a deliberately chosen channel.*
+*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*Output: One paying customer through a deliberately chosen channel.*  
 *Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
 
 - [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
