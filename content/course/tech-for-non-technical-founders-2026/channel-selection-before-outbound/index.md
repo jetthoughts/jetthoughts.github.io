@@ -81,7 +81,7 @@ Not every channel fits every product. Four dimensions narrow the field before yo
 
 | Dimension | Question | Scoring rule |
 |-----------|----------|--------------|
-| **Price point** | Can you afford the channel's acquisition cost model? Use the price you tested in [Chapter 1.3](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) as the input here. | <$50/mo tested = free/organic only; $200-$500/mo = LinkedIn; >$500/mo = outbound calls viable |
+| **Price point** | Can you afford the channel's acquisition cost model? Use the price you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) as the input here. | <$50/mo tested = free/organic only; $200-$500/mo = LinkedIn; >$500/mo = outbound calls viable |
 | **Buyer type** | Where do your must-have buyers actually live online? | Individuals = social + Reddit; B2B = LinkedIn + email + professional communities |
 | **Your time budget** | What can you honestly sustain through a full send/reply/follow-up arc? | LinkedIn 20-30 min/10 msgs; cold email 5-8 min/10 msgs; community 45 min/post + no daily mgmt |
 | **Interview signal** | What did your 10 transcripts actually say? | Count mentions per channel; 7-of-10 = louder than gut feeling |

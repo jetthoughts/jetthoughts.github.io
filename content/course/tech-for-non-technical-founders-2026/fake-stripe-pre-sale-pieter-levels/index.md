@@ -48,7 +48,7 @@ If you're running your first ever smoke test, use [the email-only version](/cour
 
 ## The setup (15 minutes)
 
-The Stripe Payment Link mechanic is the same as in [Chapter 1.3 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - read that for the full setup walkthrough. The variant-specific changes:
+The Stripe Payment Link mechanic is the same as in [Chapter 1.5 (Price Your Hypothesis on the Smoke-Test Page)](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - read that for the full setup walkthrough. The variant-specific changes:
 
 1. **CTA copy.** Replace "Get on the waitlist" with **"Reserve your spot ($1 today, refundable if we don't ship by [date])"**. The "$1 today" + "refundable" combination is the load-bearing phrase.
 2. **Thank-you page.** "You're reserved. We'll email you when we ship. Your $1 is fully refundable - just reply to this email and ask."

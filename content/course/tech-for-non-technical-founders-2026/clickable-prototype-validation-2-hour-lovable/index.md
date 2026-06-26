@@ -269,7 +269,7 @@ Write down their exact words. Do not prompt. If they give a vague answer, say: "
 - "What was the moment you felt most lost?"
 - "What did you expect to see on the second screen that wasn't there?"
 - "If you used this every week, what would you call the thing it does for you?"
-- "What would have to be true for you to pay [your target price] for this?" (Use the price hypothesis you tested in [Chapter 1.3](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - if you haven't run that test yet, the chapter's $49-$299 band is your default starting point.)
+- "What would have to be true for you to pay [your target price] for this?" (Use the price hypothesis you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - if you haven't run that test yet, the chapter's $49-$299 band is your default starting point.)
 
 Thank them. End the call. Score the session immediately.
 

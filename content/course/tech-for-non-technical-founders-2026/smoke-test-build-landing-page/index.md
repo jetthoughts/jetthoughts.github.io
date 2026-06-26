@@ -1,5 +1,5 @@
 ---
-title: "1.2a · Smoke Test: Build the Page"
+title: "1.2 · Smoke Test: Build the Page"
 aliases: ["/blog/smoke-test-build-landing-page/"]
 description: "Build a landing page that proves cold strangers click on your hypothesis before you write a line of code. No-code builders, the 6 elements that ship, tracking setup, and the 14-interview trap."
 date: 2026-05-13
@@ -23,7 +23,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "1.2a · Smoke Test: Build the Page"
+  og_title: "1.2 · Smoke Test: Build the Page"
   og_description: "Build a landing page that proves cold strangers click on your hypothesis before you write a line of code. No-code builders, the 6 elements, tracking setup."
 cover_image_alt: "JetThoughts course cover for the smoke test chapter showing a landing page with a CTA button and an ad-spend gauge"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/"
@@ -87,7 +87,7 @@ flowchart TD
 > - [ ] Email tool account on a free tier
 > - [ ] Your Founding Hypothesis sentence written down (from Module 1)
 > - [ ] A calendar window where you will NOT touch the campaign mid-flight
-> - [ ] **Stripe account signup started TONIGHT** (even if you skip the price button now). Verification takes 1-3 business days; if you wait until Ch 1.3 to start, launch day blocks on a wait you could have run in parallel.
+> - [ ] **Stripe account signup started TONIGHT** (even if you skip the price button now). Verification takes 1-3 business days; if you wait until Ch 1.5 to start, launch day blocks on a wait you could have run in parallel.
 
 If you don't have a Founding Hypothesis sentence yet, stop and run [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) first. Everything below assumes you have one.
 
@@ -186,7 +186,7 @@ The first $300-500 of ads on an untracked page buys nothing but a lesson. Instal
 - [Microsoft Clarity](https://clarity.microsoft.com/) - free heatmaps and session recordings.
 
 > **Done when:** Your landing page is live with tracking installed and you have a 15-second Loom hero visual above the fold.
-> **Next click:** [1.2b · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - buy cold traffic and read the numbers.
+> **Next click:** [1.4 · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - buy cold traffic and read the numbers.
 > **If blocked:** If you can't get a builder to produce a coherent page from your hypothesis, your hypothesis sentence is too vague. Go back to Ch 1.1 and rewrite it with a specific audience, mechanism, and outcome.
 
 > **Stuck? Most first-timers stall here:** the builder comparison turns into a research project instead of a 30-second pick. **Fix:** open Mixo, paste your hypothesis, ship the first page it gives you. You're testing demand, not builders. The ugly page that ships tonight beats the polished page that ships next week.

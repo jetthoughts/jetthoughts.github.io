@@ -167,7 +167,7 @@ Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services
 
 ## The pricing math
 
-> **From Ch 1.3 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.3](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement, which lengthens the timeline.
+> **From Ch 1.5 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement, which lengthens the timeline.
 
 The deposit number is not arbitrary. It is anchored to projected year-one ACV and to what a typical CFO will sign without a procurement review. The bands by sector:
 

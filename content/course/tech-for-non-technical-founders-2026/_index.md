@@ -21,7 +21,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "From Idea to First Paying Customer - A Non-Technical Founder's Course"
-  og_description: "Module 1 released today: validate demand for your idea with a Founding Hypothesis, smoke-test landing page, 300 cold visitors, and Stripe price test. Modules 2-5 roll out through 2026."
+  og_description: "A free five-module course for non-technical founders: write a Founding Hypothesis, smoke-test demand with 300 cold visitors, and close your first paying customer - no coding required."
 cover_image_alt: "JetThoughts course landing cover showing 5 modules (Hypothesis, Validate, Design, Build, First Customer) on the route from idea to first paying users"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/"
 related_posts: false
