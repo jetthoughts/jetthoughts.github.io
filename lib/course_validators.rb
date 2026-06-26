@@ -9,6 +9,7 @@
 # Reference: TASK-TRACKER.md P1 - "Build 4 source-of-truth validators (Kaizen Muda outcome)"
 
 require "yaml"
+require "date"
 require "set"
 
 class CourseValidators

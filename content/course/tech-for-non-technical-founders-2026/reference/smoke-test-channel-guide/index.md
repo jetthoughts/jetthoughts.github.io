@@ -6,7 +6,7 @@ draft: true
 slug: smoke-test-channel-guide
 ---
 
-> **Reference companion to [Lesson 1.2c · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)**  --  this page contains the full channel budget table, ad-account setup timing, B2B budget alternatives, and conversion benchmark sources. Read the micro-lesson first; return here for detailed channel planning.
+> **Reference companion to [Lesson 1.4 · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)**  --  this page contains the full channel budget table, ad-account setup timing, B2B budget alternatives, and conversion benchmark sources. Read the micro-lesson first; return here for detailed channel planning.
 
 ---
 
@@ -85,7 +85,7 @@ Use one of these, run it the same way until the numbers stabilize, read the resu
 You need an ad account before you can create a campaign. Each platform has a one-time setup flow  --  plan 60-90 minutes for your first one. (Approval times: see [Ad-Account Setup Timing](#ad-account-setup-timing) above.)
 
 - **Meta:** Go to [business.facebook.com](https://business.facebook.com/) → Create account → verify your business (email or domain) → create ad account → add payment method.
-- **Google Ads:** Go to [ads.google.com](https://ads.google.com/) → Sign up → enter billing info → create a dummy campaign to complete account setup (pause it immediately  --  this is NOT your real smoke-test campaign; that comes in Lesson 1.2c).
+- **Google Ads:** Go to [ads.google.com](https://ads.google.com/) → Sign up → enter billing info → create a dummy campaign to complete account setup (pause it immediately  --  this is NOT your real smoke-test campaign; that comes in Lesson 1.4).
 - **LinkedIn:** Go to [linkedin.com/campaignmanager](https://www.linkedin.com/campaignmanager/) → create account → add company page → add payment method.
 - **Reddit Ads:** Go to [ads.reddit.com](https://ads.reddit.com/) → sign up → add payment method.
 
@@ -105,8 +105,8 @@ You picked your channel above and created your ad account. Here are the settings
 2. **Budget:** $10-20/day. Set a lifetime budget of $70-140 to hit ~100-200 visits (CPC $0.70-$1.90). Add 20% for creative iteration.
 3. **Audience:** Start broad. Meta's AI optimizer is better than manual interest stacking in 2026. If your [customer] blank is "solo chiropractors," add one interest (Chiropractic) and let the rest run broad. Age 25-55. All genders unless your product is gender-specific.
 4. **Placement:** Advantage+ placements (automatic). Let Meta decide where your ad shows.
-5. **Ad creative:** Single image (your hero image from Lesson 1.2a, or the AI-generated one). Primary text: your value prop sentence (1-2 lines from your landing page). Headline: your landing page headline. CTA button: "Learn More" or "Sign Up." Destination: your landing page URL.
-6. **Tracking:** Your Meta Pixel should already be installed (Lesson 1.2b). In Ads Manager, under the ad set, verify the pixel is selected. If it says "No pixel," go back to 1.2b and install it.
+5. **Ad creative:** Single image (your hero image from Lesson 1.2, or the AI-generated one). Primary text: your value prop sentence (1-2 lines from your landing page). Headline: your landing page headline. CTA button: "Learn More" or "Sign Up." Destination: your landing page URL.
+6. **Tracking:** Your Meta Pixel should already be installed (Lesson 1.3). In Ads Manager, under the ad set, verify the pixel is selected. If it says "No pixel," go back to 1.3 and install it.
 7. **Launch:** Hit Publish. Expect 24-48 hours for first-time ad account review. Do not touch the campaign for 5-7 days after it starts spending.
 
 ### Google Ads (Search)
@@ -115,7 +115,7 @@ You picked your channel above and created your ad account. Here are the settings
 2. **Budget:** $20-50/day. Set max CPC bid at $3-8 (see channel table above for your use case).
 3. **Keywords:** 10-20 keywords in phrase match. Use your [problem] blank as the seed. Example: if your hypothesis is about chiropractor insurance claims, bid on "chiropractor insurance claim software," "resubmit denied claims chiropractor," "chiropractic billing automation."
 4. **Ad creative:** 3 headlines (Google shows 1-3). Headline 1: your landing page headline. Headline 2: one value prop. Headline 3: CTA ("Try It Free" or "See If It Works"). 2 descriptions. Description 1: your sub-headline. Description 2: one more value prop. Final URL: your landing page.
-5. **Tracking:** GA4 is installed (Lesson 1.2b). In Google Ads > Tools > Linked Accounts, link your GA4 property. This takes 30 seconds  --  click "Link" next to your GA4 property, confirm, done.
+5. **Tracking:** GA4 is installed (Lesson 1.3). In Google Ads > Tools > Linked Accounts, link your GA4 property. This takes 30 seconds  --  click "Link" next to your GA4 property, confirm, done.
 6. **Launch:** Submit. First-time accounts go into 24-hour review. Do not touch for 5-7 days.
 
 ### LinkedIn Ads
@@ -125,7 +125,7 @@ You picked your channel above and created your ad account. Here are the settings
 3. **Audience:** Job title + industry + company size. Use your [customer] blank literally. If your hypothesis says "CTOs at 20-50 person SaaS companies," target exactly that. Do not broaden  --  on LinkedIn, narrow targeting is cheaper (less competition per audience slice).
 4. **Ad format:** Single image ad.
 5. **Ad creative:** Intro text: your value prop (keep it professional  --  LinkedIn readers expect B2B tone). Headline: your landing page headline. Image: your hero image or a simple text-on-color card. CTA: "Learn More" or "Sign Up." Destination: your landing page.
-6. **Tracking:** LinkedIn Insight Tag should already be installed (Lesson 1.2b). In Campaign Manager, the tag should auto-detect if it's on your page.
+6. **Tracking:** LinkedIn Insight Tag should already be installed (Lesson 1.3). In Campaign Manager, the tag should auto-detect if it's on your page.
 7. **Launch:** Submit. First-time advertiser verification can take 48-72 hours. Start account setup Friday, launch Monday.
 
 ### Reddit Ads
@@ -135,7 +135,7 @@ You picked your channel above and created your ad account. Here are the settings
 3. **Targeting:** Community targeting. Pick 3-5 subreddits where your [customer] hangs out. For a developer tool: r/programming, r/webdev, r/SaaS. For B2B: r/startups, r/Entrepreneur. DO NOT target r/all  --  you'll burn budget on irrelevant clicks.
 4. **Ad format:** Promoted post (looks like a regular Reddit post with a "Promoted" tag).
 5. **Ad creative:** Title: your headline, rewritten in Reddit's casual tone. "We built a thing that [solves X problem]" works better than polished marketing copy. Body: 2-3 sentences. Problem → solution → link. Authentic, not salesy. Link: your landing page.
-6. **Tracking:** Reddit Pixel should be installed (Lesson 1.2b). In Ads Manager, the pixel status should show "Active."
+6. **Tracking:** Reddit Pixel should be installed (Lesson 1.3). In Ads Manager, the pixel status should show "Active."
 7. **Launch:** Submit. Reddit typically clears same-day. Comments will appear under your ad  --  leave them up unless they're spam. Real comments are free social proof or free feedback.
 
 ---

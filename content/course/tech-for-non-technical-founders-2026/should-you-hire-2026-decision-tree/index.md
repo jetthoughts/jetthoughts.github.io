@@ -95,7 +95,7 @@ Use this path when you have no MVP yet, a single untested hypothesis, and no con
 
 ### 2. Self-serve build ([The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/))
 
-Pick this path when the problem is validated (10+ Mom Test interviews with ≥7 strong-signal scores per the Ch 2.1b synthesis rubric + a Ch 1.2b smoke test that cleared the 6%+ "Promising" band - pre-orders and paid pilots are produced LATER in Module 5, do not require them as the gate), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
+Pick this path when the problem is validated (10+ Mom Test interviews with ≥7 strong-signal scores per the Ch 2.1b synthesis rubric + a Ch 1.4 smoke test that cleared the 6%+ "Promising" band - pre-orders and paid pilots are produced LATER in Module 5, do not require them as the gate), the scope is one workflow for one persona, and the backend requirements are simple - no real-time collaboration, no complex refund flows, no compliance scope.
 
 This week: paste your [one-page brief](/course/tech-for-non-technical-founders-2026/vibe-prd-template/) into [Lovable](https://lovable.dev) (an AI app builder - free trial, paid plans from $25/month), ship the smallest end-to-end thing it generates, and connect [Supabase](https://supabase.com) (database + auth, free tier) + Stripe + Resend on top. Tooling is per-vendor pricing across the stack. Watch one failure mode: hitting the architectural ceiling when the app crosses ~5,000 users or your second integration. [5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) tells you when to move up.
 
@@ -115,7 +115,7 @@ Five questions feed the matrix. Answer them alone with a printed worksheet, writ
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Start(["Default: self-serve with Lovable + Supabase + Stripe.<br/>Work through the ceiling-signal questions to see if that holds."])
-    Start --> Q1{"Q1: Problem validated?<br/>10+ Mom Test calls + ≥7 strong signals + Ch 1.2b smoke test ≥6%?"}
+    Start --> Q1{"Q1: Problem validated?<br/>10+ Mom Test calls + ≥7 strong signals + Ch 1.4 smoke test ≥6%?"}
     Q1 -->|No| Validate["Step back: Validate without code first.<br/>Run the Airbnb test this week."]
     Q1 -->|Yes| Q2{"Q2: Backend-heavy?<br/>Real-time / queues / compliance / 5+ integrations?"}
     Q2 -->|No| Q3{"Q3: Runway tight?<br/>Less than 4 months to show paying users?"}
@@ -146,7 +146,7 @@ The Mermaid above is the worksheet. The five questions live in the diagram. The 
 
 | Route | What it means | Next chapter to read |
 |---|---|---|
-| **Validate (Q1=No or Q3 tight)** | The Module 1-3 evidence chain isn't done. Pre-orders and paid pilots come in Module 5 - do NOT skip ahead. LinkedIn likes don't count; "they said they would buy" doesn't count. | Back to [Ch 1.2a + 1.2b smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) or [Ch 2.3a recruitment](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) |
+| **Validate (Q1=No or Q3 tight)** | The Module 1-3 evidence chain isn't done. Pre-orders and paid pilots come in Module 5 - do NOT skip ahead. LinkedIn likes don't count; "they said they would buy" doesn't count. | Back to [Ch 1.2 + 1.3 smoke test](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/) or [Ch 2.3a recruitment](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) |
 | **Self-serve (Q2=No, Q4=Yes)** | Default for non-technical founders. Lovable renders the screens, Supabase stores the data, Stripe charges the card. The senior engineer in your network is the cheap monthly insurance. | [Ch 4.3a · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.3b · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) |
 | **Fractional CTO (Q4=No, Q5=fractional)** | Same self-serve build, but the architecture review is bought commercially instead of borrowed from your network. 0% equity. | [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) |
 | **Hire a team (Q2=Yes OR Q5=full team)** | Backend-heavy OR runway gives you 12+ months. Material monthly burn. Read the SOW first. | [SOW reading guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) before signing anything |

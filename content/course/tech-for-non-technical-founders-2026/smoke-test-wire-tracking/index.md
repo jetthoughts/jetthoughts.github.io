@@ -1,5 +1,5 @@
 ---
-title: "1.2b · Wire Tracking Before Traffic Starts"
+title: "1.3 · Wire Tracking Before Traffic Starts"
 description: "Install Clarity and GA4 on your landing page before traffic starts. Both universal - regardless of which ad channel you pick later."
 date: 2026-06-08
 draft: true
@@ -20,11 +20,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 1 · Lesson 1.2b · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Lesson 1.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** the live landing page URL you published in [Lesson 1.2a](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
+> **Input:** the live landing page URL you published in [Lesson 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 >
-> **Output:** Clarity + GA4 installed on your landing page - ready for channel selection and pixel install in Lesson 1.2c
+> **Output:** Clarity + GA4 installed on your landing page - ready for channel selection and pixel install in Lesson 1.4
 >
 > **Progress:** M1 · 3 of 5 · Results so far: hypothesis sentence + live landing page
 
@@ -38,16 +38,16 @@ After this lesson you will be able to: **install Clarity and GA4 on your landing
 
 A **tracking snippet** is a small block of code (HTML or JavaScript) that you copy from one site and paste into a field on your page builder. You do not write or edit it. Once installed, each snippet records visitor activity to a dashboard you read later.
 
-You need two things regardless of which ad channel you pick in [Lesson 1.2c](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/):
+You need two things regardless of which ad channel you pick in [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/):
 
 - **[Microsoft Clarity](https://clarity.microsoft.com/)** - session recordings and heatmaps. Not needed to read conversion numbers, but essential when conversion is low and you need to see *why*. Watch ten replays after 300 visits; the pattern usually appears within the first three. Diagnose a <3% rate here before you rewrite your hypothesis.
-- **[Google Analytics 4](https://analytics.google.com/)** - your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the tracking snippet, paste it into your builder's head-tag field. If you later pick Google Ads in 1.2c, GA4 links directly to it - no separate pixel needed.
+- **[Google Analytics 4](https://analytics.google.com/)** - your analytics foundation. Tracks page views, clicks, and form submits. Create a GA4 property at [analytics.google.com](https://analytics.google.com/), copy the tracking snippet, paste it into your builder's head-tag field. If you later pick Google Ads in 1.4, GA4 links directly to it - no separate pixel needed.
 
-**Your channel-specific pixel** (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel) gets installed in Lesson 1.2c after you pick your channel - same process (copy snippet, paste in head-tag), under one minute.
+**Your channel-specific pixel** (Meta Pixel, LinkedIn Insight Tag, or Reddit Pixel) gets installed in Lesson 1.4 after you pick your channel - same process (copy snippet, paste in head-tag), under one minute.
 
 All snippets paste into the **head-tag field** - the hidden block at the top of every webpage. Page builders label this "head," "custom code," or "tracking scripts" (Mixo: Settings → Custom Code → Header).
 
-The 3 numbers you will read in Lesson 1.2c:
+The 3 numbers you will read in Lesson 1.4:
 
 | Event | What it measures |
 |---|---|
@@ -65,7 +65,7 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 >
 > 1. **Create accounts:** sign in to Microsoft (for Clarity) and Google (for GA4). Most people already have one or both - reuse them.
 > 2. **Install Clarity** ([clarity.microsoft.com](https://clarity.microsoft.com/), 60 seconds): copy the snippet, paste in your page builder's head-tag field.
-> 3. **Install GA4** ([analytics.google.com](https://analytics.google.com/)): copy the GA4 snippet, paste in the head-tag field. If you plan to use Google Ads in 1.2c, you'll link GA4 in Google Ads Settings there.
+> 3. **Install GA4** ([analytics.google.com](https://analytics.google.com/)): copy the GA4 snippet, paste in the head-tag field. If you plan to use Google Ads in 1.4, you'll link GA4 in Google Ads Settings there.
 > 4. **Verify:** open your page in an incognito window. Wait 60 seconds. **✅ Clarity:** your visit appears as a session recording. **✅ GA4:** test visit registers in your dashboard.
 >
 > (One "custom code" field? That field is the head-tag - paste all snippets there.)
@@ -84,9 +84,9 @@ Open Clarity, find your own session recording, and watch it. Then open GA4's Rea
 
 > **Done:** Clarity shows your recording AND GA4 shows your test visit.
 >
-> **You have now:** Founding Hypothesis (1.1) + a clear landing page (1.2a) + tracking installed (1.2b). Demand starts in 1.2c.
+> **You have now:** Founding Hypothesis (1.1) + a clear landing page (1.2) + tracking installed (1.3). Demand starts in 1.4.
 >
-> **Next:** [1.2c · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - drives 300 visits at the tracking you just installed, then reads the 3 numbers (page view, CTA click, form submit).
+> **Next:** [1.4 · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - drives 300 visits at the tracking you just installed, then reads the 3 numbers (page view, CTA click, form submit).
 >
 > **If blocked:** see "If this fails" above.
 

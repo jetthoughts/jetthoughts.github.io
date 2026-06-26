@@ -1,5 +1,5 @@
 ---
-title: "1.3 · Price Your Hypothesis on the Smoke-Test Page"
+title: "1.5 · Price Your Hypothesis on the Smoke-Test Page"
 aliases: ["/blog/price-hypothesis-on-smoke-test-page/"]
 description: "Add a Stripe payment button to your smoke-test page. Measure whether strangers will pay, not just whether they're curious."
 date: 2026-05-18
@@ -21,9 +21,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 1 · Lesson 1.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Lesson 1.5 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live smoke-test landing page from [Lesson 1.2c](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+> **Input:** a live smoke-test landing page from [Lesson 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 >
 > **Output:** a price hypothesis with a measured click-to-payment signal
 >
@@ -71,7 +71,7 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 
 ---
 
-**If this fails: Stripe verification takes more than 3 days.** **Why:** Stripe sometimes requests an ID upload for first-time accounts. **Fix:** build the page without the button. Run the email-only smoke test from 1.2c while Stripe processes. The demand signal doesn't depend on the price button being live today.
+**If this fails: Stripe verification takes more than 3 days.** **Why:** Stripe sometimes requests an ID upload for first-time accounts. **Fix:** build the page without the button. Run the email-only smoke test from 1.4 while Stripe processes. The demand signal doesn't depend on the price button being live today.
 
 **If this fails: visitors click the button but nobody completes payment.** **Why:** the checkout page is killing intent - price felt different in context, or the checkout page itself adds friction. **Fix:** track both click (page → Stripe) and completion (Stripe → thank-you). 60 clicks with 3 completions = the checkout is killing intent. 6 clicks with 3 completions = 50% of clickers bought - strong signal. Same outcome, opposite diagnosis. The [full price test guide](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/) has the detailed threshold table.
 
@@ -83,7 +83,7 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 
 > **Done:** Stripe Payment Link is live on your smoke-test page and you have a measured click-to-payment rate.
 >
-> **You have now:** all M1 artifacts - Founding Hypothesis (1.1), clear landing page (1.2a), tracking (1.2b), cold-traffic data (1.2c), price signal (1.3). Module 1 closes here.
+> **You have now:** all M1 artifacts - Founding Hypothesis (1.1), clear landing page (1.2), tracking (1.3), cold-traffic data (1.4), price signal (1.5). Module 1 closes here.
 >
 > **Next:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - takes your price signal into customer interviews to find out WHY strangers paid (or didn't).
 >

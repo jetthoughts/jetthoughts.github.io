@@ -1,5 +1,5 @@
 ---
-title: "1.2c · Smoke Test: Run It and Read the Signal"
+title: "1.4 · Smoke Test: Run It and Read the Signal"
 aliases: ["/blog/smoke-test-landing-page-300-dollar-validation/"]
 description: "Put your landing page in front of 300 cold strangers and read the conversion rate against the go/iterate/kill table."
 date: 2026-05-13
@@ -21,9 +21,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 1 · Lesson 1.2c · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Lesson 1.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live landing page with Clarity + GA4 installed (from [Lesson 1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/))
+> **Input:** a live landing page with Clarity + GA4 installed (from [Lesson 1.3](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/))
 >
 > **Output:** a go / iterate / kill decision on your hypothesis, backed by real demand signal
 >
@@ -54,7 +54,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 > **Launch:**
 >
-> 1. **Install your channel's pixel.** Open your ad platform's pixel manager: **Meta** → Events Manager, **LinkedIn** → Campaign Manager, **Reddit** → Ads Manager. Copy the pixel snippet, paste in your page builder's head-tag field - same process as Clarity and GA4 in Lesson 1.2b. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
+> 1. **Install your channel's pixel.** Open your ad platform's pixel manager: **Meta** → Events Manager, **LinkedIn** → Campaign Manager, **Reddit** → Ads Manager. Copy the pixel snippet, paste in your page builder's head-tag field - same process as Clarity and GA4 in Lesson 1.3. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
 > 2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
 > 3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
 > 4. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis - not an optimized funnel.
@@ -84,9 +84,9 @@ Open your tracking dashboard. Write down the number that surprised you most - th
 
 > **Done:** ≥300 cold visitors have seen your page and you have a conversion rate read against the go/iterate/kill table. Decision written down.
 >
-> **You have now:** Founding Hypothesis (1.1) + clear landing page (1.2a) + tracking (1.2b) + cold-traffic data + a go / iterate / kill decision (1.2c). Price test is next.
+> **You have now:** Founding Hypothesis (1.1) + clear landing page (1.2) + tracking (1.3) + cold-traffic data + a go / iterate / kill decision (1.4). Price test is next.
 >
-> **Next:** [1.3 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - adds a Stripe button so you can find out if strangers will pay, not just sign up.
+> **Next:** [1.5 · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) - adds a Stripe button so you can find out if strangers will pay, not just sign up.
 >
 > **If blocked:** see "If this fails" above. If the ad budget is out of reach, use the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real.
 >

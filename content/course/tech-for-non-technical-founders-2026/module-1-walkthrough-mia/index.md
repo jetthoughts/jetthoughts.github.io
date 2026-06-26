@@ -36,7 +36,7 @@ She scored it against the four lenses. Customer: 5/5. Pragmatic: 4/5. Growth: 3/
 
 ---
 
-## [Lesson 1.2a: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
+## [Lesson 1.2: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 
 Wednesday morning, she opened Mixo on her phone and pasted her hypothesis into the prompt box. By 7:15 she had a landing page. By 7:17 she hated it.
 
@@ -56,7 +56,7 @@ Now she needed to know who would actually visit it.
 
 ---
 
-## [Lesson 1.2b: Wire Tracking](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
+## [Lesson 1.3: Wire Tracking](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 
 Mia had never pasted code into anything. The word "snippet" sounded like something that would break if she held it wrong. But the lesson promised Clarity and GA4 would tell her exactly who was visiting the page she'd just built - before she spent a single dollar on traffic. Both free. Both five-minute installs, if you knew which field to use.
 
@@ -68,17 +68,17 @@ She moved the snippet up one slot. Refreshed Clarity. There it was - a fresh ses
 
 GA4 was the same dance, faster the second time. Real-time report showed one active user. Both tools verified.
 
-Meta Pixel could wait. She'd install that in 1.2c, after she picked her ad channel.
+Meta Pixel could wait. She'd install that in 1.4, after she picked her ad channel.
 
 Twenty-five minutes total. Twenty of those on the wrong-field detour.
 
 ---
 
-## [Lesson 1.2c: Run the Smoke Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+## [Lesson 1.4: Run the Smoke Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 
 She had $400 to spend, a Growth lens that scored only 3/5, and a quiet knot in her stomach about it. The lens was weak because she didn't know which way parents searched: by specialty (*dyslexia tutor*) or by location (*ADHD tutor near me*). The smoke test was her chance to find out.
 
-She installed the Meta Pixel she'd deferred from 1.2b. Same dance as Clarity and GA4, two minutes this time - the wrong-field detour had taught her where to click.
+She installed the Meta Pixel she'd deferred from 1.3. Same dance as Clarity and GA4, two minutes this time - the wrong-field detour had taught her where to click.
 
 Then the ads. Two variants, $200 each. Variant A targeted the search interest "dyslexia tutor," nationwide. Variant B targeted parents searching "ADHD tutor + [her city]," geographic. Same landing page, two different angles into it. She queued the ads up and hit Launch on a Monday morning.
 
@@ -94,7 +94,7 @@ Her weakest blank had just answered itself. Parents searched by specialty, not b
 
 ---
 
-## [Lesson 1.3: Price Hypothesis](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
+## [Lesson 1.5: Price Hypothesis](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
 Mia had no idea what parents actually paid for tutoring. Her Money lens scored 3/5 because her gut number ($25 a session) came from what her old school had charged for after-school programs - which she now suspected was nowhere near what parents paid private tutors out of their own pockets.
 

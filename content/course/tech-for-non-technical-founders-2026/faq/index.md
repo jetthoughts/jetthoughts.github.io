@@ -47,7 +47,7 @@ Don't skip - sign up for Stripe tonight and let it verify in the background whil
 
 **Q: Which landing page builder should I use?**
 
-Mixo ($7/mo, 30 seconds from idea to page). If the templates don't fit, Manus AI (free tier, no card). Don't comparison-shop for a week - you're testing demand, not builders. The [Ch 1.2a builder section](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/#pick-your-builder) has the full list.
+Mixo ($7/mo, 30 seconds from idea to page). If the templates don't fit, Manus AI (free tier, no card). Don't comparison-shop for a week - you're testing demand, not builders. The [Ch 1.2 builder section](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/#pick-your-builder) has the full list.
 
 ---
 

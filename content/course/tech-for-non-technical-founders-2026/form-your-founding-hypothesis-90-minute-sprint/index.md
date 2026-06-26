@@ -79,11 +79,11 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 > 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
 > 3. Score your sentence using the four lenses above.
 > 4. **✅ Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
-> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2a, 1.2c, 1.3, and every Module 2 interview.
+> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2, 1.4, 1.5, and every Module 2 interview.
 
 ---
 
-**If this fails: your sentence scores below 14 or has a lens at 1.** **Why:** a blank is still a category, not a specific noun. **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). Replace your [problem] blank with their exact words. If you don't have a quote yet, leave the [problem] blank as a placeholder and complete 1.2a - you'll fill it after Module 2 interviews.
+**If this fails: your sentence scores below 14 or has a lens at 1.** **Why:** a blank is still a category, not a specific noun. **Fix:** find a verbatim quote from a real person complaining about this problem ([Reddit](https://www.reddit.com/), [G2 reviews](https://www.g2.com/), or a conversation you had). Replace your [problem] blank with their exact words. If you don't have a quote yet, leave the [problem] blank as a placeholder and complete 1.2 - you'll fill it after Module 2 interviews.
 
 **If this fails: every blank is specific but the sentence still sounds generic.** **Why:** you're writing in market-research language instead of customer language. **Fix:** read the sentence aloud to one stranger. If they say "wait, can you say that again," rewrite the blank they tripped on. Three reads is normal.
 
@@ -97,7 +97,7 @@ Read your sentence aloud to yourself. Which blank would you bet $100 is wrong? W
 >
 > **You have now:** a one-sentence Founding Hypothesis ready to test (1.1). This is the seed for everything else in Module 1.
 >
-> **Next:** [1.2a · Build Your Smoke-Test Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - turns your hypothesis into a landing page that explains your offer to potential customers.
+> **Next:** [1.2 · Build Your Smoke-Test Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - turns your hypothesis into a landing page that explains your offer to potential customers.
 >
 > **If blocked:** see "If this fails" above. If you still can't fill the blanks, run the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) to find real customer complaints to anchor your blanks.
 

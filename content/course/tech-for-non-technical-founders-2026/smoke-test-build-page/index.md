@@ -1,5 +1,5 @@
 ---
-title: "1.2a · Build Your Smoke-Test Page with an AI Page Builder"
+title: "1.2 · Build Your Smoke-Test Page with an AI Page Builder"
 description: "Turn your Founding Hypothesis into a live landing page URL using an AI page builder. Tighten 4 copy blocks, swap one image, publish, test on one stranger."
 date: 2026-06-08
 draft: true
@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 1 · Lesson 1.2a · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 1 · Lesson 1.2 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** your Founding Hypothesis sentence from [Lesson 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) (the one-sentence `if [customer] solves [problem] with [approach]...` you wrote)
 >
@@ -35,7 +35,7 @@ After this lesson you will be able to: **publish a landing page so clear that st
 
 ---
 
-A **smoke-test page** is one URL that describes your unbuilt product and asks visitors for an email if they want it. This lesson builds the page so strangers can understand it. Tracking goes in 1.2b; the demand test runs in 1.2c (would strangers actually sign up?).
+A **smoke-test page** is one URL that describes your unbuilt product and asks visitors for an email if they want it. This lesson builds the page so strangers can understand it. Tracking goes in 1.3; the demand test runs in 1.4 (would strangers actually sign up?).
 
 An **AI page builder** drafts a working page from your hypothesis in ~60 seconds. This lesson uses **[Mixo](https://www.mixo.io/)** (fastest setup); most AI page builders are interchangeable for this workflow.
 
@@ -77,15 +77,15 @@ Translate this hypothesis into 6 landing-page elements
 
 ---
 
-Read your published page out loud as if you were the visitor. The sentence where your tongue trips is the next one to rewrite before Lesson 1.2b.
+Read your published page out loud as if you were the visitor. The sentence where your tongue trips is the next one to rewrite before Lesson 1.3.
 
 ---
 
 > **Done:** your URL is live and one stranger named who it's for and what it does in 3 seconds.
 >
-> **You have now:** Founding Hypothesis (1.1) + a clear landing page (1.2a). Demand is the next test.
+> **You have now:** Founding Hypothesis (1.1) + a clear landing page (1.2). Demand is the next test.
 >
-> **Next:** [1.2b · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/) - installs tracking on the URL you just built, so you can see what visitors do once traffic starts.
+> **Next:** [1.3 · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/) - installs tracking on the URL you just built, so you can see what visitors do once traffic starts.
 >
 > **If blocked:** see "If this fails" above.
 

@@ -124,7 +124,7 @@ The cost is real - each booked call has a meaningful incentive attached - so pan
 
 ### The parallel smoke-test landing page
 
-While the cold-outreach path books the calls, the smoke-test landing page from [Chapter 1.2b](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (built in [1.2a](/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/)) measures whether strangers will give you their email for the thing you described. Run it in parallel and drop the URL into your messages - it doubles as the warmest opener:
+While the cold-outreach path books the calls, the smoke-test landing page from [Chapter 1.4](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (built in [1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)) measures whether strangers will give you their email for the thing you described. Run it in parallel and drop the URL into your messages - it doubles as the warmest opener:
 
 > "You signed up for the waitlist on [page] last Tuesday - up for a 20-minute call?"
 
@@ -136,7 +136,7 @@ flowchart TD
     A(["Start a focused block. 30-name list from Part 1."])
     A --> B[Cold outreach track: 30 messages by hand]
     A --> C[Research-panel track: only if cold can't reach the ICP]
-    A --> D[Smoke-test track: landing page from Chapter 1.2a + 1.2b]
+    A --> D[Smoke-test track: landing page from Chapter 1.2 + 1.3]
     B --> E[10 interviews booked]
     C --> E
     D --> E
