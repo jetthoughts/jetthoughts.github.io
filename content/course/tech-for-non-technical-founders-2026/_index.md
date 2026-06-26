@@ -27,11 +27,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-Getting from idea to a paying customer is harder when you can't read code. This course is the full route. **Module 1 - Validate Demand - is released today. Modules 2-5 roll out through 2026.**
+You finish this course with a signed paid pilot from someone you didn't know yesterday.
 
-In Module 1 you write a Founding Hypothesis, ship a smoke-test landing page, run 300 cold strangers against it, and price-test with real Stripe payments. Six to eight weeks at an evenings-and-weekends pace. You walk away with a go/iterate/kill decision based on real demand data.
-
-Every tool has a free tier. Plan on $0 in fixed costs plus an optional $300-400 ad spend for the smoke test in 1.2c.
+You leave Module 1 with a go/iterate/kill decision based on real demand data - the evidence most founders skip before they build. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Six to eight weeks at an evenings-and-weekends pace.
 
 > **Start here:** [**Chapter 1.1 - Form Your Founding Hypothesis →**](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 >
@@ -48,8 +46,6 @@ Five mistakes new founders make most often - and where the course heads each one
 - Signing an SOW (the agency contract that defines "delivered") where "delivered" means "deployed to staging" - the SOW reading guide flags the bad clauses.
 - Rebuilding from scratch when salvage would have closed the gap in eight weeks - the salvage-vs-rebuild scorer keeps you out of unnecessary rewrites.
 - Shipping an AI feature only to discover the agency was passing per-question AI costs through the invoice without telling you. The AI agency questions chapter catches this on the first discovery call.
-
-Already mid-build and it's failing? Jump to the [rescue chapters](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/). Everyone else: start at Module 1.
 
 ## Take this course if
 
@@ -71,22 +67,22 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 5. A **live MVP** at a real URL, ownership locked Day 1 - proves you can ship without an engineer and nobody else holds the keys (Module 4)
 6. A **first signed paid pilot** + channel sequence running - proves someone who doesn't know you paid real money (Module 5)
 
-*Today: Module 1 produces artifacts 1 and 2. Artifacts 3 through 6 unlock as Modules 2-5 release through 2026.*
+*Module 1 produces artifacts 1 and 2. Artifacts 3-6 follow in Modules 2-5.*
 
 ## Module map
 
 > Read the modules in order. Each module's output is the next module's input.
 
 ### Module 1 - Hypothesis & Smoke Test
-*✅ **Released today** · v2 micro-lessons*  
+
 *Output: One-sentence Founding Hypothesis + a live landing page with a Stripe price button.*  
 *Start here if you don't have a one-sentence Founding Hypothesis yet, or you have one but never tested demand with a landing page.*
 
 - [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
-- [**1.2a** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
-- [**1.2b** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
-- [**1.2c** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
-- [**1.3** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
+- [**1.2** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
+- [**1.3** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
+- [**1.4** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
+- [**1.5** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
 *Optional reference: [AI stress-test for the blanks](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).*  
 *See it in action: [Mia builds TutorMatch - a full Module 1 walkthrough](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/).*
@@ -94,7 +90,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 1 with** a Founding Hypothesis, demand data from 300 cold strangers, and a price test - the demand evidence most founders skip and build without.
 
 ### Module 2 - Validate the Problem
-*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*In progress.*  
 *Output: 10 Mom Test interviews + a [Lovable](https://lovable.dev) prototype shown to 5 of them.*  
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 
@@ -110,7 +106,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 2 with** 10 scored interview transcripts and a prototype tested by 5 of them - real signal, not "I asked some friends."
 
 ### Module 3 - Design from Evidence
-*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*In progress.*  
 *Output: One-page Product Brief drafted from interview transcripts.*  
 *Start here if you've validated the problem but don't have a one-page Product Brief.*
 
@@ -123,7 +119,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 3 with** a one-page Product Brief written from interview transcripts, not feature wishlists.
 
 ### Module 4 - Build It Yourself
-*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*In progress.*  
 *Output: Live Lovable + [Supabase](https://supabase.com) + Stripe MVP at a real URL, ownership locked Day 1.*  
 *Start here if you have a Product Brief and need to build the MVP.*
 
@@ -139,7 +135,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 4 with** a live MVP at a real URL, ownership locked Day 1, no engineer hired.
 
 ### Module 5 - First Paying Customer
-*🗓️ **Rolling out 2026** · v1 long-form chapters readable now*  
+*In progress.*  
 *Output: One paying customer through a deliberately chosen channel.*  
 *Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
 

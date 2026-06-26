@@ -57,9 +57,11 @@ Five modules. Twenty chapters. Six artifacts you can hand to an investor or a co
 
 | Step | What You Do | Key Tool |
 |---|---|---|
-| 1.1 | Write your Founding Hypothesis (Mad Libs sentence) | Notebook + kitchen timer |
-| 1.2 | Build a landing page to test demand | Carrd or Neeto (free tier) |
-| 1.3 | Add a Stripe price button to measure payment intent | Stripe Payment Links (free) |
+| 1.1 | Write your Founding Hypothesis | Notebook + kitchen timer |
+| 1.2 | Build a smoke-test landing page | Carrd or Neeto (free tier) |
+| 1.3 | Wire tracking before traffic starts | Microsoft Clarity (free) |
+| 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
+| 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links (free) |
 
 **Before you write the hypothesis:** run a 30-minute Perplexity search first. Ask it to find the top 5 user complaints about existing solutions in your niche, citing G2 and Capterra reviews. Use the exact vocabulary from real complaints in your hypothesis blanks. If nobody is complaining about the problem anywhere online, the hypothesis is already in trouble.
 

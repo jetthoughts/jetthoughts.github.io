@@ -117,21 +117,13 @@ No. A verbal yes is not a paid pilot. Reframe: the deposit is year-one ACV prepa
 
 ## General
 
-**Q: Which modules of the course are released today?**
-
-Module 1 (Validate Demand) is the released module. It's a complete, standalone deliverable: you finish with a price-tested Founding Hypothesis, a smoke-test landing page, and demand data on 300 cold strangers. Modules 2-5 are scheduled to roll out through 2026 in the v2 micro-lesson format; the v1 long-form chapters for those modules are readable today.
-
-**Q: When does Module 2 release?**
-
-No fixed date. Each module ships when the v2 conversion meets the same quality bar as Module 1. The Module 1 conversion took roughly six weeks of polish across five lessons plus the Mia walkthrough. The v1 long-form M2 chapters are readable in the meantime.
-
-**Q: How long does the released Module 1 take?**
+**Q: How long does Module 1 take?**
 
 Six to eight weeks at an evenings-and-weekends pace (the pattern this course is built for). A full-time founder can finish Module 1 in about two weeks. The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) is the shortest path - core lessons only.
 
-**Q: How long will the full 5-module course take once everything is released?**
+**Q: How long does the full 5-module course take?**
 
-A full-time founder: 6-10 weeks. An evenings-and-weekends founder (2-4 hrs/week): 10-16 weeks. These estimates apply once Modules 2-5 ship in v2; reading the v1 long-form chapters today is faster but the polish bar is different.
+A full-time founder: 6-10 weeks. An evenings-and-weekends founder (2-4 hrs/week): 10-16 weeks.
 
 **Q: Do I need to do the modules in order?**
 
