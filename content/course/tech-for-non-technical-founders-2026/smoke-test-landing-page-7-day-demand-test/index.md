@@ -3,7 +3,7 @@ title: "1.4 · Smoke Test: Run It and Read the Signal"
 aliases: ["/blog/smoke-test-landing-page-300-dollar-validation/"]
 description: "Put your landing page in front of 300 cold strangers and read the conversion rate against the go/iterate/kill table."
 date: 2026-05-13
-draft: true
+draft: false
 course_chapter: false
 author: "JetThoughts Team"
 slug: smoke-test-landing-page-7-day-demand-test

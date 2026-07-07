@@ -1,8 +1,9 @@
 ---
 title: "1.2 · Build Your Smoke-Test Page with an AI Page Builder"
+aliases: ["/blog/smoke-test-build-landing-page/", "/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/"]
 description: "Turn your Founding Hypothesis into a live landing page URL using an AI page builder. Tighten 4 copy blocks, swap one image, publish, test on one stranger."
 date: 2026-06-08
-draft: true
+draft: false
 course_chapter: false
 author: "JetThoughts Team"
 slug: smoke-test-build-page

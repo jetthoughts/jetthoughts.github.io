@@ -3,7 +3,7 @@ title: "1.1 · Form Your Founding Hypothesis"
 aliases: ["/blog/form-your-founding-hypothesis-90-minute-sprint/"]
 description: "Write a one-sentence Founding Hypothesis you can test in five interviews."
 date: 2026-05-13
-draft: true
+draft: false
 course_chapter: false
 author: "JetThoughts Team"
 slug: form-your-founding-hypothesis-90-minute-sprint

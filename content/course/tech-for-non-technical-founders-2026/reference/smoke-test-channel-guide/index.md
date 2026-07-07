@@ -2,7 +2,7 @@
 title: "Full Reference: Smoke Test Channel Guide"
 description: "Complete ad channel budgets, account setup timing, B2B budget alternatives, and conversion benchmark sources for running a cold-traffic smoke test."
 date: 2026-05-13
-draft: true
+draft: false
 slug: smoke-test-channel-guide
 ---
 
@@ -23,7 +23,7 @@ The dollar cost of 300 visits depends entirely on channel CPC (cost-per-click), 
 
 *Sources: [WordStream Meta benchmarks 2026](https://www.wordstream.com/blog/facebook-ads-benchmarks-2025); [WordStream Google Ads benchmarks 2026](https://www.wordstream.com/blog/2026-google-ads-benchmarks); [The B2B House LinkedIn benchmarks 2026](https://www.theb2bhouse.com/linkedin-ad-benchmarks/); [Stackmatix Reddit Ads 2026](https://www.stackmatix.com/blog/reddit-ads-cost-per-click).*
 
-**Default for a $20K-savings, no-cofounder founder: the $0 organic path.** Use Reddit comment outreach + LinkedIn DMs + a free landing page (NeetoSite + Clarity), and run the smoke test slower. The table above is a menu of paid options if you have budget to spare; it is NOT a floor.
+**Default for a $20K-savings, no-cofounder founder: the $0 organic path.** Use Reddit comment outreach + LinkedIn DMs against the page you built in Lesson 1.2 (Clarity is already installed from 1.3), and run the smoke test slower. The table above is a menu of paid options if you have budget to spare; it is NOT a floor.
 
 ---
 
@@ -42,7 +42,7 @@ Picking the channel is fast. Getting the ad account ready to run is not. First-t
 
 ## B2B on a Small Budget
 
-If your ICP says LinkedIn but $1,800+ is out of reach, three viable substitutes at ~10% of the cost:
+If your ideal customer profile (ICP) says LinkedIn but $1,800+ is out of reach, three viable substitutes at ~10% of the cost:
 
 | Alternative | How | Cost |
 |---|---|---|
@@ -106,7 +106,7 @@ You picked your channel above and created your ad account. Here are the settings
 3. **Audience:** Start broad. Meta's AI optimizer is better than manual interest stacking in 2026. If your [customer] blank is "solo chiropractors," add one interest (Chiropractic) and let the rest run broad. Age 25-55. All genders unless your product is gender-specific.
 4. **Placement:** Advantage+ placements (automatic). Let Meta decide where your ad shows.
 5. **Ad creative:** Single image (your hero image from Lesson 1.2, or the AI-generated one). Primary text: your value prop sentence (1-2 lines from your landing page). Headline: your landing page headline. CTA button: "Learn More" or "Sign Up." Destination: your landing page URL.
-6. **Tracking:** Your Meta Pixel should already be installed (Lesson 1.3). In Ads Manager, under the ad set, verify the pixel is selected. If it says "No pixel," go back to 1.3 and install it.
+6. **Tracking:** Your Meta Pixel should already be installed (Lesson 1.4, step 1). In Ads Manager, under the ad set, verify the pixel is selected. If it says "No pixel," go back to that step and install it.
 7. **Launch:** Hit Publish. Expect 24-48 hours for first-time ad account review. Do not touch the campaign for 5-7 days after it starts spending.
 
 ### Google Ads (Search)
@@ -125,7 +125,7 @@ You picked your channel above and created your ad account. Here are the settings
 3. **Audience:** Job title + industry + company size. Use your [customer] blank literally. If your hypothesis says "CTOs at 20-50 person SaaS companies," target exactly that. Do not broaden  --  on LinkedIn, narrow targeting is cheaper (less competition per audience slice).
 4. **Ad format:** Single image ad.
 5. **Ad creative:** Intro text: your value prop (keep it professional  --  LinkedIn readers expect B2B tone). Headline: your landing page headline. Image: your hero image or a simple text-on-color card. CTA: "Learn More" or "Sign Up." Destination: your landing page.
-6. **Tracking:** LinkedIn Insight Tag should already be installed (Lesson 1.3). In Campaign Manager, the tag should auto-detect if it's on your page.
+6. **Tracking:** LinkedIn Insight Tag should already be installed (Lesson 1.4, step 1). In Campaign Manager, the tag should auto-detect if it's on your page.
 7. **Launch:** Submit. First-time advertiser verification can take 48-72 hours. Start account setup Friday, launch Monday.
 
 ### Reddit Ads
@@ -135,7 +135,7 @@ You picked your channel above and created your ad account. Here are the settings
 3. **Targeting:** Community targeting. Pick 3-5 subreddits where your [customer] hangs out. For a developer tool: r/programming, r/webdev, r/SaaS. For B2B: r/startups, r/Entrepreneur. DO NOT target r/all  --  you'll burn budget on irrelevant clicks.
 4. **Ad format:** Promoted post (looks like a regular Reddit post with a "Promoted" tag).
 5. **Ad creative:** Title: your headline, rewritten in Reddit's casual tone. "We built a thing that [solves X problem]" works better than polished marketing copy. Body: 2-3 sentences. Problem → solution → link. Authentic, not salesy. Link: your landing page.
-6. **Tracking:** Reddit Pixel should be installed (Lesson 1.3). In Ads Manager, the pixel status should show "Active."
+6. **Tracking:** Reddit Pixel should be installed (Lesson 1.4, step 1). In Ads Manager, the pixel status should show "Active."
 7. **Launch:** Submit. Reddit typically clears same-day. Comments will appear under your ad  --  leave them up unless they're spam. Real comments are free social proof or free feedback.
 
 ---

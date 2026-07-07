@@ -2,7 +2,7 @@
 title: "Module 1 Walkthrough: Mia Builds TutorMatch"
 description: "Follow Mia through Module 1 as she writes a Founding Hypothesis, builds a smoke-test page, installs tracking, runs cold traffic, and price-tests - all before writing a line of product code."
 date: 2026-06-11
-draft: true
+draft: false
 slug: module-1-walkthrough-mia
 ---
 
@@ -86,11 +86,11 @@ Then she made a rule for herself: don't touch the page for seven days. No headli
 
 On Day 8 she opened the results.
 
-- Variant A (specialty search): 6.5% conversion. **Strong.**
+- Variant A (specialty search): 6.5% conversion. **Promising band.**
 - Variant B (location search): 3.5% conversion. **Iterate band.**
 - Combined across 300 cold visitors: 4.8%. Specialty beat location by nearly two-to-one.
 
-Her weakest blank had just answered itself. Parents searched by specialty, not by location. The specialty variant alone cleared the strong bar even though the combined number didn't. She decided to advance to the price test and park the location variant for a later round.
+Her weakest blank had just answered itself. Parents searched by specialty, not by location. The specialty variant alone cleared the proceed bar even though the combined number didn't. She decided to advance to the price test and park the location variant for a later round.
 
 ---
 
@@ -100,7 +100,7 @@ Mia had no idea what parents actually paid for tutoring. Her Money lens scored 3
 
 She set up a Stripe account on Friday night and uploaded her ID. By Tuesday morning she was approved. Wednesday she built her Payment Link: a one-time *$99 founding member rate, four months of access at $25/mo equivalent*. The button on her landing page changed to *Find your kid's specialist - $99 founding member rate*. Underneath in smaller type: *Full refund within 30 days if we don't ship.* And below that, an escape hatch for the curious-but-not-ready: *Not ready? Join the waitlist instead.*
 
-She let the same ads keep running and went back to her Day Job.
+She let the same ads keep running and went back to her day job.
 
 Over the next week, 6% of visitors clicked the Stripe link. Six of them completed the $99 payment. Six paying customers before her product existed - a price signal stronger than she'd dared hope for a pre-product page. Her Money lens had been low. Parents would pay well above $25.
 

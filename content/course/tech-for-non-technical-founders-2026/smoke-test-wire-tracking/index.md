@@ -2,7 +2,7 @@
 title: "1.3 · Wire Tracking Before Traffic Starts"
 description: "Install Clarity and GA4 on your landing page before traffic starts. Both universal - regardless of which ad channel you pick later."
 date: 2026-06-08
-draft: true
+draft: false
 course_chapter: false
 author: "JetThoughts Team"
 slug: smoke-test-wire-tracking

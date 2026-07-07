@@ -2,7 +2,7 @@
 title: "Full Reference: Stripe Price Test Guide"
 description: "Complete Stripe Payment Link setup walkthrough, visit-to-Stripe-click threshold bands, button copy patterns with Claude prompt, click-vs-completion tracking, and pricing revisit moments."
 date: 2026-05-18
-draft: true
+draft: false
 slug: stripe-price-test-full
 ---
 

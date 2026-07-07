@@ -2,7 +2,7 @@
 title: "Full Reference: The 6-Step Founding Hypothesis Sprint"
 description: "The complete Click/Jake Knapp Foundation Sprint methodology for writing a falsifiable one-sentence hypothesis. Includes the Mad Libs template, 4-lens scoring deep-dive, AI deep-research prompts, and a worked procurement-tool example."
 date: 2026-05-13
-draft: true
+draft: false
 slug: hypothesis-sprint-full
 ---
 
@@ -27,7 +27,7 @@ Open four columns in a notebook: Customer, Problem, Advantages, Competition. Wri
 
 Read the column. Circle the one entry you would bet on.
 
-Beside the customer you circled, write three ICP characteristics in plain words: industry vertical (e.g., "solo chiropractic clinics"), company size band (e.g., "1-3 staff"), and the specific moment the pain happens (e.g., "Monday morning insurance-claim resubmission"). These three become inputs for your interviews.
+Beside the customer you circled, write three ideal-customer-profile (ICP) characteristics in plain words: industry vertical (e.g., "solo chiropractic clinics"), company size band (e.g., "1-3 staff"), and the specific moment the pain happens (e.g., "Monday morning insurance-claim resubmission"). These three become inputs for your interviews.
 
 ### Step 2: Classic Differentiator
 
@@ -67,7 +67,7 @@ Read it aloud three times. Stop when the sentence reads like a thing a friend co
 
 Open a fresh page. Write one sentence: *The smallest signal that would prove or kill this hypothesis is _____*.
 
-The full test is two parts: (1) a smoke-test landing page for demand signal, and (2) ten Mom Test interviews for problem signal. Write both as your test plan now. Modules 2 and 3 run the tests; this sprint produces the plan they run.
+The full test is two parts: (1) a smoke-test landing page for demand signal, and (2) ten Mom Test interviews for problem signal. Write both as your test plan now. Lessons 1.2-1.5 run the smoke test and Module 2 runs the interviews; this sprint produces the plan they run.
 
 ---
 
@@ -110,7 +110,7 @@ She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonab
 
 ---
 
-## Two More Worked Examples
+## Three More Worked Examples
 
 **Gmail in 2003:** If we help heavy email users solve finding old messages with full-text search + 1 GB free, they will pick it over Yahoo Mail because Yahoo charges for storage and has no real search.
 
@@ -124,7 +124,7 @@ She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonab
 
 **Tomas** (ReconcileBot, B2B SaaS) filled his hypothesis: "If we help mid-size accounting firm controllers solve manual Stripe-to-QuickBooks reconciliation with an auto-matching engine, they will choose it over exporting to Excel because it cuts 2 hours of Monday work to 90 seconds." He scored 4/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: money  --  he doesn't know if firms will pay $200/mo or $2,000/mo. The money test goes into his smoke-test design.
 
-**Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: growth  --  she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke-test headline will test both.
+**Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: growth  --  she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke test will test both.
 
 ---
 

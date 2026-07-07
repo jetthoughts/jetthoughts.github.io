@@ -58,8 +58,8 @@ Five modules. Twenty chapters. Six artifacts you can hand to an investor or a co
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 1.1 | Write your Founding Hypothesis | Notebook + kitchen timer |
-| 1.2 | Build a smoke-test landing page | Carrd or Neeto (free tier) |
-| 1.3 | Wire tracking before traffic starts | Microsoft Clarity (free) |
+| 1.2 | Build a smoke-test landing page | Mixo or Carrd (free tier) |
+| 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 (free) |
 | 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
 | 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links (free) |
 
@@ -167,7 +167,7 @@ These are the tools the course references - AI research tools, no-code builders,
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
-| **Carrd / Neeto** | One-page landing page builder | Smoke test (Module 1) | Free tier (subdomain) |
+| **Mixo / Carrd** | One-page landing page builder | Smoke test (Module 1) | Free tier (subdomain) |
 | **Stripe Payment Links** | Hosted checkout without writing code | Price hypothesis test (Module 1), paid pilot deposit (Module 5) | Pay-as-you-go (2.9% + $0.30) |
 | **Lovable / Bolt.new** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
@@ -184,7 +184,7 @@ Every module has a gate. If the data doesn't support your hypothesis, you stop a
 
 | Module | The Gate | Signal to Proceed |
 |---|---|---|
-| 1 | Landing page conversion | ≥3% of cold visitors click your CTA |
+| 1 | Landing page conversion | ≥3% of cold visitors submit the email form |
 | 2 | Mom Test interviews | ≥7 of 10 interviewees have spent time or money on the problem |
 | 3 | Product Brief quality check | Every feature traces back to a verbatim interview quote |
 | 4 | MVP at staging URL | You own every account; the app loads; one core flow works end-to-end |
@@ -204,7 +204,7 @@ If you're not at the idea stage - you have a half-built MVP, an inherited codeba
 
 > **Done when:** You have read the full route and know which module to start with.
 > **Next click:** [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
-> **If blocked:** If your idea is too vague to fill the hypothesis blanks, start at the [If Your Team Is Already Failing](/course/tech-for-non-technical-founders-2026/#if-your-team-is-already-failing) section on the course landing page.
+> **If blocked:** If your idea is too vague to fill the hypothesis blanks, Lesson 1.1's "If this fails" section shows how to anchor the blanks with real customer complaints from Reddit and G2.
 
 ---
 

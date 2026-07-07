@@ -3,7 +3,7 @@ title: "1.5 · Price Your Hypothesis on the Smoke-Test Page"
 aliases: ["/blog/price-hypothesis-on-smoke-test-page/"]
 description: "Add a Stripe payment button to your smoke-test page. Measure whether strangers will pay, not just whether they're curious."
 date: 2026-05-18
-draft: true
+draft: false
 course_chapter: false
 author: "JetThoughts Team"
 slug: price-hypothesis-on-smoke-test-page
