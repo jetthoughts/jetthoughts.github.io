@@ -1,7 +1,7 @@
 ---
 title: "From Idea to First Paying Customer"
 description: "From idea to first paying users in 2026, with or without engineers. A free five-module course for non-technical founders: hypothesis, validation, design, build, first paying customer."
-date: 2026-05-13
+date: 2026-07-07
 draft: false
 author: "JetThoughts Team"
 slug: tech-for-non-technical-founders-2026
@@ -29,7 +29,7 @@ related_posts: false
 
 You finish this course with a signed paid pilot from someone you didn't know yesterday.
 
-You leave Module 1 with a go/iterate/kill decision based on real demand data - the evidence most founders skip before they build. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Six to eight weeks at an evenings-and-weekends pace.
+You leave Module 1 with a go/iterate/kill decision based on real demand data instead of polite nods. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Two to three weeks at an evenings-and-weekends pace.
 
 > **Start here:** [**Chapter 1.1 - Form Your Founding Hypothesis →**](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 >
@@ -41,11 +41,11 @@ You leave Module 1 with a go/iterate/kill decision based on real demand data - t
 
 Five mistakes new founders make most often - and where the course heads each one off:
 
-- Hiring a dev shop before validating the problem - Modules 1 and 2 show what a $0 validation looks like.
-- Paying for six months of "building" with no way to see what shipped - Module 4.2 (Day-1 ownership) and the Friday-demo rule cover this.
-- Signing an SOW (the agency contract that defines "delivered") where "delivered" means "deployed to staging" - the SOW reading guide flags the bad clauses.
-- Rebuilding from scratch when salvage would have closed the gap in eight weeks - the salvage-vs-rebuild scorer keeps you out of unnecessary rewrites.
-- Shipping an AI feature only to discover the agency was passing per-question AI costs through the invoice without telling you. The AI agency questions chapter catches this on the first discovery call.
+- Hiring a dev shop before validating the problem - Modules 1 and 2 show what validation looks like for less than one agency discovery call costs.
+- Paying for six months of "building" with no way to see what shipped - [Module 4.2 (Day-1 ownership)](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) and the [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) cover this.
+- Signing an SOW (the agency contract that defines "delivered") where "delivered" means "deployed to staging" - the [SOW reading guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) flags the bad clauses.
+- Rebuilding from scratch when salvage would have closed the gap in eight weeks - the [salvage-vs-rebuild scorer](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) keeps you out of unnecessary rewrites.
+- Shipping an AI feature and discovering per-question AI costs passed through the invoice - the [AI agency questions chapter](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) catches this on the first discovery call.
 
 ## Take this course if
 
@@ -87,10 +87,10 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 *Optional reference: [AI stress-test for the blanks](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).*  
 *See it in action: [Mia builds TutorMatch - a full Module 1 walkthrough](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/).*
 
-> **You leave Module 1 with** a Founding Hypothesis, demand data from 300 cold strangers, and a price test - the demand evidence most founders skip and build without.
+> **You leave Module 1 with** a Founding Hypothesis, demand data from 300 cold strangers, and a price test - all collected before you've built anything.
 
 ### Module 2 - Validate the Problem
-*In progress.*  
+*v1 chapters readable now; v2 rework rolling out.*  
 *Output: 10 Mom Test interviews + a [Lovable](https://lovable.dev) prototype shown to 5 of them.*  
 *Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
 
@@ -106,7 +106,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 2 with** 10 scored interview transcripts and a prototype tested by 5 of them - real signal, not "I asked some friends."
 
 ### Module 3 - Design from Evidence
-*In progress.*  
+*v1 chapters readable now; v2 rework rolling out.*  
 *Output: One-page Product Brief drafted from interview transcripts.*  
 *Start here if you've validated the problem but don't have a one-page Product Brief.*
 
@@ -119,7 +119,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 3 with** a one-page Product Brief written from interview transcripts, not feature wishlists.
 
 ### Module 4 - Build It Yourself
-*In progress.*  
+*v1 chapters readable now; v2 rework rolling out.*  
 *Output: Live Lovable + [Supabase](https://supabase.com) + Stripe MVP at a real URL, ownership locked Day 1.*  
 *Start here if you have a Product Brief and need to build the MVP.*
 
@@ -135,7 +135,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 > **You leave Module 4 with** a live MVP at a real URL, ownership locked Day 1, no engineer hired.
 
 ### Module 5 - First Paying Customer
-*In progress.*  
+*v1 chapters readable now; v2 rework rolling out.*  
 *Output: One paying customer through a deliberately chosen channel.*  
 *Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
 
@@ -149,7 +149,7 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 
 *Template in this module: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).*
 
-> **You leave Module 5 with** a signed paid pilot and your first dollar from someone you didn't know yesterday.
+> **You leave Module 5 with** a signed paid pilot and your first dollar from a customer, not a favor.
 
 ## What this course does NOT cover
 
@@ -157,7 +157,7 @@ To save your time, here is what we intentionally exclude. None of these are need
 
 - **How to code.** The course assumes zero coding ability. [Lovable](https://lovable.dev) + [Supabase](https://supabase.com) + [Stripe](https://stripe.com) handle the technical side.
 - **How to hire a CTO or build an engineering team.** Hiring is covered as a build-path decision (Chapter 4.1), not as an org-design course.
-- **How to raise venture capital.** The course produces the artifacts investors fund. It does not teach pitch decks or fundraising mechanics.
+- **How to raise venture capital.** The course produces the artifacts investors want to see. It does not teach pitch decks or fundraising mechanics.
 - **How to manage a 20-person engineering team.** Friday Demo Rule + Weekly Dev Report (in Going Further) cover early-stage management; full org management is out of scope.
 - **Mobile-only or marketplace-only specifics.** Examples use SaaS + B2B + B2C patterns. Mobile apps and two-sided marketplaces have their own playbooks.
 - **Legal incorporation, taxes, IP filings.** Use a lawyer or a service like [Stripe Atlas](https://stripe.com/atlas), [Clerky](https://www.clerky.com/), or [Firstbase](https://www.firstbase.io/).
@@ -197,7 +197,7 @@ If you're reading this in the middle of a stalled build or a runaway invoice, th
 1. Check who owns GitHub, AWS, database, and domain. If it's not you, fix that first. - [Ownership Audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
 2. Demand one Friday demo with working software only - no Jira, no slides, no "almost done." - [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
 3. Require a plain-English weekly report: what shipped, what's blocked, what's next. - [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
-4. Score salvage vs rebuild and plan your team transition before you authorize any more work. - [Salvage vs Rebuild Reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)
+4. Score salvage vs rebuild and plan your team transition before you authorize any more work. - [Salvage vs Rebuild Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/)
 5. If your team is shipping AI features, run the 5-question agency audit before approving more work. - ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
 
 ---
