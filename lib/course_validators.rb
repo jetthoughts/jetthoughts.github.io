@@ -166,7 +166,6 @@ class CourseValidators
       # so won't match `\(/blog/`. This is the only form we should validate.
       body.scan(%r{\]\(/blog/([^/"')\]\s]+)/\)}) do |match|
         target_slug = match.first
-        target_slug = match.first
         # If target is a course slug, it should now live under /course/<namespace>/
         next if course_slugs.include?(target_slug)
         target_path = "#{ALL_BLOG_DIR}/#{target_slug}"

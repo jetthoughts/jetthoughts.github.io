@@ -27,10 +27,8 @@ echo ""
 # Hugo does not automatically export this env var to Node child processes.
 export HUGO_ENVIRONMENT="development"
 
-# Add node_modules/.bin to PATH for npm CLI tools.
-# NOTE: We intentionally do NOT include bin/shims (the node→bun shim)
-# here because Hugo's postCSS pipe in server mode fails with bun.
-# Build mode (bin/hugo-build) includes the shim where it works fine.
+# Add node_modules/.bin to PATH for npm CLI tools. Hugo 0.161+ node
+# permission flags are handled by [security.node.permissions] in hugo.toml.
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PATH="$SCRIPT_DIR/../node_modules/.bin:$PATH"
 export PATH

@@ -73,20 +73,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-assets-
 
-      # Verify node runtime and clear stale cache if bun→node symlink is active.
-      # Runs after cache restore so the stale-cache clearance isn't reverted.
-      # Prevents PostCSS failures when production plugins (PurgeCSS, cssnano)
-      # encounter bun, which can also corrupt the asset cache with broken output.
-      - name: Check Node runtime for PostCSS compatibility
-        run: |
-          rc=0
-          bin/check-node-runtime || rc=$?
-          case $rc in
-            0) echo "✓ Node runtime OK — continuing with cache restore" ;;
-            1) echo "⚠️  bun detected — asset cache cleared, PATH adjusted" ;;
-            2) echo "❌ bun detected but real Node.js not found — build may fail" ;;
-          esac
-
       - name: Build with Hugo
         run: |
           PATH="./node_modules/.bin:app/bin:$PATH" hugo \

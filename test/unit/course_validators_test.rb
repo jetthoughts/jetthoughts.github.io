@@ -7,6 +7,7 @@ class CourseValidatorsTest < Minitest::Test
   def setup
     @tmpdir = Dir.mktmpdir("course_validators_test")
     @orig_course_dir = CourseValidators::COURSE_DIR
+    @orig_all_blog_dir = CourseValidators::ALL_BLOG_DIR
     @orig_yaml_path = CourseValidators::YAML_PATH
 
     # Override constants for testing
@@ -24,7 +25,7 @@ class CourseValidatorsTest < Minitest::Test
     FileUtils.rm_rf(@tmpdir)
     silence_warnings do
       CourseValidators.const_set(:COURSE_DIR, @orig_course_dir)
-      CourseValidators.const_set(:ALL_BLOG_DIR, @orig_course_dir)
+      CourseValidators.const_set(:ALL_BLOG_DIR, @orig_all_blog_dir)
       CourseValidators.const_set(:YAML_PATH, @orig_yaml_path)
     end
   end

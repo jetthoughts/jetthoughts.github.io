@@ -60,18 +60,6 @@ runs:
           ${{ runner.os }}-hugo-${{ inputs.environment }}-
           ${{ runner.os }}-hugo-
 
-    # Runs after cache restore so stale-cache clearance isn't reverted.
-    - name: Check Node runtime for PostCSS compatibility
-      shell: bash
-      run: |
-        rc=0
-        bin/check-node-runtime || rc=$?
-        case $rc in
-          0) echo "✓ Node runtime OK — continuing with cache restore" ;;
-          1) echo "⚠️  bun detected — asset cache cleared, PATH adjusted" ;;
-          2) echo "❌ bun detected but real Node.js not found — build may fail" ;;
-        esac
-
     - name: Build Hugo site
       run: PATH="./node_modules/.bin:$PATH" bin/hugo-build
       shell: bash
