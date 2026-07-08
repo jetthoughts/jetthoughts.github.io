@@ -80,7 +80,9 @@ Skip anything tagged [OPTIONAL] and you still walk away with all 6 Founder OS ar
 *Output: one signed paid pilot + repeatable outbound channel.*
 
 - [**5.1** · PMF Test Before You Scale](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
-- [**5.3** · First Ten Come From People Who Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+- [**5.3a** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+- [**5.3b** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
+- [**5.3c** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
 - [**5.4** · Charge Before You Ship: The Paid Pilot](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 
 **Gate:** signed pilot agreement + $500+ deposit received through Stripe.

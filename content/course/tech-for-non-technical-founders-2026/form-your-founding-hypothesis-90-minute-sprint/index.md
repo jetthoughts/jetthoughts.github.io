@@ -97,7 +97,7 @@ Read your sentence aloud to yourself. Which blank would you bet $100 is wrong? W
 >
 > **You have now:** a one-sentence Founding Hypothesis ready to test (1.1). This is the seed for everything else in Module 1.
 >
-> **Next:** [1.2 · Build Your Smoke-Test Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - turns your hypothesis into a landing page that explains your offer to potential customers.
+> **Next:** [1.2 · Build Your Smoke-Test Page with an AI Page Builder](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - turns your hypothesis into a landing page that explains your offer to potential customers.
 >
 > **If blocked:** see "If this fails" above. If you still can't fill the blanks, run the deep-research prompt on the [full sprint reference](/course/tech-for-non-technical-founders-2026/reference/hypothesis-sprint-full/) to find real customer complaints to anchor your blanks.
 

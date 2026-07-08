@@ -90,7 +90,7 @@ Open Clarity, find your own session recording, and watch it. Then open GA4's Rea
 >
 > **You have now:** Founding Hypothesis (1.1) + a clear landing page (1.2) + tracking installed (1.3). Demand starts in 1.4.
 >
-> **Next:** [1.4 · Run the Smoke Test and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - drives 300 visits at the tracking you just installed, then reads the 3 numbers (page view, CTA click, form submit).
+> **Next:** [1.4 · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - drives 300 visits at the tracking you just installed, then reads the 3 numbers (page view, CTA click, form submit).
 >
 > **If blocked:** see "If this fails" above.
 

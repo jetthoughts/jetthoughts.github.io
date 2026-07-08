@@ -68,7 +68,7 @@ flowchart TD
 4. **Write to each one** using the templates in [Part 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 5. **10 interview calls on the calendar.**
 
-> **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Ch 1.2-1.4 smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Ch 1.5 price-button variant. 3-5% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
+> **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Ch 1.2-1.4 smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Ch 1.5 price-button variant. 3-6% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
 
 This page covers steps 1-3. Part 2 covers steps 4-5.
 

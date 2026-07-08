@@ -62,11 +62,13 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 | Conversion rate from cold traffic | Decision | What to do |
 |---|---|---|
-| <3% | Kill or pivot | Hypothesis is wrong. Rewrite the weakest blank and re-test. |
-| 3-5% | Iterate the message | Rewrite headline or try a different audience. Same hypothesis, different framing. |
+| Under 3% | Kill or pivot | Hypothesis is wrong. Rewrite the weakest blank and re-test. |
+| 3-6% | Iterate the message | Rewrite headline or try a different audience. Same hypothesis, different framing. |
 | 6-10% | Promising | Move to [Module 2 interviews](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). Talk to the people who signed up. |
 | 10-20% | Strong signal | Run interviews + [Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) in parallel. |
-| >20% | Suspicious | Either hot market OR broken targeting. Verify with a second channel. |
+| Over 20% | Suspicious | Either hot market OR broken targeting. Verify with a second channel. |
+
+*On a boundary (exactly 6%, 10%, or 20%)? Take the higher band's action.*
 
 **✅ Success check:** you have a conversion rate from ≥300 cold visits AND a go/iterate/kill decision written down.
 
