@@ -37,14 +37,14 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 ---
 
-**Pick your ad channel** based on who your hypothesis names in the [customer] blank:
+**Pick your ad channel** based on who your hypothesis names in the [customer] blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
 
-- **B2C consumer** → [Meta Ads](https://business.facebook.com/) ($0.50-$2 CPC). Best when the product is visual and the audience is broad.
-- **B2B / job-title-sold** → [Google Search](https://ads.google.com/) ($3-$8 CPC) if your customer Googles the problem; [LinkedIn](https://www.linkedin.com/campaignmanager/) ($5.50-$22 CPC) if they don't.
+- **Selling to individual people** → [Meta Ads](https://business.facebook.com/) ($0.50-$2 CPC). Best when the product is visual and the audience is broad.
+- **Selling to businesses, by job title** → [Google Search](https://ads.google.com/) ($3-$8 CPC) if your customer Googles the problem; [LinkedIn](https://www.linkedin.com/campaignmanager/) ($5.50-$22 CPC) if they don't.
 - **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1-$3 CPC) in r/programming, r/webdev, r/SaaS.
 - **Niche vertical** → Google Search long-tail ($1-$5 CPC) - real estate, dentists, contractors Googling pain.
 
-**Budget:** depends on your channel's CPC (cost-per-click - what one ad click costs). Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real. If you have budget: 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600.
+**Budget:** depends on your channel's CPC. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real. If you have budget: 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600.
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 

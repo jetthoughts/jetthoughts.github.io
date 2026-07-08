@@ -83,7 +83,7 @@ Skip anything tagged [OPTIONAL] and you still walk away with all 6 Founder OS ar
 - [**5.3** · First Ten Come From People Who Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
 - [**5.4** · Charge Before You Ship: The Paid Pilot](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 
-**Gate:** signed DPA + $500+ Stripe deposit received.
+**Gate:** signed pilot agreement + $500+ deposit received through Stripe.
 
 ---
 

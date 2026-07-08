@@ -23,7 +23,7 @@ related_posts: false
 
 > **Module 1 · Lesson 1.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a rough idea, instinct, or half-built MVP
+> **Input:** a rough idea, an instinct, or something half-built you've been tinkering with
 >
 > **Output:** a one-sentence Founding Hypothesis you can test in five interviews
 >
@@ -37,7 +37,7 @@ After this lesson you will be able to: **write a single sentence about your idea
 
 ---
 
-A **Founding Hypothesis** is a Mad Libs sentence from Jake Knapp and John Zeratsky's *Click* (2025):
+A **Founding Hypothesis** is a fill-in-the-blanks sentence (Mad Libs style) from Jake Knapp and John Zeratsky's *Click* (2025):
 
 > *"If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation]."*
 

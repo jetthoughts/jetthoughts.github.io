@@ -200,7 +200,7 @@ If you fail a gate, the system requires you to go back, not forward. Six weeks a
 
 Read the overview once. Then start at [Module 1, Chapter 1.1: Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/). Come back to this page when you need to see where you are in the full route.
 
-If you're not at the idea stage - you have a half-built MVP, an inherited codebase, or a team that's already failing - skip the linear path and go to the [If Your Team Is Already Failing](/course/tech-for-non-technical-founders-2026/#if-your-team-is-already-failing) section on the course landing page.
+If you're not at the idea stage - you're already building, or paying someone to build for you - see the [Already started building?](/course/tech-for-non-technical-founders-2026/#already-started-building) section on the course landing page.
 
 > **Done when:** You have read the full route and know which module to start with.
 > **Next click:** [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
