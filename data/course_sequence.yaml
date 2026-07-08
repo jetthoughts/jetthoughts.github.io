@@ -119,10 +119,20 @@ sequence:
     module: "Chapter 5.2"
     goal: "Pick one outreach channel you'll commit to before scaling."
 
-  - slug: first-ten-customers-personal-network
-    title: "5.3 · The First Ten Come From People Who Already Know You"
-    module: "Chapter 5.3"
-    goal: "Convert 50 personalized warm DMs into your first 10 paid pilots."
+  - slug: first-ten-customers-network-list
+    title: "5.3a · Build Your 50-Name Network List"
+    module: "Chapter 5.3a"
+    goal: "Sort 50 names into 4 outreach buckets so you know exactly who to message first."
+
+  - slug: first-ten-customers-outreach-message
+    title: "5.3b · Write the Outreach Message"
+    module: "Chapter 5.3b"
+    goal: "Write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies."
+
+  - slug: first-ten-customers-send-track
+    title: "5.3c · Send, Track, and Read the Replies"
+    module: "Chapter 5.3c"
+    goal: "Send 50 messages in the right sequence, track replies in a spreadsheet, and diagnose what a no actually means."
 
   - slug: paid-pilot-charge-before-ship
     title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"

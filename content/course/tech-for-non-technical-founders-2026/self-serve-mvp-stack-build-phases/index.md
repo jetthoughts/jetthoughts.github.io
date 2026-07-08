@@ -58,7 +58,7 @@ Four build phases, plus an onramp phase that hands you off to Module 5. Each pha
 
 Start by opening the one-page brief. The "what you're building" section becomes your first three Lovable prompts.
 
-> **Bridge from Ch 2.4 vocabulary (the highest-leverage paste in the course).** Before you describe a button label, a column header, or a screen title, open your Ch 2.4 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." If 3 of 5 said "client" and 2 said "patient," **use the most-repeated term**. The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
+> **Bridge from Ch 2.4 vocabulary (the most useful paste in the course).** Before you describe a button label, a column header, or a screen title, open your Ch 2.4 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." If 3 of 5 said "client" and 2 said "patient," **use the most-repeated term**. The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
 
 Lovable's prompt style is conversational; you describe the screen, the components, the rough behavior. Examples:
 

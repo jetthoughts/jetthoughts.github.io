@@ -126,8 +126,8 @@ Each module has an **input** (what the reader brings from the previous module), 
 - Course-chapter visibility filter excludes spine from `/blog/` index
 
 ### 🔲 Open work (see TASK-TRACKER.md)
-- **P1**: Burned-founder fast path on landing page, Founder Control Dashboard artifact, downloadable PDF templates, companion-post FAQ collection, rescue-path routing audit
-- **P2**: Skip-to-action anchor links, burned-founder Module 2 callouts, TL;DR summaries, completion criteria per chapter, tighten practical proof
+- **P1**: Landing-page fast-path routing for founders further along, Founder Control Dashboard artifact, downloadable PDF templates, companion-post FAQ collection, rescue-path routing audit (Alex-targeted, not Sam-targeted)
+- **P2**: Skip-to-action anchor links, Module 2 encouragement callouts (Sam-first, not burn-trauma), TL;DR summaries, completion criteria per chapter, tighten practical proof
 - **P3**: Cover regen for ~30 companion posts, Wizard of Oz Concierge MVP, echo chamber warning (done in Ch 5.3), Loom outreach, Engineering as Marketing
 
 ### Phase pipeline
@@ -145,7 +145,7 @@ Each module has an **input** (what the reader brings from the previous module), 
 | Spine drift after future restructures | P1: build 4 source-of-truth validators (chapter-number consistency, title-YAML byte match, internal-link existence, mobile-table width) per Kaizen Muda analysis |
 | 2510 LinkedIn validation sprint already in flight - schedule conflicts | The wrap posts ship per 2510 calendar; the 2605 curriculum framing is added retroactively. Zero schedule conflicts. |
 | AI-era posts (Going further) decay fast | Date-stamp every AI-era post + Q1 2027 refresh trigger |
-| ICP-E (burned founder) bouncing on validation curriculum when they need rescue | Routed at the entry point: the landing page "If Your Team Is Already Failing" fast path sends burned readers to Ownership Audit / Friday Demo / Weekly Report / Salvage-Rebuild before any validation work. Chapter bodies are written to the primary course ICP (Sam, first-timer); the per-chapter routing block on Ch 1.1 was removed 2026-05-22 (it taxed the primary reader and duplicated the landing-page router). **Alex (burned founder) is the website lead-gen ICP (90.10), NOT the course design target (40.06 Sam).** |
+| ICP-E (burned founder) bouncing on validation curriculum when they need rescue | Routed at the entry point: the landing page "Already started building?" fast path sends readers who are further along to Ownership Audit / Friday Demo / Weekly Report / Salvage-Rebuild before any validation work. Chapter bodies are written to the primary course ICP (Sam, first-timer, no burn history). **Alex (burned founder) is the website lead-gen ICP (90.10), NOT the course design target (Sam, per 40.06).** |
 
 ---
 

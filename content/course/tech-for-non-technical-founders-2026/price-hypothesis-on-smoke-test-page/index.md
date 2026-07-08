@@ -31,7 +31,7 @@ related_posts: false
 
 ---
 
-A founder we worked with collected 48 emails at 9.8% conversion, then spent $62K building the product. Zero paying customers. The emails proved curiosity; only a price button proves commitment.
+Your smoke test collected emails. That proves curiosity. It doesn't prove anyone will pay. The difference between an email signup and a credit card entry is the difference between "sounds interesting" and "I need this now." This lesson adds a Stripe button so you can measure the second one.
 
 After this lesson you will be able to: **find out whether strangers will pay for your offer - not just leave an email.**
 

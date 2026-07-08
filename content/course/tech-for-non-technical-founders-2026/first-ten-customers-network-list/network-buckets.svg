@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="bucket-title">
+  <title id="bucket-title">The 50-name network list sorted into 4 outreach buckets</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .bucket-label  { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #1a1a1a; font-weight: 700; }
+      .bucket-num    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 38px; fill: #cc342d; font-weight: 700; }
+      .bucket-note   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 15px; fill: #444; font-style: italic; }
+      .bucket-rule   { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #1a1a1a; }
+      .champion      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 3; }
+      .hot           { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .warm          { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .cold          { fill: #f0f0f0; stroke: #666; stroke-width: 2; stroke-dasharray: 5 3; }
+    </style>
+  </defs>
+
+  <text x="500" y="40" class="heading" text-anchor="middle">The 50-name network list, sorted</text>
+  <text x="500" y="68" class="bucket-note" text-anchor="middle">Send Monday in this order. Champions before hot. Hot before warm. Cold is the last 20.</text>
+
+  <!-- Champion -->
+  <rect x="60" y="100" width="430" height="180" rx="14" class="champion" transform="rotate(-0.3 275 190)"/>
+  <text x="275" y="135" class="bucket-label" text-anchor="middle">CHAMPIONS (5)</text>
+  <text x="275" y="180" class="bucket-num" text-anchor="middle">5 names</text>
+  <text x="275" y="208" class="bucket-rule" text-anchor="middle">Already complained about this problem to you.</text>
+  <text x="275" y="232" class="bucket-rule" text-anchor="middle">Will pick up your call. Will refer 2 more.</text>
+  <text x="275" y="260" class="bucket-note" text-anchor="middle">Send Monday 9 AM. Personalized Loom each.</text>
+
+  <!-- Hot -->
+  <rect x="510" y="100" width="430" height="180" rx="14" class="hot" transform="rotate(0.4 725 190)"/>
+  <text x="725" y="135" class="bucket-label" text-anchor="middle">HOT (10)</text>
+  <text x="725" y="180" class="bucket-num" text-anchor="middle">10 names</text>
+  <text x="725" y="208" class="bucket-rule" text-anchor="middle">In the must-have segment from 8.1.</text>
+  <text x="725" y="232" class="bucket-rule" text-anchor="middle">Knows you personally (recent contact &lt;6 mo).</text>
+  <text x="725" y="260" class="bucket-note" text-anchor="middle">Send Monday afternoon. Loom + Calendly link.</text>
+
+  <!-- Warm -->
+  <rect x="60" y="310" width="430" height="180" rx="14" class="warm" transform="rotate(0.3 275 400)"/>
+  <text x="275" y="345" class="bucket-label" text-anchor="middle">WARM (15)</text>
+  <text x="275" y="390" class="bucket-num" text-anchor="middle">15 names</text>
+  <text x="275" y="418" class="bucket-rule" text-anchor="middle">Adjacent. Knew you 6-24 months ago.</text>
+  <text x="275" y="442" class="bucket-rule" text-anchor="middle">Reasonable bet they have the problem.</text>
+  <text x="275" y="470" class="bucket-note" text-anchor="middle">Send Tuesday. Template OK, name-personalized opener.</text>
+
+  <!-- Cold -->
+  <rect x="510" y="310" width="430" height="180" rx="14" class="cold" transform="rotate(-0.4 725 400)"/>
+  <text x="725" y="345" class="bucket-label" text-anchor="middle">COLD (20)</text>
+  <text x="725" y="390" class="bucket-num" text-anchor="middle">20 names</text>
+  <text x="725" y="418" class="bucket-rule" text-anchor="middle">Dormant LinkedIn 1st-degree.</text>
+  <text x="725" y="442" class="bucket-rule" text-anchor="middle">Unclear if they have the problem.</text>
+  <text x="725" y="470" class="bucket-note" text-anchor="middle">Send Thursday. Hold the bottom 5 for week 2.</text>
+
+  <!-- Bottom callout -->
+  <rect x="80" y="520" width="840" height="65" rx="12" fill="#fbe9ff" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="500" y="546" class="bucket-label" text-anchor="middle">50 messages out by Friday EOD.</text>
+  <text x="500" y="572" class="bucket-note" text-anchor="middle">Founders consistently get 3-5 pilot conversations from this list. Champions deliver 60-70% of the early conversions.</text>
+</svg>

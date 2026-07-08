@@ -27,9 +27,11 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
+You have a business idea. You don't know what to do first. You don't know whether to start building, how to validate demand, or who to hire.
+
 You finish this course with a signed paid pilot from someone you didn't know yesterday.
 
-You leave Module 1 with a go/iterate/kill decision based on real demand data instead of polite nods. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Two to three weeks at an evenings-and-weekends pace.
+You leave Module 1 with a go/iterate/kill decision based on real demand data instead of polite nods from friends. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Two to three weeks at an evenings-and-weekends pace.
 
 > **Start here:** [**Chapter 1.1 - Form Your Founding Hypothesis →**](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
 >
@@ -39,20 +41,21 @@ You leave Module 1 with a go/iterate/kill decision based on real demand data ins
 
 ## Why this course exists
 
-Five mistakes new founders make most often - and where the course heads each one off:
+First-time founders reliably make the same five mistakes. This course heads each one off:
 
-- Hiring a dev shop before validating the problem - Modules 1 and 2 show what validation looks like for less than one agency discovery call costs.
-- Paying for six months of "building" with no way to see what shipped - [Module 4.2 (Day-1 ownership)](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/) and the [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) cover this.
-- Signing an SOW (the agency contract that defines "delivered") where "delivered" means "deployed to staging" - the [SOW reading guide](/course/tech-for-non-technical-founders-2026/sow-reading-guide/) flags the bad clauses.
-- Rebuilding from scratch when salvage would have closed the gap in eight weeks - the [salvage-vs-rebuild scorer](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/) keeps you out of unnecessary rewrites.
-- Shipping an AI feature and discovering per-question AI costs passed through the invoice - the [AI agency questions chapter](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/) catches this on the first discovery call.
+- Building an entire MVP before verifying anyone will pay for it - Modules 1 and 2 show you what validation actually looks like before you spend a single dollar.
+- Asking friends if they like the idea and mistaking their polite nods for market demand - [Module 2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) hands you five questions that extract real signal instead of hypothetical praise.
+- Writing a 15-page feature wishlist instead of a one-page problem spec - [Module 3](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) constrains your scope to what actually matters to the customer.
+- Believing you have to drop $50,000 on an engineering team to launch - [Module 4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks you through a $0 self-serve stack you can use without writing code.
+- Offering free pilots indefinitely because asking for money feels intimidating - [Module 5](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) gives you the exact script to charge your first customer before you ship.
 
 ## Take this course if
 
-- You have an idea, or a half-built MVP, and want a route from there to a paying customer
+- You are a first-time founder with an idea and don't know what to do first
+- You want the fastest route from that idea to your first paying customer
 - You can read a [Stripe](https://stripe.com) invoice but not a GitHub commit
-- You want to know what to ask, not what to build
-- You write code yourself but want a structured pass on the validation stage before you start typing
+- You have never systematically validated a business before
+- You might have tinkered with no-code tools, but you want a structured path instead of guessing
 
 Skip this course if you want to learn to code or hand off founder judgment to someone else.
 
@@ -141,11 +144,13 @@ Each module produces one fill-in-the-blank artifact. The six bundle into a singl
 
 - [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 - [**5.2** · OPTIONAL - Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)  
-  *Skip if you already have a channel in mind (LinkedIn, cold email, or personal network). The core path is 5.3 (personal network) → 5.4 (paid pilot).*
-- [**5.3** · The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/)
+  *Skip if you already have a channel in mind (LinkedIn, cold email, or personal network). The core path is 5.3a→b→c (personal network) → 5.4 (paid pilot).*
+- [**5.3a** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+- [**5.3b** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
+- [**5.3c** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
 - [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 - [**5.5** · OPTIONAL - Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)  
-  *Skip if your personal network in 5.3 produced your first 10 customers. This is the systematic path for when warm intros run out.*
+  *Skip if your personal network in 5.3a→c produced your first 10 customers. This is the systematic path for when warm intros run out.*
 
 *Template in this module: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).*
 
@@ -188,21 +193,22 @@ These conditional chapters kick in once you've passed the Module 5 gate. Read ea
 - Want a 3-question standup that catches problems early → [Three Standup Questions](/course/tech-for-non-technical-founders-2026/three-questions-turn-standup-into-proof/)
 - Need a plain-English weekly report from the team → [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
 
-## If Your Team Is Already Failing
+## Already started building?
 
-A side-path for readers in active rescue. If you're working from an idea or a half-built MVP without a team, skip to [Module 1](#module-1---hypothesis--smoke-test).
+A side-path for readers who are further along. If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1---hypothesis--smoke-test).
 
-If you're reading this in the middle of a stalled build or a runaway invoice, the rest of the course can wait. Run these 5 steps now.
+If you are already typing, or paying someone an hourly rate to type for you, run these steps before you approve any more work.
 
-1. Check who owns GitHub, AWS, database, and domain. If it's not you, fix that first. - [Ownership Audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
-2. Demand one Friday demo with working software only - no Jira, no slides, no "almost done." - [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
+1. Check who owns the GitHub, AWS, database, and domain accounts. If it's not you, fix that today. - [Ownership Audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
+2. Demand one Friday demo with working software only - no Jira tickets, no slides, no "almost done." - [Friday Demo Rule](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/)
 3. Require a plain-English weekly report: what shipped, what's blocked, what's next. - [Weekly Dev Report](/course/tech-for-non-technical-founders-2026/weekly-dev-report-template-founders/)
-4. Score salvage vs rebuild and plan your team transition before you authorize any more work. - [Salvage vs Rebuild Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/)
-5. If your team is shipping AI features, run the 5-question agency audit before approving more work. - ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
+4. Stop specifying features. Quality-check your scope against actual user outcomes before the build gets out of hand. - [Stop Specifying Features](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
+5. If your build is stalled and you're not sure whether to fix it or start over, run the salvage-vs-rebuild decision tree first. - [Salvage vs Rebuild Decision Tree](/course/tech-for-non-technical-founders-2026/salvage-vs-rebuild-decision-tree/)
+6. If your team is shipping AI features, check the vendor contract. Make sure per-question AI costs aren't passing through to your invoice. - ["We Use AI" Follow-Up Questions](/course/tech-for-non-technical-founders-2026/agency-uses-ai-follow-up-questions/)
 
 ---
 
-If this course saved you a meeting with a dev shop, send it to a founder friend.
+If this course saved you from building something nobody wanted, send it to a founder friend.
 
 ## Who built this
 

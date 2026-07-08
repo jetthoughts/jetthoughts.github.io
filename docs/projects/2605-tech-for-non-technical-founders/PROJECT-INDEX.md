@@ -61,7 +61,7 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 | `40-49-review/40.06-sam-customer-journey-report-2026-06.md` | Single-ICP Sam narrative — 18-chapter emotional arc, trust scores, recalibrated scoring methodology |
 | `40-49-review/40.07-sam-experience-improvement-report-2026-06.md` | Sam-first improvement recommendations (6 items, all marked Done in TASK-TRACKER 2026-06-07) |
 | `30-39-architecture-design/30.02-adr-content-execution-readiness.md` | **CANONICAL** — content policy (no speculative time/money), binary anchor thresholds per chapter, Module 2 two-pass framing rationale, 4-persona critic gate, Tier 1/2/3 punch list shape |
-| `10-19-research/_ARCHIVED_10.06-icp-persona-course-walkthrough.md` | (ARCHIVED 2026-06-10) Alex (burned founder) walkthrough. Archived because the course ICP is Sam (first-timer). Historical reference — use 40.06 for Sam, 90.10 for Alex website ICP. |
+| `10-19-research/_ARCHIVED_10.06-icp-persona-course-walkthrough.md` | (ARCHIVED 2026-06-10) Alex (burned founder) walkthrough — website ICP, not course ICP. Historical reference — use 40.06 for Sam (course ICP), 90.10 for Alex (website ICP). |
 | `10-19-research/_ARCHIVED_10.07-icp-sam-persona-course-walkthrough.md` | (ARCHIVED) — Superseded by 40.06 (Sam journey) + 40.07 (recommendations). |
 | `50-59-execution/mechanical-audit-checklist.md` | Greppable + structural + voice gates every post must pass |
 | `50-59-execution/distribution-prep.md` | Reddit/Twitter/Facebook/LinkedIn channels + share-copy templates + posting schedule |
@@ -74,11 +74,11 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 2a. Read 40-49-review/40.04-execution-readiness-sweep-2026-06.md — what landed in the June 2026 sweep and the open follow-ups.
 2b. Read 40-49-review/40.01-m1-m3-audit-2026-05-28.md — understand what was caught and fixed.
 3. Read 40-49-review/40.06-sam-customer-journey-report-2026-06.md — definitive Sam ICP document.
-4. Read TASK-TRACKER.md — verify P1 items reflect the audit + ICP findings.</newString>
-6. Read 40-49-review/40.03-sipoc-course-logic.md — understand module continuity and structural constraints before proposing sequence edits.
-7. Read 20-29-strategy/20.02-positioning-vs-courses.md.
-8. Cross-reference against ../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md.
-9. If retrospective is due: populate 40-49-review/40.02-post-ship-retrospective.md.
+4. Read TASK-TRACKER.md — verify P1 items reflect the audit + ICP findings.
+5. Read 40-49-review/40.03-sipoc-course-logic.md — understand module continuity and structural constraints before proposing sequence edits.
+6. Read 20-29-strategy/20.02-positioning-vs-courses.md.
+7. Cross-reference against ../2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md.
+8. If retrospective is due: populate 40-49-review/40.02-post-ship-retrospective.md.
 ```
 
 ---
@@ -119,7 +119,7 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 | `40-49-review/40.01-m1-m3-audit-2026-05-28.md` | Banned-pattern regression findings — permanent gates now in CLAUDE.md + 90.11 voice guide |
 | `40-49-review/40.03-sipoc-course-logic.md` | SIPOC course-logic validation — 10/10 score, mermaid diagrams, artifact chain, quality gates |
 | `40-49-review/40.04-execution-readiness-sweep-2026-06.md` | Sweep retrospective — 13 gap closures + 9 tool-input fixes + open follow-ups |
-| `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` | 4-lens ICP review (Burned/First-Time/Skim-First/Crisis) — 3 recommendations in TASK-TRACKER |
+| `40-49-review/40.05-multi-perspective-icp-review-2026-06.md` | 4-lens review (⚠️ done against Alex/website ICP, not Sam/course ICP — read corrigendum header first). Structural analysis and skim-first/first-timer lenses partially applicable to Sam. |
 | `40-49-review/40.06-sam-customer-journey-report-2026-06.md` | Single-ICP Sam narrative — 18-chapter emotional arc, trust scores, recalibrated scoring |
 | `40-49-review/40.11-sam-simulation-pilot-lessons-2026-06.md` | Sam simulation report — Iter 19 pilot lessons. Beat-by-beat reader simulation, 5 themes, 5 surgical fixes applied. Strong recommendation: 5-Sam validation pilot before Phase 2. |
 | `40-49-review/_DEFERRED_40.02-post-ship-retrospective.md` | Post-ship retrospective — DEFERRED until 2+ weeks of live data |
