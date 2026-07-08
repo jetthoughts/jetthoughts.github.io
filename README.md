@@ -12,6 +12,7 @@
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Quick Start](#quick-start)
+- [AI Agent Setup (APM)](#ai-agent-setup-apm)
 - [Development](#development)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -129,6 +130,60 @@ hugo server -D
 ```
 
 Visit `http://localhost:1313` to view the site.
+
+## 🤖 AI Agent Setup (APM)
+
+This project uses [Microsoft APM](https://github.com/microsoft/apm) (Agent Package Manager) to manage AI coding tool configuration. One manifest (`apm.yml`) declares instructions, agents, skills, prompts, and MCP servers — and APM compiles them for **all** tools automatically.
+
+### Tools Auto-Configured
+
+Claude Code • GitHub Copilot • Codex CLI • Cursor • Gemini CLI • Windsurf • Devin • Codebuff • Qwen Code • Junie
+
+### Quick Setup
+
+```bash
+# 1. Install APM (macOS)
+curl -fsSL https://get.apm.dev | sh
+# or via Homebrew: brew install microsoft/tap/apm
+
+# 2. Install agent primitives (instructions, agents, prompts)
+apm install
+
+# 3. Start persistent MCP backends (ollama, searxng, milvus)
+make mcp-up
+
+# 4. Open in any AI tool — same config everywhere
+code .                    # VS Code with Copilot
+claude                    # Claude Code
+gemini                    # Gemini CLI
+```
+
+### What APM Manages
+
+| Primitive | Location | Purpose |
+|-----------|----------|---------|
+| **Instructions** | `.apm/instructions/` | Shared project rules compiled to all tools |
+| **Prompts** | `.apm/prompts/` | Slash-command triggers (blog-pipeline, research, cover-image) |
+| **Agents** | `.apm/agents/` | Persona definitions (coder, reviewer, content-creator, etc.) |
+| **Skills** | `.apm/skills/` | Reusable capabilities (blog-pipeline, css-bem-migration, etc.) |
+| **MCP Servers** | Declared in `apm.yml` | claude-context, context7, brave-search, searxng, ollama, milvus, etc. |
+
+### MCP Servers
+
+MCP servers are declared in `apm.yml` → `dependencies.mcp`. Two categories:
+
+- **Stdio (auto-started)**: `claude-context`, `context7`, `brave-search`, `lean-ctx`, `chrome-devtools`, `package-search`, `github-mcp-server` — started on-demand by the AI tool.
+- **Persistent**: `ollama` (brew service), `searxng` + `milvus` (docker compose via `compose.mcp.yml`) — managed via `make mcp-up` / `make mcp-down`.
+
+### Environment Variables
+
+API keys for MCP servers are consumed from your environment — never hardcoded in config files:
+
+```bash
+# MCP Server API Keys
+BRAVE_API_KEY=your_brave_search_key
+GITHUB_TOKEN=your_github_pat
+```
 
 ## 💻 Development
 

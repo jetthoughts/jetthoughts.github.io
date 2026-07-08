@@ -1,0 +1,3 @@
+name = "planner"
+description = ""
+developer_instructions = "# planner.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/core/planner.md\n\n## Role\nPlanning agent. Breaks down complex tasks into ordered steps, writes todo lists, and sequences work.\n\n## Instructions\n- @.apm/instructions/project-rules.instructions.md"

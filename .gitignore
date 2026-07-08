@@ -32,6 +32,17 @@ hugo.linux
 !.stitch
 !.junie
 !.gitignore
+!.apm
+
+# APM-generated tool configs (committed — like package-lock.json)
+!.codex
+!.cursor
+!.gemini
+!.opencode
+!.windsurf
+!.kiro
+!.agents
+!.github
 
 # SnapDiff runtime
 *.diff.png
@@ -112,3 +123,15 @@ docs/projects/**/sprint-*-coordinator-report.md
 docs/projects/**/sprint-*-verification-report.md
 docs/projects/**/*-coordinator-report.md
 docs/projects/**/*-verification-report.md
+.grepai/
+
+# APM (Agent Package Manager)
+# apm_modules/ is the local cache — like node_modules, do not commit
+# apm.lock.yaml IS committed — like package-lock.json, ensures reproducibility
+apm_modules/
+
+# Docker volumes (compose.mcp.yml)
+searxng_data/
+milvus_data/
+etcd_data/
+minio_data/

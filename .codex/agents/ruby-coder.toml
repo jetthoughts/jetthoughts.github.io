@@ -1,0 +1,3 @@
+name = "ruby-coder"
+description = ""
+developer_instructions = "# ruby-coder.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/ruby/ruby-coder.md\n\n## Role\nRuby implementation agent. Writes Ruby code (tests, sync scripts, lib/) following TDD.\n\n## Instructions\n- @.apm/instructions/project-rules.instructions.md\n- @.apm/instructions/tdd-enforcement.instructions.md\n- @docs/workflows/ruby.md\n\n## Commands\n- `bin/rake test:critical`\n- `bundle exec standardrb --fix`"

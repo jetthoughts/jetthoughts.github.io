@@ -1,0 +1,78 @@
+{
+  "mcpServers": {
+    "claude-context": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/claude-context"
+      ]
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "brave-search": {
+      "type": "stdio",
+      "command": "npx",
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      },
+      "args": [
+        "-y",
+        "@anthropic/brave-search-mcp"
+      ]
+    },
+    "lean-ctx": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "lean-ctx-mcp"
+      ]
+    },
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/chrome-devtools-mcp"
+      ]
+    },
+    "package-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "package-search-mcp"
+      ]
+    },
+    "github-mcp-server": {
+      "type": "stdio",
+      "command": "npx",
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "args": [
+        "-y",
+        "@anthropic/github-mcp-server"
+      ]
+    },
+    "searxng": {
+      "type": "http",
+      "url": "http://localhost:8080"
+    },
+    "ollama": {
+      "type": "http",
+      "url": "http://localhost:11434"
+    },
+    "milvus": {
+      "type": "http",
+      "url": "http://localhost:19530"
+    }
+  }
+}

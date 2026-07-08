@@ -1,0 +1,135 @@
+# =============================================================================
+# APM Manifest — JetThoughts Site
+# =============================================================================
+# This repo is a PRODUCER: it defines canonical agents, skills, instructions,
+# and prompts reusable across all JetThoughts repos.
+#
+# Tools auto-configured by APM v0.24.0:
+#   Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI, Windsurf,
+#   Kiro, OpenCode, Antigravity (AGENTS.md+skills).
+#
+# Tools configured manually (APM doesn't support these targets yet):
+#   Devin, Codebuff, Qwen Code, Junie — use thin-wrapper files at root.
+#
+# Quick start:
+#   apm install       # Compile .apm/ → tool configs
+#   make mcp-up       # Start persistent MCP backends (ollama, searxng, milvus)
+#   code .            # Open in any AI tool — same config everywhere
+# =============================================================================
+
+name: jetthoughts/site
+version: 0.1.0
+description: >
+  JetThoughts website — Hugo static site blog with AI-assisted content
+  pipeline, BEM CSS architecture, visual regression testing, and TDD
+  enforcement. Exports reusable voice guides, blog-pipeline skills,
+  CSS-consolidation patterns, and agent definitions.
+
+# ---------------------------------------------------------------------------
+# DEPENDENCIES — what this project consumes
+# ---------------------------------------------------------------------------
+dependencies:
+
+  # --- APM Packages ---
+  apm: []
+
+  # --- MCP Servers ---
+  mcp:
+
+    # Stdio-based (auto-started by AI tool's MCP client)
+    # claude-flow-memory intentionally excluded — claude-flow plugin dependency
+
+    - name: claude-context
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "@anthropic/claude-context"
+
+    - name: context7
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "@upstash/context7-mcp"
+
+    - name: brave-search
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "@anthropic/brave-search-mcp"
+      env:
+        BRAVE_API_KEY: "${BRAVE_API_KEY}"
+
+    - name: lean-ctx
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "lean-ctx-mcp"
+
+    - name: chrome-devtools
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "@anthropic/chrome-devtools-mcp"
+
+    - name: package-search
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "package-search-mcp"
+
+    - name: github-mcp-server
+      registry: false
+      transport: stdio
+      command: npx
+      args:
+        - "-y"
+        - "@anthropic/github-mcp-server"
+      env:
+        GITHUB_TOKEN: "${GITHUB_TOKEN}"
+
+    # HTTP-based persistent backends (started via `make mcp-up`)
+    # These run as Docker services defined in compose.mcp.yml
+
+    - name: searxng
+      registry: false
+      transport: http
+      url: http://localhost:8080
+
+    - name: ollama
+      registry: false
+      transport: http
+      url: http://localhost:11434
+
+    - name: milvus
+      registry: false
+      transport: http
+      url: http://localhost:19530
+
+# ---------------------------------------------------------------------------
+# TOOL TARGETS — which tools APM compiles configuration for
+# ---------------------------------------------------------------------------
+# All share .apm/instructions/project-rules.instructions.md.
+# Thin-wrapper files (AGENTS.md, GEMINI.md, QWEN.md, .junie/AGENTS.md)
+# serve as fallback for tools without APM target support.
+
+targets:
+  - claude
+  - copilot
+  - codex
+  - cursor
+  - gemini
+  - opencode
+  - windsurf
+  - kiro

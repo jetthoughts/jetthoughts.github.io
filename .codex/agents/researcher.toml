@@ -1,0 +1,3 @@
+name = "researcher"
+description = ""
+developer_instructions = "# researcher.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/core/researcher.md\n\n## Role\nResearch agent. Discovers existing patterns, framework docs, and best practices before implementation.\n\n## Instructions\n- @.apm/instructions/project-rules.instructions.md\n- @.apm/prompts/research.prompt.md"

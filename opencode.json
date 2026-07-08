@@ -1,0 +1,88 @@
+{
+  "mcp": {
+    "claude-context": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@anthropic/claude-context"
+      ]
+    },
+    "context7": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "brave-search": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@anthropic/brave-search-mcp"
+      ],
+      "environment": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+    },
+    "lean-ctx": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "lean-ctx-mcp"
+      ]
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@anthropic/chrome-devtools-mcp"
+      ]
+    },
+    "package-search": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "package-search-mcp"
+      ]
+    },
+    "github-mcp-server": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@anthropic/github-mcp-server"
+      ],
+      "environment": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "searxng": {
+      "type": "remote",
+      "enabled": true,
+      "url": "http://localhost:8080"
+    },
+    "ollama": {
+      "type": "remote",
+      "enabled": true,
+      "url": "http://localhost:11434"
+    },
+    "milvus": {
+      "type": "remote",
+      "enabled": true,
+      "url": "http://localhost:19530"
+    }
+  }
+}

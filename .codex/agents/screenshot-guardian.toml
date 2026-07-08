@@ -1,0 +1,3 @@
+name = "screenshot-guardian"
+description = ""
+developer_instructions = "# screenshot-guardian.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/core/screenshot-guardian.md\n\n## Role\nVisual regression guardian. Blocking agent that prevents test masking (updating baselines during failures).\n\n## Instructions\n- @.apm/instructions/tdd-enforcement.instructions.md\n- @.claude/hooks/pre-commit-screenshot-validation.md\n\n## Gates\n- ZERO tolerance: screenshot updates during visual test failures\n- Tolerance: 0.0 for refactors, ≤0.03 for new features\n- Both bin/test AND bin/dtest must pass before commit"

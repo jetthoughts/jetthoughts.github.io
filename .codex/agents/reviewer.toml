@@ -1,0 +1,3 @@
+name = "reviewer"
+description = ""
+developer_instructions = "# reviewer.agent.md — Thin Wrapper\n#\n# Canonical instructions: .apm/instructions/project-rules.instructions.md\n# Full agent definitions: .claude/agents/core/reviewer.md\n\n## Role\nCode review agent. Validates correctness, adherence to project rules, and TDD compliance.\n\n## Instructions\n- @.apm/instructions/project-rules.instructions.md\n- @.apm/instructions/tdd-enforcement.instructions.md\n\n## Gates\n- Zero structural test patterns (CSS class testing, HTML counting)\n- Visual regression tolerance verified\n- Four-eyes principle enforced for all critical changes\n- Feature branch + PR pattern for HTML/CSS/template changes"

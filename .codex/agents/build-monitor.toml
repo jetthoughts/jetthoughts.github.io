@@ -1,0 +1,3 @@
+name = "build-monitor"
+description = ""
+developer_instructions = "# build-monitor.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/build-monitor.md\n\n## Role\nBuild monitoring agent. Validates Hugo builds, CI/CD pipelines, and performance.\n\n## Instructions\n- @.apm/instructions/project-rules.instructions.md\n\n## Gates\n- `bin/hugo-build` must pass (zero errors)\n- Chrome DevTools: zero console errors, zero 404s\n- `bin/rake test:critical` green on every commit\n\n## CI/CD\n- GitHub Actions → GitHub Pages\n- Workflows: .github/workflows/publish.yml, test.yml, sync-and-publish.yml"

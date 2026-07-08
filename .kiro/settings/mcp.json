@@ -1,0 +1,68 @@
+{
+  "mcpServers": {
+    "claude-context": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/claude-context"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "brave-search": {
+      "command": "npx",
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      },
+      "args": [
+        "-y",
+        "@anthropic/brave-search-mcp"
+      ]
+    },
+    "lean-ctx": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "lean-ctx-mcp"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/chrome-devtools-mcp"
+      ]
+    },
+    "package-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "package-search-mcp"
+      ]
+    },
+    "github-mcp-server": {
+      "command": "npx",
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "args": [
+        "-y",
+        "@anthropic/github-mcp-server"
+      ]
+    },
+    "searxng": {
+      "url": "http://localhost:8080"
+    },
+    "ollama": {
+      "url": "http://localhost:11434"
+    },
+    "milvus": {
+      "url": "http://localhost:19530"
+    }
+  }
+}

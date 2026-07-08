@@ -1,0 +1,3 @@
+name = "ui-problem-diagnosis"
+description = ""
+developer_instructions = "# ui-problem-diagnosis.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/validation/ui-problem-diagnosis-specialist.md\n\n## Role\nUI problem diagnosis specialist. Investigates visual regressions, cross-browser issues, and CSS bugs.\n\n## Instructions\n- @.apm/instructions/css-consolidation.instructions.md\n- @docs/projects/2509-css-migration/css-loading-order-analysis.md"

@@ -1,0 +1,66 @@
+---
+inclusion: always
+---
+
+# TDD Enforcement — JetThoughts Site
+#
+# MANDATORY for all code changes. Extracted from CLAUDE.md TDD section.
+# Full docs: docs/60.03-tdd-quality-enforcement.md, docs/60.04-four-eyes-principle.md
+
+## TDD Cycle
+1. **RED**: Write a failing test that validates BEHAVIOR (not implementation)
+2. **GREEN**: Minimal code to make the test pass
+3. **REFACTOR**: Clean up while tests stay green
+4. **COMMIT**: Micro-commit on green tests
+
+## Test Quality Rules (ZERO TOLERANCE)
+
+### Prohibited Test Patterns — Agent MUST Reject
+- ❌ CSS class existence testing (`.fl-node-*`, `.has_css?(".px-4")`)
+- ❌ HTML structure counting (`page.all("div").count`)
+- ❌ Framework-generated selector usage (FL-Builder, Tailwind utility classes)
+- ❌ Method existence testing (`assert SomeClass.method_defined?`)
+- ❌ Config value assertions (hardcoded `q=90`, exact file sizes, specific dimensions)
+- ❌ Implementation detail testing
+
+### Required Test Patterns
+- ✅ Visual regression: `take_screenshot` → `assert_visual_match` with tolerance
+- ✅ User-visible content: `assert page.has_content?("text")`
+- ✅ Semantic elements: `assert page.has_css?("h1", text: "...")`
+- ✅ User interaction: `click_button` → `assert_current_path`
+- ✅ Shape assertions: `q=\d+`, `src contains wsrv.nl`, not `q=90`, not exact URLs
+
+### Avoid Fragile Config Assertions
+Don't hardcode tunable values. Assert the *shape*, not the configuration:
+- Bad: `assert_match /q=90/, src`
+- Good: `assert_match /q=\d+/, src`
+- Bad: `assert_match /w=360/, src`
+- Good: `assert has_css?("picture source")`
+
+## Visual Regression Gates (BLOCKING for HTML/CSS changes)
+- **Tolerance**: 0.0 for refactoring, ≤0.03 for new features
+- **Protocol**: Capture baseline BEFORE changes → compare AFTER → block on any diff >0%
+- **MANDATORY**: Run BOTH `bin/test` (macOS) AND `bin/dtest` (Linux Docker) before commit
+- Visual regression failures are COMMIT BLOCKERS, not warnings
+
+## Test Runner
+- Framework: Minitest
+- Critical tests: `bin/rake test:critical` (after every micro-change <10 lines)
+- Visual macOS: `bin/test`
+- Visual Linux/Docker: `bin/dtest`
+- NEVER create ad hoc `*.sh` test scripts
+
+## Chrome DevTools Validation (MANDATORY after HTML/CSS/JS)
+1. Start Hugo dev server, open page in Chrome DevTools
+2. Console: ZERO JS errors
+3. Network: ZERO 404s
+4. Capture desktop + mobile screenshots
+5. All gates pass → commit. Any gate fails → fix, repeat
+
+## Feature Branch + PR (HTML/CSS/template changes)
+1. `git checkout -b <sprint-name>`
+2. Multiple related commits on branch
+3. Both test gates green on each commit
+4. `git push -u origin <branch>`
+5. ONE PR per sprint via `gh pr create`
+6. Direct-to-master only for: content-only blog edits, commit fixes, docs, CLAUDE.md updates

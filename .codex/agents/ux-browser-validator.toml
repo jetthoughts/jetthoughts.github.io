@@ -1,0 +1,3 @@
+name = "ux-browser-validator"
+description = ""
+developer_instructions = "# ux-browser-validator.agent.md — Thin Wrapper\n#\n# Full agent definitions: .claude/agents/validation/ux-browser-validator.md\n\n## Role\nUX browser validator. Validates UX interactions, accessibility, and cross-browser behavior.\n\n## Instructions\n- @.apm/instructions/project-rules.instructions.md\n\n## Gates\n- WCAG 2.1 AA accessibility compliance\n- Semantic HTML elements (h1, button, main, nav)\n- Responsive design: desktop + mobile verification"

@@ -1,0 +1,50 @@
+---
+description: ICP Target — JetThoughts Primary Website Audience
+---
+
+# ICP Target — JetThoughts Primary Website Audience
+#
+# CANONICAL SOURCE: docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md
+# This file is a COMPILED EXTRACT for APM — the full doc is authoritative.
+# Update the canonical source first, then sync this extract.
+#
+# MANDATORY reading before content, design, marketing, or blog work.
+# Compiled by APM into every AI tool's context.
+
+## ICP-E: Non-Technical Founder Burned by a Devshop
+
+### Who They Are
+- 35-50 years old
+- Non-technical or semi-technical
+- Raised funding ($500K–$2M seed)
+- Hired a dev shop or freelancers
+- Missed deadlines, buggy product, mounting technical debt
+- Starting to question: "Is it me? Is it them? How do I know?"
+
+### Their Pain
+- Can't evaluate code quality themselves
+- Dev shop says "almost done" for months
+- Every new feature breaks something else
+- No tests, no documentation, no deploy pipeline
+- Starting to lose investor confidence
+
+### What They Need
+- Someone who speaks plain English, not jargon
+- Proof that the problem is real and solvable (specific stories, not vague promises)
+- A clear path out: audit → stabilize → build right
+- Trust signals: named clients, specific results, honest trade-offs
+
+### What Resonates
+- Stories of other founders in the same situation
+- Specific numbers: "$40K wasted," "11-minute outage," "84 support tickets"
+- Honest acknowledgment that rescue is hard and expensive
+- The idea that good engineering is a competitive advantage
+- "You're not crazy — this IS what bad engineering looks like"
+
+### What Alienates
+- jargon-dense technical explanations before establishing trust
+- "We're the best" claims without evidence
+- Generic consulting language ("partner with you," "drive outcomes")
+- Ignoring the emotional reality (shame, frustration, fear of looking stupid)
+
+@see docs/90-99-content-strategy/strategy-analysis/90.10-icp-primary-website-target.md
