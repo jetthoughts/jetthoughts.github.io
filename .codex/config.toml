@@ -1,6 +1,6 @@
 [mcp_servers.claude-context]
 command = "npx"
-args = [ "-y", "@anthropic/claude-context",]
+args = [ "-y", "@zilliz/claude-context-mcp@latest",]
 id = ""
 
 [mcp_servers.context7]
@@ -34,6 +34,12 @@ args = [ "-y", "@anthropic/github-mcp-server",]
 id = ""
 
 [mcp_servers.claude-context.env]
+EMBEDDING_PROVIDER = "Ollama"
+EMBEDDING_MODEL = "nomic-embed-text"
+OLLAMA_HOST = "http://localhost:11434"
+EMBEDDING_DIMENSION = "768"
+MILVUS_ADDRESS = "http://localhost:19530"
+MILVUS_TOKEN = "root:Milvus"
 
 [mcp_servers.context7.env]
 

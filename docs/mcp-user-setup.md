@@ -35,6 +35,7 @@ Makefile (mcp-up/mcp-down)       # Orchestration: brew + docker compose
 Brewfile                         # System deps: ollama, bun, hugo, rbenv
 ```
 
-- **Stdio MCPs** (claude-context, context7, brave-search, etc.): auto-started by the AI tool's MCP client. No infrastructure needed.
+- **Stdio MCPs** (claude-context via @zilliz/claude-context-mcp, context7, brave-search, etc.): auto-started by the AI tool's MCP client. No infrastructure needed.
+- **claude-context** uses local Milvus (:19530) for vector storage + Ollama (nomic-embed-text) for embeddings.
 - **Ollama**: managed via `brew services`. Started by `brew bundle` (restart_service: true).
 - **SearXNG + Milvus**: Docker services in `compose.mcp.yml`. Started by `make mcp-up`.
