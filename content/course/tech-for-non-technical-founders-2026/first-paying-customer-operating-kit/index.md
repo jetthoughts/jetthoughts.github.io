@@ -70,7 +70,7 @@ In practice: turns a vague "I should reach out to people" instinct into 50 named
 
 The verbatim 4-line scripts from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
 
-- **B2B SaaS rescued-Rails context** - the script for founders who got out of an agency burn and are now selling to operators in the same situation.
+- **B2B SaaS Rails context** - the script for founders who built on Rails and are selling to operators in the same space.
 - **B2B services** - for fractional CTOs, consultancies, and managed-services founders who sell time rather than license.
 - **B2C app** - for direct-to-user products where the Loom + claim-link motion replaces a Calendly call.
 

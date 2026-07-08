@@ -1,7 +1,7 @@
 ---
 title: "GitHub, AWS, Database Ownership Checklist"
 aliases: ["/blog/ownership-checklist/"]
-description: "A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop. 12 items, run alone."
+description: "A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or someone else does. 12 items, run alone."
 date: 2026-05-17
 draft: false
 course_chapter: true
@@ -11,7 +11,7 @@ keywords:
   - github ownership audit
   - aws root account founder
   - non technical founder ownership
-  - dev shop hostage situation
+  - contractor credential audit
   - code ownership checklist
 tags:
   - founders
@@ -31,11 +31,11 @@ related_posts: false
 > - **Path 1 (Validate without code)**: skip this entirely - no infrastructure to audit yet.
 > - **Path 2 (Self-serve - Lovable + Supabase + Stripe)**: 5-minute confirmation, not a 45-minute audit. Your accounts will be in your own email automatically because you sign up yourself. Skim the 12 items below to confirm, save the checklist, and return in full the day you hire your first contractor or Fractional CTO.
 > - **Path 3 (Fractional CTO bridge)**: run the full 45-minute audit BEFORE you give the FCTO any credential.
-> - **Path 4 (Hire a team)**: run the full audit BEFORE the contractor's first commit. This is the safety net that prevents the hostage situation in the next section.
+> - **Path 4 (Hire a team)**: run the full audit BEFORE the contractor's first commit. This is the safety net that prevents the credential trap in the next section.
 
 # The GitHub / AWS / Database Ownership Checklist
 
-A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or just rent them from your dev shop. For Path 2 self-serve founders, this is a 5-minute confirmation; for Path 3 and Path 4 founders, the full 45-minute version.
+A 45-minute audit that tells you whether you own your company's code, cloud, and domain - or someone else does. For Path 2 self-serve founders, this is a 5-minute confirmation; for Path 3 and Path 4 founders, the full 45-minute version.
 
 By the end of one Friday (or the 5 minutes if you're self-serve) you will know whether you can fire your dev team on Monday and still ship a hotfix on Tuesday. You will not have read a line of code. You will have logged into 12 accounts and answered one question for each: is the email on this account mine, or is it theirs?
 
@@ -60,9 +60,9 @@ By the end of one Friday (or the 5 minutes if you're self-serve) you will know w
 
 ## Why this exists
 
-A B2B fintech founder we picked up in Q1 2026 had spent **$180K over eight months** with the previous agency before they stopped answering email. She thought she owned the company - the Delaware C-corp, the bank account, the trademark. What she did not own was the GitHub org (registered to the agency's CTO), the AWS root account (email was `dev@theiragency.com`), the Stripe production keys, or the domain (in the lead developer's personal Namecheap). Her app was live serving 4,200 paying users when checkout broke at 9pm on a Tuesday and she could not push a fix. Recovery took **three weeks and $11K in legal fees**. The audit below would have caught all four problems on Day 1 in 45 minutes.
+A founder we saw last year handed a contractor her company credit card on Day 1. The contractor opened the accounts fast and shipped the MVP inside six weeks. Nobody moved the accounts to her email afterwards. A year later the contractor left the industry, and she discovered the GitHub org, the AWS root, and the domain were all registered to an inbox nobody checked. Recovery is slow and expensive when the accounts are not in your name. The audit below catches all of this on Day 1 in 45 minutes.
 
-Most agencies are not malicious. They set the accounts up under their own emails on Day 1 because it was the fastest way to start, and nobody ever moved them. The damage is the same either way.
+Most contractors are not trying to lock you out. They set the accounts up under their own email on Day 1 because it was the fastest way to start, and nobody ever moved them. The damage is the same either way.
 
 ## How to use it
 
@@ -111,31 +111,31 @@ If you do not know what an item means, that is part of the result. "I have never
 ## What good looks like vs. what bad looks like
 
 **#1 - GitHub org owner**
-> Bad: Owner is `agency-admin@bigdevshop.com`. You are listed as a Member.
-> Good: Owner is `founder@mycompany.com` (you). Agency engineers are added as Outside Collaborators.
+> Bad: Owner is `contractor@external-email.com`. You are listed as a Member.
+> Good: Owner is `founder@mycompany.com` (you). Contractor engineers are added as Outside Collaborators.
 
-If the agency's email is on the Owner row, they can delete the org tomorrow morning and GitHub support will not help you.
+If the contractor's email is on the Owner row, they can delete the org tomorrow morning and GitHub support will not help you.
 
 **#4 - AWS root account email**
 
 | Signal | Root email | Recovery if you lose access |
 |---|---|---|
-| Fail | `aws@bigdevshop.com`, you have IAM only, never logged into root | None - the agency controls it |
+| Fail | `aws@external-email.com`, you have IAM only, never logged into root | None - the contractor controls it |
 | Pass | `aws@mycompany.com`, password in your 1Password, MFA on your phone with a backup code in your safe | You reset it yourself in five minutes |
 
-The root account owns everything underneath it. If the agency controls the root email, they can lock you out of every AWS service in 10 minutes.
+The root account owns everything underneath it. If the contractor controls the root email, they can lock you out of every AWS service in 10 minutes.
 
 **#7 - Production database password rotation**
 
 The fail looks like one sentence: *"Marcus knows it. I would have to ask him."* The pass looks like one action: you open AWS Secrets Manager right now, read the password, and remember the last time you rotated it (e.g. March, when the previous DBA left).
 
-If only one person can rotate the prod DB password, you do not have a database. You have a hostage.
+If only one person can rotate the prod DB password, you do not have a database. You have a single point of failure.
 
 **#10 - Domain registrar**
-> Bad: Renewals come to `dev@theiragency.com`. You have never logged into the registrar.
+> Bad: Renewals come to a contractor's email. You have never logged into the registrar.
 > Good: Logged into Namecheap with your account. WHOIS shows your name. Auto-renew is on, charged to your card.
 
-A domain transfer takes a minimum of **14 days** under ICANN rules and requires the losing registrar to release the auth code. If the agency will not release it, your customers cannot reach your site for two weeks.
+A domain transfer takes a minimum of **14 days** under ICANN rules and requires the losing registrar to release the auth code. If the contractor will not release it, your customers cannot reach your site for two weeks.
 
 ## What to do if the audit fails
 
@@ -149,7 +149,7 @@ Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help
 >
 > Subject: `Quick housekeeping - moving a few accounts to my email`
 >
-> Hi [lead engineer / agency contact],
+> Hi [lead engineer / contractor contact],
 >
 > Doing some account housekeeping this week. Can you help me move these over?
 >
@@ -168,14 +168,14 @@ Most failures are sloppy Day-1 setup, not malice. Frame the ask as "can you help
 
 ### When to escalate
 
-If the agency does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Negotiate for a month yourself and you usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
+If the contractor does not transfer the GitHub org within 7 days, the AWS root within 14 days, or the domain auth code at all, retain a lawyer. Negotiate for a month yourself and you usually lose. The legal fee is $2K-$5K. The cost of a stalled checkout is much higher.
 
-If you are in this spot, the [JetThoughts dev shop red flags checklist](/blog/dev-shop-red-flags-checklist/) is the next read - a failed audit usually correlates with three or four other red flags - and the [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the 30-day transition.
+If you are in this spot, the [contractor red flags checklist](/blog/dev-shop-red-flags-checklist/) is the next read - a failed audit usually correlates with three or four other red flags - and the [step-by-step exit guide](/blog/fire-dev-shop-guide/) covers the 30-day transition.
 
 ## What to do after
 
 - **Run this audit every quarter.** Twenty minutes once you have done it the first time. Recurring calendar block, last Friday of every quarter.
-- **Add it to your due diligence checklist for the next dev shop.** Before you sign a contract, get it in writing that all GitHub orgs, AWS accounts, domain registrar accounts, secrets stores, and third-party API accounts will be created under your company email from Day 1. Put it in the SOW. The [JetThoughts founder's guide to hiring a dev shop](/blog/founders-guide-hiring-dev-shop/) walks through the clauses worth requesting.
+- **Add it to your due diligence checklist for the next hire.** Before you sign a contract, get it in writing that all GitHub orgs, AWS accounts, domain registrar accounts, secrets stores, and third-party API accounts will be created under your company email from Day 1. Put it in the SOW. The [founder's guide to hiring a contractor](/blog/founders-guide-hiring-dev-shop/) walks through the clauses worth requesting.
 - **Forward the audit answers to your investor or board the same day.** Three quarterly audits in a row in their inbox is the cheapest investor-trust signal you will ever ship.
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
