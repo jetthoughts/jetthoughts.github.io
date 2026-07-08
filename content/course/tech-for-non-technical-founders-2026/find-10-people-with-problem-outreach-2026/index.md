@@ -51,7 +51,7 @@ You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) book
 
 ### The message most non-technical founders write first
 
-Before we hand you a working sequence, look at the version a founder typically sends on attempt one. This is composed from real first-draft messages we've seen across rescues:
+Before we hand you a working sequence, look at the version a founder typically sends on attempt one. This is composed from real first-draft messages we've seen across projects:
 
 ```text
 Subject: quick chat?
