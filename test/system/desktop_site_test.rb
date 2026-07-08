@@ -325,7 +325,7 @@ class DesktopSiteTest < ApplicationSystemTestCase
       assert_text "From Idea to First Paying Customer"
     end
     assert_text "Why this course exists"
-    assert_text "Module index"
+    assert_text "Module map"
   end
 
   def test_visit_course_chapter_from_landing

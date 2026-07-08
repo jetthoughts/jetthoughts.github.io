@@ -25,17 +25,21 @@ metatags:
 cover_image_alt: "JetThoughts course landing cover showing 5 modules (Hypothesis, Validate, Design, Build, First Customer) on the route from idea to first paying users"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/"
 related_posts: false
+hero_lede: "You have a business idea and no idea what to do first. This course takes you from that idea to a signed paid pilot - a real customer paying real money - without writing code or hiring anyone."
+hero_chips:
+  - "Free"
+  - "No sign-up"
+  - "5 modules"
+  - "Evenings & weekends pace"
+hero_primary_url: "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/"
+hero_primary_text: "Start Chapter 1.1 →"
+hero_secondary_url: "/course/tech-for-non-technical-founders-2026/quickstart/"
+hero_secondary_text: "3-minute Quickstart"
 ---
-
-You have a business idea. You don't know what to do first. You don't know whether to start building, how to validate demand, or who to hire.
-
-You finish this course with a signed paid pilot from someone you didn't know yesterday.
 
 You leave Module 1 with a go/iterate/kill decision based on real demand data instead of polite nods from friends. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Two to three weeks at an evenings-and-weekends pace.
 
-> **Start here:** [**Chapter 1.1 - Form Your Founding Hypothesis →**](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
->
-> Need orientation first? See the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min), [FAQ](/course/tech-for-non-technical-founders-2026/faq/) (15 common blockers), or [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (full route overview). The course is free, no sign-up required.
+Need orientation first? See the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min), [FAQ](/course/tech-for-non-technical-founders-2026/faq/) (15 common blockers), or [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (full route overview).
 
 *Returning? [Skip to the syllabus ↓](#module-map)*
 
@@ -43,11 +47,13 @@ You leave Module 1 with a go/iterate/kill decision based on real demand data ins
 
 First-time founders reliably make the same five mistakes. This course heads each one off:
 
-- Building an entire MVP before verifying anyone will pay for it - Modules 1 and 2 show you what validation actually looks like before you spend a single dollar.
-- Asking friends if they like the idea and mistaking their polite nods for market demand - [Module 2](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) hands you five questions that extract real signal instead of hypothetical praise.
-- Writing a 15-page feature wishlist instead of a one-page problem spec - [Module 3](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) constrains your scope to what actually matters to the customer.
-- Believing you have to drop $50,000 on an engineering team to launch - [Module 4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) walks you through a $0 self-serve stack you can use without writing code.
-- Offering free pilots indefinitely because asking for money feels intimidating - [Module 5](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) gives you the exact script to charge your first customer before you ship.
+<ul class="mistake-list">
+  <li>Building an entire MVP (minimum viable product - the first working version) before verifying anyone will pay for it - Modules 1 and 2 show you what validation actually looks like before you spend a single dollar.</li>
+  <li>Asking friends if they like the idea and mistaking their polite nods for market demand - <a href="/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/">Module 2</a> hands you five questions that extract real signal instead of hypothetical praise.</li>
+  <li>Writing a 15-page feature wishlist instead of a one-page problem spec - <a href="/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/">Module 3</a> constrains your scope to what actually matters to the customer.</li>
+  <li>Believing you have to drop $50,000 on an engineering team to launch - <a href="/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/">Module 4</a> walks you through a $0 self-serve stack you can use without writing code.</li>
+  <li>Offering free pilots indefinitely because asking for money feels intimidating - <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Module 5</a> gives you the exact script to charge your first customer before you ship.</li>
+</ul>
 
 ## Take this course if
 
@@ -63,98 +69,97 @@ Skip this course if you want to learn to code or hand off founder judgment to so
 
 Each module produces one fill-in-the-blank artifact. The six bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund:
 
-1. A one-sentence **Founding Hypothesis** - shows you didn't start with a build, you started with a falsifiable bet (Module 1)
-2. A **smoke-test decision** + price point - proves strangers clicked and some reached for their wallet (Module 1)
-3. Ten **[Mom Test](https://www.momtestbook.com/) interview notes** + prototype feedback - proves you didn't build in a vacuum (Module 2)
-4. A one-page **Product Brief** - shows scope is constrained by customer language, not feature fantasies (Module 3)
-5. A **live MVP** at a real URL, ownership locked Day 1 - proves you can ship without an engineer and nobody else holds the keys (Module 4)
-6. A **first signed paid pilot** + channel sequence running - proves someone who doesn't know you paid real money (Module 5)
-
-*Module 1 produces artifacts 1 and 2. Artifacts 3-6 follow in Modules 2-5.*
+<div class="artifact-grid">
+  <div class="artifact-card"><span class="artifact-card__num">1 · Module 1</span><p><strong>Founding Hypothesis</strong> Shows you didn't start with a build - you started with a one-sentence falsifiable bet.</p></div>
+  <div class="artifact-card"><span class="artifact-card__num">2 · Module 1</span><p><strong>Smoke-test decision + price point</strong> Proves strangers clicked and some reached for their wallet.</p></div>
+  <div class="artifact-card"><span class="artifact-card__num">3 · Module 2</span><p><strong>Ten <a href="https://www.momtestbook.com/">Mom Test</a> interview notes + prototype feedback</strong> Proves you didn't build in a vacuum.</p></div>
+  <div class="artifact-card"><span class="artifact-card__num">4 · Module 3</span><p><strong>One-page Product Brief</strong> Shows scope is constrained by customer language, not feature fantasies.</p></div>
+  <div class="artifact-card"><span class="artifact-card__num">5 · Module 4</span><p><strong>Live MVP at a real URL</strong> Ownership locked Day 1 - you can ship without an engineer and nobody else holds the keys.</p></div>
+  <div class="artifact-card"><span class="artifact-card__num">6 · Module 5</span><p><strong>First signed paid pilot + channel sequence</strong> Proves someone who doesn't know you paid real money.</p></div>
+</div>
 
 ## Module map
 
-> Read the modules in order. Each module's output is the next module's input.
+Read the modules in order. Each module's output is the next module's input.
 
-### Module 1 - Hypothesis & Smoke Test
+<div class="module-card" id="module-1">
+  <span class="module-card__badge">Module 1</span>
+  <h3>Hypothesis &amp; Smoke Test</h3>
+  <p class="module-card__output"><strong>Output:</strong> a one-sentence Founding Hypothesis + a live landing page with a Stripe price button.<br>
+  <em>Start here if you don't have a one-sentence Founding Hypothesis yet, or you have one but never tested demand with a landing page.</em></p>
+  <ol class="module-card__chapters">
+    <li><span class="module-card__num">1.1</span> <a href="/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/">Form Your Founding Hypothesis</a></li>
+    <li><span class="module-card__num">1.2</span> <a href="/course/tech-for-non-technical-founders-2026/smoke-test-build-page/">Smoke Test: Build the Page</a></li>
+    <li><span class="module-card__num">1.3</span> <a href="/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/">Wire Tracking Before Traffic Starts</a></li>
+    <li><span class="module-card__num">1.4</span> <a href="/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/">Smoke Test: Run It and Read the Signal</a></li>
+    <li><span class="module-card__num">1.5</span> <a href="/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/">Price Your Hypothesis on the Smoke-Test Page</a></li>
+  </ol>
+  <p class="module-card__extras">Optional reference: <a href="/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/">AI stress-test for the blanks</a> · See it in action: <a href="/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/">Mia builds TutorMatch - a full Module 1 walkthrough</a></p>
+  <p class="module-card__leave"><strong>You leave with:</strong> a Founding Hypothesis, demand data from 300 cold strangers, and a price test - all collected before you've built anything.</p>
+</div>
 
-*Output: One-sentence Founding Hypothesis + a live landing page with a Stripe price button.*  
-*Start here if you don't have a one-sentence Founding Hypothesis yet, or you have one but never tested demand with a landing page.*
+<div class="module-card" id="module-2">
+  <span class="module-card__badge">Module 2</span>
+  <h3>Validate the Problem</h3>
+  <p class="module-card__output"><strong>Output:</strong> 10 Mom Test interviews + a <a href="https://lovable.dev">Lovable</a> prototype shown to 5 of them.<br>
+  <em>Start here if you've never talked to 10+ potential customers about the problem you want to solve.</em></p>
+  <ol class="module-card__chapters">
+    <li><span class="module-card__num">2.1</span> <a href="/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/">The Mom Test: Ask About the Past, Not the Future</a></li>
+    <li><span class="module-card__num">2.2</span> <a href="/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/">Sharpen Your Question List with AI Personas</a> <span class="module-card__optional">optional</span><br><em>Skip if you've interviewed before. The Mom Test in 2.1 is the core; this chapter rehearses your questions with AI personas first.</em></li>
+    <li><span class="module-card__num">2.3a</span> <a href="/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/">Find 10 People: Where to Look</a></li>
+    <li><span class="module-card__num">2.3b</span> <a href="/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/">Find 10 People: What to Say</a></li>
+    <li><span class="module-card__num">2.4</span> <a href="/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/">Build a Clickable Prototype</a></li>
+  </ol>
+  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/mom-test-interview-script/">Interview Script</a> · <a href="/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/">Validated Problem Statement</a> · <a href="/course/tech-for-non-technical-founders-2026/outreach-sequence-template/">Outreach Sequence</a> · <a href="/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/">Mom Test Synthesis</a></p>
+  <p class="module-card__leave"><strong>You leave with:</strong> 10 scored interview transcripts and a prototype tested by 5 of them - real signal, not "I asked some friends."</p>
+</div>
 
-- [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
-- [**1.2** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
-- [**1.3** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
-- [**1.4** · Smoke Test: Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
-- [**1.5** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
+<div class="module-card" id="module-3">
+  <span class="module-card__badge">Module 3</span>
+  <h3>Design from Evidence</h3>
+  <p class="module-card__output"><strong>Output:</strong> one-page Product Brief drafted from interview transcripts.<br>
+  <em>Start here if you've validated the problem but don't have a one-page Product Brief.</em></p>
+  <ol class="module-card__chapters">
+    <li><span class="module-card__num">3.1</span> <a href="/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/">The One-Page Product Brief (Vibe PRD)</a></li>
+    <li><span class="module-card__num">3.2</span> <a href="/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/">Quality-check Your Brief: Features to Outcomes</a></li>
+  </ol>
+  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/vibe-prd-template/">Vibe PRD</a> · Course glossary (reference, not in the linear path): <a href="/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/">Five Tech Words to Stop Nodding At</a></p>
+  <p class="module-card__leave"><strong>You leave with:</strong> a one-page Product Brief written from interview transcripts, not feature wishlists.</p>
+</div>
 
-*Optional reference: [AI stress-test for the blanks](/course/tech-for-non-technical-founders-2026/validation-tools-field-guide/).*  
-*See it in action: [Mia builds TutorMatch - a full Module 1 walkthrough](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/).*
+<div class="module-card" id="module-4">
+  <span class="module-card__badge">Module 4</span>
+  <h3>Build It Yourself</h3>
+  <p class="module-card__output"><strong>Output:</strong> live Lovable + <a href="https://supabase.com">Supabase</a> + Stripe MVP at a real URL, ownership locked Day 1.<br>
+  <em>Start here if you have a Product Brief and need to build the MVP.</em></p>
+  <ol class="module-card__chapters">
+    <li><span class="module-card__num">4.1</span> <a href="/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/">Should You Hire? The 2026 Decision Tree</a></li>
+    <li><span class="module-card__num">4.2</span> <a href="/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/">Who Owns Your GitHub, AWS, and Database?</a></li>
+    <li><span class="module-card__num">4.3a</span> <a href="/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/">The Self-Serve MVP Stack: Tools &amp; Setup</a></li>
+    <li><span class="module-card__num">4.3b</span> <a href="/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/">The Self-Serve MVP Stack: Build Phases</a></li>
+    <li><span class="module-card__num">4.4</span> <a href="/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/">Vibe Coding Done Right: 5 Ceiling Signals</a> <span class="module-card__optional">optional</span><br><em>Skip on first pass. Come back when your no-code build hits a wall - a feature you can't add, a query you can't tune, an auth flow Lovable can't handle.</em></li>
+  </ol>
+  <p class="module-card__extras">Templates in this module: <a href="/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/">Build Path Decision Worksheet</a> · <a href="/course/tech-for-non-technical-founders-2026/ownership-checklist/">Ownership Checklist</a> · <a href="/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/">Self-Serve Stack Walkthrough</a></p>
+  <p class="module-card__leave"><strong>You leave with:</strong> a live MVP at a real URL, ownership locked Day 1, no engineer hired.</p>
+</div>
 
-> **You leave Module 1 with** a Founding Hypothesis, demand data from 300 cold strangers, and a price test - all collected before you've built anything.
-
-### Module 2 - Validate the Problem
-*v1 chapters readable now; v2 rework rolling out.*  
-*Output: 10 Mom Test interviews + a [Lovable](https://lovable.dev) prototype shown to 5 of them.*  
-*Start here if you've never talked to 10+ potential customers about the problem you want to solve.*
-
-- [**2.1** · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
-- [**2.2** · OPTIONAL - Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)  
-  *Skip if you've interviewed before. The Mom Test in 2.1 is the core; this chapter rehearses your questions with AI personas first.*
-- [**2.3a** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
-- [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
-- [**2.4** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
-
-*Templates in this module: [Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) · [Validated Problem Statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/) · [Outreach Sequence](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/) · [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/).*
-
-> **You leave Module 2 with** 10 scored interview transcripts and a prototype tested by 5 of them - real signal, not "I asked some friends."
-
-### Module 3 - Design from Evidence
-*v1 chapters readable now; v2 rework rolling out.*  
-*Output: One-page Product Brief drafted from interview transcripts.*  
-*Start here if you've validated the problem but don't have a one-page Product Brief.*
-
-- [**3.1** · The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
-- [**3.2** · Quality-check Your Brief: Features to Outcomes](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/)
-
-*Template in this module: [Vibe PRD](/course/tech-for-non-technical-founders-2026/vibe-prd-template/).*  
-*Course glossary (reference, not in the linear path): [Five Tech Words to Stop Nodding At](/course/tech-for-non-technical-founders-2026/five-tech-words-stop-nodding-at/).*
-
-> **You leave Module 3 with** a one-page Product Brief written from interview transcripts, not feature wishlists.
-
-### Module 4 - Build It Yourself
-*v1 chapters readable now; v2 rework rolling out.*  
-*Output: Live Lovable + [Supabase](https://supabase.com) + Stripe MVP at a real URL, ownership locked Day 1.*  
-*Start here if you have a Product Brief and need to build the MVP.*
-
-- [**4.1** · Should You Hire? The 2026 Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
-- [**4.2** · Who Owns Your GitHub, AWS, and Database?](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
-- [**4.3a** · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
-- [**4.3b** · The Self-Serve MVP Stack: Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
-- [**4.4** · OPTIONAL - Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)  
-  *Skip on first pass. Come back when your no-code build hits a wall - a feature you can't add, a query you can't tune, an auth flow Lovable can't handle.*
-
-*Templates in this module: [Build Path Decision Worksheet](/course/tech-for-non-technical-founders-2026/build-path-decision-worksheet/) · [Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/) · [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/).*
-
-> **You leave Module 4 with** a live MVP at a real URL, ownership locked Day 1, no engineer hired.
-
-### Module 5 - First Paying Customer
-*v1 chapters readable now; v2 rework rolling out.*  
-*Output: One paying customer through a deliberately chosen channel.*  
-*Start here if your MVP is live but you don't have a paying customer with a signed pilot.*
-
-- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
-- [**5.2** · OPTIONAL - Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)  
-  *Skip if you already have a channel in mind (LinkedIn, cold email, or personal network). The core path is 5.3a→b→c (personal network) → 5.4 (paid pilot).*
-- [**5.3a** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
-- [**5.3b** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
-- [**5.3c** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
-- [**5.4** · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
-- [**5.5** · OPTIONAL - Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)  
-  *Skip if your personal network in 5.3a→c produced your first 10 customers. This is the systematic path for when warm intros run out.*
-
-*Template in this module: [First Paying Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/).*
-
-> **You leave Module 5 with** a signed paid pilot and your first dollar from a customer, not a favor.
+<div class="module-card" id="module-5">
+  <span class="module-card__badge">Module 5</span>
+  <h3>First Paying Customer</h3>
+  <p class="module-card__output"><strong>Output:</strong> one paying customer through a deliberately chosen channel.<br>
+  <em>Start here if your MVP is live but you don't have a paying customer with a signed pilot.</em></p>
+  <ol class="module-card__chapters">
+    <li><span class="module-card__num">5.1</span> <a href="/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/">Your First Customer Is Not a Marketing Problem</a></li>
+    <li><span class="module-card__num">5.2</span> <a href="/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/">Choose Your Channel Before You Send One Message</a> <span class="module-card__optional">optional</span><br><em>Skip if you already have a channel in mind (LinkedIn, cold email, or personal network). The core path is 5.3a→b→c (personal network) → 5.4 (paid pilot).</em></li>
+    <li><span class="module-card__num">5.3a</span> <a href="/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/">Build Your 50-Name Network List</a></li>
+    <li><span class="module-card__num">5.3b</span> <a href="/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/">Write the Outreach Message</a></li>
+    <li><span class="module-card__num">5.3c</span> <a href="/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/">Send, Track, and Read the Replies</a></li>
+    <li><span class="module-card__num">5.4</span> <a href="/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/">Charge Before You Ship: The Paid Pilot Contract</a></li>
+    <li><span class="module-card__num">5.5</span> <a href="/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/">Going Outbound Without a Sales Team</a> <span class="module-card__optional">optional</span><br><em>Skip if your personal network in 5.3a→c produced your first 10 customers. This is the systematic path for when warm intros run out.</em></li>
+  </ol>
+  <p class="module-card__extras">Template in this module: <a href="/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/">First Paying Customer Operating Kit</a></p>
+  <p class="module-card__leave"><strong>You leave with:</strong> a signed paid pilot and your first dollar from a customer, not a favor.</p>
+</div>
 
 ## What this course does NOT cover
 
@@ -195,7 +200,7 @@ These conditional chapters kick in once you've passed the Module 5 gate. Read ea
 
 ## Already started building?
 
-A side-path for readers who are further along. If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1---hypothesis--smoke-test).
+A side-path for readers who are further along. If you just have an idea or a half-built prototype you're tinkering with, skip to [Module 1](#module-1).
 
 If you are already typing, or paying someone an hourly rate to type for you, run these steps before you approve any more work.
 

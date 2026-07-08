@@ -634,3 +634,231 @@ input[type=submit]:disabled {
   }
 }
 
+
+/* ============================================================
+   Course landing (layouts/course/list.html)
+   Hero lede + CTA row + module cards + artifact grid.
+   Scoped under .blog like the rest of the article styles.
+   ============================================================ */
+
+/* Hero lede — replaces the uppercase byline treatment for the
+   course landing: a human-readable value line, not tracked caps. */
+.blog .course-hero-lede {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #3a3f4a;
+  font-weight: 400;
+  max-width: 43rem;
+  margin: 12px auto 20px;
+}
+
+/* Meta chips — Free / No sign-up / 5 modules / pace */
+.blog .course-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 auto 20px;
+  max-width: 43rem;
+  font-size: 14px;
+}
+.blog .course-chips li {
+  background: #f8f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin: 0;
+  font-weight: 600;
+  color: #3a3f4a;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Hero CTA row — primary reuses .cta-link; secondary is the ghost variant */
+.blog .course-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 43rem;
+  margin: 0 auto 28px;
+}
+.blog .cta-link--ghost,
+.blog .course-hero-ctas a.cta-link--ghost {
+  background: transparent;
+  border: 2px solid #cc342d;
+  color: #cc342d;
+  padding: 12px 26px;
+}
+.blog .cta-link--ghost:hover,
+.blog .course-hero-ctas a.cta-link--ghost:hover {
+  background: rgba(204, 52, 45, 0.06);
+  color: #a8231e;
+}
+.blog .course-hero-ctas a.cta-link--ghost:visited {
+  color: #cc342d;
+}
+
+/* Module cards — one card per module in the syllabus. Breaks the
+   five-identical-bullet-lists wall into scannable units. */
+.blog .module-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 26px 30px 22px;
+  margin: 28px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+.blog .module-card__badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cc342d;
+  margin-bottom: 6px;
+}
+.blog .module-card h3,
+.blog .module-card h3:not(.post-title):first-of-type {
+  margin: 0 0 10px !important;
+  padding-top: 0;
+  border-top: none;
+}
+.blog .module-card__output {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #3a3f4a;
+  margin-bottom: 16px;
+}
+.blog .module-card__output strong {
+  color: #1a1a2e;
+}
+.blog .module-card ol.module-card__chapters {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+.blog .module-card ol.module-card__chapters li {
+  margin: 0 0 10px;
+  line-height: 1.55;
+  position: relative;
+  padding-left: 52px;
+}
+.blog .module-card__num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: #5f6470;
+  font-variant-numeric: tabular-nums;
+}
+.blog .module-card__optional {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #92400e;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 999px;
+  padding: 1px 8px;
+  margin-left: 6px;
+  vertical-align: 2px;
+}
+.blog .module-card__extras {
+  font-size: 15px;
+  color: #5f6470;
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+.blog .module-card__leave {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 16px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a2e;
+  margin-bottom: 0;
+}
+.blog .module-card__leave::before {
+  content: '✓ ';
+  color: #15803d;
+  font-weight: 700;
+}
+
+/* Artifact grid — the six Founder OS artifacts as cards instead of a
+   six-item numbered list (F-pattern rule: no 6+ identical bullets). */
+.blog .artifact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.blog .artifact-card {
+  background: #f8f8fa;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+.blog .artifact-card__num {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #cc342d;
+  margin-bottom: 4px;
+}
+.blog .artifact-card p {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+  color: #1a1a2e;
+}
+.blog .artifact-card p strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* Mistake list — "Why this course exists": five ✗ items with the
+   module that heads each mistake off. */
+.blog ul.mistake-list {
+  list-style: none;
+  padding-left: 0;
+}
+.blog ul.mistake-list > li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 18px;
+}
+.blog ul.mistake-list > li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #cc342d;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .blog .course-hero-lede {
+    font-size: 19px;
+  }
+  .blog .course-hero-ctas {
+    flex-direction: column;
+  }
+  .blog .course-hero-ctas .cta-link {
+    text-align: center;
+  }
+  .blog .module-card {
+    padding: 20px 18px 16px;
+  }
+  .blog .module-card ol.module-card__chapters {
+    font-size: 16px;
+  }
+  .blog .module-card ol.module-card__chapters li {
+    padding-left: 44px;
+  }
+  .blog .artifact-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -20,10 +20,30 @@
       <article
         class="single-content"
         style="max-width: 720px; margin:0 auto; padding-left:18px;padding-right:18px">
-        <header>
+        <header class="course-hero">
           <h1 class="fl-heading">{{ .Title }}</h1>
-          {{ with .Params.description }}
-            <p class="post-meta-byline" style="margin-top:0.5rem">{{ . }}</p>
+
+          {{ with .Params.hero_lede }}
+            <p class="course-hero-lede">{{ . | markdownify }}</p>
+          {{ else }}
+            {{ with .Params.description }}
+              <p class="post-meta-byline" style="margin-top:0.5rem">{{ . }}</p>
+            {{ end }}
+          {{ end }}
+
+          {{ with .Params.hero_chips }}
+            <ul class="course-chips">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+
+          {{ if .Params.hero_primary_url }}
+            <div class="course-hero-ctas">
+              <a class="cta-link" href="{{ .Params.hero_primary_url }}">{{ .Params.hero_primary_text }}</a>
+              {{ if .Params.hero_secondary_url }}
+                <a class="cta-link cta-link--ghost" href="{{ .Params.hero_secondary_url }}">{{ .Params.hero_secondary_text }}</a>
+              {{ end }}
+            </div>
           {{ end }}
 
           {{/* Cover image */}}
