@@ -1,0 +1,13 @@
+# SearXNG settings — JetThoughts local MCP instance
+# Mounted read-only via compose.mcp.yml
+use_default_settings: true
+
+search:
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "1oOHoKQ97m1uS9AjDH3fDVr0ZeQCyJjc"
+  bind_address: "0.0.0.0"
+  image_proxy: true

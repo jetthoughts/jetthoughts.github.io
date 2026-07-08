@@ -19,6 +19,7 @@ services:
       - "8080:8080"
     volumes:
       - searxng_data:/etc/searxng
+      - ./.dev/searxng/settings.yml:/etc/searxng/settings.yml:ro
     environment:
       - SEARXNG_BASE_URL=http://localhost:8080/
     restart: unless-stopped
