@@ -16,6 +16,10 @@ tags:
   - non-technical-founder
   - smoke-test
 categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover for Lesson 1.3 - Wire Your Tracking Before Traffic, with a dashboard card listing the three tracked numbers: page view, CTA click, and form submit"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/"
 related_posts: false
 ---

@@ -16,6 +16,10 @@ tags:
   - non-technical-founder
   - smoke-test
 categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+cover_image_alt: "JetThoughts course cover for Lesson 1.2 - Build Your Smoke-Test Page Tonight, with a page-anatomy card showing the four blocks that convert: headline, sub-headline, value props, and waitlist CTA"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/smoke-test-build-page/"
 related_posts: false
 ---
