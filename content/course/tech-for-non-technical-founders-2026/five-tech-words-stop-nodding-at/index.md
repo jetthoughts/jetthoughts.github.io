@@ -42,7 +42,7 @@ Below is the cheat sheet for the five words that hide the most invoices: refacto
 
 ## Why these five words now
 
-The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The founders we rescue in 2026 did not lose money on vocabulary - they lost it because they nodded at words the agency was using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
+The vibe-coding wave made jargon worse. Agencies now stack three vocabularies on top of each other - the old enterprise one (microservices, Docker, refactoring), the AI one (agents, prompts, RAG, MCP), and the no-code one (workflows, automations, integrations). Founders walk into status meetings and hear words from all three at once. The founders we work with in 2026 did not lose money on vocabulary - they lost it because they nodded at words the agency was using to mean something else. Veracode's 2025 study found 45% of LLM-generated code shipped at least one exploitable security flaw, and that kind of failure hides perfectly inside the word "refactoring" when nobody asks what was changed.
 
 ## The Five Words
 
@@ -110,7 +110,7 @@ Code you shipped fast knowing you would have to come back and fix it. Ward Cunni
 
 > **🔍 BS-detection question:** *"Which specific feature on next quarter's roadmap will be cheaper to ship after this debt is paid down, and by roughly how much?"* Real tech debt has a payoff number attached to a named feature. "It will help with everything" means nobody has measured anything yet.
 
-In Rails terms, healthy tech debt sounds specific: "extracting a `Billing::PlanCalculator` class out of `User` unblocks metered billing in Q3." Unhealthy tech debt sounds like "there is a lot of legacy in this codebase" - a feeling the team is asking you to fund. [LitsLink reports developers spend 42% of their time on technical debt and maintenance](https://litslink.com/blog/cost-of-outsourcing-software-development); the founders we rescue rarely see that line on an invoice. They see features taking twice as long as last quarter for no reason anyone can name. JT's [60-day playbook for slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) starts by making that line visible.
+In Rails terms, healthy tech debt sounds specific: "extracting a `Billing::PlanCalculator` class out of `User` unblocks metered billing in Q3." Unhealthy tech debt sounds like "there is a lot of legacy in this codebase" - a feeling the team is asking you to fund. [LitsLink reports developers spend 42% of their time on technical debt and maintenance](https://litslink.com/blog/cost-of-outsourcing-software-development); the founders we work with rarely see that line on an invoice. They see features taking twice as long as last quarter for no reason anyone can name. JT's [60-day playbook for slow engineering teams](/blog/fixing-slow-engineering-teams-an-extended/) starts by making that line visible.
 
 ### 🚀 4. MVP
 

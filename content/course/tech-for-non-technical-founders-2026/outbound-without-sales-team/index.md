@@ -65,7 +65,7 @@ The four-line cold-email sequence below is what customer five answers in week th
 
 This is the closing chapter of Module 5 (First Paying Customer). Once your personal network is exhausted, the next 10 customers come from filtered cold outbound, not from launch events.
 
-Figma's first customer 11-20 cohort came from cold DMs to influential designers identified via Twitter data. Retool filtered Crunchbase by funding recency. Your rescue-Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
+Figma's first customer 11-20 cohort came from cold DMs to influential designers identified via Twitter data. Retool filtered Crunchbase by funding recency. Your Rails MVP customer 11-20 cohort will come from LinkedIn Sales Navigator (or Apollo, or both) feeding the four-line script below.
 
 ## Why Product Hunt is the wrong lever for a B2B SaaS product
 

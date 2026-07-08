@@ -178,7 +178,6 @@ The deposit number is not arbitrary. It is anchored to projected year-one ACV an
 | B2B SaaS (per-seat, 5-10 seats) | $5K-$12K | $500-$3K | The CFO approves the deposit on email. No procurement involved. |
 | B2B SaaS (mid-market, 50-200 seats) | $20K-$80K | $2K-$24K | Above $10K, expect a 1-week procurement review. Plan for it. |
 | B2B Services / consultancy | $10K-$40K | $1K-$6K | Service deposit is normal in the sector. Customer expects to pay. |
-| Rescue-rebuild engagement (founder inherited a broken codebase from a prior agency) | $15K-$60K | $1.5K-$6K | Founders in this band are rebuilding rather than greenfield - the deposit anchors what they are buying back, not what they are exploring. |
 
 ### The minimum: $500
 
