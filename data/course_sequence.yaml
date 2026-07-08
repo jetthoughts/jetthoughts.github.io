@@ -7,7 +7,11 @@
 # not in the linear prev/next reading order. Like the glossary, it's reference content
 # accessible from the landing page.
 #
-# Current count: 23 entries (1 overview + 21 chapters + 1 glossary)
+# Course stats are DERIVED from this file via the course-stat shortcode:
+# {{< course-stat chapters >}} counts entries minus the Chapter 0 overview,
+# {{< course-stat modules >}} counts distinct module numbers, and any other
+# key resolves from the stats: map below. Never hardcode exact counts in
+# course prose; frontmatter/covers use near numbers ("20+ chapters") instead.
 #
 # Note: floating glossary - "Five Tech Words to Stop Nodding At" (slug five-tech-words-stop-nodding-at)
 # is reference content, accessible from every chapter, not in the linear reading order.
@@ -18,16 +22,19 @@
 # demoted AI-era chapters) are linked from Module 5 "Going further" callout
 # but NOT in the linear sequence.
 
+stats:
+  artifacts: 6
+
 sequence:
   - slug: how-this-course-works
     title: "How This Course Works"
     module: "Chapter 0"
-    goal: "The map: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage. Read once before starting."
+    goal: "The map: 5 modules, 20+ chapters, 6 artifacts, and the AI tools that accelerate each stage. Read once before starting."
 
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"
     module: "Chapter 1.1"
-    goal: "Write a Founding Hypothesis scored ≥14/20 across four lenses — one sentence, five specific blanks, falsifiable in five interviews."
+    goal: "Write a Founding Hypothesis scored ≥14/20 across four lenses - one sentence, five specific blanks, falsifiable in five interviews."
 
   - slug: smoke-test-build-page
     title: "1.2 · Smoke Test: Build the Page"
@@ -47,7 +54,7 @@ sequence:
   - slug: price-hypothesis-on-smoke-test-page
     title: "1.5 · Price Your Hypothesis on the Smoke-Test Page"
     module: "Chapter 1.5"
-    goal: "Add a Stripe Payment Link and measure whether strangers will pay — not just leave an email."
+    goal: "Add a Stripe Payment Link and measure whether strangers will pay - not just leave an email."
 
   - slug: mom-test-ask-about-past-not-future
     title: "2.1 · The Mom Test: Ask About the Past, Not the Future"

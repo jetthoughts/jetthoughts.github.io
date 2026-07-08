@@ -1,7 +1,7 @@
 ---
 title: "How This Course Works"
 aliases: ["/blog/how-this-course-works/"]
-description: "The complete journey from idea to first paying customer at a glance: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage."
+description: "The complete journey from idea to first paying customer at a glance: 5 modules, 20+ chapters, 6 artifacts, and the AI tools that accelerate each stage."
 date: 2026-06-04
 draft: false
 course_chapter: true
@@ -22,7 +22,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "How This Course Works - From Idea to First Paying Customer"
-  og_description: "The complete journey at a glance: 5 modules, 20 chapters, 6 artifacts, and the AI tools that accelerate each stage."
+  og_description: "The complete journey at a glance: 5 modules, 20+ chapters, 6 artifacts, and the AI tools that accelerate each stage."
 cover_image_alt: "Course overview diagram showing the 5-module journey from idea to first paying customer"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/how-this-course-works/"
 related_posts: false
@@ -32,7 +32,7 @@ related_posts: false
 >
 > **What this is:** the map. Read this once before Module 1, come back when you need to see where you are.
 
-> **TL;DR:** Five modules, twenty chapters, six artifacts. Each module's output is the next module's input - from rough idea to signed paid pilot. The map: read once, come back when lost.
+> **TL;DR:** {{< course-stat modules >}} modules, {{< course-stat chapters >}} chapters, {{< course-stat artifacts >}} artifacts. Each module's output is the next module's input - from rough idea to signed paid pilot. The map: read once, come back when lost.
 
 This course takes a non-technical founder from a rough idea to a signed paid pilot - on evenings and weekends, with or without engineers. Each chapter names the tool it uses and what the tool costs at that step; most tools have a free tier. Below: the flow, the tools, the artifacts you'll compile, and how the stages connect.
 
@@ -44,7 +44,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ![5-module pipeline: Module 1 Hypothesis & Smoke Test → Module 2 Validate the Problem → Module 3 Design from Evidence → Module 4 Build It Yourself → Module 5 First Paying Customer](module-pipeline.svg)
 
-Five modules. Twenty chapters. Six artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
+{{< course-stat modules >}} modules. {{< course-stat chapters >}} chapters. {{< course-stat artifacts >}} artifacts you can hand to an investor or a co-founder. Each module's output is the next module's input.
 
 ---
 
