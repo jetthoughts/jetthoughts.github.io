@@ -30,11 +30,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 2 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.2 · [OPTIONAL]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names, introduced in Ch 1.1)
 >
 > **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 (a + b) recruitment and real interviews
+>
+> **Progress:** M2 · 2 of 5 · Results so far: draft question list · Skip if you have interviewed customers before - 2.1 is the core
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
 
@@ -47,6 +49,8 @@ related_posts: false
 You drafted 5-8 Mom Test questions in Ch 2.1. Before you spend a real interview slot on a question that turns out to be pitch-shaped, run the question list past a Claude persona that matches your ICP. The persona answers in character; you ask Claude (out of character) which question generated which kind of answer and why.
 
 The failure shape the rehearsal catches: a question like "Would you use a tool like this?" reads fine on paper, generates a polite "sounds great" from any persona, and absorbs five real interview slots before you notice the pattern. The rehearsal flags the question shape before you spend the slot. Same applies to questions that smuggle in your solution, ask for a hypothetical purchase, or bury the past-tense ask under three clauses.
+
+After this lesson you will be able to: **spot and repair pitch-shaped questions before they cost you a real interview slot.**
 
 The pattern: rehearsal tells you whether the question is broken; real interviews tell you whether the hypothesis is right. Catching a broken question with a free Claude session is cheaper than catching it on call 5 of 10.
 
@@ -254,9 +258,11 @@ The rehearsal does not validate the hypothesis. It validates that your questions
 - Y Combinator, [How to Talk to Users](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - YC's short essay on why this conversation has to happen.
 - Anthropic, [Claude prompting guide](https://docs.anthropic.com/claude/docs/intro-to-prompting) - persona setup, role-play, and breaking character cleanly.
 
-> **Done when:** You have a sharpened question list (5-7 solid questions) and an Objection Tracker with the top 3 objections to listen for.
+> **Done:** you have a sharpened question list (5-7 solid questions) and an Objection Tracker with the top 3 objections to listen for.
 >
-> **Next click:** [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - build the 30-name list first, then [2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) sends the messages.
+> **You have now:** a question list rehearsed against pushback (2.2) on top of your 2.1 draft.
+>
+> **Next:** [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - build the 30-name list first, then [2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) sends the messages.
 >
 > **If blocked:** If all 3 personas produced identical answers, your persona descriptions are too generic. Rewrite them with sharper role, company-size, and urgency differences before continuing.
 

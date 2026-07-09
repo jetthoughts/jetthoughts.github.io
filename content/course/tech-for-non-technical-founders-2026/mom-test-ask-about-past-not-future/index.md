@@ -29,11 +29,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 1 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1)
 >
 > **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 (a + b) recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
+>
+> **Progress:** M2 · 1 of 5 · Results so far: all Module 1 artifacts - Module 2 starts here
 
 > **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. Skip to: [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow).
 
@@ -42,6 +44,8 @@ related_posts: false
 Run eleven interviews where the only question is "would you pay for this?" and you'll close the week with nine yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
 The technique below switches every question to the past tense. What did you do last time? What did it cost? Show me the spreadsheet. Past-tense questions force the answer back into reality; whoever pays in the past keeps paying in the future, and whoever did nothing in the past will do nothing in the future no matter what they tell you over coffee.
+
+After this lesson you will be able to: **write interview questions that ask about past behavior - so the answers tell you what people actually did, not what they would politely promise.**
 
 For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done.
 
@@ -207,9 +211,11 @@ After all 10 interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/
 - Mom Test summary by Yann Klis, [The Mom Test - 1-page summary](https://yannklis.com/posts/the-mom-test/) - a compressed cheat sheet for anyone who can't read the full book this week.
 - Lenny Rachitsky, [Customer interviewing 101](https://www.lennysnewsletter.com/p/the-ultimate-guide-to-conducting) - the operational version of the Mom Test rules with sample scripts.
 
-> **Done when:** You understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
+> **Done:** you understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
 >
-> **Next click:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
+> **You have now:** all Module 1 artifacts + a draft Mom Test question list (2.1). Sharpening and recruiting come next.
+>
+> **Next:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
 >
 > **If blocked:** If the technique isn't clicking, open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact - it has the 5 questions verbatim. Print it, practice on a friend, then return.
 

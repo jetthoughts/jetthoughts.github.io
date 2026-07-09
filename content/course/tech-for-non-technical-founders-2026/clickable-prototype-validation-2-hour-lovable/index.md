@@ -30,11 +30,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 4 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (recruited in [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
+>
+> **Progress:** M2 · 5 of 5 · Results so far: question list + 30-name list + 10 interviews run and scored
 
 > **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
 
@@ -43,6 +45,8 @@ related_posts: false
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution.
 
 Those signals do not measure the same thing.
+
+After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score what they do, not what they say.**
 
 One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
 
@@ -372,10 +376,12 @@ Nothing from the throwaway prototype carries forward except what you learned.
 - Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - how the prototype observation fits into the broader customer-discovery arc.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
-> **Done when:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
+> **Done:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
 > **Founder OS · Artifact #3 of 6:** 10 scored Mom Test transcripts (from Ch 2.3a + 2.3b) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Founder OS` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
 >
-> **Next click:** [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
+> **You have now:** all Module 2 artifacts - scored interviews (2.1-2.3) + prototype feedback from 5 real customers (2.4). Module 2 closes here.
+>
+> **Next:** [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)
 >
 > **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
 

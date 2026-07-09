@@ -29,17 +29,21 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 3a of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.3a · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a hypothesis you suspect is real (from Ch 1.1) + a sharpened Mom Test question list (built in Ch 2.1, polished in Ch 2.2)
 >
 > **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Ch 2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+>
+> **Progress:** M2 · 3 of 5 · Results so far: question list ready to run
 
 > **TL;DR (Part 1 of 2):** Paste your three-sentence hypothesis into Claude, get back the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) profile + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
-Most non-technical founders start with the same move: "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
+The instinctive first move is "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
 
 The technique below replaces that move with a different one: read where strangers are already complaining about your exact hypothesised problem, then write back to those specific complainers. Same hypothesis, same work hours, different place to look. The DM-the-network move books 2-3 polite calls. The read-where-they-already-complain move - half a day of reading threads, then 30 named outreach messages - produces a calendar of 10+ booked interviews.
+
+After this lesson you will be able to: **build a 30-name list of specific people who already complained about your problem in public - people you can name because you read what they wrote.**
 
 The full journey, top to bottom:
 
@@ -206,8 +210,10 @@ These are skip-by-default. The main chapter works without any of them.
 - [Clay](https://www.clay.com/) - list enrichment with email verification, useful once you're past 5 paying customers.
 - [User Interviews](https://www.userinterviews.com/) and [Respondent](https://respondent.io) - research panels for ICPs that cannot be reached cold.
 
-> **Done when:** 30-name list is built in your spreadsheet with name, role+company, post URL, and one quoted line per row.
-> **Next click:** [2.3b · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
+> **Done:** 30-name list is built in your spreadsheet with name, role+company, post URL, and one quoted line per row.
+> **You have now:** a question list (2.1-2.2) + a 30-name list of real people (2.3a). Outreach is next.
+>
+> **Next:** [2.3b · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
 > **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Ch 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
 
 > **Stuck? Most first-timers stall here:** your name list stops at 3 people. **Fix:** search a related keyword - "boarding costs" instead of "pet sitter," "claim denial appeal" instead of "medical billing." The second-degree search surfaces people with the same problem but different vocabulary. 30 minutes of keyword variation turns 3 names into 12. Not "License Apollo Pro."

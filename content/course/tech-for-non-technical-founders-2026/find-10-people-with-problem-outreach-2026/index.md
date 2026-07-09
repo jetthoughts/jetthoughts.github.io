@@ -29,11 +29,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 3b of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.3b · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a 30-name list from [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - specific people you can name because you read what they posted
 >
 > **Output:** 10 interview calls booked, transcripts in hand, ready to score per the Ch 2.1 rubric
+>
+> **Progress:** M2 · 4 of 5 · Results so far: question list + 30-name prospect list
 
 > **TL;DR:** Send 30 staggered messages referencing specific posts you read. A 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close) books 10 interviews. Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't.
 
@@ -42,6 +44,8 @@ related_posts: false
 > **How this chapter relates to Ch 2.4:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3 (a + b) first to validate THE PROBLEM, then Ch 2.4 to validate THE SOLUTION SHAPE.
 
 This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Chapter 5.5 cold-email script here; it scares interview subjects who don't yet know you have a product.
+
+After this lesson you will be able to: **send outreach that names something the person actually wrote - and book 10 interviews from your 30-name list.**
 
 ## What to write so they don't ignore you
 
@@ -195,8 +199,10 @@ Skip this module and start building, and the typical failure mode is burning mon
 - [Apollo](https://www.apollo.io/) - contact database for filtering by role + industry + company size when the hand-picked list runs thin.
 - [User Interviews](https://www.userinterviews.com/) and [Respondent](https://respondent.io) - research panels for ICPs that cannot be reached cold.
 
-> **Done when:** 10 interview calls are booked on your calendar and you have sent the first batch of outreach messages.
-> **Next click:** Return to [2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) to run the interviews using the 5-question script, then move to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score the transcripts.
+> **Done:** 10 interview calls are booked on your calendar and you have sent the first batch of outreach messages.
+> **You have now:** question list (2.1-2.2) + 30-name list (2.3a) + 10 booked interviews (2.3b).
+>
+> **Next:** return to [2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) to run the interviews using the 5-question script, then move to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score the transcripts.
 > **If blocked:** If your reply rate is under 10%, your Day-0 subject line is too generic. Rewrite it to reference a specific post you read by that person. If your ICP can't be reached cold, switch to a paid research panel (User Interviews or Respondent).
 
 > **Case Study: Tomas & Mia**
