@@ -4,8 +4,8 @@
 
 **Project ID**: 2605-tech-for-non-technical-founders
 **Created**: 2026-05-12
-**Last restructured**: 2026-06-10 (Stale-doc cleanup: /blog/ → /course/ path fix, ICP clarified to Sam, chapter count updated, v2 inventory added)
-**Status**: 🟢 v1 (long-form course) shipped · 🔄 v2 pilot lessons iterating to ideal · 🔲 Phase 2 gated behind pilot perfection
+**Last restructured**: 2026-07-09 (post-#345: course merged + live, M1 fully v2 with lessons 1.1-1.5, M2 v2 migration started)
+**Status**: 🟢 Course MERGED + LIVE (PR #345, 2026-07-09) · 🟢 M1 fully v2 + hardened (4 review rounds) · 🔄 M2 v2 migration in flight (branch `module-2-validate-the-problem`)
 **Owner**: JT content team
 **Parent**: 2510-seo-content-strategy (extends, does not replace)
 
@@ -22,7 +22,7 @@
 **Migration plan (see `TASK-TRACKER.md` "Course Migration Schedule")**:
 - ✅ **Phase 0 / Option C** (shipped 2026-06-07): Quickstart + FAQ + "What not to learn" + 6 Sam recommendations from 40.07
 - 🔄 **Phase 1** (iterating 2026-06-08+): 2 pilot lessons (1.2a, 1.2b) being iterated to ideal quality. Strategy: pilot-first, then scale. Phase 2 gated behind: (1) both pilots pass all 6 Sam-review tests, (2) 5-Sam real-founder validation confirms template, (3) 30.03 §7 QA passes, (4) iteration refinements documented.
-- 🔲 **Phase 2** (2-4 weeks, gated): Module-by-module full migration (M1 → M2 → M3 → M4 → M5)
+- 🔄 **Phase 2** (in flight): module-by-module migration. M1 ✅ complete + merged + live (PR #345, lessons 1.1-1.5). M2 🔄 in flight on `module-2-validate-the-problem` (template alignment done; Mia walkthrough + review loop next). M3-M5 🔲.
 - 🔲 **Phase 3** (cross-cutting polish, gated): bridges + reflection + visual discipline + viral loop
 
 **What we stopped**: Iter 17+ surgical loop on v1 long-form chapters. Each Iter-N round was catching diminishing-return defects. The structural format gap is solved by migration, not by line edits.

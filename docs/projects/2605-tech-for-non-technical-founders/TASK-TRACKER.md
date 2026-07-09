@@ -1,8 +1,24 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-06-22 (Module 1 RELEASED. Landing/Quickstart/FAQ reframed as "M1 released, M2-5 roll out 2026". M2 migration is the active work stream.)
+**Last Updated**: 2026-07-09 (Course MERGED to master via PR #345 and LIVE in production. M2 v2 migration started on branch `module-2-validate-the-problem`.)
 
-## Active Phase: M2 Migration · (M1 Released today)
+## Active Phase: M2 v2 Migration (branch `module-2-validate-the-problem`)
+
+**🚀 What shipped 2026-07-07..09: full course merged + Module 1 hardened (PR #345, squash 90216d2f, deployed)**
+- ✅ Landing page redesigned: hero lede + chips + CTA buttons above the fold, module cards, mistake list; Founder OS artifact grid merged into the module-map intro (dedup). Old 12,000px bullet-list layout gone.
+- ✅ Module 1 lesson numbering is now **1.1-1.5** (was 1.1/1.2a/1.2b/1.2c/1.3 in older tracker entries below - historical sections keep the old labels).
+- ✅ 1.1 reframed as strategy-as-hypothesis (Click / lean-inception rationale): advantage + assumptions exposed as blanks, blank→experiment map table, why-one-sentence.
+- ✅ Four independent review rounds all resolved: 2 cold-eyes subagent reviews, CodeRabbit triage, 5-lens fan-out (66 raw → 60 verified findings) + reviewer re-verification. Gate table bands contiguous (Under 3 / 3-6 / 6-10 / 10-20 / Over 20, proceed = ≥6%); FAQ/quickstart/HTCW aligned to it.
+- ✅ Single-source stats: `course-stat` shortcode derives chapters/modules/artifacts from `data/course_sequence.yaml` (24 chapters currently render). Covers use near numbers ("20+ chapters"). Never hardcode counts in prose.
+- ✅ Covers added for 1.2 + 1.3; landing + HTCW covers regenerated ("5 modules · 20+ chapters", TEMPLATES chip now "All free" - the old "14 free" note below is obsolete).
+- ✅ De-hardcoded volatile third-party claims (tool prices/limits → capability language + check-pricing-page note). Removed fabricated "Hacker News $475/mo" ad product. CPC table arithmetically consistent (Meta plan band $250-$700).
+- ✅ Site-wide fix: render-link.html trailing-newline chomp (stray space before punctuation after every markdown link).
+- ✅ Legacy deleted: drafted pre-split 5.3 chapter (first-ten-customers-personal-network) + 17 links retargeted to 5.3a/b/c.
+
+**🔄 In flight (this branch): M2 v2 migration**
+- ✅ 2026-07-09: all 5 M2 chapters aligned to the M1 v2 lesson template (Lesson 2.x · [CORE/OPTIONAL] headers, Progress chain M2 · n of 5, "After this lesson" lines, Done/You-have-now/Next/If-blocked footers). Commit 48552e7b.
+- 🔲 Module 2 Mia walkthrough (`module-2-walkthrough-mia`) + See-it-in-action lines in the 5 lessons (same-commit rule per 30.03 §2.7).
+- 🔲 Cross-page consistency pass + sweeps + cold-eyes review loop → ONE PR for the sprint.
 
 **Current sprint focus:** migrate Module 2 (Validate the Problem) to v2 micro-lesson format — 5 v1 chapters → ~6 micro-lessons following the 30.03 8-part template. M1 v2 is complete and serves as the canonical pattern. Cold AI agents should read `30.03-course-format-requirements-for-creators.md` + the M1 v2 lessons (1.1, 1.2a, 1.2b, 1.2c, 1.3) + the Mia walkthrough as the implementation reference before touching any M2 lesson.
 
@@ -17,8 +33,8 @@
 - ✅ Build clean: 0 em-dashes across all 3 pages; all 7 course validators pass.
 
 **Deferred to follow-up sweeps (NOT in this release):**
-- 🔲 **M2-M5 chapter-top callouts** (per user direction 2026-06-22 "separate sweep, later"): ~21 chapter pages need a 1-line opening callout: *"This chapter is part of v1 of the course. A polished v2 lands in 2026."* Estimated ~10 min mechanical edit. Gate: do this before/alongside M2 v2 conversion so v1 readers see the status note as they browse.
-- 🔲 **Cover image regen**: current `cover.png` visually shows "5 modules". After Option C reframe, the cover ideally shows Module 1 as released and M2-5 as roadmap. Separate task: regenerate via chrome-devtools at 2400×1260 with updated badge per `.stitch/design.md`.
+- ✅ OBSOLETE (2026-07-09): the "M2-M5 v1/v2 status callout" idea was dropped - the released-vs-rolling-out status lines were removed from the landing during the #345 redesign; the course presents as one coherent product.
+- ✅ Done differently (2026-07-08): covers regenerated with "5 modules · 20+ chapters" and "All free" chips; no roadmap badges.
 
 **What shipped earlier (2026-06-16): M1 v2 conversion COMPLETE**
 
