@@ -37,7 +37,7 @@ hero_secondary_url: "/course/tech-for-non-technical-founders-2026/quickstart/"
 hero_secondary_text: "3-minute Quickstart"
 ---
 
-You leave Module 1 with a go/iterate/kill decision based on real demand data instead of polite nods from friends. You get there by writing a Founding Hypothesis, shipping a smoke-test landing page, running 300 cold strangers against it, and price-testing with a real Stripe payment link. Two to three weeks at an evenings-and-weekends pace.
+The first milestone comes fast: within two to three weeks at an evenings-and-weekends pace, you'll know whether your idea is worth building - a go/iterate/kill decision based on real demand data instead of polite nods from friends. You get there by writing a **Founding Hypothesis** (one sentence naming who your customer is, what problem you solve for them, and why they'd pick you over what they use now), shipping a **smoke-test page** (a landing page that describes your unbuilt product to see who signs up), running 300 cold strangers against it, and price-testing with a real Stripe payment link. That's Module 1. Four more modules take you from validated idea to a signed paid pilot.
 
 Need orientation first? See the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min), [FAQ](/course/tech-for-non-technical-founders-2026/faq/) (15 common blockers), or [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (full route overview).
 
@@ -65,22 +65,9 @@ First-time founders reliably make the same five mistakes. This course heads each
 
 Skip this course if you want to learn to code or hand off founder judgment to someone else.
 
-## The Founder OS: {{< course-stat artifacts >}} artifacts you keep
-
-Each module produces at least one fill-in-the-blank artifact - Module 1 produces two. All {{< course-stat artifacts >}} bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund:
-
-<div class="artifact-grid">
-  <div class="artifact-card"><span class="artifact-card__num">1 · Module 1</span><p><strong>Founding Hypothesis</strong> Shows you didn't start with a build - you started with a one-sentence falsifiable bet.</p></div>
-  <div class="artifact-card"><span class="artifact-card__num">2 · Module 1</span><p><strong>Smoke-test decision + price point</strong> Proves strangers clicked and some reached for their wallet.</p></div>
-  <div class="artifact-card"><span class="artifact-card__num">3 · Module 2</span><p><strong>Ten <a href="https://www.momtestbook.com/">Mom Test</a> interview notes + prototype feedback</strong> Proves you didn't build in a vacuum.</p></div>
-  <div class="artifact-card"><span class="artifact-card__num">4 · Module 3</span><p><strong>One-page Product Brief</strong> Shows scope is constrained by customer language, not feature fantasies.</p></div>
-  <div class="artifact-card"><span class="artifact-card__num">5 · Module 4</span><p><strong>Live MVP at a real URL</strong> Ownership locked Day 1 - you can ship without an engineer and nobody else holds the keys.</p></div>
-  <div class="artifact-card"><span class="artifact-card__num">6 · Module 5</span><p><strong>First signed paid pilot + channel sequence</strong> Proves someone who doesn't know you paid real money.</p></div>
-</div>
-
 ## Module map
 
-Read the modules in order. Each module's output is the next module's input.
+Read the modules in order. Each module's output is the next module's input, and each leaves you with at least one fill-in-the-blank artifact - the **"You leave with"** line on every card below. The {{< course-stat artifacts >}} artifacts bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund.
 
 <div class="module-card" id="module-1">
   <span class="module-card__badge">Module 1</span>

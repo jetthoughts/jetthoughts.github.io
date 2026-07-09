@@ -657,11 +657,20 @@ input[type=submit]:disabled {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   padding: 0;
   margin: 0 auto 20px;
   max-width: 43rem;
   font-size: 14px;
+}
+/* The second selector outguns the theme's
+   `.single-content ul li:not(:first-child) { margin-top: 12px }`,
+   which otherwise pushes every chip except the first down 12px and
+   makes the first chip stretch taller than its siblings. */
+.blog .course-chips li,
+.blog .single-content ul.course-chips li:not(:first-child) {
+  margin: 0;
 }
 .blog .course-chips li {
   background: #f8f8fa;
@@ -787,37 +796,6 @@ input[type=submit]:disabled {
   font-weight: 700;
 }
 
-/* Artifact grid — the six Founder OS artifacts as cards instead of a
-   six-item numbered list (F-pattern rule: no 6+ identical bullets). */
-.blog .artifact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin: 28px 0;
-}
-.blog .artifact-card {
-  background: #f8f8fa;
-  border-radius: 10px;
-  padding: 18px 20px;
-}
-.blog .artifact-card__num {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #cc342d;
-  margin-bottom: 4px;
-}
-.blog .artifact-card p {
-  font-size: 16px;
-  line-height: 1.55;
-  margin: 0;
-  color: #1a1a2e;
-}
-.blog .artifact-card p strong {
-  display: block;
-  margin-bottom: 2px;
-}
-
 /* Mistake list — "Why this course exists": five ✗ items with the
    module that heads each mistake off. */
 .blog ul.mistake-list {
@@ -857,8 +835,5 @@ input[type=submit]:disabled {
   }
   .blog .module-card ol.module-card__chapters li {
     padding-left: 44px;
-  }
-  .blog .artifact-grid {
-    grid-template-columns: 1fr;
   }
 }
