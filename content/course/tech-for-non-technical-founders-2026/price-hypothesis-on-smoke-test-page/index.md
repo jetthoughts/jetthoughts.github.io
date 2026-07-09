@@ -92,6 +92,8 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 > **What M1 cost you:** ~$325-625 total ($300-600 for Meta/Reddit ads + optional [Perplexity Pro](https://www.perplexity.ai/) $20/mo). If you're B2B on LinkedIn, budget $1,800-6,600. If you used the $0 organic path from the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/), your cost was $0.
 >
 > **Deeper reference:** [Full Stripe setup walkthrough + pricing revisit moments + threshold bands](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/)
+>
+> **Variant:** [Fake-Stripe Pre-Sale (Pieter Levels style)](/course/tech-for-non-technical-founders-2026/fake-stripe-pre-sale-pieter-levels/) - a $1 refundable charge instead of a waitlist button, when you want the strongest pre-product demand signal. Includes refund and FTC compliance notes.
 
 ---
 

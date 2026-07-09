@@ -71,35 +71,35 @@ Every bad question above asks the interviewee to predict the future, rate someth
 
 The script runs in order. Each question funnels the interviewee deeper into a real memory of the problem. Read the questions as written - small wording changes ("would you" instead of "did you") flip the answer back into hypothetical polite, which is exactly the failure mode you are paying 30 minutes to avoid.
 
-#### Q1: "Tell me about the **last time** [problem] happened. Walk me through what you did."
+### Q1: "Tell me about the **last time** [problem] happened. Walk me through what you did."
 
 - **What it catches**: whether the problem actually happens, how often, what mechanic the interviewee uses. A real story has a date and a tool.
 - **Pass**: specific recent story. *"Last Tuesday at 9pm I spent 40 minutes copying numbers from three spreadsheets into a slide for the board."* Date, time, tool, duration, feeling.
 - **Fail**: vague generality. *"Yeah I usually struggle with reporting."* No date, no mechanic - autopilot polite mode.
 - **Follow-up**: *"Walk me through that specific Tuesday again. What did you do first?"*
 
-#### Q2: "What did that **cost** you - in time, money, or sanity?"
+### Q2: "What did that **cost** you - in time, money, or sanity?"
 
 - **What it catches**: whether the pain is quantifiable. Separates "this is annoying" from "I'd pay $200/month to make this stop."
 - **Pass**: a number with a unit. *"Two hours every Tuesday for six months."* / *"My CFO bills $200/hour and spent four hours on it last week."*
 - **Fail**: *"It costs us time."* / *"It's frustrating."* Unquantified. Polite about a problem they don't actually feel.
 - **Follow-up**: *"If you had to put a dollar figure on it - or hours, or 'I'd quit my job over this' - what's the number?"*
 
-#### Q3: "What have you **tried already** to fix this?"
+### Q3: "What have you **tried already** to fix this?"
 
 - **What it catches**: existing workarounds. A hack, a paid tool, a hired VA, two spreadsheets duct-taped = real. Nothing tried = theoretical.
 - **Pass**: a named tool, a hired person, a custom script. *"I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. My VA on Upwork fixes it."*
 - **Fail**: *"Nothing yet."* / *"We just deal with it."* / *"I've been meaning to look into something."*
 - **Follow-up**: *"What broke about the workaround? Why are you still talking to me about this?"* The crack is the gap your product would fill.
 
-#### Q4: "On a scale of **1-10**, how big a problem is this compared to everything else on your plate?"
+### Q4: "On a scale of **1-10**, how big a problem is this compared to everything else on your plate?"
 
 - **What it catches**: urgency against the interviewee's whole problem stack. A 9 is a sales conversation. A 4 is a pat on the head and zero dollars.
 - **Pass**: a 7 or higher **with a comparison**. *"This is an 8. The only thing higher is hiring my next engineer."*
 - **Fail**: a 5-6 with soft justification, or a bare "probably a 7" with no comparison (the polite-default 7 - treat as a 5 until Q5 proves otherwise).
 - **Follow-up**: *"What's at 10 for you right now? What would have to happen for this to climb to that 10 spot?"*
 
-#### Q5: "**Who else** on your team feels this? How do they handle it?"
+### Q5: "**Who else** on your team feels this? How do they handle it?"
 
 - **What it catches**: the buying committee + workarounds other people in the company already built. In B2B, your interviewee is not the only nodder when the invoice arrives.
 - **Pass**: a specific colleague named + their workaround. *"My ops manager Jess feels this worse than I do - she keeps a parallel Google Sheet because she doesn't trust the finance numbers from accounting."*

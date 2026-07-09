@@ -336,7 +336,7 @@ supabase.functions.invoke('create-checkout', { priceId,
 coachId }) and redirect to the returned URL.
 ```
 
-*See the [Appendix](#appendix-reference-code) for the full SQL schema and the Stripe integration checklist.*
+*See the [Appendix](#appendix---reference-code) for the full SQL schema and the Stripe integration checklist.*
 
 ## What good looks like vs what bad looks like
 

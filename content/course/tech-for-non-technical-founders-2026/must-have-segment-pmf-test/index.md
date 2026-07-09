@@ -123,7 +123,7 @@ Send the first batch to your largest user cluster. Re-send a few days later to a
 
 Export the CSV. Pivot on Q1 by segment from Q5. You are computing one number per segment:
 
-```
+```text
 must_have_pct = ("Very disappointed" count) / (total responses excluding "No longer use it")
 ```
 

@@ -44,6 +44,8 @@ This page consolidates the hire-track material from the [From Idea to First Payi
 
 The developer hiring market reshaped between 2024 and 2026. Algorithm interviews stopped filtering for the skill that ships product - the model passes them. The question now is whether the candidate can own a system, direct AI tools, and put a thoughtful hand on the output before it merges.
 
+*Rate-and-platform companion: [Where to Hire a Developer in 2026 - the map](/course/tech-for-non-technical-founders-2026/where-to-hire-developer-2026-map/) breaks the same market down by platform and region with rate bands.*
+
 ### The 2026 AI-Augmented Developer profile
 
 Pre-seed founders still hire on resume signals that stopped predicting outcomes around 2024. Five criteria are the new screen.

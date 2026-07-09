@@ -52,6 +52,8 @@ Total time budget: 30 minutes alone, 30 minutes posting, 0 minutes second-guessi
 
 Walk these four blocks in order. Circle the one your scope and budget land in, then move to the platform list.
 
+*The rate bands and hire-cycle times below are our own market reads from placing and hiring engineers through 2025-2026 at JetThoughts, not survey data - treat them as negotiation anchors, and expect your quotes to land inside the band, not on its edges.*
+
 ### Onshore (US / EU)
 
 Salaried, $130K - $210K+/year, 30-60 days to hire. Pick when: regulated industry (HIPAA, SOC 2 with US data residency, fintech license), security clearance, or board-mandated US team. Watch out for: 51% offer-acceptance rate and the worst cost-to-output ratio on the map.
