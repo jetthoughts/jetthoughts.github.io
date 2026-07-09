@@ -124,7 +124,7 @@ She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonab
 
 **Tomas** (ReconcileBot, B2B SaaS) filled his hypothesis: "If we help mid-size accounting firm controllers solve manual Stripe-to-QuickBooks reconciliation with an auto-matching engine, they will choose it over exporting to Excel because it cuts 2 hours of Monday work to 90 seconds." He scored 4/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: money  --  he doesn't know if firms will pay $200/mo or $2,000/mo. The money test goes into his smoke-test design.
 
-**Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: growth  --  she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke test will test both.
+**Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: growth  --  she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke test will answer one side of that split - the specialty angle her hypothesis names - and the location question goes to Module 2 interviews.
 
 ---
 
