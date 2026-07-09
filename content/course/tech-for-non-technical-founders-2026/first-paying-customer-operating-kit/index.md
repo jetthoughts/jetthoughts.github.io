@@ -62,7 +62,7 @@ flowchart TB
 
 ### 1. 50-name network list template (Google Sheets)
 
-The fill-in spreadsheet from [Chapter 5.2](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
+The fill-in spreadsheet from [Chapter 5.3a](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
 
 In practice: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
 
@@ -219,7 +219,7 @@ The DPA template (component 3) is copy-pasteable inline above. When the remainin
 This is the lead magnet for Module 5 of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) course - the chapter that lands the first paying customer right after the MVP ships. Module 5 runs in four chapters:
 
 - 7.1 [Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - run the Sean Ellis 40% test against your 10-30 MVP users.
-- 7.2 [The First Ten Come From People Who Already Know You](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) - 50-name list, 4 buckets, Monday outreach sequence.
+- 7.2 [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - 50-name list, 4 buckets; the [outreach message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) and [send-and-track sequence](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) follow.
 - 7.3 [Charge Before You Ship](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - one-page Design Partner Agreement plus Stripe Checkout setup.
 - 7.4 [Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) - filtered cold outbound for customers 11-20.
 

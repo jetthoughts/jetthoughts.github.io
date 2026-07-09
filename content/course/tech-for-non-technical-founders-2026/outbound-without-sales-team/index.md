@@ -31,13 +31,13 @@ related_posts: false
 
 > **Module 5 · Step 5 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** network exhausted, ~10 customers in from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/) and [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+> **Input:** network exhausted, ~10 customers in from [Chapter 5.3c](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
 > **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
 
 > **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name will book 1-2 paid pilots. Customers 11-20 come from cold outbound, not from launch events.
 
-> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/).
+> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.3c](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 >
 > If you still have warm names in your network who fit your ICP, close them first. Cold outbound is harder, slower, and lower-converting than warm outreach.
 >
@@ -83,7 +83,7 @@ The cold-outbound pipeline in one glance:
 
 1. **Filter** - LinkedIn Sales Navigator or Apollo.io. Pull 100-150 raw rows, strip to 30 clean names.
 2. **Personalize** - 60-90 seconds per name. Read the profile and the last post, find one specific reference.
-3. **Loom** - Same product Loom from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-personal-network/). No re-record per prospect.
+3. **Loom** - Same product Loom from [Chapter 5.3b](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/). No re-record per prospect.
 4. **Send** - LinkedIn DM or 4-line email. One personalized opener + the same body for everyone.
 5. **Calendly** - 15-min demo slot, auto-confirm. No back-and-forth scheduling.
 6. **Stripe** - DPA + deposit from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Money on the table before you start work.
