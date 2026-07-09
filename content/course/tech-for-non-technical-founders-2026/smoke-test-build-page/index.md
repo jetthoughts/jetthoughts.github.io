@@ -49,7 +49,7 @@ The page has four copy blocks that decide whether it converts:
 - The **headline** names the customer and the outcome in one line. "Solo chiropractors: resubmit denied claims in 30 seconds" works because a visitor knows in 3 seconds whether the page is for them. "Smart Solutions for Modern Businesses" tells them nothing.
 - The **sub-headline** explains how, in one line. The mechanism. "One click submits to your insurance portal" beats "AI-powered automation."
 - The **3-4 value props** describe what the visitor gets, in their words. "Stop calling 8 tutoring centers" is an outcome a parent wants; "Calendar integration" is a feature they read as noise.
-- The **CTA + footer** is "Get on the waitlist" plus a "Coming soon" line in the footer. (**CTA** = call to action, the button you want the visitor to click.) Never use "Buy now." You cannot legally sell something that does not exist yet.
+- The **CTA + footer** is "Get on the waitlist" plus a "Coming soon" line in the footer. (**CTA** = call to action, the button you want the visitor to click.) Never use "Buy now" on this page: selling something that does not exist yet *without saying so* is false advertising. [Lesson 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) adds a price test the honest way - a clearly labeled founding-member pre-order with a visible refund promise.
 
 ![Smoke-test page anatomy showing 4 labeled blocks - headline names customer plus outcome, sub-headline explains the mechanism, a row of 3-4 value props, and the CTA button with coming-soon footer line](page-anatomy.svg)
 

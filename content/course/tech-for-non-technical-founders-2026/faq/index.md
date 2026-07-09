@@ -47,7 +47,7 @@ Don't skip - sign up for Stripe tonight and let it verify in the background whil
 
 **Q: Which landing page builder should I use?**
 
-Mixo ($7/mo, 30 seconds from idea to page). If the templates don't fit, Manus AI (free tier, no card). Don't comparison-shop for a week - you're testing demand, not builders. The [Ch 1.2 builder section](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/#pick-your-builder) has the full list.
+Mixo (free tier, ~60 seconds from idea to page). If the templates don't fit, Carrd (no-code drag-drop). Don't comparison-shop for a week - you're testing demand, not builders. [Ch 1.2](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) has the workflow for both.
 
 ---
 
@@ -123,7 +123,7 @@ Two to three weeks at an evenings-and-weekends pace (the pattern this course is 
 
 **Q: How long does the full 5-module course take?**
 
-A full-time founder: 6-10 weeks. An evenings-and-weekends founder (2-4 hrs/week): 10-16 weeks.
+A full-time founder: 6-10 weeks - the per-module estimates overlap, because outreach and interviews run while you wait on ads, Stripe, and the build. An evenings-and-weekends founder (2-4 hrs/week): 10-16 weeks.
 
 **Q: Do I need to do the modules in order?**
 

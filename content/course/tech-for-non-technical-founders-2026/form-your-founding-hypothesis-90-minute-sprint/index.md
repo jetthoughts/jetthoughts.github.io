@@ -1,7 +1,7 @@
 ---
 title: "1.1 · Form Your Founding Hypothesis"
 aliases: ["/blog/form-your-founding-hypothesis-90-minute-sprint/"]
-description: "Write a one-sentence Founding Hypothesis you can test in five interviews."
+description: "Rewrite your idea as a one-sentence Founding Hypothesis: your strategic advantage stated plainly, your assumptions exposed as five testable blanks."
 date: 2026-05-13
 draft: false
 course_chapter: false
@@ -25,7 +25,7 @@ related_posts: false
 >
 > **Input:** a rough idea, an instinct, or something half-built you've been tinkering with
 >
-> **Output:** a one-sentence Founding Hypothesis you can test in five interviews
+> **Output:** your idea rewritten as a one-sentence bet - your strategic advantage stated plainly, your riskiest assumptions exposed as five blanks you'll test against cold strangers (1.2-1.5) and in Module 2's ten interviews
 >
 > **Progress:** M1 · 1 of 5 · Results so far: none yet - this is the start
 
@@ -37,11 +37,22 @@ After this lesson you will be able to: **write a single sentence about your idea
 
 ---
 
+Most founders treat their strategy as a fact ("parents need this") or a guess they hope is right. This lesson treats it as a **hypothesis**: a bet written down so it can be proven wrong. Writing the bet as one sentence forces two things onto paper - why anyone would switch to you (your strategic advantage), and the assumptions hiding inside your idea. Each assumption becomes a blank you can test with a small, cheap experiment before you build anything.
+
 A **Founding Hypothesis** is a fill-in-the-blanks sentence (Mad Libs style) from Jake Knapp and John Zeratsky's *Click* (2025):
 
 > *"If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation]."*
 
-Five blanks. One sentence. The discipline is filling all five with specifics, not categories.
+Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it verbatim: it becomes your landing-page headline in 1.2 and your opening context for every Module 2 interview. The discipline is filling all five blanks with specifics, not categories.
+
+Each blank is an assumption, and each assumption has a test waiting for it later in the course:
+
+| Blank | Where it gets tested |
+|---|---|
+| [customer] + [problem] | Strangers recognize themselves in your headline (1.2), then ten Mom Test interviews confirm the pain (Module 2) |
+| [approach] | A clickable prototype in front of 5 interviewees (Module 2) |
+| [competition] + [differentiation] | 300 cold strangers convert on your page - or don't (1.4) |
+| The whole bet: will they pay? | The Stripe price test (1.5) |
 
 **Why this works:** A vague sentence produces polite nods. A specific sentence produces pushback - and pushback is the signal:
 
@@ -89,13 +100,13 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 
 ---
 
-Read your sentence aloud to yourself. Which blank would you bet $100 is wrong? Write that blank's name at the bottom of your Google Doc. You'll test it first.
+Read your sentence aloud to yourself. Which blank would you bet $100 is wrong? Write that blank's name at the bottom of your Google Doc - that's your riskiest assumption, and it's the one Module 1 tests first.
 
 ---
 
 > **Done:** Founding Hypothesis written, scored ≥14/20 (or ≥11/15 if pre-revenue), no lens below 2, saved.
 >
-> **You have now:** a one-sentence Founding Hypothesis ready to test (1.1). This is the seed for everything else in Module 1.
+> **You have now:** a one-sentence Founding Hypothesis with your riskiest assumption flagged (1.1). This is the seed for everything else in Module 1.
 >
 > **Next:** [1.2 · Build Your Smoke-Test Page with an AI Page Builder](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) - turns your hypothesis into a landing page that explains your offer to potential customers.
 >

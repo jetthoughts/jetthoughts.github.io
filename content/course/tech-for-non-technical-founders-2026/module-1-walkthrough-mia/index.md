@@ -44,7 +44,7 @@ The headline read *Smart Tutoring Solutions for Modern Families*. She tried to p
 
 Two regenerations later, the headlines were still glossy nonsense. So she gave up on Mixo's copy generator and asked ChatGPT instead, in plain English: "Turn this hypothesis into parent-voice headlines." What ChatGPT came back with sounded like things the Vermont mother might actually say out loud - *Specialist tutor in 48 hours. No more dead phone numbers. Parent-reviewed, not algorithm-matched.* Those she pasted in.
 
-The stock hero image showed three smiling teenagers grouped around a laptop. She swapped it for a photo of a parent on the phone at 9pm, lit by a single desk lamp - the moment her landing page needed to land in, not the moment after. She stripped the Pricing, FAQ, and Testimonials blocks Mixo had added automatically. None of them belonged on a smoke test. The CTA button became *Get matched with a specialist*.
+The stock hero image showed three smiling teenagers grouped around a laptop. She swapped it for a photo of a parent on the phone at 9pm, lit by a single desk lamp - the moment her landing page needed to land in, not the moment after. She stripped the Pricing, FAQ, and Testimonials blocks Mixo had added automatically. None of them belonged on a smoke test. The CTA button became *Join the waitlist - get matched with a specialist*, with the disclosure line under it: *Coming soon. Email reserves your spot at launch.*
 
 She sent the URL to her neighbor across the hall, whose son had been diagnosed with ADHD that spring. "Three seconds," she said. "Tell me who it's for and what it does."
 

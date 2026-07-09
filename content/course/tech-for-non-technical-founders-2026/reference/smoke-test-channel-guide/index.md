@@ -23,7 +23,7 @@ The dollar cost of 300 visits depends entirely on channel CPC (cost-per-click), 
 
 *Sources: [WordStream Meta benchmarks 2026](https://www.wordstream.com/blog/facebook-ads-benchmarks-2025); [WordStream Google Ads benchmarks 2026](https://www.wordstream.com/blog/2026-google-ads-benchmarks); [The B2B House LinkedIn benchmarks 2026](https://www.theb2bhouse.com/linkedin-ad-benchmarks/); [Stackmatix Reddit Ads 2026](https://www.stackmatix.com/blog/reddit-ads-cost-per-click).*
 
-**Default for a $20K-savings, no-cofounder founder: the $0 organic path.** Use Reddit comment outreach + LinkedIn DMs against the page you built in Lesson 1.2 (Clarity is already installed from 1.3), and run the smoke test slower. The table above is a menu of paid options if you have budget to spare; it is NOT a floor.
+**Default if your budget is tight: the $0 organic path.** Use Reddit comment outreach + LinkedIn DMs against the page you built in Lesson 1.2 (Clarity is already installed from 1.3), and run the smoke test slower. The table above is a menu of paid options if you have budget to spare; it is NOT a floor.
 
 ---
 
