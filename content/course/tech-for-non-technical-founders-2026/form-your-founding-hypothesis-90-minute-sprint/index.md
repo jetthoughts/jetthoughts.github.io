@@ -37,13 +37,13 @@ After this lesson you will be able to: **write a single sentence about your idea
 
 ---
 
-Most founders treat their strategy as a fact ("parents need this") or a guess they hope is right. This lesson treats it as a **hypothesis**: a bet written down so it can be proven wrong. Writing the bet as one sentence forces two things onto paper - why anyone would switch to you (your strategic advantage), and the assumptions hiding inside your idea. Each assumption becomes a blank you can test with a small, cheap experiment before you build anything.
+A first-time founder usually treats their strategy as a fact ("parents need this") or as a guess they hope is right. This lesson treats it as a **hypothesis**: a bet written down so it can be proven wrong. Writing the bet as one sentence forces two things onto paper - why anyone would switch to you (your strategic advantage), and the assumptions hiding inside your idea. Each assumption becomes a blank you can test with a small, cheap experiment before you build anything.
 
 A **Founding Hypothesis** is a fill-in-the-blanks sentence (Mad Libs style) from Jake Knapp and John Zeratsky's *Click* (2025):
 
 > *"If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation]."*
 
-Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it verbatim: it becomes your landing-page headline in 1.2 and your opening context for every Module 2 interview. The discipline is filling all five blanks with specifics, not categories.
+Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it everywhere: it feeds your landing-page headline in 1.2 (reshaped into a customer-plus-outcome one-liner) and opens every Module 2 interview as context for every Module 2 interview. The discipline is filling all five blanks with specifics, not categories.
 
 Each blank is an assumption, and each assumption has a test waiting for it later in the course:
 
@@ -54,7 +54,7 @@ Each blank is an assumption, and each assumption has a test waiting for it later
 | [competition] + [differentiation] | 300 cold strangers convert on your page - or don't (1.4) |
 | The whole bet: will they pay? | The Stripe price test (1.5) |
 
-**Why this works:** A vague sentence produces polite nods. A specific sentence produces pushback - and pushback is the signal:
+**Why this works:** when the sentence is vague, people nod politely because there's nothing to disagree with; when it's specific, they push back - and the pushback is what you're after:
 
 - ❌ *"We help small businesses save time with automation."* - Nobody can argue with this. Nobody can validate it either.
 - ✅ *"If we help solo chiropractors solve insurance-claim resubmission with a one-click resubmit, they pick it over billing services that take 14 days and charge 8% of recovered claims."* - A chiropractor either says "I dealt with this last Tuesday" or "that's not my problem." Both are useful.
@@ -114,6 +114,6 @@ Read your sentence aloud to yourself. Which blank would you bet $100 is wrong? W
 
 ---
 
-> **See it in action:** [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+*See it in action: [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*

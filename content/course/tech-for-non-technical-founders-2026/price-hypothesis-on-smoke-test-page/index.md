@@ -31,7 +31,7 @@ related_posts: false
 
 ---
 
-Your smoke test collected emails. That proves curiosity. It doesn't prove anyone will pay. The difference between an email signup and a credit card entry is the difference between "sounds interesting" and "I need this now." This lesson adds a Stripe button so you can measure the second one.
+Your smoke test collected emails, and an email signup only tells you a stranger found the idea interesting. Whether they'd pay for it is a separate question - a person typing card details is making a different decision than a person typing an email address. This lesson adds a Stripe button so you can measure that second decision.
 
 After this lesson you will be able to: **find out whether strangers will pay for your offer - not just leave an email.**
 
@@ -47,9 +47,9 @@ Your price hypothesis needs three parts:
 | **Unit** | Per month, per user, or one-time | $49/month, not $49 |
 | **Framing** | Early-access or founding-member rate | "Founding member - $49/month for life" |
 
-**Default price anchor:** For SaaS, the most common tier is $49-$99/month if the tool replaces manual work. If you can't research yet, pick the midpoint of your category's band. You'll refine after Module 2 interviews.
+**Default price anchor:** if your product replaces manual work, price it against the time it saves - a tool that saves someone 4 hours a month is worth a meaningful fraction of what those hours cost them. Not sure? Spend 10 minutes finding what 2-3 existing tools in your category charge, and start at their middle tier. The number is a hypothesis like everything else here - you'll refine it after Module 2 interviews.
 
-**Button copy matters more than the price number.** Two patterns consistently work:
+**Button copy matters more than the price number.** Two framings we keep reaching for on pre-product pages:
 
 - **Outcome framing:** "Stop spending 4 hours on reconciliation - $97" (anchors price to the problem it replaces)
 - **Risk-reduction framing:** "Reserve your spot - $97 refundable for 30 days" (reduces first-touch risk)
@@ -64,8 +64,8 @@ Pick one pattern. Do not A/B test - 150 visits each on a $300 budget can't disti
 >
 > 1. **Start Stripe verification tonight.** Sign up at [stripe.com](https://stripe.com). Stripe needs your bank account + tax ID before accepting live payments - usually 1-3 business days. Start the weekend before launch.
 > 2. Create a Payment Link. Dashboard → Payments → Payment Links → New link. Add a one-time product at your hypothesis price. Use one-time (not subscription) - "founding member" converts better on a pre-product page.
-> 3. Set the after-payment redirect. **Skip it** if you're in a hurry (Stripe shows its own confirmation). **Set it** if you want GA4 to count payment completions as page views: **Mixo** - redirect to your main page URL (GA4 counts the revisit; rougher but works). **Carrd** - create a hidden section at the bottom, redirect to its anchor URL (`yourpage.carrd.co/#thanks`). **Durable** - create a new page called Thanks, redirect to `/thanks`.
-> 4. Add a refund line in your page footer (not the Stripe checkout footer): "Full refund within 30 days if we don't ship." Legal, honest, lowers click friction.
+> 3. Set the after-payment redirect. **Skip it** if you're in a hurry (Stripe shows its own confirmation). **Set it** if you want GA4 to count payment completions as page views: **Mixo** - redirect to your main page URL (GA4 counts the revisit; rougher but works). **Carrd** - create a hidden section at the bottom, redirect to its anchor URL (`yourpage.carrd.co/#thanks`). Other builders: redirect to any page or anchor on your site that GA4 can register.
+> 4. Add a refund line in your page footer (not the Stripe checkout footer): "Full refund within 30 days if we don't ship." Standard pre-order disclosure - it keeps the offer honest and lowers click friction. (US readers: this is the FTC-friendly pattern; selling elsewhere, check your local pre-order rules.)
 > 5. Paste the Payment Link URL on your CTA button. Below it, smaller text: "Not ready? Join the waitlist instead."
 > 6. **✅ Success check:** your Stripe dashboard shows live-mode (not test-mode) and the button opens a real checkout page.
 
@@ -89,7 +89,7 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 >
 > **If blocked:** see "If this fails" above. Missing any M1 artifact? Go back to that lesson before starting Module 2.
 >
-> **What M1 cost you:** ~$325-625 total ($300-600 for Meta/Reddit ads + optional [Perplexity Pro](https://www.perplexity.ai/) $20/mo). If you're B2B on LinkedIn, budget $1,800-6,600. If you used the $0 organic path from the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/), your cost was $0.
+> **What M1 cost you:** mostly your ad spend - $300-600 on Meta for the 1.4 demand test, plus whatever you spent keeping ads running during this price test. Reddit runs higher per the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/); LinkedIn B2B runs $1,650-6,600. If you used the guide's $0 organic path, your cost was $0.
 >
 > **Deeper reference:** [Full Stripe setup walkthrough + pricing revisit moments + threshold bands](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/)
 >
@@ -97,6 +97,6 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 
 ---
 
-> **See it in action:** [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+*See it in action: [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*

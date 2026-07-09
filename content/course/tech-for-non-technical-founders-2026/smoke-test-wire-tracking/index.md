@@ -82,7 +82,7 @@ Conversion rate = form submits ÷ page views. That is the number your hypothesis
 
 ---
 
-Open Clarity, find your own session recording, and watch it. Then open GA4's Realtime report and confirm your test visit registered. Write down one thing you did not notice while building the page that you noticed watching yourself as a visitor. That gap between what you intended and what a visitor experiences is what tracking exists to surface.
+Before you close the dashboards, watch your own Clarity session recording once and confirm your visit shows in GA4's Realtime report. You'll probably spot something as a visitor that you missed as the builder - a slow-loading image, a button below the fold. Surfacing exactly those gaps is what you just installed tracking for.
 
 ---
 
@@ -96,6 +96,6 @@ Open Clarity, find your own session recording, and watch it. Then open GA4's Rea
 
 ---
 
-> **See it in action:** [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+*See it in action: [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*

@@ -48,29 +48,23 @@ The stock hero image showed three smiling teenagers grouped around a laptop. She
 
 She sent the URL to her neighbor across the hall, whose son had been diagnosed with ADHD that spring. "Three seconds," she said. "Tell me who it's for and what it does."
 
-The neighbor read. "Parents of kids with dyslexia or ADHD. You find them specialist tutors fast."
+The neighbor read for about three seconds. "Parents of kids with dyslexia or ADHD. You find them specialist tutors fast."
 
-Three seconds. The page passed.
-
-Now she needed to know who would actually visit it.
+The page passed. Now she needed to know who would actually visit it.
 
 ---
 
 ## [Lesson 1.3: Wire Tracking](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 
-Mia had never pasted code into anything. The word "snippet" sounded like something that would break if she held it wrong. But the lesson promised Clarity and GA4 would tell her exactly who was visiting the page she'd just built - before she spent a single dollar on traffic. Both free. Both five-minute installs, if you knew which field to use.
+Mia had never pasted code into anything. The word "snippet" sounded like something that would break if she held it wrong. But the lesson promised Clarity and GA4 would tell her exactly who was visiting the page she'd just built - before she spent a single dollar on traffic. Both tools were free, and both were supposed to be five-minute installs if you knew which field to paste into - which she didn't.
 
-She didn't.
-
-The Clarity snippet went in. Refresh, incognito check. Dashboard: *No data yet*. Five minutes. Still nothing. She went back to the lesson and re-read the part she'd skimmed: the snippet has to go in the head-tag field, not the body field. Mixo had both. She'd picked the wrong one.
+She pasted the Clarity snippet in, refreshed her page in an incognito window, and opened the dashboard: *No data yet*. She waited five minutes and refreshed again - still nothing. So she went back to the lesson and re-read the part she'd skimmed: the snippet has to go in the head-tag field, not the body field. Mixo had both. She'd picked the wrong one.
 
 She moved the snippet up one slot. Refreshed Clarity. There it was - a fresh session recording, twelve seconds long, of herself.
 
-GA4 was the same dance, faster the second time. Real-time report showed one active user. Both tools verified.
+GA4 was the same dance, faster the second time - the Realtime report showed one active user, and both tools were verified. The Meta Pixel could wait until 1.4, after she picked her ad channel.
 
-Meta Pixel could wait. She'd install that in 1.4, after she picked her ad channel.
-
-Twenty-five minutes total. Twenty of those on the wrong-field detour.
+The whole install took her twenty-five minutes, twenty of which went to the wrong-field detour.
 
 ---
 
@@ -82,7 +76,7 @@ She installed the Meta Pixel she'd deferred from 1.3. Same dance as Clarity and 
 
 Then the ads. Her first instinct was to split the budget - $200 on "dyslexia tutor" search interest, $200 on "ADHD tutor near me" in her city, and let the two angles fight it out. The channel guide's sample-size warning killed that plan: $200 buys roughly 150 visits, and below 300 visits a conversion rate can't tell 2% from 5%. Two half-tests would have bought her two unreadable numbers. She put the full $400 behind one angle - the specialty search, because that was the bet her hypothesis actually named: parents searching by their kid's need, not by zip code. The location question went into her notebook, not her ad account. She hit Launch on a Monday morning.
 
-Then she made a rule for herself: don't touch the page for seven days. No headline tweaks. No bid adjustments. No anxious dashboard refreshes. The point of a smoke test was a clean signal, and a clean signal needed clean traffic.
+Then she made a rule for herself: don't touch the page for seven days - no headline tweaks, no bid adjustments, and none of the anxious dashboard refreshing she knew she'd be tempted by. The point of a smoke test was a clean signal, and a clean signal needed clean traffic.
 
 On Day 8 she opened the results: 300 cold visitors, 6.5% conversion. **Promising band** - past the 6% proceed bar, one readable number, no asterisk.
 
@@ -96,7 +90,7 @@ Mia had no idea what parents actually paid for tutoring. Her Money lens scored 3
 
 She set up a Stripe account on Friday night and uploaded her ID. By Tuesday morning she was approved. Wednesday she built her Payment Link: a one-time *$99 founding member rate, four months of access at $25/mo equivalent*. The button on her landing page changed to *Find your kid's specialist - $99 founding member rate*. Underneath in smaller type: *Full refund within 30 days if we don't ship.* And below that, an escape hatch for the curious-but-not-ready: *Not ready? Join the waitlist instead.*
 
-She let the same ads keep running and went back to her day job.
+She topped her ad account up with another $150 to keep the same ads running through the price-test week, and went back to her day job.
 
 Over the next week, 6% of visitors clicked the Stripe link. Six of them completed the $99 payment. Six paying customers before her product existed - a price signal stronger than she'd dared hope for a pre-product page. Her Money lens had been low. Parents would pay well above $25.
 
@@ -107,13 +101,13 @@ She added a note to her Module 2 prep: when she interviewed parents, she'd ask w
 ## What Mia Walked Away With at the End of Module 1
 
 - **A Founding Hypothesis** scoring 15/20, with one soft blank (Growth) flagged and tested.
-- **A live landing page** at `tutormatch.mixo.io` that passed the 3-second clarity test on a neighbor who actually fit the ICP.
+- **A live landing page** at `tutormatch.mixo.io` that passed the 3-second clarity test on a neighbor who actually fit her target customer profile.
 - **Tracking installed and verified** - Clarity for behavior, GA4 for traffic source, Meta Pixel for ad attribution.
 - **Conversion data on 300 cold visitors:** 6.5% from specialty-search targeting - the Promising band. The specialty half of the Growth question answered; the location angle queued for Module 2 interviews.
 - **Six paying customers at $99 each.** $594 in revenue, before the product existed.
 - **A Google Drive folder** holding all five Module 1 outputs. Her Founder OS, started.
 
-**Next: Module 2, where Mia interviews ten parents using the Mom Test.** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
+**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
 
 ---
 

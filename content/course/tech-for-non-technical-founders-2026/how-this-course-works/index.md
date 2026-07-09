@@ -30,9 +30,7 @@ related_posts: false
 
 > **Chapter 0** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **What this is:** the map. Read this once before Module 1, come back when you need to see where you are.
-
-> **TL;DR:** {{< course-stat modules >}} modules, {{< course-stat chapters >}} chapters, {{< course-stat artifacts >}} artifacts. Each module's output is the next module's input - from rough idea to signed paid pilot. The map: read once, come back when lost.
+> **What this is:** the map - {{< course-stat modules >}} modules, {{< course-stat chapters >}} chapters, {{< course-stat artifacts >}} artifacts, each module's output feeding the next module's input, from rough idea to signed paid pilot. Read it once before Module 1, come back when you need to see where you are.
 
 This course takes a non-technical founder from a rough idea to a signed paid pilot - on evenings and weekends, with or without engineers. Each chapter names the tool it uses and what the tool costs at that step; most tools have a free tier. Below: the flow, the tools, the artifacts you'll compile, and how the stages connect.
 
@@ -58,14 +56,14 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 1.1 | Write your Founding Hypothesis | Notebook + kitchen timer |
-| 1.2 | Build a smoke-test landing page | Mixo or Carrd (free tier) |
+| 1.2 | Build a smoke-test landing page | Mixo or Carrd (free to start; the 1.3 tracking step may need the builder's small paid tier) |
 | 1.3 | Wire tracking before traffic starts | Microsoft Clarity + GA4 (free) |
 | 1.4 | Run 300 cold visitors and read the signal | Ad platform of choice |
 | 1.5 | Add a Stripe price button to measure payment intent | Stripe Payment Links (free) |
 
-**Before you write the hypothesis:** run a 30-minute Perplexity search first. Ask it to find the top 5 user complaints about existing solutions in your niche, citing G2 and Capterra reviews. Use the exact vocabulary from real complaints in your hypothesis blanks. If nobody is complaining about the problem anywhere online, the hypothesis is already in trouble.
+**Before you write the hypothesis:** spend 30 minutes with [Perplexity](https://www.perplexity.ai/) (an AI search engine that answers questions with cited sources). Ask it to find the top 5 user complaints about existing solutions in your niche, citing reviews from [G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) (the two big business-software review sites). Use the exact vocabulary from real complaints in your hypothesis blanks. If nobody is complaining about the problem anywhere online, the hypothesis is already in trouble.
 
-> **AI research layer (pre-hypothesis):** Perplexity (free tier) + Trend Seeker (free daily limit). Purpose: confirm people are actually searching for or complaining about the problem BEFORE you write a hypothesis about it. Verbatim quotes from Reddit and G2 feed directly into your landing page headline.
+> **AI research layer (pre-hypothesis):** Perplexity + Trend Seeker (both have free tiers). Purpose: confirm people are actually searching for or complaining about the problem BEFORE you write a hypothesis about it. Verbatim quotes from Reddit and G2 feed directly into your landing page headline.
 
 ---
 
@@ -83,7 +81,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
 
-> **After interviews, before the brief:** run your refined hypothesis through IdeaProof (70 free credits, no credit card). Its 4-model ensemble (Claude, GPT, Gemini, Grok) stress-tests your business logic and catches legal, economic, and competitive blind spots you haven't considered.
+> **After interviews, before the brief:** run your refined hypothesis through IdeaProof (free tier to start). Its multi-model ensemble stress-tests your business logic and catches legal, economic, and competitive blind spots you haven't considered.
 
 ---
 
@@ -103,7 +101,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ### Module 4 - Build It Yourself
 **You have:** a one-page Product Brief.
-**You walk away with:** a build decision + a live MVP at a staging URL, with you owning every account.
+**You walk away with:** a build decision + a live MVP at a real URL, with you owning every account.
 **Time:** ~2-4 weeks.
 
 | Step | What You Do | Key Tool |
@@ -130,7 +128,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 | 5.4 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
 | 5.5 | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
 
-**Important distinction:** Your warm network is for your first PAID PILOT (a sales motion - valid). Your warm network is NOT for problem validation (an echo chamber - invalid). Friends and other founders will tell you your idea is great because they're being polite. Only cold strangers who describe the problem in their own words and pay money produce a real signal.
+**Important distinction:** your warm network is the right place to sell your first paid pilot, and the wrong place to validate the problem. Friends and other founders will tell you your idea is great because they're being polite. Only cold strangers who describe the problem in their own words and pay money produce a real signal.
 
 > **Going further:** After your first paid pilot, the course has continuation chapters for churn triage, pivot-or-persevere decisions, hiring, management (Friday Demo Rule, Weekly Dev Report), and AI-era topics (token bill auditing, slopsquatting, agency AI questions).
 
@@ -138,15 +136,15 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ## The Tool Stack: When to Use What
 
-These are the tools the course references - AI research tools, no-code builders, and infrastructure. Most have free tiers sufficient for the validation stage.
+These are the tools the course references - AI research tools, no-code builders, and infrastructure. Most have free tiers sufficient for the validation stage. Tool pricing and free-tier limits change often; the Cost column tells you which tier to look for, and the tool's own pricing page is the source of truth on the day you sign up.
 
 <details>
 <summary>Pre-Hypothesis Research (before Module 1) - 3 tools</summary>
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
-| **Perplexity** | AI search engine that bypasses paywalls, aggregates competitor complaints | Map the market, find what users hate about existing solutions | Free tier |
-| **Trend Seeker** | Semantic search across Reddit/forums for demand signals | Confirm people are actually searching for solutions to your problem | Free daily limit |
+| **Perplexity** | AI search engine that answers with cited sources, aggregates competitor complaints | Map the market, find what users hate about existing solutions | Free tier |
+| **Trend Seeker** | Semantic search across Reddit/forums for demand signals | Confirm people are actually searching for solutions to your problem | Free tier |
 | **Reddinbox** | Automated Reddit/Quora search for high-commercial-intent phrases | Find posts where people explicitly ask "how to automate X" or "sick of doing Y" | Setup required |
 
 </details>
@@ -156,9 +154,9 @@ These are the tools the course references - AI research tools, no-code builders,
 
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
-| **ValidatorAI** | Dialog-based AI advisor, rates your idea and finds blind spots | Rapid "devil's advocate" feedback before interviews | Unlimited free |
-| **IdeaProof** | 4-model ensemble (Claude, GPT, Gemini, Grok) cross-validates business logic | After Mom Test interviews, before writing the Product Brief | 70 free credits |
-| **Preuve AI** | Evidence-based scoring from 40+ live data sources with citations | Before building, when you need a data-backed viability check | Free basic score |
+| **ValidatorAI** | Dialog-based AI advisor, rates your idea and finds blind spots | Rapid "devil's advocate" feedback before interviews | Free tier |
+| **IdeaProof** | 4-model ensemble (Claude, GPT, Gemini, Grok) cross-validates business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
+| **Preuve AI** | Evidence-based idea scoring from live data sources, with citations | Before building, when you need a data-backed viability check | Free tier |
 
 </details>
 
@@ -168,11 +166,11 @@ These are the tools the course references - AI research tools, no-code builders,
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
 | **Mixo / Carrd** | One-page landing page builder | Smoke test (Module 1) | Free tier (subdomain) |
-| **Stripe Payment Links** | Hosted checkout without writing code | Price hypothesis test (Module 1), paid pilot deposit (Module 5) | Pay-as-you-go (2.9% + $0.30) |
+| **Stripe Payment Links** | Hosted checkout without writing code | Price hypothesis test (Module 1), paid pilot deposit (Module 5) | Pay-as-you-go (per-transaction fee) |
 | **Lovable / Bolt.new** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
 | **Tally + Zapier + Airtable** | "Wizard of Oz" no-code stack (a fake-it-till-you-make-it pattern: the customer thinks software is running, but you do the work by hand behind the scenes to test demand before you build the real thing) | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
-| **WorthBuild** | Auto-parses social media for leads, generates personalized outreach messages | After validation, setting up first-customer pipeline (Module 5) | 1 free check/mo |
+| **WorthBuild** | Auto-parses social media for leads, generates personalized outreach messages | After validation, setting up first-customer pipeline (Module 5) | Free tier |
 
 </details>
 
@@ -187,10 +185,10 @@ Every module has a gate. If the data doesn't support your hypothesis, you stop a
 | 1 | Landing page conversion | ≥6% of cold visitors submit the email form (the "Promising" band in the 1.4 decision table; 3-6% = iterate the message, under 3% = kill or pivot) |
 | 2 | Mom Test interviews | ≥7 of 10 interviewees have spent time or money on the problem |
 | 3 | Product Brief quality check | Every feature traces back to a verbatim interview quote |
-| 4 | MVP at staging URL | You own every account; the app loads; one core flow works end-to-end |
+| 4 | MVP at a real URL | You own every account; the app loads; one core flow works end-to-end |
 | 5 | First paid pilot | Signed DPA + $500+ Stripe deposit received |
 
-If you fail a gate, the system requires you to go back, not forward. Six weeks and zero budget lost is the cheapest failure you'll ever buy. The alternative is years and tens of thousands of dollars building something nobody wants.
+If you fail a gate, the system requires you to go back, not forward. Failing at the gate costs you a few weeks and a few hundred dollars of ad spend; failing after the build costs founders years and tens of thousands of dollars on something nobody wants.
 
 </div>
 

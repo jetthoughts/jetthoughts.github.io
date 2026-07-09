@@ -31,7 +31,7 @@ related_posts: false
 
 ---
 
-You have a live page and tracking installed. Now you need cold strangers to see it - not friends, not your LinkedIn network, not anyone who'll be polite to you. Three hundred cold visitors tell you more than 14 polite interviews ever could.
+You have a live page and tracking installed. Now you need cold strangers to see it - people with no reason to be polite to you, which rules out friends and your LinkedIn network. A stranger who hands over an email address is voting with something real; a friend saying "sounds great" is voting with kindness.
 
 After this lesson you will be able to: **make a go / iterate / kill decision on your hypothesis based on what 300 cold strangers do with your page.**
 
@@ -39,12 +39,12 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 **Pick your ad channel** based on who your hypothesis names in the [customer] blank. The dollar ranges below are **CPC** (cost-per-click - what one ad click costs you):
 
-- **Selling to individual people** → [Meta Ads](https://business.facebook.com/) ($0.50-$2 CPC). Best when the product is visual and the audience is broad.
+- **Selling to individual people** → [Meta Ads](https://business.facebook.com/) ($0.70-$1.90 CPC). Best when the product is visual and the audience is broad.
 - **Selling to businesses, by job title** → [Google Search](https://ads.google.com/) ($3-$8 CPC) if your customer Googles the problem; [LinkedIn](https://www.linkedin.com/campaignmanager/) ($5.50-$22 CPC) if they don't.
-- **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1-$3 CPC) in r/programming, r/webdev, r/SaaS.
+- **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1.25-$3 CPC) in r/programming, r/webdev, r/SaaS.
 - **Niche vertical** → Google Search long-tail ($1-$5 CPC) - real estate, dentists, contractors Googling pain.
 
-**Budget:** depends on your channel's CPC. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real. If you have budget: 300 visits on Meta costs $300-$600; on LinkedIn, $1,800-$6,600.
+**Budget:** your channel's CPC × 300 visits, plus ~20% slack for ad iterations. On Meta that's $210-$570 in clicks - plan $300-$600 total; on LinkedIn, $1,650-$6,600 before slack. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real.
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 
@@ -80,7 +80,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 
 ---
 
-Open your tracking dashboard. Write down the number that surprised you most - the gap between what you expected and what the data says. That gap is the hypothesis blank worth testing first in Module 2.
+When you read the results, notice which number surprised you most - surprise means the data disagreed with something you believed, and whichever hypothesis blank produced that belief is the one worth testing first in Module 2.
 
 ---
 
@@ -96,6 +96,6 @@ Open your tracking dashboard. Write down the number that surprised you most - th
 
 ---
 
-> **See it in action:** [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+*See it in action: [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*

@@ -1,5 +1,5 @@
 ---
-title: "1.2 · Build Your Smoke-Test Page with an AI Page Builder"
+title: "1.2 · Smoke Test: Build the Page with an AI Builder"
 aliases: ["/blog/smoke-test-build-landing-page/", "/course/tech-for-non-technical-founders-2026/smoke-test-build-landing-page/"]
 description: "Turn your Founding Hypothesis into a live landing page URL using an AI page builder. Tighten 4 copy blocks, swap one image, publish, test on one stranger."
 date: 2026-06-08
@@ -62,7 +62,7 @@ The page has four copy blocks that decide whether it converts:
 > 3. Swap the hero image (the main image at the top of your page). Ask your AI assistant for: *"Photorealistic image: [pain scenario in one sentence]. Candid, natural lighting, no text or logos."* If your AI can't generate images, grab a stock photo from [Unsplash](https://unsplash.com/). In Mixo: click the hero section → Replace image → Upload. If the image doesn't help, delete it - the headline carries the page. **Never** use a product mockup of something you have not built.
 > 4. Click **Publish**. Mixo gives a URL like `yourname.mixo.io`. Open it in an incognito window. Confirm the page loads.
 
-Send the URL to **ONE real person** who has not seen your work. Any stranger works (they don't need to be your target customer - this tests headline clarity, not buying interest). Ask: "In 3 seconds, who is this page for and what does it do?" **Nobody available right now?** Record a 3-second screen recording of your page (Loom) and send it tomorrow. Or post the URL in a relevant subreddit with "What does this page do in 3 seconds?"
+Send the URL to **ONE real person** who has not seen your work. Any stranger works (they don't need to be your target customer - this tests headline clarity, not buying interest). Ask: "In 3 seconds, who is this page for and what does it do?" **Nobody available right now?** Record a short screen recording of your page with [Loom](https://www.loom.com/) (a free screen-recording tool) and send it to someone tomorrow with the same 3-second question. Or post the URL in a relevant subreddit with "What does this page do in 3 seconds?"
 
 > **✅ Success check:** they can name both. If they cannot, the headline is almost always the fix - rewrite it and retest.
 
@@ -75,7 +75,7 @@ Send the URL to **ONE real person** who has not seen your work. Any stranger wor
 **If this fails: no AI builder fits your idea, or you want manual layout control.** **Why:** AI builders rely on common templates; niche layouts and technical product diagrams sometimes don't fit. **Fix:** drop to manual mode with **[Carrd](https://carrd.co/)** (no-code drag-drop). Use the same workflow but write each copy block yourself first. Prompt your AI assistant and paste the output into Carrd:
 
 ```text
-Translate this hypothesis into 6 landing-page elements
+Translate this hypothesis into these landing-page elements
 (headline, sub-headline, 3 value props, CTA copy, footer disclaimer):
 [PASTE HYPOTHESIS]
 ```
@@ -96,6 +96,6 @@ Read your published page out loud as if you were the visitor. The sentence where
 
 ---
 
-> **See it in action:** [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)
+*See it in action: [Module 1 walkthrough: Mia builds TutorMatch](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*

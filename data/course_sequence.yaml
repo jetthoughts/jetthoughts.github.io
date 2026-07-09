@@ -3,9 +3,9 @@
 # Order = reading sequence on the landing page (Module 1 -> end of Module 5).
 # Used by the prev/next partial on chapter pages.
 #
-# Note: Chapter 0 (how-this-course-works) is the overview/map chapter — read once before Module 1,
-# not in the linear prev/next reading order. Like the glossary, it's reference content
-# accessible from the landing page.
+# Note: Chapter 0 (how-this-course-works) is the overview/map chapter. It sits first
+# in this sequence, so the prev/next strip on Lesson 1.1 points back to it - the
+# course-stat chapter count excludes it (see below).
 #
 # Course stats are DERIVED from this file via the course-stat shortcode:
 # {{< course-stat chapters >}} counts entries minus the Chapter 0 overview,
@@ -34,17 +34,17 @@ sequence:
   - slug: form-your-founding-hypothesis-90-minute-sprint
     title: "1.1 · Form Your Founding Hypothesis"
     module: "Chapter 1.1"
-    goal: "Write a Founding Hypothesis scored ≥14/20 across four lenses - one sentence, five specific blanks, falsifiable in five interviews."
+    goal: "Rewrite your idea as a one-sentence bet scored ≥14/20 across four lenses - five specific blanks, each one a testable assumption."
 
   - slug: smoke-test-build-page
-    title: "1.2 · Smoke Test: Build the Page"
+    title: "1.2 · Smoke Test: Build the Page with an AI Builder"
     module: "Chapter 1.2"
     goal: "Publish a smoke-test page from your hypothesis in under an hour, then run a one-stranger clarity test."
 
   - slug: smoke-test-wire-tracking
     title: "1.3 · Wire Tracking Before Traffic Starts"
     module: "Chapter 1.3"
-    goal: "Install Microsoft Clarity and your ad-platform pixel before you spend a cent on traffic."
+    goal: "Install Microsoft Clarity and GA4 before you spend a cent on traffic - the ad-platform pixel follows in 1.4."
 
   - slug: smoke-test-landing-page-7-day-demand-test
     title: "1.4 · Smoke Test: Run It and Read the Signal"

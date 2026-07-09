@@ -39,7 +39,7 @@ Write it at the specificity level of "solo chiropractors in Pennsylvania who spe
 
 **Q: My landing page got zero signups from 300 visitors. Is the idea dead?**
 
-Maybe. Below 1% conversion on cold traffic is a strong negative signal. But first: check your tracking. Did you install Microsoft Clarity? Watch 10 session replays. Common failure modes: the form is broken, the page takes 5+ seconds to load on mobile, or your headline is too vague. Fix those and re-run before you kill the idea. The [smoke test chapter](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) has the 6-element checklist.
+Maybe. Under 3% conversion on cold traffic is the kill-or-pivot band in [Lesson 1.4's decision table](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) - and zero is well under it. But first: check your tracking. Did you install Microsoft Clarity? Watch 10 session replays. Common failure modes: the form is broken, the page takes 5+ seconds to load on mobile, or your headline is too vague. Fix those and re-run before you kill the idea. The [smoke test chapter](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/) walks the four copy blocks that decide whether the page converts.
 
 **Q: My Stripe account verification is taking 3+ days. Can I skip the price button?**
 
@@ -65,9 +65,9 @@ Your questions are probably hypothetical-shaped. "Would you use a tool like this
 
 If you've run customer interviews before and your questions reliably produce concrete past-tense answers, skip it - go straight to [Ch 2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). If this is your first time running Mom Test interviews, the 90-minute rehearsal catches broken question shapes before they waste real interview slots.
 
-**Q: All my Mom Test scores are below 7 out of 10. What does that mean?**
+**Q: Fewer than 7 of my 10 interviewees have actually spent time or money on the problem. What does that mean?**
 
-Directional KILL. Less than 7 of 10 interviewees have spent real time or money on the problem - the problem isn't acute enough to build for. Before you pivot, check: are you interviewing the right ICP? If you interviewed 10 chiropractors and the problem isn't real for them, but 3 mentioned a related problem they DO care about, build a new hypothesis around that problem and re-validate.
+Directional KILL. The Module 2 gate is ≥7 of 10 interviewees with real past spend - fewer means the problem isn't acute enough to build for. Before you pivot, check: are you interviewing the right ICP? If you interviewed 10 chiropractors and the problem isn't real for them, but 3 mentioned a related problem they DO care about, build a new hypothesis around that problem and re-validate.
 
 ---
 
@@ -107,11 +107,11 @@ The deposit is a test of whether the problem is real - not a test of whether you
 
 **Q: My personal network only has 5 names. What do I do?**
 
-Five is enough to start. Message all five before you try cold outbound. The warm-network motion closes at 30-50% conversion; cold outbound closes at 3-5%. Three pilots from five warm leads is a better outcome than one pilot from 30 cold emails. If your network truly has zero applicable names, skip to [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+Five is enough to start. Message all five before you try cold outbound - people who already know you reply and close at many times the rate of cold strangers, which is why [Ch 5.3a](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) runs the warm list first. If your network truly has zero applicable names, skip to [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
 **Q: The customer wants to start free and convert later. Should I accept?**
 
-No. A verbal yes is not a paid pilot. Reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, their problem isn't acute enough - they're not in your must-have segment. Move to the next lead.
+No. A verbal yes is not a paid pilot. Reframe: the deposit is year-one ACV (annual contract value - what one customer pays in year one) prepaid, not added cost. If they still say no, their problem isn't acute enough - they're not in your must-have segment. Move to the next lead.
 
 ---
 

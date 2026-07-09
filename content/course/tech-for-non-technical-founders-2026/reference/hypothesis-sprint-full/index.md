@@ -6,13 +6,13 @@ draft: false
 slug: hypothesis-sprint-full
 ---
 
-> **Reference companion to [Lesson 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)**  --  the full 6-step sprint, 4-lens scoring methodology, AI research prompts, and worked examples. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
+> **Reference companion to [Lesson 1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)** - the full 6-step sprint, 4-lens scoring methodology, AI research prompts, and worked examples. Read the micro-lesson first for the minimum effective path; return here when you want the deep reference.
 
 ---
 
 ## The Full 6-Step Sprint
 
-Jake Knapp and John Zeratsky published *Click* in April 2025 after twenty years of running design sprints with 300+ startups. The book's central artifact is the Founding Hypothesis: one Mad Libs sentence that names your customer, problem, approach, competition, and differentiation. Their thesis: *"Products click with customers when they make a compelling promise  --  and that promise must be simple, or customers won't pay attention."*
+Jake Knapp and John Zeratsky published *Click* in April 2025, drawing on the design-sprint method Knapp created at Google in 2010 and has since run with 300+ startups. The book's central artifact is the Founding Hypothesis: one Mad Libs sentence that names your customer, problem, approach, competition, and differentiation. Their thesis: *"Products click with customers when they make a compelling promise - and that promise must be simple, or customers won't pay attention."*
 
 The version below compresses the original multi-day workshop into a focused session you can run alone with a notebook and a kitchen timer.
 
@@ -51,17 +51,17 @@ Score each of the three approaches on a 1-5 scale across four lenses:
 
 **Money lens:** Do the unit economics work at the scale you can plausibly reach? A consumer app at $4/mo needing 10,000 users to clear $40K MRR is a different shape than B2B SaaS at $400/mo needing 100. Pre-revenue founders with no built product: leave the Money lens blank and come back after the smoke test gives you real conversion data.
 
-Sum each approach. Pick the highest sum. The lens that scored lowest across the winning approach is your biggest risk  --  the part of the hypothesis most likely to break.
+Sum each approach. Pick the highest sum. The lens that scored lowest across the winning approach is your biggest risk - the part of the hypothesis most likely to break.
 
 **The PASS bar:** ≥14/20 across the four lenses with no individual lens below 2. Pre-revenue founders leaving Money blank: the bar drops to ≥11/15 across the other three, same "no lens below 2" rule.
 
-**The routing rule:** The lowest-scoring lens is the part of your hypothesis the next test must attack. Money and Customer are the two that matter first  --  if Money is lowest, your smoke test is about price; if Customer is lowest, your interviews need to find real pain. Pragmatic lowest? Feasibility check. Growth lowest? Ad-test the channel before the build.
+**The routing rule:** The lowest-scoring lens is the part of your hypothesis the next test must attack. Money and Customer are the two that matter first - if Money is lowest, your smoke test is about price; if Customer is lowest, your interviews need to find real pain. Pragmatic lowest? Feasibility check. Growth lowest? Ad-test the channel before the build.
 
 ### Step 5: Write the Founding Hypothesis
 
 Open the Mad Libs sentence. Fill in the five blanks using the winning approach from Step 4, the customer and problem from Step 1, the competition from Step 2, and the differentiator from Step 2.
 
-Read it aloud three times. Stop when the sentence reads like a thing a friend could repeat back. Type the final sentence into a Google Doc titled `Founding Hypothesis - [date]` and save it to a `Founder OS` folder. You will paste this sentence verbatim into your landing-page headline, interview script, and Stripe price prompt.
+Read it aloud three times. Stop when the sentence reads like a thing a friend could repeat back. Type the final sentence into a Google Doc titled `Founding Hypothesis - [date]` and save it to a `Founder OS` folder. This sentence becomes the raw material for your landing-page headline (1.2 reshapes it into a customer-plus-outcome one-liner), your interview script, and your Stripe price prompt.
 
 ### Step 6: Test Design
 
@@ -104,7 +104,7 @@ A founder building a vendor-management tool for procurement teams scored her app
 | Growth | 4/5 | Procurement people cluster in the same 3 newsletters |
 | Money | 1/5 | Buyers expected under $150/mo; unit economics needed $600/mo |
 
-The Money lens scored 1 because procurement teams expected under $150/mo and her unit economics needed $600/mo. She designed her landing-page CTA around the price point  --  not the feature set  --  and learned quickly that procurement at that price was a no.
+The Money lens scored 1 because procurement teams expected under $150/mo and her unit economics needed $600/mo. She designed her landing-page CTA around the price point - not the feature set - and learned quickly that procurement at that price was a no.
 
 She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonable, re-scored Money to 4, and ran the test again. The pivot happened before she wrote a line of product code.
 
@@ -114,24 +114,24 @@ She pivoted to a 200-employee-plus mid-market segment where $600/mo was reasonab
 
 **Gmail in 2003:** If we help heavy email users solve finding old messages with full-text search + 1 GB free, they will pick it over Yahoo Mail because Yahoo charges for storage and has no real search.
 
-**B2B SaaS  --  chiropractic billing:** If we help solo chiropractors solve insurance-claim resubmission with a one-click resubmit, they pick it over billing services that take 14 days and charge 8% of recovered claims.
+**B2B SaaS - chiropractic billing:** If we help solo chiropractors solve insurance-claim resubmission with a one-click resubmit, they pick it over billing services that take 14 days and charge 8% of recovered claims.
 
-**B2C  --  parents of teens with allergies:** If we help parents solve weekend menu safety with a 3-second phone-camera scan, they pick it over reading menus aloud because the teen does not have to feel different.
+**B2C - parents of teens with allergies:** If we help parents solve weekend menu safety with a 3-second phone-camera scan, they pick it over reading menus aloud because the teen does not have to feel different.
 
 ---
 
 ## Case Study: Tomas & Mia
 
-**Tomas** (ReconcileBot, B2B SaaS) filled his hypothesis: "If we help mid-size accounting firm controllers solve manual Stripe-to-QuickBooks reconciliation with an auto-matching engine, they will choose it over exporting to Excel because it cuts 2 hours of Monday work to 90 seconds." He scored 4/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: money  --  he doesn't know if firms will pay $200/mo or $2,000/mo. The money test goes into his smoke-test design.
+**Tomas** (ReconcileBot, B2B SaaS) filled his hypothesis: "If we help mid-size accounting firm controllers solve manual Stripe-to-QuickBooks reconciliation with an auto-matching engine, they will choose it over exporting to Excel because it cuts 2 hours of Monday work to 90 seconds." He scored 4/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: money - he doesn't know if firms will pay $200/mo or $2,000/mo. The money test goes into his smoke-test design.
 
-**Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: growth  --  she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke test will answer one side of that split - the specialty angle her hypothesis names - and the location question goes to Module 2 interviews.
+**Mia** (TutorMatch, B2C marketplace) filled hers: "If we help parents of kids 8-14 with dyslexia/ADHD solve finding a vetted specialist tutor with a search-by-specialty marketplace, they will choose it over Googling and calling dead numbers because it matches them in 48 hours with parent reviews." She scored 5/5 on customer, 4/5 on pragmatic, 3/5 on growth, 3/5 on money. Weakest blank: growth - she doesn't know if parents prefer search-by-specialty or search-by-location. Her smoke test will answer one side of that split - the specialty angle her hypothesis names - and the location question goes to Module 2 interviews.
 
 ---
 
 ## Further Reading
 
-- Jake Knapp and John Zeratsky, [*Click*](https://www.theclickbook.com/)  --  the book that introduced the Founding Hypothesis Mad Libs and the Foundation Sprint workshop
-- Lenny Rachitsky, [Introducing the Foundation Sprint](https://www.lennysnewsletter.com/p/introducing-the-foundation-sprint)  --  short writeup of how the format works
+- Jake Knapp and John Zeratsky, [*Click*](https://www.theclickbook.com/) - the book that introduced the Founding Hypothesis Mad Libs and the Foundation Sprint workshop
+- Lenny Rachitsky, [Introducing the Foundation Sprint](https://www.lennysnewsletter.com/p/introducing-the-foundation-sprint) - short writeup of how the format works
 - Once you have run the sprint at least once, layered frameworks like Lean Inception, JTBD Canvas, Value Proposition Canvas, and Lean Canvas add useful structure. Skip them on the first pass.
 
 ---

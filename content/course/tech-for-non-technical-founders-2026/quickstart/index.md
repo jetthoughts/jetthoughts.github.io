@@ -27,21 +27,21 @@ related_posts: false
 
 > **Quickstart** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 
-You have an idea and no time. You need the minimum effective dose - the smallest amount of reading that produces a real result. This page is that dose.
+You have an idea and no time, so this page lists only the core lessons - the smallest amount of reading that still produces a real result.
 
 ## The Problem (in your language)
 
-You want to validate whether your idea has real demand before you spend $10K+ on a dev shop. You can't read code. You have evenings and weekends - maybe 2-4 hours a week. You need a route that works without hiring anyone.
+You want to validate whether your idea has real demand before you spend $10K+ on a dev shop - but you can't read code, your available time is evenings and weekends (maybe 2-4 hours a week), and hiring anyone is premature. This route works within all three constraints.
 
 ## The Minimal Path (Core Lessons Only)
 
-Skip anything tagged [OPTIONAL] and you still walk away with all 6 Founder OS artifacts. Here's the shortest route:
+Skip the lessons marked "optional" on the [course landing page](/course/tech-for-non-technical-founders-2026/#module-map) and you still walk away with every Founder OS artifact. Here's the shortest route:
 
 ### Module 1 - Hypothesis & Smoke Test
 *Output: one-sentence hypothesis + live landing page with Stripe price button + price-test signal.*
 
 - [**1.1** · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/)
-- [**1.2** · Smoke Test: Build the Page](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
+- [**1.2** · Smoke Test: Build the Page with an AI Builder](/course/tech-for-non-technical-founders-2026/smoke-test-build-page/)
 - [**1.3** · Wire Tracking Before Traffic Starts](/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/)
 - [**1.4** · Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.5** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
@@ -79,7 +79,7 @@ Skip anything tagged [OPTIONAL] and you still walk away with all 6 Founder OS ar
 ### Module 5 - First Paying Customer
 *Output: one signed paid pilot + repeatable outbound channel.*
 
-- [**5.1** · PMF Test Before You Scale](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 - [**5.3a** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
 - [**5.3b** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
 - [**5.3c** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
