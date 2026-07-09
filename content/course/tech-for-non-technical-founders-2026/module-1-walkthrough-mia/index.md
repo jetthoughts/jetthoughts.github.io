@@ -76,21 +76,17 @@ Twenty-five minutes total. Twenty of those on the wrong-field detour.
 
 ## [Lesson 1.4: Run the Smoke Test](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 
-She had $400 to spend, a Growth lens that scored only 3/5, and a quiet knot in her stomach about it. The lens was weak because she didn't know which way parents searched: by specialty (*dyslexia tutor*) or by location (*ADHD tutor near me*). The smoke test was her chance to find out.
+She had $400 to spend, a Growth lens that scored only 3/5, and a quiet knot in her stomach about it. The lens was weak because she didn't know which way parents searched: by specialty (*dyslexia tutor*) or by location (*ADHD tutor near me*). The smoke test could answer one of those questions properly - not both.
 
 She installed the Meta Pixel she'd deferred from 1.3. Same dance as Clarity and GA4, two minutes this time - the wrong-field detour had taught her where to click.
 
-Then the ads. Two variants, $200 each. Variant A targeted the search interest "dyslexia tutor," nationwide. Variant B targeted parents searching "ADHD tutor + [her city]," geographic. Same landing page, two different angles into it. She queued the ads up and hit Launch on a Monday morning.
+Then the ads. Her first instinct was to split the budget - $200 on "dyslexia tutor" search interest, $200 on "ADHD tutor near me" in her city, and let the two angles fight it out. The channel guide's sample-size warning killed that plan: $200 buys roughly 150 visits, and below 300 visits a conversion rate can't tell 2% from 5%. Two half-tests would have bought her two unreadable numbers. She put the full $400 behind one angle - the specialty search, because that was the bet her hypothesis actually named: parents searching by their kid's need, not by zip code. The location question went into her notebook, not her ad account. She hit Launch on a Monday morning.
 
 Then she made a rule for herself: don't touch the page for seven days. No headline tweaks. No bid adjustments. No anxious dashboard refreshes. The point of a smoke test was a clean signal, and a clean signal needed clean traffic.
 
-On Day 8 she opened the results.
+On Day 8 she opened the results: 300 cold visitors, 6.5% conversion. **Promising band** - past the 6% proceed bar, one readable number, no asterisk.
 
-- Variant A (specialty search): 6.5% conversion. **Promising band.**
-- Variant B (location search): 3.5% conversion. **Iterate band.**
-- Combined across 300 cold visitors: 4.8%. Specialty beat location by nearly two-to-one.
-
-Her weakest blank had just answered itself. Parents searched by specialty, not by location. The specialty variant alone cleared the proceed bar even though the combined number didn't. She decided to advance to the price test and park the location variant for a later round.
+Half of her weakest blank had just answered itself. Parents searching by specialty recognized the page and signed up. Whether the location angle would have worked too was a question she hadn't paid to answer - so she wrote it into her Module 2 prep instead: ask every parent how they actually searched the last time they needed a tutor. She advanced to the price test.
 
 ---
 
@@ -113,7 +109,7 @@ She added a note to her Module 2 prep: when she interviewed parents, she'd ask w
 - **A Founding Hypothesis** scoring 15/20, with one soft blank (Growth) flagged and tested.
 - **A live landing page** at `tutormatch.mixo.io` that passed the 3-second clarity test on a neighbor who actually fit the ICP.
 - **Tracking installed and verified** - Clarity for behavior, GA4 for traffic source, Meta Pixel for ad attribution.
-- **Conversion data on 300 cold visitors:** 4.8% combined, 6.5% on the specialty-search variant. The Growth blank now had a real answer.
+- **Conversion data on 300 cold visitors:** 6.5% from specialty-search targeting - the Promising band. The specialty half of the Growth question answered; the location angle queued for Module 2 interviews.
 - **Six paying customers at $99 each.** $594 in revenue, before the product existed.
 - **A Google Drive folder** holding all five Module 1 outputs. Her Founder OS, started.
 

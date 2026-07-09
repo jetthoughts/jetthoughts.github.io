@@ -55,7 +55,7 @@ Mixo ($7/mo, 30 seconds from idea to page). If the templates don't fit, Manus AI
 
 **Q: I can't find anyone to interview. I've searched everywhere.**
 
-Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a searchable ICP. Tighten to "12-person law-firm office manager." (2) Search second-degree keywords: "boarding costs" instead of "pet sitter." The [Ch 2.3a chapter](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) has the AI prompt that generates 8 communities + 5 search strings from your hypothesis.
+Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a searchable ICP (Ideal Customer Profile - the specific kind of person your hypothesis names). Tighten to "12-person law-firm office manager." (2) Search second-degree keywords: "boarding costs" instead of "pet sitter." The [Ch 2.3a chapter](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) has the AI prompt that generates 8 communities + 5 search strings from your hypothesis.
 
 **Q: Everyone I interview says "sounds great" but nobody gives me real data.**
 
@@ -119,7 +119,7 @@ No. A verbal yes is not a paid pilot. Reframe: the deposit is year-one ACV prepa
 
 **Q: How long does Module 1 take?**
 
-Six to eight weeks at an evenings-and-weekends pace (the pattern this course is built for). A full-time founder can finish Module 1 in about two weeks. The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) is the shortest path - core lessons only.
+Two to three weeks at an evenings-and-weekends pace (the pattern this course is built for). A full-time founder can finish Module 1 in about a week. The calendar is mostly wait time - ad-account approval, the 7-day traffic run, Stripe verification - not work time. The [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) is the shortest path - core lessons only.
 
 **Q: How long does the full 5-module course take?**
 

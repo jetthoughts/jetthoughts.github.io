@@ -46,7 +46,7 @@ Skip anything tagged [OPTIONAL] and you still walk away with all 6 Founder OS ar
 - [**1.4** · Run It and Read the Signal](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)
 - [**1.5** · Price Your Hypothesis on the Smoke-Test Page](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/)
 
-**Gate:** ≥3% conversion on your strongest ad variant; at least 1 Stripe click on the price test.
+**Gate:** ≥6% conversion from cold traffic (the "Promising" band in [Lesson 1.4's decision table](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/)); a measured click-to-payment rate from the price test. 3-6% means iterate the message, not advance.
 
 ### Module 2 - Validate the Problem
 *Output: 10 Mom Test interviews + clickable prototype tested with 5 people.*

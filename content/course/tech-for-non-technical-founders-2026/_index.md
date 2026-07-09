@@ -67,7 +67,7 @@ Skip this course if you want to learn to code or hand off founder judgment to so
 
 ## The Founder OS: {{< course-stat artifacts >}} artifacts you keep
 
-Each module produces one fill-in-the-blank artifact. All {{< course-stat artifacts >}} bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund:
+Each module produces at least one fill-in-the-blank artifact - Module 1 produces two. All {{< course-stat artifacts >}} bundle into a single Google Drive folder - your **Founder OS** - that doubles as your decision log. If you ever raise, the same folder is the evidence pack investors fund:
 
 <div class="artifact-grid">
   <div class="artifact-card"><span class="artifact-card__num">1 · Module 1</span><p><strong>Founding Hypothesis</strong> Shows you didn't start with a build - you started with a one-sentence falsifiable bet.</p></div>

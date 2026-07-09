@@ -53,7 +53,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 ### Module 1 - Hypothesis & Smoke Test
 **You have:** a rough idea or instinct.
 **You walk away with:** a one-sentence Founding Hypothesis + a live landing page with a Stripe price button.
-**Time:** ~7 days, evenings and weekends.
+**Time:** ~7 days full-time; 2-3 weeks at an evenings-and-weekends pace.
 
 | Step | What You Do | Key Tool |
 |---|---|---|
@@ -72,7 +72,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 ### Module 2 - Validate the Problem
 **You have:** a Founding Hypothesis.
 **You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a 2-hour clickable prototype tested with 5 people.
-**Time:** ~2-3 weeks, evenings and weekends.
+**Time:** ~2-3 weeks full-time.
 
 | Step | What You Do | Key Tool |
 |---|---|---|
@@ -184,7 +184,7 @@ Every module has a gate. If the data doesn't support your hypothesis, you stop a
 
 | Module | The Gate | Signal to Proceed |
 |---|---|---|
-| 1 | Landing page conversion | ≥3% of cold visitors submit the email form |
+| 1 | Landing page conversion | ≥6% of cold visitors submit the email form (the "Promising" band in the 1.4 decision table; 3-6% = iterate the message, under 3% = kill or pivot) |
 | 2 | Mom Test interviews | ≥7 of 10 interviewees have spent time or money on the problem |
 | 3 | Product Brief quality check | Every feature traces back to a verbatim interview quote |
 | 4 | MVP at staging URL | You own every account; the app loads; one core flow works end-to-end |
