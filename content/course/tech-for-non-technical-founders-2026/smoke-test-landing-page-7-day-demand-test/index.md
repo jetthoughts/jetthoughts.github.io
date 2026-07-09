@@ -44,7 +44,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 - **Developer tools** → [Reddit Ads](https://ads.reddit.com/) ($1.25-$3 CPC) in r/programming, r/webdev, r/SaaS.
 - **Niche vertical** → Google Search long-tail ($1-$5 CPC) - real estate, dentists, contractors Googling pain.
 
-**Budget:** your channel's CPC × 300 visits, plus ~20% slack for ad iterations. On Meta that's $210-$570 in clicks - plan $300-$600 total; on LinkedIn, $1,650-$6,600 before slack. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real.
+**Budget:** your channel's CPC × 300 visits, plus ~20% slack for ad iterations. On Meta that's $210-$570 in clicks - plan $250-$700 total; on LinkedIn, $1,650-$6,600 before slack. Not ready to spend? Start with the $0 organic path on the [full channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/) - slower but real.
 
 **Start ad-account setup 2-3 days before launch.** First-time ad accounts can take 24-72 hours to approve. Meta is the slowest; Reddit clears same-day.
 
@@ -57,7 +57,7 @@ After this lesson you will be able to: **make a go / iterate / kill decision on 
 > 1. **Install your channel's pixel.** Open your ad platform's pixel manager: **Meta** → Events Manager, **LinkedIn** → Campaign Manager, **Reddit** → Ads Manager. Copy the pixel snippet, paste in your page builder's head-tag field - same process as Clarity and GA4 in Lesson 1.3. Open your page in an incognito window; verify the pixel fires in your platform's dashboard. Google Ads users: skip this (GA4 is your pixel).
 > 2. Verify your ad account is approved and payment method attached. If not, set it up tonight.
 > 3. Create and launch your campaign. Open the [campaign creation recipe](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/#campaign-creation-recipes) for your channel (Meta, Google, LinkedIn, or Reddit). Each recipe walks you through 7 settings: objective, budget, audience, placement, creative, tracking, and launch. Set a daily budget that gets you to 300 visits within 5-7 days.
-> 4. **Do not touch the page.** No headline rewrites, no bid adjustments, no hourly dashboard refreshes. You want raw demand against the original hypothesis - not an optimized funnel.
+> 4. **Do not touch the page.** Resist headline rewrites, bid adjustments, and hourly dashboard refreshes for the full run. You want raw demand against the original hypothesis - not an optimized funnel.
 > 5. After 300 visits, read your conversion rate (form submits ÷ page views) against this table:
 
 | Conversion rate from cold traffic | Decision | What to do |

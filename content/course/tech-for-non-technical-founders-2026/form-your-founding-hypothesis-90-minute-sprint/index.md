@@ -43,7 +43,7 @@ A **Founding Hypothesis** is a fill-in-the-blanks sentence (Mad Libs style) from
 
 > *"If we help [customer] solve [problem] with [approach], they'll choose it over [competition] because [differentiation]."*
 
-Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it everywhere: it feeds your landing-page headline in 1.2 (reshaped into a customer-plus-outcome one-liner) and opens every Module 2 interview as context for every Module 2 interview. The discipline is filling all five blanks with specifics, not categories.
+Five blanks. One sentence - not a deck - because a sentence can't hide vague thinking, and because you'll reuse it everywhere: it feeds your landing-page headline in 1.2 (reshaped into a customer-plus-outcome one-liner) and opens every Module 2 interview as context. The discipline is filling all five blanks with specifics, not categories.
 
 Each blank is an assumption, and each assumption has a test waiting for it later in the course:
 

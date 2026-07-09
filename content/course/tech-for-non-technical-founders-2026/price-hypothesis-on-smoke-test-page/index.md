@@ -89,7 +89,7 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 >
 > **If blocked:** see "If this fails" above. Missing any M1 artifact? Go back to that lesson before starting Module 2.
 >
-> **What M1 cost you:** mostly your ad spend - $300-600 on Meta for the 1.4 demand test, plus whatever you spent keeping ads running during this price test. Reddit runs higher per the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/); LinkedIn B2B runs $1,650-6,600. If you used the guide's $0 organic path, your cost was $0.
+> **What M1 cost you:** mostly your ad spend - $250-700 on Meta for the 1.4 demand test, plus whatever you spent keeping ads running during this price test. Reddit runs higher per the [channel guide](/course/tech-for-non-technical-founders-2026/reference/smoke-test-channel-guide/); LinkedIn B2B runs $1,650-6,600. If you used the guide's $0 organic path, your cost was $0.
 >
 > **Deeper reference:** [Full Stripe setup walkthrough + pricing revisit moments + threshold bands](/course/tech-for-non-technical-founders-2026/reference/stripe-price-test-full/)
 >
