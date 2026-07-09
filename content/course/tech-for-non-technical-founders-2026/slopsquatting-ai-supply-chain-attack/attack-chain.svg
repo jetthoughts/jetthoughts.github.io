@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Caveat','Patrick Hand',cursive">
+  <defs>
+    <filter id="rough" x="-2%" y="-2%" width="104%" height="104%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="2"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" fill="#fafaf7"/>
+
+  <!-- Title -->
+  <text x="480" y="44" font-size="32" text-anchor="middle" fill="#1a1a1a" font-weight="bold">The Slopsquatting Attack Chain</text>
+  <text x="480" y="72" font-size="20" text-anchor="middle" fill="#555">How a hallucinated package name becomes a malicious install in your codebase</text>
+
+  <!-- Step 1: AI hallucinates -->
+  <rect x="40" y="110" width="200" height="120" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="140" y="140" font-size="20" text-anchor="middle" fill="#cc342d" font-weight="bold">1. AI hallucinates</text>
+  <text x="140" y="170" font-size="15" text-anchor="middle" fill="#1a1a1a">Cursor suggests:</text>
+  <text x="140" y="192" font-size="14" text-anchor="middle" fill="#1a1a1a" font-family="'Courier New',monospace">gem 'active_record_</text>
+  <text x="140" y="210" font-size="14" text-anchor="middle" fill="#1a1a1a" font-family="'Courier New',monospace">extras_helper'</text>
+
+  <!-- Step 2: Attacker watches -->
+  <rect x="280" y="110" width="200" height="120" fill="#fffbe6" stroke="#bf8a00" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="380" y="140" font-size="20" text-anchor="middle" fill="#bf8a00" font-weight="bold">2. Attacker watches</text>
+  <text x="380" y="170" font-size="15" text-anchor="middle" fill="#1a1a1a">Scrapes top hallucinated</text>
+  <text x="380" y="190" font-size="15" text-anchor="middle" fill="#1a1a1a">names from public</text>
+  <text x="380" y="210" font-size="15" text-anchor="middle" fill="#1a1a1a">prompt logs + repos.</text>
+
+  <!-- Step 3: Attacker registers -->
+  <rect x="520" y="110" width="200" height="120" fill="#fff5f5" stroke="#cc342d" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="620" y="140" font-size="20" text-anchor="middle" fill="#cc342d" font-weight="bold">3. Attacker registers</text>
+  <text x="620" y="170" font-size="15" text-anchor="middle" fill="#1a1a1a">Publishes the package</text>
+  <text x="620" y="190" font-size="15" text-anchor="middle" fill="#1a1a1a">on Rubygems / PyPI / npm.</text>
+  <text x="620" y="210" font-size="15" text-anchor="middle" fill="#1a1a1a">Adds malicious payload.</text>
+
+  <!-- Step 4: Developer installs -->
+  <rect x="760" y="110" width="160" height="120" fill="#f5e9ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#rough)"/>
+  <text x="840" y="140" font-size="18" text-anchor="middle" fill="#7c3aed" font-weight="bold">4. Developer</text>
+  <text x="840" y="160" font-size="18" text-anchor="middle" fill="#7c3aed" font-weight="bold">installs</text>
+  <text x="840" y="186" font-size="14" text-anchor="middle" fill="#1a1a1a" font-family="'Courier New',monospace">bundle install</text>
+  <text x="840" y="208" font-size="15" text-anchor="middle" fill="#1a1a1a">No human review.</text>
+
+  <!-- Arrows -->
+  <line x1="240" y1="170" x2="280" y2="170" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="170" x2="520" y2="170" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="720" y1="170" x2="760" y2="170" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Damage box -->
+  <rect x="40" y="290" width="880" height="180" fill="#1a1a1a" filter="url(#rough)"/>
+  <text x="480" y="324" font-size="24" text-anchor="middle" fill="#fff5f5" font-weight="bold">5. Damage runs in your production environment</text>
+  <text x="100" y="368" font-size="18" fill="#fafaf7">Stripe API key exfiltrated to attacker server</text>
+  <text x="100" y="396" font-size="18" fill="#fafaf7">Database credentials posted to public Pastebin</text>
+  <text x="100" y="424" font-size="18" fill="#fafaf7">Backdoor opened on every deploy</text>
+  <text x="100" y="452" font-size="18" fill="#fafaf7">Customer PII shipped to a Telegram bot</text>
+  <text x="560" y="368" font-size="18" fill="#cc342d" font-weight="bold">Time from prompt to breach:</text>
+  <text x="560" y="400" font-size="32" fill="#fff5f5" font-weight="bold">11 days</text>
+  <text x="560" y="428" font-size="15" fill="#fafaf7">(Lasso Security 2025 reproduction:</text>
+  <text x="560" y="448" font-size="15" fill="#fafaf7">first install logged 11 days after register)</text>
+
+  <!-- Defense annotation -->
+  <text x="480" y="510" font-size="20" text-anchor="middle" fill="#cc342d" font-weight="bold">The defense: a 3-line CI gate that blocks ANY new dependency until a human reviews it.</text>
+  <text x="480" y="538" font-size="16" text-anchor="middle" fill="#555">See the YAML below. Time to install: 15 minutes.</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="wheel-title">
+  <title id="wheel-title">The 6 pivot types: customer, need, solution, technology, channel, revenue</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .label         { font-family: "Caveat", "Patrick Hand", cursive; font-size: 18px; fill: #1a1a1a; font-weight: 700; }
+      .sublabel      { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #444; font-style: italic; }
+      .center        { font-family: "Caveat", "Patrick Hand", cursive; font-size: 22px; fill: #fff; font-weight: 700; }
+      .center-sub    { font-family: "Caveat", "Patrick Hand", cursive; font-size: 14px; fill: #fff; font-style: italic; }
+      .spoke         { stroke: #1a1a1a; stroke-width: 2; fill: none; }
+      .pivot-1       { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .pivot-2       { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; }
+      .pivot-3       { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; }
+      .pivot-4       { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .pivot-5       { fill: #e8f4f8; stroke: #0277bd; stroke-width: 2.5; }
+      .pivot-6       { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <text x="450" y="36" class="heading" text-anchor="middle">Six pivot types branching from the same hypothesis</text>
+  <text x="450" y="64" class="sublabel" text-anchor="middle">Each spoke names what stays right and what changes - keep what works, replace what does not</text>
+
+  <!-- Center node -->
+  <circle cx="450" cy="320" r="62" fill="#1a1a1a" stroke="#cc342d" stroke-width="3"/>
+  <text x="450" y="312" class="center" text-anchor="middle">Founding</text>
+  <text x="450" y="334" class="center" text-anchor="middle">Hypothesis</text>
+  <text x="450" y="354" class="center-sub" text-anchor="middle">5 blanks - 1 right</text>
+
+  <!-- Spoke 1: Customer Segment (top-left) -->
+  <line x1="416" y1="270" x2="200" y2="180" class="spoke"/>
+  <rect x="60" y="135" width="220" height="80" rx="10" class="pivot-1"/>
+  <text x="170" y="160" class="label" text-anchor="middle">1 - Customer Segment</text>
+  <text x="170" y="180" class="sublabel" text-anchor="middle">Right product, wrong customer</text>
+  <text x="170" y="200" class="sublabel" text-anchor="middle">e.g. SMB tool sold to enterprise</text>
+
+  <!-- Spoke 2: Customer Need (top) -->
+  <line x1="450" y1="258" x2="450" y2="120" class="spoke"/>
+  <rect x="340" y="40" width="220" height="80" rx="10" class="pivot-2"/>
+  <text x="450" y="65" class="label" text-anchor="middle">2 - Customer Need</text>
+  <text x="450" y="85" class="sublabel" text-anchor="middle">Right customer, wrong problem</text>
+  <text x="450" y="105" class="sublabel" text-anchor="middle">e.g. dentists, bill not schedule</text>
+
+  <!-- Spoke 3: Solution (top-right) -->
+  <line x1="484" y1="270" x2="700" y2="180" class="spoke"/>
+  <rect x="620" y="135" width="220" height="80" rx="10" class="pivot-3"/>
+  <text x="730" y="160" class="label" text-anchor="middle">3 - Solution</text>
+  <text x="730" y="180" class="sublabel" text-anchor="middle">Right problem, wrong solution</text>
+  <text x="730" y="200" class="sublabel" text-anchor="middle">e.g. dashboard, not workflow</text>
+
+  <!-- Spoke 4: Technology (bottom-right) -->
+  <line x1="484" y1="370" x2="700" y2="460" class="spoke"/>
+  <rect x="620" y="430" width="220" height="80" rx="10" class="pivot-4"/>
+  <text x="730" y="455" class="label" text-anchor="middle">4 - Technology</text>
+  <text x="730" y="475" class="sublabel" text-anchor="middle">Right solution, wrong stack</text>
+  <text x="730" y="495" class="sublabel" text-anchor="middle">e.g. native, not Bubble</text>
+
+  <!-- Spoke 5: Channel (bottom) -->
+  <line x1="450" y1="382" x2="450" y2="520" class="spoke"/>
+  <rect x="340" y="525" width="220" height="65" rx="10" class="pivot-5"/>
+  <text x="450" y="548" class="label" text-anchor="middle">5 - Channel</text>
+  <text x="450" y="567" class="sublabel" text-anchor="middle">Right product, wrong distribution</text>
+  <text x="450" y="585" class="sublabel" text-anchor="middle">e.g. PLG not outbound</text>
+
+  <!-- Spoke 6: Revenue Model (bottom-left) -->
+  <line x1="416" y1="370" x2="200" y2="460" class="spoke"/>
+  <rect x="60" y="430" width="220" height="80" rx="10" class="pivot-6"/>
+  <text x="170" y="455" class="label" text-anchor="middle">6 - Revenue Model</text>
+  <text x="170" y="475" class="sublabel" text-anchor="middle">Right product, wrong pricing</text>
+  <text x="170" y="495" class="sublabel" text-anchor="middle">e.g. seat, not per-event</text>
+</svg>

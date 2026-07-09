@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-labelledby="aps-title">
+  <title id="aps-title">The simple-admin-panel-to-spaceship anti-pattern, sketched.</title>
+  <desc>A hand-drawn sketch with two panels. Left: a small admin panel mockup with three buttons (hide post, ban user, refund). A small label reads "What you asked for." Right: a giant control deck panel covered in 47 buttons, a role-permissions matrix, audit log, feature flags, multi-tenant switcher, and a co-pilot AI assistant. A label reads "What got built." A wavy arrow connects the two with the words "10-week build, $15K" along it.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .header { font-size: 26px; font-weight: bold; fill: #1a1a1a; }
+      .label { font-size: 17px; font-weight: bold; fill: #1a1a1a; }
+      .stamp-bad-text { font-size: 16px; font-weight: bold; fill: #cc342d; }
+      .stamp-good-text { font-size: 16px; font-weight: bold; fill: #2e7d32; }
+      .body { font-size: 12px; fill: #1a1a1a; }
+      .tiny { font-size: 10px; fill: #1a1a1a; }
+      .hint { font-size: 13px; fill: #666; font-style: italic; }
+      .panel { fill: #fff; stroke: #1a1a1a; stroke-width: 2; }
+      .panel-good { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2; }
+      .panel-bad { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; }
+      .btn-good { fill: #e6f4e6; stroke: #2e7d32; stroke-width: 1.5; }
+      .btn-bad { fill: #ffe5e5; stroke: #cc342d; stroke-width: 1; }
+      .arrow { fill: none; stroke: #cc342d; stroke-width: 3; marker-end: url(#tri2); stroke-linecap: round; }
+    </style>
+    <marker id="tri2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cc342d"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="640" fill="#fafafa"/>
+
+  <text x="500" y="36" text-anchor="middle" class="h header">"A simple admin panel" → the spaceship that arrives 10 weeks later</text>
+
+  <!-- LEFT: simple admin panel -->
+  <text x="190" y="78" text-anchor="middle" class="h stamp-good-text">What you asked for</text>
+
+  <rect x="60" y="100" width="260" height="380" rx="8" class="panel-good"/>
+  <text x="190" y="128" text-anchor="middle" class="h label">Admin</text>
+  <line x1="80" y1="142" x2="300" y2="142" stroke="#2e7d32" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <rect x="90" y="170" width="200" height="46" rx="6" class="btn-good"/>
+  <text x="190" y="199" text-anchor="middle" class="h body">Hide this post</text>
+
+  <rect x="90" y="232" width="200" height="46" rx="6" class="btn-good"/>
+  <text x="190" y="261" text-anchor="middle" class="h body">Ban this user</text>
+
+  <rect x="90" y="294" width="200" height="46" rx="6" class="btn-good"/>
+  <text x="190" y="323" text-anchor="middle" class="h body">Refund this charge</text>
+
+  <text x="190" y="380" text-anchor="middle" class="h hint">3 buttons</text>
+  <text x="190" y="402" text-anchor="middle" class="h hint">2 days of work</text>
+  <text x="190" y="424" text-anchor="middle" class="h hint">The one job you</text>
+  <text x="190" y="442" text-anchor="middle" class="h hint">actually had on Tuesday</text>
+
+  <!-- ARROW -->
+  <path d="M 330 280 Q 470 200 500 280 Q 530 360 670 280" class="arrow"/>
+  <text x="500" y="200" text-anchor="middle" class="h stamp-bad-text">10-week build · $15,000 · "interpreted the brief"</text>
+
+  <!-- RIGHT: the spaceship -->
+  <text x="830" y="78" text-anchor="middle" class="h stamp-bad-text">What got built</text>
+
+  <rect x="680" y="100" width="280" height="500" rx="8" class="panel-bad"/>
+  <text x="820" y="128" text-anchor="middle" class="h label">Admin Control Center v1.0</text>
+  <line x1="700" y1="142" x2="940" y2="142" stroke="#cc342d" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Tabs -->
+  <rect x="694" y="150" width="56" height="22" rx="4" class="btn-bad"/>
+  <text x="722" y="166" text-anchor="middle" class="h tiny">Users</text>
+  <rect x="754" y="150" width="56" height="22" rx="4" class="btn-bad"/>
+  <text x="782" y="166" text-anchor="middle" class="h tiny">Roles</text>
+  <rect x="814" y="150" width="56" height="22" rx="4" class="btn-bad"/>
+  <text x="842" y="166" text-anchor="middle" class="h tiny">Audit</text>
+  <rect x="874" y="150" width="64" height="22" rx="4" class="btn-bad"/>
+  <text x="906" y="166" text-anchor="middle" class="h tiny">Flags</text>
+
+  <!-- Role matrix grid -->
+  <text x="694" y="194" class="h body">Role × Permission matrix</text>
+  <g stroke="#cc342d" stroke-width="0.8" fill="#fff5f5">
+    <rect x="694" y="200" width="244" height="80"/>
+    <line x1="694" y1="220" x2="938" y2="220"/>
+    <line x1="694" y1="240" x2="938" y2="240"/>
+    <line x1="694" y1="260" x2="938" y2="260"/>
+    <line x1="724" y1="200" x2="724" y2="280"/>
+    <line x1="754" y1="200" x2="754" y2="280"/>
+    <line x1="784" y1="200" x2="784" y2="280"/>
+    <line x1="814" y1="200" x2="814" y2="280"/>
+    <line x1="844" y1="200" x2="844" y2="280"/>
+    <line x1="874" y1="200" x2="874" y2="280"/>
+    <line x1="904" y1="200" x2="904" y2="280"/>
+  </g>
+
+  <!-- Button grid (representing 47 buttons) -->
+  <text x="694" y="304" class="h body">Quick actions</text>
+  <g fill="#ffe5e5" stroke="#cc342d" stroke-width="1">
+    <rect x="694" y="310" width="38" height="22" rx="3"/>
+    <rect x="736" y="310" width="38" height="22" rx="3"/>
+    <rect x="778" y="310" width="38" height="22" rx="3"/>
+    <rect x="820" y="310" width="38" height="22" rx="3"/>
+    <rect x="862" y="310" width="38" height="22" rx="3"/>
+    <rect x="904" y="310" width="34" height="22" rx="3"/>
+
+    <rect x="694" y="336" width="38" height="22" rx="3"/>
+    <rect x="736" y="336" width="38" height="22" rx="3"/>
+    <rect x="778" y="336" width="38" height="22" rx="3"/>
+    <rect x="820" y="336" width="38" height="22" rx="3"/>
+    <rect x="862" y="336" width="38" height="22" rx="3"/>
+    <rect x="904" y="336" width="34" height="22" rx="3"/>
+
+    <rect x="694" y="362" width="38" height="22" rx="3"/>
+    <rect x="736" y="362" width="38" height="22" rx="3"/>
+    <rect x="778" y="362" width="38" height="22" rx="3"/>
+    <rect x="820" y="362" width="38" height="22" rx="3"/>
+    <rect x="862" y="362" width="38" height="22" rx="3"/>
+    <rect x="904" y="362" width="34" height="22" rx="3"/>
+
+    <rect x="694" y="388" width="38" height="22" rx="3"/>
+    <rect x="736" y="388" width="38" height="22" rx="3"/>
+    <rect x="778" y="388" width="38" height="22" rx="3"/>
+    <rect x="820" y="388" width="38" height="22" rx="3"/>
+    <rect x="862" y="388" width="38" height="22" rx="3"/>
+    <rect x="904" y="388" width="34" height="22" rx="3"/>
+  </g>
+  <text x="820" y="420" text-anchor="middle" class="h hint">(47 of them, mostly broken)</text>
+
+  <!-- Multi-tenant switcher + AI co-pilot -->
+  <rect x="694" y="436" width="244" height="40" rx="6" class="btn-bad"/>
+  <text x="816" y="461" text-anchor="middle" class="h body">Multi-tenant org switcher ▾</text>
+
+  <rect x="694" y="486" width="244" height="40" rx="6" class="btn-bad"/>
+  <text x="816" y="511" text-anchor="middle" class="h body">🤖 AI co-pilot · "Ask me anything"</text>
+
+  <text x="816" y="556" text-anchor="middle" class="h hint">5 tabs · 47 buttons · 1 role matrix</text>
+  <text x="816" y="574" text-anchor="middle" class="h hint">12 feature flags · 1 AI co-pilot</text>
+  <text x="816" y="592" text-anchor="middle" class="h hint">2 of these you actually use.</text>
+</svg>

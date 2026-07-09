@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="channel-title">
+  <title id="channel-title">Channel-by-ICP matrix - the right paid channel for the audience your hypothesis names</title>
+  <defs>
+    <style>
+      .heading  { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 30px; fill: #1a1a1a; font-weight: 700; }
+      .quad-h   { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 24px; fill: #cc342d; font-weight: 700; }
+      .icp      { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 20px; fill: #1a1a1a; font-weight: 700; }
+      .channel  { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 18px; fill: #1a1a1a; }
+      .note     { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 16px; fill: #555; font-style: italic; }
+      .cpc      { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 18px; fill: #a855f7; font-weight: 700; }
+      .quad-box { fill: #fff5f5; stroke: #cc342d; stroke-width: 2; stroke-linejoin: round; }
+      .alt      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <text x="450" y="36" class="heading" text-anchor="middle">Where the audience actually lives</text>
+  <text x="450" y="58" class="note" text-anchor="middle">Pick the channel where your customer scrolls, not the one YOU scroll.</text>
+
+  <!-- Top left: B2C -->
+  <rect x="60" y="80" width="380" height="190" class="quad-box" rx="8" transform="rotate(-0.2 250 175)"/>
+  <text x="80" y="110" class="icp">B2C consumer products</text>
+  <text x="80" y="138" class="quad-h">Meta (Facebook + Instagram)</text>
+  <text x="80" y="163" class="channel">Cheap CPMs, fast learning.</text>
+  <text x="80" y="183" class="channel">60% Instagram Reels / 40% Feed.</text>
+  <text x="80" y="206" class="cpc">$0.50-$2 per click</text>
+  <text x="80" y="228" class="note">Best targeting for consumer audiences.</text>
+
+  <!-- Top right: B2B -->
+  <rect x="460" y="80" width="380" height="190" class="quad-box" rx="8" transform="rotate(0.3 650 175)"/>
+  <text x="480" y="110" class="icp">B2B SaaS / professional services</text>
+  <text x="480" y="138" class="quad-h">LinkedIn or Google Search</text>
+  <text x="480" y="163" class="channel">LinkedIn: unaware audience.</text>
+  <text x="480" y="183" class="channel">Google: already searching for fix.</text>
+  <text x="480" y="206" class="cpc">$2-$20 per click</text>
+  <text x="480" y="228" class="note">Job-title + company-size targeting.</text>
+
+  <!-- Bottom left: Developer -->
+  <rect x="60" y="284" width="380" height="190" class="alt" rx="8" transform="rotate(0.4 250 379)"/>
+  <text x="80" y="314" class="icp">Developer tools / technical</text>
+  <text x="80" y="342" class="quad-h">Reddit or HN job listing</text>
+  <text x="80" y="367" class="channel">r/programming, r/webdev,</text>
+  <text x="80" y="387" class="channel">r/devops, r/SaaS.</text>
+  <text x="80" y="410" class="cpc">$1-$3 per click</text>
+  <text x="80" y="432" class="note">HN job board: $475 for 100K+ devs.</text>
+
+  <!-- Bottom right: Niche -->
+  <rect x="460" y="284" width="380" height="190" class="alt" rx="8" transform="rotate(-0.2 650 379)"/>
+  <text x="480" y="314" class="icp">Niche-vertical (real estate, dental,</text>
+  <text x="480" y="334" class="icp">contractors, etc.)</text>
+  <text x="480" y="362" class="quad-h">Google Search</text>
+  <text x="480" y="387" class="channel">Long-tail keywords with</text>
+  <text x="480" y="407" class="channel">clear purchase intent.</text>
+  <text x="480" y="430" class="cpc">$1-$8 per click</text>
+
+  <!-- Bottom rule -->
+  <rect x="60" y="488" width="780" height="40" class="quad-box" rx="8"/>
+  <text x="450" y="513" class="heading" text-anchor="middle">Twitter/X: decayed enough that we no longer recommend it for B2B validation in 2026.</text>
+</svg>

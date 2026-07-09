@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" role="img" aria-labelledby="fvo-title">
+  <title id="fvo-title">Feature-shaped brief vs outcome-shaped brief, with the system the engineer ends up building under each.</title>
+  <desc>A side-by-side comparison. Left card is feature-shaped: a one-line brief "Build a CSV export button" leads down to a sketch of a full BI suite with eight modules, three dashboards, scheduled email reports, and a role matrix. Right card is outcome-shaped: a longer brief "When I prepare the weekly investor report, I want to grab the top 5 metrics in 30 seconds, so I can paste them into the deck before the call" leads down to a sketch of a single button labeled "Copy top 5 metrics" above a small data table.</desc>
+  <defs>
+    <style>
+      .h { font-family: "Patrick Hand", "Caveat", "Comic Sans MS", cursive; }
+      .header { font-size: 26px; font-weight: bold; fill: #1a1a1a; }
+      .badtitle { font-size: 19px; font-weight: bold; fill: #cc342d; }
+      .goodtitle { font-size: 19px; font-weight: bold; fill: #2e7d32; }
+      .label { font-size: 15px; font-weight: bold; fill: #1a1a1a; }
+      .body { font-size: 13px; fill: #1a1a1a; }
+      .hint { font-size: 12px; fill: #888; font-style: italic; }
+      .card-bad  { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; }
+      .card-good { fill: #f0f9f0; stroke: #2e7d32; stroke-width: 2.5; }
+      .stamp-bad { fill: #cc342d; }
+      .stamp-good { fill: #2e7d32; }
+      .stamptext { font-size: 16px; font-weight: bold; fill: #fff; }
+      .box { fill: #fff; stroke: #1a1a1a; stroke-width: 1.5; }
+      .box-bad { fill: #ffe5e5; stroke: #cc342d; stroke-width: 1.2; }
+      .box-good { fill: #e6f4e6; stroke: #2e7d32; stroke-width: 1.8; }
+      .arrow { fill: none; stroke: #555; stroke-width: 2; marker-end: url(#tri); }
+    </style>
+    <marker id="tri" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="720" fill="#fafafa"/>
+
+  <text x="490" y="38" text-anchor="middle" class="h header">Same Friday brief. Two different builds.</text>
+
+  <!-- BAD CARD -->
+  <rect x="40" y="65" width="440" height="620" rx="8" class="card-bad" transform="rotate(-0.5 260 375)"/>
+
+  <rect x="60" y="82" width="100" height="26" rx="13" class="stamp-bad"/>
+  <text x="110" y="101" text-anchor="middle" class="h stamptext">FEATURE</text>
+
+  <text x="260" y="142" text-anchor="middle" class="h badtitle">"Build a CSV export button"</text>
+
+  <text x="60" y="178" class="h hint">(13 words. No persona, no context, no metric.)</text>
+
+  <line x1="260" y1="200" x2="260" y2="240" class="arrow"/>
+  <text x="260" y="260" text-anchor="middle" class="h label">What the engineer builds</text>
+
+  <!-- BI suite sketch -->
+  <rect x="60" y="278" width="400" height="320" rx="6" fill="#fff" stroke="#cc342d" stroke-width="1.5"/>
+  <text x="260" y="300" text-anchor="middle" class="h label">Reporting &amp; Analytics Module v1</text>
+
+  <rect x="78" y="316" width="118" height="40" class="box-bad"/>
+  <text x="137" y="340" text-anchor="middle" class="h body">Dashboards (3)</text>
+
+  <rect x="206" y="316" width="118" height="40" class="box-bad"/>
+  <text x="265" y="340" text-anchor="middle" class="h body">Scheduled email</text>
+
+  <rect x="334" y="316" width="118" height="40" class="box-bad"/>
+  <text x="393" y="340" text-anchor="middle" class="h body">Saved filters</text>
+
+  <rect x="78" y="368" width="118" height="40" class="box-bad"/>
+  <text x="137" y="392" text-anchor="middle" class="h body">CSV / XLSX / PDF</text>
+
+  <rect x="206" y="368" width="118" height="40" class="box-bad"/>
+  <text x="265" y="392" text-anchor="middle" class="h body">Custom columns</text>
+
+  <rect x="334" y="368" width="118" height="40" class="box-bad"/>
+  <text x="393" y="392" text-anchor="middle" class="h body">Role-based access</text>
+
+  <rect x="78" y="420" width="118" height="40" class="box-bad"/>
+  <text x="137" y="444" text-anchor="middle" class="h body">Date range picker</text>
+
+  <rect x="206" y="420" width="118" height="40" class="box-bad"/>
+  <text x="265" y="444" text-anchor="middle" class="h body">Export queue</text>
+
+  <rect x="334" y="420" width="118" height="40" class="box-bad"/>
+  <text x="393" y="444" text-anchor="middle" class="h body">Webhook on done</text>
+
+  <rect x="78" y="472" width="374" height="40" class="box-bad"/>
+  <text x="265" y="496" text-anchor="middle" class="h body">Audit log of every export, retention policy, S3 archive</text>
+
+  <text x="260" y="540" text-anchor="middle" class="h hint">9 features. 6 weeks of build.</text>
+  <text x="260" y="558" text-anchor="middle" class="h hint">You used 1 of them: the CSV button.</text>
+  <text x="260" y="582" text-anchor="middle" class="h hint">The other 8 added support cost</text>
+  <text x="260" y="600" text-anchor="middle" class="h hint">and complicated the next change.</text>
+
+  <text x="260" y="650" text-anchor="middle" class="h badtitle">Bill: $18,400</text>
+
+  <!-- GOOD CARD -->
+  <rect x="500" y="65" width="440" height="620" rx="8" class="card-good" transform="rotate(0.4 720 375)"/>
+
+  <rect x="520" y="82" width="100" height="26" rx="13" class="stamp-good"/>
+  <text x="570" y="101" text-anchor="middle" class="h stamptext">OUTCOME</text>
+
+  <text x="720" y="132" text-anchor="middle" class="h goodtitle">"When I prepare the weekly</text>
+  <text x="720" y="151" text-anchor="middle" class="h goodtitle">investor report, I want to grab</text>
+  <text x="720" y="170" text-anchor="middle" class="h goodtitle">the top 5 metrics in 30 seconds,</text>
+  <text x="720" y="189" text-anchor="middle" class="h goodtitle">so I can paste them into the deck</text>
+  <text x="720" y="208" text-anchor="middle" class="h goodtitle">before the 4pm call."</text>
+
+  <text x="520" y="232" class="h hint">(Same 13-second read. Names the moment, the</text>
+  <text x="520" y="250" class="h hint">action, the result, the deadline.)</text>
+
+  <line x1="720" y1="260" x2="720" y2="298" class="arrow"/>
+  <text x="720" y="316" text-anchor="middle" class="h label">What the engineer builds</text>
+
+  <!-- Single button sketch -->
+  <rect x="520" y="332" width="400" height="266" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="720" y="354" text-anchor="middle" class="h label">Dashboard footer</text>
+
+  <rect x="560" y="378" width="320" height="56" rx="8" class="box-good"/>
+  <text x="720" y="412" text-anchor="middle" class="h label">📋 Copy top 5 metrics to clipboard</text>
+
+  <text x="560" y="460" class="h body">MRR ………………………… £24,300</text>
+  <text x="560" y="482" class="h body">Net new MRR ……………… £1,840</text>
+  <text x="560" y="504" class="h body">Active accounts ……………… 312</text>
+  <text x="560" y="526" class="h body">Trial → paid conversion … 8.4%</text>
+  <text x="560" y="548" class="h body">Runway (months) ……………… 14</text>
+
+  <text x="720" y="582" text-anchor="middle" class="h hint">5 numbers. 1 button. 90 minutes to ship.</text>
+
+  <text x="720" y="650" text-anchor="middle" class="h goodtitle">Bill: $420</text>
+</svg>

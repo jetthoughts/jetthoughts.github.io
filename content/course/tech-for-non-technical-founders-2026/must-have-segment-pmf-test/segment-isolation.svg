@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="seg-title">
+  <title id="seg-title">Segment isolation: the must-have % hidden inside an average</title>
+  <defs>
+    <style>
+      .heading       { font-family: "Caveat", "Patrick Hand", cursive; font-size: 28px; fill: #1a1a1a; font-weight: 700; }
+      .label         { font-family: "Caveat", "Patrick Hand", cursive; font-size: 20px; fill: #1a1a1a; font-weight: 700; }
+      .note          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 16px; fill: #444; font-style: italic; }
+      .stat          { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #cc342d; font-weight: 700; }
+      .stat-pass     { font-family: "Caveat", "Patrick Hand", cursive; font-size: 26px; fill: #a855f7; font-weight: 700; }
+      .circle-a      { fill: #fff5f5; stroke: #cc342d; stroke-width: 2.5; opacity: 0.85; }
+      .circle-b      { fill: #fbe9ff; stroke: #a855f7; stroke-width: 2.5; opacity: 0.85; }
+      .circle-c      { fill: #fff8e0; stroke: #b8860b; stroke-width: 2.5; opacity: 0.85; }
+    </style>
+  </defs>
+
+  <text x="450" y="40" class="heading" text-anchor="middle">Average 28% looks like failure.</text>
+  <text x="450" y="68" class="heading" text-anchor="middle">Slice by segment and one bucket is 64%.</text>
+  <text x="450" y="98" class="note" text-anchor="middle">Same 28 responses. Different conclusion. The 64% segment is who you ship to next.</text>
+
+  <!-- Circle A: Marketers (high) -->
+  <ellipse cx="280" cy="320" rx="160" ry="120" class="circle-c" transform="rotate(-0.4 280 320)"/>
+  <text x="280" y="295" class="label" text-anchor="middle">B2B Marketers</text>
+  <text x="280" y="320" class="stat-pass" text-anchor="middle">64% must-have</text>
+  <text x="280" y="345" class="note" text-anchor="middle">9 of 14 said "very disappointed"</text>
+  <text x="280" y="365" class="note" text-anchor="middle">Use it daily. Already replaced a tool.</text>
+
+  <!-- Circle B: Solo founders (medium) -->
+  <ellipse cx="620" cy="320" rx="160" ry="120" class="circle-b" transform="rotate(0.3 620 320)"/>
+  <text x="620" y="295" class="label" text-anchor="middle">Solo Founders</text>
+  <text x="620" y="320" class="stat" text-anchor="middle">14% must-have</text>
+  <text x="620" y="345" class="note" text-anchor="middle">1 of 7 said "very disappointed"</text>
+  <text x="620" y="365" class="note" text-anchor="middle">Tried it once. Forgot it existed.</text>
+
+  <!-- Circle C: Agencies (low) -->
+  <ellipse cx="450" cy="465" rx="170" ry="80" class="circle-a" transform="rotate(0.4 450 465)"/>
+  <text x="450" y="450" class="label" text-anchor="middle">Agencies</text>
+  <text x="450" y="475" class="stat" text-anchor="middle">0% must-have</text>
+  <text x="450" y="498" class="note" text-anchor="middle">0 of 7. Already have an internal tool.</text>
+
+  <!-- Decision arrow -->
+  <text x="100" y="160" class="label">Now you know:</text>
+  <text x="100" y="185" class="note">→ Target B2B marketers next.</text>
+  <text x="100" y="207" class="note">→ Stop chasing solo founders for now.</text>
+  <text x="100" y="229" class="note">→ Agencies were never your buyer.</text>
+</svg>

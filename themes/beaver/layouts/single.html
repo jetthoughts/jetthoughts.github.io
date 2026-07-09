@@ -111,6 +111,11 @@
           {{ .Content }}
         </div>
 
+        {{/* Course prev/next nav strip - renders only on course chapter
+             pages (slug must be in data/course_sequence.yaml). Empty
+             string output on non-course posts. */}}
+        {{ partial "blog/course-prev-next.html" . }}
+
         {{/* Tags rendered after content - founders see education first,
              tags serve as navigation after reading. Editorial taxonomy
              style (ALL-CAPS labels) replaces hashtag style which signals

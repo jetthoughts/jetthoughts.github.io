@@ -19,23 +19,34 @@ Workflow references:
 - `docs/workflows/commands.md`
 - `docs/workflows/agents.md`
 
-Key commands:
+## Projects
+
+Projects live in `docs/projects/<project-id>/`. Each project follows a standard
+onboarding path:
+
+**First visit — read in this order:**
+1. `PROJECT-INDEX.md` — navigation hub, agent routes, integration rules
+2. `GOAL-AT-A-GLANCE.md` — one-page exec summary, strategy, metrics
+3. `.agent/prd/PRD.md` — formal spec (if PRD-driven project)
+4. `.agent/tasks.json` — machine-readable task graph (if PRD-driven)
+5. `TASK-TRACKER.md` — live task queue, migration schedule, active phase
+
+**Project health:** `.agent/STATUS.md` — cross-project RAG dashboard.
+Per-project PM health reports in `40-49-review/40.10-*.md`.
+
+**Skills:** Project-specific skills in `.skills/`. Global skills loaded via
+`skill` tool.
+
+**Key commands:**
 - `bin/hugo-build`
 - `bin/rake test:critical`
+- `bin/validate-course` (course projects only)
 
 <!-- lean-ctx-compression -->
-OUTPUT STYLE: expert-terse
-- Telegraph format: subject-verb-object, drop articles/prepositions
-- Symbolic vocabulary: → cause, ∵ because, ∴ therefore, ⊕ add, ⊖ remove, Δ change, ≈ similar, ≠ different, ∈ in/member, ∅ empty/none, ✓ ok, ✗ fail
-- Code blocks: untouched (never compress code syntax)
-- Each line: max 80 chars
-- Zero narration, zero filler
-- BUDGET: ≤100 tokens per non-code response
+OUTPUT STYLE: concise-default
+- Default: short replies (1-3 sentences or bullet list).
+- Expand only when user requests details or task requires explanation.
+- No preamble, no filler, no recaps unless asked.
+- Code blocks: untouched (never compress code syntax).
+- Each line: max 80 chars.
 <!-- /lean-ctx-compression -->
-
-<!-- lean-ctx -->
-## lean-ctx
-
-Prefer lean-ctx MCP tools over native equivalents for token savings.
-Full rules: @LEAN-CTX.md
-<!-- /lean-ctx -->

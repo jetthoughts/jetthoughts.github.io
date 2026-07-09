@@ -305,6 +305,48 @@ class DesktopSiteTest < ApplicationSystemTestCase
     verify_section_for("about_page", "footer", css: "footer")
   end
 
+  def test_course_nav_link_exists_on_homepage
+    # User can find the course from the homepage via the nav bar "Course" link.
+    # The link points to the namespaced course URL.
+    visit "/"
+    within_top_bar do
+      link = find("a", text: "Course", visible: true, wait: 5)
+      href = link[:href]
+      assert_match %r{/course/tech-for-non-technical-founders-2026/?\z}, href,
+        "Expected Course nav link to point to /course/tech-for-non-technical-founders-2026/, got: #{href}"
+    end
+  end
+
+  def test_course_landing_page_renders
+    # The course landing page renders with title + key sections.
+    visit "/course/tech-for-non-technical-founders-2026/"
+
+    within ".fl-heading" do
+      assert_text "From Idea to First Paying Customer"
+    end
+    assert_text "Why this course exists"
+    assert_text "Module map"
+  end
+
+  def test_visit_course_chapter_from_landing
+    # From the course landing, user can click into the first chapter (Founding Hypothesis).
+    visit "/course/tech-for-non-technical-founders-2026/"
+
+    within ".post-content" do
+      find("a", text: /Form Your Founding Hypothesis/, match: :first, visible: true).click
+    end
+
+    assert_current_path "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/", wait: 10
+    assert_text "Form Your Founding Hypothesis"
+  end
+
+  def test_old_blog_url_redirects_to_course
+    # Old /blog/<slug>/ URLs alias-redirect to the new /course/<namespace>/<slug>/ URL via Hugo meta-refresh.
+    # Capybara follows the meta-refresh automatically.
+    visit "/blog/form-your-founding-hypothesis-90-minute-sprint/"
+    assert_current_path "/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/", wait: 5
+  end
+
   private
 
   def verify_section_for(page_name, section_id, css: nil, **options)
