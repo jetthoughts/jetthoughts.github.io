@@ -37,7 +37,9 @@ hero_secondary_url: "/course/tech-for-non-technical-founders-2026/quickstart/"
 hero_secondary_text: "3-minute Quickstart"
 ---
 
-The first milestone comes fast: within two to three weeks at an evenings-and-weekends pace, you'll know whether your idea is worth building - a go/iterate/kill decision based on real demand data instead of polite nods from friends. You get there by writing a **Founding Hypothesis** (one sentence naming who your customer is, what problem you solve for them, and why they'd pick you over what they use now), shipping a **smoke-test page** (a landing page that describes your unbuilt product to see who signs up), running 300 cold strangers against it, and price-testing with a real Stripe payment link. That's Module 1. Four more modules take you from validated idea to a signed paid pilot.
+Five modules take you from that idea to a signed paid pilot: test demand with strangers, interview the people who respond, turn their words into a one-page brief, build the MVP yourself with no-code tools, and charge your first customer before you ship.
+
+The first checkpoint comes fast. Two to three weeks in, at an evenings-and-weekends pace, you'll know whether the idea is worth building at all - a go/iterate/kill verdict on your **Founding Hypothesis** (the one-sentence version of your idea: who the customer is, what problem you solve, why they'd pick you) from real demand data instead of polite nods from friends.
 
 Need orientation first? See the [Quickstart](/course/tech-for-non-technical-founders-2026/quickstart/) (3 min), [FAQ](/course/tech-for-non-technical-founders-2026/faq/) (15 common blockers), or [How This Course Works](/course/tech-for-non-technical-founders-2026/how-this-course-works/) (full route overview).
 
@@ -72,7 +74,7 @@ Read the modules in order. Each module's output is the next module's input, and 
 <div class="module-card" id="module-1">
   <span class="module-card__badge">Module 1</span>
   <h3>Hypothesis &amp; Smoke Test</h3>
-  <p class="module-card__output"><strong>Output:</strong> a one-sentence Founding Hypothesis + a live landing page with a Stripe price button.<br>
+  <p class="module-card__output"><strong>Output:</strong> a one-sentence Founding Hypothesis + a live <strong>smoke-test page</strong> (a landing page describing your unbuilt product, to see whether strangers sign up) with a Stripe price button.<br>
   <em>Start here if you don't have a one-sentence Founding Hypothesis yet, or you have one but never tested demand with a landing page.</em></p>
   <ol class="module-card__chapters">
     <li><span class="module-card__num">1.1</span> <a href="/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/">Form Your Founding Hypothesis</a></li>
