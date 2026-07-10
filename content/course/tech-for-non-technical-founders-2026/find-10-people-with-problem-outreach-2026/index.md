@@ -39,7 +39,7 @@ related_posts: false
 
 > **TL;DR:** Send 30 staggered messages referencing specific posts you read, using a 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close). Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't. Plan to extend the list once or twice before all 10 calls are booked.
 
-> **This is Part 2 of 2.** [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) covers the ICP mapping, reading threads, and building the 30-name list. You need the list from Part 1 before the templates below will work - generic openers collapse to 1-5% reply rates.
+> **Read [Chapter 2.3 - Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) first.** It covers the ICP mapping, reading threads, and building the 30-name list. You need that list before the templates below will work - generic openers collapse to 1-5% reply rates.
 
 > **How this chapter relates to Ch 2.6:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3-2.4 first to validate THE PROBLEM, then Ch 2.6 to validate THE SOLUTION SHAPE.
 

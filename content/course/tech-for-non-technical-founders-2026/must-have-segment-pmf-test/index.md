@@ -1,7 +1,7 @@
 ---
 title: "5.1 · Your First Customer Is Not a Marketing Problem"
 aliases: ["/blog/must-have-segment-pmf-test/"]
-description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your earliest users. The non-technical founder's pre-paid-traffic gut check."
+description: "Before you buy traffic, run the Sean Ellis 40% test against your earliest users. The non-technical founder's pre-paid-traffic gut check."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,7 +23,7 @@ cover_image: cover.png
 metatags:
   image: cover.png
   og_title: "5.1 · Your First Customer Is Not a Marketing Problem"
-  og_description: "Before spending a dollar on ads, run the Sean Ellis 40% test against your earliest users. The non-technical founder's pre-paid-traffic gut check."
+  og_description: "Before you buy traffic, run the Sean Ellis 40% test against your earliest users. The non-technical founder's pre-paid-traffic gut check."
 cover_image_alt: "JetThoughts blog cover showing a Sean Ellis 40% gauge with a red threshold line separating product problem from must-have user"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/"
 related_posts: false
