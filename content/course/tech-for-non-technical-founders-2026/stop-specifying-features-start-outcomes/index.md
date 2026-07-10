@@ -43,7 +43,7 @@ related_posts: false
 
 You sent your engineer (or your AI agent) a one-line spec: *"build a simple admin panel."* Ten weeks later you have an admin panel with 47 buttons, role-based permissions, an audit log, and a co-pilot AI assistant. Your engineer isn't a show-off - those four words "a simple admin panel" don't tell anyone what "simple" means, who's using the panel, or what the panel needs to do. The engineer (or the training data) filled in those blanks from every big-company SaaS panel they had ever seen.
 
-You finished Section 3 of your brief in the last lesson, so this page can feel like being asked to write it twice. It is not a rewrite for style - it is the 20-minute check that decides whether the builder ships the three buttons you meant or the spaceship above. The Section 3 you fix here is the exact text Module 4 pastes into Lovable.
+You finished Section 3 of your brief in the last lesson, so this page can feel like being asked to write it twice. It is not a rewrite for style - it is the 20-minute check that decides whether the builder ships the three buttons you meant or that 47-button spaceship. The Section 3 you fix here is the exact text Module 4 pastes into Lovable.
 
 ![A hand-drawn comparison: the simple three-button admin panel you asked for on the left, the absurdly complex 47-button control deck that got built on the right, connected by a red arrow labeled 10-week build, $15K](admin-panel-spaceship.svg)
 
