@@ -39,7 +39,7 @@
 
   <!-- Row 2 -->
   <text x="60" y="215" class="row">Validated problem (survived)</text>
-  <text x="280" y="215" class="row">Chapter 2.1</text>
+  <text x="280" y="215" class="row">Chapter 2.5</text>
   <text x="565" y="215" class="keep" text-anchor="middle">YES</text>
   <text x="650" y="215" class="row">Carry forward as anchor</text>
   <line x1="50" y1="230" x2="850" y2="230" class="row-line"/>
