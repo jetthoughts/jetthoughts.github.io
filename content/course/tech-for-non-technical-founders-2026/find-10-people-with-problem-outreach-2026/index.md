@@ -49,6 +49,8 @@ After this lesson you will be able to: **send outreach that names something the 
 
 ## What to write so they don't ignore you
 
+Nervous about messaging strangers? The asymmetry works in your favor: you're asking someone to talk about their own expertise and frustrations to a person who is actually listening - more people are flattered by that than bothered by it.
+
 Send 30 messages staggered, not in one burst. A handful a day, by hand, beats a single bulk-send. In outreach runs we've coached, reply rates land around 20-30% when each message names a specific post you read - 2-3 booked calls per batch, which is enough to hit 10 interviews when stacked with replies still trickling in.
 
 You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) booking link. If 6 a day by hand is too slow, [Gmail's multi-send](https://support.google.com/mail/) (daily caps vary by plan - check Google's current limits) or [Streak](https://www.streak.com/) does the mail merge for you. Reply by hand either way - the back-and-forth is where the interview actually gets booked.
