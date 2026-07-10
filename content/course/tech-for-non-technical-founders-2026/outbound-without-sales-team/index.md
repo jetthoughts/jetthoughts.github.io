@@ -1,5 +1,5 @@
 ---
-title: "5.5 · Going Outbound Without a Sales Team"
+title: "5.7 · Going Outbound Without a Sales Team"
 aliases: ["/blog/outbound-without-sales-team/"]
 description: "Once the network is exhausted, customers 11-20 come from filtered cold outbound. The Filter -> Loom -> Calendly -> Stripe pipeline, 4-line scripts."
 date: 2026-05-13
@@ -22,22 +22,22 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "5.5 · Going Outbound Without a Sales Team"
+  og_title: "5.7 · Going Outbound Without a Sales Team"
   og_description: "Once the network is exhausted, customers 11-20 come from filtered cold outbound. The Filter -> Loom -> Calendly -> Stripe pipeline, 4-line scripts."
 cover_image_alt: "JetThoughts blog cover showing a cold-outbound pipeline funnel from filtered list through Loom and Calendly to a signed Stripe invoice"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/"
 related_posts: false
 ---
 
-> **Module 5 · Step 5 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 5 · Lesson 5.7 · [OPTIONAL] - the systematic path when warm intros run out** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** network exhausted, ~10 customers in from [Chapter 5.3c](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+> **Input:** network exhausted, ~10 customers in from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
 > **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
 
 > **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name will book 1-2 paid pilots. Customers 11-20 come from cold outbound, not from launch events.
 
-> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.3c](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
+> **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 >
 > If you still have warm names in your network who fit your ICP, close them first. Cold outbound is harder, slower, and lower-converting than warm outreach.
 >
@@ -83,10 +83,10 @@ The cold-outbound pipeline in one glance:
 
 1. **Filter** - LinkedIn Sales Navigator or Apollo.io. Pull 100-150 raw rows, strip to 30 clean names.
 2. **Personalize** - 60-90 seconds per name. Read the profile and the last post, find one specific reference.
-3. **Loom** - Same product Loom from [Chapter 5.3b](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/). No re-record per prospect.
+3. **Loom** - Same product Loom from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/). No re-record per prospect.
 4. **Send** - LinkedIn DM or 4-line email. One personalized opener + the same body for everyone.
 5. **Calendly** - 15-min demo slot, auto-confirm. No back-and-forth scheduling.
-6. **Stripe** - DPA + deposit from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Money on the table before you start work.
+6. **Stripe** - DPA + deposit from [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Money on the table before you start work.
 
 The five tools and their 2026 pricing:
 
@@ -209,7 +209,7 @@ flowchart TB
     class W3,W7 conv;
 ```
 
-Expect a 10-20% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
+Expect a 10-20% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
 
 The 30-message batch is not a one-time event. Run fresh 30-message batches until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
 

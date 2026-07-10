@@ -1,7 +1,7 @@
 ---
-title: "4.4 · Vibe Coding Done Right: 5 Ceiling Signals"
+title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
 aliases: ["/blog/vibe-coding-ceiling-signals/"]
-description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 4.4 of the course."
+description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 4.5 of the course."
 date: 2026-05-13
 draft: false
 course_chapter: true
@@ -23,16 +23,16 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "4.4 · Vibe Coding Done Right: 5 Ceiling Signals"
-  og_description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 4.4 of the course."
+  og_title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
+  og_description: "The 5 architectural ceiling signals that tell you the Lovable + Supabase + Stripe shed stopped holding. Two firing = graduate. Chapter 4.5 of the course."
 cover_image_alt: "JetThoughts cover with three hand-drawn buildings - a small shed, a two-story house, and a tall skyscraper - and a sticky note reading Two ceiling signals = graduate."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/"
 related_posts: false
 ---
 
-> **Module 4 · Step 4 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 4 · Lesson 4.5 · [OPTIONAL] - a monthly review reference** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live MVP on the self-serve stack (from [Chapter 4.3a · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.3b · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/))
+> **Input:** a live MVP on the self-serve stack (from [Chapter 4.3 · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/))
 >
 > **Output:** a yes/no decision on whether to graduate to Module 5 (First Paying Customer) or hire or stay self-serve
 
@@ -50,7 +50,7 @@ The ceiling is visible now, but it was visible two months earlier too. That's wh
 
 Once your build goes live, run this 5-signal check monthly. Each signal that fires earlier saves rebuilds later. This is a proactive monitoring habit, not a post-mortem - the goal is to catch the ceiling before you slam into it.
 
-> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3 (a + b)); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The morning scene above is what the ceiling looks like when it actually arrives.
+> **This chapter is a monthly review reference, not an action-today chapter.** Your only action today: open your calendar and add a recurring monthly block titled "Vibe-coding 5-signal check." The first run is once the live MVP is up (Ch 4.3-4.5); until then, the chapter sits on the shelf. If you haven't shipped a live MVP yet, bookmark this and come back the moment you have real users clicking around. The morning scene above is what the ceiling looks like when it actually arrives.
 
 ![A hand-drawn scoreboard showing the 5 architectural ceiling signals: data model, real-time, auth complexity, AI cost, compliance. Each row has the visible symptom and the recommended action.](signals-scoreboard.svg)
 
@@ -220,15 +220,15 @@ Three actions. The first is tonight.
 
 ## Artifacts you carry out of Module 4
 
-After finishing Ch 4.1-4.4, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 4.1-4.5, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|
-| **Build-path decision** (validate / self-serve / fractional CTO / hire - chosen and dated, from Ch 4.1) | Module 5 outbound posture. The build path determines whether you sell a live MVP (self-serve, hire) or a Carrd + Stripe pre-sale (validate path), which decides the Ch 5.2-5.5 scripts you use. |
-| **Ownership audit results** (12-item checklist - GitHub, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys, monitoring, status page - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.4 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
-| **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3 (a + b)) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
-| **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.4, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
-| **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Ch 2.3-2.4 outreach** (from Ch 4.3 (a + b) onboarding) | Ch 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Ch 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Ch 2.3-2.4 interview leads as Ch 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Ch 5.2-5.5 outbound. |
+| **Build-path decision** (validate / self-serve / fractional CTO / hire - chosen and dated, from Ch 4.1) | Module 5 outbound posture. The build path determines whether you sell a live MVP (self-serve, hire) or a Carrd + Stripe pre-sale (validate path), which decides the Ch 5.2-5.7 scripts you use. |
+| **Ownership audit results** (12-item checklist - GitHub, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys, monitoring, status page - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.6 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
+| **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3-4.5) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
+| **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.5, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
+| **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Ch 2.3-2.4 outreach** (from Ch 4.3-4.5 onboarding) | Ch 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Ch 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Ch 2.3-2.4 interview leads as Ch 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Ch 5.2-5.7 outbound. |
 
 Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Both beat watching the codebase get worse.
 
@@ -248,7 +248,7 @@ Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Bot
 >
 > **If blocked:** If 2+ signals are red but you are not sure whether to hire, book one free Fractional CTO call. The first call is usually free and the diagnosis alone is worth the hour.
 
-> **Module 4 closes here.** Before opening Module 5, you should have: (1) a build-path decision from the Ch 4.1 tree (self-serve / fractional CTO / hire), (2) a Day-1 ownership audit passed (Ch 4.2 - GitHub + AWS + domain all in your name), (3) a live MVP at a real URL with 5 ICP users tested + 5 green lights lit (Ch 4.3b), and (4) a monthly 5-signal ceiling check on the calendar (this chapter). All four in your `Founder OS` folder. Missing one? Go back - Module 5 invites your Module 2 interviewees + smoke-test email list to your URL; if there's no URL, there's no Module 5.
+> **Module 4 closes here.** Before opening Module 5, you should have: (1) a build-path decision from the Ch 4.1 tree (self-serve / fractional CTO / hire), (2) a Day-1 ownership audit passed (Ch 4.2 - GitHub + AWS + domain all in your name), (3) a live MVP at a real URL with 5 ICP users tested + 5 green lights lit (Ch 4.4), and (4) a monthly 5-signal ceiling check on the calendar (this chapter). All four in your `Founder OS` folder. Missing one? Go back - Module 5 invites your Module 2 interviewees + smoke-test email list to your URL; if there's no URL, there's no Module 5.
 
 > **Case Study: Tomas & Mia**
 >

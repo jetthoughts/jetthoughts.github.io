@@ -1,5 +1,5 @@
 ---
-title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
+title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
 aliases: ["/blog/paid-pilot-charge-before-ship/"]
 description: "A verbal yes is not a paid pilot. A refundable Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
 date: 2026-05-13
@@ -22,16 +22,16 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
+  og_title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
   og_description: "A verbal yes is not a paid pilot. A refundable Stripe deposit signed before kickoff is. The one-page Design Partner Agreement and a Stripe Checkout setup."
 cover_image_alt: "JetThoughts blog cover showing a one-page Design Partner Agreement with the deposit clause highlighted"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/"
 related_posts: false
 ---
 
-> **Module 5 · Step 4 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 5 · Lesson 5.6 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 3-5 warm leads from [Chapter 5.3c](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
+> **Input:** 3-5 warm leads from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
 >
 > **Output:** 1 signed paid pilot before any new code ships
 
@@ -86,7 +86,7 @@ The **scope of pilot** section is where new founders over-spec. Keep it to three
 
 The **pilot fee and deposit** clause is what makes everything else work. The deposit lands at 10-30% of projected year-one annual contract value (ACV), paid via Stripe before pilot kickoff and credited dollar-for-dollar against the year-one invoice on conversion. If the customer cancels before week 4, they forfeit the deposit (their commitment). If the founder cancels for any reason, the founder refunds 100% (your commitment). Pricing math is below.
 
-The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Chapter 5.3c replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
+The **success criteria** clause is what makes the DPA a real contract instead of a handshake. Pick three measurable outcomes the pilot is supposed to produce (for example, hours saved per week, errors avoided per month, or revenue lifted per quarter), worded in the customer's verbatim language from the [Chapter 5.5 replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 
 If two of three are hit by week 6, the year-one contract auto-converts unless the customer opts out in writing. If fewer than two are hit, both parties walk and the founder retains the deposit as paid consideration for the pilot work.
 
@@ -227,7 +227,7 @@ If you do want to wire the payment into a Rails app for record-keeping later, th
 
 ## The conversation script
 
-You have a warm lead from [Chapter 5.3c](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
+You have a warm lead from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) who booked a 20-minute demo, the demo went well, and they said something close to "yes, I would love to try this with my team." The default first-time-founder move is to soften here. The 15-second script that does not soften:
 
 > "Glad it resonates. Quick word on how I am setting up pilots - I am running them as paid design partnerships, so the customer has skin in the game and I have a real signal. The deposit is [$500-$6K], credited toward year one on conversion. Refunded in full if I cannot deliver on the success criteria. Want me to send the one-pager?"
 
@@ -290,7 +290,7 @@ The paid pilot is the default, but it has three honest exceptions.
 | **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.3 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
 | **3** | Bank your first deposit. Schedule pilot kickoff and the first Friday demo cadence. | Deposit cleared. Kickoff scheduled. Pilot officially started. |
 
-**If you do not have warm demos yet**, your work is still in [Chapter 5.3a](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). The DPA is the wrong sprint for an empty pipeline.
+**If you do not have warm demos yet**, your work is still in [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). The DPA is the wrong sprint for an empty pipeline.
 
 ## Advanced (optional sidebar)
 
@@ -312,7 +312,7 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 > **Done when:** One DPA is signed and the Stripe deposit has cleared in your account.
 > **Founder OS · Artifact #6 of 6:** A signed Design Partner Agreement + cleared deposit. Save the executed PDF + Stripe receipt in your `Founder OS` folder. This is the artifact investors fund; you can now point to it and say "someone who doesn't know me paid real money for this."
 >
-> **Next click:** [5.5 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
+> **Next click:** [5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
 >
 > **If blocked:** If the customer says "can we start free and convert later," reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, they are not in your must-have segment - move to the next lead.
 

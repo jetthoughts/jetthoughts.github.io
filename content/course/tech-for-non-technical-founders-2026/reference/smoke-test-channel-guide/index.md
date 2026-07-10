@@ -19,7 +19,7 @@ The dollar cost of 300 visits depends entirely on channel CPC (cost-per-click), 
 | Meta / Instagram | Consumer products | $0.70-$1.90 | $210-$570 |
 | Reddit Ads | Developer tools, niche communities | $1.25-$3.00 | $375-$900 |
 | Google Search | B2B with named search intent | $3-$8 | $900-$2,400 |
-| LinkedIn | B2B sold by job title | $5.50-$22 | $1,650-$6,600 |
+| LinkedIn | B2B sold by job title | $5.70-$22 | $1,650-$6,600 |
 
 *Sources: [WordStream Meta benchmarks 2026](https://www.wordstream.com/blog/facebook-ads-benchmarks-2025); [WordStream Google Ads benchmarks 2026](https://www.wordstream.com/blog/2026-google-ads-benchmarks); [The B2B House LinkedIn benchmarks 2026](https://www.theb2bhouse.com/linkedin-ad-benchmarks/); [Stackmatix Reddit Ads 2026](https://www.stackmatix.com/blog/reddit-ads-cost-per-click).*
 
@@ -62,7 +62,7 @@ Use one of these, run it the same way until the numbers stabilize, read the resu
 **Skip when:** Customer 55+ OR enterprise.
 
 ### B2B / Job-Title-Sold
-**Channel:** LinkedIn ($5.50-$22 CPC) OR Google Search ($3-$8).
+**Channel:** LinkedIn ($5.70-$22 CPC) OR Google Search ($3-$8).
 **When to pick:** LinkedIn for unaware audiences; Google for active searchers.
 **Skip when:** Consumer or under-25 audience.
 
@@ -121,7 +121,7 @@ You picked your channel above and created your ad account. Here are the settings
 ### LinkedIn Ads
 
 1. **Campaign objective:** Website visits.
-2. **Budget:** $50-80/day minimum (LinkedIn CPC is $5.50-$22). If this is too steep, use the B2B budget alternatives section above instead.
+2. **Budget:** $50-80/day minimum (LinkedIn CPC is $5.70-$22). If this is too steep, use the B2B budget alternatives section above instead.
 3. **Audience:** Job title + industry + company size. Use your [customer] blank literally. If your hypothesis says "CTOs at 20-50 person SaaS companies," target exactly that. Do not broaden - on LinkedIn, narrow targeting is cheaper (less competition per audience slice).
 4. **Ad format:** Single image ad.
 5. **Ad creative:** Intro text: your value prop (keep it professional - LinkedIn readers expect B2B tone). Headline: your landing page headline. Image: your hero image or a simple text-on-color card. CTA: "Learn More" or "Sign Up." Destination: your landing page.

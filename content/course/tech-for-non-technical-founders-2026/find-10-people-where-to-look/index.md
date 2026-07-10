@@ -167,7 +167,7 @@ Aim for 30 hand-picked people in one focused sitting.
 
 If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based, no credit card - a small monthly allowance of email and export credits) lets you filter on role + industry + company size and export the rest (the monthly export allowance is small, so this fills the gap over several weeks, not one sitting). Treat it as backfill, not the source - the hand-picked names always perform better.
 
-> **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+> **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
 Filter the final list on six dimensions:
 

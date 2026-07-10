@@ -87,15 +87,15 @@ Your Section 3 is too vague. Rewrite every feature as a "When / I want / So I ca
 
 **Q: I don't know whether to hire or build myself.**
 
-Run the [Ch 4.1 decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/). The default answer for a first-time solo founder with a validated brief: build it yourself with Lovable + Supabase + Stripe. Hiring triggers when you hit a [Ch 4.4 ceiling signal](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) - not before.
+Run the [Ch 4.1 decision tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/). The default answer for a first-time solo founder with a validated brief: build it yourself with Lovable + Supabase + Stripe. Hiring triggers when you hit a [Ch 4.5 ceiling signal](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) - not before.
 
 **Q: The 12 rules checklist is overwhelming. Where do I even start?**
 
-Only 3 rules need to be true before you open Lovable: (1) your one-page brief passed the Ch 3.2 quality-gate, (2) you scoped one workflow for one persona, (3) GitHub sync is on in Lovable Settings. The other 9 rules fire inline during the build. Read the [Ch 4.3a chapter](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) for the full list.
+Only 3 rules need to be true before you open Lovable: (1) your one-page brief passed the Ch 3.2 quality-gate, (2) you scoped one workflow for one persona, (3) GitHub sync is on in Lovable Settings. The other 9 rules fire inline during the build. Read the [Ch 4.3 chapter](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) for the full list.
 
 **Q: Lovable generated a sprawling admin panel from my one-page brief.**
 
-Your brief's Section 3 is feature-shaped. Go back to [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) and rewrite every feature as a "When / I want / So I can" outcome before you re-prompt Lovable. Then use the AI critic block in [Ch 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) to audit your build against your brief.
+Your brief's Section 3 is feature-shaped. Go back to [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) and rewrite every feature as a "When / I want / So I can" outcome before you re-prompt Lovable. Then use the AI critic block in [Ch 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) to audit your build against your brief.
 
 ---
 
@@ -103,11 +103,11 @@ Your brief's Section 3 is feature-shaped. Go back to [Ch 3.2](/course/tech-for-n
 
 **Q: I'm terrified of asking for money. How do I start?**
 
-The deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. Send the [DPA template](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template) to your warmest lead first. A refundable deposit at kickoff is easier to ask for than a full-price sale. The [Ch 5.4 chapter](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) has the exact contract template.
+The deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. Send the [DPA template](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/#dpa-template) to your warmest lead first. A refundable deposit at kickoff is easier to ask for than a full-price sale. The [Ch 5.6 chapter](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) has the exact contract template.
 
 **Q: My personal network only has 5 names. What do I do?**
 
-Five is enough to start. Message all five before you try cold outbound - people who already know you reply and close at many times the rate of cold strangers, which is why [Ch 5.3a](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) runs the warm list first. If your network truly has zero applicable names, skip to [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+Five is enough to start. Message all five before you try cold outbound - people who already know you reply and close at many times the rate of cold strangers, which is why [Ch 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) runs the warm list first. If your network truly has zero applicable names, skip to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
 **Q: The customer wants to start free and convert later. Should I accept?**
 

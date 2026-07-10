@@ -158,9 +158,9 @@ After finishing Ch 3.1-3.2, you have five artifacts. Each one feeds a specific d
 
 | Artifact | Where it goes next |
 |---|---|
-| **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3 (a + b) Lovable kickoff prompt. The single source of truth Module 4 builds from. |
-| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (Statement of Work - the document that tells a contractor exactly what to build) if you route to hire + Ch 4.3 (a + b) Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
-| **No-Go list** (5-8 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3 (a + b) self-serve scope guard + Ch 4.4 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
+| **One-Page Product Brief / Vibe PRD** (Ch 3.1 output) | Ch 4.1 build-path decision (the brief is the input the worksheet routes against) + Ch 4.3-4.5 Lovable kickoff prompt. The single source of truth Module 4 builds from. |
+| **Outcome-shaped feature list** (Ch 3.2 rewrite of Section 3 in Job Story format) | Ch 4.1 contractor SOW (Statement of Work - the document that tells a contractor exactly what to build) if you route to hire + Ch 4.3-4.5 Lovable prompt body. Replaces the noun-shaped feature list that causes overbuild. |
+| **No-Go list** (5-8 items you explicitly cut from Ch 3.1 Section 5) | Ch 4.3-4.5 self-serve scope guard + Ch 4.5 ceiling-signal monitoring. The written "we are not building this yet" line that prevents Module 4 scope creep. |
 | **Audience-of-one fork** (the audience choice from Ch 3.1: AI agent / junior dev / senior team) | Ch 4.1 Q2 build-path routing. The fork decides whether the brief routes to Lovable (AI agent) or a contractor (junior or senior team). |
 | **Quality-check verdict** (Ch 3.2 - peer answers "what would you build differently?" cleanly?) | Checkpoint before Module 4. If the peer cannot answer cleanly, return to Ch 3.2 and rewrite Section 3 before opening Lovable or sending the SOW. |
 

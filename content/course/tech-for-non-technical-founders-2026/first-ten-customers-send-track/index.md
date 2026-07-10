@@ -1,5 +1,5 @@
 ---
-title: "5.3c · Send, Track, and Read the Replies"
+title: "5.5 · Send, Track, and Read the Replies"
 description: "Send your 50 outreach messages in the right order, track the replies, and diagnose what the responses tell you."
 date: 2026-07-07
 draft: false
@@ -19,9 +19,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Lesson 5.3c · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 5 · Lesson 5.5 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 4 message templates + Loom from [Lesson 5.3b](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
+> **Input:** 4 message templates + Loom from [Lesson 5.4](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
 >
 > **Output:** 50 messages sent, replies tracked, "no" responses diagnosed
 >
@@ -68,7 +68,7 @@ A "no" from a cold-bucket name is a non-event. They were never the right name. M
 
 ---
 
-**If this fails: you get fewer than 5 replies.** **Why:** your openers aren't specific enough, or your network is too small for warm motion. **Fix:** tighten the opener on your next 5 messages. If the next 5 still produce under 2 replies, your network is exhausted. Move to [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+**If this fails: you get fewer than 5 replies.** **Why:** your openers aren't specific enough, or your network is too small for warm motion. **Fix:** tighten the opener on your next 5 messages. If the next 5 still produce under 2 replies, your network is exhausted. Move to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
 **If this fails: a champion says no.** **Why:** the problem moved, the buying motion is wrong, or you missed the brief. **Fix:** reply with a single question from the table above. A "no" from a champion is the most expensive feedback you'll get all year. Extract the signal before you move on.
 
@@ -80,11 +80,11 @@ A "no" from cold is noise. A "no" from a champion is the single most useful piec
 
 > **Done:** 50 messages sent, replies tracked, "no" responses diagnosed.
 >
-> **You have now:** warm-network outreach complete (5.3a/b/c). Your first paid pilots are one conversation away.
+> **You have now:** warm-network outreach complete (5.3-5.7). Your first paid pilots are one conversation away.
 >
-> **Next:** [5.4 · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - the one-page DPA and Stripe deposit that converts a demo into a signed pilot.
+> **Next:** [5.6 · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - the one-page DPA and Stripe deposit that converts a demo into a signed pilot.
 >
-> **If blocked:** see "If this fails" above. If your warm network produced fewer than 3 demos, move to [Ch 5.5](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound in parallel, not sequentially.
+> **If blocked:** see "If this fails" above. If your warm network produced fewer than 3 demos, move to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound in parallel, not sequentially.
 
 ---
 

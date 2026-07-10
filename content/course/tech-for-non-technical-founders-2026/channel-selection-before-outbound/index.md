@@ -30,9 +30,9 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Step 2 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 5 · Lesson 5.2 · [OPTIONAL] - skip if you already know your channel** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.3b) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
+> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.4) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
 
@@ -228,16 +228,16 @@ With 30 focused messages you get a reply rate you can diagnose; with 10 messages
 
 Pick the channel your interviews point to, write it down, and give it a real run before you question it.
 
-The first place to apply this is your personal network in [Chapter 5.3a (Build Your 50-Name Network List)](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
+The first place to apply this is your personal network in [Chapter 5.3 (Build Your 50-Name Network List)](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
 
 ## What to do tomorrow
 
 1. Open the worksheet above and score each of the 4 channels against your customer interview answers. Pick the one that maps to the most evidence.
 2. Write the channel name + your commitment statement in a Notion doc. The clock starts the day you send your first outbound message.
-3. Read [Chapter 5.3a - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
+3. Read [Chapter 5.3 - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
 
 > **Module 5, Step 2 of 5** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
-> Next: [5.3a · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+> Next: [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
 > Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 
 Pick the channel your interviews already named, commit to it long enough to read the signal, and stop running pilots against your own attention.
@@ -251,7 +251,7 @@ Pick the channel your interviews already named, commit to it long enough to read
 
 > **Done when:** Your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
 >
-> **Next click:** [5.3a · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+> **Next click:** [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
 >
 > **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
 

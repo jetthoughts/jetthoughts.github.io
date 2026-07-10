@@ -1,5 +1,5 @@
 ---
-title: "4.3b · The Self-Serve MVP Stack: Build Phases"
+title: "4.4 · The Self-Serve MVP Stack: Build Phases"
 description: "The build plan: 4 phases from Lovable UI to live Stripe checkout. Phase exit criteria, 5 green lights, and the Module 5 handoff. Part 2 of Chapter 4.3."
 date: 2026-05-18
 draft: false
@@ -21,14 +21,14 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "4.3b · The Self-Serve MVP Stack: Build Phases"
+  og_title: "4.4 · The Self-Serve MVP Stack: Build Phases"
   og_description: "The build plan: 4 phases from Lovable UI to live Stripe checkout. Phase exit criteria, 5 green lights, and the Module 5 handoff."
 cover_image_alt: "JetThoughts cover showing three hand-drawn stacked layers labeled Lovable, Supabase, and Stripe with arrows linking them, and a sticky note reading Ship by Friday week 4."
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/"
 related_posts: false
 ---
 
-> **Module 4 · Step 3b of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 4 · Lesson 4.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Part 2 of 2** · [Part 1: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) covers why these three tools, what each one does, the 12 rules, communities, and the AI critic block.
 >
@@ -152,11 +152,11 @@ The [Module 4 post](/course/tech-for-non-technical-founders-2026/should-you-hire
 
 Be honest about the trade-off. This stack cannot host every business. It can host yours through the first 10 paying customers, which is the only data point that earns you the right to argue about the next architecture.
 
-## The architectural ceiling - what's coming in Chapter 4.4
+## The architectural ceiling - what's coming in Chapter 4.5
 
-The stack holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Chapter 4.4 - Proactive Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)) walks through each one with the threshold to watch.
+The stack holds until it doesn't. Five specific signals tell you the ceiling is close. The next chapter ([Chapter 4.5 - Proactive Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)) walks through each one with the threshold to watch.
 
-Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.4 names the metrics.
+Quick preview: scale beyond roughly 10,000 users, complex data model that no longer fits a single Supabase project, real-time features the auto-generated REST API cannot serve, security or compliance scope that needs an external audit, AI inference at scale where per-request cost crosses pennies. When you see two of these, route to the [hire-track supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) or to a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) for the architecture call. Architecture does not collapse overnight; the warning shows up in the metrics before the customer sees it. Chapter 4.5 names the metrics.
 
 What the stack actually costs, per published vendor pricing:
 
@@ -166,7 +166,7 @@ What the stack actually costs, per published vendor pricing:
 | First ship | Per-tool monthly fees | Lovable + Supabase entry paid tiers + a .com domain (~$10/yr) + Resend entry tier + Stripe per-transaction fees |
 | Post-launch | Scale-tier monthly fees | Lovable scale tier + Supabase paid tier + Resend/Sentry/monitoring paid tiers - check vendor pricing pages |
 
-The architectural ceiling tends to land at the post-launch tier - at ~10K users, route to Chapter 4.4 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
+The architectural ceiling tends to land at the post-launch tier - at ~10K users, route to Chapter 4.5 or a [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge). A hire-a-team build is material monthly burn before revenue; this stack ships the same first 10 paying customers on a fraction of that.
 
 ## What to do tomorrow
 
@@ -205,7 +205,7 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 >
 > **Founder OS · Artifact #5 of 6:** A live MVP at a real URL, with ownership of every account in your name (per Ch 4.2's Day-1 ownership audit). Save the URL + admin login + the latest weekly demo recording in a `Live MVP` doc in your `Founder OS` folder. Module 5 invites your Module 2 interviewees + smoke-test email list to this URL as the warm seed for the first 10-30 users.
 >
-> **Next click:** [4.4 · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
+> **Next click:** [4.5 · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
 >
 > **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in Stripe test mode first. The communities section in Part 1 lists free help channels.
 

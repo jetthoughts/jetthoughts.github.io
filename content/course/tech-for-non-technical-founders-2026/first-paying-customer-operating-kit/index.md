@@ -62,13 +62,13 @@ flowchart TB
 
 ### 1. 50-name network list template (Google Sheets)
 
-The fill-in spreadsheet from [Chapter 5.3a](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
+The fill-in spreadsheet from [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Six columns - Name, Company, Role, Bucket, Relationship strength, Last contact date - plus four progress columns for tracking replies and demos. Pre-sorted by bucket: 5 champions on top, then 10 hot, 15 warm, 20 cold. Three blank rows in each bucket for week-2 additions.
 
 In practice: turns a vague "I should reach out to people" instinct into 50 named messages going out by Friday EOD.
 
 ### 2. Cold-email scripts (3 variants)
 
-The verbatim 4-line scripts from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
+The verbatim 4-line scripts from [Chapter 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Three sector-specific versions:
 
 - **B2B SaaS Rails context** - the script for founders who built on Rails and are selling to operators in the same space.
 - **B2B services** - for fractional CTOs, consultancies, and managed-services founders who sell time rather than license.
@@ -80,7 +80,7 @@ Why it matters: removes the "what do I say in the email" friction so you spend 6
 
 ### 3. Design Partner Agreement template (one-page LOI + paid pilot)
 
-The one-page DPA from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
+The one-page DPA from [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/). Six sections plus signature block. Plain English, mutual-edit document, no lawyer required for v1. Comes in three formats: Google Docs (default), PDF (for customers who want to print), DocuSign-import (for customers who want to e-sign with audit trail).
 
 Two annotated examples: a $1,500 B2B SaaS pilot DPA and a $5,000 B2B services pilot DPA, both based on real (anonymized) 2026 founder deals.
 
@@ -169,7 +169,7 @@ Result: 24 hours from "I should run the test" to a scored result you can act on.
 
 ### 6. The "First 10 Customers" Airtable tracker
 
-The Airtable base from [Chapter 5.4](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
+The Airtable base from [Chapter 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Pre-filled columns - Name, Company, Bucket, Loom sent, Reply, Demo, DPA sent, Deposit - with color-coded bucket pills (champion / hot / warm / cold) and date stamps on every progress column. Filters: "Replied this week," "Demo this week," "Pilot landed this month."
 
 ![Sample row from the First 10 Customers Airtable tracker](kit-sample-row.svg)
 

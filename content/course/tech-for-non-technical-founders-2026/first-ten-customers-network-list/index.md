@@ -1,5 +1,5 @@
 ---
-title: "5.3a · Build Your 50-Name Network List"
+title: "5.3 · Build Your 50-Name Network List"
 description: "Build a 50-name list of people who already know you and sort them into 4 outreach buckets."
 date: 2026-07-07
 draft: false
@@ -19,7 +19,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Lesson 5.3a · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 5 · Lesson 5.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** must-have-user persona + 1 named segment from [Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
 >
@@ -55,8 +55,8 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 > | Count | What this means | Your path |
 > |---|---|---|
 > | **30+** | Standard warm motion works. | Continue below. |
-> | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Ch 5.5](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
-> | **Under 15** | Your network doesn't contain the ICP segment. | Skip to [Ch 5.5](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
+> | **15-29** | Reduced warm motion. Build smaller buckets: 2 champions + 5 hot + 8 warm + 5 cold. You'll need cold outbound ([Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)) in parallel. |
+> | **Under 15** | Your network doesn't contain the ICP segment. | Skip to [Ch 5.7](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) cold outbound. |
 
 ---
 
@@ -70,7 +70,7 @@ Open a Google Sheet. Six columns: Name, Company, Role, Bucket, Relationship stre
 
 ---
 
-**If this fails: your network is under 15 names after filtering.** **Why:** your must-have segment isn't represented in your professional network. **Fix:** skip to [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
+**If this fails: your network is under 15 names after filtering.** **Why:** your must-have segment isn't represented in your professional network. **Fix:** skip to [Ch 5.7 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/). Use community fallbacks (Indie Hackers, sector Slack, Reddit) as warm-cold hybrid messages.
 
 ---
 
@@ -80,9 +80,9 @@ Count your champions out loud. That's the number of people who've already told y
 
 > **Done:** 50 names sorted into 4 buckets, champions identified.
 >
-> **You have now:** must-have segment (5.1) + channel commitment (5.2) + sorted 50-name list (5.3a). The message is next.
+> **You have now:** must-have segment (5.1) + channel commitment (5.2) + sorted 50-name list (5.3). The message is next.
 >
-> **Next:** [5.3b · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) - turns your bucket list into 4 message templates with a recorded Loom.
+> **Next:** [5.4 · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) - turns your bucket list into 4 message templates with a recorded Loom.
 >
 > **If blocked:** see "If this fails" above.
 
