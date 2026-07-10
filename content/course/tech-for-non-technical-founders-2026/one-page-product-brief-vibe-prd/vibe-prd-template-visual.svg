@@ -28,7 +28,7 @@
 
   <!-- Header -->
   <text x="480" y="78" text-anchor="middle" class="sans header">Vibe PRD - One-Page Product Brief</text>
-  <text x="480" y="102" text-anchor="middle" class="sans hint">Fill in one 90-minute sitting, after the validated problem statement. Hand to Lovable, Cursor, or a hired junior.</text>
+  <text x="480" y="102" text-anchor="middle" class="sans hint">One 90-minute sitting. Hand to Lovable, Cursor, or a hired junior.</text>
 
   <line x1="150" y1="122" x2="850" y2="122" class="line"/>
 
@@ -48,7 +48,7 @@
   <text x="160" y="332" class="sans body">Who they are while using your product: __________________</text>
   <text x="160" y="356" class="sans body">60 seconds before reaching for it: ______________________</text>
   <text x="160" y="380" class="sans body">60 seconds after they close it: _________________________</text>
-  <text x="160" y="404" class="sans hint">e.g., "Founder alone at 9pm, Stripe + QuickBooks tabs open, wants to be done in 10 min."</text>
+  <text x="160" y="404" class="sans hint">e.g., "Founder alone at 9pm, two finance tabs open, wants done in 10 min."</text>
 
   <line x1="150" y1="428" x2="850" y2="428" class="line"/>
 
@@ -58,7 +58,7 @@
   <text x="160" y="488" class="sans body">Smallest end-to-end thing the user can do: ______________</text>
   <text x="160" y="512" class="sans body">Inputs they provide + output they get back: _____________</text>
   <text x="160" y="536" class="sans body">What v1 explicitly supports (scope of done): ____________</text>
-  <text x="160" y="560" class="sans hint">e.g., "Paste Stripe CSV. Get QuickBooks journal entry CSV. USD only. Magic-link auth."</text>
+  <text x="160" y="560" class="sans hint">e.g., "Paste Stripe CSV. Get QuickBooks CSV back. USD only. Magic-link auth."</text>
 
   <line x1="150" y1="584" x2="850" y2="584" class="line"/>
 
@@ -67,7 +67,7 @@
   <text x="194" y="620" class="sans stitle">Success metric (one number)</text>
   <text x="160" y="644" class="sans body">Number + unit + timeframe: ______________________________</text>
   <text x="160" y="668" class="sans body">How it's measured (event name, not gut feel): ___________</text>
-  <text x="160" y="692" class="sans hint">e.g., "10 of first 20 signups convert at least 1 file within 30 days. Event: conversion_completed."</text>
+  <text x="160" y="692" class="sans hint">e.g., "10 of first 20 signups convert in 30 days. Event: conversion_completed."</text>
 
   <line x1="150" y1="716" x2="850" y2="716" class="line"/>
 

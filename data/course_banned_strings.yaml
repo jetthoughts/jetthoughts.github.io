@@ -132,3 +132,5 @@ banned:
     reason: "thin secondary source; cite openhunts.com primary"
   - string: "password**>"
     reason: "glued blockquote render defect (4.2 Item #7)"
+  - string: "spends 2 of 4 weeks"
+    reason: "hardcoded third-party cohort structure"

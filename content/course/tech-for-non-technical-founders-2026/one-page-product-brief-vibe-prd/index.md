@@ -111,15 +111,15 @@ Not every brief is a Vibe PRD. The audience tells you which to write.
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-    Start(["One-page Product Brief written.<br/>Where does it go next?"])
-    Start --> Q1{Who reads it<br/>and builds from it?}
-    Q1 -->|Lovable / Cursor / AI agent| Vibe1[Vibe PRD<br/>Hand the page as-is.<br/>Paste into prompt.]
-    Q1 -->|Hired junior contractor| Vibe2[Vibe PRD<br/>Hand the page +<br/>short kickoff call.]
-    Q1 -->|Hired senior engineer| Trad1[Traditional PRD<br/>Expand to 3-5 pages.<br/>Add API + data model.]
-    Q1 -->|Product committee / board| Trad2[Traditional PRD<br/>Expand to 5-10 pages.<br/>Add roadmap + budget.]
-    Vibe1 --> Ship1[Short build loop.<br/>Measure Section 4.]
+    Start(["Brief written"])
+    Start --> Q1{Who builds<br/>from it?}
+    Q1 -->|AI agent| Vibe1[Vibe PRD<br/>hand as-is]
+    Q1 -->|Hired junior| Vibe2[Vibe PRD<br/>+ kickoff call]
+    Q1 -->|Senior engineer| Trad1[Traditional PRD<br/>3-5 pages]
+    Q1 -->|Committee / board| Trad2[Traditional PRD<br/>5-10 pages]
+    Vibe1 --> Ship1[Short build loop]
     Vibe2 --> Ship1
-    Trad1 --> Ship2[Long build loop.<br/>Kickoff, sprints, demos.]
+    Trad1 --> Ship2[Long build loop]
     Trad2 --> Ship2
 
     classDef start fill:#e8f4f8,stroke:#0277bd,stroke-width:2.5px,color:#1a1a1a
@@ -149,7 +149,7 @@ Drew Falkman runs ["Vibe Coding Data-Enabled AI Apps" on Maven](https://maven.co
 |---|---|---|
 | You wrote the page tonight and can't tell whether it is good. | Yes. Go for peer review + feedback. | Actually, post the draft in a founder Slack - free feedback in 2 hours. |
 | Accountability is your blocker. (3 abandoned briefs in a drawer.) | Yes. The cohort structure + deadline forces you through. | No. You need external structure. The template alone won't help. |
-| You want to go deeper on Lovable + Supabase + Stripe stack mechanics. | Yes. The cohort spends 2 of 4 weeks on this. | No. You'll need the stack tutorials anyway; the template is concept-only. |
+| You want to go deeper on Lovable + Supabase + Stripe stack mechanics. | Yes. The cohort spends much of its time on exactly this. | No. You'll need the stack tutorials anyway; the template is concept-only. |
 | You can sit alone for 2 hours and finish the brief from the page above. | No. | Yes. The cohort buys peer review + deadline + deeper stack work, but you'll ship either way. |
 
 **Rule of thumb:** If you can sit alone for two hours and finish the brief, start here. The cohort buys structure, deadline, and stack depth. If you can't sit alone, the cohort fee buys the accountability that gets the brief out of you.
