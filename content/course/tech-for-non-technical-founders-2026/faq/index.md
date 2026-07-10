@@ -55,7 +55,7 @@ Mixo (free tier, ~60 seconds from idea to page). If the templates don't fit, Car
 
 **Q: I can't find anyone to interview. I've searched everywhere.**
 
-Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a searchable ICP (Ideal Customer Profile - the specific kind of person your hypothesis names). Tighten to "12-person law-firm office manager." (2) Search second-degree keywords: "boarding costs" instead of "pet sitter." The [Ch 2.3a chapter](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) has the AI prompt that generates 8 communities + 5 search strings from your hypothesis.
+Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a searchable ICP (Ideal Customer Profile - the specific kind of person your hypothesis names). Tighten to "12-person law-firm office manager." (2) Search second-degree keywords: "boarding costs" instead of "pet sitter." The [Ch 2.3 chapter](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) has the AI prompt that generates 8 communities + 5 search strings from your hypothesis.
 
 **Q: Everyone I interview says "sounds great" but nobody gives me real data.**
 
@@ -63,11 +63,11 @@ Your questions are probably hypothetical-shaped. "Would you use a tool like this
 
 **Q: Should I skip the AI persona rehearsal (Ch 2.2)?**
 
-If you've run customer interviews before and your questions reliably produce concrete past-tense answers, skip it - go straight to [Ch 2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). If this is your first time running Mom Test interviews, the 90-minute rehearsal catches broken question shapes before they waste real interview slots.
+If you've run customer interviews before and your questions reliably produce concrete past-tense answers, skip it - go straight to [Ch 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). If this is your first time running Mom Test interviews, the 90-minute rehearsal catches broken question shapes before they waste real interview slots.
 
 **Q: Fewer than 7 of my 10 interviewees have actually spent time or money on the problem. What does that mean?**
 
-Directional KILL. The Module 2 gate is ≥7 of 10 interviewees with real past spend - fewer means the problem isn't acute enough to build for. Before you pivot, check: are you interviewing the right ICP? If you interviewed 10 chiropractors and the problem isn't real for them, but 3 mentioned a related problem they DO care about, build a new hypothesis around that problem and re-validate.
+Pivot or kill, depending on the count. The [Ch 2.5 gate](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) reads: 7 or more of 10 interviewees with real past spend = build, 4-6 = pivot, under 4 = kill. Before you pivot, check: are you interviewing the right ICP? If you interviewed 10 chiropractors and the problem isn't real for them, but 3 mentioned a related problem they DO care about, build a new hypothesis around that problem and re-validate.
 
 ---
 
@@ -93,7 +93,7 @@ Run the [Ch 4.1 decision tree](/course/tech-for-non-technical-founders-2026/shou
 
 Only 3 rules need to be true before you open Lovable: (1) your one-page brief passed the Ch 3.2 quality-gate, (2) you scoped one workflow for one persona, (3) GitHub sync is on in Lovable Settings. The other 9 rules fire inline during the build. Read the [Ch 4.3a chapter](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) for the full list.
 
-**Q: Lovable generated a 47-button admin panel from my one-page brief.**
+**Q: Lovable generated a sprawling admin panel from my one-page brief.**
 
 Your brief's Section 3 is feature-shaped. Go back to [Ch 3.2](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) and rewrite every feature as a "When / I want / So I can" outcome before you re-prompt Lovable. Then use the AI critic block in [Ch 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) to audit your build against your brief.
 

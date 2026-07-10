@@ -29,23 +29,27 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · Step 1 of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.1 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1)
+> **Input:** a Founding Hypothesis sentence (from Ch 1.1) + your `[customer]` blank from that sentence (the role, company size, and situation it names - that description is your ICP, your Ideal Customer Profile)
 >
-> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 (a + b) recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
+> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
+>
+> **Progress:** M2 · 1 of 6 · Results so far: all Module 1 artifacts - Module 2 starts here
 
 > **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. Skip to: [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow).
 
-> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3 (a + b) interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
+> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3-2.4 interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
 
-Run eleven interviews where the only question is "would you pay for this?" and you'll close the week with nine yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
+Run ten interviews where the only question is "would you pay for this?" and you'll close the week with a stack of yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
 The technique below switches every question to the past tense. What did you do last time? What did it cost? Show me the spreadsheet. Past-tense questions force the answer back into reality; whoever pays in the past keeps paying in the future, and whoever did nothing in the past will do nothing in the future no matter what they tell you over coffee.
 
+After this lesson you will be able to: **write interview questions that ask about past behavior - so the answers tell you what people actually did, not what they would politely promise.**
+
 For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done.
 
-Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 ![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
 
@@ -87,7 +91,7 @@ The script runs in order. Each question funnels the interviewee deeper into a re
 
 ### Q3: "What have you **tried already** to fix this?"
 
-- **What it catches**: existing workarounds. A hack, a paid tool, a hired VA, two spreadsheets duct-taped = real. Nothing tried = theoretical.
+- **What it catches**: existing workarounds. A hack, a paid tool, a hired VA (virtual assistant), two spreadsheets duct-taped = real. Nothing tried = theoretical.
 - **Pass**: a named tool, a hired person, a custom script. *"I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. My VA on Upwork fixes it."*
 - **Fail**: *"Nothing yet."* / *"We just deal with it."* / *"I've been meaning to look into something."*
 - **Follow-up**: *"What broke about the workaround? Why are you still talking to me about this?"* The crack is the gap your product would fill.
@@ -127,19 +131,15 @@ While the script runs, your job is to listen for three patterns. These flags do 
 flowchart TD
     Start(["Call starts.<br/>Script open on second screen."])
     Start --> Q1[Q1 - Last time it happened?]
-    Q1 --> Listen{Listen for emotional<br/>language flags}
-    Listen -->|0-1 flags| Generic[Generic polite mode<br/>Ask the follow-up]
-    Listen -->|2+ flags| Real[Real felt problem<br/>Move to Q2]
+    Q1 --> Listen[Emotional flags?]
+    Listen -->|0-1 flags| Generic[Polite mode -<br/>ask the follow-up, retry Q1]
+    Listen -->|2+ flags| Rest[Real felt problem -<br/>run Q2 - Q5 in order:<br/>cost, tried, 1-10 priority, who else]
     Generic --> Q1
-    Real --> Q2[Q2 - What did it cost?]
-    Q2 --> Q3[Q3 - What have you tried?]
-    Q3 --> Q4[Q4 - 1-10 vs everything else?]
-    Q4 --> Q5[Q5 - Who else feels this?]
-    Q5 --> Score{Score the call<br/>1-10}
-    Score -->|7+ with comparison<br/>3+ flags| Validated[Strong signal<br/>Ask for intro and prototype]
-    Score -->|5-6 or weak<br/>1-2 flags| Weak[Polite default<br/>Score as 5]
-    Score -->|0-4 or 0 flags| Fail[No felt problem<br/>Discount the call]
-    Validated --> Next[10 calls done<br/>7+ scores of 7+ means validated]
+    Rest --> Score[Score the call 1-10]
+    Score -->|7+ with comparison, 3+ flags| Validated[Strong signal -<br/>ask for intro + prototype]
+    Score -->|5-6 or weak flags| Weak[Polite default - score as 5]
+    Score -->|0-4 or 0 flags| Fail[No felt problem - discount]
+    Validated --> Next[After 10 calls:<br/>7+ scores of 7+ = validated]
     Weak --> Next
     Fail --> Next
 
@@ -151,7 +151,7 @@ flowchart TD
     classDef fail fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#1a1a1a
 
     class Start start
-    class Q1,Q2,Q3,Q4,Q5,Real q
+    class Q1,Rest q
     class Listen,Score decision
     class Validated,Next pass
     class Weak,Generic warn
@@ -159,6 +159,10 @@ flowchart TD
 ```
 
 Stick to the order. Improvise mid-call ("oh that reminds me of my product idea") and you contaminate the rest of the transcript - the interviewee starts answering the pitch instead of describing their own life. Read the questions as written, take notes by hand, score after.
+
+Expect your first two or three interviews to feel awkward - you will catch yourself pitching at least once. That's normal, not failure: score the contaminated call honestly (in the [Module 2 walkthrough](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/), Mia breaks her own script in interview one, scores it 3/10, and keeps the other nine clean). The skill is in the recovery, not in being perfect on call one.
+
+One more failure mode worth naming: an interviewee with no story. If Q1 produces genuine blankness - not evasion, just no last time to walk through - they don't have the problem. End the call politely at the 10-minute mark and count it: a person who was supposed to be your customer and has no story IS data about your [customer] blank.
 
 ## What to do tomorrow
 
@@ -170,8 +174,6 @@ Three actions. In order.
 | **Take notes by hand, not by typing.** | Hand-writing slows you down enough that you stop transcribing and start listening for the three emotional flags. Typing during a call turns you into a court reporter. | Don't try to transcribe everything. Write the Q4 score and the flag count, not the full transcript. |
 | **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. | If you score later, you will round up. By interview 10 you have a validation total, not 10 unsorted transcripts. | Don't defer scoring. Your gut scoring in the moment is more honest than the one after a week of wanting the number to be higher. |
 
-Sometimes Q1 is wrong - the problem context is too narrow - and a broader framing wakes the interviewee up.
-
 The [stop-looking-for-product-market-fit guide](/blog/stop-looking-for-product-market-fit-startup-tutorial/) covers what the validation signal does and doesn't tell you about whether you have product-market fit (spoiler: a validated problem is necessary, not sufficient).
 
 ## The Mom Test interview script artifact
@@ -182,15 +184,15 @@ The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-intervi
 
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works.
 
-After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.4: Clickable Prototype Validation](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)) or 10 transcripts that don't (re-frame the ICP and run another 10).
+After 10 calls, you have either 10 scored transcripts that converge on a real problem (score them on [Chapter 2.5: Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), then proceed to 2.6) or 10 transcripts that don't (follow Chapter 2.5's pivot path: sharpen the ICP and run 5 more interviews against the narrower group).
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend. The [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against a hypothesis nobody confirmed.
 
-> Most customer interviews fail because the interviewees are polite. Better questions outperform better people.
+> Customer interviews usually fail because the interviewees are polite. The questions do more work than interviewer charisma ever will.
 >
 > Anchor every question in a specific past moment - last Tuesday at 9pm, the last invoice, the last time the spreadsheet broke - and the polite-mode answers run out fast.
 
-> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free, unlimited use, no credit card) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
+> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free tier) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
 >
 > It flags hypothetical questions, leading phrasing, and assumptions buried in your wording. Unlike Ch 2.2 persona rehearsal (which tests questions against simulated ICPs), ValidatorAI tests the questions themselves - are they built to surface real past behavior or polite agreement?
 >
@@ -201,24 +203,20 @@ After all 10 interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/
 ## Further reading
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the canonical reference. The book runs 130 pages and explains why "would you pay for X?" is the most popular question and the worst.
-- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - YC's distilled rules for the same conversation, free and 20 minutes.
+- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - YC's distilled rules for the same conversation, free and 20 minutes.
 - Steve Blank, [The Four Steps to the Epiphany - Customer Discovery](https://steveblank.com/category/customer-development/) - the original customer-development methodology Fitzpatrick's script sits inside.
 - Teresa Torres, [Continuous Discovery Habits](https://www.producttalk.org/continuous-discovery-habits/) - what these interviews become after the validation phase, when you run them weekly forever.
-- Mom Test summary by Yann Klis, [The Mom Test - 1-page summary](https://yannklis.com/posts/the-mom-test/) - a compressed cheat sheet for anyone who can't read the full book this week.
-- Lenny Rachitsky, [Customer interviewing 101](https://www.lennysnewsletter.com/p/the-ultimate-guide-to-conducting) - the operational version of the Mom Test rules with sample scripts.
 
-> **Done when:** You understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
+> **Done:** you understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
 >
-> **Next click:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
+> **You have now:** all Module 1 artifacts + a draft Mom Test question list (2.1). Sharpening and recruiting come next.
+>
+> **Next:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
 >
 > **If blocked:** If the technique isn't clicking, open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact - it has the 5 questions verbatim. Print it, practice on a friend, then return.
 
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Runs 10 interviews with accounting firm controllers. Q2 hits hard: "My CFO bills $200/hr and spent 4 hours on reconciliation last week - that's $800." Scored 8/10 on 7 interviews. Validated.
->
-> **Mia**: Runs 10 interviews with parents from Facebook groups. Q3 surfaces the real pain: "I missed a $2,000 client deadline because I was on hold with a tutoring center." Scored 9/10 on 8 interviews. Strongly validated.
-
 ---
+
+*See it in action: [Module 2 walkthrough: Mia interviews ten parents](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

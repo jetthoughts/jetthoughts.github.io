@@ -34,7 +34,7 @@ related_posts: false
 
 A founder we picked up in Q1 2026 had nodded at the same word for fourteen months. Every Friday her contractor's PM said "we're refactoring the order flow" and she wrote it down. When her new fractional CTO finally read the repo, he came back with one line: nothing new had shipped to production since month three. **"Refactoring" had cost her $51K and a year of runway.** She had nodded because she did not know what else to do.
 
-Most non-technical founders learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
+A non-technical founder often learn engineering vocabulary under pressure, mid-meeting, with a bill on the table. The agency throws a word, the founder nods, the meeting moves on. By the time the founder figures out what the word actually meant, the next sprint is already approved.
 
 Below is the cheat sheet for the five words that hide the most invoices: refactoring, Docker, tech debt, MVP, architecture. For each you get a plain-English definition, the dishonest version your dev shop probably means when they say it, and one question you can ask in your next standup that the BS-version cannot answer.
 
@@ -153,7 +153,7 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
-| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3a |
+| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3 |
 | **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
 | **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Ch 3.1, 3.2 |
 | **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Ch 1.1, 5.4 |

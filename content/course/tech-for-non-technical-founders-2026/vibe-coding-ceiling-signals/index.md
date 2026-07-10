@@ -220,7 +220,7 @@ Three actions. The first is tonight.
 
 ## Artifacts you carry out of Module 4
 
-After finishing Ch 4.1-4.4, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 4.1-4.4, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|
@@ -228,7 +228,7 @@ After finishing Ch 4.1-4.4, Sam has five artifacts. Each one feeds a specific do
 | **Ownership audit results** (12-item checklist - GitHub, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys, monitoring, status page - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.4 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
 | **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3 (a + b)) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
 | **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.4, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
-| **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Ch 2.3 (a + b) outreach** (from Ch 4.3 (a + b) onboarding) | Ch 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Ch 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Ch 2.3 (a + b) interview leads as Ch 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Ch 5.2-5.5 outbound. |
+| **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Ch 2.3-2.4 outreach** (from Ch 4.3 (a + b) onboarding) | Ch 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Ch 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Ch 2.3-2.4 interview leads as Ch 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Ch 5.2-5.5 outbound. |
 
 Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Both beat watching the codebase get worse.
 

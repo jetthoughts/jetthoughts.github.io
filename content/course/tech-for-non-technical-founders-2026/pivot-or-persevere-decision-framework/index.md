@@ -150,7 +150,7 @@ You walk out of this chapter holding a pivot decision (one of six types, or pers
 
 A Customer Segment pivot or Customer Need pivot routes you back to [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) - rewrite the customer or problem blanks, keep the rest of the sentence template. Then [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) to validate the new hypothesis with the new segment.
 
-A Solution pivot routes you back to [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next) - the validated problem statement is still good (you confirmed the right customer has the right pain); the solution shape needs to change. Then back into the self-serve or hire path for the rebuild.
+A Solution pivot routes you back to [Decide What's Next](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) - the validated problem statement is still good (you confirmed the right customer has the right pain); the solution shape needs to change. Then back into the self-serve or hire path for the rebuild.
 
 A Channel pivot or Revenue Model pivot routes you back to [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) with the new channel or pricing model. The hypothesis stays intact; the go-to-market motion changes.
 

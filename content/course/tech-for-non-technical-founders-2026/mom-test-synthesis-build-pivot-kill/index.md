@@ -1,5 +1,5 @@
 ---
-title: "2.1b · Mom Test Synthesis: Build, Pivot, or Kill"
+title: "2.5 · Mom Test Synthesis: Build, Pivot, or Kill"
 aliases: ["/blog/mom-test-synthesis-build-pivot-kill/"]
 description: "After your 10 Mom Test interviews: score each transcript, count strong signals, and decide build, pivot, or kill. The 90-minute synthesis that turns raw transcripts into a validated problem statement."
 date: 2026-05-13
@@ -22,22 +22,24 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "2.1b · Mom Test Synthesis: Build, Pivot, or Kill"
+  og_title: "2.5 · Mom Test Synthesis: Build, Pivot, or Kill"
   og_description: "After your 10 Mom Test interviews: score each transcript, count strong signals, and decide build, pivot, or kill. The 90-minute synthesis."
-cover_image_alt: "Mom Test synthesis cover showing the build/pivot/kill decision tree after 10 interviews"
+cover_image_alt: "JetThoughts course cover for Lesson 2.5 - Score Ten, Then Build, Pivot, or Kill, with the decision gate card: 7 or more build, 4 to 6 pivot, under 4 kill"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/"
 related_posts: false
 ---
 
-> **Module 2 · After Step 1** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.5 · [CORE] - run after your 2.4 interviews** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 10 scored Mom Test transcripts (from [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) + completed interviews (from [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/))
+> **Input:** 10 scored Mom Test transcripts (from [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) + completed interviews (from [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/))
 >
 > **Output:** a build / pivot / kill decision + a one-page validated problem statement
+>
+> **Progress:** M2 · 5 of 6 · Results so far: question list + 30-name list + 10 scored interviews - this page turns the scores into a decision
 
 > **TL;DR:** Score 10 transcripts, count strong signals, make one of three calls. 90 minutes. The decision you avoid here costs you a quarter of build time later.
 
-> **You should be here AFTER your Ch 2.3 (a + b) interviews are done.** If you don't have 10 scored transcripts in hand, return to [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) for the technique, then [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for recruitment. This page is the synthesis pass - you cannot complete it without real interview data.
+> **You should be here AFTER your Ch 2.3-2.4 interviews are done.** If you don't have 10 scored transcripts in hand, return to [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) for the technique, then [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for recruitment. This page is the synthesis pass - you cannot complete it without real interview data.
 
 After all 10 interviews are done, you have scored transcripts in a folder and a number. Synthesis is the 90-minute step that turns those transcripts into the one-page validated problem statement you'll carry into Module 3. Skip this step and go straight to Lovable, and you have not validated anything - you have a folder and a hypothesis.
 
@@ -67,9 +69,9 @@ flowchart TD
     S1 --> S2[Step 2<br/>Count strong signals 7+]
     S2 --> S3[Step 3<br/>Write the one page]
     S3 --> S4{Strong signals<br/>in 10 calls?}
-    S4 -->|7 or more| Build[BUILD<br/>Move to Chapter 3.1<br/>Write the Product Brief]
+    S4 -->|7 or more| Build[BUILD<br/>Test the shape in Ch 2.6<br/>then write the Ch 3.1 brief]
     S4 -->|4 to 6| Pivot[PIVOT<br/>Run 5 more interviews<br/>Refine the ICP first]
-    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart at Ch 2.3a]
+    S4 -->|Fewer than 4| Kill[KILL<br/>Rewrite the hypothesis in Ch 1.1<br/>then re-run Ch 2.3]
     Build --> Sign[Show to 2 advisors.<br/>Get 2 signatures before building.]
     Pivot --> Sign
     Kill --> Sign
@@ -91,13 +93,13 @@ flowchart TD
     class Sign sign
 ```
 
-**7+ strong signals: build.** You have a problem that 70%+ of a stranger sample confirmed with felt urgency. The validated problem statement is your input to [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
+**7+ strong signals: build.** You have a problem that 70%+ of a stranger sample confirmed with felt urgency. The validated problem statement travels with you into [2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape, and from there into [The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/).
 
-Before you start writing code, run the 3 pre-orders test: ask 3 of your strongest-signal interviewees for a pre-order, a paid letter of intent, or a deposit. Strangers who told you their problem score is a 9 should be willing to put a small commitment behind it. If 3 of your top 5 say yes, you have validation with money attached - the strongest signal there is. If 0 of 5 say yes, the 7+ scores were politer than you thought.
+Before you start writing code, run the 3 pre-orders test: ask your 5 strongest-signal interviewees for a pre-order, a paid letter of intent, or a deposit. Strangers who told you their problem score is a 9 should be willing to put a small commitment behind it. If 3 of the 5 say yes, you have validation with money attached - the strongest signal there is. If 0 of the 5 say yes, the 7+ scores were politer than you thought.
 
 **4-6 strong signals: pivot.** The signal is partial. Most often this is an ICP problem, not a problem problem. Pick the cleanest segment, sharpen the ICP definition, run 5 more interviews against that narrower group. Don't build yet. The 5 sharper interviews cost you a week. A built MVP against a fuzzy ICP costs you a quarter.
 
-**Below 4 strong signals: kill.** Strangers were polite. The market said no in the only way the market knows how to say no before a launch: by not feeling the pain enough to put a number on it. Write down what you learned about the wrong ICP, the wrong framing, or the wrong trigger event. Start [Find 10 People With the Problem](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) again with a different hypothesis.
+**Below 4 strong signals: kill.** Strangers were polite. The market said no in the only way the market knows how to say no before a launch: by not feeling the pain enough to put a number on it. Write down what you learned about the wrong ICP, the wrong framing, or the wrong trigger event. Return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/), rewrite the weakest blank using what the dead transcripts taught you, then rebuild your list in [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/).
 
 ## What good looks like vs what bad looks like
 
@@ -115,18 +117,15 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 
 ---
 
-> **Done when:** You have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
-> **Next click:** If build - [2.4 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - return to [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis (same hypothesis, different list). If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3a.
+> **Done:** you have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
+>
+> **You have now:** question list (2.1-2.2) + 30-name list (2.3) + 10 scored interviews (2.4) + the build/pivot/kill decision. The orientation pages state this gate as "7 of 10 interviewees have spent time or money on the problem" - the two are the same bar, because a transcript cannot score 7+ without real past spend surfacing in Q2/Q3.
+>
+> **Next:** If build - [2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - sharpen the [customer] blank of your hypothesis, then return to [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around that narrower group. If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3.
 > **If blocked:** If the numbers aren't adding up, re-read [Ch 2.1's scoring rubric](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the Q4 score and flag-count combination is what separates a 7 from a 5.
 
 ---
 
-> **Case Study: Tomas & Mia**
->
-> **Tomas** (ReconcileBot, B2B SaaS): scored 7 of 10 controllers at 8/10 or higher. Strong-signal count = 7. Verdict: BUILD. Writes the validated problem statement using a verbatim quote ("CFO billed $800 last week on a 4-hour reconciliation") and moves to 2.4 prototype.
->
-> **Mia** (TutorMatch, B2C marketplace): scored 8 of 10 parents at 9/10 or higher. Strong-signal count = 8. Verdict: BUILD. Validated problem statement anchors on a verbatim quote ("missed a $2,000 project deadline on hold with a tutoring center") and moves to 2.4 prototype.
-
----
+*See it in action: [Module 2 walkthrough: Mia interviews ten parents](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

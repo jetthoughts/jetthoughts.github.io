@@ -1,5 +1,5 @@
 ---
-title: "2.3a · Find 10 People: Where to Look"
+title: "2.3 · Find 10 People: Where to Look"
 aliases: ["/blog/find-10-people-where-to-look/"]
 description: "Where to find 10 people who actually have your validated problem. AI translates your hypothesis into an ICP map, you read where they post, you build a 30-name list from people you can name."
 date: 2026-05-18
@@ -22,24 +22,28 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "2.3a · Find 10 People: Where to Look"
+  og_title: "2.3 · Find 10 People: Where to Look"
   og_description: "Where to find 10 people who actually have your validated problem. AI translates your hypothesis into an ICP map, you read where they post, you build a 30-name list."
-cover_image_alt: "JetThoughts cover showing the 5-step outreach funnel from Reddit mining at the top down to 10 calls booked at the bottom"
+cover_image_alt: "JetThoughts course cover for Lesson 2.3 - Find 10 People Who Already Care, with a 30-name list card: name and where they posted, the post URL, one quoted line"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/"
 related_posts: false
 ---
 
-> **Module 2 · Step 3a of 4** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.3 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a hypothesis you suspect is real (from Ch 1.1) + a sharpened Mom Test question list (built in Ch 2.1, polished in Ch 2.2)
 >
-> **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Ch 2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+> **Output:** a 30-name list of specific people you can name because you read what they wrote, ready for the outreach templates in [Ch 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+>
+> **Progress:** M2 · 3 of 6 · Results so far: question list ready to run
 
-> **TL;DR (Part 1 of 2):** Paste your three-sentence hypothesis into Claude, get back the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) profile + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
+> **TL;DR (Part 1 of 2):** Expand your one-sentence hypothesis from Ch 1.1 into three sentences (a short step below), paste them into Claude, and get back the ICP profile (ICP = Ideal Customer Profile - the specific kind of person your hypothesis's [customer] blank names) + exact communities + search strings. Read where your ICP is already complaining. Build a 30-name list. [Part 2: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) covers the message templates, cadence, and follow-up sequence.
 
-Most non-technical founders start with the same move: "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
+The instinctive first move is "I'll just message my LinkedIn network." Sixty polite DMs over a week tend to produce 3 calls - two old colleagues showing up to be nice, one real lead who ghosts on reschedule.
 
 The technique below replaces that move with a different one: read where strangers are already complaining about your exact hypothesised problem, then write back to those specific complainers. Same hypothesis, same work hours, different place to look. The DM-the-network move books 2-3 polite calls. The read-where-they-already-complain move - half a day of reading threads, then 30 named outreach messages - produces a calendar of 10+ booked interviews.
+
+After this lesson you will be able to: **build a 30-name list of specific people who already complained about your problem in public - people you can name because you read what they wrote.**
 
 The full journey, top to bottom:
 
@@ -70,7 +74,7 @@ flowchart TD
 
 > **Calendar reality + smoke-test gate before you start.** Full-time founder typically books 10 interviews across 2-4 calendar weeks; evening-only founder (2-4 hr/week) typically needs 6-8 calendar weeks - plan around the longer version. Your Ch 1.2-1.4 smoke test should have cleared roughly 6%+ email conversion (the "Promising" band) or 5%+ Stripe-click on the Ch 1.5 price-button variant. 3-6% is the "iterate the message" zone, not a green light. Below 3% means you have a demand-side problem - go back to [Ch 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank before booking interviews.
 
-This page covers steps 1-3. Part 2 covers steps 4-5.
+This page covers steps 1-3. Part 2 covers steps 4-5. One time-box before you start: if you catch yourself on day three still polishing the list instead of moving to outreach, stop - the list is a means to 10 conversations, and 25 good rows now beat 30 perfect rows next week.
 
 ## Before you start: write three sentences
 
@@ -115,7 +119,7 @@ Return:
 If you cannot describe a real community for any item, respond with "NOT FOUND - [item]" rather than guessing.
 ```
 
-> No competitor URLs yet? If you ran the [naive Claude/ChatGPT prompt in Chapter 1.1](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with the follow-up "name 3-5 competitors," you already have them. Otherwise: Google your problem in plain words plus `tool` or `software`, grab the top 2 results that aren't blog posts.
+> No competitor URLs yet? Ask Claude or ChatGPT to name 3-5 competitors for your one-sentence hypothesis, or Google your problem in plain words plus `tool` or `software` and grab the top 2 results that aren't blog posts.
 
 What you get back: the channels you'll read next and the search strings you'll use to build the list. If a community the AI proposes turns out to be dead or off-topic, drop it and ask: `Suggest 3 alternatives more focused on [vertical].`
 
@@ -140,9 +144,9 @@ When you're done you should have 30 real sentences and 30 named people. Don't pa
 - **Reddit** - subreddits in your vertical. Sort by Top → Past Month. The 1% willing to complain in public are usually willing to take a 20-minute call. Free tool [Keyworddit](https://keyworddit.com) surfaces the keywords a given subreddit is currently using, so you can search those phrases back into Reddit and find the named complainers.
 - **LinkedIn** - paste the problem in quotes into search, filter to Posts → Past Week.
 - **Industry Slack and Discord** - Indie Hackers, Lovable, No Code Founders, and the vertical-specific communities your AI map named.
-- **G2 and Capterra reviews** - pull every 2-star and 3-star review of the closest competitor. Pain a stranger typed for free, organized by feature.
+- **[G2](https://www.g2.com/) and [Capterra](https://www.capterra.com/) reviews (the two big business-software review sites)** - pull every 2-star and 3-star review of the closest competitor. Pain a stranger typed for free, organized by feature.
 - **Twitter/X** - the 280-character constraint forces complaints to be precise.
-- **Personal network referrals** - text 10 people you know: `Do you know anyone who [painful task] regularly? Research call, not sales.` Warm referrals book at 70%+ show rates.
+- **Personal network referrals** - text 10 people you know: `Do you know anyone who [painful task] regularly? Research call, not sales.` Warm referrals almost always show - the mutual contact is on the line for it.
 
 One Reddit rule: don't blast a launch post on day one. Read the sub for a week, leave three real comments, then post a research question. The [self-promotion on Reddit guide](/blog/self-promote-on-reddit-without-getting-banned-promotion/) covers the karma floor and the unwritten rules.
 
@@ -159,11 +163,11 @@ Turn the 30 sentences into 30 names. Open each thread you saved while reading, c
 
 Aim for 30 hand-picked people in one focused sitting.
 
-**This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies at 3-5× the rate of a list of 30 strangers a tool exported for you.
+**This is the most important step in the chapter.** A list of 30 individuals you can name - because you read what they wrote - replies far more often than a list of strangers a tool exported for you - the quoted line is the difference.
 
-If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based: roughly 100 email credits + 10 export credits per month, no credit card) lets you filter on role + industry + company size and export the rest (at 10 exports/month, this fills the gap over several weeks, not one sitting). Treat it as backfill, not the source - the hand-picked names always perform better.
+If you run out of named posters before you hit 30, [Apollo](https://apollo.io)'s free tier (credit-based, no credit card - a small monthly allowance of email and export credits) lets you filter on role + industry + company size and export the rest (the monthly export allowance is small, so this fills the gap over several weeks, not one sitting). Treat it as backfill, not the source - the hand-picked names always perform better.
 
-> **Save the Apollo filter and whatever contacts your monthly export credits cover (roughly 10 per month on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
+> **Save the Apollo filter and whatever contacts your monthly export credits cover (a small monthly allowance on the free tier) to a tab named "Module 5 cold seed" in your outreach spreadsheet.** You will reuse this exact filter in [Ch 5.5 cold outbound](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/).
 
 Filter the final list on six dimensions:
 
@@ -192,32 +196,30 @@ Drop anyone outside the band. You want signal, not volume.
 
 These are skip-by-default. The main chapter works without any of them.
 
-**Upgrade the AI ICP map prompt with a deep-research tool.** The Claude/ChatGPT version above is fast and free; the trade-off is the AI synthesizes text without source links. For a verifiable evidence trail, swap in Perplexity Pro ($20/mo) or Gemini Deep Research ($20/mo Advanced) with the same prompt - both return real-source citations for every claim. Spot-check that each proposed community is alive and on-topic before you invest reading time, and grab verbatim quote snippets you can reuse as cold-message subject lines later.
+**Upgrade the AI ICP map prompt with a deep-research tool.** The Claude/ChatGPT version above is fast and free; the trade-off is the AI synthesizes text without source links. For a verifiable evidence trail, swap in Perplexity Pro or Gemini Deep Research (both paid tiers) with the same prompt - both return real-source citations for every claim. Spot-check that each proposed community is alive and on-topic before you invest reading time, and grab verbatim quote snippets you can reuse as cold-message subject lines later.
 
-**Offline-heavy verticals - paid panel as Plan A.** If your ICP lives in trades, nursing, in-store retail, elderly users, or regulated B2B, the Reddit / LinkedIn / G2 flow returns nothing useful. Use a paid panel instead. [UserInterviews](https://www.userinterviews.com/) and [Respondent](https://www.respondent.io/) have screened participants across these verticals; cost is $30-$100 per interview. Decision rule: if your ICP description names an offline trade, an over-60 user, or a regulated profession, budget for a paid panel as Plan A.
+**Offline-heavy verticals - paid panel as Plan A.** If your ICP lives in trades, nursing, in-store retail, elderly users, or regulated B2B, the Reddit / LinkedIn / G2 flow returns nothing useful. Use a paid panel instead. [UserInterviews](https://www.userinterviews.com/) and [Respondent](https://www.respondent.io/) have screened participants across these verticals; pricing is per completed interview - check the panel's current rates. Decision rule: if your ICP description names an offline trade, an over-60 user, or a regulated profession, budget for a paid panel as Plan A.
 
-**Monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (free, no signup) surfaces the high-frequency keywords inside any subreddit. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs. [Reddinbox](https://reddinbox.com) / [Pushshift](https://pushshift.io) (free) searches Reddit's full archive for high-commercial-intent phrases like "how to automate X" or "sick of doing Y manually." These tools surface the threads faster - you still read them yourself.
+**Monitoring tools that cut the manual reading load.** [Keyworddit](https://keyworddit.com) (free, no signup) surfaces the high-frequency keywords inside any subreddit. [F5Bot](https://f5bot.com) (free) sends email alerts when your keywords appear on Reddit, Hacker News, or Lobste.rs. [Reddinbox](https://reddinbox.com) watches Reddit for your keywords and collects the matching conversations in one inbox so you can reply from there. These tools surface the threads faster - you still read them yourself.
 
 ## Further reading
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the past-behavior interview technique you'll run on every call this chapter's list books.
-- Y Combinator, [Talking to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - the canonical YC essay on why this conversation has to happen.
+- Y Combinator, [Talking to Users (Startup Library)](https://www.ycombinator.com/library) - the canonical YC essay on why this conversation has to happen.
 - [Apollo](https://www.apollo.io/) - contact database for filtering by role + industry + company size when the hand-picked list runs thin.
 - [Clay](https://www.clay.com/) - list enrichment with email verification, useful once you're past 5 paying customers.
 - [User Interviews](https://www.userinterviews.com/) and [Respondent](https://respondent.io) - research panels for ICPs that cannot be reached cold.
 
-> **Done when:** 30-name list is built in your spreadsheet with name, role+company, post URL, and one quoted line per row.
-> **Next click:** [2.3b · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
+> **Done:** 30-name list is built in your spreadsheet with name, role+company, post URL, and one quoted line per row.
+> **You have now:** a question list (2.1-2.2) + a 30-name list of real people (2.3). Outreach is next.
+>
+> **Next:** [2.4 · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) - the message templates, cadence, and follow-up sequence.
 > **If blocked:** If the AI returned "NOT FOUND" for every community, your hypothesis is too vague. Go back to Ch 1.1 and rewrite the customer sentence with a specific role, company size, and the moment in their week when the pain happens.
 
 > **Stuck? Most first-timers stall here:** your name list stops at 3 people. **Fix:** search a related keyword - "boarding costs" instead of "pet sitter," "claim denial appeal" instead of "medical billing." The second-degree search surfaces people with the same problem but different vocabulary. 30 minutes of keyword variation turns 3 names into 12. Not "License Apollo Pro."
 
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: AI ICP map identifies r/Accounting (300K members), Controller-specific LinkedIn groups, AICPA conference attendees. Builds a 30-name list of controllers who posted about "manual reconciliation" or "month-end close pain" on LinkedIn in the last 90 days.
->
-> **Mia**: AI ICP map identifies Facebook parent groups (ADHD Parent Support, Dyslexia Moms Unite), r/ParentingADHD, local school district special-ed coordinators. Builds a 30-name list of parents who posted about "can't find a tutor" or "tutoring waitlist" in the last 60 days.
-
 ---
+
+*See it in action: [Module 2 walkthrough: Mia interviews ten parents](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

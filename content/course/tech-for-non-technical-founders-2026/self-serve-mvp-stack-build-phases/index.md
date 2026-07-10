@@ -46,19 +46,19 @@ related_posts: false
 
 > **The ship plan below is the BUILD portion only.** It assumes you already ran Modules 1-3 (hypothesis → smoke test → 10 interviews → one-page brief) and read [Part 1: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). If you skip straight here without validation, the build often ships into the silence Modules 1-3 were designed to prevent.
 
-Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). The build phase ends with five real ICP users on the staging URL; the onramp phase brings the rest of your Ch 2.3 (a + b) interview pool onto the product.
+Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). The build phase ends with five real ICP users on the staging URL; the onramp phase brings the rest of your Ch 2.3-2.4 interview pool onto the product.
 
 1. **Phase 1 - Lovable, the UI.** No backend yet. *Demo:* screens click, no data persists.
 2. **Phase 2 - Supabase + auth.** Real signup works. *Demo:* your spouse signs up, a row appears in Supabase in real time.
 3. **Phase 3 - Stripe + checkout.** $1 test transactions. *Demo:* you sign up as a fake coach, pay $1, the webhook flips your row to paid.
 4. **Phase 4 - staging URL + 5 ICP users.** Custom domain, Stripe live. *Right after:* 5 click sessions logged - iterate from real signal.
-5. **Onramp phase - Module 5 handoff.** Invite the 10 Ch 2.3 (a + b) interviewees by name (covered in detail below). Hand off to Module 5 with a populated users table, not an empty one.
+5. **Onramp phase - Module 5 handoff.** Invite the 10 Ch 2.3-2.4 interviewees by name (covered in detail below). Hand off to Module 5 with a populated users table, not an empty one.
 
 ### Phase 1 - write your prompts, set up Lovable, ship the UI
 
 Start by opening the one-page brief. The "what you're building" section becomes your first three Lovable prompts.
 
-> **Bridge from Ch 2.4 vocabulary (the most useful paste in the course).** Before you describe a button label, a column header, or a screen title, open your Ch 2.4 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." If 3 of 5 said "client" and 2 said "patient," **use the most-repeated term**. The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
+> **Bridge from Ch 2.6 vocabulary (the most useful paste in the course).** Before you describe a button label, a column header, or a screen title, open your Ch 2.6 vocabulary doc (the verbatim words your 5 prototype subjects used in the closing "describe in one sentence" question). If 4 of 5 said "match" and not "reconcile," the button label is **"Match transactions,"** not "Reconcile." If 3 of 5 said "client" and 2 said "patient," **use the most-repeated term**. The vocabulary your prototype subjects passed is the only user-tested language you have; the production MVP is the one place where using it has revenue consequences.
 
 Lovable's prompt style is conversational; you describe the screen, the components, the rough behavior. Examples:
 
@@ -95,7 +95,7 @@ In Lovable, install the Supabase integration. Lovable will add the Supabase JS c
 >
 > Zero rows back = policy works. Any rows back = the policy is missing a `USING (auth.uid() = user_id)` clause or equivalent. Fix before any real user touches the URL.
 
-> **End-of-Phase-2 micro-fail signal.** Before you build Stripe in Phase 3, hand the staging URL to your spouse OR one of your Ch 2.3 (a + b) Mom Test interviewees. Give zero coaching. Watch them try to sign up and reach the core action button (logging a check-in, exporting the CSV, whatever your one-page brief named as the workflow). If 2+ test users stall on screens 1-2, the workflow shape is wrong - pivot back to [Ch 3.2 outcome rewrite](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe. Building a payment wall on top of a workflow nobody can navigate just adds friction to a broken loop.
+> **End-of-Phase-2 micro-fail signal.** Before you build Stripe in Phase 3, hand the staging URL to your spouse OR one of your Ch 2.3-2.4 Mom Test interviewees. Give zero coaching. Watch them try to sign up and reach the core action button (logging a check-in, exporting the CSV, whatever your one-page brief named as the workflow). If 2+ test users stall on screens 1-2, the workflow shape is wrong - pivot back to [Ch 3.2 outcome rewrite](/course/tech-for-non-technical-founders-2026/stop-specifying-features-start-outcomes/) before adding Stripe. Building a payment wall on top of a workflow nobody can navigate just adds friction to a broken loop.
 
 ### Phase 3 - add Stripe, wire checkout, $1 test transactions
 
@@ -115,19 +115,19 @@ Watch what happens. If 0 of 5 click, the cold message is wrong, not the product 
 >
 > 1. **Stripe in LIVE mode** (not test mode) and a real card successfully clears the paywall at least once.
 > 2. **Custom domain wired** (not a `.lovable.app` subdomain) - the URL you DM to a user must be yours.
-> 3. **At least 1 ICP user who was NOT in your Ch 2.3 (a + b) interviews** has clicked through to the paywall on the live URL.
+> 3. **At least 1 ICP user who was NOT in your Ch 2.3-2.4 interviews** has clicked through to the paywall on the live URL.
 > 4. **Zero JS errors in the browser Console** on the sign-up + checkout flow (open DevTools, walk the happy path, console must stay clean).
 > 5. **Friday-style weekly demo recording exists** for the last week of build (a Loom or screen-record proving the demo cadence held to the end).
 >
 > Advance to Module 5 only when all 5 are green. If any are red, the MVP is NOT ready for the 10-30 users Module 5 needs as input. Fix the red light first, then re-check.
 
-> **Pre-flight before M5.1: book up to 10 user sessions.** Phase 4's 4-6 onramp accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Ch 2.3 (a + b) interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-15 active users total by the time M5.1's survey ships. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
+> **Pre-flight before M5.1: book up to 10 user sessions.** Phase 4's 4-6 onramp accounts are not enough for M5.1's Sean Ellis 40% test (under 10 respondents = noise, not signal). Before you start Module 5, book a second small invite wave: 5-10 more sessions from your Ch 2.3-2.4 interviewee list, your community connections, or a fresh micro-batch of cold DMs. Aim for 10-15 active users total by the time M5.1's survey ships. Without this pre-flight, you will run the 40% test on 5 people, get an ambiguous result, and falsely conclude you have a product problem when you really have a sample-size problem.
 
 ### Onramp phase - Module 5 handoff: invite your Module 2 interviewees onto the live MVP
 
-The build phases above are the BUILD container. The onramp phase is the Module-5 handoff - the step that turns a live staging URL into a live users table. The five cold prospects from Phase 4 are the demand-signal check. The 10 interviewees you ran through Ch 2.3 (a + b) are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words, recently. They are not on your MVP yet. They will not show up unless you invite them by name.
+The build phases above are the BUILD container. The onramp phase is the Module-5 handoff - the step that turns a live staging URL into a live users table. The five cold prospects from Phase 4 are the demand-signal check. The 10 interviewees you ran through Ch 2.3-2.4 are the warm pool that becomes your first real users - the ones who told you the problem was real, in their own words, recently. They are not on your MVP yet. They will not show up unless you invite them by name.
 
-Open your Ch 2.3 (a + b) interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to.
+Open your Ch 2.3-2.4 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to.
 
 Send it as a [Loom](https://www.loom.com) (Loom is a free short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast.
 
@@ -135,7 +135,7 @@ Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and cli
 
 This is the step that closes the gap between Module 4 (MVP shipped) and Module 5 (first paying customer). Without it, you ship a working URL into the silence of a Supabase users table with zero rows. The Module 2 interviewees are the closest 10 people in the world to your ICP - they spent 30 minutes telling you their version of the problem. Inviting them by name is the cheapest first-10-users acquisition the course will name.
 
-If you need more than 10 users on the MVP before running Ch 5.1's survey, the recruitment playbook in [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) is the same one you use to find them - the message changes from "30 minutes of your time" to "try the live tool for a week, free."
+If you need more than 10 users on the MVP before running Ch 5.1's survey, the recruitment playbook in [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) is the same one you use to find them - the message changes from "30 minutes of your time" to "try the live tool for a week, free."
 
 ## What "ship the shed" means in practice
 

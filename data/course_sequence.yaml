@@ -67,18 +67,23 @@ sequence:
     goal: "Polish the Ch 2.1 question list with a Claude persona companion pass before booking real slots."
 
   - slug: find-10-people-where-to-look
-    title: "2.3a · Find 10 People: Where to Look"
-    module: "Chapter 2.3a"
+    title: "2.3 · Find 10 People: Where to Look"
+    module: "Chapter 2.3"
     goal: "AI ICP map + read threads + build a 30-name list of people you can name because you read what they posted."
 
   - slug: find-10-people-with-problem-outreach-2026
-    title: "2.3b · Find 10 People: What to Say"
-    module: "Chapter 2.3b"
-    goal: "The 3-message sequence, volume targets, and research-panel fallback that books 10 interviews from the 30-name list."
+    title: "2.4 · Find 10 People: What to Say"
+    module: "Chapter 2.4"
+    goal: "The 3-message sequence, volume targets, and research-panel fallback that turn the 30-name list into 10 booked interviews (expanding the list if replies run thin)."
+
+  - slug: mom-test-synthesis-build-pivot-kill
+    title: "2.5 · Mom Test Synthesis: Build, Pivot, or Kill"
+    module: "Chapter 2.5"
+    goal: "Score the 10 transcripts, count strong signals, and make the build / pivot / kill call: 7+ build, 4-6 pivot, under 4 kill."
 
   - slug: clickable-prototype-validation-2-hour-lovable
-    title: "2.4 · Build a Clickable Prototype"
-    module: "Chapter 2.4"
+    title: "2.6 · Build a Clickable Prototype"
+    module: "Chapter 2.6"
     goal: "Test the SHAPE of your solution with 5 interview subjects via a focused Lovable build."
 
   - slug: one-page-product-brief-vibe-prd

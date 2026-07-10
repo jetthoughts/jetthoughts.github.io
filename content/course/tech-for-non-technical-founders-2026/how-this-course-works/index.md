@@ -69,15 +69,16 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ### Module 2 - Validate the Problem
 **You have:** a Founding Hypothesis.
-**You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a 2-hour clickable prototype tested with 5 people.
-**Time:** ~2-3 weeks full-time.
+**You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a clickable prototype tested with 5 people.
+**Time:** ~3-5 weeks full-time - booking the 10 interviews is the long pole (Ch 2.3 plans 2-4 calendar weeks for that step alone).
 
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 2.1 | Learn the 5 Mom Test rules (ask about past, not future) | Mom Test Interview Script |
-| 2.2 | Rehearse your questions with an AI persona | Claude or ChatGPT (free) |
-| 2.3 | Find and book 10 ICP interviews (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names) | Reddit, LinkedIn, X, UserInterviews.com |
-| 2.4 | Build a throwaway 3-screen clickable prototype | Lovable (free tier) |
+| 2.2 | Rehearse your questions with an AI persona (optional - skip if you've run customer interviews before) | Claude or ChatGPT (free) |
+| 2.3-2.4 | Find and book 10 ICP interviews (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names) | Reddit, LinkedIn, X |
+| 2.5 | Score the transcripts and make the build / pivot / kill call | Mom Test Synthesis page |
+| 2.6 | Build a throwaway 3-screen clickable prototype | Lovable (free tier) |
 
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
 
@@ -155,7 +156,7 @@ These are the tools the course references - AI research tools, no-code builders,
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
 | **ValidatorAI** | Dialog-based AI advisor, rates your idea and finds blind spots | Rapid "devil's advocate" feedback before interviews | Free tier |
-| **IdeaProof** | 4-model ensemble (Claude, GPT, Gemini, Grok) cross-validates business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
+| **IdeaProof** | Multi-model ensemble cross-validates business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
 | **Preuve AI** | Evidence-based idea scoring from live data sources, with citations | Before building, when you need a data-backed viability check | Free tier |
 
 </details>

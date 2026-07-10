@@ -36,7 +36,8 @@ class CourseValidators
       check_table_width,
       check_disclaimer_consistency,
       check_em_dash_in_content,
-      check_year_stamp_fabrication
+      check_year_stamp_fabrication,
+      check_banned_strings
     ]
   end
 
@@ -337,6 +338,32 @@ class CourseValidators
       end
       set
     end
+  end
+
+  # ── Validator 8: Banned-string regression ratchet ────────────────────────
+  # data/course_banned_strings.yaml lists strings prior review rounds removed.
+  # A fixed defect may never return: every new review fix adds its signature
+  # there in the same commit. Optional per-entry `scope` regex limits which
+  # course files the entry applies to (matched against the bundle dir name).
+
+  def check_banned_strings
+    violations = []
+    ratchet_path = "data/course_banned_strings.yaml"
+    if File.exist?(ratchet_path)
+      entries = YAML.load_file(ratchet_path).fetch("banned", [])
+      course_chapters.each do |path|
+        dir = File.basename(File.dirname(path))
+        body = File.read(path)
+        entries.each do |e|
+          next if e["scope"] && dir !~ Regexp.new(e["scope"])
+          if body.include?(e["string"])
+            line = body.lines.index { |l| l.include?(e["string"]) }
+            violations << "#{path}:#{line ? line + 1 : "?"} banned string #{e["string"].inspect} - #{e["reason"]}"
+          end
+        end
+      end
+    end
+    Result.new(name: "banned-string-ratchet", passed: violations.empty?, violations: violations)
   end
 
   def build_yaml_title_map

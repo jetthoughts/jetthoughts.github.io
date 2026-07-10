@@ -107,7 +107,7 @@ She added a note to her Module 2 prep: when she interviewed parents, she'd ask w
 - **Six paying customers at $99 each.** $594 in revenue, before the product existed.
 - **A Google Drive folder** holding all five Module 1 outputs. Her Founder OS, started.
 
-**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
+**Next: [Module 2, where Mia interviews ten parents using the Mom Test](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/).** Her interview script will ask whether parents have ever spent real money on a specialist tutor search (the [problem] blank in her hypothesis), and what they currently pay - so she can replace her Money lens guess with actual numbers from actual receipts.
 
 ---
 

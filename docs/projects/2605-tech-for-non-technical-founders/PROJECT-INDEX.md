@@ -1,8 +1,8 @@
 # Project 2605 - Master Index
 
 **Project**: Tech for Non-Technical Founders 2026
-**Status**: 🟢 v1 (long-form) shipped + 🟡 v2 (micro-lesson) pilot in flight
-**Last Updated**: 2026-06-10 (Stale-doc cleanup: integration rules v1/v2 split, ICP clarified to Sam, archived 10.06, archived SPRINT-RUNBOOK + 50.01, path fixes)
+**Status**: 🟢 Course LIVE (PR #345) · 🟢 M2 v2 COMPLETE on PR #351 (awaiting merge) · 🔲 M3 next
+**Last Updated**: 2026-07-10 (M2 done: flattened 2.1-2.6 with Synthesis as 2.5, walkthrough, all review rounds closed, regression ratchet validator live - see 40.12/40.13/40.14)
 **Parent**: `../2510-seo-content-strategy/`
 
 This is the **single navigation hub** for the 2605 project. Read top-to-bottom on first visit.
@@ -11,10 +11,10 @@ This is the **single navigation hub** for the 2605 project. Read top-to-bottom o
 
 ## 🚀 IMMEDIATE ACTION - START HERE
 
-**v1 (long-form) is shipped**: 5 modules, 18 chapters, live at `/course/tech-for-non-technical-founders-2026/`.
+**The course is merged and live** (PR #345, squash 90216d2f): 5 modules, 24 spine chapters (count derives from `data/course_sequence.yaml` via the `course-stat` shortcode - never hardcode it), live at `/course/tech-for-non-technical-founders-2026/`. Module 1 is fully v2 (lessons **1.1-1.5**) with redesigned landing, covers, and four review rounds resolved.
 **Strategic pivot (2026-06-07)**: v2 (micro-learning format) is the next iteration based on `30.03-course-format-requirements-for-creators.md`. All 21 v1 chapters score 1.0-1.5/8 against the 8-part template (per 40.08 gap report). The 5 micro-lesson exploration drafts (Mom Test 3-lesson sequence + paid-pilot + mom-test-5-questions) were removed 2026-06-08 to start the migration from a clean slate; the **Quickstart and FAQ pages remain in `content/course/...`** as the v2 entry points already wired into the landing.
 
-**Currently in flight**: Phase 1 pilot COMPLETE (2026-06-08). Phase 2 (module-by-module migration) next. Phase 0 (mechanical quick wins) deferred until after pilot lessons finish.
+**Currently in flight**: nothing - PR #351 (Module 2 complete) awaits merge. Next work stream: M3 migration, using M1+M2 lessons as the pattern and the ratchet discipline from 40.13 (every review fix adds its signature to data/course_banned_strings.yaml in the same commit).
 
 Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" section for the 4-phase rollout). Review docs in `40-49-review/`.
 
@@ -26,8 +26,7 @@ Post-ship work is tracked in `TASK-TRACKER.md` (see "Course Migration Schedule" 
 3. Read 40-49-review/40.08-chapter-template-gap-report.md — every v1 chapter scored against the spec. Use as the "starting state" map.
 4. Reference 40-49-review/_ARCHIVED_40.09-mom-test-micro-lesson-qa-report.md ONLY for the QA methodology pattern (criterion-by-criterion binary scoring).
 5. Read the pilot lessons as the canonical implementation pattern:
-   - content/course/tech-for-non-technical-founders-2026/smoke-test-build-page/ (Lesson 1.2a - agnostic AI-builder workflow, Mixo as worked example, ~870w; Sam-glossing pushed over the 800w pilot ceiling deliberately - jargon decode beats word count)
-   - content/course/tech-for-non-technical-founders-2026/smoke-test-wire-tracking/ (Lesson 1.2b - heavy gloss pass for snippet/head tag/heatmap/session recording/pixel/GA4/incognito, ~640w)
+   - all five Module 1 lessons (now numbered 1.1-1.5): form-your-founding-hypothesis-90-minute-sprint (1.1), smoke-test-build-page (1.2), smoke-test-wire-tracking (1.3), smoke-test-landing-page-7-day-demand-test (1.4), price-hypothesis-on-smoke-test-page (1.5) - plus module-1-walkthrough-mia
 6. Open the v2 production pages already wired into the landing: content/course/tech-for-non-technical-founders-2026/quickstart/ + .../faq/
 7. Voice gates: no em-dashes (use `-` not `—`); no "Founders who"/"Most founders"/"## Why this matters"/"ICP-E"; no template labels visible in published content; ZERO case studies inside lesson body (they live at module-end walkthrough page). The `See it in action` footer link is added in the SAME commit that publishes the module's walkthrough page - never before; otherwise the lesson promises a page that does not exist.
 8. After every micro-lesson rewrite: run bin/validate-course + em-dash sweep + Hugo build + mobile viewport check at 375px.

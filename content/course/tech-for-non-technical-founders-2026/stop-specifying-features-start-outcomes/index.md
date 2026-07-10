@@ -147,11 +147,11 @@ Three actions, in order.
 
 > The cheap fix for this whole pattern is the rewrite tomorrow morning. The expensive fix is the salvage decision you read after the spaceship lands and investors ask why the demo is so heavy. One focused pass with a marker now spares you the build-and-throwaway later.
 
-> **Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3 (a + b) interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
+> **Optional: stack-rank features with real users.** After you have rewritten Section 3 as outcome-shaped job stories, you still have a list. If you need to know which outcome to build first, [OpinionX](https://opinionx.co) (free tier available) uses forced-ranking pairwise voting - users pick A or B, not rate everything "very important." Paste your 5-7 outcome statements, send the link to your Ch 2.3-2.4 interviewees, and the forced-choice format surfaces real priorities that a 1-10 rating scale hides. The output is a ranked list backed by pairwise win rates, not averaged scores. Use this before handing the brief to Lovable or a contractor - it prevents the "build everything because everything scored 8/10" trap.
 
 ## Artifacts you carry out of Module 3
 
-After finishing Ch 3.1-3.2, Sam has five artifacts. Each one feeds a specific downstream destination - this table is the map:
+After finishing Ch 3.1-3.2, you have five artifacts. Each one feeds a specific downstream destination - this table is the map:
 
 | Artifact | Where it goes next |
 |---|---|

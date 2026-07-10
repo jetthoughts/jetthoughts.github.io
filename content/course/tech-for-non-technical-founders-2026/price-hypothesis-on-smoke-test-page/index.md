@@ -85,7 +85,7 @@ Open your Stripe dashboard. Write down the number of clicks vs. completed paymen
 >
 > **You have now:** all M1 artifacts - Founding Hypothesis (1.1), clear landing page (1.2), tracking (1.3), cold-traffic data (1.4), price signal (1.5). Module 1 closes here.
 >
-> **Next:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - takes your price signal into customer interviews to find out WHY strangers paid (or didn't).
+> **Next:** [2.1 · The Mom Test: Ask About the Past, Not the Future](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the interview method for finding out whether the problem behind your hypothesis is real. You'll ask strangers about their past, not pitch your idea or your price.
 >
 > **If blocked:** see "If this fails" above. Missing any M1 artifact? Go back to that lesson before starting Module 2.
 >

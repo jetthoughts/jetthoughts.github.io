@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
+📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the synthesis from [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
 
 # Vibe PRD Template - One Page, Five Sections
 

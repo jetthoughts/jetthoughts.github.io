@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 5 · Step 1 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a live MVP + 10-30 users who touched it. **Don't have 10-30 yet?** Invite your Module 2 Mom Test interviewees + your [1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (typically 15-50 signups) to your staging URL as the warm seed. If under 10 users still touched it, run [Ch 2.3b outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for 10 more before re-attempting this survey.
+> **Input:** a live MVP + 10-30 users who touched it. **Don't have 10-30 yet?** Invite your Module 2 Mom Test interviewees + your [1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) (typically 15-50 signups) to your staging URL as the warm seed. If under 10 users still touched it, run [Ch 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for 10 more before re-attempting this survey.
 >
 > **Output:** a written must-have-user persona with 3 verbatim quotes and one named segment to target
 
@@ -171,14 +171,14 @@ Under 40% means you have a product problem, not a marketing problem, and the Q2-
 |---|---|---|---|
 | **You built for the wrong segment** | The product works, but the people you onboarded do not have the pain. Your Q5 slice shows: one segment is at 55%, the rest are at 5%. | Stop selling to the audience and start selling to the segment. | [Chapter 5.3a](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) personal-network outreach to the right segment. |
 | **You built the right thing, but it is not finished** | The Q3 verbatims are hedged ("it is nice to have," "I would use it if it had X"). The main benefit answers lack conviction. | Go back into the build and finish the thing. | Schedule a [Friday demo](/course/tech-for-non-technical-founders-2026/friday-demo-rule-founder-progress/) with the next release. |
-| **The pain is real, but your product is not the relief** | The Q4 verbatims name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). | Either niche into the 20% the workaround does not cover, or pivot. | [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next) validated-problem statement. |
+| **The pain is real, but your product is not the relief** | The Q4 verbatims name a workaround that is already 80% of the job (a spreadsheet, an existing tool, a person they pay). | Either niche into the 20% the workaround does not cover, or pivot. | [Chapter 2.1](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) validated-problem statement. |
 | **The product solves the pain, but the workflow is too long** | Users say "very disappointed" but session logs show they bailed before the payoff. Funnel collapses between signup and the "30-minute save" moment. | UX cut, not a strategy pivot. Shorten the path to the first win. | Retest after shortening the funnel; re-run the 40% test after the next UX release. |
 
 ## When founders should skip the test
 
 | Condition | What to do instead |
 |---|---|
-| **Under 10 users** | Run [Chapter 2.3b outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (with the list-building method from [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) if you don't already have a 30-name list) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
+| **Under 10 users** | Run [Chapter 2.4 outreach](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) (with the list-building method from [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) if you don't already have a 30-name list) and book 10 more user calls before re-attempting the test. The test requires 10-30 users who actually touched the MVP to be meaningful. |
 | **Pre-launch** | Use the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) instead. The 40% test asks "if you could no longer use the product" - if the user never used it, the answer is meaningless. |
 
 ## Advanced (optional)
@@ -216,7 +216,7 @@ Treat the answer as a stop sign rather than a market-research instrument. Under 
 
 > **Done when:** You have run the 5-question Sean Ellis survey, computed the overall and per-segment must-have %, and have 3 verbatim Q2-Q3 quotes from your top segment.
 > **Next click:** [5.2 · Choose Your Channel Before You Send One Message](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)
-> **If blocked:** If under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3 (a + b) outreach playbook and re-run the survey.
+> **If blocked:** If under 10 users responded, your sample is too small to read. Book 5-10 more user sessions using the Ch 2.3-2.4 outreach playbook and re-run the survey.
 
 > **Case Study: Tomas & Mia**
 >
