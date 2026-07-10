@@ -37,7 +37,7 @@ related_posts: false
 >
 > **Progress:** M5 · 7 of 7 · [OPTIONAL] - the systematic cold path; run it only after the warm-network pass in 5.3-5.5
 
-> **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name will book 1-2 paid pilots. Customers 11-20 come from cold outbound, not from launch events.
+> **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name put roughly one paid pilot in reach per batch - more as batches compound. Customers 11-20 come from cold outbound, not from launch events.
 
 > **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 >
@@ -196,7 +196,7 @@ All three variants follow the same shape: a specific reference earns the open, o
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TB
-    W1[Stage 1<br/>Send 30 messages<br/>3-5 replies expected]
+    W1[Stage 1<br/>Send 30 messages<br/>1-4 replies expected]
     W2[Stage 2<br/>Run 3-5 demos<br/>2-3 DPAs sent]
     W3[Stage 3<br/>1-2 deposits cleared<br/>Pilot kickoffs scheduled]
     W4[Stage 4<br/>Send next 20<br/>Hold for reply tail]

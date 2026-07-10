@@ -86,6 +86,7 @@ If the contractor controls the root email, AWS support will treat them as the ac
 
 > Bad: "Marcus has it. Slack him and he can DM it to you."
 > Good: "I opened AWS Secrets Manager just now and read it myself. I rotated it once in March when we offboarded the previous DBA."
+
 The Marcus answer means you have a single point of failure. It does not matter whether Marcus is honest, kind, or available - one person holding the prod DB password is one person away from a production outage you cannot fix. Firing Marcus does not fix it. Putting the credential in a store you administer, with Marcus pulling read access from there, does.
 
 **Item #10 - Domain registrar**
@@ -99,7 +100,7 @@ A domain transfer is the slowest recovery on the list. [ICANN's transfer policy]
 
 Those three pairs anchor the pattern; the table below is the fill-in-the-blank version - 12 items, the exact pass criterion for each, the recovery steps when one fails. The full audit lives at the [GitHub / AWS / Database Ownership Checklist](/course/tech-for-non-technical-founders-2026/ownership-checklist/).
 
-> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules (the source of the 14-day wait if your registrar lock isn't released). DNS = Domain Name System (the address book that points your domain at your servers; the "A record" is the one line that says which server answers).
+> **Acronyms in the table below:** IAM = Identity and Access Management (AWS's user-permissions system, separate from the root account). MFA = Multi-Factor Authentication (the 6-digit code your phone shows when you log in - a second proof beyond your password). WHOIS = the public registry that shows who legally owns a domain. ICANN = the global body that enforces domain-transfer rules (the source of the 5-day transfer-approval window and the 60-day post-registration lock). DNS = Domain Name System (the address book that points your domain at your servers; the "A record" is the one line that says which server answers).
 
 | Zone | Item | Pass Criterion |
 |---|---|---|

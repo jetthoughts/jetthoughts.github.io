@@ -177,9 +177,9 @@ The deposit number is not arbitrary. It is anchored to projected year-one ACV an
 
 | Sector | Year-1 ACV | Pilot fee (10-30%) | Pilot fee notes |
 |---|---|---|---|
-| B2B SaaS (per-seat, 5-10 seats) | $5K-$12K | $500-$3K | The CFO approves the deposit on email. No procurement involved. |
+| B2B SaaS (per-seat, 5-10 seats) | $5K-$12K | $500-$3K (capped under the procurement line) | The CFO approves the deposit on email. No procurement involved. |
 | B2B SaaS (mid-market, 50-200 seats) | $20K-$80K | $2K-$24K | Above $10K, expect a 1-week procurement review. Plan for it. |
-| B2B Services / consultancy | $10K-$40K | $1K-$6K | Service deposit is normal in the sector. Customer expects to pay. |
+| B2B Services / consultancy | $10K-$40K | $1K-$6K (capped under the procurement line) | Service deposit is normal in the sector. Customer expects to pay. |
 
 ### The minimum: $500
 

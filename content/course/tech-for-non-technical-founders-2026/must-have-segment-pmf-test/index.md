@@ -47,8 +47,8 @@ The real question after the MVP ships is whether the people who already touched 
 
 > **What your first-pass numbers will probably look like (and that is not a failure signal).** An idea-stage founder with 4-6 onramp users typically sees one of three patterns on the first survey run:
 > - All "somewhat disappointed" or "not disappointed" → that segment is not must-have; do not scale it. Run more interviews before re-attempting.
-> - 2-3 "very disappointed" out of 6 → directional MAYBE. Almost certainly a sample-size problem, not a product problem; book 5-10 more users.
-> - 4+ "very disappointed" out of 6 → directional YES. Advance to M5.3 with the caveat above.
+> - 3-4 "very disappointed" out of 6 → directional MAYBE. Almost certainly a sample-size problem, not a product problem; book 5-10 more users.
+> - 5+ "very disappointed" out of 6 → directional STRONG YES. Advance to M5.3 with the caveat above.
 >
 > A 25-40% reading at small sample size is not a failure. It is the normal state of a brand-new product with a brand-new founder. The Sean Ellis test is calibrated for ≥ 20 respondents with months of usage; your first-pass run is a forecast, not a verdict. Treat looping back to M2.3 outreach for more user sessions as the default first-pass move, not a setback.
 
