@@ -53,7 +53,7 @@
 
   <!-- Row 4 -->
   <text x="60" y="305" class="row">Cohort retention numbers</text>
-  <text x="280" y="305" class="row">Chapter 5.5 floor</text>
+  <text x="280" y="305" class="row">Churn-triage floor</text>
   <text x="565" y="305" class="keep" text-anchor="middle">YES</text>
   <text x="650" y="305" class="row">Baseline for next cohort</text>
   <line x1="50" y1="320" x2="850" y2="320" class="row-line"/>

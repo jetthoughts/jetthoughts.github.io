@@ -22,7 +22,7 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "7.6 · Pivot or Persevere: The Decision Framework"
+  og_title: "Pivot or Persevere: The Decision Framework"
   og_description: "Six pivot types, trigger conditions for each, and what to keep when you pivot. The chapter that turns the course from a one-way escalator into a discovery loop."
 cover_image_alt: "JetThoughts course cover showing 6 pivot arrows branching from a center node"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/"
@@ -31,13 +31,13 @@ related_posts: false
 
 > **Going further · Continuation chapter 6 of 6** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a churn-triage decision (chapter 7.5) OR a Sean Ellis 40% test result (chapter 7.1)
+> **Input:** a decision from the [churn-triage chapter](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/) OR a Sean Ellis 40% test result ([Chapter 5.1](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/))
 >
 > **Output:** a pivot decision with the 6-type framework + a written list of what you keep vs what you change
 
 ## The Course Is a Loop, Not an Escalator
 
-A founder I rode shotgun with last quarter - a fintech founder named D. - hit chapter 7.4 with a cold-outbound conversion rate of 0.6%. He had sent 287 personal emails to CFOs of 50-200-person companies over 14 days, with 11 replies and 0 paid pilots. His instinct, the same instinct every founder gets here, was to push forward into salvage-or-rebuild territory and start managing the build harder.
+A founder I rode shotgun with last quarter - a fintech founder named D. - hit the cold-outbound stage (Chapter 5.7) with a conversion rate of 0.6%. He had sent 287 personal emails to CFOs of 50-200-person companies over 14 days, with 11 replies and 0 paid pilots. His instinct, the same instinct every founder gets here, was to push forward into salvage-or-rebuild territory and start managing the build harder.
 
 That was the wrong move. The right move was backwards. The 0.6% conversion rate was telling him the messaging he had built off his [Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) sentence was not landing on the segment he had picked. Three things could be wrong: the customer (segment), the need (problem), or the channel (outbound vs PLG). Pushing forward into rebuild mode would have made him a better operator of a misaligned hypothesis. Going back to [Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) with a pivot decision made him a better founder.
 
@@ -53,7 +53,7 @@ Eric Ries catalogued ten pivot types in *The Lean Startup*; Steve Blank built on
 
 ### 1. Customer Segment pivot
 
-*Right product, wrong customer.* You shipped a tool that works, but the audience you targeted is not the audience that gets value from it. The signal usually comes from a churn-triage cohort slice (chapter 7.5) where one segment retains at 50%+ and others languish under 20%. Example: R. from the churn-triage chapter shipped a workflow tool to solo founders that turned out to be a 3-person-team tool. Same product, different audience.
+*Right product, wrong customer.* You shipped a tool that works, but the audience you targeted is not the audience that gets value from it. The signal usually comes from a churn-triage cohort slice (see the [churn-triage chapter](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/)) where one segment retains at 50%+ and others languish under 20%. Example: R. from the churn-triage chapter shipped a workflow tool to solo founders that turned out to be a 3-person-team tool. Same product, different audience.
 
 ### 2. Customer Need pivot
 
@@ -106,7 +106,7 @@ flowchart TD
 
 **Sean Ellis 40% under 25% across all segments** triggers a Solution pivot or a Customer Need pivot. Founders typically react by trying harder on the same product - more features, better onboarding, more polish. The right move is to ask whether the solution shape itself is wrong, or whether you targeted the wrong job.
 
-**Cohort retention under 30% with churn-triage Decision 3** triggers a Solution pivot. The cohort floor from chapter 7.5 already told you no segment retains. The pivot framework tells you the most likely culprit is solution shape, not audience.
+**Cohort retention under 30% with churn-triage Decision 3** triggers a Solution pivot. The churn-triage cohort floor already told you no segment retains. The pivot framework tells you the most likely culprit is solution shape, not audience.
 
 **CAC > 3x LTV with paying customers who love the product** triggers a Revenue Model pivot. Founders typically react by trying to push CAC down (better ads, better landing pages). When the customers who do convert love the product, the issue is almost always pricing model, not acquisition cost.
 
@@ -122,7 +122,7 @@ A pivot is not a restart. The founders who treat pivots as restarts are the ones
 
 ![The pivot ledger - a 4-column table showing what you keep and what you replace](pivot-ledger.svg)
 
-The ledger above is the template. Print it (or copy it to a Notion doc) before you declare the pivot. Walk every row. The evidence you keep includes: the validated problem statements that survived the interviews (or the disconfirmed ones - both are evidence), the customer relationships from your [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) outreach (50 names with verified contact details and one conversation each is the most valuable B2B asset you own at this stage), the cohort retention numbers you collected for the chapter 7.5 churn triage, and your domain expertise as the founder. The hypothesis sentence, the landing page copy, and the ad creative get rewritten. The MVP code depends - the auth and billing layers usually survive; the core workflow gets rebuilt around the new hypothesis.
+The ledger above is the template. Print it (or copy it to a Notion doc) before you declare the pivot. Walk every row. The evidence you keep includes: the validated problem statements that survived the interviews (or the disconfirmed ones - both are evidence), the customer relationships from your [Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) outreach (50 names with verified contact details and one conversation each is the most valuable B2B asset you own at this stage), the cohort retention numbers you collected for the churn triage, and your domain expertise as the founder. The hypothesis sentence, the landing page copy, and the ad creative get rewritten. The MVP code depends - the auth and billing layers usually survive; the core workflow gets rebuilt around the new hypothesis.
 
 A second founder we rode shotgun with - Anika, running a vertical SaaS for clinical-trial coordinators - ran the ledger move on a Monday afternoon. She kept her 287-person coordinator contact list (Customer Need pivot meant the segment was still right). She kept four of her eleven validated problem statements from her [Mom Test interviews](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) (the ones about consent-form reconciliation, not the ones about scheduling). She kept her Stripe integration and her auth flow from the Lovable build. She rewrote her hypothesis sentence around consent-form reconciliation. She rewrote her landing page headline. She kept her pricing model intact ($240/month per seat). Two weeks later she had a smoke-test landing page live, an outreach script aimed at the same 287 contacts with the new pitch, and four warm meetings booked. The pivot took 14 days because she kept everything that survived.
 

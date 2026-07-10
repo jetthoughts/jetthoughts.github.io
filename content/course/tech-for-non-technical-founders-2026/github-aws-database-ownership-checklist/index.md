@@ -122,14 +122,14 @@ Two of those twelve are existential. AWS root email controls whether a contracto
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#f5f5f5', 'primaryBorderColor':'#666', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
     Start(["Friday afternoon. Alone.<br/>Credit card + Notion doc."])
-    Start --> Code{Code: Are you<br/>GitHub org Owner?}
-    Code -->|Yes| Cloud{Cloud: Is the AWS<br/>root email yours?}
+    Start --> Code["Code: Are you<br/>GitHub org Owner?"]
+    Code -->|Yes| Cloud["Cloud: Is the AWS<br/>root email yours?"]
     Code -->|No| FixCode[Slack the lead engineer.<br/>Self-serve org transfer]
 
-    Cloud -->|Yes, with MFA| Sec{Secrets: Can you read<br/>the prod DB password<br/>tonight without asking?}
+    Cloud -->|Yes, with MFA| Sec["Secrets: can you read the prod<br/>DB password without asking?"]
     Cloud -->|No| FixCloud[Self-serve email change<br/>or 3-5 day AWS support<br/>recovery with corp docs]
 
-    Sec -->|Yes, from your vault| Dom{Domain: Does WHOIS<br/>show your name +<br/>renewal email?}
+    Sec -->|Yes, from your vault| Dom["Domain: WHOIS shows<br/>your name + email?"]
     Sec -->|"'Marcus has it'"| FixSec[Set up Secrets Manager<br/>or 1Password vault tonight.<br/>Migrate this sprint]
 
     Dom -->|Yes, on your card| Pass[Audit clean.<br/>Quarterly recurring block.<br/>Email investor / board.]
@@ -140,7 +140,7 @@ flowchart TD
     FixSec --> Recovery
     FixDom --> Recovery
 
-    Recovery --> Escalate{Did the contractor<br/>cooperate within 7 days<br/>code / 14 days cloud /<br/>auth code at all?}
+    Recovery --> Escalate["Contractor cooperated within<br/>7 days code / 14 days cloud?"]
     Escalate -->|Yes| Pass
     Escalate -->|No| Lawyer[Retain lawyer.<br/>$2K-$5K beats<br/>a stalled checkout]
 

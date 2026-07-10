@@ -116,18 +116,18 @@ Five questions feed the matrix. Answer them alone with a printed worksheet, writ
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
 flowchart TD
-    Start(["Default: self-serve with Lovable + Supabase + Stripe.<br/>Work through the ceiling-signal questions to see if that holds."])
-    Start --> Q1{"Q1: Problem validated?<br/>10+ Mom Test calls + ≥7 strong signals + Ch 1.4 smoke test ≥6%?"}
-    Q1 -->|No| Validate["Step back: Validate without code first.<br/>Run the Airbnb test this week."]
-    Q1 -->|Yes| Q2{"Q2: Backend-heavy?<br/>Real-time / queues / compliance / 5+ integrations?"}
-    Q2 -->|No| Q3{"Q3: Runway tight?<br/>Less than 4 months to show paying users?"}
-    Q2 -->|Yes| Hire["Hire a team.<br/>Material monthly burn. Read the SOW first."]
-    Q3 -->|No| Q4{"Q4: Senior engineer available<br/>for 1 hr/month architecture review?"}
+    Start(["Default: self-serve.<br/>Five questions test it."])
+    Start --> Q1["Q1: Problem validated?<br/>10+ calls, 7+ signals, smoke test 6%+"]
+    Q1 -->|No| Validate["Step back: validate without code.<br/>Airbnb test this week."]
+    Q1 -->|Yes| Q2["Q2: Backend-heavy?<br/>Real-time / queues / compliance?"]
+    Q2 -->|No| Q3["Q3: Runway under 4 months?"]
+    Q2 -->|Yes| Hire["Hire a team.<br/>Read the SOW first."]
+    Q3 -->|No| Q4["Q4: Senior engineer for a<br/>monthly architecture review?"]
     Q3 -->|Yes| Validate
-    Q4 -->|Yes| SelfServe["Default confirmed: Self-serve.<br/>Paste one-page brief into Lovable."]
-    Q4 -->|No| Q5{"Q5: Monthly engineering budget?"}
-    Q5 -->|"Fractional rate"| Fractional["Fractional CTO bridge (see [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/)).<br/>Buys the architecture review commercially. $0 equity."]
-    Q5 -->|"Full team burn"| Hire
+    Q4 -->|Yes| SelfServe["Self-serve confirmed.<br/>Paste your brief into Lovable."]
+    Q4 -->|No| Q5["Q5: Monthly engineering budget?"]
+    Q5 -->|Fractional rate| Fractional["Fractional CTO bridge.<br/>Architecture review, bought. $0 equity."]
+    Q5 -->|Full team burn| Hire
 
     classDef start fill:#f0f9f0,stroke:#2e7d32,stroke-width:2.5px,color:#1a1a1a
     classDef question fill:#fff5f5,stroke:#cc342d,stroke-width:2px,color:#1a1a1a
