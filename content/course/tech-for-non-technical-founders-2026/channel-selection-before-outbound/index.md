@@ -30,19 +30,19 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 5 · Step 2 of 5** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 5 · Lesson 5.2 · [OPTIONAL] - skip if you already know your channel** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.3b) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
+> **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.4) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
+>
+> **Progress:** M5 · 2 of 7 · [OPTIONAL] - run this only if you don't yet know which channel your buyers actually use
 
 > **TL;DR:** Pick one channel from your interview evidence and commit for a full send/reply/follow-up arc. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
 
 The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, cold email for two weeks, a Slack community for two weeks, back to LinkedIn. Six weeks in, 8 conversations, zero paid pilots, and no idea which channel actually worked.
 
 The fix is rarely "find a smarter channel." It's pick one channel from your interview evidence and stick with it through a full send/reply/follow-up arc. Same six weeks on LinkedIn alone produces 11 conversations, 2 paid pilots, and a clear hypothesis about what to test next.
-
-The pattern: four channels, no commitment, and no way to tell which channel had worked because none of them had been run long enough to read.
 
 You ran 10 interviews in [Module 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Your interviewees told you exactly how they find tools like yours. They just did not use the word "channel" when they said it.
 
@@ -97,7 +97,7 @@ At this stage you are choosing from four options. Here is what each one actually
 | Channel | Best for | Requires | Red flag |
 |---------|----------|----------|----------|
 | **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (credit-based free tier); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
-| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (free tier available) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
+| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (free tier available) | Open rate (share of recipients who open your email) <20% after first batch = domain rep or subject lines broken; fix before scale |
 | **Community outreach** | B2B and prosumer where buyers already gather in Slack/Discord/forum | Must be a genuine participant first; one signal-quality post per sprint (not per week); spend 2 weeks commenting before posting product or get banned permanently | Joining this week then immediately selling = permanent ban from the community |
 | **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | A sustained posting cadence; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to the early low-visibility stretch |
 | **Engineering as Marketing** | Any B2B or prosumer where your ICP searches for tactical solutions; zero-CAC organic SEO | One free no-code micro-tool (calculator, checklist, grader, template) that solves one micro-problem for your ICP; build it on Carrd/Tally/Notion in an afternoon | Your ICP doesn't search for tactical tooling (they buy via referral or sales call); the micro-tool solves a toy problem nobody actually has |
@@ -144,8 +144,6 @@ The prompt is a forcing function, not a crystal ball. The real data comes from r
 >
 > **The real gate:** ≥9/12 channel-fit score + a full send/reply/follow-up arc with reply rate >5%.
 >
-> **Optional: auto-parse social media for leads.** [WorthBuild](https://worthbuild.io) (free tier available) scans Reddit, Twitter/X, and LinkedIn for posts matching your ICP's problem description and returns a list of named people publicly complaining about the thing you solve. Use it to seed your outreach list when the manual reading in Ch 2.3-2.4 didn't produce enough names. The free tier is metered - save it until you have exhausted your hand-picked list and need fresh contacts.
-
 ## Channel Selection Worksheet
 
 Fill this out before you send message one. It prevents the wasted-effort cycle of channel-hopping.
@@ -228,17 +226,13 @@ With 30 focused messages you get a reply rate you can diagnose; with 10 messages
 
 Pick the channel your interviews point to, write it down, and give it a real run before you question it.
 
-The first place to apply this is your personal network in [Chapter 5.3a (Build Your 50-Name Network List)](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
+The first place to apply this is your personal network in [Chapter 5.3 (Build Your 50-Name Network List)](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). Once that is exhausted, [going outbound without a sales team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) covers the tactics for running the channel you just chose: the filter, the script, the Calendly-to-Stripe pipeline, and what the reply rate actually means.
 
 ## What to do tomorrow
 
 1. Open the worksheet above and score each of the 4 channels against your customer interview answers. Pick the one that maps to the most evidence.
 2. Write the channel name + your commitment statement in a Notion doc. The clock starts the day you send your first outbound message.
-3. Read [Chapter 5.3a - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
-
-> **Module 5, Step 2 of 5** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
-> Next: [5.3a · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
-> Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+3. Read [Chapter 5.3 - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
 
 Pick the channel your interviews already named, commit to it long enough to read the signal, and stop running pilots against your own attention.
 
@@ -249,18 +243,16 @@ Pick the channel your interviews already named, commit to it long enough to read
 - Andrew Chen, [The Law of Shitty Clickthroughs](https://andrewchen.com/the-law-of-shitty-clickthroughs/) - why every channel degrades over time and why early-stage founders need to pick the channel that works now, not the channel that worked for a more established company 3 years ago.
 - First Round Capital, [From 1 to 1,000 Users](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - channel selection stories from Airbnb, Tinder, Etsy, Reddit, including how each picked their first acquisition channel based on where their early customers actually lived online.
 
-> **Done when:** Your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
+> **Done:** your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
 >
-> **Next click:** [5.3a · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+> **You have now:** a committed channel (5.2) chosen from your interview evidence. The 50-name list to run it on is next.
+>
+> **Next:** [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - the personal-network list you'll run this channel on first.
 >
 > **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
 
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Channel scoring: LinkedIn (9/12 - controllers are there), cold email (8/12), Reddit (5/12). Commits to LinkedIn + cold email. Scoring: 8.0/10.
->
-> **Mia**: Channel scoring: Facebook groups (9/12 - parents are there daily), school referrals (7/12), Instagram (5/12). Commits to Facebook groups + school district referrals.
-
 ---
+
+*See it in action: [Module 5 walkthrough: Mia gets paid](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)*
 
 *Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

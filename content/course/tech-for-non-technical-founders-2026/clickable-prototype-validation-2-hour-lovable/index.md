@@ -48,7 +48,7 @@ Those signals do not measure the same thing.
 
 After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score what they do, not what they say.**
 
-A founder we advised had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
+A founder we advised had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
 
 When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate.
 
@@ -58,7 +58,7 @@ A throwaway prototype run in front of 5 of your interview subjects would have su
 >
 > You will build 3 throwaway screens, show them to 5 of your Mom Test interviewees, watch what they do without coaching, then archive everything. The only outputs that carry forward into Module 3 are (a) the pass/fail signal and (b) the exact words your users used when describing what they saw. The prototype CODE is discarded.
 >
-> If you try to polish this prototype into your MVP later, you'll spend much longer on it, carry every throwaway compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Module 4 ([Ch 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) defines the stack, [Ch 4.3b](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) walks the phases), started from the one-page brief (Chapter 3.1) with real auth, real Stripe, real domain.
+> If you try to polish this prototype into your MVP later, you'll spend much longer on it, carry every throwaway compromise into production, and invalidate the shape test. The actual MVP is a fresh build in Module 4 ([Ch 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) defines the stack, [Ch 4.4](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/) walks the phases), started from the one-page brief (Chapter 3.1) with real auth, real Stripe, real domain.
 
 ## Why a Clickable Prototype Catches What Interviews Miss
 
@@ -335,7 +335,7 @@ After finishing Ch 2.1-2.6, you have five artifacts. Each one feeds a specific d
 |---|---|
 | **Validated Problem Statement** (Ch 2.5 synthesis applied to your Ch 2.3-2.4 transcripts) | Ch 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
 | **Pass/fail prototype log** (5 sessions from this chapter) | Reference doc: did we get the shape right? If yes, write the brief. If no, the table above routes you to a revision or restart. |
-| **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Ch 3.1 Section 3 ("what you're building") + Ch 4.3 (a + b) Lovable prompts. The user's words beat your marketing copy. |
+| **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Ch 3.1 Section 3 ("what you're building") + Ch 4.3-4.4 Lovable prompts. The user's words beat your marketing copy. |
 | **10 raw transcripts** (Ch 2.3-2.4 interview recordings + notes) | Archive. Reference if you ever pivot - they hold the language for a re-targeted ICP. |
 | **30 raw verbatim sentences** (Ch 2.3-2.4 step 2, Reddit/forum complaints) | Reference for Ch 3.1 Section 1 supplementary evidence + the bank for Ch 2.3-2.4 cold-message subject lines in any future round 2. |
 

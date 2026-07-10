@@ -72,21 +72,21 @@ Skip the lessons marked "optional" on the [course landing page](/course/tech-for
 
 - [**4.1** · Should You Hire? Decision Tree](/course/tech-for-non-technical-founders-2026/should-you-hire-2026-decision-tree/)
 - [**4.2** · Own Your GitHub, AWS, and Database](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)
-- [**4.3a** · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
-- [**4.3b** · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
+- [**4.3** · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
+- [**4.4** · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 
-**Gate:** you own every account; the app loads; one core flow works end-to-end.
+**Gate:** you own every account; the app loads; one core flow works end-to-end. *(4.5, the optional monthly ceiling check, starts after launch.)*
 
 ### Module 5 - First Paying Customer
 *Output: one signed paid pilot + repeatable outbound channel.*
 
-- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
-- [**5.3a** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
-- [**5.3b** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
-- [**5.3c** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
-- [**5.4** · Charge Before You Ship: The Paid Pilot](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
+- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) *(5.2, the optional channel-selection detour, is skip-safe on this fast path)*
+- [**5.3** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+- [**5.4** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
+- [**5.5** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
+- [**5.6** · Charge Before You Ship: The Paid Pilot](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 
-**Gate:** signed pilot agreement + $500+ deposit received through Stripe.
+**Gate:** signed pilot agreement + deposit received through Stripe ($500+ standard; first-month-upfront on the low-price path in 5.6).
 
 ---
 

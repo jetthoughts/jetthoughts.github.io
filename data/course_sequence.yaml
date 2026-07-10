@@ -107,18 +107,18 @@ sequence:
     goal: "Confirm you own your code, cloud, domain, and database before any build starts."
 
   - slug: self-serve-mvp-stack-lovable-supabase-stripe-2026
-    title: "4.3a · The Self-Serve MVP Stack: Tools & Setup"
-    module: "Chapter 4.3a"
+    title: "4.3 · The Self-Serve MVP Stack: Tools & Setup"
+    module: "Chapter 4.3"
     goal: "Understand why Lovable + Supabase + Stripe is the dominant self-serve path and lock in the 3 pre-flight rules."
 
   - slug: self-serve-mvp-stack-build-phases
-    title: "4.3b · The Self-Serve MVP Stack: Build Phases"
-    module: "Chapter 4.3b"
+    title: "4.4 · The Self-Serve MVP Stack: Build Phases"
+    module: "Chapter 4.4"
     goal: "Execute the 4 build phases (Lovable UI → Supabase auth → Stripe checkout → live deploy) and pass the 5 green lights."
 
   - slug: vibe-coding-ceiling-signals
-    title: "4.4 · Vibe Coding Done Right: 5 Ceiling Signals"
-    module: "Chapter 4.4"
+    title: "4.5 · Vibe Coding Done Right: 5 Ceiling Signals"
+    module: "Chapter 4.5"
     goal: "Spot the 5 architectural signals that mean it's time to graduate beyond no-code."
 
   - slug: must-have-segment-pmf-test
@@ -132,26 +132,26 @@ sequence:
     goal: "Pick one outreach channel you'll commit to before scaling."
 
   - slug: first-ten-customers-network-list
-    title: "5.3a · Build Your 50-Name Network List"
-    module: "Chapter 5.3a"
+    title: "5.3 · Build Your 50-Name Network List"
+    module: "Chapter 5.3"
     goal: "Sort 50 names into 4 outreach buckets so you know exactly who to message first."
 
   - slug: first-ten-customers-outreach-message
-    title: "5.3b · Write the Outreach Message"
-    module: "Chapter 5.3b"
+    title: "5.4 · Write the Outreach Message"
+    module: "Chapter 5.4"
     goal: "Write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies."
 
   - slug: first-ten-customers-send-track
-    title: "5.3c · Send, Track, and Read the Replies"
-    module: "Chapter 5.3c"
+    title: "5.5 · Send, Track, and Read the Replies"
+    module: "Chapter 5.5"
     goal: "Send 50 messages in the right sequence, track replies in a spreadsheet, and diagnose what a no actually means."
 
   - slug: paid-pilot-charge-before-ship
-    title: "5.4 · Charge Before You Ship: The Paid Pilot Contract"
-    module: "Chapter 5.4"
+    title: "5.6 · Charge Before You Ship: The Paid Pilot Contract"
+    module: "Chapter 5.6"
     goal: "Sign a Design Partner Agreement with a refundable Stripe deposit before writing new code."
 
   - slug: outbound-without-sales-team
-    title: "5.5 · Going Outbound Without a Sales Team"
-    module: "Chapter 5.5"
+    title: "5.7 · Going Outbound Without a Sales Team"
+    module: "Chapter 5.7"
     goal: "Send 30 filtered cold messages and book 1-2 paid pilots after the warm-network pass."

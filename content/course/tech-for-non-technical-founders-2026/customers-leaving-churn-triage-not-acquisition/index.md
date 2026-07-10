@@ -108,8 +108,8 @@ flowchart TD
     B -->|All segments under 25%<br/>and roughly the same| C[Decision 3 - KILL THE SKU<br/>Sunset gracefully + pivot]
     B -->|All segments around 20-35%<br/>and roughly the same| D[Decision 1 - FIX THE PRODUCT<br/>Rebuild one workflow]
     B -->|One segment over 50%<br/>others under 20%| E[Decision 2 - CHANGE THE SEGMENT<br/>Refund the wrong half]
-    C --> CK[Go to chapter 7.6<br/>Pivot or Persevere]
-    D --> DK[Go to chapter 8 / 9<br/>When things break]
+    C --> CK[Go to Pivot or Persevere<br/>in Going Further]
+    D --> DK[Go to the rescue chapters<br/>Going Further]
     E --> EK[Re-run Module 5 outreach<br/>aimed at the right segment]
 
     classDef redbox fill:#fff5f5,stroke:#cc342d,stroke-width:2px;
@@ -132,7 +132,7 @@ The fix is to stop adding features and rebuild one workflow until it actually wo
 
 One segment retains at 50%+ while others languish under 20%. The product works; the audience is wrong. R.'s case from the opening was Decision 2 - 71% retention for 3-person teams, 8% for solo founders, two-thirds of her customers paying for a product that did not fit their job.
 
-The fix has two parts. First, fire the wrong segment - refund their last 30 days, recommend an alternative tool, and remove them from the customer list. Second, double down on the right segment - rewrite the landing page headline for 3-person teams, redirect ad spend to that audience, and re-run [Chapter 5.3a personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) within the segment that retains.
+The fix has two parts. First, fire the wrong segment - refund their last 30 days, recommend an alternative tool, and remove them from the customer list. Second, double down on the right segment - rewrite the landing page headline for 3-person teams, redirect ad spend to that audience, and re-run [Chapter 5.3 personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) within the segment that retains.
 
 R. did this on a Friday afternoon. By the following Friday she had 11 paying customers (the right ones) and a refund tab of $5,800 (the wrong ones). Her net month-end customer count went from 35 to 11, and her churn rate dropped from 65% to 14% the next 30 days. Fewer customers, less revenue, but a real business instead of a leaking one.
 
@@ -140,7 +140,7 @@ R. did this on a Friday afternoon. By the following Friday she had 11 paying cus
 
 No segment retains above 25%. You have a feature, not a product. The pain is real but your build does not relieve it - users try it once, do not see the value, and never come back regardless of who they are.
 
-This is the hardest decision because it feels like quitting. It is not quitting; it is recovering the runway you would otherwise burn proving the same thing for another two months. Sunset the SKU. Refund the active subscribers (Stripe handles this in two API calls; your support inbox handles the rest). Move the operating decision to [chapter 7.6 Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/), which walks the six pivot types and the trigger conditions. The cohort data you collected in the 90-minute floor is the strongest single piece of evidence you will hand into the pivot decision.
+This is the hardest decision because it feels like quitting. It is not quitting; it is recovering the runway you would otherwise burn proving the same thing for another two months. Sunset the SKU. Refund the active subscribers (Stripe handles this in two API calls; your support inbox handles the rest). Move the operating decision to [the Pivot or Persevere chapter](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/), which walks the six pivot types and the trigger conditions. The cohort data you collected in the 90-minute floor is the strongest single piece of evidence you will hand into the pivot decision.
 
 The most common founder failure mode at this triage step is to refuse to pick. The cohort data says Decision 2; the founder spends six more weeks "trying to lift the solo segment retention" because saying goodbye to two-thirds of paying customers feels worse than burning $4,800/month. Six weeks later the metrics are unchanged and the runway is shorter. The triage works only if you commit to the decision in the same week you ran the cohort.
 
@@ -175,8 +175,8 @@ The honest trade-off: a refund-the-wrong-segment campaign cuts your customer cou
 You walk out of this chapter holding one of three artifacts: a fix-the-product plan with a 4-6 week ship date, a change-the-segment plan with a refund script and a redirected outreach motion, or a kill-the-SKU verdict pointing toward a pivot decision. Pick the next move from your verdict and re-run the cohort floor every 6 weeks until the bucket stops leaking.
 
 1. **If Decision 1 (FIX THE PRODUCT):** open the [salvage-vs-rebuild decision framework](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/) and feed it the cohort data. Use the same numbers in the brief to whoever rebuilds the workflow - dev shop, fractional CTO, or AI tooling - so they know which workflow to rebuild and which to leave alone.
-2. **If Decision 2 (CHANGE THE SEGMENT):** re-run [Chapter 5.3a - personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) aimed at the high-retention segment. R.'s 11 kept customers seeded her next outreach run - she asked each for two intros to similar 3-person teams and landed 7 paid pilots in 3 weeks. Your cohort data ("we have 11 customers who look like you and they retain at 70%") is the warmest possible referral.
-3. **If Decision 3 (KILL THE SKU):** open [chapter 7.6 - Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/). The cohort floor numbers are the evidence the pivot framework asks for - four cohorts saying the same thing, not a hunch.
+2. **If Decision 2 (CHANGE THE SEGMENT):** re-run [Chapter 5.3 - personal-network outreach](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) aimed at the high-retention segment. R.'s 11 kept customers seeded her next outreach run - she asked each for two intros to similar 3-person teams and landed 7 paid pilots in 3 weeks. Your cohort data ("we have 11 customers who look like you and they retain at 70%") is the warmest possible referral.
+3. **If Decision 3 (KILL THE SKU):** open [Pivot or Persevere](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/). The cohort floor numbers are the evidence the pivot framework asks for - four cohorts saying the same thing, not a hunch.
 
 ## Further reading
 

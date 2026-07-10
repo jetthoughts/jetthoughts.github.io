@@ -109,8 +109,9 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 |---|---|---|
 | 4.1 | Decide: self-serve, fractional CTO (a part-time senior engineer who owns architecture but doesn't write all the code), or hired team | Build Path Decision Worksheet |
 | 4.2 | Lock ownership: GitHub, AWS, domain, database in your name | Ownership Checklist |
-| 4.3 | Ship the MVP: Lovable + Supabase + Stripe | Lovable + Supabase + Stripe (free tiers) |
-| 4.4 | Spot the 5 ceiling signals that mean it's time to graduate beyond no-code | - |
+| 4.3 | Set up the stack and pre-flight rules: Lovable + Supabase + Stripe | Lovable + Supabase + Stripe (free tiers) |
+| 4.4 | Walk the 4 build phases to a live MVP at a real URL | Same stack + a domain in your name |
+| 4.5 (optional) | Spot the 5 ceiling signals that mean it's time to graduate beyond no-code | Monthly calendar block |
 
 > **Before you write code: the $0 Concierge MVP.** If you're not ready to commit to a full Lovable build, use Tally + Zapier (or Make.com) + Airtable to simulate your product's backend. Collect customer requests through a Tally form, route them to Airtable via Zapier, and process them manually. The customer experiences a working product. You validate demand before writing a line of code. All three tools have free tiers.
 
@@ -118,16 +119,18 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ### Module 5 - First Paying Customer
 **You have:** a live MVP at a real URL.
-**You walk away with:** one signed paid pilot ($500+ deposit) + a repeatable outbound channel.
+**You walk away with:** one signed paid pilot with a real deposit ($500+ standard; 5.6 covers the low-price exception) + a repeatable outbound channel.
 **Time:** ~2-4 weeks.
 
 | Step | What You Do | Key Tool |
 |---|---|---|
 | 5.1 | Run the Sean Ellis PMF test (PMF = Product-Market Fit; one survey question: "how would you feel if you could no longer use this product?" 40%+ "very disappointed" = signal) on your earliest users | PMF survey template |
-| 5.2 | Pick one outreach channel and commit before scaling | Channel selection framework |
-| 5.3 | Convert warm personal network into first paid pilots | Personalized DMs |
-| 5.4 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
-| 5.5 | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
+| 5.2 (optional) | Pick one outreach channel and commit before scaling | Channel selection framework |
+| 5.3 | Build the 50-name warm list, sorted into 4 outreach buckets | One spreadsheet |
+| 5.4 | Write the 4 bucket messages + a 90-second Loom | Loom (free tier) |
+| 5.5 | Send in sequence, track replies, book demos | The same spreadsheet |
+| 5.6 | Sign a Design Partner Agreement - "DPA" (a short contract where a customer pays a deposit to test your product as a co-design partner; cheaper and faster than a full enterprise contract) - with a refundable deposit | DPA template + Stripe |
+| 5.7 (optional) | Go cold outbound: 30 filtered messages, book 1-2 pilots | LinkedIn Sales Navigator or manual |
 
 **Important distinction:** your warm network is the right place to sell your first paid pilot, and the wrong place to validate the problem. Friends and other founders will tell you your idea is great because they're being polite. Only cold strangers who describe the problem in their own words and pay money produce a real signal.
 
@@ -171,7 +174,6 @@ These are the tools the course references - AI research tools, no-code builders,
 | **Lovable / Bolt.new** | AI app builder from text prompts | Clickable prototype (Module 2), MVP build (Module 4) | Free tier |
 | **Supabase** | Hosted Postgres + auth + realtime | MVP backend (Module 4) | Free tier |
 | **Tally + Zapier + Airtable** | "Wizard of Oz" no-code stack (a fake-it-till-you-make-it pattern: the customer thinks software is running, but you do the work by hand behind the scenes to test demand before you build the real thing) | Concierge MVP before committing to a code build (Module 4 alt path) | Free tiers |
-| **WorthBuild** | Auto-parses social media for leads, generates personalized outreach messages | After validation, setting up first-customer pipeline (Module 5) | Free tier |
 
 </details>
 
@@ -187,7 +189,7 @@ Every module has a gate. If the data doesn't support your hypothesis, you stop a
 | 2 | Mom Test interviews | ≥7 of 10 interviewees have spent time or money on the problem |
 | 3 | Product Brief quality check | Every feature traces back to a verbatim interview quote |
 | 4 | MVP at a real URL | You own every account; the app loads; one core flow works end-to-end |
-| 5 | First paid pilot | Signed DPA + $500+ Stripe deposit received |
+| 5 | First paid pilot | Signed DPA + Stripe deposit received ($500+ standard; low-price path in 5.6) |
 
 If you fail a gate, the system requires you to go back, not forward. Failing at the gate costs you a few weeks and a few hundred dollars of ad spend; failing after the build costs founders years and tens of thousands of dollars on something nobody wants.
 

@@ -90,7 +90,7 @@ Score each lens 1-5. Be honest - this is for you, not an investor deck.
 > 2. Fill each blank with the most specific noun you can. If a blank says "small businesses," rewrite it until it names one person in one industry.
 > 3. Score your sentence using the four lenses above.
 > 4. **✅ Success check:** total ≥14/20 (or ≥11/15 if Money is blank) AND no lens below 2.
-> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`. You'll paste it verbatim into Lessons 1.2, 1.4, and 1.5. Module 2 uses it too - to choose who you interview and what you ask about - but you never read it to an interviewee.
+> 5. Save the sentence to a Google Doc titled `Founding Hypothesis - [today's date]`, inside a new Google Drive folder called `Founder OS` - every module adds an artifact to that folder, and by the course's end it is your evidence pack. You'll paste it verbatim into Lessons 1.2, 1.4, and 1.5. Module 2 uses it too - to choose who you interview and what you ask about - but you never read it to an interviewee.
 
 ---
 

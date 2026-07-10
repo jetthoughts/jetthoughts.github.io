@@ -1,8 +1,8 @@
 # Task Tracker - 2605 Tech for Non-Technical Founders
 
-**Last Updated**: 2026-07-10 (M2 v2 migration COMPLETE on PR #351 - awaiting merge. All review rounds closed, 65-finding fan-out fixed, regression ratchet live.)
+**Last Updated**: 2026-07-10 (M4+M5 v2 COMPLETE on branch modules-4-5-v2 - the whole course is now on the v2 template. Gate report: 40.16.)
 
-## Active Phase: M2 release (PR #351 ready) → next: M3 migration
+## Active Phase: M4+M5 release (PR pending) → next: Phase 3 cross-cutting polish or distribution prep
 
 **🚀 What shipped 2026-07-09..10: Module 2 v2 complete (PR #351, 20 commits)**
 - ✅ All chapters on the M1 v2 template; numbering FLATTENED to 2.1-2.6 (letters retired; Synthesis is Lesson 2.5, in yaml prev/next). Chapter count derives 25 via course-stat.

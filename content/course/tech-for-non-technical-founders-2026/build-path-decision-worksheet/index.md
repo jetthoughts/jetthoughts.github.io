@@ -32,7 +32,7 @@ related_posts: false
 
 ## Why this exists
 
-A wellness-coaching founder we picked up in Q1 2026 had spent four months building a Lovable MVP, then panicked and signed a $24K-per-month agency contract because three advisors told her "you need a real team now." Two of the advisors had never seen her validation data. The third had not asked.
+A wellness-coaching founder who came to us in early 2026 had spent four months building a Lovable MVP, then panicked and signed a $24K-per-month agency contract because three advisors told her "you need a real team now." Two of the advisors had never seen her validation data. The third had not asked.
 
 She showed us the contract on a Tuesday. By Friday we had walked her through the same 5 questions on this worksheet and the matrix said Path 3 (Fractional CTO at $2,400/mo, 8 hours/week), not Path 4 (the agency at $24K/mo). She paid the agency a kill fee and saved 14 months of runway. The decision was already in the data she had. The advisors had not run the worksheet. Cheaper to spend 30 minutes with this page than to spend a quarter undoing a contract somebody else's instinct signed for you.
 
