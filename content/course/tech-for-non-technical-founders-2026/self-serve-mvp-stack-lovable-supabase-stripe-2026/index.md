@@ -40,9 +40,9 @@ related_posts: false
 
 > **TL;DR:** Lovable renders the screens, Supabase stores the data, Stripe charges the card. Three tools, three jobs. Know the boundaries before you open Lovable. Twelve rules keep the build inside the shed. All three tools have free tiers; the chapter's specific cost callouts live where each tool is introduced. Skip to [the ship plan](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/#the-ship-plan) if you already know the stack.
 
-> **This chapter starts FRESH from your one-page brief - do NOT iterate the Chapter 2.4 prototype.**
+> **This chapter starts FRESH from your one-page brief - do NOT iterate the Chapter 2.6 prototype.**
 >
-> The Chapter 2.4 prototype was a short research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is the production build: real Supabase auth, real Stripe payments, real domain, real users. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code multiplies the build effort and ships every research compromise into production.
+> The Chapter 2.6 prototype was a short research artifact: fake data, no auth, viewed by 5 interview subjects, archived after the shape test. This chapter is the production build: real Supabase auth, real Stripe payments, real domain, real users. The first proved users can navigate the SHAPE; the second ships the actual product. Reusing the prototype code multiplies the build effort and ships every research compromise into production.
 
 If you completed Modules 1-4, your default Module 4 path is to build it yourself with Lovable + Supabase + Stripe. Hiring is a ceiling-signal trigger covered in the [supplementary reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/), not a parallel choice.
 
@@ -163,7 +163,7 @@ Synthesis of every rule scattered across Module 4 and the supplementary referenc
 2. **One workflow, one persona, one happy path.** No multi-tenancy, no admin dashboard, no settings page on day one. Build the shed (Rob Walling's analogy), not the house.
 3. **Strict layer boundaries**: Lovable renders screens, Supabase stores data, Stripe collects payment. Do not let Lovable hand-roll auth; do not let Supabase render a UI; do not let Stripe become the source of truth for user state.
 4. **Weekly demo to one non-PRD-reader human.** Spouse, advisor, dog if necessary. Keep a ship-something-visible cadence every week. The demo IS the data; the screens are not.
-5. **Do NOT iterate the Ch 2.4 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
+5. **Do NOT iterate the Ch 2.6 throwaway prototype.** Start the M4.3 build fresh from your one-page brief. The prototype answered "do users know what to click"; the MVP answers "do users pay."
 6. **Set up GitHub sync in Lovable Settings on day 1.** Lovable can drop the work; GitHub is your backup. Skipping this is the #1 reason founders cannot retrieve their source.
 7. **Enable Row-Level Security on every Supabase table from day 1.** RLS is the rule that says "Coach A can only read Coach A's rows." Skipping it ships the cross-tenant data leak that ends pilots (see Ch 4.4 Signal 4).
 8. **Stripe webhook handler must be idempotent.** Idempotent means "safe to run twice without breaking anything" - Stripe sometimes sends the same payment event more than once, and your handler must not double-charge or double-activate. Check `WHERE event_id = $1 AND processed = true` before re-running the update. (See production hardening section of [hire-track reference](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#production-hardening-checklist-what-your-fractional-cto-will-look-for) for details.)

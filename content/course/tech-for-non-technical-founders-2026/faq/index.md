@@ -55,7 +55,7 @@ Mixo (free tier, ~60 seconds from idea to page). If the templates don't fit, Car
 
 **Q: I can't find anyone to interview. I've searched everywhere.**
 
-Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a searchable ICP (Ideal Customer Profile - the specific kind of person your hypothesis names). Tighten to "12-person law-firm office manager." (2) Search second-degree keywords: "boarding costs" instead of "pet sitter." The [Ch 2.3a chapter](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) has the AI prompt that generates 8 communities + 5 search strings from your hypothesis.
+Two fixes: (1) Your hypothesis is too vague - "small business owners" is not a searchable ICP (Ideal Customer Profile - the specific kind of person your hypothesis names). Tighten to "12-person law-firm office manager." (2) Search second-degree keywords: "boarding costs" instead of "pet sitter." The [Ch 2.3 chapter](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) has the AI prompt that generates 8 communities + 5 search strings from your hypothesis.
 
 **Q: Everyone I interview says "sounds great" but nobody gives me real data.**
 
@@ -63,7 +63,7 @@ Your questions are probably hypothetical-shaped. "Would you use a tool like this
 
 **Q: Should I skip the AI persona rehearsal (Ch 2.2)?**
 
-If you've run customer interviews before and your questions reliably produce concrete past-tense answers, skip it - go straight to [Ch 2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). If this is your first time running Mom Test interviews, the 90-minute rehearsal catches broken question shapes before they waste real interview slots.
+If you've run customer interviews before and your questions reliably produce concrete past-tense answers, skip it - go straight to [Ch 2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). If this is your first time running Mom Test interviews, the 90-minute rehearsal catches broken question shapes before they waste real interview slots.
 
 **Q: Fewer than 7 of my 10 interviewees have actually spent time or money on the problem. What does that mean?**
 

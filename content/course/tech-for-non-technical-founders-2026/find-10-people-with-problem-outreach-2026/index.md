@@ -1,5 +1,5 @@
 ---
-title: "2.3b · Find 10 People: What to Say"
+title: "2.4 · Find 10 People: What to Say"
 aliases: ["/blog/find-10-people-with-problem-outreach-2026/"]
 description: "The message templates that book 10 customer interviews. 3-message sequence, volume targets, research panel fallback. Part 2 of Chapter 2.3."
 date: 2026-05-18
@@ -22,26 +22,26 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "2.3b · Find 10 People: What to Say"
+  og_title: "2.4 · Find 10 People: What to Say"
   og_description: "The message templates that book 10 customer interviews. 3-message sequence, volume targets, research panel fallback."
 cover_image_alt: "JetThoughts cover showing the 5-step outreach funnel from Reddit mining at the top down to 10 calls booked at the bottom"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/"
 related_posts: false
 ---
 
-> **Module 2 · Lesson 2.3b · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** a 30-name list from [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - specific people you can name because you read what they posted
 >
 > **Output:** 10 interview calls booked, transcripts in hand, ready to score per the Ch 2.1 rubric
 >
-> **Progress:** M2 · 4 of 5 · Results so far: question list + 30-name prospect list
+> **Progress:** M2 · 4 of 6 · Results so far: question list + 30-name prospect list
 
 > **TL;DR:** Send 30 staggered messages referencing specific posts you read. A 3-message sequence (Day 0 intro + Day 3 bump + Day 7 close) books 10 interviews. Reply rate runs 20-30% when each message names a specific post; 1-5% when it doesn't.
 
 > **This is Part 2 of 2.** [Part 1: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) covers the ICP mapping, reading threads, and building the 30-name list. You need the list from Part 1 before the templates below will work - generic openers collapse to 1-5% reply rates.
 
-> **How this chapter relates to Ch 2.4:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.4](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3 (a + b) first to validate THE PROBLEM, then Ch 2.4 to validate THE SOLUTION SHAPE.
+> **How this chapter relates to Ch 2.6:** this chapter recruits 10 fresh interviewees and runs PAST-BEHAVIOR interviews about whether the problem is real. [Ch 2.6](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) takes the 5 strongest-signal interviewees from these 10 and runs a DIFFERENT kind of session - silent observation while they click through a throwaway Lovable prototype. Same recruitment pool; different methodology; sequential, not parallel. Run Ch 2.3-2.4 first to validate THE PROBLEM, then Ch 2.6 to validate THE SOLUTION SHAPE.
 
 This is interview recruitment, not sales. You're asking for time and insight, not money - different message template, different channels, different reciprocity. Don't use the Chapter 5.5 cold-email script here; it scares interview subjects who don't yet know you have a product.
 
@@ -183,10 +183,10 @@ The chain of artifacts the booked calls produce:
 1. **Run each interview using the Ch 2.1 5-question Mom Test technique.** Open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact on a second monitor; read the 5 questions verbatim. 30-40 minutes per call.
 2. **Score each call 1-10 within 5 minutes of hanging up** per the Ch 2.1 scoring rubric. Write the score before opening the next browser tab.
 3. **After all 10 calls are done, fill the [Validated Problem Statement template](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/)** using the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
-4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.4 prototype sessions.
+4. **Pick the 5 strongest-signal interviewees** (Mom Test score ≥ 7) for Ch 2.6 prototype sessions.
 5. **Two artifacts now flow into Module 3 + later modules:**
    - The Validated Problem Statement (Section 1 of the Ch 3.1 one-page brief, lifted verbatim)
-   - The 5 strongest-signal interviewees (Ch 2.4 input - and later, your Module 5 onramp invitees in Ch 4.3 (a + b), plus your warm-list seed in Ch 5.3)
+   - The 5 strongest-signal interviewees (Ch 2.6 input - and later, your Module 5 onramp invitees in Ch 4.3 (a + b), plus your warm-list seed in Ch 5.3)
 
 If fewer than 7 of 10 calls score ≥ 7, the problem is too weak for this ICP. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. The full kill / iterate / proceed decision lives in the [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) page.
 
@@ -200,7 +200,7 @@ Skip this module and start building, and the typical failure mode is burning mon
 - [User Interviews](https://www.userinterviews.com/) and [Respondent](https://respondent.io) - research panels for ICPs that cannot be reached cold.
 
 > **Done:** 10 interview calls are booked on your calendar and you have sent the first batch of outreach messages.
-> **You have now:** question list (2.1-2.2) + 30-name list (2.3a) + 10 booked interviews (2.3b).
+> **You have now:** question list (2.1-2.2) + 30-name list (2.3) + 10 booked interviews (2.4).
 >
 > **Next:** return to [2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) to run the interviews using the 5-question script, then move to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score the transcripts.
 > **If blocked:** If your reply rate is under 10%, your Day-0 subject line is too generic. Rewrite it to reference a specific post you read by that person. If your ICP can't be reached cold, switch to a paid research panel (User Interviews or Respondent).

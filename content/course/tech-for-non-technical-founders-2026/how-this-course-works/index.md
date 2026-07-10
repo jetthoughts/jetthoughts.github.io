@@ -76,8 +76,9 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 |---|---|---|
 | 2.1 | Learn the 5 Mom Test rules (ask about past, not future) | Mom Test Interview Script |
 | 2.2 | Rehearse your questions with an AI persona | Claude or ChatGPT (free) |
-| 2.3 | Find and book 10 ICP interviews (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names) | Reddit, LinkedIn, X, UserInterviews.com |
-| 2.4 | Build a throwaway 3-screen clickable prototype | Lovable (free tier) |
+| 2.3-2.4 | Find and book 10 ICP interviews (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names) | Reddit, LinkedIn, X |
+| 2.5 | Score the transcripts and make the build / pivot / kill call | Mom Test Synthesis page |
+| 2.6 | Build a throwaway 3-screen clickable prototype | Lovable (free tier) |
 
 **The Mom Test is irreplaceable.** AI tools can tell you what people say online, but they cannot tell you whether a specific human will open their wallet. Without the interviews, you're building features for a problem nobody confirmed exists.
 

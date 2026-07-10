@@ -45,7 +45,7 @@ related_posts: false
 
 > **$0 outbound stack.** Apollo's free tier (credit-based: roughly 100 email credits + 10 export credits per month) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo Pro ($49) or Smartlead ($39 Base plan) only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
-This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
+This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
 The 10 people you interviewed in Module 2 may or may not become customers, and outreach to them goes through the sales sequence below rather than the recruitment script.
 
@@ -127,7 +127,7 @@ A 10% reply rate on 30 messages is 3 replies. At 20% demo-to-paid, 3 demos lands
 
 ### Filter: getting to 30 high-fit names
 
-Apollo or Sales Navigator. Filter on the six dimensions you defined in [Chapter 2.3a · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (the same filter you saved as the `Module 5 cold seed` tab in your outreach spreadsheet): job title (the buyer or the user, pick one), company size (start one tight band), industry (one vertical first), geography (one timezone for callable demos), technology used (filter for tools your product replaces or integrates with), recent funding or hiring signal (companies with momentum reply faster).
+Apollo or Sales Navigator. Filter on the six dimensions you defined in [Chapter 2.3 · Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) (the same filter you saved as the `Module 5 cold seed` tab in your outreach spreadsheet): job title (the buyer or the user, pick one), company size (start one tight band), industry (one vertical first), geography (one timezone for callable demos), technology used (filter for tools your product replaces or integrates with), recent funding or hiring signal (companies with momentum reply faster).
 
 Pull 100-150 raw rows. Strip three categories before sending:
 
@@ -248,7 +248,7 @@ A 30-message batch with zero replies is rare and almost always indicates a filte
 
 | Step | Action | Output |
 |---|---|---|
-| **1** | Open your `Module 5 cold seed` tab from Ch 2.3 (a + b) - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
+| **1** | Open your `Module 5 cold seed` tab from Ch 2.3-2.4 - the Apollo filter is already saved and 8-12 contacts may already be exported. Top up to 30-50 high-fit names using the same filter. Drop bottom 20 into a "later batch" tab in your Sheet. Pick one of three message variants and customize deposit + product description. | 30-50 target list built. Message template ready. |
 | **2** | Spend 60-90 minutes personalizing the first 30 messages. One specific reference per prospect (recent post, hire milestone, role change). Send via LinkedIn DM or cold email tool ([Smartlead](https://smartlead.ai), [Instantly](https://instantly.ai)). | 30 messages sent. 3-6 replies expected. |
 | **3** | Tally replies once they settle. Book demos. Follow up with non-responders once only. | 2-4 demo calls booked. Next batch ready. |
 

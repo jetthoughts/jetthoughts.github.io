@@ -1,5 +1,5 @@
 ---
-title: "2.4 · Build a Clickable Prototype"
+title: "2.6 · Build a Clickable Prototype"
 aliases: ["/blog/clickable-prototype-validation-2-hour-lovable/"]
 description: "A throwaway Lovable prototype lets 5 interview subjects experience the SHAPE of your solution. The third validation pillar after the landing page."
 date: 2026-05-18
@@ -23,24 +23,24 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "2.4 · Build a Clickable Prototype"
+  og_title: "2.6 · Build a Clickable Prototype"
   og_description: "A throwaway Lovable prototype lets 5 interview subjects experience the SHAPE of your solution. The third validation pillar after the landing page."
-cover_image_alt: "JetThoughts cover for Chapter 2.4 - hand-drawn three-screen clickable prototype with five user-test sessions and pass/fail signal markers"
+cover_image_alt: "JetThoughts cover for Chapter 2.6 - hand-drawn three-screen clickable prototype with five user-test sessions and pass/fail signal markers"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/"
 related_posts: false
 ---
 
-> **Module 2 · Lesson 2.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.6 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (recruited in [2.3a](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.3b](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
+> **Input:** 5 of the 10 Mom Test interviewees from Chapter 2.3 (recruited in [2.3](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/), messaged in [2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)) - pick the strongest-signal ones (scored per the Ch 2.1 rubric)
 >
 > **Output:** 5 of them watched navigating a throwaway clickable prototype, with pass/fail per session
 >
-> **Progress:** M2 · 5 of 5 · Results so far: question list + 30-name list + 10 interviews run and scored
+> **Progress:** M2 · 6 of 6 · Results so far: question list + 30-name list + 10 interviews run and scored
 
 > **TL;DR:** Three throwaway screens, five silent-observation sessions. Watch whether users can navigate your solution without coaching - something interviews cannot tell you.
 
-> **How this chapter relates to Ch 2.3 (a + b):** [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) already booked and ran your 10 past-behavior Mom Test interviews. This chapter takes 5 of those 10 (the ones who scored 7+ on the Mom Test) and re-engages them for a 30-min silent-observation session with a throwaway Lovable prototype. You are NOT recruiting fresh people; you are re-asking warm contacts for a different kind of time. Ch 2.3 (a + b) validated THE PROBLEM; Ch 2.4 validates THE SOLUTION SHAPE.
+> **How this chapter relates to Ch 2.3-2.4:** [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) already booked and ran your 10 past-behavior Mom Test interviews. This chapter takes 5 of those 10 (the ones who scored 7+ on the Mom Test) and re-engages them for a 30-min silent-observation session with a throwaway Lovable prototype. You are NOT recruiting fresh people; you are re-asking warm contacts for a different kind of time. Ch 2.3-2.4 validated THE PROBLEM; Ch 2.6 validates THE SOLUTION SHAPE.
 
 The [Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) tells you whether the problem is real and felt. A clickable prototype tells you something the Mom Test cannot: whether the user knows what to do when you hand them a solution.
 
@@ -225,7 +225,7 @@ Choose 5 of the 10 interviewees whose Mom Test scores were 7 or higher. You alre
 
 Book the sessions as 30-minute video calls. Send the Lovable prototype link 10 minutes before - not earlier. You do not want them exploring it solo before you can observe.
 
-**The re-engagement message** (paste into LinkedIn DM or reply to your original Ch 2.3 (a + b) thread):
+**The re-engagement message** (paste into LinkedIn DM or reply to your original Ch 2.3-2.4 thread):
 
 > *"Hi [name] - thank you for the 40 minutes last week. I built a quick clickable prototype based on what you told me about [their specific workaround from the Mom Test transcript]. I'd like 30 more minutes to watch you try it without me explaining anything - just silent observation while you click through. I'll send the link 10 minutes before. Would Tuesday afternoon or Wednesday afternoon work?"*
 
@@ -333,17 +333,17 @@ After finishing Ch 2.1-2.4, Sam has five artifacts. Each one feeds a specific do
 
 | Artifact | Where it goes next |
 |---|---|
-| **Validated Problem Statement** (Ch 2.1 synthesis applied to your Ch 2.3 (a + b) transcripts) | Ch 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
+| **Validated Problem Statement** (Ch 2.1 synthesis applied to your Ch 2.3-2.4 transcripts) | Ch 3.1 Section 1 - copy verbatim. This is the PRD's foundation. (PRD = product requirements document, the one-page spec a team or AI agent builds from.) |
 | **Pass/fail prototype log** (5 sessions from this chapter) | Reference doc: did we get the shape right? If yes, write the brief. If no, the table above routes you to a revision or restart. |
 | **Verbatim "describe in one sentence" vocabulary** (closing answers from this chapter) | Ch 3.1 Section 3 ("what you're building") + Ch 4.3 (a + b) Lovable prompts. The user's words beat your marketing copy. |
-| **10 raw transcripts** (Ch 2.3 (a + b) interview recordings + notes) | Archive. Reference if you ever pivot - they hold the language for a re-targeted ICP. |
-| **30 raw verbatim sentences** (Ch 2.3 (a + b) step 2, Reddit/forum complaints) | Reference for Ch 3.1 Section 1 supplementary evidence + the bank for Ch 2.3 (a + b) cold-message subject lines in any future round 2. |
+| **10 raw transcripts** (Ch 2.3-2.4 interview recordings + notes) | Archive. Reference if you ever pivot - they hold the language for a re-targeted ICP. |
+| **30 raw verbatim sentences** (Ch 2.3-2.4 step 2, Reddit/forum complaints) | Reference for Ch 3.1 Section 1 supplementary evidence + the bank for Ch 2.3-2.4 cold-message subject lines in any future round 2. |
 
 ## Iterate or proceed? The combined Module-2 decision matrix
 
-The 2 chapters each have their own iteration guidance (Ch 2.3 (a + b) reply rate, Ch 2.4 pass count above). The COMBINED decision uses both signals together:
+The 2 chapters each have their own iteration guidance (Ch 2.3-2.4 reply rate, Ch 2.6 pass count above). The COMBINED decision uses both signals together:
 
-| Ch 2.3 (a + b) interview signal | Ch 2.4 prototype signal | Decision |
+| Ch 2.3-2.4 interview signal | Ch 2.6 prototype signal | Decision |
 |---|---|---|
 | 7+ of 10 scored ≥7 | 4-5 of 5 passed | **PROCEED** - write the Ch 3.1 brief tonight |
 | 7+ of 10 scored ≥7 | 2-3 of 5 passed | **ONE iteration round** - revise the prototype's worst-failing screen, re-run 2 replacement sessions (NOT new interviews) |
@@ -376,7 +376,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
 > **Done:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
-> **Founder OS · Artifact #3 of 6:** 10 scored Mom Test transcripts (from Ch 2.3a + 2.3b) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Founder OS` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
+> **Founder OS · Artifact #3 of 6:** 10 scored Mom Test transcripts (from Ch 2.3 + 2.4) + 5 prototype session pass/fail signals + the `Prototype Vocabulary - [date]` doc with verbatim "describe in one sentence" answers. Drop them all in your `Founder OS` folder; Ch 3.1 reads the vocabulary into Section 3 of the brief.
 >
 > **You have now:** all Module 2 artifacts - scored interviews (2.1-2.3) + prototype feedback from 5 real customers (2.4). Module 2 closes here.
 >
@@ -384,7 +384,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 >
 > **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
 
-> **Module 2 closes here.** Before opening Module 3, you should have: (1) a sharpened question list after the AI persona rehearsal (Ch 2.2), (2) a 30-name ICP list built from real complaints (Ch 2.3a), (3) 10 interview transcripts scored 7+/10 strong signal (Ch 2.3b), (4) a one-page validated problem statement with build/pivot/kill verdict (Ch 2.1b synthesis), and (5) 5 prototype sessions with verbatim "describe in one sentence" vocabulary (this chapter). All five in your `Founder OS` folder. Missing one? Go back - Module 3 cannot start without the validated problem statement + prototype vocabulary.
+> **Module 2 closes here.** Before opening Module 3, you should have: (1) a sharpened question list after the AI persona rehearsal (Ch 2.2), (2) a 30-name ICP list built from real complaints (Ch 2.3), (3) 10 interview transcripts scored 7+/10 strong signal (Ch 2.4), (4) a one-page validated problem statement with build/pivot/kill verdict (Ch 2.5 synthesis), and (5) 5 prototype sessions with verbatim "describe in one sentence" vocabulary (this chapter). All five in your `Founder OS` folder. Missing one? Go back - Module 3 cannot start without the validated problem statement + prototype vocabulary.
 
 ---
 

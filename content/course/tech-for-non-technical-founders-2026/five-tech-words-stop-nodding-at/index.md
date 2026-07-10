@@ -153,7 +153,7 @@ The five words above are dev-shop jargon - vocabulary you'll hit in Modules 4-5 
 
 | Acronym | Plain English | Where it shows up |
 |---|---|---|
-| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3a |
+| **ICP** | Ideal Customer Profile - the specific kind of person your hypothesis names | Ch 1.1, 2.3 |
 | **PMF** | Product-Market Fit - the survey question "would you be very disappointed if you could no longer use this?" 40%+ "very disappointed" = signal | Ch 5.1 |
 | **JTBD** | Jobs To Be Done - what a customer "hires" your product to do (instead of feature list) | Ch 3.1, 3.2 |
 | **MRR** / **ARR** | Monthly / Annual Recurring Revenue - what one customer pays per month or year | Ch 1.1, 5.4 |

@@ -36,7 +36,7 @@ Forty minutes, one interview slot saved.
 
 ---
 
-## [Lessons 2.3a and 2.3b: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
+## [Lessons 2.3 and 2.4: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
 
 Her first instinct was the one the lesson warned about: post in her Facebook feed and message old colleagues. Instead she went back to where the Vermont mother's post had come from - r/Dyslexia, two ADHD parenting subreddits, and a 40,000-member Facebook group for parents of kids with learning differences - and read for half a day.
 
@@ -58,7 +58,7 @@ The location question closed too, without an ad dollar: nine of ten described se
 
 ---
 
-## [Lesson 2.4: The Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
+## [Lesson 2.6: The Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 
 She picked her five strongest-signal parents and built the prototype in one evening - three Lovable screens: search by specialty, a tutor profile with parent reviews, a "request match" confirmation. Nothing behind the buttons.
 

@@ -1,5 +1,5 @@
 ---
-title: "2.1b · Mom Test Synthesis: Build, Pivot, or Kill"
+title: "2.5 · Mom Test Synthesis: Build, Pivot, or Kill"
 aliases: ["/blog/mom-test-synthesis-build-pivot-kill/"]
 description: "After your 10 Mom Test interviews: score each transcript, count strong signals, and decide build, pivot, or kill. The 90-minute synthesis that turns raw transcripts into a validated problem statement."
 date: 2026-05-13
@@ -22,24 +22,24 @@ categories: ["Founders"]
 cover_image: cover.png
 metatags:
   image: cover.png
-  og_title: "2.1b · Mom Test Synthesis: Build, Pivot, or Kill"
+  og_title: "2.5 · Mom Test Synthesis: Build, Pivot, or Kill"
   og_description: "After your 10 Mom Test interviews: score each transcript, count strong signals, and decide build, pivot, or kill. The 90-minute synthesis."
-cover_image_alt: "Mom Test synthesis cover showing the build/pivot/kill decision tree after 10 interviews"
+cover_image_alt: "JetThoughts course cover for Lesson 2.5 - Score Ten, Then Build, Pivot, or Kill, with the decision gate card: 7 or more build, 4 to 6 pivot, under 4 kill"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/"
 related_posts: false
 ---
 
-> **Module 2 · Synthesis - run after your 2.3b interviews · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Lesson 2.5 · [CORE] - run after your 2.4 interviews** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** 10 scored Mom Test transcripts (from [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) + completed interviews (from [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/))
+> **Input:** 10 scored Mom Test transcripts (from [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) + completed interviews (from [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/))
 >
 > **Output:** a build / pivot / kill decision + a one-page validated problem statement
 >
-> **Progress:** M2 · between 4 and 5 of 5 · Results so far: question list + 30-name list + 10 scored interviews - this page turns the scores into a decision
+> **Progress:** M2 · 5 of 6 · Results so far: question list + 30-name list + 10 scored interviews - this page turns the scores into a decision
 
 > **TL;DR:** Score 10 transcripts, count strong signals, make one of three calls. 90 minutes. The decision you avoid here costs you a quarter of build time later.
 
-> **You should be here AFTER your Ch 2.3 (a + b) interviews are done.** If you don't have 10 scored transcripts in hand, return to [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) for the technique, then [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for recruitment. This page is the synthesis pass - you cannot complete it without real interview data.
+> **You should be here AFTER your Ch 2.3-2.4 interviews are done.** If you don't have 10 scored transcripts in hand, return to [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) for the technique, then [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) for recruitment. This page is the synthesis pass - you cannot complete it without real interview data.
 
 After all 10 interviews are done, you have scored transcripts in a folder and a number. Synthesis is the 90-minute step that turns those transcripts into the one-page validated problem statement you'll carry into Module 3. Skip this step and go straight to Lovable, and you have not validated anything - you have a folder and a hypothesis.
 
@@ -71,7 +71,7 @@ flowchart TD
     S3 --> S4{Strong signals<br/>in 10 calls?}
     S4 -->|7 or more| Build[BUILD<br/>Move to Chapter 3.1<br/>Write the Product Brief]
     S4 -->|4 to 6| Pivot[PIVOT<br/>Run 5 more interviews<br/>Refine the ICP first]
-    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart at Ch 2.3a]
+    S4 -->|Fewer than 4| Kill[KILL<br/>Find a different problem<br/>Restart at Ch 2.3]
     Build --> Sign[Show to 2 advisors.<br/>Get 2 signatures before building.]
     Pivot --> Sign
     Kill --> Sign
@@ -119,9 +119,9 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 
 > **Done:** you have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
 >
-> **You have now:** question list (2.1-2.2) + 30-name list (2.3a) + 10 scored interviews (2.3b) + the build/pivot/kill decision. The orientation pages state this gate as "7 of 10 interviewees have spent time or money on the problem" - the two are the same bar, because a transcript cannot score 7+ without real past spend surfacing in Q2/Q3.
+> **You have now:** question list (2.1-2.2) + 30-name list (2.3) + 10 scored interviews (2.4) + the build/pivot/kill decision. The orientation pages state this gate as "7 of 10 interviewees have spent time or money on the problem" - the two are the same bar, because a transcript cannot score 7+ without real past spend surfacing in Q2/Q3.
 >
-> **Next:** If build - [2.4 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - return to [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis (same hypothesis, different list). If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3a.
+> **Next:** If build - [2.6 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - return to [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis (same hypothesis, different list). If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3.
 > **If blocked:** If the numbers aren't adding up, re-read [Ch 2.1's scoring rubric](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the Q4 score and flag-count combination is what separates a 7 from a 5.
 
 ---

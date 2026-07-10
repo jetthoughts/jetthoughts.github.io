@@ -34,13 +34,13 @@ related_posts: false
 >
 > **Input:** your draft Mom Test question list (5-8 questions from Ch 2.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names, introduced in Ch 1.1)
 >
-> **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3 (a + b) recruitment and real interviews
+> **Output:** a sharpened question list (5-7 solid questions) + top 3 objections, ready to take into Ch 2.3-2.4 recruitment and real interviews
 >
-> **Progress:** M2 · 2 of 5 · Results so far: draft question list · Skip if you have interviewed customers before - 2.1 is the core
+> **Progress:** M2 · 2 of 6 · Results so far: draft question list · Skip if you have interviewed customers before - 2.1 is the core
 >
 > **Cost:** $0 (free tier on Claude or ChatGPT)
 
-> **Skip this if you've interviewed before.** If you've run customer interviews in the past and your questions produced concrete past-tense answers, go straight to [Ch 2.3a: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). This chapter catches broken question shapes before they waste real interview slots - useful for first-timers, unnecessary if you've already calibrated your question technique.
+> **Skip this if you've interviewed before.** If you've run customer interviews in the past and your questions produced concrete past-tense answers, go straight to [Ch 2.3: Find 10 People](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/). This chapter catches broken question shapes before they waste real interview slots - useful for first-timers, unnecessary if you've already calibrated your question technique.
 
 > **TL;DR:** A 90-minute AI rehearsal catches broken questions before you spend real interview slots on them. Claude personas expose hypothetical phrasing that generates polite yeses from anyone.
 
@@ -60,7 +60,7 @@ An AI rehearsal costs nothing. A short pass through Claude before you pick up th
 
 Real interviews stay irreplaceable for the things rehearsal cannot simulate: the noncommittal shrug on question three, the mention of a workaround you never imagined, the silence after Q4 that tells you more than ten polite yeses. The rehearsal sharpens your questions before you spend a real customer's hour on them.
 
-This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3 (a + b) (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
+This chapter is the companion polish step between Ch 2.1 (where you learned the Mom Test technique and drafted 5-8 rough questions) and Ch 2.3-2.4 (where you recruit 10 real interviewees). You don't validate anything here - the real interviews do that. You catch the broken question shapes before they reach a real human - one focused rehearsal session saves 5 wasted interview slots. Here's the rehearsal flow at a glance:
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -122,7 +122,7 @@ Stay in character for this entire conversation. Do not break character to explai
 | `[QUESTION X]` (in Prompt 5) | Whichever question you want to sharpen from your draft list |
 | `[PERSONA NAME]`, `[FREQUENCY]`, `[DURATION]`, `[BUDGET RANGE]`, `[REASON]` | Your judgment, anchored to deep-research findings if you ran the Ch 1.1 sidebar - see fallback below |
 
-> **Fallback for the 3 fields not in your hypothesis (`[FREQUENCY]`, `[DURATION]`, `[REASON]`):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3 (a + b) interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise BETWEEN interview 1 and interview 2. If any placeholder above is empty, the Ch 1.1 hypothesis is not specific enough - tighten it before rehearsing.
+> **Fallback for the 3 fields not in your hypothesis (`[FREQUENCY]`, `[DURATION]`, `[REASON]`):** make your best informed guess. The rehearsal is calibrated; the persona doesn't have to be perfect. After your first real Ch 2.3-2.4 interview, you will know whether your guess was too mild ("monthly" when reality is "daily") or too aggressive. Revise BETWEEN interview 1 and interview 2. If any placeholder above is empty, the Ch 1.1 hypothesis is not specific enough - tighten it before rehearsing.
 
 > **Heads up:** Claude is trained to be helpful, which means it tends to give reasonable answers even to broken questions. Don't read a coherent persona answer as proof the question works. Read Claude's out-of-character diagnosis instead - the in-character answer reflects what Claude thinks a polite persona would say; the out-of-character note reflects what the question is actually asking.
 
@@ -245,7 +245,7 @@ This is the other reason real interviews stay irreplaceable: a real customer can
 > - What a real customer will actually say (Claude simulates the persona YOU describe)
 > - Whether the problem is real (only 10 Mom Test interviews can falsify the hypothesis)
 >
-> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 (a + b) recruitment).
+> **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3-2.4 recruitment).
 
 > **Advanced: AI ensemble stress-test (after your interviews).** Once your 10 Mom Test interviews are done and you have a refined hypothesis, you can cross-validate the business logic using multiple AI models simultaneously. Paste your validated problem statement into [IdeaProof](https://ideaproof.io) (free tier to start) - it runs your hypothesis through several frontier models and flags contradictions between them. A claim that passes one model but fails another is a blind spot worth investigating before you build. The ensemble approach catches what a single-model rehearsal misses: each model has different training biases, and consensus across several is stronger signal than one model saying "sounds good." This is not a substitute for the Mom Test interviews - it validates the logic AFTER the interviews validated the problem. Think of it as the final sanity check before you commit to building.
 
@@ -261,7 +261,7 @@ The rehearsal does not validate the hypothesis. It validates that your questions
 >
 > **You have now:** a question list rehearsed against pushback (2.2) on top of your 2.1 draft.
 >
-> **Next:** [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - build the 30-name list first, then [2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) sends the messages.
+> **Next:** [2.3 · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - build the 30-name list first, then [2.4 · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) sends the messages.
 >
 > **If blocked:** If all 3 personas produced identical answers, your persona descriptions are too generic. Rewrite them with sharper role, company-size, and urgency differences before continuing.
 

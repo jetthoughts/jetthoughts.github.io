@@ -33,13 +33,13 @@ related_posts: false
 >
 > **Input:** a Founding Hypothesis sentence (from Ch 1.1) + 3 ICP characteristics (ICP = Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1)
 >
-> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3 (a + b) recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
+> **Output:** the 5-question Mom Test template + a draft question list (5-8 questions) ready to sharpen in Ch 2.2 and then run in real interviews after Ch 2.3-2.4 recruitment. The scoring rubric becomes your reference card once you have transcripts in hand.
 >
-> **Progress:** M2 · 1 of 5 · Results so far: all Module 1 artifacts - Module 2 starts here
+> **Progress:** M2 · 1 of 6 · Results so far: all Module 1 artifacts - Module 2 starts here
 
 > **TL;DR:** Five questions, all anchored in past behavior. Ask what they did last Tuesday, not what they'd do with a hypothetical product. Skip to: [The 5 questions ↓](#the-5-questions) · [The 3 emotional flags ↓](#the-3-emotional-language-flags) · [What to do tomorrow ↓](#what-to-do-tomorrow).
 
-> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3 (a + b) interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
+> **Where you are in the round:** If you do not have interview transcripts yet, read straight through. After your Ch 2.3-2.4 interviews, return to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score your transcripts and decide build/pivot/kill.
 
 Run eleven interviews where the only question is "would you pay for this?" and you'll close the week with nine yeses and an empty launch. The hypothetical question produces the polite shape - the answer says nothing about what the person actually did last Tuesday.
 
@@ -49,7 +49,7 @@ After this lesson you will be able to: **write interview questions that ask abou
 
 For the verbatim script + reference card, see [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). This chapter teaches *why* those five questions work and how you'll score each call once interviews are done.
 
-Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+Next, sharpen your draft list with [AI personas in Ch 2.2](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/), then recruit 10 interviewees in [Ch 2.3-2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 ![Five Mom Test question cards stacked: last-time, cost, workaround, priority, buying committee. Each card shows the pass and fail signal.](mom-test-script.svg)
 
@@ -186,7 +186,7 @@ The artifact at **[/course/tech-for-non-technical-founders-2026/mom-test-intervi
 
 **How to use it:** Print the artifact. Keep it open on your second monitor during all 10 interviews. The artifact is the screen-side reference while this post is the explanation of why it works.
 
-After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.4: Clickable Prototype Validation](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)) or 10 transcripts that don't (re-frame the ICP and run another 10).
+After 10 calls, you have either 10 scored transcripts that converge on a real problem (proceed to [Chapter 2.6: Clickable Prototype Validation](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)) or 10 transcripts that don't (re-frame the ICP and run another 10).
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend. The [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against a hypothesis nobody confirmed.
 

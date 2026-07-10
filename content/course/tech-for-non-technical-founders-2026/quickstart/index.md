@@ -52,9 +52,10 @@ Skip the lessons marked "optional" on the [course landing page](/course/tech-for
 *Output: 10 Mom Test interviews + clickable prototype tested with 5 people.*
 
 - [**2.1** · The Mom Test: Ask About the Past](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)
-- [**2.3a** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
-- [**2.3b** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
-- [**2.4** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
+- [**2.3** · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/)
+- [**2.4** · Find 10 People: What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/)
+- [**2.5** · Mom Test Synthesis: Build, Pivot, or Kill](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)
+- [**2.6** · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
 
 **Gate:** ≥7 of 10 interviewees have spent time or money on the problem.
 

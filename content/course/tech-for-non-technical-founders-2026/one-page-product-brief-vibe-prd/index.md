@@ -31,7 +31,7 @@ related_posts: false
 
 > **Module 3 · Step 1 of 2** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Input:** a one-page validated problem statement (from [Ch 2.1b · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3a + 2.3b) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.4 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - Section 3 of the brief uses these exact words)
+> **Input:** a one-page validated problem statement (from [Ch 2.5 · Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/), after running interviews in Ch 2.3 + 2.4) + verbatim "describe in one sentence" vocabulary (from your [Ch 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) - Section 3 of the brief uses these exact words)
 >
 > **Output:** a one-page Product Brief (Vibe PRD) you can hand to Lovable or a hired team
 
