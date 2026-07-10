@@ -109,7 +109,6 @@ Your situation:
 Stay in character for this entire conversation. Do not break character to explain your reasoning. Answer as [PERSONA NAME] would, not as an AI. If a question is vague, give the kind of vague polite answer a busy professional gives when they're not sure what you're asking.
 ```
 
-
 **Placeholder mapping - where each value comes from:**
 
 | Placeholder | Where it lives in your artifacts |
@@ -187,18 +186,18 @@ Judgment is still yours. The diagnostic only tells you which questions are obvio
 
 After the rehearsal, you have two deliverables.
 
-**The sharpened question list.** Take your original questions, apply the revisions from Prompt 5, cut the ones flagged in Prompt 4. You should end the session with 5-7 solid questions where you started with 8-12 loose ones. That's the list you take into [booking real interviews with the full outreach stack](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
+**The sharpened question list.** Take your original questions, apply the revisions from Prompt 5, cut the ones flagged in Prompt 4. You should end the session with 5-7 solid questions where you started with 5-8 loose ones. That's the list you take into [booking real interviews with the full outreach stack](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/).
 
 **The top 3 objections to test in real interviews.** Prompt 4 will surface 3-5 things that make your persona want to end the conversation. Pick the 3 that appeared across at least 2 of your 3 personas. These are the objections you're listening for in real interviews - not discovering them for the first time, but noticing whether and how they show up. There's a difference between a real customer who raises objection #2 early (strong signal that the objection is real) and one who never raises it at all (either it's not real for this person, or your questions didn't give them space to surface it).
 
 **Objection Tracker** - fill this in after the rehearsal, before your first real interview:
 
-| Objection | Which personas raised it | What phrasing to listen for | Showed up in real interviews? |
-|-----------|-------------------------|----------------------------|-------------------------------|
-| They'll say budget is controlled by their manager | Personas 1 and 3 | "I'd have to run this by..." | [ ] |
-| 1. | | | |
-| 2. | | | |
-| 3. | | | |
+| Objection (and which personas raised it) | What phrasing to listen for | Heard in real interviews? |
+|-----------|----------------------------|-------------------------------|
+| They'll say budget is controlled by their manager (personas 1 and 3) | "I'd have to run this by..." | [ ] |
+| 1. | | |
+| 2. | | |
+| 3. | | |
 
 Print it. Put it next to the [Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) on your second monitor. After each real interview, tick the column. By interview 5, you'll know which objections are real and which were just AI pattern-matching.
 
@@ -248,14 +247,14 @@ This is the other reason real interviews stay irreplaceable: a real customer can
 >
 > **The real gate:** 10 Mom Test interviews with real humans, ≥7/10 strong signal (Ch 2.1 technique + Ch 2.3 (a + b) recruitment).
 
-> **Advanced: AI ensemble stress-test (after your interviews).** Once your 10 Mom Test interviews are done and you have a refined hypothesis, you can cross-validate the business logic using multiple AI models simultaneously. Paste your validated problem statement into [IdeaProof](https://ideaproof.io) (70 free credits, no credit card) - it runs your hypothesis through 4 different models (Claude 4, GPT-4.1, Gemini 3, Grok 4.1) and flags contradictions between them. A claim that passes one model but fails another is a blind spot worth investigating before you build. The ensemble approach catches what a single-model rehearsal misses: each model has different training biases, and consensus across four is stronger signal than one model saying "sounds good." This is not a substitute for the Mom Test interviews - it validates the logic AFTER the interviews validated the problem. Think of it as the final sanity check before you commit to building.
+> **Advanced: AI ensemble stress-test (after your interviews).** Once your 10 Mom Test interviews are done and you have a refined hypothesis, you can cross-validate the business logic using multiple AI models simultaneously. Paste your validated problem statement into [IdeaProof](https://ideaproof.io) (free tier to start) - it runs your hypothesis through several frontier models and flags contradictions between them. A claim that passes one model but fails another is a blind spot worth investigating before you build. The ensemble approach catches what a single-model rehearsal misses: each model has different training biases, and consensus across several is stronger signal than one model saying "sounds good." This is not a substitute for the Mom Test interviews - it validates the logic AFTER the interviews validated the problem. Think of it as the final sanity check before you commit to building.
 
 The rehearsal does not validate the hypothesis. It validates that your questions are ready to validate the hypothesis. Skip it and you burn real interview slots on questions that fail in minute one.
 
 ## Further reading
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the canonical reference for past-anchored interview questions.
-- Y Combinator, [How to Talk to Users](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - YC's short essay on why this conversation has to happen.
+- Y Combinator, [How to Talk to Users](https://www.ycombinator.com/library) - YC's short essay on why this conversation has to happen.
 - Anthropic, [Claude prompting guide](https://docs.anthropic.com/claude/docs/intro-to-prompting) - persona setup, role-play, and breaking character cleanly.
 
 > **Done:** you have a sharpened question list (5-7 solid questions) and an Objection Tracker with the top 3 objections to listen for.
@@ -265,12 +264,6 @@ The rehearsal does not validate the hypothesis. It validates that your questions
 > **Next:** [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) - build the 30-name list first, then [2.3b · What to Say](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) sends the messages.
 >
 > **If blocked:** If all 3 personas produced identical answers, your persona descriptions are too generic. Rewrite them with sharper role, company-size, and urgency differences before continuing.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Runs his draft questions through a Claude persona - a skeptical controller who's been pitched 3 automation tools and rejected all of them. Persona flags 2 leading questions. Sharpens them to anchor in specific past reconciliation events.
->
-> **Mia**: Runs her draft questions through a Claude persona - a parent of a 10-year-old with ADHD burned by a tutoring app before. Persona flags 1 question that assumes the parent has time to search. Adds: "What happened the last time you tried to book a tutor during a workday?"
 
 ---
 

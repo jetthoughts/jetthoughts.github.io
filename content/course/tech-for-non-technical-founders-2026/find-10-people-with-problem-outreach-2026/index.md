@@ -49,11 +49,11 @@ After this lesson you will be able to: **send outreach that names something the 
 
 ## What to write so they don't ignore you
 
-Send 30 messages staggered, not in one burst. A handful a day, by hand, beats a single bulk-send. Reply rate runs 20-30% when each message names a specific post you read - 2-3 booked calls per batch, which is enough to hit 10 interviews when stacked with replies still trickling in.
+Send 30 messages staggered, not in one burst. A handful a day, by hand, beats a single bulk-send. In outreach runs we've coached, reply rates land around 20-30% when each message names a specific post you read - 2-3 booked calls per batch, which is enough to hit 10 interviews when stacked with replies still trickling in.
 
-You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) booking link. If 6 a day by hand is too slow, [Gmail's multi-send](https://support.google.com/mail/answer/12018150) (up to 1,500/day on Workspace, ~500/day on personal) or [Streak](https://www.streak.com/) does the mail merge for you. Reply by hand either way - the back-and-forth is where the interview actually gets booked.
+You can do this from Gmail and a [NeetoCal](https://www.neeto.com/neetocal) booking link. If 6 a day by hand is too slow, [Gmail's multi-send](https://support.google.com/mail/) (daily caps vary by plan - check Google's current limits) or [Streak](https://www.streak.com/) does the mail merge for you. Reply by hand either way - the back-and-forth is where the interview actually gets booked.
 
-### The message most non-technical founders write first
+### The message a first-time founder typically writes first
 
 Before we hand you a working sequence, look at the version a founder typically sends on attempt one. This is composed from real first-draft messages we've seen across projects:
 
@@ -71,7 +71,7 @@ Would you be open to a quick chat next week? Calendar is here: [link]
 Thanks!
 ```
 
-Reply rate on that message hovers around 1%. Here's why each sentence dies:
+That message gets almost no replies - nothing in it tells the reader why them. Here's why each sentence dies:
 
 - **"quick chat?"** subject - generic; competes against every recruiter cold email in their inbox.
 - **"building a tool that helps small-business owners with invoicing"** - pitches a solution to a stranger who didn't ask.
@@ -98,23 +98,23 @@ questions about how you handle [task] today? Calendar: [NeetoCal link]."
 - **First-round variant (you have 0-9 interviews done):** "Hi [name] - circling back on the [topic] piece. Running my first 10 conversations on this problem - still learning, would value 25 minutes if you have it."
 - **Experienced variant (you have 10+ interviews done):** "Hi [name] - circling back on the [topic] piece. Already 30+ founders in - the conversations are sharper than I expected; happy to share the pattern if you have 25 min."
 
-Day-3 bump recovers 8-12% of non-responders. Subject line: `re: [their workaround]`.
+The Day-3 bump reliably recovers another slice of non-responders - people who meant to reply and lost the tab. Subject line: `re: [their workaround]`.
 
 ```text
-Day 7 - close (recovers 3-5% more)
+Day 7 - close (catches a few last stragglers)
 Subject: last try - 20 min on [topic]
 "Last note. If this isn't your problem, no worries - I'll stop. If it is
 and you haven't had a chance: [NeetoCal]. Running interviews through next
 Friday."
 ```
 
-In our 2026 outreach engagements that sequence ran 30-45% reply rates when the Day-0 subject referenced something the recipient had actually posted - your mileage will vary by audience tightness and recency of the posted content. It collapses to 1-5% with a generic "love to pick your brain" opener - the difference is the reading you did in Part 1 to find named people. The [cold-email conversion playbook from YC Startup School](/blog/how-convert-customers-with-cold-emails-startup-school/) walks through more variations on the opener pattern.
+That three-message shape is the whole engine - in the runs we've coached it reliably beats single-send by a wide margin when the Day-0 subject referenced something the recipient had actually posted - your mileage will vary by audience tightness and recency of the posted content. It collapses to 1-5% with a generic "love to pick your brain" opener - the difference is the reading you did in Part 1 to find named people. The [cold-email conversion playbook from YC Startup School](/blog/how-convert-customers-with-cold-emails-startup-school/) walks through more variations on the opener pattern.
 
 The same 3-email pattern works as LinkedIn DMs. Subject becomes the connection-request note. Skip Day 7 on LinkedIn (too aggressive in DM context).
 
 ### Volume targets
 
-Send 30 to 50 messages to land 10 interviews. Target a reply rate of 20% or higher - below that, your opener is too generic or you're in the wrong channel. Of the replies who say yes, expect 50% or more to actually show. If your show rate drops below 50%, add a 24-hour reminder message and confirm the meeting time the day before.
+Send 30 to 50 messages to land 10 interviews. Target a reply rate of 20% or higher - below that, your opener is too generic or you're in the wrong channel. Of the replies who say yes, expect roughly half or more to actually show. If your show rate drops below 50%, add a 24-hour reminder message and confirm the meeting time the day before.
 
 ## What if cold outreach can't reach them
 
@@ -132,7 +132,7 @@ While the cold-outreach path books the calls, the smoke-test landing page from [
 
 > "You signed up for the waitlist on [page] last Tuesday - up for a 20-minute call?"
 
-Reply rates on that opener run 60%+ - the highest in this whole chapter.
+That opener out-performs every cold variant - the person already raised a hand - the highest in this whole chapter.
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'fontFamily':'Caveat, Patrick Hand, cursive', 'primaryColor':'#fff5f5', 'primaryBorderColor':'#cc342d', 'lineColor':'#333', 'primaryTextColor':'#1a1a1a'}}}%%
@@ -168,7 +168,7 @@ Run the cold-outreach track first - that's where the 10 calls usually come from.
 | **3** | Send the remaining 25 staggered over the next few days. Day-3 bumps to non-responders. | Full 30-message batch out |
 | **4** | Check the reply rate. If under 10%, rewrite Day-0 subject line referencing a specific post and resend. If 10-30%, let the sequence run. If 30%+, move to [Mom Test script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/). | Calibrate by reply rate band |
 
-> **Slow-path variant for the part-time founder** (working evenings only, day-job constraints): the staggered cadence above assumes daytime availability. If your only window is one evening block a week, batch-send instead: sort 30 names into priority buckets first, then personalize and send all 30 in one go using Gmail multi-send. Expect a lower reply rate (~8-12% vs 20-30%) because the messages land in a burst instead of a stagger - compensate by booking the first 2-3 interviews from your fastest responders quickly.
+> **Slow-path variant for the part-time founder** (working evenings only, day-job constraints): the staggered cadence above assumes daytime availability. If your only window is one evening block a week, batch-send instead: sort 30 names into priority buckets first, then personalize and send all 30 in one go using Gmail multi-send. Expect a noticeably lower reply rate because the messages land in a burst instead of a stagger - compensate by booking the first 2-3 interviews from your fastest responders quickly.
 
 The [Outreach Sequence Template](/course/tech-for-non-technical-founders-2026/outreach-sequence-template/) carries the verbatim sequence plus the LinkedIn DM openers, cold-email subject lines, Reddit research-comment template, and NeetoCal page copy.
 
@@ -195,7 +195,7 @@ Skip this module and start building, and the typical failure mode is burning mon
 ## Further reading
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the past-behavior interview technique you'll run on every call this chapter books.
-- Y Combinator, [Talking to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - the canonical YC essay on why this conversation has to happen.
+- Y Combinator, [Talking to Users (Startup Library)](https://www.ycombinator.com/library) - the canonical YC essay on why this conversation has to happen.
 - [Apollo](https://www.apollo.io/) - contact database for filtering by role + industry + company size when the hand-picked list runs thin.
 - [User Interviews](https://www.userinterviews.com/) and [Respondent](https://respondent.io) - research panels for ICPs that cannot be reached cold.
 
@@ -204,12 +204,6 @@ Skip this module and start building, and the typical failure mode is burning mon
 >
 > **Next:** return to [2.1 · The Mom Test](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) to run the interviews using the 5-question script, then move to [Mom Test Synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) to score the transcripts.
 > **If blocked:** If your reply rate is under 10%, your Day-0 subject line is too generic. Rewrite it to reference a specific post you read by that person. If your ICP can't be reached cold, switch to a paid research panel (User Interviews or Respondent).
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Sends the 3-message sequence to 30 controllers on LinkedIn. Books 12 interviews from 30 reaches (40% reply rate - high because Tomas was an accountant and speaks their language).
->
-> **Mia**: Sends the 3-message sequence to 30 parents via Facebook DM. Books 14 interviews from 30 reaches (47% - high because Mia was a teacher and parents trust her).
 
 ---
 

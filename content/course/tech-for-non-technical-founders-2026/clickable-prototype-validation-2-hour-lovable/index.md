@@ -48,7 +48,7 @@ Those signals do not measure the same thing.
 
 After this lesson you will be able to: **watch 5 real customers try to use your solution before it exists - and score what they do, not what they say.**
 
-One of the founders we sat with had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
+A founder we advised had run 8 Mom Test interviews that came back strong: workaround evidence, named monthly costs, real frustration language. She moved to Lovable (an AI app builder; see the gloss in [Chapter 4.3a](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)) and built a working app over several weeks.
 
 When she had 5 of the same interviewees log in to try the live app, several stalled on screen 2 - they recognised the problem the app was solving but could not figure out which button to click next. Validating the problem had not validated whether the interface shape was something they could navigate.
 
@@ -98,13 +98,13 @@ flowchart LR
 
 ## This Is Throwaway
 
-> Three screens, fake data hard-coded in, CTAs that navigate but do not save. You are building a question-"Does the user know what to do?"-not a product. Then you archive it.
+> Three screens, fake data hard-coded in, CTAs that navigate but do not save. You are building a question - "Does the user know what to do?" - not a product. Then you archive it.
 
 Try to "polish the prototype into the MVP later" and you spend much longer on it, add features that invalidate the shape test, and carry every throwaway compromise into production. The [Module 4 Lovable build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) starts fresh with a proper one-page brief, real auth, and a real database. This prototype has one goal: three screens, five sessions, then archive.
 
 ## Build 3 Screens with Lovable
 
-[Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt. Free trial; paid plans from $25/month. No coding required.
+[Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt. Free trial; . No coding required.
 
 Three screens is the constraint - not five, not ten - because each extra screen multiplies the build effort without sharpening the validation signal.
 
@@ -126,9 +126,9 @@ What the user sees after the core action succeeds. A confirmation message, a sum
 
 > **📋 Save this template.** Copy the prompt below into your notes. You'll reuse the same structure in [Module 4's real MVP build](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - same Lovable tool, same 3-screen skeleton, but with real auth, real database, and real Stripe.
 
-> **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans start at $25/month (Pro)** and are only worth it later if you decide to upgrade for higher message volume - not required for this chapter.
+> **Practical Lovable onramp.** [Lovable](https://lovable.dev) is an AI app builder that generates a working web app from a prompt - you type what you want in English, it ships the screens. The **free trial** gives you a small number of messages per day with no credit card required, which is enough to ship this 3-screen throwaway prototype. **Paid plans lift the cap - check Lovable's pricing page.** and are only worth it later if you decide to upgrade for higher message volume - not required for this chapter.
 
-> **If you hit Lovable's free-tier daily cap (5 messages):** save your work-in-progress (Lovable auto-saves to your account, but copy the prompt + the current screen output to a note), come back tomorrow when the cap resets, OR upgrade to $25/mo Pro if you want to ship in one focused session. The 3-screen prototype rarely needs more than 10 total messages once your prompt is well-formed - the cap usually bites only on poorly-scoped first attempts.
+> **If you hit Lovable's free-tier daily message cap (check current limits):** save your work-in-progress (Lovable auto-saves to your account, but copy the prompt + the current screen output to a note), come back tomorrow when the cap resets, OR upgrade to a paid plan if you want to ship in one focused session. The 3-screen prototype rarely needs more than 10 total messages once your prompt is well-formed - the cap usually bites only on poorly-scoped first attempts.
 
 Open [Lovable](https://lovable.dev), create a new project, and paste the following. Replace all `[PLACEHOLDERS]` with your specific problem and solution.
 
@@ -231,7 +231,7 @@ Book the sessions as 30-minute video calls. Send the Lovable prototype link 10 m
 
 Expect 4-5 of 5 to say yes. They invested 40 minutes in the first call; the second ask is half that time and a different motion. The *"I built something based on what you told me"* line is what gets them to say yes - it signals you listened, and it makes the prototype session feel like the natural continuation of the first conversation rather than a fresh cold outreach.
 
-> **Slow-path variant for the part-time founder**: scheduling 5 live observation calls on top of your only weekly window is unrealistic. Async alternative: send each interviewee the Lovable prototype link + a short Loom prompt ("record yourself trying these 3 tasks"). Use [Maze](https://maze.co) (free tier covers 3 testers) or [UserTesting](https://www.usertesting.com) (paid) if you want screen recording with click heatmaps. You lose the real-time follow-up question ability, but you gain async scheduling - the testers record on their own time, you watch the 5 recordings in one batch. Catch rate is about 70% of what live sessions surface (you miss the "what were you about to click" follow-ups) but 200% better than skipping the validation step because you couldn't schedule it.
+> **Slow-path variant for the part-time founder**: scheduling 5 live observation calls on top of your only weekly window is unrealistic. Async alternative: send each interviewee the Lovable prototype link + a short Loom prompt ("record yourself trying these 3 tasks"). Use [Maze](https://maze.co) (free tier covers a handful of testers - check current limits) or [UserTesting](https://www.usertesting.com) (paid) if you want screen recording with click heatmaps. You lose the real-time follow-up question ability, but you gain async scheduling - the testers record on their own time, you watch the 5 recordings in one batch. Catch rate is about 70% of what live sessions surface (you miss the "what were you about to click" follow-ups) but 200% better than skipping the validation step because you couldn't schedule it.
 
 ### Script - the prototype session
 
@@ -321,7 +321,7 @@ You carry the insight forward - into the [One-Page Product Brief](/course/tech-f
 |---|---|---|
 | **4-5 passes** | Shape is legible. Users navigate without coaching. | Write the [One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/) using the exact "describe in one sentence" words from closing questions. This vocabulary is worth more than marketing copy. |
 | **2-3 passes** | Shape is mostly legible but something broke. | Revise one element (vocabulary, Screen 1 layout, or CTA label) and run 2 replacement sessions. One iteration only. |
-| **0-1 pass** | Shape is wrong. Solution concept needs a different starting point. | Read the "what did you expect to see" answers-that is the user's mental model. Return to Chapter 2.1 before restarting. Do not write the brief yet. |
+| **0-1 pass** | Shape is wrong. Solution concept needs a different starting point. | Read the "what did you expect to see" answers - that is the user's mental model. Return to Chapter 2.1 before restarting. Do not write the brief yet. |
 
 Catching a shape mismatch here costs you a single throwaway prototype.
 
@@ -347,9 +347,9 @@ The 2 chapters each have their own iteration guidance (Ch 2.3 (a + b) reply rate
 |---|---|---|
 | 7+ of 10 scored ≥7 | 4-5 of 5 passed | **PROCEED** - write the Ch 3.1 brief tonight |
 | 7+ of 10 scored ≥7 | 2-3 of 5 passed | **ONE iteration round** - revise the prototype's worst-failing screen, re-run 2 replacement sessions (NOT new interviews) |
-| 5-6 of 10 scored ≥7 | 4-5 of 5 passed | **ONE iteration round** - re-interview 3 of the polite-yes scorers asking sharper past-behavior questions (NOT a new prototype) |
-| 5-6 of 10 scored ≥7 | 2-3 of 5 passed | **STOP and re-evaluate** - read all 10 transcripts; either the ICP is wrong (re-target) or the problem framing is wrong (re-write hypothesis at Ch 1.1) |
-| <5 of 10 scored ≥7 | (any) | **KILL** - the problem is too weak for this ICP. Return to Ch 1.1 with a different customer or problem blank rewritten. |
+| 4-6 of 10 scored ≥7 | 4-5 of 5 passed | **ONE iteration round** - re-interview 3 of the polite-yes scorers asking sharper past-behavior questions (NOT a new prototype) |
+| 4-6 of 10 scored ≥7 | 2-3 of 5 passed | **STOP and re-evaluate** - read all 10 transcripts; either the ICP is wrong (re-target) or the problem framing is wrong (re-write hypothesis at Ch 1.1) |
+| Under 4 of 10 scored ≥7 | (any) | **KILL** - the problem is too weak for this ICP. Return to Ch 1.1 with a different customer or problem blank rewritten. |
 | (any) | 0-1 of 5 passed | **STOP, don't proceed to M3** - the solution shape is fundamentally wrong; return to Ch 2.1 |
 
 The trap to avoid: doing 2-3 iteration rounds when the matrix says STOP. Module 2 is the cheapest place in the course to discover the problem or ICP is wrong - don't burn another round of interviews trying to massage signal into a problem that isn't there.
@@ -372,8 +372,7 @@ Nothing from the throwaway prototype carries forward except what you learned.
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the problem-signal validation this prototype session builds on.
 - Steve Krug, [Don't Make Me Think](https://sensible.com/dont-make-me-think/) - the thinking-aloud usability test that the silent-observation session above is adapted from.
-- IDEO, [The Field Guide to Human-Centered Design](https://www.designkit.org/resources/1) - prototyping-for-learning methodology at the source.
-- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - how the prototype observation fits into the broader customer-discovery arc.
+- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - how the prototype observation fits into the broader customer-discovery arc.
 - [Lovable](https://lovable.dev) - the AI builder used in this chapter's throwaway prompt-to-prototype workflow.
 
 > **Done:** 5 silent-observation sessions are complete, scored with pass/fail per session, and you have verbatim vocabulary from the closing "describe in one sentence" answers.
@@ -386,12 +385,6 @@ Nothing from the throwaway prototype carries forward except what you learned.
 > **If blocked:** If 0-1 of 5 sessions passed, the solution shape is wrong. Read the "what did you expect to see" answers from the closing questions - that is the user's mental model. Return to Ch 2.1 before writing the brief.
 
 > **Module 2 closes here.** Before opening Module 3, you should have: (1) a sharpened question list after the AI persona rehearsal (Ch 2.2), (2) a 30-name ICP list built from real complaints (Ch 2.3a), (3) 10 interview transcripts scored 7+/10 strong signal (Ch 2.3b), (4) a one-page validated problem statement with build/pivot/kill verdict (Ch 2.1b synthesis), and (5) 5 prototype sessions with verbatim "describe in one sentence" vocabulary (this chapter). All five in your `Founder OS` folder. Missing one? Go back - Module 3 cannot start without the validated problem statement + prototype vocabulary.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Builds a 2-hour Lovable prototype: a dashboard showing mock reconciliation - Stripe transactions on the left, QuickBooks invoices on the right, a "match" button in the middle. 4 of 5 controllers say "when can I use this?" 1 objects: "what happens when the match is wrong?"
->
-> **Mia**: Builds a 2-hour Lovable prototype: a tutor search page with filters (specialty, location, availability) and mock profiles with reviews. 4 of 5 parents say "I'd use this tomorrow." 1 asks for reviews before booking - she adds them.
 
 ---
 

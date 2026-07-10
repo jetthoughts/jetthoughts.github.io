@@ -37,7 +37,6 @@ related_posts: false
 > Q4. On a scale of 1-10, how big a problem is this compared to everything else on your plate?
 > Q5. Who else on your team feels this? How do they handle it?
 
-For the ed-tech founder story that motivated this script, see the [lesson chapter](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/).
 
 Rob Fitzpatrick's book *The Mom Test* (2013) named the technique: ask about past behavior, not future intent. The questions on this page are the script. You keep them open on a second screen during the call, read them as written, and listen for emotional language while you take notes by hand.
 
@@ -77,13 +76,13 @@ Time budget: 25 minutes for the questions, 5 minutes for scoring notes. Total 30
 
 ### Q3 - The workaround question
 
-*Surfaces existing workarounds - a non-tried problem is a non-felt problem.*
+*Surfaces existing workarounds - if they never tried anything, it never actually hurt.*
 
 > "What have you tried already to fix this?"
 
 **Pass signal:** A named tool, a hired person, a custom script, a workaround that took setup time. "I pay $79/month for Zapier to copy QuickBooks to Google Sheets. It breaks every two weeks. I have a VA on Upwork who fixes it."
 
-**Fail signal:** "Nothing yet." "We just deal with it." "I've been meaning to look into something." A non-tried problem is a non-felt problem. There are exceptions (regulated industries, security, etc.) but the default reading is: no workaround means no urgency.
+**Fail signal:** "Nothing yet." "We just deal with it." "I've been meaning to look into something." If they never tried anything, the problem never actually hurt. There are exceptions (regulated industries, security, etc.) but the default reading is: no workaround means no urgency.
 
 **Follow-up:** "What broke about the workaround? Why are you still talking to me about this?"
 
@@ -146,9 +145,10 @@ The bad closing pulls them back into hypothetical preference and gives you a use
 ## What to do after the call
 
 - **Score the call 1-10 within 5 minutes of hanging up.** Use Q4 plus your emotional-flag count. Write the score in your notes file. If you score later you will round up.
-- **If you have 7+ scores on 7 out of 10 interviews:** the problem is validated. Move to the Validated Problem Statement template (synthesis section of Chapter 2.1).
-- **If you have fewer than 5 scores of 7+:** the problem is too weak. Re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
-- **Forward the transcripts to your fractional CTO or independent advisor** before you make the build/no-build call. Two readers catch what one misses.
+- **If 7 or more of your 10 interviews scored 7+:** the problem is validated - BUILD. Move to the [Mom Test Synthesis page](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/) and the Validated Problem Statement template.
+- **If 4 to 6 scored 7+:** PIVOT - re-evaluate the ICP, the problem framing, or the question wording before booking another 10 calls. Sometimes Q1 is wrong (the problem context is too narrow) - retry with broader phrasing first.
+- **If fewer than 4 scored 7+:** KILL - the problem is too weak for this customer. Return to Ch 1.1 with a different [customer] or [problem] blank.
+- **Forward the transcripts to your founder friend one step ahead, or a peer from any founder community** before you make the build/no-build call. Two readers catch what one misses.
 
 Skip this script and run "feature interest" interviews ("would you pay for X?") and you almost always launch into silence. The Mom Test isn't a productivity trick. It is the only way to keep your interviewees from being polite while you are gambling six months of your life on what they said.
 

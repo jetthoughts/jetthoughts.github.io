@@ -69,7 +69,7 @@ This course takes a non-technical founder from a rough idea to a signed paid pil
 
 ### Module 2 - Validate the Problem
 **You have:** a Founding Hypothesis.
-**You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a 2-hour clickable prototype tested with 5 people.
+**You walk away with:** 10 Mom Test interview transcripts + a validated problem statement + a clickable prototype tested with 5 people.
 **Time:** ~2-3 weeks full-time.
 
 | Step | What You Do | Key Tool |

@@ -29,11 +29,13 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-> **Module 2 · After Step 1** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+> **Module 2 · Synthesis - run after your 2.3b interviews · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
 > **Input:** 10 scored Mom Test transcripts (from [Ch 2.1](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/)) + completed interviews (from [Ch 2.3 (a + b)](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/))
 >
 > **Output:** a build / pivot / kill decision + a one-page validated problem statement
+>
+> **Progress:** M2 · between 4 and 5 of 5 · Results so far: question list + 30-name list + 10 scored interviews - this page turns the scores into a decision
 
 > **TL;DR:** Score 10 transcripts, count strong signals, make one of three calls. 90 minutes. The decision you avoid here costs you a quarter of build time later.
 
@@ -115,17 +117,14 @@ Writing the one-page statement is the validation step. Ten transcripts in a fold
 
 ---
 
-> **Done when:** You have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
-> **Next click:** If build - [2.4 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - return to [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis (same hypothesis, different list). If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3a.
+> **Done:** you have a build / pivot / kill decision backed by your strong-signal count, and a one-page validated problem statement.
+>
+> **You have now:** question list (2.1-2.2) + 30-name list (2.3a) + 10 scored interviews (2.3b) + the build/pivot/kill decision. The orientation pages state this gate as "7 of 10 interviewees have spent time or money on the problem" - the two are the same bar, because a transcript cannot score 7+ without real past spend surfacing in Q2/Q3.
+>
+> **Next:** If build - [2.4 · Build a Clickable Prototype](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/) to test the shape with 5 of your strongest-signal interviewees, then [3.1 · The One-Page Product Brief](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). If pivot - return to [2.3a · Find 10 People: Where to Look](/course/tech-for-non-technical-founders-2026/find-10-people-where-to-look/) to rebuild your list around a sharper hypothesis (same hypothesis, different list). If kill - the hypothesis is wrong, not the list; return to [1.1 · Form Your Founding Hypothesis](/course/tech-for-non-technical-founders-2026/form-your-founding-hypothesis-90-minute-sprint/) and rewrite the weakest blank using verbatim quotes from your dead transcripts, then re-run 2.3a.
 > **If blocked:** If the numbers aren't adding up, re-read [Ch 2.1's scoring rubric](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/) - the Q4 score and flag-count combination is what separates a 7 from a 5.
 
 ---
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas** (ReconcileBot, B2B SaaS): scored 7 of 10 controllers at 8/10 or higher. Strong-signal count = 7. Verdict: BUILD. Writes the validated problem statement using a verbatim quote ("CFO billed $800 last week on a 4-hour reconciliation") and moves to 2.4 prototype.
->
-> **Mia** (TutorMatch, B2C marketplace): scored 8 of 10 parents at 9/10 or higher. Strong-signal count = 8. Verdict: BUILD. Validated problem statement anchors on a verbatim quote ("missed a $2,000 project deadline on hold with a tutoring center") and moves to 2.4 prototype.
 
 ---
 

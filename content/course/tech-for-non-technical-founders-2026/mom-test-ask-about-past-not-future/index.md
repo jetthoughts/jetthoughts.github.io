@@ -190,11 +190,11 @@ After 10 calls, you have either 10 scored transcripts that converge on a real pr
 
 Fake the convergence to start building anyway, and you join the long line of post-mortem threads about wasted MVP spend. The [quality tax for AI MVPs](/blog/quality-tax-ai-mvp-cost/) is what happens when you ship against a hypothesis nobody confirmed.
 
-> Most customer interviews fail because the interviewees are polite. Better questions outperform better people.
+> Customer interviews usually fail because the interviewees are polite. The questions do more work than interviewer charisma ever will.
 >
 > Anchor every question in a specific past moment - last Tuesday at 9pm, the last invoice, the last time the spreadsheet broke - and the polite-mode answers run out fast.
 
-> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free, unlimited use, no credit card) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
+> **Optional: AI devil's advocate before your first interview.** [ValidatorAI](https://validatorai.com) (free tier) gives you an adversarial dialog: paste your draft question list, and it pushes back the way a skeptical interviewee would.
 >
 > It flags hypothetical questions, leading phrasing, and assumptions buried in your wording. Unlike Ch 2.2 persona rehearsal (which tests questions against simulated ICPs), ValidatorAI tests the questions themselves - are they built to surface real past behavior or polite agreement?
 >
@@ -205,11 +205,9 @@ After all 10 interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/
 ## Further reading
 
 - Rob Fitzpatrick, [The Mom Test (book site)](https://www.momtestbook.com/) - the canonical reference. The book runs 130 pages and explains why "would you pay for X?" is the most popular question and the worst.
-- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library/6g-how-to-talk-to-users) - YC's distilled rules for the same conversation, free and 20 minutes.
+- Y Combinator, [How to Talk to Users (Startup Library)](https://www.ycombinator.com/library) - YC's distilled rules for the same conversation, free and 20 minutes.
 - Steve Blank, [The Four Steps to the Epiphany - Customer Discovery](https://steveblank.com/category/customer-development/) - the original customer-development methodology Fitzpatrick's script sits inside.
 - Teresa Torres, [Continuous Discovery Habits](https://www.producttalk.org/continuous-discovery-habits/) - what these interviews become after the validation phase, when you run them weekly forever.
-- Mom Test summary by Yann Klis, [The Mom Test - 1-page summary](https://yannklis.com/posts/the-mom-test/) - a compressed cheat sheet for anyone who can't read the full book this week.
-- Lenny Rachitsky, [Customer interviewing 101](https://www.lennysnewsletter.com/p/the-ultimate-guide-to-conducting) - the operational version of the Mom Test rules with sample scripts.
 
 > **Done:** you understand the 5 Mom Test questions, can spot hypothetical phrasing, and have a draft question list (5-8 questions) anchored in past behavior.
 >
@@ -218,12 +216,6 @@ After all 10 interviews, return to [Mom Test Synthesis: Build, Pivot, or Kill](/
 > **Next:** [2.2 · Sharpen Your Question List with AI Personas](/course/tech-for-non-technical-founders-2026/ai-persona-pre-validation-mom-test-prep/)
 >
 > **If blocked:** If the technique isn't clicking, open the [Mom Test Interview Script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) artifact - it has the 5 questions verbatim. Print it, practice on a friend, then return.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Runs 10 interviews with accounting firm controllers. Q2 hits hard: "My CFO bills $200/hr and spent 4 hours on reconciliation last week - that's $800." Scored 8/10 on 7 interviews. Validated.
->
-> **Mia**: Runs 10 interviews with parents from Facebook groups. Q3 surfaces the real pain: "I missed a $2,000 client deadline because I was on hold with a tutoring center." Scored 9/10 on 8 interviews. Strongly validated.
 
 ---
 

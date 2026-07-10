@@ -24,7 +24,7 @@ canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2
 related_posts: false
 ---
 
-📋 Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
+📋 Template companion to [the Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/../mom-test-synthesis-build-pivot-kill/). Print after running 10 interviews. Fill in 30 minutes. Show to 2 advisors before building anything.
 
 # Validated Problem Statement Template - One Page, Five Sections
 
@@ -50,13 +50,13 @@ Block 90 minutes on a single morning. Print the template (or copy the markdown v
 
 The order matters. Score first, count second, write the page third. Write the page before scoring and you write the page you wished the calls had returned, not the page the transcripts actually support. The friction of writing the score before the prose is what stops you from talking yourself into the build.
 
-Take the filled page to 2 readers within 48 hours. One advisor (a founder one step ahead, a fractional CTO, a board member). One peer (another founder still pre-launch). Ask each: "Would you argue with this?" If both nod, you're done with Module 3. If either picks a fight on the persona, the cost, or the why-now, you have your next 5 interviews to run.
+Take the filled page to 2 readers within 48 hours. One advisor (a founder one step ahead, a founder friend one step ahead, a peer from a founder community). One peer (another founder still pre-launch). Ask each: "Would you argue with this?" If both nod, you're done with Module 2. If either picks a fight on the persona, the cost, or the why-now, you have your next 5 interviews to run.
 
 Total time budget: 30 minutes to write, 48 hours to circulate, 1 hour to incorporate the 2 advisor reads. Hard cap at 3 hours total. Beyond that, you're polishing instead of validating.
 
 ## The template - copy and paste
 
-Use the markdown block below directly in Notion, or print the PDF version (the SVG version of the page is embedded in the [Mom Test synthesis section](/course/tech-for-non-technical-founders-2026/mom-test-ask-about-past-not-future/#synthesis-write-down-what-you-heard-decide-whats-next)).
+Use the markdown block below directly in Notion, or ./mom-test-synthesis-build-pivot-kill/)).
 
 ```text
 ================ VALIDATED PROBLEM STATEMENT ================
@@ -162,9 +162,9 @@ The good version names the persona by stage, industry, and the specific workflow
 
 > Bad: *"It costs them time and money. It's a significant pain point."*
 
-> Good: *"6 hours per week. £800 per month in CFO contractor time. One founder I spoke with paid $1,500 for a SurveyMonkey panel after the bookkeeping pain spiked - the panel returned 47 useless responses and she did the work herself anyway. Cost was consistent across 8 of 10 calls; 2 were running their own pre-revenue and had zero contractor spend (but 12 hours of personal time per week)."*
+> Good: *"6 hours per week. $800 per month in CFO contractor time. One founder I spoke with paid $1,500 for a SurveyMonkey panel after the bookkeeping pain spiked - the panel returned 47 useless responses and she did the work herself anyway. Cost was consistent across 8 of 10 calls; 2 were running their own pre-revenue and had zero contractor spend (but 12 hours of personal time per week)."*
 
-The good version uses real numbers from transcripts. The £1,500 panel anecdote is from a specific person. The 6 hours and £800 are averages with the sample's variance noted. The bad version is unfilled white space dressed up as prose.
+The good version uses real numbers from transcripts. The $1,500 panel anecdote is from a specific person. The 6 hours and $800 are averages with the sample's variance noted. The bad version is unfilled white space dressed up as prose.
 
 **Section 4 - Why now**
 
@@ -185,7 +185,7 @@ The decision the filled page makes for you:
 Then walk the page through these four moves:
 
 - **Get 2 advisor signatures within 48 hours.** Email the page as a PDF. Ask: "Would you argue with this problem statement?" One sentence response is enough. If both say no, you've passed Module 2's checkpoint and you move to the [Module 3 Product Brief](/course/tech-for-non-technical-founders-2026/) next.
-- **If you landed in the BUILD lane (7+ strong signals), run the 3 pre-orders test before writing code.** Email your 5 strongest-signal interviewees. Ask each for a £500 deposit, a signed letter of intent, or a paid waitlist slot. Three yes-and-paid out of five = build. Zero yes = the 7+ scores were politer than you thought, slide back to pivot.
+- **If you landed in the BUILD lane (7+ strong signals), run the 3 pre-orders test before writing code.** Email your 5 strongest-signal interviewees. Ask each for a $500 deposit, a signed letter of intent, or a paid waitlist slot. Three yes-and-paid out of five = build. Zero yes = the 7+ scores were politer than you thought, slide back to pivot.
 - **If you landed in the PIVOT lane (4-6), pick the cleanest segment and run 5 sharper interviews using [the Mom Test interview script](/course/tech-for-non-technical-founders-2026/mom-test-interview-script/) again.** Don't rerun the same 10 - they've already given you their honest answer. New segment, new interviews, one week.
 - **If you landed in the KILL lane (fewer than 4), write a 200-word post-mortem to your future self.** What ICP did you pick wrong? What why-now did you assume that wasn't true? What workaround did you not learn about until interview 7? The post-mortem is the most valuable artifact from a kill round - it stops you from picking the same wrong target again next quarter. The [stop-AI-obsession validation post](/blog/stop-ai-obsession-smart-way-validate-your-startup-idea-product-bootstrap/) has the long version of the discipline.
 
