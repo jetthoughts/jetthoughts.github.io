@@ -25,7 +25,9 @@ related_posts: false
 >
 > **Output:** 50 messages sent, replies tracked, "no" responses diagnosed
 >
-> **Progress:** M5 · 3c of 7 · Results so far: must-have segment + channel + sorted list + message templates + Loom
+> **Progress:** M5 · 5 of 7 · Results so far: messages written (5.4) - this page sends, tracks, and reads the replies
+
+> **TL;DR:** Send champions first, cold last, and track every reply in your Sheet. Expect 15-25 replies from 50 messages. A "no" from a cold name is noise; a "no" from a champion is the most useful feedback in this course - always ask why.
 
 ---
 
@@ -80,7 +82,7 @@ A "no" from cold is noise. A "no" from a champion is the single most useful piec
 
 > **Done:** 50 messages sent, replies tracked, "no" responses diagnosed.
 >
-> **You have now:** warm-network outreach complete (5.3-5.7). Your first paid pilots are one conversation away.
+> **You have now:** warm-network outreach complete (5.3-5.5). Your first paid pilots are one conversation away.
 >
 > **Next:** [5.6 · Charge Before You Ship: The Paid Pilot Contract](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) - the one-page DPA and Stripe deposit that converts a demo into a signed pilot.
 >

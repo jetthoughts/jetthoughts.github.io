@@ -34,6 +34,8 @@ related_posts: false
 > **Input:** 3-5 warm leads from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
 >
 > **Output:** 1 signed paid pilot before any new code ships
+>
+> **Progress:** M5 · 6 of 7 · Results so far: demos booked from your warm list (5.3-5.5) - this page turns one into a signed pilot with money attached
 
 > **TL;DR:** A verbal yes is not a paid pilot. A signed DPA (Design Partner Agreement - a one-page co-design pilot contract) with a refundable Stripe deposit is. Charge 10-30% of year-one ACV (annual contract value - what one customer pays in year one) before kickoff - it puts the CFO question on Week 0 instead of Week 8.
 
@@ -167,7 +169,7 @@ Two annotated worked examples (a $1,500 B2B SaaS pilot and a $5,000 B2B services
 
 ## The pricing math
 
-> **From Ch 1.5 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement, which lengthens the timeline.
+> **From Ch 1.5 smoke-test price to year-one ACV.** Take the monthly price you tested in [Chapter 1.5](/course/tech-for-non-technical-founders-2026/price-hypothesis-on-smoke-test-page/) and multiply by 12 (or your actual billing period). Example: a $97/month hypothesis → $1,164 year-one ACV. Take 10-30% of that as your deposit floor; the band table below tells you which percentage to pick by sector. If your number lands between two bands or you are unsure which to pick, **pick the midpoint of the smallest applicable band** until your customer's CFO pushes back. The deposit is a commitment device; below the floor it stops working as one. Above the band the customer needs procurement (the formal purchasing-approval process at bigger companies), which lengthens the timeline.
 
 The deposit number is not arbitrary. It is anchored to projected year-one ACV and to what a typical CFO will sign without a procurement review. The bands by sector:
 
@@ -203,7 +205,7 @@ The five-minute path:
 2. Go to Products. Create a new product called "[Your Product Name] - Design Partner Pilot".
 3. Add a one-time price for the deposit amount ($500, $2K, $6K, whatever your math).
 4. Hit "Payment link" on the product detail page. Stripe generates a hosted checkout URL.
-5. Paste the URL into your DPA email. Customer clicks, pays card or ACH, you get the Stripe notification.
+5. Paste the URL into your DPA email. Customer clicks, pays card or ACH (a direct bank transfer), you get the Stripe notification.
 
 That is the entire setup. No webhook, no Rails controller, no Django view, no Laravel route. If you want to log paid pilots into your existing app, you can - but you do not have to. The CSV export from Stripe is enough for a Module 5 first-pilot motion.
 
@@ -250,9 +252,9 @@ The five responses below show up once you start talking to enterprise buyers or 
 
 **"Can you do net-30 instead of upfront?"**
 
-*Means:* Common ask from enterprise buyers; the deposit-before-kickoff rule loses its commitment function on net-30.
+*Means:* Common ask from enterprise buyers; the deposit-before-kickoff rule loses its commitment function on net-30 (paying 30 days after the invoice instead of upfront).
 
-*Say back:* "The deposit is structured upfront on purpose - it is the signal that this is a real pilot, not a sales call. I can offer net-15 from invoice date, but the kickoff timer starts when the deposit clears. If net-30 is a hard requirement on your end, the alternative is a paid PoC with a smaller scope I can deliver before invoicing for the full pilot."
+*Say back:* "The deposit is structured upfront on purpose - it is the signal that this is a real pilot, not a sales call. I can offer net-15 from invoice date, but the kickoff timer starts when the deposit clears. If net-30 is a hard requirement on your end, the alternative is a paid PoC (proof of concept - a small paid trial) with a smaller scope I can deliver before invoicing for the full pilot."
 
 **"My legal team needs to review any contract."**
 
@@ -294,7 +296,7 @@ The paid pilot is the default, but it has three honest exceptions.
 
 ## Advanced (optional sidebar)
 
-Once you have closed 2-3 paid pilots and want to layer on contract rigor, read the [Common Paper Design Partner Agreement template](https://commonpaper.com/standards/design-partner-agreement/) (a vetted v2 LOI used by hundreds of YC companies), [SaaStr's "Should we charge for pilots"](https://www.saastr.com/should-you-charge-for-a-pilot/) (Jason Lemkin's thirty-second answer is yes, always), and Ash Rust's ["Startup Sales: How to Get Pilot Customers to Pay"](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) for the conversation tactics. The one-page DPA in this chapter is enough through your first 10 pilots. The advanced versions matter once you start hearing the words "procurement" and "MSA" in pilot conversations.
+Once you have closed 2-3 paid pilots and want to layer on contract rigor, read the [Common Paper Design Partner Agreement template](https://commonpaper.com/standards/design-partner-agreement/) (a vetted v2 LOI used by hundreds of YC companies), [SaaStr's "Should we charge for pilots"](https://www.saastr.com/should-you-charge-for-a-pilot/) (Jason Lemkin's thirty-second answer is yes, always), and Ash Rust's ["Startup Sales: How to Get Pilot Customers to Pay"](https://medium.com/sharp-spear/startup-sales-how-to-get-pilot-customers-to-pay-7a9b7a48eedf) for the conversation tactics. The one-page DPA in this chapter is enough through your first 10 pilots. The advanced versions matter once you start hearing the words "procurement" and "MSA" (master service agreement - a long formal contract) in pilot conversations.
 
 A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 becomes paperwork, not negotiation.
 
@@ -309,20 +311,15 @@ A 20% deposit at kickoff puts the CFO question on Week 0. Conversion in Week 7 b
 - Stripe, [Payment Links documentation](https://stripe.com/docs/payment-links) - the official Stripe Checkout setup. 15-minute integration with no engineering work required.
 - Lenny Rachitsky, [How to win your first 10 B2B customers](https://www.lennysnewsletter.com/p/how-to-win-your-first-10-b2b-customers) - the 7-step playbook including the design-partner pricing model from B2B founders.
 
-> **Done when:** One DPA is signed and the Stripe deposit has cleared in your account.
-> **Founder OS · Artifact #6 of 6:** A signed Design Partner Agreement + cleared deposit. Save the executed PDF + Stripe receipt in your `Founder OS` folder. This is the artifact investors fund; you can now point to it and say "someone who doesn't know me paid real money for this."
+> **Done:** one DPA is signed and the Stripe deposit has cleared in your account.
 >
-> **Next click:** [5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/)
+> **You have now:** a signed Design Partner Agreement + a cleared deposit - real money from someone who didn't know you before you asked. Save the executed PDF + Stripe receipt in your `Founder OS` folder next to the earlier artifacts (validated problem statement, Product Brief, live MVP). That completes the folder - the artifact investors fund, the one you point to and say "someone who doesn't know me paid real money for this." Converting this pilot into a year-one contract is the next test, 6-8 weeks out.
+>
+> **Next:** the optional [5.7 · Going Outbound Without a Sales Team](/course/tech-for-non-technical-founders-2026/outbound-without-sales-team/) for the next 10 customers once your warm list runs dry, plus the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) - worked DPA examples and Friday-demo templates that keep the build honest through the pilot.
 >
 > **If blocked:** If the customer says "can we start free and convert later," reframe: the deposit is year-one ACV prepaid, not added cost. If they still say no, they are not in your must-have segment - move to the next lead.
 
 > **Stuck here?** Asking for money from someone you know is the stall point, even as a refundable deposit. **Fix:** the deposit is a test of whether the problem is real - not a test of whether you deserve to be paid. If they value the solved problem less than the deposit, their problem isn't acute enough. Send the DPA to your warmest lead first. The second one is easier.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Signs a Design Partner Agreement with 3 accounting firms. Deposit: $2,500 each (refundable if product doesn't ship within 90 days). 2 of 3 sign and pay within 48 hours. Revenue: $5,000 in committed deposits.
->
-> **Mia**: Signs a Design Partner Agreement with 4 parents. Deposit: $50 each (refundable) - B2C marketplace convention: deposit equals roughly 2× the monthly fee ($25/mo tutoring × 2). The $500 floor in the body above is the B2B SaaS convention; consumer marketplaces work to smaller absolute numbers because the buyer signs without a CFO. 4 of 4 sign and pay. Revenue: $200. Lower deposit, higher volume - consumer math.
 
 ---
 

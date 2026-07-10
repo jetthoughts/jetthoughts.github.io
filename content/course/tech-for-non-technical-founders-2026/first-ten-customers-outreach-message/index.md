@@ -25,11 +25,13 @@ related_posts: false
 >
 > **Output:** 4 message templates (one per bucket) + one 90-second Loom recording
 >
-> **Progress:** M5 · 3b of 7 · Results so far: must-have segment + channel + sorted list
+> **Progress:** M5 · 4 of 7 · Results so far: 50 names in 4 buckets (5.3) - this page writes the 4 messages
+
+> **TL;DR:** One 4-part message with a different opener per bucket, plus one 90-second [Loom](https://www.loom.com) (a free screen-recording tool - record your screen and voice, share a link). Keep it to 5-7 sentences. "Quick chat?" gets zero replies; a specific reference plus a Loom gets the meeting.
 
 ---
 
-The message most founders write first says "quick chat?" and gets zero replies. The message that works is 5-7 sentences with one specific reference, one line on the problem, and a Loom.
+The instinctive first message - "quick chat?" - gets zero replies. The message that works is 5-7 sentences with one specific reference, one line on the problem, and a Loom.
 
 After this lesson you will be able to: **write 4 outreach message variants (one per bucket) and record a 90-second Loom that gets replies.**
 

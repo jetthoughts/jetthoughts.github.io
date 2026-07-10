@@ -1,6 +1,6 @@
 ---
 title: "4.4 · The Self-Serve MVP Stack: Build Phases"
-description: "The build plan: 4 phases from Lovable UI to live Stripe checkout. Phase exit criteria, 5 green lights, and the Module 5 handoff. Part 2 of Chapter 4.3."
+description: "The build plan: 4 phases from Lovable UI to live Stripe checkout. Phase exit criteria, 5 green lights, and the Module 5 handoff. Companion build guide to Chapter 4.3 (Tools & Setup)."
 date: 2026-05-18
 draft: false
 course_chapter: true
@@ -32,13 +32,15 @@ related_posts: false
 >
 > **Part 2 of 2** · [Part 1: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) covers why these three tools, what each one does, the 12 rules, communities, and the AI critic block.
 >
-> **Input:** a Module 4 decision pointing to "self-serve" + a one-page brief + the tool knowledge from Part 1
+> **Input:** the self-serve stack set up plus the pre-flight rules from [Part 1 (Chapter 4.3)](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + your one-page brief from Module 3
 >
-> **Output:** a live MVP at a staging URL real users can click - by week 10-12 for evening-only founders (the 2-4 hr/week pattern this course is built for), or by Friday week 4 for full-time founders
+> **Output:** a live MVP at a real URL that real users can click
+>
+> **Progress:** M4 · 4 of 5 · Results so far: stack set up + pre-flight rules locked (4.3) - this page walks the 4 build phases to a live MVP
 
 > **TL;DR:** Four build phases with one demo each. Phase 1 ships clickable UI. Phase 2 wires Supabase auth. Phase 3 connects Stripe checkout. Phase 4 deploys to 5 ICP users. Five green lights to exit. Ship the shed, not the skyscraper.
 
-> **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS - Row-Level Security, the database rule that walls one customer's data off from another's) and Phase 3 (Stripe webhook - an automatic message Stripe sends your app when a payment lands - plus idempotency, the rule that says "if the same webhook fires twice, only act once") are where part-time founders lose the most calendar. Plan a 10-week version of the build, not a 4-week version. The Friday-week-4 framing in the Output line above applies to full-time founders only.
+> **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS - Row-Level Security, the database rule that walls one customer's data off from another's) and Phase 3 (Stripe webhook - an automatic message Stripe sends your app when a payment lands - plus idempotency, the rule that says "if the same webhook fires twice, only act once") are where part-time founders lose the most calendar. Plan a 10-week version of the build, not a 4-week version. The Friday-week-4 pace is a full-time-founder pace only.
 
 > **This chapter assumes you read Part 1 first.** Part 1 covers the $0 path, the 12 rules, what each tool does, the M2 prototype vs M4 MVP distinction, communities, and the AI critic block. The build phases below reference those concepts without re-explaining them.
 
@@ -201,19 +203,13 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 - Stripe, [Checkout quickstart](https://docs.stripe.com/payments/checkout/quickstart) and [Pricing page](https://stripe.com/pricing)
 - Drew Falkman, [Vibe Coding Data-Enabled AI Apps on Maven](https://maven.com/)
 
-> **Done when:** All 5 green lights are lit: Stripe in live mode, custom domain wired, 1 ICP user tested the paywall, zero JS errors on the signup+checkout flow, and a weekly demo recording exists.
+> **Done:** all 5 green lights are lit - Stripe in live mode, custom domain wired, 1 ICP user tested the paywall, zero JS errors on the signup + checkout flow, and a weekly demo recording exists.
 >
-> **Founder OS · Artifact #5 of 6:** A live MVP at a real URL, with ownership of every account in your name (per Ch 4.2's Day-1 ownership audit). Save the URL + admin login + the latest weekly demo recording in a `Live MVP` doc in your `Founder OS` folder. Module 5 invites your Module 2 interviewees + smoke-test email list to this URL as the warm seed for the first 10-30 users.
+> **You have now:** the self-serve stack set up (4.3) + a live MVP at a real URL. Save the URL, the admin login, and the latest weekly demo recording in a `Live MVP` doc in your `Founder OS` folder, with every account in your own name (per [Chapter 4.2's Day-1 ownership audit](/course/tech-for-non-technical-founders-2026/github-aws-database-ownership-checklist/)). Module 5 invites your Module 2 interviewees and your [Chapter 1.4 smoke-test email list](/course/tech-for-non-technical-founders-2026/smoke-test-landing-page-7-day-demand-test/) to this URL as the warm seed for your first 10-30 users. Paying customers are the next test.
 >
-> **Next click:** [4.5 · Vibe Coding Done Right: 5 Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/)
+> **Next:** [5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - it runs the Sean Ellis 40% test on the users this MVP collects. Bookmark [4.5 · Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) as the optional monthly check to run when the stack starts to strain.
 >
-> **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in Stripe test mode first. The communities section in Part 1 lists free help channels.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Phase 1-3 (6 weeks total with CTO): builds reconciliation dashboard, CTO sets up RLS + Stripe subscriptions + QuickBooks API via n8n. Phase 4: ships to custom domain. 5 green lights passed.
->
-> **Mia**: Phase 1-3 (4 weeks total): builds tutor search + profiles, sets up parent/tutor login, integrates Stripe booking payments. Phase 4: ships to custom domain. 5 green lights passed.
+> **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in test mode first. The communities section in Part 1 lists free help channels.
 
 ---
 

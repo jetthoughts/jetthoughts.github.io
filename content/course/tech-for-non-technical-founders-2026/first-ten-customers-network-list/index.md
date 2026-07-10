@@ -25,7 +25,9 @@ related_posts: false
 >
 > **Output:** 50 names sorted into 4 outreach buckets
 >
-> **Progress:** M5 · 3a of 7 · Results so far: must-have segment + channel commitment
+> **Progress:** M5 · 3 of 7 · Results so far: your first users answered the 40% test (5.1) - this page builds the 50-name list for the first sales push
+
+> **TL;DR:** Build a 50-name list from people who already know you, sorted into 4 buckets - champions, hot, warm, cold. Around 60% of fast-growing B2B startups landed their first 10 customers this way. One focused sitting.
 
 ---
 

@@ -35,6 +35,8 @@ related_posts: false
 > **Input:** 10 Mom Test interview transcripts from Module 2 + your live MVP from Module 4 (Ch 4.4) + the ICP (Ideal Customer Profile - the specific kind of person your hypothesis names; introduced in Ch 1.1) you sharpened across Modules 1-2
 >
 > **Output:** one channel hypothesis committed long enough to read the signal
+>
+> **Progress:** M5 · 2 of 7 · [OPTIONAL] - run this only if you don't yet know which channel your buyers actually use
 
 > **TL;DR:** Pick one channel from your interview evidence and commit for a full send/reply/follow-up arc. Channel-hopping is the most common newbie mistake - you can't read a signal you never let stabilize.
 
@@ -97,7 +99,7 @@ At this stage you are choosing from four options. Here is what each one actually
 | Channel | Best for | Requires | Red flag |
 |---------|----------|----------|----------|
 | **LinkedIn DM** | B2B SaaS/services, professional buyers, job-title filtering, $200+/mo | 1-2 hrs/week; Sales Navigator trial or Apollo.io free tier (credit-based free tier); one clear filter (title + company + industry) | Buyer is not a professional (freelancer, solo creator, non-employee) |
-| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (free tier available) | Open rate <20% after first batch = domain rep or subject lines broken; fix before scale |
+| **Cold email** | Any B2B with verified work emails; cheaper at volume | Separate sending domain; free tool ([Instantly](https://instantly.ai) / [Smartlead](https://smartlead.ai)); 30-50 emails from [Apollo](https://apollo.io) / [Hunter](https://hunter.io) (free tier available) | Open rate (share of recipients who open your email) <20% after first batch = domain rep or subject lines broken; fix before scale |
 | **Community outreach** | B2B and prosumer where buyers already gather in Slack/Discord/forum | Must be a genuine participant first; one signal-quality post per sprint (not per week); spend 2 weeks commenting before posting product or get banned permanently | Joining this week then immediately selling = permanent ban from the community |
 | **Social organic** | B2C and prosumer, visual products (apps, productivity tools, demos); buyer discovery from peers/influencers | A sustained posting cadence; format shows product working (screen recordings, before/after, results) | Never posted before AND can't commit to the early low-visibility stretch |
 | **Engineering as Marketing** | Any B2B or prosumer where your ICP searches for tactical solutions; zero-CAC organic SEO | One free no-code micro-tool (calculator, checklist, grader, template) that solves one micro-problem for your ICP; build it on Carrd/Tally/Notion in an afternoon | Your ICP doesn't search for tactical tooling (they buy via referral or sales call); the micro-tool solves a toy problem nobody actually has |
@@ -236,7 +238,7 @@ The first place to apply this is your personal network in [Chapter 5.3 (Build Yo
 2. Write the channel name + your commitment statement in a Notion doc. The clock starts the day you send your first outbound message.
 3. Read [Chapter 5.3 - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
 
-> **Module 5, Step 2 of 5** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
+> **Module 5, Step 2 of 7** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
 > Next: [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
 > Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 
@@ -249,17 +251,13 @@ Pick the channel your interviews already named, commit to it long enough to read
 - Andrew Chen, [The Law of Shitty Clickthroughs](https://andrewchen.com/the-law-of-shitty-clickthroughs/) - why every channel degrades over time and why early-stage founders need to pick the channel that works now, not the channel that worked for a more established company 3 years ago.
 - First Round Capital, [From 1 to 1,000 Users](https://review.firstround.com/from-1-to-1000-users-tactics-from-airbnb-tinder-etsy-reddit-and-more/) - channel selection stories from Airbnb, Tinder, Etsy, Reddit, including how each picked their first acquisition channel based on where their early customers actually lived online.
 
-> **Done when:** Your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
+> **Done:** your worksheet is filled, one channel is chosen, and you have written your commitment statement (channel name + why + evaluation criteria).
 >
-> **Next click:** [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
+> **You have now:** a committed channel (5.2) chosen from your interview evidence. The 50-name list to run it on is next.
+>
+> **Next:** [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) - the personal-network list you'll run this channel on first.
 >
 > **If blocked:** If no channel scores ≥9/12, your interview transcripts are missing channel signal. Re-read the transcripts looking for "how do you find tools like this" and "what tools do you use every day" - the answers are already in there.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Channel scoring: LinkedIn (9/12 - controllers are there), cold email (8/12), Reddit (5/12). Commits to LinkedIn + cold email. Scoring: 8.0/10.
->
-> **Mia**: Channel scoring: Facebook groups (9/12 - parents are there daily), school referrals (7/12), Instagram (5/12). Commits to Facebook groups + school district referrals.
 
 ---
 

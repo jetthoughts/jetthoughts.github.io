@@ -35,6 +35,8 @@ related_posts: false
 > **Input:** a live MVP on the self-serve stack (from [Chapter 4.3 · Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + [4.4 · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/))
 >
 > **Output:** a yes/no decision on whether to graduate to Module 5 (First Paying Customer) or hire or stay self-serve
+>
+> **Progress:** M4 · 5 of 5 · [OPTIONAL] - a recurring monthly check once your MVP is live; the core path continues at 5.1
 
 > **TL;DR:** Five architectural signals that mean the self-serve stack is maxed out. Two firing for 4+ weeks = graduate to a fractional CTO or hire. Run this check monthly once your MVP is live.
 
@@ -106,7 +108,7 @@ It writes a query that ignores a join, or it adds a column to one screen but not
 
 The founder shipped six features in month four and zero in months five and six because every change surfaced something else.
 
-**Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) schema review (~$400 at $200/hour). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow).
+**Cost of addressing now**: a 2-hour [Fractional CTO](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#the-fractional-cto-bridge) schema review (roughly $300-500 - a couple of hours at a senior fractional rate). They sketch the proper entity-relationship diagram, identify the joins your current schema is missing, and tell you whether the next 10 features fit on the current schema or need a redesign. If the verdict is "rebuild on a real ORM," route to [Reading the SOW](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/#reading-the-sow).
 
 ### Signal 3: Real-time features becoming non-negotiable (detectable: Week 4-8)
 
@@ -242,19 +244,15 @@ Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Bot
 - Vanta, [SOC2 readiness for early-stage SaaS](https://www.vanta.com/resources/soc-2-compliance-checklist) - the audit-surface checklist most founders see for the first time when their first enterprise customer asks for a SOC2 letter.
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder. Read before any framework decision.
 
-> **Done when:** You have scored all 5 signals (green/yellow/red) with dated observation windows and set a recurring monthly calendar block titled "Vibe-coding 5-signal check."
+> **Done:** you have scored all 5 signals (green/yellow/red) with dated observation windows and set a recurring monthly calendar block titled "Vibe-coding 5-signal check."
 >
-> **Next click:** [5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+> **You have now:** a live MVP (4.3-4.4) + a monthly ceiling-signal scorecard (4.5) that tells you, each month, whether to stay self-serve, bridge to a fractional CTO, or hire. Module 4 is done. Whether to graduate is now a dated, repeatable check instead of a guess.
 >
-> **If blocked:** If 2+ signals are red but you are not sure whether to hire, book one free Fractional CTO call. The first call is usually free and the diagnosis alone is worth the hour.
+> **Next:** the core path continues at [5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - it takes the first users on your live MVP and tests whether they would miss it before you spend on ads.
+>
+> **If blocked:** if 2+ signals are red but you are not sure whether to hire, book one free Fractional CTO call. The first call is usually free and the diagnosis alone is worth the hour.
 
 > **Module 4 closes here.** Before opening Module 5, you should have: (1) a build-path decision from the Ch 4.1 tree (self-serve / fractional CTO / hire), (2) a Day-1 ownership audit passed (Ch 4.2 - GitHub + AWS + domain all in your name), (3) a live MVP at a real URL with 5 ICP users tested + 5 green lights lit (Ch 4.4), and (4) a monthly 5-signal ceiling check on the calendar (this chapter). All four in your `Founder OS` folder. Missing one? Go back - Module 5 invites your Module 2 interviewees + smoke-test email list to your URL; if there's no URL, there's no Module 5.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: At ~50 firms, 2 ceiling signals fire: reconciliation matching has race conditions, n8n QuickBooks connector breaks on API changes. Graduates from self-serve → fractional CTO → hired team. CTO already in place, transition is smooth.
->
-> **Mia**: At ~200 parents, 2 ceiling signals fire: search takes 4 seconds, booking confirmation emails show wrong timezone. Graduates to fractional CTO at 5 hrs/week to fix the search query and timezone logic.
 
 ---
 

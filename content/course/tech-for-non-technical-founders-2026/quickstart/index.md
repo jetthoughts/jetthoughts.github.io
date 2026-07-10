@@ -75,12 +75,12 @@ Skip the lessons marked "optional" on the [course landing page](/course/tech-for
 - [**4.3** · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
 - [**4.4** · Build Phases](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-build-phases/)
 
-**Gate:** you own every account; the app loads; one core flow works end-to-end.
+**Gate:** you own every account; the app loads; one core flow works end-to-end. *(4.5, the optional monthly ceiling check, starts after launch.)*
 
 ### Module 5 - First Paying Customer
 *Output: one signed paid pilot + repeatable outbound channel.*
 
-- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/)
+- [**5.1** · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) *(5.2, the optional channel-selection detour, is skip-safe on this fast path)*
 - [**5.3** · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
 - [**5.4** · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/)
 - [**5.5** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)

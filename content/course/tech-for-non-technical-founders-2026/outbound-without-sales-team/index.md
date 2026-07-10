@@ -34,16 +34,18 @@ related_posts: false
 > **Input:** network exhausted, ~10 customers in from [Chapter 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) and [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 >
 > **Output:** 30 cold messages sent, 3-5 demo calls booked, 1-2 paid pilots cleared once replies mature
+>
+> **Progress:** M5 · 7 of 7 · [OPTIONAL] - the systematic cold path; run it only after the warm-network pass in 5.3-5.5
 
 > **TL;DR:** Once your network is exhausted, 30 filtered cold messages with a specific personalization per name will book 1-2 paid pilots. Customers 11-20 come from cold outbound, not from launch events.
 
 > **Stop here if you have not exhausted your personal network.** This chapter covers cold outbound to strangers - it assumes you have already converted the people who know you through [Ch 5.5](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/).
 >
-> If you still have warm names in your network who fit your ICP, close them first. Cold outbound is harder, slower, and lower-converting than warm outreach.
+> If you still have warm names in your network who fit your ICP (ideal customer profile - the specific buyer you're targeting), close them first. Cold outbound is harder, slower, and lower-converting than warm outreach.
 >
 > Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
-> **$0 outbound stack.** Apollo's free tier (credit-based - check the current allowance) + a Google Sheet + Gmail mail-merge add-on (free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
+> **$0 outbound stack.** Apollo's free tier (credit-based - check the current allowance) + a Google Sheet + a Gmail mail-merge add-on (sends the same email to many recipients at once, free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
@@ -256,7 +258,7 @@ The full cold-email scripts (3 variants: B2B SaaS shipped-MVP, B2B services, B2C
 
 ## Advanced (optional sidebar)
 
-Once you have closed 5-10 paid pilots from cold outbound and want to layer on sales-system rigor, read the [First Round Capital sales scripts collection](https://review.firstround.com/category/sales/), Sahil Bloom's ["The First 10 Customers"](https://www.sahilbloom.com/newsletter/the-first-10-customers) playbook, and the [Y Combinator library on early sales](https://www.ycombinator.com/library/4f-startup-sales-the-fastest-way-to-find-your-first-customers). Once you cross customer 30, the sales playbooks designed for solo founders give way to operator manuals: Mark Roberge's *The Sales Acceleration Formula* for hiring your first AE, Mike Weinberg's *New Sales. Simplified.* for the manager handbook. The main path above gets you from customer 11 to customer 20. The advanced versions matter after that.
+Once you have closed 5-10 paid pilots from cold outbound and want to layer on sales-system rigor, read the [First Round Capital sales scripts collection](https://review.firstround.com/category/sales/), Sahil Bloom's ["The First 10 Customers"](https://www.sahilbloom.com/newsletter/the-first-10-customers) playbook, and the [Y Combinator library on early sales](https://www.ycombinator.com/library/4f-startup-sales-the-fastest-way-to-find-your-first-customers). Once you cross customer 30, the sales playbooks designed for solo founders give way to operator manuals: Mark Roberge's *The Sales Acceleration Formula* for hiring your first AE (account executive - a dedicated salesperson), Mike Weinberg's *New Sales. Simplified.* for the manager handbook. The main path above gets you from customer 11 to customer 20. The advanced versions matter after that.
 
 > **Module 5 closes here.** → Download the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) (the full 6-piece template bundle). Now you have a paying pilot, the rest of the course is about keeping the build honest while you ship more: the [oversight rhythm](/course/tech-for-non-technical-founders-2026/engineering-org-chart-non-technical-founder/) sets up the weekly Friday demo + standup + report cadence. Or revisit the [course landing page](/course/tech-for-non-technical-founders-2026/) to pick the next chapter.
 
@@ -284,17 +286,13 @@ Module 5 closes with a deposit in your Stripe account. Everything from here is k
 - Y Combinator Library, [Startup Sales: The Fastest Way to Find Your First Customers](https://www.ycombinator.com/library/4f-startup-sales-the-fastest-way-to-find-your-first-customers) - YC's collection on founder-led sales including the filter-and-personalize cold-outreach motion.
 - Sahil Bloom, [The First 10 Customers](https://www.sahilbloom.com/newsletter/the-first-10-customers) - playbook framing the relationship-to-cold transition that closes the personal-network gap.
 
-> **Done when:** 30 cold messages are sent, replies are tracked in your spreadsheet, and 1-2 paid pilots are booked from the replies.
+> **Done:** 30 cold messages are sent, replies are tracked in your spreadsheet, and 1-2 paid pilots are booked from the replies.
 >
-> **Next click:** [Course landing page](/course/tech-for-non-technical-founders-2026/) - course complete. See continuation chapters for [churn triage](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/), [pivot decisions](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/), and [hiring](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
+> **You have now:** the full arc in hand - a validated hypothesis, a signed problem statement, a one-page brief, a live MVP, and at least one paying customer, plus a repeatable cold-outbound motion for customers 11-20. That is the whole course: idea → validated problem → brief → live MVP → paying customer. Keep the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) open to keep the build honest as you ship past customer 10.
+>
+> **Next:** [Course landing page](/course/tech-for-non-technical-founders-2026/) - the core course is complete. When a problem shows up, the continuation chapters cover [churn triage](/course/tech-for-non-technical-founders-2026/customers-leaving-churn-triage-not-acquisition/), [pivot decisions](/course/tech-for-non-technical-founders-2026/pivot-or-persevere-decision-framework/), and [hiring](/course/tech-for-non-technical-founders-2026/hire-track-supplementary-reference/).
 >
 > **If blocked:** If reply rate is under 5% after batch 1, diagnose before batch 2: is the filter wrong (wrong ICP), is your domain reputation dead (cold email deliverability), or is the personalization too generic? Fix the root cause before sending the next batch.
-
-> **Case Study: Tomas & Mia**
->
-> **Tomas**: Runs LinkedIn cold outreach to 30 controllers NOT in his network. 12% reply rate (4 replies). Books 2 pilot conversations. 1 signs at $2,500. Total: 3 paid pilots (2 from network, 1 from cold). Annualized: $30,000 in committed pilot revenue.
->
-> **Mia**: Runs Facebook group cold outreach to 30 parents NOT in her network. 28% reply rate (8 replies), 5 pilot conversations, 2 sign at $50 - total: 6 paid pilots at $300/mo recurring.
 
 ---
 
