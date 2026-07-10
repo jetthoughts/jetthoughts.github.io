@@ -86,6 +86,7 @@ Follow official methodology from `/knowledge/`:
 - LinkedIn pipeline: `docs/workflows/linkedin-post-pipeline.md` (Paul Keen voice rules, AI score rubric, save-location convention)
 - LinkedIn campaign: `docs/workflows/linkedin-icp-validation-plan.md`
 - Cover images: `docs/workflows/cover-images.md` (canonical spec remains `.stitch/design.md`)
+- Visual scroll gate (rendered-output QA): `docs/workflows/visual-scroll-gate.md`
 - **Content plan (active)**: `docs/projects/2510-seo-content-strategy/20-29-strategy/20.07-content-plan-icp-e-q2-2026.md`
 - Commands & hooks overview: `docs/workflows/commands.md`
 - Agent strategy: `docs/workflows/agents.md`
@@ -175,6 +176,7 @@ Repo voice guides and workflow docs override generic writing, SEO, or humanizer 
 - Any "NO" or "MIXED" on criteria 3 or 4 = ROLLBACK or REDESIGN before commit. Don't ship visuals that fail user-perspective scoring just because they're technically rendering.
 - Verify the visual's POSITION on first-fold: at the typical laptop viewport (1280×800), does the new visual appear ABOVE the fold? If it doesn't, it cannot win the 3-second hook — relocate or accept it as a mid-page visual break (different acceptance criteria).
 - For Mermaid diagrams specifically: measure rendered height. If > 2× viewport height, the diagram is too tall — reader perceives it as a wall, not a hook. Caught 2026-05-19: my Hero Roadmap rendered at 1551px on mobile (2× viewport) and the cursive font's dash-strikethrough effect on phase labels degraded legibility further.
+- **Visual SCROLL gate (BLOCKING for any new/edited content page, not just new media)**: walk the FULL page section-by-section in chrome-devtools at 1280×800 AND 390×844, screenshot each scroll view, and actually inspect each screenshot before handback. Canonical protocol + per-view defect checklist + numeric probes: `docs/workflows/visual-scroll-gate.md`. Text validators cannot see rendered output — the 2026-07-10 Module 3 pass caught mermaid node clipping, SVG text crossing artwork borders, a stale cover badge on a freshly wired og:image, a wrong-direction "diagram above" reference, and a renumber leftover INSIDE an SVG, all invisible to the banned-string ratchet. One screenshot of the hero is NOT this gate.
 
 **Cognitive load + F-pattern rules (mandatory for long-form posts > 800 words):**
 - Research-grounded rules from `docs/projects/2605-tech-for-non-technical-founders/10-19-research/10.05-content-organization-patterns-2026.md` Part 2 (Gloria Mark / Pew 2026 / NN/g F-pattern / Sweller CLT). Pew 2026: 71% of readers scroll past within 3 seconds without a visual hook; Gloria Mark 2026: per-screen attention = 43s.
