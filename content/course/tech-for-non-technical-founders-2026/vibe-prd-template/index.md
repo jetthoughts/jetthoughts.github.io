@@ -20,11 +20,21 @@ tags:
   - course-companion
   - product
 categories: ["Templates"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "Vibe PRD Template - One-Page Product Brief"
+  og_description: "One-page Product Brief template. Five sections, one 90-minute sitting. Hand to Lovable, Cursor, or a hired junior. Free."
+cover_image_alt: "JetThoughts template cover for the one-page Vibe PRD - five labeled sections on a single page"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/vibe-prd-template/"
 related_posts: false
 ---
 
-📋 Template companion to the [Chapter 3.1 post](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/). Print after running the [Chapter 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/). Fill in 45 minutes. Hand to your AI agent or contractor tomorrow.
+> **Template companion to [Chapter 3.1 - The One-Page Product Brief (Vibe PRD)](/course/tech-for-non-technical-founders-2026/one-page-product-brief-vibe-prd/)** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
+>
+> **Input:** your validated problem statement (from the [Chapter 2.5 synthesis](/course/tech-for-non-technical-founders-2026/mom-test-synthesis-build-pivot-kill/)) + the "describe in one sentence" vocabulary from your [Chapter 2.6 prototype sessions](/course/tech-for-non-technical-founders-2026/clickable-prototype-validation-2-hour-lovable/)
+>
+> **Output:** a filled one-page Product Brief (Vibe PRD), written in one 90-minute sitting, ready to hand to your AI agent or contractor tomorrow
 
 # Vibe PRD Template - One Page, Five Sections
 
@@ -45,7 +55,7 @@ A solo founder I spoke with last quarter had a validated problem statement and a
 
 Block 90 minutes on a single morning. Print the template (or copy the markdown block below into a Notion doc). Bring your filled-in [validated problem statement](/course/tech-for-non-technical-founders-2026/validated-problem-statement-template/). Open Lovable, Cursor, or your contractor's kickoff doc in a second tab. You will not type into the second tab yet. The page first.
 
-Section 1 copies directly from your validated problem statement, word for word. Sections 2 through 5 you write from scratch. Hard cap at 45 minutes per section, 90 minutes total. If you spill, the persona is too broad or you are designing too much.
+Section 1 copies directly from your validated problem statement, word for word. Sections 2 through 5 you write from scratch. Hard cap: 90 minutes total. If you spill, the persona is too broad or you are designing too much.
 
 After the page is filled, read it aloud to one peer over a 20-minute call. Ask them: "If you built this in a week using Lovable, what would you build that isn't on my no-go list?" Their first answer is your missing no-go item.
 
