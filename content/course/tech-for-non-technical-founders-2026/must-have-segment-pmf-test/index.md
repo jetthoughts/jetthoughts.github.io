@@ -39,9 +39,9 @@ related_posts: false
 
 > **TL;DR:** Before you buy traffic, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
 
-Your Lovable MVP went live last month. Forty people from your beta list poked at it. The dashboard says 0.4% conversion on $4,200 of Meta ads, and the instinct says "scale the top of funnel."
+Here is the failure mode this lesson exists to prevent. A founder's Lovable MVP goes live. Forty people from a beta list poke at it. The dashboard says 0.4% conversion on $4,200 of Meta ads, and instinct says "scale the top of funnel."
 
-The dashboard will tell you the same thing it would have told you if you had called five of those forty users first: most never opened the app twice. The $4,200 bought you a number you could have gotten for free.
+The dashboard tells that founder what five phone calls would have said for free: most users never opened the app twice. You are two weeks and zero ad dollars away from that fork - this lesson is how you take the other path.
 
 The real question after the MVP ships is whether the people who already touched it would notice if it vanished tomorrow. If less than 40% would be very disappointed, no amount of ad spend will turn that group into customers. Paid traffic does not fix a product problem; it routes more users into something they will not return to.
 

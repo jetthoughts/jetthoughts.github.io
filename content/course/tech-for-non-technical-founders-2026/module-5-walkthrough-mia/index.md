@@ -10,7 +10,7 @@ slug: module-5-walkthrough-mia
 >
 > *Illustrative composite based on patterns from real founder builds, not a single client story. Mia's earlier runs: [Module 1](/course/tech-for-non-technical-founders-2026/module-1-walkthrough-mia/) · [Module 2](/course/tech-for-non-technical-founders-2026/module-2-walkthrough-mia/) · [Module 3](/course/tech-for-non-technical-founders-2026/module-3-walkthrough-mia/) · [Module 4](/course/tech-for-non-technical-founders-2026/module-4-walkthrough-mia/).*
 
-Mia entered Module 5 with a live product and a number that could embarrass her: nineteen invitations sent, and no idea whether anyone who clicked would actually miss TutorMatch if it disappeared. Her six founding members had paid for a promise back in Module 1. Module 5 was about finding out what the product itself had earned.
+Mia entered Module 5 with a live product and a number that could embarrass her: nineteen invitations sent, and no idea whether anyone who clicked would actually miss TutorMatch if it disappeared. Her six founding members had paid for a promise back in Module 1 - pre-sold, face to face, before the product existed. Module 5 asks the harder question: what does the product earn from people who never made that early bet on Mia herself?
 
 ---
 
@@ -34,7 +34,7 @@ Skipped, honestly. The lesson is optional for founders who already know where th
 
 The 50-name list assembled itself faster than the Module 2 stranger list had, because this time she wasn't a stranger: eight interviewees who had asked to see the finished thing, eleven waitlist parents, her fifteen tutors - each of whom knew families - and the community connections she had built reading those groups for half a year. Four buckets, champions on top.
 
-The [messages](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) were one paragraph each, bucket by bucket, plus a 90-second Loom (a quick screen-recording video) of the search flow: type "dyslexia," see three vetted profiles, session rate visible. She [sent them in sequence](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) over two weeks, champions first, tracked in the same spreadsheet shape she had used for interviews. Twenty-two replies. Nine demos. Her interviewees converted at the highest rate, exactly as the lesson predicts - they had co-designed the thing without knowing it.
+The [messages](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) were one paragraph each, bucket by bucket, plus a 90-second Loom (a quick screen-recording video) of the search flow: type "dyslexia," see three vetted profiles, session rate visible. She [sent them in sequence](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/) over two weeks, champions first, tracked in the same spreadsheet shape she had used for interviews. Twenty-two replies. Nine demos. Her interviewees converted at the highest rate - they had co-designed the thing without knowing it.
 
 ---
 
@@ -42,7 +42,7 @@ The [messages](/course/tech-for-non-technical-founders-2026/first-ten-customers-
 
 The champion bucket produced the surprise. One of her demo calls was with the organizer of a regional parent group for learning differences - a woman who had spent years fielding "does anyone know a good tutor?" posts. She didn't want one account. She wanted TutorMatch for her member families.
 
-Mia's first instinct was to say yes and figure out payment later, which is precisely the free-pilot trap the lesson opens with. Instead she adapted the one-page Design Partner Agreement: a group plan for twenty member families - priced off what those families already pay tutors per session - with a $600 refundable deposit through a Stripe payment link before she lifted a finger on the group onboarding. The organizer signed the same week - people who have waited years for a solved problem don't haggle over a refundable deposit.
+Mia's first instinct was to say yes and figure out payment later, which is precisely the free-pilot trap the lesson opens with. Instead she adapted the one-page Design Partner Agreement: an annual group plan for twenty member families at $2,400 - modest next to the $70-$120 those families already pay tutors per single session - with a $600 refundable deposit (25% of year one, inside the lesson's 10-30% band) through a Stripe payment link before she lifted a finger on the group onboarding. The organizer signed the same week - people who have waited years for a solved problem don't haggle over a refundable deposit.
 
 The deposit cleared a few days later - a small number, but the first money TutorMatch had earned from someone who found Mia through the product rather than through her.
 

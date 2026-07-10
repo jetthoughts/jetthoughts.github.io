@@ -119,7 +119,7 @@ The brief is the handoff document. It goes to Lovable, a hired developer, or a f
 
 ### Module 5 - First Paying Customer
 **You have:** a live MVP at a real URL.
-**You walk away with:** one signed paid pilot ($500+ deposit) + a repeatable outbound channel.
+**You walk away with:** one signed paid pilot with a real deposit ($500+ standard; 5.6 covers the low-price exception) + a repeatable outbound channel.
 **Time:** ~2-4 weeks.
 
 | Step | What You Do | Key Tool |
@@ -190,7 +190,7 @@ Every module has a gate. If the data doesn't support your hypothesis, you stop a
 | 2 | Mom Test interviews | ≥7 of 10 interviewees have spent time or money on the problem |
 | 3 | Product Brief quality check | Every feature traces back to a verbatim interview quote |
 | 4 | MVP at a real URL | You own every account; the app loads; one core flow works end-to-end |
-| 5 | First paid pilot | Signed DPA + $500+ Stripe deposit received |
+| 5 | First paid pilot | Signed DPA + Stripe deposit received ($500+ standard; low-price path in 5.6) |
 
 If you fail a gate, the system requires you to go back, not forward. Failing at the gate costs you a few weeks and a few hundred dollars of ad spend; failing after the build costs founders years and tens of thousands of dollars on something nobody wants.
 

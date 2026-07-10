@@ -46,7 +46,7 @@ related_posts: false
 
 ## The ship plan
 
-> **The ship plan below is the BUILD portion only.** It assumes you already ran Modules 1-3 (hypothesis → smoke test → 10 interviews → one-page brief) and read [Chapter 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). If you skip straight here without validation, the build often ships into the silence Modules 1-3 were designed to prevent.
+The ship plan below is the BUILD portion only. It assumes you already ran Modules 1-3 (hypothesis, smoke test, 10 interviews, one-page brief) and read [Chapter 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). If you skip straight here without validation, the build ships into the silence Modules 1-3 were designed to prevent.
 
 Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). The build phase ends with five real ICP users on the staging URL; the onramp phase brings the rest of your Ch 2.3-2.4 interview pool onto the product.
 
@@ -84,7 +84,7 @@ In Lovable, install the Supabase integration. Lovable will add the Supabase JS c
 
 > **Self-test your RLS policy before going live (two paths).**
 >
-> *No-code path (the default for a non-technical founder).* In Claude or ChatGPT, paste: *"Audit my Supabase RLS policy. Here is my schema: [paste your table definitions from Supabase Table Editor]. Here is my current RLS policy: [paste from Authentication -> Policies]. Tell me whether a logged-in user with a fake user-id can read rows that belong to other users. If yes, give me the exact policy SQL to fix it."* Paste the AI's suggested policy into Supabase Authentication -> Policies.
+> *No-code path (the default for a non-technical founder - this is copy-paste verification, not programming: the AI writes the fix, you paste it and read the answer).* In Claude or ChatGPT, paste: *"Audit my Supabase RLS policy. Here is my schema: [paste your table definitions from Supabase Table Editor]. Here is my current RLS policy: [paste from Authentication -> Policies]. Tell me whether a logged-in user with a fake user-id can read rows that belong to other users. If yes, give me the exact policy SQL to fix it."* Paste the AI's suggested policy into Supabase Authentication -> Policies.
 >
 > *SQL path (only if you are comfortable writing SQL).* In Supabase Dashboard -> SQL Editor, paste the test below, replacing `<table>` with your main user-data table. The pretend user-id `999` has no real rows; if the query returns any, your policy has a hole.
 >
@@ -118,7 +118,7 @@ Watch what happens. If 0 of 5 click, the cold message is wrong, not the product 
 > 1. **Stripe in LIVE mode** (not test mode) and a real card successfully clears the paywall at least once.
 > 2. **Custom domain wired** (not a `.lovable.app` subdomain) - the URL you DM to a user must be yours.
 > 3. **At least 1 ICP user who was NOT in your Ch 2.3-2.4 interviews** has clicked through to the paywall on the live URL.
-> 4. **Zero JS errors in the browser Console** on the sign-up + checkout flow (open DevTools, walk the happy path, console must stay clean).
+> 4. **Zero errors in the browser Console** on the sign-up + checkout flow. Not a coding step: press F12, click through sign-up and checkout like a user, and check that the Console tab shows no red lines.
 > 5. **Friday-style weekly demo recording exists** for the last week of build (a Loom or screen-record proving the demo cadence held to the end).
 >
 > Advance to Module 5 only when all 5 are green. If any are red, the MVP is NOT ready for the 10-30 users Module 5 needs as input. Fix the red light first, then re-check.

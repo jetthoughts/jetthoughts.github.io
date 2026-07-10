@@ -86,7 +86,7 @@ Skip the lessons marked "optional" on the [course landing page](/course/tech-for
 - [**5.5** · Send, Track, and Read the Replies](/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/)
 - [**5.6** · Charge Before You Ship: The Paid Pilot](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/)
 
-**Gate:** signed pilot agreement + $500+ deposit received through Stripe.
+**Gate:** signed pilot agreement + deposit received through Stripe ($500+ standard; first-month-upfront on the low-price path in 5.6).
 
 ---
 
