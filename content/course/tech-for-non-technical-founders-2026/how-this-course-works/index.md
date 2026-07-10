@@ -156,7 +156,7 @@ These are the tools the course references - AI research tools, no-code builders,
 | Tool | What It Does | When to Use | Cost |
 |---|---|---|---|
 | **ValidatorAI** | Dialog-based AI advisor, rates your idea and finds blind spots | Rapid "devil's advocate" feedback before interviews | Free tier |
-| **IdeaProof** | 4-model ensemble (Claude, GPT, Gemini, Grok) cross-validates business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
+| **IdeaProof** | Multi-model ensemble cross-validates business logic | After Mom Test interviews, before writing the Product Brief | Free tier |
 | **Preuve AI** | Evidence-based idea scoring from live data sources, with citations | Before building, when you need a data-backed viability check | Free tier |
 
 </details>
