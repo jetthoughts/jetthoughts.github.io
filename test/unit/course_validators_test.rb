@@ -344,7 +344,7 @@ class CourseValidatorsTest < Minitest::Test
 
   # ── Integration: all validators run together ────────────────────────────
 
-  def test_run_all_returns_seven_results
+  def test_run_all_returns_eight_results
     write_yaml([
       { "slug" => "ch1", "title" => "1.1 · Test", "module" => "Chapter 1.1", "goal" => "Test" }
     ])
@@ -353,7 +353,7 @@ class CourseValidatorsTest < Minitest::Test
 
     results = CourseValidators.run_all
 
-    assert_equal 7, results.length
+    assert_equal 8, results.length
     names = results.map(&:name)
     assert_includes names, "chapter-number-consistency"
     assert_includes names, "title-yaml-match"
@@ -368,7 +368,7 @@ class CourseValidatorsTest < Minitest::Test
     write_yaml([])
     results = CourseValidators.run_all
 
-    assert_equal 7, results.length
+    assert_equal 8, results.length
     results.each do |r|
       assert r.passed, "All validators should pass when no course chapters exist: #{r.name} failed"
     end
@@ -383,7 +383,7 @@ class CourseValidatorsTest < Minitest::Test
 
     results = CourseValidators.run_all
 
-    assert_equal 7, results.length
+    assert_equal 8, results.length
     # Should not crash - just produce empty violations
   end
 
