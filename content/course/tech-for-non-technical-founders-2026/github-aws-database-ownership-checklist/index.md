@@ -198,7 +198,8 @@ Ownership audit done right means no Marcus stands between you and a 9pm Tuesday 
 >
 > **You have now:** a quality-checked one-page brief (3.2) + a build-path decision (4.1) + a passed ownership audit, all saved in your `Founder OS` folder.
 >
-> **Next:** [4.3 · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/)
+> **Next:** [4.3 · The Self-Serve MVP Stack: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - it builds on the accounts you now own.
+>
 > **If blocked:** If the AWS root email belongs to someone else and they won't cooperate, start the AWS support recovery process immediately (3-5 business days). Do not build on an account you don't own.
 
 ---

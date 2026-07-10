@@ -58,7 +58,7 @@ Once your build goes live, run this 5-signal check monthly. Each signal that fir
 
 ## Who this 5-signal check is for
 
-The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) holds most pre-seed B2B SaaS workloads. The remainder is what this post is about.
+The Lovable + Supabase + Stripe shed from [The Self-Serve MVP Stack](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) handles the common early-SaaS build. The builds it cannot hold are what this post is about.
 
 Run this check monthly once your MVP is live and the ceiling shows up while it is still a tuning problem. Wait until something breaks - slow dashboard, duplicate webhooks, support tickets climbing - and you are paying late-fix prices on what was an early-fix problem.
 
@@ -104,7 +104,7 @@ New features take twice as long as they did in month two.
 
 It writes a query that ignores a join, or it adds a column to one screen but not the migration. The schema decays from edits.
 
-**Cost of leaving it alone**: a fitness-coaching SaaS we picked up in Q1 2026 had 11,000 lines of Lovable-generated code, no foreign keys, every model named in the singular, and three customer accounts with corrupted data because a webhook had retried a Stripe charge update four times.
+**Cost of leaving it alone**: a fitness-coaching SaaS we reviewed in early 2026 had 11,000 lines of Lovable-generated code, no foreign keys, every model named in the singular, and three customer accounts with corrupted data because a webhook had retried a Stripe charge update four times.
 
 The founder shipped six features in month four and zero in months five and six because every change surfaced something else.
 
@@ -227,7 +227,7 @@ After finishing Ch 4.1-4.5, you have five artifacts. Each one feeds a specific d
 | Artifact | Where it goes next |
 |---|---|
 | **Build-path decision** (validate / self-serve / fractional CTO / hire - chosen and dated, from Ch 4.1) | Module 5 outbound posture. The build path determines whether you sell a live MVP (self-serve, hire) or a Carrd + Stripe pre-sale (validate path), which decides the Ch 5.2-5.7 scripts you use. |
-| **Ownership audit results** (12-item checklist - GitHub, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys, monitoring, status page - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.6 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
+| **Ownership audit results** (12-item checklist - GitHub org owner, repo collaborators, branch protection, AWS root, billing, IAM, DB credentials, secrets store, backups, domain, DNS, third-party keys - all on your company email, from Ch 4.2) | Module 5 contract foundations. The Ch 5.6 Design Partner Agreement assumes you own the production environment. If ownership is split, fix that before sending any DPA. |
 | **Shipped MVP** (live URL + first 4-6 user accounts if self-serve, OR live URL + contractor weekly demo cadence if hired, from Ch 4.3-4.4) | Ch 5.1 must-have test denominator. The 40% test needs 10-30 users who actually touched the MVP; the first 4-6 are the starting cohort. |
 | **Monthly ceiling-signal scorecard** (the 5 signals from Ch 4.5, first run once the live MVP is up) | Recurring monthly check from live launch onward. The scorecard is the early-warning system that decides whether you stay self-serve or graduate while you sell. |
 | **Output for Module 5: 4-6 active users as the starting cohort + a path to 10+ via Ch 2.3-2.4 outreach** (from Ch 4.3-4.4 onboarding) | Ch 5.1 Sean Ellis 40% test input. 4-6 is the directional starting cohort - Ch 5.1's "Under-10 respondents" sidebar reads that as MAYBE, not a verdict. Re-engage your Ch 2.3-2.4 interview leads as Ch 5.1 invites to get above 10 for a confident reading. Their Q2-Q3 verbatims become the persona language for Ch 5.7 outbound. |
@@ -241,7 +241,7 @@ Two ceiling signals firing for 4+ weeks means the shed is no longer holding. Bot
 - Veracode, [GenAI Code Security Report 2025](https://www.veracode.com/blog/genai-code-security-report/) - 45% of LLM-generated code shipped at least one exploitable security flaw. The data behind why the compliance signal fires.
 - Supabase, [Realtime documentation](https://supabase.com/docs/guides/realtime) and [Row-Level Security guide](https://supabase.com/docs/guides/database/postgres/row-level-security) - the official boundary between what Supabase serves well and where the data-model and real-time signals begin.
 - OpenAI, [Rate limits documentation](https://platform.openai.com/docs/guides/rate-limits) - the per-tier request and token caps that drive the AI-inference signal once your traffic crosses a threshold.
-- Vanta, [SOC2 readiness for early-stage SaaS](https://www.vanta.com/resources/soc-2-compliance-checklist) - the audit-surface checklist most founders see for the first time when their first enterprise customer asks for a SOC2 letter.
+- Vanta, [SOC2 readiness for early-stage SaaS](https://www.vanta.com/resources/soc-2-compliance-checklist) - the audit-surface checklist a founder usually meets for the first time when an enterprise customer asks for a SOC2 letter.
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code and the changing role of the technical co-founder. Read before any framework decision.
 
 > **Done:** you have scored all 5 signals (green/yellow/red) with dated observation windows and set a recurring monthly calendar block titled "Vibe-coding 5-signal check."

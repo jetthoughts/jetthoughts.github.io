@@ -18,7 +18,7 @@ Mia entered Module 5 with a live product and a number that could embarrass her: 
 
 Two weeks after the invites went out, she sent the one-question survey to everyone who had used the product: how would you feel if TutorMatch went away? Sixteen answered. Across all of them the "very disappointed" count landed at 6 of 16 - 38% - just under the bar, the kind of number that invites self-deception in both directions.
 
-The segment cut told the real story. Among parents of kids with learning differences - her interview cohort's profile - six of eleven said very disappointed: 55%. Among the five generic-tutoring parents who had wandered in from the waitlist: zero. The lesson's instruction held her still: below 40% overall is not a kill, it is a "wrong segment mixed in" signal. TutorMatch wasn't for every parent who ever wanted a tutor. It was for the parents who had already called eleven places in March.
+The segment cut told the real story. Among parents of kids with learning differences - her interview cohort's profile - six of eleven said very disappointed: 55%. Among the five generic-tutoring parents who had wandered in from the waitlist: zero. The lesson's instruction held her still: below 40% overall is not a kill, it is a "wrong segment mixed in" signal. The must-have segment was narrow: parents who had already exhausted the local options and were still looking.
 
 She wrote the niche into the top of her operating doc and stopped apologizing for it.
 
@@ -26,7 +26,7 @@ She wrote the niche into the top of her operating doc and stopped apologizing fo
 
 ## [Lesson 5.2: Channel Selection](/course/tech-for-non-technical-founders-2026/channel-selection-before-outbound/)
 
-Skipped, honestly. The lesson is optional for founders who already know where their buyers live, and Mia had known since Module 2: the learning-differences communities where her interviewees came from. One evening saved.
+Skipped, honestly. The lesson is optional for founders who already know where their buyers live, and Mia had known since Module 2: the learning-differences communities where her interviewees came from. She moved on.
 
 ---
 
@@ -42,9 +42,9 @@ The [messages](/course/tech-for-non-technical-founders-2026/first-ten-customers-
 
 The champion bucket produced the surprise. One of her demo calls was with the organizer of a regional parent group for learning differences - a woman who had spent years fielding "does anyone know a good tutor?" posts. She didn't want one account. She wanted TutorMatch for her member families.
 
-Mia's first instinct was to say yes and figure out payment later, which is precisely the free-pilot trap the lesson opens with. Instead she adapted the one-page Design Partner Agreement: a group plan for twenty member families, priced against her $70-$120-a-session Money answer, with a $400 refundable deposit through a Stripe payment link before she lifted a finger on the group onboarding. The organizer signed the same week - people who have waited years for a solved problem don't haggle over a refundable deposit.
+Mia's first instinct was to say yes and figure out payment later, which is precisely the free-pilot trap the lesson opens with. Instead she adapted the one-page Design Partner Agreement: a group plan for twenty member families - priced off what those families already pay tutors per session - with a $600 refundable deposit through a Stripe payment link before she lifted a finger on the group onboarding. The organizer signed the same week - people who have waited years for a solved problem don't haggle over a refundable deposit.
 
-The deposit cleared on a Tuesday morning. It was not a large number. It was the first money TutorMatch earned from someone who had never met Mia before the product existed.
+The deposit cleared a few days later - a small number, but the first money TutorMatch had earned from someone who found Mia through the product rather than through her.
 
 ---
 

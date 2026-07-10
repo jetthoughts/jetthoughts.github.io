@@ -30,9 +30,9 @@ related_posts: false
 
 > **Module 4 · Lesson 4.4 · [CORE]** · [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 >
-> **Part 2 of 2** · [Part 1: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) covers why these three tools, what each one does, the 12 rules, communities, and the AI critic block.
+> **Companion pair: read [Chapter 4.3 · Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) first** - it covers why these three tools, what each one does, the 12 rules, communities, and the AI critic block.
 >
-> **Input:** the self-serve stack set up plus the pre-flight rules from [Part 1 (Chapter 4.3)](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + your one-page brief from Module 3
+> **Input:** the self-serve stack set up plus the pre-flight rules from [Chapter 4.3](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) + your one-page brief from Module 3
 >
 > **Output:** a live MVP at a real URL that real users can click
 >
@@ -42,11 +42,11 @@ related_posts: false
 
 > **Calendar reality for the MVP build.** A full-time founder with daytime availability can hit the Phase 4 5-lights in 4-6 weeks. An evening-only founder (the 2-4 hr/week pattern this course is built for) typically needs 10-12 weeks for the same outputs. Phase 2 (Supabase wiring + RLS - Row-Level Security, the database rule that walls one customer's data off from another's) and Phase 3 (Stripe webhook - an automatic message Stripe sends your app when a payment lands - plus idempotency, the rule that says "if the same webhook fires twice, only act once") are where part-time founders lose the most calendar. Plan a 10-week version of the build, not a 4-week version. The Friday-week-4 pace is a full-time-founder pace only.
 
-> **This chapter assumes you read Part 1 first.** Part 1 covers the $0 path, the 12 rules, what each tool does, the M2 prototype vs M4 MVP distinction, communities, and the AI critic block. The build phases below reference those concepts without re-explaining them.
+> **This chapter assumes you read Chapter 4.3 first.** It covers the $0 path, the 12 rules, what each tool does, the M2 prototype vs M4 MVP distinction, communities, and the AI critic block. The build phases below reference those concepts without re-explaining them.
 
 ## The ship plan
 
-> **The ship plan below is the BUILD portion only.** It assumes you already ran Modules 1-3 (hypothesis → smoke test → 10 interviews → one-page brief) and read [Part 1: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). If you skip straight here without validation, the build often ships into the silence Modules 1-3 were designed to prevent.
+> **The ship plan below is the BUILD portion only.** It assumes you already ran Modules 1-3 (hypothesis → smoke test → 10 interviews → one-page brief) and read [Chapter 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/). If you skip straight here without validation, the build often ships into the silence Modules 1-3 were designed to prevent.
 
 Four build phases, plus an onramp phase that hands you off to Module 5. Each phase ends with one demo to one human (a friend, an advisor, your spouse, the dog if necessary - someone who has not seen the build). The build phase ends with five real ICP users on the staging URL; the onramp phase brings the rest of your Ch 2.3-2.4 interview pool onto the product.
 
@@ -131,7 +131,7 @@ The build phases above are the BUILD container. The onramp phase is the Module-5
 
 Open your Ch 2.3-2.4 interview list. For each of the 10 names, write a 3-line personalized note: the workaround they described in their interview, the staging URL of the workflow that now replaces it, and one specific question they answered that the MVP now responds to.
 
-Send it as a [Loom](https://www.loom.com) (Loom is a free short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast.
+Send it as a [Loom](https://www.loom.com) (Loom is a short-form screen-recording tool - the recipient watches you click through the product in their browser, no install) or a personal LinkedIn DM, not a generic email blast.
 
 Expect 4-6 of the 10 to create accounts; 2-3 of those to actually log in and click around; 1-2 to become candidates for the [Ch 5.1 Sean Ellis 40% survey](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) once you have 10-30 users total. "Create an account" is not "pay" - paid conversion happens in Module 5.
 
@@ -194,7 +194,7 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 
 ## Further reading
 
-- [Part 1: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - the companion page: why these three tools, what each one does, 12 rules, communities, and the AI critic block
+- [Chapter 4.3: Tools & Setup](/course/tech-for-non-technical-founders-2026/self-serve-mvp-stack-lovable-supabase-stripe-2026/) - the companion page: why these three tools, what each one does, 12 rules, communities, and the AI critic block
 - [Self-Serve Stack Walkthrough](/course/tech-for-non-technical-founders-2026/self-serve-stack-walkthrough/) - day-by-day version of the build plan; print before Phase 1
 - Y Combinator, [Startup School Library + 2026 Founder Resources](https://www.ycombinator.com/library/) - the YC stance on validating without code
 - Rob Walling, [Vibe Coding interview on Creator Science](https://podcast.creatorscience.com/rob-walling/) - the shed vs skyscraper analogy
@@ -209,7 +209,7 @@ Build the shed first. Lovable + Supabase + Stripe + a $14 domain ships your vali
 >
 > **Next:** [5.1 · Your First Customer Is Not a Marketing Problem](/course/tech-for-non-technical-founders-2026/must-have-segment-pmf-test/) - it runs the Sean Ellis 40% test on the users this MVP collects. Bookmark [4.5 · Ceiling Signals](/course/tech-for-non-technical-founders-2026/vibe-coding-ceiling-signals/) as the optional monthly check to run when the stack starts to strain.
 >
-> **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in test mode first. The communities section in Part 1 lists free help channels.
+> **If blocked:** If stuck on Phase 2 (Supabase), post your schema in the Lovable Discord. If stuck on Phase 3 (Stripe webhook), run a $1 test transaction in test mode first. The communities section in Chapter 4.3 lists free help channels.
 
 ---
 

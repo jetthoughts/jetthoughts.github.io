@@ -15,6 +15,12 @@ tags:
   - non-technical-founder
   - first-paying-customer
 categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "5.4 · Write the Outreach Message"
+  og_description: "4 outreach message variants (one per bucket) plus a 90-second Loom that gets replies. Lesson 5.4 of the From Idea to First Paying Customer course."
+cover_image_alt: "JetThoughts course cover for Lesson 5.4 - the 4-part outreach message and Loom"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/"
 related_posts: false
 ---
@@ -27,7 +33,7 @@ related_posts: false
 >
 > **Progress:** M5 · 4 of 7 · Results so far: 50 names in 4 buckets (5.3) - this page writes the 4 messages
 
-> **TL;DR:** One 4-part message with a different opener per bucket, plus one 90-second [Loom](https://www.loom.com) (a free screen-recording tool - record your screen and voice, share a link). Keep it to 5-7 sentences. "Quick chat?" gets zero replies; a specific reference plus a Loom gets the meeting.
+> **TL;DR:** One 4-part message with a different opener per bucket, plus one 90-second [Loom](https://www.loom.com) (a screen-recording tool - record your screen and voice, share a link). Keep it to 5-7 sentences. "Quick chat?" gets zero replies; a specific reference plus a Loom gets the meeting.
 
 ---
 
@@ -91,4 +97,4 @@ Read your champion opener aloud to yourself. If you wouldn't send it to that per
 
 *See it in action: [Module 5 walkthrough: Mia gets paid](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)*
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

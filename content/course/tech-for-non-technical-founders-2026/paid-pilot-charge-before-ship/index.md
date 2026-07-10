@@ -289,7 +289,7 @@ The paid pilot is the default, but it has three honest exceptions.
 | Step | Action | Output |
 |---|---|---|
 | **1** | Copy the [DPA template above](#dpa-template) into a Google Doc, fill the 6 bracketed sections, pick deposit number from the sector table above, set up Stripe product + payment link. Optional: the [First-Paying-Customer Operating Kit](/course/tech-for-non-technical-founders-2026/first-paying-customer-operating-kit/) has annotated worked examples + DocuSign-importable format. | Stripe link ready. DPA drafted. Deposit amount locked. |
-| **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.3 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
+| **2** | Send the DPA + Stripe link to 1-2 warm leads from Chapter 5.5 who booked demos recently. | 1-2 DPA emails sent. Expect 1 procurement question + 1 ready-to-sign. |
 | **3** | Bank your first deposit. Schedule pilot kickoff and the first Friday demo cadence. | Deposit cleared. Kickoff scheduled. Pilot officially started. |
 
 **If you do not have warm demos yet**, your work is still in [Chapter 5.3](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/). The DPA is the wrong sprint for an empty pipeline.

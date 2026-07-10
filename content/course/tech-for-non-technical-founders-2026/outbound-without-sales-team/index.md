@@ -45,7 +45,7 @@ related_posts: false
 >
 > Reading this chapter before your network is dry is the most common sequencing mistake founders make in Module 5 - it feels like progress, but you are skipping the higher-converting path for the lower one. The chapter will still be here when your network is done.
 
-> **$0 outbound stack.** Apollo's free tier (credit-based - check the current allowance) + a Google Sheet + a Gmail mail-merge add-on (sends the same email to many recipients at once, free) + Loom free + Calendly free covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
+> **$0 outbound stack.** Apollo's free tier (credit-based - check the current allowance) + a Google Sheet + a Gmail mail-merge add-on (sends the same email to many recipients at once, free) + Loom + Calendly covers the entire pipeline at zero monthly cost. You ship the same 30-message batch, you just enrich the list manually in a sheet instead of automating it through Smartlead. Upgrade to Apollo's or Smartlead's paid tiers only when you're sending 100+ messages a week and the manual enrichment is the bottleneck.
 
 This chapter is sales outbound asking buyers for money, which is a different motion from the interview-recruitment outreach in [Chapter 2.4](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/) where you were asking for 30 minutes of their time.
 
@@ -211,7 +211,7 @@ flowchart TB
     class W3,W7 conv;
 ```
 
-Expect a 10-20% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
+Expect a 10-15% reply rate on a properly filtered, properly personalized 30-message batch. That is 3-6 replies, of which 2-4 will agree to a 15-minute demo. Of the demos, 1-2 will agree to a paid pilot. Of the pilots, the [Chapter 5.6](/course/tech-for-non-technical-founders-2026/paid-pilot-charge-before-ship/) deposit-to-year-one conversion math holds.
 
 The 30-message batch is not a one-time event. Run fresh 30-message batches until you have 20 customers. The second and third batches will outperform the first by 30-50% because you will have learned which reference patterns earn replies and which do not.
 

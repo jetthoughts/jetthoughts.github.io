@@ -15,6 +15,12 @@ tags:
   - non-technical-founder
   - first-paying-customer
 categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "5.3 · Build Your 50-Name Network List"
+  og_description: "Sort 50 names into 4 outreach buckets so you know exactly who to message first. Lesson 5.3 of the From Idea to First Paying Customer course."
+cover_image_alt: "JetThoughts course cover for Lesson 5.3 - the 50-name network list sorted into 4 outreach buckets"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/"
 related_posts: false
 ---
@@ -82,7 +88,7 @@ Count your champions out loud. That's the number of people who've already told y
 
 > **Done:** 50 names sorted into 4 buckets, champions identified.
 >
-> **You have now:** must-have segment (5.1) + channel commitment (5.2) + sorted 50-name list (5.3). The message is next.
+> **You have now:** must-have segment (5.1) + your sorted 50-name list (5.3), plus a channel commitment if you took the optional 5.2 detour. The message is next.
 >
 > **Next:** [5.4 · Write the Outreach Message](/course/tech-for-non-technical-founders-2026/first-ten-customers-outreach-message/) - turns your bucket list into 4 message templates with a recorded Loom.
 >
@@ -92,4 +98,4 @@ Count your champions out loud. That's the number of people who've already told y
 
 *See it in action: [Module 5 walkthrough: Mia gets paid](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)*
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*

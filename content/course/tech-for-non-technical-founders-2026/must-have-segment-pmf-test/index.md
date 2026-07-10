@@ -37,7 +37,7 @@ related_posts: false
 >
 > **Progress:** M5 · 1 of 7 · Results so far: live MVP with your first users on it (4.4) - this page tests whether they'd miss it before you spend on ads
 
-> **TL;DR:** Before spending a dollar on ads, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
+> **TL;DR:** Before you buy traffic, survey your earliest users. If fewer than 40% would be "very disappointed" if your product vanished, you have a product problem, not a marketing problem.
 
 Your Lovable MVP went live last month. Forty people from your beta list poked at it. The dashboard says 0.4% conversion on $4,200 of Meta ads, and the instinct says "scale the top of funnel."
 
@@ -62,7 +62,7 @@ Sean Ellis ran growth at Dropbox, LogMeIn, and Eventbrite. While he was building
 
 You just shipped your first Lovable MVP and 40 people from your beta list poked at it. The natural urge is to start collecting traction numbers immediately - surveys feel like a delay, ads feel like progress. And because you cannot read the codebase, "the conversion rate is 0.4%" sounds like a UX problem (a thing you can act on) instead of a product problem (a thing you cannot diagnose). Ad spend feels safer than going back into the build.
 
-The Twitter threads make it worse. On day 90 after launch, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one and got 56% on a sample of 22.
+The Twitter threads make it worse. On day 90 after launch, every thread is some growth marketer explaining that the founder of a now-public company spent $4M on Meta in the first six months. The threads do not mention that the founder ran the 40% test in week one, cleared the bar, and then spent on ads.
 
 Ask yourself the must-have rate before you ask anything else. The pattern across the burned-thousands-on-paid-ads stories is the same: a number that was never measured. Sometimes the rate is under 25% overall - genuine "no must-have user" territory. Sometimes one segment scores high and another scores low, but the ad targets the wrong half because the high-need segment is harder to reach. Knowing the number before the ad spend is the difference between an expensive lesson and a cheap one.
 

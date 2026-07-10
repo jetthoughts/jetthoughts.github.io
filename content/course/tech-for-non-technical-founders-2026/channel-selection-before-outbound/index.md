@@ -44,7 +44,7 @@ The channel-flailing pattern: switch every 10 days - LinkedIn for two weeks, col
 
 The fix is rarely "find a smarter channel." It's pick one channel from your interview evidence and stick with it through a full send/reply/follow-up arc. Same six weeks on LinkedIn alone produces 11 conversations, 2 paid pilots, and a clear hypothesis about what to test next.
 
-The pattern: four channels, no commitment, and no way to tell which channel had worked because none of them had been run long enough to read.
+
 
 You ran 10 interviews in [Module 2](/course/tech-for-non-technical-founders-2026/find-10-people-with-problem-outreach-2026/). Your interviewees told you exactly how they find tools like yours. They just did not use the word "channel" when they said it.
 
@@ -237,10 +237,6 @@ The first place to apply this is your personal network in [Chapter 5.3 (Build Yo
 1. Open the worksheet above and score each of the 4 channels against your customer interview answers. Pick the one that maps to the most evidence.
 2. Write the channel name + your commitment statement in a Notion doc. The clock starts the day you send your first outbound message.
 3. Read [Chapter 5.3 - Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/) before your first send - that's the playbook for getting the first conversations on the channel you just picked.
-
-> **Module 5, Step 2 of 7** - channel selection is the decision before any outreach tactic. Finish the worksheet above before you open a single sales tool.
-> Next: [5.3 · Build Your 50-Name Network List](/course/tech-for-non-technical-founders-2026/first-ten-customers-network-list/)
-> Course: [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/)
 
 Pick the channel your interviews already named, commit to it long enough to read the signal, and stop running pilots against your own attention.
 

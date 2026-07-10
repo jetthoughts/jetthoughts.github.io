@@ -15,6 +15,12 @@ tags:
   - non-technical-founder
   - first-paying-customer
 categories: ["Founders"]
+cover_image: cover.png
+metatags:
+  image: cover.png
+  og_title: "5.5 · Send, Track, and Read the Replies"
+  og_description: "Send 50 messages in the right sequence, track replies in one spreadsheet, and diagnose what a no actually means. Lesson 5.5 of the From Idea to First Paying Customer course."
+cover_image_alt: "JetThoughts course cover for Lesson 5.5 - send, track, and read the replies"
 canonical_url: "https://jetthoughts.com/course/tech-for-non-technical-founders-2026/first-ten-customers-send-track/"
 related_posts: false
 ---
@@ -43,7 +49,7 @@ The send sequence in one glance:
 2. Send the 15 warm messages a day or two later.
 3. Send the 20 cold messages once the first replies are in.
 
-You will hear back from 15-25 of the 50 messages once replies settle. A 30-50% response rate is normal on a properly built personal-network list. It is the highest response rate you will ever see as a founder.
+You will hear back from 15-25 of the 50 messages once replies settle. Expect far more replies than any cold list will ever give you - these are people who know you. It is the warmest outreach you will run.
 
 Add four tracking columns to your Sheet: Reply received (date), Reply sentiment (yes/maybe/no/silent), Demo booked (date), Pilot proposed (yes/no).
 
@@ -76,7 +82,7 @@ A "no" from a cold-bucket name is a non-event. They were never the right name. M
 
 ---
 
-A "no" from cold is noise. A "no" from a champion is the single most useful piece of feedback in this course. Always reply. Always ask why.
+So when a champion says no, reply and ask why - that answer is worth more than the sale.
 
 ---
 
@@ -92,4 +98,4 @@ A "no" from cold is noise. A "no" from a champion is the single most useful piec
 
 *See it in action: [Module 5 walkthrough: Mia gets paid](/course/tech-for-non-technical-founders-2026/module-5-walkthrough-mia/)*
 
-*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) free curriculum.*
+*Built by [JetThoughts](https://jetthoughts.com) as part of the [From Idea to First Paying Customer](/course/tech-for-non-technical-founders-2026/) curriculum.*
