@@ -305,16 +305,47 @@ Six principles drive this schedule. The wrong order wastes hours; the right orde
 
 **Module 2 exit gate:** All 6 micro-lessons follow template. Core path (2.1 → 2.3a → 2.3b → 2.4) produces validated problem statement without 2.2. Bridge chain verified.
 
-#### Module 3 — Design from Evidence (~2-3 days)
+#### Module 3 — Design from Evidence (~1-2 days) — PLAN REVISED + CONFIRMED 2026-07-09 (post-M2 re-review)
 
-2 chapters → ~3 micro-lessons. Shortest module, fastest to rewrite.
+> The original "2 chapters → ~3 micro-lessons" plan predates the M2 sprint and is superseded by this section. Revision grounded in: M2 shipped shape (PR #351), 40.13 process rules, 30.03 §2.7, and a fresh re-read of both M3 chapters on 2026-07-09.
 
-| Chapter | → Micro-lessons | Key split |
+**Prerequisite:** merge PR #351 first. Then branch `module-3-design-from-evidence` off fresh master. Cold agents read 30.03 + the M1/M2 v2 lessons + both Mia walkthroughs before touching M3.
+
+**Shape decision (revised): 1 chapter = 1 lesson, NO splits.** M2 retired letter-splits and shipped 1:1; splitting 3.1 would mint a new slug, cover, and redirect churn for no reader gain. Numbering stays 3.1 / 3.2 (already flat, already on landing/quickstart/yaml - no renumber needed, which removes M2's biggest defect source). Word-count band: both chapters sit at ~2.8-3.0k words vs the 30.03 400-900 band - proceed under the same waiver-by-precedent as M2 (spec split-or-waiver decision remains an open carry-forward, not a blocker).
+
+| Page | Slug (stable) | Work |
 |---|---|---|
-| 3.1 Product Brief | ~2 lessons | Problem statement → user + build + metric + no-go rows |
-| 3.2 Outcomes Check | ~1 lesson | Feature audit → outcome mapping → decision |
+| 3.1 The One-Page Product Brief | `one-page-product-brief-vibe-prd` | v2 8-part template (Module 3 · Lesson 3.1 · CORE, Progress M3 · 1 of 2); remove in-lesson "Case Study: Tomas & Mia" block; fix defects 1-3 below |
+| 3.2 Quality-check Your Brief | `stop-specifying-features-start-outcomes` | v2 template (Lesson 3.2 · CORE, Progress M3 · 2 of 2); remove case block; align "Artifacts you carry out of Module 3" with Founder OS framing |
+| Walkthrough (NEW) | `module-3-walkthrough-mia` | Mia drafts + quality-checks the TutorMatch brief. Seed content already exists in the two case blocks being removed (core 3 jobs, no-go list, job-story rewrites). M2 walkthrough's closing promise binds it: "Every feature on that page will trace back to a line a parent actually said." See-it-in-action lines land in the SAME commit (30.03 §2.7) |
+| Companion | `vibe-prd-template` | Align with 3.1 v2 the way `outreach-sequence-template` was aligned with 2.4 last sprint: fix defect 5 below, adopt the M2-companion header format (Input/Output callout), verify cover exists |
 
-**Module 3 exit gate:** All 3 micro-lessons follow template. The brief-to-outcomes handoff is tight — the bridge from 3.1 names exactly which rows 3.2 audits.
+**Known defects to fix regardless (found in the 2026-07-09 plan re-review):**
+1. 3.1 body says "Chapter 2.1 synthesis" twice (Section 1 heading + "What comes next") - M2 renumber leftover; synthesis is now Ch 2.5. The Input callout was fixed in the M2 fan-out, the body was not. Add `Chapter 2.1 synthesis` to the ratchet in the same commit.
+2. 3.1 "Founder OS · Artifact #4 of 6" hardcoded index - reconcile with the landing "You leave with" lines and the v2 footer style (name the artifact, drop the fragile index). 4.3b/5.4 keep theirs until their sprints.
+3. 3.1 hardcodes the "$1,000 Maven cohort" price 3× plus a "4.8/5 reviews" score (section heading, intro, Further reading) - volatile third-party facts; convert to capability language + check-the-pricing-page note per the de-hardcoding policy.
+4. Verify 3.2's `admin-panel-spaceship.svg` desc/alt text ("47 buttons") doesn't collide with the `47-button admin panel` ratchet signature; the illustration itself stays (informational, not decorative).
+5. `vibe-prd-template` companion: header says "synthesis from **Chapter 2.1**" while linking the 2.5 synthesis page (same renumber-leftover class); "one-page one-page brief" doubled-word typo; "$1,000" Maven price echoed twice more.
+
+**Content improvements IN scope (evidence: 40.06 trust-score friction, both chapters 7/10):**
+- **3.2 hook reframe** - 40.06 records Sam's resistance verbatim: "I already wrote Section 3 in Chapter 3.1 - why do I need to rewrite it?" The v2 Hook must earn the rewrite up front (the 20-minute rewrite is insurance against the $15K spaceship), not assume compliance.
+- **AI critic manual fallback** - 40.06 flags that 3.2's quality-check prompt requires a Claude account. Add the manual path (read each Section 3 sentence, ask "is this a thing the user does, or a thing the software has?") per the manual-minimum policy.
+- **Explicit module gate in the v2 Done footer** - M1 ends on go/iterate/kill, M2 on build/pivot/kill; M3's implicit pass ("4 of 5 sections outcome-shaped", currently buried in the case blocks being deleted) becomes the stated Done criterion.
+
+**Content improvements OUT of scope (decided, don't relitigate):** no new lessons, no splits, no synthesis-style addition. M3's two-step arc (draft → quality-check) is sound, trust scores are healthy, and the module is deliberately the short breather between M2 interviews and the M4 build. OpinionX stack-ranking stays the optional callout it already is.
+
+**Ordered steps (each gate before the next):**
+1. Voice sweep on both v1 chapters BEFORE template conversion (em-dash, banned patterns, full ratchet run) - so v2 inherits clean voice.
+2. Convert 3.1, then 3.2 (dependency order; the 3.1→3.2 bridge names exactly which brief sections 3.2 audits).
+3. Walkthrough + See-it-in-action lines + case-block removal in one commit.
+4. Cross-page pass: landing/quickstart/FAQ/HTCW M3 rows; M2→M3 inbound promises honored (2.5 problem statement → Section 1 verbatim; 2.6 "describe in one sentence" vocabulary → Section 3; prototype code discarded, fresh M4 build); M3→M4 outbound intact (4.1 reads the brief for the build-path decision, 4.3 prompts Lovable from it).
+5. Semantic-leftover pass (40.13): grep order-encoding prose ("next chapter", "proceed to", "after step") in every touched file.
+6. Chrome-devtools visual QA at 1280×800 + 390×844: all 4 SVGs, both mermaid diagrams (height ≤ ~1600px), both covers (verify content is current - 2.3/2.5 covers turned out to be stale copies last sprint; regen from the family template if facts are wrong).
+7. ONE fan-out review (find → dedup → adversarial verify) AFTER migration is complete; fixes reviewed as scoped diffs, never whole-world re-samples; every fix adds its ratchet signature in the same commit.
+8. Mechanized gates: `bin/hugo-build` (8 validators) + `bin/rake test:critical`; `bin/dtest` too if any template/CSS file is touched; production link sweep.
+9. ONE PR for the sprint.
+
+**Module 3 exit gate:** both lessons on the 8-part template; walkthrough live and linked; boundary promises verified in both directions; all mechanized gates pass. Report format per 40.13: "all N mechanized gates pass; review round K found X" - never "everything is fine".
 
 #### Module 4 — Build It Yourself (~4-5 days)
 
